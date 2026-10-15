@@ -1,0 +1,91 @@
+
+// ==== functions (decompiled by Hex-Rays; names/signatures from DWARF) ====
+
+// IServerVehicle::Schema_CompileTimeVerificationFunction  (line 35, @0x0000000001fe4a50, libserver.so)
+void __fastcall IServerVehicle::Schema_CompileTimeVerificationFunction(IServerVehicle *const this)
+{
+  ;
+}
+
+
+// IServerVehicle::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE  (line 38, @0x0000000001fe4a60, libserver.so)  // inlines: Call, Get, SetTypeScope
+// calls: IVehicle::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE
+// callers: CSchemaNonConstructibleClassBinding<IServerVehicle>::Register, CBaseServerVehicle::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE
+// globals: IServerVehicle::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitial, IServerVehicle::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema
+CSchemaClassInfo *__fastcall IServerVehicle::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        const char *pProjectName)
+{
+  CSchemaClassInfo *result; // rax
+  ISchemaSystemTypeScope *v7; // r14
+  CSchemaClassInfo *v8; // rax
+
+  result = IServerVehicle::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult;
+  if ( IServerVehicle::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult == 0 )
+  {
+    v7 = (*(*pSchemaSystem + 112LL))(pSchemaSystem, 0, pBinaryName);
+    (*(IVehicle::s_pSchemaBindingForLocalModule->_vptr_ISchemaBinding + 5))(
+      IVehicle::s_pSchemaBindingForLocalModule,
+      pSchemaSystem,
+      pBinaryName,
+      pProjectName);
+    v8 = IVehicle::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+           pSchemaSystem,
+           pBinaryName,
+           pProjectName);
+    IServerVehicle::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_IServerVehicle.m_pOuterTypeScope = v7;
+    IServerVehicle::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassBases_IServerVehicle[0].m_pClass = v8;
+    IServerVehicle::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult = &IServerVehicle::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_IServerVehicle;
+    (*(*v7 + 264LL))(
+      v7,
+      &IServerVehicle::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_IServerVehicle);
+    return IServerVehicle::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult;
+  }
+  return result;
+}
+
+
+// IServerVehicle::Schema_VerifyBindingIsRegistered  (line 48, @0x0000000001fe4b00, libserver.so)
+// callers: IServerVehicle::Schema_DynamicBinding
+void __cdecl IServerVehicle::Schema_VerifyBindingIsRegistered()
+{
+  ;
+}
+
+
+// LocalRegisterSchemaModule<ArbitraryTemplateParameter_server_iservervehicle_h>  (line 56, @0x0000000001fe4b10, libserver.so)  // inlines: Call
+// globals: IServerVehicle::s_pSchemaBindingForLocalModule
+void __fastcall LocalRegisterSchemaModule<ArbitraryTemplateParameter_server_iservervehicle_h>(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        SchemaRegistrationPhase_t nRegistrationPhase)
+{
+  if ( nRegistrationPhase == SchemaRegistrationPhase_t::SCHEMA_REGISTRATION_PHASE_CLASSES )
+    (*(IServerVehicle::s_pSchemaBindingForLocalModule->_vptr_ISchemaBinding + 5))(
+      IServerVehicle::s_pSchemaBindingForLocalModule,
+      pSchemaSystem,
+      pBinaryName,
+      "server");
+  ++g_nLinkerHack_SchemaAnchor_RegistrationCountFor_server;
+}
+
+
+// RegisterSchemaModule_iservervehicle_h  (line 58, @0x0000000001fe4b50, libserver.so)  // inlines: Call, LocalRegisterSchemaModule<ArbitraryTemplateParameter_server_iservervehicle_h>
+// callers: CSchemaRegistration_server::RegisterAllBindings
+// globals: IServerVehicle::s_pSchemaBindingForLocalModule
+void __fastcall RegisterSchemaModule_iservervehicle_h(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        SchemaRegistrationPhase_t nRegistrationPhase)
+{
+  if ( nRegistrationPhase == SchemaRegistrationPhase_t::SCHEMA_REGISTRATION_PHASE_CLASSES )
+    (*(IServerVehicle::s_pSchemaBindingForLocalModule->_vptr_ISchemaBinding + 5))(
+      IServerVehicle::s_pSchemaBindingForLocalModule,
+      pSchemaSystem,
+      pBinaryName,
+      "server");
+  ++g_nLinkerHack_SchemaAnchor_RegistrationCountFor_server;
+}
+
+

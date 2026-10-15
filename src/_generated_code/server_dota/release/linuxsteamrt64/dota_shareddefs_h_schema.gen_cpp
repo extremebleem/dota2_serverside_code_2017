@@ -1,0 +1,2261 @@
+
+// ==== functions (decompiled by Hex-Rays; names/signatures from DWARF) ====
+
+// CSchemaEnumBinding<DOTAModifierAttribute_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE  (line 35, @0x000000000266c8d0, libserver.so)  // inlines: Count, Initialize, SetTypeScope
+// callers: CSchemaEnumBinding<DOTAModifierAttribute_t>::Register
+// globals: CSchemaEnumBinding<DOTAModifierAttribute_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char con
+CSchemaEnumInfo *__fastcall CSchemaEnumBinding<DOTAModifierAttribute_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        const char *pProjectName)
+{
+  ISchemaSystemTypeScope *v3; // rax
+  unsigned int v4; // edi
+  SchemaEnumeratorValue_t v5; // r8
+  SchemaEnumeratorValue_t v6; // r9
+  SchemaEnumeratorValue_t *v7; // rdx
+
+  v3 = (*(*pSchemaSystem + 112LL))(pSchemaSystem, 0, pBinaryName);
+  if ( CSchemaEnumBinding<DOTAModifierAttribute_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_DOTAModifierAttribute_t.m_Enumerators.m_Data.m_nImplLength != 0 )
+  {
+    v4 = abs32(CSchemaEnumBinding<DOTAModifierAttribute_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_DOTAModifierAttribute_t.m_Enumerators.m_Data.m_nImplLength);
+    v5 = *(CSchemaEnumBinding<DOTAModifierAttribute_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_DOTAModifierAttribute_t.m_Enumerators.m_Data.m_pImplElements
+         + 2);
+    CSchemaEnumBinding<DOTAModifierAttribute_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_DOTAModifierAttribute_t.m_nMinValue = v5;
+    v6 = *(CSchemaEnumBinding<DOTAModifierAttribute_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_DOTAModifierAttribute_t.m_Enumerators.m_Data.m_pImplElements
+         + 2);
+    CSchemaEnumBinding<DOTAModifierAttribute_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_DOTAModifierAttribute_t.m_nMaxValue = v6;
+    if ( v4 != 1 )
+    {
+      v7 = (CSchemaEnumBinding<DOTAModifierAttribute_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_DOTAModifierAttribute_t.m_Enumerators.m_Data.m_pImplElements
+          + 72);
+      do
+      {
+        if ( v5 > *v7 )
+          v5 = *v7;
+        CSchemaEnumBinding<DOTAModifierAttribute_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_DOTAModifierAttribute_t.m_nMinValue = v5;
+        if ( v6 < *v7 )
+          v6 = *v7;
+        v7 += 7;
+        CSchemaEnumBinding<DOTAModifierAttribute_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_DOTAModifierAttribute_t.m_nMaxValue = v6;
+      }
+      while ( v7 != CSchemaEnumBinding<DOTAModifierAttribute_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_DOTAModifierAttribute_t.m_Enumerators.m_Data.m_pImplElements
+                  + 7 * v4
+                  + 2 );
+    }
+  }
+  else
+  {
+    CSchemaEnumBinding<DOTAModifierAttribute_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_DOTAModifierAttribute_t.m_nMinValue = 0;
+    CSchemaEnumBinding<DOTAModifierAttribute_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_DOTAModifierAttribute_t.m_nMaxValue = 0;
+  }
+  CSchemaEnumBinding<DOTAModifierAttribute_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_DOTAModifierAttribute_t.m_pOuterTypeScope = v3;
+  (*(*v3 + 272LL))(
+    v3,
+    &CSchemaEnumBinding<DOTAModifierAttribute_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_DOTAModifierAttribute_t);
+  return &CSchemaEnumBinding<DOTAModifierAttribute_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_DOTAModifierAttribute_t;
+}
+
+
+// CSchemaEnumBinding<Attributes>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE  (line 49, @0x000000000266c9b0, libserver.so)  // inlines: Count, Initialize, SetTypeScope
+// callers: CSchemaEnumBinding<Attributes>::Register
+// globals: CSchemaEnumBinding<Attributes>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char cons
+CSchemaEnumInfo *__fastcall CSchemaEnumBinding<Attributes>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        const char *pProjectName)
+{
+  ISchemaSystemTypeScope *v3; // rax
+  unsigned int v4; // edi
+  SchemaEnumeratorValue_t v5; // r8
+  SchemaEnumeratorValue_t v6; // r9
+  SchemaEnumeratorValue_t *v7; // rdx
+
+  v3 = (*(*pSchemaSystem + 112LL))(pSchemaSystem, 0, pBinaryName);
+  if ( CSchemaEnumBinding<Attributes>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_Attributes.m_Enumerators.m_Data.m_nImplLength != 0 )
+  {
+    v4 = abs32(CSchemaEnumBinding<Attributes>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_Attributes.m_Enumerators.m_Data.m_nImplLength);
+    v5 = *(CSchemaEnumBinding<Attributes>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_Attributes.m_Enumerators.m_Data.m_pImplElements
+         + 2);
+    CSchemaEnumBinding<Attributes>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_Attributes.m_nMinValue = v5;
+    v6 = *(CSchemaEnumBinding<Attributes>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_Attributes.m_Enumerators.m_Data.m_pImplElements
+         + 2);
+    CSchemaEnumBinding<Attributes>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_Attributes.m_nMaxValue = v6;
+    if ( v4 != 1 )
+    {
+      v7 = (CSchemaEnumBinding<Attributes>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_Attributes.m_Enumerators.m_Data.m_pImplElements
+          + 72);
+      do
+      {
+        if ( v5 > *v7 )
+          v5 = *v7;
+        CSchemaEnumBinding<Attributes>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_Attributes.m_nMinValue = v5;
+        if ( v6 < *v7 )
+          v6 = *v7;
+        v7 += 7;
+        CSchemaEnumBinding<Attributes>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_Attributes.m_nMaxValue = v6;
+      }
+      while ( v7 != CSchemaEnumBinding<Attributes>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_Attributes.m_Enumerators.m_Data.m_pImplElements
+                  + 7 * v4
+                  + 2 );
+    }
+  }
+  else
+  {
+    CSchemaEnumBinding<Attributes>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_Attributes.m_nMinValue = 0;
+    CSchemaEnumBinding<Attributes>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_Attributes.m_nMaxValue = 0;
+  }
+  CSchemaEnumBinding<Attributes>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_Attributes.m_pOuterTypeScope = v3;
+  (*(*v3 + 272LL))(
+    v3,
+    &CSchemaEnumBinding<Attributes>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_Attributes);
+  return &CSchemaEnumBinding<Attributes>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_Attributes;
+}
+
+
+// CSchemaEnumBinding<DAMAGE_TYPES>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE  (line 63, @0x000000000266ca90, libserver.so)  // inlines: Count, Initialize, SetTypeScope
+// callers: CSchemaEnumBinding<DAMAGE_TYPES>::Register
+// globals: CSchemaEnumBinding<DAMAGE_TYPES>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char co
+CSchemaEnumInfo *__fastcall CSchemaEnumBinding<DAMAGE_TYPES>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        const char *pProjectName)
+{
+  ISchemaSystemTypeScope *v3; // rax
+  unsigned int v4; // edi
+  SchemaEnumeratorValue_t v5; // r8
+  SchemaEnumeratorValue_t v6; // r9
+  SchemaEnumeratorValue_t *v7; // rdx
+
+  v3 = (*(*pSchemaSystem + 112LL))(pSchemaSystem, 0, pBinaryName);
+  if ( CSchemaEnumBinding<DAMAGE_TYPES>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_DAMAGE_TYPES.m_Enumerators.m_Data.m_nImplLength != 0 )
+  {
+    v4 = abs32(CSchemaEnumBinding<DAMAGE_TYPES>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_DAMAGE_TYPES.m_Enumerators.m_Data.m_nImplLength);
+    v5 = *(CSchemaEnumBinding<DAMAGE_TYPES>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_DAMAGE_TYPES.m_Enumerators.m_Data.m_pImplElements
+         + 2);
+    CSchemaEnumBinding<DAMAGE_TYPES>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_DAMAGE_TYPES.m_nMinValue = v5;
+    v6 = *(CSchemaEnumBinding<DAMAGE_TYPES>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_DAMAGE_TYPES.m_Enumerators.m_Data.m_pImplElements
+         + 2);
+    CSchemaEnumBinding<DAMAGE_TYPES>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_DAMAGE_TYPES.m_nMaxValue = v6;
+    if ( v4 != 1 )
+    {
+      v7 = (CSchemaEnumBinding<DAMAGE_TYPES>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_DAMAGE_TYPES.m_Enumerators.m_Data.m_pImplElements
+          + 72);
+      do
+      {
+        if ( v5 > *v7 )
+          v5 = *v7;
+        CSchemaEnumBinding<DAMAGE_TYPES>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_DAMAGE_TYPES.m_nMinValue = v5;
+        if ( v6 < *v7 )
+          v6 = *v7;
+        v7 += 7;
+        CSchemaEnumBinding<DAMAGE_TYPES>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_DAMAGE_TYPES.m_nMaxValue = v6;
+      }
+      while ( v7 != CSchemaEnumBinding<DAMAGE_TYPES>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_DAMAGE_TYPES.m_Enumerators.m_Data.m_pImplElements
+                  + 7 * v4
+                  + 2 );
+    }
+  }
+  else
+  {
+    CSchemaEnumBinding<DAMAGE_TYPES>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_DAMAGE_TYPES.m_nMinValue = 0;
+    CSchemaEnumBinding<DAMAGE_TYPES>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_DAMAGE_TYPES.m_nMaxValue = 0;
+  }
+  CSchemaEnumBinding<DAMAGE_TYPES>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_DAMAGE_TYPES.m_pOuterTypeScope = v3;
+  (*(*v3 + 272LL))(
+    v3,
+    &CSchemaEnumBinding<DAMAGE_TYPES>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_DAMAGE_TYPES);
+  return &CSchemaEnumBinding<DAMAGE_TYPES>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_DAMAGE_TYPES;
+}
+
+
+// CSchemaEnumBinding<ABILITY_TYPES>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE  (line 78, @0x000000000266cb70, libserver.so)  // inlines: Count, Initialize, SetTypeScope
+// callers: CSchemaEnumBinding<ABILITY_TYPES>::Register
+// globals: CSchemaEnumBinding<ABILITY_TYPES>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char c
+CSchemaEnumInfo *__fastcall CSchemaEnumBinding<ABILITY_TYPES>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        const char *pProjectName)
+{
+  ISchemaSystemTypeScope *v3; // rax
+  unsigned int v4; // edi
+  SchemaEnumeratorValue_t v5; // r8
+  SchemaEnumeratorValue_t v6; // r9
+  SchemaEnumeratorValue_t *v7; // rdx
+
+  v3 = (*(*pSchemaSystem + 112LL))(pSchemaSystem, 0, pBinaryName);
+  if ( CSchemaEnumBinding<ABILITY_TYPES>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_ABILITY_TYPES.m_Enumerators.m_Data.m_nImplLength != 0 )
+  {
+    v4 = abs32(CSchemaEnumBinding<ABILITY_TYPES>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_ABILITY_TYPES.m_Enumerators.m_Data.m_nImplLength);
+    v5 = *(CSchemaEnumBinding<ABILITY_TYPES>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_ABILITY_TYPES.m_Enumerators.m_Data.m_pImplElements
+         + 2);
+    CSchemaEnumBinding<ABILITY_TYPES>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_ABILITY_TYPES.m_nMinValue = v5;
+    v6 = *(CSchemaEnumBinding<ABILITY_TYPES>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_ABILITY_TYPES.m_Enumerators.m_Data.m_pImplElements
+         + 2);
+    CSchemaEnumBinding<ABILITY_TYPES>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_ABILITY_TYPES.m_nMaxValue = v6;
+    if ( v4 != 1 )
+    {
+      v7 = (CSchemaEnumBinding<ABILITY_TYPES>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_ABILITY_TYPES.m_Enumerators.m_Data.m_pImplElements
+          + 72);
+      do
+      {
+        if ( v5 > *v7 )
+          v5 = *v7;
+        CSchemaEnumBinding<ABILITY_TYPES>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_ABILITY_TYPES.m_nMinValue = v5;
+        if ( v6 < *v7 )
+          v6 = *v7;
+        v7 += 7;
+        CSchemaEnumBinding<ABILITY_TYPES>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_ABILITY_TYPES.m_nMaxValue = v6;
+      }
+      while ( v7 != CSchemaEnumBinding<ABILITY_TYPES>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_ABILITY_TYPES.m_Enumerators.m_Data.m_pImplElements
+                  + 7 * v4
+                  + 2 );
+    }
+  }
+  else
+  {
+    CSchemaEnumBinding<ABILITY_TYPES>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_ABILITY_TYPES.m_nMinValue = 0;
+    CSchemaEnumBinding<ABILITY_TYPES>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_ABILITY_TYPES.m_nMaxValue = 0;
+  }
+  CSchemaEnumBinding<ABILITY_TYPES>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_ABILITY_TYPES.m_pOuterTypeScope = v3;
+  (*(*v3 + 272LL))(
+    v3,
+    &CSchemaEnumBinding<ABILITY_TYPES>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_ABILITY_TYPES);
+  return &CSchemaEnumBinding<ABILITY_TYPES>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_ABILITY_TYPES;
+}
+
+
+// CSchemaEnumBinding<SPELL_IMMUNITY_TYPES>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE  (line 91, @0x000000000266cc50, libserver.so)  // inlines: Count, Initialize, SetTypeScope
+// callers: CSchemaEnumBinding<SPELL_IMMUNITY_TYPES>::Register
+// globals: CSchemaEnumBinding<SPELL_IMMUNITY_TYPES>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*
+CSchemaEnumInfo *__fastcall CSchemaEnumBinding<SPELL_IMMUNITY_TYPES>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        const char *pProjectName)
+{
+  ISchemaSystemTypeScope *v3; // rax
+  unsigned int v4; // edi
+  SchemaEnumeratorValue_t v5; // r8
+  SchemaEnumeratorValue_t v6; // r9
+  SchemaEnumeratorValue_t *v7; // rdx
+
+  v3 = (*(*pSchemaSystem + 112LL))(pSchemaSystem, 0, pBinaryName);
+  if ( CSchemaEnumBinding<SPELL_IMMUNITY_TYPES>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_SPELL_IMMUNITY_TYPES.m_Enumerators.m_Data.m_nImplLength != 0 )
+  {
+    v4 = abs32(CSchemaEnumBinding<SPELL_IMMUNITY_TYPES>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_SPELL_IMMUNITY_TYPES.m_Enumerators.m_Data.m_nImplLength);
+    v5 = *(CSchemaEnumBinding<SPELL_IMMUNITY_TYPES>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_SPELL_IMMUNITY_TYPES.m_Enumerators.m_Data.m_pImplElements
+         + 2);
+    CSchemaEnumBinding<SPELL_IMMUNITY_TYPES>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_SPELL_IMMUNITY_TYPES.m_nMinValue = v5;
+    v6 = *(CSchemaEnumBinding<SPELL_IMMUNITY_TYPES>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_SPELL_IMMUNITY_TYPES.m_Enumerators.m_Data.m_pImplElements
+         + 2);
+    CSchemaEnumBinding<SPELL_IMMUNITY_TYPES>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_SPELL_IMMUNITY_TYPES.m_nMaxValue = v6;
+    if ( v4 != 1 )
+    {
+      v7 = (CSchemaEnumBinding<SPELL_IMMUNITY_TYPES>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_SPELL_IMMUNITY_TYPES.m_Enumerators.m_Data.m_pImplElements
+          + 72);
+      do
+      {
+        if ( v5 > *v7 )
+          v5 = *v7;
+        CSchemaEnumBinding<SPELL_IMMUNITY_TYPES>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_SPELL_IMMUNITY_TYPES.m_nMinValue = v5;
+        if ( v6 < *v7 )
+          v6 = *v7;
+        v7 += 7;
+        CSchemaEnumBinding<SPELL_IMMUNITY_TYPES>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_SPELL_IMMUNITY_TYPES.m_nMaxValue = v6;
+      }
+      while ( v7 != CSchemaEnumBinding<SPELL_IMMUNITY_TYPES>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_SPELL_IMMUNITY_TYPES.m_Enumerators.m_Data.m_pImplElements
+                  + 7 * v4
+                  + 2 );
+    }
+  }
+  else
+  {
+    CSchemaEnumBinding<SPELL_IMMUNITY_TYPES>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_SPELL_IMMUNITY_TYPES.m_nMinValue = 0;
+    CSchemaEnumBinding<SPELL_IMMUNITY_TYPES>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_SPELL_IMMUNITY_TYPES.m_nMaxValue = 0;
+  }
+  CSchemaEnumBinding<SPELL_IMMUNITY_TYPES>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_SPELL_IMMUNITY_TYPES.m_pOuterTypeScope = v3;
+  (*(*v3 + 272LL))(
+    v3,
+    &CSchemaEnumBinding<SPELL_IMMUNITY_TYPES>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_SPELL_IMMUNITY_TYPES);
+  return &CSchemaEnumBinding<SPELL_IMMUNITY_TYPES>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_SPELL_IMMUNITY_TYPES;
+}
+
+
+// CSchemaEnumBinding<SPELL_DISPELLABLE_TYPES>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE  (line 105, @0x000000000266cd30, libserver.so)  // inlines: Count, Initialize, SetTypeScope
+// callers: CSchemaEnumBinding<SPELL_DISPELLABLE_TYPES>::Register
+// globals: CSchemaEnumBinding<SPELL_DISPELLABLE_TYPES>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char con
+CSchemaEnumInfo *__fastcall CSchemaEnumBinding<SPELL_DISPELLABLE_TYPES>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        const char *pProjectName)
+{
+  ISchemaSystemTypeScope *v3; // rax
+  unsigned int v4; // edi
+  SchemaEnumeratorValue_t v5; // r8
+  SchemaEnumeratorValue_t v6; // r9
+  SchemaEnumeratorValue_t *v7; // rdx
+
+  v3 = (*(*pSchemaSystem + 112LL))(pSchemaSystem, 0, pBinaryName);
+  if ( CSchemaEnumBinding<SPELL_DISPELLABLE_TYPES>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_SPELL_DISPELLABLE_TYPES.m_Enumerators.m_Data.m_nImplLength != 0 )
+  {
+    v4 = abs32(CSchemaEnumBinding<SPELL_DISPELLABLE_TYPES>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_SPELL_DISPELLABLE_TYPES.m_Enumerators.m_Data.m_nImplLength);
+    v5 = *(CSchemaEnumBinding<SPELL_DISPELLABLE_TYPES>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_SPELL_DISPELLABLE_TYPES.m_Enumerators.m_Data.m_pImplElements
+         + 2);
+    CSchemaEnumBinding<SPELL_DISPELLABLE_TYPES>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_SPELL_DISPELLABLE_TYPES.m_nMinValue = v5;
+    v6 = *(CSchemaEnumBinding<SPELL_DISPELLABLE_TYPES>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_SPELL_DISPELLABLE_TYPES.m_Enumerators.m_Data.m_pImplElements
+         + 2);
+    CSchemaEnumBinding<SPELL_DISPELLABLE_TYPES>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_SPELL_DISPELLABLE_TYPES.m_nMaxValue = v6;
+    if ( v4 != 1 )
+    {
+      v7 = (CSchemaEnumBinding<SPELL_DISPELLABLE_TYPES>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_SPELL_DISPELLABLE_TYPES.m_Enumerators.m_Data.m_pImplElements
+          + 72);
+      do
+      {
+        if ( v5 > *v7 )
+          v5 = *v7;
+        CSchemaEnumBinding<SPELL_DISPELLABLE_TYPES>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_SPELL_DISPELLABLE_TYPES.m_nMinValue = v5;
+        if ( v6 < *v7 )
+          v6 = *v7;
+        v7 += 7;
+        CSchemaEnumBinding<SPELL_DISPELLABLE_TYPES>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_SPELL_DISPELLABLE_TYPES.m_nMaxValue = v6;
+      }
+      while ( v7 != CSchemaEnumBinding<SPELL_DISPELLABLE_TYPES>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_SPELL_DISPELLABLE_TYPES.m_Enumerators.m_Data.m_pImplElements
+                  + 7 * v4
+                  + 2 );
+    }
+  }
+  else
+  {
+    CSchemaEnumBinding<SPELL_DISPELLABLE_TYPES>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_SPELL_DISPELLABLE_TYPES.m_nMinValue = 0;
+    CSchemaEnumBinding<SPELL_DISPELLABLE_TYPES>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_SPELL_DISPELLABLE_TYPES.m_nMaxValue = 0;
+  }
+  CSchemaEnumBinding<SPELL_DISPELLABLE_TYPES>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_SPELL_DISPELLABLE_TYPES.m_pOuterTypeScope = v3;
+  (*(*v3 + 272LL))(
+    v3,
+    &CSchemaEnumBinding<SPELL_DISPELLABLE_TYPES>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_SPELL_DISPELLABLE_TYPES);
+  return &CSchemaEnumBinding<SPELL_DISPELLABLE_TYPES>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_SPELL_DISPELLABLE_TYPES;
+}
+
+
+// CSchemaEnumBinding<DOTAUnitMoveCapability_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE  (line 118, @0x000000000266ce10, libserver.so)  // inlines: Count, Initialize, SetTypeScope
+// callers: CSchemaEnumBinding<DOTAUnitMoveCapability_t>::Register
+// globals: CSchemaEnumBinding<DOTAUnitMoveCapability_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char co
+CSchemaEnumInfo *__fastcall CSchemaEnumBinding<DOTAUnitMoveCapability_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        const char *pProjectName)
+{
+  ISchemaSystemTypeScope *v3; // rax
+  unsigned int v4; // edi
+  SchemaEnumeratorValue_t v5; // r8
+  SchemaEnumeratorValue_t v6; // r9
+  SchemaEnumeratorValue_t *v7; // rdx
+
+  v3 = (*(*pSchemaSystem + 112LL))(pSchemaSystem, 0, pBinaryName);
+  if ( CSchemaEnumBinding<DOTAUnitMoveCapability_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_DOTAUnitMoveCapability_t.m_Enumerators.m_Data.m_nImplLength != 0 )
+  {
+    v4 = abs32(CSchemaEnumBinding<DOTAUnitMoveCapability_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_DOTAUnitMoveCapability_t.m_Enumerators.m_Data.m_nImplLength);
+    v5 = *(CSchemaEnumBinding<DOTAUnitMoveCapability_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_DOTAUnitMoveCapability_t.m_Enumerators.m_Data.m_pImplElements
+         + 2);
+    CSchemaEnumBinding<DOTAUnitMoveCapability_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_DOTAUnitMoveCapability_t.m_nMinValue = v5;
+    v6 = *(CSchemaEnumBinding<DOTAUnitMoveCapability_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_DOTAUnitMoveCapability_t.m_Enumerators.m_Data.m_pImplElements
+         + 2);
+    CSchemaEnumBinding<DOTAUnitMoveCapability_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_DOTAUnitMoveCapability_t.m_nMaxValue = v6;
+    if ( v4 != 1 )
+    {
+      v7 = (CSchemaEnumBinding<DOTAUnitMoveCapability_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_DOTAUnitMoveCapability_t.m_Enumerators.m_Data.m_pImplElements
+          + 72);
+      do
+      {
+        if ( v5 > *v7 )
+          v5 = *v7;
+        CSchemaEnumBinding<DOTAUnitMoveCapability_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_DOTAUnitMoveCapability_t.m_nMinValue = v5;
+        if ( v6 < *v7 )
+          v6 = *v7;
+        v7 += 7;
+        CSchemaEnumBinding<DOTAUnitMoveCapability_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_DOTAUnitMoveCapability_t.m_nMaxValue = v6;
+      }
+      while ( v7 != CSchemaEnumBinding<DOTAUnitMoveCapability_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_DOTAUnitMoveCapability_t.m_Enumerators.m_Data.m_pImplElements
+                  + 7 * v4
+                  + 2 );
+    }
+  }
+  else
+  {
+    CSchemaEnumBinding<DOTAUnitMoveCapability_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_DOTAUnitMoveCapability_t.m_nMinValue = 0;
+    CSchemaEnumBinding<DOTAUnitMoveCapability_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_DOTAUnitMoveCapability_t.m_nMaxValue = 0;
+  }
+  CSchemaEnumBinding<DOTAUnitMoveCapability_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_DOTAUnitMoveCapability_t.m_pOuterTypeScope = v3;
+  (*(*v3 + 272LL))(
+    v3,
+    &CSchemaEnumBinding<DOTAUnitMoveCapability_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_DOTAUnitMoveCapability_t);
+  return &CSchemaEnumBinding<DOTAUnitMoveCapability_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_DOTAUnitMoveCapability_t;
+}
+
+
+// CSchemaEnumBinding<DOTAUnitAttackCapability_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE  (line 130, @0x000000000266cef0, libserver.so)  // inlines: Count, Initialize, SetTypeScope
+// callers: CSchemaEnumBinding<DOTAUnitAttackCapability_t>::Register
+// globals: CSchemaEnumBinding<DOTAUnitAttackCapability_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char 
+CSchemaEnumInfo *__fastcall CSchemaEnumBinding<DOTAUnitAttackCapability_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        const char *pProjectName)
+{
+  ISchemaSystemTypeScope *v3; // rax
+  unsigned int v4; // edi
+  SchemaEnumeratorValue_t v5; // r8
+  SchemaEnumeratorValue_t v6; // r9
+  SchemaEnumeratorValue_t *v7; // rdx
+
+  v3 = (*(*pSchemaSystem + 112LL))(pSchemaSystem, 0, pBinaryName);
+  if ( CSchemaEnumBinding<DOTAUnitAttackCapability_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_DOTAUnitAttackCapability_t.m_Enumerators.m_Data.m_nImplLength != 0 )
+  {
+    v4 = abs32(CSchemaEnumBinding<DOTAUnitAttackCapability_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_DOTAUnitAttackCapability_t.m_Enumerators.m_Data.m_nImplLength);
+    v5 = *(CSchemaEnumBinding<DOTAUnitAttackCapability_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_DOTAUnitAttackCapability_t.m_Enumerators.m_Data.m_pImplElements
+         + 2);
+    CSchemaEnumBinding<DOTAUnitAttackCapability_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_DOTAUnitAttackCapability_t.m_nMinValue = v5;
+    v6 = *(CSchemaEnumBinding<DOTAUnitAttackCapability_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_DOTAUnitAttackCapability_t.m_Enumerators.m_Data.m_pImplElements
+         + 2);
+    CSchemaEnumBinding<DOTAUnitAttackCapability_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_DOTAUnitAttackCapability_t.m_nMaxValue = v6;
+    if ( v4 != 1 )
+    {
+      v7 = (CSchemaEnumBinding<DOTAUnitAttackCapability_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_DOTAUnitAttackCapability_t.m_Enumerators.m_Data.m_pImplElements
+          + 72);
+      do
+      {
+        if ( v5 > *v7 )
+          v5 = *v7;
+        CSchemaEnumBinding<DOTAUnitAttackCapability_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_DOTAUnitAttackCapability_t.m_nMinValue = v5;
+        if ( v6 < *v7 )
+          v6 = *v7;
+        v7 += 7;
+        CSchemaEnumBinding<DOTAUnitAttackCapability_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_DOTAUnitAttackCapability_t.m_nMaxValue = v6;
+      }
+      while ( v7 != CSchemaEnumBinding<DOTAUnitAttackCapability_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_DOTAUnitAttackCapability_t.m_Enumerators.m_Data.m_pImplElements
+                  + 7 * v4
+                  + 2 );
+    }
+  }
+  else
+  {
+    CSchemaEnumBinding<DOTAUnitAttackCapability_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_DOTAUnitAttackCapability_t.m_nMinValue = 0;
+    CSchemaEnumBinding<DOTAUnitAttackCapability_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_DOTAUnitAttackCapability_t.m_nMaxValue = 0;
+  }
+  CSchemaEnumBinding<DOTAUnitAttackCapability_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_DOTAUnitAttackCapability_t.m_pOuterTypeScope = v3;
+  (*(*v3 + 272LL))(
+    v3,
+    &CSchemaEnumBinding<DOTAUnitAttackCapability_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_DOTAUnitAttackCapability_t);
+  return &CSchemaEnumBinding<DOTAUnitAttackCapability_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_DOTAUnitAttackCapability_t;
+}
+
+
+// CSchemaEnumBinding<CLICK_BEHAVIORS>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE  (line 142, @0x000000000266cfd0, libserver.so)  // inlines: Count, Initialize, SetTypeScope
+// callers: CSchemaEnumBinding<CLICK_BEHAVIORS>::Register
+// globals: CSchemaEnumBinding<CLICK_BEHAVIORS>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char
+CSchemaEnumInfo *__fastcall CSchemaEnumBinding<CLICK_BEHAVIORS>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        const char *pProjectName)
+{
+  ISchemaSystemTypeScope *v3; // rax
+  unsigned int v4; // edi
+  SchemaEnumeratorValue_t v5; // r8
+  SchemaEnumeratorValue_t v6; // r9
+  SchemaEnumeratorValue_t *v7; // rdx
+
+  v3 = (*(*pSchemaSystem + 112LL))(pSchemaSystem, 0, pBinaryName);
+  if ( CSchemaEnumBinding<CLICK_BEHAVIORS>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_CLICK_BEHAVIORS.m_Enumerators.m_Data.m_nImplLength != 0 )
+  {
+    v4 = abs32(CSchemaEnumBinding<CLICK_BEHAVIORS>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_CLICK_BEHAVIORS.m_Enumerators.m_Data.m_nImplLength);
+    v5 = *(CSchemaEnumBinding<CLICK_BEHAVIORS>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_CLICK_BEHAVIORS.m_Enumerators.m_Data.m_pImplElements
+         + 2);
+    CSchemaEnumBinding<CLICK_BEHAVIORS>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_CLICK_BEHAVIORS.m_nMinValue = v5;
+    v6 = *(CSchemaEnumBinding<CLICK_BEHAVIORS>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_CLICK_BEHAVIORS.m_Enumerators.m_Data.m_pImplElements
+         + 2);
+    CSchemaEnumBinding<CLICK_BEHAVIORS>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_CLICK_BEHAVIORS.m_nMaxValue = v6;
+    if ( v4 != 1 )
+    {
+      v7 = (CSchemaEnumBinding<CLICK_BEHAVIORS>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_CLICK_BEHAVIORS.m_Enumerators.m_Data.m_pImplElements
+          + 72);
+      do
+      {
+        if ( v5 > *v7 )
+          v5 = *v7;
+        CSchemaEnumBinding<CLICK_BEHAVIORS>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_CLICK_BEHAVIORS.m_nMinValue = v5;
+        if ( v6 < *v7 )
+          v6 = *v7;
+        v7 += 7;
+        CSchemaEnumBinding<CLICK_BEHAVIORS>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_CLICK_BEHAVIORS.m_nMaxValue = v6;
+      }
+      while ( v7 != CSchemaEnumBinding<CLICK_BEHAVIORS>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_CLICK_BEHAVIORS.m_Enumerators.m_Data.m_pImplElements
+                  + 7 * v4
+                  + 2 );
+    }
+  }
+  else
+  {
+    CSchemaEnumBinding<CLICK_BEHAVIORS>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_CLICK_BEHAVIORS.m_nMinValue = 0;
+    CSchemaEnumBinding<CLICK_BEHAVIORS>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_CLICK_BEHAVIORS.m_nMaxValue = 0;
+  }
+  CSchemaEnumBinding<CLICK_BEHAVIORS>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_CLICK_BEHAVIORS.m_pOuterTypeScope = v3;
+  (*(*v3 + 272LL))(
+    v3,
+    &CSchemaEnumBinding<CLICK_BEHAVIORS>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_CLICK_BEHAVIORS);
+  return &CSchemaEnumBinding<CLICK_BEHAVIORS>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_CLICK_BEHAVIORS;
+}
+
+
+// CSchemaEnumBinding<DOTA_ABILITY_BEHAVIOR>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE  (line 164, @0x000000000266d0b0, libserver.so)  // inlines: Count, Initialize, SetTypeScope
+// callers: CSchemaEnumBinding<DOTA_ABILITY_BEHAVIOR>::Register
+// globals: CSchemaEnumBinding<DOTA_ABILITY_BEHAVIOR>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const
+CSchemaEnumInfo *__fastcall CSchemaEnumBinding<DOTA_ABILITY_BEHAVIOR>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        const char *pProjectName)
+{
+  ISchemaSystemTypeScope *v3; // rax
+  unsigned int v4; // edi
+  SchemaEnumeratorValue_t v5; // r8
+  SchemaEnumeratorValue_t v6; // r9
+  SchemaEnumeratorValue_t *v7; // rdx
+
+  v3 = (*(*pSchemaSystem + 112LL))(pSchemaSystem, 0, pBinaryName);
+  if ( CSchemaEnumBinding<DOTA_ABILITY_BEHAVIOR>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_DOTA_ABILITY_BEHAVIOR.m_Enumerators.m_Data.m_nImplLength != 0 )
+  {
+    v4 = abs32(CSchemaEnumBinding<DOTA_ABILITY_BEHAVIOR>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_DOTA_ABILITY_BEHAVIOR.m_Enumerators.m_Data.m_nImplLength);
+    v5 = *(CSchemaEnumBinding<DOTA_ABILITY_BEHAVIOR>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_DOTA_ABILITY_BEHAVIOR.m_Enumerators.m_Data.m_pImplElements
+         + 2);
+    CSchemaEnumBinding<DOTA_ABILITY_BEHAVIOR>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_DOTA_ABILITY_BEHAVIOR.m_nMinValue = v5;
+    v6 = *(CSchemaEnumBinding<DOTA_ABILITY_BEHAVIOR>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_DOTA_ABILITY_BEHAVIOR.m_Enumerators.m_Data.m_pImplElements
+         + 2);
+    CSchemaEnumBinding<DOTA_ABILITY_BEHAVIOR>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_DOTA_ABILITY_BEHAVIOR.m_nMaxValue = v6;
+    if ( v4 != 1 )
+    {
+      v7 = (CSchemaEnumBinding<DOTA_ABILITY_BEHAVIOR>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_DOTA_ABILITY_BEHAVIOR.m_Enumerators.m_Data.m_pImplElements
+          + 72);
+      do
+      {
+        if ( v5 > *v7 )
+          v5 = *v7;
+        CSchemaEnumBinding<DOTA_ABILITY_BEHAVIOR>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_DOTA_ABILITY_BEHAVIOR.m_nMinValue = v5;
+        if ( v6 < *v7 )
+          v6 = *v7;
+        v7 += 7;
+        CSchemaEnumBinding<DOTA_ABILITY_BEHAVIOR>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_DOTA_ABILITY_BEHAVIOR.m_nMaxValue = v6;
+      }
+      while ( v7 != CSchemaEnumBinding<DOTA_ABILITY_BEHAVIOR>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_DOTA_ABILITY_BEHAVIOR.m_Enumerators.m_Data.m_pImplElements
+                  + 7 * v4
+                  + 2 );
+    }
+  }
+  else
+  {
+    CSchemaEnumBinding<DOTA_ABILITY_BEHAVIOR>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_DOTA_ABILITY_BEHAVIOR.m_nMinValue = 0;
+    CSchemaEnumBinding<DOTA_ABILITY_BEHAVIOR>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_DOTA_ABILITY_BEHAVIOR.m_nMaxValue = 0;
+  }
+  CSchemaEnumBinding<DOTA_ABILITY_BEHAVIOR>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_DOTA_ABILITY_BEHAVIOR.m_pOuterTypeScope = v3;
+  (*(*v3 + 272LL))(
+    v3,
+    &CSchemaEnumBinding<DOTA_ABILITY_BEHAVIOR>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_DOTA_ABILITY_BEHAVIOR);
+  return &CSchemaEnumBinding<DOTA_ABILITY_BEHAVIOR>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_DOTA_ABILITY_BEHAVIOR;
+}
+
+
+// CSchemaEnumBinding<EDOTA_ModifyGold_Reason>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE  (line 207, @0x000000000266d190, libserver.so)  // inlines: Count, Initialize, SetTypeScope
+// callers: CSchemaEnumBinding<EDOTA_ModifyGold_Reason>::Register
+// globals: CSchemaEnumBinding<EDOTA_ModifyGold_Reason>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char con
+CSchemaEnumInfo *__fastcall CSchemaEnumBinding<EDOTA_ModifyGold_Reason>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        const char *pProjectName)
+{
+  ISchemaSystemTypeScope *v3; // rax
+  unsigned int v4; // edi
+  SchemaEnumeratorValue_t v5; // r8
+  SchemaEnumeratorValue_t v6; // r9
+  SchemaEnumeratorValue_t *v7; // rdx
+
+  v3 = (*(*pSchemaSystem + 112LL))(pSchemaSystem, 0, pBinaryName);
+  if ( CSchemaEnumBinding<EDOTA_ModifyGold_Reason>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_EDOTA_ModifyGold_Reason.m_Enumerators.m_Data.m_nImplLength != 0 )
+  {
+    v4 = abs32(CSchemaEnumBinding<EDOTA_ModifyGold_Reason>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_EDOTA_ModifyGold_Reason.m_Enumerators.m_Data.m_nImplLength);
+    v5 = *(CSchemaEnumBinding<EDOTA_ModifyGold_Reason>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_EDOTA_ModifyGold_Reason.m_Enumerators.m_Data.m_pImplElements
+         + 2);
+    CSchemaEnumBinding<EDOTA_ModifyGold_Reason>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_EDOTA_ModifyGold_Reason.m_nMinValue = v5;
+    v6 = *(CSchemaEnumBinding<EDOTA_ModifyGold_Reason>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_EDOTA_ModifyGold_Reason.m_Enumerators.m_Data.m_pImplElements
+         + 2);
+    CSchemaEnumBinding<EDOTA_ModifyGold_Reason>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_EDOTA_ModifyGold_Reason.m_nMaxValue = v6;
+    if ( v4 != 1 )
+    {
+      v7 = (CSchemaEnumBinding<EDOTA_ModifyGold_Reason>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_EDOTA_ModifyGold_Reason.m_Enumerators.m_Data.m_pImplElements
+          + 72);
+      do
+      {
+        if ( v5 > *v7 )
+          v5 = *v7;
+        CSchemaEnumBinding<EDOTA_ModifyGold_Reason>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_EDOTA_ModifyGold_Reason.m_nMinValue = v5;
+        if ( v6 < *v7 )
+          v6 = *v7;
+        v7 += 7;
+        CSchemaEnumBinding<EDOTA_ModifyGold_Reason>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_EDOTA_ModifyGold_Reason.m_nMaxValue = v6;
+      }
+      while ( v7 != CSchemaEnumBinding<EDOTA_ModifyGold_Reason>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_EDOTA_ModifyGold_Reason.m_Enumerators.m_Data.m_pImplElements
+                  + 7 * v4
+                  + 2 );
+    }
+  }
+  else
+  {
+    CSchemaEnumBinding<EDOTA_ModifyGold_Reason>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_EDOTA_ModifyGold_Reason.m_nMinValue = 0;
+    CSchemaEnumBinding<EDOTA_ModifyGold_Reason>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_EDOTA_ModifyGold_Reason.m_nMaxValue = 0;
+  }
+  CSchemaEnumBinding<EDOTA_ModifyGold_Reason>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_EDOTA_ModifyGold_Reason.m_pOuterTypeScope = v3;
+  (*(*v3 + 272LL))(
+    v3,
+    &CSchemaEnumBinding<EDOTA_ModifyGold_Reason>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_EDOTA_ModifyGold_Reason);
+  return &CSchemaEnumBinding<EDOTA_ModifyGold_Reason>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_EDOTA_ModifyGold_Reason;
+}
+
+
+// CSchemaEnumBinding<EDOTA_ModifyXP_Reason>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE  (line 233, @0x000000000266d270, libserver.so)  // inlines: Count, Initialize, SetTypeScope
+// callers: CSchemaEnumBinding<EDOTA_ModifyXP_Reason>::Register
+// globals: CSchemaEnumBinding<EDOTA_ModifyXP_Reason>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const
+CSchemaEnumInfo *__fastcall CSchemaEnumBinding<EDOTA_ModifyXP_Reason>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        const char *pProjectName)
+{
+  ISchemaSystemTypeScope *v3; // rax
+  unsigned int v4; // edi
+  SchemaEnumeratorValue_t v5; // r8
+  SchemaEnumeratorValue_t v6; // r9
+  SchemaEnumeratorValue_t *v7; // rdx
+
+  v3 = (*(*pSchemaSystem + 112LL))(pSchemaSystem, 0, pBinaryName);
+  if ( CSchemaEnumBinding<EDOTA_ModifyXP_Reason>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_EDOTA_ModifyXP_Reason.m_Enumerators.m_Data.m_nImplLength != 0 )
+  {
+    v4 = abs32(CSchemaEnumBinding<EDOTA_ModifyXP_Reason>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_EDOTA_ModifyXP_Reason.m_Enumerators.m_Data.m_nImplLength);
+    v5 = *(CSchemaEnumBinding<EDOTA_ModifyXP_Reason>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_EDOTA_ModifyXP_Reason.m_Enumerators.m_Data.m_pImplElements
+         + 2);
+    CSchemaEnumBinding<EDOTA_ModifyXP_Reason>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_EDOTA_ModifyXP_Reason.m_nMinValue = v5;
+    v6 = *(CSchemaEnumBinding<EDOTA_ModifyXP_Reason>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_EDOTA_ModifyXP_Reason.m_Enumerators.m_Data.m_pImplElements
+         + 2);
+    CSchemaEnumBinding<EDOTA_ModifyXP_Reason>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_EDOTA_ModifyXP_Reason.m_nMaxValue = v6;
+    if ( v4 != 1 )
+    {
+      v7 = (CSchemaEnumBinding<EDOTA_ModifyXP_Reason>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_EDOTA_ModifyXP_Reason.m_Enumerators.m_Data.m_pImplElements
+          + 72);
+      do
+      {
+        if ( v5 > *v7 )
+          v5 = *v7;
+        CSchemaEnumBinding<EDOTA_ModifyXP_Reason>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_EDOTA_ModifyXP_Reason.m_nMinValue = v5;
+        if ( v6 < *v7 )
+          v6 = *v7;
+        v7 += 7;
+        CSchemaEnumBinding<EDOTA_ModifyXP_Reason>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_EDOTA_ModifyXP_Reason.m_nMaxValue = v6;
+      }
+      while ( v7 != CSchemaEnumBinding<EDOTA_ModifyXP_Reason>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_EDOTA_ModifyXP_Reason.m_Enumerators.m_Data.m_pImplElements
+                  + 7 * v4
+                  + 2 );
+    }
+  }
+  else
+  {
+    CSchemaEnumBinding<EDOTA_ModifyXP_Reason>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_EDOTA_ModifyXP_Reason.m_nMinValue = 0;
+    CSchemaEnumBinding<EDOTA_ModifyXP_Reason>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_EDOTA_ModifyXP_Reason.m_nMaxValue = 0;
+  }
+  CSchemaEnumBinding<EDOTA_ModifyXP_Reason>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_EDOTA_ModifyXP_Reason.m_pOuterTypeScope = v3;
+  (*(*v3 + 272LL))(
+    v3,
+    &CSchemaEnumBinding<EDOTA_ModifyXP_Reason>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_EDOTA_ModifyXP_Reason);
+  return &CSchemaEnumBinding<EDOTA_ModifyXP_Reason>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_EDOTA_ModifyXP_Reason;
+}
+
+
+// CSchemaEnumBinding<UnitFilterResult>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE  (line 246, @0x000000000266d350, libserver.so)  // inlines: Count, Initialize, SetTypeScope
+// callers: CSchemaEnumBinding<UnitFilterResult>::Register
+// globals: CSchemaEnumBinding<UnitFilterResult>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,cha
+CSchemaEnumInfo *__fastcall CSchemaEnumBinding<UnitFilterResult>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        const char *pProjectName)
+{
+  ISchemaSystemTypeScope *v3; // rax
+  unsigned int v4; // edi
+  SchemaEnumeratorValue_t v5; // r8
+  SchemaEnumeratorValue_t v6; // r9
+  SchemaEnumeratorValue_t *v7; // rdx
+
+  v3 = (*(*pSchemaSystem + 112LL))(pSchemaSystem, 0, pBinaryName);
+  if ( CSchemaEnumBinding<UnitFilterResult>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_UnitFilterResult.m_Enumerators.m_Data.m_nImplLength != 0 )
+  {
+    v4 = abs32(CSchemaEnumBinding<UnitFilterResult>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_UnitFilterResult.m_Enumerators.m_Data.m_nImplLength);
+    v5 = *(CSchemaEnumBinding<UnitFilterResult>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_UnitFilterResult.m_Enumerators.m_Data.m_pImplElements
+         + 2);
+    CSchemaEnumBinding<UnitFilterResult>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_UnitFilterResult.m_nMinValue = v5;
+    v6 = *(CSchemaEnumBinding<UnitFilterResult>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_UnitFilterResult.m_Enumerators.m_Data.m_pImplElements
+         + 2);
+    CSchemaEnumBinding<UnitFilterResult>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_UnitFilterResult.m_nMaxValue = v6;
+    if ( v4 != 1 )
+    {
+      v7 = (CSchemaEnumBinding<UnitFilterResult>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_UnitFilterResult.m_Enumerators.m_Data.m_pImplElements
+          + 72);
+      do
+      {
+        if ( v5 > *v7 )
+          v5 = *v7;
+        CSchemaEnumBinding<UnitFilterResult>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_UnitFilterResult.m_nMinValue = v5;
+        if ( v6 < *v7 )
+          v6 = *v7;
+        v7 += 7;
+        CSchemaEnumBinding<UnitFilterResult>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_UnitFilterResult.m_nMaxValue = v6;
+      }
+      while ( v7 != CSchemaEnumBinding<UnitFilterResult>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_UnitFilterResult.m_Enumerators.m_Data.m_pImplElements
+                  + 7 * v4
+                  + 2 );
+    }
+  }
+  else
+  {
+    CSchemaEnumBinding<UnitFilterResult>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_UnitFilterResult.m_nMinValue = 0;
+    CSchemaEnumBinding<UnitFilterResult>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_UnitFilterResult.m_nMaxValue = 0;
+  }
+  CSchemaEnumBinding<UnitFilterResult>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_UnitFilterResult.m_pOuterTypeScope = v3;
+  (*(*v3 + 272LL))(
+    v3,
+    &CSchemaEnumBinding<UnitFilterResult>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_UnitFilterResult);
+  return &CSchemaEnumBinding<UnitFilterResult>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_UnitFilterResult;
+}
+
+
+// CSchemaEnumBinding<DOTA_UNIT_TARGET_TEAM>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE  (line 283, @0x000000000266d430, libserver.so)  // inlines: Count, Initialize, SetTypeScope
+// callers: CSchemaEnumBinding<DOTA_UNIT_TARGET_TEAM>::Register
+// globals: CSchemaEnumBinding<DOTA_UNIT_TARGET_TEAM>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const
+CSchemaEnumInfo *__fastcall CSchemaEnumBinding<DOTA_UNIT_TARGET_TEAM>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        const char *pProjectName)
+{
+  ISchemaSystemTypeScope *v3; // rax
+  unsigned int v4; // edi
+  SchemaEnumeratorValue_t v5; // r8
+  SchemaEnumeratorValue_t v6; // r9
+  SchemaEnumeratorValue_t *v7; // rdx
+
+  v3 = (*(*pSchemaSystem + 112LL))(pSchemaSystem, 0, pBinaryName);
+  if ( CSchemaEnumBinding<DOTA_UNIT_TARGET_TEAM>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_DOTA_UNIT_TARGET_TEAM.m_Enumerators.m_Data.m_nImplLength != 0 )
+  {
+    v4 = abs32(CSchemaEnumBinding<DOTA_UNIT_TARGET_TEAM>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_DOTA_UNIT_TARGET_TEAM.m_Enumerators.m_Data.m_nImplLength);
+    v5 = *(CSchemaEnumBinding<DOTA_UNIT_TARGET_TEAM>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_DOTA_UNIT_TARGET_TEAM.m_Enumerators.m_Data.m_pImplElements
+         + 2);
+    CSchemaEnumBinding<DOTA_UNIT_TARGET_TEAM>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_DOTA_UNIT_TARGET_TEAM.m_nMinValue = v5;
+    v6 = *(CSchemaEnumBinding<DOTA_UNIT_TARGET_TEAM>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_DOTA_UNIT_TARGET_TEAM.m_Enumerators.m_Data.m_pImplElements
+         + 2);
+    CSchemaEnumBinding<DOTA_UNIT_TARGET_TEAM>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_DOTA_UNIT_TARGET_TEAM.m_nMaxValue = v6;
+    if ( v4 != 1 )
+    {
+      v7 = (CSchemaEnumBinding<DOTA_UNIT_TARGET_TEAM>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_DOTA_UNIT_TARGET_TEAM.m_Enumerators.m_Data.m_pImplElements
+          + 72);
+      do
+      {
+        if ( v5 > *v7 )
+          v5 = *v7;
+        CSchemaEnumBinding<DOTA_UNIT_TARGET_TEAM>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_DOTA_UNIT_TARGET_TEAM.m_nMinValue = v5;
+        if ( v6 < *v7 )
+          v6 = *v7;
+        v7 += 7;
+        CSchemaEnumBinding<DOTA_UNIT_TARGET_TEAM>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_DOTA_UNIT_TARGET_TEAM.m_nMaxValue = v6;
+      }
+      while ( v7 != CSchemaEnumBinding<DOTA_UNIT_TARGET_TEAM>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_DOTA_UNIT_TARGET_TEAM.m_Enumerators.m_Data.m_pImplElements
+                  + 7 * v4
+                  + 2 );
+    }
+  }
+  else
+  {
+    CSchemaEnumBinding<DOTA_UNIT_TARGET_TEAM>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_DOTA_UNIT_TARGET_TEAM.m_nMinValue = 0;
+    CSchemaEnumBinding<DOTA_UNIT_TARGET_TEAM>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_DOTA_UNIT_TARGET_TEAM.m_nMaxValue = 0;
+  }
+  CSchemaEnumBinding<DOTA_UNIT_TARGET_TEAM>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_DOTA_UNIT_TARGET_TEAM.m_pOuterTypeScope = v3;
+  (*(*v3 + 272LL))(
+    v3,
+    &CSchemaEnumBinding<DOTA_UNIT_TARGET_TEAM>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_DOTA_UNIT_TARGET_TEAM);
+  return &CSchemaEnumBinding<DOTA_UNIT_TARGET_TEAM>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_DOTA_UNIT_TARGET_TEAM;
+}
+
+
+// CSchemaEnumBinding<DOTA_UNIT_TARGET_TYPE>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE  (line 297, @0x000000000266d510, libserver.so)  // inlines: Count, Initialize, SetTypeScope
+// callers: CSchemaEnumBinding<DOTA_UNIT_TARGET_TYPE>::Register
+// globals: CSchemaEnumBinding<DOTA_UNIT_TARGET_TYPE>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const
+CSchemaEnumInfo *__fastcall CSchemaEnumBinding<DOTA_UNIT_TARGET_TYPE>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        const char *pProjectName)
+{
+  ISchemaSystemTypeScope *v3; // rax
+  unsigned int v4; // edi
+  SchemaEnumeratorValue_t v5; // r8
+  SchemaEnumeratorValue_t v6; // r9
+  SchemaEnumeratorValue_t *v7; // rdx
+
+  v3 = (*(*pSchemaSystem + 112LL))(pSchemaSystem, 0, pBinaryName);
+  if ( CSchemaEnumBinding<DOTA_UNIT_TARGET_TYPE>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_DOTA_UNIT_TARGET_TYPE.m_Enumerators.m_Data.m_nImplLength != 0 )
+  {
+    v4 = abs32(CSchemaEnumBinding<DOTA_UNIT_TARGET_TYPE>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_DOTA_UNIT_TARGET_TYPE.m_Enumerators.m_Data.m_nImplLength);
+    v5 = *(CSchemaEnumBinding<DOTA_UNIT_TARGET_TYPE>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_DOTA_UNIT_TARGET_TYPE.m_Enumerators.m_Data.m_pImplElements
+         + 2);
+    CSchemaEnumBinding<DOTA_UNIT_TARGET_TYPE>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_DOTA_UNIT_TARGET_TYPE.m_nMinValue = v5;
+    v6 = *(CSchemaEnumBinding<DOTA_UNIT_TARGET_TYPE>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_DOTA_UNIT_TARGET_TYPE.m_Enumerators.m_Data.m_pImplElements
+         + 2);
+    CSchemaEnumBinding<DOTA_UNIT_TARGET_TYPE>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_DOTA_UNIT_TARGET_TYPE.m_nMaxValue = v6;
+    if ( v4 != 1 )
+    {
+      v7 = (CSchemaEnumBinding<DOTA_UNIT_TARGET_TYPE>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_DOTA_UNIT_TARGET_TYPE.m_Enumerators.m_Data.m_pImplElements
+          + 72);
+      do
+      {
+        if ( v5 > *v7 )
+          v5 = *v7;
+        CSchemaEnumBinding<DOTA_UNIT_TARGET_TYPE>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_DOTA_UNIT_TARGET_TYPE.m_nMinValue = v5;
+        if ( v6 < *v7 )
+          v6 = *v7;
+        v7 += 7;
+        CSchemaEnumBinding<DOTA_UNIT_TARGET_TYPE>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_DOTA_UNIT_TARGET_TYPE.m_nMaxValue = v6;
+      }
+      while ( v7 != CSchemaEnumBinding<DOTA_UNIT_TARGET_TYPE>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_DOTA_UNIT_TARGET_TYPE.m_Enumerators.m_Data.m_pImplElements
+                  + 7 * v4
+                  + 2 );
+    }
+  }
+  else
+  {
+    CSchemaEnumBinding<DOTA_UNIT_TARGET_TYPE>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_DOTA_UNIT_TARGET_TYPE.m_nMinValue = 0;
+    CSchemaEnumBinding<DOTA_UNIT_TARGET_TYPE>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_DOTA_UNIT_TARGET_TYPE.m_nMaxValue = 0;
+  }
+  CSchemaEnumBinding<DOTA_UNIT_TARGET_TYPE>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_DOTA_UNIT_TARGET_TYPE.m_pOuterTypeScope = v3;
+  (*(*v3 + 272LL))(
+    v3,
+    &CSchemaEnumBinding<DOTA_UNIT_TARGET_TYPE>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_DOTA_UNIT_TARGET_TYPE);
+  return &CSchemaEnumBinding<DOTA_UNIT_TARGET_TYPE>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_DOTA_UNIT_TARGET_TYPE;
+}
+
+
+// CSchemaEnumBinding<DOTA_UNIT_TARGET_FLAGS>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE  (line 316, @0x000000000266d5f0, libserver.so)  // inlines: Count, Initialize, SetTypeScope
+// callers: CSchemaEnumBinding<DOTA_UNIT_TARGET_FLAGS>::Register
+// globals: CSchemaEnumBinding<DOTA_UNIT_TARGET_FLAGS>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char cons
+CSchemaEnumInfo *__fastcall CSchemaEnumBinding<DOTA_UNIT_TARGET_FLAGS>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        const char *pProjectName)
+{
+  ISchemaSystemTypeScope *v3; // rax
+  unsigned int v4; // edi
+  SchemaEnumeratorValue_t v5; // r8
+  SchemaEnumeratorValue_t v6; // r9
+  SchemaEnumeratorValue_t *v7; // rdx
+
+  v3 = (*(*pSchemaSystem + 112LL))(pSchemaSystem, 0, pBinaryName);
+  if ( CSchemaEnumBinding<DOTA_UNIT_TARGET_FLAGS>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_DOTA_UNIT_TARGET_FLAGS.m_Enumerators.m_Data.m_nImplLength != 0 )
+  {
+    v4 = abs32(CSchemaEnumBinding<DOTA_UNIT_TARGET_FLAGS>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_DOTA_UNIT_TARGET_FLAGS.m_Enumerators.m_Data.m_nImplLength);
+    v5 = *(CSchemaEnumBinding<DOTA_UNIT_TARGET_FLAGS>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_DOTA_UNIT_TARGET_FLAGS.m_Enumerators.m_Data.m_pImplElements
+         + 2);
+    CSchemaEnumBinding<DOTA_UNIT_TARGET_FLAGS>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_DOTA_UNIT_TARGET_FLAGS.m_nMinValue = v5;
+    v6 = *(CSchemaEnumBinding<DOTA_UNIT_TARGET_FLAGS>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_DOTA_UNIT_TARGET_FLAGS.m_Enumerators.m_Data.m_pImplElements
+         + 2);
+    CSchemaEnumBinding<DOTA_UNIT_TARGET_FLAGS>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_DOTA_UNIT_TARGET_FLAGS.m_nMaxValue = v6;
+    if ( v4 != 1 )
+    {
+      v7 = (CSchemaEnumBinding<DOTA_UNIT_TARGET_FLAGS>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_DOTA_UNIT_TARGET_FLAGS.m_Enumerators.m_Data.m_pImplElements
+          + 72);
+      do
+      {
+        if ( v5 > *v7 )
+          v5 = *v7;
+        CSchemaEnumBinding<DOTA_UNIT_TARGET_FLAGS>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_DOTA_UNIT_TARGET_FLAGS.m_nMinValue = v5;
+        if ( v6 < *v7 )
+          v6 = *v7;
+        v7 += 7;
+        CSchemaEnumBinding<DOTA_UNIT_TARGET_FLAGS>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_DOTA_UNIT_TARGET_FLAGS.m_nMaxValue = v6;
+      }
+      while ( v7 != CSchemaEnumBinding<DOTA_UNIT_TARGET_FLAGS>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_DOTA_UNIT_TARGET_FLAGS.m_Enumerators.m_Data.m_pImplElements
+                  + 7 * v4
+                  + 2 );
+    }
+  }
+  else
+  {
+    CSchemaEnumBinding<DOTA_UNIT_TARGET_FLAGS>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_DOTA_UNIT_TARGET_FLAGS.m_nMinValue = 0;
+    CSchemaEnumBinding<DOTA_UNIT_TARGET_FLAGS>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_DOTA_UNIT_TARGET_FLAGS.m_nMaxValue = 0;
+  }
+  CSchemaEnumBinding<DOTA_UNIT_TARGET_FLAGS>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_DOTA_UNIT_TARGET_FLAGS.m_pOuterTypeScope = v3;
+  (*(*v3 + 272LL))(
+    v3,
+    &CSchemaEnumBinding<DOTA_UNIT_TARGET_FLAGS>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_DOTA_UNIT_TARGET_FLAGS);
+  return &CSchemaEnumBinding<DOTA_UNIT_TARGET_FLAGS>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_DOTA_UNIT_TARGET_FLAGS;
+}
+
+
+// CSchemaEnumBinding<DOTA_PURGE_FLAGS>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE  (line 346, @0x000000000266d6d0, libserver.so)  // inlines: Count, Initialize, SetTypeScope
+// callers: CSchemaEnumBinding<DOTA_PURGE_FLAGS>::Register
+// globals: CSchemaEnumBinding<DOTA_PURGE_FLAGS>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,cha
+CSchemaEnumInfo *__fastcall CSchemaEnumBinding<DOTA_PURGE_FLAGS>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        const char *pProjectName)
+{
+  ISchemaSystemTypeScope *v3; // rax
+  unsigned int v4; // edi
+  SchemaEnumeratorValue_t v5; // r8
+  SchemaEnumeratorValue_t v6; // r9
+  SchemaEnumeratorValue_t *v7; // rdx
+
+  v3 = (*(*pSchemaSystem + 112LL))(pSchemaSystem, 0, pBinaryName);
+  if ( CSchemaEnumBinding<DOTA_PURGE_FLAGS>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_DOTA_PURGE_FLAGS.m_Enumerators.m_Data.m_nImplLength != 0 )
+  {
+    v4 = abs32(CSchemaEnumBinding<DOTA_PURGE_FLAGS>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_DOTA_PURGE_FLAGS.m_Enumerators.m_Data.m_nImplLength);
+    v5 = *(CSchemaEnumBinding<DOTA_PURGE_FLAGS>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_DOTA_PURGE_FLAGS.m_Enumerators.m_Data.m_pImplElements
+         + 2);
+    CSchemaEnumBinding<DOTA_PURGE_FLAGS>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_DOTA_PURGE_FLAGS.m_nMinValue = v5;
+    v6 = *(CSchemaEnumBinding<DOTA_PURGE_FLAGS>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_DOTA_PURGE_FLAGS.m_Enumerators.m_Data.m_pImplElements
+         + 2);
+    CSchemaEnumBinding<DOTA_PURGE_FLAGS>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_DOTA_PURGE_FLAGS.m_nMaxValue = v6;
+    if ( v4 != 1 )
+    {
+      v7 = (CSchemaEnumBinding<DOTA_PURGE_FLAGS>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_DOTA_PURGE_FLAGS.m_Enumerators.m_Data.m_pImplElements
+          + 72);
+      do
+      {
+        if ( v5 > *v7 )
+          v5 = *v7;
+        CSchemaEnumBinding<DOTA_PURGE_FLAGS>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_DOTA_PURGE_FLAGS.m_nMinValue = v5;
+        if ( v6 < *v7 )
+          v6 = *v7;
+        v7 += 7;
+        CSchemaEnumBinding<DOTA_PURGE_FLAGS>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_DOTA_PURGE_FLAGS.m_nMaxValue = v6;
+      }
+      while ( v7 != CSchemaEnumBinding<DOTA_PURGE_FLAGS>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_DOTA_PURGE_FLAGS.m_Enumerators.m_Data.m_pImplElements
+                  + 7 * v4
+                  + 2 );
+    }
+  }
+  else
+  {
+    CSchemaEnumBinding<DOTA_PURGE_FLAGS>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_DOTA_PURGE_FLAGS.m_nMinValue = 0;
+    CSchemaEnumBinding<DOTA_PURGE_FLAGS>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_DOTA_PURGE_FLAGS.m_nMaxValue = 0;
+  }
+  CSchemaEnumBinding<DOTA_PURGE_FLAGS>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_DOTA_PURGE_FLAGS.m_pOuterTypeScope = v3;
+  (*(*v3 + 272LL))(
+    v3,
+    &CSchemaEnumBinding<DOTA_PURGE_FLAGS>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_DOTA_PURGE_FLAGS);
+  return &CSchemaEnumBinding<DOTA_PURGE_FLAGS>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_DOTA_PURGE_FLAGS;
+}
+
+
+// CSchemaEnumBinding<DOTATeam_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE  (line 361, @0x000000000266d7b0, libserver.so)  // inlines: Count, Initialize, SetTypeScope
+// callers: CSchemaEnumBinding<DOTATeam_t>::Register
+// globals: CSchemaEnumBinding<DOTATeam_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char cons
+CSchemaEnumInfo *__fastcall CSchemaEnumBinding<DOTATeam_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        const char *pProjectName)
+{
+  ISchemaSystemTypeScope *v3; // rax
+  unsigned int v4; // edi
+  SchemaEnumeratorValue_t v5; // r8
+  SchemaEnumeratorValue_t v6; // r9
+  SchemaEnumeratorValue_t *v7; // rdx
+
+  v3 = (*(*pSchemaSystem + 112LL))(pSchemaSystem, 0, pBinaryName);
+  if ( CSchemaEnumBinding<DOTATeam_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_DOTATeam_t.m_Enumerators.m_Data.m_nImplLength != 0 )
+  {
+    v4 = abs32(CSchemaEnumBinding<DOTATeam_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_DOTATeam_t.m_Enumerators.m_Data.m_nImplLength);
+    v5 = *(CSchemaEnumBinding<DOTATeam_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_DOTATeam_t.m_Enumerators.m_Data.m_pImplElements
+         + 2);
+    CSchemaEnumBinding<DOTATeam_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_DOTATeam_t.m_nMinValue = v5;
+    v6 = *(CSchemaEnumBinding<DOTATeam_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_DOTATeam_t.m_Enumerators.m_Data.m_pImplElements
+         + 2);
+    CSchemaEnumBinding<DOTATeam_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_DOTATeam_t.m_nMaxValue = v6;
+    if ( v4 != 1 )
+    {
+      v7 = (CSchemaEnumBinding<DOTATeam_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_DOTATeam_t.m_Enumerators.m_Data.m_pImplElements
+          + 72);
+      do
+      {
+        if ( v5 > *v7 )
+          v5 = *v7;
+        CSchemaEnumBinding<DOTATeam_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_DOTATeam_t.m_nMinValue = v5;
+        if ( v6 < *v7 )
+          v6 = *v7;
+        v7 += 7;
+        CSchemaEnumBinding<DOTATeam_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_DOTATeam_t.m_nMaxValue = v6;
+      }
+      while ( v7 != CSchemaEnumBinding<DOTATeam_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_DOTATeam_t.m_Enumerators.m_Data.m_pImplElements
+                  + 7 * v4
+                  + 2 );
+    }
+  }
+  else
+  {
+    CSchemaEnumBinding<DOTATeam_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_DOTATeam_t.m_nMinValue = 0;
+    CSchemaEnumBinding<DOTATeam_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_DOTATeam_t.m_nMaxValue = 0;
+  }
+  CSchemaEnumBinding<DOTATeam_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_DOTATeam_t.m_pOuterTypeScope = v3;
+  (*(*v3 + 272LL))(
+    v3,
+    &CSchemaEnumBinding<DOTATeam_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_DOTATeam_t);
+  return &CSchemaEnumBinding<DOTATeam_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_DOTATeam_t;
+}
+
+
+// CSchemaEnumBinding<modifierstate>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE  (line 387, @0x000000000266d890, libserver.so)  // inlines: Count, Initialize, SetTypeScope
+// callers: CSchemaEnumBinding<modifierstate>::Register
+// globals: CSchemaEnumBinding<modifierstate>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char c
+CSchemaEnumInfo *__fastcall CSchemaEnumBinding<modifierstate>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        const char *pProjectName)
+{
+  ISchemaSystemTypeScope *v3; // rax
+  unsigned int v4; // edi
+  SchemaEnumeratorValue_t v5; // r8
+  SchemaEnumeratorValue_t v6; // r9
+  SchemaEnumeratorValue_t *v7; // rdx
+
+  v3 = (*(*pSchemaSystem + 112LL))(pSchemaSystem, 0, pBinaryName);
+  if ( CSchemaEnumBinding<modifierstate>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_modifierstate.m_Enumerators.m_Data.m_nImplLength != 0 )
+  {
+    v4 = abs32(CSchemaEnumBinding<modifierstate>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_modifierstate.m_Enumerators.m_Data.m_nImplLength);
+    v5 = *(CSchemaEnumBinding<modifierstate>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_modifierstate.m_Enumerators.m_Data.m_pImplElements
+         + 2);
+    CSchemaEnumBinding<modifierstate>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_modifierstate.m_nMinValue = v5;
+    v6 = *(CSchemaEnumBinding<modifierstate>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_modifierstate.m_Enumerators.m_Data.m_pImplElements
+         + 2);
+    CSchemaEnumBinding<modifierstate>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_modifierstate.m_nMaxValue = v6;
+    if ( v4 != 1 )
+    {
+      v7 = (CSchemaEnumBinding<modifierstate>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_modifierstate.m_Enumerators.m_Data.m_pImplElements
+          + 72);
+      do
+      {
+        if ( v5 > *v7 )
+          v5 = *v7;
+        CSchemaEnumBinding<modifierstate>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_modifierstate.m_nMinValue = v5;
+        if ( v6 < *v7 )
+          v6 = *v7;
+        v7 += 7;
+        CSchemaEnumBinding<modifierstate>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_modifierstate.m_nMaxValue = v6;
+      }
+      while ( v7 != CSchemaEnumBinding<modifierstate>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_modifierstate.m_Enumerators.m_Data.m_pImplElements
+                  + 7 * v4
+                  + 2 );
+    }
+  }
+  else
+  {
+    CSchemaEnumBinding<modifierstate>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_modifierstate.m_nMinValue = 0;
+    CSchemaEnumBinding<modifierstate>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_modifierstate.m_nMaxValue = 0;
+  }
+  CSchemaEnumBinding<modifierstate>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_modifierstate.m_pOuterTypeScope = v3;
+  (*(*v3 + 272LL))(
+    v3,
+    &CSchemaEnumBinding<modifierstate>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_modifierstate);
+  return &CSchemaEnumBinding<modifierstate>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_modifierstate;
+}
+
+
+// CSchemaEnumBinding<DOTA_LANE>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE  (line 432, @0x000000000266d970, libserver.so)  // inlines: Count, Initialize, SetTypeScope
+// callers: CSchemaEnumBinding<DOTA_LANE>::Register
+// globals: CSchemaEnumBinding<DOTA_LANE>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const
+CSchemaEnumInfo *__fastcall CSchemaEnumBinding<DOTA_LANE>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        const char *pProjectName)
+{
+  ISchemaSystemTypeScope *v3; // rax
+  unsigned int v4; // edi
+  SchemaEnumeratorValue_t v5; // r8
+  SchemaEnumeratorValue_t v6; // r9
+  SchemaEnumeratorValue_t *v7; // rdx
+
+  v3 = (*(*pSchemaSystem + 112LL))(pSchemaSystem, 0, pBinaryName);
+  if ( CSchemaEnumBinding<DOTA_LANE>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_DOTA_LANE.m_Enumerators.m_Data.m_nImplLength != 0 )
+  {
+    v4 = abs32(CSchemaEnumBinding<DOTA_LANE>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_DOTA_LANE.m_Enumerators.m_Data.m_nImplLength);
+    v5 = *(CSchemaEnumBinding<DOTA_LANE>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_DOTA_LANE.m_Enumerators.m_Data.m_pImplElements
+         + 2);
+    CSchemaEnumBinding<DOTA_LANE>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_DOTA_LANE.m_nMinValue = v5;
+    v6 = *(CSchemaEnumBinding<DOTA_LANE>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_DOTA_LANE.m_Enumerators.m_Data.m_pImplElements
+         + 2);
+    CSchemaEnumBinding<DOTA_LANE>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_DOTA_LANE.m_nMaxValue = v6;
+    if ( v4 != 1 )
+    {
+      v7 = (CSchemaEnumBinding<DOTA_LANE>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_DOTA_LANE.m_Enumerators.m_Data.m_pImplElements
+          + 72);
+      do
+      {
+        if ( v5 > *v7 )
+          v5 = *v7;
+        CSchemaEnumBinding<DOTA_LANE>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_DOTA_LANE.m_nMinValue = v5;
+        if ( v6 < *v7 )
+          v6 = *v7;
+        v7 += 7;
+        CSchemaEnumBinding<DOTA_LANE>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_DOTA_LANE.m_nMaxValue = v6;
+      }
+      while ( v7 != CSchemaEnumBinding<DOTA_LANE>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_DOTA_LANE.m_Enumerators.m_Data.m_pImplElements
+                  + 7 * v4
+                  + 2 );
+    }
+  }
+  else
+  {
+    CSchemaEnumBinding<DOTA_LANE>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_DOTA_LANE.m_nMinValue = 0;
+    CSchemaEnumBinding<DOTA_LANE>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_DOTA_LANE.m_nMaxValue = 0;
+  }
+  CSchemaEnumBinding<DOTA_LANE>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_DOTA_LANE.m_pOuterTypeScope = v3;
+  (*(*v3 + 272LL))(
+    v3,
+    &CSchemaEnumBinding<DOTA_LANE>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_DOTA_LANE);
+  return &CSchemaEnumBinding<DOTA_LANE>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_DOTA_LANE;
+}
+
+
+// CSchemaEnumBinding<DOTA_SHOP_TYPE>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE  (line 446, @0x000000000266da50, libserver.so)  // inlines: Count, Initialize, SetTypeScope
+// callers: CSchemaEnumBinding<DOTA_SHOP_TYPE>::Register
+// globals: CSchemaEnumBinding<DOTA_SHOP_TYPE>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char 
+CSchemaEnumInfo *__fastcall CSchemaEnumBinding<DOTA_SHOP_TYPE>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        const char *pProjectName)
+{
+  ISchemaSystemTypeScope *v3; // rax
+  unsigned int v4; // edi
+  SchemaEnumeratorValue_t v5; // r8
+  SchemaEnumeratorValue_t v6; // r9
+  SchemaEnumeratorValue_t *v7; // rdx
+
+  v3 = (*(*pSchemaSystem + 112LL))(pSchemaSystem, 0, pBinaryName);
+  if ( CSchemaEnumBinding<DOTA_SHOP_TYPE>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_DOTA_SHOP_TYPE.m_Enumerators.m_Data.m_nImplLength != 0 )
+  {
+    v4 = abs32(CSchemaEnumBinding<DOTA_SHOP_TYPE>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_DOTA_SHOP_TYPE.m_Enumerators.m_Data.m_nImplLength);
+    v5 = *(CSchemaEnumBinding<DOTA_SHOP_TYPE>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_DOTA_SHOP_TYPE.m_Enumerators.m_Data.m_pImplElements
+         + 2);
+    CSchemaEnumBinding<DOTA_SHOP_TYPE>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_DOTA_SHOP_TYPE.m_nMinValue = v5;
+    v6 = *(CSchemaEnumBinding<DOTA_SHOP_TYPE>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_DOTA_SHOP_TYPE.m_Enumerators.m_Data.m_pImplElements
+         + 2);
+    CSchemaEnumBinding<DOTA_SHOP_TYPE>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_DOTA_SHOP_TYPE.m_nMaxValue = v6;
+    if ( v4 != 1 )
+    {
+      v7 = (CSchemaEnumBinding<DOTA_SHOP_TYPE>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_DOTA_SHOP_TYPE.m_Enumerators.m_Data.m_pImplElements
+          + 72);
+      do
+      {
+        if ( v5 > *v7 )
+          v5 = *v7;
+        CSchemaEnumBinding<DOTA_SHOP_TYPE>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_DOTA_SHOP_TYPE.m_nMinValue = v5;
+        if ( v6 < *v7 )
+          v6 = *v7;
+        v7 += 7;
+        CSchemaEnumBinding<DOTA_SHOP_TYPE>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_DOTA_SHOP_TYPE.m_nMaxValue = v6;
+      }
+      while ( v7 != CSchemaEnumBinding<DOTA_SHOP_TYPE>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_DOTA_SHOP_TYPE.m_Enumerators.m_Data.m_pImplElements
+                  + 7 * v4
+                  + 2 );
+    }
+  }
+  else
+  {
+    CSchemaEnumBinding<DOTA_SHOP_TYPE>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_DOTA_SHOP_TYPE.m_nMinValue = 0;
+    CSchemaEnumBinding<DOTA_SHOP_TYPE>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_DOTA_SHOP_TYPE.m_nMaxValue = 0;
+  }
+  CSchemaEnumBinding<DOTA_SHOP_TYPE>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_DOTA_SHOP_TYPE.m_pOuterTypeScope = v3;
+  (*(*v3 + 272LL))(
+    v3,
+    &CSchemaEnumBinding<DOTA_SHOP_TYPE>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_DOTA_SHOP_TYPE);
+  return &CSchemaEnumBinding<DOTA_SHOP_TYPE>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_DOTA_SHOP_TYPE;
+}
+
+
+// CSchemaEnumBinding<DOTA_HOLDOUT_TOWER_TYPE>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE  (line 462, @0x000000000266db30, libserver.so)  // inlines: Count, Initialize, SetTypeScope
+// callers: CSchemaEnumBinding<DOTA_HOLDOUT_TOWER_TYPE>::Register
+// globals: CSchemaEnumBinding<DOTA_HOLDOUT_TOWER_TYPE>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char con
+CSchemaEnumInfo *__fastcall CSchemaEnumBinding<DOTA_HOLDOUT_TOWER_TYPE>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        const char *pProjectName)
+{
+  ISchemaSystemTypeScope *v3; // rax
+  unsigned int v4; // edi
+  SchemaEnumeratorValue_t v5; // r8
+  SchemaEnumeratorValue_t v6; // r9
+  SchemaEnumeratorValue_t *v7; // rdx
+
+  v3 = (*(*pSchemaSystem + 112LL))(pSchemaSystem, 0, pBinaryName);
+  if ( CSchemaEnumBinding<DOTA_HOLDOUT_TOWER_TYPE>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_DOTA_HOLDOUT_TOWER_TYPE.m_Enumerators.m_Data.m_nImplLength != 0 )
+  {
+    v4 = abs32(CSchemaEnumBinding<DOTA_HOLDOUT_TOWER_TYPE>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_DOTA_HOLDOUT_TOWER_TYPE.m_Enumerators.m_Data.m_nImplLength);
+    v5 = *(CSchemaEnumBinding<DOTA_HOLDOUT_TOWER_TYPE>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_DOTA_HOLDOUT_TOWER_TYPE.m_Enumerators.m_Data.m_pImplElements
+         + 2);
+    CSchemaEnumBinding<DOTA_HOLDOUT_TOWER_TYPE>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_DOTA_HOLDOUT_TOWER_TYPE.m_nMinValue = v5;
+    v6 = *(CSchemaEnumBinding<DOTA_HOLDOUT_TOWER_TYPE>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_DOTA_HOLDOUT_TOWER_TYPE.m_Enumerators.m_Data.m_pImplElements
+         + 2);
+    CSchemaEnumBinding<DOTA_HOLDOUT_TOWER_TYPE>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_DOTA_HOLDOUT_TOWER_TYPE.m_nMaxValue = v6;
+    if ( v4 != 1 )
+    {
+      v7 = (CSchemaEnumBinding<DOTA_HOLDOUT_TOWER_TYPE>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_DOTA_HOLDOUT_TOWER_TYPE.m_Enumerators.m_Data.m_pImplElements
+          + 72);
+      do
+      {
+        if ( v5 > *v7 )
+          v5 = *v7;
+        CSchemaEnumBinding<DOTA_HOLDOUT_TOWER_TYPE>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_DOTA_HOLDOUT_TOWER_TYPE.m_nMinValue = v5;
+        if ( v6 < *v7 )
+          v6 = *v7;
+        v7 += 7;
+        CSchemaEnumBinding<DOTA_HOLDOUT_TOWER_TYPE>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_DOTA_HOLDOUT_TOWER_TYPE.m_nMaxValue = v6;
+      }
+      while ( v7 != CSchemaEnumBinding<DOTA_HOLDOUT_TOWER_TYPE>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_DOTA_HOLDOUT_TOWER_TYPE.m_Enumerators.m_Data.m_pImplElements
+                  + 7 * v4
+                  + 2 );
+    }
+  }
+  else
+  {
+    CSchemaEnumBinding<DOTA_HOLDOUT_TOWER_TYPE>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_DOTA_HOLDOUT_TOWER_TYPE.m_nMinValue = 0;
+    CSchemaEnumBinding<DOTA_HOLDOUT_TOWER_TYPE>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_DOTA_HOLDOUT_TOWER_TYPE.m_nMaxValue = 0;
+  }
+  CSchemaEnumBinding<DOTA_HOLDOUT_TOWER_TYPE>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_DOTA_HOLDOUT_TOWER_TYPE.m_pOuterTypeScope = v3;
+  (*(*v3 + 272LL))(
+    v3,
+    &CSchemaEnumBinding<DOTA_HOLDOUT_TOWER_TYPE>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_DOTA_HOLDOUT_TOWER_TYPE);
+  return &CSchemaEnumBinding<DOTA_HOLDOUT_TOWER_TYPE>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_DOTA_HOLDOUT_TOWER_TYPE;
+}
+
+
+// CSchemaEnumBinding<DOTA_HOLDOUT_WALL_TYPE>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE  (line 476, @0x000000000266dc10, libserver.so)  // inlines: Count, Initialize, SetTypeScope
+// callers: CSchemaEnumBinding<DOTA_HOLDOUT_WALL_TYPE>::Register
+// globals: CSchemaEnumBinding<DOTA_HOLDOUT_WALL_TYPE>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char cons
+CSchemaEnumInfo *__fastcall CSchemaEnumBinding<DOTA_HOLDOUT_WALL_TYPE>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        const char *pProjectName)
+{
+  ISchemaSystemTypeScope *v3; // rax
+  unsigned int v4; // edi
+  SchemaEnumeratorValue_t v5; // r8
+  SchemaEnumeratorValue_t v6; // r9
+  SchemaEnumeratorValue_t *v7; // rdx
+
+  v3 = (*(*pSchemaSystem + 112LL))(pSchemaSystem, 0, pBinaryName);
+  if ( CSchemaEnumBinding<DOTA_HOLDOUT_WALL_TYPE>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_DOTA_HOLDOUT_WALL_TYPE.m_Enumerators.m_Data.m_nImplLength != 0 )
+  {
+    v4 = abs32(CSchemaEnumBinding<DOTA_HOLDOUT_WALL_TYPE>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_DOTA_HOLDOUT_WALL_TYPE.m_Enumerators.m_Data.m_nImplLength);
+    v5 = *(CSchemaEnumBinding<DOTA_HOLDOUT_WALL_TYPE>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_DOTA_HOLDOUT_WALL_TYPE.m_Enumerators.m_Data.m_pImplElements
+         + 2);
+    CSchemaEnumBinding<DOTA_HOLDOUT_WALL_TYPE>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_DOTA_HOLDOUT_WALL_TYPE.m_nMinValue = v5;
+    v6 = *(CSchemaEnumBinding<DOTA_HOLDOUT_WALL_TYPE>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_DOTA_HOLDOUT_WALL_TYPE.m_Enumerators.m_Data.m_pImplElements
+         + 2);
+    CSchemaEnumBinding<DOTA_HOLDOUT_WALL_TYPE>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_DOTA_HOLDOUT_WALL_TYPE.m_nMaxValue = v6;
+    if ( v4 != 1 )
+    {
+      v7 = (CSchemaEnumBinding<DOTA_HOLDOUT_WALL_TYPE>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_DOTA_HOLDOUT_WALL_TYPE.m_Enumerators.m_Data.m_pImplElements
+          + 72);
+      do
+      {
+        if ( v5 > *v7 )
+          v5 = *v7;
+        CSchemaEnumBinding<DOTA_HOLDOUT_WALL_TYPE>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_DOTA_HOLDOUT_WALL_TYPE.m_nMinValue = v5;
+        if ( v6 < *v7 )
+          v6 = *v7;
+        v7 += 7;
+        CSchemaEnumBinding<DOTA_HOLDOUT_WALL_TYPE>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_DOTA_HOLDOUT_WALL_TYPE.m_nMaxValue = v6;
+      }
+      while ( v7 != CSchemaEnumBinding<DOTA_HOLDOUT_WALL_TYPE>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_DOTA_HOLDOUT_WALL_TYPE.m_Enumerators.m_Data.m_pImplElements
+                  + 7 * v4
+                  + 2 );
+    }
+  }
+  else
+  {
+    CSchemaEnumBinding<DOTA_HOLDOUT_WALL_TYPE>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_DOTA_HOLDOUT_WALL_TYPE.m_nMinValue = 0;
+    CSchemaEnumBinding<DOTA_HOLDOUT_WALL_TYPE>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_DOTA_HOLDOUT_WALL_TYPE.m_nMaxValue = 0;
+  }
+  CSchemaEnumBinding<DOTA_HOLDOUT_WALL_TYPE>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_DOTA_HOLDOUT_WALL_TYPE.m_pOuterTypeScope = v3;
+  (*(*v3 + 272LL))(
+    v3,
+    &CSchemaEnumBinding<DOTA_HOLDOUT_WALL_TYPE>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_DOTA_HOLDOUT_WALL_TYPE);
+  return &CSchemaEnumBinding<DOTA_HOLDOUT_WALL_TYPE>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_DOTA_HOLDOUT_WALL_TYPE;
+}
+
+
+// CSchemaEnumBinding<ShopItemViewMode_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE  (line 490, @0x000000000266dcf0, libserver.so)  // inlines: Count, Initialize, SetTypeScope
+// callers: CSchemaEnumBinding<ShopItemViewMode_t>::Register
+// globals: CSchemaEnumBinding<ShopItemViewMode_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,c
+CSchemaEnumInfo *__fastcall CSchemaEnumBinding<ShopItemViewMode_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        const char *pProjectName)
+{
+  ISchemaSystemTypeScope *v3; // rax
+  unsigned int v4; // edi
+  SchemaEnumeratorValue_t v5; // r8
+  SchemaEnumeratorValue_t v6; // r9
+  SchemaEnumeratorValue_t *v7; // rdx
+
+  v3 = (*(*pSchemaSystem + 112LL))(pSchemaSystem, 0, pBinaryName);
+  if ( CSchemaEnumBinding<ShopItemViewMode_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_ShopItemViewMode_t.m_Enumerators.m_Data.m_nImplLength != 0 )
+  {
+    v4 = abs32(CSchemaEnumBinding<ShopItemViewMode_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_ShopItemViewMode_t.m_Enumerators.m_Data.m_nImplLength);
+    v5 = *(CSchemaEnumBinding<ShopItemViewMode_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_ShopItemViewMode_t.m_Enumerators.m_Data.m_pImplElements
+         + 2);
+    CSchemaEnumBinding<ShopItemViewMode_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_ShopItemViewMode_t.m_nMinValue = v5;
+    v6 = *(CSchemaEnumBinding<ShopItemViewMode_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_ShopItemViewMode_t.m_Enumerators.m_Data.m_pImplElements
+         + 2);
+    CSchemaEnumBinding<ShopItemViewMode_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_ShopItemViewMode_t.m_nMaxValue = v6;
+    if ( v4 != 1 )
+    {
+      v7 = (CSchemaEnumBinding<ShopItemViewMode_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_ShopItemViewMode_t.m_Enumerators.m_Data.m_pImplElements
+          + 72);
+      do
+      {
+        if ( v5 > *v7 )
+          v5 = *v7;
+        CSchemaEnumBinding<ShopItemViewMode_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_ShopItemViewMode_t.m_nMinValue = v5;
+        if ( v6 < *v7 )
+          v6 = *v7;
+        v7 += 7;
+        CSchemaEnumBinding<ShopItemViewMode_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_ShopItemViewMode_t.m_nMaxValue = v6;
+      }
+      while ( v7 != CSchemaEnumBinding<ShopItemViewMode_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_ShopItemViewMode_t.m_Enumerators.m_Data.m_pImplElements
+                  + 7 * v4
+                  + 2 );
+    }
+  }
+  else
+  {
+    CSchemaEnumBinding<ShopItemViewMode_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_ShopItemViewMode_t.m_nMinValue = 0;
+    CSchemaEnumBinding<ShopItemViewMode_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_ShopItemViewMode_t.m_nMaxValue = 0;
+  }
+  CSchemaEnumBinding<ShopItemViewMode_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_ShopItemViewMode_t.m_pOuterTypeScope = v3;
+  (*(*v3 + 272LL))(
+    v3,
+    &CSchemaEnumBinding<ShopItemViewMode_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_ShopItemViewMode_t);
+  return &CSchemaEnumBinding<ShopItemViewMode_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_ShopItemViewMode_t;
+}
+
+
+// CSchemaEnumBinding<DOTA_SHOP_CATEGORY>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE  (line 501, @0x000000000266ddd0, libserver.so)  // inlines: Count, Initialize, SetTypeScope
+// callers: CSchemaEnumBinding<DOTA_SHOP_CATEGORY>::Register
+// globals: CSchemaEnumBinding<DOTA_SHOP_CATEGORY>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,c
+CSchemaEnumInfo *__fastcall CSchemaEnumBinding<DOTA_SHOP_CATEGORY>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        const char *pProjectName)
+{
+  ISchemaSystemTypeScope *v3; // rax
+  unsigned int v4; // edi
+  SchemaEnumeratorValue_t v5; // r8
+  SchemaEnumeratorValue_t v6; // r9
+  SchemaEnumeratorValue_t *v7; // rdx
+
+  v3 = (*(*pSchemaSystem + 112LL))(pSchemaSystem, 0, pBinaryName);
+  if ( CSchemaEnumBinding<DOTA_SHOP_CATEGORY>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_DOTA_SHOP_CATEGORY.m_Enumerators.m_Data.m_nImplLength != 0 )
+  {
+    v4 = abs32(CSchemaEnumBinding<DOTA_SHOP_CATEGORY>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_DOTA_SHOP_CATEGORY.m_Enumerators.m_Data.m_nImplLength);
+    v5 = *(CSchemaEnumBinding<DOTA_SHOP_CATEGORY>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_DOTA_SHOP_CATEGORY.m_Enumerators.m_Data.m_pImplElements
+         + 2);
+    CSchemaEnumBinding<DOTA_SHOP_CATEGORY>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_DOTA_SHOP_CATEGORY.m_nMinValue = v5;
+    v6 = *(CSchemaEnumBinding<DOTA_SHOP_CATEGORY>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_DOTA_SHOP_CATEGORY.m_Enumerators.m_Data.m_pImplElements
+         + 2);
+    CSchemaEnumBinding<DOTA_SHOP_CATEGORY>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_DOTA_SHOP_CATEGORY.m_nMaxValue = v6;
+    if ( v4 != 1 )
+    {
+      v7 = (CSchemaEnumBinding<DOTA_SHOP_CATEGORY>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_DOTA_SHOP_CATEGORY.m_Enumerators.m_Data.m_pImplElements
+          + 72);
+      do
+      {
+        if ( v5 > *v7 )
+          v5 = *v7;
+        CSchemaEnumBinding<DOTA_SHOP_CATEGORY>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_DOTA_SHOP_CATEGORY.m_nMinValue = v5;
+        if ( v6 < *v7 )
+          v6 = *v7;
+        v7 += 7;
+        CSchemaEnumBinding<DOTA_SHOP_CATEGORY>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_DOTA_SHOP_CATEGORY.m_nMaxValue = v6;
+      }
+      while ( v7 != CSchemaEnumBinding<DOTA_SHOP_CATEGORY>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_DOTA_SHOP_CATEGORY.m_Enumerators.m_Data.m_pImplElements
+                  + 7 * v4
+                  + 2 );
+    }
+  }
+  else
+  {
+    CSchemaEnumBinding<DOTA_SHOP_CATEGORY>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_DOTA_SHOP_CATEGORY.m_nMinValue = 0;
+    CSchemaEnumBinding<DOTA_SHOP_CATEGORY>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_DOTA_SHOP_CATEGORY.m_nMaxValue = 0;
+  }
+  CSchemaEnumBinding<DOTA_SHOP_CATEGORY>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_DOTA_SHOP_CATEGORY.m_pOuterTypeScope = v3;
+  (*(*v3 + 272LL))(
+    v3,
+    &CSchemaEnumBinding<DOTA_SHOP_CATEGORY>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_DOTA_SHOP_CATEGORY);
+  return &CSchemaEnumBinding<DOTA_SHOP_CATEGORY>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_DOTA_SHOP_CATEGORY;
+}
+
+
+// CSchemaEnumBinding<DOTA_RUNES>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE  (line 527, @0x000000000266deb0, libserver.so)  // inlines: Count, Initialize, SetTypeScope
+// callers: CSchemaEnumBinding<DOTA_RUNES>::Register
+// globals: CSchemaEnumBinding<DOTA_RUNES>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char cons
+CSchemaEnumInfo *__fastcall CSchemaEnumBinding<DOTA_RUNES>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        const char *pProjectName)
+{
+  ISchemaSystemTypeScope *v3; // rax
+  unsigned int v4; // edi
+  SchemaEnumeratorValue_t v5; // r8
+  SchemaEnumeratorValue_t v6; // r9
+  SchemaEnumeratorValue_t *v7; // rdx
+
+  v3 = (*(*pSchemaSystem + 112LL))(pSchemaSystem, 0, pBinaryName);
+  if ( CSchemaEnumBinding<DOTA_RUNES>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_DOTA_RUNES.m_Enumerators.m_Data.m_nImplLength != 0 )
+  {
+    v4 = abs32(CSchemaEnumBinding<DOTA_RUNES>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_DOTA_RUNES.m_Enumerators.m_Data.m_nImplLength);
+    v5 = *(CSchemaEnumBinding<DOTA_RUNES>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_DOTA_RUNES.m_Enumerators.m_Data.m_pImplElements
+         + 2);
+    CSchemaEnumBinding<DOTA_RUNES>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_DOTA_RUNES.m_nMinValue = v5;
+    v6 = *(CSchemaEnumBinding<DOTA_RUNES>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_DOTA_RUNES.m_Enumerators.m_Data.m_pImplElements
+         + 2);
+    CSchemaEnumBinding<DOTA_RUNES>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_DOTA_RUNES.m_nMaxValue = v6;
+    if ( v4 != 1 )
+    {
+      v7 = (CSchemaEnumBinding<DOTA_RUNES>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_DOTA_RUNES.m_Enumerators.m_Data.m_pImplElements
+          + 72);
+      do
+      {
+        if ( v5 > *v7 )
+          v5 = *v7;
+        CSchemaEnumBinding<DOTA_RUNES>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_DOTA_RUNES.m_nMinValue = v5;
+        if ( v6 < *v7 )
+          v6 = *v7;
+        v7 += 7;
+        CSchemaEnumBinding<DOTA_RUNES>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_DOTA_RUNES.m_nMaxValue = v6;
+      }
+      while ( v7 != CSchemaEnumBinding<DOTA_RUNES>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_DOTA_RUNES.m_Enumerators.m_Data.m_pImplElements
+                  + 7 * v4
+                  + 2 );
+    }
+  }
+  else
+  {
+    CSchemaEnumBinding<DOTA_RUNES>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_DOTA_RUNES.m_nMinValue = 0;
+    CSchemaEnumBinding<DOTA_RUNES>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_DOTA_RUNES.m_nMaxValue = 0;
+  }
+  CSchemaEnumBinding<DOTA_RUNES>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_DOTA_RUNES.m_pOuterTypeScope = v3;
+  (*(*v3 + 272LL))(
+    v3,
+    &CSchemaEnumBinding<DOTA_RUNES>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_DOTA_RUNES);
+  return &CSchemaEnumBinding<DOTA_RUNES>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_DOTA_RUNES;
+}
+
+
+// CSchemaEnumBinding<DOTALimits_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE  (line 545, @0x000000000266df90, libserver.so)  // inlines: Count, Initialize, SetTypeScope
+// callers: CSchemaEnumBinding<DOTALimits_t>::Register
+// globals: CSchemaEnumBinding<DOTALimits_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char co
+CSchemaEnumInfo *__fastcall CSchemaEnumBinding<DOTALimits_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        const char *pProjectName)
+{
+  ISchemaSystemTypeScope *v3; // rax
+  unsigned int v4; // edi
+  SchemaEnumeratorValue_t v5; // r8
+  SchemaEnumeratorValue_t v6; // r9
+  SchemaEnumeratorValue_t *v7; // rdx
+
+  v3 = (*(*pSchemaSystem + 112LL))(pSchemaSystem, 0, pBinaryName);
+  if ( CSchemaEnumBinding<DOTALimits_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_DOTALimits_t.m_Enumerators.m_Data.m_nImplLength != 0 )
+  {
+    v4 = abs32(CSchemaEnumBinding<DOTALimits_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_DOTALimits_t.m_Enumerators.m_Data.m_nImplLength);
+    v5 = *(CSchemaEnumBinding<DOTALimits_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_DOTALimits_t.m_Enumerators.m_Data.m_pImplElements
+         + 2);
+    CSchemaEnumBinding<DOTALimits_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_DOTALimits_t.m_nMinValue = v5;
+    v6 = *(CSchemaEnumBinding<DOTALimits_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_DOTALimits_t.m_Enumerators.m_Data.m_pImplElements
+         + 2);
+    CSchemaEnumBinding<DOTALimits_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_DOTALimits_t.m_nMaxValue = v6;
+    if ( v4 != 1 )
+    {
+      v7 = (CSchemaEnumBinding<DOTALimits_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_DOTALimits_t.m_Enumerators.m_Data.m_pImplElements
+          + 72);
+      do
+      {
+        if ( v5 > *v7 )
+          v5 = *v7;
+        CSchemaEnumBinding<DOTALimits_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_DOTALimits_t.m_nMinValue = v5;
+        if ( v6 < *v7 )
+          v6 = *v7;
+        v7 += 7;
+        CSchemaEnumBinding<DOTALimits_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_DOTALimits_t.m_nMaxValue = v6;
+      }
+      while ( v7 != CSchemaEnumBinding<DOTALimits_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_DOTALimits_t.m_Enumerators.m_Data.m_pImplElements
+                  + 7 * v4
+                  + 2 );
+    }
+  }
+  else
+  {
+    CSchemaEnumBinding<DOTALimits_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_DOTALimits_t.m_nMinValue = 0;
+    CSchemaEnumBinding<DOTALimits_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_DOTALimits_t.m_nMaxValue = 0;
+  }
+  CSchemaEnumBinding<DOTALimits_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_DOTALimits_t.m_pOuterTypeScope = v3;
+  (*(*v3 + 272LL))(
+    v3,
+    &CSchemaEnumBinding<DOTALimits_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_DOTALimits_t);
+  return &CSchemaEnumBinding<DOTALimits_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_DOTALimits_t;
+}
+
+
+// CSchemaEnumBinding<DOTA_MOTION_CONTROLLER_PRIORITY>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE  (line 610, @0x000000000266e070, libserver.so)  // inlines: Count, Initialize, SetTypeScope
+// callers: CSchemaEnumBinding<DOTA_MOTION_CONTROLLER_PRIORITY>::Register
+// globals: CSchemaEnumBinding<DOTA_MOTION_CONTROLLER_PRIORITY>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,
+CSchemaEnumInfo *__fastcall CSchemaEnumBinding<DOTA_MOTION_CONTROLLER_PRIORITY>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        const char *pProjectName)
+{
+  ISchemaSystemTypeScope *v3; // rax
+  unsigned int v4; // edi
+  SchemaEnumeratorValue_t v5; // r8
+  SchemaEnumeratorValue_t v6; // r9
+  SchemaEnumeratorValue_t *v7; // rdx
+
+  v3 = (*(*pSchemaSystem + 112LL))(pSchemaSystem, 0, pBinaryName);
+  if ( CSchemaEnumBinding<DOTA_MOTION_CONTROLLER_PRIORITY>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_DOTA_MOTION_CONTROLLER_PRIORITY.m_Enumerators.m_Data.m_nImplLength != 0 )
+  {
+    v4 = abs32(CSchemaEnumBinding<DOTA_MOTION_CONTROLLER_PRIORITY>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_DOTA_MOTION_CONTROLLER_PRIORITY.m_Enumerators.m_Data.m_nImplLength);
+    v5 = *(CSchemaEnumBinding<DOTA_MOTION_CONTROLLER_PRIORITY>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_DOTA_MOTION_CONTROLLER_PRIORITY.m_Enumerators.m_Data.m_pImplElements
+         + 2);
+    CSchemaEnumBinding<DOTA_MOTION_CONTROLLER_PRIORITY>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_DOTA_MOTION_CONTROLLER_PRIORITY.m_nMinValue = v5;
+    v6 = *(CSchemaEnumBinding<DOTA_MOTION_CONTROLLER_PRIORITY>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_DOTA_MOTION_CONTROLLER_PRIORITY.m_Enumerators.m_Data.m_pImplElements
+         + 2);
+    CSchemaEnumBinding<DOTA_MOTION_CONTROLLER_PRIORITY>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_DOTA_MOTION_CONTROLLER_PRIORITY.m_nMaxValue = v6;
+    if ( v4 != 1 )
+    {
+      v7 = (CSchemaEnumBinding<DOTA_MOTION_CONTROLLER_PRIORITY>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_DOTA_MOTION_CONTROLLER_PRIORITY.m_Enumerators.m_Data.m_pImplElements
+          + 72);
+      do
+      {
+        if ( v5 > *v7 )
+          v5 = *v7;
+        CSchemaEnumBinding<DOTA_MOTION_CONTROLLER_PRIORITY>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_DOTA_MOTION_CONTROLLER_PRIORITY.m_nMinValue = v5;
+        if ( v6 < *v7 )
+          v6 = *v7;
+        v7 += 7;
+        CSchemaEnumBinding<DOTA_MOTION_CONTROLLER_PRIORITY>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_DOTA_MOTION_CONTROLLER_PRIORITY.m_nMaxValue = v6;
+      }
+      while ( v7 != CSchemaEnumBinding<DOTA_MOTION_CONTROLLER_PRIORITY>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_DOTA_MOTION_CONTROLLER_PRIORITY.m_Enumerators.m_Data.m_pImplElements
+                  + 7 * v4
+                  + 2 );
+    }
+  }
+  else
+  {
+    CSchemaEnumBinding<DOTA_MOTION_CONTROLLER_PRIORITY>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_DOTA_MOTION_CONTROLLER_PRIORITY.m_nMinValue = 0;
+    CSchemaEnumBinding<DOTA_MOTION_CONTROLLER_PRIORITY>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_DOTA_MOTION_CONTROLLER_PRIORITY.m_nMaxValue = 0;
+  }
+  CSchemaEnumBinding<DOTA_MOTION_CONTROLLER_PRIORITY>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_DOTA_MOTION_CONTROLLER_PRIORITY.m_pOuterTypeScope = v3;
+  (*(*v3 + 272LL))(
+    v3,
+    &CSchemaEnumBinding<DOTA_MOTION_CONTROLLER_PRIORITY>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_DOTA_MOTION_CONTROLLER_PRIORITY);
+  return &CSchemaEnumBinding<DOTA_MOTION_CONTROLLER_PRIORITY>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_DOTA_MOTION_CONTROLLER_PRIORITY;
+}
+
+
+// CSchemaEnumBinding<DOTAMusicStatus_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE  (line 624, @0x000000000266e150, libserver.so)  // inlines: Count, Initialize, SetTypeScope
+// callers: CSchemaEnumBinding<DOTAMusicStatus_t>::Register
+// globals: CSchemaEnumBinding<DOTAMusicStatus_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,ch
+CSchemaEnumInfo *__fastcall CSchemaEnumBinding<DOTAMusicStatus_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        const char *pProjectName)
+{
+  ISchemaSystemTypeScope *v3; // rax
+  unsigned int v4; // edi
+  SchemaEnumeratorValue_t v5; // r8
+  SchemaEnumeratorValue_t v6; // r9
+  SchemaEnumeratorValue_t *v7; // rdx
+
+  v3 = (*(*pSchemaSystem + 112LL))(pSchemaSystem, 0, pBinaryName);
+  if ( CSchemaEnumBinding<DOTAMusicStatus_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_DOTAMusicStatus_t.m_Enumerators.m_Data.m_nImplLength != 0 )
+  {
+    v4 = abs32(CSchemaEnumBinding<DOTAMusicStatus_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_DOTAMusicStatus_t.m_Enumerators.m_Data.m_nImplLength);
+    v5 = *(CSchemaEnumBinding<DOTAMusicStatus_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_DOTAMusicStatus_t.m_Enumerators.m_Data.m_pImplElements
+         + 2);
+    CSchemaEnumBinding<DOTAMusicStatus_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_DOTAMusicStatus_t.m_nMinValue = v5;
+    v6 = *(CSchemaEnumBinding<DOTAMusicStatus_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_DOTAMusicStatus_t.m_Enumerators.m_Data.m_pImplElements
+         + 2);
+    CSchemaEnumBinding<DOTAMusicStatus_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_DOTAMusicStatus_t.m_nMaxValue = v6;
+    if ( v4 != 1 )
+    {
+      v7 = (CSchemaEnumBinding<DOTAMusicStatus_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_DOTAMusicStatus_t.m_Enumerators.m_Data.m_pImplElements
+          + 72);
+      do
+      {
+        if ( v5 > *v7 )
+          v5 = *v7;
+        CSchemaEnumBinding<DOTAMusicStatus_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_DOTAMusicStatus_t.m_nMinValue = v5;
+        if ( v6 < *v7 )
+          v6 = *v7;
+        v7 += 7;
+        CSchemaEnumBinding<DOTAMusicStatus_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_DOTAMusicStatus_t.m_nMaxValue = v6;
+      }
+      while ( v7 != CSchemaEnumBinding<DOTAMusicStatus_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_DOTAMusicStatus_t.m_Enumerators.m_Data.m_pImplElements
+                  + 7 * v4
+                  + 2 );
+    }
+  }
+  else
+  {
+    CSchemaEnumBinding<DOTAMusicStatus_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_DOTAMusicStatus_t.m_nMinValue = 0;
+    CSchemaEnumBinding<DOTAMusicStatus_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_DOTAMusicStatus_t.m_nMaxValue = 0;
+  }
+  CSchemaEnumBinding<DOTAMusicStatus_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_DOTAMusicStatus_t.m_pOuterTypeScope = v3;
+  (*(*v3 + 272LL))(
+    v3,
+    &CSchemaEnumBinding<DOTAMusicStatus_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_DOTAMusicStatus_t);
+  return &CSchemaEnumBinding<DOTAMusicStatus_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_DOTAMusicStatus_t;
+}
+
+
+// CSchemaEnumBinding<IGE_AssassinationState>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE  (line 639, @0x000000000266e230, libserver.so)  // inlines: Count, Initialize, SetTypeScope
+// callers: CSchemaEnumBinding<IGE_AssassinationState>::Register
+// globals: CSchemaEnumBinding<IGE_AssassinationState>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char cons
+CSchemaEnumInfo *__fastcall CSchemaEnumBinding<IGE_AssassinationState>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        const char *pProjectName)
+{
+  ISchemaSystemTypeScope *v3; // rax
+  unsigned int v4; // edi
+  SchemaEnumeratorValue_t v5; // r8
+  SchemaEnumeratorValue_t v6; // r9
+  SchemaEnumeratorValue_t *v7; // rdx
+
+  v3 = (*(*pSchemaSystem + 112LL))(pSchemaSystem, 0, pBinaryName);
+  if ( CSchemaEnumBinding<IGE_AssassinationState>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_IGE_AssassinationState.m_Enumerators.m_Data.m_nImplLength != 0 )
+  {
+    v4 = abs32(CSchemaEnumBinding<IGE_AssassinationState>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_IGE_AssassinationState.m_Enumerators.m_Data.m_nImplLength);
+    v5 = *(CSchemaEnumBinding<IGE_AssassinationState>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_IGE_AssassinationState.m_Enumerators.m_Data.m_pImplElements
+         + 2);
+    CSchemaEnumBinding<IGE_AssassinationState>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_IGE_AssassinationState.m_nMinValue = v5;
+    v6 = *(CSchemaEnumBinding<IGE_AssassinationState>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_IGE_AssassinationState.m_Enumerators.m_Data.m_pImplElements
+         + 2);
+    CSchemaEnumBinding<IGE_AssassinationState>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_IGE_AssassinationState.m_nMaxValue = v6;
+    if ( v4 != 1 )
+    {
+      v7 = (CSchemaEnumBinding<IGE_AssassinationState>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_IGE_AssassinationState.m_Enumerators.m_Data.m_pImplElements
+          + 72);
+      do
+      {
+        if ( v5 > *v7 )
+          v5 = *v7;
+        CSchemaEnumBinding<IGE_AssassinationState>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_IGE_AssassinationState.m_nMinValue = v5;
+        if ( v6 < *v7 )
+          v6 = *v7;
+        v7 += 7;
+        CSchemaEnumBinding<IGE_AssassinationState>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_IGE_AssassinationState.m_nMaxValue = v6;
+      }
+      while ( v7 != CSchemaEnumBinding<IGE_AssassinationState>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_IGE_AssassinationState.m_Enumerators.m_Data.m_pImplElements
+                  + 7 * v4
+                  + 2 );
+    }
+  }
+  else
+  {
+    CSchemaEnumBinding<IGE_AssassinationState>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_IGE_AssassinationState.m_nMinValue = 0;
+    CSchemaEnumBinding<IGE_AssassinationState>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_IGE_AssassinationState.m_nMaxValue = 0;
+  }
+  CSchemaEnumBinding<IGE_AssassinationState>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_IGE_AssassinationState.m_pOuterTypeScope = v3;
+  (*(*v3 + 272LL))(
+    v3,
+    &CSchemaEnumBinding<IGE_AssassinationState>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_IGE_AssassinationState);
+  return &CSchemaEnumBinding<IGE_AssassinationState>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_IGE_AssassinationState;
+}
+
+
+// CSchemaEnumBinding<DOTAPortraitEnvironmentType_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE  (line 653, @0x000000000266e310, libserver.so)  // inlines: Count, Initialize, SetTypeScope
+// callers: CSchemaEnumBinding<DOTAPortraitEnvironmentType_t>::Register
+// globals: CSchemaEnumBinding<DOTAPortraitEnvironmentType_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,ch
+CSchemaEnumInfo *__fastcall CSchemaEnumBinding<DOTAPortraitEnvironmentType_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        const char *pProjectName)
+{
+  ISchemaSystemTypeScope *v3; // rax
+  unsigned int v4; // edi
+  SchemaEnumeratorValue_t v5; // r8
+  SchemaEnumeratorValue_t v6; // r9
+  SchemaEnumeratorValue_t *v7; // rdx
+
+  v3 = (*(*pSchemaSystem + 112LL))(pSchemaSystem, 0, pBinaryName);
+  if ( CSchemaEnumBinding<DOTAPortraitEnvironmentType_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_DOTAPortraitEnvironmentType_t.m_Enumerators.m_Data.m_nImplLength != 0 )
+  {
+    v4 = abs32(CSchemaEnumBinding<DOTAPortraitEnvironmentType_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_DOTAPortraitEnvironmentType_t.m_Enumerators.m_Data.m_nImplLength);
+    v5 = *(CSchemaEnumBinding<DOTAPortraitEnvironmentType_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_DOTAPortraitEnvironmentType_t.m_Enumerators.m_Data.m_pImplElements
+         + 2);
+    CSchemaEnumBinding<DOTAPortraitEnvironmentType_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_DOTAPortraitEnvironmentType_t.m_nMinValue = v5;
+    v6 = *(CSchemaEnumBinding<DOTAPortraitEnvironmentType_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_DOTAPortraitEnvironmentType_t.m_Enumerators.m_Data.m_pImplElements
+         + 2);
+    CSchemaEnumBinding<DOTAPortraitEnvironmentType_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_DOTAPortraitEnvironmentType_t.m_nMaxValue = v6;
+    if ( v4 != 1 )
+    {
+      v7 = (CSchemaEnumBinding<DOTAPortraitEnvironmentType_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_DOTAPortraitEnvironmentType_t.m_Enumerators.m_Data.m_pImplElements
+          + 72);
+      do
+      {
+        if ( v5 > *v7 )
+          v5 = *v7;
+        CSchemaEnumBinding<DOTAPortraitEnvironmentType_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_DOTAPortraitEnvironmentType_t.m_nMinValue = v5;
+        if ( v6 < *v7 )
+          v6 = *v7;
+        v7 += 7;
+        CSchemaEnumBinding<DOTAPortraitEnvironmentType_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_DOTAPortraitEnvironmentType_t.m_nMaxValue = v6;
+      }
+      while ( v7 != CSchemaEnumBinding<DOTAPortraitEnvironmentType_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_DOTAPortraitEnvironmentType_t.m_Enumerators.m_Data.m_pImplElements
+                  + 7 * v4
+                  + 2 );
+    }
+  }
+  else
+  {
+    CSchemaEnumBinding<DOTAPortraitEnvironmentType_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_DOTAPortraitEnvironmentType_t.m_nMinValue = 0;
+    CSchemaEnumBinding<DOTAPortraitEnvironmentType_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_DOTAPortraitEnvironmentType_t.m_nMaxValue = 0;
+  }
+  CSchemaEnumBinding<DOTAPortraitEnvironmentType_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_DOTAPortraitEnvironmentType_t.m_pOuterTypeScope = v3;
+  (*(*v3 + 272LL))(
+    v3,
+    &CSchemaEnumBinding<DOTAPortraitEnvironmentType_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_DOTAPortraitEnvironmentType_t);
+  return &CSchemaEnumBinding<DOTAPortraitEnvironmentType_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_DOTAPortraitEnvironmentType_t;
+}
+
+
+// CSchemaEnumBinding<PortraitSoundMode_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE  (line 669, @0x000000000266e3f0, libserver.so)  // inlines: Count, Initialize, SetTypeScope
+// callers: CSchemaEnumBinding<PortraitSoundMode_t>::Register
+// globals: CSchemaEnumBinding<PortraitSoundMode_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,
+CSchemaEnumInfo *__fastcall CSchemaEnumBinding<PortraitSoundMode_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        const char *pProjectName)
+{
+  ISchemaSystemTypeScope *v3; // rax
+  unsigned int v4; // edi
+  SchemaEnumeratorValue_t v5; // r8
+  SchemaEnumeratorValue_t v6; // r9
+  SchemaEnumeratorValue_t *v7; // rdx
+
+  v3 = (*(*pSchemaSystem + 112LL))(pSchemaSystem, 0, pBinaryName);
+  if ( CSchemaEnumBinding<PortraitSoundMode_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_PortraitSoundMode_t.m_Enumerators.m_Data.m_nImplLength != 0 )
+  {
+    v4 = abs32(CSchemaEnumBinding<PortraitSoundMode_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_PortraitSoundMode_t.m_Enumerators.m_Data.m_nImplLength);
+    v5 = *(CSchemaEnumBinding<PortraitSoundMode_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_PortraitSoundMode_t.m_Enumerators.m_Data.m_pImplElements
+         + 2);
+    CSchemaEnumBinding<PortraitSoundMode_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_PortraitSoundMode_t.m_nMinValue = v5;
+    v6 = *(CSchemaEnumBinding<PortraitSoundMode_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_PortraitSoundMode_t.m_Enumerators.m_Data.m_pImplElements
+         + 2);
+    CSchemaEnumBinding<PortraitSoundMode_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_PortraitSoundMode_t.m_nMaxValue = v6;
+    if ( v4 != 1 )
+    {
+      v7 = (CSchemaEnumBinding<PortraitSoundMode_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_PortraitSoundMode_t.m_Enumerators.m_Data.m_pImplElements
+          + 72);
+      do
+      {
+        if ( v5 > *v7 )
+          v5 = *v7;
+        CSchemaEnumBinding<PortraitSoundMode_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_PortraitSoundMode_t.m_nMinValue = v5;
+        if ( v6 < *v7 )
+          v6 = *v7;
+        v7 += 7;
+        CSchemaEnumBinding<PortraitSoundMode_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_PortraitSoundMode_t.m_nMaxValue = v6;
+      }
+      while ( v7 != CSchemaEnumBinding<PortraitSoundMode_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_PortraitSoundMode_t.m_Enumerators.m_Data.m_pImplElements
+                  + 7 * v4
+                  + 2 );
+    }
+  }
+  else
+  {
+    CSchemaEnumBinding<PortraitSoundMode_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_PortraitSoundMode_t.m_nMinValue = 0;
+    CSchemaEnumBinding<PortraitSoundMode_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_PortraitSoundMode_t.m_nMaxValue = 0;
+  }
+  CSchemaEnumBinding<PortraitSoundMode_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_PortraitSoundMode_t.m_pOuterTypeScope = v3;
+  (*(*v3 + 272LL))(
+    v3,
+    &CSchemaEnumBinding<PortraitSoundMode_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_PortraitSoundMode_t);
+  return &CSchemaEnumBinding<PortraitSoundMode_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_PortraitSoundMode_t;
+}
+
+
+// ClientQuickBuyItemState::Schema_CompileTimeVerificationFunction  (line 682, @0x000000000266e4d0, libserver.so)
+void __fastcall ClientQuickBuyItemState::Schema_CompileTimeVerificationFunction(ClientQuickBuyItemState *const this)
+{
+  ;
+}
+
+
+// ClientQuickBuyItemState::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE  (line 687, @0x000000000266e4e0, libserver.so)  // inlines: Get, NetworkVarDecl_t, SchemaBinding_SchemaTypeOfMemberVarByAddr<ClientQuickBuyItemState, CNetworkVarBase<bool, ClientQuickBuyItemState::NetworkVar_bPurchasable> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<ClientQuickBuyItemState, CNetworkVarBase<short int, ClientQuickBuyItemState::NetworkVar_nItemType> >, SetTypeScope
+// calls: __cxa_guard_acquire, __cxa_guard_release
+// callers: CSchemaClassBinding<ClientQuickBuyItemState>::Register
+// strings: "nItemType"
+// globals: ClientQuickBuyItemState::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s, `guard variable for'ClientQuickBuyItemState::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char co, ClientQuickBuyItemState::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::I
+CSchemaClassInfo *__fastcall ClientQuickBuyItemState::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        const char *pProjectName)
+{
+  CSchemaClassInfo *result; // rax
+  ISchemaSystemTypeScope *v4; // rbx
+  CSchemaType *v5; // rax
+
+  result = ClientQuickBuyItemState::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult;
+  if ( ClientQuickBuyItemState::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult == 0 )
+  {
+    v4 = (*(*pSchemaSystem + 112LL))(pSchemaSystem, 0, pBinaryName);
+    if ( `guard variable for'ClientQuickBuyItemState::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_ClientQuickBuyItemState0_MNetworkVarNames_Value == 0
+      && __cxa_guard_acquire(&`guard variable for'ClientQuickBuyItemState::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_ClientQuickBuyItemState0_MNetworkVarNames_Value) != 0 )
+    {
+      ClientQuickBuyItemState::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_ClientQuickBuyItemState0_MNetworkVarNames_Value.m_pVarName = "nItemType";
+      ClientQuickBuyItemState::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_ClientQuickBuyItemState0_MNetworkVarNames_Value.m_pVarType = "short";
+      __cxa_guard_release(&`guard variable for'ClientQuickBuyItemState::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_ClientQuickBuyItemState0_MNetworkVarNames_Value);
+    }
+    if ( `guard variable for'ClientQuickBuyItemState::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_ClientQuickBuyItemState1_MNetworkVarNames_Value == 0
+      && __cxa_guard_acquire(&`guard variable for'ClientQuickBuyItemState::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_ClientQuickBuyItemState1_MNetworkVarNames_Value) != 0 )
+    {
+      ClientQuickBuyItemState::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_ClientQuickBuyItemState1_MNetworkVarNames_Value.m_pVarName = "bPurchasable";
+      ClientQuickBuyItemState::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_ClientQuickBuyItemState1_MNetworkVarNames_Value.m_pVarType = "bool";
+      __cxa_guard_release(&`guard variable for'ClientQuickBuyItemState::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_ClientQuickBuyItemState1_MNetworkVarNames_Value);
+    }
+    ClientQuickBuyItemState::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_ClientQuickBuyItemState[0].m_pType = (*(*v4 + 40LL))(v4, 5);
+    v5 = (*(*v4 + 40LL))(v4, 13);
+    ClientQuickBuyItemState::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_ClientQuickBuyItemState.m_pOuterTypeScope = v4;
+    ClientQuickBuyItemState::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_ClientQuickBuyItemState[1].m_pType = v5;
+    ClientQuickBuyItemState::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult = &ClientQuickBuyItemState::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_ClientQuickBuyItemState;
+    (*(*v4 + 264LL))(
+      v4,
+      &ClientQuickBuyItemState::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_ClientQuickBuyItemState);
+    return ClientQuickBuyItemState::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult;
+  }
+  return result;
+}
+
+
+// ClientQuickBuyItemState::Schema_VerifyBindingIsRegistered  (line 728, @0x000000000266e610, libserver.so)
+void __cdecl ClientQuickBuyItemState::Schema_VerifyBindingIsRegistered()
+{
+  ;
+}
+
+
+// CSpeechBubbleInfo::Schema_CompileTimeVerificationFunction  (line 736, @0x000000000266e620, libserver.so)
+void __fastcall CSpeechBubbleInfo::Schema_CompileTimeVerificationFunction(CSpeechBubbleInfo *const this)
+{
+  ;
+}
+
+
+// CSpeechBubbleInfo::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE  (line 745, @0x000000000266e630, libserver.so)  // inlines: Get, NetworkVarDecl_t, SchemaBinding_SchemaTypeOfMemberVarByAddr<CSpeechBubbleInfo, CNetworkHandleBase<CBaseEntity, CSpeechBubbleInfo::NetworkVar_m_hNPC> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<CSpeechBubbleInfo, CNetworkStringBase<256, CSpeechBubbleInfo::NetworkVar_m_LocalizationStr> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<CSpeechBubbleInfo, CNetworkVarBase<float, CSpeechBubbleInfo::NetworkVar_m_flDuration> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<CSpeechBubbleInfo, CNetworkVarBase<short unsigned int, CSpeechBubbleInfo::NetworkVar_m_unCount> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<CSpeechBubbleInfo, CNetworkVarBase<unsigned int, CSpeechBubbleInfo::NetworkVar_m_unOffsetX> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<CSpeechBubbleInfo, CNetworkVarBase<unsigned int, CSpeechBubbleInfo::NetworkVar_m_unOffsetY> >, SetTypeScope
+// calls: __cxa_guard_acquire, __cxa_guard_release
+// callers: CSchemaNonConstructibleClassBinding<CSpeechBubbleInfo>::Register
+// strings: "CBaseEntity", "CHandle", "m_LocalizationStr", "char", "m_unCount", "unsigned short" (12 total)
+// globals: CSpeechBubbleInfo::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInit, `guard variable for'CSpeechBubbleInfo::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,c, CSchemaManipulator<CHandle<CBaseEntity>>::StaticAccessor(void)::m, CAtomicManipulator<CHandle<CBaseEntity>>::Get(void)::val, CSpeechBubbleInfo::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSch
+CSchemaClassInfo *__fastcall CSpeechBubbleInfo::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        const char *pProjectName)
+{
+  CSchemaClassInfo *result; // rax
+  ISchemaSystemTypeScope *v4; // rbx
+  __int64 (__fastcall *v5)(ISchemaSystemTypeScope *, __int64, __int64); // r12
+  __int64 v6; // rax
+  __int64 (__fastcall *v7)(ISchemaSystemTypeScope *, const char *, __int64, __int64 (__fastcall ***)(), __int64 (__fastcall ***)(), __int64); // r12
+  __int64 v8; // rax
+  CSchemaType *v9; // rax
+
+  result = CSpeechBubbleInfo::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult;
+  if ( CSpeechBubbleInfo::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult == 0 )
+  {
+    v4 = (*(*pSchemaSystem + 112LL))(pSchemaSystem, 0, pBinaryName);
+    if ( `guard variable for'CSpeechBubbleInfo::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CSpeechBubbleInfo1_MNetworkVarNames_Value == 0
+      && __cxa_guard_acquire(&`guard variable for'CSpeechBubbleInfo::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CSpeechBubbleInfo1_MNetworkVarNames_Value) != 0 )
+    {
+      CSpeechBubbleInfo::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CSpeechBubbleInfo1_MNetworkVarNames_Value.m_pVarName = "m_LocalizationStr";
+      CSpeechBubbleInfo::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CSpeechBubbleInfo1_MNetworkVarNames_Value.m_pVarType = "char";
+      __cxa_guard_release(&`guard variable for'CSpeechBubbleInfo::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CSpeechBubbleInfo1_MNetworkVarNames_Value);
+    }
+    if ( `guard variable for'CSpeechBubbleInfo::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CSpeechBubbleInfo2_MNetworkVarNames_Value == 0
+      && __cxa_guard_acquire(&`guard variable for'CSpeechBubbleInfo::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CSpeechBubbleInfo2_MNetworkVarNames_Value) != 0 )
+    {
+      CSpeechBubbleInfo::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CSpeechBubbleInfo2_MNetworkVarNames_Value.m_pVarName = "m_hNPC";
+      CSpeechBubbleInfo::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CSpeechBubbleInfo2_MNetworkVarNames_Value.m_pVarType = "CHandle< CBaseEntity>";
+      __cxa_guard_release(&`guard variable for'CSpeechBubbleInfo::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CSpeechBubbleInfo2_MNetworkVarNames_Value);
+    }
+    if ( `guard variable for'CSpeechBubbleInfo::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CSpeechBubbleInfo3_MNetworkVarNames_Value == 0
+      && __cxa_guard_acquire(&`guard variable for'CSpeechBubbleInfo::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CSpeechBubbleInfo3_MNetworkVarNames_Value) != 0 )
+    {
+      CSpeechBubbleInfo::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CSpeechBubbleInfo3_MNetworkVarNames_Value.m_pVarName = "m_flDuration";
+      CSpeechBubbleInfo::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CSpeechBubbleInfo3_MNetworkVarNames_Value.m_pVarType = "float";
+      __cxa_guard_release(&`guard variable for'CSpeechBubbleInfo::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CSpeechBubbleInfo3_MNetworkVarNames_Value);
+    }
+    if ( `guard variable for'CSpeechBubbleInfo::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CSpeechBubbleInfo4_MNetworkVarNames_Value == 0
+      && __cxa_guard_acquire(&`guard variable for'CSpeechBubbleInfo::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CSpeechBubbleInfo4_MNetworkVarNames_Value) != 0 )
+    {
+      CSpeechBubbleInfo::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CSpeechBubbleInfo4_MNetworkVarNames_Value.m_pVarName = "m_unOffsetX";
+      CSpeechBubbleInfo::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CSpeechBubbleInfo4_MNetworkVarNames_Value.m_pVarType = "unsigned int";
+      __cxa_guard_release(&`guard variable for'CSpeechBubbleInfo::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CSpeechBubbleInfo4_MNetworkVarNames_Value);
+    }
+    if ( `guard variable for'CSpeechBubbleInfo::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CSpeechBubbleInfo5_MNetworkVarNames_Value == 0
+      && __cxa_guard_acquire(&`guard variable for'CSpeechBubbleInfo::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CSpeechBubbleInfo5_MNetworkVarNames_Value) != 0 )
+    {
+      CSpeechBubbleInfo::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CSpeechBubbleInfo5_MNetworkVarNames_Value.m_pVarName = "m_unOffsetY";
+      CSpeechBubbleInfo::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CSpeechBubbleInfo5_MNetworkVarNames_Value.m_pVarType = "unsigned int";
+      __cxa_guard_release(&`guard variable for'CSpeechBubbleInfo::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CSpeechBubbleInfo5_MNetworkVarNames_Value);
+    }
+    if ( `guard variable for'CSpeechBubbleInfo::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CSpeechBubbleInfo6_MNetworkVarNames_Value == 0
+      && __cxa_guard_acquire(&`guard variable for'CSpeechBubbleInfo::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CSpeechBubbleInfo6_MNetworkVarNames_Value) != 0 )
+    {
+      CSpeechBubbleInfo::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CSpeechBubbleInfo6_MNetworkVarNames_Value.m_pVarName = "m_unCount";
+      CSpeechBubbleInfo::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CSpeechBubbleInfo6_MNetworkVarNames_Value.m_pVarType = "unsigned short";
+      __cxa_guard_release(&`guard variable for'CSpeechBubbleInfo::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CSpeechBubbleInfo6_MNetworkVarNames_Value);
+    }
+    v5 = *(*v4 + 104LL);
+    v6 = (*(*v4 + 40LL))(v4, 2);
+    CSpeechBubbleInfo::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CSpeechBubbleInfo[0].m_pType = v5(v4, v6, 256);
+    v7 = *(*v4 + 64LL);
+    v8 = (*(*v4 + 88LL))(v4, "CBaseEntity");
+    CSpeechBubbleInfo::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CSpeechBubbleInfo[1].m_pType = v7(v4, "CHandle", 5003, CAtomicManipulator<CHandle<CBaseEntity>>::Get(void)::val, &CSchemaManipulator<CHandle<CBaseEntity>>::StaticAccessor(void)::m, v8);
+    CSpeechBubbleInfo::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CSpeechBubbleInfo[2].m_pType = (*(*v4 + 40LL))(v4, 11);
+    CSpeechBubbleInfo::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CSpeechBubbleInfo[3].m_pType = (*(*v4 + 40LL))(v4, 8);
+    CSpeechBubbleInfo::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CSpeechBubbleInfo[4].m_pType = (*(*v4 + 40LL))(v4, 8);
+    v9 = (*(*v4 + 40LL))(v4, 6);
+    CSpeechBubbleInfo::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CSpeechBubbleInfo.m_pOuterTypeScope = v4;
+    CSpeechBubbleInfo::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CSpeechBubbleInfo[5].m_pType = v9;
+    CSpeechBubbleInfo::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult = &CSpeechBubbleInfo::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CSpeechBubbleInfo;
+    (*(*v4 + 264LL))(
+      v4,
+      &CSpeechBubbleInfo::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CSpeechBubbleInfo);
+    return CSpeechBubbleInfo::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult;
+  }
+  return result;
+}
+
+
+// CSpeechBubbleInfo::Schema_VerifyBindingIsRegistered  (line 836, @0x000000000266e940, libserver.so)
+// callers: CSpeechBubbleInfo::Schema_DynamicBinding
+void __cdecl CSpeechBubbleInfo::Schema_VerifyBindingIsRegistered()
+{
+  ;
+}
+
+
+// CUnitOrders::Schema_CompileTimeVerificationFunction  (line 844, @0x000000000266e950, libserver.so)
+void __fastcall CUnitOrders::Schema_CompileTimeVerificationFunction(CUnitOrders *const this)
+{
+  ;
+}
+
+
+// CUnitOrders::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE  (line 855, @0x000000000266e960, libserver.so)  // inlines: Get, SchemaBinding_SchemaTypeOfMemberVarByAddr<CUnitOrders, CCopyableUtlVector<CEntityIndex> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<CUnitOrders, CEntityIndex>, SchemaBinding_SchemaTypeOfMemberVarByAddr<CUnitOrders, Vector>, SchemaBinding_SchemaTypeOfMemberVarByAddr<CUnitOrders, bool>, SchemaBinding_SchemaTypeOfMemberVarByAddr<CUnitOrders, int>, SetTypeScope
+// callers: CSchemaClassBinding<CUnitOrders>::Register
+// strings: "CEntityIndex", "CCopyableUtlVector"
+// globals: CUnitOrders::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitialize, CSchemaManipulator<CEntityIndex>::StaticAccessor(void)::m, CAtomicManipulator<CEntityIndex>::Get(void)::val, CSchemaManipulator<CCopyableUtlVector<CEntityIndex>>::StaticAccessor(void)::m, CAtomicManipulator<CCopyableUtlVector<CEntityIndex>>::Get(void)::val, CSchemaManipulator<Vector>::StaticAccessor(void)::m, CAtomicManipulator<Vector>::Get(void)::val, CUnitOrders::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_Cl
+CSchemaClassInfo *__fastcall CUnitOrders::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        const char *pProjectName)
+{
+  CSchemaClassInfo *result; // rax
+  ISchemaSystemTypeScope *v4; // rbx
+  __int64 (__fastcall *v5)(ISchemaSystemTypeScope *, const char *, __int64, __int64 (__fastcall ***)(), __int64 (__fastcall ***)(), __int64); // r12
+  __int64 v6; // rax
+  CSchemaType *v7; // rax
+
+  result = CUnitOrders::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult;
+  if ( CUnitOrders::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult == 0 )
+  {
+    v4 = (*(*pSchemaSystem + 112LL))(pSchemaSystem, 0, pBinaryName);
+    CUnitOrders::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CUnitOrders[0].m_pType = (*(*v4 + 40LL))(v4, 7);
+    CUnitOrders::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CUnitOrders[1].m_pType = (*(*v4 + 40LL))(v4, 7);
+    v5 = *(*v4 + 64LL);
+    v6 = (*(*v4 + 56LL))(
+           v4,
+           "CEntityIndex",
+           2019,
+           CAtomicManipulator<CEntityIndex>::Get(void)::val,
+           CSchemaManipulator<CEntityIndex>::StaticAccessor(void)::m);
+    CUnitOrders::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CUnitOrders[2].m_pType = v5(v4, "CCopyableUtlVector", 3009, &CAtomicManipulator<CCopyableUtlVector<CEntityIndex>>::Get(void)::val, CSchemaManipulator<CCopyableUtlVector<CEntityIndex>>::StaticAccessor(void)::m, v6);
+    CUnitOrders::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CUnitOrders[3].m_pType = (*(*v4 + 40LL))(v4, 7);
+    CUnitOrders::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CUnitOrders[4].m_pType = (*(*v4 + 56LL))(v4, "CEntityIndex", 2019, CAtomicManipulator<CEntityIndex>::Get(void)::val, CSchemaManipulator<CEntityIndex>::StaticAccessor(void)::m);
+    CUnitOrders::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CUnitOrders[5].m_pType = (*(*v4 + 56LL))(v4, "CEntityIndex", 2019, CAtomicManipulator<CEntityIndex>::Get(void)::val, CSchemaManipulator<CEntityIndex>::StaticAccessor(void)::m);
+    CUnitOrders::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CUnitOrders[6].m_pType = (*(*v4 + 56LL))(v4, "Vector", 2010, CAtomicManipulator<Vector>::Get(void)::val, CSchemaManipulator<Vector>::StaticAccessor(void)::m);
+    v7 = (*(*v4 + 40LL))(v4, 13);
+    CUnitOrders::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CUnitOrders.m_pOuterTypeScope = v4;
+    CUnitOrders::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CUnitOrders[7].m_pType = v7;
+    CUnitOrders::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult = &CUnitOrders::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CUnitOrders;
+    (*(*v4 + 264LL))(
+      v4,
+      &CUnitOrders::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CUnitOrders);
+    return CUnitOrders::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult;
+  }
+  return result;
+}
+
+
+// CUnitOrders::Schema_VerifyBindingIsRegistered  (line 881, @0x000000000266eae0, libserver.so)
+void __cdecl CUnitOrders::Schema_VerifyBindingIsRegistered()
+{
+  ;
+}
+
+
+// LocalRegisterSchemaModule<ArbitraryTemplateParameter_server_dota_shareddefs_h>  (line 889, @0x000000000266eaf0, libserver.so)  // inlines: Call, Get
+// callers: RegisterSchemaModule_dota_shareddefs_h
+// strings: "DOTAModifierAttribute_t", "DAMAGE_TYPES", "ABILITY_TYPES", "SPELL_IMMUNITY_TYPES", "SPELL_DISPELLABLE_TYPES", "DOTAUnitMoveCapability_t" (31 total)
+// globals: CSchemaEnumBinding<DOTAModifierAttribute_t>::s_pThisModuleBindingPointer, CSchemaEnumBinding<Attributes>::s_pThisModuleBindingPointer, CSchemaEnumBinding<DAMAGE_TYPES>::s_pThisModuleBindingPointer, CSchemaEnumBinding<ABILITY_TYPES>::s_pThisModuleBindingPointer, CSchemaEnumBinding<SPELL_IMMUNITY_TYPES>::s_pThisModuleBindingPointer, CSchemaEnumBinding<SPELL_DISPELLABLE_TYPES>::s_pThisModuleBindingPointer, CSchemaEnumBinding<DOTAUnitMoveCapability_t>::s_pThisModuleBindingPointer, CSchemaEnumBinding<DOTAUnitAttackCapability_t>::s_pThisModuleBindingPointer (35 total)
+void __fastcall LocalRegisterSchemaModule<ArbitraryTemplateParameter_server_dota_shareddefs_h>(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        SchemaRegistrationPhase_t nRegistrationPhase)
+{
+  if ( nRegistrationPhase != SchemaRegistrationPhase_t::SCHEMA_REGISTRATION_PHASE_ATOMIC_TYPES_AND_ENUMS )
+  {
+    if ( nRegistrationPhase == SchemaRegistrationPhase_t::SCHEMA_REGISTRATION_PHASE_CLASSES )
+    {
+      (*(ClientQuickBuyItemState::s_pSchemaBindingForLocalModule->_vptr_ISchemaBinding + 5))(
+        ClientQuickBuyItemState::s_pSchemaBindingForLocalModule,
+        pSchemaSystem,
+        pBinaryName,
+        "server");
+      (*(CSpeechBubbleInfo::s_pSchemaBindingForLocalModule->_vptr_ISchemaBinding + 5))(
+        CSpeechBubbleInfo::s_pSchemaBindingForLocalModule,
+        pSchemaSystem,
+        pBinaryName,
+        "server");
+      (*(CUnitOrders::s_pSchemaBindingForLocalModule->_vptr_ISchemaBinding + 5))(
+        CUnitOrders::s_pSchemaBindingForLocalModule,
+        pSchemaSystem,
+        pBinaryName,
+        "server");
+    }
+    ++g_nLinkerHack_SchemaAnchor_RegistrationCountFor_server;
+  }
+  else
+  {
+    (*(CSchemaEnumBinding<DOTAModifierAttribute_t>::s_pThisModuleBindingPointer->_vptr_ISchemaBinding + 5))(
+      CSchemaEnumBinding<DOTAModifierAttribute_t>::s_pThisModuleBindingPointer,
+      pSchemaSystem,
+      pBinaryName,
+      "server",
+      "DOTAModifierAttribute_t");
+    (*(CSchemaEnumBinding<Attributes>::s_pThisModuleBindingPointer->_vptr_ISchemaBinding + 5))(
+      CSchemaEnumBinding<Attributes>::s_pThisModuleBindingPointer,
+      pSchemaSystem,
+      pBinaryName,
+      "server",
+      "Attributes");
+    (*(CSchemaEnumBinding<DAMAGE_TYPES>::s_pThisModuleBindingPointer->_vptr_ISchemaBinding + 5))(
+      CSchemaEnumBinding<DAMAGE_TYPES>::s_pThisModuleBindingPointer,
+      pSchemaSystem,
+      pBinaryName,
+      "server",
+      "DAMAGE_TYPES");
+    (*(CSchemaEnumBinding<ABILITY_TYPES>::s_pThisModuleBindingPointer->_vptr_ISchemaBinding + 5))(
+      CSchemaEnumBinding<ABILITY_TYPES>::s_pThisModuleBindingPointer,
+      pSchemaSystem,
+      pBinaryName,
+      "server",
+      "ABILITY_TYPES");
+    (*(CSchemaEnumBinding<SPELL_IMMUNITY_TYPES>::s_pThisModuleBindingPointer->_vptr_ISchemaBinding + 5))(
+      CSchemaEnumBinding<SPELL_IMMUNITY_TYPES>::s_pThisModuleBindingPointer,
+      pSchemaSystem,
+      pBinaryName,
+      "server",
+      "SPELL_IMMUNITY_TYPES");
+    (*(CSchemaEnumBinding<SPELL_DISPELLABLE_TYPES>::s_pThisModuleBindingPointer->_vptr_ISchemaBinding + 5))(
+      CSchemaEnumBinding<SPELL_DISPELLABLE_TYPES>::s_pThisModuleBindingPointer,
+      pSchemaSystem,
+      pBinaryName,
+      "server",
+      "SPELL_DISPELLABLE_TYPES");
+    (*(CSchemaEnumBinding<DOTAUnitMoveCapability_t>::s_pThisModuleBindingPointer->_vptr_ISchemaBinding + 5))(
+      CSchemaEnumBinding<DOTAUnitMoveCapability_t>::s_pThisModuleBindingPointer,
+      pSchemaSystem,
+      pBinaryName,
+      "server",
+      "DOTAUnitMoveCapability_t");
+    (*(CSchemaEnumBinding<DOTAUnitAttackCapability_t>::s_pThisModuleBindingPointer->_vptr_ISchemaBinding + 5))(
+      CSchemaEnumBinding<DOTAUnitAttackCapability_t>::s_pThisModuleBindingPointer,
+      pSchemaSystem,
+      pBinaryName,
+      "server",
+      "DOTAUnitAttackCapability_t");
+    (*(CSchemaEnumBinding<CLICK_BEHAVIORS>::s_pThisModuleBindingPointer->_vptr_ISchemaBinding + 5))(
+      CSchemaEnumBinding<CLICK_BEHAVIORS>::s_pThisModuleBindingPointer,
+      pSchemaSystem,
+      pBinaryName,
+      "server",
+      "CLICK_BEHAVIORS");
+    (*(CSchemaEnumBinding<DOTA_ABILITY_BEHAVIOR>::s_pThisModuleBindingPointer->_vptr_ISchemaBinding + 5))(
+      CSchemaEnumBinding<DOTA_ABILITY_BEHAVIOR>::s_pThisModuleBindingPointer,
+      pSchemaSystem,
+      pBinaryName,
+      "server",
+      "DOTA_ABILITY_BEHAVIOR");
+    (*(CSchemaEnumBinding<EDOTA_ModifyGold_Reason>::s_pThisModuleBindingPointer->_vptr_ISchemaBinding + 5))(
+      CSchemaEnumBinding<EDOTA_ModifyGold_Reason>::s_pThisModuleBindingPointer,
+      pSchemaSystem,
+      pBinaryName,
+      "server",
+      "EDOTA_ModifyGold_Reason");
+    (*(CSchemaEnumBinding<EDOTA_ModifyXP_Reason>::s_pThisModuleBindingPointer->_vptr_ISchemaBinding + 5))(
+      CSchemaEnumBinding<EDOTA_ModifyXP_Reason>::s_pThisModuleBindingPointer,
+      pSchemaSystem,
+      pBinaryName,
+      "server",
+      "EDOTA_ModifyXP_Reason");
+    (*(CSchemaEnumBinding<UnitFilterResult>::s_pThisModuleBindingPointer->_vptr_ISchemaBinding + 5))(
+      CSchemaEnumBinding<UnitFilterResult>::s_pThisModuleBindingPointer,
+      pSchemaSystem,
+      pBinaryName,
+      "server",
+      "UnitFilterResult");
+    (*(CSchemaEnumBinding<DOTA_UNIT_TARGET_TEAM>::s_pThisModuleBindingPointer->_vptr_ISchemaBinding + 5))(
+      CSchemaEnumBinding<DOTA_UNIT_TARGET_TEAM>::s_pThisModuleBindingPointer,
+      pSchemaSystem,
+      pBinaryName,
+      "server",
+      "DOTA_UNIT_TARGET_TEAM");
+    (*(CSchemaEnumBinding<DOTA_UNIT_TARGET_TYPE>::s_pThisModuleBindingPointer->_vptr_ISchemaBinding + 5))(
+      CSchemaEnumBinding<DOTA_UNIT_TARGET_TYPE>::s_pThisModuleBindingPointer,
+      pSchemaSystem,
+      pBinaryName,
+      "server",
+      "DOTA_UNIT_TARGET_TYPE");
+    (*(CSchemaEnumBinding<DOTA_UNIT_TARGET_FLAGS>::s_pThisModuleBindingPointer->_vptr_ISchemaBinding + 5))(
+      CSchemaEnumBinding<DOTA_UNIT_TARGET_FLAGS>::s_pThisModuleBindingPointer,
+      pSchemaSystem,
+      pBinaryName,
+      "server",
+      "DOTA_UNIT_TARGET_FLAGS");
+    (*(CSchemaEnumBinding<DOTA_PURGE_FLAGS>::s_pThisModuleBindingPointer->_vptr_ISchemaBinding + 5))(
+      CSchemaEnumBinding<DOTA_PURGE_FLAGS>::s_pThisModuleBindingPointer,
+      pSchemaSystem,
+      pBinaryName,
+      "server",
+      "DOTA_PURGE_FLAGS");
+    (*(CSchemaEnumBinding<DOTATeam_t>::s_pThisModuleBindingPointer->_vptr_ISchemaBinding + 5))(
+      CSchemaEnumBinding<DOTATeam_t>::s_pThisModuleBindingPointer,
+      pSchemaSystem,
+      pBinaryName,
+      "server",
+      "DOTATeam_t");
+    (*(CSchemaEnumBinding<modifierstate>::s_pThisModuleBindingPointer->_vptr_ISchemaBinding + 5))(
+      CSchemaEnumBinding<modifierstate>::s_pThisModuleBindingPointer,
+      pSchemaSystem,
+      pBinaryName,
+      "server",
+      "modifierstate");
+    (*(CSchemaEnumBinding<DOTA_LANE>::s_pThisModuleBindingPointer->_vptr_ISchemaBinding + 5))(
+      CSchemaEnumBinding<DOTA_LANE>::s_pThisModuleBindingPointer,
+      pSchemaSystem,
+      pBinaryName,
+      "server",
+      "DOTA_LANE");
+    (*(CSchemaEnumBinding<DOTA_SHOP_TYPE>::s_pThisModuleBindingPointer->_vptr_ISchemaBinding + 5))(
+      CSchemaEnumBinding<DOTA_SHOP_TYPE>::s_pThisModuleBindingPointer,
+      pSchemaSystem,
+      pBinaryName,
+      "server",
+      "DOTA_SHOP_TYPE");
+    (*(CSchemaEnumBinding<DOTA_HOLDOUT_TOWER_TYPE>::s_pThisModuleBindingPointer->_vptr_ISchemaBinding + 5))(
+      CSchemaEnumBinding<DOTA_HOLDOUT_TOWER_TYPE>::s_pThisModuleBindingPointer,
+      pSchemaSystem,
+      pBinaryName,
+      "server",
+      "DOTA_HOLDOUT_TOWER_TYPE");
+    (*(CSchemaEnumBinding<DOTA_HOLDOUT_WALL_TYPE>::s_pThisModuleBindingPointer->_vptr_ISchemaBinding + 5))(
+      CSchemaEnumBinding<DOTA_HOLDOUT_WALL_TYPE>::s_pThisModuleBindingPointer,
+      pSchemaSystem,
+      pBinaryName,
+      "server",
+      "DOTA_HOLDOUT_WALL_TYPE");
+    (*(CSchemaEnumBinding<ShopItemViewMode_t>::s_pThisModuleBindingPointer->_vptr_ISchemaBinding + 5))(
+      CSchemaEnumBinding<ShopItemViewMode_t>::s_pThisModuleBindingPointer,
+      pSchemaSystem,
+      pBinaryName,
+      "server",
+      "ShopItemViewMode_t");
+    (*(CSchemaEnumBinding<DOTA_SHOP_CATEGORY>::s_pThisModuleBindingPointer->_vptr_ISchemaBinding + 5))(
+      CSchemaEnumBinding<DOTA_SHOP_CATEGORY>::s_pThisModuleBindingPointer,
+      pSchemaSystem,
+      pBinaryName,
+      "server",
+      "DOTA_SHOP_CATEGORY");
+    (*(CSchemaEnumBinding<DOTA_RUNES>::s_pThisModuleBindingPointer->_vptr_ISchemaBinding + 5))(
+      CSchemaEnumBinding<DOTA_RUNES>::s_pThisModuleBindingPointer,
+      pSchemaSystem,
+      pBinaryName,
+      "server",
+      "DOTA_RUNES");
+    (*(CSchemaEnumBinding<DOTALimits_t>::s_pThisModuleBindingPointer->_vptr_ISchemaBinding + 5))(
+      CSchemaEnumBinding<DOTALimits_t>::s_pThisModuleBindingPointer,
+      pSchemaSystem,
+      pBinaryName,
+      "server",
+      "DOTALimits_t");
+    (*(CSchemaEnumBinding<DOTA_MOTION_CONTROLLER_PRIORITY>::s_pThisModuleBindingPointer->_vptr_ISchemaBinding + 5))(
+      CSchemaEnumBinding<DOTA_MOTION_CONTROLLER_PRIORITY>::s_pThisModuleBindingPointer,
+      pSchemaSystem,
+      pBinaryName,
+      "server",
+      "DOTA_MOTION_CONTROLLER_PRIORITY");
+    (*(CSchemaEnumBinding<DOTAMusicStatus_t>::s_pThisModuleBindingPointer->_vptr_ISchemaBinding + 5))(
+      CSchemaEnumBinding<DOTAMusicStatus_t>::s_pThisModuleBindingPointer,
+      pSchemaSystem,
+      pBinaryName,
+      "server",
+      "DOTAMusicStatus_t");
+    (*(CSchemaEnumBinding<IGE_AssassinationState>::s_pThisModuleBindingPointer->_vptr_ISchemaBinding + 5))(
+      CSchemaEnumBinding<IGE_AssassinationState>::s_pThisModuleBindingPointer,
+      pSchemaSystem,
+      pBinaryName,
+      "server",
+      "IGE_AssassinationState");
+    (*(CSchemaEnumBinding<DOTAPortraitEnvironmentType_t>::s_pThisModuleBindingPointer->_vptr_ISchemaBinding + 5))(
+      CSchemaEnumBinding<DOTAPortraitEnvironmentType_t>::s_pThisModuleBindingPointer,
+      pSchemaSystem,
+      pBinaryName,
+      "server",
+      "DOTAPortraitEnvironmentType_t");
+    (*(CSchemaEnumBinding<PortraitSoundMode_t>::s_pThisModuleBindingPointer->_vptr_ISchemaBinding + 5))(
+      CSchemaEnumBinding<PortraitSoundMode_t>::s_pThisModuleBindingPointer,
+      pSchemaSystem,
+      pBinaryName,
+      "server",
+      "PortraitSoundMode_t");
+    ++g_nLinkerHack_SchemaAnchor_RegistrationCountFor_server;
+  }
+}
+
+
+// RegisterSchemaModule_dota_shareddefs_h  (line 925, @0x000000000266efb0, libserver.so)
+// calls: LocalRegisterSchemaModule<ArbitraryTemplateParameter_server_dota_shareddefs_h>
+// callers: CSchemaRegistration_server::RegisterAllBindings
+void __fastcall RegisterSchemaModule_dota_shareddefs_h(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        SchemaRegistrationPhase_t nRegistrationPhase)
+{
+  LocalRegisterSchemaModule<ArbitraryTemplateParameter_server_dota_shareddefs_h>(
+    pSchemaSystem,
+    pBinaryName,
+    nRegistrationPhase);
+}
+
+

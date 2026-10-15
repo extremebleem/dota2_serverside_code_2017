@@ -1,0 +1,97 @@
+
+// ==== functions (decompiled by Hex-Rays; names/signatures from DWARF) ====
+
+// CRenderComponent::Schema_CompileTimeVerificationFunction  (line 35, @0x000000000202cae0, libserver.so)
+void __fastcall CRenderComponent::Schema_CompileTimeVerificationFunction(CRenderComponent *const this)
+{
+  ;
+}
+
+
+// CRenderComponent::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE  (line 46, @0x000000000202caf0, libserver.so)  // inlines: Call, Get, SchemaBinding_SchemaTypeOfMemberVarByAddr<CRenderComponent, CNetworkVarChainer>, SchemaBinding_SchemaTypeOfMemberVarByAddr<CRenderComponent, bool>, SchemaBinding_SchemaTypeOfMemberVarByAddr<CRenderComponent, unsigned int>, SchemaBinding_SchemaTypeOfVarByAddr<EntComponentInfo_t>, SchemaBinding_SchemaTypeOfVarByAddr<int>, SetTypeScope
+// calls: CEntityComponent::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE
+// callers: CSchemaClassBinding<CRenderComponent>::Register
+// strings: "CNetworkVarChainer", "EntComponentInfo_t"
+// globals: CRenderComponent::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pIniti, CRenderComponent::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSche
+CSchemaClassInfo *__fastcall CRenderComponent::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        const char *pProjectName)
+{
+  CSchemaClassInfo *result; // rax
+  ISchemaSystemTypeScope *v7; // rbx
+  CSchemaClassInfo *v8; // rax
+
+  result = CRenderComponent::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult;
+  if ( CRenderComponent::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult == 0 )
+  {
+    v7 = (*(*pSchemaSystem + 112LL))(pSchemaSystem, 1, pBinaryName);
+    CRenderComponent::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CRenderComponent[0].m_pType = (*(*v7 + 88LL))(v7, "CNetworkVarChainer");
+    CRenderComponent::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CRenderComponent[1].m_pType = (*(*v7 + 40LL))(v7, 13);
+    CRenderComponent::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CRenderComponent[2].m_pType = (*(*v7 + 40LL))(v7, 8);
+    CRenderComponent::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CRenderComponent[3].m_pType = (*(*v7 + 40LL))(v7, 13);
+    CRenderComponent::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CRenderComponent[4].m_pType = (*(*v7 + 40LL))(v7, 13);
+    CRenderComponent::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CRenderComponent[5].m_pType = (*(*v7 + 40LL))(v7, 13);
+    CRenderComponent::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_StaticMembers_CRenderComponent[0].m_pType = (*(*v7 + 88LL))(v7, "EntComponentInfo_t");
+    CRenderComponent::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_StaticMembers_CRenderComponent[1].m_pType = (*(*v7 + 40LL))(v7, 7);
+    (*(CEntityComponent::s_pSchemaBindingForLocalModule->_vptr_ISchemaBinding + 5))(
+      CEntityComponent::s_pSchemaBindingForLocalModule,
+      pSchemaSystem,
+      pBinaryName,
+      pProjectName);
+    v8 = CEntityComponent::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+           pSchemaSystem,
+           pBinaryName,
+           pProjectName);
+    CRenderComponent::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CRenderComponent.m_pOuterTypeScope = v7;
+    CRenderComponent::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassBases_CRenderComponent[0].m_pClass = v8;
+    CRenderComponent::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult = &CRenderComponent::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CRenderComponent;
+    return &CRenderComponent::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CRenderComponent;
+  }
+  return result;
+}
+
+
+// CRenderComponent::Schema_VerifyBindingIsRegistered  (line 97, @0x000000000202cc20, libserver.so)
+// callers: CEntityComponentHelperT<CRenderComponent, CEntityComponentHelperReferenced<CRenderComponent> >::GetSchemaBinding
+void __cdecl CRenderComponent::Schema_VerifyBindingIsRegistered()
+{
+  ;
+}
+
+
+// LocalRegisterSchemaModule<ArbitraryTemplateParameter_server_rendercomponent_h>  (line 105, @0x000000000202cc30, libserver.so)  // inlines: Call
+// globals: CRenderComponent::s_pSchemaBindingForLocalModule
+void __fastcall LocalRegisterSchemaModule<ArbitraryTemplateParameter_server_rendercomponent_h>(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        SchemaRegistrationPhase_t nRegistrationPhase)
+{
+  if ( nRegistrationPhase == SchemaRegistrationPhase_t::SCHEMA_REGISTRATION_PHASE_CLASSES )
+    (*(CRenderComponent::s_pSchemaBindingForLocalModule->_vptr_ISchemaBinding + 5))(
+      CRenderComponent::s_pSchemaBindingForLocalModule,
+      pSchemaSystem,
+      pBinaryName,
+      "server");
+  ++g_nLinkerHack_SchemaAnchor_RegistrationCountFor_server;
+}
+
+
+// RegisterSchemaModule_rendercomponent_h  (line 107, @0x000000000202cc70, libserver.so)  // inlines: Call, LocalRegisterSchemaModule<ArbitraryTemplateParameter_server_rendercomponent_h>
+// callers: CSchemaRegistration_server::RegisterAllBindings
+// globals: CRenderComponent::s_pSchemaBindingForLocalModule
+void __fastcall RegisterSchemaModule_rendercomponent_h(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        SchemaRegistrationPhase_t nRegistrationPhase)
+{
+  if ( nRegistrationPhase == SchemaRegistrationPhase_t::SCHEMA_REGISTRATION_PHASE_CLASSES )
+    (*(CRenderComponent::s_pSchemaBindingForLocalModule->_vptr_ISchemaBinding + 5))(
+      CRenderComponent::s_pSchemaBindingForLocalModule,
+      pSchemaSystem,
+      pBinaryName,
+      "server");
+  ++g_nLinkerHack_SchemaAnchor_RegistrationCountFor_server;
+}
+
+

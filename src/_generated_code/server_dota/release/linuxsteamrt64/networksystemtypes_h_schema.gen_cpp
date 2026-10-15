@@ -1,0 +1,150 @@
+
+// ==== functions (decompiled by Hex-Rays; names/signatures from DWARF) ====
+
+// CSchemaEnumBinding<NetChannelBufType_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE  (line 35, @0x000000000203bf50, libserver.so)  // inlines: Count, Initialize, SetTypeScope
+// callers: CSchemaEnumBinding<NetChannelBufType_t>::Register
+// globals: CSchemaEnumBinding<NetChannelBufType_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,
+CSchemaEnumInfo *__fastcall CSchemaEnumBinding<NetChannelBufType_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        const char *pProjectName)
+{
+  ISchemaSystemTypeScope *v3; // rax
+  unsigned int v4; // edi
+  SchemaEnumeratorValue_t v5; // r8
+  SchemaEnumeratorValue_t v6; // r9
+  SchemaEnumeratorValue_t *v7; // rdx
+
+  v3 = (*(*pSchemaSystem + 112LL))(pSchemaSystem, 0, pBinaryName);
+  if ( CSchemaEnumBinding<NetChannelBufType_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_NetChannelBufType_t.m_Enumerators.m_Data.m_nImplLength != 0 )
+  {
+    v4 = abs32(CSchemaEnumBinding<NetChannelBufType_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_NetChannelBufType_t.m_Enumerators.m_Data.m_nImplLength);
+    v5 = *(CSchemaEnumBinding<NetChannelBufType_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_NetChannelBufType_t.m_Enumerators.m_Data.m_pImplElements
+         + 2);
+    CSchemaEnumBinding<NetChannelBufType_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_NetChannelBufType_t.m_nMinValue = v5;
+    v6 = *(CSchemaEnumBinding<NetChannelBufType_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_NetChannelBufType_t.m_Enumerators.m_Data.m_pImplElements
+         + 2);
+    CSchemaEnumBinding<NetChannelBufType_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_NetChannelBufType_t.m_nMaxValue = v6;
+    if ( v4 != 1 )
+    {
+      v7 = (CSchemaEnumBinding<NetChannelBufType_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_NetChannelBufType_t.m_Enumerators.m_Data.m_pImplElements
+          + 72);
+      do
+      {
+        if ( v5 > *v7 )
+          v5 = *v7;
+        CSchemaEnumBinding<NetChannelBufType_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_NetChannelBufType_t.m_nMinValue = v5;
+        if ( v6 < *v7 )
+          v6 = *v7;
+        v7 += 7;
+        CSchemaEnumBinding<NetChannelBufType_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_NetChannelBufType_t.m_nMaxValue = v6;
+      }
+      while ( v7 != CSchemaEnumBinding<NetChannelBufType_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_NetChannelBufType_t.m_Enumerators.m_Data.m_pImplElements
+                  + 7 * v4
+                  + 2 );
+    }
+  }
+  else
+  {
+    CSchemaEnumBinding<NetChannelBufType_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_NetChannelBufType_t.m_nMinValue = 0;
+    CSchemaEnumBinding<NetChannelBufType_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_NetChannelBufType_t.m_nMaxValue = 0;
+  }
+  CSchemaEnumBinding<NetChannelBufType_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_NetChannelBufType_t.m_pOuterTypeScope = v3;
+  (*(*v3 + 272LL))(
+    v3,
+    &CSchemaEnumBinding<NetChannelBufType_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_NetChannelBufType_t);
+  return &CSchemaEnumBinding<NetChannelBufType_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_NetChannelBufType_t;
+}
+
+
+// ChangeAccessorFieldPathIndex_t::Schema_CompileTimeVerificationFunction  (line 48, @0x000000000203c030, libserver.so)
+void __fastcall ChangeAccessorFieldPathIndex_t::Schema_CompileTimeVerificationFunction(
+        ChangeAccessorFieldPathIndex_t *const this)
+{
+  ;
+}
+
+
+// ChangeAccessorFieldPathIndex_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE  (line 52, @0x000000000203c040, libserver.so)  // inlines: Get, SchemaBinding_SchemaTypeOfMemberVarByAddr<ChangeAccessorFieldPathIndex_t, short int>, SetTypeScope
+// callers: CSchemaClassBinding<ChangeAccessorFieldPathIndex_t>::Register
+// globals: ChangeAccessorFieldPathIndex_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char con
+CSchemaClassInfo *__fastcall ChangeAccessorFieldPathIndex_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        const char *pProjectName)
+{
+  CSchemaClassInfo *result; // rax
+  ISchemaSystemTypeScope *v4; // rbx
+  CSchemaType *v5; // rax
+
+  result = ChangeAccessorFieldPathIndex_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult;
+  if ( ChangeAccessorFieldPathIndex_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult == 0 )
+  {
+    v4 = (*(*pSchemaSystem + 112LL))(pSchemaSystem, 0, pBinaryName);
+    v5 = (*(*v4 + 40LL))(v4, 5);
+    ChangeAccessorFieldPathIndex_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_ChangeAccessorFieldPathIndex_t.m_pOuterTypeScope = v4;
+    ChangeAccessorFieldPathIndex_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_ChangeAccessorFieldPathIndex_t[0].m_pType = v5;
+    ChangeAccessorFieldPathIndex_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult = &ChangeAccessorFieldPathIndex_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_ChangeAccessorFieldPathIndex_t;
+    (*(*v4 + 264LL))(
+      v4,
+      &ChangeAccessorFieldPathIndex_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_ChangeAccessorFieldPathIndex_t);
+    return ChangeAccessorFieldPathIndex_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult;
+  }
+  return result;
+}
+
+
+// ChangeAccessorFieldPathIndex_t::Schema_VerifyBindingIsRegistered  (line 64, @0x000000000203c0c0, libserver.so)
+void __cdecl ChangeAccessorFieldPathIndex_t::Schema_VerifyBindingIsRegistered()
+{
+  ;
+}
+
+
+// LocalRegisterSchemaModule<ArbitraryTemplateParameter_server_networksystemtypes_h>  (line 72, @0x000000000203c0d0, libserver.so)  // inlines: Call, Get
+// callers: RegisterSchemaModule_networksystemtypes_h
+// strings: "NetChannelBufType_t"
+// globals: CSchemaEnumBinding<NetChannelBufType_t>::s_pThisModuleBindingPointer, ChangeAccessorFieldPathIndex_t::s_pSchemaBindingForLocalModule
+void __fastcall LocalRegisterSchemaModule<ArbitraryTemplateParameter_server_networksystemtypes_h>(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        SchemaRegistrationPhase_t nRegistrationPhase)
+{
+  if ( nRegistrationPhase != SchemaRegistrationPhase_t::SCHEMA_REGISTRATION_PHASE_ATOMIC_TYPES_AND_ENUMS )
+  {
+    if ( nRegistrationPhase == SchemaRegistrationPhase_t::SCHEMA_REGISTRATION_PHASE_CLASSES )
+      (*(ChangeAccessorFieldPathIndex_t::s_pSchemaBindingForLocalModule->_vptr_ISchemaBinding + 5))(
+        ChangeAccessorFieldPathIndex_t::s_pSchemaBindingForLocalModule,
+        pSchemaSystem,
+        pBinaryName,
+        "server");
+    ++g_nLinkerHack_SchemaAnchor_RegistrationCountFor_server;
+  }
+  else
+  {
+    (*(CSchemaEnumBinding<NetChannelBufType_t>::s_pThisModuleBindingPointer->_vptr_ISchemaBinding + 5))(
+      CSchemaEnumBinding<NetChannelBufType_t>::s_pThisModuleBindingPointer,
+      pSchemaSystem,
+      pBinaryName,
+      "server",
+      "NetChannelBufType_t");
+    ++g_nLinkerHack_SchemaAnchor_RegistrationCountFor_server;
+  }
+}
+
+
+// RegisterSchemaModule_networksystemtypes_h  (line 75, @0x000000000203c160, libserver.so)
+// calls: LocalRegisterSchemaModule<ArbitraryTemplateParameter_server_networksystemtypes_h>
+// callers: CSchemaRegistration_server::RegisterAllBindings
+void __fastcall RegisterSchemaModule_networksystemtypes_h(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        SchemaRegistrationPhase_t nRegistrationPhase)
+{
+  LocalRegisterSchemaModule<ArbitraryTemplateParameter_server_networksystemtypes_h>(
+    pSchemaSystem,
+    pBinaryName,
+    nRegistrationPhase);
+}
+
+

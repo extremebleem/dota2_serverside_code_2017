@@ -1,0 +1,389 @@
+
+// ==== functions (decompiled by Hex-Rays; names/signatures from DWARF) ====
+
+// CBaseFire::CEntityInstanceEntityClass::Schema_CompileTimeVerificationFunction  (line 35, @0x0000000001fd4830, libserver.so)
+void __fastcall CBaseFire::CEntityInstanceEntityClass::Schema_CompileTimeVerificationFunction(
+        CBaseFire::CEntityInstanceEntityClass *const this)
+{
+  ;
+}
+
+
+// CBaseFire::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE  (line 38, @0x0000000001fcfc40, libserver.so)  // inlines: Call, Get, SetTypeScope
+// calls: CBaseEntity::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE
+// callers: CFireSmoke::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE, CSchemaNonConstructibleClassBinding<CBaseFire::CEntityInstanceEntityClass>::Register, CBaseFire::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE, CBaseFire::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE
+// globals: CBaseFire::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,c
+CSchemaClassInfo *__fastcall CBaseFire::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        const char *pProjectName)
+{
+  ISchemaSystemTypeScope *v6; // r14
+  CSchemaClassInfo *v7; // rax
+
+  v6 = (*(*pSchemaSystem + 112LL))(pSchemaSystem, 1, pBinaryName);
+  (*(CBaseEntity::CEntityInstanceEntityClass::s_pSchemaBindingForLocalModule->_vptr_ISchemaBinding + 5))(
+    CBaseEntity::CEntityInstanceEntityClass::s_pSchemaBindingForLocalModule,
+    pSchemaSystem,
+    pBinaryName,
+    pProjectName);
+  v7 = CBaseEntity::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+         pSchemaSystem,
+         pBinaryName,
+         pProjectName);
+  CBaseFire::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CBaseFire_CEntityInstanceEntityClass.m_pOuterTypeScope = v6;
+  CBaseFire::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassBases_CBaseFire_CEntityInstanceEntityClass[0].m_pClass = v7;
+  CBaseFire::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult = &CBaseFire::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CBaseFire_CEntityInstanceEntityClass;
+  return &CBaseFire::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CBaseFire_CEntityInstanceEntityClass;
+}
+
+
+// CBaseFire::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE  (line 38, @0x0000000001fd4840, libserver.so)
+// calls: CBaseFire::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE
+// callers: CPlasma::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE
+// globals: CBaseFire::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,c
+CSchemaClassInfo *__fastcall CBaseFire::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        const char *pProjectName)
+{
+  CSchemaClassInfo *result; // rax
+
+  result = CBaseFire::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult;
+  if ( CBaseFire::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult == 0 )
+    return CBaseFire::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+             pSchemaSystem,
+             pBinaryName,
+             pProjectName);
+  return result;
+}
+
+
+// CBaseFire::CEntityInstanceEntityClass::Schema_VerifyBindingIsRegistered  (line 55, @0x0000000001fd4860, libserver.so)
+// callers: CBaseFire::CEntityInstanceEntityClass::Schema_DynamicBinding
+void __cdecl CBaseFire::CEntityInstanceEntityClass::Schema_VerifyBindingIsRegistered()
+{
+  ;
+}
+
+
+// CBaseFire::Schema_CompileTimeVerificationFunction  (line 63, @0x0000000001fd4870, libserver.so)
+void __fastcall CBaseFire::Schema_CompileTimeVerificationFunction(CBaseFire *const this)
+{
+  ;
+}
+
+
+// CBaseFire::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE  (line 70, @0x0000000001fd4880, libserver.so)  // inlines: Call, Get, NetworkVarDecl_t, RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE, SchemaBinding_SchemaTypeOfMemberVarByAddr<CBaseFire, CNetworkVarBase<float, CBaseFire::NetworkVar_m_flScale> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<CBaseFire, CNetworkVarBase<float, CBaseFire::NetworkVar_m_flScaleTime> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<CBaseFire, CNetworkVarBase<float, CBaseFire::NetworkVar_m_flStartScale> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<CBaseFire, CNetworkVarBase<unsigned int, CBaseFire::NetworkVar_m_nFlags> >, SetTypeScope
+// calls: __cxa_guard_acquire, __cxa_guard_release, CBaseEntity::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE, CBaseFire::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE, __cxa_guard_abort, _Unwind_Resume
+// callers: CPlasma::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE, CSchemaNonConstructibleClassBinding<CBaseFire>::Register, CFireSmoke::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE
+// strings: "m_nFlags", "uint32", "m_flStartScale", "float32", "m_flScale", "m_flScaleTime"
+// globals: CBaseFire::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedR, `guard variable for'CBaseFire::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char cons, CBaseFire::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,c, CBaseFire::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_Nest, CBaseFire::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_Clas
+CSchemaClassInfo *__fastcall CBaseFire::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        const char *pProjectName)
+{
+  CSchemaClassInfo *result; // rax
+  ISchemaSystemTypeScope *v7; // r14
+  CSchemaClassInfo *v8; // rax
+  CSchemaClassInfo *v9; // rax
+
+  result = CBaseFire::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult;
+  if ( CBaseFire::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult == 0 )
+  {
+    v7 = (*(*pSchemaSystem + 112LL))(pSchemaSystem, 1, pBinaryName);
+    if ( `guard variable for'CBaseFire::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CBaseFire3_MNetworkVarNames_Value == 0
+      && __cxa_guard_acquire(&`guard variable for'CBaseFire::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CBaseFire3_MNetworkVarNames_Value) != 0 )
+    {
+      CBaseFire::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CBaseFire3_MNetworkVarNames_Value.m_pVarName = "m_flScale";
+      CBaseFire::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CBaseFire3_MNetworkVarNames_Value.m_pVarType = "float32";
+      __cxa_guard_release(&`guard variable for'CBaseFire::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CBaseFire3_MNetworkVarNames_Value);
+    }
+    if ( `guard variable for'CBaseFire::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CBaseFire4_MNetworkVarNames_Value == 0
+      && __cxa_guard_acquire(&`guard variable for'CBaseFire::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CBaseFire4_MNetworkVarNames_Value) != 0 )
+    {
+      CBaseFire::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CBaseFire4_MNetworkVarNames_Value.m_pVarName = "m_flStartScale";
+      CBaseFire::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CBaseFire4_MNetworkVarNames_Value.m_pVarType = "float32";
+      __cxa_guard_release(&`guard variable for'CBaseFire::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CBaseFire4_MNetworkVarNames_Value);
+    }
+    if ( `guard variable for'CBaseFire::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CBaseFire5_MNetworkVarNames_Value == 0
+      && __cxa_guard_acquire(&`guard variable for'CBaseFire::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CBaseFire5_MNetworkVarNames_Value) != 0 )
+    {
+      CBaseFire::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CBaseFire5_MNetworkVarNames_Value.m_pVarName = "m_flScaleTime";
+      CBaseFire::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CBaseFire5_MNetworkVarNames_Value.m_pVarType = "float32";
+      __cxa_guard_release(&`guard variable for'CBaseFire::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CBaseFire5_MNetworkVarNames_Value);
+    }
+    if ( `guard variable for'CBaseFire::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CBaseFire6_MNetworkVarNames_Value == 0
+      && __cxa_guard_acquire(&`guard variable for'CBaseFire::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CBaseFire6_MNetworkVarNames_Value) != 0 )
+    {
+      CBaseFire::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CBaseFire6_MNetworkVarNames_Value.m_pVarName = "m_nFlags";
+      CBaseFire::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CBaseFire6_MNetworkVarNames_Value.m_pVarType = "uint32";
+      __cxa_guard_release(&`guard variable for'CBaseFire::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CBaseFire6_MNetworkVarNames_Value);
+    }
+    CBaseFire::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CBaseFire[0].m_pType = (*(*v7 + 40LL))(v7, 11);
+    CBaseFire::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CBaseFire[1].m_pType = (*(*v7 + 40LL))(v7, 11);
+    CBaseFire::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CBaseFire[2].m_pType = (*(*v7 + 40LL))(v7, 11);
+    CBaseFire::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CBaseFire[3].m_pType = (*(*v7 + 40LL))(v7, 8);
+    if ( `guard variable for'CBaseFire::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_NestedClassesOf_CBaseFire == 0
+      && __cxa_guard_acquire(&`guard variable for'CBaseFire::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_NestedClassesOf_CBaseFire) != 0 )
+    {
+      v8 = CBaseFire::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult;
+      if ( CBaseFire::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult == 0 )
+        v8 = CBaseFire::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+               pSchemaSystem,
+               pBinaryName,
+               pProjectName);
+      CBaseFire::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_NestedClassesOf_CBaseFire[0] = v8;
+      __cxa_guard_release(&`guard variable for'CBaseFire::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_NestedClassesOf_CBaseFire);
+    }
+    (*(CBaseEntity::s_pSchemaBindingForLocalModule->_vptr_ISchemaBinding + 5))(
+      CBaseEntity::s_pSchemaBindingForLocalModule,
+      pSchemaSystem,
+      pBinaryName,
+      pProjectName);
+    v9 = CBaseEntity::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+           pSchemaSystem,
+           pBinaryName,
+           pProjectName);
+    CBaseFire::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CBaseFire.m_pOuterTypeScope = v7;
+    CBaseFire::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassBases_CBaseFire[0].m_pClass = v9;
+    CBaseFire::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult = &CBaseFire::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CBaseFire;
+    return &CBaseFire::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CBaseFire;
+  }
+  return result;
+}
+
+
+// CBaseFire::Schema_VerifyBindingIsRegistered  (line 159, @0x0000000001fd4b10, libserver.so)
+// callers: CBaseFire::CEntityInstanceEntityClass::GetInstanceSchemaBinding, CBaseFire::Schema_DynamicBinding
+void __cdecl CBaseFire::Schema_VerifyBindingIsRegistered()
+{
+  ;
+}
+
+
+// CBaseFire::SetupEntClassInputs  (line 173, @0x0000000001fd4b20, libserver.so)
+void __fastcall CBaseFire::SetupEntClassInputs(CEntityClass *pComponentInfo)
+{
+  ;
+}
+
+
+// CBaseFire::SetupEntClassComponentOverrides  (line 179, @0x0000000001fd4b30, libserver.so)
+void __fastcall CBaseFire::SetupEntClassComponentOverrides(CEntityClass *pEntityClass)
+{
+  pEntityClass->m_pComponentOverrides = 0;
+}
+
+
+// CFireSmoke::CEntityInstanceEntityClass::Schema_CompileTimeVerificationFunction  (line 185, @0x0000000001fd4b40, libserver.so)
+void __fastcall CFireSmoke::CEntityInstanceEntityClass::Schema_CompileTimeVerificationFunction(
+        CFireSmoke::CEntityInstanceEntityClass *const this)
+{
+  ;
+}
+
+
+// CFireSmoke::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE  (line 188, @0x0000000001fd0240, libserver.so)  // inlines: Call, Get, RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE, SetTypeScope
+// calls: CBaseFire::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE
+// callers: CSchemaNonConstructibleClassBinding<CFireSmoke::CEntityInstanceEntityClass>::Register, CFireSmoke::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE, CFireSmoke::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE
+// globals: CBaseFire::CEntityInstanceEntityClass::s_pSchemaBindingForLocalModule, CBaseFire::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,c, CFireSmoke::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,
+CSchemaClassInfo *__fastcall CFireSmoke::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        const char *pProjectName)
+{
+  ISchemaSystemTypeScope *v6; // r14
+  CSchemaClassInfo *v7; // rax
+
+  v6 = (*(*pSchemaSystem + 112LL))(pSchemaSystem, 1, pBinaryName);
+  (*(CBaseFire::CEntityInstanceEntityClass::s_pSchemaBindingForLocalModule->_vptr_ISchemaBinding + 5))(
+    CBaseFire::CEntityInstanceEntityClass::s_pSchemaBindingForLocalModule,
+    pSchemaSystem,
+    pBinaryName,
+    pProjectName);
+  v7 = CBaseFire::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult;
+  if ( CBaseFire::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult == 0 )
+    v7 = CBaseFire::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+           pSchemaSystem,
+           pBinaryName,
+           pProjectName);
+  CFireSmoke::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CFireSmoke_CEntityInstanceEntityClass.m_pOuterTypeScope = v6;
+  CFireSmoke::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassBases_CFireSmoke_CEntityInstanceEntityClass[0].m_pClass = v7;
+  CFireSmoke::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult = &CFireSmoke::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CFireSmoke_CEntityInstanceEntityClass;
+  return &CFireSmoke::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CFireSmoke_CEntityInstanceEntityClass;
+}
+
+
+// CFireSmoke::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE  (line 188, @0x0000000001fd4b50, libserver.so)
+// calls: CFireSmoke::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE
+// globals: CFireSmoke::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,
+CSchemaClassInfo *__fastcall CFireSmoke::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        const char *pProjectName)
+{
+  CSchemaClassInfo *result; // rax
+
+  result = CFireSmoke::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult;
+  if ( CFireSmoke::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult == 0 )
+    return CFireSmoke::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+             pSchemaSystem,
+             pBinaryName,
+             pProjectName);
+  return result;
+}
+
+
+// CFireSmoke::CEntityInstanceEntityClass::Schema_VerifyBindingIsRegistered  (line 205, @0x0000000001fd4b70, libserver.so)
+void __cdecl CFireSmoke::CEntityInstanceEntityClass::Schema_VerifyBindingIsRegistered()
+{
+  ;
+}
+
+
+// CFireSmoke::Schema_CompileTimeVerificationFunction  (line 213, @0x0000000001fd4b80, libserver.so)
+void __fastcall CFireSmoke::Schema_CompileTimeVerificationFunction(CFireSmoke *const this)
+{
+  ;
+}
+
+
+// CFireSmoke::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE  (line 218, @0x0000000001fd4b90, libserver.so)  // inlines: Call, Get, NetworkVarDecl_t, RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE, SchemaBinding_SchemaTypeOfMemberVarByAddr<CFireSmoke, CNetworkVarBase<int, CFireSmoke::NetworkVar_m_nFlameFromAboveModelIndex> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<CFireSmoke, CNetworkVarBase<int, CFireSmoke::NetworkVar_m_nFlameModelIndex> >, SetTypeScope
+// calls: __cxa_guard_acquire, __cxa_guard_release, CBaseFire::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE, CFireSmoke::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE, __cxa_guard_abort, _Unwind_Resume
+// callers: CSchemaNonConstructibleClassBinding<CFireSmoke>::Register
+// strings: "m_nFlameFromAboveModelIndex", "m_nFlameModelIndex"
+// globals: CFireSmoke::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitialized, `guard variable for'CFireSmoke::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char con, CFireSmoke::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,, CFireSmoke::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_Nes, CBaseFire::s_pSchemaBindingForLocalModule, CFireSmoke::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_Cla
+CSchemaClassInfo *__fastcall CFireSmoke::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        const char *pProjectName)
+{
+  CSchemaClassInfo *result; // rax
+  ISchemaSystemTypeScope *v7; // r14
+  CSchemaClassInfo *v8; // rax
+  CSchemaClassInfo *v9; // rax
+
+  result = CFireSmoke::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult;
+  if ( CFireSmoke::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult == 0 )
+  {
+    v7 = (*(*pSchemaSystem + 112LL))(pSchemaSystem, 1, pBinaryName);
+    if ( `guard variable for'CFireSmoke::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CFireSmoke3_MNetworkVarNames_Value == 0
+      && __cxa_guard_acquire(&`guard variable for'CFireSmoke::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CFireSmoke3_MNetworkVarNames_Value) != 0 )
+    {
+      CFireSmoke::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CFireSmoke3_MNetworkVarNames_Value.m_pVarName = "m_nFlameModelIndex";
+      CFireSmoke::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CFireSmoke3_MNetworkVarNames_Value.m_pVarType = "int32";
+      __cxa_guard_release(&`guard variable for'CFireSmoke::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CFireSmoke3_MNetworkVarNames_Value);
+    }
+    if ( `guard variable for'CFireSmoke::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CFireSmoke4_MNetworkVarNames_Value == 0
+      && __cxa_guard_acquire(&`guard variable for'CFireSmoke::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CFireSmoke4_MNetworkVarNames_Value) != 0 )
+    {
+      CFireSmoke::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CFireSmoke4_MNetworkVarNames_Value.m_pVarName = "m_nFlameFromAboveModelIndex";
+      CFireSmoke::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CFireSmoke4_MNetworkVarNames_Value.m_pVarType = "int32";
+      __cxa_guard_release(&`guard variable for'CFireSmoke::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CFireSmoke4_MNetworkVarNames_Value);
+    }
+    CFireSmoke::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CFireSmoke[0].m_pType = (*(*v7 + 40LL))(v7, 7);
+    CFireSmoke::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CFireSmoke[1].m_pType = (*(*v7 + 40LL))(v7, 7);
+    if ( `guard variable for'CFireSmoke::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_NestedClassesOf_CFireSmoke == 0
+      && __cxa_guard_acquire(&`guard variable for'CFireSmoke::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_NestedClassesOf_CFireSmoke) != 0 )
+    {
+      v8 = CFireSmoke::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult;
+      if ( CFireSmoke::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult == 0 )
+        v8 = CFireSmoke::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+               pSchemaSystem,
+               pBinaryName,
+               pProjectName);
+      CFireSmoke::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_NestedClassesOf_CFireSmoke[0] = v8;
+      __cxa_guard_release(&`guard variable for'CFireSmoke::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_NestedClassesOf_CFireSmoke);
+    }
+    (*(CBaseFire::s_pSchemaBindingForLocalModule->_vptr_ISchemaBinding + 5))(
+      CBaseFire::s_pSchemaBindingForLocalModule,
+      pSchemaSystem,
+      pBinaryName,
+      pProjectName);
+    v9 = CBaseFire::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+           pSchemaSystem,
+           pBinaryName,
+           pProjectName);
+    CFireSmoke::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CFireSmoke.m_pOuterTypeScope = v7;
+    CFireSmoke::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassBases_CFireSmoke[0].m_pClass = v9;
+    CFireSmoke::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult = &CFireSmoke::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CFireSmoke;
+    return &CFireSmoke::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CFireSmoke;
+  }
+  return result;
+}
+
+
+// CFireSmoke::Schema_VerifyBindingIsRegistered  (line 280, @0x0000000001fd4d50, libserver.so)
+// callers: CFireSmoke::Schema_DynamicBinding
+void __cdecl CFireSmoke::Schema_VerifyBindingIsRegistered()
+{
+  ;
+}
+
+
+// CFireSmoke::SetupEntClassInputs  (line 294, @0x0000000001fd4d60, libserver.so)
+void __fastcall CFireSmoke::SetupEntClassInputs(CEntityClass *pComponentInfo)
+{
+  ;
+}
+
+
+// CFireSmoke::SetupEntClassComponentOverrides  (line 300, @0x0000000001fd4d70, libserver.so)
+void __fastcall CFireSmoke::SetupEntClassComponentOverrides(CEntityClass *pEntityClass)
+{
+  pEntityClass->m_pComponentOverrides = 0;
+}
+
+
+// LocalRegisterSchemaModule<ArbitraryTemplateParameter_server_fire_smoke_h>  (line 306, @0x0000000001fd4d80, libserver.so)  // inlines: Call
+// callers: RegisterSchemaModule_fire_smoke_h
+// globals: CBaseFire::CEntityInstanceEntityClass::s_pSchemaBindingForLocalModule, CBaseFire::s_pSchemaBindingForLocalModule, CFireSmoke::CEntityInstanceEntityClass::s_pSchemaBindingForLocalModule, CFireSmoke::s_pSchemaBindingForLocalModule
+void __fastcall LocalRegisterSchemaModule<ArbitraryTemplateParameter_server_fire_smoke_h>(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        SchemaRegistrationPhase_t nRegistrationPhase)
+{
+  if ( nRegistrationPhase == SchemaRegistrationPhase_t::SCHEMA_REGISTRATION_PHASE_CLASSES )
+  {
+    (*(CBaseFire::CEntityInstanceEntityClass::s_pSchemaBindingForLocalModule->_vptr_ISchemaBinding + 5))(
+      CBaseFire::CEntityInstanceEntityClass::s_pSchemaBindingForLocalModule,
+      pSchemaSystem,
+      pBinaryName,
+      "server");
+    (*(CBaseFire::s_pSchemaBindingForLocalModule->_vptr_ISchemaBinding + 5))(
+      CBaseFire::s_pSchemaBindingForLocalModule,
+      pSchemaSystem,
+      pBinaryName,
+      "server");
+    (*(CFireSmoke::CEntityInstanceEntityClass::s_pSchemaBindingForLocalModule->_vptr_ISchemaBinding + 5))(
+      CFireSmoke::CEntityInstanceEntityClass::s_pSchemaBindingForLocalModule,
+      pSchemaSystem,
+      pBinaryName,
+      "server");
+    (*(CFireSmoke::s_pSchemaBindingForLocalModule->_vptr_ISchemaBinding + 5))(
+      CFireSmoke::s_pSchemaBindingForLocalModule,
+      pSchemaSystem,
+      pBinaryName,
+      "server");
+  }
+  ++g_nLinkerHack_SchemaAnchor_RegistrationCountFor_server;
+}
+
+
+// RegisterSchemaModule_fire_smoke_h  (line 311, @0x0000000001fd4e20, libserver.so)
+// calls: LocalRegisterSchemaModule<ArbitraryTemplateParameter_server_fire_smoke_h>
+// callers: CSchemaRegistration_server::RegisterAllBindings
+void __fastcall RegisterSchemaModule_fire_smoke_h(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        SchemaRegistrationPhase_t nRegistrationPhase)
+{
+  LocalRegisterSchemaModule<ArbitraryTemplateParameter_server_fire_smoke_h>(
+    pSchemaSystem,
+    pBinaryName,
+    nRegistrationPhase);
+}
+
+

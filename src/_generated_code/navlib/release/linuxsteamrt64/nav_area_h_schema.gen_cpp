@@ -1,0 +1,24 @@
+
+// ==== functions (decompiled by Hex-Rays; names/signatures from DWARF) ====
+
+// LocalRegisterSchemaModule<ArbitraryTemplateParameter_navlib_nav_area_h>  (line 33, @0x0000000003211270, libserver.so)
+void __fastcall LocalRegisterSchemaModule<ArbitraryTemplateParameter_navlib_nav_area_h>(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        SchemaRegistrationPhase_t nRegistrationPhase)
+{
+  ++g_nLinkerHack_SchemaAnchor_RegistrationCountFor_navlib;
+}
+
+
+// RegisterSchemaModule_nav_area_h  (line 34, @0x0000000003211280, libserver.so)  // inlines: LocalRegisterSchemaModule<ArbitraryTemplateParameter_navlib_nav_area_h>
+// callers: CSchemaRegistration_navlib::RegisterAllBindings
+void __fastcall RegisterSchemaModule_nav_area_h(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        SchemaRegistrationPhase_t nRegistrationPhase)
+{
+  ++g_nLinkerHack_SchemaAnchor_RegistrationCountFor_navlib;
+}
+
+

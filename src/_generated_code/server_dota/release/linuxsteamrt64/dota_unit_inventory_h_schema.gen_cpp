@@ -1,0 +1,404 @@
+
+// ==== functions (decompiled by Hex-Rays; names/signatures from DWARF) ====
+
+// CSchemaEnumBinding<DOTAScriptInventorySlot_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE  (line 35, @0x00000000027ac130, libserver.so)  // inlines: Count, Initialize, SetTypeScope
+// callers: CSchemaEnumBinding<DOTAScriptInventorySlot_t>::Register
+// globals: CSchemaEnumBinding<DOTAScriptInventorySlot_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char c
+CSchemaEnumInfo *__fastcall CSchemaEnumBinding<DOTAScriptInventorySlot_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        const char *pProjectName)
+{
+  ISchemaSystemTypeScope *v3; // rax
+  unsigned int v4; // edi
+  SchemaEnumeratorValue_t v5; // r8
+  SchemaEnumeratorValue_t v6; // r9
+  SchemaEnumeratorValue_t *v7; // rdx
+
+  v3 = (*(*pSchemaSystem + 112LL))(pSchemaSystem, 0, pBinaryName);
+  if ( CSchemaEnumBinding<DOTAScriptInventorySlot_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_DOTAScriptInventorySlot_t.m_Enumerators.m_Data.m_nImplLength != 0 )
+  {
+    v4 = abs32(CSchemaEnumBinding<DOTAScriptInventorySlot_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_DOTAScriptInventorySlot_t.m_Enumerators.m_Data.m_nImplLength);
+    v5 = *(CSchemaEnumBinding<DOTAScriptInventorySlot_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_DOTAScriptInventorySlot_t.m_Enumerators.m_Data.m_pImplElements
+         + 2);
+    CSchemaEnumBinding<DOTAScriptInventorySlot_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_DOTAScriptInventorySlot_t.m_nMinValue = v5;
+    v6 = *(CSchemaEnumBinding<DOTAScriptInventorySlot_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_DOTAScriptInventorySlot_t.m_Enumerators.m_Data.m_pImplElements
+         + 2);
+    CSchemaEnumBinding<DOTAScriptInventorySlot_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_DOTAScriptInventorySlot_t.m_nMaxValue = v6;
+    if ( v4 != 1 )
+    {
+      v7 = (CSchemaEnumBinding<DOTAScriptInventorySlot_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_DOTAScriptInventorySlot_t.m_Enumerators.m_Data.m_pImplElements
+          + 72);
+      do
+      {
+        if ( v5 > *v7 )
+          v5 = *v7;
+        CSchemaEnumBinding<DOTAScriptInventorySlot_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_DOTAScriptInventorySlot_t.m_nMinValue = v5;
+        if ( v6 < *v7 )
+          v6 = *v7;
+        v7 += 7;
+        CSchemaEnumBinding<DOTAScriptInventorySlot_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_DOTAScriptInventorySlot_t.m_nMaxValue = v6;
+      }
+      while ( v7 != CSchemaEnumBinding<DOTAScriptInventorySlot_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_DOTAScriptInventorySlot_t.m_Enumerators.m_Data.m_pImplElements
+                  + 7 * v4
+                  + 2 );
+    }
+  }
+  else
+  {
+    CSchemaEnumBinding<DOTAScriptInventorySlot_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_DOTAScriptInventorySlot_t.m_nMinValue = 0;
+    CSchemaEnumBinding<DOTAScriptInventorySlot_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_DOTAScriptInventorySlot_t.m_nMaxValue = 0;
+  }
+  CSchemaEnumBinding<DOTAScriptInventorySlot_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_DOTAScriptInventorySlot_t.m_pOuterTypeScope = v3;
+  (*(*v3 + 272LL))(
+    v3,
+    &CSchemaEnumBinding<DOTAScriptInventorySlot_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_DOTAScriptInventorySlot_t);
+  return &CSchemaEnumBinding<DOTAScriptInventorySlot_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_DOTAScriptInventorySlot_t;
+}
+
+
+// CSchemaEnumBinding<DOTA_ITEM_STATE>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE  (line 59, @0x00000000027ac210, libserver.so)  // inlines: Count, Initialize, SetTypeScope
+// callers: CSchemaEnumBinding<DOTA_ITEM_STATE>::Register
+// globals: CSchemaEnumBinding<DOTA_ITEM_STATE>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char
+CSchemaEnumInfo *__fastcall CSchemaEnumBinding<DOTA_ITEM_STATE>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        const char *pProjectName)
+{
+  ISchemaSystemTypeScope *v3; // rax
+  unsigned int v4; // edi
+  SchemaEnumeratorValue_t v5; // r8
+  SchemaEnumeratorValue_t v6; // r9
+  SchemaEnumeratorValue_t *v7; // rdx
+
+  v3 = (*(*pSchemaSystem + 112LL))(pSchemaSystem, 0, pBinaryName);
+  if ( CSchemaEnumBinding<DOTA_ITEM_STATE>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_DOTA_ITEM_STATE.m_Enumerators.m_Data.m_nImplLength != 0 )
+  {
+    v4 = abs32(CSchemaEnumBinding<DOTA_ITEM_STATE>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_DOTA_ITEM_STATE.m_Enumerators.m_Data.m_nImplLength);
+    v5 = *(CSchemaEnumBinding<DOTA_ITEM_STATE>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_DOTA_ITEM_STATE.m_Enumerators.m_Data.m_pImplElements
+         + 2);
+    CSchemaEnumBinding<DOTA_ITEM_STATE>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_DOTA_ITEM_STATE.m_nMinValue = v5;
+    v6 = *(CSchemaEnumBinding<DOTA_ITEM_STATE>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_DOTA_ITEM_STATE.m_Enumerators.m_Data.m_pImplElements
+         + 2);
+    CSchemaEnumBinding<DOTA_ITEM_STATE>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_DOTA_ITEM_STATE.m_nMaxValue = v6;
+    if ( v4 != 1 )
+    {
+      v7 = (CSchemaEnumBinding<DOTA_ITEM_STATE>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_DOTA_ITEM_STATE.m_Enumerators.m_Data.m_pImplElements
+          + 72);
+      do
+      {
+        if ( v5 > *v7 )
+          v5 = *v7;
+        CSchemaEnumBinding<DOTA_ITEM_STATE>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_DOTA_ITEM_STATE.m_nMinValue = v5;
+        if ( v6 < *v7 )
+          v6 = *v7;
+        v7 += 7;
+        CSchemaEnumBinding<DOTA_ITEM_STATE>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_DOTA_ITEM_STATE.m_nMaxValue = v6;
+      }
+      while ( v7 != CSchemaEnumBinding<DOTA_ITEM_STATE>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_DOTA_ITEM_STATE.m_Enumerators.m_Data.m_pImplElements
+                  + 7 * v4
+                  + 2 );
+    }
+  }
+  else
+  {
+    CSchemaEnumBinding<DOTA_ITEM_STATE>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_DOTA_ITEM_STATE.m_nMinValue = 0;
+    CSchemaEnumBinding<DOTA_ITEM_STATE>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_DOTA_ITEM_STATE.m_nMaxValue = 0;
+  }
+  CSchemaEnumBinding<DOTA_ITEM_STATE>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_DOTA_ITEM_STATE.m_pOuterTypeScope = v3;
+  (*(*v3 + 272LL))(
+    v3,
+    &CSchemaEnumBinding<DOTA_ITEM_STATE>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_DOTA_ITEM_STATE);
+  return &CSchemaEnumBinding<DOTA_ITEM_STATE>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_DOTA_ITEM_STATE;
+}
+
+
+// CSchemaEnumBinding<DOTAInventoryFlags_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE  (line 70, @0x00000000027ac2f0, libserver.so)  // inlines: Count, Initialize, SetTypeScope
+// callers: CSchemaEnumBinding<DOTAInventoryFlags_t>::Register
+// globals: CSchemaEnumBinding<DOTAInventoryFlags_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*
+CSchemaEnumInfo *__fastcall CSchemaEnumBinding<DOTAInventoryFlags_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        const char *pProjectName)
+{
+  ISchemaSystemTypeScope *v3; // rax
+  unsigned int v4; // edi
+  SchemaEnumeratorValue_t v5; // r8
+  SchemaEnumeratorValue_t v6; // r9
+  SchemaEnumeratorValue_t *v7; // rdx
+
+  v3 = (*(*pSchemaSystem + 112LL))(pSchemaSystem, 0, pBinaryName);
+  if ( CSchemaEnumBinding<DOTAInventoryFlags_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_DOTAInventoryFlags_t.m_Enumerators.m_Data.m_nImplLength != 0 )
+  {
+    v4 = abs32(CSchemaEnumBinding<DOTAInventoryFlags_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_DOTAInventoryFlags_t.m_Enumerators.m_Data.m_nImplLength);
+    v5 = *(CSchemaEnumBinding<DOTAInventoryFlags_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_DOTAInventoryFlags_t.m_Enumerators.m_Data.m_pImplElements
+         + 2);
+    CSchemaEnumBinding<DOTAInventoryFlags_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_DOTAInventoryFlags_t.m_nMinValue = v5;
+    v6 = *(CSchemaEnumBinding<DOTAInventoryFlags_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_DOTAInventoryFlags_t.m_Enumerators.m_Data.m_pImplElements
+         + 2);
+    CSchemaEnumBinding<DOTAInventoryFlags_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_DOTAInventoryFlags_t.m_nMaxValue = v6;
+    if ( v4 != 1 )
+    {
+      v7 = (CSchemaEnumBinding<DOTAInventoryFlags_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_DOTAInventoryFlags_t.m_Enumerators.m_Data.m_pImplElements
+          + 72);
+      do
+      {
+        if ( v5 > *v7 )
+          v5 = *v7;
+        CSchemaEnumBinding<DOTAInventoryFlags_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_DOTAInventoryFlags_t.m_nMinValue = v5;
+        if ( v6 < *v7 )
+          v6 = *v7;
+        v7 += 7;
+        CSchemaEnumBinding<DOTAInventoryFlags_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_DOTAInventoryFlags_t.m_nMaxValue = v6;
+      }
+      while ( v7 != CSchemaEnumBinding<DOTAInventoryFlags_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_DOTAInventoryFlags_t.m_Enumerators.m_Data.m_pImplElements
+                  + 7 * v4
+                  + 2 );
+    }
+  }
+  else
+  {
+    CSchemaEnumBinding<DOTAInventoryFlags_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_DOTAInventoryFlags_t.m_nMinValue = 0;
+    CSchemaEnumBinding<DOTAInventoryFlags_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_DOTAInventoryFlags_t.m_nMaxValue = 0;
+  }
+  CSchemaEnumBinding<DOTAInventoryFlags_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_DOTAInventoryFlags_t.m_pOuterTypeScope = v3;
+  (*(*v3 + 272LL))(
+    v3,
+    &CSchemaEnumBinding<DOTAInventoryFlags_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_DOTAInventoryFlags_t);
+  return &CSchemaEnumBinding<DOTAInventoryFlags_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_DOTAInventoryFlags_t;
+}
+
+
+// sSharedCooldownInfo::Schema_CompileTimeVerificationFunction  (line 86, @0x00000000027ac3d0, libserver.so)
+void __fastcall sSharedCooldownInfo::Schema_CompileTimeVerificationFunction(sSharedCooldownInfo *const this)
+{
+  ;
+}
+
+
+// sSharedCooldownInfo::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE  (line 92, @0x00000000027ac3e0, libserver.so)  // inlines: Get, SchemaBinding_SchemaTypeOfMemberVarByAddr<sSharedCooldownInfo, CUtlString>, SchemaBinding_SchemaTypeOfMemberVarByAddr<sSharedCooldownInfo, float>, SetTypeScope
+// callers: CSchemaClassBinding<sSharedCooldownInfo>::Register
+// strings: "CUtlString"
+// globals: sSharedCooldownInfo::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pIn, CSchemaManipulator<CUtlString>::StaticAccessor(void)::m, CAtomicManipulator<CUtlString>::Get(void)::val, sSharedCooldownInfo::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplS
+CSchemaClassInfo *__fastcall sSharedCooldownInfo::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        const char *pProjectName)
+{
+  CSchemaClassInfo *result; // rax
+  ISchemaSystemTypeScope *v4; // rbx
+  CSchemaType *v5; // rax
+
+  result = sSharedCooldownInfo::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult;
+  if ( sSharedCooldownInfo::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult == 0 )
+  {
+    v4 = (*(*pSchemaSystem + 112LL))(pSchemaSystem, 0, pBinaryName);
+    sSharedCooldownInfo::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_sSharedCooldownInfo[0].m_pType = (*(*v4 + 56LL))(v4, "CUtlString", 3003, CAtomicManipulator<CUtlString>::Get(void)::val, CSchemaManipulator<CUtlString>::StaticAccessor(void)::m);
+    sSharedCooldownInfo::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_sSharedCooldownInfo[1].m_pType = (*(*v4 + 40LL))(v4, 11);
+    v5 = (*(*v4 + 40LL))(v4, 11);
+    sSharedCooldownInfo::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_sSharedCooldownInfo.m_pOuterTypeScope = v4;
+    sSharedCooldownInfo::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_sSharedCooldownInfo[2].m_pType = v5;
+    sSharedCooldownInfo::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult = &sSharedCooldownInfo::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_sSharedCooldownInfo;
+    (*(*v4 + 264LL))(
+      v4,
+      &sSharedCooldownInfo::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_sSharedCooldownInfo);
+    return sSharedCooldownInfo::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult;
+  }
+  return result;
+}
+
+
+// sSharedCooldownInfo::Schema_VerifyBindingIsRegistered  (line 108, @0x00000000027ac4a0, libserver.so)
+void __cdecl sSharedCooldownInfo::Schema_VerifyBindingIsRegistered()
+{
+  ;
+}
+
+
+// CDOTA_UnitInventory::Schema_CompileTimeVerificationFunction  (line 116, @0x00000000027ac4b0, libserver.so)
+void __fastcall CDOTA_UnitInventory::Schema_CompileTimeVerificationFunction(CDOTA_UnitInventory *const this)
+{
+  ;
+}
+
+
+// CDOTA_UnitInventory::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE  (line 127, @0x00000000027ac4c0, libserver.so)  // inlines: Get, NetworkVarDecl_t, SchemaBinding_SchemaTypeOfMemberVarByAddr<CDOTA_UnitInventory, CNetworkArrayBase<CHandle<CBaseEntity>, 17, CDOTA_UnitInventory::NetworkVar_m_hItems> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<CDOTA_UnitInventory, CNetworkVarBase<CHandle<CBaseEntity>, CDOTA_UnitInventory::NetworkVar_m_hInventoryParent> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<CDOTA_UnitInventory, CNetworkVarBase<CHandle<CBaseEntity>, CDOTA_UnitInventory::NetworkVar_m_hTransientCastItem> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<CDOTA_UnitInventory, CNetworkVarBase<bool, CDOTA_UnitInventory::NetworkVar_m_bStashEnabled> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<CDOTA_UnitInventory, CNetworkVarBase<int, CDOTA_UnitInventory::NetworkVar_m_iParity> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<CDOTA_UnitInventory, CUtlVector<sSharedCooldownInfo> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<CDOTA_UnitInventory, bool [17]>, SchemaBinding_SchemaTypeOfMemberVarByAddr<CDOTA_UnitInventory, bool>, SetTypeScope
+// calls: __cxa_guard_acquire, __cxa_guard_release
+// callers: CSchemaClassBinding<CDOTA_UnitInventory>::Register
+// strings: "sSharedCooldownInfo", "CUtlVector", "CBaseEntity", "CHandle", "m_hItems", "m_hTransientCastItem" (9 total)
+// globals: CDOTA_UnitInventory::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pIn, `guard variable for'CDOTA_UnitInventory::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*, CSchemaManipulator<CUtlVector<sSharedCooldownInfo,CUtlMemory<sSharedCooldownInfo,int>>>::StaticAccessor(void)::m, CAtomicManipulator<CUtlVector<sSharedCooldownInfo,CUtlMemory<sSharedCooldownInfo,int>>>::Get(void)::val, CSchemaManipulator<CHandle<CBaseEntity>>::StaticAccessor(void)::m, CAtomicManipulator<CHandle<CBaseEntity>>::Get(void)::val, CDOTA_UnitInventory::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplS
+CSchemaClassInfo *__fastcall CDOTA_UnitInventory::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        const char *pProjectName)
+{
+  CSchemaClassInfo *result; // rax
+  ISchemaSystemTypeScope *v4; // rbx
+  __int64 (__fastcall *v5)(ISchemaSystemTypeScope *, const char *, __int64, __int64 (__fastcall ***)(), __int64 (__fastcall ***)(), __int64); // r12
+  __int64 v6; // rax
+  __int64 (__fastcall *v7)(ISchemaSystemTypeScope *, const char *, __int64, __int64 (__fastcall ***)(), __int64 (__fastcall ***)(), __int64); // r13
+  __int64 (__fastcall *v8)(ISchemaSystemTypeScope *, __int64, __int64); // r12
+  __int64 v9; // rax
+  __int64 v10; // rax
+  __int64 (__fastcall *v11)(ISchemaSystemTypeScope *, __int64, __int64); // r12
+  __int64 v12; // rax
+  __int64 (__fastcall *v13)(ISchemaSystemTypeScope *, const char *, __int64, __int64 (__fastcall ***)(), __int64 (__fastcall ***)(), __int64); // r12
+  __int64 v14; // rax
+  __int64 (__fastcall *v15)(ISchemaSystemTypeScope *, const char *, __int64, __int64 (__fastcall ***)(), __int64 (__fastcall ***)(), __int64); // r12
+  __int64 v16; // rax
+  CSchemaType *v17; // rax
+
+  result = CDOTA_UnitInventory::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult;
+  if ( CDOTA_UnitInventory::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult == 0 )
+  {
+    v4 = (*(*pSchemaSystem + 112LL))(pSchemaSystem, 1, pBinaryName);
+    if ( `guard variable for'CDOTA_UnitInventory::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTA_UnitInventory3_MNetworkVarNames_Value == 0
+      && __cxa_guard_acquire(&`guard variable for'CDOTA_UnitInventory::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTA_UnitInventory3_MNetworkVarNames_Value) != 0 )
+    {
+      CDOTA_UnitInventory::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTA_UnitInventory3_MNetworkVarNames_Value.m_pVarName = "m_hItems";
+      CDOTA_UnitInventory::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTA_UnitInventory3_MNetworkVarNames_Value.m_pVarType = "EHANDLE";
+      __cxa_guard_release(&`guard variable for'CDOTA_UnitInventory::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTA_UnitInventory3_MNetworkVarNames_Value);
+    }
+    if ( `guard variable for'CDOTA_UnitInventory::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTA_UnitInventory4_MNetworkVarNames_Value == 0
+      && __cxa_guard_acquire(&`guard variable for'CDOTA_UnitInventory::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTA_UnitInventory4_MNetworkVarNames_Value) != 0 )
+    {
+      CDOTA_UnitInventory::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTA_UnitInventory4_MNetworkVarNames_Value.m_pVarName = "m_iParity";
+      CDOTA_UnitInventory::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTA_UnitInventory4_MNetworkVarNames_Value.m_pVarType = "int";
+      __cxa_guard_release(&`guard variable for'CDOTA_UnitInventory::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTA_UnitInventory4_MNetworkVarNames_Value);
+    }
+    if ( `guard variable for'CDOTA_UnitInventory::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTA_UnitInventory5_MNetworkVarNames_Value == 0
+      && __cxa_guard_acquire(&`guard variable for'CDOTA_UnitInventory::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTA_UnitInventory5_MNetworkVarNames_Value) != 0 )
+    {
+      CDOTA_UnitInventory::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTA_UnitInventory5_MNetworkVarNames_Value.m_pVarName = "m_hInventoryParent";
+      CDOTA_UnitInventory::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTA_UnitInventory5_MNetworkVarNames_Value.m_pVarType = "EHANDLE";
+      __cxa_guard_release(&`guard variable for'CDOTA_UnitInventory::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTA_UnitInventory5_MNetworkVarNames_Value);
+    }
+    if ( `guard variable for'CDOTA_UnitInventory::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTA_UnitInventory6_MNetworkVarNames_Value == 0
+      && __cxa_guard_acquire(&`guard variable for'CDOTA_UnitInventory::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTA_UnitInventory6_MNetworkVarNames_Value) != 0 )
+    {
+      CDOTA_UnitInventory::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTA_UnitInventory6_MNetworkVarNames_Value.m_pVarName = "m_bStashEnabled";
+      CDOTA_UnitInventory::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTA_UnitInventory6_MNetworkVarNames_Value.m_pVarType = "bool";
+      __cxa_guard_release(&`guard variable for'CDOTA_UnitInventory::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTA_UnitInventory6_MNetworkVarNames_Value);
+    }
+    if ( `guard variable for'CDOTA_UnitInventory::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTA_UnitInventory7_MNetworkVarNames_Value == 0
+      && __cxa_guard_acquire(&`guard variable for'CDOTA_UnitInventory::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTA_UnitInventory7_MNetworkVarNames_Value) != 0 )
+    {
+      CDOTA_UnitInventory::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTA_UnitInventory7_MNetworkVarNames_Value.m_pVarName = "m_hTransientCastItem";
+      CDOTA_UnitInventory::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTA_UnitInventory7_MNetworkVarNames_Value.m_pVarType = "EHANDLE";
+      __cxa_guard_release(&`guard variable for'CDOTA_UnitInventory::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTA_UnitInventory7_MNetworkVarNames_Value);
+    }
+    v5 = *(*v4 + 64LL);
+    v6 = (*(*v4 + 88LL))(v4, "sSharedCooldownInfo");
+    CDOTA_UnitInventory::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CDOTA_UnitInventory[0].m_pType = v5(v4, "CUtlVector", 3002, CAtomicManipulator<CUtlVector<sSharedCooldownInfo,CUtlMemory<sSharedCooldownInfo,int>>>::Get(void)::val, CSchemaManipulator<CUtlVector<sSharedCooldownInfo,CUtlMemory<sSharedCooldownInfo,int>>>::StaticAccessor(void)::m, v6);
+    v7 = *(*v4 + 64LL);
+    v8 = *(*v4 + 104LL);
+    v9 = (*(*v4 + 88LL))(v4, "CBaseEntity");
+    v10 = v7(
+            v4,
+            "CHandle",
+            5003,
+            CAtomicManipulator<CHandle<CBaseEntity>>::Get(void)::val,
+            &CSchemaManipulator<CHandle<CBaseEntity>>::StaticAccessor(void)::m,
+            v9);
+    CDOTA_UnitInventory::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CDOTA_UnitInventory[1].m_pType = v8(v4, v10, 17);
+    v11 = *(*v4 + 104LL);
+    v12 = (*(*v4 + 40LL))(v4, 13);
+    CDOTA_UnitInventory::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CDOTA_UnitInventory[2].m_pType = v11(v4, v12, 17);
+    CDOTA_UnitInventory::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CDOTA_UnitInventory[3].m_pType = (*(*v4 + 40LL))(v4, 7);
+    v13 = *(*v4 + 64LL);
+    v14 = (*(*v4 + 88LL))(v4, "CBaseEntity");
+    CDOTA_UnitInventory::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CDOTA_UnitInventory[4].m_pType = v13(v4, "CHandle", 5003, CAtomicManipulator<CHandle<CBaseEntity>>::Get(void)::val, &CSchemaManipulator<CHandle<CBaseEntity>>::StaticAccessor(void)::m, v14);
+    CDOTA_UnitInventory::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CDOTA_UnitInventory[5].m_pType = (*(*v4 + 40LL))(v4, 13);
+    CDOTA_UnitInventory::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CDOTA_UnitInventory[6].m_pType = (*(*v4 + 40LL))(v4, 13);
+    v15 = *(*v4 + 64LL);
+    v16 = (*(*v4 + 88LL))(v4, "CBaseEntity");
+    v17 = v15(
+            v4,
+            "CHandle",
+            5003,
+            CAtomicManipulator<CHandle<CBaseEntity>>::Get(void)::val,
+            &CSchemaManipulator<CHandle<CBaseEntity>>::StaticAccessor(void)::m,
+            v16);
+    CDOTA_UnitInventory::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CDOTA_UnitInventory.m_pOuterTypeScope = v4;
+    CDOTA_UnitInventory::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CDOTA_UnitInventory[7].m_pType = v17;
+    CDOTA_UnitInventory::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult = &CDOTA_UnitInventory::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CDOTA_UnitInventory;
+    return &CDOTA_UnitInventory::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CDOTA_UnitInventory;
+  }
+  return result;
+}
+
+
+// CDOTA_UnitInventory::Schema_VerifyBindingIsRegistered  (line 222, @0x00000000027ac830, libserver.so)
+// callers: CDOTA_UnitInventory::Schema_DynamicBinding
+void __cdecl CDOTA_UnitInventory::Schema_VerifyBindingIsRegistered()
+{
+  ;
+}
+
+
+// LocalRegisterSchemaModule<ArbitraryTemplateParameter_server_dota_unit_inventory_h>  (line 230, @0x00000000027ac840, libserver.so)  // inlines: Call, Get
+// callers: RegisterSchemaModule_dota_unit_inventory_h
+// strings: "DOTAScriptInventorySlot_t", "DOTA_ITEM_STATE", "DOTAInventoryFlags_t"
+// globals: CSchemaEnumBinding<DOTAScriptInventorySlot_t>::s_pThisModuleBindingPointer, CSchemaEnumBinding<DOTA_ITEM_STATE>::s_pThisModuleBindingPointer, CSchemaEnumBinding<DOTAInventoryFlags_t>::s_pThisModuleBindingPointer, sSharedCooldownInfo::s_pSchemaBindingForLocalModule, CDOTA_UnitInventory::s_pSchemaBindingForLocalModule
+void __fastcall LocalRegisterSchemaModule<ArbitraryTemplateParameter_server_dota_unit_inventory_h>(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        SchemaRegistrationPhase_t nRegistrationPhase)
+{
+  if ( nRegistrationPhase != SchemaRegistrationPhase_t::SCHEMA_REGISTRATION_PHASE_ATOMIC_TYPES_AND_ENUMS )
+  {
+    if ( nRegistrationPhase == SchemaRegistrationPhase_t::SCHEMA_REGISTRATION_PHASE_CLASSES )
+    {
+      (*(sSharedCooldownInfo::s_pSchemaBindingForLocalModule->_vptr_ISchemaBinding + 5))(
+        sSharedCooldownInfo::s_pSchemaBindingForLocalModule,
+        pSchemaSystem,
+        pBinaryName,
+        "server");
+      (*(CDOTA_UnitInventory::s_pSchemaBindingForLocalModule->_vptr_ISchemaBinding + 5))(
+        CDOTA_UnitInventory::s_pSchemaBindingForLocalModule,
+        pSchemaSystem,
+        pBinaryName,
+        "server");
+    }
+    ++g_nLinkerHack_SchemaAnchor_RegistrationCountFor_server;
+  }
+  else
+  {
+    (*(CSchemaEnumBinding<DOTAScriptInventorySlot_t>::s_pThisModuleBindingPointer->_vptr_ISchemaBinding + 5))(
+      CSchemaEnumBinding<DOTAScriptInventorySlot_t>::s_pThisModuleBindingPointer,
+      pSchemaSystem,
+      pBinaryName,
+      "server",
+      "DOTAScriptInventorySlot_t");
+    (*(CSchemaEnumBinding<DOTA_ITEM_STATE>::s_pThisModuleBindingPointer->_vptr_ISchemaBinding + 5))(
+      CSchemaEnumBinding<DOTA_ITEM_STATE>::s_pThisModuleBindingPointer,
+      pSchemaSystem,
+      pBinaryName,
+      "server",
+      "DOTA_ITEM_STATE");
+    (*(CSchemaEnumBinding<DOTAInventoryFlags_t>::s_pThisModuleBindingPointer->_vptr_ISchemaBinding + 5))(
+      CSchemaEnumBinding<DOTAInventoryFlags_t>::s_pThisModuleBindingPointer,
+      pSchemaSystem,
+      pBinaryName,
+      "server",
+      "DOTAInventoryFlags_t");
+    ++g_nLinkerHack_SchemaAnchor_RegistrationCountFor_server;
+  }
+}
+
+
+// RegisterSchemaModule_dota_unit_inventory_h  (line 236, @0x00000000027ac930, libserver.so)
+// calls: LocalRegisterSchemaModule<ArbitraryTemplateParameter_server_dota_unit_inventory_h>
+// callers: CSchemaRegistration_server::RegisterAllBindings
+void __fastcall RegisterSchemaModule_dota_unit_inventory_h(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        SchemaRegistrationPhase_t nRegistrationPhase)
+{
+  LocalRegisterSchemaModule<ArbitraryTemplateParameter_server_dota_unit_inventory_h>(
+    pSchemaSystem,
+    pBinaryName,
+    nRegistrationPhase);
+}
+
+

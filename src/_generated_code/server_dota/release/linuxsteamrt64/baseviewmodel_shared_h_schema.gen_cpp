@@ -1,0 +1,274 @@
+
+// ==== functions (decompiled by Hex-Rays; names/signatures from DWARF) ====
+
+// CBaseViewModel::CEntityInstanceEntityClass::Schema_CompileTimeVerificationFunction  (line 35, @0x0000000001f07950, libserver.so)
+void __fastcall CBaseViewModel::CEntityInstanceEntityClass::Schema_CompileTimeVerificationFunction(
+        CBaseViewModel::CEntityInstanceEntityClass *const this)
+{
+  ;
+}
+
+
+// CBaseViewModel::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE  (line 38, @0x0000000001f06230, libserver.so)  // inlines: Call, Get, SetTypeScope
+// calls: CBaseAnimatingOverlay::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE
+// callers: CSchemaNonConstructibleClassBinding<CBaseViewModel::CEntityInstanceEntityClass>::Register, CBaseViewModel::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE, CBaseViewModel::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE
+// globals: CBaseViewModel::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char con
+CSchemaClassInfo *__fastcall CBaseViewModel::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        const char *pProjectName)
+{
+  ISchemaSystemTypeScope *v6; // r14
+  CSchemaClassInfo *v7; // rax
+
+  v6 = (*(*pSchemaSystem + 112LL))(pSchemaSystem, 1, pBinaryName);
+  (*(CBaseAnimatingOverlay::CEntityInstanceEntityClass::s_pSchemaBindingForLocalModule->_vptr_ISchemaBinding + 5))(
+    CBaseAnimatingOverlay::CEntityInstanceEntityClass::s_pSchemaBindingForLocalModule,
+    pSchemaSystem,
+    pBinaryName,
+    pProjectName);
+  v7 = CBaseAnimatingOverlay::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+         pSchemaSystem,
+         pBinaryName,
+         pProjectName);
+  CBaseViewModel::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CBaseViewModel_CEntityInstanceEntityClass.m_pOuterTypeScope = v6;
+  CBaseViewModel::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassBases_CBaseViewModel_CEntityInstanceEntityClass[0].m_pClass = v7;
+  CBaseViewModel::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult = &CBaseViewModel::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CBaseViewModel_CEntityInstanceEntityClass;
+  return &CBaseViewModel::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CBaseViewModel_CEntityInstanceEntityClass;
+}
+
+
+// CBaseViewModel::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE  (line 38, @0x0000000001f07960, libserver.so)
+// calls: CBaseViewModel::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE
+// globals: CBaseViewModel::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char con
+CSchemaClassInfo *__fastcall CBaseViewModel::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        const char *pProjectName)
+{
+  CSchemaClassInfo *result; // rax
+
+  result = CBaseViewModel::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult;
+  if ( CBaseViewModel::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult == 0 )
+    return CBaseViewModel::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+             pSchemaSystem,
+             pBinaryName,
+             pProjectName);
+  return result;
+}
+
+
+// CBaseViewModel::CEntityInstanceEntityClass::Schema_VerifyBindingIsRegistered  (line 55, @0x0000000001f07980, libserver.so)
+void __cdecl CBaseViewModel::CEntityInstanceEntityClass::Schema_VerifyBindingIsRegistered()
+{
+  ;
+}
+
+
+// PerformMetaModifyCBaseViewModel  (line 66, @0x0000000001f07990, libserver.so)
+// strings: "m_fEffects"
+// globals: _ZZ31PerformMetaModifyCBaseViewModelP13ISchemaSystemP16CSchemaClassInfoE13meta_modify_0
+void __fastcall PerformMetaModifyCBaseViewModel(ISchemaSystem *pSchemaSystem, CSchemaClassInfo *pClassInfo)
+{
+  (*(*pSchemaSystem + 216LL))(
+    pSchemaSystem,
+    pClassInfo,
+    "m_fEffects",
+    PerformMetaModifyCBaseViewModel(ISchemaSystem *,CSchemaClassInfo *)::meta_modify_0,
+    1);
+}
+
+
+// CBaseViewModel::Schema_CompileTimeVerificationFunction  (line 77, @0x0000000001f079c0, libserver.so)
+void __fastcall CBaseViewModel::Schema_CompileTimeVerificationFunction(CBaseViewModel *const this)
+{
+  ;
+}
+
+
+// CBaseViewModel::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE  (line 94, @0x0000000001f079d0, libserver.so)  // inlines: Call, Get, NetworkVarDecl_t, PerformMetaModifyCBaseViewModel, RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE, SchemaBinding_SchemaTypeOfMemberVarByAddr<CBaseViewModel, CNetworkHandleBase<CBaseCombatWeapon, CBaseViewModel::NetworkVar_m_hWeapon> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<CBaseViewModel, CNetworkVarBase<CHandle<CBaseEntity>, CBaseViewModel::NetworkVar_m_hOwner> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<CBaseViewModel, CNetworkVarBase<HSequence, CBaseViewModel::NetworkVar_m_hLayerSequence> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<CBaseViewModel, CNetworkVarBase<float, CBaseViewModel::NetworkVar_m_flAnimationStartTime> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<CBaseViewModel, CNetworkVarBase<unsigned int, CBaseViewModel::NetworkVar_m_nAnimationParity> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<CBaseViewModel, CNetworkVarBase<unsigned int, CBaseViewModel::NetworkVar_m_nLayer> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<CBaseViewModel, CNetworkVarBase<unsigned int, CBaseViewModel::NetworkVar_m_nViewModelIndex> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<CBaseViewModel, CUtlSymbolLarge>, SchemaBinding_SchemaTypeOfMemberVarByAddr<CBaseViewModel, HSequence>, SchemaBinding_SchemaTypeOfMemberVarByAddr<CBaseViewModel, Vector>, SchemaBinding_SchemaTypeOfMemberVarByAddr<CBaseViewModel, float>, SchemaBinding_SchemaTypeOfMemberVarByAddr<CBaseViewModel, int>, SetTypeScope
+// calls: __cxa_guard_acquire, __cxa_guard_release, CBaseAnimatingOverlay::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE, CBaseViewModel::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE, __cxa_guard_abort, _Unwind_Resume
+// callers: CSchemaNonConstructibleClassBinding<CBaseViewModel>::Register
+// strings: "HSequence", "CBaseCombatWeapon", "CHandle", "CBaseEntity", "CUtlSymbolLarge", "m_fEffects" (17 total)
+// globals: CBaseViewModel::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitial, `guard variable for'CBaseViewModel::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char, CSchemaManipulator<Vector>::StaticAccessor(void)::m, CAtomicManipulator<Vector>::Get(void)::val, CSchemaManipulator<HSequence>::StaticAccessor(void)::m, CAtomicManipulator<HSequence>::Get(void)::val, CSchemaManipulator<CHandle<CBaseCombatWeapon>>::StaticAccessor(void)::m, CAtomicManipulator<CHandle<CBaseCombatWeapon>>::Get(void)::val (15 total)
+CSchemaClassInfo *__fastcall CBaseViewModel::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        const char *pProjectName)
+{
+  CSchemaClassInfo *result; // rax
+  ISchemaSystemTypeScope *v7; // rbx
+  __int64 (__fastcall *v8)(ISchemaSystemTypeScope *, const char *, __int64, __int64 (__fastcall ***)(), __int64 (__fastcall ***)(), __int64); // r15
+  __int64 v9; // rax
+  __int64 (__fastcall *v10)(ISchemaSystemTypeScope *, const char *, __int64, __int64 (__fastcall ***)(), __int64 (__fastcall ***)(), __int64); // r15
+  __int64 v11; // rax
+  CSchemaClassInfo *v12; // rax
+  const CSchemaClassInfo *v13; // rax
+
+  result = CBaseViewModel::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult;
+  if ( CBaseViewModel::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult == 0 )
+  {
+    v7 = (*(*pSchemaSystem + 112LL))(pSchemaSystem, 1, pBinaryName);
+    if ( `guard variable for'CBaseViewModel::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CBaseViewModel4_MNetworkVarNames_Value == 0
+      && __cxa_guard_acquire(&`guard variable for'CBaseViewModel::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CBaseViewModel4_MNetworkVarNames_Value) != 0 )
+    {
+      CBaseViewModel::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CBaseViewModel4_MNetworkVarNames_Value.m_pVarName = "m_nViewModelIndex";
+      CBaseViewModel::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CBaseViewModel4_MNetworkVarNames_Value.m_pVarType = "uint32";
+      __cxa_guard_release(&`guard variable for'CBaseViewModel::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CBaseViewModel4_MNetworkVarNames_Value);
+    }
+    if ( `guard variable for'CBaseViewModel::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CBaseViewModel5_MNetworkVarNames_Value == 0
+      && __cxa_guard_acquire(&`guard variable for'CBaseViewModel::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CBaseViewModel5_MNetworkVarNames_Value) != 0 )
+    {
+      CBaseViewModel::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CBaseViewModel5_MNetworkVarNames_Value.m_pVarName = "m_nAnimationParity";
+      CBaseViewModel::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CBaseViewModel5_MNetworkVarNames_Value.m_pVarType = "uint32";
+      __cxa_guard_release(&`guard variable for'CBaseViewModel::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CBaseViewModel5_MNetworkVarNames_Value);
+    }
+    if ( `guard variable for'CBaseViewModel::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CBaseViewModel6_MNetworkVarNames_Value == 0
+      && __cxa_guard_acquire(&`guard variable for'CBaseViewModel::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CBaseViewModel6_MNetworkVarNames_Value) != 0 )
+    {
+      CBaseViewModel::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CBaseViewModel6_MNetworkVarNames_Value.m_pVarName = "m_hLayerSequence";
+      CBaseViewModel::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CBaseViewModel6_MNetworkVarNames_Value.m_pVarType = "HSequence";
+      __cxa_guard_release(&`guard variable for'CBaseViewModel::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CBaseViewModel6_MNetworkVarNames_Value);
+    }
+    if ( `guard variable for'CBaseViewModel::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CBaseViewModel7_MNetworkVarNames_Value == 0
+      && __cxa_guard_acquire(&`guard variable for'CBaseViewModel::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CBaseViewModel7_MNetworkVarNames_Value) != 0 )
+    {
+      CBaseViewModel::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CBaseViewModel7_MNetworkVarNames_Value.m_pVarName = "m_nLayer";
+      CBaseViewModel::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CBaseViewModel7_MNetworkVarNames_Value.m_pVarType = "uint32";
+      __cxa_guard_release(&`guard variable for'CBaseViewModel::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CBaseViewModel7_MNetworkVarNames_Value);
+    }
+    if ( `guard variable for'CBaseViewModel::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CBaseViewModel8_MNetworkVarNames_Value == 0
+      && __cxa_guard_acquire(&`guard variable for'CBaseViewModel::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CBaseViewModel8_MNetworkVarNames_Value) != 0 )
+    {
+      CBaseViewModel::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CBaseViewModel8_MNetworkVarNames_Value.m_pVarName = "m_flAnimationStartTime";
+      CBaseViewModel::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CBaseViewModel8_MNetworkVarNames_Value.m_pVarType = "float32";
+      __cxa_guard_release(&`guard variable for'CBaseViewModel::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CBaseViewModel8_MNetworkVarNames_Value);
+    }
+    if ( `guard variable for'CBaseViewModel::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CBaseViewModel9_MNetworkVarNames_Value == 0
+      && __cxa_guard_acquire(&`guard variable for'CBaseViewModel::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CBaseViewModel9_MNetworkVarNames_Value) != 0 )
+    {
+      CBaseViewModel::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CBaseViewModel9_MNetworkVarNames_Value.m_pVarName = "m_hWeapon";
+      CBaseViewModel::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CBaseViewModel9_MNetworkVarNames_Value.m_pVarType = "CHandle< CBaseCombatWeapon>";
+      __cxa_guard_release(&`guard variable for'CBaseViewModel::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CBaseViewModel9_MNetworkVarNames_Value);
+    }
+    if ( `guard variable for'CBaseViewModel::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CBaseViewModel10_MNetworkVarNames_Value == 0
+      && __cxa_guard_acquire(&`guard variable for'CBaseViewModel::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CBaseViewModel10_MNetworkVarNames_Value) != 0 )
+    {
+      CBaseViewModel::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CBaseViewModel10_MNetworkVarNames_Value.m_pVarName = "m_hOwner";
+      CBaseViewModel::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CBaseViewModel10_MNetworkVarNames_Value.m_pVarType = "CHandle< CBaseEntity >";
+      __cxa_guard_release(&`guard variable for'CBaseViewModel::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CBaseViewModel10_MNetworkVarNames_Value);
+    }
+    CBaseViewModel::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CBaseViewModel[0].m_pType = (*(*v7 + 56LL))(v7, "Vector", 2010, CAtomicManipulator<Vector>::Get(void)::val, CSchemaManipulator<Vector>::StaticAccessor(void)::m);
+    CBaseViewModel::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CBaseViewModel[1].m_pType = (*(*v7 + 40LL))(v7, 8);
+    CBaseViewModel::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CBaseViewModel[2].m_pType = (*(*v7 + 40LL))(v7, 8);
+    CBaseViewModel::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CBaseViewModel[3].m_pType = (*(*v7 + 56LL))(v7, "HSequence", 2023, CAtomicManipulator<HSequence>::Get(void)::val, CSchemaManipulator<HSequence>::StaticAccessor(void)::m);
+    CBaseViewModel::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CBaseViewModel[4].m_pType = (*(*v7 + 40LL))(v7, 8);
+    CBaseViewModel::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CBaseViewModel[5].m_pType = (*(*v7 + 40LL))(v7, 11);
+    v8 = *(*v7 + 64LL);
+    v9 = (*(*v7 + 88LL))(v7, "CBaseCombatWeapon");
+    CBaseViewModel::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CBaseViewModel[6].m_pType = v8(v7, "CHandle", 5003, CAtomicManipulator<CHandle<CBaseCombatWeapon>>::Get(void)::val, CSchemaManipulator<CHandle<CBaseCombatWeapon>>::StaticAccessor(void)::m, v9);
+    v10 = *(*v7 + 64LL);
+    v11 = (*(*v7 + 88LL))(v7, "CBaseEntity");
+    CBaseViewModel::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CBaseViewModel[7].m_pType = v10(v7, "CHandle", 5003, CAtomicManipulator<CHandle<CBaseEntity>>::Get(void)::val, &CSchemaManipulator<CHandle<CBaseEntity>>::StaticAccessor(void)::m, v11);
+    CBaseViewModel::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CBaseViewModel[8].m_pType = (*(*v7 + 40LL))(v7, 7);
+    CBaseViewModel::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CBaseViewModel[9].m_pType = (*(*v7 + 56LL))(v7, "CUtlSymbolLarge", 3007, CAtomicManipulator<CUtlSymbolLarge>::Get(void)::val, &CSchemaManipulator<CUtlSymbolLarge>::StaticAccessor(void)::m);
+    CBaseViewModel::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CBaseViewModel[10].m_pType = (*(*v7 + 56LL))(v7, "CUtlSymbolLarge", 3007, CAtomicManipulator<CUtlSymbolLarge>::Get(void)::val, &CSchemaManipulator<CUtlSymbolLarge>::StaticAccessor(void)::m);
+    CBaseViewModel::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CBaseViewModel[11].m_pType = (*(*v7 + 56LL))(v7, "HSequence", 2023, CAtomicManipulator<HSequence>::Get(void)::val, CSchemaManipulator<HSequence>::StaticAccessor(void)::m);
+    CBaseViewModel::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CBaseViewModel[12].m_pType = (*(*v7 + 40LL))(v7, 7);
+    CBaseViewModel::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CBaseViewModel[13].m_pType = (*(*v7 + 40LL))(v7, 11);
+    if ( `guard variable for'CBaseViewModel::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_NestedClassesOf_CBaseViewModel == 0
+      && __cxa_guard_acquire(&`guard variable for'CBaseViewModel::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_NestedClassesOf_CBaseViewModel) != 0 )
+    {
+      v12 = CBaseViewModel::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult;
+      if ( CBaseViewModel::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult == 0 )
+        v12 = CBaseViewModel::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+                pSchemaSystem,
+                pBinaryName,
+                pProjectName);
+      CBaseViewModel::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_NestedClassesOf_CBaseViewModel[0] = v12;
+      __cxa_guard_release(&`guard variable for'CBaseViewModel::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_NestedClassesOf_CBaseViewModel);
+    }
+    (*(CBaseAnimatingOverlay::s_pSchemaBindingForLocalModule->_vptr_ISchemaBinding + 5))(
+      CBaseAnimatingOverlay::s_pSchemaBindingForLocalModule,
+      pSchemaSystem,
+      pBinaryName,
+      pProjectName);
+    CBaseViewModel::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassBases_CBaseViewModel[0].m_pClass = CBaseAnimatingOverlay::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(pSchemaSystem, pBinaryName, pProjectName);
+    v13 = (*(*pSchemaSystem + 240LL))(pSchemaSystem);
+    CBaseViewModel::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CBaseViewModel.m_pOuterTypeScope = v7;
+    CBaseViewModel::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassBases_CBaseViewModel[1].m_pClass = v13;
+    CBaseViewModel::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult = &CBaseViewModel::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CBaseViewModel;
+    (*(*pSchemaSystem + 216LL))(
+      pSchemaSystem,
+      &CBaseViewModel::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CBaseViewModel,
+      "m_fEffects",
+      PerformMetaModifyCBaseViewModel(ISchemaSystem *,CSchemaClassInfo *)::meta_modify_0,
+      1);
+    return CBaseViewModel::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult;
+  }
+  return result;
+}
+
+
+// CBaseViewModel::Schema_VerifyBindingIsRegistered  (line 282, @0x0000000001f07f40, libserver.so)
+// callers: CBaseViewModel::Schema_DynamicBinding
+void __cdecl CBaseViewModel::Schema_VerifyBindingIsRegistered()
+{
+  ;
+}
+
+
+// CBaseViewModel::SetupEntClassInputs  (line 296, @0x0000000001f07f50, libserver.so)
+void __fastcall CBaseViewModel::SetupEntClassInputs(CEntityClass *pComponentInfo)
+{
+  ;
+}
+
+
+// CBaseViewModel::SetupEntClassComponentOverrides  (line 302, @0x0000000001f07f60, libserver.so)
+void __fastcall CBaseViewModel::SetupEntClassComponentOverrides(CEntityClass *pEntityClass)
+{
+  pEntityClass->m_pComponentOverrides = 0;
+}
+
+
+// LocalRegisterSchemaModule<ArbitraryTemplateParameter_server_baseviewmodel_shared_h>  (line 308, @0x0000000001f07f70, libserver.so)  // inlines: Call
+// callers: RegisterSchemaModule_baseviewmodel_shared_h
+// globals: CBaseViewModel::CEntityInstanceEntityClass::s_pSchemaBindingForLocalModule, CBaseViewModel::s_pSchemaBindingForLocalModule
+void __fastcall LocalRegisterSchemaModule<ArbitraryTemplateParameter_server_baseviewmodel_shared_h>(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        SchemaRegistrationPhase_t nRegistrationPhase)
+{
+  if ( nRegistrationPhase == SchemaRegistrationPhase_t::SCHEMA_REGISTRATION_PHASE_CLASSES )
+  {
+    (*(CBaseViewModel::CEntityInstanceEntityClass::s_pSchemaBindingForLocalModule->_vptr_ISchemaBinding + 5))(
+      CBaseViewModel::CEntityInstanceEntityClass::s_pSchemaBindingForLocalModule,
+      pSchemaSystem,
+      pBinaryName,
+      "server");
+    (*(CBaseViewModel::s_pSchemaBindingForLocalModule->_vptr_ISchemaBinding + 5))(
+      CBaseViewModel::s_pSchemaBindingForLocalModule,
+      pSchemaSystem,
+      pBinaryName,
+      "server");
+  }
+  ++g_nLinkerHack_SchemaAnchor_RegistrationCountFor_server;
+}
+
+
+// RegisterSchemaModule_baseviewmodel_shared_h  (line 311, @0x0000000001f07fd0, libserver.so)
+// calls: LocalRegisterSchemaModule<ArbitraryTemplateParameter_server_baseviewmodel_shared_h>
+// callers: CSchemaRegistration_server::RegisterAllBindings
+void __fastcall RegisterSchemaModule_baseviewmodel_shared_h(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        SchemaRegistrationPhase_t nRegistrationPhase)
+{
+  LocalRegisterSchemaModule<ArbitraryTemplateParameter_server_baseviewmodel_shared_h>(
+    pSchemaSystem,
+    pBinaryName,
+    nRegistrationPhase);
+}
+
+

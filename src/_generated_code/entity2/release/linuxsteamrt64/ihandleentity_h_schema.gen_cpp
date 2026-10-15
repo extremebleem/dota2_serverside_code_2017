@@ -1,0 +1,81 @@
+
+// ==== functions (decompiled by Hex-Rays; names/signatures from DWARF) ====
+
+// IHandleEntity::Schema_CompileTimeVerificationFunction  (line 33, @0x00000000030d44b0, libserver.so)
+void __fastcall IHandleEntity::Schema_CompileTimeVerificationFunction(IHandleEntity *const this)
+{
+  ;
+}
+
+
+// IHandleEntity::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE  (line 36, @0x00000000030d44c0, libserver.so)  // inlines: SetTypeScope
+// callers: CSchemaNonConstructibleClassBinding<IHandleEntity>::Register, CEntityInstance::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE
+// globals: IHandleEntity::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitiali, IHandleEntity::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_
+CSchemaClassInfo *__fastcall IHandleEntity::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        const char *pProjectName)
+{
+  CSchemaClassInfo *result; // rax
+  __int64 v4; // rdx
+
+  result = IHandleEntity::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult;
+  if ( IHandleEntity::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult == 0 )
+  {
+    IHandleEntity::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_IHandleEntity.m_pOuterTypeScope = (*(*pSchemaSystem + 112LL))(pSchemaSystem, 0, pBinaryName);
+    v4 = *IHandleEntity::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_IHandleEntity.m_pOuterTypeScope;
+    IHandleEntity::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult = &IHandleEntity::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_IHandleEntity;
+    (*(v4 + 264))(
+      IHandleEntity::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_IHandleEntity.m_pOuterTypeScope,
+      &IHandleEntity::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_IHandleEntity);
+    return IHandleEntity::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult;
+  }
+  return result;
+}
+
+
+// IHandleEntity::Schema_VerifyBindingIsRegistered  (line 38, @0x00000000030d4510, libserver.so)
+// callers: IHandleEntity::Schema_DynamicBinding
+void __cdecl IHandleEntity::Schema_VerifyBindingIsRegistered()
+{
+  ;
+}
+
+
+// LocalRegisterSchemaModule<ArbitraryTemplateParameter_entity2_ihandleentity_h>  (line 46, @0x00000000030d4520, libserver.so)  // inlines: Call
+// strings: "entity2"
+// globals: IHandleEntity::s_pSchemaBindingForLocalModule
+void __fastcall LocalRegisterSchemaModule<ArbitraryTemplateParameter_entity2_ihandleentity_h>(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        SchemaRegistrationPhase_t nRegistrationPhase)
+{
+  if ( nRegistrationPhase == SchemaRegistrationPhase_t::SCHEMA_REGISTRATION_PHASE_CLASSES )
+    (*(IHandleEntity::s_pSchemaBindingForLocalModule->_vptr_ISchemaBinding + 5))(
+      IHandleEntity::s_pSchemaBindingForLocalModule,
+      pSchemaSystem,
+      pBinaryName,
+      "entity2");
+  ++g_nLinkerHack_SchemaAnchor_RegistrationCountFor_entity2;
+}
+
+
+// RegisterSchemaModule_ihandleentity_h  (line 48, @0x00000000030d4560, libserver.so)  // inlines: Call, LocalRegisterSchemaModule<ArbitraryTemplateParameter_entity2_ihandleentity_h>
+// callers: CSchemaRegistration_entity2::RegisterAllBindings
+// strings: "entity2"
+// globals: IHandleEntity::s_pSchemaBindingForLocalModule
+void __fastcall RegisterSchemaModule_ihandleentity_h(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        SchemaRegistrationPhase_t nRegistrationPhase)
+{
+  if ( nRegistrationPhase == SchemaRegistrationPhase_t::SCHEMA_REGISTRATION_PHASE_CLASSES )
+    (*(IHandleEntity::s_pSchemaBindingForLocalModule->_vptr_ISchemaBinding + 5))(
+      IHandleEntity::s_pSchemaBindingForLocalModule,
+      pSchemaSystem,
+      pBinaryName,
+      "entity2");
+  ++g_nLinkerHack_SchemaAnchor_RegistrationCountFor_entity2;
+}
+
+

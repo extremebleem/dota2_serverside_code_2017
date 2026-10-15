@@ -1,0 +1,766 @@
+
+// ==== functions (decompiled by Hex-Rays; names/signatures from DWARF) ====
+
+// CDOTA_PlayerChallengeInfo::Schema_CompileTimeVerificationFunction  (line 35, @0x00000000025a2070, libserver.so)
+void __fastcall CDOTA_PlayerChallengeInfo::Schema_CompileTimeVerificationFunction(
+        CDOTA_PlayerChallengeInfo *const this)
+{
+  ;
+}
+
+
+// CDOTA_PlayerChallengeInfo::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE  (line 53, @0x00000000025a2080, libserver.so)  // inlines: Get, NetworkVarDecl_t, SchemaBinding_SchemaTypeOfMemberVarByAddr<CDOTA_PlayerChallengeInfo, CNetworkVarBase<int, CDOTA_PlayerChallengeInfo::NetworkVar_nCompleted> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<CDOTA_PlayerChallengeInfo, CNetworkVarBase<int, CDOTA_PlayerChallengeInfo::NetworkVar_nCompletionThreshold> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<CDOTA_PlayerChallengeInfo, CNetworkVarBase<int, CDOTA_PlayerChallengeInfo::NetworkVar_nEventID> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<CDOTA_PlayerChallengeInfo, CNetworkVarBase<int, CDOTA_PlayerChallengeInfo::NetworkVar_nParam0> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<CDOTA_PlayerChallengeInfo, CNetworkVarBase<int, CDOTA_PlayerChallengeInfo::NetworkVar_nParam1> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<CDOTA_PlayerChallengeInfo, CNetworkVarBase<int, CDOTA_PlayerChallengeInfo::NetworkVar_nPlayerID> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<CDOTA_PlayerChallengeInfo, CNetworkVarBase<int, CDOTA_PlayerChallengeInfo::NetworkVar_nProgress> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<CDOTA_PlayerChallengeInfo, CNetworkVarBase<int, CDOTA_PlayerChallengeInfo::NetworkVar_nQueryIndex> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<CDOTA_PlayerChallengeInfo, CNetworkVarBase<int, CDOTA_PlayerChallengeInfo::NetworkVar_nQuestChallengeID> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<CDOTA_PlayerChallengeInfo, CNetworkVarBase<int, CDOTA_PlayerChallengeInfo::NetworkVar_nQuestID> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<CDOTA_PlayerChallengeInfo, CNetworkVarBase<int, CDOTA_PlayerChallengeInfo::NetworkVar_nRank> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<CDOTA_PlayerChallengeInfo, CNetworkVarBase<int, CDOTA_PlayerChallengeInfo::NetworkVar_nSequenceID> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<CDOTA_PlayerChallengeInfo, CNetworkVarBase<int, CDOTA_PlayerChallengeInfo::NetworkVar_nSlotID> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<CDOTA_PlayerChallengeInfo, CNetworkVarBase<int, CDOTA_PlayerChallengeInfo::NetworkVar_nTier> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<CDOTA_PlayerChallengeInfo, CNetworkVarBase<int, CDOTA_PlayerChallengeInfo::NetworkVar_nType> >, SetTypeScope
+// calls: __cxa_guard_acquire, __cxa_guard_release
+// callers: CSchemaClassBinding<CDOTA_PlayerChallengeInfo>::Register
+// strings: "nRank", "nCompleted", "nSequenceID", "nEventID", "nQueryIndex", "nCompletionThreshold" (12 total)
+// globals: CDOTA_PlayerChallengeInfo::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*):, `guard variable for'CDOTA_PlayerChallengeInfo::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char 
+CSchemaClassInfo *__fastcall CDOTA_PlayerChallengeInfo::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        const char *pProjectName)
+{
+  CSchemaClassInfo *result; // rax
+  ISchemaSystemTypeScope *v4; // rbx
+  CSchemaType *v5; // rax
+
+  result = CDOTA_PlayerChallengeInfo::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult;
+  if ( CDOTA_PlayerChallengeInfo::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult == 0 )
+  {
+    v4 = (*(*pSchemaSystem + 112LL))(pSchemaSystem, 0, pBinaryName);
+    if ( `guard variable for'CDOTA_PlayerChallengeInfo::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTA_PlayerChallengeInfo0_MNetworkVarNames_Value == 0
+      && __cxa_guard_acquire(&`guard variable for'CDOTA_PlayerChallengeInfo::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTA_PlayerChallengeInfo0_MNetworkVarNames_Value) != 0 )
+    {
+      CDOTA_PlayerChallengeInfo::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTA_PlayerChallengeInfo0_MNetworkVarNames_Value.m_pVarName = "nType";
+      CDOTA_PlayerChallengeInfo::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTA_PlayerChallengeInfo0_MNetworkVarNames_Value.m_pVarType = "int";
+      __cxa_guard_release(&`guard variable for'CDOTA_PlayerChallengeInfo::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTA_PlayerChallengeInfo0_MNetworkVarNames_Value);
+    }
+    if ( `guard variable for'CDOTA_PlayerChallengeInfo::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTA_PlayerChallengeInfo1_MNetworkVarNames_Value == 0
+      && __cxa_guard_acquire(&`guard variable for'CDOTA_PlayerChallengeInfo::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTA_PlayerChallengeInfo1_MNetworkVarNames_Value) != 0 )
+    {
+      CDOTA_PlayerChallengeInfo::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTA_PlayerChallengeInfo1_MNetworkVarNames_Value.m_pVarName = "nQuestID";
+      CDOTA_PlayerChallengeInfo::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTA_PlayerChallengeInfo1_MNetworkVarNames_Value.m_pVarType = "int";
+      __cxa_guard_release(&`guard variable for'CDOTA_PlayerChallengeInfo::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTA_PlayerChallengeInfo1_MNetworkVarNames_Value);
+    }
+    if ( `guard variable for'CDOTA_PlayerChallengeInfo::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTA_PlayerChallengeInfo2_MNetworkVarNames_Value == 0
+      && __cxa_guard_acquire(&`guard variable for'CDOTA_PlayerChallengeInfo::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTA_PlayerChallengeInfo2_MNetworkVarNames_Value) != 0 )
+    {
+      CDOTA_PlayerChallengeInfo::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTA_PlayerChallengeInfo2_MNetworkVarNames_Value.m_pVarName = "nQuestChallengeID";
+      CDOTA_PlayerChallengeInfo::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTA_PlayerChallengeInfo2_MNetworkVarNames_Value.m_pVarType = "int";
+      __cxa_guard_release(&`guard variable for'CDOTA_PlayerChallengeInfo::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTA_PlayerChallengeInfo2_MNetworkVarNames_Value);
+    }
+    if ( `guard variable for'CDOTA_PlayerChallengeInfo::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTA_PlayerChallengeInfo3_MNetworkVarNames_Value == 0
+      && __cxa_guard_acquire(&`guard variable for'CDOTA_PlayerChallengeInfo::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTA_PlayerChallengeInfo3_MNetworkVarNames_Value) != 0 )
+    {
+      CDOTA_PlayerChallengeInfo::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTA_PlayerChallengeInfo3_MNetworkVarNames_Value.m_pVarName = "nTier";
+      CDOTA_PlayerChallengeInfo::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTA_PlayerChallengeInfo3_MNetworkVarNames_Value.m_pVarType = "int";
+      __cxa_guard_release(&`guard variable for'CDOTA_PlayerChallengeInfo::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTA_PlayerChallengeInfo3_MNetworkVarNames_Value);
+    }
+    if ( `guard variable for'CDOTA_PlayerChallengeInfo::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTA_PlayerChallengeInfo4_MNetworkVarNames_Value == 0
+      && __cxa_guard_acquire(&`guard variable for'CDOTA_PlayerChallengeInfo::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTA_PlayerChallengeInfo4_MNetworkVarNames_Value) != 0 )
+    {
+      CDOTA_PlayerChallengeInfo::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTA_PlayerChallengeInfo4_MNetworkVarNames_Value.m_pVarName = "nParam0";
+      CDOTA_PlayerChallengeInfo::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTA_PlayerChallengeInfo4_MNetworkVarNames_Value.m_pVarType = "int";
+      __cxa_guard_release(&`guard variable for'CDOTA_PlayerChallengeInfo::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTA_PlayerChallengeInfo4_MNetworkVarNames_Value);
+    }
+    if ( `guard variable for'CDOTA_PlayerChallengeInfo::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTA_PlayerChallengeInfo5_MNetworkVarNames_Value == 0
+      && __cxa_guard_acquire(&`guard variable for'CDOTA_PlayerChallengeInfo::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTA_PlayerChallengeInfo5_MNetworkVarNames_Value) != 0 )
+    {
+      CDOTA_PlayerChallengeInfo::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTA_PlayerChallengeInfo5_MNetworkVarNames_Value.m_pVarName = "nParam1";
+      CDOTA_PlayerChallengeInfo::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTA_PlayerChallengeInfo5_MNetworkVarNames_Value.m_pVarType = "int";
+      __cxa_guard_release(&`guard variable for'CDOTA_PlayerChallengeInfo::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTA_PlayerChallengeInfo5_MNetworkVarNames_Value);
+    }
+    if ( `guard variable for'CDOTA_PlayerChallengeInfo::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTA_PlayerChallengeInfo6_MNetworkVarNames_Value == 0
+      && __cxa_guard_acquire(&`guard variable for'CDOTA_PlayerChallengeInfo::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTA_PlayerChallengeInfo6_MNetworkVarNames_Value) != 0 )
+    {
+      CDOTA_PlayerChallengeInfo::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTA_PlayerChallengeInfo6_MNetworkVarNames_Value.m_pVarName = "nSlotID";
+      CDOTA_PlayerChallengeInfo::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTA_PlayerChallengeInfo6_MNetworkVarNames_Value.m_pVarType = "int";
+      __cxa_guard_release(&`guard variable for'CDOTA_PlayerChallengeInfo::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTA_PlayerChallengeInfo6_MNetworkVarNames_Value);
+    }
+    if ( `guard variable for'CDOTA_PlayerChallengeInfo::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTA_PlayerChallengeInfo7_MNetworkVarNames_Value == 0
+      && __cxa_guard_acquire(&`guard variable for'CDOTA_PlayerChallengeInfo::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTA_PlayerChallengeInfo7_MNetworkVarNames_Value) != 0 )
+    {
+      CDOTA_PlayerChallengeInfo::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTA_PlayerChallengeInfo7_MNetworkVarNames_Value.m_pVarName = "nProgress";
+      CDOTA_PlayerChallengeInfo::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTA_PlayerChallengeInfo7_MNetworkVarNames_Value.m_pVarType = "int";
+      __cxa_guard_release(&`guard variable for'CDOTA_PlayerChallengeInfo::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTA_PlayerChallengeInfo7_MNetworkVarNames_Value);
+    }
+    if ( `guard variable for'CDOTA_PlayerChallengeInfo::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTA_PlayerChallengeInfo8_MNetworkVarNames_Value == 0
+      && __cxa_guard_acquire(&`guard variable for'CDOTA_PlayerChallengeInfo::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTA_PlayerChallengeInfo8_MNetworkVarNames_Value) != 0 )
+    {
+      CDOTA_PlayerChallengeInfo::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTA_PlayerChallengeInfo8_MNetworkVarNames_Value.m_pVarName = "nCompletionThreshold";
+      CDOTA_PlayerChallengeInfo::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTA_PlayerChallengeInfo8_MNetworkVarNames_Value.m_pVarType = "int";
+      __cxa_guard_release(&`guard variable for'CDOTA_PlayerChallengeInfo::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTA_PlayerChallengeInfo8_MNetworkVarNames_Value);
+    }
+    if ( `guard variable for'CDOTA_PlayerChallengeInfo::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTA_PlayerChallengeInfo9_MNetworkVarNames_Value == 0
+      && __cxa_guard_acquire(&`guard variable for'CDOTA_PlayerChallengeInfo::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTA_PlayerChallengeInfo9_MNetworkVarNames_Value) != 0 )
+    {
+      CDOTA_PlayerChallengeInfo::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTA_PlayerChallengeInfo9_MNetworkVarNames_Value.m_pVarName = "nPlayerID";
+      CDOTA_PlayerChallengeInfo::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTA_PlayerChallengeInfo9_MNetworkVarNames_Value.m_pVarType = "int";
+      __cxa_guard_release(&`guard variable for'CDOTA_PlayerChallengeInfo::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTA_PlayerChallengeInfo9_MNetworkVarNames_Value);
+    }
+    if ( `guard variable for'CDOTA_PlayerChallengeInfo::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTA_PlayerChallengeInfo10_MNetworkVarNames_Value == 0
+      && __cxa_guard_acquire(&`guard variable for'CDOTA_PlayerChallengeInfo::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTA_PlayerChallengeInfo10_MNetworkVarNames_Value) != 0 )
+    {
+      CDOTA_PlayerChallengeInfo::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTA_PlayerChallengeInfo10_MNetworkVarNames_Value.m_pVarName = "nQueryIndex";
+      CDOTA_PlayerChallengeInfo::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTA_PlayerChallengeInfo10_MNetworkVarNames_Value.m_pVarType = "int";
+      __cxa_guard_release(&`guard variable for'CDOTA_PlayerChallengeInfo::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTA_PlayerChallengeInfo10_MNetworkVarNames_Value);
+    }
+    if ( `guard variable for'CDOTA_PlayerChallengeInfo::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTA_PlayerChallengeInfo11_MNetworkVarNames_Value == 0
+      && __cxa_guard_acquire(&`guard variable for'CDOTA_PlayerChallengeInfo::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTA_PlayerChallengeInfo11_MNetworkVarNames_Value) != 0 )
+    {
+      CDOTA_PlayerChallengeInfo::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTA_PlayerChallengeInfo11_MNetworkVarNames_Value.m_pVarName = "nEventID";
+      CDOTA_PlayerChallengeInfo::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTA_PlayerChallengeInfo11_MNetworkVarNames_Value.m_pVarType = "int";
+      __cxa_guard_release(&`guard variable for'CDOTA_PlayerChallengeInfo::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTA_PlayerChallengeInfo11_MNetworkVarNames_Value);
+    }
+    if ( `guard variable for'CDOTA_PlayerChallengeInfo::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTA_PlayerChallengeInfo12_MNetworkVarNames_Value == 0
+      && __cxa_guard_acquire(&`guard variable for'CDOTA_PlayerChallengeInfo::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTA_PlayerChallengeInfo12_MNetworkVarNames_Value) != 0 )
+    {
+      CDOTA_PlayerChallengeInfo::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTA_PlayerChallengeInfo12_MNetworkVarNames_Value.m_pVarName = "nSequenceID";
+      CDOTA_PlayerChallengeInfo::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTA_PlayerChallengeInfo12_MNetworkVarNames_Value.m_pVarType = "int";
+      __cxa_guard_release(&`guard variable for'CDOTA_PlayerChallengeInfo::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTA_PlayerChallengeInfo12_MNetworkVarNames_Value);
+    }
+    if ( `guard variable for'CDOTA_PlayerChallengeInfo::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTA_PlayerChallengeInfo13_MNetworkVarNames_Value == 0
+      && __cxa_guard_acquire(&`guard variable for'CDOTA_PlayerChallengeInfo::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTA_PlayerChallengeInfo13_MNetworkVarNames_Value) != 0 )
+    {
+      CDOTA_PlayerChallengeInfo::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTA_PlayerChallengeInfo13_MNetworkVarNames_Value.m_pVarName = "nCompleted";
+      CDOTA_PlayerChallengeInfo::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTA_PlayerChallengeInfo13_MNetworkVarNames_Value.m_pVarType = "int";
+      __cxa_guard_release(&`guard variable for'CDOTA_PlayerChallengeInfo::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTA_PlayerChallengeInfo13_MNetworkVarNames_Value);
+    }
+    if ( `guard variable for'CDOTA_PlayerChallengeInfo::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTA_PlayerChallengeInfo14_MNetworkVarNames_Value == 0
+      && __cxa_guard_acquire(&`guard variable for'CDOTA_PlayerChallengeInfo::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTA_PlayerChallengeInfo14_MNetworkVarNames_Value) != 0 )
+    {
+      CDOTA_PlayerChallengeInfo::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTA_PlayerChallengeInfo14_MNetworkVarNames_Value.m_pVarName = "nRank";
+      CDOTA_PlayerChallengeInfo::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTA_PlayerChallengeInfo14_MNetworkVarNames_Value.m_pVarType = "int";
+      __cxa_guard_release(&`guard variable for'CDOTA_PlayerChallengeInfo::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTA_PlayerChallengeInfo14_MNetworkVarNames_Value);
+    }
+    CDOTA_PlayerChallengeInfo::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CDOTA_PlayerChallengeInfo[0].m_pType = (*(*v4 + 40LL))(v4, 7);
+    CDOTA_PlayerChallengeInfo::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CDOTA_PlayerChallengeInfo[1].m_pType = (*(*v4 + 40LL))(v4, 7);
+    CDOTA_PlayerChallengeInfo::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CDOTA_PlayerChallengeInfo[2].m_pType = (*(*v4 + 40LL))(v4, 7);
+    CDOTA_PlayerChallengeInfo::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CDOTA_PlayerChallengeInfo[3].m_pType = (*(*v4 + 40LL))(v4, 7);
+    CDOTA_PlayerChallengeInfo::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CDOTA_PlayerChallengeInfo[4].m_pType = (*(*v4 + 40LL))(v4, 7);
+    CDOTA_PlayerChallengeInfo::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CDOTA_PlayerChallengeInfo[5].m_pType = (*(*v4 + 40LL))(v4, 7);
+    CDOTA_PlayerChallengeInfo::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CDOTA_PlayerChallengeInfo[6].m_pType = (*(*v4 + 40LL))(v4, 7);
+    CDOTA_PlayerChallengeInfo::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CDOTA_PlayerChallengeInfo[7].m_pType = (*(*v4 + 40LL))(v4, 7);
+    CDOTA_PlayerChallengeInfo::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CDOTA_PlayerChallengeInfo[8].m_pType = (*(*v4 + 40LL))(v4, 7);
+    CDOTA_PlayerChallengeInfo::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CDOTA_PlayerChallengeInfo[9].m_pType = (*(*v4 + 40LL))(v4, 7);
+    CDOTA_PlayerChallengeInfo::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CDOTA_PlayerChallengeInfo[10].m_pType = (*(*v4 + 40LL))(v4, 7);
+    CDOTA_PlayerChallengeInfo::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CDOTA_PlayerChallengeInfo[11].m_pType = (*(*v4 + 40LL))(v4, 7);
+    CDOTA_PlayerChallengeInfo::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CDOTA_PlayerChallengeInfo[12].m_pType = (*(*v4 + 40LL))(v4, 7);
+    CDOTA_PlayerChallengeInfo::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CDOTA_PlayerChallengeInfo[13].m_pType = (*(*v4 + 40LL))(v4, 7);
+    v5 = (*(*v4 + 40LL))(v4, 7);
+    CDOTA_PlayerChallengeInfo::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CDOTA_PlayerChallengeInfo.m_pOuterTypeScope = v4;
+    CDOTA_PlayerChallengeInfo::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CDOTA_PlayerChallengeInfo[14].m_pType = v5;
+    CDOTA_PlayerChallengeInfo::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult = &CDOTA_PlayerChallengeInfo::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CDOTA_PlayerChallengeInfo;
+    (*(*v4 + 264LL))(
+      v4,
+      &CDOTA_PlayerChallengeInfo::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CDOTA_PlayerChallengeInfo);
+    return CDOTA_PlayerChallengeInfo::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult;
+  }
+  return result;
+}
+
+
+// CDOTA_PlayerChallengeInfo::Schema_VerifyBindingIsRegistered  (line 250, @0x00000000025a2720, libserver.so)
+void __cdecl CDOTA_PlayerChallengeInfo::Schema_VerifyBindingIsRegistered()
+{
+  ;
+}
+
+
+// CDOTASubChallengeInfo::Schema_CompileTimeVerificationFunction  (line 258, @0x00000000025a2730, libserver.so)
+void __fastcall CDOTASubChallengeInfo::Schema_CompileTimeVerificationFunction(CDOTASubChallengeInfo *const this)
+{
+  ;
+}
+
+
+// CDOTASubChallengeInfo::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE  (line 272, @0x00000000025a2740, libserver.so)  // inlines: Get, NetworkVarDecl_t, SchemaBinding_SchemaTypeOfMemberVarByAddr<CDOTASubChallengeInfo, CNetworkVarBase<int, CDOTASubChallengeInfo::NetworkVar_nCompleted> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<CDOTASubChallengeInfo, CNetworkVarBase<int, CDOTASubChallengeInfo::NetworkVar_nCompletionThreshold> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<CDOTASubChallengeInfo, CNetworkVarBase<int, CDOTASubChallengeInfo::NetworkVar_nEventID> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<CDOTASubChallengeInfo, CNetworkVarBase<int, CDOTASubChallengeInfo::NetworkVar_nPlayerID> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<CDOTASubChallengeInfo, CNetworkVarBase<int, CDOTASubChallengeInfo::NetworkVar_nProgress> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<CDOTASubChallengeInfo, CNetworkVarBase<int, CDOTASubChallengeInfo::NetworkVar_nQueryIndex> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<CDOTASubChallengeInfo, CNetworkVarBase<int, CDOTASubChallengeInfo::NetworkVar_nRequiredHero> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<CDOTASubChallengeInfo, CNetworkVarBase<int, CDOTASubChallengeInfo::NetworkVar_nSequenceID> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<CDOTASubChallengeInfo, CNetworkVarBase<int, CDOTASubChallengeInfo::NetworkVar_nSlotID> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<CDOTASubChallengeInfo, CNetworkVarBase<int, CDOTASubChallengeInfo::NetworkVar_nTier> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<CDOTASubChallengeInfo, CNetworkVarBase<int, CDOTASubChallengeInfo::NetworkVar_nType> >, SetTypeScope
+// calls: __cxa_guard_acquire, __cxa_guard_release
+// callers: CSchemaClassBinding<CDOTASubChallengeInfo>::Register
+// strings: "nCompleted", "nRequiredHero", "nSequenceID", "nEventID", "nQueryIndex", "nCompletionThreshold" (8 total)
+// globals: CDOTASubChallengeInfo::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_p, `guard variable for'CDOTASubChallengeInfo::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char cons, CDOTASubChallengeInfo::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::Imp
+CSchemaClassInfo *__fastcall CDOTASubChallengeInfo::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        const char *pProjectName)
+{
+  CSchemaClassInfo *result; // rax
+  ISchemaSystemTypeScope *v4; // rbx
+  CSchemaType *v5; // rax
+
+  result = CDOTASubChallengeInfo::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult;
+  if ( CDOTASubChallengeInfo::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult == 0 )
+  {
+    v4 = (*(*pSchemaSystem + 112LL))(pSchemaSystem, 0, pBinaryName);
+    if ( `guard variable for'CDOTASubChallengeInfo::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTASubChallengeInfo0_MNetworkVarNames_Value == 0
+      && __cxa_guard_acquire(&`guard variable for'CDOTASubChallengeInfo::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTASubChallengeInfo0_MNetworkVarNames_Value) != 0 )
+    {
+      CDOTASubChallengeInfo::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTASubChallengeInfo0_MNetworkVarNames_Value.m_pVarName = "nType";
+      CDOTASubChallengeInfo::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTASubChallengeInfo0_MNetworkVarNames_Value.m_pVarType = "int";
+      __cxa_guard_release(&`guard variable for'CDOTASubChallengeInfo::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTASubChallengeInfo0_MNetworkVarNames_Value);
+    }
+    if ( `guard variable for'CDOTASubChallengeInfo::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTASubChallengeInfo1_MNetworkVarNames_Value == 0
+      && __cxa_guard_acquire(&`guard variable for'CDOTASubChallengeInfo::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTASubChallengeInfo1_MNetworkVarNames_Value) != 0 )
+    {
+      CDOTASubChallengeInfo::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTASubChallengeInfo1_MNetworkVarNames_Value.m_pVarName = "nTier";
+      CDOTASubChallengeInfo::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTASubChallengeInfo1_MNetworkVarNames_Value.m_pVarType = "int";
+      __cxa_guard_release(&`guard variable for'CDOTASubChallengeInfo::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTASubChallengeInfo1_MNetworkVarNames_Value);
+    }
+    if ( `guard variable for'CDOTASubChallengeInfo::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTASubChallengeInfo2_MNetworkVarNames_Value == 0
+      && __cxa_guard_acquire(&`guard variable for'CDOTASubChallengeInfo::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTASubChallengeInfo2_MNetworkVarNames_Value) != 0 )
+    {
+      CDOTASubChallengeInfo::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTASubChallengeInfo2_MNetworkVarNames_Value.m_pVarName = "nSlotID";
+      CDOTASubChallengeInfo::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTASubChallengeInfo2_MNetworkVarNames_Value.m_pVarType = "int";
+      __cxa_guard_release(&`guard variable for'CDOTASubChallengeInfo::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTASubChallengeInfo2_MNetworkVarNames_Value);
+    }
+    if ( `guard variable for'CDOTASubChallengeInfo::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTASubChallengeInfo3_MNetworkVarNames_Value == 0
+      && __cxa_guard_acquire(&`guard variable for'CDOTASubChallengeInfo::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTASubChallengeInfo3_MNetworkVarNames_Value) != 0 )
+    {
+      CDOTASubChallengeInfo::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTASubChallengeInfo3_MNetworkVarNames_Value.m_pVarName = "nProgress";
+      CDOTASubChallengeInfo::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTASubChallengeInfo3_MNetworkVarNames_Value.m_pVarType = "int";
+      __cxa_guard_release(&`guard variable for'CDOTASubChallengeInfo::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTASubChallengeInfo3_MNetworkVarNames_Value);
+    }
+    if ( `guard variable for'CDOTASubChallengeInfo::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTASubChallengeInfo4_MNetworkVarNames_Value == 0
+      && __cxa_guard_acquire(&`guard variable for'CDOTASubChallengeInfo::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTASubChallengeInfo4_MNetworkVarNames_Value) != 0 )
+    {
+      CDOTASubChallengeInfo::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTASubChallengeInfo4_MNetworkVarNames_Value.m_pVarName = "nCompletionThreshold";
+      CDOTASubChallengeInfo::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTASubChallengeInfo4_MNetworkVarNames_Value.m_pVarType = "int";
+      __cxa_guard_release(&`guard variable for'CDOTASubChallengeInfo::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTASubChallengeInfo4_MNetworkVarNames_Value);
+    }
+    if ( `guard variable for'CDOTASubChallengeInfo::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTASubChallengeInfo5_MNetworkVarNames_Value == 0
+      && __cxa_guard_acquire(&`guard variable for'CDOTASubChallengeInfo::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTASubChallengeInfo5_MNetworkVarNames_Value) != 0 )
+    {
+      CDOTASubChallengeInfo::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTASubChallengeInfo5_MNetworkVarNames_Value.m_pVarName = "nPlayerID";
+      CDOTASubChallengeInfo::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTASubChallengeInfo5_MNetworkVarNames_Value.m_pVarType = "int";
+      __cxa_guard_release(&`guard variable for'CDOTASubChallengeInfo::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTASubChallengeInfo5_MNetworkVarNames_Value);
+    }
+    if ( `guard variable for'CDOTASubChallengeInfo::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTASubChallengeInfo6_MNetworkVarNames_Value == 0
+      && __cxa_guard_acquire(&`guard variable for'CDOTASubChallengeInfo::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTASubChallengeInfo6_MNetworkVarNames_Value) != 0 )
+    {
+      CDOTASubChallengeInfo::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTASubChallengeInfo6_MNetworkVarNames_Value.m_pVarName = "nQueryIndex";
+      CDOTASubChallengeInfo::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTASubChallengeInfo6_MNetworkVarNames_Value.m_pVarType = "int";
+      __cxa_guard_release(&`guard variable for'CDOTASubChallengeInfo::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTASubChallengeInfo6_MNetworkVarNames_Value);
+    }
+    if ( `guard variable for'CDOTASubChallengeInfo::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTASubChallengeInfo7_MNetworkVarNames_Value == 0
+      && __cxa_guard_acquire(&`guard variable for'CDOTASubChallengeInfo::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTASubChallengeInfo7_MNetworkVarNames_Value) != 0 )
+    {
+      CDOTASubChallengeInfo::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTASubChallengeInfo7_MNetworkVarNames_Value.m_pVarName = "nEventID";
+      CDOTASubChallengeInfo::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTASubChallengeInfo7_MNetworkVarNames_Value.m_pVarType = "int";
+      __cxa_guard_release(&`guard variable for'CDOTASubChallengeInfo::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTASubChallengeInfo7_MNetworkVarNames_Value);
+    }
+    if ( `guard variable for'CDOTASubChallengeInfo::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTASubChallengeInfo8_MNetworkVarNames_Value == 0
+      && __cxa_guard_acquire(&`guard variable for'CDOTASubChallengeInfo::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTASubChallengeInfo8_MNetworkVarNames_Value) != 0 )
+    {
+      CDOTASubChallengeInfo::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTASubChallengeInfo8_MNetworkVarNames_Value.m_pVarName = "nSequenceID";
+      CDOTASubChallengeInfo::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTASubChallengeInfo8_MNetworkVarNames_Value.m_pVarType = "int";
+      __cxa_guard_release(&`guard variable for'CDOTASubChallengeInfo::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTASubChallengeInfo8_MNetworkVarNames_Value);
+    }
+    if ( `guard variable for'CDOTASubChallengeInfo::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTASubChallengeInfo9_MNetworkVarNames_Value == 0
+      && __cxa_guard_acquire(&`guard variable for'CDOTASubChallengeInfo::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTASubChallengeInfo9_MNetworkVarNames_Value) != 0 )
+    {
+      CDOTASubChallengeInfo::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTASubChallengeInfo9_MNetworkVarNames_Value.m_pVarName = "nRequiredHero";
+      CDOTASubChallengeInfo::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTASubChallengeInfo9_MNetworkVarNames_Value.m_pVarType = "int";
+      __cxa_guard_release(&`guard variable for'CDOTASubChallengeInfo::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTASubChallengeInfo9_MNetworkVarNames_Value);
+    }
+    if ( `guard variable for'CDOTASubChallengeInfo::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTASubChallengeInfo10_MNetworkVarNames_Value == 0
+      && __cxa_guard_acquire(&`guard variable for'CDOTASubChallengeInfo::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTASubChallengeInfo10_MNetworkVarNames_Value) != 0 )
+    {
+      CDOTASubChallengeInfo::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTASubChallengeInfo10_MNetworkVarNames_Value.m_pVarName = "nCompleted";
+      CDOTASubChallengeInfo::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTASubChallengeInfo10_MNetworkVarNames_Value.m_pVarType = "int";
+      __cxa_guard_release(&`guard variable for'CDOTASubChallengeInfo::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTASubChallengeInfo10_MNetworkVarNames_Value);
+    }
+    CDOTASubChallengeInfo::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CDOTASubChallengeInfo[0].m_pType = (*(*v4 + 40LL))(v4, 7);
+    CDOTASubChallengeInfo::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CDOTASubChallengeInfo[1].m_pType = (*(*v4 + 40LL))(v4, 7);
+    CDOTASubChallengeInfo::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CDOTASubChallengeInfo[2].m_pType = (*(*v4 + 40LL))(v4, 7);
+    CDOTASubChallengeInfo::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CDOTASubChallengeInfo[3].m_pType = (*(*v4 + 40LL))(v4, 7);
+    CDOTASubChallengeInfo::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CDOTASubChallengeInfo[4].m_pType = (*(*v4 + 40LL))(v4, 7);
+    CDOTASubChallengeInfo::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CDOTASubChallengeInfo[5].m_pType = (*(*v4 + 40LL))(v4, 7);
+    CDOTASubChallengeInfo::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CDOTASubChallengeInfo[6].m_pType = (*(*v4 + 40LL))(v4, 7);
+    CDOTASubChallengeInfo::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CDOTASubChallengeInfo[7].m_pType = (*(*v4 + 40LL))(v4, 7);
+    CDOTASubChallengeInfo::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CDOTASubChallengeInfo[8].m_pType = (*(*v4 + 40LL))(v4, 7);
+    CDOTASubChallengeInfo::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CDOTASubChallengeInfo[9].m_pType = (*(*v4 + 40LL))(v4, 7);
+    v5 = (*(*v4 + 40LL))(v4, 7);
+    CDOTASubChallengeInfo::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CDOTASubChallengeInfo.m_pOuterTypeScope = v4;
+    CDOTASubChallengeInfo::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CDOTASubChallengeInfo[10].m_pType = v5;
+    CDOTASubChallengeInfo::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult = &CDOTASubChallengeInfo::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CDOTASubChallengeInfo;
+    (*(*v4 + 264LL))(
+      v4,
+      &CDOTASubChallengeInfo::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CDOTASubChallengeInfo);
+    return CDOTASubChallengeInfo::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult;
+  }
+  return result;
+}
+
+
+// CDOTASubChallengeInfo::Schema_VerifyBindingIsRegistered  (line 421, @0x00000000025a2c30, libserver.so)
+void __cdecl CDOTASubChallengeInfo::Schema_VerifyBindingIsRegistered()
+{
+  ;
+}
+
+
+// CDOTA_CombatLogQueryProgress::Schema_CompileTimeVerificationFunction  (line 429, @0x00000000025a2c40, libserver.so)
+void __fastcall CDOTA_CombatLogQueryProgress::Schema_CompileTimeVerificationFunction(
+        CDOTA_CombatLogQueryProgress *const this)
+{
+  ;
+}
+
+
+// CDOTA_CombatLogQueryProgress::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE  (line 437, @0x00000000025a2c50, libserver.so)  // inlines: Get, NetworkVarDecl_t, SchemaBinding_SchemaTypeOfMemberVarByAddr<CDOTA_CombatLogQueryProgress, CNetworkStringBase<260, CDOTA_CombatLogQueryProgress::NetworkVar_m_szRankIdentifier> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<CDOTA_CombatLogQueryProgress, CNetworkVarBase<int, CDOTA_CombatLogQueryProgress::NetworkVar_m_nMultiQueryID> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<CDOTA_CombatLogQueryProgress, CNetworkVarBase<int, CDOTA_CombatLogQueryProgress::NetworkVar_m_nPlayerID> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<CDOTA_CombatLogQueryProgress, CNetworkVarBase<int, CDOTA_CombatLogQueryProgress::NetworkVar_m_nQueryID> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<CDOTA_CombatLogQueryProgress, CNetworkVarBase<int, CDOTA_CombatLogQueryProgress::NetworkVar_m_nQueryRank> >, SetTypeScope
+// calls: __cxa_guard_acquire, __cxa_guard_release
+// callers: CSchemaClassBinding<CDOTA_CombatLogQueryProgress>::Register
+// strings: "m_nPlayerID", "m_szRankIdentifier", "char", "m_nMultiQueryID", "m_nQueryRank", "m_nQueryID"
+// globals: CDOTA_CombatLogQueryProgress::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const, `guard variable for'CDOTA_CombatLogQueryProgress::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,ch
+CSchemaClassInfo *__fastcall CDOTA_CombatLogQueryProgress::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        const char *pProjectName)
+{
+  CSchemaClassInfo *result; // rax
+  ISchemaSystemTypeScope *v4; // rbx
+  __int64 (__fastcall *v5)(ISchemaSystemTypeScope *, __int64, __int64); // r12
+  __int64 v6; // rax
+  CSchemaType *v7; // rax
+
+  result = CDOTA_CombatLogQueryProgress::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult;
+  if ( CDOTA_CombatLogQueryProgress::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult == 0 )
+  {
+    v4 = (*(*pSchemaSystem + 112LL))(pSchemaSystem, 0, pBinaryName);
+    if ( `guard variable for'CDOTA_CombatLogQueryProgress::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTA_CombatLogQueryProgress1_MNetworkVarNames_Value == 0
+      && __cxa_guard_acquire(&`guard variable for'CDOTA_CombatLogQueryProgress::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTA_CombatLogQueryProgress1_MNetworkVarNames_Value) != 0 )
+    {
+      CDOTA_CombatLogQueryProgress::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTA_CombatLogQueryProgress1_MNetworkVarNames_Value.m_pVarName = "m_nPlayerID";
+      CDOTA_CombatLogQueryProgress::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTA_CombatLogQueryProgress1_MNetworkVarNames_Value.m_pVarType = "int";
+      __cxa_guard_release(&`guard variable for'CDOTA_CombatLogQueryProgress::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTA_CombatLogQueryProgress1_MNetworkVarNames_Value);
+    }
+    if ( `guard variable for'CDOTA_CombatLogQueryProgress::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTA_CombatLogQueryProgress2_MNetworkVarNames_Value == 0
+      && __cxa_guard_acquire(&`guard variable for'CDOTA_CombatLogQueryProgress::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTA_CombatLogQueryProgress2_MNetworkVarNames_Value) != 0 )
+    {
+      CDOTA_CombatLogQueryProgress::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTA_CombatLogQueryProgress2_MNetworkVarNames_Value.m_pVarName = "m_nQueryID";
+      CDOTA_CombatLogQueryProgress::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTA_CombatLogQueryProgress2_MNetworkVarNames_Value.m_pVarType = "int";
+      __cxa_guard_release(&`guard variable for'CDOTA_CombatLogQueryProgress::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTA_CombatLogQueryProgress2_MNetworkVarNames_Value);
+    }
+    if ( `guard variable for'CDOTA_CombatLogQueryProgress::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTA_CombatLogQueryProgress3_MNetworkVarNames_Value == 0
+      && __cxa_guard_acquire(&`guard variable for'CDOTA_CombatLogQueryProgress::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTA_CombatLogQueryProgress3_MNetworkVarNames_Value) != 0 )
+    {
+      CDOTA_CombatLogQueryProgress::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTA_CombatLogQueryProgress3_MNetworkVarNames_Value.m_pVarName = "m_nQueryRank";
+      CDOTA_CombatLogQueryProgress::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTA_CombatLogQueryProgress3_MNetworkVarNames_Value.m_pVarType = "int";
+      __cxa_guard_release(&`guard variable for'CDOTA_CombatLogQueryProgress::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTA_CombatLogQueryProgress3_MNetworkVarNames_Value);
+    }
+    if ( `guard variable for'CDOTA_CombatLogQueryProgress::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTA_CombatLogQueryProgress4_MNetworkVarNames_Value == 0
+      && __cxa_guard_acquire(&`guard variable for'CDOTA_CombatLogQueryProgress::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTA_CombatLogQueryProgress4_MNetworkVarNames_Value) != 0 )
+    {
+      CDOTA_CombatLogQueryProgress::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTA_CombatLogQueryProgress4_MNetworkVarNames_Value.m_pVarName = "m_nMultiQueryID";
+      CDOTA_CombatLogQueryProgress::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTA_CombatLogQueryProgress4_MNetworkVarNames_Value.m_pVarType = "int";
+      __cxa_guard_release(&`guard variable for'CDOTA_CombatLogQueryProgress::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTA_CombatLogQueryProgress4_MNetworkVarNames_Value);
+    }
+    if ( `guard variable for'CDOTA_CombatLogQueryProgress::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTA_CombatLogQueryProgress5_MNetworkVarNames_Value == 0
+      && __cxa_guard_acquire(&`guard variable for'CDOTA_CombatLogQueryProgress::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTA_CombatLogQueryProgress5_MNetworkVarNames_Value) != 0 )
+    {
+      CDOTA_CombatLogQueryProgress::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTA_CombatLogQueryProgress5_MNetworkVarNames_Value.m_pVarName = "m_szRankIdentifier";
+      CDOTA_CombatLogQueryProgress::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTA_CombatLogQueryProgress5_MNetworkVarNames_Value.m_pVarType = "char";
+      __cxa_guard_release(&`guard variable for'CDOTA_CombatLogQueryProgress::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTA_CombatLogQueryProgress5_MNetworkVarNames_Value);
+    }
+    CDOTA_CombatLogQueryProgress::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CDOTA_CombatLogQueryProgress[0].m_pType = (*(*v4 + 40LL))(v4, 7);
+    CDOTA_CombatLogQueryProgress::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CDOTA_CombatLogQueryProgress[1].m_pType = (*(*v4 + 40LL))(v4, 7);
+    CDOTA_CombatLogQueryProgress::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CDOTA_CombatLogQueryProgress[2].m_pType = (*(*v4 + 40LL))(v4, 7);
+    CDOTA_CombatLogQueryProgress::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CDOTA_CombatLogQueryProgress[3].m_pType = (*(*v4 + 40LL))(v4, 7);
+    v5 = *(*v4 + 104LL);
+    v6 = (*(*v4 + 40LL))(v4, 2);
+    v7 = v5(v4, v6, 260);
+    CDOTA_CombatLogQueryProgress::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CDOTA_CombatLogQueryProgress.m_pOuterTypeScope = v4;
+    CDOTA_CombatLogQueryProgress::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CDOTA_CombatLogQueryProgress[4].m_pType = v7;
+    CDOTA_CombatLogQueryProgress::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult = &CDOTA_CombatLogQueryProgress::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CDOTA_CombatLogQueryProgress;
+    (*(*v4 + 264LL))(
+      v4,
+      &CDOTA_CombatLogQueryProgress::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CDOTA_CombatLogQueryProgress);
+    return CDOTA_CombatLogQueryProgress::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult;
+  }
+  return result;
+}
+
+
+// CDOTA_CombatLogQueryProgress::Schema_VerifyBindingIsRegistered  (line 516, @0x00000000025a2ed0, libserver.so)
+void __cdecl CDOTA_CombatLogQueryProgress::Schema_VerifyBindingIsRegistered()
+{
+  ;
+}
+
+
+// CIngameEvent_Base::CEntityInstanceEntityClass::Schema_CompileTimeVerificationFunction  (line 524, @0x00000000025a2ee0, libserver.so)
+void __fastcall CIngameEvent_Base::CEntityInstanceEntityClass::Schema_CompileTimeVerificationFunction(
+        CIngameEvent_Base::CEntityInstanceEntityClass *const this)
+{
+  ;
+}
+
+
+// CIngameEvent_Base::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE  (line 527, @0x0000000002594850, libserver.so)  // inlines: Call, Get, SetTypeScope
+// calls: CBaseEntity::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE
+// callers: CIngameEvent_FM2015::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE, CIngameEvent_WM2016::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE, CSchemaNonConstructibleClassBinding<CIngameEvent_Base::CEntityInstanceEntityClass>::Register, CIngameEvent_Base::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE, CIngameEvent_Base::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE
+// globals: CIngameEvent_Base::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char 
+CSchemaClassInfo *__fastcall CIngameEvent_Base::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        const char *pProjectName)
+{
+  ISchemaSystemTypeScope *v6; // r14
+  CSchemaClassInfo *v7; // rax
+
+  v6 = (*(*pSchemaSystem + 112LL))(pSchemaSystem, 1, pBinaryName);
+  (*(CBaseEntity::CEntityInstanceEntityClass::s_pSchemaBindingForLocalModule->_vptr_ISchemaBinding + 5))(
+    CBaseEntity::CEntityInstanceEntityClass::s_pSchemaBindingForLocalModule,
+    pSchemaSystem,
+    pBinaryName,
+    pProjectName);
+  v7 = CBaseEntity::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+         pSchemaSystem,
+         pBinaryName,
+         pProjectName);
+  CIngameEvent_Base::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CIngameEvent_Base_CEntityInstanceEntityClass.m_pOuterTypeScope = v6;
+  CIngameEvent_Base::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassBases_CIngameEvent_Base_CEntityInstanceEntityClass[0].m_pClass = v7;
+  CIngameEvent_Base::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult = &CIngameEvent_Base::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CIngameEvent_Base_CEntityInstanceEntityClass;
+  return &CIngameEvent_Base::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CIngameEvent_Base_CEntityInstanceEntityClass;
+}
+
+
+// CIngameEvent_Base::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE  (line 527, @0x00000000025a2ef0, libserver.so)
+// calls: CIngameEvent_Base::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE
+// globals: CIngameEvent_Base::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char 
+CSchemaClassInfo *__fastcall CIngameEvent_Base::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        const char *pProjectName)
+{
+  CSchemaClassInfo *result; // rax
+
+  result = CIngameEvent_Base::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult;
+  if ( CIngameEvent_Base::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult == 0 )
+    return CIngameEvent_Base::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+             pSchemaSystem,
+             pBinaryName,
+             pProjectName);
+  return result;
+}
+
+
+// CIngameEvent_Base::CEntityInstanceEntityClass::Schema_VerifyBindingIsRegistered  (line 544, @0x00000000025a2f10, libserver.so)
+void __cdecl CIngameEvent_Base::CEntityInstanceEntityClass::Schema_VerifyBindingIsRegistered()
+{
+  ;
+}
+
+
+// CIngameEvent_Base::Schema_CompileTimeVerificationFunction  (line 552, @0x00000000025a2f20, libserver.so)
+void __fastcall CIngameEvent_Base::Schema_CompileTimeVerificationFunction(CIngameEvent_Base *const this)
+{
+  ;
+}
+
+
+// CIngameEvent_Base::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE  (line 571, @0x00000000025a2f30, libserver.so)  // inlines: Call, Get, NetworkVarDecl_t, RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE, SchemaBinding_SchemaTypeOfMemberVarByAddr<CIngameEvent_Base, CNetworkArrayBase<bool, 24, CIngameEvent_Base::NetworkVar_m_CompendiumChallengeCompleted> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<CIngameEvent_Base, CNetworkArrayBase<bool, 24, CIngameEvent_Base::NetworkVar_m_CompendiumChallengeFailed> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<CIngameEvent_Base, CNetworkArrayBase<int, 10, CIngameEvent_Base::NetworkVar_m_PlayerQuestRankCompleted> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<CIngameEvent_Base, CNetworkArrayBase<int, 10, CIngameEvent_Base::NetworkVar_m_PlayerQuestRankPreviouslyCompleted> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<CIngameEvent_Base, CNetworkArrayBase<int, 100, CIngameEvent_Base::NetworkVar_m_GoalForQueryID> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<CIngameEvent_Base, CNetworkArrayBase<int, 100, CIngameEvent_Base::NetworkVar_m_ProgressForQueryID> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<CIngameEvent_Base, CNetworkArrayBase<int, 24, CIngameEvent_Base::NetworkVar_m_CompendiumChallengeCoinReward> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<CIngameEvent_Base, CNetworkArrayBase<int, 24, CIngameEvent_Base::NetworkVar_m_CompendiumChallengeCoinSplash> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<CIngameEvent_Base, CNetworkArrayBase<int, 24, CIngameEvent_Base::NetworkVar_m_CompendiumChallengeEventID> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<CIngameEvent_Base, CNetworkArrayBase<int, 24, CIngameEvent_Base::NetworkVar_m_CompendiumChallengePointReward> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<CIngameEvent_Base, CNetworkArrayBase<int, 24, CIngameEvent_Base::NetworkVar_m_CompendiumChallengeProgress> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<CIngameEvent_Base, CNetworkArrayBase<int, 24, CIngameEvent_Base::NetworkVar_m_CompendiumChallengeSequenceID> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<CIngameEvent_Base, CNetworkArrayBase<int, 24, CIngameEvent_Base::NetworkVar_m_QueryIDForProgress> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<CIngameEvent_Base, CUtlVectorEmbeddedNetworkVar<CDOTA_CombatLogQueryProgress, CIngameEvent_Base::NetworkVar_m_PlayerQueryIDs> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<CIngameEvent_Base, CUtlVectorEmbeddedNetworkVar<CDOTA_PlayerChallengeInfo, CIngameEvent_Base::NetworkVar_m_CompendiumChallengeInfo, 24> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<CIngameEvent_Base, bool>, SetTypeScope
+// calls: __cxa_guard_acquire, __cxa_guard_release, CBaseEntity::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE, CIngameEvent_Base::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE, __cxa_guard_abort, _Unwind_Resume
+// callers: CIngameEvent_FM2015::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE, CIngameEvent_WM2016::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE, CSchemaNonConstructibleClassBinding<CIngameEvent_Base>::Register
+// strings: "CDOTA_PlayerChallengeInfo", "CUtlVector", "CDOTA_CombatLogQueryProgress", "m_PlayerQuestRankCompleted", "m_PlayerQuestRankPreviouslyCompleted", "m_GoalForQueryID" (18 total)
+// globals: CIngameEvent_Base::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInit, `guard variable for'CIngameEvent_Base::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,c, CSchemaManipulator<CUtlVector<CDOTA_PlayerChallengeInfo,CNetworkUtlVector_MemoryType<CDOTA_PlayerChallengeInfo,24>>>::StaticAccessor(void)::m, CAtomicManipulator<CUtlVector<CDOTA_PlayerChallengeInfo,CNetworkUtlVector_MemoryType<CDOTA_PlayerChallengeInfo,24>>>::Get(void)::val, CSchemaManipulator<CUtlVector<CDOTA_CombatLogQueryProgress,CNetworkUtlVector_MemoryType<CDOTA_CombatLogQueryProgress,-1>>>::StaticAccessor(void)::m, CAtomicManipulator<CUtlVector<CDOTA_CombatLogQueryProgress,CNetworkUtlVector_MemoryType<CDOTA_CombatLogQueryProgress,-1>>>::Get(void)::val, CIngameEvent_Base::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char , CIngameEvent_Base::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSch
+CSchemaClassInfo *__fastcall CIngameEvent_Base::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        const char *pProjectName)
+{
+  CSchemaClassInfo *result; // rax
+  ISchemaSystemTypeScope *v7; // rbx
+  __int64 (__fastcall *v8)(ISchemaSystemTypeScope *, __int64, __int64); // r15
+  __int64 v9; // rax
+  __int64 (__fastcall *v10)(ISchemaSystemTypeScope *, __int64, __int64); // r15
+  __int64 v11; // rax
+  __int64 (__fastcall *v12)(ISchemaSystemTypeScope *, __int64, __int64); // r15
+  __int64 v13; // rax
+  __int64 (__fastcall *v14)(ISchemaSystemTypeScope *, __int64, __int64); // r15
+  __int64 v15; // rax
+  __int64 (__fastcall *v16)(ISchemaSystemTypeScope *, __int64, __int64); // r15
+  __int64 v17; // rax
+  __int64 (__fastcall *v18)(ISchemaSystemTypeScope *, __int64, __int64); // r15
+  __int64 v19; // rax
+  __int64 (__fastcall *v20)(ISchemaSystemTypeScope *, __int64, __int64); // r15
+  __int64 v21; // rax
+  __int64 (__fastcall *v22)(ISchemaSystemTypeScope *, __int64, __int64); // r15
+  __int64 v23; // rax
+  __int64 (__fastcall *v24)(ISchemaSystemTypeScope *, __int64, __int64); // r15
+  __int64 v25; // rax
+  __int64 (__fastcall *v26)(ISchemaSystemTypeScope *, const char *, __int64, __int64 (__fastcall ***)(), __int64 (__fastcall ***)(), __int64); // r15
+  __int64 v27; // rax
+  __int64 (__fastcall *v28)(ISchemaSystemTypeScope *, const char *, __int64, __int64 (__fastcall ***)(), __int64 (__fastcall ***)(), __int64); // r15
+  __int64 v29; // rax
+  __int64 (__fastcall *v30)(ISchemaSystemTypeScope *, __int64, __int64); // r15
+  __int64 v31; // rax
+  __int64 (__fastcall *v32)(ISchemaSystemTypeScope *, __int64, __int64); // r15
+  __int64 v33; // rax
+  __int64 (__fastcall *v34)(ISchemaSystemTypeScope *, __int64, __int64); // r15
+  __int64 v35; // rax
+  __int64 (__fastcall *v36)(ISchemaSystemTypeScope *, __int64, __int64); // r15
+  __int64 v37; // rax
+  CSchemaClassInfo *v38; // rax
+  CSchemaClassInfo *v39; // rax
+
+  result = CIngameEvent_Base::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult;
+  if ( CIngameEvent_Base::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult == 0 )
+  {
+    v7 = (*(*pSchemaSystem + 112LL))(pSchemaSystem, 1, pBinaryName);
+    if ( `guard variable for'CIngameEvent_Base::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CIngameEvent_Base3_MNetworkVarNames_Value == 0
+      && __cxa_guard_acquire(&`guard variable for'CIngameEvent_Base::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CIngameEvent_Base3_MNetworkVarNames_Value) != 0 )
+    {
+      CIngameEvent_Base::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CIngameEvent_Base3_MNetworkVarNames_Value.m_pVarName = "m_CompendiumChallengeEventID";
+      CIngameEvent_Base::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CIngameEvent_Base3_MNetworkVarNames_Value.m_pVarType = "int";
+      __cxa_guard_release(&`guard variable for'CIngameEvent_Base::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CIngameEvent_Base3_MNetworkVarNames_Value);
+    }
+    if ( `guard variable for'CIngameEvent_Base::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CIngameEvent_Base4_MNetworkVarNames_Value == 0
+      && __cxa_guard_acquire(&`guard variable for'CIngameEvent_Base::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CIngameEvent_Base4_MNetworkVarNames_Value) != 0 )
+    {
+      CIngameEvent_Base::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CIngameEvent_Base4_MNetworkVarNames_Value.m_pVarName = "m_CompendiumChallengeSequenceID";
+      CIngameEvent_Base::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CIngameEvent_Base4_MNetworkVarNames_Value.m_pVarType = "int";
+      __cxa_guard_release(&`guard variable for'CIngameEvent_Base::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CIngameEvent_Base4_MNetworkVarNames_Value);
+    }
+    if ( `guard variable for'CIngameEvent_Base::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CIngameEvent_Base5_MNetworkVarNames_Value == 0
+      && __cxa_guard_acquire(&`guard variable for'CIngameEvent_Base::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CIngameEvent_Base5_MNetworkVarNames_Value) != 0 )
+    {
+      CIngameEvent_Base::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CIngameEvent_Base5_MNetworkVarNames_Value.m_pVarName = "m_CompendiumChallengeCoinReward";
+      CIngameEvent_Base::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CIngameEvent_Base5_MNetworkVarNames_Value.m_pVarType = "int";
+      __cxa_guard_release(&`guard variable for'CIngameEvent_Base::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CIngameEvent_Base5_MNetworkVarNames_Value);
+    }
+    if ( `guard variable for'CIngameEvent_Base::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CIngameEvent_Base6_MNetworkVarNames_Value == 0
+      && __cxa_guard_acquire(&`guard variable for'CIngameEvent_Base::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CIngameEvent_Base6_MNetworkVarNames_Value) != 0 )
+    {
+      CIngameEvent_Base::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CIngameEvent_Base6_MNetworkVarNames_Value.m_pVarName = "m_CompendiumChallengeCoinSplash";
+      CIngameEvent_Base::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CIngameEvent_Base6_MNetworkVarNames_Value.m_pVarType = "int";
+      __cxa_guard_release(&`guard variable for'CIngameEvent_Base::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CIngameEvent_Base6_MNetworkVarNames_Value);
+    }
+    if ( `guard variable for'CIngameEvent_Base::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CIngameEvent_Base7_MNetworkVarNames_Value == 0
+      && __cxa_guard_acquire(&`guard variable for'CIngameEvent_Base::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CIngameEvent_Base7_MNetworkVarNames_Value) != 0 )
+    {
+      CIngameEvent_Base::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CIngameEvent_Base7_MNetworkVarNames_Value.m_pVarName = "m_CompendiumChallengePointReward";
+      CIngameEvent_Base::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CIngameEvent_Base7_MNetworkVarNames_Value.m_pVarType = "int";
+      __cxa_guard_release(&`guard variable for'CIngameEvent_Base::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CIngameEvent_Base7_MNetworkVarNames_Value);
+    }
+    if ( `guard variable for'CIngameEvent_Base::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CIngameEvent_Base8_MNetworkVarNames_Value == 0
+      && __cxa_guard_acquire(&`guard variable for'CIngameEvent_Base::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CIngameEvent_Base8_MNetworkVarNames_Value) != 0 )
+    {
+      CIngameEvent_Base::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CIngameEvent_Base8_MNetworkVarNames_Value.m_pVarName = "m_CompendiumChallengeCompleted";
+      CIngameEvent_Base::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CIngameEvent_Base8_MNetworkVarNames_Value.m_pVarType = "bool";
+      __cxa_guard_release(&`guard variable for'CIngameEvent_Base::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CIngameEvent_Base8_MNetworkVarNames_Value);
+    }
+    if ( `guard variable for'CIngameEvent_Base::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CIngameEvent_Base9_MNetworkVarNames_Value == 0
+      && __cxa_guard_acquire(&`guard variable for'CIngameEvent_Base::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CIngameEvent_Base9_MNetworkVarNames_Value) != 0 )
+    {
+      CIngameEvent_Base::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CIngameEvent_Base9_MNetworkVarNames_Value.m_pVarName = "m_CompendiumChallengeFailed";
+      CIngameEvent_Base::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CIngameEvent_Base9_MNetworkVarNames_Value.m_pVarType = "bool";
+      __cxa_guard_release(&`guard variable for'CIngameEvent_Base::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CIngameEvent_Base9_MNetworkVarNames_Value);
+    }
+    if ( `guard variable for'CIngameEvent_Base::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CIngameEvent_Base10_MNetworkVarNames_Value == 0
+      && __cxa_guard_acquire(&`guard variable for'CIngameEvent_Base::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CIngameEvent_Base10_MNetworkVarNames_Value) != 0 )
+    {
+      CIngameEvent_Base::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CIngameEvent_Base10_MNetworkVarNames_Value.m_pVarName = "m_CompendiumChallengeProgress";
+      CIngameEvent_Base::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CIngameEvent_Base10_MNetworkVarNames_Value.m_pVarType = "int";
+      __cxa_guard_release(&`guard variable for'CIngameEvent_Base::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CIngameEvent_Base10_MNetworkVarNames_Value);
+    }
+    if ( `guard variable for'CIngameEvent_Base::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CIngameEvent_Base11_MNetworkVarNames_Value == 0
+      && __cxa_guard_acquire(&`guard variable for'CIngameEvent_Base::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CIngameEvent_Base11_MNetworkVarNames_Value) != 0 )
+    {
+      CIngameEvent_Base::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CIngameEvent_Base11_MNetworkVarNames_Value.m_pVarName = "m_QueryIDForProgress";
+      CIngameEvent_Base::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CIngameEvent_Base11_MNetworkVarNames_Value.m_pVarType = "int";
+      __cxa_guard_release(&`guard variable for'CIngameEvent_Base::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CIngameEvent_Base11_MNetworkVarNames_Value);
+    }
+    if ( `guard variable for'CIngameEvent_Base::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CIngameEvent_Base12_MNetworkVarNames_Value == 0
+      && __cxa_guard_acquire(&`guard variable for'CIngameEvent_Base::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CIngameEvent_Base12_MNetworkVarNames_Value) != 0 )
+    {
+      CIngameEvent_Base::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CIngameEvent_Base12_MNetworkVarNames_Value.m_pVarName = "m_CompendiumChallengeInfo";
+      CIngameEvent_Base::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CIngameEvent_Base12_MNetworkVarNames_Value.m_pVarType = "CDOTA_PlayerChallengeInfo";
+      __cxa_guard_release(&`guard variable for'CIngameEvent_Base::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CIngameEvent_Base12_MNetworkVarNames_Value);
+    }
+    if ( `guard variable for'CIngameEvent_Base::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CIngameEvent_Base13_MNetworkVarNames_Value == 0
+      && __cxa_guard_acquire(&`guard variable for'CIngameEvent_Base::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CIngameEvent_Base13_MNetworkVarNames_Value) != 0 )
+    {
+      CIngameEvent_Base::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CIngameEvent_Base13_MNetworkVarNames_Value.m_pVarName = "m_PlayerQueryIDs";
+      CIngameEvent_Base::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CIngameEvent_Base13_MNetworkVarNames_Value.m_pVarType = "CDOTA_CombatLogQueryProgress";
+      __cxa_guard_release(&`guard variable for'CIngameEvent_Base::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CIngameEvent_Base13_MNetworkVarNames_Value);
+    }
+    if ( `guard variable for'CIngameEvent_Base::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CIngameEvent_Base14_MNetworkVarNames_Value == 0
+      && __cxa_guard_acquire(&`guard variable for'CIngameEvent_Base::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CIngameEvent_Base14_MNetworkVarNames_Value) != 0 )
+    {
+      CIngameEvent_Base::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CIngameEvent_Base14_MNetworkVarNames_Value.m_pVarName = "m_ProgressForQueryID";
+      CIngameEvent_Base::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CIngameEvent_Base14_MNetworkVarNames_Value.m_pVarType = "int";
+      __cxa_guard_release(&`guard variable for'CIngameEvent_Base::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CIngameEvent_Base14_MNetworkVarNames_Value);
+    }
+    if ( `guard variable for'CIngameEvent_Base::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CIngameEvent_Base15_MNetworkVarNames_Value == 0
+      && __cxa_guard_acquire(&`guard variable for'CIngameEvent_Base::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CIngameEvent_Base15_MNetworkVarNames_Value) != 0 )
+    {
+      CIngameEvent_Base::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CIngameEvent_Base15_MNetworkVarNames_Value.m_pVarName = "m_GoalForQueryID";
+      CIngameEvent_Base::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CIngameEvent_Base15_MNetworkVarNames_Value.m_pVarType = "int";
+      __cxa_guard_release(&`guard variable for'CIngameEvent_Base::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CIngameEvent_Base15_MNetworkVarNames_Value);
+    }
+    if ( `guard variable for'CIngameEvent_Base::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CIngameEvent_Base16_MNetworkVarNames_Value == 0
+      && __cxa_guard_acquire(&`guard variable for'CIngameEvent_Base::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CIngameEvent_Base16_MNetworkVarNames_Value) != 0 )
+    {
+      CIngameEvent_Base::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CIngameEvent_Base16_MNetworkVarNames_Value.m_pVarName = "m_PlayerQuestRankPreviouslyCompleted";
+      CIngameEvent_Base::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CIngameEvent_Base16_MNetworkVarNames_Value.m_pVarType = "int";
+      __cxa_guard_release(&`guard variable for'CIngameEvent_Base::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CIngameEvent_Base16_MNetworkVarNames_Value);
+    }
+    if ( `guard variable for'CIngameEvent_Base::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CIngameEvent_Base17_MNetworkVarNames_Value == 0
+      && __cxa_guard_acquire(&`guard variable for'CIngameEvent_Base::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CIngameEvent_Base17_MNetworkVarNames_Value) != 0 )
+    {
+      CIngameEvent_Base::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CIngameEvent_Base17_MNetworkVarNames_Value.m_pVarName = "m_PlayerQuestRankCompleted";
+      CIngameEvent_Base::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CIngameEvent_Base17_MNetworkVarNames_Value.m_pVarType = "int";
+      __cxa_guard_release(&`guard variable for'CIngameEvent_Base::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CIngameEvent_Base17_MNetworkVarNames_Value);
+    }
+    CIngameEvent_Base::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CIngameEvent_Base[0].m_pType = (*(*v7 + 40LL))(v7, 13);
+    v8 = *(*v7 + 104LL);
+    v9 = (*(*v7 + 40LL))(v7, 7);
+    CIngameEvent_Base::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CIngameEvent_Base[1].m_pType = v8(v7, v9, 24);
+    v10 = *(*v7 + 104LL);
+    v11 = (*(*v7 + 40LL))(v7, 7);
+    CIngameEvent_Base::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CIngameEvent_Base[2].m_pType = v10(v7, v11, 24);
+    v12 = *(*v7 + 104LL);
+    v13 = (*(*v7 + 40LL))(v7, 7);
+    CIngameEvent_Base::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CIngameEvent_Base[3].m_pType = v12(v7, v13, 24);
+    v14 = *(*v7 + 104LL);
+    v15 = (*(*v7 + 40LL))(v7, 7);
+    CIngameEvent_Base::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CIngameEvent_Base[4].m_pType = v14(v7, v15, 24);
+    v16 = *(*v7 + 104LL);
+    v17 = (*(*v7 + 40LL))(v7, 7);
+    CIngameEvent_Base::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CIngameEvent_Base[5].m_pType = v16(v7, v17, 24);
+    v18 = *(*v7 + 104LL);
+    v19 = (*(*v7 + 40LL))(v7, 13);
+    CIngameEvent_Base::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CIngameEvent_Base[6].m_pType = v18(v7, v19, 24);
+    v20 = *(*v7 + 104LL);
+    v21 = (*(*v7 + 40LL))(v7, 13);
+    CIngameEvent_Base::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CIngameEvent_Base[7].m_pType = v20(v7, v21, 24);
+    v22 = *(*v7 + 104LL);
+    v23 = (*(*v7 + 40LL))(v7, 7);
+    CIngameEvent_Base::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CIngameEvent_Base[8].m_pType = v22(v7, v23, 24);
+    v24 = *(*v7 + 104LL);
+    v25 = (*(*v7 + 40LL))(v7, 7);
+    CIngameEvent_Base::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CIngameEvent_Base[9].m_pType = v24(v7, v25, 24);
+    v26 = *(*v7 + 64LL);
+    v27 = (*(*v7 + 88LL))(v7, "CDOTA_PlayerChallengeInfo");
+    CIngameEvent_Base::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CIngameEvent_Base[10].m_pType = v26(v7, "CUtlVector", 3002, &CAtomicManipulator<CUtlVector<CDOTA_PlayerChallengeInfo,CNetworkUtlVector_MemoryType<CDOTA_PlayerChallengeInfo,24>>>::Get(void)::val, CSchemaManipulator<CUtlVector<CDOTA_PlayerChallengeInfo,CNetworkUtlVector_MemoryType<CDOTA_PlayerChallengeInfo,24>>>::StaticAccessor(void)::m, v27);
+    v28 = *(*v7 + 64LL);
+    v29 = (*(*v7 + 88LL))(v7, "CDOTA_CombatLogQueryProgress");
+    CIngameEvent_Base::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CIngameEvent_Base[11].m_pType = v28(v7, "CUtlVector", 3002, &CAtomicManipulator<CUtlVector<CDOTA_CombatLogQueryProgress,CNetworkUtlVector_MemoryType<CDOTA_CombatLogQueryProgress,-1>>>::Get(void)::val, CSchemaManipulator<CUtlVector<CDOTA_CombatLogQueryProgress,CNetworkUtlVector_MemoryType<CDOTA_CombatLogQueryProgress,-1>>>::StaticAccessor(void)::m, v29);
+    v30 = *(*v7 + 104LL);
+    v31 = (*(*v7 + 40LL))(v7, 7);
+    CIngameEvent_Base::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CIngameEvent_Base[12].m_pType = v30(v7, v31, 100);
+    v32 = *(*v7 + 104LL);
+    v33 = (*(*v7 + 40LL))(v7, 7);
+    CIngameEvent_Base::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CIngameEvent_Base[13].m_pType = v32(v7, v33, 100);
+    v34 = *(*v7 + 104LL);
+    v35 = (*(*v7 + 40LL))(v7, 7);
+    CIngameEvent_Base::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CIngameEvent_Base[14].m_pType = v34(v7, v35, 10);
+    v36 = *(*v7 + 104LL);
+    v37 = (*(*v7 + 40LL))(v7, 7);
+    CIngameEvent_Base::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CIngameEvent_Base[15].m_pType = v36(v7, v37, 10);
+    if ( `guard variable for'CIngameEvent_Base::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_NestedClassesOf_CIngameEvent_Base == 0
+      && __cxa_guard_acquire(&`guard variable for'CIngameEvent_Base::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_NestedClassesOf_CIngameEvent_Base) != 0 )
+    {
+      v38 = CIngameEvent_Base::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult;
+      if ( CIngameEvent_Base::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult == 0 )
+        v38 = CIngameEvent_Base::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+                pSchemaSystem,
+                pBinaryName,
+                pProjectName);
+      CIngameEvent_Base::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_NestedClassesOf_CIngameEvent_Base[0] = v38;
+      __cxa_guard_release(&`guard variable for'CIngameEvent_Base::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_NestedClassesOf_CIngameEvent_Base);
+    }
+    (*(CBaseEntity::s_pSchemaBindingForLocalModule->_vptr_ISchemaBinding + 5))(
+      CBaseEntity::s_pSchemaBindingForLocalModule,
+      pSchemaSystem,
+      pBinaryName,
+      pProjectName);
+    v39 = CBaseEntity::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+            pSchemaSystem,
+            pBinaryName,
+            pProjectName);
+    CIngameEvent_Base::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CIngameEvent_Base.m_pOuterTypeScope = v7;
+    CIngameEvent_Base::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassBases_CIngameEvent_Base[0].m_pClass = v39;
+    CIngameEvent_Base::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult = &CIngameEvent_Base::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CIngameEvent_Base;
+    return &CIngameEvent_Base::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CIngameEvent_Base;
+  }
+  return result;
+}
+
+
+// CIngameEvent_Base::Schema_VerifyBindingIsRegistered  (line 809, @0x00000000025a4180, libserver.so)
+void __cdecl CIngameEvent_Base::Schema_VerifyBindingIsRegistered()
+{
+  ;
+}
+
+
+// CIngameEvent_Base::SetupEntClassInputs  (line 823, @0x00000000025a4190, libserver.so)
+void __fastcall CIngameEvent_Base::SetupEntClassInputs(CEntityClass *pComponentInfo)
+{
+  ;
+}
+
+
+// CIngameEvent_Base::SetupEntClassComponentOverrides  (line 829, @0x00000000025a41a0, libserver.so)
+void __fastcall CIngameEvent_Base::SetupEntClassComponentOverrides(CEntityClass *pEntityClass)
+{
+  pEntityClass->m_pComponentOverrides = 0;
+}
+
+
+// LocalRegisterSchemaModule<ArbitraryTemplateParameter_server_dota_ingameevents_base_h>  (line 835, @0x00000000025a41b0, libserver.so)  // inlines: Call
+// callers: RegisterSchemaModule_dota_ingameevents_base_h
+// globals: CDOTA_PlayerChallengeInfo::s_pSchemaBindingForLocalModule, CDOTASubChallengeInfo::s_pSchemaBindingForLocalModule, CDOTA_CombatLogQueryProgress::s_pSchemaBindingForLocalModule, CIngameEvent_Base::CEntityInstanceEntityClass::s_pSchemaBindingForLocalModule, CIngameEvent_Base::s_pSchemaBindingForLocalModule
+void __fastcall LocalRegisterSchemaModule<ArbitraryTemplateParameter_server_dota_ingameevents_base_h>(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        SchemaRegistrationPhase_t nRegistrationPhase)
+{
+  if ( nRegistrationPhase == SchemaRegistrationPhase_t::SCHEMA_REGISTRATION_PHASE_CLASSES )
+  {
+    (*(CDOTA_PlayerChallengeInfo::s_pSchemaBindingForLocalModule->_vptr_ISchemaBinding + 5))(
+      CDOTA_PlayerChallengeInfo::s_pSchemaBindingForLocalModule,
+      pSchemaSystem,
+      pBinaryName,
+      "server");
+    (*(CDOTASubChallengeInfo::s_pSchemaBindingForLocalModule->_vptr_ISchemaBinding + 5))(
+      CDOTASubChallengeInfo::s_pSchemaBindingForLocalModule,
+      pSchemaSystem,
+      pBinaryName,
+      "server");
+    (*(CDOTA_CombatLogQueryProgress::s_pSchemaBindingForLocalModule->_vptr_ISchemaBinding + 5))(
+      CDOTA_CombatLogQueryProgress::s_pSchemaBindingForLocalModule,
+      pSchemaSystem,
+      pBinaryName,
+      "server");
+    (*(CIngameEvent_Base::CEntityInstanceEntityClass::s_pSchemaBindingForLocalModule->_vptr_ISchemaBinding + 5))(
+      CIngameEvent_Base::CEntityInstanceEntityClass::s_pSchemaBindingForLocalModule,
+      pSchemaSystem,
+      pBinaryName,
+      "server");
+    (*(CIngameEvent_Base::s_pSchemaBindingForLocalModule->_vptr_ISchemaBinding + 5))(
+      CIngameEvent_Base::s_pSchemaBindingForLocalModule,
+      pSchemaSystem,
+      pBinaryName,
+      "server");
+  }
+  ++g_nLinkerHack_SchemaAnchor_RegistrationCountFor_server;
+}
+
+
+// RegisterSchemaModule_dota_ingameevents_base_h  (line 841, @0x00000000025a4260, libserver.so)
+// calls: LocalRegisterSchemaModule<ArbitraryTemplateParameter_server_dota_ingameevents_base_h>
+// callers: CSchemaRegistration_server::RegisterAllBindings
+void __fastcall RegisterSchemaModule_dota_ingameevents_base_h(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        SchemaRegistrationPhase_t nRegistrationPhase)
+{
+  LocalRegisterSchemaModule<ArbitraryTemplateParameter_server_dota_ingameevents_base_h>(
+    pSchemaSystem,
+    pBinaryName,
+    nRegistrationPhase);
+}
+
+

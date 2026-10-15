@@ -1,0 +1,945 @@
+
+// ==== functions (decompiled by Hex-Rays; names/signatures from DWARF) ====
+
+// CDOTA_Unit_Hero_Sven::CEntityInstanceEntityClass::Schema_CompileTimeVerificationFunction  (line 35, @0x0000000002a4b9d0, libserver.so)
+void __fastcall CDOTA_Unit_Hero_Sven::CEntityInstanceEntityClass::Schema_CompileTimeVerificationFunction(
+        CDOTA_Unit_Hero_Sven::CEntityInstanceEntityClass *const this)
+{
+  ;
+}
+
+
+// CDOTA_Unit_Hero_Sven::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE  (line 38, @0x0000000002a42d60, libserver.so)  // inlines: Call, Get, SetTypeScope
+// calls: CDOTA_BaseNPC_Hero::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE
+// callers: CSchemaNonConstructibleClassBinding<CDOTA_Unit_Hero_Sven::CEntityInstanceEntityClass>::Register, CDOTA_Unit_Hero_Sven::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE, CDOTA_Unit_Hero_Sven::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE
+// globals: CDOTA_Unit_Hero_Sven::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,ch
+CSchemaClassInfo *__fastcall CDOTA_Unit_Hero_Sven::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        const char *pProjectName)
+{
+  ISchemaSystemTypeScope *v6; // r14
+  CSchemaClassInfo *v7; // rax
+
+  v6 = (*(*pSchemaSystem + 112LL))(pSchemaSystem, 1, pBinaryName);
+  (*(CDOTA_BaseNPC_Hero::CEntityInstanceEntityClass::s_pSchemaBindingForLocalModule->_vptr_ISchemaBinding + 5))(
+    CDOTA_BaseNPC_Hero::CEntityInstanceEntityClass::s_pSchemaBindingForLocalModule,
+    pSchemaSystem,
+    pBinaryName,
+    pProjectName);
+  v7 = CDOTA_BaseNPC_Hero::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+         pSchemaSystem,
+         pBinaryName,
+         pProjectName);
+  CDOTA_Unit_Hero_Sven::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CDOTA_Unit_Hero_Sven_CEntityInstanceEntityClass.m_pOuterTypeScope = v6;
+  CDOTA_Unit_Hero_Sven::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassBases_CDOTA_Unit_Hero_Sven_CEntityInstanceEntityClass[0].m_pClass = v7;
+  CDOTA_Unit_Hero_Sven::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult = &CDOTA_Unit_Hero_Sven::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CDOTA_Unit_Hero_Sven_CEntityInstanceEntityClass;
+  return &CDOTA_Unit_Hero_Sven::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CDOTA_Unit_Hero_Sven_CEntityInstanceEntityClass;
+}
+
+
+// CDOTA_Unit_Hero_Sven::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE  (line 38, @0x0000000002a4b9e0, libserver.so)
+// calls: CDOTA_Unit_Hero_Sven::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE
+// globals: CDOTA_Unit_Hero_Sven::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,ch
+CSchemaClassInfo *__fastcall CDOTA_Unit_Hero_Sven::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        const char *pProjectName)
+{
+  CSchemaClassInfo *result; // rax
+
+  result = CDOTA_Unit_Hero_Sven::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult;
+  if ( CDOTA_Unit_Hero_Sven::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult == 0 )
+    return CDOTA_Unit_Hero_Sven::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+             pSchemaSystem,
+             pBinaryName,
+             pProjectName);
+  return result;
+}
+
+
+// CDOTA_Unit_Hero_Sven::CEntityInstanceEntityClass::Schema_VerifyBindingIsRegistered  (line 55, @0x0000000002a4ba00, libserver.so)
+void __cdecl CDOTA_Unit_Hero_Sven::CEntityInstanceEntityClass::Schema_VerifyBindingIsRegistered()
+{
+  ;
+}
+
+
+// CDOTA_Unit_Hero_Sven::Schema_CompileTimeVerificationFunction  (line 63, @0x0000000002a4ba10, libserver.so)
+void __fastcall CDOTA_Unit_Hero_Sven::Schema_CompileTimeVerificationFunction(CDOTA_Unit_Hero_Sven *const this)
+{
+  ;
+}
+
+
+// CDOTA_Unit_Hero_Sven::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE  (line 66, @0x0000000002a4ba20, libserver.so)  // inlines: Call, Get, RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE, SetTypeScope
+// calls: __cxa_guard_acquire, __cxa_guard_release, CDOTA_BaseNPC_Hero::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE, CDOTA_Unit_Hero_Sven::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE, __cxa_guard_abort, _Unwind_Resume
+// callers: CSchemaNonConstructibleClassBinding<CDOTA_Unit_Hero_Sven>::Register
+// globals: CDOTA_Unit_Hero_Sven::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pI, `guard variable for'CDOTA_Unit_Hero_Sven::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const, CDOTA_Unit_Hero_Sven::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,ch, CDOTA_Unit_Hero_Sven::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::Impl
+CSchemaClassInfo *__fastcall CDOTA_Unit_Hero_Sven::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        const char *pProjectName)
+{
+  CSchemaClassInfo *result; // rax
+  ISchemaSystemTypeScope *v7; // r14
+  CSchemaClassInfo *v8; // rax
+  CSchemaClassInfo *v9; // rax
+
+  result = CDOTA_Unit_Hero_Sven::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult;
+  if ( CDOTA_Unit_Hero_Sven::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult == 0 )
+  {
+    v7 = (*(*pSchemaSystem + 112LL))(pSchemaSystem, 1, pBinaryName);
+    if ( `guard variable for'CDOTA_Unit_Hero_Sven::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_NestedClassesOf_CDOTA_Unit_Hero_Sven == 0
+      && __cxa_guard_acquire(&`guard variable for'CDOTA_Unit_Hero_Sven::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_NestedClassesOf_CDOTA_Unit_Hero_Sven) != 0 )
+    {
+      v8 = CDOTA_Unit_Hero_Sven::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult;
+      if ( CDOTA_Unit_Hero_Sven::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult == 0 )
+        v8 = CDOTA_Unit_Hero_Sven::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+               pSchemaSystem,
+               pBinaryName,
+               pProjectName);
+      CDOTA_Unit_Hero_Sven::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_NestedClassesOf_CDOTA_Unit_Hero_Sven[0] = v8;
+      __cxa_guard_release(&`guard variable for'CDOTA_Unit_Hero_Sven::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_NestedClassesOf_CDOTA_Unit_Hero_Sven);
+    }
+    (*(CDOTA_BaseNPC_Hero::s_pSchemaBindingForLocalModule->_vptr_ISchemaBinding + 5))(
+      CDOTA_BaseNPC_Hero::s_pSchemaBindingForLocalModule,
+      pSchemaSystem,
+      pBinaryName,
+      pProjectName);
+    v9 = CDOTA_BaseNPC_Hero::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+           pSchemaSystem,
+           pBinaryName,
+           pProjectName);
+    CDOTA_Unit_Hero_Sven::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CDOTA_Unit_Hero_Sven.m_pOuterTypeScope = v7;
+    CDOTA_Unit_Hero_Sven::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassBases_CDOTA_Unit_Hero_Sven[0].m_pClass = v9;
+    CDOTA_Unit_Hero_Sven::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult = &CDOTA_Unit_Hero_Sven::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CDOTA_Unit_Hero_Sven;
+    return &CDOTA_Unit_Hero_Sven::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CDOTA_Unit_Hero_Sven;
+  }
+  return result;
+}
+
+
+// CDOTA_Unit_Hero_Sven::Schema_VerifyBindingIsRegistered  (line 94, @0x0000000002a4bb00, libserver.so)
+void __cdecl CDOTA_Unit_Hero_Sven::Schema_VerifyBindingIsRegistered()
+{
+  ;
+}
+
+
+// CDOTA_Unit_Hero_Sven::SetupEntClassInputs  (line 108, @0x0000000002a4bb10, libserver.so)
+void __fastcall CDOTA_Unit_Hero_Sven::SetupEntClassInputs(CEntityClass *pComponentInfo)
+{
+  ;
+}
+
+
+// CDOTA_Unit_Hero_Sven::SetupEntClassComponentOverrides  (line 114, @0x0000000002a4bb20, libserver.so)
+void __fastcall CDOTA_Unit_Hero_Sven::SetupEntClassComponentOverrides(CEntityClass *pEntityClass)
+{
+  pEntityClass->m_pComponentOverrides = 0;
+}
+
+
+// CDOTA_Ability_Sven_StormBolt::CEntityInstanceEntityClass::Schema_CompileTimeVerificationFunction  (line 120, @0x0000000002a4bb30, libserver.so)
+void __fastcall CDOTA_Ability_Sven_StormBolt::CEntityInstanceEntityClass::Schema_CompileTimeVerificationFunction(
+        CDOTA_Ability_Sven_StormBolt::CEntityInstanceEntityClass *const this)
+{
+  ;
+}
+
+
+// CDOTA_Ability_Sven_StormBolt::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE  (line 123, @0x0000000002a43660, libserver.so)  // inlines: Call, Get, SetTypeScope
+// calls: CDOTABaseAbility::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE
+// callers: CSchemaNonConstructibleClassBinding<CDOTA_Ability_Sven_StormBolt::CEntityInstanceEntityClass>::Register, CDOTA_Ability_Sven_StormBolt::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE, CDOTA_Ability_Sven_StormBolt::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE
+// globals: CDOTA_Ability_Sven_StormBolt::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSys
+CSchemaClassInfo *__fastcall CDOTA_Ability_Sven_StormBolt::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        const char *pProjectName)
+{
+  ISchemaSystemTypeScope *v6; // r14
+  CSchemaClassInfo *v7; // rax
+
+  v6 = (*(*pSchemaSystem + 112LL))(pSchemaSystem, 1, pBinaryName);
+  (*(CDOTABaseAbility::CEntityInstanceEntityClass::s_pSchemaBindingForLocalModule->_vptr_ISchemaBinding + 5))(
+    CDOTABaseAbility::CEntityInstanceEntityClass::s_pSchemaBindingForLocalModule,
+    pSchemaSystem,
+    pBinaryName,
+    pProjectName);
+  v7 = CDOTABaseAbility::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+         pSchemaSystem,
+         pBinaryName,
+         pProjectName);
+  CDOTA_Ability_Sven_StormBolt::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CDOTA_Ability_Sven_StormBolt_CEntityInstanceEntityClass.m_pOuterTypeScope = v6;
+  CDOTA_Ability_Sven_StormBolt::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassBases_CDOTA_Ability_Sven_StormBolt_CEntityInstanceEntityClass[0].m_pClass = v7;
+  CDOTA_Ability_Sven_StormBolt::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult = &CDOTA_Ability_Sven_StormBolt::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CDOTA_Ability_Sven_StormBolt_CEntityInstanceEntityClass;
+  return &CDOTA_Ability_Sven_StormBolt::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CDOTA_Ability_Sven_StormBolt_CEntityInstanceEntityClass;
+}
+
+
+// CDOTA_Ability_Sven_StormBolt::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE  (line 123, @0x0000000002a4bb40, libserver.so)
+// calls: CDOTA_Ability_Sven_StormBolt::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE
+// globals: CDOTA_Ability_Sven_StormBolt::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSys
+CSchemaClassInfo *__fastcall CDOTA_Ability_Sven_StormBolt::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        const char *pProjectName)
+{
+  CSchemaClassInfo *result; // rax
+
+  result = CDOTA_Ability_Sven_StormBolt::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult;
+  if ( CDOTA_Ability_Sven_StormBolt::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult == 0 )
+    return CDOTA_Ability_Sven_StormBolt::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+             pSchemaSystem,
+             pBinaryName,
+             pProjectName);
+  return result;
+}
+
+
+// CDOTA_Ability_Sven_StormBolt::CEntityInstanceEntityClass::Schema_VerifyBindingIsRegistered  (line 140, @0x0000000002a4bb60, libserver.so)
+void __cdecl CDOTA_Ability_Sven_StormBolt::CEntityInstanceEntityClass::Schema_VerifyBindingIsRegistered()
+{
+  ;
+}
+
+
+// CDOTA_Ability_Sven_StormBolt::Schema_CompileTimeVerificationFunction  (line 148, @0x0000000002a4bb70, libserver.so)
+void __fastcall CDOTA_Ability_Sven_StormBolt::Schema_CompileTimeVerificationFunction(
+        CDOTA_Ability_Sven_StormBolt *const this)
+{
+  ;
+}
+
+
+// CDOTA_Ability_Sven_StormBolt::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE  (line 152, @0x0000000002a4bb80, libserver.so)  // inlines: Call, Get, RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE, SchemaBinding_SchemaTypeOfMemberVarByAddr<CDOTA_Ability_Sven_StormBolt, int>, SetTypeScope
+// calls: __cxa_guard_acquire, __cxa_guard_release, CDOTABaseAbility::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE, CDOTA_Ability_Sven_StormBolt::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE, __cxa_guard_abort, _Unwind_Resume
+// callers: CSchemaNonConstructibleClassBinding<CDOTA_Ability_Sven_StormBolt>::Register
+// globals: CDOTA_Ability_Sven_StormBolt::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const, `guard variable for'CDOTA_Ability_Sven_StormBolt::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,ch, CDOTA_Ability_Sven_StormBolt::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSys
+CSchemaClassInfo *__fastcall CDOTA_Ability_Sven_StormBolt::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        const char *pProjectName)
+{
+  CSchemaClassInfo *result; // rax
+  ISchemaSystemTypeScope *v7; // r14
+  CSchemaClassInfo *v8; // rax
+  CSchemaClassInfo *v9; // rax
+
+  result = CDOTA_Ability_Sven_StormBolt::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult;
+  if ( CDOTA_Ability_Sven_StormBolt::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult == 0 )
+  {
+    v7 = (*(*pSchemaSystem + 112LL))(pSchemaSystem, 1, pBinaryName);
+    CDOTA_Ability_Sven_StormBolt::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CDOTA_Ability_Sven_StormBolt[0].m_pType = (*(*v7 + 40LL))(v7, 7);
+    if ( `guard variable for'CDOTA_Ability_Sven_StormBolt::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_NestedClassesOf_CDOTA_Ability_Sven_StormBolt == 0
+      && __cxa_guard_acquire(&`guard variable for'CDOTA_Ability_Sven_StormBolt::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_NestedClassesOf_CDOTA_Ability_Sven_StormBolt) != 0 )
+    {
+      v8 = CDOTA_Ability_Sven_StormBolt::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult;
+      if ( CDOTA_Ability_Sven_StormBolt::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult == 0 )
+        v8 = CDOTA_Ability_Sven_StormBolt::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+               pSchemaSystem,
+               pBinaryName,
+               pProjectName);
+      CDOTA_Ability_Sven_StormBolt::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_NestedClassesOf_CDOTA_Ability_Sven_StormBolt[0] = v8;
+      __cxa_guard_release(&`guard variable for'CDOTA_Ability_Sven_StormBolt::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_NestedClassesOf_CDOTA_Ability_Sven_StormBolt);
+    }
+    (*(CDOTABaseAbility::s_pSchemaBindingForLocalModule->_vptr_ISchemaBinding + 5))(
+      CDOTABaseAbility::s_pSchemaBindingForLocalModule,
+      pSchemaSystem,
+      pBinaryName,
+      pProjectName);
+    v9 = CDOTABaseAbility::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+           pSchemaSystem,
+           pBinaryName,
+           pProjectName);
+    CDOTA_Ability_Sven_StormBolt::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CDOTA_Ability_Sven_StormBolt.m_pOuterTypeScope = v7;
+    CDOTA_Ability_Sven_StormBolt::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassBases_CDOTA_Ability_Sven_StormBolt[0].m_pClass = v9;
+    CDOTA_Ability_Sven_StormBolt::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult = &CDOTA_Ability_Sven_StormBolt::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CDOTA_Ability_Sven_StormBolt;
+    return &CDOTA_Ability_Sven_StormBolt::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CDOTA_Ability_Sven_StormBolt;
+  }
+  return result;
+}
+
+
+// CDOTA_Ability_Sven_StormBolt::Schema_VerifyBindingIsRegistered  (line 190, @0x0000000002a4bc80, libserver.so)
+void __cdecl CDOTA_Ability_Sven_StormBolt::Schema_VerifyBindingIsRegistered()
+{
+  ;
+}
+
+
+// CDOTA_Ability_Sven_StormBolt::SetupEntClassInputs  (line 204, @0x0000000002a4bc90, libserver.so)
+void __fastcall CDOTA_Ability_Sven_StormBolt::SetupEntClassInputs(CEntityClass *pComponentInfo)
+{
+  ;
+}
+
+
+// CDOTA_Ability_Sven_StormBolt::SetupEntClassComponentOverrides  (line 210, @0x0000000002a4bca0, libserver.so)
+void __fastcall CDOTA_Ability_Sven_StormBolt::SetupEntClassComponentOverrides(CEntityClass *pEntityClass)
+{
+  pEntityClass->m_pComponentOverrides = 0;
+}
+
+
+// CDOTA_Ability_Sven_GreatCleave::CEntityInstanceEntityClass::Schema_CompileTimeVerificationFunction  (line 216, @0x0000000002a4bcb0, libserver.so)
+void __fastcall CDOTA_Ability_Sven_GreatCleave::CEntityInstanceEntityClass::Schema_CompileTimeVerificationFunction(
+        CDOTA_Ability_Sven_GreatCleave::CEntityInstanceEntityClass *const this)
+{
+  ;
+}
+
+
+// CDOTA_Ability_Sven_GreatCleave::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE  (line 219, @0x0000000002a436e0, libserver.so)  // inlines: Call, Get, SetTypeScope
+// calls: CDOTABaseAbility::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE
+// callers: CSchemaNonConstructibleClassBinding<CDOTA_Ability_Sven_GreatCleave::CEntityInstanceEntityClass>::Register, CDOTA_Ability_Sven_GreatCleave::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE, CDOTA_Ability_Sven_GreatCleave::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE
+// globals: CDOTA_Ability_Sven_GreatCleave::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaS
+CSchemaClassInfo *__fastcall CDOTA_Ability_Sven_GreatCleave::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        const char *pProjectName)
+{
+  ISchemaSystemTypeScope *v6; // r14
+  CSchemaClassInfo *v7; // rax
+
+  v6 = (*(*pSchemaSystem + 112LL))(pSchemaSystem, 1, pBinaryName);
+  (*(CDOTABaseAbility::CEntityInstanceEntityClass::s_pSchemaBindingForLocalModule->_vptr_ISchemaBinding + 5))(
+    CDOTABaseAbility::CEntityInstanceEntityClass::s_pSchemaBindingForLocalModule,
+    pSchemaSystem,
+    pBinaryName,
+    pProjectName);
+  v7 = CDOTABaseAbility::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+         pSchemaSystem,
+         pBinaryName,
+         pProjectName);
+  CDOTA_Ability_Sven_GreatCleave::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CDOTA_Ability_Sven_GreatCleave_CEntityInstanceEntityClass.m_pOuterTypeScope = v6;
+  CDOTA_Ability_Sven_GreatCleave::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassBases_CDOTA_Ability_Sven_GreatCleave_CEntityInstanceEntityClass[0].m_pClass = v7;
+  CDOTA_Ability_Sven_GreatCleave::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult = &CDOTA_Ability_Sven_GreatCleave::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CDOTA_Ability_Sven_GreatCleave_CEntityInstanceEntityClass;
+  return &CDOTA_Ability_Sven_GreatCleave::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CDOTA_Ability_Sven_GreatCleave_CEntityInstanceEntityClass;
+}
+
+
+// CDOTA_Ability_Sven_GreatCleave::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE  (line 219, @0x0000000002a4bcc0, libserver.so)
+// calls: CDOTA_Ability_Sven_GreatCleave::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE
+// globals: CDOTA_Ability_Sven_GreatCleave::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaS
+CSchemaClassInfo *__fastcall CDOTA_Ability_Sven_GreatCleave::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        const char *pProjectName)
+{
+  CSchemaClassInfo *result; // rax
+
+  result = CDOTA_Ability_Sven_GreatCleave::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult;
+  if ( CDOTA_Ability_Sven_GreatCleave::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult == 0 )
+    return CDOTA_Ability_Sven_GreatCleave::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+             pSchemaSystem,
+             pBinaryName,
+             pProjectName);
+  return result;
+}
+
+
+// CDOTA_Ability_Sven_GreatCleave::CEntityInstanceEntityClass::Schema_VerifyBindingIsRegistered  (line 236, @0x0000000002a4bce0, libserver.so)
+void __cdecl CDOTA_Ability_Sven_GreatCleave::CEntityInstanceEntityClass::Schema_VerifyBindingIsRegistered()
+{
+  ;
+}
+
+
+// CDOTA_Ability_Sven_GreatCleave::Schema_CompileTimeVerificationFunction  (line 244, @0x0000000002a4bcf0, libserver.so)
+void __fastcall CDOTA_Ability_Sven_GreatCleave::Schema_CompileTimeVerificationFunction(
+        CDOTA_Ability_Sven_GreatCleave *const this)
+{
+  ;
+}
+
+
+// CDOTA_Ability_Sven_GreatCleave::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE  (line 247, @0x0000000002a4bd00, libserver.so)  // inlines: Call, Get, RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE, SetTypeScope
+// calls: __cxa_guard_acquire, __cxa_guard_release, CDOTABaseAbility::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE, CDOTA_Ability_Sven_GreatCleave::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE, __cxa_guard_abort, _Unwind_Resume
+// callers: CSchemaNonConstructibleClassBinding<CDOTA_Ability_Sven_GreatCleave>::Register
+// globals: CDOTA_Ability_Sven_GreatCleave::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char con, `guard variable for'CDOTA_Ability_Sven_GreatCleave::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,, CDOTA_Ability_Sven_GreatCleave::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaS
+CSchemaClassInfo *__fastcall CDOTA_Ability_Sven_GreatCleave::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        const char *pProjectName)
+{
+  CSchemaClassInfo *result; // rax
+  ISchemaSystemTypeScope *v7; // r14
+  CSchemaClassInfo *v8; // rax
+  CSchemaClassInfo *v9; // rax
+
+  result = CDOTA_Ability_Sven_GreatCleave::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult;
+  if ( CDOTA_Ability_Sven_GreatCleave::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult == 0 )
+  {
+    v7 = (*(*pSchemaSystem + 112LL))(pSchemaSystem, 1, pBinaryName);
+    if ( `guard variable for'CDOTA_Ability_Sven_GreatCleave::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_NestedClassesOf_CDOTA_Ability_Sven_GreatCleave == 0
+      && __cxa_guard_acquire(&`guard variable for'CDOTA_Ability_Sven_GreatCleave::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_NestedClassesOf_CDOTA_Ability_Sven_GreatCleave) != 0 )
+    {
+      v8 = CDOTA_Ability_Sven_GreatCleave::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult;
+      if ( CDOTA_Ability_Sven_GreatCleave::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult == 0 )
+        v8 = CDOTA_Ability_Sven_GreatCleave::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+               pSchemaSystem,
+               pBinaryName,
+               pProjectName);
+      CDOTA_Ability_Sven_GreatCleave::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_NestedClassesOf_CDOTA_Ability_Sven_GreatCleave[0] = v8;
+      __cxa_guard_release(&`guard variable for'CDOTA_Ability_Sven_GreatCleave::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_NestedClassesOf_CDOTA_Ability_Sven_GreatCleave);
+    }
+    (*(CDOTABaseAbility::s_pSchemaBindingForLocalModule->_vptr_ISchemaBinding + 5))(
+      CDOTABaseAbility::s_pSchemaBindingForLocalModule,
+      pSchemaSystem,
+      pBinaryName,
+      pProjectName);
+    v9 = CDOTABaseAbility::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+           pSchemaSystem,
+           pBinaryName,
+           pProjectName);
+    CDOTA_Ability_Sven_GreatCleave::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CDOTA_Ability_Sven_GreatCleave.m_pOuterTypeScope = v7;
+    CDOTA_Ability_Sven_GreatCleave::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassBases_CDOTA_Ability_Sven_GreatCleave[0].m_pClass = v9;
+    CDOTA_Ability_Sven_GreatCleave::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult = &CDOTA_Ability_Sven_GreatCleave::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CDOTA_Ability_Sven_GreatCleave;
+    return &CDOTA_Ability_Sven_GreatCleave::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CDOTA_Ability_Sven_GreatCleave;
+  }
+  return result;
+}
+
+
+// CDOTA_Ability_Sven_GreatCleave::Schema_VerifyBindingIsRegistered  (line 275, @0x0000000002a4bde0, libserver.so)
+void __cdecl CDOTA_Ability_Sven_GreatCleave::Schema_VerifyBindingIsRegistered()
+{
+  ;
+}
+
+
+// CDOTA_Ability_Sven_GreatCleave::SetupEntClassInputs  (line 289, @0x0000000002a4bdf0, libserver.so)
+void __fastcall CDOTA_Ability_Sven_GreatCleave::SetupEntClassInputs(CEntityClass *pComponentInfo)
+{
+  ;
+}
+
+
+// CDOTA_Ability_Sven_GreatCleave::SetupEntClassComponentOverrides  (line 295, @0x0000000002a4be00, libserver.so)
+void __fastcall CDOTA_Ability_Sven_GreatCleave::SetupEntClassComponentOverrides(CEntityClass *pEntityClass)
+{
+  pEntityClass->m_pComponentOverrides = 0;
+}
+
+
+// CDOTA_Ability_Sven_Warcry::CEntityInstanceEntityClass::Schema_CompileTimeVerificationFunction  (line 301, @0x0000000002a4be10, libserver.so)
+void __fastcall CDOTA_Ability_Sven_Warcry::CEntityInstanceEntityClass::Schema_CompileTimeVerificationFunction(
+        CDOTA_Ability_Sven_Warcry::CEntityInstanceEntityClass *const this)
+{
+  ;
+}
+
+
+// CDOTA_Ability_Sven_Warcry::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE  (line 304, @0x0000000002a43760, libserver.so)  // inlines: Call, Get, SetTypeScope
+// calls: CDOTABaseAbility::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE
+// callers: CSchemaNonConstructibleClassBinding<CDOTA_Ability_Sven_Warcry::CEntityInstanceEntityClass>::Register, CDOTA_Ability_Sven_Warcry::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE, CDOTA_Ability_Sven_Warcry::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE
+// globals: CDOTA_Ability_Sven_Warcry::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem
+CSchemaClassInfo *__fastcall CDOTA_Ability_Sven_Warcry::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        const char *pProjectName)
+{
+  ISchemaSystemTypeScope *v6; // r14
+  CSchemaClassInfo *v7; // rax
+
+  v6 = (*(*pSchemaSystem + 112LL))(pSchemaSystem, 1, pBinaryName);
+  (*(CDOTABaseAbility::CEntityInstanceEntityClass::s_pSchemaBindingForLocalModule->_vptr_ISchemaBinding + 5))(
+    CDOTABaseAbility::CEntityInstanceEntityClass::s_pSchemaBindingForLocalModule,
+    pSchemaSystem,
+    pBinaryName,
+    pProjectName);
+  v7 = CDOTABaseAbility::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+         pSchemaSystem,
+         pBinaryName,
+         pProjectName);
+  CDOTA_Ability_Sven_Warcry::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CDOTA_Ability_Sven_Warcry_CEntityInstanceEntityClass.m_pOuterTypeScope = v6;
+  CDOTA_Ability_Sven_Warcry::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassBases_CDOTA_Ability_Sven_Warcry_CEntityInstanceEntityClass[0].m_pClass = v7;
+  CDOTA_Ability_Sven_Warcry::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult = &CDOTA_Ability_Sven_Warcry::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CDOTA_Ability_Sven_Warcry_CEntityInstanceEntityClass;
+  return &CDOTA_Ability_Sven_Warcry::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CDOTA_Ability_Sven_Warcry_CEntityInstanceEntityClass;
+}
+
+
+// CDOTA_Ability_Sven_Warcry::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE  (line 304, @0x0000000002a4be20, libserver.so)
+// calls: CDOTA_Ability_Sven_Warcry::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE
+// globals: CDOTA_Ability_Sven_Warcry::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem
+CSchemaClassInfo *__fastcall CDOTA_Ability_Sven_Warcry::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        const char *pProjectName)
+{
+  CSchemaClassInfo *result; // rax
+
+  result = CDOTA_Ability_Sven_Warcry::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult;
+  if ( CDOTA_Ability_Sven_Warcry::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult == 0 )
+    return CDOTA_Ability_Sven_Warcry::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+             pSchemaSystem,
+             pBinaryName,
+             pProjectName);
+  return result;
+}
+
+
+// CDOTA_Ability_Sven_Warcry::CEntityInstanceEntityClass::Schema_VerifyBindingIsRegistered  (line 321, @0x0000000002a4be40, libserver.so)
+void __cdecl CDOTA_Ability_Sven_Warcry::CEntityInstanceEntityClass::Schema_VerifyBindingIsRegistered()
+{
+  ;
+}
+
+
+// CDOTA_Ability_Sven_Warcry::Schema_CompileTimeVerificationFunction  (line 329, @0x0000000002a4be50, libserver.so)
+void __fastcall CDOTA_Ability_Sven_Warcry::Schema_CompileTimeVerificationFunction(
+        CDOTA_Ability_Sven_Warcry *const this)
+{
+  ;
+}
+
+
+// CDOTA_Ability_Sven_Warcry::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE  (line 332, @0x0000000002a4be60, libserver.so)  // inlines: Call, Get, RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE, SetTypeScope
+// calls: __cxa_guard_acquire, __cxa_guard_release, CDOTABaseAbility::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE, CDOTA_Ability_Sven_Warcry::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE, __cxa_guard_abort, _Unwind_Resume
+// callers: CSchemaNonConstructibleClassBinding<CDOTA_Ability_Sven_Warcry>::Register
+// globals: CDOTA_Ability_Sven_Warcry::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*):, `guard variable for'CDOTA_Ability_Sven_Warcry::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char , CDOTA_Ability_Sven_Warcry::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem
+CSchemaClassInfo *__fastcall CDOTA_Ability_Sven_Warcry::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        const char *pProjectName)
+{
+  CSchemaClassInfo *result; // rax
+  ISchemaSystemTypeScope *v7; // r14
+  CSchemaClassInfo *v8; // rax
+  CSchemaClassInfo *v9; // rax
+
+  result = CDOTA_Ability_Sven_Warcry::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult;
+  if ( CDOTA_Ability_Sven_Warcry::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult == 0 )
+  {
+    v7 = (*(*pSchemaSystem + 112LL))(pSchemaSystem, 1, pBinaryName);
+    if ( `guard variable for'CDOTA_Ability_Sven_Warcry::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_NestedClassesOf_CDOTA_Ability_Sven_Warcry == 0
+      && __cxa_guard_acquire(&`guard variable for'CDOTA_Ability_Sven_Warcry::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_NestedClassesOf_CDOTA_Ability_Sven_Warcry) != 0 )
+    {
+      v8 = CDOTA_Ability_Sven_Warcry::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult;
+      if ( CDOTA_Ability_Sven_Warcry::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult == 0 )
+        v8 = CDOTA_Ability_Sven_Warcry::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+               pSchemaSystem,
+               pBinaryName,
+               pProjectName);
+      CDOTA_Ability_Sven_Warcry::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_NestedClassesOf_CDOTA_Ability_Sven_Warcry[0] = v8;
+      __cxa_guard_release(&`guard variable for'CDOTA_Ability_Sven_Warcry::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_NestedClassesOf_CDOTA_Ability_Sven_Warcry);
+    }
+    (*(CDOTABaseAbility::s_pSchemaBindingForLocalModule->_vptr_ISchemaBinding + 5))(
+      CDOTABaseAbility::s_pSchemaBindingForLocalModule,
+      pSchemaSystem,
+      pBinaryName,
+      pProjectName);
+    v9 = CDOTABaseAbility::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+           pSchemaSystem,
+           pBinaryName,
+           pProjectName);
+    CDOTA_Ability_Sven_Warcry::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CDOTA_Ability_Sven_Warcry.m_pOuterTypeScope = v7;
+    CDOTA_Ability_Sven_Warcry::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassBases_CDOTA_Ability_Sven_Warcry[0].m_pClass = v9;
+    CDOTA_Ability_Sven_Warcry::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult = &CDOTA_Ability_Sven_Warcry::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CDOTA_Ability_Sven_Warcry;
+    return &CDOTA_Ability_Sven_Warcry::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CDOTA_Ability_Sven_Warcry;
+  }
+  return result;
+}
+
+
+// CDOTA_Ability_Sven_Warcry::Schema_VerifyBindingIsRegistered  (line 360, @0x0000000002a4bf40, libserver.so)
+void __cdecl CDOTA_Ability_Sven_Warcry::Schema_VerifyBindingIsRegistered()
+{
+  ;
+}
+
+
+// CDOTA_Ability_Sven_Warcry::SetupEntClassInputs  (line 374, @0x0000000002a4bf50, libserver.so)
+void __fastcall CDOTA_Ability_Sven_Warcry::SetupEntClassInputs(CEntityClass *pComponentInfo)
+{
+  ;
+}
+
+
+// CDOTA_Ability_Sven_Warcry::SetupEntClassComponentOverrides  (line 380, @0x0000000002a4bf60, libserver.so)
+void __fastcall CDOTA_Ability_Sven_Warcry::SetupEntClassComponentOverrides(CEntityClass *pEntityClass)
+{
+  pEntityClass->m_pComponentOverrides = 0;
+}
+
+
+// CDOTA_Ability_Sven_GodsStrength::CEntityInstanceEntityClass::Schema_CompileTimeVerificationFunction  (line 386, @0x0000000002a4bf70, libserver.so)
+void __fastcall CDOTA_Ability_Sven_GodsStrength::CEntityInstanceEntityClass::Schema_CompileTimeVerificationFunction(
+        CDOTA_Ability_Sven_GodsStrength::CEntityInstanceEntityClass *const this)
+{
+  ;
+}
+
+
+// CDOTA_Ability_Sven_GodsStrength::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE  (line 389, @0x0000000002a437e0, libserver.so)  // inlines: Call, Get, SetTypeScope
+// calls: CDOTABaseAbility::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE
+// callers: CDOTA_Ability_Holdout_GodsStrength::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE, CSchemaNonConstructibleClassBinding<CDOTA_Ability_Sven_GodsStrength::CEntityInstanceEntityClass>::Register, CDOTA_Ability_Sven_GodsStrength::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE, CDOTA_Ability_Sven_GodsStrength::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE
+// globals: CDOTA_Ability_Sven_GodsStrength::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchema
+CSchemaClassInfo *__fastcall CDOTA_Ability_Sven_GodsStrength::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        const char *pProjectName)
+{
+  ISchemaSystemTypeScope *v6; // r14
+  CSchemaClassInfo *v7; // rax
+
+  v6 = (*(*pSchemaSystem + 112LL))(pSchemaSystem, 1, pBinaryName);
+  (*(CDOTABaseAbility::CEntityInstanceEntityClass::s_pSchemaBindingForLocalModule->_vptr_ISchemaBinding + 5))(
+    CDOTABaseAbility::CEntityInstanceEntityClass::s_pSchemaBindingForLocalModule,
+    pSchemaSystem,
+    pBinaryName,
+    pProjectName);
+  v7 = CDOTABaseAbility::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+         pSchemaSystem,
+         pBinaryName,
+         pProjectName);
+  CDOTA_Ability_Sven_GodsStrength::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CDOTA_Ability_Sven_GodsStrength_CEntityInstanceEntityClass.m_pOuterTypeScope = v6;
+  CDOTA_Ability_Sven_GodsStrength::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassBases_CDOTA_Ability_Sven_GodsStrength_CEntityInstanceEntityClass[0].m_pClass = v7;
+  CDOTA_Ability_Sven_GodsStrength::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult = &CDOTA_Ability_Sven_GodsStrength::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CDOTA_Ability_Sven_GodsStrength_CEntityInstanceEntityClass;
+  return &CDOTA_Ability_Sven_GodsStrength::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CDOTA_Ability_Sven_GodsStrength_CEntityInstanceEntityClass;
+}
+
+
+// CDOTA_Ability_Sven_GodsStrength::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE  (line 389, @0x0000000002a4bf80, libserver.so)
+// calls: CDOTA_Ability_Sven_GodsStrength::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE
+// globals: CDOTA_Ability_Sven_GodsStrength::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchema
+CSchemaClassInfo *__fastcall CDOTA_Ability_Sven_GodsStrength::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        const char *pProjectName)
+{
+  CSchemaClassInfo *result; // rax
+
+  result = CDOTA_Ability_Sven_GodsStrength::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult;
+  if ( CDOTA_Ability_Sven_GodsStrength::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult == 0 )
+    return CDOTA_Ability_Sven_GodsStrength::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+             pSchemaSystem,
+             pBinaryName,
+             pProjectName);
+  return result;
+}
+
+
+// CDOTA_Ability_Sven_GodsStrength::CEntityInstanceEntityClass::Schema_VerifyBindingIsRegistered  (line 406, @0x0000000002a4bfa0, libserver.so)
+void __cdecl CDOTA_Ability_Sven_GodsStrength::CEntityInstanceEntityClass::Schema_VerifyBindingIsRegistered()
+{
+  ;
+}
+
+
+// CDOTA_Ability_Sven_GodsStrength::Schema_CompileTimeVerificationFunction  (line 414, @0x0000000002a4bfb0, libserver.so)
+void __fastcall CDOTA_Ability_Sven_GodsStrength::Schema_CompileTimeVerificationFunction(
+        CDOTA_Ability_Sven_GodsStrength *const this)
+{
+  ;
+}
+
+
+// CDOTA_Ability_Sven_GodsStrength::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE  (line 417, @0x0000000002a4bfc0, libserver.so)  // inlines: Call, Get, RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE, SetTypeScope
+// calls: __cxa_guard_acquire, __cxa_guard_release, CDOTABaseAbility::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE, CDOTA_Ability_Sven_GodsStrength::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE, __cxa_guard_abort, _Unwind_Resume
+// callers: CSchemaNonConstructibleClassBinding<CDOTA_Ability_Sven_GodsStrength>::Register, CDOTA_Ability_Holdout_GodsStrength::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE
+// globals: CDOTA_Ability_Sven_GodsStrength::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char co, `guard variable for'CDOTA_Ability_Sven_GodsStrength::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *, CDOTA_Ability_Sven_GodsStrength::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchema
+CSchemaClassInfo *__fastcall CDOTA_Ability_Sven_GodsStrength::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        const char *pProjectName)
+{
+  CSchemaClassInfo *result; // rax
+  ISchemaSystemTypeScope *v7; // r14
+  CSchemaClassInfo *v8; // rax
+  CSchemaClassInfo *v9; // rax
+
+  result = CDOTA_Ability_Sven_GodsStrength::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult;
+  if ( CDOTA_Ability_Sven_GodsStrength::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult == 0 )
+  {
+    v7 = (*(*pSchemaSystem + 112LL))(pSchemaSystem, 1, pBinaryName);
+    if ( `guard variable for'CDOTA_Ability_Sven_GodsStrength::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_NestedClassesOf_CDOTA_Ability_Sven_GodsStrength == 0
+      && __cxa_guard_acquire(&`guard variable for'CDOTA_Ability_Sven_GodsStrength::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_NestedClassesOf_CDOTA_Ability_Sven_GodsStrength) != 0 )
+    {
+      v8 = CDOTA_Ability_Sven_GodsStrength::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult;
+      if ( CDOTA_Ability_Sven_GodsStrength::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult == 0 )
+        v8 = CDOTA_Ability_Sven_GodsStrength::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+               pSchemaSystem,
+               pBinaryName,
+               pProjectName);
+      CDOTA_Ability_Sven_GodsStrength::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_NestedClassesOf_CDOTA_Ability_Sven_GodsStrength[0] = v8;
+      __cxa_guard_release(&`guard variable for'CDOTA_Ability_Sven_GodsStrength::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_NestedClassesOf_CDOTA_Ability_Sven_GodsStrength);
+    }
+    (*(CDOTABaseAbility::s_pSchemaBindingForLocalModule->_vptr_ISchemaBinding + 5))(
+      CDOTABaseAbility::s_pSchemaBindingForLocalModule,
+      pSchemaSystem,
+      pBinaryName,
+      pProjectName);
+    v9 = CDOTABaseAbility::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+           pSchemaSystem,
+           pBinaryName,
+           pProjectName);
+    CDOTA_Ability_Sven_GodsStrength::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CDOTA_Ability_Sven_GodsStrength.m_pOuterTypeScope = v7;
+    CDOTA_Ability_Sven_GodsStrength::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassBases_CDOTA_Ability_Sven_GodsStrength[0].m_pClass = v9;
+    CDOTA_Ability_Sven_GodsStrength::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult = &CDOTA_Ability_Sven_GodsStrength::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CDOTA_Ability_Sven_GodsStrength;
+    return &CDOTA_Ability_Sven_GodsStrength::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CDOTA_Ability_Sven_GodsStrength;
+  }
+  return result;
+}
+
+
+// CDOTA_Ability_Sven_GodsStrength::Schema_VerifyBindingIsRegistered  (line 445, @0x0000000002a4c0a0, libserver.so)
+void __cdecl CDOTA_Ability_Sven_GodsStrength::Schema_VerifyBindingIsRegistered()
+{
+  ;
+}
+
+
+// CDOTA_Ability_Sven_GodsStrength::SetupEntClassInputs  (line 459, @0x0000000002a4c0b0, libserver.so)
+void __fastcall CDOTA_Ability_Sven_GodsStrength::SetupEntClassInputs(CEntityClass *pComponentInfo)
+{
+  ;
+}
+
+
+// CDOTA_Ability_Sven_GodsStrength::SetupEntClassComponentOverrides  (line 465, @0x0000000002a4c0c0, libserver.so)
+void __fastcall CDOTA_Ability_Sven_GodsStrength::SetupEntClassComponentOverrides(CEntityClass *pEntityClass)
+{
+  pEntityClass->m_pComponentOverrides = 0;
+}
+
+
+// CDOTA_Ability_Holdout_GodsStrength::CEntityInstanceEntityClass::Schema_CompileTimeVerificationFunction  (line 471, @0x0000000002a4c0d0, libserver.so)
+void __fastcall CDOTA_Ability_Holdout_GodsStrength::CEntityInstanceEntityClass::Schema_CompileTimeVerificationFunction(
+        CDOTA_Ability_Holdout_GodsStrength::CEntityInstanceEntityClass *const this)
+{
+  ;
+}
+
+
+// CDOTA_Ability_Holdout_GodsStrength::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE  (line 474, @0x0000000002a442e0, libserver.so)  // inlines: Call, Get, RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE, SetTypeScope
+// calls: CDOTA_Ability_Sven_GodsStrength::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE
+// callers: CSchemaNonConstructibleClassBinding<CDOTA_Ability_Holdout_GodsStrength::CEntityInstanceEntityClass>::Register, CDOTA_Ability_Holdout_GodsStrength::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE, CDOTA_Ability_Holdout_GodsStrength::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE
+// globals: CDOTA_Ability_Sven_GodsStrength::CEntityInstanceEntityClass::s_pSchemaBindingForLocalModule, CDOTA_Ability_Sven_GodsStrength::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchema, CDOTA_Ability_Holdout_GodsStrength::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISch
+CSchemaClassInfo *__fastcall CDOTA_Ability_Holdout_GodsStrength::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        const char *pProjectName)
+{
+  ISchemaSystemTypeScope *v6; // r14
+  CSchemaClassInfo *v7; // rax
+
+  v6 = (*(*pSchemaSystem + 112LL))(pSchemaSystem, 1, pBinaryName);
+  (*(CDOTA_Ability_Sven_GodsStrength::CEntityInstanceEntityClass::s_pSchemaBindingForLocalModule->_vptr_ISchemaBinding
+   + 5))(
+    CDOTA_Ability_Sven_GodsStrength::CEntityInstanceEntityClass::s_pSchemaBindingForLocalModule,
+    pSchemaSystem,
+    pBinaryName,
+    pProjectName);
+  v7 = CDOTA_Ability_Sven_GodsStrength::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult;
+  if ( CDOTA_Ability_Sven_GodsStrength::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult == 0 )
+    v7 = CDOTA_Ability_Sven_GodsStrength::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+           pSchemaSystem,
+           pBinaryName,
+           pProjectName);
+  CDOTA_Ability_Holdout_GodsStrength::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CDOTA_Ability_Holdout_GodsStrength_CEntityInstanceEntityClass.m_pOuterTypeScope = v6;
+  CDOTA_Ability_Holdout_GodsStrength::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassBases_CDOTA_Ability_Holdout_GodsStrength_CEntityInstanceEntityClass[0].m_pClass = v7;
+  CDOTA_Ability_Holdout_GodsStrength::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult = &CDOTA_Ability_Holdout_GodsStrength::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CDOTA_Ability_Holdout_GodsStrength_CEntityInstanceEntityClass;
+  return &CDOTA_Ability_Holdout_GodsStrength::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CDOTA_Ability_Holdout_GodsStrength_CEntityInstanceEntityClass;
+}
+
+
+// CDOTA_Ability_Holdout_GodsStrength::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE  (line 474, @0x0000000002a4c0e0, libserver.so)
+// calls: CDOTA_Ability_Holdout_GodsStrength::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE
+// globals: CDOTA_Ability_Holdout_GodsStrength::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISch
+CSchemaClassInfo *__fastcall CDOTA_Ability_Holdout_GodsStrength::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        const char *pProjectName)
+{
+  CSchemaClassInfo *result; // rax
+
+  result = CDOTA_Ability_Holdout_GodsStrength::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult;
+  if ( CDOTA_Ability_Holdout_GodsStrength::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult == 0 )
+    return CDOTA_Ability_Holdout_GodsStrength::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+             pSchemaSystem,
+             pBinaryName,
+             pProjectName);
+  return result;
+}
+
+
+// CDOTA_Ability_Holdout_GodsStrength::CEntityInstanceEntityClass::Schema_VerifyBindingIsRegistered  (line 491, @0x0000000002a4c100, libserver.so)
+void __cdecl CDOTA_Ability_Holdout_GodsStrength::CEntityInstanceEntityClass::Schema_VerifyBindingIsRegistered()
+{
+  ;
+}
+
+
+// CDOTA_Ability_Holdout_GodsStrength::Schema_CompileTimeVerificationFunction  (line 499, @0x0000000002a4c110, libserver.so)
+void __fastcall CDOTA_Ability_Holdout_GodsStrength::Schema_CompileTimeVerificationFunction(
+        CDOTA_Ability_Holdout_GodsStrength *const this)
+{
+  ;
+}
+
+
+// CDOTA_Ability_Holdout_GodsStrength::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE  (line 502, @0x0000000002a4c120, libserver.so)  // inlines: Call, Get, RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE, SetTypeScope
+// calls: __cxa_guard_acquire, __cxa_guard_release, CDOTA_Ability_Sven_GodsStrength::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE, CDOTA_Ability_Holdout_GodsStrength::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE, __cxa_guard_abort, _Unwind_Resume
+// callers: CSchemaNonConstructibleClassBinding<CDOTA_Ability_Holdout_GodsStrength>::Register
+// globals: CDOTA_Ability_Holdout_GodsStrength::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char, `guard variable for'CDOTA_Ability_Holdout_GodsStrength::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSyste, CDOTA_Ability_Holdout_GodsStrength::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISch, CDOTA_Ability_Sven_GodsStrength::s_pSchemaBindingForLocalModule
+CSchemaClassInfo *__fastcall CDOTA_Ability_Holdout_GodsStrength::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        const char *pProjectName)
+{
+  CSchemaClassInfo *result; // rax
+  ISchemaSystemTypeScope *v7; // r14
+  CSchemaClassInfo *v8; // rax
+  CSchemaClassInfo *v9; // rax
+
+  result = CDOTA_Ability_Holdout_GodsStrength::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult;
+  if ( CDOTA_Ability_Holdout_GodsStrength::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult == 0 )
+  {
+    v7 = (*(*pSchemaSystem + 112LL))(pSchemaSystem, 1, pBinaryName);
+    if ( `guard variable for'CDOTA_Ability_Holdout_GodsStrength::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_NestedClassesOf_CDOTA_Ability_Holdout_GodsStrength == 0
+      && __cxa_guard_acquire(&`guard variable for'CDOTA_Ability_Holdout_GodsStrength::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_NestedClassesOf_CDOTA_Ability_Holdout_GodsStrength) != 0 )
+    {
+      v8 = CDOTA_Ability_Holdout_GodsStrength::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult;
+      if ( CDOTA_Ability_Holdout_GodsStrength::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult == 0 )
+        v8 = CDOTA_Ability_Holdout_GodsStrength::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+               pSchemaSystem,
+               pBinaryName,
+               pProjectName);
+      CDOTA_Ability_Holdout_GodsStrength::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_NestedClassesOf_CDOTA_Ability_Holdout_GodsStrength[0] = v8;
+      __cxa_guard_release(&`guard variable for'CDOTA_Ability_Holdout_GodsStrength::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_NestedClassesOf_CDOTA_Ability_Holdout_GodsStrength);
+    }
+    (*(CDOTA_Ability_Sven_GodsStrength::s_pSchemaBindingForLocalModule->_vptr_ISchemaBinding + 5))(
+      CDOTA_Ability_Sven_GodsStrength::s_pSchemaBindingForLocalModule,
+      pSchemaSystem,
+      pBinaryName,
+      pProjectName);
+    v9 = CDOTA_Ability_Sven_GodsStrength::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+           pSchemaSystem,
+           pBinaryName,
+           pProjectName);
+    CDOTA_Ability_Holdout_GodsStrength::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CDOTA_Ability_Holdout_GodsStrength.m_pOuterTypeScope = v7;
+    CDOTA_Ability_Holdout_GodsStrength::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassBases_CDOTA_Ability_Holdout_GodsStrength[0].m_pClass = v9;
+    CDOTA_Ability_Holdout_GodsStrength::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult = &CDOTA_Ability_Holdout_GodsStrength::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CDOTA_Ability_Holdout_GodsStrength;
+    return &CDOTA_Ability_Holdout_GodsStrength::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CDOTA_Ability_Holdout_GodsStrength;
+  }
+  return result;
+}
+
+
+// CDOTA_Ability_Holdout_GodsStrength::Schema_VerifyBindingIsRegistered  (line 530, @0x0000000002a4c200, libserver.so)
+void __cdecl CDOTA_Ability_Holdout_GodsStrength::Schema_VerifyBindingIsRegistered()
+{
+  ;
+}
+
+
+// CDOTA_Ability_Holdout_GodsStrength::SetupEntClassInputs  (line 544, @0x0000000002a4c210, libserver.so)
+void __fastcall CDOTA_Ability_Holdout_GodsStrength::SetupEntClassInputs(CEntityClass *pComponentInfo)
+{
+  ;
+}
+
+
+// CDOTA_Ability_Holdout_GodsStrength::SetupEntClassComponentOverrides  (line 550, @0x0000000002a4c220, libserver.so)
+void __fastcall CDOTA_Ability_Holdout_GodsStrength::SetupEntClassComponentOverrides(CEntityClass *pEntityClass)
+{
+  pEntityClass->m_pComponentOverrides = 0;
+}
+
+
+// LocalRegisterSchemaModule<ArbitraryTemplateParameter_server_dota_unit_hero_sven_cpp>  (line 556, @0x0000000002a4c230, libserver.so)  // inlines: Call
+// callers: RegisterSchemaModule_dota_unit_hero_sven_cpp
+// globals: CDOTA_Unit_Hero_Sven::CEntityInstanceEntityClass::s_pSchemaBindingForLocalModule, CDOTA_Unit_Hero_Sven::s_pSchemaBindingForLocalModule, CDOTA_Ability_Sven_StormBolt::CEntityInstanceEntityClass::s_pSchemaBindingForLocalModule, CDOTA_Ability_Sven_StormBolt::s_pSchemaBindingForLocalModule, CDOTA_Ability_Sven_GreatCleave::CEntityInstanceEntityClass::s_pSchemaBindingForLocalModule, CDOTA_Ability_Sven_GreatCleave::s_pSchemaBindingForLocalModule, CDOTA_Ability_Sven_Warcry::CEntityInstanceEntityClass::s_pSchemaBindingForLocalModule, CDOTA_Ability_Sven_Warcry::s_pSchemaBindingForLocalModule (12 total)
+void __fastcall LocalRegisterSchemaModule<ArbitraryTemplateParameter_server_dota_unit_hero_sven_cpp>(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        SchemaRegistrationPhase_t nRegistrationPhase)
+{
+  if ( nRegistrationPhase == SchemaRegistrationPhase_t::SCHEMA_REGISTRATION_PHASE_CLASSES )
+  {
+    (*(CDOTA_Unit_Hero_Sven::CEntityInstanceEntityClass::s_pSchemaBindingForLocalModule->_vptr_ISchemaBinding + 5))(
+      CDOTA_Unit_Hero_Sven::CEntityInstanceEntityClass::s_pSchemaBindingForLocalModule,
+      pSchemaSystem,
+      pBinaryName,
+      "server");
+    (*(CDOTA_Unit_Hero_Sven::s_pSchemaBindingForLocalModule->_vptr_ISchemaBinding + 5))(
+      CDOTA_Unit_Hero_Sven::s_pSchemaBindingForLocalModule,
+      pSchemaSystem,
+      pBinaryName,
+      "server");
+    (*(CDOTA_Ability_Sven_StormBolt::CEntityInstanceEntityClass::s_pSchemaBindingForLocalModule->_vptr_ISchemaBinding + 5))(
+      CDOTA_Ability_Sven_StormBolt::CEntityInstanceEntityClass::s_pSchemaBindingForLocalModule,
+      pSchemaSystem,
+      pBinaryName,
+      "server");
+    (*(CDOTA_Ability_Sven_StormBolt::s_pSchemaBindingForLocalModule->_vptr_ISchemaBinding + 5))(
+      CDOTA_Ability_Sven_StormBolt::s_pSchemaBindingForLocalModule,
+      pSchemaSystem,
+      pBinaryName,
+      "server");
+    (*(CDOTA_Ability_Sven_GreatCleave::CEntityInstanceEntityClass::s_pSchemaBindingForLocalModule->_vptr_ISchemaBinding
+     + 5))(
+      CDOTA_Ability_Sven_GreatCleave::CEntityInstanceEntityClass::s_pSchemaBindingForLocalModule,
+      pSchemaSystem,
+      pBinaryName,
+      "server");
+    (*(CDOTA_Ability_Sven_GreatCleave::s_pSchemaBindingForLocalModule->_vptr_ISchemaBinding + 5))(
+      CDOTA_Ability_Sven_GreatCleave::s_pSchemaBindingForLocalModule,
+      pSchemaSystem,
+      pBinaryName,
+      "server");
+    (*(CDOTA_Ability_Sven_Warcry::CEntityInstanceEntityClass::s_pSchemaBindingForLocalModule->_vptr_ISchemaBinding + 5))(
+      CDOTA_Ability_Sven_Warcry::CEntityInstanceEntityClass::s_pSchemaBindingForLocalModule,
+      pSchemaSystem,
+      pBinaryName,
+      "server");
+    (*(CDOTA_Ability_Sven_Warcry::s_pSchemaBindingForLocalModule->_vptr_ISchemaBinding + 5))(
+      CDOTA_Ability_Sven_Warcry::s_pSchemaBindingForLocalModule,
+      pSchemaSystem,
+      pBinaryName,
+      "server");
+    (*(CDOTA_Ability_Sven_GodsStrength::CEntityInstanceEntityClass::s_pSchemaBindingForLocalModule->_vptr_ISchemaBinding
+     + 5))(
+      CDOTA_Ability_Sven_GodsStrength::CEntityInstanceEntityClass::s_pSchemaBindingForLocalModule,
+      pSchemaSystem,
+      pBinaryName,
+      "server");
+    (*(CDOTA_Ability_Sven_GodsStrength::s_pSchemaBindingForLocalModule->_vptr_ISchemaBinding + 5))(
+      CDOTA_Ability_Sven_GodsStrength::s_pSchemaBindingForLocalModule,
+      pSchemaSystem,
+      pBinaryName,
+      "server");
+    (*(CDOTA_Ability_Holdout_GodsStrength::CEntityInstanceEntityClass::s_pSchemaBindingForLocalModule->_vptr_ISchemaBinding
+     + 5))(
+      CDOTA_Ability_Holdout_GodsStrength::CEntityInstanceEntityClass::s_pSchemaBindingForLocalModule,
+      pSchemaSystem,
+      pBinaryName,
+      "server");
+    (*(CDOTA_Ability_Holdout_GodsStrength::s_pSchemaBindingForLocalModule->_vptr_ISchemaBinding + 5))(
+      CDOTA_Ability_Holdout_GodsStrength::s_pSchemaBindingForLocalModule,
+      pSchemaSystem,
+      pBinaryName,
+      "server");
+  }
+  ++g_nLinkerHack_SchemaAnchor_RegistrationCountFor_server;
+}
+
+
+// RegisterSchemaModule_dota_unit_hero_sven_cpp  (line 569, @0x0000000002a4c3a0, libserver.so)
+// calls: LocalRegisterSchemaModule<ArbitraryTemplateParameter_server_dota_unit_hero_sven_cpp>
+// callers: CSchemaRegistration_server::RegisterAllBindings
+void __fastcall RegisterSchemaModule_dota_unit_hero_sven_cpp(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        SchemaRegistrationPhase_t nRegistrationPhase)
+{
+  LocalRegisterSchemaModule<ArbitraryTemplateParameter_server_dota_unit_hero_sven_cpp>(
+    pSchemaSystem,
+    pBinaryName,
+    nRegistrationPhase);
+}
+
+

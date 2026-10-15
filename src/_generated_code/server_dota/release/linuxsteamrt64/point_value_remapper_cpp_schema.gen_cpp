@@ -1,0 +1,741 @@
+
+// ==== functions (decompiled by Hex-Rays; names/signatures from DWARF) ====
+
+// CSchemaEnumBinding<ValueRemapperInputType_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE  (line 35, @0x000000000232aaa0, libserver.so)  // inlines: Count, Initialize, SetTypeScope
+// callers: CSchemaEnumBinding<ValueRemapperInputType_t>::Register
+// globals: CSchemaEnumBinding<ValueRemapperInputType_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char co
+CSchemaEnumInfo *__fastcall CSchemaEnumBinding<ValueRemapperInputType_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        const char *pProjectName)
+{
+  ISchemaSystemTypeScope *v3; // rax
+  unsigned int v4; // edi
+  SchemaEnumeratorValue_t v5; // r8
+  SchemaEnumeratorValue_t v6; // r9
+  SchemaEnumeratorValue_t *v7; // rdx
+
+  v3 = (*(*pSchemaSystem + 112LL))(pSchemaSystem, 0, pBinaryName);
+  if ( CSchemaEnumBinding<ValueRemapperInputType_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_ValueRemapperInputType_t.m_Enumerators.m_Data.m_nImplLength != 0 )
+  {
+    v4 = abs32(CSchemaEnumBinding<ValueRemapperInputType_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_ValueRemapperInputType_t.m_Enumerators.m_Data.m_nImplLength);
+    v5 = *(CSchemaEnumBinding<ValueRemapperInputType_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_ValueRemapperInputType_t.m_Enumerators.m_Data.m_pImplElements
+         + 2);
+    CSchemaEnumBinding<ValueRemapperInputType_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_ValueRemapperInputType_t.m_nMinValue = v5;
+    v6 = *(CSchemaEnumBinding<ValueRemapperInputType_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_ValueRemapperInputType_t.m_Enumerators.m_Data.m_pImplElements
+         + 2);
+    CSchemaEnumBinding<ValueRemapperInputType_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_ValueRemapperInputType_t.m_nMaxValue = v6;
+    if ( v4 != 1 )
+    {
+      v7 = (CSchemaEnumBinding<ValueRemapperInputType_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_ValueRemapperInputType_t.m_Enumerators.m_Data.m_pImplElements
+          + 72);
+      do
+      {
+        if ( v5 > *v7 )
+          v5 = *v7;
+        CSchemaEnumBinding<ValueRemapperInputType_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_ValueRemapperInputType_t.m_nMinValue = v5;
+        if ( v6 < *v7 )
+          v6 = *v7;
+        v7 += 7;
+        CSchemaEnumBinding<ValueRemapperInputType_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_ValueRemapperInputType_t.m_nMaxValue = v6;
+      }
+      while ( v7 != CSchemaEnumBinding<ValueRemapperInputType_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_ValueRemapperInputType_t.m_Enumerators.m_Data.m_pImplElements
+                  + 7 * v4
+                  + 2 );
+    }
+  }
+  else
+  {
+    CSchemaEnumBinding<ValueRemapperInputType_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_ValueRemapperInputType_t.m_nMinValue = 0;
+    CSchemaEnumBinding<ValueRemapperInputType_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_ValueRemapperInputType_t.m_nMaxValue = 0;
+  }
+  CSchemaEnumBinding<ValueRemapperInputType_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_ValueRemapperInputType_t.m_pOuterTypeScope = v3;
+  (*(*v3 + 272LL))(
+    v3,
+    &CSchemaEnumBinding<ValueRemapperInputType_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_ValueRemapperInputType_t);
+  return &CSchemaEnumBinding<ValueRemapperInputType_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_ValueRemapperInputType_t;
+}
+
+
+// CSchemaEnumBinding<ValueRemapperOutputType_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE  (line 46, @0x000000000232ab80, libserver.so)  // inlines: Count, Initialize, SetTypeScope
+// callers: CSchemaEnumBinding<ValueRemapperOutputType_t>::Register
+// globals: CSchemaEnumBinding<ValueRemapperOutputType_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char c
+CSchemaEnumInfo *__fastcall CSchemaEnumBinding<ValueRemapperOutputType_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        const char *pProjectName)
+{
+  ISchemaSystemTypeScope *v3; // rax
+  unsigned int v4; // edi
+  SchemaEnumeratorValue_t v5; // r8
+  SchemaEnumeratorValue_t v6; // r9
+  SchemaEnumeratorValue_t *v7; // rdx
+
+  v3 = (*(*pSchemaSystem + 112LL))(pSchemaSystem, 0, pBinaryName);
+  if ( CSchemaEnumBinding<ValueRemapperOutputType_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_ValueRemapperOutputType_t.m_Enumerators.m_Data.m_nImplLength != 0 )
+  {
+    v4 = abs32(CSchemaEnumBinding<ValueRemapperOutputType_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_ValueRemapperOutputType_t.m_Enumerators.m_Data.m_nImplLength);
+    v5 = *(CSchemaEnumBinding<ValueRemapperOutputType_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_ValueRemapperOutputType_t.m_Enumerators.m_Data.m_pImplElements
+         + 2);
+    CSchemaEnumBinding<ValueRemapperOutputType_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_ValueRemapperOutputType_t.m_nMinValue = v5;
+    v6 = *(CSchemaEnumBinding<ValueRemapperOutputType_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_ValueRemapperOutputType_t.m_Enumerators.m_Data.m_pImplElements
+         + 2);
+    CSchemaEnumBinding<ValueRemapperOutputType_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_ValueRemapperOutputType_t.m_nMaxValue = v6;
+    if ( v4 != 1 )
+    {
+      v7 = (CSchemaEnumBinding<ValueRemapperOutputType_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_ValueRemapperOutputType_t.m_Enumerators.m_Data.m_pImplElements
+          + 72);
+      do
+      {
+        if ( v5 > *v7 )
+          v5 = *v7;
+        CSchemaEnumBinding<ValueRemapperOutputType_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_ValueRemapperOutputType_t.m_nMinValue = v5;
+        if ( v6 < *v7 )
+          v6 = *v7;
+        v7 += 7;
+        CSchemaEnumBinding<ValueRemapperOutputType_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_ValueRemapperOutputType_t.m_nMaxValue = v6;
+      }
+      while ( v7 != CSchemaEnumBinding<ValueRemapperOutputType_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_ValueRemapperOutputType_t.m_Enumerators.m_Data.m_pImplElements
+                  + 7 * v4
+                  + 2 );
+    }
+  }
+  else
+  {
+    CSchemaEnumBinding<ValueRemapperOutputType_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_ValueRemapperOutputType_t.m_nMinValue = 0;
+    CSchemaEnumBinding<ValueRemapperOutputType_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_ValueRemapperOutputType_t.m_nMaxValue = 0;
+  }
+  CSchemaEnumBinding<ValueRemapperOutputType_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_ValueRemapperOutputType_t.m_pOuterTypeScope = v3;
+  (*(*v3 + 272LL))(
+    v3,
+    &CSchemaEnumBinding<ValueRemapperOutputType_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_ValueRemapperOutputType_t);
+  return &CSchemaEnumBinding<ValueRemapperOutputType_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_ValueRemapperOutputType_t;
+}
+
+
+// CSchemaEnumBinding<ValueRemapperHapticsType_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE  (line 59, @0x000000000232ac60, libserver.so)  // inlines: Count, Initialize, SetTypeScope
+// callers: CSchemaEnumBinding<ValueRemapperHapticsType_t>::Register
+// globals: CSchemaEnumBinding<ValueRemapperHapticsType_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char 
+CSchemaEnumInfo *__fastcall CSchemaEnumBinding<ValueRemapperHapticsType_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        const char *pProjectName)
+{
+  ISchemaSystemTypeScope *v3; // rax
+  unsigned int v4; // edi
+  SchemaEnumeratorValue_t v5; // r8
+  SchemaEnumeratorValue_t v6; // r9
+  SchemaEnumeratorValue_t *v7; // rdx
+
+  v3 = (*(*pSchemaSystem + 112LL))(pSchemaSystem, 0, pBinaryName);
+  if ( CSchemaEnumBinding<ValueRemapperHapticsType_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_ValueRemapperHapticsType_t.m_Enumerators.m_Data.m_nImplLength != 0 )
+  {
+    v4 = abs32(CSchemaEnumBinding<ValueRemapperHapticsType_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_ValueRemapperHapticsType_t.m_Enumerators.m_Data.m_nImplLength);
+    v5 = *(CSchemaEnumBinding<ValueRemapperHapticsType_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_ValueRemapperHapticsType_t.m_Enumerators.m_Data.m_pImplElements
+         + 2);
+    CSchemaEnumBinding<ValueRemapperHapticsType_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_ValueRemapperHapticsType_t.m_nMinValue = v5;
+    v6 = *(CSchemaEnumBinding<ValueRemapperHapticsType_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_ValueRemapperHapticsType_t.m_Enumerators.m_Data.m_pImplElements
+         + 2);
+    CSchemaEnumBinding<ValueRemapperHapticsType_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_ValueRemapperHapticsType_t.m_nMaxValue = v6;
+    if ( v4 != 1 )
+    {
+      v7 = (CSchemaEnumBinding<ValueRemapperHapticsType_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_ValueRemapperHapticsType_t.m_Enumerators.m_Data.m_pImplElements
+          + 72);
+      do
+      {
+        if ( v5 > *v7 )
+          v5 = *v7;
+        CSchemaEnumBinding<ValueRemapperHapticsType_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_ValueRemapperHapticsType_t.m_nMinValue = v5;
+        if ( v6 < *v7 )
+          v6 = *v7;
+        v7 += 7;
+        CSchemaEnumBinding<ValueRemapperHapticsType_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_ValueRemapperHapticsType_t.m_nMaxValue = v6;
+      }
+      while ( v7 != CSchemaEnumBinding<ValueRemapperHapticsType_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_ValueRemapperHapticsType_t.m_Enumerators.m_Data.m_pImplElements
+                  + 7 * v4
+                  + 2 );
+    }
+  }
+  else
+  {
+    CSchemaEnumBinding<ValueRemapperHapticsType_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_ValueRemapperHapticsType_t.m_nMinValue = 0;
+    CSchemaEnumBinding<ValueRemapperHapticsType_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_ValueRemapperHapticsType_t.m_nMaxValue = 0;
+  }
+  CSchemaEnumBinding<ValueRemapperHapticsType_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_ValueRemapperHapticsType_t.m_pOuterTypeScope = v3;
+  (*(*v3 + 272LL))(
+    v3,
+    &CSchemaEnumBinding<ValueRemapperHapticsType_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_ValueRemapperHapticsType_t);
+  return &CSchemaEnumBinding<ValueRemapperHapticsType_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_ValueRemapperHapticsType_t;
+}
+
+
+// CSchemaEnumBinding<ValueRemapperMomentumType_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE  (line 70, @0x000000000232ad40, libserver.so)  // inlines: Count, Initialize, SetTypeScope
+// callers: CSchemaEnumBinding<ValueRemapperMomentumType_t>::Register
+// globals: CSchemaEnumBinding<ValueRemapperMomentumType_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char
+CSchemaEnumInfo *__fastcall CSchemaEnumBinding<ValueRemapperMomentumType_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        const char *pProjectName)
+{
+  ISchemaSystemTypeScope *v3; // rax
+  unsigned int v4; // edi
+  SchemaEnumeratorValue_t v5; // r8
+  SchemaEnumeratorValue_t v6; // r9
+  SchemaEnumeratorValue_t *v7; // rdx
+
+  v3 = (*(*pSchemaSystem + 112LL))(pSchemaSystem, 0, pBinaryName);
+  if ( CSchemaEnumBinding<ValueRemapperMomentumType_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_ValueRemapperMomentumType_t.m_Enumerators.m_Data.m_nImplLength != 0 )
+  {
+    v4 = abs32(CSchemaEnumBinding<ValueRemapperMomentumType_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_ValueRemapperMomentumType_t.m_Enumerators.m_Data.m_nImplLength);
+    v5 = *(CSchemaEnumBinding<ValueRemapperMomentumType_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_ValueRemapperMomentumType_t.m_Enumerators.m_Data.m_pImplElements
+         + 2);
+    CSchemaEnumBinding<ValueRemapperMomentumType_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_ValueRemapperMomentumType_t.m_nMinValue = v5;
+    v6 = *(CSchemaEnumBinding<ValueRemapperMomentumType_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_ValueRemapperMomentumType_t.m_Enumerators.m_Data.m_pImplElements
+         + 2);
+    CSchemaEnumBinding<ValueRemapperMomentumType_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_ValueRemapperMomentumType_t.m_nMaxValue = v6;
+    if ( v4 != 1 )
+    {
+      v7 = (CSchemaEnumBinding<ValueRemapperMomentumType_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_ValueRemapperMomentumType_t.m_Enumerators.m_Data.m_pImplElements
+          + 72);
+      do
+      {
+        if ( v5 > *v7 )
+          v5 = *v7;
+        CSchemaEnumBinding<ValueRemapperMomentumType_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_ValueRemapperMomentumType_t.m_nMinValue = v5;
+        if ( v6 < *v7 )
+          v6 = *v7;
+        v7 += 7;
+        CSchemaEnumBinding<ValueRemapperMomentumType_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_ValueRemapperMomentumType_t.m_nMaxValue = v6;
+      }
+      while ( v7 != CSchemaEnumBinding<ValueRemapperMomentumType_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_ValueRemapperMomentumType_t.m_Enumerators.m_Data.m_pImplElements
+                  + 7 * v4
+                  + 2 );
+    }
+  }
+  else
+  {
+    CSchemaEnumBinding<ValueRemapperMomentumType_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_ValueRemapperMomentumType_t.m_nMinValue = 0;
+    CSchemaEnumBinding<ValueRemapperMomentumType_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_ValueRemapperMomentumType_t.m_nMaxValue = 0;
+  }
+  CSchemaEnumBinding<ValueRemapperMomentumType_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_ValueRemapperMomentumType_t.m_pOuterTypeScope = v3;
+  (*(*v3 + 272LL))(
+    v3,
+    &CSchemaEnumBinding<ValueRemapperMomentumType_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_ValueRemapperMomentumType_t);
+  return &CSchemaEnumBinding<ValueRemapperMomentumType_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_ValueRemapperMomentumType_t;
+}
+
+
+// CSchemaEnumBinding<ValueRemapperRatchetType_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE  (line 83, @0x000000000232ae20, libserver.so)  // inlines: Count, Initialize, SetTypeScope
+// callers: CSchemaEnumBinding<ValueRemapperRatchetType_t>::Register
+// globals: CSchemaEnumBinding<ValueRemapperRatchetType_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char 
+CSchemaEnumInfo *__fastcall CSchemaEnumBinding<ValueRemapperRatchetType_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        const char *pProjectName)
+{
+  ISchemaSystemTypeScope *v3; // rax
+  unsigned int v4; // edi
+  SchemaEnumeratorValue_t v5; // r8
+  SchemaEnumeratorValue_t v6; // r9
+  SchemaEnumeratorValue_t *v7; // rdx
+
+  v3 = (*(*pSchemaSystem + 112LL))(pSchemaSystem, 0, pBinaryName);
+  if ( CSchemaEnumBinding<ValueRemapperRatchetType_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_ValueRemapperRatchetType_t.m_Enumerators.m_Data.m_nImplLength != 0 )
+  {
+    v4 = abs32(CSchemaEnumBinding<ValueRemapperRatchetType_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_ValueRemapperRatchetType_t.m_Enumerators.m_Data.m_nImplLength);
+    v5 = *(CSchemaEnumBinding<ValueRemapperRatchetType_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_ValueRemapperRatchetType_t.m_Enumerators.m_Data.m_pImplElements
+         + 2);
+    CSchemaEnumBinding<ValueRemapperRatchetType_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_ValueRemapperRatchetType_t.m_nMinValue = v5;
+    v6 = *(CSchemaEnumBinding<ValueRemapperRatchetType_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_ValueRemapperRatchetType_t.m_Enumerators.m_Data.m_pImplElements
+         + 2);
+    CSchemaEnumBinding<ValueRemapperRatchetType_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_ValueRemapperRatchetType_t.m_nMaxValue = v6;
+    if ( v4 != 1 )
+    {
+      v7 = (CSchemaEnumBinding<ValueRemapperRatchetType_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_ValueRemapperRatchetType_t.m_Enumerators.m_Data.m_pImplElements
+          + 72);
+      do
+      {
+        if ( v5 > *v7 )
+          v5 = *v7;
+        CSchemaEnumBinding<ValueRemapperRatchetType_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_ValueRemapperRatchetType_t.m_nMinValue = v5;
+        if ( v6 < *v7 )
+          v6 = *v7;
+        v7 += 7;
+        CSchemaEnumBinding<ValueRemapperRatchetType_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_ValueRemapperRatchetType_t.m_nMaxValue = v6;
+      }
+      while ( v7 != CSchemaEnumBinding<ValueRemapperRatchetType_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_ValueRemapperRatchetType_t.m_Enumerators.m_Data.m_pImplElements
+                  + 7 * v4
+                  + 2 );
+    }
+  }
+  else
+  {
+    CSchemaEnumBinding<ValueRemapperRatchetType_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_ValueRemapperRatchetType_t.m_nMinValue = 0;
+    CSchemaEnumBinding<ValueRemapperRatchetType_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_ValueRemapperRatchetType_t.m_nMaxValue = 0;
+  }
+  CSchemaEnumBinding<ValueRemapperRatchetType_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_ValueRemapperRatchetType_t.m_pOuterTypeScope = v3;
+  (*(*v3 + 272LL))(
+    v3,
+    &CSchemaEnumBinding<ValueRemapperRatchetType_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_ValueRemapperRatchetType_t);
+  return &CSchemaEnumBinding<ValueRemapperRatchetType_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_ValueRemapperRatchetType_t;
+}
+
+
+// CPointValueRemapper::CEntityInstanceEntityClass::Schema_CompileTimeVerificationFunction  (line 94, @0x000000000232af00, libserver.so)
+void __fastcall CPointValueRemapper::CEntityInstanceEntityClass::Schema_CompileTimeVerificationFunction(
+        CPointValueRemapper::CEntityInstanceEntityClass *const this)
+{
+  ;
+}
+
+
+// CPointValueRemapper::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE  (line 97, @0x000000000231f7a0, libserver.so)  // inlines: Call, Get, SetTypeScope
+// calls: CBaseEntity::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE
+// callers: CSchemaNonConstructibleClassBinding<CPointValueRemapper::CEntityInstanceEntityClass>::Register, CPointValueRemapper::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE, CPointValueRemapper::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE
+// globals: CPointValueRemapper::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,cha
+CSchemaClassInfo *__fastcall CPointValueRemapper::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        const char *pProjectName)
+{
+  ISchemaSystemTypeScope *v6; // r14
+  CSchemaClassInfo *v7; // rax
+
+  v6 = (*(*pSchemaSystem + 112LL))(pSchemaSystem, 1, pBinaryName);
+  (*(CBaseEntity::CEntityInstanceEntityClass::s_pSchemaBindingForLocalModule->_vptr_ISchemaBinding + 5))(
+    CBaseEntity::CEntityInstanceEntityClass::s_pSchemaBindingForLocalModule,
+    pSchemaSystem,
+    pBinaryName,
+    pProjectName);
+  v7 = CBaseEntity::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+         pSchemaSystem,
+         pBinaryName,
+         pProjectName);
+  CPointValueRemapper::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CPointValueRemapper_CEntityInstanceEntityClass.m_pOuterTypeScope = v6;
+  CPointValueRemapper::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassBases_CPointValueRemapper_CEntityInstanceEntityClass[0].m_pClass = v7;
+  CPointValueRemapper::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult = &CPointValueRemapper::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CPointValueRemapper_CEntityInstanceEntityClass;
+  return &CPointValueRemapper::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CPointValueRemapper_CEntityInstanceEntityClass;
+}
+
+
+// CPointValueRemapper::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE  (line 97, @0x000000000232af10, libserver.so)
+// calls: CPointValueRemapper::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE
+// globals: CPointValueRemapper::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,cha
+CSchemaClassInfo *__fastcall CPointValueRemapper::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        const char *pProjectName)
+{
+  CSchemaClassInfo *result; // rax
+
+  result = CPointValueRemapper::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult;
+  if ( CPointValueRemapper::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult == 0 )
+    return CPointValueRemapper::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+             pSchemaSystem,
+             pBinaryName,
+             pProjectName);
+  return result;
+}
+
+
+// CPointValueRemapper::CEntityInstanceEntityClass::Schema_VerifyBindingIsRegistered  (line 114, @0x000000000232af30, libserver.so)
+void __cdecl CPointValueRemapper::CEntityInstanceEntityClass::Schema_VerifyBindingIsRegistered()
+{
+  ;
+}
+
+
+// CPointValueRemapper::Schema_CompileTimeVerificationFunction  (line 122, @0x000000000232af40, libserver.so)
+void __fastcall CPointValueRemapper::Schema_CompileTimeVerificationFunction(CPointValueRemapper *const this)
+{
+  ;
+}
+
+
+// CPointValueRemapper::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE  (line 166, @0x000000000232af50, libserver.so)  // inlines: Call, Get, NetworkVarDecl_t, RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE, SchemaBinding_SchemaTypeOfMemberVarByAddr<CPointValueRemapper, CEntityIOOutput>, SchemaBinding_SchemaTypeOfMemberVarByAddr<CPointValueRemapper, CNetworkHandleBase<CBaseEntity, CPointValueRemapper::NetworkVar_m_hRemapLineEnd> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<CPointValueRemapper, CNetworkHandleBase<CBaseEntity, CPointValueRemapper::NetworkVar_m_hRemapLineStart> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<CPointValueRemapper, CNetworkUtlVectorBase<CHandle<CBaseEntity>, CPointValueRemapper::NetworkVar_m_hOutputEntities> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<CPointValueRemapper, CNetworkVarBase<ValueRemapperHapticsType_t, CPointValueRemapper::NetworkVar_m_nHapticsType> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<CPointValueRemapper, CNetworkVarBase<ValueRemapperInputType_t, CPointValueRemapper::NetworkVar_m_nInputType> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<CPointValueRemapper, CNetworkVarBase<ValueRemapperMomentumType_t, CPointValueRemapper::NetworkVar_m_nMomentumType> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<CPointValueRemapper, CNetworkVarBase<ValueRemapperOutputType_t, CPointValueRemapper::NetworkVar_m_nOutputType> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<CPointValueRemapper, CNetworkVarBase<ValueRemapperRatchetType_t, CPointValueRemapper::NetworkVar_m_nRatchetType> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<CPointValueRemapper, CNetworkVarBase<bool, CPointValueRemapper::NetworkVar_m_bDisabled> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<CPointValueRemapper, CNetworkVarBase<bool, CPointValueRemapper::NetworkVar_m_bRequiresUseKey> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<CPointValueRemapper, CNetworkVarBase<bool, CPointValueRemapper::NetworkVar_m_bUpdateOnClient> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<CPointValueRemapper, CNetworkVarBase<float, CPointValueRemapper::NetworkVar_m_flDisengageDistance> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<CPointValueRemapper, CNetworkVarBase<float, CPointValueRemapper::NetworkVar_m_flEngageDistance> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<CPointValueRemapper, CNetworkVarBase<float, CPointValueRemapper::NetworkVar_m_flInputOffset> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<CPointValueRemapper, CNetworkVarBase<float, CPointValueRemapper::NetworkVar_m_flMaximumChangePerSecond> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<CPointValueRemapper, CNetworkVarBase<float, CPointValueRemapper::NetworkVar_m_flMomentumModifier> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<CPointValueRemapper, CNetworkVarBase<float, CPointValueRemapper::NetworkVar_m_flSnapValue> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<CPointValueRemapper, CUtlSymbolLarge>, SchemaBinding_SchemaTypeOfMemberVarByAddr<CPointValueRemapper, SndOpEventGuid_t>, SchemaBinding_SchemaTypeOfMemberVarByAddr<CPointValueRemapper, bool>, SchemaBinding_SchemaTypeOfMemberVarByAddr<CPointValueRemapper, float>, SetTypeScope
+// calls: __cxa_guard_acquire, __cxa_guard_release, CBaseEntity::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE, CPointValueRemapper::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE, __cxa_guard_abort, _Unwind_Resume
+// callers: CSchemaNonConstructibleClassBinding<CPointValueRemapper>::Register
+// strings: "ValueRemapperInputType_t", "CUtlSymbolLarge", "CBaseEntity", "CHandle", "ValueRemapperOutputType_t", "CUtlVector" (29 total)
+// globals: CPointValueRemapper::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pIn, `guard variable for'CPointValueRemapper::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*, CSchemaManipulator<CUtlSymbolLarge>::StaticAccessor(void)::m, CAtomicManipulator<CUtlSymbolLarge>::Get(void)::val, CSchemaManipulator<CHandle<CBaseEntity>>::StaticAccessor(void)::m, CAtomicManipulator<CHandle<CBaseEntity>>::Get(void)::val, CSchemaManipulator<CUtlVector<CHandle<CBaseEntity>,CNetworkUtlVector_MemoryType<CHandle<CBaseEntity>,-1>>>::StaticAccessor(void)::m, CAtomicManipulator<CUtlVector<CHandle<CBaseEntity>,CNetworkUtlVector_MemoryType<CHandle<CBaseEntity>,-1>>>::Get(void)::val (10 total)
+CSchemaClassInfo *__fastcall CPointValueRemapper::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        const char *pProjectName)
+{
+  CSchemaClassInfo *result; // rax
+  ISchemaSystemTypeScope *v7; // rbx
+  __int64 (__fastcall *v8)(ISchemaSystemTypeScope *, const char *, __int64, __int64 (__fastcall ***)(), __int64 (__fastcall ***)(), __int64); // r15
+  __int64 v9; // rax
+  __int64 (__fastcall *v10)(ISchemaSystemTypeScope *, const char *, __int64, __int64 (__fastcall ***)(), __int64 (__fastcall ***)(), __int64); // r15
+  __int64 v11; // rax
+  __int64 (__fastcall *v12)(ISchemaSystemTypeScope *, const char *, __int64, __int64 (__fastcall ***)(), __int64 (__fastcall ***)(), __int64); // r15
+  __int64 v13; // rax
+  __int64 v14; // rax
+  CSchemaClassInfo *v15; // rax
+  CSchemaClassInfo *v16; // rax
+
+  result = CPointValueRemapper::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult;
+  if ( CPointValueRemapper::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult == 0 )
+  {
+    v7 = (*(*pSchemaSystem + 112LL))(pSchemaSystem, 1, pBinaryName);
+    if ( `guard variable for'CPointValueRemapper::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CPointValueRemapper3_MNetworkVarNames_Value == 0
+      && __cxa_guard_acquire(&`guard variable for'CPointValueRemapper::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CPointValueRemapper3_MNetworkVarNames_Value) != 0 )
+    {
+      CPointValueRemapper::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CPointValueRemapper3_MNetworkVarNames_Value.m_pVarName = "m_bDisabled";
+      CPointValueRemapper::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CPointValueRemapper3_MNetworkVarNames_Value.m_pVarType = "bool";
+      __cxa_guard_release(&`guard variable for'CPointValueRemapper::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CPointValueRemapper3_MNetworkVarNames_Value);
+    }
+    if ( `guard variable for'CPointValueRemapper::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CPointValueRemapper4_MNetworkVarNames_Value == 0
+      && __cxa_guard_acquire(&`guard variable for'CPointValueRemapper::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CPointValueRemapper4_MNetworkVarNames_Value) != 0 )
+    {
+      CPointValueRemapper::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CPointValueRemapper4_MNetworkVarNames_Value.m_pVarName = "m_bUpdateOnClient";
+      CPointValueRemapper::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CPointValueRemapper4_MNetworkVarNames_Value.m_pVarType = "bool";
+      __cxa_guard_release(&`guard variable for'CPointValueRemapper::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CPointValueRemapper4_MNetworkVarNames_Value);
+    }
+    if ( `guard variable for'CPointValueRemapper::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CPointValueRemapper5_MNetworkVarNames_Value == 0
+      && __cxa_guard_acquire(&`guard variable for'CPointValueRemapper::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CPointValueRemapper5_MNetworkVarNames_Value) != 0 )
+    {
+      CPointValueRemapper::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CPointValueRemapper5_MNetworkVarNames_Value.m_pVarName = "m_nInputType";
+      CPointValueRemapper::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CPointValueRemapper5_MNetworkVarNames_Value.m_pVarType = "ValueRemapperInputType_t";
+      __cxa_guard_release(&`guard variable for'CPointValueRemapper::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CPointValueRemapper5_MNetworkVarNames_Value);
+    }
+    if ( `guard variable for'CPointValueRemapper::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CPointValueRemapper6_MNetworkVarNames_Value == 0
+      && __cxa_guard_acquire(&`guard variable for'CPointValueRemapper::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CPointValueRemapper6_MNetworkVarNames_Value) != 0 )
+    {
+      CPointValueRemapper::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CPointValueRemapper6_MNetworkVarNames_Value.m_pVarName = "m_hRemapLineStart";
+      CPointValueRemapper::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CPointValueRemapper6_MNetworkVarNames_Value.m_pVarType = "CHandle< CBaseEntity>";
+      __cxa_guard_release(&`guard variable for'CPointValueRemapper::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CPointValueRemapper6_MNetworkVarNames_Value);
+    }
+    if ( `guard variable for'CPointValueRemapper::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CPointValueRemapper7_MNetworkVarNames_Value == 0
+      && __cxa_guard_acquire(&`guard variable for'CPointValueRemapper::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CPointValueRemapper7_MNetworkVarNames_Value) != 0 )
+    {
+      CPointValueRemapper::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CPointValueRemapper7_MNetworkVarNames_Value.m_pVarName = "m_hRemapLineEnd";
+      CPointValueRemapper::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CPointValueRemapper7_MNetworkVarNames_Value.m_pVarType = "CHandle< CBaseEntity>";
+      __cxa_guard_release(&`guard variable for'CPointValueRemapper::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CPointValueRemapper7_MNetworkVarNames_Value);
+    }
+    if ( `guard variable for'CPointValueRemapper::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CPointValueRemapper8_MNetworkVarNames_Value == 0
+      && __cxa_guard_acquire(&`guard variable for'CPointValueRemapper::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CPointValueRemapper8_MNetworkVarNames_Value) != 0 )
+    {
+      CPointValueRemapper::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CPointValueRemapper8_MNetworkVarNames_Value.m_pVarName = "m_flMaximumChangePerSecond";
+      CPointValueRemapper::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CPointValueRemapper8_MNetworkVarNames_Value.m_pVarType = "float";
+      __cxa_guard_release(&`guard variable for'CPointValueRemapper::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CPointValueRemapper8_MNetworkVarNames_Value);
+    }
+    if ( `guard variable for'CPointValueRemapper::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CPointValueRemapper9_MNetworkVarNames_Value == 0
+      && __cxa_guard_acquire(&`guard variable for'CPointValueRemapper::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CPointValueRemapper9_MNetworkVarNames_Value) != 0 )
+    {
+      CPointValueRemapper::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CPointValueRemapper9_MNetworkVarNames_Value.m_pVarName = "m_flDisengageDistance";
+      CPointValueRemapper::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CPointValueRemapper9_MNetworkVarNames_Value.m_pVarType = "float";
+      __cxa_guard_release(&`guard variable for'CPointValueRemapper::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CPointValueRemapper9_MNetworkVarNames_Value);
+    }
+    if ( `guard variable for'CPointValueRemapper::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CPointValueRemapper10_MNetworkVarNames_Value == 0
+      && __cxa_guard_acquire(&`guard variable for'CPointValueRemapper::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CPointValueRemapper10_MNetworkVarNames_Value) != 0 )
+    {
+      CPointValueRemapper::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CPointValueRemapper10_MNetworkVarNames_Value.m_pVarName = "m_flEngageDistance";
+      CPointValueRemapper::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CPointValueRemapper10_MNetworkVarNames_Value.m_pVarType = "float";
+      __cxa_guard_release(&`guard variable for'CPointValueRemapper::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CPointValueRemapper10_MNetworkVarNames_Value);
+    }
+    if ( `guard variable for'CPointValueRemapper::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CPointValueRemapper11_MNetworkVarNames_Value == 0
+      && __cxa_guard_acquire(&`guard variable for'CPointValueRemapper::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CPointValueRemapper11_MNetworkVarNames_Value) != 0 )
+    {
+      CPointValueRemapper::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CPointValueRemapper11_MNetworkVarNames_Value.m_pVarName = "m_bRequiresUseKey";
+      CPointValueRemapper::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CPointValueRemapper11_MNetworkVarNames_Value.m_pVarType = "bool";
+      __cxa_guard_release(&`guard variable for'CPointValueRemapper::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CPointValueRemapper11_MNetworkVarNames_Value);
+    }
+    if ( `guard variable for'CPointValueRemapper::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CPointValueRemapper12_MNetworkVarNames_Value == 0
+      && __cxa_guard_acquire(&`guard variable for'CPointValueRemapper::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CPointValueRemapper12_MNetworkVarNames_Value) != 0 )
+    {
+      CPointValueRemapper::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CPointValueRemapper12_MNetworkVarNames_Value.m_pVarName = "m_nOutputType";
+      CPointValueRemapper::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CPointValueRemapper12_MNetworkVarNames_Value.m_pVarType = "ValueRemapperOutputType_t";
+      __cxa_guard_release(&`guard variable for'CPointValueRemapper::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CPointValueRemapper12_MNetworkVarNames_Value);
+    }
+    if ( `guard variable for'CPointValueRemapper::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CPointValueRemapper13_MNetworkVarNames_Value == 0
+      && __cxa_guard_acquire(&`guard variable for'CPointValueRemapper::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CPointValueRemapper13_MNetworkVarNames_Value) != 0 )
+    {
+      CPointValueRemapper::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CPointValueRemapper13_MNetworkVarNames_Value.m_pVarName = "m_hOutputEntities";
+      CPointValueRemapper::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CPointValueRemapper13_MNetworkVarNames_Value.m_pVarType = "CHandle< CBaseEntity >";
+      __cxa_guard_release(&`guard variable for'CPointValueRemapper::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CPointValueRemapper13_MNetworkVarNames_Value);
+    }
+    if ( `guard variable for'CPointValueRemapper::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CPointValueRemapper14_MNetworkVarNames_Value == 0
+      && __cxa_guard_acquire(&`guard variable for'CPointValueRemapper::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CPointValueRemapper14_MNetworkVarNames_Value) != 0 )
+    {
+      CPointValueRemapper::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CPointValueRemapper14_MNetworkVarNames_Value.m_pVarName = "m_nHapticsType";
+      CPointValueRemapper::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CPointValueRemapper14_MNetworkVarNames_Value.m_pVarType = "ValueRemapperHapticsType_t";
+      __cxa_guard_release(&`guard variable for'CPointValueRemapper::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CPointValueRemapper14_MNetworkVarNames_Value);
+    }
+    if ( `guard variable for'CPointValueRemapper::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CPointValueRemapper15_MNetworkVarNames_Value == 0
+      && __cxa_guard_acquire(&`guard variable for'CPointValueRemapper::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CPointValueRemapper15_MNetworkVarNames_Value) != 0 )
+    {
+      CPointValueRemapper::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CPointValueRemapper15_MNetworkVarNames_Value.m_pVarName = "m_nMomentumType";
+      CPointValueRemapper::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CPointValueRemapper15_MNetworkVarNames_Value.m_pVarType = "ValueRemapperMomentumType_t";
+      __cxa_guard_release(&`guard variable for'CPointValueRemapper::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CPointValueRemapper15_MNetworkVarNames_Value);
+    }
+    if ( `guard variable for'CPointValueRemapper::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CPointValueRemapper16_MNetworkVarNames_Value == 0
+      && __cxa_guard_acquire(&`guard variable for'CPointValueRemapper::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CPointValueRemapper16_MNetworkVarNames_Value) != 0 )
+    {
+      CPointValueRemapper::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CPointValueRemapper16_MNetworkVarNames_Value.m_pVarName = "m_flMomentumModifier";
+      CPointValueRemapper::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CPointValueRemapper16_MNetworkVarNames_Value.m_pVarType = "float";
+      __cxa_guard_release(&`guard variable for'CPointValueRemapper::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CPointValueRemapper16_MNetworkVarNames_Value);
+    }
+    if ( `guard variable for'CPointValueRemapper::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CPointValueRemapper17_MNetworkVarNames_Value == 0
+      && __cxa_guard_acquire(&`guard variable for'CPointValueRemapper::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CPointValueRemapper17_MNetworkVarNames_Value) != 0 )
+    {
+      CPointValueRemapper::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CPointValueRemapper17_MNetworkVarNames_Value.m_pVarName = "m_flSnapValue";
+      CPointValueRemapper::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CPointValueRemapper17_MNetworkVarNames_Value.m_pVarType = "float";
+      __cxa_guard_release(&`guard variable for'CPointValueRemapper::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CPointValueRemapper17_MNetworkVarNames_Value);
+    }
+    if ( `guard variable for'CPointValueRemapper::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CPointValueRemapper18_MNetworkVarNames_Value == 0
+      && __cxa_guard_acquire(&`guard variable for'CPointValueRemapper::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CPointValueRemapper18_MNetworkVarNames_Value) != 0 )
+    {
+      CPointValueRemapper::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CPointValueRemapper18_MNetworkVarNames_Value.m_pVarName = "m_nRatchetType";
+      CPointValueRemapper::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CPointValueRemapper18_MNetworkVarNames_Value.m_pVarType = "ValueRemapperRatchetType_t";
+      __cxa_guard_release(&`guard variable for'CPointValueRemapper::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CPointValueRemapper18_MNetworkVarNames_Value);
+    }
+    if ( `guard variable for'CPointValueRemapper::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CPointValueRemapper19_MNetworkVarNames_Value == 0
+      && __cxa_guard_acquire(&`guard variable for'CPointValueRemapper::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CPointValueRemapper19_MNetworkVarNames_Value) != 0 )
+    {
+      CPointValueRemapper::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CPointValueRemapper19_MNetworkVarNames_Value.m_pVarName = "m_flInputOffset";
+      CPointValueRemapper::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CPointValueRemapper19_MNetworkVarNames_Value.m_pVarType = "float";
+      __cxa_guard_release(&`guard variable for'CPointValueRemapper::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CPointValueRemapper19_MNetworkVarNames_Value);
+    }
+    CPointValueRemapper::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CPointValueRemapper[0].m_pType = (*(*v7 + 40LL))(v7, 13);
+    CPointValueRemapper::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CPointValueRemapper[1].m_pType = (*(*v7 + 40LL))(v7, 13);
+    CPointValueRemapper::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CPointValueRemapper[2].m_pType = (*(*v7 + 96LL))(v7, "ValueRemapperInputType_t");
+    CPointValueRemapper::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CPointValueRemapper[3].m_pType = (*(*v7 + 56LL))(v7, "CUtlSymbolLarge", 3007, CAtomicManipulator<CUtlSymbolLarge>::Get(void)::val, &CSchemaManipulator<CUtlSymbolLarge>::StaticAccessor(void)::m);
+    CPointValueRemapper::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CPointValueRemapper[4].m_pType = (*(*v7 + 56LL))(v7, "CUtlSymbolLarge", 3007, CAtomicManipulator<CUtlSymbolLarge>::Get(void)::val, &CSchemaManipulator<CUtlSymbolLarge>::StaticAccessor(void)::m);
+    v8 = *(*v7 + 64LL);
+    v9 = (*(*v7 + 88LL))(v7, "CBaseEntity");
+    CPointValueRemapper::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CPointValueRemapper[5].m_pType = v8(v7, "CHandle", 5003, CAtomicManipulator<CHandle<CBaseEntity>>::Get(void)::val, &CSchemaManipulator<CHandle<CBaseEntity>>::StaticAccessor(void)::m, v9);
+    v10 = *(*v7 + 64LL);
+    v11 = (*(*v7 + 88LL))(v7, "CBaseEntity");
+    CPointValueRemapper::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CPointValueRemapper[6].m_pType = v10(v7, "CHandle", 5003, CAtomicManipulator<CHandle<CBaseEntity>>::Get(void)::val, &CSchemaManipulator<CHandle<CBaseEntity>>::StaticAccessor(void)::m, v11);
+    CPointValueRemapper::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CPointValueRemapper[7].m_pType = (*(*v7 + 40LL))(v7, 11);
+    CPointValueRemapper::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CPointValueRemapper[8].m_pType = (*(*v7 + 40LL))(v7, 11);
+    CPointValueRemapper::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CPointValueRemapper[9].m_pType = (*(*v7 + 40LL))(v7, 11);
+    CPointValueRemapper::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CPointValueRemapper[10].m_pType = (*(*v7 + 40LL))(v7, 13);
+    CPointValueRemapper::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CPointValueRemapper[11].m_pType = (*(*v7 + 96LL))(v7, "ValueRemapperOutputType_t");
+    CPointValueRemapper::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CPointValueRemapper[12].m_pType = (*(*v7 + 56LL))(v7, "CUtlSymbolLarge", 3007, CAtomicManipulator<CUtlSymbolLarge>::Get(void)::val, &CSchemaManipulator<CUtlSymbolLarge>::StaticAccessor(void)::m);
+    CPointValueRemapper::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CPointValueRemapper[13].m_pType = (*(*v7 + 56LL))(v7, "CUtlSymbolLarge", 3007, CAtomicManipulator<CUtlSymbolLarge>::Get(void)::val, &CSchemaManipulator<CUtlSymbolLarge>::StaticAccessor(void)::m);
+    CPointValueRemapper::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CPointValueRemapper[14].m_pType = (*(*v7 + 56LL))(v7, "CUtlSymbolLarge", 3007, CAtomicManipulator<CUtlSymbolLarge>::Get(void)::val, &CSchemaManipulator<CUtlSymbolLarge>::StaticAccessor(void)::m);
+    CPointValueRemapper::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CPointValueRemapper[15].m_pType = (*(*v7 + 56LL))(v7, "CUtlSymbolLarge", 3007, CAtomicManipulator<CUtlSymbolLarge>::Get(void)::val, &CSchemaManipulator<CUtlSymbolLarge>::StaticAccessor(void)::m);
+    v12 = *(*v7 + 64LL);
+    v13 = (*(*v7 + 88LL))(v7, "CBaseEntity");
+    v14 = v12(
+            v7,
+            "CHandle",
+            5003,
+            CAtomicManipulator<CHandle<CBaseEntity>>::Get(void)::val,
+            &CSchemaManipulator<CHandle<CBaseEntity>>::StaticAccessor(void)::m,
+            v13);
+    CPointValueRemapper::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CPointValueRemapper[16].m_pType = v12(v7, "CUtlVector", 3002, &CAtomicManipulator<CUtlVector<CHandle<CBaseEntity>,CNetworkUtlVector_MemoryType<CHandle<CBaseEntity>,-1>>>::Get(void)::val, CSchemaManipulator<CUtlVector<CHandle<CBaseEntity>,CNetworkUtlVector_MemoryType<CHandle<CBaseEntity>,-1>>>::StaticAccessor(void)::m, v14);
+    CPointValueRemapper::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CPointValueRemapper[17].m_pType = (*(*v7 + 96LL))(v7, "ValueRemapperHapticsType_t");
+    CPointValueRemapper::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CPointValueRemapper[18].m_pType = (*(*v7 + 96LL))(v7, "ValueRemapperMomentumType_t");
+    CPointValueRemapper::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CPointValueRemapper[19].m_pType = (*(*v7 + 40LL))(v7, 11);
+    CPointValueRemapper::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CPointValueRemapper[20].m_pType = (*(*v7 + 40LL))(v7, 11);
+    CPointValueRemapper::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CPointValueRemapper[21].m_pType = (*(*v7 + 40LL))(v7, 11);
+    CPointValueRemapper::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CPointValueRemapper[22].m_pType = (*(*v7 + 96LL))(v7, "ValueRemapperRatchetType_t");
+    CPointValueRemapper::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CPointValueRemapper[23].m_pType = (*(*v7 + 40LL))(v7, 11);
+    CPointValueRemapper::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CPointValueRemapper[24].m_pType = (*(*v7 + 40LL))(v7, 11);
+    CPointValueRemapper::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CPointValueRemapper[25].m_pType = (*(*v7 + 40LL))(v7, 13);
+    CPointValueRemapper::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CPointValueRemapper[26].m_pType = (*(*v7 + 40LL))(v7, 13);
+    CPointValueRemapper::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CPointValueRemapper[27].m_pType = (*(*v7 + 40LL))(v7, 11);
+    CPointValueRemapper::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CPointValueRemapper[28].m_pType = (*(*v7 + 40LL))(v7, 11);
+    CPointValueRemapper::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CPointValueRemapper[29].m_pType = (*(*v7 + 40LL))(v7, 11);
+    CPointValueRemapper::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CPointValueRemapper[30].m_pType = (*(*v7 + 56LL))(v7, "CUtlSymbolLarge", 3007, CAtomicManipulator<CUtlSymbolLarge>::Get(void)::val, &CSchemaManipulator<CUtlSymbolLarge>::StaticAccessor(void)::m);
+    CPointValueRemapper::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CPointValueRemapper[31].m_pType = (*(*v7 + 56LL))(v7, "CUtlSymbolLarge", 3007, CAtomicManipulator<CUtlSymbolLarge>::Get(void)::val, &CSchemaManipulator<CUtlSymbolLarge>::StaticAccessor(void)::m);
+    CPointValueRemapper::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CPointValueRemapper[32].m_pType = (*(*v7 + 56LL))(v7, "CUtlSymbolLarge", 3007, CAtomicManipulator<CUtlSymbolLarge>::Get(void)::val, &CSchemaManipulator<CUtlSymbolLarge>::StaticAccessor(void)::m);
+    CPointValueRemapper::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CPointValueRemapper[33].m_pType = (*(*v7 + 56LL))(v7, "CUtlSymbolLarge", 3007, CAtomicManipulator<CUtlSymbolLarge>::Get(void)::val, &CSchemaManipulator<CUtlSymbolLarge>::StaticAccessor(void)::m);
+    CPointValueRemapper::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CPointValueRemapper[34].m_pType = (*(*v7 + 56LL))(v7, "CUtlSymbolLarge", 3007, CAtomicManipulator<CUtlSymbolLarge>::Get(void)::val, &CSchemaManipulator<CUtlSymbolLarge>::StaticAccessor(void)::m);
+    CPointValueRemapper::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CPointValueRemapper[35].m_pType = (*(*v7 + 120LL))(v7);
+    CPointValueRemapper::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CPointValueRemapper[36].m_pType = (*(*v7 + 88LL))(v7, "CEntityIOOutput");
+    CPointValueRemapper::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CPointValueRemapper[37].m_pType = (*(*v7 + 88LL))(v7, "CEntityIOOutput");
+    CPointValueRemapper::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CPointValueRemapper[38].m_pType = (*(*v7 + 88LL))(v7, "CEntityIOOutput");
+    CPointValueRemapper::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CPointValueRemapper[39].m_pType = (*(*v7 + 88LL))(v7, "CEntityIOOutput");
+    CPointValueRemapper::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CPointValueRemapper[40].m_pType = (*(*v7 + 88LL))(v7, "CEntityIOOutput");
+    if ( `guard variable for'CPointValueRemapper::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_NestedClassesOf_CPointValueRemapper == 0
+      && __cxa_guard_acquire(&`guard variable for'CPointValueRemapper::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_NestedClassesOf_CPointValueRemapper) != 0 )
+    {
+      v15 = CPointValueRemapper::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult;
+      if ( CPointValueRemapper::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult == 0 )
+        v15 = CPointValueRemapper::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+                pSchemaSystem,
+                pBinaryName,
+                pProjectName);
+      CPointValueRemapper::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_NestedClassesOf_CPointValueRemapper[0] = v15;
+      __cxa_guard_release(&`guard variable for'CPointValueRemapper::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_NestedClassesOf_CPointValueRemapper);
+    }
+    (*(CBaseEntity::s_pSchemaBindingForLocalModule->_vptr_ISchemaBinding + 5))(
+      CBaseEntity::s_pSchemaBindingForLocalModule,
+      pSchemaSystem,
+      pBinaryName,
+      pProjectName);
+    v16 = CBaseEntity::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+            pSchemaSystem,
+            pBinaryName,
+            pProjectName);
+    CPointValueRemapper::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CPointValueRemapper.m_pOuterTypeScope = v7;
+    CPointValueRemapper::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassBases_CPointValueRemapper[0].m_pClass = v16;
+    CPointValueRemapper::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult = &CPointValueRemapper::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CPointValueRemapper;
+    return &CPointValueRemapper::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CPointValueRemapper;
+  }
+  return result;
+}
+
+
+// CPointValueRemapper::Schema_VerifyBindingIsRegistered  (line 600, @0x000000000232bae0, libserver.so)
+void __cdecl CPointValueRemapper::Schema_VerifyBindingIsRegistered()
+{
+  ;
+}
+
+
+// CPointValueRemapper::SetupEntClassInputs  (line 614, @0x000000000232baf0, libserver.so)  // inlines: CEntityIOInputFunction<CPointValueRemapper, CPointValueRemapper>, CUtlAbstractDelegate, SetMementoFrom, operator=
+// calls: __cxa_guard_acquire, __cxa_guard_release
+// callers: CPointValueRemapper::GetEntityClassInternal
+// strings: "SetMomentumType", "SetMomentumModifier", "SetSnapValue", "SetEngageDistance", "SetDisengageistance"
+// globals: `guard variable for'CPointValueRemapper::SetupEntClassInputs(CEntityClass *)::CPointValueRemapper_Inputs, CPointValueRemapper::SetupEntClassInputs(CEntityClass *)::CPointValueRemapper_Inputs, CPointValueRemapper::InputEnable(CEntityInstance *,CEntityInstance *,CEntityInstance *,CVariantBase<CVariantDefaultAllocator> const&), InputFunctionAdapterVariant(CUtlAbstractDelegate const&,CEntityInstance *,CEntityInstance *,CEntityInstance *,int,void *,CVariantBase<CVariantDefaultAllocator> , CPointValueRemapper::InputDisable(CEntityInstance *,CEntityInstance *,CEntityInstance *,CVariantBase<CVariantDefaultAllocator> const&), CPointValueRemapper::Input_SetMomentumType(CEntityInstance *,CEntityInstance *,CEntityInstance *,CVariantBase<CVariantDefaultAllocator> const&), CPointValueRemapper::Input_SetMomentumModifier(CEntityInstance *,CEntityInstance *,CEntityInstance *,CVariantBase<CVariantDefaultAllocator> const&), CPointValueRemapper::Input_SetSnapValue(CEntityInstance *,CEntityInstance *,CEntityInstance *,CVariantBase<CVariantDefaultAllocator> const&) (10 total)
+void __fastcall CPointValueRemapper::SetupEntClassInputs(CEntityClass *pEntityClass)
+{
+  if ( `guard variable for'CPointValueRemapper::SetupEntClassInputs(CEntityClass *)::CPointValueRemapper_Inputs == 0
+    && __cxa_guard_acquire(&`guard variable for'CPointValueRemapper::SetupEntClassInputs(CEntityClass *)::CPointValueRemapper_Inputs) != 0 )
+  {
+    qword_4B40458 = 0;
+    CPointValueRemapper::SetupEntClassInputs(CEntityClass *)::CPointValueRemapper_Inputs[0].m_inputFunction.m_pName = "Enable";
+    qword_4B40460 = CPointValueRemapper::InputEnable;
+    qword_4B40470 = InputFunctionAdapterVariant;
+    qword_4B40478 = "Disable";
+    qword_4B40498 = CPointValueRemapper::InputDisable;
+    qword_4B404A8 = InputFunctionAdapterVariant;
+    qword_4B404B0 = "SetMomentumType";
+    qword_4B404D0 = CPointValueRemapper::Input_SetMomentumType;
+    qword_4B404E0 = InputFunctionAdapterVariant;
+    qword_4B404E8 = "SetMomentumModifier";
+    qword_4B40508 = CPointValueRemapper::Input_SetMomentumModifier;
+    qword_4B40518 = InputFunctionAdapterVariant;
+    qword_4B40520 = "SetSnapValue";
+    qword_4B40540 = CPointValueRemapper::Input_SetSnapValue;
+    dword_4B40448 = 0;
+    qword_4B40450 = 0;
+    qword_4B40468 = 0;
+    qword_4B40490 = 0;
+    dword_4B40480 = 0;
+    qword_4B40488 = 0;
+    qword_4B404A0 = 0;
+    qword_4B404C8 = 0;
+    dword_4B404B8 = 0;
+    qword_4B404C0 = 0;
+    qword_4B404D8 = 0;
+    qword_4B40500 = 0;
+    dword_4B404F0 = 0;
+    qword_4B404F8 = 0;
+    qword_4B40510 = 0;
+    qword_4B40538 = 0;
+    dword_4B40528 = 0;
+    qword_4B40530 = 0;
+    qword_4B40548 = 0;
+    qword_4B40550 = InputFunctionAdapterVariant;
+    qword_4B40558 = "SetEngageDistance";
+    qword_4B40578 = CPointValueRemapper::Input_SetEngageDistance;
+    qword_4B40588 = InputFunctionAdapterVariant;
+    qword_4B40590 = "SetDisengageistance";
+    qword_4B405B0 = CPointValueRemapper::Input_SetDisengageDistance;
+    qword_4B405C0 = InputFunctionAdapterVariant;
+    qword_4B40570 = 0;
+    dword_4B40560 = 0;
+    qword_4B40568 = 0;
+    qword_4B40580 = 0;
+    qword_4B405A8 = 0;
+    dword_4B40598 = 0;
+    qword_4B405A0 = 0;
+    qword_4B405B8 = 0;
+    __cxa_guard_release(&`guard variable for'CPointValueRemapper::SetupEntClassInputs(CEntityClass *)::CPointValueRemapper_Inputs);
+  }
+  pEntityClass->m_nInputCount = 7;
+  pEntityClass->m_pInputs = CPointValueRemapper::SetupEntClassInputs(CEntityClass *)::CPointValueRemapper_Inputs;
+}
+
+
+// CPointValueRemapper::SetupEntClassComponentOverrides  (line 628, @0x000000000232bda0, libserver.so)
+void __fastcall CPointValueRemapper::SetupEntClassComponentOverrides(CEntityClass *pEntityClass)
+{
+  pEntityClass->m_pComponentOverrides = 0;
+}
+
+
+// LocalRegisterSchemaModule<ArbitraryTemplateParameter_server_point_value_remapper_cpp>  (line 634, @0x000000000232bdb0, libserver.so)  // inlines: Call, Get
+// callers: RegisterSchemaModule_point_value_remapper_cpp
+// strings: "ValueRemapperInputType_t", "ValueRemapperOutputType_t", "ValueRemapperHapticsType_t", "ValueRemapperMomentumType_t", "ValueRemapperRatchetType_t"
+// globals: CSchemaEnumBinding<ValueRemapperInputType_t>::s_pThisModuleBindingPointer, CSchemaEnumBinding<ValueRemapperOutputType_t>::s_pThisModuleBindingPointer, CSchemaEnumBinding<ValueRemapperHapticsType_t>::s_pThisModuleBindingPointer, CSchemaEnumBinding<ValueRemapperMomentumType_t>::s_pThisModuleBindingPointer, CSchemaEnumBinding<ValueRemapperRatchetType_t>::s_pThisModuleBindingPointer, CPointValueRemapper::CEntityInstanceEntityClass::s_pSchemaBindingForLocalModule, CPointValueRemapper::s_pSchemaBindingForLocalModule
+void __fastcall LocalRegisterSchemaModule<ArbitraryTemplateParameter_server_point_value_remapper_cpp>(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        SchemaRegistrationPhase_t nRegistrationPhase)
+{
+  if ( nRegistrationPhase != SchemaRegistrationPhase_t::SCHEMA_REGISTRATION_PHASE_ATOMIC_TYPES_AND_ENUMS )
+  {
+    if ( nRegistrationPhase == SchemaRegistrationPhase_t::SCHEMA_REGISTRATION_PHASE_CLASSES )
+    {
+      (*(CPointValueRemapper::CEntityInstanceEntityClass::s_pSchemaBindingForLocalModule->_vptr_ISchemaBinding + 5))(
+        CPointValueRemapper::CEntityInstanceEntityClass::s_pSchemaBindingForLocalModule,
+        pSchemaSystem,
+        pBinaryName,
+        "server");
+      (*(CPointValueRemapper::s_pSchemaBindingForLocalModule->_vptr_ISchemaBinding + 5))(
+        CPointValueRemapper::s_pSchemaBindingForLocalModule,
+        pSchemaSystem,
+        pBinaryName,
+        "server");
+    }
+    ++g_nLinkerHack_SchemaAnchor_RegistrationCountFor_server;
+  }
+  else
+  {
+    (*(CSchemaEnumBinding<ValueRemapperInputType_t>::s_pThisModuleBindingPointer->_vptr_ISchemaBinding + 5))(
+      CSchemaEnumBinding<ValueRemapperInputType_t>::s_pThisModuleBindingPointer,
+      pSchemaSystem,
+      pBinaryName,
+      "server",
+      "ValueRemapperInputType_t");
+    (*(CSchemaEnumBinding<ValueRemapperOutputType_t>::s_pThisModuleBindingPointer->_vptr_ISchemaBinding + 5))(
+      CSchemaEnumBinding<ValueRemapperOutputType_t>::s_pThisModuleBindingPointer,
+      pSchemaSystem,
+      pBinaryName,
+      "server",
+      "ValueRemapperOutputType_t");
+    (*(CSchemaEnumBinding<ValueRemapperHapticsType_t>::s_pThisModuleBindingPointer->_vptr_ISchemaBinding + 5))(
+      CSchemaEnumBinding<ValueRemapperHapticsType_t>::s_pThisModuleBindingPointer,
+      pSchemaSystem,
+      pBinaryName,
+      "server",
+      "ValueRemapperHapticsType_t");
+    (*(CSchemaEnumBinding<ValueRemapperMomentumType_t>::s_pThisModuleBindingPointer->_vptr_ISchemaBinding + 5))(
+      CSchemaEnumBinding<ValueRemapperMomentumType_t>::s_pThisModuleBindingPointer,
+      pSchemaSystem,
+      pBinaryName,
+      "server",
+      "ValueRemapperMomentumType_t");
+    (*(CSchemaEnumBinding<ValueRemapperRatchetType_t>::s_pThisModuleBindingPointer->_vptr_ISchemaBinding + 5))(
+      CSchemaEnumBinding<ValueRemapperRatchetType_t>::s_pThisModuleBindingPointer,
+      pSchemaSystem,
+      pBinaryName,
+      "server",
+      "ValueRemapperRatchetType_t");
+    ++g_nLinkerHack_SchemaAnchor_RegistrationCountFor_server;
+  }
+}
+
+
+// RegisterSchemaModule_point_value_remapper_cpp  (line 642, @0x000000000232bee0, libserver.so)
+// calls: LocalRegisterSchemaModule<ArbitraryTemplateParameter_server_point_value_remapper_cpp>
+// callers: CSchemaRegistration_server::RegisterAllBindings
+void __fastcall RegisterSchemaModule_point_value_remapper_cpp(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        SchemaRegistrationPhase_t nRegistrationPhase)
+{
+  LocalRegisterSchemaModule<ArbitraryTemplateParameter_server_point_value_remapper_cpp>(
+    pSchemaSystem,
+    pBinaryName,
+    nRegistrationPhase);
+}
+
+

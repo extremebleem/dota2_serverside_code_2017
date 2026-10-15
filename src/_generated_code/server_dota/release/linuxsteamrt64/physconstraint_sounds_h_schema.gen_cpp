@@ -1,0 +1,284 @@
+
+// ==== functions (decompiled by Hex-Rays; names/signatures from DWARF) ====
+
+// CSchemaEnumBinding<SimpleConstraintSoundProfile::SimpleConstraintsSoundProfileKeypoints_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE  (line 35, @0x0000000001ff7de0, libserver.so)  // inlines: Count, Initialize, SetTypeScope
+// callers: CSchemaEnumBinding<SimpleConstraintSoundProfile::SimpleConstraintsSoundProfileKeypoints_t>::Register, SimpleConstraintSoundProfile::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE
+// globals: CSchemaEnumBinding<SimpleConstraintSoundProfile::SimpleConstraintsSoundProfileKeypoints_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS
+CSchemaEnumInfo *__fastcall CSchemaEnumBinding<SimpleConstraintSoundProfile::SimpleConstraintsSoundProfileKeypoints_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        const char *pProjectName)
+{
+  ISchemaSystemTypeScope *v3; // rax
+  unsigned int v4; // edi
+  SchemaEnumeratorValue_t v5; // r8
+  SchemaEnumeratorValue_t v6; // r9
+  SchemaEnumeratorValue_t *v7; // rdx
+
+  v3 = (*(*pSchemaSystem + 112LL))(pSchemaSystem, 0, pBinaryName);
+  if ( CSchemaEnumBinding<SimpleConstraintSoundProfile::SimpleConstraintsSoundProfileKeypoints_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_SimpleConstraintSoundProfile_SimpleConstraintsSoundProfileKeypoints_t.m_Enumerators.m_Data.m_nImplLength != 0 )
+  {
+    v4 = abs32(CSchemaEnumBinding<SimpleConstraintSoundProfile::SimpleConstraintsSoundProfileKeypoints_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_SimpleConstraintSoundProfile_SimpleConstraintsSoundProfileKeypoints_t.m_Enumerators.m_Data.m_nImplLength);
+    v5 = *(CSchemaEnumBinding<SimpleConstraintSoundProfile::SimpleConstraintsSoundProfileKeypoints_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_SimpleConstraintSoundProfile_SimpleConstraintsSoundProfileKeypoints_t.m_Enumerators.m_Data.m_pImplElements
+         + 2);
+    CSchemaEnumBinding<SimpleConstraintSoundProfile::SimpleConstraintsSoundProfileKeypoints_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_SimpleConstraintSoundProfile_SimpleConstraintsSoundProfileKeypoints_t.m_nMinValue = v5;
+    v6 = *(CSchemaEnumBinding<SimpleConstraintSoundProfile::SimpleConstraintsSoundProfileKeypoints_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_SimpleConstraintSoundProfile_SimpleConstraintsSoundProfileKeypoints_t.m_Enumerators.m_Data.m_pImplElements
+         + 2);
+    CSchemaEnumBinding<SimpleConstraintSoundProfile::SimpleConstraintsSoundProfileKeypoints_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_SimpleConstraintSoundProfile_SimpleConstraintsSoundProfileKeypoints_t.m_nMaxValue = v6;
+    if ( v4 != 1 )
+    {
+      v7 = (CSchemaEnumBinding<SimpleConstraintSoundProfile::SimpleConstraintsSoundProfileKeypoints_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_SimpleConstraintSoundProfile_SimpleConstraintsSoundProfileKeypoints_t.m_Enumerators.m_Data.m_pImplElements
+          + 72);
+      do
+      {
+        if ( v5 > *v7 )
+          v5 = *v7;
+        CSchemaEnumBinding<SimpleConstraintSoundProfile::SimpleConstraintsSoundProfileKeypoints_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_SimpleConstraintSoundProfile_SimpleConstraintsSoundProfileKeypoints_t.m_nMinValue = v5;
+        if ( v6 < *v7 )
+          v6 = *v7;
+        v7 += 7;
+        CSchemaEnumBinding<SimpleConstraintSoundProfile::SimpleConstraintsSoundProfileKeypoints_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_SimpleConstraintSoundProfile_SimpleConstraintsSoundProfileKeypoints_t.m_nMaxValue = v6;
+      }
+      while ( v7 != CSchemaEnumBinding<SimpleConstraintSoundProfile::SimpleConstraintsSoundProfileKeypoints_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_SimpleConstraintSoundProfile_SimpleConstraintsSoundProfileKeypoints_t.m_Enumerators.m_Data.m_pImplElements
+                  + 7 * v4
+                  + 2 );
+    }
+  }
+  else
+  {
+    CSchemaEnumBinding<SimpleConstraintSoundProfile::SimpleConstraintsSoundProfileKeypoints_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_SimpleConstraintSoundProfile_SimpleConstraintsSoundProfileKeypoints_t.m_nMinValue = 0;
+    CSchemaEnumBinding<SimpleConstraintSoundProfile::SimpleConstraintsSoundProfileKeypoints_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_SimpleConstraintSoundProfile_SimpleConstraintsSoundProfileKeypoints_t.m_nMaxValue = 0;
+  }
+  CSchemaEnumBinding<SimpleConstraintSoundProfile::SimpleConstraintsSoundProfileKeypoints_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_SimpleConstraintSoundProfile_SimpleConstraintsSoundProfileKeypoints_t.m_pOuterTypeScope = v3;
+  (*(*v3 + 272LL))(
+    v3,
+    &CSchemaEnumBinding<SimpleConstraintSoundProfile::SimpleConstraintsSoundProfileKeypoints_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_SimpleConstraintSoundProfile_SimpleConstraintsSoundProfileKeypoints_t);
+  return &CSchemaEnumBinding<SimpleConstraintSoundProfile::SimpleConstraintsSoundProfileKeypoints_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_SimpleConstraintSoundProfile_SimpleConstraintsSoundProfileKeypoints_t;
+}
+
+
+// VelocitySampler::Schema_CompileTimeVerificationFunction  (line 47, @0x0000000001ff7ec0, libserver.so)
+void __fastcall VelocitySampler::Schema_CompileTimeVerificationFunction(VelocitySampler *const this)
+{
+  ;
+}
+
+
+// VelocitySampler::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE  (line 53, @0x0000000001ff7ed0, libserver.so)  // inlines: Get, SchemaBinding_SchemaTypeOfMemberVarByAddr<VelocitySampler, Vector>, SchemaBinding_SchemaTypeOfMemberVarByAddr<VelocitySampler, float>, SetTypeScope
+// callers: CSchemaClassBinding<VelocitySampler>::Register
+// globals: VelocitySampler::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitia, CSchemaManipulator<Vector>::StaticAccessor(void)::m, CAtomicManipulator<Vector>::Get(void)::val, VelocitySampler::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchem
+CSchemaClassInfo *__fastcall VelocitySampler::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        const char *pProjectName)
+{
+  CSchemaClassInfo *result; // rax
+  ISchemaSystemTypeScope *v4; // rbx
+  CSchemaType *v5; // rax
+
+  result = VelocitySampler::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult;
+  if ( VelocitySampler::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult == 0 )
+  {
+    v4 = (*(*pSchemaSystem + 112LL))(pSchemaSystem, 0, pBinaryName);
+    VelocitySampler::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_VelocitySampler[0].m_pType = (*(*v4 + 56LL))(v4, "Vector", 2010, CAtomicManipulator<Vector>::Get(void)::val, CSchemaManipulator<Vector>::StaticAccessor(void)::m);
+    VelocitySampler::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_VelocitySampler[1].m_pType = (*(*v4 + 40LL))(v4, 11);
+    v5 = (*(*v4 + 40LL))(v4, 11);
+    VelocitySampler::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_VelocitySampler.m_pOuterTypeScope = v4;
+    VelocitySampler::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_VelocitySampler[2].m_pType = v5;
+    VelocitySampler::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult = &VelocitySampler::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_VelocitySampler;
+    (*(*v4 + 264LL))(
+      v4,
+      &VelocitySampler::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_VelocitySampler);
+    return VelocitySampler::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult;
+  }
+  return result;
+}
+
+
+// VelocitySampler::Schema_VerifyBindingIsRegistered  (line 69, @0x0000000001ff7f90, libserver.so)
+void __cdecl VelocitySampler::Schema_VerifyBindingIsRegistered()
+{
+  ;
+}
+
+
+// SimpleConstraintSoundProfile::Schema_CompileTimeVerificationFunction  (line 77, @0x0000000001ff7fa0, libserver.so)
+void __fastcall SimpleConstraintSoundProfile::Schema_CompileTimeVerificationFunction(
+        SimpleConstraintSoundProfile *const this)
+{
+  ;
+}
+
+
+// SimpleConstraintSoundProfile::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE  (line 83, @0x0000000001ff7fb0, libserver.so)  // inlines: Get, GetInfo, SchemaBinding_SchemaTypeOfMemberVarByAddr<SimpleConstraintSoundProfile, SimpleConstraintSoundProfile::SimpleConstraintsSoundProfileKeypoints_t>, SchemaBinding_SchemaTypeOfMemberVarByAddr<SimpleConstraintSoundProfile, float [2]>, SchemaBinding_SchemaTypeOfMemberVarByAddr<SimpleConstraintSoundProfile, float [3]>, SetTypeScope
+// calls: __cxa_guard_acquire, CSchemaEnumBinding<SimpleConstraintSoundProfile::SimpleConstraintsSoundProfileKeypoints_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE, __cxa_guard_release, __cxa_guard_abort, _Unwind_Resume
+// callers: CSchemaClassBinding<SimpleConstraintSoundProfile>::Register
+// strings: "SimpleConstraintSoundProfile::SimpleConstraintsSoundProfileKeypoints_t"
+// globals: SimpleConstraintSoundProfile::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const, `guard variable for'SimpleConstraintSoundProfile::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,ch
+CSchemaClassInfo *__fastcall SimpleConstraintSoundProfile::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        const char *pProjectName)
+{
+  CSchemaClassInfo *result; // rax
+  ISchemaSystemTypeScope *v7; // r12
+  __int64 (__fastcall *v8)(ISchemaSystemTypeScope *, __int64, __int64); // r15
+  __int64 v9; // rax
+  __int64 (__fastcall *v10)(ISchemaSystemTypeScope *, __int64, __int64); // r15
+  __int64 v11; // rax
+
+  result = SimpleConstraintSoundProfile::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult;
+  if ( SimpleConstraintSoundProfile::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult == 0 )
+  {
+    v7 = (*(*pSchemaSystem + 112LL))(pSchemaSystem, 0, pBinaryName);
+    SimpleConstraintSoundProfile::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_SimpleConstraintSoundProfile[0].m_pType = (*(*v7 + 96LL))(v7, "SimpleConstraintSoundProfile::SimpleConstraintsSoundProfileKeypoints_t");
+    v8 = *(*v7 + 104LL);
+    v9 = (*(*v7 + 40LL))(v7, 11);
+    SimpleConstraintSoundProfile::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_SimpleConstraintSoundProfile[1].m_pType = v8(v7, v9, 2);
+    v10 = *(*v7 + 104LL);
+    v11 = (*(*v7 + 40LL))(v7, 11);
+    SimpleConstraintSoundProfile::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_SimpleConstraintSoundProfile[2].m_pType = v10(v7, v11, 3);
+    if ( `guard variable for'SimpleConstraintSoundProfile::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_NestedEnumsOf_SimpleConstraintSoundProfile == 0
+      && __cxa_guard_acquire(&`guard variable for'SimpleConstraintSoundProfile::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_NestedEnumsOf_SimpleConstraintSoundProfile) != 0 )
+    {
+      SimpleConstraintSoundProfile::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_NestedEnumsOf_SimpleConstraintSoundProfile[0] = CSchemaEnumBinding<SimpleConstraintSoundProfile::SimpleConstraintsSoundProfileKeypoints_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(pSchemaSystem, pBinaryName, pProjectName);
+      __cxa_guard_release(&`guard variable for'SimpleConstraintSoundProfile::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_NestedEnumsOf_SimpleConstraintSoundProfile);
+    }
+    SimpleConstraintSoundProfile::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_SimpleConstraintSoundProfile.m_pOuterTypeScope = v7;
+    SimpleConstraintSoundProfile::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult = &SimpleConstraintSoundProfile::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_SimpleConstraintSoundProfile;
+    (*(*v7 + 264LL))(
+      v7,
+      &SimpleConstraintSoundProfile::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_SimpleConstraintSoundProfile);
+    return SimpleConstraintSoundProfile::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult;
+  }
+  return result;
+}
+
+
+// SimpleConstraintSoundProfile::Schema_VerifyBindingIsRegistered  (line 125, @0x0000000001ff80f0, libserver.so)
+void __cdecl SimpleConstraintSoundProfile::Schema_VerifyBindingIsRegistered()
+{
+  ;
+}
+
+
+// ConstraintSoundInfo::Schema_CompileTimeVerificationFunction  (line 133, @0x0000000001ff8100, libserver.so)
+void __fastcall ConstraintSoundInfo::Schema_CompileTimeVerificationFunction(ConstraintSoundInfo *const this)
+{
+  ;
+}
+
+
+// ConstraintSoundInfo::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE  (line 144, @0x0000000001ff8110, libserver.so)  // inlines: Get, SchemaBinding_SchemaTypeOfMemberVarByAddr<ConstraintSoundInfo, CUtlSymbolLarge [3]>, SchemaBinding_SchemaTypeOfMemberVarByAddr<ConstraintSoundInfo, CUtlSymbolLarge>, SchemaBinding_SchemaTypeOfMemberVarByAddr<ConstraintSoundInfo, SimpleConstraintSoundProfile>, SchemaBinding_SchemaTypeOfMemberVarByAddr<ConstraintSoundInfo, Vector>, SchemaBinding_SchemaTypeOfMemberVarByAddr<ConstraintSoundInfo, VelocitySampler>, SchemaBinding_SchemaTypeOfMemberVarByAddr<ConstraintSoundInfo, bool>, SetTypeScope
+// callers: CSchemaClassBinding<ConstraintSoundInfo>::Register
+// strings: "VelocitySampler", "SimpleConstraintSoundProfile", "CUtlSymbolLarge"
+// globals: ConstraintSoundInfo::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pIn, CSchemaManipulator<Vector>::StaticAccessor(void)::m, CAtomicManipulator<Vector>::Get(void)::val, CSchemaManipulator<CUtlSymbolLarge>::StaticAccessor(void)::m, CAtomicManipulator<CUtlSymbolLarge>::Get(void)::val, ConstraintSoundInfo::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplS
+CSchemaClassInfo *__fastcall ConstraintSoundInfo::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        const char *pProjectName)
+{
+  CSchemaClassInfo *result; // rax
+  ISchemaSystemTypeScope *v4; // rbx
+  __int64 (__fastcall *v5)(ISchemaSystemTypeScope *, __int64, __int64); // r12
+  __int64 v6; // rax
+  CSchemaType *v7; // rax
+
+  result = ConstraintSoundInfo::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult;
+  if ( ConstraintSoundInfo::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult == 0 )
+  {
+    v4 = (*(*pSchemaSystem + 112LL))(pSchemaSystem, 0, pBinaryName);
+    ConstraintSoundInfo::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_ConstraintSoundInfo[0].m_pType = (*(*v4 + 88LL))(v4, "VelocitySampler");
+    ConstraintSoundInfo::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_ConstraintSoundInfo[1].m_pType = (*(*v4 + 88LL))(v4, "SimpleConstraintSoundProfile");
+    ConstraintSoundInfo::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_ConstraintSoundInfo[2].m_pType = (*(*v4 + 56LL))(v4, "Vector", 2010, CAtomicManipulator<Vector>::Get(void)::val, CSchemaManipulator<Vector>::StaticAccessor(void)::m);
+    ConstraintSoundInfo::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_ConstraintSoundInfo[3].m_pType = (*(*v4 + 56LL))(v4, "CUtlSymbolLarge", 3007, CAtomicManipulator<CUtlSymbolLarge>::Get(void)::val, &CSchemaManipulator<CUtlSymbolLarge>::StaticAccessor(void)::m);
+    ConstraintSoundInfo::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_ConstraintSoundInfo[4].m_pType = (*(*v4 + 56LL))(v4, "CUtlSymbolLarge", 3007, CAtomicManipulator<CUtlSymbolLarge>::Get(void)::val, &CSchemaManipulator<CUtlSymbolLarge>::StaticAccessor(void)::m);
+    ConstraintSoundInfo::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_ConstraintSoundInfo[5].m_pType = (*(*v4 + 40LL))(v4, 13);
+    v5 = *(*v4 + 104LL);
+    v6 = (*(*v4 + 56LL))(
+           v4,
+           "CUtlSymbolLarge",
+           3007,
+           CAtomicManipulator<CUtlSymbolLarge>::Get(void)::val,
+           &CSchemaManipulator<CUtlSymbolLarge>::StaticAccessor(void)::m);
+    ConstraintSoundInfo::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_ConstraintSoundInfo[6].m_pType = v5(v4, v6, 3);
+    v7 = (*(*v4 + 40LL))(v4, 13);
+    ConstraintSoundInfo::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_ConstraintSoundInfo.m_pOuterTypeScope = v4;
+    ConstraintSoundInfo::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_ConstraintSoundInfo[7].m_pType = v7;
+    ConstraintSoundInfo::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult = &ConstraintSoundInfo::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_ConstraintSoundInfo;
+    (*(*v4 + 264LL))(
+      v4,
+      &ConstraintSoundInfo::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_ConstraintSoundInfo);
+    return ConstraintSoundInfo::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult;
+  }
+  return result;
+}
+
+
+// ConstraintSoundInfo::Schema_VerifyBindingIsRegistered  (line 198, @0x0000000001ff8280, libserver.so)
+void __cdecl ConstraintSoundInfo::Schema_VerifyBindingIsRegistered()
+{
+  ;
+}
+
+
+// LocalRegisterSchemaModule<ArbitraryTemplateParameter_server_physconstraint_sounds_h>  (line 206, @0x0000000001ff8290, libserver.so)  // inlines: Call, Get
+// callers: RegisterSchemaModule_physconstraint_sounds_h
+// strings: "SimpleConstraintSoundProfile::SimpleConstraintsSoundProfileKeypoints_t"
+// globals: CSchemaEnumBinding<SimpleConstraintSoundProfile::SimpleConstraintsSoundProfileKeypoints_t>::s_pThisModuleBindingPointer, VelocitySampler::s_pSchemaBindingForLocalModule, SimpleConstraintSoundProfile::s_pSchemaBindingForLocalModule, ConstraintSoundInfo::s_pSchemaBindingForLocalModule
+void __fastcall LocalRegisterSchemaModule<ArbitraryTemplateParameter_server_physconstraint_sounds_h>(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        SchemaRegistrationPhase_t nRegistrationPhase)
+{
+  if ( nRegistrationPhase != SchemaRegistrationPhase_t::SCHEMA_REGISTRATION_PHASE_ATOMIC_TYPES_AND_ENUMS )
+  {
+    if ( nRegistrationPhase == SchemaRegistrationPhase_t::SCHEMA_REGISTRATION_PHASE_CLASSES )
+    {
+      (*(VelocitySampler::s_pSchemaBindingForLocalModule->_vptr_ISchemaBinding + 5))(
+        VelocitySampler::s_pSchemaBindingForLocalModule,
+        pSchemaSystem,
+        pBinaryName,
+        "server");
+      (*(SimpleConstraintSoundProfile::s_pSchemaBindingForLocalModule->_vptr_ISchemaBinding + 5))(
+        SimpleConstraintSoundProfile::s_pSchemaBindingForLocalModule,
+        pSchemaSystem,
+        pBinaryName,
+        "server");
+      (*(ConstraintSoundInfo::s_pSchemaBindingForLocalModule->_vptr_ISchemaBinding + 5))(
+        ConstraintSoundInfo::s_pSchemaBindingForLocalModule,
+        pSchemaSystem,
+        pBinaryName,
+        "server");
+    }
+    ++g_nLinkerHack_SchemaAnchor_RegistrationCountFor_server;
+  }
+  else
+  {
+    (*(CSchemaEnumBinding<SimpleConstraintSoundProfile::SimpleConstraintsSoundProfileKeypoints_t>::s_pThisModuleBindingPointer->_vptr_ISchemaBinding
+     + 5))(
+      CSchemaEnumBinding<SimpleConstraintSoundProfile::SimpleConstraintsSoundProfileKeypoints_t>::s_pThisModuleBindingPointer,
+      pSchemaSystem,
+      pBinaryName,
+      "server",
+      "SimpleConstraintSoundProfile::SimpleConstraintsSoundProfileKeypoints_t");
+    ++g_nLinkerHack_SchemaAnchor_RegistrationCountFor_server;
+  }
+}
+
+
+// RegisterSchemaModule_physconstraint_sounds_h  (line 211, @0x0000000001ff8350, libserver.so)
+// calls: LocalRegisterSchemaModule<ArbitraryTemplateParameter_server_physconstraint_sounds_h>
+// callers: CSchemaRegistration_server::RegisterAllBindings
+void __fastcall RegisterSchemaModule_physconstraint_sounds_h(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        SchemaRegistrationPhase_t nRegistrationPhase)
+{
+  LocalRegisterSchemaModule<ArbitraryTemplateParameter_server_physconstraint_sounds_h>(
+    pSchemaSystem,
+    pBinaryName,
+    nRegistrationPhase);
+}
+
+

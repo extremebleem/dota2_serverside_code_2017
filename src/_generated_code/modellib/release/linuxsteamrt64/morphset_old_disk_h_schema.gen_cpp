@@ -1,0 +1,806 @@
+
+// ==== functions (decompiled by Hex-Rays; names/signatures from DWARF) ====
+
+// CSchemaEnumBinding<RenderMeshFlexControllerRemapType_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE  (line 33, @0x00000000031a0940, libserver.so)  // inlines: Count, Initialize, SetTypeScope
+// callers: CSchemaEnumBinding<RenderMeshFlexControllerRemapType_t>::Register
+// globals: CSchemaEnumBinding<RenderMeshFlexControllerRemapType_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSyste
+CSchemaEnumInfo *__fastcall CSchemaEnumBinding<RenderMeshFlexControllerRemapType_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        const char *pProjectName)
+{
+  ISchemaSystemTypeScope *v3; // rax
+  unsigned int v4; // edi
+  SchemaEnumeratorValue_t v5; // r8
+  SchemaEnumeratorValue_t v6; // r9
+  SchemaEnumeratorValue_t *v7; // rdx
+
+  v3 = (*(*pSchemaSystem + 112LL))(pSchemaSystem, 0, pBinaryName);
+  if ( CSchemaEnumBinding<RenderMeshFlexControllerRemapType_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_RenderMeshFlexControllerRemapType_t.m_Enumerators.m_Data.m_nImplLength != 0 )
+  {
+    v4 = abs32(CSchemaEnumBinding<RenderMeshFlexControllerRemapType_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_RenderMeshFlexControllerRemapType_t.m_Enumerators.m_Data.m_nImplLength);
+    v5 = *(CSchemaEnumBinding<RenderMeshFlexControllerRemapType_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_RenderMeshFlexControllerRemapType_t.m_Enumerators.m_Data.m_pImplElements
+         + 2);
+    CSchemaEnumBinding<RenderMeshFlexControllerRemapType_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_RenderMeshFlexControllerRemapType_t.m_nMinValue = v5;
+    v6 = *(CSchemaEnumBinding<RenderMeshFlexControllerRemapType_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_RenderMeshFlexControllerRemapType_t.m_Enumerators.m_Data.m_pImplElements
+         + 2);
+    CSchemaEnumBinding<RenderMeshFlexControllerRemapType_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_RenderMeshFlexControllerRemapType_t.m_nMaxValue = v6;
+    if ( v4 != 1 )
+    {
+      v7 = (CSchemaEnumBinding<RenderMeshFlexControllerRemapType_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_RenderMeshFlexControllerRemapType_t.m_Enumerators.m_Data.m_pImplElements
+          + 72);
+      do
+      {
+        if ( v5 > *v7 )
+          v5 = *v7;
+        CSchemaEnumBinding<RenderMeshFlexControllerRemapType_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_RenderMeshFlexControllerRemapType_t.m_nMinValue = v5;
+        if ( v6 < *v7 )
+          v6 = *v7;
+        v7 += 7;
+        CSchemaEnumBinding<RenderMeshFlexControllerRemapType_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_RenderMeshFlexControllerRemapType_t.m_nMaxValue = v6;
+      }
+      while ( v7 != CSchemaEnumBinding<RenderMeshFlexControllerRemapType_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_RenderMeshFlexControllerRemapType_t.m_Enumerators.m_Data.m_pImplElements
+                  + 7 * v4
+                  + 2 );
+    }
+  }
+  else
+  {
+    CSchemaEnumBinding<RenderMeshFlexControllerRemapType_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_RenderMeshFlexControllerRemapType_t.m_nMinValue = 0;
+    CSchemaEnumBinding<RenderMeshFlexControllerRemapType_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_RenderMeshFlexControllerRemapType_t.m_nMaxValue = 0;
+  }
+  CSchemaEnumBinding<RenderMeshFlexControllerRemapType_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_RenderMeshFlexControllerRemapType_t.m_pOuterTypeScope = v3;
+  (*(*v3 + 272LL))(
+    v3,
+    &CSchemaEnumBinding<RenderMeshFlexControllerRemapType_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_RenderMeshFlexControllerRemapType_t);
+  return &CSchemaEnumBinding<RenderMeshFlexControllerRemapType_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_RenderMeshFlexControllerRemapType_t;
+}
+
+
+// CSchemaEnumBinding<BundleType_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE  (line 46, @0x00000000031a0a20, libserver.so)  // inlines: Count, Initialize, SetTypeScope
+// callers: CSchemaEnumBinding<BundleType_t>::Register
+// globals: CSchemaEnumBinding<BundleType_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char co
+CSchemaEnumInfo *__fastcall CSchemaEnumBinding<BundleType_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        const char *pProjectName)
+{
+  ISchemaSystemTypeScope *v3; // rax
+  unsigned int v4; // edi
+  SchemaEnumeratorValue_t v5; // r8
+  SchemaEnumeratorValue_t v6; // r9
+  SchemaEnumeratorValue_t *v7; // rdx
+
+  v3 = (*(*pSchemaSystem + 112LL))(pSchemaSystem, 0, pBinaryName);
+  if ( CSchemaEnumBinding<BundleType_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_BundleType_t.m_Enumerators.m_Data.m_nImplLength != 0 )
+  {
+    v4 = abs32(CSchemaEnumBinding<BundleType_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_BundleType_t.m_Enumerators.m_Data.m_nImplLength);
+    v5 = *(CSchemaEnumBinding<BundleType_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_BundleType_t.m_Enumerators.m_Data.m_pImplElements
+         + 2);
+    CSchemaEnumBinding<BundleType_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_BundleType_t.m_nMinValue = v5;
+    v6 = *(CSchemaEnumBinding<BundleType_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_BundleType_t.m_Enumerators.m_Data.m_pImplElements
+         + 2);
+    CSchemaEnumBinding<BundleType_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_BundleType_t.m_nMaxValue = v6;
+    if ( v4 != 1 )
+    {
+      v7 = (CSchemaEnumBinding<BundleType_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_BundleType_t.m_Enumerators.m_Data.m_pImplElements
+          + 72);
+      do
+      {
+        if ( v5 > *v7 )
+          v5 = *v7;
+        CSchemaEnumBinding<BundleType_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_BundleType_t.m_nMinValue = v5;
+        if ( v6 < *v7 )
+          v6 = *v7;
+        v7 += 7;
+        CSchemaEnumBinding<BundleType_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_BundleType_t.m_nMaxValue = v6;
+      }
+      while ( v7 != CSchemaEnumBinding<BundleType_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_BundleType_t.m_Enumerators.m_Data.m_pImplElements
+                  + 7 * v4
+                  + 2 );
+    }
+  }
+  else
+  {
+    CSchemaEnumBinding<BundleType_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_BundleType_t.m_nMinValue = 0;
+    CSchemaEnumBinding<BundleType_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_BundleType_t.m_nMaxValue = 0;
+  }
+  CSchemaEnumBinding<BundleType_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_BundleType_t.m_pOuterTypeScope = v3;
+  (*(*v3 + 272LL))(
+    v3,
+    &CSchemaEnumBinding<BundleType_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_BundleType_t);
+  return &CSchemaEnumBinding<BundleType_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_BundleType_t;
+}
+
+
+// CSchemaEnumBinding<MorphSetData_t::LookupType_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE  (line 59, @0x00000000031a0b00, libserver.so)  // inlines: Count, Initialize, SetTypeScope
+// callers: CSchemaEnumBinding<MorphSetData_t::LookupType_t>::Register, MorphSetData_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE
+// globals: CSchemaEnumBinding<MorphSetData_t::LookupType_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,cha
+CSchemaEnumInfo *__fastcall CSchemaEnumBinding<MorphSetData_t::LookupType_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        const char *pProjectName)
+{
+  ISchemaSystemTypeScope *v3; // rax
+  unsigned int v4; // edi
+  SchemaEnumeratorValue_t v5; // r8
+  SchemaEnumeratorValue_t v6; // r9
+  SchemaEnumeratorValue_t *v7; // rdx
+
+  v3 = (*(*pSchemaSystem + 112LL))(pSchemaSystem, 0, pBinaryName);
+  if ( CSchemaEnumBinding<MorphSetData_t::LookupType_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_MorphSetData_t_LookupType_t.m_Enumerators.m_Data.m_nImplLength != 0 )
+  {
+    v4 = abs32(CSchemaEnumBinding<MorphSetData_t::LookupType_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_MorphSetData_t_LookupType_t.m_Enumerators.m_Data.m_nImplLength);
+    v5 = *(CSchemaEnumBinding<MorphSetData_t::LookupType_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_MorphSetData_t_LookupType_t.m_Enumerators.m_Data.m_pImplElements
+         + 2);
+    CSchemaEnumBinding<MorphSetData_t::LookupType_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_MorphSetData_t_LookupType_t.m_nMinValue = v5;
+    v6 = *(CSchemaEnumBinding<MorphSetData_t::LookupType_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_MorphSetData_t_LookupType_t.m_Enumerators.m_Data.m_pImplElements
+         + 2);
+    CSchemaEnumBinding<MorphSetData_t::LookupType_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_MorphSetData_t_LookupType_t.m_nMaxValue = v6;
+    if ( v4 != 1 )
+    {
+      v7 = (CSchemaEnumBinding<MorphSetData_t::LookupType_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_MorphSetData_t_LookupType_t.m_Enumerators.m_Data.m_pImplElements
+          + 72);
+      do
+      {
+        if ( v5 > *v7 )
+          v5 = *v7;
+        CSchemaEnumBinding<MorphSetData_t::LookupType_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_MorphSetData_t_LookupType_t.m_nMinValue = v5;
+        if ( v6 < *v7 )
+          v6 = *v7;
+        v7 += 7;
+        CSchemaEnumBinding<MorphSetData_t::LookupType_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_MorphSetData_t_LookupType_t.m_nMaxValue = v6;
+      }
+      while ( v7 != CSchemaEnumBinding<MorphSetData_t::LookupType_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_MorphSetData_t_LookupType_t.m_Enumerators.m_Data.m_pImplElements
+                  + 7 * v4
+                  + 2 );
+    }
+  }
+  else
+  {
+    CSchemaEnumBinding<MorphSetData_t::LookupType_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_MorphSetData_t_LookupType_t.m_nMinValue = 0;
+    CSchemaEnumBinding<MorphSetData_t::LookupType_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_MorphSetData_t_LookupType_t.m_nMaxValue = 0;
+  }
+  CSchemaEnumBinding<MorphSetData_t::LookupType_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_MorphSetData_t_LookupType_t.m_pOuterTypeScope = v3;
+  (*(*v3 + 272LL))(
+    v3,
+    &CSchemaEnumBinding<MorphSetData_t::LookupType_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_MorphSetData_t_LookupType_t);
+  return &CSchemaEnumBinding<MorphSetData_t::LookupType_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_MorphSetData_t_LookupType_t;
+}
+
+
+// CSchemaEnumBinding<MorphSetData_t::EncodingType_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE  (line 71, @0x00000000031a0be0, libserver.so)  // inlines: Count, Initialize, SetTypeScope
+// callers: CSchemaEnumBinding<MorphSetData_t::EncodingType_t>::Register, MorphSetData_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE
+// globals: CSchemaEnumBinding<MorphSetData_t::EncodingType_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,c
+CSchemaEnumInfo *__fastcall CSchemaEnumBinding<MorphSetData_t::EncodingType_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        const char *pProjectName)
+{
+  ISchemaSystemTypeScope *v3; // rax
+  unsigned int v4; // edi
+  SchemaEnumeratorValue_t v5; // r8
+  SchemaEnumeratorValue_t v6; // r9
+  SchemaEnumeratorValue_t *v7; // rdx
+
+  v3 = (*(*pSchemaSystem + 112LL))(pSchemaSystem, 0, pBinaryName);
+  if ( CSchemaEnumBinding<MorphSetData_t::EncodingType_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_MorphSetData_t_EncodingType_t.m_Enumerators.m_Data.m_nImplLength != 0 )
+  {
+    v4 = abs32(CSchemaEnumBinding<MorphSetData_t::EncodingType_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_MorphSetData_t_EncodingType_t.m_Enumerators.m_Data.m_nImplLength);
+    v5 = *(CSchemaEnumBinding<MorphSetData_t::EncodingType_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_MorphSetData_t_EncodingType_t.m_Enumerators.m_Data.m_pImplElements
+         + 2);
+    CSchemaEnumBinding<MorphSetData_t::EncodingType_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_MorphSetData_t_EncodingType_t.m_nMinValue = v5;
+    v6 = *(CSchemaEnumBinding<MorphSetData_t::EncodingType_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_MorphSetData_t_EncodingType_t.m_Enumerators.m_Data.m_pImplElements
+         + 2);
+    CSchemaEnumBinding<MorphSetData_t::EncodingType_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_MorphSetData_t_EncodingType_t.m_nMaxValue = v6;
+    if ( v4 != 1 )
+    {
+      v7 = (CSchemaEnumBinding<MorphSetData_t::EncodingType_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_MorphSetData_t_EncodingType_t.m_Enumerators.m_Data.m_pImplElements
+          + 72);
+      do
+      {
+        if ( v5 > *v7 )
+          v5 = *v7;
+        CSchemaEnumBinding<MorphSetData_t::EncodingType_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_MorphSetData_t_EncodingType_t.m_nMinValue = v5;
+        if ( v6 < *v7 )
+          v6 = *v7;
+        v7 += 7;
+        CSchemaEnumBinding<MorphSetData_t::EncodingType_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_MorphSetData_t_EncodingType_t.m_nMaxValue = v6;
+      }
+      while ( v7 != CSchemaEnumBinding<MorphSetData_t::EncodingType_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_MorphSetData_t_EncodingType_t.m_Enumerators.m_Data.m_pImplElements
+                  + 7 * v4
+                  + 2 );
+    }
+  }
+  else
+  {
+    CSchemaEnumBinding<MorphSetData_t::EncodingType_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_MorphSetData_t_EncodingType_t.m_nMinValue = 0;
+    CSchemaEnumBinding<MorphSetData_t::EncodingType_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_MorphSetData_t_EncodingType_t.m_nMaxValue = 0;
+  }
+  CSchemaEnumBinding<MorphSetData_t::EncodingType_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_MorphSetData_t_EncodingType_t.m_pOuterTypeScope = v3;
+  (*(*v3 + 272LL))(
+    v3,
+    &CSchemaEnumBinding<MorphSetData_t::EncodingType_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_MorphSetData_t_EncodingType_t);
+  return &CSchemaEnumBinding<MorphSetData_t::EncodingType_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_MorphSetData_t_EncodingType_t;
+}
+
+
+// FlexOp_t::Schema_CompileTimeVerificationFunction  (line 83, @0x00000000031a0cc0, libserver.so)
+void __fastcall FlexOp_t::Schema_CompileTimeVerificationFunction(FlexOp_t *const this)
+{
+  ;
+}
+
+
+// FlexOp_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE  (line 88, @0x00000000031a0cd0, libserver.so)  // inlines: Get, SchemaBinding_SchemaTypeOfMemberVarByAddr<FlexOp_t, int>, SetTypeScope
+// callers: CSchemaClassBinding<FlexOp_t>::Register
+// globals: FlexOp_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedRe, FlexOp_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_Class
+CSchemaClassInfo *__fastcall FlexOp_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        const char *pProjectName)
+{
+  CSchemaClassInfo *result; // rax
+  ISchemaSystemTypeScope *v4; // rbx
+  CSchemaType *v5; // rax
+
+  result = FlexOp_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult;
+  if ( FlexOp_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult == 0 )
+  {
+    v4 = (*(*pSchemaSystem + 112LL))(pSchemaSystem, 0, pBinaryName);
+    FlexOp_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_FlexOp_t[0].m_pType = (*(*v4 + 40LL))(v4, 7);
+    v5 = (*(*v4 + 40LL))(v4, 7);
+    FlexOp_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_FlexOp_t.m_pOuterTypeScope = v4;
+    FlexOp_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_FlexOp_t[1].m_pType = v5;
+    FlexOp_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult = &FlexOp_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_FlexOp_t;
+    (*(*v4 + 264LL))(
+      v4,
+      &FlexOp_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_FlexOp_t);
+    return FlexOp_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult;
+  }
+  return result;
+}
+
+
+// FlexOp_t::Schema_VerifyBindingIsRegistered  (line 109, @0x00000000031a0d60, libserver.so)
+void __cdecl FlexOp_t::Schema_VerifyBindingIsRegistered()
+{
+  ;
+}
+
+
+// FlexRule_t::Schema_CompileTimeVerificationFunction  (line 117, @0x00000000031a0d70, libserver.so)
+void __fastcall FlexRule_t::Schema_CompileTimeVerificationFunction(FlexRule_t *const this)
+{
+  ;
+}
+
+
+// FlexRule_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE  (line 122, @0x00000000031a0d80, libserver.so)  // inlines: Get, SchemaBinding_SchemaTypeOfMemberVarByAddr<FlexRule_t, CResourceArray<FlexOp_t> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<FlexRule_t, int>, SetTypeScope
+// callers: CSchemaClassBinding<FlexRule_t>::Register
+// strings: "FlexOp_t", "CResourceArray"
+// globals: FlexRule_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitialized, CSchemaManipulator<CResourceArray<FlexOp_t>>::StaticAccessor(void)::m, CAtomicManipulator<CResourceArray<FlexOp_t>>::Get(void)::val, FlexRule_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_Cla
+CSchemaClassInfo *__fastcall FlexRule_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        const char *pProjectName)
+{
+  CSchemaClassInfo *result; // rax
+  ISchemaSystemTypeScope *v4; // rbx
+  __int64 (__fastcall *v5)(ISchemaSystemTypeScope *, const char *, __int64, __int64 (__fastcall ***)(), __int64 (__fastcall ***)(), __int64); // r12
+  __int64 v6; // rax
+  CSchemaType *v7; // rax
+
+  result = FlexRule_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult;
+  if ( FlexRule_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult == 0 )
+  {
+    v4 = (*(*pSchemaSystem + 112LL))(pSchemaSystem, 0, pBinaryName);
+    FlexRule_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_FlexRule_t[0].m_pType = (*(*v4 + 40LL))(v4, 7);
+    v5 = *(*v4 + 64LL);
+    v6 = (*(*v4 + 88LL))(v4, "FlexOp_t");
+    v7 = v5(
+           v4,
+           "CResourceArray",
+           4004,
+           CAtomicManipulator<CResourceArray<FlexOp_t>>::Get(void)::val,
+           &CSchemaManipulator<CResourceArray<FlexOp_t>>::StaticAccessor(void)::m,
+           v6);
+    FlexRule_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_FlexRule_t.m_pOuterTypeScope = v4;
+    FlexRule_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_FlexRule_t[1].m_pType = v7;
+    FlexRule_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult = &FlexRule_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_FlexRule_t;
+    (*(*v4 + 264LL))(
+      v4,
+      &FlexRule_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_FlexRule_t);
+    return FlexRule_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult;
+  }
+  return result;
+}
+
+
+// FlexRule_t::Schema_VerifyBindingIsRegistered  (line 143, @0x00000000031a0e30, libserver.so)
+void __cdecl FlexRule_t::Schema_VerifyBindingIsRegistered()
+{
+  ;
+}
+
+
+// FlexDesc_t::Schema_CompileTimeVerificationFunction  (line 151, @0x00000000031a0e40, libserver.so)
+void __fastcall FlexDesc_t::Schema_CompileTimeVerificationFunction(FlexDesc_t *const this)
+{
+  ;
+}
+
+
+// FlexDesc_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE  (line 155, @0x00000000031a0e50, libserver.so)  // inlines: Get, SchemaBinding_SchemaTypeOfMemberVarByAddr<FlexDesc_t, CResourceString>, SetTypeScope
+// callers: CSchemaClassBinding<FlexDesc_t>::Register
+// strings: "CResourceString"
+// globals: FlexDesc_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitialized, CSchemaManipulator<CResourceString>::StaticAccessor(void)::m, CAtomicManipulator<CResourceString>::Get(void)::val, FlexDesc_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_Cla
+CSchemaClassInfo *__fastcall FlexDesc_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        const char *pProjectName)
+{
+  CSchemaClassInfo *result; // rax
+  ISchemaSystemTypeScope *v4; // rbx
+  CSchemaType *v5; // rax
+
+  result = FlexDesc_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult;
+  if ( FlexDesc_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult == 0 )
+  {
+    v4 = (*(*pSchemaSystem + 112LL))(pSchemaSystem, 0, pBinaryName);
+    v5 = (*(*v4 + 56LL))(
+           v4,
+           "CResourceString",
+           4005,
+           CAtomicManipulator<CResourceString>::Get(void)::val,
+           CSchemaManipulator<CResourceString>::StaticAccessor(void)::m);
+    FlexDesc_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_FlexDesc_t.m_pOuterTypeScope = v4;
+    FlexDesc_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_FlexDesc_t[0].m_pType = v5;
+    FlexDesc_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult = &FlexDesc_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_FlexDesc_t;
+    (*(*v4 + 264LL))(
+      v4,
+      &FlexDesc_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_FlexDesc_t);
+    return FlexDesc_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult;
+  }
+  return result;
+}
+
+
+// FlexDesc_t::Schema_VerifyBindingIsRegistered  (line 174, @0x00000000031a0ee0, libserver.so)
+void __cdecl FlexDesc_t::Schema_VerifyBindingIsRegistered()
+{
+  ;
+}
+
+
+// FlexController_t::Schema_CompileTimeVerificationFunction  (line 182, @0x00000000031a0ef0, libserver.so)
+void __fastcall FlexController_t::Schema_CompileTimeVerificationFunction(FlexController_t *const this)
+{
+  ;
+}
+
+
+// FlexController_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE  (line 190, @0x00000000031a0f00, libserver.so)  // inlines: Get, SchemaBinding_SchemaTypeOfMemberVarByAddr<FlexController_t, CResourceString>, SchemaBinding_SchemaTypeOfMemberVarByAddr<FlexController_t, float>, SchemaBinding_SchemaTypeOfMemberVarByAddr<FlexController_t, int>, SetTypeScope
+// callers: CSchemaClassBinding<FlexController_t>::Register
+// strings: "CResourceString"
+// globals: FlexController_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pIniti, CSchemaManipulator<CResourceString>::StaticAccessor(void)::m, CAtomicManipulator<CResourceString>::Get(void)::val, FlexController_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSche
+CSchemaClassInfo *__fastcall FlexController_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        const char *pProjectName)
+{
+  CSchemaClassInfo *result; // rax
+  ISchemaSystemTypeScope *v4; // rbx
+  CSchemaType *v5; // rax
+
+  result = FlexController_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult;
+  if ( FlexController_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult == 0 )
+  {
+    v4 = (*(*pSchemaSystem + 112LL))(pSchemaSystem, 0, pBinaryName);
+    FlexController_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_FlexController_t[0].m_pType = (*(*v4 + 56LL))(v4, "CResourceString", 4005, CAtomicManipulator<CResourceString>::Get(void)::val, CSchemaManipulator<CResourceString>::StaticAccessor(void)::m);
+    FlexController_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_FlexController_t[1].m_pType = (*(*v4 + 56LL))(v4, "CResourceString", 4005, CAtomicManipulator<CResourceString>::Get(void)::val, CSchemaManipulator<CResourceString>::StaticAccessor(void)::m);
+    FlexController_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_FlexController_t[2].m_pType = (*(*v4 + 40LL))(v4, 7);
+    FlexController_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_FlexController_t[3].m_pType = (*(*v4 + 40LL))(v4, 11);
+    v5 = (*(*v4 + 40LL))(v4, 11);
+    FlexController_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_FlexController_t.m_pOuterTypeScope = v4;
+    FlexController_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_FlexController_t[4].m_pType = v5;
+    FlexController_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult = &FlexController_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_FlexController_t;
+    (*(*v4 + 264LL))(
+      v4,
+      &FlexController_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_FlexController_t);
+    return FlexController_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult;
+  }
+  return result;
+}
+
+
+// FlexController_t::Schema_VerifyBindingIsRegistered  (line 217, @0x00000000031a0ff0, libserver.so)
+void __cdecl FlexController_t::Schema_VerifyBindingIsRegistered()
+{
+  ;
+}
+
+
+// BundleData_t::Schema_CompileTimeVerificationFunction  (line 225, @0x00000000031a1000, libserver.so)
+void __fastcall BundleData_t::Schema_CompileTimeVerificationFunction(BundleData_t *const this)
+{
+  ;
+}
+
+
+// BundleData_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE  (line 232, @0x00000000031a1010, libserver.so)  // inlines: Get, SchemaBinding_SchemaTypeOfMemberVarByAddr<BundleData_t, CResourceArray<float> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<BundleData_t, float>, SetTypeScope
+// callers: CSchemaClassBinding<BundleData_t>::Register
+// strings: "CResourceArray"
+// globals: BundleData_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializ, CSchemaManipulator<CResourceArray<float>>::StaticAccessor(void)::m, CAtomicManipulator<CResourceArray<float>>::Get(void)::val, BundleData_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_C
+CSchemaClassInfo *__fastcall BundleData_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        const char *pProjectName)
+{
+  CSchemaClassInfo *result; // rax
+  ISchemaSystemTypeScope *v4; // rbx
+  __int64 (__fastcall *v5)(ISchemaSystemTypeScope *, const char *, __int64, __int64 (__fastcall ***)(), __int64 (__fastcall ***)(), __int64); // r12
+  __int64 v6; // rax
+  __int64 (__fastcall *v7)(ISchemaSystemTypeScope *, const char *, __int64, __int64 (__fastcall ***)(), __int64 (__fastcall ***)(), __int64); // r12
+  __int64 v8; // rax
+  CSchemaType *v9; // rax
+
+  result = BundleData_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult;
+  if ( BundleData_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult == 0 )
+  {
+    v4 = (*(*pSchemaSystem + 112LL))(pSchemaSystem, 0, pBinaryName);
+    BundleData_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_BundleData_t[0].m_pType = (*(*v4 + 40LL))(v4, 11);
+    BundleData_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_BundleData_t[1].m_pType = (*(*v4 + 40LL))(v4, 11);
+    v5 = *(*v4 + 64LL);
+    v6 = (*(*v4 + 40LL))(v4, 11);
+    BundleData_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_BundleData_t[2].m_pType = v5(v4, "CResourceArray", 4004, CAtomicManipulator<CResourceArray<float>>::Get(void)::val, CSchemaManipulator<CResourceArray<float>>::StaticAccessor(void)::m, v6);
+    v7 = *(*v4 + 64LL);
+    v8 = (*(*v4 + 40LL))(v4, 11);
+    v9 = v7(
+           v4,
+           "CResourceArray",
+           4004,
+           CAtomicManipulator<CResourceArray<float>>::Get(void)::val,
+           CSchemaManipulator<CResourceArray<float>>::StaticAccessor(void)::m,
+           v8);
+    BundleData_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_BundleData_t.m_pOuterTypeScope = v4;
+    BundleData_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_BundleData_t[3].m_pType = v9;
+    BundleData_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult = &BundleData_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_BundleData_t;
+    (*(*v4 + 264LL))(
+      v4,
+      &BundleData_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_BundleData_t);
+    return BundleData_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult;
+  }
+  return result;
+}
+
+
+// BundleData_t::Schema_VerifyBindingIsRegistered  (line 250, @0x00000000031a1110, libserver.so)
+void __cdecl BundleData_t::Schema_VerifyBindingIsRegistered()
+{
+  ;
+}
+
+
+// MorphRectData_t::Schema_CompileTimeVerificationFunction  (line 258, @0x00000000031a1120, libserver.so)
+void __fastcall MorphRectData_t::Schema_CompileTimeVerificationFunction(MorphRectData_t *const this)
+{
+  ;
+}
+
+
+// MorphRectData_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE  (line 266, @0x00000000031a1130, libserver.so)  // inlines: Get, SchemaBinding_SchemaTypeOfMemberVarByAddr<MorphRectData_t, CResourceArray<BundleData_t> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<MorphRectData_t, float>, SchemaBinding_SchemaTypeOfMemberVarByAddr<MorphRectData_t, short int>, SetTypeScope
+// callers: CSchemaClassBinding<MorphRectData_t>::Register
+// strings: "BundleData_t", "CResourceArray"
+// globals: MorphRectData_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitia, CSchemaManipulator<CResourceArray<BundleData_t>>::StaticAccessor(void)::m, CAtomicManipulator<CResourceArray<BundleData_t>>::Get(void)::val, MorphRectData_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchem
+CSchemaClassInfo *__fastcall MorphRectData_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        const char *pProjectName)
+{
+  CSchemaClassInfo *result; // rax
+  ISchemaSystemTypeScope *v4; // rbx
+  __int64 (__fastcall *v5)(ISchemaSystemTypeScope *, const char *, __int64, __int64 (__fastcall ***)(), __int64 (__fastcall ***)(), __int64); // r12
+  __int64 v6; // rax
+  CSchemaType *v7; // rax
+
+  result = MorphRectData_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult;
+  if ( MorphRectData_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult == 0 )
+  {
+    v4 = (*(*pSchemaSystem + 112LL))(pSchemaSystem, 0, pBinaryName);
+    MorphRectData_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_MorphRectData_t[0].m_pType = (*(*v4 + 40LL))(v4, 5);
+    MorphRectData_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_MorphRectData_t[1].m_pType = (*(*v4 + 40LL))(v4, 5);
+    MorphRectData_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_MorphRectData_t[2].m_pType = (*(*v4 + 40LL))(v4, 11);
+    MorphRectData_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_MorphRectData_t[3].m_pType = (*(*v4 + 40LL))(v4, 11);
+    v5 = *(*v4 + 64LL);
+    v6 = (*(*v4 + 88LL))(v4, "BundleData_t");
+    v7 = v5(
+           v4,
+           "CResourceArray",
+           4004,
+           CAtomicManipulator<CResourceArray<BundleData_t>>::Get(void)::val,
+           CSchemaManipulator<CResourceArray<BundleData_t>>::StaticAccessor(void)::m,
+           v6);
+    MorphRectData_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_MorphRectData_t.m_pOuterTypeScope = v4;
+    MorphRectData_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_MorphRectData_t[4].m_pType = v7;
+    MorphRectData_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult = &MorphRectData_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_MorphRectData_t;
+    (*(*v4 + 264LL))(
+      v4,
+      &MorphRectData_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_MorphRectData_t);
+    return MorphRectData_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult;
+  }
+  return result;
+}
+
+
+// MorphRectData_t::Schema_VerifyBindingIsRegistered  (line 286, @0x00000000031a1220, libserver.so)
+void __cdecl MorphRectData_t::Schema_VerifyBindingIsRegistered()
+{
+  ;
+}
+
+
+// MorphData_t::Schema_CompileTimeVerificationFunction  (line 294, @0x00000000031a1230, libserver.so)
+void __fastcall MorphData_t::Schema_CompileTimeVerificationFunction(MorphData_t *const this)
+{
+  ;
+}
+
+
+// MorphData_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE  (line 299, @0x00000000031a1240, libserver.so)  // inlines: Get, SchemaBinding_SchemaTypeOfMemberVarByAddr<MorphData_t, CResourceArray<MorphRectData_t> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<MorphData_t, CResourceString>, SetTypeScope
+// callers: CSchemaClassBinding<MorphData_t>::Register
+// strings: "CResourceString", "MorphRectData_t", "CResourceArray"
+// globals: MorphData_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitialize, CSchemaManipulator<CResourceString>::StaticAccessor(void)::m, CAtomicManipulator<CResourceString>::Get(void)::val, CSchemaManipulator<CResourceArray<MorphRectData_t>>::StaticAccessor(void)::m, CAtomicManipulator<CResourceArray<MorphRectData_t>>::Get(void)::val, MorphData_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_Cl
+CSchemaClassInfo *__fastcall MorphData_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        const char *pProjectName)
+{
+  CSchemaClassInfo *result; // rax
+  ISchemaSystemTypeScope *v4; // rbx
+  __int64 (__fastcall *v5)(ISchemaSystemTypeScope *, const char *, __int64, __int64 (__fastcall ***)(), __int64 (__fastcall ***)(), __int64); // r12
+  __int64 v6; // rax
+  CSchemaType *v7; // rax
+
+  result = MorphData_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult;
+  if ( MorphData_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult == 0 )
+  {
+    v4 = (*(*pSchemaSystem + 112LL))(pSchemaSystem, 0, pBinaryName);
+    MorphData_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_MorphData_t[0].m_pType = (*(*v4 + 56LL))(v4, "CResourceString", 4005, CAtomicManipulator<CResourceString>::Get(void)::val, CSchemaManipulator<CResourceString>::StaticAccessor(void)::m);
+    v5 = *(*v4 + 64LL);
+    v6 = (*(*v4 + 88LL))(v4, "MorphRectData_t");
+    v7 = v5(
+           v4,
+           "CResourceArray",
+           4004,
+           CAtomicManipulator<CResourceArray<MorphRectData_t>>::Get(void)::val,
+           CSchemaManipulator<CResourceArray<MorphRectData_t>>::StaticAccessor(void)::m,
+           v6);
+    MorphData_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_MorphData_t.m_pOuterTypeScope = v4;
+    MorphData_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_MorphData_t[1].m_pType = v7;
+    MorphData_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult = &MorphData_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_MorphData_t;
+    (*(*v4 + 264LL))(
+      v4,
+      &MorphData_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_MorphData_t);
+    return MorphData_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult;
+  }
+  return result;
+}
+
+
+// MorphData_t::Schema_VerifyBindingIsRegistered  (line 313, @0x00000000031a1310, libserver.so)
+void __cdecl MorphData_t::Schema_VerifyBindingIsRegistered()
+{
+  ;
+}
+
+
+// MorphSetData_t::Schema_CompileTimeVerificationFunction  (line 321, @0x00000000031a1320, libserver.so)
+void __fastcall MorphSetData_t::Schema_CompileTimeVerificationFunction(MorphSetData_t *const this)
+{
+  ;
+}
+
+
+// MorphSetData_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE  (line 335, @0x00000000031a1330, libserver.so)  // inlines: Get, GetInfo, SchemaBinding_SchemaTypeOfMemberVarByAddr<MorphSetData_t, CResourceArray<BundleType_t> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<MorphSetData_t, CResourceArray<FlexController_t> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<MorphSetData_t, CResourceArray<FlexDesc_t> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<MorphSetData_t, CResourceArray<FlexRule_t> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<MorphSetData_t, CResourceArray<MorphData_t> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<MorphSetData_t, CResourceExtReference<CWeakHandle<InfoForResourceTypeCTextureBase> > >, SchemaBinding_SchemaTypeOfMemberVarByAddr<MorphSetData_t, CResourceExtReference<CWeakHandle<InfoForResourceTypeMorphSetData_t> > >, SchemaBinding_SchemaTypeOfMemberVarByAddr<MorphSetData_t, MorphSetData_t::EncodingType_t>, SchemaBinding_SchemaTypeOfMemberVarByAddr<MorphSetData_t, MorphSetData_t::LookupType_t>, SchemaBinding_SchemaTypeOfMemberVarByAddr<MorphSetData_t, int>, SetTypeScope
+// calls: __cxa_guard_acquire, CSchemaEnumBinding<MorphSetData_t::LookupType_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE, CSchemaEnumBinding<MorphSetData_t::EncodingType_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE, __cxa_guard_release, __cxa_guard_abort, _Unwind_Resume
+// callers: CSchemaClassBinding<MorphSetData_t>::Register
+// strings: "MorphSetData_t::LookupType_t", "MorphSetData_t::EncodingType_t", "BundleType_t", "CResourceArray", "MorphData_t", "InfoForResourceTypeCTextureBase" (12 total)
+// globals: MorphSetData_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitial, CSchemaManipulator<CResourceArray<BundleType_t>>::StaticAccessor(void)::m, CAtomicManipulator<CResourceArray<BundleType_t>>::Get(void)::val, CSchemaManipulator<CResourceArray<MorphData_t>>::StaticAccessor(void)::m, CAtomicManipulator<CResourceArray<MorphData_t>>::Get(void)::val, CSchemaManipulator<CWeakHandle<InfoForResourceTypeCTextureBase>>::StaticAccessor(void)::m, CAtomicManipulator<CWeakHandle<InfoForResourceTypeCTextureBase>>::Get(void)::val, CSchemaManipulator<CResourceExtReference<CWeakHandle<InfoForResourceTypeCTextureBase>>>::StaticAccessor(void)::m (21 total)
+CSchemaClassInfo *__fastcall MorphSetData_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        const char *pProjectName)
+{
+  CSchemaClassInfo *result; // rax
+  ISchemaSystemTypeScope *v7; // rbx
+  __int64 (__fastcall *v8)(ISchemaSystemTypeScope *, const char *, __int64, __int64 (__fastcall **)(), __int64 (__fastcall **)(), __int64); // r15
+  __int64 v9; // rax
+  __int64 (__fastcall *v10)(ISchemaSystemTypeScope *, const char *, __int64, __int64 (__fastcall **)(), __int64 (__fastcall **)(), __int64); // r15
+  __int64 v11; // rax
+  __int64 (__fastcall *v12)(ISchemaSystemTypeScope *, const char *, __int64, __int64 (__fastcall ***)(), __int64 (__fastcall **)(), __int64); // r15
+  __int64 v13; // rax
+  __int64 v14; // rax
+  __int64 (__fastcall *v15)(ISchemaSystemTypeScope *, const char *, __int64, __int64 (__fastcall ***)(), __int64 (__fastcall ***)(), __int64); // r15
+  __int64 v16; // rax
+  __int64 v17; // rax
+  __int64 (__fastcall *v18)(ISchemaSystemTypeScope *, const char *, __int64, __int64 (__fastcall ***)(), __int64 (__fastcall ***)(), __int64); // r15
+  __int64 v19; // rax
+  __int64 (__fastcall *v20)(ISchemaSystemTypeScope *, const char *, __int64, __int64 (__fastcall ***)(), __int64 (__fastcall ***)(), __int64); // r15
+  __int64 v21; // rax
+  __int64 (__fastcall *v22)(ISchemaSystemTypeScope *, const char *, __int64, __int64 (__fastcall ***)(), __int64 (__fastcall ***)(), __int64); // r15
+  __int64 v23; // rax
+
+  result = MorphSetData_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult;
+  if ( MorphSetData_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult == 0 )
+  {
+    v7 = (*(*pSchemaSystem + 112LL))(pSchemaSystem, 0, pBinaryName);
+    MorphSetData_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_MorphSetData_t[0].m_pType = (*(*v7 + 40LL))(v7, 7);
+    MorphSetData_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_MorphSetData_t[1].m_pType = (*(*v7 + 40LL))(v7, 7);
+    MorphSetData_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_MorphSetData_t[2].m_pType = (*(*v7 + 96LL))(v7, "MorphSetData_t::LookupType_t");
+    MorphSetData_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_MorphSetData_t[3].m_pType = (*(*v7 + 96LL))(v7, "MorphSetData_t::EncodingType_t");
+    v8 = *(*v7 + 64LL);
+    v9 = (*(*v7 + 96LL))(v7, "BundleType_t");
+    MorphSetData_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_MorphSetData_t[4].m_pType = v8(v7, "CResourceArray", 4004, CAtomicManipulator<CResourceArray<BundleType_t>>::Get(void)::val, &CSchemaManipulator<CResourceArray<BundleType_t>>::StaticAccessor(void)::m, v9);
+    v10 = *(*v7 + 64LL);
+    v11 = (*(*v7 + 88LL))(v7, "MorphData_t");
+    MorphSetData_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_MorphSetData_t[5].m_pType = v10(v7, "CResourceArray", 4004, CAtomicManipulator<CResourceArray<MorphData_t>>::Get(void)::val, CSchemaManipulator<CResourceArray<MorphData_t>>::StaticAccessor(void)::m, v11);
+    v12 = *(*v7 + 64LL);
+    v13 = (*(*v7 + 88LL))(v7, "InfoForResourceTypeCTextureBase");
+    v14 = v12(
+            v7,
+            "CWeakHandle",
+            4010,
+            &CAtomicManipulator<CWeakHandle<InfoForResourceTypeCTextureBase>>::Get(void)::val,
+            CSchemaManipulator<CWeakHandle<InfoForResourceTypeCTextureBase>>::StaticAccessor(void)::m,
+            v13);
+    MorphSetData_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_MorphSetData_t[6].m_pType = v12(v7, "CResourceExtReference", 4001, CAtomicManipulator<CResourceExtReference<CWeakHandle<InfoForResourceTypeCTextureBase>>>::Get(void)::val, CSchemaManipulator<CResourceExtReference<CWeakHandle<InfoForResourceTypeCTextureBase>>>::StaticAccessor(void)::m, v14);
+    v15 = *(*v7 + 64LL);
+    v16 = (*(*v7 + 88LL))(v7, "InfoForResourceTypeMorphSetData_t");
+    v17 = v15(
+            v7,
+            "CWeakHandle",
+            4010,
+            &CAtomicManipulator<CWeakHandle<InfoForResourceTypeMorphSetData_t>>::Get(void)::val,
+            CSchemaManipulator<CWeakHandle<InfoForResourceTypeMorphSetData_t>>::StaticAccessor(void)::m,
+            v16);
+    MorphSetData_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_MorphSetData_t[7].m_pType = v15(v7, "CResourceExtReference", 4001, CAtomicManipulator<CResourceExtReference<CWeakHandle<InfoForResourceTypeMorphSetData_t>>>::Get(void)::val, CSchemaManipulator<CResourceExtReference<CWeakHandle<InfoForResourceTypeMorphSetData_t>>>::StaticAccessor(void)::m, v17);
+    v18 = *(*v7 + 64LL);
+    v19 = (*(*v7 + 88LL))(v7, "FlexDesc_t");
+    MorphSetData_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_MorphSetData_t[8].m_pType = v18(v7, "CResourceArray", 4004, CAtomicManipulator<CResourceArray<FlexDesc_t>>::Get(void)::val, CSchemaManipulator<CResourceArray<FlexDesc_t>>::StaticAccessor(void)::m, v19);
+    v20 = *(*v7 + 64LL);
+    v21 = (*(*v7 + 88LL))(v7, "FlexController_t");
+    MorphSetData_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_MorphSetData_t[9].m_pType = v20(v7, "CResourceArray", 4004, CAtomicManipulator<CResourceArray<FlexController_t>>::Get(void)::val, CSchemaManipulator<CResourceArray<FlexController_t>>::StaticAccessor(void)::m, v21);
+    v22 = *(*v7 + 64LL);
+    v23 = (*(*v7 + 88LL))(v7, "FlexRule_t");
+    MorphSetData_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_MorphSetData_t[10].m_pType = v22(v7, "CResourceArray", 4004, CAtomicManipulator<CResourceArray<FlexRule_t>>::Get(void)::val, CSchemaManipulator<CResourceArray<FlexRule_t>>::StaticAccessor(void)::m, v23);
+    if ( `guard variable for'MorphSetData_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_NestedEnumsOf_MorphSetData_t == 0
+      && __cxa_guard_acquire(&`guard variable for'MorphSetData_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_NestedEnumsOf_MorphSetData_t) != 0 )
+    {
+      MorphSetData_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_NestedEnumsOf_MorphSetData_t[0] = CSchemaEnumBinding<MorphSetData_t::LookupType_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(pSchemaSystem, pBinaryName, pProjectName);
+      qword_4D80228 = CSchemaEnumBinding<MorphSetData_t::EncodingType_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+                        pSchemaSystem,
+                        pBinaryName,
+                        pProjectName);
+      __cxa_guard_release(&`guard variable for'MorphSetData_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_NestedEnumsOf_MorphSetData_t);
+    }
+    MorphSetData_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_MorphSetData_t.m_pOuterTypeScope = v7;
+    MorphSetData_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult = &MorphSetData_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_MorphSetData_t;
+    (*(*v7 + 264LL))(
+      v7,
+      &MorphSetData_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_MorphSetData_t);
+    return MorphSetData_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult;
+  }
+  return result;
+}
+
+
+// MorphSetData_t::Schema_VerifyBindingIsRegistered  (line 384, @0x00000000031a1660, libserver.so)
+void __cdecl MorphSetData_t::Schema_VerifyBindingIsRegistered()
+{
+  ;
+}
+
+
+// LocalRegisterSchemaModule<ArbitraryTemplateParameter_modellib_morphset_old_disk_h>  (line 392, @0x00000000031a1670, libserver.so)  // inlines: Call, Get
+// callers: RegisterSchemaModule_morphset_old_disk_h
+// strings: "RenderMeshFlexControllerRemapType_t", "modellib", "BundleType_t", "MorphSetData_t::LookupType_t", "MorphSetData_t::EncodingType_t"
+// globals: CSchemaEnumBinding<RenderMeshFlexControllerRemapType_t>::s_pThisModuleBindingPointer, CSchemaEnumBinding<BundleType_t>::s_pThisModuleBindingPointer, CSchemaEnumBinding<MorphSetData_t::LookupType_t>::s_pThisModuleBindingPointer, CSchemaEnumBinding<MorphSetData_t::EncodingType_t>::s_pThisModuleBindingPointer, FlexOp_t::s_pSchemaBindingForLocalModule, FlexRule_t::s_pSchemaBindingForLocalModule, FlexDesc_t::s_pSchemaBindingForLocalModule, FlexController_t::s_pSchemaBindingForLocalModule (12 total)
+void __fastcall LocalRegisterSchemaModule<ArbitraryTemplateParameter_modellib_morphset_old_disk_h>(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        SchemaRegistrationPhase_t nRegistrationPhase)
+{
+  if ( nRegistrationPhase != SchemaRegistrationPhase_t::SCHEMA_REGISTRATION_PHASE_ATOMIC_TYPES_AND_ENUMS )
+  {
+    if ( nRegistrationPhase == SchemaRegistrationPhase_t::SCHEMA_REGISTRATION_PHASE_CLASSES )
+    {
+      (*(FlexOp_t::s_pSchemaBindingForLocalModule->_vptr_ISchemaBinding + 5))(
+        FlexOp_t::s_pSchemaBindingForLocalModule,
+        pSchemaSystem,
+        pBinaryName,
+        "modellib");
+      (*(FlexRule_t::s_pSchemaBindingForLocalModule->_vptr_ISchemaBinding + 5))(
+        FlexRule_t::s_pSchemaBindingForLocalModule,
+        pSchemaSystem,
+        pBinaryName,
+        "modellib");
+      (*(FlexDesc_t::s_pSchemaBindingForLocalModule->_vptr_ISchemaBinding + 5))(
+        FlexDesc_t::s_pSchemaBindingForLocalModule,
+        pSchemaSystem,
+        pBinaryName,
+        "modellib");
+      (*(FlexController_t::s_pSchemaBindingForLocalModule->_vptr_ISchemaBinding + 5))(
+        FlexController_t::s_pSchemaBindingForLocalModule,
+        pSchemaSystem,
+        pBinaryName,
+        "modellib");
+      (*(BundleData_t::s_pSchemaBindingForLocalModule->_vptr_ISchemaBinding + 5))(
+        BundleData_t::s_pSchemaBindingForLocalModule,
+        pSchemaSystem,
+        pBinaryName,
+        "modellib");
+      (*(MorphRectData_t::s_pSchemaBindingForLocalModule->_vptr_ISchemaBinding + 5))(
+        MorphRectData_t::s_pSchemaBindingForLocalModule,
+        pSchemaSystem,
+        pBinaryName,
+        "modellib");
+      (*(MorphData_t::s_pSchemaBindingForLocalModule->_vptr_ISchemaBinding + 5))(
+        MorphData_t::s_pSchemaBindingForLocalModule,
+        pSchemaSystem,
+        pBinaryName,
+        "modellib");
+      (*(MorphSetData_t::s_pSchemaBindingForLocalModule->_vptr_ISchemaBinding + 5))(
+        MorphSetData_t::s_pSchemaBindingForLocalModule,
+        pSchemaSystem,
+        pBinaryName,
+        "modellib");
+    }
+    ++g_nLinkerHack_SchemaAnchor_RegistrationCountFor_modellib;
+  }
+  else
+  {
+    (*(CSchemaEnumBinding<RenderMeshFlexControllerRemapType_t>::s_pThisModuleBindingPointer->_vptr_ISchemaBinding + 5))(
+      CSchemaEnumBinding<RenderMeshFlexControllerRemapType_t>::s_pThisModuleBindingPointer,
+      pSchemaSystem,
+      pBinaryName,
+      "modellib",
+      "RenderMeshFlexControllerRemapType_t");
+    (*(CSchemaEnumBinding<BundleType_t>::s_pThisModuleBindingPointer->_vptr_ISchemaBinding + 5))(
+      CSchemaEnumBinding<BundleType_t>::s_pThisModuleBindingPointer,
+      pSchemaSystem,
+      pBinaryName,
+      "modellib",
+      "BundleType_t");
+    (*(CSchemaEnumBinding<MorphSetData_t::LookupType_t>::s_pThisModuleBindingPointer->_vptr_ISchemaBinding + 5))(
+      CSchemaEnumBinding<MorphSetData_t::LookupType_t>::s_pThisModuleBindingPointer,
+      pSchemaSystem,
+      pBinaryName,
+      "modellib",
+      "MorphSetData_t::LookupType_t");
+    (*(CSchemaEnumBinding<MorphSetData_t::EncodingType_t>::s_pThisModuleBindingPointer->_vptr_ISchemaBinding + 5))(
+      CSchemaEnumBinding<MorphSetData_t::EncodingType_t>::s_pThisModuleBindingPointer,
+      pSchemaSystem,
+      pBinaryName,
+      "modellib",
+      "MorphSetData_t::EncodingType_t");
+    ++g_nLinkerHack_SchemaAnchor_RegistrationCountFor_modellib;
+  }
+}
+
+
+// RegisterSchemaModule_morphset_old_disk_h  (line 405, @0x00000000031a1820, libserver.so)
+// calls: LocalRegisterSchemaModule<ArbitraryTemplateParameter_modellib_morphset_old_disk_h>
+// callers: CSchemaRegistration_modellib::RegisterAllBindings
+void __fastcall RegisterSchemaModule_morphset_old_disk_h(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        SchemaRegistrationPhase_t nRegistrationPhase)
+{
+  LocalRegisterSchemaModule<ArbitraryTemplateParameter_modellib_morphset_old_disk_h>(
+    pSchemaSystem,
+    pBinaryName,
+    nRegistrationPhase);
+}
+
+

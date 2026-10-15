@@ -1,0 +1,238 @@
+
+// ==== functions (decompiled by Hex-Rays; names/signatures from DWARF) ====
+
+// CEffectData::Schema_CompileTimeVerificationFunction  (line 35, @0x0000000001f09be0, libserver.so)
+void __fastcall CEffectData::Schema_CompileTimeVerificationFunction(CEffectData *const this)
+{
+  ;
+}
+
+
+// CEffectData::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE  (line 57, @0x0000000001f09bf0, libserver.so)  // inlines: Get, NetworkVarDecl_t, SchemaBinding_SchemaTypeOfMemberVarByAddr<CEffectData, CNetworkVarBase<CEntityHandle, CEffectData::NetworkVar_m_hEntity> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<CEffectData, CNetworkVarBase<CEntityHandle, CEffectData::NetworkVar_m_hOtherEntity> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<CEffectData, CNetworkVarBase<CUtlStringToken, CEffectData::NetworkVar_m_nAttachmentName> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<CEffectData, CNetworkVarBase<CUtlStringToken, CEffectData::NetworkVar_m_nSurfaceProp> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<CEffectData, CNetworkVarBase<CWeakHandle<InfoForResourceTypeIParticleSystemDefinition>, CEffectData::NetworkVar_m_nEffectIndex> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<CEffectData, CNetworkVarBase<float, CEffectData::NetworkVar_m_flMagnitude> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<CEffectData, CNetworkVarBase<float, CEffectData::NetworkVar_m_flRadius> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<CEffectData, CNetworkVarBase<float, CEffectData::NetworkVar_m_flScale> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<CEffectData, CNetworkVarBase<short unsigned int, CEffectData::NetworkVar_m_iEffectName> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<CEffectData, CNetworkVarBase<short unsigned int, CEffectData::NetworkVar_m_nHitBox> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<CEffectData, CNetworkVarBase<short unsigned int, CEffectData::NetworkVar_m_nMaterial> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<CEffectData, CNetworkVarBase<signed char, CEffectData::NetworkVar_m_nAttachmentIndex> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<CEffectData, CNetworkVarBase<unsigned char, CEffectData::NetworkVar_m_fFlags> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<CEffectData, CNetworkVarBase<unsigned char, CEffectData::NetworkVar_m_nColor> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<CEffectData, CNetworkVarBase<unsigned int, CEffectData::NetworkVar_m_nDamageType> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<CEffectData, CNetworkVectorBase<QAngle, CEffectData::NetworkVar_m_vAngles> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<CEffectData, CNetworkVectorBase<Vector, CEffectData::NetworkVar_m_vNormal> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<CEffectData, CNetworkVectorBase<Vector, CEffectData::NetworkVar_m_vOrigin> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<CEffectData, CNetworkVectorBase<Vector, CEffectData::NetworkVar_m_vStart> >, SetTypeScope
+// calls: __cxa_guard_acquire, __cxa_guard_release
+// callers: CSchemaClassBinding<CEffectData>::Register
+// strings: "QAngle", "CEntityHandle", "CUtlStringToken", "InfoForResourceTypeIParticleSystemDefinition", "CWeakHandle", "m_vOrigin" (29 total)
+// globals: CEffectData::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitialize, `guard variable for'CEffectData::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char co, CSchemaManipulator<Vector>::StaticAccessor(void)::m, CAtomicManipulator<Vector>::Get(void)::val, CSchemaManipulator<QAngle>::StaticAccessor(void)::m, CAtomicManipulator<QAngle>::Get(void)::val, CSchemaManipulator<CEntityHandle>::StaticAccessor(void)::m, CAtomicManipulator<CEntityHandle>::Get(void)::val (13 total)
+CSchemaClassInfo *__fastcall CEffectData::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        const char *pProjectName)
+{
+  CSchemaClassInfo *result; // rax
+  ISchemaSystemTypeScope *v4; // rbx
+  __int64 (__fastcall *v5)(ISchemaSystemTypeScope *, const char *, __int64, __int64 (__fastcall ***)(), __int64 (__fastcall ***)(), __int64); // r12
+  __int64 v6; // rax
+  CSchemaType *v7; // rax
+
+  result = CEffectData::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult;
+  if ( CEffectData::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult == 0 )
+  {
+    v4 = (*(*pSchemaSystem + 112LL))(pSchemaSystem, 0, pBinaryName);
+    if ( `guard variable for'CEffectData::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CEffectData0_MNetworkVarNames_Value == 0
+      && __cxa_guard_acquire(&`guard variable for'CEffectData::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CEffectData0_MNetworkVarNames_Value) != 0 )
+    {
+      CEffectData::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CEffectData0_MNetworkVarNames_Value.m_pVarName = "m_vOrigin";
+      CEffectData::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CEffectData0_MNetworkVarNames_Value.m_pVarType = "Vector";
+      __cxa_guard_release(&`guard variable for'CEffectData::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CEffectData0_MNetworkVarNames_Value);
+    }
+    if ( `guard variable for'CEffectData::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CEffectData1_MNetworkVarNames_Value == 0
+      && __cxa_guard_acquire(&`guard variable for'CEffectData::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CEffectData1_MNetworkVarNames_Value) != 0 )
+    {
+      CEffectData::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CEffectData1_MNetworkVarNames_Value.m_pVarName = "m_vStart";
+      CEffectData::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CEffectData1_MNetworkVarNames_Value.m_pVarType = "Vector";
+      __cxa_guard_release(&`guard variable for'CEffectData::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CEffectData1_MNetworkVarNames_Value);
+    }
+    if ( `guard variable for'CEffectData::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CEffectData2_MNetworkVarNames_Value == 0
+      && __cxa_guard_acquire(&`guard variable for'CEffectData::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CEffectData2_MNetworkVarNames_Value) != 0 )
+    {
+      CEffectData::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CEffectData2_MNetworkVarNames_Value.m_pVarName = "m_vNormal";
+      CEffectData::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CEffectData2_MNetworkVarNames_Value.m_pVarType = "Vector";
+      __cxa_guard_release(&`guard variable for'CEffectData::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CEffectData2_MNetworkVarNames_Value);
+    }
+    if ( `guard variable for'CEffectData::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CEffectData3_MNetworkVarNames_Value == 0
+      && __cxa_guard_acquire(&`guard variable for'CEffectData::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CEffectData3_MNetworkVarNames_Value) != 0 )
+    {
+      CEffectData::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CEffectData3_MNetworkVarNames_Value.m_pVarName = "m_vAngles";
+      CEffectData::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CEffectData3_MNetworkVarNames_Value.m_pVarType = "QAngle";
+      __cxa_guard_release(&`guard variable for'CEffectData::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CEffectData3_MNetworkVarNames_Value);
+    }
+    if ( `guard variable for'CEffectData::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CEffectData4_MNetworkVarNames_Value == 0
+      && __cxa_guard_acquire(&`guard variable for'CEffectData::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CEffectData4_MNetworkVarNames_Value) != 0 )
+    {
+      CEffectData::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CEffectData4_MNetworkVarNames_Value.m_pVarName = "m_hEntity";
+      CEffectData::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CEffectData4_MNetworkVarNames_Value.m_pVarType = "CEntityHandle";
+      __cxa_guard_release(&`guard variable for'CEffectData::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CEffectData4_MNetworkVarNames_Value);
+    }
+    if ( `guard variable for'CEffectData::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CEffectData5_MNetworkVarNames_Value == 0
+      && __cxa_guard_acquire(&`guard variable for'CEffectData::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CEffectData5_MNetworkVarNames_Value) != 0 )
+    {
+      CEffectData::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CEffectData5_MNetworkVarNames_Value.m_pVarName = "m_hOtherEntity";
+      CEffectData::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CEffectData5_MNetworkVarNames_Value.m_pVarType = "CEntityHandle";
+      __cxa_guard_release(&`guard variable for'CEffectData::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CEffectData5_MNetworkVarNames_Value);
+    }
+    if ( `guard variable for'CEffectData::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CEffectData6_MNetworkVarNames_Value == 0
+      && __cxa_guard_acquire(&`guard variable for'CEffectData::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CEffectData6_MNetworkVarNames_Value) != 0 )
+    {
+      CEffectData::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CEffectData6_MNetworkVarNames_Value.m_pVarName = "m_flScale";
+      CEffectData::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CEffectData6_MNetworkVarNames_Value.m_pVarType = "float32";
+      __cxa_guard_release(&`guard variable for'CEffectData::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CEffectData6_MNetworkVarNames_Value);
+    }
+    if ( `guard variable for'CEffectData::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CEffectData7_MNetworkVarNames_Value == 0
+      && __cxa_guard_acquire(&`guard variable for'CEffectData::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CEffectData7_MNetworkVarNames_Value) != 0 )
+    {
+      CEffectData::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CEffectData7_MNetworkVarNames_Value.m_pVarName = "m_flMagnitude";
+      CEffectData::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CEffectData7_MNetworkVarNames_Value.m_pVarType = "float32";
+      __cxa_guard_release(&`guard variable for'CEffectData::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CEffectData7_MNetworkVarNames_Value);
+    }
+    if ( `guard variable for'CEffectData::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CEffectData8_MNetworkVarNames_Value == 0
+      && __cxa_guard_acquire(&`guard variable for'CEffectData::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CEffectData8_MNetworkVarNames_Value) != 0 )
+    {
+      CEffectData::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CEffectData8_MNetworkVarNames_Value.m_pVarName = "m_flRadius";
+      CEffectData::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CEffectData8_MNetworkVarNames_Value.m_pVarType = "float32";
+      __cxa_guard_release(&`guard variable for'CEffectData::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CEffectData8_MNetworkVarNames_Value);
+    }
+    if ( `guard variable for'CEffectData::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CEffectData9_MNetworkVarNames_Value == 0
+      && __cxa_guard_acquire(&`guard variable for'CEffectData::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CEffectData9_MNetworkVarNames_Value) != 0 )
+    {
+      CEffectData::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CEffectData9_MNetworkVarNames_Value.m_pVarName = "m_nSurfaceProp";
+      CEffectData::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CEffectData9_MNetworkVarNames_Value.m_pVarType = "CUtlStringToken";
+      __cxa_guard_release(&`guard variable for'CEffectData::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CEffectData9_MNetworkVarNames_Value);
+    }
+    if ( `guard variable for'CEffectData::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CEffectData10_MNetworkVarNames_Value == 0
+      && __cxa_guard_acquire(&`guard variable for'CEffectData::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CEffectData10_MNetworkVarNames_Value) != 0 )
+    {
+      CEffectData::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CEffectData10_MNetworkVarNames_Value.m_pVarName = "m_nEffectIndex";
+      CEffectData::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CEffectData10_MNetworkVarNames_Value.m_pVarType = "HParticleSystemDefinition";
+      __cxa_guard_release(&`guard variable for'CEffectData::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CEffectData10_MNetworkVarNames_Value);
+    }
+    if ( `guard variable for'CEffectData::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CEffectData11_MNetworkVarNames_Value == 0
+      && __cxa_guard_acquire(&`guard variable for'CEffectData::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CEffectData11_MNetworkVarNames_Value) != 0 )
+    {
+      CEffectData::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CEffectData11_MNetworkVarNames_Value.m_pVarName = "m_nDamageType";
+      CEffectData::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CEffectData11_MNetworkVarNames_Value.m_pVarType = "uint32";
+      __cxa_guard_release(&`guard variable for'CEffectData::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CEffectData11_MNetworkVarNames_Value);
+    }
+    if ( `guard variable for'CEffectData::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CEffectData12_MNetworkVarNames_Value == 0
+      && __cxa_guard_acquire(&`guard variable for'CEffectData::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CEffectData12_MNetworkVarNames_Value) != 0 )
+    {
+      CEffectData::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CEffectData12_MNetworkVarNames_Value.m_pVarName = "m_nMaterial";
+      CEffectData::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CEffectData12_MNetworkVarNames_Value.m_pVarType = "uint16";
+      __cxa_guard_release(&`guard variable for'CEffectData::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CEffectData12_MNetworkVarNames_Value);
+    }
+    if ( `guard variable for'CEffectData::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CEffectData13_MNetworkVarNames_Value == 0
+      && __cxa_guard_acquire(&`guard variable for'CEffectData::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CEffectData13_MNetworkVarNames_Value) != 0 )
+    {
+      CEffectData::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CEffectData13_MNetworkVarNames_Value.m_pVarName = "m_nHitBox";
+      CEffectData::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CEffectData13_MNetworkVarNames_Value.m_pVarType = "uint16";
+      __cxa_guard_release(&`guard variable for'CEffectData::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CEffectData13_MNetworkVarNames_Value);
+    }
+    if ( `guard variable for'CEffectData::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CEffectData14_MNetworkVarNames_Value == 0
+      && __cxa_guard_acquire(&`guard variable for'CEffectData::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CEffectData14_MNetworkVarNames_Value) != 0 )
+    {
+      CEffectData::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CEffectData14_MNetworkVarNames_Value.m_pVarName = "m_nColor";
+      CEffectData::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CEffectData14_MNetworkVarNames_Value.m_pVarType = "uint8";
+      __cxa_guard_release(&`guard variable for'CEffectData::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CEffectData14_MNetworkVarNames_Value);
+    }
+    if ( `guard variable for'CEffectData::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CEffectData15_MNetworkVarNames_Value == 0
+      && __cxa_guard_acquire(&`guard variable for'CEffectData::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CEffectData15_MNetworkVarNames_Value) != 0 )
+    {
+      CEffectData::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CEffectData15_MNetworkVarNames_Value.m_pVarName = "m_fFlags";
+      CEffectData::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CEffectData15_MNetworkVarNames_Value.m_pVarType = "uint8";
+      __cxa_guard_release(&`guard variable for'CEffectData::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CEffectData15_MNetworkVarNames_Value);
+    }
+    if ( `guard variable for'CEffectData::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CEffectData16_MNetworkVarNames_Value == 0
+      && __cxa_guard_acquire(&`guard variable for'CEffectData::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CEffectData16_MNetworkVarNames_Value) != 0 )
+    {
+      CEffectData::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CEffectData16_MNetworkVarNames_Value.m_pVarName = "m_nAttachmentIndex";
+      CEffectData::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CEffectData16_MNetworkVarNames_Value.m_pVarType = "int8";
+      __cxa_guard_release(&`guard variable for'CEffectData::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CEffectData16_MNetworkVarNames_Value);
+    }
+    if ( `guard variable for'CEffectData::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CEffectData17_MNetworkVarNames_Value == 0
+      && __cxa_guard_acquire(&`guard variable for'CEffectData::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CEffectData17_MNetworkVarNames_Value) != 0 )
+    {
+      CEffectData::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CEffectData17_MNetworkVarNames_Value.m_pVarName = "m_nAttachmentName";
+      CEffectData::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CEffectData17_MNetworkVarNames_Value.m_pVarType = "CUtlStringToken";
+      __cxa_guard_release(&`guard variable for'CEffectData::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CEffectData17_MNetworkVarNames_Value);
+    }
+    if ( `guard variable for'CEffectData::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CEffectData18_MNetworkVarNames_Value == 0
+      && __cxa_guard_acquire(&`guard variable for'CEffectData::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CEffectData18_MNetworkVarNames_Value) != 0 )
+    {
+      CEffectData::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CEffectData18_MNetworkVarNames_Value.m_pVarName = "m_iEffectName";
+      CEffectData::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CEffectData18_MNetworkVarNames_Value.m_pVarType = "uint16";
+      __cxa_guard_release(&`guard variable for'CEffectData::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CEffectData18_MNetworkVarNames_Value);
+    }
+    CEffectData::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CEffectData[0].m_pType = (*(*v4 + 56LL))(v4, "Vector", 2010, CAtomicManipulator<Vector>::Get(void)::val, CSchemaManipulator<Vector>::StaticAccessor(void)::m);
+    CEffectData::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CEffectData[1].m_pType = (*(*v4 + 56LL))(v4, "Vector", 2010, CAtomicManipulator<Vector>::Get(void)::val, CSchemaManipulator<Vector>::StaticAccessor(void)::m);
+    CEffectData::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CEffectData[2].m_pType = (*(*v4 + 56LL))(v4, "Vector", 2010, CAtomicManipulator<Vector>::Get(void)::val, CSchemaManipulator<Vector>::StaticAccessor(void)::m);
+    CEffectData::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CEffectData[3].m_pType = (*(*v4 + 56LL))(v4, "QAngle", 2005, CAtomicManipulator<QAngle>::Get(void)::val, CSchemaManipulator<QAngle>::StaticAccessor(void)::m);
+    CEffectData::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CEffectData[4].m_pType = (*(*v4 + 56LL))(v4, "CEntityHandle", 5000, CAtomicManipulator<CEntityHandle>::Get(void)::val, CSchemaManipulator<CEntityHandle>::StaticAccessor(void)::m);
+    CEffectData::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CEffectData[5].m_pType = (*(*v4 + 56LL))(v4, "CEntityHandle", 5000, CAtomicManipulator<CEntityHandle>::Get(void)::val, CSchemaManipulator<CEntityHandle>::StaticAccessor(void)::m);
+    CEffectData::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CEffectData[6].m_pType = (*(*v4 + 40LL))(v4, 11);
+    CEffectData::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CEffectData[7].m_pType = (*(*v4 + 40LL))(v4, 11);
+    CEffectData::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CEffectData[8].m_pType = (*(*v4 + 40LL))(v4, 11);
+    CEffectData::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CEffectData[9].m_pType = (*(*v4 + 56LL))(v4, "CUtlStringToken", 3010, CAtomicManipulator<CUtlStringToken>::Get(void)::val, CSchemaManipulator<CUtlStringToken>::StaticAccessor(void)::m);
+    v5 = *(*v4 + 64LL);
+    v6 = (*(*v4 + 88LL))(v4, "InfoForResourceTypeIParticleSystemDefinition");
+    CEffectData::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CEffectData[10].m_pType = v5(v4, "CWeakHandle", 4010, &CAtomicManipulator<CWeakHandle<InfoForResourceTypeIParticleSystemDefinition>>::Get(void)::val, CSchemaManipulator<CWeakHandle<InfoForResourceTypeIParticleSystemDefinition>>::StaticAccessor(void)::m, v6);
+    CEffectData::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CEffectData[11].m_pType = (*(*v4 + 40LL))(v4, 8);
+    CEffectData::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CEffectData[12].m_pType = (*(*v4 + 40LL))(v4, 6);
+    CEffectData::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CEffectData[13].m_pType = (*(*v4 + 40LL))(v4, 6);
+    CEffectData::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CEffectData[14].m_pType = (*(*v4 + 40LL))(v4, 4);
+    CEffectData::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CEffectData[15].m_pType = (*(*v4 + 40LL))(v4, 4);
+    CEffectData::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CEffectData[16].m_pType = (*(*v4 + 40LL))(v4, 3);
+    CEffectData::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CEffectData[17].m_pType = (*(*v4 + 56LL))(v4, "CUtlStringToken", 3010, CAtomicManipulator<CUtlStringToken>::Get(void)::val, CSchemaManipulator<CUtlStringToken>::StaticAccessor(void)::m);
+    v7 = (*(*v4 + 40LL))(v4, 6);
+    CEffectData::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CEffectData.m_pOuterTypeScope = v4;
+    CEffectData::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CEffectData[18].m_pType = v7;
+    CEffectData::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult = &CEffectData::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CEffectData;
+    (*(*v4 + 264LL))(
+      v4,
+      &CEffectData::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CEffectData);
+    return CEffectData::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult;
+  }
+  return result;
+}
+
+
+// CEffectData::Schema_VerifyBindingIsRegistered  (line 338, @0x0000000001f0a500, libserver.so)
+void __cdecl CEffectData::Schema_VerifyBindingIsRegistered()
+{
+  ;
+}
+
+
+// LocalRegisterSchemaModule<ArbitraryTemplateParameter_server_effect_dispatch_data_h>  (line 346, @0x0000000001f0a510, libserver.so)  // inlines: Call
+// globals: CEffectData::s_pSchemaBindingForLocalModule
+void __fastcall LocalRegisterSchemaModule<ArbitraryTemplateParameter_server_effect_dispatch_data_h>(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        SchemaRegistrationPhase_t nRegistrationPhase)
+{
+  if ( nRegistrationPhase == SchemaRegistrationPhase_t::SCHEMA_REGISTRATION_PHASE_CLASSES )
+    (*(CEffectData::s_pSchemaBindingForLocalModule->_vptr_ISchemaBinding + 5))(
+      CEffectData::s_pSchemaBindingForLocalModule,
+      pSchemaSystem,
+      pBinaryName,
+      "server");
+  ++g_nLinkerHack_SchemaAnchor_RegistrationCountFor_server;
+}
+
+
+// RegisterSchemaModule_effect_dispatch_data_h  (line 348, @0x0000000001f0a550, libserver.so)  // inlines: Call, LocalRegisterSchemaModule<ArbitraryTemplateParameter_server_effect_dispatch_data_h>
+// callers: CSchemaRegistration_server::RegisterAllBindings
+// globals: CEffectData::s_pSchemaBindingForLocalModule
+void __fastcall RegisterSchemaModule_effect_dispatch_data_h(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        SchemaRegistrationPhase_t nRegistrationPhase)
+{
+  if ( nRegistrationPhase == SchemaRegistrationPhase_t::SCHEMA_REGISTRATION_PHASE_CLASSES )
+    (*(CEffectData::s_pSchemaBindingForLocalModule->_vptr_ISchemaBinding + 5))(
+      CEffectData::s_pSchemaBindingForLocalModule,
+      pSchemaSystem,
+      pBinaryName,
+      "server");
+  ++g_nLinkerHack_SchemaAnchor_RegistrationCountFor_server;
+}
+
+

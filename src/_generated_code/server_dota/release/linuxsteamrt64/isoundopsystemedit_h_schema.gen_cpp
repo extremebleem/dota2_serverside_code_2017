@@ -1,0 +1,220 @@
+
+// ==== functions (decompiled by Hex-Rays; names/signatures from DWARF) ====
+
+// CSchemaEnumBinding<SosEditItemType_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE  (line 35, @0x000000000203b790, libserver.so)  // inlines: Count, Initialize, SetTypeScope
+// callers: CSchemaEnumBinding<SosEditItemType_t>::Register
+// globals: CSchemaEnumBinding<SosEditItemType_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,ch
+CSchemaEnumInfo *__fastcall CSchemaEnumBinding<SosEditItemType_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        const char *pProjectName)
+{
+  ISchemaSystemTypeScope *v3; // rax
+  unsigned int v4; // edi
+  SchemaEnumeratorValue_t v5; // r8
+  SchemaEnumeratorValue_t v6; // r9
+  SchemaEnumeratorValue_t *v7; // rdx
+
+  v3 = (*(*pSchemaSystem + 112LL))(pSchemaSystem, 0, pBinaryName);
+  if ( CSchemaEnumBinding<SosEditItemType_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_SosEditItemType_t.m_Enumerators.m_Data.m_nImplLength != 0 )
+  {
+    v4 = abs32(CSchemaEnumBinding<SosEditItemType_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_SosEditItemType_t.m_Enumerators.m_Data.m_nImplLength);
+    v5 = *(CSchemaEnumBinding<SosEditItemType_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_SosEditItemType_t.m_Enumerators.m_Data.m_pImplElements
+         + 2);
+    CSchemaEnumBinding<SosEditItemType_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_SosEditItemType_t.m_nMinValue = v5;
+    v6 = *(CSchemaEnumBinding<SosEditItemType_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_SosEditItemType_t.m_Enumerators.m_Data.m_pImplElements
+         + 2);
+    CSchemaEnumBinding<SosEditItemType_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_SosEditItemType_t.m_nMaxValue = v6;
+    if ( v4 != 1 )
+    {
+      v7 = (CSchemaEnumBinding<SosEditItemType_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_SosEditItemType_t.m_Enumerators.m_Data.m_pImplElements
+          + 72);
+      do
+      {
+        if ( v5 > *v7 )
+          v5 = *v7;
+        CSchemaEnumBinding<SosEditItemType_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_SosEditItemType_t.m_nMinValue = v5;
+        if ( v6 < *v7 )
+          v6 = *v7;
+        v7 += 7;
+        CSchemaEnumBinding<SosEditItemType_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_SosEditItemType_t.m_nMaxValue = v6;
+      }
+      while ( v7 != CSchemaEnumBinding<SosEditItemType_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_SosEditItemType_t.m_Enumerators.m_Data.m_pImplElements
+                  + 7 * v4
+                  + 2 );
+    }
+  }
+  else
+  {
+    CSchemaEnumBinding<SosEditItemType_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_SosEditItemType_t.m_nMinValue = 0;
+    CSchemaEnumBinding<SosEditItemType_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_SosEditItemType_t.m_nMaxValue = 0;
+  }
+  CSchemaEnumBinding<SosEditItemType_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_SosEditItemType_t.m_pOuterTypeScope = v3;
+  (*(*v3 + 272LL))(
+    v3,
+    &CSchemaEnumBinding<SosEditItemType_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_SosEditItemType_t);
+  return &CSchemaEnumBinding<SosEditItemType_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_SosEditItemType_t;
+}
+
+
+// SosEditItemInfo_t::Schema_CompileTimeVerificationFunction  (line 50, @0x000000000203b870, libserver.so)
+void __fastcall SosEditItemInfo_t::Schema_CompileTimeVerificationFunction(SosEditItemInfo_t *const this)
+{
+  ;
+}
+
+
+// SosEditItemInfo_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE  (line 58, @0x000000000203b880, libserver.so)  // inlines: Get, SchemaBinding_SchemaTypeOfMemberVarByAddr<SosEditItemInfo_t, CUtlString>, SchemaBinding_SchemaTypeOfMemberVarByAddr<SosEditItemInfo_t, SosEditItemType_t>, SchemaBinding_SchemaTypeOfMemberVarByAddr<SosEditItemInfo_t, Vector2D>, SetTypeScope
+// callers: CSchemaClassBinding<SosEditItemInfo_t>::Register
+// strings: "SosEditItemType_t", "CUtlString", "Vector2D"
+// globals: SosEditItemInfo_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInit, CSchemaManipulator<CUtlString>::StaticAccessor(void)::m, CAtomicManipulator<CUtlString>::Get(void)::val, CSchemaManipulator<Vector2D>::StaticAccessor(void)::m, CAtomicManipulator<Vector2D>::Get(void)::val, SosEditItemInfo_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSch
+CSchemaClassInfo *__fastcall SosEditItemInfo_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        const char *pProjectName)
+{
+  CSchemaClassInfo *result; // rax
+  ISchemaSystemTypeScope *v4; // rbx
+  CSchemaType *v5; // rax
+
+  result = SosEditItemInfo_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult;
+  if ( SosEditItemInfo_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult == 0 )
+  {
+    v4 = (*(*pSchemaSystem + 112LL))(pSchemaSystem, 0, pBinaryName);
+    SosEditItemInfo_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_SosEditItemInfo_t[0].m_pType = (*(*v4 + 96LL))(v4, "SosEditItemType_t");
+    SosEditItemInfo_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_SosEditItemInfo_t[1].m_pType = (*(*v4 + 56LL))(v4, "CUtlString", 3003, CAtomicManipulator<CUtlString>::Get(void)::val, CSchemaManipulator<CUtlString>::StaticAccessor(void)::m);
+    SosEditItemInfo_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_SosEditItemInfo_t[2].m_pType = (*(*v4 + 56LL))(v4, "CUtlString", 3003, CAtomicManipulator<CUtlString>::Get(void)::val, CSchemaManipulator<CUtlString>::StaticAccessor(void)::m);
+    SosEditItemInfo_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_SosEditItemInfo_t[3].m_pType = (*(*v4 + 56LL))(v4, "CUtlString", 3003, CAtomicManipulator<CUtlString>::Get(void)::val, CSchemaManipulator<CUtlString>::StaticAccessor(void)::m);
+    v5 = (*(*v4 + 56LL))(
+           v4,
+           "Vector2D",
+           2001,
+           CAtomicManipulator<Vector2D>::Get(void)::val,
+           CSchemaManipulator<Vector2D>::StaticAccessor(void)::m);
+    SosEditItemInfo_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_SosEditItemInfo_t.m_pOuterTypeScope = v4;
+    SosEditItemInfo_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_SosEditItemInfo_t[4].m_pType = v5;
+    SosEditItemInfo_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult = &SosEditItemInfo_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_SosEditItemInfo_t;
+    (*(*v4 + 264LL))(
+      v4,
+      &SosEditItemInfo_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_SosEditItemInfo_t);
+    return SosEditItemInfo_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult;
+  }
+  return result;
+}
+
+
+// SosEditItemInfo_t::Schema_VerifyBindingIsRegistered  (line 78, @0x000000000203b9a0, libserver.so)
+void __cdecl SosEditItemInfo_t::Schema_VerifyBindingIsRegistered()
+{
+  ;
+}
+
+
+// SelectedEditItemInfo_t::Schema_CompileTimeVerificationFunction  (line 86, @0x000000000203b9b0, libserver.so)
+void __fastcall SelectedEditItemInfo_t::Schema_CompileTimeVerificationFunction(SelectedEditItemInfo_t *const this)
+{
+  ;
+}
+
+
+// SelectedEditItemInfo_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE  (line 90, @0x000000000203b9c0, libserver.so)  // inlines: Get, SchemaBinding_SchemaTypeOfMemberVarByAddr<SelectedEditItemInfo_t, CUtlVector<SosEditItemInfo_t> >, SetTypeScope
+// callers: CSchemaClassBinding<SelectedEditItemInfo_t>::Register
+// strings: "SosEditItemInfo_t", "CUtlVector"
+// globals: SelectedEditItemInfo_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_, CSchemaManipulator<CUtlVector<SosEditItemInfo_t,CUtlMemory<SosEditItemInfo_t,int>>>::StaticAccessor(void)::m, CAtomicManipulator<CUtlVector<SosEditItemInfo_t,CUtlMemory<SosEditItemInfo_t,int>>>::Get(void)::val, SelectedEditItemInfo_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::Im
+CSchemaClassInfo *__fastcall SelectedEditItemInfo_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        const char *pProjectName)
+{
+  CSchemaClassInfo *result; // rax
+  ISchemaSystemTypeScope *v4; // rbx
+  __int64 (__fastcall *v5)(ISchemaSystemTypeScope *, const char *, __int64, __int64 (__fastcall ***)(), __int64 (__fastcall ***)(), __int64); // r12
+  __int64 v6; // rax
+  CSchemaType *v7; // rax
+
+  result = SelectedEditItemInfo_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult;
+  if ( SelectedEditItemInfo_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult == 0 )
+  {
+    v4 = (*(*pSchemaSystem + 112LL))(pSchemaSystem, 0, pBinaryName);
+    v5 = *(*v4 + 64LL);
+    v6 = (*(*v4 + 88LL))(v4, "SosEditItemInfo_t");
+    v7 = v5(
+           v4,
+           "CUtlVector",
+           3002,
+           &CAtomicManipulator<CUtlVector<SosEditItemInfo_t,CUtlMemory<SosEditItemInfo_t,int>>>::Get(void)::val,
+           CSchemaManipulator<CUtlVector<SosEditItemInfo_t,CUtlMemory<SosEditItemInfo_t,int>>>::StaticAccessor(void)::m,
+           v6);
+    SelectedEditItemInfo_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_SelectedEditItemInfo_t.m_pOuterTypeScope = v4;
+    SelectedEditItemInfo_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_SelectedEditItemInfo_t[0].m_pType = v7;
+    SelectedEditItemInfo_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult = &SelectedEditItemInfo_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_SelectedEditItemInfo_t;
+    (*(*v4 + 264LL))(
+      v4,
+      &SelectedEditItemInfo_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_SelectedEditItemInfo_t);
+    return SelectedEditItemInfo_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult;
+  }
+  return result;
+}
+
+
+// SelectedEditItemInfo_t::Schema_VerifyBindingIsRegistered  (line 102, @0x000000000203ba60, libserver.so)
+void __cdecl SelectedEditItemInfo_t::Schema_VerifyBindingIsRegistered()
+{
+  ;
+}
+
+
+// LocalRegisterSchemaModule<ArbitraryTemplateParameter_server_isoundopsystemedit_h>  (line 110, @0x000000000203ba70, libserver.so)  // inlines: Call, Get
+// callers: RegisterSchemaModule_isoundopsystemedit_h
+// strings: "SosEditItemType_t"
+// globals: CSchemaEnumBinding<SosEditItemType_t>::s_pThisModuleBindingPointer, SosEditItemInfo_t::s_pSchemaBindingForLocalModule, SelectedEditItemInfo_t::s_pSchemaBindingForLocalModule
+void __fastcall LocalRegisterSchemaModule<ArbitraryTemplateParameter_server_isoundopsystemedit_h>(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        SchemaRegistrationPhase_t nRegistrationPhase)
+{
+  if ( nRegistrationPhase != SchemaRegistrationPhase_t::SCHEMA_REGISTRATION_PHASE_ATOMIC_TYPES_AND_ENUMS )
+  {
+    if ( nRegistrationPhase == SchemaRegistrationPhase_t::SCHEMA_REGISTRATION_PHASE_CLASSES )
+    {
+      (*(SosEditItemInfo_t::s_pSchemaBindingForLocalModule->_vptr_ISchemaBinding + 5))(
+        SosEditItemInfo_t::s_pSchemaBindingForLocalModule,
+        pSchemaSystem,
+        pBinaryName,
+        "server");
+      (*(SelectedEditItemInfo_t::s_pSchemaBindingForLocalModule->_vptr_ISchemaBinding + 5))(
+        SelectedEditItemInfo_t::s_pSchemaBindingForLocalModule,
+        pSchemaSystem,
+        pBinaryName,
+        "server");
+    }
+    ++g_nLinkerHack_SchemaAnchor_RegistrationCountFor_server;
+  }
+  else
+  {
+    (*(CSchemaEnumBinding<SosEditItemType_t>::s_pThisModuleBindingPointer->_vptr_ISchemaBinding + 5))(
+      CSchemaEnumBinding<SosEditItemType_t>::s_pThisModuleBindingPointer,
+      pSchemaSystem,
+      pBinaryName,
+      "server",
+      "SosEditItemType_t");
+    ++g_nLinkerHack_SchemaAnchor_RegistrationCountFor_server;
+  }
+}
+
+
+// RegisterSchemaModule_isoundopsystemedit_h  (line 114, @0x000000000203bb20, libserver.so)
+// calls: LocalRegisterSchemaModule<ArbitraryTemplateParameter_server_isoundopsystemedit_h>
+// callers: CSchemaRegistration_server::RegisterAllBindings
+void __fastcall RegisterSchemaModule_isoundopsystemedit_h(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        SchemaRegistrationPhase_t nRegistrationPhase)
+{
+  LocalRegisterSchemaModule<ArbitraryTemplateParameter_server_isoundopsystemedit_h>(
+    pSchemaSystem,
+    pBinaryName,
+    nRegistrationPhase);
+}
+
+

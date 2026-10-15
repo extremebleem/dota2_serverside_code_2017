@@ -1,0 +1,112 @@
+
+// ==== functions (decompiled by Hex-Rays; names/signatures from DWARF) ====
+
+// PlayerLocomotion::Schema_CompileTimeVerificationFunction  (line 35, @0x0000000002f455a0, libserver.so)
+void __fastcall PlayerLocomotion::Schema_CompileTimeVerificationFunction(PlayerLocomotion *const this)
+{
+  ;
+}
+
+
+// PlayerLocomotion::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE  (line 51, @0x0000000002f455b0, libserver.so)  // inlines: Call, Get, SchemaBinding_SchemaTypeOfMemberVarByAddr<PlayerLocomotion, CBasePlayer*>, SchemaBinding_SchemaTypeOfMemberVarByAddr<PlayerLocomotion, CountdownTimer>, SchemaBinding_SchemaTypeOfMemberVarByAddr<PlayerLocomotion, Vector>, SchemaBinding_SchemaTypeOfMemberVarByAddr<PlayerLocomotion, bool>, SchemaBinding_SchemaTypeOfMemberVarByAddr<PlayerLocomotion, const CNavArea*>, SchemaBinding_SchemaTypeOfMemberVarByAddr<PlayerLocomotion, float>, SetTypeScope
+// calls: CLocomotionBase::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE
+// callers: CSchemaNonConstructibleClassBinding<PlayerLocomotion>::Register
+// strings: "CBasePlayer", "CountdownTimer"
+// globals: PlayerLocomotion::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pIniti, CSchemaManipulator<Vector>::StaticAccessor(void)::m, CAtomicManipulator<Vector>::Get(void)::val, PlayerLocomotion::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSche
+CSchemaClassInfo *__fastcall PlayerLocomotion::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        const char *pProjectName)
+{
+  CSchemaClassInfo *result; // rax
+  ISchemaSystemTypeScope *v7; // rbx
+  __int64 (__fastcall *v8)(ISchemaSystemTypeScope *, __int64); // r15
+  __int64 v9; // rax
+  __int64 (__fastcall *v10)(ISchemaSystemTypeScope *, __int64); // r15
+  __int64 v11; // rax
+  CSchemaClassInfo *v12; // rax
+
+  result = PlayerLocomotion::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult;
+  if ( PlayerLocomotion::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult == 0 )
+  {
+    v7 = (*(*pSchemaSystem + 112LL))(pSchemaSystem, 0, pBinaryName);
+    v8 = *(*v7 + 48LL);
+    v9 = (*(*v7 + 88LL))(v7, "CBasePlayer");
+    PlayerLocomotion::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_PlayerLocomotion[0].m_pType = v8(v7, v9);
+    PlayerLocomotion::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_PlayerLocomotion[1].m_pType = (*(*v7 + 40LL))(v7, 13);
+    PlayerLocomotion::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_PlayerLocomotion[2].m_pType = (*(*v7 + 88LL))(v7, "CountdownTimer");
+    PlayerLocomotion::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_PlayerLocomotion[3].m_pType = (*(*v7 + 40LL))(v7, 13);
+    PlayerLocomotion::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_PlayerLocomotion[4].m_pType = (*(*v7 + 40LL))(v7, 13);
+    PlayerLocomotion::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_PlayerLocomotion[5].m_pType = (*(*v7 + 56LL))(v7, "Vector", 2010, CAtomicManipulator<Vector>::Get(void)::val, CSchemaManipulator<Vector>::StaticAccessor(void)::m);
+    PlayerLocomotion::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_PlayerLocomotion[6].m_pType = (*(*v7 + 40LL))(v7, 13);
+    PlayerLocomotion::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_PlayerLocomotion[7].m_pType = (*(*v7 + 40LL))(v7, 11);
+    PlayerLocomotion::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_PlayerLocomotion[8].m_pType = (*(*v7 + 40LL))(v7, 11);
+    PlayerLocomotion::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_PlayerLocomotion[9].m_pType = (*(*v7 + 40LL))(v7, 11);
+    PlayerLocomotion::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_PlayerLocomotion[10].m_pType = (*(*v7 + 40LL))(v7, 11);
+    v10 = *(*v7 + 48LL);
+    v11 = (*(*v7 + 120LL))(v7);
+    PlayerLocomotion::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_PlayerLocomotion[11].m_pType = v10(v7, v11);
+    PlayerLocomotion::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_PlayerLocomotion[12].m_pType = (*(*v7 + 88LL))(v7, "CountdownTimer");
+    (*(CLocomotionBase::s_pSchemaBindingForLocalModule->_vptr_ISchemaBinding + 5))(
+      CLocomotionBase::s_pSchemaBindingForLocalModule,
+      pSchemaSystem,
+      pBinaryName,
+      pProjectName);
+    v12 = CLocomotionBase::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+            pSchemaSystem,
+            pBinaryName,
+            pProjectName);
+    PlayerLocomotion::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_PlayerLocomotion.m_pOuterTypeScope = v7;
+    PlayerLocomotion::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassBases_PlayerLocomotion[0].m_pClass = v12;
+    PlayerLocomotion::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult = &PlayerLocomotion::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_PlayerLocomotion;
+    (*(*v7 + 264LL))(
+      v7,
+      &PlayerLocomotion::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_PlayerLocomotion);
+    return PlayerLocomotion::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult;
+  }
+  return result;
+}
+
+
+// PlayerLocomotion::Schema_VerifyBindingIsRegistered  (line 95, @0x0000000002f457a0, libserver.so)
+void __cdecl PlayerLocomotion::Schema_VerifyBindingIsRegistered()
+{
+  ;
+}
+
+
+// LocalRegisterSchemaModule<ArbitraryTemplateParameter_server_nextbotplayerlocomotion_h>  (line 103, @0x0000000002f457b0, libserver.so)  // inlines: Call
+// globals: PlayerLocomotion::s_pSchemaBindingForLocalModule
+void __fastcall LocalRegisterSchemaModule<ArbitraryTemplateParameter_server_nextbotplayerlocomotion_h>(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        SchemaRegistrationPhase_t nRegistrationPhase)
+{
+  if ( nRegistrationPhase == SchemaRegistrationPhase_t::SCHEMA_REGISTRATION_PHASE_CLASSES )
+    (*(PlayerLocomotion::s_pSchemaBindingForLocalModule->_vptr_ISchemaBinding + 5))(
+      PlayerLocomotion::s_pSchemaBindingForLocalModule,
+      pSchemaSystem,
+      pBinaryName,
+      "server");
+  ++g_nLinkerHack_SchemaAnchor_RegistrationCountFor_server;
+}
+
+
+// RegisterSchemaModule_nextbotplayerlocomotion_h  (line 105, @0x0000000002f457f0, libserver.so)  // inlines: Call, LocalRegisterSchemaModule<ArbitraryTemplateParameter_server_nextbotplayerlocomotion_h>
+// callers: CSchemaRegistration_server::RegisterAllBindings
+// globals: PlayerLocomotion::s_pSchemaBindingForLocalModule
+void __fastcall RegisterSchemaModule_nextbotplayerlocomotion_h(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        SchemaRegistrationPhase_t nRegistrationPhase)
+{
+  if ( nRegistrationPhase == SchemaRegistrationPhase_t::SCHEMA_REGISTRATION_PHASE_CLASSES )
+    (*(PlayerLocomotion::s_pSchemaBindingForLocalModule->_vptr_ISchemaBinding + 5))(
+      PlayerLocomotion::s_pSchemaBindingForLocalModule,
+      pSchemaSystem,
+      pBinaryName,
+      "server");
+  ++g_nLinkerHack_SchemaAnchor_RegistrationCountFor_server;
+}
+
+

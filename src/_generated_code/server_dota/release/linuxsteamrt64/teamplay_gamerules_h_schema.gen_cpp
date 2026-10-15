@@ -1,0 +1,101 @@
+
+// ==== functions (decompiled by Hex-Rays; names/signatures from DWARF) ====
+
+// CTeamplayRules::Schema_CompileTimeVerificationFunction  (line 35, @0x0000000001f1f840, libserver.so)
+void __fastcall CTeamplayRules::Schema_CompileTimeVerificationFunction(CTeamplayRules *const this)
+{
+  ;
+}
+
+
+// CTeamplayRules::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE  (line 44, @0x0000000001f1f850, libserver.so)  // inlines: Call, Get, SchemaBinding_SchemaTypeOfMemberVarByAddr<CTeamplayRules, bool>, SchemaBinding_SchemaTypeOfMemberVarByAddr<CTeamplayRules, char [512]>, SetTypeScope
+// calls: CMultiplayRules::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE
+// callers: CSchemaClassBinding<CTeamplayRules>::Register, CDOTAGamerules::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE
+// globals: CTeamplayRules::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitial, CTeamplayRules::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema
+CSchemaClassInfo *__fastcall CTeamplayRules::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        const char *pProjectName)
+{
+  CSchemaClassInfo *result; // rax
+  ISchemaSystemTypeScope *v7; // rbx
+  __int64 (__fastcall *v8)(ISchemaSystemTypeScope *, __int64, __int64); // r15
+  __int64 v9; // rax
+  CSchemaClassInfo *v10; // rax
+
+  result = CTeamplayRules::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult;
+  if ( CTeamplayRules::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult == 0 )
+  {
+    v7 = (*(*pSchemaSystem + 112LL))(pSchemaSystem, 0, pBinaryName);
+    CTeamplayRules::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CTeamplayRules[0].m_pType = (*(*v7 + 40LL))(v7, 13);
+    CTeamplayRules::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CTeamplayRules[1].m_pType = (*(*v7 + 40LL))(v7, 13);
+    CTeamplayRules::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CTeamplayRules[2].m_pType = (*(*v7 + 40LL))(v7, 13);
+    v8 = *(*v7 + 104LL);
+    v9 = (*(*v7 + 40LL))(v7, 2);
+    CTeamplayRules::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CTeamplayRules[3].m_pType = v8(v7, v9, 512);
+    CTeamplayRules::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CTeamplayRules[4].m_pType = (*(*v7 + 40LL))(v7, 13);
+    CTeamplayRules::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CTeamplayRules[5].m_pType = (*(*v7 + 40LL))(v7, 13);
+    (*(CMultiplayRules::s_pSchemaBindingForLocalModule->_vptr_ISchemaBinding + 5))(
+      CMultiplayRules::s_pSchemaBindingForLocalModule,
+      pSchemaSystem,
+      pBinaryName,
+      pProjectName);
+    v10 = CMultiplayRules::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+            pSchemaSystem,
+            pBinaryName,
+            pProjectName);
+    CTeamplayRules::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CTeamplayRules.m_pOuterTypeScope = v7;
+    CTeamplayRules::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassBases_CTeamplayRules[0].m_pClass = v10;
+    CTeamplayRules::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult = &CTeamplayRules::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CTeamplayRules;
+    (*(*v7 + 264LL))(
+      v7,
+      &CTeamplayRules::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CTeamplayRules);
+    return CTeamplayRules::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult;
+  }
+  return result;
+}
+
+
+// CTeamplayRules::Schema_VerifyBindingIsRegistered  (line 74, @0x0000000001f1f990, libserver.so)
+// callers: CTeamplayRules::Schema_DynamicBinding
+void __cdecl CTeamplayRules::Schema_VerifyBindingIsRegistered()
+{
+  ;
+}
+
+
+// LocalRegisterSchemaModule<ArbitraryTemplateParameter_server_teamplay_gamerules_h>  (line 82, @0x0000000001f1f9a0, libserver.so)  // inlines: Call
+// globals: CTeamplayRules::s_pSchemaBindingForLocalModule
+void __fastcall LocalRegisterSchemaModule<ArbitraryTemplateParameter_server_teamplay_gamerules_h>(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        SchemaRegistrationPhase_t nRegistrationPhase)
+{
+  if ( nRegistrationPhase == SchemaRegistrationPhase_t::SCHEMA_REGISTRATION_PHASE_CLASSES )
+    (*(CTeamplayRules::s_pSchemaBindingForLocalModule->_vptr_ISchemaBinding + 5))(
+      CTeamplayRules::s_pSchemaBindingForLocalModule,
+      pSchemaSystem,
+      pBinaryName,
+      "server");
+  ++g_nLinkerHack_SchemaAnchor_RegistrationCountFor_server;
+}
+
+
+// RegisterSchemaModule_teamplay_gamerules_h  (line 84, @0x0000000001f1f9e0, libserver.so)  // inlines: Call, LocalRegisterSchemaModule<ArbitraryTemplateParameter_server_teamplay_gamerules_h>
+// callers: CSchemaRegistration_server::RegisterAllBindings
+// globals: CTeamplayRules::s_pSchemaBindingForLocalModule
+void __fastcall RegisterSchemaModule_teamplay_gamerules_h(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        SchemaRegistrationPhase_t nRegistrationPhase)
+{
+  if ( nRegistrationPhase == SchemaRegistrationPhase_t::SCHEMA_REGISTRATION_PHASE_CLASSES )
+    (*(CTeamplayRules::s_pSchemaBindingForLocalModule->_vptr_ISchemaBinding + 5))(
+      CTeamplayRules::s_pSchemaBindingForLocalModule,
+      pSchemaSystem,
+      pBinaryName,
+      "server");
+  ++g_nLinkerHack_SchemaAnchor_RegistrationCountFor_server;
+}
+
+

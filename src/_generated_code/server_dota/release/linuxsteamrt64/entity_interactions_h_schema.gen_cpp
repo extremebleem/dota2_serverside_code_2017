@@ -1,0 +1,247 @@
+
+// ==== functions (decompiled by Hex-Rays; names/signatures from DWARF) ====
+
+// CSchemaEnumBinding<interactions_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE  (line 35, @0x00000000021cdbd0, libserver.so)  // inlines: Count, Initialize, SetTypeScope
+// callers: CSchemaEnumBinding<interactions_t>::Register
+// globals: CSchemaEnumBinding<interactions_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char 
+CSchemaEnumInfo *__fastcall CSchemaEnumBinding<interactions_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        const char *pProjectName)
+{
+  ISchemaSystemTypeScope *v3; // rax
+  unsigned int v4; // edi
+  SchemaEnumeratorValue_t v5; // r8
+  SchemaEnumeratorValue_t v6; // r9
+  SchemaEnumeratorValue_t *v7; // rdx
+
+  v3 = (*(*pSchemaSystem + 112LL))(pSchemaSystem, 0, pBinaryName);
+  if ( CSchemaEnumBinding<interactions_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_interactions_t.m_Enumerators.m_Data.m_nImplLength != 0 )
+  {
+    v4 = abs32(CSchemaEnumBinding<interactions_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_interactions_t.m_Enumerators.m_Data.m_nImplLength);
+    v5 = *(CSchemaEnumBinding<interactions_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_interactions_t.m_Enumerators.m_Data.m_pImplElements
+         + 2);
+    CSchemaEnumBinding<interactions_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_interactions_t.m_nMinValue = v5;
+    v6 = *(CSchemaEnumBinding<interactions_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_interactions_t.m_Enumerators.m_Data.m_pImplElements
+         + 2);
+    CSchemaEnumBinding<interactions_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_interactions_t.m_nMaxValue = v6;
+    if ( v4 != 1 )
+    {
+      v7 = (CSchemaEnumBinding<interactions_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_interactions_t.m_Enumerators.m_Data.m_pImplElements
+          + 72);
+      do
+      {
+        if ( v5 > *v7 )
+          v5 = *v7;
+        CSchemaEnumBinding<interactions_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_interactions_t.m_nMinValue = v5;
+        if ( v6 < *v7 )
+          v6 = *v7;
+        v7 += 7;
+        CSchemaEnumBinding<interactions_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_interactions_t.m_nMaxValue = v6;
+      }
+      while ( v7 != CSchemaEnumBinding<interactions_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_interactions_t.m_Enumerators.m_Data.m_pImplElements
+                  + 7 * v4
+                  + 2 );
+    }
+  }
+  else
+  {
+    CSchemaEnumBinding<interactions_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_interactions_t.m_nMinValue = 0;
+    CSchemaEnumBinding<interactions_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_interactions_t.m_nMaxValue = 0;
+  }
+  CSchemaEnumBinding<interactions_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_interactions_t.m_pOuterTypeScope = v3;
+  (*(*v3 + 272LL))(
+    v3,
+    &CSchemaEnumBinding<interactions_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_interactions_t);
+  return &CSchemaEnumBinding<interactions_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_interactions_t;
+}
+
+
+// prevent_interaction_t::Schema_CompileTimeVerificationFunction  (line 50, @0x00000000021cdcb0, libserver.so)
+void __fastcall prevent_interaction_t::Schema_CompileTimeVerificationFunction(prevent_interaction_t *const this)
+{
+  ;
+}
+
+
+// prevent_interaction_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE  (line 55, @0x00000000021cdcc0, libserver.so)  // inlines: Get, SchemaBinding_SchemaTypeOfMemberVarByAddr<prevent_interaction_t, CHandle<CBaseEntity> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<prevent_interaction_t, float>, SetTypeScope
+// callers: CSchemaClassBinding<prevent_interaction_t>::Register
+// strings: "CBaseEntity", "CHandle"
+// globals: prevent_interaction_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_p, CSchemaManipulator<CHandle<CBaseEntity>>::StaticAccessor(void)::m, CAtomicManipulator<CHandle<CBaseEntity>>::Get(void)::val, prevent_interaction_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::Imp
+CSchemaClassInfo *__fastcall prevent_interaction_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        const char *pProjectName)
+{
+  CSchemaClassInfo *result; // rax
+  ISchemaSystemTypeScope *v4; // rbx
+  __int64 (__fastcall *v5)(ISchemaSystemTypeScope *, const char *, __int64, __int64 (__fastcall ***)(), __int64 (__fastcall ***)(), __int64); // r12
+  __int64 v6; // rax
+  CSchemaType *v7; // rax
+
+  result = prevent_interaction_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult;
+  if ( prevent_interaction_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult == 0 )
+  {
+    v4 = (*(*pSchemaSystem + 112LL))(pSchemaSystem, 0, pBinaryName);
+    v5 = *(*v4 + 64LL);
+    v6 = (*(*v4 + 88LL))(v4, "CBaseEntity");
+    prevent_interaction_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_prevent_interaction_t[0].m_pType = v5(v4, "CHandle", 5003, CAtomicManipulator<CHandle<CBaseEntity>>::Get(void)::val, &CSchemaManipulator<CHandle<CBaseEntity>>::StaticAccessor(void)::m, v6);
+    v7 = (*(*v4 + 40LL))(v4, 11);
+    prevent_interaction_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_prevent_interaction_t.m_pOuterTypeScope = v4;
+    prevent_interaction_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_prevent_interaction_t[1].m_pType = v7;
+    prevent_interaction_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult = &prevent_interaction_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_prevent_interaction_t;
+    (*(*v4 + 264LL))(
+      v4,
+      &prevent_interaction_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_prevent_interaction_t);
+    return prevent_interaction_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult;
+  }
+  return result;
+}
+
+
+// prevent_interaction_t::Schema_VerifyBindingIsRegistered  (line 69, @0x00000000021cdd70, libserver.so)
+void __cdecl prevent_interaction_t::Schema_VerifyBindingIsRegistered()
+{
+  ;
+}
+
+
+// CInteractionManager::Schema_CompileTimeVerificationFunction  (line 77, @0x00000000021cdd80, libserver.so)
+void __fastcall CInteractionManager::Schema_CompileTimeVerificationFunction(CInteractionManager *const this)
+{
+  ;
+}
+
+
+// CInteractionManager::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE  (line 92, @0x00000000021cdd90, libserver.so)  // inlines: Get, SchemaBinding_SchemaTypeOfMemberVarByAddr<CInteractionManager, CHandle<CBaseAnimating> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<CInteractionManager, CHandle<CBasePlayer> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<CInteractionManager, CUtlVector<prevent_interaction_t> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<CInteractionManager, bool [4]>, SchemaBinding_SchemaTypeOfMemberVarByAddr<CInteractionManager, bool>, SchemaBinding_SchemaTypeOfMemberVarByAddr<CInteractionManager, float>, SchemaBinding_SchemaTypeOfMemberVarByAddr<CInteractionManager, interactions_t>, SchemaBinding_SchemaTypeOfMemberVarByAddr<CInteractionManager, matrix3x4_t>, SetTypeScope
+// callers: CSchemaNonConstructibleClassBinding<CInteractionManager>::Register
+// strings: "interactions_t", "matrix3x4_t", "CBaseAnimating", "CHandle", "CBasePlayer", "prevent_interaction_t" (7 total)
+// globals: CInteractionManager::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pIn, CSchemaManipulator<matrix3x4_t>::StaticAccessor(void)::m, CAtomicManipulator<matrix3x4_t>::Get(void)::val, CSchemaManipulator<CHandle<CBaseAnimating>>::StaticAccessor(void)::m, CAtomicManipulator<CHandle<CBaseAnimating>>::Get(void)::val, CSchemaManipulator<CHandle<CBasePlayer>>::StaticAccessor(void)::m, CAtomicManipulator<CHandle<CBasePlayer>>::Get(void)::val, CSchemaManipulator<CUtlVector<prevent_interaction_t,CUtlMemory<prevent_interaction_t,int>>>::StaticAccessor(void)::m (10 total)
+CSchemaClassInfo *__fastcall CInteractionManager::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        const char *pProjectName)
+{
+  CSchemaClassInfo *result; // rax
+  ISchemaSystemTypeScope *v4; // rbx
+  __int64 (__fastcall *v5)(ISchemaSystemTypeScope *, const char *, __int64, __int64 (__fastcall ***)(), __int64 (__fastcall ***)(), __int64); // r12
+  __int64 v6; // rax
+  __int64 (__fastcall *v7)(ISchemaSystemTypeScope *, const char *, __int64, __int64 (__fastcall ***)(), __int64 (__fastcall ***)(), __int64); // r12
+  __int64 v8; // rax
+  __int64 (__fastcall *v9)(ISchemaSystemTypeScope *, const char *, __int64, __int64 (__fastcall ***)(), __int64 (__fastcall ***)(), __int64); // r12
+  __int64 v10; // rax
+  __int64 (__fastcall *v11)(ISchemaSystemTypeScope *, __int64, __int64); // r12
+  __int64 v12; // rax
+  __int64 (__fastcall *v13)(ISchemaSystemTypeScope *, __int64, __int64); // r12
+  __int64 v14; // rax
+  __int64 (__fastcall *v15)(ISchemaSystemTypeScope *, const char *, __int64, __int64 (__fastcall ***)(), __int64 (__fastcall ***)(), __int64); // r12
+  __int64 v16; // rax
+  CSchemaType *v17; // rax
+
+  result = CInteractionManager::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult;
+  if ( CInteractionManager::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult == 0 )
+  {
+    v4 = (*(*pSchemaSystem + 112LL))(pSchemaSystem, 0, pBinaryName);
+    CInteractionManager::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CInteractionManager[0].m_pType = (*(*v4 + 96LL))(v4, "interactions_t");
+    CInteractionManager::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CInteractionManager[1].m_pType = (*(*v4 + 56LL))(v4, "matrix3x4_t", 2003, CAtomicManipulator<matrix3x4_t>::Get(void)::val, CSchemaManipulator<matrix3x4_t>::StaticAccessor(void)::m);
+    v5 = *(*v4 + 64LL);
+    v6 = (*(*v4 + 88LL))(v4, "CBaseAnimating");
+    CInteractionManager::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CInteractionManager[2].m_pType = v5(v4, "CHandle", 5003, CAtomicManipulator<CHandle<CBaseAnimating>>::Get(void)::val, CSchemaManipulator<CHandle<CBaseAnimating>>::StaticAccessor(void)::m, v6);
+    v7 = *(*v4 + 64LL);
+    v8 = (*(*v4 + 88LL))(v4, "CBasePlayer");
+    CInteractionManager::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CInteractionManager[3].m_pType = v7(v4, "CHandle", 5003, CAtomicManipulator<CHandle<CBasePlayer>>::Get(void)::val, CSchemaManipulator<CHandle<CBasePlayer>>::StaticAccessor(void)::m, v8);
+    v9 = *(*v4 + 64LL);
+    v10 = (*(*v4 + 88LL))(v4, "CBaseAnimating");
+    CInteractionManager::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CInteractionManager[4].m_pType = v9(v4, "CHandle", 5003, CAtomicManipulator<CHandle<CBaseAnimating>>::Get(void)::val, CSchemaManipulator<CHandle<CBaseAnimating>>::StaticAccessor(void)::m, v10);
+    CInteractionManager::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CInteractionManager[5].m_pType = (*(*v4 + 56LL))(v4, "matrix3x4_t", 2003, CAtomicManipulator<matrix3x4_t>::Get(void)::val, CSchemaManipulator<matrix3x4_t>::StaticAccessor(void)::m);
+    CInteractionManager::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CInteractionManager[6].m_pType = (*(*v4 + 56LL))(v4, "matrix3x4_t", 2003, CAtomicManipulator<matrix3x4_t>::Get(void)::val, CSchemaManipulator<matrix3x4_t>::StaticAccessor(void)::m);
+    CInteractionManager::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CInteractionManager[7].m_pType = (*(*v4 + 40LL))(v4, 11);
+    v11 = *(*v4 + 104LL);
+    v12 = (*(*v4 + 40LL))(v4, 13);
+    CInteractionManager::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CInteractionManager[8].m_pType = v11(v4, v12, 4);
+    v13 = *(*v4 + 104LL);
+    v14 = (*(*v4 + 40LL))(v4, 13);
+    CInteractionManager::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CInteractionManager[9].m_pType = v13(v4, v14, 4);
+    CInteractionManager::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CInteractionManager[10].m_pType = (*(*v4 + 40LL))(v4, 13);
+    v15 = *(*v4 + 64LL);
+    v16 = (*(*v4 + 88LL))(v4, "prevent_interaction_t");
+    v17 = v15(
+            v4,
+            "CUtlVector",
+            3002,
+            &CAtomicManipulator<CUtlVector<prevent_interaction_t,CUtlMemory<prevent_interaction_t,int>>>::Get(void)::val,
+            CSchemaManipulator<CUtlVector<prevent_interaction_t,CUtlMemory<prevent_interaction_t,int>>>::StaticAccessor(void)::m,
+            v16);
+    CInteractionManager::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CInteractionManager.m_pOuterTypeScope = v4;
+    CInteractionManager::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CInteractionManager[11].m_pType = v17;
+    CInteractionManager::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult = &CInteractionManager::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CInteractionManager;
+    (*(*v4 + 264LL))(
+      v4,
+      &CInteractionManager::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CInteractionManager);
+    return CInteractionManager::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult;
+  }
+  return result;
+}
+
+
+// CInteractionManager::Schema_VerifyBindingIsRegistered  (line 126, @0x00000000021cdff0, libserver.so)
+void __cdecl CInteractionManager::Schema_VerifyBindingIsRegistered()
+{
+  ;
+}
+
+
+// LocalRegisterSchemaModule<ArbitraryTemplateParameter_server_entity_interactions_h>  (line 134, @0x00000000021ce000, libserver.so)  // inlines: Call, Get
+// callers: RegisterSchemaModule_entity_interactions_h
+// strings: "interactions_t"
+// globals: CSchemaEnumBinding<interactions_t>::s_pThisModuleBindingPointer, prevent_interaction_t::s_pSchemaBindingForLocalModule, CInteractionManager::s_pSchemaBindingForLocalModule
+void __fastcall LocalRegisterSchemaModule<ArbitraryTemplateParameter_server_entity_interactions_h>(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        SchemaRegistrationPhase_t nRegistrationPhase)
+{
+  if ( nRegistrationPhase != SchemaRegistrationPhase_t::SCHEMA_REGISTRATION_PHASE_ATOMIC_TYPES_AND_ENUMS )
+  {
+    if ( nRegistrationPhase == SchemaRegistrationPhase_t::SCHEMA_REGISTRATION_PHASE_CLASSES )
+    {
+      (*(prevent_interaction_t::s_pSchemaBindingForLocalModule->_vptr_ISchemaBinding + 5))(
+        prevent_interaction_t::s_pSchemaBindingForLocalModule,
+        pSchemaSystem,
+        pBinaryName,
+        "server");
+      (*(CInteractionManager::s_pSchemaBindingForLocalModule->_vptr_ISchemaBinding + 5))(
+        CInteractionManager::s_pSchemaBindingForLocalModule,
+        pSchemaSystem,
+        pBinaryName,
+        "server");
+    }
+    ++g_nLinkerHack_SchemaAnchor_RegistrationCountFor_server;
+  }
+  else
+  {
+    (*(CSchemaEnumBinding<interactions_t>::s_pThisModuleBindingPointer->_vptr_ISchemaBinding + 5))(
+      CSchemaEnumBinding<interactions_t>::s_pThisModuleBindingPointer,
+      pSchemaSystem,
+      pBinaryName,
+      "server",
+      "interactions_t");
+    ++g_nLinkerHack_SchemaAnchor_RegistrationCountFor_server;
+  }
+}
+
+
+// RegisterSchemaModule_entity_interactions_h  (line 138, @0x00000000021ce0b0, libserver.so)
+// calls: LocalRegisterSchemaModule<ArbitraryTemplateParameter_server_entity_interactions_h>
+// callers: CSchemaRegistration_server::RegisterAllBindings
+void __fastcall RegisterSchemaModule_entity_interactions_h(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        SchemaRegistrationPhase_t nRegistrationPhase)
+{
+  LocalRegisterSchemaModule<ArbitraryTemplateParameter_server_entity_interactions_h>(
+    pSchemaSystem,
+    pBinaryName,
+    nRegistrationPhase);
+}
+
+

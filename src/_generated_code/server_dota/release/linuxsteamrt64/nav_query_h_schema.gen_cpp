@@ -1,0 +1,83 @@
+
+// ==== functions (decompiled by Hex-Rays; names/signatures from DWARF) ====
+
+// ClusteredDistributionParams_t::Schema_CompileTimeVerificationFunction  (line 35, @0x00000000020323c0, libserver.so)
+void __fastcall ClusteredDistributionParams_t::Schema_CompileTimeVerificationFunction(
+        ClusteredDistributionParams_t *const this)
+{
+  ;
+}
+
+
+// ClusteredDistributionParams_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE  (line 40, @0x00000000020323d0, libserver.so)  // inlines: Get, SchemaBinding_SchemaTypeOfMemberVarByAddr<ClusteredDistributionParams_t, float>, SetTypeScope
+// callers: CSchemaClassBinding<ClusteredDistributionParams_t>::Register
+// globals: ClusteredDistributionParams_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char cons
+CSchemaClassInfo *__fastcall ClusteredDistributionParams_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        const char *pProjectName)
+{
+  CSchemaClassInfo *result; // rax
+  ISchemaSystemTypeScope *v4; // rbx
+  CSchemaType *v5; // rax
+
+  result = ClusteredDistributionParams_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult;
+  if ( ClusteredDistributionParams_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult == 0 )
+  {
+    v4 = (*(*pSchemaSystem + 112LL))(pSchemaSystem, 0, pBinaryName);
+    ClusteredDistributionParams_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_ClusteredDistributionParams_t[0].m_pType = (*(*v4 + 40LL))(v4, 11);
+    v5 = (*(*v4 + 40LL))(v4, 11);
+    ClusteredDistributionParams_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_ClusteredDistributionParams_t.m_pOuterTypeScope = v4;
+    ClusteredDistributionParams_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_ClusteredDistributionParams_t[1].m_pType = v5;
+    ClusteredDistributionParams_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult = &ClusteredDistributionParams_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_ClusteredDistributionParams_t;
+    (*(*v4 + 264LL))(
+      v4,
+      &ClusteredDistributionParams_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_ClusteredDistributionParams_t);
+    return ClusteredDistributionParams_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult;
+  }
+  return result;
+}
+
+
+// ClusteredDistributionParams_t::Schema_VerifyBindingIsRegistered  (line 54, @0x0000000002032460, libserver.so)
+void __cdecl ClusteredDistributionParams_t::Schema_VerifyBindingIsRegistered()
+{
+  ;
+}
+
+
+// LocalRegisterSchemaModule<ArbitraryTemplateParameter_server_nav_query_h>  (line 62, @0x0000000002032470, libserver.so)  // inlines: Call
+// globals: ClusteredDistributionParams_t::s_pSchemaBindingForLocalModule
+void __fastcall LocalRegisterSchemaModule<ArbitraryTemplateParameter_server_nav_query_h>(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        SchemaRegistrationPhase_t nRegistrationPhase)
+{
+  if ( nRegistrationPhase == SchemaRegistrationPhase_t::SCHEMA_REGISTRATION_PHASE_CLASSES )
+    (*(ClusteredDistributionParams_t::s_pSchemaBindingForLocalModule->_vptr_ISchemaBinding + 5))(
+      ClusteredDistributionParams_t::s_pSchemaBindingForLocalModule,
+      pSchemaSystem,
+      pBinaryName,
+      "server");
+  ++g_nLinkerHack_SchemaAnchor_RegistrationCountFor_server;
+}
+
+
+// RegisterSchemaModule_nav_query_h  (line 64, @0x00000000020324b0, libserver.so)  // inlines: Call, LocalRegisterSchemaModule<ArbitraryTemplateParameter_server_nav_query_h>
+// callers: CSchemaRegistration_server::RegisterAllBindings
+// globals: ClusteredDistributionParams_t::s_pSchemaBindingForLocalModule
+void __fastcall RegisterSchemaModule_nav_query_h(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        SchemaRegistrationPhase_t nRegistrationPhase)
+{
+  if ( nRegistrationPhase == SchemaRegistrationPhase_t::SCHEMA_REGISTRATION_PHASE_CLASSES )
+    (*(ClusteredDistributionParams_t::s_pSchemaBindingForLocalModule->_vptr_ISchemaBinding + 5))(
+      ClusteredDistributionParams_t::s_pSchemaBindingForLocalModule,
+      pSchemaSystem,
+      pBinaryName,
+      "server");
+  ++g_nLinkerHack_SchemaAnchor_RegistrationCountFor_server;
+}
+
+

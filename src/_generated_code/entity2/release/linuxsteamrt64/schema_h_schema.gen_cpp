@@ -1,0 +1,456 @@
+
+// ==== functions (decompiled by Hex-Rays; names/signatures from DWARF) ====
+
+// LocalRegisterSchemaModule<ArbitraryTemplateParameter_entity2_schema_h>  (line 376, @0x00000000030d46e0, libserver.so)  // inlines: RegisterAtomicType_CEntityIndex, RegisterAtomicType_CPlayerSlot, RegisterAtomicType_CSplitScreenSlot, RegisterAtomicType_CTransform, RegisterAtomicType_CUtlBinaryBlock, RegisterAtomicType_CUtlString, RegisterAtomicType_CUtlSymbol, RegisterAtomicType_Color, RegisterAtomicType_DegreeEuler, RegisterAtomicType_KeyValues, RegisterAtomicType_QAngle, RegisterAtomicType_Quaternion, RegisterAtomicType_RadianEuler, RegisterAtomicType_SoundGuid_t, RegisterAtomicType_VMatrix, RegisterAtomicType_V_uuid_t, RegisterAtomicType_Vector, RegisterAtomicType_Vector2D, RegisterAtomicType_Vector4D, RegisterAtomicType_VectorAligned, RegisterAtomicType_fltx4, RegisterAtomicType_matrix3x4_t, RegisterAtomicType_matrix3x4a_t, SchemaMetaSet2_t
+// calls: __cxa_guard_acquire, __cxa_guard_release
+// callers: RegisterSchemaModule_schema_h
+// strings: "MNetworkSerializeAs", "MSerializeAs"
+// globals: `guard variable for'RegisterAtomicType_Vector2D(ISchemaSystem *)::SID_AtomicMeta2_Vector2D0_MSerializeAs_Value, `guard variable for'RegisterAtomicType_Vector2D(ISchemaSystem *)::SID_AtomicMeta2_Vector2D, `guard variable for'RegisterAtomicType_Vector2D(ISchemaSystem *)::s_AtomicTypeInfoVector2D, RegisterAtomicType_Vector2D(ISchemaSystem *)::s_AtomicTypeInfoVector2D, `guard variable for'RegisterAtomicType_Vector(ISchemaSystem *)::SID_AtomicMeta2_Vector0_MSerializeAs_Value, `guard variable for'RegisterAtomicType_Vector(ISchemaSystem *)::SID_AtomicMeta2_Vector, `guard variable for'RegisterAtomicType_Vector(ISchemaSystem *)::s_AtomicTypeInfoVector, RegisterAtomicType_Vector(ISchemaSystem *)::s_AtomicTypeInfoVector (40 total)
+void __fastcall LocalRegisterSchemaModule<ArbitraryTemplateParameter_entity2_schema_h>(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        SchemaRegistrationPhase_t nRegistrationPhase)
+{
+  if ( nRegistrationPhase != SchemaRegistrationPhase_t::SCHEMA_REGISTRATION_PHASE_ATOMIC_TYPES_AND_ENUMS )
+  {
+    ++g_nLinkerHack_SchemaAnchor_RegistrationCountFor_entity2;
+  }
+  else
+  {
+    if ( `guard variable for'RegisterAtomicType_Vector2D(ISchemaSystem *)::SID_AtomicMeta2_Vector2D0_MSerializeAs_Value == 0
+      && __cxa_guard_acquire(&`guard variable for'RegisterAtomicType_Vector2D(ISchemaSystem *)::SID_AtomicMeta2_Vector2D0_MSerializeAs_Value) != 0 )
+    {
+      RegisterAtomicType_Vector2D(ISchemaSystem *)::SID_AtomicMeta2_Vector2D0_MSerializeAs_Value = 11;
+      dword_4D78D1C = 2;
+      __cxa_guard_release(&`guard variable for'RegisterAtomicType_Vector2D(ISchemaSystem *)::SID_AtomicMeta2_Vector2D0_MSerializeAs_Value);
+    }
+    if ( `guard variable for'RegisterAtomicType_Vector2D(ISchemaSystem *)::SID_AtomicMeta2_Vector2D == 0
+      && __cxa_guard_acquire(&`guard variable for'RegisterAtomicType_Vector2D(ISchemaSystem *)::SID_AtomicMeta2_Vector2D) != 0 )
+    {
+      RegisterAtomicType_Vector2D(ISchemaSystem *)::SID_AtomicMeta2_Vector2D = "MSerializeAs";
+      __cxa_guard_release(&`guard variable for'RegisterAtomicType_Vector2D(ISchemaSystem *)::SID_AtomicMeta2_Vector2D);
+    }
+    if ( `guard variable for'RegisterAtomicType_Vector2D(ISchemaSystem *)::s_AtomicTypeInfoVector2D == 0
+      && __cxa_guard_acquire(&`guard variable for'RegisterAtomicType_Vector2D(ISchemaSystem *)::s_AtomicTypeInfoVector2D) != 0 )
+    {
+      dword_4A6BE40 = 1;
+      qword_4A6BE38 = &RegisterAtomicType_Vector2D(ISchemaSystem *)::SID_AtomicMeta2_Vector2D;
+      __cxa_guard_release(&`guard variable for'RegisterAtomicType_Vector2D(ISchemaSystem *)::s_AtomicTypeInfoVector2D);
+    }
+    (*(*pSchemaSystem + 248LL))(pSchemaSystem, RegisterAtomicType_Vector2D(ISchemaSystem *)::s_AtomicTypeInfoVector2D);
+    if ( `guard variable for'RegisterAtomicType_Vector(ISchemaSystem *)::SID_AtomicMeta2_Vector0_MSerializeAs_Value == 0
+      && __cxa_guard_acquire(&`guard variable for'RegisterAtomicType_Vector(ISchemaSystem *)::SID_AtomicMeta2_Vector0_MSerializeAs_Value) != 0 )
+    {
+      RegisterAtomicType_Vector(ISchemaSystem *)::SID_AtomicMeta2_Vector0_MSerializeAs_Value = 11;
+      dword_4D78D14 = 3;
+      __cxa_guard_release(&`guard variable for'RegisterAtomicType_Vector(ISchemaSystem *)::SID_AtomicMeta2_Vector0_MSerializeAs_Value);
+    }
+    if ( `guard variable for'RegisterAtomicType_Vector(ISchemaSystem *)::SID_AtomicMeta2_Vector == 0
+      && __cxa_guard_acquire(&`guard variable for'RegisterAtomicType_Vector(ISchemaSystem *)::SID_AtomicMeta2_Vector) != 0 )
+    {
+      RegisterAtomicType_Vector(ISchemaSystem *)::SID_AtomicMeta2_Vector = "MSerializeAs";
+      __cxa_guard_release(&`guard variable for'RegisterAtomicType_Vector(ISchemaSystem *)::SID_AtomicMeta2_Vector);
+    }
+    if ( `guard variable for'RegisterAtomicType_Vector(ISchemaSystem *)::s_AtomicTypeInfoVector == 0
+      && __cxa_guard_acquire(&`guard variable for'RegisterAtomicType_Vector(ISchemaSystem *)::s_AtomicTypeInfoVector) != 0 )
+    {
+      dword_4A6BE00 = 1;
+      qword_4A6BDF8 = &RegisterAtomicType_Vector(ISchemaSystem *)::SID_AtomicMeta2_Vector;
+      __cxa_guard_release(&`guard variable for'RegisterAtomicType_Vector(ISchemaSystem *)::s_AtomicTypeInfoVector);
+    }
+    (*(*pSchemaSystem + 248LL))(pSchemaSystem, &RegisterAtomicType_Vector(ISchemaSystem *)::s_AtomicTypeInfoVector);
+    if ( `guard variable for'RegisterAtomicType_VectorAligned(ISchemaSystem *)::SID_AtomicMeta2_VectorAligned0_MSerializeAs_Value == 0
+      && __cxa_guard_acquire(&`guard variable for'RegisterAtomicType_VectorAligned(ISchemaSystem *)::SID_AtomicMeta2_VectorAligned0_MSerializeAs_Value) != 0 )
+    {
+      RegisterAtomicType_VectorAligned(ISchemaSystem *)::SID_AtomicMeta2_VectorAligned0_MSerializeAs_Value = 11;
+      dword_4D78D0C = 3;
+      __cxa_guard_release(&`guard variable for'RegisterAtomicType_VectorAligned(ISchemaSystem *)::SID_AtomicMeta2_VectorAligned0_MSerializeAs_Value);
+    }
+    if ( `guard variable for'RegisterAtomicType_VectorAligned(ISchemaSystem *)::SID_AtomicMeta2_VectorAligned == 0
+      && __cxa_guard_acquire(&`guard variable for'RegisterAtomicType_VectorAligned(ISchemaSystem *)::SID_AtomicMeta2_VectorAligned) != 0 )
+    {
+      RegisterAtomicType_VectorAligned(ISchemaSystem *)::SID_AtomicMeta2_VectorAligned = "MSerializeAs";
+      __cxa_guard_release(&`guard variable for'RegisterAtomicType_VectorAligned(ISchemaSystem *)::SID_AtomicMeta2_VectorAligned);
+    }
+    if ( `guard variable for'RegisterAtomicType_VectorAligned(ISchemaSystem *)::s_AtomicTypeInfoVectorAligned == 0
+      && __cxa_guard_acquire(&`guard variable for'RegisterAtomicType_VectorAligned(ISchemaSystem *)::s_AtomicTypeInfoVectorAligned) != 0 )
+    {
+      dword_4A6BDC0 = 1;
+      qword_4A6BDB8 = &RegisterAtomicType_VectorAligned(ISchemaSystem *)::SID_AtomicMeta2_VectorAligned;
+      __cxa_guard_release(&`guard variable for'RegisterAtomicType_VectorAligned(ISchemaSystem *)::s_AtomicTypeInfoVectorAligned);
+    }
+    (*(*pSchemaSystem + 248LL))(
+      pSchemaSystem,
+      RegisterAtomicType_VectorAligned(ISchemaSystem *)::s_AtomicTypeInfoVectorAligned);
+    if ( `guard variable for'RegisterAtomicType_QAngle(ISchemaSystem *)::SID_AtomicMeta2_QAngle0_MSerializeAs_Value == 0
+      && __cxa_guard_acquire(&`guard variable for'RegisterAtomicType_QAngle(ISchemaSystem *)::SID_AtomicMeta2_QAngle0_MSerializeAs_Value) != 0 )
+    {
+      RegisterAtomicType_QAngle(ISchemaSystem *)::SID_AtomicMeta2_QAngle0_MSerializeAs_Value = 11;
+      dword_4D78D04 = 3;
+      __cxa_guard_release(&`guard variable for'RegisterAtomicType_QAngle(ISchemaSystem *)::SID_AtomicMeta2_QAngle0_MSerializeAs_Value);
+    }
+    if ( `guard variable for'RegisterAtomicType_QAngle(ISchemaSystem *)::SID_AtomicMeta2_QAngle == 0
+      && __cxa_guard_acquire(&`guard variable for'RegisterAtomicType_QAngle(ISchemaSystem *)::SID_AtomicMeta2_QAngle) != 0 )
+    {
+      RegisterAtomicType_QAngle(ISchemaSystem *)::SID_AtomicMeta2_QAngle = "MSerializeAs";
+      __cxa_guard_release(&`guard variable for'RegisterAtomicType_QAngle(ISchemaSystem *)::SID_AtomicMeta2_QAngle);
+    }
+    if ( `guard variable for'RegisterAtomicType_QAngle(ISchemaSystem *)::s_AtomicTypeInfoQAngle == 0
+      && __cxa_guard_acquire(&`guard variable for'RegisterAtomicType_QAngle(ISchemaSystem *)::s_AtomicTypeInfoQAngle) != 0 )
+    {
+      dword_4A6BD80 = 1;
+      qword_4A6BD78 = &RegisterAtomicType_QAngle(ISchemaSystem *)::SID_AtomicMeta2_QAngle;
+      __cxa_guard_release(&`guard variable for'RegisterAtomicType_QAngle(ISchemaSystem *)::s_AtomicTypeInfoQAngle);
+    }
+    (*(*pSchemaSystem + 248LL))(pSchemaSystem, RegisterAtomicType_QAngle(ISchemaSystem *)::s_AtomicTypeInfoQAngle);
+    if ( `guard variable for'RegisterAtomicType_RadianEuler(ISchemaSystem *)::SID_AtomicMeta2_RadianEuler0_MSerializeAs_Value == 0
+      && __cxa_guard_acquire(&`guard variable for'RegisterAtomicType_RadianEuler(ISchemaSystem *)::SID_AtomicMeta2_RadianEuler0_MSerializeAs_Value) != 0 )
+    {
+      RegisterAtomicType_RadianEuler(ISchemaSystem *)::SID_AtomicMeta2_RadianEuler0_MSerializeAs_Value = 11;
+      dword_4D78CFC = 3;
+      __cxa_guard_release(&`guard variable for'RegisterAtomicType_RadianEuler(ISchemaSystem *)::SID_AtomicMeta2_RadianEuler0_MSerializeAs_Value);
+    }
+    if ( `guard variable for'RegisterAtomicType_RadianEuler(ISchemaSystem *)::SID_AtomicMeta2_RadianEuler == 0
+      && __cxa_guard_acquire(&`guard variable for'RegisterAtomicType_RadianEuler(ISchemaSystem *)::SID_AtomicMeta2_RadianEuler) != 0 )
+    {
+      RegisterAtomicType_RadianEuler(ISchemaSystem *)::SID_AtomicMeta2_RadianEuler = "MSerializeAs";
+      __cxa_guard_release(&`guard variable for'RegisterAtomicType_RadianEuler(ISchemaSystem *)::SID_AtomicMeta2_RadianEuler);
+    }
+    if ( `guard variable for'RegisterAtomicType_RadianEuler(ISchemaSystem *)::s_AtomicTypeInfoRadianEuler == 0
+      && __cxa_guard_acquire(&`guard variable for'RegisterAtomicType_RadianEuler(ISchemaSystem *)::s_AtomicTypeInfoRadianEuler) != 0 )
+    {
+      dword_4A6BD40 = 1;
+      qword_4A6BD38 = &RegisterAtomicType_RadianEuler(ISchemaSystem *)::SID_AtomicMeta2_RadianEuler;
+      __cxa_guard_release(&`guard variable for'RegisterAtomicType_RadianEuler(ISchemaSystem *)::s_AtomicTypeInfoRadianEuler);
+    }
+    (*(*pSchemaSystem + 248LL))(
+      pSchemaSystem,
+      RegisterAtomicType_RadianEuler(ISchemaSystem *)::s_AtomicTypeInfoRadianEuler);
+    if ( `guard variable for'RegisterAtomicType_DegreeEuler(ISchemaSystem *)::SID_AtomicMeta2_DegreeEuler0_MSerializeAs_Value == 0
+      && __cxa_guard_acquire(&`guard variable for'RegisterAtomicType_DegreeEuler(ISchemaSystem *)::SID_AtomicMeta2_DegreeEuler0_MSerializeAs_Value) != 0 )
+    {
+      RegisterAtomicType_DegreeEuler(ISchemaSystem *)::SID_AtomicMeta2_DegreeEuler0_MSerializeAs_Value = 11;
+      dword_4D78CF4 = 3;
+      __cxa_guard_release(&`guard variable for'RegisterAtomicType_DegreeEuler(ISchemaSystem *)::SID_AtomicMeta2_DegreeEuler0_MSerializeAs_Value);
+    }
+    if ( `guard variable for'RegisterAtomicType_DegreeEuler(ISchemaSystem *)::SID_AtomicMeta2_DegreeEuler == 0
+      && __cxa_guard_acquire(&`guard variable for'RegisterAtomicType_DegreeEuler(ISchemaSystem *)::SID_AtomicMeta2_DegreeEuler) != 0 )
+    {
+      RegisterAtomicType_DegreeEuler(ISchemaSystem *)::SID_AtomicMeta2_DegreeEuler = "MSerializeAs";
+      __cxa_guard_release(&`guard variable for'RegisterAtomicType_DegreeEuler(ISchemaSystem *)::SID_AtomicMeta2_DegreeEuler);
+    }
+    if ( `guard variable for'RegisterAtomicType_DegreeEuler(ISchemaSystem *)::s_AtomicTypeInfoDegreeEuler == 0
+      && __cxa_guard_acquire(&`guard variable for'RegisterAtomicType_DegreeEuler(ISchemaSystem *)::s_AtomicTypeInfoDegreeEuler) != 0 )
+    {
+      dword_4A6BD00 = 1;
+      qword_4A6BCF8 = &RegisterAtomicType_DegreeEuler(ISchemaSystem *)::SID_AtomicMeta2_DegreeEuler;
+      __cxa_guard_release(&`guard variable for'RegisterAtomicType_DegreeEuler(ISchemaSystem *)::s_AtomicTypeInfoDegreeEuler);
+    }
+    (*(*pSchemaSystem + 248LL))(
+      pSchemaSystem,
+      RegisterAtomicType_DegreeEuler(ISchemaSystem *)::s_AtomicTypeInfoDegreeEuler);
+    if ( `guard variable for'RegisterAtomicType_Quaternion(ISchemaSystem *)::SID_AtomicMeta2_Quaternion0_MSerializeAs_Value == 0
+      && __cxa_guard_acquire(&`guard variable for'RegisterAtomicType_Quaternion(ISchemaSystem *)::SID_AtomicMeta2_Quaternion0_MSerializeAs_Value) != 0 )
+    {
+      RegisterAtomicType_Quaternion(ISchemaSystem *)::SID_AtomicMeta2_Quaternion0_MSerializeAs_Value = 11;
+      dword_4D78CEC = 4;
+      __cxa_guard_release(&`guard variable for'RegisterAtomicType_Quaternion(ISchemaSystem *)::SID_AtomicMeta2_Quaternion0_MSerializeAs_Value);
+    }
+    if ( `guard variable for'RegisterAtomicType_Quaternion(ISchemaSystem *)::SID_AtomicMeta2_Quaternion == 0
+      && __cxa_guard_acquire(&`guard variable for'RegisterAtomicType_Quaternion(ISchemaSystem *)::SID_AtomicMeta2_Quaternion) != 0 )
+    {
+      RegisterAtomicType_Quaternion(ISchemaSystem *)::SID_AtomicMeta2_Quaternion = "MSerializeAs";
+      __cxa_guard_release(&`guard variable for'RegisterAtomicType_Quaternion(ISchemaSystem *)::SID_AtomicMeta2_Quaternion);
+    }
+    if ( `guard variable for'RegisterAtomicType_Quaternion(ISchemaSystem *)::s_AtomicTypeInfoQuaternion == 0
+      && __cxa_guard_acquire(&`guard variable for'RegisterAtomicType_Quaternion(ISchemaSystem *)::s_AtomicTypeInfoQuaternion) != 0 )
+    {
+      dword_4A6BCC0 = 1;
+      qword_4A6BCB8 = &RegisterAtomicType_Quaternion(ISchemaSystem *)::SID_AtomicMeta2_Quaternion;
+      __cxa_guard_release(&`guard variable for'RegisterAtomicType_Quaternion(ISchemaSystem *)::s_AtomicTypeInfoQuaternion);
+    }
+    (*(*pSchemaSystem + 248LL))(
+      pSchemaSystem,
+      &RegisterAtomicType_Quaternion(ISchemaSystem *)::s_AtomicTypeInfoQuaternion);
+    if ( `guard variable for'RegisterAtomicType_matrix3x4_t(ISchemaSystem *)::SID_AtomicMeta2_matrix3x4_t0_MSerializeAs_Value == 0
+      && __cxa_guard_acquire(&`guard variable for'RegisterAtomicType_matrix3x4_t(ISchemaSystem *)::SID_AtomicMeta2_matrix3x4_t0_MSerializeAs_Value) != 0 )
+    {
+      RegisterAtomicType_matrix3x4_t(ISchemaSystem *)::SID_AtomicMeta2_matrix3x4_t0_MSerializeAs_Value = 11;
+      dword_4D78CE4 = 12;
+      __cxa_guard_release(&`guard variable for'RegisterAtomicType_matrix3x4_t(ISchemaSystem *)::SID_AtomicMeta2_matrix3x4_t0_MSerializeAs_Value);
+    }
+    if ( `guard variable for'RegisterAtomicType_matrix3x4_t(ISchemaSystem *)::SID_AtomicMeta2_matrix3x4_t == 0
+      && __cxa_guard_acquire(&`guard variable for'RegisterAtomicType_matrix3x4_t(ISchemaSystem *)::SID_AtomicMeta2_matrix3x4_t) != 0 )
+    {
+      RegisterAtomicType_matrix3x4_t(ISchemaSystem *)::SID_AtomicMeta2_matrix3x4_t = "MSerializeAs";
+      __cxa_guard_release(&`guard variable for'RegisterAtomicType_matrix3x4_t(ISchemaSystem *)::SID_AtomicMeta2_matrix3x4_t);
+    }
+    if ( `guard variable for'RegisterAtomicType_matrix3x4_t(ISchemaSystem *)::s_AtomicTypeInfomatrix3x4_t == 0
+      && __cxa_guard_acquire(&`guard variable for'RegisterAtomicType_matrix3x4_t(ISchemaSystem *)::s_AtomicTypeInfomatrix3x4_t) != 0 )
+    {
+      dword_4A6BC80 = 1;
+      qword_4A6BC78 = &RegisterAtomicType_matrix3x4_t(ISchemaSystem *)::SID_AtomicMeta2_matrix3x4_t;
+      __cxa_guard_release(&`guard variable for'RegisterAtomicType_matrix3x4_t(ISchemaSystem *)::s_AtomicTypeInfomatrix3x4_t);
+    }
+    (*(*pSchemaSystem + 248LL))(
+      pSchemaSystem,
+      RegisterAtomicType_matrix3x4_t(ISchemaSystem *)::s_AtomicTypeInfomatrix3x4_t);
+    if ( `guard variable for'RegisterAtomicType_matrix3x4a_t(ISchemaSystem *)::SID_AtomicMeta2_matrix3x4a_t0_MSerializeAs_Value == 0
+      && __cxa_guard_acquire(&`guard variable for'RegisterAtomicType_matrix3x4a_t(ISchemaSystem *)::SID_AtomicMeta2_matrix3x4a_t0_MSerializeAs_Value) != 0 )
+    {
+      RegisterAtomicType_matrix3x4a_t(ISchemaSystem *)::SID_AtomicMeta2_matrix3x4a_t0_MSerializeAs_Value = 11;
+      dword_4D78CDC = 12;
+      __cxa_guard_release(&`guard variable for'RegisterAtomicType_matrix3x4a_t(ISchemaSystem *)::SID_AtomicMeta2_matrix3x4a_t0_MSerializeAs_Value);
+    }
+    if ( `guard variable for'RegisterAtomicType_matrix3x4a_t(ISchemaSystem *)::SID_AtomicMeta2_matrix3x4a_t == 0
+      && __cxa_guard_acquire(&`guard variable for'RegisterAtomicType_matrix3x4a_t(ISchemaSystem *)::SID_AtomicMeta2_matrix3x4a_t) != 0 )
+    {
+      RegisterAtomicType_matrix3x4a_t(ISchemaSystem *)::SID_AtomicMeta2_matrix3x4a_t = "MSerializeAs";
+      __cxa_guard_release(&`guard variable for'RegisterAtomicType_matrix3x4a_t(ISchemaSystem *)::SID_AtomicMeta2_matrix3x4a_t);
+    }
+    if ( `guard variable for'RegisterAtomicType_matrix3x4a_t(ISchemaSystem *)::s_AtomicTypeInfomatrix3x4a_t == 0
+      && __cxa_guard_acquire(&`guard variable for'RegisterAtomicType_matrix3x4a_t(ISchemaSystem *)::s_AtomicTypeInfomatrix3x4a_t) != 0 )
+    {
+      dword_4A6BC40 = 1;
+      qword_4A6BC38 = &RegisterAtomicType_matrix3x4a_t(ISchemaSystem *)::SID_AtomicMeta2_matrix3x4a_t;
+      __cxa_guard_release(&`guard variable for'RegisterAtomicType_matrix3x4a_t(ISchemaSystem *)::s_AtomicTypeInfomatrix3x4a_t);
+    }
+    (*(*pSchemaSystem + 248LL))(
+      pSchemaSystem,
+      RegisterAtomicType_matrix3x4a_t(ISchemaSystem *)::s_AtomicTypeInfomatrix3x4a_t);
+    if ( `guard variable for'RegisterAtomicType_VMatrix(ISchemaSystem *)::SID_AtomicMeta2_VMatrix0_MSerializeAs_Value == 0
+      && __cxa_guard_acquire(&`guard variable for'RegisterAtomicType_VMatrix(ISchemaSystem *)::SID_AtomicMeta2_VMatrix0_MSerializeAs_Value) != 0 )
+    {
+      RegisterAtomicType_VMatrix(ISchemaSystem *)::SID_AtomicMeta2_VMatrix0_MSerializeAs_Value = 11;
+      dword_4D78CD4 = 16;
+      __cxa_guard_release(&`guard variable for'RegisterAtomicType_VMatrix(ISchemaSystem *)::SID_AtomicMeta2_VMatrix0_MSerializeAs_Value);
+    }
+    if ( `guard variable for'RegisterAtomicType_VMatrix(ISchemaSystem *)::SID_AtomicMeta2_VMatrix == 0
+      && __cxa_guard_acquire(&`guard variable for'RegisterAtomicType_VMatrix(ISchemaSystem *)::SID_AtomicMeta2_VMatrix) != 0 )
+    {
+      RegisterAtomicType_VMatrix(ISchemaSystem *)::SID_AtomicMeta2_VMatrix = "MSerializeAs";
+      __cxa_guard_release(&`guard variable for'RegisterAtomicType_VMatrix(ISchemaSystem *)::SID_AtomicMeta2_VMatrix);
+    }
+    if ( `guard variable for'RegisterAtomicType_VMatrix(ISchemaSystem *)::s_AtomicTypeInfoVMatrix == 0
+      && __cxa_guard_acquire(&`guard variable for'RegisterAtomicType_VMatrix(ISchemaSystem *)::s_AtomicTypeInfoVMatrix) != 0 )
+    {
+      dword_4A6BC00 = 1;
+      qword_4A6BBF8 = &RegisterAtomicType_VMatrix(ISchemaSystem *)::SID_AtomicMeta2_VMatrix;
+      __cxa_guard_release(&`guard variable for'RegisterAtomicType_VMatrix(ISchemaSystem *)::s_AtomicTypeInfoVMatrix);
+    }
+    (*(*pSchemaSystem + 248LL))(pSchemaSystem, RegisterAtomicType_VMatrix(ISchemaSystem *)::s_AtomicTypeInfoVMatrix);
+    if ( `guard variable for'RegisterAtomicType_fltx4(ISchemaSystem *)::SID_AtomicMeta2_fltx40_MSerializeAs_Value == 0
+      && __cxa_guard_acquire(&`guard variable for'RegisterAtomicType_fltx4(ISchemaSystem *)::SID_AtomicMeta2_fltx40_MSerializeAs_Value) != 0 )
+    {
+      RegisterAtomicType_fltx4(ISchemaSystem *)::SID_AtomicMeta2_fltx40_MSerializeAs_Value = 11;
+      dword_4D78CCC = 4;
+      __cxa_guard_release(&`guard variable for'RegisterAtomicType_fltx4(ISchemaSystem *)::SID_AtomicMeta2_fltx40_MSerializeAs_Value);
+    }
+    if ( `guard variable for'RegisterAtomicType_fltx4(ISchemaSystem *)::SID_AtomicMeta2_fltx4 == 0
+      && __cxa_guard_acquire(&`guard variable for'RegisterAtomicType_fltx4(ISchemaSystem *)::SID_AtomicMeta2_fltx4) != 0 )
+    {
+      RegisterAtomicType_fltx4(ISchemaSystem *)::SID_AtomicMeta2_fltx4 = "MSerializeAs";
+      __cxa_guard_release(&`guard variable for'RegisterAtomicType_fltx4(ISchemaSystem *)::SID_AtomicMeta2_fltx4);
+    }
+    if ( `guard variable for'RegisterAtomicType_fltx4(ISchemaSystem *)::s_AtomicTypeInfofltx4 == 0
+      && __cxa_guard_acquire(&`guard variable for'RegisterAtomicType_fltx4(ISchemaSystem *)::s_AtomicTypeInfofltx4) != 0 )
+    {
+      dword_4A6BBC0 = 1;
+      qword_4A6BBB8 = &RegisterAtomicType_fltx4(ISchemaSystem *)::SID_AtomicMeta2_fltx4;
+      __cxa_guard_release(&`guard variable for'RegisterAtomicType_fltx4(ISchemaSystem *)::s_AtomicTypeInfofltx4);
+    }
+    (*(*pSchemaSystem + 248LL))(pSchemaSystem, RegisterAtomicType_fltx4(ISchemaSystem *)::s_AtomicTypeInfofltx4);
+    if ( `guard variable for'RegisterAtomicType_Color(ISchemaSystem *)::SID_AtomicMeta2_Color0_MSerializeAs_Value == 0
+      && __cxa_guard_acquire(&`guard variable for'RegisterAtomicType_Color(ISchemaSystem *)::SID_AtomicMeta2_Color0_MSerializeAs_Value) != 0 )
+    {
+      RegisterAtomicType_Color(ISchemaSystem *)::SID_AtomicMeta2_Color0_MSerializeAs_Value = 4;
+      dword_4D78CC4 = 4;
+      __cxa_guard_release(&`guard variable for'RegisterAtomicType_Color(ISchemaSystem *)::SID_AtomicMeta2_Color0_MSerializeAs_Value);
+    }
+    if ( `guard variable for'RegisterAtomicType_Color(ISchemaSystem *)::SID_AtomicMeta2_Color == 0
+      && __cxa_guard_acquire(&`guard variable for'RegisterAtomicType_Color(ISchemaSystem *)::SID_AtomicMeta2_Color) != 0 )
+    {
+      RegisterAtomicType_Color(ISchemaSystem *)::SID_AtomicMeta2_Color = "MSerializeAs";
+      __cxa_guard_release(&`guard variable for'RegisterAtomicType_Color(ISchemaSystem *)::SID_AtomicMeta2_Color);
+    }
+    if ( `guard variable for'RegisterAtomicType_Color(ISchemaSystem *)::s_AtomicTypeInfoColor == 0
+      && __cxa_guard_acquire(&`guard variable for'RegisterAtomicType_Color(ISchemaSystem *)::s_AtomicTypeInfoColor) != 0 )
+    {
+      dword_4A6BB80 = 1;
+      qword_4A6BB78 = &RegisterAtomicType_Color(ISchemaSystem *)::SID_AtomicMeta2_Color;
+      __cxa_guard_release(&`guard variable for'RegisterAtomicType_Color(ISchemaSystem *)::s_AtomicTypeInfoColor);
+    }
+    (*(*pSchemaSystem + 248LL))(pSchemaSystem, &RegisterAtomicType_Color(ISchemaSystem *)::s_AtomicTypeInfoColor);
+    if ( `guard variable for'RegisterAtomicType_Vector4D(ISchemaSystem *)::SID_AtomicMeta2_Vector4D0_MSerializeAs_Value == 0
+      && __cxa_guard_acquire(&`guard variable for'RegisterAtomicType_Vector4D(ISchemaSystem *)::SID_AtomicMeta2_Vector4D0_MSerializeAs_Value) != 0 )
+    {
+      RegisterAtomicType_Vector4D(ISchemaSystem *)::SID_AtomicMeta2_Vector4D0_MSerializeAs_Value = 11;
+      dword_4D78CBC = 4;
+      __cxa_guard_release(&`guard variable for'RegisterAtomicType_Vector4D(ISchemaSystem *)::SID_AtomicMeta2_Vector4D0_MSerializeAs_Value);
+    }
+    if ( `guard variable for'RegisterAtomicType_Vector4D(ISchemaSystem *)::SID_AtomicMeta2_Vector4D == 0
+      && __cxa_guard_acquire(&`guard variable for'RegisterAtomicType_Vector4D(ISchemaSystem *)::SID_AtomicMeta2_Vector4D) != 0 )
+    {
+      RegisterAtomicType_Vector4D(ISchemaSystem *)::SID_AtomicMeta2_Vector4D = "MSerializeAs";
+      __cxa_guard_release(&`guard variable for'RegisterAtomicType_Vector4D(ISchemaSystem *)::SID_AtomicMeta2_Vector4D);
+    }
+    if ( `guard variable for'RegisterAtomicType_Vector4D(ISchemaSystem *)::s_AtomicTypeInfoVector4D == 0
+      && __cxa_guard_acquire(&`guard variable for'RegisterAtomicType_Vector4D(ISchemaSystem *)::s_AtomicTypeInfoVector4D) != 0 )
+    {
+      dword_4A6BB40 = 1;
+      qword_4A6BB38 = &RegisterAtomicType_Vector4D(ISchemaSystem *)::SID_AtomicMeta2_Vector4D;
+      __cxa_guard_release(&`guard variable for'RegisterAtomicType_Vector4D(ISchemaSystem *)::s_AtomicTypeInfoVector4D);
+    }
+    (*(*pSchemaSystem + 248LL))(pSchemaSystem, RegisterAtomicType_Vector4D(ISchemaSystem *)::s_AtomicTypeInfoVector4D);
+    if ( `guard variable for'RegisterAtomicType_CTransform(ISchemaSystem *)::SID_AtomicMeta2_CTransform0_MSerializeAs_Value == 0
+      && __cxa_guard_acquire(&`guard variable for'RegisterAtomicType_CTransform(ISchemaSystem *)::SID_AtomicMeta2_CTransform0_MSerializeAs_Value) != 0 )
+    {
+      RegisterAtomicType_CTransform(ISchemaSystem *)::SID_AtomicMeta2_CTransform0_MSerializeAs_Value = 11;
+      dword_4D78CB4 = 8;
+      __cxa_guard_release(&`guard variable for'RegisterAtomicType_CTransform(ISchemaSystem *)::SID_AtomicMeta2_CTransform0_MSerializeAs_Value);
+    }
+    if ( `guard variable for'RegisterAtomicType_CTransform(ISchemaSystem *)::SID_AtomicMeta2_CTransform == 0
+      && __cxa_guard_acquire(&`guard variable for'RegisterAtomicType_CTransform(ISchemaSystem *)::SID_AtomicMeta2_CTransform) != 0 )
+    {
+      RegisterAtomicType_CTransform(ISchemaSystem *)::SID_AtomicMeta2_CTransform = "MSerializeAs";
+      __cxa_guard_release(&`guard variable for'RegisterAtomicType_CTransform(ISchemaSystem *)::SID_AtomicMeta2_CTransform);
+    }
+    if ( `guard variable for'RegisterAtomicType_CTransform(ISchemaSystem *)::s_AtomicTypeInfoCTransform == 0
+      && __cxa_guard_acquire(&`guard variable for'RegisterAtomicType_CTransform(ISchemaSystem *)::s_AtomicTypeInfoCTransform) != 0 )
+    {
+      dword_4A6BB00 = 1;
+      qword_4A6BAF8 = &RegisterAtomicType_CTransform(ISchemaSystem *)::SID_AtomicMeta2_CTransform;
+      __cxa_guard_release(&`guard variable for'RegisterAtomicType_CTransform(ISchemaSystem *)::s_AtomicTypeInfoCTransform);
+    }
+    (*(*pSchemaSystem + 248LL))(
+      pSchemaSystem,
+      RegisterAtomicType_CTransform(ISchemaSystem *)::s_AtomicTypeInfoCTransform);
+    if ( `guard variable for'RegisterAtomicType_KeyValues(ISchemaSystem *)::s_AtomicTypeInfoKeyValues == 0
+      && __cxa_guard_acquire(&`guard variable for'RegisterAtomicType_KeyValues(ISchemaSystem *)::s_AtomicTypeInfoKeyValues) != 0 )
+    {
+      qword_4A6BAB8 = 0;
+      dword_4A6BAC0 = 0;
+      __cxa_guard_release(&`guard variable for'RegisterAtomicType_KeyValues(ISchemaSystem *)::s_AtomicTypeInfoKeyValues);
+    }
+    (*(*pSchemaSystem + 248LL))(
+      pSchemaSystem,
+      &RegisterAtomicType_KeyValues(ISchemaSystem *)::s_AtomicTypeInfoKeyValues);
+    if ( `guard variable for'RegisterAtomicType_V_uuid_t(ISchemaSystem *)::s_AtomicTypeInfoV_uuid_t == 0
+      && __cxa_guard_acquire(&`guard variable for'RegisterAtomicType_V_uuid_t(ISchemaSystem *)::s_AtomicTypeInfoV_uuid_t) != 0 )
+    {
+      qword_4A6BA78 = 0;
+      dword_4A6BA80 = 0;
+      __cxa_guard_release(&`guard variable for'RegisterAtomicType_V_uuid_t(ISchemaSystem *)::s_AtomicTypeInfoV_uuid_t);
+    }
+    (*(*pSchemaSystem + 248LL))(pSchemaSystem, RegisterAtomicType_V_uuid_t(ISchemaSystem *)::s_AtomicTypeInfoV_uuid_t);
+    if ( `guard variable for'RegisterAtomicType_CUtlBinaryBlock(ISchemaSystem *)::s_AtomicTypeInfoCUtlBinaryBlock == 0
+      && __cxa_guard_acquire(&`guard variable for'RegisterAtomicType_CUtlBinaryBlock(ISchemaSystem *)::s_AtomicTypeInfoCUtlBinaryBlock) != 0 )
+    {
+      qword_4A6BA38 = 0;
+      dword_4A6BA40 = 0;
+      __cxa_guard_release(&`guard variable for'RegisterAtomicType_CUtlBinaryBlock(ISchemaSystem *)::s_AtomicTypeInfoCUtlBinaryBlock);
+    }
+    (*(*pSchemaSystem + 248LL))(
+      pSchemaSystem,
+      RegisterAtomicType_CUtlBinaryBlock(ISchemaSystem *)::s_AtomicTypeInfoCUtlBinaryBlock);
+    if ( `guard variable for'RegisterAtomicType_CUtlString(ISchemaSystem *)::s_AtomicTypeInfoCUtlString == 0
+      && __cxa_guard_acquire(&`guard variable for'RegisterAtomicType_CUtlString(ISchemaSystem *)::s_AtomicTypeInfoCUtlString) != 0 )
+    {
+      qword_4A6B9F8 = 0;
+      dword_4A6BA00 = 0;
+      __cxa_guard_release(&`guard variable for'RegisterAtomicType_CUtlString(ISchemaSystem *)::s_AtomicTypeInfoCUtlString);
+    }
+    (*(*pSchemaSystem + 248LL))(
+      pSchemaSystem,
+      RegisterAtomicType_CUtlString(ISchemaSystem *)::s_AtomicTypeInfoCUtlString);
+    if ( `guard variable for'RegisterAtomicType_CUtlSymbol(ISchemaSystem *)::s_AtomicTypeInfoCUtlSymbol == 0
+      && __cxa_guard_acquire(&`guard variable for'RegisterAtomicType_CUtlSymbol(ISchemaSystem *)::s_AtomicTypeInfoCUtlSymbol) != 0 )
+    {
+      qword_4A6B9B8 = 0;
+      dword_4A6B9C0 = 0;
+      __cxa_guard_release(&`guard variable for'RegisterAtomicType_CUtlSymbol(ISchemaSystem *)::s_AtomicTypeInfoCUtlSymbol);
+    }
+    (*(*pSchemaSystem + 248LL))(
+      pSchemaSystem,
+      RegisterAtomicType_CUtlSymbol(ISchemaSystem *)::s_AtomicTypeInfoCUtlSymbol);
+    if ( `guard variable for'RegisterAtomicType_CSplitScreenSlot(ISchemaSystem *)::SID_AtomicMeta2_CSplitScreenSlot == 0
+      && __cxa_guard_acquire(&`guard variable for'RegisterAtomicType_CSplitScreenSlot(ISchemaSystem *)::SID_AtomicMeta2_CSplitScreenSlot) != 0 )
+    {
+      RegisterAtomicType_CSplitScreenSlot(ISchemaSystem *)::SID_AtomicMeta2_CSplitScreenSlot = "MNetworkSerializeAs";
+      __cxa_guard_release(&`guard variable for'RegisterAtomicType_CSplitScreenSlot(ISchemaSystem *)::SID_AtomicMeta2_CSplitScreenSlot);
+    }
+    if ( `guard variable for'RegisterAtomicType_CSplitScreenSlot(ISchemaSystem *)::s_AtomicTypeInfoCSplitScreenSlot == 0
+      && __cxa_guard_acquire(&`guard variable for'RegisterAtomicType_CSplitScreenSlot(ISchemaSystem *)::s_AtomicTypeInfoCSplitScreenSlot) != 0 )
+    {
+      dword_4A6B980 = 1;
+      qword_4A6B978 = &RegisterAtomicType_CSplitScreenSlot(ISchemaSystem *)::SID_AtomicMeta2_CSplitScreenSlot;
+      __cxa_guard_release(&`guard variable for'RegisterAtomicType_CSplitScreenSlot(ISchemaSystem *)::s_AtomicTypeInfoCSplitScreenSlot);
+    }
+    (*(*pSchemaSystem + 248LL))(
+      pSchemaSystem,
+      RegisterAtomicType_CSplitScreenSlot(ISchemaSystem *)::s_AtomicTypeInfoCSplitScreenSlot);
+    if ( `guard variable for'RegisterAtomicType_CPlayerSlot(ISchemaSystem *)::SID_AtomicMeta2_CPlayerSlot == 0
+      && __cxa_guard_acquire(&`guard variable for'RegisterAtomicType_CPlayerSlot(ISchemaSystem *)::SID_AtomicMeta2_CPlayerSlot) != 0 )
+    {
+      RegisterAtomicType_CPlayerSlot(ISchemaSystem *)::SID_AtomicMeta2_CPlayerSlot = "MNetworkSerializeAs";
+      __cxa_guard_release(&`guard variable for'RegisterAtomicType_CPlayerSlot(ISchemaSystem *)::SID_AtomicMeta2_CPlayerSlot);
+    }
+    if ( `guard variable for'RegisterAtomicType_CPlayerSlot(ISchemaSystem *)::s_AtomicTypeInfoCPlayerSlot == 0
+      && __cxa_guard_acquire(&`guard variable for'RegisterAtomicType_CPlayerSlot(ISchemaSystem *)::s_AtomicTypeInfoCPlayerSlot) != 0 )
+    {
+      dword_4A6B920 = 1;
+      qword_4A6B918 = &RegisterAtomicType_CPlayerSlot(ISchemaSystem *)::SID_AtomicMeta2_CPlayerSlot;
+      __cxa_guard_release(&`guard variable for'RegisterAtomicType_CPlayerSlot(ISchemaSystem *)::s_AtomicTypeInfoCPlayerSlot);
+    }
+    (*(*pSchemaSystem + 248LL))(
+      pSchemaSystem,
+      RegisterAtomicType_CPlayerSlot(ISchemaSystem *)::s_AtomicTypeInfoCPlayerSlot);
+    if ( `guard variable for'RegisterAtomicType_CEntityIndex(ISchemaSystem *)::SID_AtomicMeta2_CEntityIndex == 0
+      && __cxa_guard_acquire(&`guard variable for'RegisterAtomicType_CEntityIndex(ISchemaSystem *)::SID_AtomicMeta2_CEntityIndex) != 0 )
+    {
+      RegisterAtomicType_CEntityIndex(ISchemaSystem *)::SID_AtomicMeta2_CEntityIndex = "MNetworkSerializeAs";
+      __cxa_guard_release(&`guard variable for'RegisterAtomicType_CEntityIndex(ISchemaSystem *)::SID_AtomicMeta2_CEntityIndex);
+    }
+    if ( `guard variable for'RegisterAtomicType_CEntityIndex(ISchemaSystem *)::s_AtomicTypeInfoCEntityIndex == 0
+      && __cxa_guard_acquire(&`guard variable for'RegisterAtomicType_CEntityIndex(ISchemaSystem *)::s_AtomicTypeInfoCEntityIndex) != 0 )
+    {
+      dword_4A6B8C0 = 1;
+      qword_4A6B8B8 = &RegisterAtomicType_CEntityIndex(ISchemaSystem *)::SID_AtomicMeta2_CEntityIndex;
+      __cxa_guard_release(&`guard variable for'RegisterAtomicType_CEntityIndex(ISchemaSystem *)::s_AtomicTypeInfoCEntityIndex);
+    }
+    (*(*pSchemaSystem + 248LL))(
+      pSchemaSystem,
+      RegisterAtomicType_CEntityIndex(ISchemaSystem *)::s_AtomicTypeInfoCEntityIndex);
+    if ( `guard variable for'RegisterAtomicType_SoundGuid_t(ISchemaSystem *)::SID_AtomicMeta2_SoundGuid_t == 0
+      && __cxa_guard_acquire(&`guard variable for'RegisterAtomicType_SoundGuid_t(ISchemaSystem *)::SID_AtomicMeta2_SoundGuid_t) != 0 )
+    {
+      RegisterAtomicType_SoundGuid_t(ISchemaSystem *)::SID_AtomicMeta2_SoundGuid_t = "MNetworkSerializeAs";
+      __cxa_guard_release(&`guard variable for'RegisterAtomicType_SoundGuid_t(ISchemaSystem *)::SID_AtomicMeta2_SoundGuid_t);
+    }
+    if ( `guard variable for'RegisterAtomicType_SoundGuid_t(ISchemaSystem *)::s_AtomicTypeInfoSoundGuid_t == 0
+      && __cxa_guard_acquire(&`guard variable for'RegisterAtomicType_SoundGuid_t(ISchemaSystem *)::s_AtomicTypeInfoSoundGuid_t) != 0 )
+    {
+      dword_4A6B860 = 1;
+      qword_4A6B858 = &RegisterAtomicType_SoundGuid_t(ISchemaSystem *)::SID_AtomicMeta2_SoundGuid_t;
+      __cxa_guard_release(&`guard variable for'RegisterAtomicType_SoundGuid_t(ISchemaSystem *)::s_AtomicTypeInfoSoundGuid_t);
+    }
+    (*(*pSchemaSystem + 248LL))(
+      pSchemaSystem,
+      RegisterAtomicType_SoundGuid_t(ISchemaSystem *)::s_AtomicTypeInfoSoundGuid_t);
+    ++g_nLinkerHack_SchemaAnchor_RegistrationCountFor_entity2;
+  }
+}
+
+
+// RegisterSchemaModule_schema_h  (line 400, @0x00000000030d58c0, libserver.so)
+// calls: LocalRegisterSchemaModule<ArbitraryTemplateParameter_entity2_schema_h>
+// callers: CSchemaRegistration_entity2::RegisterAllBindings
+void __fastcall RegisterSchemaModule_schema_h(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        SchemaRegistrationPhase_t nRegistrationPhase)
+{
+  LocalRegisterSchemaModule<ArbitraryTemplateParameter_entity2_schema_h>(pSchemaSystem, pBinaryName, nRegistrationPhase);
+}
+
+

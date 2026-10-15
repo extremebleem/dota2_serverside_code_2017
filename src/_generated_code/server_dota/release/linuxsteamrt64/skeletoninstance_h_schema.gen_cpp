@@ -1,0 +1,241 @@
+
+// ==== functions (decompiled by Hex-Rays; names/signatures from DWARF) ====
+
+// CModelState::Schema_CompileTimeVerificationFunction  (line 35, @0x0000000001ffc430, libserver.so)
+void __fastcall CModelState::Schema_CompileTimeVerificationFunction(CModelState *const this)
+{
+  ;
+}
+
+
+// CModelState::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE  (line 46, @0x0000000001ffc440, libserver.so)  // inlines: Get, NetworkVarDecl_t, SchemaBinding_SchemaTypeOfMemberVarByAddr<CModelState, CNetworkVarBase<CStrongHandle<InfoForResourceTypeCModel>, CModelState::NetworkVar_m_hModel> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<CModelState, CNetworkVarBase<long long unsigned int, CModelState::NetworkVar_m_MeshGroupMask> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<CModelState, CNetworkVarBase<signed char, CModelState::NetworkVar_m_nIdealMotionType> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<CModelState, CUtlSymbolLarge>, SchemaBinding_SchemaTypeOfMemberVarByAddr<CModelState, bool>, SchemaBinding_SchemaTypeOfMemberVarByAddr<CModelState, int>, SchemaBinding_SchemaTypeOfMemberVarByAddr<CModelState, signed char>, SetTypeScope
+// calls: __cxa_guard_acquire, __cxa_guard_release
+// callers: CSchemaNonConstructibleClassBinding<CModelState>::Register
+// strings: "InfoForResourceTypeCModel", "CStrongHandle", "CUtlSymbolLarge", "m_hModel", "HModelStrong", "m_nIdealMotionType" (8 total)
+// globals: CModelState::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitialize, `guard variable for'CModelState::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char co, CSchemaManipulator<CStrongHandle<InfoForResourceTypeCModel>>::StaticAccessor(void)::m, CAtomicManipulator<CStrongHandle<InfoForResourceTypeCModel>>::Get(void)::val, CSchemaManipulator<CUtlSymbolLarge>::StaticAccessor(void)::m, CAtomicManipulator<CUtlSymbolLarge>::Get(void)::val, CModelState::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_Cl
+CSchemaClassInfo *__fastcall CModelState::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        const char *pProjectName)
+{
+  CSchemaClassInfo *result; // rax
+  ISchemaSystemTypeScope *v4; // rbx
+  __int64 (__fastcall *v5)(ISchemaSystemTypeScope *, const char *, __int64, __int64 (__fastcall ***)(), __int64 (__fastcall ***)(), __int64); // r12
+  __int64 v6; // rax
+  CSchemaType *v7; // rax
+
+  result = CModelState::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult;
+  if ( !CModelState::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult )
+  {
+    v4 = (*(*pSchemaSystem + 112LL))(pSchemaSystem, 0, pBinaryName);
+    if ( !`guard variable for'CModelState::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CModelState0_MNetworkVarNames_Value
+      && __cxa_guard_acquire(&`guard variable for'CModelState::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CModelState0_MNetworkVarNames_Value) )
+    {
+      CModelState::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CModelState0_MNetworkVarNames_Value.m_pVarName = "m_hModel";
+      CModelState::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CModelState0_MNetworkVarNames_Value.m_pVarType = "HModelStrong";
+      __cxa_guard_release(&`guard variable for'CModelState::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CModelState0_MNetworkVarNames_Value);
+    }
+    if ( !`guard variable for'CModelState::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CModelState1_MNetworkVarNames_Value
+      && __cxa_guard_acquire(&`guard variable for'CModelState::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CModelState1_MNetworkVarNames_Value) )
+    {
+      CModelState::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CModelState1_MNetworkVarNames_Value.m_pVarName = "m_MeshGroupMask";
+      CModelState::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CModelState1_MNetworkVarNames_Value.m_pVarType = "MeshGroupMask_t";
+      __cxa_guard_release(&`guard variable for'CModelState::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CModelState1_MNetworkVarNames_Value);
+    }
+    if ( !`guard variable for'CModelState::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CModelState2_MNetworkVarNames_Value )
+    {
+      if ( __cxa_guard_acquire(&`guard variable for'CModelState::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CModelState2_MNetworkVarNames_Value) )
+      {
+        CModelState::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CModelState2_MNetworkVarNames_Value.m_pVarName = "m_nIdealMotionType";
+        CModelState::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CModelState2_MNetworkVarNames_Value.m_pVarType = "int8";
+        __cxa_guard_release(&`guard variable for'CModelState::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CModelState2_MNetworkVarNames_Value);
+      }
+    }
+    v5 = *(*v4 + 64LL);
+    v6 = (*(*v4 + 88LL))(v4, "InfoForResourceTypeCModel");
+    CModelState::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CModelState[0].m_pType = v5(v4, "CStrongHandle", 4000, &CAtomicManipulator<CStrongHandle<InfoForResourceTypeCModel>>::Get(void)::val, CSchemaManipulator<CStrongHandle<InfoForResourceTypeCModel>>::StaticAccessor(void)::m, v6);
+    CModelState::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CModelState[1].m_pType = (*(*v4 + 56LL))(v4, "CUtlSymbolLarge", 3007, CAtomicManipulator<CUtlSymbolLarge>::Get(void)::val, &CSchemaManipulator<CUtlSymbolLarge>::StaticAccessor(void)::m);
+    CModelState::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CModelState[2].m_pType = (*(*v4 + 40LL))(v4, 10);
+    CModelState::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CModelState[3].m_pType = (*(*v4 + 40LL))(v4, 7);
+    CModelState::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CModelState[4].m_pType = (*(*v4 + 40LL))(v4, 3);
+    CModelState::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CModelState[5].m_pType = (*(*v4 + 40LL))(v4, 3);
+    CModelState::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CModelState[6].m_pType = (*(*v4 + 40LL))(v4, 13);
+    v7 = (*(*v4 + 40LL))(v4, 3);
+    CModelState::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CModelState.m_pOuterTypeScope = v4;
+    CModelState::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CModelState[7].m_pType = v7;
+    CModelState::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult = &CModelState::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CModelState;
+    (*(*v4 + 264LL))(
+      v4,
+      &CModelState::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CModelState);
+    return CModelState::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult;
+  }
+  return result;
+}
+
+
+// CModelState::Schema_VerifyBindingIsRegistered  (line 132, @0x0000000001ffc690, libserver.so)
+// callers: CModelState::Schema_DynamicBinding
+void __cdecl CModelState::Schema_VerifyBindingIsRegistered()
+{
+  ;
+}
+
+
+// CSkeletonInstance::Schema_CompileTimeVerificationFunction  (line 140, @0x0000000001ffc6a0, libserver.so)
+void __fastcall CSkeletonInstance::Schema_CompileTimeVerificationFunction(CSkeletonInstance *const this)
+{
+  ;
+}
+
+
+// CSkeletonInstance::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE  (line 151, @0x0000000001ffebb0, libserver.so)  // inlines: Call, ComponentKeyField_t, Get, NetworkVarDecl_t, SchemaBinding_SchemaTypeOfMemberVarByAddr<CSkeletonInstance, CNetworkVarBase<CUtlStringToken, CSkeletonInstance::NetworkVar_m_materialGroup> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<CSkeletonInstance, CNetworkVarBase<bool, CSkeletonInstance::NetworkVar_m_bIsAnimationEnabled> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<CSkeletonInstance, CNetworkVarBase<bool, CSkeletonInstance::NetworkVar_m_bIsRenderingEnabled> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<CSkeletonInstance, CNetworkVarBase<unsigned char, CSkeletonInstance::NetworkVar_m_nHitboxSet> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<CSkeletonInstance, CSkeletonInstance::NetworkVar_m_modelState>, SetTypeScope
+// calls: CGameSceneNode::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE, __cxa_guard_acquire, SchemaTypeOf<Vector>, __cxa_guard_release, SchemaTypeOf<float>, __cxa_guard_abort, _Unwind_Resume
+// callers: CSchemaNonConstructibleClassBinding<CSkeletonInstance>::Register
+// strings: "CModelState", "CUtlStringToken", "m_nHitboxSet", "uint8", "m_materialGroup", "m_bIsAnimationEnabled" (10 total)
+// globals: CSkeletonInstance::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInit, `guard variable for'CSkeletonInstance::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,c, CSchemaManipulator<CUtlStringToken>::StaticAccessor(void)::m, CAtomicManipulator<CUtlStringToken>::Get(void)::val, CSkeletonInstance::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSch
+CSchemaClassInfo *__fastcall CSkeletonInstance::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        const char *pProjectName)
+{
+  CSchemaClassInfo *result; // rax
+  ISchemaSystemTypeScope *v7; // rbx
+  CSchemaClassInfo *v8; // rax
+
+  result = CSkeletonInstance::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult;
+  if ( CSkeletonInstance::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult == 0 )
+  {
+    v7 = (*(*pSchemaSystem + 112LL))(pSchemaSystem, 0, pBinaryName);
+    if ( `guard variable for'CSkeletonInstance::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CSkeletonInstance0_MKeyField_Value == 0
+      && __cxa_guard_acquire(&`guard variable for'CSkeletonInstance::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CSkeletonInstance0_MKeyField_Value) != 0 )
+    {
+      CSkeletonInstance::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CSkeletonInstance0_MKeyField_Value.m_pType = SchemaTypeOf<Vector>();
+      CSkeletonInstance::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CSkeletonInstance0_MKeyField_Value.m_pKeyName = "velocity";
+      __cxa_guard_release(&`guard variable for'CSkeletonInstance::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CSkeletonInstance0_MKeyField_Value);
+    }
+    if ( `guard variable for'CSkeletonInstance::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CSkeletonInstance1_MKeyField_Value == 0
+      && __cxa_guard_acquire(&`guard variable for'CSkeletonInstance::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CSkeletonInstance1_MKeyField_Value) != 0 )
+    {
+      CSkeletonInstance::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CSkeletonInstance1_MKeyField_Value.m_pType = SchemaTypeOf<Vector>();
+      CSkeletonInstance::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CSkeletonInstance1_MKeyField_Value.m_pKeyName = "rotationAxis";
+      __cxa_guard_release(&`guard variable for'CSkeletonInstance::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CSkeletonInstance1_MKeyField_Value);
+    }
+    if ( `guard variable for'CSkeletonInstance::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CSkeletonInstance2_MKeyField_Value == 0
+      && __cxa_guard_acquire(&`guard variable for'CSkeletonInstance::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CSkeletonInstance2_MKeyField_Value) != 0 )
+    {
+      CSkeletonInstance::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CSkeletonInstance2_MKeyField_Value.m_pType = SchemaTypeOf<float>();
+      CSkeletonInstance::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CSkeletonInstance2_MKeyField_Value.m_pKeyName = "rotationSpeed";
+      __cxa_guard_release(&`guard variable for'CSkeletonInstance::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CSkeletonInstance2_MKeyField_Value);
+    }
+    if ( `guard variable for'CSkeletonInstance::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CSkeletonInstance3_MNetworkVarNames_Value == 0
+      && __cxa_guard_acquire(&`guard variable for'CSkeletonInstance::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CSkeletonInstance3_MNetworkVarNames_Value) != 0 )
+    {
+      CSkeletonInstance::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CSkeletonInstance3_MNetworkVarNames_Value.m_pVarName = "m_modelState";
+      CSkeletonInstance::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CSkeletonInstance3_MNetworkVarNames_Value.m_pVarType = "CModelState";
+      __cxa_guard_release(&`guard variable for'CSkeletonInstance::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CSkeletonInstance3_MNetworkVarNames_Value);
+    }
+    if ( `guard variable for'CSkeletonInstance::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CSkeletonInstance4_MNetworkVarNames_Value == 0
+      && __cxa_guard_acquire(&`guard variable for'CSkeletonInstance::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CSkeletonInstance4_MNetworkVarNames_Value) != 0 )
+    {
+      CSkeletonInstance::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CSkeletonInstance4_MNetworkVarNames_Value.m_pVarName = "m_bIsRenderingEnabled";
+      CSkeletonInstance::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CSkeletonInstance4_MNetworkVarNames_Value.m_pVarType = "bool";
+      __cxa_guard_release(&`guard variable for'CSkeletonInstance::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CSkeletonInstance4_MNetworkVarNames_Value);
+    }
+    if ( `guard variable for'CSkeletonInstance::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CSkeletonInstance5_MNetworkVarNames_Value == 0
+      && __cxa_guard_acquire(&`guard variable for'CSkeletonInstance::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CSkeletonInstance5_MNetworkVarNames_Value) != 0 )
+    {
+      CSkeletonInstance::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CSkeletonInstance5_MNetworkVarNames_Value.m_pVarName = "m_bIsAnimationEnabled";
+      CSkeletonInstance::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CSkeletonInstance5_MNetworkVarNames_Value.m_pVarType = "bool";
+      __cxa_guard_release(&`guard variable for'CSkeletonInstance::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CSkeletonInstance5_MNetworkVarNames_Value);
+    }
+    if ( `guard variable for'CSkeletonInstance::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CSkeletonInstance6_MNetworkVarNames_Value == 0
+      && __cxa_guard_acquire(&`guard variable for'CSkeletonInstance::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CSkeletonInstance6_MNetworkVarNames_Value) != 0 )
+    {
+      CSkeletonInstance::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CSkeletonInstance6_MNetworkVarNames_Value.m_pVarName = "m_materialGroup";
+      CSkeletonInstance::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CSkeletonInstance6_MNetworkVarNames_Value.m_pVarType = "CUtlStringToken";
+      __cxa_guard_release(&`guard variable for'CSkeletonInstance::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CSkeletonInstance6_MNetworkVarNames_Value);
+    }
+    if ( `guard variable for'CSkeletonInstance::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CSkeletonInstance7_MNetworkVarNames_Value == 0
+      && __cxa_guard_acquire(&`guard variable for'CSkeletonInstance::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CSkeletonInstance7_MNetworkVarNames_Value) != 0 )
+    {
+      CSkeletonInstance::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CSkeletonInstance7_MNetworkVarNames_Value.m_pVarName = "m_nHitboxSet";
+      CSkeletonInstance::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CSkeletonInstance7_MNetworkVarNames_Value.m_pVarType = "uint8";
+      __cxa_guard_release(&`guard variable for'CSkeletonInstance::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CSkeletonInstance7_MNetworkVarNames_Value);
+    }
+    CSkeletonInstance::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CSkeletonInstance[0].m_pType = (*(*v7 + 88LL))(v7, "CModelState");
+    CSkeletonInstance::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CSkeletonInstance[1].m_pType = (*(*v7 + 40LL))(v7, 13);
+    CSkeletonInstance::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CSkeletonInstance[2].m_pType = (*(*v7 + 40LL))(v7, 13);
+    CSkeletonInstance::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CSkeletonInstance[3].m_pType = (*(*v7 + 112LL))(v7, 1);
+    CSkeletonInstance::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CSkeletonInstance[4].m_pType = (*(*v7 + 112LL))(v7, 1);
+    CSkeletonInstance::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CSkeletonInstance[5].m_pType = (*(*v7 + 112LL))(v7, 1);
+    CSkeletonInstance::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CSkeletonInstance[6].m_pType = (*(*v7 + 56LL))(v7, "CUtlStringToken", 3010, CAtomicManipulator<CUtlStringToken>::Get(void)::val, CSchemaManipulator<CUtlStringToken>::StaticAccessor(void)::m);
+    CSkeletonInstance::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CSkeletonInstance[7].m_pType = (*(*v7 + 40LL))(v7, 4);
+    (*(CGameSceneNode::s_pSchemaBindingForLocalModule->_vptr_ISchemaBinding + 5))(
+      CGameSceneNode::s_pSchemaBindingForLocalModule,
+      pSchemaSystem,
+      pBinaryName,
+      pProjectName);
+    v8 = CGameSceneNode::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+           pSchemaSystem,
+           pBinaryName,
+           pProjectName);
+    CSkeletonInstance::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CSkeletonInstance.m_pOuterTypeScope = v7;
+    CSkeletonInstance::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassBases_CSkeletonInstance[0].m_pClass = v8;
+    CSkeletonInstance::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult = &CSkeletonInstance::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CSkeletonInstance;
+    (*(*v7 + 264LL))(
+      v7,
+      &CSkeletonInstance::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CSkeletonInstance);
+    return CSkeletonInstance::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult;
+  }
+  return result;
+}
+
+
+// CSkeletonInstance::Schema_VerifyBindingIsRegistered  (line 272, @0x0000000001ffc6b0, libserver.so)
+// callers: CSkeletonInstance::Schema_DynamicBinding
+void __cdecl CSkeletonInstance::Schema_VerifyBindingIsRegistered()
+{
+  ;
+}
+
+
+// LocalRegisterSchemaModule<ArbitraryTemplateParameter_server_skeletoninstance_h>  (line 280, @0x0000000001ffc6c0, libserver.so)  // inlines: Call
+// callers: RegisterSchemaModule_skeletoninstance_h
+// globals: CModelState::s_pSchemaBindingForLocalModule, CSkeletonInstance::s_pSchemaBindingForLocalModule
+void __fastcall LocalRegisterSchemaModule<ArbitraryTemplateParameter_server_skeletoninstance_h>(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        SchemaRegistrationPhase_t nRegistrationPhase)
+{
+  if ( nRegistrationPhase == SchemaRegistrationPhase_t::SCHEMA_REGISTRATION_PHASE_CLASSES )
+  {
+    (*(CModelState::s_pSchemaBindingForLocalModule->_vptr_ISchemaBinding + 5))(
+      CModelState::s_pSchemaBindingForLocalModule,
+      pSchemaSystem,
+      pBinaryName,
+      "server");
+    (*(CSkeletonInstance::s_pSchemaBindingForLocalModule->_vptr_ISchemaBinding + 5))(
+      CSkeletonInstance::s_pSchemaBindingForLocalModule,
+      pSchemaSystem,
+      pBinaryName,
+      "server");
+  }
+  ++g_nLinkerHack_SchemaAnchor_RegistrationCountFor_server;
+}
+
+
+// RegisterSchemaModule_skeletoninstance_h  (line 283, @0x0000000001ffc720, libserver.so)
+// calls: LocalRegisterSchemaModule<ArbitraryTemplateParameter_server_skeletoninstance_h>
+// callers: CSchemaRegistration_server::RegisterAllBindings
+void __fastcall RegisterSchemaModule_skeletoninstance_h(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        SchemaRegistrationPhase_t nRegistrationPhase)
+{
+  LocalRegisterSchemaModule<ArbitraryTemplateParameter_server_skeletoninstance_h>(
+    pSchemaSystem,
+    pBinaryName,
+    nRegistrationPhase);
+}
+
+

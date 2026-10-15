@@ -1,0 +1,158 @@
+
+// ==== functions (decompiled by Hex-Rays; names/signatures from DWARF) ====
+
+// CSchemaEnumBinding<EntityIOTargetType_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE  (line 44, @0x00000000030dbee0, libserver.so)  // inlines: Count, Initialize, SetTypeScope
+// callers: CSchemaEnumBinding<EntityIOTargetType_t>::Register
+// globals: CSchemaEnumBinding<EntityIOTargetType_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*
+CSchemaEnumInfo *__fastcall CSchemaEnumBinding<EntityIOTargetType_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        const char *pProjectName)
+{
+  ISchemaSystemTypeScope *v3; // rax
+  unsigned int v4; // edi
+  SchemaEnumeratorValue_t v5; // r8
+  SchemaEnumeratorValue_t v6; // r9
+  SchemaEnumeratorValue_t *v7; // rdx
+
+  v3 = (*(*pSchemaSystem + 112LL))(pSchemaSystem, 0, pBinaryName);
+  if ( CSchemaEnumBinding<EntityIOTargetType_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_EntityIOTargetType_t.m_Enumerators.m_Data.m_nImplLength != 0 )
+  {
+    v4 = abs32(CSchemaEnumBinding<EntityIOTargetType_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_EntityIOTargetType_t.m_Enumerators.m_Data.m_nImplLength);
+    v5 = *(CSchemaEnumBinding<EntityIOTargetType_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_EntityIOTargetType_t.m_Enumerators.m_Data.m_pImplElements
+         + 2);
+    CSchemaEnumBinding<EntityIOTargetType_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_EntityIOTargetType_t.m_nMinValue = v5;
+    v6 = *(CSchemaEnumBinding<EntityIOTargetType_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_EntityIOTargetType_t.m_Enumerators.m_Data.m_pImplElements
+         + 2);
+    CSchemaEnumBinding<EntityIOTargetType_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_EntityIOTargetType_t.m_nMaxValue = v6;
+    if ( v4 != 1 )
+    {
+      v7 = (CSchemaEnumBinding<EntityIOTargetType_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_EntityIOTargetType_t.m_Enumerators.m_Data.m_pImplElements
+          + 72);
+      do
+      {
+        if ( v5 > *v7 )
+          v5 = *v7;
+        CSchemaEnumBinding<EntityIOTargetType_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_EntityIOTargetType_t.m_nMinValue = v5;
+        if ( v6 < *v7 )
+          v6 = *v7;
+        v7 += 7;
+        CSchemaEnumBinding<EntityIOTargetType_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_EntityIOTargetType_t.m_nMaxValue = v6;
+      }
+      while ( v7 != CSchemaEnumBinding<EntityIOTargetType_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_EntityIOTargetType_t.m_Enumerators.m_Data.m_pImplElements
+                  + 7 * v4
+                  + 2 );
+    }
+  }
+  else
+  {
+    CSchemaEnumBinding<EntityIOTargetType_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_EntityIOTargetType_t.m_nMinValue = 0;
+    CSchemaEnumBinding<EntityIOTargetType_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_EntityIOTargetType_t.m_nMaxValue = 0;
+  }
+  CSchemaEnumBinding<EntityIOTargetType_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_EntityIOTargetType_t.m_pOuterTypeScope = v3;
+  (*(*v3 + 272LL))(
+    v3,
+    &CSchemaEnumBinding<EntityIOTargetType_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_EntityIOTargetType_t);
+  return &CSchemaEnumBinding<EntityIOTargetType_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_EntityIOTargetType_t;
+}
+
+
+// CEntityIOOutput::Schema_CompileTimeVerificationFunction  (line 62, @0x00000000030dbfc0, libserver.so)
+void __fastcall CEntityIOOutput::Schema_CompileTimeVerificationFunction(CEntityIOOutput *const this)
+{
+  ;
+}
+
+
+// CEntityIOOutput::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE  (line 65, @0x00000000030dbfd0, libserver.so)  // inlines: SetTypeScope
+// callers: CSchemaClassBinding<CEntityIOOutput>::Register
+// globals: CEntityIOOutput::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitia, CEntityIOOutput::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchem
+CSchemaClassInfo *__fastcall CEntityIOOutput::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        const char *pProjectName)
+{
+  CSchemaClassInfo *result; // rax
+  __int64 v4; // rdx
+
+  result = CEntityIOOutput::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult;
+  if ( CEntityIOOutput::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult == 0 )
+  {
+    CEntityIOOutput::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CEntityIOOutput.m_pOuterTypeScope = (*(*pSchemaSystem + 112LL))(pSchemaSystem, 0, pBinaryName);
+    v4 = *CEntityIOOutput::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CEntityIOOutput.m_pOuterTypeScope;
+    CEntityIOOutput::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult = &CEntityIOOutput::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CEntityIOOutput;
+    (*(v4 + 264))(
+      CEntityIOOutput::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CEntityIOOutput.m_pOuterTypeScope,
+      &CEntityIOOutput::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CEntityIOOutput);
+    return CEntityIOOutput::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult;
+  }
+  return result;
+}
+
+
+// CEntityIOOutput::Schema_VerifyBindingIsRegistered  (line 67, @0x00000000030dc020, libserver.so)
+// callers: CEntityIOOutput::Schema_DynamicBinding
+void __cdecl CEntityIOOutput::Schema_VerifyBindingIsRegistered()
+{
+  ;
+}
+
+
+// LocalRegisterSchemaModule<ArbitraryTemplateParameter_entity2_ientity2_entityio_h>  (line 75, @0x00000000030dc030, libserver.so)  // inlines: Call, Get, RegisterAtomicType_CEntityOutputTemplate, SchemaMetaSet2_t
+// calls: __cxa_guard_acquire, __cxa_guard_release
+// callers: RegisterSchemaModule_ientity2_entityio_h
+// strings: "EntityIOTargetType_t", "entity2"
+// globals: `guard variable for'RegisterAtomicType_CEntityOutputTemplate(ISchemaSystem *)::s_AtomicTypeInfoCEntityOutputTemplate, RegisterAtomicType_CEntityOutputTemplate(ISchemaSystem *)::s_AtomicTypeInfoCEntityOutputTemplate, CSchemaEnumBinding<EntityIOTargetType_t>::s_pThisModuleBindingPointer, CEntityIOOutput::s_pSchemaBindingForLocalModule
+void __fastcall LocalRegisterSchemaModule<ArbitraryTemplateParameter_entity2_ientity2_entityio_h>(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        SchemaRegistrationPhase_t nRegistrationPhase)
+{
+  if ( nRegistrationPhase != SchemaRegistrationPhase_t::SCHEMA_REGISTRATION_PHASE_ATOMIC_TYPES_AND_ENUMS )
+  {
+    if ( nRegistrationPhase == SchemaRegistrationPhase_t::SCHEMA_REGISTRATION_PHASE_CLASSES )
+      (*(CEntityIOOutput::s_pSchemaBindingForLocalModule->_vptr_ISchemaBinding + 5))(
+        CEntityIOOutput::s_pSchemaBindingForLocalModule,
+        pSchemaSystem,
+        pBinaryName,
+        "entity2");
+    ++g_nLinkerHack_SchemaAnchor_RegistrationCountFor_entity2;
+  }
+  else
+  {
+    if ( `guard variable for'RegisterAtomicType_CEntityOutputTemplate(ISchemaSystem *)::s_AtomicTypeInfoCEntityOutputTemplate == 0
+      && __cxa_guard_acquire(&`guard variable for'RegisterAtomicType_CEntityOutputTemplate(ISchemaSystem *)::s_AtomicTypeInfoCEntityOutputTemplate) != 0 )
+    {
+      qword_4A6DF58 = 0;
+      dword_4A6DF60 = 0;
+      __cxa_guard_release(&`guard variable for'RegisterAtomicType_CEntityOutputTemplate(ISchemaSystem *)::s_AtomicTypeInfoCEntityOutputTemplate);
+    }
+    (*(*pSchemaSystem + 248LL))(
+      pSchemaSystem,
+      RegisterAtomicType_CEntityOutputTemplate(ISchemaSystem *)::s_AtomicTypeInfoCEntityOutputTemplate);
+    (*(CSchemaEnumBinding<EntityIOTargetType_t>::s_pThisModuleBindingPointer->_vptr_ISchemaBinding + 5))(
+      CSchemaEnumBinding<EntityIOTargetType_t>::s_pThisModuleBindingPointer,
+      pSchemaSystem,
+      pBinaryName,
+      "entity2",
+      "EntityIOTargetType_t");
+    ++g_nLinkerHack_SchemaAnchor_RegistrationCountFor_entity2;
+  }
+}
+
+
+// RegisterSchemaModule_ientity2_entityio_h  (line 79, @0x00000000030dc120, libserver.so)
+// calls: LocalRegisterSchemaModule<ArbitraryTemplateParameter_entity2_ientity2_entityio_h>
+// callers: CSchemaRegistration_entity2::RegisterAllBindings
+void __fastcall RegisterSchemaModule_ientity2_entityio_h(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        SchemaRegistrationPhase_t nRegistrationPhase)
+{
+  LocalRegisterSchemaModule<ArbitraryTemplateParameter_entity2_ientity2_entityio_h>(
+    pSchemaSystem,
+    pBinaryName,
+    nRegistrationPhase);
+}
+
+

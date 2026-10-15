@@ -1,0 +1,439 @@
+
+// ==== functions (decompiled by Hex-Rays; names/signatures from DWARF) ====
+
+// CSchemaEnumBinding<CourierState_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE  (line 35, @0x0000000002a8db30, libserver.so)  // inlines: Count, Initialize, SetTypeScope
+// callers: CSchemaEnumBinding<CourierState_t>::Register
+// globals: CSchemaEnumBinding<CourierState_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char 
+CSchemaEnumInfo *__fastcall CSchemaEnumBinding<CourierState_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        const char *pProjectName)
+{
+  ISchemaSystemTypeScope *v3; // rax
+  unsigned int v4; // edi
+  SchemaEnumeratorValue_t v5; // r8
+  SchemaEnumeratorValue_t v6; // r9
+  SchemaEnumeratorValue_t *v7; // rdx
+
+  v3 = (*(*pSchemaSystem + 112LL))(pSchemaSystem, 0, pBinaryName);
+  if ( CSchemaEnumBinding<CourierState_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_CourierState_t.m_Enumerators.m_Data.m_nImplLength != 0 )
+  {
+    v4 = abs32(CSchemaEnumBinding<CourierState_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_CourierState_t.m_Enumerators.m_Data.m_nImplLength);
+    v5 = *(CSchemaEnumBinding<CourierState_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_CourierState_t.m_Enumerators.m_Data.m_pImplElements
+         + 2);
+    CSchemaEnumBinding<CourierState_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_CourierState_t.m_nMinValue = v5;
+    v6 = *(CSchemaEnumBinding<CourierState_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_CourierState_t.m_Enumerators.m_Data.m_pImplElements
+         + 2);
+    CSchemaEnumBinding<CourierState_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_CourierState_t.m_nMaxValue = v6;
+    if ( v4 != 1 )
+    {
+      v7 = (CSchemaEnumBinding<CourierState_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_CourierState_t.m_Enumerators.m_Data.m_pImplElements
+          + 72);
+      do
+      {
+        if ( v5 > *v7 )
+          v5 = *v7;
+        CSchemaEnumBinding<CourierState_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_CourierState_t.m_nMinValue = v5;
+        if ( v6 < *v7 )
+          v6 = *v7;
+        v7 += 7;
+        CSchemaEnumBinding<CourierState_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_CourierState_t.m_nMaxValue = v6;
+      }
+      while ( v7 != CSchemaEnumBinding<CourierState_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_CourierState_t.m_Enumerators.m_Data.m_pImplElements
+                  + 7 * v4
+                  + 2 );
+    }
+  }
+  else
+  {
+    CSchemaEnumBinding<CourierState_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_CourierState_t.m_nMinValue = 0;
+    CSchemaEnumBinding<CourierState_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_CourierState_t.m_nMaxValue = 0;
+  }
+  CSchemaEnumBinding<CourierState_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_CourierState_t.m_pOuterTypeScope = v3;
+  (*(*v3 + 272LL))(
+    v3,
+    &CSchemaEnumBinding<CourierState_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_CourierState_t);
+  return &CSchemaEnumBinding<CourierState_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_CourierState_t;
+}
+
+
+// CDOTA_Unit_Courier::CEntityInstanceEntityClass::Schema_CompileTimeVerificationFunction  (line 52, @0x0000000002a8dc10, libserver.so)
+void __fastcall CDOTA_Unit_Courier::CEntityInstanceEntityClass::Schema_CompileTimeVerificationFunction(
+        CDOTA_Unit_Courier::CEntityInstanceEntityClass *const this)
+{
+  ;
+}
+
+
+// CDOTA_Unit_Courier::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE  (line 55, @0x0000000002a80160, libserver.so)  // inlines: Call, Get, SetTypeScope
+// calls: CDOTA_BaseNPC_Additive::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE
+// callers: CSchemaNonConstructibleClassBinding<CDOTA_Unit_Courier::CEntityInstanceEntityClass>::Register, CDOTA_Unit_Courier::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE, CDOTA_Unit_Courier::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE
+// globals: CDOTA_Unit_Courier::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char
+CSchemaClassInfo *__fastcall CDOTA_Unit_Courier::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        const char *pProjectName)
+{
+  ISchemaSystemTypeScope *v6; // r14
+  CSchemaClassInfo *v7; // rax
+
+  v6 = (*(*pSchemaSystem + 112LL))(pSchemaSystem, 1, pBinaryName);
+  (*(CDOTA_BaseNPC_Additive::CEntityInstanceEntityClass::s_pSchemaBindingForLocalModule->_vptr_ISchemaBinding + 5))(
+    CDOTA_BaseNPC_Additive::CEntityInstanceEntityClass::s_pSchemaBindingForLocalModule,
+    pSchemaSystem,
+    pBinaryName,
+    pProjectName);
+  v7 = CDOTA_BaseNPC_Additive::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+         pSchemaSystem,
+         pBinaryName,
+         pProjectName);
+  CDOTA_Unit_Courier::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CDOTA_Unit_Courier_CEntityInstanceEntityClass.m_pOuterTypeScope = v6;
+  CDOTA_Unit_Courier::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassBases_CDOTA_Unit_Courier_CEntityInstanceEntityClass[0].m_pClass = v7;
+  CDOTA_Unit_Courier::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult = &CDOTA_Unit_Courier::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CDOTA_Unit_Courier_CEntityInstanceEntityClass;
+  return &CDOTA_Unit_Courier::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CDOTA_Unit_Courier_CEntityInstanceEntityClass;
+}
+
+
+// CDOTA_Unit_Courier::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE  (line 55, @0x0000000002a8dc20, libserver.so)
+// calls: CDOTA_Unit_Courier::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE
+// globals: CDOTA_Unit_Courier::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char
+CSchemaClassInfo *__fastcall CDOTA_Unit_Courier::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        const char *pProjectName)
+{
+  CSchemaClassInfo *result; // rax
+
+  result = CDOTA_Unit_Courier::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult;
+  if ( CDOTA_Unit_Courier::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult == 0 )
+    return CDOTA_Unit_Courier::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+             pSchemaSystem,
+             pBinaryName,
+             pProjectName);
+  return result;
+}
+
+
+// CDOTA_Unit_Courier::CEntityInstanceEntityClass::Schema_VerifyBindingIsRegistered  (line 72, @0x0000000002a8dc40, libserver.so)
+void __cdecl CDOTA_Unit_Courier::CEntityInstanceEntityClass::Schema_VerifyBindingIsRegistered()
+{
+  ;
+}
+
+
+// CDOTA_Unit_Courier::Schema_CompileTimeVerificationFunction  (line 80, @0x0000000002a8dc50, libserver.so)
+void __fastcall CDOTA_Unit_Courier::Schema_CompileTimeVerificationFunction(CDOTA_Unit_Courier *const this)
+{
+  ;
+}
+
+
+// CDOTA_Unit_Courier::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE  (line 92, @0x0000000002a8dc60, libserver.so)  // inlines: Call, Get, NetworkVarDecl_t, RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE, SchemaBinding_SchemaTypeOfMemberVarByAddr<CDOTA_Unit_Courier, CNetworkVarBase<CHandle<CBaseEntity>, CDOTA_Unit_Courier::NetworkVar_m_hCourierStateEntity> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<CDOTA_Unit_Courier, CNetworkVarBase<CourierState_t, CDOTA_Unit_Courier::NetworkVar_m_nCourierState> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<CDOTA_Unit_Courier, CNetworkVarBase<bool, CDOTA_Unit_Courier::NetworkVar_m_bFlyingCourier> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<CDOTA_Unit_Courier, CNetworkVarBase<float, CDOTA_Unit_Courier::NetworkVar_m_flRespawnTime> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<CDOTA_Unit_Courier, CUtlString>, SchemaBinding_SchemaTypeOfMemberVarByAddr<CDOTA_Unit_Courier, bool>, SchemaBinding_SchemaTypeOfVarByAddr<CEconItemView*>, SetTypeScope
+// calls: __cxa_guard_acquire, __cxa_guard_release, CDOTA_BaseNPC_Additive::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE, Q_log2, CDOTA_Unit_Courier::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE, __cxa_guard_abort, _Unwind_Resume
+// callers: CSchemaNonConstructibleClassBinding<CDOTA_Unit_Courier>::Register
+// strings: "CourierState_t", "CBaseEntity", "CHandle", "CUtlString", "CEconItemView", "m_hCourierStateEntity" (9 total)
+// globals: CDOTA_Unit_Courier::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pIni, `guard variable for'CDOTA_Unit_Courier::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,, CSchemaManipulator<CHandle<CBaseEntity>>::StaticAccessor(void)::m, CAtomicManipulator<CHandle<CBaseEntity>>::Get(void)::val, CSchemaManipulator<CUtlString>::StaticAccessor(void)::m, CAtomicManipulator<CUtlString>::Get(void)::val, CDOTA_Unit_Courier::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char, CDOTA_Unit_Courier::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSc
+CSchemaClassInfo *__fastcall CDOTA_Unit_Courier::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        const char *pProjectName)
+{
+  CSchemaClassInfo *result; // rax
+  ISchemaSystemTypeScope *v7; // rbx
+  __int64 (__fastcall *v8)(ISchemaSystemTypeScope *, const char *, __int64, __int64 (__fastcall ***)(), __int64 (__fastcall ***)(), __int64); // r15
+  __int64 v9; // rax
+  __int64 (__fastcall *v10)(ISchemaSystemTypeScope *, __int64); // r15
+  __int64 v11; // rax
+  CSchemaClassInfo *v12; // rax
+  CSchemaClassInfo *v13; // rax
+
+  result = CDOTA_Unit_Courier::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult;
+  if ( CDOTA_Unit_Courier::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult == 0 )
+  {
+    v7 = (*(*pSchemaSystem + 112LL))(pSchemaSystem, 1, pBinaryName);
+    if ( `guard variable for'CDOTA_Unit_Courier::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_FieldMeta_CDOTA_Unit_Courier_m_nCourierState2_MNetworkBitCount_Value == 0
+      && __cxa_guard_acquire(&`guard variable for'CDOTA_Unit_Courier::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_FieldMeta_CDOTA_Unit_Courier_m_nCourierState2_MNetworkBitCount_Value) != 0 )
+    {
+      CDOTA_Unit_Courier::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_FieldMeta_CDOTA_Unit_Courier_m_nCourierState2_MNetworkBitCount_Value = Q_log2(6u) + 1;
+      __cxa_guard_release(&`guard variable for'CDOTA_Unit_Courier::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_FieldMeta_CDOTA_Unit_Courier_m_nCourierState2_MNetworkBitCount_Value);
+    }
+    if ( `guard variable for'CDOTA_Unit_Courier::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTA_Unit_Courier3_MNetworkVarNames_Value == 0
+      && __cxa_guard_acquire(&`guard variable for'CDOTA_Unit_Courier::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTA_Unit_Courier3_MNetworkVarNames_Value) != 0 )
+    {
+      CDOTA_Unit_Courier::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTA_Unit_Courier3_MNetworkVarNames_Value.m_pVarName = "m_bFlyingCourier";
+      CDOTA_Unit_Courier::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTA_Unit_Courier3_MNetworkVarNames_Value.m_pVarType = "bool";
+      __cxa_guard_release(&`guard variable for'CDOTA_Unit_Courier::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTA_Unit_Courier3_MNetworkVarNames_Value);
+    }
+    if ( `guard variable for'CDOTA_Unit_Courier::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTA_Unit_Courier4_MNetworkVarNames_Value == 0
+      && __cxa_guard_acquire(&`guard variable for'CDOTA_Unit_Courier::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTA_Unit_Courier4_MNetworkVarNames_Value) != 0 )
+    {
+      CDOTA_Unit_Courier::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTA_Unit_Courier4_MNetworkVarNames_Value.m_pVarName = "m_flRespawnTime";
+      CDOTA_Unit_Courier::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTA_Unit_Courier4_MNetworkVarNames_Value.m_pVarType = "float";
+      __cxa_guard_release(&`guard variable for'CDOTA_Unit_Courier::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTA_Unit_Courier4_MNetworkVarNames_Value);
+    }
+    if ( `guard variable for'CDOTA_Unit_Courier::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTA_Unit_Courier5_MNetworkVarNames_Value == 0
+      && __cxa_guard_acquire(&`guard variable for'CDOTA_Unit_Courier::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTA_Unit_Courier5_MNetworkVarNames_Value) != 0 )
+    {
+      CDOTA_Unit_Courier::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTA_Unit_Courier5_MNetworkVarNames_Value.m_pVarName = "m_nCourierState";
+      CDOTA_Unit_Courier::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTA_Unit_Courier5_MNetworkVarNames_Value.m_pVarType = "CourierState_t";
+      __cxa_guard_release(&`guard variable for'CDOTA_Unit_Courier::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTA_Unit_Courier5_MNetworkVarNames_Value);
+    }
+    if ( `guard variable for'CDOTA_Unit_Courier::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTA_Unit_Courier6_MNetworkVarNames_Value == 0
+      && __cxa_guard_acquire(&`guard variable for'CDOTA_Unit_Courier::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTA_Unit_Courier6_MNetworkVarNames_Value) != 0 )
+    {
+      CDOTA_Unit_Courier::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTA_Unit_Courier6_MNetworkVarNames_Value.m_pVarName = "m_hCourierStateEntity";
+      CDOTA_Unit_Courier::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTA_Unit_Courier6_MNetworkVarNames_Value.m_pVarType = "EHANDLE";
+      __cxa_guard_release(&`guard variable for'CDOTA_Unit_Courier::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTA_Unit_Courier6_MNetworkVarNames_Value);
+    }
+    CDOTA_Unit_Courier::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CDOTA_Unit_Courier[0].m_pType = (*(*v7 + 40LL))(v7, 13);
+    CDOTA_Unit_Courier::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CDOTA_Unit_Courier[1].m_pType = (*(*v7 + 40LL))(v7, 13);
+    CDOTA_Unit_Courier::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CDOTA_Unit_Courier[2].m_pType = (*(*v7 + 40LL))(v7, 13);
+    CDOTA_Unit_Courier::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CDOTA_Unit_Courier[3].m_pType = (*(*v7 + 40LL))(v7, 11);
+    CDOTA_Unit_Courier::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CDOTA_Unit_Courier[4].m_pType = (*(*v7 + 96LL))(v7, "CourierState_t");
+    v8 = *(*v7 + 64LL);
+    v9 = (*(*v7 + 88LL))(v7, "CBaseEntity");
+    CDOTA_Unit_Courier::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CDOTA_Unit_Courier[5].m_pType = v8(v7, "CHandle", 5003, CAtomicManipulator<CHandle<CBaseEntity>>::Get(void)::val, &CSchemaManipulator<CHandle<CBaseEntity>>::StaticAccessor(void)::m, v9);
+    CDOTA_Unit_Courier::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CDOTA_Unit_Courier[6].m_pType = (*(*v7 + 56LL))(v7, "CUtlString", 3003, CAtomicManipulator<CUtlString>::Get(void)::val, CSchemaManipulator<CUtlString>::StaticAccessor(void)::m);
+    CDOTA_Unit_Courier::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CDOTA_Unit_Courier[7].m_pType = (*(*v7 + 56LL))(v7, "CUtlString", 3003, CAtomicManipulator<CUtlString>::Get(void)::val, CSchemaManipulator<CUtlString>::StaticAccessor(void)::m);
+    v10 = *(*v7 + 48LL);
+    v11 = (*(*v7 + 88LL))(v7, "CEconItemView");
+    CDOTA_Unit_Courier::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_StaticMembers_CDOTA_Unit_Courier[0].m_pType = v10(v7, v11);
+    if ( `guard variable for'CDOTA_Unit_Courier::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_NestedClassesOf_CDOTA_Unit_Courier == 0
+      && __cxa_guard_acquire(&`guard variable for'CDOTA_Unit_Courier::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_NestedClassesOf_CDOTA_Unit_Courier) != 0 )
+    {
+      v12 = CDOTA_Unit_Courier::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult;
+      if ( CDOTA_Unit_Courier::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult == 0 )
+        v12 = CDOTA_Unit_Courier::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+                pSchemaSystem,
+                pBinaryName,
+                pProjectName);
+      CDOTA_Unit_Courier::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_NestedClassesOf_CDOTA_Unit_Courier[0] = v12;
+      __cxa_guard_release(&`guard variable for'CDOTA_Unit_Courier::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_NestedClassesOf_CDOTA_Unit_Courier);
+    }
+    (*(CDOTA_BaseNPC_Additive::s_pSchemaBindingForLocalModule->_vptr_ISchemaBinding + 5))(
+      CDOTA_BaseNPC_Additive::s_pSchemaBindingForLocalModule,
+      pSchemaSystem,
+      pBinaryName,
+      pProjectName);
+    v13 = CDOTA_BaseNPC_Additive::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+            pSchemaSystem,
+            pBinaryName,
+            pProjectName);
+    CDOTA_Unit_Courier::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CDOTA_Unit_Courier.m_pOuterTypeScope = v7;
+    CDOTA_Unit_Courier::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassBases_CDOTA_Unit_Courier[0].m_pClass = v13;
+    CDOTA_Unit_Courier::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult = &CDOTA_Unit_Courier::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CDOTA_Unit_Courier;
+    return &CDOTA_Unit_Courier::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CDOTA_Unit_Courier;
+  }
+  return result;
+}
+
+
+// CDOTA_Unit_Courier::Schema_VerifyBindingIsRegistered  (line 205, @0x0000000002a8e030, libserver.so)
+void __cdecl CDOTA_Unit_Courier::Schema_VerifyBindingIsRegistered()
+{
+  ;
+}
+
+
+// CDOTA_Unit_Courier::SetupEntClassInputs  (line 219, @0x0000000002a8e040, libserver.so)
+void __fastcall CDOTA_Unit_Courier::SetupEntClassInputs(CEntityClass *pComponentInfo)
+{
+  ;
+}
+
+
+// CDOTA_Unit_Courier::SetupEntClassComponentOverrides  (line 225, @0x0000000002a8e050, libserver.so)
+void __fastcall CDOTA_Unit_Courier::SetupEntClassComponentOverrides(CEntityClass *pEntityClass)
+{
+  pEntityClass->m_pComponentOverrides = 0;
+}
+
+
+// GetScriptDesc<CDOTA_Unit_Courier>  (line 231, @0x0000000002ab17b0, libserver.so)  // inlines: AddToTail, CUtlMemory, CUtlVector, CUtlVectorBase, Construct<ScriptFunctionBinding_t>, Element, Finalize, GrowMemory, ScriptClassDesc_t, ScriptDeduceFunctionSignature<CDOTA_Unit_Courier*, CDOTA_Unit_Courier, bool>, ScriptFuncDescriptor_t, ScriptFunctionBinding_t, SetDescription, SetFunctionName, SetReturnType, SetScriptName, operator[]
+// calls: operator new, GetScriptDesc<CDOTA_BaseNPC>, CUtlMemory<ScriptFunctionBinding_t, int>::Grow
+// callers: CDOTA_Unit_Courier::GetScriptDesc, CDOTA_Unit_Courier::InitScriptDesc, CDOTA_Unit_Courier::GetClassScriptDesc, CDOTA_Unit_Courier::GetEntityClassInternal
+// strings: "A courier.", "CDOTA_Unit_Courier", "Upgrade to a flying courier", "UpgradeToFlyingCourier"
+// globals: g_pCDOTA_Unit_Courier_ScriptDesc, CMemberScriptBinding0<CDOTA_Unit_Courier *,bool (CDOTA_Unit_Courier::*)(void),bool>::Call(void *,void *,CVariantBase<CVariantDefaultAllocator> *,int,CVariantBas, CDOTA_Unit_Courier::UpgradeToFlyingCourier(void)
+ScriptClassDesc_t *__fastcall GetScriptDesc<CDOTA_Unit_Courier>(CDOTA_Unit_Courier *pScriptDescObjectInstance)
+{
+  ScriptClassDesc_t *result; // rax
+  ScriptClassDesc_t *v2; // rbx
+  ScriptClassDesc_t *Script; // rax
+  IScriptInstanceHelper *pHelper; // rcx
+  __int64 m_Size; // r12
+  int v6; // eax
+  __int64 v7; // rax
+  __int64 v8; // rsi
+  int v9; // edx
+  int v10; // edx
+  char v11; // cl
+  char v12; // di
+
+  result = g_pCDOTA_Unit_Courier_ScriptDesc;
+  if ( g_pCDOTA_Unit_Courier_ScriptDesc == 0 )
+  {
+    v2 = operator new(0x50u);
+    v2->m_pBaseDesc = 0;
+    v2->m_FunctionBindings.m_Size = 0;
+    v2->m_FunctionBindings.m_Memory.m_pMemory = 0;
+    v2->m_FunctionBindings.m_Memory.m_nAllocationCount = 0;
+    v2->m_FunctionBindings.m_Memory.m_nGrowSize = 0;
+    v2->m_pfnConstruct = 0;
+    v2->m_pfnDestruct = 0;
+    v2->pHelper = 0;
+    g_pCDOTA_Unit_Courier_ScriptDesc = v2;
+    v2->m_pszDescription = "A courier.";
+    v2->m_pszScriptName = "CDOTA_Unit_Courier";
+    v2->m_pszClassname = "CDOTA_Unit_Courier";
+    Script = GetScriptDesc<CDOTA_BaseNPC>(0);
+    v2->m_pBaseDesc = Script;
+    if ( Script != 0 )
+    {
+      while ( 1 )
+      {
+        pHelper = Script->pHelper;
+        if ( pHelper != 0 )
+          break;
+        Script = Script->m_pBaseDesc;
+        if ( Script == 0 )
+          goto LABEL_7;
+      }
+      v2->pHelper = pHelper;
+    }
+LABEL_7:
+    m_Size = v2->m_FunctionBindings.m_Size;
+    v6 = v2->m_FunctionBindings.m_Size;
+    if ( m_Size == v2->m_FunctionBindings.m_Memory.m_nAllocationCount )
+    {
+      CUtlMemory<ScriptFunctionBinding_t,int>::Grow(&v2->m_FunctionBindings.m_Memory, 1);
+      v6 = v2->m_FunctionBindings.m_Size;
+    }
+    v2->m_FunctionBindings.m_Size = v6 + 1;
+    v7 = &v2->m_FunctionBindings.m_Memory.m_pMemory[m_Size];
+    if ( v7 != 0 )
+    {
+      *v7 = 0;
+      *(v7 + 8) = 0;
+      *(v7 + 16) = 0;
+      *(v7 + 24) = 29;
+      *(v7 + 25) = -1;
+      *(v7 + 26) = 0;
+      *(v7 + 40) = 0;
+      v8 = &v2->m_FunctionBindings.m_Memory.m_pMemory[m_Size];
+    }
+    else
+    {
+      v8 = 0;
+    }
+    v9 = *(v8 + 26);
+    *(v8 + 24) = 6;
+    *(v8 + 16) = "Upgrade to a flying courier";
+    *v8 = "UpgradeToFlyingCourier";
+    *(v8 + 8) = "UpgradeToFlyingCourier";
+    v10 = v9 - 1;
+    *(v8 + 25) = 0;
+    if ( v10 >= 0 && *(v8 + v10 + 27) == 32 )
+    {
+      v11 = 1;
+      do
+      {
+        --v10;
+        v12 = v11;
+        if ( v10 == -1 )
+        {
+          *(v8 + 25) = v11;
+          goto LABEL_17;
+        }
+        ++v11;
+      }
+      while ( *(v8 + v10 + 27) == 32 );
+      *(v8 + 25) = v12;
+    }
+LABEL_17:
+    *(v8 + 64) = 1;
+    *(v8 + 48) = CMemberScriptBinding0<CDOTA_Unit_Courier *,bool (CDOTA_Unit_Courier::*)(void),bool>::Call;
+    *(v8 + 56) = CDOTA_Unit_Courier::UpgradeToFlyingCourier;
+    return v2;
+  }
+  return result;
+}
+
+
+// CDOTA_Unit_Courier::GetScriptDesc  (line 231, @0x0000000002ab1970, libserver.so)
+// calls: GetScriptDesc<CDOTA_Unit_Courier>
+ScriptClassDesc_t *__fastcall CDOTA_Unit_Courier::GetScriptDesc(CDOTA_Unit_Courier *const this)
+{
+  return GetScriptDesc<CDOTA_Unit_Courier>(this);
+}
+
+
+// CDOTA_Unit_Courier::InitScriptDesc  (line 231, @0x0000000002ab1980, libserver.so)
+// calls: GetScriptDesc<CDOTA_Unit_Courier>
+ScriptClassDesc_t *__cdecl CDOTA_Unit_Courier::InitScriptDesc()
+{
+  return GetScriptDesc<CDOTA_Unit_Courier>(0);
+}
+
+
+// CDOTA_Unit_Courier::GetClassScriptDesc  (line 231, @0x0000000002ab1990, libserver.so)
+// calls: GetScriptDesc<CDOTA_Unit_Courier>
+ScriptClassDesc_t *__cdecl CDOTA_Unit_Courier::GetClassScriptDesc()
+{
+  return GetScriptDesc<CDOTA_Unit_Courier>(0);
+}
+
+
+// LocalRegisterSchemaModule<ArbitraryTemplateParameter_server_dota_unit_courier_h>  (line 239, @0x0000000002a8e060, libserver.so)  // inlines: Call, Get
+// callers: RegisterSchemaModule_dota_unit_courier_h
+// strings: "CourierState_t"
+// globals: CSchemaEnumBinding<CourierState_t>::s_pThisModuleBindingPointer, CDOTA_Unit_Courier::CEntityInstanceEntityClass::s_pSchemaBindingForLocalModule, CDOTA_Unit_Courier::s_pSchemaBindingForLocalModule
+void __fastcall LocalRegisterSchemaModule<ArbitraryTemplateParameter_server_dota_unit_courier_h>(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        SchemaRegistrationPhase_t nRegistrationPhase)
+{
+  if ( nRegistrationPhase != SchemaRegistrationPhase_t::SCHEMA_REGISTRATION_PHASE_ATOMIC_TYPES_AND_ENUMS )
+  {
+    if ( nRegistrationPhase == SchemaRegistrationPhase_t::SCHEMA_REGISTRATION_PHASE_CLASSES )
+    {
+      (*(CDOTA_Unit_Courier::CEntityInstanceEntityClass::s_pSchemaBindingForLocalModule->_vptr_ISchemaBinding + 5))(
+        CDOTA_Unit_Courier::CEntityInstanceEntityClass::s_pSchemaBindingForLocalModule,
+        pSchemaSystem,
+        pBinaryName,
+        "server");
+      (*(CDOTA_Unit_Courier::s_pSchemaBindingForLocalModule->_vptr_ISchemaBinding + 5))(
+        CDOTA_Unit_Courier::s_pSchemaBindingForLocalModule,
+        pSchemaSystem,
+        pBinaryName,
+        "server");
+    }
+    ++g_nLinkerHack_SchemaAnchor_RegistrationCountFor_server;
+  }
+  else
+  {
+    (*(CSchemaEnumBinding<CourierState_t>::s_pThisModuleBindingPointer->_vptr_ISchemaBinding + 5))(
+      CSchemaEnumBinding<CourierState_t>::s_pThisModuleBindingPointer,
+      pSchemaSystem,
+      pBinaryName,
+      "server",
+      "CourierState_t");
+    ++g_nLinkerHack_SchemaAnchor_RegistrationCountFor_server;
+  }
+}
+
+
+// RegisterSchemaModule_dota_unit_courier_h  (line 243, @0x0000000002a8e110, libserver.so)
+// calls: LocalRegisterSchemaModule<ArbitraryTemplateParameter_server_dota_unit_courier_h>
+// callers: CSchemaRegistration_server::RegisterAllBindings
+void __fastcall RegisterSchemaModule_dota_unit_courier_h(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        SchemaRegistrationPhase_t nRegistrationPhase)
+{
+  LocalRegisterSchemaModule<ArbitraryTemplateParameter_server_dota_unit_courier_h>(
+    pSchemaSystem,
+    pBinaryName,
+    nRegistrationPhase);
+}
+
+

@@ -1,0 +1,156 @@
+
+// ==== functions (decompiled by Hex-Rays; names/signatures from DWARF) ====
+
+// CFourWheelVehiclePhysics::Schema_CompileTimeVerificationFunction  (line 35, @0x0000000001fd5bf0, libserver.so)
+void __fastcall CFourWheelVehiclePhysics::Schema_CompileTimeVerificationFunction(CFourWheelVehiclePhysics *const this)
+{
+  ;
+}
+
+
+// CFourWheelVehiclePhysics::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE  (line 70, @0x0000000001fd5c00, libserver.so)  // inlines: Get, SchemaBinding_SchemaTypeOfMemberVarByAddr<CFourWheelVehiclePhysics, CFourWheelServerVehicle*>, SchemaBinding_SchemaTypeOfMemberVarByAddr<CFourWheelVehiclePhysics, CHandle<CBaseAnimating> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<CFourWheelVehiclePhysics, IPhysicsVehicleController*>, SchemaBinding_SchemaTypeOfMemberVarByAddr<CFourWheelVehiclePhysics, QAngle [4]>, SchemaBinding_SchemaTypeOfMemberVarByAddr<CFourWheelVehiclePhysics, Vector [4]>, SchemaBinding_SchemaTypeOfMemberVarByAddr<CFourWheelVehiclePhysics, bool>, SchemaBinding_SchemaTypeOfMemberVarByAddr<CFourWheelVehiclePhysics, float [4]>, SchemaBinding_SchemaTypeOfMemberVarByAddr<CFourWheelVehiclePhysics, float>, SchemaBinding_SchemaTypeOfMemberVarByAddr<CFourWheelVehiclePhysics, int [12]>, SchemaBinding_SchemaTypeOfMemberVarByAddr<CFourWheelVehiclePhysics, int>, SchemaBinding_SchemaTypeOfMemberVarByAddr<CFourWheelVehiclePhysics, vehicle_controlparams_t>, SetTypeScope
+// callers: CSchemaNonConstructibleClassBinding<CFourWheelVehiclePhysics>::Register
+// strings: "CBaseAnimating", "CHandle", "CFourWheelServerVehicle", "vehicle_controlparams_t", "QAngle"
+// globals: CFourWheelVehiclePhysics::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::, CSchemaManipulator<CHandle<CBaseAnimating>>::StaticAccessor(void)::m, CAtomicManipulator<CHandle<CBaseAnimating>>::Get(void)::val, CSchemaManipulator<Vector>::StaticAccessor(void)::m, CAtomicManipulator<Vector>::Get(void)::val, CSchemaManipulator<QAngle>::StaticAccessor(void)::m, CAtomicManipulator<QAngle>::Get(void)::val
+CSchemaClassInfo *__fastcall CFourWheelVehiclePhysics::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        const char *pProjectName)
+{
+  CSchemaClassInfo *result; // rax
+  ISchemaSystemTypeScope *v4; // rbx
+  __int64 (__fastcall *v5)(ISchemaSystemTypeScope *, const char *, __int64, __int64 (__fastcall ***)(), __int64 (__fastcall ***)(), __int64); // r12
+  __int64 v6; // rax
+  __int64 (__fastcall *v7)(ISchemaSystemTypeScope *, __int64); // r12
+  __int64 v8; // rax
+  __int64 (__fastcall *v9)(ISchemaSystemTypeScope *, __int64); // r12
+  __int64 v10; // rax
+  __int64 (__fastcall *v11)(ISchemaSystemTypeScope *, __int64, __int64); // r12
+  __int64 v12; // rax
+  __int64 (__fastcall *v13)(ISchemaSystemTypeScope *, __int64, __int64); // r12
+  __int64 v14; // rax
+  __int64 (__fastcall *v15)(ISchemaSystemTypeScope *, __int64, __int64); // r12
+  __int64 v16; // rax
+  __int64 (__fastcall *v17)(ISchemaSystemTypeScope *, __int64, __int64); // r12
+  __int64 v18; // rax
+  __int64 (__fastcall *v19)(ISchemaSystemTypeScope *, __int64, __int64); // r12
+  __int64 v20; // rax
+  CSchemaType *v21; // rax
+
+  result = CFourWheelVehiclePhysics::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult;
+  if ( CFourWheelVehiclePhysics::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult == 0 )
+  {
+    v4 = (*(*pSchemaSystem + 112LL))(pSchemaSystem, 0, pBinaryName);
+    v5 = *(*v4 + 64LL);
+    v6 = (*(*v4 + 88LL))(v4, "CBaseAnimating");
+    CFourWheelVehiclePhysics::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CFourWheelVehiclePhysics[0].m_pType = v5(v4, "CHandle", 5003, CAtomicManipulator<CHandle<CBaseAnimating>>::Get(void)::val, CSchemaManipulator<CHandle<CBaseAnimating>>::StaticAccessor(void)::m, v6);
+    v7 = *(*v4 + 48LL);
+    v8 = (*(*v4 + 88LL))(v4, "CFourWheelServerVehicle");
+    CFourWheelVehiclePhysics::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CFourWheelVehiclePhysics[1].m_pType = v7(v4, v8);
+    CFourWheelVehiclePhysics::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CFourWheelVehiclePhysics[2].m_pType = (*(*v4 + 88LL))(v4, "vehicle_controlparams_t");
+    v9 = *(*v4 + 48LL);
+    v10 = (*(*v4 + 120LL))(v4);
+    CFourWheelVehiclePhysics::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CFourWheelVehiclePhysics[3].m_pType = v9(v4, v10);
+    CFourWheelVehiclePhysics::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CFourWheelVehiclePhysics[4].m_pType = (*(*v4 + 40LL))(v4, 7);
+    CFourWheelVehiclePhysics::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CFourWheelVehiclePhysics[5].m_pType = (*(*v4 + 40LL))(v4, 7);
+    CFourWheelVehiclePhysics::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CFourWheelVehiclePhysics[6].m_pType = (*(*v4 + 40LL))(v4, 7);
+    CFourWheelVehiclePhysics::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CFourWheelVehiclePhysics[7].m_pType = (*(*v4 + 40LL))(v4, 11);
+    CFourWheelVehiclePhysics::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CFourWheelVehiclePhysics[8].m_pType = (*(*v4 + 40LL))(v4, 7);
+    CFourWheelVehiclePhysics::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CFourWheelVehiclePhysics[9].m_pType = (*(*v4 + 40LL))(v4, 13);
+    CFourWheelVehiclePhysics::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CFourWheelVehiclePhysics[10].m_pType = (*(*v4 + 40LL))(v4, 11);
+    CFourWheelVehiclePhysics::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CFourWheelVehiclePhysics[11].m_pType = (*(*v4 + 40LL))(v4, 11);
+    CFourWheelVehiclePhysics::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CFourWheelVehiclePhysics[12].m_pType = (*(*v4 + 40LL))(v4, 11);
+    CFourWheelVehiclePhysics::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CFourWheelVehiclePhysics[13].m_pType = (*(*v4 + 40LL))(v4, 11);
+    CFourWheelVehiclePhysics::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CFourWheelVehiclePhysics[14].m_pType = (*(*v4 + 40LL))(v4, 7);
+    v11 = *(*v4 + 104LL);
+    v12 = (*(*v4 + 56LL))(
+            v4,
+            "Vector",
+            2010,
+            CAtomicManipulator<Vector>::Get(void)::val,
+            CSchemaManipulator<Vector>::StaticAccessor(void)::m);
+    CFourWheelVehiclePhysics::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CFourWheelVehiclePhysics[15].m_pType = v11(v4, v12, 4);
+    v13 = *(*v4 + 104LL);
+    v14 = (*(*v4 + 56LL))(
+            v4,
+            "QAngle",
+            2005,
+            CAtomicManipulator<QAngle>::Get(void)::val,
+            CSchemaManipulator<QAngle>::StaticAccessor(void)::m);
+    CFourWheelVehiclePhysics::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CFourWheelVehiclePhysics[16].m_pType = v13(v4, v14, 4);
+    v15 = *(*v4 + 104LL);
+    v16 = (*(*v4 + 40LL))(v4, 11);
+    CFourWheelVehiclePhysics::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CFourWheelVehiclePhysics[17].m_pType = v15(v4, v16, 4);
+    v17 = *(*v4 + 104LL);
+    v18 = (*(*v4 + 40LL))(v4, 11);
+    CFourWheelVehiclePhysics::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CFourWheelVehiclePhysics[18].m_pType = v17(v4, v18, 4);
+    v19 = *(*v4 + 104LL);
+    v20 = (*(*v4 + 40LL))(v4, 7);
+    CFourWheelVehiclePhysics::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CFourWheelVehiclePhysics[19].m_pType = v19(v4, v20, 12);
+    CFourWheelVehiclePhysics::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CFourWheelVehiclePhysics[20].m_pType = (*(*v4 + 40LL))(v4, 11);
+    CFourWheelVehiclePhysics::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CFourWheelVehiclePhysics[21].m_pType = (*(*v4 + 40LL))(v4, 11);
+    CFourWheelVehiclePhysics::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CFourWheelVehiclePhysics[22].m_pType = (*(*v4 + 40LL))(v4, 11);
+    CFourWheelVehiclePhysics::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CFourWheelVehiclePhysics[23].m_pType = (*(*v4 + 40LL))(v4, 11);
+    CFourWheelVehiclePhysics::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CFourWheelVehiclePhysics[24].m_pType = (*(*v4 + 40LL))(v4, 11);
+    CFourWheelVehiclePhysics::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CFourWheelVehiclePhysics[25].m_pType = (*(*v4 + 40LL))(v4, 11);
+    CFourWheelVehiclePhysics::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CFourWheelVehiclePhysics[26].m_pType = (*(*v4 + 40LL))(v4, 11);
+    CFourWheelVehiclePhysics::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CFourWheelVehiclePhysics[27].m_pType = (*(*v4 + 40LL))(v4, 11);
+    CFourWheelVehiclePhysics::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CFourWheelVehiclePhysics[28].m_pType = (*(*v4 + 40LL))(v4, 13);
+    CFourWheelVehiclePhysics::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CFourWheelVehiclePhysics[29].m_pType = (*(*v4 + 40LL))(v4, 13);
+    CFourWheelVehiclePhysics::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CFourWheelVehiclePhysics[30].m_pType = (*(*v4 + 40LL))(v4, 13);
+    v21 = (*(*v4 + 40LL))(v4, 13);
+    CFourWheelVehiclePhysics::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CFourWheelVehiclePhysics.m_pOuterTypeScope = v4;
+    CFourWheelVehiclePhysics::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CFourWheelVehiclePhysics[31].m_pType = v21;
+    CFourWheelVehiclePhysics::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult = &CFourWheelVehiclePhysics::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CFourWheelVehiclePhysics;
+    (*(*v4 + 264LL))(
+      v4,
+      &CFourWheelVehiclePhysics::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CFourWheelVehiclePhysics);
+    return CFourWheelVehiclePhysics::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult;
+  }
+  return result;
+}
+
+
+// CFourWheelVehiclePhysics::Schema_VerifyBindingIsRegistered  (line 161, @0x0000000001fd5fc0, libserver.so)
+// callers: CFourWheelVehiclePhysics::Schema_DynamicBinding
+void __cdecl CFourWheelVehiclePhysics::Schema_VerifyBindingIsRegistered()
+{
+  ;
+}
+
+
+// LocalRegisterSchemaModule<ArbitraryTemplateParameter_server_fourwheelvehiclephysics_h>  (line 169, @0x0000000001fd5fd0, libserver.so)  // inlines: Call
+// globals: CFourWheelVehiclePhysics::s_pSchemaBindingForLocalModule
+void __fastcall LocalRegisterSchemaModule<ArbitraryTemplateParameter_server_fourwheelvehiclephysics_h>(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        SchemaRegistrationPhase_t nRegistrationPhase)
+{
+  if ( nRegistrationPhase == SchemaRegistrationPhase_t::SCHEMA_REGISTRATION_PHASE_CLASSES )
+    (*(CFourWheelVehiclePhysics::s_pSchemaBindingForLocalModule->_vptr_ISchemaBinding + 5))(
+      CFourWheelVehiclePhysics::s_pSchemaBindingForLocalModule,
+      pSchemaSystem,
+      pBinaryName,
+      "server");
+  ++g_nLinkerHack_SchemaAnchor_RegistrationCountFor_server;
+}
+
+
+// RegisterSchemaModule_fourwheelvehiclephysics_h  (line 171, @0x0000000001fd6010, libserver.so)  // inlines: Call, LocalRegisterSchemaModule<ArbitraryTemplateParameter_server_fourwheelvehiclephysics_h>
+// callers: CSchemaRegistration_server::RegisterAllBindings
+// globals: CFourWheelVehiclePhysics::s_pSchemaBindingForLocalModule
+void __fastcall RegisterSchemaModule_fourwheelvehiclephysics_h(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        SchemaRegistrationPhase_t nRegistrationPhase)
+{
+  if ( nRegistrationPhase == SchemaRegistrationPhase_t::SCHEMA_REGISTRATION_PHASE_CLASSES )
+    (*(CFourWheelVehiclePhysics::s_pSchemaBindingForLocalModule->_vptr_ISchemaBinding + 5))(
+      CFourWheelVehiclePhysics::s_pSchemaBindingForLocalModule,
+      pSchemaSystem,
+      pBinaryName,
+      "server");
+  ++g_nLinkerHack_SchemaAnchor_RegistrationCountFor_server;
+}
+
+

@@ -1,0 +1,24 @@
+
+// ==== functions (decompiled by Hex-Rays; names/signatures from DWARF) ====
+
+// LocalRegisterSchemaModule<ArbitraryTemplateParameter_server_string_t_h>  (line 35, @0x0000000002044ce0, libserver.so)
+void __fastcall LocalRegisterSchemaModule<ArbitraryTemplateParameter_server_string_t_h>(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        SchemaRegistrationPhase_t nRegistrationPhase)
+{
+  ++g_nLinkerHack_SchemaAnchor_RegistrationCountFor_server;
+}
+
+
+// RegisterSchemaModule_string_t_h  (line 36, @0x0000000002044cf0, libserver.so)  // inlines: LocalRegisterSchemaModule<ArbitraryTemplateParameter_server_string_t_h>
+// callers: CSchemaRegistration_server::RegisterAllBindings
+void __fastcall RegisterSchemaModule_string_t_h(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        SchemaRegistrationPhase_t nRegistrationPhase)
+{
+  ++g_nLinkerHack_SchemaAnchor_RegistrationCountFor_server;
+}
+
+

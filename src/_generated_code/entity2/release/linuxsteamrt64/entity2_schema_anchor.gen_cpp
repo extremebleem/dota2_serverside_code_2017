@@ -1,0 +1,64 @@
+// Reconstructed from DWARF by pahole; not original source.
+
+// src/_generated_code/entity2/release/linuxsteamrt64/entity2_schema_anchor.gen_cpp:20
+class CSchemaRegistration_entity2 : public CSchemaRegistration {
+public:
+
+	CSchemaRegistration_entity2(CSchemaRegistration_entity2 &);
+	CSchemaRegistration_entity2(const CSchemaRegistration_entity2 &);
+	CSchemaRegistration_entity2();
+	virtual void RegisterAllBindings(ISchemaSystem *, SchemaRegistrationPhase_t);
+
+	// vtable[0] RegisterAllBindings
+	// sizeof = 16
+};
+
+// ==== functions (decompiled by Hex-Rays; names/signatures from DWARF) ====
+
+// CSchemaRegistration_entity2::RegisterAllBindings  (line 20, @0x00000000030d4250, libserver.so)
+// calls: GetNameOfModule, RegisterSchemaModule_utlsymbollarge_h, RegisterSchemaModule_basehandle2_h, RegisterSchemaModule_ihandleentity_h, RegisterSchemaModule_schema_h, RegisterSchemaModule_networkvar_h, RegisterSchemaModule_variant_h, RegisterSchemaModule_entityclass_h, RegisterSchemaModule_entitycomponent_h, RegisterSchemaModule_entityidentity_h, RegisterSchemaModule_entityinstance_h, RegisterSchemaModule_ientity2_entityio_h (13 total)
+void __fastcall CSchemaRegistration_entity2::RegisterAllBindings(
+        CSchemaRegistration_entity2 *const this,
+        ISchemaSystem *pSchemaSystem,
+        SchemaRegistrationPhase_t nRegistrationPhase)
+{
+  const char *NameOfModule; // rax
+  const char *v6; // rax
+  const char *v7; // rax
+  const char *v8; // rax
+  const char *v9; // rax
+  const char *v10; // rax
+  const char *v11; // rax
+  const char *v12; // rax
+  const char *v13; // rax
+  const char *v14; // rax
+  const char *v15; // rax
+  const char *v16; // rax
+
+  NameOfModule = GetNameOfModule();
+  RegisterSchemaModule_utlsymbollarge_h(pSchemaSystem, NameOfModule, nRegistrationPhase);
+  v6 = GetNameOfModule();
+  RegisterSchemaModule_basehandle2_h(pSchemaSystem, v6, nRegistrationPhase);
+  v7 = GetNameOfModule();
+  RegisterSchemaModule_ihandleentity_h(pSchemaSystem, v7, nRegistrationPhase);
+  v8 = GetNameOfModule();
+  RegisterSchemaModule_schema_h(pSchemaSystem, v8, nRegistrationPhase);
+  v9 = GetNameOfModule();
+  RegisterSchemaModule_networkvar_h(pSchemaSystem, v9, nRegistrationPhase);
+  v10 = GetNameOfModule();
+  RegisterSchemaModule_variant_h(pSchemaSystem, v10, nRegistrationPhase);
+  v11 = GetNameOfModule();
+  RegisterSchemaModule_entityclass_h(pSchemaSystem, v11, nRegistrationPhase);
+  v12 = GetNameOfModule();
+  RegisterSchemaModule_entitycomponent_h(pSchemaSystem, v12, nRegistrationPhase);
+  v13 = GetNameOfModule();
+  RegisterSchemaModule_entityidentity_h(pSchemaSystem, v13, nRegistrationPhase);
+  v14 = GetNameOfModule();
+  RegisterSchemaModule_entityinstance_h(pSchemaSystem, v14, nRegistrationPhase);
+  v15 = GetNameOfModule();
+  RegisterSchemaModule_ientity2_entityio_h(pSchemaSystem, v15, nRegistrationPhase);
+  v16 = GetNameOfModule();
+  RegisterSchemaModule_entityscriptframework_h(pSchemaSystem, v16, nRegistrationPhase);
+}
+
+

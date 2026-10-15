@@ -1,0 +1,47 @@
+
+// ==== functions (decompiled by Hex-Rays; names/signatures from DWARF) ====
+
+// RegisterAtomicType_HSCRIPT  (line 37, @0x0000000002047920, libserver.so)  // inlines: SchemaMetaSet2_t
+// calls: __cxa_guard_acquire, __cxa_guard_release
+// callers: LocalRegisterSchemaModule<ArbitraryTemplateParameter_server_vscript_schemasupport_h>, RegisterSchemaModule_vscript_schemasupport_h
+// globals: `guard variable for'RegisterAtomicType_HSCRIPT(ISchemaSystem *)::s_AtomicTypeInfoHSCRIPT, RegisterAtomicType_HSCRIPT(ISchemaSystem *)::s_AtomicTypeInfoHSCRIPT
+void __fastcall RegisterAtomicType_HSCRIPT(ISchemaSystem *pSchemaSystem)
+{
+  if ( `guard variable for'RegisterAtomicType_HSCRIPT(ISchemaSystem *)::s_AtomicTypeInfoHSCRIPT == 0
+    && __cxa_guard_acquire(&`guard variable for'RegisterAtomicType_HSCRIPT(ISchemaSystem *)::s_AtomicTypeInfoHSCRIPT) != 0 )
+  {
+    RegisterAtomicType_HSCRIPT(ISchemaSystem *)::s_AtomicTypeInfoHSCRIPT.m_Metadata2.m_pMetaSet = 0;
+    RegisterAtomicType_HSCRIPT(ISchemaSystem *)::s_AtomicTypeInfoHSCRIPT.m_Metadata2.m_nMetaCount = 0;
+    __cxa_guard_release(&`guard variable for'RegisterAtomicType_HSCRIPT(ISchemaSystem *)::s_AtomicTypeInfoHSCRIPT);
+  }
+  (*(*pSchemaSystem + 248LL))(pSchemaSystem, &RegisterAtomicType_HSCRIPT(ISchemaSystem *)::s_AtomicTypeInfoHSCRIPT);
+}
+
+
+// LocalRegisterSchemaModule<ArbitraryTemplateParameter_server_vscript_schemasupport_h>  (line 46, @0x00000000020486f0, libserver.so)
+// calls: RegisterAtomicType_HSCRIPT
+void __fastcall LocalRegisterSchemaModule<ArbitraryTemplateParameter_server_vscript_schemasupport_h>(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        SchemaRegistrationPhase_t nRegistrationPhase)
+{
+  if ( nRegistrationPhase == SchemaRegistrationPhase_t::SCHEMA_REGISTRATION_PHASE_ATOMIC_TYPES_AND_ENUMS )
+    RegisterAtomicType_HSCRIPT(pSchemaSystem);
+  ++g_nLinkerHack_SchemaAnchor_RegistrationCountFor_server;
+}
+
+
+// RegisterSchemaModule_vscript_schemasupport_h  (line 48, @0x0000000002048720, libserver.so)  // inlines: LocalRegisterSchemaModule<ArbitraryTemplateParameter_server_vscript_schemasupport_h>
+// calls: RegisterAtomicType_HSCRIPT
+// callers: CSchemaRegistration_server::RegisterAllBindings
+void __fastcall RegisterSchemaModule_vscript_schemasupport_h(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        SchemaRegistrationPhase_t nRegistrationPhase)
+{
+  if ( nRegistrationPhase == SchemaRegistrationPhase_t::SCHEMA_REGISTRATION_PHASE_ATOMIC_TYPES_AND_ENUMS )
+    RegisterAtomicType_HSCRIPT(pSchemaSystem);
+  ++g_nLinkerHack_SchemaAnchor_RegistrationCountFor_server;
+}
+
+

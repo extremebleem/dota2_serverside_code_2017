@@ -1,0 +1,91 @@
+
+// ==== functions (decompiled by Hex-Rays; names/signatures from DWARF) ====
+
+// CHitboxComponent::Schema_CompileTimeVerificationFunction  (line 35, @0x000000000202b9f0, libserver.so)
+void __fastcall CHitboxComponent::Schema_CompileTimeVerificationFunction(CHitboxComponent *const this)
+{
+  ;
+}
+
+
+// CHitboxComponent::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE  (line 40, @0x000000000202ba00, libserver.so)  // inlines: Call, Get, SchemaBinding_SchemaTypeOfVarByAddr<EntComponentInfo_t>, SchemaBinding_SchemaTypeOfVarByAddr<int>, SetTypeScope
+// calls: CEntityComponent::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE
+// callers: CSchemaClassBinding<CHitboxComponent>::Register
+// strings: "EntComponentInfo_t"
+// globals: CHitboxComponent::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pIniti, CHitboxComponent::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSche
+CSchemaClassInfo *__fastcall CHitboxComponent::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        const char *pProjectName)
+{
+  CSchemaClassInfo *result; // rax
+  ISchemaSystemTypeScope *v7; // r14
+  CSchemaClassInfo *v8; // rax
+
+  result = CHitboxComponent::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult;
+  if ( CHitboxComponent::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult == 0 )
+  {
+    v7 = (*(*pSchemaSystem + 112LL))(pSchemaSystem, 1, pBinaryName);
+    CHitboxComponent::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_StaticMembers_CHitboxComponent[0].m_pType = (*(*v7 + 88LL))(v7, "EntComponentInfo_t");
+    CHitboxComponent::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_StaticMembers_CHitboxComponent[1].m_pType = (*(*v7 + 40LL))(v7, 7);
+    (*(CEntityComponent::s_pSchemaBindingForLocalModule->_vptr_ISchemaBinding + 5))(
+      CEntityComponent::s_pSchemaBindingForLocalModule,
+      pSchemaSystem,
+      pBinaryName,
+      pProjectName);
+    v8 = CEntityComponent::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+           pSchemaSystem,
+           pBinaryName,
+           pProjectName);
+    CHitboxComponent::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CHitboxComponent.m_pOuterTypeScope = v7;
+    CHitboxComponent::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassBases_CHitboxComponent[0].m_pClass = v8;
+    CHitboxComponent::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult = &CHitboxComponent::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CHitboxComponent;
+    return &CHitboxComponent::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CHitboxComponent;
+  }
+  return result;
+}
+
+
+// CHitboxComponent::Schema_VerifyBindingIsRegistered  (line 71, @0x000000000202bab0, libserver.so)
+// callers: CEntityComponentHelperT<CHitboxComponent, CEntityComponentHelperContained<CHitboxComponent> >::GetSchemaBinding
+void __cdecl CHitboxComponent::Schema_VerifyBindingIsRegistered()
+{
+  ;
+}
+
+
+// LocalRegisterSchemaModule<ArbitraryTemplateParameter_server_hitboxcomponent_h>  (line 79, @0x000000000202bac0, libserver.so)  // inlines: Call
+// globals: CHitboxComponent::s_pSchemaBindingForLocalModule
+void __fastcall LocalRegisterSchemaModule<ArbitraryTemplateParameter_server_hitboxcomponent_h>(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        SchemaRegistrationPhase_t nRegistrationPhase)
+{
+  if ( nRegistrationPhase == SchemaRegistrationPhase_t::SCHEMA_REGISTRATION_PHASE_CLASSES )
+    (*(CHitboxComponent::s_pSchemaBindingForLocalModule->_vptr_ISchemaBinding + 5))(
+      CHitboxComponent::s_pSchemaBindingForLocalModule,
+      pSchemaSystem,
+      pBinaryName,
+      "server");
+  ++g_nLinkerHack_SchemaAnchor_RegistrationCountFor_server;
+}
+
+
+// RegisterSchemaModule_hitboxcomponent_h  (line 81, @0x000000000202bb00, libserver.so)  // inlines: Call, LocalRegisterSchemaModule<ArbitraryTemplateParameter_server_hitboxcomponent_h>
+// callers: CSchemaRegistration_server::RegisterAllBindings
+// globals: CHitboxComponent::s_pSchemaBindingForLocalModule
+void __fastcall RegisterSchemaModule_hitboxcomponent_h(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        SchemaRegistrationPhase_t nRegistrationPhase)
+{
+  if ( nRegistrationPhase == SchemaRegistrationPhase_t::SCHEMA_REGISTRATION_PHASE_CLASSES )
+    (*(CHitboxComponent::s_pSchemaBindingForLocalModule->_vptr_ISchemaBinding + 5))(
+      CHitboxComponent::s_pSchemaBindingForLocalModule,
+      pSchemaSystem,
+      pBinaryName,
+      "server");
+  ++g_nLinkerHack_SchemaAnchor_RegistrationCountFor_server;
+}
+
+

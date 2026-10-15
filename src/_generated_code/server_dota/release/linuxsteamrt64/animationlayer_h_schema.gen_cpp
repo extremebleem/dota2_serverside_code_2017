@@ -1,0 +1,126 @@
+
+// ==== functions (decompiled by Hex-Rays; names/signatures from DWARF) ====
+
+// CAnimationLayer::Schema_CompileTimeVerificationFunction  (line 35, @0x0000000001fa96f0, libserver.so)
+void __fastcall CAnimationLayer::Schema_CompileTimeVerificationFunction(CAnimationLayer *const this)
+{
+  ;
+}
+
+
+// CAnimationLayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE  (line 53, @0x0000000001fa9700, libserver.so)  // inlines: Get, NetworkVarDecl_t, SchemaBinding_SchemaTypeOfMemberVarByAddr<CAnimationLayer, CAnimationLayer::NetworkVar_m_op>, SchemaBinding_SchemaTypeOfMemberVarByAddr<CAnimationLayer, CNetworkVarBase<CNetworkedQuantizedFloat, CAnimationLayer::NetworkVar_m_flPlaybackRate> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<CAnimationLayer, CNetworkVarBase<bool, CAnimationLayer::NetworkVar_m_bLooping> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<CAnimationLayer, CNetworkVarBase<int, CAnimationLayer::NetworkVar_m_nNewSequenceParity> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<CAnimationLayer, CNetworkVarBase<int, CAnimationLayer::NetworkVar_m_nOrder> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<CAnimationLayer, bool>, SchemaBinding_SchemaTypeOfMemberVarByAddr<CAnimationLayer, float>, SchemaBinding_SchemaTypeOfMemberVarByAddr<CAnimationLayer, int>, SetTypeScope
+// calls: __cxa_guard_acquire, __cxa_guard_release
+// callers: CSchemaClassBinding<CAnimationLayer>::Register
+// strings: "CNetworkedSequenceOperation", "CNetworkedQuantizedFloat", "m_op", "m_nNewSequenceParity", "m_bLooping", "m_nOrder"
+// globals: CAnimationLayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitia, `guard variable for'CAnimationLayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,cha, CSchemaManipulator<CNetworkedQuantizedFloat>::StaticAccessor(void)::m, CAtomicManipulator<CNetworkedQuantizedFloat>::Get(void)::val, CAnimationLayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchem
+CSchemaClassInfo *__fastcall CAnimationLayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        const char *pProjectName)
+{
+  CSchemaClassInfo *result; // rax
+  ISchemaSystemTypeScope *v4; // rbx
+  CSchemaType *v5; // rax
+
+  result = CAnimationLayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult;
+  if ( CAnimationLayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult == 0 )
+  {
+    v4 = (*(*pSchemaSystem + 112LL))(pSchemaSystem, 0, pBinaryName);
+    if ( `guard variable for'CAnimationLayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CAnimationLayer0_MNetworkVarNames_Value == 0
+      && __cxa_guard_acquire(&`guard variable for'CAnimationLayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CAnimationLayer0_MNetworkVarNames_Value) != 0 )
+    {
+      CAnimationLayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CAnimationLayer0_MNetworkVarNames_Value.m_pVarName = "m_op";
+      CAnimationLayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CAnimationLayer0_MNetworkVarNames_Value.m_pVarType = "CNetworkedSequenceOperation";
+      __cxa_guard_release(&`guard variable for'CAnimationLayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CAnimationLayer0_MNetworkVarNames_Value);
+    }
+    if ( `guard variable for'CAnimationLayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CAnimationLayer1_MNetworkVarNames_Value == 0
+      && __cxa_guard_acquire(&`guard variable for'CAnimationLayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CAnimationLayer1_MNetworkVarNames_Value) != 0 )
+    {
+      CAnimationLayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CAnimationLayer1_MNetworkVarNames_Value.m_pVarName = "m_nOrder";
+      CAnimationLayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CAnimationLayer1_MNetworkVarNames_Value.m_pVarType = "int";
+      __cxa_guard_release(&`guard variable for'CAnimationLayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CAnimationLayer1_MNetworkVarNames_Value);
+    }
+    if ( `guard variable for'CAnimationLayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CAnimationLayer2_MNetworkVarNames_Value == 0
+      && __cxa_guard_acquire(&`guard variable for'CAnimationLayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CAnimationLayer2_MNetworkVarNames_Value) != 0 )
+    {
+      CAnimationLayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CAnimationLayer2_MNetworkVarNames_Value.m_pVarName = "m_bLooping";
+      CAnimationLayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CAnimationLayer2_MNetworkVarNames_Value.m_pVarType = "bool";
+      __cxa_guard_release(&`guard variable for'CAnimationLayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CAnimationLayer2_MNetworkVarNames_Value);
+    }
+    if ( `guard variable for'CAnimationLayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CAnimationLayer3_MNetworkVarNames_Value == 0
+      && __cxa_guard_acquire(&`guard variable for'CAnimationLayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CAnimationLayer3_MNetworkVarNames_Value) != 0 )
+    {
+      CAnimationLayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CAnimationLayer3_MNetworkVarNames_Value.m_pVarName = "m_nNewSequenceParity";
+      CAnimationLayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CAnimationLayer3_MNetworkVarNames_Value.m_pVarType = "int";
+      __cxa_guard_release(&`guard variable for'CAnimationLayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CAnimationLayer3_MNetworkVarNames_Value);
+    }
+    CAnimationLayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CAnimationLayer[0].m_pType = (*(*v4 + 88LL))(v4, "CNetworkedSequenceOperation");
+    CAnimationLayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CAnimationLayer[1].m_pType = (*(*v4 + 40LL))(v4, 7);
+    CAnimationLayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CAnimationLayer[2].m_pType = (*(*v4 + 56LL))(v4, "CNetworkedQuantizedFloat", 4012, CAtomicManipulator<CNetworkedQuantizedFloat>::Get(void)::val, &CSchemaManipulator<CNetworkedQuantizedFloat>::StaticAccessor(void)::m);
+    CAnimationLayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CAnimationLayer[3].m_pType = (*(*v4 + 40LL))(v4, 13);
+    CAnimationLayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CAnimationLayer[4].m_pType = (*(*v4 + 40LL))(v4, 7);
+    CAnimationLayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CAnimationLayer[5].m_pType = (*(*v4 + 40LL))(v4, 7);
+    CAnimationLayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CAnimationLayer[6].m_pType = (*(*v4 + 40LL))(v4, 13);
+    CAnimationLayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CAnimationLayer[7].m_pType = (*(*v4 + 40LL))(v4, 11);
+    CAnimationLayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CAnimationLayer[8].m_pType = (*(*v4 + 40LL))(v4, 11);
+    CAnimationLayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CAnimationLayer[9].m_pType = (*(*v4 + 40LL))(v4, 11);
+    CAnimationLayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CAnimationLayer[10].m_pType = (*(*v4 + 40LL))(v4, 11);
+    CAnimationLayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CAnimationLayer[11].m_pType = (*(*v4 + 40LL))(v4, 7);
+    CAnimationLayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CAnimationLayer[12].m_pType = (*(*v4 + 40LL))(v4, 7);
+    CAnimationLayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CAnimationLayer[13].m_pType = (*(*v4 + 40LL))(v4, 11);
+    v5 = (*(*v4 + 40LL))(v4, 11);
+    CAnimationLayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CAnimationLayer.m_pOuterTypeScope = v4;
+    CAnimationLayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CAnimationLayer[14].m_pType = v5;
+    CAnimationLayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult = &CAnimationLayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CAnimationLayer;
+    (*(*v4 + 264LL))(
+      v4,
+      &CAnimationLayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CAnimationLayer);
+    return CAnimationLayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult;
+  }
+  return result;
+}
+
+
+// CAnimationLayer::Schema_VerifyBindingIsRegistered  (line 233, @0x0000000001fa9a10, libserver.so)
+// callers: CAnimationLayer::Schema_DynamicBinding
+void __cdecl CAnimationLayer::Schema_VerifyBindingIsRegistered()
+{
+  ;
+}
+
+
+// LocalRegisterSchemaModule<ArbitraryTemplateParameter_server_animationlayer_h>  (line 241, @0x0000000001fa9a20, libserver.so)  // inlines: Call
+// globals: CAnimationLayer::s_pSchemaBindingForLocalModule
+void __fastcall LocalRegisterSchemaModule<ArbitraryTemplateParameter_server_animationlayer_h>(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        SchemaRegistrationPhase_t nRegistrationPhase)
+{
+  if ( nRegistrationPhase == SchemaRegistrationPhase_t::SCHEMA_REGISTRATION_PHASE_CLASSES )
+    (*(CAnimationLayer::s_pSchemaBindingForLocalModule->_vptr_ISchemaBinding + 5))(
+      CAnimationLayer::s_pSchemaBindingForLocalModule,
+      pSchemaSystem,
+      pBinaryName,
+      "server");
+  ++g_nLinkerHack_SchemaAnchor_RegistrationCountFor_server;
+}
+
+
+// RegisterSchemaModule_animationlayer_h  (line 243, @0x0000000001fa9a60, libserver.so)  // inlines: Call, LocalRegisterSchemaModule<ArbitraryTemplateParameter_server_animationlayer_h>
+// callers: CSchemaRegistration_server::RegisterAllBindings
+// globals: CAnimationLayer::s_pSchemaBindingForLocalModule
+void __fastcall RegisterSchemaModule_animationlayer_h(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        SchemaRegistrationPhase_t nRegistrationPhase)
+{
+  if ( nRegistrationPhase == SchemaRegistrationPhase_t::SCHEMA_REGISTRATION_PHASE_CLASSES )
+    (*(CAnimationLayer::s_pSchemaBindingForLocalModule->_vptr_ISchemaBinding + 5))(
+      CAnimationLayer::s_pSchemaBindingForLocalModule,
+      pSchemaSystem,
+      pBinaryName,
+      "server");
+  ++g_nLinkerHack_SchemaAnchor_RegistrationCountFor_server;
+}
+
+

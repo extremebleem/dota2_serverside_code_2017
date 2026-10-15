@@ -1,0 +1,2578 @@
+// Reconstructed from DWARF by pahole; not original source.
+
+// src/_generated_code/server_dota/release/linuxsteamrt64/server_dota_schema_anchor.gen_cpp:20
+class CSchemaRegistration_server : public CSchemaRegistration {
+public:
+
+	CSchemaRegistration_server(CSchemaRegistration_server &);
+	CSchemaRegistration_server(const CSchemaRegistration_server &);
+	CSchemaRegistration_server();
+	virtual void RegisterAllBindings(ISchemaSystem *, SchemaRegistrationPhase_t);
+
+	// vtable[0] RegisterAllBindings
+	// sizeof = 16
+};
+
+// ==== functions (decompiled by Hex-Rays; names/signatures from DWARF) ====
+
+// CSchemaRegistration_server::RegisterAllBindings  (line 20, @0x0000000001e98910, libserver.so)
+// calls: GetNameOfModule, RegisterSchemaModule_activitylist_h, RegisterSchemaModule_eventlist_h, RegisterSchemaModule_gameentity_h, RegisterSchemaModule_gamesessionconfiguration_h, RegisterSchemaModule_hitboxcomponent_cpp, RegisterSchemaModule_props_shared_cpp, RegisterSchemaModule_props_shared_h, RegisterSchemaModule_env_cubemap_cpp, RegisterSchemaModule_env_lightprobevolume_cpp, RegisterSchemaModule_env_combined_light_probe_volume_cpp, RegisterSchemaModule_env_sky_h (851 total)
+void __fastcall CSchemaRegistration_server::RegisterAllBindings(
+        CSchemaRegistration_server *const this,
+        ISchemaSystem *pSchemaSystem,
+        SchemaRegistrationPhase_t nRegistrationPhase)
+{
+  const char *NameOfModule; // rax
+  const char *v6; // rax
+  const char *v7; // rax
+  const char *v8; // rax
+  const char *v9; // rax
+  const char *v10; // rax
+  const char *v11; // rax
+  const char *v12; // rax
+  const char *v13; // rax
+  const char *v14; // rax
+  const char *v15; // rax
+  const char *v16; // rax
+  const char *v17; // rax
+  const char *v18; // rax
+  const char *v19; // rax
+  const char *v20; // rax
+  const char *v21; // rax
+  const char *v22; // rax
+  const char *v23; // rax
+  const char *v24; // rax
+  const char *v25; // rax
+  const char *v26; // rax
+  const char *v27; // rax
+  const char *v28; // rax
+  const char *v29; // rax
+  const char *v30; // rax
+  const char *v31; // rax
+  const char *v32; // rax
+  const char *v33; // rax
+  const char *v34; // rax
+  const char *v35; // rax
+  const char *v36; // rax
+  const char *v37; // rax
+  const char *v38; // rax
+  const char *v39; // rax
+  const char *v40; // rax
+  const char *v41; // rax
+  const char *v42; // rax
+  const char *v43; // rax
+  const char *v44; // rax
+  const char *v45; // rax
+  const char *v46; // rax
+  const char *v47; // rax
+  const char *v48; // rax
+  const char *v49; // rax
+  const char *v50; // rax
+  const char *v51; // rax
+  const char *v52; // rax
+  const char *v53; // rax
+  const char *v54; // rax
+  const char *v55; // rax
+  const char *v56; // rax
+  const char *v57; // rax
+  const char *v58; // rax
+  const char *v59; // rax
+  const char *v60; // rax
+  const char *v61; // rax
+  const char *v62; // rax
+  const char *v63; // rax
+  const char *v64; // rax
+  const char *v65; // rax
+  const char *v66; // rax
+  const char *v67; // rax
+  const char *v68; // rax
+  const char *v69; // rax
+  const char *v70; // rax
+  const char *v71; // rax
+  const char *v72; // rax
+  const char *v73; // rax
+  const char *v74; // rax
+  const char *v75; // rax
+  const char *v76; // rax
+  const char *v77; // rax
+  const char *v78; // rax
+  const char *v79; // rax
+  const char *v80; // rax
+  const char *v81; // rax
+  const char *v82; // rax
+  const char *v83; // rax
+  const char *v84; // rax
+  const char *v85; // rax
+  const char *v86; // rax
+  const char *v87; // rax
+  const char *v88; // rax
+  const char *v89; // rax
+  const char *v90; // rax
+  const char *v91; // rax
+  const char *v92; // rax
+  const char *v93; // rax
+  const char *v94; // rax
+  const char *v95; // rax
+  const char *v96; // rax
+  const char *v97; // rax
+  const char *v98; // rax
+  const char *v99; // rax
+  const char *v100; // rax
+  const char *v101; // rax
+  const char *v102; // rax
+  const char *v103; // rax
+  const char *v104; // rax
+  const char *v105; // rax
+  const char *v106; // rax
+  const char *v107; // rax
+  const char *v108; // rax
+  const char *v109; // rax
+  const char *v110; // rax
+  const char *v111; // rax
+  const char *v112; // rax
+  const char *v113; // rax
+  const char *v114; // rax
+  const char *v115; // rax
+  const char *v116; // rax
+  const char *v117; // rax
+  const char *v118; // rax
+  const char *v119; // rax
+  const char *v120; // rax
+  const char *v121; // rax
+  const char *v122; // rax
+  const char *v123; // rax
+  const char *v124; // rax
+  const char *v125; // rax
+  const char *v126; // rax
+  const char *v127; // rax
+  const char *v128; // rax
+  const char *v129; // rax
+  const char *v130; // rax
+  const char *v131; // rax
+  const char *v132; // rax
+  const char *v133; // rax
+  const char *v134; // rax
+  const char *v135; // rax
+  const char *v136; // rax
+  const char *v137; // rax
+  const char *v138; // rax
+  const char *v139; // rax
+  const char *v140; // rax
+  const char *v141; // rax
+  const char *v142; // rax
+  const char *v143; // rax
+  const char *v144; // rax
+  const char *v145; // rax
+  const char *v146; // rax
+  const char *v147; // rax
+  const char *v148; // rax
+  const char *v149; // rax
+  const char *v150; // rax
+  const char *v151; // rax
+  const char *v152; // rax
+  const char *v153; // rax
+  const char *v154; // rax
+  const char *v155; // rax
+  const char *v156; // rax
+  const char *v157; // rax
+  const char *v158; // rax
+  const char *v159; // rax
+  const char *v160; // rax
+  const char *v161; // rax
+  const char *v162; // rax
+  const char *v163; // rax
+  const char *v164; // rax
+  const char *v165; // rax
+  const char *v166; // rax
+  const char *v167; // rax
+  const char *v168; // rax
+  const char *v169; // rax
+  const char *v170; // rax
+  const char *v171; // rax
+  const char *v172; // rax
+  const char *v173; // rax
+  const char *v174; // rax
+  const char *v175; // rax
+  const char *v176; // rax
+  const char *v177; // rax
+  const char *v178; // rax
+  const char *v179; // rax
+  const char *v180; // rax
+  const char *v181; // rax
+  const char *v182; // rax
+  const char *v183; // rax
+  const char *v184; // rax
+  const char *v185; // rax
+  const char *v186; // rax
+  const char *v187; // rax
+  const char *v188; // rax
+  const char *v189; // rax
+  const char *v190; // rax
+  const char *v191; // rax
+  const char *v192; // rax
+  const char *v193; // rax
+  const char *v194; // rax
+  const char *v195; // rax
+  const char *v196; // rax
+  const char *v197; // rax
+  const char *v198; // rax
+  const char *v199; // rax
+  const char *v200; // rax
+  const char *v201; // rax
+  const char *v202; // rax
+  const char *v203; // rax
+  const char *v204; // rax
+  const char *v205; // rax
+  const char *v206; // rax
+  const char *v207; // rax
+  const char *v208; // rax
+  const char *v209; // rax
+  const char *v210; // rax
+  const char *v211; // rax
+  const char *v212; // rax
+  const char *v213; // rax
+  const char *v214; // rax
+  const char *v215; // rax
+  const char *v216; // rax
+  const char *v217; // rax
+  const char *v218; // rax
+  const char *v219; // rax
+  const char *v220; // rax
+  const char *v221; // rax
+  const char *v222; // rax
+  const char *v223; // rax
+  const char *v224; // rax
+  const char *v225; // rax
+  const char *v226; // rax
+  const char *v227; // rax
+  const char *v228; // rax
+  const char *v229; // rax
+  const char *v230; // rax
+  const char *v231; // rax
+  const char *v232; // rax
+  const char *v233; // rax
+  const char *v234; // rax
+  const char *v235; // rax
+  const char *v236; // rax
+  const char *v237; // rax
+  const char *v238; // rax
+  const char *v239; // rax
+  const char *v240; // rax
+  const char *v241; // rax
+  const char *v242; // rax
+  const char *v243; // rax
+  const char *v244; // rax
+  const char *v245; // rax
+  const char *v246; // rax
+  const char *v247; // rax
+  const char *v248; // rax
+  const char *v249; // rax
+  const char *v250; // rax
+  const char *v251; // rax
+  const char *v252; // rax
+  const char *v253; // rax
+  const char *v254; // rax
+  const char *v255; // rax
+  const char *v256; // rax
+  const char *v257; // rax
+  const char *v258; // rax
+  const char *v259; // rax
+  const char *v260; // rax
+  const char *v261; // rax
+  const char *v262; // rax
+  const char *v263; // rax
+  const char *v264; // rax
+  const char *v265; // rax
+  const char *v266; // rax
+  const char *v267; // rax
+  const char *v268; // rax
+  const char *v269; // rax
+  const char *v270; // rax
+  const char *v271; // rax
+  const char *v272; // rax
+  const char *v273; // rax
+  const char *v274; // rax
+  const char *v275; // rax
+  const char *v276; // rax
+  const char *v277; // rax
+  const char *v278; // rax
+  const char *v279; // rax
+  const char *v280; // rax
+  const char *v281; // rax
+  const char *v282; // rax
+  const char *v283; // rax
+  const char *v284; // rax
+  const char *v285; // rax
+  const char *v286; // rax
+  const char *v287; // rax
+  const char *v288; // rax
+  const char *v289; // rax
+  const char *v290; // rax
+  const char *v291; // rax
+  const char *v292; // rax
+  const char *v293; // rax
+  const char *v294; // rax
+  const char *v295; // rax
+  const char *v296; // rax
+  const char *v297; // rax
+  const char *v298; // rax
+  const char *v299; // rax
+  const char *v300; // rax
+  const char *v301; // rax
+  const char *v302; // rax
+  const char *v303; // rax
+  const char *v304; // rax
+  const char *v305; // rax
+  const char *v306; // rax
+  const char *v307; // rax
+  const char *v308; // rax
+  const char *v309; // rax
+  const char *v310; // rax
+  const char *v311; // rax
+  const char *v312; // rax
+  const char *v313; // rax
+  const char *v314; // rax
+  const char *v315; // rax
+  const char *v316; // rax
+  const char *v317; // rax
+  const char *v318; // rax
+  const char *v319; // rax
+  const char *v320; // rax
+  const char *v321; // rax
+  const char *v322; // rax
+  const char *v323; // rax
+  const char *v324; // rax
+  const char *v325; // rax
+  const char *v326; // rax
+  const char *v327; // rax
+  const char *v328; // rax
+  const char *v329; // rax
+  const char *v330; // rax
+  const char *v331; // rax
+  const char *v332; // rax
+  const char *v333; // rax
+  const char *v334; // rax
+  const char *v335; // rax
+  const char *v336; // rax
+  const char *v337; // rax
+  const char *v338; // rax
+  const char *v339; // rax
+  const char *v340; // rax
+  const char *v341; // rax
+  const char *v342; // rax
+  const char *v343; // rax
+  const char *v344; // rax
+  const char *v345; // rax
+  const char *v346; // rax
+  const char *v347; // rax
+  const char *v348; // rax
+  const char *v349; // rax
+  const char *v350; // rax
+  const char *v351; // rax
+  const char *v352; // rax
+  const char *v353; // rax
+  const char *v354; // rax
+  const char *v355; // rax
+  const char *v356; // rax
+  const char *v357; // rax
+  const char *v358; // rax
+  const char *v359; // rax
+  const char *v360; // rax
+  const char *v361; // rax
+  const char *v362; // rax
+  const char *v363; // rax
+  const char *v364; // rax
+  const char *v365; // rax
+  const char *v366; // rax
+  const char *v367; // rax
+  const char *v368; // rax
+  const char *v369; // rax
+  const char *v370; // rax
+  const char *v371; // rax
+  const char *v372; // rax
+  const char *v373; // rax
+  const char *v374; // rax
+  const char *v375; // rax
+  const char *v376; // rax
+  const char *v377; // rax
+  const char *v378; // rax
+  const char *v379; // rax
+  const char *v380; // rax
+  const char *v381; // rax
+  const char *v382; // rax
+  const char *v383; // rax
+  const char *v384; // rax
+  const char *v385; // rax
+  const char *v386; // rax
+  const char *v387; // rax
+  const char *v388; // rax
+  const char *v389; // rax
+  const char *v390; // rax
+  const char *v391; // rax
+  const char *v392; // rax
+  const char *v393; // rax
+  const char *v394; // rax
+  const char *v395; // rax
+  const char *v396; // rax
+  const char *v397; // rax
+  const char *v398; // rax
+  const char *v399; // rax
+  const char *v400; // rax
+  const char *v401; // rax
+  const char *v402; // rax
+  const char *v403; // rax
+  const char *v404; // rax
+  const char *v405; // rax
+  const char *v406; // rax
+  const char *v407; // rax
+  const char *v408; // rax
+  const char *v409; // rax
+  const char *v410; // rax
+  const char *v411; // rax
+  const char *v412; // rax
+  const char *v413; // rax
+  const char *v414; // rax
+  const char *v415; // rax
+  const char *v416; // rax
+  const char *v417; // rax
+  const char *v418; // rax
+  const char *v419; // rax
+  const char *v420; // rax
+  const char *v421; // rax
+  const char *v422; // rax
+  const char *v423; // rax
+  const char *v424; // rax
+  const char *v425; // rax
+  const char *v426; // rax
+  const char *v427; // rax
+  const char *v428; // rax
+  const char *v429; // rax
+  const char *v430; // rax
+  const char *v431; // rax
+  const char *v432; // rax
+  const char *v433; // rax
+  const char *v434; // rax
+  const char *v435; // rax
+  const char *v436; // rax
+  const char *v437; // rax
+  const char *v438; // rax
+  const char *v439; // rax
+  const char *v440; // rax
+  const char *v441; // rax
+  const char *v442; // rax
+  const char *v443; // rax
+  const char *v444; // rax
+  const char *v445; // rax
+  const char *v446; // rax
+  const char *v447; // rax
+  const char *v448; // rax
+  const char *v449; // rax
+  const char *v450; // rax
+  const char *v451; // rax
+  const char *v452; // rax
+  const char *v453; // rax
+  const char *v454; // rax
+  const char *v455; // rax
+  const char *v456; // rax
+  const char *v457; // rax
+  const char *v458; // rax
+  const char *v459; // rax
+  const char *v460; // rax
+  const char *v461; // rax
+  const char *v462; // rax
+  const char *v463; // rax
+  const char *v464; // rax
+  const char *v465; // rax
+  const char *v466; // rax
+  const char *v467; // rax
+  const char *v468; // rax
+  const char *v469; // rax
+  const char *v470; // rax
+  const char *v471; // rax
+  const char *v472; // rax
+  const char *v473; // rax
+  const char *v474; // rax
+  const char *v475; // rax
+  const char *v476; // rax
+  const char *v477; // rax
+  const char *v478; // rax
+  const char *v479; // rax
+  const char *v480; // rax
+  const char *v481; // rax
+  const char *v482; // rax
+  const char *v483; // rax
+  const char *v484; // rax
+  const char *v485; // rax
+  const char *v486; // rax
+  const char *v487; // rax
+  const char *v488; // rax
+  const char *v489; // rax
+  const char *v490; // rax
+  const char *v491; // rax
+  const char *v492; // rax
+  const char *v493; // rax
+  const char *v494; // rax
+  const char *v495; // rax
+  const char *v496; // rax
+  const char *v497; // rax
+  const char *v498; // rax
+  const char *v499; // rax
+  const char *v500; // rax
+  const char *v501; // rax
+  const char *v502; // rax
+  const char *v503; // rax
+  const char *v504; // rax
+  const char *v505; // rax
+  const char *v506; // rax
+  const char *v507; // rax
+  const char *v508; // rax
+  const char *v509; // rax
+  const char *v510; // rax
+  const char *v511; // rax
+  const char *v512; // rax
+  const char *v513; // rax
+  const char *v514; // rax
+  const char *v515; // rax
+  const char *v516; // rax
+  const char *v517; // rax
+  const char *v518; // rax
+  const char *v519; // rax
+  const char *v520; // rax
+  const char *v521; // rax
+  const char *v522; // rax
+  const char *v523; // rax
+  const char *v524; // rax
+  const char *v525; // rax
+  const char *v526; // rax
+  const char *v527; // rax
+  const char *v528; // rax
+  const char *v529; // rax
+  const char *v530; // rax
+  const char *v531; // rax
+  const char *v532; // rax
+  const char *v533; // rax
+  const char *v534; // rax
+  const char *v535; // rax
+  const char *v536; // rax
+  const char *v537; // rax
+  const char *v538; // rax
+  const char *v539; // rax
+  const char *v540; // rax
+  const char *v541; // rax
+  const char *v542; // rax
+  const char *v543; // rax
+  const char *v544; // rax
+  const char *v545; // rax
+  const char *v546; // rax
+  const char *v547; // rax
+  const char *v548; // rax
+  const char *v549; // rax
+  const char *v550; // rax
+  const char *v551; // rax
+  const char *v552; // rax
+  const char *v553; // rax
+  const char *v554; // rax
+  const char *v555; // rax
+  const char *v556; // rax
+  const char *v557; // rax
+  const char *v558; // rax
+  const char *v559; // rax
+  const char *v560; // rax
+  const char *v561; // rax
+  const char *v562; // rax
+  const char *v563; // rax
+  const char *v564; // rax
+  const char *v565; // rax
+  const char *v566; // rax
+  const char *v567; // rax
+  const char *v568; // rax
+  const char *v569; // rax
+  const char *v570; // rax
+  const char *v571; // rax
+  const char *v572; // rax
+  const char *v573; // rax
+  const char *v574; // rax
+  const char *v575; // rax
+  const char *v576; // rax
+  const char *v577; // rax
+  const char *v578; // rax
+  const char *v579; // rax
+  const char *v580; // rax
+  const char *v581; // rax
+  const char *v582; // rax
+  const char *v583; // rax
+  const char *v584; // rax
+  const char *v585; // rax
+  const char *v586; // rax
+  const char *v587; // rax
+  const char *v588; // rax
+  const char *v589; // rax
+  const char *v590; // rax
+  const char *v591; // rax
+  const char *v592; // rax
+  const char *v593; // rax
+  const char *v594; // rax
+  const char *v595; // rax
+  const char *v596; // rax
+  const char *v597; // rax
+  const char *v598; // rax
+  const char *v599; // rax
+  const char *v600; // rax
+  const char *v601; // rax
+  const char *v602; // rax
+  const char *v603; // rax
+  const char *v604; // rax
+  const char *v605; // rax
+  const char *v606; // rax
+  const char *v607; // rax
+  const char *v608; // rax
+  const char *v609; // rax
+  const char *v610; // rax
+  const char *v611; // rax
+  const char *v612; // rax
+  const char *v613; // rax
+  const char *v614; // rax
+  const char *v615; // rax
+  const char *v616; // rax
+  const char *v617; // rax
+  const char *v618; // rax
+  const char *v619; // rax
+  const char *v620; // rax
+  const char *v621; // rax
+  const char *v622; // rax
+  const char *v623; // rax
+  const char *v624; // rax
+  const char *v625; // rax
+  const char *v626; // rax
+  const char *v627; // rax
+  const char *v628; // rax
+  const char *v629; // rax
+  const char *v630; // rax
+  const char *v631; // rax
+  const char *v632; // rax
+  const char *v633; // rax
+  const char *v634; // rax
+  const char *v635; // rax
+  const char *v636; // rax
+  const char *v637; // rax
+  const char *v638; // rax
+  const char *v639; // rax
+  const char *v640; // rax
+  const char *v641; // rax
+  const char *v642; // rax
+  const char *v643; // rax
+  const char *v644; // rax
+  const char *v645; // rax
+  const char *v646; // rax
+  const char *v647; // rax
+  const char *v648; // rax
+  const char *v649; // rax
+  const char *v650; // rax
+  const char *v651; // rax
+  const char *v652; // rax
+  const char *v653; // rax
+  const char *v654; // rax
+  const char *v655; // rax
+  const char *v656; // rax
+  const char *v657; // rax
+  const char *v658; // rax
+  const char *v659; // rax
+  const char *v660; // rax
+  const char *v661; // rax
+  const char *v662; // rax
+  const char *v663; // rax
+  const char *v664; // rax
+  const char *v665; // rax
+  const char *v666; // rax
+  const char *v667; // rax
+  const char *v668; // rax
+  const char *v669; // rax
+  const char *v670; // rax
+  const char *v671; // rax
+  const char *v672; // rax
+  const char *v673; // rax
+  const char *v674; // rax
+  const char *v675; // rax
+  const char *v676; // rax
+  const char *v677; // rax
+  const char *v678; // rax
+  const char *v679; // rax
+  const char *v680; // rax
+  const char *v681; // rax
+  const char *v682; // rax
+  const char *v683; // rax
+  const char *v684; // rax
+  const char *v685; // rax
+  const char *v686; // rax
+  const char *v687; // rax
+  const char *v688; // rax
+  const char *v689; // rax
+  const char *v690; // rax
+  const char *v691; // rax
+  const char *v692; // rax
+  const char *v693; // rax
+  const char *v694; // rax
+  const char *v695; // rax
+  const char *v696; // rax
+  const char *v697; // rax
+  const char *v698; // rax
+  const char *v699; // rax
+  const char *v700; // rax
+  const char *v701; // rax
+  const char *v702; // rax
+  const char *v703; // rax
+  const char *v704; // rax
+  const char *v705; // rax
+  const char *v706; // rax
+  const char *v707; // rax
+  const char *v708; // rax
+  const char *v709; // rax
+  const char *v710; // rax
+  const char *v711; // rax
+  const char *v712; // rax
+  const char *v713; // rax
+  const char *v714; // rax
+  const char *v715; // rax
+  const char *v716; // rax
+  const char *v717; // rax
+  const char *v718; // rax
+  const char *v719; // rax
+  const char *v720; // rax
+  const char *v721; // rax
+  const char *v722; // rax
+  const char *v723; // rax
+  const char *v724; // rax
+  const char *v725; // rax
+  const char *v726; // rax
+  const char *v727; // rax
+  const char *v728; // rax
+  const char *v729; // rax
+  const char *v730; // rax
+  const char *v731; // rax
+  const char *v732; // rax
+  const char *v733; // rax
+  const char *v734; // rax
+  const char *v735; // rax
+  const char *v736; // rax
+  const char *v737; // rax
+  const char *v738; // rax
+  const char *v739; // rax
+  const char *v740; // rax
+  const char *v741; // rax
+  const char *v742; // rax
+  const char *v743; // rax
+  const char *v744; // rax
+  const char *v745; // rax
+  const char *v746; // rax
+  const char *v747; // rax
+  const char *v748; // rax
+  const char *v749; // rax
+  const char *v750; // rax
+  const char *v751; // rax
+  const char *v752; // rax
+  const char *v753; // rax
+  const char *v754; // rax
+  const char *v755; // rax
+  const char *v756; // rax
+  const char *v757; // rax
+  const char *v758; // rax
+  const char *v759; // rax
+  const char *v760; // rax
+  const char *v761; // rax
+  const char *v762; // rax
+  const char *v763; // rax
+  const char *v764; // rax
+  const char *v765; // rax
+  const char *v766; // rax
+  const char *v767; // rax
+  const char *v768; // rax
+  const char *v769; // rax
+  const char *v770; // rax
+  const char *v771; // rax
+  const char *v772; // rax
+  const char *v773; // rax
+  const char *v774; // rax
+  const char *v775; // rax
+  const char *v776; // rax
+  const char *v777; // rax
+  const char *v778; // rax
+  const char *v779; // rax
+  const char *v780; // rax
+  const char *v781; // rax
+  const char *v782; // rax
+  const char *v783; // rax
+  const char *v784; // rax
+  const char *v785; // rax
+  const char *v786; // rax
+  const char *v787; // rax
+  const char *v788; // rax
+  const char *v789; // rax
+  const char *v790; // rax
+  const char *v791; // rax
+  const char *v792; // rax
+  const char *v793; // rax
+  const char *v794; // rax
+  const char *v795; // rax
+  const char *v796; // rax
+  const char *v797; // rax
+  const char *v798; // rax
+  const char *v799; // rax
+  const char *v800; // rax
+  const char *v801; // rax
+  const char *v802; // rax
+  const char *v803; // rax
+  const char *v804; // rax
+  const char *v805; // rax
+  const char *v806; // rax
+  const char *v807; // rax
+  const char *v808; // rax
+  const char *v809; // rax
+  const char *v810; // rax
+  const char *v811; // rax
+  const char *v812; // rax
+  const char *v813; // rax
+  const char *v814; // rax
+  const char *v815; // rax
+  const char *v816; // rax
+  const char *v817; // rax
+  const char *v818; // rax
+  const char *v819; // rax
+  const char *v820; // rax
+  const char *v821; // rax
+  const char *v822; // rax
+  const char *v823; // rax
+  const char *v824; // rax
+  const char *v825; // rax
+  const char *v826; // rax
+  const char *v827; // rax
+  const char *v828; // rax
+  const char *v829; // rax
+  const char *v830; // rax
+  const char *v831; // rax
+  const char *v832; // rax
+  const char *v833; // rax
+  const char *v834; // rax
+  const char *v835; // rax
+  const char *v836; // rax
+  const char *v837; // rax
+  const char *v838; // rax
+  const char *v839; // rax
+  const char *v840; // rax
+  const char *v841; // rax
+  const char *v842; // rax
+  const char *v843; // rax
+  const char *v844; // rax
+  const char *v845; // rax
+  const char *v846; // rax
+  const char *v847; // rax
+  const char *v848; // rax
+  const char *v849; // rax
+  const char *v850; // rax
+  const char *v851; // rax
+  const char *v852; // rax
+  const char *v853; // rax
+  const char *v854; // rax
+
+  NameOfModule = GetNameOfModule();
+  RegisterSchemaModule_activitylist_h(pSchemaSystem, NameOfModule, nRegistrationPhase);
+  v6 = GetNameOfModule();
+  RegisterSchemaModule_eventlist_h(pSchemaSystem, v6, nRegistrationPhase);
+  v7 = GetNameOfModule();
+  RegisterSchemaModule_gameentity_h(pSchemaSystem, v7, nRegistrationPhase);
+  v8 = GetNameOfModule();
+  RegisterSchemaModule_gamesessionconfiguration_h(pSchemaSystem, v8, nRegistrationPhase);
+  v9 = GetNameOfModule();
+  RegisterSchemaModule_hitboxcomponent_cpp(pSchemaSystem, v9, nRegistrationPhase);
+  v10 = GetNameOfModule();
+  RegisterSchemaModule_props_shared_cpp(pSchemaSystem, v10, nRegistrationPhase);
+  v11 = GetNameOfModule();
+  RegisterSchemaModule_props_shared_h(pSchemaSystem, v11, nRegistrationPhase);
+  v12 = GetNameOfModule();
+  RegisterSchemaModule_env_cubemap_cpp(pSchemaSystem, v12, nRegistrationPhase);
+  v13 = GetNameOfModule();
+  RegisterSchemaModule_env_lightprobevolume_cpp(pSchemaSystem, v13, nRegistrationPhase);
+  v14 = GetNameOfModule();
+  RegisterSchemaModule_env_combined_light_probe_volume_cpp(pSchemaSystem, v14, nRegistrationPhase);
+  v15 = GetNameOfModule();
+  RegisterSchemaModule_env_sky_h(pSchemaSystem, v15, nRegistrationPhase);
+  v16 = GetNameOfModule();
+  RegisterSchemaModule_env_time_of_day2_h(pSchemaSystem, v16, nRegistrationPhase);
+  v17 = GetNameOfModule();
+  RegisterSchemaModule_env_tonemap_controller_cpp(pSchemaSystem, v17, nRegistrationPhase);
+  v18 = GetNameOfModule();
+  RegisterSchemaModule_env_tonemap_controller_h(pSchemaSystem, v18, nRegistrationPhase);
+  v19 = GetNameOfModule();
+  RegisterSchemaModule_lightentity_cpp(pSchemaSystem, v19, nRegistrationPhase);
+  v20 = GetNameOfModule();
+  RegisterSchemaModule_fogcontroller_h(pSchemaSystem, v20, nRegistrationPhase);
+  v21 = GetNameOfModule();
+  RegisterSchemaModule_fogcontroller_cpp(pSchemaSystem, v21, nRegistrationPhase);
+  v22 = GetNameOfModule();
+  RegisterSchemaModule_info_target_cpp(pSchemaSystem, v22, nRegistrationPhase);
+  v23 = GetNameOfModule();
+  RegisterSchemaModule_baseentity_shared_h(pSchemaSystem, v23, nRegistrationPhase);
+  v24 = GetNameOfModule();
+  RegisterSchemaModule_point_camera_h(pSchemaSystem, v24, nRegistrationPhase);
+  v25 = GetNameOfModule();
+  RegisterSchemaModule_env_clock_cpp(pSchemaSystem, v25, nRegistrationPhase);
+  v26 = GetNameOfModule();
+  RegisterSchemaModule_info_worldlayer_h(pSchemaSystem, v26, nRegistrationPhase);
+  v27 = GetNameOfModule();
+  RegisterSchemaModule_devtest_hierarchy_cpp(pSchemaSystem, v27, nRegistrationPhase);
+  v28 = GetNameOfModule();
+  RegisterSchemaModule_vscript_schemasupport_h(pSchemaSystem, v28, nRegistrationPhase);
+  v29 = GetNameOfModule();
+  RegisterSchemaModule_ai_responsesystem_h(pSchemaSystem, v29, nRegistrationPhase);
+  v30 = GetNameOfModule();
+  RegisterSchemaModule_ai_speechconcept_h(pSchemaSystem, v30, nRegistrationPhase);
+  v31 = GetNameOfModule();
+  RegisterSchemaModule_response_types_h(pSchemaSystem, v31, nRegistrationPhase);
+  v32 = GetNameOfModule();
+  RegisterSchemaModule_util_shared_cpp(pSchemaSystem, v32, nRegistrationPhase);
+  v33 = GetNameOfModule();
+  RegisterSchemaModule_world_cpp(pSchemaSystem, v33, nRegistrationPhase);
+  v34 = GetNameOfModule();
+  RegisterSchemaModule_recipientfilter_h(pSchemaSystem, v34, nRegistrationPhase);
+  v35 = GetNameOfModule();
+  RegisterSchemaModule_ai_activity_h(pSchemaSystem, v35, nRegistrationPhase);
+  v36 = GetNameOfModule();
+  RegisterSchemaModule_animationlayer_h(pSchemaSystem, v36, nRegistrationPhase);
+  v37 = GetNameOfModule();
+  RegisterSchemaModule_baseanimating_h(pSchemaSystem, v37, nRegistrationPhase);
+  v38 = GetNameOfModule();
+  RegisterSchemaModule_baseanimatingcontroller_h(pSchemaSystem, v38, nRegistrationPhase);
+  v39 = GetNameOfModule();
+  RegisterSchemaModule_baseanimatingoverlay_h(pSchemaSystem, v39, nRegistrationPhase);
+  v40 = GetNameOfModule();
+  RegisterSchemaModule_baseanimatingoverlaycontroller_h(pSchemaSystem, v40, nRegistrationPhase);
+  v41 = GetNameOfModule();
+  RegisterSchemaModule_basemodelentity_h(pSchemaSystem, v41, nRegistrationPhase);
+  v42 = GetNameOfModule();
+  RegisterSchemaModule_baseprop_h(pSchemaSystem, v42, nRegistrationPhase);
+  v43 = GetNameOfModule();
+  RegisterSchemaModule_breakableprop_h(pSchemaSystem, v43, nRegistrationPhase);
+  v44 = GetNameOfModule();
+  RegisterSchemaModule_damagetypes_h(pSchemaSystem, v44, nRegistrationPhase);
+  v45 = GetNameOfModule();
+  RegisterSchemaModule_dynamicprop_h(pSchemaSystem, v45, nRegistrationPhase);
+  v46 = GetNameOfModule();
+  RegisterSchemaModule_gamescenenode_h(pSchemaSystem, v46, nRegistrationPhase);
+  v47 = GetNameOfModule();
+  RegisterSchemaModule_logicrelay_h(pSchemaSystem, v47, nRegistrationPhase);
+  v48 = GetNameOfModule();
+  RegisterSchemaModule_particle_system_h(pSchemaSystem, v48, nRegistrationPhase);
+  v49 = GetNameOfModule();
+  RegisterSchemaModule_skeletonanimationcontroller_h(pSchemaSystem, v49, nRegistrationPhase);
+  v50 = GetNameOfModule();
+  RegisterSchemaModule_skeletoninstance_h(pSchemaSystem, v50, nRegistrationPhase);
+  v51 = GetNameOfModule();
+  RegisterSchemaModule_util_shared_h(pSchemaSystem, v51, nRegistrationPhase);
+  v52 = GetNameOfModule();
+  RegisterSchemaModule_weapon_parse_base_h(pSchemaSystem, v52, nRegistrationPhase);
+  v53 = GetNameOfModule();
+  RegisterSchemaModule_weapon_parse_h(pSchemaSystem, v53, nRegistrationPhase);
+  v54 = GetNameOfModule();
+  RegisterSchemaModule_bodycomponent_h(pSchemaSystem, v54, nRegistrationPhase);
+  v55 = GetNameOfModule();
+  RegisterSchemaModule_hitboxcomponent_h(pSchemaSystem, v55, nRegistrationPhase);
+  v56 = GetNameOfModule();
+  RegisterSchemaModule_lightcomponent_h(pSchemaSystem, v56, nRegistrationPhase);
+  v57 = GetNameOfModule();
+  RegisterSchemaModule_networktransmitcomponent_h(pSchemaSystem, v57, nRegistrationPhase);
+  v58 = GetNameOfModule();
+  RegisterSchemaModule_particle_decl_h(pSchemaSystem, v58, nRegistrationPhase);
+  v59 = GetNameOfModule();
+  RegisterSchemaModule_physicscomponent_h(pSchemaSystem, v59, nRegistrationPhase);
+  v60 = GetNameOfModule();
+  RegisterSchemaModule_rendercomponent_h(pSchemaSystem, v60, nRegistrationPhase);
+  v61 = GetNameOfModule();
+  RegisterSchemaModule_basehandle2_h(pSchemaSystem, v61, nRegistrationPhase);
+  v62 = GetNameOfModule();
+  RegisterSchemaModule_game_networkquantizedtypes_h(pSchemaSystem, v62, nRegistrationPhase);
+  v63 = GetNameOfModule();
+  RegisterSchemaModule_decalgamesystem_h(pSchemaSystem, v63, nRegistrationPhase);
+  v64 = GetNameOfModule();
+  RegisterSchemaModule_itextlayout_h(pSchemaSystem, v64, nRegistrationPhase);
+  v65 = GetNameOfModule();
+  RegisterSchemaModule_basetypes_h(pSchemaSystem, v65, nRegistrationPhase);
+  v66 = GetNameOfModule();
+  RegisterSchemaModule_const_h(pSchemaSystem, v66, nRegistrationPhase);
+  v67 = GetNameOfModule();
+  RegisterSchemaModule_datamap_h(pSchemaSystem, v67, nRegistrationPhase);
+  v68 = GetNameOfModule();
+  RegisterSchemaModule_engineevents_h(pSchemaSystem, v68, nRegistrationPhase);
+  v69 = GetNameOfModule();
+  RegisterSchemaModule_igameeventsystem_h(pSchemaSystem, v69, nRegistrationPhase);
+  v70 = GetNameOfModule();
+  RegisterSchemaModule_itoolgamesimulationsystem_h(pSchemaSystem, v70, nRegistrationPhase);
+  v71 = GetNameOfModule();
+  RegisterSchemaModule_model_h(pSchemaSystem, v71, nRegistrationPhase);
+  v72 = GetNameOfModule();
+  RegisterSchemaModule_networkquantizedtypes_h(pSchemaSystem, v72, nRegistrationPhase);
+  v73 = GetNameOfModule();
+  RegisterSchemaModule_isoundemittersystembase_h(pSchemaSystem, v73, nRegistrationPhase);
+  v74 = GetNameOfModule();
+  RegisterSchemaModule_shake_h(pSchemaSystem, v74, nRegistrationPhase);
+  v75 = GetNameOfModule();
+  RegisterSchemaModule_vscript_nuggets_h(pSchemaSystem, v75, nRegistrationPhase);
+  v76 = GetNameOfModule();
+  RegisterSchemaModule_gametoolevents_h(pSchemaSystem, v76, nRegistrationPhase);
+  v77 = GetNameOfModule();
+  RegisterSchemaModule_inetworkproceduraldatahelper_h(pSchemaSystem, v77, nRegistrationPhase);
+  v78 = GetNameOfModule();
+  RegisterSchemaModule_info_spawngroupstream_h(pSchemaSystem, v78, nRegistrationPhase);
+  v79 = GetNameOfModule();
+  RegisterSchemaModule_ai_hull_h(pSchemaSystem, v79, nRegistrationPhase);
+  v80 = GetNameOfModule();
+  RegisterSchemaModule_ai_speech_h(pSchemaSystem, v80, nRegistrationPhase);
+  v81 = GetNameOfModule();
+  RegisterSchemaModule_ai_speechqueue_h(pSchemaSystem, v81, nRegistrationPhase);
+  v82 = GetNameOfModule();
+  RegisterSchemaModule_basecombatweapon_cpp(pSchemaSystem, v82, nRegistrationPhase);
+  v83 = GetNameOfModule();
+  RegisterSchemaModule_baseflex_cpp(pSchemaSystem, v83, nRegistrationPhase);
+  v84 = GetNameOfModule();
+  RegisterSchemaModule_flexcycler_cpp(pSchemaSystem, v84, nRegistrationPhase);
+  v85 = GetNameOfModule();
+  RegisterSchemaModule_beam_shared_cpp(pSchemaSystem, v85, nRegistrationPhase);
+  v86 = GetNameOfModule();
+  RegisterSchemaModule_bmodels_cpp(pSchemaSystem, v86, nRegistrationPhase);
+  v87 = GetNameOfModule();
+  RegisterSchemaModule_client_cpp(pSchemaSystem, v87, nRegistrationPhase);
+  v88 = GetNameOfModule();
+  RegisterSchemaModule_colorcorrectionvolume_cpp(pSchemaSystem, v88, nRegistrationPhase);
+  v89 = GetNameOfModule();
+  RegisterSchemaModule_commentarysystem_cpp(pSchemaSystem, v89, nRegistrationPhase);
+  v90 = GetNameOfModule();
+  RegisterSchemaModule_controlentities_cpp(pSchemaSystem, v90, nRegistrationPhase);
+  v91 = GetNameOfModule();
+  RegisterSchemaModule_doors_cpp(pSchemaSystem, v91, nRegistrationPhase);
+  v92 = GetNameOfModule();
+  RegisterSchemaModule_dynamiclight_cpp(pSchemaSystem, v92, nRegistrationPhase);
+  v93 = GetNameOfModule();
+  RegisterSchemaModule_effects_cpp(pSchemaSystem, v93, nRegistrationPhase);
+  v94 = GetNameOfModule();
+  RegisterSchemaModule_entityflame_cpp(pSchemaSystem, v94, nRegistrationPhase);
+  v95 = GetNameOfModule();
+  RegisterSchemaModule_env_debughistory_cpp(pSchemaSystem, v95, nRegistrationPhase);
+  v96 = GetNameOfModule();
+  RegisterSchemaModule_env_effectsscript_cpp(pSchemaSystem, v96, nRegistrationPhase);
+  v97 = GetNameOfModule();
+  RegisterSchemaModule_env_entity_maker_cpp(pSchemaSystem, v97, nRegistrationPhase);
+  v98 = GetNameOfModule();
+  RegisterSchemaModule_env_instructor_hint_cpp(pSchemaSystem, v98, nRegistrationPhase);
+  v99 = GetNameOfModule();
+  RegisterSchemaModule_env_instructor_hint_h(pSchemaSystem, v99, nRegistrationPhase);
+  v100 = GetNameOfModule();
+  RegisterSchemaModule_env_projectedtexture_cpp(pSchemaSystem, v100, nRegistrationPhase);
+  v101 = GetNameOfModule();
+  RegisterSchemaModule_env_screenoverlay_cpp(pSchemaSystem, v101, nRegistrationPhase);
+  v102 = GetNameOfModule();
+  RegisterSchemaModule_env_texturetoggle_cpp(pSchemaSystem, v102, nRegistrationPhase);
+  v103 = GetNameOfModule();
+  RegisterSchemaModule_env_zoom_cpp(pSchemaSystem, v103, nRegistrationPhase);
+  v104 = GetNameOfModule();
+  RegisterSchemaModule_envbeam_cpp(pSchemaSystem, v104, nRegistrationPhase);
+  v105 = GetNameOfModule();
+  RegisterSchemaModule_envfade_cpp(pSchemaSystem, v105, nRegistrationPhase);
+  v106 = GetNameOfModule();
+  RegisterSchemaModule_envhudhint_cpp(pSchemaSystem, v106, nRegistrationPhase);
+  v107 = GetNameOfModule();
+  RegisterSchemaModule_envmessage_cpp(pSchemaSystem, v107, nRegistrationPhase);
+  v108 = GetNameOfModule();
+  RegisterSchemaModule_envshake_cpp(pSchemaSystem, v108, nRegistrationPhase);
+  v109 = GetNameOfModule();
+  RegisterSchemaModule_envspark_cpp(pSchemaSystem, v109, nRegistrationPhase);
+  v110 = GetNameOfModule();
+  RegisterSchemaModule_explode_cpp(pSchemaSystem, v110, nRegistrationPhase);
+  v111 = GetNameOfModule();
+  RegisterSchemaModule_filters_cpp(pSchemaSystem, v111, nRegistrationPhase);
+  v112 = GetNameOfModule();
+  RegisterSchemaModule_fire_cpp(pSchemaSystem, v112, nRegistrationPhase);
+  v113 = GetNameOfModule();
+  RegisterSchemaModule_func_areaportal_cpp(pSchemaSystem, v113, nRegistrationPhase);
+  v114 = GetNameOfModule();
+  RegisterSchemaModule_func_break_cpp(pSchemaSystem, v114, nRegistrationPhase);
+  v115 = GetNameOfModule();
+  RegisterSchemaModule_func_dust_cpp(pSchemaSystem, v115, nRegistrationPhase);
+  v116 = GetNameOfModule();
+  RegisterSchemaModule_func_ladder_cpp(pSchemaSystem, v116, nRegistrationPhase);
+  v117 = GetNameOfModule();
+  RegisterSchemaModule_func_shatterglass_cpp(pSchemaSystem, v117, nRegistrationPhase);
+  v118 = GetNameOfModule();
+  RegisterSchemaModule_func_ladder_endpoint_cpp(pSchemaSystem, v118, nRegistrationPhase);
+  v119 = GetNameOfModule();
+  RegisterSchemaModule_func_lod_cpp(pSchemaSystem, v119, nRegistrationPhase);
+  v120 = GetNameOfModule();
+  RegisterSchemaModule_func_monitor_cpp(pSchemaSystem, v120, nRegistrationPhase);
+  v121 = GetNameOfModule();
+  RegisterSchemaModule_func_movelinear_cpp(pSchemaSystem, v121, nRegistrationPhase);
+  v122 = GetNameOfModule();
+  RegisterSchemaModule_func_timescale_cpp(pSchemaSystem, v122, nRegistrationPhase);
+  v123 = GetNameOfModule();
+  RegisterSchemaModule_game_ui_cpp(pSchemaSystem, v123, nRegistrationPhase);
+  v124 = GetNameOfModule();
+  RegisterSchemaModule_gamemovement_cpp(pSchemaSystem, v124, nRegistrationPhase);
+  v125 = GetNameOfModule();
+  RegisterSchemaModule_gamestats_cpp(pSchemaSystem, v125, nRegistrationPhase);
+  v126 = GetNameOfModule();
+  RegisterSchemaModule_gameweaponmanager_cpp(pSchemaSystem, v126, nRegistrationPhase);
+  v127 = GetNameOfModule();
+  RegisterSchemaModule_guntarget_cpp(pSchemaSystem, v127, nRegistrationPhase);
+  v128 = GetNameOfModule();
+  RegisterSchemaModule_info_overlay_accessor_cpp(pSchemaSystem, v128, nRegistrationPhase);
+  v129 = GetNameOfModule();
+  RegisterSchemaModule_intermission_cpp(pSchemaSystem, v129, nRegistrationPhase);
+  v130 = GetNameOfModule();
+  RegisterSchemaModule_item_world_cpp(pSchemaSystem, v130, nRegistrationPhase);
+  v131 = GetNameOfModule();
+  RegisterSchemaModule_lightglow_cpp(pSchemaSystem, v131, nRegistrationPhase);
+  v132 = GetNameOfModule();
+  RegisterSchemaModule_lights_cpp(pSchemaSystem, v132, nRegistrationPhase);
+  v133 = GetNameOfModule();
+  RegisterSchemaModule_logic_measure_movement_cpp(pSchemaSystem, v133, nRegistrationPhase);
+  v134 = GetNameOfModule();
+  RegisterSchemaModule_logic_navigation_cpp(pSchemaSystem, v134, nRegistrationPhase);
+  v135 = GetNameOfModule();
+  RegisterSchemaModule_logic_playerproxy_h(pSchemaSystem, v135, nRegistrationPhase);
+  v136 = GetNameOfModule();
+  RegisterSchemaModule_logicauto_cpp(pSchemaSystem, v136, nRegistrationPhase);
+  v137 = GetNameOfModule();
+  RegisterSchemaModule_logicentities_cpp(pSchemaSystem, v137, nRegistrationPhase);
+  v138 = GetNameOfModule();
+  RegisterSchemaModule_maprules_cpp(pSchemaSystem, v138, nRegistrationPhase);
+  v139 = GetNameOfModule();
+  RegisterSchemaModule_markup_volume_cpp(pSchemaSystem, v139, nRegistrationPhase);
+  v140 = GetNameOfModule();
+  RegisterSchemaModule_materialmodifycontrol_cpp(pSchemaSystem, v140, nRegistrationPhase);
+  v141 = GetNameOfModule();
+  RegisterSchemaModule_message_entity_cpp(pSchemaSystem, v141, nRegistrationPhase);
+  v142 = GetNameOfModule();
+  RegisterSchemaModule_modelentities_cpp(pSchemaSystem, v142, nRegistrationPhase);
+  v143 = GetNameOfModule();
+  RegisterSchemaModule_movement_cpp(pSchemaSystem, v143, nRegistrationPhase);
+  v144 = GetNameOfModule();
+  RegisterSchemaModule_pathcorner_cpp(pSchemaSystem, v144, nRegistrationPhase);
+  v145 = GetNameOfModule();
+  RegisterSchemaModule_pathcorner_h(pSchemaSystem, v145, nRegistrationPhase);
+  v146 = GetNameOfModule();
+  RegisterSchemaModule_phys_controller_cpp(pSchemaSystem, v146, nRegistrationPhase);
+  v147 = GetNameOfModule();
+  RegisterSchemaModule_physconstraint_cpp(pSchemaSystem, v147, nRegistrationPhase);
+  v148 = GetNameOfModule();
+  RegisterSchemaModule_physics_main_cpp(pSchemaSystem, v148, nRegistrationPhase);
+  v149 = GetNameOfModule();
+  RegisterSchemaModule_physics_npc_solver_cpp(pSchemaSystem, v149, nRegistrationPhase);
+  v150 = GetNameOfModule();
+  RegisterSchemaModule_physics_prop_ragdoll_cpp(pSchemaSystem, v150, nRegistrationPhase);
+  v151 = GetNameOfModule();
+  RegisterSchemaModule_physobj_cpp(pSchemaSystem, v151, nRegistrationPhase);
+  v152 = GetNameOfModule();
+  RegisterSchemaModule_player_cpp(pSchemaSystem, v152, nRegistrationPhase);
+  v153 = GetNameOfModule();
+  RegisterSchemaModule_point_bonusmaps_accessor_cpp(pSchemaSystem, v153, nRegistrationPhase);
+  v154 = GetNameOfModule();
+  RegisterSchemaModule_pointangularvelocitysensor_cpp(pSchemaSystem, v154, nRegistrationPhase);
+  v155 = GetNameOfModule();
+  RegisterSchemaModule_point_entity_finder_cpp(pSchemaSystem, v155, nRegistrationPhase);
+  v156 = GetNameOfModule();
+  RegisterSchemaModule_point_playermoveconstraint_cpp(pSchemaSystem, v156, nRegistrationPhase);
+  v157 = GetNameOfModule();
+  RegisterSchemaModule_point_spotlight_cpp(pSchemaSystem, v157, nRegistrationPhase);
+  v158 = GetNameOfModule();
+  RegisterSchemaModule_pointanglesensor_cpp(pSchemaSystem, v158, nRegistrationPhase);
+  v159 = GetNameOfModule();
+  RegisterSchemaModule_pointhurt_cpp(pSchemaSystem, v159, nRegistrationPhase);
+  v160 = GetNameOfModule();
+  RegisterSchemaModule_pointteleport_cpp(pSchemaSystem, v160, nRegistrationPhase);
+  v161 = GetNameOfModule();
+  RegisterSchemaModule_props_cpp(pSchemaSystem, v161, nRegistrationPhase);
+  v162 = GetNameOfModule();
+  RegisterSchemaModule_prop_door_h(pSchemaSystem, v162, nRegistrationPhase);
+  v163 = GetNameOfModule();
+  RegisterSchemaModule_point_hmd_anchor_h(pSchemaSystem, v163, nRegistrationPhase);
+  v164 = GetNameOfModule();
+  RegisterSchemaModule_prop_vr_tracked_object_h(pSchemaSystem, v164, nRegistrationPhase);
+  v165 = GetNameOfModule();
+  RegisterSchemaModule_prop_hmd_avatar_h(pSchemaSystem, v165, nRegistrationPhase);
+  v166 = GetNameOfModule();
+  RegisterSchemaModule_tracked_controller_manager_h(pSchemaSystem, v166, nRegistrationPhase);
+  v167 = GetNameOfModule();
+  RegisterSchemaModule_prop_vr_hand_h(pSchemaSystem, v167, nRegistrationPhase);
+  v168 = GetNameOfModule();
+  RegisterSchemaModule_entity_interactions_h(pSchemaSystem, v168, nRegistrationPhase);
+  v169 = GetNameOfModule();
+  RegisterSchemaModule_base_vr_hand_attachment_h(pSchemaSystem, v169, nRegistrationPhase);
+  v170 = GetNameOfModule();
+  RegisterSchemaModule_vr_hand_model_override_h(pSchemaSystem, v170, nRegistrationPhase);
+  v171 = GetNameOfModule();
+  RegisterSchemaModule_point_value_remapper_cpp(pSchemaSystem, v171, nRegistrationPhase);
+  v172 = GetNameOfModule();
+  RegisterSchemaModule_prop_zipline_cpp(pSchemaSystem, v172, nRegistrationPhase);
+  v173 = GetNameOfModule();
+  RegisterSchemaModule_ragdoll_manager_cpp(pSchemaSystem, v173, nRegistrationPhase);
+  v174 = GetNameOfModule();
+  RegisterSchemaModule_rope_cpp(pSchemaSystem, v174, nRegistrationPhase);
+  v175 = GetNameOfModule();
+  RegisterSchemaModule_rope_helpers_cpp(pSchemaSystem, v175, nRegistrationPhase);
+  v176 = GetNameOfModule();
+  RegisterSchemaModule_sceneentity_cpp(pSchemaSystem, v176, nRegistrationPhase);
+  v177 = GetNameOfModule();
+  RegisterSchemaModule_sceneentity_class_h(pSchemaSystem, v177, nRegistrationPhase);
+  v178 = GetNameOfModule();
+  RegisterSchemaModule_shadowcontrol_cpp(pSchemaSystem, v178, nRegistrationPhase);
+  v179 = GetNameOfModule();
+  RegisterSchemaModule_sound_opvar_set_cpp(pSchemaSystem, v179, nRegistrationPhase);
+  v180 = GetNameOfModule();
+  RegisterSchemaModule_soundent_cpp(pSchemaSystem, v180, nRegistrationPhase);
+  v181 = GetNameOfModule();
+  RegisterSchemaModule_soundenvelope_cpp(pSchemaSystem, v181, nRegistrationPhase);
+  v182 = GetNameOfModule();
+  RegisterSchemaModule_soundevent_cpp(pSchemaSystem, v182, nRegistrationPhase);
+  v183 = GetNameOfModule();
+  RegisterSchemaModule_soundscape_cpp(pSchemaSystem, v183, nRegistrationPhase);
+  v184 = GetNameOfModule();
+  RegisterSchemaModule_sprite_cpp(pSchemaSystem, v184, nRegistrationPhase);
+  v185 = GetNameOfModule();
+  RegisterSchemaModule_sprite_perfmonitor_cpp(pSchemaSystem, v185, nRegistrationPhase);
+  v186 = GetNameOfModule();
+  RegisterSchemaModule_point_worldtext_h(pSchemaSystem, v186, nRegistrationPhase);
+  v187 = GetNameOfModule();
+  RegisterSchemaModule_subs_cpp(pSchemaSystem, v187, nRegistrationPhase);
+  v188 = GetNameOfModule();
+  RegisterSchemaModule_sun_cpp(pSchemaSystem, v188, nRegistrationPhase);
+  v189 = GetNameOfModule();
+  RegisterSchemaModule_tanktrain_cpp(pSchemaSystem, v189, nRegistrationPhase);
+  v190 = GetNameOfModule();
+  RegisterSchemaModule_tempmonster_cpp(pSchemaSystem, v190, nRegistrationPhase);
+  v191 = GetNameOfModule();
+  RegisterSchemaModule_test_ehandle_cpp(pSchemaSystem, v191, nRegistrationPhase);
+  v192 = GetNameOfModule();
+  RegisterSchemaModule_testtraceline_cpp(pSchemaSystem, v192, nRegistrationPhase);
+  v193 = GetNameOfModule();
+  RegisterSchemaModule_trains_cpp(pSchemaSystem, v193, nRegistrationPhase);
+  v194 = GetNameOfModule();
+  RegisterSchemaModule_triggers_cpp(pSchemaSystem, v194, nRegistrationPhase);
+  v195 = GetNameOfModule();
+  RegisterSchemaModule_vguiscreen_cpp(pSchemaSystem, v195, nRegistrationPhase);
+  v196 = GetNameOfModule();
+  RegisterSchemaModule_nav_entities_cpp(pSchemaSystem, v196, nRegistrationPhase);
+  v197 = GetNameOfModule();
+  RegisterSchemaModule_ambientgeneric_h(pSchemaSystem, v197, nRegistrationPhase);
+  v198 = GetNameOfModule();
+  RegisterSchemaModule_basecombatcharacter_h(pSchemaSystem, v198, nRegistrationPhase);
+  v199 = GetNameOfModule();
+  RegisterSchemaModule_baseentity_h(pSchemaSystem, v199, nRegistrationPhase);
+  v200 = GetNameOfModule();
+  RegisterSchemaModule_baseflex_h(pSchemaSystem, v200, nRegistrationPhase);
+  v201 = GetNameOfModule();
+  RegisterSchemaModule_basemultiplayerplayer_h(pSchemaSystem, v201, nRegistrationPhase);
+  v202 = GetNameOfModule();
+  RegisterSchemaModule_basepropdoor_h(pSchemaSystem, v202, nRegistrationPhase);
+  v203 = GetNameOfModule();
+  RegisterSchemaModule_basetoggle_h(pSchemaSystem, v203, nRegistrationPhase);
+  v204 = GetNameOfModule();
+  RegisterSchemaModule_breakable_shared_h(pSchemaSystem, v204, nRegistrationPhase);
+  v205 = GetNameOfModule();
+  RegisterSchemaModule_buttons_h(pSchemaSystem, v205, nRegistrationPhase);
+  v206 = GetNameOfModule();
+  RegisterSchemaModule_colorcorrection_h(pSchemaSystem, v206, nRegistrationPhase);
+  v207 = GetNameOfModule();
+  RegisterSchemaModule_cragdollmagnet_h(pSchemaSystem, v207, nRegistrationPhase);
+  v208 = GetNameOfModule();
+  RegisterSchemaModule_doors_h(pSchemaSystem, v208, nRegistrationPhase);
+  v209 = GetNameOfModule();
+  RegisterSchemaModule_entityblocker_h(pSchemaSystem, v209, nRegistrationPhase);
+  v210 = GetNameOfModule();
+  RegisterSchemaModule_entitydissolve_h(pSchemaSystem, v210, nRegistrationPhase);
+  v211 = GetNameOfModule();
+  RegisterSchemaModule_entityflame_h(pSchemaSystem, v211, nRegistrationPhase);
+  v212 = GetNameOfModule();
+  RegisterSchemaModule_entityinput_h(pSchemaSystem, v212, nRegistrationPhase);
+  v213 = GetNameOfModule();
+  RegisterSchemaModule_env_dof_controller_h(pSchemaSystem, v213, nRegistrationPhase);
+  v214 = GetNameOfModule();
+  RegisterSchemaModule_env_player_surface_trigger_h(pSchemaSystem, v214, nRegistrationPhase);
+  v215 = GetNameOfModule();
+  RegisterSchemaModule_env_projectedtexture_h(pSchemaSystem, v215, nRegistrationPhase);
+  v216 = GetNameOfModule();
+  RegisterSchemaModule_envlaser_h(pSchemaSystem, v216, nRegistrationPhase);
+  v217 = GetNameOfModule();
+  RegisterSchemaModule_envmessage_h(pSchemaSystem, v217, nRegistrationPhase);
+  v218 = GetNameOfModule();
+  RegisterSchemaModule_envmicrophone_h(pSchemaSystem, v218, nRegistrationPhase);
+  v219 = GetNameOfModule();
+  RegisterSchemaModule_filters_h(pSchemaSystem, v219, nRegistrationPhase);
+  v220 = GetNameOfModule();
+  RegisterSchemaModule_fire_smoke_h(pSchemaSystem, v220, nRegistrationPhase);
+  v221 = GetNameOfModule();
+  RegisterSchemaModule_fish_h(pSchemaSystem, v221, nRegistrationPhase);
+  v222 = GetNameOfModule();
+  RegisterSchemaModule_flexcycler_h(pSchemaSystem, v222, nRegistrationPhase);
+  v223 = GetNameOfModule();
+  RegisterSchemaModule_fourwheelvehiclephysics_h(pSchemaSystem, v223, nRegistrationPhase);
+  v224 = GetNameOfModule();
+  RegisterSchemaModule_func_areaportalbase_h(pSchemaSystem, v224, nRegistrationPhase);
+  v225 = GetNameOfModule();
+  RegisterSchemaModule_func_areaportalwindow_h(pSchemaSystem, v225, nRegistrationPhase);
+  v226 = GetNameOfModule();
+  RegisterSchemaModule_func_break_h(pSchemaSystem, v226, nRegistrationPhase);
+  v227 = GetNameOfModule();
+  RegisterSchemaModule_func_movelinear_h(pSchemaSystem, v227, nRegistrationPhase);
+  v228 = GetNameOfModule();
+  RegisterSchemaModule_func_rotating_h(pSchemaSystem, v228, nRegistrationPhase);
+  v229 = GetNameOfModule();
+  RegisterSchemaModule_gib_h(pSchemaSystem, v229, nRegistrationPhase);
+  v230 = GetNameOfModule();
+  RegisterSchemaModule_info_data_cpp(pSchemaSystem, v230, nRegistrationPhase);
+  v231 = GetNameOfModule();
+  RegisterSchemaModule_info_data_h(pSchemaSystem, v231, nRegistrationPhase);
+  v232 = GetNameOfModule();
+  RegisterSchemaModule_iservervehicle_h(pSchemaSystem, v232, nRegistrationPhase);
+  v233 = GetNameOfModule();
+  RegisterSchemaModule_items_h(pSchemaSystem, v233, nRegistrationPhase);
+  v234 = GetNameOfModule();
+  RegisterSchemaModule_item_generic_h(pSchemaSystem, v234, nRegistrationPhase);
+  v235 = GetNameOfModule();
+  RegisterSchemaModule_lights_h(pSchemaSystem, v235, nRegistrationPhase);
+  v236 = GetNameOfModule();
+  RegisterSchemaModule_locksounds_h(pSchemaSystem, v236, nRegistrationPhase);
+  v237 = GetNameOfModule();
+  RegisterSchemaModule_logicentities_h(pSchemaSystem, v237, nRegistrationPhase);
+  v238 = GetNameOfModule();
+  RegisterSchemaModule_markup_volume_h(pSchemaSystem, v238, nRegistrationPhase);
+  v239 = GetNameOfModule();
+  RegisterSchemaModule_modelentities_h(pSchemaSystem, v239, nRegistrationPhase);
+  v240 = GetNameOfModule();
+  RegisterSchemaModule_func_occluder_h(pSchemaSystem, v240, nRegistrationPhase);
+  v241 = GetNameOfModule();
+  RegisterSchemaModule_func_distance_occluder_h(pSchemaSystem, v241, nRegistrationPhase);
+  v242 = GetNameOfModule();
+  RegisterSchemaModule_particle_light_h(pSchemaSystem, v242, nRegistrationPhase);
+  v243 = GetNameOfModule();
+  RegisterSchemaModule_pathtrack_h(pSchemaSystem, v243, nRegistrationPhase);
+  v244 = GetNameOfModule();
+  RegisterSchemaModule_physconstraint_sounds_h(pSchemaSystem, v244, nRegistrationPhase);
+  v245 = GetNameOfModule();
+  RegisterSchemaModule_physics_cannister_h(pSchemaSystem, v245, nRegistrationPhase);
+  v246 = GetNameOfModule();
+  RegisterSchemaModule_physics_prop_ragdoll_h(pSchemaSystem, v246, nRegistrationPhase);
+  v247 = GetNameOfModule();
+  RegisterSchemaModule_physobj_h(pSchemaSystem, v247, nRegistrationPhase);
+  v248 = GetNameOfModule();
+  RegisterSchemaModule_player_h(pSchemaSystem, v248, nRegistrationPhase);
+  v249 = GetNameOfModule();
+  RegisterSchemaModule_player_resource_h(pSchemaSystem, v249, nRegistrationPhase);
+  v250 = GetNameOfModule();
+  RegisterSchemaModule_playerlocaldata_h(pSchemaSystem, v250, nRegistrationPhase);
+  v251 = GetNameOfModule();
+  RegisterSchemaModule_point_prefab_h(pSchemaSystem, v251, nRegistrationPhase);
+  v252 = GetNameOfModule();
+  RegisterSchemaModule_point_template_h(pSchemaSystem, v252, nRegistrationPhase);
+  v253 = GetNameOfModule();
+  RegisterSchemaModule_postprocesscontroller_h(pSchemaSystem, v253, nRegistrationPhase);
+  v254 = GetNameOfModule();
+  RegisterSchemaModule_props_h(pSchemaSystem, v254, nRegistrationPhase);
+  v255 = GetNameOfModule();
+  RegisterSchemaModule_rope_h(pSchemaSystem, v255, nRegistrationPhase);
+  v256 = GetNameOfModule();
+  RegisterSchemaModule_skycamera_h(pSchemaSystem, v256, nRegistrationPhase);
+  v257 = GetNameOfModule();
+  RegisterSchemaModule_soundent_h(pSchemaSystem, v257, nRegistrationPhase);
+  v258 = GetNameOfModule();
+  RegisterSchemaModule_soundscape_h(pSchemaSystem, v258, nRegistrationPhase);
+  v259 = GetNameOfModule();
+  RegisterSchemaModule_spotlightend_h(pSchemaSystem, v259, nRegistrationPhase);
+  v260 = GetNameOfModule();
+  RegisterSchemaModule_team_h(pSchemaSystem, v260, nRegistrationPhase);
+  v261 = GetNameOfModule();
+  RegisterSchemaModule_trains_h(pSchemaSystem, v261, nRegistrationPhase);
+  v262 = GetNameOfModule();
+  RegisterSchemaModule_triggers_h(pSchemaSystem, v262, nRegistrationPhase);
+  v263 = GetNameOfModule();
+  RegisterSchemaModule_vehicle_base_h(pSchemaSystem, v263, nRegistrationPhase);
+  v264 = GetNameOfModule();
+  RegisterSchemaModule_vehicle_baseserver_h(pSchemaSystem, v264, nRegistrationPhase);
+  v265 = GetNameOfModule();
+  RegisterSchemaModule_vehicle_sounds_h(pSchemaSystem, v265, nRegistrationPhase);
+  v266 = GetNameOfModule();
+  RegisterSchemaModule_vguiscreen_h(pSchemaSystem, v266, nRegistrationPhase);
+  v267 = GetNameOfModule();
+  RegisterSchemaModule_waterbullet_h(pSchemaSystem, v267, nRegistrationPhase);
+  v268 = GetNameOfModule();
+  RegisterSchemaModule_plasma_h(pSchemaSystem, v268, nRegistrationPhase);
+  v269 = GetNameOfModule();
+  RegisterSchemaModule_nav_entities_h(pSchemaSystem, v269, nRegistrationPhase);
+  v270 = GetNameOfModule();
+  RegisterSchemaModule_nav_query_h(pSchemaSystem, v270, nRegistrationPhase);
+  v271 = GetNameOfModule();
+  RegisterSchemaModule_nav_volume_game_h(pSchemaSystem, v271, nRegistrationPhase);
+  v272 = GetNameOfModule();
+  RegisterSchemaModule_constraints_h(pSchemaSystem, v272, nRegistrationPhase);
+  v273 = GetNameOfModule();
+  RegisterSchemaModule_isoundopsystem_h(pSchemaSystem, v273, nRegistrationPhase);
+  v274 = GetNameOfModule();
+  RegisterSchemaModule_isoundopsystemedit_h(pSchemaSystem, v274, nRegistrationPhase);
+  v275 = GetNameOfModule();
+  RegisterSchemaModule_iplayerinfo_h(pSchemaSystem, v275, nRegistrationPhase);
+  v276 = GetNameOfModule();
+  RegisterSchemaModule_irecipientfilter_h(pSchemaSystem, v276, nRegistrationPhase);
+  v277 = GetNameOfModule();
+  RegisterSchemaModule_itonemapsystem_h(pSchemaSystem, v277, nRegistrationPhase);
+  v278 = GetNameOfModule();
+  RegisterSchemaModule_localflexcontroller_h(pSchemaSystem, v278, nRegistrationPhase);
+  v279 = GetNameOfModule();
+  RegisterSchemaModule_networksystemtypes_h(pSchemaSystem, v279, nRegistrationPhase);
+  v280 = GetNameOfModule();
+  RegisterSchemaModule_player_controller_h(pSchemaSystem, v280, nRegistrationPhase);
+  v281 = GetNameOfModule();
+  RegisterSchemaModule_playerstate_h(pSchemaSystem, v281, nRegistrationPhase);
+  v282 = GetNameOfModule();
+  RegisterSchemaModule_shattersurfacetypes_h(pSchemaSystem, v282, nRegistrationPhase);
+  v283 = GetNameOfModule();
+  RegisterSchemaModule_soundflags_h(pSchemaSystem, v283, nRegistrationPhase);
+  v284 = GetNameOfModule();
+  RegisterSchemaModule_string_t_h(pSchemaSystem, v284, nRegistrationPhase);
+  v285 = GetNameOfModule();
+  RegisterSchemaModule_vehicles_h(pSchemaSystem, v285, nRegistrationPhase);
+  v286 = GetNameOfModule();
+  RegisterSchemaModule_basecombatweapon_shared_h(pSchemaSystem, v286, nRegistrationPhase);
+  v287 = GetNameOfModule();
+  RegisterSchemaModule_baseviewmodel_shared_h(pSchemaSystem, v287, nRegistrationPhase);
+  v288 = GetNameOfModule();
+  RegisterSchemaModule_beam_shared_h(pSchemaSystem, v288, nRegistrationPhase);
+  v289 = GetNameOfModule();
+  RegisterSchemaModule_collisionproperty_h(pSchemaSystem, v289, nRegistrationPhase);
+  v290 = GetNameOfModule();
+  RegisterSchemaModule_damage_h(pSchemaSystem, v290, nRegistrationPhase);
+  v291 = GetNameOfModule();
+  RegisterSchemaModule_effect_dispatch_data_h(pSchemaSystem, v291, nRegistrationPhase);
+  v292 = GetNameOfModule();
+  RegisterSchemaModule_env_detail_controller_h(pSchemaSystem, v292, nRegistrationPhase);
+  v293 = GetNameOfModule();
+  RegisterSchemaModule_env_wind_shared_h(pSchemaSystem, v293, nRegistrationPhase);
+  v294 = GetNameOfModule();
+  RegisterSchemaModule_func_ladder_h(pSchemaSystem, v294, nRegistrationPhase);
+  v295 = GetNameOfModule();
+  RegisterSchemaModule_func_shatterglass_h(pSchemaSystem, v295, nRegistrationPhase);
+  v296 = GetNameOfModule();
+  RegisterSchemaModule_gamerules_h(pSchemaSystem, v296, nRegistrationPhase);
+  v297 = GetNameOfModule();
+  RegisterSchemaModule_glowproperty_h(pSchemaSystem, v297, nRegistrationPhase);
+  v298 = GetNameOfModule();
+  RegisterSchemaModule_health_h(pSchemaSystem, v298, nRegistrationPhase);
+  v299 = GetNameOfModule();
+  RegisterSchemaModule_hintmessage_h(pSchemaSystem, v299, nRegistrationPhase);
+  v300 = GetNameOfModule();
+  RegisterSchemaModule_hintsystem_h(pSchemaSystem, v300, nRegistrationPhase);
+  v301 = GetNameOfModule();
+  RegisterSchemaModule_ivehicle_h(pSchemaSystem, v301, nRegistrationPhase);
+  v302 = GetNameOfModule();
+  RegisterSchemaModule_multiplay_gamerules_h(pSchemaSystem, v302, nRegistrationPhase);
+  v303 = GetNameOfModule();
+  RegisterSchemaModule_playernet_vars_h(pSchemaSystem, v303, nRegistrationPhase);
+  v304 = GetNameOfModule();
+  RegisterSchemaModule_point_posecontroller_h(pSchemaSystem, v304, nRegistrationPhase);
+  v305 = GetNameOfModule();
+  RegisterSchemaModule_precipitation_shared_h(pSchemaSystem, v305, nRegistrationPhase);
+  v306 = GetNameOfModule();
+  RegisterSchemaModule_ragdoll_h(pSchemaSystem, v306, nRegistrationPhase);
+  v307 = GetNameOfModule();
+  RegisterSchemaModule_ragdoll_interface_h(pSchemaSystem, v307, nRegistrationPhase);
+  v308 = GetNameOfModule();
+  RegisterSchemaModule_ragdoll_shared_h(pSchemaSystem, v308, nRegistrationPhase);
+  v309 = GetNameOfModule();
+  RegisterSchemaModule_sceneentity_shared_h(pSchemaSystem, v309, nRegistrationPhase);
+  v310 = GetNameOfModule();
+  RegisterSchemaModule_sequence_transitioner_h(pSchemaSystem, v310, nRegistrationPhase);
+  v311 = GetNameOfModule();
+  RegisterSchemaModule_shareddefs_h(pSchemaSystem, v311, nRegistrationPhase);
+  v312 = GetNameOfModule();
+  RegisterSchemaModule_simtimer_h(pSchemaSystem, v312, nRegistrationPhase);
+  v313 = GetNameOfModule();
+  RegisterSchemaModule_singleplay_gamerules_h(pSchemaSystem, v313, nRegistrationPhase);
+  v314 = GetNameOfModule();
+  RegisterSchemaModule_sprite_h(pSchemaSystem, v314, nRegistrationPhase);
+  v315 = GetNameOfModule();
+  RegisterSchemaModule_takedamageinfo_h(pSchemaSystem, v315, nRegistrationPhase);
+  v316 = GetNameOfModule();
+  RegisterSchemaModule_teamplay_gamerules_h(pSchemaSystem, v316, nRegistrationPhase);
+  v317 = GetNameOfModule();
+  RegisterSchemaModule_vehicle_viewblend_shared_h(pSchemaSystem, v317, nRegistrationPhase);
+  v318 = GetNameOfModule();
+  RegisterSchemaModule_weapon_proficiency_h(pSchemaSystem, v318, nRegistrationPhase);
+  v319 = GetNameOfModule();
+  RegisterSchemaModule_base_clientui_ent_h(pSchemaSystem, v319, nRegistrationPhase);
+  v320 = GetNameOfModule();
+  RegisterSchemaModule_point_clientui_world_panel_h(pSchemaSystem, v320, nRegistrationPhase);
+  v321 = GetNameOfModule();
+  RegisterSchemaModule_point_clientui_world_text_panel_h(pSchemaSystem, v321, nRegistrationPhase);
+  v322 = GetNameOfModule();
+  RegisterSchemaModule_point_clientui_dialog_h(pSchemaSystem, v322, nRegistrationPhase);
+  v323 = GetNameOfModule();
+  RegisterSchemaModule_nextbot_h(pSchemaSystem, v323, nRegistrationPhase);
+  v324 = GetNameOfModule();
+  RegisterSchemaModule_nextbotbehavior_h(pSchemaSystem, v324, nRegistrationPhase);
+  v325 = GetNameOfModule();
+  RegisterSchemaModule_nextbotgroundlocomotion_h(pSchemaSystem, v325, nRegistrationPhase);
+  v326 = GetNameOfModule();
+  RegisterSchemaModule_simple_bot_cpp(pSchemaSystem, v326, nRegistrationPhase);
+  v327 = GetNameOfModule();
+  RegisterSchemaModule_simple_bot_h(pSchemaSystem, v327, nRegistrationPhase);
+  v328 = GetNameOfModule();
+  RegisterSchemaModule_nextbotbodyinterface_h(pSchemaSystem, v328, nRegistrationPhase);
+  v329 = GetNameOfModule();
+  RegisterSchemaModule_nextbotcomponentinterface_h(pSchemaSystem, v329, nRegistrationPhase);
+  v330 = GetNameOfModule();
+  RegisterSchemaModule_nextboteventresponderinterface_h(pSchemaSystem, v330, nRegistrationPhase);
+  v331 = GetNameOfModule();
+  RegisterSchemaModule_nextbotintentioninterface_h(pSchemaSystem, v331, nRegistrationPhase);
+  v332 = GetNameOfModule();
+  RegisterSchemaModule_nextbotlocomotioninterface_h(pSchemaSystem, v332, nRegistrationPhase);
+  v333 = GetNameOfModule();
+  RegisterSchemaModule_nextbotvisioninterface_h(pSchemaSystem, v333, nRegistrationPhase);
+  v334 = GetNameOfModule();
+  RegisterSchemaModule_nextbotcontextualqueryinterface_h(pSchemaSystem, v334, nRegistrationPhase);
+  v335 = GetNameOfModule();
+  RegisterSchemaModule_nextbotplayerbody_h(pSchemaSystem, v335, nRegistrationPhase);
+  v336 = GetNameOfModule();
+  RegisterSchemaModule_nextbotplayerlocomotion_h(pSchemaSystem, v336, nRegistrationPhase);
+  v337 = GetNameOfModule();
+  RegisterSchemaModule_nextbotplayer_h(pSchemaSystem, v337, nRegistrationPhase);
+  v338 = GetNameOfModule();
+  RegisterSchemaModule_econ_item_view_h(pSchemaSystem, v338, nRegistrationPhase);
+  v339 = GetNameOfModule();
+  RegisterSchemaModule_econ_item_interface_h(pSchemaSystem, v339, nRegistrationPhase);
+  v340 = GetNameOfModule();
+  RegisterSchemaModule_attribute_manager_h(pSchemaSystem, v340, nRegistrationPhase);
+  v341 = GetNameOfModule();
+  RegisterSchemaModule_ihasattributes_h(pSchemaSystem, v341, nRegistrationPhase);
+  v342 = GetNameOfModule();
+  RegisterSchemaModule_econ_entity_h(pSchemaSystem, v342, nRegistrationPhase);
+  v343 = GetNameOfModule();
+  RegisterSchemaModule_econ_wearable_cpp(pSchemaSystem, v343, nRegistrationPhase);
+  v344 = GetNameOfModule();
+  RegisterSchemaModule_econ_wearable_h(pSchemaSystem, v344, nRegistrationPhase);
+  v345 = GetNameOfModule();
+  RegisterSchemaModule_econ_item_constants_h(pSchemaSystem, v345, nRegistrationPhase);
+  v346 = GetNameOfModule();
+  RegisterSchemaModule_steamworks_gamestats_server_h(pSchemaSystem, v346, nRegistrationPhase);
+  v347 = GetNameOfModule();
+  RegisterSchemaModule_flex_expresser_h(pSchemaSystem, v347, nRegistrationPhase);
+  v348 = GetNameOfModule();
+  RegisterSchemaModule_fogvolume_h(pSchemaSystem, v348, nRegistrationPhase);
+  v349 = GetNameOfModule();
+  RegisterSchemaModule_dota_item_inventory_h(pSchemaSystem, v349, nRegistrationPhase);
+  v350 = GetNameOfModule();
+  RegisterSchemaModule_dota_item_wearable_cpp(pSchemaSystem, v350, nRegistrationPhase);
+  v351 = GetNameOfModule();
+  RegisterSchemaModule_dota_item_wearable_h(pSchemaSystem, v351, nRegistrationPhase);
+  v352 = GetNameOfModule();
+  RegisterSchemaModule_dota_item_constants_h(pSchemaSystem, v352, nRegistrationPhase);
+  v353 = GetNameOfModule();
+  RegisterSchemaModule_dota_hltvdirector_h(pSchemaSystem, v353, nRegistrationPhase);
+  v354 = GetNameOfModule();
+  RegisterSchemaModule_dota_playermove_cpp(pSchemaSystem, v354, nRegistrationPhase);
+  v355 = GetNameOfModule();
+  RegisterSchemaModule_dota_hero_recorder_cpp(pSchemaSystem, v355, nRegistrationPhase);
+  v356 = GetNameOfModule();
+  RegisterSchemaModule_dota_hero_recorder_h(pSchemaSystem, v356, nRegistrationPhase);
+  v357 = GetNameOfModule();
+  RegisterSchemaModule_dota_player_cpp(pSchemaSystem, v357, nRegistrationPhase);
+  v358 = GetNameOfModule();
+  RegisterSchemaModule_dota_player_h(pSchemaSystem, v358, nRegistrationPhase);
+  v359 = GetNameOfModule();
+  RegisterSchemaModule_dota_team_cpp(pSchemaSystem, v359, nRegistrationPhase);
+  v360 = GetNameOfModule();
+  RegisterSchemaModule_dota_team_h(pSchemaSystem, v360, nRegistrationPhase);
+  v361 = GetNameOfModule();
+  RegisterSchemaModule_dota_projectile_cpp(pSchemaSystem, v361, nRegistrationPhase);
+  v362 = GetNameOfModule();
+  RegisterSchemaModule_dota_base_ability_cpp(pSchemaSystem, v362, nRegistrationPhase);
+  v363 = GetNameOfModule();
+  RegisterSchemaModule_dota_base_ability_h(pSchemaSystem, v363, nRegistrationPhase);
+  v364 = GetNameOfModule();
+  RegisterSchemaModule_dota_base_ability_botscript_cpp(pSchemaSystem, v364, nRegistrationPhase);
+  v365 = GetNameOfModule();
+  RegisterSchemaModule_dota_base_ability_botscript_h(pSchemaSystem, v365, nRegistrationPhase);
+  v366 = GetNameOfModule();
+  RegisterSchemaModule_dota_item_cpp(pSchemaSystem, v366, nRegistrationPhase);
+  v367 = GetNameOfModule();
+  RegisterSchemaModule_dota_item_h(pSchemaSystem, v367, nRegistrationPhase);
+  v368 = GetNameOfModule();
+  RegisterSchemaModule_dota_script_thinker_cpp(pSchemaSystem, v368, nRegistrationPhase);
+  v369 = GetNameOfModule();
+  RegisterSchemaModule_dota_player_resource_cpp(pSchemaSystem, v369, nRegistrationPhase);
+  v370 = GetNameOfModule();
+  RegisterSchemaModule_dota_player_resource_h(pSchemaSystem, v370, nRegistrationPhase);
+  v371 = GetNameOfModule();
+  RegisterSchemaModule_dota_player_resource_shared_h(pSchemaSystem, v371, nRegistrationPhase);
+  v372 = GetNameOfModule();
+  RegisterSchemaModule_dota_player_resource_shared_cpp(pSchemaSystem, v372, nRegistrationPhase);
+  v373 = GetNameOfModule();
+  RegisterSchemaModule_dota_data_teams_cpp(pSchemaSystem, v373, nRegistrationPhase);
+  v374 = GetNameOfModule();
+  RegisterSchemaModule_dota_data_teams_h(pSchemaSystem, v374, nRegistrationPhase);
+  v375 = GetNameOfModule();
+  RegisterSchemaModule_dota_tree_cpp(pSchemaSystem, v375, nRegistrationPhase);
+  v376 = GetNameOfModule();
+  RegisterSchemaModule_dota_tree_h(pSchemaSystem, v376, nRegistrationPhase);
+  v377 = GetNameOfModule();
+  RegisterSchemaModule_dota_ingameevents_base_h(pSchemaSystem, v377, nRegistrationPhase);
+  v378 = GetNameOfModule();
+  RegisterSchemaModule_dota_ingameevents_h(pSchemaSystem, v378, nRegistrationPhase);
+  v379 = GetNameOfModule();
+  RegisterSchemaModule_dota_ingameevents_npc_h(pSchemaSystem, v379, nRegistrationPhase);
+  v380 = GetNameOfModule();
+  RegisterSchemaModule_dota_in_game_predictions_cpp(pSchemaSystem, v380, nRegistrationPhase);
+  v381 = GetNameOfModule();
+  RegisterSchemaModule_dota_obstructionmanager_h(pSchemaSystem, v381, nRegistrationPhase);
+  v382 = GetNameOfModule();
+  RegisterSchemaModule_dota_triggers_cpp(pSchemaSystem, v382, nRegistrationPhase);
+  v383 = GetNameOfModule();
+  RegisterSchemaModule_dota_tutorial_cpp(pSchemaSystem, v383, nRegistrationPhase);
+  v384 = GetNameOfModule();
+  RegisterSchemaModule_dota_tutorial_h(pSchemaSystem, v384, nRegistrationPhase);
+  v385 = GetNameOfModule();
+  RegisterSchemaModule_dota_quest_cpp(pSchemaSystem, v385, nRegistrationPhase);
+  v386 = GetNameOfModule();
+  RegisterSchemaModule_dota_quest_h(pSchemaSystem, v386, nRegistrationPhase);
+  v387 = GetNameOfModule();
+  RegisterSchemaModule_dota_tutorial_entities_cpp(pSchemaSystem, v387, nRegistrationPhase);
+  v388 = GetNameOfModule();
+  RegisterSchemaModule_dota_tutorial_entities_h(pSchemaSystem, v388, nRegistrationPhase);
+  v389 = GetNameOfModule();
+  RegisterSchemaModule_env_deferred_light_cpp(pSchemaSystem, v389, nRegistrationPhase);
+  v390 = GetNameOfModule();
+  RegisterSchemaModule_env_deferred_light_h(pSchemaSystem, v390, nRegistrationPhase);
+  v391 = GetNameOfModule();
+  RegisterSchemaModule_dota_emotes_cpp(pSchemaSystem, v391, nRegistrationPhase);
+  v392 = GetNameOfModule();
+  RegisterSchemaModule_dota_ogs_stats_h(pSchemaSystem, v392, nRegistrationPhase);
+  v393 = GetNameOfModule();
+  RegisterSchemaModule_dota_svcamera_h(pSchemaSystem, v393, nRegistrationPhase);
+  v394 = GetNameOfModule();
+  RegisterSchemaModule_dota_svcamera_cpp(pSchemaSystem, v394, nRegistrationPhase);
+  v395 = GetNameOfModule();
+  RegisterSchemaModule_dota_holdout_cpp(pSchemaSystem, v395, nRegistrationPhase);
+  v396 = GetNameOfModule();
+  RegisterSchemaModule_dota_holdout_h(pSchemaSystem, v396, nRegistrationPhase);
+  v397 = GetNameOfModule();
+  RegisterSchemaModule_dota_vote_cpp(pSchemaSystem, v397, nRegistrationPhase);
+  v398 = GetNameOfModule();
+  RegisterSchemaModule_dota_vote_h(pSchemaSystem, v398, nRegistrationPhase);
+  v399 = GetNameOfModule();
+  RegisterSchemaModule_dota_ai_activity_h(pSchemaSystem, v399, nRegistrationPhase);
+  v400 = GetNameOfModule();
+  RegisterSchemaModule_dota_simple_obstruction_h(pSchemaSystem, v400, nRegistrationPhase);
+  v401 = GetNameOfModule();
+  RegisterSchemaModule_dota_game_manager_cpp(pSchemaSystem, v401, nRegistrationPhase);
+  v402 = GetNameOfModule();
+  RegisterSchemaModule_dota_game_manager_h(pSchemaSystem, v402, nRegistrationPhase);
+  v403 = GetNameOfModule();
+  RegisterSchemaModule_dota_gamemovement_h(pSchemaSystem, v403, nRegistrationPhase);
+  v404 = GetNameOfModule();
+  RegisterSchemaModule_dota_gamerules_h(pSchemaSystem, v404, nRegistrationPhase);
+  v405 = GetNameOfModule();
+  RegisterSchemaModule_dota_base_game_mode_cpp(pSchemaSystem, v405, nRegistrationPhase);
+  v406 = GetNameOfModule();
+  RegisterSchemaModule_dota_base_game_mode_h(pSchemaSystem, v406, nRegistrationPhase);
+  v407 = GetNameOfModule();
+  RegisterSchemaModule_dota_shareddefs_h(pSchemaSystem, v407, nRegistrationPhase);
+  v408 = GetNameOfModule();
+  RegisterSchemaModule_dota_attack_records_h(pSchemaSystem, v408, nRegistrationPhase);
+  v409 = GetNameOfModule();
+  RegisterSchemaModule_dota_base_npc_shared_h(pSchemaSystem, v409, nRegistrationPhase);
+  v410 = GetNameOfModule();
+  RegisterSchemaModule_dota_base_ability_shared_h(pSchemaSystem, v410, nRegistrationPhase);
+  v411 = GetNameOfModule();
+  RegisterSchemaModule_dota_misc_abilities_cpp(pSchemaSystem, v411, nRegistrationPhase);
+  v412 = GetNameOfModule();
+  RegisterSchemaModule_dota_misc_abilities_h(pSchemaSystem, v412, nRegistrationPhase);
+  v413 = GetNameOfModule();
+  RegisterSchemaModule_dota_unit_inventory_h(pSchemaSystem, v413, nRegistrationPhase);
+  v414 = GetNameOfModule();
+  RegisterSchemaModule_dota_binary_object_system_h(pSchemaSystem, v414, nRegistrationPhase);
+  v415 = GetNameOfModule();
+  RegisterSchemaModule_dota_minimap_utils_cpp(pSchemaSystem, v415, nRegistrationPhase);
+  v416 = GetNameOfModule();
+  RegisterSchemaModule_dota_misc_modifiers_cpp(pSchemaSystem, v416, nRegistrationPhase);
+  v417 = GetNameOfModule();
+  RegisterSchemaModule_dota_modifier_manager_h(pSchemaSystem, v417, nRegistrationPhase);
+  v418 = GetNameOfModule();
+  RegisterSchemaModule_dota_modifier_buff_h(pSchemaSystem, v418, nRegistrationPhase);
+  v419 = GetNameOfModule();
+  RegisterSchemaModule_dota_misc_modifiers_h(pSchemaSystem, v419, nRegistrationPhase);
+  v420 = GetNameOfModule();
+  RegisterSchemaModule_dota_orb_h(pSchemaSystem, v420, nRegistrationPhase);
+  v421 = GetNameOfModule();
+  RegisterSchemaModule_dota_tree_shared_h(pSchemaSystem, v421, nRegistrationPhase);
+  v422 = GetNameOfModule();
+  RegisterSchemaModule_dota_neutral_abilities_cpp(pSchemaSystem, v422, nRegistrationPhase);
+  v423 = GetNameOfModule();
+  RegisterSchemaModule_dota_speech_h(pSchemaSystem, v423, nRegistrationPhase);
+  v424 = GetNameOfModule();
+  RegisterSchemaModule_dota_speechbubble_h(pSchemaSystem, v424, nRegistrationPhase);
+  v425 = GetNameOfModule();
+  RegisterSchemaModule_dota_fog_of_war_cpp(pSchemaSystem, v425, nRegistrationPhase);
+  v426 = GetNameOfModule();
+  RegisterSchemaModule_dota_fog_of_war_h(pSchemaSystem, v426, nRegistrationPhase);
+  v427 = GetNameOfModule();
+  RegisterSchemaModule_dota_base_ability_attributes_cpp(pSchemaSystem, v427, nRegistrationPhase);
+  v428 = GetNameOfModule();
+  RegisterSchemaModule_dota_special_bonuses_cpp(pSchemaSystem, v428, nRegistrationPhase);
+  v429 = GetNameOfModule();
+  RegisterSchemaModule_dota_spectator_graphs_h(pSchemaSystem, v429, nRegistrationPhase);
+  v430 = GetNameOfModule();
+  RegisterSchemaModule_dota_fow_temp_viewers_cpp(pSchemaSystem, v430, nRegistrationPhase);
+  v431 = GetNameOfModule();
+  RegisterSchemaModule_dota_props_cpp(pSchemaSystem, v431, nRegistrationPhase);
+  v432 = GetNameOfModule();
+  RegisterSchemaModule_dota_consumable_abilities_cpp(pSchemaSystem, v432, nRegistrationPhase);
+  v433 = GetNameOfModule();
+  RegisterSchemaModule_dota_ability_datadriven_h(pSchemaSystem, v433, nRegistrationPhase);
+  v434 = GetNameOfModule();
+  RegisterSchemaModule_dota_item_datadriven_h(pSchemaSystem, v434, nRegistrationPhase);
+  v435 = GetNameOfModule();
+  RegisterSchemaModule_dota_modifier_datadriven_h(pSchemaSystem, v435, nRegistrationPhase);
+  v436 = GetNameOfModule();
+  RegisterSchemaModule_dota_actionrunner_h(pSchemaSystem, v436, nRegistrationPhase);
+  v437 = GetNameOfModule();
+  RegisterSchemaModule_dota_npc_datadriven_cpp(pSchemaSystem, v437, nRegistrationPhase);
+  v438 = GetNameOfModule();
+  RegisterSchemaModule_dota_creature_abilities_cpp(pSchemaSystem, v438, nRegistrationPhase);
+  v439 = GetNameOfModule();
+  RegisterSchemaModule_dota_ability_lua_h(pSchemaSystem, v439, nRegistrationPhase);
+  v440 = GetNameOfModule();
+  RegisterSchemaModule_dota_modifier_lua_h(pSchemaSystem, v440, nRegistrationPhase);
+  v441 = GetNameOfModule();
+  RegisterSchemaModule_dota_item_lua_h(pSchemaSystem, v441, nRegistrationPhase);
+  v442 = GetNameOfModule();
+  RegisterSchemaModule_dota_combatlog_record_h(pSchemaSystem, v442, nRegistrationPhase);
+  v443 = GetNameOfModule();
+  RegisterSchemaModule_dota_combatlog_record_cpp(pSchemaSystem, v443, nRegistrationPhase);
+  v444 = GetNameOfModule();
+  RegisterSchemaModule_dota_bot_abilityusage_ancient_janggo_h(pSchemaSystem, v444, nRegistrationPhase);
+  v445 = GetNameOfModule();
+  RegisterSchemaModule_dota_bot_abilityusage_abyssal_blade_h(pSchemaSystem, v445, nRegistrationPhase);
+  v446 = GetNameOfModule();
+  RegisterSchemaModule_dota_bot_abilityusage_arcane_boots_h(pSchemaSystem, v446, nRegistrationPhase);
+  v447 = GetNameOfModule();
+  RegisterSchemaModule_dota_bot_abilityusage_armlet_h(pSchemaSystem, v447, nRegistrationPhase);
+  v448 = GetNameOfModule();
+  RegisterSchemaModule_dota_bot_abilityusage_black_king_bar_h(pSchemaSystem, v448, nRegistrationPhase);
+  v449 = GetNameOfModule();
+  RegisterSchemaModule_dota_bot_abilityusage_blade_mail_h(pSchemaSystem, v449, nRegistrationPhase);
+  v450 = GetNameOfModule();
+  RegisterSchemaModule_dota_bot_abilityusage_blink_dagger_h(pSchemaSystem, v450, nRegistrationPhase);
+  v451 = GetNameOfModule();
+  RegisterSchemaModule_dota_bot_abilityusage_bottle_h(pSchemaSystem, v451, nRegistrationPhase);
+  v452 = GetNameOfModule();
+  RegisterSchemaModule_dota_bot_abilityusage_buckler_h(pSchemaSystem, v452, nRegistrationPhase);
+  v453 = GetNameOfModule();
+  RegisterSchemaModule_dota_bot_abilityusage_butterfly_h(pSchemaSystem, v453, nRegistrationPhase);
+  v454 = GetNameOfModule();
+  RegisterSchemaModule_dota_bot_abilityusage_cheese_h(pSchemaSystem, v454, nRegistrationPhase);
+  v455 = GetNameOfModule();
+  RegisterSchemaModule_dota_bot_abilityusage_clarity_h(pSchemaSystem, v455, nRegistrationPhase);
+  v456 = GetNameOfModule();
+  RegisterSchemaModule_dota_bot_abilityusage_courier_h(pSchemaSystem, v456, nRegistrationPhase);
+  v457 = GetNameOfModule();
+  RegisterSchemaModule_dota_bot_abilityusage_crimson_guard_h(pSchemaSystem, v457, nRegistrationPhase);
+  v458 = GetNameOfModule();
+  RegisterSchemaModule_dota_bot_abilityusage_cyclone_h(pSchemaSystem, v458, nRegistrationPhase);
+  v459 = GetNameOfModule();
+  RegisterSchemaModule_dota_bot_abilityusage_dagon_h(pSchemaSystem, v459, nRegistrationPhase);
+  v460 = GetNameOfModule();
+  RegisterSchemaModule_dota_bot_abilityusage_dust_of_appearance_h(pSchemaSystem, v460, nRegistrationPhase);
+  v461 = GetNameOfModule();
+  RegisterSchemaModule_dota_bot_abilityusage_diffusal_blade_h(pSchemaSystem, v461, nRegistrationPhase);
+  v462 = GetNameOfModule();
+  RegisterSchemaModule_dota_bot_abilityusage_ethereal_blade_h(pSchemaSystem, v462, nRegistrationPhase);
+  v463 = GetNameOfModule();
+  RegisterSchemaModule_dota_bot_abilityusage_flask_h(pSchemaSystem, v463, nRegistrationPhase);
+  v464 = GetNameOfModule();
+  RegisterSchemaModule_dota_bot_abilityusage_force_staff_h(pSchemaSystem, v464, nRegistrationPhase);
+  v465 = GetNameOfModule();
+  RegisterSchemaModule_dota_bot_abilityusage_ghost_scepter_h(pSchemaSystem, v465, nRegistrationPhase);
+  v466 = GetNameOfModule();
+  RegisterSchemaModule_dota_bot_abilityusage_heavens_halberd_h(pSchemaSystem, v466, nRegistrationPhase);
+  v467 = GetNameOfModule();
+  RegisterSchemaModule_dota_bot_abilityusage_hand_of_midas_h(pSchemaSystem, v467, nRegistrationPhase);
+  v468 = GetNameOfModule();
+  RegisterSchemaModule_dota_bot_abilityusage_invisibility_edge_h(pSchemaSystem, v468, nRegistrationPhase);
+  v469 = GetNameOfModule();
+  RegisterSchemaModule_dota_bot_abilityusage_magic_stick_h(pSchemaSystem, v469, nRegistrationPhase);
+  v470 = GetNameOfModule();
+  RegisterSchemaModule_dota_bot_abilityusage_manta_h(pSchemaSystem, v470, nRegistrationPhase);
+  v471 = GetNameOfModule();
+  RegisterSchemaModule_dota_bot_abilityusage_mask_of_madness_h(pSchemaSystem, v471, nRegistrationPhase);
+  v472 = GetNameOfModule();
+  RegisterSchemaModule_dota_bot_abilityusage_medallion_h(pSchemaSystem, v472, nRegistrationPhase);
+  v473 = GetNameOfModule();
+  RegisterSchemaModule_dota_bot_abilityusage_mekansm_h(pSchemaSystem, v473, nRegistrationPhase);
+  v474 = GetNameOfModule();
+  RegisterSchemaModule_dota_bot_abilityusage_mjollnir_h(pSchemaSystem, v474, nRegistrationPhase);
+  v475 = GetNameOfModule();
+  RegisterSchemaModule_dota_bot_abilityusage_necronomicon_h(pSchemaSystem, v475, nRegistrationPhase);
+  v476 = GetNameOfModule();
+  RegisterSchemaModule_dota_bot_abilityusage_orchid_h(pSchemaSystem, v476, nRegistrationPhase);
+  v477 = GetNameOfModule();
+  RegisterSchemaModule_dota_bot_abilityusage_pipe_h(pSchemaSystem, v477, nRegistrationPhase);
+  v478 = GetNameOfModule();
+  RegisterSchemaModule_dota_bot_abilityusage_phase_boots_h(pSchemaSystem, v478, nRegistrationPhase);
+  v479 = GetNameOfModule();
+  RegisterSchemaModule_dota_bot_abilityusage_refresher_h(pSchemaSystem, v479, nRegistrationPhase);
+  v480 = GetNameOfModule();
+  RegisterSchemaModule_dota_bot_abilityusage_rod_of_atos_h(pSchemaSystem, v480, nRegistrationPhase);
+  v481 = GetNameOfModule();
+  RegisterSchemaModule_dota_bot_abilityusage_satanic_h(pSchemaSystem, v481, nRegistrationPhase);
+  v482 = GetNameOfModule();
+  RegisterSchemaModule_dota_bot_abilityusage_shivas_guard_h(pSchemaSystem, v482, nRegistrationPhase);
+  v483 = GetNameOfModule();
+  RegisterSchemaModule_dota_bot_abilityusage_smoke_of_deceit_h(pSchemaSystem, v483, nRegistrationPhase);
+  v484 = GetNameOfModule();
+  RegisterSchemaModule_dota_bot_abilityusage_soul_ring_h(pSchemaSystem, v484, nRegistrationPhase);
+  v485 = GetNameOfModule();
+  RegisterSchemaModule_dota_bot_abilityusage_tango_h(pSchemaSystem, v485, nRegistrationPhase);
+  v486 = GetNameOfModule();
+  RegisterSchemaModule_dota_bot_abilityusage_teleport_scroll_h(pSchemaSystem, v486, nRegistrationPhase);
+  v487 = GetNameOfModule();
+  RegisterSchemaModule_dota_bot_abilityusage_travel_boots_h(pSchemaSystem, v487, nRegistrationPhase);
+  v488 = GetNameOfModule();
+  RegisterSchemaModule_dota_bot_abilityusage_urn_h(pSchemaSystem, v488, nRegistrationPhase);
+  v489 = GetNameOfModule();
+  RegisterSchemaModule_dota_bot_abilityusage_veil_of_dischord_h(pSchemaSystem, v489, nRegistrationPhase);
+  v490 = GetNameOfModule();
+  RegisterSchemaModule_dota_bot_abilityusage_wards_h(pSchemaSystem, v490, nRegistrationPhase);
+  v491 = GetNameOfModule();
+  RegisterSchemaModule_dota_bot_hero_alchemist_h(pSchemaSystem, v491, nRegistrationPhase);
+  v492 = GetNameOfModule();
+  RegisterSchemaModule_dota_bot_hero_ancient_apparition_h(pSchemaSystem, v492, nRegistrationPhase);
+  v493 = GetNameOfModule();
+  RegisterSchemaModule_dota_bot_hero_antimage_h(pSchemaSystem, v493, nRegistrationPhase);
+  v494 = GetNameOfModule();
+  RegisterSchemaModule_dota_bot_hero_axe_h(pSchemaSystem, v494, nRegistrationPhase);
+  v495 = GetNameOfModule();
+  RegisterSchemaModule_dota_bot_hero_bane_h(pSchemaSystem, v495, nRegistrationPhase);
+  v496 = GetNameOfModule();
+  RegisterSchemaModule_dota_bot_hero_batrider_h(pSchemaSystem, v496, nRegistrationPhase);
+  v497 = GetNameOfModule();
+  RegisterSchemaModule_dota_bot_hero_beastmaster_h(pSchemaSystem, v497, nRegistrationPhase);
+  v498 = GetNameOfModule();
+  RegisterSchemaModule_dota_bot_hero_bloodseeker_h(pSchemaSystem, v498, nRegistrationPhase);
+  v499 = GetNameOfModule();
+  RegisterSchemaModule_dota_bot_hero_bounty_hunter_h(pSchemaSystem, v499, nRegistrationPhase);
+  v500 = GetNameOfModule();
+  RegisterSchemaModule_dota_bot_hero_brewmaster_h(pSchemaSystem, v500, nRegistrationPhase);
+  v501 = GetNameOfModule();
+  RegisterSchemaModule_dota_bot_hero_bristleback_h(pSchemaSystem, v501, nRegistrationPhase);
+  v502 = GetNameOfModule();
+  RegisterSchemaModule_dota_bot_hero_broodmother_h(pSchemaSystem, v502, nRegistrationPhase);
+  v503 = GetNameOfModule();
+  RegisterSchemaModule_dota_bot_hero_chaos_knight_h(pSchemaSystem, v503, nRegistrationPhase);
+  v504 = GetNameOfModule();
+  RegisterSchemaModule_dota_bot_hero_chen_h(pSchemaSystem, v504, nRegistrationPhase);
+  v505 = GetNameOfModule();
+  RegisterSchemaModule_dota_bot_hero_clinkz_h(pSchemaSystem, v505, nRegistrationPhase);
+  v506 = GetNameOfModule();
+  RegisterSchemaModule_dota_bot_hero_crystal_maiden_h(pSchemaSystem, v506, nRegistrationPhase);
+  v507 = GetNameOfModule();
+  RegisterSchemaModule_dota_bot_hero_dazzle_h(pSchemaSystem, v507, nRegistrationPhase);
+  v508 = GetNameOfModule();
+  RegisterSchemaModule_dota_bot_hero_death_prophet_h(pSchemaSystem, v508, nRegistrationPhase);
+  v509 = GetNameOfModule();
+  RegisterSchemaModule_dota_bot_hero_dragon_knight_h(pSchemaSystem, v509, nRegistrationPhase);
+  v510 = GetNameOfModule();
+  RegisterSchemaModule_dota_bot_hero_drow_h(pSchemaSystem, v510, nRegistrationPhase);
+  v511 = GetNameOfModule();
+  RegisterSchemaModule_dota_bot_hero_earthshaker_h(pSchemaSystem, v511, nRegistrationPhase);
+  v512 = GetNameOfModule();
+  RegisterSchemaModule_dota_bot_hero_juggernaut_h(pSchemaSystem, v512, nRegistrationPhase);
+  v513 = GetNameOfModule();
+  RegisterSchemaModule_dota_bot_hero_jakiro_h(pSchemaSystem, v513, nRegistrationPhase);
+  v514 = GetNameOfModule();
+  RegisterSchemaModule_dota_bot_hero_keeper_of_the_light_h(pSchemaSystem, v514, nRegistrationPhase);
+  v515 = GetNameOfModule();
+  RegisterSchemaModule_dota_bot_hero_kunkka_h(pSchemaSystem, v515, nRegistrationPhase);
+  v516 = GetNameOfModule();
+  RegisterSchemaModule_dota_bot_hero_lich_h(pSchemaSystem, v516, nRegistrationPhase);
+  v517 = GetNameOfModule();
+  RegisterSchemaModule_dota_bot_hero_lina_h(pSchemaSystem, v517, nRegistrationPhase);
+  v518 = GetNameOfModule();
+  RegisterSchemaModule_dota_bot_hero_lion_h(pSchemaSystem, v518, nRegistrationPhase);
+  v519 = GetNameOfModule();
+  RegisterSchemaModule_dota_bot_hero_luna_h(pSchemaSystem, v519, nRegistrationPhase);
+  v520 = GetNameOfModule();
+  RegisterSchemaModule_dota_bot_hero_omniknight_h(pSchemaSystem, v520, nRegistrationPhase);
+  v521 = GetNameOfModule();
+  RegisterSchemaModule_dota_bot_hero_oracle_h(pSchemaSystem, v521, nRegistrationPhase);
+  v522 = GetNameOfModule();
+  RegisterSchemaModule_dota_bot_hero_necrolyte_h(pSchemaSystem, v522, nRegistrationPhase);
+  v523 = GetNameOfModule();
+  RegisterSchemaModule_dota_bot_hero_nevermore_h(pSchemaSystem, v523, nRegistrationPhase);
+  v524 = GetNameOfModule();
+  RegisterSchemaModule_dota_bot_hero_phantom_assassin_h(pSchemaSystem, v524, nRegistrationPhase);
+  v525 = GetNameOfModule();
+  RegisterSchemaModule_dota_bot_hero_pudge_h(pSchemaSystem, v525, nRegistrationPhase);
+  v526 = GetNameOfModule();
+  RegisterSchemaModule_dota_bot_hero_razor_h(pSchemaSystem, v526, nRegistrationPhase);
+  v527 = GetNameOfModule();
+  RegisterSchemaModule_dota_bot_hero_riki_h(pSchemaSystem, v527, nRegistrationPhase);
+  v528 = GetNameOfModule();
+  RegisterSchemaModule_dota_bot_hero_sand_king_h(pSchemaSystem, v528, nRegistrationPhase);
+  v529 = GetNameOfModule();
+  RegisterSchemaModule_dota_bot_hero_skeleton_king_h(pSchemaSystem, v529, nRegistrationPhase);
+  v530 = GetNameOfModule();
+  RegisterSchemaModule_dota_bot_hero_skywrath_mage_h(pSchemaSystem, v530, nRegistrationPhase);
+  v531 = GetNameOfModule();
+  RegisterSchemaModule_dota_bot_hero_sniper_h(pSchemaSystem, v531, nRegistrationPhase);
+  v532 = GetNameOfModule();
+  RegisterSchemaModule_dota_bot_hero_sven_h(pSchemaSystem, v532, nRegistrationPhase);
+  v533 = GetNameOfModule();
+  RegisterSchemaModule_dota_bot_hero_tidehunter_h(pSchemaSystem, v533, nRegistrationPhase);
+  v534 = GetNameOfModule();
+  RegisterSchemaModule_dota_bot_hero_tiny_h(pSchemaSystem, v534, nRegistrationPhase);
+  v535 = GetNameOfModule();
+  RegisterSchemaModule_dota_bot_hero_vengeful_spirit_h(pSchemaSystem, v535, nRegistrationPhase);
+  v536 = GetNameOfModule();
+  RegisterSchemaModule_dota_bot_hero_viper_h(pSchemaSystem, v536, nRegistrationPhase);
+  v537 = GetNameOfModule();
+  RegisterSchemaModule_dota_bot_hero_warlock_h(pSchemaSystem, v537, nRegistrationPhase);
+  v538 = GetNameOfModule();
+  RegisterSchemaModule_dota_bot_hero_windrunner_h(pSchemaSystem, v538, nRegistrationPhase);
+  v539 = GetNameOfModule();
+  RegisterSchemaModule_dota_bot_hero_witch_doctor_h(pSchemaSystem, v539, nRegistrationPhase);
+  v540 = GetNameOfModule();
+  RegisterSchemaModule_dota_bot_hero_zuus_h(pSchemaSystem, v540, nRegistrationPhase);
+  v541 = GetNameOfModule();
+  RegisterSchemaModule_dota_bot_hero_unknown_h(pSchemaSystem, v541, nRegistrationPhase);
+  v542 = GetNameOfModule();
+  RegisterSchemaModule_dota_bot_h(pSchemaSystem, v542, nRegistrationPhase);
+  v543 = GetNameOfModule();
+  RegisterSchemaModule_dota_bot_script_h(pSchemaSystem, v543, nRegistrationPhase);
+  v544 = GetNameOfModule();
+  RegisterSchemaModule_dota_bot_team_commander_h(pSchemaSystem, v544, nRegistrationPhase);
+  v545 = GetNameOfModule();
+  RegisterSchemaModule_dota_bot_actions_h(pSchemaSystem, v545, nRegistrationPhase);
+  v546 = GetNameOfModule();
+  RegisterSchemaModule_dota_bot_mode_assemble_h(pSchemaSystem, v546, nRegistrationPhase);
+  v547 = GetNameOfModule();
+  RegisterSchemaModule_dota_bot_mode_assemble_with_humans_h(pSchemaSystem, v547, nRegistrationPhase);
+  v548 = GetNameOfModule();
+  RegisterSchemaModule_dota_bot_mode_attack_h(pSchemaSystem, v548, nRegistrationPhase);
+  v549 = GetNameOfModule();
+  RegisterSchemaModule_dota_bot_mode_companion_h(pSchemaSystem, v549, nRegistrationPhase);
+  v550 = GetNameOfModule();
+  RegisterSchemaModule_dota_bot_mode_defend_ally_h(pSchemaSystem, v550, nRegistrationPhase);
+  v551 = GetNameOfModule();
+  RegisterSchemaModule_dota_bot_mode_defend_tower_h(pSchemaSystem, v551, nRegistrationPhase);
+  v552 = GetNameOfModule();
+  RegisterSchemaModule_dota_bot_mode_evasive_maneuvers_h(pSchemaSystem, v552, nRegistrationPhase);
+  v553 = GetNameOfModule();
+  RegisterSchemaModule_dota_bot_mode_farm_h(pSchemaSystem, v553, nRegistrationPhase);
+  v554 = GetNameOfModule();
+  RegisterSchemaModule_dota_bot_mode_item_h(pSchemaSystem, v554, nRegistrationPhase);
+  v555 = GetNameOfModule();
+  RegisterSchemaModule_dota_bot_mode_laning_h(pSchemaSystem, v555, nRegistrationPhase);
+  v556 = GetNameOfModule();
+  RegisterSchemaModule_dota_bot_mode_push_tower_h(pSchemaSystem, v556, nRegistrationPhase);
+  v557 = GetNameOfModule();
+  RegisterSchemaModule_dota_bot_mode_retreat_h(pSchemaSystem, v557, nRegistrationPhase);
+  v558 = GetNameOfModule();
+  RegisterSchemaModule_dota_bot_mode_roam_h(pSchemaSystem, v558, nRegistrationPhase);
+  v559 = GetNameOfModule();
+  RegisterSchemaModule_dota_bot_mode_roshan_h(pSchemaSystem, v559, nRegistrationPhase);
+  v560 = GetNameOfModule();
+  RegisterSchemaModule_dota_bot_mode_rune_h(pSchemaSystem, v560, nRegistrationPhase);
+  v561 = GetNameOfModule();
+  RegisterSchemaModule_dota_bot_mode_secret_shop_h(pSchemaSystem, v561, nRegistrationPhase);
+  v562 = GetNameOfModule();
+  RegisterSchemaModule_dota_bot_mode_side_shop_h(pSchemaSystem, v562, nRegistrationPhase);
+  v563 = GetNameOfModule();
+  RegisterSchemaModule_dota_bot_mode_team_roam_h(pSchemaSystem, v563, nRegistrationPhase);
+  v564 = GetNameOfModule();
+  RegisterSchemaModule_dota_bot_mode_tutorialboss_h(pSchemaSystem, v564, nRegistrationPhase);
+  v565 = GetNameOfModule();
+  RegisterSchemaModule_dota_bot_mode_ward_h(pSchemaSystem, v565, nRegistrationPhase);
+  v566 = GetNameOfModule();
+  RegisterSchemaModule_dota_npc_base_cpp(pSchemaSystem, v566, nRegistrationPhase);
+  v567 = GetNameOfModule();
+  RegisterSchemaModule_dota_npc_base_h(pSchemaSystem, v567, nRegistrationPhase);
+  v568 = GetNameOfModule();
+  RegisterSchemaModule_dota_npc_creep_cpp(pSchemaSystem, v568, nRegistrationPhase);
+  v569 = GetNameOfModule();
+  RegisterSchemaModule_dota_npc_creep_h(pSchemaSystem, v569, nRegistrationPhase);
+  v570 = GetNameOfModule();
+  RegisterSchemaModule_dota_npc_building_h(pSchemaSystem, v570, nRegistrationPhase);
+  v571 = GetNameOfModule();
+  RegisterSchemaModule_dota_npc_building_cpp(pSchemaSystem, v571, nRegistrationPhase);
+  v572 = GetNameOfModule();
+  RegisterSchemaModule_dota_npc_hero_cpp(pSchemaSystem, v572, nRegistrationPhase);
+  v573 = GetNameOfModule();
+  RegisterSchemaModule_dota_npc_hero_h(pSchemaSystem, v573, nRegistrationPhase);
+  v574 = GetNameOfModule();
+  RegisterSchemaModule_dota_npc_shop_cpp(pSchemaSystem, v574, nRegistrationPhase);
+  v575 = GetNameOfModule();
+  RegisterSchemaModule_dota_npc_shop_h(pSchemaSystem, v575, nRegistrationPhase);
+  v576 = GetNameOfModule();
+  RegisterSchemaModule_dota_npc_halloffame_cpp(pSchemaSystem, v576, nRegistrationPhase);
+  v577 = GetNameOfModule();
+  RegisterSchemaModule_dota_npc_halloffame_h(pSchemaSystem, v577, nRegistrationPhase);
+  v578 = GetNameOfModule();
+  RegisterSchemaModule_dota_npc_spawner_cpp(pSchemaSystem, v578, nRegistrationPhase);
+  v579 = GetNameOfModule();
+  RegisterSchemaModule_dota_npc_spawner_h(pSchemaSystem, v579, nRegistrationPhase);
+  v580 = GetNameOfModule();
+  RegisterSchemaModule_dota_npc_creature_cpp(pSchemaSystem, v580, nRegistrationPhase);
+  v581 = GetNameOfModule();
+  RegisterSchemaModule_dota_npc_creature_h(pSchemaSystem, v581, nRegistrationPhase);
+  v582 = GetNameOfModule();
+  RegisterSchemaModule_dota_unit_hero_ancient_apparition_cpp(pSchemaSystem, v582, nRegistrationPhase);
+  v583 = GetNameOfModule();
+  RegisterSchemaModule_dota_unit_hero_antimage_cpp(pSchemaSystem, v583, nRegistrationPhase);
+  v584 = GetNameOfModule();
+  RegisterSchemaModule_dota_unit_hero_bane_cpp(pSchemaSystem, v584, nRegistrationPhase);
+  v585 = GetNameOfModule();
+  RegisterSchemaModule_dota_unit_hero_pudge_cpp(pSchemaSystem, v585, nRegistrationPhase);
+  v586 = GetNameOfModule();
+  RegisterSchemaModule_dota_unit_hero_juggernaut_cpp(pSchemaSystem, v586, nRegistrationPhase);
+  v587 = GetNameOfModule();
+  RegisterSchemaModule_dota_unit_hero_nevermore_cpp(pSchemaSystem, v587, nRegistrationPhase);
+  v588 = GetNameOfModule();
+  RegisterSchemaModule_dota_unit_hero_sand_king_cpp(pSchemaSystem, v588, nRegistrationPhase);
+  v589 = GetNameOfModule();
+  RegisterSchemaModule_dota_unit_hero_mirana_cpp(pSchemaSystem, v589, nRegistrationPhase);
+  v590 = GetNameOfModule();
+  RegisterSchemaModule_dota_unit_hero_sven_cpp(pSchemaSystem, v590, nRegistrationPhase);
+  v591 = GetNameOfModule();
+  RegisterSchemaModule_dota_unit_hero_skeleton_king_cpp(pSchemaSystem, v591, nRegistrationPhase);
+  v592 = GetNameOfModule();
+  RegisterSchemaModule_dota_unit_hero_storm_spirit_cpp(pSchemaSystem, v592, nRegistrationPhase);
+  v593 = GetNameOfModule();
+  RegisterSchemaModule_dota_unit_hero_drow_ranger_cpp(pSchemaSystem, v593, nRegistrationPhase);
+  v594 = GetNameOfModule();
+  RegisterSchemaModule_dota_unit_hero_earthshaker_cpp(pSchemaSystem, v594, nRegistrationPhase);
+  v595 = GetNameOfModule();
+  RegisterSchemaModule_dota_unit_hero_vengeful_spirit_cpp(pSchemaSystem, v595, nRegistrationPhase);
+  v596 = GetNameOfModule();
+  RegisterSchemaModule_dota_unit_hero_crystal_maiden_cpp(pSchemaSystem, v596, nRegistrationPhase);
+  v597 = GetNameOfModule();
+  RegisterSchemaModule_dota_unit_hero_axe_cpp(pSchemaSystem, v597, nRegistrationPhase);
+  v598 = GetNameOfModule();
+  RegisterSchemaModule_dota_unit_hero_bloodseeker_cpp(pSchemaSystem, v598, nRegistrationPhase);
+  v599 = GetNameOfModule();
+  RegisterSchemaModule_dota_unit_hero_phantom_lancer_cpp(pSchemaSystem, v599, nRegistrationPhase);
+  v600 = GetNameOfModule();
+  RegisterSchemaModule_dota_unit_hero_razor_cpp(pSchemaSystem, v600, nRegistrationPhase);
+  v601 = GetNameOfModule();
+  RegisterSchemaModule_dota_unit_hero_lina_cpp(pSchemaSystem, v601, nRegistrationPhase);
+  v602 = GetNameOfModule();
+  RegisterSchemaModule_dota_unit_hero_morphling_cpp(pSchemaSystem, v602, nRegistrationPhase);
+  v603 = GetNameOfModule();
+  RegisterSchemaModule_dota_unit_hero_zuus_cpp(pSchemaSystem, v603, nRegistrationPhase);
+  v604 = GetNameOfModule();
+  RegisterSchemaModule_dota_unit_hero_kunkka_cpp(pSchemaSystem, v604, nRegistrationPhase);
+  v605 = GetNameOfModule();
+  RegisterSchemaModule_dota_unit_hero_tiny_cpp(pSchemaSystem, v605, nRegistrationPhase);
+  v606 = GetNameOfModule();
+  RegisterSchemaModule_dota_unit_hero_puck_cpp(pSchemaSystem, v606, nRegistrationPhase);
+  v607 = GetNameOfModule();
+  RegisterSchemaModule_dota_unit_hero_windrunner_cpp(pSchemaSystem, v607, nRegistrationPhase);
+  v608 = GetNameOfModule();
+  RegisterSchemaModule_dota_unit_hero_lich_cpp(pSchemaSystem, v608, nRegistrationPhase);
+  v609 = GetNameOfModule();
+  RegisterSchemaModule_dota_unit_hero_tidehunter_cpp(pSchemaSystem, v609, nRegistrationPhase);
+  v610 = GetNameOfModule();
+  RegisterSchemaModule_dota_unit_hero_shadow_shaman_cpp(pSchemaSystem, v610, nRegistrationPhase);
+  v611 = GetNameOfModule();
+  RegisterSchemaModule_dota_unit_hero_riki_cpp(pSchemaSystem, v611, nRegistrationPhase);
+  v612 = GetNameOfModule();
+  RegisterSchemaModule_dota_unit_hero_enigma_cpp(pSchemaSystem, v612, nRegistrationPhase);
+  v613 = GetNameOfModule();
+  RegisterSchemaModule_dota_unit_hero_tinker_cpp(pSchemaSystem, v613, nRegistrationPhase);
+  v614 = GetNameOfModule();
+  RegisterSchemaModule_dota_unit_hero_witch_doctor_cpp(pSchemaSystem, v614, nRegistrationPhase);
+  v615 = GetNameOfModule();
+  RegisterSchemaModule_dota_unit_hero_sniper_cpp(pSchemaSystem, v615, nRegistrationPhase);
+  v616 = GetNameOfModule();
+  RegisterSchemaModule_dota_unit_hero_necrolyte_cpp(pSchemaSystem, v616, nRegistrationPhase);
+  v617 = GetNameOfModule();
+  RegisterSchemaModule_dota_unit_hero_slardar_cpp(pSchemaSystem, v617, nRegistrationPhase);
+  v618 = GetNameOfModule();
+  RegisterSchemaModule_dota_unit_hero_ursa_cpp(pSchemaSystem, v618, nRegistrationPhase);
+  v619 = GetNameOfModule();
+  RegisterSchemaModule_dota_unit_hero_lion_cpp(pSchemaSystem, v619, nRegistrationPhase);
+  v620 = GetNameOfModule();
+  RegisterSchemaModule_dota_unit_announcer_cpp(pSchemaSystem, v620, nRegistrationPhase);
+  v621 = GetNameOfModule();
+  RegisterSchemaModule_dota_unit_announcer_h(pSchemaSystem, v621, nRegistrationPhase);
+  v622 = GetNameOfModule();
+  RegisterSchemaModule_dota_unit_courier_cpp(pSchemaSystem, v622, nRegistrationPhase);
+  v623 = GetNameOfModule();
+  RegisterSchemaModule_dota_unit_courier_h(pSchemaSystem, v623, nRegistrationPhase);
+  v624 = GetNameOfModule();
+  RegisterSchemaModule_dota_unit_fountain_cpp(pSchemaSystem, v624, nRegistrationPhase);
+  v625 = GetNameOfModule();
+  RegisterSchemaModule_dota_unit_roshan_cpp(pSchemaSystem, v625, nRegistrationPhase);
+  v626 = GetNameOfModule();
+  RegisterSchemaModule_dota_unit_nian_cpp(pSchemaSystem, v626, nRegistrationPhase);
+  v627 = GetNameOfModule();
+  RegisterSchemaModule_dota_unit_hero_warlock_cpp(pSchemaSystem, v627, nRegistrationPhase);
+  v628 = GetNameOfModule();
+  RegisterSchemaModule_dota_unit_hero_beastmaster_cpp(pSchemaSystem, v628, nRegistrationPhase);
+  v629 = GetNameOfModule();
+  RegisterSchemaModule_dota_unit_hero_queenofpain_cpp(pSchemaSystem, v629, nRegistrationPhase);
+  v630 = GetNameOfModule();
+  RegisterSchemaModule_dota_unit_hero_venomancer_cpp(pSchemaSystem, v630, nRegistrationPhase);
+  v631 = GetNameOfModule();
+  RegisterSchemaModule_dota_unit_hero_faceless_void_cpp(pSchemaSystem, v631, nRegistrationPhase);
+  v632 = GetNameOfModule();
+  RegisterSchemaModule_dota_unit_hero_death_prophet_cpp(pSchemaSystem, v632, nRegistrationPhase);
+  v633 = GetNameOfModule();
+  RegisterSchemaModule_dota_unit_hero_pugna_cpp(pSchemaSystem, v633, nRegistrationPhase);
+  v634 = GetNameOfModule();
+  RegisterSchemaModule_dota_unit_hero_phantom_assassin_cpp(pSchemaSystem, v634, nRegistrationPhase);
+  v635 = GetNameOfModule();
+  RegisterSchemaModule_dota_unit_hero_templar_assassin_cpp(pSchemaSystem, v635, nRegistrationPhase);
+  v636 = GetNameOfModule();
+  RegisterSchemaModule_dota_unit_hero_viper_cpp(pSchemaSystem, v636, nRegistrationPhase);
+  v637 = GetNameOfModule();
+  RegisterSchemaModule_dota_unit_target_dummy_cpp(pSchemaSystem, v637, nRegistrationPhase);
+  v638 = GetNameOfModule();
+  RegisterSchemaModule_dota_unit_target_dummy_h(pSchemaSystem, v638, nRegistrationPhase);
+  v639 = GetNameOfModule();
+  RegisterSchemaModule_dota_unit_looping_sound_cpp(pSchemaSystem, v639, nRegistrationPhase);
+  v640 = GetNameOfModule();
+  RegisterSchemaModule_dota_unit_looping_sound_h(pSchemaSystem, v640, nRegistrationPhase);
+  v641 = GetNameOfModule();
+  RegisterSchemaModule_dota_unit_hero_luna_cpp(pSchemaSystem, v641, nRegistrationPhase);
+  v642 = GetNameOfModule();
+  RegisterSchemaModule_dota_unit_hero_dragon_knight_cpp(pSchemaSystem, v642, nRegistrationPhase);
+  v643 = GetNameOfModule();
+  RegisterSchemaModule_dota_unit_hero_dazzle_cpp(pSchemaSystem, v643, nRegistrationPhase);
+  v644 = GetNameOfModule();
+  RegisterSchemaModule_dota_unit_hero_leshrac_cpp(pSchemaSystem, v644, nRegistrationPhase);
+  v645 = GetNameOfModule();
+  RegisterSchemaModule_dota_unit_hero_rattletrap_cpp(pSchemaSystem, v645, nRegistrationPhase);
+  v646 = GetNameOfModule();
+  RegisterSchemaModule_dota_unit_hero_furion_cpp(pSchemaSystem, v646, nRegistrationPhase);
+  v647 = GetNameOfModule();
+  RegisterSchemaModule_dota_unit_hero_life_stealer_cpp(pSchemaSystem, v647, nRegistrationPhase);
+  v648 = GetNameOfModule();
+  RegisterSchemaModule_dota_unit_hero_dark_seer_cpp(pSchemaSystem, v648, nRegistrationPhase);
+  v649 = GetNameOfModule();
+  RegisterSchemaModule_dota_unit_hero_clinkz_cpp(pSchemaSystem, v649, nRegistrationPhase);
+  v650 = GetNameOfModule();
+  RegisterSchemaModule_dota_unit_hero_omniknight_cpp(pSchemaSystem, v650, nRegistrationPhase);
+  v651 = GetNameOfModule();
+  RegisterSchemaModule_dota_unit_hero_enchantress_cpp(pSchemaSystem, v651, nRegistrationPhase);
+  v652 = GetNameOfModule();
+  RegisterSchemaModule_dota_unit_hero_huskar_cpp(pSchemaSystem, v652, nRegistrationPhase);
+  v653 = GetNameOfModule();
+  RegisterSchemaModule_dota_unit_hero_night_stalker_cpp(pSchemaSystem, v653, nRegistrationPhase);
+  v654 = GetNameOfModule();
+  RegisterSchemaModule_dota_unit_hero_broodmother_cpp(pSchemaSystem, v654, nRegistrationPhase);
+  v655 = GetNameOfModule();
+  RegisterSchemaModule_dota_unit_hero_bounty_hunter_cpp(pSchemaSystem, v655, nRegistrationPhase);
+  v656 = GetNameOfModule();
+  RegisterSchemaModule_dota_unit_hero_weaver_cpp(pSchemaSystem, v656, nRegistrationPhase);
+  v657 = GetNameOfModule();
+  RegisterSchemaModule_dota_unit_hero_jakiro_cpp(pSchemaSystem, v657, nRegistrationPhase);
+  v658 = GetNameOfModule();
+  RegisterSchemaModule_dota_unit_hero_batrider_cpp(pSchemaSystem, v658, nRegistrationPhase);
+  v659 = GetNameOfModule();
+  RegisterSchemaModule_dota_unit_hero_chen_cpp(pSchemaSystem, v659, nRegistrationPhase);
+  v660 = GetNameOfModule();
+  RegisterSchemaModule_dota_unit_hero_spectre_cpp(pSchemaSystem, v660, nRegistrationPhase);
+  v661 = GetNameOfModule();
+  RegisterSchemaModule_dota_unit_hero_doom_bringer_cpp(pSchemaSystem, v661, nRegistrationPhase);
+  v662 = GetNameOfModule();
+  RegisterSchemaModule_dota_unit_hero_spirit_breaker_cpp(pSchemaSystem, v662, nRegistrationPhase);
+  v663 = GetNameOfModule();
+  RegisterSchemaModule_dota_unit_hero_gyrocopter_cpp(pSchemaSystem, v663, nRegistrationPhase);
+  v664 = GetNameOfModule();
+  RegisterSchemaModule_dota_unit_hero_alchemist_cpp(pSchemaSystem, v664, nRegistrationPhase);
+  v665 = GetNameOfModule();
+  RegisterSchemaModule_dota_unit_hero_invoker_cpp(pSchemaSystem, v665, nRegistrationPhase);
+  v666 = GetNameOfModule();
+  RegisterSchemaModule_dota_unit_hero_silencer_cpp(pSchemaSystem, v666, nRegistrationPhase);
+  v667 = GetNameOfModule();
+  RegisterSchemaModule_dota_unit_hero_obsidian_destroyer_cpp(pSchemaSystem, v667, nRegistrationPhase);
+  v668 = GetNameOfModule();
+  RegisterSchemaModule_dota_unit_hero_brewmaster_cpp(pSchemaSystem, v668, nRegistrationPhase);
+  v669 = GetNameOfModule();
+  RegisterSchemaModule_dota_unit_hero_lycan_cpp(pSchemaSystem, v669, nRegistrationPhase);
+  v670 = GetNameOfModule();
+  RegisterSchemaModule_dota_unit_hero_shadow_demon_cpp(pSchemaSystem, v670, nRegistrationPhase);
+  v671 = GetNameOfModule();
+  RegisterSchemaModule_dota_unit_hero_lone_druid_cpp(pSchemaSystem, v671, nRegistrationPhase);
+  v672 = GetNameOfModule();
+  RegisterSchemaModule_dota_unit_hero_chaos_knight_cpp(pSchemaSystem, v672, nRegistrationPhase);
+  v673 = GetNameOfModule();
+  RegisterSchemaModule_dota_unit_hero_meepo_cpp(pSchemaSystem, v673, nRegistrationPhase);
+  v674 = GetNameOfModule();
+  RegisterSchemaModule_dota_unit_hero_treant_cpp(pSchemaSystem, v674, nRegistrationPhase);
+  v675 = GetNameOfModule();
+  RegisterSchemaModule_dota_unit_hero_ogre_magi_cpp(pSchemaSystem, v675, nRegistrationPhase);
+  v676 = GetNameOfModule();
+  RegisterSchemaModule_dota_unit_hero_undying_cpp(pSchemaSystem, v676, nRegistrationPhase);
+  v677 = GetNameOfModule();
+  RegisterSchemaModule_dota_unit_hero_rubick_cpp(pSchemaSystem, v677, nRegistrationPhase);
+  v678 = GetNameOfModule();
+  RegisterSchemaModule_dota_unit_hero_disruptor_cpp(pSchemaSystem, v678, nRegistrationPhase);
+  v679 = GetNameOfModule();
+  RegisterSchemaModule_dota_unit_hero_nyx_assassin_cpp(pSchemaSystem, v679, nRegistrationPhase);
+  v680 = GetNameOfModule();
+  RegisterSchemaModule_dota_unit_hero_naga_siren_cpp(pSchemaSystem, v680, nRegistrationPhase);
+  v681 = GetNameOfModule();
+  RegisterSchemaModule_dota_unit_hero_keeper_of_the_light_cpp(pSchemaSystem, v681, nRegistrationPhase);
+  v682 = GetNameOfModule();
+  RegisterSchemaModule_dota_unit_hero_wisp_cpp(pSchemaSystem, v682, nRegistrationPhase);
+  v683 = GetNameOfModule();
+  RegisterSchemaModule_dota_unit_hero_visage_cpp(pSchemaSystem, v683, nRegistrationPhase);
+  v684 = GetNameOfModule();
+  RegisterSchemaModule_dota_unit_hero_slark_cpp(pSchemaSystem, v684, nRegistrationPhase);
+  v685 = GetNameOfModule();
+  RegisterSchemaModule_dota_unit_hero_medusa_cpp(pSchemaSystem, v685, nRegistrationPhase);
+  v686 = GetNameOfModule();
+  RegisterSchemaModule_dota_unit_hero_troll_warlord_cpp(pSchemaSystem, v686, nRegistrationPhase);
+  v687 = GetNameOfModule();
+  RegisterSchemaModule_dota_unit_hero_centaur_cpp(pSchemaSystem, v687, nRegistrationPhase);
+  v688 = GetNameOfModule();
+  RegisterSchemaModule_dota_unit_hero_magnataur_cpp(pSchemaSystem, v688, nRegistrationPhase);
+  v689 = GetNameOfModule();
+  RegisterSchemaModule_dota_unit_hero_shredder_cpp(pSchemaSystem, v689, nRegistrationPhase);
+  v690 = GetNameOfModule();
+  RegisterSchemaModule_dota_unit_hero_bristleback_cpp(pSchemaSystem, v690, nRegistrationPhase);
+  v691 = GetNameOfModule();
+  RegisterSchemaModule_dota_unit_hero_tusk_cpp(pSchemaSystem, v691, nRegistrationPhase);
+  v692 = GetNameOfModule();
+  RegisterSchemaModule_dota_unit_hero_skywrath_mage_cpp(pSchemaSystem, v692, nRegistrationPhase);
+  v693 = GetNameOfModule();
+  RegisterSchemaModule_dota_unit_hero_abaddon_cpp(pSchemaSystem, v693, nRegistrationPhase);
+  v694 = GetNameOfModule();
+  RegisterSchemaModule_dota_unit_hero_elder_titan_cpp(pSchemaSystem, v694, nRegistrationPhase);
+  v695 = GetNameOfModule();
+  RegisterSchemaModule_dota_unit_hero_legion_commander_cpp(pSchemaSystem, v695, nRegistrationPhase);
+  v696 = GetNameOfModule();
+  RegisterSchemaModule_dota_unit_hero_techies_cpp(pSchemaSystem, v696, nRegistrationPhase);
+  v697 = GetNameOfModule();
+  RegisterSchemaModule_dota_unit_hero_ember_spirit_cpp(pSchemaSystem, v697, nRegistrationPhase);
+  v698 = GetNameOfModule();
+  RegisterSchemaModule_dota_unit_hero_earth_spirit_cpp(pSchemaSystem, v698, nRegistrationPhase);
+  v699 = GetNameOfModule();
+  RegisterSchemaModule_dota_unit_hero_abyssal_underlord_cpp(pSchemaSystem, v699, nRegistrationPhase);
+  v700 = GetNameOfModule();
+  RegisterSchemaModule_dota_unit_hero_terrorblade_cpp(pSchemaSystem, v700, nRegistrationPhase);
+  v701 = GetNameOfModule();
+  RegisterSchemaModule_dota_unit_hero_phoenix_cpp(pSchemaSystem, v701, nRegistrationPhase);
+  v702 = GetNameOfModule();
+  RegisterSchemaModule_dota_unit_hero_oracle_cpp(pSchemaSystem, v702, nRegistrationPhase);
+  v703 = GetNameOfModule();
+  RegisterSchemaModule_dota_unit_hero_winter_wyvern_cpp(pSchemaSystem, v703, nRegistrationPhase);
+  v704 = GetNameOfModule();
+  RegisterSchemaModule_dota_unit_hero_arc_warden_cpp(pSchemaSystem, v704, nRegistrationPhase);
+  v705 = GetNameOfModule();
+  RegisterSchemaModule_dota_unit_hero_monkey_king_cpp(pSchemaSystem, v705, nRegistrationPhase);
+  v706 = GetNameOfModule();
+  RegisterSchemaModule_dota_item_bracer_cpp(pSchemaSystem, v706, nRegistrationPhase);
+  v707 = GetNameOfModule();
+  RegisterSchemaModule_dota_item_gauntlets_cpp(pSchemaSystem, v707, nRegistrationPhase);
+  v708 = GetNameOfModule();
+  RegisterSchemaModule_dota_item_circlet_cpp(pSchemaSystem, v708, nRegistrationPhase);
+  v709 = GetNameOfModule();
+  RegisterSchemaModule_dota_item_slippers_cpp(pSchemaSystem, v709, nRegistrationPhase);
+  v710 = GetNameOfModule();
+  RegisterSchemaModule_dota_item_wraith_band_cpp(pSchemaSystem, v710, nRegistrationPhase);
+  v711 = GetNameOfModule();
+  RegisterSchemaModule_dota_item_mantle_cpp(pSchemaSystem, v711, nRegistrationPhase);
+  v712 = GetNameOfModule();
+  RegisterSchemaModule_dota_item_null_talisman_cpp(pSchemaSystem, v712, nRegistrationPhase);
+  v713 = GetNameOfModule();
+  RegisterSchemaModule_dota_item_tango_cpp(pSchemaSystem, v713, nRegistrationPhase);
+  v714 = GetNameOfModule();
+  RegisterSchemaModule_dota_item_clarity_cpp(pSchemaSystem, v714, nRegistrationPhase);
+  v715 = GetNameOfModule();
+  RegisterSchemaModule_dota_item_flask_cpp(pSchemaSystem, v715, nRegistrationPhase);
+  v716 = GetNameOfModule();
+  RegisterSchemaModule_dota_item_boots_cpp(pSchemaSystem, v716, nRegistrationPhase);
+  v717 = GetNameOfModule();
+  RegisterSchemaModule_dota_item_gloves_of_haste_cpp(pSchemaSystem, v717, nRegistrationPhase);
+  v718 = GetNameOfModule();
+  RegisterSchemaModule_dota_item_belt_of_strength_cpp(pSchemaSystem, v718, nRegistrationPhase);
+  v719 = GetNameOfModule();
+  RegisterSchemaModule_dota_item_robe_of_magi_cpp(pSchemaSystem, v719, nRegistrationPhase);
+  v720 = GetNameOfModule();
+  RegisterSchemaModule_dota_item_boots_of_elven_cpp(pSchemaSystem, v720, nRegistrationPhase);
+  v721 = GetNameOfModule();
+  RegisterSchemaModule_dota_item_blades_of_attack_cpp(pSchemaSystem, v721, nRegistrationPhase);
+  v722 = GetNameOfModule();
+  RegisterSchemaModule_dota_item_empty_bottle_h(pSchemaSystem, v722, nRegistrationPhase);
+  v723 = GetNameOfModule();
+  RegisterSchemaModule_dota_item_demon_edge_cpp(pSchemaSystem, v723, nRegistrationPhase);
+  v724 = GetNameOfModule();
+  RegisterSchemaModule_dota_item_eaglehorn_cpp(pSchemaSystem, v724, nRegistrationPhase);
+  v725 = GetNameOfModule();
+  RegisterSchemaModule_dota_item_reaver_cpp(pSchemaSystem, v725, nRegistrationPhase);
+  v726 = GetNameOfModule();
+  RegisterSchemaModule_dota_item_sacred_relic_cpp(pSchemaSystem, v726, nRegistrationPhase);
+  v727 = GetNameOfModule();
+  RegisterSchemaModule_dota_item_hyperstone_cpp(pSchemaSystem, v727, nRegistrationPhase);
+  v728 = GetNameOfModule();
+  RegisterSchemaModule_dota_item_ring_of_health_cpp(pSchemaSystem, v728, nRegistrationPhase);
+  v729 = GetNameOfModule();
+  RegisterSchemaModule_dota_item_void_stone_cpp(pSchemaSystem, v729, nRegistrationPhase);
+  v730 = GetNameOfModule();
+  RegisterSchemaModule_dota_item_mystic_staff_cpp(pSchemaSystem, v730, nRegistrationPhase);
+  v731 = GetNameOfModule();
+  RegisterSchemaModule_dota_item_boosters_cpp(pSchemaSystem, v731, nRegistrationPhase);
+  v732 = GetNameOfModule();
+  RegisterSchemaModule_dota_item_broadsword_cpp(pSchemaSystem, v732, nRegistrationPhase);
+  v733 = GetNameOfModule();
+  RegisterSchemaModule_dota_item_quarterstaff_cpp(pSchemaSystem, v733, nRegistrationPhase);
+  v734 = GetNameOfModule();
+  RegisterSchemaModule_dota_item_claymore_cpp(pSchemaSystem, v734, nRegistrationPhase);
+  v735 = GetNameOfModule();
+  RegisterSchemaModule_dota_item_ring_of_protection_cpp(pSchemaSystem, v735, nRegistrationPhase);
+  v736 = GetNameOfModule();
+  RegisterSchemaModule_dota_item_stout_shield_cpp(pSchemaSystem, v736, nRegistrationPhase);
+  v737 = GetNameOfModule();
+  RegisterSchemaModule_dota_item_javelin_cpp(pSchemaSystem, v737, nRegistrationPhase);
+  v738 = GetNameOfModule();
+  RegisterSchemaModule_dota_item_mithril_hammer_cpp(pSchemaSystem, v738, nRegistrationPhase);
+  v739 = GetNameOfModule();
+  RegisterSchemaModule_dota_item_chainmail_cpp(pSchemaSystem, v739, nRegistrationPhase);
+  v740 = GetNameOfModule();
+  RegisterSchemaModule_dota_item_helm_of_iron_will_cpp(pSchemaSystem, v740, nRegistrationPhase);
+  v741 = GetNameOfModule();
+  RegisterSchemaModule_dota_item_platemail_cpp(pSchemaSystem, v741, nRegistrationPhase);
+  v742 = GetNameOfModule();
+  RegisterSchemaModule_dota_item_quelling_blade_cpp(pSchemaSystem, v742, nRegistrationPhase);
+  v743 = GetNameOfModule();
+  RegisterSchemaModule_dota_item_ironwood_branch_cpp(pSchemaSystem, v743, nRegistrationPhase);
+  v744 = GetNameOfModule();
+  RegisterSchemaModule_dota_item_ogre_axe_cpp(pSchemaSystem, v744, nRegistrationPhase);
+  v745 = GetNameOfModule();
+  RegisterSchemaModule_dota_item_blade_of_alacrity_cpp(pSchemaSystem, v745, nRegistrationPhase);
+  v746 = GetNameOfModule();
+  RegisterSchemaModule_dota_item_staff_of_wizardry_cpp(pSchemaSystem, v746, nRegistrationPhase);
+  v747 = GetNameOfModule();
+  RegisterSchemaModule_dota_item_ultimate_orb_cpp(pSchemaSystem, v747, nRegistrationPhase);
+  v748 = GetNameOfModule();
+  RegisterSchemaModule_dota_item_mask_of_death_cpp(pSchemaSystem, v748, nRegistrationPhase);
+  v749 = GetNameOfModule();
+  RegisterSchemaModule_dota_item_ring_of_regeneration_cpp(pSchemaSystem, v749, nRegistrationPhase);
+  v750 = GetNameOfModule();
+  RegisterSchemaModule_dota_item_blink_dagger_cpp(pSchemaSystem, v750, nRegistrationPhase);
+  v751 = GetNameOfModule();
+  RegisterSchemaModule_dota_item_sobi_mask_cpp(pSchemaSystem, v751, nRegistrationPhase);
+  v752 = GetNameOfModule();
+  RegisterSchemaModule_dota_item_gem_of_true_sight_cpp(pSchemaSystem, v752, nRegistrationPhase);
+  v753 = GetNameOfModule();
+  RegisterSchemaModule_dota_item_planeswalkers_cloak_cpp(pSchemaSystem, v753, nRegistrationPhase);
+  v754 = GetNameOfModule();
+  RegisterSchemaModule_dota_item_magic_stick_cpp(pSchemaSystem, v754, nRegistrationPhase);
+  v755 = GetNameOfModule();
+  RegisterSchemaModule_dota_item_magic_wand_cpp(pSchemaSystem, v755, nRegistrationPhase);
+  v756 = GetNameOfModule();
+  RegisterSchemaModule_dota_item_talisman_of_evasion_cpp(pSchemaSystem, v756, nRegistrationPhase);
+  v757 = GetNameOfModule();
+  RegisterSchemaModule_dota_item_ghost_scepter_cpp(pSchemaSystem, v757, nRegistrationPhase);
+  v758 = GetNameOfModule();
+  RegisterSchemaModule_dota_item_hand_of_midas_cpp(pSchemaSystem, v758, nRegistrationPhase);
+  v759 = GetNameOfModule();
+  RegisterSchemaModule_dota_item_oblivion_staff_cpp(pSchemaSystem, v759, nRegistrationPhase);
+  v760 = GetNameOfModule();
+  RegisterSchemaModule_dota_item_perseverance_cpp(pSchemaSystem, v760, nRegistrationPhase);
+  v761 = GetNameOfModule();
+  RegisterSchemaModule_dota_item_poor_mans_shield_cpp(pSchemaSystem, v761, nRegistrationPhase);
+  v762 = GetNameOfModule();
+  RegisterSchemaModule_dota_item_dust_of_appearance_cpp(pSchemaSystem, v762, nRegistrationPhase);
+  v763 = GetNameOfModule();
+  RegisterSchemaModule_dota_item_wards_h(pSchemaSystem, v763, nRegistrationPhase);
+  v764 = GetNameOfModule();
+  RegisterSchemaModule_dota_item_wards_cpp(pSchemaSystem, v764, nRegistrationPhase);
+  v765 = GetNameOfModule();
+  RegisterSchemaModule_dota_item_teleport_scroll_cpp(pSchemaSystem, v765, nRegistrationPhase);
+  v766 = GetNameOfModule();
+  RegisterSchemaModule_dota_item_divine_rapier_cpp(pSchemaSystem, v766, nRegistrationPhase);
+  v767 = GetNameOfModule();
+  RegisterSchemaModule_dota_item_monkey_king_bar_cpp(pSchemaSystem, v767, nRegistrationPhase);
+  v768 = GetNameOfModule();
+  RegisterSchemaModule_dota_item_radiance_cpp(pSchemaSystem, v768, nRegistrationPhase);
+  v769 = GetNameOfModule();
+  RegisterSchemaModule_dota_item_butterfly_cpp(pSchemaSystem, v769, nRegistrationPhase);
+  v770 = GetNameOfModule();
+  RegisterSchemaModule_dota_item_weapon_greater_critical_cpp(pSchemaSystem, v770, nRegistrationPhase);
+  v771 = GetNameOfModule();
+  RegisterSchemaModule_dota_item_cranium_basher_cpp(pSchemaSystem, v771, nRegistrationPhase);
+  v772 = GetNameOfModule();
+  RegisterSchemaModule_dota_item_abyssal_blade_cpp(pSchemaSystem, v772, nRegistrationPhase);
+  v773 = GetNameOfModule();
+  RegisterSchemaModule_dota_item_battlefury_cpp(pSchemaSystem, v773, nRegistrationPhase);
+  v774 = GetNameOfModule();
+  RegisterSchemaModule_dota_item_manta_style_cpp(pSchemaSystem, v774, nRegistrationPhase);
+  v775 = GetNameOfModule();
+  RegisterSchemaModule_dota_item_weapon_lesser_critical_cpp(pSchemaSystem, v775, nRegistrationPhase);
+  v776 = GetNameOfModule();
+  RegisterSchemaModule_dota_item_armlet_cpp(pSchemaSystem, v776, nRegistrationPhase);
+  v777 = GetNameOfModule();
+  RegisterSchemaModule_dota_item_invisibility_edge_cpp(pSchemaSystem, v777, nRegistrationPhase);
+  v778 = GetNameOfModule();
+  RegisterSchemaModule_dota_item_sheepstick_cpp(pSchemaSystem, v778, nRegistrationPhase);
+  v779 = GetNameOfModule();
+  RegisterSchemaModule_dota_item_orchid_malevolence_cpp(pSchemaSystem, v779, nRegistrationPhase);
+  v780 = GetNameOfModule();
+  RegisterSchemaModule_dota_item_rod_of_atos_cpp(pSchemaSystem, v780, nRegistrationPhase);
+  v781 = GetNameOfModule();
+  RegisterSchemaModule_dota_item_scepter_of_cyclone_cpp(pSchemaSystem, v781, nRegistrationPhase);
+  v782 = GetNameOfModule();
+  RegisterSchemaModule_dota_item_force_staff_cpp(pSchemaSystem, v782, nRegistrationPhase);
+  v783 = GetNameOfModule();
+  RegisterSchemaModule_dota_item_dagon_cpp(pSchemaSystem, v783, nRegistrationPhase);
+  v784 = GetNameOfModule();
+  RegisterSchemaModule_dota_item_refresher_orb_cpp(pSchemaSystem, v784, nRegistrationPhase);
+  v785 = GetNameOfModule();
+  RegisterSchemaModule_dota_item_ultimate_scepter_cpp(pSchemaSystem, v785, nRegistrationPhase);
+  v786 = GetNameOfModule();
+  RegisterSchemaModule_dota_item_assault_cpp(pSchemaSystem, v786, nRegistrationPhase);
+  v787 = GetNameOfModule();
+  RegisterSchemaModule_dota_item_heart_cpp(pSchemaSystem, v787, nRegistrationPhase);
+  v788 = GetNameOfModule();
+  RegisterSchemaModule_dota_item_black_king_bar_cpp(pSchemaSystem, v788, nRegistrationPhase);
+  v789 = GetNameOfModule();
+  RegisterSchemaModule_dota_item_aegis_cpp(pSchemaSystem, v789, nRegistrationPhase);
+  v790 = GetNameOfModule();
+  RegisterSchemaModule_dota_item_aegis_h(pSchemaSystem, v790, nRegistrationPhase);
+  v791 = GetNameOfModule();
+  RegisterSchemaModule_dota_item_shivas_guard_cpp(pSchemaSystem, v791, nRegistrationPhase);
+  v792 = GetNameOfModule();
+  RegisterSchemaModule_dota_item_bloodstone_cpp(pSchemaSystem, v792, nRegistrationPhase);
+  v793 = GetNameOfModule();
+  RegisterSchemaModule_dota_item_sange_cpp(pSchemaSystem, v793, nRegistrationPhase);
+  v794 = GetNameOfModule();
+  RegisterSchemaModule_dota_item_yasha_cpp(pSchemaSystem, v794, nRegistrationPhase);
+  v795 = GetNameOfModule();
+  RegisterSchemaModule_dota_item_sange_and_yasha_cpp(pSchemaSystem, v795, nRegistrationPhase);
+  v796 = GetNameOfModule();
+  RegisterSchemaModule_dota_item_mask_of_madness_cpp(pSchemaSystem, v796, nRegistrationPhase);
+  v797 = GetNameOfModule();
+  RegisterSchemaModule_dota_item_sphere_cpp(pSchemaSystem, v797, nRegistrationPhase);
+  v798 = GetNameOfModule();
+  RegisterSchemaModule_dota_item_vanguard_cpp(pSchemaSystem, v798, nRegistrationPhase);
+  v799 = GetNameOfModule();
+  RegisterSchemaModule_dota_item_crimson_guard_cpp(pSchemaSystem, v799, nRegistrationPhase);
+  v800 = GetNameOfModule();
+  RegisterSchemaModule_dota_item_blade_mail_cpp(pSchemaSystem, v800, nRegistrationPhase);
+  v801 = GetNameOfModule();
+  RegisterSchemaModule_dota_item_soul_booster_cpp(pSchemaSystem, v801, nRegistrationPhase);
+  v802 = GetNameOfModule();
+  RegisterSchemaModule_dota_item_hood_of_defiance_cpp(pSchemaSystem, v802, nRegistrationPhase);
+  v803 = GetNameOfModule();
+  RegisterSchemaModule_dota_item_mekansm_cpp(pSchemaSystem, v803, nRegistrationPhase);
+  v804 = GetNameOfModule();
+  RegisterSchemaModule_dota_item_vladmir_cpp(pSchemaSystem, v804, nRegistrationPhase);
+  v805 = GetNameOfModule();
+  RegisterSchemaModule_dota_item_arcane_ring_cpp(pSchemaSystem, v805, nRegistrationPhase);
+  v806 = GetNameOfModule();
+  RegisterSchemaModule_dota_item_buckler_cpp(pSchemaSystem, v806, nRegistrationPhase);
+  v807 = GetNameOfModule();
+  RegisterSchemaModule_dota_item_ring_of_basilius_cpp(pSchemaSystem, v807, nRegistrationPhase);
+  v808 = GetNameOfModule();
+  RegisterSchemaModule_dota_item_pipe_cpp(pSchemaSystem, v808, nRegistrationPhase);
+  v809 = GetNameOfModule();
+  RegisterSchemaModule_dota_item_urn_of_shadows_cpp(pSchemaSystem, v809, nRegistrationPhase);
+  v810 = GetNameOfModule();
+  RegisterSchemaModule_dota_item_headdress_cpp(pSchemaSystem, v810, nRegistrationPhase);
+  v811 = GetNameOfModule();
+  RegisterSchemaModule_dota_item_satanic_cpp(pSchemaSystem, v811, nRegistrationPhase);
+  v812 = GetNameOfModule();
+  RegisterSchemaModule_dota_item_helm_of_the_dominator_cpp(pSchemaSystem, v812, nRegistrationPhase);
+  v813 = GetNameOfModule();
+  RegisterSchemaModule_dota_item_desolator_cpp(pSchemaSystem, v813, nRegistrationPhase);
+  v814 = GetNameOfModule();
+  RegisterSchemaModule_dota_item_skadi_cpp(pSchemaSystem, v814, nRegistrationPhase);
+  v815 = GetNameOfModule();
+  RegisterSchemaModule_dota_item_mjollnir_cpp(pSchemaSystem, v815, nRegistrationPhase);
+  v816 = GetNameOfModule();
+  RegisterSchemaModule_dota_item_maelstrom_cpp(pSchemaSystem, v816, nRegistrationPhase);
+  v817 = GetNameOfModule();
+  RegisterSchemaModule_dota_item_diffusal_blade_cpp(pSchemaSystem, v817, nRegistrationPhase);
+  v818 = GetNameOfModule();
+  RegisterSchemaModule_dota_item_ethereal_blade_cpp(pSchemaSystem, v818, nRegistrationPhase);
+  v819 = GetNameOfModule();
+  RegisterSchemaModule_dota_item_soul_ring_cpp(pSchemaSystem, v819, nRegistrationPhase);
+  v820 = GetNameOfModule();
+  RegisterSchemaModule_dota_item_necronomicon_cpp(pSchemaSystem, v820, nRegistrationPhase);
+  v821 = GetNameOfModule();
+  RegisterSchemaModule_dota_item_courier_cpp(pSchemaSystem, v821, nRegistrationPhase);
+  v822 = GetNameOfModule();
+  RegisterSchemaModule_dota_item_cheese_cpp(pSchemaSystem, v822, nRegistrationPhase);
+  v823 = GetNameOfModule();
+  RegisterSchemaModule_dota_item_arcane_boots_cpp(pSchemaSystem, v823, nRegistrationPhase);
+  v824 = GetNameOfModule();
+  RegisterSchemaModule_dota_item_orb_of_venom_cpp(pSchemaSystem, v824, nRegistrationPhase);
+  v825 = GetNameOfModule();
+  RegisterSchemaModule_dota_item_ancient_janggo_cpp(pSchemaSystem, v825, nRegistrationPhase);
+  v826 = GetNameOfModule();
+  RegisterSchemaModule_dota_item_medallion_of_courage_cpp(pSchemaSystem, v826, nRegistrationPhase);
+  v827 = GetNameOfModule();
+  RegisterSchemaModule_dota_item_smoke_of_deceit_cpp(pSchemaSystem, v827, nRegistrationPhase);
+  v828 = GetNameOfModule();
+  RegisterSchemaModule_dota_item_veil_of_discord_cpp(pSchemaSystem, v828, nRegistrationPhase);
+  v829 = GetNameOfModule();
+  RegisterSchemaModule_dota_item_heavens_halberd_cpp(pSchemaSystem, v829, nRegistrationPhase);
+  v830 = GetNameOfModule();
+  RegisterSchemaModule_dota_item_ring_of_aquila_cpp(pSchemaSystem, v830, nRegistrationPhase);
+  v831 = GetNameOfModule();
+  RegisterSchemaModule_dota_item_shadow_amulet_cpp(pSchemaSystem, v831, nRegistrationPhase);
+  v832 = GetNameOfModule();
+  RegisterSchemaModule_dota_item_moon_shard_cpp(pSchemaSystem, v832, nRegistrationPhase);
+  v833 = GetNameOfModule();
+  RegisterSchemaModule_dota_item_moon_shard_h(pSchemaSystem, v833, nRegistrationPhase);
+  v834 = GetNameOfModule();
+  RegisterSchemaModule_dota_item_silver_edge_cpp(pSchemaSystem, v834, nRegistrationPhase);
+  v835 = GetNameOfModule();
+  RegisterSchemaModule_dota_item_glimmer_cape_cpp(pSchemaSystem, v835, nRegistrationPhase);
+  v836 = GetNameOfModule();
+  RegisterSchemaModule_dota_item_solar_crest_cpp(pSchemaSystem, v836, nRegistrationPhase);
+  v837 = GetNameOfModule();
+  RegisterSchemaModule_dota_item_ward_dispenser_cpp(pSchemaSystem, v837, nRegistrationPhase);
+  v838 = GetNameOfModule();
+  RegisterSchemaModule_dota_item_guardian_greaves_cpp(pSchemaSystem, v838, nRegistrationPhase);
+  v839 = GetNameOfModule();
+  RegisterSchemaModule_dota_item_enchanted_mango_cpp(pSchemaSystem, v839, nRegistrationPhase);
+  v840 = GetNameOfModule();
+  RegisterSchemaModule_dota_item_lotus_orb_cpp(pSchemaSystem, v840, nRegistrationPhase);
+  v841 = GetNameOfModule();
+  RegisterSchemaModule_dota_item_octarine_core_cpp(pSchemaSystem, v841, nRegistrationPhase);
+  v842 = GetNameOfModule();
+  RegisterSchemaModule_dota_item_faerie_fire_cpp(pSchemaSystem, v842, nRegistrationPhase);
+  v843 = GetNameOfModule();
+  RegisterSchemaModule_dota_item_dragon_lance_cpp(pSchemaSystem, v843, nRegistrationPhase);
+  v844 = GetNameOfModule();
+  RegisterSchemaModule_dota_item_aether_lens_cpp(pSchemaSystem, v844, nRegistrationPhase);
+  v845 = GetNameOfModule();
+  RegisterSchemaModule_dota_item_iron_talon_cpp(pSchemaSystem, v845, nRegistrationPhase);
+  v846 = GetNameOfModule();
+  RegisterSchemaModule_dota_item_bloodthorn_cpp(pSchemaSystem, v846, nRegistrationPhase);
+  v847 = GetNameOfModule();
+  RegisterSchemaModule_dota_item_echo_sabre_cpp(pSchemaSystem, v847, nRegistrationPhase);
+  v848 = GetNameOfModule();
+  RegisterSchemaModule_dota_item_blight_stone_cpp(pSchemaSystem, v848, nRegistrationPhase);
+  v849 = GetNameOfModule();
+  RegisterSchemaModule_dota_item_wind_lace_cpp(pSchemaSystem, v849, nRegistrationPhase);
+  v850 = GetNameOfModule();
+  RegisterSchemaModule_dota_item_tome_of_knowledge_cpp(pSchemaSystem, v850, nRegistrationPhase);
+  v851 = GetNameOfModule();
+  RegisterSchemaModule_dota_item_hurricane_pike_cpp(pSchemaSystem, v851, nRegistrationPhase);
+  v852 = GetNameOfModule();
+  RegisterSchemaModule_dota_item_infused_raindrop_cpp(pSchemaSystem, v852, nRegistrationPhase);
+  v853 = GetNameOfModule();
+  RegisterSchemaModule_dota_item_river_painter_cpp(pSchemaSystem, v853, nRegistrationPhase);
+  v854 = GetNameOfModule();
+  RegisterSchemaModule_dota_locomotor_h(pSchemaSystem, v854, nRegistrationPhase);
+}
+
+

@@ -1,0 +1,1285 @@
+
+// ==== functions (decompiled by Hex-Rays; names/signatures from DWARF) ====
+
+// CSchemaEnumBinding<modifierremove>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE  (line 35, @0x0000000002e2b1a0, libserver.so)  // inlines: Count, Initialize, SetTypeScope
+// callers: CSchemaEnumBinding<modifierremove>::Register
+// globals: CSchemaEnumBinding<modifierremove>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char 
+CSchemaEnumInfo *__fastcall CSchemaEnumBinding<modifierremove>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        const char *pProjectName)
+{
+  ISchemaSystemTypeScope *v3; // rax
+  unsigned int v4; // edi
+  SchemaEnumeratorValue_t v5; // r8
+  SchemaEnumeratorValue_t v6; // r9
+  SchemaEnumeratorValue_t *v7; // rdx
+
+  v3 = (*(*pSchemaSystem + 112LL))(pSchemaSystem, 0, pBinaryName);
+  if ( CSchemaEnumBinding<modifierremove>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_modifierremove.m_Enumerators.m_Data.m_nImplLength != 0 )
+  {
+    v4 = abs32(CSchemaEnumBinding<modifierremove>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_modifierremove.m_Enumerators.m_Data.m_nImplLength);
+    v5 = *(CSchemaEnumBinding<modifierremove>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_modifierremove.m_Enumerators.m_Data.m_pImplElements
+         + 2);
+    CSchemaEnumBinding<modifierremove>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_modifierremove.m_nMinValue = v5;
+    v6 = *(CSchemaEnumBinding<modifierremove>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_modifierremove.m_Enumerators.m_Data.m_pImplElements
+         + 2);
+    CSchemaEnumBinding<modifierremove>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_modifierremove.m_nMaxValue = v6;
+    if ( v4 != 1 )
+    {
+      v7 = (CSchemaEnumBinding<modifierremove>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_modifierremove.m_Enumerators.m_Data.m_pImplElements
+          + 72);
+      do
+      {
+        if ( v5 > *v7 )
+          v5 = *v7;
+        CSchemaEnumBinding<modifierremove>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_modifierremove.m_nMinValue = v5;
+        if ( v6 < *v7 )
+          v6 = *v7;
+        v7 += 7;
+        CSchemaEnumBinding<modifierremove>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_modifierremove.m_nMaxValue = v6;
+      }
+      while ( v7 != CSchemaEnumBinding<modifierremove>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_modifierremove.m_Enumerators.m_Data.m_pImplElements
+                  + 7 * v4
+                  + 2 );
+    }
+  }
+  else
+  {
+    CSchemaEnumBinding<modifierremove>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_modifierremove.m_nMinValue = 0;
+    CSchemaEnumBinding<modifierremove>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_modifierremove.m_nMaxValue = 0;
+  }
+  CSchemaEnumBinding<modifierremove>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_modifierremove.m_pOuterTypeScope = v3;
+  (*(*v3 + 272LL))(
+    v3,
+    &CSchemaEnumBinding<modifierremove>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_modifierremove);
+  return &CSchemaEnumBinding<modifierremove>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_modifierremove;
+}
+
+
+// CSchemaEnumBinding<modifierpriority>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE  (line 47, @0x0000000002e2b280, libserver.so)  // inlines: Count, Initialize, SetTypeScope
+// callers: CSchemaEnumBinding<modifierpriority>::Register
+// globals: CSchemaEnumBinding<modifierpriority>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,cha
+CSchemaEnumInfo *__fastcall CSchemaEnumBinding<modifierpriority>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        const char *pProjectName)
+{
+  ISchemaSystemTypeScope *v3; // rax
+  unsigned int v4; // edi
+  SchemaEnumeratorValue_t v5; // r8
+  SchemaEnumeratorValue_t v6; // r9
+  SchemaEnumeratorValue_t *v7; // rdx
+
+  v3 = (*(*pSchemaSystem + 112LL))(pSchemaSystem, 0, pBinaryName);
+  if ( CSchemaEnumBinding<modifierpriority>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_modifierpriority.m_Enumerators.m_Data.m_nImplLength != 0 )
+  {
+    v4 = abs32(CSchemaEnumBinding<modifierpriority>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_modifierpriority.m_Enumerators.m_Data.m_nImplLength);
+    v5 = *(CSchemaEnumBinding<modifierpriority>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_modifierpriority.m_Enumerators.m_Data.m_pImplElements
+         + 2);
+    CSchemaEnumBinding<modifierpriority>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_modifierpriority.m_nMinValue = v5;
+    v6 = *(CSchemaEnumBinding<modifierpriority>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_modifierpriority.m_Enumerators.m_Data.m_pImplElements
+         + 2);
+    CSchemaEnumBinding<modifierpriority>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_modifierpriority.m_nMaxValue = v6;
+    if ( v4 != 1 )
+    {
+      v7 = (CSchemaEnumBinding<modifierpriority>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_modifierpriority.m_Enumerators.m_Data.m_pImplElements
+          + 72);
+      do
+      {
+        if ( v5 > *v7 )
+          v5 = *v7;
+        CSchemaEnumBinding<modifierpriority>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_modifierpriority.m_nMinValue = v5;
+        if ( v6 < *v7 )
+          v6 = *v7;
+        v7 += 7;
+        CSchemaEnumBinding<modifierpriority>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_modifierpriority.m_nMaxValue = v6;
+      }
+      while ( v7 != CSchemaEnumBinding<modifierpriority>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_modifierpriority.m_Enumerators.m_Data.m_pImplElements
+                  + 7 * v4
+                  + 2 );
+    }
+  }
+  else
+  {
+    CSchemaEnumBinding<modifierpriority>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_modifierpriority.m_nMinValue = 0;
+    CSchemaEnumBinding<modifierpriority>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_modifierpriority.m_nMaxValue = 0;
+  }
+  CSchemaEnumBinding<modifierpriority>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_modifierpriority.m_pOuterTypeScope = v3;
+  (*(*v3 + 272LL))(
+    v3,
+    &CSchemaEnumBinding<modifierpriority>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_modifierpriority);
+  return &CSchemaEnumBinding<modifierpriority>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_modifierpriority;
+}
+
+
+// CSchemaEnumBinding<modifierfunction>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE  (line 61, @0x0000000002e2b360, libserver.so)  // inlines: Count, Initialize, SetTypeScope
+// callers: CSchemaEnumBinding<modifierfunction>::Register
+// globals: CSchemaEnumBinding<modifierfunction>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,cha
+CSchemaEnumInfo *__fastcall CSchemaEnumBinding<modifierfunction>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        const char *pProjectName)
+{
+  ISchemaSystemTypeScope *v3; // rax
+  unsigned int v4; // edi
+  SchemaEnumeratorValue_t v5; // r8
+  SchemaEnumeratorValue_t v6; // r9
+  SchemaEnumeratorValue_t *v7; // rdx
+
+  v3 = (*(*pSchemaSystem + 112LL))(pSchemaSystem, 0, pBinaryName);
+  if ( CSchemaEnumBinding<modifierfunction>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_modifierfunction.m_Enumerators.m_Data.m_nImplLength != 0 )
+  {
+    v4 = abs32(CSchemaEnumBinding<modifierfunction>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_modifierfunction.m_Enumerators.m_Data.m_nImplLength);
+    v5 = *(CSchemaEnumBinding<modifierfunction>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_modifierfunction.m_Enumerators.m_Data.m_pImplElements
+         + 2);
+    CSchemaEnumBinding<modifierfunction>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_modifierfunction.m_nMinValue = v5;
+    v6 = *(CSchemaEnumBinding<modifierfunction>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_modifierfunction.m_Enumerators.m_Data.m_pImplElements
+         + 2);
+    CSchemaEnumBinding<modifierfunction>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_modifierfunction.m_nMaxValue = v6;
+    if ( v4 != 1 )
+    {
+      v7 = (CSchemaEnumBinding<modifierfunction>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_modifierfunction.m_Enumerators.m_Data.m_pImplElements
+          + 72);
+      do
+      {
+        if ( v5 > *v7 )
+          v5 = *v7;
+        CSchemaEnumBinding<modifierfunction>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_modifierfunction.m_nMinValue = v5;
+        if ( v6 < *v7 )
+          v6 = *v7;
+        v7 += 7;
+        CSchemaEnumBinding<modifierfunction>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_modifierfunction.m_nMaxValue = v6;
+      }
+      while ( v7 != CSchemaEnumBinding<modifierfunction>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_modifierfunction.m_Enumerators.m_Data.m_pImplElements
+                  + 7 * v4
+                  + 2 );
+    }
+  }
+  else
+  {
+    CSchemaEnumBinding<modifierfunction>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_modifierfunction.m_nMinValue = 0;
+    CSchemaEnumBinding<modifierfunction>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_modifierfunction.m_nMaxValue = 0;
+  }
+  CSchemaEnumBinding<modifierfunction>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_modifierfunction.m_pOuterTypeScope = v3;
+  (*(*v3 + 272LL))(
+    v3,
+    &CSchemaEnumBinding<modifierfunction>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_modifierfunction);
+  return &CSchemaEnumBinding<modifierfunction>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_modifierfunction;
+}
+
+
+// CModifierParams::Schema_CompileTimeVerificationFunction  (line 1283, @0x0000000002e2b440, libserver.so)
+void __fastcall CModifierParams::Schema_CompileTimeVerificationFunction(CModifierParams *const this)
+{
+  ;
+}
+
+
+// CModifierParams::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE  (line 1324, @0x0000000002e2b450, libserver.so)  // inlines: Get, SchemaBinding_SchemaTypeOfMemberVarByAddr<CModifierParams, CDOTA_Orb*>, SchemaBinding_SchemaTypeOfMemberVarByAddr<CModifierParams, CHandle<CBaseEntity> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<CModifierParams, CHandle<CDOTABaseAbility> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<CModifierParams, Vector>, SchemaBinding_SchemaTypeOfMemberVarByAddr<CModifierParams, bool>, SchemaBinding_SchemaTypeOfMemberVarByAddr<CModifierParams, float>, SchemaBinding_SchemaTypeOfMemberVarByAddr<CModifierParams, int>, SchemaBinding_SchemaTypeOfMemberVarByAddr<CModifierParams, short int>, SchemaBinding_SchemaTypeOfVarByAddr<CModifierParams>, SetTypeScope
+// callers: CSchemaClassBinding<CModifierParams>::Register
+// strings: "CDOTABaseAbility", "CHandle", "CBaseEntity", "CDOTA_Orb", "CModifierParams"
+// globals: CModifierParams::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitia, CSchemaManipulator<CHandle<CDOTABaseAbility>>::StaticAccessor(void)::m, CAtomicManipulator<CHandle<CDOTABaseAbility>>::Get(void)::val, CSchemaManipulator<CHandle<CBaseEntity>>::StaticAccessor(void)::m, CAtomicManipulator<CHandle<CBaseEntity>>::Get(void)::val, CSchemaManipulator<Vector>::StaticAccessor(void)::m, CAtomicManipulator<Vector>::Get(void)::val, CModifierParams::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchem
+CSchemaClassInfo *__fastcall CModifierParams::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        const char *pProjectName)
+{
+  CSchemaClassInfo *result; // rax
+  ISchemaSystemTypeScope *v4; // rbx
+  __int64 (__fastcall *v5)(ISchemaSystemTypeScope *, const char *, __int64, __int64 (__fastcall ***)(), __int64 (__fastcall ***)(), __int64); // r12
+  __int64 v6; // rax
+  __int64 (__fastcall *v7)(ISchemaSystemTypeScope *, const char *, __int64, __int64 (__fastcall ***)(), __int64 (__fastcall ***)(), __int64); // r12
+  __int64 v8; // rax
+  __int64 (__fastcall *v9)(ISchemaSystemTypeScope *, __int64); // r12
+  __int64 v10; // rax
+  __int64 (__fastcall *v11)(ISchemaSystemTypeScope *, __int64); // r12
+  __int64 v12; // rax
+  __int64 (__fastcall *v13)(ISchemaSystemTypeScope *, const char *, __int64, __int64 (__fastcall ***)(), __int64 (__fastcall ***)(), __int64); // r12
+  __int64 v14; // rax
+  __int64 (__fastcall *v15)(ISchemaSystemTypeScope *, const char *, __int64, __int64 (__fastcall ***)(), __int64 (__fastcall ***)(), __int64); // r12
+  __int64 v16; // rax
+  __int64 (__fastcall *v17)(ISchemaSystemTypeScope *, const char *, __int64, __int64 (__fastcall ***)(), __int64 (__fastcall ***)(), __int64); // r12
+  __int64 v18; // rax
+  CSchemaType *v19; // rax
+
+  result = CModifierParams::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult;
+  if ( CModifierParams::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult == 0 )
+  {
+    v4 = (*(*pSchemaSystem + 112LL))(pSchemaSystem, 0, pBinaryName);
+    v5 = *(*v4 + 64LL);
+    v6 = (*(*v4 + 88LL))(v4, "CDOTABaseAbility");
+    CModifierParams::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CModifierParams[0].m_pType = v5(v4, "CHandle", 5003, CAtomicManipulator<CHandle<CDOTABaseAbility>>::Get(void)::val, &CSchemaManipulator<CHandle<CDOTABaseAbility>>::StaticAccessor(void)::m, v6);
+    CModifierParams::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CModifierParams[1].m_pType = (*(*v4 + 40LL))(v4, 11);
+    CModifierParams::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CModifierParams[2].m_pType = (*(*v4 + 40LL))(v4, 11);
+    CModifierParams::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CModifierParams[3].m_pType = (*(*v4 + 40LL))(v4, 7);
+    CModifierParams::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CModifierParams[4].m_pType = (*(*v4 + 40LL))(v4, 13);
+    CModifierParams::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CModifierParams[5].m_pType = (*(*v4 + 40LL))(v4, 7);
+    CModifierParams::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CModifierParams[6].m_pType = (*(*v4 + 40LL))(v4, 13);
+    CModifierParams::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CModifierParams[7].m_pType = (*(*v4 + 40LL))(v4, 13);
+    CModifierParams::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CModifierParams[8].m_pType = (*(*v4 + 40LL))(v4, 13);
+    CModifierParams::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CModifierParams[9].m_pType = (*(*v4 + 40LL))(v4, 13);
+    CModifierParams::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CModifierParams[10].m_pType = (*(*v4 + 40LL))(v4, 11);
+    CModifierParams::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CModifierParams[11].m_pType = (*(*v4 + 40LL))(v4, 11);
+    CModifierParams::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CModifierParams[12].m_pType = (*(*v4 + 40LL))(v4, 11);
+    CModifierParams::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CModifierParams[13].m_pType = (*(*v4 + 40LL))(v4, 7);
+    v7 = *(*v4 + 64LL);
+    v8 = (*(*v4 + 88LL))(v4, "CBaseEntity");
+    CModifierParams::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CModifierParams[14].m_pType = v7(v4, "CHandle", 5003, CAtomicManipulator<CHandle<CBaseEntity>>::Get(void)::val, &CSchemaManipulator<CHandle<CBaseEntity>>::StaticAccessor(void)::m, v8);
+    CModifierParams::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CModifierParams[15].m_pType = (*(*v4 + 40LL))(v4, 7);
+    CModifierParams::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CModifierParams[16].m_pType = (*(*v4 + 40LL))(v4, 7);
+    CModifierParams::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CModifierParams[17].m_pType = (*(*v4 + 40LL))(v4, 7);
+    CModifierParams::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CModifierParams[18].m_pType = (*(*v4 + 40LL))(v4, 7);
+    CModifierParams::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CModifierParams[19].m_pType = (*(*v4 + 40LL))(v4, 5);
+    v9 = *(*v4 + 48LL);
+    v10 = (*(*v4 + 88LL))(v4, "CDOTA_Orb");
+    CModifierParams::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CModifierParams[20].m_pType = v9(v4, v10);
+    v11 = *(*v4 + 48LL);
+    v12 = (*(*v4 + 88LL))(v4, "CDOTA_Orb");
+    CModifierParams::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CModifierParams[21].m_pType = v11(v4, v12);
+    CModifierParams::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CModifierParams[22].m_pType = (*(*v4 + 40LL))(v4, 7);
+    CModifierParams::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CModifierParams[23].m_pType = (*(*v4 + 40LL))(v4, 7);
+    CModifierParams::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CModifierParams[24].m_pType = (*(*v4 + 56LL))(v4, "Vector", 2010, CAtomicManipulator<Vector>::Get(void)::val, CSchemaManipulator<Vector>::StaticAccessor(void)::m);
+    CModifierParams::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CModifierParams[25].m_pType = (*(*v4 + 56LL))(v4, "Vector", 2010, CAtomicManipulator<Vector>::Get(void)::val, CSchemaManipulator<Vector>::StaticAccessor(void)::m);
+    CModifierParams::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CModifierParams[26].m_pType = (*(*v4 + 40LL))(v4, 13);
+    CModifierParams::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CModifierParams[27].m_pType = (*(*v4 + 40LL))(v4, 13);
+    CModifierParams::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CModifierParams[28].m_pType = (*(*v4 + 40LL))(v4, 13);
+    CModifierParams::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CModifierParams[29].m_pType = (*(*v4 + 40LL))(v4, 13);
+    CModifierParams::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CModifierParams[30].m_pType = (*(*v4 + 40LL))(v4, 13);
+    CModifierParams::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CModifierParams[31].m_pType = (*(*v4 + 40LL))(v4, 13);
+    CModifierParams::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CModifierParams[32].m_pType = (*(*v4 + 40LL))(v4, 13);
+    CModifierParams::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CModifierParams[33].m_pType = (*(*v4 + 40LL))(v4, 7);
+    v13 = *(*v4 + 64LL);
+    v14 = (*(*v4 + 88LL))(v4, "CBaseEntity");
+    CModifierParams::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CModifierParams[34].m_pType = v13(v4, "CHandle", 5003, CAtomicManipulator<CHandle<CBaseEntity>>::Get(void)::val, &CSchemaManipulator<CHandle<CBaseEntity>>::StaticAccessor(void)::m, v14);
+    v15 = *(*v4 + 64LL);
+    v16 = (*(*v4 + 88LL))(v4, "CBaseEntity");
+    CModifierParams::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CModifierParams[35].m_pType = v15(v4, "CHandle", 5003, CAtomicManipulator<CHandle<CBaseEntity>>::Get(void)::val, &CSchemaManipulator<CHandle<CBaseEntity>>::StaticAccessor(void)::m, v16);
+    v17 = *(*v4 + 64LL);
+    v18 = (*(*v4 + 88LL))(v4, "CBaseEntity");
+    CModifierParams::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CModifierParams[36].m_pType = v17(v4, "CHandle", 5003, CAtomicManipulator<CHandle<CBaseEntity>>::Get(void)::val, &CSchemaManipulator<CHandle<CBaseEntity>>::StaticAccessor(void)::m, v18);
+    v19 = (*(*v4 + 88LL))(v4, "CModifierParams");
+    CModifierParams::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CModifierParams.m_pOuterTypeScope = v4;
+    CModifierParams::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_StaticMembers_CModifierParams[0].m_pType = v19;
+    CModifierParams::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult = &CModifierParams::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CModifierParams;
+    (*(*v4 + 264LL))(
+      v4,
+      &CModifierParams::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CModifierParams);
+    return CModifierParams::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult;
+  }
+  return result;
+}
+
+
+// CModifierParams::Schema_VerifyBindingIsRegistered  (line 1418, @0x0000000002e2b8e0, libserver.so)
+void __cdecl CModifierParams::Schema_VerifyBindingIsRegistered()
+{
+  ;
+}
+
+
+// CDOTA_BuffParticle::Schema_CompileTimeVerificationFunction  (line 1426, @0x0000000002e2b8f0, libserver.so)
+void __fastcall CDOTA_BuffParticle::Schema_CompileTimeVerificationFunction(CDOTA_BuffParticle *const this)
+{
+  ;
+}
+
+
+// CDOTA_BuffParticle::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE  (line 1435, @0x0000000002e2b900, libserver.so)  // inlines: Get, SchemaBinding_SchemaTypeOfMemberVarByAddr<CDOTA_BuffParticle, bool>, SchemaBinding_SchemaTypeOfMemberVarByAddr<CDOTA_BuffParticle, int>, SetTypeScope
+// callers: CSchemaClassBinding<CDOTA_BuffParticle>::Register
+// globals: CDOTA_BuffParticle::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pIni, CDOTA_BuffParticle::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSc
+CSchemaClassInfo *__fastcall CDOTA_BuffParticle::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        const char *pProjectName)
+{
+  CSchemaClassInfo *result; // rax
+  ISchemaSystemTypeScope *v4; // rbx
+  CSchemaType *v5; // rax
+
+  result = CDOTA_BuffParticle::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult;
+  if ( CDOTA_BuffParticle::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult == 0 )
+  {
+    v4 = (*(*pSchemaSystem + 112LL))(pSchemaSystem, 0, pBinaryName);
+    CDOTA_BuffParticle::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CDOTA_BuffParticle[0].m_pType = (*(*v4 + 40LL))(v4, 7);
+    CDOTA_BuffParticle::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CDOTA_BuffParticle[1].m_pType = (*(*v4 + 40LL))(v4, 7);
+    CDOTA_BuffParticle::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CDOTA_BuffParticle[2].m_pType = (*(*v4 + 40LL))(v4, 13);
+    CDOTA_BuffParticle::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CDOTA_BuffParticle[3].m_pType = (*(*v4 + 40LL))(v4, 13);
+    CDOTA_BuffParticle::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CDOTA_BuffParticle[4].m_pType = (*(*v4 + 40LL))(v4, 13);
+    v5 = (*(*v4 + 40LL))(v4, 13);
+    CDOTA_BuffParticle::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CDOTA_BuffParticle.m_pOuterTypeScope = v4;
+    CDOTA_BuffParticle::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CDOTA_BuffParticle[5].m_pType = v5;
+    CDOTA_BuffParticle::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult = &CDOTA_BuffParticle::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CDOTA_BuffParticle;
+    (*(*v4 + 264LL))(
+      v4,
+      &CDOTA_BuffParticle::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CDOTA_BuffParticle);
+    return CDOTA_BuffParticle::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult;
+  }
+  return result;
+}
+
+
+// CDOTA_BuffParticle::Schema_VerifyBindingIsRegistered  (line 1464, @0x0000000002e2b9e0, libserver.so)
+void __cdecl CDOTA_BuffParticle::Schema_VerifyBindingIsRegistered()
+{
+  ;
+}
+
+
+// CDOTA_Buff::Schema_CompileTimeVerificationFunction  (line 1472, @0x0000000002e2b9f0, libserver.so)
+void __fastcall CDOTA_Buff::Schema_CompileTimeVerificationFunction(CDOTA_Buff *const this)
+{
+  ;
+}
+
+
+// CDOTA_Buff::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE  (line 1512, @0x0000000002e2ba00, libserver.so)  // inlines: Get, SchemaBinding_SchemaTypeOfMemberVarByAddr<CDOTA_Buff, CHandle<CBaseEntity> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<CDOTA_Buff, CUtlSymbolLarge>, SchemaBinding_SchemaTypeOfMemberVarByAddr<CDOTA_Buff, CUtlVector<CDOTA_BuffParticle> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<CDOTA_Buff, CUtlVector<CHandle<CBaseEntity> > >, SchemaBinding_SchemaTypeOfMemberVarByAddr<CDOTA_Buff, HSCRIPT__*>, SchemaBinding_SchemaTypeOfMemberVarByAddr<CDOTA_Buff, bool>, SchemaBinding_SchemaTypeOfMemberVarByAddr<CDOTA_Buff, float>, SchemaBinding_SchemaTypeOfMemberVarByAddr<CDOTA_Buff, int>, SchemaBinding_SchemaTypeOfMemberVarByAddr<CDOTA_Buff, short int>, SetTypeScope
+// callers: CDOTA_Modifier_Lua::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE, CSchemaClassBinding<CDOTA_Buff>::Register
+// strings: "CUtlSymbolLarge", "CBaseEntity", "CHandle", "CDOTA_BuffParticle", "CUtlVector"
+// globals: CDOTA_Buff::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitialized, CSchemaManipulator<CUtlSymbolLarge>::StaticAccessor(void)::m, CAtomicManipulator<CUtlSymbolLarge>::Get(void)::val, CSchemaManipulator<CHandle<CBaseEntity>>::StaticAccessor(void)::m, CAtomicManipulator<CHandle<CBaseEntity>>::Get(void)::val, CSchemaManipulator<CUtlVector<CDOTA_BuffParticle,CUtlMemory<CDOTA_BuffParticle,int>>>::StaticAccessor(void)::m, CAtomicManipulator<CUtlVector<CDOTA_BuffParticle,CUtlMemory<CDOTA_BuffParticle,int>>>::Get(void)::val, CSchemaManipulator<CUtlVector<CHandle<CBaseEntity>,CUtlMemory<CHandle<CBaseEntity>,int>>>::StaticAccessor(void)::m (12 total)
+CSchemaClassInfo *__fastcall CDOTA_Buff::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        const char *pProjectName)
+{
+  CSchemaClassInfo *result; // rax
+  ISchemaSystemTypeScope *v4; // rbx
+  __int64 (__fastcall *v5)(ISchemaSystemTypeScope *, const char *, __int64, __int64 (__fastcall ***)(), __int64 (__fastcall ***)(), __int64); // r12
+  __int64 v6; // rax
+  __int64 (__fastcall *v7)(ISchemaSystemTypeScope *, const char *, __int64, __int64 (__fastcall ***)(), __int64 (__fastcall ***)(), __int64); // r12
+  __int64 v8; // rax
+  __int64 (__fastcall *v9)(ISchemaSystemTypeScope *, const char *, __int64, __int64 (__fastcall ***)(), __int64 (__fastcall ***)(), __int64); // r12
+  __int64 v10; // rax
+  __int64 (__fastcall *v11)(ISchemaSystemTypeScope *, const char *, __int64, __int64 (__fastcall ***)(), __int64 (__fastcall ***)(), __int64); // r12
+  __int64 v12; // rax
+  __int64 (__fastcall *v13)(ISchemaSystemTypeScope *, const char *, __int64, __int64 (__fastcall ***)(), __int64 (__fastcall ***)(), __int64); // r12
+  __int64 v14; // rax
+  __int64 v15; // rax
+  CSchemaType *v16; // rax
+
+  result = CDOTA_Buff::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult;
+  if ( CDOTA_Buff::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult == 0 )
+  {
+    v4 = (*(*pSchemaSystem + 112LL))(pSchemaSystem, 0, pBinaryName);
+    CDOTA_Buff::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CDOTA_Buff[0].m_pType = (*(*v4 + 56LL))(v4, "CUtlSymbolLarge", 3007, CAtomicManipulator<CUtlSymbolLarge>::Get(void)::val, &CSchemaManipulator<CUtlSymbolLarge>::StaticAccessor(void)::m);
+    CDOTA_Buff::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CDOTA_Buff[1].m_pType = (*(*v4 + 56LL))(v4, "CUtlSymbolLarge", 3007, CAtomicManipulator<CUtlSymbolLarge>::Get(void)::val, &CSchemaManipulator<CUtlSymbolLarge>::StaticAccessor(void)::m);
+    CDOTA_Buff::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CDOTA_Buff[2].m_pType = (*(*v4 + 56LL))(v4, "CUtlSymbolLarge", 3007, CAtomicManipulator<CUtlSymbolLarge>::Get(void)::val, &CSchemaManipulator<CUtlSymbolLarge>::StaticAccessor(void)::m);
+    CDOTA_Buff::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CDOTA_Buff[3].m_pType = (*(*v4 + 40LL))(v4, 7);
+    CDOTA_Buff::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CDOTA_Buff[4].m_pType = (*(*v4 + 40LL))(v4, 7);
+    CDOTA_Buff::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CDOTA_Buff[5].m_pType = (*(*v4 + 40LL))(v4, 7);
+    CDOTA_Buff::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CDOTA_Buff[6].m_pType = (*(*v4 + 40LL))(v4, 11);
+    CDOTA_Buff::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CDOTA_Buff[7].m_pType = (*(*v4 + 40LL))(v4, 7);
+    CDOTA_Buff::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CDOTA_Buff[8].m_pType = (*(*v4 + 40LL))(v4, 11);
+    CDOTA_Buff::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CDOTA_Buff[9].m_pType = (*(*v4 + 40LL))(v4, 11);
+    CDOTA_Buff::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CDOTA_Buff[10].m_pType = (*(*v4 + 40LL))(v4, 11);
+    v5 = *(*v4 + 64LL);
+    v6 = (*(*v4 + 88LL))(v4, "CBaseEntity");
+    CDOTA_Buff::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CDOTA_Buff[11].m_pType = v5(v4, "CHandle", 5003, CAtomicManipulator<CHandle<CBaseEntity>>::Get(void)::val, &CSchemaManipulator<CHandle<CBaseEntity>>::StaticAccessor(void)::m, v6);
+    v7 = *(*v4 + 64LL);
+    v8 = (*(*v4 + 88LL))(v4, "CBaseEntity");
+    CDOTA_Buff::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CDOTA_Buff[12].m_pType = v7(v4, "CHandle", 5003, CAtomicManipulator<CHandle<CBaseEntity>>::Get(void)::val, &CSchemaManipulator<CHandle<CBaseEntity>>::StaticAccessor(void)::m, v8);
+    v9 = *(*v4 + 64LL);
+    v10 = (*(*v4 + 88LL))(v4, "CBaseEntity");
+    CDOTA_Buff::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CDOTA_Buff[13].m_pType = v9(v4, "CHandle", 5003, CAtomicManipulator<CHandle<CBaseEntity>>::Get(void)::val, &CSchemaManipulator<CHandle<CBaseEntity>>::StaticAccessor(void)::m, v10);
+    CDOTA_Buff::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CDOTA_Buff[14].m_pType = (*(*v4 + 40LL))(v4, 7);
+    CDOTA_Buff::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CDOTA_Buff[15].m_pType = (*(*v4 + 40LL))(v4, 7);
+    CDOTA_Buff::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CDOTA_Buff[16].m_pType = (*(*v4 + 40LL))(v4, 5);
+    CDOTA_Buff::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CDOTA_Buff[17].m_pType = (*(*v4 + 40LL))(v4, 5);
+    CDOTA_Buff::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CDOTA_Buff[18].m_pType = (*(*v4 + 40LL))(v4, 7);
+    CDOTA_Buff::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CDOTA_Buff[19].m_pType = (*(*v4 + 40LL))(v4, 7);
+    CDOTA_Buff::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CDOTA_Buff[20].m_pType = (*(*v4 + 40LL))(v4, 7);
+    CDOTA_Buff::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CDOTA_Buff[21].m_pType = (*(*v4 + 40LL))(v4, 7);
+    CDOTA_Buff::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CDOTA_Buff[22].m_pType = (*(*v4 + 40LL))(v4, 5);
+    CDOTA_Buff::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CDOTA_Buff[23].m_pType = (*(*v4 + 112LL))(v4, 1);
+    CDOTA_Buff::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CDOTA_Buff[24].m_pType = (*(*v4 + 112LL))(v4, 1);
+    CDOTA_Buff::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CDOTA_Buff[25].m_pType = (*(*v4 + 112LL))(v4, 1);
+    CDOTA_Buff::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CDOTA_Buff[26].m_pType = (*(*v4 + 112LL))(v4, 1);
+    CDOTA_Buff::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CDOTA_Buff[27].m_pType = (*(*v4 + 112LL))(v4, 1);
+    CDOTA_Buff::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CDOTA_Buff[28].m_pType = (*(*v4 + 40LL))(v4, 13);
+    CDOTA_Buff::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CDOTA_Buff[29].m_pType = (*(*v4 + 40LL))(v4, 11);
+    CDOTA_Buff::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CDOTA_Buff[30].m_pType = (*(*v4 + 40LL))(v4, 11);
+    CDOTA_Buff::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CDOTA_Buff[31].m_pType = (*(*v4 + 40LL))(v4, 11);
+    CDOTA_Buff::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CDOTA_Buff[32].m_pType = (*(*v4 + 40LL))(v4, 11);
+    CDOTA_Buff::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CDOTA_Buff[33].m_pType = (*(*v4 + 40LL))(v4, 11);
+    v11 = *(*v4 + 64LL);
+    v12 = (*(*v4 + 88LL))(v4, "CDOTA_BuffParticle");
+    CDOTA_Buff::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CDOTA_Buff[34].m_pType = v11(v4, "CUtlVector", 3002, &CAtomicManipulator<CUtlVector<CDOTA_BuffParticle,CUtlMemory<CDOTA_BuffParticle,int>>>::Get(void)::val, CSchemaManipulator<CUtlVector<CDOTA_BuffParticle,CUtlMemory<CDOTA_BuffParticle,int>>>::StaticAccessor(void)::m, v12);
+    v13 = *(*v4 + 64LL);
+    v14 = (*(*v4 + 88LL))(v4, "CBaseEntity");
+    v15 = v13(
+            v4,
+            "CHandle",
+            5003,
+            CAtomicManipulator<CHandle<CBaseEntity>>::Get(void)::val,
+            &CSchemaManipulator<CHandle<CBaseEntity>>::StaticAccessor(void)::m,
+            v14);
+    CDOTA_Buff::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CDOTA_Buff[35].m_pType = v13(v4, "CUtlVector", 3002, &CAtomicManipulator<CUtlVector<CHandle<CBaseEntity>,CUtlMemory<CHandle<CBaseEntity>,int>>>::Get(void)::val, CSchemaManipulator<CUtlVector<CHandle<CBaseEntity>,CUtlMemory<CHandle<CBaseEntity>,int>>>::StaticAccessor(void)::m, v15);
+    v16 = (*(*v4 + 56LL))(
+            v4,
+            "HSCRIPT",
+            5001,
+            CAtomicManipulator<HSCRIPT__ *>::Get(void)::val,
+            CSchemaManipulator<HSCRIPT__ *>::StaticAccessor(void)::m);
+    CDOTA_Buff::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CDOTA_Buff.m_pOuterTypeScope = v4;
+    CDOTA_Buff::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CDOTA_Buff[36].m_pType = v16;
+    CDOTA_Buff::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult = &CDOTA_Buff::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CDOTA_Buff;
+    (*(*v4 + 264LL))(
+      v4,
+      &CDOTA_Buff::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CDOTA_Buff);
+    return CDOTA_Buff::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult;
+  }
+  return result;
+}
+
+
+// CDOTA_Buff::Schema_VerifyBindingIsRegistered  (line 1620, @0x0000000002e2beb0, libserver.so)
+// callers: CDOTA_Buff::Schema_DynamicBinding
+void __cdecl CDOTA_Buff::Schema_VerifyBindingIsRegistered()
+{
+  ;
+}
+
+
+// GetScriptDesc<CDOTA_Buff>  (line 1632, @0x0000000002e2c1b0, libserver.so)  // inlines: AddParameterType, AddToTail, CUtlMemory, CUtlVector, CUtlVectorBase, Construct<ScriptFunctionBinding_t>, Element, Finalize, GrowMemory, ScriptClassDesc_t, ScriptDeduceFunctionSignature<CDOTA_Buff*, CDOTA_Buff, HSCRIPT__*>, ScriptDeduceFunctionSignature<CDOTA_Buff*, CDOTA_Buff, char const*>, ScriptDeduceFunctionSignature<CDOTA_Buff*, CDOTA_Buff, float>, ScriptDeduceFunctionSignature<CDOTA_Buff*, CDOTA_Buff, int>, ScriptDeduceFunctionSignature<CDOTA_Buff*, CDOTA_Buff, void, float, bool>, ScriptDeduceFunctionSignature<CDOTA_Buff*, CDOTA_Buff, void, float>, ScriptDeduceFunctionSignature<CDOTA_Buff*, CDOTA_Buff, void, int, bool, bool, int, bool, bool>, ScriptDeduceFunctionSignature<CDOTA_Buff*, CDOTA_Buff, void, int>, ScriptDeduceFunctionSignature<CDOTA_Buff*, CDOTA_Buff, void>, ScriptFuncDescriptor_t, ScriptFunctionBinding_t, SetDescription, SetFunctionName, SetPackedParameterNames, SetReturnType, SetScriptName, operator[]
+// calls: operator new, CUtlVectorBase<ScriptFunctionBinding_t, CUtlMemory<ScriptFunctionBinding_t, int> >::AddToTail, CUtlMemory<ScriptFunctionBinding_t, int>::Grow
+// callers: GetScriptDesc<CDOTA_Modifier_Lua>, CDOTAVScriptGameSystem::InstallScriptBindings, CDOTA_Buff::GetScriptDesc, CDOTA_Buff::InitScriptDesc, CDOTA_Buff::GetClassScriptDesc
+// strings: "A modifier.", "CDOTA_Buff", "GetName", "GetClass", "Run all associated destroy functions, then remove the modifier.", "Script_Destroy" (31 total)
+// globals: g_pCDOTA_Buff_ScriptDesc, CMemberScriptBinding0<CDOTA_Buff *,char const* (CDOTA_Buff::*)(void),char const*>::Call(void *,void *,CVariantBase<CVariantDefaultAllocator> *,int,CVariantBase<, CMemberScriptBinding0<CDOTA_Buff *,void (CDOTA_Buff::*)(void),void>::Call(void *,void *,CVariantBase<CVariantDefaultAllocator> *,int,CVariantBase<CVariantDefaul, CMemberScriptBinding0<CDOTA_Buff *,int (CDOTA_Buff::*)(void),int>::Call(void *,void *,CVariantBase<CVariantDefaultAllocator> *,int,CVariantBase<CVariantDefaultA, CMemberScriptBinding1<CDOTA_Buff *,void (CDOTA_Buff::*)(int),void,int>::Call(void *,void *,CVariantBase<CVariantDefaultAllocator> *,int,CVariantBase<CVariantDef, s_CDOTA_Buff_SetStackCount_packed_arg_names, CMemberScriptBinding0<CDOTA_Buff *,float (CDOTA_Buff::*)(void),float>::Call(void *,void *,CVariantBase<CVariantDefaultAllocator> *,int,CVariantBase<CVariantDefa, CMemberScriptBinding1<CDOTA_Buff *,void (CDOTA_Buff::*)(float),void,float>::Call(void *,void *,CVariantBase<CVariantDefaultAllocator> *,int,CVariantBase<CVarian (19 total)
+ScriptClassDesc_t *__fastcall GetScriptDesc<CDOTA_Buff>(CDOTA_Buff *pScriptDescObjectInstance)
+{
+  ScriptClassDesc_t *result; // rax
+  ScriptClassDesc_t *v2; // r12
+  CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int> > *p_m_FunctionBindings; // rbx
+  __int64 v4; // rcx
+  int v5; // eax
+  int v6; // eax
+  char v7; // dl
+  char v8; // di
+  __int64 m_Size; // r13
+  __int64 v10; // rax
+  __int64 v11; // rcx
+  int v12; // eax
+  int v13; // eax
+  char v14; // dl
+  char v15; // di
+  __int64 v16; // rcx
+  int v17; // eax
+  int v18; // eax
+  char v19; // dl
+  char v20; // di
+  __int64 v21; // rcx
+  int v22; // eax
+  int v23; // eax
+  char v24; // dl
+  char v25; // di
+  __int64 v26; // rcx
+  int v27; // eax
+  int v28; // eax
+  char v29; // dl
+  char v30; // di
+  __int64 v31; // rcx
+  int v32; // eax
+  int v33; // eax
+  char v34; // dl
+  char v35; // di
+  __int64 v36; // rcx
+  char v37; // al
+  __int64 v38; // rdx
+  int v39; // eax
+  char v40; // dl
+  char v41; // di
+  __int64 v42; // rcx
+  int v43; // eax
+  int v44; // eax
+  char v45; // dl
+  char v46; // di
+  __int64 v47; // rcx
+  int v48; // eax
+  int v49; // eax
+  char v50; // dl
+  char v51; // di
+  __int64 v52; // rcx
+  int v53; // eax
+  int v54; // eax
+  char v55; // dl
+  char v56; // di
+  __int64 v57; // rcx
+  int v58; // eax
+  int v59; // eax
+  char v60; // dl
+  char v61; // di
+  __int64 v62; // rcx
+  int v63; // edx
+  int v64; // edx
+  char v65; // al
+  char v66; // di
+  __int64 v67; // rcx
+  char v68; // dl
+  __int64 v69; // rax
+  int v70; // edx
+  char v71; // al
+  char v72; // di
+  __int64 v73; // rcx
+  char v74; // dl
+  char v75; // al
+  int v76; // edx
+  char v77; // al
+  char v78; // di
+  __int64 v79; // rcx
+  char v80; // dl
+  char v81; // al
+  int v82; // edx
+  char v83; // al
+  char v84; // di
+  __int64 v85; // rcx
+  int v86; // edx
+  int v87; // edx
+  char v88; // al
+  char v89; // di
+  __int64 v90; // rcx
+  int v91; // edx
+  int v92; // edx
+  char v93; // al
+  char v94; // di
+  __int64 v95; // rcx
+  int v96; // edx
+  int v97; // edx
+  char v98; // al
+  char v99; // di
+  __int64 v100; // rax
+  int v101; // edx
+  int v102; // edx
+  char v103; // cl
+  __int64 v104; // rax
+  int v105; // edx
+  int v106; // edx
+  char v107; // cl
+
+  result = g_pCDOTA_Buff_ScriptDesc;
+  if ( g_pCDOTA_Buff_ScriptDesc == 0 )
+  {
+    v2 = operator new(0x50u);
+    v2->m_pBaseDesc = 0;
+    v2->m_FunctionBindings.m_Size = 0;
+    p_m_FunctionBindings = &v2->m_FunctionBindings;
+    v2->m_FunctionBindings.m_Memory.m_pMemory = 0;
+    v2->m_FunctionBindings.m_Memory.m_nAllocationCount = 0;
+    v2->m_FunctionBindings.m_Memory.m_nGrowSize = 0;
+    v2->m_pfnConstruct = 0;
+    v2->m_pfnDestruct = 0;
+    v2->pHelper = 0;
+    g_pCDOTA_Buff_ScriptDesc = v2;
+    v2->m_pszDescription = "A modifier.";
+    v2->m_pszScriptName = "CDOTA_Buff";
+    v2->m_pszClassname = "CDOTA_Buff";
+    v4 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(&v2->m_FunctionBindings)];
+    *(v4 + 24) = 30;
+    *(v4 + 16) = "";
+    *v4 = "GetName";
+    *(v4 + 8) = "GetName";
+    v5 = *(v4 + 26);
+    *(v4 + 25) = 0;
+    v6 = v5 - 1;
+    if ( v6 >= 0 && *(v4 + v6 + 27) == 32 )
+    {
+      v7 = 1;
+      do
+      {
+        --v6;
+        v8 = v7;
+        if ( v6 == -1 )
+        {
+          *(v4 + 25) = v7;
+          goto LABEL_8;
+        }
+        ++v7;
+      }
+      while ( *(v4 + v6 + 27) == 32 );
+      *(v4 + 25) = v8;
+    }
+LABEL_8:
+    *(v4 + 64) = 1;
+    *(v4 + 48) = CMemberScriptBinding0<CDOTA_Buff *,char const* (CDOTA_Buff::*)(void),char const*>::Call;
+    *(v4 + 56) = CDOTA_Buff::GetName;
+    m_Size = v2->m_FunctionBindings.m_Size;
+    if ( m_Size == v2->m_FunctionBindings.m_Memory.m_nAllocationCount )
+      CUtlMemory<ScriptFunctionBinding_t,int>::Grow(&v2->m_FunctionBindings.m_Memory, 1);
+    ++v2->m_FunctionBindings.m_Size;
+    v10 = &v2->m_FunctionBindings.m_Memory.m_pMemory[m_Size];
+    if ( v10 != 0 )
+    {
+      *v10 = 0;
+      *(v10 + 8) = 0;
+      *(v10 + 16) = 0;
+      *(v10 + 24) = 29;
+      *(v10 + 25) = -1;
+      *(v10 + 26) = 0;
+      *(v10 + 40) = 0;
+      v11 = &v2->m_FunctionBindings.m_Memory.m_pMemory[m_Size];
+    }
+    else
+    {
+      v11 = 0;
+    }
+    *(v11 + 24) = 30;
+    *(v11 + 16) = "";
+    *v11 = "GetClass";
+    *(v11 + 8) = "GetClass";
+    v12 = *(v11 + 26);
+    *(v11 + 25) = 0;
+    v13 = v12 - 1;
+    if ( v13 >= 0 && *(v11 + v13 + 27) == 32 )
+    {
+      v14 = 1;
+      do
+      {
+        --v13;
+        v15 = v14;
+        if ( v13 == -1 )
+        {
+          *(v11 + 25) = v14;
+          goto LABEL_18;
+        }
+        ++v14;
+      }
+      while ( *(v11 + v13 + 27) == 32 );
+      *(v11 + 25) = v15;
+    }
+LABEL_18:
+    *(v11 + 64) = 1;
+    *(v11 + 48) = CMemberScriptBinding0<CDOTA_Buff *,char const* (CDOTA_Buff::*)(void),char const*>::Call;
+    *(v11 + 56) = CDOTA_Buff::GetClass;
+    v16 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(p_m_FunctionBindings)];
+    *(v16 + 24) = 0;
+    *(v16 + 16) = "Run all associated destroy functions, then remove the modifier.";
+    *v16 = "Destroy";
+    *(v16 + 8) = "Script_Destroy";
+    v17 = *(v16 + 26);
+    *(v16 + 25) = 0;
+    v18 = v17 - 1;
+    if ( v18 >= 0 && *(v16 + v18 + 27) == 32 )
+    {
+      v19 = 1;
+      do
+      {
+        --v18;
+        v20 = v19;
+        if ( v18 == -1 )
+        {
+          *(v16 + 25) = v19;
+          goto LABEL_24;
+        }
+        ++v19;
+      }
+      while ( *(v16 + v18 + 27) == 32 );
+      *(v16 + 25) = v20;
+    }
+LABEL_24:
+    *(v16 + 64) = 1;
+    *(v16 + 48) = CMemberScriptBinding0<CDOTA_Buff *,void (CDOTA_Buff::*)(void),void>::Call;
+    *(v16 + 56) = CDOTA_Buff::Script_Destroy;
+    v21 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(p_m_FunctionBindings)];
+    *(v21 + 24) = 0;
+    *(v21 + 16) = "Increase this modifier's stack count by 1.";
+    *v21 = "IncrementStackCount";
+    *(v21 + 8) = "IncrementStackCount";
+    v22 = *(v21 + 26);
+    *(v21 + 25) = 0;
+    v23 = v22 - 1;
+    if ( v23 >= 0 && *(v21 + v23 + 27) == 32 )
+    {
+      v24 = 1;
+      do
+      {
+        --v23;
+        v25 = v24;
+        if ( v23 == -1 )
+        {
+          *(v21 + 25) = v24;
+          goto LABEL_30;
+        }
+        ++v24;
+      }
+      while ( *(v21 + v23 + 27) == 32 );
+      *(v21 + 25) = v25;
+    }
+LABEL_30:
+    *(v21 + 56) = 201;
+    *(v21 + 48) = CMemberScriptBinding0<CDOTA_Buff *,void (CDOTA_Buff::*)(void),void>::Call;
+    *(v21 + 64) = 1;
+    v26 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(p_m_FunctionBindings)];
+    *(v26 + 24) = 0;
+    *(v26 + 16) = "Decrease this modifier's stack count by 1.";
+    *v26 = "DecrementStackCount";
+    *(v26 + 8) = "DecrementStackCount";
+    v27 = *(v26 + 26);
+    *(v26 + 25) = 0;
+    v28 = v27 - 1;
+    if ( v28 >= 0 && *(v26 + v28 + 27) == 32 )
+    {
+      v29 = 1;
+      do
+      {
+        --v28;
+        v30 = v29;
+        if ( v28 == -1 )
+        {
+          *(v26 + 25) = v29;
+          goto LABEL_36;
+        }
+        ++v29;
+      }
+      while ( *(v26 + v28 + 27) == 32 );
+      *(v26 + 25) = v30;
+    }
+LABEL_36:
+    *(v26 + 56) = 209;
+    *(v26 + 48) = CMemberScriptBinding0<CDOTA_Buff *,void (CDOTA_Buff::*)(void),void>::Call;
+    *(v26 + 64) = 1;
+    v31 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(p_m_FunctionBindings)];
+    *(v31 + 24) = 5;
+    *(v31 + 16) = "";
+    *v31 = "GetStackCount";
+    *(v31 + 8) = "GetStackCount";
+    v32 = *(v31 + 26);
+    *(v31 + 25) = 0;
+    v33 = v32 - 1;
+    if ( v33 >= 0 && *(v31 + v33 + 27) == 32 )
+    {
+      v34 = 1;
+      do
+      {
+        --v33;
+        v35 = v34;
+        if ( v33 == -1 )
+        {
+          *(v31 + 25) = v34;
+          goto LABEL_42;
+        }
+        ++v34;
+      }
+      while ( *(v31 + v33 + 27) == 32 );
+      *(v31 + 25) = v35;
+    }
+LABEL_42:
+    *(v31 + 56) = 217;
+    *(v31 + 48) = CMemberScriptBinding0<CDOTA_Buff *,int (CDOTA_Buff::*)(void),int>::Call;
+    *(v31 + 64) = 1;
+    v36 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(p_m_FunctionBindings)];
+    *(v36 + 24) = 0;
+    *(v36 + 16) = "";
+    *v36 = "SetStackCount";
+    *(v36 + 8) = "SetStackCount";
+    v37 = *(v36 + 26);
+    v38 = v37++;
+    *(v36 + v38 + 27) = 5;
+    *(v36 + 26) = v37;
+    v39 = v37 - 1;
+    *(v36 + 25) = 0;
+    if ( v39 >= 0 && *(v36 + v39 + 27) == 32 )
+    {
+      v40 = 1;
+      do
+      {
+        --v39;
+        v41 = v40;
+        if ( v39 == -1 )
+        {
+          *(v36 + 25) = v40;
+          goto LABEL_48;
+        }
+        ++v40;
+      }
+      while ( *(v36 + v39 + 27) == 32 );
+      *(v36 + 25) = v41;
+    }
+LABEL_48:
+    *(v36 + 56) = 225;
+    *(v36 + 48) = CMemberScriptBinding1<CDOTA_Buff *,void (CDOTA_Buff::*)(int),void,int>::Call;
+    *(v36 + 64) = 1;
+    *(v36 + 40) = s_CDOTA_Buff_SetStackCount_packed_arg_names;
+    v42 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(p_m_FunctionBindings)];
+    *(v42 + 24) = 1;
+    *(v42 + 16) = "";
+    *v42 = "GetDieTime";
+    *(v42 + 8) = "GetDieTime";
+    v43 = *(v42 + 26);
+    *(v42 + 25) = 0;
+    v44 = v43 - 1;
+    if ( v44 >= 0 && *(v42 + v44 + 27) == 32 )
+    {
+      v45 = 1;
+      do
+      {
+        --v44;
+        v46 = v45;
+        if ( v44 == -1 )
+        {
+          *(v42 + 25) = v45;
+          goto LABEL_54;
+        }
+        ++v45;
+      }
+      while ( *(v42 + v44 + 27) == 32 );
+      *(v42 + 25) = v46;
+    }
+LABEL_54:
+    *(v42 + 56) = 241;
+    *(v42 + 48) = CMemberScriptBinding0<CDOTA_Buff *,float (CDOTA_Buff::*)(void),float>::Call;
+    *(v42 + 64) = 1;
+    v47 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(p_m_FunctionBindings)];
+    *(v47 + 24) = 1;
+    *(v47 + 16) = "";
+    *v47 = "GetDuration";
+    *(v47 + 8) = "GetDuration";
+    v48 = *(v47 + 26);
+    *(v47 + 25) = 0;
+    v49 = v48 - 1;
+    if ( v49 >= 0 && *(v47 + v49 + 27) == 32 )
+    {
+      v50 = 1;
+      do
+      {
+        --v49;
+        v51 = v50;
+        if ( v49 == -1 )
+        {
+          *(v47 + 25) = v50;
+          goto LABEL_60;
+        }
+        ++v50;
+      }
+      while ( *(v47 + v49 + 27) == 32 );
+      *(v47 + 25) = v51;
+    }
+LABEL_60:
+    *(v47 + 56) = 249;
+    *(v47 + 48) = CMemberScriptBinding0<CDOTA_Buff *,float (CDOTA_Buff::*)(void),float>::Call;
+    *(v47 + 64) = 1;
+    v52 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(p_m_FunctionBindings)];
+    *(v52 + 24) = 1;
+    *(v52 + 16) = "";
+    *v52 = "GetRemainingTime";
+    *(v52 + 8) = "GetRemainingTime";
+    v53 = *(v52 + 26);
+    *(v52 + 25) = 0;
+    v54 = v53 - 1;
+    if ( v54 >= 0 && *(v52 + v54 + 27) == 32 )
+    {
+      v55 = 1;
+      do
+      {
+        --v54;
+        v56 = v55;
+        if ( v54 == -1 )
+        {
+          *(v52 + 25) = v55;
+          goto LABEL_66;
+        }
+        ++v55;
+      }
+      while ( *(v52 + v54 + 27) == 32 );
+      *(v52 + 25) = v56;
+    }
+LABEL_66:
+    *(v52 + 56) = 265;
+    *(v52 + 48) = CMemberScriptBinding0<CDOTA_Buff *,float (CDOTA_Buff::*)(void),float>::Call;
+    *(v52 + 64) = 1;
+    v57 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(p_m_FunctionBindings)];
+    *(v57 + 24) = 1;
+    *(v57 + 16) = "";
+    *v57 = "GetElapsedTime";
+    *(v57 + 8) = "GetElapsedTime";
+    v58 = *(v57 + 26);
+    *(v57 + 25) = 0;
+    v59 = v58 - 1;
+    if ( v59 >= 0 && *(v57 + v59 + 27) == 32 )
+    {
+      v60 = 1;
+      do
+      {
+        --v59;
+        v61 = v60;
+        if ( v59 == -1 )
+        {
+          *(v57 + 25) = v60;
+          goto LABEL_72;
+        }
+        ++v60;
+      }
+      while ( *(v57 + v59 + 27) == 32 );
+      *(v57 + 25) = v61;
+    }
+LABEL_72:
+    *(v57 + 56) = 273;
+    *(v57 + 48) = CMemberScriptBinding0<CDOTA_Buff *,float (CDOTA_Buff::*)(void),float>::Call;
+    *(v57 + 64) = 1;
+    v62 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(p_m_FunctionBindings)];
+    v63 = *(v62 + 26);
+    *(v62 + 24) = 0;
+    *(v62 + 16) = "Run all associated refresh functions on this modifier as if it was re-applied.";
+    *v62 = "ForceRefresh";
+    *(v62 + 8) = "ForceRefresh";
+    v64 = v63 - 1;
+    *(v62 + 25) = 0;
+    if ( v64 >= 0 && *(v62 + v64 + 27) == 32 )
+    {
+      v65 = 1;
+      do
+      {
+        --v64;
+        v66 = v65;
+        if ( v64 == -1 )
+        {
+          *(v62 + 25) = v65;
+          goto LABEL_78;
+        }
+        ++v65;
+      }
+      while ( *(v62 + v64 + 27) == 32 );
+      *(v62 + 25) = v66;
+    }
+LABEL_78:
+    *(v62 + 64) = 1;
+    *(v62 + 48) = CMemberScriptBinding0<CDOTA_Buff *,void (CDOTA_Buff::*)(void),void>::Call;
+    *(v62 + 56) = CDOTA_Buff::ForceRefresh;
+    v67 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(p_m_FunctionBindings)];
+    v68 = *(v67 + 26);
+    *(v67 + 24) = 0;
+    *(v67 + 16) = "Start this modifier's think function (OnIntervalThink) with the given interval (float).  To stop, call with -1.";
+    *v67 = "StartIntervalThink";
+    *(v67 + 8) = "StartIntervalThink";
+    v69 = v68++;
+    *(v67 + v69 + 27) = 1;
+    *(v67 + 26) = v68;
+    v70 = v68 - 1;
+    *(v67 + 25) = 0;
+    if ( v70 >= 0 && *(v67 + v70 + 27) == 32 )
+    {
+      v71 = 1;
+      do
+      {
+        --v70;
+        v72 = v71;
+        if ( v70 == -1 )
+        {
+          *(v67 + 25) = v71;
+          goto LABEL_84;
+        }
+        ++v71;
+      }
+      while ( *(v67 + v70 + 27) == 32 );
+      *(v67 + 25) = v72;
+    }
+LABEL_84:
+    *(v67 + 64) = 1;
+    *(v67 + 48) = CMemberScriptBinding1<CDOTA_Buff *,void (CDOTA_Buff::*)(float),void,float>::Call;
+    *(v67 + 56) = CDOTA_Buff::StartIntervalThink;
+    *(v67 + 40) = s_CDOTA_Buff_StartIntervalThink_packed_arg_names;
+    v73 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(p_m_FunctionBindings)];
+    v74 = *(v73 + 26);
+    *(v73 + 24) = 0;
+    *(v73 + 16) = "(flTime, bInformClients)";
+    *v73 = "SetDuration";
+    *(v73 + 8) = "SetDuration";
+    *(v73 + v74 + 27) = 1;
+    v75 = v74 + 1;
+    v74 += 2;
+    *(v73 + v75 + 27) = 6;
+    *(v73 + 26) = v74;
+    v76 = v74 - 1;
+    *(v73 + 25) = 0;
+    if ( v76 >= 0 && *(v73 + v76 + 27) == 32 )
+    {
+      v77 = 1;
+      do
+      {
+        --v76;
+        v78 = v77;
+        if ( v76 == -1 )
+        {
+          *(v73 + 25) = v77;
+          goto LABEL_90;
+        }
+        ++v77;
+      }
+      while ( *(v73 + v76 + 27) == 32 );
+      *(v73 + 25) = v78;
+    }
+LABEL_90:
+    *(v73 + 56) = 505;
+    *(v73 + 48) = CMemberScriptBinding2<CDOTA_Buff *,void (CDOTA_Buff::*)(float,bool),void,float,bool>::Call;
+    *(v73 + 64) = 1;
+    *(v73 + 40) = s_CDOTA_Buff_SetDuration_packed_arg_names;
+    v79 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(p_m_FunctionBindings)];
+    v80 = *(v79 + 26);
+    *(v79 + 24) = 0;
+    *(v79 + 16) = "(index, bDestroyImmediately, bStatusEffect, priority, bHeroEffect, bOverheadEffect";
+    *v79 = "AddParticle";
+    *(v79 + 8) = "Script_AddParticle";
+    *(v79 + v80 + 27) = 5;
+    *(v79 + (v80 + 1) + 27) = 6;
+    *(v79 + (v80 + 2) + 27) = 6;
+    *(v79 + (v80 + 3) + 27) = 5;
+    *(v79 + (v80 + 4) + 27) = 6;
+    v81 = v80 + 5;
+    v80 += 6;
+    *(v79 + v81 + 27) = 6;
+    *(v79 + 26) = v80;
+    v82 = v80 - 1;
+    *(v79 + 25) = 0;
+    if ( v82 >= 0 && *(v79 + v82 + 27) == 32 )
+    {
+      v83 = 1;
+      do
+      {
+        --v82;
+        v84 = v83;
+        if ( v82 == -1 )
+        {
+          *(v79 + 25) = v83;
+          goto LABEL_96;
+        }
+        ++v83;
+      }
+      while ( *(v79 + v82 + 27) == 32 );
+      *(v79 + 25) = v84;
+    }
+LABEL_96:
+    *(v79 + 64) = 1;
+    *(v79 + 48) = CMemberScriptBinding6<CDOTA_Buff *,void (CDOTA_Buff::*)(int,bool,bool,int,bool,bool),void,int,bool,bool,int,bool,bool>::Call;
+    *(v79 + 56) = CDOTA_Buff::Script_AddParticle;
+    *(v79 + 40) = s_CDOTA_Buff_Script_AddParticle_packed_arg_names;
+    v85 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(p_m_FunctionBindings)];
+    v86 = *(v85 + 26);
+    *(v85 + 24) = 1;
+    *(v85 + 16) = "";
+    *v85 = "GetCreationTime";
+    *(v85 + 8) = "GetCreationTime";
+    v87 = v86 - 1;
+    *(v85 + 25) = 0;
+    if ( v87 >= 0 && *(v85 + v87 + 27) == 32 )
+    {
+      v88 = 1;
+      do
+      {
+        --v87;
+        v89 = v88;
+        if ( v87 == -1 )
+        {
+          *(v85 + 25) = v88;
+          goto LABEL_102;
+        }
+        ++v88;
+      }
+      while ( *(v85 + v87 + 27) == 32 );
+      *(v85 + 25) = v89;
+    }
+LABEL_102:
+    *(v85 + 64) = 1;
+    *(v85 + 48) = CMemberScriptBinding0<CDOTA_Buff *,float (CDOTA_Buff::*)(void),float>::Call;
+    *(v85 + 56) = CDOTA_Buff::GetCreationTime;
+    v90 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(p_m_FunctionBindings)];
+    v91 = *(v90 + 26);
+    *(v90 + 24) = 1;
+    *(v90 + 16) = "Returns aura stickiness (default 0.5)";
+    *v90 = "GetAuraDuration";
+    *(v90 + 8) = "GetAuraDuration";
+    v92 = v91 - 1;
+    *(v90 + 25) = 0;
+    if ( v92 >= 0 && *(v90 + v92 + 27) == 32 )
+    {
+      v93 = 1;
+      do
+      {
+        --v92;
+        v94 = v93;
+        if ( v92 == -1 )
+        {
+          *(v90 + 25) = v93;
+          goto LABEL_108;
+        }
+        ++v93;
+      }
+      while ( *(v90 + v92 + 27) == 32 );
+      *(v90 + 25) = v94;
+    }
+LABEL_108:
+    *(v90 + 56) = 665;
+    *(v90 + 48) = CMemberScriptBinding0<CDOTA_Buff *,float (CDOTA_Buff::*)(void),float>::Call;
+    *(v90 + 64) = 1;
+    v95 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(p_m_FunctionBindings)];
+    v96 = *(v95 + 26);
+    *(v95 + 24) = 31;
+    *(v95 + 16) = "Get the owner of the ability responsible for the modifier.";
+    *v95 = "GetCaster";
+    *(v95 + 8) = "Script_GetCaster";
+    v97 = v96 - 1;
+    *(v95 + 25) = 0;
+    if ( v97 >= 0 && *(v95 + v97 + 27) == 32 )
+    {
+      v98 = 1;
+      do
+      {
+        --v97;
+        v99 = v98;
+        if ( v97 == -1 )
+        {
+          *(v95 + 25) = v98;
+          goto LABEL_114;
+        }
+        ++v98;
+      }
+      while ( *(v95 + v97 + 27) == 32 );
+      *(v95 + 25) = v99;
+    }
+LABEL_114:
+    *(v95 + 64) = 1;
+    *(v95 + 48) = CMemberScriptBinding0<CDOTA_Buff *,HSCRIPT__ * (CDOTA_Buff::*)(void),HSCRIPT__ *>::Call;
+    *(v95 + 56) = CDOTA_Buff::Script_GetCaster;
+    v100 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(p_m_FunctionBindings)];
+    v101 = *(v100 + 26);
+    *(v100 + 16) = "Get the unit the modifier is parented to.";
+    *v100 = "GetParent";
+    *(v100 + 8) = "Script_GetParent";
+    *(v100 + 24) = 31;
+    v102 = v101 - 1;
+    *(v100 + 25) = 0;
+    if ( v102 >= 0 && *(v100 + v102 + 27) == 32 )
+    {
+      v103 = 0;
+      do
+      {
+        --v102;
+        ++v103;
+      }
+      while ( v102 != -1 && *(v100 + v102 + 27) == 32 );
+      *(v100 + 25) = v103;
+    }
+    *(v100 + 64) = 1;
+    *(v100 + 48) = CMemberScriptBinding0<CDOTA_Buff *,HSCRIPT__ * (CDOTA_Buff::*)(void),HSCRIPT__ *>::Call;
+    *(v100 + 56) = CDOTA_Buff::Script_GetParent;
+    v104 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(p_m_FunctionBindings)];
+    v105 = *(v104 + 26);
+    *(v104 + 16) = "Get the ability that generated the modifier.";
+    *v104 = "GetAbility";
+    *(v104 + 8) = "Script_GetAbility";
+    *(v104 + 24) = 31;
+    v106 = v105 - 1;
+    *(v104 + 25) = 0;
+    if ( v106 >= 0 && *(v104 + v106 + 27) == 32 )
+    {
+      v107 = 0;
+      do
+      {
+        --v106;
+        ++v107;
+      }
+      while ( v106 != -1 && *(v104 + v106 + 27) == 32 );
+      *(v104 + 25) = v107;
+    }
+    *(v104 + 64) = 1;
+    *(v104 + 48) = CMemberScriptBinding0<CDOTA_Buff *,HSCRIPT__ * (CDOTA_Buff::*)(void),HSCRIPT__ *>::Call;
+    *(v104 + 56) = CDOTA_Buff::Script_GetAbility;
+    return v2;
+  }
+  return result;
+}
+
+
+// CDOTA_Buff::GetScriptDesc  (line 1632, @0x0000000002e2d000, libserver.so)
+// calls: GetScriptDesc<CDOTA_Buff>
+ScriptClassDesc_t *__fastcall CDOTA_Buff::GetScriptDesc(CDOTA_Buff *const this)
+{
+  return GetScriptDesc<CDOTA_Buff>(this);
+}
+
+
+// CDOTA_Buff::InitScriptDesc  (line 1632, @0x0000000002e2d010, libserver.so)
+// calls: GetScriptDesc<CDOTA_Buff>
+ScriptClassDesc_t *__cdecl CDOTA_Buff::InitScriptDesc()
+{
+  return GetScriptDesc<CDOTA_Buff>(0);
+}
+
+
+// CDOTA_Buff::GetClassScriptDesc  (line 1632, @0x0000000002e2d020, libserver.so)
+// calls: GetScriptDesc<CDOTA_Buff>
+// callers: ToBuff
+ScriptClassDesc_t *__cdecl CDOTA_Buff::GetClassScriptDesc()
+{
+  return GetScriptDesc<CDOTA_Buff>(0);
+}
+
+
+// LocalRegisterSchemaModule<ArbitraryTemplateParameter_server_dota_modifier_buff_h>  (line 1659, @0x0000000002e2bec0, libserver.so)  // inlines: Call, Get
+// callers: RegisterSchemaModule_dota_modifier_buff_h
+// strings: "modifierremove", "modifierpriority", "modifierfunction"
+// globals: CSchemaEnumBinding<modifierremove>::s_pThisModuleBindingPointer, CSchemaEnumBinding<modifierpriority>::s_pThisModuleBindingPointer, CSchemaEnumBinding<modifierfunction>::s_pThisModuleBindingPointer, CModifierParams::s_pSchemaBindingForLocalModule, CDOTA_BuffParticle::s_pSchemaBindingForLocalModule, CDOTA_Buff::s_pSchemaBindingForLocalModule
+void __fastcall LocalRegisterSchemaModule<ArbitraryTemplateParameter_server_dota_modifier_buff_h>(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        SchemaRegistrationPhase_t nRegistrationPhase)
+{
+  if ( nRegistrationPhase != SchemaRegistrationPhase_t::SCHEMA_REGISTRATION_PHASE_ATOMIC_TYPES_AND_ENUMS )
+  {
+    if ( nRegistrationPhase == SchemaRegistrationPhase_t::SCHEMA_REGISTRATION_PHASE_CLASSES )
+    {
+      (*(CModifierParams::s_pSchemaBindingForLocalModule->_vptr_ISchemaBinding + 5))(
+        CModifierParams::s_pSchemaBindingForLocalModule,
+        pSchemaSystem,
+        pBinaryName,
+        "server");
+      (*(CDOTA_BuffParticle::s_pSchemaBindingForLocalModule->_vptr_ISchemaBinding + 5))(
+        CDOTA_BuffParticle::s_pSchemaBindingForLocalModule,
+        pSchemaSystem,
+        pBinaryName,
+        "server");
+      (*(CDOTA_Buff::s_pSchemaBindingForLocalModule->_vptr_ISchemaBinding + 5))(
+        CDOTA_Buff::s_pSchemaBindingForLocalModule,
+        pSchemaSystem,
+        pBinaryName,
+        "server");
+    }
+    ++g_nLinkerHack_SchemaAnchor_RegistrationCountFor_server;
+  }
+  else
+  {
+    (*(CSchemaEnumBinding<modifierremove>::s_pThisModuleBindingPointer->_vptr_ISchemaBinding + 5))(
+      CSchemaEnumBinding<modifierremove>::s_pThisModuleBindingPointer,
+      pSchemaSystem,
+      pBinaryName,
+      "server",
+      "modifierremove");
+    (*(CSchemaEnumBinding<modifierpriority>::s_pThisModuleBindingPointer->_vptr_ISchemaBinding + 5))(
+      CSchemaEnumBinding<modifierpriority>::s_pThisModuleBindingPointer,
+      pSchemaSystem,
+      pBinaryName,
+      "server",
+      "modifierpriority");
+    (*(CSchemaEnumBinding<modifierfunction>::s_pThisModuleBindingPointer->_vptr_ISchemaBinding + 5))(
+      CSchemaEnumBinding<modifierfunction>::s_pThisModuleBindingPointer,
+      pSchemaSystem,
+      pBinaryName,
+      "server",
+      "modifierfunction");
+    ++g_nLinkerHack_SchemaAnchor_RegistrationCountFor_server;
+  }
+}
+
+
+// RegisterSchemaModule_dota_modifier_buff_h  (line 1666, @0x0000000002e2bfd0, libserver.so)
+// calls: LocalRegisterSchemaModule<ArbitraryTemplateParameter_server_dota_modifier_buff_h>
+// callers: CSchemaRegistration_server::RegisterAllBindings
+void __fastcall RegisterSchemaModule_dota_modifier_buff_h(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        SchemaRegistrationPhase_t nRegistrationPhase)
+{
+  LocalRegisterSchemaModule<ArbitraryTemplateParameter_server_dota_modifier_buff_h>(
+    pSchemaSystem,
+    pBinaryName,
+    nRegistrationPhase);
+}
+
+

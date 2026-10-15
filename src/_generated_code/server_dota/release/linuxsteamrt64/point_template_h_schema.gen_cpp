@@ -1,0 +1,653 @@
+
+// ==== functions (decompiled by Hex-Rays; names/signatures from DWARF) ====
+
+// CSchemaEnumBinding<PointTemplateOwnerSpawnGroupType_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE  (line 35, @0x0000000001ffb080, libserver.so)  // inlines: Count, Initialize, SetTypeScope
+// callers: CSchemaEnumBinding<PointTemplateOwnerSpawnGroupType_t>::Register
+// globals: CSchemaEnumBinding<PointTemplateOwnerSpawnGroupType_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem
+CSchemaEnumInfo *__fastcall CSchemaEnumBinding<PointTemplateOwnerSpawnGroupType_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        const char *pProjectName)
+{
+  ISchemaSystemTypeScope *v3; // rax
+  unsigned int v4; // edi
+  SchemaEnumeratorValue_t v5; // r8
+  SchemaEnumeratorValue_t v6; // r9
+  SchemaEnumeratorValue_t *v7; // rdx
+
+  v3 = (*(*pSchemaSystem + 112LL))(pSchemaSystem, 0, pBinaryName);
+  if ( CSchemaEnumBinding<PointTemplateOwnerSpawnGroupType_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_PointTemplateOwnerSpawnGroupType_t.m_Enumerators.m_Data.m_nImplLength != 0 )
+  {
+    v4 = abs32(CSchemaEnumBinding<PointTemplateOwnerSpawnGroupType_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_PointTemplateOwnerSpawnGroupType_t.m_Enumerators.m_Data.m_nImplLength);
+    v5 = *(CSchemaEnumBinding<PointTemplateOwnerSpawnGroupType_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_PointTemplateOwnerSpawnGroupType_t.m_Enumerators.m_Data.m_pImplElements
+         + 2);
+    CSchemaEnumBinding<PointTemplateOwnerSpawnGroupType_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_PointTemplateOwnerSpawnGroupType_t.m_nMinValue = v5;
+    v6 = *(CSchemaEnumBinding<PointTemplateOwnerSpawnGroupType_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_PointTemplateOwnerSpawnGroupType_t.m_Enumerators.m_Data.m_pImplElements
+         + 2);
+    CSchemaEnumBinding<PointTemplateOwnerSpawnGroupType_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_PointTemplateOwnerSpawnGroupType_t.m_nMaxValue = v6;
+    if ( v4 != 1 )
+    {
+      v7 = (CSchemaEnumBinding<PointTemplateOwnerSpawnGroupType_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_PointTemplateOwnerSpawnGroupType_t.m_Enumerators.m_Data.m_pImplElements
+          + 72);
+      do
+      {
+        if ( v5 > *v7 )
+          v5 = *v7;
+        CSchemaEnumBinding<PointTemplateOwnerSpawnGroupType_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_PointTemplateOwnerSpawnGroupType_t.m_nMinValue = v5;
+        if ( v6 < *v7 )
+          v6 = *v7;
+        v7 += 7;
+        CSchemaEnumBinding<PointTemplateOwnerSpawnGroupType_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_PointTemplateOwnerSpawnGroupType_t.m_nMaxValue = v6;
+      }
+      while ( v7 != CSchemaEnumBinding<PointTemplateOwnerSpawnGroupType_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_PointTemplateOwnerSpawnGroupType_t.m_Enumerators.m_Data.m_pImplElements
+                  + 7 * v4
+                  + 2 );
+    }
+  }
+  else
+  {
+    CSchemaEnumBinding<PointTemplateOwnerSpawnGroupType_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_PointTemplateOwnerSpawnGroupType_t.m_nMinValue = 0;
+    CSchemaEnumBinding<PointTemplateOwnerSpawnGroupType_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_PointTemplateOwnerSpawnGroupType_t.m_nMaxValue = 0;
+  }
+  CSchemaEnumBinding<PointTemplateOwnerSpawnGroupType_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_PointTemplateOwnerSpawnGroupType_t.m_pOuterTypeScope = v3;
+  (*(*v3 + 272LL))(
+    v3,
+    &CSchemaEnumBinding<PointTemplateOwnerSpawnGroupType_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_PointTemplateOwnerSpawnGroupType_t);
+  return &CSchemaEnumBinding<PointTemplateOwnerSpawnGroupType_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_PointTemplateOwnerSpawnGroupType_t;
+}
+
+
+// CSchemaEnumBinding<PointTemplateClientOnlyEntityBehavior_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE  (line 47, @0x0000000001ffb160, libserver.so)  // inlines: Count, Initialize, SetTypeScope
+// callers: CSchemaEnumBinding<PointTemplateClientOnlyEntityBehavior_t>::Register
+// globals: CSchemaEnumBinding<PointTemplateClientOnlyEntityBehavior_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaS
+CSchemaEnumInfo *__fastcall CSchemaEnumBinding<PointTemplateClientOnlyEntityBehavior_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        const char *pProjectName)
+{
+  ISchemaSystemTypeScope *v3; // rax
+  unsigned int v4; // edi
+  SchemaEnumeratorValue_t v5; // r8
+  SchemaEnumeratorValue_t v6; // r9
+  SchemaEnumeratorValue_t *v7; // rdx
+
+  v3 = (*(*pSchemaSystem + 112LL))(pSchemaSystem, 0, pBinaryName);
+  if ( CSchemaEnumBinding<PointTemplateClientOnlyEntityBehavior_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_PointTemplateClientOnlyEntityBehavior_t.m_Enumerators.m_Data.m_nImplLength != 0 )
+  {
+    v4 = abs32(CSchemaEnumBinding<PointTemplateClientOnlyEntityBehavior_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_PointTemplateClientOnlyEntityBehavior_t.m_Enumerators.m_Data.m_nImplLength);
+    v5 = *(CSchemaEnumBinding<PointTemplateClientOnlyEntityBehavior_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_PointTemplateClientOnlyEntityBehavior_t.m_Enumerators.m_Data.m_pImplElements
+         + 2);
+    CSchemaEnumBinding<PointTemplateClientOnlyEntityBehavior_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_PointTemplateClientOnlyEntityBehavior_t.m_nMinValue = v5;
+    v6 = *(CSchemaEnumBinding<PointTemplateClientOnlyEntityBehavior_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_PointTemplateClientOnlyEntityBehavior_t.m_Enumerators.m_Data.m_pImplElements
+         + 2);
+    CSchemaEnumBinding<PointTemplateClientOnlyEntityBehavior_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_PointTemplateClientOnlyEntityBehavior_t.m_nMaxValue = v6;
+    if ( v4 != 1 )
+    {
+      v7 = (CSchemaEnumBinding<PointTemplateClientOnlyEntityBehavior_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_PointTemplateClientOnlyEntityBehavior_t.m_Enumerators.m_Data.m_pImplElements
+          + 72);
+      do
+      {
+        if ( v5 > *v7 )
+          v5 = *v7;
+        CSchemaEnumBinding<PointTemplateClientOnlyEntityBehavior_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_PointTemplateClientOnlyEntityBehavior_t.m_nMinValue = v5;
+        if ( v6 < *v7 )
+          v6 = *v7;
+        v7 += 7;
+        CSchemaEnumBinding<PointTemplateClientOnlyEntityBehavior_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_PointTemplateClientOnlyEntityBehavior_t.m_nMaxValue = v6;
+      }
+      while ( v7 != CSchemaEnumBinding<PointTemplateClientOnlyEntityBehavior_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_PointTemplateClientOnlyEntityBehavior_t.m_Enumerators.m_Data.m_pImplElements
+                  + 7 * v4
+                  + 2 );
+    }
+  }
+  else
+  {
+    CSchemaEnumBinding<PointTemplateClientOnlyEntityBehavior_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_PointTemplateClientOnlyEntityBehavior_t.m_nMinValue = 0;
+    CSchemaEnumBinding<PointTemplateClientOnlyEntityBehavior_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_PointTemplateClientOnlyEntityBehavior_t.m_nMaxValue = 0;
+  }
+  CSchemaEnumBinding<PointTemplateClientOnlyEntityBehavior_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_PointTemplateClientOnlyEntityBehavior_t.m_pOuterTypeScope = v3;
+  (*(*v3 + 272LL))(
+    v3,
+    &CSchemaEnumBinding<PointTemplateClientOnlyEntityBehavior_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_PointTemplateClientOnlyEntityBehavior_t);
+  return &CSchemaEnumBinding<PointTemplateClientOnlyEntityBehavior_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_PointTemplateClientOnlyEntityBehavior_t;
+}
+
+
+// CPointTemplate::CEntityInstanceEntityClass::Schema_CompileTimeVerificationFunction  (line 58, @0x0000000001ffb240, libserver.so)
+void __fastcall CPointTemplate::CEntityInstanceEntityClass::Schema_CompileTimeVerificationFunction(
+        CPointTemplate::CEntityInstanceEntityClass *const this)
+{
+  ;
+}
+
+
+// CPointTemplate::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE  (line 61, @0x0000000001ff6db0, libserver.so)  // inlines: Call, Get, SetTypeScope
+// calls: CLogicalEntity::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE
+// callers: CSchemaNonConstructibleClassBinding<CPointTemplate::CEntityInstanceEntityClass>::Register, CPointTemplate::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE, CPointTemplate::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE
+// globals: CPointTemplate::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char con
+CSchemaClassInfo *__fastcall CPointTemplate::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        const char *pProjectName)
+{
+  ISchemaSystemTypeScope *v6; // r14
+  CSchemaClassInfo *v7; // rax
+
+  v6 = (*(*pSchemaSystem + 112LL))(pSchemaSystem, 1, pBinaryName);
+  (*(CLogicalEntity::CEntityInstanceEntityClass::s_pSchemaBindingForLocalModule->_vptr_ISchemaBinding + 5))(
+    CLogicalEntity::CEntityInstanceEntityClass::s_pSchemaBindingForLocalModule,
+    pSchemaSystem,
+    pBinaryName,
+    pProjectName);
+  v7 = CLogicalEntity::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+         pSchemaSystem,
+         pBinaryName,
+         pProjectName);
+  CPointTemplate::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CPointTemplate_CEntityInstanceEntityClass.m_pOuterTypeScope = v6;
+  CPointTemplate::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassBases_CPointTemplate_CEntityInstanceEntityClass[0].m_pClass = v7;
+  CPointTemplate::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult = &CPointTemplate::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CPointTemplate_CEntityInstanceEntityClass;
+  return &CPointTemplate::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CPointTemplate_CEntityInstanceEntityClass;
+}
+
+
+// CPointTemplate::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE  (line 61, @0x0000000001ffb250, libserver.so)
+// calls: CPointTemplate::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE
+// globals: CPointTemplate::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char con
+CSchemaClassInfo *__fastcall CPointTemplate::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        const char *pProjectName)
+{
+  CSchemaClassInfo *result; // rax
+
+  result = CPointTemplate::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult;
+  if ( CPointTemplate::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult == 0 )
+    return CPointTemplate::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+             pSchemaSystem,
+             pBinaryName,
+             pProjectName);
+  return result;
+}
+
+
+// CPointTemplate::CEntityInstanceEntityClass::Schema_VerifyBindingIsRegistered  (line 78, @0x0000000001ffb270, libserver.so)
+void __cdecl CPointTemplate::CEntityInstanceEntityClass::Schema_VerifyBindingIsRegistered()
+{
+  ;
+}
+
+
+// CPointTemplate::Schema_CompileTimeVerificationFunction  (line 86, @0x0000000001ffb280, libserver.so)
+void __fastcall CPointTemplate::Schema_CompileTimeVerificationFunction(CPointTemplate *const this)
+{
+  ;
+}
+
+
+// CPointTemplate::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE  (line 101, @0x0000000001ffb290, libserver.so)  // inlines: Call, Get, RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE, SchemaBinding_SchemaTypeOfMemberVarByAddr<CPointTemplate, CEntityIOOutput>, SchemaBinding_SchemaTypeOfMemberVarByAddr<CPointTemplate, CUtlSymbolLarge>, SchemaBinding_SchemaTypeOfMemberVarByAddr<CPointTemplate, CUtlVector<CEntityHandle> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<CPointTemplate, CUtlVector<unsigned int> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<CPointTemplate, HSCRIPT__*>, SchemaBinding_SchemaTypeOfMemberVarByAddr<CPointTemplate, PointTemplateClientOnlyEntityBehavior_t>, SchemaBinding_SchemaTypeOfMemberVarByAddr<CPointTemplate, PointTemplateOwnerSpawnGroupType_t>, SchemaBinding_SchemaTypeOfMemberVarByAddr<CPointTemplate, bool>, SchemaBinding_SchemaTypeOfMemberVarByAddr<CPointTemplate, float>, SetTypeScope
+// calls: __cxa_guard_acquire, __cxa_guard_release, CLogicalEntity::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE, CPointTemplate::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE, __cxa_guard_abort, _Unwind_Resume
+// callers: CSchemaNonConstructibleClassBinding<CPointTemplate>::Register
+// strings: "CUtlSymbolLarge", "CEntityIOOutput", "PointTemplateClientOnlyEntityBehavior_t", "PointTemplateOwnerSpawnGroupType_t", "CUtlVector", "CEntityHandle"
+// globals: CPointTemplate::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitial, CSchemaManipulator<CUtlSymbolLarge>::StaticAccessor(void)::m, CAtomicManipulator<CUtlSymbolLarge>::Get(void)::val, CSchemaManipulator<CUtlVector<uint,CUtlMemory<uint,int>>>::StaticAccessor(void)::m, CAtomicManipulator<CUtlVector<uint,CUtlMemory<uint,int>>>::Get(void)::val, CSchemaManipulator<CEntityHandle>::StaticAccessor(void)::m, CAtomicManipulator<CEntityHandle>::Get(void)::val, CSchemaManipulator<CUtlVector<CEntityHandle,CUtlMemory<CEntityHandle,int>>>::StaticAccessor(void)::m (14 total)
+CSchemaClassInfo *__fastcall CPointTemplate::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        const char *pProjectName)
+{
+  CSchemaClassInfo *result; // rax
+  ISchemaSystemTypeScope *v7; // rbx
+  __int64 (__fastcall *v8)(ISchemaSystemTypeScope *, const char *, __int64, __int64 (__fastcall ***)(), __int64 (__fastcall ***)(), __int64); // r15
+  __int64 v9; // rax
+  __int64 (__fastcall *v10)(ISchemaSystemTypeScope *, const char *, __int64, __int64 (__fastcall ***)(), __int64 (__fastcall ***)(), __int64); // r15
+  __int64 v11; // rax
+  CSchemaClassInfo *v12; // rax
+  CSchemaClassInfo *v13; // rax
+
+  result = CPointTemplate::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult;
+  if ( CPointTemplate::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult == 0 )
+  {
+    v7 = (*(*pSchemaSystem + 112LL))(pSchemaSystem, 1, pBinaryName);
+    CPointTemplate::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CPointTemplate[0].m_pType = (*(*v7 + 56LL))(v7, "CUtlSymbolLarge", 3007, CAtomicManipulator<CUtlSymbolLarge>::Get(void)::val, &CSchemaManipulator<CUtlSymbolLarge>::StaticAccessor(void)::m);
+    CPointTemplate::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CPointTemplate[1].m_pType = (*(*v7 + 56LL))(v7, "CUtlSymbolLarge", 3007, CAtomicManipulator<CUtlSymbolLarge>::Get(void)::val, &CSchemaManipulator<CUtlSymbolLarge>::StaticAccessor(void)::m);
+    CPointTemplate::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CPointTemplate[2].m_pType = (*(*v7 + 56LL))(v7, "CUtlSymbolLarge", 3007, CAtomicManipulator<CUtlSymbolLarge>::Get(void)::val, &CSchemaManipulator<CUtlSymbolLarge>::StaticAccessor(void)::m);
+    CPointTemplate::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CPointTemplate[3].m_pType = (*(*v7 + 40LL))(v7, 11);
+    CPointTemplate::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CPointTemplate[4].m_pType = (*(*v7 + 40LL))(v7, 13);
+    CPointTemplate::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CPointTemplate[5].m_pType = (*(*v7 + 88LL))(v7, "CEntityIOOutput");
+    CPointTemplate::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CPointTemplate[6].m_pType = (*(*v7 + 96LL))(v7, "PointTemplateClientOnlyEntityBehavior_t");
+    CPointTemplate::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CPointTemplate[7].m_pType = (*(*v7 + 96LL))(v7, "PointTemplateOwnerSpawnGroupType_t");
+    v8 = *(*v7 + 64LL);
+    v9 = (*(*v7 + 40LL))(v7, 8);
+    CPointTemplate::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CPointTemplate[8].m_pType = v8(v7, "CUtlVector", 3002, &CAtomicManipulator<CUtlVector<unsigned int,CUtlMemory<unsigned int,int>>>::Get(void)::val, CSchemaManipulator<CUtlVector<unsigned int,CUtlMemory<unsigned int,int>>>::StaticAccessor(void)::m, v9);
+    v10 = *(*v7 + 64LL);
+    v11 = (*(*v7 + 56LL))(
+            v7,
+            "CEntityHandle",
+            5000,
+            CAtomicManipulator<CEntityHandle>::Get(void)::val,
+            CSchemaManipulator<CEntityHandle>::StaticAccessor(void)::m);
+    CPointTemplate::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CPointTemplate[9].m_pType = v10(v7, "CUtlVector", 3002, CAtomicManipulator<CUtlVector<CEntityHandle,CUtlMemory<CEntityHandle,int>>>::Get(void)::val, CSchemaManipulator<CUtlVector<CEntityHandle,CUtlMemory<CEntityHandle,int>>>::StaticAccessor(void)::m, v11);
+    CPointTemplate::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CPointTemplate[10].m_pType = (*(*v7 + 56LL))(v7, "HSCRIPT", 5001, CAtomicManipulator<HSCRIPT__ *>::Get(void)::val, CSchemaManipulator<HSCRIPT__ *>::StaticAccessor(void)::m);
+    CPointTemplate::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CPointTemplate[11].m_pType = (*(*v7 + 56LL))(v7, "HSCRIPT", 5001, CAtomicManipulator<HSCRIPT__ *>::Get(void)::val, CSchemaManipulator<HSCRIPT__ *>::StaticAccessor(void)::m);
+    if ( `guard variable for'CPointTemplate::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_NestedClassesOf_CPointTemplate == 0
+      && __cxa_guard_acquire(&`guard variable for'CPointTemplate::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_NestedClassesOf_CPointTemplate) != 0 )
+    {
+      v12 = CPointTemplate::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult;
+      if ( CPointTemplate::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult == 0 )
+        v12 = CPointTemplate::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+                pSchemaSystem,
+                pBinaryName,
+                pProjectName);
+      CPointTemplate::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_NestedClassesOf_CPointTemplate[0] = v12;
+      __cxa_guard_release(&`guard variable for'CPointTemplate::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_NestedClassesOf_CPointTemplate);
+    }
+    (*(CLogicalEntity::s_pSchemaBindingForLocalModule->_vptr_ISchemaBinding + 5))(
+      CLogicalEntity::s_pSchemaBindingForLocalModule,
+      pSchemaSystem,
+      pBinaryName,
+      pProjectName);
+    v13 = CLogicalEntity::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+            pSchemaSystem,
+            pBinaryName,
+            pProjectName);
+    CPointTemplate::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CPointTemplate.m_pOuterTypeScope = v7;
+    CPointTemplate::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassBases_CPointTemplate[0].m_pClass = v13;
+    CPointTemplate::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult = &CPointTemplate::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CPointTemplate;
+    return &CPointTemplate::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CPointTemplate;
+  }
+  return result;
+}
+
+
+// CPointTemplate::Schema_VerifyBindingIsRegistered  (line 191, @0x0000000001ffb550, libserver.so)
+// callers: CPointTemplate::Schema_DynamicBinding
+void __cdecl CPointTemplate::Schema_VerifyBindingIsRegistered()
+{
+  ;
+}
+
+
+// CPointTemplate::SetupEntClassInputs  (line 205, @0x0000000001ffb560, libserver.so)
+// callers: CPointTemplate::CEntityInstanceEntityClass::InitOptionalTables
+void __fastcall CPointTemplate::SetupEntClassInputs(CEntityClass *pComponentInfo)
+{
+  ;
+}
+
+
+// CPointTemplate::SetupEntClassComponentOverrides  (line 211, @0x0000000001ffb570, libserver.so)
+// callers: CPointTemplate::CEntityInstanceEntityClass::InitOptionalTables
+void __fastcall CPointTemplate::SetupEntClassComponentOverrides(CEntityClass *pEntityClass)
+{
+  pEntityClass->m_pComponentOverrides = 0;
+}
+
+
+// GetScriptDesc<CPointTemplate>  (line 218, @0x0000000002001570, libserver.so)  // inlines: AddParameterType, AddToTail, CUtlMemory, CUtlVector, CUtlVectorBase, Construct<ScriptFunctionBinding_t>, Element, Finalize, GrowMemory, ScriptClassDesc_t, ScriptDeduceFunctionSignature<CPointTemplate*, CPointTemplate, HSCRIPT__*>, ScriptDeduceFunctionSignature<CPointTemplate*, CPointTemplate, void, HSCRIPT__*, HSCRIPT__*>, ScriptDeduceFunctionSignature<CPointTemplate*, CPointTemplate, void>, ScriptFuncDescriptor_t, ScriptFunctionBinding_t, SetDescription, SetFunctionName, SetPackedParameterNames, SetReturnType, SetScriptName, operator[]
+// calls: operator new, GetScriptDesc<CBaseEntity>, CUtlMemory<ScriptFunctionBinding_t, int>::Grow
+// callers: CPointTemplate::GetScriptDesc, CPointTemplate::InitScriptDesc, CPointTemplate::GetClassScriptDesc, CPointTemplate::GetEntityClassInternal
+// strings: "point_template", "CPointTemplate", "GetSpawnedEntities() : Get the list of the most recent spawned entities", "ScriptGetSpawnedEntities", "SetSpawnCallback( hCallbackFunc, hCallbackScope, hCallbackData ) : Set a callback for whe, "ScriptSetSpawnCallback" (10 total)
+// globals: g_pCPointTemplate_ScriptDesc, CMemberScriptBinding0<CPointTemplate *,HSCRIPT__ * (CPointTemplate::*)(void),HSCRIPT__ *>::Call(void *,void *,CVariantBase<CVariantDefaultAllocator> *,int,CVari, CMemberScriptBinding2<CPointTemplate *,void (CPointTemplate::*)(HSCRIPT__ *,HSCRIPT__ *),void,HSCRIPT__ *,HSCRIPT__ *>::Call(void *,void *,CVariantBase<CVariant, s_CPointTemplate_ScriptSetSpawnCallback_packed_arg_names, CMemberScriptBinding0<CPointTemplate *,void (CPointTemplate::*)(void),void>::Call(void *,void *,CVariantBase<CVariantDefaultAllocator> *,int,CVariantBase<CVaria
+ScriptClassDesc_t *__fastcall GetScriptDesc<CPointTemplate>(CPointTemplate *pScriptDescObjectInstance)
+{
+  ScriptClassDesc_t *result; // rax
+  ScriptClassDesc_t *v2; // rbx
+  ScriptClassDesc_t *Script; // rdx
+  IScriptInstanceHelper *pHelper; // rax
+  __int64 m_Size; // r12
+  int v6; // eax
+  __int64 v7; // rax
+  __int64 v8; // rcx
+  int v9; // edx
+  int v10; // edx
+  char v11; // al
+  char v12; // di
+  __int64 v13; // r12
+  __int64 v14; // rax
+  __int64 v15; // rcx
+  char v16; // dl
+  char v17; // al
+  int v18; // edx
+  char v19; // al
+  char v20; // di
+  __int64 v21; // r12
+  __int64 v22; // rax
+  __int64 v23; // rcx
+  int v24; // edx
+  int v25; // edx
+  char v26; // al
+  char v27; // di
+  __int64 v28; // r12
+  __int64 v29; // rax
+  __int64 v30; // rcx
+  int v31; // edx
+  int v32; // edx
+  char v33; // al
+  char v34; // di
+
+  result = g_pCPointTemplate_ScriptDesc;
+  if ( g_pCPointTemplate_ScriptDesc == 0 )
+  {
+    v2 = operator new(0x50u);
+    v2->m_pBaseDesc = 0;
+    v2->m_FunctionBindings.m_Size = 0;
+    v2->m_FunctionBindings.m_Memory.m_pMemory = 0;
+    v2->m_FunctionBindings.m_Memory.m_nAllocationCount = 0;
+    v2->m_FunctionBindings.m_Memory.m_nGrowSize = 0;
+    v2->m_pfnConstruct = 0;
+    v2->m_pfnDestruct = 0;
+    v2->pHelper = 0;
+    g_pCPointTemplate_ScriptDesc = v2;
+    v2->m_pszDescription = "point_template";
+    v2->m_pszScriptName = "CPointTemplate";
+    v2->m_pszClassname = "CPointTemplate";
+    Script = GetScriptDesc<CBaseEntity>(0);
+    v2->m_pBaseDesc = Script;
+    if ( Script != 0 )
+    {
+      while ( 1 )
+      {
+        pHelper = Script->pHelper;
+        if ( pHelper != 0 )
+          break;
+        Script = Script->m_pBaseDesc;
+        if ( Script == 0 )
+          goto LABEL_7;
+      }
+      v2->pHelper = pHelper;
+    }
+LABEL_7:
+    m_Size = v2->m_FunctionBindings.m_Size;
+    v6 = v2->m_FunctionBindings.m_Size;
+    if ( m_Size == v2->m_FunctionBindings.m_Memory.m_nAllocationCount )
+    {
+      CUtlMemory<ScriptFunctionBinding_t,int>::Grow(&v2->m_FunctionBindings.m_Memory, 1);
+      v6 = v2->m_FunctionBindings.m_Size;
+    }
+    v2->m_FunctionBindings.m_Size = v6 + 1;
+    v7 = &v2->m_FunctionBindings.m_Memory.m_pMemory[m_Size];
+    if ( v7 != 0 )
+    {
+      *v7 = 0;
+      *(v7 + 8) = 0;
+      *(v7 + 16) = 0;
+      *(v7 + 24) = 29;
+      *(v7 + 25) = -1;
+      *(v7 + 26) = 0;
+      *(v7 + 40) = 0;
+      v8 = &v2->m_FunctionBindings.m_Memory.m_pMemory[m_Size];
+    }
+    else
+    {
+      v8 = 0;
+    }
+    v9 = *(v8 + 26);
+    *(v8 + 24) = 31;
+    *(v8 + 16) = "GetSpawnedEntities() : Get the list of the most recent spawned entities";
+    *v8 = "GetSpawnedEntities";
+    *(v8 + 8) = "ScriptGetSpawnedEntities";
+    v10 = v9 - 1;
+    *(v8 + 25) = 0;
+    if ( v10 >= 0 && *(v8 + v10 + 27) == 32 )
+    {
+      v11 = 1;
+      do
+      {
+        --v10;
+        v12 = v11;
+        if ( v10 == -1 )
+        {
+          *(v8 + 25) = v11;
+          goto LABEL_17;
+        }
+        ++v11;
+      }
+      while ( *(v8 + v10 + 27) == 32 );
+      *(v8 + 25) = v12;
+    }
+LABEL_17:
+    *(v8 + 64) = 1;
+    *(v8 + 48) = CMemberScriptBinding0<CPointTemplate *,HSCRIPT__ * (CPointTemplate::*)(void),HSCRIPT__ *>::Call;
+    *(v8 + 56) = CPointTemplate::ScriptGetSpawnedEntities;
+    v13 = v2->m_FunctionBindings.m_Size;
+    if ( v13 == v2->m_FunctionBindings.m_Memory.m_nAllocationCount )
+      CUtlMemory<ScriptFunctionBinding_t,int>::Grow(&v2->m_FunctionBindings.m_Memory, 1);
+    ++v2->m_FunctionBindings.m_Size;
+    v14 = &v2->m_FunctionBindings.m_Memory.m_pMemory[v13];
+    if ( v14 != 0 )
+    {
+      *v14 = 0;
+      *(v14 + 8) = 0;
+      *(v14 + 16) = 0;
+      *(v14 + 24) = 29;
+      *(v14 + 25) = -1;
+      *(v14 + 26) = 0;
+      *(v14 + 40) = 0;
+      v15 = &v2->m_FunctionBindings.m_Memory.m_pMemory[v13];
+    }
+    else
+    {
+      v15 = 0;
+    }
+    v16 = *(v15 + 26);
+    *(v15 + 24) = 0;
+    *(v15 + 16) = "SetSpawnCallback( hCallbackFunc, hCallbackScope, hCallbackData ) : Set a callback for when the templat"
+                  "e spawns entities. The spawned entities will be passed in as an array.";
+    *v15 = "SetSpawnCallback";
+    *(v15 + 8) = "ScriptSetSpawnCallback";
+    *(v15 + v16 + 27) = 31;
+    v17 = v16 + 1;
+    v16 += 2;
+    *(v15 + v17 + 27) = 31;
+    *(v15 + 26) = v16;
+    v18 = v16 - 1;
+    *(v15 + 25) = 0;
+    if ( v18 >= 0 && *(v15 + v18 + 27) == 32 )
+    {
+      v19 = 1;
+      do
+      {
+        --v18;
+        v20 = v19;
+        if ( v18 == -1 )
+        {
+          *(v15 + 25) = v19;
+          goto LABEL_27;
+        }
+        ++v19;
+      }
+      while ( *(v15 + v18 + 27) == 32 );
+      *(v15 + 25) = v20;
+    }
+LABEL_27:
+    *(v15 + 64) = 1;
+    *(v15 + 48) = CMemberScriptBinding2<CPointTemplate *,void (CPointTemplate::*)(HSCRIPT__ *,HSCRIPT__ *),void,HSCRIPT__ *,HSCRIPT__ *>::Call;
+    *(v15 + 56) = CPointTemplate::ScriptSetSpawnCallback;
+    *(v15 + 40) = s_CPointTemplate_ScriptSetSpawnCallback_packed_arg_names;
+    v21 = v2->m_FunctionBindings.m_Size;
+    if ( v21 == v2->m_FunctionBindings.m_Memory.m_nAllocationCount )
+      CUtlMemory<ScriptFunctionBinding_t,int>::Grow(&v2->m_FunctionBindings.m_Memory, 1);
+    ++v2->m_FunctionBindings.m_Size;
+    v22 = &v2->m_FunctionBindings.m_Memory.m_pMemory[v21];
+    if ( v22 != 0 )
+    {
+      *v22 = 0;
+      *(v22 + 8) = 0;
+      *(v22 + 16) = 0;
+      *(v22 + 24) = 29;
+      *(v22 + 25) = -1;
+      *(v22 + 26) = 0;
+      *(v22 + 40) = 0;
+      v23 = &v2->m_FunctionBindings.m_Memory.m_pMemory[v21];
+    }
+    else
+    {
+      v23 = 0;
+    }
+    v24 = *(v23 + 26);
+    *(v23 + 24) = 0;
+    *(v23 + 16) = "ForceSpawn() : Spawns all of the entities the point_template is pointing at.";
+    *v23 = "ForceSpawn";
+    *(v23 + 8) = "ScriptForceSpawn";
+    v25 = v24 - 1;
+    *(v23 + 25) = 0;
+    if ( v25 >= 0 && *(v23 + v25 + 27) == 32 )
+    {
+      v26 = 1;
+      do
+      {
+        --v25;
+        v27 = v26;
+        if ( v25 == -1 )
+        {
+          *(v23 + 25) = v26;
+          goto LABEL_37;
+        }
+        ++v26;
+      }
+      while ( *(v23 + v25 + 27) == 32 );
+      *(v23 + 25) = v27;
+    }
+LABEL_37:
+    *(v23 + 64) = 1;
+    *(v23 + 48) = CMemberScriptBinding0<CPointTemplate *,void (CPointTemplate::*)(void),void>::Call;
+    *(v23 + 56) = CPointTemplate::ScriptForceSpawn;
+    v28 = v2->m_FunctionBindings.m_Size;
+    if ( v28 == v2->m_FunctionBindings.m_Memory.m_nAllocationCount )
+      CUtlMemory<ScriptFunctionBinding_t,int>::Grow(&v2->m_FunctionBindings.m_Memory, 1);
+    ++v2->m_FunctionBindings.m_Size;
+    v29 = &v2->m_FunctionBindings.m_Memory.m_pMemory[v28];
+    if ( v29 != 0 )
+    {
+      *v29 = 0;
+      *(v29 + 8) = 0;
+      *(v29 + 16) = 0;
+      *(v29 + 24) = 29;
+      *(v29 + 25) = -1;
+      *(v29 + 26) = 0;
+      *(v29 + 40) = 0;
+      v30 = &v2->m_FunctionBindings.m_Memory.m_pMemory[v28];
+    }
+    else
+    {
+      v30 = 0;
+    }
+    v31 = *(v30 + 26);
+    *(v30 + 24) = 0;
+    *(v30 + 16) = "DeleteCreatedSpawnGroups() : Deletes any spawn groups that this point_template has spawned. Note: The "
+                  "point_template will not be deleted by this.";
+    *v30 = "DeleteCreatedSpawnGroups";
+    *(v30 + 8) = "ScriptDeleteCreatedSpawnGroups";
+    v32 = v31 - 1;
+    *(v30 + 25) = 0;
+    if ( v32 >= 0 && *(v30 + v32 + 27) == 32 )
+    {
+      v33 = 1;
+      do
+      {
+        --v32;
+        v34 = v33;
+        if ( v32 == -1 )
+        {
+          *(v30 + 25) = v33;
+          goto LABEL_47;
+        }
+        ++v33;
+      }
+      while ( *(v30 + v32 + 27) == 32 );
+      *(v30 + 25) = v34;
+    }
+LABEL_47:
+    *(v30 + 64) = 1;
+    *(v30 + 48) = CMemberScriptBinding0<CPointTemplate *,void (CPointTemplate::*)(void),void>::Call;
+    *(v30 + 56) = CPointTemplate::ScriptDeleteCreatedSpawnGroups;
+    return v2;
+  }
+  return result;
+}
+
+
+// CPointTemplate::GetScriptDesc  (line 218, @0x0000000002001aa0, libserver.so)
+// calls: GetScriptDesc<CPointTemplate>
+ScriptClassDesc_t *__fastcall CPointTemplate::GetScriptDesc(CPointTemplate *const this)
+{
+  return GetScriptDesc<CPointTemplate>(this);
+}
+
+
+// CPointTemplate::InitScriptDesc  (line 218, @0x0000000002001ab0, libserver.so)
+// calls: GetScriptDesc<CPointTemplate>
+// callers: CPointTemplate::CEntityInstanceEntityClass::InitOptionalTables
+ScriptClassDesc_t *__cdecl CPointTemplate::InitScriptDesc()
+{
+  return GetScriptDesc<CPointTemplate>(0);
+}
+
+
+// CPointTemplate::GetClassScriptDesc  (line 218, @0x0000000002001ac0, libserver.so)
+// calls: GetScriptDesc<CPointTemplate>
+ScriptClassDesc_t *__cdecl CPointTemplate::GetClassScriptDesc()
+{
+  return GetScriptDesc<CPointTemplate>(0);
+}
+
+
+// LocalRegisterSchemaModule<ArbitraryTemplateParameter_server_point_template_h>  (line 229, @0x0000000001ffb580, libserver.so)  // inlines: Call, Get
+// callers: RegisterSchemaModule_point_template_h
+// strings: "PointTemplateOwnerSpawnGroupType_t", "PointTemplateClientOnlyEntityBehavior_t"
+// globals: CSchemaEnumBinding<PointTemplateOwnerSpawnGroupType_t>::s_pThisModuleBindingPointer, CSchemaEnumBinding<PointTemplateClientOnlyEntityBehavior_t>::s_pThisModuleBindingPointer, CPointTemplate::CEntityInstanceEntityClass::s_pSchemaBindingForLocalModule, CPointTemplate::s_pSchemaBindingForLocalModule
+void __fastcall LocalRegisterSchemaModule<ArbitraryTemplateParameter_server_point_template_h>(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        SchemaRegistrationPhase_t nRegistrationPhase)
+{
+  if ( nRegistrationPhase != SchemaRegistrationPhase_t::SCHEMA_REGISTRATION_PHASE_ATOMIC_TYPES_AND_ENUMS )
+  {
+    if ( nRegistrationPhase == SchemaRegistrationPhase_t::SCHEMA_REGISTRATION_PHASE_CLASSES )
+    {
+      (*(CPointTemplate::CEntityInstanceEntityClass::s_pSchemaBindingForLocalModule->_vptr_ISchemaBinding + 5))(
+        CPointTemplate::CEntityInstanceEntityClass::s_pSchemaBindingForLocalModule,
+        pSchemaSystem,
+        pBinaryName,
+        "server");
+      (*(CPointTemplate::s_pSchemaBindingForLocalModule->_vptr_ISchemaBinding + 5))(
+        CPointTemplate::s_pSchemaBindingForLocalModule,
+        pSchemaSystem,
+        pBinaryName,
+        "server");
+    }
+    ++g_nLinkerHack_SchemaAnchor_RegistrationCountFor_server;
+  }
+  else
+  {
+    (*(CSchemaEnumBinding<PointTemplateOwnerSpawnGroupType_t>::s_pThisModuleBindingPointer->_vptr_ISchemaBinding + 5))(
+      CSchemaEnumBinding<PointTemplateOwnerSpawnGroupType_t>::s_pThisModuleBindingPointer,
+      pSchemaSystem,
+      pBinaryName,
+      "server",
+      "PointTemplateOwnerSpawnGroupType_t");
+    (*(CSchemaEnumBinding<PointTemplateClientOnlyEntityBehavior_t>::s_pThisModuleBindingPointer->_vptr_ISchemaBinding + 5))(
+      CSchemaEnumBinding<PointTemplateClientOnlyEntityBehavior_t>::s_pThisModuleBindingPointer,
+      pSchemaSystem,
+      pBinaryName,
+      "server",
+      "PointTemplateClientOnlyEntityBehavior_t");
+    ++g_nLinkerHack_SchemaAnchor_RegistrationCountFor_server;
+  }
+}
+
+
+// RegisterSchemaModule_point_template_h  (line 234, @0x0000000001ffb650, libserver.so)
+// calls: LocalRegisterSchemaModule<ArbitraryTemplateParameter_server_point_template_h>
+// callers: CSchemaRegistration_server::RegisterAllBindings
+void __fastcall RegisterSchemaModule_point_template_h(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        SchemaRegistrationPhase_t nRegistrationPhase)
+{
+  LocalRegisterSchemaModule<ArbitraryTemplateParameter_server_point_template_h>(
+    pSchemaSystem,
+    pBinaryName,
+    nRegistrationPhase);
+}
+
+

@@ -1,0 +1,78 @@
+
+// ==== functions (decompiled by Hex-Rays; names/signatures from DWARF) ====
+
+// IPhysicsPlayerController::Schema_CompileTimeVerificationFunction  (line 35, @0x0000000002044130, libserver.so)
+void __fastcall IPhysicsPlayerController::Schema_CompileTimeVerificationFunction(IPhysicsPlayerController *const this)
+{
+  ;
+}
+
+
+// IPhysicsPlayerController::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE  (line 38, @0x0000000002044140, libserver.so)  // inlines: SetTypeScope
+// callers: CSchemaNonConstructibleClassBinding<IPhysicsPlayerController>::Register
+// globals: IPhysicsPlayerController::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::
+CSchemaClassInfo *__fastcall IPhysicsPlayerController::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        const char *pProjectName)
+{
+  CSchemaClassInfo *result; // rax
+  __int64 v4; // rdx
+
+  result = IPhysicsPlayerController::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult;
+  if ( IPhysicsPlayerController::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult == 0 )
+  {
+    IPhysicsPlayerController::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_IPhysicsPlayerController.m_pOuterTypeScope = (*(*pSchemaSystem + 112LL))(pSchemaSystem, 0, pBinaryName);
+    v4 = *IPhysicsPlayerController::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_IPhysicsPlayerController.m_pOuterTypeScope;
+    IPhysicsPlayerController::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult = &IPhysicsPlayerController::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_IPhysicsPlayerController;
+    (*(v4 + 264))(
+      IPhysicsPlayerController::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_IPhysicsPlayerController.m_pOuterTypeScope,
+      &IPhysicsPlayerController::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_IPhysicsPlayerController);
+    return IPhysicsPlayerController::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult;
+  }
+  return result;
+}
+
+
+// IPhysicsPlayerController::Schema_VerifyBindingIsRegistered  (line 40, @0x0000000002044190, libserver.so)
+void __cdecl IPhysicsPlayerController::Schema_VerifyBindingIsRegistered()
+{
+  ;
+}
+
+
+// LocalRegisterSchemaModule<ArbitraryTemplateParameter_server_player_controller_h>  (line 48, @0x00000000020441a0, libserver.so)  // inlines: Call
+// globals: IPhysicsPlayerController::s_pSchemaBindingForLocalModule
+void __fastcall LocalRegisterSchemaModule<ArbitraryTemplateParameter_server_player_controller_h>(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        SchemaRegistrationPhase_t nRegistrationPhase)
+{
+  if ( nRegistrationPhase == SchemaRegistrationPhase_t::SCHEMA_REGISTRATION_PHASE_CLASSES )
+    (*(IPhysicsPlayerController::s_pSchemaBindingForLocalModule->_vptr_ISchemaBinding + 5))(
+      IPhysicsPlayerController::s_pSchemaBindingForLocalModule,
+      pSchemaSystem,
+      pBinaryName,
+      "server");
+  ++g_nLinkerHack_SchemaAnchor_RegistrationCountFor_server;
+}
+
+
+// RegisterSchemaModule_player_controller_h  (line 50, @0x00000000020441e0, libserver.so)  // inlines: Call, LocalRegisterSchemaModule<ArbitraryTemplateParameter_server_player_controller_h>
+// callers: CSchemaRegistration_server::RegisterAllBindings
+// globals: IPhysicsPlayerController::s_pSchemaBindingForLocalModule
+void __fastcall RegisterSchemaModule_player_controller_h(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        SchemaRegistrationPhase_t nRegistrationPhase)
+{
+  if ( nRegistrationPhase == SchemaRegistrationPhase_t::SCHEMA_REGISTRATION_PHASE_CLASSES )
+    (*(IPhysicsPlayerController::s_pSchemaBindingForLocalModule->_vptr_ISchemaBinding + 5))(
+      IPhysicsPlayerController::s_pSchemaBindingForLocalModule,
+      pSchemaSystem,
+      pBinaryName,
+      "server");
+  ++g_nLinkerHack_SchemaAnchor_RegistrationCountFor_server;
+}
+
+

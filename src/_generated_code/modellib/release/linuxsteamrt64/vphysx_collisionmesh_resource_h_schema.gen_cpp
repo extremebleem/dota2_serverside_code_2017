@@ -1,0 +1,996 @@
+
+// ==== functions (decompiled by Hex-Rays; names/signatures from DWARF) ====
+
+// CSchemaEnumBinding<VPhysXBodyPart_t::VPhysXFlagEnum_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE  (line 33, @0x0000000003184480, libserver.so)  // inlines: Count, Initialize, SetTypeScope
+// callers: CSchemaEnumBinding<VPhysXBodyPart_t::VPhysXFlagEnum_t>::Register, VPhysXBodyPart_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE
+// globals: CSchemaEnumBinding<VPhysXBodyPart_t::VPhysXFlagEnum_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem
+CSchemaEnumInfo *__fastcall CSchemaEnumBinding<VPhysXBodyPart_t::VPhysXFlagEnum_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        const char *pProjectName)
+{
+  ISchemaSystemTypeScope *v3; // rax
+  unsigned int v4; // edi
+  SchemaEnumeratorValue_t v5; // r8
+  SchemaEnumeratorValue_t v6; // r9
+  SchemaEnumeratorValue_t *v7; // rdx
+
+  v3 = (*(*pSchemaSystem + 112LL))(pSchemaSystem, 0, pBinaryName);
+  if ( CSchemaEnumBinding<VPhysXBodyPart_t::VPhysXFlagEnum_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_VPhysXBodyPart_t_VPhysXFlagEnum_t.m_Enumerators.m_Data.m_nImplLength != 0 )
+  {
+    v4 = abs32(CSchemaEnumBinding<VPhysXBodyPart_t::VPhysXFlagEnum_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_VPhysXBodyPart_t_VPhysXFlagEnum_t.m_Enumerators.m_Data.m_nImplLength);
+    v5 = *(CSchemaEnumBinding<VPhysXBodyPart_t::VPhysXFlagEnum_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_VPhysXBodyPart_t_VPhysXFlagEnum_t.m_Enumerators.m_Data.m_pImplElements
+         + 2);
+    CSchemaEnumBinding<VPhysXBodyPart_t::VPhysXFlagEnum_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_VPhysXBodyPart_t_VPhysXFlagEnum_t.m_nMinValue = v5;
+    v6 = *(CSchemaEnumBinding<VPhysXBodyPart_t::VPhysXFlagEnum_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_VPhysXBodyPart_t_VPhysXFlagEnum_t.m_Enumerators.m_Data.m_pImplElements
+         + 2);
+    CSchemaEnumBinding<VPhysXBodyPart_t::VPhysXFlagEnum_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_VPhysXBodyPart_t_VPhysXFlagEnum_t.m_nMaxValue = v6;
+    if ( v4 != 1 )
+    {
+      v7 = (CSchemaEnumBinding<VPhysXBodyPart_t::VPhysXFlagEnum_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_VPhysXBodyPart_t_VPhysXFlagEnum_t.m_Enumerators.m_Data.m_pImplElements
+          + 72);
+      do
+      {
+        if ( v5 > *v7 )
+          v5 = *v7;
+        CSchemaEnumBinding<VPhysXBodyPart_t::VPhysXFlagEnum_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_VPhysXBodyPart_t_VPhysXFlagEnum_t.m_nMinValue = v5;
+        if ( v6 < *v7 )
+          v6 = *v7;
+        v7 += 7;
+        CSchemaEnumBinding<VPhysXBodyPart_t::VPhysXFlagEnum_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_VPhysXBodyPart_t_VPhysXFlagEnum_t.m_nMaxValue = v6;
+      }
+      while ( v7 != CSchemaEnumBinding<VPhysXBodyPart_t::VPhysXFlagEnum_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_VPhysXBodyPart_t_VPhysXFlagEnum_t.m_Enumerators.m_Data.m_pImplElements
+                  + 7 * v4
+                  + 2 );
+    }
+  }
+  else
+  {
+    CSchemaEnumBinding<VPhysXBodyPart_t::VPhysXFlagEnum_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_VPhysXBodyPart_t_VPhysXFlagEnum_t.m_nMinValue = 0;
+    CSchemaEnumBinding<VPhysXBodyPart_t::VPhysXFlagEnum_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_VPhysXBodyPart_t_VPhysXFlagEnum_t.m_nMaxValue = 0;
+  }
+  CSchemaEnumBinding<VPhysXBodyPart_t::VPhysXFlagEnum_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_VPhysXBodyPart_t_VPhysXFlagEnum_t.m_pOuterTypeScope = v3;
+  (*(*v3 + 272LL))(
+    v3,
+    &CSchemaEnumBinding<VPhysXBodyPart_t::VPhysXFlagEnum_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_VPhysXBodyPart_t_VPhysXFlagEnum_t);
+  return &CSchemaEnumBinding<VPhysXBodyPart_t::VPhysXFlagEnum_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_VPhysXBodyPart_t_VPhysXFlagEnum_t;
+}
+
+
+// CSchemaEnumBinding<VPhysXConstraintParams_t::EnumFlags0_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE  (line 46, @0x0000000003184560, libserver.so)  // inlines: Count, Initialize, SetTypeScope
+// callers: CSchemaEnumBinding<VPhysXConstraintParams_t::EnumFlags0_t>::Register, VPhysXConstraintParams_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE
+// globals: CSchemaEnumBinding<VPhysXConstraintParams_t::EnumFlags0_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSy
+CSchemaEnumInfo *__fastcall CSchemaEnumBinding<VPhysXConstraintParams_t::EnumFlags0_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        const char *pProjectName)
+{
+  ISchemaSystemTypeScope *v3; // rax
+  unsigned int v4; // edi
+  SchemaEnumeratorValue_t v5; // r8
+  SchemaEnumeratorValue_t v6; // r9
+  SchemaEnumeratorValue_t *v7; // rdx
+
+  v3 = (*(*pSchemaSystem + 112LL))(pSchemaSystem, 0, pBinaryName);
+  if ( CSchemaEnumBinding<VPhysXConstraintParams_t::EnumFlags0_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_VPhysXConstraintParams_t_EnumFlags0_t.m_Enumerators.m_Data.m_nImplLength != 0 )
+  {
+    v4 = abs32(CSchemaEnumBinding<VPhysXConstraintParams_t::EnumFlags0_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_VPhysXConstraintParams_t_EnumFlags0_t.m_Enumerators.m_Data.m_nImplLength);
+    v5 = *(CSchemaEnumBinding<VPhysXConstraintParams_t::EnumFlags0_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_VPhysXConstraintParams_t_EnumFlags0_t.m_Enumerators.m_Data.m_pImplElements
+         + 2);
+    CSchemaEnumBinding<VPhysXConstraintParams_t::EnumFlags0_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_VPhysXConstraintParams_t_EnumFlags0_t.m_nMinValue = v5;
+    v6 = *(CSchemaEnumBinding<VPhysXConstraintParams_t::EnumFlags0_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_VPhysXConstraintParams_t_EnumFlags0_t.m_Enumerators.m_Data.m_pImplElements
+         + 2);
+    CSchemaEnumBinding<VPhysXConstraintParams_t::EnumFlags0_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_VPhysXConstraintParams_t_EnumFlags0_t.m_nMaxValue = v6;
+    if ( v4 != 1 )
+    {
+      v7 = (CSchemaEnumBinding<VPhysXConstraintParams_t::EnumFlags0_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_VPhysXConstraintParams_t_EnumFlags0_t.m_Enumerators.m_Data.m_pImplElements
+          + 72);
+      do
+      {
+        if ( v5 > *v7 )
+          v5 = *v7;
+        CSchemaEnumBinding<VPhysXConstraintParams_t::EnumFlags0_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_VPhysXConstraintParams_t_EnumFlags0_t.m_nMinValue = v5;
+        if ( v6 < *v7 )
+          v6 = *v7;
+        v7 += 7;
+        CSchemaEnumBinding<VPhysXConstraintParams_t::EnumFlags0_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_VPhysXConstraintParams_t_EnumFlags0_t.m_nMaxValue = v6;
+      }
+      while ( v7 != CSchemaEnumBinding<VPhysXConstraintParams_t::EnumFlags0_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_VPhysXConstraintParams_t_EnumFlags0_t.m_Enumerators.m_Data.m_pImplElements
+                  + 7 * v4
+                  + 2 );
+    }
+  }
+  else
+  {
+    CSchemaEnumBinding<VPhysXConstraintParams_t::EnumFlags0_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_VPhysXConstraintParams_t_EnumFlags0_t.m_nMinValue = 0;
+    CSchemaEnumBinding<VPhysXConstraintParams_t::EnumFlags0_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_VPhysXConstraintParams_t_EnumFlags0_t.m_nMaxValue = 0;
+  }
+  CSchemaEnumBinding<VPhysXConstraintParams_t::EnumFlags0_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_VPhysXConstraintParams_t_EnumFlags0_t.m_pOuterTypeScope = v3;
+  (*(*v3 + 272LL))(
+    v3,
+    &CSchemaEnumBinding<VPhysXConstraintParams_t::EnumFlags0_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_VPhysXConstraintParams_t_EnumFlags0_t);
+  return &CSchemaEnumBinding<VPhysXConstraintParams_t::EnumFlags0_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_VPhysXConstraintParams_t_EnumFlags0_t;
+}
+
+
+// CSchemaEnumBinding<VPhysXAggregateData_t::VPhysXFlagEnum_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE  (line 59, @0x0000000003184640, libserver.so)  // inlines: Count, Initialize, SetTypeScope
+// callers: CSchemaEnumBinding<VPhysXAggregateData_t::VPhysXFlagEnum_t>::Register, VPhysXAggregateData_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE
+// globals: CSchemaEnumBinding<VPhysXAggregateData_t::VPhysXFlagEnum_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaS
+CSchemaEnumInfo *__fastcall CSchemaEnumBinding<VPhysXAggregateData_t::VPhysXFlagEnum_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        const char *pProjectName)
+{
+  ISchemaSystemTypeScope *v3; // rax
+  unsigned int v4; // edi
+  SchemaEnumeratorValue_t v5; // r8
+  SchemaEnumeratorValue_t v6; // r9
+  SchemaEnumeratorValue_t *v7; // rdx
+
+  v3 = (*(*pSchemaSystem + 112LL))(pSchemaSystem, 0, pBinaryName);
+  if ( CSchemaEnumBinding<VPhysXAggregateData_t::VPhysXFlagEnum_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_VPhysXAggregateData_t_VPhysXFlagEnum_t.m_Enumerators.m_Data.m_nImplLength != 0 )
+  {
+    v4 = abs32(CSchemaEnumBinding<VPhysXAggregateData_t::VPhysXFlagEnum_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_VPhysXAggregateData_t_VPhysXFlagEnum_t.m_Enumerators.m_Data.m_nImplLength);
+    v5 = *(CSchemaEnumBinding<VPhysXAggregateData_t::VPhysXFlagEnum_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_VPhysXAggregateData_t_VPhysXFlagEnum_t.m_Enumerators.m_Data.m_pImplElements
+         + 2);
+    CSchemaEnumBinding<VPhysXAggregateData_t::VPhysXFlagEnum_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_VPhysXAggregateData_t_VPhysXFlagEnum_t.m_nMinValue = v5;
+    v6 = *(CSchemaEnumBinding<VPhysXAggregateData_t::VPhysXFlagEnum_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_VPhysXAggregateData_t_VPhysXFlagEnum_t.m_Enumerators.m_Data.m_pImplElements
+         + 2);
+    CSchemaEnumBinding<VPhysXAggregateData_t::VPhysXFlagEnum_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_VPhysXAggregateData_t_VPhysXFlagEnum_t.m_nMaxValue = v6;
+    if ( v4 != 1 )
+    {
+      v7 = (CSchemaEnumBinding<VPhysXAggregateData_t::VPhysXFlagEnum_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_VPhysXAggregateData_t_VPhysXFlagEnum_t.m_Enumerators.m_Data.m_pImplElements
+          + 72);
+      do
+      {
+        if ( v5 > *v7 )
+          v5 = *v7;
+        CSchemaEnumBinding<VPhysXAggregateData_t::VPhysXFlagEnum_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_VPhysXAggregateData_t_VPhysXFlagEnum_t.m_nMinValue = v5;
+        if ( v6 < *v7 )
+          v6 = *v7;
+        v7 += 7;
+        CSchemaEnumBinding<VPhysXAggregateData_t::VPhysXFlagEnum_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_VPhysXAggregateData_t_VPhysXFlagEnum_t.m_nMaxValue = v6;
+      }
+      while ( v7 != CSchemaEnumBinding<VPhysXAggregateData_t::VPhysXFlagEnum_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_VPhysXAggregateData_t_VPhysXFlagEnum_t.m_Enumerators.m_Data.m_pImplElements
+                  + 7 * v4
+                  + 2 );
+    }
+  }
+  else
+  {
+    CSchemaEnumBinding<VPhysXAggregateData_t::VPhysXFlagEnum_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_VPhysXAggregateData_t_VPhysXFlagEnum_t.m_nMinValue = 0;
+    CSchemaEnumBinding<VPhysXAggregateData_t::VPhysXFlagEnum_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_VPhysXAggregateData_t_VPhysXFlagEnum_t.m_nMaxValue = 0;
+  }
+  CSchemaEnumBinding<VPhysXAggregateData_t::VPhysXFlagEnum_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_VPhysXAggregateData_t_VPhysXFlagEnum_t.m_pOuterTypeScope = v3;
+  (*(*v3 + 272LL))(
+    v3,
+    &CSchemaEnumBinding<VPhysXAggregateData_t::VPhysXFlagEnum_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_VPhysXAggregateData_t_VPhysXFlagEnum_t);
+  return &CSchemaEnumBinding<VPhysXAggregateData_t::VPhysXFlagEnum_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_VPhysXAggregateData_t_VPhysXFlagEnum_t;
+}
+
+
+// VPhysics2ShapeDef_t::Schema_CompileTimeVerificationFunction  (line 71, @0x0000000003184720, libserver.so)
+void __fastcall VPhysics2ShapeDef_t::Schema_CompileTimeVerificationFunction(VPhysics2ShapeDef_t *const this)
+{
+  ;
+}
+
+
+// VPhysics2ShapeDef_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE  (line 79, @0x0000000003184730, libserver.so)  // inlines: Get, SchemaBinding_SchemaTypeOfMemberVarByAddr<VPhysics2ShapeDef_t, CResourceArray<RnCapsuleDesc_t> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<VPhysics2ShapeDef_t, CResourceArray<RnHullDesc_t> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<VPhysics2ShapeDef_t, CResourceArray<RnMeshDesc_t> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<VPhysics2ShapeDef_t, CResourceArray<RnSphereDesc_t> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<VPhysics2ShapeDef_t, CResourceArray<short unsigned int> >, SetTypeScope
+// callers: CSchemaClassBinding<VPhysics2ShapeDef_t>::Register
+// strings: "RnSphereDesc_t", "CResourceArray", "RnCapsuleDesc_t", "RnHullDesc_t", "RnMeshDesc_t"
+// globals: VPhysics2ShapeDef_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pIn, CSchemaManipulator<CResourceArray<RnSphereDesc_t>>::StaticAccessor(void)::m, CAtomicManipulator<CResourceArray<RnSphereDesc_t>>::Get(void)::val, CSchemaManipulator<CResourceArray<RnCapsuleDesc_t>>::StaticAccessor(void)::m, CAtomicManipulator<CResourceArray<RnCapsuleDesc_t>>::Get(void)::val, CSchemaManipulator<CResourceArray<RnHullDesc_t>>::StaticAccessor(void)::m, CAtomicManipulator<CResourceArray<RnHullDesc_t>>::Get(void)::val, CSchemaManipulator<CResourceArray<RnMeshDesc_t>>::StaticAccessor(void)::m (12 total)
+CSchemaClassInfo *__fastcall VPhysics2ShapeDef_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        const char *pProjectName)
+{
+  CSchemaClassInfo *result; // rax
+  ISchemaSystemTypeScope *v4; // rbx
+  __int64 (__fastcall *v5)(ISchemaSystemTypeScope *, const char *, __int64, __int64 (__fastcall ***)(), __int64 (__fastcall ***)(), __int64); // r12
+  __int64 v6; // rax
+  __int64 (__fastcall *v7)(ISchemaSystemTypeScope *, const char *, __int64, __int64 (__fastcall ***)(), __int64 (__fastcall ***)(), __int64); // r12
+  __int64 v8; // rax
+  __int64 (__fastcall *v9)(ISchemaSystemTypeScope *, const char *, __int64, __int64 (__fastcall ***)(), __int64 (__fastcall ***)(), __int64); // r12
+  __int64 v10; // rax
+  __int64 (__fastcall *v11)(ISchemaSystemTypeScope *, const char *, __int64, __int64 (__fastcall ***)(), __int64 (__fastcall ***)(), __int64); // r12
+  __int64 v12; // rax
+  __int64 (__fastcall *v13)(ISchemaSystemTypeScope *, const char *, __int64, __int64 (__fastcall ***)(), __int64 (__fastcall ***)(), __int64); // r12
+  __int64 v14; // rax
+  CSchemaType *v15; // rax
+
+  result = VPhysics2ShapeDef_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult;
+  if ( VPhysics2ShapeDef_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult == 0 )
+  {
+    v4 = (*(*pSchemaSystem + 112LL))(pSchemaSystem, 0, pBinaryName);
+    v5 = *(*v4 + 64LL);
+    v6 = (*(*v4 + 88LL))(v4, "RnSphereDesc_t");
+    VPhysics2ShapeDef_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_VPhysics2ShapeDef_t[0].m_pType = v5(v4, "CResourceArray", 4004, CAtomicManipulator<CResourceArray<RnSphereDesc_t>>::Get(void)::val, &CSchemaManipulator<CResourceArray<RnSphereDesc_t>>::StaticAccessor(void)::m, v6);
+    v7 = *(*v4 + 64LL);
+    v8 = (*(*v4 + 88LL))(v4, "RnCapsuleDesc_t");
+    VPhysics2ShapeDef_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_VPhysics2ShapeDef_t[1].m_pType = v7(v4, "CResourceArray", 4004, CAtomicManipulator<CResourceArray<RnCapsuleDesc_t>>::Get(void)::val, CSchemaManipulator<CResourceArray<RnCapsuleDesc_t>>::StaticAccessor(void)::m, v8);
+    v9 = *(*v4 + 64LL);
+    v10 = (*(*v4 + 88LL))(v4, "RnHullDesc_t");
+    VPhysics2ShapeDef_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_VPhysics2ShapeDef_t[2].m_pType = v9(v4, "CResourceArray", 4004, CAtomicManipulator<CResourceArray<RnHullDesc_t>>::Get(void)::val, CSchemaManipulator<CResourceArray<RnHullDesc_t>>::StaticAccessor(void)::m, v10);
+    v11 = *(*v4 + 64LL);
+    v12 = (*(*v4 + 88LL))(v4, "RnMeshDesc_t");
+    VPhysics2ShapeDef_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_VPhysics2ShapeDef_t[3].m_pType = v11(v4, "CResourceArray", 4004, CAtomicManipulator<CResourceArray<RnMeshDesc_t>>::Get(void)::val, CSchemaManipulator<CResourceArray<RnMeshDesc_t>>::StaticAccessor(void)::m, v12);
+    v13 = *(*v4 + 64LL);
+    v14 = (*(*v4 + 40LL))(v4, 6);
+    v15 = v13(
+            v4,
+            "CResourceArray",
+            4004,
+            CAtomicManipulator<CResourceArray<unsigned short>>::Get(void)::val,
+            CSchemaManipulator<CResourceArray<unsigned short>>::StaticAccessor(void)::m,
+            v14);
+    VPhysics2ShapeDef_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_VPhysics2ShapeDef_t.m_pOuterTypeScope = v4;
+    VPhysics2ShapeDef_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_VPhysics2ShapeDef_t[4].m_pType = v15;
+    VPhysics2ShapeDef_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult = &VPhysics2ShapeDef_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_VPhysics2ShapeDef_t;
+    (*(*v4 + 264LL))(
+      v4,
+      &VPhysics2ShapeDef_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_VPhysics2ShapeDef_t);
+    return VPhysics2ShapeDef_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult;
+  }
+  return result;
+}
+
+
+// VPhysics2ShapeDef_t::Schema_VerifyBindingIsRegistered  (line 106, @0x00000000031848c0, libserver.so)
+void __cdecl VPhysics2ShapeDef_t::Schema_VerifyBindingIsRegistered()
+{
+  ;
+}
+
+
+// VPhysXBodyPart_t::Schema_CompileTimeVerificationFunction  (line 114, @0x00000000031848d0, libserver.so)
+void __fastcall VPhysXBodyPart_t::Schema_CompileTimeVerificationFunction(VPhysXBodyPart_t *const this)
+{
+  ;
+}
+
+
+// VPhysXBodyPart_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE  (line 127, @0x00000000031848e0, libserver.so)  // inlines: Get, GetInfo, SchemaBinding_SchemaTypeOfMemberVarByAddr<VPhysXBodyPart_t, CResourceArray<unsigned char> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<VPhysXBodyPart_t, CResourcePointer<VpropBreakablePartData_t> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<VPhysXBodyPart_t, VPhysics2ShapeDef_t>, SchemaBinding_SchemaTypeOfMemberVarByAddr<VPhysXBodyPart_t, float>, SchemaBinding_SchemaTypeOfMemberVarByAddr<VPhysXBodyPart_t, short unsigned int>, SchemaBinding_SchemaTypeOfMemberVarByAddr<VPhysXBodyPart_t, unsigned int>, SetTypeScope
+// calls: __cxa_guard_acquire, CSchemaEnumBinding<VPhysXBodyPart_t::VPhysXFlagEnum_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE, __cxa_guard_release, __cxa_guard_abort, _Unwind_Resume
+// callers: CSchemaClassBinding<VPhysXBodyPart_t>::Register
+// strings: "VPhysics2ShapeDef_t", "VpropBreakablePartData_t", "CResourcePointer", "CResourceArray"
+// globals: VPhysXBodyPart_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pIniti, CSchemaManipulator<CResourcePointer<VpropBreakablePartData_t>>::StaticAccessor(void)::m, CAtomicManipulator<CResourcePointer<VpropBreakablePartData_t>>::Get(void)::val, CSchemaManipulator<CResourceArray<uchar>>::StaticAccessor(void)::m, CAtomicManipulator<CResourceArray<uchar>>::Get(void)::val, `guard variable for'VPhysXBodyPart_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,ch, VPhysXBodyPart_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSche
+CSchemaClassInfo *__fastcall VPhysXBodyPart_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        const char *pProjectName)
+{
+  CSchemaClassInfo *result; // rax
+  ISchemaSystemTypeScope *v7; // rbx
+  __int64 (__fastcall *v8)(ISchemaSystemTypeScope *, const char *, __int64, __int64 (__fastcall ***)(), __int64 (__fastcall ***)(), __int64); // r15
+  __int64 v9; // rax
+  __int64 (__fastcall *v10)(ISchemaSystemTypeScope *, const char *, __int64, __int64 (__fastcall ***)(), __int64 (__fastcall ***)(), __int64); // r15
+  __int64 v11; // rax
+
+  result = VPhysXBodyPart_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult;
+  if ( VPhysXBodyPart_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult == 0 )
+  {
+    v7 = (*(*pSchemaSystem + 112LL))(pSchemaSystem, 0, pBinaryName);
+    VPhysXBodyPart_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_VPhysXBodyPart_t[0].m_pType = (*(*v7 + 40LL))(v7, 8);
+    VPhysXBodyPart_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_VPhysXBodyPart_t[1].m_pType = (*(*v7 + 40LL))(v7, 11);
+    VPhysXBodyPart_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_VPhysXBodyPart_t[2].m_pType = (*(*v7 + 88LL))(v7, "VPhysics2ShapeDef_t");
+    v8 = *(*v7 + 64LL);
+    v9 = (*(*v7 + 88LL))(v7, "VpropBreakablePartData_t");
+    VPhysXBodyPart_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_VPhysXBodyPart_t[3].m_pType = v8(v7, "CResourcePointer", 4003, CAtomicManipulator<CResourcePointer<VpropBreakablePartData_t>>::Get(void)::val, CSchemaManipulator<CResourcePointer<VpropBreakablePartData_t>>::StaticAccessor(void)::m, v9);
+    v10 = *(*v7 + 64LL);
+    v11 = (*(*v7 + 40LL))(v7, 4);
+    VPhysXBodyPart_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_VPhysXBodyPart_t[4].m_pType = v10(v7, "CResourceArray", 4004, CAtomicManipulator<CResourceArray<unsigned char>>::Get(void)::val, CSchemaManipulator<CResourceArray<unsigned char>>::StaticAccessor(void)::m, v11);
+    VPhysXBodyPart_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_VPhysXBodyPart_t[5].m_pType = (*(*v7 + 40LL))(v7, 6);
+    VPhysXBodyPart_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_VPhysXBodyPart_t[6].m_pType = (*(*v7 + 40LL))(v7, 6);
+    VPhysXBodyPart_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_VPhysXBodyPart_t[7].m_pType = (*(*v7 + 40LL))(v7, 11);
+    VPhysXBodyPart_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_VPhysXBodyPart_t[8].m_pType = (*(*v7 + 40LL))(v7, 11);
+    VPhysXBodyPart_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_VPhysXBodyPart_t[9].m_pType = (*(*v7 + 40LL))(v7, 11);
+    if ( `guard variable for'VPhysXBodyPart_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_NestedEnumsOf_VPhysXBodyPart_t == 0
+      && __cxa_guard_acquire(&`guard variable for'VPhysXBodyPart_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_NestedEnumsOf_VPhysXBodyPart_t) != 0 )
+    {
+      VPhysXBodyPart_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_NestedEnumsOf_VPhysXBodyPart_t[0] = CSchemaEnumBinding<VPhysXBodyPart_t::VPhysXFlagEnum_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(pSchemaSystem, pBinaryName, pProjectName);
+      __cxa_guard_release(&`guard variable for'VPhysXBodyPart_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_NestedEnumsOf_VPhysXBodyPart_t);
+    }
+    VPhysXBodyPart_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_VPhysXBodyPart_t.m_pOuterTypeScope = v7;
+    VPhysXBodyPart_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult = &VPhysXBodyPart_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_VPhysXBodyPart_t;
+    (*(*v7 + 264LL))(
+      v7,
+      &VPhysXBodyPart_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_VPhysXBodyPart_t);
+    return VPhysXBodyPart_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult;
+  }
+  return result;
+}
+
+
+// VPhysXBodyPart_t::Schema_VerifyBindingIsRegistered  (line 170, @0x0000000003184ae0, libserver.so)
+void __cdecl VPhysXBodyPart_t::Schema_VerifyBindingIsRegistered()
+{
+  ;
+}
+
+
+// VPhysXCollisionAttributes_t::Schema_CompileTimeVerificationFunction  (line 178, @0x0000000003184af0, libserver.so)
+void __fastcall VPhysXCollisionAttributes_t::Schema_CompileTimeVerificationFunction(
+        VPhysXCollisionAttributes_t *const this)
+{
+  ;
+}
+
+
+// VPhysXCollisionAttributes_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE  (line 189, @0x0000000003184b00, libserver.so)  // inlines: Get, SchemaBinding_SchemaTypeOfMemberVarByAddr<VPhysXCollisionAttributes_t, CResourceArray<CResourceString> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<VPhysXCollisionAttributes_t, CResourceArray<unsigned int> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<VPhysXCollisionAttributes_t, CResourceString>, SchemaBinding_SchemaTypeOfMemberVarByAddr<VPhysXCollisionAttributes_t, unsigned int>, SetTypeScope
+// callers: CSchemaClassBinding<VPhysXCollisionAttributes_t>::Register
+// strings: "CResourceArray", "CResourceString"
+// globals: VPhysXCollisionAttributes_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*, CSchemaManipulator<CResourceArray<uint>>::StaticAccessor(void)::m, CAtomicManipulator<CResourceArray<uint>>::Get(void)::val, CSchemaManipulator<CResourceString>::StaticAccessor(void)::m, CAtomicManipulator<CResourceString>::Get(void)::val, CSchemaManipulator<CResourceArray<CResourceString>>::StaticAccessor(void)::m, CAtomicManipulator<CResourceArray<CResourceString>>::Get(void)::val
+CSchemaClassInfo *__fastcall VPhysXCollisionAttributes_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        const char *pProjectName)
+{
+  CSchemaClassInfo *result; // rax
+  ISchemaSystemTypeScope *v4; // rbx
+  __int64 (__fastcall *v5)(ISchemaSystemTypeScope *, const char *, __int64, __int64 (__fastcall ***)(), __int64 (__fastcall ***)(), __int64); // r12
+  __int64 v6; // rax
+  __int64 (__fastcall *v7)(ISchemaSystemTypeScope *, const char *, __int64, __int64 (__fastcall ***)(), __int64 (__fastcall ***)(), __int64); // r12
+  __int64 v8; // rax
+  __int64 (__fastcall *v9)(ISchemaSystemTypeScope *, const char *, __int64, __int64 (__fastcall ***)(), __int64 (__fastcall ***)(), __int64); // r12
+  __int64 v10; // rax
+  __int64 (__fastcall *v11)(ISchemaSystemTypeScope *, const char *, __int64, __int64 (__fastcall ***)(), __int64 (__fastcall ***)(), __int64); // r12
+  __int64 v12; // rax
+  __int64 (__fastcall *v13)(ISchemaSystemTypeScope *, const char *, __int64, __int64 (__fastcall ***)(), __int64 (__fastcall ***)(), __int64); // r12
+  __int64 v14; // rax
+  __int64 (__fastcall *v15)(ISchemaSystemTypeScope *, const char *, __int64, __int64 (__fastcall ***)(), __int64 (__fastcall ***)(), __int64); // r12
+  __int64 v16; // rax
+  CSchemaType *v17; // rax
+
+  result = VPhysXCollisionAttributes_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult;
+  if ( VPhysXCollisionAttributes_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult == 0 )
+  {
+    v4 = (*(*pSchemaSystem + 112LL))(pSchemaSystem, 0, pBinaryName);
+    VPhysXCollisionAttributes_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_VPhysXCollisionAttributes_t[0].m_pType = (*(*v4 + 40LL))(v4, 8);
+    v5 = *(*v4 + 64LL);
+    v6 = (*(*v4 + 40LL))(v4, 8);
+    VPhysXCollisionAttributes_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_VPhysXCollisionAttributes_t[1].m_pType = v5(v4, "CResourceArray", 4004, CAtomicManipulator<CResourceArray<unsigned int>>::Get(void)::val, CSchemaManipulator<CResourceArray<unsigned int>>::StaticAccessor(void)::m, v6);
+    v7 = *(*v4 + 64LL);
+    v8 = (*(*v4 + 40LL))(v4, 8);
+    VPhysXCollisionAttributes_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_VPhysXCollisionAttributes_t[2].m_pType = v7(v4, "CResourceArray", 4004, CAtomicManipulator<CResourceArray<unsigned int>>::Get(void)::val, CSchemaManipulator<CResourceArray<unsigned int>>::StaticAccessor(void)::m, v8);
+    v9 = *(*v4 + 64LL);
+    v10 = (*(*v4 + 40LL))(v4, 8);
+    VPhysXCollisionAttributes_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_VPhysXCollisionAttributes_t[3].m_pType = v9(v4, "CResourceArray", 4004, CAtomicManipulator<CResourceArray<unsigned int>>::Get(void)::val, CSchemaManipulator<CResourceArray<unsigned int>>::StaticAccessor(void)::m, v10);
+    VPhysXCollisionAttributes_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_VPhysXCollisionAttributes_t[4].m_pType = (*(*v4 + 56LL))(v4, "CResourceString", 4005, CAtomicManipulator<CResourceString>::Get(void)::val, CSchemaManipulator<CResourceString>::StaticAccessor(void)::m);
+    v11 = *(*v4 + 64LL);
+    v12 = (*(*v4 + 56LL))(
+            v4,
+            "CResourceString",
+            4005,
+            CAtomicManipulator<CResourceString>::Get(void)::val,
+            CSchemaManipulator<CResourceString>::StaticAccessor(void)::m);
+    VPhysXCollisionAttributes_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_VPhysXCollisionAttributes_t[5].m_pType = v11(v4, "CResourceArray", 4004, CAtomicManipulator<CResourceArray<CResourceString>>::Get(void)::val, CSchemaManipulator<CResourceArray<CResourceString>>::StaticAccessor(void)::m, v12);
+    v13 = *(*v4 + 64LL);
+    v14 = (*(*v4 + 56LL))(
+            v4,
+            "CResourceString",
+            4005,
+            CAtomicManipulator<CResourceString>::Get(void)::val,
+            CSchemaManipulator<CResourceString>::StaticAccessor(void)::m);
+    VPhysXCollisionAttributes_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_VPhysXCollisionAttributes_t[6].m_pType = v13(v4, "CResourceArray", 4004, CAtomicManipulator<CResourceArray<CResourceString>>::Get(void)::val, CSchemaManipulator<CResourceArray<CResourceString>>::StaticAccessor(void)::m, v14);
+    v15 = *(*v4 + 64LL);
+    v16 = (*(*v4 + 56LL))(
+            v4,
+            "CResourceString",
+            4005,
+            CAtomicManipulator<CResourceString>::Get(void)::val,
+            CSchemaManipulator<CResourceString>::StaticAccessor(void)::m);
+    v17 = v15(
+            v4,
+            "CResourceArray",
+            4004,
+            CAtomicManipulator<CResourceArray<CResourceString>>::Get(void)::val,
+            CSchemaManipulator<CResourceArray<CResourceString>>::StaticAccessor(void)::m,
+            v16);
+    VPhysXCollisionAttributes_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_VPhysXCollisionAttributes_t.m_pOuterTypeScope = v4;
+    VPhysXCollisionAttributes_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_VPhysXCollisionAttributes_t[7].m_pType = v17;
+    VPhysXCollisionAttributes_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult = &VPhysXCollisionAttributes_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_VPhysXCollisionAttributes_t;
+    (*(*v4 + 264LL))(
+      v4,
+      &VPhysXCollisionAttributes_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_VPhysXCollisionAttributes_t);
+    return VPhysXCollisionAttributes_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult;
+  }
+  return result;
+}
+
+
+// VPhysXCollisionAttributes_t::Schema_VerifyBindingIsRegistered  (line 222, @0x0000000003184d40, libserver.so)
+void __cdecl VPhysXCollisionAttributes_t::Schema_VerifyBindingIsRegistered()
+{
+  ;
+}
+
+
+// VPhysXRange_t::Schema_CompileTimeVerificationFunction  (line 230, @0x0000000003184d50, libserver.so)
+void __fastcall VPhysXRange_t::Schema_CompileTimeVerificationFunction(VPhysXRange_t *const this)
+{
+  ;
+}
+
+
+// VPhysXRange_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE  (line 235, @0x0000000003184d60, libserver.so)  // inlines: Get, SchemaBinding_SchemaTypeOfMemberVarByAddr<VPhysXRange_t, float>, SetTypeScope
+// callers: CSchemaClassBinding<VPhysXRange_t>::Register
+// globals: VPhysXRange_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitiali, VPhysXRange_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_
+CSchemaClassInfo *__fastcall VPhysXRange_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        const char *pProjectName)
+{
+  CSchemaClassInfo *result; // rax
+  ISchemaSystemTypeScope *v4; // rbx
+  CSchemaType *v5; // rax
+
+  result = VPhysXRange_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult;
+  if ( VPhysXRange_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult == 0 )
+  {
+    v4 = (*(*pSchemaSystem + 112LL))(pSchemaSystem, 0, pBinaryName);
+    VPhysXRange_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_VPhysXRange_t[0].m_pType = (*(*v4 + 40LL))(v4, 11);
+    v5 = (*(*v4 + 40LL))(v4, 11);
+    VPhysXRange_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_VPhysXRange_t.m_pOuterTypeScope = v4;
+    VPhysXRange_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_VPhysXRange_t[1].m_pType = v5;
+    VPhysXRange_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult = &VPhysXRange_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_VPhysXRange_t;
+    (*(*v4 + 264LL))(
+      v4,
+      &VPhysXRange_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_VPhysXRange_t);
+    return VPhysXRange_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult;
+  }
+  return result;
+}
+
+
+// VPhysXRange_t::Schema_VerifyBindingIsRegistered  (line 256, @0x0000000003184df0, libserver.so)
+void __cdecl VPhysXRange_t::Schema_VerifyBindingIsRegistered()
+{
+  ;
+}
+
+
+// VPhysXConstraintParams_t::Schema_CompileTimeVerificationFunction  (line 264, @0x0000000003184e00, libserver.so)
+void __fastcall VPhysXConstraintParams_t::Schema_CompileTimeVerificationFunction(VPhysXConstraintParams_t *const this)
+{
+  ;
+}
+
+
+// VPhysXConstraintParams_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE  (line 313, @0x0000000003184e10, libserver.so)  // inlines: Get, GetInfo, SchemaBinding_SchemaTypeOfMemberVarByAddr<VPhysXConstraintParams_t, Quaternion [2]>, SchemaBinding_SchemaTypeOfMemberVarByAddr<VPhysXConstraintParams_t, Quaternion>, SchemaBinding_SchemaTypeOfMemberVarByAddr<VPhysXConstraintParams_t, Vector [2]>, SchemaBinding_SchemaTypeOfMemberVarByAddr<VPhysXConstraintParams_t, Vector>, SchemaBinding_SchemaTypeOfMemberVarByAddr<VPhysXConstraintParams_t, float>, SchemaBinding_SchemaTypeOfMemberVarByAddr<VPhysXConstraintParams_t, int>, SchemaBinding_SchemaTypeOfMemberVarByAddr<VPhysXConstraintParams_t, signed char>, SetTypeScope
+// calls: __cxa_guard_acquire, CSchemaEnumBinding<VPhysXConstraintParams_t::EnumFlags0_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE, __cxa_guard_release, __cxa_guard_abort, _Unwind_Resume
+// callers: CSchemaClassBinding<VPhysXConstraintParams_t>::Register
+// globals: VPhysXConstraintParams_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::, CSchemaManipulator<Vector>::StaticAccessor(void)::m, CAtomicManipulator<Vector>::Get(void)::val, CSchemaManipulator<Quaternion>::StaticAccessor(void)::m, CAtomicManipulator<Quaternion>::Get(void)::val, `guard variable for'VPhysXConstraintParams_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char c
+CSchemaClassInfo *__fastcall VPhysXConstraintParams_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        const char *pProjectName)
+{
+  CSchemaClassInfo *result; // rax
+  ISchemaSystemTypeScope *v7; // rbx
+  __int64 (__fastcall *v8)(ISchemaSystemTypeScope *, __int64, __int64); // r15
+  __int64 v9; // rax
+  __int64 (__fastcall *v10)(ISchemaSystemTypeScope *, __int64, __int64); // r15
+  __int64 v11; // rax
+
+  result = VPhysXConstraintParams_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult;
+  if ( VPhysXConstraintParams_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult == 0 )
+  {
+    v7 = (*(*pSchemaSystem + 112LL))(pSchemaSystem, 0, pBinaryName);
+    VPhysXConstraintParams_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_VPhysXConstraintParams_t[0].m_pType = (*(*v7 + 40LL))(v7, 3);
+    VPhysXConstraintParams_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_VPhysXConstraintParams_t[1].m_pType = (*(*v7 + 40LL))(v7, 3);
+    VPhysXConstraintParams_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_VPhysXConstraintParams_t[2].m_pType = (*(*v7 + 40LL))(v7, 3);
+    VPhysXConstraintParams_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_VPhysXConstraintParams_t[3].m_pType = (*(*v7 + 40LL))(v7, 3);
+    v8 = *(*v7 + 104LL);
+    v9 = (*(*v7 + 56LL))(
+           v7,
+           "Vector",
+           2010,
+           CAtomicManipulator<Vector>::Get(void)::val,
+           CSchemaManipulator<Vector>::StaticAccessor(void)::m);
+    VPhysXConstraintParams_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_VPhysXConstraintParams_t[4].m_pType = v8(v7, v9, 2);
+    v10 = *(*v7 + 104LL);
+    v11 = (*(*v7 + 56LL))(
+            v7,
+            "Quaternion",
+            2006,
+            CAtomicManipulator<Quaternion>::Get(void)::val,
+            &CSchemaManipulator<Quaternion>::StaticAccessor(void)::m);
+    VPhysXConstraintParams_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_VPhysXConstraintParams_t[5].m_pType = v10(v7, v11, 2);
+    VPhysXConstraintParams_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_VPhysXConstraintParams_t[6].m_pType = (*(*v7 + 40LL))(v7, 11);
+    VPhysXConstraintParams_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_VPhysXConstraintParams_t[7].m_pType = (*(*v7 + 40LL))(v7, 11);
+    VPhysXConstraintParams_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_VPhysXConstraintParams_t[8].m_pType = (*(*v7 + 40LL))(v7, 11);
+    VPhysXConstraintParams_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_VPhysXConstraintParams_t[9].m_pType = (*(*v7 + 40LL))(v7, 11);
+    VPhysXConstraintParams_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_VPhysXConstraintParams_t[10].m_pType = (*(*v7 + 40LL))(v7, 11);
+    VPhysXConstraintParams_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_VPhysXConstraintParams_t[11].m_pType = (*(*v7 + 40LL))(v7, 11);
+    VPhysXConstraintParams_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_VPhysXConstraintParams_t[12].m_pType = (*(*v7 + 40LL))(v7, 11);
+    VPhysXConstraintParams_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_VPhysXConstraintParams_t[13].m_pType = (*(*v7 + 40LL))(v7, 11);
+    VPhysXConstraintParams_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_VPhysXConstraintParams_t[14].m_pType = (*(*v7 + 40LL))(v7, 11);
+    VPhysXConstraintParams_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_VPhysXConstraintParams_t[15].m_pType = (*(*v7 + 40LL))(v7, 11);
+    VPhysXConstraintParams_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_VPhysXConstraintParams_t[16].m_pType = (*(*v7 + 40LL))(v7, 11);
+    VPhysXConstraintParams_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_VPhysXConstraintParams_t[17].m_pType = (*(*v7 + 40LL))(v7, 11);
+    VPhysXConstraintParams_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_VPhysXConstraintParams_t[18].m_pType = (*(*v7 + 40LL))(v7, 11);
+    VPhysXConstraintParams_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_VPhysXConstraintParams_t[19].m_pType = (*(*v7 + 40LL))(v7, 11);
+    VPhysXConstraintParams_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_VPhysXConstraintParams_t[20].m_pType = (*(*v7 + 40LL))(v7, 11);
+    VPhysXConstraintParams_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_VPhysXConstraintParams_t[21].m_pType = (*(*v7 + 40LL))(v7, 11);
+    VPhysXConstraintParams_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_VPhysXConstraintParams_t[22].m_pType = (*(*v7 + 40LL))(v7, 11);
+    VPhysXConstraintParams_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_VPhysXConstraintParams_t[23].m_pType = (*(*v7 + 40LL))(v7, 11);
+    VPhysXConstraintParams_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_VPhysXConstraintParams_t[24].m_pType = (*(*v7 + 40LL))(v7, 11);
+    VPhysXConstraintParams_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_VPhysXConstraintParams_t[25].m_pType = (*(*v7 + 40LL))(v7, 11);
+    VPhysXConstraintParams_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_VPhysXConstraintParams_t[26].m_pType = (*(*v7 + 40LL))(v7, 11);
+    VPhysXConstraintParams_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_VPhysXConstraintParams_t[27].m_pType = (*(*v7 + 40LL))(v7, 11);
+    VPhysXConstraintParams_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_VPhysXConstraintParams_t[28].m_pType = (*(*v7 + 56LL))(v7, "Vector", 2010, CAtomicManipulator<Vector>::Get(void)::val, CSchemaManipulator<Vector>::StaticAccessor(void)::m);
+    VPhysXConstraintParams_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_VPhysXConstraintParams_t[29].m_pType = (*(*v7 + 56LL))(v7, "Quaternion", 2006, CAtomicManipulator<Quaternion>::Get(void)::val, &CSchemaManipulator<Quaternion>::StaticAccessor(void)::m);
+    VPhysXConstraintParams_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_VPhysXConstraintParams_t[30].m_pType = (*(*v7 + 56LL))(v7, "Vector", 2010, CAtomicManipulator<Vector>::Get(void)::val, CSchemaManipulator<Vector>::StaticAccessor(void)::m);
+    VPhysXConstraintParams_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_VPhysXConstraintParams_t[31].m_pType = (*(*v7 + 40LL))(v7, 11);
+    VPhysXConstraintParams_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_VPhysXConstraintParams_t[32].m_pType = (*(*v7 + 40LL))(v7, 11);
+    VPhysXConstraintParams_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_VPhysXConstraintParams_t[33].m_pType = (*(*v7 + 40LL))(v7, 11);
+    VPhysXConstraintParams_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_VPhysXConstraintParams_t[34].m_pType = (*(*v7 + 40LL))(v7, 11);
+    VPhysXConstraintParams_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_VPhysXConstraintParams_t[35].m_pType = (*(*v7 + 40LL))(v7, 11);
+    VPhysXConstraintParams_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_VPhysXConstraintParams_t[36].m_pType = (*(*v7 + 40LL))(v7, 11);
+    VPhysXConstraintParams_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_VPhysXConstraintParams_t[37].m_pType = (*(*v7 + 40LL))(v7, 11);
+    VPhysXConstraintParams_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_VPhysXConstraintParams_t[38].m_pType = (*(*v7 + 40LL))(v7, 11);
+    VPhysXConstraintParams_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_VPhysXConstraintParams_t[39].m_pType = (*(*v7 + 40LL))(v7, 11);
+    VPhysXConstraintParams_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_VPhysXConstraintParams_t[40].m_pType = (*(*v7 + 40LL))(v7, 11);
+    VPhysXConstraintParams_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_VPhysXConstraintParams_t[41].m_pType = (*(*v7 + 40LL))(v7, 11);
+    VPhysXConstraintParams_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_VPhysXConstraintParams_t[42].m_pType = (*(*v7 + 40LL))(v7, 11);
+    VPhysXConstraintParams_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_VPhysXConstraintParams_t[43].m_pType = (*(*v7 + 40LL))(v7, 7);
+    VPhysXConstraintParams_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_VPhysXConstraintParams_t[44].m_pType = (*(*v7 + 40LL))(v7, 11);
+    VPhysXConstraintParams_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_VPhysXConstraintParams_t[45].m_pType = (*(*v7 + 40LL))(v7, 11);
+    if ( `guard variable for'VPhysXConstraintParams_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_NestedEnumsOf_VPhysXConstraintParams_t == 0
+      && __cxa_guard_acquire(&`guard variable for'VPhysXConstraintParams_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_NestedEnumsOf_VPhysXConstraintParams_t) != 0 )
+    {
+      VPhysXConstraintParams_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_NestedEnumsOf_VPhysXConstraintParams_t[0] = CSchemaEnumBinding<VPhysXConstraintParams_t::EnumFlags0_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(pSchemaSystem, pBinaryName, pProjectName);
+      __cxa_guard_release(&`guard variable for'VPhysXConstraintParams_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_NestedEnumsOf_VPhysXConstraintParams_t);
+    }
+    VPhysXConstraintParams_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_VPhysXConstraintParams_t.m_pOuterTypeScope = v7;
+    VPhysXConstraintParams_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult = &VPhysXConstraintParams_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_VPhysXConstraintParams_t;
+    (*(*v7 + 264LL))(
+      v7,
+      &VPhysXConstraintParams_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_VPhysXConstraintParams_t);
+    return VPhysXConstraintParams_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult;
+  }
+  return result;
+}
+
+
+// VPhysXConstraintParams_t::Schema_VerifyBindingIsRegistered  (line 428, @0x0000000003185340, libserver.so)
+void __cdecl VPhysXConstraintParams_t::Schema_VerifyBindingIsRegistered()
+{
+  ;
+}
+
+
+// VPhysXConstraint2_t::Schema_CompileTimeVerificationFunction  (line 436, @0x0000000003185350, libserver.so)
+void __fastcall VPhysXConstraint2_t::Schema_CompileTimeVerificationFunction(VPhysXConstraint2_t *const this)
+{
+  ;
+}
+
+
+// VPhysXConstraint2_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE  (line 443, @0x0000000003185360, libserver.so)  // inlines: Get, SchemaBinding_SchemaTypeOfMemberVarByAddr<VPhysXConstraint2_t, VPhysXConstraintParams_t>, SchemaBinding_SchemaTypeOfMemberVarByAddr<VPhysXConstraint2_t, short unsigned int>, SchemaBinding_SchemaTypeOfMemberVarByAddr<VPhysXConstraint2_t, unsigned int>, SetTypeScope
+// callers: CSchemaClassBinding<VPhysXConstraint2_t>::Register
+// strings: "VPhysXConstraintParams_t"
+// globals: VPhysXConstraint2_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pIn, VPhysXConstraint2_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplS
+CSchemaClassInfo *__fastcall VPhysXConstraint2_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        const char *pProjectName)
+{
+  CSchemaClassInfo *result; // rax
+  ISchemaSystemTypeScope *v4; // rbx
+  CSchemaType *v5; // rax
+
+  result = VPhysXConstraint2_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult;
+  if ( VPhysXConstraint2_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult == 0 )
+  {
+    v4 = (*(*pSchemaSystem + 112LL))(pSchemaSystem, 0, pBinaryName);
+    VPhysXConstraint2_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_VPhysXConstraint2_t[0].m_pType = (*(*v4 + 40LL))(v4, 8);
+    VPhysXConstraint2_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_VPhysXConstraint2_t[1].m_pType = (*(*v4 + 40LL))(v4, 6);
+    VPhysXConstraint2_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_VPhysXConstraint2_t[2].m_pType = (*(*v4 + 40LL))(v4, 6);
+    v5 = (*(*v4 + 88LL))(v4, "VPhysXConstraintParams_t");
+    VPhysXConstraint2_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_VPhysXConstraint2_t.m_pOuterTypeScope = v4;
+    VPhysXConstraint2_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_VPhysXConstraint2_t[3].m_pType = v5;
+    VPhysXConstraint2_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult = &VPhysXConstraint2_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_VPhysXConstraint2_t;
+    (*(*v4 + 264LL))(
+      v4,
+      &VPhysXConstraint2_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_VPhysXConstraint2_t);
+    return VPhysXConstraint2_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult;
+  }
+  return result;
+}
+
+
+// VPhysXConstraint2_t::Schema_VerifyBindingIsRegistered  (line 468, @0x0000000003185420, libserver.so)
+void __cdecl VPhysXConstraint2_t::Schema_VerifyBindingIsRegistered()
+{
+  ;
+}
+
+
+// VPhysXJoint_t::Schema_CompileTimeVerificationFunction  (line 476, @0x0000000003185430, libserver.so)
+void __fastcall VPhysXJoint_t::Schema_CompileTimeVerificationFunction(VPhysXJoint_t *const this)
+{
+  ;
+}
+
+
+// VPhysXJoint_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE  (line 501, @0x0000000003185440, libserver.so)  // inlines: Get, SchemaBinding_SchemaTypeOfMemberVarByAddr<VPhysXJoint_t, CTransform>, SchemaBinding_SchemaTypeOfMemberVarByAddr<VPhysXJoint_t, VPhysXRange_t>, SchemaBinding_SchemaTypeOfMemberVarByAddr<VPhysXJoint_t, Vector>, SchemaBinding_SchemaTypeOfMemberVarByAddr<VPhysXJoint_t, bool>, SchemaBinding_SchemaTypeOfMemberVarByAddr<VPhysXJoint_t, float>, SchemaBinding_SchemaTypeOfMemberVarByAddr<VPhysXJoint_t, short unsigned int>, SetTypeScope
+// callers: CSchemaClassBinding<VPhysXJoint_t>::Register
+// strings: "CTransform", "VPhysXRange_t"
+// globals: VPhysXJoint_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitiali, CSchemaManipulator<CTransform>::StaticAccessor(void)::m, CAtomicManipulator<CTransform>::Get(void)::val, CSchemaManipulator<Vector>::StaticAccessor(void)::m, CAtomicManipulator<Vector>::Get(void)::val, VPhysXJoint_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_
+CSchemaClassInfo *__fastcall VPhysXJoint_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        const char *pProjectName)
+{
+  CSchemaClassInfo *result; // rax
+  ISchemaSystemTypeScope *v4; // rbx
+  CSchemaType *v5; // rax
+
+  result = VPhysXJoint_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult;
+  if ( VPhysXJoint_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult == 0 )
+  {
+    v4 = (*(*pSchemaSystem + 112LL))(pSchemaSystem, 0, pBinaryName);
+    VPhysXJoint_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_VPhysXJoint_t[0].m_pType = (*(*v4 + 40LL))(v4, 6);
+    VPhysXJoint_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_VPhysXJoint_t[1].m_pType = (*(*v4 + 40LL))(v4, 6);
+    VPhysXJoint_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_VPhysXJoint_t[2].m_pType = (*(*v4 + 40LL))(v4, 6);
+    VPhysXJoint_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_VPhysXJoint_t[3].m_pType = (*(*v4 + 40LL))(v4, 6);
+    VPhysXJoint_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_VPhysXJoint_t[4].m_pType = (*(*v4 + 56LL))(v4, "CTransform", 2013, CAtomicManipulator<CTransform>::Get(void)::val, &CSchemaManipulator<CTransform>::StaticAccessor(void)::m);
+    VPhysXJoint_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_VPhysXJoint_t[5].m_pType = (*(*v4 + 56LL))(v4, "CTransform", 2013, CAtomicManipulator<CTransform>::Get(void)::val, &CSchemaManipulator<CTransform>::StaticAccessor(void)::m);
+    VPhysXJoint_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_VPhysXJoint_t[6].m_pType = (*(*v4 + 40LL))(v4, 13);
+    VPhysXJoint_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_VPhysXJoint_t[7].m_pType = (*(*v4 + 88LL))(v4, "VPhysXRange_t");
+    VPhysXJoint_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_VPhysXJoint_t[8].m_pType = (*(*v4 + 40LL))(v4, 13);
+    VPhysXJoint_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_VPhysXJoint_t[9].m_pType = (*(*v4 + 56LL))(v4, "Vector", 2010, CAtomicManipulator<Vector>::Get(void)::val, CSchemaManipulator<Vector>::StaticAccessor(void)::m);
+    VPhysXJoint_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_VPhysXJoint_t[10].m_pType = (*(*v4 + 40LL))(v4, 11);
+    VPhysXJoint_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_VPhysXJoint_t[11].m_pType = (*(*v4 + 40LL))(v4, 13);
+    VPhysXJoint_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_VPhysXJoint_t[12].m_pType = (*(*v4 + 88LL))(v4, "VPhysXRange_t");
+    VPhysXJoint_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_VPhysXJoint_t[13].m_pType = (*(*v4 + 40LL))(v4, 13);
+    VPhysXJoint_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_VPhysXJoint_t[14].m_pType = (*(*v4 + 88LL))(v4, "VPhysXRange_t");
+    VPhysXJoint_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_VPhysXJoint_t[15].m_pType = (*(*v4 + 40LL))(v4, 13);
+    VPhysXJoint_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_VPhysXJoint_t[16].m_pType = (*(*v4 + 56LL))(v4, "Vector", 2010, CAtomicManipulator<Vector>::Get(void)::val, CSchemaManipulator<Vector>::StaticAccessor(void)::m);
+    VPhysXJoint_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_VPhysXJoint_t[17].m_pType = (*(*v4 + 40LL))(v4, 11);
+    VPhysXJoint_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_VPhysXJoint_t[18].m_pType = (*(*v4 + 40LL))(v4, 11);
+    VPhysXJoint_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_VPhysXJoint_t[19].m_pType = (*(*v4 + 40LL))(v4, 11);
+    VPhysXJoint_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_VPhysXJoint_t[20].m_pType = (*(*v4 + 40LL))(v4, 11);
+    v5 = (*(*v4 + 40LL))(v4, 11);
+    VPhysXJoint_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_VPhysXJoint_t.m_pOuterTypeScope = v4;
+    VPhysXJoint_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_VPhysXJoint_t[21].m_pType = v5;
+    VPhysXJoint_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult = &VPhysXJoint_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_VPhysXJoint_t;
+    (*(*v4 + 264LL))(
+      v4,
+      &VPhysXJoint_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_VPhysXJoint_t);
+    return VPhysXJoint_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult;
+  }
+  return result;
+}
+
+
+// VPhysXJoint_t::Schema_VerifyBindingIsRegistered  (line 562, @0x00000000031856d0, libserver.so)
+void __cdecl VPhysXJoint_t::Schema_VerifyBindingIsRegistered()
+{
+  ;
+}
+
+
+// PhysSoftbodyDesc_t::Schema_CompileTimeVerificationFunction  (line 570, @0x00000000031856e0, libserver.so)
+void __fastcall PhysSoftbodyDesc_t::Schema_CompileTimeVerificationFunction(PhysSoftbodyDesc_t *const this)
+{
+  ;
+}
+
+
+// PhysSoftbodyDesc_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE  (line 579, @0x00000000031856f0, libserver.so)  // inlines: Get, SchemaBinding_SchemaTypeOfMemberVarByAddr<PhysSoftbodyDesc_t, CResourceArray<CResourceString> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<PhysSoftbodyDesc_t, CResourceArray<CTransform> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<PhysSoftbodyDesc_t, CResourceArray<RnSoftbodyCapsule_t> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<PhysSoftbodyDesc_t, CResourceArray<RnSoftbodyParticle_t> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<PhysSoftbodyDesc_t, CResourceArray<RnSoftbodySpring_t> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<PhysSoftbodyDesc_t, CResourceArray<unsigned int> >, SetTypeScope
+// callers: CSchemaClassBinding<PhysSoftbodyDesc_t>::Register
+// strings: "CResourceArray", "RnSoftbodyParticle_t", "RnSoftbodySpring_t", "RnSoftbodyCapsule_t", "CTransform", "CResourceString"
+// globals: PhysSoftbodyDesc_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pIni, CSchemaManipulator<CResourceArray<uint>>::StaticAccessor(void)::m, CAtomicManipulator<CResourceArray<uint>>::Get(void)::val, CSchemaManipulator<CResourceArray<RnSoftbodyParticle_t>>::StaticAccessor(void)::m, CAtomicManipulator<CResourceArray<RnSoftbodyParticle_t>>::Get(void)::val, CSchemaManipulator<CResourceArray<RnSoftbodySpring_t>>::StaticAccessor(void)::m, CAtomicManipulator<CResourceArray<RnSoftbodySpring_t>>::Get(void)::val, CSchemaManipulator<CResourceArray<RnSoftbodyCapsule_t>>::StaticAccessor(void)::m (18 total)
+CSchemaClassInfo *__fastcall PhysSoftbodyDesc_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        const char *pProjectName)
+{
+  CSchemaClassInfo *result; // rax
+  ISchemaSystemTypeScope *v4; // rbx
+  __int64 (__fastcall *v5)(ISchemaSystemTypeScope *, const char *, __int64, __int64 (__fastcall ***)(), __int64 (__fastcall ***)(), __int64); // r12
+  __int64 v6; // rax
+  __int64 (__fastcall *v7)(ISchemaSystemTypeScope *, const char *, __int64, __int64 (__fastcall ***)(), __int64 (__fastcall ***)(), __int64); // r12
+  __int64 v8; // rax
+  __int64 (__fastcall *v9)(ISchemaSystemTypeScope *, const char *, __int64, __int64 (__fastcall ***)(), __int64 (__fastcall ***)(), __int64); // r12
+  __int64 v10; // rax
+  __int64 (__fastcall *v11)(ISchemaSystemTypeScope *, const char *, __int64, __int64 (__fastcall ***)(), __int64 (__fastcall ***)(), __int64); // r12
+  __int64 v12; // rax
+  __int64 (__fastcall *v13)(ISchemaSystemTypeScope *, const char *, __int64, __int64 (__fastcall ***)(), __int64 (__fastcall ***)(), __int64); // r12
+  __int64 v14; // rax
+  __int64 (__fastcall *v15)(ISchemaSystemTypeScope *, const char *, __int64, __int64 (__fastcall ***)(), __int64 (__fastcall ***)(), __int64); // r12
+  __int64 v16; // rax
+  CSchemaType *v17; // rax
+
+  result = PhysSoftbodyDesc_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult;
+  if ( PhysSoftbodyDesc_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult == 0 )
+  {
+    v4 = (*(*pSchemaSystem + 112LL))(pSchemaSystem, 0, pBinaryName);
+    v5 = *(*v4 + 64LL);
+    v6 = (*(*v4 + 40LL))(v4, 8);
+    PhysSoftbodyDesc_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_PhysSoftbodyDesc_t[0].m_pType = v5(v4, "CResourceArray", 4004, CAtomicManipulator<CResourceArray<unsigned int>>::Get(void)::val, CSchemaManipulator<CResourceArray<unsigned int>>::StaticAccessor(void)::m, v6);
+    v7 = *(*v4 + 64LL);
+    v8 = (*(*v4 + 88LL))(v4, "RnSoftbodyParticle_t");
+    PhysSoftbodyDesc_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_PhysSoftbodyDesc_t[1].m_pType = v7(v4, "CResourceArray", 4004, CAtomicManipulator<CResourceArray<RnSoftbodyParticle_t>>::Get(void)::val, CSchemaManipulator<CResourceArray<RnSoftbodyParticle_t>>::StaticAccessor(void)::m, v8);
+    v9 = *(*v4 + 64LL);
+    v10 = (*(*v4 + 88LL))(v4, "RnSoftbodySpring_t");
+    PhysSoftbodyDesc_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_PhysSoftbodyDesc_t[2].m_pType = v9(v4, "CResourceArray", 4004, CAtomicManipulator<CResourceArray<RnSoftbodySpring_t>>::Get(void)::val, CSchemaManipulator<CResourceArray<RnSoftbodySpring_t>>::StaticAccessor(void)::m, v10);
+    v11 = *(*v4 + 64LL);
+    v12 = (*(*v4 + 88LL))(v4, "RnSoftbodyCapsule_t");
+    PhysSoftbodyDesc_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_PhysSoftbodyDesc_t[3].m_pType = v11(v4, "CResourceArray", 4004, CAtomicManipulator<CResourceArray<RnSoftbodyCapsule_t>>::Get(void)::val, CSchemaManipulator<CResourceArray<RnSoftbodyCapsule_t>>::StaticAccessor(void)::m, v12);
+    v13 = *(*v4 + 64LL);
+    v14 = (*(*v4 + 56LL))(
+            v4,
+            "CTransform",
+            2013,
+            CAtomicManipulator<CTransform>::Get(void)::val,
+            &CSchemaManipulator<CTransform>::StaticAccessor(void)::m);
+    PhysSoftbodyDesc_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_PhysSoftbodyDesc_t[4].m_pType = v13(v4, "CResourceArray", 4004, CAtomicManipulator<CResourceArray<CTransform>>::Get(void)::val, CSchemaManipulator<CResourceArray<CTransform>>::StaticAccessor(void)::m, v14);
+    v15 = *(*v4 + 64LL);
+    v16 = (*(*v4 + 56LL))(
+            v4,
+            "CResourceString",
+            4005,
+            CAtomicManipulator<CResourceString>::Get(void)::val,
+            CSchemaManipulator<CResourceString>::StaticAccessor(void)::m);
+    v17 = v15(
+            v4,
+            "CResourceArray",
+            4004,
+            CAtomicManipulator<CResourceArray<CResourceString>>::Get(void)::val,
+            CSchemaManipulator<CResourceArray<CResourceString>>::StaticAccessor(void)::m,
+            v16);
+    PhysSoftbodyDesc_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_PhysSoftbodyDesc_t.m_pOuterTypeScope = v4;
+    PhysSoftbodyDesc_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_PhysSoftbodyDesc_t[5].m_pType = v17;
+    PhysSoftbodyDesc_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult = &PhysSoftbodyDesc_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_PhysSoftbodyDesc_t;
+    (*(*v4 + 264LL))(
+      v4,
+      &PhysSoftbodyDesc_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_PhysSoftbodyDesc_t);
+    return PhysSoftbodyDesc_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult;
+  }
+  return result;
+}
+
+
+// PhysSoftbodyDesc_t::Schema_VerifyBindingIsRegistered  (line 608, @0x00000000031858f0, libserver.so)
+void __cdecl PhysSoftbodyDesc_t::Schema_VerifyBindingIsRegistered()
+{
+  ;
+}
+
+
+// VPhysXAggregateData_t::Schema_CompileTimeVerificationFunction  (line 616, @0x0000000003185900, libserver.so)
+void __fastcall VPhysXAggregateData_t::Schema_CompileTimeVerificationFunction(VPhysXAggregateData_t *const this)
+{
+  ;
+}
+
+
+// VPhysXAggregateData_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE  (line 635, @0x0000000003185910, libserver.so)  // inlines: Get, GetInfo, SchemaBinding_SchemaTypeOfMemberVarByAddr<VPhysXAggregateData_t, CResourceArray<CResourceString> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<VPhysXAggregateData_t, CResourceArray<VPhysXBodyPart_t> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<VPhysXAggregateData_t, CResourceArray<VPhysXCollisionAttributes_t> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<VPhysXAggregateData_t, CResourceArray<VPhysXConstraint2_t> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<VPhysXAggregateData_t, CResourceArray<VPhysXJoint_t> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<VPhysXAggregateData_t, CResourceArray<matrix3x4a_t> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<VPhysXAggregateData_t, CResourceArray<short unsigned int> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<VPhysXAggregateData_t, CResourceArray<unsigned int> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<VPhysXAggregateData_t, CResourcePointer<PhysFeModelDesc_t> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<VPhysXAggregateData_t, CResourceString>, SchemaBinding_SchemaTypeOfMemberVarByAddr<VPhysXAggregateData_t, short unsigned int>, SetTypeScope
+// calls: __cxa_guard_acquire, CSchemaEnumBinding<VPhysXAggregateData_t::VPhysXFlagEnum_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE, __cxa_guard_release, __cxa_guard_abort, _Unwind_Resume
+// callers: CSchemaClassBinding<VPhysXAggregateData_t>::Register
+// strings: "CResourceArray", "CResourceString", "matrix3x4a_t", "VPhysXBodyPart_t", "VPhysXConstraint2_t", "VPhysXJoint_t" (9 total)
+// globals: VPhysXAggregateData_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_p, CSchemaManipulator<CResourceArray<uint>>::StaticAccessor(void)::m, CAtomicManipulator<CResourceArray<uint>>::Get(void)::val, CSchemaManipulator<CResourceString>::StaticAccessor(void)::m, CAtomicManipulator<CResourceString>::Get(void)::val, CSchemaManipulator<CResourceArray<CResourceString>>::StaticAccessor(void)::m, CAtomicManipulator<CResourceArray<CResourceString>>::Get(void)::val, CSchemaManipulator<CResourceArray<ushort>>::StaticAccessor(void)::m (25 total)
+CSchemaClassInfo *__fastcall VPhysXAggregateData_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        const char *pProjectName)
+{
+  CSchemaClassInfo *result; // rax
+  ISchemaSystemTypeScope *v7; // rbx
+  __int64 (__fastcall *v8)(ISchemaSystemTypeScope *, const char *, __int64, __int64 (__fastcall ***)(), __int64 (__fastcall ***)(), __int64); // r15
+  __int64 v9; // rax
+  __int64 (__fastcall *v10)(ISchemaSystemTypeScope *, const char *, __int64, __int64 (__fastcall ***)(), __int64 (__fastcall ***)(), __int64); // r15
+  __int64 v11; // rax
+  __int64 (__fastcall *v12)(ISchemaSystemTypeScope *, const char *, __int64, __int64 (__fastcall ***)(), __int64 (__fastcall ***)(), __int64); // r15
+  __int64 v13; // rax
+  __int64 (__fastcall *v14)(ISchemaSystemTypeScope *, const char *, __int64, __int64 (__fastcall ***)(), __int64 (__fastcall ***)(), __int64); // r15
+  __int64 v15; // rax
+  __int64 (__fastcall *v16)(ISchemaSystemTypeScope *, const char *, __int64, __int64 (__fastcall ***)(), __int64 (__fastcall ***)(), __int64); // r15
+  __int64 v17; // rax
+  __int64 (__fastcall *v18)(ISchemaSystemTypeScope *, const char *, __int64, __int64 (__fastcall ***)(), __int64 (__fastcall ***)(), __int64); // r15
+  __int64 v19; // rax
+  __int64 (__fastcall *v20)(ISchemaSystemTypeScope *, const char *, __int64, __int64 (__fastcall ***)(), __int64 (__fastcall ***)(), __int64); // r15
+  __int64 v21; // rax
+  __int64 (__fastcall *v22)(ISchemaSystemTypeScope *, const char *, __int64, __int64 (__fastcall ***)(), __int64 (__fastcall ***)(), __int64); // r15
+  __int64 v23; // rax
+  __int64 (__fastcall *v24)(ISchemaSystemTypeScope *, const char *, __int64, __int64 (__fastcall ***)(), __int64 (__fastcall ***)(), __int64); // r15
+  __int64 v25; // rax
+  __int64 (__fastcall *v26)(ISchemaSystemTypeScope *, const char *, __int64, __int64 (__fastcall ***)(), __int64 (__fastcall ***)(), __int64); // r15
+  __int64 v27; // rax
+  __int64 (__fastcall *v28)(ISchemaSystemTypeScope *, const char *, __int64, __int64 (__fastcall ***)(), __int64 (__fastcall ***)(), __int64); // r15
+  __int64 v29; // rax
+  __int64 (__fastcall *v30)(ISchemaSystemTypeScope *, const char *, __int64, __int64 (__fastcall ***)(), __int64 (__fastcall ***)(), __int64); // r15
+  __int64 v31; // rax
+  __int64 (__fastcall *v32)(ISchemaSystemTypeScope *, const char *, __int64, __int64 (__fastcall ***)(), __int64 (__fastcall ***)(), __int64); // r15
+  __int64 v33; // rax
+
+  result = VPhysXAggregateData_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult;
+  if ( VPhysXAggregateData_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult == 0 )
+  {
+    v7 = (*(*pSchemaSystem + 112LL))(pSchemaSystem, 0, pBinaryName);
+    VPhysXAggregateData_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_VPhysXAggregateData_t[0].m_pType = (*(*v7 + 40LL))(v7, 6);
+    VPhysXAggregateData_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_VPhysXAggregateData_t[1].m_pType = (*(*v7 + 40LL))(v7, 6);
+    v8 = *(*v7 + 64LL);
+    v9 = (*(*v7 + 40LL))(v7, 8);
+    VPhysXAggregateData_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_VPhysXAggregateData_t[2].m_pType = v8(v7, "CResourceArray", 4004, CAtomicManipulator<CResourceArray<unsigned int>>::Get(void)::val, CSchemaManipulator<CResourceArray<unsigned int>>::StaticAccessor(void)::m, v9);
+    v10 = *(*v7 + 64LL);
+    v11 = (*(*v7 + 56LL))(
+            v7,
+            "CResourceString",
+            4005,
+            CAtomicManipulator<CResourceString>::Get(void)::val,
+            CSchemaManipulator<CResourceString>::StaticAccessor(void)::m);
+    VPhysXAggregateData_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_VPhysXAggregateData_t[3].m_pType = v10(v7, "CResourceArray", 4004, CAtomicManipulator<CResourceArray<CResourceString>>::Get(void)::val, CSchemaManipulator<CResourceArray<CResourceString>>::StaticAccessor(void)::m, v11);
+    v12 = *(*v7 + 64LL);
+    v13 = (*(*v7 + 40LL))(v7, 6);
+    VPhysXAggregateData_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_VPhysXAggregateData_t[4].m_pType = v12(v7, "CResourceArray", 4004, CAtomicManipulator<CResourceArray<unsigned short>>::Get(void)::val, CSchemaManipulator<CResourceArray<unsigned short>>::StaticAccessor(void)::m, v13);
+    v14 = *(*v7 + 64LL);
+    v15 = (*(*v7 + 40LL))(v7, 6);
+    VPhysXAggregateData_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_VPhysXAggregateData_t[5].m_pType = v14(v7, "CResourceArray", 4004, CAtomicManipulator<CResourceArray<unsigned short>>::Get(void)::val, CSchemaManipulator<CResourceArray<unsigned short>>::StaticAccessor(void)::m, v15);
+    v16 = *(*v7 + 64LL);
+    v17 = (*(*v7 + 56LL))(
+            v7,
+            "matrix3x4a_t",
+            2004,
+            CAtomicManipulator<matrix3x4a_t>::Get(void)::val,
+            &CSchemaManipulator<matrix3x4a_t>::StaticAccessor(void)::m);
+    VPhysXAggregateData_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_VPhysXAggregateData_t[6].m_pType = v16(v7, "CResourceArray", 4004, CAtomicManipulator<CResourceArray<matrix3x4a_t>>::Get(void)::val, &CSchemaManipulator<CResourceArray<matrix3x4a_t>>::StaticAccessor(void)::m, v17);
+    v18 = *(*v7 + 64LL);
+    v19 = (*(*v7 + 88LL))(v7, "VPhysXBodyPart_t");
+    VPhysXAggregateData_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_VPhysXAggregateData_t[7].m_pType = v18(v7, "CResourceArray", 4004, CAtomicManipulator<CResourceArray<VPhysXBodyPart_t>>::Get(void)::val, CSchemaManipulator<CResourceArray<VPhysXBodyPart_t>>::StaticAccessor(void)::m, v19);
+    v20 = *(*v7 + 64LL);
+    v21 = (*(*v7 + 88LL))(v7, "VPhysXConstraint2_t");
+    VPhysXAggregateData_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_VPhysXAggregateData_t[8].m_pType = v20(v7, "CResourceArray", 4004, CAtomicManipulator<CResourceArray<VPhysXConstraint2_t>>::Get(void)::val, CSchemaManipulator<CResourceArray<VPhysXConstraint2_t>>::StaticAccessor(void)::m, v21);
+    v22 = *(*v7 + 64LL);
+    v23 = (*(*v7 + 88LL))(v7, "VPhysXJoint_t");
+    VPhysXAggregateData_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_VPhysXAggregateData_t[9].m_pType = v22(v7, "CResourceArray", 4004, CAtomicManipulator<CResourceArray<VPhysXJoint_t>>::Get(void)::val, CSchemaManipulator<CResourceArray<VPhysXJoint_t>>::StaticAccessor(void)::m, v23);
+    v24 = *(*v7 + 64LL);
+    v25 = (*(*v7 + 88LL))(v7, "PhysFeModelDesc_t");
+    VPhysXAggregateData_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_VPhysXAggregateData_t[10].m_pType = v24(v7, "CResourcePointer", 4003, CAtomicManipulator<CResourcePointer<PhysFeModelDesc_t>>::Get(void)::val, CSchemaManipulator<CResourcePointer<PhysFeModelDesc_t>>::StaticAccessor(void)::m, v25);
+    v26 = *(*v7 + 64LL);
+    v27 = (*(*v7 + 40LL))(v7, 6);
+    VPhysXAggregateData_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_VPhysXAggregateData_t[11].m_pType = v26(v7, "CResourceArray", 4004, CAtomicManipulator<CResourceArray<unsigned short>>::Get(void)::val, CSchemaManipulator<CResourceArray<unsigned short>>::StaticAccessor(void)::m, v27);
+    v28 = *(*v7 + 64LL);
+    v29 = (*(*v7 + 40LL))(v7, 8);
+    VPhysXAggregateData_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_VPhysXAggregateData_t[12].m_pType = v28(v7, "CResourceArray", 4004, CAtomicManipulator<CResourceArray<unsigned int>>::Get(void)::val, CSchemaManipulator<CResourceArray<unsigned int>>::StaticAccessor(void)::m, v29);
+    v30 = *(*v7 + 64LL);
+    v31 = (*(*v7 + 88LL))(v7, "VPhysXCollisionAttributes_t");
+    VPhysXAggregateData_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_VPhysXAggregateData_t[13].m_pType = v30(v7, "CResourceArray", 4004, CAtomicManipulator<CResourceArray<VPhysXCollisionAttributes_t>>::Get(void)::val, CSchemaManipulator<CResourceArray<VPhysXCollisionAttributes_t>>::StaticAccessor(void)::m, v31);
+    v32 = *(*v7 + 64LL);
+    v33 = (*(*v7 + 56LL))(
+            v7,
+            "CResourceString",
+            4005,
+            CAtomicManipulator<CResourceString>::Get(void)::val,
+            CSchemaManipulator<CResourceString>::StaticAccessor(void)::m);
+    VPhysXAggregateData_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_VPhysXAggregateData_t[14].m_pType = v32(v7, "CResourceArray", 4004, CAtomicManipulator<CResourceArray<CResourceString>>::Get(void)::val, CSchemaManipulator<CResourceArray<CResourceString>>::StaticAccessor(void)::m, v33);
+    VPhysXAggregateData_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_VPhysXAggregateData_t[15].m_pType = (*(*v7 + 56LL))(v7, "CResourceString", 4005, CAtomicManipulator<CResourceString>::Get(void)::val, CSchemaManipulator<CResourceString>::StaticAccessor(void)::m);
+    if ( `guard variable for'VPhysXAggregateData_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_NestedEnumsOf_VPhysXAggregateData_t == 0
+      && __cxa_guard_acquire(&`guard variable for'VPhysXAggregateData_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_NestedEnumsOf_VPhysXAggregateData_t) != 0 )
+    {
+      VPhysXAggregateData_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_NestedEnumsOf_VPhysXAggregateData_t[0] = CSchemaEnumBinding<VPhysXAggregateData_t::VPhysXFlagEnum_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(pSchemaSystem, pBinaryName, pProjectName);
+      __cxa_guard_release(&`guard variable for'VPhysXAggregateData_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_NestedEnumsOf_VPhysXAggregateData_t);
+    }
+    VPhysXAggregateData_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_VPhysXAggregateData_t.m_pOuterTypeScope = v7;
+    VPhysXAggregateData_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult = &VPhysXAggregateData_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_VPhysXAggregateData_t;
+    (*(*v7 + 264LL))(
+      v7,
+      &VPhysXAggregateData_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_VPhysXAggregateData_t);
+    return VPhysXAggregateData_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult;
+  }
+  return result;
+}
+
+
+// VPhysXAggregateData_t::Schema_VerifyBindingIsRegistered  (line 693, @0x0000000003185d90, libserver.so)
+void __cdecl VPhysXAggregateData_t::Schema_VerifyBindingIsRegistered()
+{
+  ;
+}
+
+
+// LocalRegisterSchemaModule<ArbitraryTemplateParameter_modellib_vphysx_collisionmesh_resource_h>  (line 701, @0x0000000003185da0, libserver.so)  // inlines: Call, Get
+// callers: RegisterSchemaModule_vphysx_collisionmesh_resource_h
+// strings: "VPhysXBodyPart_t::VPhysXFlagEnum_t", "modellib", "VPhysXConstraintParams_t::EnumFlags0_t", "VPhysXAggregateData_t::VPhysXFlagEnum_t"
+// globals: CSchemaEnumBinding<VPhysXBodyPart_t::VPhysXFlagEnum_t>::s_pThisModuleBindingPointer, CSchemaEnumBinding<VPhysXConstraintParams_t::EnumFlags0_t>::s_pThisModuleBindingPointer, CSchemaEnumBinding<VPhysXAggregateData_t::VPhysXFlagEnum_t>::s_pThisModuleBindingPointer, VPhysics2ShapeDef_t::s_pSchemaBindingForLocalModule, VPhysXBodyPart_t::s_pSchemaBindingForLocalModule, VPhysXCollisionAttributes_t::s_pSchemaBindingForLocalModule, VPhysXRange_t::s_pSchemaBindingForLocalModule, VPhysXConstraintParams_t::s_pSchemaBindingForLocalModule (12 total)
+void __fastcall LocalRegisterSchemaModule<ArbitraryTemplateParameter_modellib_vphysx_collisionmesh_resource_h>(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        SchemaRegistrationPhase_t nRegistrationPhase)
+{
+  if ( nRegistrationPhase != SchemaRegistrationPhase_t::SCHEMA_REGISTRATION_PHASE_ATOMIC_TYPES_AND_ENUMS )
+  {
+    if ( nRegistrationPhase == SchemaRegistrationPhase_t::SCHEMA_REGISTRATION_PHASE_CLASSES )
+    {
+      (*(VPhysics2ShapeDef_t::s_pSchemaBindingForLocalModule->_vptr_ISchemaBinding + 5))(
+        VPhysics2ShapeDef_t::s_pSchemaBindingForLocalModule,
+        pSchemaSystem,
+        pBinaryName,
+        "modellib");
+      (*(VPhysXBodyPart_t::s_pSchemaBindingForLocalModule->_vptr_ISchemaBinding + 5))(
+        VPhysXBodyPart_t::s_pSchemaBindingForLocalModule,
+        pSchemaSystem,
+        pBinaryName,
+        "modellib");
+      (*(VPhysXCollisionAttributes_t::s_pSchemaBindingForLocalModule->_vptr_ISchemaBinding + 5))(
+        VPhysXCollisionAttributes_t::s_pSchemaBindingForLocalModule,
+        pSchemaSystem,
+        pBinaryName,
+        "modellib");
+      (*(VPhysXRange_t::s_pSchemaBindingForLocalModule->_vptr_ISchemaBinding + 5))(
+        VPhysXRange_t::s_pSchemaBindingForLocalModule,
+        pSchemaSystem,
+        pBinaryName,
+        "modellib");
+      (*(VPhysXConstraintParams_t::s_pSchemaBindingForLocalModule->_vptr_ISchemaBinding + 5))(
+        VPhysXConstraintParams_t::s_pSchemaBindingForLocalModule,
+        pSchemaSystem,
+        pBinaryName,
+        "modellib");
+      (*(VPhysXConstraint2_t::s_pSchemaBindingForLocalModule->_vptr_ISchemaBinding + 5))(
+        VPhysXConstraint2_t::s_pSchemaBindingForLocalModule,
+        pSchemaSystem,
+        pBinaryName,
+        "modellib");
+      (*(VPhysXJoint_t::s_pSchemaBindingForLocalModule->_vptr_ISchemaBinding + 5))(
+        VPhysXJoint_t::s_pSchemaBindingForLocalModule,
+        pSchemaSystem,
+        pBinaryName,
+        "modellib");
+      (*(PhysSoftbodyDesc_t::s_pSchemaBindingForLocalModule->_vptr_ISchemaBinding + 5))(
+        PhysSoftbodyDesc_t::s_pSchemaBindingForLocalModule,
+        pSchemaSystem,
+        pBinaryName,
+        "modellib");
+      (*(VPhysXAggregateData_t::s_pSchemaBindingForLocalModule->_vptr_ISchemaBinding + 5))(
+        VPhysXAggregateData_t::s_pSchemaBindingForLocalModule,
+        pSchemaSystem,
+        pBinaryName,
+        "modellib");
+    }
+    ++g_nLinkerHack_SchemaAnchor_RegistrationCountFor_modellib;
+  }
+  else
+  {
+    (*(CSchemaEnumBinding<VPhysXBodyPart_t::VPhysXFlagEnum_t>::s_pThisModuleBindingPointer->_vptr_ISchemaBinding + 5))(
+      CSchemaEnumBinding<VPhysXBodyPart_t::VPhysXFlagEnum_t>::s_pThisModuleBindingPointer,
+      pSchemaSystem,
+      pBinaryName,
+      "modellib",
+      "VPhysXBodyPart_t::VPhysXFlagEnum_t");
+    (*(CSchemaEnumBinding<VPhysXConstraintParams_t::EnumFlags0_t>::s_pThisModuleBindingPointer->_vptr_ISchemaBinding + 5))(
+      CSchemaEnumBinding<VPhysXConstraintParams_t::EnumFlags0_t>::s_pThisModuleBindingPointer,
+      pSchemaSystem,
+      pBinaryName,
+      "modellib",
+      "VPhysXConstraintParams_t::EnumFlags0_t");
+    (*(CSchemaEnumBinding<VPhysXAggregateData_t::VPhysXFlagEnum_t>::s_pThisModuleBindingPointer->_vptr_ISchemaBinding + 5))(
+      CSchemaEnumBinding<VPhysXAggregateData_t::VPhysXFlagEnum_t>::s_pThisModuleBindingPointer,
+      pSchemaSystem,
+      pBinaryName,
+      "modellib",
+      "VPhysXAggregateData_t::VPhysXFlagEnum_t");
+    ++g_nLinkerHack_SchemaAnchor_RegistrationCountFor_modellib;
+  }
+}
+
+
+// RegisterSchemaModule_vphysx_collisionmesh_resource_h  (line 714, @0x0000000003185f50, libserver.so)
+// calls: LocalRegisterSchemaModule<ArbitraryTemplateParameter_modellib_vphysx_collisionmesh_resource_h>
+// callers: CSchemaRegistration_modellib::RegisterAllBindings
+void __fastcall RegisterSchemaModule_vphysx_collisionmesh_resource_h(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        SchemaRegistrationPhase_t nRegistrationPhase)
+{
+  LocalRegisterSchemaModule<ArbitraryTemplateParameter_modellib_vphysx_collisionmesh_resource_h>(
+    pSchemaSystem,
+    pBinaryName,
+    nRegistrationPhase);
+}
+
+

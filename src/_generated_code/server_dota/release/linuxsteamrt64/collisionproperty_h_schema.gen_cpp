@@ -1,0 +1,374 @@
+
+// ==== functions (decompiled by Hex-Rays; names/signatures from DWARF) ====
+
+// CSchemaEnumBinding<SurroundingBoundsType_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE  (line 35, @0x0000000001f08de0, libserver.so)  // inlines: Count, Initialize, SetTypeScope
+// callers: CSchemaEnumBinding<SurroundingBoundsType_t>::Register
+// globals: CSchemaEnumBinding<SurroundingBoundsType_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char con
+CSchemaEnumInfo *__fastcall CSchemaEnumBinding<SurroundingBoundsType_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        const char *pProjectName)
+{
+  ISchemaSystemTypeScope *v3; // rax
+  unsigned int v4; // edi
+  SchemaEnumeratorValue_t v5; // r8
+  SchemaEnumeratorValue_t v6; // r9
+  SchemaEnumeratorValue_t *v7; // rdx
+
+  v3 = (*(*pSchemaSystem + 112LL))(pSchemaSystem, 0, pBinaryName);
+  if ( CSchemaEnumBinding<SurroundingBoundsType_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_SurroundingBoundsType_t.m_Enumerators.m_Data.m_nImplLength != 0 )
+  {
+    v4 = abs32(CSchemaEnumBinding<SurroundingBoundsType_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_SurroundingBoundsType_t.m_Enumerators.m_Data.m_nImplLength);
+    v5 = *(CSchemaEnumBinding<SurroundingBoundsType_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_SurroundingBoundsType_t.m_Enumerators.m_Data.m_pImplElements
+         + 2);
+    CSchemaEnumBinding<SurroundingBoundsType_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_SurroundingBoundsType_t.m_nMinValue = v5;
+    v6 = *(CSchemaEnumBinding<SurroundingBoundsType_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_SurroundingBoundsType_t.m_Enumerators.m_Data.m_pImplElements
+         + 2);
+    CSchemaEnumBinding<SurroundingBoundsType_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_SurroundingBoundsType_t.m_nMaxValue = v6;
+    if ( v4 != 1 )
+    {
+      v7 = (CSchemaEnumBinding<SurroundingBoundsType_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_SurroundingBoundsType_t.m_Enumerators.m_Data.m_pImplElements
+          + 72);
+      do
+      {
+        if ( v5 > *v7 )
+          v5 = *v7;
+        CSchemaEnumBinding<SurroundingBoundsType_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_SurroundingBoundsType_t.m_nMinValue = v5;
+        if ( v6 < *v7 )
+          v6 = *v7;
+        v7 += 7;
+        CSchemaEnumBinding<SurroundingBoundsType_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_SurroundingBoundsType_t.m_nMaxValue = v6;
+      }
+      while ( v7 != CSchemaEnumBinding<SurroundingBoundsType_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_SurroundingBoundsType_t.m_Enumerators.m_Data.m_pImplElements
+                  + 7 * v4
+                  + 2 );
+    }
+  }
+  else
+  {
+    CSchemaEnumBinding<SurroundingBoundsType_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_SurroundingBoundsType_t.m_nMinValue = 0;
+    CSchemaEnumBinding<SurroundingBoundsType_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_SurroundingBoundsType_t.m_nMaxValue = 0;
+  }
+  CSchemaEnumBinding<SurroundingBoundsType_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_SurroundingBoundsType_t.m_pOuterTypeScope = v3;
+  (*(*v3 + 272LL))(
+    v3,
+    &CSchemaEnumBinding<SurroundingBoundsType_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_SurroundingBoundsType_t);
+  return &CSchemaEnumBinding<SurroundingBoundsType_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_SurroundingBoundsType_t;
+}
+
+
+// VPhysicsCollisionAttribute_t::Schema_CompileTimeVerificationFunction  (line 53, @0x0000000001f08ec0, libserver.so)
+void __fastcall VPhysicsCollisionAttribute_t::Schema_CompileTimeVerificationFunction(
+        VPhysicsCollisionAttribute_t *const this)
+{
+  ;
+}
+
+
+// VPhysicsCollisionAttribute_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE  (line 63, @0x0000000001f08ed0, libserver.so)  // inlines: Get, NetworkVarDecl_t, SchemaBinding_SchemaTypeOfMemberVarByAddr<VPhysicsCollisionAttribute_t, CNetworkVarBase<long long unsigned int, VPhysicsCollisionAttribute_t::NetworkVar_m_nInteractsAs> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<VPhysicsCollisionAttribute_t, CNetworkVarBase<long long unsigned int, VPhysicsCollisionAttribute_t::NetworkVar_m_nInteractsExclude> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<VPhysicsCollisionAttribute_t, CNetworkVarBase<long long unsigned int, VPhysicsCollisionAttribute_t::NetworkVar_m_nInteractsWith> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<VPhysicsCollisionAttribute_t, CNetworkVarBase<short unsigned int, VPhysicsCollisionAttribute_t::NetworkVar_m_nHierarchyId> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<VPhysicsCollisionAttribute_t, CNetworkVarBase<unsigned char, VPhysicsCollisionAttribute_t::NetworkVar_m_nCollisionFunctionMask> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<VPhysicsCollisionAttribute_t, CNetworkVarBase<unsigned char, VPhysicsCollisionAttribute_t::NetworkVar_m_nCollisionGroup> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<VPhysicsCollisionAttribute_t, CNetworkVarBase<unsigned int, VPhysicsCollisionAttribute_t::NetworkVar_m_nEntityId> >, SetTypeScope
+// calls: __cxa_guard_acquire, __cxa_guard_release
+// callers: CSchemaClassBinding<VPhysicsCollisionAttribute_t>::Register
+// strings: "m_nInteractsAs", "uint64", "m_nCollisionFunctionMask", "uint8", "m_nCollisionGroup", "m_nHierarchyId" (11 total)
+// globals: VPhysicsCollisionAttribute_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const, `guard variable for'VPhysicsCollisionAttribute_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,ch
+CSchemaClassInfo *__fastcall VPhysicsCollisionAttribute_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        const char *pProjectName)
+{
+  CSchemaClassInfo *result; // rax
+  ISchemaSystemTypeScope *v4; // rbx
+  CSchemaType *v5; // rax
+
+  result = VPhysicsCollisionAttribute_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult;
+  if ( VPhysicsCollisionAttribute_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult == 0 )
+  {
+    v4 = (*(*pSchemaSystem + 112LL))(pSchemaSystem, 0, pBinaryName);
+    if ( `guard variable for'VPhysicsCollisionAttribute_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_VPhysicsCollisionAttribute_t0_MNetworkVarNames_Value == 0
+      && __cxa_guard_acquire(&`guard variable for'VPhysicsCollisionAttribute_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_VPhysicsCollisionAttribute_t0_MNetworkVarNames_Value) != 0 )
+    {
+      VPhysicsCollisionAttribute_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_VPhysicsCollisionAttribute_t0_MNetworkVarNames_Value.m_pVarName = "m_nInteractsAs";
+      VPhysicsCollisionAttribute_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_VPhysicsCollisionAttribute_t0_MNetworkVarNames_Value.m_pVarType = "uint64";
+      __cxa_guard_release(&`guard variable for'VPhysicsCollisionAttribute_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_VPhysicsCollisionAttribute_t0_MNetworkVarNames_Value);
+    }
+    if ( `guard variable for'VPhysicsCollisionAttribute_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_VPhysicsCollisionAttribute_t1_MNetworkVarNames_Value == 0
+      && __cxa_guard_acquire(&`guard variable for'VPhysicsCollisionAttribute_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_VPhysicsCollisionAttribute_t1_MNetworkVarNames_Value) != 0 )
+    {
+      VPhysicsCollisionAttribute_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_VPhysicsCollisionAttribute_t1_MNetworkVarNames_Value.m_pVarName = "m_nInteractsWith";
+      VPhysicsCollisionAttribute_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_VPhysicsCollisionAttribute_t1_MNetworkVarNames_Value.m_pVarType = "uint64";
+      __cxa_guard_release(&`guard variable for'VPhysicsCollisionAttribute_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_VPhysicsCollisionAttribute_t1_MNetworkVarNames_Value);
+    }
+    if ( `guard variable for'VPhysicsCollisionAttribute_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_VPhysicsCollisionAttribute_t2_MNetworkVarNames_Value == 0
+      && __cxa_guard_acquire(&`guard variable for'VPhysicsCollisionAttribute_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_VPhysicsCollisionAttribute_t2_MNetworkVarNames_Value) != 0 )
+    {
+      VPhysicsCollisionAttribute_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_VPhysicsCollisionAttribute_t2_MNetworkVarNames_Value.m_pVarName = "m_nInteractsExclude";
+      VPhysicsCollisionAttribute_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_VPhysicsCollisionAttribute_t2_MNetworkVarNames_Value.m_pVarType = "uint64";
+      __cxa_guard_release(&`guard variable for'VPhysicsCollisionAttribute_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_VPhysicsCollisionAttribute_t2_MNetworkVarNames_Value);
+    }
+    if ( `guard variable for'VPhysicsCollisionAttribute_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_VPhysicsCollisionAttribute_t3_MNetworkVarNames_Value == 0
+      && __cxa_guard_acquire(&`guard variable for'VPhysicsCollisionAttribute_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_VPhysicsCollisionAttribute_t3_MNetworkVarNames_Value) != 0 )
+    {
+      VPhysicsCollisionAttribute_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_VPhysicsCollisionAttribute_t3_MNetworkVarNames_Value.m_pVarName = "m_nEntityId";
+      VPhysicsCollisionAttribute_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_VPhysicsCollisionAttribute_t3_MNetworkVarNames_Value.m_pVarType = "uint32";
+      __cxa_guard_release(&`guard variable for'VPhysicsCollisionAttribute_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_VPhysicsCollisionAttribute_t3_MNetworkVarNames_Value);
+    }
+    if ( `guard variable for'VPhysicsCollisionAttribute_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_VPhysicsCollisionAttribute_t4_MNetworkVarNames_Value == 0
+      && __cxa_guard_acquire(&`guard variable for'VPhysicsCollisionAttribute_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_VPhysicsCollisionAttribute_t4_MNetworkVarNames_Value) != 0 )
+    {
+      VPhysicsCollisionAttribute_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_VPhysicsCollisionAttribute_t4_MNetworkVarNames_Value.m_pVarName = "m_nHierarchyId";
+      VPhysicsCollisionAttribute_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_VPhysicsCollisionAttribute_t4_MNetworkVarNames_Value.m_pVarType = "uint16";
+      __cxa_guard_release(&`guard variable for'VPhysicsCollisionAttribute_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_VPhysicsCollisionAttribute_t4_MNetworkVarNames_Value);
+    }
+    if ( `guard variable for'VPhysicsCollisionAttribute_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_VPhysicsCollisionAttribute_t5_MNetworkVarNames_Value == 0
+      && __cxa_guard_acquire(&`guard variable for'VPhysicsCollisionAttribute_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_VPhysicsCollisionAttribute_t5_MNetworkVarNames_Value) != 0 )
+    {
+      VPhysicsCollisionAttribute_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_VPhysicsCollisionAttribute_t5_MNetworkVarNames_Value.m_pVarName = "m_nCollisionGroup";
+      VPhysicsCollisionAttribute_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_VPhysicsCollisionAttribute_t5_MNetworkVarNames_Value.m_pVarType = "uint8";
+      __cxa_guard_release(&`guard variable for'VPhysicsCollisionAttribute_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_VPhysicsCollisionAttribute_t5_MNetworkVarNames_Value);
+    }
+    if ( `guard variable for'VPhysicsCollisionAttribute_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_VPhysicsCollisionAttribute_t6_MNetworkVarNames_Value == 0
+      && __cxa_guard_acquire(&`guard variable for'VPhysicsCollisionAttribute_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_VPhysicsCollisionAttribute_t6_MNetworkVarNames_Value) != 0 )
+    {
+      VPhysicsCollisionAttribute_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_VPhysicsCollisionAttribute_t6_MNetworkVarNames_Value.m_pVarName = "m_nCollisionFunctionMask";
+      VPhysicsCollisionAttribute_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_VPhysicsCollisionAttribute_t6_MNetworkVarNames_Value.m_pVarType = "uint8";
+      __cxa_guard_release(&`guard variable for'VPhysicsCollisionAttribute_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_VPhysicsCollisionAttribute_t6_MNetworkVarNames_Value);
+    }
+    VPhysicsCollisionAttribute_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_VPhysicsCollisionAttribute_t[0].m_pType = (*(*v4 + 40LL))(v4, 10);
+    VPhysicsCollisionAttribute_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_VPhysicsCollisionAttribute_t[1].m_pType = (*(*v4 + 40LL))(v4, 10);
+    VPhysicsCollisionAttribute_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_VPhysicsCollisionAttribute_t[2].m_pType = (*(*v4 + 40LL))(v4, 10);
+    VPhysicsCollisionAttribute_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_VPhysicsCollisionAttribute_t[3].m_pType = (*(*v4 + 40LL))(v4, 8);
+    VPhysicsCollisionAttribute_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_VPhysicsCollisionAttribute_t[4].m_pType = (*(*v4 + 40LL))(v4, 6);
+    VPhysicsCollisionAttribute_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_VPhysicsCollisionAttribute_t[5].m_pType = (*(*v4 + 40LL))(v4, 4);
+    v5 = (*(*v4 + 40LL))(v4, 4);
+    VPhysicsCollisionAttribute_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_VPhysicsCollisionAttribute_t.m_pOuterTypeScope = v4;
+    VPhysicsCollisionAttribute_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_VPhysicsCollisionAttribute_t[6].m_pType = v5;
+    VPhysicsCollisionAttribute_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult = &VPhysicsCollisionAttribute_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_VPhysicsCollisionAttribute_t;
+    (*(*v4 + 264LL))(
+      v4,
+      &VPhysicsCollisionAttribute_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_VPhysicsCollisionAttribute_t);
+    return VPhysicsCollisionAttribute_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult;
+  }
+  return result;
+}
+
+
+// VPhysicsCollisionAttribute_t::Schema_VerifyBindingIsRegistered  (line 150, @0x0000000001f09220, libserver.so)
+void __cdecl VPhysicsCollisionAttribute_t::Schema_VerifyBindingIsRegistered()
+{
+  ;
+}
+
+
+// CCollisionProperty::Schema_CompileTimeVerificationFunction  (line 158, @0x0000000001f09230, libserver.so)
+void __fastcall CCollisionProperty::Schema_CompileTimeVerificationFunction(CCollisionProperty *const this)
+{
+  ;
+}
+
+
+// CCollisionProperty::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE  (line 178, @0x0000000001f09240, libserver.so)  // inlines: Get, NetworkVarDecl_t, SchemaBinding_SchemaTypeOfMemberVarByAddr<CCollisionProperty, CCollisionProperty::NetworkVar_m_collisionAttribute>, SchemaBinding_SchemaTypeOfMemberVarByAddr<CCollisionProperty, CNetworkVarBase<SolidType_t, CCollisionProperty::NetworkVar_m_nSolidType> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<CCollisionProperty, CNetworkVarBase<SurroundingBoundsType_t, CCollisionProperty::NetworkVar_m_nSurroundType> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<CCollisionProperty, CNetworkVarBase<bool, CCollisionProperty::NetworkVar_m_bHitboxEnabled> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<CCollisionProperty, CNetworkVarBase<float, CCollisionProperty::NetworkVar_m_flCapsuleRadius> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<CCollisionProperty, CNetworkVarBase<unsigned char, CCollisionProperty::NetworkVar_m_CollisionGroup> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<CCollisionProperty, CNetworkVarBase<unsigned char, CCollisionProperty::NetworkVar_m_triggerBloat> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<CCollisionProperty, CNetworkVarBase<unsigned char, CCollisionProperty::NetworkVar_m_usSolidFlags> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<CCollisionProperty, CNetworkVectorBase<Vector, CCollisionProperty::NetworkVar_m_vCapsuleCenter1> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<CCollisionProperty, CNetworkVectorBase<Vector, CCollisionProperty::NetworkVar_m_vCapsuleCenter2> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<CCollisionProperty, CNetworkVectorBase<Vector, CCollisionProperty::NetworkVar_m_vecMaxs> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<CCollisionProperty, CNetworkVectorBase<Vector, CCollisionProperty::NetworkVar_m_vecMins> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<CCollisionProperty, CNetworkVectorBase<Vector, CCollisionProperty::NetworkVar_m_vecSpecifiedSurroundingMaxs> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<CCollisionProperty, CNetworkVectorBase<Vector, CCollisionProperty::NetworkVar_m_vecSpecifiedSurroundingMins> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<CCollisionProperty, Vector>, SchemaBinding_SchemaTypeOfMemberVarByAddr<CCollisionProperty, float>, SetTypeScope
+// calls: __cxa_guard_acquire, __cxa_guard_release
+// callers: CSchemaClassBinding<CCollisionProperty>::Register
+// strings: "VPhysicsCollisionAttribute_t", "SolidType_t", "SurroundingBoundsType_t", "m_collisionAttribute", "m_flCapsuleRadius", "m_vCapsuleCenter2" (18 total)
+// globals: CCollisionProperty::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pIni, `guard variable for'CCollisionProperty::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,, CSchemaManipulator<Vector>::StaticAccessor(void)::m, CAtomicManipulator<Vector>::Get(void)::val, CCollisionProperty::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSc
+CSchemaClassInfo *__fastcall CCollisionProperty::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        const char *pProjectName)
+{
+  CSchemaClassInfo *result; // rax
+  ISchemaSystemTypeScope *v4; // rbx
+  CSchemaType *v5; // rax
+
+  result = CCollisionProperty::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult;
+  if ( CCollisionProperty::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult == 0 )
+  {
+    v4 = (*(*pSchemaSystem + 112LL))(pSchemaSystem, 0, pBinaryName);
+    if ( `guard variable for'CCollisionProperty::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CCollisionProperty2_MNetworkVarNames_Value == 0
+      && __cxa_guard_acquire(&`guard variable for'CCollisionProperty::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CCollisionProperty2_MNetworkVarNames_Value) != 0 )
+    {
+      CCollisionProperty::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CCollisionProperty2_MNetworkVarNames_Value.m_pVarName = "m_collisionAttribute";
+      CCollisionProperty::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CCollisionProperty2_MNetworkVarNames_Value.m_pVarType = "VPhysicsCollisionAttribute_t";
+      __cxa_guard_release(&`guard variable for'CCollisionProperty::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CCollisionProperty2_MNetworkVarNames_Value);
+    }
+    if ( `guard variable for'CCollisionProperty::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CCollisionProperty3_MNetworkVarNames_Value == 0
+      && __cxa_guard_acquire(&`guard variable for'CCollisionProperty::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CCollisionProperty3_MNetworkVarNames_Value) != 0 )
+    {
+      CCollisionProperty::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CCollisionProperty3_MNetworkVarNames_Value.m_pVarName = "m_vecMins";
+      CCollisionProperty::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CCollisionProperty3_MNetworkVarNames_Value.m_pVarType = "Vector";
+      __cxa_guard_release(&`guard variable for'CCollisionProperty::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CCollisionProperty3_MNetworkVarNames_Value);
+    }
+    if ( `guard variable for'CCollisionProperty::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CCollisionProperty4_MNetworkVarNames_Value == 0
+      && __cxa_guard_acquire(&`guard variable for'CCollisionProperty::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CCollisionProperty4_MNetworkVarNames_Value) != 0 )
+    {
+      CCollisionProperty::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CCollisionProperty4_MNetworkVarNames_Value.m_pVarName = "m_vecMaxs";
+      CCollisionProperty::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CCollisionProperty4_MNetworkVarNames_Value.m_pVarType = "Vector";
+      __cxa_guard_release(&`guard variable for'CCollisionProperty::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CCollisionProperty4_MNetworkVarNames_Value);
+    }
+    if ( `guard variable for'CCollisionProperty::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CCollisionProperty5_MNetworkVarNames_Value == 0
+      && __cxa_guard_acquire(&`guard variable for'CCollisionProperty::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CCollisionProperty5_MNetworkVarNames_Value) != 0 )
+    {
+      CCollisionProperty::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CCollisionProperty5_MNetworkVarNames_Value.m_pVarName = "m_usSolidFlags";
+      CCollisionProperty::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CCollisionProperty5_MNetworkVarNames_Value.m_pVarType = "uint8";
+      __cxa_guard_release(&`guard variable for'CCollisionProperty::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CCollisionProperty5_MNetworkVarNames_Value);
+    }
+    if ( `guard variable for'CCollisionProperty::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CCollisionProperty6_MNetworkVarNames_Value == 0
+      && __cxa_guard_acquire(&`guard variable for'CCollisionProperty::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CCollisionProperty6_MNetworkVarNames_Value) != 0 )
+    {
+      CCollisionProperty::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CCollisionProperty6_MNetworkVarNames_Value.m_pVarName = "m_nSolidType";
+      CCollisionProperty::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CCollisionProperty6_MNetworkVarNames_Value.m_pVarType = "SolidType_t";
+      __cxa_guard_release(&`guard variable for'CCollisionProperty::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CCollisionProperty6_MNetworkVarNames_Value);
+    }
+    if ( `guard variable for'CCollisionProperty::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CCollisionProperty7_MNetworkVarNames_Value == 0
+      && __cxa_guard_acquire(&`guard variable for'CCollisionProperty::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CCollisionProperty7_MNetworkVarNames_Value) != 0 )
+    {
+      CCollisionProperty::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CCollisionProperty7_MNetworkVarNames_Value.m_pVarName = "m_triggerBloat";
+      CCollisionProperty::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CCollisionProperty7_MNetworkVarNames_Value.m_pVarType = "uint8";
+      __cxa_guard_release(&`guard variable for'CCollisionProperty::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CCollisionProperty7_MNetworkVarNames_Value);
+    }
+    if ( `guard variable for'CCollisionProperty::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CCollisionProperty8_MNetworkVarNames_Value == 0
+      && __cxa_guard_acquire(&`guard variable for'CCollisionProperty::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CCollisionProperty8_MNetworkVarNames_Value) != 0 )
+    {
+      CCollisionProperty::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CCollisionProperty8_MNetworkVarNames_Value.m_pVarName = "m_nSurroundType";
+      CCollisionProperty::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CCollisionProperty8_MNetworkVarNames_Value.m_pVarType = "SurroundingBoundsType_t";
+      __cxa_guard_release(&`guard variable for'CCollisionProperty::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CCollisionProperty8_MNetworkVarNames_Value);
+    }
+    if ( `guard variable for'CCollisionProperty::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CCollisionProperty9_MNetworkVarNames_Value == 0
+      && __cxa_guard_acquire(&`guard variable for'CCollisionProperty::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CCollisionProperty9_MNetworkVarNames_Value) != 0 )
+    {
+      CCollisionProperty::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CCollisionProperty9_MNetworkVarNames_Value.m_pVarName = "m_CollisionGroup";
+      CCollisionProperty::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CCollisionProperty9_MNetworkVarNames_Value.m_pVarType = "uint8";
+      __cxa_guard_release(&`guard variable for'CCollisionProperty::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CCollisionProperty9_MNetworkVarNames_Value);
+    }
+    if ( `guard variable for'CCollisionProperty::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CCollisionProperty10_MNetworkVarNames_Value == 0
+      && __cxa_guard_acquire(&`guard variable for'CCollisionProperty::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CCollisionProperty10_MNetworkVarNames_Value) != 0 )
+    {
+      CCollisionProperty::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CCollisionProperty10_MNetworkVarNames_Value.m_pVarName = "m_bHitboxEnabled";
+      CCollisionProperty::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CCollisionProperty10_MNetworkVarNames_Value.m_pVarType = "bool";
+      __cxa_guard_release(&`guard variable for'CCollisionProperty::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CCollisionProperty10_MNetworkVarNames_Value);
+    }
+    if ( `guard variable for'CCollisionProperty::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CCollisionProperty11_MNetworkVarNames_Value == 0
+      && __cxa_guard_acquire(&`guard variable for'CCollisionProperty::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CCollisionProperty11_MNetworkVarNames_Value) != 0 )
+    {
+      CCollisionProperty::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CCollisionProperty11_MNetworkVarNames_Value.m_pVarName = "m_vecSpecifiedSurroundingMins";
+      CCollisionProperty::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CCollisionProperty11_MNetworkVarNames_Value.m_pVarType = "Vector";
+      __cxa_guard_release(&`guard variable for'CCollisionProperty::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CCollisionProperty11_MNetworkVarNames_Value);
+    }
+    if ( `guard variable for'CCollisionProperty::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CCollisionProperty12_MNetworkVarNames_Value == 0
+      && __cxa_guard_acquire(&`guard variable for'CCollisionProperty::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CCollisionProperty12_MNetworkVarNames_Value) != 0 )
+    {
+      CCollisionProperty::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CCollisionProperty12_MNetworkVarNames_Value.m_pVarName = "m_vecSpecifiedSurroundingMaxs";
+      CCollisionProperty::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CCollisionProperty12_MNetworkVarNames_Value.m_pVarType = "Vector";
+      __cxa_guard_release(&`guard variable for'CCollisionProperty::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CCollisionProperty12_MNetworkVarNames_Value);
+    }
+    if ( `guard variable for'CCollisionProperty::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CCollisionProperty13_MNetworkVarNames_Value == 0
+      && __cxa_guard_acquire(&`guard variable for'CCollisionProperty::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CCollisionProperty13_MNetworkVarNames_Value) != 0 )
+    {
+      CCollisionProperty::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CCollisionProperty13_MNetworkVarNames_Value.m_pVarName = "m_vCapsuleCenter1";
+      CCollisionProperty::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CCollisionProperty13_MNetworkVarNames_Value.m_pVarType = "Vector";
+      __cxa_guard_release(&`guard variable for'CCollisionProperty::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CCollisionProperty13_MNetworkVarNames_Value);
+    }
+    if ( `guard variable for'CCollisionProperty::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CCollisionProperty14_MNetworkVarNames_Value == 0
+      && __cxa_guard_acquire(&`guard variable for'CCollisionProperty::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CCollisionProperty14_MNetworkVarNames_Value) != 0 )
+    {
+      CCollisionProperty::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CCollisionProperty14_MNetworkVarNames_Value.m_pVarName = "m_vCapsuleCenter2";
+      CCollisionProperty::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CCollisionProperty14_MNetworkVarNames_Value.m_pVarType = "Vector";
+      __cxa_guard_release(&`guard variable for'CCollisionProperty::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CCollisionProperty14_MNetworkVarNames_Value);
+    }
+    if ( `guard variable for'CCollisionProperty::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CCollisionProperty15_MNetworkVarNames_Value == 0
+      && __cxa_guard_acquire(&`guard variable for'CCollisionProperty::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CCollisionProperty15_MNetworkVarNames_Value) != 0 )
+    {
+      CCollisionProperty::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CCollisionProperty15_MNetworkVarNames_Value.m_pVarName = "m_flCapsuleRadius";
+      CCollisionProperty::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CCollisionProperty15_MNetworkVarNames_Value.m_pVarType = "float";
+      __cxa_guard_release(&`guard variable for'CCollisionProperty::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CCollisionProperty15_MNetworkVarNames_Value);
+    }
+    CCollisionProperty::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CCollisionProperty[0].m_pType = (*(*v4 + 88LL))(v4, "VPhysicsCollisionAttribute_t");
+    CCollisionProperty::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CCollisionProperty[1].m_pType = (*(*v4 + 56LL))(v4, "Vector", 2010, CAtomicManipulator<Vector>::Get(void)::val, CSchemaManipulator<Vector>::StaticAccessor(void)::m);
+    CCollisionProperty::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CCollisionProperty[2].m_pType = (*(*v4 + 56LL))(v4, "Vector", 2010, CAtomicManipulator<Vector>::Get(void)::val, CSchemaManipulator<Vector>::StaticAccessor(void)::m);
+    CCollisionProperty::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CCollisionProperty[3].m_pType = (*(*v4 + 40LL))(v4, 4);
+    CCollisionProperty::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CCollisionProperty[4].m_pType = (*(*v4 + 96LL))(v4, "SolidType_t");
+    CCollisionProperty::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CCollisionProperty[5].m_pType = (*(*v4 + 40LL))(v4, 4);
+    CCollisionProperty::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CCollisionProperty[6].m_pType = (*(*v4 + 96LL))(v4, "SurroundingBoundsType_t");
+    CCollisionProperty::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CCollisionProperty[7].m_pType = (*(*v4 + 40LL))(v4, 4);
+    CCollisionProperty::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CCollisionProperty[8].m_pType = (*(*v4 + 40LL))(v4, 13);
+    CCollisionProperty::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CCollisionProperty[9].m_pType = (*(*v4 + 40LL))(v4, 11);
+    CCollisionProperty::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CCollisionProperty[10].m_pType = (*(*v4 + 56LL))(v4, "Vector", 2010, CAtomicManipulator<Vector>::Get(void)::val, CSchemaManipulator<Vector>::StaticAccessor(void)::m);
+    CCollisionProperty::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CCollisionProperty[11].m_pType = (*(*v4 + 56LL))(v4, "Vector", 2010, CAtomicManipulator<Vector>::Get(void)::val, CSchemaManipulator<Vector>::StaticAccessor(void)::m);
+    CCollisionProperty::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CCollisionProperty[12].m_pType = (*(*v4 + 56LL))(v4, "Vector", 2010, CAtomicManipulator<Vector>::Get(void)::val, CSchemaManipulator<Vector>::StaticAccessor(void)::m);
+    CCollisionProperty::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CCollisionProperty[13].m_pType = (*(*v4 + 56LL))(v4, "Vector", 2010, CAtomicManipulator<Vector>::Get(void)::val, CSchemaManipulator<Vector>::StaticAccessor(void)::m);
+    CCollisionProperty::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CCollisionProperty[14].m_pType = (*(*v4 + 56LL))(v4, "Vector", 2010, CAtomicManipulator<Vector>::Get(void)::val, CSchemaManipulator<Vector>::StaticAccessor(void)::m);
+    CCollisionProperty::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CCollisionProperty[15].m_pType = (*(*v4 + 56LL))(v4, "Vector", 2010, CAtomicManipulator<Vector>::Get(void)::val, CSchemaManipulator<Vector>::StaticAccessor(void)::m);
+    v5 = (*(*v4 + 40LL))(v4, 11);
+    CCollisionProperty::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CCollisionProperty.m_pOuterTypeScope = v4;
+    CCollisionProperty::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CCollisionProperty[16].m_pType = v5;
+    CCollisionProperty::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult = &CCollisionProperty::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CCollisionProperty;
+    (*(*v4 + 264LL))(
+      v4,
+      &CCollisionProperty::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CCollisionProperty);
+    return CCollisionProperty::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult;
+  }
+  return result;
+}
+
+
+// CCollisionProperty::Schema_VerifyBindingIsRegistered  (line 407, @0x0000000001f09960, libserver.so)
+// callers: CCollisionProperty::Schema_DynamicBinding
+void __cdecl CCollisionProperty::Schema_VerifyBindingIsRegistered()
+{
+  ;
+}
+
+
+// LocalRegisterSchemaModule<ArbitraryTemplateParameter_server_collisionproperty_h>  (line 415, @0x0000000001f09970, libserver.so)  // inlines: Call, Get
+// callers: RegisterSchemaModule_collisionproperty_h
+// strings: "SurroundingBoundsType_t"
+// globals: CSchemaEnumBinding<SurroundingBoundsType_t>::s_pThisModuleBindingPointer, VPhysicsCollisionAttribute_t::s_pSchemaBindingForLocalModule, CCollisionProperty::s_pSchemaBindingForLocalModule
+void __fastcall LocalRegisterSchemaModule<ArbitraryTemplateParameter_server_collisionproperty_h>(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        SchemaRegistrationPhase_t nRegistrationPhase)
+{
+  if ( nRegistrationPhase != SchemaRegistrationPhase_t::SCHEMA_REGISTRATION_PHASE_ATOMIC_TYPES_AND_ENUMS )
+  {
+    if ( nRegistrationPhase == SchemaRegistrationPhase_t::SCHEMA_REGISTRATION_PHASE_CLASSES )
+    {
+      (*(VPhysicsCollisionAttribute_t::s_pSchemaBindingForLocalModule->_vptr_ISchemaBinding + 5))(
+        VPhysicsCollisionAttribute_t::s_pSchemaBindingForLocalModule,
+        pSchemaSystem,
+        pBinaryName,
+        "server");
+      (*(CCollisionProperty::s_pSchemaBindingForLocalModule->_vptr_ISchemaBinding + 5))(
+        CCollisionProperty::s_pSchemaBindingForLocalModule,
+        pSchemaSystem,
+        pBinaryName,
+        "server");
+    }
+    ++g_nLinkerHack_SchemaAnchor_RegistrationCountFor_server;
+  }
+  else
+  {
+    (*(CSchemaEnumBinding<SurroundingBoundsType_t>::s_pThisModuleBindingPointer->_vptr_ISchemaBinding + 5))(
+      CSchemaEnumBinding<SurroundingBoundsType_t>::s_pThisModuleBindingPointer,
+      pSchemaSystem,
+      pBinaryName,
+      "server",
+      "SurroundingBoundsType_t");
+    ++g_nLinkerHack_SchemaAnchor_RegistrationCountFor_server;
+  }
+}
+
+
+// RegisterSchemaModule_collisionproperty_h  (line 419, @0x0000000001f09a20, libserver.so)
+// calls: LocalRegisterSchemaModule<ArbitraryTemplateParameter_server_collisionproperty_h>
+// callers: CSchemaRegistration_server::RegisterAllBindings
+void __fastcall RegisterSchemaModule_collisionproperty_h(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        SchemaRegistrationPhase_t nRegistrationPhase)
+{
+  LocalRegisterSchemaModule<ArbitraryTemplateParameter_server_collisionproperty_h>(
+    pSchemaSystem,
+    pBinaryName,
+    nRegistrationPhase);
+}
+
+

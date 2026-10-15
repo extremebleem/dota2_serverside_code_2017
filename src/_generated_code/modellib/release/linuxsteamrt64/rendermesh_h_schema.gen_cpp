@@ -1,0 +1,3410 @@
+
+// ==== functions (decompiled by Hex-Rays; names/signatures from DWARF) ====
+
+// CRenderBufferBinding::Schema_CompileTimeVerificationFunction  (line 33, @0x0000000003170a00, libserver.so)
+void __fastcall CRenderBufferBinding::Schema_CompileTimeVerificationFunction(CRenderBufferBinding *const this)
+{
+  ;
+}
+
+
+// CRenderBufferBinding::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE  (line 38, @0x0000000003170a10, libserver.so)  // inlines: Get, SchemaBinding_SchemaTypeOfMemberVarByAddr<CRenderBufferBinding, long long unsigned int>, SchemaBinding_SchemaTypeOfMemberVarByAddr<CRenderBufferBinding, unsigned int>, SetTypeScope
+// callers: CSchemaClassBinding<CRenderBufferBinding>::Register
+// globals: CRenderBufferBinding::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pI, CRenderBufferBinding::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::Impl
+CSchemaClassInfo *__fastcall CRenderBufferBinding::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        const char *pProjectName)
+{
+  CSchemaClassInfo *result; // rax
+  ISchemaSystemTypeScope *v4; // rbx
+  CSchemaType *v5; // rax
+
+  result = CRenderBufferBinding::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult;
+  if ( CRenderBufferBinding::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult == 0 )
+  {
+    v4 = (*(*pSchemaSystem + 112LL))(pSchemaSystem, 0, pBinaryName);
+    CRenderBufferBinding::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CRenderBufferBinding[0].m_pType = (*(*v4 + 40LL))(v4, 10);
+    v5 = (*(*v4 + 40LL))(v4, 8);
+    CRenderBufferBinding::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CRenderBufferBinding.m_pOuterTypeScope = v4;
+    CRenderBufferBinding::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CRenderBufferBinding[1].m_pType = v5;
+    CRenderBufferBinding::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult = &CRenderBufferBinding::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CRenderBufferBinding;
+    (*(*v4 + 264LL))(
+      v4,
+      &CRenderBufferBinding::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CRenderBufferBinding);
+    return CRenderBufferBinding::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult;
+  }
+  return result;
+}
+
+
+// CRenderBufferBinding::Schema_VerifyBindingIsRegistered  (line 52, @0x0000000003170aa0, libserver.so)
+void __cdecl CRenderBufferBinding::Schema_VerifyBindingIsRegistered()
+{
+  ;
+}
+
+
+// CRenderBufferBinding::KV3TransferSave  (line 60, @0x0000000003170b90, libserver.so)
+// calls: CRenderBufferBinding::KV3TransferSave_CRenderBufferBinding
+// callers: CKV3TransferSaveContext::SaveClassPointer<const CRenderBufferBinding>
+void __fastcall CRenderBufferBinding::KV3TransferSave(
+        const CRenderBufferBinding *const this,
+        CKV3TransferSaveContext *pContext)
+{
+  CRenderBufferBinding::KV3TransferSave_CRenderBufferBinding(this, pContext);
+}
+
+
+// CRenderBufferBinding::KV3TransferSave_CRenderBufferBinding  (line 65, @0x0000000003170ab0, libserver.so)  // inlines: CreateTargetMember, SaveValue<long long unsigned int>, SaveValue<unsigned int>, SaveValueDirect<long long unsigned int>, SaveValueDirect<unsigned int>, SaveValueToMember<long long unsigned int>, SaveValueToMember<unsigned int>
+// calls: KeyValues3::FindMember, CKV3TransferContextBase::NoteFailure, KeyValues3::SetInt64, KeyValues3::SetMemberToNull
+// callers: CRenderBufferBinding::KV3TransferSave, CMaterialDrawDescriptor::KV3TransferSave_CMaterialDrawDescriptor
+// strings: "m_hBuffer", "Double-save to Member '%s'", "m_nBindOffsetBytes"
+void __fastcall CRenderBufferBinding::KV3TransferSave_CRenderBufferBinding(
+        const CRenderBufferBinding *const this,
+        CKV3TransferSaveContext *pContext)
+{
+  KeyValues3 *Member; // r13
+  KeyValues3 *v5; // rdi
+  KeyValues3 *v6; // r13
+  KeyValues3 *v7; // rdi
+
+  Member = KeyValues3::FindMember(pContext->m_pTargetObject, "m_hBuffer", -573045370);
+  if ( Member != 0 )
+  {
+    CKV3TransferContextBase::NoteFailure(pContext, "Double-save to Member '%s'", "m_hBuffer");
+    v5 = Member;
+  }
+  else
+  {
+    v5 = KeyValues3::SetMemberToNull(pContext->m_pTargetObject, "m_hBuffer", -573045370);
+  }
+  KeyValues3::SetInt64(v5, this->m_hBuffer);
+  v6 = KeyValues3::FindMember(pContext->m_pTargetObject, "m_nBindOffsetBytes", -1399373021);
+  if ( v6 != 0 )
+  {
+    CKV3TransferContextBase::NoteFailure(pContext, "Double-save to Member '%s'", "m_nBindOffsetBytes");
+    v7 = v6;
+  }
+  else
+  {
+    v7 = KeyValues3::SetMemberToNull(pContext->m_pTargetObject, "m_nBindOffsetBytes", -1399373021);
+  }
+  KeyValues3::SetInt64(v7, this->m_nBindOffsetBytes);
+}
+
+
+// CRenderBufferBinding::KV3TransferLoad  (line 71, @0x0000000003170ca0, libserver.so)
+// calls: CRenderBufferBinding::KV3TransferLoad_CRenderBufferBinding
+// callers: CMaterialDrawDescriptor::TransferPostLoadFn
+void __fastcall CRenderBufferBinding::KV3TransferLoad(
+        CRenderBufferBinding *const this,
+        CKV3TransferLoadContext *pContext)
+{
+  CRenderBufferBinding::KV3TransferLoad_CRenderBufferBinding(this, pContext);
+}
+
+
+// CRenderBufferBinding::KV3TransferLoad_CRenderBufferBinding  (line 76, @0x0000000003170ba0, libserver.so)  // inlines: FindMember, FindSourceMember, LoadValue<long long unsigned int>, LoadValue<unsigned int>, LoadValueDirect<long long unsigned int>, LoadValueDirect<unsigned int>, LoadValueFromMember<long long unsigned int>, LoadValueFromMember<unsigned int>
+// calls: KeyValues3::FindMember, KeyValues3::GetInt64, KeyValues3::KeyValues3, KeyValues3::~KeyValues3, __stack_chk_fail, _Unwind_Resume
+// callers: CRenderBufferBinding::KV3TransferLoad, CMaterialDrawDescriptor::KV3TransferLoad_CMaterialDrawDescriptor
+// strings: "m_hBuffer", "m_nBindOffsetBytes"
+void __fastcall CRenderBufferBinding::KV3TransferLoad_CRenderBufferBinding(
+        CRenderBufferBinding *const this,
+        CKV3TransferLoadContext *pContext)
+{
+  KeyValues3 *Member; // rax
+  KeyValues3 *v5; // rax
+  KeyValues3 v6; // [rsp+0h] [rbp-40h] BYREF
+  unsigned __int64 v7; // [rsp+18h] [rbp-28h]
+
+  v7 = __readfsqword(0x28u);
+  Member = KeyValues3::FindMember(pContext->m_pSourceObject, "m_hBuffer", -573045370);
+  if ( Member != 0 )
+  {
+    this->m_hBuffer = KeyValues3::GetInt64(Member);
+  }
+  else
+  {
+    KeyValues3::KeyValues3(&v6);
+    this->m_hBuffer = KeyValues3::GetInt64(&v6);
+    KeyValues3::~KeyValues3(&v6);
+  }
+  v5 = KeyValues3::FindMember(pContext->m_pSourceObject, "m_nBindOffsetBytes", -1399373021);
+  if ( v5 != 0 )
+  {
+    this->m_nBindOffsetBytes = KeyValues3::GetInt64(v5);
+  }
+  else
+  {
+    KeyValues3::KeyValues3(&v6);
+    this->m_nBindOffsetBytes = KeyValues3::GetInt64(&v6);
+    KeyValues3::~KeyValues3(&v6);
+  }
+}
+
+
+// SkeletonBoneBounds_t::Schema_CompileTimeVerificationFunction  (line 88, @0x0000000003170cb0, libserver.so)
+void __fastcall SkeletonBoneBounds_t::Schema_CompileTimeVerificationFunction(SkeletonBoneBounds_t *const this)
+{
+  ;
+}
+
+
+// SkeletonBoneBounds_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE  (line 93, @0x0000000003170cc0, libserver.so)  // inlines: Get, SchemaBinding_SchemaTypeOfMemberVarByAddr<SkeletonBoneBounds_t, Vector>, SetTypeScope
+// callers: CSchemaClassBinding<SkeletonBoneBounds_t>::Register
+// globals: SkeletonBoneBounds_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pI, CSchemaManipulator<Vector>::StaticAccessor(void)::m, CAtomicManipulator<Vector>::Get(void)::val, SkeletonBoneBounds_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::Impl
+CSchemaClassInfo *__fastcall SkeletonBoneBounds_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        const char *pProjectName)
+{
+  CSchemaClassInfo *result; // rax
+  ISchemaSystemTypeScope *v4; // rbx
+  CSchemaType *v5; // rax
+
+  result = SkeletonBoneBounds_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult;
+  if ( SkeletonBoneBounds_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult == 0 )
+  {
+    v4 = (*(*pSchemaSystem + 112LL))(pSchemaSystem, 0, pBinaryName);
+    SkeletonBoneBounds_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_SkeletonBoneBounds_t[0].m_pType = (*(*v4 + 56LL))(v4, "Vector", 2010, CAtomicManipulator<Vector>::Get(void)::val, CSchemaManipulator<Vector>::StaticAccessor(void)::m);
+    v5 = (*(*v4 + 56LL))(
+           v4,
+           "Vector",
+           2010,
+           CAtomicManipulator<Vector>::Get(void)::val,
+           CSchemaManipulator<Vector>::StaticAccessor(void)::m);
+    SkeletonBoneBounds_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_SkeletonBoneBounds_t.m_pOuterTypeScope = v4;
+    SkeletonBoneBounds_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_SkeletonBoneBounds_t[1].m_pType = v5;
+    SkeletonBoneBounds_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult = &SkeletonBoneBounds_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_SkeletonBoneBounds_t;
+    (*(*v4 + 264LL))(
+      v4,
+      &SkeletonBoneBounds_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_SkeletonBoneBounds_t);
+    return SkeletonBoneBounds_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult;
+  }
+  return result;
+}
+
+
+// SkeletonBoneBounds_t::Schema_VerifyBindingIsRegistered  (line 107, @0x0000000003170d80, libserver.so)
+void __cdecl SkeletonBoneBounds_t::Schema_VerifyBindingIsRegistered()
+{
+  ;
+}
+
+
+// SkeletonBoneBounds_t::KV3TransferSave  (line 115, @0x0000000003170ef0, libserver.so)
+// calls: SkeletonBoneBounds_t::KV3TransferSave_SkeletonBoneBounds_t
+void __fastcall SkeletonBoneBounds_t::KV3TransferSave(
+        const SkeletonBoneBounds_t *const this,
+        CKV3TransferSaveContext *pContext)
+{
+  SkeletonBoneBounds_t::KV3TransferSave_SkeletonBoneBounds_t(this, pContext);
+}
+
+
+// SkeletonBoneBounds_t::KV3TransferSave_SkeletonBoneBounds_t  (line 120, @0x0000000003170d90, libserver.so)  // inlines: CreateTargetMember, SaveValue<Vector>, SaveValueDirect<Vector>, SaveValueToMember<Vector>
+// calls: KeyValues3::FindMember, CKV3TransferContextBase::NoteFailure, KeyValues3::SetArrayElementCount, KeyValues3::GetArrayElement, KeyValues3::SetFloat, KeyValues3::SetMemberToNull
+// callers: SkeletonBoneBounds_t::KV3TransferSave, CKV3TransferSaveContext::SaveClassPointer<const SkeletonBoneBounds_t>
+// strings: "m_vecCenter", "Double-save to Member '%s'", "m_vecSize"
+void __fastcall SkeletonBoneBounds_t::KV3TransferSave_SkeletonBoneBounds_t(
+        const SkeletonBoneBounds_t *const this,
+        CKV3TransferSaveContext *pContext)
+{
+  KeyValues3 *Member; // r13
+  __int64 v5; // rbx
+  int v6; // esi
+  KeyValues3 *ArrayElement; // rax
+  double v8; // xmm1_8
+  Vector *p_m_vecSize; // r12
+  KeyValues3 *v10; // r13
+  __int64 v11; // rbx
+  int v12; // esi
+  KeyValues3 *v13; // rax
+  double v14; // xmm1_8
+  double v15; // [rsp+8h] [rbp-28h]
+  double v16; // [rsp+8h] [rbp-28h]
+
+  Member = KeyValues3::FindMember(pContext->m_pTargetObject, "m_vecCenter", -1866132790);
+  if ( Member != 0 )
+    CKV3TransferContextBase::NoteFailure(pContext, "Double-save to Member '%s'", "m_vecCenter");
+  else
+    Member = KeyValues3::SetMemberToNull(pContext->m_pTargetObject, "m_vecCenter", -1866132790);
+  v5 = 0;
+  KeyValues3::SetArrayElementCount(Member, 3);
+  do
+  {
+    v6 = v5;
+    v15 = *(&this->m_vecCenter.x + v5++);
+    ArrayElement = KeyValues3::GetArrayElement(Member, v6);
+    KeyValues3::SetFloat(ArrayElement, v15, v8);
+  }
+  while ( v5 != 3 );
+  p_m_vecSize = &this->m_vecSize;
+  v10 = KeyValues3::FindMember(pContext->m_pTargetObject, "m_vecSize", 2098458041);
+  if ( v10 != 0 )
+    CKV3TransferContextBase::NoteFailure(pContext, "Double-save to Member '%s'", "m_vecSize");
+  else
+    v10 = KeyValues3::SetMemberToNull(pContext->m_pTargetObject, "m_vecSize", 2098458041);
+  v11 = 0;
+  KeyValues3::SetArrayElementCount(v10, 3);
+  do
+  {
+    v12 = v11;
+    v16 = *(&p_m_vecSize->x + v11++);
+    v13 = KeyValues3::GetArrayElement(v10, v12);
+    KeyValues3::SetFloat(v13, v16, v14);
+  }
+  while ( v11 != 3 );
+}
+
+
+// SkeletonBoneBounds_t::KV3TransferLoad  (line 126, @0x00000000031710d0, libserver.so)
+// calls: SkeletonBoneBounds_t::KV3TransferLoad_SkeletonBoneBounds_t
+void __fastcall SkeletonBoneBounds_t::KV3TransferLoad(
+        SkeletonBoneBounds_t *const this,
+        CKV3TransferLoadContext *pContext)
+{
+  SkeletonBoneBounds_t::KV3TransferLoad_SkeletonBoneBounds_t(this, pContext);
+}
+
+
+// SkeletonBoneBounds_t::KV3TransferLoad_SkeletonBoneBounds_t  (line 131, @0x0000000003170f00, libserver.so)  // inlines: FindMember, FindSourceMember, LoadValue<Vector>, LoadValueDirect<Vector>, LoadValueFromMember<Vector>
+// calls: KeyValues3::FindMember, KeyValues3::GetArrayElementCount, KeyValues3::GetArrayElement, KeyValues3::GetFloat, KeyValues3::KeyValues3, CKV3TransferValHelperAsFloats<Vector, 3, false>::LoadValue<Vector>, KeyValues3::~KeyValues3, _Unwind_Resume, __stack_chk_fail
+// callers: SkeletonBoneBounds_t::KV3TransferLoad, RenderSkeletonBone_t::KV3TransferLoad_RenderSkeletonBone_t
+// strings: "m_vecCenter", "m_vecSize"
+void __fastcall SkeletonBoneBounds_t::KV3TransferLoad_SkeletonBoneBounds_t(
+        SkeletonBoneBounds_t *const this,
+        CKV3TransferLoadContext *pContext)
+{
+  SkeletonBoneBounds_t *v3; // r14
+  KeyValues3 *Member; // rax
+  const KeyValues3 *v5; // r12
+  int v6; // ebx
+  int ArrayElementCount; // r13d
+  int v8; // esi
+  const KeyValues3 *ArrayElement; // rax
+  _DWORD *v10; // rax
+  KeyValues3 *v11; // rax
+  Vector *p_m_vecSize; // r14
+  const KeyValues3 *v13; // r13
+  int v14; // ebx
+  Vector *v15; // r12
+  int v16; // r15d
+  int v17; // esi
+  const KeyValues3 *v18; // rax
+  _DWORD *v19; // rax
+  Vector *const v20; // rdx
+  Vector *const v21; // rdx
+  KeyValues3 v23; // [rsp+10h] [rbp-50h] BYREF
+  unsigned __int64 v24; // [rsp+28h] [rbp-38h]
+
+  v3 = this;
+  v24 = __readfsqword(0x28u);
+  Member = KeyValues3::FindMember(pContext->m_pSourceObject, "m_vecCenter", -1866132790);
+  v5 = Member;
+  if ( Member != 0 )
+  {
+    v6 = 0;
+    ArrayElementCount = KeyValues3::GetArrayElementCount(Member);
+    if ( ArrayElementCount <= 0 )
+      goto LABEL_7;
+    do
+    {
+      v8 = v6++;
+      ArrayElement = KeyValues3::GetArrayElement(v5, v8);
+      v3 = (v3 + 4);
+      v3[-1].m_vecSize.z = KeyValues3::GetFloat(ArrayElement);
+    }
+    while ( ArrayElementCount > v6 && v6 <= 2 );
+    if ( v6 <= 2 )
+    {
+LABEL_7:
+      v10 = (&this->m_vecCenter.x + v6);
+      do
+      {
+        ++v6;
+        *v10++ = 0;
+      }
+      while ( v6 <= 2 );
+    }
+  }
+  else
+  {
+    KeyValues3::KeyValues3(&v23);
+    CKV3TransferValHelperAsFloats<Vector,3,false>::LoadValue<Vector>(&v23, this, v20);
+    KeyValues3::~KeyValues3(&v23);
+  }
+  v11 = KeyValues3::FindMember(pContext->m_pSourceObject, "m_vecSize", 2098458041);
+  p_m_vecSize = &this->m_vecSize;
+  v13 = v11;
+  if ( v11 != 0 )
+  {
+    v14 = 0;
+    v15 = &this->m_vecSize;
+    v16 = KeyValues3::GetArrayElementCount(v11);
+    if ( v16 <= 0 )
+      goto LABEL_15;
+    do
+    {
+      v17 = v14++;
+      v18 = KeyValues3::GetArrayElement(v13, v17);
+      v15 = (v15 + 4);
+      v15[-1].z = KeyValues3::GetFloat(v18);
+    }
+    while ( v16 > v14 && v14 <= 2 );
+    if ( v14 <= 2 )
+    {
+LABEL_15:
+      v19 = (&p_m_vecSize->x + v14);
+      do
+      {
+        ++v14;
+        *v19++ = 0;
+      }
+      while ( v14 <= 2 );
+    }
+  }
+  else
+  {
+    KeyValues3::KeyValues3(&v23);
+    CKV3TransferValHelperAsFloats<Vector,3,false>::LoadValue<Vector>(&v23, p_m_vecSize, v21);
+    KeyValues3::~KeyValues3(&v23);
+  }
+}
+
+
+// RenderSkeletonBone_t::Schema_CompileTimeVerificationFunction  (line 143, @0x00000000031710e0, libserver.so)
+void __fastcall RenderSkeletonBone_t::Schema_CompileTimeVerificationFunction(RenderSkeletonBone_t *const this)
+{
+  ;
+}
+
+
+// RenderSkeletonBone_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE  (line 151, @0x00000000031710f0, libserver.so)  // inlines: Get, SchemaBinding_SchemaTypeOfMemberVarByAddr<RenderSkeletonBone_t, CUtlString>, SchemaBinding_SchemaTypeOfMemberVarByAddr<RenderSkeletonBone_t, SkeletonBoneBounds_t>, SchemaBinding_SchemaTypeOfMemberVarByAddr<RenderSkeletonBone_t, float>, SchemaBinding_SchemaTypeOfMemberVarByAddr<RenderSkeletonBone_t, matrix3x4_t>, SetTypeScope
+// callers: CSchemaClassBinding<RenderSkeletonBone_t>::Register
+// strings: "CUtlString", "matrix3x4_t", "SkeletonBoneBounds_t"
+// globals: RenderSkeletonBone_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pI, CSchemaManipulator<CUtlString>::StaticAccessor(void)::m, CAtomicManipulator<CUtlString>::Get(void)::val, CSchemaManipulator<matrix3x4_t>::StaticAccessor(void)::m, CAtomicManipulator<matrix3x4_t>::Get(void)::val, RenderSkeletonBone_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::Impl
+CSchemaClassInfo *__fastcall RenderSkeletonBone_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        const char *pProjectName)
+{
+  CSchemaClassInfo *result; // rax
+  ISchemaSystemTypeScope *v4; // rbx
+  CSchemaType *v5; // rax
+
+  result = RenderSkeletonBone_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult;
+  if ( RenderSkeletonBone_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult == 0 )
+  {
+    v4 = (*(*pSchemaSystem + 112LL))(pSchemaSystem, 0, pBinaryName);
+    RenderSkeletonBone_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_RenderSkeletonBone_t[0].m_pType = (*(*v4 + 56LL))(v4, "CUtlString", 3003, CAtomicManipulator<CUtlString>::Get(void)::val, CSchemaManipulator<CUtlString>::StaticAccessor(void)::m);
+    RenderSkeletonBone_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_RenderSkeletonBone_t[1].m_pType = (*(*v4 + 56LL))(v4, "CUtlString", 3003, CAtomicManipulator<CUtlString>::Get(void)::val, CSchemaManipulator<CUtlString>::StaticAccessor(void)::m);
+    RenderSkeletonBone_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_RenderSkeletonBone_t[2].m_pType = (*(*v4 + 56LL))(v4, "matrix3x4_t", 2003, CAtomicManipulator<matrix3x4_t>::Get(void)::val, CSchemaManipulator<matrix3x4_t>::StaticAccessor(void)::m);
+    RenderSkeletonBone_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_RenderSkeletonBone_t[3].m_pType = (*(*v4 + 88LL))(v4, "SkeletonBoneBounds_t");
+    v5 = (*(*v4 + 40LL))(v4, 11);
+    RenderSkeletonBone_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_RenderSkeletonBone_t.m_pOuterTypeScope = v4;
+    RenderSkeletonBone_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_RenderSkeletonBone_t[4].m_pType = v5;
+    RenderSkeletonBone_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult = &RenderSkeletonBone_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_RenderSkeletonBone_t;
+    (*(*v4 + 264LL))(
+      v4,
+      &RenderSkeletonBone_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_RenderSkeletonBone_t);
+    return RenderSkeletonBone_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult;
+  }
+  return result;
+}
+
+
+// RenderSkeletonBone_t::Schema_VerifyBindingIsRegistered  (line 171, @0x0000000003171200, libserver.so)
+void __cdecl RenderSkeletonBone_t::Schema_VerifyBindingIsRegistered()
+{
+  ;
+}
+
+
+// RenderSkeletonBone_t::KV3TransferSave  (line 179, @0x0000000003173b20, libserver.so)
+// calls: RenderSkeletonBone_t::KV3TransferSave_RenderSkeletonBone_t
+void __fastcall RenderSkeletonBone_t::KV3TransferSave(
+        const RenderSkeletonBone_t *const this,
+        CKV3TransferSaveContext *pContext)
+{
+  RenderSkeletonBone_t::KV3TransferSave_RenderSkeletonBone_t(this, pContext);
+}
+
+
+// RenderSkeletonBone_t::KV3TransferSave_RenderSkeletonBone_t  (line 184, @0x00000000031738f0, libserver.so)  // inlines: CreateTargetMember, SaveValue<CUtlString>, SaveValue<SkeletonBoneBounds_t>, SaveValue<float>, SaveValue<matrix3x4_t>, SaveValueDirect<CUtlString>, SaveValueDirect<SkeletonBoneBounds_t>, SaveValueDirect<float>, SaveValueDirect<matrix3x4_t>, SaveValueToMember<CUtlString>, SaveValueToMember<SkeletonBoneBounds_t>, SaveValueToMember<float>, SaveValueToMember<matrix3x4_t>
+// calls: KeyValues3::FindMember, CKV3TransferContextBase::NoteFailure, CUtlString::Get, KeyValues3::SetString, KeyValues3::SetArrayElementCount, KeyValues3::GetArrayElement, KeyValues3::SetFloat, CKV3TransferSaveContext::SaveClassPointer<const SkeletonBoneBounds_t>, CKV3TransferSaveContext::CreateTargetMember, KeyValues3::SetMemberToNull
+// callers: RenderSkeletonBone_t::KV3TransferSave, CKV3TransferSaveContext::SaveClassPointer<const RenderSkeletonBone_t>
+// strings: "m_boneName", "Double-save to Member '%s'", "m_parentName", "m_invBindPose", "m_bbox", "m_flSphereRadius"
+void __fastcall RenderSkeletonBone_t::KV3TransferSave_RenderSkeletonBone_t(
+        const RenderSkeletonBone_t *const this,
+        CKV3TransferSaveContext *pContext)
+{
+  KeyValues3 *Member; // rbx
+  const char *v5; // rax
+  KeyValues3 *v6; // rbx
+  const char *v7; // rax
+  KeyValues3 *v8; // r12
+  __int64 v9; // rbx
+  int v10; // esi
+  KeyValues3 *ArrayElement; // rax
+  double v12; // xmm1_8
+  KeyValues3 *v13; // rbx
+  KeyValues3 *v14; // rdx
+  KeyValues3 *TargetMember; // rax
+  double v16; // xmm1_8
+  double v17; // [rsp+8h] [rbp-48h]
+  SkeletonBoneBounds_t *pClassInstance; // [rsp+18h] [rbp-38h] BYREF
+
+  Member = KeyValues3::FindMember(pContext->m_pTargetObject, "m_boneName", -1649209485);
+  if ( Member != 0 )
+    CKV3TransferContextBase::NoteFailure(pContext, "Double-save to Member '%s'", "m_boneName");
+  else
+    Member = KeyValues3::SetMemberToNull(pContext->m_pTargetObject, "m_boneName", -1649209485);
+  v5 = CUtlString::Get(&this->m_boneName);
+  KeyValues3::SetString(Member, v5);
+  v6 = KeyValues3::FindMember(pContext->m_pTargetObject, "m_parentName", -786701310);
+  if ( v6 != 0 )
+    CKV3TransferContextBase::NoteFailure(pContext, "Double-save to Member '%s'", "m_parentName");
+  else
+    v6 = KeyValues3::SetMemberToNull(pContext->m_pTargetObject, "m_parentName", -786701310);
+  v7 = CUtlString::Get(&this->m_parentName);
+  KeyValues3::SetString(v6, v7);
+  v8 = KeyValues3::FindMember(pContext->m_pTargetObject, "m_invBindPose", 587189121);
+  if ( v8 != 0 )
+    CKV3TransferContextBase::NoteFailure(pContext, "Double-save to Member '%s'", "m_invBindPose");
+  else
+    v8 = KeyValues3::SetMemberToNull(pContext->m_pTargetObject, "m_invBindPose", 587189121);
+  v9 = 0;
+  KeyValues3::SetArrayElementCount(v8, 12);
+  do
+  {
+    v10 = v9;
+    v17 = this->m_invBindPose.m_flMatVal[0][v9++];
+    ArrayElement = KeyValues3::GetArrayElement(v8, v10);
+    KeyValues3::SetFloat(ArrayElement, v17, v12);
+  }
+  while ( v9 != 12 );
+  v13 = KeyValues3::FindMember(pContext->m_pTargetObject, "m_bbox", 1204677949);
+  if ( v13 != 0 )
+  {
+    CKV3TransferContextBase::NoteFailure(pContext, "Double-save to Member '%s'", "m_bbox");
+    v14 = v13;
+  }
+  else
+  {
+    v14 = KeyValues3::SetMemberToNull(pContext->m_pTargetObject, "m_bbox", 1204677949);
+  }
+  pClassInstance = &this->m_bbox;
+  CKV3TransferSaveContext::SaveClassPointer<SkeletonBoneBounds_t const>(pContext, &pClassInstance, v14);
+  TargetMember = CKV3TransferSaveContext::CreateTargetMember(pContext, "m_flSphereRadius", 823712687);
+  KeyValues3::SetFloat(TargetMember, this->m_flSphereRadius, v16);
+}
+
+
+// RenderSkeletonBone_t::KV3TransferLoad  (line 193, @0x0000000003171540, libserver.so)
+// calls: RenderSkeletonBone_t::KV3TransferLoad_RenderSkeletonBone_t
+void __fastcall RenderSkeletonBone_t::KV3TransferLoad(
+        RenderSkeletonBone_t *const this,
+        CKV3TransferLoadContext *pContext)
+{
+  RenderSkeletonBone_t::KV3TransferLoad_RenderSkeletonBone_t(this, pContext);
+}
+
+
+// RenderSkeletonBone_t::KV3TransferLoad_RenderSkeletonBone_t  (line 198, @0x0000000003171210, libserver.so)  // inlines: FindMember, FindSourceMember, KV3TransferLoad, LoadClassInstance<SkeletonBoneBounds_t>, LoadValue<CUtlString>, LoadValue<SkeletonBoneBounds_t>, LoadValue<float>, LoadValue<matrix3x4_t>, LoadValueDirect<CUtlString>, LoadValueDirect<SkeletonBoneBounds_t>, LoadValueDirect<float>, LoadValueDirect<matrix3x4_t>, LoadValueFromMember<CUtlString>, LoadValueFromMember<SkeletonBoneBounds_t>, LoadValueFromMember<float>, LoadValueFromMember<matrix3x4_t>
+// calls: KeyValues3::FindMember, KeyValues3::GetString, KeyValues3::GetArrayElementCount, KeyValues3::GetArrayElement, KeyValues3::GetFloat, CKV3TransferLoadContext::PushSource, SkeletonBoneBounds_t::KV3TransferLoad_SkeletonBoneBounds_t, CKV3TransferLoadContext::PopSource, KeyValues3::KeyValues3, KeyValues3::~KeyValues3, _Unwind_Resume, __stack_chk_fail
+// callers: RenderSkeletonBone_t::KV3TransferLoad, CRenderSkeleton::KV3TransferLoad_CRenderSkeleton
+// strings: "m_boneName", "m_parentName", "m_invBindPose", "m_bbox", "m_flSphereRadius"
+void __fastcall RenderSkeletonBone_t::KV3TransferLoad_RenderSkeletonBone_t(
+        RenderSkeletonBone_t *const this,
+        CKV3TransferLoadContext *pContext)
+{
+  KeyValues3 *Member; // rax
+  CUtlString *p_m_parentName; // rbx
+  KeyValues3 *v6; // rax
+  matrix3x4_t *p_m_invBindPose; // r15
+  KeyValues3 *v8; // rax
+  const KeyValues3 *v9; // rbx
+  int v10; // r14d
+  int ArrayElementCount; // r13d
+  int v12; // esi
+  const KeyValues3 *ArrayElement; // rax
+  _DWORD *v14; // rax
+  SkeletonBoneBounds_t *p_m_bbox; // rbx
+  KeyValues3 *v16; // rax
+  KeyValues3 *v17; // rax
+  int v18; // ebx
+  int v19; // r15d
+  matrix3x4_t *v20; // r13
+  const KeyValues3 *v21; // rax
+  _DWORD *v22; // rax
+  matrix3x4_t *v23; // [rsp+0h] [rbp-60h]
+  KeyValues3 pSource; // [rsp+10h] [rbp-50h] BYREF
+  unsigned __int64 v26; // [rsp+28h] [rbp-38h]
+
+  v26 = __readfsqword(0x28u);
+  Member = KeyValues3::FindMember(pContext->m_pSourceObject, "m_boneName", -1649209485);
+  if ( Member != 0 )
+  {
+    KeyValues3::GetString(Member, &this->m_boneName);
+  }
+  else
+  {
+    KeyValues3::KeyValues3(&pSource);
+    KeyValues3::GetString(&pSource, &this->m_boneName);
+    KeyValues3::~KeyValues3(&pSource);
+  }
+  p_m_parentName = &this->m_parentName;
+  v6 = KeyValues3::FindMember(pContext->m_pSourceObject, "m_parentName", -786701310);
+  if ( v6 != 0 )
+  {
+    KeyValues3::GetString(v6, p_m_parentName);
+  }
+  else
+  {
+    KeyValues3::KeyValues3(&pSource);
+    KeyValues3::GetString(&pSource, p_m_parentName);
+    KeyValues3::~KeyValues3(&pSource);
+  }
+  p_m_invBindPose = &this->m_invBindPose;
+  v23 = &this->m_invBindPose;
+  v8 = KeyValues3::FindMember(pContext->m_pSourceObject, "m_invBindPose", 587189121);
+  v9 = v8;
+  if ( v8 != 0 )
+  {
+    v10 = 0;
+    ArrayElementCount = KeyValues3::GetArrayElementCount(v8);
+    if ( ArrayElementCount <= 0 )
+      goto LABEL_11;
+    do
+    {
+      v12 = v10++;
+      ArrayElement = KeyValues3::GetArrayElement(v9, v12);
+      p_m_invBindPose = (p_m_invBindPose + 4);
+      p_m_invBindPose[-1].m_flMatVal[2][3] = KeyValues3::GetFloat(ArrayElement);
+    }
+    while ( ArrayElementCount > v10 && v10 <= 11 );
+    if ( v10 <= 11 )
+    {
+LABEL_11:
+      v14 = (v23 + 4 * v10);
+      do
+      {
+        ++v10;
+        *v14++ = 0;
+      }
+      while ( v10 <= 11 );
+    }
+  }
+  else
+  {
+    KeyValues3::KeyValues3(&pSource);
+    v18 = 0;
+    v19 = KeyValues3::GetArrayElementCount(&pSource);
+    v20 = &this->m_invBindPose;
+    if ( v19 <= 0 )
+      goto LABEL_25;
+    do
+    {
+      v21 = KeyValues3::GetArrayElement(&pSource, v18++);
+      v20->m_flMatVal[0][0] = KeyValues3::GetFloat(v21);
+      v20 = (v20 + 4);
+    }
+    while ( v19 > v18 && v18 <= 11 );
+    if ( v18 <= 11 )
+    {
+LABEL_25:
+      v22 = (v23 + 4 * v18);
+      do
+      {
+        ++v18;
+        *v22++ = 0;
+      }
+      while ( v18 <= 11 );
+    }
+    KeyValues3::~KeyValues3(&pSource);
+  }
+  p_m_bbox = &this->m_bbox;
+  v16 = KeyValues3::FindMember(pContext->m_pSourceObject, "m_bbox", 1204677949);
+  if ( v16 != 0 )
+  {
+    CKV3TransferLoadContext::PushSource(pContext, v16);
+    SkeletonBoneBounds_t::KV3TransferLoad_SkeletonBoneBounds_t(p_m_bbox, pContext);
+    CKV3TransferLoadContext::PopSource(pContext);
+  }
+  else
+  {
+    KeyValues3::KeyValues3(&pSource);
+    CKV3TransferLoadContext::PushSource(pContext, &pSource);
+    SkeletonBoneBounds_t::KV3TransferLoad_SkeletonBoneBounds_t(p_m_bbox, pContext);
+    CKV3TransferLoadContext::PopSource(pContext);
+    KeyValues3::~KeyValues3(&pSource);
+  }
+  v17 = KeyValues3::FindMember(pContext->m_pSourceObject, "m_flSphereRadius", 823712687);
+  if ( v17 != 0 )
+  {
+    this->m_flSphereRadius = KeyValues3::GetFloat(v17);
+  }
+  else
+  {
+    KeyValues3::KeyValues3(&pSource);
+    this->m_flSphereRadius = KeyValues3::GetFloat(&pSource);
+    KeyValues3::~KeyValues3(&pSource);
+  }
+}
+
+
+// CRenderSkeleton::Schema_CompileTimeVerificationFunction  (line 213, @0x0000000003171550, libserver.so)
+void __fastcall CRenderSkeleton::Schema_CompileTimeVerificationFunction(CRenderSkeleton *const this)
+{
+  ;
+}
+
+
+// CRenderSkeleton::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE  (line 219, @0x0000000003171560, libserver.so)  // inlines: Get, SchemaBinding_SchemaTypeOfMemberVarByAddr<CRenderSkeleton, CUtlVector<RenderSkeletonBone_t> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<CRenderSkeleton, CUtlVector<int> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<CRenderSkeleton, int>, SetTypeScope
+// callers: CSchemaClassBinding<CRenderSkeleton>::Register
+// strings: "RenderSkeletonBone_t", "CUtlVector"
+// globals: CRenderSkeleton::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitia, CSchemaManipulator<CUtlVector<RenderSkeletonBone_t,CUtlMemory<RenderSkeletonBone_t,int>>>::StaticAccessor(void)::m, CAtomicManipulator<CUtlVector<RenderSkeletonBone_t,CUtlMemory<RenderSkeletonBone_t,int>>>::Get(void)::val, CSchemaManipulator<CUtlVector<int,CUtlMemory<int,int>>>::StaticAccessor(void)::m, CAtomicManipulator<CUtlVector<int,CUtlMemory<int,int>>>::Get(void)::val, CRenderSkeleton::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchem
+CSchemaClassInfo *__fastcall CRenderSkeleton::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        const char *pProjectName)
+{
+  CSchemaClassInfo *result; // rax
+  ISchemaSystemTypeScope *v4; // rbx
+  __int64 (__fastcall *v5)(ISchemaSystemTypeScope *, const char *, __int64, __int64 (__fastcall ***)(), __int64 (__fastcall ***)(), __int64); // r12
+  __int64 v6; // rax
+  __int64 (__fastcall *v7)(ISchemaSystemTypeScope *, const char *, __int64, __int64 (__fastcall ***)(), __int64 (__fastcall ***)(), __int64); // r12
+  __int64 v8; // rax
+  CSchemaType *v9; // rax
+
+  result = CRenderSkeleton::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult;
+  if ( CRenderSkeleton::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult == 0 )
+  {
+    v4 = (*(*pSchemaSystem + 112LL))(pSchemaSystem, 0, pBinaryName);
+    v5 = *(*v4 + 64LL);
+    v6 = (*(*v4 + 88LL))(v4, "RenderSkeletonBone_t");
+    CRenderSkeleton::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CRenderSkeleton[0].m_pType = v5(v4, "CUtlVector", 3002, &CAtomicManipulator<CUtlVector<RenderSkeletonBone_t,CUtlMemory<RenderSkeletonBone_t,int>>>::Get(void)::val, CSchemaManipulator<CUtlVector<RenderSkeletonBone_t,CUtlMemory<RenderSkeletonBone_t,int>>>::StaticAccessor(void)::m, v6);
+    v7 = *(*v4 + 64LL);
+    v8 = (*(*v4 + 40LL))(v4, 7);
+    CRenderSkeleton::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CRenderSkeleton[1].m_pType = v7(v4, "CUtlVector", 3002, &CAtomicManipulator<CUtlVector<int,CUtlMemory<int,int>>>::Get(void)::val, CSchemaManipulator<CUtlVector<int,CUtlMemory<int,int>>>::StaticAccessor(void)::m, v8);
+    v9 = (*(*v4 + 40LL))(v4, 7);
+    CRenderSkeleton::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CRenderSkeleton.m_pOuterTypeScope = v4;
+    CRenderSkeleton::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CRenderSkeleton[2].m_pType = v9;
+    CRenderSkeleton::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult = &CRenderSkeleton::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CRenderSkeleton;
+    (*(*v4 + 264LL))(
+      v4,
+      &CRenderSkeleton::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CRenderSkeleton);
+    return CRenderSkeleton::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult;
+  }
+  return result;
+}
+
+
+// CRenderSkeleton::Schema_VerifyBindingIsRegistered  (line 243, @0x0000000003171650, libserver.so)
+void __cdecl CRenderSkeleton::Schema_VerifyBindingIsRegistered()
+{
+  ;
+}
+
+
+// CRenderSkeleton::KV3TransferSave  (line 251, @0x0000000003174150, libserver.so)
+// calls: CRenderSkeleton::KV3TransferSave_CRenderSkeleton
+void __fastcall CRenderSkeleton::KV3TransferSave(const CRenderSkeleton *const this, CKV3TransferSaveContext *pContext)
+{
+  CRenderSkeleton::KV3TransferSave_CRenderSkeleton(this, pContext);
+}
+
+
+// CRenderSkeleton::KV3TransferSave_CRenderSkeleton  (line 256, @0x0000000003174040, libserver.so)  // inlines: SaveValue<CUtlVector<RenderSkeletonBone_t> >, SaveValue<CUtlVector<int> >, SaveValue<RenderSkeletonBone_t>, SaveValue<int>, SaveValueDirect<CUtlVector<RenderSkeletonBone_t> >, SaveValueDirect<CUtlVector<int> >, SaveValueDirect<RenderSkeletonBone_t>, SaveValueDirect<int>, SaveValueToMember<CUtlVector<RenderSkeletonBone_t> >, SaveValueToMember<CUtlVector<int> >, SaveValueToMember<int>, operator[]
+// calls: CKV3TransferSaveContext::CreateTargetMember, KeyValues3::SetArrayElementCount, KeyValues3::GetArrayElement, CKV3TransferSaveContext::SaveClassPointer<const RenderSkeletonBone_t>, KeyValues3::SetInt
+// callers: CRenderSkeleton::KV3TransferSave, CKV3TransferSaveContext::SaveClassPointer<const CRenderSkeleton>
+// strings: "m_bones", "m_boneParents", "m_nBoneWeightCount"
+void __fastcall CRenderSkeleton::KV3TransferSave_CRenderSkeleton(
+        const CRenderSkeleton *const this,
+        CKV3TransferSaveContext *pContext)
+{
+  KeyValues3 *TargetMember; // rax
+  int m_Size; // r14d
+  __int64 v6; // rbx
+  int v7; // r15d
+  int v8; // esi
+  KeyValues3 *ArrayElement; // rax
+  const RenderSkeletonBone_t *v10; // rdx
+  __int64 v11; // rbx
+  KeyValues3 *v12; // rax
+  int v13; // r14d
+  KeyValues3 *v14; // r15
+  KeyValues3 *v15; // rax
+  int v16; // esi
+  KeyValues3 *v17; // rax
+  KeyValues3 *v18; // [rsp+8h] [rbp-48h]
+  const RenderSkeletonBone_t *v19; // [rsp+18h] [rbp-38h] BYREF
+
+  TargetMember = CKV3TransferSaveContext::CreateTargetMember(pContext, "m_bones", -1154461456);
+  m_Size = this->m_bones.m_Size;
+  v18 = TargetMember;
+  KeyValues3::SetArrayElementCount(TargetMember, this->m_bones.m_Size);
+  if ( m_Size > 0 )
+  {
+    v6 = 0;
+    v7 = 0;
+    do
+    {
+      v8 = v7++;
+      ArrayElement = KeyValues3::GetArrayElement(v18, v8);
+      v10 = &this->m_bones.m_Memory.m_pMemory[v6++];
+      v19 = v10;
+      CKV3TransferSaveContext::SaveClassPointer<RenderSkeletonBone_t const>(pContext, &v19, ArrayElement);
+    }
+    while ( v7 != m_Size );
+  }
+  v11 = 0;
+  v12 = CKV3TransferSaveContext::CreateTargetMember(pContext, "m_boneParents", -1560353510);
+  v13 = this->m_boneParents.m_Size;
+  v14 = v12;
+  KeyValues3::SetArrayElementCount(v12, v13);
+  if ( v13 > 0 )
+  {
+    do
+    {
+      v15 = KeyValues3::GetArrayElement(v14, v11);
+      v16 = this->m_boneParents.m_Memory.m_pMemory[v11++];
+      KeyValues3::SetInt(v15, v16);
+    }
+    while ( v13 > v11 );
+  }
+  v17 = CKV3TransferSaveContext::CreateTargetMember(pContext, "m_nBoneWeightCount", -1620823728);
+  KeyValues3::SetInt(v17, this->m_nBoneWeightCount);
+}
+
+
+// CRenderSkeleton::KV3TransferLoad  (line 263, @0x0000000003174ae0, libserver.so)
+// calls: CRenderSkeleton::KV3TransferLoad_CRenderSkeleton
+void __fastcall CRenderSkeleton::KV3TransferLoad(CRenderSkeleton *const this, CKV3TransferLoadContext *pContext)
+{
+  CRenderSkeleton::KV3TransferLoad_CRenderSkeleton(this, pContext);
+}
+
+
+// CRenderSkeleton::KV3TransferLoad_CRenderSkeleton  (line 268, @0x0000000003174820, libserver.so)  // inlines: FindMember, FindSourceMember, KV3TransferLoad, LoadClassInstance<RenderSkeletonBone_t>, LoadValue<CUtlVector<RenderSkeletonBone_t> >, LoadValue<CUtlVector<int> >, LoadValue<RenderSkeletonBone_t>, LoadValue<int>, LoadValueDirect<CUtlVector<RenderSkeletonBone_t> >, LoadValueDirect<CUtlVector<int> >, LoadValueDirect<RenderSkeletonBone_t>, LoadValueDirect<int>, LoadValueFromMember<CUtlVector<RenderSkeletonBone_t> >, LoadValueFromMember<CUtlVector<int> >, LoadValueFromMember<int>, operator[]
+// calls: KeyValues3::FindMember, KeyValues3::GetArrayElementCount, CUtlVectorBase<RenderSkeletonBone_t, CUtlMemory<RenderSkeletonBone_t, int> >::SetCount, KeyValues3::GetArrayElement, CKV3TransferLoadContext::PushSource, RenderSkeletonBone_t::KV3TransferLoad_RenderSkeletonBone_t, CKV3TransferLoadContext::PopSource, CUtlVectorBase<int, CUtlMemory<int, int> >::SetCount, KeyValues3::GetInt, CRenderSkeleton::TransferPostLoadFn, KeyValues3::KeyValues3, KeyValues3::~KeyValues3 (14 total)
+// callers: CRenderSkeleton::KV3TransferLoad, CRenderMesh::KV3TransferLoad_CRenderMesh
+// strings: "m_bones", "m_boneParents", "m_nBoneWeightCount"
+void __fastcall CRenderSkeleton::KV3TransferLoad_CRenderSkeleton(
+        CRenderSkeleton *const this,
+        CKV3TransferLoadContext *pContext)
+{
+  KeyValues3 *Member; // rax
+  __int64 v5; // r13
+  int v6; // r15d
+  int v7; // esi
+  __int64 v8; // r14
+  const KeyValues3 *ArrayElement; // rax
+  RenderSkeletonBone_t *v10; // r14
+  KeyValues3 *v11; // rax
+  const KeyValues3 *v12; // r14
+  __int64 v13; // r13
+  const KeyValues3 *v14; // rax
+  int *v15; // r15
+  KeyValues3 *v16; // rax
+  __int64 v17; // r15
+  int v18; // r13d
+  const KeyValues3 *v19; // rax
+  __int64 i; // r13
+  const KeyValues3 *v21; // rax
+  int *v22; // r15
+  int ArrayElementCount; // [rsp+4h] [rbp-5Ch]
+  int v24; // [rsp+4h] [rbp-5Ch]
+  KeyValues3 *v25; // [rsp+8h] [rbp-58h]
+  int v26; // [rsp+8h] [rbp-58h]
+  RenderSkeletonBone_t *v27; // [rsp+8h] [rbp-58h]
+  int v28; // [rsp+8h] [rbp-58h]
+  KeyValues3 v29; // [rsp+10h] [rbp-50h] BYREF
+  unsigned __int64 v30; // [rsp+28h] [rbp-38h]
+
+  v30 = __readfsqword(0x28u);
+  Member = KeyValues3::FindMember(pContext->m_pSourceObject, "m_bones", -1154461456);
+  v25 = Member;
+  if ( Member != 0 )
+  {
+    ArrayElementCount = KeyValues3::GetArrayElementCount(Member);
+    CUtlVectorBase<RenderSkeletonBone_t,CUtlMemory<RenderSkeletonBone_t,int>>::SetCount(
+      &this->m_bones,
+      ArrayElementCount);
+    if ( ArrayElementCount > 0 )
+    {
+      v5 = 0;
+      v6 = 0;
+      do
+      {
+        v7 = v6;
+        v8 = v5;
+        ++v6;
+        v5 += 96;
+        ArrayElement = KeyValues3::GetArrayElement(v25, v7);
+        v10 = (this->m_bones.m_Memory.m_pMemory + v8);
+        CKV3TransferLoadContext::PushSource(pContext, ArrayElement);
+        RenderSkeletonBone_t::KV3TransferLoad_RenderSkeletonBone_t(v10, pContext);
+        CKV3TransferLoadContext::PopSource(pContext);
+      }
+      while ( v6 != ArrayElementCount );
+    }
+  }
+  else
+  {
+    KeyValues3::KeyValues3(&v29);
+    v24 = KeyValues3::GetArrayElementCount(&v29);
+    CUtlVectorBase<RenderSkeletonBone_t,CUtlMemory<RenderSkeletonBone_t,int>>::SetCount(&this->m_bones, v24);
+    v17 = 0;
+    v18 = 0;
+    if ( v24 > 0 )
+    {
+      do
+      {
+        v19 = KeyValues3::GetArrayElement(&v29, v18);
+        v27 = &this->m_bones.m_Memory.m_pMemory[v17];
+        CKV3TransferLoadContext::PushSource(pContext, v19);
+        RenderSkeletonBone_t::KV3TransferLoad_RenderSkeletonBone_t(v27, pContext);
+        CKV3TransferLoadContext::PopSource(pContext);
+        ++v18;
+        ++v17;
+      }
+      while ( v18 != v24 );
+    }
+    KeyValues3::~KeyValues3(&v29);
+  }
+  v11 = KeyValues3::FindMember(pContext->m_pSourceObject, "m_boneParents", -1560353510);
+  v12 = v11;
+  if ( v11 != 0 )
+  {
+    v26 = KeyValues3::GetArrayElementCount(v11);
+    CUtlVectorBase<int,CUtlMemory<int,int>>::SetCount(&this->m_boneParents, v26);
+    if ( v26 > 0 )
+    {
+      v13 = 0;
+      do
+      {
+        v14 = KeyValues3::GetArrayElement(v12, v13);
+        v15 = &this->m_boneParents.m_Memory.m_pMemory[v13++];
+        *v15 = KeyValues3::GetInt(v14);
+      }
+      while ( v26 > v13 );
+    }
+  }
+  else
+  {
+    KeyValues3::KeyValues3(&v29);
+    v28 = KeyValues3::GetArrayElementCount(&v29);
+    CUtlVectorBase<int,CUtlMemory<int,int>>::SetCount(&this->m_boneParents, v28);
+    for ( i = 0; v28 > i; *v22 = KeyValues3::GetInt(v21) )
+    {
+      v21 = KeyValues3::GetArrayElement(&v29, i);
+      v22 = &this->m_boneParents.m_Memory.m_pMemory[i++];
+    }
+    KeyValues3::~KeyValues3(&v29);
+  }
+  v16 = KeyValues3::FindMember(pContext->m_pSourceObject, "m_nBoneWeightCount", -1620823728);
+  if ( v16 != 0 )
+  {
+    this->m_nBoneWeightCount = KeyValues3::GetInt(v16);
+  }
+  else
+  {
+    KeyValues3::KeyValues3(&v29);
+    this->m_nBoneWeightCount = KeyValues3::GetInt(&v29);
+    KeyValues3::~KeyValues3(&v29);
+  }
+  CRenderSkeleton::TransferPostLoadFn(this, pContext);
+}
+
+
+// CMaterialDrawDescriptor::Schema_CompileTimeVerificationFunction  (line 282, @0x0000000003171660, libserver.so)
+void __fastcall CMaterialDrawDescriptor::Schema_CompileTimeVerificationFunction(CMaterialDrawDescriptor *const this)
+{
+  ;
+}
+
+
+// CMaterialDrawDescriptor::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE  (line 296, @0x0000000003171670, libserver.so)  // inlines: Get, SchemaBinding_SchemaTypeOfMemberVarByAddr<CMaterialDrawDescriptor, CRenderBufferBinding>, SchemaBinding_SchemaTypeOfMemberVarByAddr<CMaterialDrawDescriptor, CStrongHandle<InfoForResourceTypeIMaterial2> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<CMaterialDrawDescriptor, RenderPrimitiveType_t>, SchemaBinding_SchemaTypeOfMemberVarByAddr<CMaterialDrawDescriptor, Vector>, SchemaBinding_SchemaTypeOfMemberVarByAddr<CMaterialDrawDescriptor, float>, SchemaBinding_SchemaTypeOfMemberVarByAddr<CMaterialDrawDescriptor, int>, SetTypeScope
+// callers: CSchemaClassBinding<CMaterialDrawDescriptor>::Register
+// strings: "RenderPrimitiveType_t", "CRenderBufferBinding", "InfoForResourceTypeIMaterial2", "CStrongHandle"
+// globals: CMaterialDrawDescriptor::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s, CSchemaManipulator<Vector>::StaticAccessor(void)::m, CAtomicManipulator<Vector>::Get(void)::val, CSchemaManipulator<CStrongHandle<InfoForResourceTypeIMaterial2>>::StaticAccessor(void)::m, CAtomicManipulator<CStrongHandle<InfoForResourceTypeIMaterial2>>::Get(void)::val, CMaterialDrawDescriptor::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::I
+CSchemaClassInfo *__fastcall CMaterialDrawDescriptor::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        const char *pProjectName)
+{
+  CSchemaClassInfo *result; // rax
+  ISchemaSystemTypeScope *v4; // rbx
+  __int64 (__fastcall *v5)(ISchemaSystemTypeScope *, const char *, __int64, __int64 (__fastcall ***)(), __int64 (__fastcall ***)(), __int64); // r12
+  __int64 v6; // rax
+  CSchemaType *v7; // rax
+
+  result = CMaterialDrawDescriptor::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult;
+  if ( CMaterialDrawDescriptor::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult == 0 )
+  {
+    v4 = (*(*pSchemaSystem + 112LL))(pSchemaSystem, 0, pBinaryName);
+    CMaterialDrawDescriptor::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CMaterialDrawDescriptor[0].m_pType = (*(*v4 + 96LL))(v4, "RenderPrimitiveType_t");
+    CMaterialDrawDescriptor::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CMaterialDrawDescriptor[1].m_pType = (*(*v4 + 40LL))(v4, 7);
+    CMaterialDrawDescriptor::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CMaterialDrawDescriptor[2].m_pType = (*(*v4 + 40LL))(v4, 7);
+    CMaterialDrawDescriptor::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CMaterialDrawDescriptor[3].m_pType = (*(*v4 + 40LL))(v4, 7);
+    CMaterialDrawDescriptor::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CMaterialDrawDescriptor[4].m_pType = (*(*v4 + 40LL))(v4, 7);
+    CMaterialDrawDescriptor::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CMaterialDrawDescriptor[5].m_pType = (*(*v4 + 40LL))(v4, 7);
+    CMaterialDrawDescriptor::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CMaterialDrawDescriptor[6].m_pType = (*(*v4 + 40LL))(v4, 7);
+    CMaterialDrawDescriptor::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CMaterialDrawDescriptor[7].m_pType = (*(*v4 + 40LL))(v4, 11);
+    CMaterialDrawDescriptor::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CMaterialDrawDescriptor[8].m_pType = (*(*v4 + 56LL))(v4, "Vector", 2010, CAtomicManipulator<Vector>::Get(void)::val, CSchemaManipulator<Vector>::StaticAccessor(void)::m);
+    CMaterialDrawDescriptor::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CMaterialDrawDescriptor[9].m_pType = (*(*v4 + 88LL))(v4, "CRenderBufferBinding");
+    v5 = *(*v4 + 64LL);
+    v6 = (*(*v4 + 88LL))(v4, "InfoForResourceTypeIMaterial2");
+    v7 = v5(
+           v4,
+           "CStrongHandle",
+           4000,
+           &CAtomicManipulator<CStrongHandle<InfoForResourceTypeIMaterial2>>::Get(void)::val,
+           CSchemaManipulator<CStrongHandle<InfoForResourceTypeIMaterial2>>::StaticAccessor(void)::m,
+           v6);
+    CMaterialDrawDescriptor::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CMaterialDrawDescriptor.m_pOuterTypeScope = v4;
+    CMaterialDrawDescriptor::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CMaterialDrawDescriptor[10].m_pType = v7;
+    CMaterialDrawDescriptor::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult = &CMaterialDrawDescriptor::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CMaterialDrawDescriptor;
+    (*(*v4 + 264LL))(
+      v4,
+      &CMaterialDrawDescriptor::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CMaterialDrawDescriptor);
+    return CMaterialDrawDescriptor::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult;
+  }
+  return result;
+}
+
+
+// CMaterialDrawDescriptor::Schema_VerifyBindingIsRegistered  (line 347, @0x0000000003171800, libserver.so)
+void __cdecl CMaterialDrawDescriptor::Schema_VerifyBindingIsRegistered()
+{
+  ;
+}
+
+
+// CMaterialDrawDescriptor::KV3TransferSave  (line 355, @0x0000000003174030, libserver.so)
+// calls: CMaterialDrawDescriptor::KV3TransferSave_CMaterialDrawDescriptor
+void __fastcall CMaterialDrawDescriptor::KV3TransferSave(
+        const CMaterialDrawDescriptor *const this,
+        CKV3TransferSaveContext *pContext)
+{
+  CMaterialDrawDescriptor::KV3TransferSave_CMaterialDrawDescriptor(this, pContext);
+}
+
+
+// CMaterialDrawDescriptor::KV3TransferSave_CMaterialDrawDescriptor  (line 360, @0x0000000003173b30, libserver.so)  // inlines: CreateTargetMember, FindInterface<IKV3TransferInterface_ResourceSave>, KV3TransferSave, SaveClassPointer<const CRenderBufferBinding>, SaveValue<CRenderBufferBinding>, SaveValue<CStrongHandle<InfoForResourceTypeIMaterial2> >, SaveValue<RenderPrimitiveType_t>, SaveValue<Vector>, SaveValue<float>, SaveValue<int>, SaveValueDirect<CRenderBufferBinding>, SaveValueDirect<CStrongHandle<InfoForResourceTypeIMaterial2> >, SaveValueDirect<RenderPrimitiveType_t>, SaveValueDirect<Vector>, SaveValueDirect<float>, SaveValueDirect<int>, SaveValueToMember<CRenderBufferBinding>, SaveValueToMember<CStrongHandle<InfoForResourceTypeIMaterial2> >, SaveValueToMember<RenderPrimitiveType_t>, SaveValueToMember<Vector>, SaveValueToMember<float>, SaveValueToMember<int>
+// calls: KeyValues3::FindMember, CKV3TransferContextBase::NoteFailure, KV3Transfer_EnumeratorNameFromValue<RenderPrimitiveType_t>, KeyValues3::SetString, KeyValues3::SetInt, CKV3TransferSaveContext::CreateTargetMember, KeyValues3::SetFloat, KeyValues3::SetArrayElementCount, KeyValues3::GetArrayElement, CKV3TransferSaveContext::PrepareTargetForClass, CKV3TransferContextBase::FindInterfaceVoid, CMaterialDrawDescriptor::TransferPostSaveFn (17 total)
+// callers: CMaterialDrawDescriptor::KV3TransferSave, CKV3TransferSaveContext::SaveClassPointer<const CMaterialDrawDescriptor>
+// strings: "m_nPrimitiveType", "Double-save to Member '%s'", "m_nBaseVertex", "m_nVertexCount", "m_nStartIndex", "m_nIndexCount" (12 total)
+void __fastcall CMaterialDrawDescriptor::KV3TransferSave_CMaterialDrawDescriptor(
+        const CMaterialDrawDescriptor *const this,
+        CKV3TransferSaveContext *pContext)
+{
+  KeyValues3 *Member; // r12
+  const char *v5; // rax
+  KeyValues3 *v6; // r12
+  KeyValues3 *v7; // rdi
+  KeyValues3 *TargetMember; // rax
+  KeyValues3 *v9; // r12
+  KeyValues3 *v10; // rdi
+  KeyValues3 *v11; // r12
+  KeyValues3 *v12; // rdi
+  KeyValues3 *v13; // rax
+  KeyValues3 *v14; // r12
+  KeyValues3 *v15; // rdi
+  KeyValues3 *v16; // r12
+  double v17; // xmm1_8
+  KeyValues3 *v18; // rdi
+  KeyValues3 *v19; // r14
+  __int64 v20; // r12
+  int v21; // esi
+  KeyValues3 *ArrayElement; // rax
+  double v23; // xmm1_8
+  KeyValues3 *v24; // r12
+  KeyValues3 *v25; // r12
+  void *InterfaceVoid; // rax
+  double v27; // [rsp+8h] [rbp-148h]
+  char pPolymorphicClassName[264]; // [rsp+10h] [rbp-140h] BYREF
+  unsigned __int64 v29; // [rsp+118h] [rbp-38h]
+
+  v29 = __readfsqword(0x28u);
+  Member = KeyValues3::FindMember(pContext->m_pTargetObject, "m_nPrimitiveType", 314971577);
+  if ( Member != 0 )
+  {
+    CKV3TransferContextBase::NoteFailure(pContext, "Double-save to Member '%s'", "m_nPrimitiveType");
+    v5 = KV3Transfer_EnumeratorNameFromValue<RenderPrimitiveType_t>(this->m_nPrimitiveType);
+    if ( v5 != 0 )
+    {
+LABEL_3:
+      KeyValues3::SetString(Member, v5);
+      goto LABEL_4;
+    }
+  }
+  else
+  {
+    Member = KeyValues3::SetMemberToNull(pContext->m_pTargetObject, "m_nPrimitiveType", 314971577);
+    v5 = KV3Transfer_EnumeratorNameFromValue<RenderPrimitiveType_t>(this->m_nPrimitiveType);
+    if ( v5 != 0 )
+      goto LABEL_3;
+  }
+  KeyValues3::SetInt(Member, this->m_nPrimitiveType);
+LABEL_4:
+  v6 = KeyValues3::FindMember(pContext->m_pTargetObject, "m_nBaseVertex", 577242003);
+  if ( v6 != 0 )
+  {
+    CKV3TransferContextBase::NoteFailure(pContext, "Double-save to Member '%s'", "m_nBaseVertex");
+    v7 = v6;
+  }
+  else
+  {
+    v7 = KeyValues3::SetMemberToNull(pContext->m_pTargetObject, "m_nBaseVertex", 577242003);
+  }
+  KeyValues3::SetInt(v7, this->m_nBaseVertex);
+  TargetMember = CKV3TransferSaveContext::CreateTargetMember(pContext, "m_nVertexCount", -681172917);
+  KeyValues3::SetInt(TargetMember, this->m_nVertexCount);
+  v9 = KeyValues3::FindMember(pContext->m_pTargetObject, "m_nStartIndex", -498176230);
+  if ( v9 != 0 )
+  {
+    CKV3TransferContextBase::NoteFailure(pContext, "Double-save to Member '%s'", "m_nStartIndex");
+    v10 = v9;
+  }
+  else
+  {
+    v10 = KeyValues3::SetMemberToNull(pContext->m_pTargetObject, "m_nStartIndex", -498176230);
+  }
+  KeyValues3::SetInt(v10, this->m_nStartIndex);
+  v11 = KeyValues3::FindMember(pContext->m_pTargetObject, "m_nIndexCount", 824399334);
+  if ( v11 != 0 )
+  {
+    CKV3TransferContextBase::NoteFailure(pContext, "Double-save to Member '%s'", "m_nIndexCount");
+    v12 = v11;
+  }
+  else
+  {
+    v12 = KeyValues3::SetMemberToNull(pContext->m_pTargetObject, "m_nIndexCount", 824399334);
+  }
+  KeyValues3::SetInt(v12, this->m_nIndexCount);
+  v13 = CKV3TransferSaveContext::CreateTargetMember(pContext, "m_nStartInstance", -760194716);
+  KeyValues3::SetInt(v13, this->m_nStartInstance);
+  v14 = KeyValues3::FindMember(pContext->m_pTargetObject, "m_nInstanceCount", 1782198872);
+  if ( v14 != 0 )
+  {
+    CKV3TransferContextBase::NoteFailure(pContext, "Double-save to Member '%s'", "m_nInstanceCount");
+    v15 = v14;
+  }
+  else
+  {
+    v15 = KeyValues3::SetMemberToNull(pContext->m_pTargetObject, "m_nInstanceCount", 1782198872);
+  }
+  KeyValues3::SetInt(v15, this->m_nInstanceCount);
+  v16 = KeyValues3::FindMember(pContext->m_pTargetObject, "m_flUvDensity", -1290902331);
+  if ( v16 != 0 )
+  {
+    CKV3TransferContextBase::NoteFailure(pContext, "Double-save to Member '%s'", "m_flUvDensity");
+    v18 = v16;
+  }
+  else
+  {
+    v18 = KeyValues3::SetMemberToNull(pContext->m_pTargetObject, "m_flUvDensity", -1290902331);
+  }
+  KeyValues3::SetFloat(v18, this->m_flUvDensity, v17);
+  v19 = KeyValues3::FindMember(pContext->m_pTargetObject, "m_vTintColor", -850809619);
+  if ( v19 != 0 )
+    CKV3TransferContextBase::NoteFailure(pContext, "Double-save to Member '%s'", "m_vTintColor");
+  else
+    v19 = KeyValues3::SetMemberToNull(pContext->m_pTargetObject, "m_vTintColor", -850809619);
+  v20 = 0;
+  KeyValues3::SetArrayElementCount(v19, 3);
+  do
+  {
+    v21 = v20;
+    v27 = *(&this->m_vTintColor.x + v20++);
+    ArrayElement = KeyValues3::GetArrayElement(v19, v21);
+    KeyValues3::SetFloat(ArrayElement, v27, v23);
+  }
+  while ( v20 != 3 );
+  v24 = KeyValues3::FindMember(pContext->m_pTargetObject, "m_indexBuffer", 860823817);
+  if ( v24 != 0 )
+    CKV3TransferContextBase::NoteFailure(pContext, "Double-save to Member '%s'", "m_indexBuffer");
+  else
+    v24 = KeyValues3::SetMemberToNull(pContext->m_pTargetObject, "m_indexBuffer", 860823817);
+  if ( CKV3TransferSaveContext::PrepareTargetForClass(
+         pContext,
+         v24,
+         KV3TransferClassBehavior_t::KV3TRANSFER_CLASS_AS_SIMPLE_TABLE,
+         pPolymorphicClassName) )
+  {
+    CKV3TransferSaveContext::PushTarget(pContext, v24);
+    CRenderBufferBinding::KV3TransferSave_CRenderBufferBinding(&this->m_indexBuffer, pContext);
+    CKV3TransferSaveContext::PopTarget(pContext);
+  }
+  v25 = KeyValues3::FindMember(pContext->m_pTargetObject, "m_material", -2081804728);
+  if ( v25 != 0 )
+    CKV3TransferContextBase::NoteFailure(pContext, "Double-save to Member '%s'", "m_material");
+  else
+    v25 = KeyValues3::SetMemberToNull(pContext->m_pTargetObject, "m_material", -2081804728);
+  InterfaceVoid = CKV3TransferContextBase::FindInterfaceVoid(pContext, 0x53534552u);
+  (*(*InterfaceVoid + 8LL))(InterfaceVoid, pContext, v25, 1952542070, &this->m_material);
+  CMaterialDrawDescriptor::TransferPostSaveFn(this, pContext);
+}
+
+
+// CMaterialDrawDescriptor::KV3TransferLoad  (line 376, @0x0000000003171f40, libserver.so)
+// calls: CMaterialDrawDescriptor::KV3TransferLoad_CMaterialDrawDescriptor
+void __fastcall CMaterialDrawDescriptor::KV3TransferLoad(
+        CMaterialDrawDescriptor *const this,
+        CKV3TransferLoadContext *pContext)
+{
+  CMaterialDrawDescriptor::KV3TransferLoad_CMaterialDrawDescriptor(this, pContext);
+}
+
+
+// CMaterialDrawDescriptor::KV3TransferLoad_CMaterialDrawDescriptor  (line 381, @0x0000000003171810, libserver.so)  // inlines: As<CSchemaType_DeclaredEnum>, FindInterface<IKV3TransferInterface_ResourceLoad>, FindMember, FindSourceMember, Get, GetEnum, GetName, InternalAs, KV3TransferLoad, KV3Transfer_EnumeratorValueFromName<RenderPrimitiveType_t>, LoadClassInstance<CRenderBufferBinding>, LoadDefault<Vector>, LoadDefaultDirect<Vector>, LoadValue<CRenderBufferBinding>, LoadValue<CStrongHandle<InfoForResourceTypeIMaterial2> >, LoadValue<RenderPrimitiveType_t>, LoadValue<float>, LoadValue<int>, LoadValueDirect<CRenderBufferBinding>, LoadValueDirect<CStrongHandle<InfoForResourceTypeIMaterial2> >, LoadValueDirect<RenderPrimitiveType_t>, LoadValueDirect<Vector>, LoadValueDirect<float>, LoadValueDirect<int>, LoadValueFromMember<CRenderBufferBinding>, LoadValueFromMember<CStrongHandle<InfoForResourceTypeIMaterial2> >, LoadValueFromMember<RenderPrimitiveType_t>, LoadValueFromMember<float>, LoadValueFromMember<int>, LoadValueFromMemberOrDefault<Vector>, LookupEnum, SchemaTypeOf<RenderPrimitiveType_t>, SchemaTypeScope
+// calls: KeyValues3::FindMember, KeyValues3::GetType, KeyValues3::GetInt64, KeyValues3::GetInt, KeyValues3::GetFloat, CKV3TransferValHelperAsFloats<Vector, 3, false>::LoadValue<Vector>, CKV3TransferLoadContext::PushSource, CRenderBufferBinding::KV3TransferLoad_CRenderBufferBinding, CKV3TransferLoadContext::PopSource, CKV3TransferContextBase::FindInterfaceVoid, CMaterialDrawDescriptor::TransferPostLoadFn, KeyValues3::GetStringRaw (20 total)
+// callers: CMaterialDrawDescriptor::KV3TransferLoad, CSceneObjectData::KV3TransferLoad_CSceneObjectData
+// strings: "m_nPrimitiveType", "m_nBaseVertex", "m_nVertexCount", "m_nStartIndex", "m_nIndexCount", "m_nStartInstance" (13 total)
+// globals: SchemaTypeOf<RenderPrimitiveType_t>(void)::s_pTypeOf
+void __fastcall CMaterialDrawDescriptor::KV3TransferLoad_CMaterialDrawDescriptor(
+        CMaterialDrawDescriptor *const this,
+        CKV3TransferLoadContext *pContext)
+{
+  KeyValues3 *Member; // rax
+  const KeyValues3 *v5; // r12
+  KeyValues3 *v6; // rax
+  KeyValues3 *v7; // rax
+  KeyValues3 *v8; // rax
+  KeyValues3 *v9; // rax
+  KeyValues3 *v10; // rax
+  KeyValues3 *v11; // rax
+  KeyValues3 *v12; // rax
+  KeyValues3 *v13; // rax
+  Vector *v14; // rdx
+  KeyValues3 *v15; // rax
+  KeyValues3 *v16; // r12
+  void *InterfaceVoid; // rax
+  const char *StringRaw; // rax
+  __int64 v19; // r14
+  __int64 v20; // r15
+  const CSchemaEnumInfo *v21; // rdi
+  const CSchemaEnumeratorInfo *MemberByName; // rax
+  void *v23; // rax
+  const char *v24; // r15
+  __int64 i; // r14
+  char v26; // al
+  int v27; // edi
+  KeyValues3 *p_pSource; // rsi
+  unsigned int v29; // ecx
+  unsigned int v30; // ecx
+  int v31; // eax
+  const char *v32; // rax
+  __int64 v33; // r15
+  __int64 v34; // r14
+  const CSchemaEnumInfo *v35; // rdi
+  const CSchemaEnumeratorInfo *v36; // rax
+  __int64 (__fastcall *v37)(ISchemaSystem *, const char *); // r15
+  const char *NameOfModule; // rax
+  __int64 v39; // rax
+  void (__fastcall *v40)(_QWORD, __int64, const char *); // r14
+  const char *v41; // rax
+  void (__fastcall *v42)(_QWORD, __int64, const char *); // r15
+  const char *v43; // rax
+  __int64 (__fastcall *v44)(ISchemaSystem *, const char *); // r15
+  const char *v45; // rax
+  __int64 v46; // rax
+  char *pStr; // [rsp+8h] [rbp-88h]
+  char *pStra; // [rsp+8h] [rbp-88h]
+  KeyValues3 pSource; // [rsp+10h] [rbp-80h] BYREF
+  unsigned __int64 v50; // [rsp+58h] [rbp-38h]
+
+  v50 = __readfsqword(0x28u);
+  Member = KeyValues3::FindMember(pContext->m_pSourceObject, "m_nPrimitiveType", 314971577);
+  v5 = Member;
+  if ( Member != 0 )
+  {
+    if ( KeyValues3::GetType(Member) != KeyValues3Type_t::KEYVALUES3_TYPE_STRING )
+      goto LABEL_3;
+    StringRaw = KeyValues3::GetStringRaw(v5, 0);
+    v19 = SchemaTypeOf<RenderPrimitiveType_t>(void)::s_pTypeOf;
+    pStr = StringRaw;
+    if ( SchemaTypeOf<RenderPrimitiveType_t>(void)::s_pTypeOf == 0 )
+    {
+      v37 = *(*g_pSchemaSystem + 104LL);
+      NameOfModule = GetNameOfModule();
+      v39 = v37(g_pSchemaSystem, NameOfModule);
+      v19 = (*(*v39 + 96LL))(v39, "RenderPrimitiveType_t");
+      SchemaTypeOf<RenderPrimitiveType_t>(void)::s_pTypeOf = v19;
+    }
+    v20 = 0;
+    if ( (**v19)(v19) == 6 && (*(*v19 + 48LL))(v19) == 4 )
+      v20 = v19;
+    v21 = *(v20 + 48);
+    if ( v21 == 0 )
+    {
+      v40 = *(**(v20 + 40) + 288LL);
+      v41 = CUtlString::Get((v20 + 8));
+      v40(*(v20 + 40), v20 + 48, v41);
+      v21 = *(v20 + 48);
+    }
+    MemberByName = CSchemaEnumInfo::FindMemberByName(v21, pStr);
+    if ( MemberByName != 0 )
+      this->m_nPrimitiveType = MemberByName->m_nValue;
+    else
+LABEL_3:
+      this->m_nPrimitiveType = KeyValues3::GetInt64(v5);
+  }
+  else
+  {
+    KeyValues3::KeyValues3(&pSource);
+    if ( KeyValues3::GetType(&pSource) != KeyValues3Type_t::KEYVALUES3_TYPE_STRING )
+      goto LABEL_35;
+    v32 = KeyValues3::GetStringRaw(&pSource, 0);
+    v33 = SchemaTypeOf<RenderPrimitiveType_t>(void)::s_pTypeOf;
+    pStra = v32;
+    if ( SchemaTypeOf<RenderPrimitiveType_t>(void)::s_pTypeOf == 0 )
+    {
+      v44 = *(*g_pSchemaSystem + 104LL);
+      v45 = GetNameOfModule();
+      v46 = v44(g_pSchemaSystem, v45);
+      v33 = (*(*v46 + 96LL))(v46, "RenderPrimitiveType_t");
+      SchemaTypeOf<RenderPrimitiveType_t>(void)::s_pTypeOf = v33;
+    }
+    if ( (**v33)(v33) == 6 )
+    {
+      v34 = 0;
+      if ( (*(*v33 + 48LL))(v33) == 4 )
+        v34 = v33;
+    }
+    else
+    {
+      v34 = 0;
+    }
+    v35 = *(v34 + 48);
+    if ( v35 == 0 )
+    {
+      v42 = *(**(v34 + 40) + 288LL);
+      v43 = CUtlString::Get((v34 + 8));
+      v42(*(v34 + 40), v34 + 48, v43);
+      v35 = *(v34 + 48);
+    }
+    v36 = CSchemaEnumInfo::FindMemberByName(v35, pStra);
+    if ( v36 != 0 )
+      this->m_nPrimitiveType = v36->m_nValue;
+    else
+LABEL_35:
+      this->m_nPrimitiveType = KeyValues3::GetInt64(&pSource);
+    KeyValues3::~KeyValues3(&pSource);
+  }
+  v6 = KeyValues3::FindMember(pContext->m_pSourceObject, "m_nBaseVertex", 577242003);
+  if ( v6 != 0 )
+  {
+    this->m_nBaseVertex = KeyValues3::GetInt(v6);
+  }
+  else
+  {
+    KeyValues3::KeyValues3(&pSource);
+    this->m_nBaseVertex = KeyValues3::GetInt(&pSource);
+    KeyValues3::~KeyValues3(&pSource);
+  }
+  v7 = KeyValues3::FindMember(pContext->m_pSourceObject, "m_nVertexCount", -681172917);
+  if ( v7 != 0 )
+  {
+    this->m_nVertexCount = KeyValues3::GetInt(v7);
+  }
+  else
+  {
+    KeyValues3::KeyValues3(&pSource);
+    this->m_nVertexCount = KeyValues3::GetInt(&pSource);
+    KeyValues3::~KeyValues3(&pSource);
+  }
+  v8 = KeyValues3::FindMember(pContext->m_pSourceObject, "m_nStartIndex", -498176230);
+  if ( v8 != 0 )
+  {
+    this->m_nStartIndex = KeyValues3::GetInt(v8);
+  }
+  else
+  {
+    KeyValues3::KeyValues3(&pSource);
+    this->m_nStartIndex = KeyValues3::GetInt(&pSource);
+    KeyValues3::~KeyValues3(&pSource);
+  }
+  v9 = KeyValues3::FindMember(pContext->m_pSourceObject, "m_nIndexCount", 824399334);
+  if ( v9 != 0 )
+  {
+    this->m_nIndexCount = KeyValues3::GetInt(v9);
+  }
+  else
+  {
+    KeyValues3::KeyValues3(&pSource);
+    this->m_nIndexCount = KeyValues3::GetInt(&pSource);
+    KeyValues3::~KeyValues3(&pSource);
+  }
+  v10 = KeyValues3::FindMember(pContext->m_pSourceObject, "m_nStartInstance", -760194716);
+  if ( v10 != 0 )
+  {
+    this->m_nStartInstance = KeyValues3::GetInt(v10);
+  }
+  else
+  {
+    KeyValues3::KeyValues3(&pSource);
+    this->m_nStartInstance = KeyValues3::GetInt(&pSource);
+    KeyValues3::~KeyValues3(&pSource);
+  }
+  v11 = KeyValues3::FindMember(pContext->m_pSourceObject, "m_nInstanceCount", 1782198872);
+  if ( v11 != 0 )
+  {
+    this->m_nInstanceCount = KeyValues3::GetInt(v11);
+  }
+  else
+  {
+    KeyValues3::KeyValues3(&pSource);
+    this->m_nInstanceCount = KeyValues3::GetInt(&pSource);
+    KeyValues3::~KeyValues3(&pSource);
+  }
+  v12 = KeyValues3::FindMember(pContext->m_pSourceObject, "m_flUvDensity", -1290902331);
+  if ( v12 != 0 )
+  {
+    this->m_flUvDensity = KeyValues3::GetFloat(v12);
+  }
+  else
+  {
+    KeyValues3::KeyValues3(&pSource);
+    this->m_flUvDensity = KeyValues3::GetFloat(&pSource);
+    KeyValues3::~KeyValues3(&pSource);
+  }
+  v13 = KeyValues3::FindMember(pContext->m_pSourceObject, "m_vTintColor", -850809619);
+  if ( v13 != 0 )
+  {
+    CKV3TransferValHelperAsFloats<Vector,3,false>::LoadValue<Vector>(v13, &this->m_vTintColor, v14);
+  }
+  else
+  {
+    v24 = "1 1 1";
+    for ( i = 0; i != 12; i += 4 )
+    {
+      v26 = *v24;
+      v27 = 0;
+      if ( *v24 != 0 )
+      {
+        p_pSource = &pSource;
+        v27 = 0;
+        while ( 1 )
+        {
+          v29 = v26 - 9;
+          if ( v29 <= 0x17 && ((1LL << v29) & 0x80001F) != 0 )
+            break;
+          ++v24;
+          *p_pSource = v26;
+          ++v27;
+          v26 = *v24;
+          p_pSource = (p_pSource + 1);
+          if ( *v24 == 0 )
+            goto LABEL_52;
+        }
+        if ( *v24 != 0 )
+        {
+          v30 = *v24 - 9;
+          if ( v30 <= 0x17 && ((1LL << v30) & 0x80001F) != 0 )
+          {
+            do
+              v31 = *++v24;
+            while ( *v24 != 0 && (v31 - 9) <= 0x17 && ((1LL << (v31 - 9)) & 0x80001F) != 0 );
+          }
+        }
+      }
+LABEL_52:
+      *(&pSource + v27) = 0;
+      *(&this->m_vTintColor.x + i) = V_atof(&pSource);
+    }
+  }
+  v15 = KeyValues3::FindMember(pContext->m_pSourceObject, "m_indexBuffer", 860823817);
+  if ( v15 != 0 )
+  {
+    CKV3TransferLoadContext::PushSource(pContext, v15);
+    CRenderBufferBinding::KV3TransferLoad_CRenderBufferBinding(&this->m_indexBuffer, pContext);
+    CKV3TransferLoadContext::PopSource(pContext);
+  }
+  else
+  {
+    KeyValues3::KeyValues3(&pSource);
+    CKV3TransferLoadContext::PushSource(pContext, &pSource);
+    CRenderBufferBinding::KV3TransferLoad_CRenderBufferBinding(&this->m_indexBuffer, pContext);
+    CKV3TransferLoadContext::PopSource(pContext);
+    KeyValues3::~KeyValues3(&pSource);
+  }
+  v16 = KeyValues3::FindMember(pContext->m_pSourceObject, "m_material", -2081804728);
+  if ( v16 != 0 )
+  {
+    InterfaceVoid = CKV3TransferContextBase::FindInterfaceVoid(pContext, 0x4C534552u);
+    (*(*InterfaceVoid + 8LL))(InterfaceVoid, pContext, v16, 1952542070, &this->m_material);
+  }
+  else
+  {
+    KeyValues3::KeyValues3(&pSource);
+    v23 = CKV3TransferContextBase::FindInterfaceVoid(pContext, 0x4C534552u);
+    (*(*v23 + 8LL))(v23, pContext, &pSource, 1952542070, &this->m_material);
+    KeyValues3::~KeyValues3(&pSource);
+  }
+  CMaterialDrawDescriptor::TransferPostLoadFn(this, pContext);
+}
+
+
+// CSceneObjectData::Schema_CompileTimeVerificationFunction  (line 403, @0x0000000003171f50, libserver.so)
+void __fastcall CSceneObjectData::Schema_CompileTimeVerificationFunction(CSceneObjectData *const this)
+{
+  ;
+}
+
+
+// CSceneObjectData::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE  (line 410, @0x0000000003171f60, libserver.so)  // inlines: Get, SchemaBinding_SchemaTypeOfMemberVarByAddr<CSceneObjectData, CUtlVector<CMaterialDrawDescriptor> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<CSceneObjectData, Vector4D>, SchemaBinding_SchemaTypeOfMemberVarByAddr<CSceneObjectData, Vector>, SetTypeScope
+// callers: CSchemaClassBinding<CSceneObjectData>::Register
+// strings: "CMaterialDrawDescriptor", "CUtlVector", "Vector4D"
+// globals: CSceneObjectData::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pIniti, CSchemaManipulator<Vector>::StaticAccessor(void)::m, CAtomicManipulator<Vector>::Get(void)::val, CSchemaManipulator<CUtlVector<CMaterialDrawDescriptor,CUtlMemory<CMaterialDrawDescriptor,int>>>::StaticAccessor(void)::m, CAtomicManipulator<CUtlVector<CMaterialDrawDescriptor,CUtlMemory<CMaterialDrawDescriptor,int>>>::Get(void)::val, CSchemaManipulator<Vector4D>::StaticAccessor(void)::m, CAtomicManipulator<Vector4D>::Get(void)::val, CSceneObjectData::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSche
+CSchemaClassInfo *__fastcall CSceneObjectData::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        const char *pProjectName)
+{
+  CSchemaClassInfo *result; // rax
+  ISchemaSystemTypeScope *v4; // rbx
+  __int64 (__fastcall *v5)(ISchemaSystemTypeScope *, const char *, __int64, __int64 (__fastcall ***)(), __int64 (__fastcall ***)(), __int64); // r12
+  __int64 v6; // rax
+  CSchemaType *v7; // rax
+
+  result = CSceneObjectData::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult;
+  if ( CSceneObjectData::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult == 0 )
+  {
+    v4 = (*(*pSchemaSystem + 112LL))(pSchemaSystem, 0, pBinaryName);
+    CSceneObjectData::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CSceneObjectData[0].m_pType = (*(*v4 + 56LL))(v4, "Vector", 2010, CAtomicManipulator<Vector>::Get(void)::val, CSchemaManipulator<Vector>::StaticAccessor(void)::m);
+    CSceneObjectData::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CSceneObjectData[1].m_pType = (*(*v4 + 56LL))(v4, "Vector", 2010, CAtomicManipulator<Vector>::Get(void)::val, CSchemaManipulator<Vector>::StaticAccessor(void)::m);
+    v5 = *(*v4 + 64LL);
+    v6 = (*(*v4 + 88LL))(v4, "CMaterialDrawDescriptor");
+    CSceneObjectData::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CSceneObjectData[2].m_pType = v5(v4, "CUtlVector", 3002, &CAtomicManipulator<CUtlVector<CMaterialDrawDescriptor,CUtlMemory<CMaterialDrawDescriptor,int>>>::Get(void)::val, CSchemaManipulator<CUtlVector<CMaterialDrawDescriptor,CUtlMemory<CMaterialDrawDescriptor,int>>>::StaticAccessor(void)::m, v6);
+    v7 = (*(*v4 + 56LL))(
+           v4,
+           "Vector4D",
+           2002,
+           CAtomicManipulator<Vector4D>::Get(void)::val,
+           &CSchemaManipulator<Vector4D>::StaticAccessor(void)::m);
+    CSceneObjectData::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CSceneObjectData.m_pOuterTypeScope = v4;
+    CSceneObjectData::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CSceneObjectData[3].m_pType = v7;
+    CSceneObjectData::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult = &CSceneObjectData::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CSceneObjectData;
+    (*(*v4 + 264LL))(
+      v4,
+      &CSceneObjectData::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CSceneObjectData);
+    return CSceneObjectData::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult;
+  }
+  return result;
+}
+
+
+// CSceneObjectData::Schema_VerifyBindingIsRegistered  (line 428, @0x0000000003172080, libserver.so)
+void __cdecl CSceneObjectData::Schema_VerifyBindingIsRegistered()
+{
+  ;
+}
+
+
+// CSceneObjectData::KV3TransferSave  (line 436, @0x0000000003174300, libserver.so)
+// calls: CSceneObjectData::KV3TransferSave_CSceneObjectData
+void __fastcall CSceneObjectData::KV3TransferSave(
+        const CSceneObjectData *const this,
+        CKV3TransferSaveContext *pContext)
+{
+  CSceneObjectData::KV3TransferSave_CSceneObjectData(this, pContext);
+}
+
+
+// CSceneObjectData::KV3TransferSave_CSceneObjectData  (line 441, @0x0000000003174160, libserver.so)  // inlines: SaveValue<CMaterialDrawDescriptor>, SaveValue<CUtlVector<CMaterialDrawDescriptor> >, SaveValue<Vector4D>, SaveValue<Vector>, SaveValueDirect<CMaterialDrawDescriptor>, SaveValueDirect<CUtlVector<CMaterialDrawDescriptor> >, SaveValueDirect<Vector4D>, SaveValueDirect<Vector>, SaveValueToMember<CUtlVector<CMaterialDrawDescriptor> >, SaveValueToMember<Vector4D>, SaveValueToMember<Vector>, operator[]
+// calls: CKV3TransferSaveContext::CreateTargetMember, KeyValues3::SetArrayElementCount, KeyValues3::GetArrayElement, KeyValues3::SetFloat, CKV3TransferSaveContext::SaveClassPointer<const CMaterialDrawDescriptor>
+// callers: CSceneObjectData::KV3TransferSave, CKV3TransferSaveContext::SaveClassPointer<const CSceneObjectData>
+// strings: "m_vMinBounds", "m_vMaxBounds", "m_drawCalls", "m_vTintColor"
+void __fastcall CSceneObjectData::KV3TransferSave_CSceneObjectData(
+        const CSceneObjectData *const this,
+        CKV3TransferSaveContext *pContext)
+{
+  __int64 v4; // rbx
+  KeyValues3 *TargetMember; // r14
+  int v6; // esi
+  KeyValues3 *ArrayElement; // rax
+  double v8; // xmm1_8
+  KeyValues3 *v9; // r14
+  int v10; // esi
+  KeyValues3 *v11; // rax
+  double v12; // xmm1_8
+  KeyValues3 *v13; // rax
+  int m_Size; // r14d
+  __int64 v15; // rbx
+  int v16; // r15d
+  int v17; // esi
+  KeyValues3 *v18; // rax
+  const CMaterialDrawDescriptor *v19; // rdx
+  Vector4D *p_m_vTintColor; // r12
+  __int64 v21; // rbx
+  KeyValues3 *v22; // r13
+  int v23; // esi
+  KeyValues3 *v24; // rax
+  double v25; // xmm1_8
+  double v26; // [rsp+8h] [rbp-48h]
+  double v27; // [rsp+8h] [rbp-48h]
+  KeyValues3 *v28; // [rsp+8h] [rbp-48h]
+  double v29; // [rsp+8h] [rbp-48h]
+  const CMaterialDrawDescriptor *v30; // [rsp+18h] [rbp-38h] BYREF
+
+  v4 = 0;
+  TargetMember = CKV3TransferSaveContext::CreateTargetMember(pContext, "m_vMinBounds", 1361401364);
+  KeyValues3::SetArrayElementCount(TargetMember, 3);
+  do
+  {
+    v6 = v4;
+    v26 = *(&this->m_vMinBounds.x + v4++);
+    ArrayElement = KeyValues3::GetArrayElement(TargetMember, v6);
+    KeyValues3::SetFloat(ArrayElement, v26, v8);
+  }
+  while ( v4 != 3 );
+  LOBYTE(v4) = 0;
+  v9 = CKV3TransferSaveContext::CreateTargetMember(pContext, "m_vMaxBounds", -1650240958);
+  KeyValues3::SetArrayElementCount(v9, 3);
+  do
+  {
+    v10 = v4;
+    v27 = *(&this->m_vMaxBounds.x + v4++);
+    v11 = KeyValues3::GetArrayElement(v9, v10);
+    KeyValues3::SetFloat(v11, v27, v12);
+  }
+  while ( v4 != 3 );
+  v13 = CKV3TransferSaveContext::CreateTargetMember(pContext, "m_drawCalls", 1385722812);
+  m_Size = this->m_drawCalls.m_Size;
+  v28 = v13;
+  KeyValues3::SetArrayElementCount(v13, m_Size);
+  if ( m_Size > 0 )
+  {
+    v15 = 0;
+    v16 = 0;
+    do
+    {
+      v17 = v16++;
+      v18 = KeyValues3::GetArrayElement(v28, v17);
+      v19 = &this->m_drawCalls.m_Memory.m_pMemory[v15++];
+      v30 = v19;
+      CKV3TransferSaveContext::SaveClassPointer<CMaterialDrawDescriptor const>(pContext, &v30, v18);
+    }
+    while ( v16 != m_Size );
+  }
+  p_m_vTintColor = &this->m_vTintColor;
+  v21 = 0;
+  v22 = CKV3TransferSaveContext::CreateTargetMember(pContext, "m_vTintColor", -850809619);
+  KeyValues3::SetArrayElementCount(v22, 4);
+  do
+  {
+    v23 = v21;
+    v29 = *(&p_m_vTintColor->x + v21++);
+    v24 = KeyValues3::GetArrayElement(v22, v23);
+    KeyValues3::SetFloat(v24, v29, v25);
+  }
+  while ( v21 != 4 );
+}
+
+
+// CSceneObjectData::KV3TransferLoad  (line 449, @0x0000000003174dc0, libserver.so)
+// calls: CSceneObjectData::KV3TransferLoad_CSceneObjectData
+void __fastcall CSceneObjectData::KV3TransferLoad(CSceneObjectData *const this, CKV3TransferLoadContext *pContext)
+{
+  CSceneObjectData::KV3TransferLoad_CSceneObjectData(this, pContext);
+}
+
+
+// CSceneObjectData::KV3TransferLoad_CSceneObjectData  (line 454, @0x0000000003174af0, libserver.so)  // inlines: FindMember, FindSourceMember, KV3TransferLoad, LoadClassInstance<CMaterialDrawDescriptor>, LoadValue<CMaterialDrawDescriptor>, LoadValue<CUtlVector<CMaterialDrawDescriptor> >, LoadValue<Vector4D>, LoadValueDirect<CMaterialDrawDescriptor>, LoadValueDirect<CUtlVector<CMaterialDrawDescriptor> >, LoadValueDirect<Vector4D>, LoadValueFromMember<CUtlVector<CMaterialDrawDescriptor> >, LoadValueFromMember<Vector4D>, operator[]
+// calls: CKV3TransferLoadContext::LoadValueFromMember<Vector>, KeyValues3::FindMember, KeyValues3::GetArrayElementCount, CUtlVectorBase<CMaterialDrawDescriptor, CUtlMemory<CMaterialDrawDescriptor, int> >::SetCount, KeyValues3::GetArrayElement, CKV3TransferLoadContext::PushSource, CMaterialDrawDescriptor::KV3TransferLoad_CMaterialDrawDescriptor, CKV3TransferLoadContext::PopSource, KeyValues3::GetFloat, KeyValues3::KeyValues3, KeyValues3::~KeyValues3, _Unwind_Resume (13 total)
+// callers: CSceneObjectData::KV3TransferLoad, CRenderMesh::KV3TransferLoad_CRenderMesh
+// strings: "m_vMinBounds", "m_vMaxBounds", "m_drawCalls", "m_vTintColor"
+void __fastcall CSceneObjectData::KV3TransferLoad_CSceneObjectData(
+        CSceneObjectData *const this,
+        CKV3TransferLoadContext *pContext)
+{
+  KeyValues3 *Member; // rax
+  __int64 v5; // r12
+  int v6; // r15d
+  int v7; // esi
+  __int64 v8; // r13
+  const KeyValues3 *ArrayElement; // rax
+  CMaterialDrawDescriptor *v10; // r13
+  Vector4D *p_m_vTintColor; // r14
+  KeyValues3 *v12; // rax
+  const KeyValues3 *v13; // r13
+  int v14; // ebx
+  Vector4D *v15; // r12
+  int v16; // r15d
+  int v17; // esi
+  const KeyValues3 *v18; // rax
+  _DWORD *v19; // rax
+  __int64 v20; // r13
+  int v21; // r12d
+  const KeyValues3 *v22; // rax
+  int v23; // ebx
+  int v24; // r13d
+  float *p_x; // r12
+  const KeyValues3 *v26; // rax
+  _DWORD *v27; // rax
+  int ArrayElementCount; // [rsp+4h] [rbp-5Ch]
+  int v29; // [rsp+4h] [rbp-5Ch]
+  KeyValues3 *v30; // [rsp+8h] [rbp-58h]
+  CMaterialDrawDescriptor *v31; // [rsp+8h] [rbp-58h]
+  KeyValues3 v32; // [rsp+10h] [rbp-50h] BYREF
+  unsigned __int64 v33; // [rsp+28h] [rbp-38h]
+
+  v33 = __readfsqword(0x28u);
+  CKV3TransferLoadContext::LoadValueFromMember<Vector>(pContext, "m_vMinBounds", 1361401364, &this->m_vMinBounds);
+  CKV3TransferLoadContext::LoadValueFromMember<Vector>(pContext, "m_vMaxBounds", -1650240958, &this->m_vMaxBounds);
+  Member = KeyValues3::FindMember(pContext->m_pSourceObject, "m_drawCalls", 1385722812);
+  v30 = Member;
+  if ( Member != 0 )
+  {
+    ArrayElementCount = KeyValues3::GetArrayElementCount(Member);
+    CUtlVectorBase<CMaterialDrawDescriptor,CUtlMemory<CMaterialDrawDescriptor,int>>::SetCount(
+      &this->m_drawCalls,
+      ArrayElementCount);
+    if ( ArrayElementCount > 0 )
+    {
+      v5 = 0;
+      v6 = 0;
+      do
+      {
+        v7 = v6;
+        v8 = v5;
+        ++v6;
+        v5 += 200;
+        ArrayElement = KeyValues3::GetArrayElement(v30, v7);
+        v10 = (this->m_drawCalls.m_Memory.m_pMemory + v8);
+        CKV3TransferLoadContext::PushSource(pContext, ArrayElement);
+        CMaterialDrawDescriptor::KV3TransferLoad_CMaterialDrawDescriptor(v10, pContext);
+        CKV3TransferLoadContext::PopSource(pContext);
+      }
+      while ( v6 != ArrayElementCount );
+    }
+  }
+  else
+  {
+    KeyValues3::KeyValues3(&v32);
+    v29 = KeyValues3::GetArrayElementCount(&v32);
+    CUtlVectorBase<CMaterialDrawDescriptor,CUtlMemory<CMaterialDrawDescriptor,int>>::SetCount(&this->m_drawCalls, v29);
+    v20 = 0;
+    v21 = 0;
+    if ( v29 > 0 )
+    {
+      do
+      {
+        v22 = KeyValues3::GetArrayElement(&v32, v21);
+        v31 = &this->m_drawCalls.m_Memory.m_pMemory[v20];
+        CKV3TransferLoadContext::PushSource(pContext, v22);
+        CMaterialDrawDescriptor::KV3TransferLoad_CMaterialDrawDescriptor(v31, pContext);
+        CKV3TransferLoadContext::PopSource(pContext);
+        ++v21;
+        ++v20;
+      }
+      while ( v21 != v29 );
+    }
+    KeyValues3::~KeyValues3(&v32);
+  }
+  p_m_vTintColor = &this->m_vTintColor;
+  v12 = KeyValues3::FindMember(pContext->m_pSourceObject, "m_vTintColor", -850809619);
+  v13 = v12;
+  if ( v12 != 0 )
+  {
+    v14 = 0;
+    v15 = p_m_vTintColor;
+    v16 = KeyValues3::GetArrayElementCount(v12);
+    if ( v16 <= 0 )
+      goto LABEL_11;
+    do
+    {
+      v17 = v14++;
+      v18 = KeyValues3::GetArrayElement(v13, v17);
+      v15 = (v15 + 4);
+      v15[-1].w = KeyValues3::GetFloat(v18);
+    }
+    while ( v16 > v14 && v14 <= 3 );
+    if ( v14 <= 3 )
+    {
+LABEL_11:
+      v19 = (&p_m_vTintColor->x + v14);
+      do
+      {
+        ++v14;
+        *v19++ = 0;
+      }
+      while ( v14 <= 3 );
+    }
+  }
+  else
+  {
+    KeyValues3::KeyValues3(&v32);
+    v23 = 0;
+    v24 = KeyValues3::GetArrayElementCount(&v32);
+    p_x = &p_m_vTintColor->x;
+    if ( v24 <= 0 )
+      goto LABEL_22;
+    do
+    {
+      v26 = KeyValues3::GetArrayElement(&v32, v23++);
+      *p_x++ = KeyValues3::GetFloat(v26);
+    }
+    while ( v24 > v23 && v23 <= 3 );
+    if ( v23 <= 3 )
+    {
+LABEL_22:
+      v27 = (&p_m_vTintColor->x + v23);
+      do
+      {
+        ++v23;
+        *v27++ = 0;
+      }
+      while ( v23 <= 3 );
+    }
+    KeyValues3::~KeyValues3(&v32);
+  }
+}
+
+
+// CAttachment::Schema_CompileTimeVerificationFunction  (line 468, @0x0000000003172090, libserver.so)
+void __fastcall CAttachment::Schema_CompileTimeVerificationFunction(CAttachment *const this)
+{
+  ;
+}
+
+
+// CAttachment::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE  (line 478, @0x00000000031720a0, libserver.so)  // inlines: Get, SchemaBinding_SchemaTypeOfMemberVarByAddr<CAttachment, CUtlString [3]>, SchemaBinding_SchemaTypeOfMemberVarByAddr<CAttachment, CUtlString>, SchemaBinding_SchemaTypeOfMemberVarByAddr<CAttachment, Quaternion [3]>, SchemaBinding_SchemaTypeOfMemberVarByAddr<CAttachment, Vector [3]>, SchemaBinding_SchemaTypeOfMemberVarByAddr<CAttachment, bool [3]>, SchemaBinding_SchemaTypeOfMemberVarByAddr<CAttachment, float [3]>, SchemaBinding_SchemaTypeOfMemberVarByAddr<CAttachment, unsigned char>, SetTypeScope
+// callers: CSchemaClassBinding<CAttachment>::Register
+// strings: "CUtlString"
+// globals: CAttachment::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitialize, CSchemaManipulator<CUtlString>::StaticAccessor(void)::m, CAtomicManipulator<CUtlString>::Get(void)::val, CSchemaManipulator<Vector>::StaticAccessor(void)::m, CAtomicManipulator<Vector>::Get(void)::val, CSchemaManipulator<Quaternion>::StaticAccessor(void)::m, CAtomicManipulator<Quaternion>::Get(void)::val, CAttachment::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_Cl
+CSchemaClassInfo *__fastcall CAttachment::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        const char *pProjectName)
+{
+  CSchemaClassInfo *result; // rax
+  ISchemaSystemTypeScope *v4; // rbx
+  __int64 (__fastcall *v5)(ISchemaSystemTypeScope *, __int64, __int64); // r12
+  __int64 v6; // rax
+  __int64 (__fastcall *v7)(ISchemaSystemTypeScope *, __int64, __int64); // r12
+  __int64 v8; // rax
+  __int64 (__fastcall *v9)(ISchemaSystemTypeScope *, __int64, __int64); // r12
+  __int64 v10; // rax
+  __int64 (__fastcall *v11)(ISchemaSystemTypeScope *, __int64, __int64); // r12
+  __int64 v12; // rax
+  __int64 (__fastcall *v13)(ISchemaSystemTypeScope *, __int64, __int64); // r12
+  __int64 v14; // rax
+  CSchemaType *v15; // rax
+
+  result = CAttachment::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult;
+  if ( CAttachment::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult == 0 )
+  {
+    v4 = (*(*pSchemaSystem + 112LL))(pSchemaSystem, 0, pBinaryName);
+    CAttachment::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CAttachment[0].m_pType = (*(*v4 + 56LL))(v4, "CUtlString", 3003, CAtomicManipulator<CUtlString>::Get(void)::val, CSchemaManipulator<CUtlString>::StaticAccessor(void)::m);
+    v5 = *(*v4 + 104LL);
+    v6 = (*(*v4 + 56LL))(
+           v4,
+           "CUtlString",
+           3003,
+           CAtomicManipulator<CUtlString>::Get(void)::val,
+           CSchemaManipulator<CUtlString>::StaticAccessor(void)::m);
+    CAttachment::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CAttachment[1].m_pType = v5(v4, v6, 3);
+    v7 = *(*v4 + 104LL);
+    v8 = (*(*v4 + 56LL))(
+           v4,
+           "Vector",
+           2010,
+           CAtomicManipulator<Vector>::Get(void)::val,
+           CSchemaManipulator<Vector>::StaticAccessor(void)::m);
+    CAttachment::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CAttachment[2].m_pType = v7(v4, v8, 3);
+    v9 = *(*v4 + 104LL);
+    v10 = (*(*v4 + 56LL))(
+            v4,
+            "Quaternion",
+            2006,
+            CAtomicManipulator<Quaternion>::Get(void)::val,
+            &CSchemaManipulator<Quaternion>::StaticAccessor(void)::m);
+    CAttachment::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CAttachment[3].m_pType = v9(v4, v10, 3);
+    v11 = *(*v4 + 104LL);
+    v12 = (*(*v4 + 40LL))(v4, 11);
+    CAttachment::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CAttachment[4].m_pType = v11(v4, v12, 3);
+    v13 = *(*v4 + 104LL);
+    v14 = (*(*v4 + 40LL))(v4, 13);
+    CAttachment::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CAttachment[5].m_pType = v13(v4, v14, 3);
+    v15 = (*(*v4 + 40LL))(v4, 4);
+    CAttachment::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CAttachment.m_pOuterTypeScope = v4;
+    CAttachment::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CAttachment[6].m_pType = v15;
+    CAttachment::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult = &CAttachment::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CAttachment;
+    (*(*v4 + 264LL))(
+      v4,
+      &CAttachment::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CAttachment);
+    return CAttachment::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult;
+  }
+  return result;
+}
+
+
+// CAttachment::Schema_VerifyBindingIsRegistered  (line 510, @0x0000000003172240, libserver.so)
+void __cdecl CAttachment::Schema_VerifyBindingIsRegistered()
+{
+  ;
+}
+
+
+// CAttachment::KV3TransferSave  (line 518, @0x00000000031724e0, libserver.so)
+// calls: CAttachment::KV3TransferSave_CAttachment
+// callers: CKV3TransferSaveContext::SaveClassPointer<const CAttachment>
+void __fastcall CAttachment::KV3TransferSave(const CAttachment *const this, CKV3TransferSaveContext *pContext)
+{
+  CAttachment::KV3TransferSave_CAttachment(this, pContext);
+}
+
+
+// CAttachment::KV3TransferSave_CAttachment  (line 523, @0x0000000003172250, libserver.so)  // inlines: SaveValue<CUtlString [3]>, SaveValue<CUtlString>, SaveValue<Quaternion [3]>, SaveValue<Quaternion>, SaveValue<Vector [3]>, SaveValue<Vector>, SaveValue<bool [3]>, SaveValue<bool>, SaveValue<float [3]>, SaveValue<float>, SaveValue<unsigned char>, SaveValueDirect<CUtlString [3]>, SaveValueDirect<CUtlString>, SaveValueDirect<Quaternion [3]>, SaveValueDirect<Quaternion>, SaveValueDirect<Vector [3]>, SaveValueDirect<Vector>, SaveValueDirect<bool [3]>, SaveValueDirect<bool>, SaveValueDirect<float [3]>, SaveValueDirect<float>, SaveValueDirect<unsigned char>, SaveValueToMember<CUtlString [3]>, SaveValueToMember<CUtlString>, SaveValueToMember<Quaternion [3]>, SaveValueToMember<Vector [3]>, SaveValueToMember<bool [3]>, SaveValueToMember<float [3]>, SaveValueToMember<unsigned char>
+// calls: CKV3TransferSaveContext::CreateTargetMember, CUtlString::Get, KeyValues3::SetString, KeyValues3::SetArrayElementCount, KeyValues3::GetArrayElement, KeyValues3::SetFloat, KeyValues3::SetBool, KeyValues3::SetInt
+// callers: CAttachment::KV3TransferSave
+// strings: "m_influenceNames", "m_vInfluenceOffsets", "m_vInfluenceRotations", "m_influenceWeights", "m_bInfluenceRootTransform", "m_nInfluences"
+void __fastcall CAttachment::KV3TransferSave_CAttachment(
+        const CAttachment *const this,
+        CKV3TransferSaveContext *pContext)
+{
+  int v4; // r13d
+  KeyValues3 *TargetMember; // rbx
+  const char *v6; // rax
+  KeyValues3 *v7; // rdi
+  CUtlString *m_influenceNames; // rbx
+  KeyValues3 *v9; // r15
+  int v10; // esi
+  KeyValues3 *ArrayElement; // rax
+  const CUtlString *v12; // rdi
+  KeyValues3 *v13; // r12
+  const char *v14; // rax
+  Vector *m_vInfluenceOffsets; // rbx
+  __int64 v16; // r15
+  KeyValues3 *v17; // r12
+  int v18; // esi
+  KeyValues3 *v19; // rax
+  double v20; // xmm1_8
+  Quaternion *m_vInfluenceRotations; // rbx
+  __int64 v22; // r15
+  KeyValues3 *v23; // r12
+  int v24; // esi
+  KeyValues3 *v25; // rax
+  double v26; // xmm1_8
+  __int64 v27; // rbx
+  KeyValues3 *v28; // r12
+  KeyValues3 *v29; // rax
+  float v30; // xmm0_4
+  double v31; // xmm1_8
+  KeyValues3 *v32; // r12
+  KeyValues3 *v33; // rax
+  bool v34; // si
+  KeyValues3 *v35; // rax
+  KeyValues3 *v36; // [rsp+8h] [rbp-48h]
+  KeyValues3 *v37; // [rsp+8h] [rbp-48h]
+  double v39; // [rsp+18h] [rbp-38h]
+  double v40; // [rsp+18h] [rbp-38h]
+
+  v4 = 0;
+  TargetMember = CKV3TransferSaveContext::CreateTargetMember(pContext, "m_name", -1987399468);
+  v6 = CUtlString::Get(&this->m_name);
+  v7 = TargetMember;
+  m_influenceNames = this->m_influenceNames;
+  KeyValues3::SetString(v7, v6);
+  v9 = CKV3TransferSaveContext::CreateTargetMember(pContext, "m_influenceNames", 913568005);
+  KeyValues3::SetArrayElementCount(v9, 3);
+  do
+  {
+    v10 = v4++;
+    ArrayElement = KeyValues3::GetArrayElement(v9, v10);
+    v12 = m_influenceNames++;
+    v13 = ArrayElement;
+    v14 = CUtlString::Get(v12);
+    KeyValues3::SetString(v13, v14);
+  }
+  while ( v4 != 3 );
+  LOBYTE(v4) = 0;
+  m_vInfluenceOffsets = this->m_vInfluenceOffsets;
+  v36 = CKV3TransferSaveContext::CreateTargetMember(pContext, "m_vInfluenceOffsets", -1083261601);
+  KeyValues3::SetArrayElementCount(v36, 3);
+  do
+  {
+    v16 = 0;
+    v17 = KeyValues3::GetArrayElement(v36, v4);
+    KeyValues3::SetArrayElementCount(v17, 3);
+    do
+    {
+      v18 = v16;
+      v39 = *(&m_vInfluenceOffsets->x + v16++);
+      v19 = KeyValues3::GetArrayElement(v17, v18);
+      KeyValues3::SetFloat(v19, v39, v20);
+    }
+    while ( v16 != 3 );
+    ++v4;
+    ++m_vInfluenceOffsets;
+  }
+  while ( v4 != 3 );
+  LOBYTE(v4) = 0;
+  m_vInfluenceRotations = this->m_vInfluenceRotations;
+  v37 = CKV3TransferSaveContext::CreateTargetMember(pContext, "m_vInfluenceRotations", -534604555);
+  KeyValues3::SetArrayElementCount(v37, 3);
+  do
+  {
+    v22 = 0;
+    v23 = KeyValues3::GetArrayElement(v37, v4);
+    KeyValues3::SetArrayElementCount(v23, 4);
+    do
+    {
+      v24 = v22;
+      v40 = *(&m_vInfluenceRotations->x + v22++);
+      v25 = KeyValues3::GetArrayElement(v23, v24);
+      KeyValues3::SetFloat(v25, v40, v26);
+    }
+    while ( v22 != 4 );
+    ++v4;
+    ++m_vInfluenceRotations;
+  }
+  while ( v4 != 3 );
+  v27 = 0;
+  v28 = CKV3TransferSaveContext::CreateTargetMember(pContext, "m_influenceWeights", 1629689544);
+  KeyValues3::SetArrayElementCount(v28, 3);
+  do
+  {
+    v29 = KeyValues3::GetArrayElement(v28, v27);
+    v30 = this->m_influenceWeights[v27++];
+    KeyValues3::SetFloat(v29, v30, v31);
+  }
+  while ( v27 != 3 );
+  LOBYTE(v27) = 0;
+  v32 = CKV3TransferSaveContext::CreateTargetMember(pContext, "m_bInfluenceRootTransform", -993632291);
+  KeyValues3::SetArrayElementCount(v32, 3);
+  do
+  {
+    v33 = KeyValues3::GetArrayElement(v32, v27);
+    v34 = this->m_bInfluenceRootTransform[v27++];
+    KeyValues3::SetBool(v33, v34);
+  }
+  while ( v27 != 3 );
+  v35 = CKV3TransferSaveContext::CreateTargetMember(pContext, "m_nInfluences", 1106440316);
+  KeyValues3::SetInt(v35, this->m_nInfluences);
+}
+
+
+// CAttachment::KV3TransferLoad  (line 534, @0x00000000031738e0, libserver.so)
+// calls: CAttachment::KV3TransferLoad_CAttachment
+// callers: LoadUtlDict<CAttachment>
+void __fastcall CAttachment::KV3TransferLoad(CAttachment *const this, CKV3TransferLoadContext *pContext)
+{
+  CAttachment::KV3TransferLoad_CAttachment(this, pContext);
+}
+
+
+// CAttachment::KV3TransferLoad_CAttachment  (line 539, @0x0000000003173370, libserver.so)  // inlines: FindMember, FindSourceMember, LoadValue<CUtlString [3]>, LoadValue<CUtlString>, LoadValue<bool [3]>, LoadValue<bool>, LoadValue<unsigned char>, LoadValueDirect<CUtlString [3]>, LoadValueDirect<CUtlString>, LoadValueDirect<Quaternion [3]>, LoadValueDirect<Vector [3]>, LoadValueDirect<bool [3]>, LoadValueDirect<bool>, LoadValueDirect<float [3]>, LoadValueDirect<unsigned char>, LoadValueFromMember<CUtlString [3]>, LoadValueFromMember<CUtlString>, LoadValueFromMember<Quaternion [3]>, LoadValueFromMember<Vector [3]>, LoadValueFromMember<bool [3]>, LoadValueFromMember<float [3]>, LoadValueFromMember<unsigned char>
+// calls: KeyValues3::FindMember, KeyValues3::GetString, KeyValues3::GetArrayElementCount, KeyValues3::GetArrayElement, KeyValues3::KeyValues3, KeyValues3::~KeyValues3, CKV3TransferValHelper<Vector [3]>::LoadValue<Vector [3]>, CKV3TransferValHelper<Quaternion [3]>::LoadValue<Quaternion [3]>, CKV3TransferValHelper<float [3]>::LoadValue<float [3]>, KeyValues3::GetBool, KeyValues3::GetInt, CAttachment::TransferPostLoadFn (14 total)
+// callers: CAttachment::KV3TransferLoad
+// strings: "m_influenceNames", "m_vInfluenceOffsets", "m_vInfluenceRotations", "m_influenceWeights", "m_bInfluenceRootTransform", "m_nInfluences"
+void __fastcall CAttachment::KV3TransferLoad_CAttachment(CAttachment *const this, CKV3TransferLoadContext *pContext)
+{
+  KeyValues3 *Member; // rax
+  CUtlString *m_influenceNames; // rbx
+  KeyValues3 *v6; // rax
+  const KeyValues3 *v7; // r12
+  int v8; // r13d
+  int v9; // esi
+  const KeyValues3 *ArrayElement; // rax
+  CUtlString *v11; // rsi
+  CUtlString *v12; // r12
+  __int64 v13; // r13
+  KeyValues3 *v14; // rax
+  Vector *v15; // rdx
+  KeyValues3 *v16; // rax
+  Quaternion *v17; // rdx
+  KeyValues3 *v18; // rax
+  bool *m_bInfluenceRootTransform; // r12
+  KeyValues3 *v20; // rax
+  const KeyValues3 *v21; // rbx
+  int v22; // r13d
+  int v23; // esi
+  const KeyValues3 *v24; // rax
+  bool *v25; // r12
+  __int64 v26; // r13
+  KeyValues3 *v27; // rax
+  int v28; // r13d
+  int v29; // r12d
+  bool *v30; // rbx
+  __int64 v31; // r12
+  const KeyValues3 *v32; // rax
+  Quaternion *v33; // rdx
+  Vector *v34; // rdx
+  int v35; // r12d
+  int v36; // r13d
+  CUtlString *v37; // rbx
+  CUtlString *v38; // r13
+  const KeyValues3 *v39; // rax
+  CUtlString *pOutString; // [rsp+0h] [rbp-70h]
+  bool *pOutStringa; // [rsp+0h] [rbp-70h]
+  CUtlString *pOutStringb; // [rsp+0h] [rbp-70h]
+  int ArrayElementCount; // [rsp+8h] [rbp-68h]
+  int v44; // [rsp+8h] [rbp-68h]
+  KeyValues3 v45; // [rsp+10h] [rbp-60h] BYREF
+  KeyValues3 pLoadFromValue; // [rsp+20h] [rbp-50h] BYREF
+  unsigned __int64 v47; // [rsp+38h] [rbp-38h]
+
+  v47 = __readfsqword(0x28u);
+  Member = KeyValues3::FindMember(pContext->m_pSourceObject, "m_name", -1987399468);
+  if ( Member != 0 )
+  {
+    KeyValues3::GetString(Member, &this->m_name);
+  }
+  else
+  {
+    KeyValues3::KeyValues3(&pLoadFromValue);
+    KeyValues3::GetString(&pLoadFromValue, &this->m_name);
+    KeyValues3::~KeyValues3(&pLoadFromValue);
+  }
+  m_influenceNames = this->m_influenceNames;
+  pOutString = this->m_influenceNames;
+  v6 = KeyValues3::FindMember(pContext->m_pSourceObject, "m_influenceNames", 913568005);
+  v7 = v6;
+  if ( v6 != 0 )
+  {
+    v8 = 0;
+    ArrayElementCount = KeyValues3::GetArrayElementCount(v6);
+    if ( ArrayElementCount <= 0 )
+      goto LABEL_9;
+    do
+    {
+      v9 = v8++;
+      ArrayElement = KeyValues3::GetArrayElement(v7, v9);
+      v11 = m_influenceNames++;
+      KeyValues3::GetString(ArrayElement, v11);
+    }
+    while ( v8 <= 2 && ArrayElementCount > v8 );
+    if ( v8 != 3 )
+    {
+LABEL_9:
+      v12 = &pOutString[v8];
+      v13 = &pOutString[(2 - v8) + 1 + v8];
+      do
+      {
+        KeyValues3::KeyValues3(&pLoadFromValue);
+        KeyValues3::GetString(&pLoadFromValue, v12++);
+        KeyValues3::~KeyValues3(&pLoadFromValue);
+      }
+      while ( v12 != v13 );
+    }
+  }
+  else
+  {
+    KeyValues3::KeyValues3(&v45);
+    v35 = 0;
+    v36 = KeyValues3::GetArrayElementCount(&v45);
+    v37 = this->m_influenceNames;
+    if ( v36 <= 0 )
+      goto LABEL_42;
+    do
+    {
+      v39 = KeyValues3::GetArrayElement(&v45, v35);
+      KeyValues3::GetString(v39, v37);
+      ++v35;
+      ++v37;
+    }
+    while ( v35 <= 2 && v36 > v35 );
+    if ( v35 <= 2 )
+    {
+LABEL_42:
+      v38 = &pOutString[v35];
+      do
+      {
+        KeyValues3::KeyValues3(&pLoadFromValue);
+        KeyValues3::GetString(&pLoadFromValue, v38);
+        ++v35;
+        ++v38;
+        KeyValues3::~KeyValues3(&pLoadFromValue);
+      }
+      while ( v35 <= 2 );
+    }
+    KeyValues3::~KeyValues3(&v45);
+  }
+  v14 = KeyValues3::FindMember(pContext->m_pSourceObject, "m_vInfluenceOffsets", -1083261601);
+  if ( v14 != 0 )
+  {
+    CKV3TransferValHelper<Vector [3]>::LoadValue<Vector [3]>(v14, this->m_vInfluenceOffsets, v15);
+  }
+  else
+  {
+    KeyValues3::KeyValues3(&pLoadFromValue);
+    CKV3TransferValHelper<Vector [3]>::LoadValue<Vector [3]>(&pLoadFromValue, this->m_vInfluenceOffsets, v34);
+    KeyValues3::~KeyValues3(&pLoadFromValue);
+  }
+  v16 = KeyValues3::FindMember(pContext->m_pSourceObject, "m_vInfluenceRotations", -534604555);
+  if ( v16 != 0 )
+  {
+    CKV3TransferValHelper<Quaternion [3]>::LoadValue<Quaternion [3]>(v16, this->m_vInfluenceRotations, v17);
+  }
+  else
+  {
+    KeyValues3::KeyValues3(&pLoadFromValue);
+    CKV3TransferValHelper<Quaternion [3]>::LoadValue<Quaternion [3]>(&pLoadFromValue, this->m_vInfluenceRotations, v33);
+    KeyValues3::~KeyValues3(&pLoadFromValue);
+  }
+  v18 = KeyValues3::FindMember(pContext->m_pSourceObject, "m_influenceWeights", 1629689544);
+  if ( v18 != 0 )
+  {
+    CKV3TransferValHelper<float [3]>::LoadValue<float [3]>(pContext, v18, this->m_influenceWeights);
+  }
+  else
+  {
+    KeyValues3::KeyValues3(&pLoadFromValue);
+    CKV3TransferValHelper<float [3]>::LoadValue<float [3]>(pContext, &pLoadFromValue, this->m_influenceWeights);
+    KeyValues3::~KeyValues3(&pLoadFromValue);
+  }
+  m_bInfluenceRootTransform = this->m_bInfluenceRootTransform;
+  pOutStringa = this->m_bInfluenceRootTransform;
+  v20 = KeyValues3::FindMember(pContext->m_pSourceObject, "m_bInfluenceRootTransform", -993632291);
+  v21 = v20;
+  if ( v20 != 0 )
+  {
+    v22 = 0;
+    v44 = KeyValues3::GetArrayElementCount(v20);
+    if ( v44 <= 0 )
+      goto LABEL_23;
+    do
+    {
+      v23 = v22++;
+      v24 = KeyValues3::GetArrayElement(v21, v23);
+      *m_bInfluenceRootTransform++ = KeyValues3::GetBool(v24);
+    }
+    while ( v22 <= 2 && v44 > v22 );
+    if ( v22 != 3 )
+    {
+LABEL_23:
+      v25 = &pOutStringa[v22];
+      v26 = &v25[2 - v22 + 1];
+      do
+      {
+        KeyValues3::KeyValues3(&pLoadFromValue);
+        *v25++ = KeyValues3::GetBool(&pLoadFromValue);
+        KeyValues3::~KeyValues3(&pLoadFromValue);
+      }
+      while ( v25 != v26 );
+    }
+  }
+  else
+  {
+    KeyValues3::KeyValues3(&v45);
+    v28 = 0;
+    v29 = KeyValues3::GetArrayElementCount(&v45);
+    v30 = this->m_bInfluenceRootTransform;
+    if ( v29 <= 0 )
+      goto LABEL_31;
+    do
+    {
+      v32 = KeyValues3::GetArrayElement(&v45, v28++);
+      *v30++ = KeyValues3::GetBool(v32);
+    }
+    while ( v28 <= 2 && v29 > v28 );
+    if ( v28 <= 2 )
+    {
+LABEL_31:
+      v31 = 0;
+      pOutStringb = &pOutStringa[v28];
+      do
+      {
+        KeyValues3::KeyValues3(&pLoadFromValue);
+        *(&pOutStringb->m_pString + v31++) = KeyValues3::GetBool(&pLoadFromValue);
+        KeyValues3::~KeyValues3(&pLoadFromValue);
+      }
+      while ( v28 + v31 <= 2 );
+    }
+    KeyValues3::~KeyValues3(&v45);
+  }
+  v27 = KeyValues3::FindMember(pContext->m_pSourceObject, "m_nInfluences", 1106440316);
+  if ( v27 != 0 )
+  {
+    this->m_nInfluences = KeyValues3::GetInt(v27);
+  }
+  else
+  {
+    KeyValues3::KeyValues3(&pLoadFromValue);
+    this->m_nInfluences = KeyValues3::GetInt(&pLoadFromValue);
+    KeyValues3::~KeyValues3(&pLoadFromValue);
+  }
+  CAttachment::TransferPostLoadFn(this, pContext);
+}
+
+
+// CHitBox::Schema_CompileTimeVerificationFunction  (line 557, @0x00000000031724f0, libserver.so)
+void __fastcall CHitBox::Schema_CompileTimeVerificationFunction(CHitBox *const this)
+{
+  ;
+}
+
+
+// CHitBox::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE  (line 572, @0x0000000003172500, libserver.so)  // inlines: Get, SchemaBinding_SchemaTypeOfMemberVarByAddr<CHitBox, CUtlString>, SchemaBinding_SchemaTypeOfMemberVarByAddr<CHitBox, Color>, SchemaBinding_SchemaTypeOfMemberVarByAddr<CHitBox, Vector>, SchemaBinding_SchemaTypeOfMemberVarByAddr<CHitBox, bool>, SchemaBinding_SchemaTypeOfMemberVarByAddr<CHitBox, int>, SchemaBinding_SchemaTypeOfMemberVarByAddr<CHitBox, short unsigned int>, SchemaBinding_SchemaTypeOfMemberVarByAddr<CHitBox, unsigned int>, SetTypeScope
+// callers: CSchemaClassBinding<CHitBox>::Register
+// strings: "CUtlString"
+// globals: CHitBox::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedRes, CSchemaManipulator<CUtlString>::StaticAccessor(void)::m, CAtomicManipulator<CUtlString>::Get(void)::val, CSchemaManipulator<Color>::StaticAccessor(void)::m, CAtomicManipulator<Color>::Get(void)::val, CSchemaManipulator<Vector>::StaticAccessor(void)::m, CAtomicManipulator<Vector>::Get(void)::val, CHitBox::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassI
+CSchemaClassInfo *__fastcall CHitBox::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        const char *pProjectName)
+{
+  CSchemaClassInfo *result; // rax
+  ISchemaSystemTypeScope *v4; // rbx
+  CSchemaType *v5; // rax
+
+  result = CHitBox::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult;
+  if ( CHitBox::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult == 0 )
+  {
+    v4 = (*(*pSchemaSystem + 112LL))(pSchemaSystem, 0, pBinaryName);
+    CHitBox::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CHitBox[0].m_pType = (*(*v4 + 56LL))(v4, "CUtlString", 3003, CAtomicManipulator<CUtlString>::Get(void)::val, CSchemaManipulator<CUtlString>::StaticAccessor(void)::m);
+    CHitBox::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CHitBox[1].m_pType = (*(*v4 + 56LL))(v4, "CUtlString", 3003, CAtomicManipulator<CUtlString>::Get(void)::val, CSchemaManipulator<CUtlString>::StaticAccessor(void)::m);
+    CHitBox::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CHitBox[2].m_pType = (*(*v4 + 56LL))(v4, "CUtlString", 3003, CAtomicManipulator<CUtlString>::Get(void)::val, CSchemaManipulator<CUtlString>::StaticAccessor(void)::m);
+    CHitBox::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CHitBox[3].m_pType = (*(*v4 + 40LL))(v4, 8);
+    CHitBox::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CHitBox[4].m_pType = (*(*v4 + 40LL))(v4, 7);
+    CHitBox::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CHitBox[5].m_pType = (*(*v4 + 56LL))(v4, "Color", 2000, CAtomicManipulator<Color>::Get(void)::val, CSchemaManipulator<Color>::StaticAccessor(void)::m);
+    CHitBox::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CHitBox[6].m_pType = (*(*v4 + 40LL))(v4, 6);
+    CHitBox::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CHitBox[7].m_pType = (*(*v4 + 56LL))(v4, "Vector", 2010, CAtomicManipulator<Vector>::Get(void)::val, CSchemaManipulator<Vector>::StaticAccessor(void)::m);
+    CHitBox::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CHitBox[8].m_pType = (*(*v4 + 56LL))(v4, "Vector", 2010, CAtomicManipulator<Vector>::Get(void)::val, CSchemaManipulator<Vector>::StaticAccessor(void)::m);
+    CHitBox::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CHitBox[9].m_pType = (*(*v4 + 40LL))(v4, 13);
+    CHitBox::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CHitBox[10].m_pType = (*(*v4 + 40LL))(v4, 13);
+    v5 = (*(*v4 + 40LL))(v4, 13);
+    CHitBox::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CHitBox.m_pOuterTypeScope = v4;
+    CHitBox::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CHitBox[11].m_pType = v5;
+    CHitBox::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult = &CHitBox::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CHitBox;
+    (*(*v4 + 264LL))(
+      v4,
+      &CHitBox::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CHitBox);
+    return CHitBox::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult;
+  }
+  return result;
+}
+
+
+// CHitBox::Schema_VerifyBindingIsRegistered  (line 606, @0x00000000031726e0, libserver.so)
+void __cdecl CHitBox::Schema_VerifyBindingIsRegistered()
+{
+  ;
+}
+
+
+// CHitBox::KV3TransferSave  (line 614, @0x0000000003172960, libserver.so)
+// calls: CHitBox::KV3TransferSave_CHitBox
+void __fastcall CHitBox::KV3TransferSave(const CHitBox *const this, CKV3TransferSaveContext *pContext)
+{
+  CHitBox::KV3TransferSave_CHitBox(this, pContext);
+}
+
+
+// CHitBox::KV3TransferSave_CHitBox  (line 619, @0x00000000031726f0, libserver.so)  // inlines: SaveValue<CUtlString>, SaveValue<Color>, SaveValue<Vector>, SaveValue<bool>, SaveValue<int>, SaveValue<short unsigned int>, SaveValue<unsigned int>, SaveValueDirect<CUtlString>, SaveValueDirect<Color>, SaveValueDirect<Vector>, SaveValueDirect<bool>, SaveValueDirect<int>, SaveValueDirect<short unsigned int>, SaveValueDirect<unsigned int>, SaveValueToMember<CUtlString>, SaveValueToMember<Color>, SaveValueToMember<Vector>, SaveValueToMember<bool>, SaveValueToMember<int>, SaveValueToMember<short unsigned int>, SaveValueToMember<unsigned int>
+// calls: CKV3TransferSaveContext::CreateTargetMember, CUtlString::Get, KeyValues3::SetString, KeyValues3::SetInt64, KeyValues3::SetInt, KeyValues3::SetArrayElementCount, KeyValues3::GetArrayElement, KeyValues3::SetFloat, KeyValues3::SetBool
+// callers: CHitBox::KV3TransferSave, CKV3TransferSaveContext::SaveClassPointer<const CHitBox>
+// strings: "m_sSurfaceProperty", "m_sBoneName", "m_nBoneNameHash", "m_nGroupId", "m_cRenderColor", "m_nHitBoxIndex" (11 total)
+void __fastcall CHitBox::KV3TransferSave_CHitBox(const CHitBox *const this, CKV3TransferSaveContext *pContext)
+{
+  __int64 v2; // r14
+  Color *p_m_cRenderColor; // r15
+  KeyValues3 *TargetMember; // r13
+  const char *v7; // rax
+  KeyValues3 *v8; // r13
+  const char *v9; // rax
+  KeyValues3 *v10; // r13
+  const char *v11; // rax
+  KeyValues3 *v12; // rax
+  KeyValues3 *v13; // rax
+  int v14; // esi
+  int v15; // r13d
+  KeyValues3 *ArrayElement; // rax
+  __int64 v17; // r13
+  KeyValues3 *v18; // rax
+  KeyValues3 *v19; // r14
+  int v20; // esi
+  KeyValues3 *v21; // rax
+  double v22; // xmm1_8
+  KeyValues3 *v23; // r14
+  int v24; // esi
+  KeyValues3 *v25; // rax
+  double v26; // xmm1_8
+  KeyValues3 *v27; // rax
+  KeyValues3 *v28; // rax
+  KeyValues3 *v29; // rax
+  KeyValues3 *v30; // [rsp+8h] [rbp-38h]
+  double v31; // [rsp+8h] [rbp-38h]
+  double v32; // [rsp+8h] [rbp-38h]
+
+  v2 = 0;
+  p_m_cRenderColor = &this->m_cRenderColor;
+  TargetMember = CKV3TransferSaveContext::CreateTargetMember(pContext, "m_name", -1987399468);
+  v7 = CUtlString::Get(&this->m_name);
+  KeyValues3::SetString(TargetMember, v7);
+  v8 = CKV3TransferSaveContext::CreateTargetMember(pContext, "m_sSurfaceProperty", -1341951889);
+  v9 = CUtlString::Get(&this->m_sSurfaceProperty);
+  KeyValues3::SetString(v8, v9);
+  v10 = CKV3TransferSaveContext::CreateTargetMember(pContext, "m_sBoneName", 342994052);
+  v11 = CUtlString::Get(&this->m_sBoneName);
+  KeyValues3::SetString(v10, v11);
+  v12 = CKV3TransferSaveContext::CreateTargetMember(pContext, "m_nBoneNameHash", 1572382386);
+  KeyValues3::SetInt64(v12, this->m_nBoneNameHash);
+  v13 = CKV3TransferSaveContext::CreateTargetMember(pContext, "m_nGroupId", 1778211779);
+  KeyValues3::SetInt(v13, this->m_nGroupId);
+  v30 = CKV3TransferSaveContext::CreateTargetMember(pContext, "m_cRenderColor", -1054088717);
+  KeyValues3::SetArrayElementCount(v30, 4);
+  do
+  {
+    v14 = v2;
+    v15 = p_m_cRenderColor->_color[v2++];
+    ArrayElement = KeyValues3::GetArrayElement(v30, v14);
+    KeyValues3::SetInt(ArrayElement, v15);
+  }
+  while ( v2 != 4 );
+  v17 = 0;
+  v18 = CKV3TransferSaveContext::CreateTargetMember(pContext, "m_nHitBoxIndex", 1332170643);
+  KeyValues3::SetInt(v18, this->m_nHitBoxIndex);
+  v19 = CKV3TransferSaveContext::CreateTargetMember(pContext, "m_vMinBounds", 1361401364);
+  KeyValues3::SetArrayElementCount(v19, 3);
+  do
+  {
+    v20 = v17;
+    v31 = *(&this->m_vMinBounds.x + v17++);
+    v21 = KeyValues3::GetArrayElement(v19, v20);
+    KeyValues3::SetFloat(v21, v31, v22);
+  }
+  while ( v17 != 3 );
+  LOBYTE(v17) = 0;
+  v23 = CKV3TransferSaveContext::CreateTargetMember(pContext, "m_vMaxBounds", -1650240958);
+  KeyValues3::SetArrayElementCount(v23, 3);
+  do
+  {
+    v24 = v17;
+    v32 = *(&this->m_vMaxBounds.x + v17++);
+    v25 = KeyValues3::GetArrayElement(v23, v24);
+    KeyValues3::SetFloat(v25, v32, v26);
+  }
+  while ( v17 != 3 );
+  v27 = CKV3TransferSaveContext::CreateTargetMember(pContext, "m_bTranslationOnly", -167699790);
+  KeyValues3::SetBool(v27, this->m_bTranslationOnly);
+  v28 = CKV3TransferSaveContext::CreateTargetMember(pContext, "m_bVisible", 514413305);
+  KeyValues3::SetBool(v28, this->m_bVisible);
+  v29 = CKV3TransferSaveContext::CreateTargetMember(pContext, "m_bSelected", 1017495148);
+  KeyValues3::SetBool(v29, this->m_bSelected);
+}
+
+
+// CHitBox::KV3TransferLoad  (line 635, @0x0000000003172ef0, libserver.so)
+// calls: CHitBox::KV3TransferLoad_CHitBox
+void __fastcall CHitBox::KV3TransferLoad(CHitBox *const this, CKV3TransferLoadContext *pContext)
+{
+  CHitBox::KV3TransferLoad_CHitBox(this, pContext);
+}
+
+
+// CHitBox::KV3TransferLoad_CHitBox  (line 640, @0x0000000003172970, libserver.so)  // inlines: FindMember, FindSourceMember, LoadValue<CUtlString>, LoadValue<Color>, LoadValue<bool>, LoadValue<int>, LoadValue<short unsigned int>, LoadValue<unsigned int>, LoadValueDirect<CUtlString>, LoadValueDirect<Color>, LoadValueDirect<Vector>, LoadValueDirect<bool>, LoadValueDirect<int>, LoadValueDirect<short unsigned int>, LoadValueDirect<unsigned int>, LoadValueFromMember<CUtlString>, LoadValueFromMember<Color>, LoadValueFromMember<Vector>, LoadValueFromMember<bool>, LoadValueFromMember<int>, LoadValueFromMember<short unsigned int>, LoadValueFromMember<unsigned int>
+// calls: KeyValues3::FindMember, KeyValues3::GetString, KeyValues3::GetInt64, KeyValues3::GetInt, KeyValues3::GetArrayElementCount, KeyValues3::GetArrayElement, CKV3TransferValHelperAsFloats<Vector, 3, false>::LoadValue<Vector>, KeyValues3::GetBool, KeyValues3::KeyValues3, KeyValues3::~KeyValues3, _Unwind_Resume, __stack_chk_fail
+// callers: CHitBox::KV3TransferLoad, CHitBoxSet::KV3TransferLoad_CHitBoxSet
+// strings: "m_sSurfaceProperty", "m_sBoneName", "m_nBoneNameHash", "m_nGroupId", "m_cRenderColor", "m_nHitBoxIndex" (11 total)
+void __fastcall CHitBox::KV3TransferLoad_CHitBox(CHitBox *const this, CKV3TransferLoadContext *pContext)
+{
+  CUtlString *p_m_name; // rbx
+  KeyValues3 *Member; // rax
+  KeyValues3 *v6; // rax
+  KeyValues3 *v7; // rax
+  KeyValues3 *v8; // rax
+  KeyValues3 *v9; // rax
+  Color *p_m_cRenderColor; // r14
+  KeyValues3 *v11; // rax
+  const KeyValues3 *v12; // rbx
+  int v13; // r15d
+  int v14; // esi
+  const KeyValues3 *ArrayElement; // rax
+  __int64 v16; // rax
+  KeyValues3 *v17; // rax
+  KeyValues3 *v18; // rax
+  Vector *v19; // rdx
+  KeyValues3 *v20; // rax
+  Vector *v21; // rdx
+  KeyValues3 *v22; // rax
+  KeyValues3 *v23; // rax
+  KeyValues3 *v24; // rax
+  Vector *const v25; // rdx
+  Vector *const v26; // rdx
+  int v27; // ebx
+  Color *v28; // r15
+  const KeyValues3 *v29; // rax
+  __int64 v30; // rax
+  Color *v31; // [rsp+0h] [rbp-60h]
+  int ArrayElementCount; // [rsp+Ch] [rbp-54h]
+  int v33; // [rsp+Ch] [rbp-54h]
+  KeyValues3 v34; // [rsp+10h] [rbp-50h] BYREF
+  unsigned __int64 v35; // [rsp+28h] [rbp-38h]
+
+  p_m_name = &this->m_name;
+  v35 = __readfsqword(0x28u);
+  Member = KeyValues3::FindMember(pContext->m_pSourceObject, "m_name", -1987399468);
+  if ( Member != 0 )
+  {
+    KeyValues3::GetString(Member, p_m_name);
+  }
+  else
+  {
+    KeyValues3::KeyValues3(&v34);
+    KeyValues3::GetString(&v34, p_m_name);
+    KeyValues3::~KeyValues3(&v34);
+  }
+  v6 = KeyValues3::FindMember(pContext->m_pSourceObject, "m_sSurfaceProperty", -1341951889);
+  if ( v6 != 0 )
+  {
+    KeyValues3::GetString(v6, &this->m_sSurfaceProperty);
+  }
+  else
+  {
+    KeyValues3::KeyValues3(&v34);
+    KeyValues3::GetString(&v34, &this->m_sSurfaceProperty);
+    KeyValues3::~KeyValues3(&v34);
+  }
+  v7 = KeyValues3::FindMember(pContext->m_pSourceObject, "m_sBoneName", 342994052);
+  if ( v7 != 0 )
+  {
+    KeyValues3::GetString(v7, &this->m_sBoneName);
+  }
+  else
+  {
+    KeyValues3::KeyValues3(&v34);
+    KeyValues3::GetString(&v34, &this->m_sBoneName);
+    KeyValues3::~KeyValues3(&v34);
+  }
+  v8 = KeyValues3::FindMember(pContext->m_pSourceObject, "m_nBoneNameHash", 1572382386);
+  if ( v8 != 0 )
+  {
+    this->m_nBoneNameHash = KeyValues3::GetInt64(v8);
+  }
+  else
+  {
+    KeyValues3::KeyValues3(&v34);
+    this->m_nBoneNameHash = KeyValues3::GetInt64(&v34);
+    KeyValues3::~KeyValues3(&v34);
+  }
+  v9 = KeyValues3::FindMember(pContext->m_pSourceObject, "m_nGroupId", 1778211779);
+  if ( v9 != 0 )
+  {
+    this->m_nGroupId = KeyValues3::GetInt(v9);
+  }
+  else
+  {
+    KeyValues3::KeyValues3(&v34);
+    this->m_nGroupId = KeyValues3::GetInt(&v34);
+    KeyValues3::~KeyValues3(&v34);
+  }
+  p_m_cRenderColor = &this->m_cRenderColor;
+  v31 = &this->m_cRenderColor;
+  v11 = KeyValues3::FindMember(pContext->m_pSourceObject, "m_cRenderColor", -1054088717);
+  v12 = v11;
+  if ( v11 != 0 )
+  {
+    v13 = 0;
+    ArrayElementCount = KeyValues3::GetArrayElementCount(v11);
+    if ( ArrayElementCount <= 0 )
+      goto LABEL_17;
+    do
+    {
+      v14 = v13++;
+      ArrayElement = KeyValues3::GetArrayElement(v12, v14);
+      p_m_cRenderColor = (p_m_cRenderColor + 1);
+      p_m_cRenderColor[-1]._color[3] = KeyValues3::GetInt(ArrayElement);
+    }
+    while ( ArrayElementCount > v13 && v13 <= 3 );
+    if ( v13 <= 3 )
+    {
+LABEL_17:
+      v16 = 0;
+      do
+        v31->_color[v13 + v16++] = 0;
+      while ( v13 + v16 <= 3 );
+    }
+  }
+  else
+  {
+    KeyValues3::KeyValues3(&v34);
+    v27 = 0;
+    v33 = KeyValues3::GetArrayElementCount(&v34);
+    v28 = &this->m_cRenderColor;
+    if ( v33 <= 0 )
+      goto LABEL_43;
+    do
+    {
+      v29 = KeyValues3::GetArrayElement(&v34, v27++);
+      v28->_color[0] = KeyValues3::GetInt(v29);
+      v28 = (v28 + 1);
+    }
+    while ( v33 > v27 && v27 <= 3 );
+    if ( v27 <= 3 )
+    {
+LABEL_43:
+      v30 = 0;
+      do
+        v31->_color[v27 + v30++] = 0;
+      while ( v27 + v30 <= 3 );
+    }
+    KeyValues3::~KeyValues3(&v34);
+  }
+  v17 = KeyValues3::FindMember(pContext->m_pSourceObject, "m_nHitBoxIndex", 1332170643);
+  if ( v17 != 0 )
+  {
+    this->m_nHitBoxIndex = KeyValues3::GetInt(v17);
+  }
+  else
+  {
+    KeyValues3::KeyValues3(&v34);
+    this->m_nHitBoxIndex = KeyValues3::GetInt(&v34);
+    KeyValues3::~KeyValues3(&v34);
+  }
+  v18 = KeyValues3::FindMember(pContext->m_pSourceObject, "m_vMinBounds", 1361401364);
+  if ( v18 != 0 )
+  {
+    CKV3TransferValHelperAsFloats<Vector,3,false>::LoadValue<Vector>(v18, &this->m_vMinBounds, v19);
+  }
+  else
+  {
+    KeyValues3::KeyValues3(&v34);
+    CKV3TransferValHelperAsFloats<Vector,3,false>::LoadValue<Vector>(&v34, &this->m_vMinBounds, v26);
+    KeyValues3::~KeyValues3(&v34);
+  }
+  v20 = KeyValues3::FindMember(pContext->m_pSourceObject, "m_vMaxBounds", -1650240958);
+  if ( v20 != 0 )
+  {
+    CKV3TransferValHelperAsFloats<Vector,3,false>::LoadValue<Vector>(v20, &this->m_vMaxBounds, v21);
+  }
+  else
+  {
+    KeyValues3::KeyValues3(&v34);
+    CKV3TransferValHelperAsFloats<Vector,3,false>::LoadValue<Vector>(&v34, &this->m_vMaxBounds, v25);
+    KeyValues3::~KeyValues3(&v34);
+  }
+  v22 = KeyValues3::FindMember(pContext->m_pSourceObject, "m_bTranslationOnly", -167699790);
+  if ( v22 != 0 )
+  {
+    this->m_bTranslationOnly = KeyValues3::GetBool(v22);
+  }
+  else
+  {
+    KeyValues3::KeyValues3(&v34);
+    this->m_bTranslationOnly = KeyValues3::GetBool(&v34);
+    KeyValues3::~KeyValues3(&v34);
+  }
+  v23 = KeyValues3::FindMember(pContext->m_pSourceObject, "m_bVisible", 514413305);
+  if ( v23 != 0 )
+  {
+    this->m_bVisible = KeyValues3::GetBool(v23);
+  }
+  else
+  {
+    KeyValues3::KeyValues3(&v34);
+    this->m_bVisible = KeyValues3::GetBool(&v34);
+    KeyValues3::~KeyValues3(&v34);
+  }
+  v24 = KeyValues3::FindMember(pContext->m_pSourceObject, "m_bSelected", 1017495148);
+  if ( v24 != 0 )
+  {
+    this->m_bSelected = KeyValues3::GetBool(v24);
+  }
+  else
+  {
+    KeyValues3::KeyValues3(&v34);
+    this->m_bSelected = KeyValues3::GetBool(&v34);
+    KeyValues3::~KeyValues3(&v34);
+  }
+}
+
+
+// CHitBoxSet::Schema_CompileTimeVerificationFunction  (line 662, @0x0000000003172f00, libserver.so)
+void __fastcall CHitBoxSet::Schema_CompileTimeVerificationFunction(CHitBoxSet *const this)
+{
+  ;
+}
+
+
+// CHitBoxSet::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE  (line 669, @0x0000000003172f10, libserver.so)  // inlines: Get, SchemaBinding_SchemaTypeOfMemberVarByAddr<CHitBoxSet, CUtlString>, SchemaBinding_SchemaTypeOfMemberVarByAddr<CHitBoxSet, CUtlVector<CHitBox> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<CHitBoxSet, unsigned int>, SetTypeScope
+// callers: CSchemaClassBinding<CHitBoxSet>::Register
+// strings: "CUtlString", "CHitBox", "CUtlVector"
+// globals: CHitBoxSet::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitialized, CSchemaManipulator<CUtlString>::StaticAccessor(void)::m, CAtomicManipulator<CUtlString>::Get(void)::val, CSchemaManipulator<CUtlVector<CHitBox,CUtlMemory<CHitBox,int>>>::StaticAccessor(void)::m, CAtomicManipulator<CUtlVector<CHitBox,CUtlMemory<CHitBox,int>>>::Get(void)::val, CHitBoxSet::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_Cla
+CSchemaClassInfo *__fastcall CHitBoxSet::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        const char *pProjectName)
+{
+  CSchemaClassInfo *result; // rax
+  ISchemaSystemTypeScope *v4; // rbx
+  __int64 (__fastcall *v5)(ISchemaSystemTypeScope *, const char *, __int64, __int64 (__fastcall ***)(), __int64 (__fastcall ***)(), __int64); // r12
+  __int64 v6; // rax
+  CSchemaType *v7; // rax
+
+  result = CHitBoxSet::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult;
+  if ( CHitBoxSet::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult == 0 )
+  {
+    v4 = (*(*pSchemaSystem + 112LL))(pSchemaSystem, 0, pBinaryName);
+    CHitBoxSet::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CHitBoxSet[0].m_pType = (*(*v4 + 56LL))(v4, "CUtlString", 3003, CAtomicManipulator<CUtlString>::Get(void)::val, CSchemaManipulator<CUtlString>::StaticAccessor(void)::m);
+    CHitBoxSet::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CHitBoxSet[1].m_pType = (*(*v4 + 40LL))(v4, 8);
+    v5 = *(*v4 + 64LL);
+    v6 = (*(*v4 + 88LL))(v4, "CHitBox");
+    CHitBoxSet::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CHitBoxSet[2].m_pType = v5(v4, "CUtlVector", 3002, &CAtomicManipulator<CUtlVector<CHitBox,CUtlMemory<CHitBox,int>>>::Get(void)::val, CSchemaManipulator<CUtlVector<CHitBox,CUtlMemory<CHitBox,int>>>::StaticAccessor(void)::m, v6);
+    v7 = (*(*v4 + 56LL))(
+           v4,
+           "CUtlString",
+           3003,
+           CAtomicManipulator<CUtlString>::Get(void)::val,
+           CSchemaManipulator<CUtlString>::StaticAccessor(void)::m);
+    CHitBoxSet::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CHitBoxSet.m_pOuterTypeScope = v4;
+    CHitBoxSet::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CHitBoxSet[3].m_pType = v7;
+    CHitBoxSet::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult = &CHitBoxSet::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CHitBoxSet;
+    (*(*v4 + 264LL))(
+      v4,
+      &CHitBoxSet::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CHitBoxSet);
+    return CHitBoxSet::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult;
+  }
+  return result;
+}
+
+
+// CHitBoxSet::Schema_VerifyBindingIsRegistered  (line 687, @0x0000000003173010, libserver.so)
+void __cdecl CHitBoxSet::Schema_VerifyBindingIsRegistered()
+{
+  ;
+}
+
+
+// CHitBoxSet::KV3TransferSave  (line 695, @0x0000000003174530, libserver.so)
+// calls: CHitBoxSet::KV3TransferSave_CHitBoxSet
+// callers: CKV3TransferSaveContext::SaveClassPointer<const CHitBoxSet>
+void __fastcall CHitBoxSet::KV3TransferSave(const CHitBoxSet *const this, CKV3TransferSaveContext *pContext)
+{
+  CHitBoxSet::KV3TransferSave_CHitBoxSet(this, pContext);
+}
+
+
+// CHitBoxSet::KV3TransferSave_CHitBoxSet  (line 700, @0x0000000003174310, libserver.so)  // inlines: CreateTargetMember, SaveValue<CHitBox>, SaveValue<CUtlString>, SaveValue<CUtlVector<CHitBox> >, SaveValue<unsigned int>, SaveValueDirect<CHitBox>, SaveValueDirect<CUtlString>, SaveValueDirect<CUtlVector<CHitBox> >, SaveValueDirect<unsigned int>, SaveValueToMember<CUtlString>, SaveValueToMember<CUtlVector<CHitBox> >, SaveValueToMember<unsigned int>, operator[]
+// calls: KeyValues3::FindMember, CKV3TransferContextBase::NoteFailure, CUtlString::Get, KeyValues3::SetString, KeyValues3::SetInt64, KeyValues3::SetArrayElementCount, KeyValues3::GetArrayElement, CKV3TransferSaveContext::SaveClassPointer<const CHitBox>, KeyValues3::SetMemberToNull
+// callers: CHitBoxSet::KV3TransferSave
+// strings: "Double-save to Member '%s'", "m_nNameHash", "m_HitBoxes", "m_SourceFilename"
+void __fastcall CHitBoxSet::KV3TransferSave_CHitBoxSet(const CHitBoxSet *const this, CKV3TransferSaveContext *pContext)
+{
+  KeyValues3 *Member; // rbx
+  const char *v5; // rax
+  KeyValues3 *v6; // rbx
+  KeyValues3 *v7; // rdi
+  KeyValues3 *v8; // r15
+  int m_Size; // r14d
+  __int64 v10; // rbx
+  int v11; // r15d
+  int v12; // esi
+  KeyValues3 *ArrayElement; // rax
+  const CHitBox *v14; // rdx
+  CUtlString *p_m_SourceFilename; // r13
+  KeyValues3 *v16; // rbx
+  const char *v17; // rax
+  KeyValues3 *v18; // [rsp+8h] [rbp-48h]
+  const CHitBox *v19; // [rsp+18h] [rbp-38h] BYREF
+
+  Member = KeyValues3::FindMember(pContext->m_pTargetObject, "m_name", -1987399468);
+  if ( Member != 0 )
+    CKV3TransferContextBase::NoteFailure(pContext, "Double-save to Member '%s'", "m_name");
+  else
+    Member = KeyValues3::SetMemberToNull(pContext->m_pTargetObject, "m_name", -1987399468);
+  v5 = CUtlString::Get(&this->m_name);
+  KeyValues3::SetString(Member, v5);
+  v6 = KeyValues3::FindMember(pContext->m_pTargetObject, "m_nNameHash", 1234625185);
+  if ( v6 != 0 )
+  {
+    CKV3TransferContextBase::NoteFailure(pContext, "Double-save to Member '%s'", "m_nNameHash");
+    v7 = v6;
+  }
+  else
+  {
+    v7 = KeyValues3::SetMemberToNull(pContext->m_pTargetObject, "m_nNameHash", 1234625185);
+  }
+  KeyValues3::SetInt64(v7, this->m_nNameHash);
+  v8 = KeyValues3::FindMember(pContext->m_pTargetObject, "m_HitBoxes", -2047818648);
+  if ( v8 != 0 )
+  {
+    CKV3TransferContextBase::NoteFailure(pContext, "Double-save to Member '%s'", "m_HitBoxes");
+    v18 = v8;
+  }
+  else
+  {
+    v18 = KeyValues3::SetMemberToNull(pContext->m_pTargetObject, "m_HitBoxes", -2047818648);
+  }
+  m_Size = this->m_HitBoxes.m_Size;
+  KeyValues3::SetArrayElementCount(v18, m_Size);
+  if ( m_Size > 0 )
+  {
+    v10 = 0;
+    v11 = 0;
+    do
+    {
+      v12 = v11++;
+      ArrayElement = KeyValues3::GetArrayElement(v18, v12);
+      v14 = &this->m_HitBoxes.m_Memory.m_pMemory[v10++];
+      v19 = v14;
+      CKV3TransferSaveContext::SaveClassPointer<CHitBox const>(pContext, &v19, ArrayElement);
+    }
+    while ( v11 != m_Size );
+  }
+  p_m_SourceFilename = &this->m_SourceFilename;
+  v16 = KeyValues3::FindMember(pContext->m_pTargetObject, "m_SourceFilename", 909742081);
+  if ( v16 != 0 )
+    CKV3TransferContextBase::NoteFailure(pContext, "Double-save to Member '%s'", "m_SourceFilename");
+  else
+    v16 = KeyValues3::SetMemberToNull(pContext->m_pTargetObject, "m_SourceFilename", 909742081);
+  v17 = CUtlString::Get(p_m_SourceFilename);
+  KeyValues3::SetString(v16, v17);
+}
+
+
+// CHitBoxSet::KV3TransferLoad  (line 708, @0x0000000003174fe0, libserver.so)
+// calls: CHitBoxSet::KV3TransferLoad_CHitBoxSet
+// callers: LoadUtlDict<CHitBoxSet>
+void __fastcall CHitBoxSet::KV3TransferLoad(CHitBoxSet *const this, CKV3TransferLoadContext *pContext)
+{
+  CHitBoxSet::KV3TransferLoad_CHitBoxSet(this, pContext);
+}
+
+
+// CHitBoxSet::KV3TransferLoad_CHitBoxSet  (line 713, @0x0000000003174dd0, libserver.so)  // inlines: FindMember, FindSourceMember, KV3TransferLoad, LoadClassInstance<CHitBox>, LoadValue<CHitBox>, LoadValue<CUtlVector<CHitBox> >, LoadValue<unsigned int>, LoadValueDirect<CHitBox>, LoadValueDirect<CUtlVector<CHitBox> >, LoadValueDirect<unsigned int>, LoadValueFromMember<CUtlVector<CHitBox> >, LoadValueFromMember<unsigned int>, operator[]
+// calls: CKV3TransferLoadContext::LoadValueFromMember<CUtlString>, KeyValues3::FindMember, KeyValues3::GetInt64, KeyValues3::GetArrayElementCount, CUtlVectorBase<CHitBox, CUtlMemory<CHitBox, int> >::SetCount, KeyValues3::GetArrayElement, CKV3TransferLoadContext::PushSource, CHitBox::KV3TransferLoad_CHitBox, CKV3TransferLoadContext::PopSource, KeyValues3::KeyValues3, KeyValues3::~KeyValues3, _Unwind_Resume (13 total)
+// callers: CHitBoxSet::KV3TransferLoad, CHitBoxSetList::KV3TransferLoad_CHitBoxSetList
+// strings: "m_nNameHash", "m_HitBoxes", "m_SourceFilename"
+void __fastcall CHitBoxSet::KV3TransferLoad_CHitBoxSet(CHitBoxSet *const this, CKV3TransferLoadContext *pContext)
+{
+  KeyValues3 *Member; // rax
+  KeyValues3 *v5; // rax
+  __int64 v6; // r12
+  int v7; // r15d
+  int v8; // esi
+  __int64 v9; // r13
+  const KeyValues3 *ArrayElement; // rax
+  CHitBox *v11; // r13
+  __int64 v12; // r13
+  int v13; // r12d
+  const KeyValues3 *v14; // rax
+  CHitBox *v15; // r15
+  int ArrayElementCount; // [rsp+4h] [rbp-5Ch]
+  int v17; // [rsp+4h] [rbp-5Ch]
+  KeyValues3 *v18; // [rsp+8h] [rbp-58h]
+  KeyValues3 v19; // [rsp+10h] [rbp-50h] BYREF
+  unsigned __int64 v20; // [rsp+28h] [rbp-38h]
+
+  v20 = __readfsqword(0x28u);
+  CKV3TransferLoadContext::LoadValueFromMember<CUtlString>(pContext, "m_name", -1987399468, &this->m_name);
+  Member = KeyValues3::FindMember(pContext->m_pSourceObject, "m_nNameHash", 1234625185);
+  if ( Member != 0 )
+  {
+    this->m_nNameHash = KeyValues3::GetInt64(Member);
+  }
+  else
+  {
+    KeyValues3::KeyValues3(&v19);
+    this->m_nNameHash = KeyValues3::GetInt64(&v19);
+    KeyValues3::~KeyValues3(&v19);
+  }
+  v5 = KeyValues3::FindMember(pContext->m_pSourceObject, "m_HitBoxes", -2047818648);
+  v18 = v5;
+  if ( v5 != 0 )
+  {
+    ArrayElementCount = KeyValues3::GetArrayElementCount(v5);
+    CUtlVectorBase<CHitBox,CUtlMemory<CHitBox,int>>::SetCount(&this->m_HitBoxes, ArrayElementCount);
+    if ( ArrayElementCount > 0 )
+    {
+      v6 = 0;
+      v7 = 0;
+      do
+      {
+        v8 = v7;
+        v9 = v6;
+        ++v7;
+        v6 += 120;
+        ArrayElement = KeyValues3::GetArrayElement(v18, v8);
+        v11 = (this->m_HitBoxes.m_Memory.m_pMemory + v9);
+        CKV3TransferLoadContext::PushSource(pContext, ArrayElement);
+        CHitBox::KV3TransferLoad_CHitBox(v11, pContext);
+        CKV3TransferLoadContext::PopSource(pContext);
+      }
+      while ( v7 != ArrayElementCount );
+    }
+  }
+  else
+  {
+    KeyValues3::KeyValues3(&v19);
+    v17 = KeyValues3::GetArrayElementCount(&v19);
+    CUtlVectorBase<CHitBox,CUtlMemory<CHitBox,int>>::SetCount(&this->m_HitBoxes, v17);
+    v12 = 0;
+    v13 = 0;
+    if ( v17 > 0 )
+    {
+      do
+      {
+        v14 = KeyValues3::GetArrayElement(&v19, v13);
+        v15 = &this->m_HitBoxes.m_Memory.m_pMemory[v12];
+        CKV3TransferLoadContext::PushSource(pContext, v14);
+        CHitBox::KV3TransferLoad_CHitBox(v15, pContext);
+        CKV3TransferLoadContext::PopSource(pContext);
+        ++v13;
+        ++v12;
+      }
+      while ( v13 != v17 );
+    }
+    KeyValues3::~KeyValues3(&v19);
+  }
+  CKV3TransferLoadContext::LoadValueFromMember<CUtlString>(
+    pContext,
+    "m_SourceFilename",
+    909742081,
+    &this->m_SourceFilename);
+}
+
+
+// CHitBoxSetList::Schema_CompileTimeVerificationFunction  (line 727, @0x0000000003173020, libserver.so)
+void __fastcall CHitBoxSetList::Schema_CompileTimeVerificationFunction(CHitBoxSetList *const this)
+{
+  ;
+}
+
+
+// CHitBoxSetList::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE  (line 731, @0x0000000003173030, libserver.so)  // inlines: Get, SchemaBinding_SchemaTypeOfMemberVarByAddr<CHitBoxSetList, CUtlVector<CHitBoxSet> >, SetTypeScope
+// callers: CSchemaClassBinding<CHitBoxSetList>::Register
+// strings: "CHitBoxSet", "CUtlVector"
+// globals: CHitBoxSetList::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitial, CSchemaManipulator<CUtlVector<CHitBoxSet,CUtlMemory<CHitBoxSet,int>>>::StaticAccessor(void)::m, CAtomicManipulator<CUtlVector<CHitBoxSet,CUtlMemory<CHitBoxSet,int>>>::Get(void)::val, CHitBoxSetList::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema
+CSchemaClassInfo *__fastcall CHitBoxSetList::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        const char *pProjectName)
+{
+  CSchemaClassInfo *result; // rax
+  ISchemaSystemTypeScope *v4; // rbx
+  __int64 (__fastcall *v5)(ISchemaSystemTypeScope *, const char *, __int64, __int64 (__fastcall ***)(), __int64 (__fastcall ***)(), __int64); // r12
+  __int64 v6; // rax
+  CSchemaType *v7; // rax
+
+  result = CHitBoxSetList::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult;
+  if ( CHitBoxSetList::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult == 0 )
+  {
+    v4 = (*(*pSchemaSystem + 112LL))(pSchemaSystem, 0, pBinaryName);
+    v5 = *(*v4 + 64LL);
+    v6 = (*(*v4 + 88LL))(v4, "CHitBoxSet");
+    v7 = v5(
+           v4,
+           "CUtlVector",
+           3002,
+           &CAtomicManipulator<CUtlVector<CHitBoxSet,CUtlMemory<CHitBoxSet,int>>>::Get(void)::val,
+           CSchemaManipulator<CUtlVector<CHitBoxSet,CUtlMemory<CHitBoxSet,int>>>::StaticAccessor(void)::m,
+           v6);
+    CHitBoxSetList::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CHitBoxSetList.m_pOuterTypeScope = v4;
+    CHitBoxSetList::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CHitBoxSetList[0].m_pType = v7;
+    CHitBoxSetList::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult = &CHitBoxSetList::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CHitBoxSetList;
+    (*(*v4 + 264LL))(
+      v4,
+      &CHitBoxSetList::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CHitBoxSetList);
+    return CHitBoxSetList::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult;
+  }
+  return result;
+}
+
+
+// CHitBoxSetList::Schema_VerifyBindingIsRegistered  (line 743, @0x00000000031730d0, libserver.so)
+void __cdecl CHitBoxSetList::Schema_VerifyBindingIsRegistered()
+{
+  ;
+}
+
+
+// CHitBoxSetList::KV3TransferSave  (line 751, @0x0000000003174620, libserver.so)
+// calls: CHitBoxSetList::KV3TransferSave_CHitBoxSetList
+void __fastcall CHitBoxSetList::KV3TransferSave(const CHitBoxSetList *const this, CKV3TransferSaveContext *pContext)
+{
+  CHitBoxSetList::KV3TransferSave_CHitBoxSetList(this, pContext);
+}
+
+
+// CHitBoxSetList::KV3TransferSave_CHitBoxSetList  (line 756, @0x0000000003174540, libserver.so)  // inlines: CreateTargetMember, SaveValue<CHitBoxSet>, SaveValue<CUtlVector<CHitBoxSet> >, SaveValueDirect<CHitBoxSet>, SaveValueDirect<CUtlVector<CHitBoxSet> >, SaveValueToMember<CUtlVector<CHitBoxSet> >, operator[]
+// calls: KeyValues3::FindMember, CKV3TransferContextBase::NoteFailure, KeyValues3::SetArrayElementCount, KeyValues3::GetArrayElement, CKV3TransferSaveContext::SaveClassPointer<const CHitBoxSet>, KeyValues3::SetMemberToNull
+// callers: CHitBoxSetList::KV3TransferSave
+// strings: "m_HitBoxSets", "Double-save to Member '%s'"
+void __fastcall CHitBoxSetList::KV3TransferSave_CHitBoxSetList(
+        const CHitBoxSetList *const this,
+        CKV3TransferSaveContext *pContext)
+{
+  KeyValues3 *Member; // r15
+  int m_Size; // r12d
+  __int64 v6; // rbx
+  int v7; // r15d
+  int v8; // esi
+  KeyValues3 *ArrayElement; // rax
+  const CHitBoxSet *v10; // rdx
+  KeyValues3 *v11; // [rsp+8h] [rbp-48h]
+  const CHitBoxSet *v12; // [rsp+18h] [rbp-38h] BYREF
+
+  Member = KeyValues3::FindMember(pContext->m_pTargetObject, "m_HitBoxSets", -1597769875);
+  if ( Member != 0 )
+  {
+    CKV3TransferContextBase::NoteFailure(pContext, "Double-save to Member '%s'", "m_HitBoxSets");
+    v11 = Member;
+  }
+  else
+  {
+    v11 = KeyValues3::SetMemberToNull(pContext->m_pTargetObject, "m_HitBoxSets", -1597769875);
+  }
+  m_Size = this->m_HitBoxSets.m_Size;
+  KeyValues3::SetArrayElementCount(v11, this->m_HitBoxSets.m_Size);
+  if ( m_Size > 0 )
+  {
+    v6 = 0;
+    v7 = 0;
+    do
+    {
+      v8 = v7++;
+      ArrayElement = KeyValues3::GetArrayElement(v11, v8);
+      v10 = &this->m_HitBoxSets.m_Memory.m_pMemory[v6++];
+      v12 = v10;
+      CKV3TransferSaveContext::SaveClassPointer<CHitBoxSet const>(pContext, &v12, ArrayElement);
+    }
+    while ( v7 != m_Size );
+  }
+}
+
+
+// CHitBoxSetList::KV3TransferLoad  (line 761, @0x0000000003175170, libserver.so)
+// calls: CHitBoxSetList::KV3TransferLoad_CHitBoxSetList
+void __fastcall CHitBoxSetList::KV3TransferLoad(CHitBoxSetList *const this, CKV3TransferLoadContext *pContext)
+{
+  CHitBoxSetList::KV3TransferLoad_CHitBoxSetList(this, pContext);
+}
+
+
+// CHitBoxSetList::KV3TransferLoad_CHitBoxSetList  (line 766, @0x0000000003174ff0, libserver.so)  // inlines: FindMember, FindSourceMember, KV3TransferLoad, LoadClassInstance<CHitBoxSet>, LoadValue<CHitBoxSet>, LoadValue<CUtlVector<CHitBoxSet> >, LoadValueDirect<CHitBoxSet>, LoadValueDirect<CUtlVector<CHitBoxSet> >, LoadValueFromMember<CUtlVector<CHitBoxSet> >, operator[]
+// calls: KeyValues3::FindMember, KeyValues3::GetArrayElementCount, CUtlVectorBase<CHitBoxSet, CUtlMemory<CHitBoxSet, int> >::SetCount, KeyValues3::GetArrayElement, CKV3TransferLoadContext::PushSource, CHitBoxSet::KV3TransferLoad_CHitBoxSet, CKV3TransferLoadContext::PopSource, KeyValues3::KeyValues3, KeyValues3::~KeyValues3, _Unwind_Resume, __stack_chk_fail
+// callers: CHitBoxSetList::KV3TransferLoad
+// strings: "m_HitBoxSets"
+void __fastcall CHitBoxSetList::KV3TransferLoad_CHitBoxSetList(
+        CHitBoxSetList *const this,
+        CKV3TransferLoadContext *pContext)
+{
+  KeyValues3 *Member; // rax
+  __int64 v5; // r12
+  int v6; // r15d
+  int v7; // esi
+  __int64 v8; // r13
+  const KeyValues3 *ArrayElement; // rax
+  CHitBoxSet *v10; // r13
+  __int64 v11; // r13
+  int v12; // r12d
+  const KeyValues3 *v13; // rax
+  CHitBoxSet *v14; // r15
+  int ArrayElementCount; // [rsp+4h] [rbp-5Ch]
+  int v16; // [rsp+4h] [rbp-5Ch]
+  KeyValues3 *v17; // [rsp+8h] [rbp-58h]
+  KeyValues3 v18; // [rsp+10h] [rbp-50h] BYREF
+  unsigned __int64 v19; // [rsp+28h] [rbp-38h]
+
+  v19 = __readfsqword(0x28u);
+  Member = KeyValues3::FindMember(pContext->m_pSourceObject, "m_HitBoxSets", -1597769875);
+  v17 = Member;
+  if ( Member != 0 )
+  {
+    ArrayElementCount = KeyValues3::GetArrayElementCount(Member);
+    CUtlVectorBase<CHitBoxSet,CUtlMemory<CHitBoxSet,int>>::SetCount(&this->m_HitBoxSets, ArrayElementCount);
+    if ( ArrayElementCount > 0 )
+    {
+      v5 = 0;
+      v6 = 0;
+      do
+      {
+        v7 = v6;
+        v8 = v5;
+        ++v6;
+        v5 += 48;
+        ArrayElement = KeyValues3::GetArrayElement(v17, v7);
+        v10 = (this->m_HitBoxSets.m_Memory.m_pMemory + v8);
+        CKV3TransferLoadContext::PushSource(pContext, ArrayElement);
+        CHitBoxSet::KV3TransferLoad_CHitBoxSet(v10, pContext);
+        CKV3TransferLoadContext::PopSource(pContext);
+      }
+      while ( v6 != ArrayElementCount );
+    }
+  }
+  else
+  {
+    KeyValues3::KeyValues3(&v18);
+    v16 = KeyValues3::GetArrayElementCount(&v18);
+    CUtlVectorBase<CHitBoxSet,CUtlMemory<CHitBoxSet,int>>::SetCount(&this->m_HitBoxSets, v16);
+    v11 = 0;
+    v12 = 0;
+    if ( v16 > 0 )
+    {
+      do
+      {
+        v13 = KeyValues3::GetArrayElement(&v18, v12);
+        v14 = &this->m_HitBoxSets.m_Memory.m_pMemory[v11];
+        CKV3TransferLoadContext::PushSource(pContext, v13);
+        CHitBoxSet::KV3TransferLoad_CHitBoxSet(v14, pContext);
+        CKV3TransferLoadContext::PopSource(pContext);
+        ++v12;
+        ++v11;
+      }
+      while ( v12 != v16 );
+    }
+    KeyValues3::~KeyValues3(&v18);
+  }
+}
+
+
+// CRenderMesh::Schema_CompileTimeVerificationFunction  (line 777, @0x00000000031730e0, libserver.so)
+void __fastcall CRenderMesh::Schema_CompileTimeVerificationFunction(CRenderMesh_0 *const this)
+{
+  ;
+}
+
+
+// CRenderMesh::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE  (line 783, @0x00000000031730f0, libserver.so)  // inlines: Get, SchemaBinding_SchemaTypeOfMemberVarByAddr<CRenderMesh, CRenderSkeleton>, SchemaBinding_SchemaTypeOfMemberVarByAddr<CRenderMesh, CUtlVector<CBaseConstraint*> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<CRenderMesh, CUtlVectorFixedGrowable<CSceneObjectData, 1ul> >, SetTypeScope
+// callers: CSchemaClassBinding<CRenderMesh>::Register
+// strings: "CSceneObjectData", "CUtlVectorFixedGrowable", "CBaseConstraint", "CUtlVector", "CRenderSkeleton"
+// globals: CRenderMesh::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitialize, CSchemaManipulator<CUtlVectorFixedGrowable<CSceneObjectData,1ul>>::StaticAccessor(void)::m, CAtomicManipulator<CUtlVectorFixedGrowable<CSceneObjectData,1ul>>::Get(void)::val, CSchemaManipulator<CUtlVector<CBaseConstraint *,CUtlMemory<CBaseConstraint *,int>>>::StaticAccessor(void)::m, CAtomicManipulator<CUtlVector<CBaseConstraint *,CUtlMemory<CBaseConstraint *,int>>>::Get(void)::val, CRenderMesh::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_Cl
+CSchemaClassInfo *__fastcall CRenderMesh::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        const char *pProjectName)
+{
+  CSchemaClassInfo *result; // rax
+  ISchemaSystemTypeScope *v4; // rbx
+  __int64 (__fastcall *v5)(ISchemaSystemTypeScope *, const char *, __int64, __int64 (__fastcall ***)(), __int64 (__fastcall ***)(), __int64); // r12
+  __int64 v6; // rax
+  __int64 (__fastcall *v7)(ISchemaSystemTypeScope *, __int64); // r13
+  __int64 (__fastcall *v8)(ISchemaSystemTypeScope *, const char *, __int64, __int64 (__fastcall ***)(), __int64 (__fastcall ***)(), __int64); // r12
+  __int64 v9; // rax
+  __int64 v10; // rax
+  CSchemaType *v11; // rax
+
+  result = CRenderMesh::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult;
+  if ( CRenderMesh::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult == 0 )
+  {
+    v4 = (*(*pSchemaSystem + 112LL))(pSchemaSystem, 0, pBinaryName);
+    v5 = *(*v4 + 64LL);
+    v6 = (*(*v4 + 88LL))(v4, "CSceneObjectData");
+    CRenderMesh::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CRenderMesh[0].m_pType = v5(v4, "CUtlVectorFixedGrowable", 3017, &CAtomicManipulator<CUtlVectorFixedGrowable<CSceneObjectData,1ul>>::Get(void)::val, CSchemaManipulator<CUtlVectorFixedGrowable<CSceneObjectData,1ul>>::StaticAccessor(void)::m, v6);
+    v7 = *(*v4 + 48LL);
+    v8 = *(*v4 + 64LL);
+    v9 = (*(*v4 + 88LL))(v4, "CBaseConstraint");
+    v10 = v7(v4, v9);
+    CRenderMesh::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CRenderMesh[1].m_pType = v8(v4, "CUtlVector", 3002, &CAtomicManipulator<CUtlVector<CBaseConstraint *,CUtlMemory<CBaseConstraint *,int>>>::Get(void)::val, CSchemaManipulator<CUtlVector<CBaseConstraint *,CUtlMemory<CBaseConstraint *,int>>>::StaticAccessor(void)::m, v10);
+    v11 = (*(*v4 + 88LL))(v4, "CRenderSkeleton");
+    CRenderMesh::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CRenderMesh.m_pOuterTypeScope = v4;
+    CRenderMesh::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CRenderMesh[2].m_pType = v11;
+    CRenderMesh::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult = &CRenderMesh::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CRenderMesh;
+    (*(*v4 + 264LL))(
+      v4,
+      &CRenderMesh::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CRenderMesh);
+    return CRenderMesh::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult;
+  }
+  return result;
+}
+
+
+// CRenderMesh::Schema_VerifyBindingIsRegistered  (line 810, @0x0000000003173200, libserver.so)
+void __cdecl CRenderMesh::Schema_VerifyBindingIsRegistered()
+{
+  ;
+}
+
+
+// CRenderMesh::KV3TransferSave  (line 818, @0x0000000003174810, libserver.so)
+// calls: CRenderMesh::KV3TransferSave_CRenderMesh
+void __fastcall CRenderMesh::KV3TransferSave(const CRenderMesh_0 *const this, CKV3TransferSaveContext *pContext)
+{
+  CRenderMesh::KV3TransferSave_CRenderMesh(this, pContext);
+}
+
+
+// CRenderMesh::KV3TransferSave_CRenderMesh  (line 823, @0x0000000003174630, libserver.so)  // inlines: CreateTargetMember, SaveValue<CRenderSkeleton>, SaveValue<CSceneObjectData>, SaveValue<CUtlVectorFixedGrowable<CSceneObjectData, 1ul> >, SaveValueDirect<CRenderSkeleton>, SaveValueDirect<CSceneObjectData>, SaveValueDirect<CUtlVector<CBaseConstraint*> >, SaveValueDirect<CUtlVectorFixedGrowable<CSceneObjectData, 1ul> >, SaveValueToMember<CRenderSkeleton>, SaveValueToMember<CUtlVector<CBaseConstraint*> >, SaveValueToMember<CUtlVectorFixedGrowable<CSceneObjectData, 1ul> >, operator[]
+// calls: KeyValues3::FindMember, CKV3TransferContextBase::NoteFailure, KeyValues3::SetArrayElementCount, KeyValues3::GetArrayElement, CKV3TransferSaveContext::SaveClassPointer<const CSceneObjectData>, CKV3TransferValHelper<CUtlVector<CBaseConstraint*, CUtlMemory<CBaseConstraint*, int> > >::SaveValue<CUtlVector<CBaseConstraint*> >, CKV3TransferSaveContext::SaveClassPointer<const CRenderSkeleton>, CRenderMesh::TransferPostSaveFn, KeyValues3::SetMemberToNull
+// callers: CRenderMesh::KV3TransferSave
+// strings: "m_sceneObjects", "Double-save to Member '%s'", "m_constraints", "m_skeleton"
+void __fastcall CRenderMesh::KV3TransferSave_CRenderMesh(
+        const CRenderMesh_0 *const this,
+        CKV3TransferSaveContext *pContext)
+{
+  KeyValues3 *Member; // r15
+  int m_Size; // r14d
+  __int64 v6; // rbx
+  int v7; // r15d
+  int v8; // esi
+  KeyValues3 *ArrayElement; // rax
+  const CRenderSkeleton *v10; // rdx
+  KeyValues3 *v11; // rbx
+  KeyValues3 *v12; // rsi
+  KeyValues3 *v13; // rbx
+  KeyValues3 *v14; // rdx
+  KeyValues3 *v15; // [rsp+8h] [rbp-48h]
+  const CRenderSkeleton *v16[7]; // [rsp+18h] [rbp-38h] BYREF
+
+  Member = KeyValues3::FindMember(pContext->m_pTargetObject, "m_sceneObjects", 2066973827);
+  if ( Member != 0 )
+  {
+    CKV3TransferContextBase::NoteFailure(pContext, "Double-save to Member '%s'", "m_sceneObjects");
+    v15 = Member;
+  }
+  else
+  {
+    v15 = KeyValues3::SetMemberToNull(pContext->m_pTargetObject, "m_sceneObjects", 2066973827);
+  }
+  m_Size = this->m_sceneObjects.m_Size;
+  KeyValues3::SetArrayElementCount(v15, this->m_sceneObjects.m_Size);
+  if ( m_Size > 0 )
+  {
+    v6 = 0;
+    v7 = 0;
+    do
+    {
+      v8 = v7++;
+      ArrayElement = KeyValues3::GetArrayElement(v15, v8);
+      v10 = &this->m_sceneObjects.m_Memory.m_pMemory[v6++];
+      v16[0] = v10;
+      CKV3TransferSaveContext::SaveClassPointer<CSceneObjectData const>(pContext, v16, ArrayElement);
+    }
+    while ( v7 != m_Size );
+  }
+  v11 = KeyValues3::FindMember(pContext->m_pTargetObject, "m_constraints", 416546364);
+  if ( v11 != 0 )
+  {
+    CKV3TransferContextBase::NoteFailure(pContext, "Double-save to Member '%s'", "m_constraints");
+    v12 = v11;
+  }
+  else
+  {
+    v12 = KeyValues3::SetMemberToNull(pContext->m_pTargetObject, "m_constraints", 416546364);
+  }
+  CKV3TransferValHelper<CUtlVector<CBaseConstraint *,CUtlMemory<CBaseConstraint *,int>>>::SaveValue<CUtlVector<CBaseConstraint *,CUtlMemory<CBaseConstraint *,int>>>(
+    pContext,
+    v12,
+    &this->m_constraints);
+  v13 = KeyValues3::FindMember(pContext->m_pTargetObject, "m_skeleton", 2072043519);
+  if ( v13 != 0 )
+  {
+    CKV3TransferContextBase::NoteFailure(pContext, "Double-save to Member '%s'", "m_skeleton");
+    v14 = v13;
+  }
+  else
+  {
+    v14 = KeyValues3::SetMemberToNull(pContext->m_pTargetObject, "m_skeleton", 2072043519);
+  }
+  v16[0] = &this->m_skeleton;
+  CKV3TransferSaveContext::SaveClassPointer<CRenderSkeleton const>(pContext, v16, v14);
+  CRenderMesh::TransferPostSaveFn(this, pContext);
+}
+
+
+// CRenderMesh::KV3TransferLoad  (line 831, @0x0000000003175400, libserver.so)
+// calls: CRenderMesh::KV3TransferLoad_CRenderMesh
+void __fastcall CRenderMesh::KV3TransferLoad(CRenderMesh_0 *const this, CKV3TransferLoadContext *pContext)
+{
+  CRenderMesh::KV3TransferLoad_CRenderMesh(this, pContext);
+}
+
+
+// CRenderMesh::KV3TransferLoad_CRenderMesh  (line 836, @0x0000000003175180, libserver.so)  // inlines: FindMember, FindSourceMember, KV3TransferLoad, LoadClassInstance<CRenderSkeleton>, LoadClassInstance<CSceneObjectData>, LoadValue<CRenderSkeleton>, LoadValue<CSceneObjectData>, LoadValue<CUtlVectorFixedGrowable<CSceneObjectData, 1ul> >, LoadValueDirect<CRenderSkeleton>, LoadValueDirect<CSceneObjectData>, LoadValueDirect<CUtlVector<CBaseConstraint*> >, LoadValueDirect<CUtlVectorFixedGrowable<CSceneObjectData, 1ul> >, LoadValueFromMember<CRenderSkeleton>, LoadValueFromMember<CUtlVector<CBaseConstraint*> >, LoadValueFromMember<CUtlVectorFixedGrowable<CSceneObjectData, 1ul> >, operator[]
+// calls: KeyValues3::FindMember, KeyValues3::GetArrayElementCount, CUtlVectorBase<CSceneObjectData, CUtlMemoryFixedGrowable<CSceneObjectData, 1ul, int> >::SetCount, KeyValues3::GetArrayElement, CKV3TransferLoadContext::PushSource, CSceneObjectData::KV3TransferLoad_CSceneObjectData, CKV3TransferLoadContext::PopSource, CKV3TransferValHelper<CUtlVector<CBaseConstraint*, CUtlMemory<CBaseConstraint*, int> > >::LoadValue<CUtlVector<CBaseConstraint*> >, CRenderSkeleton::KV3TransferLoad_CRenderSkeleton, CRenderMesh::TransferPostLoadFn, KeyValues3::KeyValues3, KeyValues3::~KeyValues3 (14 total)
+// callers: CRenderMesh::KV3TransferLoad
+// strings: "m_sceneObjects", "m_constraints", "m_skeleton"
+void __fastcall CRenderMesh::KV3TransferLoad_CRenderMesh(CRenderMesh_0 *const this, CKV3TransferLoadContext *pContext)
+{
+  KeyValues3 *Member; // rax
+  __int64 v5; // r12
+  int v6; // r15d
+  int v7; // esi
+  __int64 v8; // r13
+  const KeyValues3 *ArrayElement; // rax
+  CSceneObjectData *v10; // r13
+  KeyValues3 *v11; // rax
+  KeyValues3 *v12; // rax
+  __int64 v13; // r13
+  int v14; // r12d
+  const KeyValues3 *v15; // rax
+  CSceneObjectData *v16; // r15
+  int ArrayElementCount; // [rsp+4h] [rbp-5Ch]
+  int v18; // [rsp+4h] [rbp-5Ch]
+  KeyValues3 *v19; // [rsp+8h] [rbp-58h]
+  KeyValues3 pSource; // [rsp+10h] [rbp-50h] BYREF
+  unsigned __int64 v21; // [rsp+28h] [rbp-38h]
+
+  v21 = __readfsqword(0x28u);
+  Member = KeyValues3::FindMember(pContext->m_pSourceObject, "m_sceneObjects", 2066973827);
+  v19 = Member;
+  if ( Member != 0 )
+  {
+    ArrayElementCount = KeyValues3::GetArrayElementCount(Member);
+    CUtlVectorBase<CSceneObjectData,CUtlMemoryFixedGrowable<CSceneObjectData,1ul,int>>::SetCount(
+      &this->m_sceneObjects,
+      ArrayElementCount);
+    if ( ArrayElementCount > 0 )
+    {
+      v5 = 0;
+      v6 = 0;
+      do
+      {
+        v7 = v6;
+        v8 = v5;
+        ++v6;
+        v5 += 72;
+        ArrayElement = KeyValues3::GetArrayElement(v19, v7);
+        v10 = (this->m_sceneObjects.m_Memory.m_pMemory + v8);
+        CKV3TransferLoadContext::PushSource(pContext, ArrayElement);
+        CSceneObjectData::KV3TransferLoad_CSceneObjectData(v10, pContext);
+        CKV3TransferLoadContext::PopSource(pContext);
+      }
+      while ( v6 != ArrayElementCount );
+    }
+  }
+  else
+  {
+    KeyValues3::KeyValues3(&pSource);
+    v18 = KeyValues3::GetArrayElementCount(&pSource);
+    CUtlVectorBase<CSceneObjectData,CUtlMemoryFixedGrowable<CSceneObjectData,1ul,int>>::SetCount(
+      &this->m_sceneObjects,
+      v18);
+    v13 = 0;
+    v14 = 0;
+    if ( v18 > 0 )
+    {
+      do
+      {
+        v15 = KeyValues3::GetArrayElement(&pSource, v14);
+        v16 = &this->m_sceneObjects.m_Memory.m_pMemory[v13];
+        CKV3TransferLoadContext::PushSource(pContext, v15);
+        CSceneObjectData::KV3TransferLoad_CSceneObjectData(v16, pContext);
+        CKV3TransferLoadContext::PopSource(pContext);
+        ++v14;
+        ++v13;
+      }
+      while ( v14 != v18 );
+    }
+    KeyValues3::~KeyValues3(&pSource);
+  }
+  v11 = KeyValues3::FindMember(pContext->m_pSourceObject, "m_constraints", 416546364);
+  if ( v11 != 0 )
+  {
+    CKV3TransferValHelper<CUtlVector<CBaseConstraint *,CUtlMemory<CBaseConstraint *,int>>>::LoadValue<CUtlVector<CBaseConstraint *,CUtlMemory<CBaseConstraint *,int>>>(
+      pContext,
+      v11,
+      &this->m_constraints);
+  }
+  else
+  {
+    KeyValues3::KeyValues3(&pSource);
+    CKV3TransferValHelper<CUtlVector<CBaseConstraint *,CUtlMemory<CBaseConstraint *,int>>>::LoadValue<CUtlVector<CBaseConstraint *,CUtlMemory<CBaseConstraint *,int>>>(
+      pContext,
+      &pSource,
+      &this->m_constraints);
+    KeyValues3::~KeyValues3(&pSource);
+  }
+  v12 = KeyValues3::FindMember(pContext->m_pSourceObject, "m_skeleton", 2072043519);
+  if ( v12 != 0 )
+  {
+    CKV3TransferLoadContext::PushSource(pContext, v12);
+    CRenderSkeleton::KV3TransferLoad_CRenderSkeleton(&this->m_skeleton, pContext);
+    CKV3TransferLoadContext::PopSource(pContext);
+  }
+  else
+  {
+    KeyValues3::KeyValues3(&pSource);
+    CKV3TransferLoadContext::PushSource(pContext, &pSource);
+    CRenderSkeleton::KV3TransferLoad_CRenderSkeleton(&this->m_skeleton, pContext);
+    CKV3TransferLoadContext::PopSource(pContext);
+    KeyValues3::~KeyValues3(&pSource);
+  }
+  CRenderMesh::TransferPostLoadFn(this, pContext);
+}
+
+
+// LocalRegisterSchemaModule<ArbitraryTemplateParameter_modellib_rendermesh_h>  (line 850, @0x0000000003173210, libserver.so)  // inlines: Call
+// callers: RegisterSchemaModule_rendermesh_h
+// strings: "modellib"
+// globals: CRenderBufferBinding::s_pSchemaBindingForLocalModule, SkeletonBoneBounds_t::s_pSchemaBindingForLocalModule, RenderSkeletonBone_t::s_pSchemaBindingForLocalModule, CRenderSkeleton::s_pSchemaBindingForLocalModule, CMaterialDrawDescriptor::s_pSchemaBindingForLocalModule, CSceneObjectData::s_pSchemaBindingForLocalModule, CAttachment::s_pSchemaBindingForLocalModule, CHitBox::s_pSchemaBindingForLocalModule (11 total)
+void __fastcall LocalRegisterSchemaModule<ArbitraryTemplateParameter_modellib_rendermesh_h>(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        SchemaRegistrationPhase_t nRegistrationPhase)
+{
+  if ( nRegistrationPhase == SchemaRegistrationPhase_t::SCHEMA_REGISTRATION_PHASE_CLASSES )
+  {
+    (*(CRenderBufferBinding::s_pSchemaBindingForLocalModule->_vptr_ISchemaBinding + 5))(
+      CRenderBufferBinding::s_pSchemaBindingForLocalModule,
+      pSchemaSystem,
+      pBinaryName,
+      "modellib");
+    (*(SkeletonBoneBounds_t::s_pSchemaBindingForLocalModule->_vptr_ISchemaBinding + 5))(
+      SkeletonBoneBounds_t::s_pSchemaBindingForLocalModule,
+      pSchemaSystem,
+      pBinaryName,
+      "modellib");
+    (*(RenderSkeletonBone_t::s_pSchemaBindingForLocalModule->_vptr_ISchemaBinding + 5))(
+      RenderSkeletonBone_t::s_pSchemaBindingForLocalModule,
+      pSchemaSystem,
+      pBinaryName,
+      "modellib");
+    (*(CRenderSkeleton::s_pSchemaBindingForLocalModule->_vptr_ISchemaBinding + 5))(
+      CRenderSkeleton::s_pSchemaBindingForLocalModule,
+      pSchemaSystem,
+      pBinaryName,
+      "modellib");
+    (*(CMaterialDrawDescriptor::s_pSchemaBindingForLocalModule->_vptr_ISchemaBinding + 5))(
+      CMaterialDrawDescriptor::s_pSchemaBindingForLocalModule,
+      pSchemaSystem,
+      pBinaryName,
+      "modellib");
+    (*(CSceneObjectData::s_pSchemaBindingForLocalModule->_vptr_ISchemaBinding + 5))(
+      CSceneObjectData::s_pSchemaBindingForLocalModule,
+      pSchemaSystem,
+      pBinaryName,
+      "modellib");
+    (*(CAttachment::s_pSchemaBindingForLocalModule->_vptr_ISchemaBinding + 5))(
+      CAttachment::s_pSchemaBindingForLocalModule,
+      pSchemaSystem,
+      pBinaryName,
+      "modellib");
+    (*(CHitBox::s_pSchemaBindingForLocalModule->_vptr_ISchemaBinding + 5))(
+      CHitBox::s_pSchemaBindingForLocalModule,
+      pSchemaSystem,
+      pBinaryName,
+      "modellib");
+    (*(CHitBoxSet::s_pSchemaBindingForLocalModule->_vptr_ISchemaBinding + 5))(
+      CHitBoxSet::s_pSchemaBindingForLocalModule,
+      pSchemaSystem,
+      pBinaryName,
+      "modellib");
+    (*(CHitBoxSetList::s_pSchemaBindingForLocalModule->_vptr_ISchemaBinding + 5))(
+      CHitBoxSetList::s_pSchemaBindingForLocalModule,
+      pSchemaSystem,
+      pBinaryName,
+      "modellib");
+    (*(CRenderMesh::s_pSchemaBindingForLocalModule->_vptr_ISchemaBinding + 5))(
+      CRenderMesh::s_pSchemaBindingForLocalModule,
+      pSchemaSystem,
+      pBinaryName,
+      "modellib");
+  }
+  ++g_nLinkerHack_SchemaAnchor_RegistrationCountFor_modellib;
+}
+
+
+// RegisterSchemaModule_rendermesh_h  (line 862, @0x0000000003173360, libserver.so)
+// calls: LocalRegisterSchemaModule<ArbitraryTemplateParameter_modellib_rendermesh_h>
+// callers: CSchemaRegistration_modellib::RegisterAllBindings
+void __fastcall RegisterSchemaModule_rendermesh_h(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        SchemaRegistrationPhase_t nRegistrationPhase)
+{
+  LocalRegisterSchemaModule<ArbitraryTemplateParameter_modellib_rendermesh_h>(
+    pSchemaSystem,
+    pBinaryName,
+    nRegistrationPhase);
+}
+
+

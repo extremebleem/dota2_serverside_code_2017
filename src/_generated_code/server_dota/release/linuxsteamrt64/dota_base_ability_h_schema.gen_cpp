@@ -1,0 +1,4376 @@
+
+// ==== functions (decompiled by Hex-Rays; names/signatures from DWARF) ====
+
+// CDOTABaseAbility::CEntityInstanceEntityClass::Schema_CompileTimeVerificationFunction  (line 35, @0x000000000242a300, libserver.so)
+void __fastcall CDOTABaseAbility::CEntityInstanceEntityClass::Schema_CompileTimeVerificationFunction(
+        CDOTABaseAbility::CEntityInstanceEntityClass *const this)
+{
+  ;
+}
+
+
+// CDOTABaseAbility::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE  (line 38, @0x000000000241fc00, libserver.so)  // inlines: Call, Get, SetTypeScope
+// calls: CBaseEntity::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE
+// callers: CDOTA_Ability_DataDriven::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE, CDOTA_Ability_Lua::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE, CDOTA_Ability_AttributeBonus::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE, CSchemaNonConstructibleClassBinding<CDOTABaseAbility::CEntityInstanceEntityClass>::Register, CDOTABaseAbility::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE, CDOTABaseAbility::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE
+// globals: CDOTABaseAbility::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char c
+CSchemaClassInfo *__fastcall CDOTABaseAbility::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        const char *pProjectName)
+{
+  ISchemaSystemTypeScope *v6; // r14
+  CSchemaClassInfo *v7; // rax
+
+  v6 = (*(*pSchemaSystem + 112LL))(pSchemaSystem, 1, pBinaryName);
+  (*(CBaseEntity::CEntityInstanceEntityClass::s_pSchemaBindingForLocalModule->_vptr_ISchemaBinding + 5))(
+    CBaseEntity::CEntityInstanceEntityClass::s_pSchemaBindingForLocalModule,
+    pSchemaSystem,
+    pBinaryName,
+    pProjectName);
+  v7 = CBaseEntity::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+         pSchemaSystem,
+         pBinaryName,
+         pProjectName);
+  CDOTABaseAbility::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CDOTABaseAbility_CEntityInstanceEntityClass.m_pOuterTypeScope = v6;
+  CDOTABaseAbility::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassBases_CDOTABaseAbility_CEntityInstanceEntityClass[0].m_pClass = v7;
+  CDOTABaseAbility::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult = &CDOTABaseAbility::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CDOTABaseAbility_CEntityInstanceEntityClass;
+  return &CDOTABaseAbility::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CDOTABaseAbility_CEntityInstanceEntityClass;
+}
+
+
+// CDOTABaseAbility::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE  (line 38, @0x000000000242a310, libserver.so)
+// calls: CDOTABaseAbility::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE
+// callers: CDOTA_Ability_Brewmaster_PrimalSplit::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE, CDOTA_Ability_DeathProphet_Exorcism::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE, CDOTA_Ability_Throw_Snowball::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE, CDOTA_Ability_Throw_Coal::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE, CDOTA_Ability_Healing_Campfire::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE, CDOTA_Ability_ShootFirework::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE, CDOTA_Ability_Lesser_NightCrawler_Pounce::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE, CDOTA_Ability_Zombie_Berserk::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE, CDOTA_Ability_Corspselord_Revive::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE, CDOTA_Ability_Slithereen_Riptide::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE, CDOTA_Ability_Creature_Fire_Breath::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE, CDOTA_Item::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE (1046 total)
+// globals: CDOTABaseAbility::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char c
+CSchemaClassInfo *__fastcall CDOTABaseAbility::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        const char *pProjectName)
+{
+  CSchemaClassInfo *result; // rax
+
+  result = CDOTABaseAbility::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult;
+  if ( CDOTABaseAbility::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult == 0 )
+    return CDOTABaseAbility::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+             pSchemaSystem,
+             pBinaryName,
+             pProjectName);
+  return result;
+}
+
+
+// CDOTABaseAbility::CEntityInstanceEntityClass::Schema_VerifyBindingIsRegistered  (line 55, @0x000000000242a330, libserver.so)
+void __cdecl CDOTABaseAbility::CEntityInstanceEntityClass::Schema_VerifyBindingIsRegistered()
+{
+  ;
+}
+
+
+// PerformMetaModifyCDOTABaseAbility  (line 66, @0x000000000242a340, libserver.so)
+// strings: "m_iTeamNum"
+// globals: _ZZ33PerformMetaModifyCDOTABaseAbilityP13ISchemaSystemP16CSchemaClassInfoE13meta_modify_0
+void __fastcall PerformMetaModifyCDOTABaseAbility(ISchemaSystem *pSchemaSystem, CSchemaClassInfo *pClassInfo)
+{
+  (*(*pSchemaSystem + 208LL))(
+    pSchemaSystem,
+    pClassInfo,
+    "m_iTeamNum",
+    PerformMetaModifyCDOTABaseAbility(ISchemaSystem *,CSchemaClassInfo *)::meta_modify_0,
+    1);
+}
+
+
+// CDOTABaseAbility::Schema_CompileTimeVerificationFunction  (line 77, @0x000000000242a370, libserver.so)
+void __fastcall CDOTABaseAbility::Schema_CompileTimeVerificationFunction(CDOTABaseAbility *const this)
+{
+  ;
+}
+
+
+// CDOTABaseAbility::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE  (line 105, @0x000000000242a380, libserver.so)  // inlines: Call, Get, NetworkVarDecl_t, PerformMetaModifyCDOTABaseAbility, RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE, SchemaBinding_SchemaTypeOfMemberVarByAddr<CDOTABaseAbility, CHandle<CBaseEntity> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<CDOTABaseAbility, CNetworkVarBase<bool, CDOTABaseAbility::NetworkVar_m_bActivated> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<CDOTABaseAbility, CNetworkVarBase<bool, CDOTABaseAbility::NetworkVar_m_bAutoCastState> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<CDOTABaseAbility, CNetworkVarBase<bool, CDOTABaseAbility::NetworkVar_m_bFrozenCooldown> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<CDOTABaseAbility, CNetworkVarBase<bool, CDOTABaseAbility::NetworkVar_m_bHidden> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<CDOTABaseAbility, CNetworkVarBase<bool, CDOTABaseAbility::NetworkVar_m_bInAbilityPhase> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<CDOTABaseAbility, CNetworkVarBase<bool, CDOTABaseAbility::NetworkVar_m_bInIndefiniteCooldown> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<CDOTABaseAbility, CNetworkVarBase<bool, CDOTABaseAbility::NetworkVar_m_bStolen> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<CDOTABaseAbility, CNetworkVarBase<bool, CDOTABaseAbility::NetworkVar_m_bToggleState> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<CDOTABaseAbility, CNetworkVarBase<float, CDOTABaseAbility::NetworkVar_m_fCooldown> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<CDOTABaseAbility, CNetworkVarBase<float, CDOTABaseAbility::NetworkVar_m_flChannelStartTime> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<CDOTABaseAbility, CNetworkVarBase<float, CDOTABaseAbility::NetworkVar_m_flCooldownLength> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<CDOTABaseAbility, CNetworkVarBase<float, CDOTABaseAbility::NetworkVar_m_flOverrideCastPoint> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<CDOTABaseAbility, CNetworkVarBase<int, CDOTABaseAbility::NetworkVar_m_iCastRange> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<CDOTABaseAbility, CNetworkVarBase<int, CDOTABaseAbility::NetworkVar_m_iDirtyButtons> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<CDOTABaseAbility, CNetworkVarBase<int, CDOTABaseAbility::NetworkVar_m_iLevel> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<CDOTABaseAbility, CNetworkVarBase<int, CDOTABaseAbility::NetworkVar_m_iManaCost> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<CDOTABaseAbility, CUtlReference<CDOTA_Buff> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<CDOTABaseAbility, bool>, SchemaBinding_SchemaTypeOfMemberVarByAddr<CDOTABaseAbility, int>, SchemaBinding_SchemaTypeOfMemberVarByAddr<CDOTABaseAbility, item_definition_index_t>, SetTypeScope
+// calls: __cxa_guard_acquire, __cxa_guard_release, CBaseEntity::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE, CDOTABaseAbility::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE, __cxa_guard_abort, _Unwind_Resume
+// callers: CDOTA_Ability_DataDriven::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE, CDOTA_Ability_Lua::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE, CSchemaNonConstructibleClassBinding<CDOTABaseAbility>::Register, CDOTA_Ability_AttributeBonus::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE, CDOTA_Ability_Brewmaster_PrimalSplit::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE, CDOTA_Ability_DeathProphet_Exorcism::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE, CDOTA_Ability_Throw_Snowball::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE, CDOTA_Ability_Throw_Coal::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE, CDOTA_Ability_Healing_Campfire::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE, CDOTA_Ability_ShootFirework::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE, CDOTA_Ability_Lesser_NightCrawler_Pounce::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE, CDOTA_Ability_Zombie_Berserk::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE (1049 total)
+// strings: "CBaseEntity", "CHandle", "item_definition_index_t", "m_iTeamNum", "m_bStolen", "m_iCastRange" (20 total)
+// globals: CDOTABaseAbility::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pIniti, `guard variable for'CDOTABaseAbility::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,ch, CSchemaManipulator<CHandle<CBaseEntity>>::StaticAccessor(void)::m, CAtomicManipulator<CHandle<CBaseEntity>>::Get(void)::val, CSchemaManipulator<item_definition_index_t>::StaticAccessor(void)::m, CAtomicManipulator<item_definition_index_t>::Get(void)::val, CDOTABaseAbility::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char c, CDOTABaseAbility::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSche (9 total)
+CSchemaClassInfo *__fastcall CDOTABaseAbility::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        const char *pProjectName)
+{
+  CSchemaClassInfo *result; // rax
+  ISchemaSystemTypeScope *v7; // rbx
+  __int64 (__fastcall *v8)(ISchemaSystemTypeScope *, const char *, __int64, __int64 (__fastcall ***)(), __int64 (__fastcall ***)(), __int64); // r15
+  __int64 v9; // rax
+  CSchemaClassInfo *v10; // rax
+  CSchemaClassInfo *v11; // rax
+
+  result = CDOTABaseAbility::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult;
+  if ( CDOTABaseAbility::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult == 0 )
+  {
+    v7 = (*(*pSchemaSystem + 112LL))(pSchemaSystem, 1, pBinaryName);
+    if ( `guard variable for'CDOTABaseAbility::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTABaseAbility25_MNetworkVarNames_Value == 0
+      && __cxa_guard_acquire(&`guard variable for'CDOTABaseAbility::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTABaseAbility25_MNetworkVarNames_Value) != 0 )
+    {
+      CDOTABaseAbility::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTABaseAbility25_MNetworkVarNames_Value.m_pVarName = "m_bHidden";
+      CDOTABaseAbility::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTABaseAbility25_MNetworkVarNames_Value.m_pVarType = "bool";
+      __cxa_guard_release(&`guard variable for'CDOTABaseAbility::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTABaseAbility25_MNetworkVarNames_Value);
+    }
+    if ( `guard variable for'CDOTABaseAbility::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTABaseAbility26_MNetworkVarNames_Value == 0
+      && __cxa_guard_acquire(&`guard variable for'CDOTABaseAbility::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTABaseAbility26_MNetworkVarNames_Value) != 0 )
+    {
+      CDOTABaseAbility::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTABaseAbility26_MNetworkVarNames_Value.m_pVarName = "m_bActivated";
+      CDOTABaseAbility::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTABaseAbility26_MNetworkVarNames_Value.m_pVarType = "bool";
+      __cxa_guard_release(&`guard variable for'CDOTABaseAbility::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTABaseAbility26_MNetworkVarNames_Value);
+    }
+    if ( `guard variable for'CDOTABaseAbility::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTABaseAbility27_MNetworkVarNames_Value == 0
+      && __cxa_guard_acquire(&`guard variable for'CDOTABaseAbility::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTABaseAbility27_MNetworkVarNames_Value) != 0 )
+    {
+      CDOTABaseAbility::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTABaseAbility27_MNetworkVarNames_Value.m_pVarName = "m_iDirtyButtons";
+      CDOTABaseAbility::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTABaseAbility27_MNetworkVarNames_Value.m_pVarType = "int";
+      __cxa_guard_release(&`guard variable for'CDOTABaseAbility::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTABaseAbility27_MNetworkVarNames_Value);
+    }
+    if ( `guard variable for'CDOTABaseAbility::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTABaseAbility28_MNetworkVarNames_Value == 0
+      && __cxa_guard_acquire(&`guard variable for'CDOTABaseAbility::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTABaseAbility28_MNetworkVarNames_Value) != 0 )
+    {
+      CDOTABaseAbility::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTABaseAbility28_MNetworkVarNames_Value.m_pVarName = "m_iLevel";
+      CDOTABaseAbility::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTABaseAbility28_MNetworkVarNames_Value.m_pVarType = "int";
+      __cxa_guard_release(&`guard variable for'CDOTABaseAbility::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTABaseAbility28_MNetworkVarNames_Value);
+    }
+    if ( `guard variable for'CDOTABaseAbility::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTABaseAbility29_MNetworkVarNames_Value == 0
+      && __cxa_guard_acquire(&`guard variable for'CDOTABaseAbility::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTABaseAbility29_MNetworkVarNames_Value) != 0 )
+    {
+      CDOTABaseAbility::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTABaseAbility29_MNetworkVarNames_Value.m_pVarName = "m_bToggleState";
+      CDOTABaseAbility::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTABaseAbility29_MNetworkVarNames_Value.m_pVarType = "bool";
+      __cxa_guard_release(&`guard variable for'CDOTABaseAbility::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTABaseAbility29_MNetworkVarNames_Value);
+    }
+    if ( `guard variable for'CDOTABaseAbility::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTABaseAbility30_MNetworkVarNames_Value == 0
+      && __cxa_guard_acquire(&`guard variable for'CDOTABaseAbility::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTABaseAbility30_MNetworkVarNames_Value) != 0 )
+    {
+      CDOTABaseAbility::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTABaseAbility30_MNetworkVarNames_Value.m_pVarName = "m_bInAbilityPhase";
+      CDOTABaseAbility::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTABaseAbility30_MNetworkVarNames_Value.m_pVarType = "bool";
+      __cxa_guard_release(&`guard variable for'CDOTABaseAbility::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTABaseAbility30_MNetworkVarNames_Value);
+    }
+    if ( `guard variable for'CDOTABaseAbility::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTABaseAbility31_MNetworkVarNames_Value == 0
+      && __cxa_guard_acquire(&`guard variable for'CDOTABaseAbility::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTABaseAbility31_MNetworkVarNames_Value) != 0 )
+    {
+      CDOTABaseAbility::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTABaseAbility31_MNetworkVarNames_Value.m_pVarName = "m_fCooldown";
+      CDOTABaseAbility::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTABaseAbility31_MNetworkVarNames_Value.m_pVarType = "float";
+      __cxa_guard_release(&`guard variable for'CDOTABaseAbility::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTABaseAbility31_MNetworkVarNames_Value);
+    }
+    if ( `guard variable for'CDOTABaseAbility::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTABaseAbility32_MNetworkVarNames_Value == 0
+      && __cxa_guard_acquire(&`guard variable for'CDOTABaseAbility::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTABaseAbility32_MNetworkVarNames_Value) != 0 )
+    {
+      CDOTABaseAbility::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTABaseAbility32_MNetworkVarNames_Value.m_pVarName = "m_iCastRange";
+      CDOTABaseAbility::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTABaseAbility32_MNetworkVarNames_Value.m_pVarType = "int";
+      __cxa_guard_release(&`guard variable for'CDOTABaseAbility::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTABaseAbility32_MNetworkVarNames_Value);
+    }
+    if ( `guard variable for'CDOTABaseAbility::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTABaseAbility33_MNetworkVarNames_Value == 0
+      && __cxa_guard_acquire(&`guard variable for'CDOTABaseAbility::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTABaseAbility33_MNetworkVarNames_Value) != 0 )
+    {
+      CDOTABaseAbility::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTABaseAbility33_MNetworkVarNames_Value.m_pVarName = "m_flCooldownLength";
+      CDOTABaseAbility::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTABaseAbility33_MNetworkVarNames_Value.m_pVarType = "float";
+      __cxa_guard_release(&`guard variable for'CDOTABaseAbility::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTABaseAbility33_MNetworkVarNames_Value);
+    }
+    if ( `guard variable for'CDOTABaseAbility::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTABaseAbility34_MNetworkVarNames_Value == 0
+      && __cxa_guard_acquire(&`guard variable for'CDOTABaseAbility::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTABaseAbility34_MNetworkVarNames_Value) != 0 )
+    {
+      CDOTABaseAbility::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTABaseAbility34_MNetworkVarNames_Value.m_pVarName = "m_iManaCost";
+      CDOTABaseAbility::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTABaseAbility34_MNetworkVarNames_Value.m_pVarType = "int";
+      __cxa_guard_release(&`guard variable for'CDOTABaseAbility::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTABaseAbility34_MNetworkVarNames_Value);
+    }
+    if ( `guard variable for'CDOTABaseAbility::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTABaseAbility35_MNetworkVarNames_Value == 0
+      && __cxa_guard_acquire(&`guard variable for'CDOTABaseAbility::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTABaseAbility35_MNetworkVarNames_Value) != 0 )
+    {
+      CDOTABaseAbility::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTABaseAbility35_MNetworkVarNames_Value.m_pVarName = "m_bAutoCastState";
+      CDOTABaseAbility::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTABaseAbility35_MNetworkVarNames_Value.m_pVarType = "bool";
+      __cxa_guard_release(&`guard variable for'CDOTABaseAbility::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTABaseAbility35_MNetworkVarNames_Value);
+    }
+    if ( `guard variable for'CDOTABaseAbility::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTABaseAbility36_MNetworkVarNames_Value == 0
+      && __cxa_guard_acquire(&`guard variable for'CDOTABaseAbility::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTABaseAbility36_MNetworkVarNames_Value) != 0 )
+    {
+      CDOTABaseAbility::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTABaseAbility36_MNetworkVarNames_Value.m_pVarName = "m_flChannelStartTime";
+      CDOTABaseAbility::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTABaseAbility36_MNetworkVarNames_Value.m_pVarType = "float";
+      __cxa_guard_release(&`guard variable for'CDOTABaseAbility::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTABaseAbility36_MNetworkVarNames_Value);
+    }
+    if ( `guard variable for'CDOTABaseAbility::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTABaseAbility37_MNetworkVarNames_Value == 0
+      && __cxa_guard_acquire(&`guard variable for'CDOTABaseAbility::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTABaseAbility37_MNetworkVarNames_Value) != 0 )
+    {
+      CDOTABaseAbility::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTABaseAbility37_MNetworkVarNames_Value.m_pVarName = "m_bInIndefiniteCooldown";
+      CDOTABaseAbility::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTABaseAbility37_MNetworkVarNames_Value.m_pVarType = "bool";
+      __cxa_guard_release(&`guard variable for'CDOTABaseAbility::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTABaseAbility37_MNetworkVarNames_Value);
+    }
+    if ( `guard variable for'CDOTABaseAbility::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTABaseAbility38_MNetworkVarNames_Value == 0
+      && __cxa_guard_acquire(&`guard variable for'CDOTABaseAbility::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTABaseAbility38_MNetworkVarNames_Value) != 0 )
+    {
+      CDOTABaseAbility::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTABaseAbility38_MNetworkVarNames_Value.m_pVarName = "m_bFrozenCooldown";
+      CDOTABaseAbility::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTABaseAbility38_MNetworkVarNames_Value.m_pVarType = "bool";
+      __cxa_guard_release(&`guard variable for'CDOTABaseAbility::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTABaseAbility38_MNetworkVarNames_Value);
+    }
+    if ( `guard variable for'CDOTABaseAbility::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTABaseAbility39_MNetworkVarNames_Value == 0
+      && __cxa_guard_acquire(&`guard variable for'CDOTABaseAbility::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTABaseAbility39_MNetworkVarNames_Value) != 0 )
+    {
+      CDOTABaseAbility::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTABaseAbility39_MNetworkVarNames_Value.m_pVarName = "m_flOverrideCastPoint";
+      CDOTABaseAbility::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTABaseAbility39_MNetworkVarNames_Value.m_pVarType = "float";
+      __cxa_guard_release(&`guard variable for'CDOTABaseAbility::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTABaseAbility39_MNetworkVarNames_Value);
+    }
+    if ( `guard variable for'CDOTABaseAbility::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTABaseAbility40_MNetworkVarNames_Value == 0
+      && __cxa_guard_acquire(&`guard variable for'CDOTABaseAbility::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTABaseAbility40_MNetworkVarNames_Value) != 0 )
+    {
+      CDOTABaseAbility::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTABaseAbility40_MNetworkVarNames_Value.m_pVarName = "m_bStolen";
+      CDOTABaseAbility::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTABaseAbility40_MNetworkVarNames_Value.m_pVarType = "bool";
+      __cxa_guard_release(&`guard variable for'CDOTABaseAbility::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTABaseAbility40_MNetworkVarNames_Value);
+    }
+    CDOTABaseAbility::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CDOTABaseAbility[0].m_pType = (*(*v7 + 40LL))(v7, 7);
+    CDOTABaseAbility::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CDOTABaseAbility[1].m_pType = (*(*v7 + 40LL))(v7, 13);
+    CDOTABaseAbility::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CDOTABaseAbility[2].m_pType = (*(*v7 + 40LL))(v7, 13);
+    CDOTABaseAbility::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CDOTABaseAbility[3].m_pType = (*(*v7 + 40LL))(v7, 13);
+    CDOTABaseAbility::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CDOTABaseAbility[4].m_pType = (*(*v7 + 40LL))(v7, 7);
+    CDOTABaseAbility::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CDOTABaseAbility[5].m_pType = (*(*v7 + 40LL))(v7, 13);
+    v8 = *(*v7 + 64LL);
+    v9 = (*(*v7 + 88LL))(v7, "CBaseEntity");
+    CDOTABaseAbility::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CDOTABaseAbility[6].m_pType = v8(v7, "CHandle", 5003, CAtomicManipulator<CHandle<CBaseEntity>>::Get(void)::val, &CSchemaManipulator<CHandle<CBaseEntity>>::StaticAccessor(void)::m, v9);
+    CDOTABaseAbility::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CDOTABaseAbility[7].m_pType = (*(*v7 + 40LL))(v7, 13);
+    CDOTABaseAbility::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CDOTABaseAbility[8].m_pType = (*(*v7 + 40LL))(v7, 13);
+    CDOTABaseAbility::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CDOTABaseAbility[9].m_pType = (*(*v7 + 40LL))(v7, 7);
+    CDOTABaseAbility::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CDOTABaseAbility[10].m_pType = (*(*v7 + 40LL))(v7, 7);
+    CDOTABaseAbility::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CDOTABaseAbility[11].m_pType = (*(*v7 + 40LL))(v7, 13);
+    CDOTABaseAbility::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CDOTABaseAbility[12].m_pType = (*(*v7 + 40LL))(v7, 13);
+    CDOTABaseAbility::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CDOTABaseAbility[13].m_pType = (*(*v7 + 40LL))(v7, 11);
+    CDOTABaseAbility::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CDOTABaseAbility[14].m_pType = (*(*v7 + 40LL))(v7, 7);
+    CDOTABaseAbility::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CDOTABaseAbility[15].m_pType = (*(*v7 + 40LL))(v7, 11);
+    CDOTABaseAbility::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CDOTABaseAbility[16].m_pType = (*(*v7 + 40LL))(v7, 7);
+    CDOTABaseAbility::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CDOTABaseAbility[17].m_pType = (*(*v7 + 40LL))(v7, 13);
+    CDOTABaseAbility::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CDOTABaseAbility[18].m_pType = (*(*v7 + 40LL))(v7, 11);
+    CDOTABaseAbility::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CDOTABaseAbility[19].m_pType = (*(*v7 + 40LL))(v7, 13);
+    CDOTABaseAbility::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CDOTABaseAbility[20].m_pType = (*(*v7 + 40LL))(v7, 13);
+    CDOTABaseAbility::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CDOTABaseAbility[21].m_pType = (*(*v7 + 40LL))(v7, 11);
+    CDOTABaseAbility::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CDOTABaseAbility[22].m_pType = (*(*v7 + 40LL))(v7, 13);
+    CDOTABaseAbility::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CDOTABaseAbility[23].m_pType = (*(*v7 + 120LL))(v7);
+    CDOTABaseAbility::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CDOTABaseAbility[24].m_pType = (*(*v7 + 56LL))(v7, "item_definition_index_t", 5008, CAtomicManipulator<item_definition_index_t>::Get(void)::val, &CSchemaManipulator<item_definition_index_t>::StaticAccessor(void)::m);
+    if ( `guard variable for'CDOTABaseAbility::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_NestedClassesOf_CDOTABaseAbility == 0
+      && __cxa_guard_acquire(&`guard variable for'CDOTABaseAbility::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_NestedClassesOf_CDOTABaseAbility) != 0 )
+    {
+      v10 = CDOTABaseAbility::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult;
+      if ( CDOTABaseAbility::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult == 0 )
+        v10 = CDOTABaseAbility::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+                pSchemaSystem,
+                pBinaryName,
+                pProjectName);
+      CDOTABaseAbility::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_NestedClassesOf_CDOTABaseAbility[0] = v10;
+      __cxa_guard_release(&`guard variable for'CDOTABaseAbility::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_NestedClassesOf_CDOTABaseAbility);
+    }
+    (*(CBaseEntity::s_pSchemaBindingForLocalModule->_vptr_ISchemaBinding + 5))(
+      CBaseEntity::s_pSchemaBindingForLocalModule,
+      pSchemaSystem,
+      pBinaryName,
+      pProjectName);
+    v11 = CBaseEntity::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+            pSchemaSystem,
+            pBinaryName,
+            pProjectName);
+    CDOTABaseAbility::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CDOTABaseAbility.m_pOuterTypeScope = v7;
+    CDOTABaseAbility::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassBases_CDOTABaseAbility[0].m_pClass = v11;
+    CDOTABaseAbility::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult = &CDOTABaseAbility::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CDOTABaseAbility;
+    (*(*pSchemaSystem + 208LL))(
+      pSchemaSystem,
+      &CDOTABaseAbility::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CDOTABaseAbility,
+      "m_iTeamNum",
+      PerformMetaModifyCDOTABaseAbility(ISchemaSystem *,CSchemaClassInfo *)::meta_modify_0,
+      1);
+    return CDOTABaseAbility::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult;
+  }
+  return result;
+}
+
+
+// CDOTABaseAbility::Schema_VerifyBindingIsRegistered  (line 458, @0x000000000242b230, libserver.so)
+void __cdecl CDOTABaseAbility::Schema_VerifyBindingIsRegistered()
+{
+  ;
+}
+
+
+// CDOTABaseAbility::SetupEntClassInputs  (line 472, @0x000000000242b240, libserver.so)
+void __fastcall CDOTABaseAbility::SetupEntClassInputs(CEntityClass *pComponentInfo)
+{
+  ;
+}
+
+
+// CDOTABaseAbility::SetupEntClassComponentOverrides  (line 478, @0x000000000242b250, libserver.so)
+void __fastcall CDOTABaseAbility::SetupEntClassComponentOverrides(CEntityClass *pEntityClass)
+{
+  pEntityClass->m_pComponentOverrides = 0;
+}
+
+
+// GetScriptDesc<CDOTABaseAbility>  (line 513, @0x0000000002445100, libserver.so)  // inlines: AddParameterType, CUtlMemory, CUtlVector, CUtlVectorBase, Finalize, ScriptClassDesc_t, ScriptDeduceFunctionSignature<CDOTABaseAbility*, CDOTABaseAbility, AbilityLearnResult_t>, ScriptDeduceFunctionSignature<CDOTABaseAbility*, CDOTABaseAbility, CVariantBase<CVariantDefaultAllocator> >, ScriptDeduceFunctionSignature<CDOTABaseAbility*, CDOTABaseAbility, CVariantBase<CVariantDefaultAllocator>, char const*, int>, ScriptDeduceFunctionSignature<CDOTABaseAbility*, CDOTABaseAbility, CVariantBase<CVariantDefaultAllocator>, char const*>, ScriptDeduceFunctionSignature<CDOTABaseAbility*, CDOTABaseAbility, DOTAAbilitySpeakTrigger_t>, ScriptDeduceFunctionSignature<CDOTABaseAbility*, CDOTABaseAbility, HSCRIPT__*>, ScriptDeduceFunctionSignature<CDOTABaseAbility*, CDOTABaseAbility, Vector>, ScriptDeduceFunctionSignature<CDOTABaseAbility*, CDOTABaseAbility, bool, HSCRIPT__*>, ScriptDeduceFunctionSignature<CDOTABaseAbility*, CDOTABaseAbility, bool, float>, ScriptDeduceFunctionSignature<CDOTABaseAbility*, CDOTABaseAbility, bool, int>, ScriptDeduceFunctionSignature<CDOTABaseAbility*, CDOTABaseAbility, bool>, ScriptDeduceFunctionSignature<CDOTABaseAbility*, CDOTABaseAbility, char const*>, ScriptDeduceFunctionSignature<CDOTABaseAbility*, CDOTABaseAbility, float, int>, ScriptDeduceFunctionSignature<CDOTABaseAbility*, CDOTABaseAbility, float>, ScriptDeduceFunctionSignature<CDOTABaseAbility*, CDOTABaseAbility, int, const Vector&, HSCRIPT__*>, ScriptDeduceFunctionSignature<CDOTABaseAbility*, CDOTABaseAbility, int, int>, ScriptDeduceFunctionSignature<CDOTABaseAbility*, CDOTABaseAbility, int>, ScriptDeduceFunctionSignature<CDOTABaseAbility*, CDOTABaseAbility, void, bool, bool, bool>, ScriptDeduceFunctionSignature<CDOTABaseAbility*, CDOTABaseAbility, void, bool>, ScriptDeduceFunctionSignature<CDOTABaseAbility*, CDOTABaseAbility, void, const Vector&, float, float>, ScriptDeduceFunctionSignature<CDOTABaseAbility*, CDOTABaseAbility, void, float>, ScriptDeduceFunctionSignature<CDOTABaseAbility*, CDOTABaseAbility, void, int>, ScriptDeduceFunctionSignature<CDOTABaseAbility*, CDOTABaseAbility, void>, SetDescription, SetFunctionName, SetPackedParameterNames, SetReturnType, SetScriptName, operator[]
+// calls: operator new, GetScriptDesc<CBaseEntity>, CUtlVectorBase<ScriptFunctionBinding_t, CUtlMemory<ScriptFunctionBinding_t, int> >::AddToTail
+// callers: CDOTABaseAbility::GetScriptDesc, CDOTABaseAbility::InitScriptDesc, CDOTABaseAbility::GetClassScriptDesc, CDOTABaseAbility::GetEntityClassInternal, CDOTA_Ability_AttributeBonus::GetEntityClassInternal, GetScriptDesc<CDOTA_Ability_DataDriven>, GetScriptDesc<CDOTA_Ability_Lua>, GetScriptDesc<CDOTA_Item>, GetScriptDesc<CDOTA_Ability_Nian_Roar>, GetScriptDesc<CDOTA_Ability_Nian_Leap>, GetScriptDesc<CDOTA_Ability_Nian_Dive>, GetScriptDesc<CDOTA_Ability_Animation_Attack> (13 total)
+// strings: "An ability", "CDOTABaseAbility", "Gets the key values definition for this ability.", "Script_GetAbilityKeyValues", "Script_GetCaster", "Script_GetCursorTarget" (40 total)
+// globals: g_pCDOTABaseAbility_ScriptDesc, CMemberScriptBinding0<CDOTABaseAbility *,CVariantBase<CVariantDefaultAllocator> (CDOTABaseAbility::*)(void),CVariantBase<CVariantDefaultAllocator>>::Call(void *, CDOTABaseAbility::Script_GetAbilityKeyValues(void), CMemberScriptBinding0<CDOTABaseAbility *,HSCRIPT__ * (CDOTABaseAbility::*)(void),HSCRIPT__ *>::Call(void *,void *,CVariantBase<CVariantDefaultAllocator> *,int,C, CDOTABaseAbility::Script_GetCaster(void), CDOTABaseAbility::Script_GetCursorTarget(void), CMemberScriptBinding0<CDOTABaseAbility *,Vector (CDOTABaseAbility::*)(void),Vector>::Call(void *,void *,CVariantBase<CVariantDefaultAllocator> *,int,CVariantBas, CDOTABaseAbility::GetCursorPosition(void) (40 total)
+ScriptClassDesc_t *__fastcall GetScriptDesc<CDOTABaseAbility>(CDOTABaseAbility *pScriptDescObjectInstance)
+{
+  ScriptClassDesc_t *result; // rax
+  ScriptClassDesc_t *v2; // rbx
+  ScriptClassDesc_t *Script; // rax
+  IScriptInstanceHelper *pHelper; // rdx
+  __int64 v5; // rcx
+  int v6; // eax
+  int v7; // eax
+  char v8; // dl
+  char v9; // di
+  __int64 v10; // rcx
+  int v11; // eax
+  int v12; // eax
+  char v13; // dl
+  char v14; // di
+  __int64 v15; // rcx
+  int v16; // eax
+  int v17; // eax
+  char v18; // dl
+  char v19; // di
+  __int64 v20; // rcx
+  int v21; // eax
+  int v22; // eax
+  char v23; // dl
+  char v24; // di
+  __int64 v25; // rcx
+  int v26; // eax
+  int v27; // eax
+  char v28; // dl
+  char v29; // di
+  __int64 v30; // rcx
+  int v31; // eax
+  int v32; // eax
+  char v33; // dl
+  char v34; // di
+  __int64 v35; // rcx
+  char v36; // al
+  __int64 v37; // rdx
+  int v38; // eax
+  char v39; // dl
+  char v40; // di
+  __int64 v41; // rcx
+  int v42; // eax
+  int v43; // eax
+  char v44; // dl
+  char v45; // di
+  __int64 v46; // rcx
+  int v47; // eax
+  int v48; // eax
+  char v49; // dl
+  char v50; // di
+  __int64 v51; // rcx
+  int v52; // eax
+  int v53; // eax
+  char v54; // dl
+  char v55; // di
+  __int64 v56; // rcx
+  char v57; // al
+  __int64 v58; // rdx
+  int v59; // eax
+  char v60; // dl
+  char v61; // di
+  __int64 v62; // rcx
+  int v63; // eax
+  int v64; // eax
+  char v65; // dl
+  char v66; // di
+  __int64 v67; // rcx
+  int v68; // eax
+  int v69; // eax
+  char v70; // dl
+  char v71; // di
+  __int64 v72; // rcx
+  char v73; // al
+  __int64 v74; // rdx
+  int v75; // eax
+  char v76; // dl
+  char v77; // di
+  __int64 v78; // rcx
+  char v79; // al
+  __int64 v80; // rdx
+  int v81; // eax
+  char v82; // dl
+  char v83; // di
+  __int64 v84; // rcx
+  int v85; // eax
+  int v86; // eax
+  char v87; // dl
+  char v88; // di
+  __int64 v89; // rcx
+  int v90; // eax
+  int v91; // eax
+  char v92; // dl
+  char v93; // di
+  __int64 v94; // rcx
+  int v95; // eax
+  int v96; // eax
+  char v97; // dl
+  char v98; // di
+  __int64 v99; // rcx
+  int v100; // eax
+  int v101; // eax
+  char v102; // dl
+  char v103; // di
+  __int64 v104; // rcx
+  int v105; // eax
+  int v106; // eax
+  char v107; // dl
+  char v108; // di
+  __int64 v109; // rcx
+  int v110; // eax
+  int v111; // eax
+  char v112; // dl
+  char v113; // di
+  __int64 v114; // rcx
+  char v115; // al
+  __int64 v116; // rdx
+  int v117; // eax
+  char v118; // dl
+  char v119; // di
+  __int64 v120; // rcx
+  int v121; // eax
+  int v122; // eax
+  char v123; // dl
+  char v124; // di
+  __int64 v125; // rcx
+  char v126; // al
+  __int64 v127; // rdx
+  int v128; // eax
+  char v129; // dl
+  char v130; // di
+  __int64 v131; // rcx
+  char v132; // al
+  __int64 v133; // rdx
+  int v134; // eax
+  char v135; // dl
+  char v136; // di
+  __int64 v137; // rcx
+  int v138; // eax
+  int v139; // eax
+  char v140; // dl
+  char v141; // di
+  __int64 v142; // rcx
+  int v143; // eax
+  int v144; // eax
+  char v145; // dl
+  char v146; // di
+  __int64 v147; // rcx
+  int v148; // eax
+  int v149; // eax
+  char v150; // dl
+  char v151; // di
+  __int64 v152; // rcx
+  int v153; // eax
+  int v154; // eax
+  char v155; // dl
+  char v156; // di
+  __int64 v157; // rcx
+  int v158; // eax
+  int v159; // eax
+  char v160; // dl
+  char v161; // di
+  __int64 v162; // rcx
+  char v163; // al
+  __int64 v164; // rdx
+  int v165; // eax
+  char v166; // dl
+  char v167; // di
+  __int64 v168; // rcx
+  int v169; // eax
+  int v170; // eax
+  char v171; // dl
+  char v172; // di
+  __int64 v173; // rcx
+  int v174; // eax
+  int v175; // eax
+  char v176; // dl
+  char v177; // di
+  __int64 v178; // rcx
+  char v179; // al
+  char v180; // dl
+  int v181; // eax
+  char v182; // dl
+  char v183; // di
+  __int64 v184; // rcx
+  int v185; // eax
+  int v186; // eax
+  char v187; // dl
+  char v188; // di
+  __int64 v189; // rcx
+  int v190; // eax
+  int v191; // eax
+  char v192; // dl
+  char v193; // di
+  __int64 v194; // rcx
+  int v195; // eax
+  int v196; // eax
+  char v197; // dl
+  char v198; // di
+  __int64 v199; // rcx
+  char v200; // al
+  __int64 v201; // rdx
+  int v202; // eax
+  char v203; // dl
+  char v204; // di
+  __int64 v205; // rcx
+  int v206; // eax
+  int v207; // eax
+  char v208; // dl
+  char v209; // di
+  __int64 v210; // rcx
+  int v211; // eax
+  int v212; // eax
+  char v213; // dl
+  char v214; // di
+  __int64 v215; // rcx
+  char v216; // al
+  __int64 v217; // rdx
+  int v218; // eax
+  char v219; // dl
+  char v220; // di
+  __int64 v221; // rcx
+  int v222; // eax
+  int v223; // eax
+  char v224; // dl
+  char v225; // di
+  __int64 v226; // rcx
+  int v227; // eax
+  int v228; // eax
+  char v229; // dl
+  char v230; // di
+  __int64 v231; // rcx
+  int v232; // eax
+  int v233; // eax
+  char v234; // dl
+  char v235; // di
+  __int64 v236; // rcx
+  int v237; // eax
+  int v238; // eax
+  char v239; // dl
+  char v240; // di
+  __int64 v241; // rcx
+  int v242; // eax
+  int v243; // eax
+  char v244; // dl
+  char v245; // di
+  __int64 v246; // rcx
+  int v247; // eax
+  int v248; // eax
+  char v249; // dl
+  char v250; // di
+  __int64 v251; // rcx
+  int v252; // eax
+  int v253; // eax
+  char v254; // dl
+  char v255; // di
+  __int64 v256; // rcx
+  char v257; // al
+  __int64 v258; // rdx
+  int v259; // eax
+  char v260; // dl
+  char v261; // di
+  __int64 v262; // rcx
+  int v263; // eax
+  int v264; // eax
+  char v265; // dl
+  char v266; // di
+  __int64 v267; // rcx
+  char v268; // al
+  __int64 v269; // rdx
+  int v270; // eax
+  char v271; // dl
+  char v272; // di
+  __int64 v273; // rcx
+  int v274; // eax
+  int v275; // eax
+  char v276; // dl
+  char v277; // di
+  __int64 v278; // rcx
+  int v279; // eax
+  int v280; // eax
+  char v281; // dl
+  char v282; // di
+  __int64 v283; // rdx
+  int v284; // eax
+  int v285; // eax
+  char v286; // cl
+  __int64 v287; // rcx
+  int v288; // eax
+  int v289; // eax
+  char v290; // dl
+  char v291; // di
+  __int64 v292; // rcx
+  int v293; // eax
+  int v294; // eax
+  char v295; // dl
+  char v296; // di
+  __int64 v297; // rcx
+  char v298; // al
+  char v299; // dl
+  int v300; // eax
+  char v301; // dl
+  char v302; // di
+  __int64 v303; // rcx
+  int v304; // eax
+  int v305; // eax
+  char v306; // dl
+  char v307; // di
+  __int64 v308; // rcx
+  int v309; // eax
+  int v310; // eax
+  char v311; // dl
+  char v312; // di
+  __int64 v313; // rcx
+  int v314; // eax
+  int v315; // eax
+  char v316; // dl
+  char v317; // di
+  __int64 v318; // rcx
+  int v319; // eax
+  int v320; // eax
+  char v321; // dl
+  char v322; // di
+  __int64 v323; // rcx
+  char v324; // al
+  __int64 v325; // rdx
+  int v326; // eax
+  char v327; // dl
+  char v328; // di
+  __int64 v329; // rcx
+  int v330; // eax
+  int v331; // eax
+  char v332; // dl
+  char v333; // di
+  __int64 v334; // rcx
+  int v335; // eax
+  int v336; // eax
+  char v337; // dl
+  char v338; // di
+  __int64 v339; // rcx
+  int v340; // eax
+  int v341; // eax
+  char v342; // dl
+  char v343; // di
+  __int64 v344; // rcx
+  int v345; // eax
+  int v346; // eax
+  char v347; // dl
+  char v348; // di
+  __int64 v349; // rcx
+  int v350; // eax
+  int v351; // eax
+  char v352; // dl
+  char v353; // di
+  __int64 v354; // rcx
+  char v355; // al
+  char v356; // dl
+  int v357; // eax
+  char v358; // dl
+  char v359; // di
+  __int64 v360; // rcx
+  int v361; // eax
+  int v362; // eax
+  char v363; // dl
+  char v364; // di
+  __int64 v365; // rcx
+  int v366; // eax
+  int v367; // eax
+  char v368; // dl
+  char v369; // di
+  __int64 v370; // rcx
+  int v371; // eax
+  int v372; // eax
+  char v373; // dl
+  char v374; // di
+  __int64 v375; // rcx
+  int v376; // eax
+  int v377; // eax
+  char v378; // dl
+  char v379; // di
+  __int64 v380; // rcx
+  int v381; // eax
+  int v382; // eax
+  char v383; // dl
+  char v384; // di
+  __int64 v385; // rcx
+  int v386; // eax
+  int v387; // eax
+  char v388; // dl
+  char v389; // di
+  __int64 v390; // rcx
+  int v391; // eax
+  int v392; // eax
+  char v393; // dl
+  char v394; // di
+  __int64 v395; // rcx
+  int v396; // eax
+  int v397; // eax
+  char v398; // dl
+  char v399; // di
+  __int64 v400; // rcx
+  int v401; // eax
+  int v402; // eax
+  char v403; // dl
+  char v404; // di
+  __int64 v405; // rcx
+  int v406; // eax
+  int v407; // eax
+  char v408; // dl
+  char v409; // di
+  __int64 v410; // rcx
+  char v411; // al
+  __int64 v412; // rdx
+  int v413; // eax
+  char v414; // dl
+  char v415; // di
+  __int64 v416; // rcx
+  int v417; // eax
+  int v418; // eax
+  char v419; // dl
+  char v420; // di
+  __int64 v421; // rcx
+  int v422; // eax
+  int v423; // eax
+  char v424; // dl
+  char v425; // di
+  __int64 v426; // rcx
+  int v427; // eax
+  int v428; // eax
+  char v429; // dl
+  char v430; // di
+  __int64 v431; // rcx
+  int v432; // eax
+  int v433; // eax
+  char v434; // dl
+  char v435; // di
+  __int64 v436; // rcx
+  int v437; // eax
+  int v438; // eax
+  char v439; // dl
+  char v440; // di
+  __int64 v441; // rcx
+  char v442; // al
+  __int64 v443; // rdx
+  int v444; // eax
+  char v445; // dl
+  char v446; // di
+  __int64 v447; // rcx
+  char v448; // al
+  __int64 v449; // rdx
+  int v450; // eax
+  char v451; // dl
+  char v452; // di
+  __int64 v453; // rcx
+  char v454; // al
+  __int64 v455; // rdx
+  int v456; // eax
+  char v457; // dl
+  char v458; // di
+  __int64 v459; // rcx
+  char v460; // al
+  __int64 v461; // rdx
+  int v462; // eax
+  char v463; // dl
+  char v464; // di
+  __int64 v465; // rcx
+  int v466; // eax
+  int v467; // eax
+  char v468; // dl
+  char v469; // di
+  __int64 v470; // rcx
+  int v471; // eax
+  int v472; // eax
+  char v473; // dl
+  char v474; // di
+  __int64 v475; // rcx
+  int v476; // eax
+  int v477; // eax
+  char v478; // dl
+  char v479; // di
+  __int64 v480; // rcx
+  int v481; // eax
+  int v482; // eax
+  char v483; // dl
+  char v484; // di
+  __int64 v485; // rcx
+  char v486; // al
+  __int64 v487; // rdx
+  int v488; // eax
+  char v489; // dl
+  char v490; // di
+  __int64 v491; // rcx
+  char v492; // al
+  __int64 v493; // rdx
+  int v494; // eax
+  char v495; // dl
+  char v496; // di
+  __int64 v497; // rcx
+  int v498; // eax
+  int v499; // eax
+  char v500; // dl
+  char v501; // di
+  __int64 v502; // rcx
+  char v503; // al
+  __int64 v504; // rdx
+  int v505; // eax
+  char v506; // dl
+  char v507; // di
+  __int64 v508; // rcx
+  int v509; // eax
+  int v510; // eax
+  char v511; // dl
+  char v512; // di
+  __int64 v513; // rcx
+  int v514; // eax
+  int v515; // eax
+  char v516; // dl
+  char v517; // di
+  __int64 v518; // rcx
+  char v519; // al
+  __int64 v520; // rdx
+  int v521; // eax
+  char v522; // dl
+  char v523; // di
+  __int64 v524; // rcx
+  int v525; // eax
+  int v526; // eax
+  char v527; // dl
+  char v528; // di
+  __int64 v529; // rcx
+  char v530; // al
+  __int64 v531; // rdx
+  int v532; // eax
+  char v533; // dl
+  char v534; // di
+  __int64 v535; // rcx
+  int v536; // eax
+  int v537; // eax
+  char v538; // dl
+  char v539; // di
+  __int64 v540; // rcx
+  int v541; // eax
+  int v542; // eax
+  char v543; // dl
+  char v544; // di
+  __int64 v545; // rcx
+  int v546; // eax
+  int v547; // eax
+  char v548; // dl
+  char v549; // di
+  __int64 v550; // rcx
+  int v551; // eax
+  int v552; // eax
+  char v553; // dl
+  char v554; // di
+  __int64 v555; // rcx
+  int v556; // eax
+  int v557; // eax
+  char v558; // dl
+  char v559; // di
+  __int64 v560; // rcx
+  char v561; // al
+  __int64 v562; // rdx
+  int v563; // eax
+  char v564; // dl
+  char v565; // di
+  __int64 v566; // rcx
+  int v567; // eax
+  int v568; // eax
+  char v569; // dl
+  char v570; // di
+  __int64 v571; // rcx
+  int v572; // eax
+  int v573; // eax
+  char v574; // dl
+  char v575; // di
+  __int64 v576; // rcx
+  int v577; // eax
+  int v578; // eax
+  char v579; // dl
+  char v580; // di
+  __int64 v581; // rcx
+  char v582; // al
+  char v583; // dl
+  int v584; // eax
+  char v585; // dl
+  char v586; // di
+  __int64 v587; // rcx
+  char v588; // al
+  __int64 v589; // rdx
+  int v590; // eax
+  char v591; // dl
+  char v592; // di
+
+  result = g_pCDOTABaseAbility_ScriptDesc;
+  if ( g_pCDOTABaseAbility_ScriptDesc == 0 )
+  {
+    v2 = operator new(0x50u);
+    v2->m_pBaseDesc = 0;
+    v2->m_FunctionBindings.m_Size = 0;
+    v2->m_FunctionBindings.m_Memory.m_pMemory = 0;
+    v2->m_FunctionBindings.m_Memory.m_nAllocationCount = 0;
+    v2->m_FunctionBindings.m_Memory.m_nGrowSize = 0;
+    v2->m_pfnConstruct = 0;
+    v2->m_pfnDestruct = 0;
+    v2->pHelper = 0;
+    g_pCDOTABaseAbility_ScriptDesc = v2;
+    v2->m_pszDescription = "An ability";
+    v2->m_pszScriptName = "CDOTABaseAbility";
+    v2->m_pszClassname = "CDOTABaseAbility";
+    Script = GetScriptDesc<CBaseEntity>(0);
+    v2->m_pBaseDesc = Script;
+    if ( Script != 0 )
+    {
+      while ( 1 )
+      {
+        pHelper = Script->pHelper;
+        if ( pHelper != 0 )
+          break;
+        Script = Script->m_pBaseDesc;
+        if ( Script == 0 )
+          goto LABEL_7;
+      }
+      v2->pHelper = pHelper;
+    }
+LABEL_7:
+    v5 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(&v2->m_FunctionBindings)];
+    *(v5 + 24) = 32;
+    *(v5 + 16) = "Gets the key values definition for this ability.";
+    *v5 = "GetAbilityKeyValues";
+    *(v5 + 8) = "Script_GetAbilityKeyValues";
+    v6 = *(v5 + 26);
+    *(v5 + 25) = 0;
+    v7 = v6 - 1;
+    if ( v7 >= 0 && *(v5 + v7 + 27) == 32 )
+    {
+      v8 = 1;
+      do
+      {
+        --v7;
+        v9 = v8;
+        if ( v7 == -1 )
+        {
+          *(v5 + 25) = v8;
+          goto LABEL_13;
+        }
+        ++v8;
+      }
+      while ( *(v5 + v7 + 27) == 32 );
+      *(v5 + 25) = v9;
+    }
+LABEL_13:
+    *(v5 + 64) = 1;
+    *(v5 + 48) = CMemberScriptBinding0<CDOTABaseAbility *,CVariantBase<CVariantDefaultAllocator> (CDOTABaseAbility::*)(void),CVariantBase<CVariantDefaultAllocator>>::Call;
+    *(v5 + 56) = CDOTABaseAbility::Script_GetAbilityKeyValues;
+    v10 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(&v2->m_FunctionBindings)];
+    *(v10 + 24) = 31;
+    *(v10 + 16) = "";
+    *v10 = "GetCaster";
+    *(v10 + 8) = "Script_GetCaster";
+    v11 = *(v10 + 26);
+    *(v10 + 25) = 0;
+    v12 = v11 - 1;
+    if ( v12 >= 0 && *(v10 + v12 + 27) == 32 )
+    {
+      v13 = 1;
+      do
+      {
+        --v12;
+        v14 = v13;
+        if ( v12 == -1 )
+        {
+          *(v10 + 25) = v13;
+          goto LABEL_19;
+        }
+        ++v13;
+      }
+      while ( *(v10 + v12 + 27) == 32 );
+      *(v10 + 25) = v14;
+    }
+LABEL_19:
+    *(v10 + 64) = 1;
+    *(v10 + 48) = CMemberScriptBinding0<CDOTABaseAbility *,HSCRIPT__ * (CDOTABaseAbility::*)(void),HSCRIPT__ *>::Call;
+    *(v10 + 56) = CDOTABaseAbility::Script_GetCaster;
+    v15 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(&v2->m_FunctionBindings)];
+    *(v15 + 24) = 31;
+    *(v15 + 16) = "";
+    *v15 = "GetCursorTarget";
+    *(v15 + 8) = "Script_GetCursorTarget";
+    v16 = *(v15 + 26);
+    *(v15 + 25) = 0;
+    v17 = v16 - 1;
+    if ( v17 >= 0 && *(v15 + v17 + 27) == 32 )
+    {
+      v18 = 1;
+      do
+      {
+        --v17;
+        v19 = v18;
+        if ( v17 == -1 )
+        {
+          *(v15 + 25) = v18;
+          goto LABEL_25;
+        }
+        ++v18;
+      }
+      while ( *(v15 + v17 + 27) == 32 );
+      *(v15 + 25) = v19;
+    }
+LABEL_25:
+    *(v15 + 64) = 1;
+    *(v15 + 48) = CMemberScriptBinding0<CDOTABaseAbility *,HSCRIPT__ * (CDOTABaseAbility::*)(void),HSCRIPT__ *>::Call;
+    *(v15 + 56) = CDOTABaseAbility::Script_GetCursorTarget;
+    v20 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(&v2->m_FunctionBindings)];
+    *(v20 + 24) = 3;
+    *(v20 + 16) = "";
+    *v20 = "GetCursorPosition";
+    *(v20 + 8) = "GetCursorPosition";
+    v21 = *(v20 + 26);
+    *(v20 + 25) = 0;
+    v22 = v21 - 1;
+    if ( v22 >= 0 && *(v20 + v22 + 27) == 32 )
+    {
+      v23 = 1;
+      do
+      {
+        --v22;
+        v24 = v23;
+        if ( v22 == -1 )
+        {
+          *(v20 + 25) = v23;
+          goto LABEL_31;
+        }
+        ++v23;
+      }
+      while ( *(v20 + v22 + 27) == 32 );
+      *(v20 + 25) = v24;
+    }
+LABEL_31:
+    *(v20 + 64) = 1;
+    *(v20 + 48) = CMemberScriptBinding0<CDOTABaseAbility *,Vector (CDOTABaseAbility::*)(void),Vector>::Call;
+    *(v20 + 56) = CDOTABaseAbility::GetCursorPosition;
+    v25 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(&v2->m_FunctionBindings)];
+    *(v25 + 24) = 6;
+    *(v25 + 16) = "";
+    *v25 = "GetCursorTargetingNothing";
+    *(v25 + 8) = "GetCursorTargetingNothing";
+    v26 = *(v25 + 26);
+    *(v25 + 25) = 0;
+    v27 = v26 - 1;
+    if ( v27 >= 0 && *(v25 + v27 + 27) == 32 )
+    {
+      v28 = 1;
+      do
+      {
+        --v27;
+        v29 = v28;
+        if ( v27 == -1 )
+        {
+          *(v25 + 25) = v28;
+          goto LABEL_37;
+        }
+        ++v28;
+      }
+      while ( *(v25 + v27 + 27) == 32 );
+      *(v25 + 25) = v29;
+    }
+LABEL_37:
+    *(v25 + 64) = 1;
+    *(v25 + 48) = CMemberScriptBinding0<CDOTABaseAbility *,bool (CDOTABaseAbility::*)(void),bool>::Call;
+    *(v25 + 56) = CDOTABaseAbility::GetCursorTargetingNothing;
+    v30 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(&v2->m_FunctionBindings)];
+    *(v30 + 24) = 5;
+    *(v30 + 16) = "Get the current level of the ability.";
+    *v30 = "GetLevel";
+    *(v30 + 8) = "GetLevel";
+    v31 = *(v30 + 26);
+    *(v30 + 25) = 0;
+    v32 = v31 - 1;
+    if ( v32 >= 0 && *(v30 + v32 + 27) == 32 )
+    {
+      v33 = 1;
+      do
+      {
+        --v32;
+        v34 = v33;
+        if ( v32 == -1 )
+        {
+          *(v30 + 25) = v33;
+          goto LABEL_43;
+        }
+        ++v33;
+      }
+      while ( *(v30 + v32 + 27) == 32 );
+      *(v30 + 25) = v34;
+    }
+LABEL_43:
+    *(v30 + 64) = 1;
+    *(v30 + 48) = CMemberScriptBinding0<CDOTABaseAbility *,int (CDOTABaseAbility::*)(void),int>::Call;
+    *(v30 + 56) = CDOTABaseAbility::GetLevel;
+    v35 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(&v2->m_FunctionBindings)];
+    *(v35 + 24) = 0;
+    *(v35 + 16) = "Sets the level of this ability.";
+    *v35 = "SetLevel";
+    *(v35 + 8) = "Script_SetLevel";
+    v36 = *(v35 + 26);
+    v37 = v36++;
+    *(v35 + v37 + 27) = 5;
+    *(v35 + 26) = v36;
+    v38 = v36 - 1;
+    *(v35 + 25) = 0;
+    if ( v38 >= 0 && *(v35 + v38 + 27) == 32 )
+    {
+      v39 = 1;
+      do
+      {
+        --v38;
+        v40 = v39;
+        if ( v38 == -1 )
+        {
+          *(v35 + 25) = v39;
+          goto LABEL_49;
+        }
+        ++v39;
+      }
+      while ( *(v35 + v38 + 27) == 32 );
+      *(v35 + 25) = v40;
+    }
+LABEL_49:
+    *(v35 + 64) = 1;
+    *(v35 + 48) = CMemberScriptBinding1<CDOTABaseAbility *,void (CDOTABaseAbility::*)(int),void,int>::Call;
+    *(v35 + 56) = CDOTABaseAbility::Script_SetLevel;
+    *(v35 + 40) = s_CDOTABaseAbility_Script_SetLevel_packed_arg_names;
+    v41 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(&v2->m_FunctionBindings)];
+    *(v41 + 24) = 6;
+    *(v41 + 16) = "";
+    *v41 = "IsTrained";
+    *(v41 + 8) = "IsTrained";
+    v42 = *(v41 + 26);
+    *(v41 + 25) = 0;
+    v43 = v42 - 1;
+    if ( v43 >= 0 && *(v41 + v43 + 27) == 32 )
+    {
+      v44 = 1;
+      do
+      {
+        --v43;
+        v45 = v44;
+        if ( v43 == -1 )
+        {
+          *(v41 + 25) = v44;
+          goto LABEL_55;
+        }
+        ++v44;
+      }
+      while ( *(v41 + v43 + 27) == 32 );
+      *(v41 + 25) = v45;
+    }
+LABEL_55:
+    *(v41 + 64) = 1;
+    *(v41 + 48) = CMemberScriptBinding0<CDOTABaseAbility *,bool (CDOTABaseAbility::*)(void),bool>::Call;
+    *(v41 + 56) = CDOTABaseAbility::IsTrained;
+    v46 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(&v2->m_FunctionBindings)];
+    *(v46 + 24) = 1;
+    *(v46 + 16) = "";
+    *v46 = "GetPlaybackRateOverride";
+    *(v46 + 8) = "GetPlaybackRateOverride";
+    v47 = *(v46 + 26);
+    *(v46 + 25) = 0;
+    v48 = v47 - 1;
+    if ( v48 >= 0 && *(v46 + v48 + 27) == 32 )
+    {
+      v49 = 1;
+      do
+      {
+        --v48;
+        v50 = v49;
+        if ( v48 == -1 )
+        {
+          *(v46 + 25) = v49;
+          goto LABEL_61;
+        }
+        ++v49;
+      }
+      while ( *(v46 + v48 + 27) == 32 );
+      *(v46 + 25) = v50;
+    }
+LABEL_61:
+    *(v46 + 56) = 1705;
+    *(v46 + 48) = CMemberScriptBinding0<CDOTABaseAbility *,float (CDOTABaseAbility::*)(void),float>::Call;
+    *(v46 + 64) = 1;
+    v51 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(&v2->m_FunctionBindings)];
+    *(v51 + 24) = 30;
+    *(v51 + 16) = "Returns the name of this ability.";
+    *v51 = "GetAbilityName";
+    *(v51 + 8) = "GetAbilityName";
+    v52 = *(v51 + 26);
+    *(v51 + 25) = 0;
+    v53 = v52 - 1;
+    if ( v53 >= 0 && *(v51 + v53 + 27) == 32 )
+    {
+      v54 = 1;
+      do
+      {
+        --v53;
+        v55 = v54;
+        if ( v53 == -1 )
+        {
+          *(v51 + 25) = v54;
+          goto LABEL_67;
+        }
+        ++v54;
+      }
+      while ( *(v51 + v53 + 27) == 32 );
+      *(v51 + 25) = v55;
+    }
+LABEL_67:
+    *(v51 + 64) = 1;
+    *(v51 + 48) = CMemberScriptBinding0<CDOTABaseAbility *,char const* (CDOTABaseAbility::*)(void),char const*>::Call;
+    *(v51 + 56) = CDOTABaseAbility::GetAbilityName;
+    v56 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(&v2->m_FunctionBindings)];
+    *(v56 + 24) = 0;
+    *(v56 + 16) = "";
+    *v56 = "SetAbilityIndex";
+    *(v56 + 8) = "SetAbilityIndex";
+    v57 = *(v56 + 26);
+    v58 = v57++;
+    *(v56 + v58 + 27) = 5;
+    *(v56 + 26) = v57;
+    v59 = v57 - 1;
+    *(v56 + 25) = 0;
+    if ( v59 >= 0 && *(v56 + v59 + 27) == 32 )
+    {
+      v60 = 1;
+      do
+      {
+        --v59;
+        v61 = v60;
+        if ( v59 == -1 )
+        {
+          *(v56 + 25) = v60;
+          goto LABEL_73;
+        }
+        ++v60;
+      }
+      while ( *(v56 + v59 + 27) == 32 );
+      *(v56 + 25) = v61;
+    }
+LABEL_73:
+    *(v56 + 64) = 1;
+    *(v56 + 48) = CMemberScriptBinding1<CDOTABaseAbility *,void (CDOTABaseAbility::*)(int),void,int>::Call;
+    *(v56 + 56) = CDOTABaseAbility::SetAbilityIndex;
+    *(v56 + 40) = s_CDOTABaseAbility_SetAbilityIndex_packed_arg_names;
+    v62 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(&v2->m_FunctionBindings)];
+    *(v62 + 24) = 5;
+    *(v62 + 16) = "";
+    *v62 = "GetAbilityIndex";
+    *(v62 + 8) = "GetAbilityIndex";
+    v63 = *(v62 + 26);
+    *(v62 + 25) = 0;
+    v64 = v63 - 1;
+    if ( v64 >= 0 && *(v62 + v64 + 27) == 32 )
+    {
+      v65 = 1;
+      do
+      {
+        --v64;
+        v66 = v65;
+        if ( v64 == -1 )
+        {
+          *(v62 + 25) = v65;
+          goto LABEL_79;
+        }
+        ++v65;
+      }
+      while ( *(v62 + v64 + 27) == 32 );
+      *(v62 + 25) = v66;
+    }
+LABEL_79:
+    *(v62 + 64) = 1;
+    *(v62 + 48) = CMemberScriptBinding0<CDOTABaseAbility *,int (CDOTABaseAbility::*)(void),int>::Call;
+    *(v62 + 56) = CDOTABaseAbility::GetAbilityIndex;
+    v67 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(&v2->m_FunctionBindings)];
+    *(v67 + 24) = 5;
+    *(v67 + 16) = "";
+    *v67 = "GetAbilityType";
+    *(v67 + 8) = "GetAbilityType";
+    v68 = *(v67 + 26);
+    *(v67 + 25) = 0;
+    v69 = v68 - 1;
+    if ( v69 >= 0 && *(v67 + v69 + 27) == 32 )
+    {
+      v70 = 1;
+      do
+      {
+        --v69;
+        v71 = v70;
+        if ( v69 == -1 )
+        {
+          *(v67 + 25) = v70;
+          goto LABEL_85;
+        }
+        ++v70;
+      }
+      while ( *(v67 + v69 + 27) == 32 );
+      *(v67 + 25) = v71;
+    }
+LABEL_85:
+    *(v67 + 56) = 1713;
+    *(v67 + 48) = CMemberScriptBinding0<CDOTABaseAbility *,int (CDOTABaseAbility::*)(void),int>::Call;
+    *(v67 + 64) = 1;
+    v72 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(&v2->m_FunctionBindings)];
+    *(v72 + 24) = 0;
+    *(v72 + 16) = "";
+    *v72 = "UpgradeAbility";
+    *(v72 + 8) = "UpgradeAbility";
+    v73 = *(v72 + 26);
+    v74 = v73++;
+    *(v72 + v74 + 27) = 6;
+    *(v72 + 26) = v73;
+    v75 = v73 - 1;
+    *(v72 + 25) = 0;
+    if ( v75 >= 0 && *(v72 + v75 + 27) == 32 )
+    {
+      v76 = 1;
+      do
+      {
+        --v75;
+        v77 = v76;
+        if ( v75 == -1 )
+        {
+          *(v72 + 25) = v76;
+          goto LABEL_91;
+        }
+        ++v76;
+      }
+      while ( *(v72 + v75 + 27) == 32 );
+      *(v72 + 25) = v77;
+    }
+LABEL_91:
+    *(v72 + 64) = 1;
+    *(v72 + 48) = CMemberScriptBinding1<CDOTABaseAbility *,void (CDOTABaseAbility::*)(bool),void,bool>::Call;
+    *(v72 + 56) = CDOTABaseAbility::UpgradeAbility;
+    *(v72 + 40) = s_CDOTABaseAbility_UpgradeAbility_packed_arg_names;
+    v78 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(&v2->m_FunctionBindings)];
+    *(v78 + 24) = 0;
+    *(v78 + 16) = "";
+    *v78 = "OnAbilityPinged";
+    *(v78 + 8) = "OnAbilityPinged";
+    v79 = *(v78 + 26);
+    v80 = v79++;
+    *(v78 + v80 + 27) = 5;
+    *(v78 + 26) = v79;
+    v81 = v79 - 1;
+    *(v78 + 25) = 0;
+    if ( v81 >= 0 && *(v78 + v81 + 27) == 32 )
+    {
+      v82 = 1;
+      do
+      {
+        --v81;
+        v83 = v82;
+        if ( v81 == -1 )
+        {
+          *(v78 + 25) = v82;
+          goto LABEL_97;
+        }
+        ++v82;
+      }
+      while ( *(v78 + v81 + 27) == 32 );
+      *(v78 + 25) = v83;
+    }
+LABEL_97:
+    *(v78 + 56) = 1721;
+    *(v78 + 48) = CMemberScriptBinding1<CDOTABaseAbility *,void (CDOTABaseAbility::*)(int),void,int>::Call;
+    *(v78 + 64) = 1;
+    *(v78 + 40) = s_CDOTABaseAbility_OnAbilityPinged_packed_arg_names;
+    v84 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(&v2->m_FunctionBindings)];
+    *(v84 + 24) = 29;
+    *(v84 + 16) = "";
+    *v84 = "CanAbilityBeUpgraded";
+    *(v84 + 8) = "CanAbilityBeUpgraded";
+    v85 = *(v84 + 26);
+    *(v84 + 25) = 0;
+    v86 = v85 - 1;
+    if ( v86 >= 0 && *(v84 + v86 + 27) == 32 )
+    {
+      v87 = 1;
+      do
+      {
+        --v86;
+        v88 = v87;
+        if ( v86 == -1 )
+        {
+          *(v84 + 25) = v87;
+          goto LABEL_103;
+        }
+        ++v87;
+      }
+      while ( *(v84 + v86 + 27) == 32 );
+      *(v84 + 25) = v88;
+    }
+LABEL_103:
+    *(v84 + 64) = 1;
+    *(v84 + 48) = CMemberScriptBinding0<CDOTABaseAbility *,AbilityLearnResult_t (CDOTABaseAbility::*)(void),AbilityLearnResult_t>::Call;
+    *(v84 + 56) = CDOTABaseAbility::CanAbilityBeUpgraded;
+    v89 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(&v2->m_FunctionBindings)];
+    *(v89 + 24) = 5;
+    *(v89 + 16) = "";
+    *v89 = "GetHeroLevelRequiredToUpgrade";
+    *(v89 + 8) = "GetHeroLevelRequiredToUpgrade";
+    v90 = *(v89 + 26);
+    *(v89 + 25) = 0;
+    v91 = v90 - 1;
+    if ( v91 >= 0 && *(v89 + v91 + 27) == 32 )
+    {
+      v92 = 1;
+      do
+      {
+        --v91;
+        v93 = v92;
+        if ( v91 == -1 )
+        {
+          *(v89 + 25) = v92;
+          goto LABEL_109;
+        }
+        ++v92;
+      }
+      while ( *(v89 + v91 + 27) == 32 );
+      *(v89 + 25) = v93;
+    }
+LABEL_109:
+    *(v89 + 64) = 1;
+    *(v89 + 48) = CMemberScriptBinding0<CDOTABaseAbility *,int (CDOTABaseAbility::*)(void),int>::Call;
+    *(v89 + 56) = CDOTABaseAbility::GetHeroLevelRequiredToUpgrade;
+    v94 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(&v2->m_FunctionBindings)];
+    *(v94 + 24) = 6;
+    *(v94 + 16) = "";
+    *v94 = "IsPassive";
+    *(v94 + 8) = "IsPassive";
+    v95 = *(v94 + 26);
+    *(v94 + 25) = 0;
+    v96 = v95 - 1;
+    if ( v96 >= 0 && *(v94 + v96 + 27) == 32 )
+    {
+      v97 = 1;
+      do
+      {
+        --v96;
+        v98 = v97;
+        if ( v96 == -1 )
+        {
+          *(v94 + 25) = v97;
+          goto LABEL_115;
+        }
+        ++v97;
+      }
+      while ( *(v94 + v96 + 27) == 32 );
+      *(v94 + 25) = v98;
+    }
+LABEL_115:
+    *(v94 + 64) = 1;
+    *(v94 + 48) = CMemberScriptBinding0<CDOTABaseAbility *,bool (CDOTABaseAbility::*)(void),bool>::Call;
+    *(v94 + 56) = CDOTABaseAbility::IsPassive;
+    v99 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(&v2->m_FunctionBindings)];
+    *(v99 + 24) = 6;
+    *(v99 + 16) = "";
+    *v99 = "IsToggle";
+    *(v99 + 8) = "IsToggle";
+    v100 = *(v99 + 26);
+    *(v99 + 25) = 0;
+    v101 = v100 - 1;
+    if ( v101 >= 0 && *(v99 + v101 + 27) == 32 )
+    {
+      v102 = 1;
+      do
+      {
+        --v101;
+        v103 = v102;
+        if ( v101 == -1 )
+        {
+          *(v99 + 25) = v102;
+          goto LABEL_121;
+        }
+        ++v102;
+      }
+      while ( *(v99 + v101 + 27) == 32 );
+      *(v99 + 25) = v103;
+    }
+LABEL_121:
+    *(v99 + 64) = 1;
+    *(v99 + 48) = CMemberScriptBinding0<CDOTABaseAbility *,bool (CDOTABaseAbility::*)(void),bool>::Call;
+    *(v99 + 56) = CDOTABaseAbility::IsToggle;
+    v104 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(&v2->m_FunctionBindings)];
+    *(v104 + 24) = 6;
+    *(v104 + 16) = "";
+    *v104 = "IsHidden";
+    *(v104 + 8) = "IsHidden";
+    v105 = *(v104 + 26);
+    *(v104 + 25) = 0;
+    v106 = v105 - 1;
+    if ( v106 >= 0 && *(v104 + v106 + 27) == 32 )
+    {
+      v107 = 1;
+      do
+      {
+        --v106;
+        v108 = v107;
+        if ( v106 == -1 )
+        {
+          *(v104 + 25) = v107;
+          goto LABEL_127;
+        }
+        ++v107;
+      }
+      while ( *(v104 + v106 + 27) == 32 );
+      *(v104 + 25) = v108;
+    }
+LABEL_127:
+    *(v104 + 64) = 1;
+    *(v104 + 48) = CMemberScriptBinding0<CDOTABaseAbility *,bool (CDOTABaseAbility::*)(void),bool>::Call;
+    *(v104 + 56) = CDOTABaseAbility::IsHidden;
+    v109 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(&v2->m_FunctionBindings)];
+    *(v109 + 24) = 6;
+    *(v109 + 16) = "";
+    *v109 = "IsActivated";
+    *(v109 + 8) = "IsActivated";
+    v110 = *(v109 + 26);
+    *(v109 + 25) = 0;
+    v111 = v110 - 1;
+    if ( v111 >= 0 && *(v109 + v111 + 27) == 32 )
+    {
+      v112 = 1;
+      do
+      {
+        --v111;
+        v113 = v112;
+        if ( v111 == -1 )
+        {
+          *(v109 + 25) = v112;
+          goto LABEL_133;
+        }
+        ++v112;
+      }
+      while ( *(v109 + v111 + 27) == 32 );
+      *(v109 + 25) = v113;
+    }
+LABEL_133:
+    *(v109 + 64) = 1;
+    *(v109 + 48) = CMemberScriptBinding0<CDOTABaseAbility *,bool (CDOTABaseAbility::*)(void),bool>::Call;
+    *(v109 + 56) = CDOTABaseAbility::IsActivated;
+    v114 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(&v2->m_FunctionBindings)];
+    *(v114 + 24) = 6;
+    *(v114 + 16) = "";
+    *v114 = "IsCosmetic";
+    *(v114 + 8) = "Script_IsCosmetic";
+    v115 = *(v114 + 26);
+    v116 = v115++;
+    *(v114 + v116 + 27) = 31;
+    *(v114 + 26) = v115;
+    v117 = v115 - 1;
+    *(v114 + 25) = 0;
+    if ( v117 >= 0 && *(v114 + v117 + 27) == 32 )
+    {
+      v118 = 1;
+      do
+      {
+        --v117;
+        v119 = v118;
+        if ( v117 == -1 )
+        {
+          *(v114 + 25) = v118;
+          goto LABEL_139;
+        }
+        ++v118;
+      }
+      while ( *(v114 + v117 + 27) == 32 );
+      *(v114 + 25) = v119;
+    }
+LABEL_139:
+    *(v114 + 64) = 1;
+    *(v114 + 48) = CMemberScriptBinding1<CDOTABaseAbility *,bool (CDOTABaseAbility::*)(HSCRIPT__ *),bool,HSCRIPT__ *>::Call;
+    *(v114 + 56) = CDOTABaseAbility::Script_IsCosmetic;
+    *(v114 + 40) = s_CDOTABaseAbility_Script_IsCosmetic_packed_arg_names;
+    v120 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(&v2->m_FunctionBindings)];
+    *(v120 + 24) = 6;
+    *(v120 + 16) = "";
+    *v120 = "IsSharedWithTeammates";
+    *(v120 + 8) = "IsSharedWithTeammates";
+    v121 = *(v120 + 26);
+    *(v120 + 25) = 0;
+    v122 = v121 - 1;
+    if ( v122 >= 0 && *(v120 + v122 + 27) == 32 )
+    {
+      v123 = 1;
+      do
+      {
+        --v122;
+        v124 = v123;
+        if ( v122 == -1 )
+        {
+          *(v120 + 25) = v123;
+          goto LABEL_145;
+        }
+        ++v123;
+      }
+      while ( *(v120 + v122 + 27) == 32 );
+      *(v120 + 25) = v124;
+    }
+LABEL_145:
+    *(v120 + 56) = 1761;
+    *(v120 + 48) = CMemberScriptBinding0<CDOTABaseAbility *,bool (CDOTABaseAbility::*)(void),bool>::Call;
+    *(v120 + 64) = 1;
+    v125 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(&v2->m_FunctionBindings)];
+    *(v125 + 24) = 0;
+    *(v125 + 16) = "";
+    *v125 = "SetHidden";
+    *(v125 + 8) = "SetHidden";
+    v126 = *(v125 + 26);
+    v127 = v126++;
+    *(v125 + v127 + 27) = 6;
+    *(v125 + 26) = v126;
+    v128 = v126 - 1;
+    *(v125 + 25) = 0;
+    if ( v128 >= 0 && *(v125 + v128 + 27) == 32 )
+    {
+      v129 = 1;
+      do
+      {
+        --v128;
+        v130 = v129;
+        if ( v128 == -1 )
+        {
+          *(v125 + 25) = v129;
+          goto LABEL_151;
+        }
+        ++v129;
+      }
+      while ( *(v125 + v128 + 27) == 32 );
+      *(v125 + 25) = v130;
+    }
+LABEL_151:
+    *(v125 + 64) = 1;
+    *(v125 + 48) = CMemberScriptBinding1<CDOTABaseAbility *,void (CDOTABaseAbility::*)(bool),void,bool>::Call;
+    *(v125 + 56) = CDOTABaseAbility::SetHidden;
+    *(v125 + 40) = s_CDOTABaseAbility_SetHidden_packed_arg_names;
+    v131 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(&v2->m_FunctionBindings)];
+    *(v131 + 24) = 0;
+    *(v131 + 16) = "";
+    *v131 = "SetActivated";
+    *(v131 + 8) = "SetActivated";
+    v132 = *(v131 + 26);
+    v133 = v132++;
+    *(v131 + v133 + 27) = 6;
+    *(v131 + 26) = v132;
+    v134 = v132 - 1;
+    *(v131 + 25) = 0;
+    if ( v134 >= 0 && *(v131 + v134 + 27) == 32 )
+    {
+      v135 = 1;
+      do
+      {
+        --v134;
+        v136 = v135;
+        if ( v134 == -1 )
+        {
+          *(v131 + 25) = v135;
+          goto LABEL_157;
+        }
+        ++v135;
+      }
+      while ( *(v131 + v134 + 27) == 32 );
+      *(v131 + 25) = v136;
+    }
+LABEL_157:
+    *(v131 + 64) = 1;
+    *(v131 + 48) = CMemberScriptBinding1<CDOTABaseAbility *,void (CDOTABaseAbility::*)(bool),void,bool>::Call;
+    *(v131 + 56) = CDOTABaseAbility::SetActivated;
+    *(v131 + 40) = s_CDOTABaseAbility_SetActivated_packed_arg_names;
+    v137 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(&v2->m_FunctionBindings)];
+    *(v137 + 24) = 0;
+    *(v137 + 16) = "";
+    *v137 = "ToggleAutoCast";
+    *(v137 + 8) = "ToggleAutoCast";
+    v138 = *(v137 + 26);
+    *(v137 + 25) = 0;
+    v139 = v138 - 1;
+    if ( v139 >= 0 && *(v137 + v139 + 27) == 32 )
+    {
+      v140 = 1;
+      do
+      {
+        --v139;
+        v141 = v140;
+        if ( v139 == -1 )
+        {
+          *(v137 + 25) = v140;
+          goto LABEL_163;
+        }
+        ++v140;
+      }
+      while ( *(v137 + v139 + 27) == 32 );
+      *(v137 + 25) = v141;
+    }
+LABEL_163:
+    *(v137 + 64) = 1;
+    *(v137 + 48) = CMemberScriptBinding0<CDOTABaseAbility *,void (CDOTABaseAbility::*)(void),void>::Call;
+    *(v137 + 56) = CDOTABaseAbility::ToggleAutoCast;
+    v142 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(&v2->m_FunctionBindings)];
+    *(v142 + 24) = 6;
+    *(v142 + 16) = "";
+    *v142 = "GetAutoCastState";
+    *(v142 + 8) = "GetAutoCastState";
+    v143 = *(v142 + 26);
+    *(v142 + 25) = 0;
+    v144 = v143 - 1;
+    if ( v144 >= 0 && *(v142 + v144 + 27) == 32 )
+    {
+      v145 = 1;
+      do
+      {
+        --v144;
+        v146 = v145;
+        if ( v144 == -1 )
+        {
+          *(v142 + 25) = v145;
+          goto LABEL_169;
+        }
+        ++v145;
+      }
+      while ( *(v142 + v144 + 27) == 32 );
+      *(v142 + 25) = v146;
+    }
+LABEL_169:
+    *(v142 + 64) = 1;
+    *(v142 + 48) = CMemberScriptBinding0<CDOTABaseAbility *,bool (CDOTABaseAbility::*)(void),bool>::Call;
+    *(v142 + 56) = CDOTABaseAbility::GetAutoCastState;
+    v147 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(&v2->m_FunctionBindings)];
+    *(v147 + 24) = 6;
+    *(v147 + 16) = "";
+    *v147 = "IsItem";
+    *(v147 + 8) = "IsItem";
+    v148 = *(v147 + 26);
+    *(v147 + 25) = 0;
+    v149 = v148 - 1;
+    if ( v149 >= 0 && *(v147 + v149 + 27) == 32 )
+    {
+      v150 = 1;
+      do
+      {
+        --v149;
+        v151 = v150;
+        if ( v149 == -1 )
+        {
+          *(v147 + 25) = v150;
+          goto LABEL_175;
+        }
+        ++v150;
+      }
+      while ( *(v147 + v149 + 27) == 32 );
+      *(v147 + 25) = v151;
+    }
+LABEL_175:
+    *(v147 + 56) = 1785;
+    *(v147 + 48) = CMemberScriptBinding0<CDOTABaseAbility *,bool (CDOTABaseAbility::*)(void),bool>::Call;
+    *(v147 + 64) = 1;
+    v152 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(&v2->m_FunctionBindings)];
+    *(v152 + 24) = 1;
+    *(v152 + 16) = "";
+    *v152 = "GetChannelTime";
+    *(v152 + 8) = "GetChannelTime";
+    v153 = *(v152 + 26);
+    *(v152 + 25) = 0;
+    v154 = v153 - 1;
+    if ( v154 >= 0 && *(v152 + v154 + 27) == 32 )
+    {
+      v155 = 1;
+      do
+      {
+        --v154;
+        v156 = v155;
+        if ( v154 == -1 )
+        {
+          *(v152 + 25) = v155;
+          goto LABEL_181;
+        }
+        ++v155;
+      }
+      while ( *(v152 + v154 + 27) == 32 );
+      *(v152 + 25) = v156;
+    }
+LABEL_181:
+    *(v152 + 56) = 1801;
+    *(v152 + 48) = CMemberScriptBinding0<CDOTABaseAbility *,float (CDOTABaseAbility::*)(void),float>::Call;
+    *(v152 + 64) = 1;
+    v157 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(&v2->m_FunctionBindings)];
+    *(v157 + 24) = 1;
+    *(v157 + 16) = "";
+    *v157 = "GetChannelStartTime";
+    *(v157 + 8) = "GetChannelStartTime";
+    v158 = *(v157 + 26);
+    *(v157 + 25) = 0;
+    v159 = v158 - 1;
+    if ( v159 >= 0 && *(v157 + v159 + 27) == 32 )
+    {
+      v160 = 1;
+      do
+      {
+        --v159;
+        v161 = v160;
+        if ( v159 == -1 )
+        {
+          *(v157 + 25) = v160;
+          goto LABEL_187;
+        }
+        ++v160;
+      }
+      while ( *(v157 + v159 + 27) == 32 );
+      *(v157 + 25) = v161;
+    }
+LABEL_187:
+    *(v157 + 64) = 1;
+    *(v157 + 48) = CMemberScriptBinding0<CDOTABaseAbility *,float (CDOTABaseAbility::*)(void),float>::Call;
+    *(v157 + 56) = CDOTABaseAbility::GetChannelStartTime;
+    v162 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(&v2->m_FunctionBindings)];
+    *(v162 + 24) = 0;
+    *(v162 + 16) = "";
+    *v162 = "EndChannel";
+    *(v162 + 8) = "EndChannel";
+    v163 = *(v162 + 26);
+    v164 = v163++;
+    *(v162 + v164 + 27) = 6;
+    *(v162 + 26) = v163;
+    v165 = v163 - 1;
+    *(v162 + 25) = 0;
+    if ( v165 >= 0 && *(v162 + v165 + 27) == 32 )
+    {
+      v166 = 1;
+      do
+      {
+        --v165;
+        v167 = v166;
+        if ( v165 == -1 )
+        {
+          *(v162 + 25) = v166;
+          goto LABEL_193;
+        }
+        ++v166;
+      }
+      while ( *(v162 + v165 + 27) == 32 );
+      *(v162 + 25) = v167;
+    }
+LABEL_193:
+    *(v162 + 64) = 1;
+    *(v162 + 48) = CMemberScriptBinding1<CDOTABaseAbility *,void (CDOTABaseAbility::*)(bool),void,bool>::Call;
+    *(v162 + 56) = CDOTABaseAbility::EndChannel;
+    *(v162 + 40) = s_CDOTABaseAbility_EndChannel_packed_arg_names;
+    v168 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(&v2->m_FunctionBindings)];
+    *(v168 + 24) = 0;
+    *(v168 + 16) = "";
+    *v168 = "ToggleAbility";
+    *(v168 + 8) = "ToggleAbility";
+    v169 = *(v168 + 26);
+    *(v168 + 25) = 0;
+    v170 = v169 - 1;
+    if ( v170 >= 0 && *(v168 + v170 + 27) == 32 )
+    {
+      v171 = 1;
+      do
+      {
+        --v170;
+        v172 = v171;
+        if ( v170 == -1 )
+        {
+          *(v168 + 25) = v171;
+          goto LABEL_199;
+        }
+        ++v171;
+      }
+      while ( *(v168 + v170 + 27) == 32 );
+      *(v168 + 25) = v172;
+    }
+LABEL_199:
+    *(v168 + 64) = 1;
+    *(v168 + 48) = CMemberScriptBinding0<CDOTABaseAbility *,void (CDOTABaseAbility::*)(void),void>::Call;
+    *(v168 + 56) = CDOTABaseAbility::ToggleAbility;
+    v173 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(&v2->m_FunctionBindings)];
+    *(v173 + 24) = 0;
+    *(v173 + 16) = "";
+    *v173 = "CastAbility";
+    *(v173 + 8) = "CastAbility";
+    v174 = *(v173 + 26);
+    *(v173 + 25) = 0;
+    v175 = v174 - 1;
+    if ( v175 >= 0 && *(v173 + v175 + 27) == 32 )
+    {
+      v176 = 1;
+      do
+      {
+        --v175;
+        v177 = v176;
+        if ( v175 == -1 )
+        {
+          *(v173 + 25) = v176;
+          goto LABEL_205;
+        }
+        ++v176;
+      }
+      while ( *(v173 + v175 + 27) == 32 );
+      *(v173 + 25) = v177;
+    }
+LABEL_205:
+    *(v173 + 64) = 1;
+    *(v173 + 48) = CMemberScriptBinding0<CDOTABaseAbility *,void (CDOTABaseAbility::*)(void),void>::Call;
+    *(v173 + 56) = CDOTABaseAbility::CastAbility;
+    v178 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(&v2->m_FunctionBindings)];
+    *(v178 + 24) = 5;
+    *(v178 + 16) = "Gets the cast range of the ability.";
+    *v178 = "GetCastRange";
+    *(v178 + 8) = "Script_GetCastRange";
+    v179 = *(v178 + 26);
+    *(v178 + v179 + 27) = 3;
+    v180 = v179 + 1;
+    v179 += 2;
+    *(v178 + v180 + 27) = 31;
+    *(v178 + 26) = v179;
+    v181 = v179 - 1;
+    *(v178 + 25) = 0;
+    if ( v181 >= 0 && *(v178 + v181 + 27) == 32 )
+    {
+      v182 = 1;
+      do
+      {
+        --v181;
+        v183 = v182;
+        if ( v181 == -1 )
+        {
+          *(v178 + 25) = v182;
+          goto LABEL_211;
+        }
+        ++v182;
+      }
+      while ( *(v178 + v181 + 27) == 32 );
+      *(v178 + 25) = v183;
+    }
+LABEL_211:
+    *(v178 + 64) = 1;
+    *(v178 + 48) = CMemberScriptBinding2<CDOTABaseAbility *,int (CDOTABaseAbility::*)(Vector const&,HSCRIPT__ *),int,Vector const&,HSCRIPT__ *>::Call;
+    *(v178 + 56) = CDOTABaseAbility::Script_GetCastRange;
+    *(v178 + 40) = s_CDOTABaseAbility_Script_GetCastRange_packed_arg_names;
+    v184 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(&v2->m_FunctionBindings)];
+    *(v184 + 24) = 1;
+    *(v184 + 16) = "";
+    *v184 = "GetCastPoint";
+    *(v184 + 8) = "GetCastPoint";
+    v185 = *(v184 + 26);
+    *(v184 + 25) = 0;
+    v186 = v185 - 1;
+    if ( v186 >= 0 && *(v184 + v186 + 27) == 32 )
+    {
+      v187 = 1;
+      do
+      {
+        --v186;
+        v188 = v187;
+        if ( v186 == -1 )
+        {
+          *(v184 + 25) = v187;
+          goto LABEL_217;
+        }
+        ++v187;
+      }
+      while ( *(v184 + v186 + 27) == 32 );
+      *(v184 + 25) = v188;
+    }
+LABEL_217:
+    *(v184 + 56) = 1849;
+    *(v184 + 48) = CMemberScriptBinding0<CDOTABaseAbility *,float (CDOTABaseAbility::*)(void),float>::Call;
+    *(v184 + 64) = 1;
+    v189 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(&v2->m_FunctionBindings)];
+    *(v189 + 24) = 6;
+    *(v189 + 16) = "";
+    *v189 = "ContinueCasting";
+    *(v189 + 8) = "ContinueCasting";
+    v190 = *(v189 + 26);
+    *(v189 + 25) = 0;
+    v191 = v190 - 1;
+    if ( v191 >= 0 && *(v189 + v191 + 27) == 32 )
+    {
+      v192 = 1;
+      do
+      {
+        --v191;
+        v193 = v192;
+        if ( v191 == -1 )
+        {
+          *(v189 + 25) = v192;
+          goto LABEL_223;
+        }
+        ++v192;
+      }
+      while ( *(v189 + v191 + 27) == 32 );
+      *(v189 + 25) = v193;
+    }
+LABEL_223:
+    *(v189 + 56) = 1865;
+    *(v189 + 48) = CMemberScriptBinding0<CDOTABaseAbility *,bool (CDOTABaseAbility::*)(void),bool>::Call;
+    *(v189 + 64) = 1;
+    v194 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(&v2->m_FunctionBindings)];
+    *(v194 + 24) = 6;
+    *(v194 + 16) = "";
+    *v194 = "GetAnimationIgnoresModelScale";
+    *(v194 + 8) = "GetAnimationIgnoresModelScale";
+    v195 = *(v194 + 26);
+    *(v194 + 25) = 0;
+    v196 = v195 - 1;
+    if ( v196 >= 0 && *(v194 + v196 + 27) == 32 )
+    {
+      v197 = 1;
+      do
+      {
+        --v196;
+        v198 = v197;
+        if ( v196 == -1 )
+        {
+          *(v194 + 25) = v197;
+          goto LABEL_229;
+        }
+        ++v197;
+      }
+      while ( *(v194 + v196 + 27) == 32 );
+      *(v194 + 25) = v198;
+    }
+LABEL_229:
+    *(v194 + 64) = 1;
+    *(v194 + 48) = CMemberScriptBinding0<CDOTABaseAbility *,bool (CDOTABaseAbility::*)(void),bool>::Call;
+    *(v194 + 56) = CDOTABaseAbility::GetAnimationIgnoresModelScale;
+    v199 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(&v2->m_FunctionBindings)];
+    *(v199 + 24) = 0;
+    *(v199 + 16) = "";
+    *v199 = "SetOverrideCastPoint";
+    *(v199 + 8) = "SetOverrideCastPoint";
+    v200 = *(v199 + 26);
+    v201 = v200++;
+    *(v199 + v201 + 27) = 1;
+    *(v199 + 26) = v200;
+    v202 = v200 - 1;
+    *(v199 + 25) = 0;
+    if ( v202 >= 0 && *(v199 + v202 + 27) == 32 )
+    {
+      v203 = 1;
+      do
+      {
+        --v202;
+        v204 = v203;
+        if ( v202 == -1 )
+        {
+          *(v199 + 25) = v203;
+          goto LABEL_235;
+        }
+        ++v203;
+      }
+      while ( *(v199 + v202 + 27) == 32 );
+      *(v199 + 25) = v204;
+    }
+LABEL_235:
+    *(v199 + 64) = 1;
+    *(v199 + 48) = CMemberScriptBinding1<CDOTABaseAbility *,void (CDOTABaseAbility::*)(float),void,float>::Call;
+    *(v199 + 56) = CDOTABaseAbility::SetOverrideCastPoint;
+    *(v199 + 40) = s_CDOTABaseAbility_SetOverrideCastPoint_packed_arg_names;
+    v205 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(&v2->m_FunctionBindings)];
+    *(v205 + 24) = 1;
+    *(v205 + 16) = "";
+    *v205 = "GetModifierValue";
+    *(v205 + 8) = "GetModifierValue";
+    v206 = *(v205 + 26);
+    *(v205 + 25) = 0;
+    v207 = v206 - 1;
+    if ( v207 >= 0 && *(v205 + v207 + 27) == 32 )
+    {
+      v208 = 1;
+      do
+      {
+        --v207;
+        v209 = v208;
+        if ( v207 == -1 )
+        {
+          *(v205 + 25) = v208;
+          goto LABEL_241;
+        }
+        ++v208;
+      }
+      while ( *(v205 + v207 + 27) == 32 );
+      *(v205 + 25) = v209;
+    }
+LABEL_241:
+    *(v205 + 56) = 1889;
+    *(v205 + 48) = CMemberScriptBinding0<CDOTABaseAbility *,float (CDOTABaseAbility::*)(void),float>::Call;
+    *(v205 + 64) = 1;
+    v210 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(&v2->m_FunctionBindings)];
+    *(v210 + 24) = 1;
+    *(v210 + 16) = "";
+    *v210 = "GetModifierValueBonus";
+    *(v210 + 8) = "GetModifierValueBonus";
+    v211 = *(v210 + 26);
+    *(v210 + 25) = 0;
+    v212 = v211 - 1;
+    if ( v212 >= 0 && *(v210 + v212 + 27) == 32 )
+    {
+      v213 = 1;
+      do
+      {
+        --v212;
+        v214 = v213;
+        if ( v212 == -1 )
+        {
+          *(v210 + 25) = v213;
+          goto LABEL_247;
+        }
+        ++v213;
+      }
+      while ( *(v210 + v212 + 27) == 32 );
+      *(v210 + 25) = v214;
+    }
+LABEL_247:
+    *(v210 + 56) = 1897;
+    *(v210 + 48) = CMemberScriptBinding0<CDOTABaseAbility *,float (CDOTABaseAbility::*)(void),float>::Call;
+    *(v210 + 64) = 1;
+    v215 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(&v2->m_FunctionBindings)];
+    *(v215 + 24) = 0;
+    *(v215 + 16) = "";
+    *v215 = "SetRefCountsModifiers";
+    *(v215 + 8) = "SetRefCountsModifiers";
+    v216 = *(v215 + 26);
+    v217 = v216++;
+    *(v215 + v217 + 27) = 6;
+    *(v215 + 26) = v216;
+    v218 = v216 - 1;
+    *(v215 + 25) = 0;
+    if ( v218 >= 0 && *(v215 + v218 + 27) == 32 )
+    {
+      v219 = 1;
+      do
+      {
+        --v218;
+        v220 = v219;
+        if ( v218 == -1 )
+        {
+          *(v215 + 25) = v219;
+          goto LABEL_253;
+        }
+        ++v219;
+      }
+      while ( *(v215 + v218 + 27) == 32 );
+      *(v215 + 25) = v220;
+    }
+LABEL_253:
+    *(v215 + 64) = 1;
+    *(v215 + 48) = CMemberScriptBinding1<CDOTABaseAbility *,void (CDOTABaseAbility::*)(bool),void,bool>::Call;
+    *(v215 + 56) = CDOTABaseAbility::SetRefCountsModifiers;
+    *(v215 + 40) = s_CDOTABaseAbility_SetRefCountsModifiers_packed_arg_names;
+    v221 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(&v2->m_FunctionBindings)];
+    *(v221 + 24) = 6;
+    *(v221 + 16) = "";
+    *v221 = "RefCountsModifiers";
+    *(v221 + 8) = "RefCountsModifiers";
+    v222 = *(v221 + 26);
+    *(v221 + 25) = 0;
+    v223 = v222 - 1;
+    if ( v223 >= 0 && *(v221 + v223 + 27) == 32 )
+    {
+      v224 = 1;
+      do
+      {
+        --v223;
+        v225 = v224;
+        if ( v223 == -1 )
+        {
+          *(v221 + 25) = v224;
+          goto LABEL_259;
+        }
+        ++v224;
+      }
+      while ( *(v221 + v223 + 27) == 32 );
+      *(v221 + 25) = v225;
+    }
+LABEL_259:
+    *(v221 + 64) = 1;
+    *(v221 + 48) = CMemberScriptBinding0<CDOTABaseAbility *,bool (CDOTABaseAbility::*)(void),bool>::Call;
+    *(v221 + 56) = CDOTABaseAbility::RefCountsModifiers;
+    v226 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(&v2->m_FunctionBindings)];
+    *(v226 + 24) = 0;
+    *(v226 + 16) = "";
+    *v226 = "IncrementModifierRefCount";
+    *(v226 + 8) = "IncrementModifierRefCount";
+    v227 = *(v226 + 26);
+    *(v226 + 25) = 0;
+    v228 = v227 - 1;
+    if ( v228 >= 0 && *(v226 + v228 + 27) == 32 )
+    {
+      v229 = 1;
+      do
+      {
+        --v228;
+        v230 = v229;
+        if ( v228 == -1 )
+        {
+          *(v226 + 25) = v229;
+          goto LABEL_265;
+        }
+        ++v229;
+      }
+      while ( *(v226 + v228 + 27) == 32 );
+      *(v226 + 25) = v230;
+    }
+LABEL_265:
+    *(v226 + 64) = 1;
+    *(v226 + 48) = CMemberScriptBinding0<CDOTABaseAbility *,void (CDOTABaseAbility::*)(void),void>::Call;
+    *(v226 + 56) = CDOTABaseAbility::IncrementModifierRefCount;
+    v231 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(&v2->m_FunctionBindings)];
+    *(v231 + 24) = 0;
+    *(v231 + 16) = "";
+    *v231 = "DecrementModifierRefCount";
+    *(v231 + 8) = "DecrementModifierRefCount";
+    v232 = *(v231 + 26);
+    *(v231 + 25) = 0;
+    v233 = v232 - 1;
+    if ( v233 >= 0 && *(v231 + v233 + 27) == 32 )
+    {
+      v234 = 1;
+      do
+      {
+        --v233;
+        v235 = v234;
+        if ( v233 == -1 )
+        {
+          *(v231 + 25) = v234;
+          goto LABEL_271;
+        }
+        ++v234;
+      }
+      while ( *(v231 + v233 + 27) == 32 );
+      *(v231 + 25) = v235;
+    }
+LABEL_271:
+    *(v231 + 64) = 1;
+    *(v231 + 48) = CMemberScriptBinding0<CDOTABaseAbility *,void (CDOTABaseAbility::*)(void),void>::Call;
+    *(v231 + 56) = CDOTABaseAbility::DecrementModifierRefCount;
+    v236 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(&v2->m_FunctionBindings)];
+    *(v236 + 24) = 5;
+    *(v236 + 16) = "";
+    *v236 = "NumModifiersUsingAbility";
+    *(v236 + 8) = "NumModifiersUsingAbility";
+    v237 = *(v236 + 26);
+    *(v236 + 25) = 0;
+    v238 = v237 - 1;
+    if ( v238 >= 0 && *(v236 + v238 + 27) == 32 )
+    {
+      v239 = 1;
+      do
+      {
+        --v238;
+        v240 = v239;
+        if ( v238 == -1 )
+        {
+          *(v236 + 25) = v239;
+          goto LABEL_277;
+        }
+        ++v239;
+      }
+      while ( *(v236 + v238 + 27) == 32 );
+      *(v236 + 25) = v240;
+    }
+LABEL_277:
+    *(v236 + 64) = 1;
+    *(v236 + 48) = CMemberScriptBinding0<CDOTABaseAbility *,int (CDOTABaseAbility::*)(void),int>::Call;
+    *(v236 + 56) = CDOTABaseAbility::NumModifiersUsingAbility;
+    v241 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(&v2->m_FunctionBindings)];
+    *(v241 + 24) = 6;
+    *(v241 + 16) = "Returns whether the ability can be cast.";
+    *v241 = "IsFullyCastable";
+    *(v241 + 8) = "IsFullyCastable";
+    v242 = *(v241 + 26);
+    *(v241 + 25) = 0;
+    v243 = v242 - 1;
+    if ( v243 >= 0 && *(v241 + v243 + 27) == 32 )
+    {
+      v244 = 1;
+      do
+      {
+        --v243;
+        v245 = v244;
+        if ( v243 == -1 )
+        {
+          *(v241 + 25) = v244;
+          goto LABEL_283;
+        }
+        ++v244;
+      }
+      while ( *(v241 + v243 + 27) == 32 );
+      *(v241 + 25) = v245;
+    }
+LABEL_283:
+    *(v241 + 64) = 1;
+    *(v241 + 48) = CMemberScriptBinding0<CDOTABaseAbility *,bool (CDOTABaseAbility::*)(void),bool>::Call;
+    *(v241 + 56) = CDOTABaseAbility::IsFullyCastable;
+    v246 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(&v2->m_FunctionBindings)];
+    *(v246 + 24) = 6;
+    *(v246 + 16) = "";
+    *v246 = "IsAttributeBonus";
+    *(v246 + 8) = "IsAttributeBonus";
+    v247 = *(v246 + 26);
+    *(v246 + 25) = 0;
+    v248 = v247 - 1;
+    if ( v248 >= 0 && *(v246 + v248 + 27) == 32 )
+    {
+      v249 = 1;
+      do
+      {
+        --v248;
+        v250 = v249;
+        if ( v248 == -1 )
+        {
+          *(v246 + 25) = v249;
+          goto LABEL_289;
+        }
+        ++v249;
+      }
+      while ( *(v246 + v248 + 27) == 32 );
+      *(v246 + 25) = v250;
+    }
+LABEL_289:
+    *(v246 + 56) = 1905;
+    *(v246 + 48) = CMemberScriptBinding0<CDOTABaseAbility *,bool (CDOTABaseAbility::*)(void),bool>::Call;
+    *(v246 + 64) = 1;
+    v251 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(&v2->m_FunctionBindings)];
+    *(v251 + 24) = 6;
+    *(v251 + 16) = "";
+    *v251 = "ProcsMagicStick";
+    *(v251 + 8) = "ProcsMagicStick";
+    v252 = *(v251 + 26);
+    *(v251 + 25) = 0;
+    v253 = v252 - 1;
+    if ( v253 >= 0 && *(v251 + v253 + 27) == 32 )
+    {
+      v254 = 1;
+      do
+      {
+        --v253;
+        v255 = v254;
+        if ( v253 == -1 )
+        {
+          *(v251 + 25) = v254;
+          goto LABEL_295;
+        }
+        ++v254;
+      }
+      while ( *(v251 + v253 + 27) == 32 );
+      *(v251 + 25) = v255;
+    }
+LABEL_295:
+    *(v251 + 56) = 1913;
+    *(v251 + 48) = CMemberScriptBinding0<CDOTABaseAbility *,bool (CDOTABaseAbility::*)(void),bool>::Call;
+    *(v251 + 64) = 1;
+    v256 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(&v2->m_FunctionBindings)];
+    *(v256 + 24) = 0;
+    *(v256 + 16) = "";
+    *v256 = "StartCooldown";
+    *(v256 + 8) = "StartCooldown";
+    v257 = *(v256 + 26);
+    v258 = v257++;
+    *(v256 + v258 + 27) = 1;
+    *(v256 + 26) = v257;
+    v259 = v257 - 1;
+    *(v256 + 25) = 0;
+    if ( v259 >= 0 && *(v256 + v259 + 27) == 32 )
+    {
+      v260 = 1;
+      do
+      {
+        --v259;
+        v261 = v260;
+        if ( v259 == -1 )
+        {
+          *(v256 + 25) = v260;
+          goto LABEL_301;
+        }
+        ++v260;
+      }
+      while ( *(v256 + v259 + 27) == 32 );
+      *(v256 + 25) = v261;
+    }
+LABEL_301:
+    *(v256 + 56) = 1929;
+    *(v256 + 48) = CMemberScriptBinding1<CDOTABaseAbility *,void (CDOTABaseAbility::*)(float),void,float>::Call;
+    *(v256 + 64) = 1;
+    *(v256 + 40) = s_CDOTABaseAbility_StartCooldown_packed_arg_names;
+    v262 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(&v2->m_FunctionBindings)];
+    *(v262 + 24) = 0;
+    *(v262 + 16) = "Clear the cooldown remaining on this ability.";
+    *v262 = "EndCooldown";
+    *(v262 + 8) = "EndCooldown";
+    v263 = *(v262 + 26);
+    *(v262 + 25) = 0;
+    v264 = v263 - 1;
+    if ( v264 >= 0 && *(v262 + v264 + 27) == 32 )
+    {
+      v265 = 1;
+      do
+      {
+        --v264;
+        v266 = v265;
+        if ( v264 == -1 )
+        {
+          *(v262 + 25) = v265;
+          goto LABEL_307;
+        }
+        ++v265;
+      }
+      while ( *(v262 + v264 + 27) == 32 );
+      *(v262 + 25) = v266;
+    }
+LABEL_307:
+    *(v262 + 64) = 1;
+    *(v262 + 48) = CMemberScriptBinding0<CDOTABaseAbility *,void (CDOTABaseAbility::*)(void),void>::Call;
+    *(v262 + 56) = CDOTABaseAbility::EndCooldown;
+    v267 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(&v2->m_FunctionBindings)];
+    *(v267 + 24) = 1;
+    *(v267 + 16) = "Get the cooldown duration for this ability at a given level, not the amount of cooldown actually left.";
+    *v267 = "GetCooldown";
+    *(v267 + 8) = "GetCooldown";
+    v268 = *(v267 + 26);
+    v269 = v268++;
+    *(v267 + v269 + 27) = 5;
+    *(v267 + 26) = v268;
+    v270 = v268 - 1;
+    *(v267 + 25) = 0;
+    if ( v270 >= 0 && *(v267 + v270 + 27) == 32 )
+    {
+      v271 = 1;
+      do
+      {
+        --v270;
+        v272 = v271;
+        if ( v270 == -1 )
+        {
+          *(v267 + 25) = v271;
+          goto LABEL_313;
+        }
+        ++v271;
+      }
+      while ( *(v267 + v270 + 27) == 32 );
+      *(v267 + 25) = v272;
+    }
+LABEL_313:
+    *(v267 + 56) = 1937;
+    *(v267 + 48) = CMemberScriptBinding1<CDOTABaseAbility *,float (CDOTABaseAbility::*)(int),float,int>::Call;
+    *(v267 + 64) = 1;
+    *(v267 + 40) = s_CDOTABaseAbility_GetCooldown_packed_arg_names;
+    v273 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(&v2->m_FunctionBindings)];
+    *(v273 + 24) = 6;
+    *(v273 + 16) = "";
+    *v273 = "IsCooldownReady";
+    *(v273 + 8) = "IsCooldownReady";
+    v274 = *(v273 + 26);
+    *(v273 + 25) = 0;
+    v275 = v274 - 1;
+    if ( v275 >= 0 && *(v273 + v275 + 27) == 32 )
+    {
+      v276 = 1;
+      do
+      {
+        --v275;
+        v277 = v276;
+        if ( v275 == -1 )
+        {
+          *(v273 + 25) = v276;
+          goto LABEL_319;
+        }
+        ++v276;
+      }
+      while ( *(v273 + v275 + 27) == 32 );
+      *(v273 + 25) = v277;
+    }
+LABEL_319:
+    *(v273 + 56) = 1961;
+    *(v273 + 48) = CMemberScriptBinding0<CDOTABaseAbility *,bool (CDOTABaseAbility::*)(void),bool>::Call;
+    *(v273 + 64) = 1;
+    v278 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(&v2->m_FunctionBindings)];
+    *(v278 + 24) = 30;
+    *(v278 + 16) = "";
+    *v278 = "GetSharedCooldownName";
+    *(v278 + 8) = "GetSharedCooldownName";
+    v279 = *(v278 + 26);
+    *(v278 + 25) = 0;
+    v280 = v279 - 1;
+    if ( v280 >= 0 && *(v278 + v280 + 27) == 32 )
+    {
+      v281 = 1;
+      do
+      {
+        --v280;
+        v282 = v281;
+        if ( v280 == -1 )
+        {
+          *(v278 + 25) = v281;
+          goto LABEL_325;
+        }
+        ++v281;
+      }
+      while ( *(v278 + v280 + 27) == 32 );
+      *(v278 + 25) = v282;
+    }
+LABEL_325:
+    *(v278 + 64) = 1;
+    *(v278 + 48) = CMemberScriptBinding0<CDOTABaseAbility *,char const* (CDOTABaseAbility::*)(void),char const*>::Call;
+    *(v278 + 56) = CDOTABaseAbility::GetSharedCooldownName;
+    v283 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(&v2->m_FunctionBindings)];
+    *(v283 + 24) = 1;
+    *(v283 + 16) = "";
+    *v283 = "GetCooldownTime";
+    *(v283 + 8) = "GetCooldownTime";
+    v284 = *(v283 + 26);
+    *(v283 + 25) = 0;
+    v285 = v284 - 1;
+    if ( v285 >= 0 && *(v283 + v285 + 27) == 32 )
+    {
+      v286 = 0;
+      do
+      {
+        --v285;
+        ++v286;
+      }
+      while ( v285 != -1 && *(v283 + v285 + 27) == 32 );
+      *(v283 + 25) = v286;
+    }
+    *(v283 + 64) = 1;
+    *(v283 + 48) = CMemberScriptBinding0<CDOTABaseAbility *,float (CDOTABaseAbility::*)(void),float>::Call;
+    *(v283 + 56) = CDOTABaseAbility::GetCooldownTime;
+    v287 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(&v2->m_FunctionBindings)];
+    *(v287 + 24) = 1;
+    *(v287 + 16) = "";
+    *v287 = "GetCooldownTimeRemaining";
+    *(v287 + 8) = "GetCooldownTimeRemaining";
+    v288 = *(v287 + 26);
+    *(v287 + 25) = 0;
+    v289 = v288 - 1;
+    if ( v289 >= 0 && *(v287 + v289 + 27) == 32 )
+    {
+      v290 = 1;
+      do
+      {
+        --v289;
+        v291 = v290;
+        if ( v289 == -1 )
+        {
+          *(v287 + 25) = v290;
+          goto LABEL_337;
+        }
+        ++v290;
+      }
+      while ( *(v287 + v289 + 27) == 32 );
+      *(v287 + 25) = v291;
+    }
+LABEL_337:
+    *(v287 + 64) = 1;
+    *(v287 + 48) = CMemberScriptBinding0<CDOTABaseAbility *,float (CDOTABaseAbility::*)(void),float>::Call;
+    *(v287 + 56) = CDOTABaseAbility::GetCooldownTimeRemaining;
+    v292 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(&v2->m_FunctionBindings)];
+    *(v292 + 24) = 6;
+    *(v292 + 16) = "";
+    *v292 = "ShouldUseResources";
+    *(v292 + 8) = "ShouldUseResources";
+    v293 = *(v292 + 26);
+    *(v292 + 25) = 0;
+    v294 = v293 - 1;
+    if ( v294 >= 0 && *(v292 + v294 + 27) == 32 )
+    {
+      v295 = 1;
+      do
+      {
+        --v294;
+        v296 = v295;
+        if ( v294 == -1 )
+        {
+          *(v292 + 25) = v295;
+          goto LABEL_343;
+        }
+        ++v295;
+      }
+      while ( *(v292 + v294 + 27) == 32 );
+      *(v292 + 25) = v296;
+    }
+LABEL_343:
+    *(v292 + 56) = 1969;
+    *(v292 + 48) = CMemberScriptBinding0<CDOTABaseAbility *,bool (CDOTABaseAbility::*)(void),bool>::Call;
+    *(v292 + 64) = 1;
+    v297 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(&v2->m_FunctionBindings)];
+    *(v297 + 24) = 0;
+    *(v297 + 16) = "";
+    *v297 = "UseResources";
+    *(v297 + 8) = "Script_UseResources";
+    v298 = *(v297 + 26);
+    *(v297 + v298 + 27) = 6;
+    *(v297 + (v298 + 1) + 27) = 6;
+    v299 = v298 + 2;
+    v298 += 3;
+    *(v297 + v299 + 27) = 6;
+    *(v297 + 26) = v298;
+    v300 = v298 - 1;
+    *(v297 + 25) = 0;
+    if ( v300 >= 0 && *(v297 + v300 + 27) == 32 )
+    {
+      v301 = 1;
+      do
+      {
+        --v300;
+        v302 = v301;
+        if ( v300 == -1 )
+        {
+          *(v297 + 25) = v301;
+          goto LABEL_349;
+        }
+        ++v301;
+      }
+      while ( *(v297 + v300 + 27) == 32 );
+      *(v297 + 25) = v302;
+    }
+LABEL_349:
+    *(v297 + 64) = 1;
+    *(v297 + 48) = CMemberScriptBinding3<CDOTABaseAbility *,void (CDOTABaseAbility::*)(bool,bool,bool),void,bool,bool,bool>::Call;
+    *(v297 + 56) = CDOTABaseAbility::Script_UseResources;
+    *(v297 + 40) = s_CDOTABaseAbility_Script_UseResources_packed_arg_names;
+    v303 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(&v2->m_FunctionBindings)];
+    *(v303 + 24) = 0;
+    *(v303 + 16) = "";
+    *v303 = "PayManaCost";
+    *(v303 + 8) = "Script_PayManaCost";
+    v304 = *(v303 + 26);
+    *(v303 + 25) = 0;
+    v305 = v304 - 1;
+    if ( v305 >= 0 && *(v303 + v305 + 27) == 32 )
+    {
+      v306 = 1;
+      do
+      {
+        --v305;
+        v307 = v306;
+        if ( v305 == -1 )
+        {
+          *(v303 + 25) = v306;
+          goto LABEL_355;
+        }
+        ++v306;
+      }
+      while ( *(v303 + v305 + 27) == 32 );
+      *(v303 + 25) = v307;
+    }
+LABEL_355:
+    *(v303 + 64) = 1;
+    *(v303 + 48) = CMemberScriptBinding0<CDOTABaseAbility *,void (CDOTABaseAbility::*)(void),void>::Call;
+    *(v303 + 56) = CDOTABaseAbility::Script_PayManaCost;
+    v308 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(&v2->m_FunctionBindings)];
+    *(v308 + 24) = 0;
+    *(v308 + 16) = "";
+    *v308 = "RefundManaCost";
+    *(v308 + 8) = "RefundManaCost";
+    v309 = *(v308 + 26);
+    *(v308 + 25) = 0;
+    v310 = v309 - 1;
+    if ( v310 >= 0 && *(v308 + v310 + 27) == 32 )
+    {
+      v311 = 1;
+      do
+      {
+        --v310;
+        v312 = v311;
+        if ( v310 == -1 )
+        {
+          *(v308 + 25) = v311;
+          goto LABEL_361;
+        }
+        ++v311;
+      }
+      while ( *(v308 + v310 + 27) == 32 );
+      *(v308 + 25) = v312;
+    }
+LABEL_361:
+    *(v308 + 64) = 1;
+    *(v308 + 48) = CMemberScriptBinding0<CDOTABaseAbility *,void (CDOTABaseAbility::*)(void),void>::Call;
+    *(v308 + 56) = CDOTABaseAbility::RefundManaCost;
+    v313 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(&v2->m_FunctionBindings)];
+    *(v313 + 24) = 6;
+    *(v313 + 16) = "";
+    *v313 = "IsOwnersManaEnough";
+    *(v313 + 8) = "IsOwnersManaEnough";
+    v314 = *(v313 + 26);
+    *(v313 + 25) = 0;
+    v315 = v314 - 1;
+    if ( v315 >= 0 && *(v313 + v315 + 27) == 32 )
+    {
+      v316 = 1;
+      do
+      {
+        --v315;
+        v317 = v316;
+        if ( v315 == -1 )
+        {
+          *(v313 + 25) = v316;
+          goto LABEL_367;
+        }
+        ++v316;
+      }
+      while ( *(v313 + v315 + 27) == 32 );
+      *(v313 + 25) = v317;
+    }
+LABEL_367:
+    *(v313 + 64) = 1;
+    *(v313 + 48) = CMemberScriptBinding0<CDOTABaseAbility *,bool (CDOTABaseAbility::*)(void),bool>::Call;
+    *(v313 + 56) = CDOTABaseAbility::IsOwnersManaEnough;
+    v318 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(&v2->m_FunctionBindings)];
+    *(v318 + 24) = 0;
+    *(v318 + 16) = "";
+    *v318 = "PayGoldCost";
+    *(v318 + 8) = "PayGoldCost";
+    v319 = *(v318 + 26);
+    *(v318 + 25) = 0;
+    v320 = v319 - 1;
+    if ( v320 >= 0 && *(v318 + v320 + 27) == 32 )
+    {
+      v321 = 1;
+      do
+      {
+        --v320;
+        v322 = v321;
+        if ( v320 == -1 )
+        {
+          *(v318 + 25) = v321;
+          goto LABEL_373;
+        }
+        ++v321;
+      }
+      while ( *(v318 + v320 + 27) == 32 );
+      *(v318 + 25) = v322;
+    }
+LABEL_373:
+    *(v318 + 64) = 1;
+    *(v318 + 48) = CMemberScriptBinding0<CDOTABaseAbility *,void (CDOTABaseAbility::*)(void),void>::Call;
+    *(v318 + 56) = CDOTABaseAbility::PayGoldCost;
+    v323 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(&v2->m_FunctionBindings)];
+    *(v323 + 24) = 6;
+    *(v323 + 16) = "";
+    *v323 = "IsOwnersGoldEnough";
+    *(v323 + 8) = "IsOwnersGoldEnough";
+    v324 = *(v323 + 26);
+    v325 = v324++;
+    *(v323 + v325 + 27) = 5;
+    *(v323 + 26) = v324;
+    v326 = v324 - 1;
+    *(v323 + 25) = 0;
+    if ( v326 >= 0 && *(v323 + v326 + 27) == 32 )
+    {
+      v327 = 1;
+      do
+      {
+        --v326;
+        v328 = v327;
+        if ( v326 == -1 )
+        {
+          *(v323 + 25) = v327;
+          goto LABEL_379;
+        }
+        ++v327;
+      }
+      while ( *(v323 + v326 + 27) == 32 );
+      *(v323 + 25) = v328;
+    }
+LABEL_379:
+    *(v323 + 64) = 1;
+    *(v323 + 48) = CMemberScriptBinding1<CDOTABaseAbility *,bool (CDOTABaseAbility::*)(int),bool,int>::Call;
+    *(v323 + 56) = CDOTABaseAbility::IsOwnersGoldEnough;
+    *(v323 + 40) = s_CDOTABaseAbility_IsOwnersGoldEnough_packed_arg_names;
+    v329 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(&v2->m_FunctionBindings)];
+    *(v329 + 24) = 0;
+    *(v329 + 16) = "";
+    *v329 = "PayGoldCostForUpgrade";
+    *(v329 + 8) = "PayGoldCostForUpgrade";
+    v330 = *(v329 + 26);
+    *(v329 + 25) = 0;
+    v331 = v330 - 1;
+    if ( v331 >= 0 && *(v329 + v331 + 27) == 32 )
+    {
+      v332 = 1;
+      do
+      {
+        --v331;
+        v333 = v332;
+        if ( v331 == -1 )
+        {
+          *(v329 + 25) = v332;
+          goto LABEL_385;
+        }
+        ++v332;
+      }
+      while ( *(v329 + v331 + 27) == 32 );
+      *(v329 + 25) = v333;
+    }
+LABEL_385:
+    *(v329 + 64) = 1;
+    *(v329 + 48) = CMemberScriptBinding0<CDOTABaseAbility *,void (CDOTABaseAbility::*)(void),void>::Call;
+    *(v329 + 56) = CDOTABaseAbility::PayGoldCostForUpgrade;
+    v334 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(&v2->m_FunctionBindings)];
+    *(v334 + 24) = 6;
+    *(v334 + 16) = "";
+    *v334 = "IsOwnersGoldEnoughForUpgrade";
+    *(v334 + 8) = "IsOwnersGoldEnoughForUpgrade";
+    v335 = *(v334 + 26);
+    *(v334 + 25) = 0;
+    v336 = v335 - 1;
+    if ( v336 >= 0 && *(v334 + v336 + 27) == 32 )
+    {
+      v337 = 1;
+      do
+      {
+        --v336;
+        v338 = v337;
+        if ( v336 == -1 )
+        {
+          *(v334 + 25) = v337;
+          goto LABEL_391;
+        }
+        ++v337;
+      }
+      while ( *(v334 + v336 + 27) == 32 );
+      *(v334 + 25) = v338;
+    }
+LABEL_391:
+    *(v334 + 64) = 1;
+    *(v334 + 48) = CMemberScriptBinding0<CDOTABaseAbility *,bool (CDOTABaseAbility::*)(void),bool>::Call;
+    *(v334 + 56) = CDOTABaseAbility::IsOwnersGoldEnoughForUpgrade;
+    v339 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(&v2->m_FunctionBindings)];
+    *(v339 + 24) = 5;
+    *(v339 + 16) = "";
+    *v339 = "GetAbilityDamage";
+    *(v339 + 8) = "GetAbilityDamage";
+    v340 = *(v339 + 26);
+    *(v339 + 25) = 0;
+    v341 = v340 - 1;
+    if ( v341 >= 0 && *(v339 + v341 + 27) == 32 )
+    {
+      v342 = 1;
+      do
+      {
+        --v341;
+        v343 = v342;
+        if ( v341 == -1 )
+        {
+          *(v339 + 25) = v342;
+          goto LABEL_397;
+        }
+        ++v342;
+      }
+      while ( *(v339 + v341 + 27) == 32 );
+      *(v339 + 25) = v343;
+    }
+LABEL_397:
+    *(v339 + 56) = 1977;
+    *(v339 + 48) = CMemberScriptBinding0<CDOTABaseAbility *,int (CDOTABaseAbility::*)(void),int>::Call;
+    *(v339 + 64) = 1;
+    v344 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(&v2->m_FunctionBindings)];
+    *(v344 + 24) = 1;
+    *(v344 + 16) = "";
+    *v344 = "GetDuration";
+    *(v344 + 8) = "GetDuration";
+    v345 = *(v344 + 26);
+    *(v344 + 25) = 0;
+    v346 = v345 - 1;
+    if ( v346 >= 0 && *(v344 + v346 + 27) == 32 )
+    {
+      v347 = 1;
+      do
+      {
+        --v346;
+        v348 = v347;
+        if ( v346 == -1 )
+        {
+          *(v344 + 25) = v347;
+          goto LABEL_403;
+        }
+        ++v347;
+      }
+      while ( *(v344 + v346 + 27) == 32 );
+      *(v344 + 25) = v348;
+    }
+LABEL_403:
+    *(v344 + 64) = 1;
+    *(v344 + 48) = CMemberScriptBinding0<CDOTABaseAbility *,float (CDOTABaseAbility::*)(void),float>::Call;
+    *(v344 + 56) = CDOTABaseAbility::GetDuration;
+    v349 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(&v2->m_FunctionBindings)];
+    *(v349 + 24) = 31;
+    *(v349 + 16) = "";
+    *v349 = "GetCloneSource";
+    *(v349 + 8) = "Script_GetCloneSource";
+    v350 = *(v349 + 26);
+    *(v349 + 25) = 0;
+    v351 = v350 - 1;
+    if ( v351 >= 0 && *(v349 + v351 + 27) == 32 )
+    {
+      v352 = 1;
+      do
+      {
+        --v351;
+        v353 = v352;
+        if ( v351 == -1 )
+        {
+          *(v349 + 25) = v352;
+          goto LABEL_409;
+        }
+        ++v352;
+      }
+      while ( *(v349 + v351 + 27) == 32 );
+      *(v349 + 25) = v353;
+    }
+LABEL_409:
+    *(v349 + 64) = 1;
+    *(v349 + 48) = CMemberScriptBinding0<CDOTABaseAbility *,HSCRIPT__ * (CDOTABaseAbility::*)(void),HSCRIPT__ *>::Call;
+    *(v349 + 56) = CDOTABaseAbility::Script_GetCloneSource;
+    v354 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(&v2->m_FunctionBindings)];
+    *(v354 + 24) = 0;
+    *(v354 + 16) = "";
+    *v354 = "CreateVisibilityNode";
+    *(v354 + 8) = "CreateVisibilityNode";
+    v355 = *(v354 + 26);
+    *(v354 + v355 + 27) = 3;
+    *(v354 + (v355 + 1) + 27) = 1;
+    v356 = v355 + 2;
+    v355 += 3;
+    *(v354 + v356 + 27) = 1;
+    *(v354 + 26) = v355;
+    v357 = v355 - 1;
+    *(v354 + 25) = 0;
+    if ( v357 >= 0 && *(v354 + v357 + 27) == 32 )
+    {
+      v358 = 1;
+      do
+      {
+        --v357;
+        v359 = v358;
+        if ( v357 == -1 )
+        {
+          *(v354 + 25) = v358;
+          goto LABEL_415;
+        }
+        ++v358;
+      }
+      while ( *(v354 + v357 + 27) == 32 );
+      *(v354 + 25) = v359;
+    }
+LABEL_415:
+    *(v354 + 64) = 1;
+    *(v354 + 48) = CMemberScriptBinding3<CDOTABaseAbility *,void (CDOTABaseAbility::*)(Vector const&,float,float),void,Vector const&,float,float>::Call;
+    *(v354 + 56) = CDOTABaseAbility::CreateVisibilityNode;
+    *(v354 + 40) = s_CDOTABaseAbility_CreateVisibilityNode_packed_arg_names;
+    v360 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(&v2->m_FunctionBindings)];
+    *(v360 + 24) = 6;
+    *(v360 + 16) = "";
+    *v360 = "GetToggleState";
+    *(v360 + 8) = "GetToggleState";
+    v361 = *(v360 + 26);
+    *(v360 + 25) = 0;
+    v362 = v361 - 1;
+    if ( v362 >= 0 && *(v360 + v362 + 27) == 32 )
+    {
+      v363 = 1;
+      do
+      {
+        --v362;
+        v364 = v363;
+        if ( v362 == -1 )
+        {
+          *(v360 + 25) = v363;
+          goto LABEL_421;
+        }
+        ++v363;
+      }
+      while ( *(v360 + v362 + 27) == 32 );
+      *(v360 + 25) = v364;
+    }
+LABEL_421:
+    *(v360 + 64) = 1;
+    *(v360 + 48) = CMemberScriptBinding0<CDOTABaseAbility *,bool (CDOTABaseAbility::*)(void),bool>::Call;
+    *(v360 + 56) = CDOTABaseAbility::GetToggleState;
+    v365 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(&v2->m_FunctionBindings)];
+    *(v365 + 24) = 5;
+    *(v365 + 16) = "";
+    *v365 = "GetBehavior";
+    *(v365 + 8) = "GetBehavior";
+    v366 = *(v365 + 26);
+    *(v365 + 25) = 0;
+    v367 = v366 - 1;
+    if ( v367 >= 0 && *(v365 + v367 + 27) == 32 )
+    {
+      v368 = 1;
+      do
+      {
+        --v367;
+        v369 = v368;
+        if ( v367 == -1 )
+        {
+          *(v365 + 25) = v368;
+          goto LABEL_427;
+        }
+        ++v368;
+      }
+      while ( *(v365 + v367 + 27) == 32 );
+      *(v365 + 25) = v369;
+    }
+LABEL_427:
+    *(v365 + 56) = 2009;
+    *(v365 + 48) = CMemberScriptBinding0<CDOTABaseAbility *,int (CDOTABaseAbility::*)(void),int>::Call;
+    *(v365 + 64) = 1;
+    v370 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(&v2->m_FunctionBindings)];
+    *(v370 + 24) = 5;
+    *(v370 + 16) = "";
+    *v370 = "GetAbilityTargetTeam";
+    *(v370 + 8) = "GetAbilityTargetTeam";
+    v371 = *(v370 + 26);
+    *(v370 + 25) = 0;
+    v372 = v371 - 1;
+    if ( v372 >= 0 && *(v370 + v372 + 27) == 32 )
+    {
+      v373 = 1;
+      do
+      {
+        --v372;
+        v374 = v373;
+        if ( v372 == -1 )
+        {
+          *(v370 + 25) = v373;
+          goto LABEL_433;
+        }
+        ++v373;
+      }
+      while ( *(v370 + v372 + 27) == 32 );
+      *(v370 + 25) = v374;
+    }
+LABEL_433:
+    *(v370 + 64) = 1;
+    *(v370 + 48) = CMemberScriptBinding0<CDOTABaseAbility *,int (CDOTABaseAbility::*)(void),int>::Call;
+    *(v370 + 56) = CDOTABaseAbility::GetAbilityTargetTeam;
+    v375 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(&v2->m_FunctionBindings)];
+    *(v375 + 24) = 5;
+    *(v375 + 16) = "";
+    *v375 = "GetAbilityTargetType";
+    *(v375 + 8) = "GetAbilityTargetType";
+    v376 = *(v375 + 26);
+    *(v375 + 25) = 0;
+    v377 = v376 - 1;
+    if ( v377 >= 0 && *(v375 + v377 + 27) == 32 )
+    {
+      v378 = 1;
+      do
+      {
+        --v377;
+        v379 = v378;
+        if ( v377 == -1 )
+        {
+          *(v375 + 25) = v378;
+          goto LABEL_439;
+        }
+        ++v378;
+      }
+      while ( *(v375 + v377 + 27) == 32 );
+      *(v375 + 25) = v379;
+    }
+LABEL_439:
+    *(v375 + 56) = 2017;
+    *(v375 + 48) = CMemberScriptBinding0<CDOTABaseAbility *,int (CDOTABaseAbility::*)(void),int>::Call;
+    *(v375 + 64) = 1;
+    v380 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(&v2->m_FunctionBindings)];
+    *(v380 + 24) = 5;
+    *(v380 + 16) = "";
+    *v380 = "GetAbilityTargetFlags";
+    *(v380 + 8) = "GetAbilityTargetFlags";
+    v381 = *(v380 + 26);
+    *(v380 + 25) = 0;
+    v382 = v381 - 1;
+    if ( v382 >= 0 && *(v380 + v382 + 27) == 32 )
+    {
+      v383 = 1;
+      do
+      {
+        --v382;
+        v384 = v383;
+        if ( v382 == -1 )
+        {
+          *(v380 + 25) = v383;
+          goto LABEL_445;
+        }
+        ++v383;
+      }
+      while ( *(v380 + v382 + 27) == 32 );
+      *(v380 + 25) = v384;
+    }
+LABEL_445:
+    *(v380 + 64) = 1;
+    *(v380 + 48) = CMemberScriptBinding0<CDOTABaseAbility *,int (CDOTABaseAbility::*)(void),int>::Call;
+    *(v380 + 56) = CDOTABaseAbility::GetAbilityTargetFlags;
+    v385 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(&v2->m_FunctionBindings)];
+    *(v385 + 24) = 5;
+    *(v385 + 16) = "";
+    *v385 = "GetAbilityDamageType";
+    *(v385 + 8) = "GetAbilityDamageType";
+    v386 = *(v385 + 26);
+    *(v385 + 25) = 0;
+    v387 = v386 - 1;
+    if ( v387 >= 0 && *(v385 + v387 + 27) == 32 )
+    {
+      v388 = 1;
+      do
+      {
+        --v387;
+        v389 = v388;
+        if ( v387 == -1 )
+        {
+          *(v385 + 25) = v388;
+          goto LABEL_451;
+        }
+        ++v388;
+      }
+      while ( *(v385 + v387 + 27) == 32 );
+      *(v385 + 25) = v389;
+    }
+LABEL_451:
+    *(v385 + 64) = 1;
+    *(v385 + 48) = CMemberScriptBinding0<CDOTABaseAbility *,int (CDOTABaseAbility::*)(void),int>::Call;
+    *(v385 + 56) = CDOTABaseAbility::GetAbilityDamageType;
+    v390 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(&v2->m_FunctionBindings)];
+    *(v390 + 24) = 5;
+    *(v390 + 16) = "";
+    *v390 = "GetMaxLevel";
+    *(v390 + 8) = "GetMaxLevel";
+    v391 = *(v390 + 26);
+    *(v390 + 25) = 0;
+    v392 = v391 - 1;
+    if ( v392 >= 0 && *(v390 + v392 + 27) == 32 )
+    {
+      v393 = 1;
+      do
+      {
+        --v392;
+        v394 = v393;
+        if ( v392 == -1 )
+        {
+          *(v390 + 25) = v393;
+          goto LABEL_457;
+        }
+        ++v393;
+      }
+      while ( *(v390 + v392 + 27) == 32 );
+      *(v390 + 25) = v394;
+    }
+LABEL_457:
+    *(v390 + 64) = 1;
+    *(v390 + 48) = CMemberScriptBinding0<CDOTABaseAbility *,int (CDOTABaseAbility::*)(void),int>::Call;
+    *(v390 + 56) = CDOTABaseAbility::GetMaxLevel;
+    v395 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(&v2->m_FunctionBindings)];
+    *(v395 + 24) = 6;
+    *(v395 + 16) = "";
+    *v395 = "OnAbilityPhaseStart";
+    *(v395 + 8) = "OnAbilityPhaseStart";
+    v396 = *(v395 + 26);
+    *(v395 + 25) = 0;
+    v397 = v396 - 1;
+    if ( v397 >= 0 && *(v395 + v397 + 27) == 32 )
+    {
+      v398 = 1;
+      do
+      {
+        --v397;
+        v399 = v398;
+        if ( v397 == -1 )
+        {
+          *(v395 + 25) = v398;
+          goto LABEL_463;
+        }
+        ++v398;
+      }
+      while ( *(v395 + v397 + 27) == 32 );
+      *(v395 + 25) = v399;
+    }
+LABEL_463:
+    *(v395 + 56) = 2113;
+    *(v395 + 48) = CMemberScriptBinding0<CDOTABaseAbility *,bool (CDOTABaseAbility::*)(void),bool>::Call;
+    *(v395 + 64) = 1;
+    v400 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(&v2->m_FunctionBindings)];
+    *(v400 + 24) = 0;
+    *(v400 + 16) = "";
+    *v400 = "OnAbilityPhaseInterrupted";
+    *(v400 + 8) = "OnAbilityPhaseInterrupted";
+    v401 = *(v400 + 26);
+    *(v400 + 25) = 0;
+    v402 = v401 - 1;
+    if ( v402 >= 0 && *(v400 + v402 + 27) == 32 )
+    {
+      v403 = 1;
+      do
+      {
+        --v402;
+        v404 = v403;
+        if ( v402 == -1 )
+        {
+          *(v400 + 25) = v403;
+          goto LABEL_469;
+        }
+        ++v403;
+      }
+      while ( *(v400 + v402 + 27) == 32 );
+      *(v400 + 25) = v404;
+    }
+LABEL_469:
+    *(v400 + 56) = 2121;
+    *(v400 + 48) = CMemberScriptBinding0<CDOTABaseAbility *,void (CDOTABaseAbility::*)(void),void>::Call;
+    *(v400 + 64) = 1;
+    v405 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(&v2->m_FunctionBindings)];
+    *(v405 + 24) = 0;
+    *(v405 + 16) = "";
+    *v405 = "OnSpellStart";
+    *(v405 + 8) = "OnSpellStart";
+    v406 = *(v405 + 26);
+    *(v405 + 25) = 0;
+    v407 = v406 - 1;
+    if ( v407 >= 0 && *(v405 + v407 + 27) == 32 )
+    {
+      v408 = 1;
+      do
+      {
+        --v407;
+        v409 = v408;
+        if ( v407 == -1 )
+        {
+          *(v405 + 25) = v408;
+          goto LABEL_475;
+        }
+        ++v408;
+      }
+      while ( *(v405 + v407 + 27) == 32 );
+      *(v405 + 25) = v409;
+    }
+LABEL_475:
+    *(v405 + 56) = 2129;
+    *(v405 + 48) = CMemberScriptBinding0<CDOTABaseAbility *,void (CDOTABaseAbility::*)(void),void>::Call;
+    *(v405 + 64) = 1;
+    v410 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(&v2->m_FunctionBindings)];
+    *(v410 + 24) = 0;
+    *(v410 + 16) = "";
+    *v410 = "OnChannelFinish";
+    *(v410 + 8) = "OnChannelFinish";
+    v411 = *(v410 + 26);
+    v412 = v411++;
+    *(v410 + v412 + 27) = 6;
+    *(v410 + 26) = v411;
+    v413 = v411 - 1;
+    *(v410 + 25) = 0;
+    if ( v413 >= 0 && *(v410 + v413 + 27) == 32 )
+    {
+      v414 = 1;
+      do
+      {
+        --v413;
+        v415 = v414;
+        if ( v413 == -1 )
+        {
+          *(v410 + 25) = v414;
+          goto LABEL_481;
+        }
+        ++v414;
+      }
+      while ( *(v410 + v413 + 27) == 32 );
+      *(v410 + 25) = v415;
+    }
+LABEL_481:
+    *(v410 + 56) = 2137;
+    *(v410 + 48) = CMemberScriptBinding1<CDOTABaseAbility *,void (CDOTABaseAbility::*)(bool),void,bool>::Call;
+    *(v410 + 64) = 1;
+    *(v410 + 40) = s_CDOTABaseAbility_OnChannelFinish_packed_arg_names;
+    v416 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(&v2->m_FunctionBindings)];
+    *(v416 + 24) = 0;
+    *(v416 + 16) = "";
+    *v416 = "OnUpgrade";
+    *(v416 + 8) = "OnUpgrade";
+    v417 = *(v416 + 26);
+    *(v416 + 25) = 0;
+    v418 = v417 - 1;
+    if ( v418 >= 0 && *(v416 + v418 + 27) == 32 )
+    {
+      v419 = 1;
+      do
+      {
+        --v418;
+        v420 = v419;
+        if ( v418 == -1 )
+        {
+          *(v416 + 25) = v419;
+          goto LABEL_487;
+        }
+        ++v419;
+      }
+      while ( *(v416 + v418 + 27) == 32 );
+      *(v416 + 25) = v420;
+    }
+LABEL_487:
+    *(v416 + 56) = 2145;
+    *(v416 + 48) = CMemberScriptBinding0<CDOTABaseAbility *,void (CDOTABaseAbility::*)(void),void>::Call;
+    *(v416 + 64) = 1;
+    v421 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(&v2->m_FunctionBindings)];
+    *(v421 + 24) = 0;
+    *(v421 + 16) = "";
+    *v421 = "OnOwnerSpawned";
+    *(v421 + 8) = "OnOwnerSpawned";
+    v422 = *(v421 + 26);
+    *(v421 + 25) = 0;
+    v423 = v422 - 1;
+    if ( v423 >= 0 && *(v421 + v423 + 27) == 32 )
+    {
+      v424 = 1;
+      do
+      {
+        --v423;
+        v425 = v424;
+        if ( v423 == -1 )
+        {
+          *(v421 + 25) = v424;
+          goto LABEL_493;
+        }
+        ++v424;
+      }
+      while ( *(v421 + v423 + 27) == 32 );
+      *(v421 + 25) = v425;
+    }
+LABEL_493:
+    *(v421 + 56) = 2153;
+    *(v421 + 48) = CMemberScriptBinding0<CDOTABaseAbility *,void (CDOTABaseAbility::*)(void),void>::Call;
+    *(v421 + 64) = 1;
+    v426 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(&v2->m_FunctionBindings)];
+    *(v426 + 24) = 0;
+    *(v426 + 16) = "";
+    *v426 = "OnToggle";
+    *(v426 + 8) = "OnToggle";
+    v427 = *(v426 + 26);
+    *(v426 + 25) = 0;
+    v428 = v427 - 1;
+    if ( v428 >= 0 && *(v426 + v428 + 27) == 32 )
+    {
+      v429 = 1;
+      do
+      {
+        --v428;
+        v430 = v429;
+        if ( v428 == -1 )
+        {
+          *(v426 + 25) = v429;
+          goto LABEL_499;
+        }
+        ++v429;
+      }
+      while ( *(v426 + v428 + 27) == 32 );
+      *(v426 + 25) = v430;
+    }
+LABEL_499:
+    *(v426 + 56) = 2161;
+    *(v426 + 48) = CMemberScriptBinding0<CDOTABaseAbility *,void (CDOTABaseAbility::*)(void),void>::Call;
+    *(v426 + 64) = 1;
+    v431 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(&v2->m_FunctionBindings)];
+    *(v431 + 24) = 0;
+    *(v431 + 16) = "";
+    *v431 = "OnOwnerDied";
+    *(v431 + 8) = "OnOwnerDied";
+    v432 = *(v431 + 26);
+    *(v431 + 25) = 0;
+    v433 = v432 - 1;
+    if ( v433 >= 0 && *(v431 + v433 + 27) == 32 )
+    {
+      v434 = 1;
+      do
+      {
+        --v433;
+        v435 = v434;
+        if ( v433 == -1 )
+        {
+          *(v431 + 25) = v434;
+          goto LABEL_505;
+        }
+        ++v434;
+      }
+      while ( *(v431 + v433 + 27) == 32 );
+      *(v431 + 25) = v435;
+    }
+LABEL_505:
+    *(v431 + 56) = 2169;
+    *(v431 + 48) = CMemberScriptBinding0<CDOTABaseAbility *,void (CDOTABaseAbility::*)(void),void>::Call;
+    *(v431 + 64) = 1;
+    v436 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(&v2->m_FunctionBindings)];
+    *(v436 + 24) = 1;
+    *(v436 + 16) = "";
+    *v436 = "GetBackswingTime";
+    *(v436 + 8) = "GetBackswingTime";
+    v437 = *(v436 + 26);
+    *(v436 + 25) = 0;
+    v438 = v437 - 1;
+    if ( v438 >= 0 && *(v436 + v438 + 27) == 32 )
+    {
+      v439 = 1;
+      do
+      {
+        --v438;
+        v440 = v439;
+        if ( v438 == -1 )
+        {
+          *(v436 + 25) = v439;
+          goto LABEL_511;
+        }
+        ++v439;
+      }
+      while ( *(v436 + v438 + 27) == 32 );
+      *(v436 + 25) = v440;
+    }
+LABEL_511:
+    *(v436 + 56) = 2177;
+    *(v436 + 48) = CMemberScriptBinding0<CDOTABaseAbility *,float (CDOTABaseAbility::*)(void),float>::Call;
+    *(v436 + 64) = 1;
+    v441 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(&v2->m_FunctionBindings)];
+    *(v441 + 24) = 5;
+    *(v441 + 16) = "";
+    *v441 = "GetManaCost";
+    *(v441 + 8) = "GetManaCost";
+    v442 = *(v441 + 26);
+    v443 = v442++;
+    *(v441 + v443 + 27) = 5;
+    *(v441 + 26) = v442;
+    v444 = v442 - 1;
+    *(v441 + 25) = 0;
+    if ( v444 >= 0 && *(v441 + v444 + 27) == 32 )
+    {
+      v445 = 1;
+      do
+      {
+        --v444;
+        v446 = v445;
+        if ( v444 == -1 )
+        {
+          *(v441 + 25) = v445;
+          goto LABEL_517;
+        }
+        ++v445;
+      }
+      while ( *(v441 + v444 + 27) == 32 );
+      *(v441 + 25) = v446;
+    }
+LABEL_517:
+    *(v441 + 56) = 2185;
+    *(v441 + 48) = CMemberScriptBinding1<CDOTABaseAbility *,int (CDOTABaseAbility::*)(int),int,int>::Call;
+    *(v441 + 64) = 1;
+    *(v441 + 40) = s_CDOTABaseAbility_GetManaCost_packed_arg_names;
+    v447 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(&v2->m_FunctionBindings)];
+    *(v447 + 24) = 5;
+    *(v447 + 16) = "";
+    *v447 = "GetChannelledManaCostPerSecond";
+    *(v447 + 8) = "GetChannelledManaCostPerSecond";
+    v448 = *(v447 + 26);
+    v449 = v448++;
+    *(v447 + v449 + 27) = 5;
+    *(v447 + 26) = v448;
+    v450 = v448 - 1;
+    *(v447 + 25) = 0;
+    if ( v450 >= 0 && *(v447 + v450 + 27) == 32 )
+    {
+      v451 = 1;
+      do
+      {
+        --v450;
+        v452 = v451;
+        if ( v450 == -1 )
+        {
+          *(v447 + 25) = v451;
+          goto LABEL_523;
+        }
+        ++v451;
+      }
+      while ( *(v447 + v450 + 27) == 32 );
+      *(v447 + 25) = v452;
+    }
+LABEL_523:
+    *(v447 + 56) = 2201;
+    *(v447 + 48) = CMemberScriptBinding1<CDOTABaseAbility *,int (CDOTABaseAbility::*)(int),int,int>::Call;
+    *(v447 + 64) = 1;
+    *(v447 + 40) = s_CDOTABaseAbility_GetChannelledManaCostPerSecond_packed_arg_names;
+    v453 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(&v2->m_FunctionBindings)];
+    *(v453 + 24) = 5;
+    *(v453 + 16) = "";
+    *v453 = "GetGoldCost";
+    *(v453 + 8) = "GetGoldCost";
+    v454 = *(v453 + 26);
+    v455 = v454++;
+    *(v453 + v455 + 27) = 5;
+    *(v453 + 26) = v454;
+    v456 = v454 - 1;
+    *(v453 + 25) = 0;
+    if ( v456 >= 0 && *(v453 + v456 + 27) == 32 )
+    {
+      v457 = 1;
+      do
+      {
+        --v456;
+        v458 = v457;
+        if ( v456 == -1 )
+        {
+          *(v453 + 25) = v457;
+          goto LABEL_529;
+        }
+        ++v457;
+      }
+      while ( *(v453 + v456 + 27) == 32 );
+      *(v453 + 25) = v458;
+    }
+LABEL_529:
+    *(v453 + 56) = 2209;
+    *(v453 + 48) = CMemberScriptBinding1<CDOTABaseAbility *,int (CDOTABaseAbility::*)(int),int,int>::Call;
+    *(v453 + 64) = 1;
+    *(v453 + 40) = s_CDOTABaseAbility_GetGoldCost_packed_arg_names;
+    v459 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(&v2->m_FunctionBindings)];
+    *(v459 + 24) = 5;
+    *(v459 + 16) = "";
+    *v459 = "GetGoldCostForUpgrade";
+    *(v459 + 8) = "GetGoldCostForUpgrade";
+    v460 = *(v459 + 26);
+    v461 = v460++;
+    *(v459 + v461 + 27) = 5;
+    *(v459 + 26) = v460;
+    v462 = v460 - 1;
+    *(v459 + 25) = 0;
+    if ( v462 >= 0 && *(v459 + v462 + 27) == 32 )
+    {
+      v463 = 1;
+      do
+      {
+        --v462;
+        v464 = v463;
+        if ( v462 == -1 )
+        {
+          *(v459 + 25) = v463;
+          goto LABEL_535;
+        }
+        ++v463;
+      }
+      while ( *(v459 + v462 + 27) == 32 );
+      *(v459 + 25) = v464;
+    }
+LABEL_535:
+    *(v459 + 56) = 2217;
+    *(v459 + 48) = CMemberScriptBinding1<CDOTABaseAbility *,int (CDOTABaseAbility::*)(int),int,int>::Call;
+    *(v459 + 64) = 1;
+    *(v459 + 40) = s_CDOTABaseAbility_GetGoldCostForUpgrade_packed_arg_names;
+    v465 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(&v2->m_FunctionBindings)];
+    *(v465 + 24) = 30;
+    *(v465 + 16) = "";
+    *v465 = "GetIntrinsicModifierName";
+    *(v465 + 8) = "GetIntrinsicModifierName";
+    v466 = *(v465 + 26);
+    *(v465 + 25) = 0;
+    v467 = v466 - 1;
+    if ( v467 >= 0 && *(v465 + v467 + 27) == 32 )
+    {
+      v468 = 1;
+      do
+      {
+        --v467;
+        v469 = v468;
+        if ( v467 == -1 )
+        {
+          *(v465 + 25) = v468;
+          goto LABEL_541;
+        }
+        ++v468;
+      }
+      while ( *(v465 + v467 + 27) == 32 );
+      *(v465 + 25) = v469;
+    }
+LABEL_541:
+    *(v465 + 56) = 2241;
+    *(v465 + 48) = CMemberScriptBinding0<CDOTABaseAbility *,char const* (CDOTABaseAbility::*)(void),char const*>::Call;
+    *(v465 + 64) = 1;
+    v470 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(&v2->m_FunctionBindings)];
+    *(v470 + 24) = 6;
+    *(v470 + 16) = "";
+    *v470 = "ResetToggleOnRespawn";
+    *(v470 + 8) = "ResetToggleOnRespawn";
+    v471 = *(v470 + 26);
+    *(v470 + 25) = 0;
+    v472 = v471 - 1;
+    if ( v472 >= 0 && *(v470 + v472 + 27) == 32 )
+    {
+      v473 = 1;
+      do
+      {
+        --v472;
+        v474 = v473;
+        if ( v472 == -1 )
+        {
+          *(v470 + 25) = v473;
+          goto LABEL_547;
+        }
+        ++v473;
+      }
+      while ( *(v470 + v472 + 27) == 32 );
+      *(v470 + 25) = v474;
+    }
+LABEL_547:
+    *(v470 + 56) = 2249;
+    *(v470 + 48) = CMemberScriptBinding0<CDOTABaseAbility *,bool (CDOTABaseAbility::*)(void),bool>::Call;
+    *(v470 + 64) = 1;
+    v475 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(&v2->m_FunctionBindings)];
+    *(v475 + 24) = 0;
+    *(v475 + 16) = "";
+    *v475 = "OnHeroLevelUp";
+    *(v475 + 8) = "OnHeroLevelUp";
+    v476 = *(v475 + 26);
+    *(v475 + 25) = 0;
+    v477 = v476 - 1;
+    if ( v477 >= 0 && *(v475 + v477 + 27) == 32 )
+    {
+      v478 = 1;
+      do
+      {
+        --v477;
+        v479 = v478;
+        if ( v477 == -1 )
+        {
+          *(v475 + 25) = v478;
+          goto LABEL_553;
+        }
+        ++v478;
+      }
+      while ( *(v475 + v477 + 27) == 32 );
+      *(v475 + 25) = v479;
+    }
+LABEL_553:
+    *(v475 + 56) = 2257;
+    *(v475 + 48) = CMemberScriptBinding0<CDOTABaseAbility *,void (CDOTABaseAbility::*)(void),void>::Call;
+    *(v475 + 64) = 1;
+    v480 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(&v2->m_FunctionBindings)];
+    *(v480 + 24) = 0;
+    *(v480 + 16) = "";
+    *v480 = "OnHeroCalculateStatBonus";
+    *(v480 + 8) = "OnHeroCalculateStatBonus";
+    v481 = *(v480 + 26);
+    *(v480 + 25) = 0;
+    v482 = v481 - 1;
+    if ( v482 >= 0 && *(v480 + v482 + 27) == 32 )
+    {
+      v483 = 1;
+      do
+      {
+        --v482;
+        v484 = v483;
+        if ( v482 == -1 )
+        {
+          *(v480 + 25) = v483;
+          goto LABEL_559;
+        }
+        ++v483;
+      }
+      while ( *(v480 + v482 + 27) == 32 );
+      *(v480 + 25) = v484;
+    }
+LABEL_559:
+    *(v480 + 56) = 2281;
+    *(v480 + 48) = CMemberScriptBinding0<CDOTABaseAbility *,void (CDOTABaseAbility::*)(void),void>::Call;
+    *(v480 + 64) = 1;
+    v485 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(&v2->m_FunctionBindings)];
+    *(v485 + 24) = 6;
+    *(v485 + 16) = "";
+    *v485 = "HeroXPChange";
+    *(v485 + 8) = "HeroXPChange";
+    v486 = *(v485 + 26);
+    v487 = v486++;
+    *(v485 + v487 + 27) = 1;
+    *(v485 + 26) = v486;
+    v488 = v486 - 1;
+    *(v485 + 25) = 0;
+    if ( v488 >= 0 && *(v485 + v488 + 27) == 32 )
+    {
+      v489 = 1;
+      do
+      {
+        --v488;
+        v490 = v489;
+        if ( v488 == -1 )
+        {
+          *(v485 + 25) = v489;
+          goto LABEL_565;
+        }
+        ++v489;
+      }
+      while ( *(v485 + v488 + 27) == 32 );
+      *(v485 + 25) = v490;
+    }
+LABEL_565:
+    *(v485 + 56) = 2289;
+    *(v485 + 48) = CMemberScriptBinding1<CDOTABaseAbility *,bool (CDOTABaseAbility::*)(float),bool,float>::Call;
+    *(v485 + 64) = 1;
+    *(v485 + 40) = s_CDOTABaseAbility_HeroXPChange_packed_arg_names;
+    v491 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(&v2->m_FunctionBindings)];
+    *(v491 + 24) = 0;
+    *(v491 + 16) = "";
+    *v491 = "OnChannelThink";
+    *(v491 + 8) = "OnChannelThink";
+    v492 = *(v491 + 26);
+    v493 = v492++;
+    *(v491 + v493 + 27) = 1;
+    *(v491 + 26) = v492;
+    v494 = v492 - 1;
+    *(v491 + 25) = 0;
+    if ( v494 >= 0 && *(v491 + v494 + 27) == 32 )
+    {
+      v495 = 1;
+      do
+      {
+        --v494;
+        v496 = v495;
+        if ( v494 == -1 )
+        {
+          *(v491 + 25) = v495;
+          goto LABEL_571;
+        }
+        ++v495;
+      }
+      while ( *(v491 + v494 + 27) == 32 );
+      *(v491 + 25) = v496;
+    }
+LABEL_571:
+    *(v491 + 56) = 2369;
+    *(v491 + 48) = CMemberScriptBinding1<CDOTABaseAbility *,void (CDOTABaseAbility::*)(float),void,float>::Call;
+    *(v491 + 64) = 1;
+    *(v491 + 40) = s_CDOTABaseAbility_OnChannelThink_packed_arg_names;
+    v497 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(&v2->m_FunctionBindings)];
+    *(v497 + 24) = 0;
+    *(v497 + 16) = "Mark the ability button for this ability as needing a refresh.";
+    *v497 = "MarkAbilityButtonDirty";
+    *(v497 + 8) = "MarkAbilityButtonDirty";
+    v498 = *(v497 + 26);
+    *(v497 + 25) = 0;
+    v499 = v498 - 1;
+    if ( v499 >= 0 && *(v497 + v499 + 27) == 32 )
+    {
+      v500 = 1;
+      do
+      {
+        --v499;
+        v501 = v500;
+        if ( v499 == -1 )
+        {
+          *(v497 + 25) = v500;
+          goto LABEL_577;
+        }
+        ++v500;
+      }
+      while ( *(v497 + v499 + 27) == 32 );
+      *(v497 + 25) = v501;
+    }
+LABEL_577:
+    *(v497 + 56) = 2377;
+    *(v497 + 48) = CMemberScriptBinding0<CDOTABaseAbility *,void (CDOTABaseAbility::*)(void),void>::Call;
+    *(v497 + 64) = 1;
+    v502 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(&v2->m_FunctionBindings)];
+    *(v502 + 24) = 0;
+    *(v502 + 16) = "";
+    *v502 = "SpeakAbilityConcept";
+    *(v502 + 8) = "SpeakAbilityConcept";
+    v503 = *(v502 + 26);
+    v504 = v503++;
+    *(v502 + v504 + 27) = 5;
+    *(v502 + 26) = v503;
+    v505 = v503 - 1;
+    *(v502 + 25) = 0;
+    if ( v505 >= 0 && *(v502 + v505 + 27) == 32 )
+    {
+      v506 = 1;
+      do
+      {
+        --v505;
+        v507 = v506;
+        if ( v505 == -1 )
+        {
+          *(v502 + 25) = v506;
+          goto LABEL_583;
+        }
+        ++v506;
+      }
+      while ( *(v502 + v505 + 27) == 32 );
+      *(v502 + 25) = v507;
+    }
+LABEL_583:
+    *(v502 + 64) = 1;
+    *(v502 + 48) = CMemberScriptBinding1<CDOTABaseAbility *,void (CDOTABaseAbility::*)(int),void,int>::Call;
+    *(v502 + 56) = CDOTABaseAbility::SpeakAbilityConcept;
+    *(v502 + 40) = s_CDOTABaseAbility_SpeakAbilityConcept_packed_arg_names;
+    v508 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(&v2->m_FunctionBindings)];
+    *(v508 + 24) = 5;
+    *(v508 + 16) = "";
+    *v508 = "GetConceptRecipientType";
+    *(v508 + 8) = "GetConceptRecipientType";
+    v509 = *(v508 + 26);
+    *(v508 + 25) = 0;
+    v510 = v509 - 1;
+    if ( v510 >= 0 && *(v508 + v510 + 27) == 32 )
+    {
+      v511 = 1;
+      do
+      {
+        --v510;
+        v512 = v511;
+        if ( v510 == -1 )
+        {
+          *(v508 + 25) = v511;
+          goto LABEL_589;
+        }
+        ++v511;
+      }
+      while ( *(v508 + v510 + 27) == 32 );
+      *(v508 + 25) = v512;
+    }
+LABEL_589:
+    *(v508 + 56) = 2393;
+    *(v508 + 48) = CMemberScriptBinding0<CDOTABaseAbility *,int (CDOTABaseAbility::*)(void),int>::Call;
+    *(v508 + 64) = 1;
+    v513 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(&v2->m_FunctionBindings)];
+    *(v513 + 24) = 29;
+    *(v513 + 16) = "";
+    *v513 = "SpeakTrigger";
+    *(v513 + 8) = "SpeakTrigger";
+    v514 = *(v513 + 26);
+    *(v513 + 25) = 0;
+    v515 = v514 - 1;
+    if ( v515 >= 0 && *(v513 + v515 + 27) == 32 )
+    {
+      v516 = 1;
+      do
+      {
+        --v515;
+        v517 = v516;
+        if ( v515 == -1 )
+        {
+          *(v513 + 25) = v516;
+          goto LABEL_595;
+        }
+        ++v516;
+      }
+      while ( *(v513 + v515 + 27) == 32 );
+      *(v513 + 25) = v517;
+    }
+LABEL_595:
+    *(v513 + 56) = 2401;
+    *(v513 + 48) = CMemberScriptBinding0<CDOTABaseAbility *,DOTAAbilitySpeakTrigger_t (CDOTABaseAbility::*)(void),DOTAAbilitySpeakTrigger_t>::Call;
+    *(v513 + 64) = 1;
+    v518 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(&v2->m_FunctionBindings)];
+    *(v518 + 24) = 0;
+    *(v518 + 16) = "";
+    *v518 = "SetInAbilityPhase";
+    *(v518 + 8) = "SetInAbilityPhase";
+    v519 = *(v518 + 26);
+    v520 = v519++;
+    *(v518 + v520 + 27) = 6;
+    *(v518 + 26) = v519;
+    v521 = v519 - 1;
+    *(v518 + 25) = 0;
+    if ( v521 >= 0 && *(v518 + v521 + 27) == 32 )
+    {
+      v522 = 1;
+      do
+      {
+        --v521;
+        v523 = v522;
+        if ( v521 == -1 )
+        {
+          *(v518 + 25) = v522;
+          goto LABEL_601;
+        }
+        ++v522;
+      }
+      while ( *(v518 + v521 + 27) == 32 );
+      *(v518 + 25) = v523;
+    }
+LABEL_601:
+    *(v518 + 64) = 1;
+    *(v518 + 48) = CMemberScriptBinding1<CDOTABaseAbility *,void (CDOTABaseAbility::*)(bool),void,bool>::Call;
+    *(v518 + 56) = CDOTABaseAbility::SetInAbilityPhase;
+    *(v518 + 40) = s_CDOTABaseAbility_SetInAbilityPhase_packed_arg_names;
+    v524 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(&v2->m_FunctionBindings)];
+    *(v524 + 24) = 6;
+    *(v524 + 16) = "Returns whether the ability is currently casting.";
+    *v524 = "IsInAbilityPhase";
+    *(v524 + 8) = "IsInAbilityPhase";
+    v525 = *(v524 + 26);
+    *(v524 + 25) = 0;
+    v526 = v525 - 1;
+    if ( v526 >= 0 && *(v524 + v526 + 27) == 32 )
+    {
+      v527 = 1;
+      do
+      {
+        --v526;
+        v528 = v527;
+        if ( v526 == -1 )
+        {
+          *(v524 + 25) = v527;
+          goto LABEL_607;
+        }
+        ++v527;
+      }
+      while ( *(v524 + v526 + 27) == 32 );
+      *(v524 + 25) = v528;
+    }
+LABEL_607:
+    *(v524 + 64) = 1;
+    *(v524 + 48) = CMemberScriptBinding0<CDOTABaseAbility *,bool (CDOTABaseAbility::*)(void),bool>::Call;
+    *(v524 + 56) = CDOTABaseAbility::IsInAbilityPhase;
+    v529 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(&v2->m_FunctionBindings)];
+    *(v529 + 24) = 0;
+    *(v529 + 16) = "";
+    *v529 = "SetChanneling";
+    *(v529 + 8) = "SetChanneling";
+    v530 = *(v529 + 26);
+    v531 = v530++;
+    *(v529 + v531 + 27) = 6;
+    *(v529 + 26) = v530;
+    v532 = v530 - 1;
+    *(v529 + 25) = 0;
+    if ( v532 >= 0 && *(v529 + v532 + 27) == 32 )
+    {
+      v533 = 1;
+      do
+      {
+        --v532;
+        v534 = v533;
+        if ( v532 == -1 )
+        {
+          *(v529 + 25) = v533;
+          goto LABEL_613;
+        }
+        ++v533;
+      }
+      while ( *(v529 + v532 + 27) == 32 );
+      *(v529 + 25) = v534;
+    }
+LABEL_613:
+    *(v529 + 64) = 1;
+    *(v529 + 48) = CMemberScriptBinding1<CDOTABaseAbility *,void (CDOTABaseAbility::*)(bool),void,bool>::Call;
+    *(v529 + 56) = CDOTABaseAbility::SetChanneling;
+    *(v529 + 40) = s_CDOTABaseAbility_SetChanneling_packed_arg_names;
+    v535 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(&v2->m_FunctionBindings)];
+    *(v535 + 24) = 6;
+    *(v535 + 16) = "Returns whether the ability is currently channeling.";
+    *v535 = "IsChanneling";
+    *(v535 + 8) = "IsChanneling";
+    v536 = *(v535 + 26);
+    *(v535 + 25) = 0;
+    v537 = v536 - 1;
+    if ( v537 >= 0 && *(v535 + v537 + 27) == 32 )
+    {
+      v538 = 1;
+      do
+      {
+        --v537;
+        v539 = v538;
+        if ( v537 == -1 )
+        {
+          *(v535 + 25) = v538;
+          goto LABEL_619;
+        }
+        ++v538;
+      }
+      while ( *(v535 + v537 + 27) == 32 );
+      *(v535 + 25) = v539;
+    }
+LABEL_619:
+    *(v535 + 64) = 1;
+    *(v535 + 48) = CMemberScriptBinding0<CDOTABaseAbility *,bool (CDOTABaseAbility::*)(void),bool>::Call;
+    *(v535 + 56) = CDOTABaseAbility::IsChanneling;
+    v540 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(&v2->m_FunctionBindings)];
+    *(v540 + 24) = 30;
+    *(v540 + 16) = "";
+    *v540 = "GetAssociatedPrimaryAbilities";
+    *(v540 + 8) = "GetAssociatedPrimaryAbilities";
+    v541 = *(v540 + 26);
+    *(v540 + 25) = 0;
+    v542 = v541 - 1;
+    if ( v542 >= 0 && *(v540 + v542 + 27) == 32 )
+    {
+      v543 = 1;
+      do
+      {
+        --v542;
+        v544 = v543;
+        if ( v542 == -1 )
+        {
+          *(v540 + 25) = v543;
+          goto LABEL_625;
+        }
+        ++v543;
+      }
+      while ( *(v540 + v542 + 27) == 32 );
+      *(v540 + 25) = v544;
+    }
+LABEL_625:
+    *(v540 + 56) = 2425;
+    *(v540 + 48) = CMemberScriptBinding0<CDOTABaseAbility *,char const* (CDOTABaseAbility::*)(void),char const*>::Call;
+    *(v540 + 64) = 1;
+    v545 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(&v2->m_FunctionBindings)];
+    *(v545 + 24) = 30;
+    *(v545 + 16) = "";
+    *v545 = "GetAssociatedSecondaryAbilities";
+    *(v545 + 8) = "GetAssociatedSecondaryAbilities";
+    v546 = *(v545 + 26);
+    *(v545 + 25) = 0;
+    v547 = v546 - 1;
+    if ( v547 >= 0 && *(v545 + v547 + 27) == 32 )
+    {
+      v548 = 1;
+      do
+      {
+        --v547;
+        v549 = v548;
+        if ( v547 == -1 )
+        {
+          *(v545 + 25) = v548;
+          goto LABEL_631;
+        }
+        ++v548;
+      }
+      while ( *(v545 + v547 + 27) == 32 );
+      *(v545 + 25) = v549;
+    }
+LABEL_631:
+    *(v545 + 56) = 2433;
+    *(v545 + 48) = CMemberScriptBinding0<CDOTABaseAbility *,char const* (CDOTABaseAbility::*)(void),char const*>::Call;
+    *(v545 + 64) = 1;
+    v550 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(&v2->m_FunctionBindings)];
+    *(v550 + 24) = 6;
+    *(v550 + 16) = "";
+    *v550 = "IsStealable";
+    *(v550 + 8) = "IsStealable";
+    v551 = *(v550 + 26);
+    *(v550 + 25) = 0;
+    v552 = v551 - 1;
+    if ( v552 >= 0 && *(v550 + v552 + 27) == 32 )
+    {
+      v553 = 1;
+      do
+      {
+        --v552;
+        v554 = v553;
+        if ( v552 == -1 )
+        {
+          *(v550 + 25) = v553;
+          goto LABEL_637;
+        }
+        ++v553;
+      }
+      while ( *(v550 + v552 + 27) == 32 );
+      *(v550 + 25) = v554;
+    }
+LABEL_637:
+    *(v550 + 56) = 2441;
+    *(v550 + 48) = CMemberScriptBinding0<CDOTABaseAbility *,bool (CDOTABaseAbility::*)(void),bool>::Call;
+    *(v550 + 64) = 1;
+    v555 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(&v2->m_FunctionBindings)];
+    *(v555 + 24) = 6;
+    *(v555 + 16) = "";
+    *v555 = "IsHiddenWhenStolen";
+    *(v555 + 8) = "IsHiddenWhenStolen";
+    v556 = *(v555 + 26);
+    *(v555 + 25) = 0;
+    v557 = v556 - 1;
+    if ( v557 >= 0 && *(v555 + v557 + 27) == 32 )
+    {
+      v558 = 1;
+      do
+      {
+        --v557;
+        v559 = v558;
+        if ( v557 == -1 )
+        {
+          *(v555 + 25) = v558;
+          goto LABEL_643;
+        }
+        ++v558;
+      }
+      while ( *(v555 + v557 + 27) == 32 );
+      *(v555 + 25) = v559;
+    }
+LABEL_643:
+    *(v555 + 56) = 2449;
+    *(v555 + 48) = CMemberScriptBinding0<CDOTABaseAbility *,bool (CDOTABaseAbility::*)(void),bool>::Call;
+    *(v555 + 64) = 1;
+    v560 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(&v2->m_FunctionBindings)];
+    *(v560 + 24) = 0;
+    *(v560 + 16) = "";
+    *v560 = "SetStolen";
+    *(v560 + 8) = "SetStolen";
+    v561 = *(v560 + 26);
+    v562 = v561++;
+    *(v560 + v562 + 27) = 6;
+    *(v560 + 26) = v561;
+    v563 = v561 - 1;
+    *(v560 + 25) = 0;
+    if ( v563 >= 0 && *(v560 + v563 + 27) == 32 )
+    {
+      v564 = 1;
+      do
+      {
+        --v563;
+        v565 = v564;
+        if ( v563 == -1 )
+        {
+          *(v560 + 25) = v564;
+          goto LABEL_649;
+        }
+        ++v564;
+      }
+      while ( *(v560 + v563 + 27) == 32 );
+      *(v560 + 25) = v565;
+    }
+LABEL_649:
+    *(v560 + 64) = 1;
+    *(v560 + 48) = CMemberScriptBinding1<CDOTABaseAbility *,void (CDOTABaseAbility::*)(bool),void,bool>::Call;
+    *(v560 + 56) = CDOTABaseAbility::SetStolen;
+    *(v560 + 40) = s_CDOTABaseAbility_SetStolen_packed_arg_names;
+    v566 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(&v2->m_FunctionBindings)];
+    *(v566 + 24) = 6;
+    *(v566 + 16) = "";
+    *v566 = "IsStolen";
+    *(v566 + 8) = "IsStolen";
+    v567 = *(v566 + 26);
+    *(v566 + 25) = 0;
+    v568 = v567 - 1;
+    if ( v568 >= 0 && *(v566 + v568 + 27) == 32 )
+    {
+      v569 = 1;
+      do
+      {
+        --v568;
+        v570 = v569;
+        if ( v568 == -1 )
+        {
+          *(v566 + 25) = v569;
+          goto LABEL_655;
+        }
+        ++v569;
+      }
+      while ( *(v566 + v568 + 27) == 32 );
+      *(v566 + 25) = v570;
+    }
+LABEL_655:
+    *(v566 + 64) = 1;
+    *(v566 + 48) = CMemberScriptBinding0<CDOTABaseAbility *,bool (CDOTABaseAbility::*)(void),bool>::Call;
+    *(v566 + 56) = CDOTABaseAbility::IsStolen;
+    v571 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(&v2->m_FunctionBindings)];
+    *(v571 + 24) = 6;
+    *(v571 + 16) = "";
+    *v571 = "PlaysDefaultAnimWhenStolen";
+    *(v571 + 8) = "PlaysDefaultAnimWhenStolen";
+    v572 = *(v571 + 26);
+    *(v571 + 25) = 0;
+    v573 = v572 - 1;
+    if ( v573 >= 0 && *(v571 + v573 + 27) == 32 )
+    {
+      v574 = 1;
+      do
+      {
+        --v573;
+        v575 = v574;
+        if ( v573 == -1 )
+        {
+          *(v571 + 25) = v574;
+          goto LABEL_661;
+        }
+        ++v574;
+      }
+      while ( *(v571 + v573 + 27) == 32 );
+      *(v571 + 25) = v575;
+    }
+LABEL_661:
+    *(v571 + 56) = 2473;
+    *(v571 + 48) = CMemberScriptBinding0<CDOTABaseAbility *,bool (CDOTABaseAbility::*)(void),bool>::Call;
+    *(v571 + 64) = 1;
+    v576 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(&v2->m_FunctionBindings)];
+    *(v576 + 24) = 30;
+    *(v576 + 16) = "";
+    *v576 = "GetStolenActivityModifier";
+    *(v576 + 8) = "GetStolenActivityModifier";
+    v577 = *(v576 + 26);
+    *(v576 + 25) = 0;
+    v578 = v577 - 1;
+    if ( v578 >= 0 && *(v576 + v578 + 27) == 32 )
+    {
+      v579 = 1;
+      do
+      {
+        --v578;
+        v580 = v579;
+        if ( v578 == -1 )
+        {
+          *(v576 + 25) = v579;
+          goto LABEL_667;
+        }
+        ++v579;
+      }
+      while ( *(v576 + v578 + 27) == 32 );
+      *(v576 + 25) = v580;
+    }
+LABEL_667:
+    *(v576 + 56) = 2481;
+    *(v576 + 48) = CMemberScriptBinding0<CDOTABaseAbility *,char const* (CDOTABaseAbility::*)(void),char const*>::Call;
+    *(v576 + 64) = 1;
+    v581 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(&v2->m_FunctionBindings)];
+    *(v581 + 24) = 32;
+    *(v581 + 16) = "";
+    *v581 = "GetLevelSpecialValueFor";
+    *(v581 + 8) = "Script_GetLevelSpecialValueFor";
+    v582 = *(v581 + 26);
+    *(v581 + v582 + 27) = 30;
+    v583 = v582 + 1;
+    v582 += 2;
+    *(v581 + v583 + 27) = 5;
+    *(v581 + 26) = v582;
+    v584 = v582 - 1;
+    *(v581 + 25) = 0;
+    if ( v584 >= 0 && *(v581 + v584 + 27) == 32 )
+    {
+      v585 = 1;
+      do
+      {
+        --v584;
+        v586 = v585;
+        if ( v584 == -1 )
+        {
+          *(v581 + 25) = v585;
+          goto LABEL_673;
+        }
+        ++v585;
+      }
+      while ( *(v581 + v584 + 27) == 32 );
+      *(v581 + 25) = v586;
+    }
+LABEL_673:
+    *(v581 + 64) = 1;
+    *(v581 + 48) = CMemberScriptBinding2<CDOTABaseAbility *,CVariantBase<CVariantDefaultAllocator> (CDOTABaseAbility::*)(char const*,int),CVariantBase<CVariantDefaultAllocator>,char const*,int>::Call;
+    *(v581 + 56) = CDOTABaseAbility::Script_GetLevelSpecialValueFor;
+    *(v581 + 40) = s_CDOTABaseAbility_Script_GetLevelSpecialValueFor_packed_arg_names;
+    v587 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(&v2->m_FunctionBindings)];
+    *(v587 + 24) = 32;
+    *(v587 + 16) = "Gets a value from this ability's special value block for its current level.";
+    *v587 = "GetSpecialValueFor";
+    *(v587 + 8) = "Script_GetSpecialValueFor";
+    v588 = *(v587 + 26);
+    v589 = v588++;
+    *(v587 + v589 + 27) = 30;
+    *(v587 + 26) = v588;
+    v590 = v588 - 1;
+    *(v587 + 25) = 0;
+    if ( v590 >= 0 && *(v587 + v590 + 27) == 32 )
+    {
+      v591 = 1;
+      do
+      {
+        --v590;
+        v592 = v591;
+        if ( v590 == -1 )
+        {
+          *(v587 + 25) = v591;
+          goto LABEL_679;
+        }
+        ++v591;
+      }
+      while ( *(v587 + v590 + 27) == 32 );
+      *(v587 + 25) = v592;
+    }
+LABEL_679:
+    *(v587 + 64) = 1;
+    *(v587 + 48) = CMemberScriptBinding1<CDOTABaseAbility *,CVariantBase<CVariantDefaultAllocator> (CDOTABaseAbility::*)(char const*),CVariantBase<CVariantDefaultAllocator>,char const*>::Call;
+    *(v587 + 56) = CDOTABaseAbility::Script_GetSpecialValueFor;
+    *(v587 + 40) = s_CDOTABaseAbility_Script_GetSpecialValueFor_packed_arg_names;
+    return v2;
+  }
+  return result;
+}
+
+
+// CDOTABaseAbility::GetScriptDesc  (line 513, @0x0000000002449b80, libserver.so)
+// calls: GetScriptDesc<CDOTABaseAbility>
+ScriptClassDesc_t *__fastcall CDOTABaseAbility::GetScriptDesc(CDOTABaseAbility *const this)
+{
+  return GetScriptDesc<CDOTABaseAbility>(this);
+}
+
+
+// CDOTABaseAbility::InitScriptDesc  (line 513, @0x0000000002449b90, libserver.so)
+// calls: GetScriptDesc<CDOTABaseAbility>
+// callers: CDOTA_Ability_Healing_Campfire::GetEntityClassInternal, CDOTA_Ability_Brewmaster_PrimalSplit::GetEntityClassInternal, CDOTA_Ability_DeathProphet_Exorcism::GetEntityClassInternal, CDOTA_Ability_Throw_Coal::GetEntityClassInternal, CDOTA_Ability_Throw_Snowball::GetEntityClassInternal, CDOTA_Ability_Slithereen_Riptide::GetEntityClassInternal, CDOTA_Ability_Corspselord_Revive::GetEntityClassInternal, CDOTA_Ability_Lesser_NightCrawler_Pounce::GetEntityClassInternal, CDOTA_Ability_Creature_Fire_Breath::GetEntityClassInternal, CDOTA_Ability_ShootFirework::GetEntityClassInternal, CDOTA_Ability_Zombie_Berserk::GetEntityClassInternal, CDOTA_Ability_Pudge_FleshHeap::GetEntityClassInternal (1061 total)
+ScriptClassDesc_t *__cdecl CDOTABaseAbility::InitScriptDesc()
+{
+  return GetScriptDesc<CDOTABaseAbility>(0);
+}
+
+
+// CDOTABaseAbility::GetClassScriptDesc  (line 513, @0x0000000002449ba0, libserver.so)
+// calls: GetScriptDesc<CDOTABaseAbility>
+ScriptClassDesc_t *__cdecl CDOTABaseAbility::GetClassScriptDesc()
+{
+  return GetScriptDesc<CDOTABaseAbility>(0);
+}
+
+
+// LocalRegisterSchemaModule<ArbitraryTemplateParameter_server_dota_base_ability_h>  (line 632, @0x000000000242b260, libserver.so)  // inlines: Call
+// callers: RegisterSchemaModule_dota_base_ability_h
+// globals: CDOTABaseAbility::CEntityInstanceEntityClass::s_pSchemaBindingForLocalModule, CDOTABaseAbility::s_pSchemaBindingForLocalModule
+void __fastcall LocalRegisterSchemaModule<ArbitraryTemplateParameter_server_dota_base_ability_h>(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        SchemaRegistrationPhase_t nRegistrationPhase)
+{
+  if ( nRegistrationPhase == SchemaRegistrationPhase_t::SCHEMA_REGISTRATION_PHASE_CLASSES )
+  {
+    (*(CDOTABaseAbility::CEntityInstanceEntityClass::s_pSchemaBindingForLocalModule->_vptr_ISchemaBinding + 5))(
+      CDOTABaseAbility::CEntityInstanceEntityClass::s_pSchemaBindingForLocalModule,
+      pSchemaSystem,
+      pBinaryName,
+      "server");
+    (*(CDOTABaseAbility::s_pSchemaBindingForLocalModule->_vptr_ISchemaBinding + 5))(
+      CDOTABaseAbility::s_pSchemaBindingForLocalModule,
+      pSchemaSystem,
+      pBinaryName,
+      "server");
+  }
+  ++g_nLinkerHack_SchemaAnchor_RegistrationCountFor_server;
+}
+
+
+// RegisterSchemaModule_dota_base_ability_h  (line 635, @0x000000000242b2c0, libserver.so)
+// calls: LocalRegisterSchemaModule<ArbitraryTemplateParameter_server_dota_base_ability_h>
+// callers: CSchemaRegistration_server::RegisterAllBindings
+void __fastcall RegisterSchemaModule_dota_base_ability_h(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        SchemaRegistrationPhase_t nRegistrationPhase)
+{
+  LocalRegisterSchemaModule<ArbitraryTemplateParameter_server_dota_base_ability_h>(
+    pSchemaSystem,
+    pBinaryName,
+    nRegistrationPhase);
+}
+
+

@@ -1,0 +1,250 @@
+
+// ==== functions (decompiled by Hex-Rays; names/signatures from DWARF) ====
+
+// CBodyComponent::Schema_CompileTimeVerificationFunction  (line 35, @0x000000000202b660, libserver.so)
+void __fastcall CBodyComponent::Schema_CompileTimeVerificationFunction(CBodyComponent *const this)
+{
+  ;
+}
+
+
+// CBodyComponent::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE  (line 42, @0x000000000202b270, libserver.so)  // inlines: Call, Get, SchemaBinding_SchemaTypeOfMemberVarByAddr<CBodyComponent, CGameSceneNode*>, SchemaBinding_SchemaTypeOfMemberVarByAddr<CBodyComponent, CNetworkVarChainer>, SchemaBinding_SchemaTypeOfVarByAddr<EntComponentInfo_t>, SchemaBinding_SchemaTypeOfVarByAddr<int>, SetTypeScope
+// calls: CEntityComponent::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE
+// callers: CSchemaNonConstructibleClassBinding<CBodyComponent>::Register, CBodyComponent::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE, CBodyComponentPoint::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE, CBodyComponentSkeletonInstance::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE
+// strings: "CGameSceneNode", "CNetworkVarChainer", "EntComponentInfo_t"
+// globals: CBodyComponent::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema, CBodyComponent::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitial
+CSchemaClassInfo *__fastcall CBodyComponent::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        const char *pProjectName)
+{
+  ISchemaSystemTypeScope *v6; // rbx
+  __int64 (__fastcall *v7)(ISchemaSystemTypeScope *, __int64); // r15
+  __int64 v8; // rax
+  CSchemaClassInfo *v9; // rax
+
+  v6 = (*(*pSchemaSystem + 112LL))(pSchemaSystem, 1, pBinaryName);
+  v7 = *(*v6 + 48LL);
+  v8 = (*(*v6 + 88LL))(v6, "CGameSceneNode");
+  CBodyComponent::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CBodyComponent[0].m_pType = v7(v6, v8);
+  CBodyComponent::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CBodyComponent[1].m_pType = (*(*v6 + 88LL))(v6, "CNetworkVarChainer");
+  CBodyComponent::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_StaticMembers_CBodyComponent[0].m_pType = (*(*v6 + 88LL))(v6, "EntComponentInfo_t");
+  CBodyComponent::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_StaticMembers_CBodyComponent[1].m_pType = (*(*v6 + 40LL))(v6, 7);
+  (*(CEntityComponent::s_pSchemaBindingForLocalModule->_vptr_ISchemaBinding + 5))(
+    CEntityComponent::s_pSchemaBindingForLocalModule,
+    pSchemaSystem,
+    pBinaryName,
+    pProjectName);
+  v9 = CEntityComponent::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+         pSchemaSystem,
+         pBinaryName,
+         pProjectName);
+  CBodyComponent::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CBodyComponent.m_pOuterTypeScope = v6;
+  CBodyComponent::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassBases_CBodyComponent[0].m_pClass = v9;
+  CBodyComponent::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult = &CBodyComponent::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CBodyComponent;
+  return &CBodyComponent::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CBodyComponent;
+}
+
+
+// CBodyComponent::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE  (line 42, @0x000000000202b670, libserver.so)
+// calls: CBodyComponent::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE
+// globals: CBodyComponent::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitial
+CSchemaClassInfo *__fastcall CBodyComponent::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        const char *pProjectName)
+{
+  CSchemaClassInfo *result; // rax
+
+  result = CBodyComponent::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult;
+  if ( CBodyComponent::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult == 0 )
+    return CBodyComponent::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+             pSchemaSystem,
+             pBinaryName,
+             pProjectName);
+  return result;
+}
+
+
+// CBodyComponent::Schema_VerifyBindingIsRegistered  (line 92, @0x000000000202b690, libserver.so)
+// callers: CBodyComponent::Schema_DynamicBinding, CEntityComponentHelperT<CBodyComponent, CEntityComponentHelperReferenced<CBodyComponent> >::GetSchemaBinding
+void __cdecl CBodyComponent::Schema_VerifyBindingIsRegistered()
+{
+  ;
+}
+
+
+// CBodyComponentPoint::Schema_CompileTimeVerificationFunction  (line 100, @0x000000000202b6a0, libserver.so)
+void __fastcall CBodyComponentPoint::Schema_CompileTimeVerificationFunction(CBodyComponentPoint *const this)
+{
+  ;
+}
+
+
+// CBodyComponentPoint::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE  (line 107, @0x000000000202b6b0, libserver.so)  // inlines: Call, Get, NetworkVarDecl_t, RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE, SchemaBinding_SchemaTypeOfMemberVarByAddr<CBodyComponentPoint, CBodyComponentPoint::NetworkVar_m_sceneNode>, SchemaBinding_SchemaTypeOfMemberVarByAddr<CBodyComponentPoint, CNetworkVarChainer>, SchemaBinding_SchemaTypeOfVarByAddr<EntComponentInfo_t>, SchemaBinding_SchemaTypeOfVarByAddr<int>, SetTypeScope
+// calls: __cxa_guard_acquire, __cxa_guard_release, CBodyComponent::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE
+// callers: CSchemaNonConstructibleClassBinding<CBodyComponentPoint>::Register
+// strings: "CGameSceneNode", "CNetworkVarChainer", "EntComponentInfo_t", "m_sceneNode"
+// globals: CBodyComponentPoint::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pIn, `guard variable for'CBodyComponentPoint::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*, CBodyComponent::s_pSchemaBindingForLocalModule, CBodyComponent::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitial, CBodyComponentPoint::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplS
+CSchemaClassInfo *__fastcall CBodyComponentPoint::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        const char *pProjectName)
+{
+  CSchemaClassInfo *result; // rax
+  ISchemaSystemTypeScope *v7; // r14
+  CSchemaClassInfo *v8; // rax
+
+  result = CBodyComponentPoint::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult;
+  if ( CBodyComponentPoint::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult == 0 )
+  {
+    v7 = (*(*pSchemaSystem + 112LL))(pSchemaSystem, 1, pBinaryName);
+    if ( `guard variable for'CBodyComponentPoint::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CBodyComponentPoint0_MNetworkVarNames_Value == 0
+      && __cxa_guard_acquire(&`guard variable for'CBodyComponentPoint::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CBodyComponentPoint0_MNetworkVarNames_Value) != 0 )
+    {
+      CBodyComponentPoint::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CBodyComponentPoint0_MNetworkVarNames_Value.m_pVarName = "m_sceneNode";
+      CBodyComponentPoint::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CBodyComponentPoint0_MNetworkVarNames_Value.m_pVarType = "CGameSceneNode";
+      __cxa_guard_release(&`guard variable for'CBodyComponentPoint::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CBodyComponentPoint0_MNetworkVarNames_Value);
+    }
+    CBodyComponentPoint::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CBodyComponentPoint[0].m_pType = (*(*v7 + 88LL))(v7, "CGameSceneNode");
+    CBodyComponentPoint::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CBodyComponentPoint[1].m_pType = (*(*v7 + 88LL))(v7, "CNetworkVarChainer");
+    CBodyComponentPoint::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_StaticMembers_CBodyComponentPoint[0].m_pType = (*(*v7 + 88LL))(v7, "EntComponentInfo_t");
+    CBodyComponentPoint::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_StaticMembers_CBodyComponentPoint[1].m_pType = (*(*v7 + 40LL))(v7, 7);
+    (*(CBodyComponent::s_pSchemaBindingForLocalModule->_vptr_ISchemaBinding + 5))(
+      CBodyComponent::s_pSchemaBindingForLocalModule,
+      pSchemaSystem,
+      pBinaryName,
+      pProjectName);
+    v8 = CBodyComponent::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult;
+    if ( CBodyComponent::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult == 0 )
+      v8 = CBodyComponent::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+             pSchemaSystem,
+             pBinaryName,
+             pProjectName);
+    CBodyComponentPoint::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CBodyComponentPoint.m_pOuterTypeScope = v7;
+    CBodyComponentPoint::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassBases_CBodyComponentPoint[0].m_pClass = v8;
+    CBodyComponentPoint::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult = &CBodyComponentPoint::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CBodyComponentPoint;
+    return &CBodyComponentPoint::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CBodyComponentPoint;
+  }
+  return result;
+}
+
+
+// CBodyComponentPoint::Schema_VerifyBindingIsRegistered  (line 162, @0x000000000202b7f0, libserver.so)
+// callers: CBodyComponentPoint::Schema_DynamicBinding, CEntityComponentHelperT<CBodyComponentPoint, CEntityComponentHelperReferenced<CBodyComponentPoint> >::GetSchemaBinding
+void __cdecl CBodyComponentPoint::Schema_VerifyBindingIsRegistered()
+{
+  ;
+}
+
+
+// CBodyComponentSkeletonInstance::Schema_CompileTimeVerificationFunction  (line 170, @0x000000000202b800, libserver.so)
+void __fastcall CBodyComponentSkeletonInstance::Schema_CompileTimeVerificationFunction(
+        CBodyComponentSkeletonInstance *const this)
+{
+  ;
+}
+
+
+// CBodyComponentSkeletonInstance::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE  (line 177, @0x000000000202b810, libserver.so)  // inlines: Call, Get, NetworkVarDecl_t, RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE, SchemaBinding_SchemaTypeOfMemberVarByAddr<CBodyComponentSkeletonInstance, CBodyComponentSkeletonInstance::NetworkVar_m_skeletonInstance>, SchemaBinding_SchemaTypeOfMemberVarByAddr<CBodyComponentSkeletonInstance, CNetworkVarChainer>, SchemaBinding_SchemaTypeOfVarByAddr<EntComponentInfo_t>, SchemaBinding_SchemaTypeOfVarByAddr<int>, SetTypeScope
+// calls: __cxa_guard_acquire, __cxa_guard_release, CBodyComponent::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE
+// callers: CBodyComponentBaseAnimating::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE, CBodyComponentBaseAnimatingOverlay::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE, CBodyComponentBaseModelEntity::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE, CSchemaNonConstructibleClassBinding<CBodyComponentSkeletonInstance>::Register
+// strings: "CSkeletonInstance", "CNetworkVarChainer", "EntComponentInfo_t", "m_skeletonInstance"
+// globals: CBodyComponentSkeletonInstance::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char con, `guard variable for'CBodyComponentSkeletonInstance::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,, CBodyComponent::s_pSchemaBindingForLocalModule, CBodyComponent::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitial
+CSchemaClassInfo *__fastcall CBodyComponentSkeletonInstance::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        const char *pProjectName)
+{
+  CSchemaClassInfo *result; // rax
+  ISchemaSystemTypeScope *v7; // r14
+  CSchemaClassInfo *v8; // rax
+
+  result = CBodyComponentSkeletonInstance::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult;
+  if ( CBodyComponentSkeletonInstance::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult == 0 )
+  {
+    v7 = (*(*pSchemaSystem + 112LL))(pSchemaSystem, 1, pBinaryName);
+    if ( `guard variable for'CBodyComponentSkeletonInstance::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CBodyComponentSkeletonInstance0_MNetworkVarNames_Value == 0
+      && __cxa_guard_acquire(&`guard variable for'CBodyComponentSkeletonInstance::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CBodyComponentSkeletonInstance0_MNetworkVarNames_Value) != 0 )
+    {
+      CBodyComponentSkeletonInstance::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CBodyComponentSkeletonInstance0_MNetworkVarNames_Value.m_pVarName = "m_skeletonInstance";
+      CBodyComponentSkeletonInstance::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CBodyComponentSkeletonInstance0_MNetworkVarNames_Value.m_pVarType = "CSkeletonInstance";
+      __cxa_guard_release(&`guard variable for'CBodyComponentSkeletonInstance::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CBodyComponentSkeletonInstance0_MNetworkVarNames_Value);
+    }
+    CBodyComponentSkeletonInstance::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CBodyComponentSkeletonInstance[0].m_pType = (*(*v7 + 88LL))(v7, "CSkeletonInstance");
+    CBodyComponentSkeletonInstance::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CBodyComponentSkeletonInstance[1].m_pType = (*(*v7 + 88LL))(v7, "CNetworkVarChainer");
+    CBodyComponentSkeletonInstance::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_StaticMembers_CBodyComponentSkeletonInstance[0].m_pType = (*(*v7 + 88LL))(v7, "EntComponentInfo_t");
+    CBodyComponentSkeletonInstance::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_StaticMembers_CBodyComponentSkeletonInstance[1].m_pType = (*(*v7 + 40LL))(v7, 7);
+    (*(CBodyComponent::s_pSchemaBindingForLocalModule->_vptr_ISchemaBinding + 5))(
+      CBodyComponent::s_pSchemaBindingForLocalModule,
+      pSchemaSystem,
+      pBinaryName,
+      pProjectName);
+    v8 = CBodyComponent::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult;
+    if ( CBodyComponent::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult == 0 )
+      v8 = CBodyComponent::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+             pSchemaSystem,
+             pBinaryName,
+             pProjectName);
+    CBodyComponentSkeletonInstance::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CBodyComponentSkeletonInstance.m_pOuterTypeScope = v7;
+    CBodyComponentSkeletonInstance::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassBases_CBodyComponentSkeletonInstance[0].m_pClass = v8;
+    CBodyComponentSkeletonInstance::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult = &CBodyComponentSkeletonInstance::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CBodyComponentSkeletonInstance;
+    return &CBodyComponentSkeletonInstance::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CBodyComponentSkeletonInstance;
+  }
+  return result;
+}
+
+
+// CBodyComponentSkeletonInstance::Schema_VerifyBindingIsRegistered  (line 232, @0x000000000202b950, libserver.so)
+// callers: CEntityComponentHelperT<CBodyComponentSkeletonInstance, CEntityComponentHelperReferenced<CBodyComponentSkeletonInstance> >::GetSchemaBinding, CBodyComponentSkeletonInstance::Schema_DynamicBinding
+void __cdecl CBodyComponentSkeletonInstance::Schema_VerifyBindingIsRegistered()
+{
+  ;
+}
+
+
+// LocalRegisterSchemaModule<ArbitraryTemplateParameter_server_bodycomponent_h>  (line 240, @0x000000000202b960, libserver.so)  // inlines: Call
+// callers: RegisterSchemaModule_bodycomponent_h
+// globals: CBodyComponent::s_pSchemaBindingForLocalModule, CBodyComponentPoint::s_pSchemaBindingForLocalModule, CBodyComponentSkeletonInstance::s_pSchemaBindingForLocalModule
+void __fastcall LocalRegisterSchemaModule<ArbitraryTemplateParameter_server_bodycomponent_h>(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        SchemaRegistrationPhase_t nRegistrationPhase)
+{
+  if ( nRegistrationPhase == SchemaRegistrationPhase_t::SCHEMA_REGISTRATION_PHASE_CLASSES )
+  {
+    (*(CBodyComponent::s_pSchemaBindingForLocalModule->_vptr_ISchemaBinding + 5))(
+      CBodyComponent::s_pSchemaBindingForLocalModule,
+      pSchemaSystem,
+      pBinaryName,
+      "server");
+    (*(CBodyComponentPoint::s_pSchemaBindingForLocalModule->_vptr_ISchemaBinding + 5))(
+      CBodyComponentPoint::s_pSchemaBindingForLocalModule,
+      pSchemaSystem,
+      pBinaryName,
+      "server");
+    (*(CBodyComponentSkeletonInstance::s_pSchemaBindingForLocalModule->_vptr_ISchemaBinding + 5))(
+      CBodyComponentSkeletonInstance::s_pSchemaBindingForLocalModule,
+      pSchemaSystem,
+      pBinaryName,
+      "server");
+  }
+  ++g_nLinkerHack_SchemaAnchor_RegistrationCountFor_server;
+}
+
+
+// RegisterSchemaModule_bodycomponent_h  (line 244, @0x000000000202b9e0, libserver.so)
+// calls: LocalRegisterSchemaModule<ArbitraryTemplateParameter_server_bodycomponent_h>
+// callers: CSchemaRegistration_server::RegisterAllBindings
+void __fastcall RegisterSchemaModule_bodycomponent_h(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        SchemaRegistrationPhase_t nRegistrationPhase)
+{
+  LocalRegisterSchemaModule<ArbitraryTemplateParameter_server_bodycomponent_h>(
+    pSchemaSystem,
+    pBinaryName,
+    nRegistrationPhase);
+}
+
+

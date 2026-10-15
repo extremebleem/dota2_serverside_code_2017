@@ -1,0 +1,637 @@
+
+// ==== functions (decompiled by Hex-Rays; names/signatures from DWARF) ====
+
+// CBaseAnimating::CEntityInstanceEntityClass::Schema_CompileTimeVerificationFunction  (line 35, @0x0000000001fa9aa0, libserver.so)
+void __fastcall CBaseAnimating::CEntityInstanceEntityClass::Schema_CompileTimeVerificationFunction(
+        CBaseAnimating::CEntityInstanceEntityClass *const this)
+{
+  ;
+}
+
+
+// CBaseAnimating::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE  (line 38, @0x0000000001fa81e0, libserver.so)  // inlines: Call, Get, RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE, SetTypeScope
+// calls: CBaseModelEntity::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE
+// callers: CBaseAnimatingOverlay::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE, CBaseProp::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE, CSchemaNonConstructibleClassBinding<CBaseAnimating::CEntityInstanceEntityClass>::Register, CBaseAnimating::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE, CBaseAnimating::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE
+// globals: CBaseModelEntity::CEntityInstanceEntityClass::s_pSchemaBindingForLocalModule, CBaseModelEntity::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char c, CBaseAnimating::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char con
+CSchemaClassInfo *__fastcall CBaseAnimating::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        const char *pProjectName)
+{
+  ISchemaSystemTypeScope *v6; // r14
+  CSchemaClassInfo *v7; // rax
+
+  v6 = (*(*pSchemaSystem + 112LL))(pSchemaSystem, 1, pBinaryName);
+  (*(CBaseModelEntity::CEntityInstanceEntityClass::s_pSchemaBindingForLocalModule->_vptr_ISchemaBinding + 5))(
+    CBaseModelEntity::CEntityInstanceEntityClass::s_pSchemaBindingForLocalModule,
+    pSchemaSystem,
+    pBinaryName,
+    pProjectName);
+  v7 = CBaseModelEntity::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult;
+  if ( CBaseModelEntity::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult == 0 )
+    v7 = CBaseModelEntity::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+           pSchemaSystem,
+           pBinaryName,
+           pProjectName);
+  CBaseAnimating::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CBaseAnimating_CEntityInstanceEntityClass.m_pOuterTypeScope = v6;
+  CBaseAnimating::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassBases_CBaseAnimating_CEntityInstanceEntityClass[0].m_pClass = v7;
+  CBaseAnimating::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult = &CBaseAnimating::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CBaseAnimating_CEntityInstanceEntityClass;
+  return &CBaseAnimating::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CBaseAnimating_CEntityInstanceEntityClass;
+}
+
+
+// CBaseAnimating::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE  (line 38, @0x0000000001fa9ab0, libserver.so)
+// calls: CBaseAnimating::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE
+// callers: CDevtestHierarchy2::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE, CBaseCombatWeapon::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE, CFish::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE, CGib::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE, CRagGib::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE, CItem::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE, CRagdollProp::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE, CPhysMagnet::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE, CWaterBullet::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE, CBaseVRHandAttachment::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE, CPointCommentaryNode::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE, CItemSoda::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE (26 total)
+// globals: CBaseAnimating::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char con
+CSchemaClassInfo *__fastcall CBaseAnimating::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        const char *pProjectName)
+{
+  CSchemaClassInfo *result; // rax
+
+  result = CBaseAnimating::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult;
+  if ( CBaseAnimating::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult == 0 )
+    return CBaseAnimating::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+             pSchemaSystem,
+             pBinaryName,
+             pProjectName);
+  return result;
+}
+
+
+// CBaseAnimating::CEntityInstanceEntityClass::Schema_VerifyBindingIsRegistered  (line 55, @0x0000000001fa9ad0, libserver.so)
+// callers: CBaseAnimating::CEntityInstanceEntityClass::Schema_DynamicBinding
+void __cdecl CBaseAnimating::CEntityInstanceEntityClass::Schema_VerifyBindingIsRegistered()
+{
+  ;
+}
+
+
+// CBaseAnimating::Schema_CompileTimeVerificationFunction  (line 63, @0x0000000001fa9ae0, libserver.so)
+void __fastcall CBaseAnimating::Schema_CompileTimeVerificationFunction(CBaseAnimating *const this)
+{
+  ;
+}
+
+
+// CBaseAnimating::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE  (line 72, @0x0000000001fafdc0, libserver.so)  // inlines: Call, ComponentKeyField_t, Get, NetworkVarDecl_t, RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE, SchemaBinding_SchemaTypeOfMemberVarByAddr<CBaseAnimating, CEntityIOOutput>, SchemaBinding_SchemaTypeOfMemberVarByAddr<CBaseAnimating, CHitboxComponent>, SchemaBinding_SchemaTypeOfMemberVarByAddr<CBaseAnimating, CNetworkVarBase<int, CBaseAnimating::NetworkVar_m_nForceBone> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<CBaseAnimating, CNetworkVarBase<unsigned char, CBaseAnimating::NetworkVar_m_nMuzzleFlashParity> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<CBaseAnimating, CNetworkVectorBase<Vector, CBaseAnimating::NetworkVar_m_vecForce> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<CBaseAnimating, float>, SetTypeScope
+// calls: __cxa_guard_acquire, __cxa_guard_release, CBaseModelEntity::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE, SchemaTypeOf<CUtlStringToken>, CBaseAnimating::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE, __cxa_guard_abort, _Unwind_Resume
+// callers: CDevtestHierarchy2::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE, CBaseCombatWeapon::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE, CBaseAnimatingOverlay::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE, CBaseProp::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE, CSchemaNonConstructibleClassBinding<CBaseAnimating>::Register, CFish::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE, CGib::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE, CRagGib::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE, CItem::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE, CRagdollProp::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE, CPhysMagnet::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE, CWaterBullet::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE (29 total)
+// strings: "CEntityIOOutput", "m_nMuzzleFlashParity", "uint8", "m_nForceBone", "m_vecForce", "m_CHitboxComponent" (7 total)
+// globals: CBaseAnimating::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitial, `guard variable for'CBaseAnimating::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char, CSchemaManipulator<Vector>::StaticAccessor(void)::m, CAtomicManipulator<Vector>::Get(void)::val, CBaseAnimating::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char con, CBaseAnimating::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema, CBaseModelEntity::s_pSchemaBindingForLocalModule
+CSchemaClassInfo *__fastcall CBaseAnimating::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        const char *pProjectName)
+{
+  CSchemaClassInfo *result; // rax
+  ISchemaSystemTypeScope *v7; // rbx
+  CSchemaClassInfo *v8; // rax
+  CSchemaClassInfo *v9; // rax
+
+  result = CBaseAnimating::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult;
+  if ( CBaseAnimating::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult == 0 )
+  {
+    v7 = (*(*pSchemaSystem + 112LL))(pSchemaSystem, 1, pBinaryName);
+    if ( `guard variable for'CBaseAnimating::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CBaseAnimating4_MKeyField_Value == 0
+      && __cxa_guard_acquire(&`guard variable for'CBaseAnimating::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CBaseAnimating4_MKeyField_Value) != 0 )
+    {
+      CBaseAnimating::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CBaseAnimating4_MKeyField_Value.m_pType = SchemaTypeOf<CUtlStringToken>();
+      CBaseAnimating::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CBaseAnimating4_MKeyField_Value.m_pKeyName = "skin";
+      __cxa_guard_release(&`guard variable for'CBaseAnimating::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CBaseAnimating4_MKeyField_Value);
+    }
+    if ( `guard variable for'CBaseAnimating::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CBaseAnimating5_MNetworkVarNames_Value == 0
+      && __cxa_guard_acquire(&`guard variable for'CBaseAnimating::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CBaseAnimating5_MNetworkVarNames_Value) != 0 )
+    {
+      CBaseAnimating::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CBaseAnimating5_MNetworkVarNames_Value.m_pVarName = "m_CHitboxComponent";
+      CBaseAnimating::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CBaseAnimating5_MNetworkVarNames_Value.m_pVarType = "CHitboxComponent::Storage_t";
+      __cxa_guard_release(&`guard variable for'CBaseAnimating::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CBaseAnimating5_MNetworkVarNames_Value);
+    }
+    if ( `guard variable for'CBaseAnimating::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CBaseAnimating6_MNetworkVarNames_Value == 0
+      && __cxa_guard_acquire(&`guard variable for'CBaseAnimating::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CBaseAnimating6_MNetworkVarNames_Value) != 0 )
+    {
+      CBaseAnimating::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CBaseAnimating6_MNetworkVarNames_Value.m_pVarName = "m_vecForce";
+      CBaseAnimating::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CBaseAnimating6_MNetworkVarNames_Value.m_pVarType = "Vector";
+      __cxa_guard_release(&`guard variable for'CBaseAnimating::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CBaseAnimating6_MNetworkVarNames_Value);
+    }
+    if ( `guard variable for'CBaseAnimating::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CBaseAnimating7_MNetworkVarNames_Value == 0
+      && __cxa_guard_acquire(&`guard variable for'CBaseAnimating::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CBaseAnimating7_MNetworkVarNames_Value) != 0 )
+    {
+      CBaseAnimating::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CBaseAnimating7_MNetworkVarNames_Value.m_pVarName = "m_nForceBone";
+      CBaseAnimating::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CBaseAnimating7_MNetworkVarNames_Value.m_pVarType = "int32";
+      __cxa_guard_release(&`guard variable for'CBaseAnimating::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CBaseAnimating7_MNetworkVarNames_Value);
+    }
+    if ( `guard variable for'CBaseAnimating::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CBaseAnimating8_MNetworkVarNames_Value == 0
+      && __cxa_guard_acquire(&`guard variable for'CBaseAnimating::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CBaseAnimating8_MNetworkVarNames_Value) != 0 )
+    {
+      CBaseAnimating::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CBaseAnimating8_MNetworkVarNames_Value.m_pVarName = "m_nMuzzleFlashParity";
+      CBaseAnimating::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CBaseAnimating8_MNetworkVarNames_Value.m_pVarType = "uint8";
+      __cxa_guard_release(&`guard variable for'CBaseAnimating::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CBaseAnimating8_MNetworkVarNames_Value);
+    }
+    CBaseAnimating::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CBaseAnimating[0].m_pType = (*(*v7 + 88LL))(v7, "CHitboxComponent");
+    CBaseAnimating::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CBaseAnimating[1].m_pType = (*(*v7 + 56LL))(v7, "Vector", 2010, CAtomicManipulator<Vector>::Get(void)::val, CSchemaManipulator<Vector>::StaticAccessor(void)::m);
+    CBaseAnimating::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CBaseAnimating[2].m_pType = (*(*v7 + 40LL))(v7, 7);
+    CBaseAnimating::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CBaseAnimating[3].m_pType = (*(*v7 + 40LL))(v7, 4);
+    CBaseAnimating::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CBaseAnimating[4].m_pType = (*(*v7 + 40LL))(v7, 11);
+    CBaseAnimating::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CBaseAnimating[5].m_pType = (*(*v7 + 88LL))(v7, "CEntityIOOutput");
+    if ( `guard variable for'CBaseAnimating::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_NestedClassesOf_CBaseAnimating == 0
+      && __cxa_guard_acquire(&`guard variable for'CBaseAnimating::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_NestedClassesOf_CBaseAnimating) != 0 )
+    {
+      v8 = CBaseAnimating::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult;
+      if ( CBaseAnimating::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult == 0 )
+        v8 = CBaseAnimating::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+               pSchemaSystem,
+               pBinaryName,
+               pProjectName);
+      CBaseAnimating::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_NestedClassesOf_CBaseAnimating[0] = v8;
+      __cxa_guard_release(&`guard variable for'CBaseAnimating::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_NestedClassesOf_CBaseAnimating);
+    }
+    (*(CBaseModelEntity::s_pSchemaBindingForLocalModule->_vptr_ISchemaBinding + 5))(
+      CBaseModelEntity::s_pSchemaBindingForLocalModule,
+      pSchemaSystem,
+      pBinaryName,
+      pProjectName);
+    v9 = CBaseModelEntity::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+           pSchemaSystem,
+           pBinaryName,
+           pProjectName);
+    CBaseAnimating::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CBaseAnimating.m_pOuterTypeScope = v7;
+    CBaseAnimating::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassBases_CBaseAnimating[0].m_pClass = v9;
+    CBaseAnimating::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult = &CBaseAnimating::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CBaseAnimating;
+    return &CBaseAnimating::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CBaseAnimating;
+  }
+  return result;
+}
+
+
+// CBaseAnimating::Schema_VerifyBindingIsRegistered  (line 187, @0x0000000001fa9af0, libserver.so)
+// callers: CBaseAnimating::CEntityInstanceEntityClass::GetInstanceSchemaBinding, CBaseAnimating::Schema_DynamicBinding
+void __cdecl CBaseAnimating::Schema_VerifyBindingIsRegistered()
+{
+  ;
+}
+
+
+// CBaseAnimating::SetupEntClassInputs  (line 201, @0x0000000001fa9b00, libserver.so)  // inlines: CEntityIOInputFunction<CBaseAnimating, CBaseAnimating>, CUtlAbstractDelegate, CUtlDelegate<CBaseAnimating, CBaseAnimating>, Convert<CBaseAnimating, void (CBaseAnimating::*)(CEntityInstance*, CEntityInstance*, CEntityInstance*, const CVariantBase<CVariantDefaultAllocator>&), void (detail::GenericClass::*)()>, FastDelegate4<CBaseAnimating, CBaseAnimating>, SetMementoFrom, bindmemfunc<CBaseAnimating, void (CBaseAnimating::*)(CEntityInstance*, CEntityInstance*, CEntityInstance*, const CVariantBase<CVariantDefaultAllocator>&)>, operator=
+// calls: __cxa_guard_acquire, __cxa_guard_release
+// callers: CBaseAnimating::GetEntityClassInternal
+// strings: "SetBodyGroup"
+// globals: `guard variable for'CBaseAnimating::SetupEntClassInputs(CEntityClass *)::CBaseAnimating_Inputs, CBaseAnimating::SetupEntClassInputs(CEntityClass *)::CBaseAnimating_Inputs, InputFunctionAdapterVariant(CUtlAbstractDelegate const&,CEntityInstance *,CEntityInstance *,CEntityInstance *,int,void *,CVariantBase<CVariantDefaultAllocator> 
+void __fastcall CBaseAnimating::SetupEntClassInputs(CEntityClass *pEntityClass)
+{
+  if ( `guard variable for'CBaseAnimating::SetupEntClassInputs(CEntityClass *)::CBaseAnimating_Inputs == 0
+    && __cxa_guard_acquire(&`guard variable for'CBaseAnimating::SetupEntClassInputs(CEntityClass *)::CBaseAnimating_Inputs) != 0 )
+  {
+    qword_4ACFA38 = 0;
+    CBaseAnimating::SetupEntClassInputs(CEntityClass *)::CBaseAnimating_Inputs[0].m_inputFunction.m_pName = "SetSequence";
+    dword_4ACFA28 = 0;
+    qword_4ACFA30 = 0;
+    qword_4ACFA48 = 0;
+    qword_4ACFA40 = CBaseAnimating::InputSetSequence;
+    qword_4ACFA50 = InputFunctionAdapterVariant;
+    qword_4ACFA58 = "SetBodyGroup";
+    qword_4ACFA70 = 0;
+    dword_4ACFA60 = 0;
+    qword_4ACFA68 = 0;
+    qword_4ACFA78 = CBaseAnimating::InputSetBodyGroup;
+    qword_4ACFA88 = InputFunctionAdapterVariant;
+    qword_4ACFA80 = 0;
+    __cxa_guard_release(&`guard variable for'CBaseAnimating::SetupEntClassInputs(CEntityClass *)::CBaseAnimating_Inputs);
+  }
+  pEntityClass->m_nInputCount = 2;
+  pEntityClass->m_pInputs = CBaseAnimating::SetupEntClassInputs(CEntityClass *)::CBaseAnimating_Inputs;
+}
+
+
+// CBaseAnimating::SetupEntClassComponentOverrides  (line 210, @0x0000000001fa9c00, libserver.so)
+// calls: __cxa_guard_acquire, __cxa_guard_release
+// callers: CBaseAnimating::GetEntityClassInternal
+// globals: `guard variable for'CBaseAnimating::SetupEntClassComponentOverrides(CEntityClass *)::CBaseAnimating_ComponentOverrides, CBaseAnimating::SetupEntClassComponentOverrides(CEntityClass *)::CBaseAnimating_ComponentOverrides
+void __fastcall CBaseAnimating::SetupEntClassComponentOverrides(CEntityClass *pEntityClass)
+{
+  if ( `guard variable for'CBaseAnimating::SetupEntClassComponentOverrides(CEntityClass *)::CBaseAnimating_ComponentOverrides == 0
+    && __cxa_guard_acquire(&`guard variable for'CBaseAnimating::SetupEntClassComponentOverrides(CEntityClass *)::CBaseAnimating_ComponentOverrides) != 0 )
+  {
+    CBaseAnimating::SetupEntClassComponentOverrides(CEntityClass *)::CBaseAnimating_ComponentOverrides[0].pszBaseComponent = "CBodyComponent";
+    __cxa_guard_release(&`guard variable for'CBaseAnimating::SetupEntClassComponentOverrides(CEntityClass *)::CBaseAnimating_ComponentOverrides);
+  }
+  pEntityClass->m_pComponentOverrides = CBaseAnimating::SetupEntClassComponentOverrides(CEntityClass *)::CBaseAnimating_ComponentOverrides;
+}
+
+
+// GetScriptDesc<CBaseAnimating>  (line 225, @0x0000000001fb6400, libserver.so)  // inlines: AddParameterType, CUtlMemory, CUtlVector, CUtlVectorBase, Finalize, ScriptClassDesc_t, ScriptDeduceFunctionSignature<CBaseAnimating*, CBaseAnimating, bool>, ScriptDeduceFunctionSignature<CBaseAnimating*, CBaseAnimating, const Vector&, int>, ScriptDeduceFunctionSignature<CBaseAnimating*, CBaseAnimating, float, char const*, float>, ScriptDeduceFunctionSignature<CBaseAnimating*, CBaseAnimating, float>, ScriptDeduceFunctionSignature<CBaseAnimating*, CBaseAnimating, int, char const*>, ScriptDeduceFunctionSignature<CBaseAnimating*, CBaseAnimating, void, char const*, int>, ScriptDeduceFunctionSignature<CBaseAnimating*, CBaseAnimating, void, float>, ScriptDeduceFunctionSignature<CBaseAnimating*, CBaseAnimating, void, int, int>, SetDescription, SetFunctionName, SetPackedParameterNames, SetReturnType, SetScriptName, operator[]
+// calls: operator new, GetScriptDesc<CBaseModelEntity>, CUtlVectorBase<ScriptFunctionBinding_t, CUtlMemory<ScriptFunctionBinding_t, int> >::AddToTail
+// callers: CBaseAnimating::GetScriptDesc, CBaseAnimating::InitScriptDesc, CBaseAnimating::GetClassScriptDesc, CBaseAnimatingOverlay::GetEntityClassInternal, CBaseProp::GetEntityClassInternal, CBreakableProp::GetEntityClassInternal, CBasePropDoor::GetEntityClassInternal, CBaseAnimating::GetEntityClassInternal, GetScriptDesc<CBaseFlex>, GetScriptDesc<CPhysicsProp>, GetScriptDesc<CPropHMDAvatar>, GetScriptDesc<CPropVRHand> (14 total)
+// strings: "Animating models", "CBaseAnimating", "Set the specified pose parameter to the specified value.", "ScriptSetPoseParameter", "Get the named attachement id.", "ScriptLookupAttachment" (20 total)
+// globals: g_pCBaseAnimating_ScriptDesc, CMemberScriptBinding2<CBaseAnimating *,float (CBaseAnimating::*)(char const*,float),float,char const*,float>::Call(void *,void *,CVariantBase<CVariantDefaultAll, s_CBaseAnimating_ScriptSetPoseParameter_packed_arg_names, CMemberScriptBinding1<CBaseAnimating *,int (CBaseAnimating::*)(char const*),int,char const*>::Call(void *,void *,CVariantBase<CVariantDefaultAllocator> *,int,CV, s_CBaseAnimating_ScriptLookupAttachment_packed_arg_names, CMemberScriptBinding1<CBaseAnimating *,Vector const& (CBaseAnimating::*)(int),Vector const&,int>::Call(void *,void *,CVariantBase<CVariantDefaultAllocator> *,in, s_CBaseAnimating_ScriptGetAttachmentOrigin_packed_arg_names, s_CBaseAnimating_ScriptGetAttachmentAngles_packed_arg_names (17 total)
+ScriptClassDesc_t *__fastcall GetScriptDesc<CBaseAnimating>(CBaseAnimating *pScriptDescObjectInstance)
+{
+  ScriptClassDesc_t *result; // rax
+  ScriptClassDesc_t *v2; // r12
+  ScriptClassDesc_t *Script; // rdx
+  IScriptInstanceHelper *pHelper; // rax
+  __int64 v5; // rcx
+  char v6; // dl
+  char v7; // al
+  int v8; // edx
+  char v9; // al
+  char v10; // di
+  __int64 v11; // rcx
+  char v12; // dl
+  __int64 v13; // rax
+  int v14; // edx
+  char v15; // al
+  char v16; // di
+  __int64 v17; // rcx
+  char v18; // dl
+  __int64 v19; // rax
+  int v20; // edx
+  char v21; // al
+  char v22; // di
+  __int64 v23; // rax
+  char v24; // dl
+  __int64 v25; // rcx
+  int v26; // edx
+  char v27; // cl
+  __int64 v28; // rax
+  int v29; // edx
+  int v30; // edx
+  char v31; // cl
+  __int64 v32; // rax
+  char v33; // dl
+  __int64 v34; // rcx
+  int v35; // edx
+  char v36; // cl
+  __int64 v37; // rax
+  int v38; // edx
+  int v39; // edx
+  char v40; // cl
+  __int64 v41; // rax
+  char v42; // dl
+  char v43; // cl
+  int v44; // edx
+  char v45; // cl
+  __int64 v46; // rax
+  char v47; // dl
+  char v48; // cl
+  int v49; // edx
+  char v50; // cl
+
+  result = g_pCBaseAnimating_ScriptDesc;
+  if ( g_pCBaseAnimating_ScriptDesc == 0 )
+  {
+    v2 = operator new(0x50u);
+    v2->m_pBaseDesc = 0;
+    v2->m_FunctionBindings.m_Size = 0;
+    v2->m_FunctionBindings.m_Memory.m_pMemory = 0;
+    v2->m_FunctionBindings.m_Memory.m_nAllocationCount = 0;
+    v2->m_FunctionBindings.m_Memory.m_nGrowSize = 0;
+    v2->m_pfnConstruct = 0;
+    v2->m_pfnDestruct = 0;
+    v2->pHelper = 0;
+    g_pCBaseAnimating_ScriptDesc = v2;
+    v2->m_pszDescription = "Animating models";
+    v2->m_pszScriptName = "CBaseAnimating";
+    v2->m_pszClassname = "CBaseAnimating";
+    Script = GetScriptDesc<CBaseModelEntity>(0);
+    v2->m_pBaseDesc = Script;
+    if ( Script != 0 )
+    {
+      while ( 1 )
+      {
+        pHelper = Script->pHelper;
+        if ( pHelper != 0 )
+          break;
+        Script = Script->m_pBaseDesc;
+        if ( Script == 0 )
+          goto LABEL_7;
+      }
+      v2->pHelper = pHelper;
+    }
+LABEL_7:
+    v5 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(&v2->m_FunctionBindings)];
+    v6 = *(v5 + 26);
+    *(v5 + 24) = 1;
+    *(v5 + 16) = "Set the specified pose parameter to the specified value.";
+    *v5 = "SetPoseParameter";
+    *(v5 + 8) = "ScriptSetPoseParameter";
+    *(v5 + v6 + 27) = 30;
+    v7 = v6 + 1;
+    v6 += 2;
+    *(v5 + v7 + 27) = 1;
+    *(v5 + 26) = v6;
+    v8 = v6 - 1;
+    *(v5 + 25) = 0;
+    if ( v8 >= 0 && *(v5 + v8 + 27) == 32 )
+    {
+      v9 = 1;
+      do
+      {
+        --v8;
+        v10 = v9;
+        if ( v8 == -1 )
+        {
+          *(v5 + 25) = v9;
+          goto LABEL_13;
+        }
+        ++v9;
+      }
+      while ( *(v5 + v8 + 27) == 32 );
+      *(v5 + 25) = v10;
+    }
+LABEL_13:
+    *(v5 + 64) = 1;
+    *(v5 + 48) = CMemberScriptBinding2<CBaseAnimating *,float (CBaseAnimating::*)(char const*,float),float,char const*,float>::Call;
+    *(v5 + 56) = CBaseAnimating::ScriptSetPoseParameter;
+    *(v5 + 40) = s_CBaseAnimating_ScriptSetPoseParameter_packed_arg_names;
+    v11 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(&v2->m_FunctionBindings)];
+    v12 = *(v11 + 26);
+    *(v11 + 24) = 5;
+    *(v11 + 16) = "Get the named attachement id.";
+    *v11 = "ScriptLookupAttachment";
+    *(v11 + 8) = "ScriptLookupAttachment";
+    v13 = v12++;
+    *(v11 + v13 + 27) = 30;
+    *(v11 + 26) = v12;
+    v14 = v12 - 1;
+    *(v11 + 25) = 0;
+    if ( v14 >= 0 && *(v11 + v14 + 27) == 32 )
+    {
+      v15 = 1;
+      do
+      {
+        --v14;
+        v16 = v15;
+        if ( v14 == -1 )
+        {
+          *(v11 + 25) = v15;
+          goto LABEL_19;
+        }
+        ++v15;
+      }
+      while ( *(v11 + v14 + 27) == 32 );
+      *(v11 + 25) = v16;
+    }
+LABEL_19:
+    *(v11 + 64) = 1;
+    *(v11 + 48) = CMemberScriptBinding1<CBaseAnimating *,int (CBaseAnimating::*)(char const*),int,char const*>::Call;
+    *(v11 + 56) = CBaseAnimating::ScriptLookupAttachment;
+    *(v11 + 40) = s_CBaseAnimating_ScriptLookupAttachment_packed_arg_names;
+    v17 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(&v2->m_FunctionBindings)];
+    v18 = *(v17 + 26);
+    *(v17 + 24) = 3;
+    *(v17 + 16) = "Get the attachement id's origin vector.";
+    *v17 = "GetAttachmentOrigin";
+    *(v17 + 8) = "ScriptGetAttachmentOrigin";
+    v19 = v18++;
+    *(v17 + v19 + 27) = 5;
+    *(v17 + 26) = v18;
+    v20 = v18 - 1;
+    *(v17 + 25) = 0;
+    if ( v20 >= 0 && *(v17 + v20 + 27) == 32 )
+    {
+      v21 = 1;
+      do
+      {
+        --v20;
+        v22 = v21;
+        if ( v20 == -1 )
+        {
+          *(v17 + 25) = v21;
+          goto LABEL_25;
+        }
+        ++v21;
+      }
+      while ( *(v17 + v20 + 27) == 32 );
+      *(v17 + 25) = v22;
+    }
+LABEL_25:
+    *(v17 + 64) = 1;
+    *(v17 + 48) = CMemberScriptBinding1<CBaseAnimating *,Vector const& (CBaseAnimating::*)(int),Vector const&,int>::Call;
+    *(v17 + 56) = CBaseAnimating::ScriptGetAttachmentOrigin;
+    *(v17 + 40) = s_CBaseAnimating_ScriptGetAttachmentOrigin_packed_arg_names;
+    v23 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(&v2->m_FunctionBindings)];
+    v24 = *(v23 + 26);
+    *(v23 + 16) = "Get the attachement id's angles as a p,y,r vector.";
+    *v23 = "GetAttachmentAngles";
+    *(v23 + 8) = "ScriptGetAttachmentAngles";
+    *(v23 + 24) = 3;
+    v25 = v24++;
+    *(v23 + v25 + 27) = 5;
+    *(v23 + 26) = v24;
+    v26 = v24 - 1;
+    *(v23 + 25) = 0;
+    if ( v26 >= 0 && *(v23 + v26 + 27) == 32 )
+    {
+      v27 = 0;
+      do
+      {
+        --v26;
+        ++v27;
+      }
+      while ( v26 != -1 && *(v23 + v26 + 27) == 32 );
+      *(v23 + 25) = v27;
+    }
+    *(v23 + 64) = 1;
+    *(v23 + 48) = CMemberScriptBinding1<CBaseAnimating *,Vector const& (CBaseAnimating::*)(int),Vector const&,int>::Call;
+    *(v23 + 40) = s_CBaseAnimating_ScriptGetAttachmentAngles_packed_arg_names;
+    *(v23 + 56) = CBaseAnimating::ScriptGetAttachmentAngles;
+    v28 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(&v2->m_FunctionBindings)];
+    v29 = *(v28 + 26);
+    *(v28 + 16) = "Get scale of entity's model.";
+    *v28 = "GetModelScale";
+    *(v28 + 8) = "GetModelScale";
+    *(v28 + 24) = 1;
+    v30 = v29 - 1;
+    *(v28 + 25) = 0;
+    if ( v30 >= 0 && *(v28 + v30 + 27) == 32 )
+    {
+      v31 = 0;
+      do
+      {
+        --v30;
+        ++v31;
+      }
+      while ( v30 != -1 && *(v28 + v30 + 27) == 32 );
+      *(v28 + 25) = v31;
+    }
+    *(v28 + 64) = 1;
+    *(v28 + 48) = CMemberScriptBinding0<CBaseAnimating *,float (CBaseAnimating::*)(void),float>::Call;
+    *(v28 + 56) = CBaseAnimating::GetModelScale;
+    v32 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(&v2->m_FunctionBindings)];
+    v33 = *(v32 + 26);
+    *(v32 + 16) = "Set scale of entity's model.";
+    *v32 = "SetModelScale";
+    *(v32 + 8) = "Script_SetModelScale";
+    *(v32 + 24) = 0;
+    v34 = v33++;
+    *(v32 + v34 + 27) = 1;
+    *(v32 + 26) = v33;
+    v35 = v33 - 1;
+    *(v32 + 25) = 0;
+    if ( v35 >= 0 && *(v32 + v35 + 27) == 32 )
+    {
+      v36 = 0;
+      do
+      {
+        --v35;
+        ++v36;
+      }
+      while ( v35 != -1 && *(v32 + v35 + 27) == 32 );
+      *(v32 + 25) = v36;
+    }
+    *(v32 + 64) = 1;
+    *(v32 + 48) = CMemberScriptBinding1<CBaseAnimating *,void (CBaseAnimating::*)(float),void,float>::Call;
+    *(v32 + 40) = s_CBaseAnimating_Script_SetModelScale_packed_arg_names;
+    *(v32 + 56) = CBaseAnimating::Script_SetModelScale;
+    v37 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(&v2->m_FunctionBindings)];
+    v38 = *(v37 + 26);
+    *(v37 + 16) = "Ask whether the main sequence is done playing.";
+    *v37 = "IsSequenceFinished";
+    *(v37 + 8) = "IsSequenceFinished";
+    *(v37 + 24) = 6;
+    v39 = v38 - 1;
+    *(v37 + 25) = 0;
+    if ( v39 >= 0 && *(v37 + v39 + 27) == 32 )
+    {
+      v40 = 0;
+      do
+      {
+        --v39;
+        ++v40;
+      }
+      while ( v39 != -1 && *(v37 + v39 + 27) == 32 );
+      *(v37 + 25) = v40;
+    }
+    *(v37 + 64) = 1;
+    *(v37 + 48) = CMemberScriptBinding0<CBaseAnimating *,bool (CBaseAnimating::*)(void),bool>::Call;
+    *(v37 + 56) = CBaseAnimating::IsSequenceFinished;
+    v41 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(&v2->m_FunctionBindings)];
+    v42 = *(v41 + 26);
+    *(v41 + 16) = "Sets a bodygroup.";
+    *v41 = "SetBodygroup";
+    *(v41 + 8) = "SetBodygroup";
+    *(v41 + 24) = 0;
+    *(v41 + v42 + 27) = 5;
+    v43 = v42 + 1;
+    v42 += 2;
+    *(v41 + v43 + 27) = 5;
+    *(v41 + 26) = v42;
+    v44 = v42 - 1;
+    *(v41 + 25) = 0;
+    if ( v44 >= 0 && *(v41 + v44 + 27) == 32 )
+    {
+      v45 = 0;
+      do
+      {
+        --v44;
+        ++v45;
+      }
+      while ( v44 != -1 && *(v41 + v44 + 27) == 32 );
+      *(v41 + 25) = v45;
+    }
+    *(v41 + 64) = 1;
+    *(v41 + 48) = CMemberScriptBinding2<CBaseAnimating *,void (CBaseAnimating::*)(int,int),void,int,int>::Call;
+    *(v41 + 40) = s_CBaseAnimating_SetBodygroup_packed_arg_names;
+    *(v41 + 56) = CBaseAnimating::SetBodygroup;
+    v46 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(&v2->m_FunctionBindings)];
+    v47 = *(v46 + 26);
+    *(v46 + 16) = "Sets a bodygroup by name.";
+    *v46 = "SetBodygroupByName";
+    *(v46 + 8) = "SetBodygroupByName";
+    *(v46 + 24) = 0;
+    *(v46 + v47 + 27) = 30;
+    v48 = v47 + 1;
+    v47 += 2;
+    *(v46 + v48 + 27) = 5;
+    *(v46 + 26) = v47;
+    v49 = v47 - 1;
+    *(v46 + 25) = 0;
+    if ( v49 >= 0 && *(v46 + v49 + 27) == 32 )
+    {
+      v50 = 0;
+      do
+      {
+        --v49;
+        ++v50;
+      }
+      while ( v49 != -1 && *(v46 + v49 + 27) == 32 );
+      *(v46 + 25) = v50;
+    }
+    *(v46 + 64) = 1;
+    *(v46 + 48) = CMemberScriptBinding2<CBaseAnimating *,void (CBaseAnimating::*)(char const*,int),void,char const*,int>::Call;
+    *(v46 + 40) = s_CBaseAnimating_SetBodygroupByName_packed_arg_names;
+    *(v46 + 56) = CBaseAnimating::SetBodygroupByName;
+    return v2;
+  }
+  return result;
+}
+
+
+// CBaseAnimating::GetScriptDesc  (line 225, @0x0000000001fb6ae0, libserver.so)
+// calls: GetScriptDesc<CBaseAnimating>
+ScriptClassDesc_t *__fastcall CBaseAnimating::GetScriptDesc(CBaseAnimating *const this)
+{
+  return GetScriptDesc<CBaseAnimating>(this);
+}
+
+
+// CBaseAnimating::InitScriptDesc  (line 225, @0x0000000001fb6af0, libserver.so)
+// calls: GetScriptDesc<CBaseAnimating>
+// callers: CDevtestHierarchy::GetEntityClassInternal, CDevtestHierarchyChild::GetEntityClassInternal, CDevtestHierarchy2::GetEntityClassInternal, CBaseCombatWeapon::GetEntityClassInternal, CBaseViewModel::GetEntityClassInternal, CDynamicProp::GetEntityClassInternal, CDynamicPropAlias_dynamic_prop::GetEntityClassInternal, CDynamicPropAlias_prop_dynamic_override::GetEntityClassInternal, CDynamicPropAlias_dynamic_prop::CEntityInstanceEntityClass::InitOptionalTables, CDynamicPropAlias_prop_dynamic_override::CEntityInstanceEntityClass::InitOptionalTables, CFish::GetEntityClassInternal, CItem::GetEntityClassInternal (47 total)
+ScriptClassDesc_t *__cdecl CBaseAnimating::InitScriptDesc()
+{
+  return GetScriptDesc<CBaseAnimating>(0);
+}
+
+
+// CBaseAnimating::GetClassScriptDesc  (line 225, @0x0000000001fb6b00, libserver.so)
+// calls: GetScriptDesc<CBaseAnimating>
+ScriptClassDesc_t *__cdecl CBaseAnimating::GetClassScriptDesc()
+{
+  return GetScriptDesc<CBaseAnimating>(0);
+}
+
+
+// LocalRegisterSchemaModule<ArbitraryTemplateParameter_server_baseanimating_h>  (line 241, @0x0000000001fa9c60, libserver.so)  // inlines: Call
+// callers: RegisterSchemaModule_baseanimating_h
+// globals: CBaseAnimating::CEntityInstanceEntityClass::s_pSchemaBindingForLocalModule, CBaseAnimating::s_pSchemaBindingForLocalModule
+void __fastcall LocalRegisterSchemaModule<ArbitraryTemplateParameter_server_baseanimating_h>(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        SchemaRegistrationPhase_t nRegistrationPhase)
+{
+  if ( nRegistrationPhase == SchemaRegistrationPhase_t::SCHEMA_REGISTRATION_PHASE_CLASSES )
+  {
+    (*(CBaseAnimating::CEntityInstanceEntityClass::s_pSchemaBindingForLocalModule->_vptr_ISchemaBinding + 5))(
+      CBaseAnimating::CEntityInstanceEntityClass::s_pSchemaBindingForLocalModule,
+      pSchemaSystem,
+      pBinaryName,
+      "server");
+    (*(CBaseAnimating::s_pSchemaBindingForLocalModule->_vptr_ISchemaBinding + 5))(
+      CBaseAnimating::s_pSchemaBindingForLocalModule,
+      pSchemaSystem,
+      pBinaryName,
+      "server");
+  }
+  ++g_nLinkerHack_SchemaAnchor_RegistrationCountFor_server;
+}
+
+
+// RegisterSchemaModule_baseanimating_h  (line 244, @0x0000000001fa9cc0, libserver.so)
+// calls: LocalRegisterSchemaModule<ArbitraryTemplateParameter_server_baseanimating_h>
+// callers: CSchemaRegistration_server::RegisterAllBindings
+void __fastcall RegisterSchemaModule_baseanimating_h(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        SchemaRegistrationPhase_t nRegistrationPhase)
+{
+  LocalRegisterSchemaModule<ArbitraryTemplateParameter_server_baseanimating_h>(
+    pSchemaSystem,
+    pBinaryName,
+    nRegistrationPhase);
+}
+
+

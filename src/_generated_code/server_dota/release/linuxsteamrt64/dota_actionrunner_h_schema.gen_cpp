@@ -1,0 +1,106 @@
+
+// ==== functions (decompiled by Hex-Rays; names/signatures from DWARF) ====
+
+// CDOTA_ActionRunner::Schema_CompileTimeVerificationFunction  (line 35, @0x00000000024262c0, libserver.so)
+void __fastcall CDOTA_ActionRunner::Schema_CompileTimeVerificationFunction(CDOTA_ActionRunner *const this)
+{
+  ;
+}
+
+
+// CDOTA_ActionRunner::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE  (line 40, @0x00000000024203c0, libserver.so)  // inlines: Get, SchemaBinding_SchemaTypeOfMemberVarByAddr<CDOTA_ActionRunner, CDOTA_BaseNPC*>, SchemaBinding_SchemaTypeOfMemberVarByAddr<CDOTA_ActionRunner, const CModifierParams*>, SetTypeScope
+// callers: CSchemaNonConstructibleClassBinding<CDOTA_ActionRunner>::Register, CDOTA_ActionRunner::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE, CDOTA_Ability_DataDriven::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE
+// strings: "CModifierParams", "CDOTA_BaseNPC"
+// globals: CDOTA_ActionRunner::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSc, CDOTA_ActionRunner::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pIni
+CSchemaClassInfo *__fastcall CDOTA_ActionRunner::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        const char *pProjectName)
+{
+  ISchemaSystemTypeScope *v3; // rbx
+  __int64 (__fastcall *v4)(ISchemaSystemTypeScope *, __int64); // r12
+  __int64 v5; // rax
+  __int64 (__fastcall *v6)(ISchemaSystemTypeScope *, __int64); // r12
+  __int64 v7; // rax
+  CSchemaType *v8; // rax
+  __int64 v9; // rax
+
+  v3 = (*(*pSchemaSystem + 112LL))(pSchemaSystem, 0, pBinaryName);
+  v4 = *(*v3 + 48LL);
+  v5 = (*(*v3 + 88LL))(v3, "CModifierParams");
+  CDOTA_ActionRunner::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CDOTA_ActionRunner[0].m_pType = v4(v3, v5);
+  v6 = *(*v3 + 48LL);
+  v7 = (*(*v3 + 88LL))(v3, "CDOTA_BaseNPC");
+  v8 = v6(v3, v7);
+  CDOTA_ActionRunner::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CDOTA_ActionRunner.m_pOuterTypeScope = v3;
+  CDOTA_ActionRunner::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CDOTA_ActionRunner[1].m_pType = v8;
+  v9 = *v3;
+  CDOTA_ActionRunner::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult = &CDOTA_ActionRunner::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CDOTA_ActionRunner;
+  (*(v9 + 264))(v3);
+  return CDOTA_ActionRunner::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult;
+}
+
+
+// CDOTA_ActionRunner::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE  (line 40, @0x00000000024262d0, libserver.so)
+// calls: CDOTA_ActionRunner::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE
+// callers: CDOTA_Item_DataDriven::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE
+// globals: CDOTA_ActionRunner::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pIni
+CSchemaClassInfo *__fastcall CDOTA_ActionRunner::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        const char *pProjectName)
+{
+  CSchemaClassInfo *result; // rax
+
+  result = CDOTA_ActionRunner::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult;
+  if ( CDOTA_ActionRunner::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult == 0 )
+    return CDOTA_ActionRunner::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+             pSchemaSystem,
+             pBinaryName,
+             pProjectName);
+  return result;
+}
+
+
+// CDOTA_ActionRunner::Schema_VerifyBindingIsRegistered  (line 73, @0x00000000024262f0, libserver.so)
+void __cdecl CDOTA_ActionRunner::Schema_VerifyBindingIsRegistered()
+{
+  ;
+}
+
+
+// LocalRegisterSchemaModule<ArbitraryTemplateParameter_server_dota_actionrunner_h>  (line 81, @0x0000000002426300, libserver.so)  // inlines: Call
+// globals: CDOTA_ActionRunner::s_pSchemaBindingForLocalModule
+void __fastcall LocalRegisterSchemaModule<ArbitraryTemplateParameter_server_dota_actionrunner_h>(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        SchemaRegistrationPhase_t nRegistrationPhase)
+{
+  if ( nRegistrationPhase == SchemaRegistrationPhase_t::SCHEMA_REGISTRATION_PHASE_CLASSES )
+    (*(CDOTA_ActionRunner::s_pSchemaBindingForLocalModule->_vptr_ISchemaBinding + 5))(
+      CDOTA_ActionRunner::s_pSchemaBindingForLocalModule,
+      pSchemaSystem,
+      pBinaryName,
+      "server");
+  ++g_nLinkerHack_SchemaAnchor_RegistrationCountFor_server;
+}
+
+
+// RegisterSchemaModule_dota_actionrunner_h  (line 83, @0x0000000002426340, libserver.so)  // inlines: Call, LocalRegisterSchemaModule<ArbitraryTemplateParameter_server_dota_actionrunner_h>
+// callers: CSchemaRegistration_server::RegisterAllBindings
+// globals: CDOTA_ActionRunner::s_pSchemaBindingForLocalModule
+void __fastcall RegisterSchemaModule_dota_actionrunner_h(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        SchemaRegistrationPhase_t nRegistrationPhase)
+{
+  if ( nRegistrationPhase == SchemaRegistrationPhase_t::SCHEMA_REGISTRATION_PHASE_CLASSES )
+    (*(CDOTA_ActionRunner::s_pSchemaBindingForLocalModule->_vptr_ISchemaBinding + 5))(
+      CDOTA_ActionRunner::s_pSchemaBindingForLocalModule,
+      pSchemaSystem,
+      pBinaryName,
+      "server");
+  ++g_nLinkerHack_SchemaAnchor_RegistrationCountFor_server;
+}
+
+

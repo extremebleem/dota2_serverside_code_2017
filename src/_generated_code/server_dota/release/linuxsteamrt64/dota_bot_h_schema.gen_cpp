@@ -1,0 +1,196 @@
+
+// ==== functions (decompiled by Hex-Rays; names/signatures from DWARF) ====
+
+// CDOTA_Bot::Schema_CompileTimeVerificationFunction  (line 35, @0x00000000027eab00, libserver.so)
+void __fastcall CDOTA_Bot::Schema_CompileTimeVerificationFunction(CDOTA_Bot *const this)
+{
+  ;
+}
+
+
+// CDOTA_Bot::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE  (line 101, @0x00000000027eab10, libserver.so)  // inlines: Get, SchemaBinding_SchemaTypeOfMemberVarByAddr<CDOTA_Bot, CDOTA_TeamCommander*>, SchemaBinding_SchemaTypeOfMemberVarByAddr<CDOTA_Bot, CHandle<CBaseEntity> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<CDOTA_Bot, CUtlVector<CDOTABaseAbility*> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<CDOTA_Bot, CUtlVector<CHandle<CBaseEntity> > >, SchemaBinding_SchemaTypeOfMemberVarByAddr<CDOTA_Bot, CUtlVector<int> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<CDOTA_Bot, CountdownTimer>, SchemaBinding_SchemaTypeOfMemberVarByAddr<CDOTA_Bot, DOTA_LANE>, SchemaBinding_SchemaTypeOfMemberVarByAddr<CDOTA_Bot, Vector>, SchemaBinding_SchemaTypeOfMemberVarByAddr<CDOTA_Bot, bool>, SchemaBinding_SchemaTypeOfMemberVarByAddr<CDOTA_Bot, float [24]>, SchemaBinding_SchemaTypeOfMemberVarByAddr<CDOTA_Bot, float [26]>, SchemaBinding_SchemaTypeOfMemberVarByAddr<CDOTA_Bot, float [30]>, SchemaBinding_SchemaTypeOfMemberVarByAddr<CDOTA_Bot, float>, SchemaBinding_SchemaTypeOfMemberVarByAddr<CDOTA_Bot, int>, SetTypeScope
+// callers: CSchemaNonConstructibleClassBinding<CDOTA_Bot>::Register
+// strings: "CBaseEntity", "CHandle", "CDOTA_TeamCommander", "DOTA_LANE", "CountdownTimer", "CUtlVector" (7 total)
+// globals: CDOTA_Bot::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedR, CSchemaManipulator<CHandle<CBaseEntity>>::StaticAccessor(void)::m, CAtomicManipulator<CHandle<CBaseEntity>>::Get(void)::val, CSchemaManipulator<CUtlVector<int,CUtlMemory<int,int>>>::StaticAccessor(void)::m, CAtomicManipulator<CUtlVector<int,CUtlMemory<int,int>>>::Get(void)::val, CSchemaManipulator<Vector>::StaticAccessor(void)::m, CAtomicManipulator<Vector>::Get(void)::val, CSchemaManipulator<CUtlVector<CHandle<CBaseEntity>,CUtlMemory<CHandle<CBaseEntity>,int>>>::StaticAccessor(void)::m (12 total)
+CSchemaClassInfo *__fastcall CDOTA_Bot::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        const char *pProjectName)
+{
+  CSchemaClassInfo *result; // rax
+  ISchemaSystemTypeScope *v4; // rbx
+  __int64 (__fastcall *v5)(ISchemaSystemTypeScope *, __int64, __int64); // r12
+  __int64 v6; // rax
+  __int64 (__fastcall *v7)(ISchemaSystemTypeScope *, const char *, __int64, __int64 (__fastcall ***)(), __int64 (__fastcall ***)(), __int64); // r12
+  __int64 v8; // rax
+  __int64 (__fastcall *v9)(ISchemaSystemTypeScope *, __int64); // r12
+  __int64 v10; // rax
+  __int64 (__fastcall *v11)(ISchemaSystemTypeScope *, __int64, __int64); // r12
+  __int64 v12; // rax
+  __int64 (__fastcall *v13)(ISchemaSystemTypeScope *, const char *, __int64, __int64 (__fastcall ***)(), __int64 (__fastcall ***)(), __int64); // r12
+  __int64 v14; // rax
+  __int64 (__fastcall *v15)(ISchemaSystemTypeScope *, const char *, __int64, __int64 (__fastcall ***)(), __int64 (__fastcall ***)(), __int64); // r12
+  __int64 v16; // rax
+  __int64 (__fastcall *v17)(ISchemaSystemTypeScope *, const char *, __int64, __int64 (__fastcall ***)(), __int64 (__fastcall ***)(), __int64); // r12
+  __int64 v18; // rax
+  __int64 (__fastcall *v19)(ISchemaSystemTypeScope *, const char *, __int64, __int64 (__fastcall ***)(), __int64 (__fastcall ***)(), __int64); // r12
+  __int64 v20; // rax
+  __int64 v21; // rax
+  __int64 (__fastcall *v22)(ISchemaSystemTypeScope *, __int64); // r13
+  __int64 (__fastcall *v23)(ISchemaSystemTypeScope *, const char *, __int64, __int64 (__fastcall ***)(), __int64 (__fastcall **)(), __int64); // r12
+  __int64 v24; // rax
+  __int64 v25; // rax
+  __int64 (__fastcall *v26)(ISchemaSystemTypeScope *, __int64, __int64); // r12
+  __int64 v27; // rax
+  CSchemaType *v28; // rax
+
+  result = CDOTA_Bot::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult;
+  if ( CDOTA_Bot::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult == 0 )
+  {
+    v4 = (*(*pSchemaSystem + 112LL))(pSchemaSystem, 0, pBinaryName);
+    CDOTA_Bot::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CDOTA_Bot[0].m_pType = (*(*v4 + 40LL))(v4, 7);
+    CDOTA_Bot::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CDOTA_Bot[1].m_pType = (*(*v4 + 40LL))(v4, 7);
+    CDOTA_Bot::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CDOTA_Bot[2].m_pType = (*(*v4 + 40LL))(v4, 13);
+    CDOTA_Bot::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CDOTA_Bot[3].m_pType = (*(*v4 + 40LL))(v4, 13);
+    v5 = *(*v4 + 104LL);
+    v6 = (*(*v4 + 40LL))(v4, 11);
+    CDOTA_Bot::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CDOTA_Bot[4].m_pType = v5(v4, v6, 30);
+    CDOTA_Bot::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CDOTA_Bot[5].m_pType = (*(*v4 + 40LL))(v4, 7);
+    CDOTA_Bot::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CDOTA_Bot[6].m_pType = (*(*v4 + 40LL))(v4, 7);
+    v7 = *(*v4 + 64LL);
+    v8 = (*(*v4 + 88LL))(v4, "CBaseEntity");
+    CDOTA_Bot::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CDOTA_Bot[7].m_pType = v7(v4, "CHandle", 5003, CAtomicManipulator<CHandle<CBaseEntity>>::Get(void)::val, &CSchemaManipulator<CHandle<CBaseEntity>>::StaticAccessor(void)::m, v8);
+    v9 = *(*v4 + 48LL);
+    v10 = (*(*v4 + 88LL))(v4, "CDOTA_TeamCommander");
+    CDOTA_Bot::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CDOTA_Bot[8].m_pType = v9(v4, v10);
+    CDOTA_Bot::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CDOTA_Bot[9].m_pType = (*(*v4 + 40LL))(v4, 7);
+    CDOTA_Bot::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CDOTA_Bot[10].m_pType = (*(*v4 + 40LL))(v4, 11);
+    CDOTA_Bot::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CDOTA_Bot[11].m_pType = (*(*v4 + 40LL))(v4, 13);
+    CDOTA_Bot::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CDOTA_Bot[12].m_pType = (*(*v4 + 40LL))(v4, 13);
+    CDOTA_Bot::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CDOTA_Bot[13].m_pType = (*(*v4 + 40LL))(v4, 13);
+    CDOTA_Bot::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CDOTA_Bot[14].m_pType = (*(*v4 + 40LL))(v4, 7);
+    CDOTA_Bot::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CDOTA_Bot[15].m_pType = (*(*v4 + 96LL))(v4, "DOTA_LANE");
+    CDOTA_Bot::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CDOTA_Bot[16].m_pType = (*(*v4 + 96LL))(v4, "DOTA_LANE");
+    CDOTA_Bot::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CDOTA_Bot[17].m_pType = (*(*v4 + 96LL))(v4, "DOTA_LANE");
+    CDOTA_Bot::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CDOTA_Bot[18].m_pType = (*(*v4 + 96LL))(v4, "DOTA_LANE");
+    CDOTA_Bot::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CDOTA_Bot[19].m_pType = (*(*v4 + 96LL))(v4, "DOTA_LANE");
+    CDOTA_Bot::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CDOTA_Bot[20].m_pType = (*(*v4 + 40LL))(v4, 11);
+    CDOTA_Bot::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CDOTA_Bot[21].m_pType = (*(*v4 + 40LL))(v4, 11);
+    CDOTA_Bot::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CDOTA_Bot[22].m_pType = (*(*v4 + 40LL))(v4, 11);
+    CDOTA_Bot::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CDOTA_Bot[23].m_pType = (*(*v4 + 40LL))(v4, 11);
+    CDOTA_Bot::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CDOTA_Bot[24].m_pType = (*(*v4 + 40LL))(v4, 13);
+    CDOTA_Bot::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CDOTA_Bot[25].m_pType = (*(*v4 + 40LL))(v4, 7);
+    CDOTA_Bot::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CDOTA_Bot[26].m_pType = (*(*v4 + 40LL))(v4, 13);
+    CDOTA_Bot::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CDOTA_Bot[27].m_pType = (*(*v4 + 40LL))(v4, 7);
+    CDOTA_Bot::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CDOTA_Bot[28].m_pType = (*(*v4 + 88LL))(v4, "CountdownTimer");
+    CDOTA_Bot::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CDOTA_Bot[29].m_pType = (*(*v4 + 88LL))(v4, "CountdownTimer");
+    CDOTA_Bot::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CDOTA_Bot[30].m_pType = (*(*v4 + 88LL))(v4, "CountdownTimer");
+    CDOTA_Bot::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CDOTA_Bot[31].m_pType = (*(*v4 + 88LL))(v4, "CountdownTimer");
+    CDOTA_Bot::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CDOTA_Bot[32].m_pType = (*(*v4 + 88LL))(v4, "CountdownTimer");
+    CDOTA_Bot::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CDOTA_Bot[33].m_pType = (*(*v4 + 88LL))(v4, "CountdownTimer");
+    CDOTA_Bot::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CDOTA_Bot[34].m_pType = (*(*v4 + 88LL))(v4, "CountdownTimer");
+    CDOTA_Bot::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CDOTA_Bot[35].m_pType = (*(*v4 + 88LL))(v4, "CountdownTimer");
+    CDOTA_Bot::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CDOTA_Bot[36].m_pType = (*(*v4 + 40LL))(v4, 11);
+    v11 = *(*v4 + 104LL);
+    v12 = (*(*v4 + 40LL))(v4, 11);
+    CDOTA_Bot::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CDOTA_Bot[37].m_pType = v11(v4, v12, 24);
+    CDOTA_Bot::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CDOTA_Bot[38].m_pType = (*(*v4 + 40LL))(v4, 11);
+    CDOTA_Bot::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CDOTA_Bot[39].m_pType = (*(*v4 + 40LL))(v4, 7);
+    v13 = *(*v4 + 64LL);
+    v14 = (*(*v4 + 40LL))(v4, 7);
+    CDOTA_Bot::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CDOTA_Bot[40].m_pType = v13(v4, "CUtlVector", 3002, &CAtomicManipulator<CUtlVector<int,CUtlMemory<int,int>>>::Get(void)::val, CSchemaManipulator<CUtlVector<int,CUtlMemory<int,int>>>::StaticAccessor(void)::m, v14);
+    CDOTA_Bot::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CDOTA_Bot[41].m_pType = (*(*v4 + 40LL))(v4, 7);
+    CDOTA_Bot::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CDOTA_Bot[42].m_pType = (*(*v4 + 40LL))(v4, 7);
+    CDOTA_Bot::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CDOTA_Bot[43].m_pType = (*(*v4 + 40LL))(v4, 7);
+    CDOTA_Bot::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CDOTA_Bot[44].m_pType = (*(*v4 + 40LL))(v4, 7);
+    CDOTA_Bot::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CDOTA_Bot[45].m_pType = (*(*v4 + 40LL))(v4, 11);
+    CDOTA_Bot::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CDOTA_Bot[46].m_pType = (*(*v4 + 40LL))(v4, 7);
+    v15 = *(*v4 + 64LL);
+    v16 = (*(*v4 + 88LL))(v4, "CBaseEntity");
+    CDOTA_Bot::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CDOTA_Bot[47].m_pType = v15(v4, "CHandle", 5003, CAtomicManipulator<CHandle<CBaseEntity>>::Get(void)::val, &CSchemaManipulator<CHandle<CBaseEntity>>::StaticAccessor(void)::m, v16);
+    CDOTA_Bot::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CDOTA_Bot[48].m_pType = (*(*v4 + 56LL))(v4, "Vector", 2010, CAtomicManipulator<Vector>::Get(void)::val, CSchemaManipulator<Vector>::StaticAccessor(void)::m);
+    CDOTA_Bot::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CDOTA_Bot[49].m_pType = (*(*v4 + 40LL))(v4, 11);
+    v17 = *(*v4 + 64LL);
+    v18 = (*(*v4 + 88LL))(v4, "CBaseEntity");
+    CDOTA_Bot::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CDOTA_Bot[50].m_pType = v17(v4, "CHandle", 5003, CAtomicManipulator<CHandle<CBaseEntity>>::Get(void)::val, &CSchemaManipulator<CHandle<CBaseEntity>>::StaticAccessor(void)::m, v18);
+    CDOTA_Bot::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CDOTA_Bot[51].m_pType = (*(*v4 + 40LL))(v4, 13);
+    CDOTA_Bot::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CDOTA_Bot[52].m_pType = (*(*v4 + 40LL))(v4, 13);
+    CDOTA_Bot::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CDOTA_Bot[53].m_pType = (*(*v4 + 56LL))(v4, "Vector", 2010, CAtomicManipulator<Vector>::Get(void)::val, CSchemaManipulator<Vector>::StaticAccessor(void)::m);
+    CDOTA_Bot::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CDOTA_Bot[54].m_pType = (*(*v4 + 56LL))(v4, "Vector", 2010, CAtomicManipulator<Vector>::Get(void)::val, CSchemaManipulator<Vector>::StaticAccessor(void)::m);
+    CDOTA_Bot::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CDOTA_Bot[55].m_pType = (*(*v4 + 40LL))(v4, 11);
+    CDOTA_Bot::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CDOTA_Bot[56].m_pType = (*(*v4 + 40LL))(v4, 11);
+    v19 = *(*v4 + 64LL);
+    v20 = (*(*v4 + 88LL))(v4, "CBaseEntity");
+    v21 = v19(
+            v4,
+            "CHandle",
+            5003,
+            CAtomicManipulator<CHandle<CBaseEntity>>::Get(void)::val,
+            &CSchemaManipulator<CHandle<CBaseEntity>>::StaticAccessor(void)::m,
+            v20);
+    CDOTA_Bot::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CDOTA_Bot[57].m_pType = v19(v4, "CUtlVector", 3002, &CAtomicManipulator<CUtlVector<CHandle<CBaseEntity>,CUtlMemory<CHandle<CBaseEntity>,int>>>::Get(void)::val, CSchemaManipulator<CUtlVector<CHandle<CBaseEntity>,CUtlMemory<CHandle<CBaseEntity>,int>>>::StaticAccessor(void)::m, v21);
+    v22 = *(*v4 + 48LL);
+    v23 = *(*v4 + 64LL);
+    v24 = (*(*v4 + 88LL))(v4, "CDOTABaseAbility");
+    v25 = v22(v4, v24);
+    CDOTA_Bot::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CDOTA_Bot[58].m_pType = v23(v4, "CUtlVector", 3002, &CAtomicManipulator<CUtlVector<CDOTABaseAbility *,CUtlMemory<CDOTABaseAbility *,int>>>::Get(void)::val, CSchemaManipulator<CUtlVector<CDOTABaseAbility *,CUtlMemory<CDOTABaseAbility *,int>>>::StaticAccessor(void)::m, v25);
+    v26 = *(*v4 + 104LL);
+    v27 = (*(*v4 + 40LL))(v4, 11);
+    CDOTA_Bot::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CDOTA_Bot[59].m_pType = v26(v4, v27, 26);
+    CDOTA_Bot::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CDOTA_Bot[60].m_pType = (*(*v4 + 40LL))(v4, 7);
+    CDOTA_Bot::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CDOTA_Bot[61].m_pType = (*(*v4 + 40LL))(v4, 13);
+    v28 = (*(*v4 + 40LL))(v4, 7);
+    CDOTA_Bot::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CDOTA_Bot.m_pOuterTypeScope = v4;
+    CDOTA_Bot::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CDOTA_Bot[62].m_pType = v28;
+    CDOTA_Bot::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult = &CDOTA_Bot::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CDOTA_Bot;
+    (*(*v4 + 264LL))(
+      v4,
+      &CDOTA_Bot::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CDOTA_Bot);
+    return CDOTA_Bot::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult;
+  }
+  return result;
+}
+
+
+// CDOTA_Bot::Schema_VerifyBindingIsRegistered  (line 244, @0x00000000027eb270, libserver.so)
+void __cdecl CDOTA_Bot::Schema_VerifyBindingIsRegistered()
+{
+  ;
+}
+
+
+// LocalRegisterSchemaModule<ArbitraryTemplateParameter_server_dota_bot_h>  (line 252, @0x00000000027eb280, libserver.so)  // inlines: Call
+// globals: CDOTA_Bot::s_pSchemaBindingForLocalModule
+void __fastcall LocalRegisterSchemaModule<ArbitraryTemplateParameter_server_dota_bot_h>(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        SchemaRegistrationPhase_t nRegistrationPhase)
+{
+  if ( nRegistrationPhase == SchemaRegistrationPhase_t::SCHEMA_REGISTRATION_PHASE_CLASSES )
+    (*(CDOTA_Bot::s_pSchemaBindingForLocalModule->_vptr_ISchemaBinding + 5))(
+      CDOTA_Bot::s_pSchemaBindingForLocalModule,
+      pSchemaSystem,
+      pBinaryName,
+      "server");
+  ++g_nLinkerHack_SchemaAnchor_RegistrationCountFor_server;
+}
+
+
+// RegisterSchemaModule_dota_bot_h  (line 254, @0x00000000027eb2c0, libserver.so)  // inlines: Call, LocalRegisterSchemaModule<ArbitraryTemplateParameter_server_dota_bot_h>
+// callers: CSchemaRegistration_server::RegisterAllBindings
+// globals: CDOTA_Bot::s_pSchemaBindingForLocalModule
+void __fastcall RegisterSchemaModule_dota_bot_h(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        SchemaRegistrationPhase_t nRegistrationPhase)
+{
+  if ( nRegistrationPhase == SchemaRegistrationPhase_t::SCHEMA_REGISTRATION_PHASE_CLASSES )
+    (*(CDOTA_Bot::s_pSchemaBindingForLocalModule->_vptr_ISchemaBinding + 5))(
+      CDOTA_Bot::s_pSchemaBindingForLocalModule,
+      pSchemaSystem,
+      pBinaryName,
+      "server");
+  ++g_nLinkerHack_SchemaAnchor_RegistrationCountFor_server;
+}
+
+

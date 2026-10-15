@@ -1,0 +1,256 @@
+
+// ==== functions (decompiled by Hex-Rays; names/signatures from DWARF) ====
+
+// CPlayerLocalData::Schema_CompileTimeVerificationFunction  (line 35, @0x0000000001ffa480, libserver.so)
+void __fastcall CPlayerLocalData::Schema_CompileTimeVerificationFunction(CPlayerLocalData *const this)
+{
+  ;
+}
+
+
+// CPlayerLocalData::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE  (line 63, @0x0000000001ffa490, libserver.so)  // inlines: Get, NetworkVarDecl_t, SchemaBinding_SchemaTypeOfMemberVarByAddr<CPlayerLocalData, CNetworkArrayBase<unsigned char, 24, CPlayerLocalData::NetworkVar_m_chAreaPortalBits> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<CPlayerLocalData, CNetworkArrayBase<unsigned char, 32, CPlayerLocalData::NetworkVar_m_chAreaBits> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<CPlayerLocalData, CNetworkVarBase<bool, CPlayerLocalData::NetworkVar_m_bAllowAutoMovement> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<CPlayerLocalData, CNetworkVarBase<bool, CPlayerLocalData::NetworkVar_m_bAutoAimTarget> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<CPlayerLocalData, CNetworkVarBase<bool, CPlayerLocalData::NetworkVar_m_bDrawViewmodel> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<CPlayerLocalData, CNetworkVarBase<bool, CPlayerLocalData::NetworkVar_m_bDucked> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<CPlayerLocalData, CNetworkVarBase<bool, CPlayerLocalData::NetworkVar_m_bDucking> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<CPlayerLocalData, CNetworkVarBase<bool, CPlayerLocalData::NetworkVar_m_bInDuckJump> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<CPlayerLocalData, CNetworkVarBase<bool, CPlayerLocalData::NetworkVar_m_bPoisoned> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<CPlayerLocalData, CNetworkVarBase<bool, CPlayerLocalData::NetworkVar_m_bSlowMovement> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<CPlayerLocalData, CNetworkVarBase<bool, CPlayerLocalData::NetworkVar_m_bWearingSuit> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<CPlayerLocalData, CNetworkVarBase<float, CPlayerLocalData::NetworkVar_m_flFOVRate> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<CPlayerLocalData, CNetworkVarBase<float, CPlayerLocalData::NetworkVar_m_flFallVelocity> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<CPlayerLocalData, CNetworkVarBase<float, CPlayerLocalData::NetworkVar_m_flStepSize> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<CPlayerLocalData, CNetworkVarBase<unsigned int, CPlayerLocalData::NetworkVar_m_iHideHUD> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<CPlayerLocalData, CNetworkVarBase<unsigned int, CPlayerLocalData::NetworkVar_m_nDuckJumpTimeMsecs> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<CPlayerLocalData, CNetworkVarBase<unsigned int, CPlayerLocalData::NetworkVar_m_nDuckTimeMsecs> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<CPlayerLocalData, CNetworkVarBase<unsigned int, CPlayerLocalData::NetworkVar_m_nJumpTimeMsecs> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<CPlayerLocalData, CPlayerLocalData::NetworkVar_m_audio>, SchemaBinding_SchemaTypeOfMemberVarByAddr<CPlayerLocalData, CPlayerLocalData::NetworkVar_m_skybox3d>, SchemaBinding_SchemaTypeOfMemberVarByAddr<CPlayerLocalData, ChangeAccessorFieldPathIndex_t>, SchemaBinding_SchemaTypeOfMemberVarByAddr<CPlayerLocalData, Vector>, SchemaBinding_SchemaTypeOfMemberVarByAddr<CPlayerLocalData, fogparams_t>, SchemaBinding_SchemaTypeOfMemberVarByAddr<CPlayerLocalData, int>, SetTypeScope
+// calls: __cxa_guard_acquire, __cxa_guard_release
+// callers: CSchemaClassBinding<CPlayerLocalData>::Register
+// strings: "ChangeAccessorFieldPathIndex_t", "sky3dparams_t", "audioparams_t", "fogparams_t", "m_chAreaBits", "uint8" (27 total)
+// globals: CPlayerLocalData::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pIniti, `guard variable for'CPlayerLocalData::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,ch, CSchemaManipulator<Vector>::StaticAccessor(void)::m, CAtomicManipulator<Vector>::Get(void)::val, CPlayerLocalData::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSche
+CSchemaClassInfo *__fastcall CPlayerLocalData::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        const char *pProjectName)
+{
+  CSchemaClassInfo *result; // rax
+  ISchemaSystemTypeScope *v4; // rbx
+  __int64 (__fastcall *v5)(ISchemaSystemTypeScope *, __int64, __int64); // r12
+  __int64 v6; // rax
+  __int64 (__fastcall *v7)(ISchemaSystemTypeScope *, __int64, __int64); // r12
+  __int64 v8; // rax
+  CSchemaType *v9; // rax
+
+  result = CPlayerLocalData::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult;
+  if ( CPlayerLocalData::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult == 0 )
+  {
+    v4 = (*(*pSchemaSystem + 112LL))(pSchemaSystem, 0, pBinaryName);
+    if ( `guard variable for'CPlayerLocalData::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CPlayerLocalData2_MNetworkVarNames_Value == 0
+      && __cxa_guard_acquire(&`guard variable for'CPlayerLocalData::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CPlayerLocalData2_MNetworkVarNames_Value) != 0 )
+    {
+      CPlayerLocalData::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CPlayerLocalData2_MNetworkVarNames_Value.m_pVarName = "m_chAreaBits";
+      CPlayerLocalData::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CPlayerLocalData2_MNetworkVarNames_Value.m_pVarType = "uint8";
+      __cxa_guard_release(&`guard variable for'CPlayerLocalData::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CPlayerLocalData2_MNetworkVarNames_Value);
+    }
+    if ( `guard variable for'CPlayerLocalData::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CPlayerLocalData3_MNetworkVarNames_Value == 0
+      && __cxa_guard_acquire(&`guard variable for'CPlayerLocalData::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CPlayerLocalData3_MNetworkVarNames_Value) != 0 )
+    {
+      CPlayerLocalData::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CPlayerLocalData3_MNetworkVarNames_Value.m_pVarName = "m_chAreaPortalBits";
+      CPlayerLocalData::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CPlayerLocalData3_MNetworkVarNames_Value.m_pVarType = "uint8";
+      __cxa_guard_release(&`guard variable for'CPlayerLocalData::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CPlayerLocalData3_MNetworkVarNames_Value);
+    }
+    if ( `guard variable for'CPlayerLocalData::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CPlayerLocalData4_MNetworkVarNames_Value == 0
+      && __cxa_guard_acquire(&`guard variable for'CPlayerLocalData::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CPlayerLocalData4_MNetworkVarNames_Value) != 0 )
+    {
+      CPlayerLocalData::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CPlayerLocalData4_MNetworkVarNames_Value.m_pVarName = "m_iHideHUD";
+      CPlayerLocalData::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CPlayerLocalData4_MNetworkVarNames_Value.m_pVarType = "uint32";
+      __cxa_guard_release(&`guard variable for'CPlayerLocalData::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CPlayerLocalData4_MNetworkVarNames_Value);
+    }
+    if ( `guard variable for'CPlayerLocalData::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CPlayerLocalData5_MNetworkVarNames_Value == 0
+      && __cxa_guard_acquire(&`guard variable for'CPlayerLocalData::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CPlayerLocalData5_MNetworkVarNames_Value) != 0 )
+    {
+      CPlayerLocalData::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CPlayerLocalData5_MNetworkVarNames_Value.m_pVarName = "m_flFOVRate";
+      CPlayerLocalData::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CPlayerLocalData5_MNetworkVarNames_Value.m_pVarType = "float32";
+      __cxa_guard_release(&`guard variable for'CPlayerLocalData::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CPlayerLocalData5_MNetworkVarNames_Value);
+    }
+    if ( `guard variable for'CPlayerLocalData::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CPlayerLocalData6_MNetworkVarNames_Value == 0
+      && __cxa_guard_acquire(&`guard variable for'CPlayerLocalData::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CPlayerLocalData6_MNetworkVarNames_Value) != 0 )
+    {
+      CPlayerLocalData::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CPlayerLocalData6_MNetworkVarNames_Value.m_pVarName = "m_bDucked";
+      CPlayerLocalData::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CPlayerLocalData6_MNetworkVarNames_Value.m_pVarType = "bool";
+      __cxa_guard_release(&`guard variable for'CPlayerLocalData::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CPlayerLocalData6_MNetworkVarNames_Value);
+    }
+    if ( `guard variable for'CPlayerLocalData::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CPlayerLocalData7_MNetworkVarNames_Value == 0
+      && __cxa_guard_acquire(&`guard variable for'CPlayerLocalData::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CPlayerLocalData7_MNetworkVarNames_Value) != 0 )
+    {
+      CPlayerLocalData::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CPlayerLocalData7_MNetworkVarNames_Value.m_pVarName = "m_bDucking";
+      CPlayerLocalData::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CPlayerLocalData7_MNetworkVarNames_Value.m_pVarType = "bool";
+      __cxa_guard_release(&`guard variable for'CPlayerLocalData::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CPlayerLocalData7_MNetworkVarNames_Value);
+    }
+    if ( `guard variable for'CPlayerLocalData::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CPlayerLocalData8_MNetworkVarNames_Value == 0
+      && __cxa_guard_acquire(&`guard variable for'CPlayerLocalData::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CPlayerLocalData8_MNetworkVarNames_Value) != 0 )
+    {
+      CPlayerLocalData::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CPlayerLocalData8_MNetworkVarNames_Value.m_pVarName = "m_bInDuckJump";
+      CPlayerLocalData::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CPlayerLocalData8_MNetworkVarNames_Value.m_pVarType = "bool";
+      __cxa_guard_release(&`guard variable for'CPlayerLocalData::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CPlayerLocalData8_MNetworkVarNames_Value);
+    }
+    if ( `guard variable for'CPlayerLocalData::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CPlayerLocalData9_MNetworkVarNames_Value == 0
+      && __cxa_guard_acquire(&`guard variable for'CPlayerLocalData::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CPlayerLocalData9_MNetworkVarNames_Value) != 0 )
+    {
+      CPlayerLocalData::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CPlayerLocalData9_MNetworkVarNames_Value.m_pVarName = "m_nDuckTimeMsecs";
+      CPlayerLocalData::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CPlayerLocalData9_MNetworkVarNames_Value.m_pVarType = "uint32";
+      __cxa_guard_release(&`guard variable for'CPlayerLocalData::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CPlayerLocalData9_MNetworkVarNames_Value);
+    }
+    if ( `guard variable for'CPlayerLocalData::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CPlayerLocalData10_MNetworkVarNames_Value == 0
+      && __cxa_guard_acquire(&`guard variable for'CPlayerLocalData::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CPlayerLocalData10_MNetworkVarNames_Value) != 0 )
+    {
+      CPlayerLocalData::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CPlayerLocalData10_MNetworkVarNames_Value.m_pVarName = "m_nDuckJumpTimeMsecs";
+      CPlayerLocalData::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CPlayerLocalData10_MNetworkVarNames_Value.m_pVarType = "uint32";
+      __cxa_guard_release(&`guard variable for'CPlayerLocalData::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CPlayerLocalData10_MNetworkVarNames_Value);
+    }
+    if ( `guard variable for'CPlayerLocalData::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CPlayerLocalData11_MNetworkVarNames_Value == 0
+      && __cxa_guard_acquire(&`guard variable for'CPlayerLocalData::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CPlayerLocalData11_MNetworkVarNames_Value) != 0 )
+    {
+      CPlayerLocalData::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CPlayerLocalData11_MNetworkVarNames_Value.m_pVarName = "m_nJumpTimeMsecs";
+      CPlayerLocalData::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CPlayerLocalData11_MNetworkVarNames_Value.m_pVarType = "uint32";
+      __cxa_guard_release(&`guard variable for'CPlayerLocalData::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CPlayerLocalData11_MNetworkVarNames_Value);
+    }
+    if ( `guard variable for'CPlayerLocalData::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CPlayerLocalData12_MNetworkVarNames_Value == 0
+      && __cxa_guard_acquire(&`guard variable for'CPlayerLocalData::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CPlayerLocalData12_MNetworkVarNames_Value) != 0 )
+    {
+      CPlayerLocalData::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CPlayerLocalData12_MNetworkVarNames_Value.m_pVarName = "m_flFallVelocity";
+      CPlayerLocalData::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CPlayerLocalData12_MNetworkVarNames_Value.m_pVarType = "float32";
+      __cxa_guard_release(&`guard variable for'CPlayerLocalData::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CPlayerLocalData12_MNetworkVarNames_Value);
+    }
+    if ( `guard variable for'CPlayerLocalData::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CPlayerLocalData13_MNetworkVarNames_Value == 0
+      && __cxa_guard_acquire(&`guard variable for'CPlayerLocalData::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CPlayerLocalData13_MNetworkVarNames_Value) != 0 )
+    {
+      CPlayerLocalData::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CPlayerLocalData13_MNetworkVarNames_Value.m_pVarName = "m_bDrawViewmodel";
+      CPlayerLocalData::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CPlayerLocalData13_MNetworkVarNames_Value.m_pVarType = "bool";
+      __cxa_guard_release(&`guard variable for'CPlayerLocalData::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CPlayerLocalData13_MNetworkVarNames_Value);
+    }
+    if ( `guard variable for'CPlayerLocalData::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CPlayerLocalData14_MNetworkVarNames_Value == 0
+      && __cxa_guard_acquire(&`guard variable for'CPlayerLocalData::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CPlayerLocalData14_MNetworkVarNames_Value) != 0 )
+    {
+      CPlayerLocalData::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CPlayerLocalData14_MNetworkVarNames_Value.m_pVarName = "m_bWearingSuit";
+      CPlayerLocalData::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CPlayerLocalData14_MNetworkVarNames_Value.m_pVarType = "bool";
+      __cxa_guard_release(&`guard variable for'CPlayerLocalData::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CPlayerLocalData14_MNetworkVarNames_Value);
+    }
+    if ( `guard variable for'CPlayerLocalData::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CPlayerLocalData15_MNetworkVarNames_Value == 0
+      && __cxa_guard_acquire(&`guard variable for'CPlayerLocalData::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CPlayerLocalData15_MNetworkVarNames_Value) != 0 )
+    {
+      CPlayerLocalData::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CPlayerLocalData15_MNetworkVarNames_Value.m_pVarName = "m_bPoisoned";
+      CPlayerLocalData::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CPlayerLocalData15_MNetworkVarNames_Value.m_pVarType = "bool";
+      __cxa_guard_release(&`guard variable for'CPlayerLocalData::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CPlayerLocalData15_MNetworkVarNames_Value);
+    }
+    if ( `guard variable for'CPlayerLocalData::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CPlayerLocalData16_MNetworkVarNames_Value == 0
+      && __cxa_guard_acquire(&`guard variable for'CPlayerLocalData::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CPlayerLocalData16_MNetworkVarNames_Value) != 0 )
+    {
+      CPlayerLocalData::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CPlayerLocalData16_MNetworkVarNames_Value.m_pVarName = "m_flStepSize";
+      CPlayerLocalData::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CPlayerLocalData16_MNetworkVarNames_Value.m_pVarType = "float32";
+      __cxa_guard_release(&`guard variable for'CPlayerLocalData::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CPlayerLocalData16_MNetworkVarNames_Value);
+    }
+    if ( `guard variable for'CPlayerLocalData::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CPlayerLocalData17_MNetworkVarNames_Value == 0
+      && __cxa_guard_acquire(&`guard variable for'CPlayerLocalData::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CPlayerLocalData17_MNetworkVarNames_Value) != 0 )
+    {
+      CPlayerLocalData::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CPlayerLocalData17_MNetworkVarNames_Value.m_pVarName = "m_bAllowAutoMovement";
+      CPlayerLocalData::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CPlayerLocalData17_MNetworkVarNames_Value.m_pVarType = "bool";
+      __cxa_guard_release(&`guard variable for'CPlayerLocalData::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CPlayerLocalData17_MNetworkVarNames_Value);
+    }
+    if ( `guard variable for'CPlayerLocalData::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CPlayerLocalData18_MNetworkVarNames_Value == 0
+      && __cxa_guard_acquire(&`guard variable for'CPlayerLocalData::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CPlayerLocalData18_MNetworkVarNames_Value) != 0 )
+    {
+      CPlayerLocalData::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CPlayerLocalData18_MNetworkVarNames_Value.m_pVarName = "m_bSlowMovement";
+      CPlayerLocalData::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CPlayerLocalData18_MNetworkVarNames_Value.m_pVarType = "bool";
+      __cxa_guard_release(&`guard variable for'CPlayerLocalData::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CPlayerLocalData18_MNetworkVarNames_Value);
+    }
+    if ( `guard variable for'CPlayerLocalData::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CPlayerLocalData19_MNetworkVarNames_Value == 0
+      && __cxa_guard_acquire(&`guard variable for'CPlayerLocalData::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CPlayerLocalData19_MNetworkVarNames_Value) != 0 )
+    {
+      CPlayerLocalData::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CPlayerLocalData19_MNetworkVarNames_Value.m_pVarName = "m_bAutoAimTarget";
+      CPlayerLocalData::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CPlayerLocalData19_MNetworkVarNames_Value.m_pVarType = "bool";
+      __cxa_guard_release(&`guard variable for'CPlayerLocalData::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CPlayerLocalData19_MNetworkVarNames_Value);
+    }
+    if ( `guard variable for'CPlayerLocalData::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CPlayerLocalData20_MNetworkVarNames_Value == 0
+      && __cxa_guard_acquire(&`guard variable for'CPlayerLocalData::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CPlayerLocalData20_MNetworkVarNames_Value) != 0 )
+    {
+      CPlayerLocalData::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CPlayerLocalData20_MNetworkVarNames_Value.m_pVarName = "m_skybox3d";
+      CPlayerLocalData::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CPlayerLocalData20_MNetworkVarNames_Value.m_pVarType = "sky3dparams_t";
+      __cxa_guard_release(&`guard variable for'CPlayerLocalData::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CPlayerLocalData20_MNetworkVarNames_Value);
+    }
+    if ( `guard variable for'CPlayerLocalData::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CPlayerLocalData21_MNetworkVarNames_Value == 0
+      && __cxa_guard_acquire(&`guard variable for'CPlayerLocalData::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CPlayerLocalData21_MNetworkVarNames_Value) != 0 )
+    {
+      CPlayerLocalData::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CPlayerLocalData21_MNetworkVarNames_Value.m_pVarName = "m_audio";
+      CPlayerLocalData::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CPlayerLocalData21_MNetworkVarNames_Value.m_pVarType = "audioparams_t";
+      __cxa_guard_release(&`guard variable for'CPlayerLocalData::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CPlayerLocalData21_MNetworkVarNames_Value);
+    }
+    CPlayerLocalData::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CPlayerLocalData[0].m_pType = (*(*v4 + 88LL))(v4, "ChangeAccessorFieldPathIndex_t");
+    v5 = *(*v4 + 104LL);
+    v6 = (*(*v4 + 40LL))(v4, 4);
+    CPlayerLocalData::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CPlayerLocalData[1].m_pType = v5(v4, v6, 32);
+    v7 = *(*v4 + 104LL);
+    v8 = (*(*v4 + 40LL))(v4, 4);
+    CPlayerLocalData::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CPlayerLocalData[2].m_pType = v7(v4, v8, 24);
+    CPlayerLocalData::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CPlayerLocalData[3].m_pType = (*(*v4 + 40LL))(v4, 7);
+    CPlayerLocalData::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CPlayerLocalData[4].m_pType = (*(*v4 + 40LL))(v4, 7);
+    CPlayerLocalData::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CPlayerLocalData[5].m_pType = (*(*v4 + 40LL))(v4, 8);
+    CPlayerLocalData::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CPlayerLocalData[6].m_pType = (*(*v4 + 40LL))(v4, 11);
+    CPlayerLocalData::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CPlayerLocalData[7].m_pType = (*(*v4 + 56LL))(v4, "Vector", 2010, CAtomicManipulator<Vector>::Get(void)::val, CSchemaManipulator<Vector>::StaticAccessor(void)::m);
+    CPlayerLocalData::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CPlayerLocalData[8].m_pType = (*(*v4 + 40LL))(v4, 13);
+    CPlayerLocalData::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CPlayerLocalData[9].m_pType = (*(*v4 + 40LL))(v4, 13);
+    CPlayerLocalData::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CPlayerLocalData[10].m_pType = (*(*v4 + 40LL))(v4, 13);
+    CPlayerLocalData::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CPlayerLocalData[11].m_pType = (*(*v4 + 40LL))(v4, 8);
+    CPlayerLocalData::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CPlayerLocalData[12].m_pType = (*(*v4 + 40LL))(v4, 8);
+    CPlayerLocalData::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CPlayerLocalData[13].m_pType = (*(*v4 + 40LL))(v4, 8);
+    CPlayerLocalData::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CPlayerLocalData[14].m_pType = (*(*v4 + 40LL))(v4, 11);
+    CPlayerLocalData::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CPlayerLocalData[15].m_pType = (*(*v4 + 40LL))(v4, 13);
+    CPlayerLocalData::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CPlayerLocalData[16].m_pType = (*(*v4 + 40LL))(v4, 13);
+    CPlayerLocalData::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CPlayerLocalData[17].m_pType = (*(*v4 + 40LL))(v4, 13);
+    CPlayerLocalData::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CPlayerLocalData[18].m_pType = (*(*v4 + 40LL))(v4, 11);
+    CPlayerLocalData::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CPlayerLocalData[19].m_pType = (*(*v4 + 40LL))(v4, 13);
+    CPlayerLocalData::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CPlayerLocalData[20].m_pType = (*(*v4 + 40LL))(v4, 13);
+    CPlayerLocalData::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CPlayerLocalData[21].m_pType = (*(*v4 + 40LL))(v4, 13);
+    CPlayerLocalData::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CPlayerLocalData[22].m_pType = (*(*v4 + 88LL))(v4, "sky3dparams_t");
+    CPlayerLocalData::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CPlayerLocalData[23].m_pType = (*(*v4 + 88LL))(v4, "audioparams_t");
+    v9 = (*(*v4 + 88LL))(v4, "fogparams_t");
+    CPlayerLocalData::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CPlayerLocalData.m_pOuterTypeScope = v4;
+    CPlayerLocalData::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CPlayerLocalData[24].m_pType = v9;
+    CPlayerLocalData::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult = &CPlayerLocalData::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CPlayerLocalData;
+    (*(*v4 + 264LL))(
+      v4,
+      &CPlayerLocalData::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CPlayerLocalData);
+    return CPlayerLocalData::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult;
+  }
+  return result;
+}
+
+
+// CPlayerLocalData::Schema_VerifyBindingIsRegistered  (line 381, @0x0000000001ffade0, libserver.so)
+// callers: CPlayerLocalData::Schema_DynamicBinding
+void __cdecl CPlayerLocalData::Schema_VerifyBindingIsRegistered()
+{
+  ;
+}
+
+
+// LocalRegisterSchemaModule<ArbitraryTemplateParameter_server_playerlocaldata_h>  (line 389, @0x0000000001ffadf0, libserver.so)  // inlines: Call
+// globals: CPlayerLocalData::s_pSchemaBindingForLocalModule
+void __fastcall LocalRegisterSchemaModule<ArbitraryTemplateParameter_server_playerlocaldata_h>(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        SchemaRegistrationPhase_t nRegistrationPhase)
+{
+  if ( nRegistrationPhase == SchemaRegistrationPhase_t::SCHEMA_REGISTRATION_PHASE_CLASSES )
+    (*(CPlayerLocalData::s_pSchemaBindingForLocalModule->_vptr_ISchemaBinding + 5))(
+      CPlayerLocalData::s_pSchemaBindingForLocalModule,
+      pSchemaSystem,
+      pBinaryName,
+      "server");
+  ++g_nLinkerHack_SchemaAnchor_RegistrationCountFor_server;
+}
+
+
+// RegisterSchemaModule_playerlocaldata_h  (line 391, @0x0000000001ffae30, libserver.so)  // inlines: Call, LocalRegisterSchemaModule<ArbitraryTemplateParameter_server_playerlocaldata_h>
+// callers: CSchemaRegistration_server::RegisterAllBindings
+// globals: CPlayerLocalData::s_pSchemaBindingForLocalModule
+void __fastcall RegisterSchemaModule_playerlocaldata_h(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        SchemaRegistrationPhase_t nRegistrationPhase)
+{
+  if ( nRegistrationPhase == SchemaRegistrationPhase_t::SCHEMA_REGISTRATION_PHASE_CLASSES )
+    (*(CPlayerLocalData::s_pSchemaBindingForLocalModule->_vptr_ISchemaBinding + 5))(
+      CPlayerLocalData::s_pSchemaBindingForLocalModule,
+      pSchemaSystem,
+      pBinaryName,
+      "server");
+  ++g_nLinkerHack_SchemaAnchor_RegistrationCountFor_server;
+}
+
+

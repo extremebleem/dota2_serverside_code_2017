@@ -1,0 +1,2126 @@
+
+// ==== functions (decompiled by Hex-Rays; names/signatures from DWARF) ====
+
+// CSchemaEnumBinding<quest_hud_types_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE  (line 35, @0x000000000266a0c0, libserver.so)  // inlines: Count, Initialize, SetTypeScope
+// callers: CSchemaEnumBinding<quest_hud_types_t>::Register
+// globals: CSchemaEnumBinding<quest_hud_types_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,ch
+CSchemaEnumInfo *__fastcall CSchemaEnumBinding<quest_hud_types_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        const char *pProjectName)
+{
+  ISchemaSystemTypeScope *v3; // rax
+  unsigned int v4; // edi
+  SchemaEnumeratorValue_t v5; // r8
+  SchemaEnumeratorValue_t v6; // r9
+  SchemaEnumeratorValue_t *v7; // rdx
+
+  v3 = (*(*pSchemaSystem + 112LL))(pSchemaSystem, 0, pBinaryName);
+  if ( CSchemaEnumBinding<quest_hud_types_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_quest_hud_types_t.m_Enumerators.m_Data.m_nImplLength != 0 )
+  {
+    v4 = abs32(CSchemaEnumBinding<quest_hud_types_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_quest_hud_types_t.m_Enumerators.m_Data.m_nImplLength);
+    v5 = *(CSchemaEnumBinding<quest_hud_types_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_quest_hud_types_t.m_Enumerators.m_Data.m_pImplElements
+         + 2);
+    CSchemaEnumBinding<quest_hud_types_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_quest_hud_types_t.m_nMinValue = v5;
+    v6 = *(CSchemaEnumBinding<quest_hud_types_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_quest_hud_types_t.m_Enumerators.m_Data.m_pImplElements
+         + 2);
+    CSchemaEnumBinding<quest_hud_types_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_quest_hud_types_t.m_nMaxValue = v6;
+    if ( v4 != 1 )
+    {
+      v7 = (CSchemaEnumBinding<quest_hud_types_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_quest_hud_types_t.m_Enumerators.m_Data.m_pImplElements
+          + 72);
+      do
+      {
+        if ( v5 > *v7 )
+          v5 = *v7;
+        CSchemaEnumBinding<quest_hud_types_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_quest_hud_types_t.m_nMinValue = v5;
+        if ( v6 < *v7 )
+          v6 = *v7;
+        v7 += 7;
+        CSchemaEnumBinding<quest_hud_types_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_quest_hud_types_t.m_nMaxValue = v6;
+      }
+      while ( v7 != CSchemaEnumBinding<quest_hud_types_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_quest_hud_types_t.m_Enumerators.m_Data.m_pImplElements
+                  + 7 * v4
+                  + 2 );
+    }
+  }
+  else
+  {
+    CSchemaEnumBinding<quest_hud_types_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_quest_hud_types_t.m_nMinValue = 0;
+    CSchemaEnumBinding<quest_hud_types_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_quest_hud_types_t.m_nMaxValue = 0;
+  }
+  CSchemaEnumBinding<quest_hud_types_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_quest_hud_types_t.m_pOuterTypeScope = v3;
+  (*(*v3 + 272LL))(
+    v3,
+    &CSchemaEnumBinding<quest_hud_types_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_quest_hud_types_t);
+  return &CSchemaEnumBinding<quest_hud_types_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_quest_hud_types_t;
+}
+
+
+// CSchemaEnumBinding<quest_text_replace_values_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE  (line 49, @0x000000000266a1a0, libserver.so)  // inlines: Count, Initialize, SetTypeScope
+// callers: CSchemaEnumBinding<quest_text_replace_values_t>::Register
+// globals: CSchemaEnumBinding<quest_text_replace_values_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char
+CSchemaEnumInfo *__fastcall CSchemaEnumBinding<quest_text_replace_values_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        const char *pProjectName)
+{
+  ISchemaSystemTypeScope *v3; // rax
+  unsigned int v4; // edi
+  SchemaEnumeratorValue_t v5; // r8
+  SchemaEnumeratorValue_t v6; // r9
+  SchemaEnumeratorValue_t *v7; // rdx
+
+  v3 = (*(*pSchemaSystem + 112LL))(pSchemaSystem, 0, pBinaryName);
+  if ( CSchemaEnumBinding<quest_text_replace_values_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_quest_text_replace_values_t.m_Enumerators.m_Data.m_nImplLength != 0 )
+  {
+    v4 = abs32(CSchemaEnumBinding<quest_text_replace_values_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_quest_text_replace_values_t.m_Enumerators.m_Data.m_nImplLength);
+    v5 = *(CSchemaEnumBinding<quest_text_replace_values_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_quest_text_replace_values_t.m_Enumerators.m_Data.m_pImplElements
+         + 2);
+    CSchemaEnumBinding<quest_text_replace_values_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_quest_text_replace_values_t.m_nMinValue = v5;
+    v6 = *(CSchemaEnumBinding<quest_text_replace_values_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_quest_text_replace_values_t.m_Enumerators.m_Data.m_pImplElements
+         + 2);
+    CSchemaEnumBinding<quest_text_replace_values_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_quest_text_replace_values_t.m_nMaxValue = v6;
+    if ( v4 != 1 )
+    {
+      v7 = (CSchemaEnumBinding<quest_text_replace_values_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_quest_text_replace_values_t.m_Enumerators.m_Data.m_pImplElements
+          + 72);
+      do
+      {
+        if ( v5 > *v7 )
+          v5 = *v7;
+        CSchemaEnumBinding<quest_text_replace_values_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_quest_text_replace_values_t.m_nMinValue = v5;
+        if ( v6 < *v7 )
+          v6 = *v7;
+        v7 += 7;
+        CSchemaEnumBinding<quest_text_replace_values_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_quest_text_replace_values_t.m_nMaxValue = v6;
+      }
+      while ( v7 != CSchemaEnumBinding<quest_text_replace_values_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_quest_text_replace_values_t.m_Enumerators.m_Data.m_pImplElements
+                  + 7 * v4
+                  + 2 );
+    }
+  }
+  else
+  {
+    CSchemaEnumBinding<quest_text_replace_values_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_quest_text_replace_values_t.m_nMinValue = 0;
+    CSchemaEnumBinding<quest_text_replace_values_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_quest_text_replace_values_t.m_nMaxValue = 0;
+  }
+  CSchemaEnumBinding<quest_text_replace_values_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_quest_text_replace_values_t.m_pOuterTypeScope = v3;
+  (*(*v3 + 272LL))(
+    v3,
+    &CSchemaEnumBinding<quest_text_replace_values_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_quest_text_replace_values_t);
+  return &CSchemaEnumBinding<quest_text_replace_values_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_quest_text_replace_values_t;
+}
+
+
+// CSchemaEnumBinding<subquest_text_replace_values_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE  (line 63, @0x000000000266a280, libserver.so)  // inlines: Count, Initialize, SetTypeScope
+// callers: CSchemaEnumBinding<subquest_text_replace_values_t>::Register
+// globals: CSchemaEnumBinding<subquest_text_replace_values_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,c
+CSchemaEnumInfo *__fastcall CSchemaEnumBinding<subquest_text_replace_values_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        const char *pProjectName)
+{
+  ISchemaSystemTypeScope *v3; // rax
+  unsigned int v4; // edi
+  SchemaEnumeratorValue_t v5; // r8
+  SchemaEnumeratorValue_t v6; // r9
+  SchemaEnumeratorValue_t *v7; // rdx
+
+  v3 = (*(*pSchemaSystem + 112LL))(pSchemaSystem, 0, pBinaryName);
+  if ( CSchemaEnumBinding<subquest_text_replace_values_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_subquest_text_replace_values_t.m_Enumerators.m_Data.m_nImplLength != 0 )
+  {
+    v4 = abs32(CSchemaEnumBinding<subquest_text_replace_values_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_subquest_text_replace_values_t.m_Enumerators.m_Data.m_nImplLength);
+    v5 = *(CSchemaEnumBinding<subquest_text_replace_values_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_subquest_text_replace_values_t.m_Enumerators.m_Data.m_pImplElements
+         + 2);
+    CSchemaEnumBinding<subquest_text_replace_values_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_subquest_text_replace_values_t.m_nMinValue = v5;
+    v6 = *(CSchemaEnumBinding<subquest_text_replace_values_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_subquest_text_replace_values_t.m_Enumerators.m_Data.m_pImplElements
+         + 2);
+    CSchemaEnumBinding<subquest_text_replace_values_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_subquest_text_replace_values_t.m_nMaxValue = v6;
+    if ( v4 != 1 )
+    {
+      v7 = (CSchemaEnumBinding<subquest_text_replace_values_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_subquest_text_replace_values_t.m_Enumerators.m_Data.m_pImplElements
+          + 72);
+      do
+      {
+        if ( v5 > *v7 )
+          v5 = *v7;
+        CSchemaEnumBinding<subquest_text_replace_values_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_subquest_text_replace_values_t.m_nMinValue = v5;
+        if ( v6 < *v7 )
+          v6 = *v7;
+        v7 += 7;
+        CSchemaEnumBinding<subquest_text_replace_values_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_subquest_text_replace_values_t.m_nMaxValue = v6;
+      }
+      while ( v7 != CSchemaEnumBinding<subquest_text_replace_values_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_subquest_text_replace_values_t.m_Enumerators.m_Data.m_pImplElements
+                  + 7 * v4
+                  + 2 );
+    }
+  }
+  else
+  {
+    CSchemaEnumBinding<subquest_text_replace_values_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_subquest_text_replace_values_t.m_nMinValue = 0;
+    CSchemaEnumBinding<subquest_text_replace_values_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_subquest_text_replace_values_t.m_nMaxValue = 0;
+  }
+  CSchemaEnumBinding<subquest_text_replace_values_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_subquest_text_replace_values_t.m_pOuterTypeScope = v3;
+  (*(*v3 + 272LL))(
+    v3,
+    &CSchemaEnumBinding<subquest_text_replace_values_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_subquest_text_replace_values_t);
+  return &CSchemaEnumBinding<subquest_text_replace_values_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_subquest_text_replace_values_t;
+}
+
+
+// CSchemaEnumBinding<subquest_player_stat_types_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE  (line 75, @0x000000000266a360, libserver.so)  // inlines: Count, Initialize, SetTypeScope
+// callers: CSchemaEnumBinding<subquest_player_stat_types_t>::Register
+// globals: CSchemaEnumBinding<subquest_player_stat_types_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,cha
+CSchemaEnumInfo *__fastcall CSchemaEnumBinding<subquest_player_stat_types_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        const char *pProjectName)
+{
+  ISchemaSystemTypeScope *v3; // rax
+  unsigned int v4; // edi
+  SchemaEnumeratorValue_t v5; // r8
+  SchemaEnumeratorValue_t v6; // r9
+  SchemaEnumeratorValue_t *v7; // rdx
+
+  v3 = (*(*pSchemaSystem + 112LL))(pSchemaSystem, 0, pBinaryName);
+  if ( CSchemaEnumBinding<subquest_player_stat_types_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_subquest_player_stat_types_t.m_Enumerators.m_Data.m_nImplLength != 0 )
+  {
+    v4 = abs32(CSchemaEnumBinding<subquest_player_stat_types_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_subquest_player_stat_types_t.m_Enumerators.m_Data.m_nImplLength);
+    v5 = *(CSchemaEnumBinding<subquest_player_stat_types_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_subquest_player_stat_types_t.m_Enumerators.m_Data.m_pImplElements
+         + 2);
+    CSchemaEnumBinding<subquest_player_stat_types_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_subquest_player_stat_types_t.m_nMinValue = v5;
+    v6 = *(CSchemaEnumBinding<subquest_player_stat_types_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_subquest_player_stat_types_t.m_Enumerators.m_Data.m_pImplElements
+         + 2);
+    CSchemaEnumBinding<subquest_player_stat_types_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_subquest_player_stat_types_t.m_nMaxValue = v6;
+    if ( v4 != 1 )
+    {
+      v7 = (CSchemaEnumBinding<subquest_player_stat_types_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_subquest_player_stat_types_t.m_Enumerators.m_Data.m_pImplElements
+          + 72);
+      do
+      {
+        if ( v5 > *v7 )
+          v5 = *v7;
+        CSchemaEnumBinding<subquest_player_stat_types_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_subquest_player_stat_types_t.m_nMinValue = v5;
+        if ( v6 < *v7 )
+          v6 = *v7;
+        v7 += 7;
+        CSchemaEnumBinding<subquest_player_stat_types_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_subquest_player_stat_types_t.m_nMaxValue = v6;
+      }
+      while ( v7 != CSchemaEnumBinding<subquest_player_stat_types_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_subquest_player_stat_types_t.m_Enumerators.m_Data.m_pImplElements
+                  + 7 * v4
+                  + 2 );
+    }
+  }
+  else
+  {
+    CSchemaEnumBinding<subquest_player_stat_types_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_subquest_player_stat_types_t.m_nMinValue = 0;
+    CSchemaEnumBinding<subquest_player_stat_types_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_subquest_player_stat_types_t.m_nMaxValue = 0;
+  }
+  CSchemaEnumBinding<subquest_player_stat_types_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_subquest_player_stat_types_t.m_pOuterTypeScope = v3;
+  (*(*v3 + 272LL))(
+    v3,
+    &CSchemaEnumBinding<subquest_player_stat_types_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_subquest_player_stat_types_t);
+  return &CSchemaEnumBinding<subquest_player_stat_types_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_subquest_player_stat_types_t;
+}
+
+
+// CDotaSubquestBase::CEntityInstanceEntityClass::Schema_CompileTimeVerificationFunction  (line 89, @0x000000000266a440, libserver.so)
+void __fastcall CDotaSubquestBase::CEntityInstanceEntityClass::Schema_CompileTimeVerificationFunction(
+        CDotaSubquestBase::CEntityInstanceEntityClass *const this)
+{
+  ;
+}
+
+
+// CDotaSubquestBase::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE  (line 92, @0x0000000002654850, libserver.so)  // inlines: Call, Get, SetTypeScope
+// calls: CBaseEntity::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE
+// callers: CDotaSubquestBuyItems::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE, CDotaSubquestEntityDeath::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE, CDotaSubquestTutorialEvent::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE, CDotaSubquestPlayerStat::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE, CDotaSubquestAbilityCastCount::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE, CSchemaNonConstructibleClassBinding<CDotaSubquestBase::CEntityInstanceEntityClass>::Register, CDotaSubquestBase::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE, CDotaSubquestBase::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE
+// globals: CDotaSubquestBase::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char 
+CSchemaClassInfo *__fastcall CDotaSubquestBase::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        const char *pProjectName)
+{
+  ISchemaSystemTypeScope *v6; // r14
+  CSchemaClassInfo *v7; // rax
+
+  v6 = (*(*pSchemaSystem + 112LL))(pSchemaSystem, 1, pBinaryName);
+  (*(CBaseEntity::CEntityInstanceEntityClass::s_pSchemaBindingForLocalModule->_vptr_ISchemaBinding + 5))(
+    CBaseEntity::CEntityInstanceEntityClass::s_pSchemaBindingForLocalModule,
+    pSchemaSystem,
+    pBinaryName,
+    pProjectName);
+  v7 = CBaseEntity::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+         pSchemaSystem,
+         pBinaryName,
+         pProjectName);
+  CDotaSubquestBase::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CDotaSubquestBase_CEntityInstanceEntityClass.m_pOuterTypeScope = v6;
+  CDotaSubquestBase::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassBases_CDotaSubquestBase_CEntityInstanceEntityClass[0].m_pClass = v7;
+  CDotaSubquestBase::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult = &CDotaSubquestBase::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CDotaSubquestBase_CEntityInstanceEntityClass;
+  return &CDotaSubquestBase::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CDotaSubquestBase_CEntityInstanceEntityClass;
+}
+
+
+// CDotaSubquestBase::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE  (line 92, @0x000000000266a450, libserver.so)
+// calls: CDotaSubquestBase::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE
+// globals: CDotaSubquestBase::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char 
+CSchemaClassInfo *__fastcall CDotaSubquestBase::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        const char *pProjectName)
+{
+  CSchemaClassInfo *result; // rax
+
+  result = CDotaSubquestBase::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult;
+  if ( CDotaSubquestBase::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult == 0 )
+    return CDotaSubquestBase::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+             pSchemaSystem,
+             pBinaryName,
+             pProjectName);
+  return result;
+}
+
+
+// CDotaSubquestBase::CEntityInstanceEntityClass::Schema_VerifyBindingIsRegistered  (line 109, @0x000000000266a470, libserver.so)
+void __cdecl CDotaSubquestBase::CEntityInstanceEntityClass::Schema_VerifyBindingIsRegistered()
+{
+  ;
+}
+
+
+// CDotaSubquestBase::Schema_CompileTimeVerificationFunction  (line 117, @0x000000000266a480, libserver.so)
+void __fastcall CDotaSubquestBase::Schema_CompileTimeVerificationFunction(CDotaSubquestBase *const this)
+{
+  ;
+}
+
+
+// CDotaSubquestBase::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE  (line 129, @0x000000000266a490, libserver.so)  // inlines: Call, Get, NetworkVarDecl_t, RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE, SchemaBinding_SchemaTypeOfMemberVarByAddr<CDotaSubquestBase, CNetworkArrayBase<int, 2, CDotaSubquestBase::NetworkVar_m_pnTextReplaceValuesCDotaSubquestBase> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<CDotaSubquestBase, CNetworkStringBase<256, CDotaSubquestBase::NetworkVar_m_pszSubquestText> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<CDotaSubquestBase, CNetworkStringBase<64, CDotaSubquestBase::NetworkVar_m_pszTextReplaceString> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<CDotaSubquestBase, CNetworkVarBase<bool, CDotaSubquestBase::NetworkVar_m_bCompleted> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<CDotaSubquestBase, CNetworkVarBase<bool, CDotaSubquestBase::NetworkVar_m_bHidden> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<CDotaSubquestBase, CNetworkVarBase<bool, CDotaSubquestBase::NetworkVar_m_bShowProgressBar> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<CDotaSubquestBase, CNetworkVarBase<int, CDotaSubquestBase::NetworkVar_m_nProgressBarHueShift> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<CDotaSubquestBase, CNetworkVarBase<int, CDotaSubquestBase::NetworkVar_m_nTextReplaceValueVersion> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<CDotaSubquestBase, char [256]>, SetTypeScope
+// calls: __cxa_guard_acquire, __cxa_guard_release, CBaseEntity::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE, CDotaSubquestBase::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE, __cxa_guard_abort, _Unwind_Resume
+// callers: CSchemaNonConstructibleClassBinding<CDotaSubquestBase>::Register, CDotaSubquestBuyItems::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE, CDotaSubquestEntityDeath::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE, CDotaSubquestTutorialEvent::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE, CDotaSubquestPlayerStat::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE, CDotaSubquestAbilityCastCount::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE
+// strings: "m_nTextReplaceValueVersion", "m_bShowProgressBar", "m_bCompleted", "m_bHidden", "m_pszSubquestText", "char" (9 total)
+// globals: CDotaSubquestBase::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInit, `guard variable for'CDotaSubquestBase::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,c, CDotaSubquestBase::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char , CDotaSubquestBase::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSch
+CSchemaClassInfo *__fastcall CDotaSubquestBase::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        const char *pProjectName)
+{
+  CSchemaClassInfo *result; // rax
+  ISchemaSystemTypeScope *v7; // rbx
+  __int64 (__fastcall *v8)(ISchemaSystemTypeScope *, __int64, __int64); // r15
+  __int64 v9; // rax
+  __int64 (__fastcall *v10)(ISchemaSystemTypeScope *, __int64, __int64); // r15
+  __int64 v11; // rax
+  __int64 (__fastcall *v12)(ISchemaSystemTypeScope *, __int64, __int64); // r15
+  __int64 v13; // rax
+  __int64 (__fastcall *v14)(ISchemaSystemTypeScope *, __int64, __int64); // r15
+  __int64 v15; // rax
+  CSchemaClassInfo *v16; // rax
+  CSchemaClassInfo *v17; // rax
+
+  result = CDotaSubquestBase::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult;
+  if ( CDotaSubquestBase::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult == 0 )
+  {
+    v7 = (*(*pSchemaSystem + 112LL))(pSchemaSystem, 1, pBinaryName);
+    if ( `guard variable for'CDotaSubquestBase::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDotaSubquestBase4_MNetworkVarNames_Value == 0
+      && __cxa_guard_acquire(&`guard variable for'CDotaSubquestBase::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDotaSubquestBase4_MNetworkVarNames_Value) != 0 )
+    {
+      CDotaSubquestBase::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDotaSubquestBase4_MNetworkVarNames_Value.m_pVarName = "m_pszSubquestText";
+      CDotaSubquestBase::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDotaSubquestBase4_MNetworkVarNames_Value.m_pVarType = "char";
+      __cxa_guard_release(&`guard variable for'CDotaSubquestBase::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDotaSubquestBase4_MNetworkVarNames_Value);
+    }
+    if ( `guard variable for'CDotaSubquestBase::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDotaSubquestBase5_MNetworkVarNames_Value == 0
+      && __cxa_guard_acquire(&`guard variable for'CDotaSubquestBase::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDotaSubquestBase5_MNetworkVarNames_Value) != 0 )
+    {
+      CDotaSubquestBase::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDotaSubquestBase5_MNetworkVarNames_Value.m_pVarName = "m_bHidden";
+      CDotaSubquestBase::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDotaSubquestBase5_MNetworkVarNames_Value.m_pVarType = "bool";
+      __cxa_guard_release(&`guard variable for'CDotaSubquestBase::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDotaSubquestBase5_MNetworkVarNames_Value);
+    }
+    if ( `guard variable for'CDotaSubquestBase::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDotaSubquestBase6_MNetworkVarNames_Value == 0
+      && __cxa_guard_acquire(&`guard variable for'CDotaSubquestBase::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDotaSubquestBase6_MNetworkVarNames_Value) != 0 )
+    {
+      CDotaSubquestBase::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDotaSubquestBase6_MNetworkVarNames_Value.m_pVarName = "m_bCompleted";
+      CDotaSubquestBase::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDotaSubquestBase6_MNetworkVarNames_Value.m_pVarType = "bool";
+      __cxa_guard_release(&`guard variable for'CDotaSubquestBase::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDotaSubquestBase6_MNetworkVarNames_Value);
+    }
+    if ( `guard variable for'CDotaSubquestBase::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDotaSubquestBase7_MNetworkVarNames_Value == 0
+      && __cxa_guard_acquire(&`guard variable for'CDotaSubquestBase::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDotaSubquestBase7_MNetworkVarNames_Value) != 0 )
+    {
+      CDotaSubquestBase::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDotaSubquestBase7_MNetworkVarNames_Value.m_pVarName = "m_bShowProgressBar";
+      CDotaSubquestBase::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDotaSubquestBase7_MNetworkVarNames_Value.m_pVarType = "bool";
+      __cxa_guard_release(&`guard variable for'CDotaSubquestBase::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDotaSubquestBase7_MNetworkVarNames_Value);
+    }
+    if ( `guard variable for'CDotaSubquestBase::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDotaSubquestBase8_MNetworkVarNames_Value == 0
+      && __cxa_guard_acquire(&`guard variable for'CDotaSubquestBase::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDotaSubquestBase8_MNetworkVarNames_Value) != 0 )
+    {
+      CDotaSubquestBase::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDotaSubquestBase8_MNetworkVarNames_Value.m_pVarName = "m_nProgressBarHueShift";
+      CDotaSubquestBase::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDotaSubquestBase8_MNetworkVarNames_Value.m_pVarType = "int";
+      __cxa_guard_release(&`guard variable for'CDotaSubquestBase::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDotaSubquestBase8_MNetworkVarNames_Value);
+    }
+    if ( `guard variable for'CDotaSubquestBase::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDotaSubquestBase9_MNetworkVarNames_Value == 0
+      && __cxa_guard_acquire(&`guard variable for'CDotaSubquestBase::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDotaSubquestBase9_MNetworkVarNames_Value) != 0 )
+    {
+      CDotaSubquestBase::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDotaSubquestBase9_MNetworkVarNames_Value.m_pVarName = "m_pnTextReplaceValuesCDotaSubquestBase";
+      CDotaSubquestBase::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDotaSubquestBase9_MNetworkVarNames_Value.m_pVarType = "int";
+      __cxa_guard_release(&`guard variable for'CDotaSubquestBase::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDotaSubquestBase9_MNetworkVarNames_Value);
+    }
+    if ( `guard variable for'CDotaSubquestBase::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDotaSubquestBase10_MNetworkVarNames_Value == 0
+      && __cxa_guard_acquire(&`guard variable for'CDotaSubquestBase::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDotaSubquestBase10_MNetworkVarNames_Value) != 0 )
+    {
+      CDotaSubquestBase::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDotaSubquestBase10_MNetworkVarNames_Value.m_pVarName = "m_pszTextReplaceString";
+      CDotaSubquestBase::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDotaSubquestBase10_MNetworkVarNames_Value.m_pVarType = "char";
+      __cxa_guard_release(&`guard variable for'CDotaSubquestBase::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDotaSubquestBase10_MNetworkVarNames_Value);
+    }
+    if ( `guard variable for'CDotaSubquestBase::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDotaSubquestBase11_MNetworkVarNames_Value == 0
+      && __cxa_guard_acquire(&`guard variable for'CDotaSubquestBase::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDotaSubquestBase11_MNetworkVarNames_Value) != 0 )
+    {
+      CDotaSubquestBase::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDotaSubquestBase11_MNetworkVarNames_Value.m_pVarName = "m_nTextReplaceValueVersion";
+      CDotaSubquestBase::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDotaSubquestBase11_MNetworkVarNames_Value.m_pVarType = "int";
+      __cxa_guard_release(&`guard variable for'CDotaSubquestBase::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDotaSubquestBase11_MNetworkVarNames_Value);
+    }
+    v8 = *(*v7 + 104LL);
+    v9 = (*(*v7 + 40LL))(v7, 2);
+    CDotaSubquestBase::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CDotaSubquestBase[0].m_pType = v8(v7, v9, 256);
+    CDotaSubquestBase::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CDotaSubquestBase[1].m_pType = (*(*v7 + 40LL))(v7, 13);
+    CDotaSubquestBase::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CDotaSubquestBase[2].m_pType = (*(*v7 + 40LL))(v7, 13);
+    CDotaSubquestBase::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CDotaSubquestBase[3].m_pType = (*(*v7 + 40LL))(v7, 13);
+    CDotaSubquestBase::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CDotaSubquestBase[4].m_pType = (*(*v7 + 40LL))(v7, 7);
+    v10 = *(*v7 + 104LL);
+    v11 = (*(*v7 + 40LL))(v7, 7);
+    CDotaSubquestBase::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CDotaSubquestBase[5].m_pType = v10(v7, v11, 2);
+    v12 = *(*v7 + 104LL);
+    v13 = (*(*v7 + 40LL))(v7, 2);
+    CDotaSubquestBase::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CDotaSubquestBase[6].m_pType = v12(v7, v13, 64);
+    CDotaSubquestBase::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CDotaSubquestBase[7].m_pType = (*(*v7 + 40LL))(v7, 7);
+    v14 = *(*v7 + 104LL);
+    v15 = (*(*v7 + 40LL))(v7, 2);
+    CDotaSubquestBase::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CDotaSubquestBase[8].m_pType = v14(v7, v15, 256);
+    if ( `guard variable for'CDotaSubquestBase::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_NestedClassesOf_CDotaSubquestBase == 0
+      && __cxa_guard_acquire(&`guard variable for'CDotaSubquestBase::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_NestedClassesOf_CDotaSubquestBase) != 0 )
+    {
+      v16 = CDotaSubquestBase::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult;
+      if ( CDotaSubquestBase::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult == 0 )
+        v16 = CDotaSubquestBase::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+                pSchemaSystem,
+                pBinaryName,
+                pProjectName);
+      CDotaSubquestBase::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_NestedClassesOf_CDotaSubquestBase[0] = v16;
+      __cxa_guard_release(&`guard variable for'CDotaSubquestBase::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_NestedClassesOf_CDotaSubquestBase);
+    }
+    (*(CBaseEntity::s_pSchemaBindingForLocalModule->_vptr_ISchemaBinding + 5))(
+      CBaseEntity::s_pSchemaBindingForLocalModule,
+      pSchemaSystem,
+      pBinaryName,
+      pProjectName);
+    v17 = CBaseEntity::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+            pSchemaSystem,
+            pBinaryName,
+            pProjectName);
+    CDotaSubquestBase::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CDotaSubquestBase.m_pOuterTypeScope = v7;
+    CDotaSubquestBase::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassBases_CDotaSubquestBase[0].m_pClass = v17;
+    CDotaSubquestBase::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult = &CDotaSubquestBase::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CDotaSubquestBase;
+    return &CDotaSubquestBase::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CDotaSubquestBase;
+  }
+  return result;
+}
+
+
+// CDotaSubquestBase::Schema_VerifyBindingIsRegistered  (line 273, @0x000000000266a940, libserver.so)
+void __cdecl CDotaSubquestBase::Schema_VerifyBindingIsRegistered()
+{
+  ;
+}
+
+
+// CDotaSubquestBase::SetupEntClassInputs  (line 287, @0x000000000266a950, libserver.so)
+void __fastcall CDotaSubquestBase::SetupEntClassInputs(CEntityClass *pComponentInfo)
+{
+  ;
+}
+
+
+// CDotaSubquestBase::SetupEntClassComponentOverrides  (line 293, @0x000000000266a960, libserver.so)
+void __fastcall CDotaSubquestBase::SetupEntClassComponentOverrides(CEntityClass *pEntityClass)
+{
+  pEntityClass->m_pComponentOverrides = 0;
+}
+
+
+// GetScriptDesc<CDotaSubquestBase>  (line 301, @0x00000000026826e0, libserver.so)  // inlines: AddParameterType, CUtlMemory, CUtlVector, CUtlVectorBase, Finalize, ScriptClassDesc_t, ScriptDeduceFunctionSignature<CDotaSubquestBase*, CDotaSubquestBase, void, char const*>, ScriptDeduceFunctionSignature<CDotaSubquestBase*, CDotaSubquestBase, void, int, int>, ScriptDeduceFunctionSignature<CDotaSubquestBase*, CDotaSubquestBase, void>, SetDescription, SetFunctionName, SetPackedParameterNames, SetReturnType, SetScriptName, operator[]
+// calls: operator new, GetScriptDesc<CBaseEntity>, CUtlVectorBase<ScriptFunctionBinding_t, CUtlMemory<ScriptFunctionBinding_t, int> >::AddToTail
+// callers: CDotaSubquestBase::GetScriptDesc, CDotaSubquestBase::InitScriptDesc, CDotaSubquestBase::GetClassScriptDesc, CDotaSubquestBase::GetEntityClassInternal, CDotaSubquestBuyItems::GetEntityClassInternal, CDotaSubquestEntityDeath::GetEntityClassInternal, CDotaSubquestTutorialEvent::GetEntityClassInternal, CDotaSubquestPlayerStat::GetEntityClassInternal, CDotaSubquestAbilityCastCount::GetEntityClassInternal
+// strings: "A subquest", "CDotaSubquestBase", "Mark this subquest complete", "CompleteSubquest", "Set a subquest value", "SetTextReplaceValue" (8 total)
+// globals: g_pCDotaSubquestBase_ScriptDesc, CMemberScriptBinding0<CDotaSubquestBase *,void (CDotaSubquestBase::*)(void),void>::Call(void *,void *,CVariantBase<CVariantDefaultAllocator> *,int,CVariantBase<, CDotaSubquestBase::CompleteSubquest(void), CMemberScriptBinding2<CDotaSubquestBase *,void (CDotaSubquestBase::*)(int,int),void,int,int>::Call(void *,void *,CVariantBase<CVariantDefaultAllocator> *,int,CV, CDotaSubquestBase::SetTextReplaceValue(int,int), s_CDotaSubquestBase_SetTextReplaceValue_packed_arg_names, CMemberScriptBinding1<CDotaSubquestBase *,void (CDotaSubquestBase::*)(char const*),void,char const*>::Call(void *,void *,CVariantBase<CVariantDefaultAllocator> , CDotaSubquestBase::SetTextReplaceString(char const*) (9 total)
+ScriptClassDesc_t *__fastcall GetScriptDesc<CDotaSubquestBase>(CDotaSubquestBase *pScriptDescObjectInstance)
+{
+  ScriptClassDesc_t *result; // rax
+  ScriptClassDesc_t *v2; // r12
+  ScriptClassDesc_t *Script; // rax
+  IScriptInstanceHelper *pHelper; // rcx
+  __int64 v5; // rsi
+  int v6; // edx
+  int v7; // edx
+  char v8; // cl
+  char v9; // di
+  __int64 v10; // rsi
+  char v11; // dl
+  char v12; // al
+  int v13; // edx
+  char v14; // cl
+  char v15; // di
+  __int64 v16; // rcx
+  char v17; // dl
+  __int64 v18; // rax
+  int v19; // edx
+  char v20; // al
+
+  result = g_pCDotaSubquestBase_ScriptDesc;
+  if ( g_pCDotaSubquestBase_ScriptDesc == 0 )
+  {
+    v2 = operator new(0x50u);
+    v2->m_pBaseDesc = 0;
+    v2->m_FunctionBindings.m_Size = 0;
+    v2->m_FunctionBindings.m_Memory.m_pMemory = 0;
+    v2->m_FunctionBindings.m_Memory.m_nAllocationCount = 0;
+    v2->m_FunctionBindings.m_Memory.m_nGrowSize = 0;
+    v2->m_pfnConstruct = 0;
+    v2->m_pfnDestruct = 0;
+    v2->pHelper = 0;
+    g_pCDotaSubquestBase_ScriptDesc = v2;
+    v2->m_pszDescription = "A subquest";
+    v2->m_pszScriptName = "CDotaSubquestBase";
+    v2->m_pszClassname = "CDotaSubquestBase";
+    Script = GetScriptDesc<CBaseEntity>(0);
+    v2->m_pBaseDesc = Script;
+    if ( Script != 0 )
+    {
+      while ( 1 )
+      {
+        pHelper = Script->pHelper;
+        if ( pHelper != 0 )
+          break;
+        Script = Script->m_pBaseDesc;
+        if ( Script == 0 )
+          goto LABEL_7;
+      }
+      v2->pHelper = pHelper;
+    }
+LABEL_7:
+    v5 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(&v2->m_FunctionBindings)];
+    v6 = *(v5 + 26);
+    *(v5 + 24) = 0;
+    *(v5 + 16) = "Mark this subquest complete";
+    *v5 = "CompleteSubquest";
+    *(v5 + 8) = "CompleteSubquest";
+    v7 = v6 - 1;
+    *(v5 + 25) = 0;
+    if ( v7 >= 0 && *(v5 + v7 + 27) == 32 )
+    {
+      v8 = 1;
+      do
+      {
+        --v7;
+        v9 = v8;
+        if ( v7 == -1 )
+        {
+          *(v5 + 25) = v8;
+          goto LABEL_13;
+        }
+        ++v8;
+      }
+      while ( *(v5 + v7 + 27) == 32 );
+      *(v5 + 25) = v9;
+    }
+LABEL_13:
+    *(v5 + 64) = 1;
+    *(v5 + 48) = CMemberScriptBinding0<CDotaSubquestBase *,void (CDotaSubquestBase::*)(void),void>::Call;
+    *(v5 + 56) = CDotaSubquestBase::CompleteSubquest;
+    v10 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(&v2->m_FunctionBindings)];
+    v11 = *(v10 + 26);
+    *(v10 + 24) = 0;
+    *(v10 + 16) = "Set a subquest value";
+    *v10 = "SetTextReplaceValue";
+    *(v10 + 8) = "SetTextReplaceValue";
+    *(v10 + v11 + 27) = 5;
+    v12 = v11 + 1;
+    v11 += 2;
+    *(v10 + v12 + 27) = 5;
+    *(v10 + 26) = v11;
+    v13 = v11 - 1;
+    *(v10 + 25) = 0;
+    if ( v13 >= 0 && *(v10 + v13 + 27) == 32 )
+    {
+      v14 = 1;
+      do
+      {
+        --v13;
+        v15 = v14;
+        if ( v13 == -1 )
+        {
+          *(v10 + 25) = v14;
+          goto LABEL_19;
+        }
+        ++v14;
+      }
+      while ( *(v10 + v13 + 27) == 32 );
+      *(v10 + 25) = v15;
+    }
+LABEL_19:
+    *(v10 + 64) = 1;
+    *(v10 + 48) = CMemberScriptBinding2<CDotaSubquestBase *,void (CDotaSubquestBase::*)(int,int),void,int,int>::Call;
+    *(v10 + 56) = CDotaSubquestBase::SetTextReplaceValue;
+    *(v10 + 40) = s_CDotaSubquestBase_SetTextReplaceValue_packed_arg_names;
+    v16 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(&v2->m_FunctionBindings)];
+    v17 = *(v16 + 26);
+    *(v16 + 24) = 0;
+    *(v16 + 16) = "Set the text replace string for this subquest";
+    *v16 = "SetTextReplaceString";
+    *(v16 + 8) = "SetTextReplaceString";
+    v18 = v17++;
+    *(v16 + v18 + 27) = 30;
+    *(v16 + 26) = v17;
+    v19 = v17 - 1;
+    *(v16 + 25) = 0;
+    if ( v19 >= 0 && *(v16 + v19 + 27) == 32 )
+    {
+      v20 = 0;
+      do
+      {
+        --v19;
+        ++v20;
+      }
+      while ( v19 != -1 && *(v16 + v19 + 27) == 32 );
+      *(v16 + 25) = v20;
+    }
+    *(v16 + 64) = 1;
+    *(v16 + 48) = CMemberScriptBinding1<CDotaSubquestBase *,void (CDotaSubquestBase::*)(char const*),void,char const*>::Call;
+    *(v16 + 56) = CDotaSubquestBase::SetTextReplaceString;
+    *(v16 + 40) = s_CDotaSubquestBase_SetTextReplaceString_packed_arg_names;
+    return v2;
+  }
+  return result;
+}
+
+
+// CDotaSubquestBase::GetScriptDesc  (line 301, @0x00000000026829c0, libserver.so)
+// calls: GetScriptDesc<CDotaSubquestBase>
+ScriptClassDesc_t *__fastcall CDotaSubquestBase::GetScriptDesc(CDotaSubquestBase *const this)
+{
+  return GetScriptDesc<CDotaSubquestBase>(this);
+}
+
+
+// CDotaSubquestBase::InitScriptDesc  (line 301, @0x00000000026829d0, libserver.so)
+// calls: GetScriptDesc<CDotaSubquestBase>
+ScriptClassDesc_t *__cdecl CDotaSubquestBase::InitScriptDesc()
+{
+  return GetScriptDesc<CDotaSubquestBase>(0);
+}
+
+
+// CDotaSubquestBase::GetClassScriptDesc  (line 301, @0x00000000026829e0, libserver.so)
+// calls: GetScriptDesc<CDotaSubquestBase>
+ScriptClassDesc_t *__cdecl CDotaSubquestBase::GetClassScriptDesc()
+{
+  return GetScriptDesc<CDotaSubquestBase>(0);
+}
+
+
+// CDotaQuest::CEntityInstanceEntityClass::Schema_CompileTimeVerificationFunction  (line 311, @0x000000000266a970, libserver.so)
+void __fastcall CDotaQuest::CEntityInstanceEntityClass::Schema_CompileTimeVerificationFunction(
+        CDotaQuest::CEntityInstanceEntityClass *const this)
+{
+  ;
+}
+
+
+// CDotaQuest::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE  (line 314, @0x00000000026548d0, libserver.so)  // inlines: Call, Get, SetTypeScope
+// calls: CBaseEntity::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE
+// callers: CSchemaNonConstructibleClassBinding<CDotaQuest::CEntityInstanceEntityClass>::Register, CDotaQuest::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE, CDotaQuest::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE
+// globals: CDotaQuest::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,
+CSchemaClassInfo *__fastcall CDotaQuest::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        const char *pProjectName)
+{
+  ISchemaSystemTypeScope *v6; // r14
+  CSchemaClassInfo *v7; // rax
+
+  v6 = (*(*pSchemaSystem + 112LL))(pSchemaSystem, 1, pBinaryName);
+  (*(CBaseEntity::CEntityInstanceEntityClass::s_pSchemaBindingForLocalModule->_vptr_ISchemaBinding + 5))(
+    CBaseEntity::CEntityInstanceEntityClass::s_pSchemaBindingForLocalModule,
+    pSchemaSystem,
+    pBinaryName,
+    pProjectName);
+  v7 = CBaseEntity::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+         pSchemaSystem,
+         pBinaryName,
+         pProjectName);
+  CDotaQuest::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CDotaQuest_CEntityInstanceEntityClass.m_pOuterTypeScope = v6;
+  CDotaQuest::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassBases_CDotaQuest_CEntityInstanceEntityClass[0].m_pClass = v7;
+  CDotaQuest::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult = &CDotaQuest::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CDotaQuest_CEntityInstanceEntityClass;
+  return &CDotaQuest::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CDotaQuest_CEntityInstanceEntityClass;
+}
+
+
+// CDotaQuest::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE  (line 314, @0x000000000266a980, libserver.so)
+// calls: CDotaQuest::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE
+// globals: CDotaQuest::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,
+CSchemaClassInfo *__fastcall CDotaQuest::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        const char *pProjectName)
+{
+  CSchemaClassInfo *result; // rax
+
+  result = CDotaQuest::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult;
+  if ( CDotaQuest::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult == 0 )
+    return CDotaQuest::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+             pSchemaSystem,
+             pBinaryName,
+             pProjectName);
+  return result;
+}
+
+
+// CDotaQuest::CEntityInstanceEntityClass::Schema_VerifyBindingIsRegistered  (line 331, @0x000000000266a9a0, libserver.so)
+void __cdecl CDotaQuest::CEntityInstanceEntityClass::Schema_VerifyBindingIsRegistered()
+{
+  ;
+}
+
+
+// CDotaQuest::Schema_CompileTimeVerificationFunction  (line 339, @0x000000000266a9b0, libserver.so)
+void __fastcall CDotaQuest::Schema_CompileTimeVerificationFunction(CDotaQuest *const this)
+{
+  ;
+}
+
+
+// CDotaQuest::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE  (line 356, @0x000000000266a9c0, libserver.so)  // inlines: Call, Get, NetworkVarDecl_t, RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE, SchemaBinding_SchemaTypeOfMemberVarByAddr<CDotaQuest, CNetworkArrayBase<CHandle<CDotaSubquestBase>, 8, CDotaQuest::NetworkVar_m_hSubquests> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<CDotaQuest, CNetworkArrayBase<int, 4, CDotaQuest::NetworkVar_m_pnTextReplaceValuesCDotaQuest> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<CDotaQuest, CNetworkStringBase<256, CDotaQuest::NetworkVar_m_pszGameEndText> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<CDotaQuest, CNetworkStringBase<256, CDotaQuest::NetworkVar_m_pszQuestText> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<CDotaQuest, CNetworkStringBase<256, CDotaQuest::NetworkVar_m_pszQuestTitle> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<CDotaQuest, CNetworkStringBase<64, CDotaQuest::NetworkVar_m_pszTextReplaceString> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<CDotaQuest, CNetworkVarBase<bool, CDotaQuest::NetworkVar_m_bCompleted> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<CDotaQuest, CNetworkVarBase<bool, CDotaQuest::NetworkVar_m_bHidden> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<CDotaQuest, CNetworkVarBase<bool, CDotaQuest::NetworkVar_m_bLoseIfCompleted> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<CDotaQuest, CNetworkVarBase<bool, CDotaQuest::NetworkVar_m_bWinIfCompleted> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<CDotaQuest, CNetworkVarBase<int, CDotaQuest::NetworkVar_m_nQuestType> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<CDotaQuest, CNetworkVarBase<int, CDotaQuest::NetworkVar_m_nTextReplaceValueVersion> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<CDotaQuest, char [256]>, SchemaBinding_SchemaTypeOfMemberVarByAddr<CDotaQuest, int>, SetTypeScope
+// calls: __cxa_guard_acquire, __cxa_guard_release, CBaseEntity::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE, CDotaQuest::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE, __cxa_guard_abort, _Unwind_Resume
+// callers: CSchemaNonConstructibleClassBinding<CDotaQuest>::Register
+// strings: "CDotaSubquestBase", "CHandle", "m_nTextReplaceValueVersion", "m_pnTextReplaceValuesCDotaQuest", "m_pszGameEndText", "char" (16 total)
+// globals: CDotaQuest::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitialized, `guard variable for'CDotaQuest::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char con, CSchemaManipulator<CHandle<CDotaSubquestBase>>::StaticAccessor(void)::m, CAtomicManipulator<CHandle<CDotaSubquestBase>>::Get(void)::val, CDotaQuest::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,, CDotaQuest::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_Nes, CDotaQuest::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_Cla
+CSchemaClassInfo *__fastcall CDotaQuest::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        const char *pProjectName)
+{
+  CSchemaClassInfo *result; // rax
+  ISchemaSystemTypeScope *v7; // rbx
+  __int64 (__fastcall *v8)(ISchemaSystemTypeScope *, __int64, __int64); // r15
+  __int64 v9; // rax
+  __int64 (__fastcall *v10)(ISchemaSystemTypeScope *, __int64, __int64); // r15
+  __int64 v11; // rax
+  __int64 (__fastcall *v12)(ISchemaSystemTypeScope *, __int64, __int64); // r15
+  __int64 v13; // rax
+  __int64 v14; // rax
+  __int64 (__fastcall *v15)(ISchemaSystemTypeScope *, __int64, __int64); // r15
+  __int64 v16; // rax
+  __int64 (__fastcall *v17)(ISchemaSystemTypeScope *, __int64, __int64); // r15
+  __int64 v18; // rax
+  __int64 (__fastcall *v19)(ISchemaSystemTypeScope *, __int64, __int64); // r15
+  __int64 v20; // rax
+  __int64 (__fastcall *v21)(ISchemaSystemTypeScope *, __int64, __int64); // r15
+  __int64 v22; // rax
+  CSchemaClassInfo *v23; // rax
+  CSchemaClassInfo *v24; // rax
+  __int64 (__fastcall *v25)(ISchemaSystemTypeScope *, const char *, __int64, __int64 (__fastcall ***)(), __int64 (__fastcall ***)(), __int64); // [rsp-40h] [rbp-40h]
+
+  result = CDotaQuest::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult;
+  if ( CDotaQuest::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult == 0 )
+  {
+    v7 = (*(*pSchemaSystem + 112LL))(pSchemaSystem, 1, pBinaryName);
+    if ( `guard variable for'CDotaQuest::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDotaQuest4_MNetworkVarNames_Value == 0
+      && __cxa_guard_acquire(&`guard variable for'CDotaQuest::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDotaQuest4_MNetworkVarNames_Value) != 0 )
+    {
+      CDotaQuest::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDotaQuest4_MNetworkVarNames_Value.m_pVarName = "m_pszQuestTitle";
+      CDotaQuest::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDotaQuest4_MNetworkVarNames_Value.m_pVarType = "char";
+      __cxa_guard_release(&`guard variable for'CDotaQuest::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDotaQuest4_MNetworkVarNames_Value);
+    }
+    if ( `guard variable for'CDotaQuest::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDotaQuest5_MNetworkVarNames_Value == 0
+      && __cxa_guard_acquire(&`guard variable for'CDotaQuest::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDotaQuest5_MNetworkVarNames_Value) != 0 )
+    {
+      CDotaQuest::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDotaQuest5_MNetworkVarNames_Value.m_pVarName = "m_pszQuestText";
+      CDotaQuest::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDotaQuest5_MNetworkVarNames_Value.m_pVarType = "char";
+      __cxa_guard_release(&`guard variable for'CDotaQuest::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDotaQuest5_MNetworkVarNames_Value);
+    }
+    if ( `guard variable for'CDotaQuest::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDotaQuest6_MNetworkVarNames_Value == 0
+      && __cxa_guard_acquire(&`guard variable for'CDotaQuest::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDotaQuest6_MNetworkVarNames_Value) != 0 )
+    {
+      CDotaQuest::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDotaQuest6_MNetworkVarNames_Value.m_pVarName = "m_nQuestType";
+      CDotaQuest::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDotaQuest6_MNetworkVarNames_Value.m_pVarType = "int";
+      __cxa_guard_release(&`guard variable for'CDotaQuest::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDotaQuest6_MNetworkVarNames_Value);
+    }
+    if ( `guard variable for'CDotaQuest::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDotaQuest7_MNetworkVarNames_Value == 0
+      && __cxa_guard_acquire(&`guard variable for'CDotaQuest::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDotaQuest7_MNetworkVarNames_Value) != 0 )
+    {
+      CDotaQuest::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDotaQuest7_MNetworkVarNames_Value.m_pVarName = "m_hSubquests";
+      CDotaQuest::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDotaQuest7_MNetworkVarNames_Value.m_pVarType = "CHandle< CDotaSubquestBase >";
+      __cxa_guard_release(&`guard variable for'CDotaQuest::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDotaQuest7_MNetworkVarNames_Value);
+    }
+    if ( `guard variable for'CDotaQuest::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDotaQuest8_MNetworkVarNames_Value == 0
+      && __cxa_guard_acquire(&`guard variable for'CDotaQuest::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDotaQuest8_MNetworkVarNames_Value) != 0 )
+    {
+      CDotaQuest::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDotaQuest8_MNetworkVarNames_Value.m_pVarName = "m_bHidden";
+      CDotaQuest::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDotaQuest8_MNetworkVarNames_Value.m_pVarType = "bool";
+      __cxa_guard_release(&`guard variable for'CDotaQuest::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDotaQuest8_MNetworkVarNames_Value);
+    }
+    if ( `guard variable for'CDotaQuest::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDotaQuest9_MNetworkVarNames_Value == 0
+      && __cxa_guard_acquire(&`guard variable for'CDotaQuest::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDotaQuest9_MNetworkVarNames_Value) != 0 )
+    {
+      CDotaQuest::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDotaQuest9_MNetworkVarNames_Value.m_pVarName = "m_bCompleted";
+      CDotaQuest::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDotaQuest9_MNetworkVarNames_Value.m_pVarType = "bool";
+      __cxa_guard_release(&`guard variable for'CDotaQuest::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDotaQuest9_MNetworkVarNames_Value);
+    }
+    if ( `guard variable for'CDotaQuest::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDotaQuest10_MNetworkVarNames_Value == 0
+      && __cxa_guard_acquire(&`guard variable for'CDotaQuest::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDotaQuest10_MNetworkVarNames_Value) != 0 )
+    {
+      CDotaQuest::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDotaQuest10_MNetworkVarNames_Value.m_pVarName = "m_bWinIfCompleted";
+      CDotaQuest::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDotaQuest10_MNetworkVarNames_Value.m_pVarType = "bool";
+      __cxa_guard_release(&`guard variable for'CDotaQuest::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDotaQuest10_MNetworkVarNames_Value);
+    }
+    if ( `guard variable for'CDotaQuest::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDotaQuest11_MNetworkVarNames_Value == 0
+      && __cxa_guard_acquire(&`guard variable for'CDotaQuest::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDotaQuest11_MNetworkVarNames_Value) != 0 )
+    {
+      CDotaQuest::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDotaQuest11_MNetworkVarNames_Value.m_pVarName = "m_bLoseIfCompleted";
+      CDotaQuest::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDotaQuest11_MNetworkVarNames_Value.m_pVarType = "bool";
+      __cxa_guard_release(&`guard variable for'CDotaQuest::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDotaQuest11_MNetworkVarNames_Value);
+    }
+    if ( `guard variable for'CDotaQuest::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDotaQuest12_MNetworkVarNames_Value == 0
+      && __cxa_guard_acquire(&`guard variable for'CDotaQuest::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDotaQuest12_MNetworkVarNames_Value) != 0 )
+    {
+      CDotaQuest::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDotaQuest12_MNetworkVarNames_Value.m_pVarName = "m_pszGameEndText";
+      CDotaQuest::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDotaQuest12_MNetworkVarNames_Value.m_pVarType = "char";
+      __cxa_guard_release(&`guard variable for'CDotaQuest::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDotaQuest12_MNetworkVarNames_Value);
+    }
+    if ( `guard variable for'CDotaQuest::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDotaQuest13_MNetworkVarNames_Value == 0
+      && __cxa_guard_acquire(&`guard variable for'CDotaQuest::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDotaQuest13_MNetworkVarNames_Value) != 0 )
+    {
+      CDotaQuest::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDotaQuest13_MNetworkVarNames_Value.m_pVarName = "m_pnTextReplaceValuesCDotaQuest";
+      CDotaQuest::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDotaQuest13_MNetworkVarNames_Value.m_pVarType = "int";
+      __cxa_guard_release(&`guard variable for'CDotaQuest::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDotaQuest13_MNetworkVarNames_Value);
+    }
+    if ( `guard variable for'CDotaQuest::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDotaQuest14_MNetworkVarNames_Value == 0
+      && __cxa_guard_acquire(&`guard variable for'CDotaQuest::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDotaQuest14_MNetworkVarNames_Value) != 0 )
+    {
+      CDotaQuest::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDotaQuest14_MNetworkVarNames_Value.m_pVarName = "m_pszTextReplaceString";
+      CDotaQuest::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDotaQuest14_MNetworkVarNames_Value.m_pVarType = "char";
+      __cxa_guard_release(&`guard variable for'CDotaQuest::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDotaQuest14_MNetworkVarNames_Value);
+    }
+    if ( `guard variable for'CDotaQuest::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDotaQuest15_MNetworkVarNames_Value == 0
+      && __cxa_guard_acquire(&`guard variable for'CDotaQuest::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDotaQuest15_MNetworkVarNames_Value) != 0 )
+    {
+      CDotaQuest::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDotaQuest15_MNetworkVarNames_Value.m_pVarName = "m_nTextReplaceValueVersion";
+      CDotaQuest::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDotaQuest15_MNetworkVarNames_Value.m_pVarType = "int";
+      __cxa_guard_release(&`guard variable for'CDotaQuest::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDotaQuest15_MNetworkVarNames_Value);
+    }
+    v8 = *(*v7 + 104LL);
+    v9 = (*(*v7 + 40LL))(v7, 2);
+    CDotaQuest::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CDotaQuest[0].m_pType = v8(v7, v9, 256);
+    v10 = *(*v7 + 104LL);
+    v11 = (*(*v7 + 40LL))(v7, 2);
+    CDotaQuest::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CDotaQuest[1].m_pType = v10(v7, v11, 256);
+    CDotaQuest::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CDotaQuest[2].m_pType = (*(*v7 + 40LL))(v7, 7);
+    v12 = *(*v7 + 104LL);
+    v25 = *(*v7 + 64LL);
+    v13 = (*(*v7 + 88LL))(v7, "CDotaSubquestBase");
+    v14 = v25(
+            v7,
+            "CHandle",
+            5003,
+            CAtomicManipulator<CHandle<CDotaSubquestBase>>::Get(void)::val,
+            CSchemaManipulator<CHandle<CDotaSubquestBase>>::StaticAccessor(void)::m,
+            v13);
+    CDotaQuest::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CDotaQuest[3].m_pType = v12(v7, v14, 8);
+    CDotaQuest::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CDotaQuest[4].m_pType = (*(*v7 + 40LL))(v7, 13);
+    CDotaQuest::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CDotaQuest[5].m_pType = (*(*v7 + 40LL))(v7, 13);
+    CDotaQuest::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CDotaQuest[6].m_pType = (*(*v7 + 40LL))(v7, 13);
+    CDotaQuest::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CDotaQuest[7].m_pType = (*(*v7 + 40LL))(v7, 13);
+    v15 = *(*v7 + 104LL);
+    v16 = (*(*v7 + 40LL))(v7, 2);
+    CDotaQuest::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CDotaQuest[8].m_pType = v15(v7, v16, 256);
+    v17 = *(*v7 + 104LL);
+    v18 = (*(*v7 + 40LL))(v7, 7);
+    CDotaQuest::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CDotaQuest[9].m_pType = v17(v7, v18, 4);
+    v19 = *(*v7 + 104LL);
+    v20 = (*(*v7 + 40LL))(v7, 2);
+    CDotaQuest::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CDotaQuest[10].m_pType = v19(v7, v20, 64);
+    CDotaQuest::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CDotaQuest[11].m_pType = (*(*v7 + 40LL))(v7, 7);
+    CDotaQuest::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CDotaQuest[12].m_pType = (*(*v7 + 40LL))(v7, 7);
+    v21 = *(*v7 + 104LL);
+    v22 = (*(*v7 + 40LL))(v7, 2);
+    CDotaQuest::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CDotaQuest[13].m_pType = v21(v7, v22, 256);
+    if ( `guard variable for'CDotaQuest::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_NestedClassesOf_CDotaQuest == 0
+      && __cxa_guard_acquire(&`guard variable for'CDotaQuest::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_NestedClassesOf_CDotaQuest) != 0 )
+    {
+      v23 = CDotaQuest::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult;
+      if ( CDotaQuest::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult == 0 )
+        v23 = CDotaQuest::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+                pSchemaSystem,
+                pBinaryName,
+                pProjectName);
+      CDotaQuest::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_NestedClassesOf_CDotaQuest[0] = v23;
+      __cxa_guard_release(&`guard variable for'CDotaQuest::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_NestedClassesOf_CDotaQuest);
+    }
+    (*(CBaseEntity::s_pSchemaBindingForLocalModule->_vptr_ISchemaBinding + 5))(
+      CBaseEntity::s_pSchemaBindingForLocalModule,
+      pSchemaSystem,
+      pBinaryName,
+      pProjectName);
+    v24 = CBaseEntity::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+            pSchemaSystem,
+            pBinaryName,
+            pProjectName);
+    CDotaQuest::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CDotaQuest.m_pOuterTypeScope = v7;
+    CDotaQuest::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassBases_CDotaQuest[0].m_pClass = v24;
+    CDotaQuest::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult = &CDotaQuest::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CDotaQuest;
+    return &CDotaQuest::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CDotaQuest;
+  }
+  return result;
+}
+
+
+// CDotaQuest::Schema_VerifyBindingIsRegistered  (line 550, @0x000000000266b090, libserver.so)
+void __cdecl CDotaQuest::Schema_VerifyBindingIsRegistered()
+{
+  ;
+}
+
+
+// CDotaQuest::SetupEntClassInputs  (line 564, @0x000000000266b0a0, libserver.so)
+void __fastcall CDotaQuest::SetupEntClassInputs(CEntityClass *pComponentInfo)
+{
+  ;
+}
+
+
+// CDotaQuest::SetupEntClassComponentOverrides  (line 570, @0x000000000266b0b0, libserver.so)
+void __fastcall CDotaQuest::SetupEntClassComponentOverrides(CEntityClass *pEntityClass)
+{
+  pEntityClass->m_pComponentOverrides = 0;
+}
+
+
+// GetScriptDesc<CDotaQuest>  (line 582, @0x00000000026829f0, libserver.so)  // inlines: AddParameterType, CUtlMemory, CUtlVector, CUtlVectorBase, Finalize, ScriptClassDesc_t, ScriptDeduceFunctionSignature<CDotaQuest*, CDotaQuest, HSCRIPT__*, char const*>, ScriptDeduceFunctionSignature<CDotaQuest*, CDotaQuest, HSCRIPT__*, int>, ScriptDeduceFunctionSignature<CDotaQuest*, CDotaQuest, void, HSCRIPT__*>, ScriptDeduceFunctionSignature<CDotaQuest*, CDotaQuest, void, char const*>, ScriptDeduceFunctionSignature<CDotaQuest*, CDotaQuest, void, int, int>, ScriptDeduceFunctionSignature<CDotaQuest*, CDotaQuest, void>, SetDescription, SetFunctionName, SetPackedParameterNames, SetReturnType, SetScriptName, operator[]
+// calls: operator new, GetScriptDesc<CBaseEntity>, CUtlVectorBase<ScriptFunctionBinding_t, CUtlMemory<ScriptFunctionBinding_t, int> >::AddToTail
+// callers: CDotaQuest::GetScriptDesc, CDotaQuest::InitScriptDesc, CDotaQuest::GetClassScriptDesc, CDotaQuest::GetEntityClassInternal
+// strings: "A quest", "CDotaQuest", "Mark this quest complete", "CompleteQuest", "Add a subquest to this quest", "Script_AddSubquest" (16 total)
+// globals: g_pCDotaQuest_ScriptDesc, CMemberScriptBinding0<CDotaQuest *,void (CDotaQuest::*)(void),void>::Call(void *,void *,CVariantBase<CVariantDefaultAllocator> *,int,CVariantBase<CVariantDefaul, CDotaQuest::CompleteQuest(void), CMemberScriptBinding1<CDotaQuest *,void (CDotaQuest::*)(HSCRIPT__ *),void,HSCRIPT__ *>::Call(void *,void *,CVariantBase<CVariantDefaultAllocator> *,int,CVariant, CDotaQuest::Script_AddSubquest(HSCRIPT__ *), s_CDotaQuest_Script_AddSubquest_packed_arg_names, CDotaQuest::Script_RemoveSubquest(HSCRIPT__ *), s_CDotaQuest_Script_RemoveSubquest_packed_arg_names (20 total)
+ScriptClassDesc_t *__fastcall GetScriptDesc<CDotaQuest>(CDotaQuest *pScriptDescObjectInstance)
+{
+  ScriptClassDesc_t *result; // rax
+  ScriptClassDesc_t *v2; // r12
+  ScriptClassDesc_t *Script; // rdx
+  IScriptInstanceHelper *pHelper; // rax
+  __int64 v5; // rcx
+  int v6; // edx
+  int v7; // edx
+  char v8; // al
+  char v9; // di
+  __int64 v10; // rcx
+  char v11; // dl
+  __int64 v12; // rax
+  int v13; // edx
+  char v14; // al
+  char v15; // di
+  __int64 v16; // rcx
+  char v17; // dl
+  __int64 v18; // rax
+  int v19; // edx
+  char v20; // al
+  char v21; // di
+  __int64 v22; // rcx
+  char v23; // dl
+  __int64 v24; // rax
+  int v25; // edx
+  char v26; // al
+  char v27; // di
+  __int64 v28; // rcx
+  char v29; // dl
+  __int64 v30; // rax
+  int v31; // edx
+  char v32; // al
+  char v33; // di
+  __int64 v34; // rax
+  char v35; // dl
+  char v36; // cl
+  int v37; // edx
+  char v38; // cl
+  char v39; // di
+  __int64 v40; // rax
+  char v41; // dl
+  __int64 v42; // rcx
+  int v43; // edx
+  char v44; // cl
+  char v45; // di
+
+  result = g_pCDotaQuest_ScriptDesc;
+  if ( g_pCDotaQuest_ScriptDesc == 0 )
+  {
+    v2 = operator new(0x50u);
+    v2->m_pBaseDesc = 0;
+    v2->m_FunctionBindings.m_Size = 0;
+    v2->m_FunctionBindings.m_Memory.m_pMemory = 0;
+    v2->m_FunctionBindings.m_Memory.m_nAllocationCount = 0;
+    v2->m_FunctionBindings.m_Memory.m_nGrowSize = 0;
+    v2->m_pfnConstruct = 0;
+    v2->m_pfnDestruct = 0;
+    v2->pHelper = 0;
+    g_pCDotaQuest_ScriptDesc = v2;
+    v2->m_pszDescription = "A quest";
+    v2->m_pszScriptName = "CDotaQuest";
+    v2->m_pszClassname = "CDotaQuest";
+    Script = GetScriptDesc<CBaseEntity>(0);
+    v2->m_pBaseDesc = Script;
+    if ( Script != 0 )
+    {
+      while ( 1 )
+      {
+        pHelper = Script->pHelper;
+        if ( pHelper != 0 )
+          break;
+        Script = Script->m_pBaseDesc;
+        if ( Script == 0 )
+          goto LABEL_7;
+      }
+      v2->pHelper = pHelper;
+    }
+LABEL_7:
+    v5 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(&v2->m_FunctionBindings)];
+    v6 = *(v5 + 26);
+    *(v5 + 24) = 0;
+    *(v5 + 16) = "Mark this quest complete";
+    *v5 = "CompleteQuest";
+    *(v5 + 8) = "CompleteQuest";
+    v7 = v6 - 1;
+    *(v5 + 25) = 0;
+    if ( v7 >= 0 && *(v5 + v7 + 27) == 32 )
+    {
+      v8 = 1;
+      do
+      {
+        --v7;
+        v9 = v8;
+        if ( v7 == -1 )
+        {
+          *(v5 + 25) = v8;
+          goto LABEL_13;
+        }
+        ++v8;
+      }
+      while ( *(v5 + v7 + 27) == 32 );
+      *(v5 + 25) = v9;
+    }
+LABEL_13:
+    *(v5 + 64) = 1;
+    *(v5 + 48) = CMemberScriptBinding0<CDotaQuest *,void (CDotaQuest::*)(void),void>::Call;
+    *(v5 + 56) = CDotaQuest::CompleteQuest;
+    v10 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(&v2->m_FunctionBindings)];
+    v11 = *(v10 + 26);
+    *(v10 + 24) = 0;
+    *(v10 + 16) = "Add a subquest to this quest";
+    *v10 = "AddSubquest";
+    *(v10 + 8) = "Script_AddSubquest";
+    v12 = v11++;
+    *(v10 + v12 + 27) = 31;
+    *(v10 + 26) = v11;
+    v13 = v11 - 1;
+    *(v10 + 25) = 0;
+    if ( v13 >= 0 && *(v10 + v13 + 27) == 32 )
+    {
+      v14 = 1;
+      do
+      {
+        --v13;
+        v15 = v14;
+        if ( v13 == -1 )
+        {
+          *(v10 + 25) = v14;
+          goto LABEL_19;
+        }
+        ++v14;
+      }
+      while ( *(v10 + v13 + 27) == 32 );
+      *(v10 + 25) = v15;
+    }
+LABEL_19:
+    *(v10 + 64) = 1;
+    *(v10 + 48) = CMemberScriptBinding1<CDotaQuest *,void (CDotaQuest::*)(HSCRIPT__ *),void,HSCRIPT__ *>::Call;
+    *(v10 + 56) = CDotaQuest::Script_AddSubquest;
+    *(v10 + 40) = s_CDotaQuest_Script_AddSubquest_packed_arg_names;
+    v16 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(&v2->m_FunctionBindings)];
+    v17 = *(v16 + 26);
+    *(v16 + 24) = 0;
+    *(v16 + 16) = "Remove a subquest from this quest";
+    *v16 = "RemoveSubquest";
+    *(v16 + 8) = "Script_RemoveSubquest";
+    v18 = v17++;
+    *(v16 + v18 + 27) = 31;
+    *(v16 + 26) = v17;
+    v19 = v17 - 1;
+    *(v16 + 25) = 0;
+    if ( v19 >= 0 && *(v16 + v19 + 27) == 32 )
+    {
+      v20 = 1;
+      do
+      {
+        --v19;
+        v21 = v20;
+        if ( v19 == -1 )
+        {
+          *(v16 + 25) = v20;
+          goto LABEL_25;
+        }
+        ++v20;
+      }
+      while ( *(v16 + v19 + 27) == 32 );
+      *(v16 + 25) = v21;
+    }
+LABEL_25:
+    *(v16 + 64) = 1;
+    *(v16 + 48) = CMemberScriptBinding1<CDotaQuest *,void (CDotaQuest::*)(HSCRIPT__ *),void,HSCRIPT__ *>::Call;
+    *(v16 + 56) = CDotaQuest::Script_RemoveSubquest;
+    *(v16 + 40) = s_CDotaQuest_Script_RemoveSubquest_packed_arg_names;
+    v22 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(&v2->m_FunctionBindings)];
+    v23 = *(v22 + 26);
+    *(v22 + 24) = 31;
+    *(v22 + 16) = "Finds a subquest from this quest by name";
+    *v22 = "GetSubquestByName";
+    *(v22 + 8) = "Script_GetSubquestByName";
+    v24 = v23++;
+    *(v22 + v24 + 27) = 30;
+    *(v22 + 26) = v23;
+    v25 = v23 - 1;
+    *(v22 + 25) = 0;
+    if ( v25 >= 0 && *(v22 + v25 + 27) == 32 )
+    {
+      v26 = 1;
+      do
+      {
+        --v25;
+        v27 = v26;
+        if ( v25 == -1 )
+        {
+          *(v22 + 25) = v26;
+          goto LABEL_31;
+        }
+        ++v26;
+      }
+      while ( *(v22 + v25 + 27) == 32 );
+      *(v22 + 25) = v27;
+    }
+LABEL_31:
+    *(v22 + 64) = 1;
+    *(v22 + 48) = CMemberScriptBinding1<CDotaQuest *,HSCRIPT__ * (CDotaQuest::*)(char const*),HSCRIPT__ *,char const*>::Call;
+    *(v22 + 56) = CDotaQuest::Script_GetSubquestByName;
+    *(v22 + 40) = s_CDotaQuest_Script_GetSubquestByName_packed_arg_names;
+    v28 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(&v2->m_FunctionBindings)];
+    v29 = *(v28 + 26);
+    *(v28 + 24) = 31;
+    *(v28 + 16) = "Finds a subquest from this quest by index";
+    *v28 = "GetSubquest";
+    *(v28 + 8) = "Script_GetSubquest";
+    v30 = v29++;
+    *(v28 + v30 + 27) = 5;
+    *(v28 + 26) = v29;
+    v31 = v29 - 1;
+    *(v28 + 25) = 0;
+    if ( v31 >= 0 && *(v28 + v31 + 27) == 32 )
+    {
+      v32 = 1;
+      do
+      {
+        --v31;
+        v33 = v32;
+        if ( v31 == -1 )
+        {
+          *(v28 + 25) = v32;
+          goto LABEL_37;
+        }
+        ++v32;
+      }
+      while ( *(v28 + v31 + 27) == 32 );
+      *(v28 + 25) = v33;
+    }
+LABEL_37:
+    *(v28 + 64) = 1;
+    *(v28 + 48) = CMemberScriptBinding1<CDotaQuest *,HSCRIPT__ * (CDotaQuest::*)(int),HSCRIPT__ *,int>::Call;
+    *(v28 + 56) = CDotaQuest::Script_GetSubquest;
+    *(v28 + 40) = s_CDotaQuest_Script_GetSubquest_packed_arg_names;
+    v34 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(&v2->m_FunctionBindings)];
+    v35 = *(v34 + 26);
+    *(v34 + 16) = "Set a quest value";
+    *v34 = "SetTextReplaceValue";
+    *(v34 + 8) = "SetTextReplaceValue";
+    *(v34 + 24) = 0;
+    *(v34 + v35 + 27) = 5;
+    v36 = v35 + 1;
+    v35 += 2;
+    *(v34 + v36 + 27) = 5;
+    *(v34 + 26) = v35;
+    v37 = v35 - 1;
+    *(v34 + 25) = 0;
+    if ( v37 >= 0 && *(v34 + v37 + 27) == 32 )
+    {
+      v38 = 1;
+      do
+      {
+        --v37;
+        v39 = v38;
+        if ( v37 == -1 )
+        {
+          *(v34 + 25) = v38;
+          goto LABEL_43;
+        }
+        ++v38;
+      }
+      while ( *(v34 + v37 + 27) == 32 );
+      *(v34 + 25) = v39;
+    }
+LABEL_43:
+    *(v34 + 64) = 1;
+    *(v34 + 48) = CMemberScriptBinding2<CDotaQuest *,void (CDotaQuest::*)(int,int),void,int,int>::Call;
+    *(v34 + 56) = CDotaQuest::SetTextReplaceValue;
+    *(v34 + 40) = s_CDotaQuest_SetTextReplaceValue_packed_arg_names;
+    v40 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(&v2->m_FunctionBindings)];
+    v41 = *(v40 + 26);
+    *(v40 + 16) = "Set the text replace string for this quest";
+    *v40 = "SetTextReplaceString";
+    *(v40 + 8) = "SetTextReplaceString";
+    *(v40 + 24) = 0;
+    v42 = v41++;
+    *(v40 + v42 + 27) = 30;
+    *(v40 + 26) = v41;
+    v43 = v41 - 1;
+    *(v40 + 25) = 0;
+    if ( v43 >= 0 && *(v40 + v43 + 27) == 32 )
+    {
+      v44 = 1;
+      do
+      {
+        --v43;
+        v45 = v44;
+        if ( v43 == -1 )
+        {
+          *(v40 + 25) = v44;
+          goto LABEL_49;
+        }
+        ++v44;
+      }
+      while ( *(v40 + v43 + 27) == 32 );
+      *(v40 + 25) = v45;
+    }
+LABEL_49:
+    *(v40 + 64) = 1;
+    *(v40 + 48) = CMemberScriptBinding1<CDotaQuest *,void (CDotaQuest::*)(char const*),void,char const*>::Call;
+    *(v40 + 56) = CDotaQuest::SetTextReplaceString;
+    *(v40 + 40) = s_CDotaQuest_SetTextReplaceString_packed_arg_names;
+    return v2;
+  }
+  return result;
+}
+
+
+// CDotaQuest::GetScriptDesc  (line 582, @0x0000000002683000, libserver.so)
+// calls: GetScriptDesc<CDotaQuest>
+ScriptClassDesc_t *__fastcall CDotaQuest::GetScriptDesc(CDotaQuest *const this)
+{
+  return GetScriptDesc<CDotaQuest>(this);
+}
+
+
+// CDotaQuest::InitScriptDesc  (line 582, @0x0000000002683010, libserver.so)
+// calls: GetScriptDesc<CDotaQuest>
+ScriptClassDesc_t *__cdecl CDotaQuest::InitScriptDesc()
+{
+  return GetScriptDesc<CDotaQuest>(0);
+}
+
+
+// CDotaQuest::GetClassScriptDesc  (line 582, @0x0000000002683020, libserver.so)
+// calls: GetScriptDesc<CDotaQuest>
+ScriptClassDesc_t *__cdecl CDotaQuest::GetClassScriptDesc()
+{
+  return GetScriptDesc<CDotaQuest>(0);
+}
+
+
+// CDotaSubquestBuyItems::CEntityInstanceEntityClass::Schema_CompileTimeVerificationFunction  (line 596, @0x000000000266b0c0, libserver.so)
+void __fastcall CDotaSubquestBuyItems::CEntityInstanceEntityClass::Schema_CompileTimeVerificationFunction(
+        CDotaSubquestBuyItems::CEntityInstanceEntityClass *const this)
+{
+  ;
+}
+
+
+// CDotaSubquestBuyItems::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE  (line 599, @0x0000000002654a50, libserver.so)  // inlines: Call, Get, RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE, SetTypeScope
+// calls: CDotaSubquestBase::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE
+// callers: CSchemaNonConstructibleClassBinding<CDotaSubquestBuyItems::CEntityInstanceEntityClass>::Register, CDotaSubquestBuyItems::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE, CDotaSubquestBuyItems::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE
+// globals: CDotaSubquestBase::CEntityInstanceEntityClass::s_pSchemaBindingForLocalModule, CDotaSubquestBase::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char , CDotaSubquestBuyItems::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,c
+CSchemaClassInfo *__fastcall CDotaSubquestBuyItems::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        const char *pProjectName)
+{
+  ISchemaSystemTypeScope *v6; // r14
+  CSchemaClassInfo *v7; // rax
+
+  v6 = (*(*pSchemaSystem + 112LL))(pSchemaSystem, 1, pBinaryName);
+  (*(CDotaSubquestBase::CEntityInstanceEntityClass::s_pSchemaBindingForLocalModule->_vptr_ISchemaBinding + 5))(
+    CDotaSubquestBase::CEntityInstanceEntityClass::s_pSchemaBindingForLocalModule,
+    pSchemaSystem,
+    pBinaryName,
+    pProjectName);
+  v7 = CDotaSubquestBase::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult;
+  if ( CDotaSubquestBase::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult == 0 )
+    v7 = CDotaSubquestBase::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+           pSchemaSystem,
+           pBinaryName,
+           pProjectName);
+  CDotaSubquestBuyItems::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CDotaSubquestBuyItems_CEntityInstanceEntityClass.m_pOuterTypeScope = v6;
+  CDotaSubquestBuyItems::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassBases_CDotaSubquestBuyItems_CEntityInstanceEntityClass[0].m_pClass = v7;
+  CDotaSubquestBuyItems::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult = &CDotaSubquestBuyItems::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CDotaSubquestBuyItems_CEntityInstanceEntityClass;
+  return &CDotaSubquestBuyItems::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CDotaSubquestBuyItems_CEntityInstanceEntityClass;
+}
+
+
+// CDotaSubquestBuyItems::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE  (line 599, @0x000000000266b0d0, libserver.so)
+// calls: CDotaSubquestBuyItems::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE
+// globals: CDotaSubquestBuyItems::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,c
+CSchemaClassInfo *__fastcall CDotaSubquestBuyItems::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        const char *pProjectName)
+{
+  CSchemaClassInfo *result; // rax
+
+  result = CDotaSubquestBuyItems::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult;
+  if ( CDotaSubquestBuyItems::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult == 0 )
+    return CDotaSubquestBuyItems::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+             pSchemaSystem,
+             pBinaryName,
+             pProjectName);
+  return result;
+}
+
+
+// CDotaSubquestBuyItems::CEntityInstanceEntityClass::Schema_VerifyBindingIsRegistered  (line 616, @0x000000000266b0f0, libserver.so)
+void __cdecl CDotaSubquestBuyItems::CEntityInstanceEntityClass::Schema_VerifyBindingIsRegistered()
+{
+  ;
+}
+
+
+// CDotaSubquestBuyItems::Schema_CompileTimeVerificationFunction  (line 624, @0x000000000266b100, libserver.so)
+void __fastcall CDotaSubquestBuyItems::Schema_CompileTimeVerificationFunction(CDotaSubquestBuyItems *const this)
+{
+  ;
+}
+
+
+// CDotaSubquestBuyItems::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE  (line 628, @0x000000000266b110, libserver.so)  // inlines: Call, Get, RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE, SchemaBinding_SchemaTypeOfMemberVarByAddr<CDotaSubquestBuyItems, CCopyableUtlVector<char const*> >, SetTypeScope
+// calls: __cxa_guard_acquire, __cxa_guard_release, CDotaSubquestBase::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE, CDotaSubquestBuyItems::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE, __cxa_guard_abort, _Unwind_Resume
+// callers: CSchemaNonConstructibleClassBinding<CDotaSubquestBuyItems>::Register
+// strings: "CCopyableUtlVector"
+// globals: CDotaSubquestBuyItems::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_p, CSchemaManipulator<CCopyableUtlVector<char const*>>::StaticAccessor(void)::m, CAtomicManipulator<CCopyableUtlVector<char const*>>::Get(void)::val, `guard variable for'CDotaSubquestBuyItems::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char cons, CDotaSubquestBuyItems::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,c, CDotaSubquestBuyItems::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::Imp, CDotaSubquestBase::s_pSchemaBindingForLocalModule
+CSchemaClassInfo *__fastcall CDotaSubquestBuyItems::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        const char *pProjectName)
+{
+  CSchemaClassInfo *result; // rax
+  ISchemaSystemTypeScope *v7; // r14
+  __int64 (__fastcall *v8)(ISchemaSystemTypeScope *, const char *, __int64, __int64 (__fastcall ***)(), __int64 (__fastcall ***)(), __int64); // r15
+  __int64 v9; // rax
+  __int64 v10; // rax
+  CSchemaClassInfo *v11; // rax
+  CSchemaClassInfo *v12; // rax
+  __int64 (__fastcall *v13)(ISchemaSystemTypeScope *, __int64); // [rsp-40h] [rbp-40h]
+
+  result = CDotaSubquestBuyItems::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult;
+  if ( CDotaSubquestBuyItems::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult == 0 )
+  {
+    v7 = (*(*pSchemaSystem + 112LL))(pSchemaSystem, 1, pBinaryName);
+    v8 = *(*v7 + 64LL);
+    v13 = *(*v7 + 48LL);
+    v9 = (*(*v7 + 40LL))(v7, 2);
+    v10 = v13(v7, v9);
+    CDotaSubquestBuyItems::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CDotaSubquestBuyItems[0].m_pType = v8(v7, "CCopyableUtlVector", 3009, &CAtomicManipulator<CCopyableUtlVector<char const*>>::Get(void)::val, CSchemaManipulator<CCopyableUtlVector<char const*>>::StaticAccessor(void)::m, v10);
+    if ( `guard variable for'CDotaSubquestBuyItems::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_NestedClassesOf_CDotaSubquestBuyItems == 0
+      && __cxa_guard_acquire(&`guard variable for'CDotaSubquestBuyItems::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_NestedClassesOf_CDotaSubquestBuyItems) != 0 )
+    {
+      v11 = CDotaSubquestBuyItems::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult;
+      if ( CDotaSubquestBuyItems::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult == 0 )
+        v11 = CDotaSubquestBuyItems::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+                pSchemaSystem,
+                pBinaryName,
+                pProjectName);
+      CDotaSubquestBuyItems::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_NestedClassesOf_CDotaSubquestBuyItems[0] = v11;
+      __cxa_guard_release(&`guard variable for'CDotaSubquestBuyItems::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_NestedClassesOf_CDotaSubquestBuyItems);
+    }
+    (*(CDotaSubquestBase::s_pSchemaBindingForLocalModule->_vptr_ISchemaBinding + 5))(
+      CDotaSubquestBase::s_pSchemaBindingForLocalModule,
+      pSchemaSystem,
+      pBinaryName,
+      pProjectName);
+    v12 = CDotaSubquestBase::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+            pSchemaSystem,
+            pBinaryName,
+            pProjectName);
+    CDotaSubquestBuyItems::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CDotaSubquestBuyItems.m_pOuterTypeScope = v7;
+    CDotaSubquestBuyItems::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassBases_CDotaSubquestBuyItems[0].m_pClass = v12;
+    CDotaSubquestBuyItems::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult = &CDotaSubquestBuyItems::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CDotaSubquestBuyItems;
+    return &CDotaSubquestBuyItems::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CDotaSubquestBuyItems;
+  }
+  return result;
+}
+
+
+// CDotaSubquestBuyItems::Schema_VerifyBindingIsRegistered  (line 668, @0x000000000266b250, libserver.so)
+void __cdecl CDotaSubquestBuyItems::Schema_VerifyBindingIsRegistered()
+{
+  ;
+}
+
+
+// CDotaSubquestBuyItems::SetupEntClassInputs  (line 682, @0x000000000266b260, libserver.so)
+void __fastcall CDotaSubquestBuyItems::SetupEntClassInputs(CEntityClass *pComponentInfo)
+{
+  ;
+}
+
+
+// CDotaSubquestBuyItems::SetupEntClassComponentOverrides  (line 688, @0x000000000266b270, libserver.so)
+void __fastcall CDotaSubquestBuyItems::SetupEntClassComponentOverrides(CEntityClass *pEntityClass)
+{
+  pEntityClass->m_pComponentOverrides = 0;
+}
+
+
+// CDotaSubquestEntityDeath::CEntityInstanceEntityClass::Schema_CompileTimeVerificationFunction  (line 694, @0x000000000266b280, libserver.so)
+void __fastcall CDotaSubquestEntityDeath::CEntityInstanceEntityClass::Schema_CompileTimeVerificationFunction(
+        CDotaSubquestEntityDeath::CEntityInstanceEntityClass *const this)
+{
+  ;
+}
+
+
+// CDotaSubquestEntityDeath::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE  (line 697, @0x0000000002654ad0, libserver.so)  // inlines: Call, Get, RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE, SetTypeScope
+// calls: CDotaSubquestBase::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE
+// callers: CSchemaNonConstructibleClassBinding<CDotaSubquestEntityDeath::CEntityInstanceEntityClass>::Register, CDotaSubquestEntityDeath::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE, CDotaSubquestEntityDeath::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE
+// globals: CDotaSubquestBase::CEntityInstanceEntityClass::s_pSchemaBindingForLocalModule, CDotaSubquestBase::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char , CDotaSubquestEntityDeath::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem 
+CSchemaClassInfo *__fastcall CDotaSubquestEntityDeath::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        const char *pProjectName)
+{
+  ISchemaSystemTypeScope *v6; // r14
+  CSchemaClassInfo *v7; // rax
+
+  v6 = (*(*pSchemaSystem + 112LL))(pSchemaSystem, 1, pBinaryName);
+  (*(CDotaSubquestBase::CEntityInstanceEntityClass::s_pSchemaBindingForLocalModule->_vptr_ISchemaBinding + 5))(
+    CDotaSubquestBase::CEntityInstanceEntityClass::s_pSchemaBindingForLocalModule,
+    pSchemaSystem,
+    pBinaryName,
+    pProjectName);
+  v7 = CDotaSubquestBase::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult;
+  if ( CDotaSubquestBase::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult == 0 )
+    v7 = CDotaSubquestBase::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+           pSchemaSystem,
+           pBinaryName,
+           pProjectName);
+  CDotaSubquestEntityDeath::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CDotaSubquestEntityDeath_CEntityInstanceEntityClass.m_pOuterTypeScope = v6;
+  CDotaSubquestEntityDeath::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassBases_CDotaSubquestEntityDeath_CEntityInstanceEntityClass[0].m_pClass = v7;
+  CDotaSubquestEntityDeath::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult = &CDotaSubquestEntityDeath::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CDotaSubquestEntityDeath_CEntityInstanceEntityClass;
+  return &CDotaSubquestEntityDeath::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CDotaSubquestEntityDeath_CEntityInstanceEntityClass;
+}
+
+
+// CDotaSubquestEntityDeath::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE  (line 697, @0x000000000266b290, libserver.so)
+// calls: CDotaSubquestEntityDeath::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE
+// globals: CDotaSubquestEntityDeath::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem 
+CSchemaClassInfo *__fastcall CDotaSubquestEntityDeath::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        const char *pProjectName)
+{
+  CSchemaClassInfo *result; // rax
+
+  result = CDotaSubquestEntityDeath::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult;
+  if ( CDotaSubquestEntityDeath::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult == 0 )
+    return CDotaSubquestEntityDeath::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+             pSchemaSystem,
+             pBinaryName,
+             pProjectName);
+  return result;
+}
+
+
+// CDotaSubquestEntityDeath::CEntityInstanceEntityClass::Schema_VerifyBindingIsRegistered  (line 714, @0x000000000266b2b0, libserver.so)
+void __cdecl CDotaSubquestEntityDeath::CEntityInstanceEntityClass::Schema_VerifyBindingIsRegistered()
+{
+  ;
+}
+
+
+// CDotaSubquestEntityDeath::Schema_CompileTimeVerificationFunction  (line 722, @0x000000000266b2c0, libserver.so)
+void __fastcall CDotaSubquestEntityDeath::Schema_CompileTimeVerificationFunction(CDotaSubquestEntityDeath *const this)
+{
+  ;
+}
+
+
+// CDotaSubquestEntityDeath::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE  (line 726, @0x000000000266b2d0, libserver.so)  // inlines: Call, Get, RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE, SchemaBinding_SchemaTypeOfMemberVarByAddr<CDotaSubquestEntityDeath, CUtlVector<CUtlSymbolLarge> >, SetTypeScope
+// calls: __cxa_guard_acquire, __cxa_guard_release, CDotaSubquestBase::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE, CDotaSubquestEntityDeath::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE, __cxa_guard_abort, _Unwind_Resume
+// callers: CSchemaNonConstructibleClassBinding<CDotaSubquestEntityDeath>::Register
+// strings: "CUtlSymbolLarge", "CUtlVector"
+// globals: CDotaSubquestEntityDeath::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::, CSchemaManipulator<CUtlSymbolLarge>::StaticAccessor(void)::m, CAtomicManipulator<CUtlSymbolLarge>::Get(void)::val, CSchemaManipulator<CUtlVector<CUtlSymbolLarge,CUtlMemory<CUtlSymbolLarge,int>>>::StaticAccessor(void)::m, CAtomicManipulator<CUtlVector<CUtlSymbolLarge,CUtlMemory<CUtlSymbolLarge,int>>>::Get(void)::val, `guard variable for'CDotaSubquestEntityDeath::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char c, CDotaSubquestEntityDeath::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem , CDotaSubquestBase::s_pSchemaBindingForLocalModule
+CSchemaClassInfo *__fastcall CDotaSubquestEntityDeath::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        const char *pProjectName)
+{
+  CSchemaClassInfo *result; // rax
+  ISchemaSystemTypeScope *v7; // r14
+  __int64 (__fastcall *v8)(ISchemaSystemTypeScope *, const char *, __int64, __int64 (__fastcall ***)(), __int64 (__fastcall ***)(), __int64); // r15
+  __int64 v9; // rax
+  CSchemaClassInfo *v10; // rax
+  CSchemaClassInfo *v11; // rax
+
+  result = CDotaSubquestEntityDeath::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult;
+  if ( CDotaSubquestEntityDeath::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult == 0 )
+  {
+    v7 = (*(*pSchemaSystem + 112LL))(pSchemaSystem, 1, pBinaryName);
+    v8 = *(*v7 + 64LL);
+    v9 = (*(*v7 + 56LL))(
+           v7,
+           "CUtlSymbolLarge",
+           3007,
+           CAtomicManipulator<CUtlSymbolLarge>::Get(void)::val,
+           &CSchemaManipulator<CUtlSymbolLarge>::StaticAccessor(void)::m);
+    CDotaSubquestEntityDeath::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CDotaSubquestEntityDeath[0].m_pType = v8(v7, "CUtlVector", 3002, &CAtomicManipulator<CUtlVector<CUtlSymbolLarge,CUtlMemory<CUtlSymbolLarge,int>>>::Get(void)::val, CSchemaManipulator<CUtlVector<CUtlSymbolLarge,CUtlMemory<CUtlSymbolLarge,int>>>::StaticAccessor(void)::m, v9);
+    if ( `guard variable for'CDotaSubquestEntityDeath::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_NestedClassesOf_CDotaSubquestEntityDeath == 0
+      && __cxa_guard_acquire(&`guard variable for'CDotaSubquestEntityDeath::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_NestedClassesOf_CDotaSubquestEntityDeath) != 0 )
+    {
+      v10 = CDotaSubquestEntityDeath::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult;
+      if ( CDotaSubquestEntityDeath::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult == 0 )
+        v10 = CDotaSubquestEntityDeath::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+                pSchemaSystem,
+                pBinaryName,
+                pProjectName);
+      CDotaSubquestEntityDeath::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_NestedClassesOf_CDotaSubquestEntityDeath[0] = v10;
+      __cxa_guard_release(&`guard variable for'CDotaSubquestEntityDeath::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_NestedClassesOf_CDotaSubquestEntityDeath);
+    }
+    (*(CDotaSubquestBase::s_pSchemaBindingForLocalModule->_vptr_ISchemaBinding + 5))(
+      CDotaSubquestBase::s_pSchemaBindingForLocalModule,
+      pSchemaSystem,
+      pBinaryName,
+      pProjectName);
+    v11 = CDotaSubquestBase::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+            pSchemaSystem,
+            pBinaryName,
+            pProjectName);
+    CDotaSubquestEntityDeath::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CDotaSubquestEntityDeath.m_pOuterTypeScope = v7;
+    CDotaSubquestEntityDeath::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassBases_CDotaSubquestEntityDeath[0].m_pClass = v11;
+    CDotaSubquestEntityDeath::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult = &CDotaSubquestEntityDeath::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CDotaSubquestEntityDeath;
+    return &CDotaSubquestEntityDeath::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CDotaSubquestEntityDeath;
+  }
+  return result;
+}
+
+
+// CDotaSubquestEntityDeath::Schema_VerifyBindingIsRegistered  (line 766, @0x000000000266b410, libserver.so)
+void __cdecl CDotaSubquestEntityDeath::Schema_VerifyBindingIsRegistered()
+{
+  ;
+}
+
+
+// CDotaSubquestEntityDeath::SetupEntClassInputs  (line 780, @0x000000000266b420, libserver.so)
+void __fastcall CDotaSubquestEntityDeath::SetupEntClassInputs(CEntityClass *pComponentInfo)
+{
+  ;
+}
+
+
+// CDotaSubquestEntityDeath::SetupEntClassComponentOverrides  (line 786, @0x000000000266b430, libserver.so)
+void __fastcall CDotaSubquestEntityDeath::SetupEntClassComponentOverrides(CEntityClass *pEntityClass)
+{
+  pEntityClass->m_pComponentOverrides = 0;
+}
+
+
+// CDotaSubquestTutorialEvent::CEntityInstanceEntityClass::Schema_CompileTimeVerificationFunction  (line 792, @0x000000000266b440, libserver.so)
+void __fastcall CDotaSubquestTutorialEvent::CEntityInstanceEntityClass::Schema_CompileTimeVerificationFunction(
+        CDotaSubquestTutorialEvent::CEntityInstanceEntityClass *const this)
+{
+  ;
+}
+
+
+// CDotaSubquestTutorialEvent::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE  (line 795, @0x0000000002654b50, libserver.so)  // inlines: Call, Get, RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE, SetTypeScope
+// calls: CDotaSubquestBase::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE
+// callers: CSchemaNonConstructibleClassBinding<CDotaSubquestTutorialEvent::CEntityInstanceEntityClass>::Register, CDotaSubquestTutorialEvent::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE, CDotaSubquestTutorialEvent::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE
+// globals: CDotaSubquestBase::CEntityInstanceEntityClass::s_pSchemaBindingForLocalModule, CDotaSubquestBase::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char , CDotaSubquestTutorialEvent::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSyste
+CSchemaClassInfo *__fastcall CDotaSubquestTutorialEvent::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        const char *pProjectName)
+{
+  ISchemaSystemTypeScope *v6; // r14
+  CSchemaClassInfo *v7; // rax
+
+  v6 = (*(*pSchemaSystem + 112LL))(pSchemaSystem, 1, pBinaryName);
+  (*(CDotaSubquestBase::CEntityInstanceEntityClass::s_pSchemaBindingForLocalModule->_vptr_ISchemaBinding + 5))(
+    CDotaSubquestBase::CEntityInstanceEntityClass::s_pSchemaBindingForLocalModule,
+    pSchemaSystem,
+    pBinaryName,
+    pProjectName);
+  v7 = CDotaSubquestBase::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult;
+  if ( CDotaSubquestBase::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult == 0 )
+    v7 = CDotaSubquestBase::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+           pSchemaSystem,
+           pBinaryName,
+           pProjectName);
+  CDotaSubquestTutorialEvent::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CDotaSubquestTutorialEvent_CEntityInstanceEntityClass.m_pOuterTypeScope = v6;
+  CDotaSubquestTutorialEvent::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassBases_CDotaSubquestTutorialEvent_CEntityInstanceEntityClass[0].m_pClass = v7;
+  CDotaSubquestTutorialEvent::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult = &CDotaSubquestTutorialEvent::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CDotaSubquestTutorialEvent_CEntityInstanceEntityClass;
+  return &CDotaSubquestTutorialEvent::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CDotaSubquestTutorialEvent_CEntityInstanceEntityClass;
+}
+
+
+// CDotaSubquestTutorialEvent::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE  (line 795, @0x000000000266b450, libserver.so)
+// calls: CDotaSubquestTutorialEvent::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE
+// globals: CDotaSubquestTutorialEvent::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSyste
+CSchemaClassInfo *__fastcall CDotaSubquestTutorialEvent::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        const char *pProjectName)
+{
+  CSchemaClassInfo *result; // rax
+
+  result = CDotaSubquestTutorialEvent::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult;
+  if ( CDotaSubquestTutorialEvent::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult == 0 )
+    return CDotaSubquestTutorialEvent::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+             pSchemaSystem,
+             pBinaryName,
+             pProjectName);
+  return result;
+}
+
+
+// CDotaSubquestTutorialEvent::CEntityInstanceEntityClass::Schema_VerifyBindingIsRegistered  (line 812, @0x000000000266b470, libserver.so)
+void __cdecl CDotaSubquestTutorialEvent::CEntityInstanceEntityClass::Schema_VerifyBindingIsRegistered()
+{
+  ;
+}
+
+
+// CDotaSubquestTutorialEvent::Schema_CompileTimeVerificationFunction  (line 820, @0x000000000266b480, libserver.so)
+void __fastcall CDotaSubquestTutorialEvent::Schema_CompileTimeVerificationFunction(
+        CDotaSubquestTutorialEvent *const this)
+{
+  ;
+}
+
+
+// CDotaSubquestTutorialEvent::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE  (line 824, @0x000000000266b490, libserver.so)  // inlines: Call, Get, RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE, SchemaBinding_SchemaTypeOfMemberVarByAddr<CDotaSubquestTutorialEvent, CUtlSymbolLarge>, SetTypeScope
+// calls: __cxa_guard_acquire, __cxa_guard_release, CDotaSubquestBase::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE, CDotaSubquestTutorialEvent::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE, __cxa_guard_abort, _Unwind_Resume
+// callers: CSchemaNonConstructibleClassBinding<CDotaSubquestTutorialEvent>::Register
+// strings: "CUtlSymbolLarge"
+// globals: CDotaSubquestTutorialEvent::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*), CSchemaManipulator<CUtlSymbolLarge>::StaticAccessor(void)::m, CAtomicManipulator<CUtlSymbolLarge>::Get(void)::val, `guard variable for'CDotaSubquestTutorialEvent::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char, CDotaSubquestTutorialEvent::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSyste, CDotaSubquestBase::s_pSchemaBindingForLocalModule
+CSchemaClassInfo *__fastcall CDotaSubquestTutorialEvent::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        const char *pProjectName)
+{
+  CSchemaClassInfo *result; // rax
+  ISchemaSystemTypeScope *v7; // r14
+  CSchemaClassInfo *v8; // rax
+  CSchemaClassInfo *v9; // rax
+
+  result = CDotaSubquestTutorialEvent::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult;
+  if ( CDotaSubquestTutorialEvent::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult == 0 )
+  {
+    v7 = (*(*pSchemaSystem + 112LL))(pSchemaSystem, 1, pBinaryName);
+    CDotaSubquestTutorialEvent::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CDotaSubquestTutorialEvent[0].m_pType = (*(*v7 + 56LL))(v7, "CUtlSymbolLarge", 3007, CAtomicManipulator<CUtlSymbolLarge>::Get(void)::val, &CSchemaManipulator<CUtlSymbolLarge>::StaticAccessor(void)::m);
+    if ( `guard variable for'CDotaSubquestTutorialEvent::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_NestedClassesOf_CDotaSubquestTutorialEvent == 0
+      && __cxa_guard_acquire(&`guard variable for'CDotaSubquestTutorialEvent::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_NestedClassesOf_CDotaSubquestTutorialEvent) != 0 )
+    {
+      v8 = CDotaSubquestTutorialEvent::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult;
+      if ( CDotaSubquestTutorialEvent::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult == 0 )
+        v8 = CDotaSubquestTutorialEvent::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+               pSchemaSystem,
+               pBinaryName,
+               pProjectName);
+      CDotaSubquestTutorialEvent::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_NestedClassesOf_CDotaSubquestTutorialEvent[0] = v8;
+      __cxa_guard_release(&`guard variable for'CDotaSubquestTutorialEvent::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_NestedClassesOf_CDotaSubquestTutorialEvent);
+    }
+    (*(CDotaSubquestBase::s_pSchemaBindingForLocalModule->_vptr_ISchemaBinding + 5))(
+      CDotaSubquestBase::s_pSchemaBindingForLocalModule,
+      pSchemaSystem,
+      pBinaryName,
+      pProjectName);
+    v9 = CDotaSubquestBase::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+           pSchemaSystem,
+           pBinaryName,
+           pProjectName);
+    CDotaSubquestTutorialEvent::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CDotaSubquestTutorialEvent.m_pOuterTypeScope = v7;
+    CDotaSubquestTutorialEvent::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassBases_CDotaSubquestTutorialEvent[0].m_pClass = v9;
+    CDotaSubquestTutorialEvent::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult = &CDotaSubquestTutorialEvent::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CDotaSubquestTutorialEvent;
+    return &CDotaSubquestTutorialEvent::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CDotaSubquestTutorialEvent;
+  }
+  return result;
+}
+
+
+// CDotaSubquestTutorialEvent::Schema_VerifyBindingIsRegistered  (line 864, @0x000000000266b5a0, libserver.so)
+void __cdecl CDotaSubquestTutorialEvent::Schema_VerifyBindingIsRegistered()
+{
+  ;
+}
+
+
+// CDotaSubquestTutorialEvent::SetupEntClassInputs  (line 878, @0x000000000266b5b0, libserver.so)
+void __fastcall CDotaSubquestTutorialEvent::SetupEntClassInputs(CEntityClass *pComponentInfo)
+{
+  ;
+}
+
+
+// CDotaSubquestTutorialEvent::SetupEntClassComponentOverrides  (line 884, @0x000000000266b5c0, libserver.so)
+void __fastcall CDotaSubquestTutorialEvent::SetupEntClassComponentOverrides(CEntityClass *pEntityClass)
+{
+  pEntityClass->m_pComponentOverrides = 0;
+}
+
+
+// CDotaSubquestPlayerStat::CEntityInstanceEntityClass::Schema_CompileTimeVerificationFunction  (line 890, @0x000000000266b5d0, libserver.so)
+void __fastcall CDotaSubquestPlayerStat::CEntityInstanceEntityClass::Schema_CompileTimeVerificationFunction(
+        CDotaSubquestPlayerStat::CEntityInstanceEntityClass *const this)
+{
+  ;
+}
+
+
+// CDotaSubquestPlayerStat::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE  (line 893, @0x0000000002654bd0, libserver.so)  // inlines: Call, Get, RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE, SetTypeScope
+// calls: CDotaSubquestBase::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE
+// callers: CSchemaNonConstructibleClassBinding<CDotaSubquestPlayerStat::CEntityInstanceEntityClass>::Register, CDotaSubquestPlayerStat::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE, CDotaSubquestPlayerStat::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE
+// globals: CDotaSubquestBase::CEntityInstanceEntityClass::s_pSchemaBindingForLocalModule, CDotaSubquestBase::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char , CDotaSubquestPlayerStat::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *
+CSchemaClassInfo *__fastcall CDotaSubquestPlayerStat::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        const char *pProjectName)
+{
+  ISchemaSystemTypeScope *v6; // r14
+  CSchemaClassInfo *v7; // rax
+
+  v6 = (*(*pSchemaSystem + 112LL))(pSchemaSystem, 1, pBinaryName);
+  (*(CDotaSubquestBase::CEntityInstanceEntityClass::s_pSchemaBindingForLocalModule->_vptr_ISchemaBinding + 5))(
+    CDotaSubquestBase::CEntityInstanceEntityClass::s_pSchemaBindingForLocalModule,
+    pSchemaSystem,
+    pBinaryName,
+    pProjectName);
+  v7 = CDotaSubquestBase::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult;
+  if ( CDotaSubquestBase::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult == 0 )
+    v7 = CDotaSubquestBase::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+           pSchemaSystem,
+           pBinaryName,
+           pProjectName);
+  CDotaSubquestPlayerStat::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CDotaSubquestPlayerStat_CEntityInstanceEntityClass.m_pOuterTypeScope = v6;
+  CDotaSubquestPlayerStat::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassBases_CDotaSubquestPlayerStat_CEntityInstanceEntityClass[0].m_pClass = v7;
+  CDotaSubquestPlayerStat::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult = &CDotaSubquestPlayerStat::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CDotaSubquestPlayerStat_CEntityInstanceEntityClass;
+  return &CDotaSubquestPlayerStat::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CDotaSubquestPlayerStat_CEntityInstanceEntityClass;
+}
+
+
+// CDotaSubquestPlayerStat::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE  (line 893, @0x000000000266b5e0, libserver.so)
+// calls: CDotaSubquestPlayerStat::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE
+// globals: CDotaSubquestPlayerStat::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *
+CSchemaClassInfo *__fastcall CDotaSubquestPlayerStat::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        const char *pProjectName)
+{
+  CSchemaClassInfo *result; // rax
+
+  result = CDotaSubquestPlayerStat::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult;
+  if ( CDotaSubquestPlayerStat::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult == 0 )
+    return CDotaSubquestPlayerStat::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+             pSchemaSystem,
+             pBinaryName,
+             pProjectName);
+  return result;
+}
+
+
+// CDotaSubquestPlayerStat::CEntityInstanceEntityClass::Schema_VerifyBindingIsRegistered  (line 910, @0x000000000266b600, libserver.so)
+void __cdecl CDotaSubquestPlayerStat::CEntityInstanceEntityClass::Schema_VerifyBindingIsRegistered()
+{
+  ;
+}
+
+
+// CDotaSubquestPlayerStat::Schema_CompileTimeVerificationFunction  (line 918, @0x000000000266b610, libserver.so)
+void __fastcall CDotaSubquestPlayerStat::Schema_CompileTimeVerificationFunction(CDotaSubquestPlayerStat *const this)
+{
+  ;
+}
+
+
+// CDotaSubquestPlayerStat::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE  (line 924, @0x000000000266b620, libserver.so)  // inlines: Call, Get, RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE, SchemaBinding_SchemaTypeOfMemberVarByAddr<CDotaSubquestPlayerStat, int>, SchemaBinding_SchemaTypeOfMemberVarByAddr<CDotaSubquestPlayerStat, subquest_player_stat_types_t>, SetTypeScope
+// calls: __cxa_guard_acquire, __cxa_guard_release, CDotaSubquestBase::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE, CDotaSubquestPlayerStat::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE, __cxa_guard_abort, _Unwind_Resume
+// callers: CSchemaNonConstructibleClassBinding<CDotaSubquestPlayerStat>::Register
+// strings: "subquest_player_stat_types_t"
+// globals: CDotaSubquestPlayerStat::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s, `guard variable for'CDotaSubquestPlayerStat::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char co, CDotaSubquestPlayerStat::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *, CDotaSubquestPlayerStat::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::I, CDotaSubquestBase::s_pSchemaBindingForLocalModule
+CSchemaClassInfo *__fastcall CDotaSubquestPlayerStat::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        const char *pProjectName)
+{
+  CSchemaClassInfo *result; // rax
+  ISchemaSystemTypeScope *v7; // r14
+  CSchemaClassInfo *v8; // rax
+  CSchemaClassInfo *v9; // rax
+
+  result = CDotaSubquestPlayerStat::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult;
+  if ( CDotaSubquestPlayerStat::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult == 0 )
+  {
+    v7 = (*(*pSchemaSystem + 112LL))(pSchemaSystem, 1, pBinaryName);
+    CDotaSubquestPlayerStat::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CDotaSubquestPlayerStat[0].m_pType = (*(*v7 + 96LL))(v7, "subquest_player_stat_types_t");
+    CDotaSubquestPlayerStat::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CDotaSubquestPlayerStat[1].m_pType = (*(*v7 + 40LL))(v7, 7);
+    CDotaSubquestPlayerStat::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CDotaSubquestPlayerStat[2].m_pType = (*(*v7 + 40LL))(v7, 7);
+    if ( `guard variable for'CDotaSubquestPlayerStat::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_NestedClassesOf_CDotaSubquestPlayerStat == 0
+      && __cxa_guard_acquire(&`guard variable for'CDotaSubquestPlayerStat::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_NestedClassesOf_CDotaSubquestPlayerStat) != 0 )
+    {
+      v8 = CDotaSubquestPlayerStat::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult;
+      if ( CDotaSubquestPlayerStat::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult == 0 )
+        v8 = CDotaSubquestPlayerStat::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+               pSchemaSystem,
+               pBinaryName,
+               pProjectName);
+      CDotaSubquestPlayerStat::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_NestedClassesOf_CDotaSubquestPlayerStat[0] = v8;
+      __cxa_guard_release(&`guard variable for'CDotaSubquestPlayerStat::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_NestedClassesOf_CDotaSubquestPlayerStat);
+    }
+    (*(CDotaSubquestBase::s_pSchemaBindingForLocalModule->_vptr_ISchemaBinding + 5))(
+      CDotaSubquestBase::s_pSchemaBindingForLocalModule,
+      pSchemaSystem,
+      pBinaryName,
+      pProjectName);
+    v9 = CDotaSubquestBase::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+           pSchemaSystem,
+           pBinaryName,
+           pProjectName);
+    CDotaSubquestPlayerStat::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CDotaSubquestPlayerStat.m_pOuterTypeScope = v7;
+    CDotaSubquestPlayerStat::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassBases_CDotaSubquestPlayerStat[0].m_pClass = v9;
+    CDotaSubquestPlayerStat::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult = &CDotaSubquestPlayerStat::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CDotaSubquestPlayerStat;
+    return &CDotaSubquestPlayerStat::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CDotaSubquestPlayerStat;
+  }
+  return result;
+}
+
+
+// CDotaSubquestPlayerStat::Schema_VerifyBindingIsRegistered  (line 968, @0x000000000266b740, libserver.so)
+void __cdecl CDotaSubquestPlayerStat::Schema_VerifyBindingIsRegistered()
+{
+  ;
+}
+
+
+// CDotaSubquestPlayerStat::SetupEntClassInputs  (line 982, @0x000000000266b750, libserver.so)
+void __fastcall CDotaSubquestPlayerStat::SetupEntClassInputs(CEntityClass *pComponentInfo)
+{
+  ;
+}
+
+
+// CDotaSubquestPlayerStat::SetupEntClassComponentOverrides  (line 988, @0x000000000266b760, libserver.so)
+void __fastcall CDotaSubquestPlayerStat::SetupEntClassComponentOverrides(CEntityClass *pEntityClass)
+{
+  pEntityClass->m_pComponentOverrides = 0;
+}
+
+
+// CDotaSubquestAbilityCastCount::CEntityInstanceEntityClass::Schema_CompileTimeVerificationFunction  (line 994, @0x000000000266b770, libserver.so)
+void __fastcall CDotaSubquestAbilityCastCount::CEntityInstanceEntityClass::Schema_CompileTimeVerificationFunction(
+        CDotaSubquestAbilityCastCount::CEntityInstanceEntityClass *const this)
+{
+  ;
+}
+
+
+// CDotaSubquestAbilityCastCount::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE  (line 997, @0x0000000002654c50, libserver.so)  // inlines: Call, Get, RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE, SetTypeScope
+// calls: CDotaSubquestBase::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE
+// callers: CSchemaNonConstructibleClassBinding<CDotaSubquestAbilityCastCount::CEntityInstanceEntityClass>::Register, CDotaSubquestAbilityCastCount::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE, CDotaSubquestAbilityCastCount::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE
+// globals: CDotaSubquestBase::CEntityInstanceEntityClass::s_pSchemaBindingForLocalModule, CDotaSubquestBase::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char , CDotaSubquestAbilityCastCount::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSy
+CSchemaClassInfo *__fastcall CDotaSubquestAbilityCastCount::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        const char *pProjectName)
+{
+  ISchemaSystemTypeScope *v6; // r14
+  CSchemaClassInfo *v7; // rax
+
+  v6 = (*(*pSchemaSystem + 112LL))(pSchemaSystem, 1, pBinaryName);
+  (*(CDotaSubquestBase::CEntityInstanceEntityClass::s_pSchemaBindingForLocalModule->_vptr_ISchemaBinding + 5))(
+    CDotaSubquestBase::CEntityInstanceEntityClass::s_pSchemaBindingForLocalModule,
+    pSchemaSystem,
+    pBinaryName,
+    pProjectName);
+  v7 = CDotaSubquestBase::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult;
+  if ( CDotaSubquestBase::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult == 0 )
+    v7 = CDotaSubquestBase::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+           pSchemaSystem,
+           pBinaryName,
+           pProjectName);
+  CDotaSubquestAbilityCastCount::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CDotaSubquestAbilityCastCount_CEntityInstanceEntityClass.m_pOuterTypeScope = v6;
+  CDotaSubquestAbilityCastCount::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassBases_CDotaSubquestAbilityCastCount_CEntityInstanceEntityClass[0].m_pClass = v7;
+  CDotaSubquestAbilityCastCount::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult = &CDotaSubquestAbilityCastCount::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CDotaSubquestAbilityCastCount_CEntityInstanceEntityClass;
+  return &CDotaSubquestAbilityCastCount::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CDotaSubquestAbilityCastCount_CEntityInstanceEntityClass;
+}
+
+
+// CDotaSubquestAbilityCastCount::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE  (line 997, @0x000000000266b780, libserver.so)
+// calls: CDotaSubquestAbilityCastCount::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE
+// globals: CDotaSubquestAbilityCastCount::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSy
+CSchemaClassInfo *__fastcall CDotaSubquestAbilityCastCount::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        const char *pProjectName)
+{
+  CSchemaClassInfo *result; // rax
+
+  result = CDotaSubquestAbilityCastCount::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult;
+  if ( CDotaSubquestAbilityCastCount::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult == 0 )
+    return CDotaSubquestAbilityCastCount::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+             pSchemaSystem,
+             pBinaryName,
+             pProjectName);
+  return result;
+}
+
+
+// CDotaSubquestAbilityCastCount::CEntityInstanceEntityClass::Schema_VerifyBindingIsRegistered  (line 1014, @0x000000000266b7a0, libserver.so)
+void __cdecl CDotaSubquestAbilityCastCount::CEntityInstanceEntityClass::Schema_VerifyBindingIsRegistered()
+{
+  ;
+}
+
+
+// CDotaSubquestAbilityCastCount::Schema_CompileTimeVerificationFunction  (line 1022, @0x000000000266b7b0, libserver.so)
+void __fastcall CDotaSubquestAbilityCastCount::Schema_CompileTimeVerificationFunction(
+        CDotaSubquestAbilityCastCount *const this)
+{
+  ;
+}
+
+
+// CDotaSubquestAbilityCastCount::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE  (line 1029, @0x000000000266b7c0, libserver.so)  // inlines: Call, Get, RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE, SchemaBinding_SchemaTypeOfMemberVarByAddr<CDotaSubquestAbilityCastCount, bool>, SchemaBinding_SchemaTypeOfMemberVarByAddr<CDotaSubquestAbilityCastCount, int>, SetTypeScope
+// calls: __cxa_guard_acquire, __cxa_guard_release, CDotaSubquestBase::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE, CDotaSubquestAbilityCastCount::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE, __cxa_guard_abort, _Unwind_Resume
+// callers: CSchemaNonConstructibleClassBinding<CDotaSubquestAbilityCastCount>::Register
+// globals: CDotaSubquestAbilityCastCount::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char cons, `guard variable for'CDotaSubquestAbilityCastCount::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,c, CDotaSubquestAbilityCastCount::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSy, CDotaSubquestBase::s_pSchemaBindingForLocalModule
+CSchemaClassInfo *__fastcall CDotaSubquestAbilityCastCount::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        const char *pProjectName)
+{
+  CSchemaClassInfo *result; // rax
+  ISchemaSystemTypeScope *v7; // r14
+  CSchemaClassInfo *v8; // rax
+  CSchemaClassInfo *v9; // rax
+
+  result = CDotaSubquestAbilityCastCount::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult;
+  if ( CDotaSubquestAbilityCastCount::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult == 0 )
+  {
+    v7 = (*(*pSchemaSystem + 112LL))(pSchemaSystem, 1, pBinaryName);
+    CDotaSubquestAbilityCastCount::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CDotaSubquestAbilityCastCount[0].m_pType = (*(*v7 + 40LL))(v7, 7);
+    CDotaSubquestAbilityCastCount::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CDotaSubquestAbilityCastCount[1].m_pType = (*(*v7 + 40LL))(v7, 7);
+    CDotaSubquestAbilityCastCount::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CDotaSubquestAbilityCastCount[2].m_pType = (*(*v7 + 40LL))(v7, 7);
+    CDotaSubquestAbilityCastCount::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CDotaSubquestAbilityCastCount[3].m_pType = (*(*v7 + 40LL))(v7, 13);
+    if ( `guard variable for'CDotaSubquestAbilityCastCount::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_NestedClassesOf_CDotaSubquestAbilityCastCount == 0
+      && __cxa_guard_acquire(&`guard variable for'CDotaSubquestAbilityCastCount::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_NestedClassesOf_CDotaSubquestAbilityCastCount) != 0 )
+    {
+      v8 = CDotaSubquestAbilityCastCount::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult;
+      if ( CDotaSubquestAbilityCastCount::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult == 0 )
+        v8 = CDotaSubquestAbilityCastCount::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+               pSchemaSystem,
+               pBinaryName,
+               pProjectName);
+      CDotaSubquestAbilityCastCount::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_NestedClassesOf_CDotaSubquestAbilityCastCount[0] = v8;
+      __cxa_guard_release(&`guard variable for'CDotaSubquestAbilityCastCount::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_NestedClassesOf_CDotaSubquestAbilityCastCount);
+    }
+    (*(CDotaSubquestBase::s_pSchemaBindingForLocalModule->_vptr_ISchemaBinding + 5))(
+      CDotaSubquestBase::s_pSchemaBindingForLocalModule,
+      pSchemaSystem,
+      pBinaryName,
+      pProjectName);
+    v9 = CDotaSubquestBase::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+           pSchemaSystem,
+           pBinaryName,
+           pProjectName);
+    CDotaSubquestAbilityCastCount::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CDotaSubquestAbilityCastCount.m_pOuterTypeScope = v7;
+    CDotaSubquestAbilityCastCount::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassBases_CDotaSubquestAbilityCastCount[0].m_pClass = v9;
+    CDotaSubquestAbilityCastCount::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult = &CDotaSubquestAbilityCastCount::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CDotaSubquestAbilityCastCount;
+    return &CDotaSubquestAbilityCastCount::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CDotaSubquestAbilityCastCount;
+  }
+  return result;
+}
+
+
+// CDotaSubquestAbilityCastCount::Schema_VerifyBindingIsRegistered  (line 1075, @0x000000000266b900, libserver.so)
+void __cdecl CDotaSubquestAbilityCastCount::Schema_VerifyBindingIsRegistered()
+{
+  ;
+}
+
+
+// CDotaSubquestAbilityCastCount::SetupEntClassInputs  (line 1089, @0x000000000266b910, libserver.so)
+void __fastcall CDotaSubquestAbilityCastCount::SetupEntClassInputs(CEntityClass *pComponentInfo)
+{
+  ;
+}
+
+
+// CDotaSubquestAbilityCastCount::SetupEntClassComponentOverrides  (line 1095, @0x000000000266b920, libserver.so)
+void __fastcall CDotaSubquestAbilityCastCount::SetupEntClassComponentOverrides(CEntityClass *pEntityClass)
+{
+  pEntityClass->m_pComponentOverrides = 0;
+}
+
+
+// LocalRegisterSchemaModule<ArbitraryTemplateParameter_server_dota_quest_h>  (line 1101, @0x000000000266b930, libserver.so)  // inlines: Call, Get
+// callers: RegisterSchemaModule_dota_quest_h
+// strings: "quest_hud_types_t", "quest_text_replace_values_t", "subquest_text_replace_values_t", "subquest_player_stat_types_t"
+// globals: CSchemaEnumBinding<quest_hud_types_t>::s_pThisModuleBindingPointer, CSchemaEnumBinding<quest_text_replace_values_t>::s_pThisModuleBindingPointer, CSchemaEnumBinding<subquest_text_replace_values_t>::s_pThisModuleBindingPointer, CSchemaEnumBinding<subquest_player_stat_types_t>::s_pThisModuleBindingPointer, CDotaSubquestBase::CEntityInstanceEntityClass::s_pSchemaBindingForLocalModule, CDotaSubquestBase::s_pSchemaBindingForLocalModule, CDotaQuest::CEntityInstanceEntityClass::s_pSchemaBindingForLocalModule, CDotaQuest::s_pSchemaBindingForLocalModule (18 total)
+void __fastcall LocalRegisterSchemaModule<ArbitraryTemplateParameter_server_dota_quest_h>(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        SchemaRegistrationPhase_t nRegistrationPhase)
+{
+  if ( nRegistrationPhase != SchemaRegistrationPhase_t::SCHEMA_REGISTRATION_PHASE_ATOMIC_TYPES_AND_ENUMS )
+  {
+    if ( nRegistrationPhase == SchemaRegistrationPhase_t::SCHEMA_REGISTRATION_PHASE_CLASSES )
+    {
+      (*(CDotaSubquestBase::CEntityInstanceEntityClass::s_pSchemaBindingForLocalModule->_vptr_ISchemaBinding + 5))(
+        CDotaSubquestBase::CEntityInstanceEntityClass::s_pSchemaBindingForLocalModule,
+        pSchemaSystem,
+        pBinaryName,
+        "server");
+      (*(CDotaSubquestBase::s_pSchemaBindingForLocalModule->_vptr_ISchemaBinding + 5))(
+        CDotaSubquestBase::s_pSchemaBindingForLocalModule,
+        pSchemaSystem,
+        pBinaryName,
+        "server");
+      (*(CDotaQuest::CEntityInstanceEntityClass::s_pSchemaBindingForLocalModule->_vptr_ISchemaBinding + 5))(
+        CDotaQuest::CEntityInstanceEntityClass::s_pSchemaBindingForLocalModule,
+        pSchemaSystem,
+        pBinaryName,
+        "server");
+      (*(CDotaQuest::s_pSchemaBindingForLocalModule->_vptr_ISchemaBinding + 5))(
+        CDotaQuest::s_pSchemaBindingForLocalModule,
+        pSchemaSystem,
+        pBinaryName,
+        "server");
+      (*(CDotaSubquestBuyItems::CEntityInstanceEntityClass::s_pSchemaBindingForLocalModule->_vptr_ISchemaBinding + 5))(
+        CDotaSubquestBuyItems::CEntityInstanceEntityClass::s_pSchemaBindingForLocalModule,
+        pSchemaSystem,
+        pBinaryName,
+        "server");
+      (*(CDotaSubquestBuyItems::s_pSchemaBindingForLocalModule->_vptr_ISchemaBinding + 5))(
+        CDotaSubquestBuyItems::s_pSchemaBindingForLocalModule,
+        pSchemaSystem,
+        pBinaryName,
+        "server");
+      (*(CDotaSubquestEntityDeath::CEntityInstanceEntityClass::s_pSchemaBindingForLocalModule->_vptr_ISchemaBinding + 5))(
+        CDotaSubquestEntityDeath::CEntityInstanceEntityClass::s_pSchemaBindingForLocalModule,
+        pSchemaSystem,
+        pBinaryName,
+        "server");
+      (*(CDotaSubquestEntityDeath::s_pSchemaBindingForLocalModule->_vptr_ISchemaBinding + 5))(
+        CDotaSubquestEntityDeath::s_pSchemaBindingForLocalModule,
+        pSchemaSystem,
+        pBinaryName,
+        "server");
+      (*(CDotaSubquestTutorialEvent::CEntityInstanceEntityClass::s_pSchemaBindingForLocalModule->_vptr_ISchemaBinding + 5))(
+        CDotaSubquestTutorialEvent::CEntityInstanceEntityClass::s_pSchemaBindingForLocalModule,
+        pSchemaSystem,
+        pBinaryName,
+        "server");
+      (*(CDotaSubquestTutorialEvent::s_pSchemaBindingForLocalModule->_vptr_ISchemaBinding + 5))(
+        CDotaSubquestTutorialEvent::s_pSchemaBindingForLocalModule,
+        pSchemaSystem,
+        pBinaryName,
+        "server");
+      (*(CDotaSubquestPlayerStat::CEntityInstanceEntityClass::s_pSchemaBindingForLocalModule->_vptr_ISchemaBinding + 5))(
+        CDotaSubquestPlayerStat::CEntityInstanceEntityClass::s_pSchemaBindingForLocalModule,
+        pSchemaSystem,
+        pBinaryName,
+        "server");
+      (*(CDotaSubquestPlayerStat::s_pSchemaBindingForLocalModule->_vptr_ISchemaBinding + 5))(
+        CDotaSubquestPlayerStat::s_pSchemaBindingForLocalModule,
+        pSchemaSystem,
+        pBinaryName,
+        "server");
+      (*(CDotaSubquestAbilityCastCount::CEntityInstanceEntityClass::s_pSchemaBindingForLocalModule->_vptr_ISchemaBinding
+       + 5))(
+        CDotaSubquestAbilityCastCount::CEntityInstanceEntityClass::s_pSchemaBindingForLocalModule,
+        pSchemaSystem,
+        pBinaryName,
+        "server");
+      (*(CDotaSubquestAbilityCastCount::s_pSchemaBindingForLocalModule->_vptr_ISchemaBinding + 5))(
+        CDotaSubquestAbilityCastCount::s_pSchemaBindingForLocalModule,
+        pSchemaSystem,
+        pBinaryName,
+        "server");
+    }
+    ++g_nLinkerHack_SchemaAnchor_RegistrationCountFor_server;
+  }
+  else
+  {
+    (*(CSchemaEnumBinding<quest_hud_types_t>::s_pThisModuleBindingPointer->_vptr_ISchemaBinding + 5))(
+      CSchemaEnumBinding<quest_hud_types_t>::s_pThisModuleBindingPointer,
+      pSchemaSystem,
+      pBinaryName,
+      "server",
+      "quest_hud_types_t");
+    (*(CSchemaEnumBinding<quest_text_replace_values_t>::s_pThisModuleBindingPointer->_vptr_ISchemaBinding + 5))(
+      CSchemaEnumBinding<quest_text_replace_values_t>::s_pThisModuleBindingPointer,
+      pSchemaSystem,
+      pBinaryName,
+      "server",
+      "quest_text_replace_values_t");
+    (*(CSchemaEnumBinding<subquest_text_replace_values_t>::s_pThisModuleBindingPointer->_vptr_ISchemaBinding + 5))(
+      CSchemaEnumBinding<subquest_text_replace_values_t>::s_pThisModuleBindingPointer,
+      pSchemaSystem,
+      pBinaryName,
+      "server",
+      "subquest_text_replace_values_t");
+    (*(CSchemaEnumBinding<subquest_player_stat_types_t>::s_pThisModuleBindingPointer->_vptr_ISchemaBinding + 5))(
+      CSchemaEnumBinding<subquest_player_stat_types_t>::s_pThisModuleBindingPointer,
+      pSchemaSystem,
+      pBinaryName,
+      "server",
+      "subquest_player_stat_types_t");
+    ++g_nLinkerHack_SchemaAnchor_RegistrationCountFor_server;
+  }
+}
+
+
+// RegisterSchemaModule_dota_quest_h  (line 1120, @0x000000000266bb80, libserver.so)
+// calls: LocalRegisterSchemaModule<ArbitraryTemplateParameter_server_dota_quest_h>
+// callers: CSchemaRegistration_server::RegisterAllBindings
+void __fastcall RegisterSchemaModule_dota_quest_h(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        SchemaRegistrationPhase_t nRegistrationPhase)
+{
+  LocalRegisterSchemaModule<ArbitraryTemplateParameter_server_dota_quest_h>(
+    pSchemaSystem,
+    pBinaryName,
+    nRegistrationPhase);
+}
+
+

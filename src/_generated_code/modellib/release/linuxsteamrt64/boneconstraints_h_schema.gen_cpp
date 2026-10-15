@@ -1,0 +1,2286 @@
+
+// ==== functions (decompiled by Hex-Rays; names/signatures from DWARF) ====
+
+// CConstraintTarget::Schema_CompileTimeVerificationFunction  (line 33, @0x000000000317d490, libserver.so)
+void __fastcall CConstraintTarget::Schema_CompileTimeVerificationFunction(CConstraintTarget *const this)
+{
+  ;
+}
+
+
+// CConstraintTarget::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE  (line 41, @0x000000000317d4a0, libserver.so)  // inlines: Get, SchemaBinding_SchemaTypeOfMemberVarByAddr<CConstraintTarget, Quaternion>, SchemaBinding_SchemaTypeOfMemberVarByAddr<CConstraintTarget, Vector>, SchemaBinding_SchemaTypeOfMemberVarByAddr<CConstraintTarget, bool>, SchemaBinding_SchemaTypeOfMemberVarByAddr<CConstraintTarget, float>, SchemaBinding_SchemaTypeOfMemberVarByAddr<CConstraintTarget, unsigned int>, SetTypeScope
+// callers: CSchemaClassBinding<CConstraintTarget>::Register
+// globals: CConstraintTarget::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInit, CSchemaManipulator<Vector>::StaticAccessor(void)::m, CAtomicManipulator<Vector>::Get(void)::val, CSchemaManipulator<Quaternion>::StaticAccessor(void)::m, CAtomicManipulator<Quaternion>::Get(void)::val, CConstraintTarget::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSch
+CSchemaClassInfo *__fastcall CConstraintTarget::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        const char *pProjectName)
+{
+  CSchemaClassInfo *result; // rax
+  ISchemaSystemTypeScope *v4; // rbx
+  CSchemaType *v5; // rax
+
+  result = CConstraintTarget::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult;
+  if ( CConstraintTarget::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult == 0 )
+  {
+    v4 = (*(*pSchemaSystem + 112LL))(pSchemaSystem, 0, pBinaryName);
+    CConstraintTarget::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CConstraintTarget[0].m_pType = (*(*v4 + 40LL))(v4, 8);
+    CConstraintTarget::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CConstraintTarget[1].m_pType = (*(*v4 + 40LL))(v4, 11);
+    CConstraintTarget::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CConstraintTarget[2].m_pType = (*(*v4 + 56LL))(v4, "Vector", 2010, CAtomicManipulator<Vector>::Get(void)::val, CSchemaManipulator<Vector>::StaticAccessor(void)::m);
+    CConstraintTarget::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CConstraintTarget[3].m_pType = (*(*v4 + 56LL))(v4, "Quaternion", 2006, CAtomicManipulator<Quaternion>::Get(void)::val, &CSchemaManipulator<Quaternion>::StaticAccessor(void)::m);
+    v5 = (*(*v4 + 40LL))(v4, 13);
+    CConstraintTarget::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CConstraintTarget.m_pOuterTypeScope = v4;
+    CConstraintTarget::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CConstraintTarget[4].m_pType = v5;
+    CConstraintTarget::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult = &CConstraintTarget::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CConstraintTarget;
+    (*(*v4 + 264LL))(
+      v4,
+      &CConstraintTarget::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CConstraintTarget);
+    return CConstraintTarget::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult;
+  }
+  return result;
+}
+
+
+// CConstraintTarget::Schema_VerifyBindingIsRegistered  (line 61, @0x000000000317d590, libserver.so)
+void __cdecl CConstraintTarget::Schema_VerifyBindingIsRegistered()
+{
+  ;
+}
+
+
+// CConstraintTarget::KV3TransferSave  (line 69, @0x000000000317d830, libserver.so)
+// calls: CConstraintTarget::KV3TransferSave_CConstraintTarget
+void __fastcall CConstraintTarget::KV3TransferSave(
+        const CConstraintTarget *const this,
+        CKV3TransferSaveContext *pContext)
+{
+  CConstraintTarget::KV3TransferSave_CConstraintTarget(this, pContext);
+}
+
+
+// CConstraintTarget::KV3TransferSave_CConstraintTarget  (line 74, @0x000000000317d5a0, libserver.so)  // inlines: CreateTargetMember, SaveValue<Quaternion>, SaveValue<Vector>, SaveValue<bool>, SaveValue<float>, SaveValue<unsigned int>, SaveValueDirect<Quaternion>, SaveValueDirect<Vector>, SaveValueDirect<bool>, SaveValueDirect<float>, SaveValueDirect<unsigned int>, SaveValueToMember<Quaternion>, SaveValueToMember<Vector>, SaveValueToMember<bool>, SaveValueToMember<float>, SaveValueToMember<unsigned int>
+// calls: KeyValues3::FindMember, CKV3TransferContextBase::NoteFailure, KeyValues3::SetInt64, KeyValues3::SetFloat, KeyValues3::SetArrayElementCount, KeyValues3::GetArrayElement, KeyValues3::SetBool, KeyValues3::SetMemberToNull
+// callers: CConstraintTarget::KV3TransferSave, CKV3TransferSaveContext::SaveClassPointer<const CConstraintTarget>
+// strings: "m_nBoneHash", "Double-save to Member '%s'", "m_flWeight", "m_vOffset", "m_qOffset", "m_bIsAttachment"
+void __fastcall CConstraintTarget::KV3TransferSave_CConstraintTarget(
+        const CConstraintTarget *const this,
+        CKV3TransferSaveContext *pContext)
+{
+  KeyValues3 *Member; // rbx
+  KeyValues3 *v5; // rdi
+  KeyValues3 *v6; // rbx
+  double v7; // xmm1_8
+  KeyValues3 *v8; // rdi
+  KeyValues3 *v9; // r14
+  __int64 v10; // rbx
+  int v11; // esi
+  KeyValues3 *ArrayElement; // rax
+  double v13; // xmm1_8
+  KeyValues3 *v14; // r14
+  __int64 v15; // rbx
+  int v16; // esi
+  KeyValues3 *v17; // rax
+  double v18; // xmm1_8
+  KeyValues3 *v19; // rbx
+  KeyValues3 *v20; // rdi
+  double v21; // [rsp+8h] [rbp-38h]
+  double v22; // [rsp+8h] [rbp-38h]
+
+  Member = KeyValues3::FindMember(pContext->m_pTargetObject, "m_nBoneHash", 1010429867);
+  if ( Member != 0 )
+  {
+    CKV3TransferContextBase::NoteFailure(pContext, "Double-save to Member '%s'", "m_nBoneHash");
+    v5 = Member;
+  }
+  else
+  {
+    v5 = KeyValues3::SetMemberToNull(pContext->m_pTargetObject, "m_nBoneHash", 1010429867);
+  }
+  KeyValues3::SetInt64(v5, this->m_nBoneHash);
+  v6 = KeyValues3::FindMember(pContext->m_pTargetObject, "m_flWeight", 12942103);
+  if ( v6 != 0 )
+  {
+    CKV3TransferContextBase::NoteFailure(pContext, "Double-save to Member '%s'", "m_flWeight");
+    v8 = v6;
+  }
+  else
+  {
+    v8 = KeyValues3::SetMemberToNull(pContext->m_pTargetObject, "m_flWeight", 12942103);
+  }
+  KeyValues3::SetFloat(v8, this->m_flWeight, v7);
+  v9 = KeyValues3::FindMember(pContext->m_pTargetObject, "m_vOffset", -384881483);
+  if ( v9 != 0 )
+    CKV3TransferContextBase::NoteFailure(pContext, "Double-save to Member '%s'", "m_vOffset");
+  else
+    v9 = KeyValues3::SetMemberToNull(pContext->m_pTargetObject, "m_vOffset", -384881483);
+  v10 = 0;
+  KeyValues3::SetArrayElementCount(v9, 3);
+  do
+  {
+    v11 = v10;
+    v21 = *(&this->m_vOffset.x + v10++);
+    ArrayElement = KeyValues3::GetArrayElement(v9, v11);
+    KeyValues3::SetFloat(ArrayElement, v21, v13);
+  }
+  while ( v10 != 3 );
+  v14 = KeyValues3::FindMember(pContext->m_pTargetObject, "m_qOffset", -232329816);
+  if ( v14 != 0 )
+    CKV3TransferContextBase::NoteFailure(pContext, "Double-save to Member '%s'", "m_qOffset");
+  else
+    v14 = KeyValues3::SetMemberToNull(pContext->m_pTargetObject, "m_qOffset", -232329816);
+  v15 = 0;
+  KeyValues3::SetArrayElementCount(v14, 4);
+  do
+  {
+    v16 = v15;
+    v22 = *(&this->m_qOffset.x + v15++);
+    v17 = KeyValues3::GetArrayElement(v14, v16);
+    KeyValues3::SetFloat(v17, v22, v18);
+  }
+  while ( v15 != 4 );
+  v19 = KeyValues3::FindMember(pContext->m_pTargetObject, "m_bIsAttachment", 2092843767);
+  if ( v19 != 0 )
+  {
+    CKV3TransferContextBase::NoteFailure(pContext, "Double-save to Member '%s'", "m_bIsAttachment");
+    v20 = v19;
+  }
+  else
+  {
+    v20 = KeyValues3::SetMemberToNull(pContext->m_pTargetObject, "m_bIsAttachment", 2092843767);
+  }
+  KeyValues3::SetBool(v20, this->m_bIsAttachment);
+}
+
+
+// CConstraintTarget::KV3TransferLoad  (line 83, @0x000000000317e920, libserver.so)
+// calls: CConstraintTarget::KV3TransferLoad_CConstraintTarget
+void __fastcall CConstraintTarget::KV3TransferLoad(CConstraintTarget *const this, CKV3TransferLoadContext *pContext)
+{
+  CConstraintTarget::KV3TransferLoad_CConstraintTarget(this, pContext);
+}
+
+
+// CConstraintTarget::KV3TransferLoad_CConstraintTarget  (line 88, @0x000000000317e670, libserver.so)  // inlines: FindMember, FindSourceMember, LoadValue<Vector>, LoadValue<bool>, LoadValue<float>, LoadValue<unsigned int>, LoadValueDirect<Vector>, LoadValueDirect<bool>, LoadValueDirect<float>, LoadValueDirect<unsigned int>, LoadValueFromMember<Vector>, LoadValueFromMember<bool>, LoadValueFromMember<float>, LoadValueFromMember<unsigned int>
+// calls: KeyValues3::FindMember, KeyValues3::GetInt64, KeyValues3::GetFloat, KeyValues3::GetArrayElementCount, KeyValues3::GetArrayElement, CKV3TransferLoadContext::LoadValueFromMember<Quaternion>, KeyValues3::GetBool, KeyValues3::KeyValues3, KeyValues3::~KeyValues3, _Unwind_Resume, __stack_chk_fail
+// callers: CConstraintTarget::KV3TransferLoad, CBaseConstraint::KV3TransferLoad_CBaseConstraint
+// strings: "m_nBoneHash", "m_flWeight", "m_vOffset", "m_qOffset", "m_bIsAttachment"
+void __fastcall CConstraintTarget::KV3TransferLoad_CConstraintTarget(
+        CConstraintTarget *const this,
+        CKV3TransferLoadContext *pContext)
+{
+  KeyValues3 *Member; // rax
+  KeyValues3 *v5; // rax
+  Vector *p_m_vOffset; // r13
+  KeyValues3 *v7; // rax
+  const KeyValues3 *v8; // rbx
+  int v9; // r15d
+  int ArrayElementCount; // r12d
+  int v11; // esi
+  const KeyValues3 *ArrayElement; // rax
+  _DWORD *v13; // rax
+  KeyValues3 *v14; // rax
+  int v15; // ebx
+  int v16; // r13d
+  Vector *v17; // r12
+  const KeyValues3 *v18; // rax
+  _DWORD *v19; // rax
+  Vector *v20; // [rsp+0h] [rbp-60h]
+  KeyValues3 v22; // [rsp+10h] [rbp-50h] BYREF
+  unsigned __int64 v23; // [rsp+28h] [rbp-38h]
+
+  v23 = __readfsqword(0x28u);
+  Member = KeyValues3::FindMember(pContext->m_pSourceObject, "m_nBoneHash", 1010429867);
+  if ( Member != 0 )
+  {
+    this->m_nBoneHash = KeyValues3::GetInt64(Member);
+  }
+  else
+  {
+    KeyValues3::KeyValues3(&v22);
+    this->m_nBoneHash = KeyValues3::GetInt64(&v22);
+    KeyValues3::~KeyValues3(&v22);
+  }
+  v5 = KeyValues3::FindMember(pContext->m_pSourceObject, "m_flWeight", 12942103);
+  if ( v5 != 0 )
+  {
+    this->m_flWeight = KeyValues3::GetFloat(v5);
+  }
+  else
+  {
+    KeyValues3::KeyValues3(&v22);
+    this->m_flWeight = KeyValues3::GetFloat(&v22);
+    KeyValues3::~KeyValues3(&v22);
+  }
+  p_m_vOffset = &this->m_vOffset;
+  v20 = &this->m_vOffset;
+  v7 = KeyValues3::FindMember(pContext->m_pSourceObject, "m_vOffset", -384881483);
+  v8 = v7;
+  if ( v7 != 0 )
+  {
+    v9 = 0;
+    ArrayElementCount = KeyValues3::GetArrayElementCount(v7);
+    if ( ArrayElementCount <= 0 )
+      goto LABEL_11;
+    do
+    {
+      v11 = v9++;
+      ArrayElement = KeyValues3::GetArrayElement(v8, v11);
+      p_m_vOffset = (p_m_vOffset + 4);
+      p_m_vOffset[-1].z = KeyValues3::GetFloat(ArrayElement);
+    }
+    while ( ArrayElementCount > v9 && v9 <= 2 );
+    if ( v9 <= 2 )
+    {
+LABEL_11:
+      v13 = (&v20->x + v9);
+      do
+      {
+        ++v9;
+        *v13++ = 0;
+      }
+      while ( v9 <= 2 );
+    }
+  }
+  else
+  {
+    KeyValues3::KeyValues3(&v22);
+    v15 = 0;
+    v16 = KeyValues3::GetArrayElementCount(&v22);
+    v17 = &this->m_vOffset;
+    if ( v16 <= 0 )
+      goto LABEL_22;
+    do
+    {
+      v18 = KeyValues3::GetArrayElement(&v22, v15++);
+      v17->x = KeyValues3::GetFloat(v18);
+      v17 = (v17 + 4);
+    }
+    while ( v16 > v15 && v15 <= 2 );
+    if ( v15 <= 2 )
+    {
+LABEL_22:
+      v19 = (&v20->x + v15);
+      do
+      {
+        ++v15;
+        *v19++ = 0;
+      }
+      while ( v15 <= 2 );
+    }
+    KeyValues3::~KeyValues3(&v22);
+  }
+  CKV3TransferLoadContext::LoadValueFromMember<Quaternion>(pContext, "m_qOffset", -232329816, &this->m_qOffset);
+  v14 = KeyValues3::FindMember(pContext->m_pSourceObject, "m_bIsAttachment", 2092843767);
+  if ( v14 != 0 )
+  {
+    this->m_bIsAttachment = KeyValues3::GetBool(v14);
+  }
+  else
+  {
+    KeyValues3::KeyValues3(&v22);
+    this->m_bIsAttachment = KeyValues3::GetBool(&v22);
+    KeyValues3::~KeyValues3(&v22);
+  }
+}
+
+
+// CConstraintSlave::Schema_CompileTimeVerificationFunction  (line 103, @0x000000000317d840, libserver.so)
+void __fastcall CConstraintSlave::Schema_CompileTimeVerificationFunction(CConstraintSlave *const this)
+{
+  ;
+}
+
+
+// CConstraintSlave::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE  (line 110, @0x000000000317d850, libserver.so)  // inlines: Get, SchemaBinding_SchemaTypeOfMemberVarByAddr<CConstraintSlave, Quaternion>, SchemaBinding_SchemaTypeOfMemberVarByAddr<CConstraintSlave, Vector>, SchemaBinding_SchemaTypeOfMemberVarByAddr<CConstraintSlave, float>, SchemaBinding_SchemaTypeOfMemberVarByAddr<CConstraintSlave, unsigned int>, SetTypeScope
+// callers: CSchemaClassBinding<CConstraintSlave>::Register
+// globals: CConstraintSlave::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pIniti, CSchemaManipulator<Vector>::StaticAccessor(void)::m, CAtomicManipulator<Vector>::Get(void)::val, CSchemaManipulator<Quaternion>::StaticAccessor(void)::m, CAtomicManipulator<Quaternion>::Get(void)::val, CConstraintSlave::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSche
+CSchemaClassInfo *__fastcall CConstraintSlave::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        const char *pProjectName)
+{
+  CSchemaClassInfo *result; // rax
+  ISchemaSystemTypeScope *v4; // rbx
+  CSchemaType *v5; // rax
+
+  result = CConstraintSlave::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult;
+  if ( CConstraintSlave::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult == 0 )
+  {
+    v4 = (*(*pSchemaSystem + 112LL))(pSchemaSystem, 0, pBinaryName);
+    CConstraintSlave::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CConstraintSlave[0].m_pType = (*(*v4 + 40LL))(v4, 8);
+    CConstraintSlave::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CConstraintSlave[1].m_pType = (*(*v4 + 40LL))(v4, 11);
+    CConstraintSlave::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CConstraintSlave[2].m_pType = (*(*v4 + 56LL))(v4, "Vector", 2010, CAtomicManipulator<Vector>::Get(void)::val, CSchemaManipulator<Vector>::StaticAccessor(void)::m);
+    v5 = (*(*v4 + 56LL))(
+           v4,
+           "Quaternion",
+           2006,
+           CAtomicManipulator<Quaternion>::Get(void)::val,
+           &CSchemaManipulator<Quaternion>::StaticAccessor(void)::m);
+    CConstraintSlave::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CConstraintSlave.m_pOuterTypeScope = v4;
+    CConstraintSlave::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CConstraintSlave[3].m_pType = v5;
+    CConstraintSlave::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult = &CConstraintSlave::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CConstraintSlave;
+    (*(*v4 + 264LL))(
+      v4,
+      &CConstraintSlave::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CConstraintSlave);
+    return CConstraintSlave::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult;
+  }
+  return result;
+}
+
+
+// CConstraintSlave::Schema_VerifyBindingIsRegistered  (line 128, @0x000000000317d930, libserver.so)
+void __cdecl CConstraintSlave::Schema_VerifyBindingIsRegistered()
+{
+  ;
+}
+
+
+// CConstraintSlave::KV3TransferSave  (line 136, @0x000000000317db80, libserver.so)
+// calls: CConstraintSlave::KV3TransferSave_CConstraintSlave
+void __fastcall CConstraintSlave::KV3TransferSave(
+        const CConstraintSlave *const this,
+        CKV3TransferSaveContext *pContext)
+{
+  CConstraintSlave::KV3TransferSave_CConstraintSlave(this, pContext);
+}
+
+
+// CConstraintSlave::KV3TransferSave_CConstraintSlave  (line 141, @0x000000000317d940, libserver.so)  // inlines: CreateTargetMember, SaveValue<Quaternion>, SaveValue<Vector>, SaveValue<float>, SaveValue<unsigned int>, SaveValueDirect<Quaternion>, SaveValueDirect<Vector>, SaveValueDirect<float>, SaveValueDirect<unsigned int>, SaveValueToMember<Quaternion>, SaveValueToMember<Vector>, SaveValueToMember<float>, SaveValueToMember<unsigned int>
+// calls: KeyValues3::FindMember, CKV3TransferContextBase::NoteFailure, KeyValues3::SetInt64, KeyValues3::SetFloat, KeyValues3::SetArrayElementCount, KeyValues3::GetArrayElement, KeyValues3::SetMemberToNull
+// callers: CConstraintSlave::KV3TransferSave, CKV3TransferSaveContext::SaveClassPointer<const CConstraintSlave>
+// strings: "m_nBoneHash", "Double-save to Member '%s'", "m_flWeight", "m_vBasePosition", "m_qBaseOrientation"
+void __fastcall CConstraintSlave::KV3TransferSave_CConstraintSlave(
+        const CConstraintSlave *const this,
+        CKV3TransferSaveContext *pContext)
+{
+  KeyValues3 *Member; // rbx
+  KeyValues3 *v5; // rdi
+  KeyValues3 *v6; // rbx
+  double v7; // xmm1_8
+  KeyValues3 *v8; // rdi
+  KeyValues3 *v9; // r14
+  __int64 v10; // rbx
+  int v11; // esi
+  KeyValues3 *ArrayElement; // rax
+  double v13; // xmm1_8
+  Quaternion *p_m_qBaseOrientation; // r13
+  KeyValues3 *v15; // rbx
+  CKV3TransferSaveContext *v16; // rdi
+  KeyValues3 *v17; // r12
+  __int64 v18; // rbx
+  int v19; // esi
+  KeyValues3 *v20; // rax
+  double v21; // xmm1_8
+  double v22; // [rsp+8h] [rbp-38h]
+  double v23; // [rsp+8h] [rbp-38h]
+
+  Member = KeyValues3::FindMember(pContext->m_pTargetObject, "m_nBoneHash", 1010429867);
+  if ( Member != 0 )
+  {
+    CKV3TransferContextBase::NoteFailure(pContext, "Double-save to Member '%s'", "m_nBoneHash");
+    v5 = Member;
+  }
+  else
+  {
+    v5 = KeyValues3::SetMemberToNull(pContext->m_pTargetObject, "m_nBoneHash", 1010429867);
+  }
+  KeyValues3::SetInt64(v5, this->m_nBoneHash);
+  v6 = KeyValues3::FindMember(pContext->m_pTargetObject, "m_flWeight", 12942103);
+  if ( v6 != 0 )
+  {
+    CKV3TransferContextBase::NoteFailure(pContext, "Double-save to Member '%s'", "m_flWeight");
+    v8 = v6;
+  }
+  else
+  {
+    v8 = KeyValues3::SetMemberToNull(pContext->m_pTargetObject, "m_flWeight", 12942103);
+  }
+  KeyValues3::SetFloat(v8, this->m_flWeight, v7);
+  v9 = KeyValues3::FindMember(pContext->m_pTargetObject, "m_vBasePosition", 1841828252);
+  if ( v9 != 0 )
+    CKV3TransferContextBase::NoteFailure(pContext, "Double-save to Member '%s'", "m_vBasePosition");
+  else
+    v9 = KeyValues3::SetMemberToNull(pContext->m_pTargetObject, "m_vBasePosition", 1841828252);
+  v10 = 0;
+  KeyValues3::SetArrayElementCount(v9, 3);
+  do
+  {
+    v11 = v10;
+    v22 = *(&this->m_vBasePosition.x + v10++);
+    ArrayElement = KeyValues3::GetArrayElement(v9, v11);
+    KeyValues3::SetFloat(ArrayElement, v22, v13);
+  }
+  while ( v10 != 3 );
+  p_m_qBaseOrientation = &this->m_qBaseOrientation;
+  v15 = KeyValues3::FindMember(pContext->m_pTargetObject, "m_qBaseOrientation", -2112844988);
+  if ( v15 != 0 )
+  {
+    v16 = pContext;
+    v17 = v15;
+    CKV3TransferContextBase::NoteFailure(v16, "Double-save to Member '%s'", "m_qBaseOrientation");
+  }
+  else
+  {
+    v17 = KeyValues3::SetMemberToNull(pContext->m_pTargetObject, "m_qBaseOrientation", -2112844988);
+  }
+  v18 = 0;
+  KeyValues3::SetArrayElementCount(v17, 4);
+  do
+  {
+    v19 = v18;
+    v23 = *(&p_m_qBaseOrientation->x + v18++);
+    v20 = KeyValues3::GetArrayElement(v17, v19);
+    KeyValues3::SetFloat(v20, v23, v21);
+  }
+  while ( v18 != 4 );
+}
+
+
+// CConstraintSlave::KV3TransferLoad  (line 149, @0x000000000317def0, libserver.so)
+// calls: CConstraintSlave::KV3TransferLoad_CConstraintSlave
+void __fastcall CConstraintSlave::KV3TransferLoad(CConstraintSlave *const this, CKV3TransferLoadContext *pContext)
+{
+  CConstraintSlave::KV3TransferLoad_CConstraintSlave(this, pContext);
+}
+
+
+// CConstraintSlave::KV3TransferLoad_CConstraintSlave  (line 154, @0x000000000317db90, libserver.so)  // inlines: FindMember, FindSourceMember, LoadValue<Quaternion>, LoadValue<Vector>, LoadValue<float>, LoadValue<unsigned int>, LoadValueDirect<Quaternion>, LoadValueDirect<Vector>, LoadValueDirect<float>, LoadValueDirect<unsigned int>, LoadValueFromMember<Quaternion>, LoadValueFromMember<Vector>, LoadValueFromMember<float>, LoadValueFromMember<unsigned int>
+// calls: KeyValues3::FindMember, KeyValues3::GetInt64, KeyValues3::GetFloat, KeyValues3::GetArrayElementCount, KeyValues3::GetArrayElement, KeyValues3::KeyValues3, KeyValues3::~KeyValues3, _Unwind_Resume, __stack_chk_fail
+// callers: CConstraintSlave::KV3TransferLoad, CBaseConstraint::KV3TransferLoad_CBaseConstraint
+// strings: "m_nBoneHash", "m_flWeight", "m_vBasePosition", "m_qBaseOrientation"
+void __fastcall CConstraintSlave::KV3TransferLoad_CConstraintSlave(
+        CConstraintSlave *const this,
+        CKV3TransferLoadContext *pContext)
+{
+  KeyValues3 *Member; // rax
+  KeyValues3 *v5; // rax
+  Vector *p_m_vBasePosition; // r15
+  KeyValues3 *v7; // rax
+  const KeyValues3 *v8; // rbx
+  int v9; // r13d
+  int ArrayElementCount; // r12d
+  int v11; // esi
+  const KeyValues3 *ArrayElement; // rax
+  _DWORD *v13; // rax
+  KeyValues3 *v14; // rax
+  Quaternion *p_m_qBaseOrientation; // r15
+  const KeyValues3 *v16; // r13
+  int v17; // ebx
+  Quaternion *v18; // r12
+  int v19; // r14d
+  int v20; // esi
+  const KeyValues3 *v21; // rax
+  _DWORD *v22; // rax
+  int v23; // ebx
+  int v24; // r14d
+  Quaternion *v25; // r13
+  const KeyValues3 *v26; // rax
+  _DWORD *v27; // rax
+  int v28; // ebx
+  int v29; // r15d
+  Vector *v30; // r13
+  const KeyValues3 *v31; // rax
+  _DWORD *v32; // rax
+  Vector *v33; // [rsp+0h] [rbp-60h]
+  KeyValues3 v35; // [rsp+10h] [rbp-50h] BYREF
+  unsigned __int64 v36; // [rsp+28h] [rbp-38h]
+
+  v36 = __readfsqword(0x28u);
+  Member = KeyValues3::FindMember(pContext->m_pSourceObject, "m_nBoneHash", 1010429867);
+  if ( Member != 0 )
+  {
+    this->m_nBoneHash = KeyValues3::GetInt64(Member);
+  }
+  else
+  {
+    KeyValues3::KeyValues3(&v35);
+    this->m_nBoneHash = KeyValues3::GetInt64(&v35);
+    KeyValues3::~KeyValues3(&v35);
+  }
+  v5 = KeyValues3::FindMember(pContext->m_pSourceObject, "m_flWeight", 12942103);
+  if ( v5 != 0 )
+  {
+    this->m_flWeight = KeyValues3::GetFloat(v5);
+  }
+  else
+  {
+    KeyValues3::KeyValues3(&v35);
+    this->m_flWeight = KeyValues3::GetFloat(&v35);
+    KeyValues3::~KeyValues3(&v35);
+  }
+  p_m_vBasePosition = &this->m_vBasePosition;
+  v33 = &this->m_vBasePosition;
+  v7 = KeyValues3::FindMember(pContext->m_pSourceObject, "m_vBasePosition", 1841828252);
+  v8 = v7;
+  if ( v7 != 0 )
+  {
+    v9 = 0;
+    ArrayElementCount = KeyValues3::GetArrayElementCount(v7);
+    if ( ArrayElementCount <= 0 )
+      goto LABEL_11;
+    do
+    {
+      v11 = v9++;
+      ArrayElement = KeyValues3::GetArrayElement(v8, v11);
+      p_m_vBasePosition = (p_m_vBasePosition + 4);
+      p_m_vBasePosition[-1].z = KeyValues3::GetFloat(ArrayElement);
+    }
+    while ( ArrayElementCount > v9 && v9 <= 2 );
+    if ( v9 <= 2 )
+    {
+LABEL_11:
+      v13 = (&v33->x + v9);
+      do
+      {
+        ++v9;
+        *v13++ = 0;
+      }
+      while ( v9 <= 2 );
+    }
+  }
+  else
+  {
+    KeyValues3::KeyValues3(&v35);
+    v28 = 0;
+    v29 = KeyValues3::GetArrayElementCount(&v35);
+    v30 = &this->m_vBasePosition;
+    if ( v29 <= 0 )
+      goto LABEL_36;
+    do
+    {
+      v31 = KeyValues3::GetArrayElement(&v35, v28++);
+      v30->x = KeyValues3::GetFloat(v31);
+      v30 = (v30 + 4);
+    }
+    while ( v29 > v28 && v28 <= 2 );
+    if ( v28 <= 2 )
+    {
+LABEL_36:
+      v32 = (&v33->x + v28);
+      do
+      {
+        ++v28;
+        *v32++ = 0;
+      }
+      while ( v28 <= 2 );
+    }
+    KeyValues3::~KeyValues3(&v35);
+  }
+  v14 = KeyValues3::FindMember(pContext->m_pSourceObject, "m_qBaseOrientation", -2112844988);
+  p_m_qBaseOrientation = &this->m_qBaseOrientation;
+  v16 = v14;
+  if ( v14 != 0 )
+  {
+    v17 = 0;
+    v18 = &this->m_qBaseOrientation;
+    v19 = KeyValues3::GetArrayElementCount(v14);
+    if ( v19 <= 0 )
+      goto LABEL_19;
+    do
+    {
+      v20 = v17++;
+      v21 = KeyValues3::GetArrayElement(v16, v20);
+      v18 = (v18 + 4);
+      v18[-1].w = KeyValues3::GetFloat(v21);
+    }
+    while ( v19 > v17 && v17 <= 3 );
+    if ( v17 <= 3 )
+    {
+LABEL_19:
+      v22 = (&p_m_qBaseOrientation->x + v17);
+      do
+      {
+        ++v17;
+        *v22++ = 0;
+      }
+      while ( v17 <= 3 );
+    }
+  }
+  else
+  {
+    KeyValues3::KeyValues3(&v35);
+    v23 = 0;
+    v24 = KeyValues3::GetArrayElementCount(&v35);
+    v25 = &this->m_qBaseOrientation;
+    if ( v24 <= 0 )
+      goto LABEL_28;
+    do
+    {
+      v26 = KeyValues3::GetArrayElement(&v35, v23++);
+      v25->x = KeyValues3::GetFloat(v26);
+      v25 = (v25 + 4);
+    }
+    while ( v24 > v23 && v23 <= 3 );
+    if ( v23 <= 3 )
+    {
+LABEL_28:
+      v27 = (&p_m_qBaseOrientation->x + v23);
+      do
+      {
+        ++v23;
+        *v27++ = 0;
+      }
+      while ( v23 <= 3 );
+    }
+    KeyValues3::~KeyValues3(&v35);
+  }
+}
+
+
+// CBaseConstraint::Schema_CompileTimeVerificationFunction  (line 168, @0x000000000317df00, libserver.so)
+void __fastcall CBaseConstraint::Schema_CompileTimeVerificationFunction(CBaseConstraint *const this)
+{
+  ;
+}
+
+
+// CBaseConstraint::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE  (line 175, @0x000000000317d2b0, libserver.so)  // inlines: Get, SchemaBinding_SchemaTypeOfMemberVarByAddr<CBaseConstraint, CUtlString>, SchemaBinding_SchemaTypeOfMemberVarByAddr<CBaseConstraint, CUtlVector<CConstraintSlave> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<CBaseConstraint, CUtlVector<CConstraintTarget> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<CBaseConstraint, Vector>, SetTypeScope
+// callers: CSchemaNonConstructibleClassBinding<CBaseConstraint>::Register, CBaseConstraint::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE, CPointConstraint::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE, COrientConstraint::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE, CAimConstraint::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE, CTwistConstraint::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE, CTiltTwistConstraint::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE, CMorphConstraint::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE
+// strings: "CUtlString", "CConstraintSlave", "CUtlVector", "CConstraintTarget"
+// globals: CSchemaManipulator<CUtlString>::StaticAccessor(void)::m, CAtomicManipulator<CUtlString>::Get(void)::val, CSchemaManipulator<Vector>::StaticAccessor(void)::m, CAtomicManipulator<Vector>::Get(void)::val, CSchemaManipulator<CUtlVector<CConstraintSlave,CUtlMemory<CConstraintSlave,int>>>::StaticAccessor(void)::m, CAtomicManipulator<CUtlVector<CConstraintSlave,CUtlMemory<CConstraintSlave,int>>>::Get(void)::val, CSchemaManipulator<CUtlVector<CConstraintTarget,CUtlMemory<CConstraintTarget,int>>>::StaticAccessor(void)::m, CAtomicManipulator<CUtlVector<CConstraintTarget,CUtlMemory<CConstraintTarget,int>>>::Get(void)::val (10 total)
+CSchemaClassInfo *__fastcall CBaseConstraint::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        const char *pProjectName)
+{
+  ISchemaSystemTypeScope *v3; // rbx
+  __int64 (__fastcall *v4)(ISchemaSystemTypeScope *, const char *, __int64, __int64 (__fastcall ***)(), __int64 (__fastcall ***)(), __int64); // r12
+  __int64 v5; // rax
+  __int64 (__fastcall *v6)(ISchemaSystemTypeScope *, const char *, __int64, __int64 (__fastcall ***)(), __int64 (__fastcall ***)(), __int64); // r12
+  __int64 v7; // rax
+  CSchemaType *v8; // rax
+  __int64 v9; // rax
+
+  v3 = (*(*pSchemaSystem + 112LL))(pSchemaSystem, 0, pBinaryName);
+  CBaseConstraint::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CBaseConstraint[0].m_pType = (*(*v3 + 56LL))(v3, "CUtlString", 3003, CAtomicManipulator<CUtlString>::Get(void)::val, CSchemaManipulator<CUtlString>::StaticAccessor(void)::m);
+  CBaseConstraint::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CBaseConstraint[1].m_pType = (*(*v3 + 56LL))(v3, "Vector", 2010, CAtomicManipulator<Vector>::Get(void)::val, CSchemaManipulator<Vector>::StaticAccessor(void)::m);
+  v4 = *(*v3 + 64LL);
+  v5 = (*(*v3 + 88LL))(v3, "CConstraintSlave");
+  CBaseConstraint::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CBaseConstraint[2].m_pType = v4(v3, "CUtlVector", 3002, &CAtomicManipulator<CUtlVector<CConstraintSlave,CUtlMemory<CConstraintSlave,int>>>::Get(void)::val, CSchemaManipulator<CUtlVector<CConstraintSlave,CUtlMemory<CConstraintSlave,int>>>::StaticAccessor(void)::m, v5);
+  v6 = *(*v3 + 64LL);
+  v7 = (*(*v3 + 88LL))(v3, "CConstraintTarget");
+  v8 = v6(
+         v3,
+         "CUtlVector",
+         3002,
+         &CAtomicManipulator<CUtlVector<CConstraintTarget,CUtlMemory<CConstraintTarget,int>>>::Get(void)::val,
+         CSchemaManipulator<CUtlVector<CConstraintTarget,CUtlMemory<CConstraintTarget,int>>>::StaticAccessor(void)::m,
+         v7);
+  CBaseConstraint::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CBaseConstraint.m_pOuterTypeScope = v3;
+  CBaseConstraint::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CBaseConstraint[3].m_pType = v8;
+  v9 = *v3;
+  CBaseConstraint::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult = &CBaseConstraint::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CBaseConstraint;
+  (*(v9 + 264))(v3);
+  return CBaseConstraint::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult;
+}
+
+
+// CBaseConstraint::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE  (line 175, @0x000000000317df10, libserver.so)
+// calls: CBaseConstraint::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE
+// globals: CBaseConstraint::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitia
+CSchemaClassInfo *__fastcall CBaseConstraint::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        const char *pProjectName)
+{
+  CSchemaClassInfo *result; // rax
+
+  result = CBaseConstraint::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult;
+  if ( CBaseConstraint::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult == 0 )
+    return CBaseConstraint::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+             pSchemaSystem,
+             pBinaryName,
+             pProjectName);
+  return result;
+}
+
+
+// CBaseConstraint::Schema_VerifyBindingIsRegistered  (line 193, @0x000000000317df30, libserver.so)
+// callers: CKV3TransferValHelper<CUtlVector<CBaseConstraint*, CUtlMemory<CBaseConstraint*, int> > >::SaveValue<CUtlVector<CBaseConstraint*> >
+void __cdecl CBaseConstraint::Schema_VerifyBindingIsRegistered()
+{
+  ;
+}
+
+
+// CBaseConstraint::KV3TransferSave  (line 201, @0x000000000317ebe0, libserver.so)
+// calls: CBaseConstraint::KV3TransferSave_CBaseConstraint
+void __fastcall CBaseConstraint::KV3TransferSave(const CBaseConstraint *const this, CKV3TransferSaveContext *pContext)
+{
+  CBaseConstraint::KV3TransferSave_CBaseConstraint(this, pContext);
+}
+
+
+// CBaseConstraint::KV3TransferSave_CBaseConstraint  (line 206, @0x000000000317e930, libserver.so)  // inlines: CreateTargetMember, SaveValue<CConstraintSlave>, SaveValue<CConstraintTarget>, SaveValue<CUtlString>, SaveValue<CUtlVector<CConstraintSlave> >, SaveValue<CUtlVector<CConstraintTarget> >, SaveValue<Vector>, SaveValueDirect<CConstraintSlave>, SaveValueDirect<CConstraintTarget>, SaveValueDirect<CUtlString>, SaveValueDirect<CUtlVector<CConstraintSlave> >, SaveValueDirect<CUtlVector<CConstraintTarget> >, SaveValueDirect<Vector>, SaveValueToMember<CUtlString>, SaveValueToMember<CUtlVector<CConstraintSlave> >, SaveValueToMember<CUtlVector<CConstraintTarget> >, SaveValueToMember<Vector>, operator[]
+// calls: KeyValues3::FindMember, CKV3TransferContextBase::NoteFailure, CUtlString::Get, KeyValues3::SetString, KeyValues3::SetArrayElementCount, KeyValues3::GetArrayElement, KeyValues3::SetFloat, CKV3TransferSaveContext::SaveClassPointer<const CConstraintSlave>, CKV3TransferSaveContext::SaveClassPointer<const CConstraintTarget>, KeyValues3::SetMemberToNull
+// callers: CBaseConstraint::KV3TransferSave, CPointConstraint::KV3TransferSave_CPointConstraint, CPointConstraint::KV3TransferSave, COrientConstraint::KV3TransferSave_COrientConstraint, COrientConstraint::KV3TransferSave, CAimConstraint::KV3TransferSave_CAimConstraint, CTwistConstraint::KV3TransferSave_CTwistConstraint, CTiltTwistConstraint::KV3TransferSave_CTiltTwistConstraint, CMorphConstraint::KV3TransferSave_CMorphConstraint
+// strings: "Double-save to Member '%s'", "m_vUpVector", "m_slaves"
+void __fastcall CBaseConstraint::KV3TransferSave_CBaseConstraint(
+        const CBaseConstraint *const this,
+        CKV3TransferSaveContext *pContext)
+{
+  CUtlString *p_m_name; // r14
+  KeyValues3 *Member; // rbx
+  const char *v6; // rax
+  KeyValues3 *v7; // r14
+  __int64 v8; // rbx
+  int v9; // esi
+  KeyValues3 *ArrayElement; // rax
+  double v11; // xmm1_8
+  KeyValues3 *v12; // rbx
+  int m_Size; // ebx
+  __int64 v14; // rbx
+  int v15; // r15d
+  int v16; // esi
+  KeyValues3 *v17; // rax
+  CConstraintSlave *v18; // rdx
+  KeyValues3 *v19; // rbx
+  int v20; // ebx
+  __int64 v21; // rbx
+  int v22; // r15d
+  int v23; // esi
+  KeyValues3 *v24; // rax
+  CConstraintSlave *v25; // rdx
+  int v26; // [rsp+4h] [rbp-4Ch]
+  int v27; // [rsp+4h] [rbp-4Ch]
+  double v28; // [rsp+8h] [rbp-48h]
+  KeyValues3 *v29; // [rsp+8h] [rbp-48h]
+  KeyValues3 *v30; // [rsp+8h] [rbp-48h]
+  CConstraintSlave *pClassInstance[7]; // [rsp+18h] [rbp-38h] BYREF
+
+  p_m_name = &this->m_name;
+  Member = KeyValues3::FindMember(pContext->m_pTargetObject, "m_name", -1987399468);
+  if ( Member != 0 )
+    CKV3TransferContextBase::NoteFailure(pContext, "Double-save to Member '%s'", "m_name");
+  else
+    Member = KeyValues3::SetMemberToNull(pContext->m_pTargetObject, "m_name", -1987399468);
+  v6 = CUtlString::Get(p_m_name);
+  KeyValues3::SetString(Member, v6);
+  v7 = KeyValues3::FindMember(pContext->m_pTargetObject, "m_vUpVector", -920810505);
+  if ( v7 != 0 )
+    CKV3TransferContextBase::NoteFailure(pContext, "Double-save to Member '%s'", "m_vUpVector");
+  else
+    v7 = KeyValues3::SetMemberToNull(pContext->m_pTargetObject, "m_vUpVector", -920810505);
+  v8 = 0;
+  KeyValues3::SetArrayElementCount(v7, 3);
+  do
+  {
+    v9 = v8;
+    v28 = *(&this->m_vUpVector.x + v8++);
+    ArrayElement = KeyValues3::GetArrayElement(v7, v9);
+    KeyValues3::SetFloat(ArrayElement, v28, v11);
+  }
+  while ( v8 != 3 );
+  v12 = KeyValues3::FindMember(pContext->m_pTargetObject, "m_slaves", 1828035002);
+  if ( v12 != 0 )
+  {
+    CKV3TransferContextBase::NoteFailure(pContext, "Double-save to Member '%s'", "m_slaves");
+    v29 = v12;
+  }
+  else
+  {
+    v29 = KeyValues3::SetMemberToNull(pContext->m_pTargetObject, "m_slaves", 1828035002);
+  }
+  m_Size = this->m_slaves.m_Size;
+  v26 = m_Size;
+  KeyValues3::SetArrayElementCount(v29, m_Size);
+  if ( m_Size > 0 )
+  {
+    v14 = 0;
+    v15 = 0;
+    do
+    {
+      v16 = v15++;
+      v17 = KeyValues3::GetArrayElement(v29, v16);
+      v18 = &this->m_slaves.m_Memory.m_pMemory[v14++];
+      pClassInstance[0] = v18;
+      CKV3TransferSaveContext::SaveClassPointer<CConstraintSlave const>(pContext, pClassInstance, v17);
+    }
+    while ( v15 != v26 );
+  }
+  v19 = KeyValues3::FindMember(pContext->m_pTargetObject, "m_targets", 6273742);
+  if ( v19 != 0 )
+  {
+    CKV3TransferContextBase::NoteFailure(pContext, "Double-save to Member '%s'", "m_targets");
+    v30 = v19;
+  }
+  else
+  {
+    v30 = KeyValues3::SetMemberToNull(pContext->m_pTargetObject, "m_targets", 6273742);
+  }
+  v20 = this->m_targets.m_Size;
+  v27 = v20;
+  KeyValues3::SetArrayElementCount(v30, v20);
+  if ( v20 > 0 )
+  {
+    v21 = 0;
+    v22 = 0;
+    do
+    {
+      v23 = v22++;
+      v24 = KeyValues3::GetArrayElement(v30, v23);
+      v25 = &this->m_targets.m_Memory.m_pMemory[v21++];
+      pClassInstance[0] = v25;
+      CKV3TransferSaveContext::SaveClassPointer<CConstraintTarget const>(pContext, pClassInstance, v24);
+    }
+    while ( v22 != v27 );
+  }
+}
+
+
+// CBaseConstraint::KV3TransferLoad  (line 214, @0x000000000317f730, libserver.so)
+// calls: CBaseConstraint::KV3TransferLoad_CBaseConstraint
+void __fastcall CBaseConstraint::KV3TransferLoad(CBaseConstraint *const this, CKV3TransferLoadContext *pContext)
+{
+  CBaseConstraint::KV3TransferLoad_CBaseConstraint(this, pContext);
+}
+
+
+// CBaseConstraint::KV3TransferLoad_CBaseConstraint  (line 219, @0x000000000317f300, libserver.so)  // inlines: FindMember, FindSourceMember, KV3TransferLoad, LoadClassInstance<CConstraintSlave>, LoadClassInstance<CConstraintTarget>, LoadValue<CConstraintSlave>, LoadValue<CConstraintTarget>, LoadValue<CUtlString>, LoadValue<CUtlVector<CConstraintSlave> >, LoadValue<CUtlVector<CConstraintTarget> >, LoadValue<Vector>, LoadValueDirect<CConstraintSlave>, LoadValueDirect<CConstraintTarget>, LoadValueDirect<CUtlString>, LoadValueDirect<CUtlVector<CConstraintSlave> >, LoadValueDirect<CUtlVector<CConstraintTarget> >, LoadValueDirect<Vector>, LoadValueFromMember<CUtlString>, LoadValueFromMember<CUtlVector<CConstraintSlave> >, LoadValueFromMember<CUtlVector<CConstraintTarget> >, LoadValueFromMember<Vector>, operator[]
+// calls: KeyValues3::FindMember, KeyValues3::GetString, KeyValues3::GetArrayElementCount, KeyValues3::GetArrayElement, KeyValues3::GetFloat, CUtlVectorBase<CConstraintSlave, CUtlMemory<CConstraintSlave, int> >::SetCount, CKV3TransferLoadContext::PushSource, CConstraintSlave::KV3TransferLoad_CConstraintSlave, CKV3TransferLoadContext::PopSource, CUtlVectorBase<CConstraintTarget, CUtlMemory<CConstraintTarget, int> >::SetCount, CConstraintTarget::KV3TransferLoad_CConstraintTarget, KeyValues3::KeyValues3 (15 total)
+// callers: CBaseConstraint::KV3TransferLoad, CPointConstraint::KV3TransferLoad_CPointConstraint, CPointConstraint::KV3TransferLoad, COrientConstraint::KV3TransferLoad_COrientConstraint, COrientConstraint::KV3TransferLoad, CAimConstraint::KV3TransferLoad_CAimConstraint, CTwistConstraint::KV3TransferLoad_CTwistConstraint, CTiltTwistConstraint::KV3TransferLoad_CTiltTwistConstraint, CMorphConstraint::KV3TransferLoad_CMorphConstraint
+// strings: "m_vUpVector", "m_slaves"
+void __fastcall CBaseConstraint::KV3TransferLoad_CBaseConstraint(
+        CBaseConstraint *const this,
+        CKV3TransferLoadContext *pContext)
+{
+  CUtlString *p_m_name; // r14
+  KeyValues3 *Member; // rax
+  Vector *p_m_vUpVector; // r14
+  KeyValues3 *v7; // rax
+  const KeyValues3 *v8; // r13
+  int v9; // r15d
+  int v10; // esi
+  const KeyValues3 *ArrayElement; // rax
+  _DWORD *v12; // rax
+  KeyValues3 *v13; // rax
+  __int64 v14; // r13
+  int v15; // r15d
+  int v16; // esi
+  __int64 v17; // r14
+  const KeyValues3 *v18; // rax
+  CConstraintSlave *v19; // r14
+  KeyValues3 *v20; // rax
+  __int64 v21; // r13
+  int v22; // r15d
+  int v23; // esi
+  __int64 v24; // r14
+  const KeyValues3 *v25; // rax
+  CConstraintTarget *v26; // r14
+  __int64 v27; // r15
+  int v28; // r14d
+  const KeyValues3 *v29; // rax
+  __int64 v30; // r15
+  int v31; // r14d
+  const KeyValues3 *v32; // rax
+  int v33; // r14d
+  Vector *v34; // r15
+  const KeyValues3 *v35; // rax
+  _DWORD *v36; // rax
+  Vector *v37; // [rsp+0h] [rbp-60h]
+  int v38; // [rsp+0h] [rbp-60h]
+  int v39; // [rsp+0h] [rbp-60h]
+  int v40; // [rsp+0h] [rbp-60h]
+  int v41; // [rsp+0h] [rbp-60h]
+  int ArrayElementCount; // [rsp+8h] [rbp-58h]
+  KeyValues3 *v43; // [rsp+8h] [rbp-58h]
+  KeyValues3 *v44; // [rsp+8h] [rbp-58h]
+  CConstraintTarget *v45; // [rsp+8h] [rbp-58h]
+  CConstraintSlave *v46; // [rsp+8h] [rbp-58h]
+  int v47; // [rsp+8h] [rbp-58h]
+  KeyValues3 v48; // [rsp+10h] [rbp-50h] BYREF
+  unsigned __int64 v49; // [rsp+28h] [rbp-38h]
+
+  p_m_name = &this->m_name;
+  v49 = __readfsqword(0x28u);
+  Member = KeyValues3::FindMember(pContext->m_pSourceObject, "m_name", -1987399468);
+  if ( Member != 0 )
+  {
+    KeyValues3::GetString(Member, p_m_name);
+  }
+  else
+  {
+    KeyValues3::KeyValues3(&v48);
+    KeyValues3::GetString(&v48, p_m_name);
+    KeyValues3::~KeyValues3(&v48);
+  }
+  p_m_vUpVector = &this->m_vUpVector;
+  v37 = &this->m_vUpVector;
+  v7 = KeyValues3::FindMember(pContext->m_pSourceObject, "m_vUpVector", -920810505);
+  v8 = v7;
+  if ( v7 != 0 )
+  {
+    v9 = 0;
+    ArrayElementCount = KeyValues3::GetArrayElementCount(v7);
+    if ( ArrayElementCount <= 0 )
+      goto LABEL_9;
+    do
+    {
+      v10 = v9++;
+      ArrayElement = KeyValues3::GetArrayElement(v8, v10);
+      p_m_vUpVector = (p_m_vUpVector + 4);
+      p_m_vUpVector[-1].z = KeyValues3::GetFloat(ArrayElement);
+    }
+    while ( ArrayElementCount > v9 && v9 <= 2 );
+    if ( v9 <= 2 )
+    {
+LABEL_9:
+      v12 = (&v37->x + v9);
+      do
+      {
+        ++v9;
+        *v12++ = 0;
+      }
+      while ( v9 <= 2 );
+    }
+  }
+  else
+  {
+    KeyValues3::KeyValues3(&v48);
+    v33 = 0;
+    v47 = KeyValues3::GetArrayElementCount(&v48);
+    v34 = &this->m_vUpVector;
+    if ( v47 <= 0 )
+      goto LABEL_32;
+    do
+    {
+      v35 = KeyValues3::GetArrayElement(&v48, v33++);
+      v34->x = KeyValues3::GetFloat(v35);
+      v34 = (v34 + 4);
+    }
+    while ( v47 > v33 && v33 <= 2 );
+    if ( v33 <= 2 )
+    {
+LABEL_32:
+      v36 = (&v37->x + v33);
+      do
+      {
+        ++v33;
+        *v36++ = 0;
+      }
+      while ( v33 <= 2 );
+    }
+    KeyValues3::~KeyValues3(&v48);
+  }
+  v13 = KeyValues3::FindMember(pContext->m_pSourceObject, "m_slaves", 1828035002);
+  v43 = v13;
+  if ( v13 != 0 )
+  {
+    v38 = KeyValues3::GetArrayElementCount(v13);
+    CUtlVectorBase<CConstraintSlave,CUtlMemory<CConstraintSlave,int>>::SetCount(&this->m_slaves, v38);
+    if ( v38 > 0 )
+    {
+      v14 = 0;
+      v15 = 0;
+      do
+      {
+        v16 = v15;
+        v17 = v14;
+        ++v15;
+        v14 += 36;
+        v18 = KeyValues3::GetArrayElement(v43, v16);
+        v19 = (this->m_slaves.m_Memory.m_pMemory + v17);
+        CKV3TransferLoadContext::PushSource(pContext, v18);
+        CConstraintSlave::KV3TransferLoad_CConstraintSlave(v19, pContext);
+        CKV3TransferLoadContext::PopSource(pContext);
+      }
+      while ( v15 != v38 );
+    }
+  }
+  else
+  {
+    KeyValues3::KeyValues3(&v48);
+    v41 = KeyValues3::GetArrayElementCount(&v48);
+    CUtlVectorBase<CConstraintSlave,CUtlMemory<CConstraintSlave,int>>::SetCount(&this->m_slaves, v41);
+    v30 = 0;
+    v31 = 0;
+    if ( v41 > 0 )
+    {
+      do
+      {
+        v32 = KeyValues3::GetArrayElement(&v48, v31);
+        v46 = &this->m_slaves.m_Memory.m_pMemory[v30];
+        CKV3TransferLoadContext::PushSource(pContext, v32);
+        CConstraintSlave::KV3TransferLoad_CConstraintSlave(v46, pContext);
+        CKV3TransferLoadContext::PopSource(pContext);
+        ++v31;
+        ++v30;
+      }
+      while ( v31 != v41 );
+    }
+    KeyValues3::~KeyValues3(&v48);
+  }
+  v20 = KeyValues3::FindMember(pContext->m_pSourceObject, "m_targets", 6273742);
+  v44 = v20;
+  if ( v20 != 0 )
+  {
+    v39 = KeyValues3::GetArrayElementCount(v20);
+    CUtlVectorBase<CConstraintTarget,CUtlMemory<CConstraintTarget,int>>::SetCount(&this->m_targets, v39);
+    if ( v39 > 0 )
+    {
+      v21 = 0;
+      v22 = 0;
+      do
+      {
+        v23 = v22;
+        v24 = v21;
+        ++v22;
+        v21 += 40;
+        v25 = KeyValues3::GetArrayElement(v44, v23);
+        v26 = (this->m_targets.m_Memory.m_pMemory + v24);
+        CKV3TransferLoadContext::PushSource(pContext, v25);
+        CConstraintTarget::KV3TransferLoad_CConstraintTarget(v26, pContext);
+        CKV3TransferLoadContext::PopSource(pContext);
+      }
+      while ( v22 != v39 );
+    }
+  }
+  else
+  {
+    KeyValues3::KeyValues3(&v48);
+    v40 = KeyValues3::GetArrayElementCount(&v48);
+    CUtlVectorBase<CConstraintTarget,CUtlMemory<CConstraintTarget,int>>::SetCount(&this->m_targets, v40);
+    v27 = 0;
+    v28 = 0;
+    if ( v40 > 0 )
+    {
+      do
+      {
+        v29 = KeyValues3::GetArrayElement(&v48, v28);
+        v45 = &this->m_targets.m_Memory.m_pMemory[v27];
+        CKV3TransferLoadContext::PushSource(pContext, v29);
+        CConstraintTarget::KV3TransferLoad_CConstraintTarget(v45, pContext);
+        CKV3TransferLoadContext::PopSource(pContext);
+        ++v28;
+        ++v27;
+      }
+      while ( v28 != v40 );
+    }
+    KeyValues3::~KeyValues3(&v48);
+  }
+}
+
+
+// CPointConstraint::Schema_CompileTimeVerificationFunction  (line 233, @0x000000000317df40, libserver.so)
+void __fastcall CPointConstraint::Schema_CompileTimeVerificationFunction(CPointConstraint *const this)
+{
+  ;
+}
+
+
+// CPointConstraint::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE  (line 236, @0x000000000317df50, libserver.so)  // inlines: Call, Get, RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE, SetTypeScope
+// calls: CBaseConstraint::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE
+// callers: CSchemaClassBinding<CPointConstraint>::Register
+// globals: CPointConstraint::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pIniti, CBaseConstraint::s_pSchemaBindingForLocalModule, CBaseConstraint::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitia, CPointConstraint::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSche
+CSchemaClassInfo *__fastcall CPointConstraint::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        const char *pProjectName)
+{
+  CSchemaClassInfo *result; // rax
+  ISchemaSystemTypeScope *v7; // r14
+  const char *v8; // rdx
+  const CSchemaClassInfo *v9; // rax
+
+  result = CPointConstraint::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult;
+  if ( CPointConstraint::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult == 0 )
+  {
+    v7 = (*(*pSchemaSystem + 112LL))(pSchemaSystem, 0, pBinaryName);
+    (*(CBaseConstraint::s_pSchemaBindingForLocalModule->_vptr_ISchemaBinding + 5))(
+      CBaseConstraint::s_pSchemaBindingForLocalModule,
+      pSchemaSystem,
+      pBinaryName,
+      pProjectName);
+    v9 = CBaseConstraint::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult;
+    if ( CBaseConstraint::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult == 0 )
+      v9 = CBaseConstraint::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+             pSchemaSystem,
+             pBinaryName,
+             v8);
+    CPointConstraint::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassBases_CPointConstraint[0].m_pClass = v9;
+    CPointConstraint::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CPointConstraint.m_pOuterTypeScope = v7;
+    CPointConstraint::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult = &CPointConstraint::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CPointConstraint;
+    (*(*v7 + 264LL))(
+      v7,
+      &CPointConstraint::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CPointConstraint);
+    return CPointConstraint::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult;
+  }
+  return result;
+}
+
+
+// CPointConstraint::Schema_VerifyBindingIsRegistered  (line 246, @0x000000000317dff0, libserver.so)
+void __cdecl CPointConstraint::Schema_VerifyBindingIsRegistered()
+{
+  ;
+}
+
+
+// CPointConstraint::KV3TransferSave  (line 254, @0x000000000317ec00, libserver.so)  // inlines: KV3TransferSave_CPointConstraint
+// calls: CBaseConstraint::KV3TransferSave_CBaseConstraint
+void __fastcall CPointConstraint::KV3TransferSave(
+        const CPointConstraint *const this,
+        CKV3TransferSaveContext *pContext)
+{
+  CBaseConstraint::KV3TransferSave_CBaseConstraint(this, pContext);
+}
+
+
+// CPointConstraint::KV3TransferSave_CPointConstraint  (line 259, @0x000000000317ebf0, libserver.so)
+// calls: CBaseConstraint::KV3TransferSave_CBaseConstraint
+void __fastcall CPointConstraint::KV3TransferSave_CPointConstraint(
+        const CPointConstraint *const this,
+        CKV3TransferSaveContext *pContext)
+{
+  CBaseConstraint::KV3TransferSave_CBaseConstraint(this, pContext);
+}
+
+
+// CPointConstraint::KV3TransferLoad  (line 266, @0x000000000317f750, libserver.so)  // inlines: KV3TransferLoad_CPointConstraint
+// calls: CBaseConstraint::KV3TransferLoad_CBaseConstraint
+void __fastcall CPointConstraint::KV3TransferLoad(CPointConstraint *const this, CKV3TransferLoadContext *pContext)
+{
+  CBaseConstraint::KV3TransferLoad_CBaseConstraint(this, pContext);
+}
+
+
+// CPointConstraint::KV3TransferLoad_CPointConstraint  (line 271, @0x000000000317f740, libserver.so)
+// calls: CBaseConstraint::KV3TransferLoad_CBaseConstraint
+void __fastcall CPointConstraint::KV3TransferLoad_CPointConstraint(
+        CPointConstraint *const this,
+        CKV3TransferLoadContext *pContext)
+{
+  CBaseConstraint::KV3TransferLoad_CBaseConstraint(this, pContext);
+}
+
+
+// COrientConstraint::Schema_CompileTimeVerificationFunction  (line 284, @0x000000000317e000, libserver.so)
+void __fastcall COrientConstraint::Schema_CompileTimeVerificationFunction(COrientConstraint *const this)
+{
+  ;
+}
+
+
+// COrientConstraint::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE  (line 287, @0x000000000317e010, libserver.so)  // inlines: Call, Get, RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE, SetTypeScope
+// calls: CBaseConstraint::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE
+// callers: CSchemaClassBinding<COrientConstraint>::Register
+// globals: COrientConstraint::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInit, CBaseConstraint::s_pSchemaBindingForLocalModule, CBaseConstraint::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitia, COrientConstraint::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSch
+CSchemaClassInfo *__fastcall COrientConstraint::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        const char *pProjectName)
+{
+  CSchemaClassInfo *result; // rax
+  ISchemaSystemTypeScope *v7; // r14
+  const char *v8; // rdx
+  const CSchemaClassInfo *v9; // rax
+
+  result = COrientConstraint::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult;
+  if ( COrientConstraint::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult == 0 )
+  {
+    v7 = (*(*pSchemaSystem + 112LL))(pSchemaSystem, 0, pBinaryName);
+    (*(CBaseConstraint::s_pSchemaBindingForLocalModule->_vptr_ISchemaBinding + 5))(
+      CBaseConstraint::s_pSchemaBindingForLocalModule,
+      pSchemaSystem,
+      pBinaryName,
+      pProjectName);
+    v9 = CBaseConstraint::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult;
+    if ( CBaseConstraint::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult == 0 )
+      v9 = CBaseConstraint::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+             pSchemaSystem,
+             pBinaryName,
+             v8);
+    COrientConstraint::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassBases_COrientConstraint[0].m_pClass = v9;
+    COrientConstraint::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_COrientConstraint.m_pOuterTypeScope = v7;
+    COrientConstraint::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult = &COrientConstraint::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_COrientConstraint;
+    (*(*v7 + 264LL))(
+      v7,
+      &COrientConstraint::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_COrientConstraint);
+    return COrientConstraint::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult;
+  }
+  return result;
+}
+
+
+// COrientConstraint::Schema_VerifyBindingIsRegistered  (line 297, @0x000000000317e0b0, libserver.so)
+void __cdecl COrientConstraint::Schema_VerifyBindingIsRegistered()
+{
+  ;
+}
+
+
+// COrientConstraint::KV3TransferSave  (line 305, @0x000000000317ec20, libserver.so)  // inlines: KV3TransferSave_COrientConstraint
+// calls: CBaseConstraint::KV3TransferSave_CBaseConstraint
+void __fastcall COrientConstraint::KV3TransferSave(
+        const COrientConstraint *const this,
+        CKV3TransferSaveContext *pContext)
+{
+  CBaseConstraint::KV3TransferSave_CBaseConstraint(this, pContext);
+}
+
+
+// COrientConstraint::KV3TransferSave_COrientConstraint  (line 310, @0x000000000317ec10, libserver.so)
+// calls: CBaseConstraint::KV3TransferSave_CBaseConstraint
+void __fastcall COrientConstraint::KV3TransferSave_COrientConstraint(
+        const COrientConstraint *const this,
+        CKV3TransferSaveContext *pContext)
+{
+  CBaseConstraint::KV3TransferSave_CBaseConstraint(this, pContext);
+}
+
+
+// COrientConstraint::KV3TransferLoad  (line 317, @0x000000000317f770, libserver.so)  // inlines: KV3TransferLoad_COrientConstraint
+// calls: CBaseConstraint::KV3TransferLoad_CBaseConstraint
+void __fastcall COrientConstraint::KV3TransferLoad(COrientConstraint *const this, CKV3TransferLoadContext *pContext)
+{
+  CBaseConstraint::KV3TransferLoad_CBaseConstraint(this, pContext);
+}
+
+
+// COrientConstraint::KV3TransferLoad_COrientConstraint  (line 322, @0x000000000317f760, libserver.so)
+// calls: CBaseConstraint::KV3TransferLoad_CBaseConstraint
+void __fastcall COrientConstraint::KV3TransferLoad_COrientConstraint(
+        COrientConstraint *const this,
+        CKV3TransferLoadContext *pContext)
+{
+  CBaseConstraint::KV3TransferLoad_CBaseConstraint(this, pContext);
+}
+
+
+// CAimConstraint::Schema_CompileTimeVerificationFunction  (line 335, @0x000000000317e0c0, libserver.so)
+void __fastcall CAimConstraint::Schema_CompileTimeVerificationFunction(CAimConstraint *const this)
+{
+  ;
+}
+
+
+// CAimConstraint::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE  (line 340, @0x000000000317e0d0, libserver.so)  // inlines: Call, Get, RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE, SchemaBinding_SchemaTypeOfMemberVarByAddr<CAimConstraint, Quaternion>, SchemaBinding_SchemaTypeOfMemberVarByAddr<CAimConstraint, unsigned int>, SetTypeScope
+// calls: CBaseConstraint::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE
+// callers: CSchemaClassBinding<CAimConstraint>::Register
+// globals: CAimConstraint::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitial, CSchemaManipulator<Quaternion>::StaticAccessor(void)::m, CAtomicManipulator<Quaternion>::Get(void)::val, CBaseConstraint::s_pSchemaBindingForLocalModule, CBaseConstraint::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitia, CAimConstraint::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema
+CSchemaClassInfo *__fastcall CAimConstraint::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        const char *pProjectName)
+{
+  CSchemaClassInfo *result; // rax
+  ISchemaSystemTypeScope *v7; // r14
+  const char *v8; // rdx
+  const CSchemaClassInfo *v9; // rax
+
+  result = CAimConstraint::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult;
+  if ( CAimConstraint::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult == 0 )
+  {
+    v7 = (*(*pSchemaSystem + 112LL))(pSchemaSystem, 0, pBinaryName);
+    CAimConstraint::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CAimConstraint[0].m_pType = (*(*v7 + 56LL))(v7, "Quaternion", 2006, CAtomicManipulator<Quaternion>::Get(void)::val, &CSchemaManipulator<Quaternion>::StaticAccessor(void)::m);
+    CAimConstraint::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CAimConstraint[1].m_pType = (*(*v7 + 40LL))(v7, 8);
+    (*(CBaseConstraint::s_pSchemaBindingForLocalModule->_vptr_ISchemaBinding + 5))(
+      CBaseConstraint::s_pSchemaBindingForLocalModule,
+      pSchemaSystem,
+      pBinaryName,
+      pProjectName);
+    v9 = CBaseConstraint::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult;
+    if ( CBaseConstraint::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult == 0 )
+      v9 = CBaseConstraint::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+             pSchemaSystem,
+             pBinaryName,
+             v8);
+    CAimConstraint::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassBases_CAimConstraint[0].m_pClass = v9;
+    CAimConstraint::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CAimConstraint.m_pOuterTypeScope = v7;
+    CAimConstraint::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult = &CAimConstraint::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CAimConstraint;
+    (*(*v7 + 264LL))(
+      v7,
+      &CAimConstraint::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CAimConstraint);
+    return CAimConstraint::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult;
+  }
+  return result;
+}
+
+
+// CAimConstraint::Schema_VerifyBindingIsRegistered  (line 362, @0x000000000317e1b0, libserver.so)
+void __cdecl CAimConstraint::Schema_VerifyBindingIsRegistered()
+{
+  ;
+}
+
+
+// CAimConstraint::KV3TransferSave  (line 370, @0x000000000317ed60, libserver.so)
+// calls: CAimConstraint::KV3TransferSave_CAimConstraint
+void __fastcall CAimConstraint::KV3TransferSave(const CAimConstraint *const this, CKV3TransferSaveContext *pContext)
+{
+  CAimConstraint::KV3TransferSave_CAimConstraint(this, pContext);
+}
+
+
+// CAimConstraint::KV3TransferSave_CAimConstraint  (line 375, @0x000000000317ec30, libserver.so)  // inlines: CreateTargetMember, SaveValue<Quaternion>, SaveValue<unsigned int>, SaveValueDirect<Quaternion>, SaveValueDirect<unsigned int>, SaveValueToMember<Quaternion>, SaveValueToMember<unsigned int>
+// calls: CBaseConstraint::KV3TransferSave_CBaseConstraint, KeyValues3::FindMember, CKV3TransferContextBase::NoteFailure, KeyValues3::SetArrayElementCount, KeyValues3::GetArrayElement, KeyValues3::SetFloat, KeyValues3::SetInt64, KeyValues3::SetMemberToNull
+// callers: CAimConstraint::KV3TransferSave
+// strings: "m_qAimOffset", "Double-save to Member '%s'", "m_nUpType"
+void __fastcall CAimConstraint::KV3TransferSave_CAimConstraint(
+        const CAimConstraint *const this,
+        CKV3TransferSaveContext *pContext)
+{
+  Quaternion *p_m_qAimOffset; // r14
+  KeyValues3 *Member; // r12
+  __int64 v6; // rbx
+  int v7; // esi
+  KeyValues3 *ArrayElement; // rax
+  double v9; // xmm1_8
+  KeyValues3 *v10; // rbx
+  KeyValues3 *v11; // rdi
+  double v12; // [rsp+8h] [rbp-38h]
+
+  p_m_qAimOffset = &this->m_qAimOffset;
+  CBaseConstraint::KV3TransferSave_CBaseConstraint(this, pContext);
+  Member = KeyValues3::FindMember(pContext->m_pTargetObject, "m_qAimOffset", -1299994543);
+  if ( Member != 0 )
+    CKV3TransferContextBase::NoteFailure(pContext, "Double-save to Member '%s'", "m_qAimOffset");
+  else
+    Member = KeyValues3::SetMemberToNull(pContext->m_pTargetObject, "m_qAimOffset", -1299994543);
+  v6 = 0;
+  KeyValues3::SetArrayElementCount(Member, 4);
+  do
+  {
+    v7 = v6;
+    v12 = *(&p_m_qAimOffset->x + v6++);
+    ArrayElement = KeyValues3::GetArrayElement(Member, v7);
+    KeyValues3::SetFloat(ArrayElement, v12, v9);
+  }
+  while ( v6 != 4 );
+  v10 = KeyValues3::FindMember(pContext->m_pTargetObject, "m_nUpType", -437913580);
+  if ( v10 != 0 )
+  {
+    CKV3TransferContextBase::NoteFailure(pContext, "Double-save to Member '%s'", "m_nUpType");
+    v11 = v10;
+  }
+  else
+  {
+    v11 = KeyValues3::SetMemberToNull(pContext->m_pTargetObject, "m_nUpType", -437913580);
+  }
+  KeyValues3::SetInt64(v11, this->m_nUpType);
+}
+
+
+// CAimConstraint::KV3TransferLoad  (line 384, @0x000000000317f980, libserver.so)
+// calls: CAimConstraint::KV3TransferLoad_CAimConstraint
+void __fastcall CAimConstraint::KV3TransferLoad(CAimConstraint *const this, CKV3TransferLoadContext *pContext)
+{
+  CAimConstraint::KV3TransferLoad_CAimConstraint(this, pContext);
+}
+
+
+// CAimConstraint::KV3TransferLoad_CAimConstraint  (line 389, @0x000000000317f780, libserver.so)  // inlines: FindMember, FindSourceMember, LoadValue<Quaternion>, LoadValue<unsigned int>, LoadValueDirect<Quaternion>, LoadValueDirect<unsigned int>, LoadValueFromMember<Quaternion>, LoadValueFromMember<unsigned int>
+// calls: CBaseConstraint::KV3TransferLoad_CBaseConstraint, KeyValues3::FindMember, KeyValues3::GetArrayElementCount, KeyValues3::GetArrayElement, KeyValues3::GetFloat, KeyValues3::GetInt64, KeyValues3::KeyValues3, KeyValues3::~KeyValues3, _Unwind_Resume, __stack_chk_fail
+// callers: CAimConstraint::KV3TransferLoad
+// strings: "m_qAimOffset", "m_nUpType"
+void __fastcall CAimConstraint::KV3TransferLoad_CAimConstraint(
+        CAimConstraint *const this,
+        CKV3TransferLoadContext *pContext)
+{
+  Quaternion *p_m_qAimOffset; // r13
+  KeyValues3 *Member; // rax
+  const KeyValues3 *v6; // rbx
+  int v7; // r15d
+  int ArrayElementCount; // r12d
+  int v9; // esi
+  const KeyValues3 *ArrayElement; // rax
+  _DWORD *v11; // rax
+  KeyValues3 *v12; // rax
+  int v13; // ebx
+  int v14; // r13d
+  float *p_x; // r12
+  const KeyValues3 *v16; // rax
+  _DWORD *v17; // rax
+  Quaternion *v19; // [rsp+8h] [rbp-58h]
+  KeyValues3 v20; // [rsp+10h] [rbp-50h] BYREF
+  unsigned __int64 v21; // [rsp+28h] [rbp-38h]
+
+  v21 = __readfsqword(0x28u);
+  CBaseConstraint::KV3TransferLoad_CBaseConstraint(this, pContext);
+  p_m_qAimOffset = &this->m_qAimOffset;
+  v19 = &this->m_qAimOffset;
+  Member = KeyValues3::FindMember(pContext->m_pSourceObject, "m_qAimOffset", -1299994543);
+  v6 = Member;
+  if ( Member != 0 )
+  {
+    v7 = 0;
+    ArrayElementCount = KeyValues3::GetArrayElementCount(Member);
+    if ( ArrayElementCount <= 0 )
+      goto LABEL_7;
+    do
+    {
+      v9 = v7++;
+      ArrayElement = KeyValues3::GetArrayElement(v6, v9);
+      p_m_qAimOffset = (p_m_qAimOffset + 4);
+      p_m_qAimOffset[-1].w = KeyValues3::GetFloat(ArrayElement);
+    }
+    while ( ArrayElementCount > v7 && v7 <= 3 );
+    if ( v7 <= 3 )
+    {
+LABEL_7:
+      v11 = (&v19->x + v7);
+      do
+      {
+        ++v7;
+        *v11++ = 0;
+      }
+      while ( v7 <= 3 );
+    }
+  }
+  else
+  {
+    KeyValues3::KeyValues3(&v20);
+    v13 = 0;
+    v14 = KeyValues3::GetArrayElementCount(&v20);
+    p_x = &v19->x;
+    if ( v14 <= 0 )
+      goto LABEL_16;
+    do
+    {
+      v16 = KeyValues3::GetArrayElement(&v20, v13++);
+      *p_x++ = KeyValues3::GetFloat(v16);
+    }
+    while ( v14 > v13 && v13 <= 3 );
+    if ( v13 <= 3 )
+    {
+LABEL_16:
+      v17 = (&v19->x + v13);
+      do
+      {
+        ++v13;
+        *v17++ = 0;
+      }
+      while ( v13 <= 3 );
+    }
+    KeyValues3::~KeyValues3(&v20);
+  }
+  v12 = KeyValues3::FindMember(pContext->m_pSourceObject, "m_nUpType", -437913580);
+  if ( v12 != 0 )
+  {
+    this->m_nUpType = KeyValues3::GetInt64(v12);
+  }
+  else
+  {
+    KeyValues3::KeyValues3(&v20);
+    this->m_nUpType = KeyValues3::GetInt64(&v20);
+    KeyValues3::~KeyValues3(&v20);
+  }
+}
+
+
+// CTwistConstraint::Schema_CompileTimeVerificationFunction  (line 404, @0x000000000317e1c0, libserver.so)
+void __fastcall CTwistConstraint::Schema_CompileTimeVerificationFunction(CTwistConstraint *const this)
+{
+  ;
+}
+
+
+// CTwistConstraint::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE  (line 410, @0x000000000317e1d0, libserver.so)  // inlines: Call, Get, RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE, SchemaBinding_SchemaTypeOfMemberVarByAddr<CTwistConstraint, Quaternion>, SchemaBinding_SchemaTypeOfMemberVarByAddr<CTwistConstraint, bool>, SetTypeScope
+// calls: CBaseConstraint::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE
+// callers: CSchemaClassBinding<CTwistConstraint>::Register
+// globals: CTwistConstraint::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pIniti, CSchemaManipulator<Quaternion>::StaticAccessor(void)::m, CAtomicManipulator<Quaternion>::Get(void)::val, CBaseConstraint::s_pSchemaBindingForLocalModule, CBaseConstraint::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitia, CTwistConstraint::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSche
+CSchemaClassInfo *__fastcall CTwistConstraint::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        const char *pProjectName)
+{
+  CSchemaClassInfo *result; // rax
+  ISchemaSystemTypeScope *v7; // r14
+  const char *v8; // rdx
+  const CSchemaClassInfo *v9; // rax
+
+  result = CTwistConstraint::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult;
+  if ( CTwistConstraint::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult == 0 )
+  {
+    v7 = (*(*pSchemaSystem + 112LL))(pSchemaSystem, 0, pBinaryName);
+    CTwistConstraint::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CTwistConstraint[0].m_pType = (*(*v7 + 40LL))(v7, 13);
+    CTwistConstraint::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CTwistConstraint[1].m_pType = (*(*v7 + 56LL))(v7, "Quaternion", 2006, CAtomicManipulator<Quaternion>::Get(void)::val, &CSchemaManipulator<Quaternion>::StaticAccessor(void)::m);
+    CTwistConstraint::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CTwistConstraint[2].m_pType = (*(*v7 + 56LL))(v7, "Quaternion", 2006, CAtomicManipulator<Quaternion>::Get(void)::val, &CSchemaManipulator<Quaternion>::StaticAccessor(void)::m);
+    (*(CBaseConstraint::s_pSchemaBindingForLocalModule->_vptr_ISchemaBinding + 5))(
+      CBaseConstraint::s_pSchemaBindingForLocalModule,
+      pSchemaSystem,
+      pBinaryName,
+      pProjectName);
+    v9 = CBaseConstraint::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult;
+    if ( CBaseConstraint::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult == 0 )
+      v9 = CBaseConstraint::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+             pSchemaSystem,
+             pBinaryName,
+             v8);
+    CTwistConstraint::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassBases_CTwistConstraint[0].m_pClass = v9;
+    CTwistConstraint::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CTwistConstraint.m_pOuterTypeScope = v7;
+    CTwistConstraint::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult = &CTwistConstraint::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CTwistConstraint;
+    (*(*v7 + 264LL))(
+      v7,
+      &CTwistConstraint::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CTwistConstraint);
+    return CTwistConstraint::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult;
+  }
+  return result;
+}
+
+
+// CTwistConstraint::Schema_VerifyBindingIsRegistered  (line 434, @0x000000000317e2e0, libserver.so)
+void __cdecl CTwistConstraint::Schema_VerifyBindingIsRegistered()
+{
+  ;
+}
+
+
+// CTwistConstraint::KV3TransferSave  (line 442, @0x000000000317ef40, libserver.so)
+// calls: CTwistConstraint::KV3TransferSave_CTwistConstraint
+void __fastcall CTwistConstraint::KV3TransferSave(
+        const CTwistConstraint *const this,
+        CKV3TransferSaveContext *pContext)
+{
+  CTwistConstraint::KV3TransferSave_CTwistConstraint(this, pContext);
+}
+
+
+// CTwistConstraint::KV3TransferSave_CTwistConstraint  (line 447, @0x000000000317ed70, libserver.so)  // inlines: CreateTargetMember, SaveValue<Quaternion>, SaveValue<bool>, SaveValueDirect<Quaternion>, SaveValueDirect<bool>, SaveValueToMember<Quaternion>, SaveValueToMember<bool>
+// calls: CBaseConstraint::KV3TransferSave_CBaseConstraint, KeyValues3::FindMember, CKV3TransferContextBase::NoteFailure, KeyValues3::SetBool, KeyValues3::SetArrayElementCount, KeyValues3::GetArrayElement, KeyValues3::SetFloat, KeyValues3::SetMemberToNull
+// callers: CTwistConstraint::KV3TransferSave
+// strings: "m_bInverse", "Double-save to Member '%s'", "m_qParentBindRotation", "m_qChildBindRotation"
+void __fastcall CTwistConstraint::KV3TransferSave_CTwistConstraint(
+        const CTwistConstraint *const this,
+        CKV3TransferSaveContext *pContext)
+{
+  KeyValues3 *Member; // rbx
+  KeyValues3 *v5; // rdi
+  KeyValues3 *v6; // r13
+  __int64 v7; // rbx
+  int v8; // esi
+  KeyValues3 *ArrayElement; // rax
+  double v10; // xmm1_8
+  Quaternion *p_m_qChildBindRotation; // r14
+  KeyValues3 *v12; // rbx
+  CKV3TransferSaveContext *v13; // rdi
+  KeyValues3 *v14; // r12
+  __int64 v15; // rbx
+  int v16; // esi
+  KeyValues3 *v17; // rax
+  double v18; // xmm1_8
+  double v19; // [rsp+8h] [rbp-38h]
+  double v20; // [rsp+8h] [rbp-38h]
+
+  CBaseConstraint::KV3TransferSave_CBaseConstraint(this, pContext);
+  Member = KeyValues3::FindMember(pContext->m_pTargetObject, "m_bInverse", -1417754897);
+  if ( Member != 0 )
+  {
+    CKV3TransferContextBase::NoteFailure(pContext, "Double-save to Member '%s'", "m_bInverse");
+    v5 = Member;
+  }
+  else
+  {
+    v5 = KeyValues3::SetMemberToNull(pContext->m_pTargetObject, "m_bInverse", -1417754897);
+  }
+  KeyValues3::SetBool(v5, this->m_bInverse);
+  v6 = KeyValues3::FindMember(pContext->m_pTargetObject, "m_qParentBindRotation", 406127422);
+  if ( v6 != 0 )
+    CKV3TransferContextBase::NoteFailure(pContext, "Double-save to Member '%s'", "m_qParentBindRotation");
+  else
+    v6 = KeyValues3::SetMemberToNull(pContext->m_pTargetObject, "m_qParentBindRotation", 406127422);
+  v7 = 0;
+  KeyValues3::SetArrayElementCount(v6, 4);
+  do
+  {
+    v8 = v7;
+    v19 = *(&this->m_qParentBindRotation.x + v7++);
+    ArrayElement = KeyValues3::GetArrayElement(v6, v8);
+    KeyValues3::SetFloat(ArrayElement, v19, v10);
+  }
+  while ( v7 != 4 );
+  p_m_qChildBindRotation = &this->m_qChildBindRotation;
+  v12 = KeyValues3::FindMember(pContext->m_pTargetObject, "m_qChildBindRotation", 1104938705);
+  if ( v12 != 0 )
+  {
+    v13 = pContext;
+    v14 = v12;
+    CKV3TransferContextBase::NoteFailure(v13, "Double-save to Member '%s'", "m_qChildBindRotation");
+  }
+  else
+  {
+    v14 = KeyValues3::SetMemberToNull(pContext->m_pTargetObject, "m_qChildBindRotation", 1104938705);
+  }
+  v15 = 0;
+  KeyValues3::SetArrayElementCount(v14, 4);
+  do
+  {
+    v16 = v15;
+    v20 = *(&p_m_qChildBindRotation->x + v15++);
+    v17 = KeyValues3::GetArrayElement(v14, v16);
+    KeyValues3::SetFloat(v17, v20, v18);
+  }
+  while ( v15 != 4 );
+}
+
+
+// CTwistConstraint::KV3TransferLoad  (line 457, @0x000000000317fc90, libserver.so)
+// calls: CTwistConstraint::KV3TransferLoad_CTwistConstraint
+void __fastcall CTwistConstraint::KV3TransferLoad(CTwistConstraint *const this, CKV3TransferLoadContext *pContext)
+{
+  CTwistConstraint::KV3TransferLoad_CTwistConstraint(this, pContext);
+}
+
+
+// CTwistConstraint::KV3TransferLoad_CTwistConstraint  (line 462, @0x000000000317f990, libserver.so)  // inlines: FindMember, FindSourceMember, LoadValue<Quaternion>, LoadValue<bool>, LoadValueDirect<Quaternion>, LoadValueDirect<bool>, LoadValueFromMember<Quaternion>, LoadValueFromMember<bool>
+// calls: CBaseConstraint::KV3TransferLoad_CBaseConstraint, KeyValues3::FindMember, KeyValues3::GetBool, KeyValues3::GetArrayElementCount, KeyValues3::GetArrayElement, KeyValues3::GetFloat, KeyValues3::KeyValues3, KeyValues3::~KeyValues3, _Unwind_Resume, __stack_chk_fail
+// callers: CTwistConstraint::KV3TransferLoad
+// strings: "m_bInverse", "m_qParentBindRotation", "m_qChildBindRotation"
+void __fastcall CTwistConstraint::KV3TransferLoad_CTwistConstraint(
+        CTwistConstraint *const this,
+        CKV3TransferLoadContext *pContext)
+{
+  KeyValues3 *Member; // rax
+  Quaternion *p_m_qParentBindRotation; // r15
+  KeyValues3 *v6; // rax
+  const KeyValues3 *v7; // rbx
+  int v8; // r13d
+  int ArrayElementCount; // r12d
+  int v10; // esi
+  const KeyValues3 *ArrayElement; // rax
+  _DWORD *v12; // rax
+  KeyValues3 *v13; // rax
+  Quaternion *p_m_qChildBindRotation; // r15
+  const KeyValues3 *v15; // r13
+  int v16; // ebx
+  Quaternion *v17; // r12
+  int v18; // r14d
+  int v19; // esi
+  const KeyValues3 *v20; // rax
+  _DWORD *v21; // rax
+  int v22; // ebx
+  int v23; // r14d
+  Quaternion *v24; // r13
+  const KeyValues3 *v25; // rax
+  _DWORD *v26; // rax
+  int v27; // ebx
+  int v28; // r15d
+  Quaternion *v29; // r13
+  const KeyValues3 *v30; // rax
+  _DWORD *v31; // rax
+  Quaternion *v32; // [rsp+0h] [rbp-60h]
+  KeyValues3 v34; // [rsp+10h] [rbp-50h] BYREF
+  unsigned __int64 v35; // [rsp+28h] [rbp-38h]
+
+  v35 = __readfsqword(0x28u);
+  CBaseConstraint::KV3TransferLoad_CBaseConstraint(this, pContext);
+  Member = KeyValues3::FindMember(pContext->m_pSourceObject, "m_bInverse", -1417754897);
+  if ( Member != 0 )
+  {
+    this->m_bInverse = KeyValues3::GetBool(Member);
+  }
+  else
+  {
+    KeyValues3::KeyValues3(&v34);
+    this->m_bInverse = KeyValues3::GetBool(&v34);
+    KeyValues3::~KeyValues3(&v34);
+  }
+  p_m_qParentBindRotation = &this->m_qParentBindRotation;
+  v32 = &this->m_qParentBindRotation;
+  v6 = KeyValues3::FindMember(pContext->m_pSourceObject, "m_qParentBindRotation", 406127422);
+  v7 = v6;
+  if ( v6 != 0 )
+  {
+    v8 = 0;
+    ArrayElementCount = KeyValues3::GetArrayElementCount(v6);
+    if ( ArrayElementCount <= 0 )
+      goto LABEL_9;
+    do
+    {
+      v10 = v8++;
+      ArrayElement = KeyValues3::GetArrayElement(v7, v10);
+      p_m_qParentBindRotation = (p_m_qParentBindRotation + 4);
+      p_m_qParentBindRotation[-1].w = KeyValues3::GetFloat(ArrayElement);
+    }
+    while ( ArrayElementCount > v8 && v8 <= 3 );
+    if ( v8 <= 3 )
+    {
+LABEL_9:
+      v12 = (&v32->x + v8);
+      do
+      {
+        ++v8;
+        *v12++ = 0;
+      }
+      while ( v8 <= 3 );
+    }
+  }
+  else
+  {
+    KeyValues3::KeyValues3(&v34);
+    v27 = 0;
+    v28 = KeyValues3::GetArrayElementCount(&v34);
+    v29 = &this->m_qParentBindRotation;
+    if ( v28 <= 0 )
+      goto LABEL_34;
+    do
+    {
+      v30 = KeyValues3::GetArrayElement(&v34, v27++);
+      v29->x = KeyValues3::GetFloat(v30);
+      v29 = (v29 + 4);
+    }
+    while ( v28 > v27 && v27 <= 3 );
+    if ( v27 <= 3 )
+    {
+LABEL_34:
+      v31 = (&v32->x + v27);
+      do
+      {
+        ++v27;
+        *v31++ = 0;
+      }
+      while ( v27 <= 3 );
+    }
+    KeyValues3::~KeyValues3(&v34);
+  }
+  v13 = KeyValues3::FindMember(pContext->m_pSourceObject, "m_qChildBindRotation", 1104938705);
+  p_m_qChildBindRotation = &this->m_qChildBindRotation;
+  v15 = v13;
+  if ( v13 != 0 )
+  {
+    v16 = 0;
+    v17 = &this->m_qChildBindRotation;
+    v18 = KeyValues3::GetArrayElementCount(v13);
+    if ( v18 <= 0 )
+      goto LABEL_17;
+    do
+    {
+      v19 = v16++;
+      v20 = KeyValues3::GetArrayElement(v15, v19);
+      v17 = (v17 + 4);
+      v17[-1].w = KeyValues3::GetFloat(v20);
+    }
+    while ( v18 > v16 && v16 <= 3 );
+    if ( v16 <= 3 )
+    {
+LABEL_17:
+      v21 = (&p_m_qChildBindRotation->x + v16);
+      do
+      {
+        ++v16;
+        *v21++ = 0;
+      }
+      while ( v16 <= 3 );
+    }
+  }
+  else
+  {
+    KeyValues3::KeyValues3(&v34);
+    v22 = 0;
+    v23 = KeyValues3::GetArrayElementCount(&v34);
+    v24 = &this->m_qChildBindRotation;
+    if ( v23 <= 0 )
+      goto LABEL_26;
+    do
+    {
+      v25 = KeyValues3::GetArrayElement(&v34, v22++);
+      v24->x = KeyValues3::GetFloat(v25);
+      v24 = (v24 + 4);
+    }
+    while ( v23 > v22 && v22 <= 3 );
+    if ( v22 <= 3 )
+    {
+LABEL_26:
+      v26 = (&p_m_qChildBindRotation->x + v22);
+      do
+      {
+        ++v22;
+        *v26++ = 0;
+      }
+      while ( v22 <= 3 );
+    }
+    KeyValues3::~KeyValues3(&v34);
+  }
+}
+
+
+// CTiltTwistConstraint::Schema_CompileTimeVerificationFunction  (line 478, @0x000000000317e2f0, libserver.so)
+void __fastcall CTiltTwistConstraint::Schema_CompileTimeVerificationFunction(CTiltTwistConstraint *const this)
+{
+  ;
+}
+
+
+// CTiltTwistConstraint::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE  (line 483, @0x000000000317e300, libserver.so)  // inlines: Call, Get, RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE, SchemaBinding_SchemaTypeOfMemberVarByAddr<CTiltTwistConstraint, int>, SetTypeScope
+// calls: CBaseConstraint::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE
+// callers: CSchemaClassBinding<CTiltTwistConstraint>::Register
+// globals: CTiltTwistConstraint::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pI, CBaseConstraint::s_pSchemaBindingForLocalModule, CBaseConstraint::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitia, CTiltTwistConstraint::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::Impl
+CSchemaClassInfo *__fastcall CTiltTwistConstraint::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        const char *pProjectName)
+{
+  CSchemaClassInfo *result; // rax
+  ISchemaSystemTypeScope *v7; // r14
+  const char *v8; // rdx
+  const CSchemaClassInfo *v9; // rax
+
+  result = CTiltTwistConstraint::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult;
+  if ( CTiltTwistConstraint::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult == 0 )
+  {
+    v7 = (*(*pSchemaSystem + 112LL))(pSchemaSystem, 0, pBinaryName);
+    CTiltTwistConstraint::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CTiltTwistConstraint[0].m_pType = (*(*v7 + 40LL))(v7, 7);
+    CTiltTwistConstraint::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CTiltTwistConstraint[1].m_pType = (*(*v7 + 40LL))(v7, 7);
+    (*(CBaseConstraint::s_pSchemaBindingForLocalModule->_vptr_ISchemaBinding + 5))(
+      CBaseConstraint::s_pSchemaBindingForLocalModule,
+      pSchemaSystem,
+      pBinaryName,
+      pProjectName);
+    v9 = CBaseConstraint::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult;
+    if ( CBaseConstraint::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult == 0 )
+      v9 = CBaseConstraint::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+             pSchemaSystem,
+             pBinaryName,
+             v8);
+    CTiltTwistConstraint::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassBases_CTiltTwistConstraint[0].m_pClass = v9;
+    CTiltTwistConstraint::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CTiltTwistConstraint.m_pOuterTypeScope = v7;
+    CTiltTwistConstraint::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult = &CTiltTwistConstraint::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CTiltTwistConstraint;
+    (*(*v7 + 264LL))(
+      v7,
+      &CTiltTwistConstraint::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CTiltTwistConstraint);
+    return CTiltTwistConstraint::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult;
+  }
+  return result;
+}
+
+
+// CTiltTwistConstraint::Schema_VerifyBindingIsRegistered  (line 513, @0x000000000317e3d0, libserver.so)
+void __cdecl CTiltTwistConstraint::Schema_VerifyBindingIsRegistered()
+{
+  ;
+}
+
+
+// CTiltTwistConstraint::KV3TransferSave  (line 521, @0x000000000317f040, libserver.so)
+// calls: CTiltTwistConstraint::KV3TransferSave_CTiltTwistConstraint
+void __fastcall CTiltTwistConstraint::KV3TransferSave(
+        const CTiltTwistConstraint *const this,
+        CKV3TransferSaveContext *pContext)
+{
+  CTiltTwistConstraint::KV3TransferSave_CTiltTwistConstraint(this, pContext);
+}
+
+
+// CTiltTwistConstraint::KV3TransferSave_CTiltTwistConstraint  (line 526, @0x000000000317ef50, libserver.so)  // inlines: CreateTargetMember, SaveValue<int>, SaveValueDirect<int>, SaveValueToMember<int>
+// calls: CBaseConstraint::KV3TransferSave_CBaseConstraint, KeyValues3::FindMember, CKV3TransferContextBase::NoteFailure, KeyValues3::SetInt, KeyValues3::SetMemberToNull
+// callers: CTiltTwistConstraint::KV3TransferSave
+// strings: "m_nTargetAxis", "Double-save to Member '%s'", "m_nSlaveAxis"
+void __fastcall CTiltTwistConstraint::KV3TransferSave_CTiltTwistConstraint(
+        const CTiltTwistConstraint *const this,
+        CKV3TransferSaveContext *pContext)
+{
+  KeyValues3 *Member; // r13
+  KeyValues3 *v5; // rdi
+  KeyValues3 *v6; // r13
+  KeyValues3 *v7; // rdi
+
+  CBaseConstraint::KV3TransferSave_CBaseConstraint(this, pContext);
+  Member = KeyValues3::FindMember(pContext->m_pTargetObject, "m_nTargetAxis", -611993285);
+  if ( Member != 0 )
+  {
+    CKV3TransferContextBase::NoteFailure(pContext, "Double-save to Member '%s'", "m_nTargetAxis");
+    v5 = Member;
+  }
+  else
+  {
+    v5 = KeyValues3::SetMemberToNull(pContext->m_pTargetObject, "m_nTargetAxis", -611993285);
+  }
+  KeyValues3::SetInt(v5, this->m_nTargetAxis);
+  v6 = KeyValues3::FindMember(pContext->m_pTargetObject, "m_nSlaveAxis", 816868807);
+  if ( v6 != 0 )
+  {
+    CKV3TransferContextBase::NoteFailure(pContext, "Double-save to Member '%s'", "m_nSlaveAxis");
+    v7 = v6;
+  }
+  else
+  {
+    v7 = KeyValues3::SetMemberToNull(pContext->m_pTargetObject, "m_nSlaveAxis", 816868807);
+  }
+  KeyValues3::SetInt(v7, this->m_nSlaveAxis);
+}
+
+
+// CTiltTwistConstraint::KV3TransferLoad  (line 535, @0x000000000317fdb0, libserver.so)
+// calls: CTiltTwistConstraint::KV3TransferLoad_CTiltTwistConstraint
+void __fastcall CTiltTwistConstraint::KV3TransferLoad(
+        CTiltTwistConstraint *const this,
+        CKV3TransferLoadContext *pContext)
+{
+  CTiltTwistConstraint::KV3TransferLoad_CTiltTwistConstraint(this, pContext);
+}
+
+
+// CTiltTwistConstraint::KV3TransferLoad_CTiltTwistConstraint  (line 540, @0x000000000317fca0, libserver.so)  // inlines: FindMember, FindSourceMember, LoadValue<int>, LoadValueDirect<int>, LoadValueFromMember<int>
+// calls: CBaseConstraint::KV3TransferLoad_CBaseConstraint, KeyValues3::FindMember, KeyValues3::GetInt, CTiltTwistConstraint::TransferPostLoadFn, KeyValues3::KeyValues3, KeyValues3::~KeyValues3, __stack_chk_fail, _Unwind_Resume
+// callers: CTiltTwistConstraint::KV3TransferLoad
+// strings: "m_nTargetAxis", "m_nSlaveAxis"
+void __fastcall CTiltTwistConstraint::KV3TransferLoad_CTiltTwistConstraint(
+        CTiltTwistConstraint *const this,
+        CKV3TransferLoadContext *pContext)
+{
+  KeyValues3 *Member; // rax
+  KeyValues3 *v5; // rax
+  KeyValues3 v6; // [rsp+0h] [rbp-40h] BYREF
+  unsigned __int64 v7; // [rsp+18h] [rbp-28h]
+
+  v7 = __readfsqword(0x28u);
+  CBaseConstraint::KV3TransferLoad_CBaseConstraint(this, pContext);
+  Member = KeyValues3::FindMember(pContext->m_pSourceObject, "m_nTargetAxis", -611993285);
+  if ( Member != 0 )
+  {
+    this->m_nTargetAxis = KeyValues3::GetInt(Member);
+  }
+  else
+  {
+    KeyValues3::KeyValues3(&v6);
+    this->m_nTargetAxis = KeyValues3::GetInt(&v6);
+    KeyValues3::~KeyValues3(&v6);
+  }
+  v5 = KeyValues3::FindMember(pContext->m_pSourceObject, "m_nSlaveAxis", 816868807);
+  if ( v5 != 0 )
+  {
+    this->m_nSlaveAxis = KeyValues3::GetInt(v5);
+  }
+  else
+  {
+    KeyValues3::KeyValues3(&v6);
+    this->m_nSlaveAxis = KeyValues3::GetInt(&v6);
+    KeyValues3::~KeyValues3(&v6);
+  }
+  CTiltTwistConstraint::TransferPostLoadFn(this, pContext);
+}
+
+
+// CMorphConstraint::Schema_CompileTimeVerificationFunction  (line 556, @0x000000000317e3e0, libserver.so)
+void __fastcall CMorphConstraint::Schema_CompileTimeVerificationFunction(CMorphConstraint *const this)
+{
+  ;
+}
+
+
+// CMorphConstraint::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE  (line 565, @0x000000000317e3f0, libserver.so)  // inlines: Call, Get, RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE, SchemaBinding_SchemaTypeOfMemberVarByAddr<CMorphConstraint, CUtlString>, SchemaBinding_SchemaTypeOfMemberVarByAddr<CMorphConstraint, bool>, SchemaBinding_SchemaTypeOfMemberVarByAddr<CMorphConstraint, float>, SchemaBinding_SchemaTypeOfMemberVarByAddr<CMorphConstraint, int>, SetTypeScope
+// calls: CBaseConstraint::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE
+// callers: CSchemaClassBinding<CMorphConstraint>::Register
+// strings: "CUtlString"
+// globals: CMorphConstraint::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pIniti, CSchemaManipulator<CUtlString>::StaticAccessor(void)::m, CAtomicManipulator<CUtlString>::Get(void)::val, CBaseConstraint::s_pSchemaBindingForLocalModule, CBaseConstraint::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitia, CMorphConstraint::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSche
+CSchemaClassInfo *__fastcall CMorphConstraint::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        const char *pProjectName)
+{
+  CSchemaClassInfo *result; // rax
+  ISchemaSystemTypeScope *v7; // rbx
+  const char *v8; // rdx
+  const CSchemaClassInfo *v9; // rax
+
+  result = CMorphConstraint::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult;
+  if ( CMorphConstraint::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult == 0 )
+  {
+    v7 = (*(*pSchemaSystem + 112LL))(pSchemaSystem, 0, pBinaryName);
+    CMorphConstraint::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CMorphConstraint[0].m_pType = (*(*v7 + 40LL))(v7, 13);
+    CMorphConstraint::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CMorphConstraint[1].m_pType = (*(*v7 + 40LL))(v7, 13);
+    CMorphConstraint::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CMorphConstraint[2].m_pType = (*(*v7 + 56LL))(v7, "CUtlString", 3003, CAtomicManipulator<CUtlString>::Get(void)::val, CSchemaManipulator<CUtlString>::StaticAccessor(void)::m);
+    CMorphConstraint::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CMorphConstraint[3].m_pType = (*(*v7 + 40LL))(v7, 7);
+    CMorphConstraint::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CMorphConstraint[4].m_pType = (*(*v7 + 40LL))(v7, 11);
+    CMorphConstraint::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CMorphConstraint[5].m_pType = (*(*v7 + 40LL))(v7, 11);
+    (*(CBaseConstraint::s_pSchemaBindingForLocalModule->_vptr_ISchemaBinding + 5))(
+      CBaseConstraint::s_pSchemaBindingForLocalModule,
+      pSchemaSystem,
+      pBinaryName,
+      pProjectName);
+    v9 = CBaseConstraint::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult;
+    if ( CBaseConstraint::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult == 0 )
+      v9 = CBaseConstraint::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+             pSchemaSystem,
+             pBinaryName,
+             v8);
+    CMorphConstraint::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassBases_CMorphConstraint[0].m_pClass = v9;
+    CMorphConstraint::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CMorphConstraint.m_pOuterTypeScope = v7;
+    CMorphConstraint::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult = &CMorphConstraint::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CMorphConstraint;
+    (*(*v7 + 264LL))(
+      v7,
+      &CMorphConstraint::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CMorphConstraint);
+    return CMorphConstraint::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult;
+  }
+  return result;
+}
+
+
+// CMorphConstraint::Schema_VerifyBindingIsRegistered  (line 595, @0x000000000317e530, libserver.so)
+void __cdecl CMorphConstraint::Schema_VerifyBindingIsRegistered()
+{
+  ;
+}
+
+
+// CMorphConstraint::KV3TransferSave  (line 603, @0x000000000317f2f0, libserver.so)
+// calls: CMorphConstraint::KV3TransferSave_CMorphConstraint
+void __fastcall CMorphConstraint::KV3TransferSave(
+        const CMorphConstraint *const this,
+        CKV3TransferSaveContext *pContext)
+{
+  CMorphConstraint::KV3TransferSave_CMorphConstraint(this, pContext);
+}
+
+
+// CMorphConstraint::KV3TransferSave_CMorphConstraint  (line 608, @0x000000000317f050, libserver.so)  // inlines: CreateTargetMember, SaveValue<CUtlString>, SaveValue<bool>, SaveValue<float>, SaveValue<int>, SaveValueDirect<CUtlString>, SaveValueDirect<bool>, SaveValueDirect<float>, SaveValueDirect<int>, SaveValueToMember<CUtlString>, SaveValueToMember<bool>, SaveValueToMember<float>, SaveValueToMember<int>
+// calls: CBaseConstraint::KV3TransferSave_CBaseConstraint, KeyValues3::FindMember, CKV3TransferContextBase::NoteFailure, KeyValues3::SetBool, CUtlString::Get, KeyValues3::SetString, KeyValues3::SetInt, KeyValues3::SetFloat, KeyValues3::SetMemberToNull
+// callers: CMorphConstraint::KV3TransferSave
+// strings: "m_bCacheAttempted", "Double-save to Member '%s'", "m_bCacheOk", "m_sTargetMorph", "m_nSlaveChannel", "m_flMin" (7 total)
+void __fastcall CMorphConstraint::KV3TransferSave_CMorphConstraint(
+        const CMorphConstraint *const this,
+        CKV3TransferSaveContext *pContext)
+{
+  KeyValues3 *Member; // r13
+  KeyValues3 *v5; // rdi
+  KeyValues3 *v6; // r13
+  KeyValues3 *v7; // rdi
+  KeyValues3 *v8; // r13
+  const char *v9; // rax
+  KeyValues3 *v10; // r13
+  KeyValues3 *v11; // rdi
+  KeyValues3 *v12; // r13
+  double v13; // xmm1_8
+  KeyValues3 *v14; // rdi
+  KeyValues3 *v15; // r13
+  double v16; // xmm1_8
+  KeyValues3 *v17; // rdi
+
+  CBaseConstraint::KV3TransferSave_CBaseConstraint(this, pContext);
+  Member = KeyValues3::FindMember(pContext->m_pTargetObject, "m_bCacheAttempted", -1655730476);
+  if ( Member != 0 )
+  {
+    CKV3TransferContextBase::NoteFailure(pContext, "Double-save to Member '%s'", "m_bCacheAttempted");
+    v5 = Member;
+  }
+  else
+  {
+    v5 = KeyValues3::SetMemberToNull(pContext->m_pTargetObject, "m_bCacheAttempted", -1655730476);
+  }
+  KeyValues3::SetBool(v5, this->m_bCacheAttempted);
+  v6 = KeyValues3::FindMember(pContext->m_pTargetObject, "m_bCacheOk", 227395472);
+  if ( v6 != 0 )
+  {
+    CKV3TransferContextBase::NoteFailure(pContext, "Double-save to Member '%s'", "m_bCacheOk");
+    v7 = v6;
+  }
+  else
+  {
+    v7 = KeyValues3::SetMemberToNull(pContext->m_pTargetObject, "m_bCacheOk", 227395472);
+  }
+  KeyValues3::SetBool(v7, this->m_bCacheOk);
+  v8 = KeyValues3::FindMember(pContext->m_pTargetObject, "m_sTargetMorph", -661280490);
+  if ( v8 != 0 )
+    CKV3TransferContextBase::NoteFailure(pContext, "Double-save to Member '%s'", "m_sTargetMorph");
+  else
+    v8 = KeyValues3::SetMemberToNull(pContext->m_pTargetObject, "m_sTargetMorph", -661280490);
+  v9 = CUtlString::Get(&this->m_sTargetMorph);
+  KeyValues3::SetString(v8, v9);
+  v10 = KeyValues3::FindMember(pContext->m_pTargetObject, "m_nSlaveChannel", -1852302740);
+  if ( v10 != 0 )
+  {
+    CKV3TransferContextBase::NoteFailure(pContext, "Double-save to Member '%s'", "m_nSlaveChannel");
+    v11 = v10;
+  }
+  else
+  {
+    v11 = KeyValues3::SetMemberToNull(pContext->m_pTargetObject, "m_nSlaveChannel", -1852302740);
+  }
+  KeyValues3::SetInt(v11, this->m_nSlaveChannel);
+  v12 = KeyValues3::FindMember(pContext->m_pTargetObject, "m_flMin", 942453776);
+  if ( v12 != 0 )
+  {
+    CKV3TransferContextBase::NoteFailure(pContext, "Double-save to Member '%s'", "m_flMin");
+    v14 = v12;
+  }
+  else
+  {
+    v14 = KeyValues3::SetMemberToNull(pContext->m_pTargetObject, "m_flMin", 942453776);
+  }
+  KeyValues3::SetFloat(v14, this->m_flMin, v13);
+  v15 = KeyValues3::FindMember(pContext->m_pTargetObject, "m_flMax", -398285431);
+  if ( v15 != 0 )
+  {
+    CKV3TransferContextBase::NoteFailure(pContext, "Double-save to Member '%s'", "m_flMax");
+    v17 = v15;
+  }
+  else
+  {
+    v17 = KeyValues3::SetMemberToNull(pContext->m_pTargetObject, "m_flMax", -398285431);
+  }
+  KeyValues3::SetFloat(v17, this->m_flMax, v16);
+}
+
+
+// CMorphConstraint::KV3TransferLoad  (line 621, @0x0000000003180040, libserver.so)
+// calls: CMorphConstraint::KV3TransferLoad_CMorphConstraint
+void __fastcall CMorphConstraint::KV3TransferLoad(CMorphConstraint *const this, CKV3TransferLoadContext *pContext)
+{
+  CMorphConstraint::KV3TransferLoad_CMorphConstraint(this, pContext);
+}
+
+
+// CMorphConstraint::KV3TransferLoad_CMorphConstraint  (line 626, @0x000000000317fdc0, libserver.so)  // inlines: FindMember, FindSourceMember, LoadValue<CUtlString>, LoadValue<bool>, LoadValue<float>, LoadValue<int>, LoadValueDirect<CUtlString>, LoadValueDirect<bool>, LoadValueDirect<float>, LoadValueDirect<int>, LoadValueFromMember<CUtlString>, LoadValueFromMember<bool>, LoadValueFromMember<float>, LoadValueFromMember<int>
+// calls: CBaseConstraint::KV3TransferLoad_CBaseConstraint, KeyValues3::FindMember, KeyValues3::GetBool, KeyValues3::GetString, KeyValues3::GetInt, KeyValues3::GetFloat, KeyValues3::KeyValues3, KeyValues3::~KeyValues3, __stack_chk_fail, _Unwind_Resume
+// callers: CMorphConstraint::KV3TransferLoad
+// strings: "m_bCacheAttempted", "m_bCacheOk", "m_sTargetMorph", "m_nSlaveChannel", "m_flMin", "m_flMax"
+void __fastcall CMorphConstraint::KV3TransferLoad_CMorphConstraint(
+        CMorphConstraint *const this,
+        CKV3TransferLoadContext *pContext)
+{
+  KeyValues3 *Member; // rax
+  KeyValues3 *v5; // rax
+  KeyValues3 *v6; // rax
+  KeyValues3 *v7; // rax
+  KeyValues3 *v8; // rax
+  KeyValues3 *v9; // rax
+  KeyValues3 v10; // [rsp+0h] [rbp-40h] BYREF
+  unsigned __int64 v11; // [rsp+18h] [rbp-28h]
+
+  v11 = __readfsqword(0x28u);
+  CBaseConstraint::KV3TransferLoad_CBaseConstraint(this, pContext);
+  Member = KeyValues3::FindMember(pContext->m_pSourceObject, "m_bCacheAttempted", -1655730476);
+  if ( Member != 0 )
+  {
+    this->m_bCacheAttempted = KeyValues3::GetBool(Member);
+  }
+  else
+  {
+    KeyValues3::KeyValues3(&v10);
+    this->m_bCacheAttempted = KeyValues3::GetBool(&v10);
+    KeyValues3::~KeyValues3(&v10);
+  }
+  v5 = KeyValues3::FindMember(pContext->m_pSourceObject, "m_bCacheOk", 227395472);
+  if ( v5 != 0 )
+  {
+    this->m_bCacheOk = KeyValues3::GetBool(v5);
+  }
+  else
+  {
+    KeyValues3::KeyValues3(&v10);
+    this->m_bCacheOk = KeyValues3::GetBool(&v10);
+    KeyValues3::~KeyValues3(&v10);
+  }
+  v6 = KeyValues3::FindMember(pContext->m_pSourceObject, "m_sTargetMorph", -661280490);
+  if ( v6 != 0 )
+  {
+    KeyValues3::GetString(v6, &this->m_sTargetMorph);
+  }
+  else
+  {
+    KeyValues3::KeyValues3(&v10);
+    KeyValues3::GetString(&v10, &this->m_sTargetMorph);
+    KeyValues3::~KeyValues3(&v10);
+  }
+  v7 = KeyValues3::FindMember(pContext->m_pSourceObject, "m_nSlaveChannel", -1852302740);
+  if ( v7 != 0 )
+  {
+    this->m_nSlaveChannel = KeyValues3::GetInt(v7);
+  }
+  else
+  {
+    KeyValues3::KeyValues3(&v10);
+    this->m_nSlaveChannel = KeyValues3::GetInt(&v10);
+    KeyValues3::~KeyValues3(&v10);
+  }
+  v8 = KeyValues3::FindMember(pContext->m_pSourceObject, "m_flMin", 942453776);
+  if ( v8 != 0 )
+  {
+    this->m_flMin = KeyValues3::GetFloat(v8);
+  }
+  else
+  {
+    KeyValues3::KeyValues3(&v10);
+    this->m_flMin = KeyValues3::GetFloat(&v10);
+    KeyValues3::~KeyValues3(&v10);
+  }
+  v9 = KeyValues3::FindMember(pContext->m_pSourceObject, "m_flMax", -398285431);
+  if ( v9 != 0 )
+  {
+    this->m_flMax = KeyValues3::GetFloat(v9);
+  }
+  else
+  {
+    KeyValues3::KeyValues3(&v10);
+    this->m_flMax = KeyValues3::GetFloat(&v10);
+    KeyValues3::~KeyValues3(&v10);
+  }
+}
+
+
+// LocalRegisterSchemaModule<ArbitraryTemplateParameter_modellib_boneconstraints_h>  (line 645, @0x000000000317e540, libserver.so)  // inlines: Call
+// callers: RegisterSchemaModule_boneconstraints_h
+// strings: "modellib"
+// globals: CConstraintTarget::s_pSchemaBindingForLocalModule, CConstraintSlave::s_pSchemaBindingForLocalModule, CBaseConstraint::s_pSchemaBindingForLocalModule, CPointConstraint::s_pSchemaBindingForLocalModule, COrientConstraint::s_pSchemaBindingForLocalModule, CAimConstraint::s_pSchemaBindingForLocalModule, CTwistConstraint::s_pSchemaBindingForLocalModule, CTiltTwistConstraint::s_pSchemaBindingForLocalModule (9 total)
+void __fastcall LocalRegisterSchemaModule<ArbitraryTemplateParameter_modellib_boneconstraints_h>(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        SchemaRegistrationPhase_t nRegistrationPhase)
+{
+  if ( nRegistrationPhase == SchemaRegistrationPhase_t::SCHEMA_REGISTRATION_PHASE_CLASSES )
+  {
+    (*(CConstraintTarget::s_pSchemaBindingForLocalModule->_vptr_ISchemaBinding + 5))(
+      CConstraintTarget::s_pSchemaBindingForLocalModule,
+      pSchemaSystem,
+      pBinaryName,
+      "modellib");
+    (*(CConstraintSlave::s_pSchemaBindingForLocalModule->_vptr_ISchemaBinding + 5))(
+      CConstraintSlave::s_pSchemaBindingForLocalModule,
+      pSchemaSystem,
+      pBinaryName,
+      "modellib");
+    (*(CBaseConstraint::s_pSchemaBindingForLocalModule->_vptr_ISchemaBinding + 5))(
+      CBaseConstraint::s_pSchemaBindingForLocalModule,
+      pSchemaSystem,
+      pBinaryName,
+      "modellib");
+    (*(CPointConstraint::s_pSchemaBindingForLocalModule->_vptr_ISchemaBinding + 5))(
+      CPointConstraint::s_pSchemaBindingForLocalModule,
+      pSchemaSystem,
+      pBinaryName,
+      "modellib");
+    (*(COrientConstraint::s_pSchemaBindingForLocalModule->_vptr_ISchemaBinding + 5))(
+      COrientConstraint::s_pSchemaBindingForLocalModule,
+      pSchemaSystem,
+      pBinaryName,
+      "modellib");
+    (*(CAimConstraint::s_pSchemaBindingForLocalModule->_vptr_ISchemaBinding + 5))(
+      CAimConstraint::s_pSchemaBindingForLocalModule,
+      pSchemaSystem,
+      pBinaryName,
+      "modellib");
+    (*(CTwistConstraint::s_pSchemaBindingForLocalModule->_vptr_ISchemaBinding + 5))(
+      CTwistConstraint::s_pSchemaBindingForLocalModule,
+      pSchemaSystem,
+      pBinaryName,
+      "modellib");
+    (*(CTiltTwistConstraint::s_pSchemaBindingForLocalModule->_vptr_ISchemaBinding + 5))(
+      CTiltTwistConstraint::s_pSchemaBindingForLocalModule,
+      pSchemaSystem,
+      pBinaryName,
+      "modellib");
+    (*(CMorphConstraint::s_pSchemaBindingForLocalModule->_vptr_ISchemaBinding + 5))(
+      CMorphConstraint::s_pSchemaBindingForLocalModule,
+      pSchemaSystem,
+      pBinaryName,
+      "modellib");
+  }
+  ++g_nLinkerHack_SchemaAnchor_RegistrationCountFor_modellib;
+}
+
+
+// RegisterSchemaModule_boneconstraints_h  (line 655, @0x000000000317e660, libserver.so)
+// calls: LocalRegisterSchemaModule<ArbitraryTemplateParameter_modellib_boneconstraints_h>
+// callers: CSchemaRegistration_modellib::RegisterAllBindings
+void __fastcall RegisterSchemaModule_boneconstraints_h(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        SchemaRegistrationPhase_t nRegistrationPhase)
+{
+  LocalRegisterSchemaModule<ArbitraryTemplateParameter_modellib_boneconstraints_h>(
+    pSchemaSystem,
+    pBinaryName,
+    nRegistrationPhase);
+}
+
+

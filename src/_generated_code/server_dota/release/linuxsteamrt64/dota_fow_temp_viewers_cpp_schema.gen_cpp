@@ -1,0 +1,316 @@
+
+// ==== functions (decompiled by Hex-Rays; names/signatures from DWARF) ====
+
+// TempViewerInfo_t::Schema_CompileTimeVerificationFunction  (line 35, @0x00000000024c2340, libserver.so)
+void __fastcall TempViewerInfo_t::Schema_CompileTimeVerificationFunction(TempViewerInfo_t *const this)
+{
+  ;
+}
+
+
+// TempViewerInfo_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE  (line 48, @0x00000000024c2350, libserver.so)  // inlines: Get, NetworkVarDecl_t, SchemaBinding_SchemaTypeOfMemberVarByAddr<TempViewerInfo_t, CHandle<CBaseEntity> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<TempViewerInfo_t, CNetworkVarBase<bool, TempViewerInfo_t::NetworkVar_m_bObstructedVision> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<TempViewerInfo_t, CNetworkVarBase<bool, TempViewerInfo_t::NetworkVar_m_bValid> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<TempViewerInfo_t, CNetworkVarBase<int, TempViewerInfo_t::NetworkVar_m_nGridX> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<TempViewerInfo_t, CNetworkVarBase<int, TempViewerInfo_t::NetworkVar_m_nGridY> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<TempViewerInfo_t, CNetworkVarBase<int, TempViewerInfo_t::NetworkVar_m_nRadius> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<TempViewerInfo_t, CNetworkVarBase<signed char, TempViewerInfo_t::NetworkVar_m_nViewerType> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<TempViewerInfo_t, bool>, SchemaBinding_SchemaTypeOfMemberVarByAddr<TempViewerInfo_t, float>, SchemaBinding_SchemaTypeOfMemberVarByAddr<TempViewerInfo_t, int>, SetTypeScope
+// calls: __cxa_guard_acquire, __cxa_guard_release
+// callers: CSchemaClassBinding<TempViewerInfo_t>::Register
+// strings: "CBaseEntity", "CHandle", "m_nGridX", "m_bValid", "m_bObstructedVision", "m_nViewerType" (8 total)
+// globals: TempViewerInfo_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pIniti, `guard variable for'TempViewerInfo_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,ch, CSchemaManipulator<CHandle<CBaseEntity>>::StaticAccessor(void)::m, CAtomicManipulator<CHandle<CBaseEntity>>::Get(void)::val, TempViewerInfo_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSche
+CSchemaClassInfo *__fastcall TempViewerInfo_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        const char *pProjectName)
+{
+  CSchemaClassInfo *result; // rax
+  ISchemaSystemTypeScope *v4; // rbx
+  __int64 (__fastcall *v5)(ISchemaSystemTypeScope *, const char *, __int64, __int64 (__fastcall ***)(), __int64 (__fastcall ***)(), __int64); // r12
+  __int64 v6; // rax
+  CSchemaType *v7; // rax
+
+  result = TempViewerInfo_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult;
+  if ( TempViewerInfo_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult == 0 )
+  {
+    v4 = (*(*pSchemaSystem + 112LL))(pSchemaSystem, 0, pBinaryName);
+    if ( `guard variable for'TempViewerInfo_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_TempViewerInfo_t0_MNetworkVarNames_Value == 0
+      && __cxa_guard_acquire(&`guard variable for'TempViewerInfo_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_TempViewerInfo_t0_MNetworkVarNames_Value) != 0 )
+    {
+      TempViewerInfo_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_TempViewerInfo_t0_MNetworkVarNames_Value.m_pVarName = "m_nGridX";
+      TempViewerInfo_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_TempViewerInfo_t0_MNetworkVarNames_Value.m_pVarType = "int";
+      __cxa_guard_release(&`guard variable for'TempViewerInfo_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_TempViewerInfo_t0_MNetworkVarNames_Value);
+    }
+    if ( `guard variable for'TempViewerInfo_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_TempViewerInfo_t1_MNetworkVarNames_Value == 0
+      && __cxa_guard_acquire(&`guard variable for'TempViewerInfo_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_TempViewerInfo_t1_MNetworkVarNames_Value) != 0 )
+    {
+      TempViewerInfo_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_TempViewerInfo_t1_MNetworkVarNames_Value.m_pVarName = "m_nGridY";
+      TempViewerInfo_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_TempViewerInfo_t1_MNetworkVarNames_Value.m_pVarType = "int";
+      __cxa_guard_release(&`guard variable for'TempViewerInfo_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_TempViewerInfo_t1_MNetworkVarNames_Value);
+    }
+    if ( `guard variable for'TempViewerInfo_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_TempViewerInfo_t2_MNetworkVarNames_Value == 0
+      && __cxa_guard_acquire(&`guard variable for'TempViewerInfo_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_TempViewerInfo_t2_MNetworkVarNames_Value) != 0 )
+    {
+      TempViewerInfo_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_TempViewerInfo_t2_MNetworkVarNames_Value.m_pVarName = "m_nRadius";
+      TempViewerInfo_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_TempViewerInfo_t2_MNetworkVarNames_Value.m_pVarType = "int";
+      __cxa_guard_release(&`guard variable for'TempViewerInfo_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_TempViewerInfo_t2_MNetworkVarNames_Value);
+    }
+    if ( `guard variable for'TempViewerInfo_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_TempViewerInfo_t3_MNetworkVarNames_Value == 0
+      && __cxa_guard_acquire(&`guard variable for'TempViewerInfo_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_TempViewerInfo_t3_MNetworkVarNames_Value) != 0 )
+    {
+      TempViewerInfo_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_TempViewerInfo_t3_MNetworkVarNames_Value.m_pVarName = "m_nViewerType";
+      TempViewerInfo_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_TempViewerInfo_t3_MNetworkVarNames_Value.m_pVarType = "int8";
+      __cxa_guard_release(&`guard variable for'TempViewerInfo_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_TempViewerInfo_t3_MNetworkVarNames_Value);
+    }
+    if ( `guard variable for'TempViewerInfo_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_TempViewerInfo_t4_MNetworkVarNames_Value == 0
+      && __cxa_guard_acquire(&`guard variable for'TempViewerInfo_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_TempViewerInfo_t4_MNetworkVarNames_Value) != 0 )
+    {
+      TempViewerInfo_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_TempViewerInfo_t4_MNetworkVarNames_Value.m_pVarName = "m_bObstructedVision";
+      TempViewerInfo_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_TempViewerInfo_t4_MNetworkVarNames_Value.m_pVarType = "bool";
+      __cxa_guard_release(&`guard variable for'TempViewerInfo_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_TempViewerInfo_t4_MNetworkVarNames_Value);
+    }
+    if ( `guard variable for'TempViewerInfo_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_TempViewerInfo_t5_MNetworkVarNames_Value == 0
+      && __cxa_guard_acquire(&`guard variable for'TempViewerInfo_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_TempViewerInfo_t5_MNetworkVarNames_Value) != 0 )
+    {
+      TempViewerInfo_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_TempViewerInfo_t5_MNetworkVarNames_Value.m_pVarName = "m_bValid";
+      TempViewerInfo_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_TempViewerInfo_t5_MNetworkVarNames_Value.m_pVarType = "bool";
+      __cxa_guard_release(&`guard variable for'TempViewerInfo_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_TempViewerInfo_t5_MNetworkVarNames_Value);
+    }
+    TempViewerInfo_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_TempViewerInfo_t[0].m_pType = (*(*v4 + 40LL))(v4, 7);
+    TempViewerInfo_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_TempViewerInfo_t[1].m_pType = (*(*v4 + 40LL))(v4, 7);
+    TempViewerInfo_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_TempViewerInfo_t[2].m_pType = (*(*v4 + 40LL))(v4, 7);
+    TempViewerInfo_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_TempViewerInfo_t[3].m_pType = (*(*v4 + 40LL))(v4, 3);
+    TempViewerInfo_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_TempViewerInfo_t[4].m_pType = (*(*v4 + 40LL))(v4, 13);
+    TempViewerInfo_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_TempViewerInfo_t[5].m_pType = (*(*v4 + 40LL))(v4, 13);
+    TempViewerInfo_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_TempViewerInfo_t[6].m_pType = (*(*v4 + 40LL))(v4, 13);
+    TempViewerInfo_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_TempViewerInfo_t[7].m_pType = (*(*v4 + 40LL))(v4, 11);
+    TempViewerInfo_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_TempViewerInfo_t[8].m_pType = (*(*v4 + 40LL))(v4, 7);
+    v5 = *(*v4 + 64LL);
+    v6 = (*(*v4 + 88LL))(v4, "CBaseEntity");
+    v7 = v5(
+           v4,
+           "CHandle",
+           5003,
+           CAtomicManipulator<CHandle<CBaseEntity>>::Get(void)::val,
+           &CSchemaManipulator<CHandle<CBaseEntity>>::StaticAccessor(void)::m,
+           v6);
+    TempViewerInfo_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_TempViewerInfo_t.m_pOuterTypeScope = v4;
+    TempViewerInfo_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_TempViewerInfo_t[9].m_pType = v7;
+    TempViewerInfo_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult = &TempViewerInfo_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_TempViewerInfo_t;
+    (*(*v4 + 264LL))(
+      v4,
+      &TempViewerInfo_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_TempViewerInfo_t);
+    return TempViewerInfo_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult;
+  }
+  return result;
+}
+
+
+// TempViewerInfo_t::Schema_VerifyBindingIsRegistered  (line 183, @0x00000000024c26b0, libserver.so)
+void __cdecl TempViewerInfo_t::Schema_VerifyBindingIsRegistered()
+{
+  ;
+}
+
+
+// CDOTAFogOfWarTempViewers::CEntityInstanceEntityClass::Schema_CompileTimeVerificationFunction  (line 191, @0x00000000024c26c0, libserver.so)
+void __fastcall CDOTAFogOfWarTempViewers::CEntityInstanceEntityClass::Schema_CompileTimeVerificationFunction(
+        CDOTAFogOfWarTempViewers::CEntityInstanceEntityClass *const this)
+{
+  ;
+}
+
+
+// CDOTAFogOfWarTempViewers::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE  (line 194, @0x00000000024b5b30, libserver.so)  // inlines: Call, Get, SetTypeScope
+// calls: CBaseEntity::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE
+// callers: CSchemaNonConstructibleClassBinding<CDOTAFogOfWarTempViewers::CEntityInstanceEntityClass>::Register, CDOTAFogOfWarTempViewers::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE, CDOTAFogOfWarTempViewers::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE
+// globals: CDOTAFogOfWarTempViewers::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem 
+CSchemaClassInfo *__fastcall CDOTAFogOfWarTempViewers::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        const char *pProjectName)
+{
+  ISchemaSystemTypeScope *v6; // r14
+  CSchemaClassInfo *v7; // rax
+
+  v6 = (*(*pSchemaSystem + 112LL))(pSchemaSystem, 1, pBinaryName);
+  (*(CBaseEntity::CEntityInstanceEntityClass::s_pSchemaBindingForLocalModule->_vptr_ISchemaBinding + 5))(
+    CBaseEntity::CEntityInstanceEntityClass::s_pSchemaBindingForLocalModule,
+    pSchemaSystem,
+    pBinaryName,
+    pProjectName);
+  v7 = CBaseEntity::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+         pSchemaSystem,
+         pBinaryName,
+         pProjectName);
+  CDOTAFogOfWarTempViewers::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CDOTAFogOfWarTempViewers_CEntityInstanceEntityClass.m_pOuterTypeScope = v6;
+  CDOTAFogOfWarTempViewers::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassBases_CDOTAFogOfWarTempViewers_CEntityInstanceEntityClass[0].m_pClass = v7;
+  CDOTAFogOfWarTempViewers::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult = &CDOTAFogOfWarTempViewers::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CDOTAFogOfWarTempViewers_CEntityInstanceEntityClass;
+  return &CDOTAFogOfWarTempViewers::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CDOTAFogOfWarTempViewers_CEntityInstanceEntityClass;
+}
+
+
+// CDOTAFogOfWarTempViewers::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE  (line 194, @0x00000000024c26d0, libserver.so)
+// calls: CDOTAFogOfWarTempViewers::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE
+// globals: CDOTAFogOfWarTempViewers::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem 
+CSchemaClassInfo *__fastcall CDOTAFogOfWarTempViewers::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        const char *pProjectName)
+{
+  CSchemaClassInfo *result; // rax
+
+  result = CDOTAFogOfWarTempViewers::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult;
+  if ( CDOTAFogOfWarTempViewers::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult == 0 )
+    return CDOTAFogOfWarTempViewers::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+             pSchemaSystem,
+             pBinaryName,
+             pProjectName);
+  return result;
+}
+
+
+// CDOTAFogOfWarTempViewers::CEntityInstanceEntityClass::Schema_VerifyBindingIsRegistered  (line 211, @0x00000000024c26f0, libserver.so)
+void __cdecl CDOTAFogOfWarTempViewers::CEntityInstanceEntityClass::Schema_VerifyBindingIsRegistered()
+{
+  ;
+}
+
+
+// CDOTAFogOfWarTempViewers::Schema_CompileTimeVerificationFunction  (line 219, @0x00000000024c2700, libserver.so)
+void __fastcall CDOTAFogOfWarTempViewers::Schema_CompileTimeVerificationFunction(CDOTAFogOfWarTempViewers *const this)
+{
+  ;
+}
+
+
+// CDOTAFogOfWarTempViewers::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE  (line 225, @0x00000000024c2710, libserver.so)  // inlines: Call, Get, NetworkVarDecl_t, RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE, SchemaBinding_SchemaTypeOfMemberVarByAddr<CDOTAFogOfWarTempViewers, CNetworkVarBase<unsigned int, CDOTAFogOfWarTempViewers::NetworkVar_m_FoWTempViewerVersion> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<CDOTAFogOfWarTempViewers, CUtlVectorEmbeddedNetworkVar<TempViewerInfo_t, CDOTAFogOfWarTempViewers::NetworkVar_m_TempViewerInfo> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<CDOTAFogOfWarTempViewers, float>, SetTypeScope
+// calls: __cxa_guard_acquire, __cxa_guard_release, CBaseEntity::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE, CDOTAFogOfWarTempViewers::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE, __cxa_guard_abort, _Unwind_Resume
+// callers: CSchemaNonConstructibleClassBinding<CDOTAFogOfWarTempViewers>::Register
+// strings: "TempViewerInfo_t", "CUtlVector", "m_TempViewerInfo", "m_FoWTempViewerVersion", "uint32"
+// globals: CDOTAFogOfWarTempViewers::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::, `guard variable for'CDOTAFogOfWarTempViewers::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char c, CSchemaManipulator<CUtlVector<TempViewerInfo_t,CNetworkUtlVector_MemoryType<TempViewerInfo_t,-1>>>::StaticAccessor(void)::m, CAtomicManipulator<CUtlVector<TempViewerInfo_t,CNetworkUtlVector_MemoryType<TempViewerInfo_t,-1>>>::Get(void)::val, CDOTAFogOfWarTempViewers::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem 
+CSchemaClassInfo *__fastcall CDOTAFogOfWarTempViewers::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        const char *pProjectName)
+{
+  CSchemaClassInfo *result; // rax
+  ISchemaSystemTypeScope *v7; // r14
+  __int64 (__fastcall *v8)(ISchemaSystemTypeScope *, const char *, __int64, __int64 (__fastcall ***)(), __int64 (__fastcall ***)(), __int64); // r15
+  __int64 v9; // rax
+  CSchemaClassInfo *v10; // rax
+  CSchemaClassInfo *v11; // rax
+
+  result = CDOTAFogOfWarTempViewers::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult;
+  if ( CDOTAFogOfWarTempViewers::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult == 0 )
+  {
+    v7 = (*(*pSchemaSystem + 112LL))(pSchemaSystem, 1, pBinaryName);
+    if ( `guard variable for'CDOTAFogOfWarTempViewers::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTAFogOfWarTempViewers3_MNetworkVarNames_Value == 0
+      && __cxa_guard_acquire(&`guard variable for'CDOTAFogOfWarTempViewers::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTAFogOfWarTempViewers3_MNetworkVarNames_Value) != 0 )
+    {
+      CDOTAFogOfWarTempViewers::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTAFogOfWarTempViewers3_MNetworkVarNames_Value.m_pVarName = "m_FoWTempViewerVersion";
+      CDOTAFogOfWarTempViewers::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTAFogOfWarTempViewers3_MNetworkVarNames_Value.m_pVarType = "uint32";
+      __cxa_guard_release(&`guard variable for'CDOTAFogOfWarTempViewers::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTAFogOfWarTempViewers3_MNetworkVarNames_Value);
+    }
+    if ( `guard variable for'CDOTAFogOfWarTempViewers::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTAFogOfWarTempViewers4_MNetworkVarNames_Value == 0
+      && __cxa_guard_acquire(&`guard variable for'CDOTAFogOfWarTempViewers::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTAFogOfWarTempViewers4_MNetworkVarNames_Value) != 0 )
+    {
+      CDOTAFogOfWarTempViewers::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTAFogOfWarTempViewers4_MNetworkVarNames_Value.m_pVarName = "m_TempViewerInfo";
+      CDOTAFogOfWarTempViewers::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTAFogOfWarTempViewers4_MNetworkVarNames_Value.m_pVarType = "TempViewerInfo_t";
+      __cxa_guard_release(&`guard variable for'CDOTAFogOfWarTempViewers::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTAFogOfWarTempViewers4_MNetworkVarNames_Value);
+    }
+    CDOTAFogOfWarTempViewers::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CDOTAFogOfWarTempViewers[0].m_pType = (*(*v7 + 40LL))(v7, 8);
+    v8 = *(*v7 + 64LL);
+    v9 = (*(*v7 + 88LL))(v7, "TempViewerInfo_t");
+    CDOTAFogOfWarTempViewers::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CDOTAFogOfWarTempViewers[1].m_pType = v8(v7, "CUtlVector", 3002, CAtomicManipulator<CUtlVector<TempViewerInfo_t,CNetworkUtlVector_MemoryType<TempViewerInfo_t,-1>>>::Get(void)::val, CSchemaManipulator<CUtlVector<TempViewerInfo_t,CNetworkUtlVector_MemoryType<TempViewerInfo_t,-1>>>::StaticAccessor(void)::m, v9);
+    CDOTAFogOfWarTempViewers::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CDOTAFogOfWarTempViewers[2].m_pType = (*(*v7 + 40LL))(v7, 11);
+    if ( `guard variable for'CDOTAFogOfWarTempViewers::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_NestedClassesOf_CDOTAFogOfWarTempViewers == 0
+      && __cxa_guard_acquire(&`guard variable for'CDOTAFogOfWarTempViewers::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_NestedClassesOf_CDOTAFogOfWarTempViewers) != 0 )
+    {
+      v10 = CDOTAFogOfWarTempViewers::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult;
+      if ( CDOTAFogOfWarTempViewers::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult == 0 )
+        v10 = CDOTAFogOfWarTempViewers::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+                pSchemaSystem,
+                pBinaryName,
+                pProjectName);
+      CDOTAFogOfWarTempViewers::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_NestedClassesOf_CDOTAFogOfWarTempViewers[0] = v10;
+      __cxa_guard_release(&`guard variable for'CDOTAFogOfWarTempViewers::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_NestedClassesOf_CDOTAFogOfWarTempViewers);
+    }
+    (*(CBaseEntity::s_pSchemaBindingForLocalModule->_vptr_ISchemaBinding + 5))(
+      CBaseEntity::s_pSchemaBindingForLocalModule,
+      pSchemaSystem,
+      pBinaryName,
+      pProjectName);
+    v11 = CBaseEntity::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+            pSchemaSystem,
+            pBinaryName,
+            pProjectName);
+    CDOTAFogOfWarTempViewers::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CDOTAFogOfWarTempViewers.m_pOuterTypeScope = v7;
+    CDOTAFogOfWarTempViewers::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassBases_CDOTAFogOfWarTempViewers[0].m_pClass = v11;
+    CDOTAFogOfWarTempViewers::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult = &CDOTAFogOfWarTempViewers::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CDOTAFogOfWarTempViewers;
+    return &CDOTAFogOfWarTempViewers::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CDOTAFogOfWarTempViewers;
+  }
+  return result;
+}
+
+
+// CDOTAFogOfWarTempViewers::Schema_VerifyBindingIsRegistered  (line 287, @0x00000000024c2920, libserver.so)
+void __cdecl CDOTAFogOfWarTempViewers::Schema_VerifyBindingIsRegistered()
+{
+  ;
+}
+
+
+// CDOTAFogOfWarTempViewers::SetupEntClassInputs  (line 301, @0x00000000024c2930, libserver.so)
+void __fastcall CDOTAFogOfWarTempViewers::SetupEntClassInputs(CEntityClass *pComponentInfo)
+{
+  ;
+}
+
+
+// CDOTAFogOfWarTempViewers::SetupEntClassComponentOverrides  (line 307, @0x00000000024c2940, libserver.so)
+void __fastcall CDOTAFogOfWarTempViewers::SetupEntClassComponentOverrides(CEntityClass *pEntityClass)
+{
+  pEntityClass->m_pComponentOverrides = 0;
+}
+
+
+// LocalRegisterSchemaModule<ArbitraryTemplateParameter_server_dota_fow_temp_viewers_cpp>  (line 313, @0x00000000024c2950, libserver.so)  // inlines: Call
+// callers: RegisterSchemaModule_dota_fow_temp_viewers_cpp
+// globals: TempViewerInfo_t::s_pSchemaBindingForLocalModule, CDOTAFogOfWarTempViewers::CEntityInstanceEntityClass::s_pSchemaBindingForLocalModule, CDOTAFogOfWarTempViewers::s_pSchemaBindingForLocalModule
+void __fastcall LocalRegisterSchemaModule<ArbitraryTemplateParameter_server_dota_fow_temp_viewers_cpp>(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        SchemaRegistrationPhase_t nRegistrationPhase)
+{
+  if ( nRegistrationPhase == SchemaRegistrationPhase_t::SCHEMA_REGISTRATION_PHASE_CLASSES )
+  {
+    (*(TempViewerInfo_t::s_pSchemaBindingForLocalModule->_vptr_ISchemaBinding + 5))(
+      TempViewerInfo_t::s_pSchemaBindingForLocalModule,
+      pSchemaSystem,
+      pBinaryName,
+      "server");
+    (*(CDOTAFogOfWarTempViewers::CEntityInstanceEntityClass::s_pSchemaBindingForLocalModule->_vptr_ISchemaBinding + 5))(
+      CDOTAFogOfWarTempViewers::CEntityInstanceEntityClass::s_pSchemaBindingForLocalModule,
+      pSchemaSystem,
+      pBinaryName,
+      "server");
+    (*(CDOTAFogOfWarTempViewers::s_pSchemaBindingForLocalModule->_vptr_ISchemaBinding + 5))(
+      CDOTAFogOfWarTempViewers::s_pSchemaBindingForLocalModule,
+      pSchemaSystem,
+      pBinaryName,
+      "server");
+  }
+  ++g_nLinkerHack_SchemaAnchor_RegistrationCountFor_server;
+}
+
+
+// RegisterSchemaModule_dota_fow_temp_viewers_cpp  (line 317, @0x00000000024c29d0, libserver.so)
+// calls: LocalRegisterSchemaModule<ArbitraryTemplateParameter_server_dota_fow_temp_viewers_cpp>
+// callers: CSchemaRegistration_server::RegisterAllBindings
+void __fastcall RegisterSchemaModule_dota_fow_temp_viewers_cpp(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        SchemaRegistrationPhase_t nRegistrationPhase)
+{
+  LocalRegisterSchemaModule<ArbitraryTemplateParameter_server_dota_fow_temp_viewers_cpp>(
+    pSchemaSystem,
+    pBinaryName,
+    nRegistrationPhase);
+}
+
+

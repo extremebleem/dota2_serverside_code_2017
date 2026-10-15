@@ -1,0 +1,106 @@
+
+// ==== functions (decompiled by Hex-Rays; names/signatures from DWARF) ====
+
+// CRecipientFilter::Schema_CompileTimeVerificationFunction  (line 35, @0x00000000020b3330, libserver.so)
+void __fastcall CRecipientFilter::Schema_CompileTimeVerificationFunction(CRecipientFilter *const this)
+{
+  ;
+}
+
+
+// CRecipientFilter::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE  (line 43, @0x00000000020b3340, libserver.so)  // inlines: Call, Get, SchemaBinding_SchemaTypeOfMemberVarByAddr<CRecipientFilter, CUtlVector<CEntityIndex, CUtlMemoryFixedGrowable<CEntityIndex, 65ul> > >, SchemaBinding_SchemaTypeOfMemberVarByAddr<CRecipientFilter, NetChannelBufType_t>, SchemaBinding_SchemaTypeOfMemberVarByAddr<CRecipientFilter, bool>, SetTypeScope
+// calls: IRecipientFilter::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE
+// callers: CSchemaClassBinding<CRecipientFilter>::Register
+// strings: "NetChannelBufType_t", "CEntityIndex", "CUtlVector"
+// globals: CRecipientFilter::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pIniti, CSchemaManipulator<CEntityIndex>::StaticAccessor(void)::m, CAtomicManipulator<CEntityIndex>::Get(void)::val, CSchemaManipulator<CUtlVector<CEntityIndex,CUtlMemoryFixedGrowable<CEntityIndex,65ul,int>>>::StaticAccessor(void)::m, CAtomicManipulator<CUtlVector<CEntityIndex,CUtlMemoryFixedGrowable<CEntityIndex,65ul,int>>>::Get(void)::val, CRecipientFilter::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSche
+CSchemaClassInfo *__fastcall CRecipientFilter::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        const char *pProjectName)
+{
+  CSchemaClassInfo *result; // rax
+  ISchemaSystemTypeScope *v7; // rbx
+  __int64 (__fastcall *v8)(ISchemaSystemTypeScope *, const char *, __int64, __int64 (__fastcall **)(), __int64 (__fastcall **)(), __int64); // r15
+  __int64 v9; // rax
+  CSchemaClassInfo *v10; // rax
+
+  result = CRecipientFilter::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult;
+  if ( CRecipientFilter::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult == 0 )
+  {
+    v7 = (*(*pSchemaSystem + 112LL))(pSchemaSystem, 0, pBinaryName);
+    CRecipientFilter::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CRecipientFilter[0].m_pType = (*(*v7 + 96LL))(v7, "NetChannelBufType_t");
+    CRecipientFilter::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CRecipientFilter[1].m_pType = (*(*v7 + 40LL))(v7, 13);
+    v8 = *(*v7 + 64LL);
+    v9 = (*(*v7 + 56LL))(
+           v7,
+           "CEntityIndex",
+           2019,
+           CAtomicManipulator<CEntityIndex>::Get(void)::val,
+           CSchemaManipulator<CEntityIndex>::StaticAccessor(void)::m);
+    CRecipientFilter::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CRecipientFilter[2].m_pType = v8(v7, "CUtlVector", 3002, CAtomicManipulator<CUtlVector<CEntityIndex,CUtlMemoryFixedGrowable<CEntityIndex,65ul,int>>>::Get(void)::val, CSchemaManipulator<CUtlVector<CEntityIndex,CUtlMemoryFixedGrowable<CEntityIndex,65ul,int>>>::StaticAccessor(void)::m, v9);
+    CRecipientFilter::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CRecipientFilter[3].m_pType = (*(*v7 + 40LL))(v7, 13);
+    CRecipientFilter::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CRecipientFilter[4].m_pType = (*(*v7 + 40LL))(v7, 13);
+    (*(IRecipientFilter::s_pSchemaBindingForLocalModule->_vptr_ISchemaBinding + 5))(
+      IRecipientFilter::s_pSchemaBindingForLocalModule,
+      pSchemaSystem,
+      pBinaryName,
+      pProjectName);
+    v10 = IRecipientFilter::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+            pSchemaSystem,
+            pBinaryName,
+            pProjectName);
+    CRecipientFilter::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CRecipientFilter.m_pOuterTypeScope = v7;
+    CRecipientFilter::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassBases_CRecipientFilter[0].m_pClass = v10;
+    CRecipientFilter::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult = &CRecipientFilter::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CRecipientFilter;
+    (*(*v7 + 264LL))(
+      v7,
+      &CRecipientFilter::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CRecipientFilter);
+    return CRecipientFilter::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult;
+  }
+  return result;
+}
+
+
+// CRecipientFilter::Schema_VerifyBindingIsRegistered  (line 71, @0x00000000020b3490, libserver.so)
+// callers: CRecipientFilter::Schema_DynamicBinding
+void __cdecl CRecipientFilter::Schema_VerifyBindingIsRegistered()
+{
+  ;
+}
+
+
+// LocalRegisterSchemaModule<ArbitraryTemplateParameter_server_recipientfilter_h>  (line 79, @0x00000000020b34a0, libserver.so)  // inlines: Call
+// globals: CRecipientFilter::s_pSchemaBindingForLocalModule
+void __fastcall LocalRegisterSchemaModule<ArbitraryTemplateParameter_server_recipientfilter_h>(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        SchemaRegistrationPhase_t nRegistrationPhase)
+{
+  if ( nRegistrationPhase == SchemaRegistrationPhase_t::SCHEMA_REGISTRATION_PHASE_CLASSES )
+    (*(CRecipientFilter::s_pSchemaBindingForLocalModule->_vptr_ISchemaBinding + 5))(
+      CRecipientFilter::s_pSchemaBindingForLocalModule,
+      pSchemaSystem,
+      pBinaryName,
+      "server");
+  ++g_nLinkerHack_SchemaAnchor_RegistrationCountFor_server;
+}
+
+
+// RegisterSchemaModule_recipientfilter_h  (line 81, @0x00000000020b34e0, libserver.so)  // inlines: Call, LocalRegisterSchemaModule<ArbitraryTemplateParameter_server_recipientfilter_h>
+// callers: CSchemaRegistration_server::RegisterAllBindings
+// globals: CRecipientFilter::s_pSchemaBindingForLocalModule
+void __fastcall RegisterSchemaModule_recipientfilter_h(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        SchemaRegistrationPhase_t nRegistrationPhase)
+{
+  if ( nRegistrationPhase == SchemaRegistrationPhase_t::SCHEMA_REGISTRATION_PHASE_CLASSES )
+    (*(CRecipientFilter::s_pSchemaBindingForLocalModule->_vptr_ISchemaBinding + 5))(
+      CRecipientFilter::s_pSchemaBindingForLocalModule,
+      pSchemaSystem,
+      pBinaryName,
+      "server");
+  ++g_nLinkerHack_SchemaAnchor_RegistrationCountFor_server;
+}
+
+

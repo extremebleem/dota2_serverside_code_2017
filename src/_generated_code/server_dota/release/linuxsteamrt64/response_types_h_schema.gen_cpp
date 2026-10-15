@@ -1,0 +1,365 @@
+
+// ==== functions (decompiled by Hex-Rays; names/signatures from DWARF) ====
+
+// CSchemaEnumBinding<CRR_Response::ResponseEnum_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE  (line 35, @0x00000000020b3520, libserver.so)  // inlines: Count, Initialize, SetTypeScope
+// callers: CSchemaEnumBinding<CRR_Response::ResponseEnum_t>::Register, CRR_Response::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE
+// globals: CSchemaEnumBinding<CRR_Response::ResponseEnum_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,cha
+CSchemaEnumInfo *__fastcall CSchemaEnumBinding<CRR_Response::ResponseEnum_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        const char *pProjectName)
+{
+  ISchemaSystemTypeScope *v3; // rax
+  unsigned int v4; // edi
+  SchemaEnumeratorValue_t v5; // r8
+  SchemaEnumeratorValue_t v6; // r9
+  SchemaEnumeratorValue_t *v7; // rdx
+
+  v3 = (*(*pSchemaSystem + 112LL))(pSchemaSystem, 0, pBinaryName);
+  if ( CSchemaEnumBinding<CRR_Response::ResponseEnum_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_CRR_Response_ResponseEnum_t.m_Enumerators.m_Data.m_nImplLength != 0 )
+  {
+    v4 = abs32(CSchemaEnumBinding<CRR_Response::ResponseEnum_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_CRR_Response_ResponseEnum_t.m_Enumerators.m_Data.m_nImplLength);
+    v5 = *(CSchemaEnumBinding<CRR_Response::ResponseEnum_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_CRR_Response_ResponseEnum_t.m_Enumerators.m_Data.m_pImplElements
+         + 2);
+    CSchemaEnumBinding<CRR_Response::ResponseEnum_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_CRR_Response_ResponseEnum_t.m_nMinValue = v5;
+    v6 = *(CSchemaEnumBinding<CRR_Response::ResponseEnum_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_CRR_Response_ResponseEnum_t.m_Enumerators.m_Data.m_pImplElements
+         + 2);
+    CSchemaEnumBinding<CRR_Response::ResponseEnum_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_CRR_Response_ResponseEnum_t.m_nMaxValue = v6;
+    if ( v4 != 1 )
+    {
+      v7 = (CSchemaEnumBinding<CRR_Response::ResponseEnum_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_CRR_Response_ResponseEnum_t.m_Enumerators.m_Data.m_pImplElements
+          + 72);
+      do
+      {
+        if ( v5 > *v7 )
+          v5 = *v7;
+        CSchemaEnumBinding<CRR_Response::ResponseEnum_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_CRR_Response_ResponseEnum_t.m_nMinValue = v5;
+        if ( v6 < *v7 )
+          v6 = *v7;
+        v7 += 7;
+        CSchemaEnumBinding<CRR_Response::ResponseEnum_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_CRR_Response_ResponseEnum_t.m_nMaxValue = v6;
+      }
+      while ( v7 != CSchemaEnumBinding<CRR_Response::ResponseEnum_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_CRR_Response_ResponseEnum_t.m_Enumerators.m_Data.m_pImplElements
+                  + 7 * v4
+                  + 2 );
+    }
+  }
+  else
+  {
+    CSchemaEnumBinding<CRR_Response::ResponseEnum_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_CRR_Response_ResponseEnum_t.m_nMinValue = 0;
+    CSchemaEnumBinding<CRR_Response::ResponseEnum_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_CRR_Response_ResponseEnum_t.m_nMaxValue = 0;
+  }
+  CSchemaEnumBinding<CRR_Response::ResponseEnum_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_CRR_Response_ResponseEnum_t.m_pOuterTypeScope = v3;
+  (*(*v3 + 272LL))(
+    v3,
+    &CSchemaEnumBinding<CRR_Response::ResponseEnum_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_CRR_Response_ResponseEnum_t);
+  return &CSchemaEnumBinding<CRR_Response::ResponseEnum_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_CRR_Response_ResponseEnum_t;
+}
+
+
+// ResponseFollowup::Schema_CompileTimeVerificationFunction  (line 46, @0x00000000020b3600, libserver.so)
+void __fastcall ResponseFollowup::Schema_CompileTimeVerificationFunction(ResponseFollowup *const this)
+{
+  ;
+}
+
+
+// ResponseFollowup::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE  (line 57, @0x00000000020b3610, libserver.so)  // inlines: Get, SchemaBinding_SchemaTypeOfMemberVarByAddr<ResponseFollowup, bool>, SchemaBinding_SchemaTypeOfMemberVarByAddr<ResponseFollowup, char const*>, SchemaBinding_SchemaTypeOfMemberVarByAddr<ResponseFollowup, float>, SetTypeScope
+// callers: CSchemaClassBinding<ResponseFollowup>::Register
+// globals: ResponseFollowup::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pIniti, ResponseFollowup::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSche
+CSchemaClassInfo *__fastcall ResponseFollowup::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        const char *pProjectName)
+{
+  CSchemaClassInfo *result; // rax
+  ISchemaSystemTypeScope *v4; // rbx
+  __int64 (__fastcall *v5)(ISchemaSystemTypeScope *, __int64); // r12
+  __int64 v6; // rax
+  __int64 (__fastcall *v7)(ISchemaSystemTypeScope *, __int64); // r12
+  __int64 v8; // rax
+  __int64 (__fastcall *v9)(ISchemaSystemTypeScope *, __int64); // r12
+  __int64 v10; // rax
+  __int64 (__fastcall *v11)(ISchemaSystemTypeScope *, __int64); // r12
+  __int64 v12; // rax
+  __int64 (__fastcall *v13)(ISchemaSystemTypeScope *, __int64); // r12
+  __int64 v14; // rax
+  CSchemaType *v15; // rax
+
+  result = ResponseFollowup::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult;
+  if ( ResponseFollowup::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult == 0 )
+  {
+    v4 = (*(*pSchemaSystem + 112LL))(pSchemaSystem, 0, pBinaryName);
+    v5 = *(*v4 + 48LL);
+    v6 = (*(*v4 + 40LL))(v4, 2);
+    ResponseFollowup::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_ResponseFollowup[0].m_pType = v5(v4, v6);
+    v7 = *(*v4 + 48LL);
+    v8 = (*(*v4 + 40LL))(v4, 2);
+    ResponseFollowup::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_ResponseFollowup[1].m_pType = v7(v4, v8);
+    ResponseFollowup::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_ResponseFollowup[2].m_pType = (*(*v4 + 40LL))(v4, 11);
+    v9 = *(*v4 + 48LL);
+    v10 = (*(*v4 + 40LL))(v4, 2);
+    ResponseFollowup::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_ResponseFollowup[3].m_pType = v9(v4, v10);
+    v11 = *(*v4 + 48LL);
+    v12 = (*(*v4 + 40LL))(v4, 2);
+    ResponseFollowup::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_ResponseFollowup[4].m_pType = v11(v4, v12);
+    v13 = *(*v4 + 48LL);
+    v14 = (*(*v4 + 40LL))(v4, 2);
+    ResponseFollowup::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_ResponseFollowup[5].m_pType = v13(v4, v14);
+    ResponseFollowup::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_ResponseFollowup[6].m_pType = (*(*v4 + 40LL))(v4, 11);
+    v15 = (*(*v4 + 40LL))(v4, 13);
+    ResponseFollowup::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_ResponseFollowup.m_pOuterTypeScope = v4;
+    ResponseFollowup::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_ResponseFollowup[7].m_pType = v15;
+    ResponseFollowup::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult = &ResponseFollowup::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_ResponseFollowup;
+    (*(*v4 + 264LL))(
+      v4,
+      &ResponseFollowup::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_ResponseFollowup);
+    return ResponseFollowup::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult;
+  }
+  return result;
+}
+
+
+// ResponseFollowup::Schema_VerifyBindingIsRegistered  (line 83, @0x00000000020b3760, libserver.so)
+void __cdecl ResponseFollowup::Schema_VerifyBindingIsRegistered()
+{
+  ;
+}
+
+
+// ResponseParams::Schema_CompileTimeVerificationFunction  (line 91, @0x00000000020b3770, libserver.so)
+void __fastcall ResponseParams::Schema_CompileTimeVerificationFunction(ResponseParams *const this)
+{
+  ;
+}
+
+
+// ResponseParams::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE  (line 102, @0x00000000020b3780, libserver.so)  // inlines: Get, SchemaBinding_SchemaTypeOfMemberVarByAddr<ResponseParams, ResponseFollowup*>, SchemaBinding_SchemaTypeOfMemberVarByAddr<ResponseParams, response_interval_t<float16_with_assign> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<ResponseParams, short int>, SchemaBinding_SchemaTypeOfMemberVarByAddr<ResponseParams, unsigned char>, SetTypeScope
+// callers: CSchemaClassBinding<ResponseParams>::Register
+// strings: "ResponseFollowup"
+// globals: ResponseParams::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitial, ResponseParams::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema
+CSchemaClassInfo *__fastcall ResponseParams::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        const char *pProjectName)
+{
+  CSchemaClassInfo *result; // rax
+  ISchemaSystemTypeScope *v4; // rbx
+  __int64 (__fastcall *v5)(ISchemaSystemTypeScope *, __int64); // r12
+  __int64 v6; // rax
+  CSchemaType *v7; // rax
+
+  result = ResponseParams::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult;
+  if ( ResponseParams::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult == 0 )
+  {
+    v4 = (*(*pSchemaSystem + 112LL))(pSchemaSystem, 0, pBinaryName);
+    ResponseParams::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_ResponseParams[0].m_pType = (*(*v4 + 120LL))(v4);
+    ResponseParams::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_ResponseParams[1].m_pType = (*(*v4 + 120LL))(v4);
+    ResponseParams::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_ResponseParams[2].m_pType = (*(*v4 + 120LL))(v4);
+    ResponseParams::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_ResponseParams[3].m_pType = (*(*v4 + 120LL))(v4);
+    ResponseParams::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_ResponseParams[4].m_pType = (*(*v4 + 40LL))(v4, 5);
+    ResponseParams::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_ResponseParams[5].m_pType = (*(*v4 + 40LL))(v4, 5);
+    ResponseParams::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_ResponseParams[6].m_pType = (*(*v4 + 40LL))(v4, 4);
+    v5 = *(*v4 + 48LL);
+    v6 = (*(*v4 + 88LL))(v4, "ResponseFollowup");
+    v7 = v5(v4, v6);
+    ResponseParams::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_ResponseParams.m_pOuterTypeScope = v4;
+    ResponseParams::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_ResponseParams[7].m_pType = v7;
+    ResponseParams::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult = &ResponseParams::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_ResponseParams;
+    (*(*v4 + 264LL))(
+      v4,
+      &ResponseParams::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_ResponseParams);
+    return ResponseParams::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult;
+  }
+  return result;
+}
+
+
+// ResponseParams::Schema_VerifyBindingIsRegistered  (line 128, @0x00000000020b3880, libserver.so)
+void __cdecl ResponseParams::Schema_VerifyBindingIsRegistered()
+{
+  ;
+}
+
+
+// CResponseCriteriaSet::Schema_CompileTimeVerificationFunction  (line 136, @0x00000000020b3890, libserver.so)
+void __fastcall CResponseCriteriaSet::Schema_CompileTimeVerificationFunction(CResponseCriteriaSet *const this)
+{
+  ;
+}
+
+
+// CResponseCriteriaSet::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE  (line 141, @0x00000000020b38a0, libserver.so)  // inlines: Get, SchemaBinding_SchemaTypeOfMemberVarByAddr<CResponseCriteriaSet, bool>, SchemaBinding_SchemaTypeOfMemberVarByAddr<CResponseCriteriaSet, int>, SetTypeScope
+// callers: CSchemaNonConstructibleClassBinding<CResponseCriteriaSet>::Register
+// globals: CResponseCriteriaSet::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pI, CResponseCriteriaSet::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::Impl
+CSchemaClassInfo *__fastcall CResponseCriteriaSet::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        const char *pProjectName)
+{
+  CSchemaClassInfo *result; // rax
+  ISchemaSystemTypeScope *v4; // rbx
+  CSchemaType *v5; // rax
+
+  result = CResponseCriteriaSet::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult;
+  if ( CResponseCriteriaSet::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult == 0 )
+  {
+    v4 = (*(*pSchemaSystem + 112LL))(pSchemaSystem, 0, pBinaryName);
+    CResponseCriteriaSet::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CResponseCriteriaSet[0].m_pType = (*(*v4 + 40LL))(v4, 7);
+    v5 = (*(*v4 + 40LL))(v4, 13);
+    CResponseCriteriaSet::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CResponseCriteriaSet.m_pOuterTypeScope = v4;
+    CResponseCriteriaSet::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CResponseCriteriaSet[1].m_pType = v5;
+    CResponseCriteriaSet::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult = &CResponseCriteriaSet::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CResponseCriteriaSet;
+    (*(*v4 + 264LL))(
+      v4,
+      &CResponseCriteriaSet::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CResponseCriteriaSet);
+    return CResponseCriteriaSet::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult;
+  }
+  return result;
+}
+
+
+// CResponseCriteriaSet::Schema_VerifyBindingIsRegistered  (line 155, @0x00000000020b3930, libserver.so)
+// callers: CResponseCriteriaSet::Schema_DynamicBinding
+void __cdecl CResponseCriteriaSet::Schema_VerifyBindingIsRegistered()
+{
+  ;
+}
+
+
+// CRR_Response::Schema_CompileTimeVerificationFunction  (line 163, @0x00000000020b3940, libserver.so)
+void __fastcall CRR_Response::Schema_CompileTimeVerificationFunction(CRR_Response *const this)
+{
+  ;
+}
+
+
+// CRR_Response::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE  (line 174, @0x00000000020b3950, libserver.so)  // inlines: Get, GetInfo, SchemaBinding_SchemaTypeOfMemberVarByAddr<CRR_Response, ResponseFollowup>, SchemaBinding_SchemaTypeOfMemberVarByAddr<CRR_Response, ResponseParams>, SchemaBinding_SchemaTypeOfMemberVarByAddr<CRR_Response, char [128]>, SchemaBinding_SchemaTypeOfMemberVarByAddr<CRR_Response, char [192]>, SchemaBinding_SchemaTypeOfMemberVarByAddr<CRR_Response, char*>, SchemaBinding_SchemaTypeOfMemberVarByAddr<CRR_Response, float>, SchemaBinding_SchemaTypeOfMemberVarByAddr<CRR_Response, unsigned char>, SetTypeScope
+// calls: __cxa_guard_acquire, CSchemaEnumBinding<CRR_Response::ResponseEnum_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE, __cxa_guard_release, __cxa_guard_abort, _Unwind_Resume
+// callers: CSchemaClassBinding<CRR_Response>::Register
+// strings: "ResponseFollowup"
+// globals: CRR_Response::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializ, `guard variable for'CRR_Response::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char c, CRR_Response::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_C, CRR_Response::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_N
+CSchemaClassInfo *__fastcall CRR_Response::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        const char *pProjectName)
+{
+  CSchemaClassInfo *result; // rax
+  ISchemaSystemTypeScope *v7; // rbx
+  __int64 (__fastcall *v8)(ISchemaSystemTypeScope *, __int64, __int64); // r15
+  __int64 v9; // rax
+  __int64 (__fastcall *v10)(ISchemaSystemTypeScope *, __int64, __int64); // r15
+  __int64 v11; // rax
+  __int64 (__fastcall *v12)(ISchemaSystemTypeScope *, __int64); // r15
+  __int64 v13; // rax
+  __int64 (__fastcall *v14)(ISchemaSystemTypeScope *, __int64); // r15
+  __int64 v15; // rax
+
+  result = CRR_Response::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult;
+  if ( CRR_Response::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult == 0 )
+  {
+    v7 = (*(*pSchemaSystem + 112LL))(pSchemaSystem, 0, pBinaryName);
+    CRR_Response::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CRR_Response[0].m_pType = (*(*v7 + 40LL))(v7, 4);
+    v8 = *(*v7 + 104LL);
+    v9 = (*(*v7 + 40LL))(v7, 2);
+    CRR_Response::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CRR_Response[1].m_pType = v8(v7, v9, 192);
+    v10 = *(*v7 + 104LL);
+    v11 = (*(*v7 + 40LL))(v7, 2);
+    CRR_Response::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CRR_Response[2].m_pType = v10(v7, v11, 128);
+    CRR_Response::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CRR_Response[3].m_pType = (*(*v7 + 88LL))(v7, "ResponseParams");
+    CRR_Response::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CRR_Response[4].m_pType = (*(*v7 + 40LL))(v7, 11);
+    v12 = *(*v7 + 48LL);
+    v13 = (*(*v7 + 40LL))(v7, 2);
+    CRR_Response::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CRR_Response[5].m_pType = v12(v7, v13);
+    v14 = *(*v7 + 48LL);
+    v15 = (*(*v7 + 40LL))(v7, 2);
+    CRR_Response::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CRR_Response[6].m_pType = v14(v7, v15);
+    CRR_Response::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CRR_Response[7].m_pType = (*(*v7 + 88LL))(v7, "ResponseFollowup");
+    if ( `guard variable for'CRR_Response::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_NestedEnumsOf_CRR_Response == 0
+      && __cxa_guard_acquire(&`guard variable for'CRR_Response::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_NestedEnumsOf_CRR_Response) != 0 )
+    {
+      CRR_Response::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_NestedEnumsOf_CRR_Response[0] = CSchemaEnumBinding<CRR_Response::ResponseEnum_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(pSchemaSystem, pBinaryName, pProjectName);
+      __cxa_guard_release(&`guard variable for'CRR_Response::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_NestedEnumsOf_CRR_Response);
+    }
+    CRR_Response::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CRR_Response.m_pOuterTypeScope = v7;
+    CRR_Response::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult = &CRR_Response::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CRR_Response;
+    (*(*v7 + 264LL))(
+      v7,
+      &CRR_Response::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CRR_Response);
+    return CRR_Response::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult;
+  }
+  return result;
+}
+
+
+// CRR_Response::Schema_VerifyBindingIsRegistered  (line 206, @0x00000000020b3b10, libserver.so)
+void __cdecl CRR_Response::Schema_VerifyBindingIsRegistered()
+{
+  ;
+}
+
+
+// LocalRegisterSchemaModule<ArbitraryTemplateParameter_server_response_types_h>  (line 214, @0x00000000020b3b20, libserver.so)  // inlines: Call, Get
+// callers: RegisterSchemaModule_response_types_h
+// strings: "CRR_Response::ResponseEnum_t"
+// globals: CSchemaEnumBinding<CRR_Response::ResponseEnum_t>::s_pThisModuleBindingPointer, ResponseFollowup::s_pSchemaBindingForLocalModule, ResponseParams::s_pSchemaBindingForLocalModule, CResponseCriteriaSet::s_pSchemaBindingForLocalModule, CRR_Response::s_pSchemaBindingForLocalModule
+void __fastcall LocalRegisterSchemaModule<ArbitraryTemplateParameter_server_response_types_h>(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        SchemaRegistrationPhase_t nRegistrationPhase)
+{
+  if ( nRegistrationPhase != SchemaRegistrationPhase_t::SCHEMA_REGISTRATION_PHASE_ATOMIC_TYPES_AND_ENUMS )
+  {
+    if ( nRegistrationPhase == SchemaRegistrationPhase_t::SCHEMA_REGISTRATION_PHASE_CLASSES )
+    {
+      (*(ResponseFollowup::s_pSchemaBindingForLocalModule->_vptr_ISchemaBinding + 5))(
+        ResponseFollowup::s_pSchemaBindingForLocalModule,
+        pSchemaSystem,
+        pBinaryName,
+        "server");
+      (*(ResponseParams::s_pSchemaBindingForLocalModule->_vptr_ISchemaBinding + 5))(
+        ResponseParams::s_pSchemaBindingForLocalModule,
+        pSchemaSystem,
+        pBinaryName,
+        "server");
+      (*(CResponseCriteriaSet::s_pSchemaBindingForLocalModule->_vptr_ISchemaBinding + 5))(
+        CResponseCriteriaSet::s_pSchemaBindingForLocalModule,
+        pSchemaSystem,
+        pBinaryName,
+        "server");
+      (*(CRR_Response::s_pSchemaBindingForLocalModule->_vptr_ISchemaBinding + 5))(
+        CRR_Response::s_pSchemaBindingForLocalModule,
+        pSchemaSystem,
+        pBinaryName,
+        "server");
+    }
+    ++g_nLinkerHack_SchemaAnchor_RegistrationCountFor_server;
+  }
+  else
+  {
+    (*(CSchemaEnumBinding<CRR_Response::ResponseEnum_t>::s_pThisModuleBindingPointer->_vptr_ISchemaBinding + 5))(
+      CSchemaEnumBinding<CRR_Response::ResponseEnum_t>::s_pThisModuleBindingPointer,
+      pSchemaSystem,
+      pBinaryName,
+      "server",
+      "CRR_Response::ResponseEnum_t");
+    ++g_nLinkerHack_SchemaAnchor_RegistrationCountFor_server;
+  }
+}
+
+
+// RegisterSchemaModule_response_types_h  (line 220, @0x00000000020b3c00, libserver.so)
+// calls: LocalRegisterSchemaModule<ArbitraryTemplateParameter_server_response_types_h>
+// callers: CSchemaRegistration_server::RegisterAllBindings
+void __fastcall RegisterSchemaModule_response_types_h(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        SchemaRegistrationPhase_t nRegistrationPhase)
+{
+  LocalRegisterSchemaModule<ArbitraryTemplateParameter_server_response_types_h>(
+    pSchemaSystem,
+    pBinaryName,
+    nRegistrationPhase);
+}
+
+

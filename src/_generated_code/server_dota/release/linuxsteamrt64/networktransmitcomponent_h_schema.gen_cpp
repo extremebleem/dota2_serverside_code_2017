@@ -1,0 +1,87 @@
+
+// ==== functions (decompiled by Hex-Rays; names/signatures from DWARF) ====
+
+// CNetworkTransmitComponent::Schema_CompileTimeVerificationFunction  (line 35, @0x000000000202c740, libserver.so)
+void __fastcall CNetworkTransmitComponent::Schema_CompileTimeVerificationFunction(
+        CNetworkTransmitComponent *const this)
+{
+  ;
+}
+
+
+// CNetworkTransmitComponent::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE  (line 43, @0x000000000202c750, libserver.so)  // inlines: Get, SchemaBinding_SchemaTypeOfMemberVarByAddr<CNetworkTransmitComponent, unsigned char>, SchemaBinding_SchemaTypeOfVarByAddr<bool>, SchemaBinding_SchemaTypeOfVarByAddr<int>, SetTypeScope
+// callers: CSchemaNonConstructibleClassBinding<CNetworkTransmitComponent>::Register
+// globals: CNetworkTransmitComponent::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*):
+CSchemaClassInfo *__fastcall CNetworkTransmitComponent::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        const char *pProjectName)
+{
+  CSchemaClassInfo *result; // rax
+  ISchemaSystemTypeScope *v4; // rbx
+  CSchemaType *v5; // rax
+
+  result = CNetworkTransmitComponent::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult;
+  if ( CNetworkTransmitComponent::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult == 0 )
+  {
+    v4 = (*(*pSchemaSystem + 112LL))(pSchemaSystem, 0, pBinaryName);
+    CNetworkTransmitComponent::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CNetworkTransmitComponent[0].m_pType = (*(*v4 + 40LL))(v4, 4);
+    CNetworkTransmitComponent::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_StaticMembers_CNetworkTransmitComponent[0].m_pType = (*(*v4 + 40LL))(v4, 7);
+    CNetworkTransmitComponent::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_StaticMembers_CNetworkTransmitComponent[1].m_pType = (*(*v4 + 40LL))(v4, 13);
+    CNetworkTransmitComponent::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_StaticMembers_CNetworkTransmitComponent[2].m_pType = (*(*v4 + 40LL))(v4, 13);
+    v5 = (*(*v4 + 40LL))(v4, 13);
+    CNetworkTransmitComponent::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CNetworkTransmitComponent.m_pOuterTypeScope = v4;
+    CNetworkTransmitComponent::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_StaticMembers_CNetworkTransmitComponent[3].m_pType = v5;
+    CNetworkTransmitComponent::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult = &CNetworkTransmitComponent::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CNetworkTransmitComponent;
+    (*(*v4 + 264LL))(
+      v4,
+      &CNetworkTransmitComponent::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CNetworkTransmitComponent);
+    return CNetworkTransmitComponent::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult;
+  }
+  return result;
+}
+
+
+// CNetworkTransmitComponent::Schema_VerifyBindingIsRegistered  (line 78, @0x000000000202c820, libserver.so)
+// callers: CNetworkTransmitComponent::Schema_DynamicBinding
+void __cdecl CNetworkTransmitComponent::Schema_VerifyBindingIsRegistered()
+{
+  ;
+}
+
+
+// LocalRegisterSchemaModule<ArbitraryTemplateParameter_server_networktransmitcomponent_h>  (line 86, @0x000000000202c830, libserver.so)  // inlines: Call
+// globals: CNetworkTransmitComponent::s_pSchemaBindingForLocalModule
+void __fastcall LocalRegisterSchemaModule<ArbitraryTemplateParameter_server_networktransmitcomponent_h>(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        SchemaRegistrationPhase_t nRegistrationPhase)
+{
+  if ( nRegistrationPhase == SchemaRegistrationPhase_t::SCHEMA_REGISTRATION_PHASE_CLASSES )
+    (*(CNetworkTransmitComponent::s_pSchemaBindingForLocalModule->_vptr_ISchemaBinding + 5))(
+      CNetworkTransmitComponent::s_pSchemaBindingForLocalModule,
+      pSchemaSystem,
+      pBinaryName,
+      "server");
+  ++g_nLinkerHack_SchemaAnchor_RegistrationCountFor_server;
+}
+
+
+// RegisterSchemaModule_networktransmitcomponent_h  (line 88, @0x000000000202c870, libserver.so)  // inlines: Call, LocalRegisterSchemaModule<ArbitraryTemplateParameter_server_networktransmitcomponent_h>
+// callers: CSchemaRegistration_server::RegisterAllBindings
+// globals: CNetworkTransmitComponent::s_pSchemaBindingForLocalModule
+void __fastcall RegisterSchemaModule_networktransmitcomponent_h(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        SchemaRegistrationPhase_t nRegistrationPhase)
+{
+  if ( nRegistrationPhase == SchemaRegistrationPhase_t::SCHEMA_REGISTRATION_PHASE_CLASSES )
+    (*(CNetworkTransmitComponent::s_pSchemaBindingForLocalModule->_vptr_ISchemaBinding + 5))(
+      CNetworkTransmitComponent::s_pSchemaBindingForLocalModule,
+      pSchemaSystem,
+      pBinaryName,
+      "server");
+  ++g_nLinkerHack_SchemaAnchor_RegistrationCountFor_server;
+}
+
+

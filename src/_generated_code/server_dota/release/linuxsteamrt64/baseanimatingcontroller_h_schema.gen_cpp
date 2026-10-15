@@ -1,0 +1,248 @@
+
+// ==== functions (decompiled by Hex-Rays; names/signatures from DWARF) ====
+
+// CBaseAnimatingController::Schema_CompileTimeVerificationFunction  (line 35, @0x0000000001fa9cd0, libserver.so)
+void __fastcall CBaseAnimatingController::Schema_CompileTimeVerificationFunction(CBaseAnimatingController *const this)
+{
+  ;
+}
+
+
+// CBaseAnimatingController::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE  (line 58, @0x0000000001fa9ce0, libserver.so)  // inlines: Call, ComponentKeyField_t, Get, NetworkOverride_t, NetworkVarDecl_t, SchemaBinding_SchemaTypeOfMemberVarByAddr<CBaseAnimatingController, CBaseAnimatingController::NetworkVar_m_baseLayer>, SchemaBinding_SchemaTypeOfMemberVarByAddr<CBaseAnimatingController, CNetworkArrayBase<float, 24, CBaseAnimatingController::NetworkVar_m_flPoseParameter> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<CBaseAnimatingController, CNetworkVarBase<CNetworkedQuantizedFloat, CBaseAnimatingController::NetworkVar_m_flPlaybackRate> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<CBaseAnimatingController, CNetworkVarBase<bool, CBaseAnimatingController::NetworkVar_m_bClientSideAnimation> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<CBaseAnimatingController, CNetworkVarBase<int, CBaseAnimatingController::NetworkVar_m_nNewSequenceParity> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<CBaseAnimatingController, CNetworkVarBase<int, CBaseAnimatingController::NetworkVar_m_nResetEventsParity> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<CBaseAnimatingController, CSequenceTransitioner2>, SchemaBinding_SchemaTypeOfMemberVarByAddr<CBaseAnimatingController, bool>, SchemaBinding_SchemaTypeOfMemberVarByAddr<CBaseAnimatingController, float>, SchemaBinding_SchemaTypeOfMemberVarByAddr<CBaseAnimatingController, int>, SchemaTypeOf<bool>, SchemaTypeScope, SetTypeScope
+// calls: CSkeletonAnimationController::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE, __cxa_guard_acquire, __cxa_guard_release, GetNameOfModule, __cxa_guard_abort, _Unwind_Resume
+// callers: CSchemaClassBinding<CBaseAnimatingController>::Register, CBaseAnimatingOverlayController::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE
+// strings: "CNetworkedSequenceOperation", "CNetworkedQuantizedFloat", "CSequenceTransitioner2", "m_baseLayer.m_hSequence", "OnBaseLayerSequenceChanged", "m_nResetEventsParity" (11 total)
+// globals: CBaseAnimatingController::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::, `guard variable for'CBaseAnimatingController::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char c, CSchemaManipulator<CNetworkedQuantizedFloat>::StaticAccessor(void)::m, CAtomicManipulator<CNetworkedQuantizedFloat>::Get(void)::val, SchemaTypeOf<bool>(void)::s_pTypeOf
+CSchemaClassInfo *__fastcall CBaseAnimatingController::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        const char *pProjectName)
+{
+  CSchemaClassInfo *result; // rax
+  ISchemaSystemTypeScope *v7; // rbx
+  __int64 (__fastcall *v8)(ISchemaSystemTypeScope *, __int64, __int64); // r15
+  __int64 v9; // rax
+  CSchemaClassInfo *v10; // rax
+  CSchemaType *v11; // rax
+  const char *NameOfModule; // rsi
+  __int64 v13; // rax
+  __int64 (__fastcall *v14)(ISchemaSystem *, const char *); // [rsp-40h] [rbp-40h]
+
+  result = CBaseAnimatingController::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult;
+  if ( CBaseAnimatingController::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult == 0 )
+  {
+    v7 = (*(*pSchemaSystem + 112LL))(pSchemaSystem, 0, pBinaryName);
+    if ( `guard variable for'CBaseAnimatingController::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CBaseAnimatingController0_MNetworkOverride_Value == 0
+      && __cxa_guard_acquire(&`guard variable for'CBaseAnimatingController::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CBaseAnimatingController0_MNetworkOverride_Value) != 0 )
+    {
+      CBaseAnimatingController::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CBaseAnimatingController0_MNetworkOverride_Value.m_pClassName = 0;
+      CBaseAnimatingController::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CBaseAnimatingController0_MNetworkOverride_Value.m_pFieldName = "m_baseLayer.m_hSequence";
+      CBaseAnimatingController::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CBaseAnimatingController0_MNetworkOverride_Value.m_eOverrideType = NetworkOverrideType_t::NET_OVERRIDE_MNetworkChangeCallback;
+      CBaseAnimatingController::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CBaseAnimatingController0_MNetworkOverride_Value.m_pNewValueString = "OnBaseLayerSequenceChanged";
+      __cxa_guard_release(&`guard variable for'CBaseAnimatingController::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CBaseAnimatingController0_MNetworkOverride_Value);
+    }
+    if ( `guard variable for'CBaseAnimatingController::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CBaseAnimatingController1_MKeyField_Value == 0
+      && __cxa_guard_acquire(&`guard variable for'CBaseAnimatingController::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CBaseAnimatingController1_MKeyField_Value) != 0 )
+    {
+      v11 = SchemaTypeOf<bool>(void)::s_pTypeOf;
+      if ( SchemaTypeOf<bool>(void)::s_pTypeOf == 0 )
+      {
+        v14 = *(*g_pSchemaSystem + 104LL);
+        NameOfModule = GetNameOfModule();
+        v13 = v14(g_pSchemaSystem, NameOfModule);
+        v11 = (*(*v13 + 40LL))(v13, 13);
+        SchemaTypeOf<bool>(void)::s_pTypeOf = v11;
+      }
+      CBaseAnimatingController::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CBaseAnimatingController1_MKeyField_Value.m_pType = v11;
+      CBaseAnimatingController::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CBaseAnimatingController1_MKeyField_Value.m_pKeyName = "useClientSideAnimation";
+      __cxa_guard_release(&`guard variable for'CBaseAnimatingController::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CBaseAnimatingController1_MKeyField_Value);
+    }
+    if ( `guard variable for'CBaseAnimatingController::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CBaseAnimatingController2_MNetworkVarNames_Value == 0
+      && __cxa_guard_acquire(&`guard variable for'CBaseAnimatingController::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CBaseAnimatingController2_MNetworkVarNames_Value) != 0 )
+    {
+      CBaseAnimatingController::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CBaseAnimatingController2_MNetworkVarNames_Value.m_pVarName = "m_baseLayer";
+      CBaseAnimatingController::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CBaseAnimatingController2_MNetworkVarNames_Value.m_pVarType = "CNetworkedSequenceOperation";
+      __cxa_guard_release(&`guard variable for'CBaseAnimatingController::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CBaseAnimatingController2_MNetworkVarNames_Value);
+    }
+    if ( `guard variable for'CBaseAnimatingController::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CBaseAnimatingController3_MNetworkVarNames_Value == 0
+      && __cxa_guard_acquire(&`guard variable for'CBaseAnimatingController::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CBaseAnimatingController3_MNetworkVarNames_Value) != 0 )
+    {
+      CBaseAnimatingController::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CBaseAnimatingController3_MNetworkVarNames_Value.m_pVarName = "m_flPoseParameter";
+      CBaseAnimatingController::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CBaseAnimatingController3_MNetworkVarNames_Value.m_pVarType = "float";
+      __cxa_guard_release(&`guard variable for'CBaseAnimatingController::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CBaseAnimatingController3_MNetworkVarNames_Value);
+    }
+    if ( `guard variable for'CBaseAnimatingController::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CBaseAnimatingController4_MNetworkVarNames_Value == 0
+      && __cxa_guard_acquire(&`guard variable for'CBaseAnimatingController::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CBaseAnimatingController4_MNetworkVarNames_Value) != 0 )
+    {
+      CBaseAnimatingController::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CBaseAnimatingController4_MNetworkVarNames_Value.m_pVarName = "m_bClientSideAnimation";
+      CBaseAnimatingController::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CBaseAnimatingController4_MNetworkVarNames_Value.m_pVarType = "bool";
+      __cxa_guard_release(&`guard variable for'CBaseAnimatingController::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CBaseAnimatingController4_MNetworkVarNames_Value);
+    }
+    if ( `guard variable for'CBaseAnimatingController::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CBaseAnimatingController5_MNetworkVarNames_Value == 0
+      && __cxa_guard_acquire(&`guard variable for'CBaseAnimatingController::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CBaseAnimatingController5_MNetworkVarNames_Value) != 0 )
+    {
+      CBaseAnimatingController::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CBaseAnimatingController5_MNetworkVarNames_Value.m_pVarName = "m_nNewSequenceParity";
+      CBaseAnimatingController::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CBaseAnimatingController5_MNetworkVarNames_Value.m_pVarType = "int";
+      __cxa_guard_release(&`guard variable for'CBaseAnimatingController::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CBaseAnimatingController5_MNetworkVarNames_Value);
+    }
+    if ( `guard variable for'CBaseAnimatingController::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CBaseAnimatingController6_MNetworkVarNames_Value == 0
+      && __cxa_guard_acquire(&`guard variable for'CBaseAnimatingController::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CBaseAnimatingController6_MNetworkVarNames_Value) != 0 )
+    {
+      CBaseAnimatingController::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CBaseAnimatingController6_MNetworkVarNames_Value.m_pVarName = "m_nResetEventsParity";
+      CBaseAnimatingController::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CBaseAnimatingController6_MNetworkVarNames_Value.m_pVarType = "int";
+      __cxa_guard_release(&`guard variable for'CBaseAnimatingController::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CBaseAnimatingController6_MNetworkVarNames_Value);
+    }
+    CBaseAnimatingController::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CBaseAnimatingController[0].m_pType = (*(*v7 + 88LL))(v7, "CNetworkedSequenceOperation");
+    CBaseAnimatingController::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CBaseAnimatingController[1].m_pType = (*(*v7 + 40LL))(v7, 13);
+    CBaseAnimatingController::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CBaseAnimatingController[2].m_pType = (*(*v7 + 40LL))(v7, 11);
+    CBaseAnimatingController::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CBaseAnimatingController[3].m_pType = (*(*v7 + 40LL))(v7, 11);
+    CBaseAnimatingController::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CBaseAnimatingController[4].m_pType = (*(*v7 + 40LL))(v7, 11);
+    CBaseAnimatingController::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CBaseAnimatingController[5].m_pType = (*(*v7 + 56LL))(v7, "CNetworkedQuantizedFloat", 4012, CAtomicManipulator<CNetworkedQuantizedFloat>::Get(void)::val, &CSchemaManipulator<CNetworkedQuantizedFloat>::StaticAccessor(void)::m);
+    CBaseAnimatingController::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CBaseAnimatingController[6].m_pType = (*(*v7 + 40LL))(v7, 11);
+    v8 = *(*v7 + 104LL);
+    v9 = (*(*v7 + 40LL))(v7, 11);
+    CBaseAnimatingController::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CBaseAnimatingController[7].m_pType = v8(v7, v9, 24);
+    CBaseAnimatingController::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CBaseAnimatingController[8].m_pType = (*(*v7 + 40LL))(v7, 13);
+    CBaseAnimatingController::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CBaseAnimatingController[9].m_pType = (*(*v7 + 40LL))(v7, 13);
+    CBaseAnimatingController::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CBaseAnimatingController[10].m_pType = (*(*v7 + 40LL))(v7, 13);
+    CBaseAnimatingController::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CBaseAnimatingController[11].m_pType = (*(*v7 + 40LL))(v7, 7);
+    CBaseAnimatingController::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CBaseAnimatingController[12].m_pType = (*(*v7 + 40LL))(v7, 7);
+    CBaseAnimatingController::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CBaseAnimatingController[13].m_pType = (*(*v7 + 40LL))(v7, 11);
+    CBaseAnimatingController::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CBaseAnimatingController[14].m_pType = (*(*v7 + 40LL))(v7, 11);
+    CBaseAnimatingController::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CBaseAnimatingController[15].m_pType = (*(*v7 + 40LL))(v7, 11);
+    CBaseAnimatingController::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CBaseAnimatingController[16].m_pType = (*(*v7 + 40LL))(v7, 11);
+    CBaseAnimatingController::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CBaseAnimatingController[17].m_pType = (*(*v7 + 40LL))(v7, 11);
+    CBaseAnimatingController::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CBaseAnimatingController[18].m_pType = (*(*v7 + 40LL))(v7, 7);
+    CBaseAnimatingController::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CBaseAnimatingController[19].m_pType = (*(*v7 + 88LL))(v7, "CSequenceTransitioner2");
+    (*(CSkeletonAnimationController::s_pSchemaBindingForLocalModule->_vptr_ISchemaBinding + 5))(
+      CSkeletonAnimationController::s_pSchemaBindingForLocalModule,
+      pSchemaSystem,
+      pBinaryName,
+      pProjectName);
+    v10 = CSkeletonAnimationController::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+            pSchemaSystem,
+            pBinaryName,
+            pProjectName);
+    CBaseAnimatingController::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CBaseAnimatingController.m_pOuterTypeScope = v7;
+    CBaseAnimatingController::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassBases_CBaseAnimatingController[0].m_pClass = v10;
+    CBaseAnimatingController::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult = &CBaseAnimatingController::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CBaseAnimatingController;
+    (*(*v7 + 264LL))(
+      v7,
+      &CBaseAnimatingController::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CBaseAnimatingController);
+    return CBaseAnimatingController::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult;
+  }
+  return result;
+}
+
+
+// CBaseAnimatingController::Schema_VerifyBindingIsRegistered  (line 309, @0x0000000001faa220, libserver.so)
+// callers: CBaseAnimatingController::Schema_DynamicBinding
+void __cdecl CBaseAnimatingController::Schema_VerifyBindingIsRegistered()
+{
+  ;
+}
+
+
+// CBodyComponentBaseAnimating::Schema_CompileTimeVerificationFunction  (line 317, @0x0000000001faa230, libserver.so)
+void __fastcall CBodyComponentBaseAnimating::Schema_CompileTimeVerificationFunction(
+        CBodyComponentBaseAnimating *const this)
+{
+  ;
+}
+
+
+// CBodyComponentBaseAnimating::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE  (line 324, @0x0000000001faa240, libserver.so)  // inlines: Call, Get, NetworkVarDecl_t, SchemaBinding_SchemaTypeOfMemberVarByAddr<CBodyComponentBaseAnimating, CBodyComponentBaseAnimating::NetworkVar_m_animationController>, SchemaBinding_SchemaTypeOfMemberVarByAddr<CBodyComponentBaseAnimating, CNetworkVarChainer>, SchemaBinding_SchemaTypeOfVarByAddr<EntComponentInfo_t>, SchemaBinding_SchemaTypeOfVarByAddr<int>, SetTypeScope
+// calls: CBodyComponentSkeletonInstance::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE, __cxa_guard_acquire, __cxa_guard_release
+// callers: CSchemaNonConstructibleClassBinding<CBodyComponentBaseAnimating>::Register
+// strings: "CBaseAnimatingController", "CNetworkVarChainer", "EntComponentInfo_t", "m_animationController"
+// globals: CBodyComponentBaseAnimating::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*, `guard variable for'CBodyComponentBaseAnimating::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,cha
+CSchemaClassInfo *__fastcall CBodyComponentBaseAnimating::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        const char *pProjectName)
+{
+  CSchemaClassInfo *result; // rax
+  ISchemaSystemTypeScope *v7; // r14
+  CSchemaClassInfo *v8; // rax
+
+  result = CBodyComponentBaseAnimating::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult;
+  if ( CBodyComponentBaseAnimating::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult == 0 )
+  {
+    v7 = (*(*pSchemaSystem + 112LL))(pSchemaSystem, 1, pBinaryName);
+    if ( `guard variable for'CBodyComponentBaseAnimating::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CBodyComponentBaseAnimating0_MNetworkVarNames_Value == 0
+      && __cxa_guard_acquire(&`guard variable for'CBodyComponentBaseAnimating::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CBodyComponentBaseAnimating0_MNetworkVarNames_Value) != 0 )
+    {
+      CBodyComponentBaseAnimating::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CBodyComponentBaseAnimating0_MNetworkVarNames_Value.m_pVarName = "m_animationController";
+      CBodyComponentBaseAnimating::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CBodyComponentBaseAnimating0_MNetworkVarNames_Value.m_pVarType = "CBaseAnimatingController";
+      __cxa_guard_release(&`guard variable for'CBodyComponentBaseAnimating::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CBodyComponentBaseAnimating0_MNetworkVarNames_Value);
+    }
+    CBodyComponentBaseAnimating::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CBodyComponentBaseAnimating[0].m_pType = (*(*v7 + 88LL))(v7, "CBaseAnimatingController");
+    CBodyComponentBaseAnimating::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CBodyComponentBaseAnimating[1].m_pType = (*(*v7 + 88LL))(v7, "CNetworkVarChainer");
+    CBodyComponentBaseAnimating::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_StaticMembers_CBodyComponentBaseAnimating[0].m_pType = (*(*v7 + 88LL))(v7, "EntComponentInfo_t");
+    CBodyComponentBaseAnimating::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_StaticMembers_CBodyComponentBaseAnimating[1].m_pType = (*(*v7 + 40LL))(v7, 7);
+    (*(CBodyComponentSkeletonInstance::s_pSchemaBindingForLocalModule->_vptr_ISchemaBinding + 5))(
+      CBodyComponentSkeletonInstance::s_pSchemaBindingForLocalModule,
+      pSchemaSystem,
+      pBinaryName,
+      pProjectName);
+    v8 = CBodyComponentSkeletonInstance::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+           pSchemaSystem,
+           pBinaryName,
+           pProjectName);
+    CBodyComponentBaseAnimating::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CBodyComponentBaseAnimating.m_pOuterTypeScope = v7;
+    CBodyComponentBaseAnimating::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassBases_CBodyComponentBaseAnimating[0].m_pClass = v8;
+    CBodyComponentBaseAnimating::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult = &CBodyComponentBaseAnimating::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CBodyComponentBaseAnimating;
+    return &CBodyComponentBaseAnimating::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CBodyComponentBaseAnimating;
+  }
+  return result;
+}
+
+
+// CBodyComponentBaseAnimating::Schema_VerifyBindingIsRegistered  (line 379, @0x0000000001faa380, libserver.so)
+// callers: CBodyComponentBaseAnimating::Schema_DynamicBinding, CEntityComponentHelperT<CBodyComponentBaseAnimating, CEntityComponentHelperReferenced<CBodyComponentBaseAnimating> >::GetSchemaBinding
+void __cdecl CBodyComponentBaseAnimating::Schema_VerifyBindingIsRegistered()
+{
+  ;
+}
+
+
+// LocalRegisterSchemaModule<ArbitraryTemplateParameter_server_baseanimatingcontroller_h>  (line 387, @0x0000000001faa390, libserver.so)  // inlines: Call
+// callers: RegisterSchemaModule_baseanimatingcontroller_h
+// globals: CBaseAnimatingController::s_pSchemaBindingForLocalModule, CBodyComponentBaseAnimating::s_pSchemaBindingForLocalModule
+void __fastcall LocalRegisterSchemaModule<ArbitraryTemplateParameter_server_baseanimatingcontroller_h>(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        SchemaRegistrationPhase_t nRegistrationPhase)
+{
+  if ( nRegistrationPhase == SchemaRegistrationPhase_t::SCHEMA_REGISTRATION_PHASE_CLASSES )
+  {
+    (*(CBaseAnimatingController::s_pSchemaBindingForLocalModule->_vptr_ISchemaBinding + 5))(
+      CBaseAnimatingController::s_pSchemaBindingForLocalModule,
+      pSchemaSystem,
+      pBinaryName,
+      "server");
+    (*(CBodyComponentBaseAnimating::s_pSchemaBindingForLocalModule->_vptr_ISchemaBinding + 5))(
+      CBodyComponentBaseAnimating::s_pSchemaBindingForLocalModule,
+      pSchemaSystem,
+      pBinaryName,
+      "server");
+  }
+  ++g_nLinkerHack_SchemaAnchor_RegistrationCountFor_server;
+}
+
+
+// RegisterSchemaModule_baseanimatingcontroller_h  (line 390, @0x0000000001faa3f0, libserver.so)
+// calls: LocalRegisterSchemaModule<ArbitraryTemplateParameter_server_baseanimatingcontroller_h>
+// callers: CSchemaRegistration_server::RegisterAllBindings
+void __fastcall RegisterSchemaModule_baseanimatingcontroller_h(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        SchemaRegistrationPhase_t nRegistrationPhase)
+{
+  LocalRegisterSchemaModule<ArbitraryTemplateParameter_server_baseanimatingcontroller_h>(
+    pSchemaSystem,
+    pBinaryName,
+    nRegistrationPhase);
+}
+
+

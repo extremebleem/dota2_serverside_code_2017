@@ -1,0 +1,769 @@
+
+// ==== functions (decompiled by Hex-Rays; names/signatures from DWARF) ====
+
+// CSchemaEnumBinding<Disposition_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE  (line 35, @0x0000000001faa870, libserver.so)  // inlines: Count, Initialize, SetTypeScope
+// callers: CSchemaEnumBinding<Disposition_t>::Register
+// globals: CSchemaEnumBinding<Disposition_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char c
+CSchemaEnumInfo *__fastcall CSchemaEnumBinding<Disposition_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        const char *pProjectName)
+{
+  ISchemaSystemTypeScope *v3; // rax
+  unsigned int v4; // edi
+  SchemaEnumeratorValue_t v5; // r8
+  SchemaEnumeratorValue_t v6; // r9
+  SchemaEnumeratorValue_t *v7; // rdx
+
+  v3 = (*(*pSchemaSystem + 112LL))(pSchemaSystem, 0, pBinaryName);
+  if ( CSchemaEnumBinding<Disposition_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_Disposition_t.m_Enumerators.m_Data.m_nImplLength != 0 )
+  {
+    v4 = abs32(CSchemaEnumBinding<Disposition_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_Disposition_t.m_Enumerators.m_Data.m_nImplLength);
+    v5 = *(CSchemaEnumBinding<Disposition_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_Disposition_t.m_Enumerators.m_Data.m_pImplElements
+         + 2);
+    CSchemaEnumBinding<Disposition_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_Disposition_t.m_nMinValue = v5;
+    v6 = *(CSchemaEnumBinding<Disposition_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_Disposition_t.m_Enumerators.m_Data.m_pImplElements
+         + 2);
+    CSchemaEnumBinding<Disposition_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_Disposition_t.m_nMaxValue = v6;
+    if ( v4 != 1 )
+    {
+      v7 = (CSchemaEnumBinding<Disposition_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_Disposition_t.m_Enumerators.m_Data.m_pImplElements
+          + 72);
+      do
+      {
+        if ( v5 > *v7 )
+          v5 = *v7;
+        CSchemaEnumBinding<Disposition_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_Disposition_t.m_nMinValue = v5;
+        if ( v6 < *v7 )
+          v6 = *v7;
+        v7 += 7;
+        CSchemaEnumBinding<Disposition_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_Disposition_t.m_nMaxValue = v6;
+      }
+      while ( v7 != CSchemaEnumBinding<Disposition_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_Disposition_t.m_Enumerators.m_Data.m_pImplElements
+                  + 7 * v4
+                  + 2 );
+    }
+  }
+  else
+  {
+    CSchemaEnumBinding<Disposition_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_Disposition_t.m_nMinValue = 0;
+    CSchemaEnumBinding<Disposition_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_Disposition_t.m_nMaxValue = 0;
+  }
+  CSchemaEnumBinding<Disposition_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_Disposition_t.m_pOuterTypeScope = v3;
+  (*(*v3 + 272LL))(
+    v3,
+    &CSchemaEnumBinding<Disposition_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_Disposition_t);
+  return &CSchemaEnumBinding<Disposition_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_Disposition_t;
+}
+
+
+// Relationship_t::Schema_CompileTimeVerificationFunction  (line 54, @0x0000000001faa950, libserver.so)
+void __fastcall Relationship_t::Schema_CompileTimeVerificationFunction(Relationship_t *const this)
+{
+  ;
+}
+
+
+// Relationship_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE  (line 62, @0x0000000001faa960, libserver.so)  // inlines: Get, SchemaBinding_SchemaTypeOfMemberVarByAddr<Relationship_t, CHandle<CBaseEntity> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<Relationship_t, Class_T>, SchemaBinding_SchemaTypeOfMemberVarByAddr<Relationship_t, Disposition_t>, SchemaBinding_SchemaTypeOfMemberVarByAddr<Relationship_t, int>, SetTypeScope
+// callers: CSchemaClassBinding<Relationship_t>::Register
+// strings: "CBaseEntity", "CHandle", "Class_T", "Disposition_t"
+// globals: Relationship_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitial, CSchemaManipulator<CHandle<CBaseEntity>>::StaticAccessor(void)::m, CAtomicManipulator<CHandle<CBaseEntity>>::Get(void)::val, Relationship_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema
+CSchemaClassInfo *__fastcall Relationship_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        const char *pProjectName)
+{
+  CSchemaClassInfo *result; // rax
+  ISchemaSystemTypeScope *v4; // rbx
+  __int64 (__fastcall *v5)(ISchemaSystemTypeScope *, const char *, __int64, __int64 (__fastcall ***)(), __int64 (__fastcall ***)(), __int64); // r12
+  __int64 v6; // rax
+  CSchemaType *v7; // rax
+
+  result = Relationship_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult;
+  if ( Relationship_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult == 0 )
+  {
+    v4 = (*(*pSchemaSystem + 112LL))(pSchemaSystem, 0, pBinaryName);
+    v5 = *(*v4 + 64LL);
+    v6 = (*(*v4 + 88LL))(v4, "CBaseEntity");
+    Relationship_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_Relationship_t[0].m_pType = v5(v4, "CHandle", 5003, CAtomicManipulator<CHandle<CBaseEntity>>::Get(void)::val, &CSchemaManipulator<CHandle<CBaseEntity>>::StaticAccessor(void)::m, v6);
+    Relationship_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_Relationship_t[1].m_pType = (*(*v4 + 96LL))(v4, "Class_T");
+    Relationship_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_Relationship_t[2].m_pType = (*(*v4 + 40LL))(v4, 7);
+    Relationship_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_Relationship_t[3].m_pType = (*(*v4 + 96LL))(v4, "Disposition_t");
+    v7 = (*(*v4 + 40LL))(v4, 7);
+    Relationship_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_Relationship_t.m_pOuterTypeScope = v4;
+    Relationship_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_Relationship_t[4].m_pType = v7;
+    Relationship_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult = &Relationship_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_Relationship_t;
+    (*(*v4 + 264LL))(
+      v4,
+      &Relationship_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_Relationship_t);
+    return Relationship_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult;
+  }
+  return result;
+}
+
+
+// Relationship_t::Schema_VerifyBindingIsRegistered  (line 82, @0x0000000001faaa50, libserver.so)
+void __cdecl Relationship_t::Schema_VerifyBindingIsRegistered()
+{
+  ;
+}
+
+
+// CBaseCombatCharacter::CEntityInstanceEntityClass::Schema_CompileTimeVerificationFunction  (line 90, @0x0000000001faaa60, libserver.so)
+void __fastcall CBaseCombatCharacter::CEntityInstanceEntityClass::Schema_CompileTimeVerificationFunction(
+        CBaseCombatCharacter::CEntityInstanceEntityClass *const this)
+{
+  ;
+}
+
+
+// CBaseCombatCharacter::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE  (line 93, @0x0000000001fa8360, libserver.so)  // inlines: Call, Get, RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE, SetTypeScope
+// calls: CBaseFlex::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE
+// callers: CSchemaNonConstructibleClassBinding<CBaseCombatCharacter::CEntityInstanceEntityClass>::Register, CBaseCombatCharacter::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE, CBaseCombatCharacter::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE
+// globals: CBaseFlex::CEntityInstanceEntityClass::s_pSchemaBindingForLocalModule, CBaseFlex::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,c, CBaseCombatCharacter::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,ch
+CSchemaClassInfo *__fastcall CBaseCombatCharacter::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        const char *pProjectName)
+{
+  ISchemaSystemTypeScope *v6; // r14
+  CSchemaClassInfo *v7; // rax
+
+  v6 = (*(*pSchemaSystem + 112LL))(pSchemaSystem, 1, pBinaryName);
+  (*(CBaseFlex::CEntityInstanceEntityClass::s_pSchemaBindingForLocalModule->_vptr_ISchemaBinding + 5))(
+    CBaseFlex::CEntityInstanceEntityClass::s_pSchemaBindingForLocalModule,
+    pSchemaSystem,
+    pBinaryName,
+    pProjectName);
+  v7 = CBaseFlex::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult;
+  if ( CBaseFlex::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult == 0 )
+    v7 = CBaseFlex::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+           pSchemaSystem,
+           pBinaryName,
+           pProjectName);
+  CBaseCombatCharacter::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CBaseCombatCharacter_CEntityInstanceEntityClass.m_pOuterTypeScope = v6;
+  CBaseCombatCharacter::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassBases_CBaseCombatCharacter_CEntityInstanceEntityClass[0].m_pClass = v7;
+  CBaseCombatCharacter::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult = &CBaseCombatCharacter::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CBaseCombatCharacter_CEntityInstanceEntityClass;
+  return &CBaseCombatCharacter::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CBaseCombatCharacter_CEntityInstanceEntityClass;
+}
+
+
+// CBaseCombatCharacter::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE  (line 93, @0x0000000001faaa70, libserver.so)
+// calls: CBaseCombatCharacter::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE
+// callers: CPhysicsCannister::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE, CBasePlayer::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE, NextBotCombatCharacter::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE
+// globals: CBaseCombatCharacter::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,ch
+CSchemaClassInfo *__fastcall CBaseCombatCharacter::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        const char *pProjectName)
+{
+  CSchemaClassInfo *result; // rax
+
+  result = CBaseCombatCharacter::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult;
+  if ( CBaseCombatCharacter::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult == 0 )
+    return CBaseCombatCharacter::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+             pSchemaSystem,
+             pBinaryName,
+             pProjectName);
+  return result;
+}
+
+
+// CBaseCombatCharacter::CEntityInstanceEntityClass::Schema_VerifyBindingIsRegistered  (line 110, @0x0000000001faaa90, libserver.so)
+void __cdecl CBaseCombatCharacter::CEntityInstanceEntityClass::Schema_VerifyBindingIsRegistered()
+{
+  ;
+}
+
+
+// CBaseCombatCharacter::DamageHistory::Schema_CompileTimeVerificationFunction  (line 118, @0x0000000001faaaa0, libserver.so)
+void __fastcall CBaseCombatCharacter::DamageHistory::Schema_CompileTimeVerificationFunction(
+        CBaseCombatCharacter::DamageHistory *const this)
+{
+  ;
+}
+
+
+// CBaseCombatCharacter::DamageHistory::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE  (line 123, @0x0000000001fa8ae0, libserver.so)  // inlines: Get, SchemaBinding_SchemaTypeOfMemberVarByAddr<CBaseCombatCharacter::DamageHistory, IntervalTimer>, SchemaBinding_SchemaTypeOfMemberVarByAddr<CBaseCombatCharacter::DamageHistory, int>, SetTypeScope
+// callers: CSchemaClassBinding<CBaseCombatCharacter::DamageHistory>::Register, CBaseCombatCharacter::DamageHistory::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE, CBaseCombatCharacter::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE
+// globals: CBaseCombatCharacter::DamageHistory::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,cha
+CSchemaClassInfo *__fastcall CBaseCombatCharacter::DamageHistory::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        const char *pProjectName)
+{
+  ISchemaSystemTypeScope *v3; // rbx
+  CSchemaType *v4; // rax
+
+  v3 = (*(*pSchemaSystem + 112LL))(pSchemaSystem, 1, pBinaryName);
+  CBaseCombatCharacter::DamageHistory::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CBaseCombatCharacter_DamageHistory[0].m_pType = (*(*v3 + 40LL))(v3, 7);
+  v4 = (*(*v3 + 88LL))(v3, "IntervalTimer");
+  CBaseCombatCharacter::DamageHistory::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CBaseCombatCharacter_DamageHistory.m_pOuterTypeScope = v3;
+  CBaseCombatCharacter::DamageHistory::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CBaseCombatCharacter_DamageHistory[1].m_pType = v4;
+  CBaseCombatCharacter::DamageHistory::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult = &CBaseCombatCharacter::DamageHistory::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CBaseCombatCharacter_DamageHistory;
+  return &CBaseCombatCharacter::DamageHistory::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CBaseCombatCharacter_DamageHistory;
+}
+
+
+// CBaseCombatCharacter::DamageHistory::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE  (line 123, @0x0000000001faaab0, libserver.so)
+// calls: CBaseCombatCharacter::DamageHistory::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE
+// globals: CBaseCombatCharacter::DamageHistory::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,cha
+CSchemaClassInfo *__fastcall CBaseCombatCharacter::DamageHistory::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        const char *pProjectName)
+{
+  CSchemaClassInfo *result; // rax
+
+  result = CBaseCombatCharacter::DamageHistory::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult;
+  if ( CBaseCombatCharacter::DamageHistory::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult == 0 )
+    return CBaseCombatCharacter::DamageHistory::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+             pSchemaSystem,
+             pBinaryName,
+             pProjectName);
+  return result;
+}
+
+
+// CBaseCombatCharacter::DamageHistory::Schema_VerifyBindingIsRegistered  (line 137, @0x0000000001faaad0, libserver.so)
+void __cdecl CBaseCombatCharacter::DamageHistory::Schema_VerifyBindingIsRegistered()
+{
+  ;
+}
+
+
+// CBaseCombatCharacter::Schema_CompileTimeVerificationFunction  (line 145, @0x0000000001faaae0, libserver.so)
+void __fastcall CBaseCombatCharacter::Schema_CompileTimeVerificationFunction(CBaseCombatCharacter *const this)
+{
+  ;
+}
+
+
+// CBaseCombatCharacter::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE  (line 186, @0x0000000001fb0490, libserver.so)  // inlines: Call, Get, NetworkVarDecl_t, RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE, SchemaBinding_SchemaTypeOfMemberVarByAddr<CBaseCombatCharacter, CAI_MoveMonitor>, SchemaBinding_SchemaTypeOfMemberVarByAddr<CBaseCombatCharacter, CBaseCombatCharacter::DamageHistory [4]>, SchemaBinding_SchemaTypeOfMemberVarByAddr<CBaseCombatCharacter, CHandle<CBaseEntity> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<CBaseCombatCharacter, CNetworkArrayBase<unsigned int, 32, CBaseCombatCharacter::NetworkVar_m_iAmmo> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<CBaseCombatCharacter, CNetworkHandleBase<CBaseCombatWeapon, CBaseCombatCharacter::NetworkVar_m_hActiveWeapon> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<CBaseCombatCharacter, CNetworkUtlVectorBase<CHandle<CBaseCombatWeapon>, CBaseCombatCharacter::NetworkVar_m_hMyWeapons> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<CBaseCombatCharacter, CNetworkUtlVectorBase<CHandle<CEconWearable>, CBaseCombatCharacter::NetworkVar_m_hMyWearables> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<CBaseCombatCharacter, CNetworkVarBase<float, CBaseCombatCharacter::NetworkVar_m_flFieldOfView> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<CBaseCombatCharacter, CNetworkVarBase<float, CBaseCombatCharacter::NetworkVar_m_flNextAttack> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<CBaseCombatCharacter, CUtlSymbolLarge>, SchemaBinding_SchemaTypeOfMemberVarByAddr<CBaseCombatCharacter, CUtlVector<CHandle<CBaseEntity> > >, SchemaBinding_SchemaTypeOfMemberVarByAddr<CBaseCombatCharacter, CUtlVector<Relationship_t> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<CBaseCombatCharacter, CountdownTimer>, SchemaBinding_SchemaTypeOfMemberVarByAddr<CBaseCombatCharacter, Hull_t>, SchemaBinding_SchemaTypeOfMemberVarByAddr<CBaseCombatCharacter, IntervalTimer>, SchemaBinding_SchemaTypeOfMemberVarByAddr<CBaseCombatCharacter, Vector>, SchemaBinding_SchemaTypeOfMemberVarByAddr<CBaseCombatCharacter, WeaponProficiency_t>, SchemaBinding_SchemaTypeOfMemberVarByAddr<CBaseCombatCharacter, bool>, SchemaBinding_SchemaTypeOfMemberVarByAddr<CBaseCombatCharacter, float>, SchemaBinding_SchemaTypeOfMemberVarByAddr<CBaseCombatCharacter, int>, SchemaBinding_SchemaTypeOfMemberVarByAddr<CBaseCombatCharacter, unsigned int>, SchemaBinding_SchemaTypeOfVarByAddr<CUtlVector<CUtlVector<CHandle<CBaseEntity> > > >, SchemaBinding_SchemaTypeOfVarByAddr<Relationship_t**>, SchemaBinding_SchemaTypeOfVarByAddr<int>, SetTypeScope
+// calls: __cxa_guard_acquire, __cxa_guard_release, CBaseFlex::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE, CBaseCombatCharacter::DamageHistory::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE, CBaseCombatCharacter::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE, __cxa_guard_abort, _Unwind_Resume
+// callers: CSchemaNonConstructibleClassBinding<CBaseCombatCharacter>::Register, CPhysicsCannister::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE, CBasePlayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE, NextBotCombatCharacter::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE
+// strings: "Hull_t", "CUtlSymbolLarge", "WeaponProficiency_t", "Relationship_t", "CUtlVector", "CBaseEntity" (23 total)
+// globals: CBaseCombatCharacter::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pI, `guard variable for'CBaseCombatCharacter::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const, CSchemaManipulator<Vector>::StaticAccessor(void)::m, CAtomicManipulator<Vector>::Get(void)::val, CSchemaManipulator<CUtlSymbolLarge>::StaticAccessor(void)::m, CAtomicManipulator<CUtlSymbolLarge>::Get(void)::val, CSchemaManipulator<CUtlVector<Relationship_t,CUtlMemory<Relationship_t,int>>>::StaticAccessor(void)::m, CAtomicManipulator<CUtlVector<Relationship_t,CUtlMemory<Relationship_t,int>>>::Get(void)::val (26 total)
+CSchemaClassInfo *__fastcall CBaseCombatCharacter::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        const char *pProjectName)
+{
+  CSchemaClassInfo *result; // rax
+  ISchemaSystemTypeScope *v7; // rbx
+  __int64 (__fastcall *v8)(ISchemaSystemTypeScope *, const char *, __int64, __int64 (__fastcall ***)(), __int64 (__fastcall ***)(), __int64); // r15
+  __int64 v9; // rax
+  __int64 (__fastcall *v10)(ISchemaSystemTypeScope *, const char *, __int64, __int64 (__fastcall ***)(), __int64 (__fastcall ***)(), __int64); // r15
+  __int64 v11; // rax
+  __int64 v12; // rax
+  __int64 (__fastcall *v13)(ISchemaSystemTypeScope *, const char *, __int64, __int64 (__fastcall ***)(), __int64 (__fastcall ***)(), __int64); // r15
+  __int64 v14; // rax
+  __int64 (__fastcall *v15)(ISchemaSystemTypeScope *, __int64, __int64); // r15
+  __int64 v16; // rax
+  __int64 (__fastcall *v17)(ISchemaSystemTypeScope *, const char *, __int64, __int64 (__fastcall ***)(), __int64 (__fastcall ***)(), __int64); // r15
+  __int64 v18; // rax
+  __int64 v19; // rax
+  __int64 (__fastcall *v20)(ISchemaSystemTypeScope *, const char *, __int64, __int64 (__fastcall ***)(), __int64 (__fastcall ***)(), __int64); // r15
+  __int64 v21; // rax
+  __int64 (__fastcall *v22)(ISchemaSystemTypeScope *, __int64, __int64); // r15
+  __int64 v23; // rax
+  __int64 (__fastcall *v24)(ISchemaSystemTypeScope *, const char *, __int64, __int64 (__fastcall ***)(), __int64 (__fastcall ***)(), __int64); // r15
+  __int64 v25; // rax
+  __int64 v26; // rax
+  __int64 (__fastcall *v27)(ISchemaSystemTypeScope *, __int64); // r15
+  __int64 v28; // rax
+  __int64 v29; // rax
+  __int64 (__fastcall *v30)(ISchemaSystemTypeScope *, __int64); // r15
+  __int64 v31; // rax
+  __int64 v32; // rax
+  __int64 (__fastcall *v33)(ISchemaSystemTypeScope *, const char *, __int64, __int64 (__fastcall ***)(), __int64 (__fastcall ***)(), __int64); // r15
+  __int64 v34; // rax
+  __int64 v35; // rax
+  __int64 v36; // rax
+  const char *v37; // rdx
+  CSchemaClassInfo *v38; // rax
+  CSchemaClassInfo *v39; // rax
+  CSchemaClassInfo *v40; // rax
+
+  result = CBaseCombatCharacter::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult;
+  if ( CBaseCombatCharacter::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult == 0 )
+  {
+    v7 = (*(*pSchemaSystem + 112LL))(pSchemaSystem, 1, pBinaryName);
+    if ( `guard variable for'CBaseCombatCharacter::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CBaseCombatCharacter5_MNetworkVarNames_Value == 0
+      && __cxa_guard_acquire(&`guard variable for'CBaseCombatCharacter::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CBaseCombatCharacter5_MNetworkVarNames_Value) != 0 )
+    {
+      CBaseCombatCharacter::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CBaseCombatCharacter5_MNetworkVarNames_Value.m_pVarName = "m_flNextAttack";
+      CBaseCombatCharacter::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CBaseCombatCharacter5_MNetworkVarNames_Value.m_pVarType = "float32";
+      __cxa_guard_release(&`guard variable for'CBaseCombatCharacter::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CBaseCombatCharacter5_MNetworkVarNames_Value);
+    }
+    if ( `guard variable for'CBaseCombatCharacter::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CBaseCombatCharacter6_MNetworkVarNames_Value == 0
+      && __cxa_guard_acquire(&`guard variable for'CBaseCombatCharacter::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CBaseCombatCharacter6_MNetworkVarNames_Value) != 0 )
+    {
+      CBaseCombatCharacter::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CBaseCombatCharacter6_MNetworkVarNames_Value.m_pVarName = "m_flFieldOfView";
+      CBaseCombatCharacter::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CBaseCombatCharacter6_MNetworkVarNames_Value.m_pVarType = "float";
+      __cxa_guard_release(&`guard variable for'CBaseCombatCharacter::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CBaseCombatCharacter6_MNetworkVarNames_Value);
+    }
+    if ( `guard variable for'CBaseCombatCharacter::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CBaseCombatCharacter7_MNetworkVarNames_Value == 0
+      && __cxa_guard_acquire(&`guard variable for'CBaseCombatCharacter::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CBaseCombatCharacter7_MNetworkVarNames_Value) != 0 )
+    {
+      CBaseCombatCharacter::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CBaseCombatCharacter7_MNetworkVarNames_Value.m_pVarName = "m_iAmmo";
+      CBaseCombatCharacter::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CBaseCombatCharacter7_MNetworkVarNames_Value.m_pVarType = "uint32";
+      __cxa_guard_release(&`guard variable for'CBaseCombatCharacter::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CBaseCombatCharacter7_MNetworkVarNames_Value);
+    }
+    if ( `guard variable for'CBaseCombatCharacter::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CBaseCombatCharacter8_MNetworkVarNames_Value == 0
+      && __cxa_guard_acquire(&`guard variable for'CBaseCombatCharacter::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CBaseCombatCharacter8_MNetworkVarNames_Value) != 0 )
+    {
+      CBaseCombatCharacter::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CBaseCombatCharacter8_MNetworkVarNames_Value.m_pVarName = "m_hMyWeapons";
+      CBaseCombatCharacter::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CBaseCombatCharacter8_MNetworkVarNames_Value.m_pVarType = "CHandle< CBaseCombatWeapon >";
+      __cxa_guard_release(&`guard variable for'CBaseCombatCharacter::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CBaseCombatCharacter8_MNetworkVarNames_Value);
+    }
+    if ( `guard variable for'CBaseCombatCharacter::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CBaseCombatCharacter9_MNetworkVarNames_Value == 0
+      && __cxa_guard_acquire(&`guard variable for'CBaseCombatCharacter::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CBaseCombatCharacter9_MNetworkVarNames_Value) != 0 )
+    {
+      CBaseCombatCharacter::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CBaseCombatCharacter9_MNetworkVarNames_Value.m_pVarName = "m_hActiveWeapon";
+      CBaseCombatCharacter::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CBaseCombatCharacter9_MNetworkVarNames_Value.m_pVarType = "CHandle< CBaseCombatWeapon>";
+      __cxa_guard_release(&`guard variable for'CBaseCombatCharacter::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CBaseCombatCharacter9_MNetworkVarNames_Value);
+    }
+    if ( `guard variable for'CBaseCombatCharacter::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CBaseCombatCharacter10_MNetworkVarNames_Value == 0
+      && __cxa_guard_acquire(&`guard variable for'CBaseCombatCharacter::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CBaseCombatCharacter10_MNetworkVarNames_Value) != 0 )
+    {
+      CBaseCombatCharacter::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CBaseCombatCharacter10_MNetworkVarNames_Value.m_pVarName = "m_hMyWearables";
+      CBaseCombatCharacter::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CBaseCombatCharacter10_MNetworkVarNames_Value.m_pVarType = "CHandle< CEconWearable >";
+      __cxa_guard_release(&`guard variable for'CBaseCombatCharacter::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CBaseCombatCharacter10_MNetworkVarNames_Value);
+    }
+    CBaseCombatCharacter::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CBaseCombatCharacter[0].m_pType = (*(*v7 + 40LL))(v7, 13);
+    CBaseCombatCharacter::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CBaseCombatCharacter[1].m_pType = (*(*v7 + 40LL))(v7, 13);
+    CBaseCombatCharacter::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CBaseCombatCharacter[2].m_pType = (*(*v7 + 40LL))(v7, 13);
+    CBaseCombatCharacter::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CBaseCombatCharacter[3].m_pType = (*(*v7 + 40LL))(v7, 11);
+    CBaseCombatCharacter::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CBaseCombatCharacter[4].m_pType = (*(*v7 + 96LL))(v7, "Hull_t");
+    CBaseCombatCharacter::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CBaseCombatCharacter[5].m_pType = (*(*v7 + 40LL))(v7, 8);
+    CBaseCombatCharacter::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CBaseCombatCharacter[6].m_pType = (*(*v7 + 40LL))(v7, 11);
+    CBaseCombatCharacter::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CBaseCombatCharacter[7].m_pType = (*(*v7 + 40LL))(v7, 11);
+    CBaseCombatCharacter::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CBaseCombatCharacter[8].m_pType = (*(*v7 + 40LL))(v7, 7);
+    CBaseCombatCharacter::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CBaseCombatCharacter[9].m_pType = (*(*v7 + 40LL))(v7, 11);
+    CBaseCombatCharacter::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CBaseCombatCharacter[10].m_pType = (*(*v7 + 56LL))(v7, "Vector", 2010, CAtomicManipulator<Vector>::Get(void)::val, CSchemaManipulator<Vector>::StaticAccessor(void)::m);
+    CBaseCombatCharacter::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CBaseCombatCharacter[11].m_pType = (*(*v7 + 56LL))(v7, "CUtlSymbolLarge", 3007, CAtomicManipulator<CUtlSymbolLarge>::Get(void)::val, &CSchemaManipulator<CUtlSymbolLarge>::StaticAccessor(void)::m);
+    CBaseCombatCharacter::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CBaseCombatCharacter[12].m_pType = (*(*v7 + 40LL))(v7, 11);
+    CBaseCombatCharacter::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CBaseCombatCharacter[13].m_pType = (*(*v7 + 40LL))(v7, 7);
+    CBaseCombatCharacter::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CBaseCombatCharacter[14].m_pType = (*(*v7 + 40LL))(v7, 11);
+    CBaseCombatCharacter::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CBaseCombatCharacter[15].m_pType = (*(*v7 + 40LL))(v7, 7);
+    CBaseCombatCharacter::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CBaseCombatCharacter[16].m_pType = (*(*v7 + 96LL))(v7, "WeaponProficiency_t");
+    v8 = *(*v7 + 64LL);
+    v9 = (*(*v7 + 88LL))(v7, "Relationship_t");
+    CBaseCombatCharacter::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CBaseCombatCharacter[17].m_pType = v8(v7, "CUtlVector", 3002, &CAtomicManipulator<CUtlVector<Relationship_t,CUtlMemory<Relationship_t,int>>>::Get(void)::val, CSchemaManipulator<CUtlVector<Relationship_t,CUtlMemory<Relationship_t,int>>>::StaticAccessor(void)::m, v9);
+    CBaseCombatCharacter::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CBaseCombatCharacter[18].m_pType = (*(*v7 + 40LL))(v7, 7);
+    v10 = *(*v7 + 64LL);
+    v11 = (*(*v7 + 88LL))(v7, "CBaseEntity");
+    v12 = v10(
+            v7,
+            "CHandle",
+            5003,
+            CAtomicManipulator<CHandle<CBaseEntity>>::Get(void)::val,
+            &CSchemaManipulator<CHandle<CBaseEntity>>::StaticAccessor(void)::m,
+            v11);
+    CBaseCombatCharacter::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CBaseCombatCharacter[19].m_pType = v10(v7, "CUtlVector", 3002, &CAtomicManipulator<CUtlVector<CHandle<CBaseEntity>,CUtlMemory<CHandle<CBaseEntity>,int>>>::Get(void)::val, CSchemaManipulator<CUtlVector<CHandle<CBaseEntity>,CUtlMemory<CHandle<CBaseEntity>,int>>>::StaticAccessor(void)::m, v12);
+    v13 = *(*v7 + 64LL);
+    v14 = (*(*v7 + 88LL))(v7, "CBaseEntity");
+    CBaseCombatCharacter::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CBaseCombatCharacter[20].m_pType = v13(v7, "CHandle", 5003, CAtomicManipulator<CHandle<CBaseEntity>>::Get(void)::val, &CSchemaManipulator<CHandle<CBaseEntity>>::StaticAccessor(void)::m, v14);
+    v15 = *(*v7 + 104LL);
+    v16 = (*(*v7 + 40LL))(v7, 8);
+    CBaseCombatCharacter::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CBaseCombatCharacter[21].m_pType = v15(v7, v16, 32);
+    v17 = *(*v7 + 64LL);
+    v18 = (*(*v7 + 88LL))(v7, "CBaseCombatWeapon");
+    v19 = v17(
+            v7,
+            "CHandle",
+            5003,
+            CAtomicManipulator<CHandle<CBaseCombatWeapon>>::Get(void)::val,
+            CSchemaManipulator<CHandle<CBaseCombatWeapon>>::StaticAccessor(void)::m,
+            v18);
+    CBaseCombatCharacter::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CBaseCombatCharacter[22].m_pType = v17(v7, "CUtlVector", 3002, &CAtomicManipulator<CUtlVector<CHandle<CBaseCombatWeapon>,CNetworkUtlVector_MemoryType<CHandle<CBaseCombatWeapon>,-1>>>::Get(void)::val, CSchemaManipulator<CUtlVector<CHandle<CBaseCombatWeapon>,CNetworkUtlVector_MemoryType<CHandle<CBaseCombatWeapon>,-1>>>::StaticAccessor(void)::m, v19);
+    v20 = *(*v7 + 64LL);
+    v21 = (*(*v7 + 88LL))(v7, "CBaseCombatWeapon");
+    CBaseCombatCharacter::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CBaseCombatCharacter[23].m_pType = v20(v7, "CHandle", 5003, CAtomicManipulator<CHandle<CBaseCombatWeapon>>::Get(void)::val, CSchemaManipulator<CHandle<CBaseCombatWeapon>>::StaticAccessor(void)::m, v21);
+    CBaseCombatCharacter::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CBaseCombatCharacter[24].m_pType = (*(*v7 + 88LL))(v7, "IntervalTimer");
+    CBaseCombatCharacter::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CBaseCombatCharacter[25].m_pType = (*(*v7 + 40LL))(v7, 8);
+    v22 = *(*v7 + 104LL);
+    v23 = (*(*v7 + 88LL))(v7, "CBaseCombatCharacter::DamageHistory");
+    CBaseCombatCharacter::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CBaseCombatCharacter[26].m_pType = v22(v7, v23, 4);
+    CBaseCombatCharacter::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CBaseCombatCharacter[27].m_pType = (*(*v7 + 88LL))(v7, "CAI_MoveMonitor");
+    CBaseCombatCharacter::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CBaseCombatCharacter[28].m_pType = (*(*v7 + 40LL))(v7, 7);
+    CBaseCombatCharacter::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CBaseCombatCharacter[29].m_pType = (*(*v7 + 88LL))(v7, "CountdownTimer");
+    CBaseCombatCharacter::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CBaseCombatCharacter[30].m_pType = (*(*v7 + 40LL))(v7, 7);
+    CBaseCombatCharacter::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CBaseCombatCharacter[31].m_pType = (*(*v7 + 40LL))(v7, 7);
+    v24 = *(*v7 + 64LL);
+    v25 = (*(*v7 + 88LL))(v7, "CEconWearable");
+    v26 = v24(
+            v7,
+            "CHandle",
+            5003,
+            CAtomicManipulator<CHandle<CEconWearable>>::Get(void)::val,
+            CSchemaManipulator<CHandle<CEconWearable>>::StaticAccessor(void)::m,
+            v25);
+    CBaseCombatCharacter::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CBaseCombatCharacter[32].m_pType = v24(v7, "CUtlVector", 3002, &CAtomicManipulator<CUtlVector<CHandle<CEconWearable>,CNetworkUtlVector_MemoryType<CHandle<CEconWearable>,-1>>>::Get(void)::val, CSchemaManipulator<CUtlVector<CHandle<CEconWearable>,CNetworkUtlVector_MemoryType<CHandle<CEconWearable>,-1>>>::StaticAccessor(void)::m, v26);
+    CBaseCombatCharacter::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_StaticMembers_CBaseCombatCharacter[0].m_pType = (*(*v7 + 40LL))(v7, 7);
+    v27 = *(*v7 + 48LL);
+    v28 = (*(*v7 + 88LL))(v7, "Relationship_t");
+    v29 = v27(v7, v28);
+    CBaseCombatCharacter::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_StaticMembers_CBaseCombatCharacter[1].m_pType = v27(v7, v29);
+    v30 = *(*v7 + 48LL);
+    v31 = (*(*v7 + 88LL))(v7, "Relationship_t");
+    v32 = v30(v7, v31);
+    CBaseCombatCharacter::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_StaticMembers_CBaseCombatCharacter[2].m_pType = v30(v7, v32);
+    v33 = *(*v7 + 64LL);
+    v34 = (*(*v7 + 88LL))(v7, "CBaseEntity");
+    v35 = v33(
+            v7,
+            "CHandle",
+            5003,
+            CAtomicManipulator<CHandle<CBaseEntity>>::Get(void)::val,
+            &CSchemaManipulator<CHandle<CBaseEntity>>::StaticAccessor(void)::m,
+            v34);
+    v36 = v33(
+            v7,
+            "CUtlVector",
+            3002,
+            &CAtomicManipulator<CUtlVector<CHandle<CBaseEntity>,CUtlMemory<CHandle<CBaseEntity>,int>>>::Get(void)::val,
+            CSchemaManipulator<CUtlVector<CHandle<CBaseEntity>,CUtlMemory<CHandle<CBaseEntity>,int>>>::StaticAccessor(void)::m,
+            v35);
+    CBaseCombatCharacter::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_StaticMembers_CBaseCombatCharacter[3].m_pType = v33(v7, "CUtlVector", 3002, &CAtomicManipulator<CUtlVector<CUtlVector<CHandle<CBaseEntity>,CUtlMemory<CHandle<CBaseEntity>,int>>,CUtlMemory<CUtlVector<CHandle<CBaseEntity>,CUtlMemory<CHandle<CBaseEntity>,int>>,int>>>::Get(void)::val, CSchemaManipulator<CUtlVector<CUtlVector<CHandle<CBaseEntity>,CUtlMemory<CHandle<CBaseEntity>,int>>,CUtlMemory<CUtlVector<CHandle<CBaseEntity>,CUtlMemory<CHandle<CBaseEntity>,int>>,int>>>::StaticAccessor(void)::m, v36);
+    CBaseCombatCharacter::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_StaticMembers_CBaseCombatCharacter[4].m_pType = (*(*v7 + 40LL))(v7, 7);
+    if ( `guard variable for'CBaseCombatCharacter::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_NestedClassesOf_CBaseCombatCharacter == 0
+      && __cxa_guard_acquire(&`guard variable for'CBaseCombatCharacter::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_NestedClassesOf_CBaseCombatCharacter) != 0 )
+    {
+      v38 = CBaseCombatCharacter::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult;
+      if ( CBaseCombatCharacter::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult == 0 )
+        v38 = CBaseCombatCharacter::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+                pSchemaSystem,
+                pBinaryName,
+                pProjectName);
+      CBaseCombatCharacter::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_NestedClassesOf_CBaseCombatCharacter[0] = v38;
+      v39 = CBaseCombatCharacter::DamageHistory::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult;
+      if ( CBaseCombatCharacter::DamageHistory::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult == 0 )
+        v39 = CBaseCombatCharacter::DamageHistory::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+                pSchemaSystem,
+                pBinaryName,
+                v37);
+      qword_4ACF808 = v39;
+      __cxa_guard_release(&`guard variable for'CBaseCombatCharacter::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_NestedClassesOf_CBaseCombatCharacter);
+    }
+    (*(CBaseFlex::s_pSchemaBindingForLocalModule->_vptr_ISchemaBinding + 5))(
+      CBaseFlex::s_pSchemaBindingForLocalModule,
+      pSchemaSystem,
+      pBinaryName,
+      pProjectName);
+    v40 = CBaseFlex::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+            pSchemaSystem,
+            pBinaryName,
+            pProjectName);
+    CBaseCombatCharacter::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CBaseCombatCharacter.m_pOuterTypeScope = v7;
+    CBaseCombatCharacter::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassBases_CBaseCombatCharacter[0].m_pClass = v40;
+    CBaseCombatCharacter::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult = &CBaseCombatCharacter::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CBaseCombatCharacter;
+    return &CBaseCombatCharacter::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CBaseCombatCharacter;
+  }
+  return result;
+}
+
+
+// CBaseCombatCharacter::Schema_VerifyBindingIsRegistered  (line 393, @0x0000000001faaaf0, libserver.so)
+// callers: CBaseCombatCharacter::Schema_DynamicBinding
+void __cdecl CBaseCombatCharacter::Schema_VerifyBindingIsRegistered()
+{
+  ;
+}
+
+
+// CBaseCombatCharacter::SetupEntClassInputs  (line 407, @0x0000000001faab00, libserver.so)
+void __fastcall CBaseCombatCharacter::SetupEntClassInputs(CEntityClass *pComponentInfo)
+{
+  ;
+}
+
+
+// CBaseCombatCharacter::SetupEntClassComponentOverrides  (line 413, @0x0000000001faab10, libserver.so)
+void __fastcall CBaseCombatCharacter::SetupEntClassComponentOverrides(CEntityClass *pEntityClass)
+{
+  pEntityClass->m_pComponentOverrides = 0;
+}
+
+
+// GetScriptDesc<CBaseCombatCharacter>  (line 420, @0x0000000001fb6e70, libserver.so)  // inlines: AddParameterType, CUtlMemory, CUtlVector, CUtlVectorBase, Finalize, ScriptClassDesc_t, ScriptDeduceFunctionSignature<CBaseCombatCharacter*, CBaseCombatCharacter, CVariantBase<CVariantDefaultAllocator> >, ScriptDeduceFunctionSignature<CBaseCombatCharacter*, CBaseCombatCharacter, Vector, int>, ScriptDeduceFunctionSignature<CBaseCombatCharacter*, CBaseCombatCharacter, int>, SetDescription, SetFunctionName, SetPackedParameterNames, SetReturnType, SetScriptName, operator[]
+// calls: operator new, GetScriptDesc<CBaseFlex>, CUtlVectorBase<ScriptFunctionBinding_t, CUtlMemory<ScriptFunctionBinding_t, int> >::AddToTail
+// callers: CBaseCombatCharacter::GetScriptDesc, CBaseCombatCharacter::InitScriptDesc, CBaseCombatCharacter::GetClassScriptDesc, CBaseCombatCharacter::GetEntityClassInternal, GetScriptDesc<CBasePlayer>
+// strings: "CBaseCombatCharacter", "Returns the shoot position eyes (or hand in VR).", "Weapon_ShootPosition", "GetEquippedWeapons() : Returns an array of all the equipped weapons", "ScriptGetEquippedWeapons", "GetWeaponCount() : Gets the number of weapons currently equipped" (9 total)
+// globals: g_pCBaseCombatCharacter_ScriptDesc, CMemberScriptBinding1<CBaseCombatCharacter *,Vector (CBaseCombatCharacter::*)(int),Vector,int>::Call(void *,void *,CVariantBase<CVariantDefaultAllocator> *,int,, s_CBaseCombatCharacter_Weapon_ShootPosition_packed_arg_names, CMemberScriptBinding0<CBaseCombatCharacter *,CVariantBase<CVariantDefaultAllocator> (CBaseCombatCharacter::*)(void),CVariantBase<CVariantDefaultAllocator>>::Cal, CMemberScriptBinding0<CBaseCombatCharacter *,int (CBaseCombatCharacter::*)(void),int>::Call(void *,void *,CVariantBase<CVariantDefaultAllocator> *,int,CVariantB, CBaseCombatCharacter::WeaponCount(void), CBaseCombatCharacter::GetFaction(void)
+ScriptClassDesc_t *__fastcall GetScriptDesc<CBaseCombatCharacter>(CBaseCombatCharacter *pScriptDescObjectInstance)
+{
+  ScriptClassDesc_t *result; // rax
+  ScriptClassDesc_t *v2; // r12
+  ScriptClassDesc_t *Script; // rdx
+  IScriptInstanceHelper *pHelper; // rax
+  __int64 v5; // rsi
+  char v6; // dl
+  __int64 v7; // rax
+  int v8; // edx
+  char v9; // cl
+  char v10; // di
+  __int64 v11; // rax
+  int v12; // edx
+  int v13; // edx
+  char v14; // cl
+  char v15; // di
+  __int64 v16; // rax
+  int v17; // edx
+  int v18; // edx
+  char v19; // cl
+  char v20; // di
+  __int64 v21; // rax
+  int v22; // edx
+  int v23; // edx
+  char v24; // cl
+  char v25; // di
+
+  result = g_pCBaseCombatCharacter_ScriptDesc;
+  if ( g_pCBaseCombatCharacter_ScriptDesc == 0 )
+  {
+    v2 = operator new(0x50u);
+    v2->m_pBaseDesc = 0;
+    v2->m_FunctionBindings.m_Size = 0;
+    v2->m_FunctionBindings.m_Memory.m_pMemory = 0;
+    v2->m_FunctionBindings.m_Memory.m_nAllocationCount = 0;
+    v2->m_FunctionBindings.m_Memory.m_nGrowSize = 0;
+    v2->m_pfnConstruct = 0;
+    v2->m_pfnDestruct = 0;
+    v2->pHelper = 0;
+    g_pCBaseCombatCharacter_ScriptDesc = v2;
+    v2->m_pszDescription = "BaseCombatCharacter";
+    v2->m_pszScriptName = "CBaseCombatCharacter";
+    v2->m_pszClassname = "CBaseCombatCharacter";
+    Script = GetScriptDesc<CBaseFlex>(0);
+    v2->m_pBaseDesc = Script;
+    if ( Script != 0 )
+    {
+      while ( 1 )
+      {
+        pHelper = Script->pHelper;
+        if ( pHelper != 0 )
+          break;
+        Script = Script->m_pBaseDesc;
+        if ( Script == 0 )
+          goto LABEL_7;
+      }
+      v2->pHelper = pHelper;
+    }
+LABEL_7:
+    v5 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(&v2->m_FunctionBindings)];
+    v6 = *(v5 + 26);
+    *(v5 + 24) = 3;
+    *(v5 + 16) = "Returns the shoot position eyes (or hand in VR).";
+    *v5 = "ShootPosition";
+    *(v5 + 8) = "Weapon_ShootPosition";
+    v7 = v6++;
+    *(v5 + v7 + 27) = 5;
+    *(v5 + 26) = v6;
+    v8 = v6 - 1;
+    *(v5 + 25) = 0;
+    if ( v8 >= 0 && *(v5 + v8 + 27) == 32 )
+    {
+      v9 = 1;
+      do
+      {
+        --v8;
+        v10 = v9;
+        if ( v8 == -1 )
+        {
+          *(v5 + 25) = v9;
+          goto LABEL_13;
+        }
+        ++v9;
+      }
+      while ( *(v5 + v8 + 27) == 32 );
+      *(v5 + 25) = v10;
+    }
+LABEL_13:
+    *(v5 + 56) = 2489;
+    *(v5 + 48) = CMemberScriptBinding1<CBaseCombatCharacter *,Vector (CBaseCombatCharacter::*)(int),Vector,int>::Call;
+    *(v5 + 64) = 1;
+    *(v5 + 40) = s_CBaseCombatCharacter_Weapon_ShootPosition_packed_arg_names;
+    v11 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(&v2->m_FunctionBindings)];
+    v12 = *(v11 + 26);
+    *(v11 + 16) = "GetEquippedWeapons() : Returns an array of all the equipped weapons";
+    *v11 = "GetEquippedWeapons";
+    *(v11 + 8) = "ScriptGetEquippedWeapons";
+    *(v11 + 24) = 32;
+    v13 = v12 - 1;
+    *(v11 + 25) = 0;
+    if ( v13 >= 0 && *(v11 + v13 + 27) == 32 )
+    {
+      v14 = 1;
+      do
+      {
+        --v13;
+        v15 = v14;
+        if ( v13 == -1 )
+        {
+          *(v11 + 25) = v14;
+          goto LABEL_19;
+        }
+        ++v14;
+      }
+      while ( *(v11 + v13 + 27) == 32 );
+      *(v11 + 25) = v15;
+    }
+LABEL_19:
+    *(v11 + 64) = 1;
+    *(v11 + 48) = CMemberScriptBinding0<CBaseCombatCharacter *,CVariantBase<CVariantDefaultAllocator> (CBaseCombatCharacter::*)(void),CVariantBase<CVariantDefaultAllocator>>::Call;
+    *(v11 + 56) = CBaseCombatCharacter::ScriptGetEquippedWeapons;
+    v16 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(&v2->m_FunctionBindings)];
+    v17 = *(v16 + 26);
+    *(v16 + 16) = "GetWeaponCount() : Gets the number of weapons currently equipped";
+    *v16 = "GetWeaponCount";
+    *(v16 + 8) = "WeaponCount";
+    *(v16 + 24) = 5;
+    v18 = v17 - 1;
+    *(v16 + 25) = 0;
+    if ( v18 >= 0 && *(v16 + v18 + 27) == 32 )
+    {
+      v19 = 1;
+      do
+      {
+        --v18;
+        v20 = v19;
+        if ( v18 == -1 )
+        {
+          *(v16 + 25) = v19;
+          goto LABEL_25;
+        }
+        ++v19;
+      }
+      while ( *(v16 + v18 + 27) == 32 );
+      *(v16 + 25) = v20;
+    }
+LABEL_25:
+    *(v16 + 64) = 1;
+    *(v16 + 48) = CMemberScriptBinding0<CBaseCombatCharacter *,int (CBaseCombatCharacter::*)(void),int>::Call;
+    *(v16 + 56) = CBaseCombatCharacter::WeaponCount;
+    v21 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(&v2->m_FunctionBindings)];
+    v22 = *(v21 + 26);
+    *(v21 + 16) = "Get the combat character faction.";
+    *v21 = "GetFaction";
+    *(v21 + 8) = "GetFaction";
+    *(v21 + 24) = 5;
+    v23 = v22 - 1;
+    *(v21 + 25) = 0;
+    if ( v23 >= 0 && *(v21 + v23 + 27) == 32 )
+    {
+      v24 = 1;
+      do
+      {
+        --v23;
+        v25 = v24;
+        if ( v23 == -1 )
+        {
+          *(v21 + 25) = v24;
+          goto LABEL_31;
+        }
+        ++v24;
+      }
+      while ( *(v21 + v23 + 27) == 32 );
+      *(v21 + 25) = v25;
+    }
+LABEL_31:
+    *(v21 + 64) = 1;
+    *(v21 + 48) = CMemberScriptBinding0<CBaseCombatCharacter *,int (CBaseCombatCharacter::*)(void),int>::Call;
+    *(v21 + 56) = CBaseCombatCharacter::GetFaction;
+    return v2;
+  }
+  return result;
+}
+
+
+// CBaseCombatCharacter::GetScriptDesc  (line 420, @0x0000000001fb71f0, libserver.so)
+// calls: GetScriptDesc<CBaseCombatCharacter>
+ScriptClassDesc_t *__fastcall CBaseCombatCharacter::GetScriptDesc(CBaseCombatCharacter *const this)
+{
+  return GetScriptDesc<CBaseCombatCharacter>(this);
+}
+
+
+// CBaseCombatCharacter::InitScriptDesc  (line 420, @0x0000000001fb7200, libserver.so)
+// calls: GetScriptDesc<CBaseCombatCharacter>
+// callers: CPhysicsCannister::GetEntityClassInternal, CSimpleBot::GetEntityClassInternal, NextBotCombatCharacter::GetEntityClassInternal
+ScriptClassDesc_t *__cdecl CBaseCombatCharacter::InitScriptDesc()
+{
+  return GetScriptDesc<CBaseCombatCharacter>(0);
+}
+
+
+// CBaseCombatCharacter::GetClassScriptDesc  (line 420, @0x0000000001fb7210, libserver.so)
+// calls: GetScriptDesc<CBaseCombatCharacter>
+ScriptClassDesc_t *__cdecl CBaseCombatCharacter::GetClassScriptDesc()
+{
+  return GetScriptDesc<CBaseCombatCharacter>(0);
+}
+
+
+// LocalRegisterSchemaModule<ArbitraryTemplateParameter_server_basecombatcharacter_h>  (line 431, @0x0000000001faab20, libserver.so)  // inlines: Call, Get
+// callers: RegisterSchemaModule_basecombatcharacter_h
+// strings: "Disposition_t"
+// globals: CSchemaEnumBinding<Disposition_t>::s_pThisModuleBindingPointer, Relationship_t::s_pSchemaBindingForLocalModule, CBaseCombatCharacter::CEntityInstanceEntityClass::s_pSchemaBindingForLocalModule, CBaseCombatCharacter::DamageHistory::s_pSchemaBindingForLocalModule, CBaseCombatCharacter::s_pSchemaBindingForLocalModule
+void __fastcall LocalRegisterSchemaModule<ArbitraryTemplateParameter_server_basecombatcharacter_h>(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        SchemaRegistrationPhase_t nRegistrationPhase)
+{
+  if ( nRegistrationPhase != SchemaRegistrationPhase_t::SCHEMA_REGISTRATION_PHASE_ATOMIC_TYPES_AND_ENUMS )
+  {
+    if ( nRegistrationPhase == SchemaRegistrationPhase_t::SCHEMA_REGISTRATION_PHASE_CLASSES )
+    {
+      (*(Relationship_t::s_pSchemaBindingForLocalModule->_vptr_ISchemaBinding + 5))(
+        Relationship_t::s_pSchemaBindingForLocalModule,
+        pSchemaSystem,
+        pBinaryName,
+        "server");
+      (*(CBaseCombatCharacter::CEntityInstanceEntityClass::s_pSchemaBindingForLocalModule->_vptr_ISchemaBinding + 5))(
+        CBaseCombatCharacter::CEntityInstanceEntityClass::s_pSchemaBindingForLocalModule,
+        pSchemaSystem,
+        pBinaryName,
+        "server");
+      (*(CBaseCombatCharacter::DamageHistory::s_pSchemaBindingForLocalModule->_vptr_ISchemaBinding + 5))(
+        CBaseCombatCharacter::DamageHistory::s_pSchemaBindingForLocalModule,
+        pSchemaSystem,
+        pBinaryName,
+        "server");
+      (*(CBaseCombatCharacter::s_pSchemaBindingForLocalModule->_vptr_ISchemaBinding + 5))(
+        CBaseCombatCharacter::s_pSchemaBindingForLocalModule,
+        pSchemaSystem,
+        pBinaryName,
+        "server");
+    }
+    ++g_nLinkerHack_SchemaAnchor_RegistrationCountFor_server;
+  }
+  else
+  {
+    (*(CSchemaEnumBinding<Disposition_t>::s_pThisModuleBindingPointer->_vptr_ISchemaBinding + 5))(
+      CSchemaEnumBinding<Disposition_t>::s_pThisModuleBindingPointer,
+      pSchemaSystem,
+      pBinaryName,
+      "server",
+      "Disposition_t");
+    ++g_nLinkerHack_SchemaAnchor_RegistrationCountFor_server;
+  }
+}
+
+
+// RegisterSchemaModule_basecombatcharacter_h  (line 437, @0x0000000001faac00, libserver.so)
+// calls: LocalRegisterSchemaModule<ArbitraryTemplateParameter_server_basecombatcharacter_h>
+// callers: CSchemaRegistration_server::RegisterAllBindings
+void __fastcall RegisterSchemaModule_basecombatcharacter_h(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        SchemaRegistrationPhase_t nRegistrationPhase)
+{
+  LocalRegisterSchemaModule<ArbitraryTemplateParameter_server_basecombatcharacter_h>(
+    pSchemaSystem,
+    pBinaryName,
+    nRegistrationPhase);
+}
+
+

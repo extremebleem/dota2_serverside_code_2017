@@ -1,0 +1,354 @@
+
+// ==== functions (decompiled by Hex-Rays; names/signatures from DWARF) ====
+
+// CSchemaEnumBinding<HierarchyType_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE  (line 35, @0x0000000001fe4050, libserver.so)  // inlines: Count, Initialize, SetTypeScope
+// callers: CSchemaEnumBinding<HierarchyType_t>::Register
+// globals: CSchemaEnumBinding<HierarchyType_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char
+CSchemaEnumInfo *__fastcall CSchemaEnumBinding<HierarchyType_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        const char *pProjectName)
+{
+  ISchemaSystemTypeScope *v3; // rax
+  unsigned int v4; // edi
+  SchemaEnumeratorValue_t v5; // r8
+  SchemaEnumeratorValue_t v6; // r9
+  SchemaEnumeratorValue_t *v7; // rdx
+
+  v3 = (*(*pSchemaSystem + 112LL))(pSchemaSystem, 0, pBinaryName);
+  if ( CSchemaEnumBinding<HierarchyType_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_HierarchyType_t.m_Enumerators.m_Data.m_nImplLength != 0 )
+  {
+    v4 = abs32(CSchemaEnumBinding<HierarchyType_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_HierarchyType_t.m_Enumerators.m_Data.m_nImplLength);
+    v5 = *(CSchemaEnumBinding<HierarchyType_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_HierarchyType_t.m_Enumerators.m_Data.m_pImplElements
+         + 2);
+    CSchemaEnumBinding<HierarchyType_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_HierarchyType_t.m_nMinValue = v5;
+    v6 = *(CSchemaEnumBinding<HierarchyType_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_HierarchyType_t.m_Enumerators.m_Data.m_pImplElements
+         + 2);
+    CSchemaEnumBinding<HierarchyType_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_HierarchyType_t.m_nMaxValue = v6;
+    if ( v4 != 1 )
+    {
+      v7 = (CSchemaEnumBinding<HierarchyType_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_HierarchyType_t.m_Enumerators.m_Data.m_pImplElements
+          + 72);
+      do
+      {
+        if ( v5 > *v7 )
+          v5 = *v7;
+        CSchemaEnumBinding<HierarchyType_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_HierarchyType_t.m_nMinValue = v5;
+        if ( v6 < *v7 )
+          v6 = *v7;
+        v7 += 7;
+        CSchemaEnumBinding<HierarchyType_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_HierarchyType_t.m_nMaxValue = v6;
+      }
+      while ( v7 != CSchemaEnumBinding<HierarchyType_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_HierarchyType_t.m_Enumerators.m_Data.m_pImplElements
+                  + 7 * v4
+                  + 2 );
+    }
+  }
+  else
+  {
+    CSchemaEnumBinding<HierarchyType_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_HierarchyType_t.m_nMinValue = 0;
+    CSchemaEnumBinding<HierarchyType_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_HierarchyType_t.m_nMaxValue = 0;
+  }
+  CSchemaEnumBinding<HierarchyType_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_HierarchyType_t.m_pOuterTypeScope = v3;
+  (*(*v3 + 272LL))(
+    v3,
+    &CSchemaEnumBinding<HierarchyType_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_HierarchyType_t);
+  return &CSchemaEnumBinding<HierarchyType_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_HierarchyType_t;
+}
+
+
+// CGameSceneNodeHandle::Schema_CompileTimeVerificationFunction  (line 50, @0x0000000001fe4130, libserver.so)
+void __fastcall CGameSceneNodeHandle::Schema_CompileTimeVerificationFunction(CGameSceneNodeHandle *const this)
+{
+  ;
+}
+
+
+// CGameSceneNodeHandle::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE  (line 55, @0x0000000001fe4140, libserver.so)  // inlines: Get, NetworkVarDecl_t, SchemaBinding_SchemaTypeOfMemberVarByAddr<CGameSceneNodeHandle, CNetworkVarBase<CEntityHandle, CGameSceneNodeHandle::NetworkVar_m_hOwner> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<CGameSceneNodeHandle, CNetworkVarBase<CUtlStringToken, CGameSceneNodeHandle::NetworkVar_m_name> >, SetTypeScope
+// calls: __cxa_guard_acquire, __cxa_guard_release
+// callers: CSchemaClassBinding<CGameSceneNodeHandle>::Register
+// strings: "CEntityHandle", "CUtlStringToken", "m_hOwner", "EHANDLE2"
+// globals: CGameSceneNodeHandle::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pI, `guard variable for'CGameSceneNodeHandle::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const, CSchemaManipulator<CEntityHandle>::StaticAccessor(void)::m, CAtomicManipulator<CEntityHandle>::Get(void)::val, CSchemaManipulator<CUtlStringToken>::StaticAccessor(void)::m, CAtomicManipulator<CUtlStringToken>::Get(void)::val, CGameSceneNodeHandle::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::Impl
+CSchemaClassInfo *__fastcall CGameSceneNodeHandle::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        const char *pProjectName)
+{
+  CSchemaClassInfo *result; // rax
+  ISchemaSystemTypeScope *v4; // rbx
+  CSchemaType *v5; // rax
+
+  result = CGameSceneNodeHandle::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult;
+  if ( CGameSceneNodeHandle::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult == 0 )
+  {
+    v4 = (*(*pSchemaSystem + 112LL))(pSchemaSystem, 0, pBinaryName);
+    if ( `guard variable for'CGameSceneNodeHandle::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CGameSceneNodeHandle0_MNetworkVarNames_Value == 0
+      && __cxa_guard_acquire(&`guard variable for'CGameSceneNodeHandle::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CGameSceneNodeHandle0_MNetworkVarNames_Value) != 0 )
+    {
+      CGameSceneNodeHandle::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CGameSceneNodeHandle0_MNetworkVarNames_Value.m_pVarName = "m_hOwner";
+      CGameSceneNodeHandle::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CGameSceneNodeHandle0_MNetworkVarNames_Value.m_pVarType = "EHANDLE2";
+      __cxa_guard_release(&`guard variable for'CGameSceneNodeHandle::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CGameSceneNodeHandle0_MNetworkVarNames_Value);
+    }
+    if ( `guard variable for'CGameSceneNodeHandle::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CGameSceneNodeHandle1_MNetworkVarNames_Value == 0
+      && __cxa_guard_acquire(&`guard variable for'CGameSceneNodeHandle::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CGameSceneNodeHandle1_MNetworkVarNames_Value) != 0 )
+    {
+      CGameSceneNodeHandle::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CGameSceneNodeHandle1_MNetworkVarNames_Value.m_pVarName = "m_name";
+      CGameSceneNodeHandle::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CGameSceneNodeHandle1_MNetworkVarNames_Value.m_pVarType = "CUtlStringToken";
+      __cxa_guard_release(&`guard variable for'CGameSceneNodeHandle::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CGameSceneNodeHandle1_MNetworkVarNames_Value);
+    }
+    CGameSceneNodeHandle::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CGameSceneNodeHandle[0].m_pType = (*(*v4 + 56LL))(v4, "CEntityHandle", 5000, CAtomicManipulator<CEntityHandle>::Get(void)::val, CSchemaManipulator<CEntityHandle>::StaticAccessor(void)::m);
+    v5 = (*(*v4 + 56LL))(
+           v4,
+           "CUtlStringToken",
+           3010,
+           CAtomicManipulator<CUtlStringToken>::Get(void)::val,
+           CSchemaManipulator<CUtlStringToken>::StaticAccessor(void)::m);
+    CGameSceneNodeHandle::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CGameSceneNodeHandle.m_pOuterTypeScope = v4;
+    CGameSceneNodeHandle::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CGameSceneNodeHandle[1].m_pType = v5;
+    CGameSceneNodeHandle::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult = &CGameSceneNodeHandle::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CGameSceneNodeHandle;
+    (*(*v4 + 264LL))(
+      v4,
+      &CGameSceneNodeHandle::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CGameSceneNodeHandle);
+    return CGameSceneNodeHandle::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult;
+  }
+  return result;
+}
+
+
+// CGameSceneNodeHandle::Schema_VerifyBindingIsRegistered  (line 92, @0x0000000001fe42a0, libserver.so)
+// callers: CGameSceneNodeHandle::Schema_DynamicBinding
+void __cdecl CGameSceneNodeHandle::Schema_VerifyBindingIsRegistered()
+{
+  ;
+}
+
+
+// CGameSceneNode::Schema_CompileTimeVerificationFunction  (line 100, @0x0000000001fe42b0, libserver.so)
+void __fastcall CGameSceneNode::Schema_CompileTimeVerificationFunction(CGameSceneNode *const this)
+{
+  ;
+}
+
+
+// CGameSceneNode::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE  (line 133, @0x0000000001fe7cf0, libserver.so)  // inlines: ComponentKeyField_t, Get, NetworkVarDecl_t, SchemaBinding_SchemaTypeOfMemberVarByAddr<CGameSceneNode, CEntityInstance*>, SchemaBinding_SchemaTypeOfMemberVarByAddr<CGameSceneNode, CGameSceneNode*>, SchemaBinding_SchemaTypeOfMemberVarByAddr<CGameSceneNode, CGameSceneNode::NetworkVar_m_hParent>, SchemaBinding_SchemaTypeOfMemberVarByAddr<CGameSceneNode, CNetworkOriginCellCoordQuantizedVector>, SchemaBinding_SchemaTypeOfMemberVarByAddr<CGameSceneNode, CNetworkVarBase<CUtlStringToken, CGameSceneNode::NetworkVar_m_hierarchyAttachName> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<CGameSceneNode, CNetworkVarBase<CUtlStringToken, CGameSceneNode::NetworkVar_m_name> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<CGameSceneNode, CNetworkVarBase<float, CGameSceneNode::NetworkVar_m_flScale> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<CGameSceneNode, CNetworkVectorBase<QAngle, CGameSceneNode::NetworkVar_m_angRotation> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<CGameSceneNode, QAngle>, SchemaBinding_SchemaTypeOfMemberVarByAddr<CGameSceneNode, Vector>, SchemaBinding_SchemaTypeOfMemberVarByAddr<CGameSceneNode, bool>, SchemaBinding_SchemaTypeOfMemberVarByAddr<CGameSceneNode, float>, SchemaBinding_SchemaTypeOfMemberVarByAddr<CGameSceneNode, matrix3x4a_t>, SchemaBinding_SchemaTypeOfMemberVarByAddr<CGameSceneNode, short int>, SchemaBinding_SchemaTypeOfMemberVarByAddr<CGameSceneNode, unsigned char>, SetTypeScope
+// calls: __cxa_guard_acquire, SchemaTypeOf<CEntityHandle>, __cxa_guard_release, SchemaTypeOf<float>, SchemaTypeOf<Vector>, SchemaTypeOf<bool>, __cxa_guard_abort, _Unwind_Resume
+// callers: CSchemaNonConstructibleClassBinding<CGameSceneNode>::Register, CSkeletonInstance::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE
+// strings: "matrix3x4a_t", "CEntityInstance", "CGameSceneNode", "CGameSceneNodeHandle", "CNetworkOriginCellCoordQuantizedVector", "QAngle" (13 total)
+// globals: CGameSceneNode::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitial, `guard variable for'CGameSceneNode::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char, CSchemaManipulator<matrix3x4a_t>::StaticAccessor(void)::m, CAtomicManipulator<matrix3x4a_t>::Get(void)::val, CSchemaManipulator<QAngle>::StaticAccessor(void)::m, CAtomicManipulator<QAngle>::Get(void)::val, CSchemaManipulator<Vector>::StaticAccessor(void)::m, CAtomicManipulator<Vector>::Get(void)::val (11 total)
+CSchemaClassInfo *__fastcall CGameSceneNode::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        const char *pProjectName)
+{
+  CSchemaClassInfo *result; // rax
+  ISchemaSystemTypeScope *v4; // rbx
+  __int64 (__fastcall *v5)(ISchemaSystemTypeScope *, __int64); // r12
+  __int64 v6; // rax
+  __int64 (__fastcall *v7)(ISchemaSystemTypeScope *, __int64); // r12
+  __int64 v8; // rax
+  __int64 (__fastcall *v9)(ISchemaSystemTypeScope *, __int64); // r12
+  __int64 v10; // rax
+  __int64 (__fastcall *v11)(ISchemaSystemTypeScope *, __int64); // r12
+  __int64 v12; // rax
+  CSchemaType *v13; // rax
+
+  result = CGameSceneNode::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult;
+  if ( CGameSceneNode::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult == 0 )
+  {
+    v4 = (*(*pSchemaSystem + 112LL))(pSchemaSystem, 0, pBinaryName);
+    if ( `guard variable for'CGameSceneNode::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CGameSceneNode0_MKeyField_Value == 0
+      && __cxa_guard_acquire(&`guard variable for'CGameSceneNode::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CGameSceneNode0_MKeyField_Value) != 0 )
+    {
+      CGameSceneNode::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CGameSceneNode0_MKeyField_Value.m_pType = SchemaTypeOf<CEntityHandle>();
+      CGameSceneNode::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CGameSceneNode0_MKeyField_Value.m_pKeyName = "parentname";
+      __cxa_guard_release(&`guard variable for'CGameSceneNode::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CGameSceneNode0_MKeyField_Value);
+    }
+    if ( `guard variable for'CGameSceneNode::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CGameSceneNode1_MKeyField_Value == 0
+      && __cxa_guard_acquire(&`guard variable for'CGameSceneNode::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CGameSceneNode1_MKeyField_Value) != 0 )
+    {
+      CGameSceneNode::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CGameSceneNode1_MKeyField_Value.m_pType = SchemaTypeOf<bool>();
+      CGameSceneNode::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CGameSceneNode1_MKeyField_Value.m_pKeyName = "useLocalOffset";
+      __cxa_guard_release(&`guard variable for'CGameSceneNode::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CGameSceneNode1_MKeyField_Value);
+    }
+    if ( `guard variable for'CGameSceneNode::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CGameSceneNode2_MKeyField_Value == 0
+      && __cxa_guard_acquire(&`guard variable for'CGameSceneNode::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CGameSceneNode2_MKeyField_Value) != 0 )
+    {
+      CGameSceneNode::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CGameSceneNode2_MKeyField_Value.m_pType = SchemaTypeOf<Vector>();
+      CGameSceneNode::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CGameSceneNode2_MKeyField_Value.m_pKeyName = "scales";
+      __cxa_guard_release(&`guard variable for'CGameSceneNode::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CGameSceneNode2_MKeyField_Value);
+    }
+    if ( `guard variable for'CGameSceneNode::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CGameSceneNode3_MKeyField_Value == 0
+      && __cxa_guard_acquire(&`guard variable for'CGameSceneNode::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CGameSceneNode3_MKeyField_Value) != 0 )
+    {
+      CGameSceneNode::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CGameSceneNode3_MKeyField_Value.m_pType = SchemaTypeOf<Vector>();
+      CGameSceneNode::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CGameSceneNode3_MKeyField_Value.m_pKeyName = "local.scales";
+      __cxa_guard_release(&`guard variable for'CGameSceneNode::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CGameSceneNode3_MKeyField_Value);
+    }
+    if ( `guard variable for'CGameSceneNode::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CGameSceneNode4_MKeyField_Value == 0
+      && __cxa_guard_acquire(&`guard variable for'CGameSceneNode::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CGameSceneNode4_MKeyField_Value) != 0 )
+    {
+      CGameSceneNode::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CGameSceneNode4_MKeyField_Value.m_pType = SchemaTypeOf<float>();
+      CGameSceneNode::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CGameSceneNode4_MKeyField_Value.m_pKeyName = "scale";
+      __cxa_guard_release(&`guard variable for'CGameSceneNode::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CGameSceneNode4_MKeyField_Value);
+    }
+    if ( `guard variable for'CGameSceneNode::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CGameSceneNode5_MKeyField_Value == 0
+      && __cxa_guard_acquire(&`guard variable for'CGameSceneNode::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CGameSceneNode5_MKeyField_Value) != 0 )
+    {
+      CGameSceneNode::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CGameSceneNode5_MKeyField_Value.m_pType = SchemaTypeOf<float>();
+      CGameSceneNode::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CGameSceneNode5_MKeyField_Value.m_pKeyName = "ModelScale";
+      __cxa_guard_release(&`guard variable for'CGameSceneNode::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CGameSceneNode5_MKeyField_Value);
+    }
+    if ( `guard variable for'CGameSceneNode::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CGameSceneNode6_MNetworkVarNames_Value == 0
+      && __cxa_guard_acquire(&`guard variable for'CGameSceneNode::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CGameSceneNode6_MNetworkVarNames_Value) != 0 )
+    {
+      CGameSceneNode::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CGameSceneNode6_MNetworkVarNames_Value.m_pVarName = "m_hParent";
+      CGameSceneNode::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CGameSceneNode6_MNetworkVarNames_Value.m_pVarType = "CGameSceneNodeHandle";
+      __cxa_guard_release(&`guard variable for'CGameSceneNode::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CGameSceneNode6_MNetworkVarNames_Value);
+    }
+    if ( `guard variable for'CGameSceneNode::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CGameSceneNode7_MNetworkVarNames_Value == 0
+      && __cxa_guard_acquire(&`guard variable for'CGameSceneNode::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CGameSceneNode7_MNetworkVarNames_Value) != 0 )
+    {
+      CGameSceneNode::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CGameSceneNode7_MNetworkVarNames_Value.m_pVarName = "m_vecOrigin";
+      CGameSceneNode::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CGameSceneNode7_MNetworkVarNames_Value.m_pVarType = "CNetworkOriginCellCoordQuantizedVector";
+      __cxa_guard_release(&`guard variable for'CGameSceneNode::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CGameSceneNode7_MNetworkVarNames_Value);
+    }
+    if ( `guard variable for'CGameSceneNode::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CGameSceneNode8_MNetworkVarNames_Value == 0
+      && __cxa_guard_acquire(&`guard variable for'CGameSceneNode::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CGameSceneNode8_MNetworkVarNames_Value) != 0 )
+    {
+      CGameSceneNode::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CGameSceneNode8_MNetworkVarNames_Value.m_pVarName = "m_angRotation";
+      CGameSceneNode::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CGameSceneNode8_MNetworkVarNames_Value.m_pVarType = "QAngle";
+      __cxa_guard_release(&`guard variable for'CGameSceneNode::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CGameSceneNode8_MNetworkVarNames_Value);
+    }
+    if ( `guard variable for'CGameSceneNode::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CGameSceneNode9_MNetworkVarNames_Value == 0
+      && __cxa_guard_acquire(&`guard variable for'CGameSceneNode::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CGameSceneNode9_MNetworkVarNames_Value) != 0 )
+    {
+      CGameSceneNode::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CGameSceneNode9_MNetworkVarNames_Value.m_pVarName = "m_flScale";
+      CGameSceneNode::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CGameSceneNode9_MNetworkVarNames_Value.m_pVarType = "float";
+      __cxa_guard_release(&`guard variable for'CGameSceneNode::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CGameSceneNode9_MNetworkVarNames_Value);
+    }
+    if ( `guard variable for'CGameSceneNode::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CGameSceneNode10_MNetworkVarNames_Value == 0
+      && __cxa_guard_acquire(&`guard variable for'CGameSceneNode::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CGameSceneNode10_MNetworkVarNames_Value) != 0 )
+    {
+      CGameSceneNode::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CGameSceneNode10_MNetworkVarNames_Value.m_pVarName = "m_name";
+      CGameSceneNode::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CGameSceneNode10_MNetworkVarNames_Value.m_pVarType = "CUtlStringToken";
+      __cxa_guard_release(&`guard variable for'CGameSceneNode::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CGameSceneNode10_MNetworkVarNames_Value);
+    }
+    if ( `guard variable for'CGameSceneNode::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CGameSceneNode11_MNetworkVarNames_Value == 0
+      && __cxa_guard_acquire(&`guard variable for'CGameSceneNode::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CGameSceneNode11_MNetworkVarNames_Value) != 0 )
+    {
+      CGameSceneNode::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CGameSceneNode11_MNetworkVarNames_Value.m_pVarName = "m_hierarchyAttachName";
+      CGameSceneNode::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CGameSceneNode11_MNetworkVarNames_Value.m_pVarType = "CUtlStringToken";
+      __cxa_guard_release(&`guard variable for'CGameSceneNode::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CGameSceneNode11_MNetworkVarNames_Value);
+    }
+    CGameSceneNode::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CGameSceneNode[0].m_pType = (*(*v4 + 56LL))(v4, "matrix3x4a_t", 2004, CAtomicManipulator<matrix3x4a_t>::Get(void)::val, &CSchemaManipulator<matrix3x4a_t>::StaticAccessor(void)::m);
+    v5 = *(*v4 + 48LL);
+    v6 = (*(*v4 + 88LL))(v4, "CEntityInstance");
+    CGameSceneNode::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CGameSceneNode[1].m_pType = v5(v4, v6);
+    v7 = *(*v4 + 48LL);
+    v8 = (*(*v4 + 88LL))(v4, "CGameSceneNode");
+    CGameSceneNode::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CGameSceneNode[2].m_pType = v7(v4, v8);
+    v9 = *(*v4 + 48LL);
+    v10 = (*(*v4 + 88LL))(v4, "CGameSceneNode");
+    CGameSceneNode::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CGameSceneNode[3].m_pType = v9(v4, v10);
+    v11 = *(*v4 + 48LL);
+    v12 = (*(*v4 + 88LL))(v4, "CGameSceneNode");
+    CGameSceneNode::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CGameSceneNode[4].m_pType = v11(v4, v12);
+    CGameSceneNode::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CGameSceneNode[5].m_pType = (*(*v4 + 88LL))(v4, "CGameSceneNodeHandle");
+    CGameSceneNode::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CGameSceneNode[6].m_pType = (*(*v4 + 88LL))(v4, "CNetworkOriginCellCoordQuantizedVector");
+    CGameSceneNode::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CGameSceneNode[7].m_pType = (*(*v4 + 56LL))(v4, "QAngle", 2005, CAtomicManipulator<QAngle>::Get(void)::val, CSchemaManipulator<QAngle>::StaticAccessor(void)::m);
+    CGameSceneNode::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CGameSceneNode[8].m_pType = (*(*v4 + 40LL))(v4, 11);
+    CGameSceneNode::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CGameSceneNode[9].m_pType = (*(*v4 + 56LL))(v4, "Vector", 2010, CAtomicManipulator<Vector>::Get(void)::val, CSchemaManipulator<Vector>::StaticAccessor(void)::m);
+    CGameSceneNode::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CGameSceneNode[10].m_pType = (*(*v4 + 56LL))(v4, "QAngle", 2005, CAtomicManipulator<QAngle>::Get(void)::val, CSchemaManipulator<QAngle>::StaticAccessor(void)::m);
+    CGameSceneNode::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CGameSceneNode[11].m_pType = (*(*v4 + 40LL))(v4, 11);
+    CGameSceneNode::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CGameSceneNode[12].m_pType = (*(*v4 + 40LL))(v4, 5);
+    CGameSceneNode::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CGameSceneNode[13].m_pType = (*(*v4 + 40LL))(v4, 13);
+    CGameSceneNode::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CGameSceneNode[14].m_pType = (*(*v4 + 40LL))(v4, 13);
+    CGameSceneNode::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CGameSceneNode[15].m_pType = (*(*v4 + 112LL))(v4, 1);
+    CGameSceneNode::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CGameSceneNode[16].m_pType = (*(*v4 + 112LL))(v4, 1);
+    CGameSceneNode::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CGameSceneNode[17].m_pType = (*(*v4 + 112LL))(v4, 1);
+    CGameSceneNode::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CGameSceneNode[18].m_pType = (*(*v4 + 112LL))(v4, 1);
+    CGameSceneNode::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CGameSceneNode[19].m_pType = (*(*v4 + 112LL))(v4, 1);
+    CGameSceneNode::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CGameSceneNode[20].m_pType = (*(*v4 + 112LL))(v4, 1);
+    CGameSceneNode::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CGameSceneNode[21].m_pType = (*(*v4 + 112LL))(v4, 1);
+    CGameSceneNode::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CGameSceneNode[22].m_pType = (*(*v4 + 112LL))(v4, 2);
+    CGameSceneNode::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CGameSceneNode[23].m_pType = (*(*v4 + 112LL))(v4, 1);
+    CGameSceneNode::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CGameSceneNode[24].m_pType = (*(*v4 + 40LL))(v4, 4);
+    CGameSceneNode::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CGameSceneNode[25].m_pType = (*(*v4 + 40LL))(v4, 4);
+    CGameSceneNode::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CGameSceneNode[26].m_pType = (*(*v4 + 40LL))(v4, 4);
+    CGameSceneNode::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CGameSceneNode[27].m_pType = (*(*v4 + 56LL))(v4, "CUtlStringToken", 3010, CAtomicManipulator<CUtlStringToken>::Get(void)::val, CSchemaManipulator<CUtlStringToken>::StaticAccessor(void)::m);
+    CGameSceneNode::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CGameSceneNode[28].m_pType = (*(*v4 + 56LL))(v4, "CUtlStringToken", 3010, CAtomicManipulator<CUtlStringToken>::Get(void)::val, CSchemaManipulator<CUtlStringToken>::StaticAccessor(void)::m);
+    v13 = (*(*v4 + 40LL))(v4, 11);
+    CGameSceneNode::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CGameSceneNode.m_pOuterTypeScope = v4;
+    CGameSceneNode::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CGameSceneNode[29].m_pType = v13;
+    CGameSceneNode::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult = &CGameSceneNode::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CGameSceneNode;
+    (*(*v4 + 264LL))(
+      v4,
+      &CGameSceneNode::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CGameSceneNode);
+    return CGameSceneNode::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult;
+  }
+  return result;
+}
+
+
+// CGameSceneNode::Schema_VerifyBindingIsRegistered  (line 467, @0x0000000001fe42c0, libserver.so)
+// callers: CGameSceneNode::Schema_DynamicBinding, CGameSceneNode::CGameSceneNode
+void __cdecl CGameSceneNode::Schema_VerifyBindingIsRegistered()
+{
+  ;
+}
+
+
+// LocalRegisterSchemaModule<ArbitraryTemplateParameter_server_gamescenenode_h>  (line 475, @0x0000000001fe42d0, libserver.so)  // inlines: Call, Get
+// callers: RegisterSchemaModule_gamescenenode_h
+// strings: "HierarchyType_t"
+// globals: CSchemaEnumBinding<HierarchyType_t>::s_pThisModuleBindingPointer, CGameSceneNodeHandle::s_pSchemaBindingForLocalModule, CGameSceneNode::s_pSchemaBindingForLocalModule
+void __fastcall LocalRegisterSchemaModule<ArbitraryTemplateParameter_server_gamescenenode_h>(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        SchemaRegistrationPhase_t nRegistrationPhase)
+{
+  if ( nRegistrationPhase != SchemaRegistrationPhase_t::SCHEMA_REGISTRATION_PHASE_ATOMIC_TYPES_AND_ENUMS )
+  {
+    if ( nRegistrationPhase == SchemaRegistrationPhase_t::SCHEMA_REGISTRATION_PHASE_CLASSES )
+    {
+      (*(CGameSceneNodeHandle::s_pSchemaBindingForLocalModule->_vptr_ISchemaBinding + 5))(
+        CGameSceneNodeHandle::s_pSchemaBindingForLocalModule,
+        pSchemaSystem,
+        pBinaryName,
+        "server");
+      (*(CGameSceneNode::s_pSchemaBindingForLocalModule->_vptr_ISchemaBinding + 5))(
+        CGameSceneNode::s_pSchemaBindingForLocalModule,
+        pSchemaSystem,
+        pBinaryName,
+        "server");
+    }
+    ++g_nLinkerHack_SchemaAnchor_RegistrationCountFor_server;
+  }
+  else
+  {
+    (*(CSchemaEnumBinding<HierarchyType_t>::s_pThisModuleBindingPointer->_vptr_ISchemaBinding + 5))(
+      CSchemaEnumBinding<HierarchyType_t>::s_pThisModuleBindingPointer,
+      pSchemaSystem,
+      pBinaryName,
+      "server",
+      "HierarchyType_t");
+    ++g_nLinkerHack_SchemaAnchor_RegistrationCountFor_server;
+  }
+}
+
+
+// RegisterSchemaModule_gamescenenode_h  (line 479, @0x0000000001fe4380, libserver.so)
+// calls: LocalRegisterSchemaModule<ArbitraryTemplateParameter_server_gamescenenode_h>
+// callers: CSchemaRegistration_server::RegisterAllBindings
+void __fastcall RegisterSchemaModule_gamescenenode_h(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        SchemaRegistrationPhase_t nRegistrationPhase)
+{
+  LocalRegisterSchemaModule<ArbitraryTemplateParameter_server_gamescenenode_h>(
+    pSchemaSystem,
+    pBinaryName,
+    nRegistrationPhase);
+}
+
+

@@ -1,0 +1,61 @@
+// Reconstructed from DWARF by pahole; not original source.
+
+// src/_generated_code/modellib/release/linuxsteamrt64/modellib_schema_anchor.gen_cpp:20
+class CSchemaRegistration_modellib : public CSchemaRegistration {
+public:
+
+	CSchemaRegistration_modellib(CSchemaRegistration_modellib &);
+	CSchemaRegistration_modellib(const CSchemaRegistration_modellib &);
+	CSchemaRegistration_modellib();
+	virtual void RegisterAllBindings(ISchemaSystem *, SchemaRegistrationPhase_t);
+
+	// vtable[0] RegisterAllBindings
+	// sizeof = 16
+};
+
+// ==== functions (decompiled by Hex-Rays; names/signatures from DWARF) ====
+
+// CSchemaRegistration_modellib::RegisterAllBindings  (line 20, @0x0000000003184390, libserver.so)
+// calls: GetNameOfModule, RegisterSchemaModule_vphysx_collisionmesh_resource_h, RegisterSchemaModule_vpropbreakabledata_h, RegisterSchemaModule_vphysx_resource_handles_h, RegisterSchemaModule_surfaceproperties_resource_h, RegisterSchemaModule_vphysx_shape_resource_h, RegisterSchemaModule_rendermesh_old_disk_h, RegisterSchemaModule_model_old_disk_h, RegisterSchemaModule_modelbuilder_h, RegisterSchemaModule_rendermesh_h, RegisterSchemaModule_boneconstraints_h, RegisterSchemaModule_morphset_old_disk_h
+void __fastcall CSchemaRegistration_modellib::RegisterAllBindings(
+        CSchemaRegistration_modellib *const this,
+        ISchemaSystem *pSchemaSystem,
+        SchemaRegistrationPhase_t nRegistrationPhase)
+{
+  const char *NameOfModule; // rax
+  const char *v6; // rax
+  const char *v7; // rax
+  const char *v8; // rax
+  const char *v9; // rax
+  const char *v10; // rax
+  const char *v11; // rax
+  const char *v12; // rax
+  const char *v13; // rax
+  const char *v14; // rax
+  const char *v15; // rax
+
+  NameOfModule = GetNameOfModule();
+  RegisterSchemaModule_vphysx_collisionmesh_resource_h(pSchemaSystem, NameOfModule, nRegistrationPhase);
+  v6 = GetNameOfModule();
+  RegisterSchemaModule_vpropbreakabledata_h(pSchemaSystem, v6, nRegistrationPhase);
+  v7 = GetNameOfModule();
+  RegisterSchemaModule_vphysx_resource_handles_h(pSchemaSystem, v7, nRegistrationPhase);
+  v8 = GetNameOfModule();
+  RegisterSchemaModule_surfaceproperties_resource_h(pSchemaSystem, v8, nRegistrationPhase);
+  v9 = GetNameOfModule();
+  RegisterSchemaModule_vphysx_shape_resource_h(pSchemaSystem, v9, nRegistrationPhase);
+  v10 = GetNameOfModule();
+  RegisterSchemaModule_rendermesh_old_disk_h(pSchemaSystem, v10, nRegistrationPhase);
+  v11 = GetNameOfModule();
+  RegisterSchemaModule_model_old_disk_h(pSchemaSystem, v11, nRegistrationPhase);
+  v12 = GetNameOfModule();
+  RegisterSchemaModule_modelbuilder_h(pSchemaSystem, v12, nRegistrationPhase);
+  v13 = GetNameOfModule();
+  RegisterSchemaModule_rendermesh_h(pSchemaSystem, v13, nRegistrationPhase);
+  v14 = GetNameOfModule();
+  RegisterSchemaModule_boneconstraints_h(pSchemaSystem, v14, nRegistrationPhase);
+  v15 = GetNameOfModule();
+  RegisterSchemaModule_morphset_old_disk_h(pSchemaSystem, v15, nRegistrationPhase);
+}
+
+

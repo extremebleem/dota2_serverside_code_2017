@@ -1,0 +1,127 @@
+
+// ==== functions (decompiled by Hex-Rays; names/signatures from DWARF) ====
+
+// CEntityIdentity::Schema_CompileTimeVerificationFunction  (line 33, @0x00000000030da610, libserver.so)
+void __fastcall CEntityIdentity::Schema_CompileTimeVerificationFunction(CEntityIdentity *const this)
+{
+  ;
+}
+
+
+// CEntityIdentity::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE  (line 47, @0x00000000030da620, libserver.so)  // inlines: Get, NetworkVarDecl_t, SchemaBinding_SchemaTypeOfMemberVarByAddr<CEntityIdentity, CEntityIdentity*>, SchemaBinding_SchemaTypeOfMemberVarByAddr<CEntityIdentity, CNetworkVarBase<int, CEntityIdentity::NetworkVar_m_nameStringableIndex> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<CEntityIdentity, CUtlSymbolLarge>, SchemaBinding_SchemaTypeOfMemberVarByAddr<CEntityIdentity, ChangeAccessorFieldPathIndex_t>, SchemaBinding_SchemaTypeOfMemberVarByAddr<CEntityIdentity, V_uuid_t*>, SchemaBinding_SchemaTypeOfMemberVarByAddr<CEntityIdentity, unsigned int>, SetTypeScope
+// calls: __cxa_guard_acquire, __cxa_guard_release
+// callers: CSchemaClassBinding<CEntityIdentity>::Register
+// strings: "CUtlSymbolLarge", "ChangeAccessorFieldPathIndex_t", "CEntityIdentity", "V_uuid_t", "m_nameStringableIndex"
+// globals: CEntityIdentity::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitia, `guard variable for'CEntityIdentity::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,cha, CSchemaManipulator<CUtlSymbolLarge>::StaticAccessor(void)::m, CAtomicManipulator<CUtlSymbolLarge>::Get(void)::val, CSchemaManipulator<V_uuid_t>::StaticAccessor(void)::m, CAtomicManipulator<V_uuid_t>::Get(void)::val, CEntityIdentity::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchem
+CSchemaClassInfo *__fastcall CEntityIdentity::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        const char *pProjectName)
+{
+  CSchemaClassInfo *result; // rax
+  ISchemaSystemTypeScope *v4; // rbx
+  __int64 (__fastcall *v5)(ISchemaSystemTypeScope *, __int64); // r12
+  __int64 v6; // rax
+  __int64 (__fastcall *v7)(ISchemaSystemTypeScope *, __int64); // r12
+  __int64 v8; // rax
+  __int64 (__fastcall *v9)(ISchemaSystemTypeScope *, __int64); // r12
+  __int64 v10; // rax
+  __int64 (__fastcall *v11)(ISchemaSystemTypeScope *, __int64); // r12
+  __int64 v12; // rax
+  __int64 (__fastcall *v13)(ISchemaSystemTypeScope *, __int64); // r12
+  __int64 v14; // rax
+  CSchemaType *v15; // rax
+
+  result = CEntityIdentity::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult;
+  if ( CEntityIdentity::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult == 0 )
+  {
+    v4 = (*(*pSchemaSystem + 112LL))(pSchemaSystem, 0, pBinaryName);
+    if ( `guard variable for'CEntityIdentity::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CEntityIdentity1_MNetworkVarNames_Value == 0
+      && __cxa_guard_acquire(&`guard variable for'CEntityIdentity::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CEntityIdentity1_MNetworkVarNames_Value) != 0 )
+    {
+      CEntityIdentity::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CEntityIdentity1_MNetworkVarNames_Value.m_pVarName = "m_nameStringableIndex";
+      CEntityIdentity::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CEntityIdentity1_MNetworkVarNames_Value.m_pVarType = "int32";
+      __cxa_guard_release(&`guard variable for'CEntityIdentity::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CEntityIdentity1_MNetworkVarNames_Value);
+    }
+    CEntityIdentity::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CEntityIdentity[0].m_pType = (*(*v4 + 40LL))(v4, 7);
+    CEntityIdentity::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CEntityIdentity[1].m_pType = (*(*v4 + 56LL))(v4, "CUtlSymbolLarge", 3007, CAtomicManipulator<CUtlSymbolLarge>::Get(void)::val, &CSchemaManipulator<CUtlSymbolLarge>::StaticAccessor(void)::m);
+    CEntityIdentity::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CEntityIdentity[2].m_pType = (*(*v4 + 56LL))(v4, "CUtlSymbolLarge", 3007, CAtomicManipulator<CUtlSymbolLarge>::Get(void)::val, &CSchemaManipulator<CUtlSymbolLarge>::StaticAccessor(void)::m);
+    CEntityIdentity::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CEntityIdentity[3].m_pType = (*(*v4 + 40LL))(v4, 8);
+    CEntityIdentity::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CEntityIdentity[4].m_pType = (*(*v4 + 40LL))(v4, 8);
+    CEntityIdentity::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CEntityIdentity[5].m_pType = (*(*v4 + 88LL))(v4, "ChangeAccessorFieldPathIndex_t");
+    v5 = *(*v4 + 48LL);
+    v6 = (*(*v4 + 88LL))(v4, "CEntityIdentity");
+    CEntityIdentity::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CEntityIdentity[6].m_pType = v5(v4, v6);
+    v7 = *(*v4 + 48LL);
+    v8 = (*(*v4 + 88LL))(v4, "CEntityIdentity");
+    CEntityIdentity::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CEntityIdentity[7].m_pType = v7(v4, v8);
+    v9 = *(*v4 + 48LL);
+    v10 = (*(*v4 + 88LL))(v4, "CEntityIdentity");
+    CEntityIdentity::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CEntityIdentity[8].m_pType = v9(v4, v10);
+    v11 = *(*v4 + 48LL);
+    v12 = (*(*v4 + 88LL))(v4, "CEntityIdentity");
+    CEntityIdentity::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CEntityIdentity[9].m_pType = v11(v4, v12);
+    v13 = *(*v4 + 48LL);
+    v14 = (*(*v4 + 56LL))(
+            v4,
+            "V_uuid_t",
+            2014,
+            CAtomicManipulator<V_uuid_t>::Get(void)::val,
+            &CSchemaManipulator<V_uuid_t>::StaticAccessor(void)::m);
+    v15 = v13(v4, v14);
+    CEntityIdentity::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CEntityIdentity.m_pOuterTypeScope = v4;
+    CEntityIdentity::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CEntityIdentity[10].m_pType = v15;
+    CEntityIdentity::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult = &CEntityIdentity::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CEntityIdentity;
+    (*(*v4 + 264LL))(
+      v4,
+      &CEntityIdentity::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CEntityIdentity);
+    return CEntityIdentity::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult;
+  }
+  return result;
+}
+
+
+// CEntityIdentity::Schema_VerifyBindingIsRegistered  (line 104, @0x00000000030da850, libserver.so)
+void __cdecl CEntityIdentity::Schema_VerifyBindingIsRegistered()
+{
+  ;
+}
+
+
+// LocalRegisterSchemaModule<ArbitraryTemplateParameter_entity2_entityidentity_h>  (line 112, @0x00000000030da860, libserver.so)  // inlines: Call
+// strings: "entity2"
+// globals: CEntityIdentity::s_pSchemaBindingForLocalModule
+void __fastcall LocalRegisterSchemaModule<ArbitraryTemplateParameter_entity2_entityidentity_h>(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        SchemaRegistrationPhase_t nRegistrationPhase)
+{
+  if ( nRegistrationPhase == SchemaRegistrationPhase_t::SCHEMA_REGISTRATION_PHASE_CLASSES )
+    (*(CEntityIdentity::s_pSchemaBindingForLocalModule->_vptr_ISchemaBinding + 5))(
+      CEntityIdentity::s_pSchemaBindingForLocalModule,
+      pSchemaSystem,
+      pBinaryName,
+      "entity2");
+  ++g_nLinkerHack_SchemaAnchor_RegistrationCountFor_entity2;
+}
+
+
+// RegisterSchemaModule_entityidentity_h  (line 114, @0x00000000030da8a0, libserver.so)  // inlines: Call, LocalRegisterSchemaModule<ArbitraryTemplateParameter_entity2_entityidentity_h>
+// callers: CSchemaRegistration_entity2::RegisterAllBindings
+// strings: "entity2"
+// globals: CEntityIdentity::s_pSchemaBindingForLocalModule
+void __fastcall RegisterSchemaModule_entityidentity_h(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        SchemaRegistrationPhase_t nRegistrationPhase)
+{
+  if ( nRegistrationPhase == SchemaRegistrationPhase_t::SCHEMA_REGISTRATION_PHASE_CLASSES )
+    (*(CEntityIdentity::s_pSchemaBindingForLocalModule->_vptr_ISchemaBinding + 5))(
+      CEntityIdentity::s_pSchemaBindingForLocalModule,
+      pSchemaSystem,
+      pBinaryName,
+      "entity2");
+  ++g_nLinkerHack_SchemaAnchor_RegistrationCountFor_entity2;
+}
+
+

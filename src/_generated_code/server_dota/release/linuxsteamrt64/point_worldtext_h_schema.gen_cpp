@@ -1,0 +1,613 @@
+
+// ==== functions (decompiled by Hex-Rays; names/signatures from DWARF) ====
+
+// CSchemaEnumBinding<PointWorldTextJustifyHorizontal_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE  (line 35, @0x000000000232c170, libserver.so)  // inlines: Count, Initialize, SetTypeScope
+// callers: CSchemaEnumBinding<PointWorldTextJustifyHorizontal_t>::Register
+// globals: CSchemaEnumBinding<PointWorldTextJustifyHorizontal_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem 
+CSchemaEnumInfo *__fastcall CSchemaEnumBinding<PointWorldTextJustifyHorizontal_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        const char *pProjectName)
+{
+  ISchemaSystemTypeScope *v3; // rax
+  unsigned int v4; // edi
+  SchemaEnumeratorValue_t v5; // r8
+  SchemaEnumeratorValue_t v6; // r9
+  SchemaEnumeratorValue_t *v7; // rdx
+
+  v3 = (*(*pSchemaSystem + 112LL))(pSchemaSystem, 0, pBinaryName);
+  if ( CSchemaEnumBinding<PointWorldTextJustifyHorizontal_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_PointWorldTextJustifyHorizontal_t.m_Enumerators.m_Data.m_nImplLength != 0 )
+  {
+    v4 = abs32(CSchemaEnumBinding<PointWorldTextJustifyHorizontal_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_PointWorldTextJustifyHorizontal_t.m_Enumerators.m_Data.m_nImplLength);
+    v5 = *(CSchemaEnumBinding<PointWorldTextJustifyHorizontal_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_PointWorldTextJustifyHorizontal_t.m_Enumerators.m_Data.m_pImplElements
+         + 2);
+    CSchemaEnumBinding<PointWorldTextJustifyHorizontal_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_PointWorldTextJustifyHorizontal_t.m_nMinValue = v5;
+    v6 = *(CSchemaEnumBinding<PointWorldTextJustifyHorizontal_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_PointWorldTextJustifyHorizontal_t.m_Enumerators.m_Data.m_pImplElements
+         + 2);
+    CSchemaEnumBinding<PointWorldTextJustifyHorizontal_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_PointWorldTextJustifyHorizontal_t.m_nMaxValue = v6;
+    if ( v4 != 1 )
+    {
+      v7 = (CSchemaEnumBinding<PointWorldTextJustifyHorizontal_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_PointWorldTextJustifyHorizontal_t.m_Enumerators.m_Data.m_pImplElements
+          + 72);
+      do
+      {
+        if ( v5 > *v7 )
+          v5 = *v7;
+        CSchemaEnumBinding<PointWorldTextJustifyHorizontal_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_PointWorldTextJustifyHorizontal_t.m_nMinValue = v5;
+        if ( v6 < *v7 )
+          v6 = *v7;
+        v7 += 7;
+        CSchemaEnumBinding<PointWorldTextJustifyHorizontal_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_PointWorldTextJustifyHorizontal_t.m_nMaxValue = v6;
+      }
+      while ( v7 != CSchemaEnumBinding<PointWorldTextJustifyHorizontal_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_PointWorldTextJustifyHorizontal_t.m_Enumerators.m_Data.m_pImplElements
+                  + 7 * v4
+                  + 2 );
+    }
+  }
+  else
+  {
+    CSchemaEnumBinding<PointWorldTextJustifyHorizontal_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_PointWorldTextJustifyHorizontal_t.m_nMinValue = 0;
+    CSchemaEnumBinding<PointWorldTextJustifyHorizontal_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_PointWorldTextJustifyHorizontal_t.m_nMaxValue = 0;
+  }
+  CSchemaEnumBinding<PointWorldTextJustifyHorizontal_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_PointWorldTextJustifyHorizontal_t.m_pOuterTypeScope = v3;
+  (*(*v3 + 272LL))(
+    v3,
+    &CSchemaEnumBinding<PointWorldTextJustifyHorizontal_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_PointWorldTextJustifyHorizontal_t);
+  return &CSchemaEnumBinding<PointWorldTextJustifyHorizontal_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_PointWorldTextJustifyHorizontal_t;
+}
+
+
+// CSchemaEnumBinding<PointWorldTextJustifyVertical_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE  (line 47, @0x000000000232c250, libserver.so)  // inlines: Count, Initialize, SetTypeScope
+// callers: CSchemaEnumBinding<PointWorldTextJustifyVertical_t>::Register
+// globals: CSchemaEnumBinding<PointWorldTextJustifyVertical_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,
+CSchemaEnumInfo *__fastcall CSchemaEnumBinding<PointWorldTextJustifyVertical_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        const char *pProjectName)
+{
+  ISchemaSystemTypeScope *v3; // rax
+  unsigned int v4; // edi
+  SchemaEnumeratorValue_t v5; // r8
+  SchemaEnumeratorValue_t v6; // r9
+  SchemaEnumeratorValue_t *v7; // rdx
+
+  v3 = (*(*pSchemaSystem + 112LL))(pSchemaSystem, 0, pBinaryName);
+  if ( CSchemaEnumBinding<PointWorldTextJustifyVertical_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_PointWorldTextJustifyVertical_t.m_Enumerators.m_Data.m_nImplLength != 0 )
+  {
+    v4 = abs32(CSchemaEnumBinding<PointWorldTextJustifyVertical_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_PointWorldTextJustifyVertical_t.m_Enumerators.m_Data.m_nImplLength);
+    v5 = *(CSchemaEnumBinding<PointWorldTextJustifyVertical_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_PointWorldTextJustifyVertical_t.m_Enumerators.m_Data.m_pImplElements
+         + 2);
+    CSchemaEnumBinding<PointWorldTextJustifyVertical_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_PointWorldTextJustifyVertical_t.m_nMinValue = v5;
+    v6 = *(CSchemaEnumBinding<PointWorldTextJustifyVertical_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_PointWorldTextJustifyVertical_t.m_Enumerators.m_Data.m_pImplElements
+         + 2);
+    CSchemaEnumBinding<PointWorldTextJustifyVertical_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_PointWorldTextJustifyVertical_t.m_nMaxValue = v6;
+    if ( v4 != 1 )
+    {
+      v7 = (CSchemaEnumBinding<PointWorldTextJustifyVertical_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_PointWorldTextJustifyVertical_t.m_Enumerators.m_Data.m_pImplElements
+          + 72);
+      do
+      {
+        if ( v5 > *v7 )
+          v5 = *v7;
+        CSchemaEnumBinding<PointWorldTextJustifyVertical_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_PointWorldTextJustifyVertical_t.m_nMinValue = v5;
+        if ( v6 < *v7 )
+          v6 = *v7;
+        v7 += 7;
+        CSchemaEnumBinding<PointWorldTextJustifyVertical_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_PointWorldTextJustifyVertical_t.m_nMaxValue = v6;
+      }
+      while ( v7 != CSchemaEnumBinding<PointWorldTextJustifyVertical_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_PointWorldTextJustifyVertical_t.m_Enumerators.m_Data.m_pImplElements
+                  + 7 * v4
+                  + 2 );
+    }
+  }
+  else
+  {
+    CSchemaEnumBinding<PointWorldTextJustifyVertical_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_PointWorldTextJustifyVertical_t.m_nMinValue = 0;
+    CSchemaEnumBinding<PointWorldTextJustifyVertical_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_PointWorldTextJustifyVertical_t.m_nMaxValue = 0;
+  }
+  CSchemaEnumBinding<PointWorldTextJustifyVertical_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_PointWorldTextJustifyVertical_t.m_pOuterTypeScope = v3;
+  (*(*v3 + 272LL))(
+    v3,
+    &CSchemaEnumBinding<PointWorldTextJustifyVertical_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_PointWorldTextJustifyVertical_t);
+  return &CSchemaEnumBinding<PointWorldTextJustifyVertical_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_PointWorldTextJustifyVertical_t;
+}
+
+
+// CSchemaEnumBinding<PointWorldTextReorientMode_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE  (line 59, @0x000000000232c330, libserver.so)  // inlines: Count, Initialize, SetTypeScope
+// callers: CSchemaEnumBinding<PointWorldTextReorientMode_t>::Register
+// globals: CSchemaEnumBinding<PointWorldTextReorientMode_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,cha
+CSchemaEnumInfo *__fastcall CSchemaEnumBinding<PointWorldTextReorientMode_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        const char *pProjectName)
+{
+  ISchemaSystemTypeScope *v3; // rax
+  unsigned int v4; // edi
+  SchemaEnumeratorValue_t v5; // r8
+  SchemaEnumeratorValue_t v6; // r9
+  SchemaEnumeratorValue_t *v7; // rdx
+
+  v3 = (*(*pSchemaSystem + 112LL))(pSchemaSystem, 0, pBinaryName);
+  if ( CSchemaEnumBinding<PointWorldTextReorientMode_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_PointWorldTextReorientMode_t.m_Enumerators.m_Data.m_nImplLength != 0 )
+  {
+    v4 = abs32(CSchemaEnumBinding<PointWorldTextReorientMode_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_PointWorldTextReorientMode_t.m_Enumerators.m_Data.m_nImplLength);
+    v5 = *(CSchemaEnumBinding<PointWorldTextReorientMode_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_PointWorldTextReorientMode_t.m_Enumerators.m_Data.m_pImplElements
+         + 2);
+    CSchemaEnumBinding<PointWorldTextReorientMode_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_PointWorldTextReorientMode_t.m_nMinValue = v5;
+    v6 = *(CSchemaEnumBinding<PointWorldTextReorientMode_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_PointWorldTextReorientMode_t.m_Enumerators.m_Data.m_pImplElements
+         + 2);
+    CSchemaEnumBinding<PointWorldTextReorientMode_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_PointWorldTextReorientMode_t.m_nMaxValue = v6;
+    if ( v4 != 1 )
+    {
+      v7 = (CSchemaEnumBinding<PointWorldTextReorientMode_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_PointWorldTextReorientMode_t.m_Enumerators.m_Data.m_pImplElements
+          + 72);
+      do
+      {
+        if ( v5 > *v7 )
+          v5 = *v7;
+        CSchemaEnumBinding<PointWorldTextReorientMode_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_PointWorldTextReorientMode_t.m_nMinValue = v5;
+        if ( v6 < *v7 )
+          v6 = *v7;
+        v7 += 7;
+        CSchemaEnumBinding<PointWorldTextReorientMode_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_PointWorldTextReorientMode_t.m_nMaxValue = v6;
+      }
+      while ( v7 != CSchemaEnumBinding<PointWorldTextReorientMode_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_PointWorldTextReorientMode_t.m_Enumerators.m_Data.m_pImplElements
+                  + 7 * v4
+                  + 2 );
+    }
+  }
+  else
+  {
+    CSchemaEnumBinding<PointWorldTextReorientMode_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_PointWorldTextReorientMode_t.m_nMinValue = 0;
+    CSchemaEnumBinding<PointWorldTextReorientMode_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_PointWorldTextReorientMode_t.m_nMaxValue = 0;
+  }
+  CSchemaEnumBinding<PointWorldTextReorientMode_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_PointWorldTextReorientMode_t.m_pOuterTypeScope = v3;
+  (*(*v3 + 272LL))(
+    v3,
+    &CSchemaEnumBinding<PointWorldTextReorientMode_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_PointWorldTextReorientMode_t);
+  return &CSchemaEnumBinding<PointWorldTextReorientMode_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_PointWorldTextReorientMode_t;
+}
+
+
+// CPointWorldText::CEntityInstanceEntityClass::Schema_CompileTimeVerificationFunction  (line 70, @0x000000000232c410, libserver.so)
+void __fastcall CPointWorldText::CEntityInstanceEntityClass::Schema_CompileTimeVerificationFunction(
+        CPointWorldText::CEntityInstanceEntityClass *const this)
+{
+  ;
+}
+
+
+// CPointWorldText::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE  (line 73, @0x000000000231f8a0, libserver.so)  // inlines: Call, Get, SetTypeScope
+// calls: CModelPointEntity::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE
+// callers: CSchemaNonConstructibleClassBinding<CPointWorldText::CEntityInstanceEntityClass>::Register, CPointWorldText::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE, CPointWorldText::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE
+// globals: CPointWorldText::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char co
+CSchemaClassInfo *__fastcall CPointWorldText::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        const char *pProjectName)
+{
+  ISchemaSystemTypeScope *v6; // r14
+  CSchemaClassInfo *v7; // rax
+
+  v6 = (*(*pSchemaSystem + 112LL))(pSchemaSystem, 1, pBinaryName);
+  (*(CModelPointEntity::CEntityInstanceEntityClass::s_pSchemaBindingForLocalModule->_vptr_ISchemaBinding + 5))(
+    CModelPointEntity::CEntityInstanceEntityClass::s_pSchemaBindingForLocalModule,
+    pSchemaSystem,
+    pBinaryName,
+    pProjectName);
+  v7 = CModelPointEntity::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+         pSchemaSystem,
+         pBinaryName,
+         pProjectName);
+  CPointWorldText::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CPointWorldText_CEntityInstanceEntityClass.m_pOuterTypeScope = v6;
+  CPointWorldText::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassBases_CPointWorldText_CEntityInstanceEntityClass[0].m_pClass = v7;
+  CPointWorldText::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult = &CPointWorldText::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CPointWorldText_CEntityInstanceEntityClass;
+  return &CPointWorldText::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CPointWorldText_CEntityInstanceEntityClass;
+}
+
+
+// CPointWorldText::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE  (line 73, @0x000000000232c420, libserver.so)
+// calls: CPointWorldText::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE
+// globals: CPointWorldText::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char co
+CSchemaClassInfo *__fastcall CPointWorldText::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        const char *pProjectName)
+{
+  CSchemaClassInfo *result; // rax
+
+  result = CPointWorldText::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult;
+  if ( CPointWorldText::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult == 0 )
+    return CPointWorldText::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+             pSchemaSystem,
+             pBinaryName,
+             pProjectName);
+  return result;
+}
+
+
+// CPointWorldText::CEntityInstanceEntityClass::Schema_VerifyBindingIsRegistered  (line 90, @0x000000000232c440, libserver.so)
+void __cdecl CPointWorldText::CEntityInstanceEntityClass::Schema_VerifyBindingIsRegistered()
+{
+  ;
+}
+
+
+// CPointWorldText::Schema_CompileTimeVerificationFunction  (line 98, @0x000000000232c450, libserver.so)
+void __fastcall CPointWorldText::Schema_CompileTimeVerificationFunction(CPointWorldText *const this)
+{
+  ;
+}
+
+
+// CPointWorldText::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE  (line 112, @0x000000000232c460, libserver.so)  // inlines: Call, Get, NetworkVarDecl_t, RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE, SchemaBinding_SchemaTypeOfMemberVarByAddr<CPointWorldText, CNetworkStringBase<512, CPointWorldText::NetworkVar_m_messageText> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<CPointWorldText, CNetworkStringBase<64, CPointWorldText::NetworkVar_m_FontName> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<CPointWorldText, CNetworkVarBase<Color, CPointWorldText::NetworkVar_m_Color> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<CPointWorldText, CNetworkVarBase<PointWorldTextJustifyHorizontal_t, CPointWorldText::NetworkVar_m_nJustifyHorizontal> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<CPointWorldText, CNetworkVarBase<PointWorldTextJustifyVertical_t, CPointWorldText::NetworkVar_m_nJustifyVertical> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<CPointWorldText, CNetworkVarBase<PointWorldTextReorientMode_t, CPointWorldText::NetworkVar_m_nReorientMode> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<CPointWorldText, CNetworkVarBase<bool, CPointWorldText::NetworkVar_m_bEnabled> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<CPointWorldText, CNetworkVarBase<bool, CPointWorldText::NetworkVar_m_bFullbright> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<CPointWorldText, CNetworkVarBase<float, CPointWorldText::NetworkVar_m_flDepthOffset> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<CPointWorldText, CNetworkVarBase<float, CPointWorldText::NetworkVar_m_flFontSize> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<CPointWorldText, CNetworkVarBase<float, CPointWorldText::NetworkVar_m_flWorldUnitsPerPx> >, SetTypeScope
+// calls: __cxa_guard_acquire, __cxa_guard_release, CModelPointEntity::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE, CPointWorldText::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE, __cxa_guard_abort, _Unwind_Resume
+// callers: CSchemaNonConstructibleClassBinding<CPointWorldText>::Register
+// strings: "PointWorldTextJustifyHorizontal_t", "PointWorldTextJustifyVertical_t", "PointWorldTextReorientMode_t", "m_nReorientMode", "m_nJustifyVertical", "m_nJustifyHorizontal" (15 total)
+// globals: CPointWorldText::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitia, `guard variable for'CPointWorldText::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,cha, CSchemaManipulator<Color>::StaticAccessor(void)::m, CAtomicManipulator<Color>::Get(void)::val, CPointWorldText::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char co, CPointWorldText::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchem
+CSchemaClassInfo *__fastcall CPointWorldText::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        const char *pProjectName)
+{
+  CSchemaClassInfo *result; // rax
+  ISchemaSystemTypeScope *v7; // rbx
+  __int64 (__fastcall *v8)(ISchemaSystemTypeScope *, __int64, __int64); // r15
+  __int64 v9; // rax
+  __int64 (__fastcall *v10)(ISchemaSystemTypeScope *, __int64, __int64); // r15
+  __int64 v11; // rax
+  CSchemaClassInfo *v12; // rax
+  CSchemaClassInfo *v13; // rax
+
+  result = CPointWorldText::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult;
+  if ( CPointWorldText::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult == 0 )
+  {
+    v7 = (*(*pSchemaSystem + 112LL))(pSchemaSystem, 1, pBinaryName);
+    if ( `guard variable for'CPointWorldText::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CPointWorldText3_MNetworkVarNames_Value == 0
+      && __cxa_guard_acquire(&`guard variable for'CPointWorldText::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CPointWorldText3_MNetworkVarNames_Value) != 0 )
+    {
+      CPointWorldText::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CPointWorldText3_MNetworkVarNames_Value.m_pVarName = "m_messageText";
+      CPointWorldText::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CPointWorldText3_MNetworkVarNames_Value.m_pVarType = "char";
+      __cxa_guard_release(&`guard variable for'CPointWorldText::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CPointWorldText3_MNetworkVarNames_Value);
+    }
+    if ( `guard variable for'CPointWorldText::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CPointWorldText4_MNetworkVarNames_Value == 0
+      && __cxa_guard_acquire(&`guard variable for'CPointWorldText::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CPointWorldText4_MNetworkVarNames_Value) != 0 )
+    {
+      CPointWorldText::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CPointWorldText4_MNetworkVarNames_Value.m_pVarName = "m_FontName";
+      CPointWorldText::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CPointWorldText4_MNetworkVarNames_Value.m_pVarType = "char";
+      __cxa_guard_release(&`guard variable for'CPointWorldText::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CPointWorldText4_MNetworkVarNames_Value);
+    }
+    if ( `guard variable for'CPointWorldText::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CPointWorldText5_MNetworkVarNames_Value == 0
+      && __cxa_guard_acquire(&`guard variable for'CPointWorldText::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CPointWorldText5_MNetworkVarNames_Value) != 0 )
+    {
+      CPointWorldText::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CPointWorldText5_MNetworkVarNames_Value.m_pVarName = "m_bEnabled";
+      CPointWorldText::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CPointWorldText5_MNetworkVarNames_Value.m_pVarType = "bool";
+      __cxa_guard_release(&`guard variable for'CPointWorldText::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CPointWorldText5_MNetworkVarNames_Value);
+    }
+    if ( `guard variable for'CPointWorldText::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CPointWorldText6_MNetworkVarNames_Value == 0
+      && __cxa_guard_acquire(&`guard variable for'CPointWorldText::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CPointWorldText6_MNetworkVarNames_Value) != 0 )
+    {
+      CPointWorldText::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CPointWorldText6_MNetworkVarNames_Value.m_pVarName = "m_bFullbright";
+      CPointWorldText::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CPointWorldText6_MNetworkVarNames_Value.m_pVarType = "bool";
+      __cxa_guard_release(&`guard variable for'CPointWorldText::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CPointWorldText6_MNetworkVarNames_Value);
+    }
+    if ( `guard variable for'CPointWorldText::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CPointWorldText7_MNetworkVarNames_Value == 0
+      && __cxa_guard_acquire(&`guard variable for'CPointWorldText::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CPointWorldText7_MNetworkVarNames_Value) != 0 )
+    {
+      CPointWorldText::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CPointWorldText7_MNetworkVarNames_Value.m_pVarName = "m_flWorldUnitsPerPx";
+      CPointWorldText::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CPointWorldText7_MNetworkVarNames_Value.m_pVarType = "float";
+      __cxa_guard_release(&`guard variable for'CPointWorldText::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CPointWorldText7_MNetworkVarNames_Value);
+    }
+    if ( `guard variable for'CPointWorldText::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CPointWorldText8_MNetworkVarNames_Value == 0
+      && __cxa_guard_acquire(&`guard variable for'CPointWorldText::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CPointWorldText8_MNetworkVarNames_Value) != 0 )
+    {
+      CPointWorldText::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CPointWorldText8_MNetworkVarNames_Value.m_pVarName = "m_flFontSize";
+      CPointWorldText::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CPointWorldText8_MNetworkVarNames_Value.m_pVarType = "float";
+      __cxa_guard_release(&`guard variable for'CPointWorldText::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CPointWorldText8_MNetworkVarNames_Value);
+    }
+    if ( `guard variable for'CPointWorldText::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CPointWorldText9_MNetworkVarNames_Value == 0
+      && __cxa_guard_acquire(&`guard variable for'CPointWorldText::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CPointWorldText9_MNetworkVarNames_Value) != 0 )
+    {
+      CPointWorldText::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CPointWorldText9_MNetworkVarNames_Value.m_pVarName = "m_flDepthOffset";
+      CPointWorldText::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CPointWorldText9_MNetworkVarNames_Value.m_pVarType = "float";
+      __cxa_guard_release(&`guard variable for'CPointWorldText::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CPointWorldText9_MNetworkVarNames_Value);
+    }
+    if ( `guard variable for'CPointWorldText::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CPointWorldText10_MNetworkVarNames_Value == 0
+      && __cxa_guard_acquire(&`guard variable for'CPointWorldText::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CPointWorldText10_MNetworkVarNames_Value) != 0 )
+    {
+      CPointWorldText::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CPointWorldText10_MNetworkVarNames_Value.m_pVarName = "m_Color";
+      CPointWorldText::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CPointWorldText10_MNetworkVarNames_Value.m_pVarType = "Color";
+      __cxa_guard_release(&`guard variable for'CPointWorldText::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CPointWorldText10_MNetworkVarNames_Value);
+    }
+    if ( `guard variable for'CPointWorldText::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CPointWorldText11_MNetworkVarNames_Value == 0
+      && __cxa_guard_acquire(&`guard variable for'CPointWorldText::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CPointWorldText11_MNetworkVarNames_Value) != 0 )
+    {
+      CPointWorldText::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CPointWorldText11_MNetworkVarNames_Value.m_pVarName = "m_nJustifyHorizontal";
+      CPointWorldText::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CPointWorldText11_MNetworkVarNames_Value.m_pVarType = "PointWorldTextJustifyHorizontal_t";
+      __cxa_guard_release(&`guard variable for'CPointWorldText::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CPointWorldText11_MNetworkVarNames_Value);
+    }
+    if ( `guard variable for'CPointWorldText::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CPointWorldText12_MNetworkVarNames_Value == 0
+      && __cxa_guard_acquire(&`guard variable for'CPointWorldText::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CPointWorldText12_MNetworkVarNames_Value) != 0 )
+    {
+      CPointWorldText::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CPointWorldText12_MNetworkVarNames_Value.m_pVarName = "m_nJustifyVertical";
+      CPointWorldText::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CPointWorldText12_MNetworkVarNames_Value.m_pVarType = "PointWorldTextJustifyVertical_t";
+      __cxa_guard_release(&`guard variable for'CPointWorldText::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CPointWorldText12_MNetworkVarNames_Value);
+    }
+    if ( `guard variable for'CPointWorldText::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CPointWorldText13_MNetworkVarNames_Value == 0
+      && __cxa_guard_acquire(&`guard variable for'CPointWorldText::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CPointWorldText13_MNetworkVarNames_Value) != 0 )
+    {
+      CPointWorldText::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CPointWorldText13_MNetworkVarNames_Value.m_pVarName = "m_nReorientMode";
+      CPointWorldText::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CPointWorldText13_MNetworkVarNames_Value.m_pVarType = "PointWorldTextReorientMode_t";
+      __cxa_guard_release(&`guard variable for'CPointWorldText::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CPointWorldText13_MNetworkVarNames_Value);
+    }
+    v8 = *(*v7 + 104LL);
+    v9 = (*(*v7 + 40LL))(v7, 2);
+    CPointWorldText::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CPointWorldText[0].m_pType = v8(v7, v9, 512);
+    v10 = *(*v7 + 104LL);
+    v11 = (*(*v7 + 40LL))(v7, 2);
+    CPointWorldText::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CPointWorldText[1].m_pType = v10(v7, v11, 64);
+    CPointWorldText::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CPointWorldText[2].m_pType = (*(*v7 + 40LL))(v7, 13);
+    CPointWorldText::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CPointWorldText[3].m_pType = (*(*v7 + 40LL))(v7, 13);
+    CPointWorldText::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CPointWorldText[4].m_pType = (*(*v7 + 40LL))(v7, 11);
+    CPointWorldText::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CPointWorldText[5].m_pType = (*(*v7 + 40LL))(v7, 11);
+    CPointWorldText::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CPointWorldText[6].m_pType = (*(*v7 + 40LL))(v7, 11);
+    CPointWorldText::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CPointWorldText[7].m_pType = (*(*v7 + 56LL))(v7, "Color", 2000, CAtomicManipulator<Color>::Get(void)::val, CSchemaManipulator<Color>::StaticAccessor(void)::m);
+    CPointWorldText::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CPointWorldText[8].m_pType = (*(*v7 + 96LL))(v7, "PointWorldTextJustifyHorizontal_t");
+    CPointWorldText::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CPointWorldText[9].m_pType = (*(*v7 + 96LL))(v7, "PointWorldTextJustifyVertical_t");
+    CPointWorldText::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CPointWorldText[10].m_pType = (*(*v7 + 96LL))(v7, "PointWorldTextReorientMode_t");
+    if ( `guard variable for'CPointWorldText::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_NestedClassesOf_CPointWorldText == 0
+      && __cxa_guard_acquire(&`guard variable for'CPointWorldText::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_NestedClassesOf_CPointWorldText) != 0 )
+    {
+      v12 = CPointWorldText::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult;
+      if ( CPointWorldText::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult == 0 )
+        v12 = CPointWorldText::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+                pSchemaSystem,
+                pBinaryName,
+                pProjectName);
+      CPointWorldText::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_NestedClassesOf_CPointWorldText[0] = v12;
+      __cxa_guard_release(&`guard variable for'CPointWorldText::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_NestedClassesOf_CPointWorldText);
+    }
+    (*(CModelPointEntity::s_pSchemaBindingForLocalModule->_vptr_ISchemaBinding + 5))(
+      CModelPointEntity::s_pSchemaBindingForLocalModule,
+      pSchemaSystem,
+      pBinaryName,
+      pProjectName);
+    v13 = CModelPointEntity::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+            pSchemaSystem,
+            pBinaryName,
+            pProjectName);
+    CPointWorldText::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CPointWorldText.m_pOuterTypeScope = v7;
+    CPointWorldText::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassBases_CPointWorldText[0].m_pClass = v13;
+    CPointWorldText::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult = &CPointWorldText::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CPointWorldText;
+    return &CPointWorldText::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CPointWorldText;
+  }
+  return result;
+}
+
+
+// CPointWorldText::Schema_VerifyBindingIsRegistered  (line 321, @0x000000000232ca20, libserver.so)
+void __cdecl CPointWorldText::Schema_VerifyBindingIsRegistered()
+{
+  ;
+}
+
+
+// CPointWorldText::SetupEntClassInputs  (line 335, @0x000000000232ca30, libserver.so)
+void __fastcall CPointWorldText::SetupEntClassInputs(CEntityClass *pComponentInfo)
+{
+  ;
+}
+
+
+// CPointWorldText::SetupEntClassComponentOverrides  (line 341, @0x000000000232ca40, libserver.so)
+void __fastcall CPointWorldText::SetupEntClassComponentOverrides(CEntityClass *pEntityClass)
+{
+  pEntityClass->m_pComponentOverrides = 0;
+}
+
+
+// GetScriptDesc<CPointWorldText>  (line 348, @0x0000000002334ee0, libserver.so)  // inlines: AddParameterType, AddToTail, CUtlMemory, CUtlVector, CUtlVectorBase, Construct<ScriptFunctionBinding_t>, Element, Finalize, GrowMemory, ScriptClassDesc_t, ScriptDeduceFunctionSignature<CPointWorldText*, CPointWorldText, void, char const*>, ScriptFuncDescriptor_t, ScriptFunctionBinding_t, SetDescription, SetFunctionName, SetPackedParameterNames, SetReturnType, SetScriptName, operator[]
+// calls: operator new, GetScriptDesc<CBaseModelEntity>, CUtlMemory<ScriptFunctionBinding_t, int>::Grow
+// callers: CPointWorldText::GetScriptDesc, CPointWorldText::InitScriptDesc, CPointWorldText::GetClassScriptDesc, CPointWorldText::GetEntityClassInternal
+// strings: "World-space text", "CPointWorldText", "Set the message on this entity."
+// globals: g_pCPointWorldText_ScriptDesc, CMemberScriptBinding1<CPointWorldText *,void (CPointWorldText::*)(char const*),void,char const*>::Call(void *,void *,CVariantBase<CVariantDefaultAllocator> *,in, CPointWorldText::SetMessage(char const*), s_CPointWorldText_SetMessage_packed_arg_names
+ScriptClassDesc_t *__fastcall GetScriptDesc<CPointWorldText>(CPointWorldText *pScriptDescObjectInstance)
+{
+  ScriptClassDesc_t *result; // rax
+  ScriptClassDesc_t *v2; // rbx
+  ScriptClassDesc_t *Script; // rax
+  IScriptInstanceHelper *pHelper; // rcx
+  __int64 m_Size; // r12
+  int v6; // eax
+  __int64 v7; // rax
+  __int64 v8; // rsi
+  char v9; // dl
+  __int64 v10; // rax
+  int v11; // edx
+  char v12; // cl
+  char v13; // di
+
+  result = g_pCPointWorldText_ScriptDesc;
+  if ( g_pCPointWorldText_ScriptDesc == 0 )
+  {
+    v2 = operator new(0x50u);
+    v2->m_pBaseDesc = 0;
+    v2->m_FunctionBindings.m_Size = 0;
+    v2->m_FunctionBindings.m_Memory.m_pMemory = 0;
+    v2->m_FunctionBindings.m_Memory.m_nAllocationCount = 0;
+    v2->m_FunctionBindings.m_Memory.m_nGrowSize = 0;
+    v2->m_pfnConstruct = 0;
+    v2->m_pfnDestruct = 0;
+    v2->pHelper = 0;
+    g_pCPointWorldText_ScriptDesc = v2;
+    v2->m_pszDescription = "World-space text";
+    v2->m_pszScriptName = "CPointWorldText";
+    v2->m_pszClassname = "CPointWorldText";
+    Script = GetScriptDesc<CBaseModelEntity>(0);
+    v2->m_pBaseDesc = Script;
+    if ( Script != 0 )
+    {
+      while ( 1 )
+      {
+        pHelper = Script->pHelper;
+        if ( pHelper != 0 )
+          break;
+        Script = Script->m_pBaseDesc;
+        if ( Script == 0 )
+          goto LABEL_7;
+      }
+      v2->pHelper = pHelper;
+    }
+LABEL_7:
+    m_Size = v2->m_FunctionBindings.m_Size;
+    v6 = v2->m_FunctionBindings.m_Size;
+    if ( m_Size == v2->m_FunctionBindings.m_Memory.m_nAllocationCount )
+    {
+      CUtlMemory<ScriptFunctionBinding_t,int>::Grow(&v2->m_FunctionBindings.m_Memory, 1);
+      v6 = v2->m_FunctionBindings.m_Size;
+    }
+    v2->m_FunctionBindings.m_Size = v6 + 1;
+    v7 = &v2->m_FunctionBindings.m_Memory.m_pMemory[m_Size];
+    if ( v7 != 0 )
+    {
+      *v7 = 0;
+      *(v7 + 8) = 0;
+      *(v7 + 16) = 0;
+      *(v7 + 24) = 29;
+      *(v7 + 25) = -1;
+      *(v7 + 26) = 0;
+      *(v7 + 40) = 0;
+      v8 = &v2->m_FunctionBindings.m_Memory.m_pMemory[m_Size];
+    }
+    else
+    {
+      v8 = 0;
+    }
+    v9 = *(v8 + 26);
+    *(v8 + 24) = 0;
+    *(v8 + 16) = "Set the message on this entity.";
+    *v8 = "SetMessage";
+    *(v8 + 8) = "SetMessage";
+    v10 = v9++;
+    *(v8 + v10 + 27) = 30;
+    *(v8 + 26) = v9;
+    v11 = v9 - 1;
+    *(v8 + 25) = 0;
+    if ( v11 >= 0 && *(v8 + v11 + 27) == 32 )
+    {
+      v12 = 1;
+      do
+      {
+        --v11;
+        v13 = v12;
+        if ( v11 == -1 )
+        {
+          *(v8 + 25) = v12;
+          goto LABEL_17;
+        }
+        ++v12;
+      }
+      while ( *(v8 + v11 + 27) == 32 );
+      *(v8 + 25) = v13;
+    }
+LABEL_17:
+    *(v8 + 64) = 1;
+    *(v8 + 48) = CMemberScriptBinding1<CPointWorldText *,void (CPointWorldText::*)(char const*),void,char const*>::Call;
+    *(v8 + 56) = CPointWorldText::SetMessage;
+    *(v8 + 40) = s_CPointWorldText_SetMessage_packed_arg_names;
+    return v2;
+  }
+  return result;
+}
+
+
+// CPointWorldText::GetScriptDesc  (line 348, @0x00000000023350c0, libserver.so)
+// calls: GetScriptDesc<CPointWorldText>
+ScriptClassDesc_t *__fastcall CPointWorldText::GetScriptDesc(CPointWorldText *const this)
+{
+  return GetScriptDesc<CPointWorldText>(this);
+}
+
+
+// CPointWorldText::InitScriptDesc  (line 348, @0x00000000023350d0, libserver.so)
+// calls: GetScriptDesc<CPointWorldText>
+ScriptClassDesc_t *__cdecl CPointWorldText::InitScriptDesc()
+{
+  return GetScriptDesc<CPointWorldText>(0);
+}
+
+
+// CPointWorldText::GetClassScriptDesc  (line 348, @0x00000000023350e0, libserver.so)
+// calls: GetScriptDesc<CPointWorldText>
+ScriptClassDesc_t *__cdecl CPointWorldText::GetClassScriptDesc()
+{
+  return GetScriptDesc<CPointWorldText>(0);
+}
+
+
+// LocalRegisterSchemaModule<ArbitraryTemplateParameter_server_point_worldtext_h>  (line 356, @0x000000000232ca50, libserver.so)  // inlines: Call, Get
+// callers: RegisterSchemaModule_point_worldtext_h
+// strings: "PointWorldTextJustifyHorizontal_t", "PointWorldTextJustifyVertical_t", "PointWorldTextReorientMode_t"
+// globals: CSchemaEnumBinding<PointWorldTextJustifyHorizontal_t>::s_pThisModuleBindingPointer, CSchemaEnumBinding<PointWorldTextJustifyVertical_t>::s_pThisModuleBindingPointer, CSchemaEnumBinding<PointWorldTextReorientMode_t>::s_pThisModuleBindingPointer, CPointWorldText::CEntityInstanceEntityClass::s_pSchemaBindingForLocalModule, CPointWorldText::s_pSchemaBindingForLocalModule
+void __fastcall LocalRegisterSchemaModule<ArbitraryTemplateParameter_server_point_worldtext_h>(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        SchemaRegistrationPhase_t nRegistrationPhase)
+{
+  if ( nRegistrationPhase != SchemaRegistrationPhase_t::SCHEMA_REGISTRATION_PHASE_ATOMIC_TYPES_AND_ENUMS )
+  {
+    if ( nRegistrationPhase == SchemaRegistrationPhase_t::SCHEMA_REGISTRATION_PHASE_CLASSES )
+    {
+      (*(CPointWorldText::CEntityInstanceEntityClass::s_pSchemaBindingForLocalModule->_vptr_ISchemaBinding + 5))(
+        CPointWorldText::CEntityInstanceEntityClass::s_pSchemaBindingForLocalModule,
+        pSchemaSystem,
+        pBinaryName,
+        "server");
+      (*(CPointWorldText::s_pSchemaBindingForLocalModule->_vptr_ISchemaBinding + 5))(
+        CPointWorldText::s_pSchemaBindingForLocalModule,
+        pSchemaSystem,
+        pBinaryName,
+        "server");
+    }
+    ++g_nLinkerHack_SchemaAnchor_RegistrationCountFor_server;
+  }
+  else
+  {
+    (*(CSchemaEnumBinding<PointWorldTextJustifyHorizontal_t>::s_pThisModuleBindingPointer->_vptr_ISchemaBinding + 5))(
+      CSchemaEnumBinding<PointWorldTextJustifyHorizontal_t>::s_pThisModuleBindingPointer,
+      pSchemaSystem,
+      pBinaryName,
+      "server",
+      "PointWorldTextJustifyHorizontal_t");
+    (*(CSchemaEnumBinding<PointWorldTextJustifyVertical_t>::s_pThisModuleBindingPointer->_vptr_ISchemaBinding + 5))(
+      CSchemaEnumBinding<PointWorldTextJustifyVertical_t>::s_pThisModuleBindingPointer,
+      pSchemaSystem,
+      pBinaryName,
+      "server",
+      "PointWorldTextJustifyVertical_t");
+    (*(CSchemaEnumBinding<PointWorldTextReorientMode_t>::s_pThisModuleBindingPointer->_vptr_ISchemaBinding + 5))(
+      CSchemaEnumBinding<PointWorldTextReorientMode_t>::s_pThisModuleBindingPointer,
+      pSchemaSystem,
+      pBinaryName,
+      "server",
+      "PointWorldTextReorientMode_t");
+    ++g_nLinkerHack_SchemaAnchor_RegistrationCountFor_server;
+  }
+}
+
+
+// RegisterSchemaModule_point_worldtext_h  (line 362, @0x000000000232cb40, libserver.so)
+// calls: LocalRegisterSchemaModule<ArbitraryTemplateParameter_server_point_worldtext_h>
+// callers: CSchemaRegistration_server::RegisterAllBindings
+void __fastcall RegisterSchemaModule_point_worldtext_h(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        SchemaRegistrationPhase_t nRegistrationPhase)
+{
+  LocalRegisterSchemaModule<ArbitraryTemplateParameter_server_point_worldtext_h>(
+    pSchemaSystem,
+    pBinaryName,
+    nRegistrationPhase);
+}
+
+

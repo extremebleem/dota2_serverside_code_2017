@@ -1,0 +1,1221 @@
+
+// ==== functions (decompiled by Hex-Rays; names/signatures from DWARF) ====
+
+// CSchemaEnumBinding<CreatureAbilityType>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE  (line 35, @0x000000000290c2d0, libserver.so)  // inlines: Count, Initialize, SetTypeScope
+// callers: CSchemaEnumBinding<CreatureAbilityType>::Register
+// globals: CSchemaEnumBinding<CreatureAbilityType>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,
+CSchemaEnumInfo *__fastcall CSchemaEnumBinding<CreatureAbilityType>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        const char *pProjectName)
+{
+  ISchemaSystemTypeScope *v3; // rax
+  unsigned int v4; // edi
+  SchemaEnumeratorValue_t v5; // r8
+  SchemaEnumeratorValue_t v6; // r9
+  SchemaEnumeratorValue_t *v7; // rdx
+
+  v3 = (*(*pSchemaSystem + 112LL))(pSchemaSystem, 0, pBinaryName);
+  if ( CSchemaEnumBinding<CreatureAbilityType>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_CreatureAbilityType.m_Enumerators.m_Data.m_nImplLength != 0 )
+  {
+    v4 = abs32(CSchemaEnumBinding<CreatureAbilityType>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_CreatureAbilityType.m_Enumerators.m_Data.m_nImplLength);
+    v5 = *(CSchemaEnumBinding<CreatureAbilityType>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_CreatureAbilityType.m_Enumerators.m_Data.m_pImplElements
+         + 2);
+    CSchemaEnumBinding<CreatureAbilityType>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_CreatureAbilityType.m_nMinValue = v5;
+    v6 = *(CSchemaEnumBinding<CreatureAbilityType>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_CreatureAbilityType.m_Enumerators.m_Data.m_pImplElements
+         + 2);
+    CSchemaEnumBinding<CreatureAbilityType>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_CreatureAbilityType.m_nMaxValue = v6;
+    if ( v4 != 1 )
+    {
+      v7 = (CSchemaEnumBinding<CreatureAbilityType>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_CreatureAbilityType.m_Enumerators.m_Data.m_pImplElements
+          + 72);
+      do
+      {
+        if ( v5 > *v7 )
+          v5 = *v7;
+        CSchemaEnumBinding<CreatureAbilityType>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_CreatureAbilityType.m_nMinValue = v5;
+        if ( v6 < *v7 )
+          v6 = *v7;
+        v7 += 7;
+        CSchemaEnumBinding<CreatureAbilityType>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_CreatureAbilityType.m_nMaxValue = v6;
+      }
+      while ( v7 != CSchemaEnumBinding<CreatureAbilityType>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_CreatureAbilityType.m_Enumerators.m_Data.m_pImplElements
+                  + 7 * v4
+                  + 2 );
+    }
+  }
+  else
+  {
+    CSchemaEnumBinding<CreatureAbilityType>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_CreatureAbilityType.m_nMinValue = 0;
+    CSchemaEnumBinding<CreatureAbilityType>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_CreatureAbilityType.m_nMaxValue = 0;
+  }
+  CSchemaEnumBinding<CreatureAbilityType>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_CreatureAbilityType.m_pOuterTypeScope = v3;
+  (*(*v3 + 272LL))(
+    v3,
+    &CSchemaEnumBinding<CreatureAbilityType>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_CreatureAbilityType);
+  return &CSchemaEnumBinding<CreatureAbilityType>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_CreatureAbilityType;
+}
+
+
+// CreatureAbilityData_t::Schema_CompileTimeVerificationFunction  (line 47, @0x000000000290c3b0, libserver.so)
+void __fastcall CreatureAbilityData_t::Schema_CompileTimeVerificationFunction(CreatureAbilityData_t *const this)
+{
+  ;
+}
+
+
+// CreatureAbilityData_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE  (line 69, @0x000000000290c3c0, libserver.so)  // inlines: Get, SchemaBinding_SchemaTypeOfMemberVarByAddr<CreatureAbilityData_t, CHandle<CBaseEntity> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<CreatureAbilityData_t, CreatureAbilityType>, SchemaBinding_SchemaTypeOfMemberVarByAddr<CreatureAbilityData_t, bool>, SchemaBinding_SchemaTypeOfMemberVarByAddr<CreatureAbilityData_t, int>, SetTypeScope
+// callers: CSchemaClassBinding<CreatureAbilityData_t>::Register
+// strings: "CBaseEntity", "CHandle", "CreatureAbilityType"
+// globals: CreatureAbilityData_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_p, CSchemaManipulator<CHandle<CBaseEntity>>::StaticAccessor(void)::m, CAtomicManipulator<CHandle<CBaseEntity>>::Get(void)::val, CreatureAbilityData_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::Imp
+CSchemaClassInfo *__fastcall CreatureAbilityData_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        const char *pProjectName)
+{
+  CSchemaClassInfo *result; // rax
+  ISchemaSystemTypeScope *v4; // rbx
+  __int64 (__fastcall *v5)(ISchemaSystemTypeScope *, const char *, __int64, __int64 (__fastcall ***)(), __int64 (__fastcall ***)(), __int64); // r12
+  __int64 v6; // rax
+  CSchemaType *v7; // rax
+
+  result = CreatureAbilityData_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult;
+  if ( CreatureAbilityData_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult == 0 )
+  {
+    v4 = (*(*pSchemaSystem + 112LL))(pSchemaSystem, 0, pBinaryName);
+    v5 = *(*v4 + 64LL);
+    v6 = (*(*v4 + 88LL))(v4, "CBaseEntity");
+    CreatureAbilityData_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CreatureAbilityData_t[0].m_pType = v5(v4, "CHandle", 5003, CAtomicManipulator<CHandle<CBaseEntity>>::Get(void)::val, &CSchemaManipulator<CHandle<CBaseEntity>>::StaticAccessor(void)::m, v6);
+    CreatureAbilityData_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CreatureAbilityData_t[1].m_pType = (*(*v4 + 40LL))(v4, 13);
+    CreatureAbilityData_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CreatureAbilityData_t[2].m_pType = (*(*v4 + 40LL))(v4, 13);
+    CreatureAbilityData_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CreatureAbilityData_t[3].m_pType = (*(*v4 + 40LL))(v4, 13);
+    CreatureAbilityData_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CreatureAbilityData_t[4].m_pType = (*(*v4 + 40LL))(v4, 13);
+    CreatureAbilityData_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CreatureAbilityData_t[5].m_pType = (*(*v4 + 40LL))(v4, 13);
+    CreatureAbilityData_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CreatureAbilityData_t[6].m_pType = (*(*v4 + 40LL))(v4, 13);
+    CreatureAbilityData_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CreatureAbilityData_t[7].m_pType = (*(*v4 + 40LL))(v4, 13);
+    CreatureAbilityData_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CreatureAbilityData_t[8].m_pType = (*(*v4 + 40LL))(v4, 13);
+    CreatureAbilityData_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CreatureAbilityData_t[9].m_pType = (*(*v4 + 40LL))(v4, 13);
+    CreatureAbilityData_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CreatureAbilityData_t[10].m_pType = (*(*v4 + 40LL))(v4, 13);
+    CreatureAbilityData_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CreatureAbilityData_t[11].m_pType = (*(*v4 + 40LL))(v4, 13);
+    CreatureAbilityData_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CreatureAbilityData_t[12].m_pType = (*(*v4 + 40LL))(v4, 13);
+    CreatureAbilityData_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CreatureAbilityData_t[13].m_pType = (*(*v4 + 40LL))(v4, 7);
+    CreatureAbilityData_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CreatureAbilityData_t[14].m_pType = (*(*v4 + 40LL))(v4, 7);
+    CreatureAbilityData_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CreatureAbilityData_t[15].m_pType = (*(*v4 + 40LL))(v4, 7);
+    CreatureAbilityData_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CreatureAbilityData_t[16].m_pType = (*(*v4 + 40LL))(v4, 7);
+    CreatureAbilityData_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CreatureAbilityData_t[17].m_pType = (*(*v4 + 40LL))(v4, 7);
+    v7 = (*(*v4 + 96LL))(v4, "CreatureAbilityType");
+    CreatureAbilityData_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CreatureAbilityData_t.m_pOuterTypeScope = v4;
+    CreatureAbilityData_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CreatureAbilityData_t[18].m_pType = v7;
+    CreatureAbilityData_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult = &CreatureAbilityData_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CreatureAbilityData_t;
+    (*(*v4 + 264LL))(
+      v4,
+      &CreatureAbilityData_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CreatureAbilityData_t);
+    return CreatureAbilityData_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult;
+  }
+  return result;
+}
+
+
+// CreatureAbilityData_t::Schema_VerifyBindingIsRegistered  (line 117, @0x000000000290c5e0, libserver.so)
+void __cdecl CreatureAbilityData_t::Schema_VerifyBindingIsRegistered()
+{
+  ;
+}
+
+
+// CreatureStateData_t::Schema_CompileTimeVerificationFunction  (line 125, @0x000000000290c5f0, libserver.so)
+void __fastcall CreatureStateData_t::Schema_CompileTimeVerificationFunction(CreatureStateData_t *const this)
+{
+  ;
+}
+
+
+// CreatureStateData_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE  (line 133, @0x000000000290c600, libserver.so)  // inlines: Get, SchemaBinding_SchemaTypeOfMemberVarByAddr<CreatureStateData_t, char const*>, SchemaBinding_SchemaTypeOfMemberVarByAddr<CreatureStateData_t, float>, SetTypeScope
+// callers: CSchemaClassBinding<CreatureStateData_t>::Register
+// globals: CreatureStateData_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pIn, CreatureStateData_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplS
+CSchemaClassInfo *__fastcall CreatureStateData_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        const char *pProjectName)
+{
+  CSchemaClassInfo *result; // rax
+  ISchemaSystemTypeScope *v4; // rbx
+  __int64 (__fastcall *v5)(ISchemaSystemTypeScope *, __int64); // r12
+  __int64 v6; // rax
+  CSchemaType *v7; // rax
+
+  result = CreatureStateData_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult;
+  if ( CreatureStateData_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult == 0 )
+  {
+    v4 = (*(*pSchemaSystem + 112LL))(pSchemaSystem, 0, pBinaryName);
+    v5 = *(*v4 + 48LL);
+    v6 = (*(*v4 + 40LL))(v4, 2);
+    CreatureStateData_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CreatureStateData_t[0].m_pType = v5(v4, v6);
+    CreatureStateData_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CreatureStateData_t[1].m_pType = (*(*v4 + 40LL))(v4, 11);
+    CreatureStateData_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CreatureStateData_t[2].m_pType = (*(*v4 + 40LL))(v4, 11);
+    CreatureStateData_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CreatureStateData_t[3].m_pType = (*(*v4 + 40LL))(v4, 11);
+    v7 = (*(*v4 + 40LL))(v4, 11);
+    CreatureStateData_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CreatureStateData_t.m_pOuterTypeScope = v4;
+    CreatureStateData_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CreatureStateData_t[4].m_pType = v7;
+    CreatureStateData_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult = &CreatureStateData_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CreatureStateData_t;
+    (*(*v4 + 264LL))(
+      v4,
+      &CreatureStateData_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CreatureStateData_t);
+    return CreatureStateData_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult;
+  }
+  return result;
+}
+
+
+// CreatureStateData_t::Schema_VerifyBindingIsRegistered  (line 153, @0x000000000290c6d0, libserver.so)
+void __cdecl CreatureStateData_t::Schema_VerifyBindingIsRegistered()
+{
+  ;
+}
+
+
+// ItemDropData_t::Schema_CompileTimeVerificationFunction  (line 161, @0x000000000290c6e0, libserver.so)
+void __fastcall ItemDropData_t::Schema_CompileTimeVerificationFunction(ItemDropData_t *const this)
+{
+  ;
+}
+
+
+// ItemDropData_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE  (line 168, @0x000000000290c6f0, libserver.so)  // inlines: Get, SchemaBinding_SchemaTypeOfMemberVarByAddr<ItemDropData_t, bool>, SchemaBinding_SchemaTypeOfMemberVarByAddr<ItemDropData_t, char const*>, SchemaBinding_SchemaTypeOfMemberVarByAddr<ItemDropData_t, int>, SetTypeScope
+// callers: CSchemaClassBinding<ItemDropData_t>::Register
+// globals: ItemDropData_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitial, ItemDropData_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema
+CSchemaClassInfo *__fastcall ItemDropData_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        const char *pProjectName)
+{
+  CSchemaClassInfo *result; // rax
+  ISchemaSystemTypeScope *v4; // rbx
+  __int64 (__fastcall *v5)(ISchemaSystemTypeScope *, __int64); // r12
+  __int64 v6; // rax
+  CSchemaType *v7; // rax
+
+  result = ItemDropData_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult;
+  if ( ItemDropData_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult == 0 )
+  {
+    v4 = (*(*pSchemaSystem + 112LL))(pSchemaSystem, 0, pBinaryName);
+    v5 = *(*v4 + 48LL);
+    v6 = (*(*v4 + 40LL))(v4, 2);
+    ItemDropData_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_ItemDropData_t[0].m_pType = v5(v4, v6);
+    ItemDropData_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_ItemDropData_t[1].m_pType = (*(*v4 + 40LL))(v4, 7);
+    ItemDropData_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_ItemDropData_t[2].m_pType = (*(*v4 + 40LL))(v4, 7);
+    v7 = (*(*v4 + 40LL))(v4, 13);
+    ItemDropData_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_ItemDropData_t.m_pOuterTypeScope = v4;
+    ItemDropData_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_ItemDropData_t[3].m_pType = v7;
+    ItemDropData_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult = &ItemDropData_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_ItemDropData_t;
+    (*(*v4 + 264LL))(
+      v4,
+      &ItemDropData_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_ItemDropData_t);
+    return ItemDropData_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult;
+  }
+  return result;
+}
+
+
+// ItemDropData_t::Schema_VerifyBindingIsRegistered  (line 186, @0x000000000290c7b0, libserver.so)
+void __cdecl ItemDropData_t::Schema_VerifyBindingIsRegistered()
+{
+  ;
+}
+
+
+// CDOTA_BaseNPC_Creature::CEntityInstanceEntityClass::Schema_CompileTimeVerificationFunction  (line 194, @0x000000000290c7c0, libserver.so)
+void __fastcall CDOTA_BaseNPC_Creature::CEntityInstanceEntityClass::Schema_CompileTimeVerificationFunction(
+        CDOTA_BaseNPC_Creature::CEntityInstanceEntityClass *const this)
+{
+  ;
+}
+
+
+// CDOTA_BaseNPC_Creature::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE  (line 197, @0x00000000028f7dc0, libserver.so)  // inlines: Call, Get, RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE, SetTypeScope
+// calls: CDOTA_BaseNPC_Creep::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE
+// callers: CSchemaNonConstructibleClassBinding<CDOTA_BaseNPC_Creature::CEntityInstanceEntityClass>::Register, CDOTA_BaseNPC_Creature::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE, CDOTA_BaseNPC_Creature::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE
+// globals: CDOTA_BaseNPC_Creep::CEntityInstanceEntityClass::s_pSchemaBindingForLocalModule, CDOTA_BaseNPC_Creep::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,cha, CDOTA_BaseNPC_Creature::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,
+CSchemaClassInfo *__fastcall CDOTA_BaseNPC_Creature::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        const char *pProjectName)
+{
+  ISchemaSystemTypeScope *v6; // r14
+  CSchemaClassInfo *v7; // rax
+
+  v6 = (*(*pSchemaSystem + 112LL))(pSchemaSystem, 1, pBinaryName);
+  (*(CDOTA_BaseNPC_Creep::CEntityInstanceEntityClass::s_pSchemaBindingForLocalModule->_vptr_ISchemaBinding + 5))(
+    CDOTA_BaseNPC_Creep::CEntityInstanceEntityClass::s_pSchemaBindingForLocalModule,
+    pSchemaSystem,
+    pBinaryName,
+    pProjectName);
+  v7 = CDOTA_BaseNPC_Creep::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult;
+  if ( CDOTA_BaseNPC_Creep::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult == 0 )
+    v7 = CDOTA_BaseNPC_Creep::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+           pSchemaSystem,
+           pBinaryName,
+           pProjectName);
+  CDOTA_BaseNPC_Creature::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CDOTA_BaseNPC_Creature_CEntityInstanceEntityClass.m_pOuterTypeScope = v6;
+  CDOTA_BaseNPC_Creature::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassBases_CDOTA_BaseNPC_Creature_CEntityInstanceEntityClass[0].m_pClass = v7;
+  CDOTA_BaseNPC_Creature::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult = &CDOTA_BaseNPC_Creature::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CDOTA_BaseNPC_Creature_CEntityInstanceEntityClass;
+  return &CDOTA_BaseNPC_Creature::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CDOTA_BaseNPC_Creature_CEntityInstanceEntityClass;
+}
+
+
+// CDOTA_BaseNPC_Creature::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE  (line 197, @0x000000000290c7d0, libserver.so)
+// calls: CDOTA_BaseNPC_Creature::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE
+// callers: CDOTA_Unit_Nian::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE
+// globals: CDOTA_BaseNPC_Creature::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,
+CSchemaClassInfo *__fastcall CDOTA_BaseNPC_Creature::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        const char *pProjectName)
+{
+  CSchemaClassInfo *result; // rax
+
+  result = CDOTA_BaseNPC_Creature::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult;
+  if ( CDOTA_BaseNPC_Creature::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult == 0 )
+    return CDOTA_BaseNPC_Creature::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+             pSchemaSystem,
+             pBinaryName,
+             pProjectName);
+  return result;
+}
+
+
+// CDOTA_BaseNPC_Creature::CEntityInstanceEntityClass::Schema_VerifyBindingIsRegistered  (line 214, @0x000000000290c7f0, libserver.so)
+void __cdecl CDOTA_BaseNPC_Creature::CEntityInstanceEntityClass::Schema_VerifyBindingIsRegistered()
+{
+  ;
+}
+
+
+// CDOTA_BaseNPC_Creature::Schema_CompileTimeVerificationFunction  (line 222, @0x000000000290c800, libserver.so)
+void __fastcall CDOTA_BaseNPC_Creature::Schema_CompileTimeVerificationFunction(CDOTA_BaseNPC_Creature *const this)
+{
+  ;
+}
+
+
+// CDOTA_BaseNPC_Creature::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE  (line 265, @0x000000000291ede0, libserver.so)  // inlines: Call, Get, RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE, SchemaBinding_SchemaTypeOfMemberVarByAddr<CDOTA_BaseNPC_Creature, CDOTABaseAbility*>, SchemaBinding_SchemaTypeOfMemberVarByAddr<CDOTA_BaseNPC_Creature, CDOTA_BaseNPC*>, SchemaBinding_SchemaTypeOfMemberVarByAddr<CDOTA_BaseNPC_Creature, CUtlVector<CreatureAbilityData_t> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<CDOTA_BaseNPC_Creature, CUtlVector<CreatureStateData_t> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<CDOTA_BaseNPC_Creature, CUtlVector<ItemDropData_t> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<CDOTA_BaseNPC_Creature, CUtlVector<item_definition_index_t> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<CDOTA_BaseNPC_Creature, Vector>, SchemaBinding_SchemaTypeOfMemberVarByAddr<CDOTA_BaseNPC_Creature, bool>, SchemaBinding_SchemaTypeOfMemberVarByAddr<CDOTA_BaseNPC_Creature, char const*>, SchemaBinding_SchemaTypeOfMemberVarByAddr<CDOTA_BaseNPC_Creature, float>, SchemaBinding_SchemaTypeOfMemberVarByAddr<CDOTA_BaseNPC_Creature, int>, SetTypeScope
+// calls: __cxa_guard_acquire, __cxa_guard_release, CDOTA_BaseNPC_Creep::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE, CDOTA_BaseNPC_Creature::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE, __cxa_guard_abort, _Unwind_Resume
+// callers: CSchemaNonConstructibleClassBinding<CDOTA_BaseNPC_Creature>::Register, CDOTA_Unit_Nian::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE
+// strings: "CreatureStateData_t", "CUtlVector", "CreatureAbilityData_t", "CDOTABaseAbility", "CDOTA_BaseNPC", "ItemDropData_t" (7 total)
+// globals: CDOTA_BaseNPC_Creature::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_, CSchemaManipulator<CUtlVector<CreatureStateData_t,CUtlMemory<CreatureStateData_t,int>>>::StaticAccessor(void)::m, CAtomicManipulator<CUtlVector<CreatureStateData_t,CUtlMemory<CreatureStateData_t,int>>>::Get(void)::val, CSchemaManipulator<CUtlVector<CreatureAbilityData_t,CUtlMemory<CreatureAbilityData_t,int>>>::StaticAccessor(void)::m, CAtomicManipulator<CUtlVector<CreatureAbilityData_t,CUtlMemory<CreatureAbilityData_t,int>>>::Get(void)::val, CSchemaManipulator<Vector>::StaticAccessor(void)::m, CAtomicManipulator<Vector>::Get(void)::val, CSchemaManipulator<CUtlVector<ItemDropData_t,CUtlMemory<ItemDropData_t,int>>>::StaticAccessor(void)::m (17 total)
+CSchemaClassInfo *__fastcall CDOTA_BaseNPC_Creature::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        const char *pProjectName)
+{
+  CSchemaClassInfo *result; // rax
+  ISchemaSystemTypeScope *v7; // rbx
+  __int64 (__fastcall *v8)(ISchemaSystemTypeScope *, const char *, __int64, __int64 (__fastcall ***)(), __int64 (__fastcall ***)(), __int64); // r15
+  __int64 v9; // rax
+  __int64 (__fastcall *v10)(ISchemaSystemTypeScope *, __int64); // r15
+  __int64 v11; // rax
+  __int64 (__fastcall *v12)(ISchemaSystemTypeScope *, __int64); // r15
+  __int64 v13; // rax
+  __int64 (__fastcall *v14)(ISchemaSystemTypeScope *, const char *, __int64, __int64 (__fastcall ***)(), __int64 (__fastcall ***)(), __int64); // r15
+  __int64 v15; // rax
+  __int64 (__fastcall *v16)(ISchemaSystemTypeScope *, const char *, __int64, __int64 (__fastcall ***)(), __int64 (__fastcall ***)(), __int64); // r15
+  __int64 v17; // rax
+  __int64 (__fastcall *v18)(ISchemaSystemTypeScope *, const char *, __int64, __int64 (__fastcall ***)(), __int64 (__fastcall ***)(), __int64); // r15
+  __int64 v19; // rax
+  __int64 (__fastcall *v20)(ISchemaSystemTypeScope *, __int64); // r15
+  __int64 v21; // rax
+  __int64 (__fastcall *v22)(ISchemaSystemTypeScope *, __int64); // r15
+  __int64 v23; // rax
+  __int64 (__fastcall *v24)(ISchemaSystemTypeScope *, __int64); // r15
+  __int64 v25; // rax
+  __int64 (__fastcall *v26)(ISchemaSystemTypeScope *, const char *, __int64, __int64 (__fastcall ***)(), __int64 (__fastcall ***)(), __int64); // r15
+  __int64 v27; // rax
+  __int64 (__fastcall *v28)(ISchemaSystemTypeScope *, const char *, __int64, __int64 (__fastcall ***)(), __int64 (__fastcall ***)(), __int64); // r15
+  __int64 v29; // rax
+  CSchemaClassInfo *v30; // rax
+  CSchemaClassInfo *v31; // rax
+
+  result = CDOTA_BaseNPC_Creature::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult;
+  if ( CDOTA_BaseNPC_Creature::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult == 0 )
+  {
+    v7 = (*(*pSchemaSystem + 112LL))(pSchemaSystem, 1, pBinaryName);
+    CDOTA_BaseNPC_Creature::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CDOTA_BaseNPC_Creature[0].m_pType = (*(*v7 + 40LL))(v7, 13);
+    CDOTA_BaseNPC_Creature::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CDOTA_BaseNPC_Creature[1].m_pType = (*(*v7 + 40LL))(v7, 13);
+    CDOTA_BaseNPC_Creature::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CDOTA_BaseNPC_Creature[2].m_pType = (*(*v7 + 40LL))(v7, 13);
+    CDOTA_BaseNPC_Creature::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CDOTA_BaseNPC_Creature[3].m_pType = (*(*v7 + 40LL))(v7, 13);
+    v8 = *(*v7 + 64LL);
+    v9 = (*(*v7 + 88LL))(v7, "CreatureStateData_t");
+    CDOTA_BaseNPC_Creature::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CDOTA_BaseNPC_Creature[4].m_pType = v8(v7, "CUtlVector", 3002, &CAtomicManipulator<CUtlVector<CreatureStateData_t,CUtlMemory<CreatureStateData_t,int>>>::Get(void)::val, CSchemaManipulator<CUtlVector<CreatureStateData_t,CUtlMemory<CreatureStateData_t,int>>>::StaticAccessor(void)::m, v9);
+    v10 = *(*v7 + 48LL);
+    v11 = (*(*v7 + 40LL))(v7, 2);
+    CDOTA_BaseNPC_Creature::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CDOTA_BaseNPC_Creature[5].m_pType = v10(v7, v11);
+    v12 = *(*v7 + 48LL);
+    v13 = (*(*v7 + 40LL))(v7, 2);
+    CDOTA_BaseNPC_Creature::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CDOTA_BaseNPC_Creature[6].m_pType = v12(v7, v13);
+    CDOTA_BaseNPC_Creature::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CDOTA_BaseNPC_Creature[7].m_pType = (*(*v7 + 40LL))(v7, 7);
+    CDOTA_BaseNPC_Creature::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CDOTA_BaseNPC_Creature[8].m_pType = (*(*v7 + 40LL))(v7, 7);
+    CDOTA_BaseNPC_Creature::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CDOTA_BaseNPC_Creature[9].m_pType = (*(*v7 + 40LL))(v7, 11);
+    CDOTA_BaseNPC_Creature::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CDOTA_BaseNPC_Creature[10].m_pType = (*(*v7 + 40LL))(v7, 11);
+    CDOTA_BaseNPC_Creature::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CDOTA_BaseNPC_Creature[11].m_pType = (*(*v7 + 40LL))(v7, 7);
+    CDOTA_BaseNPC_Creature::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CDOTA_BaseNPC_Creature[12].m_pType = (*(*v7 + 40LL))(v7, 11);
+    CDOTA_BaseNPC_Creature::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CDOTA_BaseNPC_Creature[13].m_pType = (*(*v7 + 40LL))(v7, 11);
+    CDOTA_BaseNPC_Creature::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CDOTA_BaseNPC_Creature[14].m_pType = (*(*v7 + 40LL))(v7, 11);
+    CDOTA_BaseNPC_Creature::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CDOTA_BaseNPC_Creature[15].m_pType = (*(*v7 + 40LL))(v7, 11);
+    CDOTA_BaseNPC_Creature::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CDOTA_BaseNPC_Creature[16].m_pType = (*(*v7 + 40LL))(v7, 7);
+    CDOTA_BaseNPC_Creature::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CDOTA_BaseNPC_Creature[17].m_pType = (*(*v7 + 40LL))(v7, 7);
+    CDOTA_BaseNPC_Creature::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CDOTA_BaseNPC_Creature[18].m_pType = (*(*v7 + 40LL))(v7, 7);
+    CDOTA_BaseNPC_Creature::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CDOTA_BaseNPC_Creature[19].m_pType = (*(*v7 + 40LL))(v7, 7);
+    CDOTA_BaseNPC_Creature::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CDOTA_BaseNPC_Creature[20].m_pType = (*(*v7 + 40LL))(v7, 7);
+    CDOTA_BaseNPC_Creature::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CDOTA_BaseNPC_Creature[21].m_pType = (*(*v7 + 40LL))(v7, 7);
+    CDOTA_BaseNPC_Creature::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CDOTA_BaseNPC_Creature[22].m_pType = (*(*v7 + 40LL))(v7, 13);
+    CDOTA_BaseNPC_Creature::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CDOTA_BaseNPC_Creature[23].m_pType = (*(*v7 + 40LL))(v7, 13);
+    CDOTA_BaseNPC_Creature::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CDOTA_BaseNPC_Creature[24].m_pType = (*(*v7 + 40LL))(v7, 13);
+    CDOTA_BaseNPC_Creature::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CDOTA_BaseNPC_Creature[25].m_pType = (*(*v7 + 40LL))(v7, 11);
+    CDOTA_BaseNPC_Creature::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CDOTA_BaseNPC_Creature[26].m_pType = (*(*v7 + 40LL))(v7, 13);
+    v14 = *(*v7 + 64LL);
+    v15 = (*(*v7 + 88LL))(v7, "CreatureAbilityData_t");
+    CDOTA_BaseNPC_Creature::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CDOTA_BaseNPC_Creature[27].m_pType = v14(v7, "CUtlVector", 3002, &CAtomicManipulator<CUtlVector<CreatureAbilityData_t,CUtlMemory<CreatureAbilityData_t,int>>>::Get(void)::val, CSchemaManipulator<CUtlVector<CreatureAbilityData_t,CUtlMemory<CreatureAbilityData_t,int>>>::StaticAccessor(void)::m, v15);
+    CDOTA_BaseNPC_Creature::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CDOTA_BaseNPC_Creature[28].m_pType = (*(*v7 + 40LL))(v7, 13);
+    v16 = *(*v7 + 64LL);
+    v17 = (*(*v7 + 88LL))(v7, "CreatureAbilityData_t");
+    CDOTA_BaseNPC_Creature::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CDOTA_BaseNPC_Creature[29].m_pType = v16(v7, "CUtlVector", 3002, &CAtomicManipulator<CUtlVector<CreatureAbilityData_t,CUtlMemory<CreatureAbilityData_t,int>>>::Get(void)::val, CSchemaManipulator<CUtlVector<CreatureAbilityData_t,CUtlMemory<CreatureAbilityData_t,int>>>::StaticAccessor(void)::m, v17);
+    CDOTA_BaseNPC_Creature::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CDOTA_BaseNPC_Creature[30].m_pType = (*(*v7 + 40LL))(v7, 13);
+    v18 = *(*v7 + 64LL);
+    v19 = (*(*v7 + 88LL))(v7, "CreatureAbilityData_t");
+    CDOTA_BaseNPC_Creature::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CDOTA_BaseNPC_Creature[31].m_pType = v18(v7, "CUtlVector", 3002, &CAtomicManipulator<CUtlVector<CreatureAbilityData_t,CUtlMemory<CreatureAbilityData_t,int>>>::Get(void)::val, CSchemaManipulator<CUtlVector<CreatureAbilityData_t,CUtlMemory<CreatureAbilityData_t,int>>>::StaticAccessor(void)::m, v19);
+    v20 = *(*v7 + 48LL);
+    v21 = (*(*v7 + 88LL))(v7, "CDOTABaseAbility");
+    CDOTA_BaseNPC_Creature::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CDOTA_BaseNPC_Creature[32].m_pType = v20(v7, v21);
+    CDOTA_BaseNPC_Creature::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CDOTA_BaseNPC_Creature[33].m_pType = (*(*v7 + 56LL))(v7, "Vector", 2010, CAtomicManipulator<Vector>::Get(void)::val, CSchemaManipulator<Vector>::StaticAccessor(void)::m);
+    v22 = *(*v7 + 48LL);
+    v23 = (*(*v7 + 88LL))(v7, "CDOTA_BaseNPC");
+    CDOTA_BaseNPC_Creature::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CDOTA_BaseNPC_Creature[34].m_pType = v22(v7, v23);
+    v24 = *(*v7 + 48LL);
+    v25 = (*(*v7 + 88LL))(v7, "CDOTA_BaseNPC");
+    CDOTA_BaseNPC_Creature::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CDOTA_BaseNPC_Creature[35].m_pType = v24(v7, v25);
+    CDOTA_BaseNPC_Creature::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CDOTA_BaseNPC_Creature[36].m_pType = (*(*v7 + 56LL))(v7, "Vector", 2010, CAtomicManipulator<Vector>::Get(void)::val, CSchemaManipulator<Vector>::StaticAccessor(void)::m);
+    CDOTA_BaseNPC_Creature::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CDOTA_BaseNPC_Creature[37].m_pType = (*(*v7 + 40LL))(v7, 13);
+    v26 = *(*v7 + 64LL);
+    v27 = (*(*v7 + 88LL))(v7, "ItemDropData_t");
+    CDOTA_BaseNPC_Creature::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CDOTA_BaseNPC_Creature[38].m_pType = v26(v7, "CUtlVector", 3002, &CAtomicManipulator<CUtlVector<ItemDropData_t,CUtlMemory<ItemDropData_t,int>>>::Get(void)::val, CSchemaManipulator<CUtlVector<ItemDropData_t,CUtlMemory<ItemDropData_t,int>>>::StaticAccessor(void)::m, v27);
+    v28 = *(*v7 + 64LL);
+    v29 = (*(*v7 + 56LL))(
+            v7,
+            "item_definition_index_t",
+            5008,
+            CAtomicManipulator<item_definition_index_t>::Get(void)::val,
+            &CSchemaManipulator<item_definition_index_t>::StaticAccessor(void)::m);
+    CDOTA_BaseNPC_Creature::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CDOTA_BaseNPC_Creature[39].m_pType = v28(v7, "CUtlVector", 3002, &CAtomicManipulator<CUtlVector<item_definition_index_t,CUtlMemory<item_definition_index_t,int>>>::Get(void)::val, CSchemaManipulator<CUtlVector<item_definition_index_t,CUtlMemory<item_definition_index_t,int>>>::StaticAccessor(void)::m, v29);
+    if ( `guard variable for'CDOTA_BaseNPC_Creature::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_NestedClassesOf_CDOTA_BaseNPC_Creature == 0
+      && __cxa_guard_acquire(&`guard variable for'CDOTA_BaseNPC_Creature::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_NestedClassesOf_CDOTA_BaseNPC_Creature) != 0 )
+    {
+      v30 = CDOTA_BaseNPC_Creature::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult;
+      if ( CDOTA_BaseNPC_Creature::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult == 0 )
+        v30 = CDOTA_BaseNPC_Creature::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+                pSchemaSystem,
+                pBinaryName,
+                pProjectName);
+      CDOTA_BaseNPC_Creature::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_NestedClassesOf_CDOTA_BaseNPC_Creature[0] = v30;
+      __cxa_guard_release(&`guard variable for'CDOTA_BaseNPC_Creature::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_NestedClassesOf_CDOTA_BaseNPC_Creature);
+    }
+    (*(CDOTA_BaseNPC_Creep::s_pSchemaBindingForLocalModule->_vptr_ISchemaBinding + 5))(
+      CDOTA_BaseNPC_Creep::s_pSchemaBindingForLocalModule,
+      pSchemaSystem,
+      pBinaryName,
+      pProjectName);
+    v31 = CDOTA_BaseNPC_Creep::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+            pSchemaSystem,
+            pBinaryName,
+            pProjectName);
+    CDOTA_BaseNPC_Creature::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CDOTA_BaseNPC_Creature.m_pOuterTypeScope = v7;
+    CDOTA_BaseNPC_Creature::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassBases_CDOTA_BaseNPC_Creature[0].m_pClass = v31;
+    CDOTA_BaseNPC_Creature::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult = &CDOTA_BaseNPC_Creature::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CDOTA_BaseNPC_Creature;
+    return &CDOTA_BaseNPC_Creature::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CDOTA_BaseNPC_Creature;
+  }
+  return result;
+}
+
+
+// CDOTA_BaseNPC_Creature::Schema_VerifyBindingIsRegistered  (line 387, @0x000000000290c810, libserver.so)
+void __cdecl CDOTA_BaseNPC_Creature::Schema_VerifyBindingIsRegistered()
+{
+  ;
+}
+
+
+// CDOTA_BaseNPC_Creature::SetupEntClassInputs  (line 401, @0x000000000290c820, libserver.so)
+void __fastcall CDOTA_BaseNPC_Creature::SetupEntClassInputs(CEntityClass *pComponentInfo)
+{
+  ;
+}
+
+
+// CDOTA_BaseNPC_Creature::SetupEntClassComponentOverrides  (line 407, @0x000000000290c830, libserver.so)
+void __fastcall CDOTA_BaseNPC_Creature::SetupEntClassComponentOverrides(CEntityClass *pEntityClass)
+{
+  pEntityClass->m_pComponentOverrides = 0;
+}
+
+
+// GetScriptDesc<CDOTA_BaseNPC_Creature>  (line 428, @0x0000000002939620, libserver.so)  // inlines: AddParameterType, CUtlMemory, CUtlVector, CUtlVectorBase, Finalize, ScriptClassDesc_t, ScriptDeduceFunctionSignature<CDOTA_BaseNPC_Creature*, CDOTA_BaseNPC_Creature, bool>, ScriptDeduceFunctionSignature<CDOTA_BaseNPC_Creature*, CDOTA_BaseNPC_Creature, void, HSCRIPT__*>, ScriptDeduceFunctionSignature<CDOTA_BaseNPC_Creature*, CDOTA_BaseNPC_Creature, void, bool>, ScriptDeduceFunctionSignature<CDOTA_BaseNPC_Creature*, CDOTA_BaseNPC_Creature, void, float>, ScriptDeduceFunctionSignature<CDOTA_BaseNPC_Creature*, CDOTA_BaseNPC_Creature, void, int>, SetDescription, SetFunctionName, SetPackedParameterNames, SetReturnType, SetScriptName, operator[]
+// calls: operator new, GetScriptDesc<CDOTA_BaseNPC>, CUtlVectorBase<ScriptFunctionBinding_t, CUtlMemory<ScriptFunctionBinding_t, int> >::AddToTail
+// callers: CDOTA_BaseNPC_Creature::GetScriptDesc, CDOTA_BaseNPC_Creature::InitScriptDesc, CDOTA_BaseNPC_Creature::GetClassScriptDesc, CDOTA_BaseNPC_Creature::GetEntityClassInternal, GetScriptDesc<CDOTA_Unit_Nian>
+// strings: "A Dota NPC Unit", "CDOTA_BaseNPC_Creature", "Flag this unit as a champion creature.", "SetChampion", "Is this unit a champion?", "Level the creature up by the specified number of levels" (33 total)
+// globals: g_pCDOTA_BaseNPC_Creature_ScriptDesc, CMemberScriptBinding1<CDOTA_BaseNPC_Creature *,void (CDOTA_BaseNPC_Creature::*)(bool),void,bool>::Call(void *,void *,CVariantBase<CVariantDefaultAllocator> *,in, CDOTA_BaseNPC_Creature::SetChampion(bool), s_CDOTA_BaseNPC_Creature_SetChampion_packed_arg_names, CMemberScriptBinding0<CDOTA_BaseNPC_Creature *,bool (CDOTA_BaseNPC_Creature::*)(void),bool>::Call(void *,void *,CVariantBase<CVariantDefaultAllocator> *,int,CVa, CDOTA_BaseNPC_Creature::IsChampion(void), CMemberScriptBinding1<CDOTA_BaseNPC_Creature *,void (CDOTA_BaseNPC_Creature::*)(int),void,int>::Call(void *,void *,CVariantBase<CVariantDefaultAllocator> *,int,, s_CDOTA_BaseNPC_Creature_CreatureLevelUp_packed_arg_names (36 total)
+ScriptClassDesc_t *__fastcall GetScriptDesc<CDOTA_BaseNPC_Creature>(CDOTA_BaseNPC_Creature *pScriptDescObjectInstance)
+{
+  ScriptClassDesc_t *result; // rax
+  ScriptClassDesc_t *v2; // r12
+  ScriptClassDesc_t *Script; // rdx
+  IScriptInstanceHelper *pHelper; // rax
+  __int64 v5; // rcx
+  char v6; // al
+  __int64 v7; // rdx
+  int v8; // eax
+  char v9; // dl
+  char v10; // di
+  __int64 v11; // rcx
+  int v12; // eax
+  int v13; // eax
+  char v14; // dl
+  char v15; // di
+  __int64 v16; // rcx
+  char v17; // al
+  __int64 v18; // rdx
+  int v19; // eax
+  char v20; // dl
+  char v21; // di
+  __int64 v22; // rcx
+  char v23; // al
+  __int64 v24; // rdx
+  int v25; // eax
+  char v26; // dl
+  char v27; // di
+  __int64 v28; // rcx
+  char v29; // al
+  __int64 v30; // rdx
+  int v31; // eax
+  char v32; // dl
+  char v33; // di
+  __int64 v34; // rcx
+  char v35; // al
+  __int64 v36; // rdx
+  int v37; // eax
+  char v38; // dl
+  char v39; // di
+  __int64 v40; // rcx
+  char v41; // al
+  __int64 v42; // rdx
+  int v43; // eax
+  char v44; // dl
+  char v45; // di
+  __int64 v46; // rcx
+  char v47; // dl
+  __int64 v48; // rax
+  int v49; // edx
+  char v50; // al
+  char v51; // di
+  __int64 v52; // rcx
+  char v53; // dl
+  __int64 v54; // rax
+  int v55; // edx
+  char v56; // al
+  char v57; // di
+  __int64 v58; // rcx
+  char v59; // dl
+  __int64 v60; // rax
+  int v61; // edx
+  char v62; // al
+  char v63; // di
+  __int64 v64; // rcx
+  char v65; // dl
+  __int64 v66; // rax
+  int v67; // edx
+  char v68; // al
+  char v69; // di
+  __int64 v70; // rcx
+  char v71; // dl
+  __int64 v72; // rax
+  int v73; // edx
+  char v74; // al
+  char v75; // di
+  __int64 v76; // rcx
+  char v77; // dl
+  __int64 v78; // rax
+  int v79; // edx
+  char v80; // al
+  char v81; // di
+  __int64 v82; // rcx
+  char v83; // dl
+  __int64 v84; // rax
+  int v85; // edx
+  char v86; // al
+  char v87; // di
+  __int64 v88; // rcx
+  char v89; // dl
+  __int64 v90; // rax
+  int v91; // edx
+  char v92; // al
+  char v93; // di
+  __int64 v94; // rcx
+  char v95; // dl
+  __int64 v96; // rax
+  int v97; // edx
+  char v98; // al
+  char v99; // di
+
+  result = g_pCDOTA_BaseNPC_Creature_ScriptDesc;
+  if ( g_pCDOTA_BaseNPC_Creature_ScriptDesc == 0 )
+  {
+    v2 = operator new(0x50u);
+    v2->m_pBaseDesc = 0;
+    v2->m_FunctionBindings.m_Size = 0;
+    v2->m_FunctionBindings.m_Memory.m_pMemory = 0;
+    v2->m_FunctionBindings.m_Memory.m_nAllocationCount = 0;
+    v2->m_FunctionBindings.m_Memory.m_nGrowSize = 0;
+    v2->m_pfnConstruct = 0;
+    v2->m_pfnDestruct = 0;
+    v2->pHelper = 0;
+    g_pCDOTA_BaseNPC_Creature_ScriptDesc = v2;
+    v2->m_pszDescription = "A Dota NPC Unit";
+    v2->m_pszScriptName = "CDOTA_BaseNPC_Creature";
+    v2->m_pszClassname = "CDOTA_BaseNPC_Creature";
+    Script = GetScriptDesc<CDOTA_BaseNPC>(0);
+    v2->m_pBaseDesc = Script;
+    if ( Script != 0 )
+    {
+      while ( 1 )
+      {
+        pHelper = Script->pHelper;
+        if ( pHelper != 0 )
+          break;
+        Script = Script->m_pBaseDesc;
+        if ( Script == 0 )
+          goto LABEL_7;
+      }
+      v2->pHelper = pHelper;
+    }
+LABEL_7:
+    v5 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(&v2->m_FunctionBindings)];
+    *(v5 + 24) = 0;
+    *(v5 + 16) = "Flag this unit as a champion creature.";
+    *v5 = "SetChampion";
+    *(v5 + 8) = "SetChampion";
+    v6 = *(v5 + 26);
+    v7 = v6++;
+    *(v5 + v7 + 27) = 6;
+    *(v5 + 26) = v6;
+    v8 = v6 - 1;
+    *(v5 + 25) = 0;
+    if ( v8 >= 0 && *(v5 + v8 + 27) == 32 )
+    {
+      v9 = 1;
+      do
+      {
+        --v8;
+        v10 = v9;
+        if ( v8 == -1 )
+        {
+          *(v5 + 25) = v9;
+          goto LABEL_13;
+        }
+        ++v9;
+      }
+      while ( *(v5 + v8 + 27) == 32 );
+      *(v5 + 25) = v10;
+    }
+LABEL_13:
+    *(v5 + 64) = 1;
+    *(v5 + 48) = CMemberScriptBinding1<CDOTA_BaseNPC_Creature *,void (CDOTA_BaseNPC_Creature::*)(bool),void,bool>::Call;
+    *(v5 + 56) = CDOTA_BaseNPC_Creature::SetChampion;
+    *(v5 + 40) = s_CDOTA_BaseNPC_Creature_SetChampion_packed_arg_names;
+    v11 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(&v2->m_FunctionBindings)];
+    *(v11 + 24) = 6;
+    *(v11 + 16) = "Is this unit a champion?";
+    *v11 = "IsChampion";
+    *(v11 + 8) = "IsChampion";
+    v12 = *(v11 + 26);
+    *(v11 + 25) = 0;
+    v13 = v12 - 1;
+    if ( v13 >= 0 && *(v11 + v13 + 27) == 32 )
+    {
+      v14 = 1;
+      do
+      {
+        --v13;
+        v15 = v14;
+        if ( v13 == -1 )
+        {
+          *(v11 + 25) = v14;
+          goto LABEL_19;
+        }
+        ++v14;
+      }
+      while ( *(v11 + v13 + 27) == 32 );
+      *(v11 + 25) = v15;
+    }
+LABEL_19:
+    *(v11 + 64) = 1;
+    *(v11 + 48) = CMemberScriptBinding0<CDOTA_BaseNPC_Creature *,bool (CDOTA_BaseNPC_Creature::*)(void),bool>::Call;
+    *(v11 + 56) = CDOTA_BaseNPC_Creature::IsChampion;
+    v16 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(&v2->m_FunctionBindings)];
+    *(v16 + 24) = 0;
+    *(v16 + 16) = "Level the creature up by the specified number of levels";
+    *v16 = "CreatureLevelUp";
+    *(v16 + 8) = "CreatureLevelUp";
+    v17 = *(v16 + 26);
+    v18 = v17++;
+    *(v16 + v18 + 27) = 5;
+    *(v16 + 26) = v17;
+    v19 = v17 - 1;
+    *(v16 + 25) = 0;
+    if ( v19 >= 0 && *(v16 + v19 + 27) == 32 )
+    {
+      v20 = 1;
+      do
+      {
+        --v19;
+        v21 = v20;
+        if ( v19 == -1 )
+        {
+          *(v16 + 25) = v20;
+          goto LABEL_25;
+        }
+        ++v20;
+      }
+      while ( *(v16 + v19 + 27) == 32 );
+      *(v16 + 25) = v21;
+    }
+LABEL_25:
+    *(v16 + 56) = 3985;
+    *(v16 + 48) = CMemberScriptBinding1<CDOTA_BaseNPC_Creature *,void (CDOTA_BaseNPC_Creature::*)(int),void,int>::Call;
+    *(v16 + 64) = 1;
+    *(v16 + 40) = s_CDOTA_BaseNPC_Creature_CreatureLevelUp_packed_arg_names;
+    v22 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(&v2->m_FunctionBindings)];
+    *(v22 + 24) = 0;
+    *(v22 + 16) = "Set the hit points gained per level on this creature.";
+    *v22 = "SetHPGain";
+    *(v22 + 8) = "SetHPGain";
+    v23 = *(v22 + 26);
+    v24 = v23++;
+    *(v22 + v24 + 27) = 5;
+    *(v22 + 26) = v23;
+    v25 = v23 - 1;
+    *(v22 + 25) = 0;
+    if ( v25 >= 0 && *(v22 + v25 + 27) == 32 )
+    {
+      v26 = 1;
+      do
+      {
+        --v25;
+        v27 = v26;
+        if ( v25 == -1 )
+        {
+          *(v22 + 25) = v26;
+          goto LABEL_31;
+        }
+        ++v26;
+      }
+      while ( *(v22 + v25 + 27) == 32 );
+      *(v22 + 25) = v27;
+    }
+LABEL_31:
+    *(v22 + 64) = 1;
+    *(v22 + 48) = CMemberScriptBinding1<CDOTA_BaseNPC_Creature *,void (CDOTA_BaseNPC_Creature::*)(int),void,int>::Call;
+    *(v22 + 56) = CDOTA_BaseNPC_Creature::SetHPGain;
+    *(v22 + 40) = s_CDOTA_BaseNPC_Creature_SetHPGain_packed_arg_names;
+    v28 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(&v2->m_FunctionBindings)];
+    *(v28 + 24) = 0;
+    *(v28 + 16) = "Set the mana points gained per level on this creature.";
+    *v28 = "SetManaGain";
+    *(v28 + 8) = "SetManaGain";
+    v29 = *(v28 + 26);
+    v30 = v29++;
+    *(v28 + v30 + 27) = 5;
+    *(v28 + 26) = v29;
+    v31 = v29 - 1;
+    *(v28 + 25) = 0;
+    if ( v31 >= 0 && *(v28 + v31 + 27) == 32 )
+    {
+      v32 = 1;
+      do
+      {
+        --v31;
+        v33 = v32;
+        if ( v31 == -1 )
+        {
+          *(v28 + 25) = v32;
+          goto LABEL_37;
+        }
+        ++v32;
+      }
+      while ( *(v28 + v31 + 27) == 32 );
+      *(v28 + 25) = v33;
+    }
+LABEL_37:
+    *(v28 + 64) = 1;
+    *(v28 + 48) = CMemberScriptBinding1<CDOTA_BaseNPC_Creature *,void (CDOTA_BaseNPC_Creature::*)(int),void,int>::Call;
+    *(v28 + 56) = CDOTA_BaseNPC_Creature::SetManaGain;
+    *(v28 + 40) = s_CDOTA_BaseNPC_Creature_SetManaGain_packed_arg_names;
+    v34 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(&v2->m_FunctionBindings)];
+    *(v34 + 24) = 0;
+    *(v34 + 16) = "Set the hit points regen gained per level on this creature.";
+    *v34 = "SetHPRegenGain";
+    *(v34 + 8) = "SetHPRegenGain";
+    v35 = *(v34 + 26);
+    v36 = v35++;
+    *(v34 + v36 + 27) = 1;
+    *(v34 + 26) = v35;
+    v37 = v35 - 1;
+    *(v34 + 25) = 0;
+    if ( v37 >= 0 && *(v34 + v37 + 27) == 32 )
+    {
+      v38 = 1;
+      do
+      {
+        --v37;
+        v39 = v38;
+        if ( v37 == -1 )
+        {
+          *(v34 + 25) = v38;
+          goto LABEL_43;
+        }
+        ++v38;
+      }
+      while ( *(v34 + v37 + 27) == 32 );
+      *(v34 + 25) = v39;
+    }
+LABEL_43:
+    *(v34 + 64) = 1;
+    *(v34 + 48) = CMemberScriptBinding1<CDOTA_BaseNPC_Creature *,void (CDOTA_BaseNPC_Creature::*)(float),void,float>::Call;
+    *(v34 + 56) = CDOTA_BaseNPC_Creature::SetHPRegenGain;
+    *(v34 + 40) = s_CDOTA_BaseNPC_Creature_SetHPRegenGain_packed_arg_names;
+    v40 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(&v2->m_FunctionBindings)];
+    *(v40 + 24) = 0;
+    *(v40 + 16) = "Set the mana points regen gained per level on this creature.";
+    *v40 = "SetManaRegenGain";
+    *(v40 + 8) = "SetManaRegenGain";
+    v41 = *(v40 + 26);
+    v42 = v41++;
+    *(v40 + v42 + 27) = 1;
+    *(v40 + 26) = v41;
+    v43 = v41 - 1;
+    *(v40 + 25) = 0;
+    if ( v43 >= 0 && *(v40 + v43 + 27) == 32 )
+    {
+      v44 = 1;
+      do
+      {
+        --v43;
+        v45 = v44;
+        if ( v43 == -1 )
+        {
+          *(v40 + 25) = v44;
+          goto LABEL_49;
+        }
+        ++v44;
+      }
+      while ( *(v40 + v43 + 27) == 32 );
+      *(v40 + 25) = v45;
+    }
+LABEL_49:
+    *(v40 + 64) = 1;
+    *(v40 + 48) = CMemberScriptBinding1<CDOTA_BaseNPC_Creature *,void (CDOTA_BaseNPC_Creature::*)(float),void,float>::Call;
+    *(v40 + 56) = CDOTA_BaseNPC_Creature::SetManaRegenGain;
+    *(v40 + 40) = s_CDOTA_BaseNPC_Creature_SetManaRegenGain_packed_arg_names;
+    v46 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(&v2->m_FunctionBindings)];
+    v47 = *(v46 + 26);
+    *(v46 + 24) = 0;
+    *(v46 + 16) = "Set the damage gained per level on this creature.";
+    *v46 = "SetDamageGain";
+    *(v46 + 8) = "SetDamageGain";
+    v48 = v47++;
+    *(v46 + v48 + 27) = 5;
+    *(v46 + 26) = v47;
+    v49 = v47 - 1;
+    *(v46 + 25) = 0;
+    if ( v49 >= 0 && *(v46 + v49 + 27) == 32 )
+    {
+      v50 = 1;
+      do
+      {
+        --v49;
+        v51 = v50;
+        if ( v49 == -1 )
+        {
+          *(v46 + 25) = v50;
+          goto LABEL_55;
+        }
+        ++v50;
+      }
+      while ( *(v46 + v49 + 27) == 32 );
+      *(v46 + 25) = v51;
+    }
+LABEL_55:
+    *(v46 + 64) = 1;
+    *(v46 + 48) = CMemberScriptBinding1<CDOTA_BaseNPC_Creature *,void (CDOTA_BaseNPC_Creature::*)(int),void,int>::Call;
+    *(v46 + 56) = CDOTA_BaseNPC_Creature::SetDamageGain;
+    *(v46 + 40) = s_CDOTA_BaseNPC_Creature_SetDamageGain_packed_arg_names;
+    v52 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(&v2->m_FunctionBindings)];
+    v53 = *(v52 + 26);
+    *(v52 + 24) = 0;
+    *(v52 + 16) = "Set the armor gained per level on this creature.";
+    *v52 = "SetArmorGain";
+    *(v52 + 8) = "SetArmorGain";
+    v54 = v53++;
+    *(v52 + v54 + 27) = 1;
+    *(v52 + 26) = v53;
+    v55 = v53 - 1;
+    *(v52 + 25) = 0;
+    if ( v55 >= 0 && *(v52 + v55 + 27) == 32 )
+    {
+      v56 = 1;
+      do
+      {
+        --v55;
+        v57 = v56;
+        if ( v55 == -1 )
+        {
+          *(v52 + 25) = v56;
+          goto LABEL_61;
+        }
+        ++v56;
+      }
+      while ( *(v52 + v55 + 27) == 32 );
+      *(v52 + 25) = v57;
+    }
+LABEL_61:
+    *(v52 + 64) = 1;
+    *(v52 + 48) = CMemberScriptBinding1<CDOTA_BaseNPC_Creature *,void (CDOTA_BaseNPC_Creature::*)(float),void,float>::Call;
+    *(v52 + 56) = CDOTA_BaseNPC_Creature::SetArmorGain;
+    *(v52 + 40) = s_CDOTA_BaseNPC_Creature_SetArmorGain_packed_arg_names;
+    v58 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(&v2->m_FunctionBindings)];
+    v59 = *(v58 + 26);
+    *(v58 + 24) = 0;
+    *(v58 + 16) = "Set the magic resistance gained per level on this creature.";
+    *v58 = "SetMagicResistanceGain";
+    *(v58 + 8) = "SetMagicResistanceGain";
+    v60 = v59++;
+    *(v58 + v60 + 27) = 1;
+    *(v58 + 26) = v59;
+    v61 = v59 - 1;
+    *(v58 + 25) = 0;
+    if ( v61 >= 0 && *(v58 + v61 + 27) == 32 )
+    {
+      v62 = 1;
+      do
+      {
+        --v61;
+        v63 = v62;
+        if ( v61 == -1 )
+        {
+          *(v58 + 25) = v62;
+          goto LABEL_67;
+        }
+        ++v62;
+      }
+      while ( *(v58 + v61 + 27) == 32 );
+      *(v58 + 25) = v63;
+    }
+LABEL_67:
+    *(v58 + 64) = 1;
+    *(v58 + 48) = CMemberScriptBinding1<CDOTA_BaseNPC_Creature *,void (CDOTA_BaseNPC_Creature::*)(float),void,float>::Call;
+    *(v58 + 56) = CDOTA_BaseNPC_Creature::SetMagicResistanceGain;
+    *(v58 + 40) = s_CDOTA_BaseNPC_Creature_SetMagicResistanceGain_packed_arg_names;
+    v64 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(&v2->m_FunctionBindings)];
+    v65 = *(v64 + 26);
+    *(v64 + 24) = 0;
+    *(v64 + 16) = "Set the disable resistance gained per level on this creature.";
+    *v64 = "SetDisableResistanceGain";
+    *(v64 + 8) = "SetDisableResistanceGain";
+    v66 = v65++;
+    *(v64 + v66 + 27) = 1;
+    *(v64 + 26) = v65;
+    v67 = v65 - 1;
+    *(v64 + 25) = 0;
+    if ( v67 >= 0 && *(v64 + v67 + 27) == 32 )
+    {
+      v68 = 1;
+      do
+      {
+        --v67;
+        v69 = v68;
+        if ( v67 == -1 )
+        {
+          *(v64 + 25) = v68;
+          goto LABEL_73;
+        }
+        ++v68;
+      }
+      while ( *(v64 + v67 + 27) == 32 );
+      *(v64 + 25) = v69;
+    }
+LABEL_73:
+    *(v64 + 64) = 1;
+    *(v64 + 48) = CMemberScriptBinding1<CDOTA_BaseNPC_Creature *,void (CDOTA_BaseNPC_Creature::*)(float),void,float>::Call;
+    *(v64 + 56) = CDOTA_BaseNPC_Creature::SetDisableResistanceGain;
+    *(v64 + 40) = s_CDOTA_BaseNPC_Creature_SetDisableResistanceGain_packed_arg_names;
+    v70 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(&v2->m_FunctionBindings)];
+    v71 = *(v70 + 26);
+    *(v70 + 24) = 0;
+    *(v70 + 16) = "Set the attack time gained per level on this creature.";
+    *v70 = "SetAttackTimeGain";
+    *(v70 + 8) = "SetAttackTimeGain";
+    v72 = v71++;
+    *(v70 + v72 + 27) = 1;
+    *(v70 + 26) = v71;
+    v73 = v71 - 1;
+    *(v70 + 25) = 0;
+    if ( v73 >= 0 && *(v70 + v73 + 27) == 32 )
+    {
+      v74 = 1;
+      do
+      {
+        --v73;
+        v75 = v74;
+        if ( v73 == -1 )
+        {
+          *(v70 + 25) = v74;
+          goto LABEL_79;
+        }
+        ++v74;
+      }
+      while ( *(v70 + v73 + 27) == 32 );
+      *(v70 + 25) = v75;
+    }
+LABEL_79:
+    *(v70 + 64) = 1;
+    *(v70 + 48) = CMemberScriptBinding1<CDOTA_BaseNPC_Creature *,void (CDOTA_BaseNPC_Creature::*)(float),void,float>::Call;
+    *(v70 + 56) = CDOTA_BaseNPC_Creature::SetAttackTimeGain;
+    *(v70 + 40) = s_CDOTA_BaseNPC_Creature_SetAttackTimeGain_packed_arg_names;
+    v76 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(&v2->m_FunctionBindings)];
+    v77 = *(v76 + 26);
+    *(v76 + 24) = 0;
+    *(v76 + 16) = "Set the move speed gained per level on this creature.";
+    *v76 = "SetMoveSpeedGain";
+    *(v76 + 8) = "SetMoveSpeedGain";
+    v78 = v77++;
+    *(v76 + v78 + 27) = 5;
+    *(v76 + 26) = v77;
+    v79 = v77 - 1;
+    *(v76 + 25) = 0;
+    if ( v79 >= 0 && *(v76 + v79 + 27) == 32 )
+    {
+      v80 = 1;
+      do
+      {
+        --v79;
+        v81 = v80;
+        if ( v79 == -1 )
+        {
+          *(v76 + 25) = v80;
+          goto LABEL_85;
+        }
+        ++v80;
+      }
+      while ( *(v76 + v79 + 27) == 32 );
+      *(v76 + 25) = v81;
+    }
+LABEL_85:
+    *(v76 + 64) = 1;
+    *(v76 + 48) = CMemberScriptBinding1<CDOTA_BaseNPC_Creature *,void (CDOTA_BaseNPC_Creature::*)(int),void,int>::Call;
+    *(v76 + 56) = CDOTA_BaseNPC_Creature::SetMoveSpeedGain;
+    *(v76 + 40) = s_CDOTA_BaseNPC_Creature_SetMoveSpeedGain_packed_arg_names;
+    v82 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(&v2->m_FunctionBindings)];
+    v83 = *(v82 + 26);
+    *(v82 + 24) = 0;
+    *(v82 + 16) = "Set the bounty gold gained per level on this creature.";
+    *v82 = "SetBountyGain";
+    *(v82 + 8) = "SetBountyGain";
+    v84 = v83++;
+    *(v82 + v84 + 27) = 5;
+    *(v82 + 26) = v83;
+    v85 = v83 - 1;
+    *(v82 + 25) = 0;
+    if ( v85 >= 0 && *(v82 + v85 + 27) == 32 )
+    {
+      v86 = 1;
+      do
+      {
+        --v85;
+        v87 = v86;
+        if ( v85 == -1 )
+        {
+          *(v82 + 25) = v86;
+          goto LABEL_91;
+        }
+        ++v86;
+      }
+      while ( *(v82 + v85 + 27) == 32 );
+      *(v82 + 25) = v87;
+    }
+LABEL_91:
+    *(v82 + 64) = 1;
+    *(v82 + 48) = CMemberScriptBinding1<CDOTA_BaseNPC_Creature *,void (CDOTA_BaseNPC_Creature::*)(int),void,int>::Call;
+    *(v82 + 56) = CDOTA_BaseNPC_Creature::SetBountyGain;
+    *(v82 + 40) = s_CDOTA_BaseNPC_Creature_SetBountyGain_packed_arg_names;
+    v88 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(&v2->m_FunctionBindings)];
+    v89 = *(v88 + 26);
+    *(v88 + 24) = 0;
+    *(v88 + 16) = "Set the xp reward gained per level on this creature.";
+    *v88 = "SetXPGain";
+    *(v88 + 8) = "SetXPGain";
+    v90 = v89++;
+    *(v88 + v90 + 27) = 5;
+    *(v88 + 26) = v89;
+    v91 = v89 - 1;
+    *(v88 + 25) = 0;
+    if ( v91 >= 0 && *(v88 + v91 + 27) == 32 )
+    {
+      v92 = 1;
+      do
+      {
+        --v91;
+        v93 = v92;
+        if ( v91 == -1 )
+        {
+          *(v88 + 25) = v92;
+          goto LABEL_97;
+        }
+        ++v92;
+      }
+      while ( *(v88 + v91 + 27) == 32 );
+      *(v88 + 25) = v93;
+    }
+LABEL_97:
+    *(v88 + 64) = 1;
+    *(v88 + 48) = CMemberScriptBinding1<CDOTA_BaseNPC_Creature *,void (CDOTA_BaseNPC_Creature::*)(int),void,int>::Call;
+    *(v88 + 56) = CDOTA_BaseNPC_Creature::SetXPGain;
+    *(v88 + 40) = s_CDOTA_BaseNPC_Creature_SetXPGain_packed_arg_names;
+    v94 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(&v2->m_FunctionBindings)];
+    v95 = *(v94 + 26);
+    *(v94 + 24) = 0;
+    *(v94 + 16) = "Add the specified item drop to this creature";
+    *v94 = "AddItemDrop";
+    *(v94 + 8) = "Script_AddItemDrop";
+    v96 = v95++;
+    *(v94 + v96 + 27) = 31;
+    *(v94 + 26) = v95;
+    v97 = v95 - 1;
+    *(v94 + 25) = 0;
+    if ( v97 >= 0 && *(v94 + v97 + 27) == 32 )
+    {
+      v98 = 1;
+      do
+      {
+        --v97;
+        v99 = v98;
+        if ( v97 == -1 )
+        {
+          *(v94 + 25) = v98;
+          goto LABEL_103;
+        }
+        ++v98;
+      }
+      while ( *(v94 + v97 + 27) == 32 );
+      *(v94 + 25) = v99;
+    }
+LABEL_103:
+    *(v94 + 64) = 1;
+    *(v94 + 48) = CMemberScriptBinding1<CDOTA_BaseNPC_Creature *,void (CDOTA_BaseNPC_Creature::*)(HSCRIPT__ *),void,HSCRIPT__ *>::Call;
+    *(v94 + 56) = CDOTA_BaseNPC_Creature::Script_AddItemDrop;
+    *(v94 + 40) = s_CDOTA_BaseNPC_Creature_Script_AddItemDrop_packed_arg_names;
+    return v2;
+  }
+  return result;
+}
+
+
+// CDOTA_BaseNPC_Creature::GetScriptDesc  (line 428, @0x000000000293a2d0, libserver.so)
+// calls: GetScriptDesc<CDOTA_BaseNPC_Creature>
+ScriptClassDesc_t *__fastcall CDOTA_BaseNPC_Creature::GetScriptDesc(CDOTA_BaseNPC_Creature *const this)
+{
+  return GetScriptDesc<CDOTA_BaseNPC_Creature>(this);
+}
+
+
+// CDOTA_BaseNPC_Creature::InitScriptDesc  (line 428, @0x000000000293a2e0, libserver.so)
+// calls: GetScriptDesc<CDOTA_BaseNPC_Creature>
+ScriptClassDesc_t *__cdecl CDOTA_BaseNPC_Creature::InitScriptDesc()
+{
+  return GetScriptDesc<CDOTA_BaseNPC_Creature>(0);
+}
+
+
+// CDOTA_BaseNPC_Creature::GetClassScriptDesc  (line 428, @0x000000000293a2f0, libserver.so)
+// calls: GetScriptDesc<CDOTA_BaseNPC_Creature>
+ScriptClassDesc_t *__cdecl CDOTA_BaseNPC_Creature::GetClassScriptDesc()
+{
+  return GetScriptDesc<CDOTA_BaseNPC_Creature>(0);
+}
+
+
+// LocalRegisterSchemaModule<ArbitraryTemplateParameter_server_dota_npc_creature_h>  (line 451, @0x000000000290c840, libserver.so)  // inlines: Call, Get
+// callers: RegisterSchemaModule_dota_npc_creature_h
+// strings: "CreatureAbilityType"
+// globals: CSchemaEnumBinding<CreatureAbilityType>::s_pThisModuleBindingPointer, CreatureAbilityData_t::s_pSchemaBindingForLocalModule, CreatureStateData_t::s_pSchemaBindingForLocalModule, ItemDropData_t::s_pSchemaBindingForLocalModule, CDOTA_BaseNPC_Creature::CEntityInstanceEntityClass::s_pSchemaBindingForLocalModule, CDOTA_BaseNPC_Creature::s_pSchemaBindingForLocalModule
+void __fastcall LocalRegisterSchemaModule<ArbitraryTemplateParameter_server_dota_npc_creature_h>(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        SchemaRegistrationPhase_t nRegistrationPhase)
+{
+  if ( nRegistrationPhase != SchemaRegistrationPhase_t::SCHEMA_REGISTRATION_PHASE_ATOMIC_TYPES_AND_ENUMS )
+  {
+    if ( nRegistrationPhase == SchemaRegistrationPhase_t::SCHEMA_REGISTRATION_PHASE_CLASSES )
+    {
+      (*(CreatureAbilityData_t::s_pSchemaBindingForLocalModule->_vptr_ISchemaBinding + 5))(
+        CreatureAbilityData_t::s_pSchemaBindingForLocalModule,
+        pSchemaSystem,
+        pBinaryName,
+        "server");
+      (*(CreatureStateData_t::s_pSchemaBindingForLocalModule->_vptr_ISchemaBinding + 5))(
+        CreatureStateData_t::s_pSchemaBindingForLocalModule,
+        pSchemaSystem,
+        pBinaryName,
+        "server");
+      (*(ItemDropData_t::s_pSchemaBindingForLocalModule->_vptr_ISchemaBinding + 5))(
+        ItemDropData_t::s_pSchemaBindingForLocalModule,
+        pSchemaSystem,
+        pBinaryName,
+        "server");
+      (*(CDOTA_BaseNPC_Creature::CEntityInstanceEntityClass::s_pSchemaBindingForLocalModule->_vptr_ISchemaBinding + 5))(
+        CDOTA_BaseNPC_Creature::CEntityInstanceEntityClass::s_pSchemaBindingForLocalModule,
+        pSchemaSystem,
+        pBinaryName,
+        "server");
+      (*(CDOTA_BaseNPC_Creature::s_pSchemaBindingForLocalModule->_vptr_ISchemaBinding + 5))(
+        CDOTA_BaseNPC_Creature::s_pSchemaBindingForLocalModule,
+        pSchemaSystem,
+        pBinaryName,
+        "server");
+    }
+    ++g_nLinkerHack_SchemaAnchor_RegistrationCountFor_server;
+  }
+  else
+  {
+    (*(CSchemaEnumBinding<CreatureAbilityType>::s_pThisModuleBindingPointer->_vptr_ISchemaBinding + 5))(
+      CSchemaEnumBinding<CreatureAbilityType>::s_pThisModuleBindingPointer,
+      pSchemaSystem,
+      pBinaryName,
+      "server",
+      "CreatureAbilityType");
+    ++g_nLinkerHack_SchemaAnchor_RegistrationCountFor_server;
+  }
+}
+
+
+// RegisterSchemaModule_dota_npc_creature_h  (line 458, @0x000000000290c940, libserver.so)
+// calls: LocalRegisterSchemaModule<ArbitraryTemplateParameter_server_dota_npc_creature_h>
+// callers: CSchemaRegistration_server::RegisterAllBindings
+void __fastcall RegisterSchemaModule_dota_npc_creature_h(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        SchemaRegistrationPhase_t nRegistrationPhase)
+{
+  LocalRegisterSchemaModule<ArbitraryTemplateParameter_server_dota_npc_creature_h>(
+    pSchemaSystem,
+    pBinaryName,
+    nRegistrationPhase);
+}
+
+

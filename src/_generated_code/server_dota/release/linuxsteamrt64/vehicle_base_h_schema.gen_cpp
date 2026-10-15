@@ -1,0 +1,550 @@
+
+// ==== functions (decompiled by Hex-Rays; names/signatures from DWARF) ====
+
+// CFourWheelServerVehicle::Schema_CompileTimeVerificationFunction  (line 35, @0x0000000002014f90, libserver.so)
+void __fastcall CFourWheelServerVehicle::Schema_CompileTimeVerificationFunction(CFourWheelServerVehicle *const this)
+{
+  ;
+}
+
+
+// CFourWheelServerVehicle::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE  (line 39, @0x0000000002016500, libserver.so)  // inlines: Call, Get, SchemaBinding_SchemaTypeOfMemberVarByAddr<CFourWheelServerVehicle, ViewSmoothingData_t>, SetTypeScope
+// calls: CBaseServerVehicle::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE
+// callers: CSchemaClassBinding<CFourWheelServerVehicle>::Register
+// strings: "ViewSmoothingData_t"
+// globals: CFourWheelServerVehicle::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s, CBaseServerVehicle::s_pSchemaBindingForLocalModule, CFourWheelServerVehicle::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::I
+CSchemaClassInfo *__fastcall CFourWheelServerVehicle::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        const char *pProjectName)
+{
+  CSchemaClassInfo *result; // rax
+  ISchemaSystemTypeScope *v7; // r14
+  CSchemaClassInfo *v8; // rax
+
+  result = CFourWheelServerVehicle::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult;
+  if ( CFourWheelServerVehicle::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult == 0 )
+  {
+    v7 = (*(*pSchemaSystem + 112LL))(pSchemaSystem, 0, pBinaryName);
+    CFourWheelServerVehicle::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CFourWheelServerVehicle[0].m_pType = (*(*v7 + 88LL))(v7, "ViewSmoothingData_t");
+    (*(CBaseServerVehicle::s_pSchemaBindingForLocalModule->_vptr_ISchemaBinding + 5))(
+      CBaseServerVehicle::s_pSchemaBindingForLocalModule,
+      pSchemaSystem,
+      pBinaryName,
+      pProjectName);
+    v8 = CBaseServerVehicle::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+           pSchemaSystem,
+           pBinaryName,
+           pProjectName);
+    CFourWheelServerVehicle::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CFourWheelServerVehicle.m_pOuterTypeScope = v7;
+    CFourWheelServerVehicle::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassBases_CFourWheelServerVehicle[0].m_pClass = v8;
+    CFourWheelServerVehicle::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult = &CFourWheelServerVehicle::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CFourWheelServerVehicle;
+    (*(*v7 + 264LL))(
+      v7,
+      &CFourWheelServerVehicle::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CFourWheelServerVehicle);
+    return CFourWheelServerVehicle::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult;
+  }
+  return result;
+}
+
+
+// CFourWheelServerVehicle::Schema_VerifyBindingIsRegistered  (line 59, @0x0000000002014fa0, libserver.so)
+// callers: CFourWheelServerVehicle::Schema_DynamicBinding
+void __cdecl CFourWheelServerVehicle::Schema_VerifyBindingIsRegistered()
+{
+  ;
+}
+
+
+// CPropVehicle::CEntityInstanceEntityClass::Schema_CompileTimeVerificationFunction  (line 67, @0x0000000002014fb0, libserver.so)
+void __fastcall CPropVehicle::CEntityInstanceEntityClass::Schema_CompileTimeVerificationFunction(
+        CPropVehicle::CEntityInstanceEntityClass *const this)
+{
+  ;
+}
+
+
+// CPropVehicle::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE  (line 70, @0x00000000020134e0, libserver.so)  // inlines: Call, Get, SetTypeScope
+// calls: CBaseProp::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE
+// callers: CPropVehicleDriveable::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE, CSchemaNonConstructibleClassBinding<CPropVehicle::CEntityInstanceEntityClass>::Register, CPropVehicle::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE, CPropVehicle::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE
+// globals: CPropVehicle::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const
+CSchemaClassInfo *__fastcall CPropVehicle::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        const char *pProjectName)
+{
+  ISchemaSystemTypeScope *v6; // r14
+  CSchemaClassInfo *v7; // rax
+
+  v6 = (*(*pSchemaSystem + 112LL))(pSchemaSystem, 1, pBinaryName);
+  (*(CBaseProp::CEntityInstanceEntityClass::s_pSchemaBindingForLocalModule->_vptr_ISchemaBinding + 5))(
+    CBaseProp::CEntityInstanceEntityClass::s_pSchemaBindingForLocalModule,
+    pSchemaSystem,
+    pBinaryName,
+    pProjectName);
+  v7 = CBaseProp::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+         pSchemaSystem,
+         pBinaryName,
+         pProjectName);
+  CPropVehicle::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CPropVehicle_CEntityInstanceEntityClass.m_pOuterTypeScope = v6;
+  CPropVehicle::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassBases_CPropVehicle_CEntityInstanceEntityClass[0].m_pClass = v7;
+  CPropVehicle::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult = &CPropVehicle::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CPropVehicle_CEntityInstanceEntityClass;
+  return &CPropVehicle::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CPropVehicle_CEntityInstanceEntityClass;
+}
+
+
+// CPropVehicle::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE  (line 70, @0x0000000002014fc0, libserver.so)
+// calls: CPropVehicle::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE
+// globals: CPropVehicle::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const
+CSchemaClassInfo *__fastcall CPropVehicle::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        const char *pProjectName)
+{
+  CSchemaClassInfo *result; // rax
+
+  result = CPropVehicle::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult;
+  if ( CPropVehicle::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult == 0 )
+    return CPropVehicle::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+             pSchemaSystem,
+             pBinaryName,
+             pProjectName);
+  return result;
+}
+
+
+// CPropVehicle::CEntityInstanceEntityClass::Schema_VerifyBindingIsRegistered  (line 87, @0x0000000002014fe0, libserver.so)
+void __cdecl CPropVehicle::CEntityInstanceEntityClass::Schema_VerifyBindingIsRegistered()
+{
+  ;
+}
+
+
+// CPropVehicle::Schema_CompileTimeVerificationFunction  (line 95, @0x0000000002014ff0, libserver.so)
+void __fastcall CPropVehicle::Schema_CompileTimeVerificationFunction(CPropVehicle *const this)
+{
+  ;
+}
+
+
+// CPropVehicle::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE  (line 104, @0x0000000002015000, libserver.so)  // inlines: Call, Get, RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE, SchemaBinding_SchemaTypeOfMemberVarByAddr<CPropVehicle, CFourWheelVehiclePhysics>, SchemaBinding_SchemaTypeOfMemberVarByAddr<CPropVehicle, CHandle<CBasePlayer> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<CPropVehicle, CUtlSymbolLarge>, SchemaBinding_SchemaTypeOfMemberVarByAddr<CPropVehicle, Vector>, SchemaBinding_SchemaTypeOfMemberVarByAddr<CPropVehicle, float>, SchemaBinding_SchemaTypeOfMemberVarByAddr<CPropVehicle, unsigned int>, SetTypeScope
+// calls: __cxa_guard_acquire, __cxa_guard_release, CBaseProp::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE, CPropVehicle::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE, __cxa_guard_abort, _Unwind_Resume
+// callers: CSchemaNonConstructibleClassBinding<CPropVehicle>::Register, CPropVehicleDriveable::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE
+// strings: "CFourWheelVehiclePhysics", "CUtlSymbolLarge", "CBasePlayer", "CHandle"
+// globals: CPropVehicle::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializ, CSchemaManipulator<CUtlSymbolLarge>::StaticAccessor(void)::m, CAtomicManipulator<CUtlSymbolLarge>::Get(void)::val, CSchemaManipulator<Vector>::StaticAccessor(void)::m, CAtomicManipulator<Vector>::Get(void)::val, CSchemaManipulator<CHandle<CBasePlayer>>::StaticAccessor(void)::m, CAtomicManipulator<CHandle<CBasePlayer>>::Get(void)::val, `guard variable for'CPropVehicle::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char c (11 total)
+CSchemaClassInfo *__fastcall CPropVehicle::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        const char *pProjectName)
+{
+  CSchemaClassInfo *result; // rax
+  ISchemaSystemTypeScope *v7; // r12
+  __int64 (__fastcall *v8)(ISchemaSystemTypeScope *, const char *, __int64, __int64 (__fastcall ***)(), __int64 (__fastcall ***)(), __int64); // r15
+  __int64 v9; // rax
+  CSchemaClassInfo *v10; // rax
+  const CSchemaClassInfo *v11; // rax
+
+  result = CPropVehicle::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult;
+  if ( CPropVehicle::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult == 0 )
+  {
+    v7 = (*(*pSchemaSystem + 112LL))(pSchemaSystem, 1, pBinaryName);
+    CPropVehicle::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CPropVehicle[0].m_pType = (*(*v7 + 88LL))(v7, "CFourWheelVehiclePhysics");
+    CPropVehicle::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CPropVehicle[1].m_pType = (*(*v7 + 40LL))(v7, 8);
+    CPropVehicle::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CPropVehicle[2].m_pType = (*(*v7 + 56LL))(v7, "CUtlSymbolLarge", 3007, CAtomicManipulator<CUtlSymbolLarge>::Get(void)::val, &CSchemaManipulator<CUtlSymbolLarge>::StaticAccessor(void)::m);
+    CPropVehicle::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CPropVehicle[3].m_pType = (*(*v7 + 56LL))(v7, "Vector", 2010, CAtomicManipulator<Vector>::Get(void)::val, CSchemaManipulator<Vector>::StaticAccessor(void)::m);
+    v8 = *(*v7 + 64LL);
+    v9 = (*(*v7 + 88LL))(v7, "CBasePlayer");
+    CPropVehicle::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CPropVehicle[4].m_pType = v8(v7, "CHandle", 5003, CAtomicManipulator<CHandle<CBasePlayer>>::Get(void)::val, CSchemaManipulator<CHandle<CBasePlayer>>::StaticAccessor(void)::m, v9);
+    CPropVehicle::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CPropVehicle[5].m_pType = (*(*v7 + 40LL))(v7, 11);
+    if ( `guard variable for'CPropVehicle::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_NestedClassesOf_CPropVehicle == 0
+      && __cxa_guard_acquire(&`guard variable for'CPropVehicle::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_NestedClassesOf_CPropVehicle) != 0 )
+    {
+      v10 = CPropVehicle::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult;
+      if ( CPropVehicle::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult == 0 )
+        v10 = CPropVehicle::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+                pSchemaSystem,
+                pBinaryName,
+                pProjectName);
+      CPropVehicle::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_NestedClassesOf_CPropVehicle[0] = v10;
+      __cxa_guard_release(&`guard variable for'CPropVehicle::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_NestedClassesOf_CPropVehicle);
+    }
+    (*(CBaseProp::s_pSchemaBindingForLocalModule->_vptr_ISchemaBinding + 5))(
+      CBaseProp::s_pSchemaBindingForLocalModule,
+      pSchemaSystem,
+      pBinaryName,
+      pProjectName);
+    CPropVehicle::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassBases_CPropVehicle[0].m_pClass = CBaseProp::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(pSchemaSystem, pBinaryName, pProjectName);
+    v11 = (*(*pSchemaSystem + 240LL))(pSchemaSystem);
+    CPropVehicle::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CPropVehicle.m_pOuterTypeScope = v7;
+    CPropVehicle::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassBases_CPropVehicle[1].m_pClass = v11;
+    CPropVehicle::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult = &CPropVehicle::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CPropVehicle;
+    return &CPropVehicle::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CPropVehicle;
+  }
+  return result;
+}
+
+
+// CPropVehicle::Schema_VerifyBindingIsRegistered  (line 154, @0x00000000020151e0, libserver.so)
+// callers: CPropVehicle::Schema_DynamicBinding
+void __cdecl CPropVehicle::Schema_VerifyBindingIsRegistered()
+{
+  ;
+}
+
+
+// CPropVehicle::SetupEntClassInputs  (line 168, @0x00000000020151f0, libserver.so)
+void __fastcall CPropVehicle::SetupEntClassInputs(CEntityClass *pComponentInfo)
+{
+  ;
+}
+
+
+// CPropVehicle::SetupEntClassComponentOverrides  (line 174, @0x0000000002015200, libserver.so)
+void __fastcall CPropVehicle::SetupEntClassComponentOverrides(CEntityClass *pEntityClass)
+{
+  pEntityClass->m_pComponentOverrides = 0;
+}
+
+
+// CPropVehicleDriveable::CEntityInstanceEntityClass::Schema_CompileTimeVerificationFunction  (line 180, @0x0000000002015210, libserver.so)
+void __fastcall CPropVehicleDriveable::CEntityInstanceEntityClass::Schema_CompileTimeVerificationFunction(
+        CPropVehicleDriveable::CEntityInstanceEntityClass *const this)
+{
+  ;
+}
+
+
+// CPropVehicleDriveable::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE  (line 183, @0x0000000002013560, libserver.so)  // inlines: Call, Get, RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE, SetTypeScope
+// calls: CPropVehicle::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE
+// callers: CSchemaNonConstructibleClassBinding<CPropVehicleDriveable::CEntityInstanceEntityClass>::Register, CPropVehicleDriveable::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE, CPropVehicleDriveable::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE
+// globals: CPropVehicle::CEntityInstanceEntityClass::s_pSchemaBindingForLocalModule, CPropVehicle::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const, CPropVehicleDriveable::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,c
+CSchemaClassInfo *__fastcall CPropVehicleDriveable::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        const char *pProjectName)
+{
+  ISchemaSystemTypeScope *v6; // r14
+  CSchemaClassInfo *v7; // rax
+
+  v6 = (*(*pSchemaSystem + 112LL))(pSchemaSystem, 1, pBinaryName);
+  (*(CPropVehicle::CEntityInstanceEntityClass::s_pSchemaBindingForLocalModule->_vptr_ISchemaBinding + 5))(
+    CPropVehicle::CEntityInstanceEntityClass::s_pSchemaBindingForLocalModule,
+    pSchemaSystem,
+    pBinaryName,
+    pProjectName);
+  v7 = CPropVehicle::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult;
+  if ( CPropVehicle::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult == 0 )
+    v7 = CPropVehicle::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+           pSchemaSystem,
+           pBinaryName,
+           pProjectName);
+  CPropVehicleDriveable::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CPropVehicleDriveable_CEntityInstanceEntityClass.m_pOuterTypeScope = v6;
+  CPropVehicleDriveable::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassBases_CPropVehicleDriveable_CEntityInstanceEntityClass[0].m_pClass = v7;
+  CPropVehicleDriveable::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult = &CPropVehicleDriveable::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CPropVehicleDriveable_CEntityInstanceEntityClass;
+  return &CPropVehicleDriveable::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CPropVehicleDriveable_CEntityInstanceEntityClass;
+}
+
+
+// CPropVehicleDriveable::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE  (line 183, @0x0000000002015220, libserver.so)
+// calls: CPropVehicleDriveable::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE
+// globals: CPropVehicleDriveable::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,c
+CSchemaClassInfo *__fastcall CPropVehicleDriveable::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        const char *pProjectName)
+{
+  CSchemaClassInfo *result; // rax
+
+  result = CPropVehicleDriveable::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult;
+  if ( CPropVehicleDriveable::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult == 0 )
+    return CPropVehicleDriveable::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+             pSchemaSystem,
+             pBinaryName,
+             pProjectName);
+  return result;
+}
+
+
+// CPropVehicleDriveable::CEntityInstanceEntityClass::Schema_VerifyBindingIsRegistered  (line 200, @0x0000000002015240, libserver.so)
+void __cdecl CPropVehicleDriveable::CEntityInstanceEntityClass::Schema_VerifyBindingIsRegistered()
+{
+  ;
+}
+
+
+// CPropVehicleDriveable::Schema_CompileTimeVerificationFunction  (line 208, @0x0000000002015250, libserver.so)
+void __fastcall CPropVehicleDriveable::Schema_CompileTimeVerificationFunction(CPropVehicleDriveable *const this)
+{
+  ;
+}
+
+
+// CPropVehicleDriveable::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE  (line 238, @0x0000000002015260, libserver.so)  // inlines: Call, Get, NetworkVarDecl_t, RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE, SchemaBinding_SchemaTypeOfMemberVarByAddr<CPropVehicleDriveable, CEntityIOOutput>, SchemaBinding_SchemaTypeOfMemberVarByAddr<CPropVehicleDriveable, CEntityOutputTemplate<float> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<CPropVehicleDriveable, CFourWheelServerVehicle*>, SchemaBinding_SchemaTypeOfMemberVarByAddr<CPropVehicleDriveable, CHandle<CBaseEntity> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<CPropVehicleDriveable, CNetworkHandleBase<CBasePlayer, CPropVehicleDriveable::NetworkVar_m_hPlayer> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<CPropVehicleDriveable, CNetworkVarBase<bool, CPropVehicleDriveable::NetworkVar_m_bEnterAnimOn> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<CPropVehicleDriveable, CNetworkVarBase<bool, CPropVehicleDriveable::NetworkVar_m_bExitAnimOn> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<CPropVehicleDriveable, CNetworkVarBase<bool, CPropVehicleDriveable::NetworkVar_m_bHasBoost> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<CPropVehicleDriveable, CNetworkVarBase<bool, CPropVehicleDriveable::NetworkVar_m_bHasGun> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<CPropVehicleDriveable, CNetworkVarBase<bool, CPropVehicleDriveable::NetworkVar_m_bUnableToFire> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<CPropVehicleDriveable, CNetworkVarBase<bool, CPropVehicleDriveable::NetworkVar_m_nScannerDisabledVehicle> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<CPropVehicleDriveable, CNetworkVarBase<bool, CPropVehicleDriveable::NetworkVar_m_nScannerDisabledWeapons> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<CPropVehicleDriveable, CNetworkVarBase<float, CPropVehicleDriveable::NetworkVar_m_flThrottle> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<CPropVehicleDriveable, CNetworkVarBase<int, CPropVehicleDriveable::NetworkVar_m_nBoostTimeLeft> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<CPropVehicleDriveable, CNetworkVarBase<int, CPropVehicleDriveable::NetworkVar_m_nSpeed> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<CPropVehicleDriveable, CNetworkVarBase<short int, CPropVehicleDriveable::NetworkVar_m_nRPM> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<CPropVehicleDriveable, CNetworkVectorBase<Vector, CPropVehicleDriveable::NetworkVar_m_vecEyeExitEndpoint> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<CPropVehicleDriveable, CNetworkVectorBase<Vector, CPropVehicleDriveable::NetworkVar_m_vecGunCrosshair> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<CPropVehicleDriveable, bool>, SchemaBinding_SchemaTypeOfMemberVarByAddr<CPropVehicleDriveable, float>, SetTypeScope
+// calls: __cxa_guard_acquire, __cxa_guard_release, CPropVehicle::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE, CPropVehicleDriveable::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE, __cxa_guard_abort, _Unwind_Resume
+// callers: CSchemaNonConstructibleClassBinding<CPropVehicleDriveable>::Register
+// strings: "CFourWheelServerVehicle", "CEntityIOOutput", "CEntityOutputTemplate", "CBasePlayer", "CHandle", "CBaseEntity" (22 total)
+// globals: CPropVehicleDriveable::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_p, `guard variable for'CPropVehicleDriveable::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char cons, CSchemaManipulator<CEntityOutputTemplate<float>>::StaticAccessor(void)::m, CAtomicManipulator<CEntityOutputTemplate<float>>::Get(void)::val, CSchemaManipulator<CHandle<CBasePlayer>>::StaticAccessor(void)::m, CAtomicManipulator<CHandle<CBasePlayer>>::Get(void)::val, CSchemaManipulator<Vector>::StaticAccessor(void)::m, CAtomicManipulator<Vector>::Get(void)::val (13 total)
+CSchemaClassInfo *__fastcall CPropVehicleDriveable::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        const char *pProjectName)
+{
+  CSchemaClassInfo *result; // rax
+  ISchemaSystemTypeScope *v7; // rbx
+  __int64 (__fastcall *v8)(ISchemaSystemTypeScope *, __int64); // r15
+  __int64 v9; // rax
+  __int64 (__fastcall *v10)(ISchemaSystemTypeScope *, const char *, __int64, __int64 (__fastcall ***)(), __int64 (__fastcall ***)(), __int64); // r15
+  __int64 v11; // rax
+  __int64 (__fastcall *v12)(ISchemaSystemTypeScope *, const char *, __int64, __int64 (__fastcall ***)(), __int64 (__fastcall ***)(), __int64); // r15
+  __int64 v13; // rax
+  __int64 (__fastcall *v14)(ISchemaSystemTypeScope *, const char *, __int64, __int64 (__fastcall ***)(), __int64 (__fastcall ***)(), __int64); // r15
+  __int64 v15; // rax
+  __int64 (__fastcall *v16)(ISchemaSystemTypeScope *, const char *, __int64, __int64 (__fastcall ***)(), __int64 (__fastcall ***)(), __int64); // r15
+  __int64 v17; // rax
+  CSchemaClassInfo *v18; // rax
+  const CSchemaClassInfo *v19; // rax
+
+  result = CPropVehicleDriveable::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult;
+  if ( CPropVehicleDriveable::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult == 0 )
+  {
+    v7 = (*(*pSchemaSystem + 112LL))(pSchemaSystem, 1, pBinaryName);
+    if ( `guard variable for'CPropVehicleDriveable::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CPropVehicleDriveable3_MNetworkVarNames_Value == 0
+      && __cxa_guard_acquire(&`guard variable for'CPropVehicleDriveable::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CPropVehicleDriveable3_MNetworkVarNames_Value) != 0 )
+    {
+      CPropVehicleDriveable::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CPropVehicleDriveable3_MNetworkVarNames_Value.m_pVarName = "m_hPlayer";
+      CPropVehicleDriveable::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CPropVehicleDriveable3_MNetworkVarNames_Value.m_pVarType = "CHandle< CBasePlayer>";
+      __cxa_guard_release(&`guard variable for'CPropVehicleDriveable::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CPropVehicleDriveable3_MNetworkVarNames_Value);
+    }
+    if ( `guard variable for'CPropVehicleDriveable::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CPropVehicleDriveable4_MNetworkVarNames_Value == 0
+      && __cxa_guard_acquire(&`guard variable for'CPropVehicleDriveable::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CPropVehicleDriveable4_MNetworkVarNames_Value) != 0 )
+    {
+      CPropVehicleDriveable::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CPropVehicleDriveable4_MNetworkVarNames_Value.m_pVarName = "m_nSpeed";
+      CPropVehicleDriveable::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CPropVehicleDriveable4_MNetworkVarNames_Value.m_pVarType = "int32";
+      __cxa_guard_release(&`guard variable for'CPropVehicleDriveable::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CPropVehicleDriveable4_MNetworkVarNames_Value);
+    }
+    if ( `guard variable for'CPropVehicleDriveable::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CPropVehicleDriveable5_MNetworkVarNames_Value == 0
+      && __cxa_guard_acquire(&`guard variable for'CPropVehicleDriveable::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CPropVehicleDriveable5_MNetworkVarNames_Value) != 0 )
+    {
+      CPropVehicleDriveable::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CPropVehicleDriveable5_MNetworkVarNames_Value.m_pVarName = "m_nRPM";
+      CPropVehicleDriveable::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CPropVehicleDriveable5_MNetworkVarNames_Value.m_pVarType = "int16";
+      __cxa_guard_release(&`guard variable for'CPropVehicleDriveable::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CPropVehicleDriveable5_MNetworkVarNames_Value);
+    }
+    if ( `guard variable for'CPropVehicleDriveable::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CPropVehicleDriveable6_MNetworkVarNames_Value == 0
+      && __cxa_guard_acquire(&`guard variable for'CPropVehicleDriveable::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CPropVehicleDriveable6_MNetworkVarNames_Value) != 0 )
+    {
+      CPropVehicleDriveable::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CPropVehicleDriveable6_MNetworkVarNames_Value.m_pVarName = "m_flThrottle";
+      CPropVehicleDriveable::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CPropVehicleDriveable6_MNetworkVarNames_Value.m_pVarType = "float32";
+      __cxa_guard_release(&`guard variable for'CPropVehicleDriveable::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CPropVehicleDriveable6_MNetworkVarNames_Value);
+    }
+    if ( `guard variable for'CPropVehicleDriveable::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CPropVehicleDriveable7_MNetworkVarNames_Value == 0
+      && __cxa_guard_acquire(&`guard variable for'CPropVehicleDriveable::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CPropVehicleDriveable7_MNetworkVarNames_Value) != 0 )
+    {
+      CPropVehicleDriveable::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CPropVehicleDriveable7_MNetworkVarNames_Value.m_pVarName = "m_nBoostTimeLeft";
+      CPropVehicleDriveable::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CPropVehicleDriveable7_MNetworkVarNames_Value.m_pVarType = "int32";
+      __cxa_guard_release(&`guard variable for'CPropVehicleDriveable::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CPropVehicleDriveable7_MNetworkVarNames_Value);
+    }
+    if ( `guard variable for'CPropVehicleDriveable::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CPropVehicleDriveable8_MNetworkVarNames_Value == 0
+      && __cxa_guard_acquire(&`guard variable for'CPropVehicleDriveable::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CPropVehicleDriveable8_MNetworkVarNames_Value) != 0 )
+    {
+      CPropVehicleDriveable::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CPropVehicleDriveable8_MNetworkVarNames_Value.m_pVarName = "m_bHasBoost";
+      CPropVehicleDriveable::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CPropVehicleDriveable8_MNetworkVarNames_Value.m_pVarType = "bool";
+      __cxa_guard_release(&`guard variable for'CPropVehicleDriveable::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CPropVehicleDriveable8_MNetworkVarNames_Value);
+    }
+    if ( `guard variable for'CPropVehicleDriveable::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CPropVehicleDriveable9_MNetworkVarNames_Value == 0
+      && __cxa_guard_acquire(&`guard variable for'CPropVehicleDriveable::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CPropVehicleDriveable9_MNetworkVarNames_Value) != 0 )
+    {
+      CPropVehicleDriveable::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CPropVehicleDriveable9_MNetworkVarNames_Value.m_pVarName = "m_vecEyeExitEndpoint";
+      CPropVehicleDriveable::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CPropVehicleDriveable9_MNetworkVarNames_Value.m_pVarType = "Vector";
+      __cxa_guard_release(&`guard variable for'CPropVehicleDriveable::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CPropVehicleDriveable9_MNetworkVarNames_Value);
+    }
+    if ( `guard variable for'CPropVehicleDriveable::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CPropVehicleDriveable10_MNetworkVarNames_Value == 0
+      && __cxa_guard_acquire(&`guard variable for'CPropVehicleDriveable::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CPropVehicleDriveable10_MNetworkVarNames_Value) != 0 )
+    {
+      CPropVehicleDriveable::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CPropVehicleDriveable10_MNetworkVarNames_Value.m_pVarName = "m_vecGunCrosshair";
+      CPropVehicleDriveable::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CPropVehicleDriveable10_MNetworkVarNames_Value.m_pVarType = "Vector";
+      __cxa_guard_release(&`guard variable for'CPropVehicleDriveable::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CPropVehicleDriveable10_MNetworkVarNames_Value);
+    }
+    if ( `guard variable for'CPropVehicleDriveable::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CPropVehicleDriveable11_MNetworkVarNames_Value == 0
+      && __cxa_guard_acquire(&`guard variable for'CPropVehicleDriveable::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CPropVehicleDriveable11_MNetworkVarNames_Value) != 0 )
+    {
+      CPropVehicleDriveable::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CPropVehicleDriveable11_MNetworkVarNames_Value.m_pVarName = "m_bUnableToFire";
+      CPropVehicleDriveable::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CPropVehicleDriveable11_MNetworkVarNames_Value.m_pVarType = "bool";
+      __cxa_guard_release(&`guard variable for'CPropVehicleDriveable::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CPropVehicleDriveable11_MNetworkVarNames_Value);
+    }
+    if ( `guard variable for'CPropVehicleDriveable::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CPropVehicleDriveable12_MNetworkVarNames_Value == 0
+      && __cxa_guard_acquire(&`guard variable for'CPropVehicleDriveable::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CPropVehicleDriveable12_MNetworkVarNames_Value) != 0 )
+    {
+      CPropVehicleDriveable::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CPropVehicleDriveable12_MNetworkVarNames_Value.m_pVarName = "m_bHasGun";
+      CPropVehicleDriveable::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CPropVehicleDriveable12_MNetworkVarNames_Value.m_pVarType = "bool";
+      __cxa_guard_release(&`guard variable for'CPropVehicleDriveable::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CPropVehicleDriveable12_MNetworkVarNames_Value);
+    }
+    if ( `guard variable for'CPropVehicleDriveable::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CPropVehicleDriveable13_MNetworkVarNames_Value == 0
+      && __cxa_guard_acquire(&`guard variable for'CPropVehicleDriveable::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CPropVehicleDriveable13_MNetworkVarNames_Value) != 0 )
+    {
+      CPropVehicleDriveable::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CPropVehicleDriveable13_MNetworkVarNames_Value.m_pVarName = "m_nScannerDisabledWeapons";
+      CPropVehicleDriveable::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CPropVehicleDriveable13_MNetworkVarNames_Value.m_pVarType = "bool";
+      __cxa_guard_release(&`guard variable for'CPropVehicleDriveable::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CPropVehicleDriveable13_MNetworkVarNames_Value);
+    }
+    if ( `guard variable for'CPropVehicleDriveable::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CPropVehicleDriveable14_MNetworkVarNames_Value == 0
+      && __cxa_guard_acquire(&`guard variable for'CPropVehicleDriveable::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CPropVehicleDriveable14_MNetworkVarNames_Value) != 0 )
+    {
+      CPropVehicleDriveable::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CPropVehicleDriveable14_MNetworkVarNames_Value.m_pVarName = "m_nScannerDisabledVehicle";
+      CPropVehicleDriveable::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CPropVehicleDriveable14_MNetworkVarNames_Value.m_pVarType = "bool";
+      __cxa_guard_release(&`guard variable for'CPropVehicleDriveable::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CPropVehicleDriveable14_MNetworkVarNames_Value);
+    }
+    if ( `guard variable for'CPropVehicleDriveable::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CPropVehicleDriveable15_MNetworkVarNames_Value == 0
+      && __cxa_guard_acquire(&`guard variable for'CPropVehicleDriveable::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CPropVehicleDriveable15_MNetworkVarNames_Value) != 0 )
+    {
+      CPropVehicleDriveable::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CPropVehicleDriveable15_MNetworkVarNames_Value.m_pVarName = "m_bEnterAnimOn";
+      CPropVehicleDriveable::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CPropVehicleDriveable15_MNetworkVarNames_Value.m_pVarType = "bool";
+      __cxa_guard_release(&`guard variable for'CPropVehicleDriveable::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CPropVehicleDriveable15_MNetworkVarNames_Value);
+    }
+    if ( `guard variable for'CPropVehicleDriveable::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CPropVehicleDriveable16_MNetworkVarNames_Value == 0
+      && __cxa_guard_acquire(&`guard variable for'CPropVehicleDriveable::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CPropVehicleDriveable16_MNetworkVarNames_Value) != 0 )
+    {
+      CPropVehicleDriveable::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CPropVehicleDriveable16_MNetworkVarNames_Value.m_pVarName = "m_bExitAnimOn";
+      CPropVehicleDriveable::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CPropVehicleDriveable16_MNetworkVarNames_Value.m_pVarType = "bool";
+      __cxa_guard_release(&`guard variable for'CPropVehicleDriveable::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CPropVehicleDriveable16_MNetworkVarNames_Value);
+    }
+    v8 = *(*v7 + 48LL);
+    v9 = (*(*v7 + 88LL))(v7, "CFourWheelServerVehicle");
+    CPropVehicleDriveable::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CPropVehicleDriveable[0].m_pType = v8(v7, v9);
+    CPropVehicleDriveable::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CPropVehicleDriveable[1].m_pType = (*(*v7 + 88LL))(v7, "CEntityIOOutput");
+    CPropVehicleDriveable::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CPropVehicleDriveable[2].m_pType = (*(*v7 + 88LL))(v7, "CEntityIOOutput");
+    CPropVehicleDriveable::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CPropVehicleDriveable[3].m_pType = (*(*v7 + 88LL))(v7, "CEntityIOOutput");
+    CPropVehicleDriveable::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CPropVehicleDriveable[4].m_pType = (*(*v7 + 88LL))(v7, "CEntityIOOutput");
+    v10 = *(*v7 + 64LL);
+    v11 = (*(*v7 + 40LL))(v7, 11);
+    CPropVehicleDriveable::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CPropVehicleDriveable[5].m_pType = v10(v7, "CEntityOutputTemplate", 5004, CAtomicManipulator<CEntityOutputTemplate<float>>::Get(void)::val, CSchemaManipulator<CEntityOutputTemplate<float>>::StaticAccessor(void)::m, v11);
+    v12 = *(*v7 + 64LL);
+    v13 = (*(*v7 + 40LL))(v7, 11);
+    CPropVehicleDriveable::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CPropVehicleDriveable[6].m_pType = v12(v7, "CEntityOutputTemplate", 5004, CAtomicManipulator<CEntityOutputTemplate<float>>::Get(void)::val, CSchemaManipulator<CEntityOutputTemplate<float>>::StaticAccessor(void)::m, v13);
+    v14 = *(*v7 + 64LL);
+    v15 = (*(*v7 + 88LL))(v7, "CBasePlayer");
+    CPropVehicleDriveable::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CPropVehicleDriveable[7].m_pType = v14(v7, "CHandle", 5003, CAtomicManipulator<CHandle<CBasePlayer>>::Get(void)::val, CSchemaManipulator<CHandle<CBasePlayer>>::StaticAccessor(void)::m, v15);
+    CPropVehicleDriveable::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CPropVehicleDriveable[8].m_pType = (*(*v7 + 40LL))(v7, 7);
+    CPropVehicleDriveable::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CPropVehicleDriveable[9].m_pType = (*(*v7 + 40LL))(v7, 5);
+    CPropVehicleDriveable::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CPropVehicleDriveable[10].m_pType = (*(*v7 + 40LL))(v7, 11);
+    CPropVehicleDriveable::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CPropVehicleDriveable[11].m_pType = (*(*v7 + 40LL))(v7, 7);
+    CPropVehicleDriveable::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CPropVehicleDriveable[12].m_pType = (*(*v7 + 40LL))(v7, 13);
+    CPropVehicleDriveable::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CPropVehicleDriveable[13].m_pType = (*(*v7 + 56LL))(v7, "Vector", 2010, CAtomicManipulator<Vector>::Get(void)::val, CSchemaManipulator<Vector>::StaticAccessor(void)::m);
+    CPropVehicleDriveable::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CPropVehicleDriveable[14].m_pType = (*(*v7 + 56LL))(v7, "Vector", 2010, CAtomicManipulator<Vector>::Get(void)::val, CSchemaManipulator<Vector>::StaticAccessor(void)::m);
+    CPropVehicleDriveable::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CPropVehicleDriveable[15].m_pType = (*(*v7 + 40LL))(v7, 13);
+    CPropVehicleDriveable::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CPropVehicleDriveable[16].m_pType = (*(*v7 + 40LL))(v7, 13);
+    CPropVehicleDriveable::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CPropVehicleDriveable[17].m_pType = (*(*v7 + 40LL))(v7, 13);
+    CPropVehicleDriveable::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CPropVehicleDriveable[18].m_pType = (*(*v7 + 40LL))(v7, 13);
+    v16 = *(*v7 + 64LL);
+    v17 = (*(*v7 + 88LL))(v7, "CBaseEntity");
+    CPropVehicleDriveable::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CPropVehicleDriveable[19].m_pType = v16(v7, "CHandle", 5003, CAtomicManipulator<CHandle<CBaseEntity>>::Get(void)::val, &CSchemaManipulator<CHandle<CBaseEntity>>::StaticAccessor(void)::m, v17);
+    CPropVehicleDriveable::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CPropVehicleDriveable[20].m_pType = (*(*v7 + 40LL))(v7, 13);
+    CPropVehicleDriveable::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CPropVehicleDriveable[21].m_pType = (*(*v7 + 40LL))(v7, 13);
+    CPropVehicleDriveable::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CPropVehicleDriveable[22].m_pType = (*(*v7 + 40LL))(v7, 11);
+    CPropVehicleDriveable::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CPropVehicleDriveable[23].m_pType = (*(*v7 + 40LL))(v7, 13);
+    CPropVehicleDriveable::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CPropVehicleDriveable[24].m_pType = (*(*v7 + 40LL))(v7, 13);
+    CPropVehicleDriveable::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CPropVehicleDriveable[25].m_pType = (*(*v7 + 40LL))(v7, 11);
+    CPropVehicleDriveable::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CPropVehicleDriveable[26].m_pType = (*(*v7 + 40LL))(v7, 11);
+    if ( `guard variable for'CPropVehicleDriveable::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_NestedClassesOf_CPropVehicleDriveable == 0
+      && __cxa_guard_acquire(&`guard variable for'CPropVehicleDriveable::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_NestedClassesOf_CPropVehicleDriveable) != 0 )
+    {
+      v18 = CPropVehicleDriveable::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult;
+      if ( CPropVehicleDriveable::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult == 0 )
+        v18 = CPropVehicleDriveable::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+                pSchemaSystem,
+                pBinaryName,
+                pProjectName);
+      CPropVehicleDriveable::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_NestedClassesOf_CPropVehicleDriveable[0] = v18;
+      __cxa_guard_release(&`guard variable for'CPropVehicleDriveable::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_NestedClassesOf_CPropVehicleDriveable);
+    }
+    (*(CPropVehicle::s_pSchemaBindingForLocalModule->_vptr_ISchemaBinding + 5))(
+      CPropVehicle::s_pSchemaBindingForLocalModule,
+      pSchemaSystem,
+      pBinaryName,
+      pProjectName);
+    CPropVehicleDriveable::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassBases_CPropVehicleDriveable[0].m_pClass = CPropVehicle::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(pSchemaSystem, pBinaryName, pProjectName);
+    v19 = (*(*pSchemaSystem + 240LL))(pSchemaSystem);
+    CPropVehicleDriveable::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CPropVehicleDriveable.m_pOuterTypeScope = v7;
+    CPropVehicleDriveable::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassBases_CPropVehicleDriveable[1].m_pClass = v19;
+    CPropVehicleDriveable::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult = &CPropVehicleDriveable::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CPropVehicleDriveable;
+    return &CPropVehicleDriveable::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CPropVehicleDriveable;
+  }
+  return result;
+}
+
+
+// CPropVehicleDriveable::Schema_VerifyBindingIsRegistered  (line 487, @0x0000000002015b30, libserver.so)
+// callers: CPropVehicleDriveable::Schema_DynamicBinding
+void __cdecl CPropVehicleDriveable::Schema_VerifyBindingIsRegistered()
+{
+  ;
+}
+
+
+// CPropVehicleDriveable::SetupEntClassInputs  (line 501, @0x0000000002015b40, libserver.so)
+void __fastcall CPropVehicleDriveable::SetupEntClassInputs(CEntityClass *pComponentInfo)
+{
+  ;
+}
+
+
+// CPropVehicleDriveable::SetupEntClassComponentOverrides  (line 507, @0x0000000002015b50, libserver.so)
+void __fastcall CPropVehicleDriveable::SetupEntClassComponentOverrides(CEntityClass *pEntityClass)
+{
+  pEntityClass->m_pComponentOverrides = 0;
+}
+
+
+// LocalRegisterSchemaModule<ArbitraryTemplateParameter_server_vehicle_base_h>  (line 513, @0x0000000002015b60, libserver.so)  // inlines: Call
+// callers: RegisterSchemaModule_vehicle_base_h
+// globals: CFourWheelServerVehicle::s_pSchemaBindingForLocalModule, CPropVehicle::CEntityInstanceEntityClass::s_pSchemaBindingForLocalModule, CPropVehicle::s_pSchemaBindingForLocalModule, CPropVehicleDriveable::CEntityInstanceEntityClass::s_pSchemaBindingForLocalModule, CPropVehicleDriveable::s_pSchemaBindingForLocalModule
+void __fastcall LocalRegisterSchemaModule<ArbitraryTemplateParameter_server_vehicle_base_h>(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        SchemaRegistrationPhase_t nRegistrationPhase)
+{
+  if ( nRegistrationPhase == SchemaRegistrationPhase_t::SCHEMA_REGISTRATION_PHASE_CLASSES )
+  {
+    (*(CFourWheelServerVehicle::s_pSchemaBindingForLocalModule->_vptr_ISchemaBinding + 5))(
+      CFourWheelServerVehicle::s_pSchemaBindingForLocalModule,
+      pSchemaSystem,
+      pBinaryName,
+      "server");
+    (*(CPropVehicle::CEntityInstanceEntityClass::s_pSchemaBindingForLocalModule->_vptr_ISchemaBinding + 5))(
+      CPropVehicle::CEntityInstanceEntityClass::s_pSchemaBindingForLocalModule,
+      pSchemaSystem,
+      pBinaryName,
+      "server");
+    (*(CPropVehicle::s_pSchemaBindingForLocalModule->_vptr_ISchemaBinding + 5))(
+      CPropVehicle::s_pSchemaBindingForLocalModule,
+      pSchemaSystem,
+      pBinaryName,
+      "server");
+    (*(CPropVehicleDriveable::CEntityInstanceEntityClass::s_pSchemaBindingForLocalModule->_vptr_ISchemaBinding + 5))(
+      CPropVehicleDriveable::CEntityInstanceEntityClass::s_pSchemaBindingForLocalModule,
+      pSchemaSystem,
+      pBinaryName,
+      "server");
+    (*(CPropVehicleDriveable::s_pSchemaBindingForLocalModule->_vptr_ISchemaBinding + 5))(
+      CPropVehicleDriveable::s_pSchemaBindingForLocalModule,
+      pSchemaSystem,
+      pBinaryName,
+      "server");
+  }
+  ++g_nLinkerHack_SchemaAnchor_RegistrationCountFor_server;
+}
+
+
+// RegisterSchemaModule_vehicle_base_h  (line 519, @0x0000000002015c10, libserver.so)
+// calls: LocalRegisterSchemaModule<ArbitraryTemplateParameter_server_vehicle_base_h>
+// callers: CSchemaRegistration_server::RegisterAllBindings
+void __fastcall RegisterSchemaModule_vehicle_base_h(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        SchemaRegistrationPhase_t nRegistrationPhase)
+{
+  LocalRegisterSchemaModule<ArbitraryTemplateParameter_server_vehicle_base_h>(
+    pSchemaSystem,
+    pBinaryName,
+    nRegistrationPhase);
+}
+
+

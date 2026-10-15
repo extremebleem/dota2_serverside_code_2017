@@ -1,0 +1,1387 @@
+
+// ==== functions (decompiled by Hex-Rays; names/signatures from DWARF) ====
+
+// CDOTA_Unit_Hero_Shredder::CEntityInstanceEntityClass::Schema_CompileTimeVerificationFunction  (line 35, @0x0000000002ce3580, libserver.so)
+void __fastcall CDOTA_Unit_Hero_Shredder::CEntityInstanceEntityClass::Schema_CompileTimeVerificationFunction(
+        CDOTA_Unit_Hero_Shredder::CEntityInstanceEntityClass *const this)
+{
+  ;
+}
+
+
+// CDOTA_Unit_Hero_Shredder::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE  (line 38, @0x0000000002cd2bc0, libserver.so)  // inlines: Call, Get, SetTypeScope
+// calls: CDOTA_BaseNPC_Hero::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE
+// callers: CSchemaNonConstructibleClassBinding<CDOTA_Unit_Hero_Shredder::CEntityInstanceEntityClass>::Register, CDOTA_Unit_Hero_Shredder::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE, CDOTA_Unit_Hero_Shredder::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE
+// globals: CDOTA_Unit_Hero_Shredder::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem 
+CSchemaClassInfo *__fastcall CDOTA_Unit_Hero_Shredder::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        const char *pProjectName)
+{
+  ISchemaSystemTypeScope *v6; // r14
+  CSchemaClassInfo *v7; // rax
+
+  v6 = (*(*pSchemaSystem + 112LL))(pSchemaSystem, 1, pBinaryName);
+  (*(CDOTA_BaseNPC_Hero::CEntityInstanceEntityClass::s_pSchemaBindingForLocalModule->_vptr_ISchemaBinding + 5))(
+    CDOTA_BaseNPC_Hero::CEntityInstanceEntityClass::s_pSchemaBindingForLocalModule,
+    pSchemaSystem,
+    pBinaryName,
+    pProjectName);
+  v7 = CDOTA_BaseNPC_Hero::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+         pSchemaSystem,
+         pBinaryName,
+         pProjectName);
+  CDOTA_Unit_Hero_Shredder::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CDOTA_Unit_Hero_Shredder_CEntityInstanceEntityClass.m_pOuterTypeScope = v6;
+  CDOTA_Unit_Hero_Shredder::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassBases_CDOTA_Unit_Hero_Shredder_CEntityInstanceEntityClass[0].m_pClass = v7;
+  CDOTA_Unit_Hero_Shredder::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult = &CDOTA_Unit_Hero_Shredder::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CDOTA_Unit_Hero_Shredder_CEntityInstanceEntityClass;
+  return &CDOTA_Unit_Hero_Shredder::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CDOTA_Unit_Hero_Shredder_CEntityInstanceEntityClass;
+}
+
+
+// CDOTA_Unit_Hero_Shredder::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE  (line 38, @0x0000000002ce3590, libserver.so)
+// calls: CDOTA_Unit_Hero_Shredder::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE
+// globals: CDOTA_Unit_Hero_Shredder::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem 
+CSchemaClassInfo *__fastcall CDOTA_Unit_Hero_Shredder::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        const char *pProjectName)
+{
+  CSchemaClassInfo *result; // rax
+
+  result = CDOTA_Unit_Hero_Shredder::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult;
+  if ( CDOTA_Unit_Hero_Shredder::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult == 0 )
+    return CDOTA_Unit_Hero_Shredder::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+             pSchemaSystem,
+             pBinaryName,
+             pProjectName);
+  return result;
+}
+
+
+// CDOTA_Unit_Hero_Shredder::CEntityInstanceEntityClass::Schema_VerifyBindingIsRegistered  (line 55, @0x0000000002ce35b0, libserver.so)
+void __cdecl CDOTA_Unit_Hero_Shredder::CEntityInstanceEntityClass::Schema_VerifyBindingIsRegistered()
+{
+  ;
+}
+
+
+// CDOTA_Unit_Hero_Shredder::Schema_CompileTimeVerificationFunction  (line 63, @0x0000000002ce35c0, libserver.so)
+void __fastcall CDOTA_Unit_Hero_Shredder::Schema_CompileTimeVerificationFunction(CDOTA_Unit_Hero_Shredder *const this)
+{
+  ;
+}
+
+
+// CDOTA_Unit_Hero_Shredder::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE  (line 67, @0x0000000002ce35d0, libserver.so)  // inlines: Call, Get, RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE, SchemaBinding_SchemaTypeOfMemberVarByAddr<CDOTA_Unit_Hero_Shredder, bool>, SetTypeScope
+// calls: __cxa_guard_acquire, __cxa_guard_release, CDOTA_BaseNPC_Hero::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE, CDOTA_Unit_Hero_Shredder::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE, __cxa_guard_abort, _Unwind_Resume
+// callers: CSchemaNonConstructibleClassBinding<CDOTA_Unit_Hero_Shredder>::Register
+// globals: CDOTA_Unit_Hero_Shredder::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::, `guard variable for'CDOTA_Unit_Hero_Shredder::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char c, CDOTA_Unit_Hero_Shredder::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem 
+CSchemaClassInfo *__fastcall CDOTA_Unit_Hero_Shredder::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        const char *pProjectName)
+{
+  CSchemaClassInfo *result; // rax
+  ISchemaSystemTypeScope *v7; // r14
+  CSchemaClassInfo *v8; // rax
+  CSchemaClassInfo *v9; // rax
+
+  result = CDOTA_Unit_Hero_Shredder::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult;
+  if ( CDOTA_Unit_Hero_Shredder::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult == 0 )
+  {
+    v7 = (*(*pSchemaSystem + 112LL))(pSchemaSystem, 1, pBinaryName);
+    CDOTA_Unit_Hero_Shredder::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CDOTA_Unit_Hero_Shredder[0].m_pType = (*(*v7 + 40LL))(v7, 13);
+    if ( `guard variable for'CDOTA_Unit_Hero_Shredder::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_NestedClassesOf_CDOTA_Unit_Hero_Shredder == 0
+      && __cxa_guard_acquire(&`guard variable for'CDOTA_Unit_Hero_Shredder::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_NestedClassesOf_CDOTA_Unit_Hero_Shredder) != 0 )
+    {
+      v8 = CDOTA_Unit_Hero_Shredder::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult;
+      if ( CDOTA_Unit_Hero_Shredder::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult == 0 )
+        v8 = CDOTA_Unit_Hero_Shredder::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+               pSchemaSystem,
+               pBinaryName,
+               pProjectName);
+      CDOTA_Unit_Hero_Shredder::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_NestedClassesOf_CDOTA_Unit_Hero_Shredder[0] = v8;
+      __cxa_guard_release(&`guard variable for'CDOTA_Unit_Hero_Shredder::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_NestedClassesOf_CDOTA_Unit_Hero_Shredder);
+    }
+    (*(CDOTA_BaseNPC_Hero::s_pSchemaBindingForLocalModule->_vptr_ISchemaBinding + 5))(
+      CDOTA_BaseNPC_Hero::s_pSchemaBindingForLocalModule,
+      pSchemaSystem,
+      pBinaryName,
+      pProjectName);
+    v9 = CDOTA_BaseNPC_Hero::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+           pSchemaSystem,
+           pBinaryName,
+           pProjectName);
+    CDOTA_Unit_Hero_Shredder::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CDOTA_Unit_Hero_Shredder.m_pOuterTypeScope = v7;
+    CDOTA_Unit_Hero_Shredder::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassBases_CDOTA_Unit_Hero_Shredder[0].m_pClass = v9;
+    CDOTA_Unit_Hero_Shredder::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult = &CDOTA_Unit_Hero_Shredder::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CDOTA_Unit_Hero_Shredder;
+    return &CDOTA_Unit_Hero_Shredder::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CDOTA_Unit_Hero_Shredder;
+  }
+  return result;
+}
+
+
+// CDOTA_Unit_Hero_Shredder::Schema_VerifyBindingIsRegistered  (line 105, @0x0000000002ce36d0, libserver.so)
+void __cdecl CDOTA_Unit_Hero_Shredder::Schema_VerifyBindingIsRegistered()
+{
+  ;
+}
+
+
+// CDOTA_Unit_Hero_Shredder::SetupEntClassInputs  (line 119, @0x0000000002ce36e0, libserver.so)
+void __fastcall CDOTA_Unit_Hero_Shredder::SetupEntClassInputs(CEntityClass *pComponentInfo)
+{
+  ;
+}
+
+
+// CDOTA_Unit_Hero_Shredder::SetupEntClassComponentOverrides  (line 125, @0x0000000002ce36f0, libserver.so)
+void __fastcall CDOTA_Unit_Hero_Shredder::SetupEntClassComponentOverrides(CEntityClass *pEntityClass)
+{
+  pEntityClass->m_pComponentOverrides = 0;
+}
+
+
+// CDOTA_Ability_Shredder_WhirlingDeath::CEntityInstanceEntityClass::Schema_CompileTimeVerificationFunction  (line 131, @0x0000000002ce3700, libserver.so)
+void __fastcall CDOTA_Ability_Shredder_WhirlingDeath::CEntityInstanceEntityClass::Schema_CompileTimeVerificationFunction(
+        CDOTA_Ability_Shredder_WhirlingDeath::CEntityInstanceEntityClass *const this)
+{
+  ;
+}
+
+
+// CDOTA_Ability_Shredder_WhirlingDeath::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE  (line 134, @0x0000000002cd3b40, libserver.so)  // inlines: Call, Get, SetTypeScope
+// calls: CDOTABaseAbility::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE
+// callers: CSchemaNonConstructibleClassBinding<CDOTA_Ability_Shredder_WhirlingDeath::CEntityInstanceEntityClass>::Register, CDOTA_Ability_Shredder_WhirlingDeath::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE, CDOTA_Ability_Shredder_WhirlingDeath::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE
+// globals: CDOTA_Ability_Shredder_WhirlingDeath::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(IS
+CSchemaClassInfo *__fastcall CDOTA_Ability_Shredder_WhirlingDeath::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        const char *pProjectName)
+{
+  ISchemaSystemTypeScope *v6; // r14
+  CSchemaClassInfo *v7; // rax
+
+  v6 = (*(*pSchemaSystem + 112LL))(pSchemaSystem, 1, pBinaryName);
+  (*(CDOTABaseAbility::CEntityInstanceEntityClass::s_pSchemaBindingForLocalModule->_vptr_ISchemaBinding + 5))(
+    CDOTABaseAbility::CEntityInstanceEntityClass::s_pSchemaBindingForLocalModule,
+    pSchemaSystem,
+    pBinaryName,
+    pProjectName);
+  v7 = CDOTABaseAbility::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+         pSchemaSystem,
+         pBinaryName,
+         pProjectName);
+  CDOTA_Ability_Shredder_WhirlingDeath::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CDOTA_Ability_Shredder_WhirlingDeath_CEntityInstanceEntityClass.m_pOuterTypeScope = v6;
+  CDOTA_Ability_Shredder_WhirlingDeath::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassBases_CDOTA_Ability_Shredder_WhirlingDeath_CEntityInstanceEntityClass[0].m_pClass = v7;
+  CDOTA_Ability_Shredder_WhirlingDeath::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult = &CDOTA_Ability_Shredder_WhirlingDeath::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CDOTA_Ability_Shredder_WhirlingDeath_CEntityInstanceEntityClass;
+  return &CDOTA_Ability_Shredder_WhirlingDeath::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CDOTA_Ability_Shredder_WhirlingDeath_CEntityInstanceEntityClass;
+}
+
+
+// CDOTA_Ability_Shredder_WhirlingDeath::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE  (line 134, @0x0000000002ce3710, libserver.so)
+// calls: CDOTA_Ability_Shredder_WhirlingDeath::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE
+// globals: CDOTA_Ability_Shredder_WhirlingDeath::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(IS
+CSchemaClassInfo *__fastcall CDOTA_Ability_Shredder_WhirlingDeath::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        const char *pProjectName)
+{
+  CSchemaClassInfo *result; // rax
+
+  result = CDOTA_Ability_Shredder_WhirlingDeath::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult;
+  if ( CDOTA_Ability_Shredder_WhirlingDeath::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult == 0 )
+    return CDOTA_Ability_Shredder_WhirlingDeath::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+             pSchemaSystem,
+             pBinaryName,
+             pProjectName);
+  return result;
+}
+
+
+// CDOTA_Ability_Shredder_WhirlingDeath::CEntityInstanceEntityClass::Schema_VerifyBindingIsRegistered  (line 151, @0x0000000002ce3730, libserver.so)
+void __cdecl CDOTA_Ability_Shredder_WhirlingDeath::CEntityInstanceEntityClass::Schema_VerifyBindingIsRegistered()
+{
+  ;
+}
+
+
+// CDOTA_Ability_Shredder_WhirlingDeath::Schema_CompileTimeVerificationFunction  (line 159, @0x0000000002ce3740, libserver.so)
+void __fastcall CDOTA_Ability_Shredder_WhirlingDeath::Schema_CompileTimeVerificationFunction(
+        CDOTA_Ability_Shredder_WhirlingDeath *const this)
+{
+  ;
+}
+
+
+// CDOTA_Ability_Shredder_WhirlingDeath::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE  (line 166, @0x0000000002ce3750, libserver.so)  // inlines: Call, Get, RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE, SchemaBinding_SchemaTypeOfMemberVarByAddr<CDOTA_Ability_Shredder_WhirlingDeath, float>, SchemaBinding_SchemaTypeOfMemberVarByAddr<CDOTA_Ability_Shredder_WhirlingDeath, int>, SetTypeScope
+// calls: __cxa_guard_acquire, __cxa_guard_release, CDOTABaseAbility::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE, CDOTA_Ability_Shredder_WhirlingDeath::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE, __cxa_guard_abort, _Unwind_Resume
+// callers: CSchemaNonConstructibleClassBinding<CDOTA_Ability_Shredder_WhirlingDeath>::Register
+// globals: CDOTA_Ability_Shredder_WhirlingDeath::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,ch, `guard variable for'CDOTA_Ability_Shredder_WhirlingDeath::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSys, CDOTA_Ability_Shredder_WhirlingDeath::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(IS
+CSchemaClassInfo *__fastcall CDOTA_Ability_Shredder_WhirlingDeath::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        const char *pProjectName)
+{
+  CSchemaClassInfo *result; // rax
+  ISchemaSystemTypeScope *v7; // r14
+  CSchemaClassInfo *v8; // rax
+  CSchemaClassInfo *v9; // rax
+
+  result = CDOTA_Ability_Shredder_WhirlingDeath::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult;
+  if ( CDOTA_Ability_Shredder_WhirlingDeath::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult == 0 )
+  {
+    v7 = (*(*pSchemaSystem + 112LL))(pSchemaSystem, 1, pBinaryName);
+    CDOTA_Ability_Shredder_WhirlingDeath::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CDOTA_Ability_Shredder_WhirlingDeath[0].m_pType = (*(*v7 + 40LL))(v7, 7);
+    CDOTA_Ability_Shredder_WhirlingDeath::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CDOTA_Ability_Shredder_WhirlingDeath[1].m_pType = (*(*v7 + 40LL))(v7, 7);
+    CDOTA_Ability_Shredder_WhirlingDeath::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CDOTA_Ability_Shredder_WhirlingDeath[2].m_pType = (*(*v7 + 40LL))(v7, 11);
+    CDOTA_Ability_Shredder_WhirlingDeath::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CDOTA_Ability_Shredder_WhirlingDeath[3].m_pType = (*(*v7 + 40LL))(v7, 11);
+    if ( `guard variable for'CDOTA_Ability_Shredder_WhirlingDeath::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_NestedClassesOf_CDOTA_Ability_Shredder_WhirlingDeath == 0
+      && __cxa_guard_acquire(&`guard variable for'CDOTA_Ability_Shredder_WhirlingDeath::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_NestedClassesOf_CDOTA_Ability_Shredder_WhirlingDeath) != 0 )
+    {
+      v8 = CDOTA_Ability_Shredder_WhirlingDeath::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult;
+      if ( CDOTA_Ability_Shredder_WhirlingDeath::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult == 0 )
+        v8 = CDOTA_Ability_Shredder_WhirlingDeath::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+               pSchemaSystem,
+               pBinaryName,
+               pProjectName);
+      CDOTA_Ability_Shredder_WhirlingDeath::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_NestedClassesOf_CDOTA_Ability_Shredder_WhirlingDeath[0] = v8;
+      __cxa_guard_release(&`guard variable for'CDOTA_Ability_Shredder_WhirlingDeath::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_NestedClassesOf_CDOTA_Ability_Shredder_WhirlingDeath);
+    }
+    (*(CDOTABaseAbility::s_pSchemaBindingForLocalModule->_vptr_ISchemaBinding + 5))(
+      CDOTABaseAbility::s_pSchemaBindingForLocalModule,
+      pSchemaSystem,
+      pBinaryName,
+      pProjectName);
+    v9 = CDOTABaseAbility::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+           pSchemaSystem,
+           pBinaryName,
+           pProjectName);
+    CDOTA_Ability_Shredder_WhirlingDeath::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CDOTA_Ability_Shredder_WhirlingDeath.m_pOuterTypeScope = v7;
+    CDOTA_Ability_Shredder_WhirlingDeath::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassBases_CDOTA_Ability_Shredder_WhirlingDeath[0].m_pClass = v9;
+    CDOTA_Ability_Shredder_WhirlingDeath::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult = &CDOTA_Ability_Shredder_WhirlingDeath::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CDOTA_Ability_Shredder_WhirlingDeath;
+    return &CDOTA_Ability_Shredder_WhirlingDeath::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CDOTA_Ability_Shredder_WhirlingDeath;
+  }
+  return result;
+}
+
+
+// CDOTA_Ability_Shredder_WhirlingDeath::Schema_VerifyBindingIsRegistered  (line 210, @0x0000000002ce3890, libserver.so)
+void __cdecl CDOTA_Ability_Shredder_WhirlingDeath::Schema_VerifyBindingIsRegistered()
+{
+  ;
+}
+
+
+// CDOTA_Ability_Shredder_WhirlingDeath::SetupEntClassInputs  (line 224, @0x0000000002ce38a0, libserver.so)
+void __fastcall CDOTA_Ability_Shredder_WhirlingDeath::SetupEntClassInputs(CEntityClass *pComponentInfo)
+{
+  ;
+}
+
+
+// CDOTA_Ability_Shredder_WhirlingDeath::SetupEntClassComponentOverrides  (line 230, @0x0000000002ce38b0, libserver.so)
+void __fastcall CDOTA_Ability_Shredder_WhirlingDeath::SetupEntClassComponentOverrides(CEntityClass *pEntityClass)
+{
+  pEntityClass->m_pComponentOverrides = 0;
+}
+
+
+// CDOTA_Ability_Shredder_TimberChain::CEntityInstanceEntityClass::Schema_CompileTimeVerificationFunction  (line 236, @0x0000000002ce38c0, libserver.so)
+void __fastcall CDOTA_Ability_Shredder_TimberChain::CEntityInstanceEntityClass::Schema_CompileTimeVerificationFunction(
+        CDOTA_Ability_Shredder_TimberChain::CEntityInstanceEntityClass *const this)
+{
+  ;
+}
+
+
+// CDOTA_Ability_Shredder_TimberChain::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE  (line 239, @0x0000000002cd3bc0, libserver.so)  // inlines: Call, Get, SetTypeScope
+// calls: CDOTABaseAbility::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE
+// callers: CSchemaNonConstructibleClassBinding<CDOTA_Ability_Shredder_TimberChain::CEntityInstanceEntityClass>::Register, CDOTA_Ability_Shredder_TimberChain::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE, CDOTA_Ability_Shredder_TimberChain::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE
+// globals: CDOTA_Ability_Shredder_TimberChain::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISch
+CSchemaClassInfo *__fastcall CDOTA_Ability_Shredder_TimberChain::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        const char *pProjectName)
+{
+  ISchemaSystemTypeScope *v6; // r14
+  CSchemaClassInfo *v7; // rax
+
+  v6 = (*(*pSchemaSystem + 112LL))(pSchemaSystem, 1, pBinaryName);
+  (*(CDOTABaseAbility::CEntityInstanceEntityClass::s_pSchemaBindingForLocalModule->_vptr_ISchemaBinding + 5))(
+    CDOTABaseAbility::CEntityInstanceEntityClass::s_pSchemaBindingForLocalModule,
+    pSchemaSystem,
+    pBinaryName,
+    pProjectName);
+  v7 = CDOTABaseAbility::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+         pSchemaSystem,
+         pBinaryName,
+         pProjectName);
+  CDOTA_Ability_Shredder_TimberChain::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CDOTA_Ability_Shredder_TimberChain_CEntityInstanceEntityClass.m_pOuterTypeScope = v6;
+  CDOTA_Ability_Shredder_TimberChain::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassBases_CDOTA_Ability_Shredder_TimberChain_CEntityInstanceEntityClass[0].m_pClass = v7;
+  CDOTA_Ability_Shredder_TimberChain::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult = &CDOTA_Ability_Shredder_TimberChain::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CDOTA_Ability_Shredder_TimberChain_CEntityInstanceEntityClass;
+  return &CDOTA_Ability_Shredder_TimberChain::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CDOTA_Ability_Shredder_TimberChain_CEntityInstanceEntityClass;
+}
+
+
+// CDOTA_Ability_Shredder_TimberChain::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE  (line 239, @0x0000000002ce38d0, libserver.so)
+// calls: CDOTA_Ability_Shredder_TimberChain::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE
+// globals: CDOTA_Ability_Shredder_TimberChain::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISch
+CSchemaClassInfo *__fastcall CDOTA_Ability_Shredder_TimberChain::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        const char *pProjectName)
+{
+  CSchemaClassInfo *result; // rax
+
+  result = CDOTA_Ability_Shredder_TimberChain::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult;
+  if ( CDOTA_Ability_Shredder_TimberChain::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult == 0 )
+    return CDOTA_Ability_Shredder_TimberChain::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+             pSchemaSystem,
+             pBinaryName,
+             pProjectName);
+  return result;
+}
+
+
+// CDOTA_Ability_Shredder_TimberChain::CEntityInstanceEntityClass::Schema_VerifyBindingIsRegistered  (line 256, @0x0000000002ce38f0, libserver.so)
+void __cdecl CDOTA_Ability_Shredder_TimberChain::CEntityInstanceEntityClass::Schema_VerifyBindingIsRegistered()
+{
+  ;
+}
+
+
+// CDOTA_Ability_Shredder_TimberChain::Schema_CompileTimeVerificationFunction  (line 264, @0x0000000002ce3900, libserver.so)
+void __fastcall CDOTA_Ability_Shredder_TimberChain::Schema_CompileTimeVerificationFunction(
+        CDOTA_Ability_Shredder_TimberChain *const this)
+{
+  ;
+}
+
+
+// CDOTA_Ability_Shredder_TimberChain::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE  (line 271, @0x0000000002ce3910, libserver.so)  // inlines: Call, Get, RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE, SchemaBinding_SchemaTypeOfMemberVarByAddr<CDOTA_Ability_Shredder_TimberChain, Vector>, SchemaBinding_SchemaTypeOfMemberVarByAddr<CDOTA_Ability_Shredder_TimberChain, bool>, SchemaBinding_SchemaTypeOfMemberVarByAddr<CDOTA_Ability_Shredder_TimberChain, int>, SetTypeScope
+// calls: __cxa_guard_acquire, __cxa_guard_release, CDOTABaseAbility::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE, CDOTA_Ability_Shredder_TimberChain::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE, __cxa_guard_abort, _Unwind_Resume
+// callers: CSchemaNonConstructibleClassBinding<CDOTA_Ability_Shredder_TimberChain>::Register
+// globals: CDOTA_Ability_Shredder_TimberChain::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char, CSchemaManipulator<Vector>::StaticAccessor(void)::m, CAtomicManipulator<Vector>::Get(void)::val, `guard variable for'CDOTA_Ability_Shredder_TimberChain::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSyste, CDOTA_Ability_Shredder_TimberChain::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISch
+CSchemaClassInfo *__fastcall CDOTA_Ability_Shredder_TimberChain::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        const char *pProjectName)
+{
+  CSchemaClassInfo *result; // rax
+  ISchemaSystemTypeScope *v7; // r14
+  CSchemaClassInfo *v8; // rax
+  CSchemaClassInfo *v9; // rax
+
+  result = CDOTA_Ability_Shredder_TimberChain::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult;
+  if ( CDOTA_Ability_Shredder_TimberChain::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult == 0 )
+  {
+    v7 = (*(*pSchemaSystem + 112LL))(pSchemaSystem, 1, pBinaryName);
+    CDOTA_Ability_Shredder_TimberChain::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CDOTA_Ability_Shredder_TimberChain[0].m_pType = (*(*v7 + 40LL))(v7, 7);
+    CDOTA_Ability_Shredder_TimberChain::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CDOTA_Ability_Shredder_TimberChain[1].m_pType = (*(*v7 + 40LL))(v7, 7);
+    CDOTA_Ability_Shredder_TimberChain::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CDOTA_Ability_Shredder_TimberChain[2].m_pType = (*(*v7 + 56LL))(v7, "Vector", 2010, CAtomicManipulator<Vector>::Get(void)::val, CSchemaManipulator<Vector>::StaticAccessor(void)::m);
+    CDOTA_Ability_Shredder_TimberChain::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CDOTA_Ability_Shredder_TimberChain[3].m_pType = (*(*v7 + 40LL))(v7, 13);
+    if ( `guard variable for'CDOTA_Ability_Shredder_TimberChain::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_NestedClassesOf_CDOTA_Ability_Shredder_TimberChain == 0
+      && __cxa_guard_acquire(&`guard variable for'CDOTA_Ability_Shredder_TimberChain::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_NestedClassesOf_CDOTA_Ability_Shredder_TimberChain) != 0 )
+    {
+      v8 = CDOTA_Ability_Shredder_TimberChain::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult;
+      if ( CDOTA_Ability_Shredder_TimberChain::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult == 0 )
+        v8 = CDOTA_Ability_Shredder_TimberChain::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+               pSchemaSystem,
+               pBinaryName,
+               pProjectName);
+      CDOTA_Ability_Shredder_TimberChain::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_NestedClassesOf_CDOTA_Ability_Shredder_TimberChain[0] = v8;
+      __cxa_guard_release(&`guard variable for'CDOTA_Ability_Shredder_TimberChain::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_NestedClassesOf_CDOTA_Ability_Shredder_TimberChain);
+    }
+    (*(CDOTABaseAbility::s_pSchemaBindingForLocalModule->_vptr_ISchemaBinding + 5))(
+      CDOTABaseAbility::s_pSchemaBindingForLocalModule,
+      pSchemaSystem,
+      pBinaryName,
+      pProjectName);
+    v9 = CDOTABaseAbility::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+           pSchemaSystem,
+           pBinaryName,
+           pProjectName);
+    CDOTA_Ability_Shredder_TimberChain::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CDOTA_Ability_Shredder_TimberChain.m_pOuterTypeScope = v7;
+    CDOTA_Ability_Shredder_TimberChain::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassBases_CDOTA_Ability_Shredder_TimberChain[0].m_pClass = v9;
+    CDOTA_Ability_Shredder_TimberChain::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult = &CDOTA_Ability_Shredder_TimberChain::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CDOTA_Ability_Shredder_TimberChain;
+    return &CDOTA_Ability_Shredder_TimberChain::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CDOTA_Ability_Shredder_TimberChain;
+  }
+  return result;
+}
+
+
+// CDOTA_Ability_Shredder_TimberChain::Schema_VerifyBindingIsRegistered  (line 315, @0x0000000002ce3a60, libserver.so)
+void __cdecl CDOTA_Ability_Shredder_TimberChain::Schema_VerifyBindingIsRegistered()
+{
+  ;
+}
+
+
+// CDOTA_Ability_Shredder_TimberChain::SetupEntClassInputs  (line 329, @0x0000000002ce3a70, libserver.so)
+void __fastcall CDOTA_Ability_Shredder_TimberChain::SetupEntClassInputs(CEntityClass *pComponentInfo)
+{
+  ;
+}
+
+
+// CDOTA_Ability_Shredder_TimberChain::SetupEntClassComponentOverrides  (line 335, @0x0000000002ce3a80, libserver.so)
+void __fastcall CDOTA_Ability_Shredder_TimberChain::SetupEntClassComponentOverrides(CEntityClass *pEntityClass)
+{
+  pEntityClass->m_pComponentOverrides = 0;
+}
+
+
+// CDOTA_Ability_Shredder_Reactive_Armor::CEntityInstanceEntityClass::Schema_CompileTimeVerificationFunction  (line 341, @0x0000000002ce3a90, libserver.so)
+void __fastcall CDOTA_Ability_Shredder_Reactive_Armor::CEntityInstanceEntityClass::Schema_CompileTimeVerificationFunction(
+        CDOTA_Ability_Shredder_Reactive_Armor::CEntityInstanceEntityClass *const this)
+{
+  ;
+}
+
+
+// CDOTA_Ability_Shredder_Reactive_Armor::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE  (line 344, @0x0000000002cd3c40, libserver.so)  // inlines: Call, Get, SetTypeScope
+// calls: CDOTABaseAbility::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE
+// callers: CSchemaNonConstructibleClassBinding<CDOTA_Ability_Shredder_Reactive_Armor::CEntityInstanceEntityClass>::Register, CDOTA_Ability_Shredder_Reactive_Armor::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE, CDOTA_Ability_Shredder_Reactive_Armor::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE
+// globals: CDOTA_Ability_Shredder_Reactive_Armor::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(I
+CSchemaClassInfo *__fastcall CDOTA_Ability_Shredder_Reactive_Armor::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        const char *pProjectName)
+{
+  ISchemaSystemTypeScope *v6; // r14
+  CSchemaClassInfo *v7; // rax
+
+  v6 = (*(*pSchemaSystem + 112LL))(pSchemaSystem, 1, pBinaryName);
+  (*(CDOTABaseAbility::CEntityInstanceEntityClass::s_pSchemaBindingForLocalModule->_vptr_ISchemaBinding + 5))(
+    CDOTABaseAbility::CEntityInstanceEntityClass::s_pSchemaBindingForLocalModule,
+    pSchemaSystem,
+    pBinaryName,
+    pProjectName);
+  v7 = CDOTABaseAbility::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+         pSchemaSystem,
+         pBinaryName,
+         pProjectName);
+  CDOTA_Ability_Shredder_Reactive_Armor::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CDOTA_Ability_Shredder_Reactive_Armor_CEntityInstanceEntityClass.m_pOuterTypeScope = v6;
+  CDOTA_Ability_Shredder_Reactive_Armor::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassBases_CDOTA_Ability_Shredder_Reactive_Armor_CEntityInstanceEntityClass[0].m_pClass = v7;
+  CDOTA_Ability_Shredder_Reactive_Armor::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult = &CDOTA_Ability_Shredder_Reactive_Armor::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CDOTA_Ability_Shredder_Reactive_Armor_CEntityInstanceEntityClass;
+  return &CDOTA_Ability_Shredder_Reactive_Armor::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CDOTA_Ability_Shredder_Reactive_Armor_CEntityInstanceEntityClass;
+}
+
+
+// CDOTA_Ability_Shredder_Reactive_Armor::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE  (line 344, @0x0000000002ce3aa0, libserver.so)
+// calls: CDOTA_Ability_Shredder_Reactive_Armor::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE
+// globals: CDOTA_Ability_Shredder_Reactive_Armor::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(I
+CSchemaClassInfo *__fastcall CDOTA_Ability_Shredder_Reactive_Armor::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        const char *pProjectName)
+{
+  CSchemaClassInfo *result; // rax
+
+  result = CDOTA_Ability_Shredder_Reactive_Armor::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult;
+  if ( CDOTA_Ability_Shredder_Reactive_Armor::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult == 0 )
+    return CDOTA_Ability_Shredder_Reactive_Armor::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+             pSchemaSystem,
+             pBinaryName,
+             pProjectName);
+  return result;
+}
+
+
+// CDOTA_Ability_Shredder_Reactive_Armor::CEntityInstanceEntityClass::Schema_VerifyBindingIsRegistered  (line 361, @0x0000000002ce3ac0, libserver.so)
+void __cdecl CDOTA_Ability_Shredder_Reactive_Armor::CEntityInstanceEntityClass::Schema_VerifyBindingIsRegistered()
+{
+  ;
+}
+
+
+// CDOTA_Ability_Shredder_Reactive_Armor::Schema_CompileTimeVerificationFunction  (line 369, @0x0000000002ce3ad0, libserver.so)
+void __fastcall CDOTA_Ability_Shredder_Reactive_Armor::Schema_CompileTimeVerificationFunction(
+        CDOTA_Ability_Shredder_Reactive_Armor *const this)
+{
+  ;
+}
+
+
+// CDOTA_Ability_Shredder_Reactive_Armor::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE  (line 372, @0x0000000002ce3ae0, libserver.so)  // inlines: Call, Get, RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE, SetTypeScope
+// calls: __cxa_guard_acquire, __cxa_guard_release, CDOTABaseAbility::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE, CDOTA_Ability_Shredder_Reactive_Armor::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE, __cxa_guard_abort, _Unwind_Resume
+// callers: CSchemaNonConstructibleClassBinding<CDOTA_Ability_Shredder_Reactive_Armor>::Register
+// globals: CDOTA_Ability_Shredder_Reactive_Armor::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,c, `guard variable for'CDOTA_Ability_Shredder_Reactive_Armor::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSy, CDOTA_Ability_Shredder_Reactive_Armor::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(I
+CSchemaClassInfo *__fastcall CDOTA_Ability_Shredder_Reactive_Armor::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        const char *pProjectName)
+{
+  CSchemaClassInfo *result; // rax
+  ISchemaSystemTypeScope *v7; // r14
+  CSchemaClassInfo *v8; // rax
+  CSchemaClassInfo *v9; // rax
+
+  result = CDOTA_Ability_Shredder_Reactive_Armor::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult;
+  if ( CDOTA_Ability_Shredder_Reactive_Armor::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult == 0 )
+  {
+    v7 = (*(*pSchemaSystem + 112LL))(pSchemaSystem, 1, pBinaryName);
+    if ( `guard variable for'CDOTA_Ability_Shredder_Reactive_Armor::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_NestedClassesOf_CDOTA_Ability_Shredder_Reactive_Armor == 0
+      && __cxa_guard_acquire(&`guard variable for'CDOTA_Ability_Shredder_Reactive_Armor::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_NestedClassesOf_CDOTA_Ability_Shredder_Reactive_Armor) != 0 )
+    {
+      v8 = CDOTA_Ability_Shredder_Reactive_Armor::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult;
+      if ( CDOTA_Ability_Shredder_Reactive_Armor::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult == 0 )
+        v8 = CDOTA_Ability_Shredder_Reactive_Armor::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+               pSchemaSystem,
+               pBinaryName,
+               pProjectName);
+      CDOTA_Ability_Shredder_Reactive_Armor::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_NestedClassesOf_CDOTA_Ability_Shredder_Reactive_Armor[0] = v8;
+      __cxa_guard_release(&`guard variable for'CDOTA_Ability_Shredder_Reactive_Armor::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_NestedClassesOf_CDOTA_Ability_Shredder_Reactive_Armor);
+    }
+    (*(CDOTABaseAbility::s_pSchemaBindingForLocalModule->_vptr_ISchemaBinding + 5))(
+      CDOTABaseAbility::s_pSchemaBindingForLocalModule,
+      pSchemaSystem,
+      pBinaryName,
+      pProjectName);
+    v9 = CDOTABaseAbility::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+           pSchemaSystem,
+           pBinaryName,
+           pProjectName);
+    CDOTA_Ability_Shredder_Reactive_Armor::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CDOTA_Ability_Shredder_Reactive_Armor.m_pOuterTypeScope = v7;
+    CDOTA_Ability_Shredder_Reactive_Armor::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassBases_CDOTA_Ability_Shredder_Reactive_Armor[0].m_pClass = v9;
+    CDOTA_Ability_Shredder_Reactive_Armor::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult = &CDOTA_Ability_Shredder_Reactive_Armor::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CDOTA_Ability_Shredder_Reactive_Armor;
+    return &CDOTA_Ability_Shredder_Reactive_Armor::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CDOTA_Ability_Shredder_Reactive_Armor;
+  }
+  return result;
+}
+
+
+// CDOTA_Ability_Shredder_Reactive_Armor::Schema_VerifyBindingIsRegistered  (line 400, @0x0000000002ce3bc0, libserver.so)
+void __cdecl CDOTA_Ability_Shredder_Reactive_Armor::Schema_VerifyBindingIsRegistered()
+{
+  ;
+}
+
+
+// CDOTA_Ability_Shredder_Reactive_Armor::SetupEntClassInputs  (line 414, @0x0000000002ce3bd0, libserver.so)
+void __fastcall CDOTA_Ability_Shredder_Reactive_Armor::SetupEntClassInputs(CEntityClass *pComponentInfo)
+{
+  ;
+}
+
+
+// CDOTA_Ability_Shredder_Reactive_Armor::SetupEntClassComponentOverrides  (line 420, @0x0000000002ce3be0, libserver.so)
+void __fastcall CDOTA_Ability_Shredder_Reactive_Armor::SetupEntClassComponentOverrides(CEntityClass *pEntityClass)
+{
+  pEntityClass->m_pComponentOverrides = 0;
+}
+
+
+// CDOTA_Ability_Shredder_Chakram::CEntityInstanceEntityClass::Schema_CompileTimeVerificationFunction  (line 426, @0x0000000002ce3bf0, libserver.so)
+void __fastcall CDOTA_Ability_Shredder_Chakram::CEntityInstanceEntityClass::Schema_CompileTimeVerificationFunction(
+        CDOTA_Ability_Shredder_Chakram::CEntityInstanceEntityClass *const this)
+{
+  ;
+}
+
+
+// CDOTA_Ability_Shredder_Chakram::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE  (line 429, @0x0000000002cd3cc0, libserver.so)  // inlines: Call, Get, SetTypeScope
+// calls: CDOTABaseAbility::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE
+// callers: CDOTA_Ability_Shredder_ChakramAlias_shredder_chakram_2::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE, CSchemaNonConstructibleClassBinding<CDOTA_Ability_Shredder_Chakram::CEntityInstanceEntityClass>::Register, CDOTA_Ability_Shredder_Chakram::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE, CDOTA_Ability_Shredder_Chakram::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE
+// globals: CDOTA_Ability_Shredder_Chakram::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaS
+CSchemaClassInfo *__fastcall CDOTA_Ability_Shredder_Chakram::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        const char *pProjectName)
+{
+  ISchemaSystemTypeScope *v6; // r14
+  CSchemaClassInfo *v7; // rax
+
+  v6 = (*(*pSchemaSystem + 112LL))(pSchemaSystem, 1, pBinaryName);
+  (*(CDOTABaseAbility::CEntityInstanceEntityClass::s_pSchemaBindingForLocalModule->_vptr_ISchemaBinding + 5))(
+    CDOTABaseAbility::CEntityInstanceEntityClass::s_pSchemaBindingForLocalModule,
+    pSchemaSystem,
+    pBinaryName,
+    pProjectName);
+  v7 = CDOTABaseAbility::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+         pSchemaSystem,
+         pBinaryName,
+         pProjectName);
+  CDOTA_Ability_Shredder_Chakram::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CDOTA_Ability_Shredder_Chakram_CEntityInstanceEntityClass.m_pOuterTypeScope = v6;
+  CDOTA_Ability_Shredder_Chakram::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassBases_CDOTA_Ability_Shredder_Chakram_CEntityInstanceEntityClass[0].m_pClass = v7;
+  CDOTA_Ability_Shredder_Chakram::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult = &CDOTA_Ability_Shredder_Chakram::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CDOTA_Ability_Shredder_Chakram_CEntityInstanceEntityClass;
+  return &CDOTA_Ability_Shredder_Chakram::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CDOTA_Ability_Shredder_Chakram_CEntityInstanceEntityClass;
+}
+
+
+// CDOTA_Ability_Shredder_Chakram::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE  (line 429, @0x0000000002ce3c00, libserver.so)
+// calls: CDOTA_Ability_Shredder_Chakram::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE
+// globals: CDOTA_Ability_Shredder_Chakram::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaS
+CSchemaClassInfo *__fastcall CDOTA_Ability_Shredder_Chakram::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        const char *pProjectName)
+{
+  CSchemaClassInfo *result; // rax
+
+  result = CDOTA_Ability_Shredder_Chakram::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult;
+  if ( CDOTA_Ability_Shredder_Chakram::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult == 0 )
+    return CDOTA_Ability_Shredder_Chakram::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+             pSchemaSystem,
+             pBinaryName,
+             pProjectName);
+  return result;
+}
+
+
+// CDOTA_Ability_Shredder_Chakram::CEntityInstanceEntityClass::Schema_VerifyBindingIsRegistered  (line 446, @0x0000000002ce3c20, libserver.so)
+void __cdecl CDOTA_Ability_Shredder_Chakram::CEntityInstanceEntityClass::Schema_VerifyBindingIsRegistered()
+{
+  ;
+}
+
+
+// CDOTA_Ability_Shredder_Chakram::Schema_CompileTimeVerificationFunction  (line 454, @0x0000000002ce3c30, libserver.so)
+void __fastcall CDOTA_Ability_Shredder_Chakram::Schema_CompileTimeVerificationFunction(
+        CDOTA_Ability_Shredder_Chakram *const this)
+{
+  ;
+}
+
+
+// CDOTA_Ability_Shredder_Chakram::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE  (line 471, @0x0000000002ce3c40, libserver.so)  // inlines: Call, Get, RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE, SchemaBinding_SchemaTypeOfMemberVarByAddr<CDOTA_Ability_Shredder_Chakram, CHandle<CBaseEntity> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<CDOTA_Ability_Shredder_Chakram, CUtlVector<CHandle<CBaseEntity> > >, SchemaBinding_SchemaTypeOfMemberVarByAddr<CDOTA_Ability_Shredder_Chakram, SndOpEventGuid_t>, SchemaBinding_SchemaTypeOfMemberVarByAddr<CDOTA_Ability_Shredder_Chakram, Vector>, SchemaBinding_SchemaTypeOfMemberVarByAddr<CDOTA_Ability_Shredder_Chakram, bool>, SchemaBinding_SchemaTypeOfMemberVarByAddr<CDOTA_Ability_Shredder_Chakram, float>, SchemaBinding_SchemaTypeOfMemberVarByAddr<CDOTA_Ability_Shredder_Chakram, int>, SetTypeScope
+// calls: __cxa_guard_acquire, __cxa_guard_release, CDOTABaseAbility::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE, CDOTA_Ability_Shredder_Chakram::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE, __cxa_guard_abort, _Unwind_Resume
+// callers: CSchemaNonConstructibleClassBinding<CDOTA_Ability_Shredder_Chakram>::Register, CDOTA_Ability_Shredder_ChakramAlias_shredder_chakram_2::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE
+// strings: "CBaseEntity", "CHandle", "CUtlVector"
+// globals: CDOTA_Ability_Shredder_Chakram::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char con, CSchemaManipulator<Vector>::StaticAccessor(void)::m, CAtomicManipulator<Vector>::Get(void)::val, CSchemaManipulator<CHandle<CBaseEntity>>::StaticAccessor(void)::m, CAtomicManipulator<CHandle<CBaseEntity>>::Get(void)::val, CSchemaManipulator<CUtlVector<CHandle<CBaseEntity>,CUtlMemory<CHandle<CBaseEntity>,int>>>::StaticAccessor(void)::m, CAtomicManipulator<CUtlVector<CHandle<CBaseEntity>,CUtlMemory<CHandle<CBaseEntity>,int>>>::Get(void)::val, `guard variable for'CDOTA_Ability_Shredder_Chakram::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *, (9 total)
+CSchemaClassInfo *__fastcall CDOTA_Ability_Shredder_Chakram::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        const char *pProjectName)
+{
+  CSchemaClassInfo *result; // rax
+  ISchemaSystemTypeScope *v7; // rbx
+  __int64 (__fastcall *v8)(ISchemaSystemTypeScope *, const char *, __int64, __int64 (__fastcall ***)(), __int64 (__fastcall ***)(), __int64); // r15
+  __int64 v9; // rax
+  __int64 (__fastcall *v10)(ISchemaSystemTypeScope *, const char *, __int64, __int64 (__fastcall ***)(), __int64 (__fastcall ***)(), __int64); // r15
+  __int64 v11; // rax
+  __int64 v12; // rax
+  CSchemaClassInfo *v13; // rax
+  CSchemaClassInfo *v14; // rax
+
+  result = CDOTA_Ability_Shredder_Chakram::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult;
+  if ( CDOTA_Ability_Shredder_Chakram::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult == 0 )
+  {
+    v7 = (*(*pSchemaSystem + 112LL))(pSchemaSystem, 1, pBinaryName);
+    CDOTA_Ability_Shredder_Chakram::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CDOTA_Ability_Shredder_Chakram[0].m_pType = (*(*v7 + 40LL))(v7, 11);
+    CDOTA_Ability_Shredder_Chakram::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CDOTA_Ability_Shredder_Chakram[1].m_pType = (*(*v7 + 40LL))(v7, 11);
+    CDOTA_Ability_Shredder_Chakram::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CDOTA_Ability_Shredder_Chakram[2].m_pType = (*(*v7 + 40LL))(v7, 11);
+    CDOTA_Ability_Shredder_Chakram::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CDOTA_Ability_Shredder_Chakram[3].m_pType = (*(*v7 + 40LL))(v7, 7);
+    CDOTA_Ability_Shredder_Chakram::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CDOTA_Ability_Shredder_Chakram[4].m_pType = (*(*v7 + 56LL))(v7, "Vector", 2010, CAtomicManipulator<Vector>::Get(void)::val, CSchemaManipulator<Vector>::StaticAccessor(void)::m);
+    CDOTA_Ability_Shredder_Chakram::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CDOTA_Ability_Shredder_Chakram[5].m_pType = (*(*v7 + 40LL))(v7, 11);
+    CDOTA_Ability_Shredder_Chakram::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CDOTA_Ability_Shredder_Chakram[6].m_pType = (*(*v7 + 40LL))(v7, 13);
+    CDOTA_Ability_Shredder_Chakram::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CDOTA_Ability_Shredder_Chakram[7].m_pType = (*(*v7 + 40LL))(v7, 7);
+    CDOTA_Ability_Shredder_Chakram::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CDOTA_Ability_Shredder_Chakram[8].m_pType = (*(*v7 + 40LL))(v7, 7);
+    CDOTA_Ability_Shredder_Chakram::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CDOTA_Ability_Shredder_Chakram[9].m_pType = (*(*v7 + 40LL))(v7, 7);
+    CDOTA_Ability_Shredder_Chakram::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CDOTA_Ability_Shredder_Chakram[10].m_pType = (*(*v7 + 40LL))(v7, 7);
+    v8 = *(*v7 + 64LL);
+    v9 = (*(*v7 + 88LL))(v7, "CBaseEntity");
+    CDOTA_Ability_Shredder_Chakram::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CDOTA_Ability_Shredder_Chakram[11].m_pType = v8(v7, "CHandle", 5003, CAtomicManipulator<CHandle<CBaseEntity>>::Get(void)::val, &CSchemaManipulator<CHandle<CBaseEntity>>::StaticAccessor(void)::m, v9);
+    v10 = *(*v7 + 64LL);
+    v11 = (*(*v7 + 88LL))(v7, "CBaseEntity");
+    v12 = v10(
+            v7,
+            "CHandle",
+            5003,
+            CAtomicManipulator<CHandle<CBaseEntity>>::Get(void)::val,
+            &CSchemaManipulator<CHandle<CBaseEntity>>::StaticAccessor(void)::m,
+            v11);
+    CDOTA_Ability_Shredder_Chakram::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CDOTA_Ability_Shredder_Chakram[12].m_pType = v10(v7, "CUtlVector", 3002, &CAtomicManipulator<CUtlVector<CHandle<CBaseEntity>,CUtlMemory<CHandle<CBaseEntity>,int>>>::Get(void)::val, CSchemaManipulator<CUtlVector<CHandle<CBaseEntity>,CUtlMemory<CHandle<CBaseEntity>,int>>>::StaticAccessor(void)::m, v12);
+    CDOTA_Ability_Shredder_Chakram::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CDOTA_Ability_Shredder_Chakram[13].m_pType = (*(*v7 + 120LL))(v7);
+    if ( `guard variable for'CDOTA_Ability_Shredder_Chakram::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_NestedClassesOf_CDOTA_Ability_Shredder_Chakram == 0
+      && __cxa_guard_acquire(&`guard variable for'CDOTA_Ability_Shredder_Chakram::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_NestedClassesOf_CDOTA_Ability_Shredder_Chakram) != 0 )
+    {
+      v13 = CDOTA_Ability_Shredder_Chakram::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult;
+      if ( CDOTA_Ability_Shredder_Chakram::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult == 0 )
+        v13 = CDOTA_Ability_Shredder_Chakram::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+                pSchemaSystem,
+                pBinaryName,
+                pProjectName);
+      CDOTA_Ability_Shredder_Chakram::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_NestedClassesOf_CDOTA_Ability_Shredder_Chakram[0] = v13;
+      __cxa_guard_release(&`guard variable for'CDOTA_Ability_Shredder_Chakram::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_NestedClassesOf_CDOTA_Ability_Shredder_Chakram);
+    }
+    (*(CDOTABaseAbility::s_pSchemaBindingForLocalModule->_vptr_ISchemaBinding + 5))(
+      CDOTABaseAbility::s_pSchemaBindingForLocalModule,
+      pSchemaSystem,
+      pBinaryName,
+      pProjectName);
+    v14 = CDOTABaseAbility::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+            pSchemaSystem,
+            pBinaryName,
+            pProjectName);
+    CDOTA_Ability_Shredder_Chakram::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CDOTA_Ability_Shredder_Chakram.m_pOuterTypeScope = v7;
+    CDOTA_Ability_Shredder_Chakram::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassBases_CDOTA_Ability_Shredder_Chakram[0].m_pClass = v14;
+    CDOTA_Ability_Shredder_Chakram::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult = &CDOTA_Ability_Shredder_Chakram::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CDOTA_Ability_Shredder_Chakram;
+    return &CDOTA_Ability_Shredder_Chakram::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CDOTA_Ability_Shredder_Chakram;
+  }
+  return result;
+}
+
+
+// CDOTA_Ability_Shredder_Chakram::Schema_VerifyBindingIsRegistered  (line 535, @0x0000000002ce3ee0, libserver.so)
+void __cdecl CDOTA_Ability_Shredder_Chakram::Schema_VerifyBindingIsRegistered()
+{
+  ;
+}
+
+
+// CDOTA_Ability_Shredder_Chakram::SetupEntClassInputs  (line 549, @0x0000000002ce3ef0, libserver.so)
+void __fastcall CDOTA_Ability_Shredder_Chakram::SetupEntClassInputs(CEntityClass *pComponentInfo)
+{
+  ;
+}
+
+
+// CDOTA_Ability_Shredder_Chakram::SetupEntClassComponentOverrides  (line 555, @0x0000000002ce3f00, libserver.so)
+void __fastcall CDOTA_Ability_Shredder_Chakram::SetupEntClassComponentOverrides(CEntityClass *pEntityClass)
+{
+  pEntityClass->m_pComponentOverrides = 0;
+}
+
+
+// CDOTA_Ability_Shredder_ChakramAlias_shredder_chakram_2::CEntityInstanceEntityClass::Schema_CompileTimeVerificationFunction  (line 561, @0x0000000002ce3f10, libserver.so)
+void __fastcall CDOTA_Ability_Shredder_ChakramAlias_shredder_chakram_2::CEntityInstanceEntityClass::Schema_CompileTimeVerificationFunction(
+        CDOTA_Ability_Shredder_ChakramAlias_shredder_chakram_2::CEntityInstanceEntityClass *const this)
+{
+  ;
+}
+
+
+// CDOTA_Ability_Shredder_ChakramAlias_shredder_chakram_2::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE  (line 564, @0x0000000002cd5b70, libserver.so)  // inlines: Call, Get, RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE, SetTypeScope
+// calls: CDOTA_Ability_Shredder_Chakram::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE
+// callers: CSchemaNonConstructibleClassBinding<CDOTA_Ability_Shredder_ChakramAlias_shredder_chakram_2::CEntityInstanceEntityClass>::Register, CDOTA_Ability_Shredder_ChakramAlias_shredder_chakram_2::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE, CDOTA_Ability_Shredder_ChakramAlias_shredder_chakram_2::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE
+// globals: CDOTA_Ability_Shredder_Chakram::CEntityInstanceEntityClass::s_pSchemaBindingForLocalModule, CDOTA_Ability_Shredder_Chakram::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaS, CDOTA_Ability_Shredder_ChakramAlias_shredder_chakram_2::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA
+CSchemaClassInfo *__fastcall CDOTA_Ability_Shredder_ChakramAlias_shredder_chakram_2::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        const char *pProjectName)
+{
+  ISchemaSystemTypeScope *v6; // r14
+  CSchemaClassInfo *v7; // rax
+
+  v6 = (*(*pSchemaSystem + 112LL))(pSchemaSystem, 1, pBinaryName);
+  (*(CDOTA_Ability_Shredder_Chakram::CEntityInstanceEntityClass::s_pSchemaBindingForLocalModule->_vptr_ISchemaBinding + 5))(
+    CDOTA_Ability_Shredder_Chakram::CEntityInstanceEntityClass::s_pSchemaBindingForLocalModule,
+    pSchemaSystem,
+    pBinaryName,
+    pProjectName);
+  v7 = CDOTA_Ability_Shredder_Chakram::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult;
+  if ( CDOTA_Ability_Shredder_Chakram::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult == 0 )
+    v7 = CDOTA_Ability_Shredder_Chakram::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+           pSchemaSystem,
+           pBinaryName,
+           pProjectName);
+  CDOTA_Ability_Shredder_ChakramAlias_shredder_chakram_2::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CDOTA_Ability_Shredder_ChakramAlias_shredder_chakram_2_CEntityInstanceEntityClass.m_pOuterTypeScope = v6;
+  CDOTA_Ability_Shredder_ChakramAlias_shredder_chakram_2::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassBases_CDOTA_Ability_Shredder_ChakramAlias_shredder_chakram_2_CEntityInstanceEntityClass[0].m_pClass = v7;
+  CDOTA_Ability_Shredder_ChakramAlias_shredder_chakram_2::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult = &CDOTA_Ability_Shredder_ChakramAlias_shredder_chakram_2::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CDOTA_Ability_Shredder_ChakramAlias_shredder_chakram_2_CEntityInstanceEntityClass;
+  return &CDOTA_Ability_Shredder_ChakramAlias_shredder_chakram_2::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CDOTA_Ability_Shredder_ChakramAlias_shredder_chakram_2_CEntityInstanceEntityClass;
+}
+
+
+// CDOTA_Ability_Shredder_ChakramAlias_shredder_chakram_2::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE  (line 564, @0x0000000002ce3f20, libserver.so)
+// calls: CDOTA_Ability_Shredder_ChakramAlias_shredder_chakram_2::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE
+// globals: CDOTA_Ability_Shredder_ChakramAlias_shredder_chakram_2::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA
+CSchemaClassInfo *__fastcall CDOTA_Ability_Shredder_ChakramAlias_shredder_chakram_2::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        const char *pProjectName)
+{
+  CSchemaClassInfo *result; // rax
+
+  result = CDOTA_Ability_Shredder_ChakramAlias_shredder_chakram_2::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult;
+  if ( CDOTA_Ability_Shredder_ChakramAlias_shredder_chakram_2::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult == 0 )
+    return CDOTA_Ability_Shredder_ChakramAlias_shredder_chakram_2::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+             pSchemaSystem,
+             pBinaryName,
+             pProjectName);
+  return result;
+}
+
+
+// CDOTA_Ability_Shredder_ChakramAlias_shredder_chakram_2::CEntityInstanceEntityClass::Schema_VerifyBindingIsRegistered  (line 581, @0x0000000002ce3f40, libserver.so)
+void __cdecl CDOTA_Ability_Shredder_ChakramAlias_shredder_chakram_2::CEntityInstanceEntityClass::Schema_VerifyBindingIsRegistered()
+{
+  ;
+}
+
+
+// CDOTA_Ability_Shredder_ChakramAlias_shredder_chakram_2::Schema_CompileTimeVerificationFunction  (line 589, @0x0000000002ce3f50, libserver.so)
+void __fastcall CDOTA_Ability_Shredder_ChakramAlias_shredder_chakram_2::Schema_CompileTimeVerificationFunction(
+        CDOTA_Ability_Shredder_ChakramAlias_shredder_chakram_2 *const this)
+{
+  ;
+}
+
+
+// CDOTA_Ability_Shredder_ChakramAlias_shredder_chakram_2::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE  (line 592, @0x0000000002ce3f60, libserver.so)  // inlines: Call, Get, RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE, SetTypeScope
+// calls: __cxa_guard_acquire, __cxa_guard_release, CDOTA_Ability_Shredder_Chakram::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE, CDOTA_Ability_Shredder_ChakramAlias_shredder_chakram_2::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE, __cxa_guard_abort, _Unwind_Resume
+// callers: CSchemaNonConstructibleClassBinding<CDOTA_Ability_Shredder_ChakramAlias_shredder_chakram_2>::Register
+// globals: CDOTA_Ability_Shredder_ChakramAlias_shredder_chakram_2::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSyste, _ZGVZN54CDOTA_Ability_Shredder_ChakramAlias_shredder_chakram_291RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODEEP13I, CDOTA_Ability_Shredder_ChakramAlias_shredder_chakram_2::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA, _ZZN54CDOTA_Ability_Shredder_ChakramAlias_shredder_chakram_291RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODEEP13ISc, CDOTA_Ability_Shredder_Chakram::s_pSchemaBindingForLocalModule
+CSchemaClassInfo *__fastcall CDOTA_Ability_Shredder_ChakramAlias_shredder_chakram_2::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        const char *pProjectName)
+{
+  CSchemaClassInfo *result; // rax
+  ISchemaSystemTypeScope *v7; // r14
+  CSchemaClassInfo *v8; // rax
+  CSchemaClassInfo *v9; // rax
+
+  result = CDOTA_Ability_Shredder_ChakramAlias_shredder_chakram_2::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult;
+  if ( CDOTA_Ability_Shredder_ChakramAlias_shredder_chakram_2::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult == 0 )
+  {
+    v7 = (*(*pSchemaSystem + 112LL))(pSchemaSystem, 1, pBinaryName);
+    if ( `guard variable for'CDOTA_Ability_Shredder_ChakramAlias_shredder_chakram_2::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_NestedClassesOf_CDOTA_Ability_Shredder_ChakramAlias_shredder_chakram_2 == 0
+      && __cxa_guard_acquire(&`guard variable for'CDOTA_Ability_Shredder_ChakramAlias_shredder_chakram_2::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_NestedClassesOf_CDOTA_Ability_Shredder_ChakramAlias_shredder_chakram_2) != 0 )
+    {
+      v8 = CDOTA_Ability_Shredder_ChakramAlias_shredder_chakram_2::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult;
+      if ( CDOTA_Ability_Shredder_ChakramAlias_shredder_chakram_2::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult == 0 )
+        v8 = CDOTA_Ability_Shredder_ChakramAlias_shredder_chakram_2::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+               pSchemaSystem,
+               pBinaryName,
+               pProjectName);
+      CDOTA_Ability_Shredder_ChakramAlias_shredder_chakram_2::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_NestedClassesOf_CDOTA_Ability_Shredder_ChakramAlias_shredder_chakram_2[0] = v8;
+      __cxa_guard_release(&`guard variable for'CDOTA_Ability_Shredder_ChakramAlias_shredder_chakram_2::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_NestedClassesOf_CDOTA_Ability_Shredder_ChakramAlias_shredder_chakram_2);
+    }
+    (*(CDOTA_Ability_Shredder_Chakram::s_pSchemaBindingForLocalModule->_vptr_ISchemaBinding + 5))(
+      CDOTA_Ability_Shredder_Chakram::s_pSchemaBindingForLocalModule,
+      pSchemaSystem,
+      pBinaryName,
+      pProjectName);
+    v9 = CDOTA_Ability_Shredder_Chakram::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+           pSchemaSystem,
+           pBinaryName,
+           pProjectName);
+    CDOTA_Ability_Shredder_ChakramAlias_shredder_chakram_2::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CDOTA_Ability_Shredder_ChakramAlias_shredder_chakram_2.m_pOuterTypeScope = v7;
+    CDOTA_Ability_Shredder_ChakramAlias_shredder_chakram_2::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassBases_CDOTA_Ability_Shredder_ChakramAlias_shredder_chakram_2[0].m_pClass = v9;
+    CDOTA_Ability_Shredder_ChakramAlias_shredder_chakram_2::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult = &CDOTA_Ability_Shredder_ChakramAlias_shredder_chakram_2::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CDOTA_Ability_Shredder_ChakramAlias_shredder_chakram_2;
+    return &CDOTA_Ability_Shredder_ChakramAlias_shredder_chakram_2::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CDOTA_Ability_Shredder_ChakramAlias_shredder_chakram_2;
+  }
+  return result;
+}
+
+
+// CDOTA_Ability_Shredder_ChakramAlias_shredder_chakram_2::Schema_VerifyBindingIsRegistered  (line 620, @0x0000000002ce4040, libserver.so)
+void __cdecl CDOTA_Ability_Shredder_ChakramAlias_shredder_chakram_2::Schema_VerifyBindingIsRegistered()
+{
+  ;
+}
+
+
+// CDOTA_Ability_Shredder_ChakramAlias_shredder_chakram_2::SetupEntClassInputs  (line 634, @0x0000000002ce4050, libserver.so)
+void __fastcall CDOTA_Ability_Shredder_ChakramAlias_shredder_chakram_2::SetupEntClassInputs(
+        CEntityClass *pComponentInfo)
+{
+  ;
+}
+
+
+// CDOTA_Ability_Shredder_ChakramAlias_shredder_chakram_2::SetupEntClassComponentOverrides  (line 640, @0x0000000002ce4060, libserver.so)
+void __fastcall CDOTA_Ability_Shredder_ChakramAlias_shredder_chakram_2::SetupEntClassComponentOverrides(
+        CEntityClass *pEntityClass)
+{
+  pEntityClass->m_pComponentOverrides = 0;
+}
+
+
+// CDOTA_Ability_Shredder_ChakramAlias_shredder_chakram_2::CEntityInstanceEntityClass::InitOptionalTables  (line 646, @0x0000000002d0f1f0, libserver.so)  // inlines: CEntityInstanceEntityClass, GetEntityClassInfo, GetEntityClassInternal, SetClassInfo, SetFlag, SetupEntClassComponentOverrides
+// calls: __cxa_guard_acquire, CEntityClass::CEntityClass, __cxa_guard_release, __cxa_atexit, CDOTABaseAbility::InitScriptDesc, CDOTA_Ability_Shredder_Chakram::GetEntityClassInfo, CEntityClassInfo_StaticHelper::CEntityClassInfo_StaticHelper, __cxa_guard_abort, _Unwind_Resume
+// strings: "shredder_chakram_2", "CDOTA_Ability_Shredder_ChakramAlias_shredder_chakram_2"
+// globals: `guard variable for'CDOTA_Ability_Shredder_ChakramAlias_shredder_chakram_2::GetEntityClassInternal(void)::g_EntityCDOTA_Ability_Shredder_ChakramAlias_shredder_c, CDOTA_Ability_Shredder_ChakramAlias_shredder_chakram_2::GetEntityClassInternal(void)::g_EntityCDOTA_Ability_Shredder_ChakramAlias_shredder_chakram_2Class, __dso_handle, CDOTA_Ability_Shredder_ChakramAlias_shredder_chakram_2::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(), `guard variable for'CDOTA_Ability_Shredder_ChakramAlias_shredder_chakram_2::GetEntityClassInfo(void)::g_EntityCDOTA_Ability_Shredder_ChakramAlias_shredder_chakr, CDOTA_Ability_Shredder_ChakramAlias_shredder_chakram_2::GetEntityClassInfo(void)::g_EntityCDOTA_Ability_Shredder_ChakramAlias_shredder_chakram_2ClassInfo
+bool __cdecl CDOTA_Ability_Shredder_ChakramAlias_shredder_chakram_2::CEntityInstanceEntityClass::InitOptionalTables()
+{
+  CEntityClassInfo *EntityClassInfo; // rax
+
+  if ( `guard variable for'CDOTA_Ability_Shredder_ChakramAlias_shredder_chakram_2::GetEntityClassInternal(void)::g_EntityCDOTA_Ability_Shredder_ChakramAlias_shredder_chakram_2Class == 0
+    && __cxa_guard_acquire(&`guard variable for'CDOTA_Ability_Shredder_ChakramAlias_shredder_chakram_2::GetEntityClassInternal(void)::g_EntityCDOTA_Ability_Shredder_ChakramAlias_shredder_chakram_2Class) != 0 )
+  {
+    CEntityClass::CEntityClass(&CDOTA_Ability_Shredder_ChakramAlias_shredder_chakram_2::GetEntityClassInternal(void)::g_EntityCDOTA_Ability_Shredder_ChakramAlias_shredder_chakram_2Class);
+    CDOTA_Ability_Shredder_ChakramAlias_shredder_chakram_2::GetEntityClassInternal(void)::g_EntityCDOTA_Ability_Shredder_ChakramAlias_shredder_chakram_2Class._vptr_CEntityClass = off_4621370;
+    __cxa_guard_release(&`guard variable for'CDOTA_Ability_Shredder_ChakramAlias_shredder_chakram_2::GetEntityClassInternal(void)::g_EntityCDOTA_Ability_Shredder_ChakramAlias_shredder_chakram_2Class);
+    __cxa_atexit(
+      CDOTA_Ability_Shredder_ChakramAlias_shredder_chakram_2::CEntityInstanceEntityClass::~CEntityInstanceEntityClass,
+      &CDOTA_Ability_Shredder_ChakramAlias_shredder_chakram_2::GetEntityClassInternal(void)::g_EntityCDOTA_Ability_Shredder_ChakramAlias_shredder_chakram_2Class,
+      &_dso_handle);
+  }
+  if ( g_pEntityCDOTA_Ability_Shredder_ChakramAlias_shredder_chakram_2Class == 0 )
+  {
+    if ( `guard variable for'CDOTA_Ability_Shredder_ChakramAlias_shredder_chakram_2::GetEntityClassInfo(void)::g_EntityCDOTA_Ability_Shredder_ChakramAlias_shredder_chakram_2ClassInfo == 0
+      && __cxa_guard_acquire(&`guard variable for'CDOTA_Ability_Shredder_ChakramAlias_shredder_chakram_2::GetEntityClassInfo(void)::g_EntityCDOTA_Ability_Shredder_ChakramAlias_shredder_chakram_2ClassInfo) != 0 )
+    {
+      EntityClassInfo = CDOTA_Ability_Shredder_Chakram::GetEntityClassInfo();
+      CEntityClassInfo_StaticHelper::CEntityClassInfo_StaticHelper(
+        &CDOTA_Ability_Shredder_ChakramAlias_shredder_chakram_2::GetEntityClassInfo(void)::g_EntityCDOTA_Ability_Shredder_ChakramAlias_shredder_chakram_2ClassInfo,
+        "CDOTA_Ability_Shredder_ChakramAlias_shredder_chakram_2",
+        "shredder_chakram_2",
+        0,
+        EntityClassInfo);
+      __cxa_guard_release(&`guard variable for'CDOTA_Ability_Shredder_ChakramAlias_shredder_chakram_2::GetEntityClassInfo(void)::g_EntityCDOTA_Ability_Shredder_ChakramAlias_shredder_chakram_2ClassInfo);
+    }
+    CDOTA_Ability_Shredder_ChakramAlias_shredder_chakram_2::GetEntityClassInternal(void)::g_EntityCDOTA_Ability_Shredder_ChakramAlias_shredder_chakram_2Class.m_pClassInfo = &CDOTA_Ability_Shredder_ChakramAlias_shredder_chakram_2::GetEntityClassInfo(void)::g_EntityCDOTA_Ability_Shredder_ChakramAlias_shredder_chakram_2ClassInfo;
+    CDOTA_Ability_Shredder_ChakramAlias_shredder_chakram_2::GetEntityClassInternal(void)::g_EntityCDOTA_Ability_Shredder_ChakramAlias_shredder_chakram_2Class.m_pBaseClassInfo = CDOTA_Ability_Shredder_ChakramAlias_shredder_chakram_2::GetEntityClassInfo(void)::g_EntityCDOTA_Ability_Shredder_ChakramAlias_shredder_chakram_2ClassInfo.m_pBaseClassInfo;
+    g_pEntityCDOTA_Ability_Shredder_ChakramAlias_shredder_chakram_2Class = &CDOTA_Ability_Shredder_ChakramAlias_shredder_chakram_2::GetEntityClassInternal(void)::g_EntityCDOTA_Ability_Shredder_ChakramAlias_shredder_chakram_2Class;
+    CDOTA_Ability_Shredder_ChakramAlias_shredder_chakram_2::GetEntityClassInfo(void)::g_EntityCDOTA_Ability_Shredder_ChakramAlias_shredder_chakram_2ClassInfo.m_pClass = &CDOTA_Ability_Shredder_ChakramAlias_shredder_chakram_2::GetEntityClassInternal(void)::g_EntityCDOTA_Ability_Shredder_ChakramAlias_shredder_chakram_2Class;
+    CDOTA_Ability_Shredder_ChakramAlias_shredder_chakram_2::GetEntityClassInternal(void)::g_EntityCDOTA_Ability_Shredder_ChakramAlias_shredder_chakram_2Class.m_pScriptClassDesc = CDOTABaseAbility::InitScriptDesc();
+    g_pEntityCDOTA_Ability_Shredder_ChakramAlias_shredder_chakram_2Class->m_pComponentOverrides = 0;
+  }
+  CDOTA_Ability_Shredder_ChakramAlias_shredder_chakram_2::GetEntityClassInternal(void)::g_EntityCDOTA_Ability_Shredder_ChakramAlias_shredder_chakram_2Class.m_flags |= 2u;
+  return 1;
+}
+
+
+// CDOTA_Ability_Shredder_ReturnChakram::CEntityInstanceEntityClass::Schema_CompileTimeVerificationFunction  (line 654, @0x0000000002ce4070, libserver.so)
+void __fastcall CDOTA_Ability_Shredder_ReturnChakram::CEntityInstanceEntityClass::Schema_CompileTimeVerificationFunction(
+        CDOTA_Ability_Shredder_ReturnChakram::CEntityInstanceEntityClass *const this)
+{
+  ;
+}
+
+
+// CDOTA_Ability_Shredder_ReturnChakram::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE  (line 657, @0x0000000002cd3d40, libserver.so)  // inlines: Call, Get, SetTypeScope
+// calls: CDOTABaseAbility::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE
+// callers: CDOTA_Ability_Shredder_ReturnChakramAlias_shredder_return_chakram_2::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE, CSchemaNonConstructibleClassBinding<CDOTA_Ability_Shredder_ReturnChakram::CEntityInstanceEntityClass>::Register, CDOTA_Ability_Shredder_ReturnChakram::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE, CDOTA_Ability_Shredder_ReturnChakram::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE
+// globals: CDOTA_Ability_Shredder_ReturnChakram::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(IS
+CSchemaClassInfo *__fastcall CDOTA_Ability_Shredder_ReturnChakram::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        const char *pProjectName)
+{
+  ISchemaSystemTypeScope *v6; // r14
+  CSchemaClassInfo *v7; // rax
+
+  v6 = (*(*pSchemaSystem + 112LL))(pSchemaSystem, 1, pBinaryName);
+  (*(CDOTABaseAbility::CEntityInstanceEntityClass::s_pSchemaBindingForLocalModule->_vptr_ISchemaBinding + 5))(
+    CDOTABaseAbility::CEntityInstanceEntityClass::s_pSchemaBindingForLocalModule,
+    pSchemaSystem,
+    pBinaryName,
+    pProjectName);
+  v7 = CDOTABaseAbility::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+         pSchemaSystem,
+         pBinaryName,
+         pProjectName);
+  CDOTA_Ability_Shredder_ReturnChakram::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CDOTA_Ability_Shredder_ReturnChakram_CEntityInstanceEntityClass.m_pOuterTypeScope = v6;
+  CDOTA_Ability_Shredder_ReturnChakram::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassBases_CDOTA_Ability_Shredder_ReturnChakram_CEntityInstanceEntityClass[0].m_pClass = v7;
+  CDOTA_Ability_Shredder_ReturnChakram::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult = &CDOTA_Ability_Shredder_ReturnChakram::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CDOTA_Ability_Shredder_ReturnChakram_CEntityInstanceEntityClass;
+  return &CDOTA_Ability_Shredder_ReturnChakram::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CDOTA_Ability_Shredder_ReturnChakram_CEntityInstanceEntityClass;
+}
+
+
+// CDOTA_Ability_Shredder_ReturnChakram::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE  (line 657, @0x0000000002ce4080, libserver.so)
+// calls: CDOTA_Ability_Shredder_ReturnChakram::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE
+// globals: CDOTA_Ability_Shredder_ReturnChakram::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(IS
+CSchemaClassInfo *__fastcall CDOTA_Ability_Shredder_ReturnChakram::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        const char *pProjectName)
+{
+  CSchemaClassInfo *result; // rax
+
+  result = CDOTA_Ability_Shredder_ReturnChakram::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult;
+  if ( CDOTA_Ability_Shredder_ReturnChakram::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult == 0 )
+    return CDOTA_Ability_Shredder_ReturnChakram::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+             pSchemaSystem,
+             pBinaryName,
+             pProjectName);
+  return result;
+}
+
+
+// CDOTA_Ability_Shredder_ReturnChakram::CEntityInstanceEntityClass::Schema_VerifyBindingIsRegistered  (line 674, @0x0000000002ce40a0, libserver.so)
+void __cdecl CDOTA_Ability_Shredder_ReturnChakram::CEntityInstanceEntityClass::Schema_VerifyBindingIsRegistered()
+{
+  ;
+}
+
+
+// CDOTA_Ability_Shredder_ReturnChakram::Schema_CompileTimeVerificationFunction  (line 682, @0x0000000002ce40b0, libserver.so)
+void __fastcall CDOTA_Ability_Shredder_ReturnChakram::Schema_CompileTimeVerificationFunction(
+        CDOTA_Ability_Shredder_ReturnChakram *const this)
+{
+  ;
+}
+
+
+// CDOTA_Ability_Shredder_ReturnChakram::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE  (line 685, @0x0000000002ce40c0, libserver.so)  // inlines: Call, Get, RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE, SetTypeScope
+// calls: __cxa_guard_acquire, __cxa_guard_release, CDOTABaseAbility::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE, CDOTA_Ability_Shredder_ReturnChakram::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE, __cxa_guard_abort, _Unwind_Resume
+// callers: CSchemaNonConstructibleClassBinding<CDOTA_Ability_Shredder_ReturnChakram>::Register, CDOTA_Ability_Shredder_ReturnChakramAlias_shredder_return_chakram_2::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE
+// globals: CDOTA_Ability_Shredder_ReturnChakram::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,ch, `guard variable for'CDOTA_Ability_Shredder_ReturnChakram::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSys, CDOTA_Ability_Shredder_ReturnChakram::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(IS
+CSchemaClassInfo *__fastcall CDOTA_Ability_Shredder_ReturnChakram::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        const char *pProjectName)
+{
+  CSchemaClassInfo *result; // rax
+  ISchemaSystemTypeScope *v7; // r14
+  CSchemaClassInfo *v8; // rax
+  CSchemaClassInfo *v9; // rax
+
+  result = CDOTA_Ability_Shredder_ReturnChakram::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult;
+  if ( CDOTA_Ability_Shredder_ReturnChakram::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult == 0 )
+  {
+    v7 = (*(*pSchemaSystem + 112LL))(pSchemaSystem, 1, pBinaryName);
+    if ( `guard variable for'CDOTA_Ability_Shredder_ReturnChakram::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_NestedClassesOf_CDOTA_Ability_Shredder_ReturnChakram == 0
+      && __cxa_guard_acquire(&`guard variable for'CDOTA_Ability_Shredder_ReturnChakram::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_NestedClassesOf_CDOTA_Ability_Shredder_ReturnChakram) != 0 )
+    {
+      v8 = CDOTA_Ability_Shredder_ReturnChakram::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult;
+      if ( CDOTA_Ability_Shredder_ReturnChakram::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult == 0 )
+        v8 = CDOTA_Ability_Shredder_ReturnChakram::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+               pSchemaSystem,
+               pBinaryName,
+               pProjectName);
+      CDOTA_Ability_Shredder_ReturnChakram::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_NestedClassesOf_CDOTA_Ability_Shredder_ReturnChakram[0] = v8;
+      __cxa_guard_release(&`guard variable for'CDOTA_Ability_Shredder_ReturnChakram::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_NestedClassesOf_CDOTA_Ability_Shredder_ReturnChakram);
+    }
+    (*(CDOTABaseAbility::s_pSchemaBindingForLocalModule->_vptr_ISchemaBinding + 5))(
+      CDOTABaseAbility::s_pSchemaBindingForLocalModule,
+      pSchemaSystem,
+      pBinaryName,
+      pProjectName);
+    v9 = CDOTABaseAbility::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+           pSchemaSystem,
+           pBinaryName,
+           pProjectName);
+    CDOTA_Ability_Shredder_ReturnChakram::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CDOTA_Ability_Shredder_ReturnChakram.m_pOuterTypeScope = v7;
+    CDOTA_Ability_Shredder_ReturnChakram::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassBases_CDOTA_Ability_Shredder_ReturnChakram[0].m_pClass = v9;
+    CDOTA_Ability_Shredder_ReturnChakram::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult = &CDOTA_Ability_Shredder_ReturnChakram::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CDOTA_Ability_Shredder_ReturnChakram;
+    return &CDOTA_Ability_Shredder_ReturnChakram::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CDOTA_Ability_Shredder_ReturnChakram;
+  }
+  return result;
+}
+
+
+// CDOTA_Ability_Shredder_ReturnChakram::Schema_VerifyBindingIsRegistered  (line 713, @0x0000000002ce41a0, libserver.so)
+void __cdecl CDOTA_Ability_Shredder_ReturnChakram::Schema_VerifyBindingIsRegistered()
+{
+  ;
+}
+
+
+// CDOTA_Ability_Shredder_ReturnChakram::SetupEntClassInputs  (line 727, @0x0000000002ce41b0, libserver.so)
+void __fastcall CDOTA_Ability_Shredder_ReturnChakram::SetupEntClassInputs(CEntityClass *pComponentInfo)
+{
+  ;
+}
+
+
+// CDOTA_Ability_Shredder_ReturnChakram::SetupEntClassComponentOverrides  (line 733, @0x0000000002ce41c0, libserver.so)
+void __fastcall CDOTA_Ability_Shredder_ReturnChakram::SetupEntClassComponentOverrides(CEntityClass *pEntityClass)
+{
+  pEntityClass->m_pComponentOverrides = 0;
+}
+
+
+// CDOTA_Ability_Shredder_ReturnChakramAlias_shredder_return_chakram_2::CEntityInstanceEntityClass::Schema_CompileTimeVerificationFunction  (line 739, @0x0000000002ce41d0, libserver.so)
+void __fastcall CDOTA_Ability_Shredder_ReturnChakramAlias_shredder_return_chakram_2::CEntityInstanceEntityClass::Schema_CompileTimeVerificationFunction(
+        CDOTA_Ability_Shredder_ReturnChakramAlias_shredder_return_chakram_2::CEntityInstanceEntityClass *const this)
+{
+  ;
+}
+
+
+// CDOTA_Ability_Shredder_ReturnChakramAlias_shredder_return_chakram_2::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE  (line 742, @0x0000000002cd5bf0, libserver.so)  // inlines: Call, Get, RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE, SetTypeScope
+// calls: CDOTA_Ability_Shredder_ReturnChakram::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE
+// callers: CSchemaNonConstructibleClassBinding<CDOTA_Ability_Shredder_ReturnChakramAlias_shredder_return_chakram_2::CEntityInstanceEntityClass>::Register, CDOTA_Ability_Shredder_ReturnChakramAlias_shredder_return_chakram_2::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE, CDOTA_Ability_Shredder_ReturnChakramAlias_shredder_return_chakram_2::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE
+// globals: CDOTA_Ability_Shredder_ReturnChakram::CEntityInstanceEntityClass::s_pSchemaBindingForLocalModule, CDOTA_Ability_Shredder_ReturnChakram::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(IS, CDOTA_Ability_Shredder_ReturnChakramAlias_shredder_return_chakram_2::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT
+CSchemaClassInfo *__fastcall CDOTA_Ability_Shredder_ReturnChakramAlias_shredder_return_chakram_2::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        const char *pProjectName)
+{
+  ISchemaSystemTypeScope *v6; // r14
+  CSchemaClassInfo *v7; // rax
+
+  v6 = (*(*pSchemaSystem + 112LL))(pSchemaSystem, 1, pBinaryName);
+  (*(CDOTA_Ability_Shredder_ReturnChakram::CEntityInstanceEntityClass::s_pSchemaBindingForLocalModule->_vptr_ISchemaBinding
+   + 5))(
+    CDOTA_Ability_Shredder_ReturnChakram::CEntityInstanceEntityClass::s_pSchemaBindingForLocalModule,
+    pSchemaSystem,
+    pBinaryName,
+    pProjectName);
+  v7 = CDOTA_Ability_Shredder_ReturnChakram::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult;
+  if ( CDOTA_Ability_Shredder_ReturnChakram::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult == 0 )
+    v7 = CDOTA_Ability_Shredder_ReturnChakram::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+           pSchemaSystem,
+           pBinaryName,
+           pProjectName);
+  CDOTA_Ability_Shredder_ReturnChakramAlias_shredder_return_chakram_2::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CDOTA_Ability_Shredder_ReturnChakramAlias_shredder_return_chakram_2_CEntityInstanceEntityClass.m_pOuterTypeScope = v6;
+  CDOTA_Ability_Shredder_ReturnChakramAlias_shredder_return_chakram_2::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassBases_CDOTA_Ability_Shredder_ReturnChakramAlias_shredder_return_chakram_2_CEntityInstanceEntityClass[0].m_pClass = v7;
+  CDOTA_Ability_Shredder_ReturnChakramAlias_shredder_return_chakram_2::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult = &CDOTA_Ability_Shredder_ReturnChakramAlias_shredder_return_chakram_2::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CDOTA_Ability_Shredder_ReturnChakramAlias_shredder_return_chakram_2_CEntityInstanceEntityClass;
+  return &CDOTA_Ability_Shredder_ReturnChakramAlias_shredder_return_chakram_2::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CDOTA_Ability_Shredder_ReturnChakramAlias_shredder_return_chakram_2_CEntityInstanceEntityClass;
+}
+
+
+// CDOTA_Ability_Shredder_ReturnChakramAlias_shredder_return_chakram_2::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE  (line 742, @0x0000000002ce41e0, libserver.so)
+// calls: CDOTA_Ability_Shredder_ReturnChakramAlias_shredder_return_chakram_2::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE
+// globals: CDOTA_Ability_Shredder_ReturnChakramAlias_shredder_return_chakram_2::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT
+CSchemaClassInfo *__fastcall CDOTA_Ability_Shredder_ReturnChakramAlias_shredder_return_chakram_2::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        const char *pProjectName)
+{
+  CSchemaClassInfo *result; // rax
+
+  result = CDOTA_Ability_Shredder_ReturnChakramAlias_shredder_return_chakram_2::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult;
+  if ( CDOTA_Ability_Shredder_ReturnChakramAlias_shredder_return_chakram_2::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult == 0 )
+    return CDOTA_Ability_Shredder_ReturnChakramAlias_shredder_return_chakram_2::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+             pSchemaSystem,
+             pBinaryName,
+             pProjectName);
+  return result;
+}
+
+
+// CDOTA_Ability_Shredder_ReturnChakramAlias_shredder_return_chakram_2::CEntityInstanceEntityClass::Schema_VerifyBindingIsRegistered  (line 759, @0x0000000002ce4200, libserver.so)
+void __cdecl CDOTA_Ability_Shredder_ReturnChakramAlias_shredder_return_chakram_2::CEntityInstanceEntityClass::Schema_VerifyBindingIsRegistered()
+{
+  ;
+}
+
+
+// CDOTA_Ability_Shredder_ReturnChakramAlias_shredder_return_chakram_2::Schema_CompileTimeVerificationFunction  (line 767, @0x0000000002ce4210, libserver.so)
+void __fastcall CDOTA_Ability_Shredder_ReturnChakramAlias_shredder_return_chakram_2::Schema_CompileTimeVerificationFunction(
+        CDOTA_Ability_Shredder_ReturnChakramAlias_shredder_return_chakram_2 *const this)
+{
+  ;
+}
+
+
+// CDOTA_Ability_Shredder_ReturnChakramAlias_shredder_return_chakram_2::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE  (line 770, @0x0000000002ce4220, libserver.so)  // inlines: Call, Get, RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE, SetTypeScope
+// calls: __cxa_guard_acquire, __cxa_guard_release, CDOTA_Ability_Shredder_ReturnChakram::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE, CDOTA_Ability_Shredder_ReturnChakramAlias_shredder_return_chakram_2::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE, __cxa_guard_abort, _Unwind_Resume
+// callers: CSchemaNonConstructibleClassBinding<CDOTA_Ability_Shredder_ReturnChakramAlias_shredder_return_chakram_2>::Register
+// globals: CDOTA_Ability_Shredder_ReturnChakramAlias_shredder_return_chakram_2::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE, _ZGVZN67CDOTA_Ability_Shredder_ReturnChakramAlias_shredder_return_chakram_291RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERA, CDOTA_Ability_Shredder_ReturnChakramAlias_shredder_return_chakram_2::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT, _ZZN67CDOTA_Ability_Shredder_ReturnChakramAlias_shredder_return_chakram_291RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATE, CDOTA_Ability_Shredder_ReturnChakram::s_pSchemaBindingForLocalModule
+CSchemaClassInfo *__fastcall CDOTA_Ability_Shredder_ReturnChakramAlias_shredder_return_chakram_2::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        const char *pProjectName)
+{
+  CSchemaClassInfo *result; // rax
+  ISchemaSystemTypeScope *v7; // r14
+  CSchemaClassInfo *v8; // rax
+  CSchemaClassInfo *v9; // rax
+
+  result = CDOTA_Ability_Shredder_ReturnChakramAlias_shredder_return_chakram_2::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult;
+  if ( CDOTA_Ability_Shredder_ReturnChakramAlias_shredder_return_chakram_2::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult == 0 )
+  {
+    v7 = (*(*pSchemaSystem + 112LL))(pSchemaSystem, 1, pBinaryName);
+    if ( `guard variable for'CDOTA_Ability_Shredder_ReturnChakramAlias_shredder_return_chakram_2::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_NestedClassesOf_CDOTA_Ability_Shredder_ReturnChakramAlias_shredder_return_chakram_2 == 0
+      && __cxa_guard_acquire(&`guard variable for'CDOTA_Ability_Shredder_ReturnChakramAlias_shredder_return_chakram_2::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_NestedClassesOf_CDOTA_Ability_Shredder_ReturnChakramAlias_shredder_return_chakram_2) != 0 )
+    {
+      v8 = CDOTA_Ability_Shredder_ReturnChakramAlias_shredder_return_chakram_2::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult;
+      if ( CDOTA_Ability_Shredder_ReturnChakramAlias_shredder_return_chakram_2::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult == 0 )
+        v8 = CDOTA_Ability_Shredder_ReturnChakramAlias_shredder_return_chakram_2::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+               pSchemaSystem,
+               pBinaryName,
+               pProjectName);
+      CDOTA_Ability_Shredder_ReturnChakramAlias_shredder_return_chakram_2::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_NestedClassesOf_CDOTA_Ability_Shredder_ReturnChakramAlias_shredder_return_chakram_2[0] = v8;
+      __cxa_guard_release(&`guard variable for'CDOTA_Ability_Shredder_ReturnChakramAlias_shredder_return_chakram_2::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_NestedClassesOf_CDOTA_Ability_Shredder_ReturnChakramAlias_shredder_return_chakram_2);
+    }
+    (*(CDOTA_Ability_Shredder_ReturnChakram::s_pSchemaBindingForLocalModule->_vptr_ISchemaBinding + 5))(
+      CDOTA_Ability_Shredder_ReturnChakram::s_pSchemaBindingForLocalModule,
+      pSchemaSystem,
+      pBinaryName,
+      pProjectName);
+    v9 = CDOTA_Ability_Shredder_ReturnChakram::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+           pSchemaSystem,
+           pBinaryName,
+           pProjectName);
+    CDOTA_Ability_Shredder_ReturnChakramAlias_shredder_return_chakram_2::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CDOTA_Ability_Shredder_ReturnChakramAlias_shredder_return_chakram_2.m_pOuterTypeScope = v7;
+    CDOTA_Ability_Shredder_ReturnChakramAlias_shredder_return_chakram_2::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassBases_CDOTA_Ability_Shredder_ReturnChakramAlias_shredder_return_chakram_2[0].m_pClass = v9;
+    CDOTA_Ability_Shredder_ReturnChakramAlias_shredder_return_chakram_2::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult = &CDOTA_Ability_Shredder_ReturnChakramAlias_shredder_return_chakram_2::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CDOTA_Ability_Shredder_ReturnChakramAlias_shredder_return_chakram_2;
+    return &CDOTA_Ability_Shredder_ReturnChakramAlias_shredder_return_chakram_2::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CDOTA_Ability_Shredder_ReturnChakramAlias_shredder_return_chakram_2;
+  }
+  return result;
+}
+
+
+// CDOTA_Ability_Shredder_ReturnChakramAlias_shredder_return_chakram_2::Schema_VerifyBindingIsRegistered  (line 798, @0x0000000002ce4300, libserver.so)
+void __cdecl CDOTA_Ability_Shredder_ReturnChakramAlias_shredder_return_chakram_2::Schema_VerifyBindingIsRegistered()
+{
+  ;
+}
+
+
+// CDOTA_Ability_Shredder_ReturnChakramAlias_shredder_return_chakram_2::SetupEntClassInputs  (line 812, @0x0000000002ce4310, libserver.so)
+void __fastcall CDOTA_Ability_Shredder_ReturnChakramAlias_shredder_return_chakram_2::SetupEntClassInputs(
+        CEntityClass *pComponentInfo)
+{
+  ;
+}
+
+
+// CDOTA_Ability_Shredder_ReturnChakramAlias_shredder_return_chakram_2::SetupEntClassComponentOverrides  (line 818, @0x0000000002ce4320, libserver.so)
+void __fastcall CDOTA_Ability_Shredder_ReturnChakramAlias_shredder_return_chakram_2::SetupEntClassComponentOverrides(
+        CEntityClass *pEntityClass)
+{
+  pEntityClass->m_pComponentOverrides = 0;
+}
+
+
+// CDOTA_Ability_Shredder_ReturnChakramAlias_shredder_return_chakram_2::CEntityInstanceEntityClass::InitOptionalTables  (line 824, @0x0000000002d0f0a0, libserver.so)  // inlines: CEntityInstanceEntityClass, GetEntityClassInfo, GetEntityClassInternal, SetClassInfo, SetFlag, SetupEntClassComponentOverrides
+// calls: __cxa_guard_acquire, CEntityClass::CEntityClass, __cxa_guard_release, __cxa_atexit, CDOTABaseAbility::InitScriptDesc, CDOTA_Ability_Shredder_ReturnChakram::GetEntityClassInfo, CEntityClassInfo_StaticHelper::CEntityClassInfo_StaticHelper, __cxa_guard_abort, _Unwind_Resume
+// strings: "shredder_return_chakram_2", "CDOTA_Ability_Shredder_ReturnChakramAlias_shredder_return_chakram_2"
+// globals: `guard variable for'CDOTA_Ability_Shredder_ReturnChakramAlias_shredder_return_chakram_2::GetEntityClassInternal(void)::g_EntityCDOTA_Ability_Shredder_ReturnChak, CDOTA_Ability_Shredder_ReturnChakramAlias_shredder_return_chakram_2::GetEntityClassInternal(void)::g_EntityCDOTA_Ability_Shredder_ReturnChakramAlias_shredder_re, __dso_handle, CDOTA_Ability_Shredder_ReturnChakramAlias_shredder_return_chakram_2::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(), `guard variable for'CDOTA_Ability_Shredder_ReturnChakramAlias_shredder_return_chakram_2::GetEntityClassInfo(void)::g_EntityCDOTA_Ability_Shredder_ReturnChakramA, CDOTA_Ability_Shredder_ReturnChakramAlias_shredder_return_chakram_2::GetEntityClassInfo(void)::g_EntityCDOTA_Ability_Shredder_ReturnChakramAlias_shredder_return
+bool __cdecl CDOTA_Ability_Shredder_ReturnChakramAlias_shredder_return_chakram_2::CEntityInstanceEntityClass::InitOptionalTables()
+{
+  CEntityClassInfo *EntityClassInfo; // rax
+
+  if ( `guard variable for'CDOTA_Ability_Shredder_ReturnChakramAlias_shredder_return_chakram_2::GetEntityClassInternal(void)::g_EntityCDOTA_Ability_Shredder_ReturnChakramAlias_shredder_return_chakram_2Class == 0
+    && __cxa_guard_acquire(&`guard variable for'CDOTA_Ability_Shredder_ReturnChakramAlias_shredder_return_chakram_2::GetEntityClassInternal(void)::g_EntityCDOTA_Ability_Shredder_ReturnChakramAlias_shredder_return_chakram_2Class) != 0 )
+  {
+    CEntityClass::CEntityClass(&CDOTA_Ability_Shredder_ReturnChakramAlias_shredder_return_chakram_2::GetEntityClassInternal(void)::g_EntityCDOTA_Ability_Shredder_ReturnChakramAlias_shredder_return_chakram_2Class);
+    CDOTA_Ability_Shredder_ReturnChakramAlias_shredder_return_chakram_2::GetEntityClassInternal(void)::g_EntityCDOTA_Ability_Shredder_ReturnChakramAlias_shredder_return_chakram_2Class._vptr_CEntityClass = off_4622530;
+    __cxa_guard_release(&`guard variable for'CDOTA_Ability_Shredder_ReturnChakramAlias_shredder_return_chakram_2::GetEntityClassInternal(void)::g_EntityCDOTA_Ability_Shredder_ReturnChakramAlias_shredder_return_chakram_2Class);
+    __cxa_atexit(
+      CDOTA_Ability_Shredder_ReturnChakramAlias_shredder_return_chakram_2::CEntityInstanceEntityClass::~CEntityInstanceEntityClass,
+      &CDOTA_Ability_Shredder_ReturnChakramAlias_shredder_return_chakram_2::GetEntityClassInternal(void)::g_EntityCDOTA_Ability_Shredder_ReturnChakramAlias_shredder_return_chakram_2Class,
+      &_dso_handle);
+  }
+  if ( g_pEntityCDOTA_Ability_Shredder_ReturnChakramAlias_shredder_return_chakram_2Class == 0 )
+  {
+    if ( `guard variable for'CDOTA_Ability_Shredder_ReturnChakramAlias_shredder_return_chakram_2::GetEntityClassInfo(void)::g_EntityCDOTA_Ability_Shredder_ReturnChakramAlias_shredder_return_chakram_2ClassInfo == 0
+      && __cxa_guard_acquire(&`guard variable for'CDOTA_Ability_Shredder_ReturnChakramAlias_shredder_return_chakram_2::GetEntityClassInfo(void)::g_EntityCDOTA_Ability_Shredder_ReturnChakramAlias_shredder_return_chakram_2ClassInfo) != 0 )
+    {
+      EntityClassInfo = CDOTA_Ability_Shredder_ReturnChakram::GetEntityClassInfo();
+      CEntityClassInfo_StaticHelper::CEntityClassInfo_StaticHelper(
+        &CDOTA_Ability_Shredder_ReturnChakramAlias_shredder_return_chakram_2::GetEntityClassInfo(void)::g_EntityCDOTA_Ability_Shredder_ReturnChakramAlias_shredder_return_chakram_2ClassInfo,
+        "CDOTA_Ability_Shredder_ReturnChakramAlias_shredder_return_chakram_2",
+        "shredder_return_chakram_2",
+        0,
+        EntityClassInfo);
+      __cxa_guard_release(&`guard variable for'CDOTA_Ability_Shredder_ReturnChakramAlias_shredder_return_chakram_2::GetEntityClassInfo(void)::g_EntityCDOTA_Ability_Shredder_ReturnChakramAlias_shredder_return_chakram_2ClassInfo);
+    }
+    CDOTA_Ability_Shredder_ReturnChakramAlias_shredder_return_chakram_2::GetEntityClassInternal(void)::g_EntityCDOTA_Ability_Shredder_ReturnChakramAlias_shredder_return_chakram_2Class.m_pClassInfo = &CDOTA_Ability_Shredder_ReturnChakramAlias_shredder_return_chakram_2::GetEntityClassInfo(void)::g_EntityCDOTA_Ability_Shredder_ReturnChakramAlias_shredder_return_chakram_2ClassInfo;
+    CDOTA_Ability_Shredder_ReturnChakramAlias_shredder_return_chakram_2::GetEntityClassInternal(void)::g_EntityCDOTA_Ability_Shredder_ReturnChakramAlias_shredder_return_chakram_2Class.m_pBaseClassInfo = CDOTA_Ability_Shredder_ReturnChakramAlias_shredder_return_chakram_2::GetEntityClassInfo(void)::g_EntityCDOTA_Ability_Shredder_ReturnChakramAlias_shredder_return_chakram_2ClassInfo.m_pBaseClassInfo;
+    g_pEntityCDOTA_Ability_Shredder_ReturnChakramAlias_shredder_return_chakram_2Class = &CDOTA_Ability_Shredder_ReturnChakramAlias_shredder_return_chakram_2::GetEntityClassInternal(void)::g_EntityCDOTA_Ability_Shredder_ReturnChakramAlias_shredder_return_chakram_2Class;
+    CDOTA_Ability_Shredder_ReturnChakramAlias_shredder_return_chakram_2::GetEntityClassInfo(void)::g_EntityCDOTA_Ability_Shredder_ReturnChakramAlias_shredder_return_chakram_2ClassInfo.m_pClass = &CDOTA_Ability_Shredder_ReturnChakramAlias_shredder_return_chakram_2::GetEntityClassInternal(void)::g_EntityCDOTA_Ability_Shredder_ReturnChakramAlias_shredder_return_chakram_2Class;
+    CDOTA_Ability_Shredder_ReturnChakramAlias_shredder_return_chakram_2::GetEntityClassInternal(void)::g_EntityCDOTA_Ability_Shredder_ReturnChakramAlias_shredder_return_chakram_2Class.m_pScriptClassDesc = CDOTABaseAbility::InitScriptDesc();
+    g_pEntityCDOTA_Ability_Shredder_ReturnChakramAlias_shredder_return_chakram_2Class->m_pComponentOverrides = 0;
+  }
+  CDOTA_Ability_Shredder_ReturnChakramAlias_shredder_return_chakram_2::GetEntityClassInternal(void)::g_EntityCDOTA_Ability_Shredder_ReturnChakramAlias_shredder_return_chakram_2Class.m_flags |= 2u;
+  return 1;
+}
+
+
+// LocalRegisterSchemaModule<ArbitraryTemplateParameter_server_dota_unit_hero_shredder_cpp>  (line 832, @0x0000000002ce4330, libserver.so)  // inlines: Call
+// callers: RegisterSchemaModule_dota_unit_hero_shredder_cpp
+// globals: CDOTA_Unit_Hero_Shredder::CEntityInstanceEntityClass::s_pSchemaBindingForLocalModule, CDOTA_Unit_Hero_Shredder::s_pSchemaBindingForLocalModule, CDOTA_Ability_Shredder_WhirlingDeath::CEntityInstanceEntityClass::s_pSchemaBindingForLocalModule, CDOTA_Ability_Shredder_WhirlingDeath::s_pSchemaBindingForLocalModule, CDOTA_Ability_Shredder_TimberChain::CEntityInstanceEntityClass::s_pSchemaBindingForLocalModule, CDOTA_Ability_Shredder_TimberChain::s_pSchemaBindingForLocalModule, CDOTA_Ability_Shredder_Reactive_Armor::CEntityInstanceEntityClass::s_pSchemaBindingForLocalModule, CDOTA_Ability_Shredder_Reactive_Armor::s_pSchemaBindingForLocalModule (16 total)
+void __fastcall LocalRegisterSchemaModule<ArbitraryTemplateParameter_server_dota_unit_hero_shredder_cpp>(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        SchemaRegistrationPhase_t nRegistrationPhase)
+{
+  if ( nRegistrationPhase == SchemaRegistrationPhase_t::SCHEMA_REGISTRATION_PHASE_CLASSES )
+  {
+    (*(CDOTA_Unit_Hero_Shredder::CEntityInstanceEntityClass::s_pSchemaBindingForLocalModule->_vptr_ISchemaBinding + 5))(
+      CDOTA_Unit_Hero_Shredder::CEntityInstanceEntityClass::s_pSchemaBindingForLocalModule,
+      pSchemaSystem,
+      pBinaryName,
+      "server");
+    (*(CDOTA_Unit_Hero_Shredder::s_pSchemaBindingForLocalModule->_vptr_ISchemaBinding + 5))(
+      CDOTA_Unit_Hero_Shredder::s_pSchemaBindingForLocalModule,
+      pSchemaSystem,
+      pBinaryName,
+      "server");
+    (*(CDOTA_Ability_Shredder_WhirlingDeath::CEntityInstanceEntityClass::s_pSchemaBindingForLocalModule->_vptr_ISchemaBinding
+     + 5))(
+      CDOTA_Ability_Shredder_WhirlingDeath::CEntityInstanceEntityClass::s_pSchemaBindingForLocalModule,
+      pSchemaSystem,
+      pBinaryName,
+      "server");
+    (*(CDOTA_Ability_Shredder_WhirlingDeath::s_pSchemaBindingForLocalModule->_vptr_ISchemaBinding + 5))(
+      CDOTA_Ability_Shredder_WhirlingDeath::s_pSchemaBindingForLocalModule,
+      pSchemaSystem,
+      pBinaryName,
+      "server");
+    (*(CDOTA_Ability_Shredder_TimberChain::CEntityInstanceEntityClass::s_pSchemaBindingForLocalModule->_vptr_ISchemaBinding
+     + 5))(
+      CDOTA_Ability_Shredder_TimberChain::CEntityInstanceEntityClass::s_pSchemaBindingForLocalModule,
+      pSchemaSystem,
+      pBinaryName,
+      "server");
+    (*(CDOTA_Ability_Shredder_TimberChain::s_pSchemaBindingForLocalModule->_vptr_ISchemaBinding + 5))(
+      CDOTA_Ability_Shredder_TimberChain::s_pSchemaBindingForLocalModule,
+      pSchemaSystem,
+      pBinaryName,
+      "server");
+    (*(CDOTA_Ability_Shredder_Reactive_Armor::CEntityInstanceEntityClass::s_pSchemaBindingForLocalModule->_vptr_ISchemaBinding
+     + 5))(
+      CDOTA_Ability_Shredder_Reactive_Armor::CEntityInstanceEntityClass::s_pSchemaBindingForLocalModule,
+      pSchemaSystem,
+      pBinaryName,
+      "server");
+    (*(CDOTA_Ability_Shredder_Reactive_Armor::s_pSchemaBindingForLocalModule->_vptr_ISchemaBinding + 5))(
+      CDOTA_Ability_Shredder_Reactive_Armor::s_pSchemaBindingForLocalModule,
+      pSchemaSystem,
+      pBinaryName,
+      "server");
+    (*(CDOTA_Ability_Shredder_Chakram::CEntityInstanceEntityClass::s_pSchemaBindingForLocalModule->_vptr_ISchemaBinding
+     + 5))(
+      CDOTA_Ability_Shredder_Chakram::CEntityInstanceEntityClass::s_pSchemaBindingForLocalModule,
+      pSchemaSystem,
+      pBinaryName,
+      "server");
+    (*(CDOTA_Ability_Shredder_Chakram::s_pSchemaBindingForLocalModule->_vptr_ISchemaBinding + 5))(
+      CDOTA_Ability_Shredder_Chakram::s_pSchemaBindingForLocalModule,
+      pSchemaSystem,
+      pBinaryName,
+      "server");
+    (*(CDOTA_Ability_Shredder_ChakramAlias_shredder_chakram_2::CEntityInstanceEntityClass::s_pSchemaBindingForLocalModule->_vptr_ISchemaBinding
+     + 5))(
+      CDOTA_Ability_Shredder_ChakramAlias_shredder_chakram_2::CEntityInstanceEntityClass::s_pSchemaBindingForLocalModule,
+      pSchemaSystem,
+      pBinaryName,
+      "server");
+    (*(CDOTA_Ability_Shredder_ChakramAlias_shredder_chakram_2::s_pSchemaBindingForLocalModule->_vptr_ISchemaBinding + 5))(
+      CDOTA_Ability_Shredder_ChakramAlias_shredder_chakram_2::s_pSchemaBindingForLocalModule,
+      pSchemaSystem,
+      pBinaryName,
+      "server");
+    (*(CDOTA_Ability_Shredder_ReturnChakram::CEntityInstanceEntityClass::s_pSchemaBindingForLocalModule->_vptr_ISchemaBinding
+     + 5))(
+      CDOTA_Ability_Shredder_ReturnChakram::CEntityInstanceEntityClass::s_pSchemaBindingForLocalModule,
+      pSchemaSystem,
+      pBinaryName,
+      "server");
+    (*(CDOTA_Ability_Shredder_ReturnChakram::s_pSchemaBindingForLocalModule->_vptr_ISchemaBinding + 5))(
+      CDOTA_Ability_Shredder_ReturnChakram::s_pSchemaBindingForLocalModule,
+      pSchemaSystem,
+      pBinaryName,
+      "server");
+    (*(CDOTA_Ability_Shredder_ReturnChakramAlias_shredder_return_chakram_2::CEntityInstanceEntityClass::s_pSchemaBindingForLocalModule->_vptr_ISchemaBinding
+     + 5))(
+      CDOTA_Ability_Shredder_ReturnChakramAlias_shredder_return_chakram_2::CEntityInstanceEntityClass::s_pSchemaBindingForLocalModule,
+      pSchemaSystem,
+      pBinaryName,
+      "server");
+    (*(CDOTA_Ability_Shredder_ReturnChakramAlias_shredder_return_chakram_2::s_pSchemaBindingForLocalModule->_vptr_ISchemaBinding
+     + 5))(
+      CDOTA_Ability_Shredder_ReturnChakramAlias_shredder_return_chakram_2::s_pSchemaBindingForLocalModule,
+      pSchemaSystem,
+      pBinaryName,
+      "server");
+  }
+  ++g_nLinkerHack_SchemaAnchor_RegistrationCountFor_server;
+}
+
+
+// RegisterSchemaModule_dota_unit_hero_shredder_cpp  (line 849, @0x0000000002ce4500, libserver.so)
+// calls: LocalRegisterSchemaModule<ArbitraryTemplateParameter_server_dota_unit_hero_shredder_cpp>
+// callers: CSchemaRegistration_server::RegisterAllBindings
+void __fastcall RegisterSchemaModule_dota_unit_hero_shredder_cpp(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        SchemaRegistrationPhase_t nRegistrationPhase)
+{
+  LocalRegisterSchemaModule<ArbitraryTemplateParameter_server_dota_unit_hero_shredder_cpp>(
+    pSchemaSystem,
+    pBinaryName,
+    nRegistrationPhase);
+}
+
+

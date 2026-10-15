@@ -1,0 +1,56 @@
+
+// ==== functions (decompiled by Hex-Rays; names/signatures from DWARF) ====
+
+// RegisterAtomicType_CNetworkedQuantizedFloat  (line 37, @0x00000000020382f0, libserver.so)  // inlines: SchemaMetaSet2_t
+// calls: __cxa_guard_acquire, __cxa_guard_release
+// callers: LocalRegisterSchemaModule<ArbitraryTemplateParameter_server_networkquantizedtypes_h>, RegisterSchemaModule_networkquantizedtypes_h
+// strings: "MNetworkSerializeAs"
+// globals: `guard variable for'RegisterAtomicType_CNetworkedQuantizedFloat(ISchemaSystem *)::SID_AtomicMeta2_CNetworkedQuantizedFloat, `guard variable for'RegisterAtomicType_CNetworkedQuantizedFloat(ISchemaSystem *)::s_AtomicTypeInfoCNetworkedQuantizedFloat, RegisterAtomicType_CNetworkedQuantizedFloat(ISchemaSystem *)::s_AtomicTypeInfoCNetworkedQuantizedFloat, RegisterAtomicType_CNetworkedQuantizedFloat(ISchemaSystem *)::SID_AtomicMeta2_CNetworkedQuantizedFloat
+void __fastcall RegisterAtomicType_CNetworkedQuantizedFloat(ISchemaSystem *pSchemaSystem)
+{
+  if ( `guard variable for'RegisterAtomicType_CNetworkedQuantizedFloat(ISchemaSystem *)::SID_AtomicMeta2_CNetworkedQuantizedFloat == 0
+    && __cxa_guard_acquire(&`guard variable for'RegisterAtomicType_CNetworkedQuantizedFloat(ISchemaSystem *)::SID_AtomicMeta2_CNetworkedQuantizedFloat) != 0 )
+  {
+    RegisterAtomicType_CNetworkedQuantizedFloat(ISchemaSystem *)::SID_AtomicMeta2_CNetworkedQuantizedFloat[0].m_pTagName = "MNetworkSerializeAs";
+    __cxa_guard_release(&`guard variable for'RegisterAtomicType_CNetworkedQuantizedFloat(ISchemaSystem *)::SID_AtomicMeta2_CNetworkedQuantizedFloat);
+  }
+  if ( `guard variable for'RegisterAtomicType_CNetworkedQuantizedFloat(ISchemaSystem *)::s_AtomicTypeInfoCNetworkedQuantizedFloat == 0
+    && __cxa_guard_acquire(&`guard variable for'RegisterAtomicType_CNetworkedQuantizedFloat(ISchemaSystem *)::s_AtomicTypeInfoCNetworkedQuantizedFloat) != 0 )
+  {
+    RegisterAtomicType_CNetworkedQuantizedFloat(ISchemaSystem *)::s_AtomicTypeInfoCNetworkedQuantizedFloat.m_Metadata2.m_nMetaCount = 1;
+    RegisterAtomicType_CNetworkedQuantizedFloat(ISchemaSystem *)::s_AtomicTypeInfoCNetworkedQuantizedFloat.m_Metadata2.m_pMetaSet = RegisterAtomicType_CNetworkedQuantizedFloat(ISchemaSystem *)::SID_AtomicMeta2_CNetworkedQuantizedFloat;
+    __cxa_guard_release(&`guard variable for'RegisterAtomicType_CNetworkedQuantizedFloat(ISchemaSystem *)::s_AtomicTypeInfoCNetworkedQuantizedFloat);
+  }
+  (*(*pSchemaSystem + 248LL))(
+    pSchemaSystem,
+    &RegisterAtomicType_CNetworkedQuantizedFloat(ISchemaSystem *)::s_AtomicTypeInfoCNetworkedQuantizedFloat);
+}
+
+
+// LocalRegisterSchemaModule<ArbitraryTemplateParameter_server_networkquantizedtypes_h>  (line 51, @0x000000000203bef0, libserver.so)
+// calls: RegisterAtomicType_CNetworkedQuantizedFloat
+void __fastcall LocalRegisterSchemaModule<ArbitraryTemplateParameter_server_networkquantizedtypes_h>(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        SchemaRegistrationPhase_t nRegistrationPhase)
+{
+  if ( nRegistrationPhase == SchemaRegistrationPhase_t::SCHEMA_REGISTRATION_PHASE_ATOMIC_TYPES_AND_ENUMS )
+    RegisterAtomicType_CNetworkedQuantizedFloat(pSchemaSystem);
+  ++g_nLinkerHack_SchemaAnchor_RegistrationCountFor_server;
+}
+
+
+// RegisterSchemaModule_networkquantizedtypes_h  (line 53, @0x000000000203bf20, libserver.so)  // inlines: LocalRegisterSchemaModule<ArbitraryTemplateParameter_server_networkquantizedtypes_h>
+// calls: RegisterAtomicType_CNetworkedQuantizedFloat
+// callers: CSchemaRegistration_server::RegisterAllBindings
+void __fastcall RegisterSchemaModule_networkquantizedtypes_h(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        SchemaRegistrationPhase_t nRegistrationPhase)
+{
+  if ( nRegistrationPhase == SchemaRegistrationPhase_t::SCHEMA_REGISTRATION_PHASE_ATOMIC_TYPES_AND_ENUMS )
+    RegisterAtomicType_CNetworkedQuantizedFloat(pSchemaSystem);
+  ++g_nLinkerHack_SchemaAnchor_RegistrationCountFor_server;
+}
+
+

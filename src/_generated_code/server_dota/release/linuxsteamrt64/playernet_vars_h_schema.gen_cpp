@@ -1,0 +1,617 @@
+
+// ==== functions (decompiled by Hex-Rays; names/signatures from DWARF) ====
+
+// fogparams_t::Schema_CompileTimeVerificationFunction  (line 35, @0x0000000001f0ceb0, libserver.so)
+void __fastcall fogparams_t::Schema_CompileTimeVerificationFunction(fogparams_t *const this)
+{
+  ;
+}
+
+
+// fogparams_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE  (line 60, @0x0000000001f0cec0, libserver.so)  // inlines: Get, NetworkVarDecl_t, SchemaBinding_SchemaTypeOfMemberVarByAddr<fogparams_t, CNetworkColorBase<Color, fogparams_t::NetworkVar_colorPrimary> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<fogparams_t, CNetworkColorBase<Color, fogparams_t::NetworkVar_colorPrimaryLerpTo> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<fogparams_t, CNetworkColorBase<Color, fogparams_t::NetworkVar_colorSecondary> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<fogparams_t, CNetworkColorBase<Color, fogparams_t::NetworkVar_colorSecondaryLerpTo> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<fogparams_t, CNetworkVarBase<bool, fogparams_t::NetworkVar_blend> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<fogparams_t, CNetworkVarBase<bool, fogparams_t::NetworkVar_enable> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<fogparams_t, CNetworkVarBase<bool, fogparams_t::NetworkVar_m_bNoReflectionFog> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<fogparams_t, CNetworkVarBase<float, fogparams_t::NetworkVar_HDRColorScale> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<fogparams_t, CNetworkVarBase<float, fogparams_t::NetworkVar_duration> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<fogparams_t, CNetworkVarBase<float, fogparams_t::NetworkVar_end> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<fogparams_t, CNetworkVarBase<float, fogparams_t::NetworkVar_endLerpTo> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<fogparams_t, CNetworkVarBase<float, fogparams_t::NetworkVar_exponent> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<fogparams_t, CNetworkVarBase<float, fogparams_t::NetworkVar_farz> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<fogparams_t, CNetworkVarBase<float, fogparams_t::NetworkVar_lerptime> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<fogparams_t, CNetworkVarBase<float, fogparams_t::NetworkVar_maxdensity> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<fogparams_t, CNetworkVarBase<float, fogparams_t::NetworkVar_maxdensityLerpTo> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<fogparams_t, CNetworkVarBase<float, fogparams_t::NetworkVar_skyboxFogFactor> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<fogparams_t, CNetworkVarBase<float, fogparams_t::NetworkVar_skyboxFogFactorLerpTo> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<fogparams_t, CNetworkVarBase<float, fogparams_t::NetworkVar_start> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<fogparams_t, CNetworkVarBase<float, fogparams_t::NetworkVar_startLerpTo> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<fogparams_t, CNetworkVectorBase<Vector, fogparams_t::NetworkVar_dirPrimary> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<fogparams_t, bool>, SetTypeScope
+// calls: __cxa_guard_acquire, __cxa_guard_release
+// callers: CSchemaClassBinding<fogparams_t>::Register
+// strings: "m_bNoReflectionFog", "float32", "maxdensityLerpTo", "endLerpTo", "startLerpTo", "skyboxFogFactorLerpTo" (9 total)
+// globals: fogparams_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitialize, `guard variable for'fogparams_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char co, CSchemaManipulator<Vector>::StaticAccessor(void)::m, CAtomicManipulator<Vector>::Get(void)::val, CSchemaManipulator<Color>::StaticAccessor(void)::m, CAtomicManipulator<Color>::Get(void)::val, fogparams_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_Cl
+CSchemaClassInfo *__fastcall fogparams_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        const char *pProjectName)
+{
+  CSchemaClassInfo *result; // rax
+  ISchemaSystemTypeScope *v4; // rbx
+  CSchemaType *v5; // rax
+
+  result = fogparams_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult;
+  if ( fogparams_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult == 0 )
+  {
+    v4 = (*(*pSchemaSystem + 112LL))(pSchemaSystem, 0, pBinaryName);
+    if ( `guard variable for'fogparams_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_fogparams_t1_MNetworkVarNames_Value == 0
+      && __cxa_guard_acquire(&`guard variable for'fogparams_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_fogparams_t1_MNetworkVarNames_Value) != 0 )
+    {
+      fogparams_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_fogparams_t1_MNetworkVarNames_Value.m_pVarName = "dirPrimary";
+      fogparams_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_fogparams_t1_MNetworkVarNames_Value.m_pVarType = "Vector";
+      __cxa_guard_release(&`guard variable for'fogparams_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_fogparams_t1_MNetworkVarNames_Value);
+    }
+    if ( `guard variable for'fogparams_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_fogparams_t2_MNetworkVarNames_Value == 0
+      && __cxa_guard_acquire(&`guard variable for'fogparams_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_fogparams_t2_MNetworkVarNames_Value) != 0 )
+    {
+      fogparams_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_fogparams_t2_MNetworkVarNames_Value.m_pVarName = "colorPrimary";
+      fogparams_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_fogparams_t2_MNetworkVarNames_Value.m_pVarType = "Color";
+      __cxa_guard_release(&`guard variable for'fogparams_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_fogparams_t2_MNetworkVarNames_Value);
+    }
+    if ( `guard variable for'fogparams_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_fogparams_t3_MNetworkVarNames_Value == 0
+      && __cxa_guard_acquire(&`guard variable for'fogparams_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_fogparams_t3_MNetworkVarNames_Value) != 0 )
+    {
+      fogparams_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_fogparams_t3_MNetworkVarNames_Value.m_pVarName = "colorSecondary";
+      fogparams_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_fogparams_t3_MNetworkVarNames_Value.m_pVarType = "Color";
+      __cxa_guard_release(&`guard variable for'fogparams_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_fogparams_t3_MNetworkVarNames_Value);
+    }
+    if ( `guard variable for'fogparams_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_fogparams_t4_MNetworkVarNames_Value == 0
+      && __cxa_guard_acquire(&`guard variable for'fogparams_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_fogparams_t4_MNetworkVarNames_Value) != 0 )
+    {
+      fogparams_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_fogparams_t4_MNetworkVarNames_Value.m_pVarName = "colorPrimaryLerpTo";
+      fogparams_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_fogparams_t4_MNetworkVarNames_Value.m_pVarType = "Color";
+      __cxa_guard_release(&`guard variable for'fogparams_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_fogparams_t4_MNetworkVarNames_Value);
+    }
+    if ( `guard variable for'fogparams_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_fogparams_t5_MNetworkVarNames_Value == 0
+      && __cxa_guard_acquire(&`guard variable for'fogparams_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_fogparams_t5_MNetworkVarNames_Value) != 0 )
+    {
+      fogparams_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_fogparams_t5_MNetworkVarNames_Value.m_pVarName = "colorSecondaryLerpTo";
+      fogparams_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_fogparams_t5_MNetworkVarNames_Value.m_pVarType = "Color";
+      __cxa_guard_release(&`guard variable for'fogparams_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_fogparams_t5_MNetworkVarNames_Value);
+    }
+    if ( `guard variable for'fogparams_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_fogparams_t6_MNetworkVarNames_Value == 0
+      && __cxa_guard_acquire(&`guard variable for'fogparams_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_fogparams_t6_MNetworkVarNames_Value) != 0 )
+    {
+      fogparams_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_fogparams_t6_MNetworkVarNames_Value.m_pVarName = "start";
+      fogparams_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_fogparams_t6_MNetworkVarNames_Value.m_pVarType = "float32";
+      __cxa_guard_release(&`guard variable for'fogparams_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_fogparams_t6_MNetworkVarNames_Value);
+    }
+    if ( `guard variable for'fogparams_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_fogparams_t7_MNetworkVarNames_Value == 0
+      && __cxa_guard_acquire(&`guard variable for'fogparams_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_fogparams_t7_MNetworkVarNames_Value) != 0 )
+    {
+      fogparams_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_fogparams_t7_MNetworkVarNames_Value.m_pVarName = "end";
+      fogparams_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_fogparams_t7_MNetworkVarNames_Value.m_pVarType = "float32";
+      __cxa_guard_release(&`guard variable for'fogparams_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_fogparams_t7_MNetworkVarNames_Value);
+    }
+    if ( `guard variable for'fogparams_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_fogparams_t8_MNetworkVarNames_Value == 0
+      && __cxa_guard_acquire(&`guard variable for'fogparams_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_fogparams_t8_MNetworkVarNames_Value) != 0 )
+    {
+      fogparams_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_fogparams_t8_MNetworkVarNames_Value.m_pVarName = "farz";
+      fogparams_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_fogparams_t8_MNetworkVarNames_Value.m_pVarType = "float32";
+      __cxa_guard_release(&`guard variable for'fogparams_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_fogparams_t8_MNetworkVarNames_Value);
+    }
+    if ( `guard variable for'fogparams_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_fogparams_t9_MNetworkVarNames_Value == 0
+      && __cxa_guard_acquire(&`guard variable for'fogparams_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_fogparams_t9_MNetworkVarNames_Value) != 0 )
+    {
+      fogparams_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_fogparams_t9_MNetworkVarNames_Value.m_pVarName = "maxdensity";
+      fogparams_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_fogparams_t9_MNetworkVarNames_Value.m_pVarType = "float32";
+      __cxa_guard_release(&`guard variable for'fogparams_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_fogparams_t9_MNetworkVarNames_Value);
+    }
+    if ( `guard variable for'fogparams_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_fogparams_t10_MNetworkVarNames_Value == 0
+      && __cxa_guard_acquire(&`guard variable for'fogparams_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_fogparams_t10_MNetworkVarNames_Value) != 0 )
+    {
+      fogparams_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_fogparams_t10_MNetworkVarNames_Value.m_pVarName = "exponent";
+      fogparams_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_fogparams_t10_MNetworkVarNames_Value.m_pVarType = "float32";
+      __cxa_guard_release(&`guard variable for'fogparams_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_fogparams_t10_MNetworkVarNames_Value);
+    }
+    if ( `guard variable for'fogparams_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_fogparams_t11_MNetworkVarNames_Value == 0
+      && __cxa_guard_acquire(&`guard variable for'fogparams_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_fogparams_t11_MNetworkVarNames_Value) != 0 )
+    {
+      fogparams_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_fogparams_t11_MNetworkVarNames_Value.m_pVarName = "HDRColorScale";
+      fogparams_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_fogparams_t11_MNetworkVarNames_Value.m_pVarType = "float32";
+      __cxa_guard_release(&`guard variable for'fogparams_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_fogparams_t11_MNetworkVarNames_Value);
+    }
+    if ( `guard variable for'fogparams_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_fogparams_t12_MNetworkVarNames_Value == 0
+      && __cxa_guard_acquire(&`guard variable for'fogparams_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_fogparams_t12_MNetworkVarNames_Value) != 0 )
+    {
+      fogparams_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_fogparams_t12_MNetworkVarNames_Value.m_pVarName = "skyboxFogFactor";
+      fogparams_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_fogparams_t12_MNetworkVarNames_Value.m_pVarType = "float32";
+      __cxa_guard_release(&`guard variable for'fogparams_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_fogparams_t12_MNetworkVarNames_Value);
+    }
+    if ( `guard variable for'fogparams_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_fogparams_t13_MNetworkVarNames_Value == 0
+      && __cxa_guard_acquire(&`guard variable for'fogparams_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_fogparams_t13_MNetworkVarNames_Value) != 0 )
+    {
+      fogparams_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_fogparams_t13_MNetworkVarNames_Value.m_pVarName = "skyboxFogFactorLerpTo";
+      fogparams_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_fogparams_t13_MNetworkVarNames_Value.m_pVarType = "float32";
+      __cxa_guard_release(&`guard variable for'fogparams_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_fogparams_t13_MNetworkVarNames_Value);
+    }
+    if ( `guard variable for'fogparams_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_fogparams_t14_MNetworkVarNames_Value == 0
+      && __cxa_guard_acquire(&`guard variable for'fogparams_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_fogparams_t14_MNetworkVarNames_Value) != 0 )
+    {
+      fogparams_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_fogparams_t14_MNetworkVarNames_Value.m_pVarName = "startLerpTo";
+      fogparams_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_fogparams_t14_MNetworkVarNames_Value.m_pVarType = "float32";
+      __cxa_guard_release(&`guard variable for'fogparams_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_fogparams_t14_MNetworkVarNames_Value);
+    }
+    if ( `guard variable for'fogparams_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_fogparams_t15_MNetworkVarNames_Value == 0
+      && __cxa_guard_acquire(&`guard variable for'fogparams_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_fogparams_t15_MNetworkVarNames_Value) != 0 )
+    {
+      fogparams_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_fogparams_t15_MNetworkVarNames_Value.m_pVarName = "endLerpTo";
+      fogparams_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_fogparams_t15_MNetworkVarNames_Value.m_pVarType = "float32";
+      __cxa_guard_release(&`guard variable for'fogparams_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_fogparams_t15_MNetworkVarNames_Value);
+    }
+    if ( `guard variable for'fogparams_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_fogparams_t16_MNetworkVarNames_Value == 0
+      && __cxa_guard_acquire(&`guard variable for'fogparams_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_fogparams_t16_MNetworkVarNames_Value) != 0 )
+    {
+      fogparams_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_fogparams_t16_MNetworkVarNames_Value.m_pVarName = "maxdensityLerpTo";
+      fogparams_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_fogparams_t16_MNetworkVarNames_Value.m_pVarType = "float32";
+      __cxa_guard_release(&`guard variable for'fogparams_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_fogparams_t16_MNetworkVarNames_Value);
+    }
+    if ( `guard variable for'fogparams_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_fogparams_t17_MNetworkVarNames_Value == 0
+      && __cxa_guard_acquire(&`guard variable for'fogparams_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_fogparams_t17_MNetworkVarNames_Value) != 0 )
+    {
+      fogparams_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_fogparams_t17_MNetworkVarNames_Value.m_pVarName = "lerptime";
+      fogparams_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_fogparams_t17_MNetworkVarNames_Value.m_pVarType = "float32";
+      __cxa_guard_release(&`guard variable for'fogparams_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_fogparams_t17_MNetworkVarNames_Value);
+    }
+    if ( `guard variable for'fogparams_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_fogparams_t18_MNetworkVarNames_Value == 0
+      && __cxa_guard_acquire(&`guard variable for'fogparams_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_fogparams_t18_MNetworkVarNames_Value) != 0 )
+    {
+      fogparams_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_fogparams_t18_MNetworkVarNames_Value.m_pVarName = "duration";
+      fogparams_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_fogparams_t18_MNetworkVarNames_Value.m_pVarType = "float32";
+      __cxa_guard_release(&`guard variable for'fogparams_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_fogparams_t18_MNetworkVarNames_Value);
+    }
+    if ( `guard variable for'fogparams_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_fogparams_t19_MNetworkVarNames_Value == 0
+      && __cxa_guard_acquire(&`guard variable for'fogparams_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_fogparams_t19_MNetworkVarNames_Value) != 0 )
+    {
+      fogparams_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_fogparams_t19_MNetworkVarNames_Value.m_pVarName = "enable";
+      fogparams_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_fogparams_t19_MNetworkVarNames_Value.m_pVarType = "bool";
+      __cxa_guard_release(&`guard variable for'fogparams_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_fogparams_t19_MNetworkVarNames_Value);
+    }
+    if ( `guard variable for'fogparams_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_fogparams_t20_MNetworkVarNames_Value == 0
+      && __cxa_guard_acquire(&`guard variable for'fogparams_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_fogparams_t20_MNetworkVarNames_Value) != 0 )
+    {
+      fogparams_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_fogparams_t20_MNetworkVarNames_Value.m_pVarName = "blend";
+      fogparams_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_fogparams_t20_MNetworkVarNames_Value.m_pVarType = "bool";
+      __cxa_guard_release(&`guard variable for'fogparams_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_fogparams_t20_MNetworkVarNames_Value);
+    }
+    if ( `guard variable for'fogparams_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_fogparams_t21_MNetworkVarNames_Value == 0
+      && __cxa_guard_acquire(&`guard variable for'fogparams_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_fogparams_t21_MNetworkVarNames_Value) != 0 )
+    {
+      fogparams_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_fogparams_t21_MNetworkVarNames_Value.m_pVarName = "m_bNoReflectionFog";
+      fogparams_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_fogparams_t21_MNetworkVarNames_Value.m_pVarType = "bool";
+      __cxa_guard_release(&`guard variable for'fogparams_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_fogparams_t21_MNetworkVarNames_Value);
+    }
+    fogparams_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_fogparams_t[0].m_pType = (*(*v4 + 56LL))(v4, "Vector", 2010, CAtomicManipulator<Vector>::Get(void)::val, CSchemaManipulator<Vector>::StaticAccessor(void)::m);
+    fogparams_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_fogparams_t[1].m_pType = (*(*v4 + 56LL))(v4, "Color", 2000, CAtomicManipulator<Color>::Get(void)::val, CSchemaManipulator<Color>::StaticAccessor(void)::m);
+    fogparams_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_fogparams_t[2].m_pType = (*(*v4 + 56LL))(v4, "Color", 2000, CAtomicManipulator<Color>::Get(void)::val, CSchemaManipulator<Color>::StaticAccessor(void)::m);
+    fogparams_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_fogparams_t[3].m_pType = (*(*v4 + 56LL))(v4, "Color", 2000, CAtomicManipulator<Color>::Get(void)::val, CSchemaManipulator<Color>::StaticAccessor(void)::m);
+    fogparams_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_fogparams_t[4].m_pType = (*(*v4 + 56LL))(v4, "Color", 2000, CAtomicManipulator<Color>::Get(void)::val, CSchemaManipulator<Color>::StaticAccessor(void)::m);
+    fogparams_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_fogparams_t[5].m_pType = (*(*v4 + 40LL))(v4, 11);
+    fogparams_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_fogparams_t[6].m_pType = (*(*v4 + 40LL))(v4, 11);
+    fogparams_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_fogparams_t[7].m_pType = (*(*v4 + 40LL))(v4, 11);
+    fogparams_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_fogparams_t[8].m_pType = (*(*v4 + 40LL))(v4, 11);
+    fogparams_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_fogparams_t[9].m_pType = (*(*v4 + 40LL))(v4, 11);
+    fogparams_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_fogparams_t[10].m_pType = (*(*v4 + 40LL))(v4, 11);
+    fogparams_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_fogparams_t[11].m_pType = (*(*v4 + 40LL))(v4, 11);
+    fogparams_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_fogparams_t[12].m_pType = (*(*v4 + 40LL))(v4, 11);
+    fogparams_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_fogparams_t[13].m_pType = (*(*v4 + 40LL))(v4, 11);
+    fogparams_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_fogparams_t[14].m_pType = (*(*v4 + 40LL))(v4, 11);
+    fogparams_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_fogparams_t[15].m_pType = (*(*v4 + 40LL))(v4, 11);
+    fogparams_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_fogparams_t[16].m_pType = (*(*v4 + 40LL))(v4, 11);
+    fogparams_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_fogparams_t[17].m_pType = (*(*v4 + 40LL))(v4, 11);
+    fogparams_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_fogparams_t[18].m_pType = (*(*v4 + 40LL))(v4, 13);
+    fogparams_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_fogparams_t[19].m_pType = (*(*v4 + 40LL))(v4, 13);
+    fogparams_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_fogparams_t[20].m_pType = (*(*v4 + 40LL))(v4, 13);
+    v5 = (*(*v4 + 40LL))(v4, 13);
+    fogparams_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_fogparams_t.m_pOuterTypeScope = v4;
+    fogparams_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_fogparams_t[21].m_pType = v5;
+    fogparams_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult = &fogparams_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_fogparams_t;
+    (*(*v4 + 264LL))(
+      v4,
+      &fogparams_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_fogparams_t);
+    return fogparams_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult;
+  }
+  return result;
+}
+
+
+// fogparams_t::Schema_VerifyBindingIsRegistered  (line 405, @0x0000000001f0d850, libserver.so)
+void __cdecl fogparams_t::Schema_VerifyBindingIsRegistered()
+{
+  ;
+}
+
+
+// fogplayerparams_t::Schema_CompileTimeVerificationFunction  (line 413, @0x0000000001f0d860, libserver.so)
+void __fastcall fogplayerparams_t::Schema_CompileTimeVerificationFunction(fogplayerparams_t *const this)
+{
+  ;
+}
+
+
+// fogplayerparams_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE  (line 430, @0x0000000001f0d870, libserver.so)  // inlines: Get, NetworkVarDecl_t, SchemaBinding_SchemaTypeOfMemberVarByAddr<fogplayerparams_t, CNetworkHandleBase<CFogController, fogplayerparams_t::NetworkVar_m_hCtrl> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<fogplayerparams_t, Color>, SchemaBinding_SchemaTypeOfMemberVarByAddr<fogplayerparams_t, float>, SetTypeScope
+// calls: __cxa_guard_acquire, __cxa_guard_release
+// callers: CSchemaClassBinding<fogplayerparams_t>::Register
+// strings: "CFogController", "CHandle", "m_hCtrl", "CHandle< CFogController>"
+// globals: fogplayerparams_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInit, `guard variable for'fogplayerparams_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,c, CSchemaManipulator<CHandle<CFogController>>::StaticAccessor(void)::m, CAtomicManipulator<CHandle<CFogController>>::Get(void)::val, CSchemaManipulator<Color>::StaticAccessor(void)::m, CAtomicManipulator<Color>::Get(void)::val, fogplayerparams_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSch
+CSchemaClassInfo *__fastcall fogplayerparams_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        const char *pProjectName)
+{
+  CSchemaClassInfo *result; // rax
+  ISchemaSystemTypeScope *v4; // rbx
+  __int64 (__fastcall *v5)(ISchemaSystemTypeScope *, const char *, __int64, __int64 (__fastcall **)(), __int64 (__fastcall **)(), __int64); // r12
+  __int64 v6; // rax
+  CSchemaType *v7; // rax
+
+  result = fogplayerparams_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult;
+  if ( fogplayerparams_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult == 0 )
+  {
+    v4 = (*(*pSchemaSystem + 112LL))(pSchemaSystem, 0, pBinaryName);
+    if ( `guard variable for'fogplayerparams_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_fogplayerparams_t1_MNetworkVarNames_Value == 0
+      && __cxa_guard_acquire(&`guard variable for'fogplayerparams_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_fogplayerparams_t1_MNetworkVarNames_Value) != 0 )
+    {
+      fogplayerparams_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_fogplayerparams_t1_MNetworkVarNames_Value.m_pVarName = "m_hCtrl";
+      fogplayerparams_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_fogplayerparams_t1_MNetworkVarNames_Value.m_pVarType = "CHandle< CFogController>";
+      __cxa_guard_release(&`guard variable for'fogplayerparams_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_fogplayerparams_t1_MNetworkVarNames_Value);
+    }
+    v5 = *(*v4 + 64LL);
+    v6 = (*(*v4 + 88LL))(v4, "CFogController");
+    fogplayerparams_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_fogplayerparams_t[0].m_pType = v5(v4, "CHandle", 5003, CAtomicManipulator<CHandle<CFogController>>::Get(void)::val, &CSchemaManipulator<CHandle<CFogController>>::StaticAccessor(void)::m, v6);
+    fogplayerparams_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_fogplayerparams_t[1].m_pType = (*(*v4 + 40LL))(v4, 11);
+    fogplayerparams_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_fogplayerparams_t[2].m_pType = (*(*v4 + 56LL))(v4, "Color", 2000, CAtomicManipulator<Color>::Get(void)::val, CSchemaManipulator<Color>::StaticAccessor(void)::m);
+    fogplayerparams_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_fogplayerparams_t[3].m_pType = (*(*v4 + 40LL))(v4, 11);
+    fogplayerparams_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_fogplayerparams_t[4].m_pType = (*(*v4 + 40LL))(v4, 11);
+    fogplayerparams_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_fogplayerparams_t[5].m_pType = (*(*v4 + 40LL))(v4, 11);
+    fogplayerparams_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_fogplayerparams_t[6].m_pType = (*(*v4 + 40LL))(v4, 11);
+    fogplayerparams_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_fogplayerparams_t[7].m_pType = (*(*v4 + 40LL))(v4, 11);
+    fogplayerparams_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_fogplayerparams_t[8].m_pType = (*(*v4 + 56LL))(v4, "Color", 2000, CAtomicManipulator<Color>::Get(void)::val, CSchemaManipulator<Color>::StaticAccessor(void)::m);
+    fogplayerparams_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_fogplayerparams_t[9].m_pType = (*(*v4 + 40LL))(v4, 11);
+    fogplayerparams_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_fogplayerparams_t[10].m_pType = (*(*v4 + 40LL))(v4, 11);
+    fogplayerparams_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_fogplayerparams_t[11].m_pType = (*(*v4 + 40LL))(v4, 11);
+    fogplayerparams_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_fogplayerparams_t[12].m_pType = (*(*v4 + 40LL))(v4, 11);
+    v7 = (*(*v4 + 40LL))(v4, 11);
+    fogplayerparams_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_fogplayerparams_t.m_pOuterTypeScope = v4;
+    fogplayerparams_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_fogplayerparams_t[13].m_pType = v7;
+    fogplayerparams_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult = &fogplayerparams_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_fogplayerparams_t;
+    (*(*v4 + 264LL))(
+      v4,
+      &fogplayerparams_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_fogplayerparams_t);
+    return fogplayerparams_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult;
+  }
+  return result;
+}
+
+
+// fogplayerparams_t::Schema_VerifyBindingIsRegistered  (line 490, @0x0000000001f0daa0, libserver.so)
+void __cdecl fogplayerparams_t::Schema_VerifyBindingIsRegistered()
+{
+  ;
+}
+
+
+// sky3dparams_t::Schema_CompileTimeVerificationFunction  (line 498, @0x0000000001f0dab0, libserver.so)
+void __fastcall sky3dparams_t::Schema_CompileTimeVerificationFunction(sky3dparams_t *const this)
+{
+  ;
+}
+
+
+// sky3dparams_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE  (line 507, @0x0000000001f0dac0, libserver.so)  // inlines: Get, NetworkVarDecl_t, SchemaBinding_SchemaTypeOfMemberVarByAddr<sky3dparams_t, CNetworkVarBase<bool, sky3dparams_t::NetworkVar_bClip3DSkyBoxNearToWorldFar> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<sky3dparams_t, CNetworkVarBase<float, sky3dparams_t::NetworkVar_flClip3DSkyBoxNearToWorldFarOffset> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<sky3dparams_t, CNetworkVarBase<short int, sky3dparams_t::NetworkVar_scale> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<sky3dparams_t, CNetworkVarBase<unsigned char, sky3dparams_t::NetworkVar_area> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<sky3dparams_t, CNetworkVectorBase<Vector, sky3dparams_t::NetworkVar_origin> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<sky3dparams_t, sky3dparams_t::NetworkVar_fog>, SetTypeScope
+// calls: __cxa_guard_acquire, __cxa_guard_release
+// callers: CSchemaClassBinding<sky3dparams_t>::Register
+// strings: "fogparams_t", "flClip3DSkyBoxNearToWorldFarOffset", "float32", "bClip3DSkyBoxNearToWorldFar", "uint8"
+// globals: sky3dparams_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitiali, `guard variable for'sky3dparams_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char , CSchemaManipulator<Vector>::StaticAccessor(void)::m, CAtomicManipulator<Vector>::Get(void)::val, sky3dparams_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_
+CSchemaClassInfo *__fastcall sky3dparams_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        const char *pProjectName)
+{
+  CSchemaClassInfo *result; // rax
+  ISchemaSystemTypeScope *v4; // rbx
+  CSchemaType *v5; // rax
+
+  result = sky3dparams_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult;
+  if ( sky3dparams_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult == 0 )
+  {
+    v4 = (*(*pSchemaSystem + 112LL))(pSchemaSystem, 0, pBinaryName);
+    if ( `guard variable for'sky3dparams_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_sky3dparams_t1_MNetworkVarNames_Value == 0
+      && __cxa_guard_acquire(&`guard variable for'sky3dparams_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_sky3dparams_t1_MNetworkVarNames_Value) != 0 )
+    {
+      sky3dparams_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_sky3dparams_t1_MNetworkVarNames_Value.m_pVarName = "scale";
+      sky3dparams_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_sky3dparams_t1_MNetworkVarNames_Value.m_pVarType = "int16";
+      __cxa_guard_release(&`guard variable for'sky3dparams_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_sky3dparams_t1_MNetworkVarNames_Value);
+    }
+    if ( `guard variable for'sky3dparams_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_sky3dparams_t2_MNetworkVarNames_Value == 0
+      && __cxa_guard_acquire(&`guard variable for'sky3dparams_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_sky3dparams_t2_MNetworkVarNames_Value) != 0 )
+    {
+      sky3dparams_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_sky3dparams_t2_MNetworkVarNames_Value.m_pVarName = "origin";
+      sky3dparams_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_sky3dparams_t2_MNetworkVarNames_Value.m_pVarType = "Vector";
+      __cxa_guard_release(&`guard variable for'sky3dparams_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_sky3dparams_t2_MNetworkVarNames_Value);
+    }
+    if ( `guard variable for'sky3dparams_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_sky3dparams_t3_MNetworkVarNames_Value == 0
+      && __cxa_guard_acquire(&`guard variable for'sky3dparams_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_sky3dparams_t3_MNetworkVarNames_Value) != 0 )
+    {
+      sky3dparams_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_sky3dparams_t3_MNetworkVarNames_Value.m_pVarName = "area";
+      sky3dparams_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_sky3dparams_t3_MNetworkVarNames_Value.m_pVarType = "uint8";
+      __cxa_guard_release(&`guard variable for'sky3dparams_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_sky3dparams_t3_MNetworkVarNames_Value);
+    }
+    if ( `guard variable for'sky3dparams_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_sky3dparams_t4_MNetworkVarNames_Value == 0
+      && __cxa_guard_acquire(&`guard variable for'sky3dparams_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_sky3dparams_t4_MNetworkVarNames_Value) != 0 )
+    {
+      sky3dparams_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_sky3dparams_t4_MNetworkVarNames_Value.m_pVarName = "bClip3DSkyBoxNearToWorldFar";
+      sky3dparams_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_sky3dparams_t4_MNetworkVarNames_Value.m_pVarType = "bool";
+      __cxa_guard_release(&`guard variable for'sky3dparams_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_sky3dparams_t4_MNetworkVarNames_Value);
+    }
+    if ( `guard variable for'sky3dparams_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_sky3dparams_t5_MNetworkVarNames_Value == 0
+      && __cxa_guard_acquire(&`guard variable for'sky3dparams_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_sky3dparams_t5_MNetworkVarNames_Value) != 0 )
+    {
+      sky3dparams_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_sky3dparams_t5_MNetworkVarNames_Value.m_pVarName = "flClip3DSkyBoxNearToWorldFarOffset";
+      sky3dparams_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_sky3dparams_t5_MNetworkVarNames_Value.m_pVarType = "float32";
+      __cxa_guard_release(&`guard variable for'sky3dparams_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_sky3dparams_t5_MNetworkVarNames_Value);
+    }
+    if ( `guard variable for'sky3dparams_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_sky3dparams_t6_MNetworkVarNames_Value == 0
+      && __cxa_guard_acquire(&`guard variable for'sky3dparams_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_sky3dparams_t6_MNetworkVarNames_Value) != 0 )
+    {
+      sky3dparams_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_sky3dparams_t6_MNetworkVarNames_Value.m_pVarName = "fog";
+      sky3dparams_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_sky3dparams_t6_MNetworkVarNames_Value.m_pVarType = "fogparams_t";
+      __cxa_guard_release(&`guard variable for'sky3dparams_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_sky3dparams_t6_MNetworkVarNames_Value);
+    }
+    sky3dparams_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_sky3dparams_t[0].m_pType = (*(*v4 + 40LL))(v4, 5);
+    sky3dparams_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_sky3dparams_t[1].m_pType = (*(*v4 + 56LL))(v4, "Vector", 2010, CAtomicManipulator<Vector>::Get(void)::val, CSchemaManipulator<Vector>::StaticAccessor(void)::m);
+    sky3dparams_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_sky3dparams_t[2].m_pType = (*(*v4 + 40LL))(v4, 4);
+    sky3dparams_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_sky3dparams_t[3].m_pType = (*(*v4 + 40LL))(v4, 13);
+    sky3dparams_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_sky3dparams_t[4].m_pType = (*(*v4 + 40LL))(v4, 11);
+    v5 = (*(*v4 + 88LL))(v4, "fogparams_t");
+    sky3dparams_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_sky3dparams_t.m_pOuterTypeScope = v4;
+    sky3dparams_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_sky3dparams_t[5].m_pType = v5;
+    sky3dparams_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult = &sky3dparams_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_sky3dparams_t;
+    (*(*v4 + 264LL))(
+      v4,
+      &sky3dparams_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_sky3dparams_t);
+    return sky3dparams_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult;
+  }
+  return result;
+}
+
+
+// sky3dparams_t::Schema_VerifyBindingIsRegistered  (line 615, @0x0000000001f0ddb0, libserver.so)
+void __cdecl sky3dparams_t::Schema_VerifyBindingIsRegistered()
+{
+  ;
+}
+
+
+// audioparams_t::Schema_CompileTimeVerificationFunction  (line 623, @0x0000000001f0ddc0, libserver.so)
+void __fastcall audioparams_t::Schema_CompileTimeVerificationFunction(audioparams_t *const this)
+{
+  ;
+}
+
+
+// audioparams_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE  (line 630, @0x0000000001f0ddd0, libserver.so)  // inlines: Get, NetworkVarDecl_t, SchemaBinding_SchemaTypeOfMemberVarByAddr<audioparams_t, CNetworkArrayBase<Vector, 8, audioparams_t::NetworkVar_localSound> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<audioparams_t, CNetworkVarBase<int, audioparams_t::NetworkVar_soundscapeEntityListIndex> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<audioparams_t, CNetworkVarBase<int, audioparams_t::NetworkVar_soundscapeIndex> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<audioparams_t, CNetworkVarBase<unsigned char, audioparams_t::NetworkVar_localBits> >, SetTypeScope
+// calls: __cxa_guard_acquire, __cxa_guard_release
+// callers: CSchemaClassBinding<audioparams_t>::Register
+// strings: "localSound", "soundscapeEntityListIndex", "localBits", "uint8"
+// globals: audioparams_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitiali, `guard variable for'audioparams_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char , CSchemaManipulator<Vector>::StaticAccessor(void)::m, CAtomicManipulator<Vector>::Get(void)::val, audioparams_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_
+CSchemaClassInfo *__fastcall audioparams_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        const char *pProjectName)
+{
+  CSchemaClassInfo *result; // rax
+  ISchemaSystemTypeScope *v4; // rbx
+  __int64 (__fastcall *v5)(ISchemaSystemTypeScope *, __int64, __int64); // r12
+  __int64 v6; // rax
+  CSchemaType *v7; // rax
+
+  result = audioparams_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult;
+  if ( audioparams_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult == 0 )
+  {
+    v4 = (*(*pSchemaSystem + 112LL))(pSchemaSystem, 0, pBinaryName);
+    if ( `guard variable for'audioparams_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_audioparams_t1_MNetworkVarNames_Value == 0
+      && __cxa_guard_acquire(&`guard variable for'audioparams_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_audioparams_t1_MNetworkVarNames_Value) != 0 )
+    {
+      audioparams_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_audioparams_t1_MNetworkVarNames_Value.m_pVarName = "localSound";
+      audioparams_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_audioparams_t1_MNetworkVarNames_Value.m_pVarType = "Vector";
+      __cxa_guard_release(&`guard variable for'audioparams_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_audioparams_t1_MNetworkVarNames_Value);
+    }
+    if ( `guard variable for'audioparams_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_audioparams_t2_MNetworkVarNames_Value == 0
+      && __cxa_guard_acquire(&`guard variable for'audioparams_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_audioparams_t2_MNetworkVarNames_Value) != 0 )
+    {
+      audioparams_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_audioparams_t2_MNetworkVarNames_Value.m_pVarName = "soundscapeIndex";
+      audioparams_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_audioparams_t2_MNetworkVarNames_Value.m_pVarType = "int32";
+      __cxa_guard_release(&`guard variable for'audioparams_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_audioparams_t2_MNetworkVarNames_Value);
+    }
+    if ( `guard variable for'audioparams_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_audioparams_t3_MNetworkVarNames_Value == 0
+      && __cxa_guard_acquire(&`guard variable for'audioparams_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_audioparams_t3_MNetworkVarNames_Value) != 0 )
+    {
+      audioparams_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_audioparams_t3_MNetworkVarNames_Value.m_pVarName = "localBits";
+      audioparams_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_audioparams_t3_MNetworkVarNames_Value.m_pVarType = "uint8";
+      __cxa_guard_release(&`guard variable for'audioparams_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_audioparams_t3_MNetworkVarNames_Value);
+    }
+    if ( `guard variable for'audioparams_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_audioparams_t4_MNetworkVarNames_Value == 0
+      && __cxa_guard_acquire(&`guard variable for'audioparams_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_audioparams_t4_MNetworkVarNames_Value) != 0 )
+    {
+      audioparams_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_audioparams_t4_MNetworkVarNames_Value.m_pVarName = "soundscapeEntityListIndex";
+      audioparams_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_audioparams_t4_MNetworkVarNames_Value.m_pVarType = "int";
+      __cxa_guard_release(&`guard variable for'audioparams_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_audioparams_t4_MNetworkVarNames_Value);
+    }
+    v5 = *(*v4 + 104LL);
+    v6 = (*(*v4 + 56LL))(
+           v4,
+           "Vector",
+           2010,
+           CAtomicManipulator<Vector>::Get(void)::val,
+           CSchemaManipulator<Vector>::StaticAccessor(void)::m);
+    audioparams_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_audioparams_t[0].m_pType = v5(v4, v6, 8);
+    audioparams_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_audioparams_t[1].m_pType = (*(*v4 + 40LL))(v4, 7);
+    audioparams_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_audioparams_t[2].m_pType = (*(*v4 + 40LL))(v4, 4);
+    v7 = (*(*v4 + 40LL))(v4, 7);
+    audioparams_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_audioparams_t.m_pOuterTypeScope = v4;
+    audioparams_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_audioparams_t[3].m_pType = v7;
+    audioparams_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult = &audioparams_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_audioparams_t;
+    (*(*v4 + 264LL))(
+      v4,
+      &audioparams_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_audioparams_t);
+    return audioparams_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult;
+  }
+  return result;
+}
+
+
+// audioparams_t::Schema_VerifyBindingIsRegistered  (line 706, @0x0000000001f0e000, libserver.so)
+void __cdecl audioparams_t::Schema_VerifyBindingIsRegistered()
+{
+  ;
+}
+
+
+// TonemapParameters_t::Schema_CompileTimeVerificationFunction  (line 714, @0x0000000001f0e010, libserver.so)
+void __fastcall TonemapParameters_t::Schema_CompileTimeVerificationFunction(TonemapParameters_t *const this)
+{
+  ;
+}
+
+
+// TonemapParameters_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE  (line 724, @0x0000000001f0e020, libserver.so)  // inlines: Get, NetworkVarDecl_t, SchemaBinding_SchemaTypeOfMemberVarByAddr<TonemapParameters_t, CNetworkVarBase<float, TonemapParameters_t::NetworkVar_m_flAccelerateExposureDown> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<TonemapParameters_t, CNetworkVarBase<float, TonemapParameters_t::NetworkVar_m_flAutoExposureMax> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<TonemapParameters_t, CNetworkVarBase<float, TonemapParameters_t::NetworkVar_m_flAutoExposureMin> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<TonemapParameters_t, CNetworkVarBase<float, TonemapParameters_t::NetworkVar_m_flRate> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<TonemapParameters_t, CNetworkVarBase<float, TonemapParameters_t::NetworkVar_m_flTonemapMinAvgLum> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<TonemapParameters_t, CNetworkVarBase<float, TonemapParameters_t::NetworkVar_m_flTonemapPercentBrightPixels> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<TonemapParameters_t, CNetworkVarBase<float, TonemapParameters_t::NetworkVar_m_flTonemapPercentTarget> >, SetTypeScope
+// calls: __cxa_guard_acquire, __cxa_guard_release
+// callers: CSchemaClassBinding<TonemapParameters_t>::Register
+// strings: "m_flAutoExposureMin", "m_flAccelerateExposureDown", "m_flRate", "m_flTonemapMinAvgLum", "m_flTonemapPercentBrightPixels", "m_flTonemapPercentTarget" (7 total)
+// globals: TonemapParameters_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pIn, `guard variable for'TonemapParameters_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*, TonemapParameters_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplS
+CSchemaClassInfo *__fastcall TonemapParameters_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        const char *pProjectName)
+{
+  CSchemaClassInfo *result; // rax
+  ISchemaSystemTypeScope *v4; // rbx
+  CSchemaType *v5; // rax
+
+  result = TonemapParameters_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult;
+  if ( TonemapParameters_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult == 0 )
+  {
+    v4 = (*(*pSchemaSystem + 112LL))(pSchemaSystem, 0, pBinaryName);
+    if ( `guard variable for'TonemapParameters_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_TonemapParameters_t0_MNetworkVarNames_Value == 0
+      && __cxa_guard_acquire(&`guard variable for'TonemapParameters_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_TonemapParameters_t0_MNetworkVarNames_Value) != 0 )
+    {
+      TonemapParameters_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_TonemapParameters_t0_MNetworkVarNames_Value.m_pVarName = "m_flAutoExposureMin";
+      TonemapParameters_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_TonemapParameters_t0_MNetworkVarNames_Value.m_pVarType = "float";
+      __cxa_guard_release(&`guard variable for'TonemapParameters_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_TonemapParameters_t0_MNetworkVarNames_Value);
+    }
+    if ( `guard variable for'TonemapParameters_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_TonemapParameters_t1_MNetworkVarNames_Value == 0
+      && __cxa_guard_acquire(&`guard variable for'TonemapParameters_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_TonemapParameters_t1_MNetworkVarNames_Value) != 0 )
+    {
+      TonemapParameters_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_TonemapParameters_t1_MNetworkVarNames_Value.m_pVarName = "m_flAutoExposureMax";
+      TonemapParameters_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_TonemapParameters_t1_MNetworkVarNames_Value.m_pVarType = "float";
+      __cxa_guard_release(&`guard variable for'TonemapParameters_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_TonemapParameters_t1_MNetworkVarNames_Value);
+    }
+    if ( `guard variable for'TonemapParameters_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_TonemapParameters_t2_MNetworkVarNames_Value == 0
+      && __cxa_guard_acquire(&`guard variable for'TonemapParameters_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_TonemapParameters_t2_MNetworkVarNames_Value) != 0 )
+    {
+      TonemapParameters_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_TonemapParameters_t2_MNetworkVarNames_Value.m_pVarName = "m_flTonemapPercentTarget";
+      TonemapParameters_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_TonemapParameters_t2_MNetworkVarNames_Value.m_pVarType = "float";
+      __cxa_guard_release(&`guard variable for'TonemapParameters_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_TonemapParameters_t2_MNetworkVarNames_Value);
+    }
+    if ( `guard variable for'TonemapParameters_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_TonemapParameters_t3_MNetworkVarNames_Value == 0
+      && __cxa_guard_acquire(&`guard variable for'TonemapParameters_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_TonemapParameters_t3_MNetworkVarNames_Value) != 0 )
+    {
+      TonemapParameters_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_TonemapParameters_t3_MNetworkVarNames_Value.m_pVarName = "m_flTonemapPercentBrightPixels";
+      TonemapParameters_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_TonemapParameters_t3_MNetworkVarNames_Value.m_pVarType = "float";
+      __cxa_guard_release(&`guard variable for'TonemapParameters_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_TonemapParameters_t3_MNetworkVarNames_Value);
+    }
+    if ( `guard variable for'TonemapParameters_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_TonemapParameters_t4_MNetworkVarNames_Value == 0
+      && __cxa_guard_acquire(&`guard variable for'TonemapParameters_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_TonemapParameters_t4_MNetworkVarNames_Value) != 0 )
+    {
+      TonemapParameters_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_TonemapParameters_t4_MNetworkVarNames_Value.m_pVarName = "m_flTonemapMinAvgLum";
+      TonemapParameters_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_TonemapParameters_t4_MNetworkVarNames_Value.m_pVarType = "float";
+      __cxa_guard_release(&`guard variable for'TonemapParameters_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_TonemapParameters_t4_MNetworkVarNames_Value);
+    }
+    if ( `guard variable for'TonemapParameters_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_TonemapParameters_t5_MNetworkVarNames_Value == 0
+      && __cxa_guard_acquire(&`guard variable for'TonemapParameters_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_TonemapParameters_t5_MNetworkVarNames_Value) != 0 )
+    {
+      TonemapParameters_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_TonemapParameters_t5_MNetworkVarNames_Value.m_pVarName = "m_flRate";
+      TonemapParameters_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_TonemapParameters_t5_MNetworkVarNames_Value.m_pVarType = "float";
+      __cxa_guard_release(&`guard variable for'TonemapParameters_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_TonemapParameters_t5_MNetworkVarNames_Value);
+    }
+    if ( `guard variable for'TonemapParameters_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_TonemapParameters_t6_MNetworkVarNames_Value == 0
+      && __cxa_guard_acquire(&`guard variable for'TonemapParameters_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_TonemapParameters_t6_MNetworkVarNames_Value) != 0 )
+    {
+      TonemapParameters_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_TonemapParameters_t6_MNetworkVarNames_Value.m_pVarName = "m_flAccelerateExposureDown";
+      TonemapParameters_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_TonemapParameters_t6_MNetworkVarNames_Value.m_pVarType = "float";
+      __cxa_guard_release(&`guard variable for'TonemapParameters_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_TonemapParameters_t6_MNetworkVarNames_Value);
+    }
+    TonemapParameters_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_TonemapParameters_t[0].m_pType = (*(*v4 + 40LL))(v4, 11);
+    TonemapParameters_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_TonemapParameters_t[1].m_pType = (*(*v4 + 40LL))(v4, 11);
+    TonemapParameters_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_TonemapParameters_t[2].m_pType = (*(*v4 + 40LL))(v4, 11);
+    TonemapParameters_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_TonemapParameters_t[3].m_pType = (*(*v4 + 40LL))(v4, 11);
+    TonemapParameters_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_TonemapParameters_t[4].m_pType = (*(*v4 + 40LL))(v4, 11);
+    TonemapParameters_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_TonemapParameters_t[5].m_pType = (*(*v4 + 40LL))(v4, 11);
+    v5 = (*(*v4 + 40LL))(v4, 11);
+    TonemapParameters_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_TonemapParameters_t.m_pOuterTypeScope = v4;
+    TonemapParameters_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_TonemapParameters_t[6].m_pType = v5;
+    TonemapParameters_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult = &TonemapParameters_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_TonemapParameters_t;
+    (*(*v4 + 264LL))(
+      v4,
+      &TonemapParameters_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_TonemapParameters_t);
+    return TonemapParameters_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult;
+  }
+  return result;
+}
+
+
+// TonemapParameters_t::Schema_VerifyBindingIsRegistered  (line 811, @0x0000000001f0e370, libserver.so)
+void __cdecl TonemapParameters_t::Schema_VerifyBindingIsRegistered()
+{
+  ;
+}
+
+
+// LocalRegisterSchemaModule<ArbitraryTemplateParameter_server_playernet_vars_h>  (line 819, @0x0000000001f0e380, libserver.so)  // inlines: Call
+// callers: RegisterSchemaModule_playernet_vars_h
+// globals: fogparams_t::s_pSchemaBindingForLocalModule, fogplayerparams_t::s_pSchemaBindingForLocalModule, sky3dparams_t::s_pSchemaBindingForLocalModule, audioparams_t::s_pSchemaBindingForLocalModule, TonemapParameters_t::s_pSchemaBindingForLocalModule
+void __fastcall LocalRegisterSchemaModule<ArbitraryTemplateParameter_server_playernet_vars_h>(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        SchemaRegistrationPhase_t nRegistrationPhase)
+{
+  if ( nRegistrationPhase == SchemaRegistrationPhase_t::SCHEMA_REGISTRATION_PHASE_CLASSES )
+  {
+    (*(fogparams_t::s_pSchemaBindingForLocalModule->_vptr_ISchemaBinding + 5))(
+      fogparams_t::s_pSchemaBindingForLocalModule,
+      pSchemaSystem,
+      pBinaryName,
+      "server");
+    (*(fogplayerparams_t::s_pSchemaBindingForLocalModule->_vptr_ISchemaBinding + 5))(
+      fogplayerparams_t::s_pSchemaBindingForLocalModule,
+      pSchemaSystem,
+      pBinaryName,
+      "server");
+    (*(sky3dparams_t::s_pSchemaBindingForLocalModule->_vptr_ISchemaBinding + 5))(
+      sky3dparams_t::s_pSchemaBindingForLocalModule,
+      pSchemaSystem,
+      pBinaryName,
+      "server");
+    (*(audioparams_t::s_pSchemaBindingForLocalModule->_vptr_ISchemaBinding + 5))(
+      audioparams_t::s_pSchemaBindingForLocalModule,
+      pSchemaSystem,
+      pBinaryName,
+      "server");
+    (*(TonemapParameters_t::s_pSchemaBindingForLocalModule->_vptr_ISchemaBinding + 5))(
+      TonemapParameters_t::s_pSchemaBindingForLocalModule,
+      pSchemaSystem,
+      pBinaryName,
+      "server");
+  }
+  ++g_nLinkerHack_SchemaAnchor_RegistrationCountFor_server;
+}
+
+
+// RegisterSchemaModule_playernet_vars_h  (line 825, @0x0000000001f0e430, libserver.so)
+// calls: LocalRegisterSchemaModule<ArbitraryTemplateParameter_server_playernet_vars_h>
+// callers: CSchemaRegistration_server::RegisterAllBindings
+void __fastcall RegisterSchemaModule_playernet_vars_h(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        SchemaRegistrationPhase_t nRegistrationPhase)
+{
+  LocalRegisterSchemaModule<ArbitraryTemplateParameter_server_playernet_vars_h>(
+    pSchemaSystem,
+    pBinaryName,
+    nRegistrationPhase);
+}
+
+

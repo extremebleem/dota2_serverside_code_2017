@@ -1,0 +1,24 @@
+
+// ==== functions (decompiled by Hex-Rays; names/signatures from DWARF) ====
+
+// LocalRegisterSchemaModule<ArbitraryTemplateParameter_modellib_modelbuilder_h>  (line 33, @0x00000000031a0920, libserver.so)
+void __fastcall LocalRegisterSchemaModule<ArbitraryTemplateParameter_modellib_modelbuilder_h>(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        SchemaRegistrationPhase_t nRegistrationPhase)
+{
+  ++g_nLinkerHack_SchemaAnchor_RegistrationCountFor_modellib;
+}
+
+
+// RegisterSchemaModule_modelbuilder_h  (line 34, @0x00000000031a0930, libserver.so)  // inlines: LocalRegisterSchemaModule<ArbitraryTemplateParameter_modellib_modelbuilder_h>
+// callers: CSchemaRegistration_modellib::RegisterAllBindings
+void __fastcall RegisterSchemaModule_modelbuilder_h(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        SchemaRegistrationPhase_t nRegistrationPhase)
+{
+  ++g_nLinkerHack_SchemaAnchor_RegistrationCountFor_modellib;
+}
+
+

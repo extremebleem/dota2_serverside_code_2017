@@ -1,0 +1,867 @@
+
+// ==== functions (decompiled by Hex-Rays; names/signatures from DWARF) ====
+
+// CSchemaEnumBinding<ModelSkeletonData_t::BoneFlags_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE  (line 33, @0x000000000319a3e0, libserver.so)  // inlines: Count, Initialize, SetTypeScope
+// callers: CSchemaEnumBinding<ModelSkeletonData_t::BoneFlags_t>::Register, ModelSkeletonData_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE
+// globals: CSchemaEnumBinding<ModelSkeletonData_t::BoneFlags_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *
+CSchemaEnumInfo *__fastcall CSchemaEnumBinding<ModelSkeletonData_t::BoneFlags_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        const char *pProjectName)
+{
+  ISchemaSystemTypeScope *v3; // rax
+  unsigned int v4; // edi
+  SchemaEnumeratorValue_t v5; // r8
+  SchemaEnumeratorValue_t v6; // r9
+  SchemaEnumeratorValue_t *v7; // rdx
+
+  v3 = (*(*pSchemaSystem + 112LL))(pSchemaSystem, 0, pBinaryName);
+  if ( CSchemaEnumBinding<ModelSkeletonData_t::BoneFlags_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_ModelSkeletonData_t_BoneFlags_t.m_Enumerators.m_Data.m_nImplLength != 0 )
+  {
+    v4 = abs32(CSchemaEnumBinding<ModelSkeletonData_t::BoneFlags_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_ModelSkeletonData_t_BoneFlags_t.m_Enumerators.m_Data.m_nImplLength);
+    v5 = *(CSchemaEnumBinding<ModelSkeletonData_t::BoneFlags_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_ModelSkeletonData_t_BoneFlags_t.m_Enumerators.m_Data.m_pImplElements
+         + 2);
+    CSchemaEnumBinding<ModelSkeletonData_t::BoneFlags_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_ModelSkeletonData_t_BoneFlags_t.m_nMinValue = v5;
+    v6 = *(CSchemaEnumBinding<ModelSkeletonData_t::BoneFlags_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_ModelSkeletonData_t_BoneFlags_t.m_Enumerators.m_Data.m_pImplElements
+         + 2);
+    CSchemaEnumBinding<ModelSkeletonData_t::BoneFlags_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_ModelSkeletonData_t_BoneFlags_t.m_nMaxValue = v6;
+    if ( v4 != 1 )
+    {
+      v7 = (CSchemaEnumBinding<ModelSkeletonData_t::BoneFlags_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_ModelSkeletonData_t_BoneFlags_t.m_Enumerators.m_Data.m_pImplElements
+          + 72);
+      do
+      {
+        if ( v5 > *v7 )
+          v5 = *v7;
+        CSchemaEnumBinding<ModelSkeletonData_t::BoneFlags_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_ModelSkeletonData_t_BoneFlags_t.m_nMinValue = v5;
+        if ( v6 < *v7 )
+          v6 = *v7;
+        v7 += 7;
+        CSchemaEnumBinding<ModelSkeletonData_t::BoneFlags_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_ModelSkeletonData_t_BoneFlags_t.m_nMaxValue = v6;
+      }
+      while ( v7 != CSchemaEnumBinding<ModelSkeletonData_t::BoneFlags_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_ModelSkeletonData_t_BoneFlags_t.m_Enumerators.m_Data.m_pImplElements
+                  + 7 * v4
+                  + 2 );
+    }
+  }
+  else
+  {
+    CSchemaEnumBinding<ModelSkeletonData_t::BoneFlags_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_ModelSkeletonData_t_BoneFlags_t.m_nMinValue = 0;
+    CSchemaEnumBinding<ModelSkeletonData_t::BoneFlags_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_ModelSkeletonData_t_BoneFlags_t.m_nMaxValue = 0;
+  }
+  CSchemaEnumBinding<ModelSkeletonData_t::BoneFlags_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_ModelSkeletonData_t_BoneFlags_t.m_pOuterTypeScope = v3;
+  (*(*v3 + 272LL))(
+    v3,
+    &CSchemaEnumBinding<ModelSkeletonData_t::BoneFlags_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_ModelSkeletonData_t_BoneFlags_t);
+  return &CSchemaEnumBinding<ModelSkeletonData_t::BoneFlags_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_ModelSkeletonData_t_BoneFlags_t;
+}
+
+
+// CSchemaEnumBinding<PermModelInfo_t::FlagEnum>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE  (line 65, @0x000000000319a4c0, libserver.so)  // inlines: Count, Initialize, SetTypeScope
+// callers: CSchemaEnumBinding<PermModelInfo_t::FlagEnum>::Register, PermModelInfo_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE
+// globals: CSchemaEnumBinding<PermModelInfo_t::FlagEnum>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char c
+CSchemaEnumInfo *__fastcall CSchemaEnumBinding<PermModelInfo_t::FlagEnum>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        const char *pProjectName)
+{
+  ISchemaSystemTypeScope *v3; // rax
+  unsigned int v4; // edi
+  SchemaEnumeratorValue_t v5; // r8
+  SchemaEnumeratorValue_t v6; // r9
+  SchemaEnumeratorValue_t *v7; // rdx
+
+  v3 = (*(*pSchemaSystem + 112LL))(pSchemaSystem, 0, pBinaryName);
+  if ( CSchemaEnumBinding<PermModelInfo_t::FlagEnum>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_PermModelInfo_t_FlagEnum.m_Enumerators.m_Data.m_nImplLength != 0 )
+  {
+    v4 = abs32(CSchemaEnumBinding<PermModelInfo_t::FlagEnum>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_PermModelInfo_t_FlagEnum.m_Enumerators.m_Data.m_nImplLength);
+    v5 = *(CSchemaEnumBinding<PermModelInfo_t::FlagEnum>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_PermModelInfo_t_FlagEnum.m_Enumerators.m_Data.m_pImplElements
+         + 2);
+    CSchemaEnumBinding<PermModelInfo_t::FlagEnum>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_PermModelInfo_t_FlagEnum.m_nMinValue = v5;
+    v6 = *(CSchemaEnumBinding<PermModelInfo_t::FlagEnum>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_PermModelInfo_t_FlagEnum.m_Enumerators.m_Data.m_pImplElements
+         + 2);
+    CSchemaEnumBinding<PermModelInfo_t::FlagEnum>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_PermModelInfo_t_FlagEnum.m_nMaxValue = v6;
+    if ( v4 != 1 )
+    {
+      v7 = (CSchemaEnumBinding<PermModelInfo_t::FlagEnum>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_PermModelInfo_t_FlagEnum.m_Enumerators.m_Data.m_pImplElements
+          + 72);
+      do
+      {
+        if ( v5 > *v7 )
+          v5 = *v7;
+        CSchemaEnumBinding<PermModelInfo_t::FlagEnum>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_PermModelInfo_t_FlagEnum.m_nMinValue = v5;
+        if ( v6 < *v7 )
+          v6 = *v7;
+        v7 += 7;
+        CSchemaEnumBinding<PermModelInfo_t::FlagEnum>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_PermModelInfo_t_FlagEnum.m_nMaxValue = v6;
+      }
+      while ( v7 != CSchemaEnumBinding<PermModelInfo_t::FlagEnum>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_PermModelInfo_t_FlagEnum.m_Enumerators.m_Data.m_pImplElements
+                  + 7 * v4
+                  + 2 );
+    }
+  }
+  else
+  {
+    CSchemaEnumBinding<PermModelInfo_t::FlagEnum>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_PermModelInfo_t_FlagEnum.m_nMinValue = 0;
+    CSchemaEnumBinding<PermModelInfo_t::FlagEnum>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_PermModelInfo_t_FlagEnum.m_nMaxValue = 0;
+  }
+  CSchemaEnumBinding<PermModelInfo_t::FlagEnum>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_PermModelInfo_t_FlagEnum.m_pOuterTypeScope = v3;
+  (*(*v3 + 272LL))(
+    v3,
+    &CSchemaEnumBinding<PermModelInfo_t::FlagEnum>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_PermModelInfo_t_FlagEnum);
+  return &CSchemaEnumBinding<PermModelInfo_t::FlagEnum>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_PermModelInfo_t_FlagEnum;
+}
+
+
+// CSchemaEnumBinding<ModelBoneFlexComponent_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE  (line 88, @0x000000000319a5a0, libserver.so)  // inlines: Count, Initialize, SetTypeScope
+// callers: CSchemaEnumBinding<ModelBoneFlexComponent_t>::Register
+// globals: CSchemaEnumBinding<ModelBoneFlexComponent_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char co
+CSchemaEnumInfo *__fastcall CSchemaEnumBinding<ModelBoneFlexComponent_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        const char *pProjectName)
+{
+  ISchemaSystemTypeScope *v3; // rax
+  unsigned int v4; // edi
+  SchemaEnumeratorValue_t v5; // r8
+  SchemaEnumeratorValue_t v6; // r9
+  SchemaEnumeratorValue_t *v7; // rdx
+
+  v3 = (*(*pSchemaSystem + 112LL))(pSchemaSystem, 0, pBinaryName);
+  if ( CSchemaEnumBinding<ModelBoneFlexComponent_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_ModelBoneFlexComponent_t.m_Enumerators.m_Data.m_nImplLength != 0 )
+  {
+    v4 = abs32(CSchemaEnumBinding<ModelBoneFlexComponent_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_ModelBoneFlexComponent_t.m_Enumerators.m_Data.m_nImplLength);
+    v5 = *(CSchemaEnumBinding<ModelBoneFlexComponent_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_ModelBoneFlexComponent_t.m_Enumerators.m_Data.m_pImplElements
+         + 2);
+    CSchemaEnumBinding<ModelBoneFlexComponent_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_ModelBoneFlexComponent_t.m_nMinValue = v5;
+    v6 = *(CSchemaEnumBinding<ModelBoneFlexComponent_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_ModelBoneFlexComponent_t.m_Enumerators.m_Data.m_pImplElements
+         + 2);
+    CSchemaEnumBinding<ModelBoneFlexComponent_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_ModelBoneFlexComponent_t.m_nMaxValue = v6;
+    if ( v4 != 1 )
+    {
+      v7 = (CSchemaEnumBinding<ModelBoneFlexComponent_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_ModelBoneFlexComponent_t.m_Enumerators.m_Data.m_pImplElements
+          + 72);
+      do
+      {
+        if ( v5 > *v7 )
+          v5 = *v7;
+        CSchemaEnumBinding<ModelBoneFlexComponent_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_ModelBoneFlexComponent_t.m_nMinValue = v5;
+        if ( v6 < *v7 )
+          v6 = *v7;
+        v7 += 7;
+        CSchemaEnumBinding<ModelBoneFlexComponent_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_ModelBoneFlexComponent_t.m_nMaxValue = v6;
+      }
+      while ( v7 != CSchemaEnumBinding<ModelBoneFlexComponent_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_ModelBoneFlexComponent_t.m_Enumerators.m_Data.m_pImplElements
+                  + 7 * v4
+                  + 2 );
+    }
+  }
+  else
+  {
+    CSchemaEnumBinding<ModelBoneFlexComponent_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_ModelBoneFlexComponent_t.m_nMinValue = 0;
+    CSchemaEnumBinding<ModelBoneFlexComponent_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_ModelBoneFlexComponent_t.m_nMaxValue = 0;
+  }
+  CSchemaEnumBinding<ModelBoneFlexComponent_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_ModelBoneFlexComponent_t.m_pOuterTypeScope = v3;
+  (*(*v3 + 272LL))(
+    v3,
+    &CSchemaEnumBinding<ModelBoneFlexComponent_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_ModelBoneFlexComponent_t);
+  return &CSchemaEnumBinding<ModelBoneFlexComponent_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_ModelBoneFlexComponent_t;
+}
+
+
+// MaterialGroup_t::Schema_CompileTimeVerificationFunction  (line 101, @0x000000000319a680, libserver.so)
+void __fastcall MaterialGroup_t::Schema_CompileTimeVerificationFunction(MaterialGroup_t *const this)
+{
+  ;
+}
+
+
+// MaterialGroup_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE  (line 106, @0x000000000319a690, libserver.so)  // inlines: Get, SchemaBinding_SchemaTypeOfMemberVarByAddr<MaterialGroup_t, CResourceArray<CResourceExtReference<CWeakHandle<InfoForResourceTypeIMaterial2> > > >, SchemaBinding_SchemaTypeOfMemberVarByAddr<MaterialGroup_t, CResourceString>, SetTypeScope
+// callers: CSchemaClassBinding<MaterialGroup_t>::Register
+// strings: "CResourceString", "InfoForResourceTypeIMaterial2", "CWeakHandle", "CResourceExtReference", "CResourceArray"
+// globals: MaterialGroup_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitia, CSchemaManipulator<CResourceString>::StaticAccessor(void)::m, CAtomicManipulator<CResourceString>::Get(void)::val, CSchemaManipulator<CWeakHandle<InfoForResourceTypeIMaterial2>>::StaticAccessor(void)::m, CAtomicManipulator<CWeakHandle<InfoForResourceTypeIMaterial2>>::Get(void)::val, CSchemaManipulator<CResourceExtReference<CWeakHandle<InfoForResourceTypeIMaterial2>>>::StaticAccessor(void)::m, CAtomicManipulator<CResourceExtReference<CWeakHandle<InfoForResourceTypeIMaterial2>>>::Get(void)::val, CSchemaManipulator<CResourceArray<CResourceExtReference<CWeakHandle<InfoForResourceTypeIMaterial2>>>>::StaticAccessor(void)::m (10 total)
+CSchemaClassInfo *__fastcall MaterialGroup_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        const char *pProjectName)
+{
+  CSchemaClassInfo *result; // rax
+  ISchemaSystemTypeScope *v4; // rbx
+  __int64 (__fastcall *v5)(ISchemaSystemTypeScope *, const char *, __int64, __int64 (__fastcall ***)(), __int64 (__fastcall ***)(), __int64); // r12
+  __int64 v6; // rax
+  __int64 v7; // rax
+  __int64 v8; // rax
+  CSchemaType *v9; // rax
+
+  result = MaterialGroup_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult;
+  if ( MaterialGroup_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult == 0 )
+  {
+    v4 = (*(*pSchemaSystem + 112LL))(pSchemaSystem, 0, pBinaryName);
+    MaterialGroup_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_MaterialGroup_t[0].m_pType = (*(*v4 + 56LL))(v4, "CResourceString", 4005, CAtomicManipulator<CResourceString>::Get(void)::val, CSchemaManipulator<CResourceString>::StaticAccessor(void)::m);
+    v5 = *(*v4 + 64LL);
+    v6 = (*(*v4 + 88LL))(v4, "InfoForResourceTypeIMaterial2");
+    v7 = v5(
+           v4,
+           "CWeakHandle",
+           4010,
+           &CAtomicManipulator<CWeakHandle<InfoForResourceTypeIMaterial2>>::Get(void)::val,
+           CSchemaManipulator<CWeakHandle<InfoForResourceTypeIMaterial2>>::StaticAccessor(void)::m,
+           v6);
+    v8 = v5(
+           v4,
+           "CResourceExtReference",
+           4001,
+           CAtomicManipulator<CResourceExtReference<CWeakHandle<InfoForResourceTypeIMaterial2>>>::Get(void)::val,
+           CSchemaManipulator<CResourceExtReference<CWeakHandle<InfoForResourceTypeIMaterial2>>>::StaticAccessor(void)::m,
+           v7);
+    v9 = v5(
+           v4,
+           "CResourceArray",
+           4004,
+           CAtomicManipulator<CResourceArray<CResourceExtReference<CWeakHandle<InfoForResourceTypeIMaterial2>>>>::Get(void)::val,
+           &CSchemaManipulator<CResourceArray<CResourceExtReference<CWeakHandle<InfoForResourceTypeIMaterial2>>>>::StaticAccessor(void)::m,
+           v8);
+    MaterialGroup_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_MaterialGroup_t.m_pOuterTypeScope = v4;
+    MaterialGroup_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_MaterialGroup_t[1].m_pType = v9;
+    MaterialGroup_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult = &MaterialGroup_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_MaterialGroup_t;
+    (*(*v4 + 264LL))(
+      v4,
+      &MaterialGroup_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_MaterialGroup_t);
+    return MaterialGroup_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult;
+  }
+  return result;
+}
+
+
+// MaterialGroup_t::Schema_VerifyBindingIsRegistered  (line 127, @0x000000000319a7a0, libserver.so)
+void __cdecl MaterialGroup_t::Schema_VerifyBindingIsRegistered()
+{
+  ;
+}
+
+
+// ModelSkeletonData_t::Schema_CompileTimeVerificationFunction  (line 135, @0x000000000319a7b0, libserver.so)
+void __fastcall ModelSkeletonData_t::Schema_CompileTimeVerificationFunction(ModelSkeletonData_t *const this)
+{
+  ;
+}
+
+
+// ModelSkeletonData_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE  (line 144, @0x000000000319a7c0, libserver.so)  // inlines: Get, GetInfo, SchemaBinding_SchemaTypeOfMemberVarByAddr<ModelSkeletonData_t, CResourceArray<CResourceString> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<ModelSkeletonData_t, CResourceArray<Quaternion> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<ModelSkeletonData_t, CResourceArray<Vector> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<ModelSkeletonData_t, CResourceArray<float> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<ModelSkeletonData_t, CResourceArray<short int> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<ModelSkeletonData_t, CResourceArray<unsigned int> >, SetTypeScope
+// calls: __cxa_guard_acquire, CSchemaEnumBinding<ModelSkeletonData_t::BoneFlags_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE, __cxa_guard_release, __cxa_guard_abort, _Unwind_Resume
+// callers: CSchemaClassBinding<ModelSkeletonData_t>::Register
+// strings: "CResourceString", "CResourceArray"
+// globals: ModelSkeletonData_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pIn, CSchemaManipulator<CResourceString>::StaticAccessor(void)::m, CAtomicManipulator<CResourceString>::Get(void)::val, CSchemaManipulator<CResourceArray<CResourceString>>::StaticAccessor(void)::m, CAtomicManipulator<CResourceArray<CResourceString>>::Get(void)::val, CSchemaManipulator<CResourceArray<short>>::StaticAccessor(void)::m, CAtomicManipulator<CResourceArray<short>>::Get(void)::val, CSchemaManipulator<CResourceArray<float>>::StaticAccessor(void)::m (21 total)
+CSchemaClassInfo *__fastcall ModelSkeletonData_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        const char *pProjectName)
+{
+  CSchemaClassInfo *result; // rax
+  ISchemaSystemTypeScope *v7; // rbx
+  __int64 (__fastcall *v8)(ISchemaSystemTypeScope *, const char *, __int64, __int64 (__fastcall ***)(), __int64 (__fastcall ***)(), __int64); // r15
+  __int64 v9; // rax
+  __int64 (__fastcall *v10)(ISchemaSystemTypeScope *, const char *, __int64, __int64 (__fastcall ***)(), __int64 (__fastcall ***)(), __int64); // r15
+  __int64 v11; // rax
+  __int64 (__fastcall *v12)(ISchemaSystemTypeScope *, const char *, __int64, __int64 (__fastcall ***)(), __int64 (__fastcall ***)(), __int64); // r15
+  __int64 v13; // rax
+  __int64 (__fastcall *v14)(ISchemaSystemTypeScope *, const char *, __int64, __int64 (__fastcall ***)(), __int64 (__fastcall ***)(), __int64); // r15
+  __int64 v15; // rax
+  __int64 (__fastcall *v16)(ISchemaSystemTypeScope *, const char *, __int64, __int64 (__fastcall ***)(), __int64 (__fastcall ***)(), __int64); // r15
+  __int64 v17; // rax
+  __int64 (__fastcall *v18)(ISchemaSystemTypeScope *, const char *, __int64, __int64 (__fastcall ***)(), __int64 (__fastcall ***)(), __int64); // r15
+  __int64 v19; // rax
+
+  result = ModelSkeletonData_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult;
+  if ( ModelSkeletonData_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult == 0 )
+  {
+    v7 = (*(*pSchemaSystem + 112LL))(pSchemaSystem, 0, pBinaryName);
+    v8 = *(*v7 + 64LL);
+    v9 = (*(*v7 + 56LL))(
+           v7,
+           "CResourceString",
+           4005,
+           CAtomicManipulator<CResourceString>::Get(void)::val,
+           CSchemaManipulator<CResourceString>::StaticAccessor(void)::m);
+    ModelSkeletonData_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_ModelSkeletonData_t[0].m_pType = v8(v7, "CResourceArray", 4004, CAtomicManipulator<CResourceArray<CResourceString>>::Get(void)::val, CSchemaManipulator<CResourceArray<CResourceString>>::StaticAccessor(void)::m, v9);
+    v10 = *(*v7 + 64LL);
+    v11 = (*(*v7 + 40LL))(v7, 5);
+    ModelSkeletonData_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_ModelSkeletonData_t[1].m_pType = v10(v7, "CResourceArray", 4004, CAtomicManipulator<CResourceArray<short>>::Get(void)::val, CSchemaManipulator<CResourceArray<short>>::StaticAccessor(void)::m, v11);
+    v12 = *(*v7 + 64LL);
+    v13 = (*(*v7 + 40LL))(v7, 11);
+    ModelSkeletonData_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_ModelSkeletonData_t[2].m_pType = v12(v7, "CResourceArray", 4004, CAtomicManipulator<CResourceArray<float>>::Get(void)::val, CSchemaManipulator<CResourceArray<float>>::StaticAccessor(void)::m, v13);
+    v14 = *(*v7 + 64LL);
+    v15 = (*(*v7 + 40LL))(v7, 8);
+    ModelSkeletonData_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_ModelSkeletonData_t[3].m_pType = v14(v7, "CResourceArray", 4004, CAtomicManipulator<CResourceArray<unsigned int>>::Get(void)::val, CSchemaManipulator<CResourceArray<unsigned int>>::StaticAccessor(void)::m, v15);
+    v16 = *(*v7 + 64LL);
+    v17 = (*(*v7 + 56LL))(
+            v7,
+            "Vector",
+            2010,
+            CAtomicManipulator<Vector>::Get(void)::val,
+            CSchemaManipulator<Vector>::StaticAccessor(void)::m);
+    ModelSkeletonData_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_ModelSkeletonData_t[4].m_pType = v16(v7, "CResourceArray", 4004, CAtomicManipulator<CResourceArray<Vector>>::Get(void)::val, CSchemaManipulator<CResourceArray<Vector>>::StaticAccessor(void)::m, v17);
+    v18 = *(*v7 + 64LL);
+    v19 = (*(*v7 + 56LL))(
+            v7,
+            "Quaternion",
+            2006,
+            CAtomicManipulator<Quaternion>::Get(void)::val,
+            &CSchemaManipulator<Quaternion>::StaticAccessor(void)::m);
+    ModelSkeletonData_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_ModelSkeletonData_t[5].m_pType = v18(v7, "CResourceArray", 4004, CAtomicManipulator<CResourceArray<Quaternion>>::Get(void)::val, CSchemaManipulator<CResourceArray<Quaternion>>::StaticAccessor(void)::m, v19);
+    if ( `guard variable for'ModelSkeletonData_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_NestedEnumsOf_ModelSkeletonData_t == 0
+      && __cxa_guard_acquire(&`guard variable for'ModelSkeletonData_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_NestedEnumsOf_ModelSkeletonData_t) != 0 )
+    {
+      ModelSkeletonData_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_NestedEnumsOf_ModelSkeletonData_t[0] = CSchemaEnumBinding<ModelSkeletonData_t::BoneFlags_t>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(pSchemaSystem, pBinaryName, pProjectName);
+      __cxa_guard_release(&`guard variable for'ModelSkeletonData_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_NestedEnumsOf_ModelSkeletonData_t);
+    }
+    ModelSkeletonData_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_ModelSkeletonData_t.m_pOuterTypeScope = v7;
+    ModelSkeletonData_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult = &ModelSkeletonData_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_ModelSkeletonData_t;
+    (*(*v7 + 264LL))(
+      v7,
+      &ModelSkeletonData_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_ModelSkeletonData_t);
+    return ModelSkeletonData_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult;
+  }
+  return result;
+}
+
+
+// ModelSkeletonData_t::Schema_VerifyBindingIsRegistered  (line 172, @0x000000000319aa40, libserver.so)
+void __cdecl ModelSkeletonData_t::Schema_VerifyBindingIsRegistered()
+{
+  ;
+}
+
+
+// PermModelInfo_t::Schema_CompileTimeVerificationFunction  (line 180, @0x000000000319aa50, libserver.so)
+void __fastcall PermModelInfo_t::Schema_CompileTimeVerificationFunction(PermModelInfo_t *const this)
+{
+  ;
+}
+
+
+// PermModelInfo_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE  (line 193, @0x000000000319aa60, libserver.so)  // inlines: Get, GetInfo, SchemaBinding_SchemaTypeOfMemberVarByAddr<PermModelInfo_t, CResourceString>, SchemaBinding_SchemaTypeOfMemberVarByAddr<PermModelInfo_t, Vector>, SchemaBinding_SchemaTypeOfMemberVarByAddr<PermModelInfo_t, float>, SchemaBinding_SchemaTypeOfMemberVarByAddr<PermModelInfo_t, unsigned int>, SetTypeScope
+// calls: __cxa_guard_acquire, CSchemaEnumBinding<PermModelInfo_t::FlagEnum>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE, __cxa_guard_release, __cxa_guard_abort, _Unwind_Resume
+// callers: CSchemaClassBinding<PermModelInfo_t>::Register
+// strings: "CResourceString"
+// globals: PermModelInfo_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitia, CSchemaManipulator<Vector>::StaticAccessor(void)::m, CAtomicManipulator<Vector>::Get(void)::val, CSchemaManipulator<CResourceString>::StaticAccessor(void)::m, CAtomicManipulator<CResourceString>::Get(void)::val, `guard variable for'PermModelInfo_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,cha, PermModelInfo_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchem
+CSchemaClassInfo *__fastcall PermModelInfo_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        const char *pProjectName)
+{
+  CSchemaClassInfo *result; // rax
+  ISchemaSystemTypeScope *v7; // rbx
+
+  result = PermModelInfo_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult;
+  if ( PermModelInfo_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult == 0 )
+  {
+    v7 = (*(*pSchemaSystem + 112LL))(pSchemaSystem, 0, pBinaryName);
+    PermModelInfo_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_PermModelInfo_t[0].m_pType = (*(*v7 + 40LL))(v7, 8);
+    PermModelInfo_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_PermModelInfo_t[1].m_pType = (*(*v7 + 56LL))(v7, "Vector", 2010, CAtomicManipulator<Vector>::Get(void)::val, CSchemaManipulator<Vector>::StaticAccessor(void)::m);
+    PermModelInfo_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_PermModelInfo_t[2].m_pType = (*(*v7 + 56LL))(v7, "Vector", 2010, CAtomicManipulator<Vector>::Get(void)::val, CSchemaManipulator<Vector>::StaticAccessor(void)::m);
+    PermModelInfo_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_PermModelInfo_t[3].m_pType = (*(*v7 + 56LL))(v7, "Vector", 2010, CAtomicManipulator<Vector>::Get(void)::val, CSchemaManipulator<Vector>::StaticAccessor(void)::m);
+    PermModelInfo_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_PermModelInfo_t[4].m_pType = (*(*v7 + 56LL))(v7, "Vector", 2010, CAtomicManipulator<Vector>::Get(void)::val, CSchemaManipulator<Vector>::StaticAccessor(void)::m);
+    PermModelInfo_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_PermModelInfo_t[5].m_pType = (*(*v7 + 40LL))(v7, 11);
+    PermModelInfo_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_PermModelInfo_t[6].m_pType = (*(*v7 + 56LL))(v7, "Vector", 2010, CAtomicManipulator<Vector>::Get(void)::val, CSchemaManipulator<Vector>::StaticAccessor(void)::m);
+    PermModelInfo_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_PermModelInfo_t[7].m_pType = (*(*v7 + 40LL))(v7, 11);
+    PermModelInfo_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_PermModelInfo_t[8].m_pType = (*(*v7 + 56LL))(v7, "CResourceString", 4005, CAtomicManipulator<CResourceString>::Get(void)::val, CSchemaManipulator<CResourceString>::StaticAccessor(void)::m);
+    PermModelInfo_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_PermModelInfo_t[9].m_pType = (*(*v7 + 56LL))(v7, "CResourceString", 4005, CAtomicManipulator<CResourceString>::Get(void)::val, CSchemaManipulator<CResourceString>::StaticAccessor(void)::m);
+    if ( `guard variable for'PermModelInfo_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_NestedEnumsOf_PermModelInfo_t == 0
+      && __cxa_guard_acquire(&`guard variable for'PermModelInfo_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_NestedEnumsOf_PermModelInfo_t) != 0 )
+    {
+      PermModelInfo_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_NestedEnumsOf_PermModelInfo_t[0] = CSchemaEnumBinding<PermModelInfo_t::FlagEnum>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(pSchemaSystem, pBinaryName, pProjectName);
+      __cxa_guard_release(&`guard variable for'PermModelInfo_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_NestedEnumsOf_PermModelInfo_t);
+    }
+    PermModelInfo_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_PermModelInfo_t.m_pOuterTypeScope = v7;
+    PermModelInfo_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult = &PermModelInfo_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_PermModelInfo_t;
+    (*(*v7 + 264LL))(
+      v7,
+      &PermModelInfo_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_PermModelInfo_t);
+    return PermModelInfo_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult;
+  }
+  return result;
+}
+
+
+// PermModelInfo_t::Schema_VerifyBindingIsRegistered  (line 229, @0x000000000319ac90, libserver.so)
+void __cdecl PermModelInfo_t::Schema_VerifyBindingIsRegistered()
+{
+  ;
+}
+
+
+// PermModelExtPart_t::Schema_CompileTimeVerificationFunction  (line 237, @0x000000000319aca0, libserver.so)
+void __fastcall PermModelExtPart_t::Schema_CompileTimeVerificationFunction(PermModelExtPart_t *const this)
+{
+  ;
+}
+
+
+// PermModelExtPart_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE  (line 244, @0x000000000319acb0, libserver.so)  // inlines: Get, SchemaBinding_SchemaTypeOfMemberVarByAddr<PermModelExtPart_t, CResourceExtReference<CWeakHandle<InfoForResourceTypeCModel> > >, SchemaBinding_SchemaTypeOfMemberVarByAddr<PermModelExtPart_t, CResourceString>, SchemaBinding_SchemaTypeOfMemberVarByAddr<PermModelExtPart_t, CTransform>, SchemaBinding_SchemaTypeOfMemberVarByAddr<PermModelExtPart_t, int>, SetTypeScope
+// callers: CSchemaClassBinding<PermModelExtPart_t>::Register
+// strings: "CTransform", "CResourceString", "InfoForResourceTypeCModel", "CWeakHandle", "CResourceExtReference"
+// globals: PermModelExtPart_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pIni, CSchemaManipulator<CTransform>::StaticAccessor(void)::m, CAtomicManipulator<CTransform>::Get(void)::val, CSchemaManipulator<CResourceString>::StaticAccessor(void)::m, CAtomicManipulator<CResourceString>::Get(void)::val, CSchemaManipulator<CWeakHandle<InfoForResourceTypeCModel>>::StaticAccessor(void)::m, CAtomicManipulator<CWeakHandle<InfoForResourceTypeCModel>>::Get(void)::val, CSchemaManipulator<CResourceExtReference<CWeakHandle<InfoForResourceTypeCModel>>>::StaticAccessor(void)::m (10 total)
+CSchemaClassInfo *__fastcall PermModelExtPart_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        const char *pProjectName)
+{
+  CSchemaClassInfo *result; // rax
+  ISchemaSystemTypeScope *v4; // rbx
+  __int64 (__fastcall *v5)(ISchemaSystemTypeScope *, const char *, __int64, __int64 (__fastcall ***)(), __int64 (__fastcall ***)(), __int64); // r12
+  __int64 v6; // rax
+  __int64 v7; // rax
+  CSchemaType *v8; // rax
+
+  result = PermModelExtPart_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult;
+  if ( PermModelExtPart_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult == 0 )
+  {
+    v4 = (*(*pSchemaSystem + 112LL))(pSchemaSystem, 0, pBinaryName);
+    PermModelExtPart_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_PermModelExtPart_t[0].m_pType = (*(*v4 + 56LL))(v4, "CTransform", 2013, CAtomicManipulator<CTransform>::Get(void)::val, &CSchemaManipulator<CTransform>::StaticAccessor(void)::m);
+    PermModelExtPart_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_PermModelExtPart_t[1].m_pType = (*(*v4 + 56LL))(v4, "CResourceString", 4005, CAtomicManipulator<CResourceString>::Get(void)::val, CSchemaManipulator<CResourceString>::StaticAccessor(void)::m);
+    PermModelExtPart_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_PermModelExtPart_t[2].m_pType = (*(*v4 + 40LL))(v4, 7);
+    v5 = *(*v4 + 64LL);
+    v6 = (*(*v4 + 88LL))(v4, "InfoForResourceTypeCModel");
+    v7 = v5(
+           v4,
+           "CWeakHandle",
+           4010,
+           &CAtomicManipulator<CWeakHandle<InfoForResourceTypeCModel>>::Get(void)::val,
+           CSchemaManipulator<CWeakHandle<InfoForResourceTypeCModel>>::StaticAccessor(void)::m,
+           v6);
+    v8 = v5(
+           v4,
+           "CResourceExtReference",
+           4001,
+           CAtomicManipulator<CResourceExtReference<CWeakHandle<InfoForResourceTypeCModel>>>::Get(void)::val,
+           CSchemaManipulator<CResourceExtReference<CWeakHandle<InfoForResourceTypeCModel>>>::StaticAccessor(void)::m,
+           v7);
+    PermModelExtPart_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_PermModelExtPart_t.m_pOuterTypeScope = v4;
+    PermModelExtPart_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_PermModelExtPart_t[3].m_pType = v8;
+    PermModelExtPart_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult = &PermModelExtPart_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_PermModelExtPart_t;
+    (*(*v4 + 264LL))(
+      v4,
+      &PermModelExtPart_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_PermModelExtPart_t);
+    return PermModelExtPart_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult;
+  }
+  return result;
+}
+
+
+// PermModelExtPart_t::Schema_VerifyBindingIsRegistered  (line 262, @0x000000000319ade0, libserver.so)
+void __cdecl PermModelExtPart_t::Schema_VerifyBindingIsRegistered()
+{
+  ;
+}
+
+
+// ModelBoneFlexDriverControl_t::Schema_CompileTimeVerificationFunction  (line 270, @0x000000000319adf0, libserver.so)
+void __fastcall ModelBoneFlexDriverControl_t::Schema_CompileTimeVerificationFunction(
+        ModelBoneFlexDriverControl_t *const this)
+{
+  ;
+}
+
+
+// ModelBoneFlexDriverControl_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE  (line 278, @0x000000000319ae00, libserver.so)  // inlines: Get, SchemaBinding_SchemaTypeOfMemberVarByAddr<ModelBoneFlexDriverControl_t, CResourceString>, SchemaBinding_SchemaTypeOfMemberVarByAddr<ModelBoneFlexDriverControl_t, ModelBoneFlexComponent_t>, SchemaBinding_SchemaTypeOfMemberVarByAddr<ModelBoneFlexDriverControl_t, float>, SchemaBinding_SchemaTypeOfMemberVarByAddr<ModelBoneFlexDriverControl_t, unsigned int>, SetTypeScope
+// callers: CSchemaClassBinding<ModelBoneFlexDriverControl_t>::Register
+// strings: "ModelBoneFlexComponent_t", "CResourceString"
+// globals: ModelBoneFlexDriverControl_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const, CSchemaManipulator<CResourceString>::StaticAccessor(void)::m, CAtomicManipulator<CResourceString>::Get(void)::val
+CSchemaClassInfo *__fastcall ModelBoneFlexDriverControl_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        const char *pProjectName)
+{
+  CSchemaClassInfo *result; // rax
+  ISchemaSystemTypeScope *v4; // rbx
+  CSchemaType *v5; // rax
+
+  result = ModelBoneFlexDriverControl_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult;
+  if ( ModelBoneFlexDriverControl_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult == 0 )
+  {
+    v4 = (*(*pSchemaSystem + 112LL))(pSchemaSystem, 0, pBinaryName);
+    ModelBoneFlexDriverControl_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_ModelBoneFlexDriverControl_t[0].m_pType = (*(*v4 + 96LL))(v4, "ModelBoneFlexComponent_t");
+    ModelBoneFlexDriverControl_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_ModelBoneFlexDriverControl_t[1].m_pType = (*(*v4 + 56LL))(v4, "CResourceString", 4005, CAtomicManipulator<CResourceString>::Get(void)::val, CSchemaManipulator<CResourceString>::StaticAccessor(void)::m);
+    ModelBoneFlexDriverControl_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_ModelBoneFlexDriverControl_t[2].m_pType = (*(*v4 + 40LL))(v4, 8);
+    ModelBoneFlexDriverControl_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_ModelBoneFlexDriverControl_t[3].m_pType = (*(*v4 + 40LL))(v4, 11);
+    v5 = (*(*v4 + 40LL))(v4, 11);
+    ModelBoneFlexDriverControl_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_ModelBoneFlexDriverControl_t.m_pOuterTypeScope = v4;
+    ModelBoneFlexDriverControl_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_ModelBoneFlexDriverControl_t[4].m_pType = v5;
+    ModelBoneFlexDriverControl_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult = &ModelBoneFlexDriverControl_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_ModelBoneFlexDriverControl_t;
+    (*(*v4 + 264LL))(
+      v4,
+      &ModelBoneFlexDriverControl_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_ModelBoneFlexDriverControl_t);
+    return ModelBoneFlexDriverControl_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult;
+  }
+  return result;
+}
+
+
+// ModelBoneFlexDriverControl_t::Schema_VerifyBindingIsRegistered  (line 298, @0x000000000319aee0, libserver.so)
+void __cdecl ModelBoneFlexDriverControl_t::Schema_VerifyBindingIsRegistered()
+{
+  ;
+}
+
+
+// ModelBoneFlexDriver_t::Schema_CompileTimeVerificationFunction  (line 306, @0x000000000319aef0, libserver.so)
+void __fastcall ModelBoneFlexDriver_t::Schema_CompileTimeVerificationFunction(ModelBoneFlexDriver_t *const this)
+{
+  ;
+}
+
+
+// ModelBoneFlexDriver_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE  (line 312, @0x000000000319af00, libserver.so)  // inlines: Get, SchemaBinding_SchemaTypeOfMemberVarByAddr<ModelBoneFlexDriver_t, CResourceArray<ModelBoneFlexDriverControl_t> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<ModelBoneFlexDriver_t, CResourceString>, SchemaBinding_SchemaTypeOfMemberVarByAddr<ModelBoneFlexDriver_t, unsigned int>, SetTypeScope
+// callers: CSchemaClassBinding<ModelBoneFlexDriver_t>::Register
+// strings: "CResourceString", "ModelBoneFlexDriverControl_t", "CResourceArray"
+// globals: ModelBoneFlexDriver_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_p, CSchemaManipulator<CResourceString>::StaticAccessor(void)::m, CAtomicManipulator<CResourceString>::Get(void)::val, CSchemaManipulator<CResourceArray<ModelBoneFlexDriverControl_t>>::StaticAccessor(void)::m, CAtomicManipulator<CResourceArray<ModelBoneFlexDriverControl_t>>::Get(void)::val, ModelBoneFlexDriver_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::Imp
+CSchemaClassInfo *__fastcall ModelBoneFlexDriver_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        const char *pProjectName)
+{
+  CSchemaClassInfo *result; // rax
+  ISchemaSystemTypeScope *v4; // rbx
+  __int64 (__fastcall *v5)(ISchemaSystemTypeScope *, const char *, __int64, __int64 (__fastcall ***)(), __int64 (__fastcall ***)(), __int64); // r12
+  __int64 v6; // rax
+  CSchemaType *v7; // rax
+
+  result = ModelBoneFlexDriver_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult;
+  if ( ModelBoneFlexDriver_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult == 0 )
+  {
+    v4 = (*(*pSchemaSystem + 112LL))(pSchemaSystem, 0, pBinaryName);
+    ModelBoneFlexDriver_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_ModelBoneFlexDriver_t[0].m_pType = (*(*v4 + 56LL))(v4, "CResourceString", 4005, CAtomicManipulator<CResourceString>::Get(void)::val, CSchemaManipulator<CResourceString>::StaticAccessor(void)::m);
+    ModelBoneFlexDriver_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_ModelBoneFlexDriver_t[1].m_pType = (*(*v4 + 40LL))(v4, 8);
+    v5 = *(*v4 + 64LL);
+    v6 = (*(*v4 + 88LL))(v4, "ModelBoneFlexDriverControl_t");
+    v7 = v5(
+           v4,
+           "CResourceArray",
+           4004,
+           CAtomicManipulator<CResourceArray<ModelBoneFlexDriverControl_t>>::Get(void)::val,
+           CSchemaManipulator<CResourceArray<ModelBoneFlexDriverControl_t>>::StaticAccessor(void)::m,
+           v6);
+    ModelBoneFlexDriver_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_ModelBoneFlexDriver_t.m_pOuterTypeScope = v4;
+    ModelBoneFlexDriver_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_ModelBoneFlexDriver_t[2].m_pType = v7;
+    ModelBoneFlexDriver_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult = &ModelBoneFlexDriver_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_ModelBoneFlexDriver_t;
+    (*(*v4 + 264LL))(
+      v4,
+      &ModelBoneFlexDriver_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_ModelBoneFlexDriver_t);
+    return ModelBoneFlexDriver_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult;
+  }
+  return result;
+}
+
+
+// ModelBoneFlexDriver_t::Schema_VerifyBindingIsRegistered  (line 328, @0x000000000319afe0, libserver.so)
+void __cdecl ModelBoneFlexDriver_t::Schema_VerifyBindingIsRegistered()
+{
+  ;
+}
+
+
+// PermModelData_t::Schema_CompileTimeVerificationFunction  (line 336, @0x000000000319aff0, libserver.so)
+void __fastcall PermModelData_t::Schema_CompileTimeVerificationFunction(PermModelData_t *const this)
+{
+  ;
+}
+
+
+// PermModelData_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE  (line 358, @0x000000000319b000, libserver.so)  // inlines: Get, SchemaBinding_SchemaTypeOfMemberVarByAddr<PermModelData_t, CResourceArray<CResourceExtReference<CWeakHandle<InfoForResourceTypeAnimationGroupResourceData_t> > > >, SchemaBinding_SchemaTypeOfMemberVarByAddr<PermModelData_t, CResourceArray<CResourceExtReference<CWeakHandle<InfoForResourceTypeCPhysAggregateData> > > >, SchemaBinding_SchemaTypeOfMemberVarByAddr<PermModelData_t, CResourceArray<CResourceExtReference<CWeakHandle<InfoForResourceTypeCRenderMesh> > > >, SchemaBinding_SchemaTypeOfMemberVarByAddr<PermModelData_t, CResourceArray<CResourceExtReference<CWeakHandle<InfoForResourceTypeSequenceGroupResourceData_t> > > >, SchemaBinding_SchemaTypeOfMemberVarByAddr<PermModelData_t, CResourceArray<CResourceString> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<PermModelData_t, CResourceArray<MaterialGroup_t> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<PermModelData_t, CResourceArray<ModelBoneFlexDriver_t> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<PermModelData_t, CResourceArray<PermModelExtPart_t> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<PermModelData_t, CResourceArray<float> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<PermModelData_t, CResourceArray<long long unsigned int> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<PermModelData_t, CResourceArray<short int> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<PermModelData_t, CResourceArray<short unsigned int> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<PermModelData_t, CResourceArray<unsigned char> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<PermModelData_t, CResourceString>, SchemaBinding_SchemaTypeOfMemberVarByAddr<PermModelData_t, ModelSkeletonData_t>, SchemaBinding_SchemaTypeOfMemberVarByAddr<PermModelData_t, PermModelInfo_t>, SchemaBinding_SchemaTypeOfMemberVarByAddr<PermModelData_t, long long unsigned int>, SetTypeScope
+// callers: CSchemaClassBinding<PermModelData_t>::Register
+// strings: "CResourceString", "PermModelInfo_t", "PermModelExtPart_t", "CResourceArray", "InfoForResourceTypeCRenderMesh", "CWeakHandle" (13 total)
+// globals: PermModelData_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitia, CSchemaManipulator<CResourceString>::StaticAccessor(void)::m, CAtomicManipulator<CResourceString>::Get(void)::val, CSchemaManipulator<CResourceArray<PermModelExtPart_t>>::StaticAccessor(void)::m, CAtomicManipulator<CResourceArray<PermModelExtPart_t>>::Get(void)::val, CSchemaManipulator<CWeakHandle<InfoForResourceTypeCRenderMesh>>::StaticAccessor(void)::m, CAtomicManipulator<CWeakHandle<InfoForResourceTypeCRenderMesh>>::Get(void)::val, CSchemaManipulator<CResourceExtReference<CWeakHandle<InfoForResourceTypeCRenderMesh>>>::StaticAccessor(void)::m (40 total)
+CSchemaClassInfo *__fastcall PermModelData_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        const char *pProjectName)
+{
+  CSchemaClassInfo *result; // rax
+  ISchemaSystemTypeScope *v4; // rbx
+  __int64 (__fastcall *v5)(ISchemaSystemTypeScope *, const char *, __int64, __int64 (__fastcall **)(), __int64 (__fastcall **)(), __int64); // r12
+  __int64 v6; // rax
+  __int64 (__fastcall *v7)(ISchemaSystemTypeScope *, const char *, __int64, __int64 (__fastcall ***)(), __int64 (__fastcall **)(), __int64); // r12
+  __int64 v8; // rax
+  __int64 v9; // rax
+  __int64 v10; // rax
+  __int64 (__fastcall *v11)(ISchemaSystemTypeScope *, const char *, __int64, __int64 (__fastcall ***)(), __int64 (__fastcall ***)(), __int64); // r12
+  __int64 v12; // rax
+  __int64 (__fastcall *v13)(ISchemaSystemTypeScope *, const char *, __int64, __int64 (__fastcall ***)(), __int64 (__fastcall ***)(), __int64); // r12
+  __int64 v14; // rax
+  __int64 (__fastcall *v15)(ISchemaSystemTypeScope *, const char *, __int64, __int64 (__fastcall ***)(), __int64 (__fastcall ***)(), __int64); // r12
+  __int64 v16; // rax
+  __int64 (__fastcall *v17)(ISchemaSystemTypeScope *, const char *, __int64, __int64 (__fastcall ***)(), __int64 (__fastcall ***)(), __int64); // r12
+  __int64 v18; // rax
+  __int64 (__fastcall *v19)(ISchemaSystemTypeScope *, const char *, __int64, __int64 (__fastcall ***)(), __int64 (__fastcall ***)(), __int64); // r12
+  __int64 v20; // rax
+  __int64 v21; // rax
+  __int64 v22; // rax
+  __int64 (__fastcall *v23)(ISchemaSystemTypeScope *, const char *, __int64, __int64 (__fastcall ***)(), __int64 (__fastcall ***)(), __int64); // r12
+  __int64 v24; // rax
+  __int64 v25; // rax
+  __int64 v26; // rax
+  __int64 (__fastcall *v27)(ISchemaSystemTypeScope *, const char *, __int64, __int64 (__fastcall ***)(), __int64 (__fastcall ***)(), __int64); // r12
+  __int64 v28; // rax
+  __int64 v29; // rax
+  __int64 v30; // rax
+  __int64 (__fastcall *v31)(ISchemaSystemTypeScope *, const char *, __int64, __int64 (__fastcall ***)(), __int64 (__fastcall ***)(), __int64); // r12
+  __int64 v32; // rax
+  __int64 v33; // rax
+  __int64 v34; // rax
+  __int64 (__fastcall *v35)(ISchemaSystemTypeScope *, const char *, __int64, __int64 (__fastcall ***)(), __int64 (__fastcall ***)(), __int64); // r12
+  __int64 v36; // rax
+  __int64 (__fastcall *v37)(ISchemaSystemTypeScope *, const char *, __int64, __int64 (__fastcall ***)(), __int64 (__fastcall ***)(), __int64); // r12
+  __int64 v38; // rax
+  __int64 (__fastcall *v39)(ISchemaSystemTypeScope *, const char *, __int64, __int64 (__fastcall ***)(), __int64 (__fastcall ***)(), __int64); // r12
+  __int64 v40; // rax
+  __int64 (__fastcall *v41)(ISchemaSystemTypeScope *, const char *, __int64, __int64 (__fastcall ***)(), __int64 (__fastcall ***)(), __int64); // r12
+  __int64 v42; // rax
+  __int64 (__fastcall *v43)(ISchemaSystemTypeScope *, const char *, __int64, __int64 (__fastcall ***)(), __int64 (__fastcall ***)(), __int64); // r12
+  __int64 v44; // rax
+  CSchemaType *v45; // rax
+
+  result = PermModelData_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult;
+  if ( PermModelData_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult == 0 )
+  {
+    v4 = (*(*pSchemaSystem + 112LL))(pSchemaSystem, 0, pBinaryName);
+    PermModelData_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_PermModelData_t[0].m_pType = (*(*v4 + 56LL))(v4, "CResourceString", 4005, CAtomicManipulator<CResourceString>::Get(void)::val, CSchemaManipulator<CResourceString>::StaticAccessor(void)::m);
+    PermModelData_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_PermModelData_t[1].m_pType = (*(*v4 + 88LL))(v4, "PermModelInfo_t");
+    v5 = *(*v4 + 64LL);
+    v6 = (*(*v4 + 88LL))(v4, "PermModelExtPart_t");
+    PermModelData_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_PermModelData_t[2].m_pType = v5(v4, "CResourceArray", 4004, CAtomicManipulator<CResourceArray<PermModelExtPart_t>>::Get(void)::val, &CSchemaManipulator<CResourceArray<PermModelExtPart_t>>::StaticAccessor(void)::m, v6);
+    v7 = *(*v4 + 64LL);
+    v8 = (*(*v4 + 88LL))(v4, "InfoForResourceTypeCRenderMesh");
+    v9 = v7(
+           v4,
+           "CWeakHandle",
+           4010,
+           &CAtomicManipulator<CWeakHandle<InfoForResourceTypeCRenderMesh>>::Get(void)::val,
+           CSchemaManipulator<CWeakHandle<InfoForResourceTypeCRenderMesh>>::StaticAccessor(void)::m,
+           v8);
+    v10 = v7(
+            v4,
+            "CResourceExtReference",
+            4001,
+            CAtomicManipulator<CResourceExtReference<CWeakHandle<InfoForResourceTypeCRenderMesh>>>::Get(void)::val,
+            CSchemaManipulator<CResourceExtReference<CWeakHandle<InfoForResourceTypeCRenderMesh>>>::StaticAccessor(void)::m,
+            v9);
+    PermModelData_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_PermModelData_t[3].m_pType = v7(v4, "CResourceArray", 4004, CAtomicManipulator<CResourceArray<CResourceExtReference<CWeakHandle<InfoForResourceTypeCRenderMesh>>>>::Get(void)::val, CSchemaManipulator<CResourceArray<CResourceExtReference<CWeakHandle<InfoForResourceTypeCRenderMesh>>>>::StaticAccessor(void)::m, v10);
+    v11 = *(*v4 + 64LL);
+    v12 = (*(*v4 + 40LL))(v4, 10);
+    PermModelData_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_PermModelData_t[4].m_pType = v11(v4, "CResourceArray", 4004, CAtomicManipulator<CResourceArray<unsigned long long>>::Get(void)::val, CSchemaManipulator<CResourceArray<unsigned long long>>::StaticAccessor(void)::m, v12);
+    v13 = *(*v4 + 64LL);
+    v14 = (*(*v4 + 40LL))(v4, 10);
+    PermModelData_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_PermModelData_t[5].m_pType = v13(v4, "CResourceArray", 4004, CAtomicManipulator<CResourceArray<unsigned long long>>::Get(void)::val, CSchemaManipulator<CResourceArray<unsigned long long>>::StaticAccessor(void)::m, v14);
+    v15 = *(*v4 + 64LL);
+    v16 = (*(*v4 + 40LL))(v4, 4);
+    PermModelData_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_PermModelData_t[6].m_pType = v15(v4, "CResourceArray", 4004, CAtomicManipulator<CResourceArray<unsigned char>>::Get(void)::val, CSchemaManipulator<CResourceArray<unsigned char>>::StaticAccessor(void)::m, v16);
+    v17 = *(*v4 + 64LL);
+    v18 = (*(*v4 + 40LL))(v4, 11);
+    PermModelData_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_PermModelData_t[7].m_pType = v17(v4, "CResourceArray", 4004, CAtomicManipulator<CResourceArray<float>>::Get(void)::val, CSchemaManipulator<CResourceArray<float>>::StaticAccessor(void)::m, v18);
+    v19 = *(*v4 + 64LL);
+    v20 = (*(*v4 + 88LL))(v4, "InfoForResourceTypeCPhysAggregateData");
+    v21 = v19(
+            v4,
+            "CWeakHandle",
+            4010,
+            &CAtomicManipulator<CWeakHandle<InfoForResourceTypeCPhysAggregateData>>::Get(void)::val,
+            CSchemaManipulator<CWeakHandle<InfoForResourceTypeCPhysAggregateData>>::StaticAccessor(void)::m,
+            v20);
+    v22 = v19(
+            v4,
+            "CResourceExtReference",
+            4001,
+            CAtomicManipulator<CResourceExtReference<CWeakHandle<InfoForResourceTypeCPhysAggregateData>>>::Get(void)::val,
+            CSchemaManipulator<CResourceExtReference<CWeakHandle<InfoForResourceTypeCPhysAggregateData>>>::StaticAccessor(void)::m,
+            v21);
+    PermModelData_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_PermModelData_t[8].m_pType = v19(v4, "CResourceArray", 4004, CAtomicManipulator<CResourceArray<CResourceExtReference<CWeakHandle<InfoForResourceTypeCPhysAggregateData>>>>::Get(void)::val, CSchemaManipulator<CResourceArray<CResourceExtReference<CWeakHandle<InfoForResourceTypeCPhysAggregateData>>>>::StaticAccessor(void)::m, v22);
+    v23 = *(*v4 + 64LL);
+    v24 = (*(*v4 + 88LL))(v4, "InfoForResourceTypeCPhysAggregateData");
+    v25 = v23(
+            v4,
+            "CWeakHandle",
+            4010,
+            &CAtomicManipulator<CWeakHandle<InfoForResourceTypeCPhysAggregateData>>::Get(void)::val,
+            CSchemaManipulator<CWeakHandle<InfoForResourceTypeCPhysAggregateData>>::StaticAccessor(void)::m,
+            v24);
+    v26 = v23(
+            v4,
+            "CResourceExtReference",
+            4001,
+            CAtomicManipulator<CResourceExtReference<CWeakHandle<InfoForResourceTypeCPhysAggregateData>>>::Get(void)::val,
+            CSchemaManipulator<CResourceExtReference<CWeakHandle<InfoForResourceTypeCPhysAggregateData>>>::StaticAccessor(void)::m,
+            v25);
+    PermModelData_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_PermModelData_t[9].m_pType = v23(v4, "CResourceArray", 4004, CAtomicManipulator<CResourceArray<CResourceExtReference<CWeakHandle<InfoForResourceTypeCPhysAggregateData>>>>::Get(void)::val, CSchemaManipulator<CResourceArray<CResourceExtReference<CWeakHandle<InfoForResourceTypeCPhysAggregateData>>>>::StaticAccessor(void)::m, v26);
+    v27 = *(*v4 + 64LL);
+    v28 = (*(*v4 + 88LL))(v4, "InfoForResourceTypeAnimationGroupResourceData_t");
+    v29 = v27(
+            v4,
+            "CWeakHandle",
+            4010,
+            &CAtomicManipulator<CWeakHandle<InfoForResourceTypeAnimationGroupResourceData_t>>::Get(void)::val,
+            CSchemaManipulator<CWeakHandle<InfoForResourceTypeAnimationGroupResourceData_t>>::StaticAccessor(void)::m,
+            v28);
+    v30 = v27(
+            v4,
+            "CResourceExtReference",
+            4001,
+            CAtomicManipulator<CResourceExtReference<CWeakHandle<InfoForResourceTypeAnimationGroupResourceData_t>>>::Get(void)::val,
+            CSchemaManipulator<CResourceExtReference<CWeakHandle<InfoForResourceTypeAnimationGroupResourceData_t>>>::StaticAccessor(void)::m,
+            v29);
+    PermModelData_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_PermModelData_t[10].m_pType = v27(v4, "CResourceArray", 4004, CAtomicManipulator<CResourceArray<CResourceExtReference<CWeakHandle<InfoForResourceTypeAnimationGroupResourceData_t>>>>::Get(void)::val, CSchemaManipulator<CResourceArray<CResourceExtReference<CWeakHandle<InfoForResourceTypeAnimationGroupResourceData_t>>>>::StaticAccessor(void)::m, v30);
+    v31 = *(*v4 + 64LL);
+    v32 = (*(*v4 + 88LL))(v4, "InfoForResourceTypeSequenceGroupResourceData_t");
+    v33 = v31(
+            v4,
+            "CWeakHandle",
+            4010,
+            &CAtomicManipulator<CWeakHandle<InfoForResourceTypeSequenceGroupResourceData_t>>::Get(void)::val,
+            CSchemaManipulator<CWeakHandle<InfoForResourceTypeSequenceGroupResourceData_t>>::StaticAccessor(void)::m,
+            v32);
+    v34 = v31(
+            v4,
+            "CResourceExtReference",
+            4001,
+            CAtomicManipulator<CResourceExtReference<CWeakHandle<InfoForResourceTypeSequenceGroupResourceData_t>>>::Get(void)::val,
+            CSchemaManipulator<CResourceExtReference<CWeakHandle<InfoForResourceTypeSequenceGroupResourceData_t>>>::StaticAccessor(void)::m,
+            v33);
+    PermModelData_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_PermModelData_t[11].m_pType = v31(v4, "CResourceArray", 4004, CAtomicManipulator<CResourceArray<CResourceExtReference<CWeakHandle<InfoForResourceTypeSequenceGroupResourceData_t>>>>::Get(void)::val, CSchemaManipulator<CResourceArray<CResourceExtReference<CWeakHandle<InfoForResourceTypeSequenceGroupResourceData_t>>>>::StaticAccessor(void)::m, v34);
+    v35 = *(*v4 + 64LL);
+    v36 = (*(*v4 + 56LL))(
+            v4,
+            "CResourceString",
+            4005,
+            CAtomicManipulator<CResourceString>::Get(void)::val,
+            CSchemaManipulator<CResourceString>::StaticAccessor(void)::m);
+    PermModelData_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_PermModelData_t[12].m_pType = v35(v4, "CResourceArray", 4004, CAtomicManipulator<CResourceArray<CResourceString>>::Get(void)::val, CSchemaManipulator<CResourceArray<CResourceString>>::StaticAccessor(void)::m, v36);
+    v37 = *(*v4 + 64LL);
+    v38 = (*(*v4 + 88LL))(v4, "MaterialGroup_t");
+    PermModelData_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_PermModelData_t[13].m_pType = v37(v4, "CResourceArray", 4004, CAtomicManipulator<CResourceArray<MaterialGroup_t>>::Get(void)::val, CSchemaManipulator<CResourceArray<MaterialGroup_t>>::StaticAccessor(void)::m, v38);
+    PermModelData_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_PermModelData_t[14].m_pType = (*(*v4 + 40LL))(v4, 10);
+    PermModelData_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_PermModelData_t[15].m_pType = (*(*v4 + 88LL))(v4, "ModelSkeletonData_t");
+    v39 = *(*v4 + 64LL);
+    v40 = (*(*v4 + 40LL))(v4, 5);
+    PermModelData_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_PermModelData_t[16].m_pType = v39(v4, "CResourceArray", 4004, CAtomicManipulator<CResourceArray<short>>::Get(void)::val, CSchemaManipulator<CResourceArray<short>>::StaticAccessor(void)::m, v40);
+    v41 = *(*v4 + 64LL);
+    v42 = (*(*v4 + 40LL))(v4, 6);
+    PermModelData_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_PermModelData_t[17].m_pType = v41(v4, "CResourceArray", 4004, CAtomicManipulator<CResourceArray<unsigned short>>::Get(void)::val, CSchemaManipulator<CResourceArray<unsigned short>>::StaticAccessor(void)::m, v42);
+    v43 = *(*v4 + 64LL);
+    v44 = (*(*v4 + 88LL))(v4, "ModelBoneFlexDriver_t");
+    v45 = v43(
+            v4,
+            "CResourceArray",
+            4004,
+            CAtomicManipulator<CResourceArray<ModelBoneFlexDriver_t>>::Get(void)::val,
+            CSchemaManipulator<CResourceArray<ModelBoneFlexDriver_t>>::StaticAccessor(void)::m,
+            v44);
+    PermModelData_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_PermModelData_t.m_pOuterTypeScope = v4;
+    PermModelData_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_PermModelData_t[18].m_pType = v45;
+    PermModelData_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult = &PermModelData_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_PermModelData_t;
+    (*(*v4 + 264LL))(
+      v4,
+      &PermModelData_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_PermModelData_t);
+    return PermModelData_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult;
+  }
+  return result;
+}
+
+
+// PermModelData_t::Schema_VerifyBindingIsRegistered  (line 414, @0x000000000319b5d0, libserver.so)
+void __cdecl PermModelData_t::Schema_VerifyBindingIsRegistered()
+{
+  ;
+}
+
+
+// LocalRegisterSchemaModule<ArbitraryTemplateParameter_modellib_model_old_disk_h>  (line 422, @0x000000000319b5e0, libserver.so)  // inlines: Call, Get
+// callers: RegisterSchemaModule_model_old_disk_h
+// strings: "ModelSkeletonData_t::BoneFlags_t", "modellib", "PermModelInfo_t::FlagEnum", "ModelBoneFlexComponent_t"
+// globals: CSchemaEnumBinding<ModelSkeletonData_t::BoneFlags_t>::s_pThisModuleBindingPointer, CSchemaEnumBinding<PermModelInfo_t::FlagEnum>::s_pThisModuleBindingPointer, CSchemaEnumBinding<ModelBoneFlexComponent_t>::s_pThisModuleBindingPointer, MaterialGroup_t::s_pSchemaBindingForLocalModule, ModelSkeletonData_t::s_pSchemaBindingForLocalModule, PermModelInfo_t::s_pSchemaBindingForLocalModule, PermModelExtPart_t::s_pSchemaBindingForLocalModule, ModelBoneFlexDriverControl_t::s_pSchemaBindingForLocalModule (10 total)
+void __fastcall LocalRegisterSchemaModule<ArbitraryTemplateParameter_modellib_model_old_disk_h>(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        SchemaRegistrationPhase_t nRegistrationPhase)
+{
+  if ( nRegistrationPhase != SchemaRegistrationPhase_t::SCHEMA_REGISTRATION_PHASE_ATOMIC_TYPES_AND_ENUMS )
+  {
+    if ( nRegistrationPhase == SchemaRegistrationPhase_t::SCHEMA_REGISTRATION_PHASE_CLASSES )
+    {
+      (*(MaterialGroup_t::s_pSchemaBindingForLocalModule->_vptr_ISchemaBinding + 5))(
+        MaterialGroup_t::s_pSchemaBindingForLocalModule,
+        pSchemaSystem,
+        pBinaryName,
+        "modellib");
+      (*(ModelSkeletonData_t::s_pSchemaBindingForLocalModule->_vptr_ISchemaBinding + 5))(
+        ModelSkeletonData_t::s_pSchemaBindingForLocalModule,
+        pSchemaSystem,
+        pBinaryName,
+        "modellib");
+      (*(PermModelInfo_t::s_pSchemaBindingForLocalModule->_vptr_ISchemaBinding + 5))(
+        PermModelInfo_t::s_pSchemaBindingForLocalModule,
+        pSchemaSystem,
+        pBinaryName,
+        "modellib");
+      (*(PermModelExtPart_t::s_pSchemaBindingForLocalModule->_vptr_ISchemaBinding + 5))(
+        PermModelExtPart_t::s_pSchemaBindingForLocalModule,
+        pSchemaSystem,
+        pBinaryName,
+        "modellib");
+      (*(ModelBoneFlexDriverControl_t::s_pSchemaBindingForLocalModule->_vptr_ISchemaBinding + 5))(
+        ModelBoneFlexDriverControl_t::s_pSchemaBindingForLocalModule,
+        pSchemaSystem,
+        pBinaryName,
+        "modellib");
+      (*(ModelBoneFlexDriver_t::s_pSchemaBindingForLocalModule->_vptr_ISchemaBinding + 5))(
+        ModelBoneFlexDriver_t::s_pSchemaBindingForLocalModule,
+        pSchemaSystem,
+        pBinaryName,
+        "modellib");
+      (*(PermModelData_t::s_pSchemaBindingForLocalModule->_vptr_ISchemaBinding + 5))(
+        PermModelData_t::s_pSchemaBindingForLocalModule,
+        pSchemaSystem,
+        pBinaryName,
+        "modellib");
+    }
+    ++g_nLinkerHack_SchemaAnchor_RegistrationCountFor_modellib;
+  }
+  else
+  {
+    (*(CSchemaEnumBinding<ModelSkeletonData_t::BoneFlags_t>::s_pThisModuleBindingPointer->_vptr_ISchemaBinding + 5))(
+      CSchemaEnumBinding<ModelSkeletonData_t::BoneFlags_t>::s_pThisModuleBindingPointer,
+      pSchemaSystem,
+      pBinaryName,
+      "modellib",
+      "ModelSkeletonData_t::BoneFlags_t");
+    (*(CSchemaEnumBinding<PermModelInfo_t::FlagEnum>::s_pThisModuleBindingPointer->_vptr_ISchemaBinding + 5))(
+      CSchemaEnumBinding<PermModelInfo_t::FlagEnum>::s_pThisModuleBindingPointer,
+      pSchemaSystem,
+      pBinaryName,
+      "modellib",
+      "PermModelInfo_t::FlagEnum");
+    (*(CSchemaEnumBinding<ModelBoneFlexComponent_t>::s_pThisModuleBindingPointer->_vptr_ISchemaBinding + 5))(
+      CSchemaEnumBinding<ModelBoneFlexComponent_t>::s_pThisModuleBindingPointer,
+      pSchemaSystem,
+      pBinaryName,
+      "modellib",
+      "ModelBoneFlexComponent_t");
+    ++g_nLinkerHack_SchemaAnchor_RegistrationCountFor_modellib;
+  }
+}
+
+
+// RegisterSchemaModule_model_old_disk_h  (line 433, @0x000000000319b750, libserver.so)
+// calls: LocalRegisterSchemaModule<ArbitraryTemplateParameter_modellib_model_old_disk_h>
+// callers: CSchemaRegistration_modellib::RegisterAllBindings
+void __fastcall RegisterSchemaModule_model_old_disk_h(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        SchemaRegistrationPhase_t nRegistrationPhase)
+{
+  LocalRegisterSchemaModule<ArbitraryTemplateParameter_modellib_model_old_disk_h>(
+    pSchemaSystem,
+    pBinaryName,
+    nRegistrationPhase);
+}
+
+

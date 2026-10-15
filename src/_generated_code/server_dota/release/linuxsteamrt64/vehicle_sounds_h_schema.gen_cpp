@@ -1,0 +1,293 @@
+
+// ==== functions (decompiled by Hex-Rays; names/signatures from DWARF) ====
+
+// CSchemaEnumBinding<sound_states>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE  (line 35, @0x00000000020166c0, libserver.so)  // inlines: Count, Initialize, SetTypeScope
+// callers: CSchemaEnumBinding<sound_states>::Register
+// globals: CSchemaEnumBinding<sound_states>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char co
+CSchemaEnumInfo *__fastcall CSchemaEnumBinding<sound_states>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        const char *pProjectName)
+{
+  ISchemaSystemTypeScope *v3; // rax
+  unsigned int v4; // edi
+  SchemaEnumeratorValue_t v5; // r8
+  SchemaEnumeratorValue_t v6; // r9
+  SchemaEnumeratorValue_t *v7; // rdx
+
+  v3 = (*(*pSchemaSystem + 112LL))(pSchemaSystem, 0, pBinaryName);
+  if ( CSchemaEnumBinding<sound_states>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_sound_states.m_Enumerators.m_Data.m_nImplLength != 0 )
+  {
+    v4 = abs32(CSchemaEnumBinding<sound_states>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_sound_states.m_Enumerators.m_Data.m_nImplLength);
+    v5 = *(CSchemaEnumBinding<sound_states>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_sound_states.m_Enumerators.m_Data.m_pImplElements
+         + 2);
+    CSchemaEnumBinding<sound_states>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_sound_states.m_nMinValue = v5;
+    v6 = *(CSchemaEnumBinding<sound_states>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_sound_states.m_Enumerators.m_Data.m_pImplElements
+         + 2);
+    CSchemaEnumBinding<sound_states>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_sound_states.m_nMaxValue = v6;
+    if ( v4 != 1 )
+    {
+      v7 = (CSchemaEnumBinding<sound_states>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_sound_states.m_Enumerators.m_Data.m_pImplElements
+          + 72);
+      do
+      {
+        if ( v5 > *v7 )
+          v5 = *v7;
+        CSchemaEnumBinding<sound_states>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_sound_states.m_nMinValue = v5;
+        if ( v6 < *v7 )
+          v6 = *v7;
+        v7 += 7;
+        CSchemaEnumBinding<sound_states>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_sound_states.m_nMaxValue = v6;
+      }
+      while ( v7 != CSchemaEnumBinding<sound_states>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_sound_states.m_Enumerators.m_Data.m_pImplElements
+                  + 7 * v4
+                  + 2 );
+    }
+  }
+  else
+  {
+    CSchemaEnumBinding<sound_states>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_sound_states.m_nMinValue = 0;
+    CSchemaEnumBinding<sound_states>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_sound_states.m_nMaxValue = 0;
+  }
+  CSchemaEnumBinding<sound_states>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_sound_states.m_pOuterTypeScope = v3;
+  (*(*v3 + 272LL))(
+    v3,
+    &CSchemaEnumBinding<sound_states>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_sound_states);
+  return &CSchemaEnumBinding<sound_states>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_sound_states;
+}
+
+
+// vehicle_gear_t::Schema_CompileTimeVerificationFunction  (line 65, @0x00000000020167a0, libserver.so)
+void __fastcall vehicle_gear_t::Schema_CompileTimeVerificationFunction(vehicle_gear_t *const this)
+{
+  ;
+}
+
+
+// vehicle_gear_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE  (line 71, @0x00000000020167b0, libserver.so)  // inlines: Get, SchemaBinding_SchemaTypeOfMemberVarByAddr<vehicle_gear_t, float>, SetTypeScope
+// callers: CSchemaClassBinding<vehicle_gear_t>::Register
+// globals: vehicle_gear_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitial, vehicle_gear_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema
+CSchemaClassInfo *__fastcall vehicle_gear_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        const char *pProjectName)
+{
+  CSchemaClassInfo *result; // rax
+  ISchemaSystemTypeScope *v4; // rbx
+  CSchemaType *v5; // rax
+
+  result = vehicle_gear_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult;
+  if ( vehicle_gear_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult == 0 )
+  {
+    v4 = (*(*pSchemaSystem + 112LL))(pSchemaSystem, 0, pBinaryName);
+    vehicle_gear_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_vehicle_gear_t[0].m_pType = (*(*v4 + 40LL))(v4, 11);
+    vehicle_gear_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_vehicle_gear_t[1].m_pType = (*(*v4 + 40LL))(v4, 11);
+    v5 = (*(*v4 + 40LL))(v4, 11);
+    vehicle_gear_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_vehicle_gear_t.m_pOuterTypeScope = v4;
+    vehicle_gear_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_vehicle_gear_t[2].m_pType = v5;
+    vehicle_gear_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult = &vehicle_gear_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_vehicle_gear_t;
+    (*(*v4 + 264LL))(
+      v4,
+      &vehicle_gear_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_vehicle_gear_t);
+    return vehicle_gear_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult;
+  }
+  return result;
+}
+
+
+// vehicle_gear_t::Schema_VerifyBindingIsRegistered  (line 87, @0x0000000002016850, libserver.so)
+void __cdecl vehicle_gear_t::Schema_VerifyBindingIsRegistered()
+{
+  ;
+}
+
+
+// vehicle_crashsound_t::Schema_CompileTimeVerificationFunction  (line 95, @0x0000000002016860, libserver.so)
+void __fastcall vehicle_crashsound_t::Schema_CompileTimeVerificationFunction(vehicle_crashsound_t *const this)
+{
+  ;
+}
+
+
+// vehicle_crashsound_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE  (line 102, @0x0000000002016870, libserver.so)  // inlines: Get, SchemaBinding_SchemaTypeOfMemberVarByAddr<vehicle_crashsound_t, CUtlSymbolLarge>, SchemaBinding_SchemaTypeOfMemberVarByAddr<vehicle_crashsound_t, float>, SchemaBinding_SchemaTypeOfMemberVarByAddr<vehicle_crashsound_t, int>, SetTypeScope
+// callers: CSchemaClassBinding<vehicle_crashsound_t>::Register
+// strings: "CUtlSymbolLarge"
+// globals: vehicle_crashsound_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pI, CSchemaManipulator<CUtlSymbolLarge>::StaticAccessor(void)::m, CAtomicManipulator<CUtlSymbolLarge>::Get(void)::val, vehicle_crashsound_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::Impl
+CSchemaClassInfo *__fastcall vehicle_crashsound_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        const char *pProjectName)
+{
+  CSchemaClassInfo *result; // rax
+  ISchemaSystemTypeScope *v4; // rbx
+  CSchemaType *v5; // rax
+
+  result = vehicle_crashsound_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult;
+  if ( vehicle_crashsound_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult == 0 )
+  {
+    v4 = (*(*pSchemaSystem + 112LL))(pSchemaSystem, 0, pBinaryName);
+    vehicle_crashsound_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_vehicle_crashsound_t[0].m_pType = (*(*v4 + 40LL))(v4, 11);
+    vehicle_crashsound_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_vehicle_crashsound_t[1].m_pType = (*(*v4 + 40LL))(v4, 11);
+    vehicle_crashsound_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_vehicle_crashsound_t[2].m_pType = (*(*v4 + 40LL))(v4, 7);
+    v5 = (*(*v4 + 56LL))(
+           v4,
+           "CUtlSymbolLarge",
+           3007,
+           CAtomicManipulator<CUtlSymbolLarge>::Get(void)::val,
+           &CSchemaManipulator<CUtlSymbolLarge>::StaticAccessor(void)::m);
+    vehicle_crashsound_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_vehicle_crashsound_t.m_pOuterTypeScope = v4;
+    vehicle_crashsound_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_vehicle_crashsound_t[3].m_pType = v5;
+    vehicle_crashsound_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult = &vehicle_crashsound_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_vehicle_crashsound_t;
+    (*(*v4 + 264LL))(
+      v4,
+      &vehicle_crashsound_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_vehicle_crashsound_t);
+    return vehicle_crashsound_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult;
+  }
+  return result;
+}
+
+
+// vehicle_crashsound_t::Schema_VerifyBindingIsRegistered  (line 120, @0x0000000002016940, libserver.so)
+void __cdecl vehicle_crashsound_t::Schema_VerifyBindingIsRegistered()
+{
+  ;
+}
+
+
+// vehiclesounds_t::Schema_CompileTimeVerificationFunction  (line 128, @0x0000000002016950, libserver.so)
+void __fastcall vehiclesounds_t::Schema_CompileTimeVerificationFunction(vehiclesounds_t *const this)
+{
+  ;
+}
+
+
+// vehiclesounds_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE  (line 136, @0x0000000002016960, libserver.so)  // inlines: Get, SchemaBinding_SchemaTypeOfMemberVarByAddr<vehiclesounds_t, CUtlSymbolLarge [20]>, SchemaBinding_SchemaTypeOfMemberVarByAddr<vehiclesounds_t, CUtlSymbolLarge [9]>, SchemaBinding_SchemaTypeOfMemberVarByAddr<vehiclesounds_t, CUtlVector<vehicle_crashsound_t> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<vehiclesounds_t, CUtlVector<vehicle_gear_t> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<vehiclesounds_t, float [20]>, SetTypeScope
+// callers: CSchemaClassBinding<vehiclesounds_t>::Register
+// strings: "vehicle_gear_t", "CUtlVector", "vehicle_crashsound_t", "CUtlSymbolLarge"
+// globals: vehiclesounds_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitia, CSchemaManipulator<CUtlVector<vehicle_gear_t,CUtlMemory<vehicle_gear_t,int>>>::StaticAccessor(void)::m, CAtomicManipulator<CUtlVector<vehicle_gear_t,CUtlMemory<vehicle_gear_t,int>>>::Get(void)::val, CSchemaManipulator<CUtlVector<vehicle_crashsound_t,CUtlMemory<vehicle_crashsound_t,int>>>::StaticAccessor(void)::m, CAtomicManipulator<CUtlVector<vehicle_crashsound_t,CUtlMemory<vehicle_crashsound_t,int>>>::Get(void)::val, CSchemaManipulator<CUtlSymbolLarge>::StaticAccessor(void)::m, CAtomicManipulator<CUtlSymbolLarge>::Get(void)::val, vehiclesounds_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchem
+CSchemaClassInfo *__fastcall vehiclesounds_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        const char *pProjectName)
+{
+  CSchemaClassInfo *result; // rax
+  ISchemaSystemTypeScope *v4; // rbx
+  __int64 (__fastcall *v5)(ISchemaSystemTypeScope *, const char *, __int64, __int64 (__fastcall ***)(), __int64 (__fastcall ***)(), __int64); // r12
+  __int64 v6; // rax
+  __int64 (__fastcall *v7)(ISchemaSystemTypeScope *, const char *, __int64, __int64 (__fastcall ***)(), __int64 (__fastcall ***)(), __int64); // r12
+  __int64 v8; // rax
+  __int64 (__fastcall *v9)(ISchemaSystemTypeScope *, __int64, __int64); // r12
+  __int64 v10; // rax
+  __int64 (__fastcall *v11)(ISchemaSystemTypeScope *, __int64, __int64); // r12
+  __int64 v12; // rax
+  __int64 (__fastcall *v13)(ISchemaSystemTypeScope *, __int64, __int64); // r12
+  __int64 v14; // rax
+  CSchemaType *v15; // rax
+
+  result = vehiclesounds_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult;
+  if ( vehiclesounds_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult == 0 )
+  {
+    v4 = (*(*pSchemaSystem + 112LL))(pSchemaSystem, 0, pBinaryName);
+    v5 = *(*v4 + 64LL);
+    v6 = (*(*v4 + 88LL))(v4, "vehicle_gear_t");
+    vehiclesounds_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_vehiclesounds_t[0].m_pType = v5(v4, "CUtlVector", 3002, &CAtomicManipulator<CUtlVector<vehicle_gear_t,CUtlMemory<vehicle_gear_t,int>>>::Get(void)::val, CSchemaManipulator<CUtlVector<vehicle_gear_t,CUtlMemory<vehicle_gear_t,int>>>::StaticAccessor(void)::m, v6);
+    v7 = *(*v4 + 64LL);
+    v8 = (*(*v4 + 88LL))(v4, "vehicle_crashsound_t");
+    vehiclesounds_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_vehiclesounds_t[1].m_pType = v7(v4, "CUtlVector", 3002, &CAtomicManipulator<CUtlVector<vehicle_crashsound_t,CUtlMemory<vehicle_crashsound_t,int>>>::Get(void)::val, CSchemaManipulator<CUtlVector<vehicle_crashsound_t,CUtlMemory<vehicle_crashsound_t,int>>>::StaticAccessor(void)::m, v8);
+    v9 = *(*v4 + 104LL);
+    v10 = (*(*v4 + 56LL))(
+            v4,
+            "CUtlSymbolLarge",
+            3007,
+            CAtomicManipulator<CUtlSymbolLarge>::Get(void)::val,
+            &CSchemaManipulator<CUtlSymbolLarge>::StaticAccessor(void)::m);
+    vehiclesounds_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_vehiclesounds_t[2].m_pType = v9(v4, v10, 9);
+    v11 = *(*v4 + 104LL);
+    v12 = (*(*v4 + 56LL))(
+            v4,
+            "CUtlSymbolLarge",
+            3007,
+            CAtomicManipulator<CUtlSymbolLarge>::Get(void)::val,
+            &CSchemaManipulator<CUtlSymbolLarge>::StaticAccessor(void)::m);
+    vehiclesounds_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_vehiclesounds_t[3].m_pType = v11(v4, v12, 20);
+    v13 = *(*v4 + 104LL);
+    v14 = (*(*v4 + 40LL))(v4, 11);
+    v15 = v13(v4, v14, 20);
+    vehiclesounds_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_vehiclesounds_t.m_pOuterTypeScope = v4;
+    vehiclesounds_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_vehiclesounds_t[4].m_pType = v15;
+    vehiclesounds_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult = &vehiclesounds_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_vehiclesounds_t;
+    (*(*v4 + 264LL))(
+      v4,
+      &vehiclesounds_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_vehiclesounds_t);
+    return vehiclesounds_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult;
+  }
+  return result;
+}
+
+
+// vehiclesounds_t::Schema_VerifyBindingIsRegistered  (line 156, @0x0000000002016ae0, libserver.so)
+void __cdecl vehiclesounds_t::Schema_VerifyBindingIsRegistered()
+{
+  ;
+}
+
+
+// LocalRegisterSchemaModule<ArbitraryTemplateParameter_server_vehicle_sounds_h>  (line 164, @0x0000000002016af0, libserver.so)  // inlines: Call, Get
+// callers: RegisterSchemaModule_vehicle_sounds_h
+// strings: "sound_states"
+// globals: CSchemaEnumBinding<sound_states>::s_pThisModuleBindingPointer, vehicle_gear_t::s_pSchemaBindingForLocalModule, vehicle_crashsound_t::s_pSchemaBindingForLocalModule, vehiclesounds_t::s_pSchemaBindingForLocalModule
+void __fastcall LocalRegisterSchemaModule<ArbitraryTemplateParameter_server_vehicle_sounds_h>(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        SchemaRegistrationPhase_t nRegistrationPhase)
+{
+  if ( nRegistrationPhase != SchemaRegistrationPhase_t::SCHEMA_REGISTRATION_PHASE_ATOMIC_TYPES_AND_ENUMS )
+  {
+    if ( nRegistrationPhase == SchemaRegistrationPhase_t::SCHEMA_REGISTRATION_PHASE_CLASSES )
+    {
+      (*(vehicle_gear_t::s_pSchemaBindingForLocalModule->_vptr_ISchemaBinding + 5))(
+        vehicle_gear_t::s_pSchemaBindingForLocalModule,
+        pSchemaSystem,
+        pBinaryName,
+        "server");
+      (*(vehicle_crashsound_t::s_pSchemaBindingForLocalModule->_vptr_ISchemaBinding + 5))(
+        vehicle_crashsound_t::s_pSchemaBindingForLocalModule,
+        pSchemaSystem,
+        pBinaryName,
+        "server");
+      (*(vehiclesounds_t::s_pSchemaBindingForLocalModule->_vptr_ISchemaBinding + 5))(
+        vehiclesounds_t::s_pSchemaBindingForLocalModule,
+        pSchemaSystem,
+        pBinaryName,
+        "server");
+    }
+    ++g_nLinkerHack_SchemaAnchor_RegistrationCountFor_server;
+  }
+  else
+  {
+    (*(CSchemaEnumBinding<sound_states>::s_pThisModuleBindingPointer->_vptr_ISchemaBinding + 5))(
+      CSchemaEnumBinding<sound_states>::s_pThisModuleBindingPointer,
+      pSchemaSystem,
+      pBinaryName,
+      "server",
+      "sound_states");
+    ++g_nLinkerHack_SchemaAnchor_RegistrationCountFor_server;
+  }
+}
+
+
+// RegisterSchemaModule_vehicle_sounds_h  (line 169, @0x0000000002016bb0, libserver.so)
+// calls: LocalRegisterSchemaModule<ArbitraryTemplateParameter_server_vehicle_sounds_h>
+// callers: CSchemaRegistration_server::RegisterAllBindings
+void __fastcall RegisterSchemaModule_vehicle_sounds_h(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        SchemaRegistrationPhase_t nRegistrationPhase)
+{
+  LocalRegisterSchemaModule<ArbitraryTemplateParameter_server_vehicle_sounds_h>(
+    pSchemaSystem,
+    pBinaryName,
+    nRegistrationPhase);
+}
+
+

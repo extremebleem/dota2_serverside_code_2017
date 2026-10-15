@@ -1,0 +1,106 @@
+
+// ==== functions (decompiled by Hex-Rays; names/signatures from DWARF) ====
+
+// CSceneEventInfo::Schema_CompileTimeVerificationFunction  (line 35, @0x0000000001f1d4d0, libserver.so)
+void __fastcall CSceneEventInfo::Schema_CompileTimeVerificationFunction(CSceneEventInfo *const this)
+{
+  ;
+}
+
+
+// CSceneEventInfo::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE  (line 55, @0x0000000001f1d4e0, libserver.so)  // inlines: Get, SchemaBinding_SchemaTypeOfMemberVarByAddr<CSceneEventInfo, CHandle<CBaseEntity> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<CSceneEventInfo, HSequence>, SchemaBinding_SchemaTypeOfMemberVarByAddr<CSceneEventInfo, bool>, SchemaBinding_SchemaTypeOfMemberVarByAddr<CSceneEventInfo, const flexsettinghdr_t*>, SchemaBinding_SchemaTypeOfMemberVarByAddr<CSceneEventInfo, float>, SchemaBinding_SchemaTypeOfMemberVarByAddr<CSceneEventInfo, int>, SetTypeScope
+// callers: CSchemaClassBinding<CSceneEventInfo>::Register
+// strings: "HSequence", "CBaseEntity", "CHandle"
+// globals: CSceneEventInfo::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitia, CSchemaManipulator<HSequence>::StaticAccessor(void)::m, CAtomicManipulator<HSequence>::Get(void)::val, CSchemaManipulator<CHandle<CBaseEntity>>::StaticAccessor(void)::m, CAtomicManipulator<CHandle<CBaseEntity>>::Get(void)::val, CSceneEventInfo::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchem
+CSchemaClassInfo *__fastcall CSceneEventInfo::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        const char *pProjectName)
+{
+  CSchemaClassInfo *result; // rax
+  ISchemaSystemTypeScope *v4; // rbx
+  __int64 (__fastcall *v5)(ISchemaSystemTypeScope *, const char *, __int64, __int64 (__fastcall ***)(), __int64 (__fastcall ***)(), __int64); // r12
+  __int64 v6; // rax
+  __int64 (__fastcall *v7)(ISchemaSystemTypeScope *, __int64); // r12
+  __int64 v8; // rax
+  CSchemaType *v9; // rax
+
+  result = CSceneEventInfo::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult;
+  if ( CSceneEventInfo::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult == 0 )
+  {
+    v4 = (*(*pSchemaSystem + 112LL))(pSchemaSystem, 0, pBinaryName);
+    CSceneEventInfo::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CSceneEventInfo[0].m_pType = (*(*v4 + 40LL))(v4, 13);
+    CSceneEventInfo::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CSceneEventInfo[1].m_pType = (*(*v4 + 40LL))(v4, 7);
+    CSceneEventInfo::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CSceneEventInfo[2].m_pType = (*(*v4 + 40LL))(v4, 7);
+    CSceneEventInfo::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CSceneEventInfo[3].m_pType = (*(*v4 + 56LL))(v4, "HSequence", 2023, CAtomicManipulator<HSequence>::Get(void)::val, CSchemaManipulator<HSequence>::StaticAccessor(void)::m);
+    CSceneEventInfo::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CSceneEventInfo[4].m_pType = (*(*v4 + 40LL))(v4, 13);
+    CSceneEventInfo::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CSceneEventInfo[5].m_pType = (*(*v4 + 40LL))(v4, 11);
+    v5 = *(*v4 + 64LL);
+    v6 = (*(*v4 + 88LL))(v4, "CBaseEntity");
+    CSceneEventInfo::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CSceneEventInfo[6].m_pType = v5(v4, "CHandle", 5003, CAtomicManipulator<CHandle<CBaseEntity>>::Get(void)::val, &CSchemaManipulator<CHandle<CBaseEntity>>::StaticAccessor(void)::m, v6);
+    CSceneEventInfo::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CSceneEventInfo[7].m_pType = (*(*v4 + 40LL))(v4, 13);
+    CSceneEventInfo::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CSceneEventInfo[8].m_pType = (*(*v4 + 40LL))(v4, 13);
+    CSceneEventInfo::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CSceneEventInfo[9].m_pType = (*(*v4 + 40LL))(v4, 11);
+    CSceneEventInfo::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CSceneEventInfo[10].m_pType = (*(*v4 + 40LL))(v4, 11);
+    CSceneEventInfo::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CSceneEventInfo[11].m_pType = (*(*v4 + 40LL))(v4, 11);
+    CSceneEventInfo::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CSceneEventInfo[12].m_pType = (*(*v4 + 40LL))(v4, 7);
+    CSceneEventInfo::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CSceneEventInfo[13].m_pType = (*(*v4 + 40LL))(v4, 11);
+    CSceneEventInfo::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CSceneEventInfo[14].m_pType = (*(*v4 + 40LL))(v4, 13);
+    CSceneEventInfo::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CSceneEventInfo[15].m_pType = (*(*v4 + 40LL))(v4, 13);
+    v7 = *(*v4 + 48LL);
+    v8 = (*(*v4 + 120LL))(v4);
+    v9 = v7(v4, v8);
+    CSceneEventInfo::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CSceneEventInfo.m_pOuterTypeScope = v4;
+    CSceneEventInfo::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CSceneEventInfo[16].m_pType = v9;
+    CSceneEventInfo::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult = &CSceneEventInfo::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CSceneEventInfo;
+    (*(*v4 + 264LL))(
+      v4,
+      &CSceneEventInfo::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CSceneEventInfo);
+    return CSceneEventInfo::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult;
+  }
+  return result;
+}
+
+
+// CSceneEventInfo::Schema_VerifyBindingIsRegistered  (line 99, @0x0000000001f1d6f0, libserver.so)
+void __cdecl CSceneEventInfo::Schema_VerifyBindingIsRegistered()
+{
+  ;
+}
+
+
+// LocalRegisterSchemaModule<ArbitraryTemplateParameter_server_sceneentity_shared_h>  (line 107, @0x0000000001f1d700, libserver.so)  // inlines: Call
+// globals: CSceneEventInfo::s_pSchemaBindingForLocalModule
+void __fastcall LocalRegisterSchemaModule<ArbitraryTemplateParameter_server_sceneentity_shared_h>(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        SchemaRegistrationPhase_t nRegistrationPhase)
+{
+  if ( nRegistrationPhase == SchemaRegistrationPhase_t::SCHEMA_REGISTRATION_PHASE_CLASSES )
+    (*(CSceneEventInfo::s_pSchemaBindingForLocalModule->_vptr_ISchemaBinding + 5))(
+      CSceneEventInfo::s_pSchemaBindingForLocalModule,
+      pSchemaSystem,
+      pBinaryName,
+      "server");
+  ++g_nLinkerHack_SchemaAnchor_RegistrationCountFor_server;
+}
+
+
+// RegisterSchemaModule_sceneentity_shared_h  (line 109, @0x0000000001f1d740, libserver.so)  // inlines: Call, LocalRegisterSchemaModule<ArbitraryTemplateParameter_server_sceneentity_shared_h>
+// callers: CSchemaRegistration_server::RegisterAllBindings
+// globals: CSceneEventInfo::s_pSchemaBindingForLocalModule
+void __fastcall RegisterSchemaModule_sceneentity_shared_h(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        SchemaRegistrationPhase_t nRegistrationPhase)
+{
+  if ( nRegistrationPhase == SchemaRegistrationPhase_t::SCHEMA_REGISTRATION_PHASE_CLASSES )
+    (*(CSceneEventInfo::s_pSchemaBindingForLocalModule->_vptr_ISchemaBinding + 5))(
+      CSceneEventInfo::s_pSchemaBindingForLocalModule,
+      pSchemaSystem,
+      pBinaryName,
+      "server");
+  ++g_nLinkerHack_SchemaAnchor_RegistrationCountFor_server;
+}
+
+

@@ -1,0 +1,37 @@
+// Reconstructed from DWARF by pahole; not original source.
+
+// src/_generated_code/navlib/release/linuxsteamrt64/navlib_schema_anchor.gen_cpp:20
+class CSchemaRegistration_navlib : public CSchemaRegistration {
+public:
+
+	CSchemaRegistration_navlib(CSchemaRegistration_navlib &);
+	CSchemaRegistration_navlib(const CSchemaRegistration_navlib &);
+	CSchemaRegistration_navlib();
+	virtual void RegisterAllBindings(ISchemaSystem *, SchemaRegistrationPhase_t);
+
+	// vtable[0] RegisterAllBindings
+	// sizeof = 16
+};
+
+// ==== functions (decompiled by Hex-Rays; names/signatures from DWARF) ====
+
+// CSchemaRegistration_navlib::RegisterAllBindings  (line 20, @0x0000000003210a30, libserver.so)
+// calls: GetNameOfModule, RegisterSchemaModule_nav_h, RegisterSchemaModule_nav_area_h, RegisterSchemaModule_nav_volume_h
+void __fastcall CSchemaRegistration_navlib::RegisterAllBindings(
+        CSchemaRegistration_navlib *const this,
+        ISchemaSystem *pSchemaSystem,
+        SchemaRegistrationPhase_t nRegistrationPhase)
+{
+  const char *NameOfModule; // rax
+  const char *v6; // rax
+  const char *v7; // rax
+
+  NameOfModule = GetNameOfModule();
+  RegisterSchemaModule_nav_h(pSchemaSystem, NameOfModule, nRegistrationPhase);
+  v6 = GetNameOfModule();
+  RegisterSchemaModule_nav_area_h(pSchemaSystem, v6, nRegistrationPhase);
+  v7 = GetNameOfModule();
+  RegisterSchemaModule_nav_volume_h(pSchemaSystem, v7, nRegistrationPhase);
+}
+
+

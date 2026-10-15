@@ -1,0 +1,5411 @@
+
+// ==== functions (decompiled by Hex-Rays; names/signatures from DWARF) ====
+
+// GetScriptDesc<CDOTA_Bot_Script>  (line 87, @0x000000000284fb00, libserver.so)  // inlines: AddParameterType, CUtlMemory, CUtlVector, CUtlVectorBase, Finalize, ScriptClassDesc_t, ScriptDeduceFunctionSignature<CDOTA_Bot_Script*, CDOTA_Bot_Script, CVariantBase<CVariantDefaultAllocator> >, ScriptDeduceFunctionSignature<CDOTA_Bot_Script*, CDOTA_Bot_Script, CVariantBase<CVariantDefaultAllocator>, bool, bool, const Vector&, int, int, float, int>, ScriptDeduceFunctionSignature<CDOTA_Bot_Script*, CDOTA_Bot_Script, CVariantBase<CVariantDefaultAllocator>, int, bool, int>, ScriptDeduceFunctionSignature<CDOTA_Bot_Script*, CDOTA_Bot_Script, CVariantBase<CVariantDefaultAllocator>, int, bool>, ScriptDeduceFunctionSignature<CDOTA_Bot_Script*, CDOTA_Bot_Script, CVariantBase<CVariantDefaultAllocator>, int>, ScriptDeduceFunctionSignature<CDOTA_Bot_Script*, CDOTA_Bot_Script, DOTA_INVALID_ORDERS, char const*>, ScriptDeduceFunctionSignature<CDOTA_Bot_Script*, CDOTA_Bot_Script, HSCRIPT__*, char const*>, ScriptDeduceFunctionSignature<CDOTA_Bot_Script*, CDOTA_Bot_Script, HSCRIPT__*, int>, ScriptDeduceFunctionSignature<CDOTA_Bot_Script*, CDOTA_Bot_Script, HSCRIPT__*>, ScriptDeduceFunctionSignature<CDOTA_Bot_Script*, CDOTA_Bot_Script, Vector, float>, ScriptDeduceFunctionSignature<CDOTA_Bot_Script*, CDOTA_Bot_Script, Vector>, ScriptDeduceFunctionSignature<CDOTA_Bot_Script*, CDOTA_Bot_Script, bool, HSCRIPT__*, float>, ScriptDeduceFunctionSignature<CDOTA_Bot_Script*, CDOTA_Bot_Script, bool, HSCRIPT__*, int>, ScriptDeduceFunctionSignature<CDOTA_Bot_Script*, CDOTA_Bot_Script, bool, bool>, ScriptDeduceFunctionSignature<CDOTA_Bot_Script*, CDOTA_Bot_Script, bool, char const*>, ScriptDeduceFunctionSignature<CDOTA_Bot_Script*, CDOTA_Bot_Script, bool, float>, ScriptDeduceFunctionSignature<CDOTA_Bot_Script*, CDOTA_Bot_Script, bool>, ScriptDeduceFunctionSignature<CDOTA_Bot_Script*, CDOTA_Bot_Script, char const*, int>, ScriptDeduceFunctionSignature<CDOTA_Bot_Script*, CDOTA_Bot_Script, char const*>, ScriptDeduceFunctionSignature<CDOTA_Bot_Script*, CDOTA_Bot_Script, float, HSCRIPT__*>, ScriptDeduceFunctionSignature<CDOTA_Bot_Script*, CDOTA_Bot_Script, float, bool>, ScriptDeduceFunctionSignature<CDOTA_Bot_Script*, CDOTA_Bot_Script, float>, ScriptDeduceFunctionSignature<CDOTA_Bot_Script*, CDOTA_Bot_Script, int, bool, HSCRIPT__*, float, int>, ScriptDeduceFunctionSignature<CDOTA_Bot_Script*, CDOTA_Bot_Script, int, char const*>, ScriptDeduceFunctionSignature<CDOTA_Bot_Script*, CDOTA_Bot_Script, int, int, int>, ScriptDeduceFunctionSignature<CDOTA_Bot_Script*, CDOTA_Bot_Script, int, int>, ScriptDeduceFunctionSignature<CDOTA_Bot_Script*, CDOTA_Bot_Script, int>, ScriptDeduceFunctionSignature<CDOTA_Bot_Script*, CDOTA_Bot_Script, void, HSCRIPT__*, HSCRIPT__*>, ScriptDeduceFunctionSignature<CDOTA_Bot_Script*, CDOTA_Bot_Script, void, HSCRIPT__*, bool>, ScriptDeduceFunctionSignature<CDOTA_Bot_Script*, CDOTA_Bot_Script, void, HSCRIPT__*, const Vector&>, ScriptDeduceFunctionSignature<CDOTA_Bot_Script*, CDOTA_Bot_Script, void, HSCRIPT__*, int>, ScriptDeduceFunctionSignature<CDOTA_Bot_Script*, CDOTA_Bot_Script, void, HSCRIPT__*>, ScriptDeduceFunctionSignature<CDOTA_Bot_Script*, CDOTA_Bot_Script, void, bool>, ScriptDeduceFunctionSignature<CDOTA_Bot_Script*, CDOTA_Bot_Script, void, char const*, bool>, ScriptDeduceFunctionSignature<CDOTA_Bot_Script*, CDOTA_Bot_Script, void, char const*>, ScriptDeduceFunctionSignature<CDOTA_Bot_Script*, CDOTA_Bot_Script, void, const Vector&>, ScriptDeduceFunctionSignature<CDOTA_Bot_Script*, CDOTA_Bot_Script, void, float, float, bool>, ScriptDeduceFunctionSignature<CDOTA_Bot_Script*, CDOTA_Bot_Script, void, int, int>, ScriptDeduceFunctionSignature<CDOTA_Bot_Script*, CDOTA_Bot_Script, void, int>, ScriptDeduceFunctionSignature<CDOTA_Bot_Script*, CDOTA_Bot_Script, void>, SetDescription, SetFunctionName, SetPackedParameterNames, SetReturnType, SetScriptName, operator[]
+// calls: operator new, CUtlVectorBase<ScriptFunctionBinding_t, CUtlMemory<ScriptFunctionBinding_t, int> >::AddToTail
+// callers: CDOTA_Bot_Script::GetScriptDesc, CDOTA_Bot_Script::InitScriptDesc, CDOTA_Bot_Script::GetClassScriptDesc, ToBotScript, CDOTA_TeamCommander::InitScripting
+// strings: "A unit referenced from Dota bot script", "CDOTA_Bot_Script", "Get the bot's difficulty settings.", "GetDifficulty", "Get the unit's name.", "GetUnitName" (40 total)
+// globals: g_pCDOTA_Bot_Script_ScriptDesc, CMemberScriptBinding0<CDOTA_Bot_Script *,int (CDOTA_Bot_Script::*)(void),int>::Call(void *,void *,CVariantBase<CVariantDefaultAllocator> *,int,CVariantBase<CVar, CDOTA_Bot_Script::GetDifficulty(void), CMemberScriptBinding0<CDOTA_Bot_Script *,char const* (CDOTA_Bot_Script::*)(void),char const*>::Call(void *,void *,CVariantBase<CVariantDefaultAllocator> *,int,C, CDOTA_Bot_Script::GetUnitName(void), CDOTA_Bot_Script::GetPlayerID(void), CMemberScriptBinding0<CDOTA_Bot_Script *,bool (CDOTA_Bot_Script::*)(void),bool>::Call(void *,void *,CVariantBase<CVariantDefaultAllocator> *,int,CVariantBase<CV, CDOTA_Bot_Script::IsHero(void) (40 total)
+ScriptClassDesc_t *__fastcall GetScriptDesc<CDOTA_Bot_Script>(CDOTA_Bot_Script *pScriptDescObjectInstance)
+{
+  ScriptClassDesc_t *result; // rax
+  ScriptClassDesc_t *v2; // rbx
+  CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int> > *p_m_FunctionBindings; // r12
+  __int64 v4; // rcx
+  int v5; // eax
+  int v6; // eax
+  char v7; // dl
+  char v8; // di
+  __int64 v9; // rcx
+  int v10; // eax
+  int v11; // eax
+  char v12; // dl
+  char v13; // di
+  __int64 v14; // rcx
+  int v15; // eax
+  int v16; // eax
+  char v17; // dl
+  char v18; // di
+  __int64 v19; // rcx
+  int v20; // eax
+  int v21; // eax
+  char v22; // dl
+  char v23; // di
+  __int64 v24; // rcx
+  int v25; // eax
+  int v26; // eax
+  char v27; // dl
+  char v28; // di
+  __int64 v29; // rcx
+  int v30; // eax
+  int v31; // eax
+  char v32; // dl
+  char v33; // di
+  __int64 v34; // rcx
+  int v35; // eax
+  int v36; // eax
+  char v37; // dl
+  char v38; // di
+  __int64 v39; // rcx
+  int v40; // eax
+  int v41; // eax
+  char v42; // dl
+  char v43; // di
+  __int64 v44; // rcx
+  int v45; // eax
+  int v46; // eax
+  char v47; // dl
+  char v48; // di
+  __int64 v49; // rcx
+  int v50; // eax
+  int v51; // eax
+  char v52; // dl
+  char v53; // di
+  __int64 v54; // rcx
+  char v55; // al
+  __int64 v56; // rdx
+  int v57; // eax
+  char v58; // dl
+  char v59; // di
+  __int64 v60; // rcx
+  char v61; // al
+  __int64 v62; // rdx
+  int v63; // eax
+  char v64; // dl
+  char v65; // di
+  __int64 v66; // rcx
+  char v67; // al
+  __int64 v68; // rdx
+  int v69; // eax
+  char v70; // dl
+  char v71; // di
+  __int64 v72; // rcx
+  char v73; // al
+  char v74; // dl
+  int v75; // eax
+  char v76; // dl
+  char v77; // di
+  __int64 v78; // rcx
+  char v79; // al
+  __int64 v80; // rdx
+  int v81; // eax
+  char v82; // dl
+  char v83; // di
+  __int64 v84; // rcx
+  char v85; // al
+  __int64 v86; // rdx
+  int v87; // eax
+  char v88; // dl
+  char v89; // di
+  __int64 v90; // rcx
+  char v91; // al
+  char v92; // dl
+  int v93; // eax
+  char v94; // dl
+  char v95; // di
+  __int64 v96; // rcx
+  char v97; // al
+  char v98; // dl
+  int v99; // eax
+  char v100; // dl
+  char v101; // di
+  __int64 v102; // rcx
+  char v103; // al
+  char v104; // dl
+  int v105; // eax
+  char v106; // dl
+  char v107; // di
+  __int64 v108; // rcx
+  char v109; // al
+  __int64 v110; // rdx
+  int v111; // eax
+  char v112; // dl
+  char v113; // di
+  __int64 v114; // rcx
+  char v115; // al
+  __int64 v116; // rdx
+  int v117; // eax
+  char v118; // dl
+  char v119; // di
+  __int64 v120; // rcx
+  char v121; // al
+  char v122; // dl
+  int v123; // eax
+  char v124; // dl
+  char v125; // di
+  __int64 v126; // rcx
+  char v127; // al
+  __int64 v128; // rdx
+  int v129; // eax
+  char v130; // dl
+  char v131; // di
+  __int64 v132; // rcx
+  char v133; // al
+  __int64 v134; // rdx
+  int v135; // eax
+  char v136; // dl
+  char v137; // di
+  __int64 v138; // rcx
+  char v139; // al
+  __int64 v140; // rdx
+  int v141; // eax
+  char v142; // dl
+  char v143; // di
+  __int64 v144; // rcx
+  char v145; // al
+  char v146; // dl
+  int v147; // eax
+  char v148; // dl
+  char v149; // di
+  __int64 v150; // rcx
+  char v151; // al
+  char v152; // dl
+  int v153; // eax
+  char v154; // dl
+  char v155; // di
+  __int64 v156; // rcx
+  char v157; // al
+  __int64 v158; // rdx
+  int v159; // eax
+  char v160; // dl
+  char v161; // di
+  __int64 v162; // rcx
+  char v163; // al
+  char v164; // dl
+  int v165; // eax
+  char v166; // dl
+  char v167; // di
+  __int64 v168; // rcx
+  int v169; // eax
+  int v170; // eax
+  char v171; // dl
+  char v172; // di
+  __int64 v173; // rcx
+  char v174; // al
+  __int64 v175; // rdx
+  int v176; // eax
+  char v177; // dl
+  char v178; // di
+  __int64 v179; // rcx
+  char v180; // al
+  char v181; // dl
+  int v182; // eax
+  char v183; // dl
+  char v184; // di
+  __int64 v185; // rcx
+  char v186; // al
+  char v187; // dl
+  int v188; // eax
+  char v189; // dl
+  char v190; // di
+  __int64 v191; // rcx
+  int v192; // eax
+  int v193; // eax
+  char v194; // dl
+  char v195; // di
+  __int64 v196; // rcx
+  int v197; // eax
+  int v198; // eax
+  char v199; // dl
+  char v200; // di
+  __int64 v201; // rcx
+  int v202; // eax
+  int v203; // eax
+  char v204; // dl
+  char v205; // di
+  __int64 v206; // rcx
+  int v207; // eax
+  int v208; // eax
+  char v209; // dl
+  char v210; // di
+  __int64 v211; // rcx
+  int v212; // eax
+  int v213; // eax
+  char v214; // dl
+  char v215; // di
+  __int64 v216; // rcx
+  int v217; // eax
+  int v218; // eax
+  char v219; // dl
+  char v220; // di
+  __int64 v221; // rcx
+  int v222; // eax
+  int v223; // eax
+  char v224; // dl
+  char v225; // di
+  __int64 v226; // rcx
+  int v227; // eax
+  int v228; // eax
+  char v229; // dl
+  char v230; // di
+  __int64 v231; // rcx
+  int v232; // eax
+  int v233; // eax
+  char v234; // dl
+  char v235; // di
+  __int64 v236; // rcx
+  int v237; // eax
+  int v238; // eax
+  char v239; // dl
+  char v240; // di
+  __int64 v241; // rcx
+  int v242; // eax
+  int v243; // eax
+  char v244; // dl
+  char v245; // di
+  __int64 v246; // rcx
+  int v247; // eax
+  int v248; // eax
+  char v249; // dl
+  char v250; // di
+  __int64 v251; // rcx
+  int v252; // eax
+  int v253; // eax
+  char v254; // dl
+  char v255; // di
+  __int64 v256; // rcx
+  int v257; // eax
+  int v258; // eax
+  char v259; // dl
+  char v260; // di
+  __int64 v261; // rcx
+  int v262; // eax
+  int v263; // eax
+  char v264; // dl
+  char v265; // di
+  __int64 v266; // rcx
+  int v267; // eax
+  int v268; // eax
+  char v269; // dl
+  char v270; // di
+  __int64 v271; // rcx
+  int v272; // eax
+  int v273; // eax
+  char v274; // dl
+  char v275; // di
+  __int64 v276; // rcx
+  int v277; // eax
+  int v278; // eax
+  char v279; // dl
+  char v280; // di
+  __int64 v281; // rcx
+  int v282; // eax
+  int v283; // eax
+  char v284; // dl
+  char v285; // di
+  __int64 v286; // rcx
+  int v287; // eax
+  int v288; // eax
+  char v289; // dl
+  char v290; // di
+  __int64 v291; // rcx
+  int v292; // eax
+  int v293; // eax
+  char v294; // dl
+  char v295; // di
+  __int64 v296; // rcx
+  int v297; // eax
+  int v298; // eax
+  char v299; // dl
+  char v300; // di
+  __int64 v301; // rcx
+  int v302; // eax
+  int v303; // eax
+  char v304; // dl
+  char v305; // di
+  __int64 v306; // rcx
+  int v307; // eax
+  int v308; // eax
+  char v309; // dl
+  char v310; // di
+  __int64 v311; // rcx
+  int v312; // eax
+  int v313; // eax
+  char v314; // dl
+  char v315; // di
+  __int64 v316; // rcx
+  int v317; // eax
+  int v318; // eax
+  char v319; // dl
+  char v320; // di
+  __int64 v321; // rcx
+  int v322; // eax
+  int v323; // eax
+  char v324; // dl
+  char v325; // di
+  __int64 v326; // rcx
+  int v327; // eax
+  int v328; // eax
+  char v329; // dl
+  char v330; // di
+  __int64 v331; // rcx
+  int v332; // eax
+  int v333; // eax
+  char v334; // dl
+  char v335; // di
+  __int64 v336; // rcx
+  int v337; // eax
+  int v338; // eax
+  char v339; // dl
+  char v340; // di
+  __int64 v341; // rcx
+  int v342; // eax
+  int v343; // eax
+  char v344; // dl
+  char v345; // di
+  __int64 v346; // rcx
+  int v347; // eax
+  int v348; // eax
+  char v349; // dl
+  char v350; // di
+  __int64 v351; // rcx
+  int v352; // eax
+  int v353; // eax
+  char v354; // dl
+  char v355; // di
+  __int64 v356; // rcx
+  char v357; // al
+  __int64 v358; // rdx
+  int v359; // eax
+  char v360; // dl
+  char v361; // di
+  __int64 v362; // rcx
+  int v363; // eax
+  int v364; // eax
+  char v365; // dl
+  char v366; // di
+  __int64 v367; // rcx
+  int v368; // eax
+  int v369; // eax
+  char v370; // dl
+  char v371; // di
+  __int64 v372; // rcx
+  int v373; // eax
+  int v374; // eax
+  char v375; // dl
+  char v376; // di
+  __int64 v377; // rcx
+  int v378; // eax
+  int v379; // eax
+  char v380; // dl
+  char v381; // di
+  __int64 v382; // rcx
+  int v383; // eax
+  int v384; // eax
+  char v385; // dl
+  char v386; // di
+  __int64 v387; // rcx
+  int v388; // eax
+  int v389; // eax
+  char v390; // dl
+  char v391; // di
+  __int64 v392; // rcx
+  int v393; // eax
+  int v394; // eax
+  char v395; // dl
+  char v396; // di
+  __int64 v397; // rcx
+  int v398; // eax
+  int v399; // eax
+  char v400; // dl
+  char v401; // di
+  __int64 v402; // rcx
+  int v403; // eax
+  int v404; // eax
+  char v405; // dl
+  char v406; // di
+  __int64 v407; // rcx
+  int v408; // eax
+  int v409; // eax
+  char v410; // dl
+  char v411; // di
+  __int64 v412; // rcx
+  int v413; // eax
+  int v414; // eax
+  char v415; // dl
+  char v416; // di
+  __int64 v417; // rcx
+  char v418; // al
+  __int64 v419; // rdx
+  int v420; // eax
+  char v421; // dl
+  char v422; // di
+  __int64 v423; // rcx
+  char v424; // al
+  __int64 v425; // rdx
+  int v426; // eax
+  char v427; // dl
+  char v428; // di
+  __int64 v429; // rcx
+  char v430; // al
+  __int64 v431; // rdx
+  int v432; // eax
+  char v433; // dl
+  char v434; // di
+  __int64 v435; // rcx
+  char v436; // al
+  __int64 v437; // rdx
+  int v438; // eax
+  char v439; // dl
+  char v440; // di
+  __int64 v441; // rcx
+  int v442; // eax
+  int v443; // eax
+  char v444; // dl
+  char v445; // di
+  __int64 v446; // rcx
+  int v447; // eax
+  int v448; // eax
+  char v449; // dl
+  char v450; // di
+  __int64 v451; // rcx
+  int v452; // eax
+  int v453; // eax
+  char v454; // dl
+  char v455; // di
+  __int64 v456; // rcx
+  int v457; // eax
+  int v458; // eax
+  char v459; // dl
+  char v460; // di
+  __int64 v461; // rcx
+  int v462; // eax
+  int v463; // eax
+  char v464; // dl
+  char v465; // di
+  __int64 v466; // rcx
+  int v467; // eax
+  int v468; // eax
+  char v469; // dl
+  char v470; // di
+  __int64 v471; // rcx
+  int v472; // eax
+  int v473; // eax
+  char v474; // dl
+  char v475; // di
+  __int64 v476; // rcx
+  int v477; // eax
+  int v478; // eax
+  char v479; // dl
+  char v480; // di
+  __int64 v481; // rcx
+  int v482; // eax
+  int v483; // eax
+  char v484; // dl
+  char v485; // di
+  __int64 v486; // rcx
+  int v487; // eax
+  int v488; // eax
+  char v489; // dl
+  char v490; // di
+  __int64 v491; // rcx
+  int v492; // eax
+  int v493; // eax
+  char v494; // dl
+  char v495; // di
+  __int64 v496; // rcx
+  int v497; // eax
+  int v498; // eax
+  char v499; // dl
+  char v500; // di
+  __int64 v501; // rcx
+  int v502; // eax
+  int v503; // eax
+  char v504; // dl
+  char v505; // di
+  __int64 v506; // rcx
+  int v507; // eax
+  int v508; // eax
+  char v509; // dl
+  char v510; // di
+  __int64 v511; // rcx
+  int v512; // eax
+  int v513; // eax
+  char v514; // dl
+  char v515; // di
+  __int64 v516; // rcx
+  int v517; // eax
+  int v518; // eax
+  char v519; // dl
+  char v520; // di
+  __int64 v521; // rcx
+  int v522; // eax
+  int v523; // eax
+  char v524; // dl
+  char v525; // di
+  __int64 v526; // rcx
+  int v527; // eax
+  int v528; // eax
+  char v529; // dl
+  char v530; // di
+  __int64 v531; // rcx
+  int v532; // eax
+  int v533; // eax
+  char v534; // dl
+  char v535; // di
+  __int64 v536; // rcx
+  int v537; // eax
+  int v538; // eax
+  char v539; // dl
+  char v540; // di
+  __int64 v541; // rcx
+  int v542; // eax
+  int v543; // eax
+  char v544; // dl
+  char v545; // di
+  __int64 v546; // rcx
+  int v547; // eax
+  int v548; // eax
+  char v549; // dl
+  char v550; // di
+  __int64 v551; // rcx
+  int v552; // eax
+  int v553; // eax
+  char v554; // dl
+  char v555; // di
+  __int64 v556; // rcx
+  int v557; // eax
+  int v558; // eax
+  char v559; // dl
+  char v560; // di
+  __int64 v561; // rcx
+  int v562; // eax
+  int v563; // eax
+  char v564; // dl
+  char v565; // di
+  __int64 v566; // rcx
+  int v567; // eax
+  int v568; // eax
+  char v569; // dl
+  char v570; // di
+  __int64 v571; // rcx
+  char v572; // al
+  __int64 v573; // rdx
+  int v574; // eax
+  char v575; // dl
+  char v576; // di
+  __int64 v577; // rcx
+  int v578; // eax
+  int v579; // eax
+  char v580; // dl
+  char v581; // di
+  __int64 v582; // rcx
+  char v583; // al
+  char v584; // dl
+  int v585; // eax
+  char v586; // dl
+  char v587; // di
+  __int64 v588; // rcx
+  char v589; // al
+  __int64 v590; // rdx
+  int v591; // eax
+  char v592; // dl
+  char v593; // di
+  __int64 v594; // rcx
+  char v595; // al
+  __int64 v596; // rdx
+  int v597; // eax
+  char v598; // dl
+  char v599; // di
+  __int64 v600; // rcx
+  int v601; // eax
+  int v602; // eax
+  char v603; // dl
+  char v604; // di
+  __int64 v605; // rcx
+  char v606; // al
+  __int64 v607; // rdx
+  int v608; // eax
+  char v609; // dl
+  char v610; // di
+  __int64 v611; // rcx
+  int v612; // eax
+  int v613; // eax
+  char v614; // dl
+  char v615; // di
+  __int64 v616; // rcx
+  int v617; // eax
+  int v618; // eax
+  char v619; // dl
+  char v620; // di
+  __int64 v621; // rcx
+  int v622; // eax
+  int v623; // eax
+  char v624; // dl
+  char v625; // di
+  __int64 v626; // rcx
+  int v627; // eax
+  int v628; // eax
+  char v629; // dl
+  char v630; // di
+  __int64 v631; // rcx
+  char v632; // al
+  __int64 v633; // rdx
+  int v634; // eax
+  char v635; // dl
+  char v636; // di
+  __int64 v637; // rcx
+  int v638; // eax
+  int v639; // eax
+  char v640; // dl
+  char v641; // di
+  __int64 v642; // rdx
+  char v643; // al
+  __int64 v644; // rcx
+  int v645; // eax
+  char v646; // cl
+  __int64 v647; // rcx
+  int v648; // eax
+  int v649; // eax
+  char v650; // dl
+  char v651; // di
+  __int64 v652; // rdx
+  int v653; // eax
+  int v654; // eax
+  char v655; // cl
+  __int64 v656; // rcx
+  int v657; // eax
+  int v658; // eax
+  char v659; // dl
+  char v660; // di
+  __int64 v661; // rcx
+  int v662; // eax
+  int v663; // eax
+  char v664; // dl
+  char v665; // di
+  __int64 v666; // rcx
+  char v667; // al
+  char v668; // dl
+  int v669; // eax
+  char v670; // dl
+  char v671; // di
+  __int64 v672; // rcx
+  char v673; // al
+  __int64 v674; // rdx
+  int v675; // eax
+  char v676; // dl
+  char v677; // di
+  __int64 v678; // rcx
+  char v679; // al
+  __int64 v680; // rdx
+  int v681; // eax
+  char v682; // dl
+  char v683; // di
+  __int64 v684; // rcx
+  char v685; // al
+  __int64 v686; // rdx
+  int v687; // eax
+  char v688; // dl
+  char v689; // di
+  __int64 v690; // rcx
+  int v691; // eax
+  int v692; // eax
+  char v693; // dl
+  char v694; // di
+  __int64 v695; // rcx
+  char v696; // al
+  __int64 v697; // rdx
+  int v698; // eax
+  char v699; // dl
+  char v700; // di
+  __int64 v701; // rcx
+  char v702; // al
+  __int64 v703; // rdx
+  int v704; // eax
+  char v705; // dl
+  char v706; // di
+  __int64 v707; // rcx
+  int v708; // eax
+  int v709; // eax
+  char v710; // dl
+  char v711; // di
+  __int64 v712; // rcx
+  char v713; // al
+  char v714; // dl
+  int v715; // eax
+  char v716; // dl
+  char v717; // di
+  __int64 v718; // rcx
+  char v719; // al
+  char v720; // dl
+  int v721; // eax
+  char v722; // dl
+  char v723; // di
+  __int64 v724; // rcx
+  char v725; // al
+  char v726; // dl
+  int v727; // eax
+  char v728; // dl
+  char v729; // di
+  __int64 v730; // rcx
+  char v731; // al
+  char v732; // dl
+  int v733; // eax
+  char v734; // dl
+  char v735; // di
+  __int64 v736; // rcx
+  char v737; // al
+  char v738; // dl
+  int v739; // eax
+  char v740; // dl
+  char v741; // di
+  __int64 v742; // rcx
+  char v743; // al
+  __int64 v744; // rdx
+  int v745; // eax
+  char v746; // dl
+  char v747; // di
+  __int64 v748; // rcx
+  char v749; // al
+  char v750; // dl
+  int v751; // eax
+  char v752; // dl
+  char v753; // di
+  __int64 v754; // rcx
+  char v755; // al
+  __int64 v756; // rdx
+  int v757; // eax
+  char v758; // dl
+  char v759; // di
+  __int64 v760; // rcx
+  int v761; // eax
+  int v762; // eax
+  char v763; // dl
+  char v764; // di
+  __int64 v765; // rcx
+  char v766; // al
+  char v767; // dl
+  int v768; // eax
+  char v769; // dl
+  char v770; // di
+  __int64 v771; // rcx
+  char v772; // al
+  __int64 v773; // rdx
+  int v774; // eax
+  char v775; // dl
+  char v776; // di
+  __int64 v777; // rcx
+  int v778; // eax
+  int v779; // eax
+  char v780; // dl
+  char v781; // di
+  __int64 v782; // rcx
+  char v783; // al
+  __int64 v784; // rdx
+  int v785; // eax
+  char v786; // dl
+  char v787; // di
+  __int64 v788; // rcx
+  char v789; // al
+  __int64 v790; // rdx
+  int v791; // eax
+  char v792; // dl
+  char v793; // di
+
+  result = g_pCDOTA_Bot_Script_ScriptDesc;
+  if ( g_pCDOTA_Bot_Script_ScriptDesc == 0 )
+  {
+    v2 = operator new(0x50u);
+    v2->m_pBaseDesc = 0;
+    v2->m_FunctionBindings.m_Size = 0;
+    p_m_FunctionBindings = &v2->m_FunctionBindings;
+    v2->m_FunctionBindings.m_Memory.m_pMemory = 0;
+    v2->m_FunctionBindings.m_Memory.m_nAllocationCount = 0;
+    v2->m_FunctionBindings.m_Memory.m_nGrowSize = 0;
+    v2->m_pfnConstruct = 0;
+    v2->m_pfnDestruct = 0;
+    v2->pHelper = 0;
+    g_pCDOTA_Bot_Script_ScriptDesc = v2;
+    v2->m_pszDescription = "A unit referenced from Dota bot script";
+    v2->m_pszScriptName = "CDOTA_Bot_Script";
+    v2->m_pszClassname = "CDOTA_Bot_Script";
+    v4 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(&v2->m_FunctionBindings)];
+    *(v4 + 24) = 5;
+    *(v4 + 16) = "Get the bot's difficulty settings.";
+    *v4 = "GetDifficulty";
+    *(v4 + 8) = "GetDifficulty";
+    v5 = *(v4 + 26);
+    *(v4 + 25) = 0;
+    v6 = v5 - 1;
+    if ( v6 >= 0 && *(v4 + v6 + 27) == 32 )
+    {
+      v7 = 1;
+      do
+      {
+        --v6;
+        v8 = v7;
+        if ( v6 == -1 )
+        {
+          *(v4 + 25) = v7;
+          goto LABEL_8;
+        }
+        ++v7;
+      }
+      while ( *(v4 + v6 + 27) == 32 );
+      *(v4 + 25) = v8;
+    }
+LABEL_8:
+    *(v4 + 64) = 1;
+    *(v4 + 48) = CMemberScriptBinding0<CDOTA_Bot_Script *,int (CDOTA_Bot_Script::*)(void),int>::Call;
+    *(v4 + 56) = CDOTA_Bot_Script::GetDifficulty;
+    v9 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(p_m_FunctionBindings)];
+    *(v9 + 24) = 30;
+    *(v9 + 16) = "Get the unit's name.";
+    *v9 = "GetUnitName";
+    *(v9 + 8) = "GetUnitName";
+    v10 = *(v9 + 26);
+    *(v9 + 25) = 0;
+    v11 = v10 - 1;
+    if ( v11 >= 0 && *(v9 + v11 + 27) == 32 )
+    {
+      v12 = 1;
+      do
+      {
+        --v11;
+        v13 = v12;
+        if ( v11 == -1 )
+        {
+          *(v9 + 25) = v12;
+          goto LABEL_14;
+        }
+        ++v12;
+      }
+      while ( *(v9 + v11 + 27) == 32 );
+      *(v9 + 25) = v13;
+    }
+LABEL_14:
+    *(v9 + 64) = 1;
+    *(v9 + 48) = CMemberScriptBinding0<CDOTA_Bot_Script *,char const* (CDOTA_Bot_Script::*)(void),char const*>::Call;
+    *(v9 + 56) = CDOTA_Bot_Script::GetUnitName;
+    v14 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(p_m_FunctionBindings)];
+    *(v14 + 24) = 5;
+    *(v14 + 16) = "Get the unit's controlling player id.";
+    *v14 = "GetPlayerID";
+    *(v14 + 8) = "GetPlayerID";
+    v15 = *(v14 + 26);
+    *(v14 + 25) = 0;
+    v16 = v15 - 1;
+    if ( v16 >= 0 && *(v14 + v16 + 27) == 32 )
+    {
+      v17 = 1;
+      do
+      {
+        --v16;
+        v18 = v17;
+        if ( v16 == -1 )
+        {
+          *(v14 + 25) = v17;
+          goto LABEL_20;
+        }
+        ++v17;
+      }
+      while ( *(v14 + v16 + 27) == 32 );
+      *(v14 + 25) = v18;
+    }
+LABEL_20:
+    *(v14 + 64) = 1;
+    *(v14 + 48) = CMemberScriptBinding0<CDOTA_Bot_Script *,int (CDOTA_Bot_Script::*)(void),int>::Call;
+    *(v14 + 56) = CDOTA_Bot_Script::GetPlayerID;
+    v19 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(p_m_FunctionBindings)];
+    *(v19 + 24) = 6;
+    *(v19 + 16) = "Is this unit a hero?";
+    *v19 = "IsHero";
+    *(v19 + 8) = "IsHero";
+    v20 = *(v19 + 26);
+    *(v19 + 25) = 0;
+    v21 = v20 - 1;
+    if ( v21 >= 0 && *(v19 + v21 + 27) == 32 )
+    {
+      v22 = 1;
+      do
+      {
+        --v21;
+        v23 = v22;
+        if ( v21 == -1 )
+        {
+          *(v19 + 25) = v22;
+          goto LABEL_26;
+        }
+        ++v22;
+      }
+      while ( *(v19 + v21 + 27) == 32 );
+      *(v19 + 25) = v23;
+    }
+LABEL_26:
+    *(v19 + 64) = 1;
+    *(v19 + 48) = CMemberScriptBinding0<CDOTA_Bot_Script *,bool (CDOTA_Bot_Script::*)(void),bool>::Call;
+    *(v19 + 56) = CDOTA_Bot_Script::IsHero;
+    v24 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(p_m_FunctionBindings)];
+    *(v24 + 24) = 6;
+    *(v24 + 16) = "Is this unit a creep?";
+    *v24 = "IsCreep";
+    *(v24 + 8) = "IsCreep";
+    v25 = *(v24 + 26);
+    *(v24 + 25) = 0;
+    v26 = v25 - 1;
+    if ( v26 >= 0 && *(v24 + v26 + 27) == 32 )
+    {
+      v27 = 1;
+      do
+      {
+        --v26;
+        v28 = v27;
+        if ( v26 == -1 )
+        {
+          *(v24 + 25) = v27;
+          goto LABEL_32;
+        }
+        ++v27;
+      }
+      while ( *(v24 + v26 + 27) == 32 );
+      *(v24 + 25) = v28;
+    }
+LABEL_32:
+    *(v24 + 64) = 1;
+    *(v24 + 48) = CMemberScriptBinding0<CDOTA_Bot_Script *,bool (CDOTA_Bot_Script::*)(void),bool>::Call;
+    *(v24 + 56) = CDOTA_Bot_Script::IsCreep;
+    v29 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(p_m_FunctionBindings)];
+    *(v29 + 24) = 6;
+    *(v29 + 16) = "Is this unit a tower?";
+    *v29 = "IsTower";
+    *(v29 + 8) = "IsTower";
+    v30 = *(v29 + 26);
+    *(v29 + 25) = 0;
+    v31 = v30 - 1;
+    if ( v31 >= 0 && *(v29 + v31 + 27) == 32 )
+    {
+      v32 = 1;
+      do
+      {
+        --v31;
+        v33 = v32;
+        if ( v31 == -1 )
+        {
+          *(v29 + 25) = v32;
+          goto LABEL_38;
+        }
+        ++v32;
+      }
+      while ( *(v29 + v31 + 27) == 32 );
+      *(v29 + 25) = v33;
+    }
+LABEL_38:
+    *(v29 + 64) = 1;
+    *(v29 + 48) = CMemberScriptBinding0<CDOTA_Bot_Script *,bool (CDOTA_Bot_Script::*)(void),bool>::Call;
+    *(v29 + 56) = CDOTA_Bot_Script::IsTower;
+    v34 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(p_m_FunctionBindings)];
+    *(v34 + 24) = 6;
+    *(v34 + 16) = "Is this unit a building?";
+    *v34 = "IsBuilding";
+    *(v34 + 8) = "IsBuilding";
+    v35 = *(v34 + 26);
+    *(v34 + 25) = 0;
+    v36 = v35 - 1;
+    if ( v36 >= 0 && *(v34 + v36 + 27) == 32 )
+    {
+      v37 = 1;
+      do
+      {
+        --v36;
+        v38 = v37;
+        if ( v36 == -1 )
+        {
+          *(v34 + 25) = v37;
+          goto LABEL_44;
+        }
+        ++v37;
+      }
+      while ( *(v34 + v36 + 27) == 32 );
+      *(v34 + 25) = v38;
+    }
+LABEL_44:
+    *(v34 + 64) = 1;
+    *(v34 + 48) = CMemberScriptBinding0<CDOTA_Bot_Script *,bool (CDOTA_Bot_Script::*)(void),bool>::Call;
+    *(v34 + 56) = CDOTA_Bot_Script::IsBuilding;
+    v39 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(p_m_FunctionBindings)];
+    *(v39 + 24) = 6;
+    *(v39 + 16) = "Is this unit a fort (the main ancient building)?";
+    *v39 = "IsFort";
+    *(v39 + 8) = "IsFort";
+    v40 = *(v39 + 26);
+    *(v39 + 25) = 0;
+    v41 = v40 - 1;
+    if ( v41 >= 0 && *(v39 + v41 + 27) == 32 )
+    {
+      v42 = 1;
+      do
+      {
+        --v41;
+        v43 = v42;
+        if ( v41 == -1 )
+        {
+          *(v39 + 25) = v42;
+          goto LABEL_50;
+        }
+        ++v42;
+      }
+      while ( *(v39 + v41 + 27) == 32 );
+      *(v39 + 25) = v43;
+    }
+LABEL_50:
+    *(v39 + 64) = 1;
+    *(v39 + 48) = CMemberScriptBinding0<CDOTA_Bot_Script *,bool (CDOTA_Bot_Script::*)(void),bool>::Call;
+    *(v39 + 56) = CDOTA_Bot_Script::IsFort;
+    v44 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(p_m_FunctionBindings)];
+    *(v44 + 24) = 6;
+    *(v44 + 16) = "Is this unit an illusion?";
+    *v44 = "IsIllusion";
+    *(v44 + 8) = "IsIllusion";
+    v45 = *(v44 + 26);
+    *(v44 + 25) = 0;
+    v46 = v45 - 1;
+    if ( v46 >= 0 && *(v44 + v46 + 27) == 32 )
+    {
+      v47 = 1;
+      do
+      {
+        --v46;
+        v48 = v47;
+        if ( v46 == -1 )
+        {
+          *(v44 + 25) = v47;
+          goto LABEL_56;
+        }
+        ++v47;
+      }
+      while ( *(v44 + v46 + 27) == 32 );
+      *(v44 + 25) = v48;
+    }
+LABEL_56:
+    *(v44 + 64) = 1;
+    *(v44 + 48) = CMemberScriptBinding0<CDOTA_Bot_Script *,bool (CDOTA_Bot_Script::*)(void),bool>::Call;
+    *(v44 + 56) = CDOTA_Bot_Script::IsIllusion;
+    v49 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(p_m_FunctionBindings)];
+    *(v49 + 24) = 6;
+    *(v49 + 16) = "Is this unit owned by a bot?";
+    *v49 = "IsBot";
+    *(v49 + 8) = "IsBot";
+    v50 = *(v49 + 26);
+    *(v49 + 25) = 0;
+    v51 = v50 - 1;
+    if ( v51 >= 0 && *(v49 + v51 + 27) == 32 )
+    {
+      v52 = 1;
+      do
+      {
+        --v51;
+        v53 = v52;
+        if ( v51 == -1 )
+        {
+          *(v49 + 25) = v52;
+          goto LABEL_62;
+        }
+        ++v52;
+      }
+      while ( *(v49 + v51 + 27) == 32 );
+      *(v49 + 25) = v53;
+    }
+LABEL_62:
+    *(v49 + 64) = 1;
+    *(v49 + 48) = CMemberScriptBinding0<CDOTA_Bot_Script *,bool (CDOTA_Bot_Script::*)(void),bool>::Call;
+    *(v49 + 56) = CDOTA_Bot_Script::IsBot;
+    v54 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(p_m_FunctionBindings)];
+    *(v54 + 24) = 0;
+    *(v54 + 16) = "Clear current action stack and return to idle.  Optionally stop in place.";
+    *v54 = "Action_ClearActions";
+    *(v54 + 8) = "Action_ClearActions";
+    v55 = *(v54 + 26);
+    v56 = v55++;
+    *(v54 + v56 + 27) = 6;
+    *(v54 + 26) = v55;
+    v57 = v55 - 1;
+    *(v54 + 25) = 0;
+    if ( v57 >= 0 && *(v54 + v57 + 27) == 32 )
+    {
+      v58 = 1;
+      do
+      {
+        --v57;
+        v59 = v58;
+        if ( v57 == -1 )
+        {
+          *(v54 + 25) = v58;
+          goto LABEL_68;
+        }
+        ++v58;
+      }
+      while ( *(v54 + v57 + 27) == 32 );
+      *(v54 + 25) = v59;
+    }
+LABEL_68:
+    *(v54 + 64) = 1;
+    *(v54 + 48) = CMemberScriptBinding1<CDOTA_Bot_Script *,void (CDOTA_Bot_Script::*)(bool),void,bool>::Call;
+    *(v54 + 56) = CDOTA_Bot_Script::Action_ClearActions;
+    *(v54 + 40) = s_CDOTA_Bot_Script_Action_ClearActions_packed_arg_names;
+    v60 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(p_m_FunctionBindings)];
+    *(v60 + 24) = 0;
+    *(v60 + 16) = "Tell a bot to move to a location.";
+    *v60 = "Action_MoveToLocation";
+    *(v60 + 8) = "Action_MoveToLocation";
+    v61 = *(v60 + 26);
+    v62 = v61++;
+    *(v60 + v62 + 27) = 3;
+    *(v60 + 26) = v61;
+    v63 = v61 - 1;
+    *(v60 + 25) = 0;
+    if ( v63 >= 0 && *(v60 + v63 + 27) == 32 )
+    {
+      v64 = 1;
+      do
+      {
+        --v63;
+        v65 = v64;
+        if ( v63 == -1 )
+        {
+          *(v60 + 25) = v64;
+          goto LABEL_74;
+        }
+        ++v64;
+      }
+      while ( *(v60 + v63 + 27) == 32 );
+      *(v60 + 25) = v65;
+    }
+LABEL_74:
+    *(v60 + 64) = 1;
+    *(v60 + 48) = CMemberScriptBinding1<CDOTA_Bot_Script *,void (CDOTA_Bot_Script::*)(Vector const&),void,Vector const&>::Call;
+    *(v60 + 56) = CDOTA_Bot_Script::Action_MoveToLocation;
+    *(v60 + 40) = s_CDOTA_Bot_Script_Action_MoveToLocation_packed_arg_names;
+    v66 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(p_m_FunctionBindings)];
+    *(v66 + 24) = 0;
+    *(v66 + 16) = "Tell a bot to move to a unit and start following them.";
+    *v66 = "Action_MoveToUnit";
+    *(v66 + 8) = "Action_MoveToUnit";
+    v67 = *(v66 + 26);
+    v68 = v67++;
+    *(v66 + v68 + 27) = 31;
+    *(v66 + 26) = v67;
+    v69 = v67 - 1;
+    *(v66 + 25) = 0;
+    if ( v69 >= 0 && *(v66 + v69 + 27) == 32 )
+    {
+      v70 = 1;
+      do
+      {
+        --v69;
+        v71 = v70;
+        if ( v69 == -1 )
+        {
+          *(v66 + 25) = v70;
+          goto LABEL_80;
+        }
+        ++v70;
+      }
+      while ( *(v66 + v69 + 27) == 32 );
+      *(v66 + 25) = v71;
+    }
+LABEL_80:
+    *(v66 + 64) = 1;
+    *(v66 + 48) = CMemberScriptBinding1<CDOTA_Bot_Script *,void (CDOTA_Bot_Script::*)(HSCRIPT__ *),void,HSCRIPT__ *>::Call;
+    *(v66 + 56) = CDOTA_Bot_Script::Action_MoveToUnit;
+    *(v66 + 40) = s_CDOTA_Bot_Script_Action_MoveToUnit_packed_arg_names;
+    v72 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(p_m_FunctionBindings)];
+    *(v72 + 24) = 0;
+    *(v72 + 16) = "Tell a bot to attack a target unit. If bOnce is specified, it will auto-pop the action after one attack.";
+    *v72 = "Action_AttackUnit";
+    *(v72 + 8) = "Action_AttackUnit";
+    v73 = *(v72 + 26);
+    *(v72 + v73 + 27) = 31;
+    v74 = v73 + 1;
+    v73 += 2;
+    *(v72 + v74 + 27) = 6;
+    *(v72 + 26) = v73;
+    v75 = v73 - 1;
+    *(v72 + 25) = 0;
+    if ( v75 >= 0 && *(v72 + v75 + 27) == 32 )
+    {
+      v76 = 1;
+      do
+      {
+        --v75;
+        v77 = v76;
+        if ( v75 == -1 )
+        {
+          *(v72 + 25) = v76;
+          goto LABEL_86;
+        }
+        ++v76;
+      }
+      while ( *(v72 + v75 + 27) == 32 );
+      *(v72 + 25) = v77;
+    }
+LABEL_86:
+    *(v72 + 64) = 1;
+    *(v72 + 48) = CMemberScriptBinding2<CDOTA_Bot_Script *,void (CDOTA_Bot_Script::*)(HSCRIPT__ *,bool),void,HSCRIPT__ *,bool>::Call;
+    *(v72 + 56) = CDOTA_Bot_Script::Action_AttackUnit;
+    *(v72 + 40) = s_CDOTA_Bot_Script_Action_AttackUnit_packed_arg_names;
+    v78 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(p_m_FunctionBindings)];
+    *(v78 + 24) = 0;
+    *(v78 + 16) = "Tell a bot to attack-move a location.";
+    *v78 = "Action_AttackMove";
+    *(v78 + 8) = "Action_AttackMove";
+    v79 = *(v78 + 26);
+    v80 = v79++;
+    *(v78 + v80 + 27) = 3;
+    *(v78 + 26) = v79;
+    v81 = v79 - 1;
+    *(v78 + 25) = 0;
+    if ( v81 >= 0 && *(v78 + v81 + 27) == 32 )
+    {
+      v82 = 1;
+      do
+      {
+        --v81;
+        v83 = v82;
+        if ( v81 == -1 )
+        {
+          *(v78 + 25) = v82;
+          goto LABEL_92;
+        }
+        ++v82;
+      }
+      while ( *(v78 + v81 + 27) == 32 );
+      *(v78 + 25) = v83;
+    }
+LABEL_92:
+    *(v78 + 64) = 1;
+    *(v78 + 48) = CMemberScriptBinding1<CDOTA_Bot_Script *,void (CDOTA_Bot_Script::*)(Vector const&),void,Vector const&>::Call;
+    *(v78 + 56) = CDOTA_Bot_Script::Action_AttackMove;
+    *(v78 + 40) = s_CDOTA_Bot_Script_Action_AttackMove_packed_arg_names;
+    v84 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(p_m_FunctionBindings)];
+    *(v84 + 24) = 0;
+    *(v84 + 16) = "Tell a bot to use a non-targeted ability.";
+    *v84 = "Action_UseAbility";
+    *(v84 + 8) = "Action_UseAbility";
+    v85 = *(v84 + 26);
+    v86 = v85++;
+    *(v84 + v86 + 27) = 31;
+    *(v84 + 26) = v85;
+    v87 = v85 - 1;
+    *(v84 + 25) = 0;
+    if ( v87 >= 0 && *(v84 + v87 + 27) == 32 )
+    {
+      v88 = 1;
+      do
+      {
+        --v87;
+        v89 = v88;
+        if ( v87 == -1 )
+        {
+          *(v84 + 25) = v88;
+          goto LABEL_98;
+        }
+        ++v88;
+      }
+      while ( *(v84 + v87 + 27) == 32 );
+      *(v84 + 25) = v89;
+    }
+LABEL_98:
+    *(v84 + 64) = 1;
+    *(v84 + 48) = CMemberScriptBinding1<CDOTA_Bot_Script *,void (CDOTA_Bot_Script::*)(HSCRIPT__ *),void,HSCRIPT__ *>::Call;
+    *(v84 + 56) = CDOTA_Bot_Script::Action_UseAbility;
+    *(v84 + 40) = s_CDOTA_Bot_Script_Action_UseAbility_packed_arg_names;
+    v90 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(p_m_FunctionBindings)];
+    *(v90 + 24) = 0;
+    *(v90 + 16) = "Tell a bot to use a unit-targeted ability.";
+    *v90 = "Action_UseAbilityOnEntity";
+    *(v90 + 8) = "Action_UseAbilityOnEntity";
+    v91 = *(v90 + 26);
+    *(v90 + v91 + 27) = 31;
+    v92 = v91 + 1;
+    v91 += 2;
+    *(v90 + v92 + 27) = 31;
+    *(v90 + 26) = v91;
+    v93 = v91 - 1;
+    *(v90 + 25) = 0;
+    if ( v93 >= 0 && *(v90 + v93 + 27) == 32 )
+    {
+      v94 = 1;
+      do
+      {
+        --v93;
+        v95 = v94;
+        if ( v93 == -1 )
+        {
+          *(v90 + 25) = v94;
+          goto LABEL_104;
+        }
+        ++v94;
+      }
+      while ( *(v90 + v93 + 27) == 32 );
+      *(v90 + 25) = v95;
+    }
+LABEL_104:
+    *(v90 + 64) = 1;
+    *(v90 + 48) = CMemberScriptBinding2<CDOTA_Bot_Script *,void (CDOTA_Bot_Script::*)(HSCRIPT__ *,HSCRIPT__ *),void,HSCRIPT__ *,HSCRIPT__ *>::Call;
+    *(v90 + 56) = CDOTA_Bot_Script::Action_UseAbilityOnEntity;
+    *(v90 + 40) = s_CDOTA_Bot_Script_Action_UseAbilityOnEntity_packed_arg_names;
+    v96 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(p_m_FunctionBindings)];
+    *(v96 + 24) = 0;
+    *(v96 + 16) = "Tell a bot to use a location-targeted ability.";
+    *v96 = "Action_UseAbilityOnLocation";
+    *(v96 + 8) = "Action_UseAbilityOnLocation";
+    v97 = *(v96 + 26);
+    *(v96 + v97 + 27) = 31;
+    v98 = v97 + 1;
+    v97 += 2;
+    *(v96 + v98 + 27) = 3;
+    *(v96 + 26) = v97;
+    v99 = v97 - 1;
+    *(v96 + 25) = 0;
+    if ( v99 >= 0 && *(v96 + v99 + 27) == 32 )
+    {
+      v100 = 1;
+      do
+      {
+        --v99;
+        v101 = v100;
+        if ( v99 == -1 )
+        {
+          *(v96 + 25) = v100;
+          goto LABEL_110;
+        }
+        ++v100;
+      }
+      while ( *(v96 + v99 + 27) == 32 );
+      *(v96 + 25) = v101;
+    }
+LABEL_110:
+    *(v96 + 64) = 1;
+    *(v96 + 48) = CMemberScriptBinding2<CDOTA_Bot_Script *,void (CDOTA_Bot_Script::*)(HSCRIPT__ *,Vector const&),void,HSCRIPT__ *,Vector const&>::Call;
+    *(v96 + 56) = CDOTA_Bot_Script::Action_UseAbilityOnLocation;
+    *(v96 + 40) = s_CDOTA_Bot_Script_Action_UseAbilityOnLocation_packed_arg_names;
+    v102 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(p_m_FunctionBindings)];
+    *(v102 + 24) = 0;
+    *(v102 + 16) = "Tell a bot to use a tree-targeted ability.";
+    *v102 = "Action_UseAbilityOnTree";
+    *(v102 + 8) = "Action_UseAbilityOnTree";
+    v103 = *(v102 + 26);
+    *(v102 + v103 + 27) = 31;
+    v104 = v103 + 1;
+    v103 += 2;
+    *(v102 + v104 + 27) = 5;
+    *(v102 + 26) = v103;
+    v105 = v103 - 1;
+    *(v102 + 25) = 0;
+    if ( v105 >= 0 && *(v102 + v105 + 27) == 32 )
+    {
+      v106 = 1;
+      do
+      {
+        --v105;
+        v107 = v106;
+        if ( v105 == -1 )
+        {
+          *(v102 + 25) = v106;
+          goto LABEL_116;
+        }
+        ++v106;
+      }
+      while ( *(v102 + v105 + 27) == 32 );
+      *(v102 + 25) = v107;
+    }
+LABEL_116:
+    *(v102 + 64) = 1;
+    *(v102 + 48) = CMemberScriptBinding2<CDOTA_Bot_Script *,void (CDOTA_Bot_Script::*)(HSCRIPT__ *,int),void,HSCRIPT__ *,int>::Call;
+    *(v102 + 56) = CDOTA_Bot_Script::Action_UseAbilityOnTree;
+    *(v102 + 40) = s_CDOTA_Bot_Script_Action_UseAbilityOnTree_packed_arg_names;
+    v108 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(p_m_FunctionBindings)];
+    *(v108 + 24) = 0;
+    *(v108 + 16) = "Tell a bot to pick up a rune.";
+    *v108 = "Action_PickUpRune";
+    *(v108 + 8) = "Action_PickUpRune";
+    v109 = *(v108 + 26);
+    v110 = v109++;
+    *(v108 + v110 + 27) = 5;
+    *(v108 + 26) = v109;
+    v111 = v109 - 1;
+    *(v108 + 25) = 0;
+    if ( v111 >= 0 && *(v108 + v111 + 27) == 32 )
+    {
+      v112 = 1;
+      do
+      {
+        --v111;
+        v113 = v112;
+        if ( v111 == -1 )
+        {
+          *(v108 + 25) = v112;
+          goto LABEL_122;
+        }
+        ++v112;
+      }
+      while ( *(v108 + v111 + 27) == 32 );
+      *(v108 + 25) = v113;
+    }
+LABEL_122:
+    *(v108 + 64) = 1;
+    *(v108 + 48) = CMemberScriptBinding1<CDOTA_Bot_Script *,void (CDOTA_Bot_Script::*)(int),void,int>::Call;
+    *(v108 + 56) = CDOTA_Bot_Script::Action_PickUpRune;
+    *(v108 + 40) = s_CDOTA_Bot_Script_Action_PickUpRune_packed_arg_names;
+    v114 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(p_m_FunctionBindings)];
+    *(v114 + 24) = 0;
+    *(v114 + 16) = "Tell a bot to pick up a dropped item.";
+    *v114 = "Action_PickUpItem";
+    *(v114 + 8) = "Action_PickUpItem";
+    v115 = *(v114 + 26);
+    v116 = v115++;
+    *(v114 + v116 + 27) = 31;
+    *(v114 + 26) = v115;
+    v117 = v115 - 1;
+    *(v114 + 25) = 0;
+    if ( v117 >= 0 && *(v114 + v117 + 27) == 32 )
+    {
+      v118 = 1;
+      do
+      {
+        --v117;
+        v119 = v118;
+        if ( v117 == -1 )
+        {
+          *(v114 + 25) = v118;
+          goto LABEL_128;
+        }
+        ++v118;
+      }
+      while ( *(v114 + v117 + 27) == 32 );
+      *(v114 + 25) = v119;
+    }
+LABEL_128:
+    *(v114 + 64) = 1;
+    *(v114 + 48) = CMemberScriptBinding1<CDOTA_Bot_Script *,void (CDOTA_Bot_Script::*)(HSCRIPT__ *),void,HSCRIPT__ *>::Call;
+    *(v114 + 56) = CDOTA_Bot_Script::Action_PickUpItem;
+    *(v114 + 40) = s_CDOTA_Bot_Script_Action_PickUpItem_packed_arg_names;
+    v120 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(p_m_FunctionBindings)];
+    *(v120 + 24) = 0;
+    *(v120 + 16) = "Tell a bot to drop an item.";
+    *v120 = "Action_DropItem";
+    *(v120 + 8) = "Action_DropItem";
+    v121 = *(v120 + 26);
+    *(v120 + v121 + 27) = 31;
+    v122 = v121 + 1;
+    v121 += 2;
+    *(v120 + v122 + 27) = 3;
+    *(v120 + 26) = v121;
+    v123 = v121 - 1;
+    *(v120 + 25) = 0;
+    if ( v123 >= 0 && *(v120 + v123 + 27) == 32 )
+    {
+      v124 = 1;
+      do
+      {
+        --v123;
+        v125 = v124;
+        if ( v123 == -1 )
+        {
+          *(v120 + 25) = v124;
+          goto LABEL_134;
+        }
+        ++v124;
+      }
+      while ( *(v120 + v123 + 27) == 32 );
+      *(v120 + 25) = v125;
+    }
+LABEL_134:
+    *(v120 + 64) = 1;
+    *(v120 + 48) = CMemberScriptBinding2<CDOTA_Bot_Script *,void (CDOTA_Bot_Script::*)(HSCRIPT__ *,Vector const&),void,HSCRIPT__ *,Vector const&>::Call;
+    *(v120 + 56) = CDOTA_Bot_Script::Action_DropItem;
+    *(v120 + 40) = s_CDOTA_Bot_Script_Action_DropItem_packed_arg_names;
+    v126 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(p_m_FunctionBindings)];
+    *(v126 + 24) = 29;
+    *(v126 + 16) = "Tell a bot to purchase an item by name.";
+    *v126 = "Action_PurchaseItem";
+    *(v126 + 8) = "Action_PurchaseItem";
+    v127 = *(v126 + 26);
+    v128 = v127++;
+    *(v126 + v128 + 27) = 30;
+    *(v126 + 26) = v127;
+    v129 = v127 - 1;
+    *(v126 + 25) = 0;
+    if ( v129 >= 0 && *(v126 + v129 + 27) == 32 )
+    {
+      v130 = 1;
+      do
+      {
+        --v129;
+        v131 = v130;
+        if ( v129 == -1 )
+        {
+          *(v126 + 25) = v130;
+          goto LABEL_140;
+        }
+        ++v130;
+      }
+      while ( *(v126 + v129 + 27) == 32 );
+      *(v126 + 25) = v131;
+    }
+LABEL_140:
+    *(v126 + 64) = 1;
+    *(v126 + 48) = CMemberScriptBinding1<CDOTA_Bot_Script *,DOTA_INVALID_ORDERS (CDOTA_Bot_Script::*)(char const*),DOTA_INVALID_ORDERS,char const*>::Call;
+    *(v126 + 56) = CDOTA_Bot_Script::Action_PurchaseItem;
+    *(v126 + 40) = s_CDOTA_Bot_Script_Action_PurchaseItem_packed_arg_names;
+    v132 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(p_m_FunctionBindings)];
+    *(v132 + 24) = 0;
+    *(v132 + 16) = "Tell a bot to sell an item.";
+    *v132 = "Action_SellItem";
+    *(v132 + 8) = "Action_SellItem";
+    v133 = *(v132 + 26);
+    v134 = v133++;
+    *(v132 + v134 + 27) = 31;
+    *(v132 + 26) = v133;
+    v135 = v133 - 1;
+    *(v132 + 25) = 0;
+    if ( v135 >= 0 && *(v132 + v135 + 27) == 32 )
+    {
+      v136 = 1;
+      do
+      {
+        --v135;
+        v137 = v136;
+        if ( v135 == -1 )
+        {
+          *(v132 + 25) = v136;
+          goto LABEL_146;
+        }
+        ++v136;
+      }
+      while ( *(v132 + v135 + 27) == 32 );
+      *(v132 + 25) = v137;
+    }
+LABEL_146:
+    *(v132 + 64) = 1;
+    *(v132 + 48) = CMemberScriptBinding1<CDOTA_Bot_Script *,void (CDOTA_Bot_Script::*)(HSCRIPT__ *),void,HSCRIPT__ *>::Call;
+    *(v132 + 56) = CDOTA_Bot_Script::Action_SellItem;
+    *(v132 + 40) = s_CDOTA_Bot_Script_Action_SellItem_packed_arg_names;
+    v138 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(p_m_FunctionBindings)];
+    *(v138 + 24) = 0;
+    *(v138 + 16) = "Tell a bot to disassemble an item.";
+    *v138 = "Action_DisassembleItem";
+    *(v138 + 8) = "Action_DisassembleItem";
+    v139 = *(v138 + 26);
+    v140 = v139++;
+    *(v138 + v140 + 27) = 31;
+    *(v138 + 26) = v139;
+    v141 = v139 - 1;
+    *(v138 + 25) = 0;
+    if ( v141 >= 0 && *(v138 + v141 + 27) == 32 )
+    {
+      v142 = 1;
+      do
+      {
+        --v141;
+        v143 = v142;
+        if ( v141 == -1 )
+        {
+          *(v138 + 25) = v142;
+          goto LABEL_152;
+        }
+        ++v142;
+      }
+      while ( *(v138 + v141 + 27) == 32 );
+      *(v138 + 25) = v143;
+    }
+LABEL_152:
+    *(v138 + 64) = 1;
+    *(v138 + 48) = CMemberScriptBinding1<CDOTA_Bot_Script *,void (CDOTA_Bot_Script::*)(HSCRIPT__ *),void,HSCRIPT__ *>::Call;
+    *(v138 + 56) = CDOTA_Bot_Script::Action_DisassembleItem;
+    *(v138 + 40) = s_CDOTA_Bot_Script_Action_DisassembleItem_packed_arg_names;
+    v144 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(p_m_FunctionBindings)];
+    *(v144 + 24) = 0;
+    *(v144 + 16) = "Set the combine state on an item.";
+    *v144 = "Action_SetItemCombineLock";
+    *(v144 + 8) = "Action_SetItemCombineLock";
+    v145 = *(v144 + 26);
+    *(v144 + v145 + 27) = 31;
+    v146 = v145 + 1;
+    v145 += 2;
+    *(v144 + v146 + 27) = 6;
+    *(v144 + 26) = v145;
+    v147 = v145 - 1;
+    *(v144 + 25) = 0;
+    if ( v147 >= 0 && *(v144 + v147 + 27) == 32 )
+    {
+      v148 = 1;
+      do
+      {
+        --v147;
+        v149 = v148;
+        if ( v147 == -1 )
+        {
+          *(v144 + 25) = v148;
+          goto LABEL_158;
+        }
+        ++v148;
+      }
+      while ( *(v144 + v147 + 27) == 32 );
+      *(v144 + 25) = v149;
+    }
+LABEL_158:
+    *(v144 + 64) = 1;
+    *(v144 + 48) = CMemberScriptBinding2<CDOTA_Bot_Script *,void (CDOTA_Bot_Script::*)(HSCRIPT__ *,bool),void,HSCRIPT__ *,bool>::Call;
+    *(v144 + 56) = CDOTA_Bot_Script::Action_SetItemCombineLock;
+    *(v144 + 40) = s_CDOTA_Bot_Script_Action_SetItemCombineLock_packed_arg_names;
+    v150 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(p_m_FunctionBindings)];
+    *(v150 + 24) = 0;
+    *(v150 + 16) = "Tell a bot to swap the contents of two item slots.";
+    *v150 = "Action_SwapItems";
+    *(v150 + 8) = "Action_SwapItems";
+    v151 = *(v150 + 26);
+    *(v150 + v151 + 27) = 5;
+    v152 = v151 + 1;
+    v151 += 2;
+    *(v150 + v152 + 27) = 5;
+    *(v150 + 26) = v151;
+    v153 = v151 - 1;
+    *(v150 + 25) = 0;
+    if ( v153 >= 0 && *(v150 + v153 + 27) == 32 )
+    {
+      v154 = 1;
+      do
+      {
+        --v153;
+        v155 = v154;
+        if ( v153 == -1 )
+        {
+          *(v150 + 25) = v154;
+          goto LABEL_164;
+        }
+        ++v154;
+      }
+      while ( *(v150 + v153 + 27) == 32 );
+      *(v150 + 25) = v155;
+    }
+LABEL_164:
+    *(v150 + 64) = 1;
+    *(v150 + 48) = CMemberScriptBinding2<CDOTA_Bot_Script *,void (CDOTA_Bot_Script::*)(int,int),void,int,int>::Call;
+    *(v150 + 56) = CDOTA_Bot_Script::Action_SwapItems;
+    *(v150 + 40) = s_CDOTA_Bot_Script_Action_SwapItems_packed_arg_names;
+    v156 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(p_m_FunctionBindings)];
+    *(v156 + 24) = 0;
+    *(v156 + 16) = "Tell a bot to use the specified shrine.";
+    *v156 = "Action_UseShrine";
+    *(v156 + 8) = "Action_UseShrine";
+    v157 = *(v156 + 26);
+    v158 = v157++;
+    *(v156 + v158 + 27) = 31;
+    *(v156 + 26) = v157;
+    v159 = v157 - 1;
+    *(v156 + 25) = 0;
+    if ( v159 >= 0 && *(v156 + v159 + 27) == 32 )
+    {
+      v160 = 1;
+      do
+      {
+        --v159;
+        v161 = v160;
+        if ( v159 == -1 )
+        {
+          *(v156 + 25) = v160;
+          goto LABEL_170;
+        }
+        ++v160;
+      }
+      while ( *(v156 + v159 + 27) == 32 );
+      *(v156 + 25) = v161;
+    }
+LABEL_170:
+    *(v156 + 64) = 1;
+    *(v156 + 48) = CMemberScriptBinding1<CDOTA_Bot_Script *,void (CDOTA_Bot_Script::*)(HSCRIPT__ *),void,HSCRIPT__ *>::Call;
+    *(v156 + 56) = CDOTA_Bot_Script::Action_UseShrine;
+    *(v156 + 40) = s_CDOTA_Bot_Script_Action_UseShrine_packed_arg_names;
+    v162 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(p_m_FunctionBindings)];
+    *(v162 + 24) = 6;
+    *(v162 + 16) = "Tell a bot to use the courier.";
+    *v162 = "Action_Courier";
+    *(v162 + 8) = "Action_Courier";
+    v163 = *(v162 + 26);
+    *(v162 + v163 + 27) = 31;
+    v164 = v163 + 1;
+    v163 += 2;
+    *(v162 + v164 + 27) = 5;
+    *(v162 + 26) = v163;
+    v165 = v163 - 1;
+    *(v162 + 25) = 0;
+    if ( v165 >= 0 && *(v162 + v165 + 27) == 32 )
+    {
+      v166 = 1;
+      do
+      {
+        --v165;
+        v167 = v166;
+        if ( v165 == -1 )
+        {
+          *(v162 + 25) = v166;
+          goto LABEL_176;
+        }
+        ++v166;
+      }
+      while ( *(v162 + v165 + 27) == 32 );
+      *(v162 + 25) = v167;
+    }
+LABEL_176:
+    *(v162 + 64) = 1;
+    *(v162 + 48) = CMemberScriptBinding2<CDOTA_Bot_Script *,bool (CDOTA_Bot_Script::*)(HSCRIPT__ *,int),bool,HSCRIPT__ *,int>::Call;
+    *(v162 + 56) = CDOTA_Bot_Script::Action_Courier;
+    *(v162 + 40) = s_CDOTA_Bot_Script_Action_Courier_packed_arg_names;
+    v168 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(p_m_FunctionBindings)];
+    *(v168 + 24) = 0;
+    *(v168 + 16) = "Tell a bot to buy back into the game.";
+    *v168 = "Action_Buyback";
+    *(v168 + 8) = "Action_Buyback";
+    v169 = *(v168 + 26);
+    *(v168 + 25) = 0;
+    v170 = v169 - 1;
+    if ( v170 >= 0 && *(v168 + v170 + 27) == 32 )
+    {
+      v171 = 1;
+      do
+      {
+        --v170;
+        v172 = v171;
+        if ( v170 == -1 )
+        {
+          *(v168 + 25) = v171;
+          goto LABEL_182;
+        }
+        ++v171;
+      }
+      while ( *(v168 + v170 + 27) == 32 );
+      *(v168 + 25) = v172;
+    }
+LABEL_182:
+    *(v168 + 64) = 1;
+    *(v168 + 48) = CMemberScriptBinding0<CDOTA_Bot_Script *,void (CDOTA_Bot_Script::*)(void),void>::Call;
+    *(v168 + 56) = CDOTA_Bot_Script::Action_Buyback;
+    v173 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(p_m_FunctionBindings)];
+    *(v173 + 24) = 0;
+    *(v173 + 16) = "Tell a bot to level up a specific ability.";
+    *v173 = "Action_LevelAbility";
+    *(v173 + 8) = "Action_LevelAbility";
+    v174 = *(v173 + 26);
+    v175 = v174++;
+    *(v173 + v175 + 27) = 30;
+    *(v173 + 26) = v174;
+    v176 = v174 - 1;
+    *(v173 + 25) = 0;
+    if ( v176 >= 0 && *(v173 + v176 + 27) == 32 )
+    {
+      v177 = 1;
+      do
+      {
+        --v176;
+        v178 = v177;
+        if ( v176 == -1 )
+        {
+          *(v173 + 25) = v177;
+          goto LABEL_188;
+        }
+        ++v177;
+      }
+      while ( *(v173 + v176 + 27) == 32 );
+      *(v173 + 25) = v178;
+    }
+LABEL_188:
+    *(v173 + 64) = 1;
+    *(v173 + 48) = CMemberScriptBinding1<CDOTA_Bot_Script *,void (CDOTA_Bot_Script::*)(char const*),void,char const*>::Call;
+    *(v173 + 56) = CDOTA_Bot_Script::Action_LevelAbility;
+    *(v173 + 40) = s_CDOTA_Bot_Script_Action_LevelAbility_packed_arg_names;
+    v179 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(p_m_FunctionBindings)];
+    *(v179 + 24) = 0;
+    *(v179 + 16) = "Tell a bot to say something.";
+    *v179 = "Action_Chat";
+    *(v179 + 8) = "Action_Chat";
+    v180 = *(v179 + 26);
+    *(v179 + v180 + 27) = 30;
+    v181 = v180 + 1;
+    v180 += 2;
+    *(v179 + v181 + 27) = 6;
+    *(v179 + 26) = v180;
+    v182 = v180 - 1;
+    *(v179 + 25) = 0;
+    if ( v182 >= 0 && *(v179 + v182 + 27) == 32 )
+    {
+      v183 = 1;
+      do
+      {
+        --v182;
+        v184 = v183;
+        if ( v182 == -1 )
+        {
+          *(v179 + 25) = v183;
+          goto LABEL_194;
+        }
+        ++v183;
+      }
+      while ( *(v179 + v182 + 27) == 32 );
+      *(v179 + 25) = v184;
+    }
+LABEL_194:
+    *(v179 + 64) = 1;
+    *(v179 + 48) = CMemberScriptBinding2<CDOTA_Bot_Script *,void (CDOTA_Bot_Script::*)(char const*,bool),void,char const*,bool>::Call;
+    *(v179 + 56) = CDOTA_Bot_Script::Action_Chat;
+    *(v179 + 40) = s_CDOTA_Bot_Script_Action_Chat_packed_arg_names;
+    v185 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(p_m_FunctionBindings)];
+    *(v185 + 24) = 0;
+    *(v185 + 16) = "Tell a bot to ping a location.";
+    *v185 = "Action_Ping";
+    *(v185 + 8) = "Action_Ping";
+    v186 = *(v185 + 26);
+    *(v185 + v186 + 27) = 1;
+    *(v185 + (v186 + 1) + 27) = 1;
+    v187 = v186 + 2;
+    v186 += 3;
+    *(v185 + v187 + 27) = 6;
+    *(v185 + 26) = v186;
+    v188 = v186 - 1;
+    *(v185 + 25) = 0;
+    if ( v188 >= 0 && *(v185 + v188 + 27) == 32 )
+    {
+      v189 = 1;
+      do
+      {
+        --v188;
+        v190 = v189;
+        if ( v188 == -1 )
+        {
+          *(v185 + 25) = v189;
+          goto LABEL_200;
+        }
+        ++v189;
+      }
+      while ( *(v185 + v188 + 27) == 32 );
+      *(v185 + 25) = v190;
+    }
+LABEL_200:
+    *(v185 + 64) = 1;
+    *(v185 + 48) = CMemberScriptBinding3<CDOTA_Bot_Script *,void (CDOTA_Bot_Script::*)(float,float,bool),void,float,float,bool>::Call;
+    *(v185 + 56) = CDOTA_Bot_Script::Action_Ping;
+    *(v185 + 40) = s_CDOTA_Bot_Script_Action_Ping_packed_arg_names;
+    v191 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(p_m_FunctionBindings)];
+    *(v191 + 24) = 5;
+    *(v191 + 16) = "Get the type of the current action.";
+    *v191 = "GetCurrentActionType";
+    *(v191 + 8) = "GetCurrentActionType";
+    v192 = *(v191 + 26);
+    *(v191 + 25) = 0;
+    v193 = v192 - 1;
+    if ( v193 >= 0 && *(v191 + v193 + 27) == 32 )
+    {
+      v194 = 1;
+      do
+      {
+        --v193;
+        v195 = v194;
+        if ( v193 == -1 )
+        {
+          *(v191 + 25) = v194;
+          goto LABEL_206;
+        }
+        ++v194;
+      }
+      while ( *(v191 + v193 + 27) == 32 );
+      *(v191 + 25) = v195;
+    }
+LABEL_206:
+    *(v191 + 64) = 1;
+    *(v191 + 48) = CMemberScriptBinding0<CDOTA_Bot_Script *,int (CDOTA_Bot_Script::*)(void),int>::Call;
+    *(v191 + 56) = CDOTA_Bot_Script::GetCurrentActionType;
+    v196 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(p_m_FunctionBindings)];
+    *(v196 + 24) = 32;
+    *(v196 + 16) = "Get the most recent ping by this player.";
+    *v196 = "GetMostRecentPing";
+    *(v196 + 8) = "GetMostRecentPing";
+    v197 = *(v196 + 26);
+    *(v196 + 25) = 0;
+    v198 = v197 - 1;
+    if ( v198 >= 0 && *(v196 + v198 + 27) == 32 )
+    {
+      v199 = 1;
+      do
+      {
+        --v198;
+        v200 = v199;
+        if ( v198 == -1 )
+        {
+          *(v196 + 25) = v199;
+          goto LABEL_212;
+        }
+        ++v199;
+      }
+      while ( *(v196 + v198 + 27) == 32 );
+      *(v196 + 25) = v200;
+    }
+LABEL_212:
+    *(v196 + 64) = 1;
+    *(v196 + 48) = CMemberScriptBinding0<CDOTA_Bot_Script *,CVariantBase<CVariantDefaultAllocator> (CDOTA_Bot_Script::*)(void),CVariantBase<CVariantDefaultAllocator>>::Call;
+    *(v196 + 56) = CDOTA_Bot_Script::GetMostRecentPing;
+    v201 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(p_m_FunctionBindings)];
+    *(v201 + 24) = 6;
+    *(v201 + 16) = "Can we currently see this bot?  Always true for bots on our team.  Many function will not return vali"
+                   "d data without this being true.";
+    *v201 = "CanBeSeen";
+    *(v201 + 8) = "CanBeSeen";
+    v202 = *(v201 + 26);
+    *(v201 + 25) = 0;
+    v203 = v202 - 1;
+    if ( v203 >= 0 && *(v201 + v203 + 27) == 32 )
+    {
+      v204 = 1;
+      do
+      {
+        --v203;
+        v205 = v204;
+        if ( v203 == -1 )
+        {
+          *(v201 + 25) = v204;
+          goto LABEL_218;
+        }
+        ++v204;
+      }
+      while ( *(v201 + v203 + 27) == 32 );
+      *(v201 + 25) = v205;
+    }
+LABEL_218:
+    *(v201 + 64) = 1;
+    *(v201 + 48) = CMemberScriptBinding0<CDOTA_Bot_Script *,bool (CDOTA_Bot_Script::*)(void),bool>::Call;
+    *(v201 + 56) = CDOTA_Bot_Script::CanBeSeen;
+    v206 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(p_m_FunctionBindings)];
+    *(v206 + 24) = 5;
+    *(v206 + 16) = "Get the active mode ID";
+    *v206 = "GetActiveMode";
+    *(v206 + 8) = "GetActiveMode";
+    v207 = *(v206 + 26);
+    *(v206 + 25) = 0;
+    v208 = v207 - 1;
+    if ( v208 >= 0 && *(v206 + v208 + 27) == 32 )
+    {
+      v209 = 1;
+      do
+      {
+        --v208;
+        v210 = v209;
+        if ( v208 == -1 )
+        {
+          *(v206 + 25) = v209;
+          goto LABEL_224;
+        }
+        ++v209;
+      }
+      while ( *(v206 + v208 + 27) == 32 );
+      *(v206 + 25) = v210;
+    }
+LABEL_224:
+    *(v206 + 64) = 1;
+    *(v206 + 48) = CMemberScriptBinding0<CDOTA_Bot_Script *,int (CDOTA_Bot_Script::*)(void),int>::Call;
+    *(v206 + 56) = CDOTA_Bot_Script::GetActiveMode;
+    v211 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(p_m_FunctionBindings)];
+    *(v211 + 24) = 1;
+    *(v211 + 16) = "Get the desire value of the active mode";
+    *v211 = "GetActiveModeDesire";
+    *(v211 + 8) = "GetActiveModeDesire";
+    v212 = *(v211 + 26);
+    *(v211 + 25) = 0;
+    v213 = v212 - 1;
+    if ( v213 >= 0 && *(v211 + v213 + 27) == 32 )
+    {
+      v214 = 1;
+      do
+      {
+        --v213;
+        v215 = v214;
+        if ( v213 == -1 )
+        {
+          *(v211 + 25) = v214;
+          goto LABEL_230;
+        }
+        ++v214;
+      }
+      while ( *(v211 + v213 + 27) == 32 );
+      *(v211 + 25) = v215;
+    }
+LABEL_230:
+    *(v211 + 64) = 1;
+    *(v211 + 48) = CMemberScriptBinding0<CDOTA_Bot_Script *,float (CDOTA_Bot_Script::*)(void),float>::Call;
+    *(v211 + 56) = CDOTA_Bot_Script::GetActiveModeDesire;
+    v216 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(p_m_FunctionBindings)];
+    *(v216 + 24) = 5;
+    *(v216 + 16) = "Get a bot's current health.";
+    *v216 = "GetHealth";
+    *(v216 + 8) = "GetHealth";
+    v217 = *(v216 + 26);
+    *(v216 + 25) = 0;
+    v218 = v217 - 1;
+    if ( v218 >= 0 && *(v216 + v218 + 27) == 32 )
+    {
+      v219 = 1;
+      do
+      {
+        --v218;
+        v220 = v219;
+        if ( v218 == -1 )
+        {
+          *(v216 + 25) = v219;
+          goto LABEL_236;
+        }
+        ++v219;
+      }
+      while ( *(v216 + v218 + 27) == 32 );
+      *(v216 + 25) = v220;
+    }
+LABEL_236:
+    *(v216 + 64) = 1;
+    *(v216 + 48) = CMemberScriptBinding0<CDOTA_Bot_Script *,int (CDOTA_Bot_Script::*)(void),int>::Call;
+    *(v216 + 56) = CDOTA_Bot_Script::GetHealth;
+    v221 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(p_m_FunctionBindings)];
+    *(v221 + 24) = 5;
+    *(v221 + 16) = "Get a bot's maximum health.";
+    *v221 = "GetMaxHealth";
+    *(v221 + 8) = "GetMaxHealth";
+    v222 = *(v221 + 26);
+    *(v221 + 25) = 0;
+    v223 = v222 - 1;
+    if ( v223 >= 0 && *(v221 + v223 + 27) == 32 )
+    {
+      v224 = 1;
+      do
+      {
+        --v223;
+        v225 = v224;
+        if ( v223 == -1 )
+        {
+          *(v221 + 25) = v224;
+          goto LABEL_242;
+        }
+        ++v224;
+      }
+      while ( *(v221 + v223 + 27) == 32 );
+      *(v221 + 25) = v225;
+    }
+LABEL_242:
+    *(v221 + 64) = 1;
+    *(v221 + 48) = CMemberScriptBinding0<CDOTA_Bot_Script *,int (CDOTA_Bot_Script::*)(void),int>::Call;
+    *(v221 + 56) = CDOTA_Bot_Script::GetMaxHealth;
+    v226 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(p_m_FunctionBindings)];
+    *(v226 + 24) = 1;
+    *(v226 + 16) = "Get a bot's health regen rate.";
+    *v226 = "GetHealthRegen";
+    *(v226 + 8) = "GetHealthRegen";
+    v227 = *(v226 + 26);
+    *(v226 + 25) = 0;
+    v228 = v227 - 1;
+    if ( v228 >= 0 && *(v226 + v228 + 27) == 32 )
+    {
+      v229 = 1;
+      do
+      {
+        --v228;
+        v230 = v229;
+        if ( v228 == -1 )
+        {
+          *(v226 + 25) = v229;
+          goto LABEL_248;
+        }
+        ++v229;
+      }
+      while ( *(v226 + v228 + 27) == 32 );
+      *(v226 + 25) = v230;
+    }
+LABEL_248:
+    *(v226 + 64) = 1;
+    *(v226 + 48) = CMemberScriptBinding0<CDOTA_Bot_Script *,float (CDOTA_Bot_Script::*)(void),float>::Call;
+    *(v226 + 56) = CDOTA_Bot_Script::GetHealthRegen;
+    v231 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(p_m_FunctionBindings)];
+    *(v231 + 24) = 5;
+    *(v231 + 16) = "Get a bot's current mana.";
+    *v231 = "GetMana";
+    *(v231 + 8) = "GetMana";
+    v232 = *(v231 + 26);
+    *(v231 + 25) = 0;
+    v233 = v232 - 1;
+    if ( v233 >= 0 && *(v231 + v233 + 27) == 32 )
+    {
+      v234 = 1;
+      do
+      {
+        --v233;
+        v235 = v234;
+        if ( v233 == -1 )
+        {
+          *(v231 + 25) = v234;
+          goto LABEL_254;
+        }
+        ++v234;
+      }
+      while ( *(v231 + v233 + 27) == 32 );
+      *(v231 + 25) = v235;
+    }
+LABEL_254:
+    *(v231 + 64) = 1;
+    *(v231 + 48) = CMemberScriptBinding0<CDOTA_Bot_Script *,int (CDOTA_Bot_Script::*)(void),int>::Call;
+    *(v231 + 56) = CDOTA_Bot_Script::GetMana;
+    v236 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(p_m_FunctionBindings)];
+    *(v236 + 24) = 5;
+    *(v236 + 16) = "Get a bot's maximum mana.";
+    *v236 = "GetMaxMana";
+    *(v236 + 8) = "GetMaxMana";
+    v237 = *(v236 + 26);
+    *(v236 + 25) = 0;
+    v238 = v237 - 1;
+    if ( v238 >= 0 && *(v236 + v238 + 27) == 32 )
+    {
+      v239 = 1;
+      do
+      {
+        --v238;
+        v240 = v239;
+        if ( v238 == -1 )
+        {
+          *(v236 + 25) = v239;
+          goto LABEL_260;
+        }
+        ++v239;
+      }
+      while ( *(v236 + v238 + 27) == 32 );
+      *(v236 + 25) = v240;
+    }
+LABEL_260:
+    *(v236 + 64) = 1;
+    *(v236 + 48) = CMemberScriptBinding0<CDOTA_Bot_Script *,int (CDOTA_Bot_Script::*)(void),int>::Call;
+    *(v236 + 56) = CDOTA_Bot_Script::GetMaxMana;
+    v241 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(p_m_FunctionBindings)];
+    *(v241 + 24) = 1;
+    *(v241 + 16) = "Get a bot's mana regen rate.";
+    *v241 = "GetManaRegen";
+    *(v241 + 8) = "GetManaRegen";
+    v242 = *(v241 + 26);
+    *(v241 + 25) = 0;
+    v243 = v242 - 1;
+    if ( v243 >= 0 && *(v241 + v243 + 27) == 32 )
+    {
+      v244 = 1;
+      do
+      {
+        --v243;
+        v245 = v244;
+        if ( v243 == -1 )
+        {
+          *(v241 + 25) = v244;
+          goto LABEL_266;
+        }
+        ++v244;
+      }
+      while ( *(v241 + v243 + 27) == 32 );
+      *(v241 + 25) = v245;
+    }
+LABEL_266:
+    *(v241 + 64) = 1;
+    *(v241 + 48) = CMemberScriptBinding0<CDOTA_Bot_Script *,float (CDOTA_Bot_Script::*)(void),float>::Call;
+    *(v241 + 56) = CDOTA_Bot_Script::GetManaRegen;
+    v246 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(p_m_FunctionBindings)];
+    *(v246 + 24) = 5;
+    *(v246 + 16) = "Get a bot's base movement speed.";
+    *v246 = "GetBaseMovementSpeed";
+    *(v246 + 8) = "GetBaseMovementSpeed";
+    v247 = *(v246 + 26);
+    *(v246 + 25) = 0;
+    v248 = v247 - 1;
+    if ( v248 >= 0 && *(v246 + v248 + 27) == 32 )
+    {
+      v249 = 1;
+      do
+      {
+        --v248;
+        v250 = v249;
+        if ( v248 == -1 )
+        {
+          *(v246 + 25) = v249;
+          goto LABEL_272;
+        }
+        ++v249;
+      }
+      while ( *(v246 + v248 + 27) == 32 );
+      *(v246 + 25) = v250;
+    }
+LABEL_272:
+    *(v246 + 64) = 1;
+    *(v246 + 48) = CMemberScriptBinding0<CDOTA_Bot_Script *,int (CDOTA_Bot_Script::*)(void),int>::Call;
+    *(v246 + 56) = CDOTA_Bot_Script::GetBaseMovementSpeed;
+    v251 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(p_m_FunctionBindings)];
+    *(v251 + 24) = 5;
+    *(v251 + 16) = "Get a bot's current movement speed.";
+    *v251 = "GetCurrentMovementSpeed";
+    *(v251 + 8) = "GetCurrentMovementSpeed";
+    v252 = *(v251 + 26);
+    *(v251 + 25) = 0;
+    v253 = v252 - 1;
+    if ( v253 >= 0 && *(v251 + v253 + 27) == 32 )
+    {
+      v254 = 1;
+      do
+      {
+        --v253;
+        v255 = v254;
+        if ( v253 == -1 )
+        {
+          *(v251 + 25) = v254;
+          goto LABEL_278;
+        }
+        ++v254;
+      }
+      while ( *(v251 + v253 + 27) == 32 );
+      *(v251 + 25) = v255;
+    }
+LABEL_278:
+    *(v251 + 64) = 1;
+    *(v251 + 48) = CMemberScriptBinding0<CDOTA_Bot_Script *,int (CDOTA_Bot_Script::*)(void),int>::Call;
+    *(v251 + 56) = CDOTA_Bot_Script::GetCurrentMovementSpeed;
+    v256 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(p_m_FunctionBindings)];
+    *(v256 + 24) = 6;
+    *(v256 + 16) = "Is a bot alive?";
+    *v256 = "IsAlive";
+    *(v256 + 8) = "IsAlive";
+    v257 = *(v256 + 26);
+    *(v256 + 25) = 0;
+    v258 = v257 - 1;
+    if ( v258 >= 0 && *(v256 + v258 + 27) == 32 )
+    {
+      v259 = 1;
+      do
+      {
+        --v258;
+        v260 = v259;
+        if ( v258 == -1 )
+        {
+          *(v256 + 25) = v259;
+          goto LABEL_284;
+        }
+        ++v259;
+      }
+      while ( *(v256 + v258 + 27) == 32 );
+      *(v256 + 25) = v260;
+    }
+LABEL_284:
+    *(v256 + 64) = 1;
+    *(v256 + 48) = CMemberScriptBinding0<CDOTA_Bot_Script *,bool (CDOTA_Bot_Script::*)(void),bool>::Call;
+    *(v256 + 56) = CDOTA_Bot_Script::IsAlive;
+    v261 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(p_m_FunctionBindings)];
+    *(v261 + 24) = 1;
+    *(v261 + 16) = "Get the time in seconds until a bot respawns.";
+    *v261 = "GetRespawnTime";
+    *(v261 + 8) = "GetRespawnTime";
+    v262 = *(v261 + 26);
+    *(v261 + 25) = 0;
+    v263 = v262 - 1;
+    if ( v263 >= 0 && *(v261 + v263 + 27) == 32 )
+    {
+      v264 = 1;
+      do
+      {
+        --v263;
+        v265 = v264;
+        if ( v263 == -1 )
+        {
+          *(v261 + 25) = v264;
+          goto LABEL_290;
+        }
+        ++v264;
+      }
+      while ( *(v261 + v263 + 27) == 32 );
+      *(v261 + 25) = v265;
+    }
+LABEL_290:
+    *(v261 + 64) = 1;
+    *(v261 + 48) = CMemberScriptBinding0<CDOTA_Bot_Script *,float (CDOTA_Bot_Script::*)(void),float>::Call;
+    *(v261 + 56) = CDOTA_Bot_Script::GetRespawnTime;
+    v266 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(p_m_FunctionBindings)];
+    *(v266 + 24) = 6;
+    *(v266 + 16) = "Can the bot buy back?";
+    *v266 = "HasBuyback";
+    *(v266 + 8) = "HasBuyback";
+    v267 = *(v266 + 26);
+    *(v266 + 25) = 0;
+    v268 = v267 - 1;
+    if ( v268 >= 0 && *(v266 + v268 + 27) == 32 )
+    {
+      v269 = 1;
+      do
+      {
+        --v268;
+        v270 = v269;
+        if ( v268 == -1 )
+        {
+          *(v266 + 25) = v269;
+          goto LABEL_296;
+        }
+        ++v269;
+      }
+      while ( *(v266 + v268 + 27) == 32 );
+      *(v266 + 25) = v270;
+    }
+LABEL_296:
+    *(v266 + 64) = 1;
+    *(v266 + 48) = CMemberScriptBinding0<CDOTA_Bot_Script *,bool (CDOTA_Bot_Script::*)(void),bool>::Call;
+    *(v266 + 56) = CDOTA_Bot_Script::HasBuyback;
+    v271 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(p_m_FunctionBindings)];
+    *(v271 + 24) = 5;
+    *(v271 + 16) = "Can the bot buy back?";
+    *v271 = "GetBuybackCost";
+    *(v271 + 8) = "GetBuybackCost";
+    v272 = *(v271 + 26);
+    *(v271 + 25) = 0;
+    v273 = v272 - 1;
+    if ( v273 >= 0 && *(v271 + v273 + 27) == 32 )
+    {
+      v274 = 1;
+      do
+      {
+        --v273;
+        v275 = v274;
+        if ( v273 == -1 )
+        {
+          *(v271 + 25) = v274;
+          goto LABEL_302;
+        }
+        ++v274;
+      }
+      while ( *(v271 + v273 + 27) == 32 );
+      *(v271 + 25) = v275;
+    }
+LABEL_302:
+    *(v271 + 64) = 1;
+    *(v271 + 48) = CMemberScriptBinding0<CDOTA_Bot_Script *,int (CDOTA_Bot_Script::*)(void),int>::Call;
+    *(v271 + 56) = CDOTA_Bot_Script::GetBuybackCost;
+    v276 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(p_m_FunctionBindings)];
+    *(v276 + 24) = 1;
+    *(v276 + 16) = "Can the bot buy back?";
+    *v276 = "GetBuybackCooldown";
+    *(v276 + 8) = "GetBuybackCooldown";
+    v277 = *(v276 + 26);
+    *(v276 + 25) = 0;
+    v278 = v277 - 1;
+    if ( v278 >= 0 && *(v276 + v278 + 27) == 32 )
+    {
+      v279 = 1;
+      do
+      {
+        --v278;
+        v280 = v279;
+        if ( v278 == -1 )
+        {
+          *(v276 + 25) = v279;
+          goto LABEL_308;
+        }
+        ++v279;
+      }
+      while ( *(v276 + v278 + 27) == 32 );
+      *(v276 + 25) = v280;
+    }
+LABEL_308:
+    *(v276 + 64) = 1;
+    *(v276 + 48) = CMemberScriptBinding0<CDOTA_Bot_Script *,float (CDOTA_Bot_Script::*)(void),float>::Call;
+    *(v276 + 56) = CDOTA_Bot_Script::GetBuybackCooldown;
+    v281 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(p_m_FunctionBindings)];
+    *(v281 + 24) = 5;
+    *(v281 + 16) = "Get the number of ability points the bot can spend.";
+    *v281 = "GetAbilityPoints";
+    *(v281 + 8) = "GetAbilityPoints";
+    v282 = *(v281 + 26);
+    *(v281 + 25) = 0;
+    v283 = v282 - 1;
+    if ( v283 >= 0 && *(v281 + v283 + 27) == 32 )
+    {
+      v284 = 1;
+      do
+      {
+        --v283;
+        v285 = v284;
+        if ( v283 == -1 )
+        {
+          *(v281 + 25) = v284;
+          goto LABEL_314;
+        }
+        ++v284;
+      }
+      while ( *(v281 + v283 + 27) == 32 );
+      *(v281 + 25) = v285;
+    }
+LABEL_314:
+    *(v281 + 64) = 1;
+    *(v281 + 48) = CMemberScriptBinding0<CDOTA_Bot_Script *,int (CDOTA_Bot_Script::*)(void),int>::Call;
+    *(v281 + 56) = CDOTA_Bot_Script::GetAbilityPoints;
+    v286 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(p_m_FunctionBindings)];
+    *(v286 + 24) = 1;
+    *(v286 + 16) = "Get the size of the unit's bounding radius.";
+    *v286 = "GetBoundingRadius";
+    *(v286 + 8) = "GetBoundingRadius";
+    v287 = *(v286 + 26);
+    *(v286 + 25) = 0;
+    v288 = v287 - 1;
+    if ( v288 >= 0 && *(v286 + v288 + 27) == 32 )
+    {
+      v289 = 1;
+      do
+      {
+        --v288;
+        v290 = v289;
+        if ( v288 == -1 )
+        {
+          *(v286 + 25) = v289;
+          goto LABEL_320;
+        }
+        ++v289;
+      }
+      while ( *(v286 + v288 + 27) == 32 );
+      *(v286 + 25) = v290;
+    }
+LABEL_320:
+    *(v286 + 64) = 1;
+    *(v286 + 48) = CMemberScriptBinding0<CDOTA_Bot_Script *,float (CDOTA_Bot_Script::*)(void),float>::Call;
+    *(v286 + 56) = CDOTA_Bot_Script::GetBoundingRadius;
+    v291 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(p_m_FunctionBindings)];
+    *(v291 + 24) = 1;
+    *(v291 + 16) = "Gets the base attack damage of the unit.";
+    *v291 = "GetBaseDamage";
+    *(v291 + 8) = "GetBaseDamage";
+    v292 = *(v291 + 26);
+    *(v291 + 25) = 0;
+    v293 = v292 - 1;
+    if ( v293 >= 0 && *(v291 + v293 + 27) == 32 )
+    {
+      v294 = 1;
+      do
+      {
+        --v293;
+        v295 = v294;
+        if ( v293 == -1 )
+        {
+          *(v291 + 25) = v294;
+          goto LABEL_326;
+        }
+        ++v294;
+      }
+      while ( *(v291 + v293 + 27) == 32 );
+      *(v291 + 25) = v295;
+    }
+LABEL_326:
+    *(v291 + 64) = 1;
+    *(v291 + 48) = CMemberScriptBinding0<CDOTA_Bot_Script *,float (CDOTA_Bot_Script::*)(void),float>::Call;
+    *(v291 + 56) = CDOTA_Bot_Script::GetBaseDamage;
+    v296 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(p_m_FunctionBindings)];
+    *(v296 + 24) = 1;
+    *(v296 + 16) = "Gets the variance of the base attack damage.";
+    *v296 = "GetBaseDamageVariance";
+    *(v296 + 8) = "GetBaseDamageVariance";
+    v297 = *(v296 + 26);
+    *(v296 + 25) = 0;
+    v298 = v297 - 1;
+    if ( v298 >= 0 && *(v296 + v298 + 27) == 32 )
+    {
+      v299 = 1;
+      do
+      {
+        --v298;
+        v300 = v299;
+        if ( v298 == -1 )
+        {
+          *(v296 + 25) = v299;
+          goto LABEL_332;
+        }
+        ++v299;
+      }
+      while ( *(v296 + v298 + 27) == 32 );
+      *(v296 + 25) = v300;
+    }
+LABEL_332:
+    *(v296 + 64) = 1;
+    *(v296 + 48) = CMemberScriptBinding0<CDOTA_Bot_Script *,float (CDOTA_Bot_Script::*)(void),float>::Call;
+    *(v296 + 56) = CDOTA_Bot_Script::GetBaseDamageVariance;
+    v301 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(p_m_FunctionBindings)];
+    *(v301 + 24) = 1;
+    *(v301 + 16) = "Gets the total attack damage.";
+    *v301 = "GetAttackDamage";
+    *(v301 + 8) = "GetAttackDamage";
+    v302 = *(v301 + 26);
+    *(v301 + 25) = 0;
+    v303 = v302 - 1;
+    if ( v303 >= 0 && *(v301 + v303 + 27) == 32 )
+    {
+      v304 = 1;
+      do
+      {
+        --v303;
+        v305 = v304;
+        if ( v303 == -1 )
+        {
+          *(v301 + 25) = v304;
+          goto LABEL_338;
+        }
+        ++v304;
+      }
+      while ( *(v301 + v303 + 27) == 32 );
+      *(v301 + 25) = v305;
+    }
+LABEL_338:
+    *(v301 + 64) = 1;
+    *(v301 + 48) = CMemberScriptBinding0<CDOTA_Bot_Script *,float (CDOTA_Bot_Script::*)(void),float>::Call;
+    *(v301 + 56) = CDOTA_Bot_Script::GetAttackDamage;
+    v306 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(p_m_FunctionBindings)];
+    *(v306 + 24) = 5;
+    *(v306 + 16) = "Gets the attack range of the unit.";
+    *v306 = "GetAttackRange";
+    *(v306 + 8) = "GetAttackRange";
+    v307 = *(v306 + 26);
+    *(v306 + 25) = 0;
+    v308 = v307 - 1;
+    if ( v308 >= 0 && *(v306 + v308 + 27) == 32 )
+    {
+      v309 = 1;
+      do
+      {
+        --v308;
+        v310 = v309;
+        if ( v308 == -1 )
+        {
+          *(v306 + 25) = v309;
+          goto LABEL_344;
+        }
+        ++v309;
+      }
+      while ( *(v306 + v308 + 27) == 32 );
+      *(v306 + 25) = v310;
+    }
+LABEL_344:
+    *(v306 + 64) = 1;
+    *(v306 + 48) = CMemberScriptBinding0<CDOTA_Bot_Script *,int (CDOTA_Bot_Script::*)(void),int>::Call;
+    *(v306 + 56) = CDOTA_Bot_Script::GetAttackRange;
+    v311 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(p_m_FunctionBindings)];
+    *(v311 + 24) = 1;
+    *(v311 + 16) = "Gets the attack speed of the unit.";
+    *v311 = "GetAttackSpeed";
+    *(v311 + 8) = "GetAttackSpeed";
+    v312 = *(v311 + 26);
+    *(v311 + 25) = 0;
+    v313 = v312 - 1;
+    if ( v313 >= 0 && *(v311 + v313 + 27) == 32 )
+    {
+      v314 = 1;
+      do
+      {
+        --v313;
+        v315 = v314;
+        if ( v313 == -1 )
+        {
+          *(v311 + 25) = v314;
+          goto LABEL_350;
+        }
+        ++v314;
+      }
+      while ( *(v311 + v313 + 27) == 32 );
+      *(v311 + 25) = v315;
+    }
+LABEL_350:
+    *(v311 + 64) = 1;
+    *(v311 + 48) = CMemberScriptBinding0<CDOTA_Bot_Script *,float (CDOTA_Bot_Script::*)(void),float>::Call;
+    *(v311 + 56) = CDOTA_Bot_Script::GetAttackSpeed;
+    v316 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(p_m_FunctionBindings)];
+    *(v316 + 24) = 1;
+    *(v316 + 16) = "Gets the number of seconds per attack that a unit can do.";
+    *v316 = "GetSecondsPerAttack";
+    *(v316 + 8) = "GetSecondsPerAttack";
+    v317 = *(v316 + 26);
+    *(v316 + 25) = 0;
+    v318 = v317 - 1;
+    if ( v318 >= 0 && *(v316 + v318 + 27) == 32 )
+    {
+      v319 = 1;
+      do
+      {
+        --v318;
+        v320 = v319;
+        if ( v318 == -1 )
+        {
+          *(v316 + 25) = v319;
+          goto LABEL_356;
+        }
+        ++v319;
+      }
+      while ( *(v316 + v318 + 27) == 32 );
+      *(v316 + 25) = v320;
+    }
+LABEL_356:
+    *(v316 + 64) = 1;
+    *(v316 + 48) = CMemberScriptBinding0<CDOTA_Bot_Script *,float (CDOTA_Bot_Script::*)(void),float>::Call;
+    *(v316 + 56) = CDOTA_Bot_Script::GetSecondsPerAttack;
+    v321 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(p_m_FunctionBindings)];
+    *(v321 + 24) = 1;
+    *(v321 + 16) = "Gets the attack point of the unit.";
+    *v321 = "GetAttackPoint";
+    *(v321 + 8) = "GetAttackPoint";
+    v322 = *(v321 + 26);
+    *(v321 + 25) = 0;
+    v323 = v322 - 1;
+    if ( v323 >= 0 && *(v321 + v323 + 27) == 32 )
+    {
+      v324 = 1;
+      do
+      {
+        --v323;
+        v325 = v324;
+        if ( v323 == -1 )
+        {
+          *(v321 + 25) = v324;
+          goto LABEL_362;
+        }
+        ++v324;
+      }
+      while ( *(v321 + v323 + 27) == 32 );
+      *(v321 + 25) = v325;
+    }
+LABEL_362:
+    *(v321 + 64) = 1;
+    *(v321 + 48) = CMemberScriptBinding0<CDOTA_Bot_Script *,float (CDOTA_Bot_Script::*)(void),float>::Call;
+    *(v321 + 56) = CDOTA_Bot_Script::GetAttackPoint;
+    v326 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(p_m_FunctionBindings)];
+    *(v326 + 24) = 1;
+    *(v326 + 16) = "Gets the last attack time of the unit.";
+    *v326 = "GetLastAttackTime";
+    *(v326 + 8) = "GetLastAttackTime";
+    v327 = *(v326 + 26);
+    *(v326 + 25) = 0;
+    v328 = v327 - 1;
+    if ( v328 >= 0 && *(v326 + v328 + 27) == 32 )
+    {
+      v329 = 1;
+      do
+      {
+        --v328;
+        v330 = v329;
+        if ( v328 == -1 )
+        {
+          *(v326 + 25) = v329;
+          goto LABEL_368;
+        }
+        ++v329;
+      }
+      while ( *(v326 + v328 + 27) == 32 );
+      *(v326 + 25) = v330;
+    }
+LABEL_368:
+    *(v326 + 64) = 1;
+    *(v326 + 48) = CMemberScriptBinding0<CDOTA_Bot_Script *,float (CDOTA_Bot_Script::*)(void),float>::Call;
+    *(v326 + 56) = CDOTA_Bot_Script::GetLastAttackTime;
+    v331 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(p_m_FunctionBindings)];
+    *(v331 + 24) = 1;
+    *(v331 + 16) = "Gets the spell damage amplification of the unit.";
+    *v331 = "GetSpellAmp";
+    *(v331 + 8) = "GetSpellAmp";
+    v332 = *(v331 + 26);
+    *(v331 + 25) = 0;
+    v333 = v332 - 1;
+    if ( v333 >= 0 && *(v331 + v333 + 27) == 32 )
+    {
+      v334 = 1;
+      do
+      {
+        --v333;
+        v335 = v334;
+        if ( v333 == -1 )
+        {
+          *(v331 + 25) = v334;
+          goto LABEL_374;
+        }
+        ++v334;
+      }
+      while ( *(v331 + v333 + 27) == 32 );
+      *(v331 + 25) = v335;
+    }
+LABEL_374:
+    *(v331 + 64) = 1;
+    *(v331 + 48) = CMemberScriptBinding0<CDOTA_Bot_Script *,float (CDOTA_Bot_Script::*)(void),float>::Call;
+    *(v331 + 56) = CDOTA_Bot_Script::GetSpellAmp;
+    v336 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(p_m_FunctionBindings)];
+    *(v336 + 24) = 1;
+    *(v336 + 16) = "Gets the armor of the unit.";
+    *v336 = "GetArmor";
+    *(v336 + 8) = "GetArmor";
+    v337 = *(v336 + 26);
+    *(v336 + 25) = 0;
+    v338 = v337 - 1;
+    if ( v338 >= 0 && *(v336 + v338 + 27) == 32 )
+    {
+      v339 = 1;
+      do
+      {
+        --v338;
+        v340 = v339;
+        if ( v338 == -1 )
+        {
+          *(v336 + 25) = v339;
+          goto LABEL_380;
+        }
+        ++v339;
+      }
+      while ( *(v336 + v338 + 27) == 32 );
+      *(v336 + 25) = v340;
+    }
+LABEL_380:
+    *(v336 + 64) = 1;
+    *(v336 + 48) = CMemberScriptBinding0<CDOTA_Bot_Script *,float (CDOTA_Bot_Script::*)(void),float>::Call;
+    *(v336 + 56) = CDOTA_Bot_Script::GetArmor;
+    v341 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(p_m_FunctionBindings)];
+    *(v341 + 24) = 1;
+    *(v341 + 16) = "Gets the magic resist of the unit.";
+    *v341 = "GetMagicResist";
+    *(v341 + 8) = "GetMagicResist";
+    v342 = *(v341 + 26);
+    *(v341 + 25) = 0;
+    v343 = v342 - 1;
+    if ( v343 >= 0 && *(v341 + v343 + 27) == 32 )
+    {
+      v344 = 1;
+      do
+      {
+        --v343;
+        v345 = v344;
+        if ( v343 == -1 )
+        {
+          *(v341 + 25) = v344;
+          goto LABEL_386;
+        }
+        ++v344;
+      }
+      while ( *(v341 + v343 + 27) == 32 );
+      *(v341 + 25) = v345;
+    }
+LABEL_386:
+    *(v341 + 64) = 1;
+    *(v341 + 48) = CMemberScriptBinding0<CDOTA_Bot_Script *,float (CDOTA_Bot_Script::*)(void),float>::Call;
+    *(v341 + 56) = CDOTA_Bot_Script::GetMagicResist;
+    v346 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(p_m_FunctionBindings)];
+    *(v346 + 24) = 1;
+    *(v346 + 16) = "Gets the evasion resist of the unit.";
+    *v346 = "GetEvasion";
+    *(v346 + 8) = "GetEvasion";
+    v347 = *(v346 + 26);
+    *(v346 + 25) = 0;
+    v348 = v347 - 1;
+    if ( v348 >= 0 && *(v346 + v348 + 27) == 32 )
+    {
+      v349 = 1;
+      do
+      {
+        --v348;
+        v350 = v349;
+        if ( v348 == -1 )
+        {
+          *(v346 + 25) = v349;
+          goto LABEL_392;
+        }
+        ++v349;
+      }
+      while ( *(v346 + v348 + 27) == 32 );
+      *(v346 + 25) = v350;
+    }
+LABEL_392:
+    *(v346 + 64) = 1;
+    *(v346 + 48) = CMemberScriptBinding0<CDOTA_Bot_Script *,float (CDOTA_Bot_Script::*)(void),float>::Call;
+    *(v346 + 56) = CDOTA_Bot_Script::GetEvasion;
+    v351 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(p_m_FunctionBindings)];
+    *(v351 + 24) = 5;
+    *(v351 + 16) = "Gets the evasion resist of the unit.";
+    *v351 = "GetPrimaryAttribute";
+    *(v351 + 8) = "GetPrimaryAttribute";
+    v352 = *(v351 + 26);
+    *(v351 + 25) = 0;
+    v353 = v352 - 1;
+    if ( v353 >= 0 && *(v351 + v353 + 27) == 32 )
+    {
+      v354 = 1;
+      do
+      {
+        --v353;
+        v355 = v354;
+        if ( v353 == -1 )
+        {
+          *(v351 + 25) = v354;
+          goto LABEL_398;
+        }
+        ++v354;
+      }
+      while ( *(v351 + v353 + 27) == 32 );
+      *(v351 + 25) = v355;
+    }
+LABEL_398:
+    *(v351 + 64) = 1;
+    *(v351 + 48) = CMemberScriptBinding0<CDOTA_Bot_Script *,int (CDOTA_Bot_Script::*)(void),int>::Call;
+    *(v351 + 56) = CDOTA_Bot_Script::GetPrimaryAttribute;
+    v356 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(p_m_FunctionBindings)];
+    *(v356 + 24) = 5;
+    *(v356 + 16) = "Gets the evasion resist of the unit.";
+    *v356 = "GetAttributeValue";
+    *(v356 + 8) = "GetAttributeValue";
+    v357 = *(v356 + 26);
+    v358 = v357++;
+    *(v356 + v358 + 27) = 5;
+    *(v356 + 26) = v357;
+    v359 = v357 - 1;
+    *(v356 + 25) = 0;
+    if ( v359 >= 0 && *(v356 + v359 + 27) == 32 )
+    {
+      v360 = 1;
+      do
+      {
+        --v359;
+        v361 = v360;
+        if ( v359 == -1 )
+        {
+          *(v356 + 25) = v360;
+          goto LABEL_404;
+        }
+        ++v360;
+      }
+      while ( *(v356 + v359 + 27) == 32 );
+      *(v356 + 25) = v361;
+    }
+LABEL_404:
+    *(v356 + 64) = 1;
+    *(v356 + 48) = CMemberScriptBinding1<CDOTA_Bot_Script *,int (CDOTA_Bot_Script::*)(int),int,int>::Call;
+    *(v356 + 56) = CDOTA_Bot_Script::GetAttributeValue;
+    *(v356 + 40) = s_CDOTA_Bot_Script_GetAttributeValue_packed_arg_names;
+    v362 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(p_m_FunctionBindings)];
+    *(v362 + 24) = 5;
+    *(v362 + 16) = "Get the amount of XP needed to level up.";
+    *v362 = "GetXPNeededToLevel";
+    *(v362 + 8) = "GetXPNeededToLevel";
+    v363 = *(v362 + 26);
+    *(v362 + 25) = 0;
+    v364 = v363 - 1;
+    if ( v364 >= 0 && *(v362 + v364 + 27) == 32 )
+    {
+      v365 = 1;
+      do
+      {
+        --v364;
+        v366 = v365;
+        if ( v364 == -1 )
+        {
+          *(v362 + 25) = v365;
+          goto LABEL_410;
+        }
+        ++v365;
+      }
+      while ( *(v362 + v364 + 27) == 32 );
+      *(v362 + 25) = v366;
+    }
+LABEL_410:
+    *(v362 + 64) = 1;
+    *(v362 + 48) = CMemberScriptBinding0<CDOTA_Bot_Script *,int (CDOTA_Bot_Script::*)(void),int>::Call;
+    *(v362 + 56) = CDOTA_Bot_Script::GetXPNeededToLevel;
+    v367 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(p_m_FunctionBindings)];
+    *(v367 + 24) = 5;
+    *(v367 + 16) = "Get the bot's current level.";
+    *v367 = "GetLevel";
+    *(v367 + 8) = "GetLevel";
+    v368 = *(v367 + 26);
+    *(v367 + 25) = 0;
+    v369 = v368 - 1;
+    if ( v369 >= 0 && *(v367 + v369 + 27) == 32 )
+    {
+      v370 = 1;
+      do
+      {
+        --v369;
+        v371 = v370;
+        if ( v369 == -1 )
+        {
+          *(v367 + 25) = v370;
+          goto LABEL_416;
+        }
+        ++v370;
+      }
+      while ( *(v367 + v369 + 27) == 32 );
+      *(v367 + 25) = v371;
+    }
+LABEL_416:
+    *(v367 + 64) = 1;
+    *(v367 + 48) = CMemberScriptBinding0<CDOTA_Bot_Script *,int (CDOTA_Bot_Script::*)(void),int>::Call;
+    *(v367 + 56) = CDOTA_Bot_Script::GetLevel;
+    v372 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(p_m_FunctionBindings)];
+    *(v372 + 24) = 5;
+    *(v372 + 16) = "Gets the amount of XP rewarded by killing this unit.";
+    *v372 = "GetBountyXP";
+    *(v372 + 8) = "GetBountyXP";
+    v373 = *(v372 + 26);
+    *(v372 + 25) = 0;
+    v374 = v373 - 1;
+    if ( v374 >= 0 && *(v372 + v374 + 27) == 32 )
+    {
+      v375 = 1;
+      do
+      {
+        --v374;
+        v376 = v375;
+        if ( v374 == -1 )
+        {
+          *(v372 + 25) = v375;
+          goto LABEL_422;
+        }
+        ++v375;
+      }
+      while ( *(v372 + v374 + 27) == 32 );
+      *(v372 + 25) = v376;
+    }
+LABEL_422:
+    *(v372 + 64) = 1;
+    *(v372 + 48) = CMemberScriptBinding0<CDOTA_Bot_Script *,int (CDOTA_Bot_Script::*)(void),int>::Call;
+    *(v372 + 56) = CDOTA_Bot_Script::GetBountyXP;
+    v377 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(p_m_FunctionBindings)];
+    *(v377 + 24) = 5;
+    *(v377 + 16) = "Gets the minimum amount of gold rewarded by killing this unit.";
+    *v377 = "GetBountyGoldMin";
+    *(v377 + 8) = "GetBountyGoldMin";
+    v378 = *(v377 + 26);
+    *(v377 + 25) = 0;
+    v379 = v378 - 1;
+    if ( v379 >= 0 && *(v377 + v379 + 27) == 32 )
+    {
+      v380 = 1;
+      do
+      {
+        --v379;
+        v381 = v380;
+        if ( v379 == -1 )
+        {
+          *(v377 + 25) = v380;
+          goto LABEL_428;
+        }
+        ++v380;
+      }
+      while ( *(v377 + v379 + 27) == 32 );
+      *(v377 + 25) = v381;
+    }
+LABEL_428:
+    *(v377 + 64) = 1;
+    *(v377 + 48) = CMemberScriptBinding0<CDOTA_Bot_Script *,int (CDOTA_Bot_Script::*)(void),int>::Call;
+    *(v377 + 56) = CDOTA_Bot_Script::GetBountyGoldMin;
+    v382 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(p_m_FunctionBindings)];
+    *(v382 + 24) = 5;
+    *(v382 + 16) = "Gets the maximum amount of gold rewarded by killing this unit.";
+    *v382 = "GetBountyGoldMax";
+    *(v382 + 8) = "GetBountyGoldMax";
+    v383 = *(v382 + 26);
+    *(v382 + 25) = 0;
+    v384 = v383 - 1;
+    if ( v384 >= 0 && *(v382 + v384 + 27) == 32 )
+    {
+      v385 = 1;
+      do
+      {
+        --v384;
+        v386 = v385;
+        if ( v384 == -1 )
+        {
+          *(v382 + 25) = v385;
+          goto LABEL_434;
+        }
+        ++v385;
+      }
+      while ( *(v382 + v384 + 27) == 32 );
+      *(v382 + 25) = v386;
+    }
+LABEL_434:
+    *(v382 + 64) = 1;
+    *(v382 + 48) = CMemberScriptBinding0<CDOTA_Bot_Script *,int (CDOTA_Bot_Script::*)(void),int>::Call;
+    *(v382 + 56) = CDOTA_Bot_Script::GetBountyGoldMax;
+    v387 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(p_m_FunctionBindings)];
+    *(v387 + 24) = 5;
+    *(v387 + 16) = "Get the bot's current gold.";
+    *v387 = "GetGold";
+    *(v387 + 8) = "GetGold";
+    v388 = *(v387 + 26);
+    *(v387 + 25) = 0;
+    v389 = v388 - 1;
+    if ( v389 >= 0 && *(v387 + v389 + 27) == 32 )
+    {
+      v390 = 1;
+      do
+      {
+        --v389;
+        v391 = v390;
+        if ( v389 == -1 )
+        {
+          *(v387 + 25) = v390;
+          goto LABEL_440;
+        }
+        ++v390;
+      }
+      while ( *(v387 + v389 + 27) == 32 );
+      *(v387 + 25) = v391;
+    }
+LABEL_440:
+    *(v387 + 64) = 1;
+    *(v387 + 48) = CMemberScriptBinding0<CDOTA_Bot_Script *,int (CDOTA_Bot_Script::*)(void),int>::Call;
+    *(v387 + 56) = CDOTA_Bot_Script::GetGold;
+    v392 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(p_m_FunctionBindings)];
+    *(v392 + 24) = 5;
+    *(v392 + 16) = "Get the value of the items in the bot's stash.";
+    *v392 = "GetStashValue";
+    *(v392 + 8) = "GetStashValue";
+    v393 = *(v392 + 26);
+    *(v392 + 25) = 0;
+    v394 = v393 - 1;
+    if ( v394 >= 0 && *(v392 + v394 + 27) == 32 )
+    {
+      v395 = 1;
+      do
+      {
+        --v394;
+        v396 = v395;
+        if ( v394 == -1 )
+        {
+          *(v392 + 25) = v395;
+          goto LABEL_446;
+        }
+        ++v395;
+      }
+      while ( *(v392 + v394 + 27) == 32 );
+      *(v392 + 25) = v396;
+    }
+LABEL_446:
+    *(v392 + 64) = 1;
+    *(v392 + 48) = CMemberScriptBinding0<CDOTA_Bot_Script *,int (CDOTA_Bot_Script::*)(void),int>::Call;
+    *(v392 + 56) = CDOTA_Bot_Script::GetStashValue;
+    v397 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(p_m_FunctionBindings)];
+    *(v397 + 24) = 5;
+    *(v397 + 16) = "Get the value of items on the courier owned by this bot.";
+    *v397 = "GetCourierValue";
+    *(v397 + 8) = "GetCourierValue";
+    v398 = *(v397 + 26);
+    *(v397 + 25) = 0;
+    v399 = v398 - 1;
+    if ( v399 >= 0 && *(v397 + v399 + 27) == 32 )
+    {
+      v400 = 1;
+      do
+      {
+        --v399;
+        v401 = v400;
+        if ( v399 == -1 )
+        {
+          *(v397 + 25) = v400;
+          goto LABEL_452;
+        }
+        ++v400;
+      }
+      while ( *(v397 + v399 + 27) == 32 );
+      *(v397 + 25) = v401;
+    }
+LABEL_452:
+    *(v397 + 64) = 1;
+    *(v397 + 48) = CMemberScriptBinding0<CDOTA_Bot_Script *,int (CDOTA_Bot_Script::*)(void),int>::Call;
+    *(v397 + 56) = CDOTA_Bot_Script::GetCourierValue;
+    v402 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(p_m_FunctionBindings)];
+    *(v402 + 24) = 3;
+    *(v402 + 16) = "Geta  bot's 2D location.";
+    *v402 = "GetLocation";
+    *(v402 + 8) = "GetLocation";
+    v403 = *(v402 + 26);
+    *(v402 + 25) = 0;
+    v404 = v403 - 1;
+    if ( v404 >= 0 && *(v402 + v404 + 27) == 32 )
+    {
+      v405 = 1;
+      do
+      {
+        --v404;
+        v406 = v405;
+        if ( v404 == -1 )
+        {
+          *(v402 + 25) = v405;
+          goto LABEL_458;
+        }
+        ++v405;
+      }
+      while ( *(v402 + v404 + 27) == 32 );
+      *(v402 + 25) = v406;
+    }
+LABEL_458:
+    *(v402 + 64) = 1;
+    *(v402 + 48) = CMemberScriptBinding0<CDOTA_Bot_Script *,Vector (CDOTA_Bot_Script::*)(void),Vector>::Call;
+    *(v402 + 56) = CDOTA_Bot_Script::GetLocation;
+    v407 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(p_m_FunctionBindings)];
+    *(v407 + 24) = 5;
+    *(v407 + 16) = "Get a bot's facing (0-255).";
+    *v407 = "GetFacing";
+    *(v407 + 8) = "GetFacing";
+    v408 = *(v407 + 26);
+    *(v407 + 25) = 0;
+    v409 = v408 - 1;
+    if ( v409 >= 0 && *(v407 + v409 + 27) == 32 )
+    {
+      v410 = 1;
+      do
+      {
+        --v409;
+        v411 = v410;
+        if ( v409 == -1 )
+        {
+          *(v407 + 25) = v410;
+          goto LABEL_464;
+        }
+        ++v410;
+      }
+      while ( *(v407 + v409 + 27) == 32 );
+      *(v407 + 25) = v411;
+    }
+LABEL_464:
+    *(v407 + 64) = 1;
+    *(v407 + 48) = CMemberScriptBinding0<CDOTA_Bot_Script *,int (CDOTA_Bot_Script::*)(void),int>::Call;
+    *(v407 + 56) = CDOTA_Bot_Script::GetFacing;
+    v412 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(p_m_FunctionBindings)];
+    *(v412 + 24) = 5;
+    *(v412 + 16) = "Get a bot's height value.";
+    *v412 = "GetGroundHeight";
+    *(v412 + 8) = "GetGroundHeight";
+    v413 = *(v412 + 26);
+    *(v412 + 25) = 0;
+    v414 = v413 - 1;
+    if ( v414 >= 0 && *(v412 + v414 + 27) == 32 )
+    {
+      v415 = 1;
+      do
+      {
+        --v414;
+        v416 = v415;
+        if ( v414 == -1 )
+        {
+          *(v412 + 25) = v415;
+          goto LABEL_470;
+        }
+        ++v415;
+      }
+      while ( *(v412 + v414 + 27) == 32 );
+      *(v412 + 25) = v416;
+    }
+LABEL_470:
+    *(v412 + 64) = 1;
+    *(v412 + 48) = CMemberScriptBinding0<CDOTA_Bot_Script *,int (CDOTA_Bot_Script::*)(void),int>::Call;
+    *(v412 + 56) = CDOTA_Bot_Script::GetGroundHeight;
+    v417 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(p_m_FunctionBindings)];
+    *(v417 + 24) = 31;
+    *(v417 + 16) = "Get a bot's ability by name";
+    *v417 = "GetAbilityByName";
+    *(v417 + 8) = "GetAbilityByName";
+    v418 = *(v417 + 26);
+    v419 = v418++;
+    *(v417 + v419 + 27) = 30;
+    *(v417 + 26) = v418;
+    v420 = v418 - 1;
+    *(v417 + 25) = 0;
+    if ( v420 >= 0 && *(v417 + v420 + 27) == 32 )
+    {
+      v421 = 1;
+      do
+      {
+        --v420;
+        v422 = v421;
+        if ( v420 == -1 )
+        {
+          *(v417 + 25) = v421;
+          goto LABEL_476;
+        }
+        ++v421;
+      }
+      while ( *(v417 + v420 + 27) == 32 );
+      *(v417 + 25) = v422;
+    }
+LABEL_476:
+    *(v417 + 64) = 1;
+    *(v417 + 48) = CMemberScriptBinding1<CDOTA_Bot_Script *,HSCRIPT__ * (CDOTA_Bot_Script::*)(char const*),HSCRIPT__ *,char const*>::Call;
+    *(v417 + 56) = CDOTA_Bot_Script::GetAbilityByName;
+    *(v417 + 40) = s_CDOTA_Bot_Script_GetAbilityByName_packed_arg_names;
+    v423 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(p_m_FunctionBindings)];
+    *(v423 + 24) = 31;
+    *(v423 + 16) = "Get a bot's item by slot";
+    *v423 = "GetItemInSlot";
+    *(v423 + 8) = "GetItemInSlot";
+    v424 = *(v423 + 26);
+    v425 = v424++;
+    *(v423 + v425 + 27) = 5;
+    *(v423 + 26) = v424;
+    v426 = v424 - 1;
+    *(v423 + 25) = 0;
+    if ( v426 >= 0 && *(v423 + v426 + 27) == 32 )
+    {
+      v427 = 1;
+      do
+      {
+        --v426;
+        v428 = v427;
+        if ( v426 == -1 )
+        {
+          *(v423 + 25) = v427;
+          goto LABEL_482;
+        }
+        ++v427;
+      }
+      while ( *(v423 + v426 + 27) == 32 );
+      *(v423 + 25) = v428;
+    }
+LABEL_482:
+    *(v423 + 64) = 1;
+    *(v423 + 48) = CMemberScriptBinding1<CDOTA_Bot_Script *,HSCRIPT__ * (CDOTA_Bot_Script::*)(int),HSCRIPT__ *,int>::Call;
+    *(v423 + 56) = CDOTA_Bot_Script::GetItemInSlot;
+    *(v423 + 40) = s_CDOTA_Bot_Script_GetItemInSlot_packed_arg_names;
+    v429 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(p_m_FunctionBindings)];
+    *(v429 + 24) = 5;
+    *(v429 + 16) = "Get the slot a named item is in";
+    *v429 = "FindItemSlot";
+    *(v429 + 8) = "FindItemSlot";
+    v430 = *(v429 + 26);
+    v431 = v430++;
+    *(v429 + v431 + 27) = 30;
+    *(v429 + 26) = v430;
+    v432 = v430 - 1;
+    *(v429 + 25) = 0;
+    if ( v432 >= 0 && *(v429 + v432 + 27) == 32 )
+    {
+      v433 = 1;
+      do
+      {
+        --v432;
+        v434 = v433;
+        if ( v432 == -1 )
+        {
+          *(v429 + 25) = v433;
+          goto LABEL_488;
+        }
+        ++v433;
+      }
+      while ( *(v429 + v432 + 27) == 32 );
+      *(v429 + 25) = v434;
+    }
+LABEL_488:
+    *(v429 + 64) = 1;
+    *(v429 + 48) = CMemberScriptBinding1<CDOTA_Bot_Script *,int (CDOTA_Bot_Script::*)(char const*),int,char const*>::Call;
+    *(v429 + 56) = CDOTA_Bot_Script::FindItemSlot;
+    *(v429 + 40) = s_CDOTA_Bot_Script_FindItemSlot_packed_arg_names;
+    v435 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(p_m_FunctionBindings)];
+    *(v435 + 24) = 5;
+    *(v435 + 16) = "Get the type of the specified item slot";
+    *v435 = "GetItemSlotType";
+    *(v435 + 8) = "GetItemSlotType";
+    v436 = *(v435 + 26);
+    v437 = v436++;
+    *(v435 + v437 + 27) = 5;
+    *(v435 + 26) = v436;
+    v438 = v436 - 1;
+    *(v435 + 25) = 0;
+    if ( v438 >= 0 && *(v435 + v438 + 27) == 32 )
+    {
+      v439 = 1;
+      do
+      {
+        --v438;
+        v440 = v439;
+        if ( v438 == -1 )
+        {
+          *(v435 + 25) = v439;
+          goto LABEL_494;
+        }
+        ++v439;
+      }
+      while ( *(v435 + v438 + 27) == 32 );
+      *(v435 + 25) = v440;
+    }
+LABEL_494:
+    *(v435 + 64) = 1;
+    *(v435 + 48) = CMemberScriptBinding1<CDOTA_Bot_Script *,int (CDOTA_Bot_Script::*)(int),int,int>::Call;
+    *(v435 + 56) = CDOTA_Bot_Script::GetItemSlotType;
+    *(v435 + 40) = s_CDOTA_Bot_Script_GetItemSlotType_packed_arg_names;
+    v441 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(p_m_FunctionBindings)];
+    *(v441 + 24) = 6;
+    *(v441 + 16) = "Is this bot currently channeling an ability?";
+    *v441 = "IsChanneling";
+    *(v441 + 8) = "IsChanneling";
+    v442 = *(v441 + 26);
+    *(v441 + 25) = 0;
+    v443 = v442 - 1;
+    if ( v443 >= 0 && *(v441 + v443 + 27) == 32 )
+    {
+      v444 = 1;
+      do
+      {
+        --v443;
+        v445 = v444;
+        if ( v443 == -1 )
+        {
+          *(v441 + 25) = v444;
+          goto LABEL_500;
+        }
+        ++v444;
+      }
+      while ( *(v441 + v443 + 27) == 32 );
+      *(v441 + 25) = v445;
+    }
+LABEL_500:
+    *(v441 + 64) = 1;
+    *(v441 + 48) = CMemberScriptBinding0<CDOTA_Bot_Script *,bool (CDOTA_Bot_Script::*)(void),bool>::Call;
+    *(v441 + 56) = CDOTA_Bot_Script::IsChanneling;
+    v446 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(p_m_FunctionBindings)];
+    *(v446 + 24) = 6;
+    *(v446 + 16) = "Is this bot currently casting an ability?";
+    *v446 = "IsUsingAbility";
+    *(v446 + 8) = "IsUsingAbility";
+    v447 = *(v446 + 26);
+    *(v446 + 25) = 0;
+    v448 = v447 - 1;
+    if ( v448 >= 0 && *(v446 + v448 + 27) == 32 )
+    {
+      v449 = 1;
+      do
+      {
+        --v448;
+        v450 = v449;
+        if ( v448 == -1 )
+        {
+          *(v446 + 25) = v449;
+          goto LABEL_506;
+        }
+        ++v449;
+      }
+      while ( *(v446 + v448 + 27) == 32 );
+      *(v446 + 25) = v450;
+    }
+LABEL_506:
+    *(v446 + 64) = 1;
+    *(v446 + 48) = CMemberScriptBinding0<CDOTA_Bot_Script *,bool (CDOTA_Bot_Script::*)(void),bool>::Call;
+    *(v446 + 56) = CDOTA_Bot_Script::IsUsingAbility;
+    v451 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(p_m_FunctionBindings)];
+    *(v451 + 24) = 31;
+    *(v451 + 16) = "Get the ability this bot is currently casting.";
+    *v451 = "GetCurrentActiveAbility";
+    *(v451 + 8) = "GetCurrentActiveAbility";
+    v452 = *(v451 + 26);
+    *(v451 + 25) = 0;
+    v453 = v452 - 1;
+    if ( v453 >= 0 && *(v451 + v453 + 27) == 32 )
+    {
+      v454 = 1;
+      do
+      {
+        --v453;
+        v455 = v454;
+        if ( v453 == -1 )
+        {
+          *(v451 + 25) = v454;
+          goto LABEL_512;
+        }
+        ++v454;
+      }
+      while ( *(v451 + v453 + 27) == 32 );
+      *(v451 + 25) = v455;
+    }
+LABEL_512:
+    *(v451 + 64) = 1;
+    *(v451 + 48) = CMemberScriptBinding0<CDOTA_Bot_Script *,HSCRIPT__ * (CDOTA_Bot_Script::*)(void),HSCRIPT__ *>::Call;
+    *(v451 + 56) = CDOTA_Bot_Script::GetCurrentActiveAbility;
+    v456 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(p_m_FunctionBindings)];
+    *(v456 + 24) = 6;
+    *(v456 + 16) = "Does the bot have a queued action currently?";
+    *v456 = "HasQueuedAction";
+    *(v456 + 8) = "HasQueuedAction";
+    v457 = *(v456 + 26);
+    *(v456 + 25) = 0;
+    v458 = v457 - 1;
+    if ( v458 >= 0 && *(v456 + v458 + 27) == 32 )
+    {
+      v459 = 1;
+      do
+      {
+        --v458;
+        v460 = v459;
+        if ( v458 == -1 )
+        {
+          *(v456 + 25) = v459;
+          goto LABEL_518;
+        }
+        ++v459;
+      }
+      while ( *(v456 + v458 + 27) == 32 );
+      *(v456 + 25) = v460;
+    }
+LABEL_518:
+    *(v456 + 64) = 1;
+    *(v456 + 48) = CMemberScriptBinding0<CDOTA_Bot_Script *,bool (CDOTA_Bot_Script::*)(void),bool>::Call;
+    *(v456 + 56) = CDOTA_Bot_Script::HasQueuedAction;
+    v461 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(p_m_FunctionBindings)];
+    *(v461 + 24) = 3;
+    *(v461 + 16) = "Get the velocity the unit has moved over the last two seconds.";
+    *v461 = "GetVelocity";
+    *(v461 + 8) = "GetVelocity";
+    v462 = *(v461 + 26);
+    *(v461 + 25) = 0;
+    v463 = v462 - 1;
+    if ( v463 >= 0 && *(v461 + v463 + 27) == 32 )
+    {
+      v464 = 1;
+      do
+      {
+        --v463;
+        v465 = v464;
+        if ( v463 == -1 )
+        {
+          *(v461 + 25) = v464;
+          goto LABEL_524;
+        }
+        ++v464;
+      }
+      while ( *(v461 + v463 + 27) == 32 );
+      *(v461 + 25) = v465;
+    }
+LABEL_524:
+    *(v461 + 64) = 1;
+    *(v461 + 48) = CMemberScriptBinding0<CDOTA_Bot_Script *,Vector (CDOTA_Bot_Script::*)(void),Vector>::Call;
+    *(v461 + 56) = CDOTA_Bot_Script::GetVelocity;
+    v466 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(p_m_FunctionBindings)];
+    *(v466 + 24) = 31;
+    *(v466 + 16) = "Get the unit being attacked.";
+    *v466 = "GetAttackTarget";
+    *(v466 + 8) = "GetAttackTarget";
+    v467 = *(v466 + 26);
+    *(v466 + 25) = 0;
+    v468 = v467 - 1;
+    if ( v468 >= 0 && *(v466 + v468 + 27) == 32 )
+    {
+      v469 = 1;
+      do
+      {
+        --v468;
+        v470 = v469;
+        if ( v468 == -1 )
+        {
+          *(v466 + 25) = v469;
+          goto LABEL_530;
+        }
+        ++v469;
+      }
+      while ( *(v466 + v468 + 27) == 32 );
+      *(v466 + 25) = v470;
+    }
+LABEL_530:
+    *(v466 + 64) = 1;
+    *(v466 + 48) = CMemberScriptBinding0<CDOTA_Bot_Script *,HSCRIPT__ * (CDOTA_Bot_Script::*)(void),HSCRIPT__ *>::Call;
+    *(v466 + 56) = CDOTA_Bot_Script::GetAttackTarget;
+    v471 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(p_m_FunctionBindings)];
+    *(v471 + 24) = 3;
+    *(v471 + 16) = "Get the location at which this unit was last seen.";
+    *v471 = "GetLastSeenLocation";
+    *(v471 + 8) = "GetLastSeenLocation";
+    v472 = *(v471 + 26);
+    *(v471 + 25) = 0;
+    v473 = v472 - 1;
+    if ( v473 >= 0 && *(v471 + v473 + 27) == 32 )
+    {
+      v474 = 1;
+      do
+      {
+        --v473;
+        v475 = v474;
+        if ( v473 == -1 )
+        {
+          *(v471 + 25) = v474;
+          goto LABEL_536;
+        }
+        ++v474;
+      }
+      while ( *(v471 + v473 + 27) == 32 );
+      *(v471 + 25) = v475;
+    }
+LABEL_536:
+    *(v471 + 64) = 1;
+    *(v471 + 48) = CMemberScriptBinding0<CDOTA_Bot_Script *,Vector (CDOTA_Bot_Script::*)(void),Vector>::Call;
+    *(v471 + 56) = CDOTA_Bot_Script::GetLastSeenLocation;
+    v476 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(p_m_FunctionBindings)];
+    *(v476 + 24) = 1;
+    *(v476 + 16) = "Get how long it's been since the unit was seen.";
+    *v476 = "GetTimeSinceLastSeen";
+    *(v476 + 8) = "GetTimeSinceLastSeen";
+    v477 = *(v476 + 26);
+    *(v476 + 25) = 0;
+    v478 = v477 - 1;
+    if ( v478 >= 0 && *(v476 + v478 + 27) == 32 )
+    {
+      v479 = 1;
+      do
+      {
+        --v478;
+        v480 = v479;
+        if ( v478 == -1 )
+        {
+          *(v476 + 25) = v479;
+          goto LABEL_542;
+        }
+        ++v479;
+      }
+      while ( *(v476 + v478 + 27) == 32 );
+      *(v476 + 25) = v480;
+    }
+LABEL_542:
+    *(v476 + 64) = 1;
+    *(v476 + 48) = CMemberScriptBinding0<CDOTA_Bot_Script *,float (CDOTA_Bot_Script::*)(void),float>::Call;
+    *(v476 + 56) = CDOTA_Bot_Script::GetTimeSinceLastSeen;
+    v481 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(p_m_FunctionBindings)];
+    *(v481 + 24) = 6;
+    *(v481 + 16) = "Is the unit rooted?";
+    *v481 = "IsRooted";
+    *(v481 + 8) = "IsRooted";
+    v482 = *(v481 + 26);
+    *(v481 + 25) = 0;
+    v483 = v482 - 1;
+    if ( v483 >= 0 && *(v481 + v483 + 27) == 32 )
+    {
+      v484 = 1;
+      do
+      {
+        --v483;
+        v485 = v484;
+        if ( v483 == -1 )
+        {
+          *(v481 + 25) = v484;
+          goto LABEL_548;
+        }
+        ++v484;
+      }
+      while ( *(v481 + v483 + 27) == 32 );
+      *(v481 + 25) = v485;
+    }
+LABEL_548:
+    *(v481 + 64) = 1;
+    *(v481 + 48) = CMemberScriptBinding0<CDOTA_Bot_Script *,bool (CDOTA_Bot_Script::*)(void),bool>::Call;
+    *(v481 + 56) = CDOTA_Bot_Script::IsRooted;
+    v486 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(p_m_FunctionBindings)];
+    *(v486 + 24) = 6;
+    *(v486 + 16) = "Is the unit disarmed?";
+    *v486 = "IsDisarmed";
+    *(v486 + 8) = "IsDisarmed";
+    v487 = *(v486 + 26);
+    *(v486 + 25) = 0;
+    v488 = v487 - 1;
+    if ( v488 >= 0 && *(v486 + v488 + 27) == 32 )
+    {
+      v489 = 1;
+      do
+      {
+        --v488;
+        v490 = v489;
+        if ( v488 == -1 )
+        {
+          *(v486 + 25) = v489;
+          goto LABEL_554;
+        }
+        ++v489;
+      }
+      while ( *(v486 + v488 + 27) == 32 );
+      *(v486 + 25) = v490;
+    }
+LABEL_554:
+    *(v486 + 64) = 1;
+    *(v486 + 48) = CMemberScriptBinding0<CDOTA_Bot_Script *,bool (CDOTA_Bot_Script::*)(void),bool>::Call;
+    *(v486 + 56) = CDOTA_Bot_Script::IsDisarmed;
+    v491 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(p_m_FunctionBindings)];
+    *(v491 + 24) = 6;
+    *(v491 + 16) = "Is the unit attack immune?";
+    *v491 = "IsAttackImmune";
+    *(v491 + 8) = "IsAttackImmune";
+    v492 = *(v491 + 26);
+    *(v491 + 25) = 0;
+    v493 = v492 - 1;
+    if ( v493 >= 0 && *(v491 + v493 + 27) == 32 )
+    {
+      v494 = 1;
+      do
+      {
+        --v493;
+        v495 = v494;
+        if ( v493 == -1 )
+        {
+          *(v491 + 25) = v494;
+          goto LABEL_560;
+        }
+        ++v494;
+      }
+      while ( *(v491 + v493 + 27) == 32 );
+      *(v491 + 25) = v495;
+    }
+LABEL_560:
+    *(v491 + 64) = 1;
+    *(v491 + 48) = CMemberScriptBinding0<CDOTA_Bot_Script *,bool (CDOTA_Bot_Script::*)(void),bool>::Call;
+    *(v491 + 56) = CDOTA_Bot_Script::IsAttackImmune;
+    v496 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(p_m_FunctionBindings)];
+    *(v496 + 24) = 6;
+    *(v496 + 16) = "Is the unit silenced?";
+    *v496 = "IsSilenced";
+    *(v496 + 8) = "IsSilenced";
+    v497 = *(v496 + 26);
+    *(v496 + 25) = 0;
+    v498 = v497 - 1;
+    if ( v498 >= 0 && *(v496 + v498 + 27) == 32 )
+    {
+      v499 = 1;
+      do
+      {
+        --v498;
+        v500 = v499;
+        if ( v498 == -1 )
+        {
+          *(v496 + 25) = v499;
+          goto LABEL_566;
+        }
+        ++v499;
+      }
+      while ( *(v496 + v498 + 27) == 32 );
+      *(v496 + 25) = v500;
+    }
+LABEL_566:
+    *(v496 + 64) = 1;
+    *(v496 + 48) = CMemberScriptBinding0<CDOTA_Bot_Script *,bool (CDOTA_Bot_Script::*)(void),bool>::Call;
+    *(v496 + 56) = CDOTA_Bot_Script::IsSilenced;
+    v501 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(p_m_FunctionBindings)];
+    *(v501 + 24) = 6;
+    *(v501 + 16) = "Is the unit muted?";
+    *v501 = "IsMuted";
+    *(v501 + 8) = "IsMuted";
+    v502 = *(v501 + 26);
+    *(v501 + 25) = 0;
+    v503 = v502 - 1;
+    if ( v503 >= 0 && *(v501 + v503 + 27) == 32 )
+    {
+      v504 = 1;
+      do
+      {
+        --v503;
+        v505 = v504;
+        if ( v503 == -1 )
+        {
+          *(v501 + 25) = v504;
+          goto LABEL_572;
+        }
+        ++v504;
+      }
+      while ( *(v501 + v503 + 27) == 32 );
+      *(v501 + 25) = v505;
+    }
+LABEL_572:
+    *(v501 + 64) = 1;
+    *(v501 + 48) = CMemberScriptBinding0<CDOTA_Bot_Script *,bool (CDOTA_Bot_Script::*)(void),bool>::Call;
+    *(v501 + 56) = CDOTA_Bot_Script::IsMuted;
+    v506 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(p_m_FunctionBindings)];
+    *(v506 + 24) = 6;
+    *(v506 + 16) = "Is the unit stunned?";
+    *v506 = "IsStunned";
+    *(v506 + 8) = "IsStunned";
+    v507 = *(v506 + 26);
+    *(v506 + 25) = 0;
+    v508 = v507 - 1;
+    if ( v508 >= 0 && *(v506 + v508 + 27) == 32 )
+    {
+      v509 = 1;
+      do
+      {
+        --v508;
+        v510 = v509;
+        if ( v508 == -1 )
+        {
+          *(v506 + 25) = v509;
+          goto LABEL_578;
+        }
+        ++v509;
+      }
+      while ( *(v506 + v508 + 27) == 32 );
+      *(v506 + 25) = v510;
+    }
+LABEL_578:
+    *(v506 + 64) = 1;
+    *(v506 + 48) = CMemberScriptBinding0<CDOTA_Bot_Script *,bool (CDOTA_Bot_Script::*)(void),bool>::Call;
+    *(v506 + 56) = CDOTA_Bot_Script::IsStunned;
+    v511 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(p_m_FunctionBindings)];
+    *(v511 + 24) = 6;
+    *(v511 + 16) = "Is the unit hexed?";
+    *v511 = "IsHexed";
+    *(v511 + 8) = "IsHexed";
+    v512 = *(v511 + 26);
+    *(v511 + 25) = 0;
+    v513 = v512 - 1;
+    if ( v513 >= 0 && *(v511 + v513 + 27) == 32 )
+    {
+      v514 = 1;
+      do
+      {
+        --v513;
+        v515 = v514;
+        if ( v513 == -1 )
+        {
+          *(v511 + 25) = v514;
+          goto LABEL_584;
+        }
+        ++v514;
+      }
+      while ( *(v511 + v513 + 27) == 32 );
+      *(v511 + 25) = v515;
+    }
+LABEL_584:
+    *(v511 + 64) = 1;
+    *(v511 + 48) = CMemberScriptBinding0<CDOTA_Bot_Script *,bool (CDOTA_Bot_Script::*)(void),bool>::Call;
+    *(v511 + 56) = CDOTA_Bot_Script::IsHexed;
+    v516 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(p_m_FunctionBindings)];
+    *(v516 + 24) = 6;
+    *(v516 + 16) = "Is the unit invulnerable?";
+    *v516 = "IsInvulnerable";
+    *(v516 + 8) = "IsInvulnerable";
+    v517 = *(v516 + 26);
+    *(v516 + 25) = 0;
+    v518 = v517 - 1;
+    if ( v518 >= 0 && *(v516 + v518 + 27) == 32 )
+    {
+      v519 = 1;
+      do
+      {
+        --v518;
+        v520 = v519;
+        if ( v518 == -1 )
+        {
+          *(v516 + 25) = v519;
+          goto LABEL_590;
+        }
+        ++v519;
+      }
+      while ( *(v516 + v518 + 27) == 32 );
+      *(v516 + 25) = v520;
+    }
+LABEL_590:
+    *(v516 + 64) = 1;
+    *(v516 + 48) = CMemberScriptBinding0<CDOTA_Bot_Script *,bool (CDOTA_Bot_Script::*)(void),bool>::Call;
+    *(v516 + 56) = CDOTA_Bot_Script::IsInvulnerable;
+    v521 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(p_m_FunctionBindings)];
+    *(v521 + 24) = 6;
+    *(v521 + 16) = "Is the unit invisible?";
+    *v521 = "IsInvisible";
+    *(v521 + 8) = "IsInvisible";
+    v522 = *(v521 + 26);
+    *(v521 + 25) = 0;
+    v523 = v522 - 1;
+    if ( v523 >= 0 && *(v521 + v523 + 27) == 32 )
+    {
+      v524 = 1;
+      do
+      {
+        --v523;
+        v525 = v524;
+        if ( v523 == -1 )
+        {
+          *(v521 + 25) = v524;
+          goto LABEL_596;
+        }
+        ++v524;
+      }
+      while ( *(v521 + v523 + 27) == 32 );
+      *(v521 + 25) = v525;
+    }
+LABEL_596:
+    *(v521 + 64) = 1;
+    *(v521 + 48) = CMemberScriptBinding0<CDOTA_Bot_Script *,bool (CDOTA_Bot_Script::*)(void),bool>::Call;
+    *(v521 + 56) = CDOTA_Bot_Script::IsInvisible;
+    v526 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(p_m_FunctionBindings)];
+    *(v526 + 24) = 6;
+    *(v526 + 16) = "Is the unit magic immune?";
+    *v526 = "IsMagicImmune";
+    *(v526 + 8) = "IsMagicImmune";
+    v527 = *(v526 + 26);
+    *(v526 + 25) = 0;
+    v528 = v527 - 1;
+    if ( v528 >= 0 && *(v526 + v528 + 27) == 32 )
+    {
+      v529 = 1;
+      do
+      {
+        --v528;
+        v530 = v529;
+        if ( v528 == -1 )
+        {
+          *(v526 + 25) = v529;
+          goto LABEL_602;
+        }
+        ++v529;
+      }
+      while ( *(v526 + v528 + 27) == 32 );
+      *(v526 + 25) = v530;
+    }
+LABEL_602:
+    *(v526 + 64) = 1;
+    *(v526 + 48) = CMemberScriptBinding0<CDOTA_Bot_Script *,bool (CDOTA_Bot_Script::*)(void),bool>::Call;
+    *(v526 + 56) = CDOTA_Bot_Script::IsMagicImmune;
+    v531 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(p_m_FunctionBindings)];
+    *(v531 + 24) = 6;
+    *(v531 + 16) = "Is the unit nightmared?";
+    *v531 = "IsNightmared";
+    *(v531 + 8) = "IsNightmared";
+    v532 = *(v531 + 26);
+    *(v531 + 25) = 0;
+    v533 = v532 - 1;
+    if ( v533 >= 0 && *(v531 + v533 + 27) == 32 )
+    {
+      v534 = 1;
+      do
+      {
+        --v533;
+        v535 = v534;
+        if ( v533 == -1 )
+        {
+          *(v531 + 25) = v534;
+          goto LABEL_608;
+        }
+        ++v534;
+      }
+      while ( *(v531 + v533 + 27) == 32 );
+      *(v531 + 25) = v535;
+    }
+LABEL_608:
+    *(v531 + 64) = 1;
+    *(v531 + 48) = CMemberScriptBinding0<CDOTA_Bot_Script *,bool (CDOTA_Bot_Script::*)(void),bool>::Call;
+    *(v531 + 56) = CDOTA_Bot_Script::IsNightmared;
+    v536 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(p_m_FunctionBindings)];
+    *(v536 + 24) = 6;
+    *(v536 + 16) = "Is the unit block disabled?";
+    *v536 = "IsBlockDisabled";
+    *(v536 + 8) = "IsBlockDisabled";
+    v537 = *(v536 + 26);
+    *(v536 + 25) = 0;
+    v538 = v537 - 1;
+    if ( v538 >= 0 && *(v536 + v538 + 27) == 32 )
+    {
+      v539 = 1;
+      do
+      {
+        --v538;
+        v540 = v539;
+        if ( v538 == -1 )
+        {
+          *(v536 + 25) = v539;
+          goto LABEL_614;
+        }
+        ++v539;
+      }
+      while ( *(v536 + v538 + 27) == 32 );
+      *(v536 + 25) = v540;
+    }
+LABEL_614:
+    *(v536 + 64) = 1;
+    *(v536 + 48) = CMemberScriptBinding0<CDOTA_Bot_Script *,bool (CDOTA_Bot_Script::*)(void),bool>::Call;
+    *(v536 + 56) = CDOTA_Bot_Script::IsBlockDisabled;
+    v541 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(p_m_FunctionBindings)];
+    *(v541 + 24) = 6;
+    *(v541 + 16) = "Is the unit evade disabled?";
+    *v541 = "IsEvadeDisabled";
+    *(v541 + 8) = "IsEvadeDisabled";
+    v542 = *(v541 + 26);
+    *(v541 + 25) = 0;
+    v543 = v542 - 1;
+    if ( v543 >= 0 && *(v541 + v543 + 27) == 32 )
+    {
+      v544 = 1;
+      do
+      {
+        --v543;
+        v545 = v544;
+        if ( v543 == -1 )
+        {
+          *(v541 + 25) = v544;
+          goto LABEL_620;
+        }
+        ++v544;
+      }
+      while ( *(v541 + v543 + 27) == 32 );
+      *(v541 + 25) = v545;
+    }
+LABEL_620:
+    *(v541 + 64) = 1;
+    *(v541 + 48) = CMemberScriptBinding0<CDOTA_Bot_Script *,bool (CDOTA_Bot_Script::*)(void),bool>::Call;
+    *(v541 + 56) = CDOTA_Bot_Script::IsEvadeDisabled;
+    v546 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(p_m_FunctionBindings)];
+    *(v546 + 24) = 6;
+    *(v546 + 16) = "Is the unit unable to miss?";
+    *v546 = "IsUnableToMiss";
+    *(v546 + 8) = "IsUnableToMiss";
+    v547 = *(v546 + 26);
+    *(v546 + 25) = 0;
+    v548 = v547 - 1;
+    if ( v548 >= 0 && *(v546 + v548 + 27) == 32 )
+    {
+      v549 = 1;
+      do
+      {
+        --v548;
+        v550 = v549;
+        if ( v548 == -1 )
+        {
+          *(v546 + 25) = v549;
+          goto LABEL_626;
+        }
+        ++v549;
+      }
+      while ( *(v546 + v548 + 27) == 32 );
+      *(v546 + 25) = v550;
+    }
+LABEL_626:
+    *(v546 + 64) = 1;
+    *(v546 + 48) = CMemberScriptBinding0<CDOTA_Bot_Script *,bool (CDOTA_Bot_Script::*)(void),bool>::Call;
+    *(v546 + 56) = CDOTA_Bot_Script::IsUnableToMiss;
+    v551 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(p_m_FunctionBindings)];
+    *(v551 + 24) = 6;
+    *(v551 + 16) = "Is the unit specially deniable?";
+    *v551 = "IsSpeciallyDeniable";
+    *(v551 + 8) = "IsSpeciallyDeniable";
+    v552 = *(v551 + 26);
+    *(v551 + 25) = 0;
+    v553 = v552 - 1;
+    if ( v553 >= 0 && *(v551 + v553 + 27) == 32 )
+    {
+      v554 = 1;
+      do
+      {
+        --v553;
+        v555 = v554;
+        if ( v553 == -1 )
+        {
+          *(v551 + 25) = v554;
+          goto LABEL_632;
+        }
+        ++v554;
+      }
+      while ( *(v551 + v553 + 27) == 32 );
+      *(v551 + 25) = v555;
+    }
+LABEL_632:
+    *(v551 + 64) = 1;
+    *(v551 + 48) = CMemberScriptBinding0<CDOTA_Bot_Script *,bool (CDOTA_Bot_Script::*)(void),bool>::Call;
+    *(v551 + 56) = CDOTA_Bot_Script::IsSpeciallyDeniable;
+    v556 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(p_m_FunctionBindings)];
+    *(v556 + 24) = 6;
+    *(v556 + 16) = "Is the unit dominated?";
+    *v556 = "IsDominated";
+    *(v556 + 8) = "IsDominated";
+    v557 = *(v556 + 26);
+    *(v556 + 25) = 0;
+    v558 = v557 - 1;
+    if ( v558 >= 0 && *(v556 + v558 + 27) == 32 )
+    {
+      v559 = 1;
+      do
+      {
+        --v558;
+        v560 = v559;
+        if ( v558 == -1 )
+        {
+          *(v556 + 25) = v559;
+          goto LABEL_638;
+        }
+        ++v559;
+      }
+      while ( *(v556 + v558 + 27) == 32 );
+      *(v556 + 25) = v560;
+    }
+LABEL_638:
+    *(v556 + 64) = 1;
+    *(v556 + 48) = CMemberScriptBinding0<CDOTA_Bot_Script *,bool (CDOTA_Bot_Script::*)(void),bool>::Call;
+    *(v556 + 56) = CDOTA_Bot_Script::IsDominated;
+    v561 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(p_m_FunctionBindings)];
+    *(v561 + 24) = 6;
+    *(v561 + 16) = "Is the unit blind?";
+    *v561 = "IsBlind";
+    *(v561 + 8) = "IsBlind";
+    v562 = *(v561 + 26);
+    *(v561 + 25) = 0;
+    v563 = v562 - 1;
+    if ( v563 >= 0 && *(v561 + v563 + 27) == 32 )
+    {
+      v564 = 1;
+      do
+      {
+        --v563;
+        v565 = v564;
+        if ( v563 == -1 )
+        {
+          *(v561 + 25) = v564;
+          goto LABEL_644;
+        }
+        ++v564;
+      }
+      while ( *(v561 + v563 + 27) == 32 );
+      *(v561 + 25) = v565;
+    }
+LABEL_644:
+    *(v561 + 64) = 1;
+    *(v561 + 48) = CMemberScriptBinding0<CDOTA_Bot_Script *,bool (CDOTA_Bot_Script::*)(void),bool>::Call;
+    *(v561 + 56) = CDOTA_Bot_Script::IsBlind;
+    v566 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(p_m_FunctionBindings)];
+    *(v566 + 24) = 6;
+    *(v566 + 16) = "Does the unit have Aghanim's Scepter?";
+    *v566 = "HasScepter";
+    *(v566 + 8) = "HasScepter";
+    v567 = *(v566 + 26);
+    *(v566 + 25) = 0;
+    v568 = v567 - 1;
+    if ( v568 >= 0 && *(v566 + v568 + 27) == 32 )
+    {
+      v569 = 1;
+      do
+      {
+        --v568;
+        v570 = v569;
+        if ( v568 == -1 )
+        {
+          *(v566 + 25) = v569;
+          goto LABEL_650;
+        }
+        ++v569;
+      }
+      while ( *(v566 + v568 + 27) == 32 );
+      *(v566 + 25) = v570;
+    }
+LABEL_650:
+    *(v566 + 64) = 1;
+    *(v566 + 48) = CMemberScriptBinding0<CDOTA_Bot_Script *,bool (CDOTA_Bot_Script::*)(void),bool>::Call;
+    *(v566 + 56) = CDOTA_Bot_Script::HasScepter;
+    v571 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(p_m_FunctionBindings)];
+    *(v571 + 24) = 6;
+    *(v571 + 16) = "Was the unit recently damaged by any enemy?";
+    *v571 = "WasRecentlyDamagedByAnyHero";
+    *(v571 + 8) = "WasRecentlyDamagedByAnyHero";
+    v572 = *(v571 + 26);
+    v573 = v572++;
+    *(v571 + v573 + 27) = 1;
+    *(v571 + 26) = v572;
+    v574 = v572 - 1;
+    *(v571 + 25) = 0;
+    if ( v574 >= 0 && *(v571 + v574 + 27) == 32 )
+    {
+      v575 = 1;
+      do
+      {
+        --v574;
+        v576 = v575;
+        if ( v574 == -1 )
+        {
+          *(v571 + 25) = v575;
+          goto LABEL_656;
+        }
+        ++v575;
+      }
+      while ( *(v571 + v574 + 27) == 32 );
+      *(v571 + 25) = v576;
+    }
+LABEL_656:
+    *(v571 + 64) = 1;
+    *(v571 + 48) = CMemberScriptBinding1<CDOTA_Bot_Script *,bool (CDOTA_Bot_Script::*)(float),bool,float>::Call;
+    *(v571 + 56) = CDOTA_Bot_Script::WasRecentlyDamagedByAnyHero;
+    *(v571 + 40) = s_CDOTA_Bot_Script_WasRecentlyDamagedByAnyHero_packed_arg_names;
+    v577 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(p_m_FunctionBindings)];
+    *(v577 + 24) = 1;
+    *(v577 + 16) = "How long as it been since the unit was damaged by any enemy?";
+    *v577 = "TimeSinceDamagedByAnyHero";
+    *(v577 + 8) = "TimeSinceDamagedByAnyHero";
+    v578 = *(v577 + 26);
+    *(v577 + 25) = 0;
+    v579 = v578 - 1;
+    if ( v579 >= 0 && *(v577 + v579 + 27) == 32 )
+    {
+      v580 = 1;
+      do
+      {
+        --v579;
+        v581 = v580;
+        if ( v579 == -1 )
+        {
+          *(v577 + 25) = v580;
+          goto LABEL_662;
+        }
+        ++v580;
+      }
+      while ( *(v577 + v579 + 27) == 32 );
+      *(v577 + 25) = v581;
+    }
+LABEL_662:
+    *(v577 + 64) = 1;
+    *(v577 + 48) = CMemberScriptBinding0<CDOTA_Bot_Script *,float (CDOTA_Bot_Script::*)(void),float>::Call;
+    *(v577 + 56) = CDOTA_Bot_Script::TimeSinceDamagedByAnyHero;
+    v582 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(p_m_FunctionBindings)];
+    *(v582 + 24) = 6;
+    *(v582 + 16) = "Was the unit recently damaged by an specific enemy?";
+    *v582 = "WasRecentlyDamagedByHero";
+    *(v582 + 8) = "WasRecentlyDamagedByHero";
+    v583 = *(v582 + 26);
+    *(v582 + v583 + 27) = 31;
+    v584 = v583 + 1;
+    v583 += 2;
+    *(v582 + v584 + 27) = 1;
+    *(v582 + 26) = v583;
+    v585 = v583 - 1;
+    *(v582 + 25) = 0;
+    if ( v585 >= 0 && *(v582 + v585 + 27) == 32 )
+    {
+      v586 = 1;
+      do
+      {
+        --v585;
+        v587 = v586;
+        if ( v585 == -1 )
+        {
+          *(v582 + 25) = v586;
+          goto LABEL_668;
+        }
+        ++v586;
+      }
+      while ( *(v582 + v585 + 27) == 32 );
+      *(v582 + 25) = v587;
+    }
+LABEL_668:
+    *(v582 + 64) = 1;
+    *(v582 + 48) = CMemberScriptBinding2<CDOTA_Bot_Script *,bool (CDOTA_Bot_Script::*)(HSCRIPT__ *,float),bool,HSCRIPT__ *,float>::Call;
+    *(v582 + 56) = CDOTA_Bot_Script::WasRecentlyDamagedByHero;
+    *(v582 + 40) = s_CDOTA_Bot_Script_WasRecentlyDamagedByHero_packed_arg_names;
+    v588 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(p_m_FunctionBindings)];
+    *(v588 + 24) = 1;
+    *(v588 + 16) = "How long as it been since the unit was damaged by an specific enemy?";
+    *v588 = "TimeSinceDamagedByHero";
+    *(v588 + 8) = "TimeSinceDamagedByHero";
+    v589 = *(v588 + 26);
+    v590 = v589++;
+    *(v588 + v590 + 27) = 31;
+    *(v588 + 26) = v589;
+    v591 = v589 - 1;
+    *(v588 + 25) = 0;
+    if ( v591 >= 0 && *(v588 + v591 + 27) == 32 )
+    {
+      v592 = 1;
+      do
+      {
+        --v591;
+        v593 = v592;
+        if ( v591 == -1 )
+        {
+          *(v588 + 25) = v592;
+          goto LABEL_674;
+        }
+        ++v592;
+      }
+      while ( *(v588 + v591 + 27) == 32 );
+      *(v588 + 25) = v593;
+    }
+LABEL_674:
+    *(v588 + 64) = 1;
+    *(v588 + 48) = CMemberScriptBinding1<CDOTA_Bot_Script *,float (CDOTA_Bot_Script::*)(HSCRIPT__ *),float,HSCRIPT__ *>::Call;
+    *(v588 + 56) = CDOTA_Bot_Script::TimeSinceDamagedByHero;
+    *(v588 + 40) = s_CDOTA_Bot_Script_TimeSinceDamagedByHero_packed_arg_names;
+    v594 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(p_m_FunctionBindings)];
+    *(v594 + 24) = 6;
+    *(v594 + 16) = "Was the unit recently damaged by a tower?";
+    *v594 = "WasRecentlyDamagedByTower";
+    *(v594 + 8) = "WasRecentlyDamagedByTower";
+    v595 = *(v594 + 26);
+    v596 = v595++;
+    *(v594 + v596 + 27) = 1;
+    *(v594 + 26) = v595;
+    v597 = v595 - 1;
+    *(v594 + 25) = 0;
+    if ( v597 >= 0 && *(v594 + v597 + 27) == 32 )
+    {
+      v598 = 1;
+      do
+      {
+        --v597;
+        v599 = v598;
+        if ( v597 == -1 )
+        {
+          *(v594 + 25) = v598;
+          goto LABEL_680;
+        }
+        ++v598;
+      }
+      while ( *(v594 + v597 + 27) == 32 );
+      *(v594 + 25) = v599;
+    }
+LABEL_680:
+    *(v594 + 64) = 1;
+    *(v594 + 48) = CMemberScriptBinding1<CDOTA_Bot_Script *,bool (CDOTA_Bot_Script::*)(float),bool,float>::Call;
+    *(v594 + 56) = CDOTA_Bot_Script::WasRecentlyDamagedByTower;
+    *(v594 + 40) = s_CDOTA_Bot_Script_WasRecentlyDamagedByTower_packed_arg_names;
+    v600 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(p_m_FunctionBindings)];
+    *(v600 + 24) = 1;
+    *(v600 + 16) = "How long as it been since the unit was damaged by a tower?";
+    *v600 = "TimeSinceDamagedByTower";
+    *(v600 + 8) = "TimeSinceDamagedByTower";
+    v601 = *(v600 + 26);
+    *(v600 + 25) = 0;
+    v602 = v601 - 1;
+    if ( v602 >= 0 && *(v600 + v602 + 27) == 32 )
+    {
+      v603 = 1;
+      do
+      {
+        --v602;
+        v604 = v603;
+        if ( v602 == -1 )
+        {
+          *(v600 + 25) = v603;
+          goto LABEL_686;
+        }
+        ++v603;
+      }
+      while ( *(v600 + v602 + 27) == 32 );
+      *(v600 + 25) = v604;
+    }
+LABEL_686:
+    *(v600 + 64) = 1;
+    *(v600 + 48) = CMemberScriptBinding0<CDOTA_Bot_Script *,float (CDOTA_Bot_Script::*)(void),float>::Call;
+    *(v600 + 56) = CDOTA_Bot_Script::TimeSinceDamagedByTower;
+    v605 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(p_m_FunctionBindings)];
+    *(v605 + 24) = 6;
+    *(v605 + 16) = "Was the unit recently damaged by a creep?";
+    *v605 = "WasRecentlyDamagedByCreep";
+    *(v605 + 8) = "WasRecentlyDamagedByCreep";
+    v606 = *(v605 + 26);
+    v607 = v606++;
+    *(v605 + v607 + 27) = 1;
+    *(v605 + 26) = v606;
+    v608 = v606 - 1;
+    *(v605 + 25) = 0;
+    if ( v608 >= 0 && *(v605 + v608 + 27) == 32 )
+    {
+      v609 = 1;
+      do
+      {
+        --v608;
+        v610 = v609;
+        if ( v608 == -1 )
+        {
+          *(v605 + 25) = v609;
+          goto LABEL_692;
+        }
+        ++v609;
+      }
+      while ( *(v605 + v608 + 27) == 32 );
+      *(v605 + 25) = v610;
+    }
+LABEL_692:
+    *(v605 + 64) = 1;
+    *(v605 + 48) = CMemberScriptBinding1<CDOTA_Bot_Script *,bool (CDOTA_Bot_Script::*)(float),bool,float>::Call;
+    *(v605 + 56) = CDOTA_Bot_Script::WasRecentlyDamagedByCreep;
+    *(v605 + 40) = s_CDOTA_Bot_Script_WasRecentlyDamagedByCreep_packed_arg_names;
+    v611 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(p_m_FunctionBindings)];
+    *(v611 + 24) = 1;
+    *(v611 + 16) = "How long as it been since the unit was damaged by a creep?";
+    *v611 = "TimeSinceDamagedByCreep";
+    *(v611 + 8) = "TimeSinceDamagedByCreep";
+    v612 = *(v611 + 26);
+    *(v611 + 25) = 0;
+    v613 = v612 - 1;
+    if ( v613 >= 0 && *(v611 + v613 + 27) == 32 )
+    {
+      v614 = 1;
+      do
+      {
+        --v613;
+        v615 = v614;
+        if ( v613 == -1 )
+        {
+          *(v611 + 25) = v614;
+          goto LABEL_698;
+        }
+        ++v614;
+      }
+      while ( *(v611 + v613 + 27) == 32 );
+      *(v611 + 25) = v615;
+    }
+LABEL_698:
+    *(v611 + 64) = 1;
+    *(v611 + 48) = CMemberScriptBinding0<CDOTA_Bot_Script *,float (CDOTA_Bot_Script::*)(void),float>::Call;
+    *(v611 + 56) = CDOTA_Bot_Script::TimeSinceDamagedByCreep;
+    v616 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(p_m_FunctionBindings)];
+    *(v616 + 24) = 5;
+    *(v616 + 16) = "Gets the unit's straight-line distance from the team's fountain (0 is in the fountain).";
+    *v616 = "DistanceFromFountain";
+    *(v616 + 8) = "DistanceFromFountain";
+    v617 = *(v616 + 26);
+    *(v616 + 25) = 0;
+    v618 = v617 - 1;
+    if ( v618 >= 0 && *(v616 + v618 + 27) == 32 )
+    {
+      v619 = 1;
+      do
+      {
+        --v618;
+        v620 = v619;
+        if ( v618 == -1 )
+        {
+          *(v616 + 25) = v619;
+          goto LABEL_704;
+        }
+        ++v619;
+      }
+      while ( *(v616 + v618 + 27) == 32 );
+      *(v616 + 25) = v620;
+    }
+LABEL_704:
+    *(v616 + 64) = 1;
+    *(v616 + 48) = CMemberScriptBinding0<CDOTA_Bot_Script *,int (CDOTA_Bot_Script::*)(void),int>::Call;
+    *(v616 + 56) = CDOTA_Bot_Script::DistanceFromFountain;
+    v621 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(p_m_FunctionBindings)];
+    *(v621 + 24) = 5;
+    *(v621 + 16) = "Gets the unit's straight-line distance from the closest side shop (0 is in a side shop).";
+    *v621 = "DistanceFromSideShop";
+    *(v621 + 8) = "DistanceFromSideShop";
+    v622 = *(v621 + 26);
+    *(v621 + 25) = 0;
+    v623 = v622 - 1;
+    if ( v623 >= 0 && *(v621 + v623 + 27) == 32 )
+    {
+      v624 = 1;
+      do
+      {
+        --v623;
+        v625 = v624;
+        if ( v623 == -1 )
+        {
+          *(v621 + 25) = v624;
+          goto LABEL_710;
+        }
+        ++v624;
+      }
+      while ( *(v621 + v623 + 27) == 32 );
+      *(v621 + 25) = v625;
+    }
+LABEL_710:
+    *(v621 + 64) = 1;
+    *(v621 + 48) = CMemberScriptBinding0<CDOTA_Bot_Script *,int (CDOTA_Bot_Script::*)(void),int>::Call;
+    *(v621 + 56) = CDOTA_Bot_Script::DistanceFromSideShop;
+    v626 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(p_m_FunctionBindings)];
+    *(v626 + 24) = 5;
+    *(v626 + 16) = "Gets the unit's straight-line distance from the closest secret shop (0 is in a secret shop).";
+    *v626 = "DistanceFromSecretShop";
+    *(v626 + 8) = "DistanceFromSecretShop";
+    v627 = *(v626 + 26);
+    *(v626 + 25) = 0;
+    v628 = v627 - 1;
+    if ( v628 >= 0 && *(v626 + v628 + 27) == 32 )
+    {
+      v629 = 1;
+      do
+      {
+        --v628;
+        v630 = v629;
+        if ( v628 == -1 )
+        {
+          *(v626 + 25) = v629;
+          goto LABEL_716;
+        }
+        ++v629;
+      }
+      while ( *(v626 + v628 + 27) == 32 );
+      *(v626 + 25) = v630;
+    }
+LABEL_716:
+    *(v626 + 64) = 1;
+    *(v626 + 48) = CMemberScriptBinding0<CDOTA_Bot_Script *,int (CDOTA_Bot_Script::*)(void),int>::Call;
+    *(v626 + 56) = CDOTA_Bot_Script::DistanceFromSecretShop;
+    v631 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(p_m_FunctionBindings)];
+    *(v631 + 24) = 0;
+    *(v631 + 16) = "Set the current target of this bot. Causes no actions, but is used for coordinating between modes and"
+                   " ability/item usage.";
+    *v631 = "SetTarget";
+    *(v631 + 8) = "SetTarget";
+    v632 = *(v631 + 26);
+    v633 = v632++;
+    *(v631 + v633 + 27) = 31;
+    *(v631 + 26) = v632;
+    v634 = v632 - 1;
+    *(v631 + 25) = 0;
+    if ( v634 >= 0 && *(v631 + v634 + 27) == 32 )
+    {
+      v635 = 1;
+      do
+      {
+        --v634;
+        v636 = v635;
+        if ( v634 == -1 )
+        {
+          *(v631 + 25) = v635;
+          goto LABEL_722;
+        }
+        ++v635;
+      }
+      while ( *(v631 + v634 + 27) == 32 );
+      *(v631 + 25) = v636;
+    }
+LABEL_722:
+    *(v631 + 64) = 1;
+    *(v631 + 48) = CMemberScriptBinding1<CDOTA_Bot_Script *,void (CDOTA_Bot_Script::*)(HSCRIPT__ *),void,HSCRIPT__ *>::Call;
+    *(v631 + 56) = CDOTA_Bot_Script::SetTarget;
+    *(v631 + 40) = s_CDOTA_Bot_Script_SetTarget_packed_arg_names;
+    v637 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(p_m_FunctionBindings)];
+    *(v637 + 24) = 31;
+    *(v637 + 16) = "Get the current target of this bot.";
+    *v637 = "GetTarget";
+    *(v637 + 8) = "GetTarget";
+    v638 = *(v637 + 26);
+    *(v637 + 25) = 0;
+    v639 = v638 - 1;
+    if ( v639 >= 0 && *(v637 + v639 + 27) == 32 )
+    {
+      v640 = 1;
+      do
+      {
+        --v639;
+        v641 = v640;
+        if ( v639 == -1 )
+        {
+          *(v637 + 25) = v640;
+          goto LABEL_728;
+        }
+        ++v640;
+      }
+      while ( *(v637 + v639 + 27) == 32 );
+      *(v637 + 25) = v641;
+    }
+LABEL_728:
+    *(v637 + 64) = 1;
+    *(v637 + 48) = CMemberScriptBinding0<CDOTA_Bot_Script *,HSCRIPT__ * (CDOTA_Bot_Script::*)(void),HSCRIPT__ *>::Call;
+    *(v637 + 56) = CDOTA_Bot_Script::GetTarget;
+    v642 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(p_m_FunctionBindings)];
+    *(v642 + 24) = 0;
+    *(v642 + 16) = "Sets the value of the next item the unit wants to purchase.";
+    *v642 = "SetNextItemPurchaseValue";
+    *(v642 + 8) = "SetNextItemPurchaseValue";
+    v643 = *(v642 + 26);
+    v644 = v643++;
+    *(v642 + v644 + 27) = 5;
+    *(v642 + 26) = v643;
+    v645 = v643 - 1;
+    *(v642 + 25) = 0;
+    if ( v645 >= 0 && *(v642 + v645 + 27) == 32 )
+    {
+      v646 = 0;
+      do
+      {
+        --v645;
+        ++v646;
+      }
+      while ( v645 != -1 && *(v642 + v645 + 27) == 32 );
+      *(v642 + 25) = v646;
+    }
+    *(v642 + 64) = 1;
+    *(v642 + 48) = CMemberScriptBinding1<CDOTA_Bot_Script *,void (CDOTA_Bot_Script::*)(int),void,int>::Call;
+    *(v642 + 56) = CDOTA_Bot_Script::SetNextItemPurchaseValue;
+    *(v642 + 40) = s_CDOTA_Bot_Script_SetNextItemPurchaseValue_packed_arg_names;
+    v647 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(p_m_FunctionBindings)];
+    *(v647 + 24) = 5;
+    *(v647 + 16) = "Gets the purchase value of the next item the unit wants to purchase.";
+    *v647 = "GetNextItemPurchaseValue";
+    *(v647 + 8) = "GetNextItemPurchaseValue";
+    v648 = *(v647 + 26);
+    *(v647 + 25) = 0;
+    v649 = v648 - 1;
+    if ( v649 >= 0 && *(v647 + v649 + 27) == 32 )
+    {
+      v650 = 1;
+      do
+      {
+        --v649;
+        v651 = v650;
+        if ( v649 == -1 )
+        {
+          *(v647 + 25) = v650;
+          goto LABEL_740;
+        }
+        ++v650;
+      }
+      while ( *(v647 + v649 + 27) == 32 );
+      *(v647 + 25) = v651;
+    }
+LABEL_740:
+    *(v647 + 64) = 1;
+    *(v647 + 48) = CMemberScriptBinding0<CDOTA_Bot_Script *,int (CDOTA_Bot_Script::*)(void),int>::Call;
+    *(v647 + 56) = CDOTA_Bot_Script::GetNextItemPurchaseValue;
+    v652 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(p_m_FunctionBindings)];
+    *(v652 + 24) = 5;
+    *(v652 + 16) = "Get the lane that a unit is assigned to.";
+    *v652 = "GetAssignedLane";
+    *(v652 + 8) = "GetAssignedLane";
+    v653 = *(v652 + 26);
+    *(v652 + 25) = 0;
+    v654 = v653 - 1;
+    if ( v654 >= 0 && *(v652 + v654 + 27) == 32 )
+    {
+      v655 = 0;
+      do
+      {
+        --v654;
+        ++v655;
+      }
+      while ( v654 != -1 && *(v652 + v654 + 27) == 32 );
+      *(v652 + 25) = v655;
+    }
+    *(v652 + 64) = 1;
+    *(v652 + 48) = CMemberScriptBinding0<CDOTA_Bot_Script *,int (CDOTA_Bot_Script::*)(void),int>::Call;
+    *(v652 + 56) = CDOTA_Bot_Script::GetAssignedLane;
+    v656 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(p_m_FunctionBindings)];
+    *(v656 + 24) = 1;
+    *(v656 + 16) = "Get the unit's current offensive power.";
+    *v656 = "GetOffensivePower";
+    *(v656 + 8) = "GetOffensivePower";
+    v657 = *(v656 + 26);
+    *(v656 + 25) = 0;
+    v658 = v657 - 1;
+    if ( v658 >= 0 && *(v656 + v658 + 27) == 32 )
+    {
+      v659 = 1;
+      do
+      {
+        --v658;
+        v660 = v659;
+        if ( v658 == -1 )
+        {
+          *(v656 + 25) = v659;
+          goto LABEL_752;
+        }
+        ++v659;
+      }
+      while ( *(v656 + v658 + 27) == 32 );
+      *(v656 + 25) = v660;
+    }
+LABEL_752:
+    *(v656 + 64) = 1;
+    *(v656 + 48) = CMemberScriptBinding0<CDOTA_Bot_Script *,float (CDOTA_Bot_Script::*)(void),float>::Call;
+    *(v656 + 56) = CDOTA_Bot_Script::GetOffensivePower;
+    v661 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(p_m_FunctionBindings)];
+    *(v661 + 24) = 1;
+    *(v661 + 16) = "Get the unit's raw offensive power.";
+    *v661 = "GetRawOffensivePower";
+    *(v661 + 8) = "GetRawOffensivePower";
+    v662 = *(v661 + 26);
+    *(v661 + 25) = 0;
+    v663 = v662 - 1;
+    if ( v663 >= 0 && *(v661 + v663 + 27) == 32 )
+    {
+      v664 = 1;
+      do
+      {
+        --v663;
+        v665 = v664;
+        if ( v663 == -1 )
+        {
+          *(v661 + 25) = v664;
+          goto LABEL_758;
+        }
+        ++v664;
+      }
+      while ( *(v661 + v663 + 27) == 32 );
+      *(v661 + 25) = v665;
+    }
+LABEL_758:
+    *(v661 + 64) = 1;
+    *(v661 + 48) = CMemberScriptBinding0<CDOTA_Bot_Script *,float (CDOTA_Bot_Script::*)(void),float>::Call;
+    *(v661 + 56) = CDOTA_Bot_Script::GetRawOffensivePower;
+    v666 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(p_m_FunctionBindings)];
+    *(v666 + 24) = 5;
+    *(v666 + 16) = "Get an estimate of how much damage a bot can do in the specified timeframe.  Takes into account item "
+                   "and ability usage based on current mana/cooldowns for allies, for enemies it assumes all items/abilit"
+                   "ies are available.  Uses no positional/situation info.  Basically asks 'How scary is X to Y?'.";
+    *v666 = "GetEstimatedDamageToTarget";
+    *(v666 + 8) = "GetEstimatedDamageToTarget";
+    v667 = *(v666 + 26);
+    *(v666 + v667 + 27) = 6;
+    *(v666 + (v667 + 1) + 27) = 31;
+    *(v666 + (v667 + 2) + 27) = 1;
+    v668 = v667 + 3;
+    v667 += 4;
+    *(v666 + v668 + 27) = 5;
+    *(v666 + 26) = v667;
+    v669 = v667 - 1;
+    *(v666 + 25) = 0;
+    if ( v669 >= 0 && *(v666 + v669 + 27) == 32 )
+    {
+      v670 = 1;
+      do
+      {
+        --v669;
+        v671 = v670;
+        if ( v669 == -1 )
+        {
+          *(v666 + 25) = v670;
+          goto LABEL_764;
+        }
+        ++v670;
+      }
+      while ( *(v666 + v669 + 27) == 32 );
+      *(v666 + 25) = v671;
+    }
+LABEL_764:
+    *(v666 + 64) = 1;
+    *(v666 + 48) = CMemberScriptBinding4<CDOTA_Bot_Script *,int (CDOTA_Bot_Script::*)(bool,HSCRIPT__ *,float,int),int,bool,HSCRIPT__ *,float,int>::Call;
+    *(v666 + 56) = CDOTA_Bot_Script::GetEstimatedDamageToTarget;
+    *(v666 + 40) = s_CDOTA_Bot_Script_GetEstimatedDamageToTarget_packed_arg_names;
+    v672 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(p_m_FunctionBindings)];
+    *(v672 + 24) = 1;
+    *(v672 + 16) = "Get the duration of available stuns.";
+    *v672 = "GetStunDuration";
+    *(v672 + 8) = "GetStunDuration";
+    v673 = *(v672 + 26);
+    v674 = v673++;
+    *(v672 + v674 + 27) = 6;
+    *(v672 + 26) = v673;
+    v675 = v673 - 1;
+    *(v672 + 25) = 0;
+    if ( v675 >= 0 && *(v672 + v675 + 27) == 32 )
+    {
+      v676 = 1;
+      do
+      {
+        --v675;
+        v677 = v676;
+        if ( v675 == -1 )
+        {
+          *(v672 + 25) = v676;
+          goto LABEL_770;
+        }
+        ++v676;
+      }
+      while ( *(v672 + v675 + 27) == 32 );
+      *(v672 + 25) = v677;
+    }
+LABEL_770:
+    *(v672 + 64) = 1;
+    *(v672 + 48) = CMemberScriptBinding1<CDOTA_Bot_Script *,float (CDOTA_Bot_Script::*)(bool),float,bool>::Call;
+    *(v672 + 56) = CDOTA_Bot_Script::GetStunDuration;
+    *(v672 + 40) = s_CDOTA_Bot_Script_GetStunDuration_packed_arg_names;
+    v678 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(p_m_FunctionBindings)];
+    *(v678 + 24) = 1;
+    *(v678 + 16) = "Get the duration of available slows.";
+    *v678 = "GetSlowDuration";
+    *(v678 + 8) = "GetSlowDuration";
+    v679 = *(v678 + 26);
+    v680 = v679++;
+    *(v678 + v680 + 27) = 6;
+    *(v678 + 26) = v679;
+    v681 = v679 - 1;
+    *(v678 + 25) = 0;
+    if ( v681 >= 0 && *(v678 + v681 + 27) == 32 )
+    {
+      v682 = 1;
+      do
+      {
+        --v681;
+        v683 = v682;
+        if ( v681 == -1 )
+        {
+          *(v678 + 25) = v682;
+          goto LABEL_776;
+        }
+        ++v682;
+      }
+      while ( *(v678 + v681 + 27) == 32 );
+      *(v678 + 25) = v683;
+    }
+LABEL_776:
+    *(v678 + 64) = 1;
+    *(v678 + 48) = CMemberScriptBinding1<CDOTA_Bot_Script *,float (CDOTA_Bot_Script::*)(bool),float,bool>::Call;
+    *(v678 + 56) = CDOTA_Bot_Script::GetSlowDuration;
+    *(v678 + 40) = s_CDOTA_Bot_Script_GetSlowDuration_packed_arg_names;
+    v684 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(p_m_FunctionBindings)];
+    *(v684 + 24) = 6;
+    *(v684 + 16) = "Does the bot have a blink available?";
+    *v684 = "HasBlink";
+    *(v684 + 8) = "HasBlink";
+    v685 = *(v684 + 26);
+    v686 = v685++;
+    *(v684 + v686 + 27) = 6;
+    *(v684 + 26) = v685;
+    v687 = v685 - 1;
+    *(v684 + 25) = 0;
+    if ( v687 >= 0 && *(v684 + v687 + 27) == 32 )
+    {
+      v688 = 1;
+      do
+      {
+        --v687;
+        v689 = v688;
+        if ( v687 == -1 )
+        {
+          *(v684 + 25) = v688;
+          goto LABEL_782;
+        }
+        ++v688;
+      }
+      while ( *(v684 + v687 + 27) == 32 );
+      *(v684 + 25) = v689;
+    }
+LABEL_782:
+    *(v684 + 64) = 1;
+    *(v684 + 48) = CMemberScriptBinding1<CDOTA_Bot_Script *,bool (CDOTA_Bot_Script::*)(bool),bool,bool>::Call;
+    *(v684 + 56) = CDOTA_Bot_Script::HasBlink;
+    *(v684 + 40) = s_CDOTA_Bot_Script_HasBlink_packed_arg_names;
+    v690 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(p_m_FunctionBindings)];
+    *(v690 + 24) = 6;
+    *(v690 + 16) = "Does the bot have ministuns on attack?";
+    *v690 = "HasMinistunOnAttack";
+    *(v690 + 8) = "HasMinistunOnAttack";
+    v691 = *(v690 + 26);
+    *(v690 + 25) = 0;
+    v692 = v691 - 1;
+    if ( v692 >= 0 && *(v690 + v692 + 27) == 32 )
+    {
+      v693 = 1;
+      do
+      {
+        --v692;
+        v694 = v693;
+        if ( v692 == -1 )
+        {
+          *(v690 + 25) = v693;
+          goto LABEL_788;
+        }
+        ++v693;
+      }
+      while ( *(v690 + v692 + 27) == 32 );
+      *(v690 + 25) = v694;
+    }
+LABEL_788:
+    *(v690 + 64) = 1;
+    *(v690 + 48) = CMemberScriptBinding0<CDOTA_Bot_Script *,bool (CDOTA_Bot_Script::*)(void),bool>::Call;
+    *(v690 + 56) = CDOTA_Bot_Script::HasMinistunOnAttack;
+    v695 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(p_m_FunctionBindings)];
+    *(v695 + 24) = 6;
+    *(v695 + 16) = "Does the bot have a silence available?";
+    *v695 = "HasSilence";
+    *(v695 + 8) = "HasSilence";
+    v696 = *(v695 + 26);
+    v697 = v696++;
+    *(v695 + v697 + 27) = 6;
+    *(v695 + 26) = v696;
+    v698 = v696 - 1;
+    *(v695 + 25) = 0;
+    if ( v698 >= 0 && *(v695 + v698 + 27) == 32 )
+    {
+      v699 = 1;
+      do
+      {
+        --v698;
+        v700 = v699;
+        if ( v698 == -1 )
+        {
+          *(v695 + 25) = v699;
+          goto LABEL_794;
+        }
+        ++v699;
+      }
+      while ( *(v695 + v698 + 27) == 32 );
+      *(v695 + 25) = v700;
+    }
+LABEL_794:
+    *(v695 + 64) = 1;
+    *(v695 + 48) = CMemberScriptBinding1<CDOTA_Bot_Script *,bool (CDOTA_Bot_Script::*)(bool),bool,bool>::Call;
+    *(v695 + 56) = CDOTA_Bot_Script::HasSilence;
+    *(v695 + 40) = s_CDOTA_Bot_Script_HasSilence_packed_arg_names;
+    v701 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(p_m_FunctionBindings)];
+    *(v701 + 24) = 6;
+    *(v701 + 16) = "Does the bot have invisibility available?";
+    *v701 = "HasInvisibility";
+    *(v701 + 8) = "HasInvisibility";
+    v702 = *(v701 + 26);
+    v703 = v702++;
+    *(v701 + v703 + 27) = 6;
+    *(v701 + 26) = v702;
+    v704 = v702 - 1;
+    *(v701 + 25) = 0;
+    if ( v704 >= 0 && *(v701 + v704 + 27) == 32 )
+    {
+      v705 = 1;
+      do
+      {
+        --v704;
+        v706 = v705;
+        if ( v704 == -1 )
+        {
+          *(v701 + 25) = v705;
+          goto LABEL_800;
+        }
+        ++v705;
+      }
+      while ( *(v701 + v704 + 27) == 32 );
+      *(v701 + 25) = v706;
+    }
+LABEL_800:
+    *(v701 + 64) = 1;
+    *(v701 + 48) = CMemberScriptBinding1<CDOTA_Bot_Script *,bool (CDOTA_Bot_Script::*)(bool),bool,bool>::Call;
+    *(v701 + 56) = CDOTA_Bot_Script::HasInvisibility;
+    *(v701 + 40) = s_CDOTA_Bot_Script_HasInvisibility_packed_arg_names;
+    v707 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(p_m_FunctionBindings)];
+    *(v707 + 24) = 6;
+    *(v707 + 16) = "Will using an item break invisibiilty?";
+    *v707 = "UsingItemBreaksInvisibility";
+    *(v707 + 8) = "UsingItemBreaksInvisibility";
+    v708 = *(v707 + 26);
+    *(v707 + 25) = 0;
+    v709 = v708 - 1;
+    if ( v709 >= 0 && *(v707 + v709 + 27) == 32 )
+    {
+      v710 = 1;
+      do
+      {
+        --v709;
+        v711 = v710;
+        if ( v709 == -1 )
+        {
+          *(v707 + 25) = v710;
+          goto LABEL_806;
+        }
+        ++v710;
+      }
+      while ( *(v707 + v709 + 27) == 32 );
+      *(v707 + 25) = v711;
+    }
+LABEL_806:
+    *(v707 + 64) = 1;
+    *(v707 + 48) = CMemberScriptBinding0<CDOTA_Bot_Script *,bool (CDOTA_Bot_Script::*)(void),bool>::Call;
+    *(v707 + 56) = CDOTA_Bot_Script::UsingItemBreaksInvisibility;
+    v712 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(p_m_FunctionBindings)];
+    *(v712 + 24) = 32;
+    *(v712 + 16) = "Get nearby heroes that we can see in a mode.  Can specify a bot mode when querying allies.  BOT_MODE_"
+                   "NONE does no mode filtering.";
+    *v712 = "GetNearbyHeroes";
+    *(v712 + 8) = "GetNearbyHeroes";
+    v713 = *(v712 + 26);
+    *(v712 + v713 + 27) = 5;
+    *(v712 + (v713 + 1) + 27) = 6;
+    v714 = v713 + 2;
+    v713 += 3;
+    *(v712 + v714 + 27) = 5;
+    *(v712 + 26) = v713;
+    v715 = v713 - 1;
+    *(v712 + 25) = 0;
+    if ( v715 >= 0 && *(v712 + v715 + 27) == 32 )
+    {
+      v716 = 1;
+      do
+      {
+        --v715;
+        v717 = v716;
+        if ( v715 == -1 )
+        {
+          *(v712 + 25) = v716;
+          goto LABEL_812;
+        }
+        ++v716;
+      }
+      while ( *(v712 + v715 + 27) == 32 );
+      *(v712 + 25) = v717;
+    }
+LABEL_812:
+    *(v712 + 64) = 1;
+    *(v712 + 48) = CMemberScriptBinding3<CDOTA_Bot_Script *,CVariantBase<CVariantDefaultAllocator> (CDOTA_Bot_Script::*)(int,bool,int),CVariantBase<CVariantDefaultAllocator>,int,bool,int>::Call;
+    *(v712 + 56) = CDOTA_Bot_Script::GetNearbyHeroes;
+    *(v712 + 40) = s_CDOTA_Bot_Script_GetNearbyHeroes_packed_arg_names;
+    v718 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(p_m_FunctionBindings)];
+    *(v718 + 24) = 32;
+    *(v718 + 16) = "Get nearby creeps that we can see.";
+    *v718 = "GetNearbyCreeps";
+    *(v718 + 8) = "GetNearbyCreeps";
+    v719 = *(v718 + 26);
+    *(v718 + v719 + 27) = 5;
+    v720 = v719 + 1;
+    v719 += 2;
+    *(v718 + v720 + 27) = 6;
+    *(v718 + 26) = v719;
+    v721 = v719 - 1;
+    *(v718 + 25) = 0;
+    if ( v721 >= 0 && *(v718 + v721 + 27) == 32 )
+    {
+      v722 = 1;
+      do
+      {
+        --v721;
+        v723 = v722;
+        if ( v721 == -1 )
+        {
+          *(v718 + 25) = v722;
+          goto LABEL_818;
+        }
+        ++v722;
+      }
+      while ( *(v718 + v721 + 27) == 32 );
+      *(v718 + 25) = v723;
+    }
+LABEL_818:
+    *(v718 + 64) = 1;
+    *(v718 + 48) = CMemberScriptBinding2<CDOTA_Bot_Script *,CVariantBase<CVariantDefaultAllocator> (CDOTA_Bot_Script::*)(int,bool),CVariantBase<CVariantDefaultAllocator>,int,bool>::Call;
+    *(v718 + 56) = CDOTA_Bot_Script::GetNearbyCreeps;
+    *(v718 + 40) = s_CDOTA_Bot_Script_GetNearbyCreeps_packed_arg_names;
+    v724 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(p_m_FunctionBindings)];
+    *(v724 + 24) = 32;
+    *(v724 + 16) = "Get all nearby towers.";
+    *v724 = "GetNearbyTowers";
+    *(v724 + 8) = "GetNearbyTowers";
+    v725 = *(v724 + 26);
+    *(v724 + v725 + 27) = 5;
+    v726 = v725 + 1;
+    v725 += 2;
+    *(v724 + v726 + 27) = 6;
+    *(v724 + 26) = v725;
+    v727 = v725 - 1;
+    *(v724 + 25) = 0;
+    if ( v727 >= 0 && *(v724 + v727 + 27) == 32 )
+    {
+      v728 = 1;
+      do
+      {
+        --v727;
+        v729 = v728;
+        if ( v727 == -1 )
+        {
+          *(v724 + 25) = v728;
+          goto LABEL_824;
+        }
+        ++v728;
+      }
+      while ( *(v724 + v727 + 27) == 32 );
+      *(v724 + 25) = v729;
+    }
+LABEL_824:
+    *(v724 + 64) = 1;
+    *(v724 + 48) = CMemberScriptBinding2<CDOTA_Bot_Script *,CVariantBase<CVariantDefaultAllocator> (CDOTA_Bot_Script::*)(int,bool),CVariantBase<CVariantDefaultAllocator>,int,bool>::Call;
+    *(v724 + 56) = CDOTA_Bot_Script::GetNearbyTowers;
+    *(v724 + 40) = s_CDOTA_Bot_Script_GetNearbyTowers_packed_arg_names;
+    v730 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(p_m_FunctionBindings)];
+    *(v730 + 24) = 32;
+    *(v730 + 16) = "Get all nearby barracks.";
+    *v730 = "GetNearbyBarracks";
+    *(v730 + 8) = "GetNearbyBarracks";
+    v731 = *(v730 + 26);
+    *(v730 + v731 + 27) = 5;
+    v732 = v731 + 1;
+    v731 += 2;
+    *(v730 + v732 + 27) = 6;
+    *(v730 + 26) = v731;
+    v733 = v731 - 1;
+    *(v730 + 25) = 0;
+    if ( v733 >= 0 && *(v730 + v733 + 27) == 32 )
+    {
+      v734 = 1;
+      do
+      {
+        --v733;
+        v735 = v734;
+        if ( v733 == -1 )
+        {
+          *(v730 + 25) = v734;
+          goto LABEL_830;
+        }
+        ++v734;
+      }
+      while ( *(v730 + v733 + 27) == 32 );
+      *(v730 + 25) = v735;
+    }
+LABEL_830:
+    *(v730 + 64) = 1;
+    *(v730 + 48) = CMemberScriptBinding2<CDOTA_Bot_Script *,CVariantBase<CVariantDefaultAllocator> (CDOTA_Bot_Script::*)(int,bool),CVariantBase<CVariantDefaultAllocator>,int,bool>::Call;
+    *(v730 + 56) = CDOTA_Bot_Script::GetNearbyBarracks;
+    *(v730 + 40) = s_CDOTA_Bot_Script_GetNearbyBarracks_packed_arg_names;
+    v736 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(p_m_FunctionBindings)];
+    *(v736 + 24) = 32;
+    *(v736 + 16) = "Get all nearby shrines.";
+    *v736 = "GetNearbyShrines";
+    *(v736 + 8) = "GetNearbyShrines";
+    v737 = *(v736 + 26);
+    *(v736 + v737 + 27) = 5;
+    v738 = v737 + 1;
+    v737 += 2;
+    *(v736 + v738 + 27) = 6;
+    *(v736 + 26) = v737;
+    v739 = v737 - 1;
+    *(v736 + 25) = 0;
+    if ( v739 >= 0 && *(v736 + v739 + 27) == 32 )
+    {
+      v740 = 1;
+      do
+      {
+        --v739;
+        v741 = v740;
+        if ( v739 == -1 )
+        {
+          *(v736 + 25) = v740;
+          goto LABEL_836;
+        }
+        ++v740;
+      }
+      while ( *(v736 + v739 + 27) == 32 );
+      *(v736 + 25) = v741;
+    }
+LABEL_836:
+    *(v736 + 64) = 1;
+    *(v736 + 48) = CMemberScriptBinding2<CDOTA_Bot_Script *,CVariantBase<CVariantDefaultAllocator> (CDOTA_Bot_Script::*)(int,bool),CVariantBase<CVariantDefaultAllocator>,int,bool>::Call;
+    *(v736 + 56) = CDOTA_Bot_Script::GetNearbyShrines;
+    *(v736 + 40) = s_CDOTA_Bot_Script_GetNearbyShrines_packed_arg_names;
+    v742 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(p_m_FunctionBindings)];
+    *(v742 + 24) = 32;
+    *(v742 + 16) = "Get nearby trees.";
+    *v742 = "GetNearbyTrees";
+    *(v742 + 8) = "GetNearbyTrees";
+    v743 = *(v742 + 26);
+    v744 = v743++;
+    *(v742 + v744 + 27) = 5;
+    *(v742 + 26) = v743;
+    v745 = v743 - 1;
+    *(v742 + 25) = 0;
+    if ( v745 >= 0 && *(v742 + v745 + 27) == 32 )
+    {
+      v746 = 1;
+      do
+      {
+        --v745;
+        v747 = v746;
+        if ( v745 == -1 )
+        {
+          *(v742 + 25) = v746;
+          goto LABEL_842;
+        }
+        ++v746;
+      }
+      while ( *(v742 + v745 + 27) == 32 );
+      *(v742 + 25) = v747;
+    }
+LABEL_842:
+    *(v742 + 64) = 1;
+    *(v742 + 48) = CMemberScriptBinding1<CDOTA_Bot_Script *,CVariantBase<CVariantDefaultAllocator> (CDOTA_Bot_Script::*)(int),CVariantBase<CVariantDefaultAllocator>,int>::Call;
+    *(v742 + 56) = CDOTA_Bot_Script::GetNearbyTrees;
+    *(v742 + 40) = s_CDOTA_Bot_Script_GetNearbyTrees_packed_arg_names;
+    v748 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(p_m_FunctionBindings)];
+    *(v748 + 24) = 32;
+    *(v748 + 16) = "Finds optimal AoE location that overlaps heroes/creeps.";
+    *v748 = "FindAoELocation";
+    *(v748 + 8) = "FindAoELocation";
+    v749 = *(v748 + 26);
+    *(v748 + v749 + 27) = 6;
+    *(v748 + (v749 + 1) + 27) = 6;
+    *(v748 + (v749 + 2) + 27) = 3;
+    *(v748 + (v749 + 3) + 27) = 5;
+    *(v748 + (v749 + 4) + 27) = 5;
+    *(v748 + (v749 + 5) + 27) = 1;
+    v750 = v749 + 6;
+    v749 += 7;
+    *(v748 + v750 + 27) = 5;
+    *(v748 + 26) = v749;
+    v751 = v749 - 1;
+    *(v748 + 25) = 0;
+    if ( v751 >= 0 && *(v748 + v751 + 27) == 32 )
+    {
+      v752 = 1;
+      do
+      {
+        --v751;
+        v753 = v752;
+        if ( v751 == -1 )
+        {
+          *(v748 + 25) = v752;
+          goto LABEL_848;
+        }
+        ++v752;
+      }
+      while ( *(v748 + v751 + 27) == 32 );
+      *(v748 + 25) = v753;
+    }
+LABEL_848:
+    *(v748 + 64) = 1;
+    *(v748 + 48) = CMemberScriptBinding7<CDOTA_Bot_Script *,CVariantBase<CVariantDefaultAllocator> (CDOTA_Bot_Script::*)(bool,bool,Vector const&,int,int,float,int),CVariantBase<CVariantDefaultAllocator>,bool,bool,Vector const&,int,int,float,int>::Call;
+    *(v748 + 56) = CDOTA_Bot_Script::FindAoELocation;
+    *(v748 + 40) = s_CDOTA_Bot_Script_FindAoELocation_packed_arg_names;
+    v754 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(p_m_FunctionBindings)];
+    *(v754 + 24) = 3;
+    *(v754 + 16) = "Extrapolates their location in the future, based on past movement.";
+    *v754 = "GetExtrapolatedLocation";
+    *(v754 + 8) = "GetExtrapolatedLocation";
+    v755 = *(v754 + 26);
+    v756 = v755++;
+    *(v754 + v756 + 27) = 1;
+    *(v754 + 26) = v755;
+    v757 = v755 - 1;
+    *(v754 + 25) = 0;
+    if ( v757 >= 0 && *(v754 + v757 + 27) == 32 )
+    {
+      v758 = 1;
+      do
+      {
+        --v757;
+        v759 = v758;
+        if ( v757 == -1 )
+        {
+          *(v754 + 25) = v758;
+          goto LABEL_854;
+        }
+        ++v758;
+      }
+      while ( *(v754 + v757 + 27) == 32 );
+      *(v754 + 25) = v759;
+    }
+LABEL_854:
+    *(v754 + 64) = 1;
+    *(v754 + 48) = CMemberScriptBinding1<CDOTA_Bot_Script *,Vector (CDOTA_Bot_Script::*)(float),Vector,float>::Call;
+    *(v754 + 56) = CDOTA_Bot_Script::GetExtrapolatedLocation;
+    *(v754 + 40) = s_CDOTA_Bot_Script_GetExtrapolatedLocation_packed_arg_names;
+    v760 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(p_m_FunctionBindings)];
+    *(v760 + 24) = 1;
+    *(v760 + 16) = "Indicates how consistent the unit's movement has been over the last few seconds.  1 is a straight lin"
+                   "e, 0 is serpentine.";
+    *v760 = "GetMovementDirectionStability";
+    *(v760 + 8) = "GetMovementDirectionStability";
+    v761 = *(v760 + 26);
+    *(v760 + 25) = 0;
+    v762 = v761 - 1;
+    if ( v762 >= 0 && *(v760 + v762 + 27) == 32 )
+    {
+      v763 = 1;
+      do
+      {
+        --v762;
+        v764 = v763;
+        if ( v762 == -1 )
+        {
+          *(v760 + 25) = v763;
+          goto LABEL_860;
+        }
+        ++v763;
+      }
+      while ( *(v760 + v762 + 27) == 32 );
+      *(v760 + 25) = v764;
+    }
+LABEL_860:
+    *(v760 + 64) = 1;
+    *(v760 + 48) = CMemberScriptBinding0<CDOTA_Bot_Script *,float (CDOTA_Bot_Script::*)(void),float>::Call;
+    *(v760 + 56) = CDOTA_Bot_Script::GetMovementDirectionStability;
+    v765 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(p_m_FunctionBindings)];
+    *(v765 + 24) = 5;
+    *(v765 + 16) = "Get damage value after reductions.";
+    *v765 = "GetActualDamage";
+    *(v765 + 8) = "GetActualDamage";
+    v766 = *(v765 + 26);
+    *(v765 + v766 + 27) = 5;
+    v767 = v766 + 1;
+    v766 += 2;
+    *(v765 + v767 + 27) = 5;
+    *(v765 + 26) = v766;
+    v768 = v766 - 1;
+    *(v765 + 25) = 0;
+    if ( v768 >= 0 && *(v765 + v768 + 27) == 32 )
+    {
+      v769 = 1;
+      do
+      {
+        --v768;
+        v770 = v769;
+        if ( v768 == -1 )
+        {
+          *(v765 + 25) = v769;
+          goto LABEL_866;
+        }
+        ++v769;
+      }
+      while ( *(v765 + v768 + 27) == 32 );
+      *(v765 + 25) = v770;
+    }
+LABEL_866:
+    *(v765 + 64) = 1;
+    *(v765 + 48) = CMemberScriptBinding2<CDOTA_Bot_Script *,int (CDOTA_Bot_Script::*)(int,int),int,int,int>::Call;
+    *(v765 + 56) = CDOTA_Bot_Script::GetActualDamage;
+    *(v765 + 40) = s_CDOTA_Bot_Script_GetActualDamage_packed_arg_names;
+    v771 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(p_m_FunctionBindings)];
+    *(v771 + 24) = 6;
+    *(v771 + 16) = "Does the bot have the specified modifier?";
+    *v771 = "HasModifier";
+    *(v771 + 8) = "HasModifier";
+    v772 = *(v771 + 26);
+    v773 = v772++;
+    *(v771 + v773 + 27) = 30;
+    *(v771 + 26) = v772;
+    v774 = v772 - 1;
+    *(v771 + 25) = 0;
+    if ( v774 >= 0 && *(v771 + v774 + 27) == 32 )
+    {
+      v775 = 1;
+      do
+      {
+        --v774;
+        v776 = v775;
+        if ( v774 == -1 )
+        {
+          *(v771 + 25) = v775;
+          goto LABEL_872;
+        }
+        ++v775;
+      }
+      while ( *(v771 + v774 + 27) == 32 );
+      *(v771 + 25) = v776;
+    }
+LABEL_872:
+    *(v771 + 64) = 1;
+    *(v771 + 48) = CMemberScriptBinding1<CDOTA_Bot_Script *,bool (CDOTA_Bot_Script::*)(char const*),bool,char const*>::Call;
+    *(v771 + 56) = CDOTA_Bot_Script::HasModifier;
+    *(v771 + 40) = s_CDOTA_Bot_Script_HasModifier_packed_arg_names;
+    v777 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(p_m_FunctionBindings)];
+    *(v777 + 24) = 5;
+    *(v777 + 16) = "Get the number of modifiers on this bot.";
+    *v777 = "NumModifiers";
+    *(v777 + 8) = "NumModifiers";
+    v778 = *(v777 + 26);
+    *(v777 + 25) = 0;
+    v779 = v778 - 1;
+    if ( v779 >= 0 && *(v777 + v779 + 27) == 32 )
+    {
+      v780 = 1;
+      do
+      {
+        --v779;
+        v781 = v780;
+        if ( v779 == -1 )
+        {
+          *(v777 + 25) = v780;
+          goto LABEL_878;
+        }
+        ++v780;
+      }
+      while ( *(v777 + v779 + 27) == 32 );
+      *(v777 + 25) = v781;
+    }
+LABEL_878:
+    *(v777 + 64) = 1;
+    *(v777 + 48) = CMemberScriptBinding0<CDOTA_Bot_Script *,int (CDOTA_Bot_Script::*)(void),int>::Call;
+    *(v777 + 56) = CDOTA_Bot_Script::NumModifiers;
+    v782 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(p_m_FunctionBindings)];
+    *(v782 + 24) = 30;
+    *(v782 + 16) = "Get a specific modifier name.";
+    *v782 = "GetModifierName";
+    *(v782 + 8) = "GetModifierName";
+    v783 = *(v782 + 26);
+    v784 = v783++;
+    *(v782 + v784 + 27) = 5;
+    *(v782 + 26) = v783;
+    v785 = v783 - 1;
+    *(v782 + 25) = 0;
+    if ( v785 >= 0 && *(v782 + v785 + 27) == 32 )
+    {
+      v786 = 1;
+      do
+      {
+        --v785;
+        v787 = v786;
+        if ( v785 == -1 )
+        {
+          *(v782 + 25) = v786;
+          goto LABEL_884;
+        }
+        ++v786;
+      }
+      while ( *(v782 + v785 + 27) == 32 );
+      *(v782 + 25) = v787;
+    }
+LABEL_884:
+    *(v782 + 64) = 1;
+    *(v782 + 48) = CMemberScriptBinding1<CDOTA_Bot_Script *,char const* (CDOTA_Bot_Script::*)(int),char const*,int>::Call;
+    *(v782 + 56) = CDOTA_Bot_Script::GetModifierName;
+    *(v782 + 40) = s_CDOTA_Bot_Script_GetModifierName_packed_arg_names;
+    v788 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(p_m_FunctionBindings)];
+    *(v788 + 24) = 5;
+    *(v788 + 16) = "Get a modifier's stack count.";
+    *v788 = "GetModifierStackCount";
+    *(v788 + 8) = "GetModifierStackCount";
+    v789 = *(v788 + 26);
+    v790 = v789++;
+    *(v788 + v790 + 27) = 5;
+    *(v788 + 26) = v789;
+    v791 = v789 - 1;
+    *(v788 + 25) = 0;
+    if ( v791 >= 0 && *(v788 + v791 + 27) == 32 )
+    {
+      v792 = 1;
+      do
+      {
+        --v791;
+        v793 = v792;
+        if ( v791 == -1 )
+        {
+          *(v788 + 25) = v792;
+          goto LABEL_890;
+        }
+        ++v792;
+      }
+      while ( *(v788 + v791 + 27) == 32 );
+      *(v788 + 25) = v793;
+    }
+LABEL_890:
+    *(v788 + 64) = 1;
+    *(v788 + 48) = CMemberScriptBinding1<CDOTA_Bot_Script *,int (CDOTA_Bot_Script::*)(int),int,int>::Call;
+    *(v788 + 56) = CDOTA_Bot_Script::GetModifierStackCount;
+    *(v788 + 40) = s_CDOTA_Bot_Script_GetModifierStackCount_packed_arg_names;
+    return v2;
+  }
+  return result;
+}
+
+
+// CDOTA_Bot_Script::GetScriptDesc  (line 87, @0x0000000002855f80, libserver.so)
+// calls: GetScriptDesc<CDOTA_Bot_Script>
+ScriptClassDesc_t *__fastcall CDOTA_Bot_Script::GetScriptDesc(CDOTA_Bot_Script *const this)
+{
+  return GetScriptDesc<CDOTA_Bot_Script>(this);
+}
+
+
+// CDOTA_Bot_Script::InitScriptDesc  (line 87, @0x0000000002855f90, libserver.so)
+// calls: GetScriptDesc<CDOTA_Bot_Script>
+ScriptClassDesc_t *__cdecl CDOTA_Bot_Script::InitScriptDesc()
+{
+  return GetScriptDesc<CDOTA_Bot_Script>(0);
+}
+
+
+// CDOTA_Bot_Script::GetClassScriptDesc  (line 87, @0x0000000002855fa0, libserver.so)
+// calls: GetScriptDesc<CDOTA_Bot_Script>
+ScriptClassDesc_t *__cdecl CDOTA_Bot_Script::GetClassScriptDesc()
+{
+  return GetScriptDesc<CDOTA_Bot_Script>(0);
+}
+
+
+// LocalRegisterSchemaModule<ArbitraryTemplateParameter_server_dota_bot_script_h>  (line 242, @0x0000000002833700, libserver.so)
+void __fastcall LocalRegisterSchemaModule<ArbitraryTemplateParameter_server_dota_bot_script_h>(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        SchemaRegistrationPhase_t nRegistrationPhase)
+{
+  ++g_nLinkerHack_SchemaAnchor_RegistrationCountFor_server;
+}
+
+
+// RegisterSchemaModule_dota_bot_script_h  (line 243, @0x0000000002833710, libserver.so)  // inlines: LocalRegisterSchemaModule<ArbitraryTemplateParameter_server_dota_bot_script_h>
+// callers: CSchemaRegistration_server::RegisterAllBindings
+void __fastcall RegisterSchemaModule_dota_bot_script_h(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        SchemaRegistrationPhase_t nRegistrationPhase)
+{
+  ++g_nLinkerHack_SchemaAnchor_RegistrationCountFor_server;
+}
+
+

@@ -1,0 +1,2567 @@
+
+// ==== functions (decompiled by Hex-Rays; names/signatures from DWARF) ====
+
+// CDOTA_Item::CEntityInstanceEntityClass::Schema_CompileTimeVerificationFunction  (line 35, @0x00000000025a5d00, libserver.so)
+void __fastcall CDOTA_Item::CEntityInstanceEntityClass::Schema_CompileTimeVerificationFunction(
+        CDOTA_Item::CEntityInstanceEntityClass *const this)
+{
+  ;
+}
+
+
+// CDOTA_Item::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE  (line 38, @0x0000000002594cd0, libserver.so)  // inlines: Call, Get, SetTypeScope
+// calls: CDOTABaseAbility::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE
+// callers: CDOTA_Item_Book::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE, CDOTA_Item_Tombstone::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE, CDOTA_Item_DataDriven::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE, CDOTA_Item_Lua::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE, CSchemaNonConstructibleClassBinding<CDOTA_Item::CEntityInstanceEntityClass>::Register, CDOTA_Item::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE, CDOTA_Item::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE
+// globals: CDOTA_Item::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,
+CSchemaClassInfo *__fastcall CDOTA_Item::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        const char *pProjectName)
+{
+  ISchemaSystemTypeScope *v6; // r14
+  CSchemaClassInfo *v7; // rax
+
+  v6 = (*(*pSchemaSystem + 112LL))(pSchemaSystem, 1, pBinaryName);
+  (*(CDOTABaseAbility::CEntityInstanceEntityClass::s_pSchemaBindingForLocalModule->_vptr_ISchemaBinding + 5))(
+    CDOTABaseAbility::CEntityInstanceEntityClass::s_pSchemaBindingForLocalModule,
+    pSchemaSystem,
+    pBinaryName,
+    pProjectName);
+  v7 = CDOTABaseAbility::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+         pSchemaSystem,
+         pBinaryName,
+         pProjectName);
+  CDOTA_Item::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CDOTA_Item_CEntityInstanceEntityClass.m_pOuterTypeScope = v6;
+  CDOTA_Item::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassBases_CDOTA_Item_CEntityInstanceEntityClass[0].m_pClass = v7;
+  CDOTA_Item::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult = &CDOTA_Item::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CDOTA_Item_CEntityInstanceEntityClass;
+  return &CDOTA_Item::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CDOTA_Item_CEntityInstanceEntityClass;
+}
+
+
+// CDOTA_Item::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE  (line 38, @0x00000000025a5d10, libserver.so)
+// calls: CDOTA_Item::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE
+// callers: CDOTA_Item_GreaterClarity::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE, CDOTA_Item_UpgradedMortar::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE, CDOTA_Item_UpgradedBarricade::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE, CDOTA_Item_BagOfGold::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE, CDOTA_Item_Nian_Flag_Trap::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE, CDOTA_Ability_Firework_Mine::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE, CDOTA_Item_ForceBoots::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE, CDOTA_Item_JumpBoots::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE, CDOTA_Item_Recipe_Vermillion_Robe::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE, CDOTA_Item_Vermillion_Robe::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE, CDOTA_Item_Recipe_AbyssalBlade::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE, CDOTA_Item_AbyssalBlade::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE (251 total)
+// globals: CDOTA_Item::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,
+CSchemaClassInfo *__fastcall CDOTA_Item::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        const char *pProjectName)
+{
+  CSchemaClassInfo *result; // rax
+
+  result = CDOTA_Item::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult;
+  if ( CDOTA_Item::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult == 0 )
+    return CDOTA_Item::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+             pSchemaSystem,
+             pBinaryName,
+             pProjectName);
+  return result;
+}
+
+
+// CDOTA_Item::CEntityInstanceEntityClass::Schema_VerifyBindingIsRegistered  (line 55, @0x00000000025a5d30, libserver.so)
+// callers: CDOTA_Item::CEntityInstanceEntityClass::Schema_DynamicBinding
+void __cdecl CDOTA_Item::CEntityInstanceEntityClass::Schema_VerifyBindingIsRegistered()
+{
+  ;
+}
+
+
+// CDOTA_Item::Schema_CompileTimeVerificationFunction  (line 63, @0x00000000025a5d40, libserver.so)
+void __fastcall CDOTA_Item::Schema_CompileTimeVerificationFunction(CDOTA_Item *const this)
+{
+  ;
+}
+
+
+// CDOTA_Item::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE  (line 103, @0x00000000025a5d50, libserver.so)  // inlines: Call, Get, NetworkVarDecl_t, RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE, SchemaBinding_SchemaTypeOfMemberVarByAddr<CDOTA_Item, CHandle<CDOTA_Item_Physical> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<CDOTA_Item, CNetworkVarBase<bool, CDOTA_Item::NetworkVar_m_bAlertable> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<CDOTA_Item, CNetworkVarBase<bool, CDOTA_Item::NetworkVar_m_bCanBeUsedOutOfInventory> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<CDOTA_Item, CNetworkVarBase<bool, CDOTA_Item::NetworkVar_m_bCastOnPickup> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<CDOTA_Item, CNetworkVarBase<bool, CDOTA_Item::NetworkVar_m_bCombinable> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<CDOTA_Item, CNetworkVarBase<bool, CDOTA_Item::NetworkVar_m_bCombineLocked> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<CDOTA_Item, CNetworkVarBase<bool, CDOTA_Item::NetworkVar_m_bDisassemblable> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<CDOTA_Item, CNetworkVarBase<bool, CDOTA_Item::NetworkVar_m_bDroppable> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<CDOTA_Item, CNetworkVarBase<bool, CDOTA_Item::NetworkVar_m_bItemEnabled> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<CDOTA_Item, CNetworkVarBase<bool, CDOTA_Item::NetworkVar_m_bKillable> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<CDOTA_Item, CNetworkVarBase<bool, CDOTA_Item::NetworkVar_m_bPermanent> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<CDOTA_Item, CNetworkVarBase<bool, CDOTA_Item::NetworkVar_m_bPurchasable> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<CDOTA_Item, CNetworkVarBase<bool, CDOTA_Item::NetworkVar_m_bPurchasedWhileDead> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<CDOTA_Item, CNetworkVarBase<bool, CDOTA_Item::NetworkVar_m_bRecipe> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<CDOTA_Item, CNetworkVarBase<bool, CDOTA_Item::NetworkVar_m_bRequiresCharges> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<CDOTA_Item, CNetworkVarBase<bool, CDOTA_Item::NetworkVar_m_bSellable> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<CDOTA_Item, CNetworkVarBase<bool, CDOTA_Item::NetworkVar_m_bStackable> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<CDOTA_Item, CNetworkVarBase<float, CDOTA_Item::NetworkVar_m_flAssembledTime> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<CDOTA_Item, CNetworkVarBase<float, CDOTA_Item::NetworkVar_m_flEnableTime> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<CDOTA_Item, CNetworkVarBase<float, CDOTA_Item::NetworkVar_m_flPurchaseTime> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<CDOTA_Item, CNetworkVarBase<int, CDOTA_Item::NetworkVar_m_iCurrentCharges> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<CDOTA_Item, CNetworkVarBase<int, CDOTA_Item::NetworkVar_m_iInitialCharges> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<CDOTA_Item, CNetworkVarBase<int, CDOTA_Item::NetworkVar_m_iPlayerOwnerID> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<CDOTA_Item, CNetworkVarBase<int, CDOTA_Item::NetworkVar_m_iSecondaryCharges> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<CDOTA_Item, CNetworkVarBase<int, CDOTA_Item::NetworkVar_m_iSharability> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<CDOTA_Item, bool>, SchemaBinding_SchemaTypeOfMemberVarByAddr<CDOTA_Item, int>, SetTypeScope
+// calls: __cxa_guard_acquire, __cxa_guard_release, CDOTABaseAbility::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE, CDOTA_Item::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE, __cxa_guard_abort, _Unwind_Resume
+// callers: CDOTA_Item_GreaterClarity::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE, CDOTA_Item_UpgradedMortar::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE, CDOTA_Item_UpgradedBarricade::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE, CDOTA_Item_BagOfGold::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE, CDOTA_Item_Book::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE, CDOTA_Item_Tombstone::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE, CSchemaNonConstructibleClassBinding<CDOTA_Item>::Register, CDOTA_Item_DataDriven::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE, CDOTA_Item_Lua::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE, CDOTA_Item_Nian_Flag_Trap::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE, CDOTA_Ability_Firework_Mine::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE, CDOTA_Item_ForceBoots::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE (256 total)
+// strings: "CDOTA_Item_Physical", "CHandle", "m_bPurchasedWhileDead", "m_iCurrentCharges", "m_flAssembledTime", "m_flPurchaseTime" (26 total)
+// globals: CDOTA_Item::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitialized, `guard variable for'CDOTA_Item::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char con, CSchemaManipulator<CHandle<CDOTA_Item_Physical>>::StaticAccessor(void)::m, CAtomicManipulator<CHandle<CDOTA_Item_Physical>>::Get(void)::val, CDOTA_Item::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,, CDOTA_Item::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_Nes, CDOTA_Item::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_Cla
+CSchemaClassInfo *__fastcall CDOTA_Item::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        const char *pProjectName)
+{
+  CSchemaClassInfo *result; // rax
+  ISchemaSystemTypeScope *v7; // rbx
+  __int64 (__fastcall *v8)(ISchemaSystemTypeScope *, const char *, __int64, __int64 (__fastcall ***)(), __int64 (__fastcall ***)(), __int64); // r15
+  __int64 v9; // rax
+  CSchemaClassInfo *v10; // rax
+  CSchemaClassInfo *v11; // rax
+
+  result = CDOTA_Item::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult;
+  if ( CDOTA_Item::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult == 0 )
+  {
+    v7 = (*(*pSchemaSystem + 112LL))(pSchemaSystem, 1, pBinaryName);
+    if ( `guard variable for'CDOTA_Item::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTA_Item3_MNetworkVarNames_Value == 0
+      && __cxa_guard_acquire(&`guard variable for'CDOTA_Item::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTA_Item3_MNetworkVarNames_Value) != 0 )
+    {
+      CDOTA_Item::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTA_Item3_MNetworkVarNames_Value.m_pVarName = "m_bCombinable";
+      CDOTA_Item::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTA_Item3_MNetworkVarNames_Value.m_pVarType = "bool";
+      __cxa_guard_release(&`guard variable for'CDOTA_Item::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTA_Item3_MNetworkVarNames_Value);
+    }
+    if ( `guard variable for'CDOTA_Item::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTA_Item4_MNetworkVarNames_Value == 0
+      && __cxa_guard_acquire(&`guard variable for'CDOTA_Item::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTA_Item4_MNetworkVarNames_Value) != 0 )
+    {
+      CDOTA_Item::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTA_Item4_MNetworkVarNames_Value.m_pVarName = "m_bPermanent";
+      CDOTA_Item::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTA_Item4_MNetworkVarNames_Value.m_pVarType = "bool";
+      __cxa_guard_release(&`guard variable for'CDOTA_Item::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTA_Item4_MNetworkVarNames_Value);
+    }
+    if ( `guard variable for'CDOTA_Item::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTA_Item5_MNetworkVarNames_Value == 0
+      && __cxa_guard_acquire(&`guard variable for'CDOTA_Item::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTA_Item5_MNetworkVarNames_Value) != 0 )
+    {
+      CDOTA_Item::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTA_Item5_MNetworkVarNames_Value.m_pVarName = "m_bStackable";
+      CDOTA_Item::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTA_Item5_MNetworkVarNames_Value.m_pVarType = "bool";
+      __cxa_guard_release(&`guard variable for'CDOTA_Item::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTA_Item5_MNetworkVarNames_Value);
+    }
+    if ( `guard variable for'CDOTA_Item::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTA_Item6_MNetworkVarNames_Value == 0
+      && __cxa_guard_acquire(&`guard variable for'CDOTA_Item::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTA_Item6_MNetworkVarNames_Value) != 0 )
+    {
+      CDOTA_Item::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTA_Item6_MNetworkVarNames_Value.m_pVarName = "m_bRecipe";
+      CDOTA_Item::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTA_Item6_MNetworkVarNames_Value.m_pVarType = "bool";
+      __cxa_guard_release(&`guard variable for'CDOTA_Item::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTA_Item6_MNetworkVarNames_Value);
+    }
+    if ( `guard variable for'CDOTA_Item::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTA_Item7_MNetworkVarNames_Value == 0
+      && __cxa_guard_acquire(&`guard variable for'CDOTA_Item::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTA_Item7_MNetworkVarNames_Value) != 0 )
+    {
+      CDOTA_Item::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTA_Item7_MNetworkVarNames_Value.m_pVarName = "m_iSharability";
+      CDOTA_Item::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTA_Item7_MNetworkVarNames_Value.m_pVarType = "int";
+      __cxa_guard_release(&`guard variable for'CDOTA_Item::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTA_Item7_MNetworkVarNames_Value);
+    }
+    if ( `guard variable for'CDOTA_Item::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTA_Item8_MNetworkVarNames_Value == 0
+      && __cxa_guard_acquire(&`guard variable for'CDOTA_Item::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTA_Item8_MNetworkVarNames_Value) != 0 )
+    {
+      CDOTA_Item::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTA_Item8_MNetworkVarNames_Value.m_pVarName = "m_bDroppable";
+      CDOTA_Item::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTA_Item8_MNetworkVarNames_Value.m_pVarType = "bool";
+      __cxa_guard_release(&`guard variable for'CDOTA_Item::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTA_Item8_MNetworkVarNames_Value);
+    }
+    if ( `guard variable for'CDOTA_Item::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTA_Item9_MNetworkVarNames_Value == 0
+      && __cxa_guard_acquire(&`guard variable for'CDOTA_Item::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTA_Item9_MNetworkVarNames_Value) != 0 )
+    {
+      CDOTA_Item::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTA_Item9_MNetworkVarNames_Value.m_pVarName = "m_bPurchasable";
+      CDOTA_Item::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTA_Item9_MNetworkVarNames_Value.m_pVarType = "bool";
+      __cxa_guard_release(&`guard variable for'CDOTA_Item::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTA_Item9_MNetworkVarNames_Value);
+    }
+    if ( `guard variable for'CDOTA_Item::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTA_Item10_MNetworkVarNames_Value == 0
+      && __cxa_guard_acquire(&`guard variable for'CDOTA_Item::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTA_Item10_MNetworkVarNames_Value) != 0 )
+    {
+      CDOTA_Item::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTA_Item10_MNetworkVarNames_Value.m_pVarName = "m_bSellable";
+      CDOTA_Item::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTA_Item10_MNetworkVarNames_Value.m_pVarType = "bool";
+      __cxa_guard_release(&`guard variable for'CDOTA_Item::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTA_Item10_MNetworkVarNames_Value);
+    }
+    if ( `guard variable for'CDOTA_Item::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTA_Item11_MNetworkVarNames_Value == 0
+      && __cxa_guard_acquire(&`guard variable for'CDOTA_Item::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTA_Item11_MNetworkVarNames_Value) != 0 )
+    {
+      CDOTA_Item::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTA_Item11_MNetworkVarNames_Value.m_pVarName = "m_bRequiresCharges";
+      CDOTA_Item::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTA_Item11_MNetworkVarNames_Value.m_pVarType = "bool";
+      __cxa_guard_release(&`guard variable for'CDOTA_Item::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTA_Item11_MNetworkVarNames_Value);
+    }
+    if ( `guard variable for'CDOTA_Item::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTA_Item12_MNetworkVarNames_Value == 0
+      && __cxa_guard_acquire(&`guard variable for'CDOTA_Item::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTA_Item12_MNetworkVarNames_Value) != 0 )
+    {
+      CDOTA_Item::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTA_Item12_MNetworkVarNames_Value.m_pVarName = "m_bKillable";
+      CDOTA_Item::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTA_Item12_MNetworkVarNames_Value.m_pVarType = "bool";
+      __cxa_guard_release(&`guard variable for'CDOTA_Item::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTA_Item12_MNetworkVarNames_Value);
+    }
+    if ( `guard variable for'CDOTA_Item::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTA_Item13_MNetworkVarNames_Value == 0
+      && __cxa_guard_acquire(&`guard variable for'CDOTA_Item::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTA_Item13_MNetworkVarNames_Value) != 0 )
+    {
+      CDOTA_Item::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTA_Item13_MNetworkVarNames_Value.m_pVarName = "m_bDisassemblable";
+      CDOTA_Item::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTA_Item13_MNetworkVarNames_Value.m_pVarType = "bool";
+      __cxa_guard_release(&`guard variable for'CDOTA_Item::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTA_Item13_MNetworkVarNames_Value);
+    }
+    if ( `guard variable for'CDOTA_Item::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTA_Item14_MNetworkVarNames_Value == 0
+      && __cxa_guard_acquire(&`guard variable for'CDOTA_Item::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTA_Item14_MNetworkVarNames_Value) != 0 )
+    {
+      CDOTA_Item::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTA_Item14_MNetworkVarNames_Value.m_pVarName = "m_bAlertable";
+      CDOTA_Item::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTA_Item14_MNetworkVarNames_Value.m_pVarType = "bool";
+      __cxa_guard_release(&`guard variable for'CDOTA_Item::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTA_Item14_MNetworkVarNames_Value);
+    }
+    if ( `guard variable for'CDOTA_Item::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTA_Item15_MNetworkVarNames_Value == 0
+      && __cxa_guard_acquire(&`guard variable for'CDOTA_Item::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTA_Item15_MNetworkVarNames_Value) != 0 )
+    {
+      CDOTA_Item::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTA_Item15_MNetworkVarNames_Value.m_pVarName = "m_iInitialCharges";
+      CDOTA_Item::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTA_Item15_MNetworkVarNames_Value.m_pVarType = "int";
+      __cxa_guard_release(&`guard variable for'CDOTA_Item::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTA_Item15_MNetworkVarNames_Value);
+    }
+    if ( `guard variable for'CDOTA_Item::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTA_Item16_MNetworkVarNames_Value == 0
+      && __cxa_guard_acquire(&`guard variable for'CDOTA_Item::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTA_Item16_MNetworkVarNames_Value) != 0 )
+    {
+      CDOTA_Item::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTA_Item16_MNetworkVarNames_Value.m_pVarName = "m_bCastOnPickup";
+      CDOTA_Item::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTA_Item16_MNetworkVarNames_Value.m_pVarType = "bool";
+      __cxa_guard_release(&`guard variable for'CDOTA_Item::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTA_Item16_MNetworkVarNames_Value);
+    }
+    if ( `guard variable for'CDOTA_Item::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTA_Item17_MNetworkVarNames_Value == 0
+      && __cxa_guard_acquire(&`guard variable for'CDOTA_Item::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTA_Item17_MNetworkVarNames_Value) != 0 )
+    {
+      CDOTA_Item::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTA_Item17_MNetworkVarNames_Value.m_pVarName = "m_bCanBeUsedOutOfInventory";
+      CDOTA_Item::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTA_Item17_MNetworkVarNames_Value.m_pVarType = "bool";
+      __cxa_guard_release(&`guard variable for'CDOTA_Item::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTA_Item17_MNetworkVarNames_Value);
+    }
+    if ( `guard variable for'CDOTA_Item::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTA_Item18_MNetworkVarNames_Value == 0
+      && __cxa_guard_acquire(&`guard variable for'CDOTA_Item::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTA_Item18_MNetworkVarNames_Value) != 0 )
+    {
+      CDOTA_Item::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTA_Item18_MNetworkVarNames_Value.m_pVarName = "m_bItemEnabled";
+      CDOTA_Item::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTA_Item18_MNetworkVarNames_Value.m_pVarType = "bool";
+      __cxa_guard_release(&`guard variable for'CDOTA_Item::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTA_Item18_MNetworkVarNames_Value);
+    }
+    if ( `guard variable for'CDOTA_Item::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTA_Item19_MNetworkVarNames_Value == 0
+      && __cxa_guard_acquire(&`guard variable for'CDOTA_Item::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTA_Item19_MNetworkVarNames_Value) != 0 )
+    {
+      CDOTA_Item::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTA_Item19_MNetworkVarNames_Value.m_pVarName = "m_flEnableTime";
+      CDOTA_Item::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTA_Item19_MNetworkVarNames_Value.m_pVarType = "float";
+      __cxa_guard_release(&`guard variable for'CDOTA_Item::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTA_Item19_MNetworkVarNames_Value);
+    }
+    if ( `guard variable for'CDOTA_Item::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTA_Item20_MNetworkVarNames_Value == 0
+      && __cxa_guard_acquire(&`guard variable for'CDOTA_Item::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTA_Item20_MNetworkVarNames_Value) != 0 )
+    {
+      CDOTA_Item::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTA_Item20_MNetworkVarNames_Value.m_pVarName = "m_flPurchaseTime";
+      CDOTA_Item::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTA_Item20_MNetworkVarNames_Value.m_pVarType = "float";
+      __cxa_guard_release(&`guard variable for'CDOTA_Item::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTA_Item20_MNetworkVarNames_Value);
+    }
+    if ( `guard variable for'CDOTA_Item::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTA_Item21_MNetworkVarNames_Value == 0
+      && __cxa_guard_acquire(&`guard variable for'CDOTA_Item::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTA_Item21_MNetworkVarNames_Value) != 0 )
+    {
+      CDOTA_Item::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTA_Item21_MNetworkVarNames_Value.m_pVarName = "m_flAssembledTime";
+      CDOTA_Item::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTA_Item21_MNetworkVarNames_Value.m_pVarType = "float";
+      __cxa_guard_release(&`guard variable for'CDOTA_Item::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTA_Item21_MNetworkVarNames_Value);
+    }
+    if ( `guard variable for'CDOTA_Item::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTA_Item22_MNetworkVarNames_Value == 0
+      && __cxa_guard_acquire(&`guard variable for'CDOTA_Item::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTA_Item22_MNetworkVarNames_Value) != 0 )
+    {
+      CDOTA_Item::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTA_Item22_MNetworkVarNames_Value.m_pVarName = "m_iCurrentCharges";
+      CDOTA_Item::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTA_Item22_MNetworkVarNames_Value.m_pVarType = "int";
+      __cxa_guard_release(&`guard variable for'CDOTA_Item::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTA_Item22_MNetworkVarNames_Value);
+    }
+    if ( `guard variable for'CDOTA_Item::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTA_Item23_MNetworkVarNames_Value == 0
+      && __cxa_guard_acquire(&`guard variable for'CDOTA_Item::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTA_Item23_MNetworkVarNames_Value) != 0 )
+    {
+      CDOTA_Item::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTA_Item23_MNetworkVarNames_Value.m_pVarName = "m_iSecondaryCharges";
+      CDOTA_Item::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTA_Item23_MNetworkVarNames_Value.m_pVarType = "int";
+      __cxa_guard_release(&`guard variable for'CDOTA_Item::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTA_Item23_MNetworkVarNames_Value);
+    }
+    if ( `guard variable for'CDOTA_Item::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTA_Item24_MNetworkVarNames_Value == 0
+      && __cxa_guard_acquire(&`guard variable for'CDOTA_Item::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTA_Item24_MNetworkVarNames_Value) != 0 )
+    {
+      CDOTA_Item::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTA_Item24_MNetworkVarNames_Value.m_pVarName = "m_bCombineLocked";
+      CDOTA_Item::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTA_Item24_MNetworkVarNames_Value.m_pVarType = "bool";
+      __cxa_guard_release(&`guard variable for'CDOTA_Item::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTA_Item24_MNetworkVarNames_Value);
+    }
+    if ( `guard variable for'CDOTA_Item::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTA_Item25_MNetworkVarNames_Value == 0
+      && __cxa_guard_acquire(&`guard variable for'CDOTA_Item::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTA_Item25_MNetworkVarNames_Value) != 0 )
+    {
+      CDOTA_Item::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTA_Item25_MNetworkVarNames_Value.m_pVarName = "m_iPlayerOwnerID";
+      CDOTA_Item::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTA_Item25_MNetworkVarNames_Value.m_pVarType = "int";
+      __cxa_guard_release(&`guard variable for'CDOTA_Item::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTA_Item25_MNetworkVarNames_Value);
+    }
+    if ( `guard variable for'CDOTA_Item::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTA_Item26_MNetworkVarNames_Value == 0
+      && __cxa_guard_acquire(&`guard variable for'CDOTA_Item::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTA_Item26_MNetworkVarNames_Value) != 0 )
+    {
+      CDOTA_Item::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTA_Item26_MNetworkVarNames_Value.m_pVarName = "m_bPurchasedWhileDead";
+      CDOTA_Item::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTA_Item26_MNetworkVarNames_Value.m_pVarType = "bool";
+      __cxa_guard_release(&`guard variable for'CDOTA_Item::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTA_Item26_MNetworkVarNames_Value);
+    }
+    CDOTA_Item::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CDOTA_Item[0].m_pType = (*(*v7 + 40LL))(v7, 7);
+    CDOTA_Item::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CDOTA_Item[1].m_pType = (*(*v7 + 40LL))(v7, 7);
+    CDOTA_Item::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CDOTA_Item[2].m_pType = (*(*v7 + 40LL))(v7, 13);
+    CDOTA_Item::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CDOTA_Item[3].m_pType = (*(*v7 + 40LL))(v7, 13);
+    CDOTA_Item::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CDOTA_Item[4].m_pType = (*(*v7 + 40LL))(v7, 13);
+    CDOTA_Item::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CDOTA_Item[5].m_pType = (*(*v7 + 40LL))(v7, 13);
+    CDOTA_Item::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CDOTA_Item[6].m_pType = (*(*v7 + 40LL))(v7, 7);
+    CDOTA_Item::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CDOTA_Item[7].m_pType = (*(*v7 + 40LL))(v7, 13);
+    CDOTA_Item::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CDOTA_Item[8].m_pType = (*(*v7 + 40LL))(v7, 13);
+    CDOTA_Item::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CDOTA_Item[9].m_pType = (*(*v7 + 40LL))(v7, 13);
+    CDOTA_Item::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CDOTA_Item[10].m_pType = (*(*v7 + 40LL))(v7, 13);
+    CDOTA_Item::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CDOTA_Item[11].m_pType = (*(*v7 + 40LL))(v7, 13);
+    CDOTA_Item::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CDOTA_Item[12].m_pType = (*(*v7 + 40LL))(v7, 13);
+    CDOTA_Item::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CDOTA_Item[13].m_pType = (*(*v7 + 40LL))(v7, 13);
+    CDOTA_Item::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CDOTA_Item[14].m_pType = (*(*v7 + 40LL))(v7, 13);
+    CDOTA_Item::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CDOTA_Item[15].m_pType = (*(*v7 + 40LL))(v7, 13);
+    CDOTA_Item::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CDOTA_Item[16].m_pType = (*(*v7 + 40LL))(v7, 7);
+    CDOTA_Item::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CDOTA_Item[17].m_pType = (*(*v7 + 40LL))(v7, 13);
+    CDOTA_Item::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CDOTA_Item[18].m_pType = (*(*v7 + 40LL))(v7, 13);
+    CDOTA_Item::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CDOTA_Item[19].m_pType = (*(*v7 + 40LL))(v7, 13);
+    CDOTA_Item::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CDOTA_Item[20].m_pType = (*(*v7 + 40LL))(v7, 11);
+    CDOTA_Item::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CDOTA_Item[21].m_pType = (*(*v7 + 40LL))(v7, 13);
+    CDOTA_Item::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CDOTA_Item[22].m_pType = (*(*v7 + 40LL))(v7, 13);
+    CDOTA_Item::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CDOTA_Item[23].m_pType = (*(*v7 + 40LL))(v7, 13);
+    CDOTA_Item::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CDOTA_Item[24].m_pType = (*(*v7 + 40LL))(v7, 7);
+    CDOTA_Item::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CDOTA_Item[25].m_pType = (*(*v7 + 40LL))(v7, 13);
+    CDOTA_Item::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CDOTA_Item[26].m_pType = (*(*v7 + 40LL))(v7, 13);
+    CDOTA_Item::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CDOTA_Item[27].m_pType = (*(*v7 + 40LL))(v7, 13);
+    CDOTA_Item::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CDOTA_Item[28].m_pType = (*(*v7 + 40LL))(v7, 11);
+    CDOTA_Item::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CDOTA_Item[29].m_pType = (*(*v7 + 40LL))(v7, 11);
+    CDOTA_Item::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CDOTA_Item[30].m_pType = (*(*v7 + 40LL))(v7, 7);
+    CDOTA_Item::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CDOTA_Item[31].m_pType = (*(*v7 + 40LL))(v7, 7);
+    CDOTA_Item::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CDOTA_Item[32].m_pType = (*(*v7 + 40LL))(v7, 13);
+    v8 = *(*v7 + 64LL);
+    v9 = (*(*v7 + 88LL))(v7, "CDOTA_Item_Physical");
+    CDOTA_Item::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CDOTA_Item[33].m_pType = v8(v7, "CHandle", 5003, CAtomicManipulator<CHandle<CDOTA_Item_Physical>>::Get(void)::val, CSchemaManipulator<CHandle<CDOTA_Item_Physical>>::StaticAccessor(void)::m, v9);
+    CDOTA_Item::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CDOTA_Item[34].m_pType = (*(*v7 + 40LL))(v7, 7);
+    CDOTA_Item::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CDOTA_Item[35].m_pType = (*(*v7 + 40LL))(v7, 13);
+    CDOTA_Item::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CDOTA_Item[36].m_pType = (*(*v7 + 40LL))(v7, 7);
+    if ( `guard variable for'CDOTA_Item::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_NestedClassesOf_CDOTA_Item == 0
+      && __cxa_guard_acquire(&`guard variable for'CDOTA_Item::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_NestedClassesOf_CDOTA_Item) != 0 )
+    {
+      v10 = CDOTA_Item::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult;
+      if ( CDOTA_Item::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult == 0 )
+        v10 = CDOTA_Item::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+                pSchemaSystem,
+                pBinaryName,
+                pProjectName);
+      CDOTA_Item::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_NestedClassesOf_CDOTA_Item[0] = v10;
+      __cxa_guard_release(&`guard variable for'CDOTA_Item::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_NestedClassesOf_CDOTA_Item);
+    }
+    (*(CDOTABaseAbility::s_pSchemaBindingForLocalModule->_vptr_ISchemaBinding + 5))(
+      CDOTABaseAbility::s_pSchemaBindingForLocalModule,
+      pSchemaSystem,
+      pBinaryName,
+      pProjectName);
+    v11 = CDOTABaseAbility::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+            pSchemaSystem,
+            pBinaryName,
+            pProjectName);
+    CDOTA_Item::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CDOTA_Item.m_pOuterTypeScope = v7;
+    CDOTA_Item::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassBases_CDOTA_Item[0].m_pClass = v11;
+    CDOTA_Item::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult = &CDOTA_Item::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CDOTA_Item;
+    return &CDOTA_Item::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CDOTA_Item;
+  }
+  return result;
+}
+
+
+// CDOTA_Item::Schema_VerifyBindingIsRegistered  (line 492, @0x00000000025a6ec0, libserver.so)
+// callers: CDOTA_Item::CEntityInstanceEntityClass::GetInstanceSchemaBinding
+void __cdecl CDOTA_Item::Schema_VerifyBindingIsRegistered()
+{
+  ;
+}
+
+
+// CDOTA_Item::SetupEntClassInputs  (line 506, @0x00000000025a6ed0, libserver.so)
+void __fastcall CDOTA_Item::SetupEntClassInputs(CEntityClass *pComponentInfo)
+{
+  ;
+}
+
+
+// CDOTA_Item::SetupEntClassComponentOverrides  (line 512, @0x00000000025a6ee0, libserver.so)
+void __fastcall CDOTA_Item::SetupEntClassComponentOverrides(CEntityClass *pEntityClass)
+{
+  pEntityClass->m_pComponentOverrides = 0;
+}
+
+
+// GetScriptDesc<CDOTA_Item>  (line 525, @0x00000000025b91b0, libserver.so)  // inlines: AddParameterType, CUtlMemory, CUtlVector, CUtlVectorBase, Finalize, ScriptClassDesc_t, ScriptDeduceFunctionSignature<CDOTA_Item*, CDOTA_Item, HSCRIPT__*>, ScriptDeduceFunctionSignature<CDOTA_Item*, CDOTA_Item, bool>, ScriptDeduceFunctionSignature<CDOTA_Item*, CDOTA_Item, float>, ScriptDeduceFunctionSignature<CDOTA_Item*, CDOTA_Item, int>, ScriptDeduceFunctionSignature<CDOTA_Item*, CDOTA_Item, void, HSCRIPT__*>, ScriptDeduceFunctionSignature<CDOTA_Item*, CDOTA_Item, void, bool, float, float, Vector>, ScriptDeduceFunctionSignature<CDOTA_Item*, CDOTA_Item, void, bool, float, float, float, Vector>, ScriptDeduceFunctionSignature<CDOTA_Item*, CDOTA_Item, void, bool>, ScriptDeduceFunctionSignature<CDOTA_Item*, CDOTA_Item, void, float>, ScriptDeduceFunctionSignature<CDOTA_Item*, CDOTA_Item, void, int>, ScriptDeduceFunctionSignature<CDOTA_Item*, CDOTA_Item, void>, SetDescription, SetFunctionName, SetPackedParameterNames, SetReturnType, SetScriptName, operator[]
+// calls: operator new, GetScriptDesc<CDOTABaseAbility>, CUtlVectorBase<ScriptFunctionBinding_t, CUtlMemory<ScriptFunctionBinding_t, int> >::AddToTail
+// callers: CDOTA_Item::GetScriptDesc, CDOTA_Item::InitScriptDesc, CDOTA_Item::GetClassScriptDesc, CDOTA_Item::GetEntityClassInternal, CDOTA_Item_Book::GetEntityClassInternal, CDOTA_Item_BookStrength::GetEntityClassInternal, CDOTA_Item_BookAgility::GetEntityClassInternal, CDOTA_Item_BookIntelligence::GetEntityClassInternal, CDOTA_Item_Tombstone::GetEntityClassInternal, GetScriptDesc<CDOTA_Item_DataDriven>, GetScriptDesc<CDOTA_Item_Lua>
+// strings: "A usable item.", "CDOTA_Item", "Think this item", "Set the purchase time of this item", "SetPurchaseTime", "Get the purchase time of this item" (38 total)
+// globals: g_pCDOTA_Item_ScriptDesc, CMemberScriptBinding0<CDOTA_Item *,void (CDOTA_Item::*)(void),void>::Call(void *,void *,CVariantBase<CVariantDefaultAllocator> *,int,CVariantBase<CVariantDefaul, CMemberScriptBinding1<CDOTA_Item *,void (CDOTA_Item::*)(float),void,float>::Call(void *,void *,CVariantBase<CVariantDefaultAllocator> *,int,CVariantBase<CVarian, CDOTA_Item::SetPurchaseTime(float), s_CDOTA_Item_SetPurchaseTime_packed_arg_names, CMemberScriptBinding0<CDOTA_Item *,float (CDOTA_Item::*)(void),float>::Call(void *,void *,CVariantBase<CVariantDefaultAllocator> *,int,CVariantBase<CVariantDefa, CDOTA_Item::GetPurchaseTime(void), CMemberScriptBinding0<CDOTA_Item *,int (CDOTA_Item::*)(void),int>::Call(void *,void *,CVariantBase<CVariantDefaultAllocator> *,int,CVariantBase<CVariantDefaultA (35 total)
+ScriptClassDesc_t *__fastcall GetScriptDesc<CDOTA_Item>(CDOTA_Item *pScriptDescObjectInstance)
+{
+  ScriptClassDesc_t *result; // rax
+  ScriptClassDesc_t *v2; // rbx
+  ScriptClassDesc_t *Script; // rax
+  IScriptInstanceHelper *pHelper; // rdx
+  __int64 v5; // rcx
+  int v6; // eax
+  int v7; // eax
+  char v8; // dl
+  char v9; // di
+  __int64 v10; // rcx
+  char v11; // al
+  __int64 v12; // rdx
+  int v13; // eax
+  char v14; // dl
+  char v15; // di
+  __int64 v16; // rcx
+  int v17; // eax
+  int v18; // eax
+  char v19; // dl
+  char v20; // di
+  __int64 v21; // rcx
+  int v22; // eax
+  int v23; // eax
+  char v24; // dl
+  char v25; // di
+  __int64 v26; // rcx
+  int v27; // eax
+  int v28; // eax
+  char v29; // dl
+  char v30; // di
+  __int64 v31; // rcx
+  char v32; // al
+  __int64 v33; // rdx
+  int v34; // eax
+  char v35; // dl
+  char v36; // di
+  __int64 v37; // rcx
+  int v38; // eax
+  int v39; // eax
+  char v40; // dl
+  char v41; // di
+  __int64 v42; // rcx
+  int v43; // eax
+  int v44; // eax
+  char v45; // dl
+  char v46; // di
+  __int64 v47; // rcx
+  int v48; // eax
+  int v49; // eax
+  char v50; // dl
+  char v51; // di
+  __int64 v52; // rcx
+  int v53; // eax
+  int v54; // eax
+  char v55; // dl
+  char v56; // di
+  __int64 v57; // rcx
+  int v58; // eax
+  int v59; // eax
+  char v60; // dl
+  char v61; // di
+  __int64 v62; // rcx
+  int v63; // eax
+  int v64; // eax
+  char v65; // dl
+  char v66; // di
+  __int64 v67; // rcx
+  int v68; // eax
+  int v69; // eax
+  char v70; // dl
+  char v71; // di
+  __int64 v72; // rcx
+  int v73; // eax
+  int v74; // eax
+  char v75; // dl
+  char v76; // di
+  __int64 v77; // rdx
+  int v78; // eax
+  int v79; // eax
+  char v80; // cl
+  __int64 v81; // rdx
+  int v82; // eax
+  int v83; // eax
+  char v84; // cl
+  __int64 v85; // rdx
+  int v86; // eax
+  int v87; // eax
+  char v88; // cl
+  __int64 v89; // rdx
+  int v90; // eax
+  int v91; // eax
+  char v92; // cl
+  __int64 v93; // rdx
+  int v94; // eax
+  int v95; // eax
+  char v96; // cl
+  __int64 v97; // rdx
+  int v98; // eax
+  int v99; // eax
+  char v100; // cl
+  __int64 v101; // rdx
+  int v102; // eax
+  int v103; // eax
+  char v104; // cl
+  __int64 v105; // rdx
+  int v106; // eax
+  int v107; // eax
+  char v108; // cl
+  __int64 v109; // rdx
+  int v110; // eax
+  int v111; // eax
+  char v112; // cl
+  __int64 v113; // rdx
+  int v114; // eax
+  int v115; // eax
+  char v116; // cl
+  __int64 v117; // rdx
+  char v118; // al
+  __int64 v119; // rcx
+  int v120; // eax
+  char v121; // cl
+  __int64 v122; // rdx
+  int v123; // eax
+  int v124; // eax
+  char v125; // cl
+  __int64 v126; // rdx
+  int v127; // eax
+  int v128; // eax
+  char v129; // cl
+  __int64 v130; // rdx
+  char v131; // al
+  __int64 v132; // rcx
+  int v133; // eax
+  char v134; // cl
+  __int64 v135; // rdx
+  int v136; // eax
+  int v137; // eax
+  char v138; // cl
+  __int64 v139; // rdx
+  char v140; // al
+  __int64 v141; // rcx
+  int v142; // eax
+  char v143; // cl
+  __int64 v144; // rdx
+  int v145; // eax
+  int v146; // eax
+  char v147; // cl
+  __int64 v148; // rdx
+  char v149; // al
+  char v150; // cl
+  int v151; // eax
+  char v152; // cl
+  __int64 v153; // rdx
+  char v154; // al
+  char v155; // cl
+  int v156; // eax
+  char v157; // cl
+
+  result = g_pCDOTA_Item_ScriptDesc;
+  if ( g_pCDOTA_Item_ScriptDesc == 0 )
+  {
+    v2 = operator new(0x50u);
+    v2->m_pBaseDesc = 0;
+    v2->m_FunctionBindings.m_Size = 0;
+    v2->m_FunctionBindings.m_Memory.m_pMemory = 0;
+    v2->m_FunctionBindings.m_Memory.m_nAllocationCount = 0;
+    v2->m_FunctionBindings.m_Memory.m_nGrowSize = 0;
+    v2->m_pfnConstruct = 0;
+    v2->m_pfnDestruct = 0;
+    v2->pHelper = 0;
+    g_pCDOTA_Item_ScriptDesc = v2;
+    v2->m_pszDescription = "A usable item.";
+    v2->m_pszScriptName = "CDOTA_Item";
+    v2->m_pszClassname = "CDOTA_Item";
+    Script = GetScriptDesc<CDOTABaseAbility>(0);
+    v2->m_pBaseDesc = Script;
+    if ( Script != 0 )
+    {
+      while ( 1 )
+      {
+        pHelper = Script->pHelper;
+        if ( pHelper != 0 )
+          break;
+        Script = Script->m_pBaseDesc;
+        if ( Script == 0 )
+          goto LABEL_7;
+      }
+      v2->pHelper = pHelper;
+    }
+LABEL_7:
+    v5 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(&v2->m_FunctionBindings)];
+    *(v5 + 24) = 0;
+    *(v5 + 16) = "Think this item";
+    *v5 = "Think";
+    *(v5 + 8) = "Think";
+    v6 = *(v5 + 26);
+    *(v5 + 25) = 0;
+    v7 = v6 - 1;
+    if ( v7 >= 0 && *(v5 + v7 + 27) == 32 )
+    {
+      v8 = 1;
+      do
+      {
+        --v7;
+        v9 = v8;
+        if ( v7 == -1 )
+        {
+          *(v5 + 25) = v8;
+          goto LABEL_13;
+        }
+        ++v8;
+      }
+      while ( *(v5 + v7 + 27) == 32 );
+      *(v5 + 25) = v9;
+    }
+LABEL_13:
+    *(v5 + 56) = 937;
+    *(v5 + 48) = CMemberScriptBinding0<CDOTA_Item *,void (CDOTA_Item::*)(void),void>::Call;
+    *(v5 + 64) = 1;
+    v10 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(&v2->m_FunctionBindings)];
+    *(v10 + 24) = 0;
+    *(v10 + 16) = "Set the purchase time of this item";
+    *v10 = "SetPurchaseTime";
+    *(v10 + 8) = "SetPurchaseTime";
+    v11 = *(v10 + 26);
+    v12 = v11++;
+    *(v10 + v12 + 27) = 1;
+    *(v10 + 26) = v11;
+    v13 = v11 - 1;
+    *(v10 + 25) = 0;
+    if ( v13 >= 0 && *(v10 + v13 + 27) == 32 )
+    {
+      v14 = 1;
+      do
+      {
+        --v13;
+        v15 = v14;
+        if ( v13 == -1 )
+        {
+          *(v10 + 25) = v14;
+          goto LABEL_19;
+        }
+        ++v14;
+      }
+      while ( *(v10 + v13 + 27) == 32 );
+      *(v10 + 25) = v15;
+    }
+LABEL_19:
+    *(v10 + 64) = 1;
+    *(v10 + 48) = CMemberScriptBinding1<CDOTA_Item *,void (CDOTA_Item::*)(float),void,float>::Call;
+    *(v10 + 56) = CDOTA_Item::SetPurchaseTime;
+    *(v10 + 40) = s_CDOTA_Item_SetPurchaseTime_packed_arg_names;
+    v16 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(&v2->m_FunctionBindings)];
+    *(v16 + 24) = 1;
+    *(v16 + 16) = "Get the purchase time of this item";
+    *v16 = "GetPurchaseTime";
+    *(v16 + 8) = "GetPurchaseTime";
+    v17 = *(v16 + 26);
+    *(v16 + 25) = 0;
+    v18 = v17 - 1;
+    if ( v18 >= 0 && *(v16 + v18 + 27) == 32 )
+    {
+      v19 = 1;
+      do
+      {
+        --v18;
+        v20 = v19;
+        if ( v18 == -1 )
+        {
+          *(v16 + 25) = v19;
+          goto LABEL_25;
+        }
+        ++v19;
+      }
+      while ( *(v16 + v18 + 27) == 32 );
+      *(v16 + 25) = v20;
+    }
+LABEL_25:
+    *(v16 + 64) = 1;
+    *(v16 + 48) = CMemberScriptBinding0<CDOTA_Item *,float (CDOTA_Item::*)(void),float>::Call;
+    *(v16 + 56) = CDOTA_Item::GetPurchaseTime;
+    v21 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(&v2->m_FunctionBindings)];
+    *(v21 + 24) = 5;
+    *(v21 + 16) = "Get the initial number of charges this item has.";
+    *v21 = "GetInitialCharges";
+    *(v21 + 8) = "GetInitialCharges";
+    v22 = *(v21 + 26);
+    *(v21 + 25) = 0;
+    v23 = v22 - 1;
+    if ( v23 >= 0 && *(v21 + v23 + 27) == 32 )
+    {
+      v24 = 1;
+      do
+      {
+        --v23;
+        v25 = v24;
+        if ( v23 == -1 )
+        {
+          *(v21 + 25) = v24;
+          goto LABEL_31;
+        }
+        ++v24;
+      }
+      while ( *(v21 + v23 + 27) == 32 );
+      *(v21 + 25) = v25;
+    }
+LABEL_31:
+    *(v21 + 64) = 1;
+    *(v21 + 48) = CMemberScriptBinding0<CDOTA_Item *,int (CDOTA_Item::*)(void),int>::Call;
+    *(v21 + 56) = CDOTA_Item::GetInitialCharges;
+    v26 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(&v2->m_FunctionBindings)];
+    *(v26 + 24) = 5;
+    *(v26 + 16) = "Get the number of charges this item currently has.";
+    *v26 = "GetCurrentCharges";
+    *(v26 + 8) = "GetCurrentCharges";
+    v27 = *(v26 + 26);
+    *(v26 + 25) = 0;
+    v28 = v27 - 1;
+    if ( v28 >= 0 && *(v26 + v28 + 27) == 32 )
+    {
+      v29 = 1;
+      do
+      {
+        --v28;
+        v30 = v29;
+        if ( v28 == -1 )
+        {
+          *(v26 + 25) = v29;
+          goto LABEL_37;
+        }
+        ++v29;
+      }
+      while ( *(v26 + v28 + 27) == 32 );
+      *(v26 + 25) = v30;
+    }
+LABEL_37:
+    *(v26 + 64) = 1;
+    *(v26 + 48) = CMemberScriptBinding0<CDOTA_Item *,int (CDOTA_Item::*)(void),int>::Call;
+    *(v26 + 56) = CDOTA_Item::GetCurrentCharges;
+    v31 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(&v2->m_FunctionBindings)];
+    *(v31 + 24) = 0;
+    *(v31 + 16) = "Set the number of charges on this item";
+    *v31 = "SetCurrentCharges";
+    *(v31 + 8) = "SetCurrentCharges";
+    v32 = *(v31 + 26);
+    v33 = v32++;
+    *(v31 + v33 + 27) = 5;
+    *(v31 + 26) = v32;
+    v34 = v32 - 1;
+    *(v31 + 25) = 0;
+    if ( v34 >= 0 && *(v31 + v34 + 27) == 32 )
+    {
+      v35 = 1;
+      do
+      {
+        --v34;
+        v36 = v35;
+        if ( v34 == -1 )
+        {
+          *(v31 + 25) = v35;
+          goto LABEL_43;
+        }
+        ++v35;
+      }
+      while ( *(v31 + v34 + 27) == 32 );
+      *(v31 + 25) = v36;
+    }
+LABEL_43:
+    *(v31 + 64) = 1;
+    *(v31 + 48) = CMemberScriptBinding1<CDOTA_Item *,void (CDOTA_Item::*)(int),void,int>::Call;
+    *(v31 + 56) = CDOTA_Item::SetCurrentCharges;
+    *(v31 + 40) = s_CDOTA_Item_SetCurrentCharges_packed_arg_names;
+    v37 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(&v2->m_FunctionBindings)];
+    *(v37 + 24) = 0;
+    *(v37 + 16) = "";
+    *v37 = "SpendCharge";
+    *(v37 + 8) = "SpendCharge";
+    v38 = *(v37 + 26);
+    *(v37 + 25) = 0;
+    v39 = v38 - 1;
+    if ( v39 >= 0 && *(v37 + v39 + 27) == 32 )
+    {
+      v40 = 1;
+      do
+      {
+        --v39;
+        v41 = v40;
+        if ( v39 == -1 )
+        {
+          *(v37 + 25) = v40;
+          goto LABEL_49;
+        }
+        ++v40;
+      }
+      while ( *(v37 + v39 + 27) == 32 );
+      *(v37 + 25) = v41;
+    }
+LABEL_49:
+    *(v37 + 64) = 1;
+    *(v37 + 48) = CMemberScriptBinding0<CDOTA_Item *,void (CDOTA_Item::*)(void),void>::Call;
+    *(v37 + 56) = CDOTA_Item::SpendCharge;
+    v42 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(&v2->m_FunctionBindings)];
+    *(v42 + 24) = 6;
+    *(v42 + 16) = "";
+    *v42 = "IsItem";
+    *(v42 + 8) = "IsItem";
+    v43 = *(v42 + 26);
+    *(v42 + 25) = 0;
+    v44 = v43 - 1;
+    if ( v44 >= 0 && *(v42 + v44 + 27) == 32 )
+    {
+      v45 = 1;
+      do
+      {
+        --v44;
+        v46 = v45;
+        if ( v44 == -1 )
+        {
+          *(v42 + 25) = v45;
+          goto LABEL_55;
+        }
+        ++v45;
+      }
+      while ( *(v42 + v44 + 27) == 32 );
+      *(v42 + 25) = v46;
+    }
+LABEL_55:
+    *(v42 + 56) = 1785;
+    *(v42 + 48) = CMemberScriptBinding0<CDOTA_Item *,bool (CDOTA_Item::*)(void),bool>::Call;
+    *(v42 + 64) = 1;
+    v47 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(&v2->m_FunctionBindings)];
+    *(v47 + 24) = 6;
+    *(v47 + 16) = "";
+    *v47 = "IsCombinable";
+    *(v47 + 8) = "IsCombinable";
+    v48 = *(v47 + 26);
+    *(v47 + 25) = 0;
+    v49 = v48 - 1;
+    if ( v49 >= 0 && *(v47 + v49 + 27) == 32 )
+    {
+      v50 = 1;
+      do
+      {
+        --v49;
+        v51 = v50;
+        if ( v49 == -1 )
+        {
+          *(v47 + 25) = v50;
+          goto LABEL_61;
+        }
+        ++v50;
+      }
+      while ( *(v47 + v49 + 27) == 32 );
+      *(v47 + 25) = v51;
+    }
+LABEL_61:
+    *(v47 + 56) = 2753;
+    *(v47 + 48) = CMemberScriptBinding0<CDOTA_Item *,bool (CDOTA_Item::*)(void),bool>::Call;
+    *(v47 + 64) = 1;
+    v52 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(&v2->m_FunctionBindings)];
+    *(v52 + 24) = 6;
+    *(v52 + 16) = "";
+    *v52 = "IsPermanent";
+    *(v52 + 8) = "IsPermanent";
+    v53 = *(v52 + 26);
+    *(v52 + 25) = 0;
+    v54 = v53 - 1;
+    if ( v54 >= 0 && *(v52 + v54 + 27) == 32 )
+    {
+      v55 = 1;
+      do
+      {
+        --v54;
+        v56 = v55;
+        if ( v54 == -1 )
+        {
+          *(v52 + 25) = v55;
+          goto LABEL_67;
+        }
+        ++v55;
+      }
+      while ( *(v52 + v54 + 27) == 32 );
+      *(v52 + 25) = v56;
+    }
+LABEL_67:
+    *(v52 + 56) = 2761;
+    *(v52 + 48) = CMemberScriptBinding0<CDOTA_Item *,bool (CDOTA_Item::*)(void),bool>::Call;
+    *(v52 + 64) = 1;
+    v57 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(&v2->m_FunctionBindings)];
+    *(v57 + 24) = 6;
+    *(v57 + 16) = "";
+    *v57 = "IsStackable";
+    *(v57 + 8) = "IsStackable";
+    v58 = *(v57 + 26);
+    *(v57 + 25) = 0;
+    v59 = v58 - 1;
+    if ( v59 >= 0 && *(v57 + v59 + 27) == 32 )
+    {
+      v60 = 1;
+      do
+      {
+        --v59;
+        v61 = v60;
+        if ( v59 == -1 )
+        {
+          *(v57 + 25) = v60;
+          goto LABEL_73;
+        }
+        ++v60;
+      }
+      while ( *(v57 + v59 + 27) == 32 );
+      *(v57 + 25) = v61;
+    }
+LABEL_73:
+    *(v57 + 56) = 2769;
+    *(v57 + 48) = CMemberScriptBinding0<CDOTA_Item *,bool (CDOTA_Item::*)(void),bool>::Call;
+    *(v57 + 64) = 1;
+    v62 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(&v2->m_FunctionBindings)];
+    *(v62 + 24) = 6;
+    *(v62 + 16) = "";
+    *v62 = "IsRecipe";
+    *(v62 + 8) = "IsRecipe";
+    v63 = *(v62 + 26);
+    *(v62 + 25) = 0;
+    v64 = v63 - 1;
+    if ( v64 >= 0 && *(v62 + v64 + 27) == 32 )
+    {
+      v65 = 1;
+      do
+      {
+        --v64;
+        v66 = v65;
+        if ( v64 == -1 )
+        {
+          *(v62 + 25) = v65;
+          goto LABEL_79;
+        }
+        ++v65;
+      }
+      while ( *(v62 + v64 + 27) == 32 );
+      *(v62 + 25) = v66;
+    }
+LABEL_79:
+    *(v62 + 56) = 2777;
+    *(v62 + 48) = CMemberScriptBinding0<CDOTA_Item *,bool (CDOTA_Item::*)(void),bool>::Call;
+    *(v62 + 64) = 1;
+    v67 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(&v2->m_FunctionBindings)];
+    *(v67 + 24) = 6;
+    *(v67 + 16) = "";
+    *v67 = "IsMuted";
+    *(v67 + 8) = "IsMuted";
+    v68 = *(v67 + 26);
+    *(v67 + 25) = 0;
+    v69 = v68 - 1;
+    if ( v69 >= 0 && *(v67 + v69 + 27) == 32 )
+    {
+      v70 = 1;
+      do
+      {
+        --v69;
+        v71 = v70;
+        if ( v69 == -1 )
+        {
+          *(v67 + 25) = v70;
+          goto LABEL_85;
+        }
+        ++v70;
+      }
+      while ( *(v67 + v69 + 27) == 32 );
+      *(v67 + 25) = v71;
+    }
+LABEL_85:
+    *(v67 + 56) = 2785;
+    *(v67 + 48) = CMemberScriptBinding0<CDOTA_Item *,bool (CDOTA_Item::*)(void),bool>::Call;
+    *(v67 + 64) = 1;
+    v72 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(&v2->m_FunctionBindings)];
+    *(v72 + 24) = 6;
+    *(v72 + 16) = "";
+    *v72 = "IsDroppable";
+    *(v72 + 8) = "IsDroppable";
+    v73 = *(v72 + 26);
+    *(v72 + 25) = 0;
+    v74 = v73 - 1;
+    if ( v74 >= 0 && *(v72 + v74 + 27) == 32 )
+    {
+      v75 = 1;
+      do
+      {
+        --v74;
+        v76 = v75;
+        if ( v74 == -1 )
+        {
+          *(v72 + 25) = v75;
+          goto LABEL_91;
+        }
+        ++v75;
+      }
+      while ( *(v72 + v74 + 27) == 32 );
+      *(v72 + 25) = v76;
+    }
+LABEL_91:
+    *(v72 + 56) = 2793;
+    *(v72 + 48) = CMemberScriptBinding0<CDOTA_Item *,bool (CDOTA_Item::*)(void),bool>::Call;
+    *(v72 + 64) = 1;
+    v77 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(&v2->m_FunctionBindings)];
+    *(v77 + 24) = 6;
+    *(v77 + 16) = "";
+    *v77 = "IsPurchasable";
+    *(v77 + 8) = "IsPurchasable";
+    v78 = *(v77 + 26);
+    *(v77 + 25) = 0;
+    v79 = v78 - 1;
+    if ( v79 >= 0 && *(v77 + v79 + 27) == 32 )
+    {
+      v80 = 0;
+      do
+      {
+        --v79;
+        ++v80;
+      }
+      while ( v79 != -1 && *(v77 + v79 + 27) == 32 );
+      *(v77 + 25) = v80;
+    }
+    *(v77 + 56) = 2801;
+    *(v77 + 48) = CMemberScriptBinding0<CDOTA_Item *,bool (CDOTA_Item::*)(void),bool>::Call;
+    *(v77 + 64) = 1;
+    v81 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(&v2->m_FunctionBindings)];
+    *(v81 + 24) = 6;
+    *(v81 + 16) = "";
+    *v81 = "IsSellable";
+    *(v81 + 8) = "IsSellable";
+    v82 = *(v81 + 26);
+    *(v81 + 25) = 0;
+    v83 = v82 - 1;
+    if ( v83 >= 0 && *(v81 + v83 + 27) == 32 )
+    {
+      v84 = 0;
+      do
+      {
+        --v83;
+        ++v84;
+      }
+      while ( v83 != -1 && *(v81 + v83 + 27) == 32 );
+      *(v81 + 25) = v84;
+    }
+    *(v81 + 56) = 2809;
+    *(v81 + 48) = CMemberScriptBinding0<CDOTA_Item *,bool (CDOTA_Item::*)(void),bool>::Call;
+    *(v81 + 64) = 1;
+    v85 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(&v2->m_FunctionBindings)];
+    *(v85 + 24) = 6;
+    *(v85 + 16) = "";
+    *v85 = "IsKillable";
+    *(v85 + 8) = "IsKillable";
+    v86 = *(v85 + 26);
+    *(v85 + 25) = 0;
+    v87 = v86 - 1;
+    if ( v87 >= 0 && *(v85 + v87 + 27) == 32 )
+    {
+      v88 = 0;
+      do
+      {
+        --v87;
+        ++v88;
+      }
+      while ( v87 != -1 && *(v85 + v87 + 27) == 32 );
+      *(v85 + 25) = v88;
+    }
+    *(v85 + 56) = 2817;
+    *(v85 + 48) = CMemberScriptBinding0<CDOTA_Item *,bool (CDOTA_Item::*)(void),bool>::Call;
+    *(v85 + 64) = 1;
+    v89 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(&v2->m_FunctionBindings)];
+    *(v89 + 24) = 6;
+    *(v89 + 16) = "";
+    *v89 = "IsDisassemblable";
+    *(v89 + 8) = "IsDisassemblable";
+    v90 = *(v89 + 26);
+    *(v89 + 25) = 0;
+    v91 = v90 - 1;
+    if ( v91 >= 0 && *(v89 + v91 + 27) == 32 )
+    {
+      v92 = 0;
+      do
+      {
+        --v91;
+        ++v92;
+      }
+      while ( v91 != -1 && *(v89 + v91 + 27) == 32 );
+      *(v89 + 25) = v92;
+    }
+    *(v89 + 56) = 2825;
+    *(v89 + 48) = CMemberScriptBinding0<CDOTA_Item *,bool (CDOTA_Item::*)(void),bool>::Call;
+    *(v89 + 64) = 1;
+    v93 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(&v2->m_FunctionBindings)];
+    *(v93 + 24) = 6;
+    *(v93 + 16) = "";
+    *v93 = "IsAlertableItem";
+    *(v93 + 8) = "IsAlertableItem";
+    v94 = *(v93 + 26);
+    *(v93 + 25) = 0;
+    v95 = v94 - 1;
+    if ( v95 >= 0 && *(v93 + v95 + 27) == 32 )
+    {
+      v96 = 0;
+      do
+      {
+        --v95;
+        ++v96;
+      }
+      while ( v95 != -1 && *(v93 + v95 + 27) == 32 );
+      *(v93 + 25) = v96;
+    }
+    *(v93 + 56) = 1793;
+    *(v93 + 48) = CMemberScriptBinding0<CDOTA_Item *,bool (CDOTA_Item::*)(void),bool>::Call;
+    *(v93 + 64) = 1;
+    v97 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(&v2->m_FunctionBindings)];
+    *(v97 + 24) = 6;
+    *(v97 + 16) = "";
+    *v97 = "RequiresCharges";
+    *(v97 + 8) = "RequiresCharges";
+    v98 = *(v97 + 26);
+    *(v97 + 25) = 0;
+    v99 = v98 - 1;
+    if ( v99 >= 0 && *(v97 + v99 + 27) == 32 )
+    {
+      v100 = 0;
+      do
+      {
+        --v99;
+        ++v100;
+      }
+      while ( v99 != -1 && *(v97 + v99 + 27) == 32 );
+      *(v97 + 25) = v100;
+    }
+    *(v97 + 56) = 2833;
+    *(v97 + 48) = CMemberScriptBinding0<CDOTA_Item *,bool (CDOTA_Item::*)(void),bool>::Call;
+    *(v97 + 64) = 1;
+    v101 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(&v2->m_FunctionBindings)];
+    *(v101 + 24) = 5;
+    *(v101 + 16) = "";
+    *v101 = "GetShareability";
+    *(v101 + 8) = "GetShareability";
+    v102 = *(v101 + 26);
+    *(v101 + 25) = 0;
+    v103 = v102 - 1;
+    if ( v103 >= 0 && *(v101 + v103 + 27) == 32 )
+    {
+      v104 = 0;
+      do
+      {
+        --v103;
+        ++v104;
+      }
+      while ( v103 != -1 && *(v101 + v103 + 27) == 32 );
+      *(v101 + 25) = v104;
+    }
+    *(v101 + 56) = 2841;
+    *(v101 + 48) = CMemberScriptBinding0<CDOTA_Item *,int (CDOTA_Item::*)(void),int>::Call;
+    *(v101 + 64) = 1;
+    v105 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(&v2->m_FunctionBindings)];
+    *(v105 + 24) = 6;
+    *(v105 + 16) = "";
+    *v105 = "IsCastOnPickup";
+    *(v105 + 8) = "IsCastOnPickup";
+    v106 = *(v105 + 26);
+    *(v105 + 25) = 0;
+    v107 = v106 - 1;
+    if ( v107 >= 0 && *(v105 + v107 + 27) == 32 )
+    {
+      v108 = 0;
+      do
+      {
+        --v107;
+        ++v108;
+      }
+      while ( v107 != -1 && *(v105 + v107 + 27) == 32 );
+      *(v105 + 25) = v108;
+    }
+    *(v105 + 56) = 2857;
+    *(v105 + 48) = CMemberScriptBinding0<CDOTA_Item *,bool (CDOTA_Item::*)(void),bool>::Call;
+    *(v105 + 64) = 1;
+    v109 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(&v2->m_FunctionBindings)];
+    *(v109 + 24) = 6;
+    *(v109 + 16) = "";
+    *v109 = "IsRecipeGenerated";
+    *(v109 + 8) = "IsRecipeGenerated";
+    v110 = *(v109 + 26);
+    *(v109 + 25) = 0;
+    v111 = v110 - 1;
+    if ( v111 >= 0 && *(v109 + v111 + 27) == 32 )
+    {
+      v112 = 0;
+      do
+      {
+        --v111;
+        ++v112;
+      }
+      while ( v111 != -1 && *(v109 + v111 + 27) == 32 );
+      *(v109 + 25) = v112;
+    }
+    *(v109 + 64) = 1;
+    *(v109 + 48) = CMemberScriptBinding0<CDOTA_Item *,bool (CDOTA_Item::*)(void),bool>::Call;
+    *(v109 + 56) = CDOTA_Item::IsRecipeGenerated;
+    v113 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(&v2->m_FunctionBindings)];
+    *(v113 + 24) = 6;
+    *(v113 + 16) = "";
+    *v113 = "StacksWithOtherOwners";
+    *(v113 + 8) = "StacksWithOtherOwners";
+    v114 = *(v113 + 26);
+    *(v113 + 25) = 0;
+    v115 = v114 - 1;
+    if ( v115 >= 0 && *(v113 + v115 + 27) == 32 )
+    {
+      v116 = 0;
+      do
+      {
+        --v115;
+        ++v116;
+      }
+      while ( v115 != -1 && *(v113 + v115 + 27) == 32 );
+      *(v113 + 25) = v116;
+    }
+    *(v113 + 64) = 1;
+    *(v113 + 48) = CMemberScriptBinding0<CDOTA_Item *,bool (CDOTA_Item::*)(void),bool>::Call;
+    *(v113 + 56) = CDOTA_Item::StacksWithOtherOwners;
+    v117 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(&v2->m_FunctionBindings)];
+    *(v117 + 24) = 0;
+    *(v117 + 16) = "";
+    *v117 = "SetStacksWithOtherOwners";
+    *(v117 + 8) = "SetStacksWithOtherOwners";
+    v118 = *(v117 + 26);
+    v119 = v118++;
+    *(v117 + v119 + 27) = 6;
+    *(v117 + 26) = v118;
+    v120 = v118 - 1;
+    *(v117 + 25) = 0;
+    if ( v120 >= 0 && *(v117 + v120 + 27) == 32 )
+    {
+      v121 = 0;
+      do
+      {
+        --v120;
+        ++v121;
+      }
+      while ( v120 != -1 && *(v117 + v120 + 27) == 32 );
+      *(v117 + 25) = v121;
+    }
+    *(v117 + 64) = 1;
+    *(v117 + 48) = CMemberScriptBinding1<CDOTA_Item *,void (CDOTA_Item::*)(bool),void,bool>::Call;
+    *(v117 + 56) = CDOTA_Item::SetStacksWithOtherOwners;
+    *(v117 + 40) = s_CDOTA_Item_SetStacksWithOtherOwners_packed_arg_names;
+    v122 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(&v2->m_FunctionBindings)];
+    *(v122 + 24) = 5;
+    *(v122 + 16) = "";
+    *v122 = "GetCost";
+    *(v122 + 8) = "GetCost";
+    v123 = *(v122 + 26);
+    *(v122 + 25) = 0;
+    v124 = v123 - 1;
+    if ( v124 >= 0 && *(v122 + v124 + 27) == 32 )
+    {
+      v125 = 0;
+      do
+      {
+        --v124;
+        ++v125;
+      }
+      while ( v124 != -1 && *(v122 + v124 + 27) == 32 );
+      *(v122 + 25) = v125;
+    }
+    *(v122 + 56) = 2873;
+    *(v122 + 48) = CMemberScriptBinding0<CDOTA_Item *,int (CDOTA_Item::*)(void),int>::Call;
+    *(v122 + 64) = 1;
+    v126 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(&v2->m_FunctionBindings)];
+    *(v126 + 24) = 5;
+    *(v126 + 16) = "Gets whether item is unequipped or ready.";
+    *v126 = "GetItemState";
+    *(v126 + 8) = "GetItemState";
+    v127 = *(v126 + 26);
+    *(v126 + 25) = 0;
+    v128 = v127 - 1;
+    if ( v128 >= 0 && *(v126 + v128 + 27) == 32 )
+    {
+      v129 = 0;
+      do
+      {
+        --v128;
+        ++v129;
+      }
+      while ( v128 != -1 && *(v126 + v128 + 27) == 32 );
+      *(v126 + 25) = v129;
+    }
+    *(v126 + 64) = 1;
+    *(v126 + 48) = CMemberScriptBinding0<CDOTA_Item *,int (CDOTA_Item::*)(void),int>::Call;
+    *(v126 + 56) = CDOTA_Item::GetItemState;
+    v130 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(&v2->m_FunctionBindings)];
+    *(v130 + 24) = 0;
+    *(v130 + 16) = "Sets whether item is unequipped or ready.";
+    *v130 = "SetItemState";
+    *(v130 + 8) = "SetItemState";
+    v131 = *(v130 + 26);
+    v132 = v131++;
+    *(v130 + v132 + 27) = 5;
+    *(v130 + 26) = v131;
+    v133 = v131 - 1;
+    *(v130 + 25) = 0;
+    if ( v133 >= 0 && *(v130 + v133 + 27) == 32 )
+    {
+      v134 = 0;
+      do
+      {
+        --v133;
+        ++v134;
+      }
+      while ( v133 != -1 && *(v130 + v133 + 27) == 32 );
+      *(v130 + 25) = v134;
+    }
+    *(v130 + 64) = 1;
+    *(v130 + 48) = CMemberScriptBinding1<CDOTA_Item *,void (CDOTA_Item::*)(int),void,int>::Call;
+    *(v130 + 56) = CDOTA_Item::SetItemState;
+    *(v130 + 40) = s_CDOTA_Item_SetItemState_packed_arg_names;
+    v135 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(&v2->m_FunctionBindings)];
+    *(v135 + 24) = 31;
+    *(v135 + 16) = "Get the container for this item.";
+    *v135 = "GetContainer";
+    *(v135 + 8) = "Script_GetContainer";
+    v136 = *(v135 + 26);
+    *(v135 + 25) = 0;
+    v137 = v136 - 1;
+    if ( v137 >= 0 && *(v135 + v137 + 27) == 32 )
+    {
+      v138 = 0;
+      do
+      {
+        --v137;
+        ++v138;
+      }
+      while ( v137 != -1 && *(v135 + v137 + 27) == 32 );
+      *(v135 + 25) = v138;
+    }
+    *(v135 + 64) = 1;
+    *(v135 + 48) = CMemberScriptBinding0<CDOTA_Item *,HSCRIPT__ * (CDOTA_Item::*)(void),HSCRIPT__ *>::Call;
+    *(v135 + 56) = CDOTA_Item::Script_GetContainer;
+    v139 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(&v2->m_FunctionBindings)];
+    *(v139 + 24) = 0;
+    *(v139 + 16) = "Set the purchaser of record for this item.";
+    *v139 = "SetPurchaser";
+    *(v139 + 8) = "Script_SetPurchaser";
+    v140 = *(v139 + 26);
+    v141 = v140++;
+    *(v139 + v141 + 27) = 31;
+    *(v139 + 26) = v140;
+    v142 = v140 - 1;
+    *(v139 + 25) = 0;
+    if ( v142 >= 0 && *(v139 + v142 + 27) == 32 )
+    {
+      v143 = 0;
+      do
+      {
+        --v142;
+        ++v143;
+      }
+      while ( v142 != -1 && *(v139 + v142 + 27) == 32 );
+      *(v139 + 25) = v143;
+    }
+    *(v139 + 64) = 1;
+    *(v139 + 48) = CMemberScriptBinding1<CDOTA_Item *,void (CDOTA_Item::*)(HSCRIPT__ *),void,HSCRIPT__ *>::Call;
+    *(v139 + 56) = CDOTA_Item::Script_SetPurchaser;
+    *(v139 + 40) = s_CDOTA_Item_Script_SetPurchaser_packed_arg_names;
+    v144 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(&v2->m_FunctionBindings)];
+    *(v144 + 24) = 31;
+    *(v144 + 16) = "Get the purchaser for this item.";
+    *v144 = "GetPurchaser";
+    *(v144 + 8) = "Script_GetPurchaser";
+    v145 = *(v144 + 26);
+    *(v144 + 25) = 0;
+    v146 = v145 - 1;
+    if ( v146 >= 0 && *(v144 + v146 + 27) == 32 )
+    {
+      v147 = 0;
+      do
+      {
+        --v146;
+        ++v147;
+      }
+      while ( v146 != -1 && *(v144 + v146 + 27) == 32 );
+      *(v144 + 25) = v147;
+    }
+    *(v144 + 64) = 1;
+    *(v144 + 48) = CMemberScriptBinding0<CDOTA_Item *,HSCRIPT__ * (CDOTA_Item::*)(void),HSCRIPT__ *>::Call;
+    *(v144 + 56) = CDOTA_Item::Script_GetPurchaser;
+    v148 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(&v2->m_FunctionBindings)];
+    *(v148 + 24) = 0;
+    *(v148 + 16) = "";
+    *v148 = "LaunchLoot";
+    *(v148 + 8) = "LaunchLoot";
+    v149 = *(v148 + 26);
+    *(v148 + v149 + 27) = 6;
+    *(v148 + (v149 + 1) + 27) = 1;
+    *(v148 + (v149 + 2) + 27) = 1;
+    v150 = v149 + 3;
+    v149 += 4;
+    *(v148 + v150 + 27) = 3;
+    *(v148 + 26) = v149;
+    v151 = v149 - 1;
+    *(v148 + 25) = 0;
+    if ( v151 >= 0 && *(v148 + v151 + 27) == 32 )
+    {
+      v152 = 0;
+      do
+      {
+        --v151;
+        ++v152;
+      }
+      while ( v151 != -1 && *(v148 + v151 + 27) == 32 );
+      *(v148 + 25) = v152;
+    }
+    *(v148 + 64) = 1;
+    *(v148 + 48) = CMemberScriptBinding4<CDOTA_Item *,void (CDOTA_Item::*)(bool,float,float,Vector),void,bool,float,float,Vector>::Call;
+    *(v148 + 56) = CDOTA_Item::LaunchLoot;
+    *(v148 + 40) = s_CDOTA_Item_LaunchLoot_packed_arg_names;
+    v153 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(&v2->m_FunctionBindings)];
+    *(v153 + 24) = 0;
+    *(v153 + 16) = "";
+    *v153 = "LaunchLootInitialHeight";
+    *(v153 + 8) = "LaunchLootInitialHeight";
+    v154 = *(v153 + 26);
+    *(v153 + v154 + 27) = 6;
+    *(v153 + (v154 + 1) + 27) = 1;
+    *(v153 + (v154 + 2) + 27) = 1;
+    *(v153 + (v154 + 3) + 27) = 1;
+    v155 = v154 + 4;
+    v154 += 5;
+    *(v153 + v155 + 27) = 3;
+    *(v153 + 26) = v154;
+    v156 = v154 - 1;
+    *(v153 + 25) = 0;
+    if ( v156 >= 0 && *(v153 + v156 + 27) == 32 )
+    {
+      v157 = 0;
+      do
+      {
+        --v156;
+        ++v157;
+      }
+      while ( v156 != -1 && *(v153 + v156 + 27) == 32 );
+      *(v153 + 25) = v157;
+    }
+    *(v153 + 64) = 1;
+    *(v153 + 48) = CMemberScriptBinding5<CDOTA_Item *,void (CDOTA_Item::*)(bool,float,float,float,Vector),void,bool,float,float,float,Vector>::Call;
+    *(v153 + 56) = CDOTA_Item::LaunchLootInitialHeight;
+    *(v153 + 40) = s_CDOTA_Item_LaunchLootInitialHeight_packed_arg_names;
+    return v2;
+  }
+  return result;
+}
+
+
+// CDOTA_Item::GetScriptDesc  (line 525, @0x00000000025ba630, libserver.so)
+// calls: GetScriptDesc<CDOTA_Item>
+ScriptClassDesc_t *__fastcall CDOTA_Item::GetScriptDesc(CDOTA_Item *const this)
+{
+  return GetScriptDesc<CDOTA_Item>(this);
+}
+
+
+// CDOTA_Item::InitScriptDesc  (line 525, @0x00000000025ba640, libserver.so)
+// calls: GetScriptDesc<CDOTA_Item>
+// callers: CDOTA_Item_BagOfGold::GetEntityClassInternal, CDOTA_Item_UpgradedBarricade::GetEntityClassInternal, CDOTA_Item_UpgradedMortar::GetEntityClassInternal, CDOTA_Item_GreaterClarity::GetEntityClassInternal, CDOTA_Item_Nian_Flag_Trap::GetEntityClassInternal, CDOTA_Ability_Firework_Mine::GetEntityClassInternal, CDOTA_Item_ForceBoots::GetEntityClassInternal, CDOTA_Item_JumpBoots::GetEntityClassInternal, CDOTA_Item_Recipe_Vermillion_Robe::GetEntityClassInternal, CDOTA_Item_Vermillion_Robe::GetEntityClassInternal, CDOTA_Item_Recipe_AbyssalBlade::GetEntityClassInternal, CDOTA_Item_AbyssalBlade::GetEntityClassInternal (274 total)
+ScriptClassDesc_t *__cdecl CDOTA_Item::InitScriptDesc()
+{
+  return GetScriptDesc<CDOTA_Item>(0);
+}
+
+
+// CDOTA_Item::GetClassScriptDesc  (line 525, @0x00000000025ba650, libserver.so)
+// calls: GetScriptDesc<CDOTA_Item>
+ScriptClassDesc_t *__cdecl CDOTA_Item::GetClassScriptDesc()
+{
+  return GetScriptDesc<CDOTA_Item>(0);
+}
+
+
+// CDOTA_Item_Physical::CEntityInstanceEntityClass::Schema_CompileTimeVerificationFunction  (line 565, @0x00000000025a6ef0, libserver.so)
+void __fastcall CDOTA_Item_Physical::CEntityInstanceEntityClass::Schema_CompileTimeVerificationFunction(
+        CDOTA_Item_Physical::CEntityInstanceEntityClass *const this)
+{
+  ;
+}
+
+
+// CDOTA_Item_Physical::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE  (line 568, @0x00000000025950d0, libserver.so)  // inlines: Call, Get, SetTypeScope
+// calls: CBaseAnimating::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE
+// callers: CDOTA_Item_Tombstone_Drop::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE, CSchemaNonConstructibleClassBinding<CDOTA_Item_Physical::CEntityInstanceEntityClass>::Register, CDOTA_Item_Physical::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE, CDOTA_Item_Physical::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE
+// globals: CDOTA_Item_Physical::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,cha
+CSchemaClassInfo *__fastcall CDOTA_Item_Physical::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        const char *pProjectName)
+{
+  ISchemaSystemTypeScope *v6; // r14
+  CSchemaClassInfo *v7; // rax
+
+  v6 = (*(*pSchemaSystem + 112LL))(pSchemaSystem, 1, pBinaryName);
+  (*(CBaseAnimating::CEntityInstanceEntityClass::s_pSchemaBindingForLocalModule->_vptr_ISchemaBinding + 5))(
+    CBaseAnimating::CEntityInstanceEntityClass::s_pSchemaBindingForLocalModule,
+    pSchemaSystem,
+    pBinaryName,
+    pProjectName);
+  v7 = CBaseAnimating::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+         pSchemaSystem,
+         pBinaryName,
+         pProjectName);
+  CDOTA_Item_Physical::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CDOTA_Item_Physical_CEntityInstanceEntityClass.m_pOuterTypeScope = v6;
+  CDOTA_Item_Physical::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassBases_CDOTA_Item_Physical_CEntityInstanceEntityClass[0].m_pClass = v7;
+  CDOTA_Item_Physical::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult = &CDOTA_Item_Physical::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CDOTA_Item_Physical_CEntityInstanceEntityClass;
+  return &CDOTA_Item_Physical::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CDOTA_Item_Physical_CEntityInstanceEntityClass;
+}
+
+
+// CDOTA_Item_Physical::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE  (line 568, @0x00000000025a6f00, libserver.so)
+// calls: CDOTA_Item_Physical::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE
+// globals: CDOTA_Item_Physical::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,cha
+CSchemaClassInfo *__fastcall CDOTA_Item_Physical::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        const char *pProjectName)
+{
+  CSchemaClassInfo *result; // rax
+
+  result = CDOTA_Item_Physical::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult;
+  if ( CDOTA_Item_Physical::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult == 0 )
+    return CDOTA_Item_Physical::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+             pSchemaSystem,
+             pBinaryName,
+             pProjectName);
+  return result;
+}
+
+
+// CDOTA_Item_Physical::CEntityInstanceEntityClass::Schema_VerifyBindingIsRegistered  (line 585, @0x00000000025a6f20, libserver.so)
+void __cdecl CDOTA_Item_Physical::CEntityInstanceEntityClass::Schema_VerifyBindingIsRegistered()
+{
+  ;
+}
+
+
+// CDOTA_Item_Physical::Schema_CompileTimeVerificationFunction  (line 593, @0x00000000025a6f30, libserver.so)
+void __fastcall CDOTA_Item_Physical::Schema_CompileTimeVerificationFunction(CDOTA_Item_Physical *const this)
+{
+  ;
+}
+
+
+// CDOTA_Item_Physical::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE  (line 599, @0x00000000025a6f40, libserver.so)  // inlines: Call, Get, NetworkVarDecl_t, RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE, SchemaBinding_SchemaTypeOfMemberVarByAddr<CDOTA_Item_Physical, CNetworkVarBase<CHandle<CDOTA_Item>, CDOTA_Item_Physical::NetworkVar_m_hItem> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<CDOTA_Item_Physical, float>, SchemaBinding_SchemaTypeOfMemberVarByAddr<CDOTA_Item_Physical, int>, SetTypeScope
+// calls: __cxa_guard_acquire, __cxa_guard_release, CBaseAnimating::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE, CDOTA_Item_Physical::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE, __cxa_guard_abort, _Unwind_Resume
+// callers: CDOTA_Item_Tombstone_Drop::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE, CSchemaNonConstructibleClassBinding<CDOTA_Item_Physical>::Register
+// strings: "CDOTA_Item", "CHandle", "m_hItem", "CHandle<CDOTA_Item>"
+// globals: CDOTA_Item_Physical::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pIn, `guard variable for'CDOTA_Item_Physical::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*, CSchemaManipulator<CHandle<CDOTA_Item>>::StaticAccessor(void)::m, CAtomicManipulator<CHandle<CDOTA_Item>>::Get(void)::val, CDOTA_Item_Physical::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,cha, CDOTA_Item_Physical::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplS
+CSchemaClassInfo *__fastcall CDOTA_Item_Physical::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        const char *pProjectName)
+{
+  CSchemaClassInfo *result; // rax
+  ISchemaSystemTypeScope *v7; // r14
+  __int64 (__fastcall *v8)(ISchemaSystemTypeScope *, const char *, __int64, __int64 (__fastcall ***)(), __int64 (__fastcall ***)(), __int64); // r15
+  __int64 v9; // rax
+  CSchemaClassInfo *v10; // rax
+  const CSchemaClassInfo *v11; // rax
+
+  result = CDOTA_Item_Physical::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult;
+  if ( CDOTA_Item_Physical::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult == 0 )
+  {
+    v7 = (*(*pSchemaSystem + 112LL))(pSchemaSystem, 1, pBinaryName);
+    if ( `guard variable for'CDOTA_Item_Physical::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTA_Item_Physical3_MNetworkVarNames_Value == 0
+      && __cxa_guard_acquire(&`guard variable for'CDOTA_Item_Physical::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTA_Item_Physical3_MNetworkVarNames_Value) != 0 )
+    {
+      CDOTA_Item_Physical::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTA_Item_Physical3_MNetworkVarNames_Value.m_pVarName = "m_hItem";
+      CDOTA_Item_Physical::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTA_Item_Physical3_MNetworkVarNames_Value.m_pVarType = "CHandle<CDOTA_Item>";
+      __cxa_guard_release(&`guard variable for'CDOTA_Item_Physical::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTA_Item_Physical3_MNetworkVarNames_Value);
+    }
+    CDOTA_Item_Physical::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CDOTA_Item_Physical[0].m_pType = (*(*v7 + 40LL))(v7, 7);
+    CDOTA_Item_Physical::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CDOTA_Item_Physical[1].m_pType = (*(*v7 + 40LL))(v7, 11);
+    v8 = *(*v7 + 64LL);
+    v9 = (*(*v7 + 88LL))(v7, "CDOTA_Item");
+    CDOTA_Item_Physical::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CDOTA_Item_Physical[2].m_pType = v8(v7, "CHandle", 5003, CAtomicManipulator<CHandle<CDOTA_Item>>::Get(void)::val, CSchemaManipulator<CHandle<CDOTA_Item>>::StaticAccessor(void)::m, v9);
+    if ( `guard variable for'CDOTA_Item_Physical::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_NestedClassesOf_CDOTA_Item_Physical == 0
+      && __cxa_guard_acquire(&`guard variable for'CDOTA_Item_Physical::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_NestedClassesOf_CDOTA_Item_Physical) != 0 )
+    {
+      v10 = CDOTA_Item_Physical::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult;
+      if ( CDOTA_Item_Physical::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult == 0 )
+        v10 = CDOTA_Item_Physical::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+                pSchemaSystem,
+                pBinaryName,
+                pProjectName);
+      CDOTA_Item_Physical::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_NestedClassesOf_CDOTA_Item_Physical[0] = v10;
+      __cxa_guard_release(&`guard variable for'CDOTA_Item_Physical::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_NestedClassesOf_CDOTA_Item_Physical);
+    }
+    (*(CBaseAnimating::s_pSchemaBindingForLocalModule->_vptr_ISchemaBinding + 5))(
+      CBaseAnimating::s_pSchemaBindingForLocalModule,
+      pSchemaSystem,
+      pBinaryName,
+      pProjectName);
+    CDOTA_Item_Physical::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassBases_CDOTA_Item_Physical[0].m_pClass = CBaseAnimating::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(pSchemaSystem, pBinaryName, pProjectName);
+    v11 = (*(*pSchemaSystem + 240LL))(pSchemaSystem);
+    CDOTA_Item_Physical::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CDOTA_Item_Physical.m_pOuterTypeScope = v7;
+    CDOTA_Item_Physical::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassBases_CDOTA_Item_Physical[1].m_pClass = v11;
+    CDOTA_Item_Physical::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult = &CDOTA_Item_Physical::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CDOTA_Item_Physical;
+    return &CDOTA_Item_Physical::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CDOTA_Item_Physical;
+  }
+  return result;
+}
+
+
+// CDOTA_Item_Physical::Schema_VerifyBindingIsRegistered  (line 661, @0x00000000025a71f0, libserver.so)
+void __cdecl CDOTA_Item_Physical::Schema_VerifyBindingIsRegistered()
+{
+  ;
+}
+
+
+// CDOTA_Item_Physical::SetupEntClassInputs  (line 675, @0x00000000025a7200, libserver.so)
+void __fastcall CDOTA_Item_Physical::SetupEntClassInputs(CEntityClass *pComponentInfo)
+{
+  ;
+}
+
+
+// CDOTA_Item_Physical::SetupEntClassComponentOverrides  (line 681, @0x00000000025a7210, libserver.so)
+void __fastcall CDOTA_Item_Physical::SetupEntClassComponentOverrides(CEntityClass *pEntityClass)
+{
+  pEntityClass->m_pComponentOverrides = 0;
+}
+
+
+// GetScriptDesc<CDOTA_Item_Physical>  (line 688, @0x00000000025ba660, libserver.so)  // inlines: AddParameterType, CUtlMemory, CUtlVector, CUtlVectorBase, Finalize, ScriptClassDesc_t, ScriptDeduceFunctionSignature<CDOTA_Item_Physical*, CDOTA_Item_Physical, HSCRIPT__*>, ScriptDeduceFunctionSignature<CDOTA_Item_Physical*, CDOTA_Item_Physical, float>, ScriptDeduceFunctionSignature<CDOTA_Item_Physical*, CDOTA_Item_Physical, void, HSCRIPT__*>, SetDescription, SetFunctionName, SetPackedParameterNames, SetReturnType, SetScriptName, operator[]
+// calls: operator new, GetScriptDesc<CBaseAnimating>, CUtlVectorBase<ScriptFunctionBinding_t, CUtlMemory<ScriptFunctionBinding_t, int> >::AddToTail
+// callers: CDOTA_Item_Physical::GetScriptDesc, CDOTA_Item_Physical::InitScriptDesc, CDOTA_Item_Physical::GetClassScriptDesc, CDOTA_Item_Physical::GetEntityClassInternal, CDOTA_Item_Tombstone_Drop::GetEntityClassInternal
+// strings: "A physical item dropped in the world", "CDOTA_Item_Physical", "Set the contained item.", "Script_SetContainedItem", "Returned the contained item.", "Script_GetContainedItem" (8 total)
+// globals: g_pCDOTA_Item_Physical_ScriptDesc, CMemberScriptBinding1<CDOTA_Item_Physical *,void (CDOTA_Item_Physical::*)(HSCRIPT__ *),void,HSCRIPT__ *>::Call(void *,void *,CVariantBase<CVariantDefaultAllocat, CDOTA_Item_Physical::Script_SetContainedItem(HSCRIPT__ *), s_CDOTA_Item_Physical_Script_SetContainedItem_packed_arg_names, CMemberScriptBinding0<CDOTA_Item_Physical *,HSCRIPT__ * (CDOTA_Item_Physical::*)(void),HSCRIPT__ *>::Call(void *,void *,CVariantBase<CVariantDefaultAllocator> *, CDOTA_Item_Physical::Script_GetContainedItem(void), CMemberScriptBinding0<CDOTA_Item_Physical *,float (CDOTA_Item_Physical::*)(void),float>::Call(void *,void *,CVariantBase<CVariantDefaultAllocator> *,int,CVarian, CDOTA_Item_Physical::GetCreationTime(void)
+ScriptClassDesc_t *__fastcall GetScriptDesc<CDOTA_Item_Physical>(CDOTA_Item_Physical *pScriptDescObjectInstance)
+{
+  ScriptClassDesc_t *result; // rax
+  ScriptClassDesc_t *v2; // r12
+  ScriptClassDesc_t *Script; // rax
+  IScriptInstanceHelper *pHelper; // rcx
+  __int64 v5; // rcx
+  char v6; // dl
+  __int64 v7; // rax
+  int v8; // edx
+  char v9; // al
+  __int64 v10; // rsi
+  int v11; // edx
+  int v12; // edx
+  char v13; // cl
+  char v14; // di
+  __int64 v15; // rsi
+  int v16; // edx
+  int v17; // edx
+  char v18; // cl
+  char v19; // di
+
+  result = g_pCDOTA_Item_Physical_ScriptDesc;
+  if ( g_pCDOTA_Item_Physical_ScriptDesc == 0 )
+  {
+    v2 = operator new(0x50u);
+    v2->m_pBaseDesc = 0;
+    v2->m_FunctionBindings.m_Size = 0;
+    v2->m_FunctionBindings.m_Memory.m_pMemory = 0;
+    v2->m_FunctionBindings.m_Memory.m_nAllocationCount = 0;
+    v2->m_FunctionBindings.m_Memory.m_nGrowSize = 0;
+    v2->m_pfnConstruct = 0;
+    v2->m_pfnDestruct = 0;
+    v2->pHelper = 0;
+    g_pCDOTA_Item_Physical_ScriptDesc = v2;
+    v2->m_pszDescription = "A physical item dropped in the world";
+    v2->m_pszScriptName = "CDOTA_Item_Physical";
+    v2->m_pszClassname = "CDOTA_Item_Physical";
+    Script = GetScriptDesc<CBaseAnimating>(0);
+    v2->m_pBaseDesc = Script;
+    if ( Script != 0 )
+    {
+      while ( 1 )
+      {
+        pHelper = Script->pHelper;
+        if ( pHelper != 0 )
+          break;
+        Script = Script->m_pBaseDesc;
+        if ( Script == 0 )
+          goto LABEL_7;
+      }
+      v2->pHelper = pHelper;
+    }
+LABEL_7:
+    v5 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(&v2->m_FunctionBindings)];
+    v6 = *(v5 + 26);
+    *(v5 + 24) = 0;
+    *(v5 + 16) = "Set the contained item.";
+    *v5 = "SetContainedItem";
+    *(v5 + 8) = "Script_SetContainedItem";
+    v7 = v6++;
+    *(v5 + v7 + 27) = 31;
+    *(v5 + 26) = v6;
+    v8 = v6 - 1;
+    *(v5 + 25) = 0;
+    if ( v8 >= 0 && *(v5 + v8 + 27) == 32 )
+    {
+      v9 = 0;
+      do
+      {
+        --v8;
+        ++v9;
+      }
+      while ( v8 != -1 && *(v5 + v8 + 27) == 32 );
+      *(v5 + 25) = v9;
+    }
+    *(v5 + 64) = 1;
+    *(v5 + 48) = CMemberScriptBinding1<CDOTA_Item_Physical *,void (CDOTA_Item_Physical::*)(HSCRIPT__ *),void,HSCRIPT__ *>::Call;
+    *(v5 + 56) = CDOTA_Item_Physical::Script_SetContainedItem;
+    *(v5 + 40) = s_CDOTA_Item_Physical_Script_SetContainedItem_packed_arg_names;
+    v10 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(&v2->m_FunctionBindings)];
+    v11 = *(v10 + 26);
+    *(v10 + 24) = 31;
+    *(v10 + 16) = "Returned the contained item.";
+    *v10 = "GetContainedItem";
+    *(v10 + 8) = "Script_GetContainedItem";
+    v12 = v11 - 1;
+    *(v10 + 25) = 0;
+    if ( v12 >= 0 && *(v10 + v12 + 27) == 32 )
+    {
+      v13 = 1;
+      do
+      {
+        --v12;
+        v14 = v13;
+        if ( v12 == -1 )
+        {
+          *(v10 + 25) = v13;
+          goto LABEL_19;
+        }
+        ++v13;
+      }
+      while ( *(v10 + v12 + 27) == 32 );
+      *(v10 + 25) = v14;
+    }
+LABEL_19:
+    *(v10 + 64) = 1;
+    *(v10 + 48) = CMemberScriptBinding0<CDOTA_Item_Physical *,HSCRIPT__ * (CDOTA_Item_Physical::*)(void),HSCRIPT__ *>::Call;
+    *(v10 + 56) = CDOTA_Item_Physical::Script_GetContainedItem;
+    v15 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(&v2->m_FunctionBindings)];
+    v16 = *(v15 + 26);
+    *(v15 + 24) = 1;
+    *(v15 + 16) = "Returns the game time when this item was created in the world";
+    *v15 = "GetCreationTime";
+    *(v15 + 8) = "GetCreationTime";
+    v17 = v16 - 1;
+    *(v15 + 25) = 0;
+    if ( v17 >= 0 && *(v15 + v17 + 27) == 32 )
+    {
+      v18 = 1;
+      do
+      {
+        --v17;
+        v19 = v18;
+        if ( v17 == -1 )
+        {
+          *(v15 + 25) = v18;
+          goto LABEL_25;
+        }
+        ++v18;
+      }
+      while ( *(v15 + v17 + 27) == 32 );
+      *(v15 + 25) = v19;
+    }
+LABEL_25:
+    *(v15 + 64) = 1;
+    *(v15 + 48) = CMemberScriptBinding0<CDOTA_Item_Physical *,float (CDOTA_Item_Physical::*)(void),float>::Call;
+    *(v15 + 56) = CDOTA_Item_Physical::GetCreationTime;
+    return v2;
+  }
+  return result;
+}
+
+
+// CDOTA_Item_Physical::GetScriptDesc  (line 688, @0x00000000025ba920, libserver.so)
+// calls: GetScriptDesc<CDOTA_Item_Physical>
+ScriptClassDesc_t *__fastcall CDOTA_Item_Physical::GetScriptDesc(CDOTA_Item_Physical *const this)
+{
+  return GetScriptDesc<CDOTA_Item_Physical>(this);
+}
+
+
+// CDOTA_Item_Physical::InitScriptDesc  (line 688, @0x00000000025ba930, libserver.so)
+// calls: GetScriptDesc<CDOTA_Item_Physical>
+ScriptClassDesc_t *__cdecl CDOTA_Item_Physical::InitScriptDesc()
+{
+  return GetScriptDesc<CDOTA_Item_Physical>(0);
+}
+
+
+// CDOTA_Item_Physical::GetClassScriptDesc  (line 688, @0x00000000025ba940, libserver.so)
+// calls: GetScriptDesc<CDOTA_Item_Physical>
+ScriptClassDesc_t *__cdecl CDOTA_Item_Physical::GetClassScriptDesc()
+{
+  return GetScriptDesc<CDOTA_Item_Physical>(0);
+}
+
+
+// CDOTA_Item_Rune::CEntityInstanceEntityClass::Schema_CompileTimeVerificationFunction  (line 698, @0x00000000025a7220, libserver.so)
+void __fastcall CDOTA_Item_Rune::CEntityInstanceEntityClass::Schema_CompileTimeVerificationFunction(
+        CDOTA_Item_Rune::CEntityInstanceEntityClass *const this)
+{
+  ;
+}
+
+
+// CDOTA_Item_Rune::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE  (line 701, @0x00000000025951d0, libserver.so)  // inlines: Call, Get, SetTypeScope
+// calls: CBaseAnimating::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE
+// callers: CSchemaNonConstructibleClassBinding<CDOTA_Item_Rune::CEntityInstanceEntityClass>::Register, CDOTA_Item_Rune::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE, CDOTA_Item_Rune::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE
+// globals: CDOTA_Item_Rune::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char co
+CSchemaClassInfo *__fastcall CDOTA_Item_Rune::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        const char *pProjectName)
+{
+  ISchemaSystemTypeScope *v6; // r14
+  CSchemaClassInfo *v7; // rax
+
+  v6 = (*(*pSchemaSystem + 112LL))(pSchemaSystem, 1, pBinaryName);
+  (*(CBaseAnimating::CEntityInstanceEntityClass::s_pSchemaBindingForLocalModule->_vptr_ISchemaBinding + 5))(
+    CBaseAnimating::CEntityInstanceEntityClass::s_pSchemaBindingForLocalModule,
+    pSchemaSystem,
+    pBinaryName,
+    pProjectName);
+  v7 = CBaseAnimating::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+         pSchemaSystem,
+         pBinaryName,
+         pProjectName);
+  CDOTA_Item_Rune::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CDOTA_Item_Rune_CEntityInstanceEntityClass.m_pOuterTypeScope = v6;
+  CDOTA_Item_Rune::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassBases_CDOTA_Item_Rune_CEntityInstanceEntityClass[0].m_pClass = v7;
+  CDOTA_Item_Rune::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult = &CDOTA_Item_Rune::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CDOTA_Item_Rune_CEntityInstanceEntityClass;
+  return &CDOTA_Item_Rune::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CDOTA_Item_Rune_CEntityInstanceEntityClass;
+}
+
+
+// CDOTA_Item_Rune::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE  (line 701, @0x00000000025a7230, libserver.so)
+// calls: CDOTA_Item_Rune::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE
+// globals: CDOTA_Item_Rune::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char co
+CSchemaClassInfo *__fastcall CDOTA_Item_Rune::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        const char *pProjectName)
+{
+  CSchemaClassInfo *result; // rax
+
+  result = CDOTA_Item_Rune::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult;
+  if ( CDOTA_Item_Rune::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult == 0 )
+    return CDOTA_Item_Rune::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+             pSchemaSystem,
+             pBinaryName,
+             pProjectName);
+  return result;
+}
+
+
+// CDOTA_Item_Rune::CEntityInstanceEntityClass::Schema_VerifyBindingIsRegistered  (line 718, @0x00000000025a7250, libserver.so)
+void __cdecl CDOTA_Item_Rune::CEntityInstanceEntityClass::Schema_VerifyBindingIsRegistered()
+{
+  ;
+}
+
+
+// CDOTA_Item_Rune::Schema_CompileTimeVerificationFunction  (line 726, @0x00000000025a7260, libserver.so)
+void __fastcall CDOTA_Item_Rune::Schema_CompileTimeVerificationFunction(CDOTA_Item_Rune *const this)
+{
+  ;
+}
+
+
+// CDOTA_Item_Rune::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE  (line 731, @0x00000000025a7270, libserver.so)  // inlines: Call, Get, NetworkVarDecl_t, RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE, SchemaBinding_SchemaTypeOfMemberVarByAddr<CDOTA_Item_Rune, CHandle<CBaseEntity> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<CDOTA_Item_Rune, CNetworkVarBase<int, CDOTA_Item_Rune::NetworkVar_m_iRuneType> >, SetTypeScope
+// calls: __cxa_guard_acquire, __cxa_guard_release, CBaseAnimating::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE, CDOTA_Item_Rune::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE, __cxa_guard_abort, _Unwind_Resume
+// callers: CSchemaNonConstructibleClassBinding<CDOTA_Item_Rune>::Register
+// strings: "CBaseEntity", "CHandle", "m_iRuneType"
+// globals: CDOTA_Item_Rune::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitia, `guard variable for'CDOTA_Item_Rune::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,cha, CSchemaManipulator<CHandle<CBaseEntity>>::StaticAccessor(void)::m, CAtomicManipulator<CHandle<CBaseEntity>>::Get(void)::val, CDOTA_Item_Rune::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char co, CDOTA_Item_Rune::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchem
+CSchemaClassInfo *__fastcall CDOTA_Item_Rune::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        const char *pProjectName)
+{
+  CSchemaClassInfo *result; // rax
+  ISchemaSystemTypeScope *v7; // r14
+  __int64 (__fastcall *v8)(ISchemaSystemTypeScope *, const char *, __int64, __int64 (__fastcall ***)(), __int64 (__fastcall ***)(), __int64); // r15
+  __int64 v9; // rax
+  CSchemaClassInfo *v10; // rax
+  CSchemaClassInfo *v11; // rax
+
+  result = CDOTA_Item_Rune::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult;
+  if ( CDOTA_Item_Rune::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult == 0 )
+  {
+    v7 = (*(*pSchemaSystem + 112LL))(pSchemaSystem, 1, pBinaryName);
+    if ( `guard variable for'CDOTA_Item_Rune::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTA_Item_Rune7_MNetworkVarNames_Value == 0
+      && __cxa_guard_acquire(&`guard variable for'CDOTA_Item_Rune::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTA_Item_Rune7_MNetworkVarNames_Value) != 0 )
+    {
+      CDOTA_Item_Rune::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTA_Item_Rune7_MNetworkVarNames_Value.m_pVarName = "m_iRuneType";
+      CDOTA_Item_Rune::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTA_Item_Rune7_MNetworkVarNames_Value.m_pVarType = "int";
+      __cxa_guard_release(&`guard variable for'CDOTA_Item_Rune::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTA_Item_Rune7_MNetworkVarNames_Value);
+    }
+    v8 = *(*v7 + 64LL);
+    v9 = (*(*v7 + 88LL))(v7, "CBaseEntity");
+    CDOTA_Item_Rune::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CDOTA_Item_Rune[0].m_pType = v8(v7, "CHandle", 5003, CAtomicManipulator<CHandle<CBaseEntity>>::Get(void)::val, &CSchemaManipulator<CHandle<CBaseEntity>>::StaticAccessor(void)::m, v9);
+    CDOTA_Item_Rune::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CDOTA_Item_Rune[1].m_pType = (*(*v7 + 40LL))(v7, 7);
+    if ( `guard variable for'CDOTA_Item_Rune::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_NestedClassesOf_CDOTA_Item_Rune == 0
+      && __cxa_guard_acquire(&`guard variable for'CDOTA_Item_Rune::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_NestedClassesOf_CDOTA_Item_Rune) != 0 )
+    {
+      v10 = CDOTA_Item_Rune::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult;
+      if ( CDOTA_Item_Rune::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult == 0 )
+        v10 = CDOTA_Item_Rune::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+                pSchemaSystem,
+                pBinaryName,
+                pProjectName);
+      CDOTA_Item_Rune::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_NestedClassesOf_CDOTA_Item_Rune[0] = v10;
+      __cxa_guard_release(&`guard variable for'CDOTA_Item_Rune::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_NestedClassesOf_CDOTA_Item_Rune);
+    }
+    (*(CBaseAnimating::s_pSchemaBindingForLocalModule->_vptr_ISchemaBinding + 5))(
+      CBaseAnimating::s_pSchemaBindingForLocalModule,
+      pSchemaSystem,
+      pBinaryName,
+      pProjectName);
+    v11 = CBaseAnimating::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+            pSchemaSystem,
+            pBinaryName,
+            pProjectName);
+    CDOTA_Item_Rune::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CDOTA_Item_Rune.m_pOuterTypeScope = v7;
+    CDOTA_Item_Rune::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassBases_CDOTA_Item_Rune[0].m_pClass = v11;
+    CDOTA_Item_Rune::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult = &CDOTA_Item_Rune::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CDOTA_Item_Rune;
+    return &CDOTA_Item_Rune::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CDOTA_Item_Rune;
+  }
+  return result;
+}
+
+
+// CDOTA_Item_Rune::Schema_VerifyBindingIsRegistered  (line 798, @0x00000000025a7410, libserver.so)
+void __cdecl CDOTA_Item_Rune::Schema_VerifyBindingIsRegistered()
+{
+  ;
+}
+
+
+// CDOTA_Item_Rune::SetupEntClassInputs  (line 812, @0x00000000025a7420, libserver.so)
+void __fastcall CDOTA_Item_Rune::SetupEntClassInputs(CEntityClass *pComponentInfo)
+{
+  ;
+}
+
+
+// CDOTA_Item_Rune::SetupEntClassComponentOverrides  (line 818, @0x00000000025a7430, libserver.so)
+void __fastcall CDOTA_Item_Rune::SetupEntClassComponentOverrides(CEntityClass *pEntityClass)
+{
+  pEntityClass->m_pComponentOverrides = 0;
+}
+
+
+// CDOTA_Item_RuneSpawner_Powerup::CEntityInstanceEntityClass::Schema_CompileTimeVerificationFunction  (line 824, @0x00000000025a7440, libserver.so)
+void __fastcall CDOTA_Item_RuneSpawner_Powerup::CEntityInstanceEntityClass::Schema_CompileTimeVerificationFunction(
+        CDOTA_Item_RuneSpawner_Powerup::CEntityInstanceEntityClass *const this)
+{
+  ;
+}
+
+
+// CDOTA_Item_RuneSpawner_Powerup::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE  (line 827, @0x0000000002595250, libserver.so)  // inlines: Call, Get, SetTypeScope
+// calls: CBaseAnimating::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE
+// callers: CSchemaNonConstructibleClassBinding<CDOTA_Item_RuneSpawner_Powerup::CEntityInstanceEntityClass>::Register, CDOTA_Item_RuneSpawner_Powerup::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE, CDOTA_Item_RuneSpawner_Powerup::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE
+// globals: CDOTA_Item_RuneSpawner_Powerup::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaS
+CSchemaClassInfo *__fastcall CDOTA_Item_RuneSpawner_Powerup::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        const char *pProjectName)
+{
+  ISchemaSystemTypeScope *v6; // r14
+  CSchemaClassInfo *v7; // rax
+
+  v6 = (*(*pSchemaSystem + 112LL))(pSchemaSystem, 1, pBinaryName);
+  (*(CBaseAnimating::CEntityInstanceEntityClass::s_pSchemaBindingForLocalModule->_vptr_ISchemaBinding + 5))(
+    CBaseAnimating::CEntityInstanceEntityClass::s_pSchemaBindingForLocalModule,
+    pSchemaSystem,
+    pBinaryName,
+    pProjectName);
+  v7 = CBaseAnimating::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+         pSchemaSystem,
+         pBinaryName,
+         pProjectName);
+  CDOTA_Item_RuneSpawner_Powerup::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CDOTA_Item_RuneSpawner_Powerup_CEntityInstanceEntityClass.m_pOuterTypeScope = v6;
+  CDOTA_Item_RuneSpawner_Powerup::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassBases_CDOTA_Item_RuneSpawner_Powerup_CEntityInstanceEntityClass[0].m_pClass = v7;
+  CDOTA_Item_RuneSpawner_Powerup::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult = &CDOTA_Item_RuneSpawner_Powerup::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CDOTA_Item_RuneSpawner_Powerup_CEntityInstanceEntityClass;
+  return &CDOTA_Item_RuneSpawner_Powerup::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CDOTA_Item_RuneSpawner_Powerup_CEntityInstanceEntityClass;
+}
+
+
+// CDOTA_Item_RuneSpawner_Powerup::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE  (line 827, @0x00000000025a7450, libserver.so)
+// calls: CDOTA_Item_RuneSpawner_Powerup::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE
+// globals: CDOTA_Item_RuneSpawner_Powerup::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaS
+CSchemaClassInfo *__fastcall CDOTA_Item_RuneSpawner_Powerup::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        const char *pProjectName)
+{
+  CSchemaClassInfo *result; // rax
+
+  result = CDOTA_Item_RuneSpawner_Powerup::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult;
+  if ( CDOTA_Item_RuneSpawner_Powerup::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult == 0 )
+    return CDOTA_Item_RuneSpawner_Powerup::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+             pSchemaSystem,
+             pBinaryName,
+             pProjectName);
+  return result;
+}
+
+
+// CDOTA_Item_RuneSpawner_Powerup::CEntityInstanceEntityClass::Schema_VerifyBindingIsRegistered  (line 844, @0x00000000025a7470, libserver.so)
+void __cdecl CDOTA_Item_RuneSpawner_Powerup::CEntityInstanceEntityClass::Schema_VerifyBindingIsRegistered()
+{
+  ;
+}
+
+
+// CDOTA_Item_RuneSpawner_Powerup::Schema_CompileTimeVerificationFunction  (line 852, @0x00000000025a7480, libserver.so)
+void __fastcall CDOTA_Item_RuneSpawner_Powerup::Schema_CompileTimeVerificationFunction(
+        CDOTA_Item_RuneSpawner_Powerup *const this)
+{
+  ;
+}
+
+
+// CDOTA_Item_RuneSpawner_Powerup::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE  (line 856, @0x00000000025a7490, libserver.so)  // inlines: Call, Get, NetworkVarDecl_t, RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE, SchemaBinding_SchemaTypeOfMemberVarByAddr<CDOTA_Item_RuneSpawner_Powerup, CNetworkVarBase<float, CDOTA_Item_RuneSpawner_Powerup::NetworkVar_m_flLastSpawnTime> >, SetTypeScope
+// calls: __cxa_guard_acquire, __cxa_guard_release, CBaseAnimating::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE, CDOTA_Item_RuneSpawner_Powerup::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE, __cxa_guard_abort, _Unwind_Resume
+// callers: CSchemaNonConstructibleClassBinding<CDOTA_Item_RuneSpawner_Powerup>::Register
+// strings: "m_flLastSpawnTime"
+// globals: CDOTA_Item_RuneSpawner_Powerup::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char con, `guard variable for'CDOTA_Item_RuneSpawner_Powerup::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,, CDOTA_Item_RuneSpawner_Powerup::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaS
+CSchemaClassInfo *__fastcall CDOTA_Item_RuneSpawner_Powerup::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        const char *pProjectName)
+{
+  CSchemaClassInfo *result; // rax
+  ISchemaSystemTypeScope *v7; // r14
+  CSchemaClassInfo *v8; // rax
+  CSchemaClassInfo *v9; // rax
+
+  result = CDOTA_Item_RuneSpawner_Powerup::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult;
+  if ( CDOTA_Item_RuneSpawner_Powerup::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult == 0 )
+  {
+    v7 = (*(*pSchemaSystem + 112LL))(pSchemaSystem, 1, pBinaryName);
+    if ( `guard variable for'CDOTA_Item_RuneSpawner_Powerup::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTA_Item_RuneSpawner_Powerup3_MNetworkVarNames_Value == 0
+      && __cxa_guard_acquire(&`guard variable for'CDOTA_Item_RuneSpawner_Powerup::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTA_Item_RuneSpawner_Powerup3_MNetworkVarNames_Value) != 0 )
+    {
+      CDOTA_Item_RuneSpawner_Powerup::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTA_Item_RuneSpawner_Powerup3_MNetworkVarNames_Value.m_pVarName = "m_flLastSpawnTime";
+      CDOTA_Item_RuneSpawner_Powerup::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTA_Item_RuneSpawner_Powerup3_MNetworkVarNames_Value.m_pVarType = "float";
+      __cxa_guard_release(&`guard variable for'CDOTA_Item_RuneSpawner_Powerup::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTA_Item_RuneSpawner_Powerup3_MNetworkVarNames_Value);
+    }
+    CDOTA_Item_RuneSpawner_Powerup::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CDOTA_Item_RuneSpawner_Powerup[0].m_pType = (*(*v7 + 40LL))(v7, 11);
+    if ( `guard variable for'CDOTA_Item_RuneSpawner_Powerup::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_NestedClassesOf_CDOTA_Item_RuneSpawner_Powerup == 0
+      && __cxa_guard_acquire(&`guard variable for'CDOTA_Item_RuneSpawner_Powerup::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_NestedClassesOf_CDOTA_Item_RuneSpawner_Powerup) != 0 )
+    {
+      v8 = CDOTA_Item_RuneSpawner_Powerup::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult;
+      if ( CDOTA_Item_RuneSpawner_Powerup::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult == 0 )
+        v8 = CDOTA_Item_RuneSpawner_Powerup::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+               pSchemaSystem,
+               pBinaryName,
+               pProjectName);
+      CDOTA_Item_RuneSpawner_Powerup::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_NestedClassesOf_CDOTA_Item_RuneSpawner_Powerup[0] = v8;
+      __cxa_guard_release(&`guard variable for'CDOTA_Item_RuneSpawner_Powerup::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_NestedClassesOf_CDOTA_Item_RuneSpawner_Powerup);
+    }
+    (*(CBaseAnimating::s_pSchemaBindingForLocalModule->_vptr_ISchemaBinding + 5))(
+      CBaseAnimating::s_pSchemaBindingForLocalModule,
+      pSchemaSystem,
+      pBinaryName,
+      pProjectName);
+    v9 = CBaseAnimating::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+           pSchemaSystem,
+           pBinaryName,
+           pProjectName);
+    CDOTA_Item_RuneSpawner_Powerup::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CDOTA_Item_RuneSpawner_Powerup.m_pOuterTypeScope = v7;
+    CDOTA_Item_RuneSpawner_Powerup::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassBases_CDOTA_Item_RuneSpawner_Powerup[0].m_pClass = v9;
+    CDOTA_Item_RuneSpawner_Powerup::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult = &CDOTA_Item_RuneSpawner_Powerup::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CDOTA_Item_RuneSpawner_Powerup;
+    return &CDOTA_Item_RuneSpawner_Powerup::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CDOTA_Item_RuneSpawner_Powerup;
+  }
+  return result;
+}
+
+
+// CDOTA_Item_RuneSpawner_Powerup::Schema_VerifyBindingIsRegistered  (line 906, @0x00000000025a75e0, libserver.so)
+void __cdecl CDOTA_Item_RuneSpawner_Powerup::Schema_VerifyBindingIsRegistered()
+{
+  ;
+}
+
+
+// CDOTA_Item_RuneSpawner_Powerup::SetupEntClassInputs  (line 920, @0x00000000025a75f0, libserver.so)
+void __fastcall CDOTA_Item_RuneSpawner_Powerup::SetupEntClassInputs(CEntityClass *pComponentInfo)
+{
+  ;
+}
+
+
+// CDOTA_Item_RuneSpawner_Powerup::SetupEntClassComponentOverrides  (line 926, @0x00000000025a7600, libserver.so)
+void __fastcall CDOTA_Item_RuneSpawner_Powerup::SetupEntClassComponentOverrides(CEntityClass *pEntityClass)
+{
+  pEntityClass->m_pComponentOverrides = 0;
+}
+
+
+// CDOTA_Item_RuneSpawner_Bounty::CEntityInstanceEntityClass::Schema_CompileTimeVerificationFunction  (line 932, @0x00000000025a7610, libserver.so)
+void __fastcall CDOTA_Item_RuneSpawner_Bounty::CEntityInstanceEntityClass::Schema_CompileTimeVerificationFunction(
+        CDOTA_Item_RuneSpawner_Bounty::CEntityInstanceEntityClass *const this)
+{
+  ;
+}
+
+
+// CDOTA_Item_RuneSpawner_Bounty::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE  (line 935, @0x00000000025952d0, libserver.so)  // inlines: Call, Get, SetTypeScope
+// calls: CBaseAnimating::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE
+// callers: CSchemaNonConstructibleClassBinding<CDOTA_Item_RuneSpawner_Bounty::CEntityInstanceEntityClass>::Register, CDOTA_Item_RuneSpawner_Bounty::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE, CDOTA_Item_RuneSpawner_Bounty::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE
+// globals: CDOTA_Item_RuneSpawner_Bounty::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSy
+CSchemaClassInfo *__fastcall CDOTA_Item_RuneSpawner_Bounty::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        const char *pProjectName)
+{
+  ISchemaSystemTypeScope *v6; // r14
+  CSchemaClassInfo *v7; // rax
+
+  v6 = (*(*pSchemaSystem + 112LL))(pSchemaSystem, 1, pBinaryName);
+  (*(CBaseAnimating::CEntityInstanceEntityClass::s_pSchemaBindingForLocalModule->_vptr_ISchemaBinding + 5))(
+    CBaseAnimating::CEntityInstanceEntityClass::s_pSchemaBindingForLocalModule,
+    pSchemaSystem,
+    pBinaryName,
+    pProjectName);
+  v7 = CBaseAnimating::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+         pSchemaSystem,
+         pBinaryName,
+         pProjectName);
+  CDOTA_Item_RuneSpawner_Bounty::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CDOTA_Item_RuneSpawner_Bounty_CEntityInstanceEntityClass.m_pOuterTypeScope = v6;
+  CDOTA_Item_RuneSpawner_Bounty::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassBases_CDOTA_Item_RuneSpawner_Bounty_CEntityInstanceEntityClass[0].m_pClass = v7;
+  CDOTA_Item_RuneSpawner_Bounty::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult = &CDOTA_Item_RuneSpawner_Bounty::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CDOTA_Item_RuneSpawner_Bounty_CEntityInstanceEntityClass;
+  return &CDOTA_Item_RuneSpawner_Bounty::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CDOTA_Item_RuneSpawner_Bounty_CEntityInstanceEntityClass;
+}
+
+
+// CDOTA_Item_RuneSpawner_Bounty::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE  (line 935, @0x00000000025a7620, libserver.so)
+// calls: CDOTA_Item_RuneSpawner_Bounty::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE
+// globals: CDOTA_Item_RuneSpawner_Bounty::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSy
+CSchemaClassInfo *__fastcall CDOTA_Item_RuneSpawner_Bounty::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        const char *pProjectName)
+{
+  CSchemaClassInfo *result; // rax
+
+  result = CDOTA_Item_RuneSpawner_Bounty::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult;
+  if ( CDOTA_Item_RuneSpawner_Bounty::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult == 0 )
+    return CDOTA_Item_RuneSpawner_Bounty::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+             pSchemaSystem,
+             pBinaryName,
+             pProjectName);
+  return result;
+}
+
+
+// CDOTA_Item_RuneSpawner_Bounty::CEntityInstanceEntityClass::Schema_VerifyBindingIsRegistered  (line 952, @0x00000000025a7640, libserver.so)
+void __cdecl CDOTA_Item_RuneSpawner_Bounty::CEntityInstanceEntityClass::Schema_VerifyBindingIsRegistered()
+{
+  ;
+}
+
+
+// CDOTA_Item_RuneSpawner_Bounty::Schema_CompileTimeVerificationFunction  (line 960, @0x00000000025a7650, libserver.so)
+void __fastcall CDOTA_Item_RuneSpawner_Bounty::Schema_CompileTimeVerificationFunction(
+        CDOTA_Item_RuneSpawner_Bounty *const this)
+{
+  ;
+}
+
+
+// CDOTA_Item_RuneSpawner_Bounty::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE  (line 964, @0x00000000025a7660, libserver.so)  // inlines: Call, Get, NetworkVarDecl_t, RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE, SchemaBinding_SchemaTypeOfMemberVarByAddr<CDOTA_Item_RuneSpawner_Bounty, CNetworkVarBase<float, CDOTA_Item_RuneSpawner_Bounty::NetworkVar_m_flLastSpawnTime> >, SetTypeScope
+// calls: __cxa_guard_acquire, __cxa_guard_release, CBaseAnimating::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE, CDOTA_Item_RuneSpawner_Bounty::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE, __cxa_guard_abort, _Unwind_Resume
+// callers: CSchemaNonConstructibleClassBinding<CDOTA_Item_RuneSpawner_Bounty>::Register
+// strings: "m_flLastSpawnTime"
+// globals: CDOTA_Item_RuneSpawner_Bounty::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char cons, `guard variable for'CDOTA_Item_RuneSpawner_Bounty::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,c, CDOTA_Item_RuneSpawner_Bounty::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSy
+CSchemaClassInfo *__fastcall CDOTA_Item_RuneSpawner_Bounty::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        const char *pProjectName)
+{
+  CSchemaClassInfo *result; // rax
+  ISchemaSystemTypeScope *v7; // r14
+  CSchemaClassInfo *v8; // rax
+  CSchemaClassInfo *v9; // rax
+
+  result = CDOTA_Item_RuneSpawner_Bounty::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult;
+  if ( CDOTA_Item_RuneSpawner_Bounty::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult == 0 )
+  {
+    v7 = (*(*pSchemaSystem + 112LL))(pSchemaSystem, 1, pBinaryName);
+    if ( `guard variable for'CDOTA_Item_RuneSpawner_Bounty::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTA_Item_RuneSpawner_Bounty3_MNetworkVarNames_Value == 0
+      && __cxa_guard_acquire(&`guard variable for'CDOTA_Item_RuneSpawner_Bounty::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTA_Item_RuneSpawner_Bounty3_MNetworkVarNames_Value) != 0 )
+    {
+      CDOTA_Item_RuneSpawner_Bounty::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTA_Item_RuneSpawner_Bounty3_MNetworkVarNames_Value.m_pVarName = "m_flLastSpawnTime";
+      CDOTA_Item_RuneSpawner_Bounty::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTA_Item_RuneSpawner_Bounty3_MNetworkVarNames_Value.m_pVarType = "float";
+      __cxa_guard_release(&`guard variable for'CDOTA_Item_RuneSpawner_Bounty::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CDOTA_Item_RuneSpawner_Bounty3_MNetworkVarNames_Value);
+    }
+    CDOTA_Item_RuneSpawner_Bounty::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CDOTA_Item_RuneSpawner_Bounty[0].m_pType = (*(*v7 + 40LL))(v7, 11);
+    if ( `guard variable for'CDOTA_Item_RuneSpawner_Bounty::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_NestedClassesOf_CDOTA_Item_RuneSpawner_Bounty == 0
+      && __cxa_guard_acquire(&`guard variable for'CDOTA_Item_RuneSpawner_Bounty::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_NestedClassesOf_CDOTA_Item_RuneSpawner_Bounty) != 0 )
+    {
+      v8 = CDOTA_Item_RuneSpawner_Bounty::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult;
+      if ( CDOTA_Item_RuneSpawner_Bounty::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult == 0 )
+        v8 = CDOTA_Item_RuneSpawner_Bounty::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+               pSchemaSystem,
+               pBinaryName,
+               pProjectName);
+      CDOTA_Item_RuneSpawner_Bounty::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_NestedClassesOf_CDOTA_Item_RuneSpawner_Bounty[0] = v8;
+      __cxa_guard_release(&`guard variable for'CDOTA_Item_RuneSpawner_Bounty::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_NestedClassesOf_CDOTA_Item_RuneSpawner_Bounty);
+    }
+    (*(CBaseAnimating::s_pSchemaBindingForLocalModule->_vptr_ISchemaBinding + 5))(
+      CBaseAnimating::s_pSchemaBindingForLocalModule,
+      pSchemaSystem,
+      pBinaryName,
+      pProjectName);
+    v9 = CBaseAnimating::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+           pSchemaSystem,
+           pBinaryName,
+           pProjectName);
+    CDOTA_Item_RuneSpawner_Bounty::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CDOTA_Item_RuneSpawner_Bounty.m_pOuterTypeScope = v7;
+    CDOTA_Item_RuneSpawner_Bounty::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassBases_CDOTA_Item_RuneSpawner_Bounty[0].m_pClass = v9;
+    CDOTA_Item_RuneSpawner_Bounty::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult = &CDOTA_Item_RuneSpawner_Bounty::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CDOTA_Item_RuneSpawner_Bounty;
+    return &CDOTA_Item_RuneSpawner_Bounty::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CDOTA_Item_RuneSpawner_Bounty;
+  }
+  return result;
+}
+
+
+// CDOTA_Item_RuneSpawner_Bounty::Schema_VerifyBindingIsRegistered  (line 1014, @0x00000000025a77b0, libserver.so)
+void __cdecl CDOTA_Item_RuneSpawner_Bounty::Schema_VerifyBindingIsRegistered()
+{
+  ;
+}
+
+
+// CDOTA_Item_RuneSpawner_Bounty::SetupEntClassInputs  (line 1028, @0x00000000025a77c0, libserver.so)
+void __fastcall CDOTA_Item_RuneSpawner_Bounty::SetupEntClassInputs(CEntityClass *pComponentInfo)
+{
+  ;
+}
+
+
+// CDOTA_Item_RuneSpawner_Bounty::SetupEntClassComponentOverrides  (line 1034, @0x00000000025a77d0, libserver.so)
+void __fastcall CDOTA_Item_RuneSpawner_Bounty::SetupEntClassComponentOverrides(CEntityClass *pEntityClass)
+{
+  pEntityClass->m_pComponentOverrides = 0;
+}
+
+
+// CDOTA_ItemSpawner::CEntityInstanceEntityClass::Schema_CompileTimeVerificationFunction  (line 1040, @0x00000000025a77e0, libserver.so)
+void __fastcall CDOTA_ItemSpawner::CEntityInstanceEntityClass::Schema_CompileTimeVerificationFunction(
+        CDOTA_ItemSpawner::CEntityInstanceEntityClass *const this)
+{
+  ;
+}
+
+
+// CDOTA_ItemSpawner::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE  (line 1043, @0x0000000002595350, libserver.so)  // inlines: Call, Get, SetTypeScope
+// calls: CPointEntity::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE
+// callers: CSchemaNonConstructibleClassBinding<CDOTA_ItemSpawner::CEntityInstanceEntityClass>::Register, CDOTA_ItemSpawner::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE, CDOTA_ItemSpawner::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE
+// globals: CDOTA_ItemSpawner::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char 
+CSchemaClassInfo *__fastcall CDOTA_ItemSpawner::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        const char *pProjectName)
+{
+  ISchemaSystemTypeScope *v6; // r14
+  CSchemaClassInfo *v7; // rax
+
+  v6 = (*(*pSchemaSystem + 112LL))(pSchemaSystem, 1, pBinaryName);
+  (*(CPointEntity::CEntityInstanceEntityClass::s_pSchemaBindingForLocalModule->_vptr_ISchemaBinding + 5))(
+    CPointEntity::CEntityInstanceEntityClass::s_pSchemaBindingForLocalModule,
+    pSchemaSystem,
+    pBinaryName,
+    pProjectName);
+  v7 = CPointEntity::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+         pSchemaSystem,
+         pBinaryName,
+         pProjectName);
+  CDOTA_ItemSpawner::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CDOTA_ItemSpawner_CEntityInstanceEntityClass.m_pOuterTypeScope = v6;
+  CDOTA_ItemSpawner::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassBases_CDOTA_ItemSpawner_CEntityInstanceEntityClass[0].m_pClass = v7;
+  CDOTA_ItemSpawner::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult = &CDOTA_ItemSpawner::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CDOTA_ItemSpawner_CEntityInstanceEntityClass;
+  return &CDOTA_ItemSpawner::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CDOTA_ItemSpawner_CEntityInstanceEntityClass;
+}
+
+
+// CDOTA_ItemSpawner::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE  (line 1043, @0x00000000025a77f0, libserver.so)
+// calls: CDOTA_ItemSpawner::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE
+// globals: CDOTA_ItemSpawner::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char 
+CSchemaClassInfo *__fastcall CDOTA_ItemSpawner::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        const char *pProjectName)
+{
+  CSchemaClassInfo *result; // rax
+
+  result = CDOTA_ItemSpawner::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult;
+  if ( CDOTA_ItemSpawner::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult == 0 )
+    return CDOTA_ItemSpawner::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+             pSchemaSystem,
+             pBinaryName,
+             pProjectName);
+  return result;
+}
+
+
+// CDOTA_ItemSpawner::CEntityInstanceEntityClass::Schema_VerifyBindingIsRegistered  (line 1060, @0x00000000025a7810, libserver.so)
+void __cdecl CDOTA_ItemSpawner::CEntityInstanceEntityClass::Schema_VerifyBindingIsRegistered()
+{
+  ;
+}
+
+
+// CDOTA_ItemSpawner::Schema_CompileTimeVerificationFunction  (line 1068, @0x00000000025a7820, libserver.so)
+void __fastcall CDOTA_ItemSpawner::Schema_CompileTimeVerificationFunction(CDOTA_ItemSpawner *const this)
+{
+  ;
+}
+
+
+// CDOTA_ItemSpawner::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE  (line 1072, @0x00000000025a7830, libserver.so)  // inlines: Call, Get, RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE, SchemaBinding_SchemaTypeOfMemberVarByAddr<CDOTA_ItemSpawner, CUtlSymbolLarge>, SetTypeScope
+// calls: __cxa_guard_acquire, __cxa_guard_release, CPointEntity::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE, CDOTA_ItemSpawner::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE, __cxa_guard_abort, _Unwind_Resume
+// callers: CSchemaNonConstructibleClassBinding<CDOTA_ItemSpawner>::Register
+// strings: "CUtlSymbolLarge"
+// globals: CDOTA_ItemSpawner::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInit, CSchemaManipulator<CUtlSymbolLarge>::StaticAccessor(void)::m, CAtomicManipulator<CUtlSymbolLarge>::Get(void)::val, `guard variable for'CDOTA_ItemSpawner::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,c, CDOTA_ItemSpawner::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char , CDOTA_ItemSpawner::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSch
+CSchemaClassInfo *__fastcall CDOTA_ItemSpawner::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        const char *pProjectName)
+{
+  CSchemaClassInfo *result; // rax
+  ISchemaSystemTypeScope *v7; // r14
+  CSchemaClassInfo *v8; // rax
+  CSchemaClassInfo *v9; // rax
+
+  result = CDOTA_ItemSpawner::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult;
+  if ( CDOTA_ItemSpawner::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult == 0 )
+  {
+    v7 = (*(*pSchemaSystem + 112LL))(pSchemaSystem, 1, pBinaryName);
+    CDOTA_ItemSpawner::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CDOTA_ItemSpawner[0].m_pType = (*(*v7 + 56LL))(v7, "CUtlSymbolLarge", 3007, CAtomicManipulator<CUtlSymbolLarge>::Get(void)::val, &CSchemaManipulator<CUtlSymbolLarge>::StaticAccessor(void)::m);
+    if ( `guard variable for'CDOTA_ItemSpawner::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_NestedClassesOf_CDOTA_ItemSpawner == 0
+      && __cxa_guard_acquire(&`guard variable for'CDOTA_ItemSpawner::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_NestedClassesOf_CDOTA_ItemSpawner) != 0 )
+    {
+      v8 = CDOTA_ItemSpawner::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult;
+      if ( CDOTA_ItemSpawner::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult == 0 )
+        v8 = CDOTA_ItemSpawner::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+               pSchemaSystem,
+               pBinaryName,
+               pProjectName);
+      CDOTA_ItemSpawner::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_NestedClassesOf_CDOTA_ItemSpawner[0] = v8;
+      __cxa_guard_release(&`guard variable for'CDOTA_ItemSpawner::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_NestedClassesOf_CDOTA_ItemSpawner);
+    }
+    (*(CPointEntity::s_pSchemaBindingForLocalModule->_vptr_ISchemaBinding + 5))(
+      CPointEntity::s_pSchemaBindingForLocalModule,
+      pSchemaSystem,
+      pBinaryName,
+      pProjectName);
+    v9 = CPointEntity::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+           pSchemaSystem,
+           pBinaryName,
+           pProjectName);
+    CDOTA_ItemSpawner::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CDOTA_ItemSpawner.m_pOuterTypeScope = v7;
+    CDOTA_ItemSpawner::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassBases_CDOTA_ItemSpawner[0].m_pClass = v9;
+    CDOTA_ItemSpawner::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult = &CDOTA_ItemSpawner::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CDOTA_ItemSpawner;
+    return &CDOTA_ItemSpawner::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CDOTA_ItemSpawner;
+  }
+  return result;
+}
+
+
+// CDOTA_ItemSpawner::Schema_VerifyBindingIsRegistered  (line 1116, @0x00000000025a7940, libserver.so)
+void __cdecl CDOTA_ItemSpawner::Schema_VerifyBindingIsRegistered()
+{
+  ;
+}
+
+
+// CDOTA_ItemSpawner::SetupEntClassInputs  (line 1130, @0x00000000025a7950, libserver.so)
+void __fastcall CDOTA_ItemSpawner::SetupEntClassInputs(CEntityClass *pComponentInfo)
+{
+  ;
+}
+
+
+// CDOTA_ItemSpawner::SetupEntClassComponentOverrides  (line 1136, @0x00000000025a7960, libserver.so)
+void __fastcall CDOTA_ItemSpawner::SetupEntClassComponentOverrides(CEntityClass *pEntityClass)
+{
+  pEntityClass->m_pComponentOverrides = 0;
+}
+
+
+// GetScriptDesc<CDOTA_ItemSpawner>  (line 1142, @0x00000000025ba950, libserver.so)  // inlines: CUtlMemory, CUtlVector, CUtlVectorBase, Finalize, ScriptClassDesc_t, ScriptDeduceFunctionSignature<CDOTA_ItemSpawner*, CDOTA_ItemSpawner, char const*>, SetDescription, SetFunctionName, SetReturnType, SetScriptName, operator[]
+// calls: operator new, GetScriptDesc<CBaseEntity>, CUtlVectorBase<ScriptFunctionBinding_t, CUtlMemory<ScriptFunctionBinding_t, int> >::AddToTail
+// callers: CDOTA_ItemSpawner::GetScriptDesc, CDOTA_ItemSpawner::InitScriptDesc, CDOTA_ItemSpawner::GetClassScriptDesc, CDOTA_ItemSpawner::GetEntityClassInternal
+// strings: "Spawns a physical item", "CDOTA_ItemSpawner", "Returns the item name", "GetItemName"
+// globals: g_pCDOTA_ItemSpawner_ScriptDesc, CMemberScriptBinding0<CDOTA_ItemSpawner *,char const* (CDOTA_ItemSpawner::*)(void),char const*>::Call(void *,void *,CVariantBase<CVariantDefaultAllocator> *,int, CDOTA_ItemSpawner::GetItemName(void)
+ScriptClassDesc_t *__fastcall GetScriptDesc<CDOTA_ItemSpawner>(CDOTA_ItemSpawner *pScriptDescObjectInstance)
+{
+  ScriptClassDesc_t *result; // rax
+  ScriptClassDesc_t *v2; // rbx
+  ScriptClassDesc_t *Script; // rax
+  IScriptInstanceHelper *pHelper; // rcx
+  __int64 v5; // rsi
+  int v6; // edx
+  int v7; // edx
+  char v8; // cl
+  char v9; // al
+
+  result = g_pCDOTA_ItemSpawner_ScriptDesc;
+  if ( g_pCDOTA_ItemSpawner_ScriptDesc == 0 )
+  {
+    v2 = operator new(0x50u);
+    v2->m_pBaseDesc = 0;
+    v2->m_FunctionBindings.m_Size = 0;
+    v2->m_FunctionBindings.m_Memory.m_pMemory = 0;
+    v2->m_FunctionBindings.m_Memory.m_nAllocationCount = 0;
+    v2->m_FunctionBindings.m_Memory.m_nGrowSize = 0;
+    v2->m_pfnConstruct = 0;
+    v2->m_pfnDestruct = 0;
+    v2->pHelper = 0;
+    g_pCDOTA_ItemSpawner_ScriptDesc = v2;
+    v2->m_pszDescription = "Spawns a physical item";
+    v2->m_pszScriptName = "CDOTA_ItemSpawner";
+    v2->m_pszClassname = "CDOTA_ItemSpawner";
+    Script = GetScriptDesc<CBaseEntity>(0);
+    v2->m_pBaseDesc = Script;
+    if ( Script != 0 )
+    {
+      while ( 1 )
+      {
+        pHelper = Script->pHelper;
+        if ( pHelper != 0 )
+          break;
+        Script = Script->m_pBaseDesc;
+        if ( Script == 0 )
+          goto LABEL_7;
+      }
+      v2->pHelper = pHelper;
+    }
+LABEL_7:
+    v5 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(&v2->m_FunctionBindings)];
+    v6 = *(v5 + 26);
+    *(v5 + 24) = 30;
+    *(v5 + 16) = "Returns the item name";
+    *v5 = "GetItemName";
+    *(v5 + 8) = "GetItemName";
+    v7 = v6 - 1;
+    *(v5 + 25) = 0;
+    if ( v7 >= 0 && *(v5 + v7 + 27) == 32 )
+    {
+      v8 = 1;
+      do
+      {
+        --v7;
+        v9 = v8;
+        if ( v7 == -1 )
+        {
+          *(v5 + 25) = v8;
+          goto LABEL_13;
+        }
+        ++v8;
+      }
+      while ( *(v5 + v7 + 27) == 32 );
+      *(v5 + 25) = v9;
+    }
+LABEL_13:
+    *(v5 + 64) = 1;
+    *(v5 + 48) = CMemberScriptBinding0<CDOTA_ItemSpawner *,char const* (CDOTA_ItemSpawner::*)(void),char const*>::Call;
+    *(v5 + 56) = CDOTA_ItemSpawner::GetItemName;
+    return v2;
+  }
+  return result;
+}
+
+
+// CDOTA_ItemSpawner::GetScriptDesc  (line 1142, @0x00000000025baaa0, libserver.so)
+// calls: GetScriptDesc<CDOTA_ItemSpawner>
+ScriptClassDesc_t *__fastcall CDOTA_ItemSpawner::GetScriptDesc(CDOTA_ItemSpawner *const this)
+{
+  return GetScriptDesc<CDOTA_ItemSpawner>(this);
+}
+
+
+// CDOTA_ItemSpawner::InitScriptDesc  (line 1142, @0x00000000025baab0, libserver.so)
+// calls: GetScriptDesc<CDOTA_ItemSpawner>
+ScriptClassDesc_t *__cdecl CDOTA_ItemSpawner::InitScriptDesc()
+{
+  return GetScriptDesc<CDOTA_ItemSpawner>(0);
+}
+
+
+// CDOTA_ItemSpawner::GetClassScriptDesc  (line 1142, @0x00000000025baac0, libserver.so)
+// calls: GetScriptDesc<CDOTA_ItemSpawner>
+ScriptClassDesc_t *__cdecl CDOTA_ItemSpawner::GetClassScriptDesc()
+{
+  return GetScriptDesc<CDOTA_ItemSpawner>(0);
+}
+
+
+// LocalRegisterSchemaModule<ArbitraryTemplateParameter_server_dota_item_h>  (line 1150, @0x00000000025a7970, libserver.so)  // inlines: Call
+// callers: RegisterSchemaModule_dota_item_h
+// globals: CDOTA_Item::CEntityInstanceEntityClass::s_pSchemaBindingForLocalModule, CDOTA_Item::s_pSchemaBindingForLocalModule, CDOTA_Item_Physical::CEntityInstanceEntityClass::s_pSchemaBindingForLocalModule, CDOTA_Item_Physical::s_pSchemaBindingForLocalModule, CDOTA_Item_Rune::CEntityInstanceEntityClass::s_pSchemaBindingForLocalModule, CDOTA_Item_Rune::s_pSchemaBindingForLocalModule, CDOTA_Item_RuneSpawner_Powerup::CEntityInstanceEntityClass::s_pSchemaBindingForLocalModule, CDOTA_Item_RuneSpawner_Powerup::s_pSchemaBindingForLocalModule (12 total)
+void __fastcall LocalRegisterSchemaModule<ArbitraryTemplateParameter_server_dota_item_h>(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        SchemaRegistrationPhase_t nRegistrationPhase)
+{
+  if ( nRegistrationPhase == SchemaRegistrationPhase_t::SCHEMA_REGISTRATION_PHASE_CLASSES )
+  {
+    (*(CDOTA_Item::CEntityInstanceEntityClass::s_pSchemaBindingForLocalModule->_vptr_ISchemaBinding + 5))(
+      CDOTA_Item::CEntityInstanceEntityClass::s_pSchemaBindingForLocalModule,
+      pSchemaSystem,
+      pBinaryName,
+      "server");
+    (*(CDOTA_Item::s_pSchemaBindingForLocalModule->_vptr_ISchemaBinding + 5))(
+      CDOTA_Item::s_pSchemaBindingForLocalModule,
+      pSchemaSystem,
+      pBinaryName,
+      "server");
+    (*(CDOTA_Item_Physical::CEntityInstanceEntityClass::s_pSchemaBindingForLocalModule->_vptr_ISchemaBinding + 5))(
+      CDOTA_Item_Physical::CEntityInstanceEntityClass::s_pSchemaBindingForLocalModule,
+      pSchemaSystem,
+      pBinaryName,
+      "server");
+    (*(CDOTA_Item_Physical::s_pSchemaBindingForLocalModule->_vptr_ISchemaBinding + 5))(
+      CDOTA_Item_Physical::s_pSchemaBindingForLocalModule,
+      pSchemaSystem,
+      pBinaryName,
+      "server");
+    (*(CDOTA_Item_Rune::CEntityInstanceEntityClass::s_pSchemaBindingForLocalModule->_vptr_ISchemaBinding + 5))(
+      CDOTA_Item_Rune::CEntityInstanceEntityClass::s_pSchemaBindingForLocalModule,
+      pSchemaSystem,
+      pBinaryName,
+      "server");
+    (*(CDOTA_Item_Rune::s_pSchemaBindingForLocalModule->_vptr_ISchemaBinding + 5))(
+      CDOTA_Item_Rune::s_pSchemaBindingForLocalModule,
+      pSchemaSystem,
+      pBinaryName,
+      "server");
+    (*(CDOTA_Item_RuneSpawner_Powerup::CEntityInstanceEntityClass::s_pSchemaBindingForLocalModule->_vptr_ISchemaBinding
+     + 5))(
+      CDOTA_Item_RuneSpawner_Powerup::CEntityInstanceEntityClass::s_pSchemaBindingForLocalModule,
+      pSchemaSystem,
+      pBinaryName,
+      "server");
+    (*(CDOTA_Item_RuneSpawner_Powerup::s_pSchemaBindingForLocalModule->_vptr_ISchemaBinding + 5))(
+      CDOTA_Item_RuneSpawner_Powerup::s_pSchemaBindingForLocalModule,
+      pSchemaSystem,
+      pBinaryName,
+      "server");
+    (*(CDOTA_Item_RuneSpawner_Bounty::CEntityInstanceEntityClass::s_pSchemaBindingForLocalModule->_vptr_ISchemaBinding
+     + 5))(
+      CDOTA_Item_RuneSpawner_Bounty::CEntityInstanceEntityClass::s_pSchemaBindingForLocalModule,
+      pSchemaSystem,
+      pBinaryName,
+      "server");
+    (*(CDOTA_Item_RuneSpawner_Bounty::s_pSchemaBindingForLocalModule->_vptr_ISchemaBinding + 5))(
+      CDOTA_Item_RuneSpawner_Bounty::s_pSchemaBindingForLocalModule,
+      pSchemaSystem,
+      pBinaryName,
+      "server");
+    (*(CDOTA_ItemSpawner::CEntityInstanceEntityClass::s_pSchemaBindingForLocalModule->_vptr_ISchemaBinding + 5))(
+      CDOTA_ItemSpawner::CEntityInstanceEntityClass::s_pSchemaBindingForLocalModule,
+      pSchemaSystem,
+      pBinaryName,
+      "server");
+    (*(CDOTA_ItemSpawner::s_pSchemaBindingForLocalModule->_vptr_ISchemaBinding + 5))(
+      CDOTA_ItemSpawner::s_pSchemaBindingForLocalModule,
+      pSchemaSystem,
+      pBinaryName,
+      "server");
+  }
+  ++g_nLinkerHack_SchemaAnchor_RegistrationCountFor_server;
+}
+
+
+// RegisterSchemaModule_dota_item_h  (line 1163, @0x00000000025a7ae0, libserver.so)
+// calls: LocalRegisterSchemaModule<ArbitraryTemplateParameter_server_dota_item_h>
+// callers: CSchemaRegistration_server::RegisterAllBindings
+void __fastcall RegisterSchemaModule_dota_item_h(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        SchemaRegistrationPhase_t nRegistrationPhase)
+{
+  LocalRegisterSchemaModule<ArbitraryTemplateParameter_server_dota_item_h>(
+    pSchemaSystem,
+    pBinaryName,
+    nRegistrationPhase);
+}
+
+

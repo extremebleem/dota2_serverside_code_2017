@@ -1,0 +1,106 @@
+
+// ==== functions (decompiled by Hex-Rays; names/signatures from DWARF) ====
+
+// CBaseNugget::Schema_CompileTimeVerificationFunction  (line 57, @0x0000000002044ed0, libserver.so)
+void __fastcall CBaseNugget::Schema_CompileTimeVerificationFunction(CBaseNugget *const this)
+{
+  ;
+}
+
+
+// CBaseNugget::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE  (line 60, @0x0000000002044ee0, libserver.so)  // inlines: Get, SetTypeScope
+// callers: CSchemaClassBinding<CBaseNugget>::Register
+// globals: CBaseNugget::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitialize, CBaseNugget::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_Cl
+CSchemaClassInfo *__fastcall CBaseNugget::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        const char *pProjectName)
+{
+  CSchemaClassInfo *result; // rax
+  ISchemaSystemTypeScope *v5; // r12
+  const CSchemaClassInfo *v6; // rax
+
+  result = CBaseNugget::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult;
+  if ( CBaseNugget::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult == 0 )
+  {
+    v5 = (*(*pSchemaSystem + 112LL))(pSchemaSystem, 0, pBinaryName);
+    v6 = (*(*pSchemaSystem + 240LL))(pSchemaSystem);
+    CBaseNugget::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CBaseNugget.m_pOuterTypeScope = v5;
+    CBaseNugget::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassBases_CBaseNugget[0].m_pClass = v6;
+    CBaseNugget::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult = &CBaseNugget::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CBaseNugget;
+    (*(*v5 + 264LL))(
+      v5,
+      &CBaseNugget::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CBaseNugget);
+    return CBaseNugget::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult;
+  }
+  return result;
+}
+
+
+// CBaseNugget::Schema_VerifyBindingIsRegistered  (line 70, @0x0000000002044f50, libserver.so)
+void __cdecl CBaseNugget::Schema_VerifyBindingIsRegistered()
+{
+  ;
+}
+
+
+// LocalRegisterSchemaModule<ArbitraryTemplateParameter_server_vscript_nuggets_h>  (line 78, @0x0000000002044f60, libserver.so)  // inlines: Call, RegisterAtomicType_CBaseNuggetRef, RegisterAtomicType_CNuggetRef, SchemaMetaSet2_t
+// calls: __cxa_guard_acquire, __cxa_guard_release
+// callers: RegisterSchemaModule_vscript_nuggets_h
+// globals: `guard variable for'RegisterAtomicType_CBaseNuggetRef(ISchemaSystem *)::s_AtomicTypeInfoCBaseNuggetRef, RegisterAtomicType_CBaseNuggetRef(ISchemaSystem *)::s_AtomicTypeInfoCBaseNuggetRef, `guard variable for'RegisterAtomicType_CNuggetRef(ISchemaSystem *)::s_AtomicTypeInfoCNuggetRef, RegisterAtomicType_CNuggetRef(ISchemaSystem *)::s_AtomicTypeInfoCNuggetRef, CBaseNugget::s_pSchemaBindingForLocalModule
+void __fastcall LocalRegisterSchemaModule<ArbitraryTemplateParameter_server_vscript_nuggets_h>(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        SchemaRegistrationPhase_t nRegistrationPhase)
+{
+  if ( nRegistrationPhase != SchemaRegistrationPhase_t::SCHEMA_REGISTRATION_PHASE_ATOMIC_TYPES_AND_ENUMS )
+  {
+    if ( nRegistrationPhase == SchemaRegistrationPhase_t::SCHEMA_REGISTRATION_PHASE_CLASSES )
+      (*(CBaseNugget::s_pSchemaBindingForLocalModule->_vptr_ISchemaBinding + 5))(
+        CBaseNugget::s_pSchemaBindingForLocalModule,
+        pSchemaSystem,
+        pBinaryName,
+        "server");
+  }
+  else
+  {
+    if ( `guard variable for'RegisterAtomicType_CBaseNuggetRef(ISchemaSystem *)::s_AtomicTypeInfoCBaseNuggetRef == 0
+      && __cxa_guard_acquire(&`guard variable for'RegisterAtomicType_CBaseNuggetRef(ISchemaSystem *)::s_AtomicTypeInfoCBaseNuggetRef) != 0 )
+    {
+      qword_4856618 = 0;
+      dword_4856620 = 0;
+      __cxa_guard_release(&`guard variable for'RegisterAtomicType_CBaseNuggetRef(ISchemaSystem *)::s_AtomicTypeInfoCBaseNuggetRef);
+    }
+    (*(*pSchemaSystem + 248LL))(
+      pSchemaSystem,
+      RegisterAtomicType_CBaseNuggetRef(ISchemaSystem *)::s_AtomicTypeInfoCBaseNuggetRef);
+    if ( `guard variable for'RegisterAtomicType_CNuggetRef(ISchemaSystem *)::s_AtomicTypeInfoCNuggetRef == 0
+      && __cxa_guard_acquire(&`guard variable for'RegisterAtomicType_CNuggetRef(ISchemaSystem *)::s_AtomicTypeInfoCNuggetRef) != 0 )
+    {
+      qword_48565D8 = 0;
+      dword_48565E0 = 0;
+      __cxa_guard_release(&`guard variable for'RegisterAtomicType_CNuggetRef(ISchemaSystem *)::s_AtomicTypeInfoCNuggetRef);
+    }
+    (*(*pSchemaSystem + 248LL))(
+      pSchemaSystem,
+      RegisterAtomicType_CNuggetRef(ISchemaSystem *)::s_AtomicTypeInfoCNuggetRef);
+  }
+  ++g_nLinkerHack_SchemaAnchor_RegistrationCountFor_server;
+}
+
+
+// RegisterSchemaModule_vscript_nuggets_h  (line 82, @0x0000000002045060, libserver.so)
+// calls: LocalRegisterSchemaModule<ArbitraryTemplateParameter_server_vscript_nuggets_h>
+// callers: CSchemaRegistration_server::RegisterAllBindings
+void __fastcall RegisterSchemaModule_vscript_nuggets_h(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        SchemaRegistrationPhase_t nRegistrationPhase)
+{
+  LocalRegisterSchemaModule<ArbitraryTemplateParameter_server_vscript_nuggets_h>(
+    pSchemaSystem,
+    pBinaryName,
+    nRegistrationPhase);
+}
+
+

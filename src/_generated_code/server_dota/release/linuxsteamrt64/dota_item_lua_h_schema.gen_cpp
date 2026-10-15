@@ -1,0 +1,1776 @@
+
+// ==== functions (decompiled by Hex-Rays; names/signatures from DWARF) ====
+
+// CDOTA_Item_Lua::CEntityInstanceEntityClass::Schema_CompileTimeVerificationFunction  (line 35, @0x00000000025a8330, libserver.so)
+void __fastcall CDOTA_Item_Lua::CEntityInstanceEntityClass::Schema_CompileTimeVerificationFunction(
+        CDOTA_Item_Lua::CEntityInstanceEntityClass *const this)
+{
+  ;
+}
+
+
+// CDOTA_Item_Lua::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE  (line 38, @0x0000000002595050, libserver.so)  // inlines: Call, Get, RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE, SetTypeScope
+// calls: CDOTA_Item::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE
+// callers: CSchemaNonConstructibleClassBinding<CDOTA_Item_Lua::CEntityInstanceEntityClass>::Register, CDOTA_Item_Lua::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE, CDOTA_Item_Lua::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE
+// globals: CDOTA_Item::CEntityInstanceEntityClass::s_pSchemaBindingForLocalModule, CDOTA_Item::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,, CDOTA_Item_Lua::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char con
+CSchemaClassInfo *__fastcall CDOTA_Item_Lua::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        const char *pProjectName)
+{
+  ISchemaSystemTypeScope *v6; // r14
+  CSchemaClassInfo *v7; // rax
+
+  v6 = (*(*pSchemaSystem + 112LL))(pSchemaSystem, 1, pBinaryName);
+  (*(CDOTA_Item::CEntityInstanceEntityClass::s_pSchemaBindingForLocalModule->_vptr_ISchemaBinding + 5))(
+    CDOTA_Item::CEntityInstanceEntityClass::s_pSchemaBindingForLocalModule,
+    pSchemaSystem,
+    pBinaryName,
+    pProjectName);
+  v7 = CDOTA_Item::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult;
+  if ( CDOTA_Item::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult == 0 )
+    v7 = CDOTA_Item::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+           pSchemaSystem,
+           pBinaryName,
+           pProjectName);
+  CDOTA_Item_Lua::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CDOTA_Item_Lua_CEntityInstanceEntityClass.m_pOuterTypeScope = v6;
+  CDOTA_Item_Lua::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassBases_CDOTA_Item_Lua_CEntityInstanceEntityClass[0].m_pClass = v7;
+  CDOTA_Item_Lua::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult = &CDOTA_Item_Lua::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CDOTA_Item_Lua_CEntityInstanceEntityClass;
+  return &CDOTA_Item_Lua::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CDOTA_Item_Lua_CEntityInstanceEntityClass;
+}
+
+
+// CDOTA_Item_Lua::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE  (line 38, @0x00000000025a8340, libserver.so)
+// calls: CDOTA_Item_Lua::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE
+// globals: CDOTA_Item_Lua::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char con
+CSchemaClassInfo *__fastcall CDOTA_Item_Lua::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        const char *pProjectName)
+{
+  CSchemaClassInfo *result; // rax
+
+  result = CDOTA_Item_Lua::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult;
+  if ( CDOTA_Item_Lua::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult == 0 )
+    return CDOTA_Item_Lua::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+             pSchemaSystem,
+             pBinaryName,
+             pProjectName);
+  return result;
+}
+
+
+// CDOTA_Item_Lua::CEntityInstanceEntityClass::Schema_VerifyBindingIsRegistered  (line 55, @0x00000000025a8360, libserver.so)
+void __cdecl CDOTA_Item_Lua::CEntityInstanceEntityClass::Schema_VerifyBindingIsRegistered()
+{
+  ;
+}
+
+
+// CDOTA_Item_Lua::Schema_CompileTimeVerificationFunction  (line 63, @0x00000000025a8370, libserver.so)
+void __fastcall CDOTA_Item_Lua::Schema_CompileTimeVerificationFunction(CDOTA_Item_Lua *const this)
+{
+  ;
+}
+
+
+// CDOTA_Item_Lua::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE  (line 66, @0x00000000025a8380, libserver.so)  // inlines: Call, Get, RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE, SetTypeScope
+// calls: __cxa_guard_acquire, __cxa_guard_release, CDOTA_Item::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE, CDOTA_Item_Lua::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE, __cxa_guard_abort, _Unwind_Resume
+// callers: CSchemaNonConstructibleClassBinding<CDOTA_Item_Lua>::Register
+// globals: CDOTA_Item_Lua::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitial, `guard variable for'CDOTA_Item_Lua::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char, CDOTA_Item_Lua::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char con, CDOTA_Item_Lua::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema, CDOTA_Item::s_pSchemaBindingForLocalModule
+CSchemaClassInfo *__fastcall CDOTA_Item_Lua::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        const char *pProjectName)
+{
+  CSchemaClassInfo *result; // rax
+  ISchemaSystemTypeScope *v7; // r14
+  CSchemaClassInfo *v8; // rax
+  CSchemaClassInfo *v9; // rax
+
+  result = CDOTA_Item_Lua::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult;
+  if ( CDOTA_Item_Lua::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult == 0 )
+  {
+    v7 = (*(*pSchemaSystem + 112LL))(pSchemaSystem, 1, pBinaryName);
+    if ( `guard variable for'CDOTA_Item_Lua::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_NestedClassesOf_CDOTA_Item_Lua == 0
+      && __cxa_guard_acquire(&`guard variable for'CDOTA_Item_Lua::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_NestedClassesOf_CDOTA_Item_Lua) != 0 )
+    {
+      v8 = CDOTA_Item_Lua::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult;
+      if ( CDOTA_Item_Lua::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult == 0 )
+        v8 = CDOTA_Item_Lua::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+               pSchemaSystem,
+               pBinaryName,
+               pProjectName);
+      CDOTA_Item_Lua::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_NestedClassesOf_CDOTA_Item_Lua[0] = v8;
+      __cxa_guard_release(&`guard variable for'CDOTA_Item_Lua::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_NestedClassesOf_CDOTA_Item_Lua);
+    }
+    (*(CDOTA_Item::s_pSchemaBindingForLocalModule->_vptr_ISchemaBinding + 5))(
+      CDOTA_Item::s_pSchemaBindingForLocalModule,
+      pSchemaSystem,
+      pBinaryName,
+      pProjectName);
+    v9 = CDOTA_Item::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+           pSchemaSystem,
+           pBinaryName,
+           pProjectName);
+    CDOTA_Item_Lua::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CDOTA_Item_Lua.m_pOuterTypeScope = v7;
+    CDOTA_Item_Lua::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassBases_CDOTA_Item_Lua[0].m_pClass = v9;
+    CDOTA_Item_Lua::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult = &CDOTA_Item_Lua::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CDOTA_Item_Lua;
+    return &CDOTA_Item_Lua::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CDOTA_Item_Lua;
+  }
+  return result;
+}
+
+
+// CDOTA_Item_Lua::Schema_VerifyBindingIsRegistered  (line 100, @0x00000000025a8460, libserver.so)
+void __cdecl CDOTA_Item_Lua::Schema_VerifyBindingIsRegistered()
+{
+  ;
+}
+
+
+// CDOTA_Item_Lua::SetupEntClassInputs  (line 114, @0x00000000025a8470, libserver.so)
+void __fastcall CDOTA_Item_Lua::SetupEntClassInputs(CEntityClass *pComponentInfo)
+{
+  ;
+}
+
+
+// CDOTA_Item_Lua::SetupEntClassComponentOverrides  (line 120, @0x00000000025a8480, libserver.so)
+void __fastcall CDOTA_Item_Lua::SetupEntClassComponentOverrides(CEntityClass *pEntityClass)
+{
+  pEntityClass->m_pComponentOverrides = 0;
+}
+
+
+// GetScriptDesc<CDOTA_Item_Lua>  (line 142, @0x00000000025bad80, libserver.so)  // inlines: AddParameterType, CUtlMemory, CUtlVector, CUtlVectorBase, Finalize, ScriptClassDesc_t, ScriptDeduceFunctionSignature<CDOTA_Item_Lua*, CDOTA_Item_Lua, bool, HSCRIPT__*, const Vector&>, ScriptDeduceFunctionSignature<CDOTA_Item_Lua*, CDOTA_Item_Lua, bool>, ScriptDeduceFunctionSignature<CDOTA_Item_Lua*, CDOTA_Item_Lua, char const*, HSCRIPT__*>, ScriptDeduceFunctionSignature<CDOTA_Item_Lua*, CDOTA_Item_Lua, char const*, const Vector&>, ScriptDeduceFunctionSignature<CDOTA_Item_Lua*, CDOTA_Item_Lua, char const*>, ScriptDeduceFunctionSignature<CDOTA_Item_Lua*, CDOTA_Item_Lua, float, int>, ScriptDeduceFunctionSignature<CDOTA_Item_Lua*, CDOTA_Item_Lua, float>, ScriptDeduceFunctionSignature<CDOTA_Item_Lua*, CDOTA_Item_Lua, int, HSCRIPT__*>, ScriptDeduceFunctionSignature<CDOTA_Item_Lua*, CDOTA_Item_Lua, int, const Vector&, HSCRIPT__*>, ScriptDeduceFunctionSignature<CDOTA_Item_Lua*, CDOTA_Item_Lua, int, const Vector&>, ScriptDeduceFunctionSignature<CDOTA_Item_Lua*, CDOTA_Item_Lua, int, int>, ScriptDeduceFunctionSignature<CDOTA_Item_Lua*, CDOTA_Item_Lua, int>, ScriptDeduceFunctionSignature<CDOTA_Item_Lua*, CDOTA_Item_Lua, void, HSCRIPT__*, HSCRIPT__*, HSCRIPT__*>, ScriptDeduceFunctionSignature<CDOTA_Item_Lua*, CDOTA_Item_Lua, void, HSCRIPT__*>, ScriptDeduceFunctionSignature<CDOTA_Item_Lua*, CDOTA_Item_Lua, void, bool>, ScriptDeduceFunctionSignature<CDOTA_Item_Lua*, CDOTA_Item_Lua, void, const Vector&>, ScriptDeduceFunctionSignature<CDOTA_Item_Lua*, CDOTA_Item_Lua, void, float>, ScriptDeduceFunctionSignature<CDOTA_Item_Lua*, CDOTA_Item_Lua, void>, SetDescription, SetFunctionName, SetPackedParameterNames, SetReturnType, SetScriptName, operator[]
+// calls: operator new, GetScriptDesc<CDOTA_Item>, CUtlVectorBase<ScriptFunctionBinding_t, CUtlMemory<ScriptFunctionBinding_t, int> >::AddToTail
+// callers: CDOTA_Item_Lua::GetScriptDesc, CDOTA_Item_Lua::InitScriptDesc, CDOTA_Item_Lua::GetClassScriptDesc, CDOTA_Item_Lua::GetEntityClassInternal
+// strings: "A lua-based item.", "CDOTA_Item_Lua", "Return cast behavior type of this ability.", "Script_GetBehavior", "Return cast range of this ability.", "Script_GetCastRange" (40 total)
+// globals: g_pCDOTA_Item_Lua_ScriptDesc, CMemberScriptBinding0<CDOTA_Item_Lua *,int (CDOTA_Item_Lua::*)(void),int>::Call(void *,void *,CVariantBase<CVariantDefaultAllocator> *,int,CVariantBase<CVariant, CDOTA_Item_Lua::Script_GetBehavior(void), CMemberScriptBinding2<CDOTA_Item_Lua *,int (CDOTA_Item_Lua::*)(Vector const&,HSCRIPT__ *),int,Vector const&,HSCRIPT__ *>::Call(void *,void *,CVariantBase<CVaria, CDOTA_Item_Lua::Script_GetCastRange(Vector const&,HSCRIPT__ *), s_CDOTA_Item_Lua_Script_GetCastRange_packed_arg_names, CMemberScriptBinding1<CDOTA_Item_Lua *,int (CDOTA_Item_Lua::*)(int),int,int>::Call(void *,void *,CVariantBase<CVariantDefaultAllocator> *,int,CVariantBase<CVari, CDOTA_Item_Lua::Script_GetManaCost(int) (40 total)
+ScriptClassDesc_t *__fastcall GetScriptDesc<CDOTA_Item_Lua>(CDOTA_Item_Lua *pScriptDescObjectInstance)
+{
+  ScriptClassDesc_t *result; // rax
+  ScriptClassDesc_t *v2; // rbx
+  ScriptClassDesc_t *Script; // rax
+  IScriptInstanceHelper *pHelper; // rdx
+  __int64 v5; // rcx
+  int v6; // eax
+  int v7; // eax
+  char v8; // dl
+  char v9; // di
+  __int64 v10; // rcx
+  char v11; // al
+  char v12; // dl
+  int v13; // eax
+  char v14; // dl
+  char v15; // di
+  __int64 v16; // rcx
+  char v17; // al
+  __int64 v18; // rdx
+  int v19; // eax
+  char v20; // dl
+  char v21; // di
+  __int64 v22; // rcx
+  int v23; // eax
+  int v24; // eax
+  char v25; // dl
+  char v26; // di
+  __int64 v27; // rcx
+  char v28; // al
+  __int64 v29; // rdx
+  int v30; // eax
+  char v31; // dl
+  char v32; // di
+  __int64 v33; // rcx
+  char v34; // al
+  __int64 v35; // rdx
+  int v36; // eax
+  char v37; // dl
+  char v38; // di
+  __int64 v39; // rcx
+  char v40; // al
+  __int64 v41; // rdx
+  int v42; // eax
+  char v43; // dl
+  char v44; // di
+  __int64 v45; // rcx
+  char v46; // al
+  __int64 v47; // rdx
+  int v48; // eax
+  char v49; // dl
+  char v50; // di
+  __int64 v51; // rcx
+  char v52; // al
+  __int64 v53; // rdx
+  int v54; // eax
+  char v55; // dl
+  char v56; // di
+  __int64 v57; // rcx
+  int v58; // eax
+  int v59; // eax
+  char v60; // dl
+  char v61; // di
+  __int64 v62; // rcx
+  char v63; // al
+  __int64 v64; // rdx
+  int v65; // eax
+  char v66; // dl
+  char v67; // di
+  __int64 v68; // rcx
+  char v69; // al
+  __int64 v70; // rdx
+  int v71; // eax
+  char v72; // dl
+  char v73; // di
+  __int64 v74; // rcx
+  int v75; // eax
+  int v76; // eax
+  char v77; // dl
+  char v78; // di
+  __int64 v79; // rcx
+  int v80; // eax
+  int v81; // eax
+  char v82; // dl
+  char v83; // di
+  __int64 v84; // rcx
+  int v85; // eax
+  int v86; // eax
+  char v87; // dl
+  char v88; // di
+  __int64 v89; // rcx
+  int v90; // eax
+  int v91; // eax
+  char v92; // dl
+  char v93; // di
+  __int64 v94; // rcx
+  int v95; // eax
+  int v96; // eax
+  char v97; // dl
+  char v98; // di
+  __int64 v99; // rcx
+  char v100; // al
+  __int64 v101; // rdx
+  int v102; // eax
+  char v103; // dl
+  char v104; // di
+  __int64 v105; // rcx
+  char v106; // al
+  __int64 v107; // rdx
+  int v108; // eax
+  char v109; // dl
+  char v110; // di
+  __int64 v111; // rcx
+  char v112; // al
+  char v113; // dl
+  int v114; // eax
+  char v115; // dl
+  char v116; // di
+  __int64 v117; // rcx
+  char v118; // al
+  __int64 v119; // rdx
+  int v120; // eax
+  char v121; // dl
+  char v122; // di
+  __int64 v123; // rcx
+  int v124; // eax
+  int v125; // eax
+  char v126; // dl
+  char v127; // di
+  __int64 v128; // rcx
+  int v129; // eax
+  int v130; // eax
+  char v131; // dl
+  char v132; // di
+  __int64 v133; // rcx
+  int v134; // eax
+  int v135; // eax
+  char v136; // dl
+  char v137; // di
+  __int64 v138; // rcx
+  int v139; // eax
+  int v140; // eax
+  char v141; // dl
+  char v142; // di
+  __int64 v143; // rcx
+  int v144; // eax
+  int v145; // eax
+  char v146; // dl
+  char v147; // di
+  __int64 v148; // rcx
+  char v149; // al
+  __int64 v150; // rdx
+  int v151; // eax
+  char v152; // dl
+  char v153; // di
+  __int64 v154; // rcx
+  int v155; // eax
+  int v156; // eax
+  char v157; // dl
+  char v158; // di
+  __int64 v159; // rcx
+  char v160; // al
+  __int64 v161; // rdx
+  int v162; // eax
+  char v163; // dl
+  char v164; // di
+  __int64 v165; // rcx
+  int v166; // eax
+  int v167; // eax
+  char v168; // dl
+  char v169; // di
+  __int64 v170; // rcx
+  char v171; // al
+  char v172; // dl
+  int v173; // eax
+  char v174; // dl
+  char v175; // di
+  __int64 v176; // rcx
+  int v177; // eax
+  int v178; // eax
+  char v179; // dl
+  char v180; // di
+  __int64 v181; // rcx
+  int v182; // eax
+  int v183; // eax
+  char v184; // dl
+  char v185; // di
+  __int64 v186; // rcx
+  int v187; // eax
+  int v188; // eax
+  char v189; // dl
+  char v190; // di
+  __int64 v191; // rcx
+  int v192; // eax
+  int v193; // eax
+  char v194; // dl
+  char v195; // di
+  __int64 v196; // rcx
+  int v197; // eax
+  int v198; // eax
+  char v199; // dl
+  char v200; // di
+  __int64 v201; // rcx
+  int v202; // eax
+  int v203; // eax
+  char v204; // dl
+  char v205; // di
+  __int64 v206; // rcx
+  int v207; // eax
+  int v208; // eax
+  char v209; // dl
+  char v210; // di
+  __int64 v211; // rcx
+  int v212; // eax
+  int v213; // eax
+  char v214; // dl
+  char v215; // di
+  __int64 v216; // rcx
+  int v217; // eax
+  int v218; // eax
+  char v219; // dl
+  char v220; // di
+  __int64 v221; // rcx
+  int v222; // eax
+  int v223; // eax
+  char v224; // dl
+  char v225; // di
+  __int64 v226; // rcx
+  int v227; // eax
+  int v228; // eax
+  char v229; // dl
+  char v230; // di
+
+  result = g_pCDOTA_Item_Lua_ScriptDesc;
+  if ( g_pCDOTA_Item_Lua_ScriptDesc == 0 )
+  {
+    v2 = operator new(0x50u);
+    v2->m_pBaseDesc = 0;
+    v2->m_FunctionBindings.m_Size = 0;
+    v2->m_FunctionBindings.m_Memory.m_pMemory = 0;
+    v2->m_FunctionBindings.m_Memory.m_nAllocationCount = 0;
+    v2->m_FunctionBindings.m_Memory.m_nGrowSize = 0;
+    v2->m_pfnConstruct = 0;
+    v2->m_pfnDestruct = 0;
+    v2->pHelper = 0;
+    g_pCDOTA_Item_Lua_ScriptDesc = v2;
+    v2->m_pszDescription = "A lua-based item.";
+    v2->m_pszScriptName = "CDOTA_Item_Lua";
+    v2->m_pszClassname = "CDOTA_Item_Lua";
+    Script = GetScriptDesc<CDOTA_Item>(0);
+    v2->m_pBaseDesc = Script;
+    if ( Script != 0 )
+    {
+      while ( 1 )
+      {
+        pHelper = Script->pHelper;
+        if ( pHelper != 0 )
+          break;
+        Script = Script->m_pBaseDesc;
+        if ( Script == 0 )
+          goto LABEL_7;
+      }
+      v2->pHelper = pHelper;
+    }
+LABEL_7:
+    v5 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(&v2->m_FunctionBindings)];
+    *(v5 + 24) = 5;
+    *(v5 + 16) = "Return cast behavior type of this ability.";
+    *v5 = "GetBehavior";
+    *(v5 + 8) = "Script_GetBehavior";
+    v6 = *(v5 + 26);
+    *(v5 + 25) = 0;
+    v7 = v6 - 1;
+    if ( v7 >= 0 && *(v5 + v7 + 27) == 32 )
+    {
+      v8 = 1;
+      do
+      {
+        --v7;
+        v9 = v8;
+        if ( v7 == -1 )
+        {
+          *(v5 + 25) = v8;
+          goto LABEL_13;
+        }
+        ++v8;
+      }
+      while ( *(v5 + v7 + 27) == 32 );
+      *(v5 + 25) = v9;
+    }
+LABEL_13:
+    *(v5 + 64) = 1;
+    *(v5 + 48) = CMemberScriptBinding0<CDOTA_Item_Lua *,int (CDOTA_Item_Lua::*)(void),int>::Call;
+    *(v5 + 56) = CDOTA_Item_Lua::Script_GetBehavior;
+    v10 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(&v2->m_FunctionBindings)];
+    *(v10 + 24) = 5;
+    *(v10 + 16) = "Return cast range of this ability.";
+    *v10 = "GetCastRange";
+    *(v10 + 8) = "Script_GetCastRange";
+    v11 = *(v10 + 26);
+    *(v10 + v11 + 27) = 3;
+    v12 = v11 + 1;
+    v11 += 2;
+    *(v10 + v12 + 27) = 31;
+    *(v10 + 26) = v11;
+    v13 = v11 - 1;
+    *(v10 + 25) = 0;
+    if ( v13 >= 0 && *(v10 + v13 + 27) == 32 )
+    {
+      v14 = 1;
+      do
+      {
+        --v13;
+        v15 = v14;
+        if ( v13 == -1 )
+        {
+          *(v10 + 25) = v14;
+          goto LABEL_19;
+        }
+        ++v14;
+      }
+      while ( *(v10 + v13 + 27) == 32 );
+      *(v10 + 25) = v15;
+    }
+LABEL_19:
+    *(v10 + 64) = 1;
+    *(v10 + 48) = CMemberScriptBinding2<CDOTA_Item_Lua *,int (CDOTA_Item_Lua::*)(Vector const&,HSCRIPT__ *),int,Vector const&,HSCRIPT__ *>::Call;
+    *(v10 + 56) = CDOTA_Item_Lua::Script_GetCastRange;
+    *(v10 + 40) = s_CDOTA_Item_Lua_Script_GetCastRange_packed_arg_names;
+    v16 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(&v2->m_FunctionBindings)];
+    *(v16 + 24) = 5;
+    *(v16 + 16) = "Return mana cost at the given level (-1 is current).";
+    *v16 = "GetManaCost";
+    *(v16 + 8) = "Script_GetManaCost";
+    v17 = *(v16 + 26);
+    v18 = v17++;
+    *(v16 + v18 + 27) = 5;
+    *(v16 + 26) = v17;
+    v19 = v17 - 1;
+    *(v16 + 25) = 0;
+    if ( v19 >= 0 && *(v16 + v19 + 27) == 32 )
+    {
+      v20 = 1;
+      do
+      {
+        --v19;
+        v21 = v20;
+        if ( v19 == -1 )
+        {
+          *(v16 + 25) = v20;
+          goto LABEL_25;
+        }
+        ++v20;
+      }
+      while ( *(v16 + v19 + 27) == 32 );
+      *(v16 + 25) = v21;
+    }
+LABEL_25:
+    *(v16 + 64) = 1;
+    *(v16 + 48) = CMemberScriptBinding1<CDOTA_Item_Lua *,int (CDOTA_Item_Lua::*)(int),int,int>::Call;
+    *(v16 + 56) = CDOTA_Item_Lua::Script_GetManaCost;
+    *(v16 + 40) = s_CDOTA_Item_Lua_Script_GetManaCost_packed_arg_names;
+    v22 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(&v2->m_FunctionBindings)];
+    *(v22 + 24) = 1;
+    *(v22 + 16) = "Return the channel time of this ability.";
+    *v22 = "GetChannelTime";
+    *(v22 + 8) = "Script_GetChannelTime";
+    v23 = *(v22 + 26);
+    *(v22 + 25) = 0;
+    v24 = v23 - 1;
+    if ( v24 >= 0 && *(v22 + v24 + 27) == 32 )
+    {
+      v25 = 1;
+      do
+      {
+        --v24;
+        v26 = v25;
+        if ( v24 == -1 )
+        {
+          *(v22 + 25) = v25;
+          goto LABEL_31;
+        }
+        ++v25;
+      }
+      while ( *(v22 + v24 + 27) == 32 );
+      *(v22 + 25) = v26;
+    }
+LABEL_31:
+    *(v22 + 64) = 1;
+    *(v22 + 48) = CMemberScriptBinding0<CDOTA_Item_Lua *,float (CDOTA_Item_Lua::*)(void),float>::Call;
+    *(v22 + 56) = CDOTA_Item_Lua::Script_GetChannelTime;
+    v27 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(&v2->m_FunctionBindings)];
+    *(v27 + 24) = 5;
+    *(v27 + 16) = "Return mana cost at the given level per second while channeling (-1 is current).";
+    *v27 = "GetChannelledManaCostPerSecond";
+    *(v27 + 8) = "Script_GetChannelledManaCostPerSecond";
+    v28 = *(v27 + 26);
+    v29 = v28++;
+    *(v27 + v29 + 27) = 5;
+    *(v27 + 26) = v28;
+    v30 = v28 - 1;
+    *(v27 + 25) = 0;
+    if ( v30 >= 0 && *(v27 + v30 + 27) == 32 )
+    {
+      v31 = 1;
+      do
+      {
+        --v30;
+        v32 = v31;
+        if ( v30 == -1 )
+        {
+          *(v27 + 25) = v31;
+          goto LABEL_37;
+        }
+        ++v31;
+      }
+      while ( *(v27 + v30 + 27) == 32 );
+      *(v27 + 25) = v32;
+    }
+LABEL_37:
+    *(v27 + 64) = 1;
+    *(v27 + 48) = CMemberScriptBinding1<CDOTA_Item_Lua *,int (CDOTA_Item_Lua::*)(int),int,int>::Call;
+    *(v27 + 56) = CDOTA_Item_Lua::Script_GetChannelledManaCostPerSecond;
+    *(v27 + 40) = s_CDOTA_Item_Lua_Script_GetChannelledManaCostPerSecond_packed_arg_names;
+    v33 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(&v2->m_FunctionBindings)];
+    *(v33 + 24) = 5;
+    *(v33 + 16) = "Return gold cost at the given level (-1 is current).";
+    *v33 = "GetGoldCost";
+    *(v33 + 8) = "Script_GetGoldCost";
+    v34 = *(v33 + 26);
+    v35 = v34++;
+    *(v33 + v35 + 27) = 5;
+    *(v33 + 26) = v34;
+    v36 = v34 - 1;
+    *(v33 + 25) = 0;
+    if ( v36 >= 0 && *(v33 + v36 + 27) == 32 )
+    {
+      v37 = 1;
+      do
+      {
+        --v36;
+        v38 = v37;
+        if ( v36 == -1 )
+        {
+          *(v33 + 25) = v37;
+          goto LABEL_43;
+        }
+        ++v37;
+      }
+      while ( *(v33 + v36 + 27) == 32 );
+      *(v33 + 25) = v38;
+    }
+LABEL_43:
+    *(v33 + 64) = 1;
+    *(v33 + 48) = CMemberScriptBinding1<CDOTA_Item_Lua *,int (CDOTA_Item_Lua::*)(int),int,int>::Call;
+    *(v33 + 56) = CDOTA_Item_Lua::Script_GetGoldCost;
+    *(v33 + 40) = s_CDOTA_Item_Lua_Script_GetGoldCost_packed_arg_names;
+    v39 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(&v2->m_FunctionBindings)];
+    *(v39 + 24) = 1;
+    *(v39 + 16) = "Return cooldown of this ability.";
+    *v39 = "GetCooldown";
+    *(v39 + 8) = "Script_GetCooldown";
+    v40 = *(v39 + 26);
+    v41 = v40++;
+    *(v39 + v41 + 27) = 5;
+    *(v39 + 26) = v40;
+    v42 = v40 - 1;
+    *(v39 + 25) = 0;
+    if ( v42 >= 0 && *(v39 + v42 + 27) == 32 )
+    {
+      v43 = 1;
+      do
+      {
+        --v42;
+        v44 = v43;
+        if ( v42 == -1 )
+        {
+          *(v39 + 25) = v43;
+          goto LABEL_49;
+        }
+        ++v43;
+      }
+      while ( *(v39 + v42 + 27) == 32 );
+      *(v39 + 25) = v44;
+    }
+LABEL_49:
+    *(v39 + 64) = 1;
+    *(v39 + 48) = CMemberScriptBinding1<CDOTA_Item_Lua *,float (CDOTA_Item_Lua::*)(int),float,int>::Call;
+    *(v39 + 56) = CDOTA_Item_Lua::Script_GetCooldown;
+    *(v39 + 40) = s_CDOTA_Item_Lua_Script_GetCooldown_packed_arg_names;
+    v45 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(&v2->m_FunctionBindings)];
+    *(v45 + 24) = 5;
+    *(v45 + 16) = "(HSCRIPT hTarget) Determine whether an issued command on a target is valid.";
+    *v45 = "CastFilterResultTarget";
+    *(v45 + 8) = "Script_CastFilterResultTarget";
+    v46 = *(v45 + 26);
+    v47 = v46++;
+    *(v45 + v47 + 27) = 31;
+    *(v45 + 26) = v46;
+    v48 = v46 - 1;
+    *(v45 + 25) = 0;
+    if ( v48 >= 0 && *(v45 + v48 + 27) == 32 )
+    {
+      v49 = 1;
+      do
+      {
+        --v48;
+        v50 = v49;
+        if ( v48 == -1 )
+        {
+          *(v45 + 25) = v49;
+          goto LABEL_55;
+        }
+        ++v49;
+      }
+      while ( *(v45 + v48 + 27) == 32 );
+      *(v45 + 25) = v50;
+    }
+LABEL_55:
+    *(v45 + 64) = 1;
+    *(v45 + 48) = CMemberScriptBinding1<CDOTA_Item_Lua *,int (CDOTA_Item_Lua::*)(HSCRIPT__ *),int,HSCRIPT__ *>::Call;
+    *(v45 + 56) = CDOTA_Item_Lua::Script_CastFilterResultTarget;
+    *(v45 + 40) = s_CDOTA_Item_Lua_Script_CastFilterResultTarget_packed_arg_names;
+    v51 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(&v2->m_FunctionBindings)];
+    *(v51 + 24) = 5;
+    *(v51 + 16) = "(Vector vLocation) Determine whether an issued command on a location is valid.";
+    *v51 = "CastFilterResultLocation";
+    *(v51 + 8) = "Script_CastFilterResultLocation";
+    v52 = *(v51 + 26);
+    v53 = v52++;
+    *(v51 + v53 + 27) = 3;
+    *(v51 + 26) = v52;
+    v54 = v52 - 1;
+    *(v51 + 25) = 0;
+    if ( v54 >= 0 && *(v51 + v54 + 27) == 32 )
+    {
+      v55 = 1;
+      do
+      {
+        --v54;
+        v56 = v55;
+        if ( v54 == -1 )
+        {
+          *(v51 + 25) = v55;
+          goto LABEL_61;
+        }
+        ++v55;
+      }
+      while ( *(v51 + v54 + 27) == 32 );
+      *(v51 + 25) = v56;
+    }
+LABEL_61:
+    *(v51 + 64) = 1;
+    *(v51 + 48) = CMemberScriptBinding1<CDOTA_Item_Lua *,int (CDOTA_Item_Lua::*)(Vector const&),int,Vector const&>::Call;
+    *(v51 + 56) = CDOTA_Item_Lua::Script_CastFilterResultLocation;
+    *(v51 + 40) = s_CDOTA_Item_Lua_Script_CastFilterResultLocation_packed_arg_names;
+    v57 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(&v2->m_FunctionBindings)];
+    *(v57 + 24) = 5;
+    *(v57 + 16) = "Determine whether an issued command with no target is valid.";
+    *v57 = "CastFilterResult";
+    *(v57 + 8) = "Script_CastFilterResult";
+    v58 = *(v57 + 26);
+    *(v57 + 25) = 0;
+    v59 = v58 - 1;
+    if ( v59 >= 0 && *(v57 + v59 + 27) == 32 )
+    {
+      v60 = 1;
+      do
+      {
+        --v59;
+        v61 = v60;
+        if ( v59 == -1 )
+        {
+          *(v57 + 25) = v60;
+          goto LABEL_67;
+        }
+        ++v60;
+      }
+      while ( *(v57 + v59 + 27) == 32 );
+      *(v57 + 25) = v61;
+    }
+LABEL_67:
+    *(v57 + 64) = 1;
+    *(v57 + 48) = CMemberScriptBinding0<CDOTA_Item_Lua *,int (CDOTA_Item_Lua::*)(void),int>::Call;
+    *(v57 + 56) = CDOTA_Item_Lua::Script_CastFilterResult;
+    v62 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(&v2->m_FunctionBindings)];
+    *(v62 + 24) = 30;
+    *(v62 + 16) = "(HSCRIPT hTarget) Return the error string of a failed command on a target.";
+    *v62 = "GetCustomCastErrorTarget";
+    *(v62 + 8) = "Script_GetCustomCastErrorTarget";
+    v63 = *(v62 + 26);
+    v64 = v63++;
+    *(v62 + v64 + 27) = 31;
+    *(v62 + 26) = v63;
+    v65 = v63 - 1;
+    *(v62 + 25) = 0;
+    if ( v65 >= 0 && *(v62 + v65 + 27) == 32 )
+    {
+      v66 = 1;
+      do
+      {
+        --v65;
+        v67 = v66;
+        if ( v65 == -1 )
+        {
+          *(v62 + 25) = v66;
+          goto LABEL_73;
+        }
+        ++v66;
+      }
+      while ( *(v62 + v65 + 27) == 32 );
+      *(v62 + 25) = v67;
+    }
+LABEL_73:
+    *(v62 + 64) = 1;
+    *(v62 + 48) = CMemberScriptBinding1<CDOTA_Item_Lua *,char const* (CDOTA_Item_Lua::*)(HSCRIPT__ *),char const*,HSCRIPT__ *>::Call;
+    *(v62 + 56) = CDOTA_Item_Lua::Script_GetCustomCastErrorTarget;
+    *(v62 + 40) = s_CDOTA_Item_Lua_Script_GetCustomCastErrorTarget_packed_arg_names;
+    v68 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(&v2->m_FunctionBindings)];
+    *(v68 + 24) = 30;
+    *(v68 + 16) = "(Vector vLocation) Return the error string of a failed command on a location.";
+    *v68 = "GetCustomCastErrorLocation";
+    *(v68 + 8) = "Script_GetCustomCastErrorLocation";
+    v69 = *(v68 + 26);
+    v70 = v69++;
+    *(v68 + v70 + 27) = 3;
+    *(v68 + 26) = v69;
+    v71 = v69 - 1;
+    *(v68 + 25) = 0;
+    if ( v71 >= 0 && *(v68 + v71 + 27) == 32 )
+    {
+      v72 = 1;
+      do
+      {
+        --v71;
+        v73 = v72;
+        if ( v71 == -1 )
+        {
+          *(v68 + 25) = v72;
+          goto LABEL_79;
+        }
+        ++v72;
+      }
+      while ( *(v68 + v71 + 27) == 32 );
+      *(v68 + 25) = v73;
+    }
+LABEL_79:
+    *(v68 + 64) = 1;
+    *(v68 + 48) = CMemberScriptBinding1<CDOTA_Item_Lua *,char const* (CDOTA_Item_Lua::*)(Vector const&),char const*,Vector const&>::Call;
+    *(v68 + 56) = CDOTA_Item_Lua::Script_GetCustomCastErrorLocation;
+    *(v68 + 40) = s_CDOTA_Item_Lua_Script_GetCustomCastErrorLocation_packed_arg_names;
+    v74 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(&v2->m_FunctionBindings)];
+    *(v74 + 24) = 30;
+    *(v74 + 16) = "Return the error string of a failed command with no target.";
+    *v74 = "GetCustomCastError";
+    *(v74 + 8) = "Script_GetCustomCastError";
+    v75 = *(v74 + 26);
+    *(v74 + 25) = 0;
+    v76 = v75 - 1;
+    if ( v76 >= 0 && *(v74 + v76 + 27) == 32 )
+    {
+      v77 = 1;
+      do
+      {
+        --v76;
+        v78 = v77;
+        if ( v76 == -1 )
+        {
+          *(v74 + 25) = v77;
+          goto LABEL_85;
+        }
+        ++v77;
+      }
+      while ( *(v74 + v76 + 27) == 32 );
+      *(v74 + 25) = v78;
+    }
+LABEL_85:
+    *(v74 + 64) = 1;
+    *(v74 + 48) = CMemberScriptBinding0<CDOTA_Item_Lua *,char const* (CDOTA_Item_Lua::*)(void),char const*>::Call;
+    *(v74 + 56) = CDOTA_Item_Lua::Script_GetCustomCastError;
+    v79 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(&v2->m_FunctionBindings)];
+    *(v79 + 24) = 0;
+    *(v79 + 16) = "Ability is toggled on/off.";
+    *v79 = "OnToggle";
+    *(v79 + 8) = "Script_OnToggle";
+    v80 = *(v79 + 26);
+    *(v79 + 25) = 0;
+    v81 = v80 - 1;
+    if ( v81 >= 0 && *(v79 + v81 + 27) == 32 )
+    {
+      v82 = 1;
+      do
+      {
+        --v81;
+        v83 = v82;
+        if ( v81 == -1 )
+        {
+          *(v79 + 25) = v82;
+          goto LABEL_91;
+        }
+        ++v82;
+      }
+      while ( *(v79 + v81 + 27) == 32 );
+      *(v79 + 25) = v83;
+    }
+LABEL_91:
+    *(v79 + 64) = 1;
+    *(v79 + 48) = CMemberScriptBinding0<CDOTA_Item_Lua *,void (CDOTA_Item_Lua::*)(void),void>::Call;
+    *(v79 + 56) = CDOTA_Item_Lua::Script_OnToggle;
+    v84 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(&v2->m_FunctionBindings)];
+    *(v84 + 24) = 0;
+    *(v84 + 16) = "Cast time finished, spell effects begin.";
+    *v84 = "OnSpellStart";
+    *(v84 + 8) = "Script_OnSpellStart";
+    v85 = *(v84 + 26);
+    *(v84 + 25) = 0;
+    v86 = v85 - 1;
+    if ( v86 >= 0 && *(v84 + v86 + 27) == 32 )
+    {
+      v87 = 1;
+      do
+      {
+        --v86;
+        v88 = v87;
+        if ( v86 == -1 )
+        {
+          *(v84 + 25) = v87;
+          goto LABEL_97;
+        }
+        ++v87;
+      }
+      while ( *(v84 + v86 + 27) == 32 );
+      *(v84 + 25) = v88;
+    }
+LABEL_97:
+    *(v84 + 64) = 1;
+    *(v84 + 48) = CMemberScriptBinding0<CDOTA_Item_Lua *,void (CDOTA_Item_Lua::*)(void),void>::Call;
+    *(v84 + 56) = CDOTA_Item_Lua::Script_OnSpellStart;
+    v89 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(&v2->m_FunctionBindings)];
+    *(v89 + 24) = 6;
+    *(v89 + 16) = "Cast time begins (return true for successful cast).";
+    *v89 = "OnAbilityPhaseStart";
+    *(v89 + 8) = "Script_OnAbilityPhaseStart";
+    v90 = *(v89 + 26);
+    *(v89 + 25) = 0;
+    v91 = v90 - 1;
+    if ( v91 >= 0 && *(v89 + v91 + 27) == 32 )
+    {
+      v92 = 1;
+      do
+      {
+        --v91;
+        v93 = v92;
+        if ( v91 == -1 )
+        {
+          *(v89 + 25) = v92;
+          goto LABEL_103;
+        }
+        ++v92;
+      }
+      while ( *(v89 + v91 + 27) == 32 );
+      *(v89 + 25) = v93;
+    }
+LABEL_103:
+    *(v89 + 64) = 1;
+    *(v89 + 48) = CMemberScriptBinding0<CDOTA_Item_Lua *,bool (CDOTA_Item_Lua::*)(void),bool>::Call;
+    *(v89 + 56) = CDOTA_Item_Lua::Script_OnAbilityPhaseStart;
+    v94 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(&v2->m_FunctionBindings)];
+    *(v94 + 24) = 0;
+    *(v94 + 16) = "Cast time did not complete successfully.";
+    *v94 = "OnAbilityPhaseInterrupted";
+    *(v94 + 8) = "Script_OnAbilityPhaseInterrupted";
+    v95 = *(v94 + 26);
+    *(v94 + 25) = 0;
+    v96 = v95 - 1;
+    if ( v96 >= 0 && *(v94 + v96 + 27) == 32 )
+    {
+      v97 = 1;
+      do
+      {
+        --v96;
+        v98 = v97;
+        if ( v96 == -1 )
+        {
+          *(v94 + 25) = v97;
+          goto LABEL_109;
+        }
+        ++v97;
+      }
+      while ( *(v94 + v96 + 27) == 32 );
+      *(v94 + 25) = v98;
+    }
+LABEL_109:
+    *(v94 + 64) = 1;
+    *(v94 + 48) = CMemberScriptBinding0<CDOTA_Item_Lua *,void (CDOTA_Item_Lua::*)(void),void>::Call;
+    *(v94 + 56) = CDOTA_Item_Lua::Script_OnAbilityPhaseInterrupted;
+    v99 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(&v2->m_FunctionBindings)];
+    *(v99 + 24) = 0;
+    *(v99 + 16) = "(float flInterval) Channeling is taking place.";
+    *v99 = "OnChannelThink";
+    *(v99 + 8) = "Script_OnChannelThink";
+    v100 = *(v99 + 26);
+    v101 = v100++;
+    *(v99 + v101 + 27) = 1;
+    *(v99 + 26) = v100;
+    v102 = v100 - 1;
+    *(v99 + 25) = 0;
+    if ( v102 >= 0 && *(v99 + v102 + 27) == 32 )
+    {
+      v103 = 1;
+      do
+      {
+        --v102;
+        v104 = v103;
+        if ( v102 == -1 )
+        {
+          *(v99 + 25) = v103;
+          goto LABEL_115;
+        }
+        ++v103;
+      }
+      while ( *(v99 + v102 + 27) == 32 );
+      *(v99 + 25) = v104;
+    }
+LABEL_115:
+    *(v99 + 64) = 1;
+    *(v99 + 48) = CMemberScriptBinding1<CDOTA_Item_Lua *,void (CDOTA_Item_Lua::*)(float),void,float>::Call;
+    *(v99 + 56) = CDOTA_Item_Lua::Script_OnChannelThink;
+    *(v99 + 40) = s_CDOTA_Item_Lua_Script_OnChannelThink_packed_arg_names;
+    v105 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(&v2->m_FunctionBindings)];
+    *(v105 + 24) = 0;
+    *(v105 + 16) = "(bool bInterrupted) Channel finished.";
+    *v105 = "OnChannelFinish";
+    *(v105 + 8) = "Script_OnChannelFinish";
+    v106 = *(v105 + 26);
+    v107 = v106++;
+    *(v105 + v107 + 27) = 6;
+    *(v105 + 26) = v106;
+    v108 = v106 - 1;
+    *(v105 + 25) = 0;
+    if ( v108 >= 0 && *(v105 + v108 + 27) == 32 )
+    {
+      v109 = 1;
+      do
+      {
+        --v108;
+        v110 = v109;
+        if ( v108 == -1 )
+        {
+          *(v105 + 25) = v109;
+          goto LABEL_121;
+        }
+        ++v109;
+      }
+      while ( *(v105 + v108 + 27) == 32 );
+      *(v105 + 25) = v110;
+    }
+LABEL_121:
+    *(v105 + 64) = 1;
+    *(v105 + 48) = CMemberScriptBinding1<CDOTA_Item_Lua *,void (CDOTA_Item_Lua::*)(bool),void,bool>::Call;
+    *(v105 + 56) = CDOTA_Item_Lua::Script_OnChannelFinish;
+    *(v105 + 40) = s_CDOTA_Item_Lua_Script_OnChannelFinish_packed_arg_names;
+    v111 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(&v2->m_FunctionBindings)];
+    *(v111 + 24) = 6;
+    *(v111 + 16) = "(HSCRIPT hTarget, Vector vLocation) Projectile has collided with a given target or reached its destin"
+                   "ation (target is invalid).";
+    *v111 = "OnProjectileHit";
+    *(v111 + 8) = "Script_OnProjectileHit";
+    v112 = *(v111 + 26);
+    *(v111 + v112 + 27) = 31;
+    v113 = v112 + 1;
+    v112 += 2;
+    *(v111 + v113 + 27) = 3;
+    *(v111 + 26) = v112;
+    v114 = v112 - 1;
+    *(v111 + 25) = 0;
+    if ( v114 >= 0 && *(v111 + v114 + 27) == 32 )
+    {
+      v115 = 1;
+      do
+      {
+        --v114;
+        v116 = v115;
+        if ( v114 == -1 )
+        {
+          *(v111 + 25) = v115;
+          goto LABEL_127;
+        }
+        ++v115;
+      }
+      while ( *(v111 + v114 + 27) == 32 );
+      *(v111 + 25) = v116;
+    }
+LABEL_127:
+    *(v111 + 64) = 1;
+    *(v111 + 48) = CMemberScriptBinding2<CDOTA_Item_Lua *,bool (CDOTA_Item_Lua::*)(HSCRIPT__ *,Vector const&),bool,HSCRIPT__ *,Vector const&>::Call;
+    *(v111 + 56) = CDOTA_Item_Lua::Script_OnProjectileHit;
+    *(v111 + 40) = s_CDOTA_Item_Lua_Script_OnProjectileHit_packed_arg_names;
+    v117 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(&v2->m_FunctionBindings)];
+    *(v117 + 24) = 0;
+    *(v117 + 16) = "(Vector vLocation) Projectile is actively moving.";
+    *v117 = "OnProjectileThink";
+    *(v117 + 8) = "Script_OnProjectileThink";
+    v118 = *(v117 + 26);
+    v119 = v118++;
+    *(v117 + v119 + 27) = 3;
+    *(v117 + 26) = v118;
+    v120 = v118 - 1;
+    *(v117 + 25) = 0;
+    if ( v120 >= 0 && *(v117 + v120 + 27) == 32 )
+    {
+      v121 = 1;
+      do
+      {
+        --v120;
+        v122 = v121;
+        if ( v120 == -1 )
+        {
+          *(v117 + 25) = v121;
+          goto LABEL_133;
+        }
+        ++v121;
+      }
+      while ( *(v117 + v120 + 27) == 32 );
+      *(v117 + 25) = v122;
+    }
+LABEL_133:
+    *(v117 + 64) = 1;
+    *(v117 + 48) = CMemberScriptBinding1<CDOTA_Item_Lua *,void (CDOTA_Item_Lua::*)(Vector const&),void,Vector const&>::Call;
+    *(v117 + 56) = CDOTA_Item_Lua::Script_OnProjectileThink;
+    *(v117 + 40) = s_CDOTA_Item_Lua_Script_OnProjectileThink_packed_arg_names;
+    v123 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(&v2->m_FunctionBindings)];
+    *(v123 + 24) = 0;
+    *(v123 + 16) = "Caster respawned or spawned for the first time.";
+    *v123 = "OnOwnerSpawned";
+    *(v123 + 8) = "Script_OnOwnerSpawned";
+    v124 = *(v123 + 26);
+    *(v123 + 25) = 0;
+    v125 = v124 - 1;
+    if ( v125 >= 0 && *(v123 + v125 + 27) == 32 )
+    {
+      v126 = 1;
+      do
+      {
+        --v125;
+        v127 = v126;
+        if ( v125 == -1 )
+        {
+          *(v123 + 25) = v126;
+          goto LABEL_139;
+        }
+        ++v126;
+      }
+      while ( *(v123 + v125 + 27) == 32 );
+      *(v123 + 25) = v127;
+    }
+LABEL_139:
+    *(v123 + 64) = 1;
+    *(v123 + 48) = CMemberScriptBinding0<CDOTA_Item_Lua *,void (CDOTA_Item_Lua::*)(void),void>::Call;
+    *(v123 + 56) = CDOTA_Item_Lua::Script_OnOwnerSpawned;
+    v128 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(&v2->m_FunctionBindings)];
+    *(v128 + 24) = 0;
+    *(v128 + 16) = "Caster died.";
+    *v128 = "OnOwnerDied";
+    *(v128 + 8) = "Script_OnOwnerDied";
+    v129 = *(v128 + 26);
+    *(v128 + 25) = 0;
+    v130 = v129 - 1;
+    if ( v130 >= 0 && *(v128 + v130 + 27) == 32 )
+    {
+      v131 = 1;
+      do
+      {
+        --v130;
+        v132 = v131;
+        if ( v130 == -1 )
+        {
+          *(v128 + 25) = v131;
+          goto LABEL_145;
+        }
+        ++v131;
+      }
+      while ( *(v128 + v130 + 27) == 32 );
+      *(v128 + 25) = v132;
+    }
+LABEL_145:
+    *(v128 + 64) = 1;
+    *(v128 + 48) = CMemberScriptBinding0<CDOTA_Item_Lua *,void (CDOTA_Item_Lua::*)(void),void>::Call;
+    *(v128 + 56) = CDOTA_Item_Lua::Script_OnOwnerDied;
+    v133 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(&v2->m_FunctionBindings)];
+    *(v133 + 24) = 0;
+    *(v133 + 16) = "Ability gained a level.";
+    *v133 = "OnUpgrade";
+    *(v133 + 8) = "Script_OnUpgrade";
+    v134 = *(v133 + 26);
+    *(v133 + 25) = 0;
+    v135 = v134 - 1;
+    if ( v135 >= 0 && *(v133 + v135 + 27) == 32 )
+    {
+      v136 = 1;
+      do
+      {
+        --v135;
+        v137 = v136;
+        if ( v135 == -1 )
+        {
+          *(v133 + 25) = v136;
+          goto LABEL_151;
+        }
+        ++v136;
+      }
+      while ( *(v133 + v135 + 27) == 32 );
+      *(v133 + 25) = v137;
+    }
+LABEL_151:
+    *(v133 + 64) = 1;
+    *(v133 + 48) = CMemberScriptBinding0<CDOTA_Item_Lua *,void (CDOTA_Item_Lua::*)(void),void>::Call;
+    *(v133 + 56) = CDOTA_Item_Lua::Script_OnUpgrade;
+    v138 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(&v2->m_FunctionBindings)];
+    *(v138 + 24) = 0;
+    *(v138 + 16) = "Caster gained a level.";
+    *v138 = "OnHeroLevelUp";
+    *(v138 + 8) = "Script_OnHeroLevelUp";
+    v139 = *(v138 + 26);
+    *(v138 + 25) = 0;
+    v140 = v139 - 1;
+    if ( v140 >= 0 && *(v138 + v140 + 27) == 32 )
+    {
+      v141 = 1;
+      do
+      {
+        --v140;
+        v142 = v141;
+        if ( v140 == -1 )
+        {
+          *(v138 + 25) = v141;
+          goto LABEL_157;
+        }
+        ++v141;
+      }
+      while ( *(v138 + v140 + 27) == 32 );
+      *(v138 + 25) = v142;
+    }
+LABEL_157:
+    *(v138 + 64) = 1;
+    *(v138 + 48) = CMemberScriptBinding0<CDOTA_Item_Lua *,void (CDOTA_Item_Lua::*)(void),void>::Call;
+    *(v138 + 56) = CDOTA_Item_Lua::Script_OnHeroLevelUp;
+    v143 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(&v2->m_FunctionBindings)];
+    *(v143 + 24) = 0;
+    *(v143 + 16) = "Caster inventory changed.";
+    *v143 = "OnInventoryContentsChanged";
+    *(v143 + 8) = "Script_OnInventoryContentsChanged";
+    v144 = *(v143 + 26);
+    *(v143 + 25) = 0;
+    v145 = v144 - 1;
+    if ( v145 >= 0 && *(v143 + v145 + 27) == 32 )
+    {
+      v146 = 1;
+      do
+      {
+        --v145;
+        v147 = v146;
+        if ( v145 == -1 )
+        {
+          *(v143 + 25) = v146;
+          goto LABEL_163;
+        }
+        ++v146;
+      }
+      while ( *(v143 + v145 + 27) == 32 );
+      *(v143 + 25) = v147;
+    }
+LABEL_163:
+    *(v143 + 64) = 1;
+    *(v143 + 48) = CMemberScriptBinding0<CDOTA_Item_Lua *,void (CDOTA_Item_Lua::*)(void),void>::Call;
+    *(v143 + 56) = CDOTA_Item_Lua::Script_OnInventoryContentsChanged;
+    v148 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(&v2->m_FunctionBindings)];
+    *(v148 + 24) = 0;
+    *(v148 + 16) = "( HSCRIPT hItem ) Caster equipped item.";
+    *v148 = "OnItemEquipped";
+    *(v148 + 8) = "Script_OnItemEquipped";
+    v149 = *(v148 + 26);
+    v150 = v149++;
+    *(v148 + v150 + 27) = 31;
+    *(v148 + 26) = v149;
+    v151 = v149 - 1;
+    *(v148 + 25) = 0;
+    if ( v151 >= 0 && *(v148 + v151 + 27) == 32 )
+    {
+      v152 = 1;
+      do
+      {
+        --v151;
+        v153 = v152;
+        if ( v151 == -1 )
+        {
+          *(v148 + 25) = v152;
+          goto LABEL_169;
+        }
+        ++v152;
+      }
+      while ( *(v148 + v151 + 27) == 32 );
+      *(v148 + 25) = v153;
+    }
+LABEL_169:
+    *(v148 + 64) = 1;
+    *(v148 + 48) = CMemberScriptBinding1<CDOTA_Item_Lua *,void (CDOTA_Item_Lua::*)(HSCRIPT__ *),void,HSCRIPT__ *>::Call;
+    *(v148 + 56) = CDOTA_Item_Lua::Script_OnItemEquipped;
+    *(v148 + 40) = s_CDOTA_Item_Lua_Script_OnItemEquipped_packed_arg_names;
+    v154 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(&v2->m_FunctionBindings)];
+    *(v154 + 24) = 0;
+    *(v154 + 16) = "Caster (hero only) gained a level, skilled an ability, or received a new stat bonus.";
+    *v154 = "OnHeroCalculateStatBonus";
+    *(v154 + 8) = "Script_OnHeroCalculateStatBonus";
+    v155 = *(v154 + 26);
+    *(v154 + 25) = 0;
+    v156 = v155 - 1;
+    if ( v156 >= 0 && *(v154 + v156 + 27) == 32 )
+    {
+      v157 = 1;
+      do
+      {
+        --v156;
+        v158 = v157;
+        if ( v156 == -1 )
+        {
+          *(v154 + 25) = v157;
+          goto LABEL_175;
+        }
+        ++v157;
+      }
+      while ( *(v154 + v156 + 27) == 32 );
+      *(v154 + 25) = v158;
+    }
+LABEL_175:
+    *(v154 + 64) = 1;
+    *(v154 + 48) = CMemberScriptBinding0<CDOTA_Item_Lua *,void (CDOTA_Item_Lua::*)(void),void>::Call;
+    *(v154 + 56) = CDOTA_Item_Lua::Script_OnHeroCalculateStatBonus;
+    v159 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(&v2->m_FunctionBindings)];
+    *(v159 + 24) = 0;
+    *(v159 + 16) = "( HSCRIPT hAbility ) Special behavior when stolen by Spell Steal.";
+    *v159 = "OnStolen";
+    *(v159 + 8) = "Script_OnStolen";
+    v160 = *(v159 + 26);
+    v161 = v160++;
+    *(v159 + v161 + 27) = 31;
+    *(v159 + 26) = v160;
+    v162 = v160 - 1;
+    *(v159 + 25) = 0;
+    if ( v162 >= 0 && *(v159 + v162 + 27) == 32 )
+    {
+      v163 = 1;
+      do
+      {
+        --v162;
+        v164 = v163;
+        if ( v162 == -1 )
+        {
+          *(v159 + 25) = v163;
+          goto LABEL_181;
+        }
+        ++v163;
+      }
+      while ( *(v159 + v162 + 27) == 32 );
+      *(v159 + 25) = v164;
+    }
+LABEL_181:
+    *(v159 + 64) = 1;
+    *(v159 + 48) = CMemberScriptBinding1<CDOTA_Item_Lua *,void (CDOTA_Item_Lua::*)(HSCRIPT__ *),void,HSCRIPT__ *>::Call;
+    *(v159 + 56) = CDOTA_Item_Lua::Script_OnStolen;
+    *(v159 + 40) = s_CDOTA_Item_Lua_Script_OnStolen_packed_arg_names;
+    v165 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(&v2->m_FunctionBindings)];
+    *(v165 + 24) = 0;
+    *(v165 + 16) = "Special behavior when lost by Spell Steal.";
+    *v165 = "OnUnStolen";
+    *(v165 + 8) = "Script_OnUnStolen";
+    v166 = *(v165 + 26);
+    *(v165 + 25) = 0;
+    v167 = v166 - 1;
+    if ( v167 >= 0 && *(v165 + v167 + 27) == 32 )
+    {
+      v168 = 1;
+      do
+      {
+        --v167;
+        v169 = v168;
+        if ( v167 == -1 )
+        {
+          *(v165 + 25) = v168;
+          goto LABEL_187;
+        }
+        ++v168;
+      }
+      while ( *(v165 + v167 + 27) == 32 );
+      *(v165 + 25) = v169;
+    }
+LABEL_187:
+    *(v165 + 64) = 1;
+    *(v165 + 48) = CMemberScriptBinding0<CDOTA_Item_Lua *,void (CDOTA_Item_Lua::*)(void),void>::Call;
+    *(v165 + 56) = CDOTA_Item_Lua::Script_OnUnStolen;
+    v170 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(&v2->m_FunctionBindings)];
+    *(v170 + 24) = 0;
+    *(v170 + 16) = "A hero has died in the vicinity (ie Urn), takes table of params.";
+    *v170 = "OnHeroDiedNearby";
+    *(v170 + 8) = "Script_OnHeroDiedNearby";
+    v171 = *(v170 + 26);
+    *(v170 + v171 + 27) = 31;
+    *(v170 + (v171 + 1) + 27) = 31;
+    v172 = v171 + 2;
+    v171 += 3;
+    *(v170 + v172 + 27) = 31;
+    *(v170 + 26) = v171;
+    v173 = v171 - 1;
+    *(v170 + 25) = 0;
+    if ( v173 >= 0 && *(v170 + v173 + 27) == 32 )
+    {
+      v174 = 1;
+      do
+      {
+        --v173;
+        v175 = v174;
+        if ( v173 == -1 )
+        {
+          *(v170 + 25) = v174;
+          goto LABEL_193;
+        }
+        ++v174;
+      }
+      while ( *(v170 + v173 + 27) == 32 );
+      *(v170 + 25) = v175;
+    }
+LABEL_193:
+    *(v170 + 64) = 1;
+    *(v170 + 48) = CMemberScriptBinding3<CDOTA_Item_Lua *,void (CDOTA_Item_Lua::*)(HSCRIPT__ *,HSCRIPT__ *,HSCRIPT__ *),void,HSCRIPT__ *,HSCRIPT__ *,HSCRIPT__ *>::Call;
+    *(v170 + 56) = CDOTA_Item_Lua::Script_OnHeroDiedNearby;
+    *(v170 + 40) = s_CDOTA_Item_Lua_Script_OnHeroDiedNearby_packed_arg_names;
+    v176 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(&v2->m_FunctionBindings)];
+    *(v176 + 24) = 30;
+    *(v176 + 16) = "Returns abilities that are stolen simultaneously, or otherwise related in functionality.";
+    *v176 = "GetAssociatedPrimaryAbilities";
+    *(v176 + 8) = "Script_GetAssociatedPrimaryAbilities";
+    v177 = *(v176 + 26);
+    *(v176 + 25) = 0;
+    v178 = v177 - 1;
+    if ( v178 >= 0 && *(v176 + v178 + 27) == 32 )
+    {
+      v179 = 1;
+      do
+      {
+        --v178;
+        v180 = v179;
+        if ( v178 == -1 )
+        {
+          *(v176 + 25) = v179;
+          goto LABEL_199;
+        }
+        ++v179;
+      }
+      while ( *(v176 + v178 + 27) == 32 );
+      *(v176 + 25) = v180;
+    }
+LABEL_199:
+    *(v176 + 64) = 1;
+    *(v176 + 48) = CMemberScriptBinding0<CDOTA_Item_Lua *,char const* (CDOTA_Item_Lua::*)(void),char const*>::Call;
+    *(v176 + 56) = CDOTA_Item_Lua::Script_GetAssociatedPrimaryAbilities;
+    v181 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(&v2->m_FunctionBindings)];
+    *(v181 + 24) = 30;
+    *(v181 + 16) = "Returns other abilities that are stolen simultaneously, or otherwise related in functionality.  Gener"
+                   "ally hidden abilities.";
+    *v181 = "GetAssociatedSecondaryAbilities";
+    *(v181 + 8) = "Script_GetAssociatedSecondaryAbilities";
+    v182 = *(v181 + 26);
+    *(v181 + 25) = 0;
+    v183 = v182 - 1;
+    if ( v183 >= 0 && *(v181 + v183 + 27) == 32 )
+    {
+      v184 = 1;
+      do
+      {
+        --v183;
+        v185 = v184;
+        if ( v183 == -1 )
+        {
+          *(v181 + 25) = v184;
+          goto LABEL_205;
+        }
+        ++v184;
+      }
+      while ( *(v181 + v183 + 27) == 32 );
+      *(v181 + 25) = v185;
+    }
+LABEL_205:
+    *(v181 + 64) = 1;
+    *(v181 + 48) = CMemberScriptBinding0<CDOTA_Item_Lua *,char const* (CDOTA_Item_Lua::*)(void),char const*>::Call;
+    *(v181 + 56) = CDOTA_Item_Lua::Script_GetAssociatedSecondaryAbilities;
+    v186 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(&v2->m_FunctionBindings)];
+    *(v186 + 24) = 30;
+    *(v186 + 16) = "Returns the name of the modifier applied passively by this ability.";
+    *v186 = "GetIntrinsicModifierName";
+    *(v186 + 8) = "Script_GetIntrinsicModifierName";
+    v187 = *(v186 + 26);
+    *(v186 + 25) = 0;
+    v188 = v187 - 1;
+    if ( v188 >= 0 && *(v186 + v188 + 27) == 32 )
+    {
+      v189 = 1;
+      do
+      {
+        --v188;
+        v190 = v189;
+        if ( v188 == -1 )
+        {
+          *(v186 + 25) = v189;
+          goto LABEL_211;
+        }
+        ++v189;
+      }
+      while ( *(v186 + v188 + 27) == 32 );
+      *(v186 + 25) = v190;
+    }
+LABEL_211:
+    *(v186 + 64) = 1;
+    *(v186 + 48) = CMemberScriptBinding0<CDOTA_Item_Lua *,char const* (CDOTA_Item_Lua::*)(void),char const*>::Call;
+    *(v186 + 56) = CDOTA_Item_Lua::Script_GetIntrinsicModifierName;
+    v191 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(&v2->m_FunctionBindings)];
+    *(v191 + 24) = 6;
+    *(v191 + 16) = "Returns true if this ability can be stolen by Spell Steal.";
+    *v191 = "IsStealable";
+    *(v191 + 8) = "Script_IsStealable";
+    v192 = *(v191 + 26);
+    *(v191 + 25) = 0;
+    v193 = v192 - 1;
+    if ( v193 >= 0 && *(v191 + v193 + 27) == 32 )
+    {
+      v194 = 1;
+      do
+      {
+        --v193;
+        v195 = v194;
+        if ( v193 == -1 )
+        {
+          *(v191 + 25) = v194;
+          goto LABEL_217;
+        }
+        ++v194;
+      }
+      while ( *(v191 + v193 + 27) == 32 );
+      *(v191 + 25) = v195;
+    }
+LABEL_217:
+    *(v191 + 64) = 1;
+    *(v191 + 48) = CMemberScriptBinding0<CDOTA_Item_Lua *,bool (CDOTA_Item_Lua::*)(void),bool>::Call;
+    *(v191 + 56) = CDOTA_Item_Lua::Script_IsStealable;
+    v196 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(&v2->m_FunctionBindings)];
+    *(v196 + 24) = 6;
+    *(v196 + 16) = "Returns true if this ability is hidden when stolen by Spell Steal.";
+    *v196 = "IsHiddenWhenStolen";
+    *(v196 + 8) = "Script_IsHiddenWhenStolen";
+    v197 = *(v196 + 26);
+    *(v196 + 25) = 0;
+    v198 = v197 - 1;
+    if ( v198 >= 0 && *(v196 + v198 + 27) == 32 )
+    {
+      v199 = 1;
+      do
+      {
+        --v198;
+        v200 = v199;
+        if ( v198 == -1 )
+        {
+          *(v196 + 25) = v199;
+          goto LABEL_223;
+        }
+        ++v199;
+      }
+      while ( *(v196 + v198 + 27) == 32 );
+      *(v196 + 25) = v200;
+    }
+LABEL_223:
+    *(v196 + 64) = 1;
+    *(v196 + 48) = CMemberScriptBinding0<CDOTA_Item_Lua *,bool (CDOTA_Item_Lua::*)(void),bool>::Call;
+    *(v196 + 56) = CDOTA_Item_Lua::Script_IsHiddenWhenStolen;
+    v201 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(&v2->m_FunctionBindings)];
+    *(v201 + 24) = 6;
+    *(v201 + 16) = "Returns true if this ability is refreshed by Refresher Orb.";
+    *v201 = "IsRefreshable";
+    *(v201 + 8) = "Script_IsRefreshable";
+    v202 = *(v201 + 26);
+    *(v201 + 25) = 0;
+    v203 = v202 - 1;
+    if ( v203 >= 0 && *(v201 + v203 + 27) == 32 )
+    {
+      v204 = 1;
+      do
+      {
+        --v203;
+        v205 = v204;
+        if ( v203 == -1 )
+        {
+          *(v201 + 25) = v204;
+          goto LABEL_229;
+        }
+        ++v204;
+      }
+      while ( *(v201 + v203 + 27) == 32 );
+      *(v201 + 25) = v205;
+    }
+LABEL_229:
+    *(v201 + 64) = 1;
+    *(v201 + 48) = CMemberScriptBinding0<CDOTA_Item_Lua *,bool (CDOTA_Item_Lua::*)(void),bool>::Call;
+    *(v201 + 56) = CDOTA_Item_Lua::Script_IsRefreshable;
+    v206 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(&v2->m_FunctionBindings)];
+    *(v206 + 24) = 6;
+    *(v206 + 16) = "Returns true if this ability can be used when not on the action panel.";
+    *v206 = "IsHiddenAbilityCastable";
+    *(v206 + 8) = "Script_IsHiddenAbilityCastable";
+    v207 = *(v206 + 26);
+    *(v206 + 25) = 0;
+    v208 = v207 - 1;
+    if ( v208 >= 0 && *(v206 + v208 + 27) == 32 )
+    {
+      v209 = 1;
+      do
+      {
+        --v208;
+        v210 = v209;
+        if ( v208 == -1 )
+        {
+          *(v206 + 25) = v209;
+          goto LABEL_235;
+        }
+        ++v209;
+      }
+      while ( *(v206 + v208 + 27) == 32 );
+      *(v206 + 25) = v210;
+    }
+LABEL_235:
+    *(v206 + 64) = 1;
+    *(v206 + 48) = CMemberScriptBinding0<CDOTA_Item_Lua *,bool (CDOTA_Item_Lua::*)(void),bool>::Call;
+    *(v206 + 56) = CDOTA_Item_Lua::Script_IsHiddenAbilityCastable;
+    v211 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(&v2->m_FunctionBindings)];
+    *(v211 + 24) = 6;
+    *(v211 + 16) = "Returns true if this ability will generate magic stick charges for nearby enemies.";
+    *v211 = "ProcsMagicStick";
+    *(v211 + 8) = "Script_ProcsMagicStick";
+    v212 = *(v211 + 26);
+    *(v211 + 25) = 0;
+    v213 = v212 - 1;
+    if ( v213 >= 0 && *(v211 + v213 + 27) == 32 )
+    {
+      v214 = 1;
+      do
+      {
+        --v213;
+        v215 = v214;
+        if ( v213 == -1 )
+        {
+          *(v211 + 25) = v214;
+          goto LABEL_241;
+        }
+        ++v214;
+      }
+      while ( *(v211 + v213 + 27) == 32 );
+      *(v211 + 25) = v215;
+    }
+LABEL_241:
+    *(v211 + 64) = 1;
+    *(v211 + 48) = CMemberScriptBinding0<CDOTA_Item_Lua *,bool (CDOTA_Item_Lua::*)(void),bool>::Call;
+    *(v211 + 56) = CDOTA_Item_Lua::Script_ProcsMagicStick;
+    v216 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(&v2->m_FunctionBindings)];
+    *(v216 + 24) = 5;
+    *(v216 + 16) = "Return who hears speech when this spell is cast.";
+    *v216 = "GetConceptRecipientType";
+    *(v216 + 8) = "Script_GetConceptRecipientType";
+    v217 = *(v216 + 26);
+    *(v216 + 25) = 0;
+    v218 = v217 - 1;
+    if ( v218 >= 0 && *(v216 + v218 + 27) == 32 )
+    {
+      v219 = 1;
+      do
+      {
+        --v218;
+        v220 = v219;
+        if ( v218 == -1 )
+        {
+          *(v216 + 25) = v219;
+          goto LABEL_247;
+        }
+        ++v219;
+      }
+      while ( *(v216 + v218 + 27) == 32 );
+      *(v216 + 25) = v220;
+    }
+LABEL_247:
+    *(v216 + 64) = 1;
+    *(v216 + 48) = CMemberScriptBinding0<CDOTA_Item_Lua *,int (CDOTA_Item_Lua::*)(void),int>::Call;
+    *(v216 + 56) = CDOTA_Item_Lua::Script_GetConceptRecipientType;
+    v221 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(&v2->m_FunctionBindings)];
+    *(v221 + 24) = 5;
+    *(v221 + 16) = "Return the type of speech used.";
+    *v221 = "SpeakTrigger";
+    *(v221 + 8) = "Script_SpeakTrigger";
+    v222 = *(v221 + 26);
+    *(v221 + 25) = 0;
+    v223 = v222 - 1;
+    if ( v223 >= 0 && *(v221 + v223 + 27) == 32 )
+    {
+      v224 = 1;
+      do
+      {
+        --v223;
+        v225 = v224;
+        if ( v223 == -1 )
+        {
+          *(v221 + 25) = v224;
+          goto LABEL_253;
+        }
+        ++v224;
+      }
+      while ( *(v221 + v223 + 27) == 32 );
+      *(v221 + 25) = v225;
+    }
+LABEL_253:
+    *(v221 + 64) = 1;
+    *(v221 + 48) = CMemberScriptBinding0<CDOTA_Item_Lua *,int (CDOTA_Item_Lua::*)(void),int>::Call;
+    *(v221 + 56) = CDOTA_Item_Lua::Script_SpeakTrigger;
+    v226 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(&v2->m_FunctionBindings)];
+    *(v226 + 24) = 1;
+    *(v226 + 16) = "Return the animation rate of the cast animation.";
+    *v226 = "GetPlaybackRateOverride";
+    *(v226 + 8) = "Script_GetPlaybackRateOverride";
+    v227 = *(v226 + 26);
+    *(v226 + 25) = 0;
+    v228 = v227 - 1;
+    if ( v228 >= 0 && *(v226 + v228 + 27) == 32 )
+    {
+      v229 = 1;
+      do
+      {
+        --v228;
+        v230 = v229;
+        if ( v228 == -1 )
+        {
+          *(v226 + 25) = v229;
+          goto LABEL_259;
+        }
+        ++v229;
+      }
+      while ( *(v226 + v228 + 27) == 32 );
+      *(v226 + 25) = v230;
+    }
+LABEL_259:
+    *(v226 + 64) = 1;
+    *(v226 + 48) = CMemberScriptBinding0<CDOTA_Item_Lua *,float (CDOTA_Item_Lua::*)(void),float>::Call;
+    *(v226 + 56) = CDOTA_Item_Lua::Script_GetPlaybackRateOverride;
+    return v2;
+  }
+  return result;
+}
+
+
+// CDOTA_Item_Lua::GetScriptDesc  (line 142, @0x00000000025bcbe0, libserver.so)
+// calls: GetScriptDesc<CDOTA_Item_Lua>
+ScriptClassDesc_t *__fastcall CDOTA_Item_Lua::GetScriptDesc(CDOTA_Item_Lua *const this)
+{
+  return GetScriptDesc<CDOTA_Item_Lua>(this);
+}
+
+
+// CDOTA_Item_Lua::InitScriptDesc  (line 142, @0x00000000025bcbf0, libserver.so)
+// calls: GetScriptDesc<CDOTA_Item_Lua>
+ScriptClassDesc_t *__cdecl CDOTA_Item_Lua::InitScriptDesc()
+{
+  return GetScriptDesc<CDOTA_Item_Lua>(0);
+}
+
+
+// CDOTA_Item_Lua::GetClassScriptDesc  (line 142, @0x00000000025bcc00, libserver.so)
+// calls: GetScriptDesc<CDOTA_Item_Lua>
+ScriptClassDesc_t *__cdecl CDOTA_Item_Lua::GetClassScriptDesc()
+{
+  return GetScriptDesc<CDOTA_Item_Lua>(0);
+}
+
+
+// LocalRegisterSchemaModule<ArbitraryTemplateParameter_server_dota_item_lua_h>  (line 191, @0x00000000025a8490, libserver.so)  // inlines: Call
+// callers: RegisterSchemaModule_dota_item_lua_h
+// globals: CDOTA_Item_Lua::CEntityInstanceEntityClass::s_pSchemaBindingForLocalModule, CDOTA_Item_Lua::s_pSchemaBindingForLocalModule
+void __fastcall LocalRegisterSchemaModule<ArbitraryTemplateParameter_server_dota_item_lua_h>(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        SchemaRegistrationPhase_t nRegistrationPhase)
+{
+  if ( nRegistrationPhase == SchemaRegistrationPhase_t::SCHEMA_REGISTRATION_PHASE_CLASSES )
+  {
+    (*(CDOTA_Item_Lua::CEntityInstanceEntityClass::s_pSchemaBindingForLocalModule->_vptr_ISchemaBinding + 5))(
+      CDOTA_Item_Lua::CEntityInstanceEntityClass::s_pSchemaBindingForLocalModule,
+      pSchemaSystem,
+      pBinaryName,
+      "server");
+    (*(CDOTA_Item_Lua::s_pSchemaBindingForLocalModule->_vptr_ISchemaBinding + 5))(
+      CDOTA_Item_Lua::s_pSchemaBindingForLocalModule,
+      pSchemaSystem,
+      pBinaryName,
+      "server");
+  }
+  ++g_nLinkerHack_SchemaAnchor_RegistrationCountFor_server;
+}
+
+
+// RegisterSchemaModule_dota_item_lua_h  (line 194, @0x00000000025a84f0, libserver.so)
+// calls: LocalRegisterSchemaModule<ArbitraryTemplateParameter_server_dota_item_lua_h>
+// callers: CSchemaRegistration_server::RegisterAllBindings
+void __fastcall RegisterSchemaModule_dota_item_lua_h(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        SchemaRegistrationPhase_t nRegistrationPhase)
+{
+  LocalRegisterSchemaModule<ArbitraryTemplateParameter_server_dota_item_lua_h>(
+    pSchemaSystem,
+    pBinaryName,
+    nRegistrationPhase);
+}
+
+

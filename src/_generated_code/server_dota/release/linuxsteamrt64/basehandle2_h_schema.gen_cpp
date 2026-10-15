@@ -1,0 +1,69 @@
+
+// ==== functions (decompiled by Hex-Rays; names/signatures from DWARF) ====
+
+// LocalRegisterSchemaModule<ArbitraryTemplateParameter_server_basehandle2_h>  (line 67, @0x000000000202e430, libserver.so)  // inlines: RegisterAtomicType_CEntityHandle, RegisterAtomicType_CHandle, SchemaMetaSet2_t
+// calls: __cxa_guard_acquire, __cxa_guard_release
+// callers: RegisterSchemaModule_basehandle2_h
+// strings: "MNetworkSerializeAs"
+// globals: `guard variable for'RegisterAtomicType_CEntityHandle(ISchemaSystem *)::SID_AtomicMeta2_CEntityHandle, `guard variable for'RegisterAtomicType_CEntityHandle(ISchemaSystem *)::s_AtomicTypeInfoCEntityHandle, RegisterAtomicType_CEntityHandle(ISchemaSystem *)::s_AtomicTypeInfoCEntityHandle, `guard variable for'RegisterAtomicType_CHandle(ISchemaSystem *)::SID_AtomicMeta2_CHandle, `guard variable for'RegisterAtomicType_CHandle(ISchemaSystem *)::s_AtomicTypeInfoCHandle, RegisterAtomicType_CHandle(ISchemaSystem *)::s_AtomicTypeInfoCHandle, RegisterAtomicType_CEntityHandle(ISchemaSystem *)::SID_AtomicMeta2_CEntityHandle, RegisterAtomicType_CHandle(ISchemaSystem *)::SID_AtomicMeta2_CHandle
+void __fastcall LocalRegisterSchemaModule<ArbitraryTemplateParameter_server_basehandle2_h>(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        SchemaRegistrationPhase_t nRegistrationPhase)
+{
+  if ( nRegistrationPhase != SchemaRegistrationPhase_t::SCHEMA_REGISTRATION_PHASE_ATOMIC_TYPES_AND_ENUMS )
+  {
+    ++g_nLinkerHack_SchemaAnchor_RegistrationCountFor_server;
+  }
+  else
+  {
+    if ( `guard variable for'RegisterAtomicType_CEntityHandle(ISchemaSystem *)::SID_AtomicMeta2_CEntityHandle == 0
+      && __cxa_guard_acquire(&`guard variable for'RegisterAtomicType_CEntityHandle(ISchemaSystem *)::SID_AtomicMeta2_CEntityHandle) != 0 )
+    {
+      RegisterAtomicType_CEntityHandle(ISchemaSystem *)::SID_AtomicMeta2_CEntityHandle = "MNetworkSerializeAs";
+      __cxa_guard_release(&`guard variable for'RegisterAtomicType_CEntityHandle(ISchemaSystem *)::SID_AtomicMeta2_CEntityHandle);
+    }
+    if ( `guard variable for'RegisterAtomicType_CEntityHandle(ISchemaSystem *)::s_AtomicTypeInfoCEntityHandle == 0
+      && __cxa_guard_acquire(&`guard variable for'RegisterAtomicType_CEntityHandle(ISchemaSystem *)::s_AtomicTypeInfoCEntityHandle) != 0 )
+    {
+      dword_484E960 = 1;
+      qword_484E958 = &RegisterAtomicType_CEntityHandle(ISchemaSystem *)::SID_AtomicMeta2_CEntityHandle;
+      __cxa_guard_release(&`guard variable for'RegisterAtomicType_CEntityHandle(ISchemaSystem *)::s_AtomicTypeInfoCEntityHandle);
+    }
+    (*(*pSchemaSystem + 248LL))(
+      pSchemaSystem,
+      RegisterAtomicType_CEntityHandle(ISchemaSystem *)::s_AtomicTypeInfoCEntityHandle);
+    if ( `guard variable for'RegisterAtomicType_CHandle(ISchemaSystem *)::SID_AtomicMeta2_CHandle == 0
+      && __cxa_guard_acquire(&`guard variable for'RegisterAtomicType_CHandle(ISchemaSystem *)::SID_AtomicMeta2_CHandle) != 0 )
+    {
+      RegisterAtomicType_CHandle(ISchemaSystem *)::SID_AtomicMeta2_CHandle = "MNetworkSerializeAs";
+      __cxa_guard_release(&`guard variable for'RegisterAtomicType_CHandle(ISchemaSystem *)::SID_AtomicMeta2_CHandle);
+    }
+    if ( `guard variable for'RegisterAtomicType_CHandle(ISchemaSystem *)::s_AtomicTypeInfoCHandle == 0
+      && __cxa_guard_acquire(&`guard variable for'RegisterAtomicType_CHandle(ISchemaSystem *)::s_AtomicTypeInfoCHandle) != 0 )
+    {
+      dword_484E900 = 1;
+      qword_484E8F8 = &RegisterAtomicType_CHandle(ISchemaSystem *)::SID_AtomicMeta2_CHandle;
+      __cxa_guard_release(&`guard variable for'RegisterAtomicType_CHandle(ISchemaSystem *)::s_AtomicTypeInfoCHandle);
+    }
+    (*(*pSchemaSystem + 248LL))(pSchemaSystem, RegisterAtomicType_CHandle(ISchemaSystem *)::s_AtomicTypeInfoCHandle);
+    ++g_nLinkerHack_SchemaAnchor_RegistrationCountFor_server;
+  }
+}
+
+
+// RegisterSchemaModule_basehandle2_h  (line 70, @0x000000000202e5a0, libserver.so)
+// calls: LocalRegisterSchemaModule<ArbitraryTemplateParameter_server_basehandle2_h>
+// callers: CSchemaRegistration_server::RegisterAllBindings, CSchemaRegistration_entity2::RegisterAllBindings
+void __fastcall RegisterSchemaModule_basehandle2_h(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        SchemaRegistrationPhase_t nRegistrationPhase)
+{
+  LocalRegisterSchemaModule<ArbitraryTemplateParameter_server_basehandle2_h>(
+    pSchemaSystem,
+    pBinaryName,
+    nRegistrationPhase);
+}
+
+

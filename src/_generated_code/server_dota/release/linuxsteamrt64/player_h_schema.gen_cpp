@@ -1,0 +1,1582 @@
+
+// ==== functions (decompiled by Hex-Rays; names/signatures from DWARF) ====
+
+// CSchemaEnumBinding<PlayerConnectedState>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE  (line 35, @0x0000000001ff99c0, libserver.so)  // inlines: Count, Initialize, SetTypeScope
+// callers: CSchemaEnumBinding<PlayerConnectedState>::Register
+// globals: CSchemaEnumBinding<PlayerConnectedState>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*
+CSchemaEnumInfo *__fastcall CSchemaEnumBinding<PlayerConnectedState>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        const char *pProjectName)
+{
+  ISchemaSystemTypeScope *v3; // rax
+  unsigned int v4; // edi
+  SchemaEnumeratorValue_t v5; // r8
+  SchemaEnumeratorValue_t v6; // r9
+  SchemaEnumeratorValue_t *v7; // rdx
+
+  v3 = (*(*pSchemaSystem + 112LL))(pSchemaSystem, 0, pBinaryName);
+  if ( CSchemaEnumBinding<PlayerConnectedState>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_PlayerConnectedState.m_Enumerators.m_Data.m_nImplLength != 0 )
+  {
+    v4 = abs32(CSchemaEnumBinding<PlayerConnectedState>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_PlayerConnectedState.m_Enumerators.m_Data.m_nImplLength);
+    v5 = *(CSchemaEnumBinding<PlayerConnectedState>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_PlayerConnectedState.m_Enumerators.m_Data.m_pImplElements
+         + 2);
+    CSchemaEnumBinding<PlayerConnectedState>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_PlayerConnectedState.m_nMinValue = v5;
+    v6 = *(CSchemaEnumBinding<PlayerConnectedState>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_PlayerConnectedState.m_Enumerators.m_Data.m_pImplElements
+         + 2);
+    CSchemaEnumBinding<PlayerConnectedState>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_PlayerConnectedState.m_nMaxValue = v6;
+    if ( v4 != 1 )
+    {
+      v7 = (CSchemaEnumBinding<PlayerConnectedState>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_PlayerConnectedState.m_Enumerators.m_Data.m_pImplElements
+          + 72);
+      do
+      {
+        if ( v5 > *v7 )
+          v5 = *v7;
+        CSchemaEnumBinding<PlayerConnectedState>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_PlayerConnectedState.m_nMinValue = v5;
+        if ( v6 < *v7 )
+          v6 = *v7;
+        v7 += 7;
+        CSchemaEnumBinding<PlayerConnectedState>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_PlayerConnectedState.m_nMaxValue = v6;
+      }
+      while ( v7 != CSchemaEnumBinding<PlayerConnectedState>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_PlayerConnectedState.m_Enumerators.m_Data.m_pImplElements
+                  + 7 * v4
+                  + 2 );
+    }
+  }
+  else
+  {
+    CSchemaEnumBinding<PlayerConnectedState>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_PlayerConnectedState.m_nMinValue = 0;
+    CSchemaEnumBinding<PlayerConnectedState>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_PlayerConnectedState.m_nMaxValue = 0;
+  }
+  CSchemaEnumBinding<PlayerConnectedState>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_PlayerConnectedState.m_pOuterTypeScope = v3;
+  (*(*v3 + 272LL))(
+    v3,
+    &CSchemaEnumBinding<PlayerConnectedState>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_PlayerConnectedState);
+  return &CSchemaEnumBinding<PlayerConnectedState>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_PlayerConnectedState;
+}
+
+
+// CInfoPlayerStart::CEntityInstanceEntityClass::Schema_CompileTimeVerificationFunction  (line 47, @0x0000000001ff9aa0, libserver.so)
+void __fastcall CInfoPlayerStart::CEntityInstanceEntityClass::Schema_CompileTimeVerificationFunction(
+        CInfoPlayerStart::CEntityInstanceEntityClass *const this)
+{
+  ;
+}
+
+
+// CInfoPlayerStart::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE  (line 50, @0x0000000001ff67b0, libserver.so)  // inlines: Call, Get, SetTypeScope
+// calls: CPointEntity::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE
+// callers: CSchemaNonConstructibleClassBinding<CInfoPlayerStart::CEntityInstanceEntityClass>::Register, CInfoPlayerStart::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE, CInfoPlayerStart::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE
+// globals: CInfoPlayerStart::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char c
+CSchemaClassInfo *__fastcall CInfoPlayerStart::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        const char *pProjectName)
+{
+  ISchemaSystemTypeScope *v6; // r14
+  CSchemaClassInfo *v7; // rax
+
+  v6 = (*(*pSchemaSystem + 112LL))(pSchemaSystem, 1, pBinaryName);
+  (*(CPointEntity::CEntityInstanceEntityClass::s_pSchemaBindingForLocalModule->_vptr_ISchemaBinding + 5))(
+    CPointEntity::CEntityInstanceEntityClass::s_pSchemaBindingForLocalModule,
+    pSchemaSystem,
+    pBinaryName,
+    pProjectName);
+  v7 = CPointEntity::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+         pSchemaSystem,
+         pBinaryName,
+         pProjectName);
+  CInfoPlayerStart::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CInfoPlayerStart_CEntityInstanceEntityClass.m_pOuterTypeScope = v6;
+  CInfoPlayerStart::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassBases_CInfoPlayerStart_CEntityInstanceEntityClass[0].m_pClass = v7;
+  CInfoPlayerStart::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult = &CInfoPlayerStart::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CInfoPlayerStart_CEntityInstanceEntityClass;
+  return &CInfoPlayerStart::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CInfoPlayerStart_CEntityInstanceEntityClass;
+}
+
+
+// CInfoPlayerStart::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE  (line 50, @0x0000000001ff9ab0, libserver.so)
+// calls: CInfoPlayerStart::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE
+// globals: CInfoPlayerStart::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char c
+CSchemaClassInfo *__fastcall CInfoPlayerStart::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        const char *pProjectName)
+{
+  CSchemaClassInfo *result; // rax
+
+  result = CInfoPlayerStart::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult;
+  if ( CInfoPlayerStart::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult == 0 )
+    return CInfoPlayerStart::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+             pSchemaSystem,
+             pBinaryName,
+             pProjectName);
+  return result;
+}
+
+
+// CInfoPlayerStart::CEntityInstanceEntityClass::Schema_VerifyBindingIsRegistered  (line 67, @0x0000000001ff9ad0, libserver.so)
+void __cdecl CInfoPlayerStart::CEntityInstanceEntityClass::Schema_VerifyBindingIsRegistered()
+{
+  ;
+}
+
+
+// CInfoPlayerStart::Schema_CompileTimeVerificationFunction  (line 75, @0x0000000001ff9ae0, libserver.so)
+void __fastcall CInfoPlayerStart::Schema_CompileTimeVerificationFunction(CInfoPlayerStart *const this)
+{
+  ;
+}
+
+
+// CInfoPlayerStart::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE  (line 79, @0x0000000001ff9af0, libserver.so)  // inlines: Call, Get, RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE, SchemaBinding_SchemaTypeOfMemberVarByAddr<CInfoPlayerStart, bool>, SetTypeScope
+// calls: __cxa_guard_acquire, __cxa_guard_release, CPointEntity::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE, CInfoPlayerStart::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE, __cxa_guard_abort, _Unwind_Resume
+// callers: CSchemaNonConstructibleClassBinding<CInfoPlayerStart>::Register
+// globals: CInfoPlayerStart::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pIniti, `guard variable for'CInfoPlayerStart::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,ch, CInfoPlayerStart::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char c, CInfoPlayerStart::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSche
+CSchemaClassInfo *__fastcall CInfoPlayerStart::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        const char *pProjectName)
+{
+  CSchemaClassInfo *result; // rax
+  ISchemaSystemTypeScope *v7; // r14
+  CSchemaClassInfo *v8; // rax
+  CSchemaClassInfo *v9; // rax
+
+  result = CInfoPlayerStart::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult;
+  if ( CInfoPlayerStart::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult == 0 )
+  {
+    v7 = (*(*pSchemaSystem + 112LL))(pSchemaSystem, 1, pBinaryName);
+    CInfoPlayerStart::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CInfoPlayerStart[0].m_pType = (*(*v7 + 40LL))(v7, 13);
+    if ( `guard variable for'CInfoPlayerStart::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_NestedClassesOf_CInfoPlayerStart == 0
+      && __cxa_guard_acquire(&`guard variable for'CInfoPlayerStart::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_NestedClassesOf_CInfoPlayerStart) != 0 )
+    {
+      v8 = CInfoPlayerStart::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult;
+      if ( CInfoPlayerStart::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult == 0 )
+        v8 = CInfoPlayerStart::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+               pSchemaSystem,
+               pBinaryName,
+               pProjectName);
+      CInfoPlayerStart::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_NestedClassesOf_CInfoPlayerStart[0] = v8;
+      __cxa_guard_release(&`guard variable for'CInfoPlayerStart::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_NestedClassesOf_CInfoPlayerStart);
+    }
+    (*(CPointEntity::s_pSchemaBindingForLocalModule->_vptr_ISchemaBinding + 5))(
+      CPointEntity::s_pSchemaBindingForLocalModule,
+      pSchemaSystem,
+      pBinaryName,
+      pProjectName);
+    v9 = CPointEntity::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+           pSchemaSystem,
+           pBinaryName,
+           pProjectName);
+    CInfoPlayerStart::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CInfoPlayerStart.m_pOuterTypeScope = v7;
+    CInfoPlayerStart::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassBases_CInfoPlayerStart[0].m_pClass = v9;
+    CInfoPlayerStart::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult = &CInfoPlayerStart::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CInfoPlayerStart;
+    return &CInfoPlayerStart::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CInfoPlayerStart;
+  }
+  return result;
+}
+
+
+// CInfoPlayerStart::Schema_VerifyBindingIsRegistered  (line 117, @0x0000000001ff9bf0, libserver.so)
+// callers: CInfoPlayerStart::Schema_DynamicBinding
+void __cdecl CInfoPlayerStart::Schema_VerifyBindingIsRegistered()
+{
+  ;
+}
+
+
+// CInfoPlayerStart::SetupEntClassInputs  (line 131, @0x0000000001ff9c00, libserver.so)
+void __fastcall CInfoPlayerStart::SetupEntClassInputs(CEntityClass *pComponentInfo)
+{
+  ;
+}
+
+
+// CInfoPlayerStart::SetupEntClassComponentOverrides  (line 137, @0x0000000001ff9c10, libserver.so)
+void __fastcall CInfoPlayerStart::SetupEntClassComponentOverrides(CEntityClass *pEntityClass)
+{
+  pEntityClass->m_pComponentOverrides = 0;
+}
+
+
+// CPlayerInfo::Schema_CompileTimeVerificationFunction  (line 143, @0x0000000001ff9c20, libserver.so)
+void __fastcall CPlayerInfo::Schema_CompileTimeVerificationFunction(CPlayerInfo *const this)
+{
+  ;
+}
+
+
+// CPlayerInfo::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE  (line 147, @0x0000000001ff9c30, libserver.so)  // inlines: Call, Get, SchemaBinding_SchemaTypeOfMemberVarByAddr<CPlayerInfo, CBasePlayer*>, SetTypeScope
+// calls: IBotController::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE, IPlayerInfo::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE
+// callers: CSchemaClassBinding<CPlayerInfo>::Register
+// strings: "CBasePlayer"
+// globals: CPlayerInfo::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitialize, CPlayerInfo::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_Cl
+CSchemaClassInfo *__fastcall CPlayerInfo::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        const char *pProjectName)
+{
+  CSchemaClassInfo *result; // rax
+  ISchemaSystemTypeScope *v7; // r14
+  __int64 (__fastcall *v8)(ISchemaSystemTypeScope *, __int64); // r15
+  __int64 v9; // rax
+  CSchemaClassInfo *v10; // rax
+
+  result = CPlayerInfo::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult;
+  if ( CPlayerInfo::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult == 0 )
+  {
+    v7 = (*(*pSchemaSystem + 112LL))(pSchemaSystem, 0, pBinaryName);
+    v8 = *(*v7 + 48LL);
+    v9 = (*(*v7 + 88LL))(v7, "CBasePlayer");
+    CPlayerInfo::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CPlayerInfo[0].m_pType = v8(v7, v9);
+    (*(IBotController::s_pSchemaBindingForLocalModule->_vptr_ISchemaBinding + 5))(
+      IBotController::s_pSchemaBindingForLocalModule,
+      pSchemaSystem,
+      pBinaryName,
+      pProjectName);
+    CPlayerInfo::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassBases_CPlayerInfo[0].m_pClass = IBotController::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(pSchemaSystem, pBinaryName, pProjectName);
+    (*(IPlayerInfo::s_pSchemaBindingForLocalModule->_vptr_ISchemaBinding + 5))(
+      IPlayerInfo::s_pSchemaBindingForLocalModule,
+      pSchemaSystem,
+      pBinaryName,
+      pProjectName);
+    v10 = IPlayerInfo::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+            pSchemaSystem,
+            pBinaryName,
+            pProjectName);
+    CPlayerInfo::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CPlayerInfo.m_pOuterTypeScope = v7;
+    CPlayerInfo::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassBases_CPlayerInfo[1].m_pClass = v10;
+    CPlayerInfo::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult = &CPlayerInfo::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CPlayerInfo;
+    (*(*v7 + 264LL))(
+      v7,
+      &CPlayerInfo::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CPlayerInfo);
+    return CPlayerInfo::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult;
+  }
+  return result;
+}
+
+
+// CPlayerInfo::Schema_VerifyBindingIsRegistered  (line 169, @0x0000000001ff9d30, libserver.so)
+// callers: CPlayerInfo::Schema_DynamicBinding
+void __cdecl CPlayerInfo::Schema_VerifyBindingIsRegistered()
+{
+  ;
+}
+
+
+// CBasePlayer::CEntityInstanceEntityClass::Schema_CompileTimeVerificationFunction  (line 177, @0x0000000001ff9d40, libserver.so)
+void __fastcall CBasePlayer::CEntityInstanceEntityClass::Schema_CompileTimeVerificationFunction(
+        CBasePlayer::CEntityInstanceEntityClass *const this)
+{
+  ;
+}
+
+
+// CBasePlayer::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE  (line 180, @0x0000000001ff6930, libserver.so)  // inlines: Call, Get, SetTypeScope
+// calls: CBaseCombatCharacter::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE
+// callers: CSchemaNonConstructibleClassBinding<CBasePlayer::CEntityInstanceEntityClass>::Register, CBasePlayer::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE, CBasePlayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE
+// globals: CBasePlayer::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*
+CSchemaClassInfo *__fastcall CBasePlayer::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        const char *pProjectName)
+{
+  ISchemaSystemTypeScope *v6; // r14
+  CSchemaClassInfo *v7; // rax
+
+  v6 = (*(*pSchemaSystem + 112LL))(pSchemaSystem, 1, pBinaryName);
+  (*(CBaseCombatCharacter::CEntityInstanceEntityClass::s_pSchemaBindingForLocalModule->_vptr_ISchemaBinding + 5))(
+    CBaseCombatCharacter::CEntityInstanceEntityClass::s_pSchemaBindingForLocalModule,
+    pSchemaSystem,
+    pBinaryName,
+    pProjectName);
+  v7 = CBaseCombatCharacter::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+         pSchemaSystem,
+         pBinaryName,
+         pProjectName);
+  CBasePlayer::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CBasePlayer_CEntityInstanceEntityClass.m_pOuterTypeScope = v6;
+  CBasePlayer::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassBases_CBasePlayer_CEntityInstanceEntityClass[0].m_pClass = v7;
+  CBasePlayer::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult = &CBasePlayer::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CBasePlayer_CEntityInstanceEntityClass;
+  return &CBasePlayer::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CBasePlayer_CEntityInstanceEntityClass;
+}
+
+
+// CBasePlayer::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE  (line 180, @0x0000000001ff9d50, libserver.so)
+// calls: CBasePlayer::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE
+// callers: CBaseMultiplayerPlayer::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE
+// globals: CBasePlayer::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*
+CSchemaClassInfo *__fastcall CBasePlayer::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        const char *pProjectName)
+{
+  CSchemaClassInfo *result; // rax
+
+  result = CBasePlayer::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult;
+  if ( CBasePlayer::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult == 0 )
+    return CBasePlayer::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+             pSchemaSystem,
+             pBinaryName,
+             pProjectName);
+  return result;
+}
+
+
+// CBasePlayer::CEntityInstanceEntityClass::Schema_VerifyBindingIsRegistered  (line 197, @0x0000000001ff9d70, libserver.so)
+// callers: CBasePlayer::CEntityInstanceEntityClass::Schema_DynamicBinding
+void __cdecl CBasePlayer::CEntityInstanceEntityClass::Schema_VerifyBindingIsRegistered()
+{
+  ;
+}
+
+
+// CBasePlayer::StepSoundCache_t::Schema_CompileTimeVerificationFunction  (line 205, @0x0000000001ff9d80, libserver.so)
+void __fastcall CBasePlayer::StepSoundCache_t::Schema_CompileTimeVerificationFunction(
+        CBasePlayer::StepSoundCache_t *const this)
+{
+  ;
+}
+
+
+// CBasePlayer::StepSoundCache_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE  (line 210, @0x0000000001ff7130, libserver.so)  // inlines: Get, SchemaBinding_SchemaTypeOfMemberVarByAddr<CBasePlayer::StepSoundCache_t, CSoundParameters>, SchemaBinding_SchemaTypeOfMemberVarByAddr<CBasePlayer::StepSoundCache_t, CUtlStringToken>, SetTypeScope
+// callers: CSchemaClassBinding<CBasePlayer::StepSoundCache_t>::Register, CBasePlayer::StepSoundCache_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE, CBasePlayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE
+// strings: "CSoundParameters", "CUtlStringToken"
+// globals: CSchemaManipulator<CUtlStringToken>::StaticAccessor(void)::m, CAtomicManipulator<CUtlStringToken>::Get(void)::val, CBasePlayer::StepSoundCache_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char cons
+CSchemaClassInfo *__fastcall CBasePlayer::StepSoundCache_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        const char *pProjectName)
+{
+  ISchemaSystemTypeScope *v3; // rbx
+  CSchemaType *v4; // rax
+
+  v3 = (*(*pSchemaSystem + 112LL))(pSchemaSystem, 1, pBinaryName);
+  CBasePlayer::StepSoundCache_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CBasePlayer_StepSoundCache_t[0].m_pType = (*(*v3 + 88LL))(v3, "CSoundParameters");
+  v4 = (*(*v3 + 56LL))(
+         v3,
+         "CUtlStringToken",
+         3010,
+         CAtomicManipulator<CUtlStringToken>::Get(void)::val,
+         CSchemaManipulator<CUtlStringToken>::StaticAccessor(void)::m);
+  CBasePlayer::StepSoundCache_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CBasePlayer_StepSoundCache_t.m_pOuterTypeScope = v3;
+  CBasePlayer::StepSoundCache_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CBasePlayer_StepSoundCache_t[1].m_pType = v4;
+  CBasePlayer::StepSoundCache_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult = &CBasePlayer::StepSoundCache_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CBasePlayer_StepSoundCache_t;
+  return &CBasePlayer::StepSoundCache_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CBasePlayer_StepSoundCache_t;
+}
+
+
+// CBasePlayer::StepSoundCache_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE  (line 210, @0x0000000001ff9d90, libserver.so)
+// calls: CBasePlayer::StepSoundCache_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE
+// globals: CBasePlayer::StepSoundCache_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char cons
+CSchemaClassInfo *__fastcall CBasePlayer::StepSoundCache_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        const char *pProjectName)
+{
+  CSchemaClassInfo *result; // rax
+
+  result = CBasePlayer::StepSoundCache_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult;
+  if ( CBasePlayer::StepSoundCache_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult == 0 )
+    return CBasePlayer::StepSoundCache_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+             pSchemaSystem,
+             pBinaryName,
+             pProjectName);
+  return result;
+}
+
+
+// CBasePlayer::StepSoundCache_t::Schema_VerifyBindingIsRegistered  (line 224, @0x0000000001ff9db0, libserver.so)
+void __cdecl CBasePlayer::StepSoundCache_t::Schema_VerifyBindingIsRegistered()
+{
+  ;
+}
+
+
+// CBasePlayer::Schema_CompileTimeVerificationFunction  (line 232, @0x0000000001ff9dc0, libserver.so)
+void __fastcall CBasePlayer::Schema_CompileTimeVerificationFunction(CBasePlayer *const this)
+{
+  ;
+}
+
+
+// CBasePlayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE  (line 409, @0x0000000001ffeff0, libserver.so)  // inlines: Call, Get, GetExcluderLocalPlayerExclusive, NetworkUserGroupProxyInfo_t, NetworkVarDecl_t, RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE, SchemaBinding_SchemaTypeOfMemberVarByAddr<CBasePlayer, CBasePlayer::NetworkVar_m_Local>, SchemaBinding_SchemaTypeOfMemberVarByAddr<CBasePlayer, CBasePlayer::NetworkVar_m_PlayerFog>, SchemaBinding_SchemaTypeOfMemberVarByAddr<CBasePlayer, CBasePlayer::StepSoundCache_t [2]>, SchemaBinding_SchemaTypeOfMemberVarByAddr<CBasePlayer, CBitVec<64> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<CBasePlayer, CEntityIndex>, SchemaBinding_SchemaTypeOfMemberVarByAddr<CBasePlayer, CHandle<CBaseCombatCharacter> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<CBasePlayer, CHandle<CBaseEntity> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<CBasePlayer, CHandle<CBasePlayer> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<CBasePlayer, CNetworkArrayBase<CHandle<CBaseViewModel>, 2, CBasePlayer::NetworkVar_m_hViewModel> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<CBasePlayer, CNetworkHandleBase<CBaseCombatWeapon, CBasePlayer::NetworkVar_m_hLastWeapon> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<CBasePlayer, CNetworkHandleBase<CBaseEntity, CBasePlayer::NetworkVar_m_hConstraintEntity> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<CBasePlayer, CNetworkHandleBase<CBaseEntity, CBasePlayer::NetworkVar_m_hHeldEntity> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<CBasePlayer, CNetworkHandleBase<CBaseEntity, CBasePlayer::NetworkVar_m_hObserverTarget> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<CBasePlayer, CNetworkHandleBase<CBaseEntity, CBasePlayer::NetworkVar_m_hUseEntity> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<CBasePlayer, CNetworkHandleBase<CBaseEntity, CBasePlayer::NetworkVar_m_hVehicle> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<CBasePlayer, CNetworkHandleBase<CBaseEntity, CBasePlayer::NetworkVar_m_hViewEntity> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<CBasePlayer, CNetworkHandleBase<CBaseEntity, CBasePlayer::NetworkVar_m_hZoomOwner> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<CBasePlayer, CNetworkHandleBase<CColorCorrection, CBasePlayer::NetworkVar_m_hColorCorrectionCtrl> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<CBasePlayer, CNetworkHandleBase<CPointHMDAnchor, CBasePlayer::NetworkVar_m_hPointHMDAnchor> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<CBasePlayer, CNetworkHandleBase<CPostProcessController, CBasePlayer::NetworkVar_m_hPostProcessCtrl> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<CBasePlayer, CNetworkHandleBase<CPropHMDAvatar, CBasePlayer::NetworkVar_m_hPropHMDAvatar> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<CBasePlayer, CNetworkStringBase<18, CBasePlayer::NetworkVar_m_szLastPlaceName> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<CBasePlayer, CNetworkVarBase<CHandle<CBaseEntity>, CBasePlayer::NetworkVar_m_hTonemapController> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<CBasePlayer, CNetworkVarBase<CUtlStringToken, CBasePlayer::NetworkVar_m_ladderSurfaceProps> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<CBasePlayer, CNetworkVarBase<bool, CBasePlayer::NetworkVar_m_bConstraintPastRadius> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<CBasePlayer, CNetworkVarBase<bool, CBasePlayer::NetworkVar_m_fOnTarget> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<CBasePlayer, CNetworkVarBase<float, CBasePlayer::NetworkVar_m_flConstraintRadius> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<CBasePlayer, CNetworkVarBase<float, CBasePlayer::NetworkVar_m_flConstraintSpeedFactor> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<CBasePlayer, CNetworkVarBase<float, CBasePlayer::NetworkVar_m_flConstraintWidth> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<CBasePlayer, CNetworkVarBase<float, CBasePlayer::NetworkVar_m_flDeathTime> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<CBasePlayer, CNetworkVarBase<float, CBasePlayer::NetworkVar_m_flFOVTime> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<CBasePlayer, CNetworkVarBase<float, CBasePlayer::NetworkVar_m_flLaggedMovementValue> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<CBasePlayer, CNetworkVarBase<float, CBasePlayer::NetworkVar_m_flMaxspeed> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<CBasePlayer, CNetworkVarBase<int, CBasePlayer::NetworkVar_m_ArmorValue> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<CBasePlayer, CNetworkVarBase<int, CBasePlayer::NetworkVar_m_currentSCLPacked> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<CBasePlayer, CNetworkVarBase<int, CBasePlayer::NetworkVar_m_iBonusChallenge> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<CBasePlayer, CNetworkVarBase<int, CBasePlayer::NetworkVar_m_iBonusProgress> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<CBasePlayer, CNetworkVarBase<long long unsigned int, CBasePlayer::NetworkVar_m_nUnHoldableButtons> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<CBasePlayer, CNetworkVarBase<unsigned char, CBasePlayer::NetworkVar_m_iObserverMode> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<CBasePlayer, CNetworkVarBase<unsigned int, CBasePlayer::NetworkVar_m_iDefaultFOV> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<CBasePlayer, CNetworkVarBase<unsigned int, CBasePlayer::NetworkVar_m_iFOV> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<CBasePlayer, CNetworkVarBase<unsigned int, CBasePlayer::NetworkVar_m_iFOVStart> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<CBasePlayer, CNetworkVarBase<unsigned int, CBasePlayer::NetworkVar_m_nTickBase> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<CBasePlayer, CNetworkVectorBase<Vector, CBasePlayer::NetworkVar_m_vecConstraintCenter> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<CBasePlayer, CNetworkVectorBase<Vector, CBasePlayer::NetworkVar_m_vecLadderNormal> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<CBasePlayer, CPlayerInfo>, SchemaBinding_SchemaTypeOfMemberVarByAddr<CBasePlayer, CPlayerState>, SchemaBinding_SchemaTypeOfMemberVarByAddr<CBasePlayer, CSimpleSimTimer>, SchemaBinding_SchemaTypeOfMemberVarByAddr<CBasePlayer, CUserCmd*>, SchemaBinding_SchemaTypeOfMemberVarByAddr<CBasePlayer, CUserCmd>, SchemaBinding_SchemaTypeOfMemberVarByAddr<CBasePlayer, CUtlLinkedList<CPlayerCmdInfo> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<CBasePlayer, CUtlLinkedList<CPlayerSimInfo> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<CBasePlayer, CUtlStringToken>, SchemaBinding_SchemaTypeOfMemberVarByAddr<CBasePlayer, CUtlVector<CHandle<CBaseEntity> > >, SchemaBinding_SchemaTypeOfMemberVarByAddr<CBasePlayer, CUtlVector<CHandle<CBasePlayer> > >, SchemaBinding_SchemaTypeOfMemberVarByAddr<CBasePlayer, IPhysicsPlayerController*>, SchemaBinding_SchemaTypeOfMemberVarByAddr<CBasePlayer, IntervalTimer>, SchemaBinding_SchemaTypeOfMemberVarByAddr<CBasePlayer, PlayerConnectedState>, SchemaBinding_SchemaTypeOfMemberVarByAddr<CBasePlayer, QAngle>, SchemaBinding_SchemaTypeOfMemberVarByAddr<CBasePlayer, Vector>, SchemaBinding_SchemaTypeOfMemberVarByAddr<CBasePlayer, bool>, SchemaBinding_SchemaTypeOfMemberVarByAddr<CBasePlayer, char [32]>, SchemaBinding_SchemaTypeOfMemberVarByAddr<CBasePlayer, char [64]>, SchemaBinding_SchemaTypeOfMemberVarByAddr<CBasePlayer, char>, SchemaBinding_SchemaTypeOfMemberVarByAddr<CBasePlayer, float>, SchemaBinding_SchemaTypeOfMemberVarByAddr<CBasePlayer, int [5]>, SchemaBinding_SchemaTypeOfMemberVarByAddr<CBasePlayer, int>, SchemaBinding_SchemaTypeOfMemberVarByAddr<CBasePlayer, long long unsigned int>, SchemaBinding_SchemaTypeOfMemberVarByAddr<CBasePlayer, unsigned char [8]>, SchemaBinding_SchemaTypeOfMemberVarByAddr<CBasePlayer, unsigned int>, SchemaBinding_SchemaTypeOfVarByAddr<QAngle>, SchemaBinding_SchemaTypeOfVarByAddr<Vector>, SchemaBinding_SchemaTypeOfVarByAddr<bool>, SetTypeScope
+// calls: CSchemaTypeOf<CHandle<CBaseEntity> >::Get, __cxa_guard_acquire, __cxa_guard_release, CBaseCombatCharacter::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE, CBasePlayer::StepSoundCache_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE, CBasePlayer::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE, __cxa_guard_abort, _Unwind_Resume
+// callers: CBaseMultiplayerPlayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE, CSchemaNonConstructibleClassBinding<CBasePlayer>::Register
+// strings: "CPlayerLocalData", "fogplayerparams_t", "CPostProcessController", "CHandle", "CColorCorrection", "CUtlVector" (40 total)
+// globals: CBasePlayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitialize, `guard variable for'CBasePlayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char co
+CSchemaClassInfo *__fastcall CBasePlayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        const char *pProjectName)
+{
+  CSchemaClassInfo *result; // rax
+  ISchemaSystemTypeScope *v5; // rbx
+  __int64 (__fastcall *v6)(ISchemaSystemTypeScope *, const char *, __int64, __int64 (__fastcall ***)(), __int64 (__fastcall ***)(), __int64); // r15
+  __int64 v7; // rax
+  __int64 (__fastcall *v8)(ISchemaSystemTypeScope *, const char *, __int64, __int64 (__fastcall ***)(), __int64 (__fastcall ***)(), __int64); // r15
+  __int64 v9; // rax
+  __int64 (__fastcall *v10)(ISchemaSystemTypeScope *, const char *, __int64, __int64 (__fastcall ***)(), __int64 (__fastcall ***)(), CSchemaType *); // r15
+  CSchemaType *v11; // rax
+  __int64 (__fastcall *v12)(ISchemaSystemTypeScope *, __int64, __int64); // r15
+  __int64 v13; // rax
+  __int64 (__fastcall *v14)(ISchemaSystemTypeScope *, __int64, __int64); // r15
+  __int64 v15; // rax
+  __int64 (__fastcall *v16)(ISchemaSystemTypeScope *, __int64); // r15
+  __int64 v17; // rax
+  __int64 (__fastcall *v18)(ISchemaSystemTypeScope *, __int64, __int64); // r15
+  __int64 v19; // rax
+  __int64 (__fastcall *v20)(ISchemaSystemTypeScope *, __int64, __int64); // r15
+  __int64 v21; // rax
+  __int64 v22; // rax
+  __int64 (__fastcall *v23)(ISchemaSystemTypeScope *, const char *, __int64, __int64 (__fastcall ***)(), __int64 (__fastcall ***)(), __int64); // r15
+  __int64 v24; // rax
+  __int64 (__fastcall *v25)(ISchemaSystemTypeScope *, const char *, __int64, __int64 (__fastcall ***)(), __int64 (__fastcall ***)(), __int64); // r15
+  __int64 v26; // rax
+  __int64 (__fastcall *v27)(ISchemaSystemTypeScope *, __int64); // r15
+  __int64 v28; // rax
+  __int64 (__fastcall *v29)(ISchemaSystemTypeScope *, const char *, __int64, __int64 (__fastcall ***)(), __int64 (__fastcall ***)(), __int64); // r15
+  __int64 v30; // rax
+  __int64 (__fastcall *v31)(ISchemaSystemTypeScope *, __int64, __int64); // r15
+  __int64 v32; // rax
+  __int64 (__fastcall *v33)(ISchemaSystemTypeScope *, __int64, __int64); // r15
+  __int64 v34; // rax
+  __int64 (__fastcall *v35)(ISchemaSystemTypeScope *, __int64, __int64); // r15
+  __int64 v36; // rax
+  __int64 (__fastcall *v37)(ISchemaSystemTypeScope *, const char *, __int64, __int64 (__fastcall ***)(), __int64 (__fastcall ***)(), __int64); // r15
+  __int64 v38; // rax
+  __int64 (__fastcall *v39)(ISchemaSystemTypeScope *, __int64, __int64); // r15
+  __int64 v40; // rax
+  __int64 (__fastcall *v41)(ISchemaSystemTypeScope *, const char *, __int64, __int64 (__fastcall ***)(), __int64 (__fastcall ***)(), __int64); // r15
+  __int64 v42; // rax
+  __int64 (__fastcall *v43)(ISchemaSystemTypeScope *, const char *, __int64, __int64 (__fastcall ***)(), __int64 (__fastcall ***)(), __int64); // r15
+  __int64 v44; // rax
+  __int64 (__fastcall *v45)(ISchemaSystemTypeScope *, const char *, __int64, __int64 (__fastcall ***)(), __int64 (__fastcall ***)(), __int64); // r15
+  __int64 v46; // rax
+  __int64 v47; // rax
+  const char *v48; // rdx
+  CSchemaClassInfo *v49; // rax
+  CSchemaClassInfo *v50; // rax
+  CSchemaClassInfo *v51; // rax
+  __int64 (__fastcall *v52)(ISchemaSystemTypeScope *, const char *, __int64, __int64 (__fastcall ***)(), __int64 (__fastcall ***)(), __int64); // [rsp-40h] [rbp-40h]
+
+  result = CBasePlayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult;
+  if ( !CBasePlayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult )
+  {
+    v5 = (*(*pSchemaSystem + 112LL))(pSchemaSystem, 1, pBinaryName);
+    if ( !`guard variable for'CBasePlayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CBasePlayer3_MNetworkUserGroupSendProxyRecipientsFilter_Value
+      && __cxa_guard_acquire(&`guard variable for'CBasePlayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CBasePlayer3_MNetworkUserGroupSendProxyRecipientsFilter_Value) )
+    {
+      if ( !`guard variable for'CBasePlayer::GetExcluderLocalPlayerExclusive(void)::s_Filter
+        && __cxa_guard_acquire(&`guard variable for'CBasePlayer::GetExcluderLocalPlayerExclusive(void)::s_Filter) )
+      {
+        CBasePlayer::GetExcluderLocalPlayerExclusive(void)::s_Filter = "LocalPlayerExclusive";
+        qword_4AE78B8 = LocalPlayerOnly_UserGroupFunc;
+        __cxa_guard_release(&`guard variable for'CBasePlayer::GetExcluderLocalPlayerExclusive(void)::s_Filter);
+      }
+      CBasePlayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CBasePlayer3_MNetworkUserGroupSendProxyRecipientsFilter_Value = &CBasePlayer::GetExcluderLocalPlayerExclusive(void)::s_Filter;
+      __cxa_guard_release(&`guard variable for'CBasePlayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CBasePlayer3_MNetworkUserGroupSendProxyRecipientsFilter_Value);
+    }
+    if ( !`guard variable for'CBasePlayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CBasePlayer9_MNetworkVarNames_Value
+      && __cxa_guard_acquire(&`guard variable for'CBasePlayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CBasePlayer9_MNetworkVarNames_Value) )
+    {
+      CBasePlayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CBasePlayer9_MNetworkVarNames_Value.m_pVarName = "m_Local";
+      CBasePlayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CBasePlayer9_MNetworkVarNames_Value.m_pVarType = "CPlayerLocalData";
+      __cxa_guard_release(&`guard variable for'CBasePlayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CBasePlayer9_MNetworkVarNames_Value);
+    }
+    if ( !`guard variable for'CBasePlayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CBasePlayer10_MNetworkVarNames_Value
+      && __cxa_guard_acquire(&`guard variable for'CBasePlayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CBasePlayer10_MNetworkVarNames_Value) )
+    {
+      CBasePlayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CBasePlayer10_MNetworkVarNames_Value.m_pVarName = "m_PlayerFog";
+      CBasePlayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CBasePlayer10_MNetworkVarNames_Value.m_pVarType = "fogplayerparams_t";
+      __cxa_guard_release(&`guard variable for'CBasePlayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CBasePlayer10_MNetworkVarNames_Value);
+    }
+    if ( !`guard variable for'CBasePlayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CBasePlayer11_MNetworkVarNames_Value
+      && __cxa_guard_acquire(&`guard variable for'CBasePlayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CBasePlayer11_MNetworkVarNames_Value) )
+    {
+      CBasePlayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CBasePlayer11_MNetworkVarNames_Value.m_pVarName = "m_hPostProcessCtrl";
+      CBasePlayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CBasePlayer11_MNetworkVarNames_Value.m_pVarType = "CHandle< CPostProcessController>";
+      __cxa_guard_release(&`guard variable for'CBasePlayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CBasePlayer11_MNetworkVarNames_Value);
+    }
+    if ( !`guard variable for'CBasePlayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CBasePlayer12_MNetworkVarNames_Value
+      && __cxa_guard_acquire(&`guard variable for'CBasePlayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CBasePlayer12_MNetworkVarNames_Value) )
+    {
+      CBasePlayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CBasePlayer12_MNetworkVarNames_Value.m_pVarName = "m_hColorCorrectionCtrl";
+      CBasePlayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CBasePlayer12_MNetworkVarNames_Value.m_pVarType = "CHandle< CColorCorrection>";
+      __cxa_guard_release(&`guard variable for'CBasePlayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CBasePlayer12_MNetworkVarNames_Value);
+    }
+    if ( !`guard variable for'CBasePlayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CBasePlayer13_MNetworkVarNames_Value
+      && __cxa_guard_acquire(&`guard variable for'CBasePlayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CBasePlayer13_MNetworkVarNames_Value) )
+    {
+      CBasePlayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CBasePlayer13_MNetworkVarNames_Value.m_pVarName = "m_fOnTarget";
+      CBasePlayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CBasePlayer13_MNetworkVarNames_Value.m_pVarType = "bool";
+      __cxa_guard_release(&`guard variable for'CBasePlayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CBasePlayer13_MNetworkVarNames_Value);
+    }
+    if ( !`guard variable for'CBasePlayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CBasePlayer14_MNetworkVarNames_Value
+      && __cxa_guard_acquire(&`guard variable for'CBasePlayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CBasePlayer14_MNetworkVarNames_Value) )
+    {
+      CBasePlayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CBasePlayer14_MNetworkVarNames_Value.m_pVarName = "m_hUseEntity";
+      CBasePlayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CBasePlayer14_MNetworkVarNames_Value.m_pVarType = "CHandle< CBaseEntity>";
+      __cxa_guard_release(&`guard variable for'CBasePlayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CBasePlayer14_MNetworkVarNames_Value);
+    }
+    if ( !`guard variable for'CBasePlayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CBasePlayer15_MNetworkVarNames_Value
+      && __cxa_guard_acquire(&`guard variable for'CBasePlayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CBasePlayer15_MNetworkVarNames_Value) )
+    {
+      CBasePlayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CBasePlayer15_MNetworkVarNames_Value.m_pVarName = "m_hHeldEntity";
+      CBasePlayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CBasePlayer15_MNetworkVarNames_Value.m_pVarType = "CHandle< CBaseEntity>";
+      __cxa_guard_release(&`guard variable for'CBasePlayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CBasePlayer15_MNetworkVarNames_Value);
+    }
+    if ( !`guard variable for'CBasePlayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CBasePlayer16_MNetworkVarNames_Value
+      && __cxa_guard_acquire(&`guard variable for'CBasePlayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CBasePlayer16_MNetworkVarNames_Value) )
+    {
+      CBasePlayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CBasePlayer16_MNetworkVarNames_Value.m_pVarName = "m_hVehicle";
+      CBasePlayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CBasePlayer16_MNetworkVarNames_Value.m_pVarType = "CHandle< CBaseEntity>";
+      __cxa_guard_release(&`guard variable for'CBasePlayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CBasePlayer16_MNetworkVarNames_Value);
+    }
+    if ( !`guard variable for'CBasePlayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CBasePlayer17_MNetworkVarNames_Value
+      && __cxa_guard_acquire(&`guard variable for'CBasePlayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CBasePlayer17_MNetworkVarNames_Value) )
+    {
+      CBasePlayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CBasePlayer17_MNetworkVarNames_Value.m_pVarName = "m_iBonusProgress";
+      CBasePlayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CBasePlayer17_MNetworkVarNames_Value.m_pVarType = "int32";
+      __cxa_guard_release(&`guard variable for'CBasePlayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CBasePlayer17_MNetworkVarNames_Value);
+    }
+    if ( !`guard variable for'CBasePlayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CBasePlayer18_MNetworkVarNames_Value
+      && __cxa_guard_acquire(&`guard variable for'CBasePlayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CBasePlayer18_MNetworkVarNames_Value) )
+    {
+      CBasePlayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CBasePlayer18_MNetworkVarNames_Value.m_pVarName = "m_iBonusChallenge";
+      CBasePlayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CBasePlayer18_MNetworkVarNames_Value.m_pVarType = "int32";
+      __cxa_guard_release(&`guard variable for'CBasePlayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CBasePlayer18_MNetworkVarNames_Value);
+    }
+    if ( !`guard variable for'CBasePlayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CBasePlayer19_MNetworkVarNames_Value
+      && __cxa_guard_acquire(&`guard variable for'CBasePlayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CBasePlayer19_MNetworkVarNames_Value) )
+    {
+      CBasePlayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CBasePlayer19_MNetworkVarNames_Value.m_pVarName = "m_flDeathTime";
+      CBasePlayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CBasePlayer19_MNetworkVarNames_Value.m_pVarType = "float32";
+      __cxa_guard_release(&`guard variable for'CBasePlayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CBasePlayer19_MNetworkVarNames_Value);
+    }
+    if ( !`guard variable for'CBasePlayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CBasePlayer20_MNetworkVarNames_Value
+      && __cxa_guard_acquire(&`guard variable for'CBasePlayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CBasePlayer20_MNetworkVarNames_Value) )
+    {
+      CBasePlayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CBasePlayer20_MNetworkVarNames_Value.m_pVarName = "m_iObserverMode";
+      CBasePlayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CBasePlayer20_MNetworkVarNames_Value.m_pVarType = "uint8";
+      __cxa_guard_release(&`guard variable for'CBasePlayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CBasePlayer20_MNetworkVarNames_Value);
+    }
+    if ( !`guard variable for'CBasePlayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CBasePlayer21_MNetworkVarNames_Value
+      && __cxa_guard_acquire(&`guard variable for'CBasePlayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CBasePlayer21_MNetworkVarNames_Value) )
+    {
+      CBasePlayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CBasePlayer21_MNetworkVarNames_Value.m_pVarName = "m_iFOV";
+      CBasePlayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CBasePlayer21_MNetworkVarNames_Value.m_pVarType = "uint32";
+      __cxa_guard_release(&`guard variable for'CBasePlayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CBasePlayer21_MNetworkVarNames_Value);
+    }
+    if ( !`guard variable for'CBasePlayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CBasePlayer22_MNetworkVarNames_Value
+      && __cxa_guard_acquire(&`guard variable for'CBasePlayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CBasePlayer22_MNetworkVarNames_Value) )
+    {
+      CBasePlayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CBasePlayer22_MNetworkVarNames_Value.m_pVarName = "m_iDefaultFOV";
+      CBasePlayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CBasePlayer22_MNetworkVarNames_Value.m_pVarType = "uint32";
+      __cxa_guard_release(&`guard variable for'CBasePlayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CBasePlayer22_MNetworkVarNames_Value);
+    }
+    if ( !`guard variable for'CBasePlayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CBasePlayer23_MNetworkVarNames_Value
+      && __cxa_guard_acquire(&`guard variable for'CBasePlayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CBasePlayer23_MNetworkVarNames_Value) )
+    {
+      CBasePlayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CBasePlayer23_MNetworkVarNames_Value.m_pVarName = "m_iFOVStart";
+      CBasePlayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CBasePlayer23_MNetworkVarNames_Value.m_pVarType = "uint32";
+      __cxa_guard_release(&`guard variable for'CBasePlayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CBasePlayer23_MNetworkVarNames_Value);
+    }
+    if ( !`guard variable for'CBasePlayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CBasePlayer24_MNetworkVarNames_Value
+      && __cxa_guard_acquire(&`guard variable for'CBasePlayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CBasePlayer24_MNetworkVarNames_Value) )
+    {
+      CBasePlayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CBasePlayer24_MNetworkVarNames_Value.m_pVarName = "m_flFOVTime";
+      CBasePlayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CBasePlayer24_MNetworkVarNames_Value.m_pVarType = "float32";
+      __cxa_guard_release(&`guard variable for'CBasePlayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CBasePlayer24_MNetworkVarNames_Value);
+    }
+    if ( !`guard variable for'CBasePlayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CBasePlayer25_MNetworkVarNames_Value
+      && __cxa_guard_acquire(&`guard variable for'CBasePlayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CBasePlayer25_MNetworkVarNames_Value) )
+    {
+      CBasePlayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CBasePlayer25_MNetworkVarNames_Value.m_pVarName = "m_hObserverTarget";
+      CBasePlayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CBasePlayer25_MNetworkVarNames_Value.m_pVarType = "CHandle< CBaseEntity>";
+      __cxa_guard_release(&`guard variable for'CBasePlayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CBasePlayer25_MNetworkVarNames_Value);
+    }
+    if ( !`guard variable for'CBasePlayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CBasePlayer26_MNetworkVarNames_Value
+      && __cxa_guard_acquire(&`guard variable for'CBasePlayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CBasePlayer26_MNetworkVarNames_Value) )
+    {
+      CBasePlayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CBasePlayer26_MNetworkVarNames_Value.m_pVarName = "m_hZoomOwner";
+      CBasePlayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CBasePlayer26_MNetworkVarNames_Value.m_pVarType = "CHandle< CBaseEntity>";
+      __cxa_guard_release(&`guard variable for'CBasePlayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CBasePlayer26_MNetworkVarNames_Value);
+    }
+    if ( !`guard variable for'CBasePlayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CBasePlayer27_MNetworkVarNames_Value
+      && __cxa_guard_acquire(&`guard variable for'CBasePlayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CBasePlayer27_MNetworkVarNames_Value) )
+    {
+      CBasePlayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CBasePlayer27_MNetworkVarNames_Value.m_pVarName = "m_hTonemapController";
+      CBasePlayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CBasePlayer27_MNetworkVarNames_Value.m_pVarType = "EHANDLE";
+      __cxa_guard_release(&`guard variable for'CBasePlayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CBasePlayer27_MNetworkVarNames_Value);
+    }
+    if ( !`guard variable for'CBasePlayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CBasePlayer28_MNetworkVarNames_Value
+      && __cxa_guard_acquire(&`guard variable for'CBasePlayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CBasePlayer28_MNetworkVarNames_Value) )
+    {
+      CBasePlayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CBasePlayer28_MNetworkVarNames_Value.m_pVarName = "m_ArmorValue";
+      CBasePlayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CBasePlayer28_MNetworkVarNames_Value.m_pVarType = "int32";
+      __cxa_guard_release(&`guard variable for'CBasePlayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CBasePlayer28_MNetworkVarNames_Value);
+    }
+    if ( !`guard variable for'CBasePlayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CBasePlayer29_MNetworkVarNames_Value
+      && __cxa_guard_acquire(&`guard variable for'CBasePlayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CBasePlayer29_MNetworkVarNames_Value) )
+    {
+      CBasePlayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CBasePlayer29_MNetworkVarNames_Value.m_pVarName = "m_hViewModel";
+      CBasePlayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CBasePlayer29_MNetworkVarNames_Value.m_pVarType = "CHandle< CBaseViewModel >";
+      __cxa_guard_release(&`guard variable for'CBasePlayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CBasePlayer29_MNetworkVarNames_Value);
+    }
+    if ( !`guard variable for'CBasePlayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CBasePlayer30_MNetworkVarNames_Value
+      && __cxa_guard_acquire(&`guard variable for'CBasePlayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CBasePlayer30_MNetworkVarNames_Value) )
+    {
+      CBasePlayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CBasePlayer30_MNetworkVarNames_Value.m_pVarName = "m_hPropHMDAvatar";
+      CBasePlayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CBasePlayer30_MNetworkVarNames_Value.m_pVarType = "CHandle< CPropHMDAvatar>";
+      __cxa_guard_release(&`guard variable for'CBasePlayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CBasePlayer30_MNetworkVarNames_Value);
+    }
+    if ( !`guard variable for'CBasePlayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CBasePlayer31_MNetworkVarNames_Value
+      && __cxa_guard_acquire(&`guard variable for'CBasePlayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CBasePlayer31_MNetworkVarNames_Value) )
+    {
+      CBasePlayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CBasePlayer31_MNetworkVarNames_Value.m_pVarName = "m_hPointHMDAnchor";
+      CBasePlayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CBasePlayer31_MNetworkVarNames_Value.m_pVarType = "CHandle< CPointHMDAnchor>";
+      __cxa_guard_release(&`guard variable for'CBasePlayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CBasePlayer31_MNetworkVarNames_Value);
+    }
+    if ( !`guard variable for'CBasePlayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CBasePlayer32_MNetworkVarNames_Value
+      && __cxa_guard_acquire(&`guard variable for'CBasePlayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CBasePlayer32_MNetworkVarNames_Value) )
+    {
+      CBasePlayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CBasePlayer32_MNetworkVarNames_Value.m_pVarName = "m_flMaxspeed";
+      CBasePlayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CBasePlayer32_MNetworkVarNames_Value.m_pVarType = "float32";
+      __cxa_guard_release(&`guard variable for'CBasePlayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CBasePlayer32_MNetworkVarNames_Value);
+    }
+    if ( !`guard variable for'CBasePlayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CBasePlayer33_MNetworkVarNames_Value
+      && __cxa_guard_acquire(&`guard variable for'CBasePlayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CBasePlayer33_MNetworkVarNames_Value) )
+    {
+      CBasePlayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CBasePlayer33_MNetworkVarNames_Value.m_pVarName = "m_ladderSurfaceProps";
+      CBasePlayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CBasePlayer33_MNetworkVarNames_Value.m_pVarType = "CUtlStringToken";
+      __cxa_guard_release(&`guard variable for'CBasePlayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CBasePlayer33_MNetworkVarNames_Value);
+    }
+    if ( !`guard variable for'CBasePlayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CBasePlayer34_MNetworkVarNames_Value
+      && __cxa_guard_acquire(&`guard variable for'CBasePlayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CBasePlayer34_MNetworkVarNames_Value) )
+    {
+      CBasePlayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CBasePlayer34_MNetworkVarNames_Value.m_pVarName = "m_vecLadderNormal";
+      CBasePlayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CBasePlayer34_MNetworkVarNames_Value.m_pVarType = "Vector";
+      __cxa_guard_release(&`guard variable for'CBasePlayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CBasePlayer34_MNetworkVarNames_Value);
+    }
+    if ( !`guard variable for'CBasePlayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CBasePlayer35_MNetworkVarNames_Value
+      && __cxa_guard_acquire(&`guard variable for'CBasePlayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CBasePlayer35_MNetworkVarNames_Value) )
+    {
+      CBasePlayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CBasePlayer35_MNetworkVarNames_Value.m_pVarName = "m_nTickBase";
+      CBasePlayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CBasePlayer35_MNetworkVarNames_Value.m_pVarType = "uint32";
+      __cxa_guard_release(&`guard variable for'CBasePlayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CBasePlayer35_MNetworkVarNames_Value);
+    }
+    if ( !`guard variable for'CBasePlayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CBasePlayer36_MNetworkVarNames_Value
+      && __cxa_guard_acquire(&`guard variable for'CBasePlayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CBasePlayer36_MNetworkVarNames_Value) )
+    {
+      CBasePlayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CBasePlayer36_MNetworkVarNames_Value.m_pVarName = "m_hLastWeapon";
+      CBasePlayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CBasePlayer36_MNetworkVarNames_Value.m_pVarType = "CHandle< CBaseCombatWeapon>";
+      __cxa_guard_release(&`guard variable for'CBasePlayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CBasePlayer36_MNetworkVarNames_Value);
+    }
+    if ( !`guard variable for'CBasePlayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CBasePlayer37_MNetworkVarNames_Value
+      && __cxa_guard_acquire(&`guard variable for'CBasePlayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CBasePlayer37_MNetworkVarNames_Value) )
+    {
+      CBasePlayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CBasePlayer37_MNetworkVarNames_Value.m_pVarName = "m_hViewEntity";
+      CBasePlayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CBasePlayer37_MNetworkVarNames_Value.m_pVarType = "CHandle< CBaseEntity>";
+      __cxa_guard_release(&`guard variable for'CBasePlayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CBasePlayer37_MNetworkVarNames_Value);
+    }
+    if ( !`guard variable for'CBasePlayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CBasePlayer38_MNetworkVarNames_Value
+      && __cxa_guard_acquire(&`guard variable for'CBasePlayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CBasePlayer38_MNetworkVarNames_Value) )
+    {
+      CBasePlayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CBasePlayer38_MNetworkVarNames_Value.m_pVarName = "m_hConstraintEntity";
+      CBasePlayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CBasePlayer38_MNetworkVarNames_Value.m_pVarType = "CHandle< CBaseEntity>";
+      __cxa_guard_release(&`guard variable for'CBasePlayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CBasePlayer38_MNetworkVarNames_Value);
+    }
+    if ( !`guard variable for'CBasePlayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CBasePlayer39_MNetworkVarNames_Value
+      && __cxa_guard_acquire(&`guard variable for'CBasePlayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CBasePlayer39_MNetworkVarNames_Value) )
+    {
+      CBasePlayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CBasePlayer39_MNetworkVarNames_Value.m_pVarName = "m_vecConstraintCenter";
+      CBasePlayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CBasePlayer39_MNetworkVarNames_Value.m_pVarType = "Vector";
+      __cxa_guard_release(&`guard variable for'CBasePlayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CBasePlayer39_MNetworkVarNames_Value);
+    }
+    if ( !`guard variable for'CBasePlayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CBasePlayer40_MNetworkVarNames_Value
+      && __cxa_guard_acquire(&`guard variable for'CBasePlayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CBasePlayer40_MNetworkVarNames_Value) )
+    {
+      CBasePlayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CBasePlayer40_MNetworkVarNames_Value.m_pVarName = "m_flConstraintRadius";
+      CBasePlayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CBasePlayer40_MNetworkVarNames_Value.m_pVarType = "float32";
+      __cxa_guard_release(&`guard variable for'CBasePlayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CBasePlayer40_MNetworkVarNames_Value);
+    }
+    if ( !`guard variable for'CBasePlayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CBasePlayer41_MNetworkVarNames_Value
+      && __cxa_guard_acquire(&`guard variable for'CBasePlayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CBasePlayer41_MNetworkVarNames_Value) )
+    {
+      CBasePlayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CBasePlayer41_MNetworkVarNames_Value.m_pVarName = "m_flConstraintWidth";
+      CBasePlayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CBasePlayer41_MNetworkVarNames_Value.m_pVarType = "float32";
+      __cxa_guard_release(&`guard variable for'CBasePlayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CBasePlayer41_MNetworkVarNames_Value);
+    }
+    if ( !`guard variable for'CBasePlayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CBasePlayer42_MNetworkVarNames_Value
+      && __cxa_guard_acquire(&`guard variable for'CBasePlayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CBasePlayer42_MNetworkVarNames_Value) )
+    {
+      CBasePlayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CBasePlayer42_MNetworkVarNames_Value.m_pVarName = "m_flConstraintSpeedFactor";
+      CBasePlayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CBasePlayer42_MNetworkVarNames_Value.m_pVarType = "float32";
+      __cxa_guard_release(&`guard variable for'CBasePlayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CBasePlayer42_MNetworkVarNames_Value);
+    }
+    if ( !`guard variable for'CBasePlayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CBasePlayer43_MNetworkVarNames_Value
+      && __cxa_guard_acquire(&`guard variable for'CBasePlayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CBasePlayer43_MNetworkVarNames_Value) )
+    {
+      CBasePlayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CBasePlayer43_MNetworkVarNames_Value.m_pVarName = "m_bConstraintPastRadius";
+      CBasePlayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CBasePlayer43_MNetworkVarNames_Value.m_pVarType = "bool";
+      __cxa_guard_release(&`guard variable for'CBasePlayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CBasePlayer43_MNetworkVarNames_Value);
+    }
+    if ( !`guard variable for'CBasePlayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CBasePlayer44_MNetworkVarNames_Value
+      && __cxa_guard_acquire(&`guard variable for'CBasePlayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CBasePlayer44_MNetworkVarNames_Value) )
+    {
+      CBasePlayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CBasePlayer44_MNetworkVarNames_Value.m_pVarName = "m_flLaggedMovementValue";
+      CBasePlayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CBasePlayer44_MNetworkVarNames_Value.m_pVarType = "float32";
+      __cxa_guard_release(&`guard variable for'CBasePlayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CBasePlayer44_MNetworkVarNames_Value);
+    }
+    if ( !`guard variable for'CBasePlayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CBasePlayer45_MNetworkVarNames_Value
+      && __cxa_guard_acquire(&`guard variable for'CBasePlayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CBasePlayer45_MNetworkVarNames_Value) )
+    {
+      CBasePlayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CBasePlayer45_MNetworkVarNames_Value.m_pVarName = "m_szLastPlaceName";
+      CBasePlayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CBasePlayer45_MNetworkVarNames_Value.m_pVarType = "char";
+      __cxa_guard_release(&`guard variable for'CBasePlayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CBasePlayer45_MNetworkVarNames_Value);
+    }
+    if ( !`guard variable for'CBasePlayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CBasePlayer46_MNetworkVarNames_Value
+      && __cxa_guard_acquire(&`guard variable for'CBasePlayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CBasePlayer46_MNetworkVarNames_Value) )
+    {
+      CBasePlayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CBasePlayer46_MNetworkVarNames_Value.m_pVarName = "m_currentSCLPacked";
+      CBasePlayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CBasePlayer46_MNetworkVarNames_Value.m_pVarType = "int";
+      __cxa_guard_release(&`guard variable for'CBasePlayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CBasePlayer46_MNetworkVarNames_Value);
+    }
+    if ( !`guard variable for'CBasePlayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CBasePlayer47_MNetworkVarNames_Value
+      && __cxa_guard_acquire(&`guard variable for'CBasePlayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CBasePlayer47_MNetworkVarNames_Value) )
+    {
+      CBasePlayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CBasePlayer47_MNetworkVarNames_Value.m_pVarName = "m_nUnHoldableButtons";
+      CBasePlayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CBasePlayer47_MNetworkVarNames_Value.m_pVarType = "ButtonBitMask_t";
+      __cxa_guard_release(&`guard variable for'CBasePlayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CBasePlayer47_MNetworkVarNames_Value);
+    }
+    CBasePlayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CBasePlayer[0].m_pType = (*(*v5 + 40LL))(v5, 7);
+    CBasePlayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CBasePlayer[1].m_pType = (*(*v5 + 88LL))(v5, "CPlayerLocalData");
+    CBasePlayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CBasePlayer[2].m_pType = (*(*v5 + 88LL))(v5, "fogplayerparams_t");
+    v6 = *(*v5 + 64LL);
+    v7 = (*(*v5 + 88LL))(v5, "CPostProcessController");
+    CBasePlayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CBasePlayer[3].m_pType = v6(v5, "CHandle", 5003, CAtomicManipulator<CHandle<CPostProcessController>>::Get(void)::val, CSchemaManipulator<CHandle<CPostProcessController>>::StaticAccessor(void)::m, v7);
+    v8 = *(*v5 + 64LL);
+    v9 = (*(*v5 + 88LL))(v5, "CColorCorrection");
+    CBasePlayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CBasePlayer[4].m_pType = v8(v5, "CHandle", 5003, CAtomicManipulator<CHandle<CColorCorrection>>::Get(void)::val, CSchemaManipulator<CHandle<CColorCorrection>>::StaticAccessor(void)::m, v9);
+    v10 = *(*v5 + 64LL);
+    v11 = CSchemaTypeOf<CHandle<CBaseEntity>>::Get(v5);
+    CBasePlayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CBasePlayer[5].m_pType = v10(v5, "CUtlVector", 3002, &CAtomicManipulator<CUtlVector<CHandle<CBaseEntity>,CUtlMemory<CHandle<CBaseEntity>,int>>>::Get(void)::val, CSchemaManipulator<CUtlVector<CHandle<CBaseEntity>,CUtlMemory<CHandle<CBaseEntity>,int>>>::StaticAccessor(void)::m, v11);
+    CBasePlayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CBasePlayer[6].m_pType = (*(*v5 + 88LL))(v5, "CPlayerState");
+    CBasePlayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CBasePlayer[7].m_pType = (*(*v5 + 40LL))(v5, 10);
+    CBasePlayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CBasePlayer[8].m_pType = (*(*v5 + 40LL))(v5, 10);
+    CBasePlayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CBasePlayer[9].m_pType = (*(*v5 + 40LL))(v5, 10);
+    CBasePlayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CBasePlayer[10].m_pType = (*(*v5 + 40LL))(v5, 10);
+    CBasePlayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CBasePlayer[11].m_pType = (*(*v5 + 40LL))(v5, 10);
+    CBasePlayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CBasePlayer[12].m_pType = (*(*v5 + 40LL))(v5, 10);
+    CBasePlayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CBasePlayer[13].m_pType = (*(*v5 + 40LL))(v5, 13);
+    v12 = *(*v5 + 104LL);
+    v13 = (*(*v5 + 40LL))(v5, 2);
+    CBasePlayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CBasePlayer[14].m_pType = v12(v5, v13, 32);
+    CBasePlayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CBasePlayer[15].m_pType = (*(*v5 + 40LL))(v5, 7);
+    CBasePlayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CBasePlayer[16].m_pType = (*(*v5 + 40LL))(v5, 11);
+    CBasePlayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CBasePlayer[17].m_pType = (*(*v5 + 40LL))(v5, 13);
+    CBasePlayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CBasePlayer[18].m_pType = (*(*v5 + 40LL))(v5, 13);
+    CBasePlayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CBasePlayer[19].m_pType = (*(*v5 + 40LL))(v5, 7);
+    CBasePlayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CBasePlayer[20].m_pType = (*(*v5 + 56LL))(v5, "Vector", 2010, CAtomicManipulator<Vector>::Get(void)::val, CSchemaManipulator<Vector>::StaticAccessor(void)::m);
+    CBasePlayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CBasePlayer[21].m_pType = (*(*v5 + 56LL))(v5, "Vector", 2010, CAtomicManipulator<Vector>::Get(void)::val, CSchemaManipulator<Vector>::StaticAccessor(void)::m);
+    CBasePlayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CBasePlayer[22].m_pType = CSchemaTypeOf<CHandle<CBaseEntity>>::Get(v5);
+    CBasePlayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CBasePlayer[23].m_pType = CSchemaTypeOf<CHandle<CBaseEntity>>::Get(v5);
+    CBasePlayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CBasePlayer[24].m_pType = (*(*v5 + 40LL))(v5, 11);
+    CBasePlayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CBasePlayer[25].m_pType = (*(*v5 + 40LL))(v5, 7);
+    CBasePlayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CBasePlayer[26].m_pType = (*(*v5 + 40LL))(v5, 11);
+    CBasePlayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CBasePlayer[27].m_pType = (*(*v5 + 40LL))(v5, 8);
+    CBasePlayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CBasePlayer[28].m_pType = CSchemaTypeOf<CHandle<CBaseEntity>>::Get(v5);
+    CBasePlayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CBasePlayer[29].m_pType = (*(*v5 + 40LL))(v5, 7);
+    CBasePlayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CBasePlayer[30].m_pType = (*(*v5 + 40LL))(v5, 13);
+    CBasePlayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CBasePlayer[31].m_pType = (*(*v5 + 40LL))(v5, 7);
+    CBasePlayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CBasePlayer[32].m_pType = (*(*v5 + 40LL))(v5, 7);
+    CBasePlayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CBasePlayer[33].m_pType = (*(*v5 + 40LL))(v5, 7);
+    CBasePlayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CBasePlayer[34].m_pType = (*(*v5 + 40LL))(v5, 11);
+    CBasePlayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CBasePlayer[35].m_pType = (*(*v5 + 56LL))(v5, "Vector", 2010, CAtomicManipulator<Vector>::Get(void)::val, CSchemaManipulator<Vector>::StaticAccessor(void)::m);
+    CBasePlayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CBasePlayer[36].m_pType = (*(*v5 + 40LL))(v5, 11);
+    CBasePlayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CBasePlayer[37].m_pType = (*(*v5 + 40LL))(v5, 11);
+    CBasePlayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CBasePlayer[38].m_pType = (*(*v5 + 40LL))(v5, 7);
+    CBasePlayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CBasePlayer[39].m_pType = (*(*v5 + 40LL))(v5, 7);
+    CBasePlayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CBasePlayer[40].m_pType = (*(*v5 + 40LL))(v5, 11);
+    CBasePlayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CBasePlayer[41].m_pType = (*(*v5 + 40LL))(v5, 11);
+    CBasePlayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CBasePlayer[42].m_pType = (*(*v5 + 40LL))(v5, 4);
+    CBasePlayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CBasePlayer[43].m_pType = (*(*v5 + 40LL))(v5, 8);
+    CBasePlayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CBasePlayer[44].m_pType = (*(*v5 + 40LL))(v5, 8);
+    CBasePlayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CBasePlayer[45].m_pType = (*(*v5 + 40LL))(v5, 8);
+    CBasePlayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CBasePlayer[46].m_pType = (*(*v5 + 40LL))(v5, 11);
+    CBasePlayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CBasePlayer[47].m_pType = (*(*v5 + 40LL))(v5, 7);
+    CBasePlayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CBasePlayer[48].m_pType = CSchemaTypeOf<CHandle<CBaseEntity>>::Get(v5);
+    CBasePlayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CBasePlayer[49].m_pType = (*(*v5 + 40LL))(v5, 13);
+    CBasePlayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CBasePlayer[50].m_pType = CSchemaTypeOf<CHandle<CBaseEntity>>::Get(v5);
+    CBasePlayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CBasePlayer[51].m_pType = (*(*v5 + 40LL))(v5, 11);
+    CBasePlayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CBasePlayer[52].m_pType = (*(*v5 + 40LL))(v5, 7);
+    CBasePlayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CBasePlayer[53].m_pType = (*(*v5 + 40LL))(v5, 7);
+    CBasePlayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CBasePlayer[54].m_pType = (*(*v5 + 40LL))(v5, 7);
+    CBasePlayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CBasePlayer[55].m_pType = (*(*v5 + 40LL))(v5, 7);
+    v14 = *(*v5 + 104LL);
+    v15 = (*(*v5 + 40LL))(v5, 4);
+    CBasePlayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CBasePlayer[56].m_pType = v14(v5, v15, 8);
+    CBasePlayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CBasePlayer[57].m_pType = (*(*v5 + 40LL))(v5, 7);
+    CBasePlayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CBasePlayer[58].m_pType = (*(*v5 + 40LL))(v5, 11);
+    CBasePlayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CBasePlayer[59].m_pType = (*(*v5 + 40LL))(v5, 7);
+    CBasePlayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CBasePlayer[60].m_pType = (*(*v5 + 40LL))(v5, 11);
+    CBasePlayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CBasePlayer[61].m_pType = (*(*v5 + 40LL))(v5, 11);
+    CBasePlayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CBasePlayer[62].m_pType = (*(*v5 + 56LL))(v5, "CEntityIndex", 2019, CAtomicManipulator<CEntityIndex>::Get(void)::val, CSchemaManipulator<CEntityIndex>::StaticAccessor(void)::m);
+    CBasePlayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CBasePlayer[63].m_pType = CSchemaTypeOf<CHandle<CBaseEntity>>::Get(v5);
+    CBasePlayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CBasePlayer[64].m_pType = (*(*v5 + 40LL))(v5, 7);
+    v16 = *(*v5 + 48LL);
+    v17 = (*(*v5 + 88LL))(v5, "IPhysicsPlayerController");
+    CBasePlayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CBasePlayer[65].m_pType = v16(v5, v17);
+    CBasePlayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CBasePlayer[66].m_pType = (*(*v5 + 56LL))(v5, "Vector", 2010, CAtomicManipulator<Vector>::Get(void)::val, CSchemaManipulator<Vector>::StaticAccessor(void)::m);
+    CBasePlayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CBasePlayer[67].m_pType = (*(*v5 + 56LL))(v5, "Vector", 2010, CAtomicManipulator<Vector>::Get(void)::val, CSchemaManipulator<Vector>::StaticAccessor(void)::m);
+    CBasePlayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CBasePlayer[68].m_pType = (*(*v5 + 40LL))(v5, 13);
+    CBasePlayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CBasePlayer[69].m_pType = (*(*v5 + 40LL))(v5, 13);
+    CBasePlayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CBasePlayer[70].m_pType = (*(*v5 + 40LL))(v5, 7);
+    CBasePlayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CBasePlayer[71].m_pType = (*(*v5 + 40LL))(v5, 7);
+    v18 = *(*v5 + 104LL);
+    v19 = (*(*v5 + 40LL))(v5, 7);
+    CBasePlayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CBasePlayer[72].m_pType = v18(v5, v19, 5);
+    CBasePlayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CBasePlayer[73].m_pType = (*(*v5 + 88LL))(v5, "IntervalTimer");
+    CBasePlayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CBasePlayer[74].m_pType = (*(*v5 + 40LL))(v5, 11);
+    CBasePlayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CBasePlayer[75].m_pType = (*(*v5 + 40LL))(v5, 11);
+    CBasePlayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CBasePlayer[76].m_pType = (*(*v5 + 40LL))(v5, 7);
+    CBasePlayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CBasePlayer[77].m_pType = (*(*v5 + 40LL))(v5, 13);
+    CBasePlayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CBasePlayer[78].m_pType = (*(*v5 + 40LL))(v5, 13);
+    CBasePlayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CBasePlayer[79].m_pType = (*(*v5 + 40LL))(v5, 13);
+    CBasePlayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CBasePlayer[80].m_pType = (*(*v5 + 40LL))(v5, 7);
+    CBasePlayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CBasePlayer[81].m_pType = (*(*v5 + 40LL))(v5, 7);
+    CBasePlayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CBasePlayer[82].m_pType = (*(*v5 + 40LL))(v5, 7);
+    CBasePlayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CBasePlayer[83].m_pType = (*(*v5 + 40LL))(v5, 11);
+    CBasePlayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CBasePlayer[84].m_pType = (*(*v5 + 40LL))(v5, 11);
+    CBasePlayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CBasePlayer[85].m_pType = (*(*v5 + 96LL))(v5, "PlayerConnectedState");
+    CBasePlayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CBasePlayer[86].m_pType = (*(*v5 + 40LL))(v5, 13);
+    CBasePlayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CBasePlayer[87].m_pType = (*(*v5 + 40LL))(v5, 7);
+    CBasePlayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CBasePlayer[88].m_pType = (*(*v5 + 40LL))(v5, 11);
+    CBasePlayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CBasePlayer[89].m_pType = (*(*v5 + 40LL))(v5, 11);
+    CBasePlayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CBasePlayer[90].m_pType = (*(*v5 + 40LL))(v5, 7);
+    CBasePlayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CBasePlayer[91].m_pType = (*(*v5 + 88LL))(v5, "CSimpleSimTimer");
+    CBasePlayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CBasePlayer[92].m_pType = (*(*v5 + 56LL))(v5, "QAngle", 2005, CAtomicManipulator<QAngle>::Get(void)::val, CSchemaManipulator<QAngle>::StaticAccessor(void)::m);
+    v20 = *(*v5 + 104LL);
+    v52 = *(*v5 + 64LL);
+    v21 = (*(*v5 + 88LL))(v5, "CBaseViewModel");
+    v22 = v52(
+            v5,
+            "CHandle",
+            5003,
+            CAtomicManipulator<CHandle<CBaseViewModel>>::Get(void)::val,
+            CSchemaManipulator<CHandle<CBaseViewModel>>::StaticAccessor(void)::m,
+            v21);
+    CBasePlayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CBasePlayer[93].m_pType = v20(v5, v22, 2);
+    v23 = *(*v5 + 64LL);
+    v24 = (*(*v5 + 88LL))(v5, "CPropHMDAvatar");
+    CBasePlayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CBasePlayer[94].m_pType = v23(v5, "CHandle", 5003, CAtomicManipulator<CHandle<CPropHMDAvatar>>::Get(void)::val, CSchemaManipulator<CHandle<CPropHMDAvatar>>::StaticAccessor(void)::m, v24);
+    v25 = *(*v5 + 64LL);
+    v26 = (*(*v5 + 88LL))(v5, "CPointHMDAnchor");
+    CBasePlayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CBasePlayer[95].m_pType = v25(v5, "CHandle", 5003, CAtomicManipulator<CHandle<CPointHMDAnchor>>::Get(void)::val, CSchemaManipulator<CHandle<CPointHMDAnchor>>::StaticAccessor(void)::m, v26);
+    CBasePlayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CBasePlayer[96].m_pType = (*(*v5 + 40LL))(v5, 13);
+    CBasePlayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CBasePlayer[97].m_pType = (*(*v5 + 56LL))(v5, "Vector", 2010, CAtomicManipulator<Vector>::Get(void)::val, CSchemaManipulator<Vector>::StaticAccessor(void)::m);
+    CBasePlayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CBasePlayer[98].m_pType = (*(*v5 + 40LL))(v5, 13);
+    CBasePlayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CBasePlayer[99].m_pType = (*(*v5 + 120LL))(v5);
+    v27 = *(*v5 + 48LL);
+    v28 = (*(*v5 + 120LL))(v5);
+    CBasePlayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CBasePlayer[100].m_pType = v27(v5, v28);
+    CBasePlayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CBasePlayer[101].m_pType = (*(*v5 + 88LL))(v5, "IntervalTimer");
+    CBasePlayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CBasePlayer[102].m_pType = (*(*v5 + 40LL))(v5, 11);
+    CBasePlayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CBasePlayer[103].m_pType = (*(*v5 + 40LL))(v5, 13);
+    CBasePlayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CBasePlayer[104].m_pType = (*(*v5 + 40LL))(v5, 11);
+    CBasePlayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CBasePlayer[105].m_pType = (*(*v5 + 56LL))(v5, "CUtlStringToken", 3010, CAtomicManipulator<CUtlStringToken>::Get(void)::val, CSchemaManipulator<CUtlStringToken>::StaticAccessor(void)::m);
+    CBasePlayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CBasePlayer[106].m_pType = (*(*v5 + 56LL))(v5, "Vector", 2010, CAtomicManipulator<Vector>::Get(void)::val, CSchemaManipulator<Vector>::StaticAccessor(void)::m);
+    CBasePlayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CBasePlayer[107].m_pType = (*(*v5 + 40LL))(v5, 11);
+    CBasePlayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CBasePlayer[108].m_pType = (*(*v5 + 56LL))(v5, "Vector", 2010, CAtomicManipulator<Vector>::Get(void)::val, CSchemaManipulator<Vector>::StaticAccessor(void)::m);
+    CBasePlayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CBasePlayer[109].m_pType = (*(*v5 + 40LL))(v5, 7);
+    CBasePlayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CBasePlayer[110].m_pType = (*(*v5 + 40LL))(v5, 11);
+    CBasePlayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CBasePlayer[111].m_pType = (*(*v5 + 40LL))(v5, 11);
+    CBasePlayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CBasePlayer[112].m_pType = (*(*v5 + 40LL))(v5, 7);
+    CBasePlayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CBasePlayer[113].m_pType = (*(*v5 + 40LL))(v5, 7);
+    CBasePlayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CBasePlayer[114].m_pType = (*(*v5 + 40LL))(v5, 13);
+    CBasePlayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CBasePlayer[115].m_pType = (*(*v5 + 40LL))(v5, 11);
+    CBasePlayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CBasePlayer[116].m_pType = (*(*v5 + 40LL))(v5, 11);
+    CBasePlayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CBasePlayer[117].m_pType = (*(*v5 + 40LL))(v5, 7);
+    CBasePlayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CBasePlayer[118].m_pType = (*(*v5 + 56LL))(v5, "Vector", 2010, CAtomicManipulator<Vector>::Get(void)::val, CSchemaManipulator<Vector>::StaticAccessor(void)::m);
+    CBasePlayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CBasePlayer[119].m_pType = (*(*v5 + 40LL))(v5, 13);
+    CBasePlayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CBasePlayer[120].m_pType = (*(*v5 + 40LL))(v5, 8);
+    CBasePlayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CBasePlayer[121].m_pType = (*(*v5 + 40LL))(v5, 7);
+    CBasePlayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CBasePlayer[122].m_pType = (*(*v5 + 40LL))(v5, 13);
+    CBasePlayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CBasePlayer[123].m_pType = (*(*v5 + 40LL))(v5, 11);
+    v29 = *(*v5 + 64LL);
+    v30 = (*(*v5 + 88LL))(v5, "CBaseCombatWeapon");
+    CBasePlayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CBasePlayer[124].m_pType = v29(v5, "CHandle", 5003, CAtomicManipulator<CHandle<CBaseCombatWeapon>>::Get(void)::val, CSchemaManipulator<CHandle<CBaseCombatWeapon>>::StaticAccessor(void)::m, v30);
+    CBasePlayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CBasePlayer[125].m_pType = (*(*v5 + 40LL))(v5, 11);
+    CBasePlayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CBasePlayer[126].m_pType = (*(*v5 + 40LL))(v5, 11);
+    CBasePlayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CBasePlayer[127].m_pType = (*(*v5 + 40LL))(v5, 13);
+    CBasePlayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CBasePlayer[128].m_pType = CSchemaTypeOf<CHandle<CBaseEntity>>::Get(v5);
+    CBasePlayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CBasePlayer[129].m_pType = CSchemaTypeOf<CHandle<CBaseEntity>>::Get(v5);
+    CBasePlayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CBasePlayer[130].m_pType = (*(*v5 + 56LL))(v5, "Vector", 2010, CAtomicManipulator<Vector>::Get(void)::val, CSchemaManipulator<Vector>::StaticAccessor(void)::m);
+    CBasePlayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CBasePlayer[131].m_pType = (*(*v5 + 40LL))(v5, 11);
+    CBasePlayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CBasePlayer[132].m_pType = (*(*v5 + 40LL))(v5, 11);
+    CBasePlayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CBasePlayer[133].m_pType = (*(*v5 + 40LL))(v5, 11);
+    CBasePlayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CBasePlayer[134].m_pType = (*(*v5 + 40LL))(v5, 13);
+    v31 = *(*v5 + 104LL);
+    v32 = (*(*v5 + 40LL))(v5, 2);
+    CBasePlayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CBasePlayer[135].m_pType = v31(v5, v32, 32);
+    CBasePlayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CBasePlayer[136].m_pType = (*(*v5 + 40LL))(v5, 11);
+    CBasePlayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CBasePlayer[137].m_pType = (*(*v5 + 56LL))(v5, "Vector", 2010, CAtomicManipulator<Vector>::Get(void)::val, CSchemaManipulator<Vector>::StaticAccessor(void)::m);
+    CBasePlayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CBasePlayer[138].m_pType = (*(*v5 + 56LL))(v5, "Vector", 2010, CAtomicManipulator<Vector>::Get(void)::val, CSchemaManipulator<Vector>::StaticAccessor(void)::m);
+    CBasePlayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CBasePlayer[139].m_pType = (*(*v5 + 56LL))(v5, "Vector", 2010, CAtomicManipulator<Vector>::Get(void)::val, CSchemaManipulator<Vector>::StaticAccessor(void)::m);
+    CBasePlayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CBasePlayer[140].m_pType = (*(*v5 + 56LL))(v5, "QAngle", 2005, CAtomicManipulator<QAngle>::Get(void)::val, CSchemaManipulator<QAngle>::StaticAccessor(void)::m);
+    CBasePlayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CBasePlayer[141].m_pType = (*(*v5 + 40LL))(v5, 11);
+    CBasePlayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CBasePlayer[142].m_pType = (*(*v5 + 40LL))(v5, 7);
+    CBasePlayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CBasePlayer[143].m_pType = (*(*v5 + 56LL))(v5, "Vector", 2010, CAtomicManipulator<Vector>::Get(void)::val, CSchemaManipulator<Vector>::StaticAccessor(void)::m);
+    CBasePlayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CBasePlayer[144].m_pType = (*(*v5 + 40LL))(v5, 7);
+    v33 = *(*v5 + 104LL);
+    v34 = (*(*v5 + 40LL))(v5, 2);
+    CBasePlayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CBasePlayer[145].m_pType = v33(v5, v34, 18);
+    v35 = *(*v5 + 104LL);
+    v36 = (*(*v5 + 40LL))(v5, 2);
+    CBasePlayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CBasePlayer[146].m_pType = v35(v5, v36, 64);
+    CBasePlayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CBasePlayer[147].m_pType = (*(*v5 + 88LL))(v5, "CPlayerInfo");
+    CBasePlayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CBasePlayer[148].m_pType = (*(*v5 + 56LL))(v5, "CUtlStringToken", 3010, CAtomicManipulator<CUtlStringToken>::Get(void)::val, CSchemaManipulator<CUtlStringToken>::StaticAccessor(void)::m);
+    CBasePlayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CBasePlayer[149].m_pType = (*(*v5 + 40LL))(v5, 11);
+    CBasePlayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CBasePlayer[150].m_pType = (*(*v5 + 40LL))(v5, 2);
+    CBasePlayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CBasePlayer[151].m_pType = (*(*v5 + 40LL))(v5, 2);
+    CBasePlayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CBasePlayer[152].m_pType = (*(*v5 + 40LL))(v5, 13);
+    v37 = *(*v5 + 64LL);
+    v38 = (*(*v5 + 88LL))(v5, "CBaseEntity");
+    CBasePlayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CBasePlayer[153].m_pType = v37(v5, "CHandle", 5003, CAtomicManipulator<CHandle<CBaseEntity>>::Get(void)::val, &CSchemaManipulator<CHandle<CBaseEntity>>::StaticAccessor(void)::m, v38);
+    CBasePlayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CBasePlayer[154].m_pType = (*(*v5 + 40LL))(v5, 13);
+    CBasePlayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CBasePlayer[155].m_pType = (*(*v5 + 40LL))(v5, 13);
+    v39 = *(*v5 + 104LL);
+    v40 = (*(*v5 + 88LL))(v5, "CBasePlayer::StepSoundCache_t");
+    CBasePlayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CBasePlayer[156].m_pType = v39(v5, v40, 2);
+    CBasePlayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CBasePlayer[157].m_pType = (*(*v5 + 120LL))(v5);
+    CBasePlayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CBasePlayer[158].m_pType = (*(*v5 + 120LL))(v5);
+    CBasePlayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CBasePlayer[159].m_pType = (*(*v5 + 56LL))(v5, "Vector", 2010, CAtomicManipulator<Vector>::Get(void)::val, CSchemaManipulator<Vector>::StaticAccessor(void)::m);
+    CBasePlayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CBasePlayer[160].m_pType = (*(*v5 + 56LL))(v5, "Vector", 2010, CAtomicManipulator<Vector>::Get(void)::val, CSchemaManipulator<Vector>::StaticAccessor(void)::m);
+    v41 = *(*v5 + 64LL);
+    v42 = (*(*v5 + 88LL))(v5, "CBaseCombatCharacter");
+    CBasePlayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CBasePlayer[161].m_pType = v41(v5, "CHandle", 5003, CAtomicManipulator<CHandle<CBaseCombatCharacter>>::Get(void)::val, &CSchemaManipulator<CHandle<CBaseCombatCharacter>>::StaticAccessor(void)::m, v42);
+    CBasePlayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CBasePlayer[162].m_pType = (*(*v5 + 40LL))(v5, 11);
+    CBasePlayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CBasePlayer[163].m_pType = (*(*v5 + 40LL))(v5, 7);
+    CBasePlayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CBasePlayer[164].m_pType = (*(*v5 + 80LL))(v5, "CBitVec", 3000, CAtomicManipulator<CBitVec<64>>::Get(void)::val, CSchemaManipulator<CBitVec<64>>::StaticAccessor(void)::m, 64);
+    CBasePlayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CBasePlayer[165].m_pType = (*(*v5 + 40LL))(v5, 13);
+    CBasePlayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CBasePlayer[166].m_pType = (*(*v5 + 40LL))(v5, 13);
+    v43 = *(*v5 + 64LL);
+    v44 = (*(*v5 + 88LL))(v5, "CBasePlayer");
+    CBasePlayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CBasePlayer[167].m_pType = v43(v5, "CHandle", 5003, CAtomicManipulator<CHandle<CBasePlayer>>::Get(void)::val, CSchemaManipulator<CHandle<CBasePlayer>>::StaticAccessor(void)::m, v44);
+    v45 = *(*v5 + 64LL);
+    v46 = (*(*v5 + 88LL))(v5, "CBasePlayer");
+    v47 = v45(
+            v5,
+            "CHandle",
+            5003,
+            CAtomicManipulator<CHandle<CBasePlayer>>::Get(void)::val,
+            CSchemaManipulator<CHandle<CBasePlayer>>::StaticAccessor(void)::m,
+            v46);
+    CBasePlayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CBasePlayer[168].m_pType = v45(v5, "CUtlVector", 3002, &CAtomicManipulator<CUtlVector<CHandle<CBasePlayer>,CUtlMemory<CHandle<CBasePlayer>,int>>>::Get(void)::val, CSchemaManipulator<CUtlVector<CHandle<CBasePlayer>,CUtlMemory<CHandle<CBasePlayer>,int>>>::StaticAccessor(void)::m, v47);
+    CBasePlayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CBasePlayer[169].m_pType = (*(*v5 + 40LL))(v5, 7);
+    CBasePlayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CBasePlayer[170].m_pType = (*(*v5 + 40LL))(v5, 10);
+    CBasePlayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_StaticMembers_CBasePlayer[0].m_pType = (*(*v5 + 40LL))(v5, 13);
+    CBasePlayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_StaticMembers_CBasePlayer[1].m_pType = (*(*v5 + 56LL))(v5, "Vector", 2010, CAtomicManipulator<Vector>::Get(void)::val, CSchemaManipulator<Vector>::StaticAccessor(void)::m);
+    CBasePlayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_StaticMembers_CBasePlayer[2].m_pType = (*(*v5 + 56LL))(v5, "QAngle", 2005, CAtomicManipulator<QAngle>::Get(void)::val, CSchemaManipulator<QAngle>::StaticAccessor(void)::m);
+    if ( !`guard variable for'CBasePlayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_NestedClassesOf_CBasePlayer
+      && __cxa_guard_acquire(&`guard variable for'CBasePlayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_NestedClassesOf_CBasePlayer) )
+    {
+      v49 = CBasePlayer::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult;
+      if ( !CBasePlayer::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult )
+        v49 = CBasePlayer::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+                pSchemaSystem,
+                pBinaryName,
+                pProjectName);
+      CBasePlayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_NestedClassesOf_CBasePlayer[0] = v49;
+      v50 = CBasePlayer::StepSoundCache_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult;
+      if ( !CBasePlayer::StepSoundCache_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult )
+        v50 = CBasePlayer::StepSoundCache_t::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+                pSchemaSystem,
+                pBinaryName,
+                v48);
+      qword_4AE3278 = v50;
+      __cxa_guard_release(&`guard variable for'CBasePlayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_NestedClassesOf_CBasePlayer);
+    }
+    (*(CBaseCombatCharacter::s_pSchemaBindingForLocalModule->_vptr_ISchemaBinding + 5))(
+      CBaseCombatCharacter::s_pSchemaBindingForLocalModule,
+      pSchemaSystem,
+      pBinaryName,
+      pProjectName);
+    v51 = CBaseCombatCharacter::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+            pSchemaSystem,
+            pBinaryName,
+            pProjectName);
+    CBasePlayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CBasePlayer.m_pOuterTypeScope = v5;
+    CBasePlayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassBases_CBasePlayer[0].m_pClass = v51;
+    result = &CBasePlayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CBasePlayer;
+    CBasePlayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult = &CBasePlayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CBasePlayer;
+  }
+  return result;
+}
+
+
+// CBasePlayer::Schema_VerifyBindingIsRegistered  (line 1348, @0x0000000001ff9dd0, libserver.so)
+// callers: CBasePlayer::CEntityInstanceEntityClass::GetInstanceSchemaBinding, CBasePlayer::Schema_DynamicBinding, CPointPlayerMoveConstraint::InputTurnOn
+void __cdecl CBasePlayer::Schema_VerifyBindingIsRegistered()
+{
+  ;
+}
+
+
+// CBasePlayer::SetupEntClassInputs  (line 1362, @0x0000000001ff9de0, libserver.so)
+// callers: CBasePlayer::CEntityInstanceEntityClass::InitOptionalTables
+void __fastcall CBasePlayer::SetupEntClassInputs(CEntityClass *pComponentInfo)
+{
+  ;
+}
+
+
+// CBasePlayer::SetupEntClassComponentOverrides  (line 1368, @0x0000000001ff9df0, libserver.so)
+// callers: CBasePlayer::CEntityInstanceEntityClass::InitOptionalTables
+void __fastcall CBasePlayer::SetupEntClassComponentOverrides(CEntityClass *pEntityClass)
+{
+  pEntityClass->m_pComponentOverrides = 0;
+}
+
+
+// GetScriptDesc<CBasePlayer>  (line 1375, @0x0000000002001ad0, libserver.so)  // inlines: AddParameterType, AddToTail, CUtlMemory, CUtlVector, CUtlVectorBase, Construct<ScriptFunctionBinding_t>, Element, Finalize, GrowMemory, ScriptClassDesc_t, ScriptDeduceFunctionSignature<CBasePlayer*, CBasePlayer, HSCRIPT__*>, ScriptDeduceFunctionSignature<CBasePlayer*, CBasePlayer, bool, int>, ScriptDeduceFunctionSignature<CBasePlayer*, CBasePlayer, bool>, ScriptDeduceFunctionSignature<CBasePlayer*, CBasePlayer, int>, ScriptDeduceFunctionSignature<CBasePlayer*, CBasePlayer, void>, ScriptFuncDescriptor_t, ScriptFunctionBinding_t, SetDescription, SetFunctionName, SetPackedParameterNames, SetReturnType, SetScriptName, operator[]
+// calls: operator new, GetScriptDesc<CBaseCombatCharacter>, CUtlMemory<ScriptFunctionBinding_t, int>::Grow
+// callers: CBasePlayer::GetScriptDesc, CBasePlayer::InitScriptDesc, CBasePlayer::GetClassScriptDesc, CBasePlayer::GetEntityClassInternal
+// strings: "The player entity.", "CBasePlayer", "Returns the HMD Avatar entity for this player if it exists.", "ScriptGetHMDAvatar", "Returns the HMD anchor entity for this player if it exists.", "ScriptGetHMDAnchor" (18 total)
+// globals: g_pCBasePlayer_ScriptDesc, CMemberScriptBinding0<CBasePlayer *,HSCRIPT__ * (CBasePlayer::*)(void),HSCRIPT__ *>::Call(void *,void *,CVariantBase<CVariantDefaultAllocator> *,int,CVariantBas, CMemberScriptBinding1<CBasePlayer *,bool (CBasePlayer::*)(int),bool,int>::Call(void *,void *,CVariantBase<CVariantDefaultAllocator> *,int,CVariantBase<CVariantD, s_CBasePlayer_ScriptIsVRControllerButtonPressed_packed_arg_names, CMemberScriptBinding0<CBasePlayer *,bool (CBasePlayer::*)(void),bool>::Call(void *,void *,CVariantBase<CVariantDefaultAllocator> *,int,CVariantBase<CVariantDefa, CMemberScriptBinding0<CBasePlayer *,int (CBasePlayer::*)(void),int>::Call(void *,void *,CVariantBase<CVariantDefaultAllocator> *,int,CVariantBase<CVariantDefaul, CMemberScriptBinding0<CBasePlayer *,void (CBasePlayer::*)(void),void>::Call(void *,void *,CVariantBase<CVariantDefaultAllocator> *,int,CVariantBase<CVariantDefa, CBasePlayer::ScriptIsPlayerNoclipping(void)
+ScriptClassDesc_t *__fastcall GetScriptDesc<CBasePlayer>(CBasePlayer *pScriptDescObjectInstance)
+{
+  ScriptClassDesc_t *result; // rax
+  ScriptClassDesc_t *v2; // rbx
+  ScriptClassDesc_t *Script; // rax
+  IScriptInstanceHelper *pHelper; // rdx
+  __int64 m_Size; // r12
+  int v6; // eax
+  __int64 v7; // rax
+  __int64 v8; // rcx
+  int v9; // eax
+  int v10; // eax
+  char v11; // dl
+  char v12; // di
+  __int64 v13; // r12
+  __int64 v14; // rax
+  __int64 v15; // rcx
+  int v16; // eax
+  int v17; // eax
+  char v18; // dl
+  char v19; // di
+  __int64 v20; // r12
+  __int64 v21; // rax
+  __int64 v22; // rcx
+  char v23; // al
+  __int64 v24; // rdx
+  int v25; // eax
+  char v26; // dl
+  char v27; // di
+  __int64 v28; // r12
+  __int64 v29; // rax
+  __int64 v30; // rcx
+  int v31; // eax
+  int v32; // eax
+  char v33; // dl
+  char v34; // di
+  __int64 v35; // r12
+  __int64 v36; // rax
+  __int64 v37; // rcx
+  int v38; // eax
+  int v39; // eax
+  char v40; // dl
+  char v41; // di
+  __int64 v42; // r12
+  __int64 v43; // rax
+  __int64 v44; // rcx
+  int v45; // eax
+  int v46; // eax
+  char v47; // dl
+  char v48; // di
+  __int64 v49; // r12
+  __int64 v50; // rax
+  __int64 v51; // rcx
+  int v52; // eax
+  int v53; // eax
+  char v54; // dl
+  char v55; // di
+
+  result = g_pCBasePlayer_ScriptDesc;
+  if ( g_pCBasePlayer_ScriptDesc == 0 )
+  {
+    v2 = operator new(0x50u);
+    v2->m_pBaseDesc = 0;
+    v2->m_FunctionBindings.m_Size = 0;
+    v2->m_FunctionBindings.m_Memory.m_pMemory = 0;
+    v2->m_FunctionBindings.m_Memory.m_nAllocationCount = 0;
+    v2->m_FunctionBindings.m_Memory.m_nGrowSize = 0;
+    v2->m_pfnConstruct = 0;
+    v2->m_pfnDestruct = 0;
+    v2->pHelper = 0;
+    g_pCBasePlayer_ScriptDesc = v2;
+    v2->m_pszDescription = "The player entity.";
+    v2->m_pszScriptName = "CBasePlayer";
+    v2->m_pszClassname = "CBasePlayer";
+    Script = GetScriptDesc<CBaseCombatCharacter>(0);
+    v2->m_pBaseDesc = Script;
+    if ( Script != 0 )
+    {
+      while ( 1 )
+      {
+        pHelper = Script->pHelper;
+        if ( pHelper != 0 )
+          break;
+        Script = Script->m_pBaseDesc;
+        if ( Script == 0 )
+          goto LABEL_7;
+      }
+      v2->pHelper = pHelper;
+    }
+LABEL_7:
+    m_Size = v2->m_FunctionBindings.m_Size;
+    v6 = v2->m_FunctionBindings.m_Size;
+    if ( m_Size == v2->m_FunctionBindings.m_Memory.m_nAllocationCount )
+    {
+      CUtlMemory<ScriptFunctionBinding_t,int>::Grow(&v2->m_FunctionBindings.m_Memory, 1);
+      v6 = v2->m_FunctionBindings.m_Size;
+    }
+    v2->m_FunctionBindings.m_Size = v6 + 1;
+    v7 = &v2->m_FunctionBindings.m_Memory.m_pMemory[m_Size];
+    if ( v7 != 0 )
+    {
+      *v7 = 0;
+      *(v7 + 8) = 0;
+      *(v7 + 16) = 0;
+      *(v7 + 24) = 29;
+      *(v7 + 25) = -1;
+      *(v7 + 26) = 0;
+      *(v7 + 40) = 0;
+      v8 = &v2->m_FunctionBindings.m_Memory.m_pMemory[m_Size];
+    }
+    else
+    {
+      v8 = 0;
+    }
+    *(v8 + 24) = 31;
+    *(v8 + 16) = "Returns the HMD Avatar entity for this player if it exists.";
+    *v8 = "GetHMDAvatar";
+    *(v8 + 8) = "ScriptGetHMDAvatar";
+    v9 = *(v8 + 26);
+    *(v8 + 25) = 0;
+    v10 = v9 - 1;
+    if ( v10 >= 0 && *(v8 + v10 + 27) == 32 )
+    {
+      v11 = 1;
+      do
+      {
+        --v10;
+        v12 = v11;
+        if ( v10 == -1 )
+        {
+          *(v8 + 25) = v11;
+          goto LABEL_17;
+        }
+        ++v11;
+      }
+      while ( *(v8 + v10 + 27) == 32 );
+      *(v8 + 25) = v12;
+    }
+LABEL_17:
+    *(v8 + 64) = 1;
+    *(v8 + 48) = CMemberScriptBinding0<CBasePlayer *,HSCRIPT__ * (CBasePlayer::*)(void),HSCRIPT__ *>::Call;
+    *(v8 + 56) = CBasePlayer::ScriptGetHMDAvatar;
+    v13 = v2->m_FunctionBindings.m_Size;
+    if ( v13 == v2->m_FunctionBindings.m_Memory.m_nAllocationCount )
+      CUtlMemory<ScriptFunctionBinding_t,int>::Grow(&v2->m_FunctionBindings.m_Memory, 1);
+    ++v2->m_FunctionBindings.m_Size;
+    v14 = &v2->m_FunctionBindings.m_Memory.m_pMemory[v13];
+    if ( v14 != 0 )
+    {
+      *v14 = 0;
+      *(v14 + 8) = 0;
+      *(v14 + 16) = 0;
+      *(v14 + 24) = 29;
+      *(v14 + 25) = -1;
+      *(v14 + 26) = 0;
+      *(v14 + 40) = 0;
+      v15 = &v2->m_FunctionBindings.m_Memory.m_pMemory[v13];
+    }
+    else
+    {
+      v15 = 0;
+    }
+    *(v15 + 24) = 31;
+    *(v15 + 16) = "Returns the HMD anchor entity for this player if it exists.";
+    *v15 = "GetHMDAnchor";
+    *(v15 + 8) = "ScriptGetHMDAnchor";
+    v16 = *(v15 + 26);
+    *(v15 + 25) = 0;
+    v17 = v16 - 1;
+    if ( v17 >= 0 && *(v15 + v17 + 27) == 32 )
+    {
+      v18 = 1;
+      do
+      {
+        --v17;
+        v19 = v18;
+        if ( v17 == -1 )
+        {
+          *(v15 + 25) = v18;
+          goto LABEL_27;
+        }
+        ++v18;
+      }
+      while ( *(v15 + v17 + 27) == 32 );
+      *(v15 + 25) = v19;
+    }
+LABEL_27:
+    *(v15 + 64) = 1;
+    *(v15 + 48) = CMemberScriptBinding0<CBasePlayer *,HSCRIPT__ * (CBasePlayer::*)(void),HSCRIPT__ *>::Call;
+    *(v15 + 56) = CBasePlayer::ScriptGetHMDAnchor;
+    v20 = v2->m_FunctionBindings.m_Size;
+    if ( v20 == v2->m_FunctionBindings.m_Memory.m_nAllocationCount )
+      CUtlMemory<ScriptFunctionBinding_t,int>::Grow(&v2->m_FunctionBindings.m_Memory, 1);
+    ++v2->m_FunctionBindings.m_Size;
+    v21 = &v2->m_FunctionBindings.m_Memory.m_pMemory[v20];
+    if ( v21 != 0 )
+    {
+      *v21 = 0;
+      *(v21 + 8) = 0;
+      *(v21 + 16) = 0;
+      *(v21 + 24) = 29;
+      *(v21 + 25) = -1;
+      *(v21 + 26) = 0;
+      *(v21 + 40) = 0;
+      v22 = &v2->m_FunctionBindings.m_Memory.m_pMemory[v20];
+    }
+    else
+    {
+      v22 = 0;
+    }
+    *(v22 + 24) = 6;
+    *(v22 + 16) = "Returns true if the controller button is pressed.";
+    *v22 = "IsVRControllerButtonPressed";
+    *(v22 + 8) = "ScriptIsVRControllerButtonPressed";
+    v23 = *(v22 + 26);
+    v24 = v23++;
+    *(v22 + v24 + 27) = 5;
+    *(v22 + 26) = v23;
+    v25 = v23 - 1;
+    *(v22 + 25) = 0;
+    if ( v25 >= 0 && *(v22 + v25 + 27) == 32 )
+    {
+      v26 = 1;
+      do
+      {
+        --v25;
+        v27 = v26;
+        if ( v25 == -1 )
+        {
+          *(v22 + 25) = v26;
+          goto LABEL_37;
+        }
+        ++v26;
+      }
+      while ( *(v22 + v25 + 27) == 32 );
+      *(v22 + 25) = v27;
+    }
+LABEL_37:
+    *(v22 + 64) = 1;
+    *(v22 + 48) = CMemberScriptBinding1<CBasePlayer *,bool (CBasePlayer::*)(int),bool,int>::Call;
+    *(v22 + 56) = CBasePlayer::ScriptIsVRControllerButtonPressed;
+    *(v22 + 40) = s_CBasePlayer_ScriptIsVRControllerButtonPressed_packed_arg_names;
+    v28 = v2->m_FunctionBindings.m_Size;
+    if ( v28 == v2->m_FunctionBindings.m_Memory.m_nAllocationCount )
+      CUtlMemory<ScriptFunctionBinding_t,int>::Grow(&v2->m_FunctionBindings.m_Memory, 1);
+    ++v2->m_FunctionBindings.m_Size;
+    v29 = &v2->m_FunctionBindings.m_Memory.m_pMemory[v28];
+    if ( v29 != 0 )
+    {
+      *v29 = 0;
+      *(v29 + 8) = 0;
+      *(v29 + 16) = 0;
+      *(v29 + 24) = 29;
+      *(v29 + 25) = -1;
+      *(v29 + 26) = 0;
+      *(v29 + 40) = 0;
+      v30 = &v2->m_FunctionBindings.m_Memory.m_pMemory[v28];
+    }
+    else
+    {
+      v30 = 0;
+    }
+    *(v30 + 24) = 6;
+    *(v30 + 16) = "Returns true if the use key is pressed.";
+    *v30 = "IsUsePressed";
+    *(v30 + 8) = "ScriptIsUsePressed";
+    v31 = *(v30 + 26);
+    *(v30 + 25) = 0;
+    v32 = v31 - 1;
+    if ( v32 >= 0 && *(v30 + v32 + 27) == 32 )
+    {
+      v33 = 1;
+      do
+      {
+        --v32;
+        v34 = v33;
+        if ( v32 == -1 )
+        {
+          *(v30 + 25) = v33;
+          goto LABEL_47;
+        }
+        ++v33;
+      }
+      while ( *(v30 + v32 + 27) == 32 );
+      *(v30 + 25) = v34;
+    }
+LABEL_47:
+    *(v30 + 64) = 1;
+    *(v30 + 48) = CMemberScriptBinding0<CBasePlayer *,bool (CBasePlayer::*)(void),bool>::Call;
+    *(v30 + 56) = CBasePlayer::ScriptIsUsePressed;
+    v35 = v2->m_FunctionBindings.m_Size;
+    if ( v35 == v2->m_FunctionBindings.m_Memory.m_nAllocationCount )
+      CUtlMemory<ScriptFunctionBinding_t,int>::Grow(&v2->m_FunctionBindings.m_Memory, 1);
+    ++v2->m_FunctionBindings.m_Size;
+    v36 = &v2->m_FunctionBindings.m_Memory.m_pMemory[v35];
+    if ( v36 != 0 )
+    {
+      *v36 = 0;
+      *(v36 + 8) = 0;
+      *(v36 + 16) = 0;
+      *(v36 + 24) = 29;
+      *(v36 + 25) = -1;
+      *(v36 + 26) = 0;
+      *(v36 + 40) = 0;
+      v37 = &v2->m_FunctionBindings.m_Memory.m_pMemory[v35];
+    }
+    else
+    {
+      v37 = 0;
+    }
+    *(v37 + 24) = 5;
+    *(v37 + 16) = "Returns the player's user id.";
+    *v37 = "GetUserID";
+    *(v37 + 8) = "ScriptGetUserID";
+    v38 = *(v37 + 26);
+    *(v37 + 25) = 0;
+    v39 = v38 - 1;
+    if ( v39 >= 0 && *(v37 + v39 + 27) == 32 )
+    {
+      v40 = 1;
+      do
+      {
+        --v39;
+        v41 = v40;
+        if ( v39 == -1 )
+        {
+          *(v37 + 25) = v40;
+          goto LABEL_57;
+        }
+        ++v40;
+      }
+      while ( *(v37 + v39 + 27) == 32 );
+      *(v37 + 25) = v41;
+    }
+LABEL_57:
+    *(v37 + 64) = 1;
+    *(v37 + 48) = CMemberScriptBinding0<CBasePlayer *,int (CBasePlayer::*)(void),int>::Call;
+    *(v37 + 56) = CBasePlayer::ScriptGetUserID;
+    v42 = v2->m_FunctionBindings.m_Size;
+    if ( v42 == v2->m_FunctionBindings.m_Memory.m_nAllocationCount )
+      CUtlMemory<ScriptFunctionBinding_t,int>::Grow(&v2->m_FunctionBindings.m_Memory, 1);
+    ++v2->m_FunctionBindings.m_Size;
+    v43 = &v2->m_FunctionBindings.m_Memory.m_pMemory[v42];
+    if ( v43 != 0 )
+    {
+      *v43 = 0;
+      *(v43 + 8) = 0;
+      *(v43 + 16) = 0;
+      *(v43 + 24) = 29;
+      *(v43 + 25) = -1;
+      *(v43 + 26) = 0;
+      *(v43 + 40) = 0;
+      v44 = &v2->m_FunctionBindings.m_Memory.m_pMemory[v42];
+    }
+    else
+    {
+      v44 = 0;
+    }
+    *(v44 + 24) = 0;
+    *(v44 + 16) = "Quit the game from script.";
+    *v44 = "Quit";
+    *(v44 + 8) = "ScriptQuit";
+    v45 = *(v44 + 26);
+    *(v44 + 25) = 0;
+    v46 = v45 - 1;
+    if ( v46 >= 0 && *(v44 + v46 + 27) == 32 )
+    {
+      v47 = 1;
+      do
+      {
+        --v46;
+        v48 = v47;
+        if ( v46 == -1 )
+        {
+          *(v44 + 25) = v47;
+          goto LABEL_67;
+        }
+        ++v47;
+      }
+      while ( *(v44 + v46 + 27) == 32 );
+      *(v44 + 25) = v48;
+    }
+LABEL_67:
+    *(v44 + 64) = 1;
+    *(v44 + 48) = CMemberScriptBinding0<CBasePlayer *,void (CBasePlayer::*)(void),void>::Call;
+    *(v44 + 56) = CBasePlayer::ScriptQuit;
+    v49 = v2->m_FunctionBindings.m_Size;
+    if ( v49 == v2->m_FunctionBindings.m_Memory.m_nAllocationCount )
+      CUtlMemory<ScriptFunctionBinding_t,int>::Grow(&v2->m_FunctionBindings.m_Memory, 1);
+    ++v2->m_FunctionBindings.m_Size;
+    v50 = &v2->m_FunctionBindings.m_Memory.m_pMemory[v49];
+    if ( v50 != 0 )
+    {
+      *v50 = 0;
+      *(v50 + 8) = 0;
+      *(v50 + 16) = 0;
+      *(v50 + 24) = 29;
+      *(v50 + 25) = -1;
+      *(v50 + 26) = 0;
+      *(v50 + 40) = 0;
+      v51 = &v2->m_FunctionBindings.m_Memory.m_pMemory[v49];
+    }
+    else
+    {
+      v51 = 0;
+    }
+    *(v51 + 24) = 6;
+    *(v51 + 16) = "Returns true if the player is in noclip mode.";
+    *v51 = "IsNoclipping";
+    *(v51 + 8) = "ScriptIsPlayerNoclipping";
+    v52 = *(v51 + 26);
+    *(v51 + 25) = 0;
+    v53 = v52 - 1;
+    if ( v53 >= 0 && *(v51 + v53 + 27) == 32 )
+    {
+      v54 = 1;
+      do
+      {
+        --v53;
+        v55 = v54;
+        if ( v53 == -1 )
+        {
+          *(v51 + 25) = v54;
+          goto LABEL_77;
+        }
+        ++v54;
+      }
+      while ( *(v51 + v53 + 27) == 32 );
+      *(v51 + 25) = v55;
+    }
+LABEL_77:
+    *(v51 + 64) = 1;
+    *(v51 + 48) = CMemberScriptBinding0<CBasePlayer *,bool (CBasePlayer::*)(void),bool>::Call;
+    *(v51 + 56) = CBasePlayer::ScriptIsPlayerNoclipping;
+    return v2;
+  }
+  return result;
+}
+
+
+// CBasePlayer::GetScriptDesc  (line 1375, @0x0000000002002330, libserver.so)
+// calls: GetScriptDesc<CBasePlayer>
+ScriptClassDesc_t *__fastcall CBasePlayer::GetScriptDesc(CBasePlayer *const this)
+{
+  return GetScriptDesc<CBasePlayer>(this);
+}
+
+
+// CBasePlayer::InitScriptDesc  (line 1375, @0x0000000002002340, libserver.so)
+// calls: GetScriptDesc<CBasePlayer>
+// callers: CBaseMultiplayerPlayer::GetEntityClassInternal, CBasePlayer::CEntityInstanceEntityClass::InitOptionalTables
+ScriptClassDesc_t *__cdecl CBasePlayer::InitScriptDesc()
+{
+  return GetScriptDesc<CBasePlayer>(0);
+}
+
+
+// CBasePlayer::GetClassScriptDesc  (line 1375, @0x0000000002002350, libserver.so)
+// calls: GetScriptDesc<CBasePlayer>
+ScriptClassDesc_t *__cdecl CBasePlayer::GetClassScriptDesc()
+{
+  return GetScriptDesc<CBasePlayer>(0);
+}
+
+
+// LocalRegisterSchemaModule<ArbitraryTemplateParameter_server_player_h>  (line 1389, @0x0000000001ff9e00, libserver.so)  // inlines: Call, Get
+// callers: RegisterSchemaModule_player_h
+// strings: "PlayerConnectedState"
+// globals: CSchemaEnumBinding<PlayerConnectedState>::s_pThisModuleBindingPointer, CInfoPlayerStart::CEntityInstanceEntityClass::s_pSchemaBindingForLocalModule, CInfoPlayerStart::s_pSchemaBindingForLocalModule, CPlayerInfo::s_pSchemaBindingForLocalModule, CBasePlayer::CEntityInstanceEntityClass::s_pSchemaBindingForLocalModule, CBasePlayer::StepSoundCache_t::s_pSchemaBindingForLocalModule, CBasePlayer::s_pSchemaBindingForLocalModule
+void __fastcall LocalRegisterSchemaModule<ArbitraryTemplateParameter_server_player_h>(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        SchemaRegistrationPhase_t nRegistrationPhase)
+{
+  if ( nRegistrationPhase != SchemaRegistrationPhase_t::SCHEMA_REGISTRATION_PHASE_ATOMIC_TYPES_AND_ENUMS )
+  {
+    if ( nRegistrationPhase == SchemaRegistrationPhase_t::SCHEMA_REGISTRATION_PHASE_CLASSES )
+    {
+      (*(CInfoPlayerStart::CEntityInstanceEntityClass::s_pSchemaBindingForLocalModule->_vptr_ISchemaBinding + 5))(
+        CInfoPlayerStart::CEntityInstanceEntityClass::s_pSchemaBindingForLocalModule,
+        pSchemaSystem,
+        pBinaryName,
+        "server");
+      (*(CInfoPlayerStart::s_pSchemaBindingForLocalModule->_vptr_ISchemaBinding + 5))(
+        CInfoPlayerStart::s_pSchemaBindingForLocalModule,
+        pSchemaSystem,
+        pBinaryName,
+        "server");
+      (*(CPlayerInfo::s_pSchemaBindingForLocalModule->_vptr_ISchemaBinding + 5))(
+        CPlayerInfo::s_pSchemaBindingForLocalModule,
+        pSchemaSystem,
+        pBinaryName,
+        "server");
+      (*(CBasePlayer::CEntityInstanceEntityClass::s_pSchemaBindingForLocalModule->_vptr_ISchemaBinding + 5))(
+        CBasePlayer::CEntityInstanceEntityClass::s_pSchemaBindingForLocalModule,
+        pSchemaSystem,
+        pBinaryName,
+        "server");
+      (*(CBasePlayer::StepSoundCache_t::s_pSchemaBindingForLocalModule->_vptr_ISchemaBinding + 5))(
+        CBasePlayer::StepSoundCache_t::s_pSchemaBindingForLocalModule,
+        pSchemaSystem,
+        pBinaryName,
+        "server");
+      (*(CBasePlayer::s_pSchemaBindingForLocalModule->_vptr_ISchemaBinding + 5))(
+        CBasePlayer::s_pSchemaBindingForLocalModule,
+        pSchemaSystem,
+        pBinaryName,
+        "server");
+    }
+    ++g_nLinkerHack_SchemaAnchor_RegistrationCountFor_server;
+  }
+  else
+  {
+    (*(CSchemaEnumBinding<PlayerConnectedState>::s_pThisModuleBindingPointer->_vptr_ISchemaBinding + 5))(
+      CSchemaEnumBinding<PlayerConnectedState>::s_pThisModuleBindingPointer,
+      pSchemaSystem,
+      pBinaryName,
+      "server",
+      "PlayerConnectedState");
+    ++g_nLinkerHack_SchemaAnchor_RegistrationCountFor_server;
+  }
+}
+
+
+// RegisterSchemaModule_player_h  (line 1397, @0x0000000001ff9f10, libserver.so)
+// calls: LocalRegisterSchemaModule<ArbitraryTemplateParameter_server_player_h>
+// callers: CSchemaRegistration_server::RegisterAllBindings
+void __fastcall RegisterSchemaModule_player_h(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        SchemaRegistrationPhase_t nRegistrationPhase)
+{
+  LocalRegisterSchemaModule<ArbitraryTemplateParameter_server_player_h>(pSchemaSystem, pBinaryName, nRegistrationPhase);
+}
+
+

@@ -1,0 +1,392 @@
+
+// ==== functions (decompiled by Hex-Rays; names/signatures from DWARF) ====
+
+// CEmptyEntityInstance::CEntityInstanceEntityClass::Schema_CompileTimeVerificationFunction  (line 33, @0x00000000030db2b0, libserver.so)
+void __fastcall CEmptyEntityInstance::CEntityInstanceEntityClass::Schema_CompileTimeVerificationFunction(
+        CEmptyEntityInstance::CEntityInstanceEntityClass *const this)
+{
+  ;
+}
+
+
+// CEmptyEntityInstance::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE  (line 36, @0x00000000030daf60, libserver.so)  // inlines: Call, Get, SetTypeScope
+// calls: CEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE
+// callers: CSchemaNonConstructibleClassBinding<CEmptyEntityInstance::CEntityInstanceEntityClass>::Register, CEmptyEntityInstance::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE, CEmptyEntityInstance::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE
+// globals: CEmptyEntityInstance::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,ch
+CSchemaClassInfo *__fastcall CEmptyEntityInstance::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        const char *pProjectName)
+{
+  ISchemaSystemTypeScope *v6; // r13
+  CSchemaClassInfo *v7; // rax
+  __int64 v8; // rax
+
+  v6 = (*(*pSchemaSystem + 112LL))(pSchemaSystem, 0, pBinaryName);
+  (*(CEntityClass::s_pSchemaBindingForLocalModule->_vptr_ISchemaBinding + 5))(
+    CEntityClass::s_pSchemaBindingForLocalModule,
+    pSchemaSystem,
+    pBinaryName,
+    pProjectName);
+  v7 = CEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+         pSchemaSystem,
+         pBinaryName,
+         pProjectName);
+  CEmptyEntityInstance::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CEmptyEntityInstance_CEntityInstanceEntityClass.m_pOuterTypeScope = v6;
+  CEmptyEntityInstance::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassBases_CEmptyEntityInstance_CEntityInstanceEntityClass[0].m_pClass = v7;
+  v8 = *v6;
+  CEmptyEntityInstance::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult = &CEmptyEntityInstance::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CEmptyEntityInstance_CEntityInstanceEntityClass;
+  (*(v8 + 264))(v6);
+  return CEmptyEntityInstance::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult;
+}
+
+
+// CEmptyEntityInstance::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE  (line 36, @0x00000000030db2c0, libserver.so)
+// calls: CEmptyEntityInstance::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE
+// callers: dota_minimap_boundary::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE
+// globals: CEmptyEntityInstance::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,ch
+CSchemaClassInfo *__fastcall CEmptyEntityInstance::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        const char *pProjectName)
+{
+  CSchemaClassInfo *result; // rax
+
+  result = CEmptyEntityInstance::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult;
+  if ( CEmptyEntityInstance::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult == 0 )
+    return CEmptyEntityInstance::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+             pSchemaSystem,
+             pBinaryName,
+             pProjectName);
+  return result;
+}
+
+
+// CEmptyEntityInstance::CEntityInstanceEntityClass::Schema_VerifyBindingIsRegistered  (line 46, @0x00000000030db2e0, libserver.so)
+// callers: CEmptyEntityInstance::CEntityInstanceEntityClass::Schema_DynamicBinding
+void __cdecl CEmptyEntityInstance::CEntityInstanceEntityClass::Schema_VerifyBindingIsRegistered()
+{
+  ;
+}
+
+
+// CEmptyEntityInstance::Schema_CompileTimeVerificationFunction  (line 54, @0x00000000030db2f0, libserver.so)
+void __fastcall CEmptyEntityInstance::Schema_CompileTimeVerificationFunction(CEmptyEntityInstance *const this)
+{
+  ;
+}
+
+
+// CEmptyEntityInstance::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE  (line 57, @0x00000000030db300, libserver.so)  // inlines: Get, RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE, SetTypeScope
+// calls: __cxa_guard_acquire, __cxa_guard_release, CEmptyEntityInstance::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE, __cxa_guard_abort, _Unwind_Resume
+// callers: dota_minimap_boundary::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE, CSchemaNonConstructibleClassBinding<CEmptyEntityInstance>::Register
+// globals: CEmptyEntityInstance::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pI, `guard variable for'CEmptyEntityInstance::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const, CEmptyEntityInstance::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,ch, CEmptyEntityInstance::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::Impl
+CSchemaClassInfo *__fastcall CEmptyEntityInstance::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        const char *pProjectName)
+{
+  CSchemaClassInfo *result; // rax
+  ISchemaSystemTypeScope *v7; // r14
+  CSchemaClassInfo *v8; // rax
+
+  result = CEmptyEntityInstance::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult;
+  if ( CEmptyEntityInstance::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult == 0 )
+  {
+    v7 = (*(*pSchemaSystem + 112LL))(pSchemaSystem, 0, pBinaryName);
+    if ( `guard variable for'CEmptyEntityInstance::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_NestedClassesOf_CEmptyEntityInstance == 0
+      && __cxa_guard_acquire(&`guard variable for'CEmptyEntityInstance::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_NestedClassesOf_CEmptyEntityInstance) != 0 )
+    {
+      v8 = CEmptyEntityInstance::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult;
+      if ( CEmptyEntityInstance::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult == 0 )
+        v8 = CEmptyEntityInstance::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+               pSchemaSystem,
+               pBinaryName,
+               pProjectName);
+      CEmptyEntityInstance::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_NestedClassesOf_CEmptyEntityInstance[0] = v8;
+      __cxa_guard_release(&`guard variable for'CEmptyEntityInstance::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_NestedClassesOf_CEmptyEntityInstance);
+    }
+    CEmptyEntityInstance::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CEmptyEntityInstance.m_pOuterTypeScope = v7;
+    CEmptyEntityInstance::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult = &CEmptyEntityInstance::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CEmptyEntityInstance;
+    (*(*v7 + 264LL))(
+      v7,
+      &CEmptyEntityInstance::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CEmptyEntityInstance);
+    return CEmptyEntityInstance::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult;
+  }
+  return result;
+}
+
+
+// CEmptyEntityInstance::Schema_VerifyBindingIsRegistered  (line 65, @0x00000000030db3d0, libserver.so)
+void __cdecl CEmptyEntityInstance::Schema_VerifyBindingIsRegistered()
+{
+  ;
+}
+
+
+// CEntityInstance::CEntityInstanceEntityClass::Schema_CompileTimeVerificationFunction  (line 73, @0x00000000030db3e0, libserver.so)
+void __fastcall CEntityInstance::CEntityInstanceEntityClass::Schema_CompileTimeVerificationFunction(
+        CEntityInstance::CEntityInstanceEntityClass *const this)
+{
+  ;
+}
+
+
+// CEntityInstance::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE  (line 76, @0x00000000030daff0, libserver.so)  // inlines: Call, Get, SetTypeScope
+// calls: CEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE
+// callers: CSchemaNonConstructibleClassBinding<CEntityInstance::CEntityInstanceEntityClass>::Register, CEntityInstance::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE, CEntityInstance::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE
+// globals: CEntityInstance::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char co
+CSchemaClassInfo *__fastcall CEntityInstance::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        const char *pProjectName)
+{
+  ISchemaSystemTypeScope *v6; // r14
+  CSchemaClassInfo *v7; // rax
+
+  v6 = (*(*pSchemaSystem + 112LL))(pSchemaSystem, 1, pBinaryName);
+  (*(CEntityClass::s_pSchemaBindingForLocalModule->_vptr_ISchemaBinding + 5))(
+    CEntityClass::s_pSchemaBindingForLocalModule,
+    pSchemaSystem,
+    pBinaryName,
+    pProjectName);
+  v7 = CEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+         pSchemaSystem,
+         pBinaryName,
+         pProjectName);
+  CEntityInstance::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CEntityInstance_CEntityInstanceEntityClass.m_pOuterTypeScope = v6;
+  CEntityInstance::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassBases_CEntityInstance_CEntityInstanceEntityClass[0].m_pClass = v7;
+  CEntityInstance::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult = &CEntityInstance::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CEntityInstance_CEntityInstanceEntityClass;
+  return &CEntityInstance::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CEntityInstance_CEntityInstanceEntityClass;
+}
+
+
+// CEntityInstance::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE  (line 76, @0x00000000030db3f0, libserver.so)
+// calls: CEntityInstance::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE
+// callers: CGameEntity::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE
+// globals: CEntityInstance::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char co
+CSchemaClassInfo *__fastcall CEntityInstance::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        const char *pProjectName)
+{
+  CSchemaClassInfo *result; // rax
+
+  result = CEntityInstance::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult;
+  if ( CEntityInstance::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult == 0 )
+    return CEntityInstance::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+             pSchemaSystem,
+             pBinaryName,
+             pProjectName);
+  return result;
+}
+
+
+// CEntityInstance::CEntityInstanceEntityClass::Schema_VerifyBindingIsRegistered  (line 86, @0x00000000030db410, libserver.so)
+// callers: CEntityInstance::CEntityInstanceEntityClass::Schema_DynamicBinding
+void __cdecl CEntityInstance::CEntityInstanceEntityClass::Schema_VerifyBindingIsRegistered()
+{
+  ;
+}
+
+
+// CEntityInstance::Schema_CompileTimeVerificationFunction  (line 94, @0x00000000030db420, libserver.so)
+void __fastcall CEntityInstance::Schema_CompileTimeVerificationFunction(CEntityInstance *const this)
+{
+  ;
+}
+
+
+// CEntityInstance::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE  (line 101, @0x00000000030db430, libserver.so)  // inlines: Call, Get, NetworkVarDecl_t, RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE, SchemaBinding_SchemaTypeOfMemberVarByAddr<CEntityInstance, CEntityIdentity*>, SchemaBinding_SchemaTypeOfMemberVarByAddr<CEntityInstance, CScriptComponent*>, SchemaBinding_SchemaTypeOfMemberVarByAddr<CEntityInstance, CUtlStringToken>, SchemaBinding_SchemaTypeOfMemberVarByAddr<CEntityInstance, CUtlSymbolLarge>, SetTypeScope
+// calls: __cxa_guard_acquire, __cxa_guard_release, IHandleEntity::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE, CEntityInstance::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE, __cxa_guard_abort, _Unwind_Resume
+// callers: CGameEntity::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE, CSchemaNonConstructibleClassBinding<CEntityInstance>::Register
+// strings: "CEntityIdentity", "CUtlSymbolLarge", "CUtlStringToken", "m_CScriptComponent", "CScriptComponent::Storage_t", "m_pEntity" (7 total)
+// globals: CEntityInstance::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitia, `guard variable for'CEntityInstance::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,cha, CSchemaManipulator<CUtlSymbolLarge>::StaticAccessor(void)::m, CAtomicManipulator<CUtlSymbolLarge>::Get(void)::val, CSchemaManipulator<CUtlStringToken>::StaticAccessor(void)::m, CAtomicManipulator<CUtlStringToken>::Get(void)::val, CEntityInstance::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char co, CEntityInstance::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchem
+CSchemaClassInfo *__fastcall CEntityInstance::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        const char *pProjectName)
+{
+  CSchemaClassInfo *result; // rax
+  ISchemaSystemTypeScope *v7; // r13
+  __int64 (__fastcall *v8)(ISchemaSystemTypeScope *, __int64); // r15
+  __int64 v9; // rax
+  __int64 (__fastcall *v10)(ISchemaSystemTypeScope *, __int64); // r15
+  __int64 v11; // rax
+  CSchemaClassInfo *v12; // rax
+  CSchemaClassInfo *v13; // rax
+
+  result = CEntityInstance::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult;
+  if ( CEntityInstance::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult == 0 )
+  {
+    v7 = (*(*pSchemaSystem + 112LL))(pSchemaSystem, 1, pBinaryName);
+    if ( `guard variable for'CEntityInstance::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CEntityInstance1_MNetworkVarNames_Value == 0
+      && __cxa_guard_acquire(&`guard variable for'CEntityInstance::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CEntityInstance1_MNetworkVarNames_Value) != 0 )
+    {
+      CEntityInstance::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CEntityInstance1_MNetworkVarNames_Value.m_pVarName = "m_pEntity";
+      CEntityInstance::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CEntityInstance1_MNetworkVarNames_Value.m_pVarType = "CEntityIdentity *";
+      __cxa_guard_release(&`guard variable for'CEntityInstance::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CEntityInstance1_MNetworkVarNames_Value);
+    }
+    if ( `guard variable for'CEntityInstance::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CEntityInstance2_MNetworkVarNames_Value == 0
+      && __cxa_guard_acquire(&`guard variable for'CEntityInstance::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CEntityInstance2_MNetworkVarNames_Value) != 0 )
+    {
+      CEntityInstance::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CEntityInstance2_MNetworkVarNames_Value.m_pVarName = "m_CScriptComponent";
+      CEntityInstance::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CEntityInstance2_MNetworkVarNames_Value.m_pVarType = "CScriptComponent::Storage_t";
+      __cxa_guard_release(&`guard variable for'CEntityInstance::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CEntityInstance2_MNetworkVarNames_Value);
+    }
+    v8 = *(*v7 + 48LL);
+    v9 = (*(*v7 + 88LL))(v7, "CEntityIdentity");
+    CEntityInstance::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CEntityInstance[0].m_pType = v8(v7, v9);
+    CEntityInstance::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CEntityInstance[1].m_pType = (*(*v7 + 56LL))(v7, "CUtlSymbolLarge", 3007, CAtomicManipulator<CUtlSymbolLarge>::Get(void)::val, &CSchemaManipulator<CUtlSymbolLarge>::StaticAccessor(void)::m);
+    CEntityInstance::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CEntityInstance[2].m_pType = (*(*v7 + 56LL))(v7, "CUtlStringToken", 3010, CAtomicManipulator<CUtlStringToken>::Get(void)::val, CSchemaManipulator<CUtlStringToken>::StaticAccessor(void)::m);
+    v10 = *(*v7 + 48LL);
+    v11 = (*(*v7 + 88LL))(v7, "CScriptComponent");
+    CEntityInstance::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CEntityInstance[3].m_pType = v10(v7, v11);
+    if ( `guard variable for'CEntityInstance::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_NestedClassesOf_CEntityInstance == 0
+      && __cxa_guard_acquire(&`guard variable for'CEntityInstance::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_NestedClassesOf_CEntityInstance) != 0 )
+    {
+      v12 = CEntityInstance::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult;
+      if ( CEntityInstance::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult == 0 )
+        v12 = CEntityInstance::CEntityInstanceEntityClass::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+                pSchemaSystem,
+                pBinaryName,
+                pProjectName);
+      CEntityInstance::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_NestedClassesOf_CEntityInstance[0] = v12;
+      __cxa_guard_release(&`guard variable for'CEntityInstance::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_NestedClassesOf_CEntityInstance);
+    }
+    (*(IHandleEntity::s_pSchemaBindingForLocalModule->_vptr_ISchemaBinding + 5))(
+      IHandleEntity::s_pSchemaBindingForLocalModule,
+      pSchemaSystem,
+      pBinaryName,
+      pProjectName);
+    v13 = IHandleEntity::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+            pSchemaSystem,
+            pBinaryName,
+            pProjectName);
+    CEntityInstance::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CEntityInstance.m_pOuterTypeScope = v7;
+    CEntityInstance::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassBases_CEntityInstance[0].m_pClass = v13;
+    CEntityInstance::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult = &CEntityInstance::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CEntityInstance;
+    return &CEntityInstance::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CEntityInstance;
+  }
+  return result;
+}
+
+
+// CEntityInstance::Schema_VerifyBindingIsRegistered  (line 176, @0x00000000030db670, libserver.so)
+// callers: CEntityClass::GetInstanceSchemaBinding, CEntityInstance::Schema_DynamicBinding
+void __cdecl CEntityInstance::Schema_VerifyBindingIsRegistered()
+{
+  ;
+}
+
+
+// CEntityInstance::SetupEntClassInputs  (line 184, @0x00000000030db680, libserver.so)  // inlines: CEntityIOInputFunction<CEntityInstance, CEntityInstance>, CUtlAbstractDelegate, CUtlDelegate<CEntityInstance, CEntityInstance>, Convert<CEntityInstance, void (CEntityInstance::*)(inputdata2_t&), void (detail::GenericClass::*)()>, FastDelegate1<CEntityInstance, CEntityInstance>, SetMementoFrom, bindmemfunc<CEntityInstance, void (CEntityInstance::*)(inputdata2_t&)>, operator=
+// calls: __cxa_guard_acquire, __cxa_guard_release
+// callers: CEntityRootClassesInitializer::CEntityRootClassesInitializer
+// strings: "AddOutput", "RunScriptCode", "RunScriptFile", "CallScriptFunction", "CallPrivateScriptFunction", "CallGlobalScriptFunction"
+// globals: `guard variable for'CEntityInstance::SetupEntClassInputs(CEntityClass *)::CEntityInstance_Inputs, CEntityInstance::SetupEntClassInputs(CEntityClass *)::CEntityInstance_Inputs, InputFunctionAdapterInputData(CUtlAbstractDelegate const&,CEntityInstance *,CEntityInstance *,CEntityInstance *,int,void *,CVariantBase<CVariantDefaultAllocator
+void __fastcall CEntityInstance::SetupEntClassInputs(CEntityClass *pEntityClass)
+{
+  if ( `guard variable for'CEntityInstance::SetupEntClassInputs(CEntityClass *)::CEntityInstance_Inputs == 0
+    && __cxa_guard_acquire(&`guard variable for'CEntityInstance::SetupEntClassInputs(CEntityClass *)::CEntityInstance_Inputs) != 0 )
+  {
+    qword_4D7B8D8 = 0;
+    CEntityInstance::SetupEntClassInputs(CEntityClass *)::CEntityInstance_Inputs[0].m_inputFunction.m_pName = "AddOutput";
+    dword_4D7B8C8 = 0;
+    qword_4D7B8D0 = 0;
+    qword_4D7B8E8 = 0;
+    qword_4D7B8E0 = CEntityInstance::InputAddOutput;
+    qword_4D7B8F0 = InputFunctionAdapterInputData;
+    qword_4D7B8F8 = "RunScriptCode";
+    qword_4D7B910 = 0;
+    dword_4D7B900 = 0;
+    qword_4D7B908 = 0;
+    qword_4D7B918 = CEntityInstance::InputRunPrivateScript;
+    qword_4D7B928 = InputFunctionAdapterInputData;
+    qword_4D7B930 = "RunScriptFile";
+    qword_4D7B920 = 0;
+    qword_4D7B948 = 0;
+    dword_4D7B938 = 0;
+    qword_4D7B950 = CEntityInstance::InputRunPrivateScriptFile;
+    qword_4D7B960 = InputFunctionAdapterInputData;
+    qword_4D7B968 = "CallScriptFunction";
+    qword_4D7B940 = 0;
+    qword_4D7B958 = 0;
+    qword_4D7B980 = 0;
+    qword_4D7B988 = CEntityInstance::InputCallScriptFunction;
+    qword_4D7B998 = InputFunctionAdapterInputData;
+    dword_4D7B970 = 0;
+    qword_4D7B978 = 0;
+    qword_4D7B990 = 0;
+    qword_4D7B9B8 = 0;
+    qword_4D7B9A0 = "CallPrivateScriptFunction";
+    dword_4D7B9A8 = 0;
+    qword_4D7B9B0 = 0;
+    qword_4D7B9C8 = 0;
+    qword_4D7B9C0 = CEntityInstance::InputCallPrivateScriptFunction;
+    qword_4D7B9D0 = InputFunctionAdapterInputData;
+    qword_4D7B9D8 = "CallGlobalScriptFunction";
+    qword_4D7B9F0 = 0;
+    dword_4D7B9E0 = 0;
+    qword_4D7B9E8 = 0;
+    qword_4D7B9F8 = CEntityInstance::InputCallGlobalScriptFunction;
+    qword_4D7BA08 = InputFunctionAdapterInputData;
+    qword_4D7BA00 = 0;
+    __cxa_guard_release(&`guard variable for'CEntityInstance::SetupEntClassInputs(CEntityClass *)::CEntityInstance_Inputs);
+  }
+  pEntityClass->m_nInputCount = 6;
+  pEntityClass->m_pInputs = CEntityInstance::SetupEntClassInputs(CEntityClass *)::CEntityInstance_Inputs;
+}
+
+
+// LocalRegisterSchemaModule<ArbitraryTemplateParameter_entity2_entityinstance_h>  (line 197, @0x00000000030db8e0, libserver.so)  // inlines: Call
+// callers: RegisterSchemaModule_entityinstance_h
+// strings: "entity2"
+// globals: CEmptyEntityInstance::CEntityInstanceEntityClass::s_pSchemaBindingForLocalModule, CEmptyEntityInstance::s_pSchemaBindingForLocalModule, CEntityInstance::CEntityInstanceEntityClass::s_pSchemaBindingForLocalModule, CEntityInstance::s_pSchemaBindingForLocalModule
+void __fastcall LocalRegisterSchemaModule<ArbitraryTemplateParameter_entity2_entityinstance_h>(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        SchemaRegistrationPhase_t nRegistrationPhase)
+{
+  if ( nRegistrationPhase == SchemaRegistrationPhase_t::SCHEMA_REGISTRATION_PHASE_CLASSES )
+  {
+    (*(CEmptyEntityInstance::CEntityInstanceEntityClass::s_pSchemaBindingForLocalModule->_vptr_ISchemaBinding + 5))(
+      CEmptyEntityInstance::CEntityInstanceEntityClass::s_pSchemaBindingForLocalModule,
+      pSchemaSystem,
+      pBinaryName,
+      "entity2");
+    (*(CEmptyEntityInstance::s_pSchemaBindingForLocalModule->_vptr_ISchemaBinding + 5))(
+      CEmptyEntityInstance::s_pSchemaBindingForLocalModule,
+      pSchemaSystem,
+      pBinaryName,
+      "entity2");
+    (*(CEntityInstance::CEntityInstanceEntityClass::s_pSchemaBindingForLocalModule->_vptr_ISchemaBinding + 5))(
+      CEntityInstance::CEntityInstanceEntityClass::s_pSchemaBindingForLocalModule,
+      pSchemaSystem,
+      pBinaryName,
+      "entity2");
+    (*(CEntityInstance::s_pSchemaBindingForLocalModule->_vptr_ISchemaBinding + 5))(
+      CEntityInstance::s_pSchemaBindingForLocalModule,
+      pSchemaSystem,
+      pBinaryName,
+      "entity2");
+  }
+  ++g_nLinkerHack_SchemaAnchor_RegistrationCountFor_entity2;
+}
+
+
+// RegisterSchemaModule_entityinstance_h  (line 202, @0x00000000030db980, libserver.so)
+// calls: LocalRegisterSchemaModule<ArbitraryTemplateParameter_entity2_entityinstance_h>
+// callers: CSchemaRegistration_entity2::RegisterAllBindings
+void __fastcall RegisterSchemaModule_entityinstance_h(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        SchemaRegistrationPhase_t nRegistrationPhase)
+{
+  LocalRegisterSchemaModule<ArbitraryTemplateParameter_entity2_entityinstance_h>(
+    pSchemaSystem,
+    pBinaryName,
+    nRegistrationPhase);
+}
+
+

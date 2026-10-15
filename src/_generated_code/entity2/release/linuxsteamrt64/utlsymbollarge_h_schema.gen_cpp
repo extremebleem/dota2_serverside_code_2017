@@ -1,0 +1,49 @@
+
+// ==== functions (decompiled by Hex-Rays; names/signatures from DWARF) ====
+
+// RegisterAtomicType_CUtlSymbolLarge  (line 35, @0x00000000030d4350, libserver.so)  // inlines: SchemaMetaSet2_t
+// calls: __cxa_guard_acquire, __cxa_guard_release
+// callers: LocalRegisterSchemaModule<ArbitraryTemplateParameter_entity2_utlsymbollarge_h>, RegisterSchemaModule_utlsymbollarge_h
+// globals: `guard variable for'RegisterAtomicType_CUtlSymbolLarge(ISchemaSystem *)::s_AtomicTypeInfoCUtlSymbolLarge, RegisterAtomicType_CUtlSymbolLarge(ISchemaSystem *)::s_AtomicTypeInfoCUtlSymbolLarge
+void __fastcall RegisterAtomicType_CUtlSymbolLarge(ISchemaSystem *pSchemaSystem)
+{
+  if ( `guard variable for'RegisterAtomicType_CUtlSymbolLarge(ISchemaSystem *)::s_AtomicTypeInfoCUtlSymbolLarge == 0
+    && __cxa_guard_acquire(&`guard variable for'RegisterAtomicType_CUtlSymbolLarge(ISchemaSystem *)::s_AtomicTypeInfoCUtlSymbolLarge) != 0 )
+  {
+    RegisterAtomicType_CUtlSymbolLarge(ISchemaSystem *)::s_AtomicTypeInfoCUtlSymbolLarge.m_Metadata2.m_pMetaSet = 0;
+    RegisterAtomicType_CUtlSymbolLarge(ISchemaSystem *)::s_AtomicTypeInfoCUtlSymbolLarge.m_Metadata2.m_nMetaCount = 0;
+    __cxa_guard_release(&`guard variable for'RegisterAtomicType_CUtlSymbolLarge(ISchemaSystem *)::s_AtomicTypeInfoCUtlSymbolLarge);
+  }
+  (*(*pSchemaSystem + 248LL))(
+    pSchemaSystem,
+    &RegisterAtomicType_CUtlSymbolLarge(ISchemaSystem *)::s_AtomicTypeInfoCUtlSymbolLarge);
+}
+
+
+// LocalRegisterSchemaModule<ArbitraryTemplateParameter_entity2_utlsymbollarge_h>  (line 44, @0x00000000030d43c0, libserver.so)
+// calls: RegisterAtomicType_CUtlSymbolLarge
+void __fastcall LocalRegisterSchemaModule<ArbitraryTemplateParameter_entity2_utlsymbollarge_h>(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        SchemaRegistrationPhase_t nRegistrationPhase)
+{
+  if ( nRegistrationPhase == SchemaRegistrationPhase_t::SCHEMA_REGISTRATION_PHASE_ATOMIC_TYPES_AND_ENUMS )
+    RegisterAtomicType_CUtlSymbolLarge(pSchemaSystem);
+  ++g_nLinkerHack_SchemaAnchor_RegistrationCountFor_entity2;
+}
+
+
+// RegisterSchemaModule_utlsymbollarge_h  (line 46, @0x00000000030d43f0, libserver.so)  // inlines: LocalRegisterSchemaModule<ArbitraryTemplateParameter_entity2_utlsymbollarge_h>
+// calls: RegisterAtomicType_CUtlSymbolLarge
+// callers: CSchemaRegistration_entity2::RegisterAllBindings
+void __fastcall RegisterSchemaModule_utlsymbollarge_h(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        SchemaRegistrationPhase_t nRegistrationPhase)
+{
+  if ( nRegistrationPhase == SchemaRegistrationPhase_t::SCHEMA_REGISTRATION_PHASE_ATOMIC_TYPES_AND_ENUMS )
+    RegisterAtomicType_CUtlSymbolLarge(pSchemaSystem);
+  ++g_nLinkerHack_SchemaAnchor_RegistrationCountFor_entity2;
+}
+
+

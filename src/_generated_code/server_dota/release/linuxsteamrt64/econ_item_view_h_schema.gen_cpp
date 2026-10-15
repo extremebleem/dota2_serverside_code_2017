@@ -1,0 +1,310 @@
+
+// ==== functions (decompiled by Hex-Rays; names/signatures from DWARF) ====
+
+// CAttributeList::Schema_CompileTimeVerificationFunction  (line 35, @0x0000000002e70ca0, libserver.so)
+void __fastcall CAttributeList::Schema_CompileTimeVerificationFunction(CAttributeList *const this)
+{
+  ;
+}
+
+
+// CAttributeList::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE  (line 40, @0x0000000002e70cb0, libserver.so)  // inlines: Get, NetworkVarDecl_t, SchemaBinding_SchemaTypeOfMemberVarByAddr<CAttributeList, CAttributeManager*>, SchemaBinding_SchemaTypeOfMemberVarByAddr<CAttributeList, CUtlVectorEmbeddedNetworkVar<CEconItemAttribute, CAttributeList::NetworkVar_m_Attributes> >, SetTypeScope
+// calls: __cxa_guard_acquire, __cxa_guard_release
+// callers: CSchemaClassBinding<CAttributeList>::Register
+// strings: "CEconItemAttribute", "CUtlVector", "CAttributeManager", "m_Attributes"
+// globals: CAttributeList::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitial, `guard variable for'CAttributeList::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char, CSchemaManipulator<CUtlVector<CEconItemAttribute,CNetworkUtlVector_MemoryType<CEconItemAttribute,-1>>>::StaticAccessor(void)::m, CAtomicManipulator<CUtlVector<CEconItemAttribute,CNetworkUtlVector_MemoryType<CEconItemAttribute,-1>>>::Get(void)::val, CAttributeList::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema
+CSchemaClassInfo *__fastcall CAttributeList::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        const char *pProjectName)
+{
+  CSchemaClassInfo *result; // rax
+  ISchemaSystemTypeScope *v4; // rbx
+  __int64 (__fastcall *v5)(ISchemaSystemTypeScope *, const char *, __int64, __int64 (__fastcall ***)(), __int64 (__fastcall ***)(), __int64); // r12
+  __int64 v6; // rax
+  __int64 (__fastcall *v7)(ISchemaSystemTypeScope *, __int64); // r12
+  __int64 v8; // rax
+  CSchemaType *v9; // rax
+
+  result = CAttributeList::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult;
+  if ( CAttributeList::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult == 0 )
+  {
+    v4 = (*(*pSchemaSystem + 112LL))(pSchemaSystem, 0, pBinaryName);
+    if ( `guard variable for'CAttributeList::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CAttributeList1_MNetworkVarNames_Value == 0
+      && __cxa_guard_acquire(&`guard variable for'CAttributeList::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CAttributeList1_MNetworkVarNames_Value) != 0 )
+    {
+      CAttributeList::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CAttributeList1_MNetworkVarNames_Value.m_pVarName = "m_Attributes";
+      CAttributeList::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CAttributeList1_MNetworkVarNames_Value.m_pVarType = "CEconItemAttribute";
+      __cxa_guard_release(&`guard variable for'CAttributeList::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CAttributeList1_MNetworkVarNames_Value);
+    }
+    v5 = *(*v4 + 64LL);
+    v6 = (*(*v4 + 88LL))(v4, "CEconItemAttribute");
+    CAttributeList::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CAttributeList[0].m_pType = v5(v4, "CUtlVector", 3002, &CAtomicManipulator<CUtlVector<CEconItemAttribute,CNetworkUtlVector_MemoryType<CEconItemAttribute,-1>>>::Get(void)::val, CSchemaManipulator<CUtlVector<CEconItemAttribute,CNetworkUtlVector_MemoryType<CEconItemAttribute,-1>>>::StaticAccessor(void)::m, v6);
+    v7 = *(*v4 + 48LL);
+    v8 = (*(*v4 + 88LL))(v4, "CAttributeManager");
+    v9 = v7(v4, v8);
+    CAttributeList::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CAttributeList.m_pOuterTypeScope = v4;
+    CAttributeList::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CAttributeList[1].m_pType = v9;
+    CAttributeList::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult = &CAttributeList::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CAttributeList;
+    (*(*v4 + 264LL))(
+      v4,
+      &CAttributeList::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CAttributeList);
+    return CAttributeList::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult;
+  }
+  return result;
+}
+
+
+// CAttributeList::Schema_VerifyBindingIsRegistered  (line 76, @0x0000000002e70dd0, libserver.so)
+void __cdecl CAttributeList::Schema_VerifyBindingIsRegistered()
+{
+  ;
+}
+
+
+// CEconItemAttribute::Schema_CompileTimeVerificationFunction  (line 84, @0x0000000002e70de0, libserver.so)
+void __fastcall CEconItemAttribute::Schema_CompileTimeVerificationFunction(CEconItemAttribute *const this)
+{
+  ;
+}
+
+
+// CEconItemAttribute::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE  (line 89, @0x0000000002e70df0, libserver.so)  // inlines: Get, NetworkVarDecl_t, SchemaBinding_SchemaTypeOfMemberVarByAddr<CEconItemAttribute, CNetworkVarBase<float, CEconItemAttribute::NetworkVar_m_flValue> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<CEconItemAttribute, CNetworkVarBase<short unsigned int, CEconItemAttribute::NetworkVar_m_iAttributeDefinitionIndex> >, SetTypeScope
+// calls: __cxa_guard_acquire, __cxa_guard_release
+// callers: CSchemaClassBinding<CEconItemAttribute>::Register
+// strings: "m_iAttributeDefinitionIndex", "attrib_definition_index_t", "m_flValue"
+// globals: CEconItemAttribute::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pIni, `guard variable for'CEconItemAttribute::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,, CEconItemAttribute::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSc
+CSchemaClassInfo *__fastcall CEconItemAttribute::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        const char *pProjectName)
+{
+  CSchemaClassInfo *result; // rax
+  ISchemaSystemTypeScope *v4; // rbx
+  CSchemaType *v5; // rax
+
+  result = CEconItemAttribute::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult;
+  if ( CEconItemAttribute::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult == 0 )
+  {
+    v4 = (*(*pSchemaSystem + 112LL))(pSchemaSystem, 0, pBinaryName);
+    if ( `guard variable for'CEconItemAttribute::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CEconItemAttribute1_MNetworkVarNames_Value == 0
+      && __cxa_guard_acquire(&`guard variable for'CEconItemAttribute::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CEconItemAttribute1_MNetworkVarNames_Value) != 0 )
+    {
+      CEconItemAttribute::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CEconItemAttribute1_MNetworkVarNames_Value.m_pVarName = "m_iAttributeDefinitionIndex";
+      CEconItemAttribute::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CEconItemAttribute1_MNetworkVarNames_Value.m_pVarType = "attrib_definition_index_t";
+      __cxa_guard_release(&`guard variable for'CEconItemAttribute::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CEconItemAttribute1_MNetworkVarNames_Value);
+    }
+    if ( `guard variable for'CEconItemAttribute::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CEconItemAttribute2_MNetworkVarNames_Value == 0
+      && __cxa_guard_acquire(&`guard variable for'CEconItemAttribute::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CEconItemAttribute2_MNetworkVarNames_Value) != 0 )
+    {
+      CEconItemAttribute::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CEconItemAttribute2_MNetworkVarNames_Value.m_pVarName = "m_flValue";
+      CEconItemAttribute::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CEconItemAttribute2_MNetworkVarNames_Value.m_pVarType = "float";
+      __cxa_guard_release(&`guard variable for'CEconItemAttribute::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CEconItemAttribute2_MNetworkVarNames_Value);
+    }
+    CEconItemAttribute::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CEconItemAttribute[0].m_pType = (*(*v4 + 40LL))(v4, 6);
+    v5 = (*(*v4 + 40LL))(v4, 11);
+    CEconItemAttribute::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CEconItemAttribute.m_pOuterTypeScope = v4;
+    CEconItemAttribute::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CEconItemAttribute[1].m_pType = v5;
+    CEconItemAttribute::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult = &CEconItemAttribute::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CEconItemAttribute;
+    (*(*v4 + 264LL))(
+      v4,
+      &CEconItemAttribute::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CEconItemAttribute);
+    return CEconItemAttribute::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult;
+  }
+  return result;
+}
+
+
+// CEconItemAttribute::Schema_VerifyBindingIsRegistered  (line 135, @0x0000000002e70f20, libserver.so)
+void __cdecl CEconItemAttribute::Schema_VerifyBindingIsRegistered()
+{
+  ;
+}
+
+
+// CEconItemView::Schema_CompileTimeVerificationFunction  (line 143, @0x0000000002e70f30, libserver.so)
+void __fastcall CEconItemView::Schema_CompileTimeVerificationFunction(CEconItemView *const this)
+{
+  ;
+}
+
+
+// CEconItemView::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE  (line 163, @0x0000000002e70f40, libserver.so)  // inlines: Call, Get, NetworkVarDecl_t, RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE, SchemaBinding_SchemaTypeOfMemberVarByAddr<CEconItemView, CEconItemView::NetworkVar_m_AttributeList>, SchemaBinding_SchemaTypeOfMemberVarByAddr<CEconItemView, CNetworkVarBase<bool, CEconItemView::NetworkVar_m_bInitialized> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<CEconItemView, CNetworkVarBase<int, CEconItemView::NetworkVar_m_iEntityQuality> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<CEconItemView, CNetworkVarBase<item_definition_index_t, CEconItemView::NetworkVar_m_iItemDefinitionIndex> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<CEconItemView, CNetworkVarBase<itemid_t, CEconItemView::NetworkVar_m_iItemID> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<CEconItemView, CNetworkVarBase<style_index_t, CEconItemView::NetworkVar_m_nOverrideStyle> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<CEconItemView, CNetworkVarBase<unsigned int, CEconItemView::NetworkVar_m_iAccountID> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<CEconItemView, CNetworkVarBase<unsigned int, CEconItemView::NetworkVar_m_iEntityLevel> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<CEconItemView, CNetworkVarBase<unsigned int, CEconItemView::NetworkVar_m_iInventoryPosition> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<CEconItemView, bool>, SchemaBinding_SchemaTypeOfMemberVarByAddr<CEconItemView, char*>, SchemaBinding_SchemaTypeOfMemberVarByAddr<CEconItemView, eEconItemOrigin>, SchemaBinding_SchemaTypeOfMemberVarByAddr<CEconItemView, int>, SchemaBinding_SchemaTypeOfMemberVarByAddr<CEconItemView, unsigned char>, SetTypeScope
+// calls: __cxa_guard_acquire, __cxa_guard_release, IEconItemInterface::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE
+// callers: CSchemaClassBinding<CEconItemView>::Register
+// strings: "item_definition_index_t", "itemid_t", "style_index_t", "eEconItemOrigin", "CAttributeList", "m_iItemDefinitionIndex" (15 total)
+// globals: CEconItemView::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitiali, `guard variable for'CEconItemView::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char , CSchemaManipulator<item_definition_index_t>::StaticAccessor(void)::m, CAtomicManipulator<item_definition_index_t>::Get(void)::val, CSchemaManipulator<itemid_t>::StaticAccessor(void)::m, CAtomicManipulator<itemid_t>::Get(void)::val, CSchemaManipulator<style_index_t>::StaticAccessor(void)::m, CAtomicManipulator<style_index_t>::Get(void)::val (11 total)
+CSchemaClassInfo *__fastcall CEconItemView::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        const char *pProjectName)
+{
+  CSchemaClassInfo *result; // rax
+  ISchemaSystemTypeScope *v7; // rbx
+  __int64 (__fastcall *v8)(ISchemaSystemTypeScope *, __int64); // r15
+  __int64 v9; // rax
+  const char *v10; // rdx
+  const CSchemaClassInfo *v11; // rax
+
+  result = CEconItemView::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult;
+  if ( CEconItemView::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult == 0 )
+  {
+    v7 = (*(*pSchemaSystem + 112LL))(pSchemaSystem, 0, pBinaryName);
+    if ( `guard variable for'CEconItemView::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CEconItemView1_MNetworkVarNames_Value == 0
+      && __cxa_guard_acquire(&`guard variable for'CEconItemView::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CEconItemView1_MNetworkVarNames_Value) != 0 )
+    {
+      CEconItemView::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CEconItemView1_MNetworkVarNames_Value.m_pVarName = "m_iItemDefinitionIndex";
+      CEconItemView::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CEconItemView1_MNetworkVarNames_Value.m_pVarType = "item_definition_index_t";
+      __cxa_guard_release(&`guard variable for'CEconItemView::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CEconItemView1_MNetworkVarNames_Value);
+    }
+    if ( `guard variable for'CEconItemView::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CEconItemView2_MNetworkVarNames_Value == 0
+      && __cxa_guard_acquire(&`guard variable for'CEconItemView::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CEconItemView2_MNetworkVarNames_Value) != 0 )
+    {
+      CEconItemView::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CEconItemView2_MNetworkVarNames_Value.m_pVarName = "m_iEntityQuality";
+      CEconItemView::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CEconItemView2_MNetworkVarNames_Value.m_pVarType = "int";
+      __cxa_guard_release(&`guard variable for'CEconItemView::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CEconItemView2_MNetworkVarNames_Value);
+    }
+    if ( `guard variable for'CEconItemView::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CEconItemView3_MNetworkVarNames_Value == 0
+      && __cxa_guard_acquire(&`guard variable for'CEconItemView::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CEconItemView3_MNetworkVarNames_Value) != 0 )
+    {
+      CEconItemView::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CEconItemView3_MNetworkVarNames_Value.m_pVarName = "m_iEntityLevel";
+      CEconItemView::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CEconItemView3_MNetworkVarNames_Value.m_pVarType = "uint32";
+      __cxa_guard_release(&`guard variable for'CEconItemView::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CEconItemView3_MNetworkVarNames_Value);
+    }
+    if ( `guard variable for'CEconItemView::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CEconItemView4_MNetworkVarNames_Value == 0
+      && __cxa_guard_acquire(&`guard variable for'CEconItemView::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CEconItemView4_MNetworkVarNames_Value) != 0 )
+    {
+      CEconItemView::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CEconItemView4_MNetworkVarNames_Value.m_pVarName = "m_iItemID";
+      CEconItemView::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CEconItemView4_MNetworkVarNames_Value.m_pVarType = "itemid_t";
+      __cxa_guard_release(&`guard variable for'CEconItemView::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CEconItemView4_MNetworkVarNames_Value);
+    }
+    if ( `guard variable for'CEconItemView::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CEconItemView5_MNetworkVarNames_Value == 0
+      && __cxa_guard_acquire(&`guard variable for'CEconItemView::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CEconItemView5_MNetworkVarNames_Value) != 0 )
+    {
+      CEconItemView::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CEconItemView5_MNetworkVarNames_Value.m_pVarName = "m_iAccountID";
+      CEconItemView::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CEconItemView5_MNetworkVarNames_Value.m_pVarType = "uint32";
+      __cxa_guard_release(&`guard variable for'CEconItemView::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CEconItemView5_MNetworkVarNames_Value);
+    }
+    if ( `guard variable for'CEconItemView::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CEconItemView6_MNetworkVarNames_Value == 0
+      && __cxa_guard_acquire(&`guard variable for'CEconItemView::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CEconItemView6_MNetworkVarNames_Value) != 0 )
+    {
+      CEconItemView::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CEconItemView6_MNetworkVarNames_Value.m_pVarName = "m_iInventoryPosition";
+      CEconItemView::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CEconItemView6_MNetworkVarNames_Value.m_pVarType = "uint32";
+      __cxa_guard_release(&`guard variable for'CEconItemView::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CEconItemView6_MNetworkVarNames_Value);
+    }
+    if ( `guard variable for'CEconItemView::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CEconItemView7_MNetworkVarNames_Value == 0
+      && __cxa_guard_acquire(&`guard variable for'CEconItemView::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CEconItemView7_MNetworkVarNames_Value) != 0 )
+    {
+      CEconItemView::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CEconItemView7_MNetworkVarNames_Value.m_pVarName = "m_bInitialized";
+      CEconItemView::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CEconItemView7_MNetworkVarNames_Value.m_pVarType = "bool";
+      __cxa_guard_release(&`guard variable for'CEconItemView::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CEconItemView7_MNetworkVarNames_Value);
+    }
+    if ( `guard variable for'CEconItemView::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CEconItemView8_MNetworkVarNames_Value == 0
+      && __cxa_guard_acquire(&`guard variable for'CEconItemView::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CEconItemView8_MNetworkVarNames_Value) != 0 )
+    {
+      CEconItemView::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CEconItemView8_MNetworkVarNames_Value.m_pVarName = "m_nOverrideStyle";
+      CEconItemView::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CEconItemView8_MNetworkVarNames_Value.m_pVarType = "style_index_t";
+      __cxa_guard_release(&`guard variable for'CEconItemView::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CEconItemView8_MNetworkVarNames_Value);
+    }
+    if ( `guard variable for'CEconItemView::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CEconItemView9_MNetworkVarNames_Value == 0
+      && __cxa_guard_acquire(&`guard variable for'CEconItemView::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CEconItemView9_MNetworkVarNames_Value) != 0 )
+    {
+      CEconItemView::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CEconItemView9_MNetworkVarNames_Value.m_pVarName = "m_AttributeList";
+      CEconItemView::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CEconItemView9_MNetworkVarNames_Value.m_pVarType = "CAttributeList";
+      __cxa_guard_release(&`guard variable for'CEconItemView::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMeta_CEconItemView9_MNetworkVarNames_Value);
+    }
+    CEconItemView::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CEconItemView[0].m_pType = (*(*v7 + 56LL))(v7, "item_definition_index_t", 5008, CAtomicManipulator<item_definition_index_t>::Get(void)::val, &CSchemaManipulator<item_definition_index_t>::StaticAccessor(void)::m);
+    CEconItemView::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CEconItemView[1].m_pType = (*(*v7 + 40LL))(v7, 7);
+    CEconItemView::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CEconItemView[2].m_pType = (*(*v7 + 40LL))(v7, 8);
+    CEconItemView::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CEconItemView[3].m_pType = (*(*v7 + 56LL))(v7, "itemid_t", 5009, CAtomicManipulator<itemid_t>::Get(void)::val, CSchemaManipulator<itemid_t>::StaticAccessor(void)::m);
+    CEconItemView::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CEconItemView[4].m_pType = (*(*v7 + 40LL))(v7, 8);
+    CEconItemView::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CEconItemView[5].m_pType = (*(*v7 + 40LL))(v7, 8);
+    CEconItemView::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CEconItemView[6].m_pType = (*(*v7 + 40LL))(v7, 13);
+    CEconItemView::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CEconItemView[7].m_pType = (*(*v7 + 56LL))(v7, "style_index_t", 5010, CAtomicManipulator<style_index_t>::Get(void)::val, CSchemaManipulator<style_index_t>::StaticAccessor(void)::m);
+    CEconItemView::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CEconItemView[8].m_pType = (*(*v7 + 40LL))(v7, 13);
+    CEconItemView::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CEconItemView[9].m_pType = (*(*v7 + 40LL))(v7, 13);
+    CEconItemView::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CEconItemView[10].m_pType = (*(*v7 + 40LL))(v7, 13);
+    CEconItemView::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CEconItemView[11].m_pType = (*(*v7 + 40LL))(v7, 13);
+    CEconItemView::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CEconItemView[12].m_pType = (*(*v7 + 40LL))(v7, 7);
+    CEconItemView::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CEconItemView[13].m_pType = (*(*v7 + 40LL))(v7, 4);
+    CEconItemView::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CEconItemView[14].m_pType = (*(*v7 + 96LL))(v7, "eEconItemOrigin");
+    v8 = *(*v7 + 48LL);
+    v9 = (*(*v7 + 40LL))(v7, 2);
+    CEconItemView::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CEconItemView[15].m_pType = v8(v7, v9);
+    CEconItemView::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CEconItemView[16].m_pType = (*(*v7 + 88LL))(v7, "CAttributeList");
+    (*(IEconItemInterface::s_pSchemaBindingForLocalModule->_vptr_ISchemaBinding + 5))(
+      IEconItemInterface::s_pSchemaBindingForLocalModule,
+      pSchemaSystem,
+      pBinaryName,
+      pProjectName);
+    v11 = IEconItemInterface::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult;
+    if ( IEconItemInterface::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult == 0 )
+      v11 = IEconItemInterface::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+              pSchemaSystem,
+              pBinaryName,
+              v10);
+    CEconItemView::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassBases_CEconItemView[0].m_pClass = v11;
+    CEconItemView::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CEconItemView.m_pOuterTypeScope = v7;
+    CEconItemView::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult = &CEconItemView::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CEconItemView;
+    (*(*v7 + 264LL))(
+      v7,
+      &CEconItemView::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CEconItemView);
+    return CEconItemView::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult;
+  }
+  return result;
+}
+
+
+// CEconItemView::Schema_VerifyBindingIsRegistered  (line 312, @0x0000000002e714b0, libserver.so)
+// callers: CEconItemView::Schema_DynamicBinding
+void __cdecl CEconItemView::Schema_VerifyBindingIsRegistered()
+{
+  ;
+}
+
+
+// LocalRegisterSchemaModule<ArbitraryTemplateParameter_server_econ_item_view_h>  (line 320, @0x0000000002e714c0, libserver.so)  // inlines: Call
+// callers: RegisterSchemaModule_econ_item_view_h
+// globals: CAttributeList::s_pSchemaBindingForLocalModule, CEconItemAttribute::s_pSchemaBindingForLocalModule, CEconItemView::s_pSchemaBindingForLocalModule
+void __fastcall LocalRegisterSchemaModule<ArbitraryTemplateParameter_server_econ_item_view_h>(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        SchemaRegistrationPhase_t nRegistrationPhase)
+{
+  if ( nRegistrationPhase == SchemaRegistrationPhase_t::SCHEMA_REGISTRATION_PHASE_CLASSES )
+  {
+    (*(CAttributeList::s_pSchemaBindingForLocalModule->_vptr_ISchemaBinding + 5))(
+      CAttributeList::s_pSchemaBindingForLocalModule,
+      pSchemaSystem,
+      pBinaryName,
+      "server");
+    (*(CEconItemAttribute::s_pSchemaBindingForLocalModule->_vptr_ISchemaBinding + 5))(
+      CEconItemAttribute::s_pSchemaBindingForLocalModule,
+      pSchemaSystem,
+      pBinaryName,
+      "server");
+    (*(CEconItemView::s_pSchemaBindingForLocalModule->_vptr_ISchemaBinding + 5))(
+      CEconItemView::s_pSchemaBindingForLocalModule,
+      pSchemaSystem,
+      pBinaryName,
+      "server");
+  }
+  ++g_nLinkerHack_SchemaAnchor_RegistrationCountFor_server;
+}
+
+
+// RegisterSchemaModule_econ_item_view_h  (line 324, @0x0000000002e71540, libserver.so)
+// calls: LocalRegisterSchemaModule<ArbitraryTemplateParameter_server_econ_item_view_h>
+// callers: CSchemaRegistration_server::RegisterAllBindings
+void __fastcall RegisterSchemaModule_econ_item_view_h(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        SchemaRegistrationPhase_t nRegistrationPhase)
+{
+  LocalRegisterSchemaModule<ArbitraryTemplateParameter_server_econ_item_view_h>(
+    pSchemaSystem,
+    pBinaryName,
+    nRegistrationPhase);
+}
+
+

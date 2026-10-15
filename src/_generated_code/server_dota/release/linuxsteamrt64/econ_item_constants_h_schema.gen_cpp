@@ -1,0 +1,147 @@
+
+// ==== functions (decompiled by Hex-Rays; names/signatures from DWARF) ====
+
+// CSchemaEnumBinding<eEconItemOrigin>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE  (line 83, @0x0000000002e6c410, libserver.so)  // inlines: Count, Initialize, SetTypeScope
+// callers: CSchemaEnumBinding<eEconItemOrigin>::Register
+// globals: CSchemaEnumBinding<eEconItemOrigin>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char
+CSchemaEnumInfo *__fastcall CSchemaEnumBinding<eEconItemOrigin>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        const char *pProjectName)
+{
+  ISchemaSystemTypeScope *v3; // rax
+  unsigned int v4; // edi
+  SchemaEnumeratorValue_t v5; // r8
+  SchemaEnumeratorValue_t v6; // r9
+  SchemaEnumeratorValue_t *v7; // rdx
+
+  v3 = (*(*pSchemaSystem + 112LL))(pSchemaSystem, 0, pBinaryName);
+  if ( CSchemaEnumBinding<eEconItemOrigin>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_eEconItemOrigin.m_Enumerators.m_Data.m_nImplLength != 0 )
+  {
+    v4 = abs32(CSchemaEnumBinding<eEconItemOrigin>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_eEconItemOrigin.m_Enumerators.m_Data.m_nImplLength);
+    v5 = *(CSchemaEnumBinding<eEconItemOrigin>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_eEconItemOrigin.m_Enumerators.m_Data.m_pImplElements
+         + 2);
+    CSchemaEnumBinding<eEconItemOrigin>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_eEconItemOrigin.m_nMinValue = v5;
+    v6 = *(CSchemaEnumBinding<eEconItemOrigin>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_eEconItemOrigin.m_Enumerators.m_Data.m_pImplElements
+         + 2);
+    CSchemaEnumBinding<eEconItemOrigin>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_eEconItemOrigin.m_nMaxValue = v6;
+    if ( v4 != 1 )
+    {
+      v7 = (CSchemaEnumBinding<eEconItemOrigin>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_eEconItemOrigin.m_Enumerators.m_Data.m_pImplElements
+          + 72);
+      do
+      {
+        if ( v5 > *v7 )
+          v5 = *v7;
+        CSchemaEnumBinding<eEconItemOrigin>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_eEconItemOrigin.m_nMinValue = v5;
+        if ( v6 < *v7 )
+          v6 = *v7;
+        v7 += 7;
+        CSchemaEnumBinding<eEconItemOrigin>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_eEconItemOrigin.m_nMaxValue = v6;
+      }
+      while ( v7 != CSchemaEnumBinding<eEconItemOrigin>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_eEconItemOrigin.m_Enumerators.m_Data.m_pImplElements
+                  + 7 * v4
+                  + 2 );
+    }
+  }
+  else
+  {
+    CSchemaEnumBinding<eEconItemOrigin>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_eEconItemOrigin.m_nMinValue = 0;
+    CSchemaEnumBinding<eEconItemOrigin>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_eEconItemOrigin.m_nMaxValue = 0;
+  }
+  CSchemaEnumBinding<eEconItemOrigin>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_eEconItemOrigin.m_pOuterTypeScope = v3;
+  (*(*v3 + 272LL))(
+    v3,
+    &CSchemaEnumBinding<eEconItemOrigin>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_eEconItemOrigin);
+  return &CSchemaEnumBinding<eEconItemOrigin>::RegisterEnumSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_EnumInfo_eEconItemOrigin;
+}
+
+
+// LocalRegisterSchemaModule<ArbitraryTemplateParameter_server_econ_item_constants_h>  (line 129, @0x0000000002e6c4f0, libserver.so)  // inlines: Get, RegisterAtomicType_item_definition_index_t, RegisterAtomicType_itemid_t, RegisterAtomicType_style_index_t, SchemaMetaSet2_t
+// calls: __cxa_guard_acquire, __cxa_guard_release
+// callers: RegisterSchemaModule_econ_item_constants_h
+// strings: "eEconItemOrigin", "MNetworkSerializeAs"
+// globals: `guard variable for'RegisterAtomicType_style_index_t(ISchemaSystem *)::SID_AtomicMeta2_style_index_t, `guard variable for'RegisterAtomicType_style_index_t(ISchemaSystem *)::s_AtomicTypeInfostyle_index_t, RegisterAtomicType_style_index_t(ISchemaSystem *)::s_AtomicTypeInfostyle_index_t, `guard variable for'RegisterAtomicType_item_definition_index_t(ISchemaSystem *)::SID_AtomicMeta2_item_definition_index_t, `guard variable for'RegisterAtomicType_item_definition_index_t(ISchemaSystem *)::s_AtomicTypeInfoitem_definition_index_t, RegisterAtomicType_item_definition_index_t(ISchemaSystem *)::s_AtomicTypeInfoitem_definition_index_t, `guard variable for'RegisterAtomicType_itemid_t(ISchemaSystem *)::SID_AtomicMeta2_itemid_t, `guard variable for'RegisterAtomicType_itemid_t(ISchemaSystem *)::s_AtomicTypeInfoitemid_t (13 total)
+void __fastcall LocalRegisterSchemaModule<ArbitraryTemplateParameter_server_econ_item_constants_h>(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        SchemaRegistrationPhase_t nRegistrationPhase)
+{
+  if ( nRegistrationPhase != SchemaRegistrationPhase_t::SCHEMA_REGISTRATION_PHASE_ATOMIC_TYPES_AND_ENUMS )
+  {
+    ++g_nLinkerHack_SchemaAnchor_RegistrationCountFor_server;
+  }
+  else
+  {
+    if ( `guard variable for'RegisterAtomicType_style_index_t(ISchemaSystem *)::SID_AtomicMeta2_style_index_t == 0
+      && __cxa_guard_acquire(&`guard variable for'RegisterAtomicType_style_index_t(ISchemaSystem *)::SID_AtomicMeta2_style_index_t) != 0 )
+    {
+      RegisterAtomicType_style_index_t(ISchemaSystem *)::SID_AtomicMeta2_style_index_t = "MNetworkSerializeAs";
+      __cxa_guard_release(&`guard variable for'RegisterAtomicType_style_index_t(ISchemaSystem *)::SID_AtomicMeta2_style_index_t);
+    }
+    if ( `guard variable for'RegisterAtomicType_style_index_t(ISchemaSystem *)::s_AtomicTypeInfostyle_index_t == 0
+      && __cxa_guard_acquire(&`guard variable for'RegisterAtomicType_style_index_t(ISchemaSystem *)::s_AtomicTypeInfostyle_index_t) != 0 )
+    {
+      dword_4A603E0 = 1;
+      qword_4A603D8 = &RegisterAtomicType_style_index_t(ISchemaSystem *)::SID_AtomicMeta2_style_index_t;
+      __cxa_guard_release(&`guard variable for'RegisterAtomicType_style_index_t(ISchemaSystem *)::s_AtomicTypeInfostyle_index_t);
+    }
+    (*(*pSchemaSystem + 248LL))(
+      pSchemaSystem,
+      RegisterAtomicType_style_index_t(ISchemaSystem *)::s_AtomicTypeInfostyle_index_t);
+    if ( `guard variable for'RegisterAtomicType_item_definition_index_t(ISchemaSystem *)::SID_AtomicMeta2_item_definition_index_t == 0
+      && __cxa_guard_acquire(&`guard variable for'RegisterAtomicType_item_definition_index_t(ISchemaSystem *)::SID_AtomicMeta2_item_definition_index_t) != 0 )
+    {
+      RegisterAtomicType_item_definition_index_t(ISchemaSystem *)::SID_AtomicMeta2_item_definition_index_t = "MNetworkSerializeAs";
+      __cxa_guard_release(&`guard variable for'RegisterAtomicType_item_definition_index_t(ISchemaSystem *)::SID_AtomicMeta2_item_definition_index_t);
+    }
+    if ( `guard variable for'RegisterAtomicType_item_definition_index_t(ISchemaSystem *)::s_AtomicTypeInfoitem_definition_index_t == 0
+      && __cxa_guard_acquire(&`guard variable for'RegisterAtomicType_item_definition_index_t(ISchemaSystem *)::s_AtomicTypeInfoitem_definition_index_t) != 0 )
+    {
+      dword_4A60380 = 1;
+      qword_4A60378 = &RegisterAtomicType_item_definition_index_t(ISchemaSystem *)::SID_AtomicMeta2_item_definition_index_t;
+      __cxa_guard_release(&`guard variable for'RegisterAtomicType_item_definition_index_t(ISchemaSystem *)::s_AtomicTypeInfoitem_definition_index_t);
+    }
+    (*(*pSchemaSystem + 248LL))(
+      pSchemaSystem,
+      RegisterAtomicType_item_definition_index_t(ISchemaSystem *)::s_AtomicTypeInfoitem_definition_index_t);
+    if ( `guard variable for'RegisterAtomicType_itemid_t(ISchemaSystem *)::SID_AtomicMeta2_itemid_t == 0
+      && __cxa_guard_acquire(&`guard variable for'RegisterAtomicType_itemid_t(ISchemaSystem *)::SID_AtomicMeta2_itemid_t) != 0 )
+    {
+      RegisterAtomicType_itemid_t(ISchemaSystem *)::SID_AtomicMeta2_itemid_t = "MNetworkSerializeAs";
+      __cxa_guard_release(&`guard variable for'RegisterAtomicType_itemid_t(ISchemaSystem *)::SID_AtomicMeta2_itemid_t);
+    }
+    if ( `guard variable for'RegisterAtomicType_itemid_t(ISchemaSystem *)::s_AtomicTypeInfoitemid_t == 0
+      && __cxa_guard_acquire(&`guard variable for'RegisterAtomicType_itemid_t(ISchemaSystem *)::s_AtomicTypeInfoitemid_t) != 0 )
+    {
+      dword_4A60320 = 1;
+      qword_4A60318 = &RegisterAtomicType_itemid_t(ISchemaSystem *)::SID_AtomicMeta2_itemid_t;
+      __cxa_guard_release(&`guard variable for'RegisterAtomicType_itemid_t(ISchemaSystem *)::s_AtomicTypeInfoitemid_t);
+    }
+    (*(*pSchemaSystem + 248LL))(pSchemaSystem, RegisterAtomicType_itemid_t(ISchemaSystem *)::s_AtomicTypeInfoitemid_t);
+    (*(CSchemaEnumBinding<eEconItemOrigin>::s_pThisModuleBindingPointer->_vptr_ISchemaBinding + 5))(
+      CSchemaEnumBinding<eEconItemOrigin>::s_pThisModuleBindingPointer,
+      pSchemaSystem,
+      pBinaryName,
+      "server",
+      "eEconItemOrigin");
+    ++g_nLinkerHack_SchemaAnchor_RegistrationCountFor_server;
+  }
+}
+
+
+// RegisterSchemaModule_econ_item_constants_h  (line 134, @0x0000000002e6c730, libserver.so)
+// calls: LocalRegisterSchemaModule<ArbitraryTemplateParameter_server_econ_item_constants_h>
+// callers: CSchemaRegistration_server::RegisterAllBindings
+void __fastcall RegisterSchemaModule_econ_item_constants_h(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        SchemaRegistrationPhase_t nRegistrationPhase)
+{
+  LocalRegisterSchemaModule<ArbitraryTemplateParameter_server_econ_item_constants_h>(
+    pSchemaSystem,
+    pBinaryName,
+    nRegistrationPhase);
+}
+
+

@@ -1,0 +1,1486 @@
+
+// ==== functions (decompiled by Hex-Rays; names/signatures from DWARF) ====
+
+// CTakeDamageInfo::Schema_CompileTimeVerificationFunction  (line 35, @0x0000000001f1f460, libserver.so)
+void __fastcall CTakeDamageInfo::Schema_CompileTimeVerificationFunction(CTakeDamageInfo *const this)
+{
+  ;
+}
+
+
+// CTakeDamageInfo::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE  (line 62, @0x0000000001f1f470, libserver.so)  // inlines: Get, SchemaBinding_SchemaTypeOfMemberVarByAddr<CTakeDamageInfo, CHandle<CBaseEntity> >, SchemaBinding_SchemaTypeOfMemberVarByAddr<CTakeDamageInfo, HSCRIPT__*>, SchemaBinding_SchemaTypeOfMemberVarByAddr<CTakeDamageInfo, Vector>, SchemaBinding_SchemaTypeOfMemberVarByAddr<CTakeDamageInfo, bool>, SchemaBinding_SchemaTypeOfMemberVarByAddr<CTakeDamageInfo, float>, SchemaBinding_SchemaTypeOfMemberVarByAddr<CTakeDamageInfo, int>, SchemaBinding_SchemaTypeOfMemberVarByAddr<CTakeDamageInfo, short int>, SetTypeScope
+// callers: CSchemaClassBinding<CTakeDamageInfo>::Register
+// strings: "CBaseEntity", "CHandle"
+// globals: CTakeDamageInfo::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitia, CSchemaManipulator<Vector>::StaticAccessor(void)::m, CAtomicManipulator<Vector>::Get(void)::val, CSchemaManipulator<CHandle<CBaseEntity>>::StaticAccessor(void)::m, CAtomicManipulator<CHandle<CBaseEntity>>::Get(void)::val, CSchemaManipulator<HSCRIPT__ *>::StaticAccessor(void)::m, CAtomicManipulator<HSCRIPT__ *>::Get(void)::val, CTakeDamageInfo::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchem
+CSchemaClassInfo *__fastcall CTakeDamageInfo::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        const char *pProjectName)
+{
+  CSchemaClassInfo *result; // rax
+  ISchemaSystemTypeScope *v4; // rbx
+  __int64 (__fastcall *v5)(ISchemaSystemTypeScope *, const char *, __int64, __int64 (__fastcall ***)(), __int64 (__fastcall ***)(), __int64); // r12
+  __int64 v6; // rax
+  __int64 (__fastcall *v7)(ISchemaSystemTypeScope *, const char *, __int64, __int64 (__fastcall ***)(), __int64 (__fastcall ***)(), __int64); // r12
+  __int64 v8; // rax
+  __int64 (__fastcall *v9)(ISchemaSystemTypeScope *, const char *, __int64, __int64 (__fastcall ***)(), __int64 (__fastcall ***)(), __int64); // r12
+  __int64 v10; // rax
+  CSchemaType *v11; // rax
+
+  result = CTakeDamageInfo::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult;
+  if ( CTakeDamageInfo::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult == 0 )
+  {
+    v4 = (*(*pSchemaSystem + 112LL))(pSchemaSystem, 0, pBinaryName);
+    CTakeDamageInfo::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CTakeDamageInfo[0].m_pType = (*(*v4 + 56LL))(v4, "Vector", 2010, CAtomicManipulator<Vector>::Get(void)::val, CSchemaManipulator<Vector>::StaticAccessor(void)::m);
+    CTakeDamageInfo::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CTakeDamageInfo[1].m_pType = (*(*v4 + 56LL))(v4, "Vector", 2010, CAtomicManipulator<Vector>::Get(void)::val, CSchemaManipulator<Vector>::StaticAccessor(void)::m);
+    CTakeDamageInfo::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CTakeDamageInfo[2].m_pType = (*(*v4 + 56LL))(v4, "Vector", 2010, CAtomicManipulator<Vector>::Get(void)::val, CSchemaManipulator<Vector>::StaticAccessor(void)::m);
+    CTakeDamageInfo::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CTakeDamageInfo[3].m_pType = (*(*v4 + 56LL))(v4, "Vector", 2010, CAtomicManipulator<Vector>::Get(void)::val, CSchemaManipulator<Vector>::StaticAccessor(void)::m);
+    v5 = *(*v4 + 64LL);
+    v6 = (*(*v4 + 88LL))(v4, "CBaseEntity");
+    CTakeDamageInfo::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CTakeDamageInfo[4].m_pType = v5(v4, "CHandle", 5003, CAtomicManipulator<CHandle<CBaseEntity>>::Get(void)::val, &CSchemaManipulator<CHandle<CBaseEntity>>::StaticAccessor(void)::m, v6);
+    v7 = *(*v4 + 64LL);
+    v8 = (*(*v4 + 88LL))(v4, "CBaseEntity");
+    CTakeDamageInfo::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CTakeDamageInfo[5].m_pType = v7(v4, "CHandle", 5003, CAtomicManipulator<CHandle<CBaseEntity>>::Get(void)::val, &CSchemaManipulator<CHandle<CBaseEntity>>::StaticAccessor(void)::m, v8);
+    v9 = *(*v4 + 64LL);
+    v10 = (*(*v4 + 88LL))(v4, "CBaseEntity");
+    CTakeDamageInfo::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CTakeDamageInfo[6].m_pType = v9(v4, "CHandle", 5003, CAtomicManipulator<CHandle<CBaseEntity>>::Get(void)::val, &CSchemaManipulator<CHandle<CBaseEntity>>::StaticAccessor(void)::m, v10);
+    CTakeDamageInfo::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CTakeDamageInfo[7].m_pType = (*(*v4 + 40LL))(v4, 11);
+    CTakeDamageInfo::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CTakeDamageInfo[8].m_pType = (*(*v4 + 40LL))(v4, 11);
+    CTakeDamageInfo::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CTakeDamageInfo[9].m_pType = (*(*v4 + 40LL))(v4, 11);
+    CTakeDamageInfo::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CTakeDamageInfo[10].m_pType = (*(*v4 + 40LL))(v4, 7);
+    CTakeDamageInfo::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CTakeDamageInfo[11].m_pType = (*(*v4 + 40LL))(v4, 7);
+    CTakeDamageInfo::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CTakeDamageInfo[12].m_pType = (*(*v4 + 40LL))(v4, 7);
+    CTakeDamageInfo::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CTakeDamageInfo[13].m_pType = (*(*v4 + 40LL))(v4, 11);
+    CTakeDamageInfo::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CTakeDamageInfo[14].m_pType = (*(*v4 + 40LL))(v4, 13);
+    CTakeDamageInfo::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CTakeDamageInfo[15].m_pType = (*(*v4 + 40LL))(v4, 11);
+    CTakeDamageInfo::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CTakeDamageInfo[16].m_pType = (*(*v4 + 40LL))(v4, 7);
+    CTakeDamageInfo::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CTakeDamageInfo[17].m_pType = (*(*v4 + 40LL))(v4, 5);
+    CTakeDamageInfo::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CTakeDamageInfo[18].m_pType = (*(*v4 + 40LL))(v4, 11);
+    CTakeDamageInfo::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CTakeDamageInfo[19].m_pType = (*(*v4 + 40LL))(v4, 7);
+    CTakeDamageInfo::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CTakeDamageInfo[20].m_pType = (*(*v4 + 40LL))(v4, 7);
+    CTakeDamageInfo::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CTakeDamageInfo[21].m_pType = (*(*v4 + 40LL))(v4, 13);
+    CTakeDamageInfo::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CTakeDamageInfo[22].m_pType = (*(*v4 + 40LL))(v4, 13);
+    v11 = (*(*v4 + 56LL))(
+            v4,
+            "HSCRIPT",
+            5001,
+            CAtomicManipulator<HSCRIPT__ *>::Get(void)::val,
+            CSchemaManipulator<HSCRIPT__ *>::StaticAccessor(void)::m);
+    CTakeDamageInfo::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CTakeDamageInfo.m_pOuterTypeScope = v4;
+    CTakeDamageInfo::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassMembers_CTakeDamageInfo[23].m_pType = v11;
+    CTakeDamageInfo::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult = &CTakeDamageInfo::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CTakeDamageInfo;
+    (*(*v4 + 264LL))(
+      v4,
+      &CTakeDamageInfo::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::ImplSchema_ClassInfo_CTakeDamageInfo);
+    return CTakeDamageInfo::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(ISchemaSystem *,char const*,char const*)::s_pInitializedResult;
+  }
+  return result;
+}
+
+
+// CTakeDamageInfo::Schema_VerifyBindingIsRegistered  (line 135, @0x0000000001f1f7b0, libserver.so)
+void __cdecl CTakeDamageInfo::Schema_VerifyBindingIsRegistered()
+{
+  ;
+}
+
+
+// GetScriptDesc<CTakeDamageInfo>  (line 161, @0x0000000001f1ff10, libserver.so)  // inlines: AddParameterType, CUtlMemory, CUtlVector, CUtlVectorBase, Finalize, ScriptClassDesc_t, ScriptDeduceFunctionSignature<CTakeDamageInfo*, CTakeDamageInfo, HSCRIPT__*>, ScriptDeduceFunctionSignature<CTakeDamageInfo*, CTakeDamageInfo, Vector>, ScriptDeduceFunctionSignature<CTakeDamageInfo*, CTakeDamageInfo, bool>, ScriptDeduceFunctionSignature<CTakeDamageInfo*, CTakeDamageInfo, float>, ScriptDeduceFunctionSignature<CTakeDamageInfo*, CTakeDamageInfo, int>, ScriptDeduceFunctionSignature<CTakeDamageInfo*, CTakeDamageInfo, void, HSCRIPT__*>, ScriptDeduceFunctionSignature<CTakeDamageInfo*, CTakeDamageInfo, void, bool>, ScriptDeduceFunctionSignature<CTakeDamageInfo*, CTakeDamageInfo, void, const Vector&>, ScriptDeduceFunctionSignature<CTakeDamageInfo*, CTakeDamageInfo, void, float>, ScriptDeduceFunctionSignature<CTakeDamageInfo*, CTakeDamageInfo, void, int>, SetDescription, SetFunctionName, SetPackedParameterNames, SetReturnType, SetScriptName, operator[]
+// calls: operator new, CUtlVectorBase<ScriptFunctionBinding_t, CUtlMemory<ScriptFunctionBinding_t, int> >::AddToTail
+// callers: CTakeDamageInfo::GetScriptDesc, CTakeDamageInfo::InitScriptDesc, CTakeDamageInfo::GetClassScriptDesc, DestroyDamageInfo, CBaseEntity::Script_TakeDamage
+// strings: "CTakeDamageInfo", "Script_GetInflictor", "Script_GetAttacker", "Script_SetAttacker", "GetDamage", "SetDamage" (35 total)
+// globals: g_pCTakeDamageInfo_ScriptDesc, CMemberScriptBinding0<CTakeDamageInfo *,HSCRIPT__ * (CTakeDamageInfo::*)(void),HSCRIPT__ *>::Call(void *,void *,CVariantBase<CVariantDefaultAllocator> *,int,CVa, CTakeDamageInfo::Script_GetInflictor(void), CTakeDamageInfo::Script_GetAttacker(void), CMemberScriptBinding1<CTakeDamageInfo *,void (CTakeDamageInfo::*)(HSCRIPT__ *),void,HSCRIPT__ *>::Call(void *,void *,CVariantBase<CVariantDefaultAllocator> *,in, CTakeDamageInfo::Script_SetAttacker(HSCRIPT__ *), s_CTakeDamageInfo_Script_SetAttacker_packed_arg_names, CMemberScriptBinding0<CTakeDamageInfo *,float (CTakeDamageInfo::*)(void),float>::Call(void *,void *,CVariantBase<CVariantDefaultAllocator> *,int,CVariantBase<CV (40 total)
+ScriptClassDesc_t *__fastcall GetScriptDesc<CTakeDamageInfo>(CTakeDamageInfo *pScriptDescObjectInstance)
+{
+  ScriptClassDesc_t *result; // rax
+  ScriptClassDesc_t *v2; // rbx
+  CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int> > *p_m_FunctionBindings; // r12
+  __int64 v4; // rcx
+  int v5; // eax
+  int v6; // eax
+  char v7; // dl
+  char v8; // di
+  __int64 v9; // rcx
+  int v10; // eax
+  int v11; // eax
+  char v12; // dl
+  char v13; // di
+  __int64 v14; // rcx
+  char v15; // al
+  __int64 v16; // rdx
+  int v17; // eax
+  char v18; // dl
+  char v19; // di
+  __int64 v20; // rcx
+  int v21; // eax
+  int v22; // eax
+  char v23; // dl
+  char v24; // di
+  __int64 v25; // rcx
+  char v26; // al
+  __int64 v27; // rdx
+  int v28; // eax
+  char v29; // dl
+  char v30; // di
+  __int64 v31; // rcx
+  int v32; // eax
+  int v33; // eax
+  char v34; // dl
+  char v35; // di
+  __int64 v36; // rcx
+  char v37; // al
+  __int64 v38; // rdx
+  int v39; // eax
+  char v40; // dl
+  char v41; // di
+  __int64 v42; // rcx
+  char v43; // al
+  __int64 v44; // rdx
+  int v45; // eax
+  char v46; // dl
+  char v47; // di
+  __int64 v48; // rcx
+  char v49; // al
+  __int64 v50; // rdx
+  int v51; // eax
+  char v52; // dl
+  char v53; // di
+  __int64 v54; // rcx
+  int v55; // eax
+  int v56; // eax
+  char v57; // dl
+  char v58; // di
+  __int64 v59; // rcx
+  int v60; // eax
+  int v61; // eax
+  char v62; // dl
+  char v63; // di
+  __int64 v64; // rcx
+  int v65; // eax
+  int v66; // eax
+  char v67; // dl
+  char v68; // di
+  __int64 v69; // rcx
+  char v70; // al
+  __int64 v71; // rdx
+  int v72; // eax
+  char v73; // dl
+  char v74; // di
+  __int64 v75; // rcx
+  int v76; // eax
+  int v77; // eax
+  char v78; // dl
+  char v79; // di
+  __int64 v80; // rcx
+  char v81; // al
+  __int64 v82; // rdx
+  int v83; // eax
+  char v84; // dl
+  char v85; // di
+  __int64 v86; // rcx
+  int v87; // eax
+  int v88; // eax
+  char v89; // dl
+  char v90; // di
+  __int64 v91; // rcx
+  char v92; // al
+  __int64 v93; // rdx
+  int v94; // eax
+  char v95; // dl
+  char v96; // di
+  __int64 v97; // rcx
+  int v98; // eax
+  int v99; // eax
+  char v100; // dl
+  char v101; // di
+  __int64 v102; // rcx
+  char v103; // al
+  __int64 v104; // rdx
+  int v105; // eax
+  char v106; // dl
+  char v107; // di
+  __int64 v108; // rcx
+  char v109; // al
+  __int64 v110; // rdx
+  int v111; // eax
+  char v112; // dl
+  char v113; // di
+  __int64 v114; // rcx
+  int v115; // eax
+  int v116; // eax
+  char v117; // dl
+  char v118; // di
+  __int64 v119; // rcx
+  char v120; // al
+  __int64 v121; // rdx
+  int v122; // eax
+  char v123; // dl
+  char v124; // di
+  __int64 v125; // rcx
+  int v126; // eax
+  int v127; // eax
+  char v128; // dl
+  char v129; // di
+  __int64 v130; // rcx
+  char v131; // al
+  __int64 v132; // rdx
+  int v133; // eax
+  char v134; // dl
+  char v135; // di
+  __int64 v136; // rcx
+  int v137; // eax
+  int v138; // eax
+  char v139; // dl
+  char v140; // di
+  __int64 v141; // rcx
+  char v142; // al
+  __int64 v143; // rdx
+  int v144; // eax
+  char v145; // dl
+  char v146; // di
+  __int64 v147; // rcx
+  char v148; // al
+  __int64 v149; // rdx
+  int v150; // eax
+  char v151; // dl
+  char v152; // di
+  __int64 v153; // rcx
+  int v154; // eax
+  int v155; // eax
+  char v156; // dl
+  char v157; // di
+  __int64 v158; // rcx
+  char v159; // al
+  __int64 v160; // rdx
+  int v161; // eax
+  char v162; // dl
+  char v163; // di
+  __int64 v164; // rcx
+  int v165; // eax
+  int v166; // eax
+  char v167; // dl
+  char v168; // di
+  __int64 v169; // rdx
+  char v170; // al
+  __int64 v171; // rcx
+  int v172; // eax
+  char v173; // cl
+  __int64 v174; // rcx
+  int v175; // eax
+  int v176; // eax
+  char v177; // dl
+  char v178; // di
+  __int64 v179; // rcx
+  char v180; // al
+  __int64 v181; // rdx
+  int v182; // eax
+  char v183; // dl
+  char v184; // di
+  __int64 v185; // rcx
+  int v186; // eax
+  int v187; // eax
+  char v188; // dl
+  char v189; // di
+  __int64 v190; // rcx
+  char v191; // al
+  __int64 v192; // rdx
+  int v193; // eax
+  char v194; // dl
+  char v195; // di
+  __int64 v196; // rcx
+  int v197; // eax
+  int v198; // eax
+  char v199; // dl
+  char v200; // di
+
+  result = g_pCTakeDamageInfo_ScriptDesc;
+  if ( g_pCTakeDamageInfo_ScriptDesc == 0 )
+  {
+    v2 = operator new(0x50u);
+    v2->m_pBaseDesc = 0;
+    v2->m_FunctionBindings.m_Size = 0;
+    p_m_FunctionBindings = &v2->m_FunctionBindings;
+    v2->m_FunctionBindings.m_Memory.m_pMemory = 0;
+    v2->m_FunctionBindings.m_Memory.m_nAllocationCount = 0;
+    v2->m_FunctionBindings.m_Memory.m_nGrowSize = 0;
+    v2->m_pfnConstruct = 0;
+    v2->m_pfnDestruct = 0;
+    v2->pHelper = 0;
+    g_pCTakeDamageInfo_ScriptDesc = v2;
+    v2->m_pszDescription = "TakeDamageInfo";
+    v2->m_pszScriptName = "CTakeDamageInfo";
+    v2->m_pszClassname = "CTakeDamageInfo";
+    v4 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(&v2->m_FunctionBindings)];
+    *(v4 + 24) = 31;
+    *(v4 + 16) = "";
+    *v4 = "GetInflictor";
+    *(v4 + 8) = "Script_GetInflictor";
+    v5 = *(v4 + 26);
+    *(v4 + 25) = 0;
+    v6 = v5 - 1;
+    if ( v6 >= 0 && *(v4 + v6 + 27) == 32 )
+    {
+      v7 = 1;
+      do
+      {
+        --v6;
+        v8 = v7;
+        if ( v6 == -1 )
+        {
+          *(v4 + 25) = v7;
+          goto LABEL_8;
+        }
+        ++v7;
+      }
+      while ( *(v4 + v6 + 27) == 32 );
+      *(v4 + 25) = v8;
+    }
+LABEL_8:
+    *(v4 + 64) = 1;
+    *(v4 + 48) = CMemberScriptBinding0<CTakeDamageInfo *,HSCRIPT__ * (CTakeDamageInfo::*)(void),HSCRIPT__ *>::Call;
+    *(v4 + 56) = CTakeDamageInfo::Script_GetInflictor;
+    v9 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(p_m_FunctionBindings)];
+    *(v9 + 24) = 31;
+    *(v9 + 16) = "";
+    *v9 = "GetAttacker";
+    *(v9 + 8) = "Script_GetAttacker";
+    v10 = *(v9 + 26);
+    *(v9 + 25) = 0;
+    v11 = v10 - 1;
+    if ( v11 >= 0 && *(v9 + v11 + 27) == 32 )
+    {
+      v12 = 1;
+      do
+      {
+        --v11;
+        v13 = v12;
+        if ( v11 == -1 )
+        {
+          *(v9 + 25) = v12;
+          goto LABEL_14;
+        }
+        ++v12;
+      }
+      while ( *(v9 + v11 + 27) == 32 );
+      *(v9 + 25) = v13;
+    }
+LABEL_14:
+    *(v9 + 64) = 1;
+    *(v9 + 48) = CMemberScriptBinding0<CTakeDamageInfo *,HSCRIPT__ * (CTakeDamageInfo::*)(void),HSCRIPT__ *>::Call;
+    *(v9 + 56) = CTakeDamageInfo::Script_GetAttacker;
+    v14 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(p_m_FunctionBindings)];
+    *(v14 + 24) = 0;
+    *(v14 + 16) = "";
+    *v14 = "SetAttacker";
+    *(v14 + 8) = "Script_SetAttacker";
+    v15 = *(v14 + 26);
+    v16 = v15++;
+    *(v14 + v16 + 27) = 31;
+    *(v14 + 26) = v15;
+    v17 = v15 - 1;
+    *(v14 + 25) = 0;
+    if ( v17 >= 0 && *(v14 + v17 + 27) == 32 )
+    {
+      v18 = 1;
+      do
+      {
+        --v17;
+        v19 = v18;
+        if ( v17 == -1 )
+        {
+          *(v14 + 25) = v18;
+          goto LABEL_20;
+        }
+        ++v18;
+      }
+      while ( *(v14 + v17 + 27) == 32 );
+      *(v14 + 25) = v19;
+    }
+LABEL_20:
+    *(v14 + 64) = 1;
+    *(v14 + 48) = CMemberScriptBinding1<CTakeDamageInfo *,void (CTakeDamageInfo::*)(HSCRIPT__ *),void,HSCRIPT__ *>::Call;
+    *(v14 + 56) = CTakeDamageInfo::Script_SetAttacker;
+    *(v14 + 40) = s_CTakeDamageInfo_Script_SetAttacker_packed_arg_names;
+    v20 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(p_m_FunctionBindings)];
+    *(v20 + 24) = 1;
+    *(v20 + 16) = "";
+    *v20 = "GetDamage";
+    *(v20 + 8) = "GetDamage";
+    v21 = *(v20 + 26);
+    *(v20 + 25) = 0;
+    v22 = v21 - 1;
+    if ( v22 >= 0 && *(v20 + v22 + 27) == 32 )
+    {
+      v23 = 1;
+      do
+      {
+        --v22;
+        v24 = v23;
+        if ( v22 == -1 )
+        {
+          *(v20 + 25) = v23;
+          goto LABEL_26;
+        }
+        ++v23;
+      }
+      while ( *(v20 + v22 + 27) == 32 );
+      *(v20 + 25) = v24;
+    }
+LABEL_26:
+    *(v20 + 64) = 1;
+    *(v20 + 48) = CMemberScriptBinding0<CTakeDamageInfo *,float (CTakeDamageInfo::*)(void),float>::Call;
+    *(v20 + 56) = CTakeDamageInfo::GetDamage;
+    v25 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(p_m_FunctionBindings)];
+    *(v25 + 24) = 0;
+    *(v25 + 16) = "";
+    *v25 = "SetDamage";
+    *(v25 + 8) = "SetDamage";
+    v26 = *(v25 + 26);
+    v27 = v26++;
+    *(v25 + v27 + 27) = 1;
+    *(v25 + 26) = v26;
+    v28 = v26 - 1;
+    *(v25 + 25) = 0;
+    if ( v28 >= 0 && *(v25 + v28 + 27) == 32 )
+    {
+      v29 = 1;
+      do
+      {
+        --v28;
+        v30 = v29;
+        if ( v28 == -1 )
+        {
+          *(v25 + 25) = v29;
+          goto LABEL_32;
+        }
+        ++v29;
+      }
+      while ( *(v25 + v28 + 27) == 32 );
+      *(v25 + 25) = v30;
+    }
+LABEL_32:
+    *(v25 + 64) = 1;
+    *(v25 + 48) = CMemberScriptBinding1<CTakeDamageInfo *,void (CTakeDamageInfo::*)(float),void,float>::Call;
+    *(v25 + 56) = CTakeDamageInfo::SetDamage;
+    *(v25 + 40) = s_CTakeDamageInfo_SetDamage_packed_arg_names;
+    v31 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(p_m_FunctionBindings)];
+    *(v31 + 24) = 1;
+    *(v31 + 16) = "";
+    *v31 = "GetMaxDamage";
+    *(v31 + 8) = "GetMaxDamage";
+    v32 = *(v31 + 26);
+    *(v31 + 25) = 0;
+    v33 = v32 - 1;
+    if ( v33 >= 0 && *(v31 + v33 + 27) == 32 )
+    {
+      v34 = 1;
+      do
+      {
+        --v33;
+        v35 = v34;
+        if ( v33 == -1 )
+        {
+          *(v31 + 25) = v34;
+          goto LABEL_38;
+        }
+        ++v34;
+      }
+      while ( *(v31 + v33 + 27) == 32 );
+      *(v31 + 25) = v35;
+    }
+LABEL_38:
+    *(v31 + 64) = 1;
+    *(v31 + 48) = CMemberScriptBinding0<CTakeDamageInfo *,float (CTakeDamageInfo::*)(void),float>::Call;
+    *(v31 + 56) = CTakeDamageInfo::GetMaxDamage;
+    v36 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(p_m_FunctionBindings)];
+    *(v36 + 24) = 0;
+    *(v36 + 16) = "";
+    *v36 = "SetMaxDamage";
+    *(v36 + 8) = "SetMaxDamage";
+    v37 = *(v36 + 26);
+    v38 = v37++;
+    *(v36 + v38 + 27) = 1;
+    *(v36 + 26) = v37;
+    v39 = v37 - 1;
+    *(v36 + 25) = 0;
+    if ( v39 >= 0 && *(v36 + v39 + 27) == 32 )
+    {
+      v40 = 1;
+      do
+      {
+        --v39;
+        v41 = v40;
+        if ( v39 == -1 )
+        {
+          *(v36 + 25) = v40;
+          goto LABEL_44;
+        }
+        ++v40;
+      }
+      while ( *(v36 + v39 + 27) == 32 );
+      *(v36 + 25) = v41;
+    }
+LABEL_44:
+    *(v36 + 64) = 1;
+    *(v36 + 48) = CMemberScriptBinding1<CTakeDamageInfo *,void (CTakeDamageInfo::*)(float),void,float>::Call;
+    *(v36 + 56) = CTakeDamageInfo::SetMaxDamage;
+    *(v36 + 40) = s_CTakeDamageInfo_SetMaxDamage_packed_arg_names;
+    v42 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(p_m_FunctionBindings)];
+    *(v42 + 24) = 0;
+    *(v42 + 16) = "";
+    *v42 = "ScaleDamage";
+    *(v42 + 8) = "ScaleDamage";
+    v43 = *(v42 + 26);
+    v44 = v43++;
+    *(v42 + v44 + 27) = 1;
+    *(v42 + 26) = v43;
+    v45 = v43 - 1;
+    *(v42 + 25) = 0;
+    if ( v45 >= 0 && *(v42 + v45 + 27) == 32 )
+    {
+      v46 = 1;
+      do
+      {
+        --v45;
+        v47 = v46;
+        if ( v45 == -1 )
+        {
+          *(v42 + 25) = v46;
+          goto LABEL_50;
+        }
+        ++v46;
+      }
+      while ( *(v42 + v45 + 27) == 32 );
+      *(v42 + 25) = v47;
+    }
+LABEL_50:
+    *(v42 + 64) = 1;
+    *(v42 + 48) = CMemberScriptBinding1<CTakeDamageInfo *,void (CTakeDamageInfo::*)(float),void,float>::Call;
+    *(v42 + 56) = CTakeDamageInfo::ScaleDamage;
+    *(v42 + 40) = s_CTakeDamageInfo_ScaleDamage_packed_arg_names;
+    v48 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(p_m_FunctionBindings)];
+    *(v48 + 24) = 0;
+    *(v48 + 16) = "";
+    *v48 = "AddDamage";
+    *(v48 + 8) = "AddDamage";
+    v49 = *(v48 + 26);
+    v50 = v49++;
+    *(v48 + v50 + 27) = 1;
+    *(v48 + 26) = v49;
+    v51 = v49 - 1;
+    *(v48 + 25) = 0;
+    if ( v51 >= 0 && *(v48 + v51 + 27) == 32 )
+    {
+      v52 = 1;
+      do
+      {
+        --v51;
+        v53 = v52;
+        if ( v51 == -1 )
+        {
+          *(v48 + 25) = v52;
+          goto LABEL_56;
+        }
+        ++v52;
+      }
+      while ( *(v48 + v51 + 27) == 32 );
+      *(v48 + 25) = v53;
+    }
+LABEL_56:
+    *(v48 + 64) = 1;
+    *(v48 + 48) = CMemberScriptBinding1<CTakeDamageInfo *,void (CTakeDamageInfo::*)(float),void,float>::Call;
+    *(v48 + 56) = CTakeDamageInfo::AddDamage;
+    *(v48 + 40) = s_CTakeDamageInfo_AddDamage_packed_arg_names;
+    v54 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(p_m_FunctionBindings)];
+    *(v54 + 24) = 1;
+    *(v54 + 16) = "";
+    *v54 = "GetBaseDamage";
+    *(v54 + 8) = "GetBaseDamage";
+    v55 = *(v54 + 26);
+    *(v54 + 25) = 0;
+    v56 = v55 - 1;
+    if ( v56 >= 0 && *(v54 + v56 + 27) == 32 )
+    {
+      v57 = 1;
+      do
+      {
+        --v56;
+        v58 = v57;
+        if ( v56 == -1 )
+        {
+          *(v54 + 25) = v57;
+          goto LABEL_62;
+        }
+        ++v57;
+      }
+      while ( *(v54 + v56 + 27) == 32 );
+      *(v54 + 25) = v58;
+    }
+LABEL_62:
+    *(v54 + 64) = 1;
+    *(v54 + 48) = CMemberScriptBinding0<CTakeDamageInfo *,float (CTakeDamageInfo::*)(void),float>::Call;
+    *(v54 + 56) = CTakeDamageInfo::GetBaseDamage;
+    v59 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(p_m_FunctionBindings)];
+    *(v59 + 24) = 6;
+    *(v59 + 16) = "";
+    *v59 = "BaseDamageIsValid";
+    *(v59 + 8) = "BaseDamageIsValid";
+    v60 = *(v59 + 26);
+    *(v59 + 25) = 0;
+    v61 = v60 - 1;
+    if ( v61 >= 0 && *(v59 + v61 + 27) == 32 )
+    {
+      v62 = 1;
+      do
+      {
+        --v61;
+        v63 = v62;
+        if ( v61 == -1 )
+        {
+          *(v59 + 25) = v62;
+          goto LABEL_68;
+        }
+        ++v62;
+      }
+      while ( *(v59 + v61 + 27) == 32 );
+      *(v59 + 25) = v63;
+    }
+LABEL_68:
+    *(v59 + 64) = 1;
+    *(v59 + 48) = CMemberScriptBinding0<CTakeDamageInfo *,bool (CTakeDamageInfo::*)(void),bool>::Call;
+    *(v59 + 56) = CTakeDamageInfo::BaseDamageIsValid;
+    v64 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(p_m_FunctionBindings)];
+    *(v64 + 24) = 3;
+    *(v64 + 16) = "";
+    *v64 = "GetDamageForce";
+    *(v64 + 8) = "GetDamageForce";
+    v65 = *(v64 + 26);
+    *(v64 + 25) = 0;
+    v66 = v65 - 1;
+    if ( v66 >= 0 && *(v64 + v66 + 27) == 32 )
+    {
+      v67 = 1;
+      do
+      {
+        --v66;
+        v68 = v67;
+        if ( v66 == -1 )
+        {
+          *(v64 + 25) = v67;
+          goto LABEL_74;
+        }
+        ++v67;
+      }
+      while ( *(v64 + v66 + 27) == 32 );
+      *(v64 + 25) = v68;
+    }
+LABEL_74:
+    *(v64 + 64) = 1;
+    *(v64 + 48) = CMemberScriptBinding0<CTakeDamageInfo *,Vector (CTakeDamageInfo::*)(void),Vector>::Call;
+    *(v64 + 56) = CTakeDamageInfo::GetDamageForce;
+    v69 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(p_m_FunctionBindings)];
+    *(v69 + 24) = 0;
+    *(v69 + 16) = "";
+    *v69 = "SetDamageForce";
+    *(v69 + 8) = "SetDamageForce";
+    v70 = *(v69 + 26);
+    v71 = v70++;
+    *(v69 + v71 + 27) = 3;
+    *(v69 + 26) = v70;
+    v72 = v70 - 1;
+    *(v69 + 25) = 0;
+    if ( v72 >= 0 && *(v69 + v72 + 27) == 32 )
+    {
+      v73 = 1;
+      do
+      {
+        --v72;
+        v74 = v73;
+        if ( v72 == -1 )
+        {
+          *(v69 + 25) = v73;
+          goto LABEL_80;
+        }
+        ++v73;
+      }
+      while ( *(v69 + v72 + 27) == 32 );
+      *(v69 + 25) = v74;
+    }
+LABEL_80:
+    *(v69 + 64) = 1;
+    *(v69 + 48) = CMemberScriptBinding1<CTakeDamageInfo *,void (CTakeDamageInfo::*)(Vector const&),void,Vector const&>::Call;
+    *(v69 + 56) = CTakeDamageInfo::SetDamageForce;
+    *(v69 + 40) = s_CTakeDamageInfo_SetDamageForce_packed_arg_names;
+    v75 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(p_m_FunctionBindings)];
+    *(v75 + 24) = 3;
+    *(v75 + 16) = "";
+    *v75 = "GetDamagePosition";
+    *(v75 + 8) = "GetDamagePosition";
+    v76 = *(v75 + 26);
+    *(v75 + 25) = 0;
+    v77 = v76 - 1;
+    if ( v77 >= 0 && *(v75 + v77 + 27) == 32 )
+    {
+      v78 = 1;
+      do
+      {
+        --v77;
+        v79 = v78;
+        if ( v77 == -1 )
+        {
+          *(v75 + 25) = v78;
+          goto LABEL_86;
+        }
+        ++v78;
+      }
+      while ( *(v75 + v77 + 27) == 32 );
+      *(v75 + 25) = v79;
+    }
+LABEL_86:
+    *(v75 + 64) = 1;
+    *(v75 + 48) = CMemberScriptBinding0<CTakeDamageInfo *,Vector (CTakeDamageInfo::*)(void),Vector>::Call;
+    *(v75 + 56) = CTakeDamageInfo::GetDamagePosition;
+    v80 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(p_m_FunctionBindings)];
+    *(v80 + 24) = 0;
+    *(v80 + 16) = "";
+    *v80 = "SetDamagePosition";
+    *(v80 + 8) = "SetDamagePosition";
+    v81 = *(v80 + 26);
+    v82 = v81++;
+    *(v80 + v82 + 27) = 3;
+    *(v80 + 26) = v81;
+    v83 = v81 - 1;
+    *(v80 + 25) = 0;
+    if ( v83 >= 0 && *(v80 + v83 + 27) == 32 )
+    {
+      v84 = 1;
+      do
+      {
+        --v83;
+        v85 = v84;
+        if ( v83 == -1 )
+        {
+          *(v80 + 25) = v84;
+          goto LABEL_92;
+        }
+        ++v84;
+      }
+      while ( *(v80 + v83 + 27) == 32 );
+      *(v80 + 25) = v85;
+    }
+LABEL_92:
+    *(v80 + 64) = 1;
+    *(v80 + 48) = CMemberScriptBinding1<CTakeDamageInfo *,void (CTakeDamageInfo::*)(Vector const&),void,Vector const&>::Call;
+    *(v80 + 56) = CTakeDamageInfo::SetDamagePosition;
+    *(v80 + 40) = s_CTakeDamageInfo_SetDamagePosition_packed_arg_names;
+    v86 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(p_m_FunctionBindings)];
+    *(v86 + 24) = 3;
+    *(v86 + 16) = "";
+    *v86 = "GetReportedPosition";
+    *(v86 + 8) = "GetReportedPosition";
+    v87 = *(v86 + 26);
+    *(v86 + 25) = 0;
+    v88 = v87 - 1;
+    if ( v88 >= 0 && *(v86 + v88 + 27) == 32 )
+    {
+      v89 = 1;
+      do
+      {
+        --v88;
+        v90 = v89;
+        if ( v88 == -1 )
+        {
+          *(v86 + 25) = v89;
+          goto LABEL_98;
+        }
+        ++v89;
+      }
+      while ( *(v86 + v88 + 27) == 32 );
+      *(v86 + 25) = v90;
+    }
+LABEL_98:
+    *(v86 + 64) = 1;
+    *(v86 + 48) = CMemberScriptBinding0<CTakeDamageInfo *,Vector (CTakeDamageInfo::*)(void),Vector>::Call;
+    *(v86 + 56) = CTakeDamageInfo::GetReportedPosition;
+    v91 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(p_m_FunctionBindings)];
+    *(v91 + 24) = 0;
+    *(v91 + 16) = "";
+    *v91 = "SetReportedPosition";
+    *(v91 + 8) = "SetReportedPosition";
+    v92 = *(v91 + 26);
+    v93 = v92++;
+    *(v91 + v93 + 27) = 3;
+    *(v91 + 26) = v92;
+    v94 = v92 - 1;
+    *(v91 + 25) = 0;
+    if ( v94 >= 0 && *(v91 + v94 + 27) == 32 )
+    {
+      v95 = 1;
+      do
+      {
+        --v94;
+        v96 = v95;
+        if ( v94 == -1 )
+        {
+          *(v91 + 25) = v95;
+          goto LABEL_104;
+        }
+        ++v95;
+      }
+      while ( *(v91 + v94 + 27) == 32 );
+      *(v91 + 25) = v96;
+    }
+LABEL_104:
+    *(v91 + 64) = 1;
+    *(v91 + 48) = CMemberScriptBinding1<CTakeDamageInfo *,void (CTakeDamageInfo::*)(Vector const&),void,Vector const&>::Call;
+    *(v91 + 56) = CTakeDamageInfo::SetReportedPosition;
+    *(v91 + 40) = s_CTakeDamageInfo_SetReportedPosition_packed_arg_names;
+    v97 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(p_m_FunctionBindings)];
+    *(v97 + 24) = 5;
+    *(v97 + 16) = "";
+    *v97 = "GetDamageType";
+    *(v97 + 8) = "GetDamageType";
+    v98 = *(v97 + 26);
+    *(v97 + 25) = 0;
+    v99 = v98 - 1;
+    if ( v99 >= 0 && *(v97 + v99 + 27) == 32 )
+    {
+      v100 = 1;
+      do
+      {
+        --v99;
+        v101 = v100;
+        if ( v99 == -1 )
+        {
+          *(v97 + 25) = v100;
+          goto LABEL_110;
+        }
+        ++v100;
+      }
+      while ( *(v97 + v99 + 27) == 32 );
+      *(v97 + 25) = v101;
+    }
+LABEL_110:
+    *(v97 + 64) = 1;
+    *(v97 + 48) = CMemberScriptBinding0<CTakeDamageInfo *,int (CTakeDamageInfo::*)(void),int>::Call;
+    *(v97 + 56) = CTakeDamageInfo::GetDamageType;
+    v102 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(p_m_FunctionBindings)];
+    *(v102 + 24) = 0;
+    *(v102 + 16) = "";
+    *v102 = "SetDamageType";
+    *(v102 + 8) = "SetDamageType";
+    v103 = *(v102 + 26);
+    v104 = v103++;
+    *(v102 + v104 + 27) = 5;
+    *(v102 + 26) = v103;
+    v105 = v103 - 1;
+    *(v102 + 25) = 0;
+    if ( v105 >= 0 && *(v102 + v105 + 27) == 32 )
+    {
+      v106 = 1;
+      do
+      {
+        --v105;
+        v107 = v106;
+        if ( v105 == -1 )
+        {
+          *(v102 + 25) = v106;
+          goto LABEL_116;
+        }
+        ++v106;
+      }
+      while ( *(v102 + v105 + 27) == 32 );
+      *(v102 + 25) = v107;
+    }
+LABEL_116:
+    *(v102 + 64) = 1;
+    *(v102 + 48) = CMemberScriptBinding1<CTakeDamageInfo *,void (CTakeDamageInfo::*)(int),void,int>::Call;
+    *(v102 + 56) = CTakeDamageInfo::SetDamageType;
+    *(v102 + 40) = s_CTakeDamageInfo_SetDamageType_packed_arg_names;
+    v108 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(p_m_FunctionBindings)];
+    *(v108 + 24) = 0;
+    *(v108 + 16) = "";
+    *v108 = "AddDamageType";
+    *(v108 + 8) = "AddDamageType";
+    v109 = *(v108 + 26);
+    v110 = v109++;
+    *(v108 + v110 + 27) = 5;
+    *(v108 + 26) = v109;
+    v111 = v109 - 1;
+    *(v108 + 25) = 0;
+    if ( v111 >= 0 && *(v108 + v111 + 27) == 32 )
+    {
+      v112 = 1;
+      do
+      {
+        --v111;
+        v113 = v112;
+        if ( v111 == -1 )
+        {
+          *(v108 + 25) = v112;
+          goto LABEL_122;
+        }
+        ++v112;
+      }
+      while ( *(v108 + v111 + 27) == 32 );
+      *(v108 + 25) = v113;
+    }
+LABEL_122:
+    *(v108 + 64) = 1;
+    *(v108 + 48) = CMemberScriptBinding1<CTakeDamageInfo *,void (CTakeDamageInfo::*)(int),void,int>::Call;
+    *(v108 + 56) = CTakeDamageInfo::AddDamageType;
+    *(v108 + 40) = s_CTakeDamageInfo_AddDamageType_packed_arg_names;
+    v114 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(p_m_FunctionBindings)];
+    *(v114 + 24) = 5;
+    *(v114 + 16) = "";
+    *v114 = "GetDamageCustom";
+    *(v114 + 8) = "GetDamageCustom";
+    v115 = *(v114 + 26);
+    *(v114 + 25) = 0;
+    v116 = v115 - 1;
+    if ( v116 >= 0 && *(v114 + v116 + 27) == 32 )
+    {
+      v117 = 1;
+      do
+      {
+        --v116;
+        v118 = v117;
+        if ( v116 == -1 )
+        {
+          *(v114 + 25) = v117;
+          goto LABEL_128;
+        }
+        ++v117;
+      }
+      while ( *(v114 + v116 + 27) == 32 );
+      *(v114 + 25) = v118;
+    }
+LABEL_128:
+    *(v114 + 64) = 1;
+    *(v114 + 48) = CMemberScriptBinding0<CTakeDamageInfo *,int (CTakeDamageInfo::*)(void),int>::Call;
+    *(v114 + 56) = CTakeDamageInfo::GetDamageCustom;
+    v119 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(p_m_FunctionBindings)];
+    *(v119 + 24) = 0;
+    *(v119 + 16) = "";
+    *v119 = "SetDamageCustom";
+    *(v119 + 8) = "SetDamageCustom";
+    v120 = *(v119 + 26);
+    v121 = v120++;
+    *(v119 + v121 + 27) = 5;
+    *(v119 + 26) = v120;
+    v122 = v120 - 1;
+    *(v119 + 25) = 0;
+    if ( v122 >= 0 && *(v119 + v122 + 27) == 32 )
+    {
+      v123 = 1;
+      do
+      {
+        --v122;
+        v124 = v123;
+        if ( v122 == -1 )
+        {
+          *(v119 + 25) = v123;
+          goto LABEL_134;
+        }
+        ++v123;
+      }
+      while ( *(v119 + v122 + 27) == 32 );
+      *(v119 + 25) = v124;
+    }
+LABEL_134:
+    *(v119 + 64) = 1;
+    *(v119 + 48) = CMemberScriptBinding1<CTakeDamageInfo *,void (CTakeDamageInfo::*)(int),void,int>::Call;
+    *(v119 + 56) = CTakeDamageInfo::SetDamageCustom;
+    *(v119 + 40) = s_CTakeDamageInfo_SetDamageCustom_packed_arg_names;
+    v125 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(p_m_FunctionBindings)];
+    *(v125 + 24) = 5;
+    *(v125 + 16) = "";
+    *v125 = "GetAmmoType";
+    *(v125 + 8) = "GetAmmoType";
+    v126 = *(v125 + 26);
+    *(v125 + 25) = 0;
+    v127 = v126 - 1;
+    if ( v127 >= 0 && *(v125 + v127 + 27) == 32 )
+    {
+      v128 = 1;
+      do
+      {
+        --v127;
+        v129 = v128;
+        if ( v127 == -1 )
+        {
+          *(v125 + 25) = v128;
+          goto LABEL_140;
+        }
+        ++v128;
+      }
+      while ( *(v125 + v127 + 27) == 32 );
+      *(v125 + 25) = v129;
+    }
+LABEL_140:
+    *(v125 + 64) = 1;
+    *(v125 + 48) = CMemberScriptBinding0<CTakeDamageInfo *,int (CTakeDamageInfo::*)(void),int>::Call;
+    *(v125 + 56) = CTakeDamageInfo::GetAmmoType;
+    v130 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(p_m_FunctionBindings)];
+    *(v130 + 24) = 0;
+    *(v130 + 16) = "";
+    *v130 = "SetAmmoType";
+    *(v130 + 8) = "SetAmmoType";
+    v131 = *(v130 + 26);
+    v132 = v131++;
+    *(v130 + v132 + 27) = 5;
+    *(v130 + 26) = v131;
+    v133 = v131 - 1;
+    *(v130 + 25) = 0;
+    if ( v133 >= 0 && *(v130 + v133 + 27) == 32 )
+    {
+      v134 = 1;
+      do
+      {
+        --v133;
+        v135 = v134;
+        if ( v133 == -1 )
+        {
+          *(v130 + 25) = v134;
+          goto LABEL_146;
+        }
+        ++v134;
+      }
+      while ( *(v130 + v133 + 27) == 32 );
+      *(v130 + 25) = v135;
+    }
+LABEL_146:
+    *(v130 + 64) = 1;
+    *(v130 + 48) = CMemberScriptBinding1<CTakeDamageInfo *,void (CTakeDamageInfo::*)(int),void,int>::Call;
+    *(v130 + 56) = CTakeDamageInfo::SetAmmoType;
+    *(v130 + 40) = s_CTakeDamageInfo_SetAmmoType_packed_arg_names;
+    v136 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(p_m_FunctionBindings)];
+    *(v136 + 24) = 1;
+    *(v136 + 16) = "";
+    *v136 = "GetRadius";
+    *(v136 + 8) = "GetRadius";
+    v137 = *(v136 + 26);
+    *(v136 + 25) = 0;
+    v138 = v137 - 1;
+    if ( v138 >= 0 && *(v136 + v138 + 27) == 32 )
+    {
+      v139 = 1;
+      do
+      {
+        --v138;
+        v140 = v139;
+        if ( v138 == -1 )
+        {
+          *(v136 + 25) = v139;
+          goto LABEL_152;
+        }
+        ++v139;
+      }
+      while ( *(v136 + v138 + 27) == 32 );
+      *(v136 + 25) = v140;
+    }
+LABEL_152:
+    *(v136 + 64) = 1;
+    *(v136 + 48) = CMemberScriptBinding0<CTakeDamageInfo *,float (CTakeDamageInfo::*)(void),float>::Call;
+    *(v136 + 56) = CTakeDamageInfo::GetRadius;
+    v141 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(p_m_FunctionBindings)];
+    *(v141 + 24) = 0;
+    *(v141 + 16) = "";
+    *v141 = "SetRadius";
+    *(v141 + 8) = "SetRadius";
+    v142 = *(v141 + 26);
+    v143 = v142++;
+    *(v141 + v143 + 27) = 1;
+    *(v141 + 26) = v142;
+    v144 = v142 - 1;
+    *(v141 + 25) = 0;
+    if ( v144 >= 0 && *(v141 + v144 + 27) == 32 )
+    {
+      v145 = 1;
+      do
+      {
+        --v144;
+        v146 = v145;
+        if ( v144 == -1 )
+        {
+          *(v141 + 25) = v145;
+          goto LABEL_158;
+        }
+        ++v145;
+      }
+      while ( *(v141 + v144 + 27) == 32 );
+      *(v141 + 25) = v146;
+    }
+LABEL_158:
+    *(v141 + 64) = 1;
+    *(v141 + 48) = CMemberScriptBinding1<CTakeDamageInfo *,void (CTakeDamageInfo::*)(float),void,float>::Call;
+    *(v141 + 56) = CTakeDamageInfo::SetRadius;
+    *(v141 + 40) = s_CTakeDamageInfo_SetRadius_packed_arg_names;
+    v147 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(p_m_FunctionBindings)];
+    *(v147 + 24) = 0;
+    *(v147 + 16) = "";
+    *v147 = "SetOriginalDamage";
+    *(v147 + 8) = "SetOriginalDamage";
+    v148 = *(v147 + 26);
+    v149 = v148++;
+    *(v147 + v149 + 27) = 1;
+    *(v147 + 26) = v148;
+    v150 = v148 - 1;
+    *(v147 + 25) = 0;
+    if ( v150 >= 0 && *(v147 + v150 + 27) == 32 )
+    {
+      v151 = 1;
+      do
+      {
+        --v150;
+        v152 = v151;
+        if ( v150 == -1 )
+        {
+          *(v147 + 25) = v151;
+          goto LABEL_164;
+        }
+        ++v151;
+      }
+      while ( *(v147 + v150 + 27) == 32 );
+      *(v147 + 25) = v152;
+    }
+LABEL_164:
+    *(v147 + 64) = 1;
+    *(v147 + 48) = CMemberScriptBinding1<CTakeDamageInfo *,void (CTakeDamageInfo::*)(float),void,float>::Call;
+    *(v147 + 56) = CTakeDamageInfo::SetOriginalDamage;
+    *(v147 + 40) = s_CTakeDamageInfo_SetOriginalDamage_packed_arg_names;
+    v153 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(p_m_FunctionBindings)];
+    *(v153 + 24) = 1;
+    *(v153 + 16) = "";
+    *v153 = "GetOriginalDamage";
+    *(v153 + 8) = "GetOriginalDamage";
+    v154 = *(v153 + 26);
+    *(v153 + 25) = 0;
+    v155 = v154 - 1;
+    if ( v155 >= 0 && *(v153 + v155 + 27) == 32 )
+    {
+      v156 = 1;
+      do
+      {
+        --v155;
+        v157 = v156;
+        if ( v155 == -1 )
+        {
+          *(v153 + 25) = v156;
+          goto LABEL_170;
+        }
+        ++v156;
+      }
+      while ( *(v153 + v155 + 27) == 32 );
+      *(v153 + 25) = v157;
+    }
+LABEL_170:
+    *(v153 + 64) = 1;
+    *(v153 + 48) = CMemberScriptBinding0<CTakeDamageInfo *,float (CTakeDamageInfo::*)(void),float>::Call;
+    *(v153 + 56) = CTakeDamageInfo::GetOriginalDamage;
+    v158 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(p_m_FunctionBindings)];
+    *(v158 + 24) = 0;
+    *(v158 + 16) = "";
+    *v158 = "SetDamageTaken";
+    *(v158 + 8) = "SetDamageTaken";
+    v159 = *(v158 + 26);
+    v160 = v159++;
+    *(v158 + v160 + 27) = 5;
+    *(v158 + 26) = v159;
+    v161 = v159 - 1;
+    *(v158 + 25) = 0;
+    if ( v161 >= 0 && *(v158 + v161 + 27) == 32 )
+    {
+      v162 = 1;
+      do
+      {
+        --v161;
+        v163 = v162;
+        if ( v161 == -1 )
+        {
+          *(v158 + 25) = v162;
+          goto LABEL_176;
+        }
+        ++v162;
+      }
+      while ( *(v158 + v161 + 27) == 32 );
+      *(v158 + 25) = v163;
+    }
+LABEL_176:
+    *(v158 + 64) = 1;
+    *(v158 + 48) = CMemberScriptBinding1<CTakeDamageInfo *,void (CTakeDamageInfo::*)(int),void,int>::Call;
+    *(v158 + 56) = CTakeDamageInfo::SetDamageTaken;
+    *(v158 + 40) = s_CTakeDamageInfo_SetDamageTaken_packed_arg_names;
+    v164 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(p_m_FunctionBindings)];
+    *(v164 + 24) = 1;
+    *(v164 + 16) = "";
+    *v164 = "GetDamageTaken";
+    *(v164 + 8) = "GetDamageTaken";
+    v165 = *(v164 + 26);
+    *(v164 + 25) = 0;
+    v166 = v165 - 1;
+    if ( v166 >= 0 && *(v164 + v166 + 27) == 32 )
+    {
+      v167 = 1;
+      do
+      {
+        --v166;
+        v168 = v167;
+        if ( v166 == -1 )
+        {
+          *(v164 + 25) = v167;
+          goto LABEL_182;
+        }
+        ++v167;
+      }
+      while ( *(v164 + v166 + 27) == 32 );
+      *(v164 + 25) = v168;
+    }
+LABEL_182:
+    *(v164 + 64) = 1;
+    *(v164 + 48) = CMemberScriptBinding0<CTakeDamageInfo *,float (CTakeDamageInfo::*)(void),float>::Call;
+    *(v164 + 56) = CTakeDamageInfo::GetDamageTaken;
+    v169 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(p_m_FunctionBindings)];
+    *(v169 + 24) = 0;
+    *(v169 + 16) = "";
+    *v169 = "SetStabilityDamage";
+    *(v169 + 8) = "SetStabilityDamage";
+    v170 = *(v169 + 26);
+    v171 = v170++;
+    *(v169 + v171 + 27) = 1;
+    *(v169 + 26) = v170;
+    v172 = v170 - 1;
+    *(v169 + 25) = 0;
+    if ( v172 >= 0 && *(v169 + v172 + 27) == 32 )
+    {
+      v173 = 0;
+      do
+      {
+        --v172;
+        ++v173;
+      }
+      while ( v172 != -1 && *(v169 + v172 + 27) == 32 );
+      *(v169 + 25) = v173;
+    }
+    *(v169 + 64) = 1;
+    *(v169 + 48) = CMemberScriptBinding1<CTakeDamageInfo *,void (CTakeDamageInfo::*)(float),void,float>::Call;
+    *(v169 + 56) = CTakeDamageInfo::SetStabilityDamage;
+    *(v169 + 40) = s_CTakeDamageInfo_SetStabilityDamage_packed_arg_names;
+    v174 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(p_m_FunctionBindings)];
+    *(v174 + 24) = 1;
+    *(v174 + 16) = "";
+    *v174 = "GetStabilityDamage";
+    *(v174 + 8) = "GetStabilityDamage";
+    v175 = *(v174 + 26);
+    *(v174 + 25) = 0;
+    v176 = v175 - 1;
+    if ( v176 >= 0 && *(v174 + v176 + 27) == 32 )
+    {
+      v177 = 1;
+      do
+      {
+        --v176;
+        v178 = v177;
+        if ( v176 == -1 )
+        {
+          *(v174 + 25) = v177;
+          goto LABEL_194;
+        }
+        ++v177;
+      }
+      while ( *(v174 + v176 + 27) == 32 );
+      *(v174 + 25) = v178;
+    }
+LABEL_194:
+    *(v174 + 64) = 1;
+    *(v174 + 48) = CMemberScriptBinding0<CTakeDamageInfo *,float (CTakeDamageInfo::*)(void),float>::Call;
+    *(v174 + 56) = CTakeDamageInfo::GetStabilityDamage;
+    v179 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(p_m_FunctionBindings)];
+    *(v179 + 24) = 0;
+    *(v179 + 16) = "";
+    *v179 = "SetAllowFriendlyFire";
+    *(v179 + 8) = "SetAllowFriendlyFire";
+    v180 = *(v179 + 26);
+    v181 = v180++;
+    *(v179 + v181 + 27) = 6;
+    *(v179 + 26) = v180;
+    v182 = v180 - 1;
+    *(v179 + 25) = 0;
+    if ( v182 >= 0 && *(v179 + v182 + 27) == 32 )
+    {
+      v183 = 1;
+      do
+      {
+        --v182;
+        v184 = v183;
+        if ( v182 == -1 )
+        {
+          *(v179 + 25) = v183;
+          goto LABEL_200;
+        }
+        ++v183;
+      }
+      while ( *(v179 + v182 + 27) == 32 );
+      *(v179 + 25) = v184;
+    }
+LABEL_200:
+    *(v179 + 64) = 1;
+    *(v179 + 48) = CMemberScriptBinding1<CTakeDamageInfo *,void (CTakeDamageInfo::*)(bool),void,bool>::Call;
+    *(v179 + 56) = CTakeDamageInfo::SetAllowFriendlyFire;
+    *(v179 + 40) = s_CTakeDamageInfo_SetAllowFriendlyFire_packed_arg_names;
+    v185 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(p_m_FunctionBindings)];
+    *(v185 + 24) = 6;
+    *(v185 + 16) = "";
+    *v185 = "AllowFriendlyFire";
+    *(v185 + 8) = "AllowFriendlyFire";
+    v186 = *(v185 + 26);
+    *(v185 + 25) = 0;
+    v187 = v186 - 1;
+    if ( v187 >= 0 && *(v185 + v187 + 27) == 32 )
+    {
+      v188 = 1;
+      do
+      {
+        --v187;
+        v189 = v188;
+        if ( v187 == -1 )
+        {
+          *(v185 + 25) = v188;
+          goto LABEL_206;
+        }
+        ++v188;
+      }
+      while ( *(v185 + v187 + 27) == 32 );
+      *(v185 + 25) = v189;
+    }
+LABEL_206:
+    *(v185 + 64) = 1;
+    *(v185 + 48) = CMemberScriptBinding0<CTakeDamageInfo *,bool (CTakeDamageInfo::*)(void),bool>::Call;
+    *(v185 + 56) = CTakeDamageInfo::AllowFriendlyFire;
+    v190 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(p_m_FunctionBindings)];
+    *(v190 + 24) = 0;
+    *(v190 + 16) = "";
+    *v190 = "SetCanBeBlocked";
+    *(v190 + 8) = "SetCanBeBlocked";
+    v191 = *(v190 + 26);
+    v192 = v191++;
+    *(v190 + v192 + 27) = 6;
+    *(v190 + 26) = v191;
+    v193 = v191 - 1;
+    *(v190 + 25) = 0;
+    if ( v193 >= 0 && *(v190 + v193 + 27) == 32 )
+    {
+      v194 = 1;
+      do
+      {
+        --v193;
+        v195 = v194;
+        if ( v193 == -1 )
+        {
+          *(v190 + 25) = v194;
+          goto LABEL_212;
+        }
+        ++v194;
+      }
+      while ( *(v190 + v193 + 27) == 32 );
+      *(v190 + 25) = v195;
+    }
+LABEL_212:
+    *(v190 + 64) = 1;
+    *(v190 + 48) = CMemberScriptBinding1<CTakeDamageInfo *,void (CTakeDamageInfo::*)(bool),void,bool>::Call;
+    *(v190 + 56) = CTakeDamageInfo::SetCanBeBlocked;
+    *(v190 + 40) = s_CTakeDamageInfo_SetCanBeBlocked_packed_arg_names;
+    v196 = &v2->m_FunctionBindings.m_Memory.m_pMemory[CUtlVectorBase<ScriptFunctionBinding_t,CUtlMemory<ScriptFunctionBinding_t,int>>::AddToTail(p_m_FunctionBindings)];
+    *(v196 + 24) = 6;
+    *(v196 + 16) = "";
+    *v196 = "CanBeBlocked";
+    *(v196 + 8) = "CanBeBlocked";
+    v197 = *(v196 + 26);
+    *(v196 + 25) = 0;
+    v198 = v197 - 1;
+    if ( v198 >= 0 && *(v196 + v198 + 27) == 32 )
+    {
+      v199 = 1;
+      do
+      {
+        --v198;
+        v200 = v199;
+        if ( v198 == -1 )
+        {
+          *(v196 + 25) = v199;
+          goto LABEL_218;
+        }
+        ++v199;
+      }
+      while ( *(v196 + v198 + 27) == 32 );
+      *(v196 + 25) = v200;
+    }
+LABEL_218:
+    *(v196 + 64) = 1;
+    *(v196 + 48) = CMemberScriptBinding0<CTakeDamageInfo *,bool (CTakeDamageInfo::*)(void),bool>::Call;
+    *(v196 + 56) = CTakeDamageInfo::CanBeBlocked;
+    return v2;
+  }
+  return result;
+}
+
+
+// CTakeDamageInfo::GetScriptDesc  (line 161, @0x0000000001f21860, libserver.so)
+// calls: GetScriptDesc<CTakeDamageInfo>
+ScriptClassDesc_t *__fastcall CTakeDamageInfo::GetScriptDesc(CTakeDamageInfo *const this)
+{
+  return GetScriptDesc<CTakeDamageInfo>(this);
+}
+
+
+// CTakeDamageInfo::InitScriptDesc  (line 161, @0x0000000001f21870, libserver.so)
+// calls: GetScriptDesc<CTakeDamageInfo>
+ScriptClassDesc_t *__cdecl CTakeDamageInfo::InitScriptDesc()
+{
+  return GetScriptDesc<CTakeDamageInfo>(0);
+}
+
+
+// CTakeDamageInfo::GetClassScriptDesc  (line 161, @0x0000000001f21880, libserver.so)
+// calls: GetScriptDesc<CTakeDamageInfo>
+ScriptClassDesc_t *__cdecl CTakeDamageInfo::GetClassScriptDesc()
+{
+  return GetScriptDesc<CTakeDamageInfo>(0);
+}
+
+
+// LocalRegisterSchemaModule<ArbitraryTemplateParameter_server_takedamageinfo_h>  (line 204, @0x0000000001f1f7c0, libserver.so)  // inlines: Call
+// globals: CTakeDamageInfo::s_pSchemaBindingForLocalModule
+void __fastcall LocalRegisterSchemaModule<ArbitraryTemplateParameter_server_takedamageinfo_h>(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        SchemaRegistrationPhase_t nRegistrationPhase)
+{
+  if ( nRegistrationPhase == SchemaRegistrationPhase_t::SCHEMA_REGISTRATION_PHASE_CLASSES )
+    (*(CTakeDamageInfo::s_pSchemaBindingForLocalModule->_vptr_ISchemaBinding + 5))(
+      CTakeDamageInfo::s_pSchemaBindingForLocalModule,
+      pSchemaSystem,
+      pBinaryName,
+      "server");
+  ++g_nLinkerHack_SchemaAnchor_RegistrationCountFor_server;
+}
+
+
+// RegisterSchemaModule_takedamageinfo_h  (line 206, @0x0000000001f1f800, libserver.so)  // inlines: Call, LocalRegisterSchemaModule<ArbitraryTemplateParameter_server_takedamageinfo_h>
+// callers: CSchemaRegistration_server::RegisterAllBindings
+// globals: CTakeDamageInfo::s_pSchemaBindingForLocalModule
+void __fastcall RegisterSchemaModule_takedamageinfo_h(
+        ISchemaSystem *pSchemaSystem,
+        const char *pBinaryName,
+        SchemaRegistrationPhase_t nRegistrationPhase)
+{
+  if ( nRegistrationPhase == SchemaRegistrationPhase_t::SCHEMA_REGISTRATION_PHASE_CLASSES )
+    (*(CTakeDamageInfo::s_pSchemaBindingForLocalModule->_vptr_ISchemaBinding + 5))(
+      CTakeDamageInfo::s_pSchemaBindingForLocalModule,
+      pSchemaSystem,
+      pBinaryName,
+      "server");
+  ++g_nLinkerHack_SchemaAnchor_RegistrationCountFor_server;
+}
+
+
