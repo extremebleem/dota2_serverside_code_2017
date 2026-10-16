@@ -71,7 +71,7 @@ CEntityInstance *__fastcall CFish::CEntityInstanceEntityClass::ConstructInstance
 void __fastcall CFish::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CFish::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -81,7 +81,7 @@ void __fastcall CFish::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
 void __fastcall CFish::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CFish::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -166,14 +166,14 @@ void __fastcall CFishPool::~CFishPool(CFishPool *const this)
       CUtlMemory<CHandle<CFish>,int>::Purge(p_m_Memory);
   }
   v2 = !this->m_bRegisteredForEvents;
-  this->_vptr_IGameEventListener2 = off_3FB3190;
+  this->_vptr_IGameEventListener2 = off_3FB3190;  // vptr: CGameEventListener
   if ( !v2 )
   {
     if ( gameeventmanager != 0 )
       (*(gameeventmanager->_vptr_IBaseInterface + 6))(gameeventmanager, &this->CGameEventListener);
     this->m_bRegisteredForEvents = 0;
   }
-  this->_vptr_IGameEventListener2 = off_3FB3150;
+  this->_vptr_IGameEventListener2 = off_3FB3150;  // vptr: IGameEventListener2
   CBaseEntity::~CBaseEntity(this);
 }
 
@@ -197,14 +197,14 @@ void __fastcall CFishPool::~CFishPool(CFishPool *const this)
       CUtlMemory<CHandle<CFish>,int>::Purge(p_m_Memory);
   }
   v2 = !this->m_bRegisteredForEvents;
-  this->_vptr_IGameEventListener2 = off_3FB3190;
+  this->_vptr_IGameEventListener2 = off_3FB3190;  // vptr: CGameEventListener
   if ( !v2 )
   {
     if ( gameeventmanager != 0 )
       (*(gameeventmanager->_vptr_IBaseInterface + 6))(gameeventmanager, &this->CGameEventListener);
     this->m_bRegisteredForEvents = 0;
   }
-  this->_vptr_IGameEventListener2 = off_3FB3150;
+  this->_vptr_IGameEventListener2 = off_3FB3150;  // vptr: IGameEventListener2
   CBaseEntity::~CBaseEntity(this);
   CBaseEntity::operator delete(this);
 }
@@ -284,7 +284,7 @@ CEntityInstance *__fastcall CFishPool::CEntityInstanceEntityClass::ConstructInst
 void __fastcall CFishPool::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CFishPool::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -294,7 +294,7 @@ void __fastcall CFishPool::CEntityInstanceEntityClass::~CEntityInstanceEntityCla
 void __fastcall CFishPool::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CFishPool::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }

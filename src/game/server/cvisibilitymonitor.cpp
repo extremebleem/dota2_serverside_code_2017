@@ -88,7 +88,7 @@ void __fastcall CVisibilityMonitor::~CVisibilityMonitor(CVisibilityMonitor *cons
     if ( (this->m_Entities.m_Memory.m_nGrowSize & 0xC0000000) == 0 )
       CUtlMemory<visibility_target_t,int>::Purge(&this->m_Entities.m_Memory);
   }
-  this->_vptr_IGameSystem = off_3F7C1B0;
+  this->_vptr_IGameSystem = off_3F7C1B0;  // vptr: CAutoGameSystem
   IGameSystem::~IGameSystem(this);
 }
 
@@ -105,7 +105,7 @@ void __fastcall CVisibilityMonitor::~CVisibilityMonitor(CVisibilityMonitor *cons
     if ( (this->m_Entities.m_Memory.m_nGrowSize & 0xC0000000) == 0 )
       CUtlMemory<visibility_target_t,int>::Purge(&this->m_Entities.m_Memory);
   }
-  this->_vptr_IGameSystem = off_3F7C1B0;
+  this->_vptr_IGameSystem = off_3F7C1B0;  // vptr: CAutoGameSystem
   IGameSystem::~IGameSystem(this);
   operator delete(this);
 }

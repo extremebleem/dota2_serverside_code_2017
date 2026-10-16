@@ -148,7 +148,7 @@ void *__fastcall CGameWeaponManager::CEntityInstanceEntityClass::AllocateInstanc
 void __fastcall CGameWeaponManager::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CGameWeaponManager::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -158,7 +158,7 @@ void __fastcall CGameWeaponManager::CEntityInstanceEntityClass::~CEntityInstance
 void __fastcall CGameWeaponManager::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CGameWeaponManager::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }

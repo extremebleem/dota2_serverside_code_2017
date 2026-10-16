@@ -11,7 +11,7 @@ void __fastcall CDOTA_Bot_AbilityUsage_VeilOfDischord::CDOTA_Bot_AbilityUsage_Ve
   this->m_pAbility = pAbility;
   this->m_bUseOnCreeps = 0;
   this->m_pBot = pBot;
-  this->_vptr_CDOTA_Bot_AbilityUsage = off_42C6F70;
+  this->_vptr_CDOTA_Bot_AbilityUsage = off_42C6F70;  // vptr: CDOTA_Bot_AbilityUsage_VeilOfDischord
 }
 
 

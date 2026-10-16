@@ -169,7 +169,7 @@ void __fastcall CEntitySpawnerAsync<CBaseEntity>::CEntitySpawnerAsync(
   p_m_modifyScope[-1].m_pKeyValues = off_3FCEBB0;
   CEntityKeyValuesModifyScope::BeginModify(p_m_modifyScope, 0);
   this->m_pContext = pContext;
-  this->_vptr_CEntitySpawnerBase = off_3FCEC50;
+  this->_vptr_CEntitySpawnerBase = off_3FCEC50;  // vptr: CEntitySpawnerAsync<CBaseEntity>
   this->m_scriptClassName.m_pString = 0;
   this->m_pFilter = 0;
   v34 = 0;

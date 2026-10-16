@@ -106,7 +106,7 @@ CEntityInstance *__fastcall CInfoSpawnGroupLandmark::CEntityInstanceEntityClass:
 void __fastcall CInfoSpawnGroupLandmark::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CInfoSpawnGroupLandmark::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -116,7 +116,7 @@ void __fastcall CInfoSpawnGroupLandmark::CEntityInstanceEntityClass::~CEntityIns
 void __fastcall CInfoSpawnGroupLandmark::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CInfoSpawnGroupLandmark::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -343,7 +343,7 @@ void *__fastcall CInfoSpawnGroupLoadUnload::CEntityInstanceEntityClass::Allocate
 void __fastcall CInfoSpawnGroupLoadUnload::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CInfoSpawnGroupLoadUnload::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -353,7 +353,7 @@ void __fastcall CInfoSpawnGroupLoadUnload::CEntityInstanceEntityClass::~CEntityI
 void __fastcall CInfoSpawnGroupLoadUnload::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CInfoSpawnGroupLoadUnload::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -645,7 +645,7 @@ void __fastcall CInfoSpawnGroupLoadUnloadAlias_info_spawngroup_load::~CInfoSpawn
 void __fastcall CInfoSpawnGroupLoadUnloadAlias_info_spawngroup_load::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CInfoSpawnGroupLoadUnloadAlias_info_spawngroup_load::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -655,7 +655,7 @@ void __fastcall CInfoSpawnGroupLoadUnloadAlias_info_spawngroup_load::CEntityInst
 void __fastcall CInfoSpawnGroupLoadUnloadAlias_info_spawngroup_load::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CInfoSpawnGroupLoadUnloadAlias_info_spawngroup_load::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -881,7 +881,7 @@ void __fastcall CInfoSpawnGroupLoadUnloadAlias_info_spawngroup_unload::~CInfoSpa
 void __fastcall CInfoSpawnGroupLoadUnloadAlias_info_spawngroup_unload::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CInfoSpawnGroupLoadUnloadAlias_info_spawngroup_unload::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -891,7 +891,7 @@ void __fastcall CInfoSpawnGroupLoadUnloadAlias_info_spawngroup_unload::CEntityIn
 void __fastcall CInfoSpawnGroupLoadUnloadAlias_info_spawngroup_unload::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CInfoSpawnGroupLoadUnloadAlias_info_spawngroup_unload::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }

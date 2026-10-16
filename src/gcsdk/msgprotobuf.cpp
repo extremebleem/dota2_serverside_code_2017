@@ -56,7 +56,7 @@ void __fastcall GCSDK::CProtoBufNetPacket::CProtoBufNetPacket(
   CMsgProtoBufHeader *v15; // rax
 
   this->m_cRef = 1;
-  this->_vptr_CRefCount = off_47D0770;
+  this->_vptr_CRefCount = off_47D0770;  // vptr: GCSDK::CProtoBufNetPacket
   this->m_steamID = steamID;
   this->m_msgType = msgType;
   this->m_bIsValid = 0;
@@ -94,11 +94,11 @@ void __fastcall GCSDK::CProtoBufNetPacket::~CProtoBufNetPacket(GCSDK::CProtoBufN
   GCSDK::CProtoBufMsgMemoryPoolMgr *v3; // rax
 
   m_pHeader = this->m_pHeader;
-  this->_vptr_CRefCount = off_47D0770;
+  this->_vptr_CRefCount = off_47D0770;  // vptr: GCSDK::CProtoBufNetPacket
   v3 = GCSDK::GProtoBufMsgMemoryPoolMgr();
   GCSDK::CProtoBufMsgMemoryPoolBase::Free(&v3->m_PoolHeaders, m_pHeader);
   GCSDK::CNetPacket::Release(this->m_pNetPacket);
-  this->_vptr_CRefCount = off_47D0430;
+  this->_vptr_CRefCount = off_47D0430;  // vptr: GCSDK::CRefCount
 }
 
 
@@ -155,7 +155,7 @@ void __fastcall GCSDK::CProtoBufMsgMemoryPoolBase::CProtoBufMsgMemoryPoolBase(
   CTSQueue<google::protobuf::Message*,false>::Node_t *v6; // rax
 
   this->m_unAllocHitCounter.m_value = 0;
-  this->_vptr_CProtoBufMsgMemoryPoolBase = off_47D0810;
+  this->_vptr_CProtoBufMsgMemoryPoolBase = off_47D0810;  // vptr: GCSDK::CProtoBufMsgMemoryPoolBase
   this->m_unAllocMissCounter.m_value = 0;
   this->m_unTargetCountHigh = unTargetHigh;
   this->m_unAllocated.m_value = 0;
@@ -215,7 +215,7 @@ void __fastcall GCSDK::CProtoBufMsgMemoryPoolBase::~CProtoBufMsgMemoryPoolBase(
   intp *v29; // [rsp+38h] [rbp-38h]
 
   m_pTSQueueFreeObjects = this->m_pTSQueueFreeObjects;
-  this->_vptr_CProtoBufMsgMemoryPoolBase = off_47D0810;
+  this->_vptr_CProtoBufMsgMemoryPoolBase = off_47D0810;  // vptr: GCSDK::CProtoBufMsgMemoryPoolBase
   v28 = m_pTSQueueFreeObjects;
   p_m_Tail = &m_pTSQueueFreeObjects->m_Tail;
   p_sequence = &m_pTSQueueFreeObjects->m_Head.value.sequence;
@@ -533,10 +533,8 @@ void __fastcall GCSDK::CProtoBufMsgMemoryPoolBase::Free(
   int v10; // r12d
   intp sequence; // rdx
   volatile signed __int64 *pNode; // rsi
-  intp v13; // rcx
-  __int64 v14; // rdx
-  __int128 v15; // rt0
-  __int128 v16; // rt0
+  __int128 v13; // rt0
+  __int128 v14; // rt0
 
   (*(*pObject + 32LL))(pObject);
   _InterlockedSub(&this->m_unAllocated.m_value, 1u);
@@ -575,24 +573,20 @@ LABEL_13:
     pNode = m_pTSQueueFreeObjects->m_Tail.value.pNode;
     if ( m_pTSQueueFreeObjects == _InterlockedCompareExchange64(pNode, p_Next, m_pTSQueueFreeObjects) )
       break;
-    v13 = sequence + 1;
-    *&v15 = pNode;
-    *(&v15 + 1) = sequence;
-    _InterlockedCompareExchange128(p_m_Tail, sequence + 1, *pNode, &v15);
-    v14 = *(&v15 + 1);
+    *&v13 = pNode;
+    *(&v13 + 1) = sequence;
+    _InterlockedCompareExchange128(p_m_Tail, sequence + 1, *pNode, &v13);
     if ( ++v10 > 9999999
       && AssertMsg_ConditionFailed(
            &CTSQueue<google::protobuf::Message *,false>::Push(CTSQueue<google::protobuf::Message *,false>::Node_t *)::_assertionConstants,
-           "CTSQueue corruption",
-           v14,
-           v13) != 0 )
+           "CTSQueue corruption") != 0 )
     {
       __debugbreak();
     }
   }
-  *&v16 = pNode;
-  *(&v16 + 1) = sequence;
-  _InterlockedCompareExchange128(p_m_Tail, sequence + 1, p_Next, &v16);
+  *&v14 = pNode;
+  *(&v14 + 1) = sequence;
+  _InterlockedCompareExchange128(p_m_Tail, sequence + 1, p_Next, &v14);
   _InterlockedAdd(&m_pTSQueueFreeObjects->m_Count.m_value, 1u);
 }
 
@@ -626,17 +620,15 @@ uint32 __fastcall GCSDK::CProtoBufMsgMemoryPoolBase::GetEstimatedSize(GCSDK::CPr
   volatile signed __int64 *v21; // r15
   __int64 v22; // rdx
   volatile signed __int64 *v23; // rsi
-  __int64 v24; // rcx
-  __int64 v25; // rdx
+  __int128 v24; // rt0
+  __int128 v25; // rt0
   __int128 v26; // rt0
-  __int128 v27; // rt0
-  __int128 v28; // rt0
-  int v29; // eax
+  int v27; // eax
   int unEstimate; // [rsp+0h] [rbp-A0h]
   uint32 unEstimatea; // [rsp+0h] [rbp-A0h]
   __int64 i; // [rsp+20h] [rbp-80h]
-  unsigned __int64 v35; // [rsp+28h] [rbp-78h]
-  signed __int64 v36; // [rsp+28h] [rbp-78h]
+  unsigned __int64 v33; // [rsp+28h] [rbp-78h]
+  signed __int64 v34; // [rsp+28h] [rbp-78h]
   intp *p_sequence; // [rsp+48h] [rbp-58h]
   CUtlVector<google::protobuf::Message*,CUtlMemory<google::protobuf::Message*,int> > vecTemp; // [rsp+50h] [rbp-50h] BYREF
 
@@ -673,9 +665,9 @@ uint32 __fastcall GCSDK::CProtoBufMsgMemoryPoolBase::GetEstimatedSize(GCSDK::CPr
           v8 = 0;
           goto LABEL_11;
         }
-        *&v27 = m_pTSQueueFreeObjects->m_Head.value.pNode;
-        *(&v27 + 1) = m_pTSQueueFreeObjects->m_Tail.value.sequence;
-        _InterlockedCompareExchange128(&m_pTSQueueFreeObjects->m_Tail, *(&v27 + 1) + 1LL, pNext, &v27);
+        *&v25 = m_pTSQueueFreeObjects->m_Head.value.pNode;
+        *(&v25 + 1) = m_pTSQueueFreeObjects->m_Tail.value.sequence;
+        _InterlockedCompareExchange128(&m_pTSQueueFreeObjects->m_Tail, *(&v25 + 1) + 1LL, pNext, &v25);
       }
       if ( m_pTSQueueFreeObjects != pNext )
       {
@@ -688,14 +680,14 @@ uint32 __fastcall GCSDK::CProtoBufMsgMemoryPoolBase::GetEstimatedSize(GCSDK::CPr
     }
     _InterlockedSub(&m_pTSQueueFreeObjects->m_Count.m_value, 1u);
     pNode[1] = v8;
-    v35 = v35;
+    v33 = v33;
     while ( 1 )
     {
       m_Head = m_pTSQueueFreeObjects->m_FreeNodes.m_Head;
-      v35 = (m_Head.value32.DepthAndSequence + 65537) | v35 & 0xFFFFFFFF00000000LL;
+      v33 = (m_Head.value32.DepthAndSequence + 65537) | v33 & 0xFFFFFFFF00000000LL;
       *pNode = m_Head.value.Next;
       v11 = m_Head;
-      if ( _InterlockedCompareExchange128(&m_pTSQueueFreeObjects->m_FreeNodes, v35, pNode, &v11) != 0 )
+      if ( _InterlockedCompareExchange128(&m_pTSQueueFreeObjects->m_FreeNodes, v33, pNode, &v11) != 0 )
         break;
       _mm_pause();
     }
@@ -727,7 +719,7 @@ LABEL_11:
       v15 = &vecTemp.m_Memory.m_pMemory[i];
       v16 = this->m_pTSQueueFreeObjects;
       v17 = v16->m_FreeNodes.m_Head;
-      v36 = v16;
+      v34 = v16;
       p_Next = &v17.value.Next->Next;
       if ( v17.value.Next != 0 )
       {
@@ -752,36 +744,32 @@ LABEL_34:
       if ( p_Next != -8LL )
         p_Next[1] = *v15;
       v20 = 0;
-      *p_Next = v36;
-      v21 = (v36 + 16);
+      *p_Next = v34;
+      v21 = (v34 + 16);
       while ( 1 )
       {
-        v22 = *(v36 + 24);
-        v23 = *(v36 + 16);
-        if ( v36 == _InterlockedCompareExchange64(v23, p_Next, v36) )
+        v22 = *(v34 + 24);
+        v23 = *(v34 + 16);
+        if ( v34 == _InterlockedCompareExchange64(v23, p_Next, v34) )
           break;
-        v24 = v22 + 1;
-        *&v26 = v23;
-        *(&v26 + 1) = v22;
-        _InterlockedCompareExchange128(v21, v22 + 1, *v23, &v26);
-        v25 = *(&v26 + 1);
+        *&v24 = v23;
+        *(&v24 + 1) = v22;
+        _InterlockedCompareExchange128(v21, v22 + 1, *v23, &v24);
         if ( ++v20 > 9999999
           && AssertMsg_ConditionFailed(
                &CTSQueue<google::protobuf::Message *,false>::Push(CTSQueue<google::protobuf::Message *,false>::Node_t *)::_assertionConstants,
-               "CTSQueue corruption",
-               v25,
-               v24) != 0 )
+               "CTSQueue corruption") != 0 )
         {
           __debugbreak();
         }
       }
-      *&v28 = v23;
-      *(&v28 + 1) = v22;
-      _InterlockedCompareExchange128(v21, v22 + 1, p_Next, &v28);
-      _InterlockedAdd((v36 + 32), 1u);
-      v29 = i++;
+      *&v26 = v23;
+      *(&v26 + 1) = v22;
+      _InterlockedCompareExchange128(v21, v22 + 1, p_Next, &v26);
+      _InterlockedAdd((v34 + 32), 1u);
+      v27 = i++;
     }
-    while ( vecTemp.m_Size > v29 + 1 );
+    while ( vecTemp.m_Size > v27 + 1 );
     unEstimatea = (unEstimate * ((this->m_unAllocated.m_value + vecTemp.m_Size) / vecTemp.m_Size));
   }
   if ( (vecTemp.m_Memory.m_nGrowSize & 0xC0000000) == 0 )
@@ -1022,61 +1010,64 @@ void __fastcall GCSDK::CProtoBufMsgMemoryPoolMgr::RegisterPool(
 // strings: "CProtoBufMsgMemoryPoolMgr:\n", "  PoolName                                   Allocated        Free   Est. Size    Hit Rat, "  ----------------------------------------- ----------- ----------- ----------- ---------, "%f%%", "%43s%12d%12d%12s%12s\n", "  --------------------------------------------------------------------------------------- (7 total)
 void __fastcall GCSDK::CProtoBufMsgMemoryPoolMgr::DumpPoolInfo(GCSDK::CProtoBufMsgMemoryPoolMgr *const this)
 {
-  __int64 v2; // rbx
-  float v3; // xmm0_4
-  GCSDK::CProtoBufMsgMemoryPoolBase *v4; // rdi
+  double v2; // xmm0_8
+  double v3; // xmm0_8
+  unsigned __int64 v4; // xmm0_8
+  __int64 v5; // rbx
+  float v6; // xmm0_4
+  GCSDK::CProtoBufMsgMemoryPoolBase *v7; // rdi
   signed int EstimatedSize; // r13d
-  GCSDK::CProtoBufMsgMemoryPoolBase *v6; // rsi
+  GCSDK::CProtoBufMsgMemoryPoolBase *v9; // rsi
   volatile int m_value; // r15d
-  const char *v8; // rax
-  const char *v9; // rax
+  const char *v11; // rax
+  const char *v12; // rax
   signed int unTotalSize; // [rsp+10h] [rbp-170h]
-  volatile int v11; // [rsp+14h] [rbp-16Ch]
+  volatile int v14; // [rsp+14h] [rbp-16Ch]
   float flHitRate; // [rsp+18h] [rbp-168h]
   const char *flHitRatea; // [rsp+18h] [rbp-168h]
-  CUtlString v14; // [rsp+20h] [rbp-160h] BYREF
-  CFmtStrN<256,false> v15; // [rsp+30h] [rbp-150h] BYREF
-  unsigned __int64 v16; // [rsp+148h] [rbp-38h]
+  CUtlString v17; // [rsp+20h] [rbp-160h] BYREF
+  CFmtStrN<256,false> v18; // [rsp+30h] [rbp-150h] BYREF
+  unsigned __int64 v19; // [rsp+148h] [rbp-38h]
 
-  v16 = __readfsqword(0x28u);
-  Msg("CProtoBufMsgMemoryPoolMgr:\n");
-  Msg("  PoolName                                   Allocated        Free   Est. Size    Hit Rate\n");
-  Msg("  ----------------------------------------- ----------- ----------- ----------- -----------\n");
+  v19 = __readfsqword(0x28u);
+  *&v2 = Msg("CProtoBufMsgMemoryPoolMgr:\n").m128_u64[0];
+  *&v3 = Msg("  PoolName                                   Allocated        Free   Est. Size    Hit Rate\n", v2).m128_u64[0];
+  v4 = Msg("  ----------------------------------------- ----------- ----------- ----------- -----------\n", v3).m128_u64[0];
   if ( this->m_vecMsgPools.m_Size <= 0 )
   {
     unTotalSize = 0;
   }
   else
   {
-    v2 = 0;
+    v5 = 0;
     unTotalSize = 0;
     do
     {
-      v3 = 0.0;
-      v4 = this->m_vecMsgPools.m_Memory.m_pMemory[v2];
-      if ( *&v4->m_unAllocHitCounter.m_value != 0 )
-        v3 = (v4->m_unAllocHitCounter.m_value / (v4->m_unAllocMissCounter.m_value + v4->m_unAllocHitCounter.m_value))
+      v6 = 0.0;
+      v7 = this->m_vecMsgPools.m_Memory.m_pMemory[v5];
+      if ( *&v7->m_unAllocHitCounter.m_value != 0 )
+        v6 = (v7->m_unAllocHitCounter.m_value / (v7->m_unAllocMissCounter.m_value + v7->m_unAllocHitCounter.m_value))
            * 100.0;
-      flHitRate = v3;
-      EstimatedSize = GCSDK::CProtoBufMsgMemoryPoolBase::GetEstimatedSize(v4);
-      CFmtStrN<256,false>::CFmtStrN(&v15, "%f%%", flHitRate);
+      flHitRate = v6;
+      EstimatedSize = GCSDK::CProtoBufMsgMemoryPoolBase::GetEstimatedSize(v7);
+      CFmtStrN<256,false>::CFmtStrN(&v18, "%f%%", flHitRate);
       flHitRatea = V_pretifymem(2, 1, EstimatedSize);
-      v6 = this->m_vecMsgPools.m_Memory.m_pMemory[v2];
-      m_value = v6->m_pTSQueueFreeObjects->m_Count.m_value;
-      v11 = v6->m_unAllocated.m_value;
-      (*(v6->_vptr_CProtoBufMsgMemoryPoolBase + 2))(&v14);
-      v8 = CUtlString::Get(&v14);
-      Msg("%43s%12d%12d%12s%12s\n", v8, v11, m_value, flHitRatea, v15.m_szBuf);
-      if ( v14.m_pString != 0 )
-        CUtlString::FreeMemoryBlock(&v14);
+      v9 = this->m_vecMsgPools.m_Memory.m_pMemory[v5];
+      m_value = v9->m_pTSQueueFreeObjects->m_Count.m_value;
+      v14 = v9->m_unAllocated.m_value;
+      (*(v9->_vptr_CProtoBufMsgMemoryPoolBase + 2))(&v17);
+      v11 = CUtlString::Get(&v17);
+      v4 = Msg("%43s%12d%12d%12s%12s\n", v11, v14, m_value, flHitRatea, v18.m_szBuf).m128_u64[0];
+      if ( v17.m_pString != 0 )
+        CUtlString::FreeMemoryBlock(&v17);
       unTotalSize += EstimatedSize;
-      ++v2;
+      ++v5;
     }
-    while ( this->m_vecMsgPools.m_Size > v2 );
+    while ( this->m_vecMsgPools.m_Size > v5 );
   }
-  Msg("  -----------------------------------------------------------------------------------------\n");
-  v9 = V_pretifymem(2, 1, unTotalSize);
-  Msg("  Total: %s\n", v9);
+  Msg("  -----------------------------------------------------------------------------------------\n", *&v4);
+  v12 = V_pretifymem(2, 1, unTotalSize);
+  Msg("  Total: %s\n", v12);
 }
 
 
@@ -1084,7 +1075,7 @@ void __fastcall GCSDK::CProtoBufMsgMemoryPoolMgr::DumpPoolInfo(GCSDK::CProtoBufM
 // callers: CGCClientJobGrantSurveyPermission::BYieldingRunJob, CGCTournamentItemEventResponse::BYieldingRunJobFromMsg, CGCUserUpdatedAdditionalItems::BYieldingRunJobFromMsg, CGCClientJobGetHLTVChatBanStatus::BYieldingRunJob, CGCServerJobGetAdditionalItems::BYieldingRunJob, CGCClientJobTeamFanfare::BYieldingRunJob, GCSDK::GCClientJobLambda<CIngameEvent_WM2016::GiveTip(int, int)::__lambda11>::BYieldingRunJob, CGCClientJobSetLeaverDetected::BYieldingRunJob, CGCJobRequestBatchPlayerResourcesResponse::BYieldingRunGCJob, CGCClientJobRealtimeStateStartStop::BYieldingRunJobFromMsg, CGCClientJobDOTABroadcastNotificationServer::BYieldingRunJobFromMsg, CGCClientJobGCToServerPredictionResult::BYieldingRunJobFromMsg (33 total)
 void __fastcall GCSDK::CProtoBufMsgBase::CProtoBufMsgBase(GCSDK::CProtoBufMsgBase *const this)
 {
-  this->_vptr_CProtoBufMsgBase = off_47D0850;
+  this->_vptr_CProtoBufMsgBase = off_47D0850;  // vptr: GCSDK::CProtoBufMsgBase
   this->m_pNetPacket = 0;
   this->m_pProtoBufHdr = 0;
   this->m_eMsg = 0;
@@ -1099,7 +1090,7 @@ void __fastcall GCSDK::CProtoBufMsgBase::CProtoBufMsgBase(GCSDK::CProtoBufMsgBas
   GCSDK::CProtoBufMsgMemoryPoolMgr *v3; // rax
 
   this->m_eMsg = eMsg;
-  this->_vptr_CProtoBufMsgBase = off_47D0850;
+  this->_vptr_CProtoBufMsgBase = off_47D0850;  // vptr: GCSDK::CProtoBufMsgBase
   this->m_pNetPacket = 0;
   this->m_pProtoBufHdr = 0;
   v3 = GCSDK::GProtoBufMsgMemoryPoolMgr();
@@ -1116,7 +1107,7 @@ void __fastcall GCSDK::CProtoBufMsgBase::~CProtoBufMsgBase(GCSDK::CProtoBufMsgBa
   google::protobuf::Message *m_pProtoBufHdr; // r12
   GCSDK::CProtoBufMsgMemoryPoolMgr *v4; // rax
 
-  this->_vptr_CProtoBufMsgBase = off_47D0850;
+  this->_vptr_CProtoBufMsgBase = off_47D0850;  // vptr: GCSDK::CProtoBufMsgBase
   m_pNetPacket = this->m_pNetPacket;
   if ( m_pNetPacket != 0 )
   {
@@ -1155,7 +1146,7 @@ bool __fastcall GCSDK::CProtoBufMsgBase::InitFromPacketInternal(
         GCSDK::CProtoBufMsgBase *const this,
         GCSDK::IMsgNetPacket *pNetPacket)
 {
-  __int64 m_enabled; // rdi
+  int m_enabled; // edi
   bool v5; // r14
   GCSDK::MsgType_t *v6; // rax
   GCSDK::CProtoBufNetPacket *m_pNetPacket; // rdi
@@ -1179,7 +1170,7 @@ bool __fastcall GCSDK::CProtoBufMsgBase::InitFromPacketInternal(
   {
     v14 = __rdtsc();
     m_TargetThreadId = g_VProfCurrentProfile.m_TargetThreadId;
-    if ( m_TargetThreadId == ThreadGetCurrentId(m_enabled) )
+    if ( m_TargetThreadId == ThreadGetCurrentId() )
     {
       m_pCurNode = g_VProfCurrentProfile.m_pCurNode;
       if ( m_pCurNode->m_pszName != "CProtoBufMsg::InitFromPacket( IMsgNetPacket )" )
@@ -1229,7 +1220,7 @@ bool __fastcall GCSDK::CProtoBufMsgBase::InitFromPacketInternal(
     if ( !g_VProfCurrentProfile.m_fAtRoot || g_VProfCurrentProfile.m_enabled != 0 )
     {
       v11 = g_VProfCurrentProfile.m_TargetThreadId;
-      if ( v11 == ThreadGetCurrentId(m_pNetPacket) )
+      if ( v11 == ThreadGetCurrentId() )
       {
         if ( CVProfNode::ExitScope(g_VProfCurrentProfile.m_pCurNode) != 0 )
         {
@@ -1264,15 +1255,15 @@ bool __fastcall GCSDK::CProtoBufMsgBase::InitFromPacketSafe(
 {
   int m_enabled; // r9d
   bool v5; // r13
-  GCSDK::CProtoBufNetPacket *m_pNetPacket; // rdi
   char m_bIsValid; // r12
-  unsigned __int64 v9; // r13
-  ThreadId_t v10; // r14
-  uint64 v11; // rcx
-  unsigned __int64 v12; // r15
+  unsigned __int64 v8; // r13
+  ThreadId_t v9; // r14
+  uint64 v10; // rcx
+  unsigned __int64 v11; // r15
   uint64 m_numTimeBaseTicks; // rcx
   CVProfNode *m_pParent; // rax
-  GCSDK::MsgType_t *v15; // rax
+  GCSDK::MsgType_t *v14; // rax
+  GCSDK::CProtoBufNetPacket *m_pNetPacket; // rdi
   CVProfNode *m_pCurNode; // rax
   CVProfile::CBudgetGroup *v17; // rax
   google::protobuf::MessageLite *v18; // rax
@@ -1284,9 +1275,9 @@ bool __fastcall GCSDK::CProtoBufMsgBase::InitFromPacketSafe(
   v5 = m_enabled != 0;
   if ( m_enabled != 0 )
   {
-    v12 = __rdtsc();
+    v11 = __rdtsc();
     m_TargetThreadId = g_VProfCurrentProfile.m_TargetThreadId;
-    if ( m_TargetThreadId == ThreadGetCurrentId(this) )
+    if ( m_TargetThreadId == ThreadGetCurrentId() )
     {
       m_pCurNode = g_VProfCurrentProfile.m_pCurNode;
       if ( m_pCurNode->m_pszName != "CProtoBufMsg::InitFromPacket( IMsgNetPacket )" )
@@ -1306,15 +1297,15 @@ bool __fastcall GCSDK::CProtoBufMsgBase::InitFromPacketSafe(
     }
     m_numTimeBaseTicks = g_VProfCurrentProfile.m_ScopeProfiler.m_numTimeBaseTicks;
     ++g_VProfCurrentProfile.m_ScopeProfiler.m_numCalls;
-    g_VProfCurrentProfile.m_ScopeProfiler.m_numTimeBaseTicks = m_numTimeBaseTicks - v12 + __rdtsc();
+    g_VProfCurrentProfile.m_ScopeProfiler.m_numTimeBaseTicks = m_numTimeBaseTicks - v11 + __rdtsc();
   }
   if ( (*(pNetPacket->_vptr_CRefCount + 3))(pNetPacket) != 3 )
     goto LABEL_3;
   this->m_pNetPacket = pNetPacket;
   _InterlockedAdd(&pNetPacket->m_cRef, 1u);
-  v15 = (*(this->m_pNetPacket->_vptr_CRefCount + 5))(this->m_pNetPacket);
+  v14 = (*(this->m_pNetPacket->_vptr_CRefCount + 5))(this->m_pNetPacket);
   m_pNetPacket = this->m_pNetPacket;
-  this->m_eMsg = *v15;
+  this->m_eMsg = *v14;
   this->m_pProtoBufHdr = m_pNetPacket->m_pHeader;
   m_bIsValid = m_pNetPacket->m_bIsValid;
   if ( m_bIsValid != 0 )
@@ -1336,11 +1327,11 @@ LABEL_3:
 LABEL_4:
   if ( v5 )
   {
-    v9 = __rdtsc();
+    v8 = __rdtsc();
     if ( !g_VProfCurrentProfile.m_fAtRoot || g_VProfCurrentProfile.m_enabled != 0 )
     {
-      v10 = g_VProfCurrentProfile.m_TargetThreadId;
-      if ( v10 == ThreadGetCurrentId(m_pNetPacket) )
+      v9 = g_VProfCurrentProfile.m_TargetThreadId;
+      if ( v9 == ThreadGetCurrentId() )
       {
         if ( CVProfNode::ExitScope(g_VProfCurrentProfile.m_pCurNode) != 0 )
         {
@@ -1357,9 +1348,9 @@ LABEL_4:
         g_VProfCurrentProfile.m_fAtRoot = m_pParent == &g_VProfCurrentProfile.m_Root;
       }
     }
-    v11 = g_VProfCurrentProfile.m_ScopeProfiler.m_numTimeBaseTicks;
+    v10 = g_VProfCurrentProfile.m_ScopeProfiler.m_numTimeBaseTicks;
     ++g_VProfCurrentProfile.m_ScopeProfiler.m_numCalls;
-    g_VProfCurrentProfile.m_ScopeProfiler.m_numTimeBaseTicks = v11 - v9 + __rdtsc();
+    g_VProfCurrentProfile.m_ScopeProfiler.m_numTimeBaseTicks = v10 - v8 + __rdtsc();
   }
   return m_bIsValid;
 }
@@ -1394,15 +1385,14 @@ bool __fastcall GCSDK::CProtoBufMsgBase::BAsyncSendProto(
   __int64 v9; // r15
   uint8 *MessageMemory; // r13
   char v11; // r12
-  __int64 v12; // rdi
-  unsigned __int64 v14; // r13
-  ThreadId_t v15; // r14
-  uint64 v16; // rcx
-  unsigned __int64 v17; // r15
+  unsigned __int64 v13; // r13
+  ThreadId_t v14; // r14
+  uint64 v15; // rcx
+  unsigned __int64 v16; // r15
   uint64 m_numTimeBaseTicks; // rcx
   CVProfNode *m_pParent; // rax
   CVProfNode *m_pCurNode; // rax
-  CVProfile::CBudgetGroup *v21; // rax
+  CVProfile::CBudgetGroup *v20; // rax
   ThreadId_t m_TargetThreadId; // [rsp+0h] [rbp-50h]
   bool VProf_432; // [rsp+Bh] [rbp-45h]
   uint32 cubTotalSize[13]; // [rsp+1Ch] [rbp-34h] BYREF
@@ -1411,9 +1401,9 @@ bool __fastcall GCSDK::CProtoBufMsgBase::BAsyncSendProto(
   VProf_432 = m_enabled != 0;
   if ( m_enabled != 0 )
   {
-    v17 = __rdtsc();
+    v16 = __rdtsc();
     m_TargetThreadId = g_VProfCurrentProfile.m_TargetThreadId;
-    if ( m_TargetThreadId == ThreadGetCurrentId(sender) )
+    if ( m_TargetThreadId == ThreadGetCurrentId() )
     {
       m_pCurNode = g_VProfCurrentProfile.m_pCurNode;
       if ( m_pCurNode->m_pszName != "CProtoBufMsg::BAsyncSendProto" )
@@ -1426,14 +1416,14 @@ bool __fastcall GCSDK::CProtoBufMsgBase::BAsyncSendProto(
                        4);
         g_VProfCurrentProfile.m_pCurNode = m_pCurNode;
       }
-      v21 = &g_VProfCurrentProfile.m_pBudgetGroups[m_pCurNode->m_BudgetGroupID];
-      v21->m_BudgetFlags |= 4u;
+      v20 = &g_VProfCurrentProfile.m_pBudgetGroups[m_pCurNode->m_BudgetGroupID];
+      v20->m_BudgetFlags |= 4u;
       CVProfNode::EnterScope(g_VProfCurrentProfile.m_pCurNode);
       g_VProfCurrentProfile.m_fAtRoot = 0;
     }
     m_numTimeBaseTicks = g_VProfCurrentProfile.m_ScopeProfiler.m_numTimeBaseTicks;
     ++g_VProfCurrentProfile.m_ScopeProfiler.m_numCalls;
-    g_VProfCurrentProfile.m_ScopeProfiler.m_numTimeBaseTicks = m_numTimeBaseTicks - v17 + __rdtsc();
+    g_VProfCurrentProfile.m_ScopeProfiler.m_numTimeBaseTicks = m_numTimeBaseTicks - v16 + __rdtsc();
   }
   v8 = (*(*proto + 72LL))(proto);
   v9 = v8;
@@ -1444,11 +1434,11 @@ bool __fastcall GCSDK::CProtoBufMsgBase::BAsyncSendProto(
   CThreadSafeMultiMemoryPool::Free(&GCSDK::g_MemPoolMsg, MessageMemory);
   if ( VProf_432 )
   {
-    v14 = __rdtsc();
+    v13 = __rdtsc();
     if ( !g_VProfCurrentProfile.m_fAtRoot || g_VProfCurrentProfile.m_enabled != 0 )
     {
-      v15 = g_VProfCurrentProfile.m_TargetThreadId;
-      if ( v15 == ThreadGetCurrentId(v12) )
+      v14 = g_VProfCurrentProfile.m_TargetThreadId;
+      if ( v14 == ThreadGetCurrentId() )
       {
         if ( CVProfNode::ExitScope(g_VProfCurrentProfile.m_pCurNode) != 0 )
         {
@@ -1465,9 +1455,9 @@ bool __fastcall GCSDK::CProtoBufMsgBase::BAsyncSendProto(
         g_VProfCurrentProfile.m_fAtRoot = m_pParent == &g_VProfCurrentProfile.m_Root;
       }
     }
-    v16 = g_VProfCurrentProfile.m_ScopeProfiler.m_numTimeBaseTicks;
+    v15 = g_VProfCurrentProfile.m_ScopeProfiler.m_numTimeBaseTicks;
     ++g_VProfCurrentProfile.m_ScopeProfiler.m_numCalls;
-    g_VProfCurrentProfile.m_ScopeProfiler.m_numTimeBaseTicks = v16 - v14 + __rdtsc();
+    g_VProfCurrentProfile.m_ScopeProfiler.m_numTimeBaseTicks = v15 - v13 + __rdtsc();
   }
   return v11;
 }
@@ -1504,16 +1494,15 @@ bool __fastcall GCSDK::CProtoBufMsgBase::BAsyncSendWithPreSerializedBody(
   int m_enabled; // eax
   uint8 *MessageMemory; // r12
   char v11; // r13
-  __int64 v12; // rdi
-  unsigned __int64 v14; // r12
-  ThreadId_t v15; // r14
-  uint64 v16; // rcx
+  unsigned __int64 v13; // r12
+  ThreadId_t v14; // r14
+  uint64 v15; // rcx
   uint64 m_numTimeBaseTicks; // rcx
   CVProfNode *m_pParent; // rax
   CVProfNode *m_pCurNode; // rax
-  CVProfile::CBudgetGroup *v20; // rax
+  CVProfile::CBudgetGroup *v19; // rax
   ThreadId_t m_TargetThreadId; // [rsp+0h] [rbp-60h]
-  unsigned __int64 v22; // [rsp+8h] [rbp-58h]
+  unsigned __int64 v21; // [rsp+8h] [rbp-58h]
   bool VProf_461; // [rsp+1Fh] [rbp-41h]
   uint32 cubTotalSize[13]; // [rsp+2Ch] [rbp-34h] BYREF
 
@@ -1521,9 +1510,9 @@ bool __fastcall GCSDK::CProtoBufMsgBase::BAsyncSendWithPreSerializedBody(
   VProf_461 = m_enabled != 0;
   if ( m_enabled != 0 )
   {
-    v22 = __rdtsc();
+    v21 = __rdtsc();
     m_TargetThreadId = g_VProfCurrentProfile.m_TargetThreadId;
-    if ( m_TargetThreadId == ThreadGetCurrentId(sender) )
+    if ( m_TargetThreadId == ThreadGetCurrentId() )
     {
       m_pCurNode = g_VProfCurrentProfile.m_pCurNode;
       if ( m_pCurNode->m_pszName != "CProtoBufMsg::BAsyncSendWithPreSerializedBody" )
@@ -1536,14 +1525,14 @@ bool __fastcall GCSDK::CProtoBufMsgBase::BAsyncSendWithPreSerializedBody(
                        4);
         g_VProfCurrentProfile.m_pCurNode = m_pCurNode;
       }
-      v20 = &g_VProfCurrentProfile.m_pBudgetGroups[m_pCurNode->m_BudgetGroupID];
-      v20->m_BudgetFlags |= 4u;
+      v19 = &g_VProfCurrentProfile.m_pBudgetGroups[m_pCurNode->m_BudgetGroupID];
+      v19->m_BudgetFlags |= 4u;
       CVProfNode::EnterScope(g_VProfCurrentProfile.m_pCurNode);
       g_VProfCurrentProfile.m_fAtRoot = 0;
     }
     m_numTimeBaseTicks = g_VProfCurrentProfile.m_ScopeProfiler.m_numTimeBaseTicks;
     ++g_VProfCurrentProfile.m_ScopeProfiler.m_numCalls;
-    g_VProfCurrentProfile.m_ScopeProfiler.m_numTimeBaseTicks = m_numTimeBaseTicks - v22 + __rdtsc();
+    g_VProfCurrentProfile.m_ScopeProfiler.m_numTimeBaseTicks = m_numTimeBaseTicks - v21 + __rdtsc();
   }
   cubTotalSize[0] = 0;
   MessageMemory = GCSDK::CProtoBufMsgBase::AllocateMessageMemory(eMsgType, hdr, cubBody, cubTotalSize);
@@ -1552,11 +1541,11 @@ bool __fastcall GCSDK::CProtoBufMsgBase::BAsyncSendWithPreSerializedBody(
   CThreadSafeMultiMemoryPool::Free(&GCSDK::g_MemPoolMsg, MessageMemory);
   if ( VProf_461 )
   {
-    v14 = __rdtsc();
+    v13 = __rdtsc();
     if ( !g_VProfCurrentProfile.m_fAtRoot || g_VProfCurrentProfile.m_enabled != 0 )
     {
-      v15 = g_VProfCurrentProfile.m_TargetThreadId;
-      if ( v15 == ThreadGetCurrentId(v12) )
+      v14 = g_VProfCurrentProfile.m_TargetThreadId;
+      if ( v14 == ThreadGetCurrentId() )
       {
         if ( CVProfNode::ExitScope(g_VProfCurrentProfile.m_pCurNode) != 0 )
         {
@@ -1573,9 +1562,9 @@ bool __fastcall GCSDK::CProtoBufMsgBase::BAsyncSendWithPreSerializedBody(
         g_VProfCurrentProfile.m_fAtRoot = m_pParent == &g_VProfCurrentProfile.m_Root;
       }
     }
-    v16 = g_VProfCurrentProfile.m_ScopeProfiler.m_numTimeBaseTicks;
+    v15 = g_VProfCurrentProfile.m_ScopeProfiler.m_numTimeBaseTicks;
     ++g_VProfCurrentProfile.m_ScopeProfiler.m_numCalls;
-    g_VProfCurrentProfile.m_ScopeProfiler.m_numTimeBaseTicks = v16 - v14 + __rdtsc();
+    g_VProfCurrentProfile.m_ScopeProfiler.m_numTimeBaseTicks = v15 - v13 + __rdtsc();
   }
   return v11;
 }

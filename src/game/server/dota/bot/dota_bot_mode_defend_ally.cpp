@@ -21,7 +21,7 @@ void __fastcall CDOTA_BotMode_DefendAlly::CDOTA_BotMode_DefendAlly(
   this->m_hTarget.m_Index = -1;
   this->m_vDesiredLocation.y = y;
   z = vec3_origin.z;
-  this->_vptr_CDOTA_BotMode = off_42B7A50;
+  this->_vptr_CDOTA_BotMode = off_42B7A50;  // vptr: CDOTA_BotMode_DefendAlly
   this->m_vDesiredLocation.z = z;
   this->m_fCurrentTargetScore = 0.0;
 }
@@ -736,7 +736,7 @@ void __fastcall CDOTA_BotMode_DefendAlly_Human::CDOTA_BotMode_DefendAlly_Human(
   this->m_vDesiredLocation.x = x;
   this->m_vDesiredLocation.y = vec3_origin.y;
   z = vec3_origin.z;
-  this->_vptr_CDOTA_BotMode = off_42B7AF0;
+  this->_vptr_CDOTA_BotMode = off_42B7AF0;  // vptr: CDOTA_BotMode_DefendAlly_Human
   this->m_vDesiredLocation.z = z;
   CountdownTimer::CountdownTimer(&this->m_AbilityUseTimer);
   CountdownTimer::CountdownTimer(&this->m_AttackTimer);

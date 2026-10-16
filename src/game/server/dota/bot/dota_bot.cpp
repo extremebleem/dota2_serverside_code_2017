@@ -589,9 +589,9 @@ LABEL_35:
   v31 = vptr_CDOTA_Bot[4](this);
   CDOTA_Bot::SwitchToMode(this, v31, 0.25, v32);
   this->m_bBypassActionQueue = 1;
-  v33 = operator new(0x18u);
+  v33 = operator new(0x18u);  // new CDOTA_BotAction_Idle (size matches)
   v33->m_pBot = this;
-  v33->_vptr_CDOTA_BotAction = off_42B6EB0;
+  v33->_vptr_CDOTA_BotAction = off_42B6EB0;  // vptr: CDOTA_BotAction_Idle
   CDOTA_Bot::SetAction(this, v33);
   this->m_bBypassActionQueue = 0;
   CDOTA_Bot_Pathing::Init(&this->m_Pathing, this);
@@ -1529,9 +1529,9 @@ CDOTA_BotMode *__fastcall CDOTA_Bot::CreateMode(CDOTA_Bot *const this, int iMode
       case 25:
         return 0;
       case 1:
-        v8 = operator new(0xF0u);
+        v8 = operator new(0xF0u);  // new CDOTA_BotMode_Laning_Human (size matches)
         CDOTA_BotMode_Laning::CDOTA_BotMode_Laning(v8, this);
-        v8->_vptr_CDOTA_BotMode = off_42B82F0;
+        v8->_vptr_CDOTA_BotMode = off_42B82F0;  // vptr: CDOTA_BotMode_Laning_Human
         result = v8;
         break;
       case 2:
@@ -1539,15 +1539,15 @@ CDOTA_BotMode *__fastcall CDOTA_Bot::CreateMode(CDOTA_Bot *const this, int iMode
         CDOTA_BotMode_Attack_Human::CDOTA_BotMode_Attack_Human(v9, this);
         goto LABEL_10;
       case 3:
-        v10 = operator new(0x108u);
+        v10 = operator new(0x108u);  // new CDOTA_BotMode_Roam_Human (size matches)
         CDOTA_BotMode_Roam::CDOTA_BotMode_Roam(v10, this);
-        v10->_vptr_CDOTA_BotMode = off_42B86D0;
+        v10->_vptr_CDOTA_BotMode = off_42B86D0;  // vptr: CDOTA_BotMode_Roam_Human
         result = v10;
         break;
       case 4:
-        v11 = operator new(0x140u);
+        v11 = operator new(0x140u);  // new CDOTA_BotMode_Retreat_Human (size matches)
         CDOTA_BotMode_Retreat::CDOTA_BotMode_Retreat(v11, this);
-        v11->_vptr_CDOTA_BotMode = off_42B8570;
+        v11->_vptr_CDOTA_BotMode = off_42B8570;  // vptr: CDOTA_BotMode_Retreat_Human
         result = v11;
         break;
       case 8:
@@ -1575,12 +1575,12 @@ CDOTA_BotMode *__fastcall CDOTA_Bot::CreateMode(CDOTA_Bot *const this, int iMode
           DOTA_BOT_MODE::DOTA_BOT_MODE_PUSH_TOWER_BOT);
         goto LABEL_10;
       case 11:
-        result = operator new(0xF8u);
+        result = operator new(0xF8u);  // new CDOTA_BotMode_DefendTower_Human (size matches)
         result->m_pBot = this;
         result->m_iDesireLocationFrame = 0;
         result->m_DebugStringBuffer[0] = 0;
         x = vec3_origin.x;
-        result->_vptr_CDOTA_BotMode = off_42B7C30;
+        result->_vptr_CDOTA_BotMode = off_42B7C30;  // vptr: CDOTA_BotMode_DefendTower_Human
         result->m_DebugValueBuffer[0] = 0;
         result->m_vDesiredLocation.x = x;
         y = vec3_origin.y;
@@ -1593,12 +1593,12 @@ CDOTA_BotMode *__fastcall CDOTA_Bot::CreateMode(CDOTA_Bot *const this, int iMode
         result[1].m_DebugStringBuffer[12] = 0;
         break;
       case 12:
-        result = operator new(0xF8u);
+        result = operator new(0xF8u);  // new CDOTA_BotMode_DefendTower_Human (size matches)
         result->m_pBot = this;
         result->m_iDesireLocationFrame = 0;
         result->m_DebugStringBuffer[0] = 0;
         v16 = vec3_origin.x;
-        result->_vptr_CDOTA_BotMode = off_42B7C30;
+        result->_vptr_CDOTA_BotMode = off_42B7C30;  // vptr: CDOTA_BotMode_DefendTower_Human
         result->m_DebugValueBuffer[0] = 0;
         result->m_vDesiredLocation.x = v16;
         v17 = vec3_origin.y;
@@ -1611,12 +1611,12 @@ CDOTA_BotMode *__fastcall CDOTA_Bot::CreateMode(CDOTA_Bot *const this, int iMode
         result[1].m_DebugStringBuffer[12] = 0;
         break;
       case 13:
-        result = operator new(0xF8u);
+        result = operator new(0xF8u);  // new CDOTA_BotMode_DefendTower_Human (size matches)
         result->m_pBot = this;
         result->m_iDesireLocationFrame = 0;
         result->m_DebugStringBuffer[0] = 0;
         v4 = vec3_origin.x;
-        result->_vptr_CDOTA_BotMode = off_42B7C30;
+        result->_vptr_CDOTA_BotMode = off_42B7C30;  // vptr: CDOTA_BotMode_DefendTower_Human
         result->m_DebugValueBuffer[0] = 0;
         result->m_vDesiredLocation.x = v4;
         v5 = vec3_origin.y;
@@ -1629,21 +1629,21 @@ CDOTA_BotMode *__fastcall CDOTA_Bot::CreateMode(CDOTA_Bot *const this, int iMode
         result[1].m_DebugStringBuffer[12] = 0;
         break;
       case 14:
-        result = operator new(0xE0u);
+        result = operator new(0xE0u);  // new CDOTA_BotMode_Assemble_Human (size matches)
         result->m_pBot = this;
         result->m_iDesireLocationFrame = 0;
         result->m_DebugStringBuffer[0] = 0;
         v7 = vec3_origin.x;
         result->m_DebugValueBuffer[0] = 0;
-        result->_vptr_CDOTA_BotMode = off_42B7730;
+        result->_vptr_CDOTA_BotMode = off_42B7730;  // vptr: CDOTA_BotMode_Assemble_Human
         result->m_vDesiredLocation.x = v7;
         result->m_vDesiredLocation.y = vec3_origin.y;
         result->m_vDesiredLocation.z = vec3_origin.z;
         break;
       case 17:
-        v12 = operator new(0x110u);
+        v12 = operator new(0x110u);  // new CDOTA_BotMode_Farm_Human (size matches)
         CDOTA_BotMode_Farm::CDOTA_BotMode_Farm(v12, this);
-        v12->_vptr_CDOTA_BotMode = off_42B8110;
+        v12->_vptr_CDOTA_BotMode = off_42B8110;  // vptr: CDOTA_BotMode_Farm_Human
         result = v12;
         break;
       case 18:
@@ -1672,13 +1672,13 @@ CDOTA_BotMode *__fastcall CDOTA_Bot::CreateMode(CDOTA_Bot *const this, int iMode
         CDOTA_BotMode_Laning::CDOTA_BotMode_Laning(v9, this);
         goto LABEL_10;
       case 2:
-        result = operator new(0xE8u);
+        result = operator new(0xE8u);  // new CDOTA_BotMode_Attack (size matches)
         result->m_pBot = this;
         result->m_iDesireLocationFrame = 0;
         result->m_DebugStringBuffer[0] = 0;
         v34 = vec3_origin.x;
         result->m_DebugValueBuffer[0] = 0;
-        result->_vptr_CDOTA_BotMode = off_42B7870;
+        result->_vptr_CDOTA_BotMode = off_42B7870;  // vptr: CDOTA_BotMode_Attack
         result->m_vDesiredLocation.x = v34;
         v35 = vec3_origin.y;
         HIDWORD(result[1]._vptr_CDOTA_BotMode) = -1;
@@ -1732,13 +1732,13 @@ CDOTA_BotMode *__fastcall CDOTA_Bot::CreateMode(CDOTA_Bot *const this, int iMode
           DOTA_BOT_MODE::DOTA_BOT_MODE_PUSH_TOWER_BOT);
         goto LABEL_10;
       case 11:
-        result = operator new(0xF8u);
+        result = operator new(0xF8u);  // new CDOTA_BotMode_DefendTower (size matches)
         result->m_pBot = this;
         result->m_iDesireLocationFrame = 0;
         result->m_DebugStringBuffer[0] = 0;
         v19 = vec3_origin.x;
         result->m_DebugValueBuffer[0] = 0;
-        result->_vptr_CDOTA_BotMode = off_42B7B90;
+        result->_vptr_CDOTA_BotMode = off_42B7B90;  // vptr: CDOTA_BotMode_DefendTower
         result->m_vDesiredLocation.x = v19;
         v20 = vec3_origin.y;
         HIDWORD(result[1]._vptr_CDOTA_BotMode) = 1;
@@ -1749,13 +1749,13 @@ CDOTA_BotMode *__fastcall CDOTA_Bot::CreateMode(CDOTA_Bot *const this, int iMode
         LODWORD(result[1]._vptr_CDOTA_BotMode) = 0;
         return result;
       case 12:
-        result = operator new(0xF8u);
+        result = operator new(0xF8u);  // new CDOTA_BotMode_DefendTower (size matches)
         result->m_pBot = this;
         result->m_iDesireLocationFrame = 0;
         result->m_DebugStringBuffer[0] = 0;
         v22 = vec3_origin.x;
         result->m_DebugValueBuffer[0] = 0;
-        result->_vptr_CDOTA_BotMode = off_42B7B90;
+        result->_vptr_CDOTA_BotMode = off_42B7B90;  // vptr: CDOTA_BotMode_DefendTower
         result->m_vDesiredLocation.x = v22;
         v23 = vec3_origin.y;
         HIDWORD(result[1]._vptr_CDOTA_BotMode) = 2;
@@ -1766,13 +1766,13 @@ CDOTA_BotMode *__fastcall CDOTA_Bot::CreateMode(CDOTA_Bot *const this, int iMode
         LODWORD(result[1]._vptr_CDOTA_BotMode) = 0;
         return result;
       case 13:
-        result = operator new(0xF8u);
+        result = operator new(0xF8u);  // new CDOTA_BotMode_DefendTower (size matches)
         result->m_pBot = this;
         result->m_iDesireLocationFrame = 0;
         result->m_DebugStringBuffer[0] = 0;
         v25 = vec3_origin.x;
         result->m_DebugValueBuffer[0] = 0;
-        result->_vptr_CDOTA_BotMode = off_42B7B90;
+        result->_vptr_CDOTA_BotMode = off_42B7B90;  // vptr: CDOTA_BotMode_DefendTower
         result->m_vDesiredLocation.x = v25;
         v26 = vec3_origin.y;
         HIDWORD(result[1]._vptr_CDOTA_BotMode) = 3;
@@ -1783,25 +1783,25 @@ CDOTA_BotMode *__fastcall CDOTA_Bot::CreateMode(CDOTA_Bot *const this, int iMode
         LODWORD(result[1]._vptr_CDOTA_BotMode) = 0;
         return result;
       case 14:
-        result = operator new(0xE0u);
+        result = operator new(0xE0u);  // new CDOTA_BotMode_Assemble (size matches)
         result->m_pBot = this;
         result->m_iDesireLocationFrame = 0;
         result->m_DebugStringBuffer[0] = 0;
         v28 = vec3_origin.x;
         result->m_DebugValueBuffer[0] = 0;
-        result->_vptr_CDOTA_BotMode = off_42B7690;
+        result->_vptr_CDOTA_BotMode = off_42B7690;  // vptr: CDOTA_BotMode_Assemble
         result->m_vDesiredLocation.x = v28;
         result->m_vDesiredLocation.y = vec3_origin.y;
         result->m_vDesiredLocation.z = vec3_origin.z;
         return result;
       case 15:
-        result = operator new(0xE8u);
+        result = operator new(0xE8u);  // new CDOTA_BotMode_AssembleWithHumans (size matches)
         result->m_pBot = this;
         result->m_iDesireLocationFrame = 0;
         result->m_DebugStringBuffer[0] = 0;
         v29 = vec3_origin.x;
         result->m_DebugValueBuffer[0] = 0;
-        result->_vptr_CDOTA_BotMode = off_42B77D0;
+        result->_vptr_CDOTA_BotMode = off_42B77D0;  // vptr: CDOTA_BotMode_AssembleWithHumans
         result->m_vDesiredLocation.x = v29;
         v30 = vec3_origin.y;
         LODWORD(result[1]._vptr_CDOTA_BotMode) = -1;
@@ -1817,13 +1817,13 @@ CDOTA_BotMode *__fastcall CDOTA_Bot::CreateMode(CDOTA_Bot *const this, int iMode
         CDOTA_BotMode_Farm::CDOTA_BotMode_Farm(v9, this);
         goto LABEL_10;
       case 18:
-        result = operator new(0xF0u);
+        result = operator new(0xF0u);  // new CDOTA_BotMode_DefendAlly (size matches)
         result->m_pBot = this;
         result->m_iDesireLocationFrame = 0;
         result->m_DebugStringBuffer[0] = 0;
         v31 = vec3_origin.x;
         result->m_DebugValueBuffer[0] = 0;
-        result->_vptr_CDOTA_BotMode = off_42B7A50;
+        result->_vptr_CDOTA_BotMode = off_42B7A50;  // vptr: CDOTA_BotMode_DefendAlly
         result->m_vDesiredLocation.x = v31;
         v32 = vec3_origin.y;
         LODWORD(result[1]._vptr_CDOTA_BotMode) = -1;
@@ -2615,9 +2615,9 @@ void __fastcall CDOTA_Bot::SetAttackMoveAction(CDOTA_Bot *const this, const Vect
     || (v5 = this->m_ActionStack.m_Memory.m_pMemory[m_Size - 1]) == 0
     || (*(v5->_vptr_CDOTA_BotAction + 2))(v5) != 4 )
   {
-    v6 = operator new(0x20u);
+    v6 = operator new(0x20u);  // new CDOTA_BotAction_AttackMove (size matches)
     v6->m_pBot = this;
-    v6->_vptr_CDOTA_BotAction = off_42B7030;
+    v6->_vptr_CDOTA_BotAction = off_42B7030;  // vptr: CDOTA_BotAction_AttackMove
     *(&v6->m_iActionFrame + 1) = LODWORD(vLoc->x);
     *&v6[1]._vptr_CDOTA_BotAction = vLoc->y;
     HIDWORD(v6[1]._vptr_CDOTA_BotAction) = LODWORD(vLoc->z);

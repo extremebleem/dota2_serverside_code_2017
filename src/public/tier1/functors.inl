@@ -5,8 +5,8 @@
 void __fastcall CMemberFunctor0<IFileSystem *,void (IFileSystem::*)(void),CRefCounted1<CFunctor,CRefCountServiceBase<true,CRefMT>>,CFuncMemPolicyNone>::~CMemberFunctor0(
         CMemberFunctor0<IFileSystem*,void (IFileSystem::*)(),CRefCounted1<CFunctor,CRefCountServiceBase<true,CRefMT> >,CFuncMemPolicyNone> *const this)
 {
-  this->_vptr_IRefCounted = off_3FF1FD0;
-  this->_vptr_CRefCountServiceBase = off_3FEABF0;
+  this->_vptr_IRefCounted = off_3FF1FD0;  // vptr: CRefCounted1<CFunctor,CRefCountServiceBase<true,CRefMT>>
+  this->_vptr_CRefCountServiceBase = off_3FEABF0;  // vptr: CRefCountServiceBase<true,CRefMT>
 }
 
 
@@ -14,8 +14,8 @@ void __fastcall CMemberFunctor0<IFileSystem *,void (IFileSystem::*)(void),CRefCo
 void __fastcall CMemberFunctor0<CEntity2SaveRestore *,void (CEntity2SaveRestore::*)(void),CRefCounted1<CFunctor,CRefCountServiceBase<true,CRefMT>>,CFuncMemPolicyNone>::~CMemberFunctor0(
         CMemberFunctor0<CEntity2SaveRestore*,void (CEntity2SaveRestore::*)(),CRefCounted1<CFunctor,CRefCountServiceBase<true,CRefMT> >,CFuncMemPolicyNone> *const this)
 {
-  this->_vptr_IRefCounted = off_3FF1FD0;
-  this->_vptr_CRefCountServiceBase = off_3FEABF0;
+  this->_vptr_IRefCounted = off_3FF1FD0;  // vptr: CRefCounted1<CFunctor,CRefCountServiceBase<true,CRefMT>>
+  this->_vptr_CRefCountServiceBase = off_3FEABF0;  // vptr: CRefCountServiceBase<true,CRefMT>
 }
 
 
@@ -51,8 +51,8 @@ void __fastcall CMemberFunctor0<CEntity2SaveRestore *,void (CEntity2SaveRestore:
 void __fastcall CMemberFunctor0<CEntity2SaveRestore *,void (CEntity2SaveRestore::*)(void),CRefCounted1<CFunctor,CRefCountServiceBase<true,CRefMT>>,CFuncMemPolicyNone>::~CMemberFunctor0(
         CMemberFunctor0<CEntity2SaveRestore*,void (CEntity2SaveRestore::*)(),CRefCounted1<CFunctor,CRefCountServiceBase<true,CRefMT> >,CFuncMemPolicyNone> *const this)
 {
-  this->_vptr_IRefCounted = off_3FF1FD0;
-  this->_vptr_CRefCountServiceBase = off_3FEABF0;
+  this->_vptr_IRefCounted = off_3FF1FD0;  // vptr: CRefCounted1<CFunctor,CRefCountServiceBase<true,CRefMT>>
+  this->_vptr_CRefCountServiceBase = off_3FEABF0;  // vptr: CRefCountServiceBase<true,CRefMT>
   operator delete(this);
 }
 
@@ -62,8 +62,8 @@ void __fastcall CMemberFunctor0<CEntity2SaveRestore *,void (CEntity2SaveRestore:
 void __fastcall CMemberFunctor0<IFileSystem *,void (IFileSystem::*)(void),CRefCounted1<CFunctor,CRefCountServiceBase<true,CRefMT>>,CFuncMemPolicyNone>::~CMemberFunctor0(
         CMemberFunctor0<IFileSystem*,void (IFileSystem::*)(),CRefCounted1<CFunctor,CRefCountServiceBase<true,CRefMT> >,CFuncMemPolicyNone> *const this)
 {
-  this->_vptr_IRefCounted = off_3FF1FD0;
-  this->_vptr_CRefCountServiceBase = off_3FEABF0;
+  this->_vptr_IRefCounted = off_3FF1FD0;  // vptr: CRefCounted1<CFunctor,CRefCountServiceBase<true,CRefMT>>
+  this->_vptr_CRefCountServiceBase = off_3FEABF0;  // vptr: CRefCountServiceBase<true,CRefMT>
   operator delete(this);
 }
 
@@ -80,8 +80,8 @@ void __fastcall CMemberFunctor6<ISaveRestoreFileSystem *,FSAsyncStatus_t (ISaveR
   p_m_arg1[-5].m_string.m_pString = off_3FF20C8;
   if ( this->m_arg1.m_string.m_pString != 0 )
     CUtlString::FreeMemoryBlock(&p_m_arg1->m_string);
-  this->_vptr_IRefCounted = off_3FF1FD0;
-  this->_vptr_CRefCountServiceBase = off_3FEABF0;
+  this->_vptr_IRefCounted = off_3FF1FD0;  // vptr: CRefCounted1<CFunctor,CRefCountServiceBase<true,CRefMT>>
+  this->_vptr_CRefCountServiceBase = off_3FEABF0;  // vptr: CRefCountServiceBase<true,CRefMT>
 }
 
 
@@ -97,8 +97,8 @@ void __fastcall CMemberFunctor6<ISaveRestoreFileSystem *,FSAsyncStatus_t (ISaveR
   p_m_arg1[-5].m_string.m_pString = off_3FF20C8;
   if ( this->m_arg1.m_string.m_pString != 0 )
     CUtlString::FreeMemoryBlock(&p_m_arg1->m_string);
-  this->_vptr_IRefCounted = off_3FF1FD0;
-  this->_vptr_CRefCountServiceBase = off_3FEABF0;
+  this->_vptr_IRefCounted = off_3FF1FD0;  // vptr: CRefCounted1<CFunctor,CRefCountServiceBase<true,CRefMT>>
+  this->_vptr_CRefCountServiceBase = off_3FEABF0;  // vptr: CRefCountServiceBase<true,CRefMT>
   operator delete(this);
 }
 
@@ -115,8 +115,8 @@ void __fastcall CMemberFunctor2<CEntity2SaveRestore *,void (CEntity2SaveRestore:
   p_m_arg1[-5].m_string.m_pString = off_3FF2128;
   if ( this->m_arg1.m_string.m_pString != 0 )
     CUtlString::FreeMemoryBlock(&p_m_arg1->m_string);
-  this->_vptr_IRefCounted = off_3FF1FD0;
-  this->_vptr_CRefCountServiceBase = off_3FEABF0;
+  this->_vptr_IRefCounted = off_3FF1FD0;  // vptr: CRefCounted1<CFunctor,CRefCountServiceBase<true,CRefMT>>
+  this->_vptr_CRefCountServiceBase = off_3FEABF0;  // vptr: CRefCountServiceBase<true,CRefMT>
 }
 
 
@@ -132,8 +132,8 @@ void __fastcall CMemberFunctor2<CEntity2SaveRestore *,void (CEntity2SaveRestore:
   p_m_arg1[-5].m_string.m_pString = off_3FF2128;
   if ( this->m_arg1.m_string.m_pString != 0 )
     CUtlString::FreeMemoryBlock(&p_m_arg1->m_string);
-  this->_vptr_IRefCounted = off_3FF1FD0;
-  this->_vptr_CRefCountServiceBase = off_3FEABF0;
+  this->_vptr_IRefCounted = off_3FF1FD0;  // vptr: CRefCounted1<CFunctor,CRefCountServiceBase<true,CRefMT>>
+  this->_vptr_CRefCountServiceBase = off_3FEABF0;  // vptr: CRefCountServiceBase<true,CRefMT>
   operator delete(this);
 }
 
@@ -145,15 +145,15 @@ void __fastcall CMemberFunctor2<CEntity2SaveRestore *,void (CEntity2SaveRestore:
 {
   bool v2; // zf
 
-  this->_vptr_IRefCounted = off_3FF2150;
+  this->_vptr_IRefCounted = off_3FF2150;  // vptr: CMemberFunctor2<CEntity2SaveRestore *,void (CEntity2SaveRestore::*)(char const*,char const*),CUtlEnvelope<char const*>,CUtlEnvelope<char const*>,CRefCounted1<CFunctor,CRefCountServiceBase<true,CRefMT>>,CFuncMemPolicyNone>
   v2 = this->m_arg2.m_string.m_pString == 0;
   this->_vptr_CRefCountServiceBase = off_3FF2188;
   if ( !v2 )
     CUtlString::FreeMemoryBlock(&this->m_arg2.m_string);
   if ( this->m_arg1.m_string.m_pString != 0 )
     CUtlString::FreeMemoryBlock(&this->m_arg1.m_string);
-  this->_vptr_IRefCounted = off_3FF1FD0;
-  this->_vptr_CRefCountServiceBase = off_3FEABF0;
+  this->_vptr_IRefCounted = off_3FF1FD0;  // vptr: CRefCounted1<CFunctor,CRefCountServiceBase<true,CRefMT>>
+  this->_vptr_CRefCountServiceBase = off_3FEABF0;  // vptr: CRefCountServiceBase<true,CRefMT>
 }
 
 
@@ -226,15 +226,15 @@ void __fastcall CMemberFunctor2<CEntity2SaveRestore *,void (CEntity2SaveRestore:
 {
   bool v2; // zf
 
-  this->_vptr_IRefCounted = off_3FF2150;
+  this->_vptr_IRefCounted = off_3FF2150;  // vptr: CMemberFunctor2<CEntity2SaveRestore *,void (CEntity2SaveRestore::*)(char const*,char const*),CUtlEnvelope<char const*>,CUtlEnvelope<char const*>,CRefCounted1<CFunctor,CRefCountServiceBase<true,CRefMT>>,CFuncMemPolicyNone>
   v2 = this->m_arg2.m_string.m_pString == 0;
   this->_vptr_CRefCountServiceBase = off_3FF2188;
   if ( !v2 )
     CUtlString::FreeMemoryBlock(&this->m_arg2.m_string);
   if ( this->m_arg1.m_string.m_pString != 0 )
     CUtlString::FreeMemoryBlock(&this->m_arg1.m_string);
-  this->_vptr_IRefCounted = off_3FF1FD0;
-  this->_vptr_CRefCountServiceBase = off_3FEABF0;
+  this->_vptr_IRefCounted = off_3FF1FD0;  // vptr: CRefCounted1<CFunctor,CRefCountServiceBase<true,CRefMT>>
+  this->_vptr_CRefCountServiceBase = off_3FEABF0;  // vptr: CRefCountServiceBase<true,CRefMT>
   operator delete(this);
 }
 
@@ -243,8 +243,8 @@ void __fastcall CMemberFunctor2<CEntity2SaveRestore *,void (CEntity2SaveRestore:
 void __fastcall CMemberFunctor1<CParallelProcessorAbstract<CParallelProcessor<QueryCacheUpdateRecord_t,CFuncJobItemProcessor<QueryCacheUpdateRecord_t>,1>> *,void (CParallelProcessorAbstract<CParallelProcessor<QueryCacheUpdateRecord_t,CFuncJobItemProcessor<QueryCacheUpdateRecord_t>,1>>::*)(int),int,CRefCounted1<CFunctor,CRefCountServiceBase<true,CRefMT>>,CFuncMemPolicyNone>::~CMemberFunctor1(
         CMemberFunctor1<CParallelProcessorAbstract<CParallelProcessor<QueryCacheUpdateRecord_t,CFuncJobItemProcessor<QueryCacheUpdateRecord_t>,1> >*,void (CParallelProcessorAbstract<CParallelProcessor<QueryCacheUpdateRecord_t,CFuncJobItemProcessor<QueryCacheUpdateRecord_t>,1> >::*)(int),int,CRefCounted1<CFunctor,CRefCountServiceBase<true,CRefMT> >,CFuncMemPolicyNone> *const this)
 {
-  this->_vptr_IRefCounted = off_3FF1FD0;
-  this->_vptr_CRefCountServiceBase = off_3FEABF0;
+  this->_vptr_IRefCounted = off_3FF1FD0;  // vptr: CRefCounted1<CFunctor,CRefCountServiceBase<true,CRefMT>>
+  this->_vptr_CRefCountServiceBase = off_3FEABF0;  // vptr: CRefCountServiceBase<true,CRefMT>
 }
 
 
@@ -253,8 +253,8 @@ void __fastcall CMemberFunctor1<CParallelProcessorAbstract<CParallelProcessor<Qu
 void __fastcall CMemberFunctor1<CParallelProcessorAbstract<CParallelProcessor<QueryCacheUpdateRecord_t,CFuncJobItemProcessor<QueryCacheUpdateRecord_t>,1>> *,void (CParallelProcessorAbstract<CParallelProcessor<QueryCacheUpdateRecord_t,CFuncJobItemProcessor<QueryCacheUpdateRecord_t>,1>>::*)(int),int,CRefCounted1<CFunctor,CRefCountServiceBase<true,CRefMT>>,CFuncMemPolicyNone>::~CMemberFunctor1(
         CMemberFunctor1<CParallelProcessorAbstract<CParallelProcessor<QueryCacheUpdateRecord_t,CFuncJobItemProcessor<QueryCacheUpdateRecord_t>,1> >*,void (CParallelProcessorAbstract<CParallelProcessor<QueryCacheUpdateRecord_t,CFuncJobItemProcessor<QueryCacheUpdateRecord_t>,1> >::*)(int),int,CRefCounted1<CFunctor,CRefCountServiceBase<true,CRefMT> >,CFuncMemPolicyNone> *const this)
 {
-  this->_vptr_IRefCounted = off_3FF1FD0;
-  this->_vptr_CRefCountServiceBase = off_3FEABF0;
+  this->_vptr_IRefCounted = off_3FF1FD0;  // vptr: CRefCounted1<CFunctor,CRefCountServiceBase<true,CRefMT>>
+  this->_vptr_CRefCountServiceBase = off_3FEABF0;  // vptr: CRefCountServiceBase<true,CRefMT>
   operator delete(this);
 }
 
@@ -280,8 +280,8 @@ void __fastcall CMemberFunctor1<CParallelProcessorAbstract<CParallelProcessor<Qu
 void __fastcall CMemberFunctor0<CAsyncFileLoadPrerequisite *,void (CAsyncFileLoadPrerequisite::*)(void),CRefCounted1<CFunctor,CRefCountServiceBase<true,CRefMT>>,CFuncMemPolicyNone>::~CMemberFunctor0(
         CMemberFunctor0<CAsyncFileLoadPrerequisite*,void (CAsyncFileLoadPrerequisite::*)(),CRefCounted1<CFunctor,CRefCountServiceBase<true,CRefMT> >,CFuncMemPolicyNone> *const this)
 {
-  this->_vptr_IRefCounted = off_3FF1FD0;
-  this->_vptr_CRefCountServiceBase = off_3FEABF0;
+  this->_vptr_IRefCounted = off_3FF1FD0;  // vptr: CRefCounted1<CFunctor,CRefCountServiceBase<true,CRefMT>>
+  this->_vptr_CRefCountServiceBase = off_3FEABF0;  // vptr: CRefCountServiceBase<true,CRefMT>
 }
 
 
@@ -303,8 +303,8 @@ void __fastcall CMemberFunctor0<CAsyncFileLoadPrerequisite *,void (CAsyncFileLoa
 void __fastcall CMemberFunctor0<CAsyncFileLoadPrerequisite *,void (CAsyncFileLoadPrerequisite::*)(void),CRefCounted1<CFunctor,CRefCountServiceBase<true,CRefMT>>,CFuncMemPolicyNone>::~CMemberFunctor0(
         CMemberFunctor0<CAsyncFileLoadPrerequisite*,void (CAsyncFileLoadPrerequisite::*)(),CRefCounted1<CFunctor,CRefCountServiceBase<true,CRefMT> >,CFuncMemPolicyNone> *const this)
 {
-  this->_vptr_IRefCounted = off_3FF1FD0;
-  this->_vptr_CRefCountServiceBase = off_3FEABF0;
+  this->_vptr_IRefCounted = off_3FF1FD0;  // vptr: CRefCounted1<CFunctor,CRefCountServiceBase<true,CRefMT>>
+  this->_vptr_CRefCountServiceBase = off_3FEABF0;  // vptr: CRefCountServiceBase<true,CRefMT>
   operator delete(this);
 }
 

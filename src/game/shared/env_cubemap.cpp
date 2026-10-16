@@ -292,7 +292,7 @@ void *__fastcall CEnvCubemap::CEntityInstanceEntityClass::AllocateInstance(
 void __fastcall CEnvCubemap::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CEnvCubemap::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -302,7 +302,7 @@ void __fastcall CEnvCubemap::CEntityInstanceEntityClass::~CEntityInstanceEntityC
 void __fastcall CEnvCubemap::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CEnvCubemap::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -555,7 +555,7 @@ void *__fastcall CEnvCubemapBox::CEntityInstanceEntityClass::AllocateInstance(
 void __fastcall CEnvCubemapBox::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CEnvCubemapBox::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -565,7 +565,7 @@ void __fastcall CEnvCubemapBox::CEntityInstanceEntityClass::~CEntityInstanceEnti
 void __fastcall CEnvCubemapBox::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CEnvCubemapBox::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -827,7 +827,7 @@ void __fastcall CEnvCubemapToolsResourceListener::NotifyResourceStatusChange(
 void __fastcall CBaseCubemap::CBaseCubemap(CBaseCubemap *const this, IToolObjectContext *pContext)
 {
   this->m_pContext = pContext;
-  this->_vptr_IToolObject = off_3FB8670;
+  this->_vptr_IToolObject = off_3FB8670;  // vptr: CBaseCubemap
   this->m_hCubemapTexture.m_pBinding = 0;
   this->m_LightGroups.u.m_Id = 0;
   this->m_nCubeMapIndex = -1;
@@ -843,7 +843,7 @@ void __fastcall CBaseCubemap::~CBaseCubemap(CBaseCubemap *const this)
   p_m_hCubemapTexture = &this->m_hCubemapTexture;
   p_m_hCubemapTexture[-2].m_pBinding = off_3FB8670;
   CStrongHandle<InfoForResourceTypeCTextureBase>::Shutdown(p_m_hCubemapTexture);
-  this->_vptr_IToolObject = off_3FB7BF0;
+  this->_vptr_IToolObject = off_3FB7BF0;  // vptr: IToolObject
 }
 
 
@@ -856,7 +856,7 @@ void __fastcall CBaseCubemap::~CBaseCubemap(CBaseCubemap *const this)
   p_m_hCubemapTexture = &this->m_hCubemapTexture;
   p_m_hCubemapTexture[-2].m_pBinding = off_3FB8670;
   CStrongHandle<InfoForResourceTypeCTextureBase>::Shutdown(p_m_hCubemapTexture);
-  this->_vptr_IToolObject = off_3FB7BF0;
+  this->_vptr_IToolObject = off_3FB7BF0;  // vptr: IToolObject
   operator delete(this);
 }
 
@@ -1726,9 +1726,9 @@ void __fastcall CEnvCubemap::~CEnvCubemap(CEnvCubemap *const this)
   p_m_hCubemapTexture[-108].m_Value.m_pBinding = &off_3FB86D0;
   p_m_hCubemapTexture[-11].m_Value.m_pBinding = off_3FB8D58;
   CStrongHandle<InfoForResourceTypeCTextureBase>::Shutdown(&p_m_hCubemapTexture->m_Value);
-  this->_vptr_IToolObject = off_3FB8670;
+  this->_vptr_IToolObject = off_3FB8670;  // vptr: CBaseCubemap
   CStrongHandle<InfoForResourceTypeCTextureBase>::Shutdown(&this->CBaseCubemap::m_hCubemapTexture);
-  this->_vptr_IToolObject = off_3FB7BF0;
+  this->_vptr_IToolObject = off_3FB7BF0;  // vptr: IToolObject
   CBaseEntity::~CBaseEntity(this);
 }
 

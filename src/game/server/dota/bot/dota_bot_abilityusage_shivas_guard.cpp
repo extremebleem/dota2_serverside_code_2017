@@ -32,7 +32,7 @@ void __fastcall CDOTA_Bot_AbilityUsage_ShivasGuard::CDOTA_Bot_AbilityUsage_Shiva
   this->m_pAbility = pAbility;
   this->m_bUseOnCreeps = 0;
   this->m_pBot = pBot;
-  this->_vptr_CDOTA_Bot_AbilityUsage = off_42C6BB0;
+  this->_vptr_CDOTA_Bot_AbilityUsage = off_42C6BB0;  // vptr: CDOTA_Bot_AbilityUsage_ShivasGuard
   EffectiveLevel = CDOTABaseAbility::GetEffectiveLevel(pAbility);
   if ( EffectiveLevel == -1 || (SpecialAbility = CDOTABaseAbility::GetSpecialAbility(pAbility, "blast_radius")) == 0 )
   {

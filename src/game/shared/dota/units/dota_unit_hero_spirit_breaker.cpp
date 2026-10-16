@@ -713,7 +713,7 @@ void *__fastcall CDOTA_Ability_SpiritBreaker_ChargeOfDarkness::CEntityInstanceEn
 void __fastcall CDOTA_Ability_SpiritBreaker_ChargeOfDarkness::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_SpiritBreaker_ChargeOfDarkness::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -723,7 +723,7 @@ void __fastcall CDOTA_Ability_SpiritBreaker_ChargeOfDarkness::CEntityInstanceEnt
 void __fastcall CDOTA_Ability_SpiritBreaker_ChargeOfDarkness::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_SpiritBreaker_ChargeOfDarkness::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -939,7 +939,7 @@ CEntityInstance *__fastcall CDOTA_Unit_Hero_SpiritBreaker::CEntityInstanceEntity
 void __fastcall CDOTA_Unit_Hero_SpiritBreaker::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Unit_Hero_SpiritBreaker::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -949,7 +949,7 @@ void __fastcall CDOTA_Unit_Hero_SpiritBreaker::CEntityInstanceEntityClass::~CEnt
 void __fastcall CDOTA_Unit_Hero_SpiritBreaker::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Unit_Hero_SpiritBreaker::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -1155,7 +1155,7 @@ CEntityInstance *__fastcall CDOTA_Ability_SpiritBreaker_GreaterBash::CEntityInst
 void __fastcall CDOTA_Ability_SpiritBreaker_GreaterBash::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_SpiritBreaker_GreaterBash::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -1165,7 +1165,7 @@ void __fastcall CDOTA_Ability_SpiritBreaker_GreaterBash::CEntityInstanceEntityCl
 void __fastcall CDOTA_Ability_SpiritBreaker_GreaterBash::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_SpiritBreaker_GreaterBash::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -3076,7 +3076,7 @@ CEntityInstance *__fastcall CDOTA_Ability_SpiritBreaker_EmpoweringHaste::CEntity
 void __fastcall CDOTA_Ability_SpiritBreaker_EmpoweringHaste::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_SpiritBreaker_EmpoweringHaste::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -3086,7 +3086,7 @@ void __fastcall CDOTA_Ability_SpiritBreaker_EmpoweringHaste::CEntityInstanceEnti
 void __fastcall CDOTA_Ability_SpiritBreaker_EmpoweringHaste::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_SpiritBreaker_EmpoweringHaste::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -3612,7 +3612,7 @@ CEntityInstance *__fastcall CDOTA_Ability_SpiritBreaker_NetherStrike::CEntityIns
 void __fastcall CDOTA_Ability_SpiritBreaker_NetherStrike::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_SpiritBreaker_NetherStrike::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -3622,7 +3622,7 @@ void __fastcall CDOTA_Ability_SpiritBreaker_NetherStrike::CEntityInstanceEntityC
 void __fastcall CDOTA_Ability_SpiritBreaker_NetherStrike::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_SpiritBreaker_NetherStrike::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }

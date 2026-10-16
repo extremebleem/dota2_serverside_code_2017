@@ -219,7 +219,7 @@ void __fastcall ChangeTheNavMesh(CNavMesh *pNewNavMesh)
 // callers: NavMeshFactory
 void __fastcall CNavMesh::CNavMesh(CNavMesh *const this)
 {
-  this->_vptr_CNavMesh = off_47CE2F0;
+  this->_vptr_CNavMesh = off_47CE2F0;  // vptr: CNavMesh
   this->m_NavAreas.m_Size = 0;
   this->m_NavAreas.m_Memory.m_pMemory = 0;
   this->m_NavAreas.m_Memory.m_nAllocationCount = 0;
@@ -344,13 +344,13 @@ void __fastcall CNavMesh::~CNavMesh(CNavMesh *const this)
   CNavPrecacheInfo *m_pPrecacheInfo; // rdi
   bool v6; // zf
 
-  this->_vptr_CNavMesh = off_47CE2F0;
+  this->_vptr_CNavMesh = off_47CE2F0;  // vptr: CNavMesh
   m_pNavMeshGameEventListener = this->m_pNavMeshGameEventListener;
   if ( m_pNavMeshGameEventListener != 0 )
-    (*m_pNavMeshGameEventListener->_vptr_INavMeshGameEventListener)(m_pNavMeshGameEventListener);
+    m_pNavMeshGameEventListener->OnNavMeshDestroy();
   m_pEditor = this->m_pEditor;
   if ( m_pEditor != 0 )
-    (*m_pEditor->_vptr_INavEditor)(m_pEditor);
+    m_pEditor->OnNavMeshDestroy();
   m_pGenerator = this->m_pGenerator;
   if ( m_pGenerator != 0 )
     (*(m_pGenerator->_vptr_CNavGeneratorBase + 1))(m_pGenerator);
@@ -538,28 +538,26 @@ void __fastcall CNavMesh::Update(CNavMesh *const this)
   int m_enabled; // r9d
   bool v3; // r13
   CNavGeneratorBase *m_pGenerator; // rdi
-  __int64 v5; // rdi
   INavObstructionManager *m_pObstructionManager; // rdi
   INavEditor *m_pEditor; // rdi
-  unsigned __int64 m_nValue; // rdi
-  unsigned __int64 v9; // r12
-  ThreadId_t v10; // r13
-  uint64 v11; // rcx
+  unsigned __int64 v7; // r12
+  ThreadId_t v8; // r13
+  uint64 v9; // rcx
   ThreadId_t m_TargetThreadId; // r15
-  unsigned __int64 v13; // r14
+  unsigned __int64 v11; // r14
   uint64 m_numTimeBaseTicks; // rcx
-  ThreadId_t v15; // r13
+  ThreadId_t v13; // r13
   CVProfNode *m_pParent; // rax
   CVProfNode *m_pCurNode; // rax
-  CVProfile::CBudgetGroup *v18; // rax
+  CVProfile::CBudgetGroup *v16; // rax
 
   m_enabled = g_VProfCurrentProfile.m_enabled;
   v3 = m_enabled != 0;
   if ( m_enabled != 0 )
   {
     m_TargetThreadId = g_VProfCurrentProfile.m_TargetThreadId;
-    v13 = __rdtsc();
-    if ( m_TargetThreadId == ThreadGetCurrentId(this) )
+    v11 = __rdtsc();
+    if ( m_TargetThreadId == ThreadGetCurrentId() )
     {
       m_pCurNode = g_VProfCurrentProfile.m_pCurNode;
       if ( m_pCurNode->m_pszName != "CNavMesh::Update" )
@@ -567,14 +565,14 @@ void __fastcall CNavMesh::Update(CNavMesh *const this)
         m_pCurNode = CVProfNode::GetSubNode(g_VProfCurrentProfile.m_pCurNode, "CNavMesh::Update", 0, "NextBot", 4);
         g_VProfCurrentProfile.m_pCurNode = m_pCurNode;
       }
-      v18 = &g_VProfCurrentProfile.m_pBudgetGroups[m_pCurNode->m_BudgetGroupID];
-      v18->m_BudgetFlags |= 4u;
+      v16 = &g_VProfCurrentProfile.m_pBudgetGroups[m_pCurNode->m_BudgetGroupID];
+      v16->m_BudgetFlags |= 4u;
       CVProfNode::EnterScope(g_VProfCurrentProfile.m_pCurNode);
       g_VProfCurrentProfile.m_fAtRoot = 0;
     }
     m_numTimeBaseTicks = g_VProfCurrentProfile.m_ScopeProfiler.m_numTimeBaseTicks;
     ++g_VProfCurrentProfile.m_ScopeProfiler.m_numCalls;
-    g_VProfCurrentProfile.m_ScopeProfiler.m_numTimeBaseTicks = m_numTimeBaseTicks - v13 + __rdtsc();
+    g_VProfCurrentProfile.m_ScopeProfiler.m_numTimeBaseTicks = m_numTimeBaseTicks - v11 + __rdtsc();
   }
   if ( `guard variable for'CNavMesh::Update(void)::nav_show_player_counts == 0
     && __cxa_guard_acquire(&`guard variable for'CNavMesh::Update(void)::nav_show_player_counts) != 0 )
@@ -589,18 +587,18 @@ void __fastcall CNavMesh::Update(CNavMesh *const this)
     __cxa_guard_release(&`guard variable for'CNavMesh::Update(void)::nav_show_clearance);
   }
   m_pGenerator = this->m_pGenerator;
-  if ( m_pGenerator != 0 && (*m_pGenerator->_vptr_CNavGeneratorBase)(m_pGenerator) != 0 )
+  if ( m_pGenerator != 0 && m_pGenerator->Update() != 0 )
   {
     if ( !v3 )
       return;
-    v9 = __rdtsc();
+    v7 = __rdtsc();
     if ( g_VProfCurrentProfile.m_fAtRoot && g_VProfCurrentProfile.m_enabled == 0
-      || (v15 = g_VProfCurrentProfile.m_TargetThreadId) != ThreadGetCurrentId(v5) )
+      || (v13 = g_VProfCurrentProfile.m_TargetThreadId) != ThreadGetCurrentId() )
     {
 LABEL_22:
-      v11 = g_VProfCurrentProfile.m_ScopeProfiler.m_numTimeBaseTicks;
+      v9 = g_VProfCurrentProfile.m_ScopeProfiler.m_numTimeBaseTicks;
       ++g_VProfCurrentProfile.m_ScopeProfiler.m_numCalls;
-      g_VProfCurrentProfile.m_ScopeProfiler.m_numTimeBaseTicks = v11 - v9 + __rdtsc();
+      g_VProfCurrentProfile.m_ScopeProfiler.m_numTimeBaseTicks = v9 - v7 + __rdtsc();
       return;
     }
 LABEL_32:
@@ -621,7 +619,7 @@ LABEL_32:
   }
   m_pObstructionManager = this->m_pObstructionManager;
   if ( m_pObstructionManager != 0 )
-    (*m_pObstructionManager->_vptr_INavObstructionManager)(m_pObstructionManager);
+    m_pObstructionManager->Update();
   m_pEditor = this->m_pEditor;
   if ( m_pEditor != 0 )
     (*(m_pEditor->_vptr_INavEditor + 1))(m_pEditor);
@@ -630,20 +628,15 @@ LABEL_32:
   {
     (*INavDrawMesh::ms_pInst->_vptr_INavDrawMesh)(INavDrawMesh::ms_pInst, this);
   }
-  m_nValue = CNavMesh::Update(void)::nav_show_clearance.m_pConVarState->m_Value.m_nValue;
-  if ( m_nValue != 0 )
-  {
-    m_nValue = INavDrawMesh::ms_pInst;
-    if ( INavDrawMesh::ms_pInst != 0 )
-      (*(INavDrawMesh::ms_pInst->_vptr_INavDrawMesh + 2))(INavDrawMesh::ms_pInst, this);
-  }
+  if ( CNavMesh::Update(void)::nav_show_clearance.m_pConVarState->m_Value.m_nValue != 0 && INavDrawMesh::ms_pInst != 0 )
+    (*(INavDrawMesh::ms_pInst->_vptr_INavDrawMesh + 2))(INavDrawMesh::ms_pInst, this);
   if ( v3 )
   {
-    v9 = __rdtsc();
+    v7 = __rdtsc();
     if ( g_VProfCurrentProfile.m_fAtRoot && g_VProfCurrentProfile.m_enabled == 0 )
       goto LABEL_22;
-    v10 = g_VProfCurrentProfile.m_TargetThreadId;
-    if ( v10 != ThreadGetCurrentId(m_nValue) )
+    v8 = g_VProfCurrentProfile.m_TargetThreadId;
+    if ( v8 != ThreadGetCurrentId() )
       goto LABEL_22;
     goto LABEL_32;
   }
@@ -1762,52 +1755,51 @@ CNavArea *__fastcall CNavMesh::GetNavArea(
         __m128 flAboveLimit)
 {
   char v8; // r12
-  const CNavMesh *v9; // rbx
   int m_enabled; // eax
   float m_flGridCellSize; // xmm1_4
   int m_nGridSizeX; // edx
   int v13; // eax
   int v14; // esi
-  int v15; // ecx
-  CUtlVector<CNavArea*,CUtlMemory<CNavArea*,int> > *v16; // rax
+  int m_nGridSizeY; // edi
+  int v16; // ecx
+  CUtlVector<CNavArea*,CUtlMemory<CNavArea*,int> > *v17; // rax
   const CNavPoly *const *m_pMemory; // rbx
-  const CNavPoly *const *v18; // r13
-  const CNavArea *v19; // r12
-  __m128 v20; // xmm0
+  const CNavPoly *const *v19; // r13
+  const CNavArea *v20; // r12
+  __m128 v21; // xmm0
   __m128 x_low; // xmm1
-  float v22; // xmm2_4
-  __m128 v23; // xmm1
-  __m128 v24; // xmm3
-  CNavArea *v25; // rbx
-  unsigned __int64 v27; // r12
-  ThreadId_t v28; // r13
-  uint64 v29; // rcx
-  unsigned __int64 v30; // r13
+  float v23; // xmm2_4
+  __m128 v24; // xmm1
+  __m128 v25; // xmm3
+  CNavArea *v26; // rbx
+  unsigned __int64 v28; // r12
+  ThreadId_t v29; // r13
+  uint64 v30; // rcx
+  unsigned __int64 v31; // r13
   ThreadId_t m_TargetThreadId; // r14
   uint64 m_numTimeBaseTicks; // rcx
   CVProfNode *m_pParent; // rax
   CVProfNode *m_pCurNode; // rax
-  CVProfile::CBudgetGroup *v35; // rax
-  NavHull_t v36; // [rsp+0h] [rbp-70h]
+  CVProfile::CBudgetGroup *v36; // rax
+  NavHull_t v37; // [rsp+0h] [rbp-70h]
   float flBeneathLimita; // [rsp+Ch] [rbp-64h]
   bool VProf_954; // [rsp+1Bh] [rbp-55h]
   float flUseZ; // [rsp+1Ch] [rbp-54h]
   CNavArea *pUseArea; // [rsp+20h] [rbp-50h]
   float flAboveLimita; // [rsp+28h] [rbp-48h]
-  int v43; // [rsp+2Ch] [rbp-44h]
+  int v44; // [rsp+2Ch] [rbp-44h]
   unsigned __int8 navHulla; // [rsp+30h] [rbp-40h]
 
   v8 = nFlags;
-  v9 = this;
   flAboveLimita = flAboveLimit.m128_f32[0];
   navHulla = navHull.m_hullCategory;
   m_enabled = g_VProfCurrentProfile.m_enabled;
   VProf_954 = m_enabled != 0;
   if ( m_enabled != 0 )
   {
-    v30 = __rdtsc();
+    v31 = __rdtsc();
     m_TargetThreadId = g_VProfCurrentProfile.m_TargetThreadId;
-    if ( m_TargetThreadId == ThreadGetCurrentId(this) )
+    if ( m_TargetThreadId == ThreadGetCurrentId() )
     {
       m_pCurNode = g_VProfCurrentProfile.m_pCurNode;
       if ( m_pCurNode->m_pszName != "CNavMesh::GetNavArea" )
@@ -1815,26 +1807,26 @@ CNavArea *__fastcall CNavMesh::GetNavArea(
         m_pCurNode = CVProfNode::GetSubNode(g_VProfCurrentProfile.m_pCurNode, "CNavMesh::GetNavArea", 0, "NextBot", 4);
         g_VProfCurrentProfile.m_pCurNode = m_pCurNode;
       }
-      v35 = &g_VProfCurrentProfile.m_pBudgetGroups[m_pCurNode->m_BudgetGroupID];
-      v35->m_BudgetFlags |= 4u;
+      v36 = &g_VProfCurrentProfile.m_pBudgetGroups[m_pCurNode->m_BudgetGroupID];
+      v36->m_BudgetFlags |= 4u;
       CVProfNode::EnterScope(g_VProfCurrentProfile.m_pCurNode);
       g_VProfCurrentProfile.m_fAtRoot = 0;
     }
     m_numTimeBaseTicks = g_VProfCurrentProfile.m_ScopeProfiler.m_numTimeBaseTicks;
     ++g_VProfCurrentProfile.m_ScopeProfiler.m_numCalls;
-    g_VProfCurrentProfile.m_ScopeProfiler.m_numTimeBaseTicks = m_numTimeBaseTicks - v30 + __rdtsc();
-    if ( v9->m_Grid.m_Size != 0 )
+    g_VProfCurrentProfile.m_ScopeProfiler.m_numTimeBaseTicks = m_numTimeBaseTicks - v31 + __rdtsc();
+    if ( this->m_Grid.m_Size != 0 )
       goto LABEL_3;
 LABEL_33:
-    v25 = 0;
+    v26 = 0;
     goto LABEL_22;
   }
   if ( this->m_Grid.m_Size == 0 )
     goto LABEL_33;
 LABEL_3:
-  m_flGridCellSize = v9->m_flGridCellSize;
-  m_nGridSizeX = v9->m_nGridSizeX;
-  v13 = ((vPos->x - v9->m_flGridMinX) / m_flGridCellSize);
+  m_flGridCellSize = this->m_flGridCellSize;
+  m_nGridSizeX = this->m_nGridSizeX;
+  v13 = ((vPos->x - this->m_flGridMinX) / m_flGridCellSize);
   if ( v13 < 0 )
   {
     v13 = 0;
@@ -1844,20 +1836,20 @@ LABEL_3:
     v13 = m_nGridSizeX - 1;
   }
   v14 = 0;
-  this = v9->m_nGridSizeY;
-  v15 = ((vPos->y - v9->m_flGridMinY) / m_flGridCellSize);
-  if ( v15 >= 0 )
+  m_nGridSizeY = this->m_nGridSizeY;
+  v16 = ((vPos->y - this->m_flGridMinY) / m_flGridCellSize);
+  if ( v16 >= 0 )
   {
-    if ( this > v15 )
-      v14 = v15 * m_nGridSizeX;
+    if ( m_nGridSizeY > v16 )
+      v14 = v16 * m_nGridSizeX;
     else
-      v14 = m_nGridSizeX * (this - 1);
+      v14 = m_nGridSizeX * (m_nGridSizeY - 1);
   }
-  v43 = v8 & 2;
-  v16 = &v9->m_Grid.m_Memory.m_pMemory[v14 + v13];
-  m_pMemory = v16->m_Memory.m_pMemory;
-  v18 = &m_pMemory[v16->m_Size];
-  if ( m_pMemory == v18 )
+  v44 = v8 & 2;
+  v17 = &this->m_Grid.m_Memory.m_pMemory[v14 + v13];
+  m_pMemory = v17->m_Memory.m_pMemory;
+  v19 = &m_pMemory[v17->m_Size];
+  if ( m_pMemory == v19 )
   {
     pUseArea = 0;
     flUseZ = -100000000.0;
@@ -1870,49 +1862,49 @@ LABEL_3:
     {
       while ( 1 )
       {
-        v19 = *m_pMemory;
+        v20 = *m_pMemory;
         if ( (navHulla & (*m_pMemory)->m_nHullSupport) != 0
-          && CNavPoly::IsOverlappingPointForHull(*m_pMemory, vPos, v36, flAboveLimit.m128_f32[0])
-          && (v43 != 0 || !CNavArea::IsBlocked(v19, -1, 0)) )
+          && CNavPoly::IsOverlappingPointForHull(*m_pMemory, vPos, v37, flAboveLimit.m128_f32[0])
+          && (v44 != 0 || !CNavArea::IsBlocked(v20, -1, 0)) )
         {
-          v20.m128_f32[0] = CNavPoly::GetZ(v19, vPos->y, flAboveLimit.m128_f32[0]);
+          v21.m128_f32[0] = CNavPoly::GetZ(v20, vPos->y, flAboveLimit.m128_f32[0]);
           x_low = LODWORD(vPos[1].x);
           flAboveLimit.m128_f32[0] = flAboveLimita + x_low.m128_f32[0];
-          if ( v20.m128_f32[0] <= (flAboveLimita + x_low.m128_f32[0]) )
+          if ( v21.m128_f32[0] <= (flAboveLimita + x_low.m128_f32[0]) )
           {
             flAboveLimit.m128_f32[0] = x_low.m128_f32[0] - flBeneathLimita;
-            if ( (x_low.m128_f32[0] - flBeneathLimita) <= v20.m128_f32[0] )
+            if ( (x_low.m128_f32[0] - flBeneathLimita) <= v21.m128_f32[0] )
               break;
           }
         }
-        if ( v18 == ++m_pMemory )
+        if ( v19 == ++m_pMemory )
           goto LABEL_20;
       }
-      v22 = x_low.m128_f32[0] - v20.m128_f32[0];
+      v23 = x_low.m128_f32[0] - v21.m128_f32[0];
       x_low.m128_f32[0] = x_low.m128_f32[0] - flUseZ;
-      flAboveLimit.m128_i32[0] = fabs(v22);
-      v23 = _mm_and_ps(x_low, *&angle);
-      v24 = _mm_cmplt_ss(v23, flAboveLimit);
-      if ( flAboveLimit.m128_f32[0] > v23.m128_f32[0] )
-        v19 = pUseArea;
+      flAboveLimit.m128_i32[0] = fabs(v23);
+      v24 = _mm_and_ps(x_low, *&angle);
+      v25 = _mm_cmplt_ss(v24, flAboveLimit);
+      if ( flAboveLimit.m128_f32[0] > v24.m128_f32[0] )
+        v20 = pUseArea;
       ++m_pMemory;
-      pUseArea = v19;
-      LODWORD(flUseZ) = _mm_andnot_ps(v24, v20).m128_u32[0] | LODWORD(flUseZ) & v24.m128_i32[0];
+      pUseArea = v20;
+      LODWORD(flUseZ) = _mm_andnot_ps(v25, v21).m128_u32[0] | LODWORD(flUseZ) & v25.m128_i32[0];
     }
-    while ( v18 != m_pMemory );
+    while ( v19 != m_pMemory );
   }
 LABEL_20:
-  v25 = pUseArea;
+  v26 = pUseArea;
   if ( pZOut != 0 )
     *pZOut = flUseZ;
 LABEL_22:
   if ( VProf_954 )
   {
-    v27 = __rdtsc();
+    v28 = __rdtsc();
     if ( !g_VProfCurrentProfile.m_fAtRoot || g_VProfCurrentProfile.m_enabled != 0 )
     {
-      v28 = g_VProfCurrentProfile.m_TargetThreadId;
-      if ( v28 == ThreadGetCurrentId(this) )
+      v29 = g_VProfCurrentProfile.m_TargetThreadId;
+      if ( v29 == ThreadGetCurrentId() )
       {
         if ( CVProfNode::ExitScope(g_VProfCurrentProfile.m_pCurNode) != 0 )
         {
@@ -1929,11 +1921,11 @@ LABEL_22:
         g_VProfCurrentProfile.m_fAtRoot = m_pParent == &g_VProfCurrentProfile.m_Root;
       }
     }
-    v29 = g_VProfCurrentProfile.m_ScopeProfiler.m_numTimeBaseTicks;
+    v30 = g_VProfCurrentProfile.m_ScopeProfiler.m_numTimeBaseTicks;
     ++g_VProfCurrentProfile.m_ScopeProfiler.m_numCalls;
-    g_VProfCurrentProfile.m_ScopeProfiler.m_numTimeBaseTicks = v29 - v27 + __rdtsc();
+    g_VProfCurrentProfile.m_ScopeProfiler.m_numTimeBaseTicks = v30 - v28 + __rdtsc();
   }
-  return v25;
+  return v26;
 }
 
 
@@ -1990,7 +1982,7 @@ CNavArea *__fastcall CNavMesh::GetNavAreaWithLargestPortal(
   {
     v28 = __rdtsc();
     m_TargetThreadId = g_VProfCurrentProfile.m_TargetThreadId;
-    if ( m_TargetThreadId == ThreadGetCurrentId(this) )
+    if ( m_TargetThreadId == ThreadGetCurrentId() )
     {
       m_pCurNode = g_VProfCurrentProfile.m_pCurNode;
       if ( m_pCurNode->m_pszName != "CNavMesh::GetNavAreaWithLargestPortal" )
@@ -2139,7 +2131,7 @@ CNavArea *__fastcall CNavMesh::GetNearestNav(
         Vector *pNearestPosOut,
         float flMaxDist)
 {
-  __int64 m_enabled; // rdi
+  int m_enabled; // edi
   float m_flGridCellSize; // xmm1_4
   int m_nGridSizeX; // eax
   int v10; // edi
@@ -2204,7 +2196,7 @@ CNavArea *__fastcall CNavMesh::GetNearestNav(
   {
     v36 = __rdtsc();
     m_TargetThreadId = g_VProfCurrentProfile.m_TargetThreadId;
-    if ( m_TargetThreadId == ThreadGetCurrentId(m_enabled) )
+    if ( m_TargetThreadId == ThreadGetCurrentId() )
     {
       m_pCurNode = g_VProfCurrentProfile.m_pCurNode;
       if ( m_pCurNode->m_pszName != "CNavMesh::GetNearestNavArea" )
@@ -2933,7 +2925,7 @@ bool __fastcall CNavMesh::GetGroundHeight(
   {
     v20 = __rdtsc();
     m_TargetThreadId = g_VProfCurrentProfile.m_TargetThreadId;
-    if ( m_TargetThreadId == ThreadGetCurrentId(this) )
+    if ( m_TargetThreadId == ThreadGetCurrentId() )
     {
       m_pCurNode = g_VProfCurrentProfile.m_pCurNode;
       if ( m_pCurNode->m_pszName != "CNavMesh::GetGroundHeight" )
@@ -3125,9 +3117,7 @@ bool __fastcall CNavMesh::GetSimpleGroundHeight(
   v12.m_ShapeAttributes.m_nCollisionFunctionMask = 7;
   vTo.z = z - 9999.9004;
   CGameTrace::Init(&v12);
-  (*this->m_pPhysicsInterface->_vptr_INavPhysicsInterface)(
-    this->m_pPhysicsInterface,
-    vPos,
+  this->m_pPhysicsInterface->Nav_TraceLine(vPos,
     &vTo,
     CNavConfig::ms_TraceMaskSolidBrushOnly,
     0,
@@ -4405,9 +4395,7 @@ void __fastcall CNavMesh::CreateLadder(
     vTo.x = CNavGeneratorBase::sm_flGenerationStepSize + v7->m_vTop.x;
     vTo.y = v23;
     vTo.z = v24;
-    (*m_pPhysicsInterface->_vptr_INavPhysicsInterface)(
-      m_pPhysicsInterface,
-      &vFrom,
+    m_pPhysicsInterface->Nav_TraceLine(&vFrom,
       &vTo,
       CNavConfig::ms_TraceMaskSolidBrushOnly,
       0,
@@ -4438,7 +4426,7 @@ void __fastcall CNavMesh::CreateLadder(
     vTo.y = v7->m_vTop.y + CNavGeneratorBase::sm_flGenerationStepSize;
     vTo.x = v17;
     vTo.z = v18;
-    (*v15->_vptr_INavPhysicsInterface)(v15, &vFrom, &vTo, CNavConfig::ms_TraceMaskSolidBrushOnly, 0, 4, &result);
+    v15->Nav_TraceLine(&vFrom, &vTo, CNavConfig::ms_TraceMaskSolidBrushOnly, 0, 4, &result);
     if ( result.fraction == 1.0 && !result.startsolid )
     {
       CNavLadder::SetDir(v7, NavDirType::SOUTH);
@@ -4484,7 +4472,7 @@ LABEL_18:
       vTo.y = v33;
       vTo.z = v34;
       vTo.x = v35 + vFrom.x;
-      (*v30->_vptr_INavPhysicsInterface)(v30, &vFrom, &vTo, CNavConfig::ms_TraceMaskSolidBrushOnly, 0, 4, &result);
+      v30->Nav_TraceLine(&vFrom, &vTo, CNavConfig::ms_TraceMaskSolidBrushOnly, 0, 4, &result);
       v28 = v53;
       if ( result.fraction == 1.0 && !result.startsolid )
         break;
@@ -4510,7 +4498,7 @@ LABEL_14:
       vTo.y = (v7->m_vNormal.y * v28) + vFrom.y;
       vTo.z = v40;
       vTo.x = v41 + vFrom.x;
-      (*v38->_vptr_INavPhysicsInterface)(v38, &vFrom, &vTo, CNavConfig::ms_TraceMaskSolidBrushOnly, 0, 4, &result);
+      v38->Nav_TraceLine(&vFrom, &vTo, CNavConfig::ms_TraceMaskSolidBrushOnly, 0, 4, &result);
       v28 = v54;
       if ( result.fraction == 1.0 && !result.startsolid )
         break;
@@ -4686,9 +4674,7 @@ LABEL_13:
         v23 = v16 * pLadder->m_vNormal.x;
         vOut.z = v22;
         vOut.x = v23 + v21;
-        (*m_pPhysicsInterface->_vptr_INavPhysicsInterface)(
-          m_pPhysicsInterface,
-          &vOn,
+        m_pPhysicsInterface->Nav_TraceLine(&vOn,
           &vOut,
           CNavConfig::ms_TraceMaskSolidBrushOnly,
           0,
@@ -4721,7 +4707,7 @@ LABEL_9:
         v31 = v16 * pLadder->m_vNormal.x;
         vOut.z = v30;
         vOut.x = v31 + vOn.x;
-        (*v26->_vptr_INavPhysicsInterface)(v26, &vOn, &vOut, CNavConfig::ms_TraceMaskSolidBrushOnly, 0, 4, &result);
+        v26->Nav_TraceLine(&vOn, &vOut, CNavConfig::ms_TraceMaskSolidBrushOnly, 0, 4, &result);
         v16 = v41;
         if ( result.fraction == 1.0 && !result.startsolid )
           break;

@@ -25,7 +25,7 @@ void __fastcall CGameResponseSystem::~CGameResponseSystem(CGameResponseSystem *c
   const char *v4; // rax
 
   p_m_sScriptFile = &this->m_sScriptFile;
-  this->_vptr_IResponseSystem = off_3FECDD0;
+  this->_vptr_IResponseSystem = off_3FECDD0;  // vptr: CGameResponseSystem
   this->_vptr_CRefCountServiceBase = off_3FECE18;
   v3 = *(*this->m_pCache + 96LL);
   v4 = CUtlString::Get(&this->m_sScriptFile);
@@ -45,7 +45,7 @@ void __fastcall CGameResponseSystem::~CGameResponseSystem(CGameResponseSystem *c
   const char *v4; // rax
 
   p_m_sScriptFile = &this->m_sScriptFile;
-  this->_vptr_IResponseSystem = off_3FECDD0;
+  this->_vptr_IResponseSystem = off_3FECDD0;  // vptr: CGameResponseSystem
   this->_vptr_CRefCountServiceBase = off_3FECE18;
   v3 = *(*this->m_pCache + 96LL);
   v4 = CUtlString::Get(&this->m_sScriptFile);

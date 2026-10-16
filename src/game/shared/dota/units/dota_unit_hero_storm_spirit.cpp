@@ -668,7 +668,7 @@ CEntityInstance *__fastcall CDOTA_Unit_Hero_StormSpirit::CEntityInstanceEntityCl
 void __fastcall CDOTA_Unit_Hero_StormSpirit::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Unit_Hero_StormSpirit::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -678,7 +678,7 @@ void __fastcall CDOTA_Unit_Hero_StormSpirit::CEntityInstanceEntityClass::~CEntit
 void __fastcall CDOTA_Unit_Hero_StormSpirit::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Unit_Hero_StormSpirit::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -863,7 +863,7 @@ CEntityInstance *__fastcall CDOTA_Ability_StormSpirit_StaticRemnant::CEntityInst
 void __fastcall CDOTA_Ability_StormSpirit_StaticRemnant::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_StormSpirit_StaticRemnant::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -873,7 +873,7 @@ void __fastcall CDOTA_Ability_StormSpirit_StaticRemnant::CEntityInstanceEntityCl
 void __fastcall CDOTA_Ability_StormSpirit_StaticRemnant::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_StormSpirit_StaticRemnant::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -1593,7 +1593,7 @@ CEntityInstance *__fastcall CDOTA_Ability_StormSpirit_ElectricVortex::CEntityIns
 void __fastcall CDOTA_Ability_StormSpirit_ElectricVortex::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_StormSpirit_ElectricVortex::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -1603,7 +1603,7 @@ void __fastcall CDOTA_Ability_StormSpirit_ElectricVortex::CEntityInstanceEntityC
 void __fastcall CDOTA_Ability_StormSpirit_ElectricVortex::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_StormSpirit_ElectricVortex::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -2290,7 +2290,7 @@ CEntityInstance *__fastcall CDOTA_Ability_StormSpirit_Overload::CEntityInstanceE
 void __fastcall CDOTA_Ability_StormSpirit_Overload::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_StormSpirit_Overload::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -2300,7 +2300,7 @@ void __fastcall CDOTA_Ability_StormSpirit_Overload::CEntityInstanceEntityClass::
 void __fastcall CDOTA_Ability_StormSpirit_Overload::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_StormSpirit_Overload::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -2909,7 +2909,7 @@ CEntityInstance *__fastcall CDOTA_Ability_StormSpirit_BallLightning::CEntityInst
 void __fastcall CDOTA_Ability_StormSpirit_BallLightning::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_StormSpirit_BallLightning::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -2919,7 +2919,7 @@ void __fastcall CDOTA_Ability_StormSpirit_BallLightning::CEntityInstanceEntityCl
 void __fastcall CDOTA_Ability_StormSpirit_BallLightning::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_StormSpirit_BallLightning::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }

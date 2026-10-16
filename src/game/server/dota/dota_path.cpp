@@ -2584,7 +2584,7 @@ void __fastcall CShortPathProbe::AddStep(CShortPathProbe *const this, Vector2D v
 
 
 // CShortPathProbe::operator delete  (line 1105, @0x00000000026a8640, libserver.so)  // inlines: Free
-// calls: CUtlMemoryPoolBase::Free
+// calls: CUtlMemoryPoolBase::Free, _Unwind_Resume, __cxa_call_unexpected
 // callers: CShortPathProbe::Advance, CGridNavPath::ComputeShortPath
 // globals: CShortPathProbe::s_Allocator
 void __fastcall CShortPathProbe::operator delete(void *p)

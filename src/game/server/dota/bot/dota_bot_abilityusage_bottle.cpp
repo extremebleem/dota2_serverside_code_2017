@@ -11,7 +11,7 @@ void __fastcall CDOTA_Bot_AbilityUsage_Bottle::CDOTA_Bot_AbilityUsage_Bottle(
   this->m_pAbility = pAbility;
   this->m_bUseOnCreeps = 0;
   this->m_pBot = pBot;
-  this->_vptr_CDOTA_Bot_AbilityUsage = off_42C5BF0;
+  this->_vptr_CDOTA_Bot_AbilityUsage = off_42C5BF0;  // vptr: CDOTA_Bot_AbilityUsage_Bottle
 }
 
 

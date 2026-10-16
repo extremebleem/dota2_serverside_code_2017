@@ -14,7 +14,7 @@ void __fastcall Crr2Payload::~Crr2Payload(Crr2Payload *const this)
   __int64 v8; // rdi
   unsigned __int64 v9; // [rsp+8h] [rbp-38h]
 
-  this->_vptr_IRulePayload = off_47C4D10;
+  this->_vptr_IRulePayload = off_47C4D10;  // vptr: Crr2Payload
   v2 = this->m_Responses.m_Size - 1;
   if ( v2 >= 0 )
   {
@@ -54,7 +54,7 @@ void __fastcall Crr2Payload::~Crr2Payload(Crr2Payload *const this)
   (*(*g_pMemAlloc + 16LL))(g_pMemAlloc, this->m_Responses.m_Memory.m_pMemory);
   this->m_Responses.m_Memory.m_nCurAllocSize = 0;
   this->m_Responses.m_Memory.m_pMemory = 0;
-  this->_vptr_IRulePayload = off_3FEAC70;
+  this->_vptr_IRulePayload = off_3FEAC70;  // vptr: rr2::IRulePayload
 }
 
 
@@ -71,7 +71,7 @@ void __fastcall Crr2Payload::~Crr2Payload(Crr2Payload *const this)
   __int64 v8; // rdi
   unsigned __int64 v9; // [rsp+8h] [rbp-38h]
 
-  this->_vptr_IRulePayload = off_47C4D10;
+  this->_vptr_IRulePayload = off_47C4D10;  // vptr: Crr2Payload
   v2 = this->m_Responses.m_Size - 1;
   if ( v2 >= 0 )
   {
@@ -111,7 +111,7 @@ void __fastcall Crr2Payload::~Crr2Payload(Crr2Payload *const this)
   (*(*g_pMemAlloc + 16LL))(g_pMemAlloc, this->m_Responses.m_Memory.m_pMemory);
   this->m_Responses.m_Memory.m_nCurAllocSize = 0;
   this->m_Responses.m_Memory.m_pMemory = 0;
-  this->_vptr_IRulePayload = off_3FEAC70;
+  this->_vptr_IRulePayload = off_3FEAC70;  // vptr: rr2::IRulePayload
   operator delete(this);
 }
 

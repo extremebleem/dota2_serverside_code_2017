@@ -1009,15 +1009,15 @@ void __fastcall CServerAchievementManager::~CServerAchievementManager(CServerAch
   if ( (this->m_mapPlayerAchievementState.m_Tree.m_Elements.m_nGrowSize & 0xC0000000) == 0 )
     CUtlMemory<UtlRBTreeNode_t<CUtlMap<int,CPlayerAchievementState *,unsigned short,bool (*)(int const&,int const&)>::Node_t,unsigned short>,unsigned short>::Purge(&this->m_mapPlayerAchievementState.m_Tree.m_Elements);
   v3 = !this->m_bRegisteredForEvents;
-  this->_vptr_IGameEventListener2 = off_3FB3190;
+  this->_vptr_IGameEventListener2 = off_3FB3190;  // vptr: CGameEventListener
   if ( !v3 )
   {
     if ( gameeventmanager != 0 )
       (*(gameeventmanager->_vptr_IBaseInterface + 6))(gameeventmanager, &this->CGameEventListener);
     this->m_bRegisteredForEvents = 0;
   }
-  this->_vptr_IGameEventListener2 = off_3FB3150;
-  this->_vptr_IGameSystem = off_3F7C1B0;
+  this->_vptr_IGameEventListener2 = off_3FB3150;  // vptr: IGameEventListener2
+  this->_vptr_IGameSystem = off_3F7C1B0;  // vptr: CAutoGameSystem
   IGameSystem::~IGameSystem(this);
 }
 

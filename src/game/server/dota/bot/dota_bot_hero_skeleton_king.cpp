@@ -100,7 +100,7 @@ void __fastcall CDOTA_Bot_AbilityUsage_SkeletonKing_HellfireBlast::CDOTA_Bot_Abi
   this->m_pAbility = pAbility;
   this->m_bUseOnCreeps = 0;
   this->m_pBot = pBot;
-  this->_vptr_CDOTA_Bot_AbilityUsage = off_42D01B0;
+  this->_vptr_CDOTA_Bot_AbilityUsage = off_42D01B0;  // vptr: CDOTA_Bot_AbilityUsage_SkeletonKing_HellfireBlast
   this->m_hDesiredTarget.m_Index = -1;
 }
 

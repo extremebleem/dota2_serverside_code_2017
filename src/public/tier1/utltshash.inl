@@ -75,7 +75,7 @@ void __fastcall CUtlTSHashBase<CUtlSymbolTableLargeBaseTreeEntry_t *,2048,CUtlSy
     for ( i = 2048; i != 0; --i )
     {
       bucket = (p_m_nReaders - 1);
-      CurrentId = ThreadGetCurrentId(this);
+      CurrentId = ThreadGetCurrentId();
       _InterlockedAdd(p_m_nReaders + 2, 1u);
       if ( *p_m_nReaders > 0
         || (v6 = *(p_m_nReaders - 1)) != 0 && CurrentId != v6

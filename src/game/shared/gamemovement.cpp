@@ -190,7 +190,7 @@ void __fastcall CGameMovement::CGameMovement(CGameMovement *const this)
 {
   float *v2; // rdi
 
-  this->_vptr_IGameMovement = off_404F270;
+  this->_vptr_IGameMovement = off_404F270;  // vptr: CGameMovement
   this->m_flWaterEntryTime = 0.0;
   this->m_mapLastVelocitySpewTime.m_Tree.m_LessFunc.m_LessFunc = CDefOps<CEntityIndex>::LessFunc;
   this->m_mapLastVelocitySpewTime.m_Tree.m_NumElements = 0;

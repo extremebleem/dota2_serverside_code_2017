@@ -132,7 +132,7 @@ void __fastcall CEntityClass::CEntityClass(CEntityClass *const this)
   ComponentUnserializerClassInfo_t::FieldHash_t *p_m_atomicFields; // rdi
   CEntityClass *v3; // rax
 
-  this->_vptr_CEntityClass = off_3F79390;
+  this->_vptr_CEntityClass = off_3F79390;  // vptr: CEntityClass
   p_m_atomicFields = &this->m_instanceUnserializer.m_atomicFields;
   p_m_atomicFields[-1].m_aBuckets[12].m_pFirst = 0;
   LODWORD(p_m_atomicFields[-1].m_aBuckets[13].m_pFirst) = 0;
@@ -197,7 +197,7 @@ void __fastcall CEntityClass::~CEntityClass(CEntityClass *const this)
   CUtlVectorBase<CEntityClass::ClassOutputInfo_t,CUtlMemory<CEntityClass::ClassOutputInfo_t,int> >::CAllocator *p_m_Memory; // r12
 
   v2 = (this->m_classOutputs.m_Memory.m_nGrowSize & 0xC0000000) == 0;
-  this->_vptr_CEntityClass = off_3F79390;
+  this->_vptr_CEntityClass = off_3F79390;  // vptr: CEntityClass
   this->m_classOutputs.m_Size = 0;
   if ( v2 )
   {
@@ -287,7 +287,7 @@ void __fastcall CEntityClass::~CEntityClass(CEntityClass *const this)
   CUtlVectorBase<CEntityClass::ClassOutputInfo_t,CUtlMemory<CEntityClass::ClassOutputInfo_t,int> >::CAllocator *p_m_Memory; // r12
 
   v2 = (this->m_classOutputs.m_Memory.m_nGrowSize & 0xC0000000) == 0;
-  this->_vptr_CEntityClass = off_3F79390;
+  this->_vptr_CEntityClass = off_3F79390;  // vptr: CEntityClass
   this->m_classOutputs.m_Size = 0;
   if ( v2 )
   {

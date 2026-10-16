@@ -154,7 +154,7 @@ CEntityInstance *__fastcall CSceneListManager::CEntityInstanceEntityClass::Const
 void __fastcall CSceneListManager::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CSceneListManager::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -164,7 +164,7 @@ void __fastcall CSceneListManager::CEntityInstanceEntityClass::~CEntityInstanceE
 void __fastcall CSceneListManager::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CSceneListManager::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -287,7 +287,7 @@ CEntityClass *__cdecl CSceneListManager::GetEntityClassInternal()
 // calls: CUtlVectorBase<CSceneManager::CRestoreSceneSound, CUtlMemory<CSceneManager::CRestoreSceneSound, int> >::RemoveAll, CUtlVectorBase<CHandle<CSceneEntity>, CUtlMemory<CHandle<CSceneEntity>, int> >::RemoveAll, IGameSystem::~IGameSystem, CUtlMemory<CSceneManager::CRestoreSceneSound, int>::Purge, CUtlMemory<CHandle<CSceneEntity>, int>::Purge
 void __fastcall CSceneManager::~CSceneManager(CSceneManager *const this)
 {
-  this->_vptr_IGameSystem = off_40A7D30;
+  this->_vptr_IGameSystem = off_40A7D30;  // vptr: CSceneManager
   CUtlVectorBase<CSceneManager::CRestoreSceneSound,CUtlMemory<CSceneManager::CRestoreSceneSound,int>>::RemoveAll(&this->m_QueuedSceneSounds);
   if ( (this->m_QueuedSceneSounds.m_Memory.m_nGrowSize & 0xC0000000) == 0 )
   {
@@ -302,7 +302,7 @@ void __fastcall CSceneManager::~CSceneManager(CSceneManager *const this)
     if ( (this->m_ActiveScenes.m_Memory.m_nGrowSize & 0xC0000000) == 0 )
       CUtlMemory<CHandle<CSceneEntity>,int>::Purge(&this->m_ActiveScenes.m_Memory);
   }
-  this->_vptr_IGameSystem = off_3F7C1B0;
+  this->_vptr_IGameSystem = off_3F7C1B0;  // vptr: CAutoGameSystem
   IGameSystem::~IGameSystem(this);
 }
 
@@ -311,7 +311,7 @@ void __fastcall CSceneManager::~CSceneManager(CSceneManager *const this)
 // calls: CUtlVectorBase<CSceneManager::CRestoreSceneSound, CUtlMemory<CSceneManager::CRestoreSceneSound, int> >::RemoveAll, CUtlVectorBase<CHandle<CSceneEntity>, CUtlMemory<CHandle<CSceneEntity>, int> >::RemoveAll, IGameSystem::~IGameSystem, operator delete, CUtlMemory<CSceneManager::CRestoreSceneSound, int>::Purge, CUtlMemory<CHandle<CSceneEntity>, int>::Purge
 void __fastcall CSceneManager::~CSceneManager(CSceneManager *const this)
 {
-  this->_vptr_IGameSystem = off_40A7D30;
+  this->_vptr_IGameSystem = off_40A7D30;  // vptr: CSceneManager
   CUtlVectorBase<CSceneManager::CRestoreSceneSound,CUtlMemory<CSceneManager::CRestoreSceneSound,int>>::RemoveAll(&this->m_QueuedSceneSounds);
   if ( (this->m_QueuedSceneSounds.m_Memory.m_nGrowSize & 0xC0000000) == 0 )
   {
@@ -326,7 +326,7 @@ void __fastcall CSceneManager::~CSceneManager(CSceneManager *const this)
     if ( (this->m_ActiveScenes.m_Memory.m_nGrowSize & 0xC0000000) == 0 )
       CUtlMemory<CHandle<CSceneEntity>,int>::Purge(&this->m_ActiveScenes.m_Memory);
   }
-  this->_vptr_IGameSystem = off_3F7C1B0;
+  this->_vptr_IGameSystem = off_3F7C1B0;  // vptr: CAutoGameSystem
   IGameSystem::~IGameSystem(this);
   operator delete(this);
 }
@@ -433,7 +433,7 @@ void *__fastcall CSceneEntity::CEntityInstanceEntityClass::AllocateInstance(
 void __fastcall CSceneEntity::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CSceneEntity::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -443,7 +443,7 @@ void __fastcall CSceneEntity::CEntityInstanceEntityClass::~CEntityInstanceEntity
 void __fastcall CSceneEntity::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CSceneEntity::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }

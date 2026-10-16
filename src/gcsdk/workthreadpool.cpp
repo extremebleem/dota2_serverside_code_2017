@@ -58,54 +58,53 @@ void __fastcall GCSDK::CWorkThreadPool::SetNeverSetEventOnAdd(GCSDK::CWorkThread
 // strings: "CWorkThread -- Sleep", "Sleeping"
 int __fastcall GCSDK::CWorkThread::Run(GCSDK::CWorkThread *const this)
 {
-  __int64 v2; // rdi
-  __int64 v3; // rbx
-  uint64 v4; // rdx
-  __int64 v5; // rsi
+  __int64 v2; // rbx
+  uint64 v3; // rdx
+  __int64 v4; // rsi
   GCSDK::CWorkItem *NextWorkItemToProcess; // rax
-  GCSDK::CWorkItem *v7; // r15
-  unsigned __int64 v8; // r13
-  char v9; // al
-  char v10; // cl
-  unsigned __int64 v11; // rax
+  GCSDK::CWorkItem *v6; // r15
+  unsigned __int64 v7; // r13
+  char v8; // al
+  char v9; // cl
+  unsigned __int64 v10; // rax
   int m_enabled; // r13d
-  bool v13; // r15
-  unsigned __int64 v14; // r15
-  ThreadId_t v15; // r13
-  uint64 v16; // rcx
-  int v17; // eax
-  bool v18; // r13
-  unsigned __int64 v19; // r13
-  ThreadId_t v20; // r15
-  uint64 v21; // rcx
-  __int64 v22; // rax
+  bool v12; // r15
+  unsigned __int64 v13; // r15
+  ThreadId_t v14; // r13
+  uint64 v15; // rcx
+  int v16; // eax
+  bool v17; // r13
+  unsigned __int64 v18; // r13
+  ThreadId_t v19; // r15
+  uint64 v20; // rcx
+  __int64 v21; // rax
   ThreadId_t m_TargetThreadId; // r13
   uint64 m_numTimeBaseTicks; // rcx
   CVProfNode *m_pCurNode; // rax
-  CVProfile::CBudgetGroup *v27; // rax
+  CVProfile::CBudgetGroup *v26; // rax
   CVProfNode *m_pParent; // rax
-  unsigned __int64 v29; // r15
-  uint64 v30; // rcx
+  unsigned __int64 v28; // r15
+  uint64 v29; // rcx
   CVProfNode *SubNode; // rax
-  CVProfile::CBudgetGroup *v32; // rax
-  CVProfNode *v33; // rax
-  CVProfNode *v34; // rdx
-  unsigned __int64 v35; // [rsp+20h] [rbp-40h]
+  CVProfile::CBudgetGroup *v31; // rax
+  CVProfNode *v32; // rax
+  CVProfNode *v33; // rdx
+  unsigned __int64 v34; // [rsp+20h] [rbp-40h]
   int nIterations; // [rsp+28h] [rbp-38h]
   ThreadId_t nIterationsa; // [rsp+28h] [rbp-38h]
 
   _InterlockedAdd((*(this + 49) + 280LL), 1u);
   (*(*this + 72LL))(this);
-  v3 = *(this + 49);
+  v2 = *(this + 49);
 LABEL_2:
   if ( *(this + 400) != 0 )
     goto LABEL_32;
   do
   {
-    _InterlockedAdd((v3 + 416), 1u);
+    _InterlockedAdd((v2 + 416), 1u);
     nIterations = 0;
 LABEL_4:
-    if ( *(v3 + 420) != 0 )
+    if ( *(v2 + 420) != 0 )
     {
 LABEL_5:
       if ( nIterations > 3 )
@@ -117,51 +116,51 @@ LABEL_5:
 LABEL_10:
       while ( 1 )
       {
-        NextWorkItemToProcess = GCSDK::CWorkThreadPool::GetNextWorkItemToProcess(v3);
-        v7 = NextWorkItemToProcess;
+        NextWorkItemToProcess = GCSDK::CWorkThreadPool::GetNextWorkItemToProcess(v2);
+        v6 = NextWorkItemToProcess;
         if ( NextWorkItemToProcess == 0 )
           break;
         if ( NextWorkItemToProcess->m_jobtimeTimeout.m_lTime != 0
           && GCSDK::CJobTime::CServerMicroSecsPassed(&NextWorkItemToProcess->m_jobtimeTimeout) > 0 )
         {
-          v7->m_bCanceled = 1;
+          v6->m_bCanceled = 1;
         }
         else
         {
-          v7->m_bCanceled = 0;
-          v7->m_bRunning = 1;
-          v8 = __rdtsc();
-          v9 = (*(v7->_vptr_CRefCount + 5))(v7, this);
-          v7->m_bRunning = 0;
-          v10 = v9;
-          v11 = __rdtsc();
-          v7->m_CycleCount.m_Int64 = (v11 | (HIDWORD(v11) << 32)) - v8;
-          if ( v10 != 0 )
+          v6->m_bCanceled = 0;
+          v6->m_bRunning = 1;
+          v7 = __rdtsc();
+          v8 = (*(v6->_vptr_CRefCount + 5))(v6, this);
+          v6->m_bRunning = 0;
+          v9 = v8;
+          v10 = __rdtsc();
+          v6->m_CycleCount.m_Int64 = (v10 | (HIDWORD(v10) << 32)) - v7;
+          if ( v9 != 0 )
           {
-            ++*(v3 + 440);
+            ++*(v2 + 440);
           }
-          else if ( v7->m_bResubmit )
+          else if ( v6->m_bResubmit )
           {
-            ++*(v3 + 448);
+            ++*(v2 + 448);
           }
           else
           {
-            ++*(v3 + 444);
+            ++*(v2 + 444);
           }
         }
-        if ( v7->m_bResubmit )
+        if ( v6->m_bResubmit )
         {
-          v7->m_bResubmit = 0;
-          v7->m_bCanceled = 0;
-          GCSDK::CWorkThreadPool::AddWorkItem(v3, v7);
-          if ( _InterlockedSub(&v7->m_cRef, 1u) == 0 )
-            (*(v7->_vptr_CRefCount + 2))(v7);
+          v6->m_bResubmit = 0;
+          v6->m_bCanceled = 0;
+          GCSDK::CWorkThreadPool::AddWorkItem(v2, v6);
+          if ( _InterlockedSub(&v6->m_cRef, 1u) == 0 )
+            (*(v6->_vptr_CRefCount + 2))(v6);
           if ( *(this + 400) != 0 )
             break;
         }
         else
         {
-          (*(*v3 + 16LL))(v3, v7);
+          (*(*v2 + 16LL))(v2, v6);
           if ( *(this + 400) != 0 )
             break;
         }
@@ -169,15 +168,15 @@ LABEL_10:
       if ( *(this + 400) != 0 )
         break;
       ++nIterations;
-      if ( *(v3 + 420) == 0 || nIterations > 3 )
+      if ( *(v2 + 420) == 0 || nIterations > 3 )
         goto LABEL_4;
       m_enabled = g_VProfCurrentProfile.m_enabled;
-      v13 = m_enabled != 0;
+      v12 = m_enabled != 0;
       if ( m_enabled != 0 )
       {
         m_TargetThreadId = g_VProfCurrentProfile.m_TargetThreadId;
-        v35 = __rdtsc();
-        if ( m_TargetThreadId == ThreadGetCurrentId(v2) )
+        v34 = __rdtsc();
+        if ( m_TargetThreadId == ThreadGetCurrentId() )
         {
           m_pCurNode = g_VProfCurrentProfile.m_pCurNode;
           if ( m_pCurNode->m_pszName != "CWorkThread -- Sleep" )
@@ -190,24 +189,24 @@ LABEL_10:
                            4);
             g_VProfCurrentProfile.m_pCurNode = m_pCurNode;
           }
-          v27 = &g_VProfCurrentProfile.m_pBudgetGroups[m_pCurNode->m_BudgetGroupID];
-          v27->m_BudgetFlags |= 4u;
+          v26 = &g_VProfCurrentProfile.m_pBudgetGroups[m_pCurNode->m_BudgetGroupID];
+          v26->m_BudgetFlags |= 4u;
           CVProfNode::EnterScope(g_VProfCurrentProfile.m_pCurNode);
           g_VProfCurrentProfile.m_fAtRoot = 0;
         }
         m_numTimeBaseTicks = g_VProfCurrentProfile.m_ScopeProfiler.m_numTimeBaseTicks;
         ++g_VProfCurrentProfile.m_ScopeProfiler.m_numCalls;
-        v4 = m_numTimeBaseTicks - v35 + __rdtsc();
-        g_VProfCurrentProfile.m_ScopeProfiler.m_numTimeBaseTicks = v4;
+        v3 = m_numTimeBaseTicks - v34 + __rdtsc();
+        g_VProfCurrentProfile.m_ScopeProfiler.m_numTimeBaseTicks = v3;
       }
-      ThreadSleep(2, v5, v4);
-      if ( !v13 )
+      ThreadSleep(2, v4, v3);
+      if ( !v12 )
         goto LABEL_4;
-      v14 = __rdtsc();
+      v13 = __rdtsc();
       if ( !g_VProfCurrentProfile.m_fAtRoot || g_VProfCurrentProfile.m_enabled != 0 )
       {
-        v15 = g_VProfCurrentProfile.m_TargetThreadId;
-        if ( v15 == ThreadGetCurrentId(v2) )
+        v14 = g_VProfCurrentProfile.m_TargetThreadId;
+        if ( v14 == ThreadGetCurrentId() )
         {
           if ( CVProfNode::ExitScope(g_VProfCurrentProfile.m_pCurNode) != 0 )
           {
@@ -224,21 +223,21 @@ LABEL_10:
           g_VProfCurrentProfile.m_fAtRoot = m_pParent == &g_VProfCurrentProfile.m_Root;
         }
       }
-      v16 = g_VProfCurrentProfile.m_ScopeProfiler.m_numTimeBaseTicks;
+      v15 = g_VProfCurrentProfile.m_ScopeProfiler.m_numTimeBaseTicks;
       ++g_VProfCurrentProfile.m_ScopeProfiler.m_numCalls;
-      g_VProfCurrentProfile.m_ScopeProfiler.m_numTimeBaseTicks = v16 - v14 + __rdtsc();
-      if ( *(v3 + 420) != 0 )
+      g_VProfCurrentProfile.m_ScopeProfiler.m_numTimeBaseTicks = v15 - v13 + __rdtsc();
+      if ( *(v2 + 420) != 0 )
         goto LABEL_5;
     }
 LABEL_26:
-    _InterlockedSub((v3 + 416), 1u);
-    v17 = g_VProfCurrentProfile.m_enabled;
-    v18 = v17 != 0;
-    if ( v17 != 0 )
+    _InterlockedSub((v2 + 416), 1u);
+    v16 = g_VProfCurrentProfile.m_enabled;
+    v17 = v16 != 0;
+    if ( v16 != 0 )
     {
-      v29 = __rdtsc();
+      v28 = __rdtsc();
       nIterationsa = g_VProfCurrentProfile.m_TargetThreadId;
-      if ( nIterationsa == ThreadGetCurrentId(v2) )
+      if ( nIterationsa == ThreadGetCurrentId() )
       {
         SubNode = g_VProfCurrentProfile.m_pCurNode;
         if ( SubNode->m_pszName != "CWorkThread -- Sleep" )
@@ -246,51 +245,51 @@ LABEL_26:
           SubNode = CVProfNode::GetSubNode(g_VProfCurrentProfile.m_pCurNode, "CWorkThread -- Sleep", 0, "Sleeping", 4);
           g_VProfCurrentProfile.m_pCurNode = SubNode;
         }
-        v32 = &g_VProfCurrentProfile.m_pBudgetGroups[SubNode->m_BudgetGroupID];
-        v32->m_BudgetFlags |= 4u;
+        v31 = &g_VProfCurrentProfile.m_pBudgetGroups[SubNode->m_BudgetGroupID];
+        v31->m_BudgetFlags |= 4u;
         CVProfNode::EnterScope(g_VProfCurrentProfile.m_pCurNode);
         g_VProfCurrentProfile.m_fAtRoot = 0;
       }
-      v30 = g_VProfCurrentProfile.m_ScopeProfiler.m_numTimeBaseTicks;
+      v29 = g_VProfCurrentProfile.m_ScopeProfiler.m_numTimeBaseTicks;
       ++g_VProfCurrentProfile.m_ScopeProfiler.m_numCalls;
-      g_VProfCurrentProfile.m_ScopeProfiler.m_numTimeBaseTicks = v30 - v29 + __rdtsc();
+      g_VProfCurrentProfile.m_ScopeProfiler.m_numTimeBaseTicks = v29 - v28 + __rdtsc();
     }
-    CThreadSyncObject::Wait((v3 + 288), 0x32u);
-    if ( !v18 )
+    CThreadSyncObject::Wait((v2 + 288), 0x32u);
+    if ( !v17 )
       goto LABEL_2;
-    v19 = __rdtsc();
+    v18 = __rdtsc();
     if ( !g_VProfCurrentProfile.m_fAtRoot || g_VProfCurrentProfile.m_enabled != 0 )
     {
-      v20 = g_VProfCurrentProfile.m_TargetThreadId;
-      if ( v20 == ThreadGetCurrentId(v2) )
+      v19 = g_VProfCurrentProfile.m_TargetThreadId;
+      if ( v19 == ThreadGetCurrentId() )
       {
         if ( CVProfNode::ExitScope(g_VProfCurrentProfile.m_pCurNode) != 0 )
         {
-          v33 = g_VProfCurrentProfile.m_pCurNode;
-          v34 = v33->m_pParent;
-          if ( v34 != 0 )
+          v32 = g_VProfCurrentProfile.m_pCurNode;
+          v33 = v32->m_pParent;
+          if ( v33 != 0 )
           {
-            g_VProfCurrentProfile.m_pCurNode = v34;
-            v33 = v34;
+            g_VProfCurrentProfile.m_pCurNode = v33;
+            v32 = v33;
           }
         }
         else
         {
-          v33 = g_VProfCurrentProfile.m_pCurNode;
+          v32 = g_VProfCurrentProfile.m_pCurNode;
         }
-        g_VProfCurrentProfile.m_fAtRoot = v33 == &g_VProfCurrentProfile.m_Root;
+        g_VProfCurrentProfile.m_fAtRoot = v32 == &g_VProfCurrentProfile.m_Root;
       }
     }
-    v21 = g_VProfCurrentProfile.m_ScopeProfiler.m_numTimeBaseTicks;
+    v20 = g_VProfCurrentProfile.m_ScopeProfiler.m_numTimeBaseTicks;
     ++g_VProfCurrentProfile.m_ScopeProfiler.m_numCalls;
-    g_VProfCurrentProfile.m_ScopeProfiler.m_numTimeBaseTicks = v21 - v19 + __rdtsc();
+    g_VProfCurrentProfile.m_ScopeProfiler.m_numTimeBaseTicks = v20 - v18 + __rdtsc();
   }
   while ( *(this + 400) == 0 );
 LABEL_32:
-  CThreadEvent::Set((v3 + 288));
-  v22 = *(this + 49);
+  CThreadEvent::Set((v2 + 288));
+  v21 = *(this + 49);
   *(this + 401) = 1;
-  _InterlockedSub((v22 + 280), 1u);
+  _InterlockedSub((v21 + 280), 1u);
   return 0;
 }
 
@@ -967,29 +966,24 @@ bool __fastcall GCSDK::CWorkThreadPool::AddWorkItem(GCSDK::CWorkThreadPool *cons
   signed __int64 v14; // rdi
   __int128 v15; // rax
   _QWORD *v16; // r15
-  volatile signed __int64 *v17; // rsi
-  unsigned __int64 v18; // rdi
-  __int128 v19; // rt0
-  int v20; // r13d
-  volatile signed __int64 *v21; // r14
-  __int64 v22; // rdx
-  volatile signed __int64 *v23; // r8
-  __int64 v24; // rcx
-  __int64 v25; // rdx
-  __int128 v26; // rt0
-  __int128 v27; // rt0
+  __int128 v17; // rt0
+  int v18; // r13d
+  volatile signed __int64 *v19; // r14
+  __int64 v20; // rdx
+  volatile signed __int64 *v21; // r8
+  __int128 v22; // rt0
+  __int128 v23; // rt0
   int m_enabled; // r10d
-  __int64 v29; // rdi
-  unsigned __int64 v30; // r12
-  ThreadId_t v31; // r14
-  uint64 v32; // rcx
+  unsigned __int64 v25; // r12
+  ThreadId_t v26; // r14
+  uint64 v27; // rcx
   ThreadId_t m_TargetThreadId; // r15
-  unsigned __int64 v34; // r14
+  unsigned __int64 v29; // r14
   uint64 m_numTimeBaseTicks; // rcx
   CVProfNode *m_pParent; // rax
   CVProfNode *m_pCurNode; // rax
-  CVProfile::CBudgetGroup *v38; // rax
-  signed __int64 v39; // [rsp+8h] [rbp-38h]
+  CVProfile::CBudgetGroup *v33; // rax
+  signed __int64 v34; // [rsp+8h] [rbp-38h]
 
   if ( *(this + 284) != 0 )
     return 0;
@@ -1018,60 +1012,54 @@ LABEL_16:
       pWorkItem->m_ulSequenceNumber = v13;
       v14 = *(this + 6);
       v15 = *(v14 + 48);
-      v39 = v14;
+      v34 = v14;
       v16 = v15;
       if ( v15 != 0 )
       {
-        v17 = (v14 + 48);
-        v18 = 0xFFFFFFFF00000000LL;
         while ( 1 )
         {
           v12 = (DWORD2(v15) - 1) | v12 & 0xFFFFFFFF00000000LL;
-          v19 = v15;
-          if ( _InterlockedCompareExchange128(v17, v12, *v15, &v19) != 0 )
+          v17 = v15;
+          if ( _InterlockedCompareExchange128((v14 + 48), v12, *v15, &v17) != 0 )
             break;
           _mm_pause();
-          v15 = *(v39 + 48);
+          v15 = *(v14 + 48);
           v16 = v15;
           if ( v15 == 0 )
-            goto LABEL_39;
+            goto LABEL_38;
         }
       }
       else
       {
-LABEL_39:
+LABEL_38:
         v16 = operator new(0x10u);
       }
       if ( v16 != -8LL )
         v16[1] = pWorkItem;
-      v20 = 0;
-      *v16 = v39;
-      v21 = (v39 + 16);
+      v18 = 0;
+      *v16 = v34;
+      v19 = (v34 + 16);
       while ( 1 )
       {
-        v22 = *(v39 + 24);
-        v23 = *(v39 + 16);
-        if ( v39 == _InterlockedCompareExchange64(v23, v16, v39) )
+        v20 = *(v34 + 24);
+        v21 = *(v34 + 16);
+        if ( v34 == _InterlockedCompareExchange64(v21, v16, v34) )
           break;
-        v24 = v22 + 1;
-        *&v26 = v23;
-        *(&v26 + 1) = v22;
-        _InterlockedCompareExchange128(v21, v22 + 1, *v23, &v26);
-        v25 = *(&v26 + 1);
-        if ( ++v20 > 9999999
+        *&v22 = v21;
+        *(&v22 + 1) = v20;
+        _InterlockedCompareExchange128(v19, v20 + 1, *v21, &v22);
+        if ( ++v18 > 9999999
           && AssertMsg_ConditionFailed(
                &CTSQueue<GCSDK::CWorkItem *,false>::Push(CTSQueue<GCSDK::CWorkItem *,false>::Node_t *)::_assertionConstants,
-               "CTSQueue corruption",
-               v25,
-               v24) != 0 )
+               "CTSQueue corruption") != 0 )
         {
           __debugbreak();
         }
       }
-      *&v27 = v23;
-      *(&v27 + 1) = v22;
-      _InterlockedCompareExchange128(v21, v22 + 1, v16, &v27);
-      _InterlockedAdd((v39 + 32), 1u);
+      *&v23 = v21;
+      *(&v23 + 1) = v20;
+      _InterlockedCompareExchange128(v19, v20 + 1, v16, &v23);
+      _InterlockedAdd((v34 + 32), 1u);
       if ( *(this + 420) != 0 || *(this + 104) != 0 )
         return 1;
       m_enabled = g_VProfCurrentProfile.m_enabled;
@@ -1079,8 +1067,8 @@ LABEL_39:
       if ( m_enabled != 0 )
       {
         m_TargetThreadId = g_VProfCurrentProfile.m_TargetThreadId;
-        v34 = __rdtsc();
-        if ( m_TargetThreadId == ThreadGetCurrentId(v18) )
+        v29 = __rdtsc();
+        if ( m_TargetThreadId == ThreadGetCurrentId() )
         {
           m_pCurNode = g_VProfCurrentProfile.m_pCurNode;
           if ( m_pCurNode->m_pszName != "SetEvent()" )
@@ -1088,23 +1076,23 @@ LABEL_39:
             m_pCurNode = CVProfNode::GetSubNode(g_VProfCurrentProfile.m_pCurNode, "SetEvent()", 0, "ThreadingMain", 4);
             g_VProfCurrentProfile.m_pCurNode = m_pCurNode;
           }
-          v38 = &g_VProfCurrentProfile.m_pBudgetGroups[m_pCurNode->m_BudgetGroupID];
-          v38->m_BudgetFlags |= 4u;
+          v33 = &g_VProfCurrentProfile.m_pBudgetGroups[m_pCurNode->m_BudgetGroupID];
+          v33->m_BudgetFlags |= 4u;
           CVProfNode::EnterScope(g_VProfCurrentProfile.m_pCurNode);
           g_VProfCurrentProfile.m_fAtRoot = 0;
         }
         m_numTimeBaseTicks = g_VProfCurrentProfile.m_ScopeProfiler.m_numTimeBaseTicks;
         ++g_VProfCurrentProfile.m_ScopeProfiler.m_numCalls;
-        g_VProfCurrentProfile.m_ScopeProfiler.m_numTimeBaseTicks = m_numTimeBaseTicks - v34 + __rdtsc();
+        g_VProfCurrentProfile.m_ScopeProfiler.m_numTimeBaseTicks = m_numTimeBaseTicks - v29 + __rdtsc();
       }
       CThreadEvent::Set((this + 288));
       if ( !v10 )
         return 1;
-      v30 = __rdtsc();
+      v25 = __rdtsc();
       if ( !g_VProfCurrentProfile.m_fAtRoot || g_VProfCurrentProfile.m_enabled != 0 )
       {
-        v31 = g_VProfCurrentProfile.m_TargetThreadId;
-        if ( v31 == ThreadGetCurrentId(v29) )
+        v26 = g_VProfCurrentProfile.m_TargetThreadId;
+        if ( v26 == ThreadGetCurrentId() )
         {
           if ( CVProfNode::ExitScope(g_VProfCurrentProfile.m_pCurNode) != 0 )
           {
@@ -1121,9 +1109,9 @@ LABEL_39:
           g_VProfCurrentProfile.m_fAtRoot = m_pParent == &g_VProfCurrentProfile.m_Root;
         }
       }
-      v32 = g_VProfCurrentProfile.m_ScopeProfiler.m_numTimeBaseTicks;
+      v27 = g_VProfCurrentProfile.m_ScopeProfiler.m_numTimeBaseTicks;
       ++g_VProfCurrentProfile.m_ScopeProfiler.m_numCalls;
-      g_VProfCurrentProfile.m_ScopeProfiler.m_numTimeBaseTicks = v32 - v30 + __rdtsc();
+      g_VProfCurrentProfile.m_ScopeProfiler.m_numTimeBaseTicks = v27 - v25 + __rdtsc();
       return v10;
     }
   }
@@ -1434,47 +1422,41 @@ void __fastcall GCSDK::CWorkThreadPool::OnWorkItemCompleted(
   int v14; // r15d
   __int64 v15; // rdx
   volatile signed __int64 *v16; // rsi
-  __int64 v17; // rcx
-  __int64 v18; // rdx
-  __int128 v19; // rt0
-  __int128 v20; // rt0
-  signed __int64 v21; // r12
-  unsigned __int64 v22; // rcx
-  __int128 v23; // rax
-  _QWORD *v24; // r15
-  __int128 v25; // rt0
-  volatile signed __int64 *v26; // r9
-  int v27; // r13d
-  __int64 v28; // rdx
-  volatile signed __int64 *v29; // rsi
-  __int64 v30; // rcx
-  __int64 v31; // rdx
-  __int128 v32; // rt0
-  char v33; // al
-  __int128 v34; // rt0
-  int v35; // r15d
-  int v36; // ecx
-  __int64 v37; // r10
-  signed __int64 v38; // r12
-  __int64 v39; // rax
-  signed __int64 v40; // rbx
-  __int128 v41; // rax
-  signed __int64 *v42; // r13
-  __int128 v43; // rt0
-  int v44; // r12d
-  volatile signed __int64 *v45; // r11
-  __int64 v46; // rdx
-  volatile signed __int64 *v47; // rsi
-  __int64 v48; // rcx
-  __int64 v49; // rdx
-  __int128 v50; // rt0
-  char v51; // al
-  __int128 v52; // rt0
-  signed __int64 *v53; // rax
-  unsigned __int64 v54; // [rsp+10h] [rbp-50h]
-  __int64 v55; // [rsp+18h] [rbp-48h]
-  volatile signed __int64 *v56; // [rsp+20h] [rbp-40h]
-  volatile signed __int64 *v57; // [rsp+28h] [rbp-38h]
+  __int128 v17; // rt0
+  __int128 v18; // rt0
+  signed __int64 v19; // r12
+  unsigned __int64 v20; // rcx
+  __int128 v21; // rax
+  _QWORD *v22; // r15
+  __int128 v23; // rt0
+  volatile signed __int64 *v24; // r9
+  int v25; // r13d
+  __int64 v26; // rdx
+  volatile signed __int64 *v27; // rsi
+  __int128 v28; // rt0
+  char v29; // al
+  __int128 v30; // rt0
+  int v31; // r15d
+  int v32; // ecx
+  __int64 v33; // r10
+  signed __int64 v34; // r12
+  __int64 v35; // rax
+  signed __int64 v36; // rbx
+  __int128 v37; // rax
+  signed __int64 *v38; // r13
+  __int128 v39; // rt0
+  int v40; // r12d
+  volatile signed __int64 *v41; // r11
+  __int64 v42; // rdx
+  volatile signed __int64 *v43; // rsi
+  __int128 v44; // rt0
+  char v45; // al
+  __int128 v46; // rt0
+  signed __int64 *v47; // rax
+  unsigned __int64 v48; // [rsp+10h] [rbp-50h]
+  __int64 v49; // [rsp+18h] [rbp-48h]
+  volatile signed __int64 *v50; // [rsp+20h] [rbp-40h]
+  volatile signed __int64 *v51; // [rsp+28h] [rbp-38h]
 
   if ( GCSDK::CWorkThreadPool::sm_pWorkItemsCompletedSignal != 0 )
     (**GCSDK::CWorkThreadPool::sm_pWorkItemsCompletedSignal)(GCSDK::CWorkThreadPool::sm_pWorkItemsCompletedSignal);
@@ -1484,151 +1466,143 @@ void __fastcall GCSDK::CWorkThreadPool::OnWorkItemCompleted(
     v4 = *(this + 21) + 1LL;
     if ( v4 == pWorkItem->m_ulSequenceNumber )
     {
-      v21 = *(this + 7);
+      v19 = *(this + 7);
       *(this + 21) = v4;
-      v22 = 0;
-      v23 = *(v21 + 48);
-      v24 = v23;
-      if ( v23 != 0 )
+      v20 = 0;
+      v21 = *(v19 + 48);
+      v22 = v21;
+      if ( v21 != 0 )
       {
         while ( 1 )
         {
-          v22 = (DWORD2(v23) - 1) | v22 & 0xFFFFFFFF00000000LL;
-          v25 = v23;
-          if ( _InterlockedCompareExchange128((v21 + 48), v22, *v23, &v25) != 0 )
+          v20 = (DWORD2(v21) - 1) | v20 & 0xFFFFFFFF00000000LL;
+          v23 = v21;
+          if ( _InterlockedCompareExchange128((v19 + 48), v20, *v21, &v23) != 0 )
             break;
           _mm_pause();
-          v23 = *(v21 + 48);
-          v24 = v23;
-          if ( v23 == 0 )
+          v21 = *(v19 + 48);
+          v22 = v21;
+          if ( v21 == 0 )
             goto LABEL_53;
         }
       }
       else
       {
 LABEL_53:
-        v24 = operator new(0x10u);
+        v22 = operator new(0x10u);
       }
-      if ( v24 != -8LL )
-        v24[1] = pWorkItem;
-      *v24 = v21;
-      v26 = (v21 + 16);
-      v27 = 0;
+      if ( v22 != -8LL )
+        v22[1] = pWorkItem;
+      *v22 = v19;
+      v24 = (v19 + 16);
+      v25 = 0;
       while ( 1 )
       {
-        v28 = *(v21 + 24);
-        v29 = *(v21 + 16);
-        if ( v21 == _InterlockedCompareExchange64(v29, v24, v21) )
+        v26 = *(v19 + 24);
+        v27 = *(v19 + 16);
+        if ( v19 == _InterlockedCompareExchange64(v27, v22, v19) )
           break;
-        v30 = v28 + 1;
-        *&v32 = v29;
-        *(&v32 + 1) = v28;
-        _InterlockedCompareExchange128(v26, v28 + 1, *v29, &v32);
-        v31 = *(&v32 + 1);
-        if ( ++v27 > 9999999 )
+        *&v28 = v27;
+        *(&v28 + 1) = v26;
+        _InterlockedCompareExchange128(v24, v26 + 1, *v27, &v28);
+        if ( ++v25 > 9999999 )
         {
-          v57 = v26;
-          v33 = AssertMsg_ConditionFailed(
+          v51 = v24;
+          v29 = AssertMsg_ConditionFailed(
                   &CTSQueue<GCSDK::CWorkItem *,false>::Push(CTSQueue<GCSDK::CWorkItem *,false>::Node_t *)::_assertionConstants,
-                  "CTSQueue corruption",
-                  v31,
-                  v30);
-          v26 = v57;
-          if ( v33 != 0 )
+                  "CTSQueue corruption");
+          v24 = v51;
+          if ( v29 != 0 )
             __debugbreak();
         }
       }
-      *&v34 = v29;
-      *(&v34 + 1) = v28;
-      _InterlockedCompareExchange128(v26, v28 + 1, v24, &v34);
-      _InterlockedAdd((v21 + 32), 1u);
-      v35 = 0;
-      v36 = *(this + 32);
-      while ( v36 > 0 )
+      *&v30 = v27;
+      *(&v30 + 1) = v26;
+      _InterlockedCompareExchange128(v24, v26 + 1, v22, &v30);
+      _InterlockedAdd((v19 + 32), 1u);
+      v31 = 0;
+      v32 = *(this + 32);
+      while ( v32 > 0 )
       {
         while ( 1 )
         {
-          v37 = 8LL * v35;
-          v38 = *(*(this + 17) + v37);
-          v39 = *(this + 21) + 1LL;
-          if ( v39 == *(v38 + 16) )
+          v33 = 8LL * v31;
+          v34 = *(*(this + 17) + v33);
+          v35 = *(this + 21) + 1LL;
+          if ( v35 == *(v34 + 16) )
             break;
-          if ( ++v35 >= v36 )
+          if ( ++v31 >= v32 )
             goto LABEL_9;
         }
-        *(this + 21) = v39;
-        v40 = *(this + 7);
-        v41 = *(v40 + 48);
-        v54 = v54;
-        v42 = v41;
-        if ( v41 != 0 )
+        *(this + 21) = v35;
+        v36 = *(this + 7);
+        v37 = *(v36 + 48);
+        v48 = v48;
+        v38 = v37;
+        if ( v37 != 0 )
         {
           while ( 1 )
           {
-            v54 = (DWORD2(v41) - 1) | v54 & 0xFFFFFFFF00000000LL;
-            v43 = v41;
-            if ( _InterlockedCompareExchange128((v40 + 48), v54, *v41, &v43) != 0 )
+            v48 = (DWORD2(v37) - 1) | v48 & 0xFFFFFFFF00000000LL;
+            v39 = v37;
+            if ( _InterlockedCompareExchange128((v36 + 48), v48, *v37, &v39) != 0 )
               break;
             _mm_pause();
-            v41 = *(v40 + 48);
-            v42 = v41;
-            if ( v41 == 0 )
+            v37 = *(v36 + 48);
+            v38 = v37;
+            if ( v37 == 0 )
               goto LABEL_49;
           }
         }
         else
         {
 LABEL_49:
-          v53 = operator new(0x10u);
-          v37 = 8LL * v35;
-          v42 = v53;
+          v47 = operator new(0x10u);
+          v33 = 8LL * v31;
+          v38 = v47;
         }
-        if ( v42 != -8LL )
-          v42[1] = v38;
-        v44 = 0;
-        *v42 = v40;
-        v45 = (v40 + 16);
+        if ( v38 != -8LL )
+          v38[1] = v34;
+        v40 = 0;
+        *v38 = v36;
+        v41 = (v36 + 16);
         while ( 1 )
         {
-          v46 = *(v40 + 24);
-          v47 = *(v40 + 16);
-          if ( v40 == _InterlockedCompareExchange64(v47, v42, v40) )
+          v42 = *(v36 + 24);
+          v43 = *(v36 + 16);
+          if ( v36 == _InterlockedCompareExchange64(v43, v38, v36) )
             break;
-          v48 = v46 + 1;
-          *&v50 = v47;
-          *(&v50 + 1) = v46;
-          _InterlockedCompareExchange128(v45, v46 + 1, *v47, &v50);
-          v49 = *(&v50 + 1);
-          if ( ++v44 > 9999999 )
+          *&v44 = v43;
+          *(&v44 + 1) = v42;
+          _InterlockedCompareExchange128(v41, v42 + 1, *v43, &v44);
+          if ( ++v40 > 9999999 )
           {
-            v55 = v37;
-            v56 = v45;
-            v51 = AssertMsg_ConditionFailed(
+            v49 = v33;
+            v50 = v41;
+            v45 = AssertMsg_ConditionFailed(
                     &CTSQueue<GCSDK::CWorkItem *,false>::Push(CTSQueue<GCSDK::CWorkItem *,false>::Node_t *)::_assertionConstants,
-                    "CTSQueue corruption",
-                    v49,
-                    v48);
-            v45 = v56;
-            v37 = v55;
-            if ( v51 != 0 )
+                    "CTSQueue corruption");
+            v41 = v50;
+            v33 = v49;
+            if ( v45 != 0 )
               __debugbreak();
           }
         }
-        *&v52 = v47;
-        *(&v52 + 1) = v46;
-        _InterlockedCompareExchange128(v45, v46 + 1, v42, &v52);
-        _InterlockedAdd((v40 + 32), 1u);
-        v36 = *(this + 32);
-        if ( v36 > 0 )
+        *&v46 = v43;
+        *(&v46 + 1) = v42;
+        _InterlockedCompareExchange128(v41, v42 + 1, v38, &v46);
+        _InterlockedAdd((v36 + 32), 1u);
+        v32 = *(this + 32);
+        if ( v32 > 0 )
         {
-          if ( v35 != --v36 )
+          if ( v31 != --v32 )
           {
-            *(*(this + 17) + v37) = *(*(this + 17) + 8LL * v36);
-            v36 = *(this + 32) - 1;
+            *(*(this + 17) + v33) = *(*(this + 17) + 8LL * v32);
+            v32 = *(this + 32) - 1;
           }
-          *(this + 32) = v36;
+          *(this + 32) = v32;
         }
-        v35 = 0;
+        v31 = 0;
       }
     }
     else
@@ -1686,24 +1660,20 @@ LABEL_51:
       v16 = *(v9 + 16);
       if ( v9 == _InterlockedCompareExchange64(v16, v11, v9) )
         break;
-      v17 = v15 + 1;
-      *&v19 = v16;
-      *(&v19 + 1) = v15;
-      _InterlockedCompareExchange128(v13, v15 + 1, *v16, &v19);
-      v18 = *(&v19 + 1);
+      *&v17 = v16;
+      *(&v17 + 1) = v15;
+      _InterlockedCompareExchange128(v13, v15 + 1, *v16, &v17);
       if ( ++v14 > 9999999
         && AssertMsg_ConditionFailed(
              &CTSQueue<GCSDK::CWorkItem *,false>::Push(CTSQueue<GCSDK::CWorkItem *,false>::Node_t *)::_assertionConstants,
-             "CTSQueue corruption",
-             v18,
-             v17) != 0 )
+             "CTSQueue corruption") != 0 )
       {
         __debugbreak();
       }
     }
-    *&v20 = v16;
-    *(&v20 + 1) = v15;
-    _InterlockedCompareExchange128(v13, v15 + 1, v11, &v20);
+    *&v18 = v16;
+    *(&v18 + 1) = v15;
+    _InterlockedCompareExchange128(v13, v15 + 1, v11, &v18);
     _InterlockedAdd((v9 + 32), 1u);
   }
 }

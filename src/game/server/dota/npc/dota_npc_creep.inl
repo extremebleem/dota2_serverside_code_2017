@@ -102,7 +102,7 @@ void *__fastcall CDOTA_BaseNPC_Creep::CEntityInstanceEntityClass::AllocateInstan
 void __fastcall CDOTA_BaseNPC_Creep::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_BaseNPC_Creep::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -112,7 +112,7 @@ void __fastcall CDOTA_BaseNPC_Creep::CEntityInstanceEntityClass::~CEntityInstanc
 void __fastcall CDOTA_BaseNPC_Creep::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_BaseNPC_Creep::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -409,7 +409,7 @@ void *__fastcall CDOTA_BaseNPC_Creep_Lane::CEntityInstanceEntityClass::AllocateI
 void __fastcall CDOTA_BaseNPC_Creep_Lane::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_BaseNPC_Creep_Lane::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -419,7 +419,7 @@ void __fastcall CDOTA_BaseNPC_Creep_Lane::CEntityInstanceEntityClass::~CEntityIn
 void __fastcall CDOTA_BaseNPC_Creep_Lane::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_BaseNPC_Creep_Lane::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -676,7 +676,7 @@ void *__fastcall CDOTA_BaseNPC_Creep_Siege::CEntityInstanceEntityClass::Allocate
 void __fastcall CDOTA_BaseNPC_Creep_Siege::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_BaseNPC_Creep_Siege::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -686,7 +686,7 @@ void __fastcall CDOTA_BaseNPC_Creep_Siege::CEntityInstanceEntityClass::~CEntityI
 void __fastcall CDOTA_BaseNPC_Creep_Siege::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_BaseNPC_Creep_Siege::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -899,7 +899,7 @@ void *__fastcall CDOTA_BaseNPC_Creep_Neutral::CEntityInstanceEntityClass::Alloca
 void __fastcall CDOTA_BaseNPC_Creep_Neutral::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_BaseNPC_Creep_Neutral::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -909,7 +909,7 @@ void __fastcall CDOTA_BaseNPC_Creep_Neutral::CEntityInstanceEntityClass::~CEntit
 void __fastcall CDOTA_BaseNPC_Creep_Neutral::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_BaseNPC_Creep_Neutral::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -1112,7 +1112,7 @@ void *__fastcall CDOTA_BaseNPC_Creep_Talking::CEntityInstanceEntityClass::Alloca
 void __fastcall CDOTA_BaseNPC_Creep_Talking::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_BaseNPC_Creep_Talking::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -1122,7 +1122,7 @@ void __fastcall CDOTA_BaseNPC_Creep_Talking::CEntityInstanceEntityClass::~CEntit
 void __fastcall CDOTA_BaseNPC_Creep_Talking::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_BaseNPC_Creep_Talking::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -1385,7 +1385,7 @@ void *__fastcall CDOTA_Unit_Roquelaire::CEntityInstanceEntityClass::AllocateInst
 void __fastcall CDOTA_Unit_Roquelaire::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Unit_Roquelaire::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -1395,7 +1395,7 @@ void __fastcall CDOTA_Unit_Roquelaire::CEntityInstanceEntityClass::~CEntityInsta
 void __fastcall CDOTA_Unit_Roquelaire::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Unit_Roquelaire::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }

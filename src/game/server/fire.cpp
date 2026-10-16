@@ -377,7 +377,7 @@ void *__fastcall CFire::CEntityInstanceEntityClass::AllocateInstance(CFire::CEnt
 void __fastcall CFire::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CFire::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -387,7 +387,7 @@ void __fastcall CFire::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
 void __fastcall CFire::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CFire::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -3229,7 +3229,7 @@ CEntityInstance *__fastcall CEnvFireSource::CEntityInstanceEntityClass::Construc
 void __fastcall CEnvFireSource::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CEnvFireSource::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -3239,7 +3239,7 @@ void __fastcall CEnvFireSource::CEntityInstanceEntityClass::~CEntityInstanceEnti
 void __fastcall CEnvFireSource::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CEnvFireSource::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -3600,7 +3600,7 @@ CEntityInstance *__fastcall CEnvFireSensor::CEntityInstanceEntityClass::Construc
 void __fastcall CEnvFireSensor::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CEnvFireSensor::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -3610,7 +3610,7 @@ void __fastcall CEnvFireSensor::CEntityInstanceEntityClass::~CEntityInstanceEnti
 void __fastcall CEnvFireSensor::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CEnvFireSensor::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }

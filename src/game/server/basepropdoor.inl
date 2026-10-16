@@ -67,7 +67,7 @@ const ISchemaBinding *__fastcall CBasePropDoor::CEntityInstanceEntityClass::GetI
 void __fastcall CBasePropDoor::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CBasePropDoor::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -77,7 +77,7 @@ void __fastcall CBasePropDoor::CEntityInstanceEntityClass::~CEntityInstanceEntit
 void __fastcall CBasePropDoor::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CBasePropDoor::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }

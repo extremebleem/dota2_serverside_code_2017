@@ -681,7 +681,7 @@ CEntityInstance *__fastcall CDOTA_Unit_Hero_Legion_Commander::CEntityInstanceEnt
 void __fastcall CDOTA_Unit_Hero_Legion_Commander::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Unit_Hero_Legion_Commander::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -691,7 +691,7 @@ void __fastcall CDOTA_Unit_Hero_Legion_Commander::CEntityInstanceEntityClass::~C
 void __fastcall CDOTA_Unit_Hero_Legion_Commander::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Unit_Hero_Legion_Commander::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -879,7 +879,7 @@ bool __fastcall CDOTA_Unit_Hero_Legion_Commander::IsDemon(const CDOTA_Unit_Hero_
           if ( v16 != -104 )
           {
             StaticData = CEconItemView::GetStaticData((v16 + 104));
-            if ( (*StaticData->_vptr_IEconItemDefinition)(StaticData) == 5810 )
+            if ( StaticData->GetDefinitionIndex() == 5810 )
               break;
           }
         }
@@ -1189,7 +1189,7 @@ CEntityInstance *__fastcall CDOTA_Ability_Legion_Commander_OverwhelmingOdds::CEn
 void __fastcall CDOTA_Ability_Legion_Commander_OverwhelmingOdds::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Legion_Commander_OverwhelmingOdds::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -1199,7 +1199,7 @@ void __fastcall CDOTA_Ability_Legion_Commander_OverwhelmingOdds::CEntityInstance
 void __fastcall CDOTA_Ability_Legion_Commander_OverwhelmingOdds::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Legion_Commander_OverwhelmingOdds::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -2086,7 +2086,7 @@ CEntityInstance *__fastcall CDOTA_Ability_Legion_Commander_PressTheAttack::CEnti
 void __fastcall CDOTA_Ability_Legion_Commander_PressTheAttack::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Legion_Commander_PressTheAttack::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -2096,7 +2096,7 @@ void __fastcall CDOTA_Ability_Legion_Commander_PressTheAttack::CEntityInstanceEn
 void __fastcall CDOTA_Ability_Legion_Commander_PressTheAttack::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Legion_Commander_PressTheAttack::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -2580,7 +2580,7 @@ CEntityInstance *__fastcall CDOTA_Ability_Legion_Commander_MomentOfCourage::CEnt
 void __fastcall CDOTA_Ability_Legion_Commander_MomentOfCourage::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Legion_Commander_MomentOfCourage::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -2590,7 +2590,7 @@ void __fastcall CDOTA_Ability_Legion_Commander_MomentOfCourage::CEntityInstanceE
 void __fastcall CDOTA_Ability_Legion_Commander_MomentOfCourage::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Legion_Commander_MomentOfCourage::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -3230,7 +3230,7 @@ CEntityInstance *__fastcall CDOTA_Ability_Legion_Commander_Duel::CEntityInstance
 void __fastcall CDOTA_Ability_Legion_Commander_Duel::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Legion_Commander_Duel::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -3240,7 +3240,7 @@ void __fastcall CDOTA_Ability_Legion_Commander_Duel::CEntityInstanceEntityClass:
 void __fastcall CDOTA_Ability_Legion_Commander_Duel::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Legion_Commander_Duel::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -4664,7 +4664,7 @@ CEntityInstance *__fastcall CDOTA_Ability_Holdout_GladiatorsUnite::CEntityInstan
 void __fastcall CDOTA_Ability_Holdout_GladiatorsUnite::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Holdout_GladiatorsUnite::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -4674,7 +4674,7 @@ void __fastcall CDOTA_Ability_Holdout_GladiatorsUnite::CEntityInstanceEntityClas
 void __fastcall CDOTA_Ability_Holdout_GladiatorsUnite::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Holdout_GladiatorsUnite::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }

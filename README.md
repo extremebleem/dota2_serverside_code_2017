@@ -10,4 +10,11 @@ and a Hex-Rays decompile of the same binary.
   `// calls:`, `// callers:`, `// strings:` and `// globals:` lines.
 - Layout: `src/<module>/...` follows the original build paths. Declarations are in `.h`/`.cpp`;
   functions defined in headers are in a sibling `.inl`; template instantiations are in `_templates/`.
-  `src/_unknown/functions.cpp` holds compiler-generated functions with no known source file.
+  Functions that DWARF does not describe (third-party code built without debug info) are in `src/_no_dwarf/libserver.cpp`;
+  their names come from the binary's symbols.
+- An inlined constructor is annotated: `v = operator new(0xF8u);  // new CFoo` and `this->_vptr_X = off_N;  // vptr: CFoo`
+  name the class from the real virtual table of the binary (`(size matches)` = sizeof equals the allocation;
+  `[vptr stores: ...]` lists base to derived stores). Two names of one function body (identical code folding) are
+  shown as `// also named: ...`.
+- Virtual calls are written `obj->Method(args)` when the vtable slot is known; `JUMPOUT(addr)` marks control flow
+  Hex-Rays could not structure (39 lines in the whole tree).

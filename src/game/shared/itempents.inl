@@ -4,7 +4,7 @@
 // ITempEntsSystem::~ITempEntsSystem  (line 25, @0x0000000002f4f810, libserver.so)  // inlines: ~IPredictionSystem
 void __fastcall ITempEntsSystem::~ITempEntsSystem(ITempEntsSystem *const this)
 {
-  this->_vptr_IPredictionSystem = off_3FFC070;
+  this->_vptr_IPredictionSystem = off_3FFC070;  // vptr: IPredictionSystem
 }
 
 
@@ -12,7 +12,7 @@ void __fastcall ITempEntsSystem::~ITempEntsSystem(ITempEntsSystem *const this)
 // calls: operator delete
 void __fastcall ITempEntsSystem::~ITempEntsSystem(ITempEntsSystem *const this)
 {
-  this->_vptr_IPredictionSystem = off_3FFC070;
+  this->_vptr_IPredictionSystem = off_3FFC070;  // vptr: IPredictionSystem
   operator delete(this);
 }
 

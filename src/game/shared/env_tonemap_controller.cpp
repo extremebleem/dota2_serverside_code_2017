@@ -151,7 +151,7 @@ void __fastcall CTonemapController2Alias_env_tonemap_controller2::~CTonemapContr
 void __fastcall CTonemapController2Alias_env_tonemap_controller2::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CTonemapController2Alias_env_tonemap_controller2::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -161,7 +161,7 @@ void __fastcall CTonemapController2Alias_env_tonemap_controller2::CEntityInstanc
 void __fastcall CTonemapController2Alias_env_tonemap_controller2::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CTonemapController2Alias_env_tonemap_controller2::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }

@@ -360,7 +360,7 @@ void *__fastcall CMarkupVolumeTagged_Group::CEntityInstanceEntityClass::Allocate
 void __fastcall CMarkupVolumeTagged_Group::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CMarkupVolumeTagged_Group::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -370,7 +370,7 @@ void __fastcall CMarkupVolumeTagged_Group::CEntityInstanceEntityClass::~CEntityI
 void __fastcall CMarkupVolumeTagged_Group::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CMarkupVolumeTagged_Group::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -625,7 +625,7 @@ void *__fastcall CMarkupVolumeTagged_Nav::CEntityInstanceEntityClass::AllocateIn
 void __fastcall CMarkupVolumeTagged_Nav::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CMarkupVolumeTagged_Nav::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -635,7 +635,7 @@ void __fastcall CMarkupVolumeTagged_Nav::CEntityInstanceEntityClass::~CEntityIns
 void __fastcall CMarkupVolumeTagged_Nav::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CMarkupVolumeTagged_Nav::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -892,7 +892,7 @@ void *__fastcall CMarkupVolumeTagged_NavL4D::CEntityInstanceEntityClass::Allocat
 void __fastcall CMarkupVolumeTagged_NavL4D::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CMarkupVolumeTagged_NavL4D::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -902,7 +902,7 @@ void __fastcall CMarkupVolumeTagged_NavL4D::CEntityInstanceEntityClass::~CEntity
 void __fastcall CMarkupVolumeTagged_NavL4D::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CMarkupVolumeTagged_NavL4D::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -1157,7 +1157,7 @@ void *__fastcall CMarkupVolumeTagged_NavHLVR::CEntityInstanceEntityClass::Alloca
 void __fastcall CMarkupVolumeTagged_NavHLVR::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CMarkupVolumeTagged_NavHLVR::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -1167,7 +1167,7 @@ void __fastcall CMarkupVolumeTagged_NavHLVR::CEntityInstanceEntityClass::~CEntit
 void __fastcall CMarkupVolumeTagged_NavHLVR::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CMarkupVolumeTagged_NavHLVR::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -1495,7 +1495,7 @@ void __fastcall CMarkupManager::~CMarkupManager(CMarkupManager *const this)
   CUtlVectorBase<CMarkupVolumeTagged*,CUtlMemory<CMarkupVolumeTagged*,int> >::CAllocator *p_m_Memory; // r12
 
   v2 = (this->m_AllMarkupEntities.m_Memory.m_nGrowSize & 0xC0000000) == 0;
-  this->_vptr_IGameSystem = off_406D050;
+  this->_vptr_IGameSystem = off_406D050;  // vptr: CMarkupManager
   this->m_AllMarkupEntities.m_Size = 0;
   if ( v2 )
   {
@@ -1508,7 +1508,7 @@ void __fastcall CMarkupManager::~CMarkupManager(CMarkupManager *const this)
   CUtlHashtable<CUtlStableHashtable<char const*,CMarkupManager::MarkupGroup_t *,DefaultHashFunctor<char const*>,DefaultEqualFunctor<char const*>,unsigned short,undefined_t>::IndirectIndex,empty_t,CUtlStableHashtable<char const*,CMarkupManager::MarkupGroup_t *,DefaultHashFunctor<char const*>,DefaultEqualFunctor<char const*>,unsigned short,undefined_t>::HashProxy,CUtlStableHashtable<char const*,CMarkupManager::MarkupGroup_t *,DefaultHashFunctor<char const*>,DefaultEqualFunctor<char const*>,unsigned short,undefined_t>::EqualProxy,undefined_t,CUtlMemory<CUtlHashtableEntry<CUtlStableHashtable<char const*,CMarkupManager::MarkupGroup_t *,DefaultHashFunctor<char const*>,DefaultEqualFunctor<char const*>,unsigned short,undefined_t>::IndirectIndex,empty_t>,int>>::RemoveAll(&this->m_MarkupGroups.m_table);
   if ( (this->m_MarkupGroups.m_table.m_table.m_nGrowSize & 0xC0000000) == 0 )
     CUtlMemory<CUtlHashtableEntry<CUtlStableHashtable<char const*,CMarkupManager::MarkupGroup_t *,DefaultHashFunctor<char const*>,DefaultEqualFunctor<char const*>,unsigned short,undefined_t>::IndirectIndex,empty_t>,int>::Purge(&this->m_MarkupGroups.m_table.m_table);
-  this->_vptr_IGameSystem = off_3F7C1B0;
+  this->_vptr_IGameSystem = off_3F7C1B0;  // vptr: CAutoGameSystem
   IGameSystem::~IGameSystem(this);
 }
 
@@ -1521,7 +1521,7 @@ void __fastcall CMarkupManager::~CMarkupManager(CMarkupManager *const this)
   CUtlVectorBase<CMarkupVolumeTagged*,CUtlMemory<CMarkupVolumeTagged*,int> >::CAllocator *p_m_Memory; // r12
 
   v2 = (this->m_AllMarkupEntities.m_Memory.m_nGrowSize & 0xC0000000) == 0;
-  this->_vptr_IGameSystem = off_406D050;
+  this->_vptr_IGameSystem = off_406D050;  // vptr: CMarkupManager
   this->m_AllMarkupEntities.m_Size = 0;
   if ( v2 )
   {
@@ -1534,7 +1534,7 @@ void __fastcall CMarkupManager::~CMarkupManager(CMarkupManager *const this)
   CUtlHashtable<CUtlStableHashtable<char const*,CMarkupManager::MarkupGroup_t *,DefaultHashFunctor<char const*>,DefaultEqualFunctor<char const*>,unsigned short,undefined_t>::IndirectIndex,empty_t,CUtlStableHashtable<char const*,CMarkupManager::MarkupGroup_t *,DefaultHashFunctor<char const*>,DefaultEqualFunctor<char const*>,unsigned short,undefined_t>::HashProxy,CUtlStableHashtable<char const*,CMarkupManager::MarkupGroup_t *,DefaultHashFunctor<char const*>,DefaultEqualFunctor<char const*>,unsigned short,undefined_t>::EqualProxy,undefined_t,CUtlMemory<CUtlHashtableEntry<CUtlStableHashtable<char const*,CMarkupManager::MarkupGroup_t *,DefaultHashFunctor<char const*>,DefaultEqualFunctor<char const*>,unsigned short,undefined_t>::IndirectIndex,empty_t>,int>>::RemoveAll(&this->m_MarkupGroups.m_table);
   if ( (this->m_MarkupGroups.m_table.m_table.m_nGrowSize & 0xC0000000) == 0 )
     CUtlMemory<CUtlHashtableEntry<CUtlStableHashtable<char const*,CMarkupManager::MarkupGroup_t *,DefaultHashFunctor<char const*>,DefaultEqualFunctor<char const*>,unsigned short,undefined_t>::IndirectIndex,empty_t>,int>::Purge(&this->m_MarkupGroups.m_table.m_table);
-  this->_vptr_IGameSystem = off_3F7C1B0;
+  this->_vptr_IGameSystem = off_3F7C1B0;  // vptr: CAutoGameSystem
   IGameSystem::~IGameSystem(this);
   operator delete(this);
 }

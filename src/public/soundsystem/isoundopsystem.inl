@@ -404,7 +404,7 @@ LABEL_64:
 // CSosEventInfo_t::~CSosEventInfo_t  (line 349, @0x0000000001f71aa0, libserver.so)
 void __fastcall CSosEventInfo_t::~CSosEventInfo_t(CSosEventInfo_t *const this)
 {
-  this->_vptr_CSosEventInfo_t = off_3FCACD0;
+  this->_vptr_CSosEventInfo_t = off_3FCACD0;  // vptr: CSosEventInfo_t
 }
 
 
@@ -412,7 +412,7 @@ void __fastcall CSosEventInfo_t::~CSosEventInfo_t(CSosEventInfo_t *const this)
 // calls: operator delete
 void __fastcall CSosEventInfo_t::~CSosEventInfo_t(CSosEventInfo_t *const this)
 {
-  this->_vptr_CSosEventInfo_t = off_3FCACD0;
+  this->_vptr_CSosEventInfo_t = off_3FCACD0;  // vptr: CSosEventInfo_t
   operator delete(this);
 }
 
@@ -439,7 +439,7 @@ void __fastcall CSosEventInfoWithFieldData_t::~CSosEventInfoWithFieldData_t(CSos
       v4(g_pMemAlloc, 0);
   }
   this->m_fieldData.m_entries.m_nAllocated = 3;
-  this->_vptr_CSosEventInfo_t = off_3FCACD0;
+  this->_vptr_CSosEventInfo_t = off_3FCACD0;  // vptr: CSosEventInfo_t
 }
 
 
@@ -465,7 +465,7 @@ void __fastcall CSosEventInfoWithFieldData_t::~CSosEventInfoWithFieldData_t(CSos
       v4(g_pMemAlloc, 0);
   }
   this->m_fieldData.m_entries.m_nAllocated = 3;
-  this->_vptr_CSosEventInfo_t = off_3FCACD0;
+  this->_vptr_CSosEventInfo_t = off_3FCACD0;  // vptr: CSosEventInfo_t
   operator delete(this);
 }
 
@@ -492,7 +492,7 @@ void __fastcall CSosStartSoundEventInfo_t::~CSosStartSoundEventInfo_t(CSosStartS
       v4(g_pMemAlloc, 0);
   }
   this->m_fieldData.m_entries.m_nAllocated = 3;
-  this->_vptr_CSosEventInfo_t = off_3FCACD0;
+  this->_vptr_CSosEventInfo_t = off_3FCACD0;  // vptr: CSosEventInfo_t
 }
 
 
@@ -518,7 +518,7 @@ void __fastcall CSosStartSoundEventInfo_t::~CSosStartSoundEventInfo_t(CSosStartS
       v4(g_pMemAlloc, 0);
   }
   this->m_fieldData.m_entries.m_nAllocated = 3;
-  this->_vptr_CSosEventInfo_t = off_3FCACD0;
+  this->_vptr_CSosEventInfo_t = off_3FCACD0;  // vptr: CSosEventInfo_t
   operator delete(this);
 }
 
@@ -526,7 +526,7 @@ void __fastcall CSosStartSoundEventInfo_t::~CSosStartSoundEventInfo_t(CSosStartS
 // CSosStopSoundEventInfo_t::~CSosStopSoundEventInfo_t  (line 401, @0x0000000001f72340, libserver.so)  // inlines: ~CSosEventInfo_t
 void __fastcall CSosStopSoundEventInfo_t::~CSosStopSoundEventInfo_t(CSosStopSoundEventInfo_t *const this)
 {
-  this->_vptr_CSosEventInfo_t = off_3FCACD0;
+  this->_vptr_CSosEventInfo_t = off_3FCACD0;  // vptr: CSosEventInfo_t
 }
 
 
@@ -534,7 +534,7 @@ void __fastcall CSosStopSoundEventInfo_t::~CSosStopSoundEventInfo_t(CSosStopSoun
 // calls: operator delete
 void __fastcall CSosStopSoundEventInfo_t::~CSosStopSoundEventInfo_t(CSosStopSoundEventInfo_t *const this)
 {
-  this->_vptr_CSosEventInfo_t = off_3FCACD0;
+  this->_vptr_CSosEventInfo_t = off_3FCACD0;  // vptr: CSosEventInfo_t
   operator delete(this);
 }
 
@@ -542,7 +542,7 @@ void __fastcall CSosStopSoundEventInfo_t::~CSosStopSoundEventInfo_t(CSosStopSoun
 // CSosStopSoundEventHashInfo_t::~CSosStopSoundEventHashInfo_t  (line 415, @0x0000000001f72350, libserver.so)  // inlines: ~CSosEventInfo_t
 void __fastcall CSosStopSoundEventHashInfo_t::~CSosStopSoundEventHashInfo_t(CSosStopSoundEventHashInfo_t *const this)
 {
-  this->_vptr_CSosEventInfo_t = off_3FCACD0;
+  this->_vptr_CSosEventInfo_t = off_3FCACD0;  // vptr: CSosEventInfo_t
 }
 
 
@@ -550,7 +550,7 @@ void __fastcall CSosStopSoundEventHashInfo_t::~CSosStopSoundEventHashInfo_t(CSos
 // calls: operator delete
 void __fastcall CSosStopSoundEventHashInfo_t::~CSosStopSoundEventHashInfo_t(CSosStopSoundEventHashInfo_t *const this)
 {
-  this->_vptr_CSosEventInfo_t = off_3FCACD0;
+  this->_vptr_CSosEventInfo_t = off_3FCACD0;  // vptr: CSosEventInfo_t
   operator delete(this);
 }
 
@@ -578,7 +578,7 @@ void __fastcall CSosSetSoundEventFieldsInfo_t::~CSosSetSoundEventFieldsInfo_t(
       v4(g_pMemAlloc, 0);
   }
   this->m_fieldData.m_entries.m_nAllocated = 3;
-  this->_vptr_CSosEventInfo_t = off_3FCACD0;
+  this->_vptr_CSosEventInfo_t = off_3FCACD0;  // vptr: CSosEventInfo_t
 }
 
 
@@ -605,7 +605,7 @@ void __fastcall CSosSetSoundEventFieldsInfo_t::~CSosSetSoundEventFieldsInfo_t(
       v4(g_pMemAlloc, 0);
   }
   this->m_fieldData.m_entries.m_nAllocated = 3;
-  this->_vptr_CSosEventInfo_t = off_3FCACD0;
+  this->_vptr_CSosEventInfo_t = off_3FCACD0;  // vptr: CSosEventInfo_t
   operator delete(this);
 }
 
@@ -633,7 +633,7 @@ void __fastcall CSosSetLibraryStackFieldsInfo_t::~CSosSetLibraryStackFieldsInfo_
       v4(g_pMemAlloc, 0);
   }
   this->m_fieldData.m_entries.m_nAllocated = 3;
-  this->_vptr_CSosEventInfo_t = off_3FCACD0;
+  this->_vptr_CSosEventInfo_t = off_3FCACD0;  // vptr: CSosEventInfo_t
 }
 
 
@@ -660,7 +660,7 @@ void __fastcall CSosSetLibraryStackFieldsInfo_t::~CSosSetLibraryStackFieldsInfo_
       v4(g_pMemAlloc, 0);
   }
   this->m_fieldData.m_entries.m_nAllocated = 3;
-  this->_vptr_CSosEventInfo_t = off_3FCACD0;
+  this->_vptr_CSosEventInfo_t = off_3FCACD0;  // vptr: CSosEventInfo_t
   operator delete(this);
 }
 

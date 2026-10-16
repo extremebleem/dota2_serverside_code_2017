@@ -59,7 +59,7 @@ void __fastcall CDOTA_Bot_AbilityUsage_Chen_Penitence::CDOTA_Bot_AbilityUsage_Ch
   this->m_pAbility = pAbility;
   this->m_bUseOnCreeps = 0;
   this->m_pBot = pBot;
-  this->_vptr_CDOTA_Bot_AbilityUsage = off_42CA7B0;
+  this->_vptr_CDOTA_Bot_AbilityUsage = off_42CA7B0;  // vptr: CDOTA_Bot_AbilityUsage_Chen_Penitence
 }
 
 
@@ -88,7 +88,7 @@ void __fastcall CDOTA_Bot_AbilityUsage_Chen_TestOfFaith::CDOTA_Bot_AbilityUsage_
   this->m_pAbility = pAbility;
   this->m_bUseOnCreeps = 0;
   this->m_pBot = pBot;
-  this->_vptr_CDOTA_Bot_AbilityUsage = off_42CA810;
+  this->_vptr_CDOTA_Bot_AbilityUsage = off_42CA810;  // vptr: CDOTA_Bot_AbilityUsage_Chen_TestOfFaith
 }
 
 
@@ -118,7 +118,7 @@ void __fastcall CDOTA_Bot_AbilityUsage_Chen_HolyPersuasion::CDOTA_Bot_AbilityUsa
   this->m_pAbility = pAbility;
   this->m_bUseOnCreeps = 0;
   this->m_pBot = pBot;
-  this->_vptr_CDOTA_Bot_AbilityUsage = off_42CA870;
+  this->_vptr_CDOTA_Bot_AbilityUsage = off_42CA870;  // vptr: CDOTA_Bot_AbilityUsage_Chen_HolyPersuasion
 }
 
 
@@ -148,7 +148,7 @@ void __fastcall CDOTA_Bot_AbilityUsage_Chen_HandOfGod::CDOTA_Bot_AbilityUsage_Ch
   this->m_pAbility = pAbility;
   this->m_bUseOnCreeps = 0;
   this->m_pBot = pBot;
-  this->_vptr_CDOTA_Bot_AbilityUsage = off_42CA8D0;
+  this->_vptr_CDOTA_Bot_AbilityUsage = off_42CA8D0;  // vptr: CDOTA_Bot_AbilityUsage_Chen_HandOfGod
 }
 
 

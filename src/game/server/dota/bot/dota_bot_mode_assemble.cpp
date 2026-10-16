@@ -15,7 +15,7 @@ void __fastcall CDOTA_BotMode_Assemble::CDOTA_BotMode_Assemble(CDOTA_BotMode_Ass
   this->m_vDesiredLocation.x = x;
   this->m_vDesiredLocation.y = vec3_origin.y;
   z = vec3_origin.z;
-  this->_vptr_CDOTA_BotMode = off_42B7690;
+  this->_vptr_CDOTA_BotMode = off_42B7690;  // vptr: CDOTA_BotMode_Assemble
   this->m_vDesiredLocation.z = z;
 }
 

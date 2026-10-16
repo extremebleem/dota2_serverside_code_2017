@@ -30,9 +30,9 @@ CDOTA_BotMode *__fastcall CDOTA_Bot_Unit_GenericMinion::CreateMode(CDOTA_Bot_Uni
     }
     else if ( iMode == 25 )
     {
-      v3 = operator new(0xE0u);
+      v3 = operator new(0xE0u);  // new CDOTA_BotMode_GenericMinion (size matches)
       CDOTA_BotMode::CDOTA_BotMode(v3, this);
-      v3->_vptr_CDOTA_BotMode = off_42D1B30;
+      v3->_vptr_CDOTA_BotMode = off_42D1B30;  // vptr: CDOTA_BotMode_GenericMinion
       return v3;
     }
     else
@@ -42,9 +42,9 @@ CDOTA_BotMode *__fastcall CDOTA_Bot_Unit_GenericMinion::CreateMode(CDOTA_Bot_Uni
   }
   else
   {
-    v5 = operator new(0xE0u);
+    v5 = operator new(0xE0u);  // new CDOTA_BotModeMinionNone (size matches)
     CDOTA_BotMode::CDOTA_BotMode(v5, this);
-    v5->_vptr_CDOTA_BotMode = off_42D1990;
+    v5->_vptr_CDOTA_BotMode = off_42D1990;  // vptr: CDOTA_BotModeMinionNone
     return v5;
   }
 }

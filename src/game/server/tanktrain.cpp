@@ -334,7 +334,7 @@ void *__fastcall CFuncTankTrain::CEntityInstanceEntityClass::AllocateInstance(
 void __fastcall CFuncTankTrain::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CFuncTankTrain::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -344,7 +344,7 @@ void __fastcall CFuncTankTrain::CEntityInstanceEntityClass::~CEntityInstanceEnti
 void __fastcall CFuncTankTrain::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CFuncTankTrain::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -674,7 +674,7 @@ CEntityInstance *__fastcall CTankTargetChange::CEntityInstanceEntityClass::Const
 void __fastcall CTankTargetChange::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CTankTargetChange::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -684,7 +684,7 @@ void __fastcall CTankTargetChange::CEntityInstanceEntityClass::~CEntityInstanceE
 void __fastcall CTankTargetChange::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CTankTargetChange::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -929,7 +929,7 @@ CEntityInstance *__fastcall CTankTrainAI::CEntityInstanceEntityClass::ConstructI
 void __fastcall CTankTrainAI::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CTankTrainAI::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -939,7 +939,7 @@ void __fastcall CTankTrainAI::CEntityInstanceEntityClass::~CEntityInstanceEntity
 void __fastcall CTankTrainAI::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CTankTrainAI::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }

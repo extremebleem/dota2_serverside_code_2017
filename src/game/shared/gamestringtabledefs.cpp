@@ -33,7 +33,7 @@ void __fastcall CGameNetworkStringTables::~CGameNetworkStringTables(CGameNetwork
   CUtlVectorBase<StringTableDef_t,CUtlMemory<StringTableDef_t,int> >::CAllocator *p_m_Memory; // r12
 
   v2 = (this->m_StringTableDefs.m_Memory.m_nGrowSize & 0xC0000000) == 0;
-  this->_vptr_IGameNetworkStringTables = off_3FF7B30;
+  this->_vptr_IGameNetworkStringTables = off_3FF7B30;  // vptr: CGameNetworkStringTables
   this->m_StringTableDefs.m_Size = 0;
   if ( v2 )
   {

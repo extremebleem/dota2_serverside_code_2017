@@ -1904,42 +1904,41 @@ CSceneObject *__fastcall CreatePhysicsBodySceneObject(
   __int64 (__fastcall *v15)(ISceneSystem *, ISceneWorld *, VertexBufferHandle_t, IndexBufferHandle_t, _QWORD *, _QWORD, unsigned int, AABB_t *, Vector *, int, _QWORD, int); // rax
   __int64 v16; // r13
   uint8 m_nClassID; // al
-  __int64 v19; // rdi
   signed __int64 CurrentId; // rsi
-  unsigned int v21; // [rsp+34h] [rbp-1ECh]
-  CIndexData<unsigned int> *v22; // [rsp+38h] [rbp-1E8h]
-  CVertexData<VertexColorPos_t> *v25; // [rsp+50h] [rbp-1D0h]
+  unsigned int v20; // [rsp+34h] [rbp-1ECh]
+  CIndexData<unsigned int> *v21; // [rsp+38h] [rbp-1E8h]
+  CVertexData<VertexColorPos_t> *v24; // [rsp+50h] [rbp-1D0h]
   unsigned int nIndexCount; // [rsp+68h] [rbp-1B8h]
-  VertexColorPos_t *v30; // [rsp+70h] [rbp-1B0h] BYREF
-  unsigned int *v31; // [rsp+80h] [rbp-1A0h] BYREF
+  VertexColorPos_t *v29; // [rsp+70h] [rbp-1B0h] BYREF
+  unsigned int *v30; // [rsp+80h] [rbp-1A0h] BYREF
   VertexColorPos_t *m_pMemory; // [rsp+90h] [rbp-190h] BYREF
-  unsigned int *v33; // [rsp+A0h] [rbp-180h] BYREF
+  unsigned int *v32; // [rsp+A0h] [rbp-180h] BYREF
   AABB_t bbox; // [rsp+B0h] [rbp-170h] BYREF
-  _DWORD v35[2]; // [rsp+D0h] [rbp-150h] BYREF
-  const char *v36; // [rsp+D8h] [rbp-148h]
-  char *v37; // [rsp+E0h] [rbp-140h]
-  _DWORD v38[2]; // [rsp+F0h] [rbp-130h] BYREF
-  const char *v39; // [rsp+F8h] [rbp-128h]
-  const char *v40; // [rsp+100h] [rbp-120h]
+  _DWORD v34[2]; // [rsp+D0h] [rbp-150h] BYREF
+  const char *v35; // [rsp+D8h] [rbp-148h]
+  char *v36; // [rsp+E0h] [rbp-140h]
+  _DWORD v37[2]; // [rsp+F0h] [rbp-130h] BYREF
+  const char *v38; // [rsp+F8h] [rbp-128h]
+  const char *v39; // [rsp+100h] [rbp-120h]
   CIndexData<unsigned int> ib; // [rsp+110h] [rbp-110h] BYREF
   CVertexData<VertexColorPos_t> vb; // [rsp+140h] [rbp-E0h] BYREF
-  _QWORD v43[20]; // [rsp+180h] [rbp-A0h] BYREF
+  _QWORD v42[20]; // [rsp+180h] [rbp-A0h] BYREF
 
   if ( nTriangleCount == 0 )
     return 0;
-  memset(v43, 0, 64);
+  memset(v42, 0, 64);
   v7 = g_pRenderDevice;
   for ( i = 0; i != 8; ++i )
   {
-    v43[i] = 0;
-    *(&v43[9] + i * 4) = 0;
+    v42[i] = 0;
+    *(&v42[9] + i * 4) = 0;
   }
-  v43[13] &= 0xFE00000000000000LL;
-  v43[8] = 0;
+  v42[13] &= 0xFE00000000000000LL;
+  v42[8] = 0;
   v9 = (*(*v7 + 368LL))(v7, 0, 0, 0);
   v10 = v9;
   if ( v9 != 0 )
-    (*(*v9 + 8LL))(v9, v43);
+    (*(*v9 + 8LL))(v9, v42);
   else
     Warning("WARNING: Trying to create a CRenderContextPtr without a valid context.\n");
   vb.m_pRenderContext = v10;
@@ -1953,15 +1952,15 @@ CSceneObject *__fastcall CreatePhysicsBodySceneObject(
   vb.m_nMaxVertexCount = 0;
   vb.m_pMemory = 0;
   *(&vb.CVertexDataBase<VertexColorPos_t> + 11) &= 0xC0000000;
-  v36 = "vb phys";
+  v35 = "vb phys";
   *(&vb.CVertexDataBase<VertexColorPos_t> + 47) = 0;
   vb.m_nVertexCount = 0;
   vb.m_nVertexIncrement = 0;
-  v35[1] = 16;
-  v35[0] = nVertexCount;
-  v37 = "testbed";
+  v34[1] = 16;
+  v34[0] = nVertexCount;
+  v36 = "testbed";
   v11 = (*(v10->_vptr_IRenderContext + 78))(v10);
-  v25 = *(*v11 + 264LL);
+  v24 = *(*v11 + 264LL);
   if ( `guard variable for'VertexColorPos_t::GetLayout(void)::inputLayoutCreator == 0
     && __cxa_guard_acquire(&`guard variable for'VertexColorPos_t::GetLayout(void)::inputLayoutCreator) != 0 )
   {
@@ -1974,48 +1973,48 @@ CSceneObject *__fastcall CreatePhysicsBodySceneObject(
   }
   else
   {
-    memset(v43, 0, 0x70u);
-    LODWORD(v43[12]) = 12;
-    v43[0] = 0x6E6F697469736F70LL;
-    v43[7] = 0x726F6C6F63LL;
-    HIDWORD(v43[4]) = 6;
-    HIDWORD(v43[11]) = 28;
-    v22 = (*(*g_pRenderDevice + 216LL))(g_pRenderDevice);
-    CurrentId = ThreadGetCurrentId(v19);
-    if ( CurrentId == v22->m_pMemory || _InterlockedCompareExchange64(v22, CurrentId, 0) == 0 )
+    memset(v42, 0, 0x70u);
+    LODWORD(v42[12]) = 12;
+    v42[0] = 0x6E6F697469736F70LL;
+    v42[7] = 0x726F6C6F63LL;
+    HIDWORD(v42[4]) = 6;
+    HIDWORD(v42[11]) = 28;
+    v21 = (*(*g_pRenderDevice + 216LL))(g_pRenderDevice);
+    CurrentId = ThreadGetCurrentId();
+    if ( CurrentId == v21->m_pMemory || _InterlockedCompareExchange64(v21, CurrentId, 0) == 0 )
     {
-      ++v22->m_nIndexCount;
+      ++v21->m_nIndexCount;
     }
     else
     {
       _mm_pause();
-      CThreadFastMutex::Lock(v22, CurrentId, 0);
+      CThreadFastMutex::Lock(v21, CurrentId, 0);
     }
     if ( VertexColorPos_t::GetLayout(void)::inputLayoutCreator == 0 )
     {
-      dword_4D802A0 = (*(*g_pRenderDevice + 184LL))(g_pRenderDevice, "VertexColorPos_t", 2, v43);
+      dword_4D802A0 = (*(*g_pRenderDevice + 184LL))(g_pRenderDevice, "VertexColorPos_t", 2, v42);
       VertexColorPos_t::GetLayout(void)::inputLayoutCreator = 1;
     }
     v12 = dword_4D802A0;
-    if ( --v22->m_nIndexCount == 0 )
+    if ( --v21->m_nIndexCount == 0 )
     {
-      v21 = v12;
-      ThreadInterlockedExchange64(v22, 0);
-      v12 = v21;
+      v20 = v12;
+      ThreadInterlockedExchange64(v21, 0);
+      v12 = v20;
     }
   }
   v13 = nVertexCount & 0x3FFFFFFF;
-  vb.m_hVertexBuffer = (v25)(v11, 0, v35, v12);
+  vb.m_hVertexBuffer = (v24)(v11, 0, v34, v12);
   vb.m_nMaxVertexCount = 0;
   vb.m_pMemory = 0;
   vb.m_nVertexCount = 0;
   vb.m_nVertexIncrement = 0;
   *(&vb.CVertexDataBase<VertexColorPos_t> + 11) = v13 | *(&vb.CVertexDataBase<VertexColorPos_t> + 11) & 0xC0000000;
   *(&vb.CVertexDataBase<VertexColorPos_t> + 47) = *(&vb.CVertexDataBase<VertexColorPos_t> + 47) & 0x3F | 0x40;
-  if ( (*(vb.m_pRenderContext->_vptr_IRenderContext + 51))(vb.m_pRenderContext, vb.m_hVertexBuffer, (16 * v13), &v30) != 0 )
+  if ( (*(vb.m_pRenderContext->_vptr_IRenderContext + 51))(vb.m_pRenderContext, vb.m_hVertexBuffer, (16 * v13), &v29) != 0 )
   {
     vb.m_nVertexIncrement = 1;
-    vb.m_pMemory = v30;
+    vb.m_pMemory = v29;
   }
   else
   {
@@ -2029,15 +2028,15 @@ CSceneObject *__fastcall CreatePhysicsBodySceneObject(
   ib.m_nIndexCount = 0;
   ib.m_nIndexIncrement = 0;
   *(&ib.CIndexDataBase<unsigned int> + 7) &= 0xC0000000;
-  v39 = "physib";
+  v38 = "physib";
   *(&ib.CIndexDataBase<unsigned int> + 31) = 0;
   ib.m_hIndexBuffer = 0;
   ib.m_pRenderContext = v10;
-  v38[1] = 4;
-  v38[0] = 3 * nTriangleCount;
-  v40 = "ptestbed";
+  v37[1] = 4;
+  v37[0] = 3 * nTriangleCount;
+  v39 = "ptestbed";
   v14 = (*(v10->_vptr_IRenderContext + 78))(v10);
-  ib.m_hIndexBuffer = (*(*v14 + 280LL))(v14, 0, v38);
+  ib.m_hIndexBuffer = (*(*v14 + 280LL))(v14, 0, v37);
   *(&ib.CIndexDataBase<unsigned int> + 7) = nIndexCount & 0x3FFFFFFF
                                           | *(&ib.CIndexDataBase<unsigned int> + 7) & 0xC0000000;
   *(&ib.CIndexDataBase<unsigned int> + 31) = *(&ib.CIndexDataBase<unsigned int> + 31) & 0x3F | 0x40;
@@ -2045,10 +2044,10 @@ CSceneObject *__fastcall CreatePhysicsBodySceneObject(
          ib.m_pRenderContext,
          ib.m_hIndexBuffer,
          (12 * nTriangleCount),
-         &v31) != 0 )
+         &v30) != 0 )
   {
     ib.m_nIndexIncrement = 1;
-    ib.m_pMemory = v31;
+    ib.m_pMemory = v30;
   }
   else
   {
@@ -2072,18 +2071,18 @@ CSceneObject *__fastcall CreatePhysicsBodySceneObject(
   vb.m_nMaxVertexCount = 0;
   if ( *(&ib.CIndexDataBase<unsigned int> + 31) >= 0 && ib.m_pMemory != 0 )
   {
-    v33 = ib.m_pMemory;
+    v32 = ib.m_pMemory;
     (*(ib.m_pRenderContext->_vptr_IRenderContext + 50))(
       ib.m_pRenderContext,
       ib.m_hIndexBuffer,
       (4 * ib.m_nIndexCount),
-      &v33);
+      &v32);
     ib.m_pMemory = 0;
   }
   ib.m_nIndexCount = 0;
   ib.m_nIndexIncrement = 0;
   v15 = *(*g_pSceneSystem + 104LL);
-  v43[0] = hMaterial.m_pBinding->m_pData;
+  v42[0] = hMaterial.m_pBinding->m_pData;
   *(&ib.CIndexDataBase<unsigned int> + 31) &= ~0x40u;
   *(&vb.CVertexDataBase<VertexColorPos_t> + 47) &= ~0x40u;
   v16 = v15(
@@ -2091,7 +2090,7 @@ CSceneObject *__fastcall CreatePhysicsBodySceneObject(
           pSceneWorld,
           vb.m_hVertexBuffer,
           ib.m_hIndexBuffer,
-          v43,
+          v42,
           nIndexCount,
           nIndexCount,
           &bbox,
@@ -2148,40 +2147,39 @@ CSceneObject *__fastcall CreatePhysicsEdgeSceneObject(
   void *m_pData; // rax
   __int64 v27; // r12
   __int64 v29; // r12
-  __int64 v30; // rdi
   signed __int64 CurrentId; // rsi
-  unsigned int v32; // [rsp+3Ch] [rbp-264h]
+  unsigned int v31; // [rsp+3Ch] [rbp-264h]
   IRenderDevice *pRenderContext; // [rsp+58h] [rbp-248h]
-  VertexWireFrame_t *v39; // [rsp+70h] [rbp-230h] BYREF
-  unsigned int *v40; // [rsp+80h] [rbp-220h] BYREF
+  VertexWireFrame_t *v38; // [rsp+70h] [rbp-230h] BYREF
+  unsigned int *v39; // [rsp+80h] [rbp-220h] BYREF
   VertexWireFrame_t *m_pMemory; // [rsp+90h] [rbp-210h] BYREF
-  unsigned int *v42; // [rsp+A0h] [rbp-200h] BYREF
+  unsigned int *v41; // [rsp+A0h] [rbp-200h] BYREF
   AABB_t bbox; // [rsp+B0h] [rbp-1F0h] BYREF
-  _DWORD v44[2]; // [rsp+D0h] [rbp-1D0h] BYREF
-  const char *v45; // [rsp+D8h] [rbp-1C8h]
-  char *v46; // [rsp+E0h] [rbp-1C0h]
-  _DWORD v47[2]; // [rsp+F0h] [rbp-1B0h] BYREF
-  const char *v48; // [rsp+F8h] [rbp-1A8h]
-  const char *v49; // [rsp+100h] [rbp-1A0h]
+  _DWORD v43[2]; // [rsp+D0h] [rbp-1D0h] BYREF
+  const char *v44; // [rsp+D8h] [rbp-1C8h]
+  char *v45; // [rsp+E0h] [rbp-1C0h]
+  _DWORD v46[2]; // [rsp+F0h] [rbp-1B0h] BYREF
+  const char *v47; // [rsp+F8h] [rbp-1A8h]
+  const char *v48; // [rsp+100h] [rbp-1A0h]
   CIndexData<unsigned int> ib; // [rsp+110h] [rbp-190h] BYREF
   CVertexData<VertexWireFrame_t> vb; // [rsp+140h] [rbp-160h] BYREF
-  _QWORD v52[34]; // [rsp+190h] [rbp-110h] BYREF
+  _QWORD v51[34]; // [rsp+190h] [rbp-110h] BYREF
 
   if ( nEdgeCount == 0 )
     return 0;
-  memset(v52, 0, 64);
+  memset(v51, 0, 64);
   pRenderContext = g_pRenderDevice;
   for ( i = 0; i != 8; ++i )
   {
-    v52[i] = 0;
-    *(&v52[9] + i * 4) = 0;
+    v51[i] = 0;
+    *(&v51[9] + i * 4) = 0;
   }
-  v52[13] &= 0xFE00000000000000LL;
-  v52[8] = 0;
+  v51[13] &= 0xFE00000000000000LL;
+  v51[8] = 0;
   v8 = (*(*pRenderContext + 368LL))(pRenderContext, 0, 0, 0);
   v9 = v8;
   if ( v8 != 0 )
-    (*(*v8 + 8LL))(v8, v52);
+    (*(*v8 + 8LL))(v8, v51);
   else
     Warning("WARNING: Trying to create a CRenderContextPtr without a valid context.\n");
   vb.m_pRenderContext = v9;
@@ -2193,14 +2191,14 @@ CSceneObject *__fastcall CreatePhysicsEdgeSceneObject(
   bbox.m_vMaxBounds.y = -3.4028235e38;
   bbox.m_vMaxBounds.z = -3.4028235e38;
   *(&vb.CVertexDataBase<VertexWireFrame_t> + 71) = 0;
-  v44[0] = nVertexCount;
-  v45 = "vb phys";
+  v43[0] = nVertexCount;
+  v44 = "vb phys";
   vb.m_nMaxVertexCount = 0;
   vb.m_pMemory = 0;
   vb.m_nVertexCount = 0;
   vb.m_nVertexIncrement = 0;
-  v44[1] = 40;
-  v46 = "testbed";
+  v43[1] = 40;
+  v45 = "testbed";
   v10 = (*(v9->_vptr_IRenderContext + 78))(v9);
   v11 = *(*v10 + 264LL);
   if ( `guard variable for'VertexWireFrame_t::GetLayout(void)::inputLayoutCreator == 0
@@ -2215,20 +2213,20 @@ CSceneObject *__fastcall CreatePhysicsEdgeSceneObject(
   }
   else
   {
-    memset(v52, 0, 0xE0u);
-    LODWORD(v52[19]) = 28;
-    v52[0] = 0x6E6F697469736F70LL;
-    v52[7] = 0x6C616D726F6ELL;
-    v52[14] = 0x64726F6F63786574LL;
-    v52[21] = 0x726F6C6F63LL;
-    LODWORD(v52[12]) = 16;
-    LODWORD(v52[26]) = 12;
-    HIDWORD(v52[4]) = 6;
-    HIDWORD(v52[18]) = 6;
-    HIDWORD(v52[11]) = 6;
-    HIDWORD(v52[25]) = 28;
+    memset(v51, 0, 0xE0u);
+    LODWORD(v51[19]) = 28;
+    v51[0] = 0x6E6F697469736F70LL;
+    v51[7] = 0x6C616D726F6ELL;
+    v51[14] = 0x64726F6F63786574LL;
+    v51[21] = 0x726F6C6F63LL;
+    LODWORD(v51[12]) = 16;
+    LODWORD(v51[26]) = 12;
+    HIDWORD(v51[4]) = 6;
+    HIDWORD(v51[18]) = 6;
+    HIDWORD(v51[11]) = 6;
+    HIDWORD(v51[25]) = 28;
     v29 = (*(*g_pRenderDevice + 216LL))(g_pRenderDevice);
-    CurrentId = ThreadGetCurrentId(v30);
+    CurrentId = ThreadGetCurrentId();
     if ( CurrentId == *v29 || _InterlockedCompareExchange64(v29, CurrentId, 0) == 0 )
     {
       ++*(v29 + 8);
@@ -2240,18 +2238,18 @@ CSceneObject *__fastcall CreatePhysicsEdgeSceneObject(
     }
     if ( VertexWireFrame_t::GetLayout(void)::inputLayoutCreator == 0 )
     {
-      dword_4D80298 = (*(*g_pRenderDevice + 184LL))(g_pRenderDevice, "VertexWireFrame_t", 4, v52);
+      dword_4D80298 = (*(*g_pRenderDevice + 184LL))(g_pRenderDevice, "VertexWireFrame_t", 4, v51);
       VertexWireFrame_t::GetLayout(void)::inputLayoutCreator = 1;
     }
     v12 = dword_4D80298;
     if ( --*(v29 + 8) == 0 )
     {
-      v32 = v12;
+      v31 = v12;
       ThreadInterlockedExchange64(v29, 0);
-      v12 = v32;
+      v12 = v31;
     }
   }
-  vb.m_hVertexBuffer = v11(v10, 0, v44, v12);
+  vb.m_hVertexBuffer = v11(v10, 0, v43, v12);
   vb.m_nMaxVertexCount = 0;
   vb.m_pMemory = 0;
   vb.m_nVertexCount = 0;
@@ -2264,10 +2262,10 @@ CSceneObject *__fastcall CreatePhysicsEdgeSceneObject(
          vb.m_pRenderContext,
          vb.m_hVertexBuffer,
          40 * (nVertexCount & 0x3FFFFFFF),
-         &v39) != 0 )
+         &v38) != 0 )
   {
     vb.m_nVertexIncrement = 1;
-    vb.m_pMemory = v39;
+    vb.m_pMemory = v38;
   }
   else
   {
@@ -2282,14 +2280,14 @@ CSceneObject *__fastcall CreatePhysicsEdgeSceneObject(
   ib.m_nIndexIncrement = 0;
   HIDWORD(ib.m_hIndexBuffer) = 0;
   ib.m_pRenderContext = v9;
-  v47[1] = 4;
-  v47[0] = 3 * nEdgeCount;
+  v46[1] = 4;
+  v46[0] = 3 * nEdgeCount;
   *(&ib.CIndexDataBase<unsigned int> + 28) = *(&ib.CIndexDataBase<unsigned int> + 7) & 0xC0000000;
-  v48 = "physib";
+  v47 = "physib";
   *(&ib.CIndexDataBase<unsigned int> + 31) = 0;
-  v49 = "ptestbed";
+  v48 = "ptestbed";
   v14 = (*(v9->_vptr_IRenderContext + 78))(v9);
-  ib.m_hIndexBuffer = (*(*v14 + 280LL))(v14, 0, v47);
+  ib.m_hIndexBuffer = (*(*v14 + 280LL))(v14, 0, v46);
   *(&ib.CIndexDataBase<unsigned int> + 7) = (3 * nEdgeCount) & 0x3FFFFFFF
                                           | *(&ib.CIndexDataBase<unsigned int> + 7) & 0xC0000000;
   *(&ib.CIndexDataBase<unsigned int> + 31) = *(&ib.CIndexDataBase<unsigned int> + 31) & 0x3F | 0x40;
@@ -2297,10 +2295,10 @@ CSceneObject *__fastcall CreatePhysicsEdgeSceneObject(
          ib.m_pRenderContext,
          ib.m_hIndexBuffer,
          (12 * nEdgeCount),
-         &v40) != 0 )
+         &v39) != 0 )
   {
     ib.m_nIndexIncrement = 1;
-    ib.m_pMemory = v40;
+    ib.m_pMemory = v39;
   }
   else
   {
@@ -2385,12 +2383,12 @@ CSceneObject *__fastcall CreatePhysicsEdgeSceneObject(
   vb.m_nMaxVertexCount = 0;
   if ( *(&ib.CIndexDataBase<unsigned int> + 31) >= 0 && ib.m_pMemory != 0 )
   {
-    v42 = ib.m_pMemory;
+    v41 = ib.m_pMemory;
     (*(ib.m_pRenderContext->_vptr_IRenderContext + 50))(
       ib.m_pRenderContext,
       ib.m_hIndexBuffer,
       (4 * ib.m_nIndexCount),
-      &v42);
+      &v41);
     ib.m_pMemory = 0;
   }
   ib.m_nIndexCount = 0;
@@ -2399,13 +2397,13 @@ CSceneObject *__fastcall CreatePhysicsEdgeSceneObject(
   m_pData = hMaterial.m_pBinding->m_pData;
   *(&ib.CIndexDataBase<unsigned int> + 31) &= ~0x40u;
   *(&vb.CVertexDataBase<VertexWireFrame_t> + 71) &= ~0x40u;
-  v52[0] = m_pData;
+  v51[0] = m_pData;
   v27 = v25(
           g_pSceneSystem,
           pSceneWorld,
           vb.m_hVertexBuffer,
           ib.m_hIndexBuffer,
-          v52,
+          v51,
           nVertexCount,
           3 * nEdgeCount,
           &bbox,

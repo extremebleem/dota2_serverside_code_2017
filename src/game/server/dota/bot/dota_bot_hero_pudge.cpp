@@ -53,17 +53,17 @@ CDOTA_BotMode *__fastcall CDOTA_Bot_Hero_Pudge::CreateMode(CDOTA_Bot_Hero_Pudge 
   {
     if ( iMode == 2 )
     {
-      v3 = operator new(0xE8u);
+      v3 = operator new(0xE8u);  // new CDOTA_BotMode_Attack_Pudge (size matches)
       CDOTA_BotMode_Attack::CDOTA_BotMode_Attack(v3, this);
-      v3->_vptr_CDOTA_BotMode = off_42CF370;
+      v3->_vptr_CDOTA_BotMode = off_42CF370;  // vptr: CDOTA_BotMode_Attack_Pudge
       return v3;
     }
     return CDOTA_Bot::CreateMode(this, iMode);
   }
-  v5 = operator new(0xF0u);
+  v5 = operator new(0xF0u);  // new CDOTA_BotMode_Laning_Pudge (size matches)
   CDOTA_BotMode_Laning::CDOTA_BotMode_Laning(v5, this);
   *(&v5->m_vForceMove + 3) = -1;
-  v5->_vptr_CDOTA_BotMode = off_42CF410;
+  v5->_vptr_CDOTA_BotMode = off_42CF410;  // vptr: CDOTA_BotMode_Laning_Pudge
   return v5;
 }
 
@@ -356,7 +356,7 @@ void __fastcall CDOTA_BotMode_Laning_Pudge::CDOTA_BotMode_Laning_Pudge(
 {
   CDOTA_BotMode_Laning::CDOTA_BotMode_Laning(this, pBot);
   this->m_hHookTarget.m_Index = -1;
-  this->_vptr_CDOTA_BotMode = off_42CF410;
+  this->_vptr_CDOTA_BotMode = off_42CF410;  // vptr: CDOTA_BotMode_Laning_Pudge
 }
 
 
@@ -616,7 +616,7 @@ void __fastcall CDOTA_Bot_AbilityUsage_Pudge_MeatHook::CDOTA_Bot_AbilityUsage_Pu
   this->m_pAbility = pAbility;
   this->m_bUseOnCreeps = 0;
   this->m_pBot = pBot;
-  this->_vptr_CDOTA_Bot_AbilityUsage = off_42CF4B0;
+  this->_vptr_CDOTA_Bot_AbilityUsage = off_42CF4B0;  // vptr: CDOTA_Bot_AbilityUsage_Pudge_MeatHook
 }
 
 
@@ -993,7 +993,7 @@ void __fastcall CDOTA_Bot_AbilityUsage_Pudge_Rot::CDOTA_Bot_AbilityUsage_Pudge_R
 {
   this->m_pAbility = pAbility;
   this->m_pBot = pBot;
-  this->_vptr_CDOTA_Bot_AbilityUsage = off_42CF510;
+  this->_vptr_CDOTA_Bot_AbilityUsage = off_42CF510;  // vptr: CDOTA_Bot_AbilityUsage_Pudge_Rot
   this->m_bUseOnCreeps = 1;
 }
 
@@ -1230,7 +1230,7 @@ void __fastcall CDOTA_Bot_AbilityUsage_Pudge_Dismember::CDOTA_Bot_AbilityUsage_P
   this->m_pAbility = pAbility;
   this->m_bUseOnCreeps = 0;
   this->m_pBot = pBot;
-  this->_vptr_CDOTA_Bot_AbilityUsage = off_42CF570;
+  this->_vptr_CDOTA_Bot_AbilityUsage = off_42CF570;  // vptr: CDOTA_Bot_AbilityUsage_Pudge_Dismember
   this->m_hDesiredTarget.m_Index = -1;
 }
 

@@ -79,7 +79,7 @@ void *__fastcall CEnvInstructorHint::CEntityInstanceEntityClass::AllocateInstanc
 void __fastcall CEnvInstructorHint::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CEnvInstructorHint::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -89,7 +89,7 @@ void __fastcall CEnvInstructorHint::CEntityInstanceEntityClass::~CEntityInstance
 void __fastcall CEnvInstructorHint::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CEnvInstructorHint::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }

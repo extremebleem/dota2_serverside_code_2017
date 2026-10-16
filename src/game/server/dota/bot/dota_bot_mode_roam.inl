@@ -4,7 +4,7 @@
 // CDOTA_BotMode_Roam::~CDOTA_BotMode_Roam  (line 14, @0x0000000002826eb0, libserver.so)  // inlines: ~CDOTA_BotMode
 void __fastcall CDOTA_BotMode_Roam::~CDOTA_BotMode_Roam(CDOTA_BotMode_Roam *const this)
 {
-  this->_vptr_CDOTA_BotMode = off_42B75F0;
+  this->_vptr_CDOTA_BotMode = off_42B75F0;  // vptr: CDOTA_BotMode
 }
 
 
@@ -12,7 +12,7 @@ void __fastcall CDOTA_BotMode_Roam::~CDOTA_BotMode_Roam(CDOTA_BotMode_Roam *cons
 // calls: operator delete
 void __fastcall CDOTA_BotMode_Roam::~CDOTA_BotMode_Roam(CDOTA_BotMode_Roam *const this)
 {
-  this->_vptr_CDOTA_BotMode = off_42B75F0;
+  this->_vptr_CDOTA_BotMode = off_42B75F0;  // vptr: CDOTA_BotMode
   operator delete(this);
 }
 
@@ -27,7 +27,7 @@ DOTA_BOT_MODE __fastcall CDOTA_BotMode_Roam::GetModeType(CDOTA_BotMode_Roam *con
 // CDOTA_BotMode_Roam_Human::~CDOTA_BotMode_Roam_Human  (line 55, @0x0000000002827010, libserver.so)  // inlines: ~CDOTA_BotMode, ~CDOTA_BotMode_Roam
 void __fastcall CDOTA_BotMode_Roam_Human::~CDOTA_BotMode_Roam_Human(CDOTA_BotMode_Roam_Human *const this)
 {
-  this->_vptr_CDOTA_BotMode = off_42B75F0;
+  this->_vptr_CDOTA_BotMode = off_42B75F0;  // vptr: CDOTA_BotMode
 }
 
 
@@ -35,7 +35,7 @@ void __fastcall CDOTA_BotMode_Roam_Human::~CDOTA_BotMode_Roam_Human(CDOTA_BotMod
 // calls: operator delete
 void __fastcall CDOTA_BotMode_Roam_Human::~CDOTA_BotMode_Roam_Human(CDOTA_BotMode_Roam_Human *const this)
 {
-  this->_vptr_CDOTA_BotMode = off_42B75F0;
+  this->_vptr_CDOTA_BotMode = off_42B75F0;  // vptr: CDOTA_BotMode
   operator delete(this);
 }
 

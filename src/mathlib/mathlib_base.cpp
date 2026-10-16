@@ -200,14 +200,11 @@ float __fastcall _InvRSquared(const float *v)
 // Vector::Random  (line 183, @0x00000000030df050, libserver.so)
 // calls: RandomFloat
 // callers: CDefaultPlayerPickupVPhysics::PhysGunLaunchAngularImpulse, CBreakableProp::PhysGunLaunchAngularImpulse, CEntityDissolve::ElectrocuteThink, CFourWheelVehiclePhysics::PlaceWheelDust, CGib::InitGib, CRagdollProp::PhysGunLaunchAngularImpulse, CBasePlayer::PostThink, Pickup_PhysGunLaunchAngularImpulse, CTriggerImpact::StartTouch, CDOTA_Ability_Greevil_Miniboss_Purple_PlagueWard::OnSpellStart, CDOTA_Modifier_Leshrac_Diabolic_Edict::OnIntervalThink, CDOTA_Modifier_Rattletrap_BatteryAssault::OnIntervalThink (14 total)
-void __fastcall Vector::Random(Vector *const this, double a2, vec_t minVal, vec_t maxVal)
+void __fastcall Vector::Random(Vector *const this, float a2, vec_t minVal, vec_t maxVal)
 {
-  int minVala; // [rsp+Ch] [rbp-14h]
-
-  minVala = LODWORD(a2);
   this->x = RandomFloat(a2, minVal);
-  this->y = RandomFloat(COERCE_DOUBLE(minVala), minVal);
-  this->z = RandomFloat(COERCE_DOUBLE(minVala), minVal);
+  this->y = RandomFloat(a2, minVal);
+  this->z = RandomFloat(a2, minVal);
 }
 
 
@@ -2430,14 +2427,14 @@ void __fastcall VectorYawRotate(Vector *vIn, float a2, float flYaw, Vector *cons
 // calls: V_powf, V_logf
 // callers: CEnvWindShared::UpdateWindSound, CShatterGlassShard::ResetRestoreMove, CDOTABehaviorCreatureInvade::UpdateMoveRate, Gain
 // globals: Bias(float,float)::lastExponent
-float __fastcall Bias(double a1, float x, float biasAmt, __int64 a4, __int64 a5, __int64 a6, __int64 a7)
+float __fastcall Bias(double a1, double x, float biasAmt, float a4)
 {
   int xa; // [rsp+Ch] [rbp-4h]
 
-  if ( x == -1.0 )
+  if ( *&x == -1.0 )
     return V_powf(a1, Bias(float,float)::lastExponent);
   xa = LODWORD(a1);
-  Bias(float,float)::lastExponent = V_logf(a4, a5, a6, a7, x) * -1.4427;
+  Bias(float,float)::lastExponent = V_logf(x, *&x, *&a1, a4) * -1.4427;
   return V_powf(COERCE_DOUBLE(xa), Bias(float,float)::lastExponent);
 }
 
@@ -2445,13 +2442,18 @@ float __fastcall Bias(double a1, float x, float biasAmt, __int64 a4, __int64 a5,
 // Gain  (line 1817, @0x00000000030e2710, libserver.so)
 // calls: Bias
 // callers: SmoothCurve_Tweak
-float __fastcall Gain(double a1, float x, float biasAmt, __int64 a4, __int64 a5, __int64 a6, __int64 a7)
+float __fastcall Gain(double a1, float x, float biasAmt)
 {
   if ( *&a1 >= 0.5 )
     return 1.0
-         - (Bias(COERCE_DOUBLE(COERCE_UNSIGNED_INT(2.0 - (*&a1 + *&a1))), 1.0 - x, *&a1 + *&a1, a4, a5, a6, a7) * 0.5);
+         - (Bias(
+              COERCE_DOUBLE(COERCE_UNSIGNED_INT(2.0 - (*&a1 + *&a1))),
+              COERCE_DOUBLE(COERCE_UNSIGNED_INT(1.0 - x)),
+              *&a1 + *&a1,
+              0.5)
+          * 0.5);
   *&a1 = *&a1 + *&a1;
-  return Bias(a1, 1.0 - x, 1.0 - x, a4, a5, a6, a7) * 0.5;
+  return Bias(a1, COERCE_DOUBLE(COERCE_UNSIGNED_INT(1.0 - x)), 1.0 - x, 0.5) * 0.5;
 }
 
 
@@ -2468,21 +2470,13 @@ float __fastcall SmoothCurve(float a1, float x)
 
 // SmoothCurve_Tweak  (line 1843, @0x00000000030e27d0, libserver.so)  // inlines: MovePeak, SmoothCurve
 // calls: Gain, V_cosf
-float __fastcall SmoothCurve_Tweak(
-        double a1,
-        float x,
-        float flPeakPos,
-        float flPeakSharpness,
-        __int64 a5,
-        __int64 a6,
-        __int64 a7,
-        __int64 a8)
+float __fastcall SmoothCurve_Tweak(double a1, float x, float flPeakPos, float flPeakSharpness)
 {
-  float v9; // xmm1_4
-  __m128d v10; // xmm1
-  float v11; // xmm0_4
+  float v5; // xmm1_4
+  __m128d v6; // xmm1
+  float v7; // xmm0_4
 
-  v9 = flPeakPos;
+  v5 = flPeakPos;
   if ( x > *&a1 )
   {
     *&a1 = (*&a1 * 0.5) / x;
@@ -2492,10 +2486,10 @@ float __fastcall SmoothCurve_Tweak(
     flPeakPos = 0.0;
     a1 = (*&a1 - x) * 0.5 / (1.0 - x) + 0.5;
   }
-  v10.m128d_f64[1] = Gain(a1, v9, flPeakPos, a5, a6, a7, a8);
-  v10.m128d_f64[0] = v10.m128d_f64[1] * 3.141592653589793;
-  v11 = _mm_movedup_pd(v10).m128d_f64[0];
-  return (1.0 - V_cosf(v11)) * 0.5;
+  v6.m128d_f64[1] = Gain(a1, v5, flPeakPos);
+  v6.m128d_f64[0] = v6.m128d_f64[1] * 3.141592653589793;
+  v7 = _mm_movedup_pd(v6).m128d_f64[0];
+  return (1.0 - V_cosf(v7)) * 0.5;
 }
 
 
@@ -3015,30 +3009,37 @@ Vector __fastcall QuaternionLnIm(const Quaternion *const p)
 // callers: QuaternionAverageExponential
 void __fastcall QuaternionLn(const Quaternion *const p, Quaternion *const q)
 {
-  __int64 v2; // rdx
-  __int64 v3; // rcx
-  double v6; // xmm2_8
-  float v7; // xmm5_4
-  float v8; // xmm0_4
-  vec_t v9; // xmm1_4
-  vec_t v10; // xmm2_4
-  vec_t v11; // xmm5_4
+  float v4; // xmm1_4
+  double v5; // xmm2_8
+  float v6; // xmm5_4
+  double v7; // xmm0_8
+  float v8; // xmm3_4
+  float v9; // xmm2_4
+  float v10; // xmm0_4
+  vec_t v11; // xmm1_4
+  vec_t v12; // xmm2_4
+  vec_t v13; // xmm5_4
   float t; // [rsp+Ch] [rbp-14h]
 
-  *&v6 = LODWORD(p->y);
-  *&v6 = fsqrt(((p->x * p->x) + (*&v6 * *&v6)) + (p->z * p->z));
-  v7 = 0.0;
-  if ( *&v6 > 0.0000099999997 )
-    v7 = V_atan2f(v6, COERCE_DOUBLE(LODWORD(p->w))) / *&v6;
-  t = v7;
-  v8 = V_logf(p, q, v2, v3, (((p->x * p->x) + (p->y * p->y)) + (p->z * p->z)) + (p->w * p->w));
-  v9 = p->z * t;
-  v10 = p->y * t;
-  v11 = t * p->x;
-  q->w = v8 * 0.5;
-  q->z = v9;
-  q->y = v10;
-  q->x = v11;
+  *&v5 = LODWORD(p->y);
+  v4 = ((p->x * p->x) + (*&v5 * *&v5)) + (p->z * p->z);
+  *&v5 = fsqrt(v4);
+  v6 = 0.0;
+  if ( *&v5 > 0.0000099999997 )
+    v6 = V_atan2f(v5, COERCE_DOUBLE(LODWORD(p->w))) / *&v5;
+  *&v7 = LODWORD(p->x);
+  t = v6;
+  v8 = p->z * p->z;
+  v9 = p->w * p->w;
+  *&v7 = (((*&v7 * *&v7) + (p->y * p->y)) + v8) + v9;
+  v10 = V_logf(v7, v4, v9, v8);
+  v11 = p->z * t;
+  v12 = p->y * t;
+  v13 = t * p->x;
+  q->w = v10 * 0.5;
+  q->z = v11;
+  q->y = v12;
+  q->x = v13;
 }
 
 
@@ -6062,17 +6063,18 @@ void __fastcall SetSIMDLEVEL(ESIMDLevel n)
 void __cdecl MathLib_Init()
 {
   __int64 CPUInformation; // rax
-  char v1; // al
-  __int64 v2; // rax
+  __int64 v1; // rdi
+  char v2; // al
   __int64 v3; // rax
-  __int64 v4; // rax
-  __int64 v5; // rdx
-  __int64 v6; // rcx
-  __int64 v7; // rdi
-  __int64 v8; // rsi
-  __int64 v9; // r8
-  __int64 v10; // r9
-  LeafCodeInfo_t v11; // [rsp+10h] [rbp-30h] BYREF
+  __int64 v4; // rdi
+  __int64 v5; // rax
+  __int64 v6; // rdi
+  __int64 v7; // rax
+  __int64 v8; // rdx
+  __int64 v9; // rcx
+  __int64 v10; // rdi
+  __int64 v11; // rsi
+  LeafCodeInfo_t v12; // [rsp+10h] [rbp-30h] BYREF
 
   if ( !s_bMathlibInitialized || s_bMathlibInitializedGlobalConstructorOnly )
   {
@@ -6081,31 +6083,31 @@ void __cdecl MathLib_Init()
     {
       if ( LoggingSystem_IsChannelEnabled(LOG_GENERAL, 4) != 0 )
       {
-        v11.m_szFile = "mathlib_base.cpp";
-        v11.m_szFunction = "MathLib_Init";
-        v11.m_nLine = 4471;
-        LoggingSystem_Log(LOG_GENERAL, LoggingSeverity_t::LS_ERROR, &v11, "SSE and SSE2 are required.");
+        v12.m_szFile = "mathlib_base.cpp";
+        v12.m_szFunction = "MathLib_Init";
+        v12.m_nLine = 4471;
+        LoggingSystem_Log(LOG_GENERAL, LoggingSeverity_t::LS_ERROR, &v12, "SSE and SSE2 are required.");
       }
-      if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v7, v8, v5, v6, v9, v10) != 0 )
+      if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v10, v11, v8, v9) != 0 )
         loc_0 = -559038737;
       Plat_ExitProcess(1);
       JUMPOUT(0x30E81D2);
     }
-    v1 = *(CPUInformation + 7);
-    if ( (v1 & 2) != 0 )
+    v2 = *(CPUInformation + 7);
+    if ( (v2 & 2) != 0 )
       g_nCPUSIMDLevel = ESIMDLevel::SIMDLEVEL_SSE3;
-    if ( (v1 & 0x10) != 0 )
+    if ( (v2 & 0x10) != 0 )
       g_nCPUSIMDLevel = ESIMDLevel::SIMDLEVEL_SSE4;
-    if ( (v1 & 0x20) != 0 )
+    if ( (v2 & 0x20) != 0 )
       g_nCPUSIMDLevel = ESIMDLevel::SIMDLEVEL_SSE42;
-    v2 = CommandLine();
-    if ( (*(*v2 + 24LL))(v2, "-sse2", 0) != 0 )
+    v3 = CommandLine(v1);
+    if ( (*(*v3 + 24LL))(v3, "-sse2", 0) != 0 )
       g_nCPUSIMDLevel = ESIMDLevel::SIMDLEVEL_SSE2;
-    v3 = CommandLine();
-    if ( (*(*v3 + 24LL))(v3, "-sse3", 0) != 0 )
+    v5 = CommandLine(v4);
+    if ( (*(*v5 + 24LL))(v5, "-sse3", 0) != 0 )
       g_nCPUSIMDLevel = ESIMDLevel::SIMDLEVEL_SSE3;
-    v4 = CommandLine();
-    if ( (*(*v4 + 24LL))(v4, "-sse4", 0) != 0 )
+    v7 = CommandLine(v6);
+    if ( (*(*v7 + 24LL))(v7, "-sse4", 0) != 0 )
       g_nCPUSIMDLevel = ESIMDLevel::SIMDLEVEL_SSE4;
     _mm_setcsr(_mm_getcsr() | 0x8040);
     s_bMathlibInitialized = 1;
@@ -8660,7 +8662,7 @@ Quaternion __cdecl RandomQuaternion()
   *&v0 = RandomFloat(0.0, 6.2831855);
   u = *&v0;
   v16 = V_sinf(v0);
-  v1 = RandomFloat(COERCE_DOUBLE(3212836864LL), 1.0);
+  v1 = RandomFloat(-1.0, 1.0);
   *&v2 = V_acosf(v1);
   v = *&v2;
   v11 = V_sinf(v2);

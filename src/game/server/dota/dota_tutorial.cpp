@@ -270,7 +270,7 @@ void __fastcall CInfoRoquelairePerch::~CInfoRoquelairePerch(CInfoRoquelairePerch
 void __fastcall CInfoRoquelairePerch::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CInfoRoquelairePerch::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -280,7 +280,7 @@ void __fastcall CInfoRoquelairePerch::CEntityInstanceEntityClass::~CEntityInstan
 void __fastcall CInfoRoquelairePerch::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CInfoRoquelairePerch::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -11274,7 +11274,7 @@ CEntityInstance *__fastcall CDOTA_HeroTrigger::CEntityInstanceEntityClass::Const
 void __fastcall CDOTA_HeroTrigger::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_HeroTrigger::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -11284,7 +11284,7 @@ void __fastcall CDOTA_HeroTrigger::CEntityInstanceEntityClass::~CEntityInstanceE
 void __fastcall CDOTA_HeroTrigger::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_HeroTrigger::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }

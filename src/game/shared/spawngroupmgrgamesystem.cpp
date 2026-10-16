@@ -62,7 +62,7 @@ void __fastcall CMapSpawnGroup::Init(CMapSpawnGroup *const this, ISpawnGroup *pS
 // CMapSpawnGroup::GetName  (line 166, @0x0000000001f38310, libserver.so)
 const char *__fastcall CMapSpawnGroup::GetName(const CMapSpawnGroup *const this)
 {
-  return (*this->m_pSpawnGroup->_vptr_ISpawnGroup)(this->m_pSpawnGroup);
+  return this->m_pSpawnGroup->GetWorldName();
 }
 
 
@@ -90,7 +90,7 @@ const char *__fastcall CMapSpawnGroup::GetEntityLumpName(const CMapSpawnGroup *c
 // CMapSpawnGroup::GetWorldName  (line 186, @0x0000000001f38380, libserver.so)
 const char *__fastcall CMapSpawnGroup::GetWorldName(const CMapSpawnGroup *const this)
 {
-  return (*this->m_pSpawnGroup->_vptr_ISpawnGroup)(this->m_pSpawnGroup);
+  return this->m_pSpawnGroup->GetWorldName();
 }
 
 
@@ -600,7 +600,7 @@ LABEL_34:
             if ( !entry.m_bForwardLink )
             {
               if ( v37 != 0 )
-                v38 = (*v37->m_pSpawnGroup->_vptr_ISpawnGroup)(v37->m_pSpawnGroup);
+                v38 = v37->m_pSpawnGroup->GetWorldName();
               else
                 v38 = "???";
               pLink = v38;
@@ -621,7 +621,7 @@ LABEL_34:
               else
                 CUtlString::Format(v85, &stru_32D9EEC.m_mapLevelWorlds.m_Tree.m_Elements.m_nGrowSize + 3);
               v43 = CUtlString::Get(v85);
-              v44 = (*this->m_pSpawnGroup->_vptr_ISpawnGroup)(this->m_pSpawnGroup);
+              v44 = this->m_pSpawnGroup->GetWorldName();
               v78 = pLink;
               LoggingSystem_Log(
                 LOG_SPAWN_GROUP,
@@ -1251,7 +1251,7 @@ void __fastcall CSpawnGroupMgrGameSystem::SpawnGroupInit(
     msg.m_SpawnGroupName.m_pString = 0;
     msg.m_EntityLumpName.m_pString = 0;
     v9 = v8;
-    v10 = (*v7->m_pSpawnGroup->_vptr_ISpawnGroup)(v7->m_pSpawnGroup);
+    v10 = v7->m_pSpawnGroup->GetWorldName();
     CUtlString::operator=(&msg.m_SpawnGroupName, v10);
     v11 = (*(v7->m_pSpawnGroup->_vptr_ISpawnGroup + 1))(v7->m_pSpawnGroup);
     CUtlString::operator=(&msg.m_EntityLumpName, v11);
@@ -1528,7 +1528,7 @@ void __fastcall CSpawnGroupMgrGameSystem::SpawnGroupActuallySpawnEntities(
   }
   preMsg.m_SpawnGroupName.m_pString = 0;
   preMsg.m_EntityLumpName.m_pString = 0;
-  v5 = (*v3->m_pSpawnGroup->_vptr_ISpawnGroup)(v3->m_pSpawnGroup);
+  v5 = v3->m_pSpawnGroup->GetWorldName();
   CUtlString::operator=(&preMsg.m_SpawnGroupName, v5);
   v6 = (*(v3->m_pSpawnGroup->_vptr_ISpawnGroup + 1))(v3->m_pSpawnGroup);
   CUtlString::operator=(&preMsg.m_EntityLumpName, v6);
@@ -1587,7 +1587,7 @@ LABEL_23:
   {
     if ( (*(*v9 + 40LL))(v9) != 0 && LoggingSystem_IsChannelEnabled(LOG_SAVERESTORE, 0) != 0 )
     {
-      v17 = (*v3->m_pSpawnGroup->_vptr_ISpawnGroup)(v3->m_pSpawnGroup);
+      v17 = v3->m_pSpawnGroup->GetWorldName();
       LoggingSystem_Log(LOG_SAVERESTORE, 0, "%s:  loading '%s' entities from map file\n", "SV", v17);
     }
     goto LABEL_23;
@@ -1597,7 +1597,7 @@ LABEL_23:
   if ( (*(*v9 + 40LL))(v9) != 0 && LoggingSystem_IsChannelEnabled(LOG_SAVERESTORE, 0) != 0 )
   {
     m_Put = saveData->m_Put;
-    v29 = (*v3->m_pSpawnGroup->_vptr_ISpawnGroup)(v3->m_pSpawnGroup);
+    v29 = v3->m_pSpawnGroup->GetWorldName();
     LoggingSystem_Log(LOG_SAVERESTORE, 0, "%s:  loading '%s' entities from savedata (%d bytes)\n", "SV", v29, m_Put);
   }
   v31 = *(&stru_1A0B8.r_offset + g_pGameEntitySystem);
@@ -1611,7 +1611,7 @@ LABEL_23:
   m_pMemory = saveData->m_Memory.m_pMemory;
   saveDataa = saveData->m_Put;
   v30 = m_pMemory;
-  v16 = (*v3->m_pSpawnGroup->_vptr_ISpawnGroup)(v3->m_pSpawnGroup);
+  v16 = v3->m_pSpawnGroup->GetWorldName();
   v39(v31, g_pGameSaveRestoreBlockSet, v16, v30, saveDataa, handle, &v45, v10, v47);
 LABEL_25:
   if ( (*(*v9 + 40LL))(v9) != 0 )
@@ -1620,7 +1620,7 @@ LABEL_25:
     {
       saveDatab = (*(*v9 + 56LL))(v9);
       v33 = (*(*v9 + 48LL))(v9);
-      v26 = (*v3->m_pSpawnGroup->_vptr_ISpawnGroup)(v3->m_pSpawnGroup);
+      v26 = v3->m_pSpawnGroup->GetWorldName();
       LoggingSystem_Log(
         LOG_SAVERESTORE,
         0,
@@ -1635,7 +1635,7 @@ LABEL_25:
     v40 = *(*v32 + 40LL);
     saveDatac = (*(*v9 + 56LL))(v9);
     v23 = (*(*v9 + 48LL))(v9);
-    v24 = (*v3->m_pSpawnGroup->_vptr_ISpawnGroup)(v3->m_pSpawnGroup);
+    v24 = v3->m_pSpawnGroup->GetWorldName();
     v40(v32, g_pGameSaveRestoreBlockSet, v24, v23, saveDatac, handle, v10, v47);
     g_pEntitySystem->m_bInRestoreActivation = 0;
   }
@@ -1654,7 +1654,7 @@ LABEL_26:
     v18 = (*(*g_pResourceSystem + 528LL))(g_pResourceSystem);
     (*(*v18 + 32LL))(v18, 0, 24, 1);
   }
-  v19 = (*v3->m_pSpawnGroup->_vptr_ISpawnGroup)(v3->m_pSpawnGroup);
+  v19 = v3->m_pSpawnGroup->GetWorldName();
   CUtlString::operator=(&preMsg.m_SpawnGroupName, v19);
   v20 = (*(v3->m_pSpawnGroup->_vptr_ISpawnGroup + 1))(v3->m_pSpawnGroup);
   CUtlString::operator=(&preMsg.m_EntityLumpName, v20);
@@ -1770,7 +1770,7 @@ void __fastcall CSpawnGroupMgrGameSystem::SpawnGroupShutdown(
       msg.m_EntityList.m_Memory.m_pMemory = 0;
       msg.m_EntityList.m_Memory.m_nAllocationCount = 0;
       msg.m_EntityList.m_Memory.m_nGrowSize = 0;
-      v6 = (*v4->m_pSpawnGroup->_vptr_ISpawnGroup)(v4->m_pSpawnGroup);
+      v6 = v4->m_pSpawnGroup->GetWorldName();
       CUtlString::operator=(&msg.m_SpawnGroupName, v6);
       v7 = (*(v5->m_pSpawnGroup->_vptr_ISpawnGroup + 1))(v5->m_pSpawnGroup);
       CUtlString::operator=(&msg.m_EntityLumpName, v7);
@@ -1977,7 +1977,7 @@ LABEL_27:
     {
       v42.m_pString = 0;
       postMsg.m_SpawnGroupName.m_pString = 0;
-      v29 = (*v10->m_pSpawnGroup->_vptr_ISpawnGroup)(v10->m_pSpawnGroup);
+      v29 = v10->m_pSpawnGroup->GetWorldName();
       CUtlString::operator=(&v42, v29);
       v30 = (*(v10->m_pSpawnGroup->_vptr_ISpawnGroup + 1))(v10->m_pSpawnGroup);
       CUtlString::operator=(&postMsg.m_SpawnGroupName, v30);
@@ -2007,7 +2007,7 @@ LABEL_27:
     }
     v42.m_pString = 0;
     postMsg.m_SpawnGroupName.m_pString = 0;
-    v32 = (*v10->m_pSpawnGroup->_vptr_ISpawnGroup)(v10->m_pSpawnGroup);
+    v32 = v10->m_pSpawnGroup->GetWorldName();
     CUtlString::operator=(&v42, v32);
     v33 = (*(v10->m_pSpawnGroup->_vptr_ISpawnGroup + 1))(v10->m_pSpawnGroup);
     CUtlString::operator=(&postMsg.m_SpawnGroupName, v33);
@@ -2256,7 +2256,7 @@ CMapSpawnGroup *__fastcall CSpawnGroupMgrGameSystem::FindByName(
     elem = m_pMemory[v5].m_Data.elem;
     if ( elem->m_bSpawnGroupLoadDispatched )
     {
-      v10 = (*elem->m_pSpawnGroup->_vptr_ISpawnGroup)(elem->m_pSpawnGroup);
+      v10 = elem->m_pSpawnGroup->GetWorldName();
       if ( V_AreFileNamesEqual(v10, pGroupName, 0) != 0 )
         break;
     }
@@ -2310,7 +2310,7 @@ SpawnGroupHandle_t __fastcall CSpawnGroupMgrGameSystem::FindSpawnGroupByName(
     elem = m_pMemory[v5].m_Data.elem;
     if ( elem->m_bSpawnGroupLoadDispatched )
     {
-      v10 = (*elem->m_pSpawnGroup->_vptr_ISpawnGroup)(elem->m_pSpawnGroup);
+      v10 = elem->m_pSpawnGroup->GetWorldName();
       if ( V_AreFileNamesEqual(v10, pGroupName, 0) != 0 )
         break;
     }
@@ -2337,7 +2337,7 @@ const char *__fastcall CSpawnGroupMgrGameSystem::GetSpawnGroupName(
 
   v2 = CSpawnGroupMgrGameSystem::Get(this, hSpawnGroup);
   if ( v2 != 0 )
-    return (*v2->m_pSpawnGroup->_vptr_ISpawnGroup)(v2->m_pSpawnGroup);
+    return v2->m_pSpawnGroup->GetWorldName();
   else
     return "";
 }
@@ -2460,7 +2460,7 @@ const char *__fastcall CSpawnGroupMgrGameSystem::GetSpawnGroupWorldName(
 
   v2 = CSpawnGroupMgrGameSystem::Get(this, hSpawnGroup);
   if ( v2 != 0 )
-    return (*v2->m_pSpawnGroup->_vptr_ISpawnGroup)(v2->m_pSpawnGroup);
+    return v2->m_pSpawnGroup->GetWorldName();
   else
     return "";
 }
@@ -2644,7 +2644,7 @@ void __fastcall CSpawnGroupMgrGameSystem::SpawnGroupBuildStreamInfo(
   pInfo->m_pSaveRestoreBlockSet = g_pGameSaveRestoreBlockSet;
   if ( v8 != 0 )
   {
-    v10 = (*v8->m_pSpawnGroup->_vptr_ISpawnGroup)(v8->m_pSpawnGroup);
+    v10 = v8->m_pSpawnGroup->GetWorldName();
     CUtlString::operator=(&pInfo->m_SpawnGroup.m_SpawnGroupName, v10);
     v11 = (*(v8->m_pSpawnGroup->_vptr_ISpawnGroup + 4))(v8->m_pSpawnGroup);
   }
@@ -2830,7 +2830,7 @@ LABEL_10:
     v4 = CSpawnGroupMgrGameSystem::Get(this, handles.m_Memory.m_pMemory[v2]);
     if ( v4 != 0 )
     {
-      v5 = (*v4->m_pSpawnGroup->_vptr_ISpawnGroup)(v4->m_pSpawnGroup);
+      v5 = v4->m_pSpawnGroup->GetWorldName();
       v6 = v5;
       if ( v5 != 0 && *v5 != 0 && V_stricmp_fast(v5, &stru_32D9EEC.m_pResourceManifestPrerequisite) != 0 )
         break;
@@ -3018,7 +3018,7 @@ void __fastcall CSpawnGroupMgrGameSystem::SetActiveSpawnGroup(
   v3 = CSpawnGroupMgrGameSystem::Get(this, handle);
   if ( v3 != 0 )
   {
-    v4 = (*v3->m_pSpawnGroup->_vptr_ISpawnGroup)(v3->m_pSpawnGroup);
+    v4 = v3->m_pSpawnGroup->GetWorldName();
     ActiveSpawnGroupHandle = CEntitySystem::GetActiveSpawnGroupHandle(g_pEntitySystem);
     if ( handle != ActiveSpawnGroupHandle )
     {
@@ -3331,7 +3331,7 @@ LABEL_11:
         if ( groups.m_Size <= i )
           goto LABEL_17;
       }
-      v14 = (*v13->m_pSpawnGroup->_vptr_ISpawnGroup)(v13->m_pSpawnGroup);
+      v14 = v13->m_pSpawnGroup->GetWorldName();
       v15 = v14;
       if ( v4 == 0 || *v4 == 0 || V_stristr_fast(v14, v4) != 0 )
       {

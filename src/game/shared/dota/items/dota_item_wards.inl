@@ -119,7 +119,7 @@ CEntityInstance *__fastcall CDOTA_NPC_Observer_Ward::CEntityInstanceEntityClass:
 void __fastcall CDOTA_NPC_Observer_Ward::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_NPC_Observer_Ward::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -129,7 +129,7 @@ void __fastcall CDOTA_NPC_Observer_Ward::CEntityInstanceEntityClass::~CEntityIns
 void __fastcall CDOTA_NPC_Observer_Ward::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_NPC_Observer_Ward::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -402,7 +402,7 @@ CEntityInstance *__fastcall CDOTA_NPC_Observer_Ward_TrueSight::CEntityInstanceEn
 void __fastcall CDOTA_NPC_Observer_Ward_TrueSight::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_NPC_Observer_Ward_TrueSight::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -412,7 +412,7 @@ void __fastcall CDOTA_NPC_Observer_Ward_TrueSight::CEntityInstanceEntityClass::~
 void __fastcall CDOTA_NPC_Observer_Ward_TrueSight::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_NPC_Observer_Ward_TrueSight::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -640,7 +640,7 @@ CEntityInstance *__fastcall CDOTA_NoWardTrigger::CEntityInstanceEntityClass::Con
 void __fastcall CDOTA_NoWardTrigger::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_NoWardTrigger::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -650,7 +650,7 @@ void __fastcall CDOTA_NoWardTrigger::CEntityInstanceEntityClass::~CEntityInstanc
 void __fastcall CDOTA_NoWardTrigger::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_NoWardTrigger::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }

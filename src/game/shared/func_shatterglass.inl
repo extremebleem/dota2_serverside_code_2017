@@ -114,7 +114,7 @@ CEntityInstance *__fastcall CShatterGlassShardPhysics::CEntityInstanceEntityClas
 void __fastcall CShatterGlassShardPhysics::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CShatterGlassShardPhysics::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -124,7 +124,7 @@ void __fastcall CShatterGlassShardPhysics::CEntityInstanceEntityClass::~CEntityI
 void __fastcall CShatterGlassShardPhysics::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CShatterGlassShardPhysics::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -305,7 +305,7 @@ CEntityInstance *__fastcall CFuncShatterglass::CEntityInstanceEntityClass::Const
 void __fastcall CFuncShatterglass::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CFuncShatterglass::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -315,7 +315,7 @@ void __fastcall CFuncShatterglass::CEntityInstanceEntityClass::~CEntityInstanceE
 void __fastcall CFuncShatterglass::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CFuncShatterglass::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }

@@ -188,7 +188,7 @@ void __cdecl CallPostConnect()
       do
       {
         v6 = *(v3 + 8 * v5);
-        if ( (*v6->_vptr_CPostConnectCallback)(v6) == 1 )
+        if ( v6->OnConnect() == 1 )
         {
           v7 = CPostConnectCallback::s_pFirstCallback;
           CPostConnectCallback::s_pFirstCallback = v6;
@@ -224,25 +224,23 @@ void __fastcall ConnectInterfaces(CreateInterfaceFn *pFactoryList, int nFactoryC
   __int64 v11; // rcx
   __int64 v12; // rdi
   __int64 v13; // rsi
-  __int64 v14; // r8
-  __int64 v15; // r9
-  LeafCodeInfo_t v16; // [rsp+0h] [rbp-40h] BYREF
+  LeafCodeInfo_t v14; // [rsp+0h] [rbp-40h] BYREF
 
   if ( s_nRegistrationCount < 0 )
   {
     if ( LoggingSystem_IsChannelEnabled(LOG_GENERAL, 4) != 0 )
     {
-      v16.m_nLine = 478;
-      v16.m_szFile = "interfaces.cpp";
-      v16.m_szFunction = "ConnectInterfaces";
+      v14.m_nLine = 478;
+      v14.m_szFile = "interfaces.cpp";
+      v14.m_szFunction = "ConnectInterfaces";
       LoggingSystem_Log(
         LOG_GENERAL,
         LoggingSeverity_t::LS_ERROR,
-        &v16,
+        &v14,
         "APPSYSTEM: In ConnectInterfaces(), s_nRegistrationCount is %d!\n",
         s_nRegistrationCount);
     }
-    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v12, v13, v10, v11, v14, v15) != 0 )
+    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v12, v13, v10, v11) != 0 )
       loc_0 = -559038737;
     Plat_ExitProcess(1);
     JUMPOUT(0x2F90677);

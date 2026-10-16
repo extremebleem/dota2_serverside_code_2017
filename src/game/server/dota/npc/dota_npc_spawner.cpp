@@ -459,7 +459,7 @@ CEntityInstance *__fastcall CDOTA_NPCSpawnerGoodTop::CEntityInstanceEntityClass:
 void __fastcall CDOTA_NPCSpawnerGoodTop::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_NPCSpawnerGoodTop::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -469,7 +469,7 @@ void __fastcall CDOTA_NPCSpawnerGoodTop::CEntityInstanceEntityClass::~CEntityIns
 void __fastcall CDOTA_NPCSpawnerGoodTop::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_NPCSpawnerGoodTop::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -697,7 +697,7 @@ CEntityInstance *__fastcall CDOTA_NPCSpawnerGoodMid::CEntityInstanceEntityClass:
 void __fastcall CDOTA_NPCSpawnerGoodMid::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_NPCSpawnerGoodMid::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -707,7 +707,7 @@ void __fastcall CDOTA_NPCSpawnerGoodMid::CEntityInstanceEntityClass::~CEntityIns
 void __fastcall CDOTA_NPCSpawnerGoodMid::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_NPCSpawnerGoodMid::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -935,7 +935,7 @@ CEntityInstance *__fastcall CDOTA_NPCSpawnerGoodBot::CEntityInstanceEntityClass:
 void __fastcall CDOTA_NPCSpawnerGoodBot::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_NPCSpawnerGoodBot::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -945,7 +945,7 @@ void __fastcall CDOTA_NPCSpawnerGoodBot::CEntityInstanceEntityClass::~CEntityIns
 void __fastcall CDOTA_NPCSpawnerGoodBot::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_NPCSpawnerGoodBot::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -1173,7 +1173,7 @@ CEntityInstance *__fastcall CDOTA_NPCSpawnerBadTop::CEntityInstanceEntityClass::
 void __fastcall CDOTA_NPCSpawnerBadTop::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_NPCSpawnerBadTop::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -1183,7 +1183,7 @@ void __fastcall CDOTA_NPCSpawnerBadTop::CEntityInstanceEntityClass::~CEntityInst
 void __fastcall CDOTA_NPCSpawnerBadTop::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_NPCSpawnerBadTop::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -1411,7 +1411,7 @@ CEntityInstance *__fastcall CDOTA_NPCSpawnerBadMid::CEntityInstanceEntityClass::
 void __fastcall CDOTA_NPCSpawnerBadMid::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_NPCSpawnerBadMid::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -1421,7 +1421,7 @@ void __fastcall CDOTA_NPCSpawnerBadMid::CEntityInstanceEntityClass::~CEntityInst
 void __fastcall CDOTA_NPCSpawnerBadMid::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_NPCSpawnerBadMid::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -1649,7 +1649,7 @@ CEntityInstance *__fastcall CDOTA_NPCSpawnerBadBot::CEntityInstanceEntityClass::
 void __fastcall CDOTA_NPCSpawnerBadBot::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_NPCSpawnerBadBot::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -1659,7 +1659,7 @@ void __fastcall CDOTA_NPCSpawnerBadBot::CEntityInstanceEntityClass::~CEntityInst
 void __fastcall CDOTA_NPCSpawnerBadBot::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_NPCSpawnerBadBot::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }

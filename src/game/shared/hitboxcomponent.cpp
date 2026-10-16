@@ -1146,7 +1146,7 @@ void __fastcall CHitboxComponent::UpdateHitboxes(
 
   if ( this->m_nHitboxHandle != -1 )
     goto LABEL_2;
-  v4 = (*collisionProp->_vptr_ICollideable)(collisionProp);
+  v4 = collisionProp->GetEntity();
   (*(*v4 + 24LL))(&vMaxs, v4);
   m_pInstance = 0;
   if ( (LODWORD(vMaxs.x) + 2) > 1 )

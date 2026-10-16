@@ -421,7 +421,7 @@ CEntityInstance *__fastcall CInfoGameEventProxy::CEntityInstanceEntityClass::Con
 void __fastcall CInfoGameEventProxy::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CInfoGameEventProxy::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -431,7 +431,7 @@ void __fastcall CInfoGameEventProxy::CEntityInstanceEntityClass::~CEntityInstanc
 void __fastcall CInfoGameEventProxy::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CInfoGameEventProxy::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -813,7 +813,7 @@ CEntityInstance *__fastcall CDecal::CEntityInstanceEntityClass::ConstructInstanc
 void __fastcall CDecal::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDecal::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -823,7 +823,7 @@ void __fastcall CDecal::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
 void __fastcall CDecal::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDecal::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -1111,7 +1111,7 @@ void __fastcall CDecal::Activate(CDecal *const this, ActivateType_t activateType
 // CTraceFilterValidForDecal::~CTraceFilterValidForDecal  (line 242, @0x00000000021399a0, libserver.so)  // inlines: ~CTraceFilter, ~CTraceFilterSimple
 void __fastcall CTraceFilterValidForDecal::~CTraceFilterValidForDecal(CTraceFilterValidForDecal *const this)
 {
-  this->_vptr_CTraceFilter = off_3FE6970;
+  this->_vptr_CTraceFilter = off_3FE6970;  // vptr: CTraceFilter
 }
 
 
@@ -1119,7 +1119,7 @@ void __fastcall CTraceFilterValidForDecal::~CTraceFilterValidForDecal(CTraceFilt
 // calls: operator delete
 void __fastcall CTraceFilterValidForDecal::~CTraceFilterValidForDecal(CTraceFilterValidForDecal *const this)
 {
-  this->_vptr_CTraceFilter = off_3FE6970;
+  this->_vptr_CTraceFilter = off_3FE6970;  // vptr: CTraceFilter
   operator delete(this);
 }
 
@@ -1582,7 +1582,7 @@ CEntityInstance *__fastcall CProjectedDecal::CEntityInstanceEntityClass::Constru
 void __fastcall CProjectedDecal::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CProjectedDecal::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -1592,7 +1592,7 @@ void __fastcall CProjectedDecal::CEntityInstanceEntityClass::~CEntityInstanceEnt
 void __fastcall CProjectedDecal::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CProjectedDecal::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -2149,7 +2149,7 @@ CEntityInstance *__fastcall CWorld::CEntityInstanceEntityClass::ConstructInstanc
 void __fastcall CWorld::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CWorld::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -2159,7 +2159,7 @@ void __fastcall CWorld::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
 void __fastcall CWorld::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CWorld::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -2863,7 +2863,7 @@ void __fastcall CWorld::DecalTrace(CWorld *const this, trace_t *pTrace, const ch
   unsigned __int64 v6; // [rsp+138h] [rbp-28h]
 
   v6 = __readfsqword(0x28u);
-  v4 = (*decalsystem->_vptr_IDecalEmitterSystem)(decalsystem, decalName);
+  v4 = decalsystem->GetDecalIndexForName(decalName);
   if ( v4 >= 0 )
   {
     CRecipientFilter::CRecipientFilter(&filter);

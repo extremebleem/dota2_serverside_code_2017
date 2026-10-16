@@ -129,15 +129,13 @@ void __fastcall CKeyValues3Cluster::CKeyValues3Cluster(CKeyValues3Cluster *const
   __int64 v7; // rcx
   __int64 v8; // rdi
   __int64 v9; // rsi
-  __int64 v10; // r8
-  __int64 v11; // r9
-  int v12; // edx
-  int v13; // ecx
-  int v14; // esi
-  int v15; // r8d
-  int v16; // r9d
-  int v17; // r12d
-  LeafCodeInfo_t v18; // [rsp+0h] [rbp-40h] BYREF
+  int v10; // edx
+  int v11; // ecx
+  int v12; // esi
+  int v13; // r8d
+  int v14; // r9d
+  int v15; // r12d
+  LeafCodeInfo_t v16; // [rsp+0h] [rbp-40h] BYREF
 
   m_Values = this->m_Values;
   v2 = this->m_Values;
@@ -154,27 +152,27 @@ void __fastcall CKeyValues3Cluster::CKeyValues3Cluster(CKeyValues3Cluster *const
   {
     if ( LoggingSystem_IsChannelEnabled(LOG_GENERAL, 4) != 0 )
     {
-      v18.m_szFile = "keyvalues3.cpp";
-      v18.m_szFunction = "CKeyValues3Cluster";
-      v18.m_nLine = 196;
+      v16.m_szFile = "keyvalues3.cpp";
+      v16.m_szFunction = "CKeyValues3Cluster";
+      v16.m_nLine = 196;
       LoggingSystem_Log(
         LOG_GENERAL,
         LoggingSeverity_t::LS_ERROR,
-        &v18,
+        &v16,
         "CKeyValues3Cluster allocated with bad alignment! (%p) (If this is inside of a heap allocation, you may need to i"
         "nherit from CAlignedNewDelete< KV3_CLUSTER_SIZEOF >.)\n",
         this);
     }
-    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v8, v9, v6, v7, v10, v11) != 0 )
+    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v8, v9, v6, v7) != 0 )
       loc_0 = -559038737;
-    v17 = Plat_ExitProcess(1);
+    v15 = Plat_ExitProcess(1);
     if ( m_Values != 0 )
     {
       do
         KeyValues3::Internal_FreeAllocation(--v4);
       while ( m_Values != v4 );
     }
-    Unwind_Resume(v17, v14, v12, v13, v15, v16);
+    Unwind_Resume(v15, v12, v10, v11, v13, v14);
   }
 }
 
@@ -4755,7 +4753,7 @@ const char *__fastcall CKeyValues3Context::AllocSharedString(
   char *s1c; // [rsp+18h] [rbp-48h]
   char *s1; // [rsp+18h] [rbp-48h]
   char *s1b; // [rsp+18h] [rbp-48h]
-  const char *v45; // [rsp+20h] [rbp-40h]
+  char *v45; // [rsp+20h] [rbp-40h] BYREF
   CUtlSymbolTableLargeBaseTreeEntry_t *pCopyFrom; // [rsp+28h] [rbp-38h] BYREF
 
   if ( (*pParent & 1) != 0 || (v7 = (pParent & 0xFFFFFFFFFFFFFC00LL)) == 0 || (v8 = *v7, *v7 == 0) )
@@ -4772,7 +4770,7 @@ const char *__fastcall CKeyValues3Context::AllocSharedString(
   if ( v9 <= 0 || *pStr == 0 )
     return "";
   v40 = (v8 + 1120);
-  CUtlSymbolTableLargeBase<CNonThreadsafeTree<false>,false,2048ul>::Find((v8 + 1120), pStr, v9);
+  CUtlSymbolTableLargeBase<CNonThreadsafeTree<false>,false,2048ul>::Find(&v45, (v8 + 1120), pStr, v9);
   v10 = v45;
   if ( v45 == 0 )
   {

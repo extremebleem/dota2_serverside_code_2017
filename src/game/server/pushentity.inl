@@ -26,7 +26,7 @@ void __fastcall CPhysicsPushedEntities::~CPhysicsPushedEntities(CPhysicsPushedEn
 // CTraceFilterPushMove::~CTraceFilterPushMove  (line 127, @0x0000000002304830, libserver.so)  // inlines: ~CTraceFilter, ~CTraceFilterSimple
 void __fastcall CTraceFilterPushMove::~CTraceFilterPushMove(CTraceFilterPushMove *const this)
 {
-  this->_vptr_CTraceFilter = off_3FE6970;
+  this->_vptr_CTraceFilter = off_3FE6970;  // vptr: CTraceFilter
 }
 
 
@@ -34,7 +34,7 @@ void __fastcall CTraceFilterPushMove::~CTraceFilterPushMove(CTraceFilterPushMove
 // calls: operator delete
 void __fastcall CTraceFilterPushMove::~CTraceFilterPushMove(CTraceFilterPushMove *const this)
 {
-  this->_vptr_CTraceFilter = off_3FE6970;
+  this->_vptr_CTraceFilter = off_3FE6970;  // vptr: CTraceFilter
   operator delete(this);
 }
 

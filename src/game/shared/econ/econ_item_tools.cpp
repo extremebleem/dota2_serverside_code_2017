@@ -18,7 +18,7 @@ bool __fastcall BStringsEqual(const char *pszA, const char *pszB)
 // callers: CDOTAItemSchema::CreateEconToolImpl, CEconItemSchema::CreateEconToolImpl
 void __fastcall IEconTool::IEconTool(IEconTool *const this)
 {
-  this->_vptr_IEconTool = off_47A8E30;
+  this->_vptr_IEconTool = off_47A8E30;  // vptr: IEconTool
   this->m_symTypeName.u.m_Id = 0;
   this->m_symUseString.u.m_Id = 0;
   this->m_symUsageRestriction.u.m_Id = 0;
@@ -49,7 +49,7 @@ void __fastcall IEconTool::IEconTool(
   int v13; // r14d
   UtlSymLargeId_t v14; // rax
   int v15; // r13d
-  UtlSymLargeId_t v16; // rax
+  char *v16; // rax
   int v17; // r8d
   signed int v18; // r14d
   CUtlSymbolTableLargeBase<CNonThreadsafeTree<true>,true,2048ul>::StringPool_t **v19; // rcx
@@ -114,9 +114,9 @@ void __fastcall IEconTool::IEconTool(
   int v78; // [rsp+20h] [rbp-A0h]
   signed int v79; // [rsp+20h] [rbp-A0h]
   bool v80; // [rsp+20h] [rbp-A0h]
-  UtlSymLargeId_t v82; // [rsp+30h] [rbp-90h]
-  UtlSymLargeId_t v83; // [rsp+40h] [rbp-80h]
-  UtlSymLargeId_t v84; // [rsp+50h] [rbp-70h]
+  char *v82; // [rsp+30h] [rbp-90h] BYREF
+  char *v83; // [rsp+40h] [rbp-80h] BYREF
+  char *v84; // [rsp+50h] [rbp-70h] BYREF
   CUtlSymbolTableLargeBaseTreeEntry_t *v85; // [rsp+60h] [rbp-60h] BYREF
   CUtlSymbolTableLargeBase<CNonThreadsafeTree<true>,true,2048ul>::StringPool_t *v86; // [rsp+68h] [rbp-58h] BYREF
   CUtlSymbolTableLargeBaseTreeEntry_t *pCopyFrom; // [rsp+70h] [rbp-50h] BYREF
@@ -124,7 +124,7 @@ void __fastcall IEconTool::IEconTool(
   CUtlSymbolTableLargeBaseTreeEntry_t *v89; // [rsp+80h] [rbp-40h] BYREF
   CUtlSymbolTableLargeBase<CNonThreadsafeTree<true>,true,2048ul>::StringPool_t *src; // [rsp+88h] [rbp-38h] BYREF
 
-  this->_vptr_IEconTool = off_47A8E30;
+  this->_vptr_IEconTool = off_47A8E30;  // vptr: IEconTool
   v10 = g_pEconSchemaSymbolTable;
   this->m_symTypeName.u.m_Id = 0;
   this->m_symUseString.u.m_Id = 0;
@@ -146,7 +146,7 @@ void __fastcall IEconTool::IEconTool(
   m_String = 0;
   if ( *pszTypeName == 0 )
     goto LABEL_4;
-  CUtlSymbolTableLargeBase<CNonThreadsafeTree<true>,true,2048ul>::Find(v11, pszTypeName, nStringLen);
+  CUtlSymbolTableLargeBase<CNonThreadsafeTree<true>,true,2048ul>::Find(&v82, v11, pszTypeName, nStringLen);
   if ( v82 != 0 )
   {
     v11 = g_pEconSchemaSymbolTable;
@@ -260,7 +260,7 @@ LABEL_5:
   v14 = 0;
   if ( v13 <= 0 || *pszUseString == 0 )
     goto LABEL_7;
-  CUtlSymbolTableLargeBase<CNonThreadsafeTree<true>,true,2048ul>::Find(v11, pszUseString, v13);
+  CUtlSymbolTableLargeBase<CNonThreadsafeTree<true>,true,2048ul>::Find(&v83, v11, pszUseString, v13);
   if ( v83 != 0 )
   {
     v11 = g_pEconSchemaSymbolTable;
@@ -376,7 +376,7 @@ LABEL_8:
     goto LABEL_10;
   if ( *pszUsageRestriction == 0 )
     goto LABEL_10;
-  CUtlSymbolTableLargeBase<CNonThreadsafeTree<true>,true,2048ul>::Find(v11, pszUsageRestriction, v15);
+  CUtlSymbolTableLargeBase<CNonThreadsafeTree<true>,true,2048ul>::Find(&v84, v11, pszUsageRestriction, v15);
   v16 = v84;
   if ( v84 != 0 )
     goto LABEL_10;
@@ -496,11 +496,11 @@ void __fastcall IEconTool::BInitFromKV(
   const char *v9; // rdx
   KeyValues *v10; // rax
   const char *v11; // rdx
-  UtlSymLargeId_t v12; // rax
+  char *v12; // rax
   KeyValues *v13; // rax
   KeyValues *i; // rbx
   KeyValues *v15; // rax
-  UtlSymLargeId_t usageCapabilities[6]; // [rsp+0h] [rbp-30h] BYREF
+  char *usageCapabilities; // [rsp+0h] [rbp-30h] BYREF
 
   if ( `guard variable for'IEconTool::BInitFromKV(KeyValues *,CUtlVector<CUtlString,CUtlMemory<CUtlString,int>> *)::{lambda(char const*)#1}::operator() const(char const*)::s_sym == 0
     && __cxa_guard_acquire(&`guard variable for'IEconTool::BInitFromKV(KeyValues *,CUtlVector<CUtlString,CUtlMemory<CUtlString,int>> *)::{lambda(char const*)#1}::operator() const(char const*)::s_sym) != 0 )
@@ -517,11 +517,11 @@ void __fastcall IEconTool::BInitFromKV(
   if ( Key != 0 )
     String = CKeyValues_Data::Internal_GetString(Key, 0, 0, 0);
   CUtlSymbolTableLargeBase<CNonThreadsafeTree<true>,true,2048ul>::AddString(
-    usageCapabilities,
+    &usageCapabilities,
     g_pEconSchemaSymbolTable,
     String);
   v7 = `guard variable for'IEconTool::BInitFromKV(KeyValues *,CUtlVector<CUtlString,CUtlMemory<CUtlString,int>> *)::{lambda(char const*)#2}::operator() const(char const*)::s_sym == 0;
-  this->m_symTypeName.u.m_Id = usageCapabilities[0];
+  this->m_symTypeName.u.m_Id = usageCapabilities;
   if ( v7
     && __cxa_guard_acquire(&`guard variable for'IEconTool::BInitFromKV(KeyValues *,CUtlVector<CUtlString,CUtlMemory<CUtlString,int>> *)::{lambda(char const*)#2}::operator() const(char const*)::s_sym) != 0 )
   {
@@ -537,11 +537,11 @@ void __fastcall IEconTool::BInitFromKV(
   if ( v8 != 0 )
     v9 = CKeyValues_Data::Internal_GetString(v8, 0, 0, 0);
   CUtlSymbolTableLargeBase<CNonThreadsafeTree<true>,true,2048ul>::AddString(
-    usageCapabilities,
+    &usageCapabilities,
     g_pEconSchemaSymbolTable,
     v9);
   v7 = `guard variable for'IEconTool::BInitFromKV(KeyValues *,CUtlVector<CUtlString,CUtlMemory<CUtlString,int>> *)::{lambda(char const*)#3}::operator() const(char const*)::s_sym == 0;
-  this->m_symUseString.u.m_Id = usageCapabilities[0];
+  this->m_symUseString.u.m_Id = usageCapabilities;
   if ( v7
     && __cxa_guard_acquire(&`guard variable for'IEconTool::BInitFromKV(KeyValues *,CUtlVector<CUtlString,CUtlMemory<CUtlString,int>> *)::{lambda(char const*)#3}::operator() const(char const*)::s_sym) != 0 )
   {
@@ -557,11 +557,11 @@ void __fastcall IEconTool::BInitFromKV(
   if ( v10 != 0 )
     v11 = CKeyValues_Data::Internal_GetString(v10, 0, 0, 0);
   CUtlSymbolTableLargeBase<CNonThreadsafeTree<true>,true,2048ul>::AddString(
-    usageCapabilities,
+    &usageCapabilities,
     g_pEconSchemaSymbolTable,
     v11);
-  v12 = usageCapabilities[0];
-  LODWORD(usageCapabilities[0]) = 0;
+  v12 = usageCapabilities;
+  LODWORD(usageCapabilities) = 0;
   v7 = `guard variable for'IEconTool::BInitFromKV(KeyValues *,CUtlVector<CUtlString,CUtlMemory<CUtlString,int>> *)::{lambda(char const*)#4}::operator() const(char const*)::s_sym == 0;
   this->m_symUsageRestriction.u.m_Id = v12;
   if ( v7
@@ -578,7 +578,7 @@ void __fastcall IEconTool::BInitFromKV(
   if ( v13 != 0 )
   {
     for ( i = KeyValues::GetFirstSubKey(v13); i != 0; i = KeyValues::GetNextKey(i) )
-      ParseCapability(usageCapabilities, i);
+      ParseCapability(&usageCapabilities, i);
   }
   if ( `guard variable for'IEconTool::BInitFromKV(KeyValues *,CUtlVector<CUtlString,CUtlMemory<CUtlString,int>> *)::{lambda(char const*)#5}::operator() const(char const*)::s_sym == 0
     && __cxa_guard_acquire(&`guard variable for'IEconTool::BInitFromKV(KeyValues *,CUtlVector<CUtlString,CUtlMemory<CUtlString,int>> *)::{lambda(char const*)#5}::operator() const(char const*)::s_sym) != 0 )
@@ -1076,7 +1076,7 @@ void __fastcall CEconTool_ItemDynamicRecipe::CEconTool_ItemDynamicRecipe(
 {
   IEconTool::IEconTool(this, pszTypeName, pszUseString, 0, unCapabilities, pUsageKV);
   this->m_bStaticRecipe = 0;
-  this->_vptr_IEconTool = off_47A9250;
+  this->_vptr_IEconTool = off_47A9250;  // vptr: CEconTool_ItemDynamicRecipe
   this->m_symContextMenuPrompt.u.m_Id = 0;
   this->m_symContextMenuConfirm.u.m_Id = 0;
   this->m_symContextMenuConfirmTitle.u.m_Id = 0;
@@ -1272,7 +1272,7 @@ void __fastcall CEconTool_ItemDynamicRecipe::CBaseRecipeComponent::CBaseRecipeCo
         CEconTool_ItemDynamicRecipe::CBaseRecipeComponent *const this,
         bool bIsOutput)
 {
-  this->_vptr_CBaseRecipeComponent = off_47A9010;
+  this->_vptr_CBaseRecipeComponent = off_47A9010;  // vptr: CEconTool_ItemDynamicRecipe::CBaseRecipeComponent
   this->m_unSlotID = 0;
   this->m_flChanceOfApplying = 1.0;
   this->m_bIsOutput = bIsOutput;
@@ -1303,7 +1303,7 @@ void __fastcall CEconTool_ItemDynamicRecipe::CBaseRecipeComponent::~CBaseRecipeC
   CEconTool_ItemDynamicRecipe::CBaseRecipeComponent::StringEncodedAttribute_t *v4; // rax
   bool v5; // zf
 
-  this->_vptr_CBaseRecipeComponent = off_47A9010;
+  this->_vptr_CBaseRecipeComponent = off_47A9010;  // vptr: CEconTool_ItemDynamicRecipe::CBaseRecipeComponent
   v2 = this->m_vecDynamicAttributes.m_Size - 1;
   v3 = v2;
   if ( v2 >= 0 )
@@ -1345,7 +1345,7 @@ void __fastcall CEconTool_ItemDynamicRecipe::CBaseRecipeComponent::~CBaseRecipeC
   CEconTool_ItemDynamicRecipe::CBaseRecipeComponent::StringEncodedAttribute_t *v4; // rax
   bool v5; // zf
 
-  this->_vptr_CBaseRecipeComponent = off_47A9010;
+  this->_vptr_CBaseRecipeComponent = off_47A9010;  // vptr: CEconTool_ItemDynamicRecipe::CBaseRecipeComponent
   v2 = this->m_vecDynamicAttributes.m_Size - 1;
   v3 = v2;
   if ( v2 >= 0 )
@@ -1567,7 +1567,7 @@ bool __fastcall CEconTool_ItemDynamicRecipe::CDynamicRecipeComponentSpecificItem
 {
   const char *String; // r15
   int v9; // r9d
-  UtlSymLargeId_t m_String; // rax
+  char *m_String; // rax
   int v12; // r9d
   signed int v13; // edx
   int m_Size; // r11d
@@ -1606,7 +1606,7 @@ bool __fastcall CEconTool_ItemDynamicRecipe::CDynamicRecipeComponentSpecificItem
   unsigned int pCopyFroma; // [rsp+20h] [rbp-180h]
   CUtlSymbolTableLargeBase<CNonThreadsafeTree<true>,true,2048ul> *v48; // [rsp+28h] [rbp-178h]
   __int64 v49; // [rsp+28h] [rbp-178h]
-  UtlSymLargeId_t v50; // [rsp+30h] [rbp-170h]
+  char *v50; // [rsp+30h] [rbp-170h] BYREF
   CUtlString msg; // [rsp+40h] [rbp-160h] BYREF
   CFmtStrN<256,false> v52; // [rsp+50h] [rbp-150h] BYREF
   unsigned __int64 v53; // [rsp+168h] [rbp-38h]
@@ -1623,7 +1623,7 @@ bool __fastcall CEconTool_ItemDynamicRecipe::CDynamicRecipeComponentSpecificItem
       if ( v9 > 0 && *String != 0 )
       {
         pCopyFrom = v9;
-        CUtlSymbolTableLargeBase<CNonThreadsafeTree<true>,true,2048ul>::Find(v48, String, v9);
+        CUtlSymbolTableLargeBase<CNonThreadsafeTree<true>,true,2048ul>::Find(&v50, v48, String, v9);
         m_String = v50;
         v12 = pCopyFrom;
         if ( v50 == 0 )
@@ -1800,7 +1800,7 @@ bool __fastcall CEconTool_ItemDynamicRecipe::CDynamicRecipeComponentSpecificItem
   ItemDefinitionBySymbol = CEconItemSchema::GetItemDefinitionBySymbol(&v4->m_itemSchema, &msg);
   if ( ItemDefinitionBySymbol != 0 )
   {
-    this->m_unDefIndex.m_Data = (*ItemDefinitionBySymbol->_vptr_IEconItemDefinition)(ItemDefinitionBySymbol);
+    this->m_unDefIndex.m_Data = ItemDefinitionBySymbol->GetDefinitionIndex();
     return pVecErrors == 0 || pVecErrors->m_Size == 0;
   }
   else
@@ -1988,7 +1988,7 @@ bool __fastcall CEconTool_ItemDynamicRecipe::CDynamicRecipeComponentSpecificItem
   const char *v10; // rax
   const char *String; // rbx
   int v15; // r9d
-  UtlSymLargeId_t m_String; // rax
+  char *m_String; // rax
   int v17; // r9d
   signed int v18; // r10d
   int v19; // r11d
@@ -2023,7 +2023,7 @@ bool __fastcall CEconTool_ItemDynamicRecipe::CDynamicRecipeComponentSpecificItem
   int pCopyFrom; // [rsp+28h] [rbp-178h]
   unsigned int pCopyFroma; // [rsp+28h] [rbp-178h]
   __int64 pCopyFromb; // [rsp+28h] [rbp-178h]
-  UtlSymLargeId_t v51; // [rsp+30h] [rbp-170h]
+  char *v51; // [rsp+30h] [rbp-170h] BYREF
   CUtlString msg; // [rsp+40h] [rbp-160h] BYREF
   CFmtStrN<256,false> v53; // [rsp+50h] [rbp-150h] BYREF
   unsigned __int64 v54; // [rsp+168h] [rbp-38h]
@@ -2069,7 +2069,7 @@ bool __fastcall CEconTool_ItemDynamicRecipe::CDynamicRecipeComponentSpecificItem
       if ( v15 > 0 && *String != 0 )
       {
         pCopyFrom = v15;
-        CUtlSymbolTableLargeBase<CNonThreadsafeTree<true>,true,2048ul>::Find(v47, String, v15);
+        CUtlSymbolTableLargeBase<CNonThreadsafeTree<true>,true,2048ul>::Find(&v51, v47, String, v15);
         m_String = v51;
         v17 = pCopyFrom;
         if ( v51 == 0 )
@@ -2237,7 +2237,7 @@ bool __fastcall CEconTool_ItemDynamicRecipe::CDynamicRecipeComponentLootList::Pa
 {
   const char *String; // r15
   int v9; // r9d
-  UtlSymLargeId_t m_String; // rax
+  char *m_String; // rax
   int v12; // r9d
   signed int v13; // edx
   int m_Size; // r11d
@@ -2276,7 +2276,7 @@ bool __fastcall CEconTool_ItemDynamicRecipe::CDynamicRecipeComponentLootList::Pa
   unsigned int pCopyFroma; // [rsp+20h] [rbp-180h]
   CUtlSymbolTableLargeBase<CNonThreadsafeTree<true>,true,2048ul> *v48; // [rsp+28h] [rbp-178h]
   __int64 v49; // [rsp+28h] [rbp-178h]
-  UtlSymLargeId_t v50; // [rsp+30h] [rbp-170h]
+  char *v50; // [rsp+30h] [rbp-170h] BYREF
   CUtlString msg; // [rsp+40h] [rbp-160h] BYREF
   CFmtStrN<256,false> v52; // [rsp+50h] [rbp-150h] BYREF
   unsigned __int64 v53; // [rsp+168h] [rbp-38h]
@@ -2293,7 +2293,7 @@ bool __fastcall CEconTool_ItemDynamicRecipe::CDynamicRecipeComponentLootList::Pa
       if ( v9 > 0 && *String != 0 )
       {
         pCopyFrom = v9;
-        CUtlSymbolTableLargeBase<CNonThreadsafeTree<true>,true,2048ul>::Find(v48, String, v9);
+        CUtlSymbolTableLargeBase<CNonThreadsafeTree<true>,true,2048ul>::Find(&v50, v48, String, v9);
         m_String = v50;
         v12 = pCopyFrom;
         if ( v50 == 0 )
@@ -2607,7 +2607,7 @@ void __fastcall CEconTool_ItemDynamicRecipe::~CEconTool_ItemDynamicRecipe(CEconT
   v1 = 0;
   v2 = 0;
   m_Size = this->m_vecComponents.m_Size;
-  this->_vptr_IEconTool = off_47A9250;
+  this->_vptr_IEconTool = off_47A9250;  // vptr: CEconTool_ItemDynamicRecipe
   if ( m_Size > 0 )
   {
     do
@@ -2662,7 +2662,7 @@ void __fastcall CEconTool_ItemDynamicRecipe::~CEconTool_ItemDynamicRecipe(CEconT
   if ( (this->m_vecComponents.m_Memory.m_nGrowSize & 0xC0000000) == 0 )
     CUtlMemory<CEconTool_ItemDynamicRecipe::CBaseRecipeComponent *,int>::Purge(&this->m_vecComponents.m_Memory);
 LABEL_15:
-  this->_vptr_IEconTool = off_47A8E30;
+  this->_vptr_IEconTool = off_47A8E30;  // vptr: IEconTool
   CUtlVectorBase<item_definition_index_t,CUtlMemory<item_definition_index_t,int>>::RemoveAll(&this->m_vecBonusItemDef);
   if ( (this->m_vecBonusItemDef.m_Memory.m_nGrowSize & 0xC0000000) == 0 )
   {
@@ -2702,12 +2702,12 @@ bool __fastcall CEconTool_ItemDynamicRecipe::BInitFromKV(
   CUtlSymbolTableLarge_CI *v14; // r14
   const char *v15; // r15
   int v16; // r9d
-  UtlSymLargeId_t v17; // rax
+  char *v17; // rax
   const char *v18; // rax
   CUtlSymbolTableLarge_CI *v19; // r14
   const char *v20; // r15
   int v21; // r9d
-  UtlSymLargeId_t v22; // rax
+  char *v22; // rax
   bool result; // al
   int v24; // r9d
   int v25; // r11d
@@ -2802,7 +2802,7 @@ bool __fastcall CEconTool_ItemDynamicRecipe::BInitFromKV(
   bool isLeftj[8]; // [rsp+28h] [rbp-58h]
   bool isLeftk; // [rsp+28h] [rbp-58h]
   bool isLeftl[8]; // [rsp+28h] [rbp-58h]
-  UtlSymLargeId_t v117; // [rsp+30h] [rbp-50h]
+  char *v117; // [rsp+30h] [rbp-50h] BYREF
   CUtlSymbolTableLargeBaseTreeEntry_t *pCopyFrom; // [rsp+38h] [rbp-48h] BYREF
   CUtlSymbolTableLargeBaseTreeEntry_t *v119; // [rsp+40h] [rbp-40h] BYREF
   CUtlSymbolTableLargeBase<CNonThreadsafeTree<true>,true,2048ul>::StringPool_t *src[7]; // [rsp+48h] [rbp-38h] BYREF
@@ -2836,7 +2836,7 @@ bool __fastcall CEconTool_ItemDynamicRecipe::BInitFromKV(
     if ( v12 > 0 && *v10 != 0 )
     {
       isLeftb = v12;
-      CUtlSymbolTableLargeBase<CNonThreadsafeTree<true>,true,2048ul>::Find(v9, v10, v12);
+      CUtlSymbolTableLargeBase<CNonThreadsafeTree<true>,true,2048ul>::Find(&v119, v9, v10, v12);
       m_String = v119;
       v63 = isLeftb;
       if ( v119 == 0 )
@@ -2963,7 +2963,7 @@ LABEL_7:
   if ( v16 > 0 && *v15 != 0 )
   {
     isLefta = v16;
-    CUtlSymbolTableLargeBase<CNonThreadsafeTree<true>,true,2048ul>::Find(v14, v15, v16);
+    CUtlSymbolTableLargeBase<CNonThreadsafeTree<true>,true,2048ul>::Find(&v117, v14, v15, v16);
     v17 = v117;
     v45 = isLefta;
     if ( v117 == 0 )
@@ -3091,7 +3091,7 @@ LABEL_10:
   if ( *v20 == 0 )
     goto LABEL_13;
   isLeft = v21;
-  CUtlSymbolTableLargeBase<CNonThreadsafeTree<true>,true,2048ul>::Find(v19, v20, v21);
+  CUtlSymbolTableLargeBase<CNonThreadsafeTree<true>,true,2048ul>::Find(&v117, v19, v20, v21);
   v22 = v117;
   v24 = isLeft;
   if ( v117 != 0 )
@@ -3383,23 +3383,23 @@ LABEL_18:
         {
           if ( strcmp(v13, "criteria_match") == 0 )
           {
-            GameSpecificRecipeComponent = operator new(0x68u);
+            GameSpecificRecipeComponent = operator new(0x68u);  // new CEconTool_ItemDynamicRecipe::CDynamicRecipeComponentCriteriaMatch
             CEconTool_ItemDynamicRecipe::CBaseRecipeComponent::CBaseRecipeComponent(
               GameSpecificRecipeComponent,
               bIsOutputa);
             *(&GameSpecificRecipeComponent->m_bCannotMatchInput + 1) = 1;
-            GameSpecificRecipeComponent->_vptr_CBaseRecipeComponent = off_47A90D0;
+            GameSpecificRecipeComponent->_vptr_CBaseRecipeComponent = off_47A90D0;  // vptr: CEconTool_ItemDynamicRecipe::CDynamicRecipeComponentCriteriaMatch
           }
           else if ( strcmp(v13, "specific_item") == 0 )
           {
             if ( KeyValues::FindKey(FirstSubKey, "item", 0) != 0 )
             {
-              GameSpecificRecipeComponent = operator new(0x78u);
+              GameSpecificRecipeComponent = operator new(0x78u);  // new CEconTool_ItemDynamicRecipe::CDynamicRecipeComponentSpecificItem
               CEconTool_ItemDynamicRecipe::CBaseRecipeComponent::CBaseRecipeComponent(
                 GameSpecificRecipeComponent,
                 bIsOutputa);
               GameSpecificRecipeComponent[1]._vptr_CBaseRecipeComponent = 0;
-              GameSpecificRecipeComponent->_vptr_CBaseRecipeComponent = off_47A9070;
+              GameSpecificRecipeComponent->_vptr_CBaseRecipeComponent = off_47A9070;  // vptr: CEconTool_ItemDynamicRecipe::CDynamicRecipeComponentSpecificItem
               LOWORD(GameSpecificRecipeComponent[1].m_unSlotID) = INVALID_ITEM_DEF_INDEX;
             }
             else
@@ -3417,7 +3417,7 @@ LABEL_18:
                   return 0;
                 goto LABEL_18;
               }
-              GameSpecificRecipeComponent = operator new(0x80u);
+              GameSpecificRecipeComponent = operator new(0x80u);  // new CEconTool_ItemDynamicRecipe::CDynamicRecipeComponentSpecificItemFromLootList
               CEconTool_ItemDynamicRecipe::CBaseRecipeComponent::CBaseRecipeComponent(
                 GameSpecificRecipeComponent,
                 bIsOutputa);
@@ -3425,7 +3425,7 @@ LABEL_18:
               GameSpecificRecipeComponent[1]._vptr_CBaseRecipeComponent = 0;
               *&GameSpecificRecipeComponent[1].m_bIsOutput = 0;
               LOWORD(GameSpecificRecipeComponent[1].m_unSlotID) = m_Data;
-              GameSpecificRecipeComponent->_vptr_CBaseRecipeComponent = off_47A9130;
+              GameSpecificRecipeComponent->_vptr_CBaseRecipeComponent = off_47A9130;  // vptr: CEconTool_ItemDynamicRecipe::CDynamicRecipeComponentSpecificItemFromLootList
             }
           }
           else
@@ -3441,12 +3441,12 @@ LABEL_18:
                 return 0;
               goto LABEL_18;
             }
-            GameSpecificRecipeComponent = operator new(0x70u);
+            GameSpecificRecipeComponent = operator new(0x70u);  // new CEconTool_ItemDynamicRecipe::CDynamicRecipeComponentLootList
             CEconTool_ItemDynamicRecipe::CBaseRecipeComponent::CBaseRecipeComponent(
               GameSpecificRecipeComponent,
               bIsOutputa);
             GameSpecificRecipeComponent[1]._vptr_CBaseRecipeComponent = 0;
-            GameSpecificRecipeComponent->_vptr_CBaseRecipeComponent = off_47A9190;
+            GameSpecificRecipeComponent->_vptr_CBaseRecipeComponent = off_47A9190;  // vptr: CEconTool_ItemDynamicRecipe::CDynamicRecipeComponentLootList
           }
         }
         m_Size = vecComponents->m_Size;
@@ -3748,7 +3748,7 @@ LABEL_60:
           String = KeyValues::GetString(v32, "rarity", "", 0, 0);
           v34 = "";
           CUtlSymbolTableLargeBase<CNonThreadsafeTree<true>,true,2048ul>::AddString(
-            &msg_0,
+            &msg_0.m_pString,
             g_pEconSchemaSymbolTable,
             String);
           m_pString = msg_0.m_pString;
@@ -3847,7 +3847,7 @@ LABEL_60:
             {
               v48 = 0;
             }
-            v48->m_AttrIndex = (*AttributeDefinitionByName->_vptr_IEconItemAttributeDefinition)(AttributeDefinitionByName);
+            v48->m_AttrIndex = AttributeDefinitionByName->GetDefinitionIndex();
             v49 = KeyValues::GetString(NextKey, "value", "", 0, 0);
             CUtlConstStringBase<char>::Set(&v48->m_symAttrData, v49);
             NextKey = KeyValues::GetNextKey(NextKey);

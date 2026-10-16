@@ -6,7 +6,7 @@
 void __fastcall CEmptyEntityInstance::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CEmptyEntityInstance::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_40F1710;
+  this->_vptr_CEntityClass = off_40F1710;  // vptr: CEmptyEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -16,7 +16,7 @@ void __fastcall CEmptyEntityInstance::CEntityInstanceEntityClass::~CEntityInstan
 void __fastcall CEmptyEntityInstance::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CEmptyEntityInstance::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_40F1710;
+  this->_vptr_CEntityClass = off_40F1710;  // vptr: CEmptyEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -154,7 +154,7 @@ const CSchemaClassBindingBase *__fastcall CEntityInstance::Schema_DynamicBinding
 void __fastcall CEntityInstance::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CEntityInstance::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -164,7 +164,7 @@ void __fastcall CEntityInstance::CEntityInstanceEntityClass::~CEntityInstanceEnt
 void __fastcall CEntityInstance::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CEntityInstance::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }

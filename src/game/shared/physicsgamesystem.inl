@@ -17,7 +17,7 @@ void __fastcall CPhysicsGameSystem::~CPhysicsGameSystem(CPhysicsGameSystem *cons
   CUtlVectorBase<physicssound::friction_t,CUtlMemory<physicssound::friction_t,int> >::CAllocator *p_m_Memory; // r12
 
   v2 = (this->m_scrapeSounds.m_Memory.m_nGrowSize & 0xC0000000) == 0;
-  this->_vptr_IGameSystem = off_3FCDAD0;
+  this->_vptr_IGameSystem = off_3FCDAD0;  // vptr: CPhysicsGameSystem
   this->_vptr_IPhysicsWorldEventListener = &off_3FCDC28;
   this->m_scrapeSounds.m_Size = 0;
   if ( v2 )
@@ -178,7 +178,7 @@ void __fastcall CPhysicsGameSystem::~CPhysicsGameSystem(CPhysicsGameSystem *cons
   CUtlVectorBase<physicssound::friction_t,CUtlMemory<physicssound::friction_t,int> >::CAllocator *p_m_Memory; // r12
 
   v2 = (this->m_scrapeSounds.m_Memory.m_nGrowSize & 0xC0000000) == 0;
-  this->_vptr_IGameSystem = off_3FCDAD0;
+  this->_vptr_IGameSystem = off_3FCDAD0;  // vptr: CPhysicsGameSystem
   this->_vptr_IPhysicsWorldEventListener = &off_3FCDC28;
   this->m_scrapeSounds.m_Size = 0;
   if ( v2 )
@@ -350,7 +350,7 @@ void __fastcall CPhysicsGameSystem::SetGameSystemGlobalPtrs(CPhysicsGameSystem *
 // CPhysicsGameSystem::PhysicsWorld_t::~PhysicsWorld_t  (line 244, @0x0000000001f71b70, libserver.so)
 void __fastcall CPhysicsGameSystem::PhysicsWorld_t::~PhysicsWorld_t(CPhysicsGameSystem::PhysicsWorld_t *const this)
 {
-  this->_vptr_PhysicsWorld_t = off_3FCADD0;
+  this->_vptr_PhysicsWorld_t = off_3FCADD0;  // vptr: CPhysicsGameSystem::PhysicsWorld_t
 }
 
 
@@ -358,7 +358,7 @@ void __fastcall CPhysicsGameSystem::PhysicsWorld_t::~PhysicsWorld_t(CPhysicsGame
 // calls: operator delete
 void __fastcall CPhysicsGameSystem::PhysicsWorld_t::~PhysicsWorld_t(CPhysicsGameSystem::PhysicsWorld_t *const this)
 {
-  this->_vptr_PhysicsWorld_t = off_3FCADD0;
+  this->_vptr_PhysicsWorld_t = off_3FCADD0;  // vptr: CPhysicsGameSystem::PhysicsWorld_t
   operator delete(this);
 }
 

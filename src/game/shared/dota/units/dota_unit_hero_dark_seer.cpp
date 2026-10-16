@@ -563,7 +563,7 @@ CEntityInstance *__fastcall CDOTA_Unit_Hero_DarkSeer::CEntityInstanceEntityClass
 void __fastcall CDOTA_Unit_Hero_DarkSeer::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Unit_Hero_DarkSeer::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -573,7 +573,7 @@ void __fastcall CDOTA_Unit_Hero_DarkSeer::CEntityInstanceEntityClass::~CEntityIn
 void __fastcall CDOTA_Unit_Hero_DarkSeer::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Unit_Hero_DarkSeer::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -757,7 +757,7 @@ CEntityInstance *__fastcall CDOTA_Ability_DarkSeer_Vacuum::CEntityInstanceEntity
 void __fastcall CDOTA_Ability_DarkSeer_Vacuum::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_DarkSeer_Vacuum::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -767,7 +767,7 @@ void __fastcall CDOTA_Ability_DarkSeer_Vacuum::CEntityInstanceEntityClass::~CEnt
 void __fastcall CDOTA_Ability_DarkSeer_Vacuum::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_DarkSeer_Vacuum::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -1293,7 +1293,7 @@ CEntityInstance *__fastcall CDOTA_Ability_DarkSeer_IonShell::CEntityInstanceEnti
 void __fastcall CDOTA_Ability_DarkSeer_IonShell::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_DarkSeer_IonShell::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -1303,7 +1303,7 @@ void __fastcall CDOTA_Ability_DarkSeer_IonShell::CEntityInstanceEntityClass::~CE
 void __fastcall CDOTA_Ability_DarkSeer_IonShell::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_DarkSeer_IonShell::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -1788,7 +1788,7 @@ CEntityInstance *__fastcall CDOTA_Ability_DarkSeer_Surge::CEntityInstanceEntityC
 void __fastcall CDOTA_Ability_DarkSeer_Surge::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_DarkSeer_Surge::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -1798,7 +1798,7 @@ void __fastcall CDOTA_Ability_DarkSeer_Surge::CEntityInstanceEntityClass::~CEnti
 void __fastcall CDOTA_Ability_DarkSeer_Surge::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_DarkSeer_Surge::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -2098,7 +2098,7 @@ CEntityInstance *__fastcall CDOTA_Ability_DarkSeer_WallOfReplica::CEntityInstanc
 void __fastcall CDOTA_Ability_DarkSeer_WallOfReplica::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_DarkSeer_WallOfReplica::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -2108,7 +2108,7 @@ void __fastcall CDOTA_Ability_DarkSeer_WallOfReplica::CEntityInstanceEntityClass
 void __fastcall CDOTA_Ability_DarkSeer_WallOfReplica::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_DarkSeer_WallOfReplica::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }

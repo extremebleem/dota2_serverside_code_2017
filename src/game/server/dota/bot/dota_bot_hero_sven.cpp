@@ -57,9 +57,9 @@ CDOTA_BotMode *__fastcall CDOTA_Bot_Hero_Sven::CreateMode(CDOTA_Bot_Hero_Sven *c
 
   if ( this->m_bHuman || iMode != 2 )
     return CDOTA_Bot::CreateMode(this, iMode);
-  v4 = operator new(0xE8u);
+  v4 = operator new(0xE8u);  // new CDOTA_BotMode_Attack_Sven (size matches)
   CDOTA_BotMode_Attack::CDOTA_BotMode_Attack(v4, this);
-  v4->_vptr_CDOTA_BotMode = off_42D10F0;
+  v4->_vptr_CDOTA_BotMode = off_42D10F0;  // vptr: CDOTA_BotMode_Attack_Sven
   return v4;
 }
 
@@ -170,7 +170,7 @@ void __fastcall CDOTA_Bot_AbilityUsage_Sven_StormBolt::CDOTA_Bot_AbilityUsage_Sv
   this->m_pAbility = pAbility;
   this->m_bUseOnCreeps = 0;
   this->m_pBot = pBot;
-  this->_vptr_CDOTA_Bot_AbilityUsage = off_42D1190;
+  this->_vptr_CDOTA_Bot_AbilityUsage = off_42D1190;  // vptr: CDOTA_Bot_AbilityUsage_Sven_StormBolt
   this->m_hDesiredTarget.m_Index = -1;
 }
 
@@ -237,7 +237,7 @@ void __fastcall CDOTA_Bot_AbilityUsage_Sven_Warcry::CDOTA_Bot_AbilityUsage_Sven_
   this->m_pAbility = pAbility;
   this->m_bUseOnCreeps = 0;
   this->m_pBot = pBot;
-  this->_vptr_CDOTA_Bot_AbilityUsage = off_42D11F0;
+  this->_vptr_CDOTA_Bot_AbilityUsage = off_42D11F0;  // vptr: CDOTA_Bot_AbilityUsage_Sven_Warcry
 }
 
 
@@ -378,7 +378,7 @@ void __fastcall CDOTA_Bot_AbilityUsage_Sven_GodsStrength::CDOTA_Bot_AbilityUsage
   this->m_pAbility = pAbility;
   this->m_bUseOnCreeps = 0;
   this->m_pBot = pBot;
-  this->_vptr_CDOTA_Bot_AbilityUsage = off_42D1250;
+  this->_vptr_CDOTA_Bot_AbilityUsage = off_42D1250;  // vptr: CDOTA_Bot_AbilityUsage_Sven_GodsStrength
 }
 
 

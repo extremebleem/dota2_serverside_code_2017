@@ -146,7 +146,7 @@ LABEL_20:
 // calls: CPlayerVoiceListener::InitData
 void __fastcall CPlayerVoiceListener::CPlayerVoiceListener(CPlayerVoiceListener *const this)
 {
-  this->_vptr_IGameSystem = off_408B810;
+  this->_vptr_IGameSystem = off_408B810;  // vptr: CPlayerVoiceListener
   CPlayerVoiceListener::InitData(this);
 }
 

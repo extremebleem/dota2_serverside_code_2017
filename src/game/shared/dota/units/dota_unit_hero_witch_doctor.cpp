@@ -674,7 +674,7 @@ CEntityInstance *__fastcall CDOTA_Unit_Hero_WitchDoctor::CEntityInstanceEntityCl
 void __fastcall CDOTA_Unit_Hero_WitchDoctor::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Unit_Hero_WitchDoctor::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -684,7 +684,7 @@ void __fastcall CDOTA_Unit_Hero_WitchDoctor::CEntityInstanceEntityClass::~CEntit
 void __fastcall CDOTA_Unit_Hero_WitchDoctor::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Unit_Hero_WitchDoctor::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -879,7 +879,7 @@ CEntityInstance *__fastcall CDOTA_Ability_WitchDoctor_ParalyzingCask::CEntityIns
 void __fastcall CDOTA_Ability_WitchDoctor_ParalyzingCask::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_WitchDoctor_ParalyzingCask::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -889,7 +889,7 @@ void __fastcall CDOTA_Ability_WitchDoctor_ParalyzingCask::CEntityInstanceEntityC
 void __fastcall CDOTA_Ability_WitchDoctor_ParalyzingCask::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_WitchDoctor_ParalyzingCask::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -1571,7 +1571,7 @@ CEntityInstance *__fastcall CDOTA_Ability_WitchDoctor_VoodooRestoration::CEntity
 void __fastcall CDOTA_Ability_WitchDoctor_VoodooRestoration::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_WitchDoctor_VoodooRestoration::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -1581,7 +1581,7 @@ void __fastcall CDOTA_Ability_WitchDoctor_VoodooRestoration::CEntityInstanceEnti
 void __fastcall CDOTA_Ability_WitchDoctor_VoodooRestoration::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_WitchDoctor_VoodooRestoration::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -2102,7 +2102,7 @@ CEntityInstance *__fastcall CDOTA_Ability_WitchDoctor_Maledict::CEntityInstanceE
 void __fastcall CDOTA_Ability_WitchDoctor_Maledict::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_WitchDoctor_Maledict::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -2112,7 +2112,7 @@ void __fastcall CDOTA_Ability_WitchDoctor_Maledict::CEntityInstanceEntityClass::
 void __fastcall CDOTA_Ability_WitchDoctor_Maledict::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_WitchDoctor_Maledict::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -2652,7 +2652,7 @@ CEntityInstance *__fastcall CDOTA_NPC_WitchDoctor_Ward::CEntityInstanceEntityCla
 void __fastcall CDOTA_NPC_WitchDoctor_Ward::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_NPC_WitchDoctor_Ward::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -2662,7 +2662,7 @@ void __fastcall CDOTA_NPC_WitchDoctor_Ward::CEntityInstanceEntityClass::~CEntity
 void __fastcall CDOTA_NPC_WitchDoctor_Ward::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_NPC_WitchDoctor_Ward::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -2919,7 +2919,7 @@ CEntityInstance *__fastcall CDOTA_Ability_WitchDoctor_DeathWard::CEntityInstance
 void __fastcall CDOTA_Ability_WitchDoctor_DeathWard::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_WitchDoctor_DeathWard::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -2929,7 +2929,7 @@ void __fastcall CDOTA_Ability_WitchDoctor_DeathWard::CEntityInstanceEntityClass:
 void __fastcall CDOTA_Ability_WitchDoctor_DeathWard::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_WitchDoctor_DeathWard::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }

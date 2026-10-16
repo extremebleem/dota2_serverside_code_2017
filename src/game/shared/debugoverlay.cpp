@@ -62,8 +62,8 @@ protected:
 void __fastcall CDebugOverlayGameSystem::~CDebugOverlayGameSystem(CDebugOverlayGameSystem *const this)
 {
   this->_vptr_IConsoleDisplayFunc = &off_3FF1130;
-  this->_vptr_IDebugVisualizer = off_3FCBB90;
-  this->_vptr_IGameSystem = off_3F7C1B0;
+  this->_vptr_IDebugVisualizer = off_3FCBB90;  // vptr: IDebugVisualizer
+  this->_vptr_IGameSystem = off_3F7C1B0;  // vptr: CAutoGameSystem
   IGameSystem::~IGameSystem(this);
 }
 
@@ -73,8 +73,8 @@ void __fastcall CDebugOverlayGameSystem::~CDebugOverlayGameSystem(CDebugOverlayG
 void __fastcall CDebugOverlayGameSystem::~CDebugOverlayGameSystem(CDebugOverlayGameSystem *const this)
 {
   this->_vptr_IConsoleDisplayFunc = &off_3FF1130;
-  this->_vptr_IDebugVisualizer = off_3FCBB90;
-  this->_vptr_IGameSystem = off_3F7C1B0;
+  this->_vptr_IDebugVisualizer = off_3FCBB90;  // vptr: IDebugVisualizer
+  this->_vptr_IGameSystem = off_3F7C1B0;  // vptr: CAutoGameSystem
   IGameSystem::~IGameSystem(this);
   operator delete(this);
 }
@@ -115,7 +115,7 @@ void __cdecl CDebugOverlayGameSystem::YouForgot::ToDefine_DEFINE_GAME_SYSTEM()
 // CDebugOverlayGameSystem::CDebugOverlayGameSystem  (line 122, @0x000000000206fea0, libserver.so)
 void __fastcall CDebugOverlayGameSystem::CDebugOverlayGameSystem(CDebugOverlayGameSystem *const this)
 {
-  this->_vptr_IGameSystem = off_3FF0F70;
+  this->_vptr_IGameSystem = off_3FF0F70;  // vptr: CDebugOverlayGameSystem
   this->_vptr_IDebugVisualizer = off_3FF10F8;
   this->_vptr_IConsoleDisplayFunc = &off_3FF1130;
   this->m_pOverlayListInterpolated = 0;

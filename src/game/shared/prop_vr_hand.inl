@@ -145,7 +145,7 @@ void *__fastcall CPropVRHand::CEntityInstanceEntityClass::AllocateInstance(
 void __fastcall CPropVRHand::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CPropVRHand::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -155,7 +155,7 @@ void __fastcall CPropVRHand::CEntityInstanceEntityClass::~CEntityInstanceEntityC
 void __fastcall CPropVRHand::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CPropVRHand::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }

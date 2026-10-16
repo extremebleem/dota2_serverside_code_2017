@@ -5,7 +5,7 @@
 // calls: CUtlVectorBase<CPropData::propdata_breakablechunk_t, CUtlMemory<CPropData::propdata_breakablechunk_t, int> >::RemoveAll, IGameSystem::~IGameSystem, CUtlMemory<CPropData::propdata_breakablechunk_t, int>::Purge
 void __fastcall CPropData::~CPropData(CPropData *const this)
 {
-  this->_vptr_IGameSystem = off_3FEAFB0;
+  this->_vptr_IGameSystem = off_3FEAFB0;  // vptr: CPropData
   CUtlVectorBase<CPropData::propdata_breakablechunk_t,CUtlMemory<CPropData::propdata_breakablechunk_t,int>>::RemoveAll(&this->m_BreakableChunks);
   if ( (this->m_BreakableChunks.m_Memory.m_nGrowSize & 0xC0000000) == 0 )
   {
@@ -13,7 +13,7 @@ void __fastcall CPropData::~CPropData(CPropData *const this)
     if ( (this->m_BreakableChunks.m_Memory.m_nGrowSize & 0xC0000000) == 0 )
       CUtlMemory<CPropData::propdata_breakablechunk_t,int>::Purge(&this->m_BreakableChunks.m_Memory);
   }
-  this->_vptr_IGameSystem = off_3F7C1B0;
+  this->_vptr_IGameSystem = off_3F7C1B0;  // vptr: CAutoGameSystem
   IGameSystem::~IGameSystem(this);
 }
 
@@ -22,7 +22,7 @@ void __fastcall CPropData::~CPropData(CPropData *const this)
 // calls: CUtlVectorBase<CPropData::propdata_breakablechunk_t, CUtlMemory<CPropData::propdata_breakablechunk_t, int> >::RemoveAll, IGameSystem::~IGameSystem, operator delete, CUtlMemory<CPropData::propdata_breakablechunk_t, int>::Purge
 void __fastcall CPropData::~CPropData(CPropData *const this)
 {
-  this->_vptr_IGameSystem = off_3FEAFB0;
+  this->_vptr_IGameSystem = off_3FEAFB0;  // vptr: CPropData
   CUtlVectorBase<CPropData::propdata_breakablechunk_t,CUtlMemory<CPropData::propdata_breakablechunk_t,int>>::RemoveAll(&this->m_BreakableChunks);
   if ( (this->m_BreakableChunks.m_Memory.m_nGrowSize & 0xC0000000) == 0 )
   {
@@ -30,7 +30,7 @@ void __fastcall CPropData::~CPropData(CPropData *const this)
     if ( (this->m_BreakableChunks.m_Memory.m_nGrowSize & 0xC0000000) == 0 )
       CUtlMemory<CPropData::propdata_breakablechunk_t,int>::Purge(&this->m_BreakableChunks.m_Memory);
   }
-  this->_vptr_IGameSystem = off_3F7C1B0;
+  this->_vptr_IGameSystem = off_3F7C1B0;  // vptr: CAutoGameSystem
   IGameSystem::~IGameSystem(this);
   operator delete(this);
 }

@@ -266,12 +266,10 @@ Criteria *__fastcall Criteria::operator=(Criteria *const this, const Criteria *c
   __int64 v33; // rcx
   __int64 v34; // rdi
   __int64 v35; // rsi
-  __int64 v36; // r8
-  __int64 v37; // r9
-  const Criteria *v38; // [rsp+0h] [rbp-60h]
-  const Criteria *v39; // [rsp+0h] [rbp-60h]
+  const Criteria *v36; // [rsp+0h] [rbp-60h]
+  const Criteria *v37; // [rsp+0h] [rbp-60h]
   const Criteria *srcb; // [rsp+8h] [rbp-58h]
-  LeafCodeInfo_t v42; // [rsp+10h] [rbp-50h] BYREF
+  LeafCodeInfo_t v40; // [rsp+10h] [rbp-50h] BYREF
 
   if ( this == src )
     return this;
@@ -387,17 +385,17 @@ LABEL_6:
           goto LABEL_56;
         while ( 1 )
         {
-          if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v34, v35, v32, v33, v36, v37) != 0 )
+          if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v34, v35, v32, v33) != 0 )
             loc_0 = -559038737;
           Plat_ExitProcess(1);
 LABEL_56:
-          v42.m_szFile = "../../public/tier1/utlleanvector.h";
-          v42.m_szFunction = "AddToTailGetPtr";
-          v42.m_nLine = 557;
+          v40.m_szFile = "../../public/tier1/utlleanvector.h";
+          v40.m_szFunction = "AddToTailGetPtr";
+          v40.m_nLine = 557;
           LoggingSystem_Log(
             LOG_GENERAL,
             LoggingSeverity_t::LS_ERROR,
-            &v42,
+            &v40,
             "%s allocation count overflow",
             "AddToTailGetPtr");
         }
@@ -431,18 +429,18 @@ LABEL_56:
         }
         if ( v14 > 6 )
         {
-          v38 = v4;
+          v36 = v4;
           v22 = (*(*g_pMemAlloc + 8LL))(g_pMemAlloc, this->subcriteria.m_pElements, 2LL * v17);
           v15 = this->subcriteria.m_nCount;
           this->subcriteria.m_pElements = v22;
-          v4 = v38;
+          v4 = v36;
         }
         else
         {
           v15 = this->subcriteria.m_nCount;
           if ( v17 > 6 )
           {
-            v39 = v4;
+            v37 = v4;
             v23 = (**g_pMemAlloc)(g_pMemAlloc, 2LL * v17, m_nCount);
             v24 = this->subcriteria.m_nAllocated;
             if ( v24 != 0 )
@@ -457,7 +455,7 @@ LABEL_56:
             }
             this->subcriteria.m_pElements = memcpy(v23, v25, 2LL * this->subcriteria.m_nCount);
             v15 = this->subcriteria.m_nCount;
-            v4 = v39;
+            v4 = v37;
           }
         }
         this->subcriteria.m_nAllocated = v17;
@@ -664,15 +662,13 @@ Rule *__fastcall Rule::operator=(Rule *const this, const Rule *const src)
   __int64 v60; // rcx
   __int64 v61; // rdi
   __int64 v62; // rsi
-  __int64 v63; // r8
-  __int64 v64; // r9
+  CUtlLeanVectorFixedGrowableBase<short unsigned int,6u,short int>::ElemType_t *v63; // [rsp+0h] [rbp-60h]
+  CUtlLeanVectorFixedGrowableBase<short unsigned int,6u,short int>::ElemType_t *v64; // [rsp+0h] [rbp-60h]
   CUtlLeanVectorFixedGrowableBase<short unsigned int,6u,short int>::ElemType_t *v65; // [rsp+0h] [rbp-60h]
   CUtlLeanVectorFixedGrowableBase<short unsigned int,6u,short int>::ElemType_t *v66; // [rsp+0h] [rbp-60h]
-  CUtlLeanVectorFixedGrowableBase<short unsigned int,6u,short int>::ElemType_t *v67; // [rsp+0h] [rbp-60h]
-  CUtlLeanVectorFixedGrowableBase<short unsigned int,6u,short int>::ElemType_t *v68; // [rsp+0h] [rbp-60h]
-  __int64 v69; // [rsp+8h] [rbp-58h]
-  __int64 v70; // [rsp+8h] [rbp-58h]
-  LeafCodeInfo_t v71; // [rsp+10h] [rbp-50h] BYREF
+  __int64 v67; // [rsp+8h] [rbp-58h]
+  __int64 v68; // [rsp+8h] [rbp-58h]
+  LeafCodeInfo_t v69; // [rsp+10h] [rbp-50h] BYREF
 
   if ( this == src )
     return this;
@@ -741,7 +737,7 @@ LABEL_6:
   {
     v8 = 2LL * (m_nCount - 1) + 2;
     v9 = 0;
-    v69 = v8;
+    v67 = v8;
     do
     {
       v10 = src->m_Criteria.m_nAllocated;
@@ -788,18 +784,18 @@ LABEL_6:
         }
         if ( v14 > 6 )
         {
-          v65 = v13;
+          v63 = v13;
           v39 = (*(*g_pMemAlloc + 8LL))(g_pMemAlloc, this->m_Criteria.m_pElements, 2LL * v17);
           v15 = this->m_Criteria.m_nCount;
           this->m_Criteria.m_pElements = v39;
-          v13 = v65;
+          v13 = v63;
         }
         else
         {
           v15 = this->m_Criteria.m_nCount;
           if ( v17 > 6 )
           {
-            v67 = v13;
+            v65 = v13;
             v41 = (**g_pMemAlloc)(g_pMemAlloc, 2LL * v17, v12);
             v42 = this->m_Criteria.m_nAllocated;
             if ( v42 != 0 )
@@ -814,7 +810,7 @@ LABEL_6:
             }
             this->m_Criteria.m_pElements = memcpy(v41, v43, 2LL * this->m_Criteria.m_nCount);
             v15 = this->m_Criteria.m_nCount;
-            v13 = v67;
+            v13 = v65;
           }
         }
         this->m_Criteria.m_nAllocated = v17;
@@ -835,7 +831,7 @@ LABEL_6:
       this->m_Criteria.m_nCount = v15 + 1;
       v19[v12] = *v13;
     }
-    while ( v9 != v69 );
+    while ( v9 != v67 );
   }
   LOWORD(v20) = src->m_Responses.m_nCount;
   v21 = this->m_Responses.m_nAllocated;
@@ -894,7 +890,7 @@ LABEL_29:
   {
     v23 = 2LL * (v9 - 1) + 2;
     v9 = 0;
-    v70 = v23;
+    v68 = v23;
     while ( 1 )
     {
       v24 = src->m_Responses.m_nAllocated;
@@ -941,18 +937,18 @@ LABEL_29:
         }
         if ( v28 > 6 )
         {
-          v66 = v27;
+          v64 = v27;
           v40 = (*(*g_pMemAlloc + 8LL))(g_pMemAlloc, this->m_Responses.m_pElements, 2LL * v31);
           v29 = this->m_Responses.m_nCount;
           this->m_Responses.m_pElements = v40;
-          v27 = v66;
+          v27 = v64;
         }
         else
         {
           v29 = this->m_Responses.m_nCount;
           if ( v31 > 6 )
           {
-            v68 = v27;
+            v66 = v27;
             v44 = (**g_pMemAlloc)(g_pMemAlloc, 2LL * v31, v26);
             v45 = this->m_Responses.m_nAllocated;
             if ( v45 != 0 )
@@ -967,7 +963,7 @@ LABEL_29:
             }
             this->m_Responses.m_pElements = memcpy(v44, v46, 2LL * this->m_Responses.m_nCount);
             v29 = this->m_Responses.m_nCount;
-            v27 = v68;
+            v27 = v66;
           }
         }
         this->m_Responses.m_nAllocated = v31;
@@ -987,24 +983,24 @@ LABEL_29:
       v9 += 2;
       this->m_Responses.m_nCount = v29 + 1;
       v33[v26] = *v27;
-      if ( v9 == v70 )
+      if ( v9 == v68 )
         goto LABEL_48;
     }
 LABEL_103:
     v20 = &LOG_GENERAL;
     if ( LoggingSystem_IsChannelEnabled(LOG_GENERAL, 4) != 0 )
     {
-      v71.m_nLine = 557;
-      v71.m_szFile = "../../public/tier1/utlleanvector.h";
-      v71.m_szFunction = "AddToTailGetPtr";
+      v69.m_nLine = 557;
+      v69.m_szFile = "../../public/tier1/utlleanvector.h";
+      v69.m_szFunction = "AddToTailGetPtr";
       LoggingSystem_Log(
         LOG_GENERAL,
         LoggingSeverity_t::LS_ERROR,
-        &v71,
+        &v69,
         "%s allocation count overflow",
         "AddToTailGetPtr");
     }
-    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v61, v62, v59, v60, v63, v64) != 0 )
+    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v61, v62, v59, v60) != 0 )
       loc_0 = -559038737;
     Plat_ExitProcess(1);
 LABEL_108:

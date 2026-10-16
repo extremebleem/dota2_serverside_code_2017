@@ -8,7 +8,7 @@ void __fastcall CDOTAInGamePredictionGameSystem::~CDOTAInGamePredictionGameSyste
 {
   bool v2; // zf
 
-  this->_vptr_IGameSystem = off_41078F0;
+  this->_vptr_IGameSystem = off_41078F0;  // vptr: CDOTAInGamePredictionGameSystem
   this->_vptr_IGameEventListener2 = off_4107A48;
   CUtlVectorBase<CDOTAInGamePredictionGameSystem::PredictionInfo_t,CUtlMemory<CDOTAInGamePredictionGameSystem::PredictionInfo_t,int>>::RemoveAll(&this->m_activePredictions);
   if ( (this->m_activePredictions.m_Memory.m_nGrowSize & 0xC0000000) == 0 )
@@ -18,15 +18,15 @@ void __fastcall CDOTAInGamePredictionGameSystem::~CDOTAInGamePredictionGameSyste
       CUtlMemory<CDOTAInGamePredictionGameSystem::PredictionInfo_t,int>::Purge(&this->m_activePredictions.m_Memory);
   }
   v2 = !this->m_bRegisteredForEvents;
-  this->_vptr_IGameEventListener2 = off_3FB3190;
+  this->_vptr_IGameEventListener2 = off_3FB3190;  // vptr: CGameEventListener
   if ( !v2 )
   {
     if ( gameeventmanager != 0 )
       (*(gameeventmanager->_vptr_IBaseInterface + 6))(gameeventmanager, &this->CGameEventListener);
     this->m_bRegisteredForEvents = 0;
   }
-  this->_vptr_IGameEventListener2 = off_3FB3150;
-  this->_vptr_IGameSystem = off_3F7C1B0;
+  this->_vptr_IGameEventListener2 = off_3FB3150;  // vptr: IGameEventListener2
+  this->_vptr_IGameSystem = off_3F7C1B0;  // vptr: CAutoGameSystem
   IGameSystem::~IGameSystem(this);
 }
 
@@ -38,7 +38,7 @@ void __fastcall CDOTAInGamePredictionGameSystem::~CDOTAInGamePredictionGameSyste
 {
   bool v2; // zf
 
-  this->_vptr_IGameSystem = off_41078F0;
+  this->_vptr_IGameSystem = off_41078F0;  // vptr: CDOTAInGamePredictionGameSystem
   this->_vptr_IGameEventListener2 = off_4107A48;
   CUtlVectorBase<CDOTAInGamePredictionGameSystem::PredictionInfo_t,CUtlMemory<CDOTAInGamePredictionGameSystem::PredictionInfo_t,int>>::RemoveAll(&this->m_activePredictions);
   if ( (this->m_activePredictions.m_Memory.m_nGrowSize & 0xC0000000) == 0 )
@@ -48,15 +48,15 @@ void __fastcall CDOTAInGamePredictionGameSystem::~CDOTAInGamePredictionGameSyste
       CUtlMemory<CDOTAInGamePredictionGameSystem::PredictionInfo_t,int>::Purge(&this->m_activePredictions.m_Memory);
   }
   v2 = !this->m_bRegisteredForEvents;
-  this->_vptr_IGameEventListener2 = off_3FB3190;
+  this->_vptr_IGameEventListener2 = off_3FB3190;  // vptr: CGameEventListener
   if ( !v2 )
   {
     if ( gameeventmanager != 0 )
       (*(gameeventmanager->_vptr_IBaseInterface + 6))(gameeventmanager, &this->CGameEventListener);
     this->m_bRegisteredForEvents = 0;
   }
-  this->_vptr_IGameEventListener2 = off_3FB3150;
-  this->_vptr_IGameSystem = off_3F7C1B0;
+  this->_vptr_IGameEventListener2 = off_3FB3150;  // vptr: IGameEventListener2
+  this->_vptr_IGameSystem = off_3F7C1B0;  // vptr: CAutoGameSystem
   IGameSystem::~IGameSystem(this);
   operator delete(this);
 }

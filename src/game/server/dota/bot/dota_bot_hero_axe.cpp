@@ -76,16 +76,16 @@ CDOTA_BotMode *__fastcall CDOTA_Bot_Hero_Axe::CreateMode(CDOTA_Bot_Hero_Axe *con
   {
     if ( iMode == 2 )
     {
-      v3 = operator new(0xE8u);
+      v3 = operator new(0xE8u);  // new CDOTA_BotMode_Attack_Axe (size matches)
       CDOTA_BotMode_Attack::CDOTA_BotMode_Attack(v3, this);
-      v3->_vptr_CDOTA_BotMode = off_42C81F0;
+      v3->_vptr_CDOTA_BotMode = off_42C81F0;  // vptr: CDOTA_BotMode_Attack_Axe
       return v3;
     }
     return CDOTA_Bot::CreateMode(this, iMode);
   }
-  v5 = operator new(0xF0u);
+  v5 = operator new(0xF0u);  // new CDOTA_BotMode_Laning_Axe (size matches)
   CDOTA_BotMode_Laning::CDOTA_BotMode_Laning(v5, this);
-  v5->_vptr_CDOTA_BotMode = off_42C8290;
+  v5->_vptr_CDOTA_BotMode = off_42C8290;  // vptr: CDOTA_BotMode_Laning_Axe
   return v5;
 }
 
@@ -196,7 +196,7 @@ void __fastcall CDOTA_Bot_AbilityUsage_Axe_BerserkersCall::CDOTA_Bot_AbilityUsag
   this->m_pAbility = pAbility;
   this->m_bUseOnCreeps = 0;
   this->m_pBot = pBot;
-  this->_vptr_CDOTA_Bot_AbilityUsage = off_42C8330;
+  this->_vptr_CDOTA_Bot_AbilityUsage = off_42C8330;  // vptr: CDOTA_Bot_AbilityUsage_Axe_BerserkersCall
 }
 
 
@@ -514,7 +514,7 @@ void __fastcall CDOTA_Bot_AbilityUsage_Axe_BattleHunger::CDOTA_Bot_AbilityUsage_
   this->m_pAbility = pAbility;
   this->m_bUseOnCreeps = 0;
   this->m_pBot = pBot;
-  this->_vptr_CDOTA_Bot_AbilityUsage = off_42C8390;
+  this->_vptr_CDOTA_Bot_AbilityUsage = off_42C8390;  // vptr: CDOTA_Bot_AbilityUsage_Axe_BattleHunger
   this->m_hDesiredTarget.m_Index = -1;
 }
 
@@ -824,7 +824,7 @@ void __fastcall CDOTA_Bot_AbilityUsage_Axe_CullingBlade::CDOTA_Bot_AbilityUsage_
   this->m_pAbility = pAbility;
   this->m_bUseOnCreeps = 0;
   this->m_pBot = pBot;
-  this->_vptr_CDOTA_Bot_AbilityUsage = off_42C83F0;
+  this->_vptr_CDOTA_Bot_AbilityUsage = off_42C83F0;  // vptr: CDOTA_Bot_AbilityUsage_Axe_CullingBlade
   this->m_hDesiredTarget.m_Index = -1;
 }
 

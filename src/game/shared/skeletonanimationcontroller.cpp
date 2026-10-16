@@ -62,7 +62,7 @@ void __fastcall CNetworkedSequenceOperation::CNetworkedSequenceOperation(CNetwor
   float v11; // [rsp+Ch] [rbp-24h]
   bool v12; // [rsp+16h] [rbp-1Ah]
 
-  this->_vptr_CNetworkedSequenceOperation = off_3FF4370;
+  this->_vptr_CNetworkedSequenceOperation = off_3FF4370;  // vptr: CNetworkedSequenceOperation
   this->m_hSequence.m_Value.m_Data = 0;
   this->m_flPrevCycle.m_Value = 0.0;
   this->m_flCycle.m_Value = 0.0;
@@ -1156,7 +1156,7 @@ datamap_t *__fastcall DataMapInit<CSkeletonAnimationController>(CSkeletonAnimati
 // callers: CBaseAnimatingController::CBaseAnimatingController
 void __fastcall CSkeletonAnimationController::CSkeletonAnimationController(CSkeletonAnimationController *const this)
 {
-  this->_vptr_CSkeletonAnimationController = off_3FFC590;
+  this->_vptr_CSkeletonAnimationController = off_3FFC590;  // vptr: CSkeletonAnimationController
   this->m_pSkeletonInstance = 0;
 }
 
@@ -1165,7 +1165,7 @@ void __fastcall CSkeletonAnimationController::CSkeletonAnimationController(CSkel
 // callers: CEntityComponentHelperReferenced<CBodyComponentBaseAnimating>::Free, CBaseAnimatingController::CBaseAnimatingController, CBaseAnimatingController::~CBaseAnimatingController, CEntityComponentHelperReferenced<CBodyComponentBaseAnimatingOverlay>::Free, CEntityComponentHelperReferenced<CBodyComponentBaseAnimatingOverlay>::Allocate, CEntityComponentHelperReferenced<CBodyComponentBaseAnimating>::Allocate
 void __fastcall CSkeletonAnimationController::~CSkeletonAnimationController(CSkeletonAnimationController *const this)
 {
-  this->_vptr_CSkeletonAnimationController = off_3FFC590;
+  this->_vptr_CSkeletonAnimationController = off_3FFC590;  // vptr: CSkeletonAnimationController
 }
 
 

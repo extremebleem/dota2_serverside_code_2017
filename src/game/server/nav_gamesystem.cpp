@@ -14,7 +14,7 @@ void __cdecl CNavGameSystem::YouForgot::ToDefine_DEFINE_GAME_SYSTEM()
 // globals: CDefOps<uint>::LessFunc(uint const&,uint const&)
 void __fastcall CNavGameSystem::CNavGameSystem(CNavGameSystem *const this)
 {
-  this->_vptr_IGameSystem = off_47B0A70;
+  this->_vptr_IGameSystem = off_47B0A70;  // vptr: CNavGameSystem
   this->m_NavInfoForSpawnGroup.m_Tree.m_Root = -1;
   this->m_NavInfoForSpawnGroup.m_Tree.m_NumElements = 0;
   this->m_NavInfoForSpawnGroup.m_Tree.m_LessFunc.m_LessFunc = CDefOps<unsigned int>::LessFunc;
@@ -38,7 +38,7 @@ void __fastcall CNavGameSystem::~CNavGameSystem(CNavGameSystem *const this)
 {
   CNavMesh *m_pNavMeshForSpawnGroupsWithNoNav; // rdi
 
-  this->_vptr_IGameSystem = off_47B0A70;
+  this->_vptr_IGameSystem = off_47B0A70;  // vptr: CNavGameSystem
   m_pNavMeshForSpawnGroupsWithNoNav = this->m_pNavMeshForSpawnGroupsWithNoNav;
   if ( m_pNavMeshForSpawnGroupsWithNoNav != 0 )
     (*(m_pNavMeshForSpawnGroupsWithNoNav->_vptr_CNavMesh + 1))(m_pNavMeshForSpawnGroupsWithNoNav);

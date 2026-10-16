@@ -5,7 +5,7 @@
 // calls: IGameSystem::~IGameSystem
 void __fastcall CGameTimescale::~CGameTimescale(CGameTimescale *const this)
 {
-  this->_vptr_IGameSystem = off_3F7C1B0;
+  this->_vptr_IGameSystem = off_3F7C1B0;  // vptr: CAutoGameSystem
   IGameSystem::~IGameSystem(this);
 }
 
@@ -14,7 +14,7 @@ void __fastcall CGameTimescale::~CGameTimescale(CGameTimescale *const this)
 // calls: IGameSystem::~IGameSystem, operator delete
 void __fastcall CGameTimescale::~CGameTimescale(CGameTimescale *const this)
 {
-  this->_vptr_IGameSystem = off_3F7C1B0;
+  this->_vptr_IGameSystem = off_3F7C1B0;  // vptr: CAutoGameSystem
   IGameSystem::~IGameSystem(this);
   operator delete(this);
 }

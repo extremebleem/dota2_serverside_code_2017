@@ -57,9 +57,9 @@ CDOTA_BotMode *__fastcall CDOTA_Bot_Hero_Earthshaker::CreateMode(CDOTA_Bot_Hero_
 
   if ( this->m_bHuman || iMode != 2 )
     return CDOTA_Bot::CreateMode(this, iMode);
-  v4 = operator new(0xE8u);
+  v4 = operator new(0xE8u);  // new CDOTA_BotMode_Attack_Earthshaker (size matches)
   CDOTA_BotMode_Attack::CDOTA_BotMode_Attack(v4, this);
-  v4->_vptr_CDOTA_BotMode = off_42CC2F0;
+  v4->_vptr_CDOTA_BotMode = off_42CC2F0;  // vptr: CDOTA_BotMode_Attack_Earthshaker
   return v4;
 }
 
@@ -340,7 +340,7 @@ void __fastcall CDOTA_Bot_AbilityUsage_Earthshaker_Fissure::CDOTA_Bot_AbilityUsa
   this->m_pAbility = pAbility;
   this->m_bUseOnCreeps = 0;
   this->m_pBot = pBot;
-  this->_vptr_CDOTA_Bot_AbilityUsage = off_42CC390;
+  this->_vptr_CDOTA_Bot_AbilityUsage = off_42CC390;  // vptr: CDOTA_Bot_AbilityUsage_Earthshaker_Fissure
 }
 
 
@@ -1905,7 +1905,7 @@ void __fastcall CDOTA_Bot_AbilityUsage_Earthshaker_EnchantTotem::CDOTA_Bot_Abili
   this->m_pAbility = pAbility;
   this->m_bUseOnCreeps = 0;
   this->m_pBot = pBot;
-  this->_vptr_CDOTA_Bot_AbilityUsage = off_42CC3F0;
+  this->_vptr_CDOTA_Bot_AbilityUsage = off_42CC3F0;  // vptr: CDOTA_Bot_AbilityUsage_Earthshaker_EnchantTotem
 }
 
 
@@ -2387,7 +2387,7 @@ void __fastcall CDOTA_Bot_AbilityUsage_Earthshaker_EchoSlam::CDOTA_Bot_AbilityUs
   this->m_pAbility = pAbility;
   this->m_bUseOnCreeps = 0;
   this->m_pBot = pBot;
-  this->_vptr_CDOTA_Bot_AbilityUsage = off_42CC450;
+  this->_vptr_CDOTA_Bot_AbilityUsage = off_42CC450;  // vptr: CDOTA_Bot_AbilityUsage_Earthshaker_EchoSlam
 }
 
 

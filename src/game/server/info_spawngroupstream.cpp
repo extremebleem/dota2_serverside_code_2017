@@ -508,7 +508,9 @@ void __fastcall CInfoSpawnGroupLoadUnload::InputStartSpawnGroupLoad(
   bool v4; // zf
   const char *v5; // rcx
   const char *v6; // rdx
-  float v7; // xmm1_4
+  double v7; // xmm1_8
+  double v8; // xmm0_8
+  CGlobalVars *v9; // r12
   FnGlobalVarsWarningFunc m_pfnWarningFunc; // rax
   CVariant value; // [rsp+0h] [rbp-30h] BYREF
 
@@ -558,13 +560,19 @@ LABEL_3:
       (*(*g_pMemAlloc + 16LL))(g_pMemAlloc, value.m_uint64);
     if ( LoggingSystem_IsChannelEnabled(LOG_SERVER, 1) != 0 )
       LoggingSystem_Log(LOG_SERVER, 1, "SV:  InputStartSpawnGroupLoad(%s)\n", m_pAsString);
-    if ( gpGlobals != 0 && !gpGlobals->m_bEnableAssertions && !gpGlobals->m_bInSimulation )
+    v8 = 0.0;
+    v9 = gpGlobals;
+    if ( gpGlobals != 0 )
     {
-      m_pfnWarningFunc = gpGlobals->m_pfnWarningFunc;
-      if ( m_pfnWarningFunc != 0 )
-        (m_pfnWarningFunc)(1, 0.0);
+      if ( !gpGlobals->m_bEnableAssertions && !gpGlobals->m_bInSimulation )
+      {
+        m_pfnWarningFunc = gpGlobals->m_pfnWarningFunc;
+        if ( m_pfnWarningFunc != 0 )
+          (m_pfnWarningFunc)(1, 0.0);
+      }
+      *&v8 = LODWORD(v9->m_flCurrentTime);
     }
-    CBaseEntity::SetNextThink(this, v7, 0);
+    CBaseEntity::SetNextThink(this, v8, v7, 0);
     CBaseEntity::ThinkSet(this, CInfoSpawnGroupLoadUnload::SpawnGroupLoadingThink, 0.0, 0, 0);
   }
 }
@@ -614,43 +622,51 @@ void __fastcall CInfoSpawnGroupLoadUnload::InputActivateSpawnGroup(
 // strings: "SV:  CInfoSpawnGroupLoadUnload:  LOAD FINISH %s/%s]\n"
 void __fastcall CInfoSpawnGroupLoadUnload::SpawnGroupLoadingThink(CInfoSpawnGroupLoadUnload *const this)
 {
-  float v1; // xmm1_4
+  double v1; // xmm1_8
+  double v2; // xmm0_8
+  CGlobalVars *v4; // r12
   FnGlobalVarsWarningFunc m_pfnWarningFunc; // rax
-  char v4; // r13
-  float v5; // xmm1_4
+  char v6; // r13
+  double v7; // xmm1_8
   const char *m_pAsString; // r8
-  const char *v7; // rcx
-  CVariant v8; // [rsp-30h] [rbp-38h] BYREF
+  const char *v9; // rcx
+  CVariant v10; // [rsp-30h] [rbp-38h] BYREF
 
-  if ( gpGlobals != 0 && !gpGlobals->m_bEnableAssertions && !gpGlobals->m_bInSimulation )
+  v2 = 0.0;
+  v4 = gpGlobals;
+  if ( gpGlobals != 0 )
   {
-    m_pfnWarningFunc = gpGlobals->m_pfnWarningFunc;
-    if ( m_pfnWarningFunc != 0 )
-      (m_pfnWarningFunc)(1, 0.0);
+    if ( !gpGlobals->m_bEnableAssertions && !gpGlobals->m_bInSimulation )
+    {
+      m_pfnWarningFunc = gpGlobals->m_pfnWarningFunc;
+      if ( m_pfnWarningFunc != 0 )
+        (m_pfnWarningFunc)(1, 0.0);
+    }
+    *&v2 = LODWORD(v4->m_flCurrentTime);
   }
-  CBaseEntity::SetNextThink(this, v1, 0);
-  v4 = (*(*engine + 472LL))(engine, this->m_Request.m_hSpawnGroup);
+  CBaseEntity::SetNextThink(this, v2, v1, 0);
+  v6 = (*(*engine + 472LL))(engine, this->m_Request.m_hSpawnGroup);
   (*(*engine + 480LL))(engine, this->m_Request.m_hSpawnGroup);
-  if ( v4 != 0 )
+  if ( v6 != 0 )
   {
     if ( LoggingSystem_IsChannelEnabled(LOG_SERVER, 1) != 0 )
     {
       m_pAsString = "";
       if ( this->m_iszSpawnGroupFilterName.u.m_Id != 0 )
         m_pAsString = this->m_iszSpawnGroupFilterName.u.m_pAsString;
-      v7 = "";
+      v9 = "";
       if ( this->m_iszSpawnGroupName.u.m_Id != 0 )
-        v7 = this->m_iszSpawnGroupName.u.m_pAsString;
-      LoggingSystem_Log(LOG_SERVER, 1, "SV:  CInfoSpawnGroupLoadUnload:  LOAD FINISH %s/%s]\n", v7, m_pAsString);
+        v9 = this->m_iszSpawnGroupName.u.m_pAsString;
+      LoggingSystem_Log(LOG_SERVER, 1, "SV:  CInfoSpawnGroupLoadUnload:  LOAD FINISH %s/%s]\n", v9, m_pAsString);
     }
     this->m_bStreamingStarted = 0;
-    CBaseEntity::SetNextThink(this, v5, 0);
-    v8.m_type = 0;
-    v8.m_flags = 0;
-    v8.m_uint64 = 0;
-    CEntityIOOutput::FireOutputInternal(&this->m_OnSpawnGroupLoadFinished, this, this, &v8, 0.0);
-    if ( (v8.m_flags & 1) != 0 )
-      (*(*g_pMemAlloc + 16LL))(g_pMemAlloc, v8.m_uint64);
+    CBaseEntity::SetNextThink(this, COERCE_DOUBLE(3212836864LL), v7, 0);
+    v10.m_type = 0;
+    v10.m_flags = 0;
+    v10.m_uint64 = 0;
+    CEntityIOOutput::FireOutputInternal(&this->m_OnSpawnGroupLoadFinished, this, this, &v10, 0.0);
+    if ( (v10.m_flags & 1) != 0 )
+      (*(*g_pMemAlloc + 16LL))(g_pMemAlloc, v10.m_uint64);
   }
 }
 
@@ -664,7 +680,9 @@ void __fastcall CInfoSpawnGroupLoadUnload::InputStartSpawnGroupUnload(
         inputdata_t *const inputdata)
 {
   const char *m_pAsString; // r12
-  float v4; // xmm1_4
+  double v4; // xmm1_8
+  double v5; // xmm0_8
+  CGlobalVars *v6; // r12
   FnGlobalVarsWarningFunc m_pfnWarningFunc; // rax
 
   if ( this->m_iszSpawnGroupName.u.m_Id != 0 )
@@ -676,13 +694,19 @@ void __fastcall CInfoSpawnGroupLoadUnload::InputStartSpawnGroupUnload(
     if ( LoggingSystem_IsChannelEnabled(LOG_SERVER, 1) != 0 )
       LoggingSystem_Log(LOG_SERVER, 1, "SV:  InputStartSpawnGroupUnload(%s)\n", m_pAsString);
     CBaseEntity::ThinkSet(this, CInfoSpawnGroupLoadUnload::SpawnGroupUnloadingThink, 0.0, 0, 0);
-    if ( gpGlobals != 0 && !gpGlobals->m_bEnableAssertions && !gpGlobals->m_bInSimulation )
+    v5 = 0.0;
+    v6 = gpGlobals;
+    if ( gpGlobals != 0 )
     {
-      m_pfnWarningFunc = gpGlobals->m_pfnWarningFunc;
-      if ( m_pfnWarningFunc != 0 )
-        (m_pfnWarningFunc)(1, 0.0);
+      if ( !gpGlobals->m_bEnableAssertions && !gpGlobals->m_bInSimulation )
+      {
+        m_pfnWarningFunc = gpGlobals->m_pfnWarningFunc;
+        if ( m_pfnWarningFunc != 0 )
+          (m_pfnWarningFunc)(1, 0.0);
+      }
+      *&v5 = LODWORD(v6->m_flCurrentTime);
     }
-    CBaseEntity::SetNextThink(this, v4, 0);
+    CBaseEntity::SetNextThink(this, v5, v4, 0);
   }
 }
 
@@ -694,10 +718,12 @@ void __fastcall CInfoSpawnGroupLoadUnload::SpawnGroupUnloadingThink(CInfoSpawnGr
 {
   const char *m_pAsString; // r12
   SpawnGroupHandle_t SpawnGroupByName; // r13d
-  float v4; // xmm1_4
-  float v5; // xmm1_4
+  double v4; // xmm1_8
+  double v5; // xmm1_8
+  double v6; // xmm0_8
+  CGlobalVars *v7; // r15
   FnGlobalVarsWarningFunc m_pfnWarningFunc; // rax
-  float v7; // xmm1_4
+  double v9; // xmm1_8
   CVariant value; // [rsp+0h] [rbp-40h] BYREF
 
   if ( this->m_iszSpawnGroupName.u.m_Id != 0 )
@@ -727,16 +753,22 @@ void __fastcall CInfoSpawnGroupLoadUnload::SpawnGroupUnloadingThink(CInfoSpawnGr
         "SV:  SpawnGroupUnloadingThink(%s), ignored because server doesn't know about this spawngroup!\n",
         m_pAsString);
     }
-    CBaseEntity::SetNextThink(this, v5, 0);
+    CBaseEntity::SetNextThink(this, COERCE_DOUBLE(3212836864LL), v5, 0);
     return;
   }
-  if ( gpGlobals != 0 && !gpGlobals->m_bEnableAssertions && !gpGlobals->m_bInSimulation )
+  v6 = 0.0;
+  v7 = gpGlobals;
+  if ( gpGlobals != 0 )
   {
-    m_pfnWarningFunc = gpGlobals->m_pfnWarningFunc;
-    if ( m_pfnWarningFunc != 0 )
-      (m_pfnWarningFunc)(1, 0.0);
+    if ( !gpGlobals->m_bEnableAssertions && !gpGlobals->m_bInSimulation )
+    {
+      m_pfnWarningFunc = gpGlobals->m_pfnWarningFunc;
+      if ( m_pfnWarningFunc != 0 )
+        (m_pfnWarningFunc)(1, 0.0);
+    }
+    *&v6 = LODWORD(v7->m_flCurrentTime);
   }
-  CBaseEntity::SetNextThink(this, v4, 0);
+  CBaseEntity::SetNextThink(this, v6, v4, 0);
   if ( (*(g_pGameRules->_vptr_CGameRules + 150))(g_pGameRules, SpawnGroupByName) != 0 )
   {
     if ( this->m_bUnloadingStarted )
@@ -746,13 +778,13 @@ void __fastcall CInfoSpawnGroupLoadUnload::SpawnGroupUnloadingThink(CInfoSpawnGr
         if ( LoggingSystem_IsChannelEnabled(LOG_SERVER, 1) != 0 )
           LoggingSystem_Log(LOG_SERVER, 1, "SV:  SpawnGroupUnloadingThink:  UNLOAD FINISH %s]\n", m_pAsString);
         this->m_bUnloadingStarted = 0;
-        CBaseEntity::SetNextThink(this, v7, 0);
+        CBaseEntity::SetNextThink(this, COERCE_DOUBLE(3212836864LL), v9, 0);
         value.m_type = 0;
         value.m_flags = 0;
         value.m_uint64 = 0;
         CEntityIOOutput::FireOutputInternal(&this->m_OnSpawnGroupUnloadFinished, this, this, &value, 0.0);
         if ( (value.m_flags & 1) != 0 )
-          goto LABEL_29;
+          goto LABEL_30;
       }
     }
     else
@@ -766,7 +798,7 @@ void __fastcall CInfoSpawnGroupLoadUnload::SpawnGroupUnloadingThink(CInfoSpawnGr
       value.m_uint64 = 0;
       CEntityIOOutput::FireOutputInternal(&this->m_OnSpawnGroupUnloadStarted, this, this, &value, 0.0);
       if ( (value.m_flags & 1) != 0 )
-LABEL_29:
+LABEL_30:
         (*(*g_pMemAlloc + 16LL))(g_pMemAlloc, value.m_uint64);
     }
   }

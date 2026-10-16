@@ -76,16 +76,16 @@ CDOTA_BotMode *__fastcall CDOTA_Bot_Hero_BountyHunter::CreateMode(CDOTA_Bot_Hero
   {
     if ( iMode == 3 )
     {
-      v3 = operator new(0x108u);
+      v3 = operator new(0x108u);  // new CDOTA_BotMode_Roam_BountyHunter (size matches)
       CDOTA_BotMode_Roam::CDOTA_BotMode_Roam(v3, this);
-      v3->_vptr_CDOTA_BotMode = off_42C9410;
+      v3->_vptr_CDOTA_BotMode = off_42C9410;  // vptr: CDOTA_BotMode_Roam_BountyHunter
       return v3;
     }
     return CDOTA_Bot::CreateMode(this, iMode);
   }
-  v5 = operator new(0xE8u);
+  v5 = operator new(0xE8u);  // new CDOTA_BotMode_Attack_BountyHunter (size matches)
   CDOTA_BotMode_Attack::CDOTA_BotMode_Attack(v5, this);
-  v5->_vptr_CDOTA_BotMode = off_42C9370;
+  v5->_vptr_CDOTA_BotMode = off_42C9370;  // vptr: CDOTA_BotMode_Attack_BountyHunter
   return v5;
 }
 
@@ -358,7 +358,7 @@ void __fastcall CDOTA_Bot_AbilityUsage_BountyHunter_ShurikenToss::CDOTA_Bot_Abil
   this->m_pAbility = pAbility;
   this->m_bUseOnCreeps = 0;
   this->m_pBot = pBot;
-  this->_vptr_CDOTA_Bot_AbilityUsage = off_42C94D0;
+  this->_vptr_CDOTA_Bot_AbilityUsage = off_42C94D0;  // vptr: CDOTA_Bot_AbilityUsage_BountyHunter_ShurikenToss
   this->m_hDesiredTarget.m_Index = -1;
 }
 
@@ -654,7 +654,7 @@ void __fastcall CDOTA_Bot_AbilityUsage_BountyHunter_WindWalk::CDOTA_Bot_AbilityU
   this->m_pAbility = pAbility;
   this->m_bUseOnCreeps = 0;
   this->m_pBot = pBot;
-  this->_vptr_CDOTA_Bot_AbilityUsage = off_42C9530;
+  this->_vptr_CDOTA_Bot_AbilityUsage = off_42C9530;  // vptr: CDOTA_Bot_AbilityUsage_BountyHunter_WindWalk
 }
 
 
@@ -723,7 +723,7 @@ void __fastcall CDOTA_Bot_AbilityUsage_BountyHunter_Track::CDOTA_Bot_AbilityUsag
   this->m_pAbility = pAbility;
   this->m_bUseOnCreeps = 0;
   this->m_pBot = pBot;
-  this->_vptr_CDOTA_Bot_AbilityUsage = off_42C9590;
+  this->_vptr_CDOTA_Bot_AbilityUsage = off_42C9590;  // vptr: CDOTA_Bot_AbilityUsage_BountyHunter_Track
   this->m_hDesiredTarget.m_Index = -1;
 }
 

@@ -77,7 +77,7 @@ void __fastcall CWeaponScriptParser::~CWeaponScriptParser(CWeaponScriptParser *c
     if ( (this->m_WeaponDatabase.m_Memory.m_nGrowSize & 0xC0000000) == 0 )
       CUtlMemory<FileWeaponInfo_t *,int>::Purge(&this->m_WeaponDatabase.m_Memory);
   }
-  this->_vptr_IGameSystem = off_3F7C1B0;
+  this->_vptr_IGameSystem = off_3F7C1B0;  // vptr: CAutoGameSystem
   IGameSystem::~IGameSystem(this);
 }
 
@@ -104,7 +104,7 @@ void __fastcall CWeaponScriptParser::~CWeaponScriptParser(CWeaponScriptParser *c
     if ( (this->m_WeaponDatabase.m_Memory.m_nGrowSize & 0xC0000000) == 0 )
       CUtlMemory<FileWeaponInfo_t *,int>::Purge(&this->m_WeaponDatabase.m_Memory);
   }
-  this->_vptr_IGameSystem = off_3F7C1B0;
+  this->_vptr_IGameSystem = off_3F7C1B0;  // vptr: CAutoGameSystem
   IGameSystem::~IGameSystem(this);
   operator delete(this);
 }
@@ -715,7 +715,7 @@ LABEL_8:
   else
     CUtlString::operator=(&this->m_szAmmo1, v19);
   v20 = CUtlString::Get(&this->m_szAmmo1);
-  v21 = (*g_pWeaponInfo->_vptr_IWeaponInfo)(g_pWeaponInfo);
+  v21 = g_pWeaponInfo->GetAmmoDef();
   this->m_iAmmoType = CAmmoDef::Index(v21, v20);
   v22 = KeyValues::GetString(pKeyValuesData, "secondary_ammo", "None", 0, 0);
   if ( strcmp("None", v22) == 0 )
@@ -723,7 +723,7 @@ LABEL_8:
   else
     CUtlString::operator=(&this->m_szAmmo2, v22);
   v23 = CUtlString::Get(&this->m_szAmmo2);
-  v24 = (*g_pWeaponInfo->_vptr_IWeaponInfo)(g_pWeaponInfo);
+  v24 = g_pWeaponInfo->GetAmmoDef();
   this->m_iAmmo2Type = CAmmoDef::Index(v24, v23);
   CUtlVectorBase<WeaponSoundData_t,CUtlMemory<WeaponSoundData_t,int>>::RemoveAll(&this->m_aShootSounds);
   if ( (this->m_aShootSounds.m_Memory.m_nGrowSize & 0xC0000000) == 0 )

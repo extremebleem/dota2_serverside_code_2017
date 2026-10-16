@@ -69,7 +69,7 @@ void __fastcall CNotifyManager::~CNotifyManager(CNotifyManager *const this)
   CUtlVectorBase<entitynotify_t,CUtlMemory<entitynotify_t,int> >::CAllocator *p_m_Memory; // r12
 
   v2 = (this->m_notifyList.m_Memory.m_nGrowSize & 0xC0000000) == 0;
-  this->_vptr_IGameSystem = off_3FCCBB0;
+  this->_vptr_IGameSystem = off_3FCCBB0;  // vptr: CNotifyManager
   this->_vptr_INotify = off_3FCCD38;
   this->m_notifyList.m_Size = 0;
   this->_vptr_IEntityListener = &off_3FCCD70;
@@ -80,7 +80,7 @@ void __fastcall CNotifyManager::~CNotifyManager(CNotifyManager *const this)
     if ( (this->m_notifyList.m_Memory.m_nGrowSize & 0xC0000000) == 0 )
       CUtlMemory<entitynotify_t,int>::Purge(p_m_Memory);
   }
-  this->_vptr_IGameSystem = off_3F7C1B0;
+  this->_vptr_IGameSystem = off_3F7C1B0;  // vptr: CAutoGameSystem
   IGameSystem::~IGameSystem(this);
 }
 
@@ -93,7 +93,7 @@ void __fastcall CNotifyManager::~CNotifyManager(CNotifyManager *const this)
   CUtlVectorBase<entitynotify_t,CUtlMemory<entitynotify_t,int> >::CAllocator *p_m_Memory; // r12
 
   v2 = (this->m_notifyList.m_Memory.m_nGrowSize & 0xC0000000) == 0;
-  this->_vptr_IGameSystem = off_3FCCBB0;
+  this->_vptr_IGameSystem = off_3FCCBB0;  // vptr: CNotifyManager
   this->_vptr_INotify = off_3FCCD38;
   this->m_notifyList.m_Size = 0;
   this->_vptr_IEntityListener = &off_3FCCD70;
@@ -104,7 +104,7 @@ void __fastcall CNotifyManager::~CNotifyManager(CNotifyManager *const this)
     if ( (this->m_notifyList.m_Memory.m_nGrowSize & 0xC0000000) == 0 )
       CUtlMemory<entitynotify_t,int>::Purge(p_m_Memory);
   }
-  this->_vptr_IGameSystem = off_3F7C1B0;
+  this->_vptr_IGameSystem = off_3F7C1B0;  // vptr: CAutoGameSystem
   IGameSystem::~IGameSystem(this);
   operator delete(this);
 }

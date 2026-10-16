@@ -3731,7 +3731,7 @@ EEconItemQuality __fastcall CItemSocket_Autograph::GetQuality(const CItemSocket_
 // CSocketIterator::~CSocketIterator  (line 609, @0x0000000002ea1fc0, libserver.so)  // inlines: ~CEconItemSpecificAttributeIterator, ~IEconItemAttributeIterator
 void __fastcall CSocketIterator::~CSocketIterator(CSocketIterator *const this)
 {
-  this->_vptr_IEconItemAttributeIterator = off_40DB570;
+  this->_vptr_IEconItemAttributeIterator = off_40DB570;  // vptr: IEconItemAttributeIterator
 }
 
 
@@ -3739,7 +3739,7 @@ void __fastcall CSocketIterator::~CSocketIterator(CSocketIterator *const this)
 // calls: operator delete
 void __fastcall CSocketIterator::~CSocketIterator(CSocketIterator *const this)
 {
-  this->_vptr_IEconItemAttributeIterator = off_40DB570;
+  this->_vptr_IEconItemAttributeIterator = off_40DB570;  // vptr: IEconItemAttributeIterator
   operator delete(this);
 }
 
@@ -3747,7 +3747,7 @@ void __fastcall CSocketIterator::~CSocketIterator(CSocketIterator *const this)
 // TSocketIterator<CItemSocket_Color>::~TSocketIterator  (line 655, @0x00000000024980e0, libserver.so)  // inlines: ~CEconItemSpecificAttributeIterator, ~CSocketIterator, ~IEconItemAttributeIterator
 void __fastcall TSocketIterator<CItemSocket_Color>::~TSocketIterator(TSocketIterator<CItemSocket_Color> *const this)
 {
-  this->_vptr_IEconItemAttributeIterator = off_40DB570;
+  this->_vptr_IEconItemAttributeIterator = off_40DB570;  // vptr: IEconItemAttributeIterator
 }
 
 
@@ -3755,7 +3755,7 @@ void __fastcall TSocketIterator<CItemSocket_Color>::~TSocketIterator(TSocketIter
 // calls: operator delete
 void __fastcall TSocketIterator<CItemSocket_Color>::~TSocketIterator(TSocketIterator<CItemSocket_Color> *const this)
 {
-  this->_vptr_IEconItemAttributeIterator = off_40DB570;
+  this->_vptr_IEconItemAttributeIterator = off_40DB570;  // vptr: IEconItemAttributeIterator
   operator delete(this);
 }
 
@@ -3764,7 +3764,7 @@ void __fastcall TSocketIterator<CItemSocket_Color>::~TSocketIterator(TSocketIter
 void __fastcall TSocketIterator<CItemSocket_Strange>::~TSocketIterator(
         TSocketIterator<CItemSocket_Strange> *const this)
 {
-  this->_vptr_IEconItemAttributeIterator = off_40DB570;
+  this->_vptr_IEconItemAttributeIterator = off_40DB570;  // vptr: IEconItemAttributeIterator
 }
 
 
@@ -3773,7 +3773,7 @@ void __fastcall TSocketIterator<CItemSocket_Strange>::~TSocketIterator(
 void __fastcall TSocketIterator<CItemSocket_Strange>::~TSocketIterator(
         TSocketIterator<CItemSocket_Strange> *const this)
 {
-  this->_vptr_IEconItemAttributeIterator = off_40DB570;
+  this->_vptr_IEconItemAttributeIterator = off_40DB570;  // vptr: IEconItemAttributeIterator
   operator delete(this);
 }
 
@@ -3782,7 +3782,7 @@ void __fastcall TSocketIterator<CItemSocket_Strange>::~TSocketIterator(
 void __fastcall TSocketIterator<CItemSocket_Spectator>::~TSocketIterator(
         TSocketIterator<CItemSocket_Spectator> *const this)
 {
-  this->_vptr_IEconItemAttributeIterator = off_40DB570;
+  this->_vptr_IEconItemAttributeIterator = off_40DB570;  // vptr: IEconItemAttributeIterator
 }
 
 
@@ -3791,7 +3791,7 @@ void __fastcall TSocketIterator<CItemSocket_Spectator>::~TSocketIterator(
 void __fastcall TSocketIterator<CItemSocket_Spectator>::~TSocketIterator(
         TSocketIterator<CItemSocket_Spectator> *const this)
 {
-  this->_vptr_IEconItemAttributeIterator = off_40DB570;
+  this->_vptr_IEconItemAttributeIterator = off_40DB570;  // vptr: IEconItemAttributeIterator
   operator delete(this);
 }
 
@@ -3799,7 +3799,7 @@ void __fastcall TSocketIterator<CItemSocket_Spectator>::~TSocketIterator(
 // TSocketIterator<CItemSocket_Effect>::~TSocketIterator  (line 655, @0x0000000002ea2060, libserver.so)  // inlines: ~CEconItemSpecificAttributeIterator, ~CSocketIterator, ~IEconItemAttributeIterator
 void __fastcall TSocketIterator<CItemSocket_Effect>::~TSocketIterator(TSocketIterator<CItemSocket_Effect> *const this)
 {
-  this->_vptr_IEconItemAttributeIterator = off_40DB570;
+  this->_vptr_IEconItemAttributeIterator = off_40DB570;  // vptr: IEconItemAttributeIterator
 }
 
 
@@ -3807,7 +3807,7 @@ void __fastcall TSocketIterator<CItemSocket_Effect>::~TSocketIterator(TSocketIte
 void __fastcall TSocketIterator<CItemSocket_AssetModifier>::~TSocketIterator(
         TSocketIterator<CItemSocket_AssetModifier> *const this)
 {
-  this->_vptr_IEconItemAttributeIterator = off_40DB570;
+  this->_vptr_IEconItemAttributeIterator = off_40DB570;  // vptr: IEconItemAttributeIterator
 }
 
 
@@ -3815,7 +3815,7 @@ void __fastcall TSocketIterator<CItemSocket_AssetModifier>::~TSocketIterator(
 // calls: operator delete
 void __fastcall TSocketIterator<CItemSocket_Effect>::~TSocketIterator(TSocketIterator<CItemSocket_Effect> *const this)
 {
-  this->_vptr_IEconItemAttributeIterator = off_40DB570;
+  this->_vptr_IEconItemAttributeIterator = off_40DB570;  // vptr: IEconItemAttributeIterator
   operator delete(this);
 }
 
@@ -3825,7 +3825,7 @@ void __fastcall TSocketIterator<CItemSocket_Effect>::~TSocketIterator(TSocketIte
 void __fastcall TSocketIterator<CItemSocket_AssetModifier>::~TSocketIterator(
         TSocketIterator<CItemSocket_AssetModifier> *const this)
 {
-  this->_vptr_IEconItemAttributeIterator = off_40DB570;
+  this->_vptr_IEconItemAttributeIterator = off_40DB570;  // vptr: IEconItemAttributeIterator
   operator delete(this);
 }
 

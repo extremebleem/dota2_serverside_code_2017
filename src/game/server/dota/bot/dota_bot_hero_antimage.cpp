@@ -58,7 +58,7 @@ void __fastcall CDOTA_Bot_AbilityUsage_Antimage_Blink::CDOTA_Bot_AbilityUsage_An
   this->m_pAbility = pAbility;
   this->m_bUseOnCreeps = 0;
   this->m_pBot = pBot;
-  this->_vptr_CDOTA_Bot_AbilityUsage = off_42C7FD0;
+  this->_vptr_CDOTA_Bot_AbilityUsage = off_42C7FD0;  // vptr: CDOTA_Bot_AbilityUsage_Antimage_Blink
 }
 
 
@@ -87,7 +87,7 @@ void __fastcall CDOTA_Bot_AbilityUsage_Antimage_ManaVoid::CDOTA_Bot_AbilityUsage
   this->m_pAbility = pAbility;
   this->m_bUseOnCreeps = 0;
   this->m_pBot = pBot;
-  this->_vptr_CDOTA_Bot_AbilityUsage = off_42C8030;
+  this->_vptr_CDOTA_Bot_AbilityUsage = off_42C8030;  // vptr: CDOTA_Bot_AbilityUsage_Antimage_ManaVoid
 }
 
 

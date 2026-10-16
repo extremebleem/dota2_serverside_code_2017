@@ -18,7 +18,7 @@ void __fastcall CDOTA_ActionDelayer::~CDOTA_ActionDelayer(CDOTA_ActionDelayer *c
   CUtlVectorBase<DelayedAction_t,CUtlMemory<DelayedAction_t,int> >::CAllocator *p_m_Memory; // r12
 
   v2 = (this->m_vDelayedActions.m_Memory.m_nGrowSize & 0xC0000000) == 0;
-  this->_vptr_IGameSystem = off_40D6D90;
+  this->_vptr_IGameSystem = off_40D6D90;  // vptr: CDOTA_ActionDelayer
   this->m_vDelayedActions.m_Size = 0;
   if ( v2 )
   {
@@ -27,7 +27,7 @@ void __fastcall CDOTA_ActionDelayer::~CDOTA_ActionDelayer(CDOTA_ActionDelayer *c
     if ( (this->m_vDelayedActions.m_Memory.m_nGrowSize & 0xC0000000) == 0 )
       CUtlMemory<DelayedAction_t,int>::Purge(p_m_Memory);
   }
-  this->_vptr_IGameSystem = off_3F7C1B0;
+  this->_vptr_IGameSystem = off_3F7C1B0;  // vptr: CAutoGameSystem
   IGameSystem::~IGameSystem(this);
 }
 
@@ -40,7 +40,7 @@ void __fastcall CDOTA_ActionDelayer::~CDOTA_ActionDelayer(CDOTA_ActionDelayer *c
   CUtlVectorBase<DelayedAction_t,CUtlMemory<DelayedAction_t,int> >::CAllocator *p_m_Memory; // r12
 
   v2 = (this->m_vDelayedActions.m_Memory.m_nGrowSize & 0xC0000000) == 0;
-  this->_vptr_IGameSystem = off_40D6D90;
+  this->_vptr_IGameSystem = off_40D6D90;  // vptr: CDOTA_ActionDelayer
   this->m_vDelayedActions.m_Size = 0;
   if ( v2 )
   {
@@ -49,7 +49,7 @@ void __fastcall CDOTA_ActionDelayer::~CDOTA_ActionDelayer(CDOTA_ActionDelayer *c
     if ( (this->m_vDelayedActions.m_Memory.m_nGrowSize & 0xC0000000) == 0 )
       CUtlMemory<DelayedAction_t,int>::Purge(p_m_Memory);
   }
-  this->_vptr_IGameSystem = off_3F7C1B0;
+  this->_vptr_IGameSystem = off_3F7C1B0;  // vptr: CAutoGameSystem
   IGameSystem::~IGameSystem(this);
   operator delete(this);
 }

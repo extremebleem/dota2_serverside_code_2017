@@ -130,7 +130,7 @@ void __fastcall CDOTABehaviorMoveTo::Update(
   }
   if ( !CDOTA_BaseNPC::IsActionLocked(me) )
   {
-    v9 = (*pMoveTo->_vptr_IDOTABehaviorMoveTo)(pMoveTo, me);
+    v9 = pMoveTo->GetTargetPosition(me);
     vptr_IDOTABehaviorMoveTo = pMoveTo->_vptr_IDOTABehaviorMoveTo;
     *&vTargetPos.x = v9;
     vTargetPos.z = v11;

@@ -57,9 +57,9 @@ CDOTA_BotMode *__fastcall CDOTA_Bot_Hero_Windrunner::CreateMode(CDOTA_Bot_Hero_W
 
   if ( this->m_bHuman || iMode != 2 )
     return CDOTA_Bot::CreateMode(this, iMode);
-  v4 = operator new(0xE8u);
+  v4 = operator new(0xE8u);  // new CDOTA_BotMode_Attack_Windrunner (size matches)
   CDOTA_BotMode_Attack::CDOTA_BotMode_Attack(v4, this);
-  v4->_vptr_CDOTA_BotMode = off_42D2750;
+  v4->_vptr_CDOTA_BotMode = off_42D2750;  // vptr: CDOTA_BotMode_Attack_Windrunner
   return v4;
 }
 
@@ -194,7 +194,7 @@ void __fastcall CDOTA_Bot_AbilityUsage_Windrunner_Shackleshot::CDOTA_Bot_Ability
   this->m_pAbility = pAbility;
   this->m_bUseOnCreeps = 0;
   this->m_pBot = pBot;
-  this->_vptr_CDOTA_Bot_AbilityUsage = off_42D27F0;
+  this->_vptr_CDOTA_Bot_AbilityUsage = off_42D27F0;  // vptr: CDOTA_Bot_AbilityUsage_Windrunner_Shackleshot
   this->m_hDesiredTarget.m_Index = -1;
 }
 
@@ -818,7 +818,7 @@ void __fastcall CDOTA_Bot_AbilityUsage_Windrunner_Powershot::CDOTA_Bot_AbilityUs
   this->m_pAbility = pAbility;
   this->m_bUseOnCreeps = 0;
   this->m_pBot = pBot;
-  this->_vptr_CDOTA_Bot_AbilityUsage = off_42D2850;
+  this->_vptr_CDOTA_Bot_AbilityUsage = off_42D2850;  // vptr: CDOTA_Bot_AbilityUsage_Windrunner_Powershot
 }
 
 
@@ -1136,7 +1136,7 @@ void __fastcall CDOTA_Bot_AbilityUsage_Windrunner_Windrun::CDOTA_Bot_AbilityUsag
   this->m_pAbility = pAbility;
   this->m_bUseOnCreeps = 0;
   this->m_pBot = pBot;
-  this->_vptr_CDOTA_Bot_AbilityUsage = off_42D28B0;
+  this->_vptr_CDOTA_Bot_AbilityUsage = off_42D28B0;  // vptr: CDOTA_Bot_AbilityUsage_Windrunner_Windrun
 }
 
 
@@ -1258,7 +1258,7 @@ void __fastcall CDOTA_Bot_AbilityUsage_Windrunner_FocusFire::CDOTA_Bot_AbilityUs
   this->m_pAbility = pAbility;
   this->m_bUseOnCreeps = 0;
   this->m_pBot = pBot;
-  this->_vptr_CDOTA_Bot_AbilityUsage = off_42D2910;
+  this->_vptr_CDOTA_Bot_AbilityUsage = off_42D2910;  // vptr: CDOTA_Bot_AbilityUsage_Windrunner_FocusFire
   this->m_hDesiredTarget.m_Index = -1;
 }
 

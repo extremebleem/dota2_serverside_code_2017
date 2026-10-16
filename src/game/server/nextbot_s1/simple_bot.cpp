@@ -232,7 +232,7 @@ void __fastcall CSimpleBotRoam::~CSimpleBotRoam(CSimpleBotRoam *const this)
   p_m_pathFollower = &this->m_pathFollower;
   *&p_m_pathFollower[-1].m_MyPath.m_flMaxPathLength = &off_47B4290;
   p_m_pathFollower[-1].m_MyPath.m_pOptimizer = &off_47B46B0;
-  p_m_pathFollower->_vptr_IPathFollower = off_47B4230;
+  p_m_pathFollower->_vptr_IPathFollower = off_47B4230;  // vptr: CPathAndFollower<CNavPathNB>
   p_m_pathFollower->m_MyPath._vptr_CPathData = off_47B0E10;
   CPathFollower::~CPathFollower(p_m_pathFollower);
   Action<CSimpleBot>::~Action(this);
@@ -248,7 +248,7 @@ void __fastcall CSimpleBotRoam::~CSimpleBotRoam(CSimpleBotRoam *const this)
   p_m_pathFollower = &this->m_pathFollower;
   *&p_m_pathFollower[-1].m_MyPath.m_flMaxPathLength = &off_47B4290;
   p_m_pathFollower[-1].m_MyPath.m_pOptimizer = &off_47B46B0;
-  p_m_pathFollower->_vptr_IPathFollower = off_47B4230;
+  p_m_pathFollower->_vptr_IPathFollower = off_47B4230;  // vptr: CPathAndFollower<CNavPathNB>
   p_m_pathFollower->m_MyPath._vptr_CPathData = off_47B0E10;
   CPathFollower::~CPathFollower(p_m_pathFollower);
   Action<CSimpleBot>::~Action(this);
@@ -406,7 +406,7 @@ ActionResult<CSimpleBot> *__fastcall CSimpleBotRoam::Update(
         (*(m_rPath->_vptr_CPathData + 8))(m_rPath, v27);
       }
     }
-    rPathCaps = RandomFloat(COERCE_DOUBLE(1084227584), 10.0);
+    rPathCaps = RandomFloat(5.0, 10.0);
     *&v28 = CountdownTimer::Now(p_m_timer) + rPathCaps;
     if ( *&v28 != this->m_timer.m_timestamp.m_Value )
     {

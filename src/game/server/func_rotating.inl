@@ -98,7 +98,7 @@ CEntityInstance *__fastcall CFuncRotating::CEntityInstanceEntityClass::Construct
 void __fastcall CFuncRotating::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CFuncRotating::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -108,7 +108,7 @@ void __fastcall CFuncRotating::CEntityInstanceEntityClass::~CEntityInstanceEntit
 void __fastcall CFuncRotating::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CFuncRotating::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }

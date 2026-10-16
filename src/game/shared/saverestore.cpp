@@ -461,7 +461,7 @@ void __fastcall CEntitySaveRestoreBlockHandler::WriteSaveHeaders(
   unsigned __int64 v20; // [rsp+148h] [rbp-38h]
 
   v20 = __readfsqword(0x28u);
-  v3 = (*this->_vptr_ISaveRestoreBlockHandler)(this);
+  v3 = this->GetBlockName();
   CFmtStrN<256,false>::CFmtStrN(&v19, "%s | ", v3);
   if ( pSave != 0 )
     v4 = __dynamic_cast(pSave, &`typeinfo for'ISave, &`typeinfo for'CSave, 0);
@@ -1573,7 +1573,7 @@ void __fastcall CSaveRestoreBlockSet::PreSave(
       ++v3;
       v6 = &this->m_BlockHeaders.m_Memory.m_pMemory[v5];
       v7 = this->m_Handlers.m_Memory.m_pMemory[v5++];
-      v8 = (*v7->_vptr_ISaveRestoreBlockHandler)(v7);
+      v8 = v7->GetBlockName();
       _V_strncpy(v6, v8, 32);
       (*(v7->_vptr_ISaveRestoreBlockHandler + 1))(v7, pData, list);
     }
@@ -1615,9 +1615,9 @@ void __fastcall CSaveRestoreBlockSet::Save(CSaveRestoreBlockSet *const this, ISa
       v8 = this->m_Handlers.m_Memory.m_pMemory[v4];
       v15 = &this->m_BlockHeaders.m_Memory.m_pMemory[v4];
       v15->m_locBody = (*(pSave->_vptr_ISave + 3))(pSave) - base;
-      v9 = (*v8->_vptr_ISaveRestoreBlockHandler)(v8);
+      v9 = v8->GetBlockName();
       LODWORD(v15) = V_stricmp_fast(v9, "Entities");
-      v10 = (*v8->_vptr_ISaveRestoreBlockHandler)(v8);
+      v10 = v8->GetBlockName();
       CFmtStrN<256,false>::CFmtStrN(&v17, "%-16.16s | ", v10);
       v11 = __dynamic_cast(pSave, &`typeinfo for'ISave, &`typeinfo for'CSave, 0);
       guard.m_sScopeName.m_pString = 0;
@@ -1750,7 +1750,7 @@ void __fastcall CSaveRestoreBlockSet::WriteSaveHeaders(CSaveRestoreBlockSet *con
       v12 = &this->m_BlockHeaders.m_Memory.m_pMemory[v9];
       v13 = this->m_Handlers.m_Memory.m_pMemory[v9];
       v12->m_locHeader = (*(pSave->_vptr_ISave + 3))(pSave) - base;
-      v14 = (*v13->_vptr_ISaveRestoreBlockHandler)(v13);
+      v14 = v13->GetBlockName();
       CFmtStrN<256,false>::CFmtStrN(&v37, "%-16.16s | ", v14);
       v15 = __dynamic_cast(pSave, &`typeinfo for'ISave, &`typeinfo for'CSave, 0);
       guard.m_sScopeName.m_pString = 0;
@@ -1890,7 +1890,7 @@ void __fastcall CSaveRestoreBlockSet::ReadRestoreHeaders(CSaveRestoreBlockSet *c
   int i; // [rsp+1Ch] [rbp-54h]
   _QWORD v14[10]; // [rsp+20h] [rbp-50h] BYREF
 
-  base = (*pRestore->_vptr_IRestore)(pRestore);
+  base = pRestore->GetReadPos();
   (*(pRestore->_vptr_IRestore + 24))(pRestore, &this->m_SizeHeaders, 1, 0);
   (*(pRestore->_vptr_IRestore + 24))(pRestore, &this->m_SizeBodies, 1, 0);
   if ( `guard variable for'ISaveRestoreOps * CUtlVectorDataopsInstantiator<10>::GetDataOps<CUtlVector<SaveRestoreBlockHeader_t,CUtlMemory<SaveRestoreBlockHeader_t,int>>>(CUtlVector<SaveRestoreBlockHeader_t,CUtlMemory<SaveRestoreBlockHeader_t,int>> *)::ops == 0
@@ -1911,7 +1911,7 @@ void __fastcall CSaveRestoreBlockSet::ReadRestoreHeaders(CSaveRestoreBlockSet *c
   for ( i = 0; this->m_Handlers.m_Size > i; ++v11 )
   {
     v4 = this->m_Handlers.m_Memory.m_pMemory[v11];
-    v5 = (*v4->_vptr_ISaveRestoreBlockHandler)(v4);
+    v5 = v4->GetBlockName();
     m_Size = this->m_BlockHeaders.m_Size;
     if ( m_Size > 0 )
     {
@@ -1952,7 +1952,7 @@ void __fastcall CSaveRestoreBlockSet::CallBlockHandlerRestore(
   __int64 m_sBlockName; // r12
   int m_locBody; // esi
 
-  v9 = (*pHandler->_vptr_ISaveRestoreBlockHandler)(pHandler);
+  v9 = pHandler->GetBlockName();
   m_Size = this->m_BlockHeaders.m_Size;
   if ( m_Size > 0 )
   {
@@ -1985,7 +1985,7 @@ void __fastcall CSaveRestoreBlockSet::Restore(
   __int64 v10; // r14
   _BOOL4 i; // [rsp+Ch] [rbp-34h]
 
-  v8 = (*pRestore->_vptr_IRestore)(pRestore);
+  v8 = pRestore->GetReadPos();
   v9 = fCreatePlayers;
   v10 = 0;
   for ( i = v9; this->m_Handlers.m_Size > v10; ++v10 )

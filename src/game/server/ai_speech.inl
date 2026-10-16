@@ -137,11 +137,11 @@ void __fastcall CAI_ExpresserHost<CBasePlayer>::NoteSpeaking(
 // calls: CAI_Expresser::NoteSpeaking
 void __fastcall CAI_ExpresserHost<CFlexExpresserShim>::NoteSpeaking(
         CAI_ExpresserHost<CFlexExpresserShim> *const this,
-        double a2,
+        float a2,
         float duration,
         float delay)
 {
-  CAI_Expresser::NoteSpeaking(this->m_pExpresser, duration, delay);
+  CAI_Expresser::NoteSpeaking(this->m_pExpresser, a2, duration, delay);
 }
 
 
@@ -270,7 +270,7 @@ __int64 __fastcall CAI_ExpresserHost<CBasePlayer>::SpeakIfAllowed(
 // CAI_ExpresserHost<CFlexExpresserShim>::SpeakIfAllowed  (line 358, @0x0000000002ec4de0, libserver.so)  // inlines: CAI_Concept, CEntityHandle, CHandle, CRR_Concept, CUtlSymbol
 // calls: CAI_Expresser::SpeakIfAllowed
 // local variable allocation has failed, the output may be wrong!
-bool __fastcall CAI_ExpresserHost<CFlexExpresserShim>::SpeakIfAllowed(
+__int64 __fastcall CAI_ExpresserHost<CFlexExpresserShim>::SpeakIfAllowed(
         CAI_ExpresserHost<CFlexExpresserShim> *const this,
         AIConcept_t *concept,
         const char *modifiers,

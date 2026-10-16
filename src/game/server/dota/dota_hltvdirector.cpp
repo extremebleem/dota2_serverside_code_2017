@@ -47,7 +47,7 @@ CDOTAHLTVDirector *__cdecl DOTAHLTVDirector()
 void __fastcall CDOTAHLTVDirector::CDOTAHLTVDirector(CDOTAHLTVDirector *const this)
 {
   CHLTVDirector::CHLTVDirector(this);
-  this->_vptr_IGameEventListener2 = off_41018F0;
+  this->_vptr_IGameEventListener2 = off_41018F0;  // vptr: CDOTAHLTVDirector
   this->_vptr_IGameSystem = &off_4101A50;
   this->_vptr_IHLTVDirector = off_4101BA0;
   CountdownTimer::CountdownTimer(&this->m_startReplayTimer);

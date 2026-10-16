@@ -236,7 +236,7 @@ void __fastcall NextBotApproacher::NextBotApproacher(NextBotApproacher *const th
     CGamePhysicsQueryInterface::TraceRay(g_pPhysicsQuery, &ray, &v20, &result);
     if ( result.fraction < 1.0 || result.startsolid )
     {
-      NDebugOverlay::Cross3D(&result.endpos, 5.0, 0, 255, 0, 1, 10.0);
+      NDebugOverlay::Cross3D(&result.endpos, 5.0, 0, 0xFFu, 0, 1, 10.0);
       x = result.endpos.x;
       this->m_isGoalValid = 1;
       this->m_goal.x = x;
@@ -335,7 +335,9 @@ void __fastcall NextBotCombatCharacter::Spawn(NextBotCombatCharacter *const this
   const Vector *v5; // rax
   bool v6; // r12
   int Health; // eax
-  float v8; // xmm1_4
+  double v8; // xmm1_8
+  double v9; // xmm0_8
+  CGlobalVars *v10; // r12
   FnGlobalVarsWarningFunc m_pfnWarningFunc; // rax
 
   CBaseCombatCharacter::Spawn(this, pKeyValues);
@@ -370,13 +372,19 @@ void __fastcall NextBotCombatCharacter::Spawn(NextBotCombatCharacter *const this
   CBaseEntity::SetDamageOptions(this, DamageOptions_t::DAMAGE_YES);
   (*(this->_vptr_IHandleEntity + 219))(this);
   CBaseEntity::ThinkSet(this, NextBotCombatCharacter::DoThink, 0.0, 0, 0);
-  if ( gpGlobals != 0 && !gpGlobals->m_bEnableAssertions && !gpGlobals->m_bInSimulation )
+  v9 = 0.0;
+  v10 = gpGlobals;
+  if ( gpGlobals != 0 )
   {
-    m_pfnWarningFunc = gpGlobals->m_pfnWarningFunc;
-    if ( m_pfnWarningFunc != 0 )
-      (m_pfnWarningFunc)(1, 0.0);
+    if ( !gpGlobals->m_bEnableAssertions && !gpGlobals->m_bInSimulation )
+    {
+      m_pfnWarningFunc = gpGlobals->m_pfnWarningFunc;
+      if ( m_pfnWarningFunc != 0 )
+        (m_pfnWarningFunc)(1, 0.0);
+    }
+    *&v9 = LODWORD(v10->m_flCurrentTime);
   }
-  CBaseEntity::SetNextThink(this, v8, 0);
+  CBaseEntity::SetNextThink(this, v9, v8, 0);
   this->m_lastAttacker.m_Index = -1;
 }
 
@@ -400,11 +408,11 @@ bool __fastcall NextBotCombatCharacter::IsAreaTraversable(
 // strings: "NextBotCombatCharacter::DoThink", "NextBot"
 void __fastcall NextBotCombatCharacter::DoThink(NextBotCombatCharacter *const this)
 {
-  float v1; // xmm1_4
+  double v1; // xmm1_8
   int m_enabled; // r9d
   bool v4; // r14
   CGlobalVars *v5; // r12
-  __int64 v6; // rdi
+  double v6; // xmm0_8
   void (__fastcall *m_pfnWarningFunc)(__int64); // rax
   unsigned __int64 v8; // r12
   ThreadId_t v9; // r13
@@ -413,76 +421,77 @@ void __fastcall NextBotCombatCharacter::DoThink(NextBotCombatCharacter *const th
   unsigned __int64 v12; // r12
   uint64 m_numTimeBaseTicks; // rcx
   uint64 v14; // rdx
-  __int64 v15; // rdi
-  ThreadId_t v16; // r13
+  ThreadId_t v15; // r13
   CVProfNode *m_pCurNode; // rax
-  CVProfile::CBudgetGroup *v18; // rax
+  CVProfile::CBudgetGroup *v17; // rax
   CVProfNode *m_pParent; // rax
   int (**vptr_INextBotEventResponder)(...); // rax
   __int64 i; // rax
-  __int64 v22; // r12
+  __int64 v21; // r12
 
   m_enabled = g_VProfCurrentProfile.m_enabled;
   v4 = m_enabled != 0;
-  if ( m_enabled == 0 )
+  if ( m_enabled != 0 )
   {
+    m_TargetThreadId = g_VProfCurrentProfile.m_TargetThreadId;
+    v12 = __rdtsc();
+    if ( m_TargetThreadId == ThreadGetCurrentId() )
+    {
+      m_pCurNode = g_VProfCurrentProfile.m_pCurNode;
+      if ( m_pCurNode->m_pszName != "NextBotCombatCharacter::DoThink" )
+      {
+        m_pCurNode = CVProfNode::GetSubNode(
+                       g_VProfCurrentProfile.m_pCurNode,
+                       "NextBotCombatCharacter::DoThink",
+                       0,
+                       "NextBot",
+                       4);
+        g_VProfCurrentProfile.m_pCurNode = m_pCurNode;
+      }
+      v17 = &g_VProfCurrentProfile.m_pBudgetGroups[m_pCurNode->m_BudgetGroupID];
+      v17->m_BudgetFlags |= 4u;
+      CVProfNode::EnterScope(g_VProfCurrentProfile.m_pCurNode);
+      g_VProfCurrentProfile.m_fAtRoot = 0;
+    }
+    m_numTimeBaseTicks = g_VProfCurrentProfile.m_ScopeProfiler.m_numTimeBaseTicks;
+    ++g_VProfCurrentProfile.m_ScopeProfiler.m_numCalls;
+    v14 = m_numTimeBaseTicks - v12 + __rdtsc();
     v5 = gpGlobals;
-    if ( gpGlobals == 0 )
-      goto LABEL_4;
-    goto LABEL_3;
+    g_VProfCurrentProfile.m_ScopeProfiler.m_numTimeBaseTicks = v14;
+    if ( v5 != 0 )
+      goto LABEL_3;
+LABEL_18:
+    v6 = 0.0;
+    goto LABEL_5;
   }
-  m_TargetThreadId = g_VProfCurrentProfile.m_TargetThreadId;
-  v12 = __rdtsc();
-  if ( m_TargetThreadId == ThreadGetCurrentId(this) )
-  {
-    m_pCurNode = g_VProfCurrentProfile.m_pCurNode;
-    if ( m_pCurNode->m_pszName != "NextBotCombatCharacter::DoThink" )
-    {
-      m_pCurNode = CVProfNode::GetSubNode(
-                     g_VProfCurrentProfile.m_pCurNode,
-                     "NextBotCombatCharacter::DoThink",
-                     0,
-                     "NextBot",
-                     4);
-      g_VProfCurrentProfile.m_pCurNode = m_pCurNode;
-    }
-    v18 = &g_VProfCurrentProfile.m_pBudgetGroups[m_pCurNode->m_BudgetGroupID];
-    v18->m_BudgetFlags |= 4u;
-    CVProfNode::EnterScope(g_VProfCurrentProfile.m_pCurNode);
-    g_VProfCurrentProfile.m_fAtRoot = 0;
-  }
-  m_numTimeBaseTicks = g_VProfCurrentProfile.m_ScopeProfiler.m_numTimeBaseTicks;
-  ++g_VProfCurrentProfile.m_ScopeProfiler.m_numCalls;
-  v14 = m_numTimeBaseTicks - v12 + __rdtsc();
   v5 = gpGlobals;
-  g_VProfCurrentProfile.m_ScopeProfiler.m_numTimeBaseTicks = v14;
-  if ( v5 != 0 )
-  {
+  if ( gpGlobals == 0 )
+    goto LABEL_18;
 LABEL_3:
-    if ( !v5->m_bEnableAssertions && !v5->m_bInSimulation )
-    {
-      m_pfnWarningFunc = v5->m_pfnWarningFunc;
-      if ( m_pfnWarningFunc != 0 )
-        m_pfnWarningFunc(1);
-    }
+  if ( !v5->m_bEnableAssertions && !v5->m_bInSimulation )
+  {
+    m_pfnWarningFunc = v5->m_pfnWarningFunc;
+    if ( m_pfnWarningFunc != 0 )
+      m_pfnWarningFunc(1);
   }
-LABEL_4:
-  CBaseEntity::SetNextThink(this, v1, 0);
+  *&v6 = LODWORD(v5->m_flCurrentTime);
+LABEL_5:
+  CBaseEntity::SetNextThink(this, v6, v1, 0);
   if ( g_pGameRules != 0 && g_pGameRules[19].m_szQuestName[29] != 0 )
   {
     if ( !v4 )
       return;
     v8 = __rdtsc();
     if ( g_VProfCurrentProfile.m_fAtRoot && g_VProfCurrentProfile.m_enabled == 0
-      || (v9 = g_VProfCurrentProfile.m_TargetThreadId) != ThreadGetCurrentId(v6) )
+      || (v9 = g_VProfCurrentProfile.m_TargetThreadId) != ThreadGetCurrentId() )
     {
-LABEL_14:
+LABEL_15:
       v10 = g_VProfCurrentProfile.m_ScopeProfiler.m_numTimeBaseTicks;
       ++g_VProfCurrentProfile.m_ScopeProfiler.m_numCalls;
       g_VProfCurrentProfile.m_ScopeProfiler.m_numTimeBaseTicks = v10 - v8 + __rdtsc();
       return;
     }
-LABEL_32:
+LABEL_33:
     if ( CVProfNode::ExitScope(g_VProfCurrentProfile.m_pCurNode) != 0 )
     {
       m_pParent = g_VProfCurrentProfile.m_pCurNode->m_pParent;
@@ -496,7 +505,7 @@ LABEL_32:
       m_pParent = g_VProfCurrentProfile.m_pCurNode;
     }
     g_VProfCurrentProfile.m_fAtRoot = m_pParent == &g_VProfCurrentProfile.m_Root;
-    goto LABEL_14;
+    goto LABEL_15;
   }
   if ( INextBot::BeginUpdate(&this->INextBot) )
   {
@@ -507,9 +516,9 @@ LABEL_32:
       vptr_INextBotEventResponder[26](&this->INextBot);
       for ( i = (*(this->_vptr_INextBotEventResponder + 3))(&this->INextBot);
             ;
-            i = (*(this->_vptr_INextBotEventResponder + 4))(&this->INextBot, v22) )
+            i = (*(this->_vptr_INextBotEventResponder + 4))(&this->INextBot, v21) )
       {
-        v22 = i;
+        v21 = i;
         if ( i == 0 )
           break;
         (*(*i + 208LL))(i);
@@ -522,16 +531,12 @@ LABEL_32:
   if ( v4 )
   {
     v8 = __rdtsc();
-    if ( g_VProfCurrentProfile.m_fAtRoot )
-    {
-      v15 = g_VProfCurrentProfile.m_enabled;
-      if ( v15 == 0 )
-        goto LABEL_14;
-    }
-    v16 = g_VProfCurrentProfile.m_TargetThreadId;
-    if ( v16 != ThreadGetCurrentId(v15) )
-      goto LABEL_14;
-    goto LABEL_32;
+    if ( g_VProfCurrentProfile.m_fAtRoot && g_VProfCurrentProfile.m_enabled == 0 )
+      goto LABEL_15;
+    v15 = g_VProfCurrentProfile.m_TargetThreadId;
+    if ( v15 != ThreadGetCurrentId() )
+      goto LABEL_15;
+    goto LABEL_33;
   }
 }
 
@@ -662,9 +667,10 @@ void __fastcall NextBotCombatCharacter::Ignite(
         float flFlameLifetime,
         bool bNPCOnly,
         float flSize,
-        bool bCalledByLevelDesigner)
+        bool bCalledByLevelDesigner,
+        float a6)
 {
-  CBaseAnimating::Ignite(this, flFlameLifetime, bNPCOnly, flSize, bCalledByLevelDesigner);
+  CBaseAnimating::Ignite(this, flFlameLifetime, bNPCOnly, flSize, bCalledByLevelDesigner, a6);
   (*(this->_vptr_INextBotEventResponder + 16))(&this->INextBot);
 }
 
@@ -673,7 +679,7 @@ void __fastcall NextBotCombatCharacter::Ignite(
 // calls: CEntityFlame::Create, CBaseEntity::AddFlag, CBaseEntity::SetEffectEntity, CEntityIOOutput::FireOutputInternal, CVariantBase<CVariantDefaultAllocator>::Free, _Unwind_Resume
 void __fastcall NextBotCombatCharacter::Ignite(
         NextBotCombatCharacter *const this,
-        double a2,
+        float a2,
         float flFlameLifetime,
         CBaseEntity *pAttacker,
         float a5)
@@ -687,7 +693,7 @@ void __fastcall NextBotCombatCharacter::Ignite(
 
   if ( (this->m_fFlags.m_Value & 0x8000000) == 0 )
   {
-    v7 = CEntityFlame::Create(this, 0.0, a5, 1);
+    v7 = CEntityFlame::Create(this, a2, 0.0, a5, 1);
     v8 = v7;
     if ( v7 != 0 )
     {

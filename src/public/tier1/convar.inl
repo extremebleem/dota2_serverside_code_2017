@@ -113,7 +113,7 @@ bool __fastcall ConVar::GetBoolVirtualized(const ConVar *const this)
 // calls: ConVar::~ConVar
 void __fastcall CSplitScreenAddedConVar::~CSplitScreenAddedConVar(CSplitScreenAddedConVar *const this)
 {
-  this->_vptr_ConCommandBase = off_3F79230;
+  this->_vptr_ConCommandBase = off_3F79230;  // vptr: CSplitScreenAddedConVar
   this->_vptr_IConVar = &off_3F79330;
   ConVar::~ConVar(this);
 }
@@ -123,7 +123,7 @@ void __fastcall CSplitScreenAddedConVar::~CSplitScreenAddedConVar(CSplitScreenAd
 // calls: ConVar::~ConVar, operator delete
 void __fastcall CSplitScreenAddedConVar::~CSplitScreenAddedConVar(CSplitScreenAddedConVar *const this)
 {
-  this->_vptr_ConCommandBase = off_3F79230;
+  this->_vptr_ConCommandBase = off_3F79230;  // vptr: CSplitScreenAddedConVar
   this->_vptr_IConVar = &off_3F79330;
   ConVar::~ConVar(this);
   operator delete(this);

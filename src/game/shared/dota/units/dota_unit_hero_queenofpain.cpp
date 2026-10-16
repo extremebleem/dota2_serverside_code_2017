@@ -482,7 +482,7 @@ CEntityInstance *__fastcall CDOTA_Unit_Hero_QueenOfPain::CEntityInstanceEntityCl
 void __fastcall CDOTA_Unit_Hero_QueenOfPain::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Unit_Hero_QueenOfPain::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -492,7 +492,7 @@ void __fastcall CDOTA_Unit_Hero_QueenOfPain::CEntityInstanceEntityClass::~CEntit
 void __fastcall CDOTA_Unit_Hero_QueenOfPain::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Unit_Hero_QueenOfPain::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -684,7 +684,7 @@ CEntityInstance *__fastcall CDOTA_Ability_QueenOfPain_ShadowStrike::CEntityInsta
 void __fastcall CDOTA_Ability_QueenOfPain_ShadowStrike::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_QueenOfPain_ShadowStrike::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -694,7 +694,7 @@ void __fastcall CDOTA_Ability_QueenOfPain_ShadowStrike::CEntityInstanceEntityCla
 void __fastcall CDOTA_Ability_QueenOfPain_ShadowStrike::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_QueenOfPain_ShadowStrike::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -1328,7 +1328,7 @@ CEntityInstance *__fastcall CDOTA_Ability_QueenOfPain_Blink::CEntityInstanceEnti
 void __fastcall CDOTA_Ability_QueenOfPain_Blink::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_QueenOfPain_Blink::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -1338,7 +1338,7 @@ void __fastcall CDOTA_Ability_QueenOfPain_Blink::CEntityInstanceEntityClass::~CE
 void __fastcall CDOTA_Ability_QueenOfPain_Blink::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_QueenOfPain_Blink::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -1707,7 +1707,7 @@ CEntityInstance *__fastcall CDOTA_Ability_QueenOfPain_ScreamOfPain::CEntityInsta
 void __fastcall CDOTA_Ability_QueenOfPain_ScreamOfPain::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_QueenOfPain_ScreamOfPain::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -1717,7 +1717,7 @@ void __fastcall CDOTA_Ability_QueenOfPain_ScreamOfPain::CEntityInstanceEntityCla
 void __fastcall CDOTA_Ability_QueenOfPain_ScreamOfPain::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_QueenOfPain_ScreamOfPain::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -2112,7 +2112,7 @@ CEntityInstance *__fastcall CDOTA_Ability_QueenOfPain_SonicWave::CEntityInstance
 void __fastcall CDOTA_Ability_QueenOfPain_SonicWave::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_QueenOfPain_SonicWave::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -2122,7 +2122,7 @@ void __fastcall CDOTA_Ability_QueenOfPain_SonicWave::CEntityInstanceEntityClass:
 void __fastcall CDOTA_Ability_QueenOfPain_SonicWave::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_QueenOfPain_SonicWave::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }

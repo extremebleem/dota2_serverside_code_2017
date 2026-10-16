@@ -5,7 +5,7 @@
 // calls: CUtlVectorBase<item_definition_index_t, CUtlMemory<item_definition_index_t, int> >::RemoveAll, CUtlMemory<item_definition_index_t, int>::Purge
 void __fastcall CEconTool_WrappedGift::~CEconTool_WrappedGift(CEconTool_WrappedGift *const this)
 {
-  this->_vptr_IEconTool = off_47A8E30;
+  this->_vptr_IEconTool = off_47A8E30;  // vptr: IEconTool
   CUtlVectorBase<item_definition_index_t,CUtlMemory<item_definition_index_t,int>>::RemoveAll(&this->m_vecBonusItemDef);
   if ( (this->m_vecBonusItemDef.m_Memory.m_nGrowSize & 0xC0000000) == 0 )
   {
@@ -20,7 +20,7 @@ void __fastcall CEconTool_WrappedGift::~CEconTool_WrappedGift(CEconTool_WrappedG
 // calls: CUtlVectorBase<item_definition_index_t, CUtlMemory<item_definition_index_t, int> >::RemoveAll, operator delete, CUtlMemory<item_definition_index_t, int>::Purge
 void __fastcall CEconTool_WrappedGift::~CEconTool_WrappedGift(CEconTool_WrappedGift *const this)
 {
-  this->_vptr_IEconTool = off_47A8E30;
+  this->_vptr_IEconTool = off_47A8E30;  // vptr: IEconTool
   CUtlVectorBase<item_definition_index_t,CUtlMemory<item_definition_index_t,int>>::RemoveAll(&this->m_vecBonusItemDef);
   if ( (this->m_vecBonusItemDef.m_Memory.m_nGrowSize & 0xC0000000) != 0
     || (CUtlMemory<item_definition_index_t,int>::Purge(&this->m_vecBonusItemDef.m_Memory),
@@ -44,7 +44,7 @@ void __fastcall CEconTool_StrangePart::~CEconTool_StrangePart(CEconTool_StrangeP
   CUtlVectorBase<int,CUtlMemory<int,int> >::CAllocator *p_m_Memory; // r12
 
   v2 = (this->m_vecRequiredTags.m_Memory.m_nGrowSize & 0xC0000000) == 0;
-  this->_vptr_IEconTool = off_47A8EF0;
+  this->_vptr_IEconTool = off_47A8EF0;  // vptr: CEconTool_StrangePart
   this->m_vecRequiredTags.m_Size = 0;
   if ( v2 )
   {
@@ -53,7 +53,7 @@ void __fastcall CEconTool_StrangePart::~CEconTool_StrangePart(CEconTool_StrangeP
     if ( (this->m_vecRequiredTags.m_Memory.m_nGrowSize & 0xC0000000) == 0 )
       CUtlMemory<int,int>::Purge(p_m_Memory);
   }
-  this->_vptr_IEconTool = off_47A8E30;
+  this->_vptr_IEconTool = off_47A8E30;  // vptr: IEconTool
   CUtlVectorBase<item_definition_index_t,CUtlMemory<item_definition_index_t,int>>::RemoveAll(&this->m_vecBonusItemDef);
   if ( (this->m_vecBonusItemDef.m_Memory.m_nGrowSize & 0xC0000000) == 0 )
   {
@@ -72,7 +72,7 @@ void __fastcall CEconTool_StrangePart::~CEconTool_StrangePart(CEconTool_StrangeP
   CUtlVectorBase<int,CUtlMemory<int,int> >::CAllocator *p_m_Memory; // r12
 
   v2 = (this->m_vecRequiredTags.m_Memory.m_nGrowSize & 0xC0000000) == 0;
-  this->_vptr_IEconTool = off_47A8EF0;
+  this->_vptr_IEconTool = off_47A8EF0;  // vptr: CEconTool_StrangePart
   this->m_vecRequiredTags.m_Size = 0;
   if ( v2 )
   {
@@ -81,7 +81,7 @@ void __fastcall CEconTool_StrangePart::~CEconTool_StrangePart(CEconTool_StrangeP
     if ( (this->m_vecRequiredTags.m_Memory.m_nGrowSize & 0xC0000000) == 0 )
       CUtlMemory<int,int>::Purge(p_m_Memory);
   }
-  this->_vptr_IEconTool = off_47A8E30;
+  this->_vptr_IEconTool = off_47A8E30;  // vptr: IEconTool
   CUtlVectorBase<item_definition_index_t,CUtlMemory<item_definition_index_t,int>>::RemoveAll(&this->m_vecBonusItemDef);
   if ( (this->m_vecBonusItemDef.m_Memory.m_nGrowSize & 0xC0000000) != 0
     || (CUtlMemory<item_definition_index_t,int>::Purge(&this->m_vecBonusItemDef.m_Memory),
@@ -109,7 +109,7 @@ void __fastcall CEconTool_StrangePart::CEconTool_StrangePart(
 {
   IEconTool::IEconTool(this, pszTypeName, pszUseString, 0, unCapabilities, pUsageKV);
   this->m_vecRequiredTags.m_Size = 0;
-  this->_vptr_IEconTool = off_47A8EF0;
+  this->_vptr_IEconTool = off_47A8EF0;  // vptr: CEconTool_StrangePart
   this->m_vecRequiredTags.m_Memory.m_pMemory = 0;
   this->m_vecRequiredTags.m_Memory.m_nAllocationCount = 0;
   this->m_vecRequiredTags.m_Memory.m_nGrowSize = 0;
@@ -205,7 +205,7 @@ bool __fastcall CEconTool_StrangePart::BInitFromKV(
 // calls: CUtlVectorBase<item_definition_index_t, CUtlMemory<item_definition_index_t, int> >::RemoveAll, CUtlMemory<item_definition_index_t, int>::Purge
 void __fastcall CEconTool_BackpackExpander::~CEconTool_BackpackExpander(CEconTool_BackpackExpander *const this)
 {
-  this->_vptr_IEconTool = off_47A8E30;
+  this->_vptr_IEconTool = off_47A8E30;  // vptr: IEconTool
   CUtlVectorBase<item_definition_index_t,CUtlMemory<item_definition_index_t,int>>::RemoveAll(&this->m_vecBonusItemDef);
   if ( (this->m_vecBonusItemDef.m_Memory.m_nGrowSize & 0xC0000000) == 0 )
   {
@@ -220,7 +220,7 @@ void __fastcall CEconTool_BackpackExpander::~CEconTool_BackpackExpander(CEconToo
 // calls: CUtlVectorBase<item_definition_index_t, CUtlMemory<item_definition_index_t, int> >::RemoveAll, operator delete, CUtlMemory<item_definition_index_t, int>::Purge
 void __fastcall CEconTool_BackpackExpander::~CEconTool_BackpackExpander(CEconTool_BackpackExpander *const this)
 {
-  this->_vptr_IEconTool = off_47A8E30;
+  this->_vptr_IEconTool = off_47A8E30;  // vptr: IEconTool
   CUtlVectorBase<item_definition_index_t,CUtlMemory<item_definition_index_t,int>>::RemoveAll(&this->m_vecBonusItemDef);
   if ( (this->m_vecBonusItemDef.m_Memory.m_nGrowSize & 0xC0000000) != 0
     || (CUtlMemory<item_definition_index_t,int>::Purge(&this->m_vecBonusItemDef.m_Memory),
@@ -285,7 +285,7 @@ void __fastcall CEconTool_HeroTaunt::~CEconTool_HeroTaunt(CEconTool_HeroTaunt *c
 
   this->m_vecBonusItemDef.m_Size = 0;
   v2 = (this->m_vecBonusItemDef.m_Memory.m_nGrowSize & 0xC0000000) == 0;
-  this->_vptr_IEconTool = off_47A8E30;
+  this->_vptr_IEconTool = off_47A8E30;  // vptr: IEconTool
   if ( v2 )
   {
     p_m_Memory = &this->m_vecBonusItemDef.m_Memory;
@@ -305,7 +305,7 @@ void __fastcall CEconTool_HeroTaunt::~CEconTool_HeroTaunt(CEconTool_HeroTaunt *c
 
   this->m_vecBonusItemDef.m_Size = 0;
   v2 = (this->m_vecBonusItemDef.m_Memory.m_nGrowSize & 0xC0000000) == 0;
-  this->_vptr_IEconTool = off_47A8E30;
+  this->_vptr_IEconTool = off_47A8E30;  // vptr: IEconTool
   if ( !v2
     || (p_m_Memory = &this->m_vecBonusItemDef.m_Memory,
         CUtlMemory<item_definition_index_t,int>::Purge(&this->m_vecBonusItemDef.m_Memory),
@@ -339,7 +339,7 @@ void __fastcall CEconTool_VictoryPrediction::~CEconTool_VictoryPrediction(CEconT
 
   this->m_vecBonusItemDef.m_Size = 0;
   v2 = (this->m_vecBonusItemDef.m_Memory.m_nGrowSize & 0xC0000000) == 0;
-  this->_vptr_IEconTool = off_47A8E30;
+  this->_vptr_IEconTool = off_47A8E30;  // vptr: IEconTool
   if ( v2 )
   {
     p_m_Memory = &this->m_vecBonusItemDef.m_Memory;
@@ -359,7 +359,7 @@ void __fastcall CEconTool_VictoryPrediction::~CEconTool_VictoryPrediction(CEconT
 
   this->m_vecBonusItemDef.m_Size = 0;
   v2 = (this->m_vecBonusItemDef.m_Memory.m_nGrowSize & 0xC0000000) == 0;
-  this->_vptr_IEconTool = off_47A8E30;
+  this->_vptr_IEconTool = off_47A8E30;  // vptr: IEconTool
   if ( !v2
     || (p_m_Memory = &this->m_vecBonusItemDef.m_Memory,
         CUtlMemory<item_definition_index_t,int>::Purge(&this->m_vecBonusItemDef.m_Memory),
@@ -389,7 +389,7 @@ void __fastcall CEconTool_VictoryPrediction::CEconTool_VictoryPrediction(
   uint16 m_Data; // ax
 
   IEconTool::IEconTool(this, pszTypeName, pszUseString, 0, unCapabilities, pUsageKV);
-  this->_vptr_IEconTool = off_47A0190;
+  this->_vptr_IEconTool = off_47A0190;  // vptr: CEconTool_VictoryPrediction
   m_Data = INVALID_ITEM_DEF_INDEX.m_Data;
   this->m_eWinsEventType = kill_eater_event_t::kKillEaterEventType_VictoryPredictions;
   this->m_bTrackFailure = 0;
@@ -549,7 +549,7 @@ void __fastcall CEconTool_HeroAbility::~CEconTool_HeroAbility(CEconTool_HeroAbil
 
   this->m_vecBonusItemDef.m_Size = 0;
   v2 = (this->m_vecBonusItemDef.m_Memory.m_nGrowSize & 0xC0000000) == 0;
-  this->_vptr_IEconTool = off_47A8E30;
+  this->_vptr_IEconTool = off_47A8E30;  // vptr: IEconTool
   if ( v2 )
   {
     p_m_Memory = &this->m_vecBonusItemDef.m_Memory;
@@ -569,7 +569,7 @@ void __fastcall CEconTool_HeroAbility::~CEconTool_HeroAbility(CEconTool_HeroAbil
 
   this->m_vecBonusItemDef.m_Size = 0;
   v2 = (this->m_vecBonusItemDef.m_Memory.m_nGrowSize & 0xC0000000) == 0;
-  this->_vptr_IEconTool = off_47A8E30;
+  this->_vptr_IEconTool = off_47A8E30;  // vptr: IEconTool
   if ( !v2
     || (p_m_Memory = &this->m_vecBonusItemDef.m_Memory,
         CUtlMemory<item_definition_index_t,int>::Purge(&this->m_vecBonusItemDef.m_Memory),
@@ -589,7 +589,7 @@ void __fastcall CEconTool_HeroAbility::~CEconTool_HeroAbility(CEconTool_HeroAbil
 // calls: CUtlVectorBase<item_definition_index_t, CUtlMemory<item_definition_index_t, int> >::RemoveAll, CUtlMemory<item_definition_index_t, int>::Purge
 void __fastcall CEconTool_PaintCan::~CEconTool_PaintCan(CEconTool_PaintCan *const this)
 {
-  this->_vptr_IEconTool = off_47A8E30;
+  this->_vptr_IEconTool = off_47A8E30;  // vptr: IEconTool
   CUtlVectorBase<item_definition_index_t,CUtlMemory<item_definition_index_t,int>>::RemoveAll(&this->m_vecBonusItemDef);
   if ( (this->m_vecBonusItemDef.m_Memory.m_nGrowSize & 0xC0000000) == 0 )
   {
@@ -604,7 +604,7 @@ void __fastcall CEconTool_PaintCan::~CEconTool_PaintCan(CEconTool_PaintCan *cons
 // calls: CUtlVectorBase<item_definition_index_t, CUtlMemory<item_definition_index_t, int> >::RemoveAll, operator delete, CUtlMemory<item_definition_index_t, int>::Purge
 void __fastcall CEconTool_PaintCan::~CEconTool_PaintCan(CEconTool_PaintCan *const this)
 {
-  this->_vptr_IEconTool = off_47A8E30;
+  this->_vptr_IEconTool = off_47A8E30;  // vptr: IEconTool
   CUtlVectorBase<item_definition_index_t,CUtlMemory<item_definition_index_t,int>>::RemoveAll(&this->m_vecBonusItemDef);
   if ( (this->m_vecBonusItemDef.m_Memory.m_nGrowSize & 0xC0000000) != 0
     || (CUtlMemory<item_definition_index_t,int>::Purge(&this->m_vecBonusItemDef.m_Memory),
@@ -624,7 +624,7 @@ void __fastcall CEconTool_PaintCan::~CEconTool_PaintCan(CEconTool_PaintCan *cons
 // calls: CUtlVectorBase<item_definition_index_t, CUtlMemory<item_definition_index_t, int> >::RemoveAll, CUtlMemory<item_definition_index_t, int>::Purge
 void __fastcall CEconTool_GiftWrap::~CEconTool_GiftWrap(CEconTool_GiftWrap *const this)
 {
-  this->_vptr_IEconTool = off_47A8E30;
+  this->_vptr_IEconTool = off_47A8E30;  // vptr: IEconTool
   CUtlVectorBase<item_definition_index_t,CUtlMemory<item_definition_index_t,int>>::RemoveAll(&this->m_vecBonusItemDef);
   if ( (this->m_vecBonusItemDef.m_Memory.m_nGrowSize & 0xC0000000) == 0 )
   {
@@ -639,7 +639,7 @@ void __fastcall CEconTool_GiftWrap::~CEconTool_GiftWrap(CEconTool_GiftWrap *cons
 // calls: CUtlVectorBase<item_definition_index_t, CUtlMemory<item_definition_index_t, int> >::RemoveAll, operator delete, CUtlMemory<item_definition_index_t, int>::Purge
 void __fastcall CEconTool_GiftWrap::~CEconTool_GiftWrap(CEconTool_GiftWrap *const this)
 {
-  this->_vptr_IEconTool = off_47A8E30;
+  this->_vptr_IEconTool = off_47A8E30;  // vptr: IEconTool
   CUtlVectorBase<item_definition_index_t,CUtlMemory<item_definition_index_t,int>>::RemoveAll(&this->m_vecBonusItemDef);
   if ( (this->m_vecBonusItemDef.m_Memory.m_nGrowSize & 0xC0000000) != 0
     || (CUtlMemory<item_definition_index_t,int>::Purge(&this->m_vecBonusItemDef.m_Memory),
@@ -666,7 +666,7 @@ bool __fastcall CEconTool_GiftWrap::RequiresToolEscrowPeriod(const CEconTool_Gif
 // calls: CUtlVectorBase<item_definition_index_t, CUtlMemory<item_definition_index_t, int> >::RemoveAll, CUtlMemory<item_definition_index_t, int>::Purge
 void __fastcall CEconTool_NameTag::~CEconTool_NameTag(CEconTool_NameTag *const this)
 {
-  this->_vptr_IEconTool = off_47A8E30;
+  this->_vptr_IEconTool = off_47A8E30;  // vptr: IEconTool
   CUtlVectorBase<item_definition_index_t,CUtlMemory<item_definition_index_t,int>>::RemoveAll(&this->m_vecBonusItemDef);
   if ( (this->m_vecBonusItemDef.m_Memory.m_nGrowSize & 0xC0000000) == 0 )
   {
@@ -681,7 +681,7 @@ void __fastcall CEconTool_NameTag::~CEconTool_NameTag(CEconTool_NameTag *const t
 // calls: CUtlVectorBase<item_definition_index_t, CUtlMemory<item_definition_index_t, int> >::RemoveAll, operator delete, CUtlMemory<item_definition_index_t, int>::Purge
 void __fastcall CEconTool_NameTag::~CEconTool_NameTag(CEconTool_NameTag *const this)
 {
-  this->_vptr_IEconTool = off_47A8E30;
+  this->_vptr_IEconTool = off_47A8E30;  // vptr: IEconTool
   CUtlVectorBase<item_definition_index_t,CUtlMemory<item_definition_index_t,int>>::RemoveAll(&this->m_vecBonusItemDef);
   if ( (this->m_vecBonusItemDef.m_Memory.m_nGrowSize & 0xC0000000) != 0
     || (CUtlMemory<item_definition_index_t,int>::Purge(&this->m_vecBonusItemDef.m_Memory),
@@ -701,7 +701,7 @@ void __fastcall CEconTool_NameTag::~CEconTool_NameTag(CEconTool_NameTag *const t
 // calls: CUtlVectorBase<item_definition_index_t, CUtlMemory<item_definition_index_t, int> >::RemoveAll, CUtlMemory<item_definition_index_t, int>::Purge
 void __fastcall CEconTool_DescTag::~CEconTool_DescTag(CEconTool_DescTag *const this)
 {
-  this->_vptr_IEconTool = off_47A8E30;
+  this->_vptr_IEconTool = off_47A8E30;  // vptr: IEconTool
   CUtlVectorBase<item_definition_index_t,CUtlMemory<item_definition_index_t,int>>::RemoveAll(&this->m_vecBonusItemDef);
   if ( (this->m_vecBonusItemDef.m_Memory.m_nGrowSize & 0xC0000000) == 0 )
   {
@@ -716,7 +716,7 @@ void __fastcall CEconTool_DescTag::~CEconTool_DescTag(CEconTool_DescTag *const t
 // calls: CUtlVectorBase<item_definition_index_t, CUtlMemory<item_definition_index_t, int> >::RemoveAll, operator delete, CUtlMemory<item_definition_index_t, int>::Purge
 void __fastcall CEconTool_DescTag::~CEconTool_DescTag(CEconTool_DescTag *const this)
 {
-  this->_vptr_IEconTool = off_47A8E30;
+  this->_vptr_IEconTool = off_47A8E30;  // vptr: IEconTool
   CUtlVectorBase<item_definition_index_t,CUtlMemory<item_definition_index_t,int>>::RemoveAll(&this->m_vecBonusItemDef);
   if ( (this->m_vecBonusItemDef.m_Memory.m_nGrowSize & 0xC0000000) != 0
     || (CUtlMemory<item_definition_index_t,int>::Purge(&this->m_vecBonusItemDef.m_Memory),
@@ -736,7 +736,7 @@ void __fastcall CEconTool_DescTag::~CEconTool_DescTag(CEconTool_DescTag *const t
 // calls: CUtlVectorBase<item_definition_index_t, CUtlMemory<item_definition_index_t, int> >::RemoveAll, CUtlMemory<item_definition_index_t, int>::Purge
 void __fastcall CEconTool_CrateKey::~CEconTool_CrateKey(CEconTool_CrateKey *const this)
 {
-  this->_vptr_IEconTool = off_47A8E30;
+  this->_vptr_IEconTool = off_47A8E30;  // vptr: IEconTool
   CUtlVectorBase<item_definition_index_t,CUtlMemory<item_definition_index_t,int>>::RemoveAll(&this->m_vecBonusItemDef);
   if ( (this->m_vecBonusItemDef.m_Memory.m_nGrowSize & 0xC0000000) == 0 )
   {
@@ -751,7 +751,7 @@ void __fastcall CEconTool_CrateKey::~CEconTool_CrateKey(CEconTool_CrateKey *cons
 // calls: CUtlVectorBase<item_definition_index_t, CUtlMemory<item_definition_index_t, int> >::RemoveAll, operator delete, CUtlMemory<item_definition_index_t, int>::Purge
 void __fastcall CEconTool_CrateKey::~CEconTool_CrateKey(CEconTool_CrateKey *const this)
 {
-  this->_vptr_IEconTool = off_47A8E30;
+  this->_vptr_IEconTool = off_47A8E30;  // vptr: IEconTool
   CUtlVectorBase<item_definition_index_t,CUtlMemory<item_definition_index_t,int>>::RemoveAll(&this->m_vecBonusItemDef);
   if ( (this->m_vecBonusItemDef.m_Memory.m_nGrowSize & 0xC0000000) != 0
     || (CUtlMemory<item_definition_index_t,int>::Purge(&this->m_vecBonusItemDef.m_Memory),
@@ -771,7 +771,7 @@ void __fastcall CEconTool_CrateKey::~CEconTool_CrateKey(CEconTool_CrateKey *cons
 // calls: CUtlVectorBase<item_definition_index_t, CUtlMemory<item_definition_index_t, int> >::RemoveAll, CUtlMemory<item_definition_index_t, int>::Purge
 void __fastcall CEconTool_ItemRedemption::~CEconTool_ItemRedemption(CEconTool_ItemRedemption *const this)
 {
-  this->_vptr_IEconTool = off_47A8E30;
+  this->_vptr_IEconTool = off_47A8E30;  // vptr: IEconTool
   CUtlVectorBase<item_definition_index_t,CUtlMemory<item_definition_index_t,int>>::RemoveAll(&this->m_vecBonusItemDef);
   if ( (this->m_vecBonusItemDef.m_Memory.m_nGrowSize & 0xC0000000) == 0 )
   {
@@ -786,7 +786,7 @@ void __fastcall CEconTool_ItemRedemption::~CEconTool_ItemRedemption(CEconTool_It
 // calls: CUtlVectorBase<item_definition_index_t, CUtlMemory<item_definition_index_t, int> >::RemoveAll, operator delete, CUtlMemory<item_definition_index_t, int>::Purge
 void __fastcall CEconTool_ItemRedemption::~CEconTool_ItemRedemption(CEconTool_ItemRedemption *const this)
 {
-  this->_vptr_IEconTool = off_47A8E30;
+  this->_vptr_IEconTool = off_47A8E30;  // vptr: IEconTool
   CUtlVectorBase<item_definition_index_t,CUtlMemory<item_definition_index_t,int>>::RemoveAll(&this->m_vecBonusItemDef);
   if ( (this->m_vecBonusItemDef.m_Memory.m_nGrowSize & 0xC0000000) != 0
     || (CUtlMemory<item_definition_index_t,int>::Purge(&this->m_vecBonusItemDef.m_Memory),
@@ -817,7 +817,7 @@ bool __fastcall CEconTool_ItemRedemption::BInitFromKV(
   CUtlSymbolTableLarge_CI *v9; // r14
   const char *v10; // r13
   int v11; // r15d
-  UtlSymLargeId_t m_String; // rax
+  char *m_String; // rax
   int m_Size; // r9d
   signed int v15; // edx
   CUtlSymbolTableLargeBase<CNonThreadsafeTree<true>,true,2048ul>::StringPool_t **m_pMemory; // rax
@@ -841,7 +841,7 @@ bool __fastcall CEconTool_ItemRedemption::BInitFromKV(
   unsigned int v34; // [rsp+10h] [rbp-50h]
   bool isLeft[8]; // [rsp+18h] [rbp-48h]
   bool isLefta; // [rsp+18h] [rbp-48h]
-  UtlSymLargeId_t v37; // [rsp+20h] [rbp-40h]
+  char *v37; // [rsp+20h] [rbp-40h] BYREF
   CUtlSymbolTableLargeBase<CNonThreadsafeTree<true>,true,2048ul>::StringPool_t *src[7]; // [rsp+28h] [rbp-38h] BYREF
 
   if ( this->m_bUnserializeStandardKeys )
@@ -870,7 +870,7 @@ bool __fastcall CEconTool_ItemRedemption::BInitFromKV(
       m_String = 0;
       if ( v11 > 0 && *v10 != 0 )
       {
-        CUtlSymbolTableLargeBase<CNonThreadsafeTree<true>,true,2048ul>::Find(v9, v10, v11);
+        CUtlSymbolTableLargeBase<CNonThreadsafeTree<true>,true,2048ul>::Find(&v37, v9, v10, v11);
         m_String = v37;
         if ( v37 == 0 )
         {
@@ -990,7 +990,7 @@ LABEL_8:
 // calls: CUtlVectorBase<item_definition_index_t, CUtlMemory<item_definition_index_t, int> >::RemoveAll, CUtlMemory<item_definition_index_t, int>::Purge
 void __fastcall CEconTool_ItemPack::~CEconTool_ItemPack(CEconTool_ItemPack *const this)
 {
-  this->_vptr_IEconTool = off_47A8E30;
+  this->_vptr_IEconTool = off_47A8E30;  // vptr: IEconTool
   CUtlVectorBase<item_definition_index_t,CUtlMemory<item_definition_index_t,int>>::RemoveAll(&this->m_vecBonusItemDef);
   if ( (this->m_vecBonusItemDef.m_Memory.m_nGrowSize & 0xC0000000) == 0 )
   {
@@ -1005,7 +1005,7 @@ void __fastcall CEconTool_ItemPack::~CEconTool_ItemPack(CEconTool_ItemPack *cons
 // calls: CUtlVectorBase<item_definition_index_t, CUtlMemory<item_definition_index_t, int> >::RemoveAll, operator delete, CUtlMemory<item_definition_index_t, int>::Purge
 void __fastcall CEconTool_ItemPack::~CEconTool_ItemPack(CEconTool_ItemPack *const this)
 {
-  this->_vptr_IEconTool = off_47A8E30;
+  this->_vptr_IEconTool = off_47A8E30;  // vptr: IEconTool
   CUtlVectorBase<item_definition_index_t,CUtlMemory<item_definition_index_t,int>>::RemoveAll(&this->m_vecBonusItemDef);
   if ( (this->m_vecBonusItemDef.m_Memory.m_nGrowSize & 0xC0000000) != 0
     || (CUtlMemory<item_definition_index_t,int>::Purge(&this->m_vecBonusItemDef.m_Memory),
@@ -1030,7 +1030,7 @@ void __fastcall CEconTool_Egg::~CEconTool_Egg(CEconTool_Egg *const this)
 
   this->m_vecBonusItemDef.m_Size = 0;
   v2 = (this->m_vecBonusItemDef.m_Memory.m_nGrowSize & 0xC0000000) == 0;
-  this->_vptr_IEconTool = off_47A8E30;
+  this->_vptr_IEconTool = off_47A8E30;  // vptr: IEconTool
   if ( v2 )
   {
     p_m_Memory = &this->m_vecBonusItemDef.m_Memory;
@@ -1050,7 +1050,7 @@ void __fastcall CEconTool_Egg::~CEconTool_Egg(CEconTool_Egg *const this)
 
   this->m_vecBonusItemDef.m_Size = 0;
   v2 = (this->m_vecBonusItemDef.m_Memory.m_nGrowSize & 0xC0000000) == 0;
-  this->_vptr_IEconTool = off_47A8E30;
+  this->_vptr_IEconTool = off_47A8E30;  // vptr: IEconTool
   if ( !v2
     || (p_m_Memory = &this->m_vecBonusItemDef.m_Memory,
         CUtlMemory<item_definition_index_t,int>::Purge(&this->m_vecBonusItemDef.m_Memory),
@@ -1070,7 +1070,7 @@ void __fastcall CEconTool_Egg::~CEconTool_Egg(CEconTool_Egg *const this)
 // calls: CUtlVectorBase<item_definition_index_t, CUtlMemory<item_definition_index_t, int> >::RemoveAll, CUtlMemory<item_definition_index_t, int>::Purge
 void __fastcall CEconTool_Default::~CEconTool_Default(CEconTool_Default *const this)
 {
-  this->_vptr_IEconTool = off_47A8E30;
+  this->_vptr_IEconTool = off_47A8E30;  // vptr: IEconTool
   CUtlVectorBase<item_definition_index_t,CUtlMemory<item_definition_index_t,int>>::RemoveAll(&this->m_vecBonusItemDef);
   if ( (this->m_vecBonusItemDef.m_Memory.m_nGrowSize & 0xC0000000) == 0 )
   {
@@ -1085,7 +1085,7 @@ void __fastcall CEconTool_Default::~CEconTool_Default(CEconTool_Default *const t
 // calls: CUtlVectorBase<item_definition_index_t, CUtlMemory<item_definition_index_t, int> >::RemoveAll, operator delete, CUtlMemory<item_definition_index_t, int>::Purge
 void __fastcall CEconTool_Default::~CEconTool_Default(CEconTool_Default *const this)
 {
-  this->_vptr_IEconTool = off_47A8E30;
+  this->_vptr_IEconTool = off_47A8E30;  // vptr: IEconTool
   CUtlVectorBase<item_definition_index_t,CUtlMemory<item_definition_index_t,int>>::RemoveAll(&this->m_vecBonusItemDef);
   if ( (this->m_vecBonusItemDef.m_Memory.m_nGrowSize & 0xC0000000) != 0
     || (CUtlMemory<item_definition_index_t,int>::Purge(&this->m_vecBonusItemDef.m_Memory),
@@ -1105,7 +1105,7 @@ void __fastcall CEconTool_Default::~CEconTool_Default(CEconTool_Default *const t
 // calls: CUtlVectorBase<item_definition_index_t, CUtlMemory<item_definition_index_t, int> >::RemoveAll, CUtlMemory<item_definition_index_t, int>::Purge
 void __fastcall CEconTool_SupplyCrate::~CEconTool_SupplyCrate(CEconTool_SupplyCrate *const this)
 {
-  this->_vptr_IEconTool = off_47A8E30;
+  this->_vptr_IEconTool = off_47A8E30;  // vptr: IEconTool
   CUtlVectorBase<item_definition_index_t,CUtlMemory<item_definition_index_t,int>>::RemoveAll(&this->m_vecBonusItemDef);
   if ( (this->m_vecBonusItemDef.m_Memory.m_nGrowSize & 0xC0000000) == 0 )
   {
@@ -1120,7 +1120,7 @@ void __fastcall CEconTool_SupplyCrate::~CEconTool_SupplyCrate(CEconTool_SupplyCr
 // calls: CUtlVectorBase<item_definition_index_t, CUtlMemory<item_definition_index_t, int> >::RemoveAll, operator delete, CUtlMemory<item_definition_index_t, int>::Purge
 void __fastcall CEconTool_SupplyCrate::~CEconTool_SupplyCrate(CEconTool_SupplyCrate *const this)
 {
-  this->_vptr_IEconTool = off_47A8E30;
+  this->_vptr_IEconTool = off_47A8E30;  // vptr: IEconTool
   CUtlVectorBase<item_definition_index_t,CUtlMemory<item_definition_index_t,int>>::RemoveAll(&this->m_vecBonusItemDef);
   if ( (this->m_vecBonusItemDef.m_Memory.m_nGrowSize & 0xC0000000) != 0
     || (CUtlMemory<item_definition_index_t,int>::Purge(&this->m_vecBonusItemDef.m_Memory),
@@ -1149,7 +1149,7 @@ bool __fastcall CEconTool_SupplyCrate::BInitFromKV(
   CUtlSymbolTableLarge_CI *v7; // r14
   const char *v8; // r12
   int v9; // r15d
-  UtlSymLargeId_t m_String; // rax
+  char *m_String; // rax
   int m_Size; // r10d
   signed int v13; // edx
   CUtlSymbolTableLargeBase<CNonThreadsafeTree<true>,true,2048ul>::StringPool_t **m_pMemory; // rdi
@@ -1174,7 +1174,7 @@ bool __fastcall CEconTool_SupplyCrate::BInitFromKV(
   int v33; // [rsp+10h] [rbp-50h]
   bool isLeft[8]; // [rsp+18h] [rbp-48h]
   bool isLefta; // [rsp+18h] [rbp-48h]
-  UtlSymLargeId_t v36; // [rsp+20h] [rbp-40h]
+  char *v36; // [rsp+20h] [rbp-40h] BYREF
   CUtlSymbolTableLargeBase<CNonThreadsafeTree<true>,true,2048ul>::StringPool_t *src[7]; // [rsp+28h] [rbp-38h] BYREF
 
   this->m_nItemsPerTreasure = 0;
@@ -1195,7 +1195,7 @@ bool __fastcall CEconTool_SupplyCrate::BInitFromKV(
     goto LABEL_6;
   if ( *v8 == 0 )
     goto LABEL_6;
-  CUtlSymbolTableLargeBase<CNonThreadsafeTree<true>,true,2048ul>::Find(v7, v8, v9);
+  CUtlSymbolTableLargeBase<CNonThreadsafeTree<true>,true,2048ul>::Find(&v36, v7, v8, v9);
   m_String = v36;
   if ( v36 != 0 )
     goto LABEL_6;
@@ -1306,7 +1306,7 @@ LABEL_6:
 // calls: CUtlVectorBase<item_definition_index_t, CUtlMemory<item_definition_index_t, int> >::RemoveAll, CUtlMemory<item_definition_index_t, int>::Purge
 void __fastcall CEconTool_SocketHammer::~CEconTool_SocketHammer(CEconTool_SocketHammer *const this)
 {
-  this->_vptr_IEconTool = off_47A8E30;
+  this->_vptr_IEconTool = off_47A8E30;  // vptr: IEconTool
   CUtlVectorBase<item_definition_index_t,CUtlMemory<item_definition_index_t,int>>::RemoveAll(&this->m_vecBonusItemDef);
   if ( (this->m_vecBonusItemDef.m_Memory.m_nGrowSize & 0xC0000000) == 0 )
   {
@@ -1321,7 +1321,7 @@ void __fastcall CEconTool_SocketHammer::~CEconTool_SocketHammer(CEconTool_Socket
 // calls: CUtlVectorBase<item_definition_index_t, CUtlMemory<item_definition_index_t, int> >::RemoveAll, operator delete, CUtlMemory<item_definition_index_t, int>::Purge
 void __fastcall CEconTool_SocketHammer::~CEconTool_SocketHammer(CEconTool_SocketHammer *const this)
 {
-  this->_vptr_IEconTool = off_47A8E30;
+  this->_vptr_IEconTool = off_47A8E30;  // vptr: IEconTool
   CUtlVectorBase<item_definition_index_t,CUtlMemory<item_definition_index_t,int>>::RemoveAll(&this->m_vecBonusItemDef);
   if ( (this->m_vecBonusItemDef.m_Memory.m_nGrowSize & 0xC0000000) != 0
     || (CUtlMemory<item_definition_index_t,int>::Purge(&this->m_vecBonusItemDef.m_Memory),
@@ -1385,7 +1385,7 @@ void __fastcall CEconTool_SocketChisel::~CEconTool_SocketChisel(CEconTool_Socket
   CUtlVectorBase<ESocketType,CUtlMemory<ESocketType,int> >::CAllocator *p_m_Memory; // r12
 
   v2 = (this->m_socketsToAdd.m_Memory.m_nGrowSize & 0xC0000000) == 0;
-  this->_vptr_IEconTool = off_47A8BF0;
+  this->_vptr_IEconTool = off_47A8BF0;  // vptr: CEconTool_SocketChisel
   this->m_socketsToAdd.m_Size = 0;
   if ( v2 )
   {
@@ -1394,7 +1394,7 @@ void __fastcall CEconTool_SocketChisel::~CEconTool_SocketChisel(CEconTool_Socket
     if ( (this->m_socketsToAdd.m_Memory.m_nGrowSize & 0xC0000000) == 0 )
       CUtlMemory<ESocketType,int>::Purge(p_m_Memory);
   }
-  this->_vptr_IEconTool = off_47A8E30;
+  this->_vptr_IEconTool = off_47A8E30;  // vptr: IEconTool
   CUtlVectorBase<item_definition_index_t,CUtlMemory<item_definition_index_t,int>>::RemoveAll(&this->m_vecBonusItemDef);
   if ( (this->m_vecBonusItemDef.m_Memory.m_nGrowSize & 0xC0000000) == 0 )
   {
@@ -1413,7 +1413,7 @@ void __fastcall CEconTool_SocketChisel::~CEconTool_SocketChisel(CEconTool_Socket
   CUtlVectorBase<ESocketType,CUtlMemory<ESocketType,int> >::CAllocator *p_m_Memory; // r12
 
   v2 = (this->m_socketsToAdd.m_Memory.m_nGrowSize & 0xC0000000) == 0;
-  this->_vptr_IEconTool = off_47A8BF0;
+  this->_vptr_IEconTool = off_47A8BF0;  // vptr: CEconTool_SocketChisel
   this->m_socketsToAdd.m_Size = 0;
   if ( v2 )
   {
@@ -1422,7 +1422,7 @@ void __fastcall CEconTool_SocketChisel::~CEconTool_SocketChisel(CEconTool_Socket
     if ( (this->m_socketsToAdd.m_Memory.m_nGrowSize & 0xC0000000) == 0 )
       CUtlMemory<ESocketType,int>::Purge(p_m_Memory);
   }
-  this->_vptr_IEconTool = off_47A8E30;
+  this->_vptr_IEconTool = off_47A8E30;  // vptr: IEconTool
   CUtlVectorBase<item_definition_index_t,CUtlMemory<item_definition_index_t,int>>::RemoveAll(&this->m_vecBonusItemDef);
   if ( (this->m_vecBonusItemDef.m_Memory.m_nGrowSize & 0xC0000000) != 0
     || (CUtlMemory<item_definition_index_t,int>::Purge(&this->m_vecBonusItemDef.m_Memory),
@@ -1450,7 +1450,7 @@ void __fastcall CEconTool_SocketChisel::CEconTool_SocketChisel(
 {
   IEconTool::IEconTool(this, pszTypeName, pszUseString, 0, unCapabilities, pUsageKV);
   this->m_socketsToAdd.m_Size = 0;
-  this->_vptr_IEconTool = off_47A8BF0;
+  this->_vptr_IEconTool = off_47A8BF0;  // vptr: CEconTool_SocketChisel
   this->m_socketsToAdd.m_Memory.m_pMemory = 0;
   this->m_socketsToAdd.m_Memory.m_nAllocationCount = 0;
   this->m_socketsToAdd.m_Memory.m_nGrowSize = 0;
@@ -1511,7 +1511,7 @@ bool __fastcall CEconTool_SocketChisel::BInitFromKV(
 // calls: CUtlVectorBase<item_definition_index_t, CUtlMemory<item_definition_index_t, int> >::RemoveAll, CUtlMemory<item_definition_index_t, int>::Purge
 void __fastcall CEconTool_Autograph::~CEconTool_Autograph(CEconTool_Autograph *const this)
 {
-  this->_vptr_IEconTool = off_47A8E30;
+  this->_vptr_IEconTool = off_47A8E30;  // vptr: IEconTool
   CUtlVectorBase<item_definition_index_t,CUtlMemory<item_definition_index_t,int>>::RemoveAll(&this->m_vecBonusItemDef);
   if ( (this->m_vecBonusItemDef.m_Memory.m_nGrowSize & 0xC0000000) == 0 )
   {
@@ -1526,7 +1526,7 @@ void __fastcall CEconTool_Autograph::~CEconTool_Autograph(CEconTool_Autograph *c
 // calls: CUtlVectorBase<item_definition_index_t, CUtlMemory<item_definition_index_t, int> >::RemoveAll, operator delete, CUtlMemory<item_definition_index_t, int>::Purge
 void __fastcall CEconTool_Autograph::~CEconTool_Autograph(CEconTool_Autograph *const this)
 {
-  this->_vptr_IEconTool = off_47A8E30;
+  this->_vptr_IEconTool = off_47A8E30;  // vptr: IEconTool
   CUtlVectorBase<item_definition_index_t,CUtlMemory<item_definition_index_t,int>>::RemoveAll(&this->m_vecBonusItemDef);
   if ( (this->m_vecBonusItemDef.m_Memory.m_nGrowSize & 0xC0000000) != 0
     || (CUtlMemory<item_definition_index_t,int>::Purge(&this->m_vecBonusItemDef.m_Memory),
@@ -1550,7 +1550,7 @@ void __fastcall CEconTool_StyleUnlock::~CEconTool_StyleUnlock(CEconTool_StyleUnl
   CUtlVectorBase<CEconTool_StyleUnlock::StyleUnlock_t,CUtlMemory<CEconTool_StyleUnlock::StyleUnlock_t,int> >::CAllocator *p_m_Memory; // r12
 
   v2 = (this->m_vecUnlocks.m_Memory.m_nGrowSize & 0xC0000000) == 0;
-  this->_vptr_IEconTool = off_47A8FB0;
+  this->_vptr_IEconTool = off_47A8FB0;  // vptr: CEconTool_StyleUnlock
   this->m_vecUnlocks.m_Size = 0;
   if ( v2 )
   {
@@ -1559,7 +1559,7 @@ void __fastcall CEconTool_StyleUnlock::~CEconTool_StyleUnlock(CEconTool_StyleUnl
     if ( (this->m_vecUnlocks.m_Memory.m_nGrowSize & 0xC0000000) == 0 )
       CUtlMemory<CEconTool_StyleUnlock::StyleUnlock_t,int>::Purge(p_m_Memory);
   }
-  this->_vptr_IEconTool = off_47A8E30;
+  this->_vptr_IEconTool = off_47A8E30;  // vptr: IEconTool
   CUtlVectorBase<item_definition_index_t,CUtlMemory<item_definition_index_t,int>>::RemoveAll(&this->m_vecBonusItemDef);
   if ( (this->m_vecBonusItemDef.m_Memory.m_nGrowSize & 0xC0000000) == 0 )
   {
@@ -1578,7 +1578,7 @@ void __fastcall CEconTool_StyleUnlock::~CEconTool_StyleUnlock(CEconTool_StyleUnl
   CUtlVectorBase<CEconTool_StyleUnlock::StyleUnlock_t,CUtlMemory<CEconTool_StyleUnlock::StyleUnlock_t,int> >::CAllocator *p_m_Memory; // r12
 
   v2 = (this->m_vecUnlocks.m_Memory.m_nGrowSize & 0xC0000000) == 0;
-  this->_vptr_IEconTool = off_47A8FB0;
+  this->_vptr_IEconTool = off_47A8FB0;  // vptr: CEconTool_StyleUnlock
   this->m_vecUnlocks.m_Size = 0;
   if ( v2 )
   {
@@ -1587,7 +1587,7 @@ void __fastcall CEconTool_StyleUnlock::~CEconTool_StyleUnlock(CEconTool_StyleUnl
     if ( (this->m_vecUnlocks.m_Memory.m_nGrowSize & 0xC0000000) == 0 )
       CUtlMemory<CEconTool_StyleUnlock::StyleUnlock_t,int>::Purge(p_m_Memory);
   }
-  this->_vptr_IEconTool = off_47A8E30;
+  this->_vptr_IEconTool = off_47A8E30;  // vptr: IEconTool
   CUtlVectorBase<item_definition_index_t,CUtlMemory<item_definition_index_t,int>>::RemoveAll(&this->m_vecBonusItemDef);
   if ( (this->m_vecBonusItemDef.m_Memory.m_nGrowSize & 0xC0000000) != 0
     || (CUtlMemory<item_definition_index_t,int>::Purge(&this->m_vecBonusItemDef.m_Memory),
@@ -1615,7 +1615,7 @@ void __fastcall CEconTool_StyleUnlock::CEconTool_StyleUnlock(
 {
   IEconTool::IEconTool(this, pszTypeName, pszUseString, 0, unCapabilities, pUsageKV);
   this->m_eOverrideQuality = EEconItemQuality::AE_UNDEFINED;
-  this->_vptr_IEconTool = off_47A8FB0;
+  this->_vptr_IEconTool = off_47A8FB0;  // vptr: CEconTool_StyleUnlock
   this->m_vecUnlocks.m_Size = 0;
   this->m_vecUnlocks.m_Memory.m_pMemory = 0;
   this->m_vecUnlocks.m_Memory.m_nAllocationCount = 0;
@@ -1821,7 +1821,7 @@ void __fastcall CEconTool_ItemDynamicRecipe::CDynamicRecipeComponentSpecificItem
   CEconTool_ItemDynamicRecipe::CBaseRecipeComponent::StringEncodedAttribute_t *v4; // rax
   bool v5; // zf
 
-  this->_vptr_CBaseRecipeComponent = off_47A9010;
+  this->_vptr_CBaseRecipeComponent = off_47A9010;  // vptr: CEconTool_ItemDynamicRecipe::CBaseRecipeComponent
   v2 = this->m_vecDynamicAttributes.m_Size - 1;
   v3 = v2;
   if ( v2 >= 0 )
@@ -1863,7 +1863,7 @@ void __fastcall CEconTool_ItemDynamicRecipe::CDynamicRecipeComponentSpecificItem
   CEconTool_ItemDynamicRecipe::CBaseRecipeComponent::StringEncodedAttribute_t *v4; // rax
   bool v5; // zf
 
-  this->_vptr_CBaseRecipeComponent = off_47A9010;
+  this->_vptr_CBaseRecipeComponent = off_47A9010;  // vptr: CEconTool_ItemDynamicRecipe::CBaseRecipeComponent
   v2 = this->m_vecDynamicAttributes.m_Size - 1;
   v3 = v2;
   if ( v2 >= 0 )
@@ -1906,7 +1906,7 @@ void __fastcall CEconTool_ItemDynamicRecipe::CDynamicRecipeComponentSpecificItem
   CEconTool_ItemDynamicRecipe::CBaseRecipeComponent::StringEncodedAttribute_t *v4; // rax
   bool v5; // zf
 
-  this->_vptr_CBaseRecipeComponent = off_47A9010;
+  this->_vptr_CBaseRecipeComponent = off_47A9010;  // vptr: CEconTool_ItemDynamicRecipe::CBaseRecipeComponent
   v2 = this->m_vecDynamicAttributes.m_Size - 1;
   v3 = v2;
   if ( v2 >= 0 )
@@ -1948,7 +1948,7 @@ void __fastcall CEconTool_ItemDynamicRecipe::CDynamicRecipeComponentSpecificItem
   CEconTool_ItemDynamicRecipe::CBaseRecipeComponent::StringEncodedAttribute_t *v4; // rax
   bool v5; // zf
 
-  this->_vptr_CBaseRecipeComponent = off_47A9010;
+  this->_vptr_CBaseRecipeComponent = off_47A9010;  // vptr: CEconTool_ItemDynamicRecipe::CBaseRecipeComponent
   v2 = this->m_vecDynamicAttributes.m_Size - 1;
   v3 = v2;
   if ( v2 >= 0 )
@@ -1991,7 +1991,7 @@ void __fastcall CEconTool_ItemDynamicRecipe::CDynamicRecipeComponentCriteriaMatc
   CEconTool_ItemDynamicRecipe::CBaseRecipeComponent::StringEncodedAttribute_t *v4; // rax
   bool v5; // zf
 
-  this->_vptr_CBaseRecipeComponent = off_47A9010;
+  this->_vptr_CBaseRecipeComponent = off_47A9010;  // vptr: CEconTool_ItemDynamicRecipe::CBaseRecipeComponent
   v2 = this->m_vecDynamicAttributes.m_Size - 1;
   v3 = v2;
   if ( v2 >= 0 )
@@ -2033,7 +2033,7 @@ void __fastcall CEconTool_ItemDynamicRecipe::CDynamicRecipeComponentCriteriaMatc
   CEconTool_ItemDynamicRecipe::CBaseRecipeComponent::StringEncodedAttribute_t *v4; // rax
   bool v5; // zf
 
-  this->_vptr_CBaseRecipeComponent = off_47A9010;
+  this->_vptr_CBaseRecipeComponent = off_47A9010;  // vptr: CEconTool_ItemDynamicRecipe::CBaseRecipeComponent
   v2 = this->m_vecDynamicAttributes.m_Size - 1;
   v3 = v2;
   if ( v2 >= 0 )
@@ -2076,7 +2076,7 @@ void __fastcall CEconTool_ItemDynamicRecipe::CDynamicRecipeComponentLootList::~C
   CEconTool_ItemDynamicRecipe::CBaseRecipeComponent::StringEncodedAttribute_t *v4; // rax
   bool v5; // zf
 
-  this->_vptr_CBaseRecipeComponent = off_47A9010;
+  this->_vptr_CBaseRecipeComponent = off_47A9010;  // vptr: CEconTool_ItemDynamicRecipe::CBaseRecipeComponent
   v2 = this->m_vecDynamicAttributes.m_Size - 1;
   v3 = v2;
   if ( v2 >= 0 )
@@ -2118,7 +2118,7 @@ void __fastcall CEconTool_ItemDynamicRecipe::CDynamicRecipeComponentLootList::~C
   CEconTool_ItemDynamicRecipe::CBaseRecipeComponent::StringEncodedAttribute_t *v4; // rax
   bool v5; // zf
 
-  this->_vptr_CBaseRecipeComponent = off_47A9010;
+  this->_vptr_CBaseRecipeComponent = off_47A9010;  // vptr: CEconTool_ItemDynamicRecipe::CBaseRecipeComponent
   v2 = this->m_vecDynamicAttributes.m_Size - 1;
   v3 = v2;
   if ( v2 >= 0 )
@@ -2161,7 +2161,7 @@ void __fastcall CEconTool_ItemDynamicRecipe::CStaticRecipeComponent::~CStaticRec
   CEconTool_ItemDynamicRecipe::CBaseRecipeComponent::StringEncodedAttribute_t *v4; // rax
   bool v5; // zf
 
-  this->_vptr_CBaseRecipeComponent = off_47A9010;
+  this->_vptr_CBaseRecipeComponent = off_47A9010;  // vptr: CEconTool_ItemDynamicRecipe::CBaseRecipeComponent
   v2 = this->m_vecDynamicAttributes.m_Size - 1;
   v3 = v2;
   if ( v2 >= 0 )
@@ -2203,7 +2203,7 @@ void __fastcall CEconTool_ItemDynamicRecipe::CStaticRecipeComponent::~CStaticRec
   CEconTool_ItemDynamicRecipe::CBaseRecipeComponent::StringEncodedAttribute_t *v4; // rax
   bool v5; // zf
 
-  this->_vptr_CBaseRecipeComponent = off_47A9010;
+  this->_vptr_CBaseRecipeComponent = off_47A9010;  // vptr: CEconTool_ItemDynamicRecipe::CBaseRecipeComponent
   v2 = this->m_vecDynamicAttributes.m_Size - 1;
   v3 = v2;
   if ( v2 >= 0 )

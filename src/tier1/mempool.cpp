@@ -46,9 +46,13 @@ void __fastcall CUtlMemoryPoolBase::CUtlMemoryPoolBase(
   int v8; // ecx
   int v9; // eax
   int m_BlocksPerBlob; // edx
-  __int64 v11; // r8
-  __int64 v12; // r9
-  LeafCodeInfo_t v13; // [rsp+0h] [rbp-30h] BYREF
+  __int64 v11; // rdx
+  __int64 v12; // rcx
+  __int64 v13; // rdi
+  __int64 v14; // rsi
+  __int64 v15; // r8
+  __int64 v16; // r9
+  LeafCodeInfo_t v17; // [rsp+0h] [rbp-30h] BYREF
 
   this->m_BlocksAllocated.m_value = 0;
   this->m_PeakAlloc.m_value = 0;
@@ -86,20 +90,20 @@ void __fastcall CUtlMemoryPoolBase::CUtlMemoryPoolBase(
       goto LABEL_14;
     while ( 1 )
     {
-      if ( Plat_ShouldCollectMiniDumpsForFatalErrors() != 0 )
+      if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v13, v14, v11, v12) != 0 )
         loc_0 = -559038737;
       Plat_ExitProcess(1);
 LABEL_14:
-      v13.m_szFunction = "CUtlMemoryPoolBase";
-      v13.m_szFile = "mempool.cpp";
-      v13.m_nLine = 130;
+      v17.m_szFunction = "CUtlMemoryPoolBase";
+      v17.m_szFile = "mempool.cpp";
+      v17.m_nLine = 130;
       LoggingSystem_Log(
         LOG_GENERAL,
         LoggingSeverity_t::LS_ERROR,
-        &v13,
+        &v17,
         "CUtlMemoryPoolBase: Cannot specify 0 elements to grow each time!\n",
-        v11,
-        v12);
+        v15,
+        v16);
     }
   }
   this->m_NumBlobs = 0;

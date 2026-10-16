@@ -173,7 +173,7 @@ void __fastcall CEconItemView::NetworkVar_m_AttributeList::NetworkStateChanged(
 void __fastcall CEconItemView::NetworkVar_m_AttributeList::~NetworkVar_m_AttributeList(
         CEconItemView::NetworkVar_m_AttributeList *const this)
 {
-  this->_vptr_CAttributeList = off_47A92B0;
+  this->_vptr_CAttributeList = off_47A92B0;  // vptr: CAttributeList
   operator delete(this->m_Attributes.m_pArraySizeChangedDelegate);
   CUtlVectorBase<CEconItemAttribute,CNetworkUtlVector_MemoryType<CEconItemAttribute,-1>>::RemoveAll(&this->m_Attributes.m_Vector);
   if ( (this->m_Attributes.m_Vector.m_Memory.m_nGrowSize & 0xC0000000) == 0 )

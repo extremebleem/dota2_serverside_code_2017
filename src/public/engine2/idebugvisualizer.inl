@@ -4,7 +4,7 @@
 // IDebugVisualizer::~IDebugVisualizer  (line 28, @0x0000000001f71e30, libserver.so)
 void __fastcall IDebugVisualizer::~IDebugVisualizer(IDebugVisualizer *const this)
 {
-  this->_vptr_IDebugVisualizer = off_3FCBB90;
+  this->_vptr_IDebugVisualizer = off_3FCBB90;  // vptr: IDebugVisualizer
 }
 
 
@@ -12,7 +12,7 @@ void __fastcall IDebugVisualizer::~IDebugVisualizer(IDebugVisualizer *const this
 // calls: operator delete
 void __fastcall IDebugVisualizer::~IDebugVisualizer(IDebugVisualizer *const this)
 {
-  this->_vptr_IDebugVisualizer = off_3FCBB90;
+  this->_vptr_IDebugVisualizer = off_3FCBB90;  // vptr: IDebugVisualizer
   operator delete(this);
 }
 

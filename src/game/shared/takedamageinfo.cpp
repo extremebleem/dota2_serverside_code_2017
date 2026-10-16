@@ -169,7 +169,7 @@ void __fastcall CTakeDamageInfo::CTakeDamageInfo(CTakeDamageInfo *const this)
   this->m_hInflictor.m_Index = -1;
   this->m_hAttacker.m_Index = -1;
   this->m_hWeapon.m_Index = -1;
-  this->_vptr_CTakeDamageInfo = off_3FC92D0;
+  this->_vptr_CTakeDamageInfo = off_3FC92D0;  // vptr: CTakeDamageInfo
   CTakeDamageInfo::Init(this, 0, 0, 0, &vec3_origin, &vec3_origin, 0.0, &vec3_origin, 0, 0);
 }
 
@@ -188,7 +188,7 @@ void __fastcall CTakeDamageInfo::CTakeDamageInfo(
   this->m_hInflictor.m_Index = -1;
   this->m_hAttacker.m_Index = -1;
   this->m_hWeapon.m_Index = -1;
-  this->_vptr_CTakeDamageInfo = off_3FC92D0;
+  this->_vptr_CTakeDamageInfo = off_3FC92D0;  // vptr: CTakeDamageInfo
   CTakeDamageInfo::Init(
     this,
     pInflictor,
@@ -217,7 +217,7 @@ void __fastcall CTakeDamageInfo::CTakeDamageInfo(
   this->m_hInflictor.m_Index = -1;
   this->m_hAttacker.m_Index = -1;
   this->m_hWeapon.m_Index = -1;
-  this->_vptr_CTakeDamageInfo = off_3FC92D0;
+  this->_vptr_CTakeDamageInfo = off_3FC92D0;  // vptr: CTakeDamageInfo
   CTakeDamageInfo::Init(
     this,
     pInflictor,
@@ -249,7 +249,7 @@ void __fastcall CTakeDamageInfo::CTakeDamageInfo(
   this->m_hInflictor.m_Index = -1;
   this->m_hAttacker.m_Index = -1;
   this->m_hWeapon.m_Index = -1;
-  this->_vptr_CTakeDamageInfo = off_3FC92D0;
+  this->_vptr_CTakeDamageInfo = off_3FC92D0;  // vptr: CTakeDamageInfo
   CTakeDamageInfo::Set(
     this,
     pInflictor,
@@ -281,7 +281,7 @@ void __fastcall CTakeDamageInfo::CTakeDamageInfo(
   this->m_hInflictor.m_Index = -1;
   this->m_hAttacker.m_Index = -1;
   this->m_hWeapon.m_Index = -1;
-  this->_vptr_CTakeDamageInfo = off_3FC92D0;
+  this->_vptr_CTakeDamageInfo = off_3FC92D0;  // vptr: CTakeDamageInfo
   CTakeDamageInfo::Set(
     this,
     pInflictor,
@@ -438,7 +438,7 @@ void __fastcall CTakeDamageInfo::~CTakeDamageInfo(CTakeDamageInfo *const this)
   HSCRIPT m_hScriptInstance; // rsi
 
   m_hScriptInstance = this->m_hScriptInstance;
-  this->_vptr_CTakeDamageInfo = off_3FC92D0;
+  this->_vptr_CTakeDamageInfo = off_3FC92D0;  // vptr: CTakeDamageInfo
   if ( m_hScriptInstance != 0 )
   {
     (*(*g_pScriptVM + 136LL))(g_pScriptVM);
@@ -455,7 +455,7 @@ void __fastcall CTakeDamageInfo::CTakeDamageInfo(CTakeDamageInfo *const this, co
   this->m_hInflictor.m_Index = -1;
   this->m_hAttacker.m_Index = -1;
   this->m_hWeapon.m_Index = -1;
-  this->_vptr_CTakeDamageInfo = off_3FC92D0;
+  this->_vptr_CTakeDamageInfo = off_3FC92D0;  // vptr: CTakeDamageInfo
   *(memcpy(this, rhs, sizeof(CTakeDamageInfo)) + 17) = 0;
 }
 
@@ -609,7 +609,7 @@ void __fastcall CMultiDamage::CMultiDamage(CMultiDamage *const this)
 {
   CTakeDamageInfo::CTakeDamageInfo(this);
   this->m_hTarget.m_Index = -1;
-  this->_vptr_CTakeDamageInfo = off_40B06D0;
+  this->_vptr_CTakeDamageInfo = off_40B06D0;  // vptr: CMultiDamage
 }
 
 

@@ -577,7 +577,7 @@ void __fastcall CVProfOGSModeFullGameAverage::ForceImmediateReport(CVProfOGSMode
 // calls: CUtlVectorBase<CVProfOGSMode::CVProfSample, CUtlMemory<CVProfOGSMode::CVProfSample, int> >::RemoveAll, CUtlMemory<CVProfOGSMode::CVProfSample, int>::Purge
 void __fastcall CVProfOGSModeHeartbeat::~CVProfOGSModeHeartbeat(CVProfOGSModeHeartbeat *const this)
 {
-  this->_vptr_CVProfOGSMode = off_4169850;
+  this->_vptr_CVProfOGSMode = off_4169850;  // vptr: CVProfOGSModeHeartbeat
   CUtlVectorBase<CVProfOGSMode::CVProfSample,CUtlMemory<CVProfOGSMode::CVProfSample,int>>::RemoveAll(&this->m_bufferedSamples);
   if ( (this->m_bufferedSamples.m_Memory.m_nGrowSize & 0xC0000000) != 0
     || (CUtlMemory<CVProfOGSMode::CVProfSample,int>::Purge(&this->m_bufferedSamples.m_Memory),
@@ -597,7 +597,7 @@ void __fastcall CVProfOGSModeHeartbeat::~CVProfOGSModeHeartbeat(CVProfOGSModeHea
 // calls: CUtlVectorBase<CVProfOGSMode::CVProfSample, CUtlMemory<CVProfOGSMode::CVProfSample, int> >::RemoveAll, operator delete, CUtlMemory<CVProfOGSMode::CVProfSample, int>::Purge
 void __fastcall CVProfOGSModeHeartbeat::~CVProfOGSModeHeartbeat(CVProfOGSModeHeartbeat *const this)
 {
-  this->_vptr_CVProfOGSMode = off_4169850;
+  this->_vptr_CVProfOGSMode = off_4169850;  // vptr: CVProfOGSModeHeartbeat
   CUtlVectorBase<CVProfOGSMode::CVProfSample,CUtlMemory<CVProfOGSMode::CVProfSample,int>>::RemoveAll(&this->m_bufferedSamples);
   if ( (this->m_bufferedSamples.m_Memory.m_nGrowSize & 0xC0000000) == 0 )
   {
@@ -635,7 +635,7 @@ void __fastcall CVProfOGSModeHeartbeat::CVProfOGSModeHeartbeat(CVProfOGSModeHear
   this->m_scheduledCallback.m_Closure.m_pFunction.__pfn = 0;
   this->m_scheduledCallback.m_Closure.m_pFunction.__delta = 0;
   this->m_nRefCount = 1;
-  this->_vptr_CVProfOGSMode = off_4169850;
+  this->_vptr_CVProfOGSMode = off_4169850;  // vptr: CVProfOGSModeHeartbeat
   this->m_bufferedSamples.m_Size = 0;
   this->m_bufferedSamples.m_Memory.m_pMemory = 0;
   this->m_bufferedSamples.m_Memory.m_nAllocationCount = 0;
@@ -973,7 +973,7 @@ void __cdecl CDOTA_OGS_VPROF::YouForgot::ToDefine_DEFINE_GAME_SYSTEM()
 // callers: _GLOBAL__sub_I__unity_dota_05.cpp
 void __fastcall CDOTA_OGS_VPROF::CDOTA_OGS_VPROF(CDOTA_OGS_VPROF *const this)
 {
-  this->_vptr_IGameSystem = off_41696F0;
+  this->_vptr_IGameSystem = off_41696F0;  // vptr: CDOTA_OGS_VPROF
   this->m_pCurrentRecordingMode = 0;
   CDOTA_OGS_VPROF::Reset(this);
 }
@@ -1153,7 +1153,7 @@ void __fastcall CDOTA_OGS_VPROF::OnGameStart(CDOTA_OGS_VPROF *const this)
   CDOTA_OGS_VPROF::ChangeReportMode(this, v4);
   m_pCurrentRecordingMode = this->m_pCurrentRecordingMode;
   if ( m_pCurrentRecordingMode != 0 )
-    (*m_pCurrentRecordingMode->_vptr_CVProfOGSMode)(m_pCurrentRecordingMode);
+    m_pCurrentRecordingMode->OnGameStart();
 }
 
 

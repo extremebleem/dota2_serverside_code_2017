@@ -116,7 +116,7 @@ CEntityInstance *__fastcall CPathCorner::CEntityInstanceEntityClass::ConstructIn
 void __fastcall CPathCorner::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CPathCorner::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -126,7 +126,7 @@ void __fastcall CPathCorner::CEntityInstanceEntityClass::~CEntityInstanceEntityC
 void __fastcall CPathCorner::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CPathCorner::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }

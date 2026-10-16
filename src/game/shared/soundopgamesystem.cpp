@@ -16,7 +16,7 @@ void __fastcall CSoundOpGameSystem::CSoundOpGameSystem(CSoundOpGameSystem *const
   this->m_ConnectedSignallers.m_depth = 0;
   this->m_ConnectedSignallers.Mutex_t.m_ownerID = 0;
   this->m_ConnectedSignallers.Mutex_t.m_depth = 0;
-  this->_vptr_IGameSystem = off_3FCE4D0;
+  this->_vptr_IGameSystem = off_3FCE4D0;  // vptr: CSoundOpGameSystem
   this->m_serverGuidMessageQueue.m_messages.m_Size = 0;
   this->m_serverGuidMessageQueue.m_messages.m_Memory.m_pMemory = 0;
   this->m_serverGuidMessageQueue.m_messages.m_Memory.m_nAllocationCount = 0;
@@ -117,7 +117,7 @@ void __fastcall CSoundOpGameSystem::~CSoundOpGameSystem(CSoundOpGameSystem *cons
   CSoundOpGameSystem::CCommandMemberInitializer_snd_sos_sv_soundevent_unpause_last *v1; // r12
 
   v1 = &this->m_snd_sos_sv_soundevent_unpause_last_register;
-  this->_vptr_IGameSystem = off_3FCE4D0;
+  this->_vptr_IGameSystem = off_3FCE4D0;  // vptr: CSoundOpGameSystem
   this->m_snd_sos_sv_soundevent_unpause_last_register.m_ConCommandAccessor._vptr_ConCommandBase = &off_3FCD990;
   this->m_snd_sos_sv_soundevent_unpause_last_register.m_ConCommandAccessor._vptr_ICommandCallback = &off_3FCDA38;
   this->m_snd_sos_sv_soundevent_unpause_last_register.m_ConCommandAccessor._vptr_ICommandCompletionCallback = &off_3FCDA50;
@@ -165,7 +165,7 @@ void __fastcall CSoundOpGameSystem::~CSoundOpGameSystem(CSoundOpGameSystem *cons
       CUtlMemory<CSosMessageQueue<SoundEventGuid_t>::Entry_t,int>::Purge(&this->m_serverGuidMessageQueue.m_messages.m_Memory);
   }
   CUtlSlot::~CUtlSlot(&this->CUtlSlot);
-  this->_vptr_IGameSystem = off_3F7C1B0;
+  this->_vptr_IGameSystem = off_3F7C1B0;  // vptr: CAutoGameSystem
   IGameSystem::~IGameSystem(this);
 }
 
@@ -1323,11 +1323,11 @@ LABEL_7:
       v34 = (v24 + 80);
       CUtlBuffer::CUtlBuffer(v24 + 1, 0, 0, 0);
       CUtlBuffer::SetExternalBuffer(v34, pNewEvent->m_fieldData.m_fixedData, 32, 0, 2);
-      pNewEvent->_vptr_CSosEventInfo_t = off_3FCAD70;
+      pNewEvent->_vptr_CSosEventInfo_t = off_3FCAD70;  // vptr: CSosSetSoundEventFieldsInfo_t
       pNewEvent->m_nGuid.m_Data = 0;
       pNewEvent->m_msgType = SosMessageQueueInfoType_t::SOSMSGQ_SOUND_FIELDS;
       CSosCopyRecipientFilter::CSosCopyRecipientFilter(&pNewEvent->m_recipientFilter);
-      pNewEvent->_vptr_CSosEventInfo_t = off_3FCD950;
+      pNewEvent->_vptr_CSosEventInfo_t = off_3FCD950;  // vptr: CSosFilterSetSoundEventFieldsInfo_t
       if ( pFilter != 0 )
       {
         v35 = 2 * ((*(pFilter->_vptr_IRecipientFilter + 3))(pFilter) == 1) + 1;
@@ -1496,7 +1496,7 @@ LABEL_16:
     CUtlBuffer::CUtlBuffer(v22 + 1, 0, 0, 0);
     CUtlBuffer::SetExternalBuffer(v23, pNewEvent->m_fieldData.m_fixedData, 32, 0, 2);
     pNewEvent->m_recipientFilter._vptr_IRecipientFilter = &off_3FCCE90;
-    pNewEvent->_vptr_CSosEventInfo_t = off_3FCD970;
+    pNewEvent->_vptr_CSosEventInfo_t = off_3FCD970;  // vptr: CSosFilterSetLibraryStackFieldsInfo_t
     pNewEvent->m_msgType = SosMessageQueueInfoType_t::SOSMSGQ_LIBRARY_FIELDS;
     pNewEvent->m_libStackHash = -1;
     pNewEvent->m_recipientFilter.m_Flags = 0;

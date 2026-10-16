@@ -77,7 +77,7 @@ IItemSocket *__fastcall CAttribute_Socket::ItemSocketFactory(item_definition_ind
   if ( ItemDefinitionMutable == 0 )
   {
 LABEL_12:
-    v12 = operator new(0x28u);
+    v12 = operator new(0x28u);  // new CItemSocket_Empty (size matches)
     v12[1]._vptr_IItemSocket = 0;
     v12[2]._vptr_IItemSocket = 0;
     LODWORD(v12[3]._vptr_IItemSocket) = 0;
@@ -86,7 +86,7 @@ LABEL_12:
     v12->_vptr_IItemSocket = &off_47A60F0;
     CProtoItemSocket_Empty::CProtoItemSocket_Empty(&v12[1]);
 LABEL_13:
-    v12->_vptr_IItemSocket = off_47A8430;
+    v12->_vptr_IItemSocket = off_47A8430;  // vptr: CItemSocket_Empty
     return v12;
   }
   if ( `guard variable for'CAttribute_Socket::ItemSocketFactory(item_definition_index_t)::pAttrDef_GemType == 0
@@ -138,52 +138,52 @@ LABEL_11:
   switch ( unGemType[0] )
   {
     case 1u:
-      v19 = operator new(0x30u);
+      v19 = operator new(0x30u);  // new CItemSocket_Effect (size matches)
       memset(v19, 0, 0x30u);
       v19->_vptr_IItemSocket = &off_47A64F0;
       CProtoItemSocket_Effect::CProtoItemSocket_Effect(&v19[1]);
-      v19->_vptr_IItemSocket = off_47A8530;
+      v19->_vptr_IItemSocket = off_47A8530;  // vptr: CItemSocket_Effect
       result = v19;
       break;
     case 2u:
-      v18 = operator new(0x38u);
+      v18 = operator new(0x38u);  // new CItemSocket_Color (size matches)
       memset(v18, 0, 0x38u);
       v18->_vptr_IItemSocket = &off_47A65F0;
       CProtoItemSocket_Color::CProtoItemSocket_Color(&v18[1]);
-      v18->_vptr_IItemSocket = off_47A8630;
+      v18->_vptr_IItemSocket = off_47A8630;  // vptr: CItemSocket_Color
       result = v18;
       break;
     case 3u:
-      v17 = operator new(0x30u);
+      v17 = operator new(0x30u);  // new CItemSocket_Strange (size matches)
       memset(v17, 0, 0x30u);
       v17->_vptr_IItemSocket = &off_47A61F0;
       CProtoItemSocket_Strange::CProtoItemSocket_Strange(&v17[1]);
-      v17->_vptr_IItemSocket = off_47A8730;
+      v17->_vptr_IItemSocket = off_47A8730;  // vptr: CItemSocket_Strange
       result = v17;
       break;
     case 5u:
     case 8u:
-      v16 = operator new(0x30u);
+      v16 = operator new(0x30u);  // new CItemSocket_AssetModifier (size matches)
       memset(v16, 0, 0x30u);
       v16->_vptr_IItemSocket = &off_47A63F0;
       CProtoItemSocket_AssetModifier::CProtoItemSocket_AssetModifier(&v16[1]);
-      v16->_vptr_IItemSocket = off_47A8930;
+      v16->_vptr_IItemSocket = off_47A8930;  // vptr: CItemSocket_AssetModifier
       result = v16;
       break;
     case 6u:
-      v15 = operator new(0x38u);
+      v15 = operator new(0x38u);  // new CItemSocket_Autograph (size matches)
       memset(v15, 0, 0x38u);
       v15->_vptr_IItemSocket = &off_47A66F0;
       CProtoItemSocket_Autograph::CProtoItemSocket_Autograph(&v15[1]);
-      v15->_vptr_IItemSocket = off_47A8A30;
+      v15->_vptr_IItemSocket = off_47A8A30;  // vptr: CItemSocket_Autograph
       result = v15;
       break;
     case 7u:
-      v14 = operator new(0x38u);
+      v14 = operator new(0x38u);  // new CItemSocket_Spectator (size matches)
       memset(v14, 0, 0x38u);
       v14->_vptr_IItemSocket = &off_47A62F0;
       CProtoItemSocket_Spectator::CProtoItemSocket_Spectator(&v14[1]);
-      v14->_vptr_IItemSocket = off_47A8830;
+      v14->_vptr_IItemSocket = off_47A8830;  // vptr: CItemSocket_Spectator
       result = v14;
       break;
     default:
@@ -1190,15 +1190,15 @@ void __fastcall TItemSocket<CProtoItemSocket_Autograph>::GetItemType(
     options_high = HIDWORD(containing_type->options_);
     if ( options_high == 1 )
     {
-      v8 = (*v4->_vptr_CLocalizationProvider)(v4, "#Econ_Socket_Empty_Effect");
+      v8 = v4->Find("#Econ_Socket_Empty_Effect");
     }
     else if ( options_high == 2 )
     {
-      v8 = (*v4->_vptr_CLocalizationProvider)(v4, "#Econ_Socket_Empty_Color");
+      v8 = v4->Find("#Econ_Socket_Empty_Color");
     }
     else
     {
-      v8 = (*v4->_vptr_CLocalizationProvider)(v4, "#Econ_Socket_Empty_General");
+      v8 = v4->Find("#Econ_Socket_Empty_General");
     }
   }
   CUtlConstStringBase<wchar_t>::Set(strType, v8);
@@ -1260,15 +1260,15 @@ void __fastcall TItemSocket<CProtoItemSocket_AssetModifier>::GetItemType(
     options_high = HIDWORD(containing_type->options_);
     if ( options_high == 1 )
     {
-      v8 = (*v4->_vptr_CLocalizationProvider)(v4, "#Econ_Socket_Empty_Effect");
+      v8 = v4->Find("#Econ_Socket_Empty_Effect");
     }
     else if ( options_high == 2 )
     {
-      v8 = (*v4->_vptr_CLocalizationProvider)(v4, "#Econ_Socket_Empty_Color");
+      v8 = v4->Find("#Econ_Socket_Empty_Color");
     }
     else
     {
-      v8 = (*v4->_vptr_CLocalizationProvider)(v4, "#Econ_Socket_Empty_General");
+      v8 = v4->Find("#Econ_Socket_Empty_General");
     }
   }
   CUtlConstStringBase<wchar_t>::Set(strType, v8);
@@ -1330,15 +1330,15 @@ void __fastcall TItemSocket<CProtoItemSocket_Strange>::GetItemType(
     options_high = HIDWORD(containing_type->options_);
     if ( options_high == 1 )
     {
-      v8 = (*v4->_vptr_CLocalizationProvider)(v4, "#Econ_Socket_Empty_Effect");
+      v8 = v4->Find("#Econ_Socket_Empty_Effect");
     }
     else if ( options_high == 2 )
     {
-      v8 = (*v4->_vptr_CLocalizationProvider)(v4, "#Econ_Socket_Empty_Color");
+      v8 = v4->Find("#Econ_Socket_Empty_Color");
     }
     else
     {
-      v8 = (*v4->_vptr_CLocalizationProvider)(v4, "#Econ_Socket_Empty_General");
+      v8 = v4->Find("#Econ_Socket_Empty_General");
     }
   }
   CUtlConstStringBase<wchar_t>::Set(strType, v8);
@@ -1400,15 +1400,15 @@ void __fastcall TItemSocket<CProtoItemSocket_Color>::GetItemType(
     options_high = HIDWORD(containing_type->options_);
     if ( options_high == 1 )
     {
-      v8 = (*v4->_vptr_CLocalizationProvider)(v4, "#Econ_Socket_Empty_Effect");
+      v8 = v4->Find("#Econ_Socket_Empty_Effect");
     }
     else if ( options_high == 2 )
     {
-      v8 = (*v4->_vptr_CLocalizationProvider)(v4, "#Econ_Socket_Empty_Color");
+      v8 = v4->Find("#Econ_Socket_Empty_Color");
     }
     else
     {
-      v8 = (*v4->_vptr_CLocalizationProvider)(v4, "#Econ_Socket_Empty_General");
+      v8 = v4->Find("#Econ_Socket_Empty_General");
     }
   }
   CUtlConstStringBase<wchar_t>::Set(strType, v8);
@@ -1470,15 +1470,15 @@ void __fastcall TItemSocket<CProtoItemSocket_Effect>::GetItemType(
     options_high = HIDWORD(containing_type->options_);
     if ( options_high == 1 )
     {
-      v8 = (*v4->_vptr_CLocalizationProvider)(v4, "#Econ_Socket_Empty_Effect");
+      v8 = v4->Find("#Econ_Socket_Empty_Effect");
     }
     else if ( options_high == 2 )
     {
-      v8 = (*v4->_vptr_CLocalizationProvider)(v4, "#Econ_Socket_Empty_Color");
+      v8 = v4->Find("#Econ_Socket_Empty_Color");
     }
     else
     {
-      v8 = (*v4->_vptr_CLocalizationProvider)(v4, "#Econ_Socket_Empty_General");
+      v8 = v4->Find("#Econ_Socket_Empty_General");
     }
   }
   CUtlConstStringBase<wchar_t>::Set(strType, v8);
@@ -1540,15 +1540,15 @@ void __fastcall TItemSocket<CProtoItemSocket_Empty>::GetItemType(
     options_high = HIDWORD(containing_type->options_);
     if ( options_high == 1 )
     {
-      v8 = (*v4->_vptr_CLocalizationProvider)(v4, "#Econ_Socket_Empty_Effect");
+      v8 = v4->Find("#Econ_Socket_Empty_Effect");
     }
     else if ( options_high == 2 )
     {
-      v8 = (*v4->_vptr_CLocalizationProvider)(v4, "#Econ_Socket_Empty_Color");
+      v8 = v4->Find("#Econ_Socket_Empty_Color");
     }
     else
     {
-      v8 = (*v4->_vptr_CLocalizationProvider)(v4, "#Econ_Socket_Empty_General");
+      v8 = v4->Find("#Econ_Socket_Empty_General");
     }
   }
   CUtlConstStringBase<wchar_t>::Set(strType, v8);
@@ -1610,15 +1610,15 @@ void __fastcall TItemSocket<CProtoItemSocket_Spectator>::GetItemType(
     options_high = HIDWORD(containing_type->options_);
     if ( options_high == 1 )
     {
-      v8 = (*v4->_vptr_CLocalizationProvider)(v4, "#Econ_Socket_Empty_Effect");
+      v8 = v4->Find("#Econ_Socket_Empty_Effect");
     }
     else if ( options_high == 2 )
     {
-      v8 = (*v4->_vptr_CLocalizationProvider)(v4, "#Econ_Socket_Empty_Color");
+      v8 = v4->Find("#Econ_Socket_Empty_Color");
     }
     else
     {
-      v8 = (*v4->_vptr_CLocalizationProvider)(v4, "#Econ_Socket_Empty_General");
+      v8 = v4->Find("#Econ_Socket_Empty_General");
     }
   }
   CUtlConstStringBase<wchar_t>::Set(strType, v8);
@@ -1644,7 +1644,7 @@ void __fastcall CItemSocket_Empty::GetString(
     pszLocKey = pszLocKeya;
     pLocalize = v6;
   }
-  v5 = (*pLocalize->_vptr_CLocalizationProvider)(pLocalize, pszLocKey);
+  v5 = pLocalize->Find(pszLocKey);
   CUtlConstStringBase<wchar_t>::Set(strDesc, v5);
 }
 
@@ -1679,8 +1679,8 @@ void __fastcall CItemSocket_Effect::GetString(
   }
   CFmtStrN<256,false>::CFmtStrN(&v13, "#Attrib_Particle%u", *(this + 10));
   v7 = *(v6->_vptr_CLocalizationProvider + 1);
-  thisb = (*v6->_vptr_CLocalizationProvider)(v6, v13.m_szBuf);
-  v8 = (*v6->_vptr_CLocalizationProvider)(v6, pszLocKey);
+  thisb = v6->Find(v13.m_szBuf);
+  v8 = v6->Find(pszLocKey);
   v7(v6, wszLocalizedString, 1024, v8, 1, thisb);
   CUtlConstStringBase<wchar_t>::Set(strVal, wszLocalizedString);
 }
@@ -1809,7 +1809,7 @@ void __fastcall CItemSocket_Color::GetString(
     strLocKey_0.m_pString = 0;
     CUtlString::Format(&strLocKey_0, "Econ_Socket_Color_%s_Legacy", pszLocKey);
     v23 = *(v6->_vptr_CLocalizationProvider + 1);
-    v27 = (*v6->_vptr_CLocalizationProvider)(v6, "#UnknownColor");
+    v27 = v6->Find("#UnknownColor");
     v24 = *v6->_vptr_CLocalizationProvider;
     v25 = CUtlString::Get(&strLocKey_0);
     v26 = (v24)(v6, v25);
@@ -1872,7 +1872,7 @@ void __fastcall CItemSocket_Strange::GetString(
     {
       v13 = vptr_CLocalizationProvider[1];
       v14 = (*vptr_CLocalizationProvider)(v7, KillEaterScoreTypeLocString);
-      v15 = (*v7->_vptr_CLocalizationProvider)(v7, pszLocKey);
+      v15 = v7->Find(pszLocKey);
       v13(v7, wszLocalizedString, 1024, v15, 1, v14);
       CUtlConstStringBase<wchar_t>::Set(strVal, wszLocalizedString);
     }
@@ -1880,7 +1880,7 @@ void __fastcall CItemSocket_Strange::GetString(
     {
       v18 = vptr_CLocalizationProvider[1];
       v16 = (*vptr_CLocalizationProvider)(v7, KillEaterScoreTypeLocString);
-      v17 = (*v7->_vptr_CLocalizationProvider)(v7, pszLocKey);
+      v17 = v7->Find(pszLocKey);
       v18(v7, wszLocalizedString, 1024, v17, 2, v16, lszScore);
       CUtlConstStringBase<wchar_t>::Set(strVal, wszLocalizedString);
     }
@@ -1910,7 +1910,7 @@ void __fastcall CItemSocket_Spectator::GetItemType(
   memset(lszScore, 0, sizeof(lszScore));
   V_swprintf_safe<12ul>(lszScore, U"%u", v6);
   v7 = *(v5->_vptr_CLocalizationProvider + 1);
-  v8 = (*v5->_vptr_CLocalizationProvider)(v5, "Econ_Socket_Spectator_Type");
+  v8 = v5->Find("Econ_Socket_Spectator_Type");
   v7(v5, wszLocalizedString, 1024, v8, 1, lszScore);
   CUtlConstStringBase<wchar_t>::Set(strType, wszLocalizedString);
 }
@@ -2006,8 +2006,8 @@ LABEL_17:
   }
 LABEL_6:
   v9 = *(v6->_vptr_CLocalizationProvider + 1);
-  v10 = (*v6->_vptr_CLocalizationProvider)(v6, szName);
-  v11 = (*v6->_vptr_CLocalizationProvider)(v6, pszLocKey);
+  v10 = v6->Find(szName);
+  v11 = v6->Find(pszLocKey);
   v9(v6, wszLocalizedString, 1024, v11, 1, v10);
   CUtlConstStringBase<wchar_t>::Set(strVal, wszLocalizedString);
 }
@@ -2052,8 +2052,8 @@ void __fastcall CItemSocket_AssetModifier::GetString(
     m_pAsString = "#Invalid_AssetMod";
   }
   v9 = *(v6->_vptr_CLocalizationProvider + 1);
-  v10 = (*v6->_vptr_CLocalizationProvider)(v6, m_pAsString);
-  v11 = (*v6->_vptr_CLocalizationProvider)(v6, pszLocKey);
+  v10 = v6->Find(m_pAsString);
+  v11 = v6->Find(pszLocKey);
   v9(v6, wszLocalizedString, 1024, v11, 1, v10);
   CUtlConstStringBase<wchar_t>::Set(strVal, wszLocalizedString);
 }
@@ -2226,7 +2226,7 @@ LABEL_11:
     v22 = v15;
     goto LABEL_26;
   }
-  v17 = (*pLocalizea->_vptr_CLocalizationProvider)(pLocalizea, NameModifier);
+  v17 = pLocalizea->Find(NameModifier);
   V_swprintf_safe<16ul>(wszLevel, U"%u", *(this + 13));
   if ( v17 != 0 )
   {
@@ -2351,7 +2351,7 @@ IItemSocket *__fastcall CSocketIterator::GetSocketByAttributeDef(
   {
     m_pAttributeDefinition = v4->m_Sockets[0].m_pAttributeDefinition;
     if ( m_pAttributeDefinition != 0
-      && (*m_pAttributeDefinition->_vptr_IEconItemAttributeDefinition)(m_pAttributeDefinition) == def_index )
+      && m_pAttributeDefinition->GetDefinitionIndex() == def_index )
     {
       break;
     }

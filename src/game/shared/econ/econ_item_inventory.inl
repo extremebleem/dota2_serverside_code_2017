@@ -128,7 +128,7 @@ void __fastcall CInventoryManager::~CInventoryManager(CInventoryManager *const t
   CUtlVectorBase<CInventoryManager::inventories_t,CUtlMemory<CInventoryManager::inventories_t,int> >::CAllocator *p_m_Memory; // r12
 
   v2 = (this->m_inventories.m_Memory.m_nGrowSize & 0xC0000000) == 0;
-  this->_vptr_IGameSystem = off_47A6E10;
+  this->_vptr_IGameSystem = off_47A6E10;  // vptr: CInventoryManager
   this->m_inventories.m_Size = 0;
   if ( v2 )
   {
@@ -137,7 +137,7 @@ void __fastcall CInventoryManager::~CInventoryManager(CInventoryManager *const t
     if ( (this->m_inventories.m_Memory.m_nGrowSize & 0xC0000000) == 0 )
       CUtlMemory<CInventoryManager::inventories_t,int>::Purge(p_m_Memory);
   }
-  this->_vptr_IGameSystem = off_3F7C1B0;
+  this->_vptr_IGameSystem = off_3F7C1B0;  // vptr: CAutoGameSystem
   IGameSystem::~IGameSystem(this);
 }
 
@@ -150,7 +150,7 @@ void __fastcall CInventoryManager::~CInventoryManager(CInventoryManager *const t
   CUtlVectorBase<CInventoryManager::inventories_t,CUtlMemory<CInventoryManager::inventories_t,int> >::CAllocator *p_m_Memory; // r12
 
   v2 = (this->m_inventories.m_Memory.m_nGrowSize & 0xC0000000) == 0;
-  this->_vptr_IGameSystem = off_47A6E10;
+  this->_vptr_IGameSystem = off_47A6E10;  // vptr: CInventoryManager
   this->m_inventories.m_Size = 0;
   if ( v2 )
   {
@@ -159,7 +159,7 @@ void __fastcall CInventoryManager::~CInventoryManager(CInventoryManager *const t
     if ( (this->m_inventories.m_Memory.m_nGrowSize & 0xC0000000) == 0 )
       CUtlMemory<CInventoryManager::inventories_t,int>::Purge(p_m_Memory);
   }
-  this->_vptr_IGameSystem = off_3F7C1B0;
+  this->_vptr_IGameSystem = off_3F7C1B0;  // vptr: CAutoGameSystem
   IGameSystem::~IGameSystem(this);
   operator delete(this);
 }

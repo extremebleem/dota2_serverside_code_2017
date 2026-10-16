@@ -12,7 +12,7 @@ void __fastcall CDotaNPCSpawner<CDOTA_BaseNPC>::~CDotaNPCSpawner(CDotaNPCSpawner
   CEntityKeyValues *m_pEntityKeyValues; // r13
   int m_nEntitySpawnerDataUseCount; // ecx
 
-  this->_vptr_CEntitySpawnerBase = off_40FBED0;
+  this->_vptr_CEntitySpawnerBase = off_40FBED0;  // vptr: CEntitySpawnerBase<CDOTA_BaseNPC>
   m_pPrevAllocator = this->m_pPrevAllocator;
   v3 = CEntityKeyValuesModifyScope::sm_pAllocatorOverride;
   CEntityKeyValuesModifyScope::sm_pAllocatorOverride = m_pPrevAllocator;
@@ -66,7 +66,7 @@ void __fastcall CDotaNPCSpawner<CDOTA_BaseNPC>::CDotaNPCSpawner(
   CEntityKeyValuesModifyScope::BeginModify(p_m_modifyScope, 0);
   this->m_pContext = pContext;
   this->m_scriptClassName.m_pString = 0;
-  this->_vptr_CEntitySpawnerBase = off_40FC030;
+  this->_vptr_CEntitySpawnerBase = off_40FC030;  // vptr: CEntitySpawner<CDOTA_BaseNPC>
   v7 = CEntityKeyValuesModifyScope::sm_pAllocatorOverride;
   this->m_pSpawnBatch = 0;
   v8 = g_pEntitySystem;
@@ -93,7 +93,7 @@ void __fastcall CDotaNPCSpawner<CDOTA_BaseNPC>::CDotaNPCSpawner(
   vptr_CEntitySpawnerBase = this->_vptr_CEntitySpawnerBase;
   this->m_nMode = EntityNetworkingMode_t::ENTITY_NETWORKING_MODE_DEFAULT;
   (*vptr_CEntitySpawnerBase)(this);
-  this->_vptr_CEntitySpawnerBase = off_40FC050;
+  this->_vptr_CEntitySpawnerBase = off_40FC050;  // vptr: CDotaNPCSpawner<CDOTA_BaseNPC>
   if ( pUnitName != 0 )
     CEntityKeyValues::SetValue(this->m_pEntityKeyValues, -782893907, pUnitName);
   AppendNPCKeyValues(pUnitName, this->m_pEntityKeyValues, 0);
@@ -114,7 +114,7 @@ void __fastcall CDotaNPCSpawnerAsync<CDOTA_BaseNPC>::~CDotaNPCSpawnerAsync(
   CEntityKeyValues *m_pEntityKeyValues; // r13
   int m_nEntitySpawnerDataUseCount; // ecx
 
-  this->_vptr_CEntitySpawnerBase = off_40FBED0;
+  this->_vptr_CEntitySpawnerBase = off_40FBED0;  // vptr: CEntitySpawnerBase<CDOTA_BaseNPC>
   m_pPrevAllocator = this->m_pPrevAllocator;
   v3 = CEntityKeyValuesModifyScope::sm_pAllocatorOverride;
   CEntityKeyValuesModifyScope::sm_pAllocatorOverride = m_pPrevAllocator;
@@ -186,7 +186,7 @@ void __fastcall CDotaNPCSpawnerAsync<CDOTA_BaseNPC>::CDotaNPCSpawnerAsync(
   p_m_modifyScope->m_pKeyValues = 0;
   p_m_modifyScope->m_pPrevAllocator = 0;
   CEntityKeyValuesModifyScope::BeginModify(p_m_modifyScope, 0);
-  this->_vptr_CEntitySpawnerBase = off_40FBF10;
+  this->_vptr_CEntitySpawnerBase = off_40FBF10;  // vptr: CEntitySpawnerAsync<CDOTA_BaseNPC>
   this->m_scriptClassName.m_pString = 0;
   this->m_pContext = pContext;
   spawnerDesc.m_pSpawnGroupToWorld = 0;
@@ -201,7 +201,7 @@ void __fastcall CDotaNPCSpawnerAsync<CDOTA_BaseNPC>::CDotaNPCSpawnerAsync(
   spawnerDesc.m_bManualCompletion = bManualCreation;
   CEntitySpawnerAsync<CDOTA_BaseNPC>::Init(this, &spawnerDesc);
   m_pEntityKeyValues = this->m_pEntityKeyValues;
-  this->_vptr_CEntitySpawnerBase = off_40FBF30;
+  this->_vptr_CEntitySpawnerBase = off_40FBF30;  // vptr: CDotaNPCSpawnerAsync<CDOTA_BaseNPC>
   if ( pUnitName == 0 || m_pEntityKeyValues->m_nQueuedForSpawnCount > 0 )
     goto LABEL_3;
   m_nCount = m_pEntityKeyValues->m_keyHashes.m_nCount;

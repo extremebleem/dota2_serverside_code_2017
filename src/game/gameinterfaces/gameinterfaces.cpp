@@ -158,7 +158,7 @@ void __fastcall ConnectGameInterfaces(
     }
     while ( 1 )
     {
-      if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v14, v15, v12, v13, v16, v17) != 0 )
+      if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v14, v15, v12, v13) != 0 )
         loc_0 = -559038737;
       Plat_ExitProcess(1);
 LABEL_26:
@@ -306,7 +306,7 @@ void __fastcall ReconnectGameInterface(
         v12,
         v13);
     }
-    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v10, v11, v8, v9, v12, v13) != 0 )
+    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v10, v11, v8, v9) != 0 )
       loc_0 = -559038737;
     Plat_ExitProcess(1);
     JUMPOUT(0x312E632);

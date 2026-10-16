@@ -3034,7 +3034,7 @@ CDOTA_Buff *__fastcall CModifieractoryDictionary::Create(CModifieractoryDictiona
 
   Factory = CModifieractoryDictionary::FindFactory(this, pClassName);
   if ( Factory != 0 )
-    return (*Factory->_vptr_IModifierFactory)(Factory);
+    return Factory->Create();
   Warning("Attempted to create unknown modifier type %s!\n", pClassName);
   return 0;
 }

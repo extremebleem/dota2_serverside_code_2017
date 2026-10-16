@@ -26,7 +26,7 @@ __int64 __fastcall CDOTA_Bot_AbilityUsage::FindFilter(CDOTA_Bot_AbilityUsage *co
 void __fastcall CDOTA_Bot_AbilityUsageSpecific<CDOTA_Bot>::~CDOTA_Bot_AbilityUsageSpecific(
         CDOTA_Bot_AbilityUsageSpecific<CDOTA_Bot> *const this)
 {
-  this->_vptr_CDOTA_Bot_AbilityUsage = off_42C5890;
+  this->_vptr_CDOTA_Bot_AbilityUsage = off_42C5890;  // vptr: CDOTA_Bot_AbilityUsage
 }
 
 
@@ -35,7 +35,7 @@ void __fastcall CDOTA_Bot_AbilityUsageSpecific<CDOTA_Bot>::~CDOTA_Bot_AbilityUsa
 void __fastcall CDOTA_Bot_AbilityUsageSpecific<CDOTA_Bot>::~CDOTA_Bot_AbilityUsageSpecific(
         CDOTA_Bot_AbilityUsageSpecific<CDOTA_Bot> *const this)
 {
-  this->_vptr_CDOTA_Bot_AbilityUsage = off_42C5890;
+  this->_vptr_CDOTA_Bot_AbilityUsage = off_42C5890;  // vptr: CDOTA_Bot_AbilityUsage
   operator delete(this);
 }
 

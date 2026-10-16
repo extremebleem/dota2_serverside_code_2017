@@ -8,12 +8,12 @@ void __fastcall CRagdollLRURetirement::~CRagdollLRURetirement(CRagdollLRURetirem
   CUtlLinkedList<CHandle<CBaseAnimating>,short unsigned int,false,short unsigned int,CUtlMemory<UtlLinkedListElem_t<CHandle<CBaseAnimating>,short unsigned int>,short unsigned int> > *p_m_LRUImportantRagdolls; // r12
 
   p_m_LRUImportantRagdolls = &this->m_LRUImportantRagdolls;
-  this->_vptr_IGameSystem = off_40A3670;
+  this->_vptr_IGameSystem = off_40A3670;  // vptr: CRagdollLRURetirement
   CUtlLinkedList<CHandle<CBaseAnimating>,unsigned short,false,unsigned short,CUtlMemory<UtlLinkedListElem_t<CHandle<CBaseAnimating>,unsigned short>,unsigned short>>::RemoveAll(&this->m_LRUImportantRagdolls);
   CUtlMemory<UtlLinkedListElem_t<CHandle<CBaseAnimating>,unsigned short>,unsigned short>::Purge(&p_m_LRUImportantRagdolls->m_Memory);
   CUtlLinkedList<CHandle<CBaseAnimating>,unsigned short,false,unsigned short,CUtlMemory<UtlLinkedListElem_t<CHandle<CBaseAnimating>,unsigned short>,unsigned short>>::RemoveAll(&this->m_LRU);
   CUtlMemory<UtlLinkedListElem_t<CHandle<CBaseAnimating>,unsigned short>,unsigned short>::Purge(&this->m_LRU.m_Memory);
-  this->_vptr_IGameSystem = off_3F7C1B0;
+  this->_vptr_IGameSystem = off_3F7C1B0;  // vptr: CAutoGameSystem
   IGameSystem::~IGameSystem(this);
 }
 
@@ -25,12 +25,12 @@ void __fastcall CRagdollLRURetirement::~CRagdollLRURetirement(CRagdollLRURetirem
   CUtlLinkedList<CHandle<CBaseAnimating>,short unsigned int,false,short unsigned int,CUtlMemory<UtlLinkedListElem_t<CHandle<CBaseAnimating>,short unsigned int>,short unsigned int> > *p_m_LRUImportantRagdolls; // r12
 
   p_m_LRUImportantRagdolls = &this->m_LRUImportantRagdolls;
-  this->_vptr_IGameSystem = off_40A3670;
+  this->_vptr_IGameSystem = off_40A3670;  // vptr: CRagdollLRURetirement
   CUtlLinkedList<CHandle<CBaseAnimating>,unsigned short,false,unsigned short,CUtlMemory<UtlLinkedListElem_t<CHandle<CBaseAnimating>,unsigned short>,unsigned short>>::RemoveAll(&this->m_LRUImportantRagdolls);
   CUtlMemory<UtlLinkedListElem_t<CHandle<CBaseAnimating>,unsigned short>,unsigned short>::Purge(&p_m_LRUImportantRagdolls->m_Memory);
   CUtlLinkedList<CHandle<CBaseAnimating>,unsigned short,false,unsigned short,CUtlMemory<UtlLinkedListElem_t<CHandle<CBaseAnimating>,unsigned short>,unsigned short>>::RemoveAll(&this->m_LRU);
   CUtlMemory<UtlLinkedListElem_t<CHandle<CBaseAnimating>,unsigned short>,unsigned short>::Purge(&this->m_LRU.m_Memory);
-  this->_vptr_IGameSystem = off_3F7C1B0;
+  this->_vptr_IGameSystem = off_3F7C1B0;  // vptr: CAutoGameSystem
   IGameSystem::~IGameSystem(this);
   operator delete(this);
 }
@@ -65,7 +65,7 @@ void __fastcall CRagdollLRURetirement::SetGameSystemGlobalPtrs(CRagdollLRURetire
 // calls: IGameSystem::~IGameSystem
 void __fastcall CRagdollLowViolenceManager::~CRagdollLowViolenceManager(CRagdollLowViolenceManager *const this)
 {
-  this->_vptr_IGameSystem = off_3F7C1B0;
+  this->_vptr_IGameSystem = off_3F7C1B0;  // vptr: CAutoGameSystem
   IGameSystem::~IGameSystem(this);
 }
 
@@ -74,7 +74,7 @@ void __fastcall CRagdollLowViolenceManager::~CRagdollLowViolenceManager(CRagdoll
 // calls: IGameSystem::~IGameSystem, operator delete
 void __fastcall CRagdollLowViolenceManager::~CRagdollLowViolenceManager(CRagdollLowViolenceManager *const this)
 {
-  this->_vptr_IGameSystem = off_3F7C1B0;
+  this->_vptr_IGameSystem = off_3F7C1B0;  // vptr: CAutoGameSystem
   IGameSystem::~IGameSystem(this);
   operator delete(this);
 }

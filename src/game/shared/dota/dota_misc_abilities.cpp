@@ -476,7 +476,7 @@ CEntityInstance *__fastcall CDOTA_Ability_ControllerTest_MeleeAttack::CEntityIns
 void __fastcall CDOTA_Ability_ControllerTest_MeleeAttack::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_ControllerTest_MeleeAttack::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -486,7 +486,7 @@ void __fastcall CDOTA_Ability_ControllerTest_MeleeAttack::CEntityInstanceEntityC
 void __fastcall CDOTA_Ability_ControllerTest_MeleeAttack::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_ControllerTest_MeleeAttack::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -1084,7 +1084,7 @@ CEntityInstance *__fastcall CDOTA_Ability_ControllerTest_SvenOverheadAttack::CEn
 void __fastcall CDOTA_Ability_ControllerTest_SvenOverheadAttack::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_ControllerTest_SvenOverheadAttack::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -1094,7 +1094,7 @@ void __fastcall CDOTA_Ability_ControllerTest_SvenOverheadAttack::CEntityInstance
 void __fastcall CDOTA_Ability_ControllerTest_SvenOverheadAttack::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_ControllerTest_SvenOverheadAttack::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -1356,7 +1356,7 @@ CEntityInstance *__fastcall CDOTA_Ability_ControllerTest_SvenSweepingAttack::CEn
 void __fastcall CDOTA_Ability_ControllerTest_SvenSweepingAttack::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_ControllerTest_SvenSweepingAttack::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -1366,7 +1366,7 @@ void __fastcall CDOTA_Ability_ControllerTest_SvenSweepingAttack::CEntityInstance
 void __fastcall CDOTA_Ability_ControllerTest_SvenSweepingAttack::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_ControllerTest_SvenSweepingAttack::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -1628,7 +1628,7 @@ CEntityInstance *__fastcall CDOTA_Ability_ControllerTest_SvenThrustingAttack::CE
 void __fastcall CDOTA_Ability_ControllerTest_SvenThrustingAttack::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_ControllerTest_SvenThrustingAttack::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -1638,7 +1638,7 @@ void __fastcall CDOTA_Ability_ControllerTest_SvenThrustingAttack::CEntityInstanc
 void __fastcall CDOTA_Ability_ControllerTest_SvenThrustingAttack::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_ControllerTest_SvenThrustingAttack::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -1890,7 +1890,7 @@ CEntityInstance *__fastcall CDOTA_Ability_ControllerTest_SlarkSpinAttack::CEntit
 void __fastcall CDOTA_Ability_ControllerTest_SlarkSpinAttack::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_ControllerTest_SlarkSpinAttack::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -1900,7 +1900,7 @@ void __fastcall CDOTA_Ability_ControllerTest_SlarkSpinAttack::CEntityInstanceEnt
 void __fastcall CDOTA_Ability_ControllerTest_SlarkSpinAttack::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_ControllerTest_SlarkSpinAttack::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }

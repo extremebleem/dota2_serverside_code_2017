@@ -28,7 +28,7 @@ private:
 // callers: CSchemaClassBinding<CAttributeManager>::Allocate, CSchemaClassBinding<CAttributeManager>::ConstructInPlace, CSchemaClassBinding<CAttributeContainer>::ConstructInPlace, CSchemaClassBinding<CAttributeContainer>::Allocate, CEconEntity::CEconEntity, CSchemaClassBinding<CAttributeContainer>::AllocateAndCopyConstruct, CSchemaClassBinding<CAttributeManager>::AllocateAndCopyConstruct
 void __fastcall CAttributeManager::CAttributeManager(CAttributeManager *const this)
 {
-  this->_vptr_CAttributeManager = off_479F4D0;
+  this->_vptr_CAttributeManager = off_479F4D0;  // vptr: CAttributeManager
   this->m_Providers.m_Size = 0;
   this->m_Providers.m_Memory.m_pMemory = 0;
   this->m_Providers.m_Memory.m_nAllocationCount = 0;
@@ -1005,7 +1005,7 @@ float __fastcall CollateAttributeValues(
 void __fastcall CEconItemAttributeIterator_ApplyAttributeFloat::~CEconItemAttributeIterator_ApplyAttributeFloat(
         CEconItemAttributeIterator_ApplyAttributeFloat *const this)
 {
-  this->_vptr_IEconItemAttributeIterator = off_40DB570;
+  this->_vptr_IEconItemAttributeIterator = off_40DB570;  // vptr: IEconItemAttributeIterator
 }
 
 
@@ -1014,7 +1014,7 @@ void __fastcall CEconItemAttributeIterator_ApplyAttributeFloat::~CEconItemAttrib
 void __fastcall CEconItemAttributeIterator_ApplyAttributeFloat::~CEconItemAttributeIterator_ApplyAttributeFloat(
         CEconItemAttributeIterator_ApplyAttributeFloat *const this)
 {
-  this->_vptr_IEconItemAttributeIterator = off_40DB570;
+  this->_vptr_IEconItemAttributeIterator = off_40DB570;  // vptr: IEconItemAttributeIterator
   operator delete(this);
 }
 
@@ -1028,26 +1028,28 @@ bool __fastcall CEconItemAttributeIterator_ApplyAttributeFloat::OnIterateAttribu
 {
   float v3; // xmm1_4
   UtlSymLargeId_t m_Id; // rax
+  UtlSymLargeId_t v8; // rax
   CUtlVector<CBaseEntity*,CUtlMemory<CBaseEntity*,int> > *m_pItemList; // r14
   __int64 m_Size; // rbx
   CBaseEntity **m_pMemory; // rcx
   CBaseEntity *m_pOuter; // r8
-  _QWORD *v12; // rcx
-  int v13; // eax
+  _QWORD *v13; // rcx
   int v14; // eax
-  CBaseEntity **v15; // rax
+  int v15; // eax
+  CBaseEntity **v16; // rax
   attrib_value_t valuea; // [rsp+Ch] [rbp-34h]
   attrib_value_t valueb; // [rsp+Ch] [rbp-34h]
-  UtlSymLargeId_t v18; // [rsp+10h] [rbp-30h]
+  UtlSymLargeId_t v19[6]; // [rsp+10h] [rbp-30h] BYREF
 
   m_Id = pAttrDef->m_iszAttributeClass.u.m_Id;
   if ( m_Id == 0 && pAttrDef->m_symAttributeClass.u.m_Id != 0 )
   {
     valuea = value;
-    AllocPooledString(pAttrDef->m_symAttributeClass.u.m_pAsString);
+    AllocPooledString(v19, pAttrDef->m_symAttributeClass.u.m_pAsString);
+    v8 = v19[0];
     value = valuea;
-    pAttrDef->m_iszAttributeClass.u.m_Id = v18;
-    if ( this->m_iszAttribHook.u.m_Id != v18 )
+    pAttrDef->m_iszAttributeClass.u.m_Id = v19[0];
+    if ( this->m_iszAttribHook.u.m_Id != v8 )
       return 1;
 LABEL_6:
     m_pItemList = this->m_pItemList;
@@ -1061,30 +1063,30 @@ LABEL_12:
         {
           valueb = value;
           CUtlMemory<CBaseEntity *,int>::Grow(&m_pItemList->m_Memory, 1);
-          v14 = m_pItemList->m_Size;
+          v15 = m_pItemList->m_Size;
           value = valueb;
         }
         else
         {
-          v14 = m_pItemList->m_Size;
+          v15 = m_pItemList->m_Size;
         }
-        m_pItemList->m_Size = v14 + 1;
-        v15 = &m_pItemList->m_Memory.m_pMemory[m_Size];
-        if ( v15 != 0 )
-          *v15 = this->m_pOuter;
+        m_pItemList->m_Size = v15 + 1;
+        v16 = &m_pItemList->m_Memory.m_pMemory[m_Size];
+        if ( v16 != 0 )
+          *v16 = this->m_pOuter;
         goto LABEL_18;
       }
       m_pMemory = m_pItemList->m_Memory.m_pMemory;
       m_pOuter = this->m_pOuter;
       if ( *m_pMemory != m_pOuter )
       {
-        v12 = m_pMemory + 1;
-        v13 = 0;
-        while ( ++v13 != m_Size )
+        v13 = m_pMemory + 1;
+        v14 = 0;
+        while ( ++v14 != m_Size )
         {
-          if ( *v12++ == m_pOuter )
+          if ( *v13++ == m_pOuter )
           {
-            if ( v13 < 0 )
+            if ( v14 < 0 )
               goto LABEL_12;
             goto LABEL_18;
           }

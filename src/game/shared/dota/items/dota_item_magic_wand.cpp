@@ -236,7 +236,7 @@ CEntityInstance *__fastcall CDOTA_Item_Recipe_MagicWand::CEntityInstanceEntityCl
 void __fastcall CDOTA_Item_Recipe_MagicWand::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Item_Recipe_MagicWand::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -246,7 +246,7 @@ void __fastcall CDOTA_Item_Recipe_MagicWand::CEntityInstanceEntityClass::~CEntit
 void __fastcall CDOTA_Item_Recipe_MagicWand::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Item_Recipe_MagicWand::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -401,7 +401,7 @@ CEntityInstance *__fastcall CDOTA_Item_MagicWand::CEntityInstanceEntityClass::Co
 void __fastcall CDOTA_Item_MagicWand::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Item_MagicWand::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -411,7 +411,7 @@ void __fastcall CDOTA_Item_MagicWand::CEntityInstanceEntityClass::~CEntityInstan
 void __fastcall CDOTA_Item_MagicWand::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Item_MagicWand::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }

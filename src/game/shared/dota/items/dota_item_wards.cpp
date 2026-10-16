@@ -941,7 +941,7 @@ CEntityInstance *__fastcall CDOTA_Item_ObserverWard::CEntityInstanceEntityClass:
 void __fastcall CDOTA_Item_ObserverWard::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Item_ObserverWard::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -951,7 +951,7 @@ void __fastcall CDOTA_Item_ObserverWard::CEntityInstanceEntityClass::~CEntityIns
 void __fastcall CDOTA_Item_ObserverWard::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Item_ObserverWard::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -1908,7 +1908,7 @@ CEntityInstance *__fastcall CDOTA_Item_SentryWard::CEntityInstanceEntityClass::C
 void __fastcall CDOTA_Item_SentryWard::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Item_SentryWard::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -1918,7 +1918,7 @@ void __fastcall CDOTA_Item_SentryWard::CEntityInstanceEntityClass::~CEntityInsta
 void __fastcall CDOTA_Item_SentryWard::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Item_SentryWard::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }

@@ -32,7 +32,7 @@ void __fastcall CDOTA_Bot_AbilityUsage_Pipe::CDOTA_Bot_AbilityUsage_Pipe(
   this->m_pAbility = pAbility;
   this->m_bUseOnCreeps = 0;
   this->m_pBot = pBot;
-  this->_vptr_CDOTA_Bot_AbilityUsage = off_42C69D0;
+  this->_vptr_CDOTA_Bot_AbilityUsage = off_42C69D0;  // vptr: CDOTA_Bot_AbilityUsage_Pipe
   EffectiveLevel = CDOTABaseAbility::GetEffectiveLevel(pAbility);
   if ( EffectiveLevel == -1 || (SpecialAbility = CDOTABaseAbility::GetSpecialAbility(pAbility, "barrier_radius")) == 0 )
   {

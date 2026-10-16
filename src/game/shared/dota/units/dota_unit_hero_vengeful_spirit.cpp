@@ -666,7 +666,7 @@ CEntityInstance *__fastcall CDOTA_Unit_Hero_VengefulSpirit::CEntityInstanceEntit
 void __fastcall CDOTA_Unit_Hero_VengefulSpirit::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Unit_Hero_VengefulSpirit::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -676,7 +676,7 @@ void __fastcall CDOTA_Unit_Hero_VengefulSpirit::CEntityInstanceEntityClass::~CEn
 void __fastcall CDOTA_Unit_Hero_VengefulSpirit::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Unit_Hero_VengefulSpirit::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -873,7 +873,7 @@ CEntityInstance *__fastcall CDOTA_Ability_VengefulSpirit_Magic_Missile::CEntityI
 void __fastcall CDOTA_Ability_VengefulSpirit_Magic_Missile::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_VengefulSpirit_Magic_Missile::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -883,7 +883,7 @@ void __fastcall CDOTA_Ability_VengefulSpirit_Magic_Missile::CEntityInstanceEntit
 void __fastcall CDOTA_Ability_VengefulSpirit_Magic_Missile::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_VengefulSpirit_Magic_Missile::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -1296,7 +1296,7 @@ CEntityInstance *__fastcall CDOTA_Ability_VengefulSpirit_WaveOfTerror::CEntityIn
 void __fastcall CDOTA_Ability_VengefulSpirit_WaveOfTerror::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_VengefulSpirit_WaveOfTerror::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -1306,7 +1306,7 @@ void __fastcall CDOTA_Ability_VengefulSpirit_WaveOfTerror::CEntityInstanceEntity
 void __fastcall CDOTA_Ability_VengefulSpirit_WaveOfTerror::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_VengefulSpirit_WaveOfTerror::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -1957,7 +1957,7 @@ CEntityInstance *__fastcall CDOTA_Ability_VengefulSpirit_Command_Aura::CEntityIn
 void __fastcall CDOTA_Ability_VengefulSpirit_Command_Aura::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_VengefulSpirit_Command_Aura::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -1967,7 +1967,7 @@ void __fastcall CDOTA_Ability_VengefulSpirit_Command_Aura::CEntityInstanceEntity
 void __fastcall CDOTA_Ability_VengefulSpirit_Command_Aura::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_VengefulSpirit_Command_Aura::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -2689,7 +2689,7 @@ CEntityInstance *__fastcall CDOTA_Ability_VengefulSpirit_Nether_Swap::CEntityIns
 void __fastcall CDOTA_Ability_VengefulSpirit_Nether_Swap::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_VengefulSpirit_Nether_Swap::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -2699,7 +2699,7 @@ void __fastcall CDOTA_Ability_VengefulSpirit_Nether_Swap::CEntityInstanceEntityC
 void __fastcall CDOTA_Ability_VengefulSpirit_Nether_Swap::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_VengefulSpirit_Nether_Swap::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }

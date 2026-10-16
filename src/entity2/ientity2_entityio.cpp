@@ -35,30 +35,24 @@ void __cdecl GLOBAL__sub_I_ientity2_entityio_cpp()
   UNSPECIFIED_LOGGING_COLOR._color[1] = 0;
   UNSPECIFIED_LOGGING_COLOR._color[2] = 0;
   UNSPECIFIED_LOGGING_COLOR._color[3] = 0;
-  if ( `guard variable for'g_HuffmanEncoder == 0 )
-  {
-    `guard variable for'g_HuffmanEncoder = 1;
-    g_HuffmanEncoder.m_pRoot = 0;
-    g_HuffmanEncoder.m_Frequencies.m_Size = 0;
-    g_HuffmanEncoder.m_Frequencies.m_Memory.m_pMemory = 0;
-    g_HuffmanEncoder.m_Frequencies.m_Memory.m_nAllocationCount = 0;
-    g_HuffmanEncoder.m_Frequencies.m_Memory.m_nGrowSize = 0;
-    g_HuffmanEncoder.m_OpCodeToHuffmanLookup.m_Size = 0;
-    g_HuffmanEncoder.m_FixedTree.m_Size = 0;
-    g_HuffmanEncoder.m_FixedTree.m_Memory.m_pMemory = 0;
-    g_HuffmanEncoder.m_FixedTree.m_Memory.m_nAllocationCount = 0;
-    g_HuffmanEncoder.m_FixedTree.m_Memory.m_nGrowSize = 0;
-    CFieldPathHuffmanEncoder::BuildOpCodeCodeToHuffmanLookup(&g_HuffmanEncoder);
-    __cxa_atexit(CFieldPathHuffmanEncoder::~CFieldPathHuffmanEncoder, &g_HuffmanEncoder, &_dso_handle);
-  }
-  if ( `guard variable for'CEntityKeyValues::sm_EmptyVariant == 0 )
-  {
-    `guard variable for'CEntityKeyValues::sm_EmptyVariant = 1;
-    CEntityKeyValues::sm_EmptyVariant.m_type = 0;
-    CEntityKeyValues::sm_EmptyVariant.m_flags = 0;
-    CEntityKeyValues::sm_EmptyVariant.m_uint64 = 0;
-    __cxa_atexit(CVariantBase<CEntityVariantAllocator>::~CVariantBase, &CEntityKeyValues::sm_EmptyVariant, &_dso_handle);
-  }
+  // init once: g_HuffmanEncoder
+  g_HuffmanEncoder.m_pRoot = 0;
+  g_HuffmanEncoder.m_Frequencies.m_Size = 0;
+  g_HuffmanEncoder.m_Frequencies.m_Memory.m_pMemory = 0;
+  g_HuffmanEncoder.m_Frequencies.m_Memory.m_nAllocationCount = 0;
+  g_HuffmanEncoder.m_Frequencies.m_Memory.m_nGrowSize = 0;
+  g_HuffmanEncoder.m_OpCodeToHuffmanLookup.m_Size = 0;
+  g_HuffmanEncoder.m_FixedTree.m_Size = 0;
+  g_HuffmanEncoder.m_FixedTree.m_Memory.m_pMemory = 0;
+  g_HuffmanEncoder.m_FixedTree.m_Memory.m_nAllocationCount = 0;
+  g_HuffmanEncoder.m_FixedTree.m_Memory.m_nGrowSize = 0;
+  CFieldPathHuffmanEncoder::BuildOpCodeCodeToHuffmanLookup(&g_HuffmanEncoder);
+  __cxa_atexit(CFieldPathHuffmanEncoder::~CFieldPathHuffmanEncoder, &g_HuffmanEncoder, &_dso_handle);
+  // init once: CEntityKeyValues::sm_EmptyVariant
+  CEntityKeyValues::sm_EmptyVariant.m_type = 0;
+  CEntityKeyValues::sm_EmptyVariant.m_flags = 0;
+  CEntityKeyValues::sm_EmptyVariant.m_uint64 = 0;
+  __cxa_atexit(CVariantBase<CEntityVariantAllocator>::~CVariantBase, &CEntityKeyValues::sm_EmptyVariant, &_dso_handle);
   EntityIOConnectionDesc_t_DataDescInit::g_DataMapHolder = DataMapInit<EntityIOConnectionDesc_t>(0);
   EntityIOConnection_t_DataDescInit::g_DataMapHolder = DataMapInit<EntityIOConnection_t>(0);
   CEntityIOOutput_DataDescInit::g_DataMapHolder = DataMapInit<CEntityIOOutput>(0);
@@ -580,7 +574,7 @@ LABEL_16:
               0);
           }
           if ( m_pEntityIONotify != 0 )
-            (*m_pEntityIONotify->_vptr_IEntityIONotify)(m_pEntityIONotify, pActivator, pCaller, m_pConnections);
+            m_pEntityIONotify->OnEntityIOOutput(pActivator, pCaller, m_pConnections);
           if ( (eventValue.m_flags & 1) != 0 )
             (*(*g_pMemAlloc + 16LL))(g_pMemAlloc, eventValue.m_uint64);
         }

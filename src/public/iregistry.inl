@@ -4,7 +4,7 @@
 // IRegistry::~IRegistry  (line 21, @0x0000000002f4a250, libserver.so)
 void __fastcall IRegistry::~IRegistry(IRegistry *const this)
 {
-  this->_vptr_IRegistry = off_47B7070;
+  this->_vptr_IRegistry = off_47B7070;  // vptr: IRegistry
 }
 
 
@@ -12,7 +12,7 @@ void __fastcall IRegistry::~IRegistry(IRegistry *const this)
 // calls: operator delete
 void __fastcall IRegistry::~IRegistry(IRegistry *const this)
 {
-  this->_vptr_IRegistry = off_47B7070;
+  this->_vptr_IRegistry = off_47B7070;  // vptr: IRegistry
   operator delete(this);
 }
 

@@ -5,7 +5,7 @@
 // calls: GCSDK::CJob::~CJob
 void __fastcall GCSDK::CGCClientJob::~CGCClientJob(GCSDK::CGCClientJob *const this)
 {
-  this->_vptr_CJob = off_40DB690;
+  this->_vptr_CJob = off_40DB690;  // vptr: GCSDK::CGCClientJob
   GCSDK::CJob::~CJob(this);
 }
 
@@ -14,7 +14,7 @@ void __fastcall GCSDK::CGCClientJob::~CGCClientJob(GCSDK::CGCClientJob *const th
 // calls: GCSDK::CJob::~CJob, operator delete
 void __fastcall GCSDK::CGCClientJob::~CGCClientJob(GCSDK::CGCClientJob *const this)
 {
-  this->_vptr_CJob = off_40DB690;
+  this->_vptr_CJob = off_40DB690;  // vptr: GCSDK::CGCClientJob
   GCSDK::CJob::~CJob(this);
   operator delete(this);
 }
@@ -103,7 +103,7 @@ void __fastcall GCSDK::GCClientJobLambda<CIngameEvent_WM2016::GiveTip(int,int)::
 void __fastcall GCSDK::GCClientJobLambda<CDOTAGCServerSystem::UpdateLiveFantasyStats(void)::{lambda(void)#1}>::~GCClientJobLambda(
         GCSDK::GCClientJobLambda<CDOTAGCServerSystem::UpdateLiveFantasyStats()::__lambda11> *const this)
 {
-  this->_vptr_CJob = off_40DB690;
+  this->_vptr_CJob = off_40DB690;  // vptr: GCSDK::CGCClientJob
   GCSDK::CJob::~CJob(this);
 }
 
@@ -113,7 +113,7 @@ void __fastcall GCSDK::GCClientJobLambda<CDOTAGCServerSystem::UpdateLiveFantasyS
 void __fastcall GCSDK::GCClientJobLambda<CDOTAGCServerSystem::UpdateLiveFantasyStats(void)::{lambda(void)#1}>::~GCClientJobLambda(
         GCSDK::GCClientJobLambda<CDOTAGCServerSystem::UpdateLiveFantasyStats()::__lambda11> *const this)
 {
-  this->_vptr_CJob = off_40DB690;
+  this->_vptr_CJob = off_40DB690;  // vptr: GCSDK::CGCClientJob
   GCSDK::CJob::~CJob(this);
   operator delete(this);
 }
@@ -352,7 +352,7 @@ LABEL_11:
 void __fastcall GCSDK::CGCClientProtoJob<CMsgSOSingleObject>::~CGCClientProtoJob(
         GCSDK::CGCClientProtoJob<CMsgSOSingleObject> *const this)
 {
-  this->_vptr_CJob = off_40DB690;
+  this->_vptr_CJob = off_40DB690;  // vptr: GCSDK::CGCClientJob
   GCSDK::CJob::~CJob(this);
 }
 
@@ -362,7 +362,7 @@ void __fastcall GCSDK::CGCClientProtoJob<CMsgSOSingleObject>::~CGCClientProtoJob
 void __fastcall GCSDK::CGCClientProtoJob<CMsgSOSingleObject>::~CGCClientProtoJob(
         GCSDK::CGCClientProtoJob<CMsgSOSingleObject> *const this)
 {
-  this->_vptr_CJob = off_40DB690;
+  this->_vptr_CJob = off_40DB690;  // vptr: GCSDK::CGCClientJob
   GCSDK::CJob::~CJob(this);
   operator delete(this);
 }
@@ -373,7 +373,7 @@ void __fastcall GCSDK::CGCClientProtoJob<CMsgSOSingleObject>::~CGCClientProtoJob
 void __fastcall GCSDK::CGCClientProtoJob<CMsgSOMultipleObjects>::~CGCClientProtoJob(
         GCSDK::CGCClientProtoJob<CMsgSOMultipleObjects> *const this)
 {
-  this->_vptr_CJob = off_40DB690;
+  this->_vptr_CJob = off_40DB690;  // vptr: GCSDK::CGCClientJob
   GCSDK::CJob::~CJob(this);
 }
 
@@ -383,7 +383,7 @@ void __fastcall GCSDK::CGCClientProtoJob<CMsgSOMultipleObjects>::~CGCClientProto
 void __fastcall GCSDK::CGCClientProtoJob<CMsgSOMultipleObjects>::~CGCClientProtoJob(
         GCSDK::CGCClientProtoJob<CMsgSOMultipleObjects> *const this)
 {
-  this->_vptr_CJob = off_40DB690;
+  this->_vptr_CJob = off_40DB690;  // vptr: GCSDK::CGCClientJob
   GCSDK::CJob::~CJob(this);
   operator delete(this);
 }
@@ -394,7 +394,7 @@ void __fastcall GCSDK::CGCClientProtoJob<CMsgSOMultipleObjects>::~CGCClientProto
 void __fastcall GCSDK::CGCClientProtoJob<CMsgSOCacheSubscribed>::~CGCClientProtoJob(
         GCSDK::CGCClientProtoJob<CMsgSOCacheSubscribed> *const this)
 {
-  this->_vptr_CJob = off_40DB690;
+  this->_vptr_CJob = off_40DB690;  // vptr: GCSDK::CGCClientJob
   GCSDK::CJob::~CJob(this);
 }
 
@@ -404,7 +404,7 @@ void __fastcall GCSDK::CGCClientProtoJob<CMsgSOCacheSubscribed>::~CGCClientProto
 void __fastcall GCSDK::CGCClientProtoJob<CMsgSOCacheSubscribed>::~CGCClientProtoJob(
         GCSDK::CGCClientProtoJob<CMsgSOCacheSubscribed> *const this)
 {
-  this->_vptr_CJob = off_40DB690;
+  this->_vptr_CJob = off_40DB690;  // vptr: GCSDK::CGCClientJob
   GCSDK::CJob::~CJob(this);
   operator delete(this);
 }
@@ -415,7 +415,7 @@ void __fastcall GCSDK::CGCClientProtoJob<CMsgSOCacheSubscribed>::~CGCClientProto
 void __fastcall GCSDK::CGCClientProtoJob<CMsgSOCacheSubscribedUpToDate>::~CGCClientProtoJob(
         GCSDK::CGCClientProtoJob<CMsgSOCacheSubscribedUpToDate> *const this)
 {
-  this->_vptr_CJob = off_40DB690;
+  this->_vptr_CJob = off_40DB690;  // vptr: GCSDK::CGCClientJob
   GCSDK::CJob::~CJob(this);
 }
 
@@ -425,7 +425,7 @@ void __fastcall GCSDK::CGCClientProtoJob<CMsgSOCacheSubscribedUpToDate>::~CGCCli
 void __fastcall GCSDK::CGCClientProtoJob<CMsgSOCacheSubscribedUpToDate>::~CGCClientProtoJob(
         GCSDK::CGCClientProtoJob<CMsgSOCacheSubscribedUpToDate> *const this)
 {
-  this->_vptr_CJob = off_40DB690;
+  this->_vptr_CJob = off_40DB690;  // vptr: GCSDK::CGCClientJob
   GCSDK::CJob::~CJob(this);
   operator delete(this);
 }
@@ -436,7 +436,7 @@ void __fastcall GCSDK::CGCClientProtoJob<CMsgSOCacheSubscribedUpToDate>::~CGCCli
 void __fastcall GCSDK::CGCClientProtoJob<CMsgSOCacheUnsubscribed>::~CGCClientProtoJob(
         GCSDK::CGCClientProtoJob<CMsgSOCacheUnsubscribed> *const this)
 {
-  this->_vptr_CJob = off_40DB690;
+  this->_vptr_CJob = off_40DB690;  // vptr: GCSDK::CGCClientJob
   GCSDK::CJob::~CJob(this);
 }
 
@@ -446,7 +446,7 @@ void __fastcall GCSDK::CGCClientProtoJob<CMsgSOCacheUnsubscribed>::~CGCClientPro
 void __fastcall GCSDK::CGCClientProtoJob<CMsgSOCacheUnsubscribed>::~CGCClientProtoJob(
         GCSDK::CGCClientProtoJob<CMsgSOCacheUnsubscribed> *const this)
 {
-  this->_vptr_CJob = off_40DB690;
+  this->_vptr_CJob = off_40DB690;  // vptr: GCSDK::CGCClientJob
   GCSDK::CJob::~CJob(this);
   operator delete(this);
 }
@@ -457,7 +457,7 @@ void __fastcall GCSDK::CGCClientProtoJob<CMsgSOCacheUnsubscribed>::~CGCClientPro
 void __fastcall GCSDK::CGCClientProtoJob<CMsgGCClientPing>::~CGCClientProtoJob(
         GCSDK::CGCClientProtoJob<CMsgGCClientPing> *const this)
 {
-  this->_vptr_CJob = off_40DB690;
+  this->_vptr_CJob = off_40DB690;  // vptr: GCSDK::CGCClientJob
   GCSDK::CJob::~CJob(this);
 }
 
@@ -467,7 +467,7 @@ void __fastcall GCSDK::CGCClientProtoJob<CMsgGCClientPing>::~CGCClientProtoJob(
 void __fastcall GCSDK::CGCClientProtoJob<CMsgGCClientPing>::~CGCClientProtoJob(
         GCSDK::CGCClientProtoJob<CMsgGCClientPing> *const this)
 {
-  this->_vptr_CJob = off_40DB690;
+  this->_vptr_CJob = off_40DB690;  // vptr: GCSDK::CGCClientJob
   GCSDK::CJob::~CJob(this);
   operator delete(this);
 }
@@ -478,7 +478,7 @@ void __fastcall GCSDK::CGCClientProtoJob<CMsgGCClientPing>::~CGCClientProtoJob(
 void __fastcall GCSDK::CGCClientProtoJob<CMsgGCToClientPollConvarRequest>::~CGCClientProtoJob(
         GCSDK::CGCClientProtoJob<CMsgGCToClientPollConvarRequest> *const this)
 {
-  this->_vptr_CJob = off_40DB690;
+  this->_vptr_CJob = off_40DB690;  // vptr: GCSDK::CGCClientJob
   GCSDK::CJob::~CJob(this);
 }
 
@@ -488,7 +488,7 @@ void __fastcall GCSDK::CGCClientProtoJob<CMsgGCToClientPollConvarRequest>::~CGCC
 void __fastcall GCSDK::CGCClientProtoJob<CMsgGCToClientPollConvarRequest>::~CGCClientProtoJob(
         GCSDK::CGCClientProtoJob<CMsgGCToClientPollConvarRequest> *const this)
 {
-  this->_vptr_CJob = off_40DB690;
+  this->_vptr_CJob = off_40DB690;  // vptr: GCSDK::CGCClientJob
   GCSDK::CJob::~CJob(this);
   operator delete(this);
 }

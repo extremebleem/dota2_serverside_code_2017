@@ -968,7 +968,7 @@ void __fastcall CInfoCourierSpawnRadiant::~CInfoCourierSpawnRadiant(CInfoCourier
 void __fastcall CInfoCourierSpawnRadiant::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CInfoCourierSpawnRadiant::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -978,7 +978,7 @@ void __fastcall CInfoCourierSpawnRadiant::CEntityInstanceEntityClass::~CEntityIn
 void __fastcall CInfoCourierSpawnRadiant::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CInfoCourierSpawnRadiant::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -1133,7 +1133,7 @@ void __fastcall CInfoCourierSpawnDire::~CInfoCourierSpawnDire(CInfoCourierSpawnD
 void __fastcall CInfoCourierSpawnDire::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CInfoCourierSpawnDire::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -1143,7 +1143,7 @@ void __fastcall CInfoCourierSpawnDire::CEntityInstanceEntityClass::~CEntityInsta
 void __fastcall CInfoCourierSpawnDire::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CInfoCourierSpawnDire::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -1297,7 +1297,7 @@ void __fastcall CInfoCourierSpawn::~CInfoCourierSpawn(CInfoCourierSpawn *const t
 void __fastcall CInfoCourierSpawn::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CInfoCourierSpawn::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -1307,7 +1307,7 @@ void __fastcall CInfoCourierSpawn::CEntityInstanceEntityClass::~CEntityInstanceE
 void __fastcall CInfoCourierSpawn::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CInfoCourierSpawn::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -3400,7 +3400,7 @@ CEntityInstance *__fastcall CDOTA_Ability_Courier_ReturnToBase::CEntityInstanceE
 void __fastcall CDOTA_Ability_Courier_ReturnToBase::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Courier_ReturnToBase::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -3410,7 +3410,7 @@ void __fastcall CDOTA_Ability_Courier_ReturnToBase::CEntityInstanceEntityClass::
 void __fastcall CDOTA_Ability_Courier_ReturnToBase::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Courier_ReturnToBase::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -3609,7 +3609,7 @@ CEntityInstance *__fastcall CDOTA_Ability_Courier_GoToSecretShop::CEntityInstanc
 void __fastcall CDOTA_Ability_Courier_GoToSecretShop::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Courier_GoToSecretShop::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -3619,7 +3619,7 @@ void __fastcall CDOTA_Ability_Courier_GoToSecretShop::CEntityInstanceEntityClass
 void __fastcall CDOTA_Ability_Courier_GoToSecretShop::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Courier_GoToSecretShop::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -3809,7 +3809,7 @@ CEntityInstance *__fastcall CDOTA_Ability_Courier_TransferItems::CEntityInstance
 void __fastcall CDOTA_Ability_Courier_TransferItems::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Courier_TransferItems::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -3819,7 +3819,7 @@ void __fastcall CDOTA_Ability_Courier_TransferItems::CEntityInstanceEntityClass:
 void __fastcall CDOTA_Ability_Courier_TransferItems::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Courier_TransferItems::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -4132,7 +4132,7 @@ CEntityInstance *__fastcall CDOTA_Ability_Courier_TransferItems_ToOtherPlayer::C
 void __fastcall CDOTA_Ability_Courier_TransferItems_ToOtherPlayer::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Courier_TransferItems_ToOtherPlayer::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -4142,7 +4142,7 @@ void __fastcall CDOTA_Ability_Courier_TransferItems_ToOtherPlayer::CEntityInstan
 void __fastcall CDOTA_Ability_Courier_TransferItems_ToOtherPlayer::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Courier_TransferItems_ToOtherPlayer::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -4795,7 +4795,7 @@ CEntityInstance *__fastcall CDOTA_Ability_Courier_TakeStashAndTransferItems::CEn
 void __fastcall CDOTA_Ability_Courier_TakeStashAndTransferItems::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Courier_TakeStashAndTransferItems::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -4805,7 +4805,7 @@ void __fastcall CDOTA_Ability_Courier_TakeStashAndTransferItems::CEntityInstance
 void __fastcall CDOTA_Ability_Courier_TakeStashAndTransferItems::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Courier_TakeStashAndTransferItems::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -5207,7 +5207,7 @@ CEntityInstance *__fastcall CDOTA_Ability_Courier_TakeStashItems::CEntityInstanc
 void __fastcall CDOTA_Ability_Courier_TakeStashItems::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Courier_TakeStashItems::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -5217,7 +5217,7 @@ void __fastcall CDOTA_Ability_Courier_TakeStashItems::CEntityInstanceEntityClass
 void __fastcall CDOTA_Ability_Courier_TakeStashItems::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Courier_TakeStashItems::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -5797,7 +5797,7 @@ CEntityInstance *__fastcall CDOTA_Ability_Courier_ReturnStashItems::CEntityInsta
 void __fastcall CDOTA_Ability_Courier_ReturnStashItems::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Courier_ReturnStashItems::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -5807,7 +5807,7 @@ void __fastcall CDOTA_Ability_Courier_ReturnStashItems::CEntityInstanceEntityCla
 void __fastcall CDOTA_Ability_Courier_ReturnStashItems::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Courier_ReturnStashItems::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -6312,7 +6312,7 @@ CEntityInstance *__fastcall CDOTA_Ability_Courier_Burst::CEntityInstanceEntityCl
 void __fastcall CDOTA_Ability_Courier_Burst::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Courier_Burst::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -6322,7 +6322,7 @@ void __fastcall CDOTA_Ability_Courier_Burst::CEntityInstanceEntityClass::~CEntit
 void __fastcall CDOTA_Ability_Courier_Burst::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Courier_Burst::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -6605,7 +6605,7 @@ CEntityInstance *__fastcall CDOTA_Ability_Courier_Morph::CEntityInstanceEntityCl
 void __fastcall CDOTA_Ability_Courier_Morph::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Courier_Morph::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -6615,7 +6615,7 @@ void __fastcall CDOTA_Ability_Courier_Morph::CEntityInstanceEntityClass::~CEntit
 void __fastcall CDOTA_Ability_Courier_Morph::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Courier_Morph::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }

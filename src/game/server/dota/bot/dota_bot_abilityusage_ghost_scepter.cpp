@@ -13,7 +13,7 @@ void __fastcall CDOTA_Bot_AbilityUsage_GhostScepter::CDOTA_Bot_AbilityUsage_Ghos
   this->m_pAbility = pAbility;
   this->m_pBot = pBot;
   this->m_bUseOnCreeps = 0;
-  this->_vptr_CDOTA_Bot_AbilityUsage = off_42C63B0;
+  this->_vptr_CDOTA_Bot_AbilityUsage = off_42C63B0;  // vptr: CDOTA_Bot_AbilityUsage_GhostScepter
   this->m_hTarget.m_Index = -1;
   this->m_iEtherealDamageBonus = CDOTABaseAbility::GetLevelSpecialValueFor<int>(
                                    pAbility,

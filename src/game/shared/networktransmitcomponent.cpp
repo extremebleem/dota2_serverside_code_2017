@@ -228,7 +228,7 @@ void __fastcall UTIL_FindSpawnGroupsOriginTouches(
       while ( 1 )
       {
         v4 = groups.m_Memory.m_pMemory[v3];
-        v5 = (*g_pPVSManager->_vptr_IPVSManager)(g_pPVSManager, v4);
+        v5 = g_pPVSManager->GetPVS(v4);
         v6 = v5;
         if ( v5 != 0 )
         {
@@ -441,7 +441,7 @@ datamap_t *__fastcall DataMapInit<CNetworkTransmitComponent>(CNetworkTransmitCom
 // callers: CBaseEntity::CBaseEntity
 void __fastcall CNetworkTransmitComponent::CNetworkTransmitComponent(CNetworkTransmitComponent *const this)
 {
-  this->_vptr_IEventRegisterCallback = off_3FB50F0;
+  this->_vptr_IEventRegisterCallback = off_3FB50F0;  // vptr: CNetworkTransmitComponent
   this->m_PVSInfo.m_nHeadNode = 0;
   this->m_PVSInfo.m_nClusterCount = 0;
   this->m_PVSInfo.m_nAreaNum = 0;
@@ -472,7 +472,7 @@ void __fastcall CNetworkTransmitComponent::~CNetworkTransmitComponent(CNetworkTr
   CEventRegister *m_pTimerEvent; // rbx
   void (__fastcall *v9)(_QWORD *, CUtlLeanVectorFixedGrowableBase<unsigned int,3u,short int>::ElemType_t *); // rdx
 
-  this->_vptr_IEventRegisterCallback = off_3FB50F0;
+  this->_vptr_IEventRegisterCallback = off_3FB50F0;  // vptr: CNetworkTransmitComponent
   if ( this->m_PVSInfo.m_nClusterCount > 4 )
   {
     CUtlMemoryPoolBase::Free(&s_PVSInfoAllocator, this->m_PVSInfo.m_pClusters);
@@ -559,7 +559,7 @@ void __fastcall CNetworkTransmitComponent::RecomputePVSInformation(
   {
     this->m_nStateFlags = m_nStateFlags & 0xFFFFFFDF;
     m_pCollision = this->m_pOuter->m_pCollision;
-    if ( m_pCollision )
+    if ( m_pCollision != 0 )
     {
       (*(m_pCollision->_vptr_ICollideable + 10))(m_pCollision, &vecWorldMins, &vecWorldMaxs);
       ActiveSpawnGroupHandle = CEntitySystem::GetActiveSpawnGroupHandle(g_pEntitySystem);

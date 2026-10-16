@@ -62,7 +62,7 @@ void __fastcall CEntityTouchManager::~CEntityTouchManager(CEntityTouchManager *c
   CUtlVectorBase<CBaseEntity*,CUtlMemory<CBaseEntity*,int> >::CAllocator *p_m_Memory; // r12
 
   v2 = (this->m_updateList.m_Memory.m_nGrowSize & 0xC0000000) == 0;
-  this->_vptr_IGameSystem = off_3FCC7B0;
+  this->_vptr_IGameSystem = off_3FCC7B0;  // vptr: CEntityTouchManager
   this->_vptr_IEntityListener = &off_3FCC910;
   this->m_updateList.m_Size = 0;
   if ( v2 )
@@ -72,7 +72,7 @@ void __fastcall CEntityTouchManager::~CEntityTouchManager(CEntityTouchManager *c
     if ( (this->m_updateList.m_Memory.m_nGrowSize & 0xC0000000) == 0 )
       CUtlMemory<CBaseEntity *,int>::Purge(p_m_Memory);
   }
-  this->_vptr_IGameSystem = off_3F7C1B0;
+  this->_vptr_IGameSystem = off_3F7C1B0;  // vptr: CAutoGameSystem
   IGameSystem::~IGameSystem(this);
 }
 
@@ -85,7 +85,7 @@ void __fastcall CEntityTouchManager::~CEntityTouchManager(CEntityTouchManager *c
   CUtlVectorBase<CBaseEntity*,CUtlMemory<CBaseEntity*,int> >::CAllocator *p_m_Memory; // r12
 
   v2 = (this->m_updateList.m_Memory.m_nGrowSize & 0xC0000000) == 0;
-  this->_vptr_IGameSystem = off_3FCC7B0;
+  this->_vptr_IGameSystem = off_3FCC7B0;  // vptr: CEntityTouchManager
   this->_vptr_IEntityListener = &off_3FCC910;
   this->m_updateList.m_Size = 0;
   if ( v2 )
@@ -95,7 +95,7 @@ void __fastcall CEntityTouchManager::~CEntityTouchManager(CEntityTouchManager *c
     if ( (this->m_updateList.m_Memory.m_nGrowSize & 0xC0000000) == 0 )
       CUtlMemory<CBaseEntity *,int>::Purge(p_m_Memory);
   }
-  this->_vptr_IGameSystem = off_3F7C1B0;
+  this->_vptr_IGameSystem = off_3F7C1B0;  // vptr: CAutoGameSystem
   IGameSystem::~IGameSystem(this);
   operator delete(this);
 }

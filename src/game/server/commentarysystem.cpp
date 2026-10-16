@@ -548,7 +548,7 @@ CEntityInstance *__fastcall CPointCommentaryNode::CEntityInstanceEntityClass::Co
 void __fastcall CPointCommentaryNode::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CPointCommentaryNode::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -558,7 +558,7 @@ void __fastcall CPointCommentaryNode::CEntityInstanceEntityClass::~CEntityInstan
 void __fastcall CPointCommentaryNode::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CPointCommentaryNode::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -929,7 +929,7 @@ CEntityInstance *__fastcall CCommentaryViewPosition::CEntityInstanceEntityClass:
 void __fastcall CCommentaryViewPosition::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CCommentaryViewPosition::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -939,7 +939,7 @@ void __fastcall CCommentaryViewPosition::CEntityInstanceEntityClass::~CEntityIns
 void __fastcall CCommentaryViewPosition::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CCommentaryViewPosition::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -1052,7 +1052,7 @@ void __fastcall CCommentarySystem::~CCommentarySystem(CCommentarySystem *const t
   CUtlVectorBase<CHandle<CBaseEntity>,CUtlMemory<CHandle<CBaseEntity>,int> >::CAllocator *p_m_Memory; // r12
 
   v2 = (this->m_hSpawnedEntities.m_Memory.m_nGrowSize & 0xC0000000) == 0;
-  this->_vptr_IGameSystem = off_4012830;
+  this->_vptr_IGameSystem = off_4012830;  // vptr: CCommentarySystem
   this->m_hSpawnedEntities.m_Size = 0;
   if ( !v2
     || (p_m_Memory = &this->m_hSpawnedEntities.m_Memory,
@@ -1076,7 +1076,7 @@ void __fastcall CCommentarySystem::~CCommentarySystem(CCommentarySystem *const t
   if ( (this->m_ModifiedConvars.m_Memory.m_nGrowSize & 0xC0000000) == 0 )
     CUtlMemory<modifiedconvars_t,int>::Purge(&this->m_ModifiedConvars.m_Memory);
 LABEL_3:
-  this->_vptr_IGameSystem = off_3F7C1B0;
+  this->_vptr_IGameSystem = off_3F7C1B0;  // vptr: CAutoGameSystem
   IGameSystem::~IGameSystem(this);
 }
 
@@ -1089,7 +1089,7 @@ void __fastcall CCommentarySystem::~CCommentarySystem(CCommentarySystem *const t
   CUtlVectorBase<CHandle<CBaseEntity>,CUtlMemory<CHandle<CBaseEntity>,int> >::CAllocator *p_m_Memory; // r12
 
   v2 = (this->m_hSpawnedEntities.m_Memory.m_nGrowSize & 0xC0000000) == 0;
-  this->_vptr_IGameSystem = off_4012830;
+  this->_vptr_IGameSystem = off_4012830;  // vptr: CCommentarySystem
   this->m_hSpawnedEntities.m_Size = 0;
   if ( !v2
     || (p_m_Memory = &this->m_hSpawnedEntities.m_Memory,
@@ -1113,7 +1113,7 @@ void __fastcall CCommentarySystem::~CCommentarySystem(CCommentarySystem *const t
   if ( (this->m_ModifiedConvars.m_Memory.m_nGrowSize & 0xC0000000) == 0 )
     CUtlMemory<modifiedconvars_t,int>::Purge(&this->m_ModifiedConvars.m_Memory);
 LABEL_3:
-  this->_vptr_IGameSystem = off_3F7C1B0;
+  this->_vptr_IGameSystem = off_3F7C1B0;  // vptr: CAutoGameSystem
   IGameSystem::~IGameSystem(this);
   operator delete(this);
 }
@@ -5173,7 +5173,7 @@ CEntityInstance *__fastcall CCommentaryAuto::CEntityInstanceEntityClass::Constru
 void __fastcall CCommentaryAuto::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CCommentaryAuto::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -5183,7 +5183,7 @@ void __fastcall CCommentaryAuto::CEntityInstanceEntityClass::~CEntityInstanceEnt
 void __fastcall CCommentaryAuto::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CCommentaryAuto::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }

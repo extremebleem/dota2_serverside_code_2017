@@ -602,7 +602,7 @@ CEntityInstance *__fastcall CDOTA_Unit_Hero_Huskar::CEntityInstanceEntityClass::
 void __fastcall CDOTA_Unit_Hero_Huskar::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Unit_Hero_Huskar::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -612,7 +612,7 @@ void __fastcall CDOTA_Unit_Hero_Huskar::CEntityInstanceEntityClass::~CEntityInst
 void __fastcall CDOTA_Unit_Hero_Huskar::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Unit_Hero_Huskar::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -796,7 +796,7 @@ CEntityInstance *__fastcall CDOTA_Ability_Huskar_Inner_Vitality::CEntityInstance
 void __fastcall CDOTA_Ability_Huskar_Inner_Vitality::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Huskar_Inner_Vitality::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -806,7 +806,7 @@ void __fastcall CDOTA_Ability_Huskar_Inner_Vitality::CEntityInstanceEntityClass:
 void __fastcall CDOTA_Ability_Huskar_Inner_Vitality::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Huskar_Inner_Vitality::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -1511,7 +1511,7 @@ CEntityInstance *__fastcall CDOTA_Ability_Huskar_Burning_Spear::CEntityInstanceE
 void __fastcall CDOTA_Ability_Huskar_Burning_Spear::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Huskar_Burning_Spear::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -1521,7 +1521,7 @@ void __fastcall CDOTA_Ability_Huskar_Burning_Spear::CEntityInstanceEntityClass::
 void __fastcall CDOTA_Ability_Huskar_Burning_Spear::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Huskar_Burning_Spear::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -1947,7 +1947,7 @@ CEntityInstance *__fastcall CDOTA_Ability_Huskar_Berserkers_Blood::CEntityInstan
 void __fastcall CDOTA_Ability_Huskar_Berserkers_Blood::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Huskar_Berserkers_Blood::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -1957,7 +1957,7 @@ void __fastcall CDOTA_Ability_Huskar_Berserkers_Blood::CEntityInstanceEntityClas
 void __fastcall CDOTA_Ability_Huskar_Berserkers_Blood::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Huskar_Berserkers_Blood::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -2479,7 +2479,7 @@ CEntityInstance *__fastcall CDOTA_Ability_Huskar_Life_Break::CEntityInstanceEnti
 void __fastcall CDOTA_Ability_Huskar_Life_Break::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Huskar_Life_Break::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -2489,7 +2489,7 @@ void __fastcall CDOTA_Ability_Huskar_Life_Break::CEntityInstanceEntityClass::~CE
 void __fastcall CDOTA_Ability_Huskar_Life_Break::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Huskar_Life_Break::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }

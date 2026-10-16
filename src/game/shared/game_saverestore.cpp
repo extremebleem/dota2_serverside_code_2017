@@ -689,7 +689,7 @@ void __fastcall CEntity2SaveRestore::CEntity2SaveRestore(CEntity2SaveRestore *co
   CTSQueue<CFunctor*,false>::Node_t *v3; // rax
 
   p_m_AsyncSaveCallQueue = &this->m_AsyncSaveCallQueue;
-  this->_vptr_IEntity2SaveRestore = off_3FF1D30;
+  this->_vptr_IEntity2SaveRestore = off_3FF1D30;  // vptr: CEntity2SaveRestore
   this->m_RestoredEntities.m_Size = 0;
   this->m_RestoredEntities.m_Memory.m_pMemory = 0;
   this->m_RestoredEntities.m_Memory.m_nAllocationCount = 0;
@@ -1607,7 +1607,7 @@ void __fastcall CEntity2SaveRestore::EndRestoreEntities(
   }
 LABEL_11:
   if ( pCompletion != 0 )
-    (*pCompletion->_vptr_IStreamEntitiesFromFileCompletion)(pCompletion, &this->m_RestoredEntities);
+    pCompletion->OnStreamEntitiesFromFileCompleted(&this->m_RestoredEntities);
   v13 = (this->m_RestoredEntities.m_Memory.m_nGrowSize & 0xC0000000) == 0;
   this->m_RestoredEntities.m_Size = 0;
   if ( v13 )
@@ -2754,7 +2754,7 @@ void __fastcall CEntity2SaveRestore::DirectoryCopy(
                 parts.m_Memory.m_pMemory[v6]);
     ++i;
   }
-  v8 = (*g_pSaveRestoreFileSystem->_vptr_ISaveRestoreFileSystem)(g_pSaveRestoreFileSystem, pDestFileName, "ab+", 0);
+  v8 = g_pSaveRestoreFileSystem->Open(pDestFileName, "ab+", 0);
   v9 = v8;
   if ( v8 != 0 )
   {
@@ -3453,11 +3453,11 @@ LABEL_118:
       if ( v96.m_pString != 0 )
         CUtlString::FreeMemoryBlock(&v96);
       v24 = g_pFullFileSystem;
-      v25 = operator new(0x38u);
+      v25 = operator new(0x38u);  // new CMemberFunctor0<IFileSystem *,void (IFileSystem::*)(void),CRefCounted1<CFunctor,CRefCountServiceBase<true,CRefMT>>,CFuncMemPolicyNone>
       v25->m_iRefs = 1;
       v26 = v25;
       v25->m_Proxy.m_pObject = v24;
-      v25->_vptr_IRefCounted = off_3FF21B0;
+      v25->_vptr_IRefCounted = off_3FF21B0;  // vptr: CMemberFunctor0<IFileSystem *,void (IFileSystem::*)(void),CRefCounted1<CFunctor,CRefCountServiceBase<true,CRefMT>>,CFuncMemPolicyNone>
       v25->_vptr_CRefCountServiceBase = off_3FF21E8;
       v25->m_Proxy.m_pfnProxied.__pfn = (&stru_10 + 401);
       v25->m_Proxy.m_pfnProxied.__delta = 0;
@@ -4115,7 +4115,7 @@ void __fastcall CEntity2SaveRestore::Release(CEntity2SaveRestore *const this)
 
   if ( this != 0 )
   {
-    this->_vptr_IEntity2SaveRestore = off_3FF1D30;
+    this->_vptr_IEntity2SaveRestore = off_3FF1D30;  // vptr: CEntity2SaveRestore
     m_Size = this->m_residentSpawnGroups.m_Size;
     for ( i = 80LL * m_Size - 80; --m_Size >= 0; i -= 80 )
     {

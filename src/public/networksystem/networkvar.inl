@@ -2317,28 +2317,32 @@ LABEL_5:
 void __fastcall __noreturn CUtlVectorEmbeddedNetworkVar<CEconItemAttribute,CAttributeList::NetworkVar_m_Attributes,-1>::Resolve(
         CUtlVectorEmbeddedNetworkVar<CEconItemAttribute,CAttributeList::NetworkVar_m_Attributes,-1> *const this)
 {
-  __int64 v1; // r8
-  __int64 v2; // r9
-  LeafCodeInfo_t v3; // [rsp+0h] [rbp-30h] BYREF
+  __int64 v1; // rdx
+  __int64 v2; // rcx
+  __int64 v3; // rdi
+  __int64 v4; // rsi
+  __int64 v5; // r8
+  __int64 v6; // r9
+  LeafCodeInfo_t v7; // [rsp+0h] [rbp-30h] BYREF
 
   if ( LoggingSystem_IsChannelEnabled(LOG_GENERAL, 4) != 0 )
     goto LABEL_5;
   while ( 1 )
   {
-    if ( Plat_ShouldCollectMiniDumpsForFatalErrors() != 0 )
+    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v3, v4, v1, v2) != 0 )
       loc_0 = -559038737;
     Plat_ExitProcess(1);
 LABEL_5:
-    v3.m_szFile = "../../public/tier2/fieldpath.h";
-    v3.m_szFunction = "Path_RemoveAll";
-    v3.m_nLine = 487;
+    v7.m_szFile = "../../public/tier2/fieldpath.h";
+    v7.m_szFunction = "Path_RemoveAll";
+    v7.m_nLine = 487;
     LoggingSystem_Log(
       LOG_GENERAL,
       LoggingSeverity_t::LS_ERROR,
-      &v3,
+      &v7,
       "Path_RemoveAll failed for read only CFieldPath",
-      v1,
-      v2);
+      v5,
+      v6);
   }
 }
 
@@ -3769,23 +3773,27 @@ void __fastcall __noreturn CUtlVectorEmbeddedNetworkVar<CEconItemAttribute,CAttr
         CUtlVectorEmbeddedNetworkVar<CEconItemAttribute,CAttributeList::NetworkVar_m_Attributes,-1> *const this,
         int nElement)
 {
-  LeafCodeInfo_t v2; // [rsp+0h] [rbp-30h] BYREF
+  __int64 v2; // rdx
+  __int64 v3; // rcx
+  __int64 v4; // rdi
+  __int64 v5; // rsi
+  LeafCodeInfo_t v6; // [rsp+0h] [rbp-30h] BYREF
 
   if ( LoggingSystem_IsChannelEnabled(LOG_GENERAL, 4) != 0 )
     goto LABEL_5;
   while ( 1 )
   {
-    if ( Plat_ShouldCollectMiniDumpsForFatalErrors() != 0 )
+    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v4, v5, v2, v3) != 0 )
       loc_0 = -559038737;
     Plat_ExitProcess(1);
 LABEL_5:
-    v2.m_szFile = "../../public/tier2/fieldpath.h";
-    v2.m_szFunction = "Path_AddToTail";
-    v2.m_nLine = 425;
+    v6.m_szFile = "../../public/tier2/fieldpath.h";
+    v6.m_szFunction = "Path_AddToTail";
+    v6.m_nLine = 425;
     LoggingSystem_Log(
       LOG_GENERAL,
       LoggingSeverity_t::LS_ERROR,
-      &v2,
+      &v6,
       "Path_AddToTail failed, depth already == DEFAULT_MAX_PATH_DEPTH(%d)",
       6);
   }

@@ -97,7 +97,7 @@ void *__fastcall CEnvDeferredLight::CEntityInstanceEntityClass::AllocateInstance
 void __fastcall CEnvDeferredLight::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CEnvDeferredLight::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -107,7 +107,7 @@ void __fastcall CEnvDeferredLight::CEntityInstanceEntityClass::~CEntityInstanceE
 void __fastcall CEnvDeferredLight::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CEnvDeferredLight::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }

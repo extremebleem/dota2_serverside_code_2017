@@ -88,7 +88,7 @@ void __fastcall GameToolEventToolEvent_SFMRecordingStateChanged_tHookupGameSyste
 void __fastcall GameToolEventToolEvent_SFMRecordingStateChanged_tHookupGameSystem::~GameToolEventToolEvent_SFMRecordingStateChanged_tHookupGameSystem(
         GameToolEventToolEvent_SFMRecordingStateChanged_tHookupGameSystem *const this)
 {
-  this->_vptr_IGameSystem = off_3FCDDB0;
+  this->_vptr_IGameSystem = off_3FCDDB0;  // vptr: CStartupHookGameSystem<GameToolEventToolEvent_SFMRecordingStateChanged_tInternal,0>
   IGameSystem::~IGameSystem(this);
 }
 
@@ -98,7 +98,7 @@ void __fastcall GameToolEventToolEvent_SFMRecordingStateChanged_tHookupGameSyste
 void __fastcall GameToolEventToolEvent_SFMRecordingStateChanged_tHookupGameSystem::~GameToolEventToolEvent_SFMRecordingStateChanged_tHookupGameSystem(
         GameToolEventToolEvent_SFMRecordingStateChanged_tHookupGameSystem *const this)
 {
-  this->_vptr_IGameSystem = off_3FCDDB0;
+  this->_vptr_IGameSystem = off_3FCDDB0;  // vptr: CStartupHookGameSystem<GameToolEventToolEvent_SFMRecordingStateChanged_tInternal,0>
   IGameSystem::~IGameSystem(this);
   operator delete(this);
 }
@@ -164,7 +164,7 @@ void __fastcall CRenderGameSystem::CRenderGameSystem(CRenderGameSystem *const th
   this->m_ConnectedSignalQueues.Mutex_t.m_ownerID = 0;
   this->m_ConnectedSignalQueues.Mutex_t.m_depth = 0;
   this->m_SlotDeletionDelegate.m_Closure.m_pFunction.__delta = 0;
-  this->_vptr_IGameSystem = off_3FCE0D0;
+  this->_vptr_IGameSystem = off_3FCE0D0;  // vptr: CRenderGameSystem
   this->m_changedRenderComponentsMutex.m_ownerID = 0;
   this->m_changedRenderComponentsMutex.m_depth = 0;
   this->m_changedRenderComponents.m_Memory.m_pBlocks = 0;
@@ -2148,7 +2148,7 @@ void __fastcall CRender::CRender(CRender *const this)
 {
   __int64 v2; // r12
 
-  this->_vptr_CRender = off_3FCE250;
+  this->_vptr_CRender = off_3FCE250;  // vptr: CRender
   this->m_ViewStack.m_Memory.m_pMemory = 0;
   this->m_ViewStack.m_Memory.m_nAllocationCount = 0;
   this->m_ViewStack.m_Memory.m_nGrowSize = 0;

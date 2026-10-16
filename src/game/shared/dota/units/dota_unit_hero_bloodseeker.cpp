@@ -622,7 +622,7 @@ CEntityInstance *__fastcall CDOTA_Unit_Hero_Bloodseeker::CEntityInstanceEntityCl
 void __fastcall CDOTA_Unit_Hero_Bloodseeker::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Unit_Hero_Bloodseeker::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -632,7 +632,7 @@ void __fastcall CDOTA_Unit_Hero_Bloodseeker::CEntityInstanceEntityClass::~CEntit
 void __fastcall CDOTA_Unit_Hero_Bloodseeker::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Unit_Hero_Bloodseeker::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -817,7 +817,7 @@ CEntityInstance *__fastcall CDOTA_Ability_Bloodseeker_Bloodrage::CEntityInstance
 void __fastcall CDOTA_Ability_Bloodseeker_Bloodrage::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Bloodseeker_Bloodrage::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -827,7 +827,7 @@ void __fastcall CDOTA_Ability_Bloodseeker_Bloodrage::CEntityInstanceEntityClass:
 void __fastcall CDOTA_Ability_Bloodseeker_Bloodrage::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Bloodseeker_Bloodrage::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -1426,7 +1426,7 @@ CEntityInstance *__fastcall CDOTA_Ability_Bloodseeker_Bloodbath::CEntityInstance
 void __fastcall CDOTA_Ability_Bloodseeker_Bloodbath::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Bloodseeker_Bloodbath::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -1436,7 +1436,7 @@ void __fastcall CDOTA_Ability_Bloodseeker_Bloodbath::CEntityInstanceEntityClass:
 void __fastcall CDOTA_Ability_Bloodseeker_Bloodbath::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Bloodseeker_Bloodbath::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -2026,7 +2026,7 @@ CEntityInstance *__fastcall CDOTA_Ability_Bloodseeker_Thirst::CEntityInstanceEnt
 void __fastcall CDOTA_Ability_Bloodseeker_Thirst::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Bloodseeker_Thirst::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -2036,7 +2036,7 @@ void __fastcall CDOTA_Ability_Bloodseeker_Thirst::CEntityInstanceEntityClass::~C
 void __fastcall CDOTA_Ability_Bloodseeker_Thirst::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Bloodseeker_Thirst::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -3088,7 +3088,7 @@ CEntityInstance *__fastcall CDOTA_Ability_Bloodseeker_Rupture::CEntityInstanceEn
 void __fastcall CDOTA_Ability_Bloodseeker_Rupture::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Bloodseeker_Rupture::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -3098,7 +3098,7 @@ void __fastcall CDOTA_Ability_Bloodseeker_Rupture::CEntityInstanceEntityClass::~
 void __fastcall CDOTA_Ability_Bloodseeker_Rupture::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Bloodseeker_Rupture::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }

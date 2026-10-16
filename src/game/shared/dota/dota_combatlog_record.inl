@@ -79,7 +79,7 @@ LABEL_12:
       CUtlMemory<unsigned char,int>::Purge(&this->m_MemoryStack.m_Memory);
   }
 LABEL_5:
-  this->_vptr_IGameSystem = off_3F7C1B0;
+  this->_vptr_IGameSystem = off_3F7C1B0;  // vptr: CAutoGameSystem
   IGameSystem::~IGameSystem(this);
 }
 
@@ -137,7 +137,7 @@ LABEL_12:
       CUtlMemory<unsigned char,int>::Purge(&this->m_MemoryStack.m_Memory);
   }
 LABEL_5:
-  this->_vptr_IGameSystem = off_3F7C1B0;
+  this->_vptr_IGameSystem = off_3F7C1B0;  // vptr: CAutoGameSystem
   IGameSystem::~IGameSystem(this);
   operator delete(this);
 }

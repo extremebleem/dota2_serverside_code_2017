@@ -632,7 +632,7 @@ CEntityInstance *__fastcall CDOTA_Unit_Hero_CrystalMaiden::CEntityInstanceEntity
 void __fastcall CDOTA_Unit_Hero_CrystalMaiden::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Unit_Hero_CrystalMaiden::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -642,7 +642,7 @@ void __fastcall CDOTA_Unit_Hero_CrystalMaiden::CEntityInstanceEntityClass::~CEnt
 void __fastcall CDOTA_Unit_Hero_CrystalMaiden::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Unit_Hero_CrystalMaiden::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -843,7 +843,7 @@ CEntityInstance *__fastcall CDOTA_Ability_CrystalMaiden_CrystalNova::CEntityInst
 void __fastcall CDOTA_Ability_CrystalMaiden_CrystalNova::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_CrystalMaiden_CrystalNova::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -853,7 +853,7 @@ void __fastcall CDOTA_Ability_CrystalMaiden_CrystalNova::CEntityInstanceEntityCl
 void __fastcall CDOTA_Ability_CrystalMaiden_CrystalNova::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_CrystalMaiden_CrystalNova::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -1361,7 +1361,7 @@ CEntityInstance *__fastcall CDOTA_Ability_CrystalMaiden_Frostbite::CEntityInstan
 void __fastcall CDOTA_Ability_CrystalMaiden_Frostbite::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_CrystalMaiden_Frostbite::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -1371,7 +1371,7 @@ void __fastcall CDOTA_Ability_CrystalMaiden_Frostbite::CEntityInstanceEntityClas
 void __fastcall CDOTA_Ability_CrystalMaiden_Frostbite::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_CrystalMaiden_Frostbite::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -1859,7 +1859,7 @@ CEntityInstance *__fastcall CDOTA_Ability_CrystalMaiden_BrillianceAura::CEntityI
 void __fastcall CDOTA_Ability_CrystalMaiden_BrillianceAura::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_CrystalMaiden_BrillianceAura::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -1869,7 +1869,7 @@ void __fastcall CDOTA_Ability_CrystalMaiden_BrillianceAura::CEntityInstanceEntit
 void __fastcall CDOTA_Ability_CrystalMaiden_BrillianceAura::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_CrystalMaiden_BrillianceAura::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -2346,7 +2346,7 @@ CEntityInstance *__fastcall CDOTA_Ability_CrystalMaiden_FreezingField::CEntityIn
 void __fastcall CDOTA_Ability_CrystalMaiden_FreezingField::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_CrystalMaiden_FreezingField::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -2356,7 +2356,7 @@ void __fastcall CDOTA_Ability_CrystalMaiden_FreezingField::CEntityInstanceEntity
 void __fastcall CDOTA_Ability_CrystalMaiden_FreezingField::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_CrystalMaiden_FreezingField::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }

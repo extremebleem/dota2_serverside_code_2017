@@ -167,7 +167,7 @@ void *__fastcall CVGuiScreenTeam::CEntityInstanceEntityClass::AllocateInstance(
 void __fastcall CVGuiScreenTeam::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CVGuiScreenTeam::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -177,7 +177,7 @@ void __fastcall CVGuiScreenTeam::CEntityInstanceEntityClass::~CEntityInstanceEnt
 void __fastcall CVGuiScreenTeam::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CVGuiScreenTeam::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -1074,7 +1074,7 @@ int __fastcall CVGuiScreen::ShouldTransmit(CVGuiScreen *const this, const CGameC
     && (v7 = g_pEntitySystem->m_EntityList.m_pIdentityChunks[v5 >> 9]) != 0
     && (v8 = &v7[v5 & 0x1FF]) != 0
     && v6 == v8->m_EHandle.m_Index
-    && v8->m_pInstance )
+    && v8->m_pInstance != 0 )
   {
     return (*(v8->m_pInstance->_vptr_IHandleEntity + 65))(v8->m_pInstance, pInfo);
   }

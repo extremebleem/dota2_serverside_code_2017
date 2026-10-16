@@ -188,7 +188,7 @@ void __fastcall CBaseRopePhysics::GetNodeForces(
   m_pDelegate = this->m_pDelegate;
   if ( m_pDelegate != 0 )
   {
-    (*m_pDelegate->_vptr_IHelper)(m_pDelegate, pNodes, iNode, pAccel);
+    m_pDelegate->GetNodeForces(pNodes, iNode, pAccel);
   }
   else
   {

@@ -836,7 +836,7 @@ CEntityInstance *__fastcall CDOTA_Unit_Hero_Lycan::CEntityInstanceEntityClass::C
 void __fastcall CDOTA_Unit_Hero_Lycan::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Unit_Hero_Lycan::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -846,7 +846,7 @@ void __fastcall CDOTA_Unit_Hero_Lycan::CEntityInstanceEntityClass::~CEntityInsta
 void __fastcall CDOTA_Unit_Hero_Lycan::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Unit_Hero_Lycan::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -1125,7 +1125,7 @@ CEntityInstance *__fastcall CDOTA_Ability_Lycan_SummonWolves::CEntityInstanceEnt
 void __fastcall CDOTA_Ability_Lycan_SummonWolves::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Lycan_SummonWolves::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -1135,7 +1135,7 @@ void __fastcall CDOTA_Ability_Lycan_SummonWolves::CEntityInstanceEntityClass::~C
 void __fastcall CDOTA_Ability_Lycan_SummonWolves::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Lycan_SummonWolves::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -1786,7 +1786,7 @@ CEntityInstance *__fastcall CDOTA_Ability_Lycan_SummonWolves_CriticalStrike::CEn
 void __fastcall CDOTA_Ability_Lycan_SummonWolves_CriticalStrike::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Lycan_SummonWolves_CriticalStrike::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -1796,7 +1796,7 @@ void __fastcall CDOTA_Ability_Lycan_SummonWolves_CriticalStrike::CEntityInstance
 void __fastcall CDOTA_Ability_Lycan_SummonWolves_CriticalStrike::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Lycan_SummonWolves_CriticalStrike::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -2279,7 +2279,7 @@ CEntityInstance *__fastcall CDOTA_Ability_Lycan_SummonWolves_PermanentInvisibili
 void __fastcall CDOTA_Ability_Lycan_SummonWolves_PermanentInvisibility::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Lycan_SummonWolves_PermanentInvisibility::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -2289,7 +2289,7 @@ void __fastcall CDOTA_Ability_Lycan_SummonWolves_PermanentInvisibility::CEntityI
 void __fastcall CDOTA_Ability_Lycan_SummonWolves_PermanentInvisibility::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Lycan_SummonWolves_PermanentInvisibility::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -2538,7 +2538,7 @@ CEntityInstance *__fastcall CDOTA_Ability_Lycan_Howl::CEntityInstanceEntityClass
 void __fastcall CDOTA_Ability_Lycan_Howl::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Lycan_Howl::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -2548,7 +2548,7 @@ void __fastcall CDOTA_Ability_Lycan_Howl::CEntityInstanceEntityClass::~CEntityIn
 void __fastcall CDOTA_Ability_Lycan_Howl::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Lycan_Howl::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -3152,7 +3152,7 @@ CEntityInstance *__fastcall CDOTA_Ability_Lycan_FeralImpulse::CEntityInstanceEnt
 void __fastcall CDOTA_Ability_Lycan_FeralImpulse::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Lycan_FeralImpulse::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -3162,7 +3162,7 @@ void __fastcall CDOTA_Ability_Lycan_FeralImpulse::CEntityInstanceEntityClass::~C
 void __fastcall CDOTA_Ability_Lycan_FeralImpulse::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Lycan_FeralImpulse::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -3637,7 +3637,7 @@ CEntityInstance *__fastcall CDOTA_Ability_Lycan_Shapeshift::CEntityInstanceEntit
 void __fastcall CDOTA_Ability_Lycan_Shapeshift::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Lycan_Shapeshift::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -3647,7 +3647,7 @@ void __fastcall CDOTA_Ability_Lycan_Shapeshift::CEntityInstanceEntityClass::~CEn
 void __fastcall CDOTA_Ability_Lycan_Shapeshift::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Lycan_Shapeshift::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }

@@ -66,7 +66,7 @@ void __fastcall CDOTA_UnitInventory::CDOTA_UnitInventory(CDOTA_UnitInventory *co
 {
   CDOTA_UnitInventory *p_m_hItems; // rax
 
-  this->_vptr_CDOTA_UnitInventory = off_40DC990;
+  this->_vptr_CDOTA_UnitInventory = off_40DC990;  // vptr: CDOTA_UnitInventory
   this->m_SharedCooldownList.m_Size = 0;
   p_m_hItems = &this->m_hItems;
   this->m_SharedCooldownList.m_Memory.m_pMemory = 0;
@@ -753,7 +753,7 @@ void __fastcall CDOTA_UnitInventory::DumpInventorySlots(CDOTA_UnitInventory *con
 // calls: CUtlVectorBase<CDOTA_AutoBluePrint, CUtlMemory<CDOTA_AutoBluePrint, int> >::RemoveAll, IGameSystem::~IGameSystem, CUtlMemory<CDOTA_AutoBluePrint, int>::Purge
 void __fastcall CDOTA_AutoCombinableItems::~CDOTA_AutoCombinableItems(CDOTA_AutoCombinableItems *const this)
 {
-  this->_vptr_IGameSystem = off_42B3F50;
+  this->_vptr_IGameSystem = off_42B3F50;  // vptr: CDOTA_AutoCombinableItems
   CUtlVectorBase<CDOTA_AutoBluePrint,CUtlMemory<CDOTA_AutoBluePrint,int>>::RemoveAll(&this->m_AutoBluePrints);
   if ( (this->m_AutoBluePrints.m_Memory.m_nGrowSize & 0xC0000000) == 0 )
   {
@@ -761,7 +761,7 @@ void __fastcall CDOTA_AutoCombinableItems::~CDOTA_AutoCombinableItems(CDOTA_Auto
     if ( (this->m_AutoBluePrints.m_Memory.m_nGrowSize & 0xC0000000) == 0 )
       CUtlMemory<CDOTA_AutoBluePrint,int>::Purge(&this->m_AutoBluePrints.m_Memory);
   }
-  this->_vptr_IGameSystem = off_3F7C1B0;
+  this->_vptr_IGameSystem = off_3F7C1B0;  // vptr: CAutoGameSystem
   IGameSystem::~IGameSystem(this);
 }
 
@@ -770,7 +770,7 @@ void __fastcall CDOTA_AutoCombinableItems::~CDOTA_AutoCombinableItems(CDOTA_Auto
 // calls: CUtlVectorBase<CDOTA_AutoBluePrint, CUtlMemory<CDOTA_AutoBluePrint, int> >::RemoveAll, IGameSystem::~IGameSystem, operator delete, CUtlMemory<CDOTA_AutoBluePrint, int>::Purge
 void __fastcall CDOTA_AutoCombinableItems::~CDOTA_AutoCombinableItems(CDOTA_AutoCombinableItems *const this)
 {
-  this->_vptr_IGameSystem = off_42B3F50;
+  this->_vptr_IGameSystem = off_42B3F50;  // vptr: CDOTA_AutoCombinableItems
   CUtlVectorBase<CDOTA_AutoBluePrint,CUtlMemory<CDOTA_AutoBluePrint,int>>::RemoveAll(&this->m_AutoBluePrints);
   if ( (this->m_AutoBluePrints.m_Memory.m_nGrowSize & 0xC0000000) == 0 )
   {
@@ -778,7 +778,7 @@ void __fastcall CDOTA_AutoCombinableItems::~CDOTA_AutoCombinableItems(CDOTA_Auto
     if ( (this->m_AutoBluePrints.m_Memory.m_nGrowSize & 0xC0000000) == 0 )
       CUtlMemory<CDOTA_AutoBluePrint,int>::Purge(&this->m_AutoBluePrints.m_Memory);
   }
-  this->_vptr_IGameSystem = off_3F7C1B0;
+  this->_vptr_IGameSystem = off_3F7C1B0;  // vptr: CAutoGameSystem
   IGameSystem::~IGameSystem(this);
   operator delete(this);
 }

@@ -24,7 +24,7 @@ void __fastcall CDOTA_Bot_Hero_WitchDoctor::~CDOTA_Bot_Hero_WitchDoctor(CDOTA_Bo
 void __fastcall CDOTA_BotMode_Attack_WitchDoctor::~CDOTA_BotMode_Attack_WitchDoctor(
         CDOTA_BotMode_Attack_WitchDoctor *const this)
 {
-  this->_vptr_CDOTA_BotMode = off_42B75F0;
+  this->_vptr_CDOTA_BotMode = off_42B75F0;  // vptr: CDOTA_BotMode
 }
 
 
@@ -33,7 +33,7 @@ void __fastcall CDOTA_BotMode_Attack_WitchDoctor::~CDOTA_BotMode_Attack_WitchDoc
 void __fastcall CDOTA_BotMode_Attack_WitchDoctor::~CDOTA_BotMode_Attack_WitchDoctor(
         CDOTA_BotMode_Attack_WitchDoctor *const this)
 {
-  this->_vptr_CDOTA_BotMode = off_42B75F0;
+  this->_vptr_CDOTA_BotMode = off_42B75F0;  // vptr: CDOTA_BotMode
   operator delete(this);
 }
 
@@ -155,7 +155,7 @@ DOTA_BOT_MODE __fastcall CDOTA_Bot_Unit_WitchDoctor_DeathWard::GetInitialMode(
 void __fastcall CDOTA_BotMode_Attack_WitchDoctor_DeathWard::~CDOTA_BotMode_Attack_WitchDoctor_DeathWard(
         CDOTA_BotMode_Attack_WitchDoctor_DeathWard *const this)
 {
-  this->_vptr_CDOTA_BotMode = off_42B75F0;
+  this->_vptr_CDOTA_BotMode = off_42B75F0;  // vptr: CDOTA_BotMode
 }
 
 
@@ -164,7 +164,7 @@ void __fastcall CDOTA_BotMode_Attack_WitchDoctor_DeathWard::~CDOTA_BotMode_Attac
 void __fastcall CDOTA_BotMode_Attack_WitchDoctor_DeathWard::~CDOTA_BotMode_Attack_WitchDoctor_DeathWard(
         CDOTA_BotMode_Attack_WitchDoctor_DeathWard *const this)
 {
-  this->_vptr_CDOTA_BotMode = off_42B75F0;
+  this->_vptr_CDOTA_BotMode = off_42B75F0;  // vptr: CDOTA_BotMode
   operator delete(this);
 }
 

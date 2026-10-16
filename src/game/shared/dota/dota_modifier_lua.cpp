@@ -43,7 +43,7 @@ void __fastcall LinkLuaModifier(const char *pszLuaModifierName, const char *pszF
       if ( CModifieractoryDictionary::FindFactory(v9, pszLuaModifierName) == 0 )
       {
         v13 = ModifierFactoryDictionary();
-        (*v13->_vptr_CModifieractoryDictionary)(v13, Factory, pszLuaModifierName);
+        v13->InstallFactory(Factory, pszLuaModifierName);
       }
       CDOTALuaModifierEntry::CDOTALuaModifierEntry(v14);
       v15 |= 2u;

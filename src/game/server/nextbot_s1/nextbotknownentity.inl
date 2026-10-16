@@ -4,7 +4,7 @@
 // CKnownEntity::~CKnownEntity  (line 32, @0x0000000002f364b0, libserver.so)
 void __fastcall CKnownEntity::~CKnownEntity(CKnownEntity *const this)
 {
-  this->_vptr_CKnownEntity = off_47B4DD0;
+  this->_vptr_CKnownEntity = off_47B4DD0;  // vptr: CKnownEntity
 }
 
 
@@ -12,7 +12,7 @@ void __fastcall CKnownEntity::~CKnownEntity(CKnownEntity *const this)
 // calls: operator delete
 void __fastcall CKnownEntity::~CKnownEntity(CKnownEntity *const this)
 {
-  this->_vptr_CKnownEntity = off_47B4DD0;
+  this->_vptr_CKnownEntity = off_47B4DD0;  // vptr: CKnownEntity
   operator delete(this);
 }
 

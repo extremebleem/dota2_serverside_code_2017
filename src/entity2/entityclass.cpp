@@ -23,30 +23,24 @@ void __cdecl GLOBAL__sub_I_entityclass_cpp()
   UNSPECIFIED_LOGGING_COLOR._color[1] = 0;
   UNSPECIFIED_LOGGING_COLOR._color[2] = 0;
   UNSPECIFIED_LOGGING_COLOR._color[3] = 0;
-  if ( `guard variable for'g_HuffmanEncoder == 0 )
-  {
-    `guard variable for'g_HuffmanEncoder = 1;
-    g_HuffmanEncoder.m_pRoot = 0;
-    g_HuffmanEncoder.m_Frequencies.m_Size = 0;
-    g_HuffmanEncoder.m_Frequencies.m_Memory.m_pMemory = 0;
-    g_HuffmanEncoder.m_Frequencies.m_Memory.m_nAllocationCount = 0;
-    g_HuffmanEncoder.m_Frequencies.m_Memory.m_nGrowSize = 0;
-    g_HuffmanEncoder.m_OpCodeToHuffmanLookup.m_Size = 0;
-    g_HuffmanEncoder.m_FixedTree.m_Size = 0;
-    g_HuffmanEncoder.m_FixedTree.m_Memory.m_pMemory = 0;
-    g_HuffmanEncoder.m_FixedTree.m_Memory.m_nAllocationCount = 0;
-    g_HuffmanEncoder.m_FixedTree.m_Memory.m_nGrowSize = 0;
-    CFieldPathHuffmanEncoder::BuildOpCodeCodeToHuffmanLookup(&g_HuffmanEncoder);
-    __cxa_atexit(CFieldPathHuffmanEncoder::~CFieldPathHuffmanEncoder, &g_HuffmanEncoder, &_dso_handle);
-  }
-  if ( `guard variable for'CEntityKeyValues::sm_EmptyVariant == 0 )
-  {
-    `guard variable for'CEntityKeyValues::sm_EmptyVariant = 1;
-    CEntityKeyValues::sm_EmptyVariant.m_type = 0;
-    CEntityKeyValues::sm_EmptyVariant.m_flags = 0;
-    CEntityKeyValues::sm_EmptyVariant.m_uint64 = 0;
-    __cxa_atexit(CVariantBase<CEntityVariantAllocator>::~CVariantBase, &CEntityKeyValues::sm_EmptyVariant, &_dso_handle);
-  }
+  // init once: g_HuffmanEncoder
+  g_HuffmanEncoder.m_pRoot = 0;
+  g_HuffmanEncoder.m_Frequencies.m_Size = 0;
+  g_HuffmanEncoder.m_Frequencies.m_Memory.m_pMemory = 0;
+  g_HuffmanEncoder.m_Frequencies.m_Memory.m_nAllocationCount = 0;
+  g_HuffmanEncoder.m_Frequencies.m_Memory.m_nGrowSize = 0;
+  g_HuffmanEncoder.m_OpCodeToHuffmanLookup.m_Size = 0;
+  g_HuffmanEncoder.m_FixedTree.m_Size = 0;
+  g_HuffmanEncoder.m_FixedTree.m_Memory.m_pMemory = 0;
+  g_HuffmanEncoder.m_FixedTree.m_Memory.m_nAllocationCount = 0;
+  g_HuffmanEncoder.m_FixedTree.m_Memory.m_nGrowSize = 0;
+  CFieldPathHuffmanEncoder::BuildOpCodeCodeToHuffmanLookup(&g_HuffmanEncoder);
+  __cxa_atexit(CFieldPathHuffmanEncoder::~CFieldPathHuffmanEncoder, &g_HuffmanEncoder, &_dso_handle);
+  // init once: CEntityKeyValues::sm_EmptyVariant
+  CEntityKeyValues::sm_EmptyVariant.m_type = 0;
+  CEntityKeyValues::sm_EmptyVariant.m_flags = 0;
+  CEntityKeyValues::sm_EmptyVariant.m_uint64 = 0;
+  __cxa_atexit(CVariantBase<CEntityVariantAllocator>::~CVariantBase, &CEntityKeyValues::sm_EmptyVariant, &_dso_handle);
   CEntityClass::gm_fComponentsContained.m_Size = 0;
   CEntityClass::gm_fComponentsContained.m_Memory.m_pMemory = 0;
   CEntityClass::gm_fComponentsContained.m_Memory.m_nAllocationCount = 0;
@@ -695,7 +689,7 @@ bool __fastcall AssignKeyValue<Color>(
   {
     m_uint64 = value->m_uint64;
     v12 = 0;
-    V_StringToColor(&v12, m_uint64);
+    V_StringToColor(&v12, m_uint64, value, pKeyName);
     *pMemory = v12;
     return 1;
   }

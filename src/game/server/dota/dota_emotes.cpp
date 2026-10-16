@@ -423,8 +423,8 @@ void __fastcall CDOTAGamerules::FillOutHardcodedEmoteRules(CDOTAGamerules *const
   CEmoteMap::IFunction *v3; // r12
 
   p_m_EmoteRules = &this->m_EmoteRules;
-  v2 = operator new(0x20u);
-  v2->_vptr_CRefCountServiceBase = off_40F6990;
+  v2 = operator new(0x20u);  // new CEmotePlayConcept (size matches)
+  v2->_vptr_CRefCountServiceBase = off_40F6990;  // vptr: CEmotePlayConcept
   v2->m_iRefs = 1;
   v2[1]._vptr_CRefCountServiceBase = "laugh";
   v2[1].m_iRefs = 30;
@@ -435,8 +435,8 @@ void __fastcall CDOTAGamerules::FillOutHardcodedEmoteRules(CDOTAGamerules *const
   CEmoteMap::AddFunction(p_m_EmoteRules, "hah", v2);
   CEmoteMap::AddFunction(p_m_EmoteRules, "jaja", v2);
   CEmoteMap::AddFunction(p_m_EmoteRules, "/laugh", v2);
-  v3 = operator new(0x20u);
-  v3->_vptr_CRefCountServiceBase = off_40F6990;
+  v3 = operator new(0x20u);  // new CEmotePlayConcept (size matches)
+  v3->_vptr_CRefCountServiceBase = off_40F6990;  // vptr: CEmotePlayConcept
   v3[1]._vptr_CRefCountServiceBase = "thanks";
   v3->m_iRefs = 1;
   v3[1].m_iRefs = 26;

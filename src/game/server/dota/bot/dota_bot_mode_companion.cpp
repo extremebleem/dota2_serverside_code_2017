@@ -20,7 +20,7 @@ void __fastcall CDOTA_BotMode_Companion::CDOTA_BotMode_Companion(CDOTA_BotMode_C
   this->m_hFriendly.m_Index = -1;
   this->m_vDesiredLocation.y = y;
   z = vec3_origin.z;
-  this->_vptr_CDOTA_BotMode = off_42B79B0;
+  this->_vptr_CDOTA_BotMode = off_42B79B0;  // vptr: CDOTA_BotMode_Companion
   this->m_vDesiredLocation.z = z;
   this->m_nSubMode = 0;
   this->m_flOffsetTimer = 0.0;

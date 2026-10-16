@@ -100,7 +100,7 @@ CEntityInstance *__fastcall CDOTA_Ability_Pudge_FleshHeap::CEntityInstanceEntity
 void __fastcall CDOTA_Ability_Pudge_FleshHeap::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Pudge_FleshHeap::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -110,7 +110,7 @@ void __fastcall CDOTA_Ability_Pudge_FleshHeap::CEntityInstanceEntityClass::~CEnt
 void __fastcall CDOTA_Ability_Pudge_FleshHeap::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Pudge_FleshHeap::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }

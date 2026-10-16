@@ -644,7 +644,7 @@ CEntityInstance *__fastcall CDOTA_Unit_Hero_Naga_Siren::CEntityInstanceEntityCla
 void __fastcall CDOTA_Unit_Hero_Naga_Siren::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Unit_Hero_Naga_Siren::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -654,7 +654,7 @@ void __fastcall CDOTA_Unit_Hero_Naga_Siren::CEntityInstanceEntityClass::~CEntity
 void __fastcall CDOTA_Unit_Hero_Naga_Siren::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Unit_Hero_Naga_Siren::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -885,7 +885,7 @@ CEntityInstance *__fastcall CDOTA_Ability_NagaSiren_MirrorImage::CEntityInstance
 void __fastcall CDOTA_Ability_NagaSiren_MirrorImage::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_NagaSiren_MirrorImage::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -895,7 +895,7 @@ void __fastcall CDOTA_Ability_NagaSiren_MirrorImage::CEntityInstanceEntityClass:
 void __fastcall CDOTA_Ability_NagaSiren_MirrorImage::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_NagaSiren_MirrorImage::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -1351,7 +1351,7 @@ CEntityInstance *__fastcall CDOTA_Ability_NagaSiren_Ensnare::CEntityInstanceEnti
 void __fastcall CDOTA_Ability_NagaSiren_Ensnare::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_NagaSiren_Ensnare::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -1361,7 +1361,7 @@ void __fastcall CDOTA_Ability_NagaSiren_Ensnare::CEntityInstanceEntityClass::~CE
 void __fastcall CDOTA_Ability_NagaSiren_Ensnare::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_NagaSiren_Ensnare::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -2041,7 +2041,7 @@ CEntityInstance *__fastcall CDOTA_Ability_NagaSiren_RipTide::CEntityInstanceEnti
 void __fastcall CDOTA_Ability_NagaSiren_RipTide::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_NagaSiren_RipTide::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -2051,7 +2051,7 @@ void __fastcall CDOTA_Ability_NagaSiren_RipTide::CEntityInstanceEntityClass::~CE
 void __fastcall CDOTA_Ability_NagaSiren_RipTide::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_NagaSiren_RipTide::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -2718,7 +2718,7 @@ CEntityInstance *__fastcall CDOTA_Ability_NagaSiren_SongOfTheSiren::CEntityInsta
 void __fastcall CDOTA_Ability_NagaSiren_SongOfTheSiren::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_NagaSiren_SongOfTheSiren::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -2728,7 +2728,7 @@ void __fastcall CDOTA_Ability_NagaSiren_SongOfTheSiren::CEntityInstanceEntityCla
 void __fastcall CDOTA_Ability_NagaSiren_SongOfTheSiren::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_NagaSiren_SongOfTheSiren::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -2894,7 +2894,7 @@ CEntityInstance *__fastcall CDOTA_Ability_NagaSiren_SongOfTheSiren_Cancel::CEnti
 void __fastcall CDOTA_Ability_NagaSiren_SongOfTheSiren_Cancel::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_NagaSiren_SongOfTheSiren_Cancel::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -2904,7 +2904,7 @@ void __fastcall CDOTA_Ability_NagaSiren_SongOfTheSiren_Cancel::CEntityInstanceEn
 void __fastcall CDOTA_Ability_NagaSiren_SongOfTheSiren_Cancel::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_NagaSiren_SongOfTheSiren_Cancel::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }

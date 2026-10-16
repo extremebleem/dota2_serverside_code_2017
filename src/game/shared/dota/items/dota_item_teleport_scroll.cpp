@@ -134,7 +134,7 @@ void __fastcall CDOTA_TeleportTimerManager::~CDOTA_TeleportTimerManager(CDOTA_Te
   CUtlVectorBase<CDOTA_TeleportTimer,CUtlMemory<CDOTA_TeleportTimer,int> >::CAllocator *p_m_Memory; // r12
 
   v2 = (this->m_teleports.m_Memory.m_nGrowSize & 0xC0000000) == 0;
-  this->_vptr_IGameSystem = off_477D870;
+  this->_vptr_IGameSystem = off_477D870;  // vptr: CDOTA_TeleportTimerManager
   this->m_teleports.m_Size = 0;
   if ( v2 )
   {
@@ -143,7 +143,7 @@ void __fastcall CDOTA_TeleportTimerManager::~CDOTA_TeleportTimerManager(CDOTA_Te
     if ( (this->m_teleports.m_Memory.m_nGrowSize & 0xC0000000) == 0 )
       CUtlMemory<CDOTA_TeleportTimer,int>::Purge(p_m_Memory);
   }
-  this->_vptr_IGameSystem = off_3F7C1B0;
+  this->_vptr_IGameSystem = off_3F7C1B0;  // vptr: CAutoGameSystem
   IGameSystem::~IGameSystem(this);
 }
 
@@ -156,7 +156,7 @@ void __fastcall CDOTA_TeleportTimerManager::~CDOTA_TeleportTimerManager(CDOTA_Te
   CUtlVectorBase<CDOTA_TeleportTimer,CUtlMemory<CDOTA_TeleportTimer,int> >::CAllocator *p_m_Memory; // r12
 
   v2 = (this->m_teleports.m_Memory.m_nGrowSize & 0xC0000000) == 0;
-  this->_vptr_IGameSystem = off_477D870;
+  this->_vptr_IGameSystem = off_477D870;  // vptr: CDOTA_TeleportTimerManager
   this->m_teleports.m_Size = 0;
   if ( v2 )
   {
@@ -165,7 +165,7 @@ void __fastcall CDOTA_TeleportTimerManager::~CDOTA_TeleportTimerManager(CDOTA_Te
     if ( (this->m_teleports.m_Memory.m_nGrowSize & 0xC0000000) == 0 )
       CUtlMemory<CDOTA_TeleportTimer,int>::Purge(p_m_Memory);
   }
-  this->_vptr_IGameSystem = off_3F7C1B0;
+  this->_vptr_IGameSystem = off_3F7C1B0;  // vptr: CAutoGameSystem
   IGameSystem::~IGameSystem(this);
   operator delete(this);
 }
@@ -367,7 +367,7 @@ CEntityInstance *__fastcall CDOTA_Item_TeleportScroll::CEntityInstanceEntityClas
 void __fastcall CDOTA_Item_TeleportScroll::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Item_TeleportScroll::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -377,7 +377,7 @@ void __fastcall CDOTA_Item_TeleportScroll::CEntityInstanceEntityClass::~CEntityI
 void __fastcall CDOTA_Item_TeleportScroll::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Item_TeleportScroll::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -864,7 +864,7 @@ LABEL_28:
               if ( v48 != -104 )
               {
                 StaticData = CEconItemView::GetStaticData((v48 + 104));
-                if ( (*StaticData->_vptr_IEconItemDefinition)(StaticData) == 6224 )
+                if ( StaticData->GetDefinitionIndex() == 6224 )
                   break;
               }
             }

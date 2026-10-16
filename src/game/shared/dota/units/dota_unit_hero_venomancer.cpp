@@ -799,7 +799,7 @@ CEntityInstance *__fastcall CDOTA_BaseNPC_Venomancer_PlagueWard::CEntityInstance
 void __fastcall CDOTA_BaseNPC_Venomancer_PlagueWard::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_BaseNPC_Venomancer_PlagueWard::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -809,7 +809,7 @@ void __fastcall CDOTA_BaseNPC_Venomancer_PlagueWard::CEntityInstanceEntityClass:
 void __fastcall CDOTA_BaseNPC_Venomancer_PlagueWard::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_BaseNPC_Venomancer_PlagueWard::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -1031,7 +1031,7 @@ CEntityInstance *__fastcall CDOTA_Unit_Hero_Venomancer::CEntityInstanceEntityCla
 void __fastcall CDOTA_Unit_Hero_Venomancer::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Unit_Hero_Venomancer::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -1041,7 +1041,7 @@ void __fastcall CDOTA_Unit_Hero_Venomancer::CEntityInstanceEntityClass::~CEntity
 void __fastcall CDOTA_Unit_Hero_Venomancer::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Unit_Hero_Venomancer::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -1244,7 +1244,7 @@ CEntityInstance *__fastcall CDOTA_Ability_Venomancer_VenomousGale::CEntityInstan
 void __fastcall CDOTA_Ability_Venomancer_VenomousGale::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Venomancer_VenomousGale::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -1254,7 +1254,7 @@ void __fastcall CDOTA_Ability_Venomancer_VenomousGale::CEntityInstanceEntityClas
 void __fastcall CDOTA_Ability_Venomancer_VenomousGale::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Venomancer_VenomousGale::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -1976,7 +1976,7 @@ CEntityInstance *__fastcall CDOTA_Ability_Venomancer_PoisonSting::CEntityInstanc
 void __fastcall CDOTA_Ability_Venomancer_PoisonSting::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Venomancer_PoisonSting::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -1986,7 +1986,7 @@ void __fastcall CDOTA_Ability_Venomancer_PoisonSting::CEntityInstanceEntityClass
 void __fastcall CDOTA_Ability_Venomancer_PoisonSting::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Venomancer_PoisonSting::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -2833,7 +2833,7 @@ CEntityInstance *__fastcall CDOTA_Ability_Venomancer_PlagueWard::CEntityInstance
 void __fastcall CDOTA_Ability_Venomancer_PlagueWard::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Venomancer_PlagueWard::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -2843,7 +2843,7 @@ void __fastcall CDOTA_Ability_Venomancer_PlagueWard::CEntityInstanceEntityClass:
 void __fastcall CDOTA_Ability_Venomancer_PlagueWard::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Venomancer_PlagueWard::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -3340,7 +3340,7 @@ CEntityInstance *__fastcall CDOTA_Ability_Venomancer_PoisonNova::CEntityInstance
 void __fastcall CDOTA_Ability_Venomancer_PoisonNova::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Venomancer_PoisonNova::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -3350,7 +3350,7 @@ void __fastcall CDOTA_Ability_Venomancer_PoisonNova::CEntityInstanceEntityClass:
 void __fastcall CDOTA_Ability_Venomancer_PoisonNova::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Venomancer_PoisonNova::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -4111,7 +4111,7 @@ CEntityInstance *__fastcall CDOTA_Ability_Holdout_ScourgeWard::CEntityInstanceEn
 void __fastcall CDOTA_Ability_Holdout_ScourgeWard::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Holdout_ScourgeWard::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -4121,7 +4121,7 @@ void __fastcall CDOTA_Ability_Holdout_ScourgeWard::CEntityInstanceEntityClass::~
 void __fastcall CDOTA_Ability_Holdout_ScourgeWard::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Holdout_ScourgeWard::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }

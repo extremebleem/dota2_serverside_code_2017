@@ -23,7 +23,7 @@ void __fastcall CDOTA_Bot_Hero_Riki::~CDOTA_Bot_Hero_Riki(CDOTA_Bot_Hero_Riki *c
 // CDOTA_BotMode_Attack_Riki::~CDOTA_BotMode_Attack_Riki  (line 37, @0x00000000028e0c10, libserver.so)  // inlines: ~CDOTA_BotMode, ~CDOTA_BotMode_Attack
 void __fastcall CDOTA_BotMode_Attack_Riki::~CDOTA_BotMode_Attack_Riki(CDOTA_BotMode_Attack_Riki *const this)
 {
-  this->_vptr_CDOTA_BotMode = off_42B75F0;
+  this->_vptr_CDOTA_BotMode = off_42B75F0;  // vptr: CDOTA_BotMode
 }
 
 
@@ -31,7 +31,7 @@ void __fastcall CDOTA_BotMode_Attack_Riki::~CDOTA_BotMode_Attack_Riki(CDOTA_BotM
 // calls: operator delete
 void __fastcall CDOTA_BotMode_Attack_Riki::~CDOTA_BotMode_Attack_Riki(CDOTA_BotMode_Attack_Riki *const this)
 {
-  this->_vptr_CDOTA_BotMode = off_42B75F0;
+  this->_vptr_CDOTA_BotMode = off_42B75F0;  // vptr: CDOTA_BotMode
   operator delete(this);
 }
 
@@ -39,7 +39,7 @@ void __fastcall CDOTA_BotMode_Attack_Riki::~CDOTA_BotMode_Attack_Riki(CDOTA_BotM
 // CDOTA_BotMode_Roam_Riki::~CDOTA_BotMode_Roam_Riki  (line 50, @0x00000000028e0bf0, libserver.so)  // inlines: ~CDOTA_BotMode, ~CDOTA_BotMode_Roam
 void __fastcall CDOTA_BotMode_Roam_Riki::~CDOTA_BotMode_Roam_Riki(CDOTA_BotMode_Roam_Riki *const this)
 {
-  this->_vptr_CDOTA_BotMode = off_42B75F0;
+  this->_vptr_CDOTA_BotMode = off_42B75F0;  // vptr: CDOTA_BotMode
 }
 
 
@@ -47,7 +47,7 @@ void __fastcall CDOTA_BotMode_Roam_Riki::~CDOTA_BotMode_Roam_Riki(CDOTA_BotMode_
 // calls: operator delete
 void __fastcall CDOTA_BotMode_Roam_Riki::~CDOTA_BotMode_Roam_Riki(CDOTA_BotMode_Roam_Riki *const this)
 {
-  this->_vptr_CDOTA_BotMode = off_42B75F0;
+  this->_vptr_CDOTA_BotMode = off_42B75F0;  // vptr: CDOTA_BotMode
   operator delete(this);
 }
 

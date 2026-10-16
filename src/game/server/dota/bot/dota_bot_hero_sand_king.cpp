@@ -184,7 +184,7 @@ void __fastcall CDOTA_Bot_AbilityUsage_SandKing_BurrowStrike::CDOTA_Bot_AbilityU
   this->m_pAbility = pAbility;
   this->m_bUseOnCreeps = 0;
   this->m_pBot = pBot;
-  this->_vptr_CDOTA_Bot_AbilityUsage = off_42CFF30;
+  this->_vptr_CDOTA_Bot_AbilityUsage = off_42CFF30;  // vptr: CDOTA_Bot_AbilityUsage_SandKing_BurrowStrike
   this->m_hDesiredTarget.m_Index = -1;
 }
 
@@ -662,7 +662,7 @@ void __fastcall CDOTA_Bot_AbilityUsage_SandKing_SandStorm::CDOTA_Bot_AbilityUsag
   this->m_pAbility = pAbility;
   this->m_bUseOnCreeps = 0;
   this->m_pBot = pBot;
-  this->_vptr_CDOTA_Bot_AbilityUsage = off_42CFF90;
+  this->_vptr_CDOTA_Bot_AbilityUsage = off_42CFF90;  // vptr: CDOTA_Bot_AbilityUsage_SandKing_SandStorm
 }
 
 
@@ -834,7 +834,7 @@ void __fastcall CDOTA_Bot_AbilityUsage_SandKing_Epicenter::CDOTA_Bot_AbilityUsag
   this->m_pAbility = pAbility;
   this->m_bUseOnCreeps = 0;
   this->m_pBot = pBot;
-  this->_vptr_CDOTA_Bot_AbilityUsage = off_42CFFF0;
+  this->_vptr_CDOTA_Bot_AbilityUsage = off_42CFFF0;  // vptr: CDOTA_Bot_AbilityUsage_SandKing_Epicenter
 }
 
 

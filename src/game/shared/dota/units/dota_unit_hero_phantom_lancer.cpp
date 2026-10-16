@@ -631,7 +631,7 @@ CEntityInstance *__fastcall CDOTA_Unit_Hero_PhantomLancer::CEntityInstanceEntity
 void __fastcall CDOTA_Unit_Hero_PhantomLancer::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Unit_Hero_PhantomLancer::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -641,7 +641,7 @@ void __fastcall CDOTA_Unit_Hero_PhantomLancer::CEntityInstanceEntityClass::~CEnt
 void __fastcall CDOTA_Unit_Hero_PhantomLancer::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Unit_Hero_PhantomLancer::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -1051,7 +1051,7 @@ CEntityInstance *__fastcall CDOTA_Ability_PhantomLancer_SpiritLance::CEntityInst
 void __fastcall CDOTA_Ability_PhantomLancer_SpiritLance::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_PhantomLancer_SpiritLance::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -1061,7 +1061,7 @@ void __fastcall CDOTA_Ability_PhantomLancer_SpiritLance::CEntityInstanceEntityCl
 void __fastcall CDOTA_Ability_PhantomLancer_SpiritLance::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_PhantomLancer_SpiritLance::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -1988,7 +1988,7 @@ CEntityInstance *__fastcall CDOTA_Ability_PhantomLancer_Doppelwalk::CEntityInsta
 void __fastcall CDOTA_Ability_PhantomLancer_Doppelwalk::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_PhantomLancer_Doppelwalk::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -1998,7 +1998,7 @@ void __fastcall CDOTA_Ability_PhantomLancer_Doppelwalk::CEntityInstanceEntityCla
 void __fastcall CDOTA_Ability_PhantomLancer_Doppelwalk::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_PhantomLancer_Doppelwalk::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -2854,7 +2854,7 @@ CEntityInstance *__fastcall CDOTA_Ability_PhantomLancer_Juxtapose::CEntityInstan
 void __fastcall CDOTA_Ability_PhantomLancer_Juxtapose::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_PhantomLancer_Juxtapose::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -2864,7 +2864,7 @@ void __fastcall CDOTA_Ability_PhantomLancer_Juxtapose::CEntityInstanceEntityClas
 void __fastcall CDOTA_Ability_PhantomLancer_Juxtapose::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_PhantomLancer_Juxtapose::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -3470,7 +3470,7 @@ CEntityInstance *__fastcall CDOTA_Ability_PhantomLancer_PhantomEdge::CEntityInst
 void __fastcall CDOTA_Ability_PhantomLancer_PhantomEdge::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_PhantomLancer_PhantomEdge::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -3480,7 +3480,7 @@ void __fastcall CDOTA_Ability_PhantomLancer_PhantomEdge::CEntityInstanceEntityCl
 void __fastcall CDOTA_Ability_PhantomLancer_PhantomEdge::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_PhantomLancer_PhantomEdge::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }

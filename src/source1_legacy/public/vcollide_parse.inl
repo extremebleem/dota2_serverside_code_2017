@@ -4,7 +4,7 @@
 // IVPhysicsKeyParser::~IVPhysicsKeyParser  (line 54, @0x00000000020f13f0, libserver.so)
 void __fastcall IVPhysicsKeyParser::~IVPhysicsKeyParser(IVPhysicsKeyParser *const this)
 {
-  this->_vptr_IVPhysicsKeyParser = off_3FF4510;
+  this->_vptr_IVPhysicsKeyParser = off_3FF4510;  // vptr: IVPhysicsKeyParser
 }
 
 
@@ -12,7 +12,7 @@ void __fastcall IVPhysicsKeyParser::~IVPhysicsKeyParser(IVPhysicsKeyParser *cons
 // calls: operator delete
 void __fastcall IVPhysicsKeyParser::~IVPhysicsKeyParser(IVPhysicsKeyParser *const this)
 {
-  this->_vptr_IVPhysicsKeyParser = off_3FF4510;
+  this->_vptr_IVPhysicsKeyParser = off_3FF4510;  // vptr: IVPhysicsKeyParser
   operator delete(this);
 }
 

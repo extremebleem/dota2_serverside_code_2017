@@ -4,7 +4,7 @@
 // CPathCostBase::~CPathCostBase  (line 51, @0x0000000002f04c20, libserver.so)
 void __fastcall CPathCostBase::~CPathCostBase(CPathCostBase *const this)
 {
-  this->_vptr_CPathCostBase = off_47AE0B0;
+  this->_vptr_CPathCostBase = off_47AE0B0;  // vptr: CPathCostBase
 }
 
 
@@ -12,7 +12,7 @@ void __fastcall CPathCostBase::~CPathCostBase(CPathCostBase *const this)
 // calls: operator delete
 void __fastcall CPathCostBase::~CPathCostBase(CPathCostBase *const this)
 {
-  this->_vptr_CPathCostBase = off_47AE0B0;
+  this->_vptr_CPathCostBase = off_47AE0B0;  // vptr: CPathCostBase
   operator delete(this);
 }
 
@@ -30,7 +30,7 @@ bool __fastcall CPathCostBase::IsToAreaTraversable(
 // CNavShortestPathCost::~CNavShortestPathCost  (line 139, @0x0000000002f04d20, libserver.so)  // inlines: ~CPathCostBase
 void __fastcall CNavShortestPathCost::~CNavShortestPathCost(CNavShortestPathCost *const this)
 {
-  this->_vptr_CPathCostBase = off_47AE0B0;
+  this->_vptr_CPathCostBase = off_47AE0B0;  // vptr: CPathCostBase
 }
 
 
@@ -38,7 +38,7 @@ void __fastcall CNavShortestPathCost::~CNavShortestPathCost(CNavShortestPathCost
 // calls: operator delete
 void __fastcall CNavShortestPathCost::~CNavShortestPathCost(CNavShortestPathCost *const this)
 {
-  this->_vptr_CPathCostBase = off_47AE0B0;
+  this->_vptr_CPathCostBase = off_47AE0B0;  // vptr: CPathCostBase
   operator delete(this);
 }
 
@@ -187,7 +187,7 @@ void __fastcall CNavShortestPathCost::CalcCostElevator(
 // CNavPathCostCore::~CNavPathCostCore  (line 267, @0x0000000002f05270, libserver.so)  // inlines: ~CNavShortestPathCost, ~CPathCostBase
 void __fastcall CNavPathCostCore::~CNavPathCostCore(CNavPathCostCore *const this)
 {
-  this->_vptr_CPathCostBase = off_47AE0B0;
+  this->_vptr_CPathCostBase = off_47AE0B0;  // vptr: CPathCostBase
 }
 
 
@@ -195,7 +195,7 @@ void __fastcall CNavPathCostCore::~CNavPathCostCore(CNavPathCostCore *const this
 // calls: operator delete
 void __fastcall CNavPathCostCore::~CNavPathCostCore(CNavPathCostCore *const this)
 {
-  this->_vptr_CPathCostBase = off_47AE0B0;
+  this->_vptr_CPathCostBase = off_47AE0B0;  // vptr: CPathCostBase
   operator delete(this);
 }
 

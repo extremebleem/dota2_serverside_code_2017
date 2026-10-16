@@ -42,7 +42,7 @@ class NextBotWeaponFiredNotifyScan {
 // callers: _GLOBAL__sub_I__unity_nextbot_01.cpp
 void __fastcall NextBotManager::NextBotManager(NextBotManager *const this)
 {
-  this->_vptr_NextBotManager = off_47B2A10;
+  this->_vptr_NextBotManager = off_47B2A10;  // vptr: NextBotManager
   this->m_botList.m_Head = -1;
   this->m_botList.m_Tail = -1;
   this->m_botList.m_FirstFree = -1;
@@ -74,7 +74,7 @@ void __fastcall NextBotManager::~NextBotManager(NextBotManager *const this)
   CUtlVectorBase<NextBotManager::DebugFilter,CUtlMemory<NextBotManager::DebugFilter,int> >::CAllocator *p_m_Memory; // r12
 
   v2 = (this->m_debugFilterList.m_Memory.m_nGrowSize & 0xC0000000) == 0;
-  this->_vptr_NextBotManager = off_47B2A10;
+  this->_vptr_NextBotManager = off_47B2A10;  // vptr: NextBotManager
   this->m_debugFilterList.m_Size = 0;
   if ( v2 )
   {
@@ -150,31 +150,32 @@ void __fastcall NextBotManager::Update(NextBotManager *const this)
   __int64 m_iUpdateTickrate; // rsi
   float interval_per_tick; // xmm2_4
   int v11; // eax
+  double v12; // xmm0_8
   __int64 m_Next; // r12
-  char v13; // r14
-  UtlLinkedListElem_t<INextBot*,short unsigned int> *v14; // rax
-  __int64 v15; // r12
-  _BYTE *v16; // rax
-  _BYTE *v17; // r13
+  char v14; // r14
+  UtlLinkedListElem_t<INextBot*,short unsigned int> *v15; // rax
+  __int64 v16; // r12
+  _BYTE *v17; // rax
+  _BYTE *v18; // r13
   __int64 i; // rax
-  UtlLinkedListElem_t<INextBot*,short unsigned int> *v19; // rdx
-  __int64 v20; // r12
-  __int64 v21; // rax
-  __int64 v22; // r13
-  float v23; // xmm0_4
-  UtlLinkedListElem_t<INextBot*,short unsigned int> *v24; // rdx
-  int v25; // r13d
-  __int64 v26; // r12
+  UtlLinkedListElem_t<INextBot*,short unsigned int> *v20; // rdx
+  __int64 v21; // r12
+  __int64 v22; // rax
+  __int64 v23; // r13
+  float v24; // xmm0_4
+  UtlLinkedListElem_t<INextBot*,short unsigned int> *v25; // rdx
+  int v26; // r13d
+  __int64 v27; // r12
   INextBot *m_Element; // r15
-  UtlLinkedListElem_t<INextBot*,short unsigned int> *v28; // r12
-  int v29; // edi
-  int v30; // ecx
-  CGlobalVars *v31; // r9
+  UtlLinkedListElem_t<INextBot*,short unsigned int> *v29; // r12
+  int v30; // edi
+  int v31; // ecx
+  CGlobalVars *v32; // r9
   int tickcount; // edx
-  __int64 v33; // rax
-  __int64 v34; // r14
-  UtlLinkedListElem_t<INextBot*,short unsigned int> *v35; // rax
-  INextBot *v36; // rsi
+  __int64 v34; // rax
+  __int64 v35; // r14
+  UtlLinkedListElem_t<INextBot*,short unsigned int> *v36; // rax
+  INextBot *v37; // rsi
   int nScheduled; // [rsp+2Ch] [rbp-44h]
   int nDead; // [rsp+30h] [rbp-40h]
   int curtickcount; // [rsp+34h] [rbp-3Ch]
@@ -183,7 +184,7 @@ void __fastcall NextBotManager::Update(NextBotManager *const this)
 
   m_pLodManager = this->m_pLodManager;
   if ( m_pLodManager != 0 )
-    (*m_pLodManager->_vptr_CNextbotLodManager)(m_pLodManager);
+    m_pLodManager->Update();
   m_Head = this->m_botList.m_Head;
   if ( m_Head != 0xFFFF )
   {
@@ -213,34 +214,34 @@ void __fastcall NextBotManager::Update(NextBotManager *const this)
         v8 = v11;
       if ( m_iUpdateTickrate != v8 )
       {
-        Msg(
-          "NextBot tickrate changed from %d (%.3fms) to %d (%.3fms)\n",
-          m_iUpdateTickrate,
-          v8,
-          (m_iUpdateTickrate * interval_per_tick),
-          (v8 * interval_per_tick));
+        *&v12 = Msg(
+                  "NextBot tickrate changed from %d (%.3fms) to %d (%.3fms)\n",
+                  m_iUpdateTickrate,
+                  v8,
+                  (m_iUpdateTickrate * interval_per_tick),
+                  (v8 * interval_per_tick)).m128_u64[0];
         m_Next = this->m_botList.m_Head;
         this->m_iUpdateTickrate = v8;
-        v13 = v8 <= 1;
+        v14 = v8 <= 1;
         if ( m_Next == 0xFFFF )
         {
           LODWORD(m_iUpdateTickrate) = v8;
         }
         else
         {
-          v14 = this->m_botList.m_Memory.m_pMemory;
+          v15 = this->m_botList.m_Memory.m_pMemory;
           do
           {
-            v15 = m_Next;
-            v16 = (*(v14[v15].m_Element->_vptr_INextBotEventResponder + 66))(v14[v15].m_Element);
-            v17 = v16;
-            if ( v13 != v16[562] )
+            v16 = m_Next;
+            v17 = (*(v15[v16].m_Element->_vptr_INextBotEventResponder + 66))(v15[v16].m_Element, v12);
+            v18 = v17;
+            if ( v14 != v17[562] )
             {
-              (*(*v16 + 176LL))(v16, 562, 0xFFFFFFFFLL, 0xFFFFFFFFLL);
-              v17[562] = v13;
+              (*(*v17 + 176LL))(v17, 562, 0xFFFFFFFFLL, 0xFFFFFFFFLL);
+              v18[562] = v14;
             }
-            v14 = this->m_botList.m_Memory.m_pMemory;
-            m_Next = v14[v15].m_Next;
+            v15 = this->m_botList.m_Memory.m_pMemory;
+            m_Next = v15[v16].m_Next;
           }
           while ( m_Next != 0xFFFF );
           LODWORD(m_iUpdateTickrate) = this->m_iUpdateTickrate;
@@ -264,73 +265,73 @@ void __fastcall NextBotManager::Update(NextBotManager *const this)
         }
         else
         {
-          v19 = this->m_botList.m_Memory.m_pMemory;
+          v20 = this->m_botList.m_Memory.m_pMemory;
           nDead = 0;
           do
           {
-            v20 = i;
-            v21 = (*(v19[v20].m_Element->_vptr_INextBotEventResponder + 66))(v19[v20].m_Element);
-            v22 = v21;
-            if ( v21 != 0 )
+            v21 = i;
+            v22 = (*(v20[v21].m_Element->_vptr_INextBotEventResponder + 66))(v20[v21].m_Element);
+            v23 = v22;
+            if ( v22 != 0 )
             {
-              if ( (*(*v21 + 1120LL))(v21) != 0 && CBaseEntity::GetLifeState(v22) == LifeState_t::LIFE_DEAD )
+              if ( (*(*v22 + 1120LL))(v22) != 0 && CBaseEntity::GetLifeState(v23) == LifeState_t::LIFE_DEAD )
               {
                 ++nDead;
               }
-              else if ( (*(*(v22 + 8) + 49LL) & 2) != 0 || *(v22 + 208) == CBaseEntity::SUB_Remove && *(v22 + 216) == 0 )
+              else if ( (*(*(v23 + 8) + 49LL) & 2) != 0 || *(v23 + 208) == CBaseEntity::SUB_Remove && *(v23 + 216) == 0 )
               {
                 ++nDead;
               }
             }
-            v19 = this->m_botList.m_Memory.m_pMemory;
-            LODWORD(i) = v19[v20].m_Next;
+            v20 = this->m_botList.m_Memory.m_pMemory;
+            LODWORD(i) = v20[v21].m_Next;
           }
           while ( i != 0xFFFF );
           nNonResponsivea = this->m_botList.m_Memory.m_pMemory;
-          v23 = ceilf((this->m_botList.m_ElementCount - nDead) / this->m_iUpdateTickrate);
-          v24 = nNonResponsivea;
+          v24 = ceilf((this->m_botList.m_ElementCount - nDead) / this->m_iUpdateTickrate);
+          v25 = nNonResponsivea;
           nScheduled = 0;
-          v25 = v23;
+          v26 = v24;
           nNonResponsive = 0;
           curtickcount = gpGlobals->tickcount;
-          for ( i = this->m_botList.m_Head; v25 != 0; i = v28->m_Next )
+          for ( i = this->m_botList.m_Head; v26 != 0; i = v29->m_Next )
           {
             if ( i == 0xFFFF )
               break;
-            v26 = i;
-            m_Element = v24[v26].m_Element;
+            v27 = i;
+            m_Element = v25[v27].m_Element;
             if ( m_Element->m_bFlaggedForUpdate )
             {
               ++nNonResponsive;
-              v28 = &v24[v26];
+              v29 = &v25[v27];
             }
             else
             {
               if ( curtickcount - m_Element->m_tickLastUpdate < this->m_iUpdateTickrate )
                 break;
-              v33 = (*(m_Element->_vptr_INextBotEventResponder + 66))(m_Element);
-              v34 = v33;
-              if ( v33 == 0 )
+              v34 = (*(m_Element->_vptr_INextBotEventResponder + 66))(m_Element);
+              v35 = v34;
+              if ( v34 == 0 )
                 goto LABEL_44;
-              if ( (*(*v33 + 1120LL))(v33) != 0 && CBaseEntity::GetLifeState(v34) == LifeState_t::LIFE_DEAD )
+              if ( (*(*v34 + 1120LL))(v34) != 0 && CBaseEntity::GetLifeState(v35) == LifeState_t::LIFE_DEAD )
               {
-                v24 = this->m_botList.m_Memory.m_pMemory;
-                v28 = &v24[v26];
+                v25 = this->m_botList.m_Memory.m_pMemory;
+                v29 = &v25[v27];
                 continue;
               }
-              if ( (*(*(v34 + 8) + 49LL) & 2) != 0 || *(v34 + 208) == CBaseEntity::SUB_Remove && *(v34 + 216) == 0 )
+              if ( (*(*(v35 + 8) + 49LL) & 2) != 0 || *(v35 + 208) == CBaseEntity::SUB_Remove && *(v35 + 216) == 0 )
               {
-                v24 = this->m_botList.m_Memory.m_pMemory;
-                v28 = &v24[v26];
+                v25 = this->m_botList.m_Memory.m_pMemory;
+                v29 = &v25[v27];
               }
               else
               {
 LABEL_44:
                 ++nScheduled;
                 m_Element->m_bFlaggedForUpdate = 1;
-                --v25;
-                v24 = this->m_botList.m_Memory.m_pMemory;
-                v28 = &v24[v26];
+                --v26;
+                v25 = this->m_botList.m_Memory.m_pMemory;
+                v29 = &v25[v27];
               }
             }
           }
@@ -338,38 +339,38 @@ LABEL_44:
       }
       if ( nb_update_debug.m_pParent->m_Value.m_nValue != 0 )
       {
-        v29 = this->m_iUpdateTickrate;
-        if ( v29 <= 0 || i == 0xFFFF )
+        v30 = this->m_iUpdateTickrate;
+        if ( v30 <= 0 || i == 0xFFFF )
         {
-          v30 = 0;
-          v31 = gpGlobals;
+          v31 = 0;
+          v32 = gpGlobals;
           tickcount = gpGlobals->tickcount;
         }
         else
         {
-          v31 = gpGlobals;
-          v30 = 0;
+          v32 = gpGlobals;
+          v31 = 0;
           tickcount = gpGlobals->tickcount;
           do
           {
-            v35 = &this->m_botList.m_Memory.m_pMemory[i];
-            v36 = v35->m_Element;
-            i = v35->m_Next;
-            v30 += v29 <= tickcount - v36->m_tickLastUpdate;
+            v36 = &this->m_botList.m_Memory.m_pMemory[i];
+            v37 = v36->m_Element;
+            i = v36->m_Next;
+            v31 += v30 <= tickcount - v37->m_tickLastUpdate;
           }
           while ( i != 0xFFFF );
         }
         Msg(
           "Frame %8d/tick %8d: %3d run of %3d, %3d sliders, %3d blocked slides, scheduled %3d for next tick, %3d intentio"
           "nal sliders, %d nonresponsive, %d dead\n",
-          v31->framecount - 1,
+          v32->framecount - 1,
           tickcount - 1,
           g_nRun,
           this->m_botList.m_ElementCount - nDead,
           g_nSlid,
           g_nBlockedSlides,
           nScheduled,
-          v30,
+          v31,
           nNonResponsive,
           nDead);
         g_nBlockedSlides = 0;
@@ -705,8 +706,8 @@ void __fastcall NextBotManager::OnSound(
   INextBot *m_Element; // r15
   __int64 v10; // rax
   unsigned __int8 m_Value; // al
-  int v12; // ecx
-  int v13; // r8d
+  unsigned int v12; // ecx
+  unsigned int v13; // r8d
   Vector xAxis; // [rsp+20h] [rbp-50h] BYREF
   Vector yAxis; // [rsp+30h] [rbp-40h] BYREF
 
@@ -743,7 +744,7 @@ void __fastcall NextBotManager::OnSound(
     xAxis.x = 1.0;
     xAxis.y = 0.0;
     xAxis.z = 0.0;
-    NDebugOverlay::Circle(vPos, &xAxis, &yAxis, 5.0, v12, v13, 0, 255, 1, 3.0);
+    NDebugOverlay::Circle(vPos, &xAxis, &yAxis, 5.0, v12, v13, 0, 3.0, 255, 1);
   }
 }
 
@@ -1171,8 +1172,8 @@ INextBot *__fastcall NextBotManager::GetBotUnderCrosshair(NextBotManager *const 
       CalcClosestPointOnLineSegment(&v29, &v27, &v28, &v26, 0);
       if ( LOBYTE(scan.m_maxRange) != 0 )
       {
-        NDebugOverlay::Cross3D(&v26, 1.0, 255, 255, 255, 1, -1.0);
-        NDebugOverlay::Line(&v28, &v27, 255, 0, 0, 1, -1.0);
+        NDebugOverlay::Cross3D(&v26, 1.0, 0xFFu, 0xFFu, 0xFFu, 1, -1.0);
+        NDebugOverlay::Line(&v28, &v27, 0xFFu, 0, 0, 1, -1.0);
       }
       v33 = (*(*scan._vptr_TargetScan + 164))(scan._vptr_TargetScan);
       v34 = v18;
@@ -1424,7 +1425,7 @@ void __fastcall CC_SetDebug(const CCommandContext *const ctx, const CCommand *co
 {
   int m_nArgc; // r15d
   int v4; // r12d
-  char *v5; // rsi
+  const char *v5; // rsi
   __int64 v6; // r14
   __int64 v7; // rdx
   const char *v8; // rdi
@@ -1433,7 +1434,7 @@ void __fastcall CC_SetDebug(const CCommandContext *const ctx, const CCommand *co
   const char *v11; // rax
   const char *v12; // rsi
   unsigned int debugType; // [rsp+Ch] [rbp-44h]
-  char *v14; // [rsp+18h] [rbp-38h]
+  const char *v14; // [rsp+18h] [rbp-38h]
 
   if ( args->m_nArgc <= 1 )
   {
@@ -1645,7 +1646,7 @@ void __fastcall CC_SelectBot(const CCommandContext *const ctx, const CCommand *c
       position.z = v7 + 5.0;
       position.y = *(&v8 + 1) + 0.0;
       position.x = *&v8 + 0.0;
-      NDebugOverlay::Circle(&position, &xAxis, &yAxis, 25.0, 0, 255, 0, 255, 0, 1.0);
+      NDebugOverlay::Circle(&position, &xAxis, &yAxis, 25.0, 0, 0xFFu, 0, 1.0, 255, 0);
     }
     else
     {

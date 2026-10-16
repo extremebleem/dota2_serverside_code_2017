@@ -38,7 +38,7 @@ void __fastcall GCSDK::CJob::CJob(GCSDK::CJob *const this, GCSDK::CJobMgr *const
 
   p_m_STimeStarted = &this->m_STimeStarted;
   p_m_STimeSwitched = &this->m_STimeSwitched;
-  this->_vptr_CJob = off_47D05F0;
+  this->_vptr_CJob = off_47D05F0;  // vptr: GCSDK::CJob
   p_m_FixedMemory = &this->m_vecLocks.m_Memory.m_FixedMemory;
   GCSDK::CJobTime::CJobTime(&this->m_STimeStarted);
   GCSDK::CJobTime::CJobTime(p_m_STimeSwitched);
@@ -114,7 +114,7 @@ void __fastcall GCSDK::CJob::~CJob(GCSDK::CJob *const this)
   GCSDK::CLock **v11; // rsi
   uint32 v12; // eax
 
-  this->_vptr_CJob = off_47D05F0;
+  this->_vptr_CJob = off_47D05F0;  // vptr: GCSDK::CJob
   if ( GCSDK::g_pJobCur == this )
     GCSDK::g_pJobCur = this->m_pJobPrev;
   v2 = 0;
@@ -581,20 +581,18 @@ void __fastcall GCSDK::CJob::Continue(GCSDK::CJob *const this)
   GCSDK::CJobTime *p_m_STimeSwitched; // rdi
   _QWORD *v4; // rdi
   __int64 v5; // r14
-  __int64 v6; // rdi
   const GCSDK::JobType_t *m_pJobType; // rax
-  unsigned __int64 v8; // r15
+  unsigned __int64 v7; // r15
   uint64 m_numTimeBaseTicks; // rcx
-  __int64 v10; // rdi
-  char v11; // r15
-  uint64 v12; // rcx
+  char v9; // r15
+  uint64 v10; // rcx
   CVProfNode *m_pParent; // rax
   CVProfNode *m_pCurNode; // rax
-  CVProfile::CBudgetGroup *v15; // rax
+  CVProfile::CBudgetGroup *v13; // rax
   char *m_pchName; // [rsp+0h] [rbp-40h]
-  char *v17; // [rsp+0h] [rbp-40h]
+  char *v15; // [rsp+0h] [rbp-40h]
   ThreadId_t m_TargetThreadId; // [rsp+8h] [rbp-38h]
-  unsigned __int64 v19; // [rsp+8h] [rbp-38h]
+  unsigned __int64 v17; // [rsp+8h] [rbp-38h]
 
   v2 = GCSDK::g_pJobCur;
   GCSDK::g_pJobCur = this;
@@ -618,9 +616,9 @@ void __fastcall GCSDK::CJob::Continue(GCSDK::CJob *const this)
       m_pchName = m_pJobType->m_pchName;
     else
       m_pchName = this->m_pchJobName;
-    v8 = __rdtsc();
+    v7 = __rdtsc();
     m_TargetThreadId = g_VProfCurrentProfile.m_TargetThreadId;
-    if ( m_TargetThreadId == ThreadGetCurrentId(v6) )
+    if ( m_TargetThreadId == ThreadGetCurrentId() )
     {
       m_pCurNode = g_VProfCurrentProfile.m_pCurNode;
       if ( m_pchName != m_pCurNode->m_pszName )
@@ -628,20 +626,20 @@ void __fastcall GCSDK::CJob::Continue(GCSDK::CJob *const this)
         m_pCurNode = CVProfNode::GetSubNode(g_VProfCurrentProfile.m_pCurNode, m_pchName, 0, "Jobs/Coroutines", 4);
         g_VProfCurrentProfile.m_pCurNode = m_pCurNode;
       }
-      v15 = &g_VProfCurrentProfile.m_pBudgetGroups[m_pCurNode->m_BudgetGroupID];
-      v15->m_BudgetFlags |= 4u;
+      v13 = &g_VProfCurrentProfile.m_pBudgetGroups[m_pCurNode->m_BudgetGroupID];
+      v13->m_BudgetFlags |= 4u;
       CVProfNode::EnterScope(g_VProfCurrentProfile.m_pCurNode);
       g_VProfCurrentProfile.m_fAtRoot = 0;
     }
     m_numTimeBaseTicks = g_VProfCurrentProfile.m_ScopeProfiler.m_numTimeBaseTicks;
     ++g_VProfCurrentProfile.m_ScopeProfiler.m_numCalls;
-    g_VProfCurrentProfile.m_ScopeProfiler.m_numTimeBaseTicks = m_numTimeBaseTicks - v8 + __rdtsc();
-    v11 = Coroutine_Continue(this->m_hCoroutine, "");
-    v19 = __rdtsc();
+    g_VProfCurrentProfile.m_ScopeProfiler.m_numTimeBaseTicks = m_numTimeBaseTicks - v7 + __rdtsc();
+    v9 = Coroutine_Continue(this->m_hCoroutine, "");
+    v17 = __rdtsc();
     if ( !g_VProfCurrentProfile.m_fAtRoot || g_VProfCurrentProfile.m_enabled != 0 )
     {
-      v17 = g_VProfCurrentProfile.m_TargetThreadId;
-      if ( v17 == ThreadGetCurrentId(v10) )
+      v15 = g_VProfCurrentProfile.m_TargetThreadId;
+      if ( v15 == ThreadGetCurrentId() )
       {
         if ( CVProfNode::ExitScope(g_VProfCurrentProfile.m_pCurNode) != 0 )
         {
@@ -658,15 +656,15 @@ void __fastcall GCSDK::CJob::Continue(GCSDK::CJob *const this)
         g_VProfCurrentProfile.m_fAtRoot = m_pParent == &g_VProfCurrentProfile.m_Root;
       }
     }
-    v12 = g_VProfCurrentProfile.m_ScopeProfiler.m_numTimeBaseTicks;
+    v10 = g_VProfCurrentProfile.m_ScopeProfiler.m_numTimeBaseTicks;
     ++g_VProfCurrentProfile.m_ScopeProfiler.m_numCalls;
-    g_VProfCurrentProfile.m_ScopeProfiler.m_numTimeBaseTicks = v12 - v19 + __rdtsc();
+    g_VProfCurrentProfile.m_ScopeProfiler.m_numTimeBaseTicks = v10 - v17 + __rdtsc();
   }
   else
   {
-    v11 = Coroutine_Continue(this->m_hCoroutine, "");
+    v9 = Coroutine_Continue(this->m_hCoroutine, "");
   }
-  if ( v11 != 0 )
+  if ( v9 != 0 )
     (*(*g_pMemAlloc + 240LL))(g_pMemAlloc, this->m_memAllocStack.m_pMemory);
   (*(*g_pMemAlloc + 248LL))(g_pMemAlloc, v5);
 }
@@ -894,7 +892,7 @@ bool __fastcall GCSDK::CJob::BYieldingWaitForWorkItem(
 // GCSDK::CJobThreadFuncWorkItem::~CJobThreadFuncWorkItem  (line 730, @0x0000000003223f70, libserver.so)  // inlines: ~CRefCount, ~CWorkItem
 void __fastcall GCSDK::CJobThreadFuncWorkItem::~CJobThreadFuncWorkItem(GCSDK::CJobThreadFuncWorkItem *const this)
 {
-  this->_vptr_CRefCount = off_47D0430;
+  this->_vptr_CRefCount = off_47D0430;  // vptr: GCSDK::CRefCount
 }
 
 
@@ -902,7 +900,7 @@ void __fastcall GCSDK::CJobThreadFuncWorkItem::~CJobThreadFuncWorkItem(GCSDK::CJ
 // calls: operator delete
 void __fastcall GCSDK::CJobThreadFuncWorkItem::~CJobThreadFuncWorkItem(GCSDK::CJobThreadFuncWorkItem *const this)
 {
-  this->_vptr_CRefCount = off_47D0430;
+  this->_vptr_CRefCount = off_47D0430;  // vptr: GCSDK::CRefCount
   operator delete(this);
 }
 
@@ -989,7 +987,7 @@ bool __fastcall GCSDK::CJob::BYieldingWaitForThreadFunc(GCSDK::CJob *const this,
   v6->m_jobtimeTimeout.m_lTime = 0;
   GCSDK::CJobTime::SetToJobTime(&v6->m_jobtimeQueued);
   v6[1]._vptr_CRefCount = this;
-  v6->_vptr_CRefCount = off_47D0630;
+  v6->_vptr_CRefCount = off_47D0630;  // vptr: GCSDK::CJobThreadFuncWorkItem
   *&v6[1].m_cRef = 0;
   v6[1].m_ulSequenceNumber = 0;
   v6[1].m_CycleCount.m_Int64 = jobFunctor;

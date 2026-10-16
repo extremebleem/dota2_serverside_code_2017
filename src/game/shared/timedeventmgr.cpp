@@ -243,7 +243,7 @@ LABEL_13:
     }
     pEvent->m_bRegistered = 0;
     CEventRegister::Reregister(pEvent);
-    (*pEvent->m_pCallback->_vptr_IEventRegisterCallback)(pEvent->m_pCallback);
+    pEvent->m_pCallback->FireEvent();
   }
 }
 

@@ -184,7 +184,7 @@ CEntityInstance *__fastcall CDOTA_Item_Infused_Raindrop::CEntityInstanceEntityCl
 void __fastcall CDOTA_Item_Infused_Raindrop::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Item_Infused_Raindrop::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -194,7 +194,7 @@ void __fastcall CDOTA_Item_Infused_Raindrop::CEntityInstanceEntityClass::~CEntit
 void __fastcall CDOTA_Item_Infused_Raindrop::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Item_Infused_Raindrop::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }

@@ -162,7 +162,7 @@ CEntityInstance *__fastcall CEconWearable::CEntityInstanceEntityClass::Construct
 void __fastcall CEconWearable::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CEconWearable::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -172,7 +172,7 @@ void __fastcall CEconWearable::CEntityInstanceEntityClass::~CEntityInstanceEntit
 void __fastcall CEconWearable::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CEconWearable::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -460,7 +460,7 @@ CEntityInstance *__fastcall CTFWearableItem::CEntityInstanceEntityClass::Constru
 void __fastcall CTFWearableItem::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CTFWearableItem::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -470,7 +470,7 @@ void __fastcall CTFWearableItem::CEntityInstanceEntityClass::~CEntityInstanceEnt
 void __fastcall CTFWearableItem::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CTFWearableItem::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }

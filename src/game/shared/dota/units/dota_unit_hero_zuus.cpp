@@ -742,7 +742,7 @@ CEntityInstance *__fastcall CDOTA_Unit_ZeusCloud::CEntityInstanceEntityClass::Co
 void __fastcall CDOTA_Unit_ZeusCloud::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Unit_ZeusCloud::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -752,7 +752,7 @@ void __fastcall CDOTA_Unit_ZeusCloud::CEntityInstanceEntityClass::~CEntityInstan
 void __fastcall CDOTA_Unit_ZeusCloud::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Unit_ZeusCloud::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -974,7 +974,7 @@ CEntityInstance *__fastcall CDOTA_Unit_Hero_Zuus::CEntityInstanceEntityClass::Co
 void __fastcall CDOTA_Unit_Hero_Zuus::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Unit_Hero_Zuus::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -984,7 +984,7 @@ void __fastcall CDOTA_Unit_Hero_Zuus::CEntityInstanceEntityClass::~CEntityInstan
 void __fastcall CDOTA_Unit_Hero_Zuus::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Unit_Hero_Zuus::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -1230,7 +1230,7 @@ CEntityInstance *__fastcall CDOTA_Ability_Zuus_ArcLightning::CEntityInstanceEnti
 void __fastcall CDOTA_Ability_Zuus_ArcLightning::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Zuus_ArcLightning::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -1240,7 +1240,7 @@ void __fastcall CDOTA_Ability_Zuus_ArcLightning::CEntityInstanceEntityClass::~CE
 void __fastcall CDOTA_Ability_Zuus_ArcLightning::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Zuus_ArcLightning::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -1779,7 +1779,7 @@ CEntityInstance *__fastcall CDOTA_Ability_Zuus_Cloud::CEntityInstanceEntityClass
 void __fastcall CDOTA_Ability_Zuus_Cloud::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Zuus_Cloud::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -1789,7 +1789,7 @@ void __fastcall CDOTA_Ability_Zuus_Cloud::CEntityInstanceEntityClass::~CEntityIn
 void __fastcall CDOTA_Ability_Zuus_Cloud::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Zuus_Cloud::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -2082,7 +2082,7 @@ CEntityInstance *__fastcall CDOTA_Ability_Zuus_LightningBolt::CEntityInstanceEnt
 void __fastcall CDOTA_Ability_Zuus_LightningBolt::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Zuus_LightningBolt::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -2092,7 +2092,7 @@ void __fastcall CDOTA_Ability_Zuus_LightningBolt::CEntityInstanceEntityClass::~C
 void __fastcall CDOTA_Ability_Zuus_LightningBolt::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Zuus_LightningBolt::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -2812,7 +2812,7 @@ CEntityInstance *__fastcall CDOTA_Ability_Zuus_StaticField::CEntityInstanceEntit
 void __fastcall CDOTA_Ability_Zuus_StaticField::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Zuus_StaticField::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -2822,7 +2822,7 @@ void __fastcall CDOTA_Ability_Zuus_StaticField::CEntityInstanceEntityClass::~CEn
 void __fastcall CDOTA_Ability_Zuus_StaticField::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Zuus_StaticField::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -3254,7 +3254,7 @@ CEntityInstance *__fastcall CDOTA_Ability_Zuus_ThundergodsWrath::CEntityInstance
 void __fastcall CDOTA_Ability_Zuus_ThundergodsWrath::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Zuus_ThundergodsWrath::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -3264,7 +3264,7 @@ void __fastcall CDOTA_Ability_Zuus_ThundergodsWrath::CEntityInstanceEntityClass:
 void __fastcall CDOTA_Ability_Zuus_ThundergodsWrath::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Zuus_ThundergodsWrath::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -4058,7 +4058,7 @@ CEntityInstance *__fastcall CDOTA_Ability_Zuus_ThundergodsVengeance::CEntityInst
 void __fastcall CDOTA_Ability_Zuus_ThundergodsVengeance::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Zuus_ThundergodsVengeance::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -4068,7 +4068,7 @@ void __fastcall CDOTA_Ability_Zuus_ThundergodsVengeance::CEntityInstanceEntityCl
 void __fastcall CDOTA_Ability_Zuus_ThundergodsVengeance::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Zuus_ThundergodsVengeance::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }

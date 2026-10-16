@@ -68,7 +68,7 @@ bool __fastcall CDefaultAccessor::RegisterConCommandBase(CDefaultAccessor *const
 // calls: ConVar::~ConVar
 void __fastcall CEmptyConVar::~CEmptyConVar(CEmptyConVar *const this)
 {
-  this->_vptr_ConCommandBase = off_47BEB70;
+  this->_vptr_ConCommandBase = off_47BEB70;  // vptr: CEmptyConVar
   this->_vptr_IConVar = &off_47BEC70;
   ConVar::~ConVar(this);
 }
@@ -78,7 +78,7 @@ void __fastcall CEmptyConVar::~CEmptyConVar(CEmptyConVar *const this)
 // calls: ConVar::~ConVar, operator delete
 void __fastcall CEmptyConVar::~CEmptyConVar(CEmptyConVar *const this)
 {
-  this->_vptr_ConCommandBase = off_47BEB70;
+  this->_vptr_ConCommandBase = off_47BEB70;  // vptr: CEmptyConVar
   this->_vptr_IConVar = &off_47BEC70;
   ConVar::~ConVar(this);
   operator delete(this);
@@ -200,7 +200,7 @@ void __cdecl ConVar_Unregister()
 // ConCommandBase::ConCommandBase  (line 129, @0x0000000002f6f2b0, libserver.so)
 void __fastcall ConCommandBase::ConCommandBase(ConCommandBase *const this)
 {
-  this->_vptr_ConCommandBase = off_47BECD0;
+  this->_vptr_ConCommandBase = off_47BECD0;  // vptr: ConCommandBase
   this->m_bRegistered = 0;
   this->m_pszName = 0;
   this->m_pszHelpString = 0;
@@ -217,7 +217,7 @@ void __fastcall ConCommandBase::ConCommandBase(
         const char *pHelpString,
         int64 flags)
 {
-  this->_vptr_ConCommandBase = off_47BECD0;
+  this->_vptr_ConCommandBase = off_47BECD0;  // vptr: ConCommandBase
   ConCommandBase::Create(this, pName, pHelpString, flags);
 }
 
@@ -225,7 +225,7 @@ void __fastcall ConCommandBase::ConCommandBase(
 // ConCommandBase::~ConCommandBase  (line 153, @0x0000000002f6e650, libserver.so)
 void __fastcall ConCommandBase::~ConCommandBase(ConCommandBase *const this)
 {
-  this->_vptr_ConCommandBase = off_47BECD0;
+  this->_vptr_ConCommandBase = off_47BECD0;  // vptr: ConCommandBase
 }
 
 
@@ -233,7 +233,7 @@ void __fastcall ConCommandBase::~ConCommandBase(ConCommandBase *const this)
 // calls: operator delete
 void __fastcall ConCommandBase::~ConCommandBase(ConCommandBase *const this)
 {
-  this->_vptr_ConCommandBase = off_47BECD0;
+  this->_vptr_ConCommandBase = off_47BECD0;  // vptr: ConCommandBase
   operator delete(this);
 }
 
@@ -754,7 +754,7 @@ void __fastcall ConCommand::ConCommand(
   char v12; // al
   ConCommand::CallbackInfo_t *m_pMemory; // rax
 
-  this->_vptr_ConCommandBase = off_47BED50;
+  this->_vptr_ConCommandBase = off_47BED50;  // vptr: ConCommand
   v11 = DefaultCompletionFunc;
   this->m_bRegistered = 0;
   if ( completionFunc != 0 )
@@ -803,7 +803,7 @@ void __fastcall ConCommand::ConCommand(
   ConCommand::CallbackInfo_t *m_pMemory; // rdx
   char v14; // al
 
-  this->_vptr_ConCommandBase = off_47BED50;
+  this->_vptr_ConCommandBase = off_47BED50;  // vptr: ConCommand
   v11 = DefaultCompletionFunc;
   this->m_bRegistered = 0;
   if ( completionFunc != 0 )
@@ -852,7 +852,7 @@ void __fastcall ConCommand::ConCommand(
   ConCommand::CallbackInfo_t *m_pMemory; // rdx
   char v14; // al
 
-  this->_vptr_ConCommandBase = off_47BED50;
+  this->_vptr_ConCommandBase = off_47BED50;  // vptr: ConCommand
   v11 = DefaultCompletionFunc;
   this->m_bRegistered = 0;
   if ( completionFunc != 0 )
@@ -900,7 +900,7 @@ void __fastcall ConCommand::ConCommand(
   ConCommand::CallbackInfo_t *m_pMemory; // rdx
   char v13; // al
 
-  this->_vptr_ConCommandBase = off_47BED50;
+  this->_vptr_ConCommandBase = off_47BED50;  // vptr: ConCommand
   v11 = *(this + 56);
   this->m_bRegistered = 0;
   this->m_pszName = 0;
@@ -948,19 +948,19 @@ void __fastcall ConCommand::~ConCommand(ConCommand *const this)
   CUtlVectorBase<ConCommand::CallbackInfo_t,CUtlMemory<ConCommand::CallbackInfo_t,int> >::CAllocator *p_m_Memory; // r12
 
   v2 = (this->m_Callbacks.m_Memory.m_nGrowSize & 0xC0000000) == 0;
-  this->_vptr_ConCommandBase = off_47BED50;
+  this->_vptr_ConCommandBase = off_47BED50;  // vptr: ConCommand
   this->m_Callbacks.m_Size = 0;
   if ( !v2
     || (p_m_Memory = &this->m_Callbacks.m_Memory,
         CUtlMemory<ConCommand::CallbackInfo_t,int>::Purge(&this->m_Callbacks.m_Memory),
         (this->m_Callbacks.m_Memory.m_nGrowSize & 0xC0000000) != 0) )
   {
-    this->_vptr_ConCommandBase = off_47BECD0;
+    this->_vptr_ConCommandBase = off_47BECD0;  // vptr: ConCommandBase
   }
   else
   {
     CUtlMemory<ConCommand::CallbackInfo_t,int>::Purge(p_m_Memory);
-    this->_vptr_ConCommandBase = off_47BECD0;
+    this->_vptr_ConCommandBase = off_47BECD0;  // vptr: ConCommandBase
   }
 }
 
@@ -973,7 +973,7 @@ void __fastcall ConCommand::~ConCommand(ConCommand *const this)
   CUtlVectorBase<ConCommand::CallbackInfo_t,CUtlMemory<ConCommand::CallbackInfo_t,int> >::CAllocator *p_m_Memory; // r12
 
   v2 = (this->m_Callbacks.m_Memory.m_nGrowSize & 0xC0000000) == 0;
-  this->_vptr_ConCommandBase = off_47BED50;
+  this->_vptr_ConCommandBase = off_47BED50;  // vptr: ConCommand
   this->m_Callbacks.m_Size = 0;
   if ( v2 )
   {
@@ -982,7 +982,7 @@ void __fastcall ConCommand::~ConCommand(ConCommand *const this)
     if ( (this->m_Callbacks.m_Memory.m_nGrowSize & 0xC0000000) == 0 )
       CUtlMemory<ConCommand::CallbackInfo_t,int>::Purge(p_m_Memory);
   }
-  this->_vptr_ConCommandBase = off_47BECD0;
+  this->_vptr_ConCommandBase = off_47BECD0;  // vptr: ConCommandBase
   operator delete(this);
 }
 
@@ -1098,7 +1098,7 @@ bool __fastcall ConCommand::CanAutoComplete(ConCommand *const this)
 // callers: _GLOBAL__sub_I__unity_entities_01.cpp, __static_initialization_and_destruction_0, _GLOBAL__sub_I__unity_source_files_02.cpp, _GLOBAL__sub_I__unity_base_01.cpp, _GLOBAL__sub_I__unity_base_02.cpp, _GLOBAL__sub_I__unity_base_03.cpp, _GLOBAL__sub_I__unity_base_04.cpp, _GLOBAL__sub_I__unity_base_05.cpp, _GLOBAL__sub_I__unity_base_06.cpp, _GLOBAL__sub_I__unity_base_07.cpp, _GLOBAL__sub_I__unity_base_08.cpp, _GLOBAL__sub_I__unity_base_09.cpp (42 total)
 void __fastcall ConVar::ConVar(ConVar *const this, const char *pName, const char *pDefaultValue, int64 flags)
 {
-  this->_vptr_ConCommandBase = off_47BEDF0;
+  this->_vptr_ConCommandBase = off_47BEDF0;  // vptr: ConVar
   this->m_bRegistered = 0;
   this->m_pszName = 0;
   this->m_pszHelpString = 0;
@@ -1123,7 +1123,7 @@ void __fastcall ConVar::ConVar(
         int64 flags,
         const char *pHelpString)
 {
-  this->_vptr_ConCommandBase = off_47BEDF0;
+  this->_vptr_ConCommandBase = off_47BEDF0;  // vptr: ConVar
   this->m_bRegistered = 0;
   this->m_pszName = 0;
   this->m_pszHelpString = 0;
@@ -1152,7 +1152,7 @@ void __fastcall ConVar::ConVar(
         float fMax,
         bool bMax)
 {
-  this->_vptr_ConCommandBase = off_47BEDF0;
+  this->_vptr_ConCommandBase = off_47BEDF0;  // vptr: ConVar
   this->m_bRegistered = 0;
   this->_vptr_IConVar = &off_47BEEF0;
   this->m_pszName = 0;
@@ -1178,7 +1178,7 @@ void __fastcall ConVar::ConVar(
         const char *pHelpString,
         FnChangeCallback_t callback)
 {
-  this->_vptr_ConCommandBase = off_47BEDF0;
+  this->_vptr_ConCommandBase = off_47BEDF0;  // vptr: ConVar
   this->m_bRegistered = 0;
   this->m_pszName = 0;
   this->m_pszHelpString = 0;
@@ -1207,7 +1207,7 @@ void __fastcall ConVar::ConVar(
         bool bMax,
         FnChangeCallback_t callback)
 {
-  this->_vptr_ConCommandBase = off_47BEDF0;
+  this->_vptr_ConCommandBase = off_47BEDF0;  // vptr: ConVar
   this->m_bRegistered = 0;
   this->_vptr_IConVar = &off_47BEEF0;
   this->m_pszName = 0;
@@ -1231,7 +1231,7 @@ void __fastcall ConVar::~ConVar(ConVar *const this)
   char *m_pszString; // rdi
 
   v2 = !this->m_bRegistered;
-  this->_vptr_ConCommandBase = off_47BEDF0;
+  this->_vptr_ConCommandBase = off_47BEDF0;  // vptr: ConVar
   this->_vptr_IConVar = &off_47BEEF0;
   if ( !v2 && this->m_pParent == this )
     GetEmptyConVar();
@@ -1247,12 +1247,12 @@ void __fastcall ConVar::~ConVar(ConVar *const this)
     || (CUtlMemory<void (*)(IConVar *,char const*,float),int>::Purge(&this->m_fnChangeCallbacks.m_Memory),
         (this->m_fnChangeCallbacks.m_Memory.m_nGrowSize & 0xC0000000) != 0) )
   {
-    this->_vptr_ConCommandBase = off_47BECD0;
+    this->_vptr_ConCommandBase = off_47BECD0;  // vptr: ConCommandBase
   }
   else
   {
     CUtlMemory<void (*)(IConVar *,char const*,float),int>::Purge(&this->m_fnChangeCallbacks.m_Memory);
-    this->_vptr_ConCommandBase = off_47BECD0;
+    this->_vptr_ConCommandBase = off_47BECD0;  // vptr: ConCommandBase
   }
 }
 
@@ -1472,24 +1472,23 @@ void __fastcall ConVar::InternalSetValue(ConVar *const this, const char *value)
 {
   const char *v4; // r13
   unsigned int v5; // r14d
-  __int64 v6; // rsi
-  __m128 v7; // xmm0
-  __m128i v8; // xmm0
-  double v9; // xmm1_8
+  __m128 v6; // xmm0
+  __m128i v7; // xmm0
+  double v8; // xmm1_8
   int (**vptr_ConCommandBase)(...); // rax
-  char v11; // al
-  float v12; // xmm0_4
-  double v13; // xmm1_8
-  const char *v14; // rax
+  char v10; // al
+  float v11; // xmm0_4
+  double v12; // xmm1_8
+  const char *v13; // rax
   double fNewValue; // [rsp+0h] [rbp-70h]
   float fNewValuea; // [rsp+0h] [rbp-70h]
-  __int32 v17; // [rsp+8h] [rbp-68h]
-  double v18; // [rsp+8h] [rbp-68h]
+  __int32 v16; // [rsp+8h] [rbp-68h]
+  double v17; // [rsp+8h] [rbp-68h]
   float fClampedValue; // [rsp+1Ch] [rbp-54h] BYREF
   char tempVal[32]; // [rsp+20h] [rbp-50h] BYREF
-  unsigned __int64 v21; // [rsp+48h] [rbp-28h]
+  unsigned __int64 v20; // [rsp+48h] [rbp-28h]
 
-  v21 = __readfsqword(0x28u);
+  v20 = __readfsqword(0x28u);
   if ( (*(this->_vptr_ConCommandBase + 4))(this, 11534336) != 0 && g_pCVar != 0 && (*(*g_pCVar + 304LL))(g_pCVar) == 0 )
   {
     (*(*g_pCVar + 312LL))(g_pCVar, this, value);
@@ -1502,34 +1501,34 @@ void __fastcall ConVar::InternalSetValue(ConVar *const this, const char *value)
     v5 = _mm_cvtsi128_si32(LODWORD(this->m_Value.m_fValue));
     if ( !ConVar::InternalSetColorFromString(this, value) )
     {
-      v7.m128_f32[0] = V_atof(value, v6);
-      v8 = _mm_unpacklo_ps(v7, v7);
-      v9 = *v8.m128i_i32;
-      if ( (_mm_cvtsi128_si32(v8) & 0x7F800000) == 0x7F800000 )
+      v6.m128_f32[0] = V_atof(value);
+      v7 = _mm_unpacklo_ps(v6, v6);
+      v8 = *v7.m128i_i32;
+      if ( (_mm_cvtsi128_si32(v7) & 0x7F800000) == 0x7F800000 )
       {
-        v14 = (*(this->_vptr_ConCommandBase + 8))(this, *v8.m128i_i64, v9);
-        Warning("Warning:  %s = '%s' is infinite, clamping value.\n", v14, value);
-        v8.m128i_i32[0] = 2139095039;
-        v9 = 3.402823466385289e38;
+        v13 = (*(this->_vptr_ConCommandBase + 8))(this, *v7.m128i_i64, v8);
+        Warning("Warning:  %s = '%s' is infinite, clamping value.\n", v13, value);
+        v7.m128i_i32[0] = 2139095039;
+        v8 = 3.402823466385289e38;
       }
       vptr_ConCommandBase = this->_vptr_ConCommandBase;
-      fNewValue = v9;
-      fClampedValue = *v8.m128i_i32;
-      v17 = v8.m128i_i32[0];
-      v11 = vptr_ConCommandBase[27](this, &fClampedValue);
-      v12 = *&v17;
-      v13 = fNewValue;
-      if ( v11 != 0 )
+      fNewValue = v8;
+      fClampedValue = *v7.m128i_i32;
+      v16 = v7.m128i_i32[0];
+      v10 = vptr_ConCommandBase[27](this, &fClampedValue);
+      v11 = *&v16;
+      v12 = fNewValue;
+      if ( v10 != 0 )
       {
         v4 = tempVal;
         fNewValuea = fClampedValue;
-        v18 = fClampedValue;
+        v17 = fClampedValue;
         V_snprintf(tempVal, 32, "%f", fClampedValue);
-        v13 = v18;
-        v12 = fNewValuea;
+        v12 = v17;
+        v11 = fNewValuea;
       }
-      this->m_Value.m_fValue = v12;
-      this->m_Value.m_nValue = v13;
+      this->m_Value.m_fValue = v11;
+      this->m_Value.m_nValue = v12;
     }
     if ( (this->m_nFlags & 0x1000) == 0 )
       (*(this->_vptr_ConCommandBase + 28))(this, v4, *_mm_cvtsi32_si128(v5).m128i_i64);
@@ -1728,8 +1727,7 @@ void __fastcall ConVar::Create(
   char *v21; // rax
   size_t m_StringLength; // rdx
   const char *v23; // rsi
-  __int64 v24; // rsi
-  __m128i v25; // xmm0
+  __m128i v24; // xmm0
 
   this->m_pParent = this;
   v14 = callback;
@@ -1775,9 +1773,9 @@ LABEL_9:
   memcpy(v21, v23, m_StringLength);
   if ( !ConVar::InternalSetColorFromString(this, this->m_Value.m_pszString) )
   {
-    *v25.m128i_i32 = V_atof(this->m_Value.m_pszString, v24);
-    LODWORD(this->m_Value.m_fValue) = v25.m128i_i32[0];
-    if ( (_mm_cvtsi128_si32(v25) & 0x7F800000) == 0x7F800000 )
+    *v24.m128i_i32 = V_atof(this->m_Value.m_pszString);
+    LODWORD(this->m_Value.m_fValue) = v24.m128i_i32[0];
+    if ( (_mm_cvtsi128_si32(v24) & 0x7F800000) == 0x7F800000 )
     {
       Warning("ConVar(%s) defined with infinite float value (%s)\n", pName, this->m_Value.m_pszString);
       this->m_Value.m_fValue = 3.4028235e38;

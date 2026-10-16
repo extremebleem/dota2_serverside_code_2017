@@ -335,7 +335,7 @@ void __cdecl InitPropdataInteractions()
 // callers: CGameSystemReallocatingFactory<CPropData, CPropData>::CreateGameSystem
 void __fastcall CPropData::CPropData(CPropData *const this)
 {
-  this->_vptr_IGameSystem = off_3FEAFB0;
+  this->_vptr_IGameSystem = off_3FEAFB0;  // vptr: CPropData
   this->m_BreakableChunks.m_Size = 0;
   this->m_BreakableChunks.m_Memory.m_pMemory = 0;
   this->m_BreakableChunks.m_Memory.m_nAllocationCount = 0;
@@ -1599,7 +1599,7 @@ CEntityInstance *__fastcall CGameGibManager::CEntityInstanceEntityClass::Constru
 void __fastcall CGameGibManager::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CGameGibManager::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -1609,7 +1609,7 @@ void __fastcall CGameGibManager::CEntityInstanceEntityClass::~CEntityInstanceEnt
 void __fastcall CGameGibManager::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CGameGibManager::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -3021,7 +3021,7 @@ void __fastcall CBreakModelsPrecached::~CBreakModelsPrecached(CBreakModelsPrecac
   CUtlMemory<CBreakModelsPrecached::BreakModelInfo_t,int> *p_m_Memory; // rbx
   CBreakModelsPrecached *v12; // r14
 
-  this->_vptr_IGameSystem = off_3FEB830;
+  this->_vptr_IGameSystem = off_3FEB830;  // vptr: CBreakModelsPrecached
   CUtlSymbolTable::~CUtlSymbolTable(&this->m_modelList.m_SymbolTable);
   m_Size = this->m_modelList.m_Vector.m_Size;
   v3 = this;
@@ -3057,7 +3057,7 @@ void __fastcall CBreakModelsPrecached::~CBreakModelsPrecached(CBreakModelsPrecac
     if ( (v12->m_modelList.m_Vector.m_Memory.m_nGrowSize & 0xC0000000) == 0 )
       CUtlMemory<CBreakModelsPrecached::BreakModelInfo_t,int>::Purge(p_m_Memory);
   }
-  this->_vptr_IGameSystem = off_3F7C1B0;
+  this->_vptr_IGameSystem = off_3F7C1B0;  // vptr: CAutoGameSystem
   IGameSystem::~IGameSystem(this);
 }
 
@@ -3109,7 +3109,7 @@ void __fastcall CBreakModelsPrecached::~CBreakModelsPrecached(CBreakModelsPrecac
     if ( (this->m_modelList.m_Vector.m_Memory.m_nGrowSize & 0xC0000000) == 0 )
       CUtlMemory<CBreakModelsPrecached::BreakModelInfo_t,int>::Purge(&this->m_modelList.m_Vector.m_Memory);
   }
-  this->_vptr_IGameSystem = off_3F7C1B0;
+  this->_vptr_IGameSystem = off_3F7C1B0;  // vptr: CAutoGameSystem
   IGameSystem::~IGameSystem(this);
   operator delete(this);
 }

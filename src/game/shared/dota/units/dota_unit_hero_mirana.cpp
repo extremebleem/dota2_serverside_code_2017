@@ -575,7 +575,7 @@ CEntityInstance *__fastcall CDOTA_Unit_Hero_Mirana::CEntityInstanceEntityClass::
 void __fastcall CDOTA_Unit_Hero_Mirana::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Unit_Hero_Mirana::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -585,7 +585,7 @@ void __fastcall CDOTA_Unit_Hero_Mirana::CEntityInstanceEntityClass::~CEntityInst
 void __fastcall CDOTA_Unit_Hero_Mirana::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Unit_Hero_Mirana::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -769,7 +769,7 @@ CEntityInstance *__fastcall CDOTA_Ability_Mirana_Starfall::CEntityInstanceEntity
 void __fastcall CDOTA_Ability_Mirana_Starfall::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Mirana_Starfall::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -779,7 +779,7 @@ void __fastcall CDOTA_Ability_Mirana_Starfall::CEntityInstanceEntityClass::~CEnt
 void __fastcall CDOTA_Ability_Mirana_Starfall::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Mirana_Starfall::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -1639,7 +1639,7 @@ CEntityInstance *__fastcall CDOTA_Ability_Mirana_Arrow::CEntityInstanceEntityCla
 void __fastcall CDOTA_Ability_Mirana_Arrow::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Mirana_Arrow::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -1649,7 +1649,7 @@ void __fastcall CDOTA_Ability_Mirana_Arrow::CEntityInstanceEntityClass::~CEntity
 void __fastcall CDOTA_Ability_Mirana_Arrow::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Mirana_Arrow::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -2378,7 +2378,7 @@ CEntityInstance *__fastcall CDOTA_Ability_Mirana_Leap::CEntityInstanceEntityClas
 void __fastcall CDOTA_Ability_Mirana_Leap::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Mirana_Leap::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -2388,7 +2388,7 @@ void __fastcall CDOTA_Ability_Mirana_Leap::CEntityInstanceEntityClass::~CEntityI
 void __fastcall CDOTA_Ability_Mirana_Leap::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Mirana_Leap::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -3123,7 +3123,7 @@ CEntityInstance *__fastcall CDOTA_Ability_Mirana_MoonlightShadow::CEntityInstanc
 void __fastcall CDOTA_Ability_Mirana_MoonlightShadow::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Mirana_MoonlightShadow::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -3133,7 +3133,7 @@ void __fastcall CDOTA_Ability_Mirana_MoonlightShadow::CEntityInstanceEntityClass
 void __fastcall CDOTA_Ability_Mirana_MoonlightShadow::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Mirana_MoonlightShadow::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }

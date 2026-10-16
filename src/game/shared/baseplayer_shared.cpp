@@ -312,7 +312,7 @@ void __fastcall CBasePlayer::ItemPostFrame(CBasePlayer *const this)
               if ( v32 >= 0 )
               {
                 AmmoDef = GetAmmoDef();
-                v34 = (*AmmoDef->_vptr_CAmmoDef)(AmmoDef, v32, this);
+                v34 = AmmoDef->MaxCarry(v32, this);
                 v35 = v34;
                 if ( v34 > 0 )
                 {
@@ -334,7 +334,7 @@ void __fastcall CBasePlayer::ItemPostFrame(CBasePlayer *const this)
               if ( v37 >= 0 )
               {
                 v38 = GetAmmoDef();
-                v39 = (*v38->_vptr_CAmmoDef)(v38, v37, this);
+                v39 = v38->MaxCarry(v37, this);
                 LODWORD(s2) = v39;
                 if ( memcmp(&this->m_iAmmo.m_Value[v37], &s2, 4u) != 0 )
                 {
@@ -3204,7 +3204,7 @@ CBaseEntity *__fastcall CBasePlayer::FindEntityInheritingFromForward(
   if ( tr.m_ShapeAttributes.m_nEntityId == 0x8000 )
     return 0;
   m_pEnt = tr.m_pEnt;
-  v11 = (*tr.m_pEnt->_vptr_IHandleEntity)(tr.m_pEnt);
+  v11 = tr.m_pEnt->Schema_DynamicBinding();
   m_pClassInfo_N = pInheritsFrom->m_pClassInfo_N;
   v13 = *(v11 + 40);
   if ( v13 == 0 )

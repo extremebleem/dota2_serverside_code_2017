@@ -24,7 +24,7 @@ void __fastcall CDOTA_Bot_Hero_Bloodseeker::~CDOTA_Bot_Hero_Bloodseeker(CDOTA_Bo
 void __fastcall CDOTA_BotMode_Roam_Bloodseeker::~CDOTA_BotMode_Roam_Bloodseeker(
         CDOTA_BotMode_Roam_Bloodseeker *const this)
 {
-  this->_vptr_CDOTA_BotMode = off_42B75F0;
+  this->_vptr_CDOTA_BotMode = off_42B75F0;  // vptr: CDOTA_BotMode
 }
 
 
@@ -33,7 +33,7 @@ void __fastcall CDOTA_BotMode_Roam_Bloodseeker::~CDOTA_BotMode_Roam_Bloodseeker(
 void __fastcall CDOTA_BotMode_Roam_Bloodseeker::~CDOTA_BotMode_Roam_Bloodseeker(
         CDOTA_BotMode_Roam_Bloodseeker *const this)
 {
-  this->_vptr_CDOTA_BotMode = off_42B75F0;
+  this->_vptr_CDOTA_BotMode = off_42B75F0;  // vptr: CDOTA_BotMode
   operator delete(this);
 }
 
@@ -42,7 +42,7 @@ void __fastcall CDOTA_BotMode_Roam_Bloodseeker::~CDOTA_BotMode_Roam_Bloodseeker(
 void __fastcall CDOTA_BotMode_Attack_Bloodseeker::~CDOTA_BotMode_Attack_Bloodseeker(
         CDOTA_BotMode_Attack_Bloodseeker *const this)
 {
-  this->_vptr_CDOTA_BotMode = off_42B75F0;
+  this->_vptr_CDOTA_BotMode = off_42B75F0;  // vptr: CDOTA_BotMode
 }
 
 
@@ -51,7 +51,7 @@ void __fastcall CDOTA_BotMode_Attack_Bloodseeker::~CDOTA_BotMode_Attack_Bloodsee
 void __fastcall CDOTA_BotMode_Attack_Bloodseeker::~CDOTA_BotMode_Attack_Bloodseeker(
         CDOTA_BotMode_Attack_Bloodseeker *const this)
 {
-  this->_vptr_CDOTA_BotMode = off_42B75F0;
+  this->_vptr_CDOTA_BotMode = off_42B75F0;  // vptr: CDOTA_BotMode
   operator delete(this);
 }
 

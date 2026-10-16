@@ -282,7 +282,7 @@ bool __fastcall IGameSystem::DoesGameSystemReallocate(const IGameSystem *const t
 // calls: IGameSystem::~IGameSystem
 void __fastcall CAutoGameSystem::~CAutoGameSystem(CAutoGameSystem *const this)
 {
-  this->_vptr_IGameSystem = off_3F7C1B0;
+  this->_vptr_IGameSystem = off_3F7C1B0;  // vptr: CAutoGameSystem
   IGameSystem::~IGameSystem(this);
 }
 
@@ -291,7 +291,7 @@ void __fastcall CAutoGameSystem::~CAutoGameSystem(CAutoGameSystem *const this)
 // calls: IGameSystem::~IGameSystem, operator delete
 void __fastcall CAutoGameSystem::~CAutoGameSystem(CAutoGameSystem *const this)
 {
-  this->_vptr_IGameSystem = off_3F7C1B0;
+  this->_vptr_IGameSystem = off_3F7C1B0;  // vptr: CAutoGameSystem
   IGameSystem::~IGameSystem(this);
   operator delete(this);
 }
@@ -300,7 +300,7 @@ void __fastcall CAutoGameSystem::~CAutoGameSystem(CAutoGameSystem *const this)
 // CDontUseThisGameSystem::~CDontUseThisGameSystem  (line 397, @0x0000000001f03d00, libserver.so)  // inlines: ~IGameSystem
 void __fastcall CDontUseThisGameSystem::~CDontUseThisGameSystem(CDontUseThisGameSystem *const this)
 {
-  this->_vptr_IGameSystem = off_3FC4070;
+  this->_vptr_IGameSystem = off_3FC4070;  // vptr: IGameSystem
 }
 
 
@@ -308,7 +308,7 @@ void __fastcall CDontUseThisGameSystem::~CDontUseThisGameSystem(CDontUseThisGame
 // calls: operator delete
 void __fastcall CDontUseThisGameSystem::~CDontUseThisGameSystem(CDontUseThisGameSystem *const this)
 {
-  this->_vptr_IGameSystem = off_3FC4070;
+  this->_vptr_IGameSystem = off_3FC4070;  // vptr: IGameSystem
   operator delete(this);
 }
 
@@ -2667,7 +2667,7 @@ IGameSystem *__fastcall CGameSystemReallocatingFactory<CStepSimulationHook,CStep
     *(v1 + 8) = 0;
     *(v1 + 16) = 0;
     v3 = off_3FCE9B0;
-    v2->_vptr_IGameSystem = off_3FCE9B0;
+    v2->_vptr_IGameSystem = off_3FCE9B0;  // vptr: CStepSimulationHook
   }
   else
   {
@@ -2693,7 +2693,7 @@ IGameSystem *__fastcall CGameSystemReallocatingFactory<CSimThinkHook,CSimThinkHo
     *(v1 + 8) = 0;
     *(v1 + 16) = 0;
     v3 = off_3FCE310;
-    v2->_vptr_IGameSystem = off_3FCE310;
+    v2->_vptr_IGameSystem = off_3FCE310;  // vptr: CSimThinkHook
   }
   else
   {
@@ -2719,7 +2719,7 @@ IGameSystem *__fastcall CGameSystemReallocatingFactory<GameToolEventToolEvent_SF
     *(v1 + 8) = 0;
     *(v1 + 16) = 0;
     v3 = off_3FCDF10;
-    v2->_vptr_IGameSystem = off_3FCDF10;
+    v2->_vptr_IGameSystem = off_3FCDF10;  // vptr: GameToolEventToolEvent_SFMRecordingStateChanged_tHookupGameSystem
   }
   else
   {
@@ -2770,7 +2770,7 @@ IGameSystem *__fastcall CGameSystemReallocatingFactory<CAimTargetManager,CAimTar
   if ( v1 != 0 )
   {
     memset(v1, 0, 0x38u);
-    v1->_vptr_IGameSystem = off_3FCB610;
+    v1->_vptr_IGameSystem = off_3FCB610;  // vptr: CAimTargetManager
     v1[1]._vptr_IGameSystem = off_3FCB778;
     v2 = off_3FCB610;
   }
@@ -2794,7 +2794,7 @@ IGameSystem *__fastcall CGameSystemReallocatingFactory<CEntityTouchManager,CEnti
   if ( v1 != 0 )
   {
     memset(v1, 0, 0x38u);
-    v1->_vptr_IGameSystem = off_3FCC7B0;
+    v1->_vptr_IGameSystem = off_3FCC7B0;  // vptr: CEntityTouchManager
     v1[1]._vptr_IGameSystem = &off_3FCC910;
     v2 = off_3FCC7B0;
   }
@@ -2818,7 +2818,7 @@ IGameSystem *__fastcall CGameSystemReallocatingFactory<CNotifyManager,INotify>::
   if ( v1 != 0 )
   {
     memset(v1, 0, 0x40u);
-    v1->_vptr_IGameSystem = off_3FCCBB0;
+    v1->_vptr_IGameSystem = off_3FCCBB0;  // vptr: CNotifyManager
     v1[1]._vptr_IGameSystem = off_3FCCD38;
     v1[1].m_pName = &off_3FCCD70;
     v2 = off_3FCCBB0;
@@ -3036,7 +3036,7 @@ IGameSystem *__fastcall CGameSystemReallocatingFactory<CDebugOverlayGameSystem,C
   {
     memset(v1, 0, 0x48u);
     LOBYTE(v1[4]._vptr_IGameSystem) = 1;
-    v1->_vptr_IGameSystem = off_3FF0F70;
+    v1->_vptr_IGameSystem = off_3FF0F70;  // vptr: CDebugOverlayGameSystem
     v1[1]._vptr_IGameSystem = off_3FF10F8;
     v1[1].m_pName = &off_3FF1130;
     v2 = off_3FF0F70;
@@ -3062,7 +3062,7 @@ IGameSystem *__fastcall CGameSystemReallocatingFactory<CScenePrecacheSystem,CSce
   if ( v1 != 0 )
   {
     memset(v1, 0, 0x40u);
-    v1->_vptr_IGameSystem = off_3FECE50;
+    v1->_vptr_IGameSystem = off_3FECE50;  // vptr: CScenePrecacheSystem
     v1[1].m_pName = CDefOps<int>::LessFunc;
     LOWORD(v1[3]._vptr_IGameSystem) = -1;
     WORD2(v1[3]._vptr_IGameSystem) = -1;
@@ -3093,7 +3093,7 @@ IGameSystem *__fastcall CGameSystemReallocatingFactory<GameToolEventToolTraceRay
     *(v1 + 8) = 0;
     *(v1 + 16) = 0;
     v3 = off_3FFB5B0;
-    v2->_vptr_IGameSystem = off_3FFB5B0;
+    v2->_vptr_IGameSystem = off_3FFB5B0;  // vptr: GameToolEventToolTraceRayResult_tHookupGameSystem
   }
   else
   {
@@ -3119,7 +3119,7 @@ IGameSystem *__fastcall CGameSystemReallocatingFactory<GameToolEventTraceRayServ
     *(v1 + 8) = 0;
     *(v1 + 16) = 0;
     v3 = off_3FFB290;
-    v2->_vptr_IGameSystem = off_3FFB290;
+    v2->_vptr_IGameSystem = off_3FFB290;  // vptr: GameToolEventTraceRayServerToolEvent_tHookupGameSystem
   }
   else
   {
@@ -3145,7 +3145,7 @@ IGameSystem *__fastcall CGameSystemReallocatingFactory<GameToolEventDestroyAllEn
     *(v1 + 8) = 0;
     *(v1 + 16) = 0;
     v3 = off_3FFAF70;
-    v2->_vptr_IGameSystem = off_3FFAF70;
+    v2->_vptr_IGameSystem = off_3FFAF70;  // vptr: GameToolEventDestroyAllEntitiesToolEvent_tHookupGameSystem
   }
   else
   {
@@ -3171,7 +3171,7 @@ IGameSystem *__fastcall CGameSystemReallocatingFactory<GameToolEventRestartMapTo
     *(v1 + 8) = 0;
     *(v1 + 16) = 0;
     v3 = off_3FFAC50;
-    v2->_vptr_IGameSystem = off_3FFAC50;
+    v2->_vptr_IGameSystem = off_3FFAC50;  // vptr: GameToolEventRestartMapToolEvent_tHookupGameSystem
   }
   else
   {
@@ -3197,7 +3197,7 @@ IGameSystem *__fastcall CGameSystemReallocatingFactory<GameToolEventDestroyEntit
     *(v1 + 8) = 0;
     *(v1 + 16) = 0;
     v3 = off_3FFA930;
-    v2->_vptr_IGameSystem = off_3FFA930;
+    v2->_vptr_IGameSystem = off_3FFA930;  // vptr: GameToolEventDestroyEntityToolEvent_tHookupGameSystem
   }
   else
   {
@@ -3223,7 +3223,7 @@ IGameSystem *__fastcall CGameSystemReallocatingFactory<GameToolEventSpawnEntityT
     *(v1 + 8) = 0;
     *(v1 + 16) = 0;
     v3 = off_3FFA610;
-    v2->_vptr_IGameSystem = off_3FFA610;
+    v2->_vptr_IGameSystem = off_3FFA610;  // vptr: GameToolEventSpawnEntityToolEvent_tHookupGameSystem
   }
   else
   {
@@ -3249,7 +3249,7 @@ IGameSystem *__fastcall CGameSystemReallocatingFactory<GameToolEventToolEvent_SF
     *(v1 + 8) = 0;
     *(v1 + 16) = 0;
     v3 = off_3FFA2F0;
-    v2->_vptr_IGameSystem = off_3FFA2F0;
+    v2->_vptr_IGameSystem = off_3FFA2F0;  // vptr: GameToolEventToolEvent_SFMToolActiveStateChanged_tHookupGameSystem
   }
   else
   {
@@ -3275,7 +3275,7 @@ IGameSystem *__fastcall CGameSystemReallocatingFactory<GameToolEventToolEvent_Fi
     *(v1 + 8) = 0;
     *(v1 + 16) = 0;
     v3 = off_3FF9FD0;
-    v2->_vptr_IGameSystem = off_3FF9FD0;
+    v2->_vptr_IGameSystem = off_3FF9FD0;  // vptr: GameToolEventToolEvent_FireEntityInput_tHookupGameSystem
   }
   else
   {
@@ -3301,7 +3301,7 @@ IGameSystem *__fastcall CGameSystemReallocatingFactory<GameToolEventToolEvent_Ge
     *(v1 + 8) = 0;
     *(v1 + 16) = 0;
     v3 = off_3FF9CB0;
-    v2->_vptr_IGameSystem = off_3FF9CB0;
+    v2->_vptr_IGameSystem = off_3FF9CB0;  // vptr: GameToolEventToolEvent_GetEntityInputsResult_tHookupGameSystem
   }
   else
   {
@@ -3327,7 +3327,7 @@ IGameSystem *__fastcall CGameSystemReallocatingFactory<GameToolEventToolEvent_Ge
     *(v1 + 8) = 0;
     *(v1 + 16) = 0;
     v3 = off_3FF9990;
-    v2->_vptr_IGameSystem = off_3FF9990;
+    v2->_vptr_IGameSystem = off_3FF9990;  // vptr: GameToolEventToolEvent_GetEntityInputs_tHookupGameSystem
   }
   else
   {
@@ -3353,7 +3353,7 @@ IGameSystem *__fastcall CGameSystemReallocatingFactory<GameToolEventToolEvent_Ge
     *(v1 + 8) = 0;
     *(v1 + 16) = 0;
     v3 = off_3FF9670;
-    v2->_vptr_IGameSystem = off_3FF9670;
+    v2->_vptr_IGameSystem = off_3FF9670;  // vptr: GameToolEventToolEvent_GetEntityInfoResult_tHookupGameSystem
   }
   else
   {
@@ -3379,7 +3379,7 @@ IGameSystem *__fastcall CGameSystemReallocatingFactory<GameToolEventToolEvent_Ge
     *(v1 + 8) = 0;
     *(v1 + 16) = 0;
     v3 = off_3FF9350;
-    v2->_vptr_IGameSystem = off_3FF9350;
+    v2->_vptr_IGameSystem = off_3FF9350;  // vptr: GameToolEventToolEvent_GetEntityInfo_tHookupGameSystem
   }
   else
   {
@@ -3405,7 +3405,7 @@ IGameSystem *__fastcall CGameSystemReallocatingFactory<GameEvent_RegisterHookupG
     *(v1 + 8) = 0;
     *(v1 + 16) = 0;
     v3 = off_3FF7650;
-    v2->_vptr_IGameSystem = off_3FF7650;
+    v2->_vptr_IGameSystem = off_3FF7650;  // vptr: GameEvent_RegisterHookupGameSystem
   }
   else
   {
@@ -3431,7 +3431,7 @@ IGameSystem *__fastcall CGameSystemReallocatingFactory<CSource2EntitySystem,CSou
     *(v1 + 8) = 0;
     *(v1 + 16) = 0;
     v3 = off_3FF6950;
-    v2->_vptr_IGameSystem = off_3FF6950;
+    v2->_vptr_IGameSystem = off_3FF6950;  // vptr: CSource2EntitySystem
   }
   else
   {
@@ -3457,7 +3457,7 @@ IGameSystem *__fastcall CGameSystemReallocatingFactory<CRespawnAllEntitiesSystem
     *(v1 + 8) = 0;
     *(v1 + 16) = 0;
     v3 = off_3FF6710;
-    v2->_vptr_IGameSystem = off_3FF6710;
+    v2->_vptr_IGameSystem = off_3FF6710;  // vptr: CRespawnAllEntitiesSystem
   }
   else
   {
@@ -3480,7 +3480,7 @@ IGameSystem *__fastcall CGameSystemReallocatingFactory<CSpawnGroupCompletionCall
   {
     memset(v1, 0, 0x38u);
     v2 = off_3FF6450;
-    v1->_vptr_IGameSystem = off_3FF6450;
+    v1->_vptr_IGameSystem = off_3FF6450;  // vptr: CSpawnGroupCompletionCallbackGameSystem
   }
   else
   {
@@ -3508,7 +3508,7 @@ IGameSystem *__fastcall CGameSystemReallocatingFactory<CSource1LegacyGameEventGa
   if ( v1 != 0 )
   {
     memset(v1, 0, 0x468u);
-    v2->_vptr_IGameSystem = off_3FF7330;
+    v2->_vptr_IGameSystem = off_3FF7330;  // vptr: CSource1LegacyGameEventGameSystem
     v3 = v2 + 5;
     do
     {
@@ -3573,7 +3573,7 @@ IGameSystem *__fastcall CGameSystemReallocatingFactory<CClientPrecacheGameSystem
     *(v1 + 8) = 0;
     *(v1 + 16) = 0;
     v3 = off_4010210;
-    v2->_vptr_IGameSystem = off_4010210;
+    v2->_vptr_IGameSystem = off_4010210;  // vptr: CClientPrecacheGameSystem
   }
   else
   {
@@ -3597,7 +3597,7 @@ IGameSystem *__fastcall CGameSystemReallocatingFactory<CCommentarySystem,CCommen
     memset(v1, 0, 0x80u);
     v2 = off_4012830;
     LODWORD(v1[7]._vptr_IGameSystem) = -1;
-    v1->_vptr_IGameSystem = off_4012830;
+    v1->_vptr_IGameSystem = off_4012830;  // vptr: CCommentarySystem
     HIDWORD(v1[7]._vptr_IGameSystem) = -1;
     LODWORD(v1[7].m_pName) = -1;
   }
@@ -3669,7 +3669,7 @@ IGameSystem *__fastcall CGameSystemReallocatingFactory<CMarkupManager,CMarkupMan
     memset(v1, 0, 0x80u);
     v2 = off_406D050;
     WORD1(v1[5]._vptr_IGameSystem) = -1;
-    v1->_vptr_IGameSystem = off_406D050;
+    v1->_vptr_IGameSystem = off_406D050;  // vptr: CMarkupManager
     HIDWORD(v1[2].m_pName) = 32;
     LOWORD(v1[4].m_pName) = -1;
     WORD1(v1[4].m_pName) = -1;
@@ -3696,7 +3696,7 @@ IGameSystem *__fastcall CGameSystemReallocatingFactory<CPhysicsHook,CPhysicsHook
   {
     memset(v1, 0, 0x30u);
     v2 = off_407E610;
-    v1->_vptr_IGameSystem = off_407E610;
+    v1->_vptr_IGameSystem = off_407E610;  // vptr: CPhysicsHook
   }
   else
   {
@@ -3722,7 +3722,7 @@ IGameSystem *__fastcall CGameSystemReallocatingFactory<CRagdollLowViolenceManage
     *(v1 + 8) = 0;
     *(v1 + 16) = 0;
     v3 = off_40A34B0;
-    v2->_vptr_IGameSystem = off_40A34B0;
+    v2->_vptr_IGameSystem = off_40A34B0;  // vptr: CRagdollLowViolenceManager
   }
   else
   {
@@ -3747,7 +3747,7 @@ IGameSystem *__fastcall CGameSystemReallocatingFactory<CPVSManager,IPVSManager>:
   {
     v1->m_pName = 0;
     v1[1].m_pName = 0;
-    v1->_vptr_IGameSystem = off_40A27F0;
+    v1->_vptr_IGameSystem = off_40A27F0;  // vptr: CPVSManager
     v1[1]._vptr_IGameSystem = &off_40A29D0;
     v3 = off_40A27F0;
   }
@@ -3775,7 +3775,7 @@ IGameSystem *__fastcall CGameSystemReallocatingFactory<CPrecacheRegister,CPrecac
     *(v1 + 8) = 0;
     *(v1 + 16) = 0;
     v3 = off_4096790;
-    v2->_vptr_IGameSystem = off_4096790;
+    v2->_vptr_IGameSystem = off_4096790;  // vptr: CPrecacheRegister
   }
   else
   {
@@ -3818,7 +3818,7 @@ IGameSystem *__fastcall CGameSystemReallocatingFactory<CSceneManager,CSceneManag
   {
     memset(v1, 0, 0x48u);
     v2 = off_40A7D30;
-    v1->_vptr_IGameSystem = off_40A7D30;
+    v1->_vptr_IGameSystem = off_40A7D30;  // vptr: CSceneManager
   }
   else
   {
@@ -3862,7 +3862,7 @@ IGameSystem *__fastcall CGameSystemReallocatingFactory<CCheckClient,CCheckClient
   {
     memset(v1, 0, 0x858u);
     LODWORD(v2[66]._vptr_IGameSystem) = 1024;
-    v2->_vptr_IGameSystem = off_40D0590;
+    v2->_vptr_IGameSystem = off_40D0590;  // vptr: CCheckClient
     v2[65].m_pName = &v2[1]._vptr_IGameSystem + 1;
     v2[131]._vptr_IGameSystem = &v2[67];
     v3 = off_40D0590;
@@ -3923,7 +3923,7 @@ IGameSystem *__fastcall CGameSystemReallocatingFactory<CDOTAEventLog,CDOTAEventL
     *(v1 + 24) = 0;
     *(v1 + 32) = 0;
     CEventLog::CEventLog(v1);
-    v2->_vptr_IGameSystem = off_40F69D0;
+    v2->_vptr_IGameSystem = off_40F69D0;  // vptr: CDOTAEventLog
     v2[1]._vptr_IGameSystem = off_40F6A48;
     v3 = off_40F69D0;
   }
@@ -3969,7 +3969,7 @@ IGameSystem *__fastcall CGameSystemReallocatingFactory<CDOTA_ActiveModifiersList
   {
     memset(v1, 0, 0x2E8u);
     v3 = off_412D110;
-    v2->_vptr_IGameSystem = off_412D110;
+    v2->_vptr_IGameSystem = off_412D110;  // vptr: CDOTA_ActiveModifiersList
   }
   else
   {
@@ -3994,7 +3994,7 @@ IGameSystem *__fastcall CGameSystemReallocatingFactory<CDOTA_QuestSystem,CDOTA_Q
   {
     v1->m_pName = 0;
     v1[1].m_pName = 0;
-    v1->_vptr_IGameSystem = off_4174890;
+    v1->_vptr_IGameSystem = off_4174890;  // vptr: CDOTA_QuestSystem
     v1[1]._vptr_IGameSystem = off_41749E8;
     v3 = off_4174890;
   }
@@ -4020,7 +4020,7 @@ IGameSystem *__fastcall CGameSystemReallocatingFactory<CDOTAVScriptGameSystem,CD
   {
     memset(v1, 0, sizeof(CVScriptGameSystem));
     CVScriptGameSystem::CVScriptGameSystem(v1);
-    v1->_vptr_IGameSystem = off_42B49D0;
+    v1->_vptr_IGameSystem = off_42B49D0;  // vptr: CDOTAVScriptGameSystem
     v1->_vptr_IVScriptGameSystem = off_42B4BB0;
     v2 = off_42B49D0;
   }
@@ -4047,7 +4047,7 @@ IGameSystem *__fastcall CGameSystemReallocatingFactory<CDOTA_UnitFilterCache,CDO
   if ( v1 != 0 )
   {
     memset(v1, 0, 0xB0u);
-    v1->_vptr_IGameSystem = off_42B4430;
+    v1->_vptr_IGameSystem = off_42B4430;  // vptr: CDOTA_UnitFilterCache
     p_m_pName = &v1[2].m_pName;
     v3 = (v1 + 40);
     v1[1]._vptr_IGameSystem = &off_42B4588;
@@ -4542,7 +4542,7 @@ void __fastcall CGameSystemReallocatingFactory<CHLTVDirector,CHLTVDirector>::Des
   if ( pGameSystem != 0 )
     v2 = pGameSystem - 1;
   (*(v2->_vptr_IGameSystem + 5))(v2, 0);
-  (*v2->_vptr_IGameSystem)(v2);
+  v2->Init();
   (*(*g_pMemAlloc + 16LL))(g_pMemAlloc, v2);
 }
 
@@ -4679,7 +4679,7 @@ void __fastcall CGameSystemReallocatingFactory<CDOTAEventLog,CDOTAEventLog>::Des
   if ( pGameSystem != 0 )
     v2 = pGameSystem - 1;
   (*(v2->_vptr_IGameSystem + 5))(v2, 0);
-  (*v2->_vptr_IGameSystem)(v2);
+  v2->Init();
   (*(*g_pMemAlloc + 16LL))(g_pMemAlloc, v2);
 }
 
@@ -6949,7 +6949,7 @@ IGameSystem *__fastcall CGameSystemReallocatingFactory<CNavGameSystem,CNavGameSy
 bool __fastcall CGameSystemStaticFactory<CClientUIDialogManager,CClientUIDialogManager>::Init(
         CGameSystemStaticFactory<CClientUIDialogManager,CClientUIDialogManager> *const this)
 {
-  return (*this->m_pActualGlobal->_vptr_IGameSystem)(this->m_pActualGlobal);
+  return this->m_pActualGlobal->Init();
 }
 
 
@@ -6957,7 +6957,7 @@ bool __fastcall CGameSystemStaticFactory<CClientUIDialogManager,CClientUIDialogM
 bool __fastcall CGameSystemStaticFactory<CFogSystem,CFogSystem>::Init(
         CGameSystemStaticFactory<CFogSystem,CFogSystem> *const this)
 {
-  return (*this->m_pActualGlobal->_vptr_IGameSystem)(this->m_pActualGlobal);
+  return this->m_pActualGlobal->Init();
 }
 
 
@@ -6965,7 +6965,7 @@ bool __fastcall CGameSystemStaticFactory<CFogSystem,CFogSystem>::Init(
 bool __fastcall CGameSystemStaticFactory<CResourcePrecacherGameSystem,CResourcePrecacherGameSystem>::Init(
         CGameSystemStaticFactory<CResourcePrecacherGameSystem,CResourcePrecacherGameSystem> *const this)
 {
-  return (*this->m_pActualGlobal->_vptr_IGameSystem)(this->m_pActualGlobal);
+  return this->m_pActualGlobal->Init();
 }
 
 
@@ -6973,7 +6973,7 @@ bool __fastcall CGameSystemStaticFactory<CResourcePrecacherGameSystem,CResourceP
 bool __fastcall CGameSystemStaticFactory<CCustomGameEventManager,CCustomGameEventManager>::Init(
         CGameSystemStaticFactory<CCustomGameEventManager,CCustomGameEventManager> *const this)
 {
-  return (*this->m_pActualGlobal->_vptr_IGameSystem)(this->m_pActualGlobal);
+  return this->m_pActualGlobal->Init();
 }
 
 
@@ -6987,7 +6987,7 @@ bool __fastcall CGameSystemStaticFactory<CDefaultResponseSystem,IResponseSystem>
   v2 = (*(*responserulesfilecache + 104LL))(responserulesfilecache);
   m_pActualGlobal = this->m_pActualGlobal;
   CResponseCriteriaSet::sm_pCriteriaSymbols = v2;
-  return (*m_pActualGlobal->_vptr_IGameSystem)(m_pActualGlobal);
+  return m_pActualGlobal->Init();
 }
 
 
@@ -6995,7 +6995,7 @@ bool __fastcall CGameSystemStaticFactory<CDefaultResponseSystem,IResponseSystem>
 bool __fastcall CGameSystemStaticFactory<CWeaponScriptParser,CWeaponScriptParser>::Init(
         CGameSystemStaticFactory<CWeaponScriptParser,CWeaponScriptParser> *const this)
 {
-  return (*this->m_pActualGlobal->_vptr_IGameSystem)(this->m_pActualGlobal);
+  return this->m_pActualGlobal->Init();
 }
 
 
@@ -7003,7 +7003,7 @@ bool __fastcall CGameSystemStaticFactory<CWeaponScriptParser,CWeaponScriptParser
 bool __fastcall CGameSystemStaticFactory<CWeaponList,CWeaponList>::Init(
         CGameSystemStaticFactory<CWeaponList,CWeaponList> *const this)
 {
-  return (*this->m_pActualGlobal->_vptr_IGameSystem)(this->m_pActualGlobal);
+  return this->m_pActualGlobal->Init();
 }
 
 
@@ -7011,7 +7011,7 @@ bool __fastcall CGameSystemStaticFactory<CWeaponList,CWeaponList>::Init(
 bool __fastcall CGameSystemStaticFactory<CCombatCharVisCache,CCombatCharVisCache>::Init(
         CGameSystemStaticFactory<CCombatCharVisCache,CCombatCharVisCache> *const this)
 {
-  return (*this->m_pActualGlobal->_vptr_IGameSystem)(this->m_pActualGlobal);
+  return this->m_pActualGlobal->Init();
 }
 
 
@@ -7019,7 +7019,7 @@ bool __fastcall CGameSystemStaticFactory<CCombatCharVisCache,CCombatCharVisCache
 bool __fastcall CGameSystemStaticFactory<CCleanupDefaultRelationships,CCleanupDefaultRelationships>::Init(
         CGameSystemStaticFactory<CCleanupDefaultRelationships,CCleanupDefaultRelationships> *const this)
 {
-  return (*this->m_pActualGlobal->_vptr_IGameSystem)(this->m_pActualGlobal);
+  return this->m_pActualGlobal->Init();
 }
 
 
@@ -7027,7 +7027,7 @@ bool __fastcall CGameSystemStaticFactory<CCleanupDefaultRelationships,CCleanupDe
 bool __fastcall CGameSystemStaticFactory<CResponseQueueManager,CResponseQueueManager>::Init(
         CGameSystemStaticFactory<CResponseQueueManager,CResponseQueueManager> *const this)
 {
-  return (*this->m_pActualGlobal->_vptr_IGameSystem)(this->m_pActualGlobal);
+  return this->m_pActualGlobal->Init();
 }
 
 
@@ -7035,7 +7035,7 @@ bool __fastcall CGameSystemStaticFactory<CResponseQueueManager,CResponseQueueMan
 bool __fastcall CGameSystemStaticFactory<CVisibilityMonitor,CVisibilityMonitor>::Init(
         CGameSystemStaticFactory<CVisibilityMonitor,CVisibilityMonitor> *const this)
 {
-  return (*this->m_pActualGlobal->_vptr_IGameSystem)(this->m_pActualGlobal);
+  return this->m_pActualGlobal->Init();
 }
 
 
@@ -7043,7 +7043,7 @@ bool __fastcall CGameSystemStaticFactory<CVisibilityMonitor,CVisibilityMonitor>:
 bool __fastcall CGameSystemStaticFactory<CDirtySpatialPartitionEntityList,CDirtySpatialPartitionEntityList>::Init(
         CGameSystemStaticFactory<CDirtySpatialPartitionEntityList,CDirtySpatialPartitionEntityList> *const this)
 {
-  return (*this->m_pActualGlobal->_vptr_IGameSystem)(this->m_pActualGlobal);
+  return this->m_pActualGlobal->Init();
 }
 
 
@@ -7059,7 +7059,7 @@ bool __fastcall CGameSystemStaticFactory<CDecalEmitterSystem,IDecalEmitterSystem
 bool __fastcall CGameSystemStaticFactory<CGameTimescale,CGameTimescale>::Init(
         CGameSystemStaticFactory<CGameTimescale,CGameTimescale> *const this)
 {
-  return (*this->m_pActualGlobal->_vptr_IGameSystem)(this->m_pActualGlobal);
+  return this->m_pActualGlobal->Init();
 }
 
 
@@ -7067,7 +7067,7 @@ bool __fastcall CGameSystemStaticFactory<CGameTimescale,CGameTimescale>::Init(
 bool __fastcall CGameSystemStaticFactory<CGlobalState,CGlobalState>::Init(
         CGameSystemStaticFactory<CGlobalState,CGlobalState> *const this)
 {
-  return (*this->m_pActualGlobal->_vptr_IGameSystem)(this->m_pActualGlobal);
+  return this->m_pActualGlobal->Init();
 }
 
 
@@ -7075,7 +7075,7 @@ bool __fastcall CGameSystemStaticFactory<CGlobalState,CGlobalState>::Init(
 bool __fastcall CGameSystemStaticFactory<CBaseGameStats_Driver,CBaseGameStats_Driver>::Init(
         CGameSystemStaticFactory<CBaseGameStats_Driver,CBaseGameStats_Driver> *const this)
 {
-  return (*this->m_pActualGlobal->_vptr_IGameSystem)(this->m_pActualGlobal);
+  return this->m_pActualGlobal->Init();
 }
 
 
@@ -7083,7 +7083,7 @@ bool __fastcall CGameSystemStaticFactory<CBaseGameStats_Driver,CBaseGameStats_Dr
 bool __fastcall CGameSystemStaticFactory<CAnchorList,CAnchorList>::Init(
         CGameSystemStaticFactory<CAnchorList,CAnchorList> *const this)
 {
-  return (*this->m_pActualGlobal->_vptr_IGameSystem)(this->m_pActualGlobal);
+  return this->m_pActualGlobal->Init();
 }
 
 
@@ -7091,7 +7091,7 @@ bool __fastcall CGameSystemStaticFactory<CAnchorList,CAnchorList>::Init(
 bool __fastcall CGameSystemStaticFactory<CParticleSystemQueryGameSystem,CParticleSystemQueryGameSystem>::Init(
         CGameSystemStaticFactory<CParticleSystemQueryGameSystem,CParticleSystemQueryGameSystem> *const this)
 {
-  return (*this->m_pActualGlobal->_vptr_IGameSystem)(this->m_pActualGlobal);
+  return this->m_pActualGlobal->Init();
 }
 
 
@@ -7099,7 +7099,7 @@ bool __fastcall CGameSystemStaticFactory<CParticleSystemQueryGameSystem,CParticl
 bool __fastcall CGameSystemStaticFactory<CPlayerVoiceListener,CPlayerVoiceListener>::Init(
         CGameSystemStaticFactory<CPlayerVoiceListener,CPlayerVoiceListener> *const this)
 {
-  return (*this->m_pActualGlobal->_vptr_IGameSystem)(this->m_pActualGlobal);
+  return this->m_pActualGlobal->Init();
 }
 
 
@@ -7107,7 +7107,7 @@ bool __fastcall CGameSystemStaticFactory<CPlayerVoiceListener,CPlayerVoiceListen
 bool __fastcall CGameSystemStaticFactory<CLagCompensationManager,ILagCompensationManager>::Init(
         CGameSystemStaticFactory<CLagCompensationManager,ILagCompensationManager> *const this)
 {
-  return (*this->m_pActualGlobal->_vptr_IGameSystem)(this->m_pActualGlobal);
+  return this->m_pActualGlobal->Init();
 }
 
 
@@ -7115,7 +7115,7 @@ bool __fastcall CGameSystemStaticFactory<CLagCompensationManager,ILagCompensatio
 bool __fastcall CGameSystemStaticFactory<CRagdollLRURetirement,CRagdollLRURetirement>::Init(
         CGameSystemStaticFactory<CRagdollLRURetirement,CRagdollLRURetirement> *const this)
 {
-  return (*this->m_pActualGlobal->_vptr_IGameSystem)(this->m_pActualGlobal);
+  return this->m_pActualGlobal->Init();
 }
 
 
@@ -7123,7 +7123,7 @@ bool __fastcall CGameSystemStaticFactory<CRagdollLRURetirement,CRagdollLRURetire
 bool __fastcall CGameSystemStaticFactory<CPostProcessSystem,CPostProcessSystem>::Init(
         CGameSystemStaticFactory<CPostProcessSystem,CPostProcessSystem> *const this)
 {
-  return (*this->m_pActualGlobal->_vptr_IGameSystem)(this->m_pActualGlobal);
+  return this->m_pActualGlobal->Init();
 }
 
 
@@ -7139,7 +7139,7 @@ bool __fastcall CGameSystemStaticFactory<CSoundControllerImp,CSoundControllerImp
 bool __fastcall CGameSystemStaticFactory<CSoundEmitterSystem,CSoundEmitterSystem>::Init(
         CGameSystemStaticFactory<CSoundEmitterSystem,CSoundEmitterSystem> *const this)
 {
-  return (*this->m_pActualGlobal->_vptr_IGameSystem)(this->m_pActualGlobal);
+  return this->m_pActualGlobal->Init();
 }
 
 
@@ -7147,7 +7147,7 @@ bool __fastcall CGameSystemStaticFactory<CSoundEmitterSystem,CSoundEmitterSystem
 bool __fastcall CGameSystemStaticFactory<CFlexSceneFileManager,CFlexSceneFileManager>::Init(
         CGameSystemStaticFactory<CFlexSceneFileManager,CFlexSceneFileManager> *const this)
 {
-  return (*this->m_pActualGlobal->_vptr_IGameSystem)(this->m_pActualGlobal);
+  return this->m_pActualGlobal->Init();
 }
 
 
@@ -7155,7 +7155,7 @@ bool __fastcall CGameSystemStaticFactory<CFlexSceneFileManager,CFlexSceneFileMan
 bool __fastcall CGameSystemStaticFactory<CTrackedControllerManager,CTrackedControllerManager>::Init(
         CGameSystemStaticFactory<CTrackedControllerManager,CTrackedControllerManager> *const this)
 {
-  return (*this->m_pActualGlobal->_vptr_IGameSystem)(this->m_pActualGlobal);
+  return this->m_pActualGlobal->Init();
 }
 
 
@@ -7163,7 +7163,7 @@ bool __fastcall CGameSystemStaticFactory<CTrackedControllerManager,CTrackedContr
 bool __fastcall CGameSystemStaticFactory<CDOTA_AttackRecordManager,CDOTA_AttackRecordManager>::Init(
         CGameSystemStaticFactory<CDOTA_AttackRecordManager,CDOTA_AttackRecordManager> *const this)
 {
-  return (*this->m_pActualGlobal->_vptr_IGameSystem)(this->m_pActualGlobal);
+  return this->m_pActualGlobal->Init();
 }
 
 
@@ -7171,7 +7171,7 @@ bool __fastcall CGameSystemStaticFactory<CDOTA_AttackRecordManager,CDOTA_AttackR
 bool __fastcall CGameSystemStaticFactory<CDOTA_AbilityAnimations,CDOTA_AbilityAnimations>::Init(
         CGameSystemStaticFactory<CDOTA_AbilityAnimations,CDOTA_AbilityAnimations> *const this)
 {
-  return (*this->m_pActualGlobal->_vptr_IGameSystem)(this->m_pActualGlobal);
+  return this->m_pActualGlobal->Init();
 }
 
 
@@ -7179,7 +7179,7 @@ bool __fastcall CGameSystemStaticFactory<CDOTA_AbilityAnimations,CDOTA_AbilityAn
 bool __fastcall CGameSystemStaticFactory<CDOTA_ActionDelayer,CDOTA_ActionDelayer>::Init(
         CGameSystemStaticFactory<CDOTA_ActionDelayer,CDOTA_ActionDelayer> *const this)
 {
-  return (*this->m_pActualGlobal->_vptr_IGameSystem)(this->m_pActualGlobal);
+  return this->m_pActualGlobal->Init();
 }
 
 
@@ -7187,7 +7187,7 @@ bool __fastcall CGameSystemStaticFactory<CDOTA_ActionDelayer,CDOTA_ActionDelayer
 bool __fastcall CGameSystemStaticFactory<CCustomNetTableManager,CCustomNetTableManager>::Init(
         CGameSystemStaticFactory<CCustomNetTableManager,CCustomNetTableManager> *const this)
 {
-  return (*this->m_pActualGlobal->_vptr_IGameSystem)(this->m_pActualGlobal);
+  return this->m_pActualGlobal->Init();
 }
 
 
@@ -7195,7 +7195,7 @@ bool __fastcall CGameSystemStaticFactory<CCustomNetTableManager,CCustomNetTableM
 bool __fastcall CGameSystemStaticFactory<CDOTA_CustomUIManager,CDOTA_CustomUIManager>::Init(
         CGameSystemStaticFactory<CDOTA_CustomUIManager,CDOTA_CustomUIManager> *const this)
 {
-  return (*this->m_pActualGlobal->_vptr_IGameSystem)(this->m_pActualGlobal);
+  return this->m_pActualGlobal->Init();
 }
 
 
@@ -7203,7 +7203,7 @@ bool __fastcall CGameSystemStaticFactory<CDOTA_CustomUIManager,CDOTA_CustomUIMan
 bool __fastcall CGameSystemStaticFactory<DOTA_CombatLog_Record,DOTA_CombatLog_Record>::Init(
         CGameSystemStaticFactory<DOTA_CombatLog_Record,DOTA_CombatLog_Record> *const this)
 {
-  return (*this->m_pActualGlobal->_vptr_IGameSystem)(this->m_pActualGlobal);
+  return this->m_pActualGlobal->Init();
 }
 
 
@@ -7211,7 +7211,7 @@ bool __fastcall CGameSystemStaticFactory<DOTA_CombatLog_Record,DOTA_CombatLog_Re
 bool __fastcall CGameSystemStaticFactory<CDOTA_CombatLog,CDOTA_CombatLog>::Init(
         CGameSystemStaticFactory<CDOTA_CombatLog,CDOTA_CombatLog> *const this)
 {
-  return (*this->m_pActualGlobal->_vptr_IGameSystem)(this->m_pActualGlobal);
+  return this->m_pActualGlobal->Init();
 }
 
 
@@ -7219,7 +7219,7 @@ bool __fastcall CGameSystemStaticFactory<CDOTA_CombatLog,CDOTA_CombatLog>::Init(
 bool __fastcall CGameSystemStaticFactory<CDOTA_RealtimeCombatAnalyzer,CDOTA_RealtimeCombatAnalyzer>::Init(
         CGameSystemStaticFactory<CDOTA_RealtimeCombatAnalyzer,CDOTA_RealtimeCombatAnalyzer> *const this)
 {
-  return (*this->m_pActualGlobal->_vptr_IGameSystem)(this->m_pActualGlobal);
+  return this->m_pActualGlobal->Init();
 }
 
 
@@ -7227,7 +7227,7 @@ bool __fastcall CGameSystemStaticFactory<CDOTA_RealtimeCombatAnalyzer,CDOTA_Real
 bool __fastcall CGameSystemStaticFactory<CDOTA_CombatAnalyzer,CDOTA_CombatAnalyzer>::Init(
         CGameSystemStaticFactory<CDOTA_CombatAnalyzer,CDOTA_CombatAnalyzer> *const this)
 {
-  return (*this->m_pActualGlobal->_vptr_IGameSystem)(this->m_pActualGlobal);
+  return this->m_pActualGlobal->Init();
 }
 
 
@@ -7235,7 +7235,7 @@ bool __fastcall CGameSystemStaticFactory<CDOTA_CombatAnalyzer,CDOTA_CombatAnalyz
 bool __fastcall CGameSystemStaticFactory<CDOTAChallengeSystem,CDOTAChallengeSystem>::Init(
         CGameSystemStaticFactory<CDOTAChallengeSystem,CDOTAChallengeSystem> *const this)
 {
-  return (*this->m_pActualGlobal->_vptr_IGameSystem)(this->m_pActualGlobal);
+  return this->m_pActualGlobal->Init();
 }
 
 
@@ -7243,7 +7243,7 @@ bool __fastcall CGameSystemStaticFactory<CDOTAChallengeSystem,CDOTAChallengeSyst
 bool __fastcall CGameSystemStaticFactory<CDOTA_BinaryObjectSystem,CDOTA_BinaryObjectSystem>::Init(
         CGameSystemStaticFactory<CDOTA_BinaryObjectSystem,CDOTA_BinaryObjectSystem> *const this)
 {
-  return (*this->m_pActualGlobal->_vptr_IGameSystem)(this->m_pActualGlobal);
+  return this->m_pActualGlobal->Init();
 }
 
 
@@ -7251,7 +7251,7 @@ bool __fastcall CGameSystemStaticFactory<CDOTA_BinaryObjectSystem,CDOTA_BinaryOb
 bool __fastcall CGameSystemStaticFactory<CGridNav,CGridNav>::Init(
         CGameSystemStaticFactory<CGridNav,CGridNav> *const this)
 {
-  return (*this->m_pActualGlobal->_vptr_IGameSystem)(this->m_pActualGlobal);
+  return this->m_pActualGlobal->Init();
 }
 
 
@@ -7259,7 +7259,7 @@ bool __fastcall CGameSystemStaticFactory<CGridNav,CGridNav>::Init(
 bool __fastcall CGameSystemStaticFactory<CDOTAGameManager,CDOTAGameManager>::Init(
         CGameSystemStaticFactory<CDOTAGameManager,CDOTAGameManager> *const this)
 {
-  return (*this->m_pActualGlobal->_vptr_IGameSystem)(this->m_pActualGlobal);
+  return this->m_pActualGlobal->Init();
 }
 
 
@@ -7267,7 +7267,7 @@ bool __fastcall CGameSystemStaticFactory<CDOTAGameManager,CDOTAGameManager>::Ini
 bool __fastcall CGameSystemStaticFactory<CDOTAFogOfWarSystem,CDOTAFogOfWarSystem>::Init(
         CGameSystemStaticFactory<CDOTAFogOfWarSystem,CDOTAFogOfWarSystem> *const this)
 {
-  return (*this->m_pActualGlobal->_vptr_IGameSystem)(this->m_pActualGlobal);
+  return this->m_pActualGlobal->Init();
 }
 
 
@@ -7283,7 +7283,7 @@ bool __fastcall CGameSystemStaticFactory<CDOTAHLTVDirector,CDOTAHLTVDirector>::I
 bool __fastcall CGameSystemStaticFactory<CDOTA_OGS_VPROF,CDOTA_OGS_VPROF>::Init(
         CGameSystemStaticFactory<CDOTA_OGS_VPROF,CDOTA_OGS_VPROF> *const this)
 {
-  return (*this->m_pActualGlobal->_vptr_IGameSystem)(this->m_pActualGlobal);
+  return this->m_pActualGlobal->Init();
 }
 
 
@@ -7291,7 +7291,7 @@ bool __fastcall CGameSystemStaticFactory<CDOTA_OGS_VPROF,CDOTA_OGS_VPROF>::Init(
 bool __fastcall CGameSystemStaticFactory<CDOTASteamWorksGameStatsServer,CDOTASteamWorksGameStatsServer>::Init(
         CGameSystemStaticFactory<CDOTASteamWorksGameStatsServer,CDOTASteamWorksGameStatsServer> *const this)
 {
-  return (*this->m_pActualGlobal->_vptr_IGameSystem)(this->m_pActualGlobal);
+  return this->m_pActualGlobal->Init();
 }
 
 
@@ -7299,7 +7299,7 @@ bool __fastcall CGameSystemStaticFactory<CDOTASteamWorksGameStatsServer,CDOTASte
 bool __fastcall CGameSystemStaticFactory<CDOTA_ProjectileManager,CDOTA_ProjectileManager>::Init(
         CGameSystemStaticFactory<CDOTA_ProjectileManager,CDOTA_ProjectileManager> *const this)
 {
-  return (*this->m_pActualGlobal->_vptr_IGameSystem)(this->m_pActualGlobal);
+  return this->m_pActualGlobal->Init();
 }
 
 
@@ -7307,7 +7307,7 @@ bool __fastcall CGameSystemStaticFactory<CDOTA_ProjectileManager,CDOTA_Projectil
 bool __fastcall CGameSystemStaticFactory<CDOTA_ParticleManagerSystem,CDOTA_ParticleManagerSystem>::Init(
         CGameSystemStaticFactory<CDOTA_ParticleManagerSystem,CDOTA_ParticleManagerSystem> *const this)
 {
-  return (*this->m_pActualGlobal->_vptr_IGameSystem)(this->m_pActualGlobal);
+  return this->m_pActualGlobal->Init();
 }
 
 
@@ -7315,7 +7315,7 @@ bool __fastcall CGameSystemStaticFactory<CDOTA_ParticleManagerSystem,CDOTA_Parti
 bool __fastcall CGameSystemStaticFactory<CDOTA_Tutorial,CDOTA_Tutorial>::Init(
         CGameSystemStaticFactory<CDOTA_Tutorial,CDOTA_Tutorial> *const this)
 {
-  return (*this->m_pActualGlobal->_vptr_IGameSystem)(this->m_pActualGlobal);
+  return this->m_pActualGlobal->Init();
 }
 
 
@@ -7323,7 +7323,7 @@ bool __fastcall CGameSystemStaticFactory<CDOTA_Tutorial,CDOTA_Tutorial>::Init(
 bool __fastcall CGameSystemStaticFactory<CDotaStatManager,CDotaStatManager>::Init(
         CGameSystemStaticFactory<CDotaStatManager,CDotaStatManager> *const this)
 {
-  return (*this->m_pActualGlobal->_vptr_IGameSystem)(this->m_pActualGlobal);
+  return this->m_pActualGlobal->Init();
 }
 
 
@@ -7331,7 +7331,7 @@ bool __fastcall CGameSystemStaticFactory<CDotaStatManager,CDotaStatManager>::Ini
 bool __fastcall CGameSystemStaticFactory<CDOTASpectatorGraphManager,CDOTASpectatorGraphManager>::Init(
         CGameSystemStaticFactory<CDOTASpectatorGraphManager,CDOTASpectatorGraphManager> *const this)
 {
-  return (*this->m_pActualGlobal->_vptr_IGameSystem)(this->m_pActualGlobal);
+  return this->m_pActualGlobal->Init();
 }
 
 
@@ -7339,7 +7339,7 @@ bool __fastcall CGameSystemStaticFactory<CDOTASpectatorGraphManager,CDOTASpectat
 bool __fastcall CGameSystemStaticFactory<CDOTAVoteSystem,CDOTAVoteSystem>::Init(
         CGameSystemStaticFactory<CDOTAVoteSystem,CDOTAVoteSystem> *const this)
 {
-  return (*this->m_pActualGlobal->_vptr_IGameSystem)(this->m_pActualGlobal);
+  return this->m_pActualGlobal->Init();
 }
 
 
@@ -7347,7 +7347,7 @@ bool __fastcall CGameSystemStaticFactory<CDOTAVoteSystem,CDOTAVoteSystem>::Init(
 bool __fastcall CGameSystemStaticFactory<CDOTA_Grinder,CDOTA_Grinder>::Init(
         CGameSystemStaticFactory<CDOTA_Grinder,CDOTA_Grinder> *const this)
 {
-  return (*this->m_pActualGlobal->_vptr_IGameSystem)(this->m_pActualGlobal);
+  return this->m_pActualGlobal->Init();
 }
 
 
@@ -7355,7 +7355,7 @@ bool __fastcall CGameSystemStaticFactory<CDOTA_Grinder,CDOTA_Grinder>::Init(
 bool __fastcall CGameSystemStaticFactory<CDOTA_AutoCombinableItems,CDOTA_AutoCombinableItems>::Init(
         CGameSystemStaticFactory<CDOTA_AutoCombinableItems,CDOTA_AutoCombinableItems> *const this)
 {
-  return (*this->m_pActualGlobal->_vptr_IGameSystem)(this->m_pActualGlobal);
+  return this->m_pActualGlobal->Init();
 }
 
 
@@ -7363,7 +7363,7 @@ bool __fastcall CGameSystemStaticFactory<CDOTA_AutoCombinableItems,CDOTA_AutoCom
 bool __fastcall CGameSystemStaticFactory<CDOTA_Commander,CDOTA_Commander>::Init(
         CGameSystemStaticFactory<CDOTA_Commander,CDOTA_Commander> *const this)
 {
-  return (*this->m_pActualGlobal->_vptr_IGameSystem)(this->m_pActualGlobal);
+  return this->m_pActualGlobal->Init();
 }
 
 
@@ -7371,7 +7371,7 @@ bool __fastcall CGameSystemStaticFactory<CDOTA_Commander,CDOTA_Commander>::Init(
 bool __fastcall CGameSystemStaticFactory<CDOTAHeroList,CDOTAHeroList>::Init(
         CGameSystemStaticFactory<CDOTAHeroList,CDOTAHeroList> *const this)
 {
-  return (*this->m_pActualGlobal->_vptr_IGameSystem)(this->m_pActualGlobal);
+  return this->m_pActualGlobal->Init();
 }
 
 
@@ -7379,7 +7379,7 @@ bool __fastcall CGameSystemStaticFactory<CDOTAHeroList,CDOTAHeroList>::Init(
 bool __fastcall CGameSystemStaticFactory<CDOTACustomGameCache,CDOTACustomGameCache>::Init(
         CGameSystemStaticFactory<CDOTACustomGameCache,CDOTACustomGameCache> *const this)
 {
-  return (*this->m_pActualGlobal->_vptr_IGameSystem)(this->m_pActualGlobal);
+  return this->m_pActualGlobal->Init();
 }
 
 
@@ -7395,7 +7395,7 @@ bool __fastcall CGameSystemStaticFactory<CDOTAGCServerSystem,CDOTAGCServerSystem
 bool __fastcall CGameSystemStaticFactory<CAnnouncerSharedThinker,CAnnouncerSharedThinker>::Init(
         CGameSystemStaticFactory<CAnnouncerSharedThinker,CAnnouncerSharedThinker> *const this)
 {
-  return (*this->m_pActualGlobal->_vptr_IGameSystem)(this->m_pActualGlobal);
+  return this->m_pActualGlobal->Init();
 }
 
 
@@ -7403,7 +7403,7 @@ bool __fastcall CGameSystemStaticFactory<CAnnouncerSharedThinker,CAnnouncerShare
 bool __fastcall CGameSystemStaticFactory<CDOTA_TeleportTimerManager,CDOTA_TeleportTimerManager>::Init(
         CGameSystemStaticFactory<CDOTA_TeleportTimerManager,CDOTA_TeleportTimerManager> *const this)
 {
-  return (*this->m_pActualGlobal->_vptr_IGameSystem)(this->m_pActualGlobal);
+  return this->m_pActualGlobal->Init();
 }
 
 
@@ -7411,7 +7411,7 @@ bool __fastcall CGameSystemStaticFactory<CDOTA_TeleportTimerManager,CDOTA_Telepo
 bool __fastcall CGameSystemStaticFactory<CItemGeneration,CItemGeneration>::Init(
         CGameSystemStaticFactory<CItemGeneration,CItemGeneration> *const this)
 {
-  return (*this->m_pActualGlobal->_vptr_IGameSystem)(this->m_pActualGlobal);
+  return this->m_pActualGlobal->Init();
 }
 
 
@@ -12229,7 +12229,7 @@ IGameSystem *__fastcall CGameSystemAbstractFactory<CVScriptGameSystem,IVScriptGa
 void __fastcall CStartupHookGameSystem<GameToolEventToolEvent_SFMRecordingStateChanged_tInternal,0>::~CStartupHookGameSystem(
         CStartupHookGameSystem<GameToolEventToolEvent_SFMRecordingStateChanged_tInternal,0> *const this)
 {
-  this->_vptr_IGameSystem = off_3FCDDB0;
+  this->_vptr_IGameSystem = off_3FCDDB0;  // vptr: CStartupHookGameSystem<GameToolEventToolEvent_SFMRecordingStateChanged_tInternal,0>
   IGameSystem::~IGameSystem(this);
 }
 
@@ -12239,7 +12239,7 @@ void __fastcall CStartupHookGameSystem<GameToolEventToolEvent_SFMRecordingStateC
 void __fastcall CStartupHookGameSystem<GameToolEventToolEvent_SFMRecordingStateChanged_tInternal,0>::~CStartupHookGameSystem(
         CStartupHookGameSystem<GameToolEventToolEvent_SFMRecordingStateChanged_tInternal,0> *const this)
 {
-  this->_vptr_IGameSystem = off_3FCDDB0;
+  this->_vptr_IGameSystem = off_3FCDDB0;  // vptr: CStartupHookGameSystem<GameToolEventToolEvent_SFMRecordingStateChanged_tInternal,0>
   IGameSystem::~IGameSystem(this);
   operator delete(this);
 }
@@ -12250,7 +12250,7 @@ void __fastcall CStartupHookGameSystem<GameToolEventToolEvent_SFMRecordingStateC
 void __fastcall CStartupHookGameSystem<GameToolEventToolTraceRayResult_tInternal,0>::~CStartupHookGameSystem(
         CStartupHookGameSystem<GameToolEventToolTraceRayResult_tInternal,0> *const this)
 {
-  this->_vptr_IGameSystem = off_3FFB450;
+  this->_vptr_IGameSystem = off_3FFB450;  // vptr: CStartupHookGameSystem<GameToolEventToolTraceRayResult_tInternal,0>
   IGameSystem::~IGameSystem(this);
 }
 
@@ -12260,7 +12260,7 @@ void __fastcall CStartupHookGameSystem<GameToolEventToolTraceRayResult_tInternal
 void __fastcall CStartupHookGameSystem<GameToolEventToolTraceRayResult_tInternal,0>::~CStartupHookGameSystem(
         CStartupHookGameSystem<GameToolEventToolTraceRayResult_tInternal,0> *const this)
 {
-  this->_vptr_IGameSystem = off_3FFB450;
+  this->_vptr_IGameSystem = off_3FFB450;  // vptr: CStartupHookGameSystem<GameToolEventToolTraceRayResult_tInternal,0>
   IGameSystem::~IGameSystem(this);
   operator delete(this);
 }
@@ -12271,7 +12271,7 @@ void __fastcall CStartupHookGameSystem<GameToolEventToolTraceRayResult_tInternal
 void __fastcall CStartupHookGameSystem<GameToolEventTraceRayServerToolEvent_tInternal,0>::~CStartupHookGameSystem(
         CStartupHookGameSystem<GameToolEventTraceRayServerToolEvent_tInternal,0> *const this)
 {
-  this->_vptr_IGameSystem = off_3FFB130;
+  this->_vptr_IGameSystem = off_3FFB130;  // vptr: CStartupHookGameSystem<GameToolEventTraceRayServerToolEvent_tInternal,0>
   IGameSystem::~IGameSystem(this);
 }
 
@@ -12281,7 +12281,7 @@ void __fastcall CStartupHookGameSystem<GameToolEventTraceRayServerToolEvent_tInt
 void __fastcall CStartupHookGameSystem<GameToolEventTraceRayServerToolEvent_tInternal,0>::~CStartupHookGameSystem(
         CStartupHookGameSystem<GameToolEventTraceRayServerToolEvent_tInternal,0> *const this)
 {
-  this->_vptr_IGameSystem = off_3FFB130;
+  this->_vptr_IGameSystem = off_3FFB130;  // vptr: CStartupHookGameSystem<GameToolEventTraceRayServerToolEvent_tInternal,0>
   IGameSystem::~IGameSystem(this);
   operator delete(this);
 }
@@ -12292,7 +12292,7 @@ void __fastcall CStartupHookGameSystem<GameToolEventTraceRayServerToolEvent_tInt
 void __fastcall CStartupHookGameSystem<GameToolEventDestroyAllEntitiesToolEvent_tInternal,0>::~CStartupHookGameSystem(
         CStartupHookGameSystem<GameToolEventDestroyAllEntitiesToolEvent_tInternal,0> *const this)
 {
-  this->_vptr_IGameSystem = off_3FFAE10;
+  this->_vptr_IGameSystem = off_3FFAE10;  // vptr: CStartupHookGameSystem<GameToolEventDestroyAllEntitiesToolEvent_tInternal,0>
   IGameSystem::~IGameSystem(this);
 }
 
@@ -12302,7 +12302,7 @@ void __fastcall CStartupHookGameSystem<GameToolEventDestroyAllEntitiesToolEvent_
 void __fastcall CStartupHookGameSystem<GameToolEventDestroyAllEntitiesToolEvent_tInternal,0>::~CStartupHookGameSystem(
         CStartupHookGameSystem<GameToolEventDestroyAllEntitiesToolEvent_tInternal,0> *const this)
 {
-  this->_vptr_IGameSystem = off_3FFAE10;
+  this->_vptr_IGameSystem = off_3FFAE10;  // vptr: CStartupHookGameSystem<GameToolEventDestroyAllEntitiesToolEvent_tInternal,0>
   IGameSystem::~IGameSystem(this);
   operator delete(this);
 }
@@ -12313,7 +12313,7 @@ void __fastcall CStartupHookGameSystem<GameToolEventDestroyAllEntitiesToolEvent_
 void __fastcall CStartupHookGameSystem<GameToolEventRestartMapToolEvent_tInternal,0>::~CStartupHookGameSystem(
         CStartupHookGameSystem<GameToolEventRestartMapToolEvent_tInternal,0> *const this)
 {
-  this->_vptr_IGameSystem = off_3FFAAF0;
+  this->_vptr_IGameSystem = off_3FFAAF0;  // vptr: CStartupHookGameSystem<GameToolEventRestartMapToolEvent_tInternal,0>
   IGameSystem::~IGameSystem(this);
 }
 
@@ -12323,7 +12323,7 @@ void __fastcall CStartupHookGameSystem<GameToolEventRestartMapToolEvent_tInterna
 void __fastcall CStartupHookGameSystem<GameToolEventRestartMapToolEvent_tInternal,0>::~CStartupHookGameSystem(
         CStartupHookGameSystem<GameToolEventRestartMapToolEvent_tInternal,0> *const this)
 {
-  this->_vptr_IGameSystem = off_3FFAAF0;
+  this->_vptr_IGameSystem = off_3FFAAF0;  // vptr: CStartupHookGameSystem<GameToolEventRestartMapToolEvent_tInternal,0>
   IGameSystem::~IGameSystem(this);
   operator delete(this);
 }
@@ -12334,7 +12334,7 @@ void __fastcall CStartupHookGameSystem<GameToolEventRestartMapToolEvent_tInterna
 void __fastcall CStartupHookGameSystem<GameToolEventDestroyEntityToolEvent_tInternal,0>::~CStartupHookGameSystem(
         CStartupHookGameSystem<GameToolEventDestroyEntityToolEvent_tInternal,0> *const this)
 {
-  this->_vptr_IGameSystem = off_3FFA7D0;
+  this->_vptr_IGameSystem = off_3FFA7D0;  // vptr: CStartupHookGameSystem<GameToolEventDestroyEntityToolEvent_tInternal,0>
   IGameSystem::~IGameSystem(this);
 }
 
@@ -12344,7 +12344,7 @@ void __fastcall CStartupHookGameSystem<GameToolEventDestroyEntityToolEvent_tInte
 void __fastcall CStartupHookGameSystem<GameToolEventDestroyEntityToolEvent_tInternal,0>::~CStartupHookGameSystem(
         CStartupHookGameSystem<GameToolEventDestroyEntityToolEvent_tInternal,0> *const this)
 {
-  this->_vptr_IGameSystem = off_3FFA7D0;
+  this->_vptr_IGameSystem = off_3FFA7D0;  // vptr: CStartupHookGameSystem<GameToolEventDestroyEntityToolEvent_tInternal,0>
   IGameSystem::~IGameSystem(this);
   operator delete(this);
 }
@@ -12355,7 +12355,7 @@ void __fastcall CStartupHookGameSystem<GameToolEventDestroyEntityToolEvent_tInte
 void __fastcall CStartupHookGameSystem<GameToolEventSpawnEntityToolEvent_tInternal,0>::~CStartupHookGameSystem(
         CStartupHookGameSystem<GameToolEventSpawnEntityToolEvent_tInternal,0> *const this)
 {
-  this->_vptr_IGameSystem = off_3FFA4B0;
+  this->_vptr_IGameSystem = off_3FFA4B0;  // vptr: CStartupHookGameSystem<GameToolEventSpawnEntityToolEvent_tInternal,0>
   IGameSystem::~IGameSystem(this);
 }
 
@@ -12365,7 +12365,7 @@ void __fastcall CStartupHookGameSystem<GameToolEventSpawnEntityToolEvent_tIntern
 void __fastcall CStartupHookGameSystem<GameToolEventSpawnEntityToolEvent_tInternal,0>::~CStartupHookGameSystem(
         CStartupHookGameSystem<GameToolEventSpawnEntityToolEvent_tInternal,0> *const this)
 {
-  this->_vptr_IGameSystem = off_3FFA4B0;
+  this->_vptr_IGameSystem = off_3FFA4B0;  // vptr: CStartupHookGameSystem<GameToolEventSpawnEntityToolEvent_tInternal,0>
   IGameSystem::~IGameSystem(this);
   operator delete(this);
 }
@@ -12376,7 +12376,7 @@ void __fastcall CStartupHookGameSystem<GameToolEventSpawnEntityToolEvent_tIntern
 void __fastcall CStartupHookGameSystem<GameToolEventToolEvent_SFMToolActiveStateChanged_tInternal,0>::~CStartupHookGameSystem(
         CStartupHookGameSystem<GameToolEventToolEvent_SFMToolActiveStateChanged_tInternal,0> *const this)
 {
-  this->_vptr_IGameSystem = off_3FFA190;
+  this->_vptr_IGameSystem = off_3FFA190;  // vptr: CStartupHookGameSystem<GameToolEventToolEvent_SFMToolActiveStateChanged_tInternal,0>
   IGameSystem::~IGameSystem(this);
 }
 
@@ -12386,7 +12386,7 @@ void __fastcall CStartupHookGameSystem<GameToolEventToolEvent_SFMToolActiveState
 void __fastcall CStartupHookGameSystem<GameToolEventToolEvent_SFMToolActiveStateChanged_tInternal,0>::~CStartupHookGameSystem(
         CStartupHookGameSystem<GameToolEventToolEvent_SFMToolActiveStateChanged_tInternal,0> *const this)
 {
-  this->_vptr_IGameSystem = off_3FFA190;
+  this->_vptr_IGameSystem = off_3FFA190;  // vptr: CStartupHookGameSystem<GameToolEventToolEvent_SFMToolActiveStateChanged_tInternal,0>
   IGameSystem::~IGameSystem(this);
   operator delete(this);
 }
@@ -12397,7 +12397,7 @@ void __fastcall CStartupHookGameSystem<GameToolEventToolEvent_SFMToolActiveState
 void __fastcall CStartupHookGameSystem<GameToolEventToolEvent_FireEntityInput_tInternal,0>::~CStartupHookGameSystem(
         CStartupHookGameSystem<GameToolEventToolEvent_FireEntityInput_tInternal,0> *const this)
 {
-  this->_vptr_IGameSystem = off_3FF9E70;
+  this->_vptr_IGameSystem = off_3FF9E70;  // vptr: CStartupHookGameSystem<GameToolEventToolEvent_FireEntityInput_tInternal,0>
   IGameSystem::~IGameSystem(this);
 }
 
@@ -12407,7 +12407,7 @@ void __fastcall CStartupHookGameSystem<GameToolEventToolEvent_FireEntityInput_tI
 void __fastcall CStartupHookGameSystem<GameToolEventToolEvent_FireEntityInput_tInternal,0>::~CStartupHookGameSystem(
         CStartupHookGameSystem<GameToolEventToolEvent_FireEntityInput_tInternal,0> *const this)
 {
-  this->_vptr_IGameSystem = off_3FF9E70;
+  this->_vptr_IGameSystem = off_3FF9E70;  // vptr: CStartupHookGameSystem<GameToolEventToolEvent_FireEntityInput_tInternal,0>
   IGameSystem::~IGameSystem(this);
   operator delete(this);
 }
@@ -12418,7 +12418,7 @@ void __fastcall CStartupHookGameSystem<GameToolEventToolEvent_FireEntityInput_tI
 void __fastcall CStartupHookGameSystem<GameToolEventToolEvent_GetEntityInputsResult_tInternal,0>::~CStartupHookGameSystem(
         CStartupHookGameSystem<GameToolEventToolEvent_GetEntityInputsResult_tInternal,0> *const this)
 {
-  this->_vptr_IGameSystem = off_3FF9B50;
+  this->_vptr_IGameSystem = off_3FF9B50;  // vptr: CStartupHookGameSystem<GameToolEventToolEvent_GetEntityInputsResult_tInternal,0>
   IGameSystem::~IGameSystem(this);
 }
 
@@ -12428,7 +12428,7 @@ void __fastcall CStartupHookGameSystem<GameToolEventToolEvent_GetEntityInputsRes
 void __fastcall CStartupHookGameSystem<GameToolEventToolEvent_GetEntityInputsResult_tInternal,0>::~CStartupHookGameSystem(
         CStartupHookGameSystem<GameToolEventToolEvent_GetEntityInputsResult_tInternal,0> *const this)
 {
-  this->_vptr_IGameSystem = off_3FF9B50;
+  this->_vptr_IGameSystem = off_3FF9B50;  // vptr: CStartupHookGameSystem<GameToolEventToolEvent_GetEntityInputsResult_tInternal,0>
   IGameSystem::~IGameSystem(this);
   operator delete(this);
 }
@@ -12439,7 +12439,7 @@ void __fastcall CStartupHookGameSystem<GameToolEventToolEvent_GetEntityInputsRes
 void __fastcall CStartupHookGameSystem<GameToolEventToolEvent_GetEntityInputs_tInternal,0>::~CStartupHookGameSystem(
         CStartupHookGameSystem<GameToolEventToolEvent_GetEntityInputs_tInternal,0> *const this)
 {
-  this->_vptr_IGameSystem = off_3FF9830;
+  this->_vptr_IGameSystem = off_3FF9830;  // vptr: CStartupHookGameSystem<GameToolEventToolEvent_GetEntityInputs_tInternal,0>
   IGameSystem::~IGameSystem(this);
 }
 
@@ -12449,7 +12449,7 @@ void __fastcall CStartupHookGameSystem<GameToolEventToolEvent_GetEntityInputs_tI
 void __fastcall CStartupHookGameSystem<GameToolEventToolEvent_GetEntityInputs_tInternal,0>::~CStartupHookGameSystem(
         CStartupHookGameSystem<GameToolEventToolEvent_GetEntityInputs_tInternal,0> *const this)
 {
-  this->_vptr_IGameSystem = off_3FF9830;
+  this->_vptr_IGameSystem = off_3FF9830;  // vptr: CStartupHookGameSystem<GameToolEventToolEvent_GetEntityInputs_tInternal,0>
   IGameSystem::~IGameSystem(this);
   operator delete(this);
 }
@@ -12460,7 +12460,7 @@ void __fastcall CStartupHookGameSystem<GameToolEventToolEvent_GetEntityInputs_tI
 void __fastcall CStartupHookGameSystem<GameToolEventToolEvent_GetEntityInfoResult_tInternal,0>::~CStartupHookGameSystem(
         CStartupHookGameSystem<GameToolEventToolEvent_GetEntityInfoResult_tInternal,0> *const this)
 {
-  this->_vptr_IGameSystem = off_3FF9510;
+  this->_vptr_IGameSystem = off_3FF9510;  // vptr: CStartupHookGameSystem<GameToolEventToolEvent_GetEntityInfoResult_tInternal,0>
   IGameSystem::~IGameSystem(this);
 }
 
@@ -12470,7 +12470,7 @@ void __fastcall CStartupHookGameSystem<GameToolEventToolEvent_GetEntityInfoResul
 void __fastcall CStartupHookGameSystem<GameToolEventToolEvent_GetEntityInfoResult_tInternal,0>::~CStartupHookGameSystem(
         CStartupHookGameSystem<GameToolEventToolEvent_GetEntityInfoResult_tInternal,0> *const this)
 {
-  this->_vptr_IGameSystem = off_3FF9510;
+  this->_vptr_IGameSystem = off_3FF9510;  // vptr: CStartupHookGameSystem<GameToolEventToolEvent_GetEntityInfoResult_tInternal,0>
   IGameSystem::~IGameSystem(this);
   operator delete(this);
 }
@@ -12481,7 +12481,7 @@ void __fastcall CStartupHookGameSystem<GameToolEventToolEvent_GetEntityInfoResul
 void __fastcall CStartupHookGameSystem<GameToolEventToolEvent_GetEntityInfo_tInternal,0>::~CStartupHookGameSystem(
         CStartupHookGameSystem<GameToolEventToolEvent_GetEntityInfo_tInternal,0> *const this)
 {
-  this->_vptr_IGameSystem = off_3FF91F0;
+  this->_vptr_IGameSystem = off_3FF91F0;  // vptr: CStartupHookGameSystem<GameToolEventToolEvent_GetEntityInfo_tInternal,0>
   IGameSystem::~IGameSystem(this);
 }
 
@@ -12491,7 +12491,7 @@ void __fastcall CStartupHookGameSystem<GameToolEventToolEvent_GetEntityInfo_tInt
 void __fastcall CStartupHookGameSystem<GameToolEventToolEvent_GetEntityInfo_tInternal,0>::~CStartupHookGameSystem(
         CStartupHookGameSystem<GameToolEventToolEvent_GetEntityInfo_tInternal,0> *const this)
 {
-  this->_vptr_IGameSystem = off_3FF91F0;
+  this->_vptr_IGameSystem = off_3FF91F0;  // vptr: CStartupHookGameSystem<GameToolEventToolEvent_GetEntityInfo_tInternal,0>
   IGameSystem::~IGameSystem(this);
   operator delete(this);
 }
@@ -12502,7 +12502,7 @@ void __fastcall CStartupHookGameSystem<GameToolEventToolEvent_GetEntityInfo_tInt
 void __fastcall CStartupHookGameSystem<GameEvent_RegisterInternal,17408>::~CStartupHookGameSystem(
         CStartupHookGameSystem<GameEvent_RegisterInternal,17408> *const this)
 {
-  this->_vptr_IGameSystem = off_3FF74F0;
+  this->_vptr_IGameSystem = off_3FF74F0;  // vptr: CStartupHookGameSystem<GameEvent_RegisterInternal,17408>
   IGameSystem::~IGameSystem(this);
 }
 
@@ -12512,7 +12512,7 @@ void __fastcall CStartupHookGameSystem<GameEvent_RegisterInternal,17408>::~CStar
 void __fastcall CStartupHookGameSystem<GameEvent_RegisterInternal,17408>::~CStartupHookGameSystem(
         CStartupHookGameSystem<GameEvent_RegisterInternal,17408> *const this)
 {
-  this->_vptr_IGameSystem = off_3FF74F0;
+  this->_vptr_IGameSystem = off_3FF74F0;  // vptr: CStartupHookGameSystem<GameEvent_RegisterInternal,17408>
   IGameSystem::~IGameSystem(this);
   operator delete(this);
 }

@@ -30,7 +30,7 @@ void __fastcall CThreadSpinRWLock::LockForWrite(CThreadSpinRWLock *const this)
   __int64 CurrentId; // rsi
   __int128 v3; // rt0
 
-  CurrentId = ThreadGetCurrentId(this);
+  CurrentId = ThreadGetCurrentId();
   _InterlockedAdd(&this->m_nWriters.m_value, 1u);
   if ( this->m_lockInfo.m_nReaders > 0
     || this->m_lockInfo.m_writerId != 0 && CurrentId != this->m_lockInfo.m_writerId

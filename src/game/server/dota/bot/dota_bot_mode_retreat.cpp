@@ -7,7 +7,7 @@
 void __fastcall CDOTA_BotMode_Retreat::CDOTA_BotMode_Retreat(CDOTA_BotMode_Retreat *const this, CDOTA_Bot *pBot)
 {
   CDOTA_BotMode::CDOTA_BotMode(this, pBot);
-  this->_vptr_CDOTA_BotMode = off_42B84D0;
+  this->_vptr_CDOTA_BotMode = off_42B84D0;  // vptr: CDOTA_BotMode_Retreat
 }
 
 

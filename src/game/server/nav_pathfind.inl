@@ -8,7 +8,7 @@ void __fastcall CNavBreadthFirstSearch::~CNavBreadthFirstSearch(CNavBreadthFirst
 {
   std::_Function_base::_Manager_type M_manager; // rax
 
-  this->_vptr_CNavBreadthFirstSearch = off_47AE210;
+  this->_vptr_CNavBreadthFirstSearch = off_47AE210;  // vptr: CNavBreadthFirstSearch
   M_manager = this->m_funcOnSearchArea._M_manager;
   if ( M_manager != 0 )
     M_manager(
@@ -27,7 +27,7 @@ void __fastcall CNavBreadthFirstSearch::~CNavBreadthFirstSearch(CNavBreadthFirst
 {
   std::_Function_base::_Manager_type M_manager; // rax
 
-  this->_vptr_CNavBreadthFirstSearch = off_47AE210;
+  this->_vptr_CNavBreadthFirstSearch = off_47AE210;  // vptr: CNavBreadthFirstSearch
   M_manager = this->m_funcOnSearchArea._M_manager;
   if ( M_manager != 0 )
     M_manager(
@@ -185,7 +185,7 @@ void __fastcall CNavSearchHexLattice::~CNavSearchHexLattice(CNavSearchHexLattice
   std::_Function_base::_Manager_type M_manager; // rax
   std::_Function_base::_Manager_type v4; // rax
 
-  this->_vptr_CNavBreadthFirstSearch = off_47AE230;
+  this->_vptr_CNavBreadthFirstSearch = off_47AE230;  // vptr: CNavSearchHexLattice
   p_m_Memory = &this->m_Hexes.m_Memory;
   CUtlVectorBase<HexIndex_t,CUtlMemoryFixedGrowable<HexIndex_t,1024ul,int>>::RemoveAll(&this->m_Hexes);
   CUtlMemory<HexIndex_t,int>::ConvertToExternalMemory(
@@ -203,7 +203,7 @@ void __fastcall CNavSearchHexLattice::~CNavSearchHexLattice(CNavSearchHexLattice
       &this->m_funcOnSearchPos._M_functor,
       &this->m_funcOnSearchPos._M_functor,
       std::_Manager_operation::__destroy_functor);
-  this->_vptr_CNavBreadthFirstSearch = off_47AE210;
+  this->_vptr_CNavBreadthFirstSearch = off_47AE210;  // vptr: CNavBreadthFirstSearch
   v4 = this->m_funcOnSearchArea._M_manager;
   if ( v4 != 0 )
     v4(
@@ -224,7 +224,7 @@ void __fastcall CNavSearchHexLattice::~CNavSearchHexLattice(CNavSearchHexLattice
   std::_Function_base::_Manager_type M_manager; // rax
   std::_Function_base::_Manager_type v4; // rax
 
-  this->_vptr_CNavBreadthFirstSearch = off_47AE230;
+  this->_vptr_CNavBreadthFirstSearch = off_47AE230;  // vptr: CNavSearchHexLattice
   p_m_Memory = &this->m_Hexes.m_Memory;
   CUtlVectorBase<HexIndex_t,CUtlMemoryFixedGrowable<HexIndex_t,1024ul,int>>::RemoveAll(&this->m_Hexes);
   CUtlMemory<HexIndex_t,int>::ConvertToExternalMemory(
@@ -242,7 +242,7 @@ void __fastcall CNavSearchHexLattice::~CNavSearchHexLattice(CNavSearchHexLattice
       &this->m_funcOnSearchPos._M_functor,
       &this->m_funcOnSearchPos._M_functor,
       std::_Manager_operation::__destroy_functor);
-  this->_vptr_CNavBreadthFirstSearch = off_47AE210;
+  this->_vptr_CNavBreadthFirstSearch = off_47AE210;  // vptr: CNavBreadthFirstSearch
   v4 = this->m_funcOnSearchArea._M_manager;
   if ( v4 != 0 )
     v4(

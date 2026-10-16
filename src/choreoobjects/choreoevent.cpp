@@ -2819,7 +2819,7 @@ void __fastcall CChoreoEvent::StartProcessing(
 {
   *(this + 440) |= 0x10u;
   if ( cb != 0 )
-    (*cb->_vptr_IChoreoEventCallback)(cb, scene, this, t);
+    cb->StartEvent(scene, this, t);
 }
 
 

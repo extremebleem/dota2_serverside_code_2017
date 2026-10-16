@@ -46,7 +46,7 @@ void __fastcall CDOTAConsumableEconItem::CDOTAConsumableEconItem(
         CDOTAConsumableEconItem *const this,
         const CEconItemView *pItem)
 {
-  this->_vptr_CDOTAConsumableEconItem = off_479FFD0;
+  this->_vptr_CDOTAConsumableEconItem = off_479FFD0;  // vptr: CDOTAConsumableEconItem
   this->m_ulItemID.m_Data = 0;
   this->m_pInitiator = 0;
 }
@@ -95,33 +95,32 @@ bool __fastcall CDOTAConsumableEconItem::RequiresGC(CDOTAConsumableEconItem *con
 // globals: GCSDK::CProtoBufMsg<CMsgServerUseItem>::s_bRegisteredWithMemoryPoolMgr, GCSDK::CProtoBufMsg<CMsgServerUseItem>::s_pMemoryPool
 bool __fastcall CDOTAConsumableEconItem::NotifyGC(CDOTAConsumableEconItem *const this)
 {
-  __int64 v2; // rdi
   int m_enabled; // eax
-  bool v4; // r12
+  bool v3; // r12
   ThreadId_t m_TargetThreadId; // r15
-  unsigned __int64 v6; // r14
+  unsigned __int64 v5; // r14
   uint64 m_numTimeBaseTicks; // rcx
   CMsgServerUseItem *m_pProtoBufBody; // rax
   int m_comp; // edx
-  CMsgServerUseItem *v10; // rbx
-  CMsgUseItem *v11; // r12
+  CMsgServerUseItem *v9; // rbx
+  CMsgUseItem *v10; // r12
   uint64 m_Data; // rax
-  int v13; // ebx
-  CBasePlayer *v14; // rax
-  __int64 v15; // rdx
-  int v16; // r15d
-  void *v17; // rax
-  CGCClientSystem *v18; // rax
-  int v20; // eax
-  int v21; // edx
-  GCSDK::CProtoBufMsgMemoryPool<CMsgServerUseItem> *v22; // r14
-  const google::protobuf::Descriptor *v23; // rax
+  int v12; // ebx
+  CBasePlayer *v13; // rax
+  __int64 v14; // rdx
+  int v15; // r15d
+  void *v16; // rax
+  CGCClientSystem *v17; // rax
+  int v19; // eax
+  int v20; // edx
+  GCSDK::CProtoBufMsgMemoryPool<CMsgServerUseItem> *v21; // r14
+  const google::protobuf::Descriptor *v22; // rax
   uint32 Int32; // r15d
-  const google::protobuf::Descriptor *v25; // rax
-  uint32 v26; // eax
-  GCSDK::CProtoBufMsgMemoryPoolMgr *v27; // rax
+  const google::protobuf::Descriptor *v24; // rax
+  uint32 v25; // eax
+  GCSDK::CProtoBufMsgMemoryPoolMgr *v26; // rax
   CVProfNode *m_pCurNode; // rax
-  __int64 v29; // rax
+  CVProfile::CBudgetGroup *v28; // rax
   void *src; // [rsp+8h] [rbp-88h]
   CSteamID steamIDInitiator; // [rsp+10h] [rbp-80h] BYREF
   CSteamID steamIDPlayer; // [rsp+20h] [rbp-70h] BYREF
@@ -131,12 +130,12 @@ bool __fastcall CDOTAConsumableEconItem::NotifyGC(CDOTAConsumableEconItem *const
   msg._vptr_CProtoBufMsgBase = &off_47A0010;
   msg.m_pProtoBufBody = 0;
   m_enabled = g_VProfCurrentProfile.m_enabled;
-  v4 = m_enabled != 0;
+  v3 = m_enabled != 0;
   if ( m_enabled != 0 )
   {
     m_TargetThreadId = g_VProfCurrentProfile.m_TargetThreadId;
-    v6 = __rdtsc();
-    if ( m_TargetThreadId == ThreadGetCurrentId(v2) )
+    v5 = __rdtsc();
+    if ( m_TargetThreadId == ThreadGetCurrentId() )
     {
       m_pCurNode = g_VProfCurrentProfile.m_pCurNode;
       if ( m_pCurNode->m_pszName != "CProtoBufMsg::CProtoBufMsg( MsgType_t )" )
@@ -149,42 +148,42 @@ bool __fastcall CDOTAConsumableEconItem::NotifyGC(CDOTAConsumableEconItem *const
                        4);
         g_VProfCurrentProfile.m_pCurNode = m_pCurNode;
       }
-      v29 = &g_VProfCurrentProfile.m_pBudgetGroups[m_pCurNode->m_BudgetGroupID];
-      *(v29 + 8) |= 4u;
+      v28 = &g_VProfCurrentProfile.m_pBudgetGroups[m_pCurNode->m_BudgetGroupID];
+      v28->m_BudgetFlags |= 4u;
       CVProfNode::EnterScope(g_VProfCurrentProfile.m_pCurNode);
       g_VProfCurrentProfile.m_fAtRoot = 0;
     }
     m_numTimeBaseTicks = g_VProfCurrentProfile.m_ScopeProfiler.m_numTimeBaseTicks;
     ++g_VProfCurrentProfile.m_ScopeProfiler.m_numCalls;
-    g_VProfCurrentProfile.m_ScopeProfiler.m_numTimeBaseTicks = m_numTimeBaseTicks - v6 + __rdtsc();
+    g_VProfCurrentProfile.m_ScopeProfiler.m_numTimeBaseTicks = m_numTimeBaseTicks - v5 + __rdtsc();
   }
   if ( !GCSDK::CProtoBufMsg<CMsgServerUseItem>::s_bRegisteredWithMemoryPoolMgr )
   {
     pthread_mutex_lock(&GCSDK::CProtoBufMsgBase::s_PoolRegMutex.m_Mutex);
     if ( !GCSDK::CProtoBufMsg<CMsgServerUseItem>::s_bRegisteredWithMemoryPoolMgr )
     {
-      v22 = operator new(0x28u);
-      v23 = CMsgServerUseItem::descriptor();
+      v21 = operator new(0x28u);
+      v22 = CMsgServerUseItem::descriptor();
       Int32 = google::protobuf::internal::ExtensionSet::GetInt32(
-                (v23->options_ + 8),
+                (v22->options_ + 8),
                 msgpool_hard_limit.number_,
                 msgpool_hard_limit.default_value_);
-      v25 = CMsgServerUseItem::descriptor();
-      v26 = google::protobuf::internal::ExtensionSet::GetInt32(
-              (v25->options_ + 8),
+      v24 = CMsgServerUseItem::descriptor();
+      v25 = google::protobuf::internal::ExtensionSet::GetInt32(
+              (v24->options_ + 8),
               msgpool_soft_limit.number_,
               msgpool_soft_limit.default_value_);
-      GCSDK::CProtoBufMsgMemoryPoolBase::CProtoBufMsgMemoryPoolBase(v22, v26, Int32);
-      v22->_vptr_CProtoBufMsgMemoryPoolBase = &off_47A4590;
-      GCSDK::CProtoBufMsg<CMsgServerUseItem>::s_pMemoryPool = v22;
-      v27 = GCSDK::GProtoBufMsgMemoryPoolMgr();
-      GCSDK::CProtoBufMsgMemoryPoolMgr::RegisterPool(v27, v22);
+      GCSDK::CProtoBufMsgMemoryPoolBase::CProtoBufMsgMemoryPoolBase(v21, v25, Int32);
+      v21->_vptr_CProtoBufMsgMemoryPoolBase = &off_47A4590;
+      GCSDK::CProtoBufMsg<CMsgServerUseItem>::s_pMemoryPool = v21;
+      v26 = GCSDK::GProtoBufMsgMemoryPoolMgr();
+      GCSDK::CProtoBufMsgMemoryPoolMgr::RegisterPool(v26, v21);
       GCSDK::CProtoBufMsg<CMsgServerUseItem>::s_bRegisteredWithMemoryPoolMgr = 1;
     }
     pthread_mutex_unlock(&GCSDK::CProtoBufMsgBase::s_PoolRegMutex.m_Mutex);
   }
   msg.m_pProtoBufBody = GCSDK::CProtoBufMsgMemoryPoolBase::Alloc(GCSDK::CProtoBufMsg<CMsgServerUseItem>::s_pMemoryPool);
-  if ( v4 )
+  if ( v3 )
     CVProfile::ExitScope(&g_VProfCurrentProfile);
   HIWORD(steamIDInitiator.m_steamid.m_unAll64Bits) = BYTE6(steamIDInitiator.m_steamid.m_unAll64Bits) & 0xF;
   steamIDInitiator.m_steamid.m_comp = (steamIDInitiator.m_steamid.m_unAll64Bits & 0xFFF0000000000000LL);
@@ -193,69 +192,69 @@ bool __fastcall CDOTAConsumableEconItem::NotifyGC(CDOTAConsumableEconItem *const
   m_comp = steamIDInitiator.m_steamid.m_comp;
   *(msg.m_pProtoBufBody + 4) |= 1u;
   *(m_pProtoBufBody + 8) = m_comp;
-  v10 = msg.m_pProtoBufBody;
-  v11 = *(msg.m_pProtoBufBody + 3);
+  v9 = msg.m_pProtoBufBody;
+  v10 = *(msg.m_pProtoBufBody + 3);
   *(msg.m_pProtoBufBody + 4) |= 2u;
-  if ( v11 == 0 )
+  if ( v10 == 0 )
   {
-    v11 = operator new(0x48u);
-    CMsgUseItem::CMsgUseItem(v11);
-    *(v10 + 3) = v11;
+    v10 = operator new(0x48u);
+    CMsgUseItem::CMsgUseItem(v10);
+    *(v9 + 3) = v10;
   }
   m_Data = this->m_ulItemID.m_Data;
-  *(v11 + 4) |= 1u;
-  *(v11 + 3) = m_Data;
+  *(v10 + 4) |= 1u;
+  *(v10 + 3) = m_Data;
   if ( (*(this->_vptr_CDOTAConsumableEconItem + 5))(this) != 0 && gpGlobals->maxClients > 0 )
   {
-    v13 = 1;
+    v12 = 1;
     do
     {
       while ( 1 )
       {
-        v14 = UTIL_PlayerByIndex(v13);
-        if ( v14 != 0 )
+        v13 = UTIL_PlayerByIndex(v12);
+        if ( v13 != 0 )
         {
           HIWORD(steamIDPlayer.m_steamid.m_unAll64Bits) = BYTE6(steamIDPlayer.m_steamid.m_unAll64Bits) & 0xF;
           steamIDPlayer.m_steamid.m_comp = (steamIDPlayer.m_steamid.m_unAll64Bits & 0xFFF0000000000000LL);
-          if ( CBasePlayer::GetSteamID(v14, &steamIDPlayer) )
+          if ( CBasePlayer::GetSteamID(v13, &steamIDPlayer) )
             break;
         }
-        if ( gpGlobals->maxClients < ++v13 )
+        if ( gpGlobals->maxClients < ++v12 )
           goto LABEL_20;
       }
-      v15 = *(v11 + 12);
-      v16 = steamIDPlayer.m_steamid.m_comp;
-      v17 = *(v11 + 5);
-      if ( v15 == *(v11 + 13) )
+      v14 = *(v10 + 12);
+      v15 = steamIDPlayer.m_steamid.m_comp;
+      v16 = *(v10 + 5);
+      if ( v14 == *(v10 + 13) )
       {
-        src = *(v11 + 5);
-        v20 = v15 + 1;
-        v21 = 2 * v15;
-        if ( v20 >= v21 )
-          v21 = v20;
-        if ( v21 < 4 )
-          v21 = 4;
-        *(v11 + 13) = v21;
-        v17 = operator new[](4LL * v21);
-        *(v11 + 5) = v17;
-        v15 = *(v11 + 12);
+        src = *(v10 + 5);
+        v19 = v14 + 1;
+        v20 = 2 * v14;
+        if ( v19 >= v20 )
+          v20 = v19;
+        if ( v20 < 4 )
+          v20 = 4;
+        *(v10 + 13) = v20;
+        v16 = operator new[](4LL * v20);
+        *(v10 + 5) = v16;
+        v14 = *(v10 + 12);
         if ( src != 0 )
         {
-          memcpy(v17, src, 4 * v15);
+          memcpy(v16, src, 4 * v14);
           operator delete[](src);
-          v17 = *(v11 + 5);
-          v15 = *(v11 + 12);
+          v16 = *(v10 + 5);
+          v14 = *(v10 + 12);
         }
       }
-      ++v13;
-      *(v11 + 12) = v15 + 1;
-      *(v17 + v15) = v16;
+      ++v12;
+      *(v10 + 12) = v14 + 1;
+      *(v16 + v14) = v15;
     }
-    while ( gpGlobals->maxClients >= v13 );
+    while ( gpGlobals->maxClients >= v12 );
   }
 LABEL_20:
-  v18 = GCClientSystem();
-  CGCClientSystem::BSendMessage(v18, &msg);
+  v17 = GCClientSystem();
+  CGCClientSystem::BSendMessage(v17, &msg);
   msg._vptr_CProtoBufMsgBase = &off_47A0010;
   if ( msg.m_pProtoBufBody != 0 )
   {
@@ -274,25 +273,23 @@ LABEL_20:
 // globals: GCSDK::CProtoBufMsg<CMsgServerUseItem>::s_bRegisteredWithMemoryPoolMgr, GCSDK::CProtoBufMsg<CMsgServerUseItem>::s_pMemoryPool
 bool __fastcall CDOTAConsumableEconItem::ConsumeItem(uint32 unAccountID, uint64 ulItemID)
 {
-  __int64 v4; // rdi
   int m_enabled; // eax
-  bool v6; // r13
+  bool v5; // r13
   uint64 m_numTimeBaseTicks; // rcx
+  const google::protobuf::Descriptor *v7; // rax
   const google::protobuf::Descriptor *v8; // rax
-  const google::protobuf::Descriptor *v9; // rax
   uint32 Int32; // eax
-  GCSDK::CProtoBufMsgMemoryPoolMgr *v11; // rax
+  GCSDK::CProtoBufMsgMemoryPoolMgr *v10; // rax
   google::protobuf::Message *m_pProtoBufBody; // rcx
-  __int64 v13; // rdi
-  CMsgServerUseItem *v14; // rbx
-  CMsgUseItem *v15; // rax
-  CGCClientSystem *v16; // rax
-  unsigned __int64 v18; // r13
-  uint64 v19; // rsi
+  CMsgServerUseItem *v12; // rbx
+  CMsgUseItem *v13; // rax
+  CGCClientSystem *v14; // rax
+  unsigned __int64 v16; // r13
+  uint64 v17; // rsi
   CVProfNode *m_pCurNode; // rax
-  CVProfile::CBudgetGroup *v21; // rax
+  CVProfile::CBudgetGroup *v19; // rax
   CVProfNode *m_pParent; // rax
-  CMsgUseItem *v23; // r13
+  CMsgUseItem *v21; // r13
   uint32 unTargetHigh[2]; // [rsp+0h] [rbp-70h]
   uint32 unTargetHigha; // [rsp+0h] [rbp-70h]
   GCSDK::CProtoBufMsgMemoryPoolBase *pPool; // [rsp+8h] [rbp-68h]
@@ -304,12 +301,12 @@ bool __fastcall CDOTAConsumableEconItem::ConsumeItem(uint32 unAccountID, uint64 
   msg._vptr_CProtoBufMsgBase = &off_47A0010;
   msg.m_pProtoBufBody = 0;
   m_enabled = g_VProfCurrentProfile.m_enabled;
-  v6 = m_enabled != 0;
+  v5 = m_enabled != 0;
   if ( m_enabled != 0 )
   {
     pPool = __rdtsc();
     *unTargetHigh = g_VProfCurrentProfile.m_TargetThreadId;
-    if ( *unTargetHigh == ThreadGetCurrentId(v4) )
+    if ( *unTargetHigh == ThreadGetCurrentId() )
     {
       m_pCurNode = g_VProfCurrentProfile.m_pCurNode;
       if ( m_pCurNode->m_pszName != "CProtoBufMsg::CProtoBufMsg( MsgType_t )" )
@@ -322,8 +319,8 @@ bool __fastcall CDOTAConsumableEconItem::ConsumeItem(uint32 unAccountID, uint64 
                        4);
         g_VProfCurrentProfile.m_pCurNode = m_pCurNode;
       }
-      v21 = &g_VProfCurrentProfile.m_pBudgetGroups[m_pCurNode->m_BudgetGroupID];
-      v21->m_BudgetFlags |= 4u;
+      v19 = &g_VProfCurrentProfile.m_pBudgetGroups[m_pCurNode->m_BudgetGroupID];
+      v19->m_BudgetFlags |= 4u;
       CVProfNode::EnterScope(g_VProfCurrentProfile.m_pCurNode);
       g_VProfCurrentProfile.m_fAtRoot = 0;
     }
@@ -337,34 +334,34 @@ bool __fastcall CDOTAConsumableEconItem::ConsumeItem(uint32 unAccountID, uint64 
     if ( !GCSDK::CProtoBufMsg<CMsgServerUseItem>::s_bRegisteredWithMemoryPoolMgr )
     {
       pPoola = operator new(0x28u);
-      v8 = CMsgServerUseItem::descriptor();
+      v7 = CMsgServerUseItem::descriptor();
       unTargetHigha = google::protobuf::internal::ExtensionSet::GetInt32(
-                        (v8->options_ + 8),
+                        (v7->options_ + 8),
                         msgpool_hard_limit.number_,
                         msgpool_hard_limit.default_value_);
-      v9 = CMsgServerUseItem::descriptor();
+      v8 = CMsgServerUseItem::descriptor();
       Int32 = google::protobuf::internal::ExtensionSet::GetInt32(
-                (v9->options_ + 8),
+                (v8->options_ + 8),
                 msgpool_soft_limit.number_,
                 msgpool_soft_limit.default_value_);
       GCSDK::CProtoBufMsgMemoryPoolBase::CProtoBufMsgMemoryPoolBase(pPoola, Int32, unTargetHigha);
       pPoola->_vptr_CProtoBufMsgMemoryPoolBase = &off_47A4590;
       GCSDK::CProtoBufMsg<CMsgServerUseItem>::s_pMemoryPool = pPoola;
-      v11 = GCSDK::GProtoBufMsgMemoryPoolMgr();
-      GCSDK::CProtoBufMsgMemoryPoolMgr::RegisterPool(v11, pPoola);
+      v10 = GCSDK::GProtoBufMsgMemoryPoolMgr();
+      GCSDK::CProtoBufMsgMemoryPoolMgr::RegisterPool(v10, pPoola);
       GCSDK::CProtoBufMsg<CMsgServerUseItem>::s_bRegisteredWithMemoryPoolMgr = 1;
     }
     pthread_mutex_unlock(&GCSDK::CProtoBufMsgBase::s_PoolRegMutex.m_Mutex);
   }
   m_pProtoBufBody = GCSDK::CProtoBufMsgMemoryPoolBase::Alloc(GCSDK::CProtoBufMsg<CMsgServerUseItem>::s_pMemoryPool);
   msg.m_pProtoBufBody = m_pProtoBufBody;
-  if ( v6 )
+  if ( v5 )
   {
-    v18 = __rdtsc();
+    v16 = __rdtsc();
     if ( !g_VProfCurrentProfile.m_fAtRoot || g_VProfCurrentProfile.m_enabled != 0 )
     {
       pPoolb = g_VProfCurrentProfile.m_TargetThreadId;
-      if ( pPoolb == ThreadGetCurrentId(v13) )
+      if ( pPoolb == ThreadGetCurrentId() )
       {
         if ( CVProfNode::ExitScope(g_VProfCurrentProfile.m_pCurNode) != 0 )
         {
@@ -386,26 +383,26 @@ bool __fastcall CDOTAConsumableEconItem::ConsumeItem(uint32 unAccountID, uint64 
         m_pProtoBufBody = msg.m_pProtoBufBody;
       }
     }
-    v19 = g_VProfCurrentProfile.m_ScopeProfiler.m_numTimeBaseTicks;
+    v17 = g_VProfCurrentProfile.m_ScopeProfiler.m_numTimeBaseTicks;
     ++g_VProfCurrentProfile.m_ScopeProfiler.m_numCalls;
-    g_VProfCurrentProfile.m_ScopeProfiler.m_numTimeBaseTicks = v19 - v18 + __rdtsc();
+    g_VProfCurrentProfile.m_ScopeProfiler.m_numTimeBaseTicks = v17 - v16 + __rdtsc();
   }
   *(m_pProtoBufBody + 4) |= 1u;
   *(m_pProtoBufBody + 8) = unAccountID;
-  v14 = msg.m_pProtoBufBody;
-  v15 = *(msg.m_pProtoBufBody + 3);
+  v12 = msg.m_pProtoBufBody;
+  v13 = *(msg.m_pProtoBufBody + 3);
   *(msg.m_pProtoBufBody + 4) |= 2u;
-  if ( v15 == 0 )
+  if ( v13 == 0 )
   {
-    v23 = operator new(0x48u);
-    CMsgUseItem::CMsgUseItem(v23);
-    *(v14 + 3) = v23;
-    v15 = v23;
+    v21 = operator new(0x48u);
+    CMsgUseItem::CMsgUseItem(v21);
+    *(v12 + 3) = v21;
+    v13 = v21;
   }
-  *(v15 + 4) |= 1u;
-  *(v15 + 3) = ulItemID;
-  v16 = GCClientSystem();
-  CGCClientSystem::BSendMessage(v16, &msg);
+  *(v13 + 4) |= 1u;
+  *(v13 + 3) = ulItemID;
+  v14 = GCClientSystem();
+  CGCClientSystem::BSendMessage(v14, &msg);
   msg._vptr_CProtoBufMsgBase = &off_47A0010;
   if ( msg.m_pProtoBufBody != 0 )
   {
@@ -454,7 +451,7 @@ ActionItemResult_t __fastcall CDOTAConsumableEconItem::TryUse(CDOTAConsumableEco
           (*(this->_vptr_CDOTAConsumableEconItem + 4))(this);
         }
       }
-      if ( (*(this->_vptr_CDOTAConsumableEconItem + 3))(this) == 0 || (*this->_vptr_CDOTAConsumableEconItem)(this) != 0 )
+      if ( (*(this->_vptr_CDOTAConsumableEconItem + 3))(this) == 0 || this->IsServerEconItem() != 0 )
         return (*(this->_vptr_CDOTAConsumableEconItem + 2))(this);
       else
         return ActionItemResult_t::ACTION_ITEM_SUCCESS;
@@ -651,7 +648,7 @@ bool __fastcall UseEconItemID(const char *pszItemID, CDOTAPlayer *pPlayer)
 
   result = pPlayer != 0
         && pszItemID != 0
-        && (v3.m_Data = V_atoi64(),
+        && (v3.m_Data = V_atoi64(pszItemID),
             v4 = (*(pPlayer->_vptr_IHandleEntity + 393))(pPlayer),
             (InventoryForPlayerID = CDOTAInventoryManager::GetInventoryForPlayerID(g_DOTAInventoryManager, v4, 0)) != 0)
         && (InventoryItemByItemID = CPlayerInventory::GetInventoryItemByItemID(InventoryForPlayerID, v3, 0)) != 0
@@ -664,7 +661,7 @@ bool __fastcall UseEconItemID(const char *pszItemID, CDOTAPlayer *pPlayer)
 // calls: GCSDK::CJob::~CJob
 void __fastcall CGCConsumableExhausted::~CGCConsumableExhausted(CGCConsumableExhausted *const this)
 {
-  this->_vptr_CJob = off_40DB690;
+  this->_vptr_CJob = off_40DB690;  // vptr: GCSDK::CGCClientJob
   GCSDK::CJob::~CJob(this);
 }
 
@@ -673,7 +670,7 @@ void __fastcall CGCConsumableExhausted::~CGCConsumableExhausted(CGCConsumableExh
 // calls: GCSDK::CJob::~CJob, operator delete
 void __fastcall CGCConsumableExhausted::~CGCConsumableExhausted(CGCConsumableExhausted *const this)
 {
-  this->_vptr_CJob = off_40DB690;
+  this->_vptr_CJob = off_40DB690;  // vptr: GCSDK::CGCClientJob
   GCSDK::CJob::~CJob(this);
   operator delete(this);
 }
@@ -801,10 +798,10 @@ GCSDK::CJob *__fastcall CreateJob_CGCConsumableExhausted(GCSDK::CGCClient *pGC)
 {
   GCSDK::CJob *v2; // rbx
 
-  v2 = operator new(0x140u);
+  v2 = operator new(0x140u);  // new CGCConsumableExhausted (size matches)
   GCSDK::CJob::CJob(v2, (pGC + 48));
   v2[1]._vptr_CJob = pGC;
-  v2->_vptr_CJob = off_47A0050;
+  v2->_vptr_CJob = off_47A0050;  // vptr: CGCConsumableExhausted
   v2->m_pJobType = &g_JobType_CGCConsumableExhausted;
   *(&v2[1] + 2) = 4;
   return v2;
@@ -1304,29 +1301,29 @@ ActionItemResult_t __fastcall CDOTAVictoryPrediction::ApplyEffects(CDOTAVictoryP
   CEntityIdentity *v7; // rdx
   CEntityInstance *m_pInstance; // r12
   int v10; // eax
-  int v11; // eax
-  char v12; // dl
-  uint32 v13; // r12d
+  const CEconItemView *v11; // rax
+  uint16 m_Data; // r12
+  int v13; // eax
+  char v14; // dl
+  uint32 v15; // r12d
   const CEconItemAttributeDefinition *m_pRef; // rax
   const char *m_szName; // r13
-  CEconItemSchema *v16; // rax
-  uint32 v17; // r12d
+  CEconItemSchema *v18; // rax
+  uint32 v19; // r12d
   CEconItemAttributeDefinition *AttributeDefinitionByName; // rax
-  const char *v19; // r13
-  CEconItemSchema *v20; // rax
-  const CEconItemView *v21; // rdi
-  __int64 v22; // rdi
+  const char *v21; // r13
+  CEconItemSchema *v22; // rax
+  const CEconItemView *v23; // rdi
   int m_enabled; // eax
-  bool v24; // r15
-  unsigned __int64 v25; // r14
+  bool v25; // r15
+  unsigned __int64 v26; // r14
   uint64 m_numTimeBaseTicks; // rcx
-  GCSDK::CProtoBufMsgMemoryPool<CMsgServerToGCLockCharmTrading> *v27; // r14
-  const google::protobuf::Descriptor *v28; // rax
+  GCSDK::CProtoBufMsgMemoryPool<CMsgServerToGCLockCharmTrading> *v28; // r14
   const google::protobuf::Descriptor *v29; // rax
+  const google::protobuf::Descriptor *v30; // rax
   uint32 Int32; // eax
-  GCSDK::CProtoBufMsgMemoryPoolMgr *v31; // rax
+  GCSDK::CProtoBufMsgMemoryPoolMgr *v32; // rax
   google::protobuf::Message *m_pProtoBufBody; // rcx
-  __int64 v33; // rdi
   int m_comp; // eax
   __int64 v35; // rax
   CMsgServerToGCLockCharmTrading *v36; // rdx
@@ -1439,41 +1436,46 @@ ActionItemResult_t __fastcall CDOTAVictoryPrediction::ApplyEffects(CDOTAVictoryP
       }
     }
   }
-  v11 = (*(this->m_pInitiator->_vptr_IHandleEntity + 393))(this->m_pInitiator);
-  CDOTA_PlayerResource::RecordVictoryPrediction(g_pDOTAPlayerResource, v11, this, this->m_ulItemID);
+  v11 = this->m_pItemView;
+  if ( v11 != 0 )
+    m_Data = v11->m_iItemDefinitionIndex.m_Value.m_Data;
+  else
+    m_Data = INVALID_ITEM_DEF_INDEX.m_Data;
+  v13 = (*(this->m_pInitiator->_vptr_IHandleEntity + 393))(this->m_pInitiator);
+  CDOTA_PlayerResource::RecordVictoryPrediction(g_pDOTAPlayerResource, v13, m_Data, this->m_ulItemID);
   HIWORD(steamID.m_steamid.m_unAll64Bits) = BYTE6(steamID.m_steamid.m_unAll64Bits) & 0xF;
   steamID.m_steamid.m_comp = (steamID.m_steamid.m_unAll64Bits & 0xFFF0000000000000LL);
   CBaseMultiplayerPlayer::GetSteamID(this->m_pInitiator, &steamID);
-  v12 = BYTE6(steamID.m_steamid.m_unAll64Bits) & 0xF0;
+  v14 = BYTE6(steamID.m_steamid.m_unAll64Bits) & 0xF0;
   if ( (steamID.m_steamid.m_unAll64Bits & 0xF0000000000000LL) == 0
     || BYTE6(steamID.m_steamid.m_unAll64Bits) > 0xAFu
     || (HIBYTE(steamID.m_steamid.m_unAll64Bits) - 1) > 3u )
   {
     return ActionItemResult_t::ACTION_ITEM_SUCCESS;
   }
-  if ( v12 == 16 )
+  if ( v14 == 16 )
   {
     if ( steamID.m_steamid.m_comp != 0 )
     {
       if ( (*(&steamID.m_steamid.m_comp + 1) & 0xFFFFFu) > 4 )
         return ActionItemResult_t::ACTION_ITEM_SUCCESS;
-      goto LABEL_19;
+      goto LABEL_21;
     }
     return ActionItemResult_t::ACTION_ITEM_SUCCESS;
   }
-  if ( v12 == 112 )
+  if ( v14 == 112 )
   {
     if ( steamID.m_steamid.m_comp != 0 )
     {
       if ( (*(&steamID.m_steamid.m_comp + 1) & 0xFFFFF) != 0 )
         return ActionItemResult_t::ACTION_ITEM_SUCCESS;
-      goto LABEL_19;
+      goto LABEL_21;
     }
     return ActionItemResult_t::ACTION_ITEM_SUCCESS;
   }
-  if ( v12 == 48 && steamID.m_steamid.m_comp == 0 )
+  if ( v14 == 48 && steamID.m_steamid.m_comp == 0 )
     return ActionItemResult_t::ACTION_ITEM_SUCCESS;
-LABEL_19:
+LABEL_21:
   if ( `guard variable for'CDOTAVictoryPrediction::ApplyEffects(void)::pAttrib_CannotTrade == 0
     && __cxa_guard_acquire(&`guard variable for'CDOTAVictoryPrediction::ApplyEffects(void)::pAttrib_CannotTrade) != 0 )
   {
@@ -1493,37 +1495,37 @@ LABEL_19:
   }
   if ( this->m_pItemView == 0 || CDOTAVictoryPrediction::ApplyEffects(void)::pAttrib_CannotTrade.m_szName == 0 )
     return ActionItemResult_t::ACTION_ITEM_SUCCESS;
-  v13 = GEconItemSchema()->m_unResetCount;
+  v15 = GEconItemSchema()->m_unResetCount;
   m_pRef = CDOTAVictoryPrediction::ApplyEffects(void)::pAttrib_CannotTrade.m_pRef;
-  if ( v13 != CDOTAVictoryPrediction::ApplyEffects(void)::pAttrib_CannotTrade.m_unSchemaGeneration )
+  if ( v15 != CDOTAVictoryPrediction::ApplyEffects(void)::pAttrib_CannotTrade.m_unSchemaGeneration )
   {
     m_szName = CDOTAVictoryPrediction::ApplyEffects(void)::pAttrib_CannotTrade.m_szName;
-    v16 = GEconItemSchema();
-    m_pRef = CEconItemSchema::GetAttributeDefinitionByName(v16, m_szName);
-    CDOTAVictoryPrediction::ApplyEffects(void)::pAttrib_CannotTrade.m_unSchemaGeneration = v13;
+    v18 = GEconItemSchema();
+    m_pRef = CEconItemSchema::GetAttributeDefinitionByName(v18, m_szName);
+    CDOTAVictoryPrediction::ApplyEffects(void)::pAttrib_CannotTrade.m_unSchemaGeneration = v15;
     CDOTAVictoryPrediction::ApplyEffects(void)::pAttrib_CannotTrade.m_pRef = m_pRef;
   }
   if ( m_pRef == 0 )
     return ActionItemResult_t::ACTION_ITEM_SUCCESS;
   if ( CDOTAVictoryPrediction::ApplyEffects(void)::pAttrib_CannotTrade.m_szName != 0 )
   {
-    v17 = GEconItemSchema()->m_unResetCount;
+    v19 = GEconItemSchema()->m_unResetCount;
     AttributeDefinitionByName = CDOTAVictoryPrediction::ApplyEffects(void)::pAttrib_CannotTrade.m_pRef;
-    if ( v17 != CDOTAVictoryPrediction::ApplyEffects(void)::pAttrib_CannotTrade.m_unSchemaGeneration )
+    if ( v19 != CDOTAVictoryPrediction::ApplyEffects(void)::pAttrib_CannotTrade.m_unSchemaGeneration )
     {
-      v19 = CDOTAVictoryPrediction::ApplyEffects(void)::pAttrib_CannotTrade.m_szName;
-      v20 = GEconItemSchema();
-      AttributeDefinitionByName = CEconItemSchema::GetAttributeDefinitionByName(v20, v19);
-      CDOTAVictoryPrediction::ApplyEffects(void)::pAttrib_CannotTrade.m_unSchemaGeneration = v17;
+      v21 = CDOTAVictoryPrediction::ApplyEffects(void)::pAttrib_CannotTrade.m_szName;
+      v22 = GEconItemSchema();
+      AttributeDefinitionByName = CEconItemSchema::GetAttributeDefinitionByName(v22, v21);
+      CDOTAVictoryPrediction::ApplyEffects(void)::pAttrib_CannotTrade.m_unSchemaGeneration = v19;
       CDOTAVictoryPrediction::ApplyEffects(void)::pAttrib_CannotTrade.m_pRef = AttributeDefinitionByName;
     }
-    v21 = this->m_pItemView;
+    v23 = this->m_pItemView;
     if ( AttributeDefinitionByName != 0 )
     {
       msg.m_pNetPacket = AttributeDefinitionByName;
       msg._vptr_CProtoBufMsgBase = off_40F17F0;
       LOBYTE(msg.m_pProtoBufHdr) = 0;
-      (*(v21->_vptr_IEconItemInterface + 28))(v21, &msg);
+      (*(v23->_vptr_IEconItemInterface + 28))(v23, &msg);
       if ( LOBYTE(msg.m_pProtoBufHdr) != 0 )
         return ActionItemResult_t::ACTION_ITEM_SUCCESS;
     }
@@ -1532,12 +1534,12 @@ LABEL_19:
   msg._vptr_CProtoBufMsgBase = &off_47A0230;
   msg.m_pProtoBufBody = 0;
   m_enabled = g_VProfCurrentProfile.m_enabled;
-  v24 = m_enabled != 0;
+  v25 = m_enabled != 0;
   if ( m_enabled != 0 )
   {
-    v25 = __rdtsc();
+    v26 = __rdtsc();
     iCurrentStreaka = g_VProfCurrentProfile.m_TargetThreadId;
-    if ( iCurrentStreaka == ThreadGetCurrentId(v22) )
+    if ( iCurrentStreaka == ThreadGetCurrentId() )
     {
       m_pCurNode = g_VProfCurrentProfile.m_pCurNode;
       if ( m_pCurNode->m_pszName != "CProtoBufMsg::CProtoBufMsg( MsgType_t )" )
@@ -1557,42 +1559,42 @@ LABEL_19:
     }
     m_numTimeBaseTicks = g_VProfCurrentProfile.m_ScopeProfiler.m_numTimeBaseTicks;
     ++g_VProfCurrentProfile.m_ScopeProfiler.m_numCalls;
-    g_VProfCurrentProfile.m_ScopeProfiler.m_numTimeBaseTicks = m_numTimeBaseTicks - v25 + __rdtsc();
+    g_VProfCurrentProfile.m_ScopeProfiler.m_numTimeBaseTicks = m_numTimeBaseTicks - v26 + __rdtsc();
   }
   if ( !GCSDK::CProtoBufMsg<CMsgServerToGCLockCharmTrading>::s_bRegisteredWithMemoryPoolMgr )
   {
     pthread_mutex_lock(&GCSDK::CProtoBufMsgBase::s_PoolRegMutex.m_Mutex);
     if ( !GCSDK::CProtoBufMsg<CMsgServerToGCLockCharmTrading>::s_bRegisteredWithMemoryPoolMgr )
     {
-      v27 = operator new(0x28u);
-      v28 = CMsgServerToGCLockCharmTrading::descriptor();
+      v28 = operator new(0x28u);
+      v29 = CMsgServerToGCLockCharmTrading::descriptor();
       iCurrentStreakb = google::protobuf::internal::ExtensionSet::GetInt32(
-                          (v28->options_ + 8),
+                          (v29->options_ + 8),
                           msgpool_hard_limit.number_,
                           msgpool_hard_limit.default_value_);
-      v29 = CMsgServerToGCLockCharmTrading::descriptor();
+      v30 = CMsgServerToGCLockCharmTrading::descriptor();
       Int32 = google::protobuf::internal::ExtensionSet::GetInt32(
-                (v29->options_ + 8),
+                (v30->options_ + 8),
                 msgpool_soft_limit.number_,
                 msgpool_soft_limit.default_value_);
-      GCSDK::CProtoBufMsgMemoryPoolBase::CProtoBufMsgMemoryPoolBase(v27, Int32, iCurrentStreakb);
-      v27->_vptr_CProtoBufMsgMemoryPoolBase = &off_47A4610;
-      GCSDK::CProtoBufMsg<CMsgServerToGCLockCharmTrading>::s_pMemoryPool = v27;
-      v31 = GCSDK::GProtoBufMsgMemoryPoolMgr();
-      GCSDK::CProtoBufMsgMemoryPoolMgr::RegisterPool(v31, v27);
+      GCSDK::CProtoBufMsgMemoryPoolBase::CProtoBufMsgMemoryPoolBase(v28, Int32, iCurrentStreakb);
+      v28->_vptr_CProtoBufMsgMemoryPoolBase = &off_47A4610;
+      GCSDK::CProtoBufMsg<CMsgServerToGCLockCharmTrading>::s_pMemoryPool = v28;
+      v32 = GCSDK::GProtoBufMsgMemoryPoolMgr();
+      GCSDK::CProtoBufMsgMemoryPoolMgr::RegisterPool(v32, v28);
       GCSDK::CProtoBufMsg<CMsgServerToGCLockCharmTrading>::s_bRegisteredWithMemoryPoolMgr = 1;
     }
     pthread_mutex_unlock(&GCSDK::CProtoBufMsgBase::s_PoolRegMutex.m_Mutex);
   }
   m_pProtoBufBody = GCSDK::CProtoBufMsgMemoryPoolBase::Alloc(GCSDK::CProtoBufMsg<CMsgServerToGCLockCharmTrading>::s_pMemoryPool);
   msg.m_pProtoBufBody = m_pProtoBufBody;
-  if ( v24 )
+  if ( v25 )
   {
     v50 = __rdtsc();
     if ( !g_VProfCurrentProfile.m_fAtRoot || g_VProfCurrentProfile.m_enabled != 0 )
     {
       m_TargetThreadId = g_VProfCurrentProfile.m_TargetThreadId;
-      if ( m_TargetThreadId == ThreadGetCurrentId(v33) )
+      if ( m_TargetThreadId == ThreadGetCurrentId() )
       {
         if ( CVProfNode::ExitScope(g_VProfCurrentProfile.m_pCurNode) != 0 )
         {

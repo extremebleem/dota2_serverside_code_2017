@@ -635,7 +635,7 @@ void __fastcall CFourWheelVehiclePhysics::Spawn(
 // CDummyVehicleController::~CDummyVehicleController  (line 371, @0x0000000002245d60, libserver.so)  // inlines: ~IPhysicsVehicleController
 void __fastcall CDummyVehicleController::~CDummyVehicleController(CDummyVehicleController *const this)
 {
-  this->_vptr_IPhysicsVehicleController = off_403FFF0;
+  this->_vptr_IPhysicsVehicleController = off_403FFF0;  // vptr: IPhysicsVehicleController
 }
 
 
@@ -643,7 +643,7 @@ void __fastcall CDummyVehicleController::~CDummyVehicleController(CDummyVehicleC
 // calls: operator delete
 void __fastcall CDummyVehicleController::~CDummyVehicleController(CDummyVehicleController *const this)
 {
-  this->_vptr_IPhysicsVehicleController = off_403FFF0;
+  this->_vptr_IPhysicsVehicleController = off_403FFF0;  // vptr: IPhysicsVehicleController
   operator delete(this);
 }
 

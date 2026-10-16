@@ -422,7 +422,7 @@ CEntityInstance *__fastcall CDOTA_Ability_Throw_Snowball::CEntityInstanceEntityC
 void __fastcall CDOTA_Ability_Throw_Snowball::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Throw_Snowball::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -432,7 +432,7 @@ void __fastcall CDOTA_Ability_Throw_Snowball::CEntityInstanceEntityClass::~CEnti
 void __fastcall CDOTA_Ability_Throw_Snowball::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Throw_Snowball::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -830,7 +830,7 @@ CEntityInstance *__fastcall CDOTA_Ability_Throw_Coal::CEntityInstanceEntityClass
 void __fastcall CDOTA_Ability_Throw_Coal::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Throw_Coal::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -840,7 +840,7 @@ void __fastcall CDOTA_Ability_Throw_Coal::CEntityInstanceEntityClass::~CEntityIn
 void __fastcall CDOTA_Ability_Throw_Coal::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Throw_Coal::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -1235,7 +1235,7 @@ CEntityInstance *__fastcall CDOTA_Ability_Healing_Campfire::CEntityInstanceEntit
 void __fastcall CDOTA_Ability_Healing_Campfire::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Healing_Campfire::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -1245,7 +1245,7 @@ void __fastcall CDOTA_Ability_Healing_Campfire::CEntityInstanceEntityClass::~CEn
 void __fastcall CDOTA_Ability_Healing_Campfire::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Healing_Campfire::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -1533,7 +1533,7 @@ CEntityInstance *__fastcall CDOTA_Ability_ShootFirework::CEntityInstanceEntityCl
 void __fastcall CDOTA_Ability_ShootFirework::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_ShootFirework::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -1543,7 +1543,7 @@ void __fastcall CDOTA_Ability_ShootFirework::CEntityInstanceEntityClass::~CEntit
 void __fastcall CDOTA_Ability_ShootFirework::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_ShootFirework::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }

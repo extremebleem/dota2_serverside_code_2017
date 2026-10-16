@@ -27,7 +27,7 @@ void __fastcall ChasePath::ChasePath(ChasePath *const this)
   this->m_LastTarget.m_vTargetPoint.x = x;
   this->m_LastTarget.m_vTargetPoint.y = y;
   this->m_LastTarget.m_vTargetPoint.z = z;
-  this->_vptr_CPathData = off_47B6510;
+  this->_vptr_CPathData = off_47B6510;  // vptr: ChasePath
   this->m_bShouldLeadTarget = 0;
   this->m_bAllowRepathDueToStuck = 1;
   CountdownTimer::CountdownTimer(&this->m_failTimer);

@@ -137,7 +137,7 @@ CEntityInstance *__fastcall CDOTA_NPCSpawner::CEntityInstanceEntityClass::Constr
 void __fastcall CDOTA_NPCSpawner::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_NPCSpawner::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -147,7 +147,7 @@ void __fastcall CDOTA_NPCSpawner::CEntityInstanceEntityClass::~CEntityInstanceEn
 void __fastcall CDOTA_NPCSpawner::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_NPCSpawner::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -440,7 +440,7 @@ void *__fastcall CDOTA_NeutralSpawner::CEntityInstanceEntityClass::AllocateInsta
 void __fastcall CDOTA_NeutralSpawner::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_NeutralSpawner::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -450,7 +450,7 @@ void __fastcall CDOTA_NeutralSpawner::CEntityInstanceEntityClass::~CEntityInstan
 void __fastcall CDOTA_NeutralSpawner::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_NeutralSpawner::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -677,7 +677,7 @@ CEntityInstance *__fastcall CDOTA_RoshanSpawner::CEntityInstanceEntityClass::Con
 void __fastcall CDOTA_RoshanSpawner::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_RoshanSpawner::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -687,7 +687,7 @@ void __fastcall CDOTA_RoshanSpawner::CEntityInstanceEntityClass::~CEntityInstanc
 void __fastcall CDOTA_RoshanSpawner::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_RoshanSpawner::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -826,14 +826,14 @@ void __fastcall CDOTA_ScriptedSpawner::~CDOTA_ScriptedSpawner(CDOTA_ScriptedSpaw
       CUtlMemory<CDOTA_ScriptedSpawner::scripted_moveto_t,int>::Purge(&this->m_hMoveToTargets.m_Memory);
   }
   v2 = !this->m_bRegisteredForEvents;
-  this->_vptr_IGameEventListener2 = off_3FB3190;
+  this->_vptr_IGameEventListener2 = off_3FB3190;  // vptr: CGameEventListener
   if ( !v2 )
   {
     if ( gameeventmanager != 0 )
       (*(gameeventmanager->_vptr_IBaseInterface + 6))(gameeventmanager, &this->CGameEventListener);
     this->m_bRegisteredForEvents = 0;
   }
-  this->_vptr_IGameEventListener2 = off_3FB3150;
+  this->_vptr_IGameEventListener2 = off_3FB3150;  // vptr: IGameEventListener2
   this->_vptr_IHandleEntity = &off_3FB6510;
   CBaseEntity::~CBaseEntity(this);
 }
@@ -863,14 +863,14 @@ void __fastcall CDOTA_ScriptedSpawner::~CDOTA_ScriptedSpawner(CDOTA_ScriptedSpaw
       CUtlMemory<CDOTA_ScriptedSpawner::scripted_moveto_t,int>::Purge(&this->m_hMoveToTargets.m_Memory);
   }
   v2 = !this->m_bRegisteredForEvents;
-  this->_vptr_IGameEventListener2 = off_3FB3190;
+  this->_vptr_IGameEventListener2 = off_3FB3190;  // vptr: CGameEventListener
   if ( !v2 )
   {
     if ( gameeventmanager != 0 )
       (*(gameeventmanager->_vptr_IBaseInterface + 6))(gameeventmanager, &this->CGameEventListener);
     this->m_bRegisteredForEvents = 0;
   }
-  this->_vptr_IGameEventListener2 = off_3FB3150;
+  this->_vptr_IGameEventListener2 = off_3FB3150;  // vptr: IGameEventListener2
   this->_vptr_IHandleEntity = &off_3FB6510;
   CBaseEntity::~CBaseEntity(this);
   CBaseEntity::operator delete(this);
@@ -955,7 +955,7 @@ void *__fastcall CDOTA_ScriptedSpawner::CEntityInstanceEntityClass::AllocateInst
 void __fastcall CDOTA_ScriptedSpawner::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_ScriptedSpawner::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -965,7 +965,7 @@ void __fastcall CDOTA_ScriptedSpawner::CEntityInstanceEntityClass::~CEntityInsta
 void __fastcall CDOTA_ScriptedSpawner::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_ScriptedSpawner::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }

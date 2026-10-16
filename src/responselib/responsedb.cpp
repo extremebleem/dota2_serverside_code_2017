@@ -19,11 +19,11 @@ rr2::IResponseDB *__cdecl rr2::IResponseDB::CreateDB()
 {
   rr2::IResponseDB *v0; // rbx
 
-  v0 = operator new(0x70u);
-  v0->_vptr_IResponseDB = off_47C4DF0;
+  v0 = operator new(0x70u);  // new rr2::CResponseDB  [vptr stores: rr2::IResponseDB, rr2::CResponseDB]
+  v0->_vptr_IResponseDB = off_47C4DF0;  // vptr: rr2::IResponseDB
   CUtlSymbolTable::CUtlSymbolTable(&v0->m_SymTab, 0, 64, 1);
   LODWORD(v0[1]._vptr_IResponseDB) = 0;
-  v0->_vptr_IResponseDB = off_47C4E50;
+  v0->_vptr_IResponseDB = off_47C4E50;  // vptr: rr2::CResponseDB
   *&v0[1].m_SymTab.m_Lookup.m_LessFunc.gap0 = 0;
   LODWORD(v0[1].m_SymTab.m_Lookup.m_Elements.m_pMemory) = 0;
   HIDWORD(v0[1].m_SymTab.m_Lookup.m_Elements.m_pMemory) = 0;

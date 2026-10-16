@@ -193,10 +193,10 @@ void __fastcall CPlasma::Spawn(CPlasma *const this, const CEntityKeyValues *pKey
 {
   const ResourceBindingBase_t *m_pBinding; // rax
   HMaterialStrong hMaterial; // [rsp+0h] [rbp-50h] BYREF
-  CStrongHandle<InfoForResourceTypeIMaterial2>::ResourceHandleTyped_t v5; // [rsp+10h] [rbp-40h]
+  CStrongHandle<InfoForResourceTypeIMaterial2>::ResourceHandleTyped_t v5[2]; // [rsp+10h] [rbp-40h] BYREF
   CStrongHandle<InfoForResourceTypeIMaterial2>::ResourceHandleTyped_t hResource[6]; // [rsp+20h] [rbp-30h] BYREF
 
-  GetMaterialIndex("sprites/plasma1.vmat");
+  GetMaterialIndex(hResource, "sprites/plasma1.vmat");
   hMaterial.m_pBinding = 0;
   CStrongHandle<InfoForResourceTypeIMaterial2>::Init(&hMaterial, hResource[0]);
   m_pBinding = hMaterial.m_pBinding;
@@ -211,9 +211,9 @@ void __fastcall CPlasma::Spawn(CPlasma *const this, const CEntityKeyValues *pKey
     (*(this->_vptr_IHandleEntity + 22))(this, 800, 0xFFFFFFFFLL, 0xFFFFFFFFLL);
     CStrongHandle<InfoForResourceTypeIMaterial2>::Init(&this->m_nPlasmaModelIndex2.m_Value, &hMaterial);
   }
-  GetMaterialIndex("sprites/fire_floor.vmat");
+  GetMaterialIndex(v5, "sprites/fire_floor.vmat");
   hResource[0] = 0;
-  CStrongHandle<InfoForResourceTypeIMaterial2>::Init(hResource, v5);
+  CStrongHandle<InfoForResourceTypeIMaterial2>::Init(hResource, v5[0]);
   if ( this->m_nGlowModelIndex.m_Value.m_pBinding != hResource[0] )
   {
     (*(this->_vptr_IHandleEntity + 22))(this, 808, 0xFFFFFFFFLL, 0xFFFFFFFFLL);

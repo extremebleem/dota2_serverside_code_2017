@@ -32,7 +32,7 @@ bool __fastcall GetTerrainAmbientLightAtPoint(const Vector *const pos, Vector *c
   Vector newStart; // [rsp+50h] [rbp-50h] BYREF
   Vector newEnd; // [rsp+60h] [rbp-40h] BYREF
 
-  *&newEnd.x = (*g_pLightQuery->_vptr_ILightQuery)(g_pLightQuery, 7, pos, 0xFFFFFFFFLL);
+  *&newEnd.x = g_pLightQuery->GetLightForPoint(7, pos, 0xFFFFFFFFLL);
   y = pos->y;
   newEnd.z = v6;
   z = vec3_origin.z;

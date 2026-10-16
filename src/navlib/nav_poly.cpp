@@ -896,7 +896,7 @@ LABEL_15:
     this->m_flClearance = v17;
   }
 LABEL_7:
-  (*this->_vptr_CNavPoly)(this);
+  this->GeometryChanged();
   if ( CNavPoly::IsDegenerate(this) )
     DevWarning(
       "Degenerate Navigation Area at ( %0.2f, %0.2f, %0.2f )\n",
@@ -1660,7 +1660,7 @@ int __fastcall CNavPoly::FindClosestVertIndex2D(const CNavPoly *const this, cons
 void __fastcall CNavPoly::SetCorner(CNavPoly *const this, NavCornerType corner, const Vector *const vPos)
 {
   this->m_vVerts[corner] = *vPos;
-  (*this->_vptr_CNavPoly)(this);
+  this->GeometryChanged();
 }
 
 

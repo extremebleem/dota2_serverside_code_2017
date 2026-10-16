@@ -625,9 +625,7 @@ NetworkFieldResult_t __fastcall CGameSceneNodeStepSimulationOriginSerializer::Un
       m_pStateChanged = m_pFieldData->m_pStateChanged;
       if ( m_pStateChanged != 0 )
       {
-        (*m_pStateChanged->_vptr_INetworkStateChangedRouter)(
-          m_pStateChanged,
-          m_pFieldData,
+        m_pStateChanged->NetworkStateChanged(m_pFieldData,
           p_m_vecX - m_pFieldData,
           0xFFFFFFFFLL,
           0xFFFFFFFFLL);
@@ -642,9 +640,7 @@ NetworkFieldResult_t __fastcall CGameSceneNodeStepSimulationOriginSerializer::Un
       }
       v11 = p_m_cellX - m_pFieldData;
       if ( m_pStateChanged != 0 )
-        (*m_pStateChanged->_vptr_INetworkStateChangedRouter)(
-          m_pStateChanged,
-          m_pFieldData,
+        m_pStateChanged->NetworkStateChanged(m_pFieldData,
           v11,
           0xFFFFFFFFLL,
           0xFFFFFFFFLL);
@@ -884,9 +880,7 @@ NetworkFieldResult_t __fastcall CGameSceneNodeCellSerializer<1>::Unserialize(
     m_pStateChanged = m_pStructBase->m_pStateChanged;
     m_pStructBase->m_cellY = pIn->m_iVal64;
     if ( m_pStateChanged != 0 )
-      (*m_pStateChanged->_vptr_INetworkStateChangedRouter)(
-        m_pStateChanged,
-        m_pStructBase,
+      m_pStateChanged->NetworkStateChanged(m_pStructBase,
         14,
         0xFFFFFFFFLL,
         0xFFFFFFFFLL);
@@ -899,11 +893,11 @@ NetworkFieldResult_t __fastcall CGameSceneNodeCellSerializer<1>::Unserialize(
   v8 = m_pStructBase->m_pStateChanged;
   if ( v8 == 0 )
     return NetworkFieldResult_t::NET_FIELD_OK;
-  (*v8->_vptr_INetworkStateChangedRouter)(v8, m_pStructBase, 28, 0xFFFFFFFFLL, 0xFFFFFFFFLL);
+  v8->NetworkStateChanged(m_pStructBase, 28, 0xFFFFFFFFLL, 0xFFFFFFFFLL);
   v9 = m_pStructBase->m_pStateChanged;
   if ( v9 == 0 )
     return NetworkFieldResult_t::NET_FIELD_OK;
-  (*v9->_vptr_INetworkStateChangedRouter)(v9, m_pStructBase, 14, 0xFFFFFFFFLL, 0xFFFFFFFFLL);
+  v9->NetworkStateChanged(m_pStructBase, 14, 0xFFFFFFFFLL, 0xFFFFFFFFLL);
   return NetworkFieldResult_t::NET_FIELD_OK;
 }
 
@@ -929,9 +923,7 @@ NetworkFieldResult_t __fastcall CGameSceneNodeCellSerializer<0>::Unserialize(
     m_pStateChanged = m_pStructBase->m_pStateChanged;
     m_pStructBase->m_cellX = pIn->m_iVal64;
     if ( m_pStateChanged != 0 )
-      (*m_pStateChanged->_vptr_INetworkStateChangedRouter)(
-        m_pStateChanged,
-        m_pStructBase,
+      m_pStateChanged->NetworkStateChanged(m_pStructBase,
         12,
         0xFFFFFFFFLL,
         0xFFFFFFFFLL);
@@ -944,11 +936,11 @@ NetworkFieldResult_t __fastcall CGameSceneNodeCellSerializer<0>::Unserialize(
   v8 = m_pStructBase->m_pStateChanged;
   if ( v8 == 0 )
     return NetworkFieldResult_t::NET_FIELD_OK;
-  (*v8->_vptr_INetworkStateChangedRouter)(v8, m_pStructBase, 20, 0xFFFFFFFFLL, 0xFFFFFFFFLL);
+  v8->NetworkStateChanged(m_pStructBase, 20, 0xFFFFFFFFLL, 0xFFFFFFFFLL);
   v9 = m_pStructBase->m_pStateChanged;
   if ( v9 == 0 )
     return NetworkFieldResult_t::NET_FIELD_OK;
-  (*v9->_vptr_INetworkStateChangedRouter)(v9, m_pStructBase, 12, 0xFFFFFFFFLL, 0xFFFFFFFFLL);
+  v9->NetworkStateChanged(m_pStructBase, 12, 0xFFFFFFFFLL, 0xFFFFFFFFLL);
   return NetworkFieldResult_t::NET_FIELD_OK;
 }
 
@@ -974,9 +966,7 @@ NetworkFieldResult_t __fastcall CGameSceneNodeCellSerializer<2>::Unserialize(
     m_pStateChanged = m_pStructBase->m_pStateChanged;
     m_pStructBase->m_cellZ = pIn->m_iVal64;
     if ( m_pStateChanged != 0 )
-      (*m_pStateChanged->_vptr_INetworkStateChangedRouter)(
-        m_pStateChanged,
-        m_pStructBase,
+      m_pStateChanged->NetworkStateChanged(m_pStructBase,
         16,
         0xFFFFFFFFLL,
         0xFFFFFFFFLL);
@@ -989,11 +979,11 @@ NetworkFieldResult_t __fastcall CGameSceneNodeCellSerializer<2>::Unserialize(
   v8 = m_pStructBase->m_pStateChanged;
   if ( v8 == 0 )
     return NetworkFieldResult_t::NET_FIELD_OK;
-  (*v8->_vptr_INetworkStateChangedRouter)(v8, m_pStructBase, 36, 0xFFFFFFFFLL, 0xFFFFFFFFLL);
+  v8->NetworkStateChanged(m_pStructBase, 36, 0xFFFFFFFFLL, 0xFFFFFFFFLL);
   v9 = m_pStructBase->m_pStateChanged;
   if ( v9 == 0 )
     return NetworkFieldResult_t::NET_FIELD_OK;
-  (*v9->_vptr_INetworkStateChangedRouter)(v9, m_pStructBase, 16, 0xFFFFFFFFLL, 0xFFFFFFFFLL);
+  v9->NetworkStateChanged(m_pStructBase, 16, 0xFFFFFFFFLL, 0xFFFFFFFFLL);
   return NetworkFieldResult_t::NET_FIELD_OK;
 }
 
@@ -1533,9 +1523,7 @@ void __fastcall CGameSceneNode::CGameSceneNode(CGameSceneNode *const this)
       m_pStateChanged = this->m_vecOrigin.m_pStateChanged;
       if ( m_pStateChanged != 0 )
       {
-        (*m_pStateChanged->_vptr_INetworkStateChangedRouter)(
-          m_pStateChanged,
-          p_m_vecOrigin,
+        m_pStateChanged->NetworkStateChanged(p_m_vecOrigin,
           p_m_vecX - p_m_vecOrigin,
           0xFFFFFFFFLL,
           0xFFFFFFFFLL);
@@ -1559,7 +1547,7 @@ LABEL_15:
     v21 = v20;
   }
   ++v20;
-  (*m_pStateChanged->_vptr_INetworkStateChangedRouter)(m_pStateChanged, p_m_vecOrigin, v30, 0xFFFFFFFFLL, 0xFFFFFFFFLL);
+  m_pStateChanged->NetworkStateChanged(p_m_vecOrigin, v30, 0xFFFFFFFFLL, 0xFFFFFFFFLL);
   if ( v20 != 3 )
     goto LABEL_15;
 LABEL_22:
@@ -2898,9 +2886,7 @@ LABEL_30:
           {
             v53 = x;
             v57 = p_m_vecX;
-            (*m_pStateChanged->_vptr_INetworkStateChangedRouter)(
-              m_pStateChanged,
-              &this->m_vecOrigin,
+            m_pStateChanged->NetworkStateChanged(&this->m_vecOrigin,
               18,
               0xFFFFFFFFLL,
               0xFFFFFFFFLL);
@@ -2978,7 +2964,7 @@ LABEL_43:
         {
           v52 = x;
           v56 = p_m_vecX;
-          (*v45->_vptr_INetworkStateChangedRouter)(v45, &this->m_vecOrigin, 18, 0xFFFFFFFFLL, 0xFFFFFFFFLL);
+          v45->NetworkStateChanged(&this->m_vecOrigin, 18, 0xFFFFFFFFLL, 0xFFFFFFFFLL);
           p_m_vecX = v56;
           x = v52;
         }
@@ -3018,9 +3004,7 @@ LABEL_44:
       {
         v49 = p_m_cellY;
         v51 = p_m_cellX;
-        (*v44->_vptr_INetworkStateChangedRouter)(
-          v44,
-          &this->m_vecOrigin,
+        v44->NetworkStateChanged(&this->m_vecOrigin,
           p_m_vecY - p_m_vecOrigin,
           0xFFFFFFFFLL,
           0xFFFFFFFFLL);
@@ -3037,9 +3021,7 @@ LABEL_44:
       if ( v44 == 0 )
         goto LABEL_30;
       ++v27;
-      (*v44->_vptr_INetworkStateChangedRouter)(
-        v44,
-        &this->m_vecOrigin,
+      v44->NetworkStateChanged(&this->m_vecOrigin,
         p_m_cellX - p_m_vecOrigin,
         0xFFFFFFFFLL,
         0xFFFFFFFFLL);
@@ -4411,9 +4393,7 @@ void __fastcall CGameSceneNode::SetNodeToParentInternal(
         m_pStateChanged = this->m_vecOrigin.m_pStateChanged;
         if ( m_pStateChanged != 0 )
         {
-          (*m_pStateChanged->_vptr_INetworkStateChangedRouter)(
-            m_pStateChanged,
-            p_m_vecOrigin,
+          m_pStateChanged->NetworkStateChanged(p_m_vecOrigin,
             p_m_vecX - p_m_vecOrigin,
             0xFFFFFFFFLL,
             0xFFFFFFFFLL);
@@ -4431,9 +4411,7 @@ void __fastcall CGameSceneNode::SetNodeToParentInternal(
         if ( m_pStateChanged != 0 )
         {
           v37 = v6;
-          (*m_pStateChanged->_vptr_INetworkStateChangedRouter)(
-            m_pStateChanged,
-            p_m_vecOrigin,
+          m_pStateChanged->NetworkStateChanged(p_m_vecOrigin,
             v32,
             0xFFFFFFFFLL,
             0xFFFFFFFFLL);
@@ -4960,9 +4938,7 @@ void __fastcall CGameSceneNode::SetLocalOrigin(CGameSceneNode *const this, const
         m_pStateChanged = this->m_vecOrigin.m_pStateChanged;
         if ( m_pStateChanged != 0 )
         {
-          (*m_pStateChanged->_vptr_INetworkStateChangedRouter)(
-            m_pStateChanged,
-            &this->m_vecOrigin,
+          m_pStateChanged->NetworkStateChanged(&this->m_vecOrigin,
             p_m_vecX - p_m_vecOrigin,
             0xFFFFFFFFLL,
             0xFFFFFFFFLL);
@@ -4977,9 +4953,7 @@ void __fastcall CGameSceneNode::SetLocalOrigin(CGameSceneNode *const this, const
         }
         v15 = p_m_cellX - p_m_vecOrigin;
         if ( m_pStateChanged != 0 )
-          (*m_pStateChanged->_vptr_INetworkStateChangedRouter)(
-            m_pStateChanged,
-            &this->m_vecOrigin,
+          m_pStateChanged->NetworkStateChanged(&this->m_vecOrigin,
             v15,
             0xFFFFFFFFLL,
             0xFFFFFFFFLL);
@@ -5217,9 +5191,7 @@ void __fastcall CGameSceneNode::SetAbsOrigin(CGameSceneNode *const this, const V
         m_pStateChanged = this->m_vecOrigin.m_pStateChanged;
         if ( m_pStateChanged != 0 )
         {
-          (*m_pStateChanged->_vptr_INetworkStateChangedRouter)(
-            m_pStateChanged,
-            &this->m_vecOrigin,
+          m_pStateChanged->NetworkStateChanged(&this->m_vecOrigin,
             p_m_vecX - p_m_vecOrigin,
             0xFFFFFFFFLL,
             0xFFFFFFFFLL);
@@ -5242,9 +5214,7 @@ LABEL_10:
         else
         {
           ++v9;
-          (*m_pStateChanged->_vptr_INetworkStateChangedRouter)(
-            m_pStateChanged,
-            &this->m_vecOrigin,
+          m_pStateChanged->NetworkStateChanged(&this->m_vecOrigin,
             v2,
             0xFFFFFFFFLL,
             0xFFFFFFFFLL);
@@ -5523,9 +5493,7 @@ void __fastcall CGameSceneNode::ForceDirtyOriginAngles(
       m_pStateChanged = this->m_vecOrigin.m_pStateChanged;
       if ( m_pStateChanged != 0 )
       {
-        (*m_pStateChanged->_vptr_INetworkStateChangedRouter)(
-          m_pStateChanged,
-          p_m_vecOrigin,
+        m_pStateChanged->NetworkStateChanged(p_m_vecOrigin,
           p_m_vecX - p_m_vecOrigin,
           0xFFFFFFFFLL,
           0xFFFFFFFFLL);
@@ -5540,9 +5508,7 @@ void __fastcall CGameSceneNode::ForceDirtyOriginAngles(
       }
       v22 = p_m_cellX - p_m_vecOrigin;
       if ( m_pStateChanged != 0 )
-        (*m_pStateChanged->_vptr_INetworkStateChangedRouter)(
-          m_pStateChanged,
-          p_m_vecOrigin,
+        m_pStateChanged->NetworkStateChanged(p_m_vecOrigin,
           v22,
           0xFFFFFFFFLL,
           0xFFFFFFFFLL);
@@ -5568,7 +5534,7 @@ void __fastcall CGameSceneNode::ForceDirtyOriginAngles(
       v16 = this->m_vecOrigin.m_pStateChanged;
       if ( v16 != 0 )
       {
-        (*v16->_vptr_INetworkStateChangedRouter)(v16, p_m_vecOrigin, v15 - p_m_vecOrigin, 0xFFFFFFFFLL, 0xFFFFFFFFLL);
+        v16->NetworkStateChanged(p_m_vecOrigin, v15 - p_m_vecOrigin, 0xFFFFFFFFLL, 0xFFFFFFFFLL);
         v16 = this->m_vecOrigin.m_pStateChanged;
       }
       v17 = &this->m_vecOrigin.m_cellX;
@@ -5580,7 +5546,7 @@ void __fastcall CGameSceneNode::ForceDirtyOriginAngles(
       }
       v18 = v17 - p_m_vecOrigin;
       if ( v16 != 0 )
-        (*v16->_vptr_INetworkStateChangedRouter)(v16, p_m_vecOrigin, v18, 0xFFFFFFFFLL, 0xFFFFFFFFLL);
+        v16->NetworkStateChanged(p_m_vecOrigin, v18, 0xFFFFFFFFLL, 0xFFFFFFFFLL);
     }
     ++v3;
   }
@@ -6412,9 +6378,7 @@ void __fastcall CGameSceneNode::MarkNetworkStateChangedForOrigin(CGameSceneNode 
   m_pStateChanged = this->m_vecOrigin.m_pStateChanged;
   if ( m_pStateChanged != 0 )
   {
-    (*m_pStateChanged->_vptr_INetworkStateChangedRouter)(
-      m_pStateChanged,
-      p_m_vecOrigin,
+    m_pStateChanged->NetworkStateChanged(p_m_vecOrigin,
       p_m_vecX - p_m_vecOrigin,
       0xFFFFFFFFLL,
       0xFFFFFFFFLL);
@@ -6430,7 +6394,7 @@ void __fastcall CGameSceneNode::MarkNetworkStateChangedForOrigin(CGameSceneNode 
   }
   v9 = p_m_cellX - p_m_vecOrigin;
   if ( m_pStateChanged != 0 )
-    (*m_pStateChanged->_vptr_INetworkStateChangedRouter)(m_pStateChanged, p_m_vecOrigin, v9, 0xFFFFFFFFLL, 0xFFFFFFFFLL);
+    m_pStateChanged->NetworkStateChanged(p_m_vecOrigin, v9, 0xFFFFFFFFLL, 0xFFFFFFFFLL);
 }
 
 

@@ -471,7 +471,7 @@ CEntityInstance *__fastcall CLightEntity::CEntityInstanceEntityClass::ConstructI
 void __fastcall CLightEntity::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CLightEntity::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -481,7 +481,7 @@ void __fastcall CLightEntity::CEntityInstanceEntityClass::~CEntityInstanceEntity
 void __fastcall CLightEntity::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CLightEntity::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -1211,7 +1211,7 @@ CEntityInstance *__fastcall CLightSpotEntity::CEntityInstanceEntityClass::Constr
 void __fastcall CLightSpotEntity::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CLightSpotEntity::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -1221,7 +1221,7 @@ void __fastcall CLightSpotEntity::CEntityInstanceEntityClass::~CEntityInstanceEn
 void __fastcall CLightSpotEntity::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CLightSpotEntity::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -1450,7 +1450,7 @@ CEntityInstance *__fastcall CLightDirectionalEntity::CEntityInstanceEntityClass:
 void __fastcall CLightDirectionalEntity::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CLightDirectionalEntity::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -1460,7 +1460,7 @@ void __fastcall CLightDirectionalEntity::CEntityInstanceEntityClass::~CEntityIns
 void __fastcall CLightDirectionalEntity::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CLightDirectionalEntity::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -1736,7 +1736,7 @@ CEntityInstance *__fastcall CLightEnvironmentEntity::CEntityInstanceEntityClass:
 void __fastcall CLightEnvironmentEntity::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CLightEnvironmentEntity::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -1746,7 +1746,7 @@ void __fastcall CLightEnvironmentEntity::CEntityInstanceEntityClass::~CEntityIns
 void __fastcall CLightEnvironmentEntity::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CLightEnvironmentEntity::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -2013,7 +2013,7 @@ CEntityInstance *__fastcall CMultiLightProxy::CEntityInstanceEntityClass::Constr
 void __fastcall CMultiLightProxy::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CMultiLightProxy::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -2023,7 +2023,7 @@ void __fastcall CMultiLightProxy::CEntityInstanceEntityClass::~CEntityInstanceEn
 void __fastcall CMultiLightProxy::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CMultiLightProxy::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }

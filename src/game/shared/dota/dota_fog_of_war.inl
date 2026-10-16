@@ -105,7 +105,7 @@ CEntityInstance *__fastcall CFoWBlockerEntity::CEntityInstanceEntityClass::Const
 void __fastcall CFoWBlockerEntity::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CFoWBlockerEntity::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -115,7 +115,7 @@ void __fastcall CFoWBlockerEntity::CEntityInstanceEntityClass::~CEntityInstanceE
 void __fastcall CFoWBlockerEntity::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CFoWBlockerEntity::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -324,7 +324,7 @@ CEntityInstance *__fastcall CFoWRevealerEntity::CEntityInstanceEntityClass::Cons
 void __fastcall CFoWRevealerEntity::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CFoWRevealerEntity::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -334,7 +334,7 @@ void __fastcall CFoWRevealerEntity::CEntityInstanceEntityClass::~CEntityInstance
 void __fastcall CFoWRevealerEntity::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CFoWRevealerEntity::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -438,7 +438,7 @@ void __fastcall CDOTAFogOfWarSystem::~CDOTAFogOfWarSystem(CDOTAFogOfWarSystem *c
   CUtlHashtable<unsigned int,CDOTAFogOfWarSystem::SpawnGroupFowSize_t,DefaultHashFunctor<unsigned int>,DefaultEqualFunctor<unsigned int>,undefined_t,CUtlMemory<CUtlHashtableEntry<unsigned int,CDOTAFogOfWarSystem::SpawnGroupFowSize_t>,int> > *p_m_fowSize; // r12
 
   p_m_fowSize = &this->m_fowSize;
-  this->_vptr_IGameSystem = off_40F7C90;
+  this->_vptr_IGameSystem = off_40F7C90;  // vptr: CDOTAFogOfWarSystem
   CUtlHashtable<unsigned int,CDOTAFogOfWarSystem::SpawnGroupFowSize_t,DefaultHashFunctor<unsigned int>,DefaultEqualFunctor<unsigned int>,undefined_t,CUtlMemory<CUtlHashtableEntry<unsigned int,CDOTAFogOfWarSystem::SpawnGroupFowSize_t>,int>>::RemoveAll(&this->m_fowSize);
   if ( (this->m_fowSize.m_table.m_nGrowSize & 0xC0000000) == 0 )
     CUtlMemory<CUtlHashtableEntry<unsigned int,CDOTAFogOfWarSystem::SpawnGroupFowSize_t>,int>::Purge(&p_m_fowSize->m_table);
@@ -456,7 +456,7 @@ void __fastcall CDOTAFogOfWarSystem::~CDOTAFogOfWarSystem(CDOTAFogOfWarSystem *c
   CUtlHashtable<unsigned int,CDOTAFogOfWarSystem::SpawnGroupFowSize_t,DefaultHashFunctor<unsigned int>,DefaultEqualFunctor<unsigned int>,undefined_t,CUtlMemory<CUtlHashtableEntry<unsigned int,CDOTAFogOfWarSystem::SpawnGroupFowSize_t>,int> > *p_m_fowSize; // r12
 
   p_m_fowSize = &this->m_fowSize;
-  this->_vptr_IGameSystem = off_40F7C90;
+  this->_vptr_IGameSystem = off_40F7C90;  // vptr: CDOTAFogOfWarSystem
   CUtlHashtable<unsigned int,CDOTAFogOfWarSystem::SpawnGroupFowSize_t,DefaultHashFunctor<unsigned int>,DefaultEqualFunctor<unsigned int>,undefined_t,CUtlMemory<CUtlHashtableEntry<unsigned int,CDOTAFogOfWarSystem::SpawnGroupFowSize_t>,int>>::RemoveAll(&this->m_fowSize);
   if ( (this->m_fowSize.m_table.m_nGrowSize & 0xC0000000) == 0 )
     CUtlMemory<CUtlHashtableEntry<unsigned int,CDOTAFogOfWarSystem::SpawnGroupFowSize_t>,int>::Purge(&p_m_fowSize->m_table);

@@ -657,7 +657,7 @@ CEntityInstance *__fastcall CDOTA_Unit_Hero_SkeletonKing::CEntityInstanceEntityC
 void __fastcall CDOTA_Unit_Hero_SkeletonKing::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Unit_Hero_SkeletonKing::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -667,7 +667,7 @@ void __fastcall CDOTA_Unit_Hero_SkeletonKing::CEntityInstanceEntityClass::~CEnti
 void __fastcall CDOTA_Unit_Hero_SkeletonKing::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Unit_Hero_SkeletonKing::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -884,7 +884,7 @@ CEntityInstance *__fastcall CDOTA_Ability_SkeletonKing_HellfireBlast::CEntityIns
 void __fastcall CDOTA_Ability_SkeletonKing_HellfireBlast::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_SkeletonKing_HellfireBlast::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -894,7 +894,7 @@ void __fastcall CDOTA_Ability_SkeletonKing_HellfireBlast::CEntityInstanceEntityC
 void __fastcall CDOTA_Ability_SkeletonKing_HellfireBlast::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_SkeletonKing_HellfireBlast::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -1694,7 +1694,7 @@ CEntityInstance *__fastcall CDOTA_Ability_SkeletonKing_VampiricAura::CEntityInst
 void __fastcall CDOTA_Ability_SkeletonKing_VampiricAura::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_SkeletonKing_VampiricAura::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -1704,7 +1704,7 @@ void __fastcall CDOTA_Ability_SkeletonKing_VampiricAura::CEntityInstanceEntityCl
 void __fastcall CDOTA_Ability_SkeletonKing_VampiricAura::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_SkeletonKing_VampiricAura::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -1945,7 +1945,7 @@ CEntityInstance *__fastcall CDOTA_Ability_SkeletonKing_MortalStrike::CEntityInst
 void __fastcall CDOTA_Ability_SkeletonKing_MortalStrike::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_SkeletonKing_MortalStrike::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -1955,7 +1955,7 @@ void __fastcall CDOTA_Ability_SkeletonKing_MortalStrike::CEntityInstanceEntityCl
 void __fastcall CDOTA_Ability_SkeletonKing_MortalStrike::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_SkeletonKing_MortalStrike::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -2620,7 +2620,7 @@ CEntityInstance *__fastcall CDOTA_Ability_SkeletonKing_Reincarnation::CEntityIns
 void __fastcall CDOTA_Ability_SkeletonKing_Reincarnation::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_SkeletonKing_Reincarnation::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -2630,7 +2630,7 @@ void __fastcall CDOTA_Ability_SkeletonKing_Reincarnation::CEntityInstanceEntityC
 void __fastcall CDOTA_Ability_SkeletonKing_Reincarnation::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_SkeletonKing_Reincarnation::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }

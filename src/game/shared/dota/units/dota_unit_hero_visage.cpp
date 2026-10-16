@@ -884,7 +884,7 @@ CEntityInstance *__fastcall CDOTA_Unit_Hero_Visage::CEntityInstanceEntityClass::
 void __fastcall CDOTA_Unit_Hero_Visage::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Unit_Hero_Visage::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -894,7 +894,7 @@ void __fastcall CDOTA_Unit_Hero_Visage::CEntityInstanceEntityClass::~CEntityInst
 void __fastcall CDOTA_Unit_Hero_Visage::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Unit_Hero_Visage::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -1166,7 +1166,7 @@ CEntityInstance *__fastcall CDOTA_Ability_Visage_GraveChill::CEntityInstanceEnti
 void __fastcall CDOTA_Ability_Visage_GraveChill::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Visage_GraveChill::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -1176,7 +1176,7 @@ void __fastcall CDOTA_Ability_Visage_GraveChill::CEntityInstanceEntityClass::~CE
 void __fastcall CDOTA_Ability_Visage_GraveChill::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Visage_GraveChill::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -1755,7 +1755,7 @@ CEntityInstance *__fastcall CDOTA_Ability_Visage_SoulAssumption::CEntityInstance
 void __fastcall CDOTA_Ability_Visage_SoulAssumption::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Visage_SoulAssumption::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -1765,7 +1765,7 @@ void __fastcall CDOTA_Ability_Visage_SoulAssumption::CEntityInstanceEntityClass:
 void __fastcall CDOTA_Ability_Visage_SoulAssumption::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Visage_SoulAssumption::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -2759,7 +2759,7 @@ CEntityInstance *__fastcall CDOTA_Ability_Visage_GravekeepersCloak::CEntityInsta
 void __fastcall CDOTA_Ability_Visage_GravekeepersCloak::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Visage_GravekeepersCloak::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -2769,7 +2769,7 @@ void __fastcall CDOTA_Ability_Visage_GravekeepersCloak::CEntityInstanceEntityCla
 void __fastcall CDOTA_Ability_Visage_GravekeepersCloak::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Visage_GravekeepersCloak::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -3612,7 +3612,7 @@ CEntityInstance *__fastcall CDOTA_Ability_Visage_SummonFamiliars::CEntityInstanc
 void __fastcall CDOTA_Ability_Visage_SummonFamiliars::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Visage_SummonFamiliars::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -3622,7 +3622,7 @@ void __fastcall CDOTA_Ability_Visage_SummonFamiliars::CEntityInstanceEntityClass
 void __fastcall CDOTA_Ability_Visage_SummonFamiliars::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Visage_SummonFamiliars::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -4189,7 +4189,7 @@ CEntityInstance *__fastcall CDOTA_Unit_VisageFamiliar::CEntityInstanceEntityClas
 void __fastcall CDOTA_Unit_VisageFamiliar::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Unit_VisageFamiliar::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -4199,7 +4199,7 @@ void __fastcall CDOTA_Unit_VisageFamiliar::CEntityInstanceEntityClass::~CEntityI
 void __fastcall CDOTA_Unit_VisageFamiliar::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Unit_VisageFamiliar::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -5196,7 +5196,7 @@ CEntityInstance *__fastcall CDOTA_Ability_Visage_SummonFamiliars_StoneForm::CEnt
 void __fastcall CDOTA_Ability_Visage_SummonFamiliars_StoneForm::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Visage_SummonFamiliars_StoneForm::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -5206,7 +5206,7 @@ void __fastcall CDOTA_Ability_Visage_SummonFamiliars_StoneForm::CEntityInstanceE
 void __fastcall CDOTA_Ability_Visage_SummonFamiliars_StoneForm::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Visage_SummonFamiliars_StoneForm::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }

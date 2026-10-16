@@ -12,7 +12,7 @@ void __cdecl CBodyGameSystem::YouForgot::ToDefine_DEFINE_GAME_SYSTEM()
 // callers: CGameSystemReallocatingFactory<CBodyGameSystem, CBodyGameSystem>::CreateGameSystem
 void __fastcall CBodyGameSystem::CBodyGameSystem(CBodyGameSystem *const this)
 {
-  this->_vptr_IGameSystem = off_3FCB870;
+  this->_vptr_IGameSystem = off_3FCB870;  // vptr: CBodyGameSystem
   this->m_extraPostDataUpdates.m_Size = 0;
   this->m_extraPostDataUpdates.m_Memory.m_pMemory = 0;
   this->m_extraPostDataUpdates.m_Memory.m_nAllocationCount = 0;
@@ -28,7 +28,7 @@ void __fastcall CBodyGameSystem::~CBodyGameSystem(CBodyGameSystem *const this)
   CUtlMemory<CGameSceneNode*,int> *p_m_Memory; // r12
 
   v2 = (this->m_extraPostDataUpdates.m_Memory.m_nGrowSize & 0xC0000000) == 0;
-  this->_vptr_IGameSystem = off_3FCB870;
+  this->_vptr_IGameSystem = off_3FCB870;  // vptr: CBodyGameSystem
   this->m_extraPostDataUpdates.m_Size = 0;
   if ( !v2
     || (p_m_Memory = &this->m_extraPostDataUpdates.m_Memory,
@@ -53,7 +53,7 @@ void __fastcall CBodyGameSystem::~CBodyGameSystem(CBodyGameSystem *const this)
   CUtlMemory<CGameSceneNode*,int> *p_m_Memory; // r12
 
   v2 = (this->m_extraPostDataUpdates.m_Memory.m_nGrowSize & 0xC0000000) == 0;
-  this->_vptr_IGameSystem = off_3FCB870;
+  this->_vptr_IGameSystem = off_3FCB870;  // vptr: CBodyGameSystem
   this->m_extraPostDataUpdates.m_Size = 0;
   if ( v2 )
   {

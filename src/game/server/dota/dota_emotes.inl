@@ -4,7 +4,7 @@
 // CEmoteMap::IFunction::~IFunction  (line 42, @0x0000000002552020, libserver.so)  // inlines: ~CRefCountServiceBase, ~CRefCounted
 void __fastcall CEmoteMap::IFunction::~IFunction(CEmoteMap::IFunction *const this)
 {
-  this->_vptr_CRefCountServiceBase = off_3FEABF0;
+  this->_vptr_CRefCountServiceBase = off_3FEABF0;  // vptr: CRefCountServiceBase<true,CRefMT>
 }
 
 
@@ -12,7 +12,7 @@ void __fastcall CEmoteMap::IFunction::~IFunction(CEmoteMap::IFunction *const thi
 // calls: operator delete
 void __fastcall CEmoteMap::IFunction::~IFunction(CEmoteMap::IFunction *const this)
 {
-  this->_vptr_CRefCountServiceBase = off_3FEABF0;
+  this->_vptr_CRefCountServiceBase = off_3FEABF0;  // vptr: CRefCountServiceBase<true,CRefMT>
   operator delete(this);
 }
 
@@ -20,7 +20,7 @@ void __fastcall CEmoteMap::IFunction::~IFunction(CEmoteMap::IFunction *const thi
 // CEmotePlayConcept::~CEmotePlayConcept  (line 77, @0x0000000002552aa0, libserver.so)  // inlines: ~CRefCountServiceBase, ~CRefCounted, ~IFunction
 void __fastcall CEmotePlayConcept::~CEmotePlayConcept(CEmotePlayConcept *const this)
 {
-  this->_vptr_CRefCountServiceBase = off_3FEABF0;
+  this->_vptr_CRefCountServiceBase = off_3FEABF0;  // vptr: CRefCountServiceBase<true,CRefMT>
 }
 
 
@@ -28,7 +28,7 @@ void __fastcall CEmotePlayConcept::~CEmotePlayConcept(CEmotePlayConcept *const t
 // calls: operator delete
 void __fastcall CEmotePlayConcept::~CEmotePlayConcept(CEmotePlayConcept *const this)
 {
-  this->_vptr_CRefCountServiceBase = off_3FEABF0;
+  this->_vptr_CRefCountServiceBase = off_3FEABF0;  // vptr: CRefCountServiceBase<true,CRefMT>
   operator delete(this);
 }
 

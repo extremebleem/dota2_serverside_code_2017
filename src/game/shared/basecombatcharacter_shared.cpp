@@ -954,7 +954,7 @@ void __fastcall CCombatCharVisCache::~CCombatCharVisCache(CCombatCharVisCache *c
   CUtlRBTree<CCombatCharVisCache::VisCacheEntry_t,unsigned short,CCombatCharVisCache::CVisCacheEntryLess,CUtlMemory<UtlRBTreeNode_t<CCombatCharVisCache::VisCacheEntry_t,unsigned short>,unsigned short>>::Purge(p_m_VisCache);
   if ( (this->m_VisCache.m_Elements.m_nGrowSize & 0xC0000000) == 0 )
     CUtlMemory<UtlRBTreeNode_t<CCombatCharVisCache::VisCacheEntry_t,unsigned short>,unsigned short>::Purge(&this->m_VisCache.m_Elements);
-  this->_vptr_IGameSystem = off_3F7C1B0;
+  this->_vptr_IGameSystem = off_3F7C1B0;  // vptr: CAutoGameSystem
   IGameSystem::~IGameSystem(this);
 }
 
@@ -970,7 +970,7 @@ void __fastcall CCombatCharVisCache::~CCombatCharVisCache(CCombatCharVisCache *c
   CUtlRBTree<CCombatCharVisCache::VisCacheEntry_t,unsigned short,CCombatCharVisCache::CVisCacheEntryLess,CUtlMemory<UtlRBTreeNode_t<CCombatCharVisCache::VisCacheEntry_t,unsigned short>,unsigned short>>::Purge(p_m_VisCache);
   if ( (this->m_VisCache.m_Elements.m_nGrowSize & 0xC0000000) == 0 )
     CUtlMemory<UtlRBTreeNode_t<CCombatCharVisCache::VisCacheEntry_t,unsigned short>,unsigned short>::Purge(&this->m_VisCache.m_Elements);
-  this->_vptr_IGameSystem = off_3F7C1B0;
+  this->_vptr_IGameSystem = off_3F7C1B0;  // vptr: CAutoGameSystem
   IGameSystem::~IGameSystem(this);
   operator delete(this);
 }
@@ -1439,7 +1439,7 @@ bool __fastcall CBaseCombatCharacter::IsAbleToSee(
 void __fastcall CTraceFilterNoCombatCharacters::~CTraceFilterNoCombatCharacters(
         CTraceFilterNoCombatCharacters *const this)
 {
-  this->_vptr_CTraceFilter = off_3FE6970;
+  this->_vptr_CTraceFilter = off_3FE6970;  // vptr: CTraceFilter
 }
 
 
@@ -1448,7 +1448,7 @@ void __fastcall CTraceFilterNoCombatCharacters::~CTraceFilterNoCombatCharacters(
 void __fastcall CTraceFilterNoCombatCharacters::~CTraceFilterNoCombatCharacters(
         CTraceFilterNoCombatCharacters *const this)
 {
-  this->_vptr_CTraceFilter = off_3FE6970;
+  this->_vptr_CTraceFilter = off_3FE6970;  // vptr: CTraceFilter
   operator delete(this);
 }
 
@@ -1943,27 +1943,31 @@ void __fastcall SendProxyBaseCombatCharacterLocalOnly_RecipientsFilter(
         CSendProxyRecipients *pRecipients,
         int objectid)
 {
-  __int64 v6; // rax
-  void *v7; // rax
-  CEntityIndex v8; // eax
+  char v7; // al
+  const CEntityInstance *v8; // rdi
+  __int64 v9; // rax
+  __int64 v10; // rax
+  CEntityIndex v11; // eax
 
   *pRecipients = 0;
-  if ( pRootObjectBase )
+  if ( pRootObjectBase != 0 )
   {
-    if ( (*(*pRootObjectBase + 1120LL))(pRootObjectBase, pStructBase, pCurrentField, pRecipients, objectid) )
+    v7 = (*(*pRootObjectBase + 1120LL))(pRootObjectBase, pStructBase, pCurrentField, pRecipients, objectid);
+    v8 = pRootObjectBase;
+    if ( v7 != 0 )
     {
 LABEL_6:
-      v8.m_Data = CEntityInstance::GetEntityIndex(pRootObjectBase).m_Data;
-      pRecipients->m_Bits.m_Ints[(v8.m_Data - 1) >> 5] |= 1 << (LOBYTE(v8.m_Data) - 1);
+      v11.m_Data = CEntityInstance::GetEntityIndex(v8).m_Data;
+      pRecipients->m_Bits.m_Ints[(v11.m_Data - 1) >> 5] |= 1 << (LOBYTE(v11.m_Data) - 1);
       return;
     }
-    v6 = (*(*pRootObjectBase + 808LL))(pRootObjectBase);
-    if ( v6 )
+    v9 = (*(*pRootObjectBase + 808LL))(pRootObjectBase);
+    if ( v9 != 0 )
     {
-      v7 = (*(*v6 + 8LL))(v6, 0);
-      if ( v7 )
+      v10 = (*(*v9 + 8LL))(v9, 0);
+      if ( v10 != 0 )
       {
-        pRootObjectBase = v7;
+        v8 = v10;
         goto LABEL_6;
       }
     }

@@ -56,7 +56,7 @@ void __fastcall GenerateResourceNameFromFileName(const char *pFileName, char *pR
   __int64 v14; // rax
   char *v15; // rdx
   __int64 v16; // rsi
-  __int64 v17; // rcx
+  int v17; // ecx
   __int64 v18; // rax
   const char *v19; // rdx
   const char *v20; // rax
@@ -142,19 +142,19 @@ LABEL_14:
     goto LABEL_21;
   v15 = pRelativePath;
   v16 = 0;
-  LODWORD(v17) = 0;
+  v17 = 0;
   do
   {
     v18 = v13 << v17;
     ++v15;
-    v17 = (v17 + 8);
+    v17 += 8;
     v16 |= v18;
     v13 = *v15;
   }
   while ( v13 != 0 );
   if ( v16 == 0 )
     goto LABEL_21;
-  if ( V_IsAbsolutePath(pFileName, v16, v15, v17) == 0 )
+  if ( V_IsAbsolutePath(pFileName) == 0 )
   {
     v19 = pFileName;
 LABEL_20:
@@ -371,7 +371,7 @@ bool __fastcall FixupResourceName(const char *pResourceName, ResourceType_t nTyp
 {
   if ( pResourceName != 0 && *pResourceName != 0 )
   {
-    if ( V_IsAbsolutePath(pResourceName, nType, pOutResourceName, nBufLen) != 0 )
+    if ( V_IsAbsolutePath(pResourceName) != 0 )
     {
       Warning("FixupResourceName: Illegal full path passed in (\"%s\")!\n", pResourceName);
       *pOutResourceName = 0;
@@ -418,7 +418,7 @@ bool __fastcall FixupResourceName(const char *pResourceName, char *pOutResourceN
     *pOutResourceName = 0;
     return 1;
   }
-  IsAbsolutePath = V_IsAbsolutePath(pResourceName, pOutResourceName, nBufLen);
+  IsAbsolutePath = V_IsAbsolutePath(pResourceName);
   if ( IsAbsolutePath != 0 )
   {
     Warning("FixupResourceName: Illegal full path passed in (\"%s\")!\n", pResourceName);
@@ -444,25 +444,23 @@ bool __fastcall FixupResourceName(const char *pResourceName, char *pOutResourceN
 // calls: V_IsAbsolutePath
 bool __fastcall IsResourceNameValid(const char *pResourceName)
 {
-  int v1; // edx
-  __int64 v2; // rsi
-  const char *v3; // rbx
+  const char *v1; // rbx
   bool result; // al
-  char v5; // dl
+  char v3; // dl
 
-  v3 = pResourceName;
+  v1 = pResourceName;
   if ( pResourceName == 0 || *pResourceName == 0 )
     return 1;
-  result = V_IsAbsolutePath(pResourceName, v2, v1);
+  result = V_IsAbsolutePath(pResourceName);
   if ( result )
     return 0;
-  v5 = *v3;
-  if ( *v3 == 0 )
+  v3 = *v1;
+  if ( *v1 == 0 )
     return 1;
-  while ( (v5 - 65) > 0x19u && v5 != 92 )
+  while ( (v3 - 65) > 0x19u && v3 != 92 )
   {
-    v5 = *++v3;
-    if ( *v3 == 0 )
+    v3 = *++v1;
+    if ( *v1 == 0 )
       return 1;
   }
   return result;

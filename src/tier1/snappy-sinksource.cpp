@@ -4,7 +4,7 @@
 // snappy::Source::~Source  (line 35, @0x0000000002f8c650, libserver.so)
 void __fastcall snappy::Source::~Source(snappy::Source *const this)
 {
-  this->_vptr_Source = off_47BF170;
+  this->_vptr_Source = off_47BF170;  // vptr: snappy::Source
 }
 
 
@@ -12,7 +12,7 @@ void __fastcall snappy::Source::~Source(snappy::Source *const this)
 // calls: operator delete
 void __fastcall snappy::Source::~Source(snappy::Source *const this)
 {
-  this->_vptr_Source = off_47BF170;
+  this->_vptr_Source = off_47BF170;  // vptr: snappy::Source
   operator delete(this);
 }
 
@@ -20,7 +20,7 @@ void __fastcall snappy::Source::~Source(snappy::Source *const this)
 // snappy::Sink::~Sink  (line 37, @0x0000000002f8c660, libserver.so)
 void __fastcall snappy::Sink::~Sink(snappy::Sink *const this)
 {
-  this->_vptr_Sink = off_47BF1B0;
+  this->_vptr_Sink = off_47BF1B0;  // vptr: snappy::Sink
 }
 
 
@@ -28,7 +28,7 @@ void __fastcall snappy::Sink::~Sink(snappy::Sink *const this)
 // calls: operator delete
 void __fastcall snappy::Sink::~Sink(snappy::Sink *const this)
 {
-  this->_vptr_Sink = off_47BF1B0;
+  this->_vptr_Sink = off_47BF1B0;  // vptr: snappy::Sink
   operator delete(this);
 }
 
@@ -44,7 +44,7 @@ char *__fastcall snappy::Sink::GetAppendBuffer(snappy::Sink *const this, size_t 
 // callers: snappy::RawUncompressToIOVec, snappy::RawUncompress, snappy::IsValidCompressedBuffer, snappy::RawCompress
 void __fastcall snappy::ByteArraySource::~ByteArraySource(snappy::ByteArraySource *const this)
 {
-  this->_vptr_Source = off_47BF170;
+  this->_vptr_Source = off_47BF170;  // vptr: snappy::Source
 }
 
 
@@ -52,7 +52,7 @@ void __fastcall snappy::ByteArraySource::~ByteArraySource(snappy::ByteArraySourc
 // calls: operator delete
 void __fastcall snappy::ByteArraySource::~ByteArraySource(snappy::ByteArraySource *const this)
 {
-  this->_vptr_Source = off_47BF170;
+  this->_vptr_Source = off_47BF170;  // vptr: snappy::Source
   operator delete(this);
 }
 
@@ -84,7 +84,7 @@ void __fastcall snappy::ByteArraySource::Skip(snappy::ByteArraySource *const thi
 // callers: snappy::RawCompress
 void __fastcall snappy::UncheckedByteArraySink::~UncheckedByteArraySink(snappy::UncheckedByteArraySink *const this)
 {
-  this->_vptr_Sink = off_47BF1B0;
+  this->_vptr_Sink = off_47BF1B0;  // vptr: snappy::Sink
 }
 
 
@@ -92,7 +92,7 @@ void __fastcall snappy::UncheckedByteArraySink::~UncheckedByteArraySink(snappy::
 // calls: operator delete
 void __fastcall snappy::UncheckedByteArraySink::~UncheckedByteArraySink(snappy::UncheckedByteArraySink *const this)
 {
-  this->_vptr_Sink = off_47BF1B0;
+  this->_vptr_Sink = off_47BF1B0;  // vptr: snappy::Sink
   operator delete(this);
 }
 

@@ -1007,7 +1007,7 @@ CEntityInstance *__fastcall CDOTA_Unit_Undying_Tombstone::CEntityInstanceEntityC
 void __fastcall CDOTA_Unit_Undying_Tombstone::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Unit_Undying_Tombstone::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -1017,7 +1017,7 @@ void __fastcall CDOTA_Unit_Undying_Tombstone::CEntityInstanceEntityClass::~CEnti
 void __fastcall CDOTA_Unit_Undying_Tombstone::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Unit_Undying_Tombstone::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -1316,7 +1316,7 @@ CEntityInstance *__fastcall CDOTA_Unit_Undying_Zombie::CEntityInstanceEntityClas
 void __fastcall CDOTA_Unit_Undying_Zombie::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Unit_Undying_Zombie::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -1326,7 +1326,7 @@ void __fastcall CDOTA_Unit_Undying_Zombie::CEntityInstanceEntityClass::~CEntityI
 void __fastcall CDOTA_Unit_Undying_Zombie::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Unit_Undying_Zombie::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -1627,7 +1627,7 @@ CEntityInstance *__fastcall CDOTA_Unit_Hero_Undying::CEntityInstanceEntityClass:
 void __fastcall CDOTA_Unit_Hero_Undying::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Unit_Hero_Undying::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -1637,7 +1637,7 @@ void __fastcall CDOTA_Unit_Hero_Undying::CEntityInstanceEntityClass::~CEntityIns
 void __fastcall CDOTA_Unit_Hero_Undying::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Unit_Hero_Undying::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -1879,7 +1879,7 @@ CEntityInstance *__fastcall CDOTA_Ability_Undying_Decay::CEntityInstanceEntityCl
 void __fastcall CDOTA_Ability_Undying_Decay::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Undying_Decay::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -1889,7 +1889,7 @@ void __fastcall CDOTA_Ability_Undying_Decay::CEntityInstanceEntityClass::~CEntit
 void __fastcall CDOTA_Ability_Undying_Decay::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Undying_Decay::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -3099,7 +3099,7 @@ CEntityInstance *__fastcall CDOTA_Ability_Undying_SoulRip::CEntityInstanceEntity
 void __fastcall CDOTA_Ability_Undying_SoulRip::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Undying_SoulRip::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -3109,7 +3109,7 @@ void __fastcall CDOTA_Ability_Undying_SoulRip::CEntityInstanceEntityClass::~CEnt
 void __fastcall CDOTA_Ability_Undying_SoulRip::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Undying_SoulRip::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -3818,7 +3818,7 @@ CEntityInstance *__fastcall CDOTA_Ability_Undying_Tombstone_Zombie_DeathStrike::
 void __fastcall CDOTA_Ability_Undying_Tombstone_Zombie_DeathStrike::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Undying_Tombstone_Zombie_DeathStrike::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -3828,7 +3828,7 @@ void __fastcall CDOTA_Ability_Undying_Tombstone_Zombie_DeathStrike::CEntityInsta
 void __fastcall CDOTA_Ability_Undying_Tombstone_Zombie_DeathStrike::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Undying_Tombstone_Zombie_DeathStrike::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -4716,7 +4716,7 @@ CEntityInstance *__fastcall CDOTA_Ability_Undying_Tombstone::CEntityInstanceEnti
 void __fastcall CDOTA_Ability_Undying_Tombstone::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Undying_Tombstone::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -4726,7 +4726,7 @@ void __fastcall CDOTA_Ability_Undying_Tombstone::CEntityInstanceEntityClass::~CE
 void __fastcall CDOTA_Ability_Undying_Tombstone::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Undying_Tombstone::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -5950,7 +5950,7 @@ CEntityInstance *__fastcall CDOTA_Ability_Undying_FleshGolem::CEntityInstanceEnt
 void __fastcall CDOTA_Ability_Undying_FleshGolem::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Undying_FleshGolem::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -5960,7 +5960,7 @@ void __fastcall CDOTA_Ability_Undying_FleshGolem::CEntityInstanceEntityClass::~C
 void __fastcall CDOTA_Ability_Undying_FleshGolem::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Undying_FleshGolem::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }

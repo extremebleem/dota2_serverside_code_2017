@@ -88,7 +88,7 @@ const CSchemaClassBindingBase *__fastcall CGameEntity::CEntityInstanceEntityClas
 void __fastcall CGameEntity::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CGameEntity::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -98,7 +98,7 @@ void __fastcall CGameEntity::CEntityInstanceEntityClass::~CEntityInstanceEntityC
 void __fastcall CGameEntity::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CGameEntity::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }

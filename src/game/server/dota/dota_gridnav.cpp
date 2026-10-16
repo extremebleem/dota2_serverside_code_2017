@@ -769,7 +769,7 @@ LABEL_13:
   C2DGridObstructionManager::DeInit(&this->m_ObstructionManager);
   C2DGridObstructionManager::~C2DGridObstructionManager(&this->m_ObstructionManager);
   v6 = (this->m_CellFlags.m_Memory.m_nGrowSize & 0xC0000000) == 0;
-  this->_vptr_IGameSystem = off_40F6C10;
+  this->_vptr_IGameSystem = off_40F6C10;  // vptr: CGridNavBase
   this->m_CellFlags.m_Size = 0;
   if ( v6 )
   {
@@ -777,7 +777,7 @@ LABEL_13:
     if ( (this->m_CellFlags.m_Memory.m_nGrowSize & 0xC0000000) == 0 )
       CUtlMemory<unsigned char,int>::Purge(&this->m_CellFlags.m_Memory);
   }
-  this->_vptr_IGameSystem = off_3F7C1B0;
+  this->_vptr_IGameSystem = off_3F7C1B0;  // vptr: CAutoGameSystem
   IGameSystem::~IGameSystem(this);
 }
 
@@ -5315,12 +5315,12 @@ LABEL_26:
 // callers: CGridSceneObjectDescriptor::Create
 void __fastcall CHeightMapSceneObject::CHeightMapSceneObject(CHeightMapSceneObject *const this)
 {
-  this->_vptr_IGenericInterface = off_3F794B0;
+  this->_vptr_IGenericInterface = off_3F794B0;  // vptr: CSceneObject
   this->m_pPVS = 0;
   this->m_nLayerMatchID.m_nHashCode = 0;
   (*(*g_pSceneSystem + 792LL))(g_pSceneSystem, this);
   this->m_nNumVertices = 0;
-  this->_vptr_IGenericInterface = off_40FD9B0;
+  this->_vptr_IGenericInterface = off_40FD9B0;  // vptr: CHeightMapSceneObject
   this->m_hVertexBuffer = 0;
 }
 
@@ -5329,11 +5329,11 @@ void __fastcall CHeightMapSceneObject::CHeightMapSceneObject(CHeightMapSceneObje
 // callers: CHeightMapSceneObject::~CHeightMapSceneObject
 void __fastcall CHeightMapSceneObject::~CHeightMapSceneObject(CHeightMapSceneObject *const this)
 {
-  this->_vptr_IGenericInterface = off_40FD9B0;
+  this->_vptr_IGenericInterface = off_40FD9B0;  // vptr: CHeightMapSceneObject
   (*(*g_pRenderDevice + 272LL))(g_pRenderDevice, this->m_hVertexBuffer);
-  this->_vptr_IGenericInterface = off_3F794B0;
+  this->_vptr_IGenericInterface = off_3F794B0;  // vptr: CSceneObject
   (*(*g_pSceneSystem + 800LL))(g_pSceneSystem, this);
-  this->_vptr_IGenericInterface = off_3F79210;
+  this->_vptr_IGenericInterface = off_3F79210;  // vptr: IGenericInterface
 }
 
 

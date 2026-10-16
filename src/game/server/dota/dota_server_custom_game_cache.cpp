@@ -1262,7 +1262,7 @@ void __fastcall CDOTACustomGameCache::CDOTACustomGameCache(CDOTACustomGameCache 
 void __fastcall CDOTACustomGameCache::~CDOTACustomGameCache(CDOTACustomGameCache *const this)
 {
   this->_vptr_IUGCAddonPathResolver = &off_4306268;
-  this->_vptr_IGameSystem = off_3F7C1B0;
+  this->_vptr_IGameSystem = off_3F7C1B0;  // vptr: CAutoGameSystem
   IGameSystem::~IGameSystem(this);
 }
 
@@ -1272,7 +1272,7 @@ void __fastcall CDOTACustomGameCache::~CDOTACustomGameCache(CDOTACustomGameCache
 void __fastcall CDOTACustomGameCache::~CDOTACustomGameCache(CDOTACustomGameCache *const this)
 {
   this->_vptr_IUGCAddonPathResolver = &off_4306268;
-  this->_vptr_IGameSystem = off_3F7C1B0;
+  this->_vptr_IGameSystem = off_3F7C1B0;  // vptr: CAutoGameSystem
   IGameSystem::~IGameSystem(this);
   operator delete(this);
 }

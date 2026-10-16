@@ -104,7 +104,7 @@ void __fastcall CFlexSceneFileManager::~CFlexSceneFileManager(CFlexSceneFileMana
   CUtlRBTree<CUtlMap<char const*,flexsettinghdr_t const*,int,bool (*)(char const* const&,char const* const&)>::Node_t,int,CUtlMap<char const*,flexsettinghdr_t const*,int,bool (*)(char const* const&,char const* const&)>::CKeyLess,CUtlMemory<UtlRBTreeNode_t<CUtlMap<char const*,flexsettinghdr_t const*,int,bool (*)(char const* const&,char const* const&)>::Node_t,int>,int>>::Purge(&p_m_FileList->m_Elements.m_Tree);
   if ( (this->m_FileList.m_Elements.m_Tree.m_Elements.m_nGrowSize & 0xC0000000) == 0 )
     CUtlMemory<UtlRBTreeNode_t<CUtlMap<char const*,flexsettinghdr_t const*,int,bool (*)(char const* const&,char const* const&)>::Node_t,int>,int>::Purge(&this->m_FileList.m_Elements.m_Tree.m_Elements);
-  this->_vptr_IGameSystem = off_3F7C1B0;
+  this->_vptr_IGameSystem = off_3F7C1B0;  // vptr: CAutoGameSystem
   IGameSystem::~IGameSystem(this);
 }
 
@@ -122,7 +122,7 @@ void __fastcall CFlexSceneFileManager::~CFlexSceneFileManager(CFlexSceneFileMana
   CUtlRBTree<CUtlMap<char const*,flexsettinghdr_t const*,int,bool (*)(char const* const&,char const* const&)>::Node_t,int,CUtlMap<char const*,flexsettinghdr_t const*,int,bool (*)(char const* const&,char const* const&)>::CKeyLess,CUtlMemory<UtlRBTreeNode_t<CUtlMap<char const*,flexsettinghdr_t const*,int,bool (*)(char const* const&,char const* const&)>::Node_t,int>,int>>::Purge(&p_m_FileList->m_Elements.m_Tree);
   if ( (this->m_FileList.m_Elements.m_Tree.m_Elements.m_nGrowSize & 0xC0000000) == 0 )
     CUtlMemory<UtlRBTreeNode_t<CUtlMap<char const*,flexsettinghdr_t const*,int,bool (*)(char const* const&,char const* const&)>::Node_t,int>,int>::Purge(&this->m_FileList.m_Elements.m_Tree.m_Elements);
-  this->_vptr_IGameSystem = off_3F7C1B0;
+  this->_vptr_IGameSystem = off_3F7C1B0;  // vptr: CAutoGameSystem
   IGameSystem::~IGameSystem(this);
   operator delete(this);
 }

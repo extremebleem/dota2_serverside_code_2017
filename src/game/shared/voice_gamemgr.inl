@@ -4,7 +4,7 @@
 // IVoiceGameMgrHelper::~IVoiceGameMgrHelper  (line 22, @0x0000000002552900, libserver.so)
 void __fastcall IVoiceGameMgrHelper::~IVoiceGameMgrHelper(IVoiceGameMgrHelper *const this)
 {
-  this->_vptr_IVoiceGameMgrHelper = off_40F9970;
+  this->_vptr_IVoiceGameMgrHelper = off_40F9970;  // vptr: IVoiceGameMgrHelper
 }
 
 
@@ -12,7 +12,7 @@ void __fastcall IVoiceGameMgrHelper::~IVoiceGameMgrHelper(IVoiceGameMgrHelper *c
 // calls: operator delete
 void __fastcall IVoiceGameMgrHelper::~IVoiceGameMgrHelper(IVoiceGameMgrHelper *const this)
 {
-  this->_vptr_IVoiceGameMgrHelper = off_40F9970;
+  this->_vptr_IVoiceGameMgrHelper = off_40F9970;  // vptr: IVoiceGameMgrHelper
   operator delete(this);
 }
 

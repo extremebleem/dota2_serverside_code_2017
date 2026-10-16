@@ -4,7 +4,7 @@
 // CSceneCache::CSceneCache  (line 20, @0x0000000002388310, libserver.so)  // inlines: CUtlMemory, CUtlSortVector, CUtlVector, CUtlVectorBase
 void __fastcall CSceneCache::CSceneCache(CSceneCache *const this)
 {
-  this->_vptr_IBaseCacheInfo = off_40A6090;
+  this->_vptr_IBaseCacheInfo = off_40A6090;  // vptr: CSceneCache
   this->sounds.m_Size = 0;
   this->sounds.m_Memory.m_pMemory = 0;
   this->sounds.m_Memory.m_nAllocationCount = 0;

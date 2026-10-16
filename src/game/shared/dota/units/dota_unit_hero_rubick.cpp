@@ -963,7 +963,7 @@ CEntityInstance *__fastcall CDOTA_Unit_Hero_Rubick::CEntityInstanceEntityClass::
 void __fastcall CDOTA_Unit_Hero_Rubick::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Unit_Hero_Rubick::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -973,7 +973,7 @@ void __fastcall CDOTA_Unit_Hero_Rubick::CEntityInstanceEntityClass::~CEntityInst
 void __fastcall CDOTA_Unit_Hero_Rubick::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Unit_Hero_Rubick::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -1230,7 +1230,7 @@ CEntityInstance *__fastcall CDOTA_Ability_Rubick_Telekinesis::CEntityInstanceEnt
 void __fastcall CDOTA_Ability_Rubick_Telekinesis::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Rubick_Telekinesis::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -1240,7 +1240,7 @@ void __fastcall CDOTA_Ability_Rubick_Telekinesis::CEntityInstanceEntityClass::~C
 void __fastcall CDOTA_Ability_Rubick_Telekinesis::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Rubick_Telekinesis::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -2134,7 +2134,7 @@ CEntityInstance *__fastcall CDOTA_Ability_Rubick_TelekinesisLand::CEntityInstanc
 void __fastcall CDOTA_Ability_Rubick_TelekinesisLand::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Rubick_TelekinesisLand::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -2144,7 +2144,7 @@ void __fastcall CDOTA_Ability_Rubick_TelekinesisLand::CEntityInstanceEntityClass
 void __fastcall CDOTA_Ability_Rubick_TelekinesisLand::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Rubick_TelekinesisLand::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -2543,7 +2543,7 @@ CEntityInstance *__fastcall CDOTA_Ability_Rubick_FadeBolt::CEntityInstanceEntity
 void __fastcall CDOTA_Ability_Rubick_FadeBolt::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Rubick_FadeBolt::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -2553,7 +2553,7 @@ void __fastcall CDOTA_Ability_Rubick_FadeBolt::CEntityInstanceEntityClass::~CEnt
 void __fastcall CDOTA_Ability_Rubick_FadeBolt::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Rubick_FadeBolt::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -3217,7 +3217,7 @@ CEntityInstance *__fastcall CDOTA_Ability_Rubick_NullField::CEntityInstanceEntit
 void __fastcall CDOTA_Ability_Rubick_NullField::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Rubick_NullField::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -3227,7 +3227,7 @@ void __fastcall CDOTA_Ability_Rubick_NullField::CEntityInstanceEntityClass::~CEn
 void __fastcall CDOTA_Ability_Rubick_NullField::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Rubick_NullField::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -3613,7 +3613,7 @@ CEntityInstance *__fastcall CDOTA_Ability_Rubick_SpellSteal::CEntityInstanceEnti
 void __fastcall CDOTA_Ability_Rubick_SpellSteal::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Rubick_SpellSteal::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -3623,7 +3623,7 @@ void __fastcall CDOTA_Ability_Rubick_SpellSteal::CEntityInstanceEntityClass::~CE
 void __fastcall CDOTA_Ability_Rubick_SpellSteal::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Rubick_SpellSteal::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -5030,7 +5030,7 @@ CEntityInstance *__fastcall CDOTA_Ability_Rubick_Empty1::CEntityInstanceEntityCl
 void __fastcall CDOTA_Ability_Rubick_Empty1::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Rubick_Empty1::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -5040,7 +5040,7 @@ void __fastcall CDOTA_Ability_Rubick_Empty1::CEntityInstanceEntityClass::~CEntit
 void __fastcall CDOTA_Ability_Rubick_Empty1::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Rubick_Empty1::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -5242,7 +5242,7 @@ CEntityInstance *__fastcall CDOTA_Ability_Rubick_Empty2::CEntityInstanceEntityCl
 void __fastcall CDOTA_Ability_Rubick_Empty2::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Rubick_Empty2::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -5252,7 +5252,7 @@ void __fastcall CDOTA_Ability_Rubick_Empty2::CEntityInstanceEntityClass::~CEntit
 void __fastcall CDOTA_Ability_Rubick_Empty2::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Rubick_Empty2::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -5454,7 +5454,7 @@ CEntityInstance *__fastcall CDOTA_Ability_Rubick_Hidden1::CEntityInstanceEntityC
 void __fastcall CDOTA_Ability_Rubick_Hidden1::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Rubick_Hidden1::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -5464,7 +5464,7 @@ void __fastcall CDOTA_Ability_Rubick_Hidden1::CEntityInstanceEntityClass::~CEnti
 void __fastcall CDOTA_Ability_Rubick_Hidden1::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Rubick_Hidden1::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -5619,7 +5619,7 @@ CEntityInstance *__fastcall CDOTA_Ability_Rubick_Hidden2::CEntityInstanceEntityC
 void __fastcall CDOTA_Ability_Rubick_Hidden2::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Rubick_Hidden2::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -5629,7 +5629,7 @@ void __fastcall CDOTA_Ability_Rubick_Hidden2::CEntityInstanceEntityClass::~CEnti
 void __fastcall CDOTA_Ability_Rubick_Hidden2::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Rubick_Hidden2::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -5831,7 +5831,7 @@ CEntityInstance *__fastcall CDOTA_Ability_Rubick_Hidden3::CEntityInstanceEntityC
 void __fastcall CDOTA_Ability_Rubick_Hidden3::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Rubick_Hidden3::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -5841,7 +5841,7 @@ void __fastcall CDOTA_Ability_Rubick_Hidden3::CEntityInstanceEntityClass::~CEnti
 void __fastcall CDOTA_Ability_Rubick_Hidden3::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Rubick_Hidden3::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }

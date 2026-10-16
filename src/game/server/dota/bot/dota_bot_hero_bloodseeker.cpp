@@ -76,16 +76,16 @@ CDOTA_BotMode *__fastcall CDOTA_Bot_Hero_Bloodseeker::CreateMode(CDOTA_Bot_Hero_
   {
     if ( iMode == 3 )
     {
-      v3 = operator new(0x108u);
+      v3 = operator new(0x108u);  // new CDOTA_BotMode_Roam_Bloodseeker (size matches)
       CDOTA_BotMode_Roam::CDOTA_BotMode_Roam(v3, this);
-      v3->_vptr_CDOTA_BotMode = off_42C8F90;
+      v3->_vptr_CDOTA_BotMode = off_42C8F90;  // vptr: CDOTA_BotMode_Roam_Bloodseeker
       return v3;
     }
     return CDOTA_Bot::CreateMode(this, iMode);
   }
-  v5 = operator new(0xE8u);
+  v5 = operator new(0xE8u);  // new CDOTA_BotMode_Attack_Bloodseeker (size matches)
   CDOTA_BotMode_Attack::CDOTA_BotMode_Attack(v5, this);
-  v5->_vptr_CDOTA_BotMode = off_42C9050;
+  v5->_vptr_CDOTA_BotMode = off_42C9050;  // vptr: CDOTA_BotMode_Attack_Bloodseeker
   return v5;
 }
 
@@ -401,7 +401,7 @@ void __fastcall CDOTA_Bot_AbilityUsage_Bloodseeker_Bloodrage::CDOTA_Bot_AbilityU
   this->m_pAbility = pAbility;
   this->m_bUseOnCreeps = 0;
   this->m_pBot = pBot;
-  this->_vptr_CDOTA_Bot_AbilityUsage = off_42C90F0;
+  this->_vptr_CDOTA_Bot_AbilityUsage = off_42C90F0;  // vptr: CDOTA_Bot_AbilityUsage_Bloodseeker_Bloodrage
   this->m_hDesiredTarget.m_Index = -1;
 }
 
@@ -734,7 +734,7 @@ void __fastcall CDOTA_Bot_AbilityUsage_Bloodseeker_BloodRite::CDOTA_Bot_AbilityU
   vec_t z; // eax
 
   this->m_pAbility = pAbility;
-  this->_vptr_CDOTA_Bot_AbilityUsage = off_42C9150;
+  this->_vptr_CDOTA_Bot_AbilityUsage = off_42C9150;  // vptr: CDOTA_Bot_AbilityUsage_Bloodseeker_BloodRite
   this->m_bUseOnCreeps = 0;
   this->m_pBot = pBot;
   z = vec3_invalid.z;
@@ -831,7 +831,7 @@ void __fastcall CDOTA_Bot_AbilityUsage_Bloodseeker_Rupture::CDOTA_Bot_AbilityUsa
   this->m_pAbility = pAbility;
   this->m_bUseOnCreeps = 0;
   this->m_pBot = pBot;
-  this->_vptr_CDOTA_Bot_AbilityUsage = off_42C91B0;
+  this->_vptr_CDOTA_Bot_AbilityUsage = off_42C91B0;  // vptr: CDOTA_Bot_AbilityUsage_Bloodseeker_Rupture
   this->m_hDesiredTarget.m_Index = -1;
 }
 

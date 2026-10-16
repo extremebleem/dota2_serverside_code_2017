@@ -270,7 +270,7 @@ CEntityInstance *__fastcall CAdditionalWearable::CEntityInstanceEntityClass::Con
 void __fastcall CAdditionalWearable::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CAdditionalWearable::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -280,7 +280,7 @@ void __fastcall CAdditionalWearable::CEntityInstanceEntityClass::~CEntityInstanc
 void __fastcall CAdditionalWearable::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CAdditionalWearable::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -589,70 +589,68 @@ void __fastcall CDOTAWearableItem::Spawn(CDOTAWearableItem *const this, const CE
   __int64 v7; // rdx
   char v8; // al
   const char *v9; // rax
-  __int64 v10; // rdi
   CEntityKeyValues *m_pEntityKeyValues; // rbx
-  const char *v12; // r14
+  const char *v11; // r14
   int m_enabled; // r11d
   EntityNetworkingMode_t m_nMode; // ebx
-  const char *v15; // rax
-  __int64 v16; // rdi
+  const char *v14; // rax
   CEntityIdentity *m_pEntity; // rax
-  __int16 v18; // si
+  __int16 v16; // si
   CEntitySpawnerContext<CAdditionalWearable> *m_pContext; // rbx
   detail::GenericClass *m_pthis; // rdx
   void (*pfn)(detail::GenericClass *); // rax
-  _QWORD *v22; // rdi
-  CEntityIdentity *v23; // rax
+  _QWORD *v20; // rdi
+  CEntityIdentity *v21; // rax
   CBaseEntity *m_pInstance; // r14
-  CEntityIdentity *v25; // rax
-  CEntityIdentity *v26; // rdx
-  int v27; // eax
-  __int16 v28; // cx
-  CUtlScratchMemoryPool *v29; // rdi
-  CEntityKeyValues *v30; // rbx
+  CEntityIdentity *v23; // rax
+  CEntityIdentity *v24; // rdx
+  int v25; // eax
+  __int16 v26; // cx
+  CUtlScratchMemoryPool *v27; // rdi
+  CEntityKeyValues *v28; // rbx
   const char *m_pszClassname; // rdx
+  unsigned __int64 v31; // rbx
+  uint64 v32; // rcx
   unsigned __int64 v33; // rbx
-  uint64 v34; // rcx
-  unsigned __int64 v35; // rbx
   uint64 m_numTimeBaseTicks; // rcx
-  uint64 v37; // rcx
+  uint64 v35; // rcx
   int m_nCount; // esi
-  CUtlLeanVectorFixedGrowableBase<unsigned int,9u,short int>::IndexType_t v39; // cx
-  __int64 v40; // rax
-  CUtlLeanVectorFixedGrowableBase<unsigned int,9u,short int>::ElemType_t *v41; // rdx
+  CUtlLeanVectorFixedGrowableBase<unsigned int,9u,short int>::IndexType_t v37; // cx
+  __int64 v38; // rax
+  CUtlLeanVectorFixedGrowableBase<unsigned int,9u,short int>::ElemType_t *v39; // rdx
   CVProfNode *m_pParent; // rax
   int m_nEntitySpawnerDataUseCount; // ecx
-  __int16 v44; // dx
+  __int16 v42; // dx
   unsigned __int64 m_nAllocated; // rax
   CUtlLeanVectorFixedGrowableBase<unsigned int,9u,short int>::ElemType_t *m_pElements; // rax
-  CUtlLeanVectorBase<CEntityKeyValues::KeyValueInfo_t,short int>::ElemType_t *v47; // rax
-  __int16 v48; // ax
-  int (**v49)(...); // rax
-  CUtlLeanVectorBase<CEntityKeyValues::KeyValueInfo_t,short int>::ElemType_t *v50; // rax
-  CUtlLeanVectorBase<CEntityKeyValues::KeyValueInfo_t,short int>::ElemType_t *v51; // rdx
-  __int64 v52; // rax
-  __int64 v53; // rbx
+  CUtlLeanVectorBase<CEntityKeyValues::KeyValueInfo_t,short int>::ElemType_t *v45; // rax
+  __int16 v46; // ax
+  int (**v47)(...); // rax
+  CUtlLeanVectorBase<CEntityKeyValues::KeyValueInfo_t,short int>::ElemType_t *v48; // rax
+  CUtlLeanVectorBase<CEntityKeyValues::KeyValueInfo_t,short int>::ElemType_t *v49; // rdx
+  __int64 v50; // rax
+  __int64 v51; // rbx
   CVProfNode *m_pCurNode; // rax
-  CVProfile::CBudgetGroup *v55; // rax
-  __int16 v56; // ax
-  void *v57; // rax
-  bool v58; // [rsp+24h] [rbp-1ACh]
-  signed int v59; // [rsp+24h] [rbp-1ACh]
+  CVProfile::CBudgetGroup *v53; // rax
+  __int16 v54; // ax
+  void *v55; // rax
+  bool v56; // [rsp+24h] [rbp-1ACh]
+  signed int v57; // [rsp+24h] [rbp-1ACh]
   CEntityKeyValues *i; // [rsp+30h] [rbp-1A0h]
-  __int64 v61; // [rsp+30h] [rbp-1A0h]
+  __int64 v59; // [rsp+30h] [rbp-1A0h]
   CEntityInstance *pEntity; // [rsp+38h] [rbp-198h]
   CEntityInstance *pEntityc; // [rsp+38h] [rbp-198h]
   CEntityInstance *pEntityd; // [rsp+38h] [rbp-198h]
   CEntityInstance *pEntitya; // [rsp+38h] [rbp-198h]
   CEntityInstance *pEntityb; // [rsp+38h] [rbp-198h]
   signed int pEntitye; // [rsp+38h] [rbp-198h]
-  int v68; // [rsp+40h] [rbp-190h]
-  _QWORD v69[2]; // [rsp+50h] [rbp-180h] BYREF
+  int v66; // [rsp+40h] [rbp-190h]
+  _QWORD v67[2]; // [rsp+50h] [rbp-180h] BYREF
   CEntitySpawner<CAdditionalWearable> spawner; // [rsp+60h] [rbp-170h] BYREF
   CEntitySpawnerContext<CAdditionalWearable> context; // [rsp+100h] [rbp-D0h] BYREF
-  unsigned __int64 v72; // [rsp+198h] [rbp-38h]
+  unsigned __int64 v70; // [rsp+198h] [rbp-38h]
 
-  v72 = __readfsqword(0x28u);
+  v70 = __readfsqword(0x28u);
   CEconWearable::Spawn(this, pKeyValues);
   if ( !CEntityInstance::IsAuthoritative(this) )
     return;
@@ -692,18 +690,18 @@ void __fastcall CDOTAWearableItem::Spawn(CDOTAWearableItem *const this, const CE
   (*spawner._vptr_CEntitySpawnerBase)(&spawner);
   v9 = CUtlString::Get(&Asset->m_strAsset);
   m_pEntityKeyValues = spawner.m_pEntityKeyValues;
-  v12 = v9;
+  v11 = v9;
   if ( spawner.m_pEntityKeyValues->m_nQueuedForSpawnCount > 0 )
   {
-    v68 = -1;
+    v66 = -1;
 LABEL_8:
     m_enabled = g_VProfCurrentProfile.m_enabled;
-    v58 = m_enabled != 0;
+    v56 = m_enabled != 0;
     if ( m_enabled != 0 )
     {
-      v35 = __rdtsc();
+      v33 = __rdtsc();
       pEntityd = g_VProfCurrentProfile.m_TargetThreadId;
-      if ( pEntityd == ThreadGetCurrentId(v10) )
+      if ( pEntityd == ThreadGetCurrentId() )
       {
         m_pCurNode = g_VProfCurrentProfile.m_pCurNode;
         if ( m_pCurNode->m_pszName != "Spawn" )
@@ -711,16 +709,16 @@ LABEL_8:
           m_pCurNode = CVProfNode::GetSubNode(g_VProfCurrentProfile.m_pCurNode, "Spawn", 0, "Server Simulation", 4);
           g_VProfCurrentProfile.m_pCurNode = m_pCurNode;
         }
-        v55 = &g_VProfCurrentProfile.m_pBudgetGroups[m_pCurNode->m_BudgetGroupID];
-        v55->m_BudgetFlags |= 4u;
+        v53 = &g_VProfCurrentProfile.m_pBudgetGroups[m_pCurNode->m_BudgetGroupID];
+        v53->m_BudgetFlags |= 4u;
         CVProfNode::EnterScope(g_VProfCurrentProfile.m_pCurNode);
         g_VProfCurrentProfile.m_fAtRoot = 0;
       }
       m_numTimeBaseTicks = g_VProfCurrentProfile.m_ScopeProfiler.m_numTimeBaseTicks;
       ++g_VProfCurrentProfile.m_ScopeProfiler.m_numCalls;
-      v37 = m_numTimeBaseTicks - v35;
+      v35 = m_numTimeBaseTicks - v33;
       m_pEntityKeyValues = spawner.m_pEntityKeyValues;
-      g_VProfCurrentProfile.m_ScopeProfiler.m_numTimeBaseTicks = v37 + __rdtsc();
+      g_VProfCurrentProfile.m_ScopeProfiler.m_numTimeBaseTicks = v35 + __rdtsc();
     }
     if ( !CEntityKeyValues::HasValue(m_pEntityKeyValues, -971301790) )
     {
@@ -730,12 +728,12 @@ LABEL_8:
     }
     CEntityKeyValuesModifyScope::Release(&spawner.m_modifyScope);
     m_nMode = spawner.m_nMode;
-    v15 = CUtlString::Get(&spawner.m_scriptClassName);
+    v14 = CUtlString::Get(&spawner.m_scriptClassName);
     pEntity = CEntitySystem::CreateEntity(
                 g_pEntitySystem,
                 spawner.m_hSpawnGroupHandle,
                 spawner.m_pEntityClass,
-                v15,
+                v14,
                 m_nMode,
                 -1,
                 -1,
@@ -746,18 +744,18 @@ LABEL_8:
       m_pEntity = pEntity->m_pEntity;
       if ( m_pEntity != 0 )
       {
-        v18 = 0x7FFF;
+        v16 = 0x7FFF;
         if ( m_pEntity->m_EHandle.m_Index != -1 )
-          v18 = m_pEntity->m_EHandle.m_Index & 0x7FFF;
-        v68 = (((m_pEntity->m_EHandle.m_Index >> 15) - (m_pEntity->m_flags & 1)) << 15) | v18 & 0x7FFF;
+          v16 = m_pEntity->m_EHandle.m_Index & 0x7FFF;
+        v66 = (((m_pEntity->m_EHandle.m_Index >> 15) - (m_pEntity->m_flags & 1)) << 15) | v16 & 0x7FFF;
       }
-      v69[0] = pEntity->m_pEntity;
-      v69[1] = spawner.m_pEntityKeyValues;
+      v67[0] = pEntity->m_pEntity;
+      v67[1] = spawner.m_pEntityKeyValues;
       (*(*g_pGameResourceService + 280LL))(
         g_pGameResourceService,
         spawner.m_hSpawnGroupHandle,
         1,
-        v69,
+        v67,
         &spawner.m_mSpawnGroupToWorld);
       CEntitySystem::QueueSpawnEntity(g_pEntitySystem, pEntity, spawner.m_pEntityKeyValues);
       if ( spawner.m_pSpawnBatch == 0 )
@@ -769,20 +767,20 @@ LABEL_8:
         pfn = m_pContext->m_callback.m_Closure.m_pFunction.__pfn;
         if ( m_pthis != 0 || pfn != 0 )
         {
-          v22 = (m_pthis + m_pContext->m_callback.m_Closure.m_pFunction.__delta);
+          v20 = (m_pthis + m_pContext->m_callback.m_Closure.m_pFunction.__delta);
           if ( (pfn & 1) != 0 )
-            pfn = *(pfn + *v22 - 1);
-          (pfn)(v22, pEntity, i);
+            pfn = *(pfn + *v20 - 1);
+          (pfn)(v20, pEntity, i);
         }
       }
     }
-    if ( v58 )
+    if ( v56 )
     {
-      v33 = __rdtsc();
+      v31 = __rdtsc();
       if ( !g_VProfCurrentProfile.m_fAtRoot || g_VProfCurrentProfile.m_enabled != 0 )
       {
         pEntityc = g_VProfCurrentProfile.m_TargetThreadId;
-        if ( pEntityc == ThreadGetCurrentId(v16) )
+        if ( pEntityc == ThreadGetCurrentId() )
         {
           if ( CVProfNode::ExitScope(g_VProfCurrentProfile.m_pCurNode) != 0 )
           {
@@ -799,16 +797,16 @@ LABEL_8:
           g_VProfCurrentProfile.m_fAtRoot = m_pParent == &g_VProfCurrentProfile.m_Root;
         }
       }
-      v34 = g_VProfCurrentProfile.m_ScopeProfiler.m_numTimeBaseTicks;
+      v32 = g_VProfCurrentProfile.m_ScopeProfiler.m_numTimeBaseTicks;
       ++g_VProfCurrentProfile.m_ScopeProfiler.m_numCalls;
-      g_VProfCurrentProfile.m_ScopeProfiler.m_numTimeBaseTicks = v34 - v33 + __rdtsc();
+      g_VProfCurrentProfile.m_ScopeProfiler.m_numTimeBaseTicks = v32 - v31 + __rdtsc();
     }
-    if ( (v68 + 2) > 1 && (v23 = CEntityHandle::gm_pEntityList->m_pIdentityChunks[(v68 >> 9) & 0x3F]) != 0 )
+    if ( (v66 + 2) > 1 && (v21 = CEntityHandle::gm_pEntityList->m_pIdentityChunks[(v66 >> 9) & 0x3F]) != 0 )
     {
       m_pInstance = 0;
-      v25 = &v23[v68 & 0x1FF];
-      if ( v25 != 0 && v68 == v25->m_EHandle.m_Index )
-        m_pInstance = v25->m_pInstance;
+      v23 = &v21[v66 & 0x1FF];
+      if ( v23 != 0 && v66 == v23->m_EHandle.m_Index )
+        m_pInstance = v23->m_pInstance;
     }
     else
     {
@@ -821,7 +819,7 @@ LABEL_8:
   {
 LABEL_68:
     CUtlLeanVectorImpl<CUtlLeanVectorFixedGrowableBase<unsigned int,(unsigned short)9,short>,unsigned int,short>::AddToTailGetPtr(&spawner.m_pEntityKeyValues->m_keyHashes);
-    v44 = m_pEntityKeyValues->m_keyHashes.m_nCount - 1;
+    v42 = m_pEntityKeyValues->m_keyHashes.m_nCount - 1;
     m_nAllocated = m_pEntityKeyValues->m_keyHashes.m_nAllocated;
     if ( m_nAllocated != 0 )
     {
@@ -835,65 +833,64 @@ LABEL_68:
       m_pElements = 0;
     }
     m_pElements[(m_pEntityKeyValues->m_keyHashes.m_nCount - 1)] = -926958586;
-    pEntitya = v44;
+    pEntitya = v42;
     CUtlLeanVectorImpl<CUtlLeanVectorBase<CEntityKeyValues::KeyValueInfo_t,short>,CEntityKeyValues::KeyValueInfo_t,short>::AddToTailGetPtr(&m_pEntityKeyValues->m_keyValues);
     if ( m_pEntityKeyValues->m_keyValues.m_nAllocated != 0 )
-      v47 = m_pEntityKeyValues->m_keyValues.m_pElements;
+      v45 = m_pEntityKeyValues->m_keyValues.m_pElements;
     else
-      v47 = 0;
-    v61 = pEntitya;
-    pEntityb = &v47[pEntitya];
-    v48 = WORD1(pEntityb->m_pEntity);
-    if ( (v48 & 1) != 0 )
-      WORD1(pEntityb->m_pEntity) = v48 & 0xFFFE;
+      v45 = 0;
+    v59 = pEntitya;
+    pEntityb = &v45[pEntitya];
+    v46 = WORD1(pEntityb->m_pEntity);
+    if ( (v46 & 1) != 0 )
+      WORD1(pEntityb->m_pEntity) = v46 & 0xFFFE;
     pEntityb->_vptr_IHandleEntity = 0;
     LOWORD(pEntityb->m_pEntity) = 30;
-    if ( v12 != 0 )
+    if ( v11 != 0 )
     {
-      v59 = strlen(v12) + 1;
-      v49 = CEntityVariantAllocator::Allocate(v59);
-      pEntityb->_vptr_IHandleEntity = v49;
-      memcpy(v49, v12, v59);
+      v57 = strlen(v11) + 1;
+      v47 = CEntityVariantAllocator::Allocate(v57);
+      pEntityb->_vptr_IHandleEntity = v47;
+      memcpy(v47, v11, v57);
       WORD1(pEntityb->m_pEntity) |= 1u;
     }
     if ( m_pEntityKeyValues->m_keyValues.m_nAllocated != 0 )
-      v50 = m_pEntityKeyValues->m_keyValues.m_pElements;
+      v48 = m_pEntityKeyValues->m_keyValues.m_pElements;
     else
-      v50 = 0;
+      v48 = 0;
     m_pEntityKeyValues = spawner.m_pEntityKeyValues;
-    v50[v61].m_pAttributeName = 0;
+    v48[v59].m_pAttributeName = 0;
   }
   else
   {
-    v39 = spawner.m_pEntityKeyValues->m_keyHashes.m_nAllocated;
-    v40 = 0;
-    v10 = v39;
+    v37 = spawner.m_pEntityKeyValues->m_keyHashes.m_nAllocated;
+    v38 = 0;
     while ( 1 )
     {
-      if ( v39 != 0 )
+      if ( v37 != 0 )
       {
-        v41 = (&spawner.m_pEntityKeyValues->m_keyHashes.m_nAllocAllocated + 1);
-        if ( v39 > 9 )
-          v41 = spawner.m_pEntityKeyValues->m_keyHashes.m_pElements;
+        v39 = (&spawner.m_pEntityKeyValues->m_keyHashes.m_nAllocAllocated + 1);
+        if ( v37 > 9 )
+          v39 = spawner.m_pEntityKeyValues->m_keyHashes.m_pElements;
       }
       else
       {
-        v41 = 0;
+        v39 = 0;
       }
-      if ( v41[v40] == -926958586 )
+      if ( v39[v38] == -926958586 )
         break;
-      if ( m_nCount <= ++v40 )
+      if ( m_nCount <= ++v38 )
         goto LABEL_68;
     }
     if ( spawner.m_pEntityKeyValues->m_keyValues.m_nAllocated != 0 )
     {
-      v51 = spawner.m_pEntityKeyValues->m_keyValues.m_pElements;
-      v52 = v40;
-      v53 = &v51[v52];
-      if ( v51[v52].m_pAttributeName != 0 )
+      v49 = spawner.m_pEntityKeyValues->m_keyValues.m_pElements;
+      v50 = v38;
+      v51 = &v49[v50];
+      if ( v49[v50].m_pAttributeName != 0 )
       {
 LABEL_84:
-        Warning("Attempted to set attribute %s as if it was a non-attribute key!\n", v51[v52].m_pAttributeName);
+        Warning("Attempted to set attribute %s as if it was a non-attribute key!\n", v49[v50].m_pAttributeName);
 LABEL_85:
         m_pEntityKeyValues = spawner.m_pEntityKeyValues;
         goto LABEL_80;
@@ -901,64 +898,64 @@ LABEL_85:
     }
     else
     {
-      v52 = v40;
-      v51 = 0;
-      v53 = v52 * 24;
-      if ( *(v52 * 24 + 16) != 0 )
+      v50 = v38;
+      v49 = 0;
+      v51 = v50 * 24;
+      if ( *(v50 * 24 + 16) != 0 )
         goto LABEL_84;
     }
-    v56 = *(v53 + 10);
-    if ( (v56 & 1) != 0 )
-      *(v53 + 10) = v56 & 0xFFFE;
-    *v53 = 0;
-    *(v53 + 8) = 30;
-    if ( v12 == 0 )
+    v54 = *(v51 + 10);
+    if ( (v54 & 1) != 0 )
+      *(v51 + 10) = v54 & 0xFFFE;
+    *v51 = 0;
+    *(v51 + 8) = 30;
+    if ( v11 == 0 )
       goto LABEL_85;
-    pEntitye = strlen(v12) + 1;
-    v57 = CEntityVariantAllocator::Allocate(pEntitye);
-    *v53 = v57;
-    memcpy(v57, v12, pEntitye);
-    *(v53 + 10) |= 1u;
+    pEntitye = strlen(v11) + 1;
+    v55 = CEntityVariantAllocator::Allocate(pEntitye);
+    *v51 = v55;
+    memcpy(v55, v11, pEntitye);
+    *(v51 + 10) |= 1u;
     m_pEntityKeyValues = spawner.m_pEntityKeyValues;
   }
 LABEL_80:
-  v68 = -1;
+  v66 = -1;
   m_pInstance = 0;
   if ( m_pEntityKeyValues != 0 )
     goto LABEL_8;
 LABEL_29:
   CBaseEntity::AddEffects(m_pInstance, 32);
-  if ( m_pInstance != 0 && (v26 = m_pInstance->m_pEntity) != 0 )
+  if ( m_pInstance != 0 && (v24 = m_pInstance->m_pEntity) != 0 )
   {
-    v27 = (v26->m_EHandle.m_Index >> 15) - (v26->m_flags & 1);
-    v28 = 0x7FFF;
-    if ( v26->m_EHandle.m_Index != -1 )
-      v28 = v26->m_EHandle.m_Index & 0x7FFF;
-    LOWORD(this->m_hAdditionalWearable.m_Index) = v28 | this->m_hAdditionalWearable.m_Index & 0x8000;
-    this->m_hAdditionalWearable.m_Index = (v27 << 15) | this->m_hAdditionalWearable.m_Index & 0x7FFF;
+    v25 = (v24->m_EHandle.m_Index >> 15) - (v24->m_flags & 1);
+    v26 = 0x7FFF;
+    if ( v24->m_EHandle.m_Index != -1 )
+      v26 = v24->m_EHandle.m_Index & 0x7FFF;
+    LOWORD(this->m_hAdditionalWearable.m_Index) = v26 | this->m_hAdditionalWearable.m_Index & 0x8000;
+    this->m_hAdditionalWearable.m_Index = (v25 << 15) | this->m_hAdditionalWearable.m_Index & 0x7FFF;
   }
   else
   {
     this->m_hAdditionalWearable.m_Index = -1;
   }
-  v29 = CEntityKeyValuesModifyScope::sm_pAllocatorOverride;
+  v27 = CEntityKeyValuesModifyScope::sm_pAllocatorOverride;
   spawner._vptr_CEntitySpawnerBase = off_47A24B0;
   CEntityKeyValuesModifyScope::sm_pAllocatorOverride = spawner.m_pPrevAllocator;
-  if ( v29 == &g_pEntitySystem->m_entitySpawnerData )
+  if ( v27 == &g_pEntitySystem->m_entitySpawnerData )
   {
     m_nEntitySpawnerDataUseCount = g_pEntitySystem->m_nEntitySpawnerDataUseCount;
     g_pEntitySystem->m_nEntitySpawnerDataUseCount = m_nEntitySpawnerDataUseCount - 1;
     if ( m_nEntitySpawnerDataUseCount == 1 )
-      CUtlScratchMemoryPool::FreeAll(v29);
+      CUtlScratchMemoryPool::FreeAll(v27);
   }
   if ( spawner.m_pEntityKeyValues != 0 )
   {
     CEntityKeyValuesModifyScope::Release(&spawner.m_modifyScope);
-    v30 = spawner.m_pEntityKeyValues;
+    v28 = spawner.m_pEntityKeyValues;
     if ( --spawner.m_pEntityKeyValues->m_nRefCount <= 0 )
     {
-      CEntityKeyValues::~CEntityKeyValues(v30);
-      operator delete(v30);
+      CEntityKeyValues::~CEntityKeyValues(v28);
+      operator delete(v28);
     }
   }
   if ( spawner.m_scriptClassName.m_pString != 0 )

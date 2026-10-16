@@ -4,7 +4,7 @@
 // CDOTA_BotMode_DefendAlly::~CDOTA_BotMode_DefendAlly  (line 15, @0x0000000002811f30, libserver.so)  // inlines: ~CDOTA_BotMode
 void __fastcall CDOTA_BotMode_DefendAlly::~CDOTA_BotMode_DefendAlly(CDOTA_BotMode_DefendAlly *const this)
 {
-  this->_vptr_CDOTA_BotMode = off_42B75F0;
+  this->_vptr_CDOTA_BotMode = off_42B75F0;  // vptr: CDOTA_BotMode
 }
 
 
@@ -12,7 +12,7 @@ void __fastcall CDOTA_BotMode_DefendAlly::~CDOTA_BotMode_DefendAlly(CDOTA_BotMod
 // calls: operator delete
 void __fastcall CDOTA_BotMode_DefendAlly::~CDOTA_BotMode_DefendAlly(CDOTA_BotMode_DefendAlly *const this)
 {
-  this->_vptr_CDOTA_BotMode = off_42B75F0;
+  this->_vptr_CDOTA_BotMode = off_42B75F0;  // vptr: CDOTA_BotMode
   operator delete(this);
 }
 
@@ -36,7 +36,7 @@ const char *__fastcall CDOTA_BotMode_DefendAlly::GetDebugValue(CDOTA_BotMode_Def
 void __fastcall CDOTA_BotMode_DefendAlly_Human::~CDOTA_BotMode_DefendAlly_Human(
         CDOTA_BotMode_DefendAlly_Human *const this)
 {
-  this->_vptr_CDOTA_BotMode = off_42B75F0;
+  this->_vptr_CDOTA_BotMode = off_42B75F0;  // vptr: CDOTA_BotMode
 }
 
 
@@ -45,7 +45,7 @@ void __fastcall CDOTA_BotMode_DefendAlly_Human::~CDOTA_BotMode_DefendAlly_Human(
 void __fastcall CDOTA_BotMode_DefendAlly_Human::~CDOTA_BotMode_DefendAlly_Human(
         CDOTA_BotMode_DefendAlly_Human *const this)
 {
-  this->_vptr_CDOTA_BotMode = off_42B75F0;
+  this->_vptr_CDOTA_BotMode = off_42B75F0;  // vptr: CDOTA_BotMode
   operator delete(this);
 }
 

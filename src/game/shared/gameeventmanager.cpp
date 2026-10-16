@@ -74,7 +74,7 @@ void __fastcall CGameEvent::CGameEvent(CGameEvent *const this, CGameEventDescrip
 {
   KeyValues *v5; // r12
 
-  this->_vptr_IGameEvent = off_3FF7190;
+  this->_vptr_IGameEvent = off_3FF7190;  // vptr: CGameEvent
   this->m_pDescriptor = descriptor;
   v5 = KeyValues::operator new(0x14u);
   KeyValues::KeyValues(v5, name);
@@ -87,9 +87,9 @@ void __fastcall CGameEvent::CGameEvent(CGameEvent *const this, CGameEventDescrip
 // calls: KeyValues::deleteThis
 void __fastcall CGameEvent::~CGameEvent(CGameEvent *const this)
 {
-  this->_vptr_IGameEvent = off_3FF7190;
+  this->_vptr_IGameEvent = off_3FF7190;  // vptr: CGameEvent
   KeyValues::deleteThis(this->m_pDataKeys);
-  this->_vptr_IGameEvent = off_3FF43B0;
+  this->_vptr_IGameEvent = off_3FF43B0;  // vptr: IGameEvent
 }
 
 
@@ -97,9 +97,9 @@ void __fastcall CGameEvent::~CGameEvent(CGameEvent *const this)
 // calls: KeyValues::deleteThis, operator delete
 void __fastcall CGameEvent::~CGameEvent(CGameEvent *const this)
 {
-  this->_vptr_IGameEvent = off_3FF7190;
+  this->_vptr_IGameEvent = off_3FF7190;  // vptr: CGameEvent
   KeyValues::deleteThis(this->m_pDataKeys);
-  this->_vptr_IGameEvent = off_3FF43B0;
+  this->_vptr_IGameEvent = off_3FF43B0;  // vptr: IGameEvent
   operator delete(this);
 }
 
@@ -252,7 +252,7 @@ void __fastcall CGameEventManager::CGameEventManager(CGameEventManager *const th
 {
   bool v2; // zf
 
-  this->_vptr_IBaseInterface = off_3FF7250;
+  this->_vptr_IBaseInterface = off_3FF7250;  // vptr: CGameEventManager
   this->m_GameEvents.m_Size = 0;
   this->m_GameEvents.m_Memory.m_pMemory = 0;
   this->m_GameEvents.m_Memory.m_nAllocationCount = 0;
@@ -292,7 +292,7 @@ void __fastcall CGameEventManager::~CGameEventManager(CGameEventManager *const t
 {
   bool v2; // zf
 
-  this->_vptr_IBaseInterface = off_3FF7250;
+  this->_vptr_IBaseInterface = off_3FF7250;  // vptr: CGameEventManager
   CGameEventManager::Reset(this);
   if ( this == gameeventmanager )
     gameeventmanager = 0;
@@ -321,12 +321,12 @@ void __fastcall CGameEventManager::~CGameEventManager(CGameEventManager *const t
     || (CUtlMemory<CGameEventDescriptor,int>::Purge(&this->m_GameEvents.m_Memory),
         (this->m_GameEvents.m_Memory.m_nGrowSize & 0xC0000000) != 0) )
   {
-    this->_vptr_IBaseInterface = off_3FF3D10;
+    this->_vptr_IBaseInterface = off_3FF3D10;  // vptr: IBaseInterface
   }
   else
   {
     CUtlMemory<CGameEventDescriptor,int>::Purge(&this->m_GameEvents.m_Memory);
-    this->_vptr_IBaseInterface = off_3FF3D10;
+    this->_vptr_IBaseInterface = off_3FF3D10;  // vptr: IBaseInterface
   }
 }
 
@@ -2281,7 +2281,7 @@ void __fastcall CSource1LegacyGameEventGameSystem::~CSource1LegacyGameEventGameS
 
   m_Clients = this->m_Clients;
   p_m_bRegisteredTestScriptChatScanner = &this->m_bRegisteredTestScriptChatScanner;
-  this->_vptr_IGameSystem = off_3FF7330;
+  this->_vptr_IGameSystem = off_3FF7330;  // vptr: CSource1LegacyGameEventGameSystem
   do
   {
     p_m_bRegisteredTestScriptChatScanner -= 16;
@@ -2324,7 +2324,7 @@ void __fastcall CSource1LegacyGameEventGameSystem::~CSource1LegacyGameEventGameS
     if ( (this->m_ConnectedSignallers.m_Memory.m_nGrowSize & 0xC0000000) == 0 )
       CUtlMemory<CUtlSignaller_Base *,int>::Purge(&this->m_ConnectedSignallers.m_Memory);
   }
-  this->_vptr_IGameSystem = off_3F7C1B0;
+  this->_vptr_IGameSystem = off_3F7C1B0;  // vptr: CAutoGameSystem
   IGameSystem::~IGameSystem(this);
 }
 
@@ -2346,7 +2346,7 @@ void __fastcall CSource1LegacyGameEventGameSystem::~CSource1LegacyGameEventGameS
 
   m_Clients = this->m_Clients;
   p_m_bRegisteredTestScriptChatScanner = &this->m_bRegisteredTestScriptChatScanner;
-  this->_vptr_IGameSystem = off_3FF7330;
+  this->_vptr_IGameSystem = off_3FF7330;  // vptr: CSource1LegacyGameEventGameSystem
   do
   {
     p_m_bRegisteredTestScriptChatScanner -= 16;
@@ -2389,7 +2389,7 @@ void __fastcall CSource1LegacyGameEventGameSystem::~CSource1LegacyGameEventGameS
     if ( (this->m_ConnectedSignallers.m_Memory.m_nGrowSize & 0xC0000000) == 0 )
       CUtlMemory<CUtlSignaller_Base *,int>::Purge(&this->m_ConnectedSignallers.m_Memory);
   }
-  this->_vptr_IGameSystem = off_3F7C1B0;
+  this->_vptr_IGameSystem = off_3F7C1B0;  // vptr: CAutoGameSystem
   IGameSystem::~IGameSystem(this);
   operator delete(this);
 }
@@ -2512,7 +2512,7 @@ void __fastcall CSource1LegacyGameEventGameSystem::GameShutdown(
 void __fastcall CSource1LegacyGameEventGameSystem::CServerSideClient_GameEventLegacyProxy::~CServerSideClient_GameEventLegacyProxy(
         CSource1LegacyGameEventGameSystem::CServerSideClient_GameEventLegacyProxy *const this)
 {
-  this->_vptr_IGameEventListener2 = off_3FB3150;
+  this->_vptr_IGameEventListener2 = off_3FB3150;  // vptr: IGameEventListener2
 }
 
 
@@ -2521,7 +2521,7 @@ void __fastcall CSource1LegacyGameEventGameSystem::CServerSideClient_GameEventLe
 void __fastcall CSource1LegacyGameEventGameSystem::CServerSideClient_GameEventLegacyProxy::~CServerSideClient_GameEventLegacyProxy(
         CSource1LegacyGameEventGameSystem::CServerSideClient_GameEventLegacyProxy *const this)
 {
-  this->_vptr_IGameEventListener2 = off_3FB3150;
+  this->_vptr_IGameEventListener2 = off_3FB3150;  // vptr: IGameEventListener2
   operator delete(this);
 }
 

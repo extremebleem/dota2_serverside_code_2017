@@ -13,7 +13,7 @@ void __cdecl CCustomGameEventManager::YouForgot::ToDefine_DEFINE_GAME_SYSTEM()
 // callers: __static_initialization_and_destruction_0
 void __fastcall CCustomGameEventManager::CCustomGameEventManager(CCustomGameEventManager *const this)
 {
-  this->_vptr_IGameSystem = off_3FCBA30;
+  this->_vptr_IGameSystem = off_3FCBA30;  // vptr: CCustomGameEventManager
   this->m_CustomGameEvents.m_Vector.m_Size = 0;
   this->m_CustomGameEvents.m_Vector.m_Memory.m_pMemory = 0;
   this->m_CustomGameEvents.m_Vector.m_Memory.m_nAllocationCount = 32;
@@ -35,7 +35,7 @@ void __fastcall CCustomGameEventManager::~CCustomGameEventManager(CCustomGameEve
 {
   bool v2; // zf
 
-  this->_vptr_IGameSystem = off_3FCBA30;
+  this->_vptr_IGameSystem = off_3FCBA30;  // vptr: CCustomGameEventManager
   CUtlSymbolTable::~CUtlSymbolTable(&this->m_CustomGameEvents.m_SymbolTable);
   v2 = (this->m_CustomGameEvents.m_Vector.m_Memory.m_nGrowSize & 0xC0000000) == 0;
   this->m_CustomGameEvents.m_Vector.m_Size = 0;
@@ -45,7 +45,7 @@ void __fastcall CCustomGameEventManager::~CCustomGameEventManager(CCustomGameEve
     if ( (this->m_CustomGameEvents.m_Vector.m_Memory.m_nGrowSize & 0xC0000000) == 0 )
       CUtlMemory<CCustomGameEventManager::CCustomGameEventInfo *,int>::Purge(&this->m_CustomGameEvents.m_Vector.m_Memory);
   }
-  this->_vptr_IGameSystem = off_3F7C1B0;
+  this->_vptr_IGameSystem = off_3F7C1B0;  // vptr: CAutoGameSystem
   IGameSystem::~IGameSystem(this);
 }
 

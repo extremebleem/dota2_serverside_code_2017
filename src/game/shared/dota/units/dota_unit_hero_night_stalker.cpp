@@ -579,7 +579,7 @@ CEntityInstance *__fastcall CDOTA_Unit_Hero_NightStalker::CEntityInstanceEntityC
 void __fastcall CDOTA_Unit_Hero_NightStalker::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Unit_Hero_NightStalker::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -589,7 +589,7 @@ void __fastcall CDOTA_Unit_Hero_NightStalker::CEntityInstanceEntityClass::~CEnti
 void __fastcall CDOTA_Unit_Hero_NightStalker::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Unit_Hero_NightStalker::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -869,7 +869,7 @@ CEntityInstance *__fastcall CDOTA_Ability_NightStalker_Void::CEntityInstanceEnti
 void __fastcall CDOTA_Ability_NightStalker_Void::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_NightStalker_Void::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -879,7 +879,7 @@ void __fastcall CDOTA_Ability_NightStalker_Void::CEntityInstanceEntityClass::~CE
 void __fastcall CDOTA_Ability_NightStalker_Void::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_NightStalker_Void::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -1291,7 +1291,7 @@ CEntityInstance *__fastcall CDOTA_Ability_NightStalker_CripplingFear::CEntityIns
 void __fastcall CDOTA_Ability_NightStalker_CripplingFear::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_NightStalker_CripplingFear::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -1301,7 +1301,7 @@ void __fastcall CDOTA_Ability_NightStalker_CripplingFear::CEntityInstanceEntityC
 void __fastcall CDOTA_Ability_NightStalker_CripplingFear::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_NightStalker_CripplingFear::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -1709,7 +1709,7 @@ CEntityInstance *__fastcall CDOTA_Ability_NightStalker_HunterInTheNight::CEntity
 void __fastcall CDOTA_Ability_NightStalker_HunterInTheNight::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_NightStalker_HunterInTheNight::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -1719,7 +1719,7 @@ void __fastcall CDOTA_Ability_NightStalker_HunterInTheNight::CEntityInstanceEnti
 void __fastcall CDOTA_Ability_NightStalker_HunterInTheNight::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_NightStalker_HunterInTheNight::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -2276,7 +2276,7 @@ CEntityInstance *__fastcall CDOTA_Ability_NightStalker_Darkness::CEntityInstance
 void __fastcall CDOTA_Ability_NightStalker_Darkness::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_NightStalker_Darkness::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -2286,7 +2286,7 @@ void __fastcall CDOTA_Ability_NightStalker_Darkness::CEntityInstanceEntityClass:
 void __fastcall CDOTA_Ability_NightStalker_Darkness::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_NightStalker_Darkness::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }

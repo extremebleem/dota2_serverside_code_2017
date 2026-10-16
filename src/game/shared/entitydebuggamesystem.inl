@@ -7,7 +7,7 @@ void __fastcall CEntityDebugGameSystem::~CEntityDebugGameSystem(CEntityDebugGame
 {
   bool v2; // zf
 
-  this->_vptr_IGameSystem = off_3FCC5F0;
+  this->_vptr_IGameSystem = off_3FCC5F0;  // vptr: CEntityDebugGameSystem
   CUtlVectorBase<CUtlString,CUtlMemory<CUtlString,int>>::RemoveAll(&this->m_StickyEntTextNames);
   if ( (this->m_StickyEntTextNames.m_Memory.m_nGrowSize & 0xC0000000) == 0 )
   {
@@ -46,7 +46,7 @@ void __fastcall CEntityDebugGameSystem::~CEntityDebugGameSystem(CEntityDebugGame
   ConCommandBase::Shutdown(&this->m_OnEntityReport_register.m_ConCommandAccessor);
   ConCommand::~ConCommand(&this->m_OnEntityReport_register.m_ConCommandAccessor);
   CUtlSlot::~CUtlSlot(&this->CUtlSlot);
-  this->_vptr_IGameSystem = off_3F7C1B0;
+  this->_vptr_IGameSystem = off_3F7C1B0;  // vptr: CAutoGameSystem
   IGameSystem::~IGameSystem(this);
 }
 
@@ -57,7 +57,7 @@ void __fastcall CEntityDebugGameSystem::~CEntityDebugGameSystem(CEntityDebugGame
 {
   bool v2; // zf
 
-  this->_vptr_IGameSystem = off_3FCC5F0;
+  this->_vptr_IGameSystem = off_3FCC5F0;  // vptr: CEntityDebugGameSystem
   CUtlVectorBase<CUtlString,CUtlMemory<CUtlString,int>>::RemoveAll(&this->m_StickyEntTextNames);
   if ( (this->m_StickyEntTextNames.m_Memory.m_nGrowSize & 0xC0000000) == 0 )
   {
@@ -97,7 +97,7 @@ void __fastcall CEntityDebugGameSystem::~CEntityDebugGameSystem(CEntityDebugGame
   ConCommandBase::Shutdown(&this->m_OnEntityReport_register.m_ConCommandAccessor);
   ConCommand::~ConCommand(&this->m_OnEntityReport_register.m_ConCommandAccessor);
   CUtlSlot::~CUtlSlot(&this->CUtlSlot);
-  this->_vptr_IGameSystem = off_3F7C1B0;
+  this->_vptr_IGameSystem = off_3F7C1B0;  // vptr: CAutoGameSystem
   IGameSystem::~IGameSystem(this);
   operator delete(this);
 }

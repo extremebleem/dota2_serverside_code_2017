@@ -10,7 +10,7 @@ void __fastcall CDOTA_Bot_AbilityUsage_MedallionOfCourage::CDOTA_Bot_AbilityUsag
 {
   this->m_pAbility = pAbility;
   this->m_pBot = pBot;
-  this->_vptr_CDOTA_Bot_AbilityUsage = off_42C6650;
+  this->_vptr_CDOTA_Bot_AbilityUsage = off_42C6650;  // vptr: CDOTA_Bot_AbilityUsage_MedallionOfCourage
   this->m_hTarget.m_Index = -1;
   this->m_bUseOnCreeps = 1;
 }

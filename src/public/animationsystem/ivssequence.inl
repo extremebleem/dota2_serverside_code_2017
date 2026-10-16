@@ -4,7 +4,7 @@
 // IVSSequence::~IVSSequence  (line 25, @0x0000000003145af0, libserver.so)  // inlines: ~IBaseSequence, ~ISequence
 void __fastcall IVSSequence::~IVSSequence(IVSSequence *const this)
 {
-  this->_vptr_IBaseSequence = off_47C52D0;
+  this->_vptr_IBaseSequence = off_47C52D0;  // vptr: IBaseSequence
 }
 
 
@@ -12,7 +12,7 @@ void __fastcall IVSSequence::~IVSSequence(IVSSequence *const this)
 // calls: operator delete
 void __fastcall IVSSequence::~IVSSequence(IVSSequence *const this)
 {
-  this->_vptr_IBaseSequence = off_47C52D0;
+  this->_vptr_IBaseSequence = off_47C52D0;  // vptr: IBaseSequence
   operator delete(this);
 }
 

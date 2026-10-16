@@ -193,7 +193,7 @@ CEntityInstance *__fastcall CDOTA_Item_DustofAppearance::CEntityInstanceEntityCl
 void __fastcall CDOTA_Item_DustofAppearance::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Item_DustofAppearance::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -203,7 +203,7 @@ void __fastcall CDOTA_Item_DustofAppearance::CEntityInstanceEntityClass::~CEntit
 void __fastcall CDOTA_Item_DustofAppearance::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Item_DustofAppearance::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }

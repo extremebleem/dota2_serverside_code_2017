@@ -659,7 +659,7 @@ CEntityInstance *__fastcall CDOTA_Unit_Hero_Jakiro::CEntityInstanceEntityClass::
 void __fastcall CDOTA_Unit_Hero_Jakiro::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Unit_Hero_Jakiro::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -669,7 +669,7 @@ void __fastcall CDOTA_Unit_Hero_Jakiro::CEntityInstanceEntityClass::~CEntityInst
 void __fastcall CDOTA_Unit_Hero_Jakiro::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Unit_Hero_Jakiro::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -860,7 +860,7 @@ CEntityInstance *__fastcall CDOTA_Ability_Jakiro_DualBreath::CEntityInstanceEnti
 void __fastcall CDOTA_Ability_Jakiro_DualBreath::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Jakiro_DualBreath::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -870,7 +870,7 @@ void __fastcall CDOTA_Ability_Jakiro_DualBreath::CEntityInstanceEntityClass::~CE
 void __fastcall CDOTA_Ability_Jakiro_DualBreath::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Jakiro_DualBreath::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -1772,7 +1772,7 @@ CEntityInstance *__fastcall CDOTA_Ability_Jakiro_IcePath::CEntityInstanceEntityC
 void __fastcall CDOTA_Ability_Jakiro_IcePath::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Jakiro_IcePath::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -1782,7 +1782,7 @@ void __fastcall CDOTA_Ability_Jakiro_IcePath::CEntityInstanceEntityClass::~CEnti
 void __fastcall CDOTA_Ability_Jakiro_IcePath::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Jakiro_IcePath::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -2704,7 +2704,7 @@ CEntityInstance *__fastcall CDOTA_Ability_Jakiro_Liquid_Fire::CEntityInstanceEnt
 void __fastcall CDOTA_Ability_Jakiro_Liquid_Fire::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Jakiro_Liquid_Fire::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -2714,7 +2714,7 @@ void __fastcall CDOTA_Ability_Jakiro_Liquid_Fire::CEntityInstanceEntityClass::~C
 void __fastcall CDOTA_Ability_Jakiro_Liquid_Fire::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Jakiro_Liquid_Fire::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -3520,7 +3520,7 @@ CEntityInstance *__fastcall CDOTA_Ability_Jakiro_Macropyre::CEntityInstanceEntit
 void __fastcall CDOTA_Ability_Jakiro_Macropyre::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Jakiro_Macropyre::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -3530,7 +3530,7 @@ void __fastcall CDOTA_Ability_Jakiro_Macropyre::CEntityInstanceEntityClass::~CEn
 void __fastcall CDOTA_Ability_Jakiro_Macropyre::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Jakiro_Macropyre::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }

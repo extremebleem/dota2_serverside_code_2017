@@ -105,7 +105,7 @@ void __fastcall CDecalEmitterSystem::~CDecalEmitterSystem(CDecalEmitterSystem *c
     if ( (this->m_AllDecals.m_Memory.m_nGrowSize & 0xC0000000) == 0 )
       CUtlMemory<CDecalEmitterSystem::DecalListEntry,int>::Purge(&this->m_AllDecals.m_Memory);
   }
-  this->_vptr_IGameSystem = off_3F7C1B0;
+  this->_vptr_IGameSystem = off_3F7C1B0;  // vptr: CAutoGameSystem
   IGameSystem::~IGameSystem(&this->CAutoGameSystem);
 }
 
@@ -137,7 +137,7 @@ void __fastcall CDecalEmitterSystem::~CDecalEmitterSystem(CDecalEmitterSystem *c
     if ( (this->m_AllDecals.m_Memory.m_nGrowSize & 0xC0000000) == 0 )
       CUtlMemory<CDecalEmitterSystem::DecalListEntry,int>::Purge(&this->m_AllDecals.m_Memory);
   }
-  this->_vptr_IGameSystem = off_3F7C1B0;
+  this->_vptr_IGameSystem = off_3F7C1B0;  // vptr: CAutoGameSystem
   IGameSystem::~IGameSystem(&this->CAutoGameSystem);
   operator delete(this);
 }

@@ -10,26 +10,23 @@ void __cdecl GLOBAL__sub_I_model_cpp()
   UNSPECIFIED_LOGGING_COLOR._color[1] = 0;
   UNSPECIFIED_LOGGING_COLOR._color[2] = 0;
   UNSPECIFIED_LOGGING_COLOR._color[3] = 0;
-  if ( `guard variable for'g_AnimOpSourceColors == 0 )
-  {
-    `guard variable for'g_AnimOpSourceColors = 1;
-    g_AnimOpSourceColors[0]._color[0] = -1;
-    g_AnimOpSourceColors[0]._color[1] = -1;
-    g_AnimOpSourceColors[0]._color[2] = 0;
-    g_AnimOpSourceColors[0]._color[3] = -1;
-    g_AnimOpSourceColors[1]._color[0] = -36;
-    g_AnimOpSourceColors[1]._color[1] = -36;
-    g_AnimOpSourceColors[1]._color[2] = -36;
-    g_AnimOpSourceColors[1]._color[3] = -1;
-    g_AnimOpSourceColors[2]._color[0] = 0;
-    g_AnimOpSourceColors[2]._color[1] = -1;
-    g_AnimOpSourceColors[2]._color[2] = 50;
-    g_AnimOpSourceColors[2]._color[3] = -1;
-    g_AnimOpSourceColors[3]._color[0] = -1;
-    g_AnimOpSourceColors[3]._color[1] = 50;
-    g_AnimOpSourceColors[3]._color[2] = 50;
-    g_AnimOpSourceColors[3]._color[3] = -1;
-  }
+  // init once: g_AnimOpSourceColors
+  g_AnimOpSourceColors[0]._color[0] = -1;
+  g_AnimOpSourceColors[0]._color[1] = -1;
+  g_AnimOpSourceColors[0]._color[2] = 0;
+  g_AnimOpSourceColors[0]._color[3] = -1;
+  g_AnimOpSourceColors[1]._color[0] = -36;
+  g_AnimOpSourceColors[1]._color[1] = -36;
+  g_AnimOpSourceColors[1]._color[2] = -36;
+  g_AnimOpSourceColors[1]._color[3] = -1;
+  g_AnimOpSourceColors[2]._color[0] = 0;
+  g_AnimOpSourceColors[2]._color[1] = -1;
+  g_AnimOpSourceColors[2]._color[2] = 50;
+  g_AnimOpSourceColors[2]._color[3] = -1;
+  g_AnimOpSourceColors[3]._color[0] = -1;
+  g_AnimOpSourceColors[3]._color[1] = 50;
+  g_AnimOpSourceColors[3]._color[2] = 50;
+  g_AnimOpSourceColors[3]._color[3] = -1;
   __cxa_atexit(CEmptySequence::~CEmptySequence, &s_EmptySequence, &_dso_handle);
 }
 
@@ -2811,13 +2808,11 @@ int __fastcall CModel::GetBoneIndexForHitboxForMesh(const CModel *const this, co
   __int64 v7; // rcx
   __int64 v8; // rdi
   __int64 v9; // rsi
-  __int64 v10; // r8
-  __int64 v11; // r9
-  unsigned __int8 v12; // al
+  unsigned __int8 v10; // al
   int m_Size; // r15d
-  int v14; // r14d
-  const char *v15; // rax
-  LeafCodeInfo_t v16; // [rsp+10h] [rbp-50h] BYREF
+  int v12; // r14d
+  const char *v13; // rax
+  LeafCodeInfo_t v14; // [rsp+10h] [rbp-50h] BYREF
 
   v3 = nMesh;
   if ( this->m_boneAndFlexCountsForMesh.m_Size <= nMesh )
@@ -2826,27 +2821,27 @@ int __fastcall CModel::GetBoneIndexForHitboxForMesh(const CModel *const this, co
       goto LABEL_7;
     while ( 1 )
     {
-      if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v8, v9, v6, v7, v10, v11) != 0 )
+      if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v8, v9, v6, v7) != 0 )
         loc_0 = -559038737;
       Plat_ExitProcess(1);
 LABEL_7:
       ++v3;
-      v12 = (*(this->_vptr_CModel + 4))(this);
+      v10 = (*(this->_vptr_CModel + 4))(this);
       m_Size = this->m_boneAndFlexCountsForMesh.m_Size;
-      v14 = v12;
-      v15 = CUtlString::Get(&this->m_name);
-      v16.m_szFile = "model.cpp";
-      v16.m_szFunction = "GetBoneIndexForHitboxForMesh";
-      v16.m_nLine = 952;
+      v12 = v10;
+      v13 = CUtlString::Get(&this->m_name);
+      v14.m_szFile = "model.cpp";
+      v14.m_szFunction = "GetBoneIndexForHitboxForMesh";
+      v14.m_nLine = 952;
       LoggingSystem_Log(
         LOG_GENERAL,
         LoggingSeverity_t::LS_ERROR,
-        &v16,
+        &v14,
         "Model %s missing bone and flex counts (%d < %d), init %d\n",
-        v15,
+        v13,
         m_Size,
         v3,
-        v14);
+        v12);
     }
   }
   return CModel::GetLocalToMasterTableForMesh(this, nMesh)[this->m_boneAndFlexCountsForMesh.m_Memory.m_pMemory[nMesh]

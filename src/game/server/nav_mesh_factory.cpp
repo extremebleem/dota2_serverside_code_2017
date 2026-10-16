@@ -57,8 +57,8 @@ CNavMesh *__cdecl NavMeshFactory()
     CNavConfig::FillAttributeTableBase();
   if ( INavDrawArea::ms_pInst == 0 )
   {
-    v12 = operator new(8u);
-    v12->_vptr_INavDrawArea = off_47AE250;
+    v12 = operator new(8u);  // new CNavDrawArea (size matches)
+    v12->_vptr_INavDrawArea = off_47AE250;  // vptr: CNavDrawArea
     INavDrawArea::ms_pInst = v12;
   }
   v0 = operator new(0x2150u);
@@ -76,13 +76,13 @@ CNavMesh *__cdecl NavMeshFactory()
     CNavMesh::RegisterNavEditor(v0, v3);
     NavObstructionMgr = GetNavObstructionMgr();
     CNavMesh::RegisterObstructionManager(v0, NavObstructionMgr);
-    v5 = operator new(0xC0u);
+    v5 = operator new(0xC0u);  // new CNavGeneratorAAQuad (size matches)
     CNavGenerator::CNavGenerator(v5, v0);
     v5[1]._vptr_CNavGeneratorBase = 0;
     LODWORD(v5[1].m_rNavMesh) = 0;
     HIDWORD(v5[1].m_rNavMesh) = 0;
     LODWORD(v5[1].m_rNavAreas) = 0;
-    v5->_vptr_CNavGeneratorBase = off_47B0C90;
+    v5->_vptr_CNavGeneratorBase = off_47B0C90;  // vptr: CNavGeneratorAAQuad
     HIDWORD(v5[1].m_rNavAreas) = 32;
     LOBYTE(v5[1].m_rNavLadders) = 0;
     CNavMesh::RegisterGenerator(v0, v5);
@@ -92,17 +92,17 @@ CNavMesh *__cdecl NavMeshFactory()
     v7 = operator new(8u);
     v7->_vptr_INavPhysicsInterface = &off_47AE370;
     CNavMesh::RegisterPhysicsInterface(v0, v7);
-    v8 = operator new(0x48u);
+    v8 = operator new(0x48u);  // new CTraceFilterGroundEntities (size matches)
     CTraceFilterSimple::CTraceFilterSimple(v8, 0, 4, 0);
     v8->m_attr.m_nInteractsExclude |= 0xC0000uLL;
     LODWORD(v8[1]._vptr_CTraceFilter) = 15;
-    v8->_vptr_CTraceFilter = off_3FE6A90;
+    v8->_vptr_CTraceFilter = off_3FE6A90;  // vptr: CTraceFilterGroundEntities
     CNavMesh::RegisterFilterGroundEntities(v0, v8);
-    v9 = operator new(0x48u);
+    v9 = operator new(0x48u);  // new CTraceFilterWalkableEntities (size matches)
     CTraceFilterSimple::CTraceFilterSimple(v9, 0, 11, 0);
     v9->m_attr.m_nInteractsExclude |= 0xC0000uLL;
     LODWORD(v9[1]._vptr_CTraceFilter) = 15;
-    v9->_vptr_CTraceFilter = off_3FE6A50;
+    v9->_vptr_CTraceFilter = off_3FE6A50;  // vptr: CTraceFilterWalkableEntities
     CNavMesh::RegisterFilterWalkableEntities(v0, v9);
   }
   return v0;

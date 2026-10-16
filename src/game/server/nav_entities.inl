@@ -4,7 +4,7 @@
 // CTraceFilterWalkableEntities::~CTraceFilterWalkableEntities  (line 262, @0x00000000020327f0, libserver.so)  // inlines: ~CTraceFilter, ~CTraceFilterSimple
 void __fastcall CTraceFilterWalkableEntities::~CTraceFilterWalkableEntities(CTraceFilterWalkableEntities *const this)
 {
-  this->_vptr_CTraceFilter = off_3FE6970;
+  this->_vptr_CTraceFilter = off_3FE6970;  // vptr: CTraceFilter
 }
 
 
@@ -12,7 +12,7 @@ void __fastcall CTraceFilterWalkableEntities::~CTraceFilterWalkableEntities(CTra
 // calls: operator delete
 void __fastcall CTraceFilterWalkableEntities::~CTraceFilterWalkableEntities(CTraceFilterWalkableEntities *const this)
 {
-  this->_vptr_CTraceFilter = off_3FE6970;
+  this->_vptr_CTraceFilter = off_3FE6970;  // vptr: CTraceFilter
   operator delete(this);
 }
 
@@ -75,7 +75,7 @@ bool __fastcall CTraceFilterWalkableEntities::ShouldHitEntity(
 // CTraceFilterGroundEntities::~CTraceFilterGroundEntities  (line 286, @0x0000000002032a00, libserver.so)  // inlines: ~CTraceFilter, ~CTraceFilterSimple, ~CTraceFilterWalkableEntities
 void __fastcall CTraceFilterGroundEntities::~CTraceFilterGroundEntities(CTraceFilterGroundEntities *const this)
 {
-  this->_vptr_CTraceFilter = off_3FE6970;
+  this->_vptr_CTraceFilter = off_3FE6970;  // vptr: CTraceFilter
 }
 
 
@@ -83,7 +83,7 @@ void __fastcall CTraceFilterGroundEntities::~CTraceFilterGroundEntities(CTraceFi
 // calls: operator delete
 void __fastcall CTraceFilterGroundEntities::~CTraceFilterGroundEntities(CTraceFilterGroundEntities *const this)
 {
-  this->_vptr_CTraceFilter = off_3FE6970;
+  this->_vptr_CTraceFilter = off_3FE6970;  // vptr: CTraceFilter
   operator delete(this);
 }
 
@@ -246,7 +246,7 @@ CEntityInstance *__fastcall CFuncNavBlocker::CEntityInstanceEntityClass::Constru
 void __fastcall CFuncNavBlocker::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CFuncNavBlocker::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -256,7 +256,7 @@ void __fastcall CFuncNavBlocker::CEntityInstanceEntityClass::~CEntityInstanceEnt
 void __fastcall CFuncNavBlocker::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CFuncNavBlocker::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -511,7 +511,7 @@ CEntityInstance *__fastcall CFuncNavConnectionBlocker::CEntityInstanceEntityClas
 void __fastcall CFuncNavConnectionBlocker::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CFuncNavConnectionBlocker::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -521,7 +521,7 @@ void __fastcall CFuncNavConnectionBlocker::CEntityInstanceEntityClass::~CEntityI
 void __fastcall CFuncNavConnectionBlocker::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CFuncNavConnectionBlocker::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -701,7 +701,7 @@ CBaseEntity *__fastcall CNavEntityInterface::FindLadderEntity(
   vSrc.x = (rLadder->m_vTop.x + rLadder->m_vBottom.x) * 0.5;
   vSrc.y = v2 * 0.5;
   vSrc.z = v3 * 0.5;
-  EntityByClassnameNearest = UTIL_FindEntityByClassnameNearest("func_simpleladder", &vSrc, v3 * 0.5);
+  EntityByClassnameNearest = UTIL_FindEntityByClassnameNearest("func_simpleladder", &vSrc, 16.0, v3 * 0.5);
   if ( EntityByClassnameNearest == 0 )
     return 0;
   m_pEntity = EntityByClassnameNearest->m_pEntity;
@@ -1053,7 +1053,7 @@ CEntityInstance *__fastcall CZombieBorder::CEntityInstanceEntityClass::Construct
 void __fastcall CZombieBorder::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CZombieBorder::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -1063,7 +1063,7 @@ void __fastcall CZombieBorder::CEntityInstanceEntityClass::~CEntityInstanceEntit
 void __fastcall CZombieBorder::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CZombieBorder::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }

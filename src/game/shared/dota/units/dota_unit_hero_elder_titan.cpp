@@ -1107,7 +1107,7 @@ CEntityInstance *__fastcall CDOTA_Ability_Elder_Titan_AncestralSpirit::CEntityIn
 void __fastcall CDOTA_Ability_Elder_Titan_AncestralSpirit::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Elder_Titan_AncestralSpirit::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -1117,7 +1117,7 @@ void __fastcall CDOTA_Ability_Elder_Titan_AncestralSpirit::CEntityInstanceEntity
 void __fastcall CDOTA_Ability_Elder_Titan_AncestralSpirit::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Elder_Titan_AncestralSpirit::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -1297,7 +1297,7 @@ CEntityInstance *__fastcall CDOTA_Unit_Elder_Titan_AncestralSpirit::CEntityInsta
 void __fastcall CDOTA_Unit_Elder_Titan_AncestralSpirit::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Unit_Elder_Titan_AncestralSpirit::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -1307,7 +1307,7 @@ void __fastcall CDOTA_Unit_Elder_Titan_AncestralSpirit::CEntityInstanceEntityCla
 void __fastcall CDOTA_Unit_Elder_Titan_AncestralSpirit::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Unit_Elder_Titan_AncestralSpirit::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -1536,7 +1536,7 @@ CEntityInstance *__fastcall CDOTA_Unit_Hero_Elder_Titan::CEntityInstanceEntityCl
 void __fastcall CDOTA_Unit_Hero_Elder_Titan::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Unit_Hero_Elder_Titan::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -1546,7 +1546,7 @@ void __fastcall CDOTA_Unit_Hero_Elder_Titan::CEntityInstanceEntityClass::~CEntit
 void __fastcall CDOTA_Unit_Hero_Elder_Titan::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Unit_Hero_Elder_Titan::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -3445,7 +3445,7 @@ CEntityInstance *__fastcall CDOTA_Ability_Elder_Titan_ReturnSpirit::CEntityInsta
 void __fastcall CDOTA_Ability_Elder_Titan_ReturnSpirit::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Elder_Titan_ReturnSpirit::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -3455,7 +3455,7 @@ void __fastcall CDOTA_Ability_Elder_Titan_ReturnSpirit::CEntityInstanceEntityCla
 void __fastcall CDOTA_Ability_Elder_Titan_ReturnSpirit::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Elder_Titan_ReturnSpirit::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -4194,7 +4194,7 @@ CEntityInstance *__fastcall CDOTA_Ability_Elder_Titan_EchoStomp::CEntityInstance
 void __fastcall CDOTA_Ability_Elder_Titan_EchoStomp::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Elder_Titan_EchoStomp::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -4204,7 +4204,7 @@ void __fastcall CDOTA_Ability_Elder_Titan_EchoStomp::CEntityInstanceEntityClass:
 void __fastcall CDOTA_Ability_Elder_Titan_EchoStomp::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Elder_Titan_EchoStomp::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -5004,7 +5004,7 @@ CEntityInstance *__fastcall CDOTA_Ability_Elder_Titan_EchoStomp_Spirit::CEntityI
 void __fastcall CDOTA_Ability_Elder_Titan_EchoStomp_Spirit::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Elder_Titan_EchoStomp_Spirit::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -5014,7 +5014,7 @@ void __fastcall CDOTA_Ability_Elder_Titan_EchoStomp_Spirit::CEntityInstanceEntit
 void __fastcall CDOTA_Ability_Elder_Titan_EchoStomp_Spirit::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Elder_Titan_EchoStomp_Spirit::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -5761,7 +5761,7 @@ CEntityInstance *__fastcall CDOTA_Ability_Elder_Titan_NaturalOrder::CEntityInsta
 void __fastcall CDOTA_Ability_Elder_Titan_NaturalOrder::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Elder_Titan_NaturalOrder::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -5771,7 +5771,7 @@ void __fastcall CDOTA_Ability_Elder_Titan_NaturalOrder::CEntityInstanceEntityCla
 void __fastcall CDOTA_Ability_Elder_Titan_NaturalOrder::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Elder_Titan_NaturalOrder::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -6053,7 +6053,7 @@ CEntityInstance *__fastcall CDOTA_Ability_Elder_Titan_NaturalOrder_Spirit::CEnti
 void __fastcall CDOTA_Ability_Elder_Titan_NaturalOrder_Spirit::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Elder_Titan_NaturalOrder_Spirit::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -6063,7 +6063,7 @@ void __fastcall CDOTA_Ability_Elder_Titan_NaturalOrder_Spirit::CEntityInstanceEn
 void __fastcall CDOTA_Ability_Elder_Titan_NaturalOrder_Spirit::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Elder_Titan_NaturalOrder_Spirit::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -7561,7 +7561,7 @@ CEntityInstance *__fastcall CDOTA_Ability_Elder_Titan_EarthSplitter::CEntityInst
 void __fastcall CDOTA_Ability_Elder_Titan_EarthSplitter::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Elder_Titan_EarthSplitter::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -7571,7 +7571,7 @@ void __fastcall CDOTA_Ability_Elder_Titan_EarthSplitter::CEntityInstanceEntityCl
 void __fastcall CDOTA_Ability_Elder_Titan_EarthSplitter::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Elder_Titan_EarthSplitter::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }

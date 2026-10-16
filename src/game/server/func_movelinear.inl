@@ -102,7 +102,7 @@ CEntityInstance *__fastcall CFuncMoveLinear::CEntityInstanceEntityClass::Constru
 void __fastcall CFuncMoveLinear::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CFuncMoveLinear::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -112,7 +112,7 @@ void __fastcall CFuncMoveLinear::CEntityInstanceEntityClass::~CEntityInstanceEnt
 void __fastcall CFuncMoveLinear::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CFuncMoveLinear::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }

@@ -208,7 +208,7 @@ void *__fastcall CShadowControl::CEntityInstanceEntityClass::AllocateInstance(
 void __fastcall CShadowControl::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CShadowControl::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -218,7 +218,7 @@ void __fastcall CShadowControl::CEntityInstanceEntityClass::~CEntityInstanceEnti
 void __fastcall CShadowControl::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CShadowControl::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }

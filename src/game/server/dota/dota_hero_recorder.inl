@@ -72,7 +72,7 @@ void *__fastcall CDOTA_Hero_Recorder::CEntityInstanceEntityClass::AllocateInstan
 void __fastcall CDOTA_Hero_Recorder::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Hero_Recorder::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -82,7 +82,7 @@ void __fastcall CDOTA_Hero_Recorder::CEntityInstanceEntityClass::~CEntityInstanc
 void __fastcall CDOTA_Hero_Recorder::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Hero_Recorder::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }

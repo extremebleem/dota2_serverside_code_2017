@@ -772,7 +772,7 @@ CEntityInstance *__fastcall CDOTA_Unit_Hero_AbyssalUnderlord::CEntityInstanceEnt
 void __fastcall CDOTA_Unit_Hero_AbyssalUnderlord::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Unit_Hero_AbyssalUnderlord::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -782,7 +782,7 @@ void __fastcall CDOTA_Unit_Hero_AbyssalUnderlord::CEntityInstanceEntityClass::~C
 void __fastcall CDOTA_Unit_Hero_AbyssalUnderlord::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Unit_Hero_AbyssalUnderlord::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -1013,7 +1013,7 @@ CEntityInstance *__fastcall CDOTA_Ability_AbyssalUnderlord_Firestorm::CEntityIns
 void __fastcall CDOTA_Ability_AbyssalUnderlord_Firestorm::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_AbyssalUnderlord_Firestorm::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -1023,7 +1023,7 @@ void __fastcall CDOTA_Ability_AbyssalUnderlord_Firestorm::CEntityInstanceEntityC
 void __fastcall CDOTA_Ability_AbyssalUnderlord_Firestorm::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_AbyssalUnderlord_Firestorm::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -1796,7 +1796,7 @@ CEntityInstance *__fastcall CDOTA_Ability_AbyssalUnderlord_PitOfMalice::CEntityI
 void __fastcall CDOTA_Ability_AbyssalUnderlord_PitOfMalice::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_AbyssalUnderlord_PitOfMalice::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -1806,7 +1806,7 @@ void __fastcall CDOTA_Ability_AbyssalUnderlord_PitOfMalice::CEntityInstanceEntit
 void __fastcall CDOTA_Ability_AbyssalUnderlord_PitOfMalice::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_AbyssalUnderlord_PitOfMalice::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -2578,7 +2578,7 @@ CEntityInstance *__fastcall CDOTA_Ability_AbyssalUnderlord_AtrophyAura::CEntityI
 void __fastcall CDOTA_Ability_AbyssalUnderlord_AtrophyAura::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_AbyssalUnderlord_AtrophyAura::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -2588,7 +2588,7 @@ void __fastcall CDOTA_Ability_AbyssalUnderlord_AtrophyAura::CEntityInstanceEntit
 void __fastcall CDOTA_Ability_AbyssalUnderlord_AtrophyAura::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_AbyssalUnderlord_AtrophyAura::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -3561,7 +3561,7 @@ CEntityInstance *__fastcall CDOTA_Ability_AbyssalUnderlord_DarkRift::CEntityInst
 void __fastcall CDOTA_Ability_AbyssalUnderlord_DarkRift::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_AbyssalUnderlord_DarkRift::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -3571,7 +3571,7 @@ void __fastcall CDOTA_Ability_AbyssalUnderlord_DarkRift::CEntityInstanceEntityCl
 void __fastcall CDOTA_Ability_AbyssalUnderlord_DarkRift::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_AbyssalUnderlord_DarkRift::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -4301,7 +4301,7 @@ CEntityInstance *__fastcall CDOTA_Ability_AbyssalUnderlord_Cancel_DarkRift::CEnt
 void __fastcall CDOTA_Ability_AbyssalUnderlord_Cancel_DarkRift::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_AbyssalUnderlord_Cancel_DarkRift::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -4311,7 +4311,7 @@ void __fastcall CDOTA_Ability_AbyssalUnderlord_Cancel_DarkRift::CEntityInstanceE
 void __fastcall CDOTA_Ability_AbyssalUnderlord_Cancel_DarkRift::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_AbyssalUnderlord_Cancel_DarkRift::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }

@@ -11,7 +11,7 @@ void __fastcall CDOTA_Bot_AbilityUsage_DiffusalBlade::CDOTA_Bot_AbilityUsage_Dif
   this->m_pAbility = pAbility;
   this->m_bUseOnCreeps = 0;
   this->m_pBot = pBot;
-  this->_vptr_CDOTA_Bot_AbilityUsage = off_42C6090;
+  this->_vptr_CDOTA_Bot_AbilityUsage = off_42C6090;  // vptr: CDOTA_Bot_AbilityUsage_DiffusalBlade
   this->m_hTarget.m_Index = -1;
 }
 

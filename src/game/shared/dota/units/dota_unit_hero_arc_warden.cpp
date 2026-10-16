@@ -610,7 +610,7 @@ CEntityInstance *__fastcall CDOTA_Unit_Hero_ArcWarden::CEntityInstanceEntityClas
 void __fastcall CDOTA_Unit_Hero_ArcWarden::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Unit_Hero_ArcWarden::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -620,7 +620,7 @@ void __fastcall CDOTA_Unit_Hero_ArcWarden::CEntityInstanceEntityClass::~CEntityI
 void __fastcall CDOTA_Unit_Hero_ArcWarden::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Unit_Hero_ArcWarden::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -881,7 +881,7 @@ CEntityInstance *__fastcall CDOTA_Ability_ArcWarden_Flux::CEntityInstanceEntityC
 void __fastcall CDOTA_Ability_ArcWarden_Flux::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_ArcWarden_Flux::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -891,7 +891,7 @@ void __fastcall CDOTA_Ability_ArcWarden_Flux::CEntityInstanceEntityClass::~CEnti
 void __fastcall CDOTA_Ability_ArcWarden_Flux::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_ArcWarden_Flux::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -1415,7 +1415,7 @@ CEntityInstance *__fastcall CDOTA_Ability_ArcWarden_MagneticField::CEntityInstan
 void __fastcall CDOTA_Ability_ArcWarden_MagneticField::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_ArcWarden_MagneticField::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -1425,7 +1425,7 @@ void __fastcall CDOTA_Ability_ArcWarden_MagneticField::CEntityInstanceEntityClas
 void __fastcall CDOTA_Ability_ArcWarden_MagneticField::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_ArcWarden_MagneticField::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -2136,7 +2136,7 @@ CEntityInstance *__fastcall CDOTA_Ability_ArcWarden_SparkWraith::CEntityInstance
 void __fastcall CDOTA_Ability_ArcWarden_SparkWraith::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_ArcWarden_SparkWraith::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -2146,7 +2146,7 @@ void __fastcall CDOTA_Ability_ArcWarden_SparkWraith::CEntityInstanceEntityClass:
 void __fastcall CDOTA_Ability_ArcWarden_SparkWraith::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_ArcWarden_SparkWraith::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -2915,7 +2915,7 @@ CEntityInstance *__fastcall CDOTA_Ability_ArcWarden_TempestDouble::CEntityInstan
 void __fastcall CDOTA_Ability_ArcWarden_TempestDouble::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_ArcWarden_TempestDouble::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -2925,7 +2925,7 @@ void __fastcall CDOTA_Ability_ArcWarden_TempestDouble::CEntityInstanceEntityClas
 void __fastcall CDOTA_Ability_ArcWarden_TempestDouble::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_ArcWarden_TempestDouble::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }

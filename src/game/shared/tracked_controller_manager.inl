@@ -10,7 +10,7 @@ void __fastcall CTrackedControllerManager::~CTrackedControllerManager(CTrackedCo
   p_m_mutex = &this->m_mutex;
   *p_m_mutex[-1].m_Attr.__size = off_40B9490;
   pthread_mutex_destroy(&p_m_mutex->m_Mutex);
-  this->_vptr_IGameSystem = off_3F7C1B0;
+  this->_vptr_IGameSystem = off_3F7C1B0;  // vptr: CAutoGameSystem
   IGameSystem::~IGameSystem(this);
 }
 
@@ -24,7 +24,7 @@ void __fastcall CTrackedControllerManager::~CTrackedControllerManager(CTrackedCo
   p_m_mutex = &this->m_mutex;
   *p_m_mutex[-1].m_Attr.__size = off_40B9490;
   pthread_mutex_destroy(&p_m_mutex->m_Mutex);
-  this->_vptr_IGameSystem = off_3F7C1B0;
+  this->_vptr_IGameSystem = off_3F7C1B0;  // vptr: CAutoGameSystem
   IGameSystem::~IGameSystem(this);
   operator delete(this);
 }

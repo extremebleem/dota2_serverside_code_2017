@@ -319,7 +319,7 @@ CEntityInstance *__fastcall CDOTA_Item_Recipe_Ancient_Janggo::CEntityInstanceEnt
 void __fastcall CDOTA_Item_Recipe_Ancient_Janggo::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Item_Recipe_Ancient_Janggo::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -329,7 +329,7 @@ void __fastcall CDOTA_Item_Recipe_Ancient_Janggo::CEntityInstanceEntityClass::~C
 void __fastcall CDOTA_Item_Recipe_Ancient_Janggo::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Item_Recipe_Ancient_Janggo::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -484,7 +484,7 @@ CEntityInstance *__fastcall CDOTA_Item_Ancient_Janggo::CEntityInstanceEntityClas
 void __fastcall CDOTA_Item_Ancient_Janggo::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Item_Ancient_Janggo::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -494,7 +494,7 @@ void __fastcall CDOTA_Item_Ancient_Janggo::CEntityInstanceEntityClass::~CEntityI
 void __fastcall CDOTA_Item_Ancient_Janggo::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Item_Ancient_Janggo::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }

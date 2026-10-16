@@ -624,7 +624,7 @@ CEntityInstance *__fastcall CDOTA_Unit_Hero_DragonKnight::CEntityInstanceEntityC
 void __fastcall CDOTA_Unit_Hero_DragonKnight::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Unit_Hero_DragonKnight::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -634,7 +634,7 @@ void __fastcall CDOTA_Unit_Hero_DragonKnight::CEntityInstanceEntityClass::~CEnti
 void __fastcall CDOTA_Unit_Hero_DragonKnight::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Unit_Hero_DragonKnight::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -888,7 +888,7 @@ CEntityInstance *__fastcall CDOTA_Ability_DragonKnight_BreatheFire::CEntityInsta
 void __fastcall CDOTA_Ability_DragonKnight_BreatheFire::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_DragonKnight_BreatheFire::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -898,7 +898,7 @@ void __fastcall CDOTA_Ability_DragonKnight_BreatheFire::CEntityInstanceEntityCla
 void __fastcall CDOTA_Ability_DragonKnight_BreatheFire::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_DragonKnight_BreatheFire::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -1403,7 +1403,7 @@ CEntityInstance *__fastcall CDOTA_Ability_DragonKnight_DragonTail::CEntityInstan
 void __fastcall CDOTA_Ability_DragonKnight_DragonTail::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_DragonKnight_DragonTail::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -1413,7 +1413,7 @@ void __fastcall CDOTA_Ability_DragonKnight_DragonTail::CEntityInstanceEntityClas
 void __fastcall CDOTA_Ability_DragonKnight_DragonTail::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_DragonKnight_DragonTail::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -1882,7 +1882,7 @@ CEntityInstance *__fastcall CDOTA_Ability_DragonKnight_DragonBlood::CEntityInsta
 void __fastcall CDOTA_Ability_DragonKnight_DragonBlood::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_DragonKnight_DragonBlood::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -1892,7 +1892,7 @@ void __fastcall CDOTA_Ability_DragonKnight_DragonBlood::CEntityInstanceEntityCla
 void __fastcall CDOTA_Ability_DragonKnight_DragonBlood::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_DragonKnight_DragonBlood::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -2267,7 +2267,7 @@ CEntityInstance *__fastcall CDOTA_Ability_DragonKnight_ElderDragonForm::CEntityI
 void __fastcall CDOTA_Ability_DragonKnight_ElderDragonForm::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_DragonKnight_ElderDragonForm::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -2277,7 +2277,7 @@ void __fastcall CDOTA_Ability_DragonKnight_ElderDragonForm::CEntityInstanceEntit
 void __fastcall CDOTA_Ability_DragonKnight_ElderDragonForm::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_DragonKnight_ElderDragonForm::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }

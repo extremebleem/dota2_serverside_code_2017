@@ -14,7 +14,7 @@ void __fastcall CDOTA_BotMode::CDOTA_BotMode(CDOTA_BotMode *const this, CDOTA_Bo
 {
   vec_t x; // xmm0_4
 
-  this->_vptr_CDOTA_BotMode = off_42B75F0;
+  this->_vptr_CDOTA_BotMode = off_42B75F0;  // vptr: CDOTA_BotMode
   this->m_pBot = pBot;
   this->m_iDesireLocationFrame = 0;
   this->m_DebugStringBuffer[0] = 0;

@@ -57,9 +57,9 @@ CDOTA_BotMode *__fastcall CDOTA_Bot_Hero_CrystalMaiden::CreateMode(CDOTA_Bot_Her
 
   if ( this->m_bHuman || iMode != 2 )
     return CDOTA_Bot::CreateMode(this, iMode);
-  v4 = operator new(0xE8u);
+  v4 = operator new(0xE8u);  // new CDOTA_BotMode_Attack_CrystalMaiden (size matches)
   CDOTA_BotMode_Attack::CDOTA_BotMode_Attack(v4, this);
-  v4->_vptr_CDOTA_BotMode = off_42CAD70;
+  v4->_vptr_CDOTA_BotMode = off_42CAD70;  // vptr: CDOTA_BotMode_Attack_CrystalMaiden
   return v4;
 }
 
@@ -113,7 +113,7 @@ void __fastcall CDOTA_Bot_AbilityUsage_CrystalMaiden_CrystalNova::CDOTA_Bot_Abil
 {
   this->m_pAbility = pAbility;
   this->m_pBot = pBot;
-  this->_vptr_CDOTA_Bot_AbilityUsage = off_42CAE10;
+  this->_vptr_CDOTA_Bot_AbilityUsage = off_42CAE10;  // vptr: CDOTA_Bot_AbilityUsage_CrystalMaiden_CrystalNova
   this->m_bUseOnCreeps = 1;
 }
 
@@ -512,7 +512,7 @@ void __fastcall CDOTA_Bot_AbilityUsage_CrystalMaiden_Frostbite::CDOTA_Bot_Abilit
   this->m_pAbility = pAbility;
   this->m_bUseOnCreeps = 0;
   this->m_pBot = pBot;
-  this->_vptr_CDOTA_Bot_AbilityUsage = off_42CAE70;
+  this->_vptr_CDOTA_Bot_AbilityUsage = off_42CAE70;  // vptr: CDOTA_Bot_AbilityUsage_CrystalMaiden_Frostbite
   this->m_hDesiredTarget.m_Index = -1;
 }
 
@@ -912,7 +912,7 @@ void __fastcall CDOTA_Bot_AbilityUsage_CrystalMaiden_FreezingField::CDOTA_Bot_Ab
   this->m_pAbility = pAbility;
   this->m_bUseOnCreeps = 0;
   this->m_pBot = pBot;
-  this->_vptr_CDOTA_Bot_AbilityUsage = off_42CAED0;
+  this->_vptr_CDOTA_Bot_AbilityUsage = off_42CAED0;  // vptr: CDOTA_Bot_AbilityUsage_CrystalMaiden_FreezingField
 }
 
 

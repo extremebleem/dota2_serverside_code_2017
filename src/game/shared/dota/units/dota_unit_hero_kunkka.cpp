@@ -749,7 +749,7 @@ CEntityInstance *__fastcall CDOTA_Unit_Hero_Kunkka::CEntityInstanceEntityClass::
 void __fastcall CDOTA_Unit_Hero_Kunkka::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Unit_Hero_Kunkka::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -759,7 +759,7 @@ void __fastcall CDOTA_Unit_Hero_Kunkka::CEntityInstanceEntityClass::~CEntityInst
 void __fastcall CDOTA_Unit_Hero_Kunkka::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Unit_Hero_Kunkka::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -956,7 +956,7 @@ CEntityInstance *__fastcall CDOTA_Ability_Kunkka_Torrent::CEntityInstanceEntityC
 void __fastcall CDOTA_Ability_Kunkka_Torrent::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Kunkka_Torrent::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -966,7 +966,7 @@ void __fastcall CDOTA_Ability_Kunkka_Torrent::CEntityInstanceEntityClass::~CEnti
 void __fastcall CDOTA_Ability_Kunkka_Torrent::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Kunkka_Torrent::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -1846,7 +1846,7 @@ CEntityInstance *__fastcall CDOTA_Ability_Kunkka_Tidebringer::CEntityInstanceEnt
 void __fastcall CDOTA_Ability_Kunkka_Tidebringer::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Kunkka_Tidebringer::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -1856,7 +1856,7 @@ void __fastcall CDOTA_Ability_Kunkka_Tidebringer::CEntityInstanceEntityClass::~C
 void __fastcall CDOTA_Ability_Kunkka_Tidebringer::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Kunkka_Tidebringer::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -2549,7 +2549,7 @@ CEntityInstance *__fastcall CDOTA_Ability_Kunkka_XMarksTheSpot::CEntityInstanceE
 void __fastcall CDOTA_Ability_Kunkka_XMarksTheSpot::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Kunkka_XMarksTheSpot::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -2559,7 +2559,7 @@ void __fastcall CDOTA_Ability_Kunkka_XMarksTheSpot::CEntityInstanceEntityClass::
 void __fastcall CDOTA_Ability_Kunkka_XMarksTheSpot::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Kunkka_XMarksTheSpot::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -3099,7 +3099,7 @@ CEntityInstance *__fastcall CDOTA_Ability_Kunkka_Return::CEntityInstanceEntityCl
 void __fastcall CDOTA_Ability_Kunkka_Return::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Kunkka_Return::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -3109,7 +3109,7 @@ void __fastcall CDOTA_Ability_Kunkka_Return::CEntityInstanceEntityClass::~CEntit
 void __fastcall CDOTA_Ability_Kunkka_Return::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Kunkka_Return::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -3342,7 +3342,7 @@ CEntityInstance *__fastcall CDOTA_Ability_Kunkka_GhostShip::CEntityInstanceEntit
 void __fastcall CDOTA_Ability_Kunkka_GhostShip::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Kunkka_GhostShip::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -3352,7 +3352,7 @@ void __fastcall CDOTA_Ability_Kunkka_GhostShip::CEntityInstanceEntityClass::~CEn
 void __fastcall CDOTA_Ability_Kunkka_GhostShip::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Kunkka_GhostShip::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }

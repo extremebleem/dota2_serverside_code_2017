@@ -260,7 +260,7 @@ int __fastcall CStepSimulationManager::GetEntityList(
 // calls: IGameSystem::~IGameSystem
 void __fastcall CStepSimulationHook::~CStepSimulationHook(CStepSimulationHook *const this)
 {
-  this->_vptr_IGameSystem = off_3F7C1B0;
+  this->_vptr_IGameSystem = off_3F7C1B0;  // vptr: CAutoGameSystem
   IGameSystem::~IGameSystem(this);
 }
 
@@ -269,7 +269,7 @@ void __fastcall CStepSimulationHook::~CStepSimulationHook(CStepSimulationHook *c
 // calls: IGameSystem::~IGameSystem, operator delete
 void __fastcall CStepSimulationHook::~CStepSimulationHook(CStepSimulationHook *const this)
 {
-  this->_vptr_IGameSystem = off_3F7C1B0;
+  this->_vptr_IGameSystem = off_3F7C1B0;  // vptr: CAutoGameSystem
   IGameSystem::~IGameSystem(this);
   operator delete(this);
 }

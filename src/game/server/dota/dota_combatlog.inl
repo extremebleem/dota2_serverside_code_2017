@@ -37,7 +37,7 @@ ICLSearchFields *__fastcall CCLSearchFieldFactory<SCLPlayerStatsFields,(DOTA_COM
   ICLSearchFields *v5; // rbx
   const char *String; // rax
 
-  v5 = operator new(0x28u);
+  v5 = operator new(0x28u);  // new SCLPlayerStatsFields (size matches)
   v5->m_iType = DOTA_COMBATLOG_TYPES::DOTA_COMBATLOG_INVALID;
   v5->m_flGameTime = 0.0;
   v5->m_bMatchPreviousTarget = 0;
@@ -45,7 +45,7 @@ ICLSearchFields *__fastcall CCLSearchFieldFactory<SCLPlayerStatsFields,(DOTA_COM
   v5->m_iAttackerName = -1;
   v5->m_iInflictorName = -1;
   v5->m_pDynamicValues = 0;
-  v5->_vptr_ICLSearchFields = off_40DEA90;
+  v5->_vptr_ICLSearchFields = off_40DEA90;  // vptr: SCLPlayerStatsFields
   String = KeyValues::GetString(pKeyValues, "playerid", "", 0, 0);
   ICLSearchFields::ParseQueryStringID(v5, &v5->m_iTargetName, pPlayer, String);
   return v5;
@@ -62,7 +62,7 @@ ICLSearchFields *__fastcall CCLSearchFieldFactory<SCLEndGameStatsFields,(DOTA_CO
   ICLSearchFields *v5; // rbx
   const char *String; // rax
 
-  v5 = operator new(0x28u);
+  v5 = operator new(0x28u);  // new SCLEndGameStatsFields (size matches)
   v5->m_iType = DOTA_COMBATLOG_TYPES::DOTA_COMBATLOG_INVALID;
   v5->m_flGameTime = 0.0;
   v5->m_bMatchPreviousTarget = 0;
@@ -70,7 +70,7 @@ ICLSearchFields *__fastcall CCLSearchFieldFactory<SCLEndGameStatsFields,(DOTA_CO
   v5->m_iAttackerName = -1;
   v5->m_iInflictorName = -1;
   v5->m_pDynamicValues = 0;
-  v5->_vptr_ICLSearchFields = off_40DF210;
+  v5->_vptr_ICLSearchFields = off_40DF210;  // vptr: SCLEndGameStatsFields
   String = KeyValues::GetString(pKeyValues, "playerid", "", 0, 0);
   ICLSearchFields::ParseQueryStringID(v5, &v5->m_iTargetName, pPlayer, String);
   return v5;
@@ -87,7 +87,7 @@ ICLSearchFields *__fastcall CCLSearchFieldFactory<SCLInterruptChannelFields,(DOT
   ICLSearchFields *v5; // rbx
   const char *String; // rax
 
-  v5 = operator new(0x28u);
+  v5 = operator new(0x28u);  // new SCLInterruptChannelFields (size matches)
   v5->m_iType = DOTA_COMBATLOG_TYPES::DOTA_COMBATLOG_INVALID;
   v5->m_flGameTime = 0.0;
   v5->m_bMatchPreviousTarget = 0;
@@ -95,7 +95,7 @@ ICLSearchFields *__fastcall CCLSearchFieldFactory<SCLInterruptChannelFields,(DOT
   v5->m_iAttackerName = -1;
   v5->m_iInflictorName = -1;
   v5->m_pDynamicValues = 0;
-  v5->_vptr_ICLSearchFields = off_40DF270;
+  v5->_vptr_ICLSearchFields = off_40DF270;  // vptr: SCLInterruptChannelFields
   String = KeyValues::GetString(pKeyValues, "target", "", 0, 0);
   ICLSearchFields::ParseQueryStringID(v5, &v5->m_iTargetName, pPlayer, String);
   return v5;
@@ -112,7 +112,7 @@ ICLSearchFields *__fastcall CCLSearchFieldFactory<SCLAlliedGoldFields,(DOTA_COMB
   ICLSearchFields *v5; // rbx
   const char *String; // rax
 
-  v5 = operator new(0x28u);
+  v5 = operator new(0x28u);  // new SCLAlliedGoldFields (size matches)
   v5->m_iType = DOTA_COMBATLOG_TYPES::DOTA_COMBATLOG_INVALID;
   v5->m_flGameTime = 0.0;
   v5->m_bMatchPreviousTarget = 0;
@@ -120,7 +120,7 @@ ICLSearchFields *__fastcall CCLSearchFieldFactory<SCLAlliedGoldFields,(DOTA_COMB
   v5->m_iAttackerName = -1;
   v5->m_iInflictorName = -1;
   v5->m_pDynamicValues = 0;
-  v5->_vptr_ICLSearchFields = off_40DF2D0;
+  v5->_vptr_ICLSearchFields = off_40DF2D0;  // vptr: SCLAlliedGoldFields
   String = KeyValues::GetString(pKeyValues, "playerid", "", 0, 0);
   ICLSearchFields::ParseQueryStringID(v5, &v5->m_iTargetName, pPlayer, String);
   return v5;
@@ -163,7 +163,7 @@ ICLSearchFields *__fastcall CCLSearchFieldFactory<SCLGoldChangeFields,(DOTA_COMB
   ICLSearchFields *v5; // rbx
   const char *String; // rax
 
-  v5 = operator new(0x28u);
+  v5 = operator new(0x28u);  // new SCLGoldChangeFields (size matches)
   v5->m_iType = DOTA_COMBATLOG_TYPES::DOTA_COMBATLOG_INVALID;
   v5->m_flGameTime = 0.0;
   v5->m_bMatchPreviousTarget = 0;
@@ -171,7 +171,7 @@ ICLSearchFields *__fastcall CCLSearchFieldFactory<SCLGoldChangeFields,(DOTA_COMB
   v5->m_iAttackerName = -1;
   v5->m_iInflictorName = -1;
   v5->m_pDynamicValues = 0;
-  v5->_vptr_ICLSearchFields = off_40DF510;
+  v5->_vptr_ICLSearchFields = off_40DF510;  // vptr: SCLGoldChangeFields
   String = KeyValues::GetString(pKeyValues, "hero", "", 0, 0);
   ICLSearchFields::ParseQueryStringID(v5, &v5->m_iTargetName, pPlayer, String);
   return v5;
@@ -188,7 +188,7 @@ ICLSearchFields *__fastcall CCLSearchFieldFactory<SCLTreeCutDownFields,(DOTA_COM
   ICLSearchFields *v5; // rbx
   const char *String; // rax
 
-  v5 = operator new(0x28u);
+  v5 = operator new(0x28u);  // new SCLTreeCutDownFields (size matches)
   v5->m_iType = DOTA_COMBATLOG_TYPES::DOTA_COMBATLOG_INVALID;
   v5->m_flGameTime = 0.0;
   v5->m_bMatchPreviousTarget = 0;
@@ -196,7 +196,7 @@ ICLSearchFields *__fastcall CCLSearchFieldFactory<SCLTreeCutDownFields,(DOTA_COM
   v5->m_iAttackerName = -1;
   v5->m_iInflictorName = -1;
   v5->m_pDynamicValues = 0;
-  v5->_vptr_ICLSearchFields = off_40DF570;
+  v5->_vptr_ICLSearchFields = off_40DF570;  // vptr: SCLTreeCutDownFields
   String = KeyValues::GetString(pKeyValues, "playerid", "", 0, 0);
   ICLSearchFields::ParseQueryStringID(v5, &v5->m_iTargetName, pPlayer, String);
   return v5;
@@ -213,7 +213,7 @@ ICLSearchFields *__fastcall CCLSearchFieldFactory<SCLSuccessfulScanFields,(DOTA_
   ICLSearchFields *v5; // rbx
   const char *String; // rax
 
-  v5 = operator new(0x28u);
+  v5 = operator new(0x28u);  // new SCLSuccessfulScanFields (size matches)
   v5->m_iType = DOTA_COMBATLOG_TYPES::DOTA_COMBATLOG_INVALID;
   v5->m_flGameTime = 0.0;
   v5->m_bMatchPreviousTarget = 0;
@@ -221,7 +221,7 @@ ICLSearchFields *__fastcall CCLSearchFieldFactory<SCLSuccessfulScanFields,(DOTA_
   v5->m_iAttackerName = -1;
   v5->m_iInflictorName = -1;
   v5->m_pDynamicValues = 0;
-  v5->_vptr_ICLSearchFields = off_40DF5D0;
+  v5->_vptr_ICLSearchFields = off_40DF5D0;  // vptr: SCLSuccessfulScanFields
   String = KeyValues::GetString(pKeyValues, "playerid", "", 0, 0);
   ICLSearchFields::ParseQueryStringID(v5, &v5->m_iTargetName, pPlayer, String);
   return v5;
@@ -240,7 +240,7 @@ ICLSearchFields *__fastcall CCLSearchFieldFactory<SCLAegisTakenFields,(DOTA_COMB
   const char *String; // rax
   bool v7; // zf
 
-  v5 = operator new(0x30u);
+  v5 = operator new(0x30u);  // new SCLAegisTakenFields (size matches)
   v5->m_iType = DOTA_COMBATLOG_TYPES::DOTA_COMBATLOG_INVALID;
   v5->m_flGameTime = 0.0;
   v5->m_bMatchPreviousTarget = 0;
@@ -248,7 +248,7 @@ ICLSearchFields *__fastcall CCLSearchFieldFactory<SCLAegisTakenFields,(DOTA_COMB
   v5->m_iAttackerName = -1;
   v5->m_iInflictorName = -1;
   v5->m_pDynamicValues = 0;
-  v5->_vptr_ICLSearchFields = off_40DF330;
+  v5->_vptr_ICLSearchFields = off_40DF330;  // vptr: SCLAegisTakenFields
   String = KeyValues::GetString(pKeyValues, "playerid", "", 0, 0);
   ICLSearchFields::ParseQueryStringID(v5, &v5->m_iTargetName, pPlayer, String);
   v7 = KeyValues::GetInt(pKeyValues, "snatched", 0) == 1;
@@ -269,7 +269,7 @@ ICLSearchFields *__fastcall CCLSearchFieldFactory<SCLAttackEvadeFields,(DOTA_COM
   const char *String; // rax
   bool v7; // zf
 
-  v5 = operator new(0x30u);
+  v5 = operator new(0x30u);  // new SCLAttackEvadeFields (size matches)
   v5->m_iType = DOTA_COMBATLOG_TYPES::DOTA_COMBATLOG_INVALID;
   v5->m_flGameTime = 0.0;
   v5->m_bMatchPreviousTarget = 0;
@@ -277,7 +277,7 @@ ICLSearchFields *__fastcall CCLSearchFieldFactory<SCLAttackEvadeFields,(DOTA_COM
   v5->m_iAttackerName = -1;
   v5->m_iInflictorName = -1;
   v5->m_pDynamicValues = 0;
-  v5->_vptr_ICLSearchFields = off_40DF4B0;
+  v5->_vptr_ICLSearchFields = off_40DF4B0;  // vptr: SCLAttackEvadeFields
   String = KeyValues::GetString(pKeyValues, "evading_unit", "", 0, 0);
   ICLSearchFields::ParseQueryStringID(v5, &v5->m_iTargetName, pPlayer, String);
   v7 = KeyValues::GetInt(pKeyValues, "spell_dodge", 0) == 1;
@@ -325,7 +325,7 @@ ICLSearchFields *__fastcall CCLSearchFieldFactory<SCLBottleHealedAllyFields,(DOT
   const char *String; // rax
   const char *v7; // rax
 
-  v5 = operator new(0x28u);
+  v5 = operator new(0x28u);  // new SCLBottleHealedAllyFields (size matches)
   v5->m_iType = DOTA_COMBATLOG_TYPES::DOTA_COMBATLOG_INVALID;
   v5->m_flGameTime = 0.0;
   v5->m_bMatchPreviousTarget = 0;
@@ -333,7 +333,7 @@ ICLSearchFields *__fastcall CCLSearchFieldFactory<SCLBottleHealedAllyFields,(DOT
   v5->m_iAttackerName = -1;
   v5->m_iInflictorName = -1;
   v5->m_pDynamicValues = 0;
-  v5->_vptr_ICLSearchFields = off_40DF1B0;
+  v5->_vptr_ICLSearchFields = off_40DF1B0;  // vptr: SCLBottleHealedAllyFields
   String = KeyValues::GetString(pKeyValues, "caster", "", 0, 0);
   ICLSearchFields::ParseQueryStringID(v5, &v5->m_iAttackerName, pPlayer, String);
   v7 = KeyValues::GetString(pKeyValues, "target", "", 0, 0);
@@ -382,7 +382,7 @@ ICLSearchFields *__fastcall CCLSearchFieldFactory<SCLHeroGainedLevelFields,(DOTA
   ICLSearchFields *v5; // rbx
   const char *String; // rax
 
-  v5 = operator new(0x38u);
+  v5 = operator new(0x38u);  // new SCLHeroGainedLevelFields (size matches)
   v5->m_iType = DOTA_COMBATLOG_TYPES::DOTA_COMBATLOG_INVALID;
   v5->m_flGameTime = 0.0;
   v5->m_bMatchPreviousTarget = 0;
@@ -390,7 +390,7 @@ ICLSearchFields *__fastcall CCLSearchFieldFactory<SCLHeroGainedLevelFields,(DOTA
   v5->m_iAttackerName = -1;
   v5->m_iInflictorName = -1;
   v5->m_pDynamicValues = 0;
-  v5->_vptr_ICLSearchFields = off_40DF150;
+  v5->_vptr_ICLSearchFields = off_40DF150;  // vptr: SCLHeroGainedLevelFields
   String = KeyValues::GetString(pKeyValues, "hero", "", 0, 0);
   ICLSearchFields::ParseQueryStringID(v5, &v5->m_iTargetName, pPlayer, String);
   LODWORD(v5[1]._vptr_ICLSearchFields) = KeyValues::GetInt(pKeyValues, "level", -1);
@@ -535,7 +535,7 @@ ICLSearchFields *__fastcall CCLSearchFieldFactory<SCLAbilityTriggerFields,(DOTA_
   const char *v7; // rax
   const char *v8; // rax
 
-  v5 = operator new(0x28u);
+  v5 = operator new(0x28u);  // new SCLAbilityTriggerFields (size matches)
   v5->m_iType = DOTA_COMBATLOG_TYPES::DOTA_COMBATLOG_INVALID;
   v5->m_flGameTime = 0.0;
   v5->m_bMatchPreviousTarget = 0;
@@ -543,7 +543,7 @@ ICLSearchFields *__fastcall CCLSearchFieldFactory<SCLAbilityTriggerFields,(DOTA_
   v5->m_iAttackerName = -1;
   v5->m_iInflictorName = -1;
   v5->m_pDynamicValues = 0;
-  v5->_vptr_ICLSearchFields = off_40DED30;
+  v5->_vptr_ICLSearchFields = off_40DED30;  // vptr: SCLAbilityTriggerFields
   String = KeyValues::GetString(pKeyValues, "ability", "", 0, 0);
   ICLSearchFields::ParseQueryStringID(v5, &v5->m_iInflictorName, pPlayer, String);
   v7 = KeyValues::GetString(pKeyValues, "caster", "", 0, 0);
@@ -566,7 +566,7 @@ ICLSearchFields *__fastcall CCLSearchFieldFactory<SCLRevealInvisibleFields,(DOTA
   const char *v7; // rax
   const char *v8; // rax
 
-  v5 = operator new(0x28u);
+  v5 = operator new(0x28u);  // new SCLRevealInvisibleFields (size matches)
   v5->m_iType = DOTA_COMBATLOG_TYPES::DOTA_COMBATLOG_INVALID;
   v5->m_flGameTime = 0.0;
   v5->m_bMatchPreviousTarget = 0;
@@ -574,7 +574,7 @@ ICLSearchFields *__fastcall CCLSearchFieldFactory<SCLRevealInvisibleFields,(DOTA
   v5->m_iAttackerName = -1;
   v5->m_iInflictorName = -1;
   v5->m_pDynamicValues = 0;
-  v5->_vptr_ICLSearchFields = off_40DF030;
+  v5->_vptr_ICLSearchFields = off_40DF030;  // vptr: SCLRevealInvisibleFields
   String = KeyValues::GetString(pKeyValues, "ability", "", 0, 0);
   ICLSearchFields::ParseQueryStringID(v5, &v5->m_iInflictorName, pPlayer, String);
   v7 = KeyValues::GetString(pKeyValues, "caster", "", 0, 0);
@@ -598,7 +598,7 @@ ICLSearchFields *__fastcall CCLSearchFieldFactory<SCLUnitSummonedFields,(DOTA_CO
   const char *v7; // rax
   const char *v8; // rax
 
-  v5 = operator new(0x28u);
+  v5 = operator new(0x28u);  // new SCLUnitSummonedFields (size matches)
   v5->m_iType = DOTA_COMBATLOG_TYPES::DOTA_COMBATLOG_INVALID;
   v5->m_flGameTime = 0.0;
   v5->m_bMatchPreviousTarget = 0;
@@ -606,7 +606,7 @@ ICLSearchFields *__fastcall CCLSearchFieldFactory<SCLUnitSummonedFields,(DOTA_CO
   v5->m_iAttackerName = -1;
   v5->m_iInflictorName = -1;
   v5->m_pDynamicValues = 0;
-  v5->_vptr_ICLSearchFields = off_40DF450;
+  v5->_vptr_ICLSearchFields = off_40DF450;  // vptr: SCLUnitSummonedFields
   String = KeyValues::GetString(pKeyValues, "summoner", "", 0, 0);
   ICLSearchFields::ParseQueryStringID(v5, &v5->m_iAttackerName, pPlayer, String);
   v7 = KeyValues::GetString(pKeyValues, "ability", "", 0, 0);
@@ -631,7 +631,7 @@ ICLSearchFields *__fastcall CCLSearchFieldFactory<SCLAbilityUseFields,(DOTA_COMB
   const char *v8; // rax
   bool v9; // zf
 
-  v5 = operator new(0x30u);
+  v5 = operator new(0x30u);  // new SCLAbilityUseFields (size matches)
   v5->m_iType = DOTA_COMBATLOG_TYPES::DOTA_COMBATLOG_INVALID;
   v5->m_flGameTime = 0.0;
   v5->m_bMatchPreviousTarget = 0;
@@ -639,7 +639,7 @@ ICLSearchFields *__fastcall CCLSearchFieldFactory<SCLAbilityUseFields,(DOTA_COMB
   v5->m_iAttackerName = -1;
   v5->m_iInflictorName = -1;
   v5->m_pDynamicValues = 0;
-  v5->_vptr_ICLSearchFields = off_40DECD0;
+  v5->_vptr_ICLSearchFields = off_40DECD0;  // vptr: SCLAbilityUseFields
   String = KeyValues::GetString(pKeyValues, "ability", "", 0, 0);
   ICLSearchFields::ParseQueryStringID(v5, &v5->m_iInflictorName, pPlayer, String);
   v7 = KeyValues::GetString(pKeyValues, "caster", "", 0, 0);
@@ -666,7 +666,7 @@ ICLSearchFields *__fastcall CCLSearchFieldFactory<SCLManaRestoreFields,(DOTA_COM
   const char *v8; // rax
   bool v9; // zf
 
-  v5 = operator new(0x30u);
+  v5 = operator new(0x30u);  // new SCLManaRestoreFields (size matches)
   v5->m_iType = DOTA_COMBATLOG_TYPES::DOTA_COMBATLOG_INVALID;
   v5->m_flGameTime = 0.0;
   v5->m_bMatchPreviousTarget = 0;
@@ -674,7 +674,7 @@ ICLSearchFields *__fastcall CCLSearchFieldFactory<SCLManaRestoreFields,(DOTA_COM
   v5->m_iAttackerName = -1;
   v5->m_iInflictorName = -1;
   v5->m_pDynamicValues = 0;
-  v5->_vptr_ICLSearchFields = off_40DF0F0;
+  v5->_vptr_ICLSearchFields = off_40DF0F0;  // vptr: SCLManaRestoreFields
   String = KeyValues::GetString(pKeyValues, "ability", "", 0, 0);
   ICLSearchFields::ParseQueryStringID(v5, &v5->m_iInflictorName, pPlayer, String);
   v7 = KeyValues::GetString(pKeyValues, "caster", "", 0, 0);
@@ -701,7 +701,7 @@ ICLSearchFields *__fastcall CCLSearchFieldFactory<SCLHeroSavedFields,(DOTA_COMBA
   const char *v8; // rax
   bool v9; // zf
 
-  v5 = operator new(0x30u);
+  v5 = operator new(0x30u);  // new SCLHeroSavedFields (size matches)
   v5->m_iType = DOTA_COMBATLOG_TYPES::DOTA_COMBATLOG_INVALID;
   v5->m_flGameTime = 0.0;
   v5->m_bMatchPreviousTarget = 0;
@@ -709,7 +709,7 @@ ICLSearchFields *__fastcall CCLSearchFieldFactory<SCLHeroSavedFields,(DOTA_COMBA
   v5->m_iAttackerName = -1;
   v5->m_iInflictorName = -1;
   v5->m_pDynamicValues = 0;
-  v5->_vptr_ICLSearchFields = off_40DF090;
+  v5->_vptr_ICLSearchFields = off_40DF090;  // vptr: SCLHeroSavedFields
   String = KeyValues::GetString(pKeyValues, "ability", "", 0, 0);
   ICLSearchFields::ParseQueryStringID(v5, &v5->m_iInflictorName, pPlayer, String);
   v7 = KeyValues::GetString(pKeyValues, "caster", "", 0, 0);
@@ -772,7 +772,7 @@ ICLSearchFields *__fastcall CCLSearchFieldFactory<SCLItemUseFields,(DOTA_COMBATL
   const char *v8; // rax
   bool v9; // zf
 
-  v5 = operator new(0x30u);
+  v5 = operator new(0x30u);  // new SCLItemUseFields (size matches)
   v5->m_iType = DOTA_COMBATLOG_TYPES::DOTA_COMBATLOG_INVALID;
   v5->m_flGameTime = 0.0;
   v5->m_bMatchPreviousTarget = 0;
@@ -780,7 +780,7 @@ ICLSearchFields *__fastcall CCLSearchFieldFactory<SCLItemUseFields,(DOTA_COMBATL
   v5->m_iAttackerName = -1;
   v5->m_iInflictorName = -1;
   v5->m_pDynamicValues = 0;
-  v5->_vptr_ICLSearchFields = off_40DEDF0;
+  v5->_vptr_ICLSearchFields = off_40DEDF0;  // vptr: SCLItemUseFields
   ItemNameFromEventBlock = GetItemNameFromEventBlock(pKeyValues);
   ICLSearchFields::ParseQueryStringID(v5, &v5->m_iInflictorName, pPlayer, ItemNameFromEventBlock);
   String = KeyValues::GetString(pKeyValues, "caster", "", 0, 0);
@@ -809,7 +809,7 @@ ICLSearchFields *__fastcall CCLSearchFieldFactory<SCLHealFields,(DOTA_COMBATLOG_
   const char *v8; // rax
   bool v9; // zf
 
-  v5 = operator new(0x30u);
+  v5 = operator new(0x30u);  // new SCLHealFields (size matches)
   v5->m_iType = DOTA_COMBATLOG_TYPES::DOTA_COMBATLOG_INVALID;
   v5->m_flGameTime = 0.0;
   v5->m_bMatchPreviousTarget = 0;
@@ -817,7 +817,7 @@ ICLSearchFields *__fastcall CCLSearchFieldFactory<SCLHealFields,(DOTA_COMBATLOG_
   v5->m_iAttackerName = -1;
   v5->m_iInflictorName = -1;
   v5->m_pDynamicValues = 0;
-  v5->_vptr_ICLSearchFields = off_40DED90;
+  v5->_vptr_ICLSearchFields = off_40DED90;  // vptr: SCLHealFields
   String = KeyValues::GetString(pKeyValues, "source", "", 0, 0);
   ICLSearchFields::ParseQueryStringID(v5, &v5->m_iInflictorName, pPlayer, String);
   v7 = KeyValues::GetString(pKeyValues, "healer", "", 0, 0);
@@ -883,7 +883,7 @@ ICLSearchFields *__fastcall CCLSearchFieldFactory<SCLModifierRefreshFields,(DOTA
   const char *v7; // rax
   const char *v8; // rax
 
-  v5 = operator new(0x30u);
+  v5 = operator new(0x30u);  // new SCLModifierRefreshFields (size matches)
   v5->m_iType = DOTA_COMBATLOG_TYPES::DOTA_COMBATLOG_INVALID;
   v5->m_flGameTime = 0.0;
   v5->m_bMatchPreviousTarget = 0;
@@ -891,7 +891,7 @@ ICLSearchFields *__fastcall CCLSearchFieldFactory<SCLModifierRefreshFields,(DOTA
   v5->m_iAttackerName = -1;
   v5->m_iInflictorName = -1;
   v5->m_pDynamicValues = 0;
-  v5->_vptr_ICLSearchFields = off_40DEC10;
+  v5->_vptr_ICLSearchFields = off_40DEC10;  // vptr: SCLModifierRefreshFields
   String = KeyValues::GetString(pKeyValues, "modifier", "", 0, 0);
   ICLSearchFields::ParseQueryStringID(v5, &v5->m_iInflictorName, pPlayer, String);
   v7 = KeyValues::GetString(pKeyValues, "caster", "", 0, 0);

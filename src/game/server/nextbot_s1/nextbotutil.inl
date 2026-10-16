@@ -5,7 +5,7 @@
 void __fastcall NextBotTraceFilterIgnoreActors::~NextBotTraceFilterIgnoreActors(
         NextBotTraceFilterIgnoreActors *const this)
 {
-  this->_vptr_CTraceFilter = off_3FE6970;
+  this->_vptr_CTraceFilter = off_3FE6970;  // vptr: CTraceFilter
 }
 
 
@@ -14,7 +14,7 @@ void __fastcall NextBotTraceFilterIgnoreActors::~NextBotTraceFilterIgnoreActors(
 void __fastcall NextBotTraceFilterIgnoreActors::~NextBotTraceFilterIgnoreActors(
         NextBotTraceFilterIgnoreActors *const this)
 {
-  this->_vptr_CTraceFilter = off_3FE6970;
+  this->_vptr_CTraceFilter = off_3FE6970;  // vptr: CTraceFilter
   operator delete(this);
 }
 
@@ -22,7 +22,7 @@ void __fastcall NextBotTraceFilterIgnoreActors::~NextBotTraceFilterIgnoreActors(
 // NextBotVisionTraceFilter::~NextBotVisionTraceFilter  (line 47, @0x0000000002f36710, libserver.so)  // inlines: ~CTraceFilter, ~CTraceFilterSimple
 void __fastcall NextBotVisionTraceFilter::~NextBotVisionTraceFilter(NextBotVisionTraceFilter *const this)
 {
-  this->_vptr_CTraceFilter = off_3FE6970;
+  this->_vptr_CTraceFilter = off_3FE6970;  // vptr: CTraceFilter
 }
 
 
@@ -30,7 +30,7 @@ void __fastcall NextBotVisionTraceFilter::~NextBotVisionTraceFilter(NextBotVisio
 // calls: operator delete
 void __fastcall NextBotVisionTraceFilter::~NextBotVisionTraceFilter(NextBotVisionTraceFilter *const this)
 {
-  this->_vptr_CTraceFilter = off_3FE6970;
+  this->_vptr_CTraceFilter = off_3FE6970;  // vptr: CTraceFilter
   operator delete(this);
 }
 
@@ -38,7 +38,7 @@ void __fastcall NextBotVisionTraceFilter::~NextBotVisionTraceFilter(NextBotVisio
 // NextBotTraceFilterOnlyActors::~NextBotTraceFilterOnlyActors  (line 132, @0x0000000002f40da0, libserver.so)  // inlines: ~CTraceFilter, ~CTraceFilterSimple
 void __fastcall NextBotTraceFilterOnlyActors::~NextBotTraceFilterOnlyActors(NextBotTraceFilterOnlyActors *const this)
 {
-  this->_vptr_CTraceFilter = off_3FE6970;
+  this->_vptr_CTraceFilter = off_3FE6970;  // vptr: CTraceFilter
 }
 
 
@@ -46,7 +46,7 @@ void __fastcall NextBotTraceFilterOnlyActors::~NextBotTraceFilterOnlyActors(Next
 // calls: operator delete
 void __fastcall NextBotTraceFilterOnlyActors::~NextBotTraceFilterOnlyActors(NextBotTraceFilterOnlyActors *const this)
 {
-  this->_vptr_CTraceFilter = off_3FE6970;
+  this->_vptr_CTraceFilter = off_3FE6970;  // vptr: CTraceFilter
   operator delete(this);
 }
 
@@ -76,7 +76,7 @@ bool __fastcall NextBotTraceFilterOnlyActors::ShouldHitEntity(
 void __fastcall NextBotTraversableTraceFilter::~NextBotTraversableTraceFilter(
         NextBotTraversableTraceFilter *const this)
 {
-  this->_vptr_CTraceFilter = off_3FE6970;
+  this->_vptr_CTraceFilter = off_3FE6970;  // vptr: CTraceFilter
 }
 
 
@@ -85,7 +85,7 @@ void __fastcall NextBotTraversableTraceFilter::~NextBotTraversableTraceFilter(
 void __fastcall NextBotTraversableTraceFilter::~NextBotTraversableTraceFilter(
         NextBotTraversableTraceFilter *const this)
 {
-  this->_vptr_CTraceFilter = off_3FE6970;
+  this->_vptr_CTraceFilter = off_3FE6970;  // vptr: CTraceFilter
   operator delete(this);
 }
 

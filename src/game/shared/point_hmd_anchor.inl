@@ -115,7 +115,7 @@ CEntityInstance *__fastcall CPointHMDAnchor::CEntityInstanceEntityClass::Constru
 void __fastcall CPointHMDAnchor::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CPointHMDAnchor::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -125,7 +125,7 @@ void __fastcall CPointHMDAnchor::CEntityInstanceEntityClass::~CEntityInstanceEnt
 void __fastcall CPointHMDAnchor::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CPointHMDAnchor::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }

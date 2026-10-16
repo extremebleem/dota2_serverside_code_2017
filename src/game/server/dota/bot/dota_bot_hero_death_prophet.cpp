@@ -91,7 +91,7 @@ void __fastcall CDOTA_Bot_AbilityUsage_DeathProphet_CarrionSwarm::CDOTA_Bot_Abil
   this->m_pAbility = pAbility;
   this->m_bUseOnCreeps = 0;
   this->m_pBot = pBot;
-  this->_vptr_CDOTA_Bot_AbilityUsage = off_42CB370;
+  this->_vptr_CDOTA_Bot_AbilityUsage = off_42CB370;  // vptr: CDOTA_Bot_AbilityUsage_DeathProphet_CarrionSwarm
 }
 
 
@@ -568,7 +568,7 @@ void __fastcall CDOTA_Bot_AbilityUsage_DeathProphet_Silence::CDOTA_Bot_AbilityUs
   this->m_pAbility = pAbility;
   this->m_bUseOnCreeps = 0;
   this->m_pBot = pBot;
-  this->_vptr_CDOTA_Bot_AbilityUsage = off_42CB3D0;
+  this->_vptr_CDOTA_Bot_AbilityUsage = off_42CB3D0;  // vptr: CDOTA_Bot_AbilityUsage_DeathProphet_Silence
 }
 
 
@@ -693,7 +693,7 @@ void __fastcall CDOTA_Bot_AbilityUsage_DeathProphet_SpiritSiphon::CDOTA_Bot_Abil
   this->m_pAbility = pAbility;
   this->m_bUseOnCreeps = 0;
   this->m_pBot = pBot;
-  this->_vptr_CDOTA_Bot_AbilityUsage = off_42CB430;
+  this->_vptr_CDOTA_Bot_AbilityUsage = off_42CB430;  // vptr: CDOTA_Bot_AbilityUsage_DeathProphet_SpiritSiphon
   this->m_hDesiredTarget.m_Index = -1;
 }
 
@@ -877,7 +877,7 @@ void __fastcall CDOTA_Bot_AbilityUsage_DeathProphet_Exorcism::CDOTA_Bot_AbilityU
   this->m_pAbility = pAbility;
   this->m_bUseOnCreeps = 0;
   this->m_pBot = pBot;
-  this->_vptr_CDOTA_Bot_AbilityUsage = off_42CB490;
+  this->_vptr_CDOTA_Bot_AbilityUsage = off_42CB490;  // vptr: CDOTA_Bot_AbilityUsage_DeathProphet_Exorcism
 }
 
 

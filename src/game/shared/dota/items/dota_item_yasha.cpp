@@ -231,7 +231,7 @@ CEntityInstance *__fastcall CDOTA_Item_Recipe_Yasha::CEntityInstanceEntityClass:
 void __fastcall CDOTA_Item_Recipe_Yasha::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Item_Recipe_Yasha::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -241,7 +241,7 @@ void __fastcall CDOTA_Item_Recipe_Yasha::CEntityInstanceEntityClass::~CEntityIns
 void __fastcall CDOTA_Item_Recipe_Yasha::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Item_Recipe_Yasha::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -442,7 +442,7 @@ CEntityInstance *__fastcall CDOTA_Item_Yasha::CEntityInstanceEntityClass::Constr
 void __fastcall CDOTA_Item_Yasha::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Item_Yasha::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -452,7 +452,7 @@ void __fastcall CDOTA_Item_Yasha::CEntityInstanceEntityClass::~CEntityInstanceEn
 void __fastcall CDOTA_Item_Yasha::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Item_Yasha::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }

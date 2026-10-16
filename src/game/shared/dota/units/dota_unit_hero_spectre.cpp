@@ -688,7 +688,7 @@ CEntityInstance *__fastcall CDOTA_Unit_Hero_Spectre::CEntityInstanceEntityClass:
 void __fastcall CDOTA_Unit_Hero_Spectre::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Unit_Hero_Spectre::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -698,7 +698,7 @@ void __fastcall CDOTA_Unit_Hero_Spectre::CEntityInstanceEntityClass::~CEntityIns
 void __fastcall CDOTA_Unit_Hero_Spectre::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Unit_Hero_Spectre::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -1583,7 +1583,7 @@ CEntityInstance *__fastcall CDOTA_Ability_Spectre_SpectralDagger::CEntityInstanc
 void __fastcall CDOTA_Ability_Spectre_SpectralDagger::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Spectre_SpectralDagger::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -1593,7 +1593,7 @@ void __fastcall CDOTA_Ability_Spectre_SpectralDagger::CEntityInstanceEntityClass
 void __fastcall CDOTA_Ability_Spectre_SpectralDagger::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Spectre_SpectralDagger::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -2649,7 +2649,7 @@ CEntityInstance *__fastcall CDOTA_Ability_Spectre_Desolate::CEntityInstanceEntit
 void __fastcall CDOTA_Ability_Spectre_Desolate::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Spectre_Desolate::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -2659,7 +2659,7 @@ void __fastcall CDOTA_Ability_Spectre_Desolate::CEntityInstanceEntityClass::~CEn
 void __fastcall CDOTA_Ability_Spectre_Desolate::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Spectre_Desolate::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -3139,7 +3139,7 @@ CEntityInstance *__fastcall CDOTA_Ability_Spectre_Dispersion::CEntityInstanceEnt
 void __fastcall CDOTA_Ability_Spectre_Dispersion::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Spectre_Dispersion::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -3149,7 +3149,7 @@ void __fastcall CDOTA_Ability_Spectre_Dispersion::CEntityInstanceEntityClass::~C
 void __fastcall CDOTA_Ability_Spectre_Dispersion::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Spectre_Dispersion::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -3697,7 +3697,7 @@ CEntityInstance *__fastcall CDOTA_Ability_Spectre_Haunt::CEntityInstanceEntityCl
 void __fastcall CDOTA_Ability_Spectre_Haunt::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Spectre_Haunt::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -3707,7 +3707,7 @@ void __fastcall CDOTA_Ability_Spectre_Haunt::CEntityInstanceEntityClass::~CEntit
 void __fastcall CDOTA_Ability_Spectre_Haunt::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Spectre_Haunt::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -4318,7 +4318,7 @@ CEntityInstance *__fastcall CDOTA_Ability_Spectre_Reality::CEntityInstanceEntity
 void __fastcall CDOTA_Ability_Spectre_Reality::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Spectre_Reality::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -4328,7 +4328,7 @@ void __fastcall CDOTA_Ability_Spectre_Reality::CEntityInstanceEntityClass::~CEnt
 void __fastcall CDOTA_Ability_Spectre_Reality::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Spectre_Reality::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }

@@ -3501,7 +3501,7 @@ bool __fastcall CBaseAnimating::IsUsingClientSideAnimation(const CBaseAnimating 
   __int64 v1; // rax
 
   v1 = (*(this->m_pGameSceneNode->_vptr_CGameSceneNode + 10))(this->m_pGameSceneNode);
-  if ( v1 )
+  if ( v1 != 0 )
     return *(*(v1 + 736) + 188LL);
   else
     return 0;
@@ -4659,12 +4659,12 @@ void __fastcall CBaseAnimating::Teleport(
         const QAngle *newAngles,
         const Vector *newVelocity)
 {
-  __int64 v4; // rax
+  __int64 v5; // rax
 
   CBaseEntity::Teleport(this, newPosition, newAngles, newVelocity);
-  v4 = (*(this->m_pGameSceneNode->_vptr_CGameSceneNode + 9))(this->m_pGameSceneNode);
-  if ( v4 )
-    CBaseAnimatingController::OnTeleported(*(v4 + 736));
+  v5 = (*(this->m_pGameSceneNode->_vptr_CGameSceneNode + 9))(this->m_pGameSceneNode);
+  if ( v5 != 0 )
+    CBaseAnimatingController::OnTeleported(*(v5 + 736));
   else
     CBaseAnimatingController::OnTeleported(0);
 }

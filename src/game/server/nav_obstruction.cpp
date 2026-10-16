@@ -626,7 +626,7 @@ void __fastcall CNavObstructionManager::RemoveObstacle(
   unsigned int v6; // ecx
   CNavObstacleMgr *m_pObstacleMgr; // rdi
 
-  v4 = (*rObstacle->_vptr_INavObstacle)(rObstacle);
+  v4 = rObstacle->GetId();
   v5 = 33 * (((4097 * v4 + 2127912214) >> 19) ^ (4097 * v4 + 2127912214) ^ 0xC761C23C);
   v6 = 9 * ((v5 - 369570787) ^ ((v5 + 374761393) << 9)) - 42973499;
   CUtlHashtable<int,INavObstacle *,DefaultHashFunctor<int>,DefaultEqualFunctor<int>,undefined_t,CUtlMemory<CUtlHashtableEntry<int,INavObstacle *>,int>>::DoRemove<int>(
@@ -1181,7 +1181,7 @@ void __fastcall CNavObstructionManager::UpdateObstacle(
   if ( (*(rObstacle->_vptr_INavObstacle + 3))(rObstacle) != 0
     && ((*(rObstacle->_vptr_INavObstacle + 4))(rObstacle) != 0 || (*(rObstacle->_vptr_INavObstacle + 7))(rObstacle) != 0) )
   {
-    v4 = (*rObstacle->_vptr_INavObstacle)(rObstacle);
+    v4 = rObstacle->GetId();
     v5 = 33 * (((4097 * v4 + 2127912214) >> 19) ^ (4097 * v4 + 2127912214) ^ 0xC761C23C);
     v6 = 9 * ((v5 - 369570787) ^ ((v5 + 374761393) << 9)) - 42973499;
     v7 = HIWORD(v6) ^ v6 ^ 0xB55A4F09;
@@ -2309,7 +2309,7 @@ void __fastcall CNavObstacleMgr::RemoveObstacle(CNavObstacleMgr *const this, con
 {
   int32 v3; // eax
 
-  v3 = (*rObstacle->_vptr_INavObstacle)(rObstacle);
+  v3 = rObstacle->GetId();
   CNavObstacleMgr::RemoveObstacle(this, v3);
 }
 
@@ -2342,7 +2342,7 @@ void __fastcall CNavObstacleMgr::UpdateObstacle(CNavObstacleMgr *const this, INa
     &obstacleShape.m_vMins,
     &obstacleShape.m_vMaxs,
     &obstacleShape.m_Angles);
-  v7 = (*rObstacle->_vptr_INavObstacle)(rObstacle);
+  v7 = rObstacle->GetId();
   CNavObstacleMgr::UpdateObstacle(this, v7, &obstacleShape);
 }
 

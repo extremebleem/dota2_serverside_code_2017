@@ -285,7 +285,7 @@ CEntityInstance *__fastcall CDOTA_Item_Recipe_Ward_Dispenser::CEntityInstanceEnt
 void __fastcall CDOTA_Item_Recipe_Ward_Dispenser::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Item_Recipe_Ward_Dispenser::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -295,7 +295,7 @@ void __fastcall CDOTA_Item_Recipe_Ward_Dispenser::CEntityInstanceEntityClass::~C
 void __fastcall CDOTA_Item_Recipe_Ward_Dispenser::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Item_Recipe_Ward_Dispenser::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -497,7 +497,7 @@ CEntityInstance *__fastcall CDOTA_Item_Ward_Dispenser::CEntityInstanceEntityClas
 void __fastcall CDOTA_Item_Ward_Dispenser::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Item_Ward_Dispenser::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -507,7 +507,7 @@ void __fastcall CDOTA_Item_Ward_Dispenser::CEntityInstanceEntityClass::~CEntityI
 void __fastcall CDOTA_Item_Ward_Dispenser::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Item_Ward_Dispenser::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }

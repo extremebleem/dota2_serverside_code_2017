@@ -6,7 +6,7 @@
 // callers: CSchemaUtlVectorManipulator<CUtlVector<DataTeamPlayer_t, CNetworkUtlVector_MemoryType<DataTeamPlayer_t, -1> >, DataTeamPlayer_t>::SwapItems, DataTeamPlayer_t::DataTeamPlayer_t, CDOTA_BaseNPC::CDOTA_BaseNPC
 void __fastcall CDOTA_UnitInventory::~CDOTA_UnitInventory(CDOTA_UnitInventory *const this)
 {
-  this->_vptr_CDOTA_UnitInventory = off_40DC990;
+  this->_vptr_CDOTA_UnitInventory = off_40DC990;  // vptr: CDOTA_UnitInventory
   CUtlVectorBase<CHandle<CBaseEntity>,CUtlMemory<CHandle<CBaseEntity>,int>>::RemoveAll(&this->m_vecRecentlyDroppedItems);
   if ( (this->m_vecRecentlyDroppedItems.m_Memory.m_nGrowSize & 0xC0000000) == 0 )
   {

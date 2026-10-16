@@ -55,7 +55,7 @@ void __fastcall CTrackedControllerManager::CTrackedControllerManager(CTrackedCon
 
   p_m_Attr = &this->m_mutex.m_Attr;
   p_m_mutex = &this->m_mutex;
-  this->_vptr_IGameSystem = off_40B9490;
+  this->_vptr_IGameSystem = off_40B9490;  // vptr: CTrackedControllerManager
   pthread_mutexattr_init(&this->m_mutex.m_Attr);
   pthread_mutexattr_settype(p_m_Attr, 1);
   pthread_mutex_init(&p_m_mutex->m_Mutex, p_m_Attr);

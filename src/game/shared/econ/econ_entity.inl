@@ -77,7 +77,7 @@ CEntityInstance *__fastcall CEconEntity::CEntityInstanceEntityClass::ConstructIn
 void __fastcall CEconEntity::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CEconEntity::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -87,7 +87,7 @@ void __fastcall CEconEntity::CEntityInstanceEntityClass::~CEntityInstanceEntityC
 void __fastcall CEconEntity::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CEconEntity::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -379,7 +379,7 @@ void __fastcall CEconEntity::NetworkVar_m_AttributeManager::~NetworkVar_m_Attrib
   this->m_Item._vptr_IEconItemInterface = &off_479F2B0;
   CEconItemView::~CEconItemView(&this->m_Item);
   v2 = (this->m_CachedResults.m_Memory.m_nGrowSize & 0xC0000000) == 0;
-  this->_vptr_CAttributeManager = off_479F4D0;
+  this->_vptr_CAttributeManager = off_479F4D0;  // vptr: CAttributeManager
   this->m_CachedResults.m_Size = 0;
   if ( !v2
     || (CUtlMemory<CAttributeManager::cached_attribute_float_t,int>::Purge(&this->m_CachedResults.m_Memory),
@@ -431,7 +431,7 @@ void __fastcall CEconEntity::NetworkVar_m_AttributeManager::~NetworkVar_m_Attrib
   this->m_Item._vptr_IEconItemInterface = &off_479F2B0;
   CEconItemView::~CEconItemView(&this->m_Item);
   v2 = (this->m_CachedResults.m_Memory.m_nGrowSize & 0xC0000000) == 0;
-  this->_vptr_CAttributeManager = off_479F4D0;
+  this->_vptr_CAttributeManager = off_479F4D0;  // vptr: CAttributeManager
   this->m_CachedResults.m_Size = 0;
   if ( !v2
     || (CUtlMemory<CAttributeManager::cached_attribute_float_t,int>::Purge(&this->m_CachedResults.m_Memory),
@@ -639,7 +639,7 @@ void *__fastcall CBaseAttributableItem::CEntityInstanceEntityClass::AllocateInst
 void __fastcall CBaseAttributableItem::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CBaseAttributableItem::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -649,7 +649,7 @@ void __fastcall CBaseAttributableItem::CEntityInstanceEntityClass::~CEntityInsta
 void __fastcall CBaseAttributableItem::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CBaseAttributableItem::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }

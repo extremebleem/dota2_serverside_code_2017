@@ -402,7 +402,7 @@ HSCRIPT __fastcall CDOTA_Bot_Script::GetScriptHandle(CDOTA_Bot_Script *const thi
       v7 = DOTACommander();
       ActiveScriptVM = CDOTA_Commander::GetActiveScriptVM(v7);
       v9 = *(*ActiveScriptVM + 184LL);
-      v10 = (*this->_vptr_CDOTA_Bot_Script)(this);
+      v10 = this->GetScriptDesc();
       result = v9(ActiveScriptVM, v10, this);
       v4[3] = result;
     }

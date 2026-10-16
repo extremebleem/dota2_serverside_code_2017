@@ -80,7 +80,7 @@ void __fastcall CDOTA_Bot_AbilityUsage_VengefulSpirit_MagicMissile::CDOTA_Bot_Ab
   this->m_pAbility = pAbility;
   this->m_bUseOnCreeps = 0;
   this->m_pBot = pBot;
-  this->_vptr_CDOTA_Bot_AbilityUsage = off_42D1D30;
+  this->_vptr_CDOTA_Bot_AbilityUsage = off_42D1D30;  // vptr: CDOTA_Bot_AbilityUsage_VengefulSpirit_MagicMissile
   this->m_hDesiredTarget.m_Index = -1;
 }
 
@@ -484,7 +484,7 @@ void __fastcall CDOTA_Bot_AbilityUsage_VengefulSpirit_WaveOfTerror::CDOTA_Bot_Ab
   this->m_pAbility = pAbility;
   this->m_bUseOnCreeps = 0;
   this->m_pBot = pBot;
-  this->_vptr_CDOTA_Bot_AbilityUsage = off_42D1D90;
+  this->_vptr_CDOTA_Bot_AbilityUsage = off_42D1D90;  // vptr: CDOTA_Bot_AbilityUsage_VengefulSpirit_WaveOfTerror
 }
 
 
@@ -612,7 +612,7 @@ void __fastcall CDOTA_Bot_AbilityUsage_VengefulSpirit_NetherSwap::CDOTA_Bot_Abil
   this->m_pAbility = pAbility;
   this->m_bUseOnCreeps = 0;
   this->m_pBot = pBot;
-  this->_vptr_CDOTA_Bot_AbilityUsage = off_42D1DF0;
+  this->_vptr_CDOTA_Bot_AbilityUsage = off_42D1DF0;  // vptr: CDOTA_Bot_AbilityUsage_VengefulSpirit_NetherSwap
   this->m_hDesiredTarget.m_Index = -1;
 }
 

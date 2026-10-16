@@ -383,7 +383,7 @@ void __fastcall CGlobalState::~CGlobalState(CGlobalState *const this)
   CUtlVectorBase<globalentity_t,CUtlMemory<globalentity_t,int> >::CAllocator *p_m_Memory; // r12
 
   v2 = (this->m_database.m_list.m_Memory.m_nGrowSize & 0xC0000000) == 0;
-  this->_vptr_IGameSystem = off_4051FD0;
+  this->_vptr_IGameSystem = off_4051FD0;  // vptr: CGlobalState
   this->m_database.m_list.m_Size = 0;
   if ( v2 )
   {
@@ -393,7 +393,7 @@ void __fastcall CGlobalState::~CGlobalState(CGlobalState *const this)
       CUtlMemory<globalentity_t,int>::Purge(p_m_Memory);
   }
   CUtlSymbolTable::~CUtlSymbolTable(&this->m_database.m_nameList);
-  this->_vptr_IGameSystem = off_3F7C1B0;
+  this->_vptr_IGameSystem = off_3F7C1B0;  // vptr: CAutoGameSystem
   IGameSystem::~IGameSystem(this);
 }
 
@@ -406,7 +406,7 @@ void __fastcall CGlobalState::~CGlobalState(CGlobalState *const this)
   CUtlVectorBase<globalentity_t,CUtlMemory<globalentity_t,int> >::CAllocator *p_m_Memory; // r12
 
   v2 = (this->m_database.m_list.m_Memory.m_nGrowSize & 0xC0000000) == 0;
-  this->_vptr_IGameSystem = off_4051FD0;
+  this->_vptr_IGameSystem = off_4051FD0;  // vptr: CGlobalState
   this->m_database.m_list.m_Size = 0;
   if ( v2 )
   {
@@ -416,7 +416,7 @@ void __fastcall CGlobalState::~CGlobalState(CGlobalState *const this)
       CUtlMemory<globalentity_t,int>::Purge(p_m_Memory);
   }
   CUtlSymbolTable::~CUtlSymbolTable(&this->m_database.m_nameList);
-  this->_vptr_IGameSystem = off_3F7C1B0;
+  this->_vptr_IGameSystem = off_3F7C1B0;  // vptr: CAutoGameSystem
   IGameSystem::~IGameSystem(this);
   operator delete(this);
 }

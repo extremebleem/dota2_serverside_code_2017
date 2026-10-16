@@ -106,7 +106,7 @@ void *__fastcall CBaseVRHandAttachment::CEntityInstanceEntityClass::AllocateInst
 void __fastcall CBaseVRHandAttachment::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CBaseVRHandAttachment::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -116,7 +116,7 @@ void __fastcall CBaseVRHandAttachment::CEntityInstanceEntityClass::~CEntityInsta
 void __fastcall CBaseVRHandAttachment::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CBaseVRHandAttachment::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }

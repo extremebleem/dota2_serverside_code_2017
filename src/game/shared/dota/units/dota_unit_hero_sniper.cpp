@@ -800,7 +800,7 @@ CEntityInstance *__fastcall CDOTA_Unit_Hero_Sniper::CEntityInstanceEntityClass::
 void __fastcall CDOTA_Unit_Hero_Sniper::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Unit_Hero_Sniper::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -810,7 +810,7 @@ void __fastcall CDOTA_Unit_Hero_Sniper::CEntityInstanceEntityClass::~CEntityInst
 void __fastcall CDOTA_Unit_Hero_Sniper::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Unit_Hero_Sniper::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -1055,7 +1055,7 @@ CEntityInstance *__fastcall CDOTA_Ability_Sniper_Shrapnel::CEntityInstanceEntity
 void __fastcall CDOTA_Ability_Sniper_Shrapnel::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Sniper_Shrapnel::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -1065,7 +1065,7 @@ void __fastcall CDOTA_Ability_Sniper_Shrapnel::CEntityInstanceEntityClass::~CEnt
 void __fastcall CDOTA_Ability_Sniper_Shrapnel::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Sniper_Shrapnel::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -1916,7 +1916,7 @@ CEntityInstance *__fastcall CDOTA_Ability_Sniper_Headshot::CEntityInstanceEntity
 void __fastcall CDOTA_Ability_Sniper_Headshot::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Sniper_Headshot::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -1926,7 +1926,7 @@ void __fastcall CDOTA_Ability_Sniper_Headshot::CEntityInstanceEntityClass::~CEnt
 void __fastcall CDOTA_Ability_Sniper_Headshot::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Sniper_Headshot::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -2542,7 +2542,7 @@ CEntityInstance *__fastcall CDOTA_Ability_Sniper_TakeAim::CEntityInstanceEntityC
 void __fastcall CDOTA_Ability_Sniper_TakeAim::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Sniper_TakeAim::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -2552,7 +2552,7 @@ void __fastcall CDOTA_Ability_Sniper_TakeAim::CEntityInstanceEntityClass::~CEnti
 void __fastcall CDOTA_Ability_Sniper_TakeAim::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Sniper_TakeAim::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -2804,7 +2804,7 @@ CEntityInstance *__fastcall CDOTA_Ability_Sniper_Assassinate::CEntityInstanceEnt
 void __fastcall CDOTA_Ability_Sniper_Assassinate::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Sniper_Assassinate::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -2814,7 +2814,7 @@ void __fastcall CDOTA_Ability_Sniper_Assassinate::CEntityInstanceEntityClass::~C
 void __fastcall CDOTA_Ability_Sniper_Assassinate::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Sniper_Assassinate::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }

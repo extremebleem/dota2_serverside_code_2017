@@ -386,22 +386,26 @@ int __fastcall CEntityKeyValues::AddKeyValue<Vector>(
   unsigned __int64 v55; // rax
   CUtlLeanVectorFixedGrowableBase<unsigned int,9u,short int>::ElemType_t *m_pElements; // rsi
   CUtlLeanVectorFixedGrowableBase<unsigned int,9u,short int>::ElemType_t *v57; // rax
-  const char *v58; // rax
-  CEntityKeyValues *v59; // [rsp+8h] [rbp-98h]
+  __int64 v58; // rdx
+  __int64 v59; // rcx
+  __int64 v60; // rdi
+  __int64 v61; // rsi
+  const char *v62; // rax
+  CEntityKeyValues *v63; // [rsp+8h] [rbp-98h]
   CEntityKeyValues *src; // [rsp+10h] [rbp-90h]
   const char *srcb; // [rsp+10h] [rbp-90h]
   CEntityKeyValues *srca; // [rsp+10h] [rbp-90h]
   CEntityKeyValues *srcc; // [rsp+10h] [rbp-90h]
-  const char *v64; // [rsp+18h] [rbp-88h]
-  signed int v65; // [rsp+18h] [rbp-88h]
-  const char *v66; // [rsp+18h] [rbp-88h]
-  const char *v67; // [rsp+18h] [rbp-88h]
-  __int64 v70; // [rsp+30h] [rbp-70h]
-  CUtlLeanVectorBase<CEntityKeyValues::KeyValueInfo_t,short int>::IndexType_t v71; // [rsp+3Ah] [rbp-66h]
+  const char *v68; // [rsp+18h] [rbp-88h]
+  signed int v69; // [rsp+18h] [rbp-88h]
+  const char *v70; // [rsp+18h] [rbp-88h]
+  const char *v71; // [rsp+18h] [rbp-88h]
+  __int64 v74; // [rsp+30h] [rbp-70h]
+  CUtlLeanVectorBase<CEntityKeyValues::KeyValueInfo_t,short int>::IndexType_t v75; // [rsp+3Ah] [rbp-66h]
   int nIdx; // [rsp+3Ch] [rbp-64h]
-  CUtlLeanVectorBase<CEntityKeyValues::KeyValueInfo_t,short int>::ElemType_t *v73; // [rsp+40h] [rbp-60h]
-  __int64 v74; // [rsp+48h] [rbp-58h]
-  LeafCodeInfo_t v75; // [rsp+50h] [rbp-50h] BYREF
+  CUtlLeanVectorBase<CEntityKeyValues::KeyValueInfo_t,short int>::ElemType_t *v77; // [rsp+40h] [rbp-60h]
+  __int64 v78; // [rsp+48h] [rbp-58h]
+  LeafCodeInfo_t v79; // [rsp+50h] [rbp-50h] BYREF
 
   v4 = this;
   m_nCount = this->m_keyHashes.m_nCount;
@@ -409,9 +413,9 @@ int __fastcall CEntityKeyValues::AddKeyValue<Vector>(
   {
     if ( LoggingSystem_IsChannelEnabled(LOG_GENERAL, 4) != 0 )
     {
-      v75.m_nLine = 557;
-      v75.m_szFile = "../../public/tier1/utlleanvector.h";
-      v58 = "AddToTailGetPtr";
+      v79.m_nLine = 557;
+      v79.m_szFile = "../../public/tier1/utlleanvector.h";
+      v62 = "AddToTailGetPtr";
       goto LABEL_92;
     }
     goto LABEL_88;
@@ -489,29 +493,29 @@ int __fastcall CEntityKeyValues::AddKeyValue<Vector>(
     v12 = 0;
   }
   v12[v8] = key.m_nHashCode;
-  v70 = v8;
-  v71 = v4->m_keyValues.m_nCount;
-  if ( v71 == 0x7FFF )
+  v74 = v8;
+  v75 = v4->m_keyValues.m_nCount;
+  if ( v75 == 0x7FFF )
   {
     if ( LoggingSystem_IsChannelEnabled(LOG_GENERAL, 4) != 0 )
       goto LABEL_91;
     while ( 1 )
     {
 LABEL_88:
-      if ( Plat_ShouldCollectMiniDumpsForFatalErrors() != 0 )
+      if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v60, v61, v58, v59) != 0 )
         loc_0 = -559038737;
       Plat_ExitProcess(1);
 LABEL_91:
-      v75.m_nLine = 557;
-      v75.m_szFile = "../../public/tier1/utlleanvector.h";
-      v58 = "AddToTailGetPtr";
+      v79.m_nLine = 557;
+      v79.m_szFile = "../../public/tier1/utlleanvector.h";
+      v62 = "AddToTailGetPtr";
 LABEL_92:
-      v75.m_szFunction = v58;
-      LoggingSystem_Log(LOG_GENERAL, LoggingSeverity_t::LS_ERROR, &v75, "%s allocation count overflow", v58);
+      v79.m_szFunction = v62;
+      LoggingSystem_Log(LOG_GENERAL, LoggingSeverity_t::LS_ERROR, &v79, "%s allocation count overflow", v62);
     }
   }
   v13 = v4->m_keyValues.m_nAllocated;
-  v14 = v71 + 1;
+  v14 = v75 + 1;
   v15 = v13;
   if ( v14 > v13 )
   {
@@ -534,11 +538,11 @@ LABEL_92:
         v15 = 0x7FFF;
       }
     }
-    v74 = (**g_pMemAlloc)(g_pMemAlloc, 24LL * v13);
+    v78 = (**g_pMemAlloc)(g_pMemAlloc, 24LL * v13);
     if ( v4->m_keyValues.m_nAllocated != 0 )
-      v73 = v4->m_keyValues.m_pElements;
+      v77 = v4->m_keyValues.m_pElements;
     else
-      v73 = 0;
+      v77 = 0;
     v16 = v4->m_keyValues.m_nCount;
     if ( v13 <= v16 )
       v16 = v13;
@@ -550,16 +554,16 @@ LABEL_92:
       do
       {
         v20 = v19;
-        v21 = v20 * 24 + v74;
-        if ( v20 * 24 + v74 != 0 )
+        v21 = v20 * 24 + v78;
+        if ( v20 * 24 + v78 != 0 )
         {
-          v22 = &v73[v20];
+          v22 = &v77[v20];
           *v21 = 0;
           *(v21 + 10) = 0;
         }
         else
         {
-          v22 = &v73[v20];
+          v22 = &v77[v20];
         }
         *v21 = 0;
         *(v21 + 8) = 0;
@@ -572,7 +576,7 @@ LABEL_92:
             if ( (v49 & 1) != 0 )
               *(v21 + 10) = v49 & 0xFFFE;
             src = v17;
-            v64 = m_uint64;
+            v68 = m_uint64;
             *(v21 + 8) = 3;
             goto LABEL_32;
           case 4:
@@ -581,7 +585,7 @@ LABEL_92:
             if ( (v47 & 1) != 0 )
               *(v21 + 10) = v47 & 0xFFFE;
             srca = v17;
-            v66 = v48;
+            v70 = v48;
             *(v21 + 8) = 4;
             goto LABEL_57;
           case 25:
@@ -591,12 +595,12 @@ LABEL_92:
               *(v21 + 10) = v44 & 0xFFFE;
             srcc = v17;
             *(v21 + 8) = 25;
-            v67 = v45;
+            v71 = v45;
             v46 = CEntityVariantAllocator::Allocate(8u);
             *v21 = v46;
             v17 = srcc;
-            *v46 = *v67;
-            v46[1] = *(v67 + 1);
+            *v46 = *v71;
+            v46[1] = *(v71 + 1);
             *(v21 + 10) |= 1u;
             break;
           case 27:
@@ -605,15 +609,15 @@ LABEL_92:
             if ( (v41 & 1) != 0 )
               *(v21 + 10) = v41 & 0xFFFE;
             srca = v17;
-            v66 = v42;
+            v70 = v42;
             *(v21 + 8) = 27;
 LABEL_57:
             v43 = CEntityVariantAllocator::Allocate(0x10u);
             *v21 = v43;
-            *v43 = *v66;
-            v43[1] = *(v66 + 1);
-            v43[2] = *(v66 + 2);
-            v43[3] = *(v66 + 3);
+            *v43 = *v70;
+            v43[1] = *(v70 + 1);
+            v43[2] = *(v70 + 2);
+            v43[3] = *(v70 + 3);
             *(v21 + 10) |= 1u;
             v17 = srca;
             break;
@@ -625,13 +629,13 @@ LABEL_57:
             *(v21 + 8) = 30;
             if ( v39 != 0 )
             {
-              v59 = v17;
+              v63 = v17;
               srcb = v39;
-              v65 = strlen(v39) + 1;
-              v40 = CEntityVariantAllocator::Allocate(v65);
+              v69 = strlen(v39) + 1;
+              v40 = CEntityVariantAllocator::Allocate(v69);
               *v21 = v40;
-              memcpy(v40, srcb, v65);
-              v17 = v59;
+              memcpy(v40, srcb, v69);
+              v17 = v63;
               *(v21 + 10) |= 1u;
             }
             break;
@@ -641,14 +645,14 @@ LABEL_57:
             if ( (v24 & 1) != 0 )
               *(v21 + 10) = v24 & 0xFFFE;
             src = v17;
-            v64 = v25;
+            v68 = v25;
             *(v21 + 8) = 39;
 LABEL_32:
             v26 = CEntityVariantAllocator::Allocate(0xCu);
             *v21 = v26;
-            *v26 = *v64;
-            v26[1] = *(v64 + 1);
-            v26[2] = *(v64 + 2);
+            *v26 = *v68;
+            v26[1] = *(v68 + 1);
+            v26[2] = *(v68 + 2);
             *(v21 + 10) |= 1u;
             v17 = src;
             break;
@@ -674,13 +678,13 @@ LABEL_32:
     }
     (*(*g_pMemAlloc + 16LL))(g_pMemAlloc, v4->m_keyValues.m_pElements);
     v4->m_keyValues.m_nAllocated = v13;
-    v4->m_keyValues.m_pElements = v74;
+    v4->m_keyValues.m_pElements = v78;
   }
   if ( v13 != 0 )
     v29 = v4->m_keyValues.m_pElements;
   else
     v29 = 0;
-  v30 = &v29[v71];
+  v30 = &v29[v75];
   if ( v30 != 0 )
   {
     v30->m_value.m_uint64 = 0;
@@ -703,7 +707,7 @@ LABEL_44:
   }
   v32 = 0;
 LABEL_45:
-  v33 = &v32[v70];
+  v33 = &v32[v74];
   v34 = v33->m_value.m_flags;
   if ( (v34 & 1) != 0 )
     v33->m_value.m_flags = v34 & 0xFFFE;
@@ -719,7 +723,7 @@ LABEL_45:
     v36 = v4->m_keyValues.m_pElements;
   else
     v36 = 0;
-  v36[v70].m_pAttributeName = pAttributeName;
+  v36[v74].m_pAttributeName = pAttributeName;
   return nIdx;
 }
 

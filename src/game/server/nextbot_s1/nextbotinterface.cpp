@@ -588,13 +588,13 @@ const char *__fastcall INextBot::GetDebugIdentifier(const INextBot *const this)
 bool __fastcall INextBot::IsDebugFilterMatch(const INextBot *const this, const char *name)
 {
   unsigned int v4; // r13d
-  __int64 v5; // rax
+  const char *v5; // rax
   int v6; // edx
   bool result; // al
   const CBaseEntity *v8; // rax
   CTeam *Team; // r12
   unsigned int v10; // r13d
-  __int64 v11; // rax
+  const char *v11; // rax
 
   if ( name != 0 )
     v4 = strlen(name);

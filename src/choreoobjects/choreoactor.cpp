@@ -20,7 +20,7 @@ void __fastcall CChoreoActor::CChoreoActor(CChoreoActor *const this, const char 
 {
   ChoreoObjectHandle_t v2; // rax
 
-  this->_vptr_CChoreoObjectBase = off_47C2810;
+  this->_vptr_CChoreoObjectBase = off_47C2810;  // vptr: CChoreoActor
   v2 = CChoreoObjectBase::s_nNextChoreoObjectHandle;
   this->m_szName.m_pString = 0;
   this->m_szFacePoserModelName.m_pString = 0;

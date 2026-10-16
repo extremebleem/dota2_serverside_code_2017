@@ -251,7 +251,7 @@ void *__fastcall CColorCorrectionVolume::CEntityInstanceEntityClass::AllocateIns
 void __fastcall CColorCorrectionVolume::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CColorCorrectionVolume::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -261,7 +261,7 @@ void __fastcall CColorCorrectionVolume::CEntityInstanceEntityClass::~CEntityInst
 void __fastcall CColorCorrectionVolume::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CColorCorrectionVolume::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }

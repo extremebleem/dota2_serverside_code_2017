@@ -59,7 +59,7 @@ void __fastcall CDOTA_Bot_AbilityUsage_Dazzle_PoisonTouch::CDOTA_Bot_AbilityUsag
   this->m_pAbility = pAbility;
   this->m_bUseOnCreeps = 0;
   this->m_pBot = pBot;
-  this->_vptr_CDOTA_Bot_AbilityUsage = off_42CB090;
+  this->_vptr_CDOTA_Bot_AbilityUsage = off_42CB090;  // vptr: CDOTA_Bot_AbilityUsage_Dazzle_PoisonTouch
   this->m_hDesiredTarget.m_Index = -1;
 }
 
@@ -328,7 +328,7 @@ void __fastcall CDOTA_Bot_AbilityUsage_Dazzle_ShallowGrave::CDOTA_Bot_AbilityUsa
 {
   this->m_pAbility = pAbility;
   this->m_pBot = pBot;
-  this->_vptr_CDOTA_Bot_AbilityUsage = off_42CB0F0;
+  this->_vptr_CDOTA_Bot_AbilityUsage = off_42CB0F0;  // vptr: CDOTA_Bot_AbilityUsage_Dazzle_ShallowGrave
   this->m_hDesiredTarget.m_Index = -1;
   this->m_bUseOnCreeps = 1;
 }
@@ -493,7 +493,7 @@ void __fastcall CDOTA_Bot_AbilityUsage_Dazzle_ShadowWave::CDOTA_Bot_AbilityUsage
 {
   this->m_pAbility = pAbility;
   this->m_pBot = pBot;
-  this->_vptr_CDOTA_Bot_AbilityUsage = off_42CB150;
+  this->_vptr_CDOTA_Bot_AbilityUsage = off_42CB150;  // vptr: CDOTA_Bot_AbilityUsage_Dazzle_ShadowWave
   this->m_hDesiredTarget.m_Index = -1;
   this->m_bUseOnCreeps = 1;
 }
@@ -1026,7 +1026,7 @@ void __fastcall CDOTA_Bot_AbilityUsage_Dazzle_Weave::CDOTA_Bot_AbilityUsage_Dazz
 {
   this->m_pAbility = pAbility;
   this->m_pBot = pBot;
-  this->_vptr_CDOTA_Bot_AbilityUsage = off_42CB1B0;
+  this->_vptr_CDOTA_Bot_AbilityUsage = off_42CB1B0;  // vptr: CDOTA_Bot_AbilityUsage_Dazzle_Weave
   this->m_bUseOnCreeps = 1;
 }
 

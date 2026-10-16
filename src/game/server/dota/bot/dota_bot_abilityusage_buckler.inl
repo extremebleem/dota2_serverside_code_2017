@@ -5,7 +5,7 @@
 void __fastcall CDOTA_Bot_AbilityUsage_Buckler::~CDOTA_Bot_AbilityUsage_Buckler(
         CDOTA_Bot_AbilityUsage_Buckler *const this)
 {
-  this->_vptr_CDOTA_Bot_AbilityUsage = off_42C5890;
+  this->_vptr_CDOTA_Bot_AbilityUsage = off_42C5890;  // vptr: CDOTA_Bot_AbilityUsage
 }
 
 
@@ -14,7 +14,7 @@ void __fastcall CDOTA_Bot_AbilityUsage_Buckler::~CDOTA_Bot_AbilityUsage_Buckler(
 void __fastcall CDOTA_Bot_AbilityUsage_Buckler::~CDOTA_Bot_AbilityUsage_Buckler(
         CDOTA_Bot_AbilityUsage_Buckler *const this)
 {
-  this->_vptr_CDOTA_Bot_AbilityUsage = off_42C5890;
+  this->_vptr_CDOTA_Bot_AbilityUsage = off_42C5890;  // vptr: CDOTA_Bot_AbilityUsage
   operator delete(this);
 }
 

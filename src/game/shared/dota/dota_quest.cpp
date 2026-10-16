@@ -235,7 +235,7 @@ CEntityInstance *__fastcall CDotaQuestBase::CEntityInstanceEntityClass::Construc
 void __fastcall CDotaQuestBase::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDotaQuestBase::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -245,7 +245,7 @@ void __fastcall CDotaQuestBase::CEntityInstanceEntityClass::~CEntityInstanceEnti
 void __fastcall CDotaQuestBase::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDotaQuestBase::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }

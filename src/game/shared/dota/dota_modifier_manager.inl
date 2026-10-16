@@ -159,7 +159,7 @@ void __fastcall CDOTA_ActiveModifiersList::~CDOTA_ActiveModifiersList(CDOTA_Acti
   CUtlVectorBase<CDOTA_ModifierManager*,CUtlMemory<CDOTA_ModifierManager*,int> >::CAllocator *p_m_Memory; // r12
 
   v2 = (this->m_modifiers.m_Memory.m_nGrowSize & 0xC0000000) == 0;
-  this->_vptr_IGameSystem = off_412D110;
+  this->_vptr_IGameSystem = off_412D110;  // vptr: CDOTA_ActiveModifiersList
   this->m_modifiers.m_Size = 0;
   if ( v2 )
   {
@@ -168,7 +168,7 @@ void __fastcall CDOTA_ActiveModifiersList::~CDOTA_ActiveModifiersList(CDOTA_Acti
     if ( (this->m_modifiers.m_Memory.m_nGrowSize & 0xC0000000) == 0 )
       CUtlMemory<CDOTA_ModifierManager *,int>::Purge(p_m_Memory);
   }
-  this->_vptr_IGameSystem = off_3F7C1B0;
+  this->_vptr_IGameSystem = off_3F7C1B0;  // vptr: CAutoGameSystem
   IGameSystem::~IGameSystem(this);
 }
 
@@ -181,7 +181,7 @@ void __fastcall CDOTA_ActiveModifiersList::~CDOTA_ActiveModifiersList(CDOTA_Acti
   CUtlVectorBase<CDOTA_ModifierManager*,CUtlMemory<CDOTA_ModifierManager*,int> >::CAllocator *p_m_Memory; // r12
 
   v2 = (this->m_modifiers.m_Memory.m_nGrowSize & 0xC0000000) == 0;
-  this->_vptr_IGameSystem = off_412D110;
+  this->_vptr_IGameSystem = off_412D110;  // vptr: CDOTA_ActiveModifiersList
   this->m_modifiers.m_Size = 0;
   if ( v2 )
   {
@@ -190,7 +190,7 @@ void __fastcall CDOTA_ActiveModifiersList::~CDOTA_ActiveModifiersList(CDOTA_Acti
     if ( (this->m_modifiers.m_Memory.m_nGrowSize & 0xC0000000) == 0 )
       CUtlMemory<CDOTA_ModifierManager *,int>::Purge(p_m_Memory);
   }
-  this->_vptr_IGameSystem = off_3F7C1B0;
+  this->_vptr_IGameSystem = off_3F7C1B0;  // vptr: CAutoGameSystem
   IGameSystem::~IGameSystem(this);
   operator delete(this);
 }

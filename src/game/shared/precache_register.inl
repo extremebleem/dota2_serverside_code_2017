@@ -29,7 +29,7 @@ void __fastcall CPrecacheRegister::SetGameSystemGlobalPtrs(CPrecacheRegister *co
 // calls: IGameSystem::~IGameSystem
 void __fastcall CPrecacheRegister::~CPrecacheRegister(CPrecacheRegister *const this)
 {
-  this->_vptr_IGameSystem = off_3F7C1B0;
+  this->_vptr_IGameSystem = off_3F7C1B0;  // vptr: CAutoGameSystem
   IGameSystem::~IGameSystem(this);
 }
 
@@ -38,7 +38,7 @@ void __fastcall CPrecacheRegister::~CPrecacheRegister(CPrecacheRegister *const t
 // calls: IGameSystem::~IGameSystem, operator delete
 void __fastcall CPrecacheRegister::~CPrecacheRegister(CPrecacheRegister *const this)
 {
-  this->_vptr_IGameSystem = off_3F7C1B0;
+  this->_vptr_IGameSystem = off_3F7C1B0;  // vptr: CAutoGameSystem
   IGameSystem::~IGameSystem(this);
   operator delete(this);
 }

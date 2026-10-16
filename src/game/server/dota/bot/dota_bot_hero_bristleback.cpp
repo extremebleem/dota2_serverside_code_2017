@@ -202,7 +202,7 @@ void __fastcall CDOTA_Bot_AbilityUsage_Bristleback_ViscousNasalGoo::CDOTA_Bot_Ab
   this->m_pAbility = pAbility;
   this->m_bUseOnCreeps = 0;
   this->m_pBot = pBot;
-  this->_vptr_CDOTA_Bot_AbilityUsage = off_42CA090;
+  this->_vptr_CDOTA_Bot_AbilityUsage = off_42CA090;  // vptr: CDOTA_Bot_AbilityUsage_Bristleback_ViscousNasalGoo
   this->m_hDesiredTarget.m_Index = -1;
 }
 
@@ -475,7 +475,7 @@ void __fastcall CDOTA_Bot_AbilityUsage_Bristleback_QuillSpray::CDOTA_Bot_Ability
   this->m_pAbility = pAbility;
   this->m_bUseOnCreeps = 0;
   this->m_pBot = pBot;
-  this->_vptr_CDOTA_Bot_AbilityUsage = off_42CA0F0;
+  this->_vptr_CDOTA_Bot_AbilityUsage = off_42CA0F0;  // vptr: CDOTA_Bot_AbilityUsage_Bristleback_QuillSpray
 }
 
 

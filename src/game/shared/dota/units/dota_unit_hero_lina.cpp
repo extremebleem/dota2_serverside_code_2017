@@ -603,7 +603,7 @@ CEntityInstance *__fastcall CDOTA_Unit_Hero_Lina::CEntityInstanceEntityClass::Co
 void __fastcall CDOTA_Unit_Hero_Lina::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Unit_Hero_Lina::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -613,7 +613,7 @@ void __fastcall CDOTA_Unit_Hero_Lina::CEntityInstanceEntityClass::~CEntityInstan
 void __fastcall CDOTA_Unit_Hero_Lina::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Unit_Hero_Lina::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -816,7 +816,7 @@ CEntityInstance *__fastcall CDOTA_Ability_Lina_DragonSlave::CEntityInstanceEntit
 void __fastcall CDOTA_Ability_Lina_DragonSlave::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Lina_DragonSlave::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -826,7 +826,7 @@ void __fastcall CDOTA_Ability_Lina_DragonSlave::CEntityInstanceEntityClass::~CEn
 void __fastcall CDOTA_Ability_Lina_DragonSlave::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Lina_DragonSlave::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -1359,7 +1359,7 @@ CEntityInstance *__fastcall CDOTA_Ability_Lina_LightStrikeArray::CEntityInstance
 void __fastcall CDOTA_Ability_Lina_LightStrikeArray::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Lina_LightStrikeArray::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -1369,7 +1369,7 @@ void __fastcall CDOTA_Ability_Lina_LightStrikeArray::CEntityInstanceEntityClass:
 void __fastcall CDOTA_Ability_Lina_LightStrikeArray::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Lina_LightStrikeArray::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -1871,7 +1871,7 @@ CEntityInstance *__fastcall CDOTA_Ability_Lina_FierySoul::CEntityInstanceEntityC
 void __fastcall CDOTA_Ability_Lina_FierySoul::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Lina_FierySoul::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -1881,7 +1881,7 @@ void __fastcall CDOTA_Ability_Lina_FierySoul::CEntityInstanceEntityClass::~CEnti
 void __fastcall CDOTA_Ability_Lina_FierySoul::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Lina_FierySoul::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -2358,7 +2358,7 @@ CEntityInstance *__fastcall CDOTA_Ability_Lina_LagunaBlade::CEntityInstanceEntit
 void __fastcall CDOTA_Ability_Lina_LagunaBlade::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Lina_LagunaBlade::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -2368,7 +2368,7 @@ void __fastcall CDOTA_Ability_Lina_LagunaBlade::CEntityInstanceEntityClass::~CEn
 void __fastcall CDOTA_Ability_Lina_LagunaBlade::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Lina_LagunaBlade::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -2862,7 +2862,7 @@ CEntityInstance *__fastcall CDOTA_Ability_Holdout_FierySoul::CEntityInstanceEnti
 void __fastcall CDOTA_Ability_Holdout_FierySoul::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Holdout_FierySoul::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -2872,7 +2872,7 @@ void __fastcall CDOTA_Ability_Holdout_FierySoul::CEntityInstanceEntityClass::~CE
 void __fastcall CDOTA_Ability_Holdout_FierySoul::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Holdout_FierySoul::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }

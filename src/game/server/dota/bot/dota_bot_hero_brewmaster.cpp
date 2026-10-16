@@ -73,7 +73,7 @@ void __fastcall CDOTA_Bot_AbilityUsage_Brewmaster_ThunderClap::CDOTA_Bot_Ability
   this->m_pAbility = pAbility;
   this->m_bUseOnCreeps = 0;
   this->m_pBot = pBot;
-  this->_vptr_CDOTA_Bot_AbilityUsage = off_42C9750;
+  this->_vptr_CDOTA_Bot_AbilityUsage = off_42C9750;  // vptr: CDOTA_Bot_AbilityUsage_Brewmaster_ThunderClap
 }
 
 
@@ -103,7 +103,7 @@ void __fastcall CDOTA_Bot_AbilityUsage_Brewmaster_DrunkenHaze::CDOTA_Bot_Ability
   this->m_pAbility = pAbility;
   this->m_bUseOnCreeps = 0;
   this->m_pBot = pBot;
-  this->_vptr_CDOTA_Bot_AbilityUsage = off_42C97B0;
+  this->_vptr_CDOTA_Bot_AbilityUsage = off_42C97B0;  // vptr: CDOTA_Bot_AbilityUsage_Brewmaster_DrunkenHaze
 }
 
 
@@ -133,7 +133,7 @@ void __fastcall CDOTA_Bot_AbilityUsage_Brewmaster_PrimalSplit::CDOTA_Bot_Ability
   this->m_pAbility = pAbility;
   this->m_bUseOnCreeps = 0;
   this->m_pBot = pBot;
-  this->_vptr_CDOTA_Bot_AbilityUsage = off_42C9810;
+  this->_vptr_CDOTA_Bot_AbilityUsage = off_42C9810;  // vptr: CDOTA_Bot_AbilityUsage_Brewmaster_PrimalSplit
 }
 
 

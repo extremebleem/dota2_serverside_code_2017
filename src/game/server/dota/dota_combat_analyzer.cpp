@@ -18,7 +18,7 @@ void __cdecl CDOTA_RealtimeCombatAnalyzer::YouForgot::ToDefine_DEFINE_GAME_SYSTE
 // CDOTA_CombatAnalyzer::CDOTA_CombatAnalyzer  (line 41, @0x000000000246c520, libserver.so)
 void __fastcall CDOTA_CombatAnalyzer::CDOTA_CombatAnalyzer(CDOTA_CombatAnalyzer *const this)
 {
-  this->_vptr_IGameSystem = off_40DE710;
+  this->_vptr_IGameSystem = off_40DE710;  // vptr: CDOTA_CombatAnalyzer
   this->m_pParsingPlayer = 0;
 }
 
@@ -27,7 +27,7 @@ void __fastcall CDOTA_CombatAnalyzer::CDOTA_CombatAnalyzer(CDOTA_CombatAnalyzer 
 // calls: IGameSystem::~IGameSystem
 void __fastcall CDOTA_CombatAnalyzer::~CDOTA_CombatAnalyzer(CDOTA_CombatAnalyzer *const this)
 {
-  this->_vptr_IGameSystem = off_3F7C1B0;
+  this->_vptr_IGameSystem = off_3F7C1B0;  // vptr: CAutoGameSystem
   IGameSystem::~IGameSystem(this);
 }
 
@@ -36,7 +36,7 @@ void __fastcall CDOTA_CombatAnalyzer::~CDOTA_CombatAnalyzer(CDOTA_CombatAnalyzer
 // calls: IGameSystem::~IGameSystem, operator delete
 void __fastcall CDOTA_CombatAnalyzer::~CDOTA_CombatAnalyzer(CDOTA_CombatAnalyzer *const this)
 {
-  this->_vptr_IGameSystem = off_3F7C1B0;
+  this->_vptr_IGameSystem = off_3F7C1B0;  // vptr: CAutoGameSystem
   IGameSystem::~IGameSystem(this);
   operator delete(this);
 }
@@ -659,7 +659,7 @@ LABEL_31:
 void __fastcall CDOTA_RealtimeCombatAnalyzer::CDOTA_RealtimeCombatAnalyzer(CDOTA_RealtimeCombatAnalyzer *const this)
 {
   this->m_pParsingPlayer = 0;
-  this->_vptr_IGameSystem = off_40DE870;
+  this->_vptr_IGameSystem = off_40DE870;  // vptr: CDOTA_RealtimeCombatAnalyzer
   this->m_vecQueries.m_Size = 0;
   this->m_vecQueries.m_Memory.m_pMemory = 0;
   this->m_vecQueries.m_Memory.m_nAllocationCount = 0;
@@ -687,7 +687,7 @@ void __fastcall CDOTA_RealtimeCombatAnalyzer::~CDOTA_RealtimeCombatAnalyzer(CDOT
   v1 = 0;
   v2 = 0;
   m_Size = this->m_vecQueries.m_Size;
-  this->_vptr_IGameSystem = off_40DE870;
+  this->_vptr_IGameSystem = off_40DE870;  // vptr: CDOTA_RealtimeCombatAnalyzer
   if ( m_Size > 0 )
   {
     do
@@ -724,7 +724,7 @@ void __fastcall CDOTA_RealtimeCombatAnalyzer::~CDOTA_RealtimeCombatAnalyzer(CDOT
     if ( (this->m_vecQueries.m_Memory.m_nGrowSize & 0xC0000000) == 0 )
       CUtlMemory<CombatLogQuery *,int>::Purge(&this->m_vecQueries.m_Memory);
   }
-  this->_vptr_IGameSystem = off_3F7C1B0;
+  this->_vptr_IGameSystem = off_3F7C1B0;  // vptr: CAutoGameSystem
   IGameSystem::~IGameSystem(this);
 }
 
@@ -2240,7 +2240,7 @@ void __fastcall CDOTA_RealtimeCombatAnalyzer::PerformStorageInternal(
 LABEL_22:
     m_pNotify = pQuery->m_pNotify;
     if ( m_pNotify != 0 )
-      (*m_pNotify->_vptr_ICombatAnalyzerQueryUpdateNotify)(m_pNotify, pQuery->m_nQueryID, v12);
+      m_pNotify->OnQueryProgressChanged(pQuery->m_nQueryID, v12);
     return;
   }
 LABEL_9:

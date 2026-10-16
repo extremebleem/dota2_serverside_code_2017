@@ -2588,7 +2588,7 @@ void __fastcall CBaseEntity::DecalTrace(CBaseEntity *const this, trace_t *pTrace
   unsigned __int64 v8; // [rsp+148h] [rbp-38h]
 
   v8 = __readfsqword(0x28u);
-  v4 = (*decalsystem->_vptr_IDecalEmitterSystem)(decalsystem, decalName);
+  v4 = decalsystem->GetDecalIndexForName(decalName);
   if ( v4 >= 0 )
   {
     CRecipientFilter::CRecipientFilter(&filter);
@@ -7663,9 +7663,7 @@ void __fastcall CBaseEntity::SetAbsVelocity(CBaseEntity *const this, const Vecto
           if ( m_pStateChanged != 0 )
           {
             v23 = p_m_vecY;
-            (*m_pStateChanged->_vptr_INetworkStateChangedRouter)(
-              m_pStateChanged,
-              &this->m_vecVelocity,
+            m_pStateChanged->NetworkStateChanged(&this->m_vecVelocity,
               v22,
               0xFFFFFFFFLL,
               0xFFFFFFFFLL);
@@ -7739,9 +7737,7 @@ void __fastcall CBaseEntity::SetLocalVelocity(CBaseEntity *const this, const Vec
         if ( m_pStateChanged != 0 )
         {
           v14 = p_m_vecY;
-          (*m_pStateChanged->_vptr_INetworkStateChangedRouter)(
-            m_pStateChanged,
-            &this->m_vecVelocity,
+          m_pStateChanged->NetworkStateChanged(&this->m_vecVelocity,
             v13,
             0xFFFFFFFFLL,
             0xFFFFFFFFLL);
@@ -7860,9 +7856,7 @@ void __fastcall CBaseEntity::ApplyLocalVelocityImpulse(CBaseEntity *const this, 
           m_pStateChanged = this->m_vecVelocity.m_pStateChanged;
           v19 = p_m_vecY - p_m_vecVelocity;
           if ( m_pStateChanged != 0 )
-            (*m_pStateChanged->_vptr_INetworkStateChangedRouter)(
-              m_pStateChanged,
-              &this->m_vecVelocity,
+            m_pStateChanged->NetworkStateChanged(&this->m_vecVelocity,
               v19,
               0xFFFFFFFFLL,
               0xFFFFFFFFLL);
@@ -8537,7 +8531,7 @@ void __fastcall SendProxyUsingClientSideAnimation_RecipientsFilter(
   const CBaseAnimating *v6; // rax
 
   v6 = (*(*pRootObjectBase + 344LL))(pRootObjectBase, pStructBase, pCurrentField, pRecipients, objectid);
-  if ( !v6 || !CBaseAnimating::IsUsingClientSideAnimation(v6) )
+  if ( v6 == 0 || !CBaseAnimating::IsUsingClientSideAnimation(v6) )
     *pRecipients = 0;
 }
 

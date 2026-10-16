@@ -317,14 +317,14 @@ void __fastcall CBasePropDoor::~CBasePropDoor(CBasePropDoor *const this)
       CUtlMemory<CHandle<CBasePropDoor>,int>::Purge(&this->m_hDoorList.m_Memory);
   }
   v2 = !this->m_bRegisteredForEvents;
-  this->_vptr_IGameEventListener2 = off_3FB3190;
+  this->_vptr_IGameEventListener2 = off_3FB3190;  // vptr: CGameEventListener
   if ( !v2 )
   {
     if ( gameeventmanager != 0 )
       (*(gameeventmanager->_vptr_IBaseInterface + 6))(gameeventmanager, &this->CGameEventListener);
     this->m_bRegisteredForEvents = 0;
   }
-  this->_vptr_IGameEventListener2 = off_3FB3150;
+  this->_vptr_IGameEventListener2 = off_3FB3150;  // vptr: IGameEventListener2
   this->_vptr_IPlayerPickupVPhysics = &off_3FF0E98;
   this->_vptr_IBreakableWithPropData = off_3FF0D80;
   this->_vptr_IHandleEntity = &off_3FED330;
@@ -3074,19 +3074,19 @@ void __fastcall CTraceFilterDoor::~CTraceFilterDoor(CTraceFilterDoor *const this
   CUtlVectorBase<const CBaseEntity*,CUtlMemory<const CBaseEntity*,int> >::CAllocator *p_m_Memory; // r12
 
   v2 = (this->m_pPassEnts.m_Memory.m_nGrowSize & 0xC0000000) == 0;
-  this->_vptr_CTraceFilter = off_4097810;
+  this->_vptr_CTraceFilter = off_4097810;  // vptr: CTraceFilterDoor
   this->m_pPassEnts.m_Size = 0;
   if ( !v2
     || (p_m_Memory = &this->m_pPassEnts.m_Memory,
         CUtlMemory<CBaseEntity const*,int>::Purge(&this->m_pPassEnts.m_Memory),
         (this->m_pPassEnts.m_Memory.m_nGrowSize & 0xC0000000) != 0) )
   {
-    this->_vptr_CTraceFilter = off_3FE6970;
+    this->_vptr_CTraceFilter = off_3FE6970;  // vptr: CTraceFilter
   }
   else
   {
     CUtlMemory<CBaseEntity const*,int>::Purge(p_m_Memory);
-    this->_vptr_CTraceFilter = off_3FE6970;
+    this->_vptr_CTraceFilter = off_3FE6970;  // vptr: CTraceFilter
   }
 }
 
@@ -3099,7 +3099,7 @@ void __fastcall CTraceFilterDoor::~CTraceFilterDoor(CTraceFilterDoor *const this
   CUtlVectorBase<const CBaseEntity*,CUtlMemory<const CBaseEntity*,int> >::CAllocator *p_m_Memory; // r12
 
   v2 = (this->m_pPassEnts.m_Memory.m_nGrowSize & 0xC0000000) == 0;
-  this->_vptr_CTraceFilter = off_4097810;
+  this->_vptr_CTraceFilter = off_4097810;  // vptr: CTraceFilterDoor
   this->m_pPassEnts.m_Size = 0;
   if ( v2 )
   {
@@ -3108,7 +3108,7 @@ void __fastcall CTraceFilterDoor::~CTraceFilterDoor(CTraceFilterDoor *const this
     if ( (this->m_pPassEnts.m_Memory.m_nGrowSize & 0xC0000000) == 0 )
       CUtlMemory<CBaseEntity const*,int>::Purge(p_m_Memory);
   }
-  this->_vptr_CTraceFilter = off_3FE6970;
+  this->_vptr_CTraceFilter = off_3FE6970;  // vptr: CTraceFilter
   operator delete(this);
 }
 

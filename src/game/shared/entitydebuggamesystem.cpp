@@ -38,7 +38,7 @@ void __cdecl CEntityDebugGameSystem::YouForgot::ToDefine_DEFINE_GAME_SYSTEM()
 // globals: CEntityDebugGameSystem::OnEntityReport(CCommandContext const&,CCommand const&), CEntityDebugGameSystem::OnEntitySummary(CCommandContext const&,CCommand const&), CDefOps<int>::LessFunc(int const&,int const&)
 void __fastcall CEntityDebugGameSystem::CEntityDebugGameSystem(CEntityDebugGameSystem *const this)
 {
-  this->_vptr_IGameSystem = off_3FCC5F0;
+  this->_vptr_IGameSystem = off_3FCC5F0;  // vptr: CEntityDebugGameSystem
   this->m_ConnectedSignallers.m_Size = 0;
   this->m_ConnectedSignallers.m_Memory.m_pMemory = 0;
   this->m_ConnectedSignallers.m_Memory.m_nAllocationCount = 0;

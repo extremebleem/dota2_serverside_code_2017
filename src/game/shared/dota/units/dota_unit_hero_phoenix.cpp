@@ -1075,7 +1075,7 @@ CEntityInstance *__fastcall CDOTA_Unit_Hero_Phoenix::CEntityInstanceEntityClass:
 void __fastcall CDOTA_Unit_Hero_Phoenix::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Unit_Hero_Phoenix::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -1085,7 +1085,7 @@ void __fastcall CDOTA_Unit_Hero_Phoenix::CEntityInstanceEntityClass::~CEntityIns
 void __fastcall CDOTA_Unit_Hero_Phoenix::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Unit_Hero_Phoenix::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -1341,7 +1341,7 @@ CEntityInstance *__fastcall CDOTA_Ability_Phoenix_SunRay::CEntityInstanceEntityC
 void __fastcall CDOTA_Ability_Phoenix_SunRay::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Phoenix_SunRay::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -1351,7 +1351,7 @@ void __fastcall CDOTA_Ability_Phoenix_SunRay::CEntityInstanceEntityClass::~CEnti
 void __fastcall CDOTA_Ability_Phoenix_SunRay::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Phoenix_SunRay::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -1650,7 +1650,7 @@ CEntityInstance *__fastcall CDOTA_Ability_Phoenix_SunRayStop::CEntityInstanceEnt
 void __fastcall CDOTA_Ability_Phoenix_SunRayStop::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Phoenix_SunRayStop::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -1660,7 +1660,7 @@ void __fastcall CDOTA_Ability_Phoenix_SunRayStop::CEntityInstanceEntityClass::~C
 void __fastcall CDOTA_Ability_Phoenix_SunRayStop::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Phoenix_SunRayStop::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -3293,7 +3293,7 @@ CEntityInstance *__fastcall CDOTA_Ability_Phoenix_SunRayToggleMove::CEntityInsta
 void __fastcall CDOTA_Ability_Phoenix_SunRayToggleMove::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Phoenix_SunRayToggleMove::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -3303,7 +3303,7 @@ void __fastcall CDOTA_Ability_Phoenix_SunRayToggleMove::CEntityInstanceEntityCla
 void __fastcall CDOTA_Ability_Phoenix_SunRayToggleMove::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Phoenix_SunRayToggleMove::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -3509,7 +3509,7 @@ CEntityInstance *__fastcall CDOTA_Ability_Phoenix_SunRayToggleMoveEmpty::CEntity
 void __fastcall CDOTA_Ability_Phoenix_SunRayToggleMoveEmpty::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Phoenix_SunRayToggleMoveEmpty::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -3519,7 +3519,7 @@ void __fastcall CDOTA_Ability_Phoenix_SunRayToggleMoveEmpty::CEntityInstanceEnti
 void __fastcall CDOTA_Ability_Phoenix_SunRayToggleMoveEmpty::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Phoenix_SunRayToggleMoveEmpty::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -3723,7 +3723,7 @@ CEntityInstance *__fastcall CDOTA_Ability_Phoenix_IcarusDive::CEntityInstanceEnt
 void __fastcall CDOTA_Ability_Phoenix_IcarusDive::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Phoenix_IcarusDive::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -3733,7 +3733,7 @@ void __fastcall CDOTA_Ability_Phoenix_IcarusDive::CEntityInstanceEntityClass::~C
 void __fastcall CDOTA_Ability_Phoenix_IcarusDive::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Phoenix_IcarusDive::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -4000,7 +4000,7 @@ CEntityInstance *__fastcall CDOTA_Ability_Phoenix_IcarusDiveStop::CEntityInstanc
 void __fastcall CDOTA_Ability_Phoenix_IcarusDiveStop::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Phoenix_IcarusDiveStop::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -4010,7 +4010,7 @@ void __fastcall CDOTA_Ability_Phoenix_IcarusDiveStop::CEntityInstanceEntityClass
 void __fastcall CDOTA_Ability_Phoenix_IcarusDiveStop::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Phoenix_IcarusDiveStop::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -4929,7 +4929,7 @@ CEntityInstance *__fastcall CDOTA_Ability_Phoenix_FireSpirits::CEntityInstanceEn
 void __fastcall CDOTA_Ability_Phoenix_FireSpirits::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Phoenix_FireSpirits::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -4939,7 +4939,7 @@ void __fastcall CDOTA_Ability_Phoenix_FireSpirits::CEntityInstanceEntityClass::~
 void __fastcall CDOTA_Ability_Phoenix_FireSpirits::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Phoenix_FireSpirits::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -5420,7 +5420,7 @@ CEntityInstance *__fastcall CDOTA_Ability_Phoenix_LaunchFireSpirit::CEntityInsta
 void __fastcall CDOTA_Ability_Phoenix_LaunchFireSpirit::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Phoenix_LaunchFireSpirit::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -5430,7 +5430,7 @@ void __fastcall CDOTA_Ability_Phoenix_LaunchFireSpirit::CEntityInstanceEntityCla
 void __fastcall CDOTA_Ability_Phoenix_LaunchFireSpirit::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Phoenix_LaunchFireSpirit::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -6117,7 +6117,7 @@ CEntityInstance *__fastcall CDOTA_Ability_Phoenix_Supernova::CEntityInstanceEnti
 void __fastcall CDOTA_Ability_Phoenix_Supernova::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Phoenix_Supernova::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -6127,7 +6127,7 @@ void __fastcall CDOTA_Ability_Phoenix_Supernova::CEntityInstanceEntityClass::~CE
 void __fastcall CDOTA_Ability_Phoenix_Supernova::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Phoenix_Supernova::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }

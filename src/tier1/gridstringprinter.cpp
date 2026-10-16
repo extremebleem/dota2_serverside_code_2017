@@ -179,7 +179,7 @@ void __fastcall CGridStringPrinter::SetString(CGridStringPrinter *const this, in
   int v18; // edx
   CUtlSymbolLarge *v19; // rax
   CUtlSymbolLarge *v20; // rax
-  __int64 m_String; // rax
+  char *m_String; // rax
   int v22; // r14d
   int v23; // r10d
   signed int v24; // r15d
@@ -219,7 +219,7 @@ void __fastcall CGridStringPrinter::SetString(CGridStringPrinter *const this, in
   const char *pStringb; // [rsp+28h] [rbp-48h]
   const char *pStringc; // [rsp+28h] [rbp-48h]
   __int64 pStringd; // [rsp+28h] [rbp-48h]
-  __int64 v62; // [rsp+30h] [rbp-40h]
+  char *v62; // [rsp+30h] [rbp-40h] BYREF
   CUtlSymbolTableLargeBaseTreeEntry_t *pCopyFrom; // [rsp+38h] [rbp-38h] BYREF
 
   v4 = row;
@@ -300,7 +300,7 @@ LABEL_22:
     if ( v22 > 0 && *pString != 0 )
     {
       p_m_Symbols = &this->m_Symbols;
-      CUtlSymbolTableLargeBase<CNonThreadsafeTree<false>,false,2048ul>::Find(&this->m_Symbols, pString, v22);
+      CUtlSymbolTableLargeBase<CNonThreadsafeTree<false>,false,2048ul>::Find(&v62, &this->m_Symbols, pString, v22);
       m_String = v62;
       if ( v62 == 0 )
       {
@@ -444,7 +444,7 @@ void __fastcall CGridStringPrinter::SetColumnHeader(CGridStringPrinter *const th
   int i; // r12d
   int v8; // edx
   CGridStringPrinter::ColumnHeader_t *v9; // rax
-  UtlSymLargeId_t m_String; // rax
+  char *m_String; // rax
   int v11; // r12d
   int m_Size; // r9d
   signed int v13; // r14d
@@ -478,7 +478,7 @@ void __fastcall CGridStringPrinter::SetColumnHeader(CGridStringPrinter *const th
   char *v41; // [rsp+18h] [rbp-48h]
   __int64 v42; // [rsp+18h] [rbp-48h]
   CUtlSymbolTableLargeBase<CNonThreadsafeTree<false>,false,2048ul>::StringPool_t *v43; // [rsp+18h] [rbp-48h]
-  UtlSymLargeId_t v44; // [rsp+20h] [rbp-40h]
+  char *v44; // [rsp+20h] [rbp-40h] BYREF
   CUtlSymbolTableLargeBaseTreeEntry_t *pCopyFrom; // [rsp+28h] [rbp-38h] BYREF
 
   v3 = column;
@@ -510,7 +510,7 @@ LABEL_8:
     if ( v11 > 0 && *pString != 0 )
     {
       p_m_Symbols = &this->m_Symbols;
-      CUtlSymbolTableLargeBase<CNonThreadsafeTree<false>,false,2048ul>::Find(&this->m_Symbols, pString, v11);
+      CUtlSymbolTableLargeBase<CNonThreadsafeTree<false>,false,2048ul>::Find(&v44, &this->m_Symbols, pString, v11);
       m_String = v44;
       if ( v44 == 0 )
       {

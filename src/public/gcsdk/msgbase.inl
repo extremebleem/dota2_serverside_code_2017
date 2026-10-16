@@ -4,7 +4,7 @@
 // GCSDK::IMsgNetPacket::~IMsgNetPacket  (line 80, @0x0000000003221570, libserver.so)  // inlines: ~CRefCount
 void __fastcall GCSDK::IMsgNetPacket::~IMsgNetPacket(GCSDK::IMsgNetPacket *const this)
 {
-  this->_vptr_CRefCount = off_47D0430;
+  this->_vptr_CRefCount = off_47D0430;  // vptr: GCSDK::CRefCount
 }
 
 
@@ -12,7 +12,7 @@ void __fastcall GCSDK::IMsgNetPacket::~IMsgNetPacket(GCSDK::IMsgNetPacket *const
 // calls: operator delete
 void __fastcall GCSDK::IMsgNetPacket::~IMsgNetPacket(GCSDK::IMsgNetPacket *const this)
 {
-  this->_vptr_CRefCount = off_47D0430;
+  this->_vptr_CRefCount = off_47D0430;  // vptr: GCSDK::CRefCount
   operator delete(this);
 }
 

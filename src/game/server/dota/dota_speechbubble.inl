@@ -95,7 +95,7 @@ void *__fastcall CSpeechBubbleManager::CEntityInstanceEntityClass::AllocateInsta
 void __fastcall CSpeechBubbleManager::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CSpeechBubbleManager::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -105,7 +105,7 @@ void __fastcall CSpeechBubbleManager::CEntityInstanceEntityClass::~CEntityInstan
 void __fastcall CSpeechBubbleManager::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CSpeechBubbleManager::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }

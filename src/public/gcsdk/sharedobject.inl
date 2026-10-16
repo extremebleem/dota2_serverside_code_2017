@@ -4,7 +4,7 @@
 // GCSDK::CSharedObject::~CSharedObject  (line 35, @0x0000000002496da0, libserver.so)
 void __fastcall GCSDK::CSharedObject::~CSharedObject(GCSDK::CSharedObject *const this)
 {
-  this->_vptr_CSharedObject = off_40DB630;
+  this->_vptr_CSharedObject = off_40DB630;  // vptr: GCSDK::CSharedObject
 }
 
 
@@ -12,7 +12,7 @@ void __fastcall GCSDK::CSharedObject::~CSharedObject(GCSDK::CSharedObject *const
 // calls: operator delete
 void __fastcall GCSDK::CSharedObject::~CSharedObject(GCSDK::CSharedObject *const this)
 {
-  this->_vptr_CSharedObject = off_40DB630;
+  this->_vptr_CSharedObject = off_40DB630;  // vptr: GCSDK::CSharedObject
   operator delete(this);
 }
 
@@ -23,11 +23,11 @@ GCSDK::CSharedObject *__cdecl GCSDK::CreateSharedObjectSubclass<CDOTAPlayerChall
 {
   GCSDK::CSharedObject *v0; // rbx
 
-  v0 = operator new(0x58u);
+  v0 = operator new(0x58u);  // new CDOTAPlayerChallenge (size matches)
   memset(v0, 0, 0x58u);
   v0->_vptr_CSharedObject = &off_40DE2B0;
   CSODOTAPlayerChallenge::CSODOTAPlayerChallenge(&v0[1]);
-  v0->_vptr_CSharedObject = off_40DE330;
+  v0->_vptr_CSharedObject = off_40DE330;  // vptr: CDOTAPlayerChallenge
   return v0;
 }
 
@@ -50,11 +50,11 @@ GCSDK::CSharedObject *__cdecl GCSDK::CreateSharedObjectSubclass<CEconItemTournam
 {
   GCSDK::CSharedObject *v0; // rbx
 
-  v0 = operator new(0x48u);
+  v0 = operator new(0x48u);  // new CEconItemTournamentPassport (size matches)
   memset(v0, 0, 0x48u);
   v0->_vptr_CSharedObject = &off_47A6C90;
   CSOEconItemTournamentPassport::CSOEconItemTournamentPassport(&v0[1]);
-  v0->_vptr_CSharedObject = off_47A6D10;
+  v0->_vptr_CSharedObject = off_47A6D10;  // vptr: CEconItemTournamentPassport
   return v0;
 }
 
@@ -65,11 +65,11 @@ GCSDK::CSharedObject *__cdecl GCSDK::CreateSharedObjectSubclass<CEconItemEventTi
 {
   GCSDK::CSharedObject *v0; // rbx
 
-  v0 = operator new(0x30u);
+  v0 = operator new(0x30u);  // new CEconItemEventTicket (size matches)
   memset(v0, 0, 0x30u);
   v0->_vptr_CSharedObject = &off_47A6B90;
   CSOEconItemEventTicket::CSOEconItemEventTicket(&v0[1]);
-  v0->_vptr_CSharedObject = off_47A6C10;
+  v0->_vptr_CSharedObject = off_47A6C10;  // vptr: CEconItemEventTicket
   return v0;
 }
 
@@ -80,11 +80,11 @@ GCSDK::CSharedObject *__cdecl GCSDK::CreateSharedObjectSubclass<CEconItemLeagueV
 {
   GCSDK::CSharedObject *v0; // rbx
 
-  v0 = operator new(0x30u);
+  v0 = operator new(0x30u);  // new CEconItemLeagueViewPass (size matches)
   memset(v0, 0, 0x30u);
   v0->_vptr_CSharedObject = &off_47A6A90;
   CSOEconItemLeagueViewPass::CSOEconItemLeagueViewPass(&v0[1]);
-  v0->_vptr_CSharedObject = off_47A6B10;
+  v0->_vptr_CSharedObject = off_47A6B10;  // vptr: CEconItemLeagueViewPass
   return v0;
 }
 
@@ -95,11 +95,11 @@ GCSDK::CSharedObject *__cdecl GCSDK::CreateSharedObjectSubclass<CEconItemDropRat
 {
   GCSDK::CSharedObject *v0; // rbx
 
-  v0 = operator new(0x48u);
+  v0 = operator new(0x48u);  // new CEconItemDropRateBonus (size matches)
   memset(v0, 0, 0x48u);
   v0->_vptr_CSharedObject = &off_47A6990;
   CSOEconItemDropRateBonus::CSOEconItemDropRateBonus(&v0[1]);
-  v0->_vptr_CSharedObject = off_47A6A10;
+  v0->_vptr_CSharedObject = off_47A6A10;  // vptr: CEconItemDropRateBonus
   return v0;
 }
 

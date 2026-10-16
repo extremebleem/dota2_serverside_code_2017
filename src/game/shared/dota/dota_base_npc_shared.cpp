@@ -5111,14 +5111,11 @@ CDOTABaseAbility *__fastcall CDOTA_BaseNPC::GetAbilityByIndex(CDOTA_BaseNPC *con
   {
     v5 = v3->m_Index;
     v6 = CEntityHandle::gm_pEntityList->m_pIdentityChunks[(LOWORD(v3->m_Index) >> 9) & 0x3F];
-    if ( v6 )
+    if ( v6 != 0 )
     {
       v7 = &v6[v5 & 0x1FF];
-      if ( v7 )
-      {
-        if ( m_Index == v7->m_EHandle.m_Index )
-          return v7->m_pInstance;
-      }
+      if ( v7 != 0 && m_Index == v7->m_EHandle.m_Index )
+        return v7->m_pInstance;
     }
   }
   return result;

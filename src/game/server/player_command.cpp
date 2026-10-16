@@ -5,7 +5,7 @@
 // callers: _GLOBAL__sub_I__unity_dota_06.cpp
 void __fastcall CPlayerMove::CPlayerMove(CPlayerMove *const this)
 {
-  this->_vptr_CPlayerMove = off_408A030;
+  this->_vptr_CPlayerMove = off_408A030;  // vptr: CPlayerMove
 }
 
 

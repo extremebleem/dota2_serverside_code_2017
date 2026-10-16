@@ -4,7 +4,7 @@
 // CPlayerMove::~CPlayerMove  (line 30, @0x00000000023045e0, libserver.so)
 void __fastcall CPlayerMove::~CPlayerMove(CPlayerMove *const this)
 {
-  this->_vptr_CPlayerMove = off_408A030;
+  this->_vptr_CPlayerMove = off_408A030;  // vptr: CPlayerMove
 }
 
 
@@ -12,7 +12,7 @@ void __fastcall CPlayerMove::~CPlayerMove(CPlayerMove *const this)
 // calls: operator delete
 void __fastcall CPlayerMove::~CPlayerMove(CPlayerMove *const this)
 {
-  this->_vptr_CPlayerMove = off_408A030;
+  this->_vptr_CPlayerMove = off_408A030;  // vptr: CPlayerMove
   operator delete(this);
 }
 

@@ -103,7 +103,7 @@ void __fastcall CDOTA_Bot_AbilityUsage_AncientApparition_ColdFeet::CDOTA_Bot_Abi
   this->m_pAbility = pAbility;
   this->m_bUseOnCreeps = 0;
   this->m_pBot = pBot;
-  this->_vptr_CDOTA_Bot_AbilityUsage = off_42C7C90;
+  this->_vptr_CDOTA_Bot_AbilityUsage = off_42C7C90;  // vptr: CDOTA_Bot_AbilityUsage_AncientApparition_ColdFeet
 }
 
 
@@ -133,7 +133,7 @@ void __fastcall CDOTA_Bot_AbilityUsage_AncientApparition_IceVortex::CDOTA_Bot_Ab
   this->m_pAbility = pAbility;
   this->m_bUseOnCreeps = 0;
   this->m_pBot = pBot;
-  this->_vptr_CDOTA_Bot_AbilityUsage = off_42C7CF0;
+  this->_vptr_CDOTA_Bot_AbilityUsage = off_42C7CF0;  // vptr: CDOTA_Bot_AbilityUsage_AncientApparition_IceVortex
 }
 
 
@@ -163,7 +163,7 @@ void __fastcall CDOTA_Bot_AbilityUsage_AncientApparition_ChillingTouch::CDOTA_Bo
   this->m_pAbility = pAbility;
   this->m_bUseOnCreeps = 0;
   this->m_pBot = pBot;
-  this->_vptr_CDOTA_Bot_AbilityUsage = off_42C7D50;
+  this->_vptr_CDOTA_Bot_AbilityUsage = off_42C7D50;  // vptr: CDOTA_Bot_AbilityUsage_AncientApparition_ChillingTouch
 }
 
 
@@ -193,7 +193,7 @@ void __fastcall CDOTA_Bot_AbilityUsage_AncientApparition_IceBlast::CDOTA_Bot_Abi
   this->m_pAbility = pAbility;
   this->m_bUseOnCreeps = 0;
   this->m_pBot = pBot;
-  this->_vptr_CDOTA_Bot_AbilityUsage = off_42C7DB0;
+  this->_vptr_CDOTA_Bot_AbilityUsage = off_42C7DB0;  // vptr: CDOTA_Bot_AbilityUsage_AncientApparition_IceBlast
 }
 
 
@@ -223,7 +223,7 @@ void __fastcall CDOTA_Bot_AbilityUsage_AncientApparition_IceBlastRelease::CDOTA_
   this->m_pAbility = pAbility;
   this->m_bUseOnCreeps = 0;
   this->m_pBot = pBot;
-  this->_vptr_CDOTA_Bot_AbilityUsage = off_42C7E10;
+  this->_vptr_CDOTA_Bot_AbilityUsage = off_42C7E10;  // vptr: CDOTA_Bot_AbilityUsage_AncientApparition_IceBlastRelease
 }
 
 

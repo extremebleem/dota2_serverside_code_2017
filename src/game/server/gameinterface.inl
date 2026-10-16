@@ -9,7 +9,7 @@ void __fastcall CSource2GameClients::~CSource2GameClients(CSource2GameClients *c
   CUtlVectorBase<ResourceManifestDesc_t*,CUtlMemory<ResourceManifestDesc_t*,int> >::CAllocator *p_m_Memory; // r12
 
   v2 = (this->m_manualManifests.m_Memory.m_nGrowSize & 0xC0000000) == 0;
-  this->_vptr_IAppSystem = off_404CD30;
+  this->_vptr_IAppSystem = off_404CD30;  // vptr: CTier2AppSystem<ISource2GameClients,0>
   this->m_manualManifests.m_Size = 0;
   if ( v2 )
   {
@@ -30,7 +30,7 @@ void __fastcall CSource2Server::~CSource2Server(CSource2Server *const this)
 
   v2 = (this->m_manualManifests.m_Memory.m_nGrowSize & 0xC0000000) == 0;
   this->_vptr_IStreamEntitiesFromFileCompletion = &off_404E010;
-  this->_vptr_IAppSystem = off_404D750;
+  this->_vptr_IAppSystem = off_404D750;  // vptr: CTier2AppSystem<ISource2Server,0>
   this->m_manualManifests.m_Size = 0;
   if ( v2 )
   {

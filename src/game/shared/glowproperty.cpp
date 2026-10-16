@@ -10,7 +10,7 @@ void __fastcall CGlowProperty::CGlowProperty(CGlowProperty *const this)
 
   this->m_glowColorOverride = 0;
   v2 = this->m_glowColorOverride.m_Value._color[1] == 0;
-  this->_vptr_CGlowProperty = off_404EE70;
+  this->_vptr_CGlowProperty = off_404EE70;  // vptr: CGlowProperty
   this->m_pDepthStencilSceneObject.m_p = 0;
   this->m_pGlowSceneObject.m_p = 0;
   this->m_iGlowType.m_Value = 0;
@@ -320,7 +320,7 @@ void __fastcall CGlowProperty::~CGlowProperty(CGlowProperty *const this)
   CGlowHelperSceneObject *m_p; // rsi
   CGlowHelperSceneObject *v3; // rsi
 
-  this->_vptr_CGlowProperty = off_404EE70;
+  this->_vptr_CGlowProperty = off_404EE70;  // vptr: CGlowProperty
   if ( this->m_bGlowing )
     this->m_bGlowing = 0;
   m_p = this->m_pGlowSceneObject.m_p;

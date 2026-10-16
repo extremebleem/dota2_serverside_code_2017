@@ -108,7 +108,7 @@ CEntityInstance *__fastcall CDOTA_BinaryObject::CEntityInstanceEntityClass::Cons
 void __fastcall CDOTA_BinaryObject::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_BinaryObject::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -118,7 +118,7 @@ void __fastcall CDOTA_BinaryObject::CEntityInstanceEntityClass::~CEntityInstance
 void __fastcall CDOTA_BinaryObject::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_BinaryObject::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -244,7 +244,7 @@ void __fastcall CDOTA_BinaryObjectSystem::~CDOTA_BinaryObjectSystem(CDOTA_Binary
   if ( (this->m_BinaryObjects.m_Memory.m_nGrowSize & 0xC0000000) == 0 )
     CUtlMemory<CDOTA_BinaryObject *,int>::Purge(&this->m_BinaryObjects.m_Memory);
 LABEL_3:
-  this->_vptr_IGameSystem = off_3F7C1B0;
+  this->_vptr_IGameSystem = off_3F7C1B0;  // vptr: CAutoGameSystem
   IGameSystem::~IGameSystem(this);
 }
 
@@ -278,7 +278,7 @@ void __fastcall CDOTA_BinaryObjectSystem::~CDOTA_BinaryObjectSystem(CDOTA_Binary
   if ( (this->m_BinaryObjects.m_Memory.m_nGrowSize & 0xC0000000) == 0 )
     CUtlMemory<CDOTA_BinaryObject *,int>::Purge(&this->m_BinaryObjects.m_Memory);
 LABEL_3:
-  this->_vptr_IGameSystem = off_3F7C1B0;
+  this->_vptr_IGameSystem = off_3F7C1B0;  // vptr: CAutoGameSystem
   IGameSystem::~IGameSystem(this);
   operator delete(this);
 }

@@ -4411,7 +4411,7 @@ void __fastcall CWeaponList::~CWeaponList(CWeaponList *const this)
   p_m_list = &this->m_list;
   *&p_m_list[-1].m_Head = off_4003E50;
   CUtlLinkedList<CBaseCombatWeapon *,unsigned short,false,unsigned short,CUtlMemory<UtlLinkedListElem_t<CBaseCombatWeapon *,unsigned short>,unsigned short>>::~CUtlLinkedList(p_m_list);
-  this->_vptr_IGameSystem = off_3F7C1B0;
+  this->_vptr_IGameSystem = off_3F7C1B0;  // vptr: CAutoGameSystem
   IGameSystem::~IGameSystem(this);
 }
 
@@ -4425,7 +4425,7 @@ void __fastcall CWeaponList::~CWeaponList(CWeaponList *const this)
   p_m_list = &this->m_list;
   *&p_m_list[-1].m_Head = off_4003E50;
   CUtlLinkedList<CBaseCombatWeapon *,unsigned short,false,unsigned short,CUtlMemory<UtlLinkedListElem_t<CBaseCombatWeapon *,unsigned short>,unsigned short>>::~CUtlLinkedList(p_m_list);
-  this->_vptr_IGameSystem = off_3F7C1B0;
+  this->_vptr_IGameSystem = off_3F7C1B0;  // vptr: CAutoGameSystem
   IGameSystem::~IGameSystem(this);
   operator delete(this);
 }

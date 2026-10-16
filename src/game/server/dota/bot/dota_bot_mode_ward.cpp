@@ -7,7 +7,7 @@
 void __fastcall CDOTA_BotMode_Ward::CDOTA_BotMode_Ward(CDOTA_BotMode_Ward *const this, CDOTA_Bot *pBot)
 {
   CDOTA_BotMode::CDOTA_BotMode(this, pBot);
-  this->_vptr_CDOTA_BotMode = off_42B9010;
+  this->_vptr_CDOTA_BotMode = off_42B9010;  // vptr: CDOTA_BotMode_Ward
   this->m_vBestWardLocation = vec3_invalid;
 }
 

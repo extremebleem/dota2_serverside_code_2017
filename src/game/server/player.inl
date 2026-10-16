@@ -97,7 +97,7 @@ CEntityInstance *__fastcall CInfoPlayerStart::CEntityInstanceEntityClass::Constr
 void __fastcall CInfoPlayerStart::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CInfoPlayerStart::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -107,7 +107,7 @@ void __fastcall CInfoPlayerStart::CEntityInstanceEntityClass::~CEntityInstanceEn
 void __fastcall CInfoPlayerStart::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CInfoPlayerStart::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -357,7 +357,7 @@ CEntityInstance *__fastcall CBasePlayer::CEntityInstanceEntityClass::ConstructIn
 void __fastcall CBasePlayer::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CBasePlayer::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -367,7 +367,7 @@ void __fastcall CBasePlayer::CEntityInstanceEntityClass::~CEntityInstanceEntityC
 void __fastcall CBasePlayer::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CBasePlayer::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -1633,7 +1633,7 @@ bool __fastcall ForEachPlayer<IsLadderFreeFunctor>(IsLadderFreeFunctor *const fu
 void __fastcall CTraceFilterSkipTwoEntitiesAndTeammates::~CTraceFilterSkipTwoEntitiesAndTeammates(
         CTraceFilterSkipTwoEntitiesAndTeammates *const this)
 {
-  this->_vptr_CTraceFilter = off_3FE6970;
+  this->_vptr_CTraceFilter = off_3FE6970;  // vptr: CTraceFilter
 }
 
 
@@ -1642,7 +1642,7 @@ void __fastcall CTraceFilterSkipTwoEntitiesAndTeammates::~CTraceFilterSkipTwoEnt
 void __fastcall CTraceFilterSkipTwoEntitiesAndTeammates::~CTraceFilterSkipTwoEntitiesAndTeammates(
         CTraceFilterSkipTwoEntitiesAndTeammates *const this)
 {
-  this->_vptr_CTraceFilter = off_3FE6970;
+  this->_vptr_CTraceFilter = off_3FE6970;  // vptr: CTraceFilter
   operator delete(this);
 }
 

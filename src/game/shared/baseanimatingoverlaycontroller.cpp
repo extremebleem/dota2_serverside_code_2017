@@ -206,7 +206,7 @@ void __fastcall CBaseAnimatingOverlayController::CBaseAnimatingOverlayController
   CEntityInstance *v2; // rax
 
   CBaseAnimatingController::CBaseAnimatingController(this);
-  this->_vptr_CSkeletonAnimationController = off_3FEE610;
+  this->_vptr_CSkeletonAnimationController = off_3FEE610;  // vptr: CBaseAnimatingOverlayController
   this->_vptr_IAnimationStateGraphOwner = &off_3FEE718;
   this->m_AnimOverlay.m_Vector.m_Size = 0;
   this->m_AnimOverlay.m_Vector.m_Memory.m_pMemory = 0;

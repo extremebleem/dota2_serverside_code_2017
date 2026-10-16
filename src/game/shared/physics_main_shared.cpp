@@ -1241,7 +1241,7 @@ void __fastcall CBaseEntity::PhysicsNotifyOtherOfUntouch(CBaseEntity *ent, CBase
 
 
 // CBaseEntity::PhysicsRemoveToucher  (line 887, @0x00000000022d4060, libserver.so)  // inlines: Free, FreeTouchLink, Get, GetBool, GetDebugName, GetEntityIdentity, GetEntryIndex, GetInstance, GetInt, IndexToIdentity, IsValid, LookupEntity, PeakCount, Set, entindex, operator CEntityInstance*, operator delete, operator int, operator!=<CBaseEntity>, operator->, operator=
-// calls: CUtlMemoryPoolBase::Free, CEntityInstance::GetEntityIndex, CEntityIdentity::GetDebugName, Msg
+// calls: CUtlMemoryPoolBase::Free, CEntityInstance::GetEntityIndex, CEntityIdentity::GetDebugName, Msg, _Unwind_Resume, __cxa_call_unexpected
 // callers: CBaseEntity::PhysicsNotifyOtherOfUntouch, CBaseEntity::PhysicsCheckForEntityUntouch
 // strings: "remove 0x%p: %s-%s (%d-%d) [%d in play, %d max]\n"
 // globals: CEntityHandle::gm_pEntityList, g_pNextLink, linksallocated, touchlink_t::s_Allocator
@@ -1334,7 +1334,7 @@ LABEL_8:
 
 
 // CBaseEntity::PhysicsRemoveTouchedList  (line 915, @0x00000000022f8740, libserver.so)  // inlines: AddToTail, CUtlMemory, CUtlMemoryFixedGrowable, CUtlMemoryFixedGrowable_Base, CUtlVectorBase, CUtlVectorFixedGrowable, ConvertToExternalMemory, CopyConstruct<CBaseEntity*>, DestroyDataObject, Element, Free, FreeTouchLink, Get, GetBool, GetDataObject, GetDebugName, GetEntityIdentity, GetEntryIndex, GetInstance, GetInt, GrowMemory, IndexToIdentity, IsExternallyAllocated, IsValid, LookupEntity, PeakCount, Purge, Purge_FixedGrowable, RemoveAll, Set, entindex, operator CBaseEntity*, operator CEntityInstance*, operator delete, operator int, operator->, operator=, operator[], ~CUtlMemory, ~CUtlMemoryFixedGrowable, ~CUtlMemoryFixedGrowable_Base, ~CUtlVectorBase, ~CUtlVectorFixedGrowable
-// calls: CEntityIdentity::GetDataObject, CEntityInstance::GetEntityIndex, CEntityIdentity::GetDebugName, Msg, CUtlMemoryPoolBase::Free, CUtlMemory<CBaseEntity*, int>::Grow, CEntityIdentity::DestroyDataObject, CBaseEntity::PhysicsNotifyOtherOfUntouch, CUtlMemory<CBaseEntity*, int>::Purge, CUtlVectorBase<CBaseEntity*, CUtlMemoryFixedGrowable<CBaseEntity*, 32ul, int> >::~CUtlVectorBase, _Unwind_Resume, __stack_chk_fail
+// calls: CEntityIdentity::GetDataObject, CEntityInstance::GetEntityIndex, CEntityIdentity::GetDebugName, Msg, CUtlMemoryPoolBase::Free, CUtlMemory<CBaseEntity*, int>::Grow, CEntityIdentity::DestroyDataObject, CBaseEntity::PhysicsNotifyOtherOfUntouch, CUtlMemory<CBaseEntity*, int>::Purge, CUtlVectorBase<CBaseEntity*, CUtlMemoryFixedGrowable<CBaseEntity*, 32ul, int> >::~CUtlVectorBase, _Unwind_Resume, __stack_chk_fail (13 total)
 // callers: FreeContainingEntity, CBaseEntity::UpdateOnRemove, CSource2GameClients::ClientDisconnect, CPhysicsPropRespawnable::Event_Killed
 // strings: "remove 0x%p: %s-%s (%d-%d) [%d in play, %d max]\n"
 // globals: g_bCleanupDatObject, linksallocated, CEntityHandle::gm_pEntityList, g_pNextLink, touchlink_t::s_Allocator
@@ -1497,7 +1497,7 @@ void __fastcall CBaseEntity::PhysicsRemoveTouchedList(CBaseEntity *ent)
 
 
 // CBaseEntity::AddEntityToGroundList  (line 960, @0x00000000022d4540, libserver.so)  // inlines: Alloc, AllocGroundLink, CEntityHandle, CHandle, CreateDataObject, Get, GetDataObject, GetEHandle, GetEntityIdentity, GetEntryIndex, GetInstance, GetSerialNumber, IndexToIdentity, IsValid, LookupEntity, Set, groundlink_t, operator CEntityInstance*, operator new, operator=, operator==
-// calls: CEntityIdentity::GetDataObject, CEntityIdentity::CreateDataObject, CUtlMemoryPoolBase::Alloc, CBaseEntity::PhysicsStartGroundContact, DevMsg(char const*,...)
+// calls: CEntityIdentity::GetDataObject, CEntityIdentity::CreateDataObject, CUtlMemoryPoolBase::Alloc, CBaseEntity::PhysicsStartGroundContact, DevMsg(char const*,...), _Unwind_Resume, __cxa_call_unexpected
 // callers: CBaseEntity::Restore, CBaseEntity::SetGroundEntity
 // strings: "AllocGroundLink: failed to allocate groundlink_t.!!!\n"
 // globals: CEntityHandle::gm_pEntityList, groundlink_t::s_Allocator, groundlinksallocated
@@ -1645,7 +1645,7 @@ void __fastcall CBaseEntity::PhysicsNotifyOtherOfGroundRemoval(CBaseEntity *ent,
 
 
 // CBaseEntity::PhysicsRemoveGround  (line 1064, @0x00000000022d4700, libserver.so)  // inlines: EndGroundContact, Free, FreeGroundLink, Get, GetEntityIdentity, GetEntryIndex, GetInstance, IndexToIdentity, IsValid, LookupEntity, operator CEntityInstance*, operator delete, operator!=<CBaseEntity>
-// calls: CUtlMemoryPoolBase::Free, CBaseEntity::RemoveFlag
+// calls: CUtlMemoryPoolBase::Free, CBaseEntity::RemoveFlag, _Unwind_Resume, __cxa_call_unexpected
 // callers: CBaseEntity::PhysicsNotifyOtherOfGroundRemoval
 // globals: CEntityHandle::gm_pEntityList, groundlink_t::s_Allocator, groundlinksallocated
 void __fastcall CBaseEntity::PhysicsRemoveGround(CBaseEntity *other, groundlink_t *link)
@@ -1675,7 +1675,7 @@ void __fastcall CBaseEntity::PhysicsRemoveGround(CBaseEntity *other, groundlink_
 
 
 // CBaseEntity::PhysicsRemoveGroundList  (line 1086, @0x00000000022d48c0, libserver.so)  // inlines: DestroyDataObject, Free, FreeGroundLink, Get, GetDataObject, GetEntityIdentity, GetEntryIndex, GetInstance, IndexToIdentity, IsValid, LookupEntity, operator CBaseEntity*, operator CEntityInstance*, operator delete
-// calls: CEntityIdentity::GetDataObject, CBaseEntity::PhysicsNotifyOtherOfGroundRemoval, CUtlMemoryPoolBase::Free, CEntityIdentity::DestroyDataObject
+// calls: CEntityIdentity::GetDataObject, CBaseEntity::PhysicsNotifyOtherOfGroundRemoval, CUtlMemoryPoolBase::Free, CEntityIdentity::DestroyDataObject, _Unwind_Resume, __cxa_call_unexpected
 // callers: FreeContainingEntity, CBaseEntity::UpdateOnRemove, CSource2GameClients::ClientDisconnect, CBaseEntity::WakeRestingObjects, CPhysicsPropRespawnable::Event_Killed
 // globals: groundlink_t::s_Allocator, groundlinksallocated, CEntityHandle::gm_pEntityList
 void __fastcall CBaseEntity::PhysicsRemoveGroundList(CBaseEntity *ent)
@@ -1737,7 +1737,7 @@ void __fastcall CBaseEntity::PhysicsStartTouch(CBaseEntity *const this, CBaseEnt
 
 
 // CBaseEntity::PhysicsMarkEntityAsTouched  (line 1151, @0x00000000022d4a50, libserver.so)  // inlines: Alloc, AllocTouchLink, CEntityHandle, CHandle, CreateDataObject, Get, GetBool, GetDataObject, GetDebugName, GetEHandle, GetEntityIdentity, GetEntryIndex, GetInstance, GetInt, GetSerialNumber, IndexToIdentity, IsSolid, IsTriggerCollisionGroup, IsValid, LookupEntity, PeakCount, Set, entindex, operator CEntityInstance*, operator int, operator new, operator=, operator==, touchlink_t
-// calls: CBaseEntity::GetMoveParent, CCollisionProperty::IsTriggerCollisionGroup, CEntityIdentity::GetDataObject, CEntityIdentity::CreateDataObject, CUtlMemoryPoolBase::Alloc, CBaseEntity::PhysicsStartTouch, CEntityInstance::GetEntityIndex, CEntityIdentity::GetDebugName, Msg, CBaseEntity::PhysicsTouch, DevWarning(char const*,...)
+// calls: CBaseEntity::GetMoveParent, CCollisionProperty::IsTriggerCollisionGroup, CEntityIdentity::GetDataObject, CEntityIdentity::CreateDataObject, CUtlMemoryPoolBase::Alloc, CBaseEntity::PhysicsStartTouch, CEntityInstance::GetEntityIndex, CEntityIdentity::GetDebugName, Msg, CBaseEntity::PhysicsTouch, DevWarning(char const*,...), _Unwind_Resume (13 total)
 // callers: CBaseEntity::PhysicsMarkEntitiesAsTouching
 // strings: "add 0x%p: %s-%s (%d-%d) [%d in play, %d max]\n", "AllocTouchLink: failed to allocate touchlink_t.\n"
 // globals: CEntityHandle::gm_pEntityList, touchlink_t::s_Allocator, linksallocated
@@ -3679,7 +3679,7 @@ void __cdecl Physics_UpdateStepSimulation()
   list.m_Memory.m_nAllocationCount = 128;
   list.m_Memory.m_pMemory = &list.m_Memory.m_FixedMemory;
   list.m_Memory.m_nGrowSize = 0x80000000;
-  v0 = (*g_pStepSimulationManager->_vptr_IStepSimulationManager)(g_pStepSimulationManager, &list);
+  v0 = g_pStepSimulationManager->GetEntityList(&list);
   if ( v0 > 0 )
   {
     v1 = 0;
@@ -3896,7 +3896,7 @@ void __fastcall Physics_RunThinkFunctions(bool simulating)
   if ( simulating )
   {
     memset(&list, 0, sizeof(list));
-    (*g_pSimThinkManager->_vptr_ISimulationThinkManager)(g_pSimThinkManager, &list, &nFirstSetBit, &nLastSetBit);
+    g_pSimThinkManager->GetSimThinkList(&list, &nFirstSetBit, &nLastSetBit);
     v5 = nFirstSetBit;
     if ( nFirstSetBit > nLastSetBit )
     {

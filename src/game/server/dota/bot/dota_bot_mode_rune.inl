@@ -4,7 +4,7 @@
 // CDOTA_BotMode_Rune::~CDOTA_BotMode_Rune  (line 15, @0x0000000002826fd0, libserver.so)  // inlines: ~CDOTA_BotMode
 void __fastcall CDOTA_BotMode_Rune::~CDOTA_BotMode_Rune(CDOTA_BotMode_Rune *const this)
 {
-  this->_vptr_CDOTA_BotMode = off_42B75F0;
+  this->_vptr_CDOTA_BotMode = off_42B75F0;  // vptr: CDOTA_BotMode
 }
 
 
@@ -12,7 +12,7 @@ void __fastcall CDOTA_BotMode_Rune::~CDOTA_BotMode_Rune(CDOTA_BotMode_Rune *cons
 // calls: operator delete
 void __fastcall CDOTA_BotMode_Rune::~CDOTA_BotMode_Rune(CDOTA_BotMode_Rune *const this)
 {
-  this->_vptr_CDOTA_BotMode = off_42B75F0;
+  this->_vptr_CDOTA_BotMode = off_42B75F0;  // vptr: CDOTA_BotMode
   operator delete(this);
 }
 

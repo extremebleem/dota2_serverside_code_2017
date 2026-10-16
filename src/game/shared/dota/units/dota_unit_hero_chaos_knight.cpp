@@ -509,7 +509,7 @@ CEntityInstance *__fastcall CDOTA_Unit_Hero_ChaosKnight::CEntityInstanceEntityCl
 void __fastcall CDOTA_Unit_Hero_ChaosKnight::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Unit_Hero_ChaosKnight::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -519,7 +519,7 @@ void __fastcall CDOTA_Unit_Hero_ChaosKnight::CEntityInstanceEntityClass::~CEntit
 void __fastcall CDOTA_Unit_Hero_ChaosKnight::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Unit_Hero_ChaosKnight::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -704,7 +704,7 @@ CEntityInstance *__fastcall CDOTA_Ability_ChaosKnight_Chaos_Bolt::CEntityInstanc
 void __fastcall CDOTA_Ability_ChaosKnight_Chaos_Bolt::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_ChaosKnight_Chaos_Bolt::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -714,7 +714,7 @@ void __fastcall CDOTA_Ability_ChaosKnight_Chaos_Bolt::CEntityInstanceEntityClass
 void __fastcall CDOTA_Ability_ChaosKnight_Chaos_Bolt::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_ChaosKnight_Chaos_Bolt::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -1163,7 +1163,7 @@ CEntityInstance *__fastcall CDOTA_Ability_ChaosKnight_Reality_Rift::CEntityInsta
 void __fastcall CDOTA_Ability_ChaosKnight_Reality_Rift::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_ChaosKnight_Reality_Rift::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -1173,7 +1173,7 @@ void __fastcall CDOTA_Ability_ChaosKnight_Reality_Rift::CEntityInstanceEntityCla
 void __fastcall CDOTA_Ability_ChaosKnight_Reality_Rift::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_ChaosKnight_Reality_Rift::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -2219,7 +2219,7 @@ CEntityInstance *__fastcall CDOTA_Ability_ChaosKnight_Chaos_Strike::CEntityInsta
 void __fastcall CDOTA_Ability_ChaosKnight_Chaos_Strike::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_ChaosKnight_Chaos_Strike::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -2229,7 +2229,7 @@ void __fastcall CDOTA_Ability_ChaosKnight_Chaos_Strike::CEntityInstanceEntityCla
 void __fastcall CDOTA_Ability_ChaosKnight_Chaos_Strike::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_ChaosKnight_Chaos_Strike::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -2943,7 +2943,7 @@ CEntityInstance *__fastcall CDOTA_Ability_ChaosKnight_Phantasm::CEntityInstanceE
 void __fastcall CDOTA_Ability_ChaosKnight_Phantasm::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_ChaosKnight_Phantasm::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -2953,7 +2953,7 @@ void __fastcall CDOTA_Ability_ChaosKnight_Phantasm::CEntityInstanceEntityClass::
 void __fastcall CDOTA_Ability_ChaosKnight_Phantasm::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_ChaosKnight_Phantasm::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }

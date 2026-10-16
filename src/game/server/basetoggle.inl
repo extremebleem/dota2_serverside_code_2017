@@ -96,7 +96,7 @@ CEntityInstance *__fastcall CBaseToggle::CEntityInstanceEntityClass::ConstructIn
 void __fastcall CBaseToggle::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CBaseToggle::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -106,7 +106,7 @@ void __fastcall CBaseToggle::CEntityInstanceEntityClass::~CEntityInstanceEntityC
 void __fastcall CBaseToggle::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CBaseToggle::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }

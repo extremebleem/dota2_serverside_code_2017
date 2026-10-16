@@ -713,7 +713,7 @@ CEntityInstance *__fastcall CDOTA_Unit_Hero_Nyx_Assassin::CEntityInstanceEntityC
 void __fastcall CDOTA_Unit_Hero_Nyx_Assassin::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Unit_Hero_Nyx_Assassin::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -723,7 +723,7 @@ void __fastcall CDOTA_Unit_Hero_Nyx_Assassin::CEntityInstanceEntityClass::~CEnti
 void __fastcall CDOTA_Unit_Hero_Nyx_Assassin::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Unit_Hero_Nyx_Assassin::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -989,7 +989,7 @@ CEntityInstance *__fastcall CDOTA_Ability_Nyx_Assassin_Impale::CEntityInstanceEn
 void __fastcall CDOTA_Ability_Nyx_Assassin_Impale::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Nyx_Assassin_Impale::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -999,7 +999,7 @@ void __fastcall CDOTA_Ability_Nyx_Assassin_Impale::CEntityInstanceEntityClass::~
 void __fastcall CDOTA_Ability_Nyx_Assassin_Impale::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Nyx_Assassin_Impale::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -1698,7 +1698,7 @@ CEntityInstance *__fastcall CDOTA_Ability_Nyx_Assassin_ManaBurn::CEntityInstance
 void __fastcall CDOTA_Ability_Nyx_Assassin_ManaBurn::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Nyx_Assassin_ManaBurn::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -1708,7 +1708,7 @@ void __fastcall CDOTA_Ability_Nyx_Assassin_ManaBurn::CEntityInstanceEntityClass:
 void __fastcall CDOTA_Ability_Nyx_Assassin_ManaBurn::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Nyx_Assassin_ManaBurn::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -2058,7 +2058,7 @@ CEntityInstance *__fastcall CDOTA_Ability_Nyx_Assassin_Burrow::CEntityInstanceEn
 void __fastcall CDOTA_Ability_Nyx_Assassin_Burrow::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Nyx_Assassin_Burrow::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -2068,7 +2068,7 @@ void __fastcall CDOTA_Ability_Nyx_Assassin_Burrow::CEntityInstanceEntityClass::~
 void __fastcall CDOTA_Ability_Nyx_Assassin_Burrow::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Nyx_Assassin_Burrow::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -2779,7 +2779,7 @@ CEntityInstance *__fastcall CDOTA_Ability_Nyx_Assassin_Unburrow::CEntityInstance
 void __fastcall CDOTA_Ability_Nyx_Assassin_Unburrow::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Nyx_Assassin_Unburrow::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -2789,7 +2789,7 @@ void __fastcall CDOTA_Ability_Nyx_Assassin_Unburrow::CEntityInstanceEntityClass:
 void __fastcall CDOTA_Ability_Nyx_Assassin_Unburrow::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Nyx_Assassin_Unburrow::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -3123,7 +3123,7 @@ CEntityInstance *__fastcall CDOTA_Ability_Nyx_Assassin_SpikedCarapace::CEntityIn
 void __fastcall CDOTA_Ability_Nyx_Assassin_SpikedCarapace::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Nyx_Assassin_SpikedCarapace::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -3133,7 +3133,7 @@ void __fastcall CDOTA_Ability_Nyx_Assassin_SpikedCarapace::CEntityInstanceEntity
 void __fastcall CDOTA_Ability_Nyx_Assassin_SpikedCarapace::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Nyx_Assassin_SpikedCarapace::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -3760,7 +3760,7 @@ CEntityInstance *__fastcall CDOTA_Ability_Nyx_Assassin_Vendetta::CEntityInstance
 void __fastcall CDOTA_Ability_Nyx_Assassin_Vendetta::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Nyx_Assassin_Vendetta::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -3770,7 +3770,7 @@ void __fastcall CDOTA_Ability_Nyx_Assassin_Vendetta::CEntityInstanceEntityClass:
 void __fastcall CDOTA_Ability_Nyx_Assassin_Vendetta::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Nyx_Assassin_Vendetta::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }

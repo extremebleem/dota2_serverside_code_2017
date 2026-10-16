@@ -139,7 +139,7 @@ CEntityInstance *__fastcall CPointClientUIWorldPanel::CEntityInstanceEntityClass
 void __fastcall CPointClientUIWorldPanel::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CPointClientUIWorldPanel::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -149,7 +149,7 @@ void __fastcall CPointClientUIWorldPanel::CEntityInstanceEntityClass::~CEntityIn
 void __fastcall CPointClientUIWorldPanel::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CPointClientUIWorldPanel::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }

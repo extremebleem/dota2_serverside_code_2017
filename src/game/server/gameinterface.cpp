@@ -2698,7 +2698,7 @@ void __fastcall CSource2Server::GameCreateNetworkStringTables(CSource2Server *co
       LoggingSystem_Log(LOG_SERVER, 2, "Forcing S1 g_pNetworkStringTable to use version from engine.dll\n");
     g_pNetworkStringTable = networkstringtable;
   }
-  (*g_pGameNetworkStringTables->_vptr_IGameNetworkStringTables)(g_pGameNetworkStringTables);
+  g_pGameNetworkStringTables->InitStringTableDefinitions();
   (*(g_pGameNetworkStringTables->_vptr_IGameNetworkStringTables + 2))(g_pGameNetworkStringTables);
   PrecacheEffect("error", 0);
   g_VguiScreenStringOps.m_pStringTable = g_pStringTableVguiScreen;
@@ -3615,7 +3615,7 @@ void __fastcall ValidateMOTDFilename(IConVar *pConVar, const char *oldValue, dou
   {
     m_pConVarState = var.m_pConVarState;
 LABEL_6:
-    (*var.m_pConVar->_vptr_IConVar)(var.m_pConVar, m_pConVarState->m_pszDefaultValue);
+    var.m_pConVar->SetValue(m_pConVarState->m_pszDefaultValue);
   }
 }
 
@@ -3953,7 +3953,7 @@ void __fastcall CSource2GameEntities::~CSource2GameEntities(CSource2GameEntities
   CUtlVectorBase<ResourceManifestDesc_t*,CUtlMemory<ResourceManifestDesc_t*,int> >::CAllocator *p_m_Memory; // r12
 
   v2 = (this->m_manualManifests.m_Memory.m_nGrowSize & 0xC0000000) == 0;
-  this->_vptr_IAppSystem = off_404E270;
+  this->_vptr_IAppSystem = off_404E270;  // vptr: CTier2AppSystem<ISource2GameEntities,0>
   this->m_manualManifests.m_Size = 0;
   if ( !v2
     || (p_m_Memory = &this->m_manualManifests.m_Memory,
@@ -3978,7 +3978,7 @@ void __fastcall CSource2GameEntities::~CSource2GameEntities(CSource2GameEntities
   CUtlVectorBase<ResourceManifestDesc_t*,CUtlMemory<ResourceManifestDesc_t*,int> >::CAllocator *p_m_Memory; // r12
 
   v2 = (this->m_manualManifests.m_Memory.m_nGrowSize & 0xC0000000) == 0;
-  this->_vptr_IAppSystem = off_404E270;
+  this->_vptr_IAppSystem = off_404E270;  // vptr: CTier2AppSystem<ISource2GameEntities,0>
   this->m_manualManifests.m_Size = 0;
   if ( v2 )
   {
@@ -4226,7 +4226,7 @@ LABEL_15:
       goto LABEL_45;
     v21 = ppNetworkables[v18];
     m_SpawnGroupHandle = v21->m_SpawnGroupHandle;
-    if ( m_SpawnGroupHandle )
+    if ( m_SpawnGroupHandle != 0 )
       break;
 LABEL_20:
     m_Data = index.m_Data;
@@ -4234,7 +4234,7 @@ LABEL_20:
     if ( (pBaseEntitya & 4) != 0 )
     {
       v25 = 1;
-      if ( m_nValue )
+      if ( m_nValue != 0 )
       {
         m_pParentEntity = v21->m_pEntityInstance;
         while ( 1 )
@@ -4243,9 +4243,9 @@ LABEL_20:
           v28 = m_Data >> 5;
           v17->m_pTransmitEdict->m_Ints[v28] |= 1 << m_Data;
           m_pTransmitAlways = v17->m_pTransmitAlways;
-          if ( m_pTransmitAlways )
+          if ( m_pTransmitAlways != 0 )
             m_pTransmitAlways->m_Ints[v28] |= v27;
-          if ( v25 )
+          if ( v25 != 0 )
           {
             m_pParentEntity = v21->m_pParentEntity;
           }
@@ -4253,20 +4253,20 @@ LABEL_20:
           {
             m_pEntity = m_pParentEntity->m_pEntity;
             m_pInstance = m_pEntity->m_pInstance;
-            if ( !m_pEntity->m_pInstance )
+            if ( m_pEntity->m_pInstance == 0 )
               goto LABEL_45;
             m_nBaseOffset = m_pEntity->m_pClass->m_ComponentOffsets.m_Memory.m_pMemory[CBodyComponent::s_EntComponentInfo.m_nRuntimeIndex].m_nBaseOffset;
             if ( m_nBaseOffset == 0xFFFF )
               goto LABEL_45;
             v37 = *(&m_pInstance->_vptr_IHandleEntity + m_nBaseOffset);
-            if ( !v37 )
+            if ( v37 == 0 )
               goto LABEL_45;
             m_pParentEntity = CBodyComponent::GetParent(v37);
           }
-          if ( !m_pParentEntity )
+          if ( m_pParentEntity == 0 )
             goto LABEL_45;
           v30 = m_pParentEntity->m_pEntity;
-          if ( !v30 )
+          if ( v30 == 0 )
             goto LABEL_51;
           LOWORD(m_Data) = 0x7FFF;
           if ( v30->m_EHandle.m_Index != -1 )
@@ -4287,10 +4287,10 @@ LABEL_51:
       goto LABEL_44;
     }
     v60 = *(v21 + 60) & 1;
-    if ( v60 )
+    if ( v60 != 0 )
       CBasePlayer::SetPlayerInPVS(pRecipientPlayer, index, 0);
     v31 = pBaseEntitya;
-    if ( !pBaseEntitya )
+    if ( pBaseEntitya == 0 )
     {
       v31 = (*(m_pEntityInstance->_vptr_IHandleEntity + 65))(m_pEntityInstance, checkTransmitInfo, v20, m_Data);
       if ( (v31 & 4) != 0 )
@@ -4300,7 +4300,7 @@ LABEL_65:
         v39 = 1;
 LABEL_54:
         vptr_IHandleEntity[66](m_pEntityInstance, v17, v39);
-        if ( v60 )
+        if ( v60 != 0 )
 LABEL_55:
           CBasePlayer::SetPlayerInPVS(pRecipientPlayer, index, 1);
         goto LABEL_45;
@@ -4308,7 +4308,7 @@ LABEL_55:
     }
     if ( (v31 & 0x10) != 0 )
     {
-      if ( !this->m_bSteadyStateEnabled || !m_pEntityInstance )
+      if ( !this->m_bSteadyStateEnabled || m_pEntityInstance == 0 )
       {
 LABEL_52:
         CNetworkTransmitComponent::RecomputePVSInformation(&m_pEntityInstance->m_NetworkTransmitComponent, index);
@@ -4316,7 +4316,7 @@ LABEL_52:
           && !CNetworkTransmitComponent::IsInPVS(&m_pEntityInstance->m_NetworkTransmitComponent, checkTransmitInfo) )
         {
           m_pParent = m_pEntityInstance->m_pGameSceneNode->m_pParent;
-          if ( m_pParent )
+          if ( m_pParent != 0 )
           {
             pBaseEntityb = m_pEntityInstance;
             OwnerEntity = CGameSceneNode::GetOwnerEntity(m_pParent);
@@ -4326,10 +4326,10 @@ LABEL_52:
             OwnerEntity = 0;
             pBaseEntityb = m_pEntityInstance;
           }
-          while ( OwnerEntity )
+          while ( OwnerEntity != 0 )
           {
             v49 = OwnerEntity->m_pEntity;
-            if ( !v49 )
+            if ( v49 == 0 )
               goto LABEL_89;
             v50 = 0x7FFF;
             if ( v49->m_EHandle.m_Index != -1 )
@@ -4357,7 +4357,7 @@ LABEL_89:
             {
 LABEL_92:
               (*(OwnerEntity->_vptr_IHandleEntity + 66))(OwnerEntity, v17, 1);
-              if ( !v60 )
+              if ( v60 == 0 )
                 goto LABEL_45;
               goto LABEL_55;
             }
@@ -4379,7 +4379,7 @@ LABEL_92:
               }
             }
             v56 = OwnerEntity->m_pGameSceneNode->m_pParent;
-            if ( !v56 )
+            if ( v56 == 0 )
             {
               if ( ++v18 != nEntityIndicesa )
                 goto LABEL_15;
@@ -4421,7 +4421,7 @@ LABEL_45:
   }
   if ( bUseCachedSpawnGroupHandles )
   {
-    if ( !_mm_movemask_epi8(_mm_cmpeq_epi32(_mm_shuffle_epi32(_mm_cvtsi32_si128(m_SpawnGroupHandle), 0), handles128)) )
+    if ( _mm_movemask_epi8(_mm_cmpeq_epi32(_mm_shuffle_epi32(_mm_cvtsi32_si128(m_SpawnGroupHandle), 0), handles128)) == 0 )
       goto LABEL_45;
     goto LABEL_20;
   }
@@ -4490,6 +4490,7 @@ bool __fastcall TeamSharePVS_t::Less(const TeamSharePVS_t *const lhs, const Team
   int v20; // r12d
   unsigned __int16 v21; // r14
   unsigned __int16 v22; // ax
+  UtlRBTreeNode_t<unsigned int,short unsigned int> *v23; // [rsp+0h] [rbp-40h]
   const CUtlRBTree<unsigned int,short unsigned int,bool (*)(unsigned int const&,unsigned int const&),CUtlMemory<UtlRBTreeNode_t<unsigned int,short unsigned int>,short unsigned int> > *l; // [rsp+8h] [rbp-38h]
 
   result = 1;
@@ -4543,6 +4544,7 @@ bool __fastcall TeamSharePVS_t::Less(const TeamSharePVS_t *const lhs, const Team
               {
                 m_Data = v13[v11].m_Data;
                 v17 = m_pInfo->m_LoadedSpawnGroups.m_Elements.m_pMemory;
+                v23 = v17;
                 if ( v17[m_Root].m_Data < m_Data )
                 {
                   return 1;
@@ -4565,9 +4567,9 @@ bool __fastcall TeamSharePVS_t::Less(const TeamSharePVS_t *const lhs, const Team
                     if ( v22 == 0xFFFF )
                       break;
                     v18 = v13[v22].m_Data;
-                    if ( v17[v21].m_Data < v18 )
+                    if ( v23[v21].m_Data < v18 )
                       return 1;
-                    if ( v17[v21].m_Data > v18 )
+                    if ( v23[v21].m_Data > v18 )
                       break;
                     v12 = v20;
                   }
@@ -4645,10 +4647,10 @@ void __fastcall CSource2GameEntities::CheckTransmit(
       if ( m_Data <= 0x7FFE )
       {
         v19 = g_pGameEntitySystem->m_EntityList.m_pIdentityChunks[m_Data >> 9];
-        if ( v19 )
+        if ( v19 != 0 )
         {
           v20 = &v19[m_Data & 0x1FF];
-          if ( v20 )
+          if ( v20 != 0 )
           {
             LOWORD(v47) = v20->m_EHandle.m_Index;
             if ( (v47 & 0x7FFF) == m_Data )
@@ -4657,99 +4659,93 @@ void __fastcall CSource2GameEntities::CheckTransmit(
               v22 = v20->m_pInstance == 0;
               v23 = v20->m_pInstance;
               v47 = v20->m_pInstance;
-              if ( !v22 )
+              if ( !v22 && (*(m_pInstance->_vptr_IHandleEntity + 140))(v23) != 0 )
               {
-                if ( (*(m_pInstance->_vptr_IHandleEntity + 140))(v23) )
+                (*(v47->_vptr_IHandleEntity + 372))(v47, checkTransmitInfo, m_PVS);
+                m_Root = teamTopInfo.m_Root;
+                m_pMemory = teamTopInfo.m_Elements.m_pMemory;
+                search.m_nTeamNumber = gameInfo.m_nRecipientCoachedTeamNumber;
+                search.m_pInfo = m_PVS;
+                while ( m_Root != 0xFFFF )
                 {
-                  p_m_Data = checkTransmitInfo;
-                  (*(v47->_vptr_IHandleEntity + 372))(v47, checkTransmitInfo, m_PVS);
-                  m_Root = teamTopInfo.m_Root;
-                  m_pMemory = teamTopInfo.m_Elements.m_pMemory;
-                  search.m_nTeamNumber = gameInfo.m_nRecipientCoachedTeamNumber;
-                  search.m_pInfo = m_PVS;
-                  while ( m_Root != 0xFFFF )
+                  while ( 1 )
                   {
-                    while ( 1 )
-                    {
-                      v27 = m_Root;
-                      p_m_Data = &m_pMemory[v27].m_Data;
-                      if ( !teamTopInfo.m_LessFunc(pCopyFrom, p_m_Data) )
-                        break;
-                      m_pMemory = teamTopInfo.m_Elements.m_pMemory;
-                      m_Root = teamTopInfo.m_Elements.m_pMemory[m_Root].m_Left;
-                      if ( m_Root == 0xFFFF )
-                        goto LABEL_16;
-                    }
-                    p_m_Data = pCopyFrom;
-                    if ( !teamTopInfo.m_LessFunc(&teamTopInfo.m_Elements.m_pMemory[v27].m_Data, pCopyFrom) )
-                      goto LABEL_17;
+                    v27 = m_Root;
+                    if ( teamTopInfo.m_LessFunc(pCopyFrom, &m_pMemory[v27].m_Data) == 0 )
+                      break;
                     m_pMemory = teamTopInfo.m_Elements.m_pMemory;
-                    m_Root = teamTopInfo.m_Elements.m_pMemory[v27].m_Right;
+                    m_Root = teamTopInfo.m_Elements.m_pMemory[m_Root].m_Left;
+                    if ( m_Root == 0xFFFF )
+                      goto LABEL_16;
                   }
+                  if ( teamTopInfo.m_LessFunc(&teamTopInfo.m_Elements.m_pMemory[v27].m_Data, pCopyFrom) == 0 )
+                    goto LABEL_17;
+                  m_pMemory = teamTopInfo.m_Elements.m_pMemory;
+                  m_Root = teamTopInfo.m_Elements.m_pMemory[v27].m_Right;
+                }
 LABEL_16:
-                  m_Root = 0xFFFF;
+                m_Root = 0xFFFF;
 LABEL_17:
-                  if ( !bSharedTeamPVS || m_PVS->m_bFullUpdate || gameInfo.m_bRecipientHLTV || m_Root == 0xFFFF )
+                if ( !bSharedTeamPVS || m_PVS->m_bFullUpdate || gameInfo.m_bRecipientHLTV || m_Root == 0xFFFF )
+                {
+                  v32 = (*(v47->_vptr_IHandleEntity + 534))(v47, v24, m_pMemory);
+                  if ( !thisa->m_bSteadyStateEnabled )
+                    v32 = 0;
+                  CSource2GameEntities::CheckEntities(
+                    thisa,
+                    checkTransmitInfo,
+                    nEntityIndices,
+                    ppNetworkablesa,
+                    pEntityIndices,
+                    pChangeFlags,
+                    v32,
+                    v43[0]);
+                  m_pTransmitEdict = m_PVS->m_pTransmitEdict;
+                  for ( i = 0; i != -512; --i )
+                    unionTransmitEdicts->m_Ints[i + 511] |= m_pTransmitEdict->m_Ints[i + 511];
+                  if ( bSharedTeamPVS && !m_PVS->m_bFullUpdate && m_Root == 0xFFFF )
                   {
-                    v32 = (*(v47->_vptr_IHandleEntity + 534))(v47, p_m_Data, m_pMemory);
-                    if ( !thisa->m_bSteadyStateEnabled )
-                      v32 = 0;
-                    CSource2GameEntities::CheckEntities(
-                      thisa,
-                      checkTransmitInfo,
-                      nEntityIndices,
-                      ppNetworkablesa,
-                      pEntityIndices,
-                      pChangeFlags,
-                      v32,
-                      v43[0]);
-                    m_pTransmitEdict = m_PVS->m_pTransmitEdict;
-                    for ( i = 0; i != -512; --i )
-                      unionTransmitEdicts->m_Ints[i + 511] |= m_pTransmitEdict->m_Ints[i + 511];
-                    if ( bSharedTeamPVS && !m_PVS->m_bFullUpdate && m_Root == 0xFFFF )
+                    v35 = teamTopInfo.m_Root;
+                    if ( teamTopInfo.m_Root != 0xFFFF )
                     {
-                      v35 = teamTopInfo.m_Root;
-                      if ( teamTopInfo.m_Root != 0xFFFF )
+                      while ( 1 )
                       {
-                        while ( 1 )
+                        if ( teamTopInfo.m_LessFunc(pCopyFrom, &teamTopInfo.m_Elements.m_pMemory[v35].m_Data) != 0 )
                         {
-                          if ( teamTopInfo.m_LessFunc(pCopyFrom, &teamTopInfo.m_Elements.m_pMemory[v35].m_Data) )
-                          {
-                            m_Left = teamTopInfo.m_Elements.m_pMemory[v35].m_Left;
-                            v38 = 1;
-                            if ( m_Left == 0xFFFF )
-                              goto LABEL_50;
-                          }
-                          else
-                          {
-                            m_Left = teamTopInfo.m_Elements.m_pMemory[v35].m_Right;
-                            v38 = 0;
-                            if ( m_Left == 0xFFFF )
-                              goto LABEL_50;
-                          }
-                          v35 = m_Left;
+                          m_Left = teamTopInfo.m_Elements.m_pMemory[v35].m_Left;
+                          v38 = 1;
+                          if ( m_Left == 0xFFFF )
+                            goto LABEL_50;
                         }
+                        else
+                        {
+                          m_Left = teamTopInfo.m_Elements.m_pMemory[v35].m_Right;
+                          v38 = 0;
+                          if ( m_Left == 0xFFFF )
+                            goto LABEL_50;
+                        }
+                        v35 = m_Left;
                       }
-                      v38 = 0;
-LABEL_50:
-                      v37 = CUtlRBTree<TeamSharePVS_t,unsigned short,bool (*)(TeamSharePVS_t const&,TeamSharePVS_t const&),CUtlMemory<UtlRBTreeNode_t<TeamSharePVS_t,unsigned short>,unsigned short>>::NewNode(
-                              &teamTopInfo,
-                              pCopyFrom);
-                      CUtlRBTree<TeamSharePVS_t,unsigned short,bool (*)(TeamSharePVS_t const&,TeamSharePVS_t const&),CUtlMemory<UtlRBTreeNode_t<TeamSharePVS_t,unsigned short>,unsigned short>>::LinkToParent(
-                        &teamTopInfo,
-                        v37,
-                        v35,
-                        v38);
-                      ++teamTopInfo.m_NumElements;
                     }
+                    v38 = 0;
+LABEL_50:
+                    v37 = CUtlRBTree<TeamSharePVS_t,unsigned short,bool (*)(TeamSharePVS_t const&,TeamSharePVS_t const&),CUtlMemory<UtlRBTreeNode_t<TeamSharePVS_t,unsigned short>,unsigned short>>::NewNode(
+                            &teamTopInfo,
+                            pCopyFrom);
+                    CUtlRBTree<TeamSharePVS_t,unsigned short,bool (*)(TeamSharePVS_t const&,TeamSharePVS_t const&),CUtlMemory<UtlRBTreeNode_t<TeamSharePVS_t,unsigned short>,unsigned short>>::LinkToParent(
+                      &teamTopInfo,
+                      v37,
+                      v35,
+                      v38);
+                    ++teamTopInfo.m_NumElements;
                   }
-                  else
-                  {
-                    memcpy(
-                      m_PVS->m_pTransmitEdict,
-                      teamTopInfo.m_Elements.m_pMemory[m_Root].m_Data.m_pInfo->m_pTransmitEdict,
-                      sizeof(CBitVec<16384>));
-                  }
+                }
+                else
+                {
+                  memcpy(
+                    m_PVS->m_pTransmitEdict,
+                    teamTopInfo.m_Elements.m_pMemory[m_Root].m_Data.m_pInfo->m_pTransmitEdict,
+                    sizeof(CBitVec<16384>));
                 }
               }
             }
@@ -5574,7 +5570,7 @@ void __fastcall CSource2GameClients::ProcessUsercmds(
   p_m_FilteredAngularVel = &cmds[0].hmd_controllers_info[0].m_FilteredAngularVel;
   do
   {
-    v8->_vptr_CUserCmd = off_403F950;
+    v8->_vptr_CUserCmd = off_403F950;  // vptr: CUserCmd
     hmd_controllers_info = v8->hmd_controllers_info;
     v9 = v8->hmd_controllers_info;
     p_m_vPosition = &v8->hmd_controllers_info[0].m_vPosition;

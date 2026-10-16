@@ -394,7 +394,7 @@ CEntityInstance *__fastcall CDOTA_Item_Recipe_Diffusal_Blade::CEntityInstanceEnt
 void __fastcall CDOTA_Item_Recipe_Diffusal_Blade::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Item_Recipe_Diffusal_Blade::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -404,7 +404,7 @@ void __fastcall CDOTA_Item_Recipe_Diffusal_Blade::CEntityInstanceEntityClass::~C
 void __fastcall CDOTA_Item_Recipe_Diffusal_Blade::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Item_Recipe_Diffusal_Blade::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -608,7 +608,7 @@ void __fastcall CDOTA_Item_Recipe_Diffusal_Blade2::~CDOTA_Item_Recipe_Diffusal_B
 void __fastcall CDOTA_Item_Recipe_Diffusal_Blade2::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Item_Recipe_Diffusal_Blade2::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -618,7 +618,7 @@ void __fastcall CDOTA_Item_Recipe_Diffusal_Blade2::CEntityInstanceEntityClass::~
 void __fastcall CDOTA_Item_Recipe_Diffusal_Blade2::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Item_Recipe_Diffusal_Blade2::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -773,7 +773,7 @@ CEntityInstance *__fastcall CDOTA_Item_Diffusal_Blade::CEntityInstanceEntityClas
 void __fastcall CDOTA_Item_Diffusal_Blade::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Item_Diffusal_Blade::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -783,7 +783,7 @@ void __fastcall CDOTA_Item_Diffusal_Blade::CEntityInstanceEntityClass::~CEntityI
 void __fastcall CDOTA_Item_Diffusal_Blade::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Item_Diffusal_Blade::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -1186,7 +1186,7 @@ CEntityInstance *__fastcall CDOTA_Item_Diffusal_Blade_Level2::CEntityInstanceEnt
 void __fastcall CDOTA_Item_Diffusal_Blade_Level2::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Item_Diffusal_Blade_Level2::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -1196,7 +1196,7 @@ void __fastcall CDOTA_Item_Diffusal_Blade_Level2::CEntityInstanceEntityClass::~C
 void __fastcall CDOTA_Item_Diffusal_Blade_Level2::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Item_Diffusal_Blade_Level2::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }

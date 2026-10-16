@@ -103,9 +103,9 @@ const char *__fastcall GCSDK::CStructNetPacket::GetTargetJobName(const GCSDK::CS
 // calls: GCSDK::CNetPacket::Release
 void __fastcall GCSDK::CStructNetPacket::~CStructNetPacket(GCSDK::CStructNetPacket *const this)
 {
-  this->_vptr_CRefCount = off_47D0510;
+  this->_vptr_CRefCount = off_47D0510;  // vptr: GCSDK::CStructNetPacket
   GCSDK::CNetPacket::Release(*(&this->m_cRef + 1));
-  this->_vptr_CRefCount = off_47D0430;
+  this->_vptr_CRefCount = off_47D0430;  // vptr: GCSDK::CRefCount
 }
 
 
@@ -113,9 +113,9 @@ void __fastcall GCSDK::CStructNetPacket::~CStructNetPacket(GCSDK::CStructNetPack
 // calls: GCSDK::CNetPacket::Release, operator delete
 void __fastcall GCSDK::CStructNetPacket::~CStructNetPacket(GCSDK::CStructNetPacket *const this)
 {
-  this->_vptr_CRefCount = off_47D0510;
+  this->_vptr_CRefCount = off_47D0510;  // vptr: GCSDK::CStructNetPacket
   GCSDK::CNetPacket::Release(*(&this->m_cRef + 1));
-  this->_vptr_CRefCount = off_47D0430;
+  this->_vptr_CRefCount = off_47D0430;  // vptr: GCSDK::CRefCount
   operator delete(this);
 }
 

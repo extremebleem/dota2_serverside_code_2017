@@ -2747,7 +2747,7 @@ void *__fastcall CTriggerRemove::CEntityInstanceEntityClass::AllocateInstance(
 void __fastcall CTriggerRemove::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CTriggerRemove::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -2757,7 +2757,7 @@ void __fastcall CTriggerRemove::CEntityInstanceEntityClass::~CEntityInstanceEnti
 void __fastcall CTriggerRemove::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CTriggerRemove::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -3156,7 +3156,7 @@ void *__fastcall CScriptTriggerHurt::CEntityInstanceEntityClass::AllocateInstanc
 void __fastcall CScriptTriggerHurt::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CScriptTriggerHurt::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -3166,7 +3166,7 @@ void __fastcall CScriptTriggerHurt::CEntityInstanceEntityClass::~CEntityInstance
 void __fastcall CScriptTriggerHurt::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CScriptTriggerHurt::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -4682,7 +4682,7 @@ void *__fastcall CScriptTriggerMultiple::CEntityInstanceEntityClass::AllocateIns
 void __fastcall CScriptTriggerMultiple::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CScriptTriggerMultiple::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -4692,7 +4692,7 @@ void __fastcall CScriptTriggerMultiple::CEntityInstanceEntityClass::~CEntityInst
 void __fastcall CScriptTriggerMultiple::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CScriptTriggerMultiple::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -5125,7 +5125,7 @@ void *__fastcall CTriggerOnce::CEntityInstanceEntityClass::AllocateInstance(
 void __fastcall CTriggerOnce::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CTriggerOnce::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -5135,7 +5135,7 @@ void __fastcall CTriggerOnce::CEntityInstanceEntityClass::~CEntityInstanceEntity
 void __fastcall CTriggerOnce::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CTriggerOnce::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -5425,7 +5425,7 @@ void *__fastcall CScriptTriggerOnce::CEntityInstanceEntityClass::AllocateInstanc
 void __fastcall CScriptTriggerOnce::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CScriptTriggerOnce::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -5435,7 +5435,7 @@ void __fastcall CScriptTriggerOnce::CEntityInstanceEntityClass::~CEntityInstance
 void __fastcall CScriptTriggerOnce::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CScriptTriggerOnce::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -5692,7 +5692,7 @@ void *__fastcall CTriggerLook::CEntityInstanceEntityClass::AllocateInstance(
 void __fastcall CTriggerLook::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CTriggerLook::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -5702,7 +5702,7 @@ void __fastcall CTriggerLook::CEntityInstanceEntityClass::~CEntityInstanceEntity
 void __fastcall CTriggerLook::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CTriggerLook::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -6382,7 +6382,7 @@ CEntityInstance *__fastcall CTriggerVolume::CEntityInstanceEntityClass::Construc
 void __fastcall CTriggerVolume::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CTriggerVolume::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -6392,7 +6392,7 @@ void __fastcall CTriggerVolume::CEntityInstanceEntityClass::~CEntityInstanceEnti
 void __fastcall CTriggerVolume::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CTriggerVolume::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -6613,7 +6613,7 @@ void *__fastcall CChangeLevel::CEntityInstanceEntityClass::AllocateInstance(
 void __fastcall CChangeLevel::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CChangeLevel::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -6623,7 +6623,7 @@ void __fastcall CChangeLevel::CEntityInstanceEntityClass::~CEntityInstanceEntity
 void __fastcall CChangeLevel::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CChangeLevel::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -8227,7 +8227,7 @@ void *__fastcall CTriggerPush::CEntityInstanceEntityClass::AllocateInstance(
 void __fastcall CTriggerPush::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CTriggerPush::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -8237,7 +8237,7 @@ void __fastcall CTriggerPush::CEntityInstanceEntityClass::~CEntityInstanceEntity
 void __fastcall CTriggerPush::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CTriggerPush::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -8517,7 +8517,7 @@ void *__fastcall CScriptTriggerPush::CEntityInstanceEntityClass::AllocateInstanc
 void __fastcall CScriptTriggerPush::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CScriptTriggerPush::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -8527,7 +8527,7 @@ void __fastcall CScriptTriggerPush::CEntityInstanceEntityClass::~CEntityInstance
 void __fastcall CScriptTriggerPush::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CScriptTriggerPush::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -9235,7 +9235,7 @@ void *__fastcall CTriggerTeleport::CEntityInstanceEntityClass::AllocateInstance(
 void __fastcall CTriggerTeleport::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CTriggerTeleport::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -9245,7 +9245,7 @@ void __fastcall CTriggerTeleport::CEntityInstanceEntityClass::~CEntityInstanceEn
 void __fastcall CTriggerTeleport::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CTriggerTeleport::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -9564,7 +9564,7 @@ void __fastcall CInfoTeleportDestination::~CInfoTeleportDestination(CInfoTelepor
 void __fastcall CInfoTeleportDestination::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CInfoTeleportDestination::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -9574,7 +9574,7 @@ void __fastcall CInfoTeleportDestination::CEntityInstanceEntityClass::~CEntityIn
 void __fastcall CInfoTeleportDestination::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CInfoTeleportDestination::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -9737,7 +9737,7 @@ void *__fastcall CTriggerToggleSave::CEntityInstanceEntityClass::AllocateInstanc
 void __fastcall CTriggerToggleSave::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CTriggerToggleSave::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -9747,7 +9747,7 @@ void __fastcall CTriggerToggleSave::CEntityInstanceEntityClass::~CEntityInstance
 void __fastcall CTriggerToggleSave::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CTriggerToggleSave::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -10017,7 +10017,7 @@ void *__fastcall CTriggerSave::CEntityInstanceEntityClass::AllocateInstance(
 void __fastcall CTriggerSave::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CTriggerSave::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -10027,7 +10027,7 @@ void __fastcall CTriggerSave::CEntityInstanceEntityClass::~CEntityInstanceEntity
 void __fastcall CTriggerSave::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CTriggerSave::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -10331,7 +10331,7 @@ void *__fastcall CTriggerGravity::CEntityInstanceEntityClass::AllocateInstance(
 void __fastcall CTriggerGravity::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CTriggerGravity::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -10341,7 +10341,7 @@ void __fastcall CTriggerGravity::CEntityInstanceEntityClass::~CEntityInstanceEnt
 void __fastcall CTriggerGravity::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CTriggerGravity::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -10618,7 +10618,7 @@ CEntityInstance *__fastcall CAI_ChangeTarget::CEntityInstanceEntityClass::Constr
 void __fastcall CAI_ChangeTarget::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CAI_ChangeTarget::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -10628,7 +10628,7 @@ void __fastcall CAI_ChangeTarget::CEntityInstanceEntityClass::~CEntityInstanceEn
 void __fastcall CAI_ChangeTarget::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CAI_ChangeTarget::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -10879,7 +10879,7 @@ CEntityInstance *__fastcall CAI_ChangeHintGroup::CEntityInstanceEntityClass::Con
 void __fastcall CAI_ChangeHintGroup::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CAI_ChangeHintGroup::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -10889,7 +10889,7 @@ void __fastcall CAI_ChangeHintGroup::CEntityInstanceEntityClass::~CEntityInstanc
 void __fastcall CAI_ChangeHintGroup::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CAI_ChangeHintGroup::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -12625,7 +12625,7 @@ void *__fastcall CTriggerProximity::CEntityInstanceEntityClass::AllocateInstance
 void __fastcall CTriggerProximity::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CTriggerProximity::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -12635,7 +12635,7 @@ void __fastcall CTriggerProximity::CEntityInstanceEntityClass::~CEntityInstanceE
 void __fastcall CTriggerProximity::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CTriggerProximity::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -12887,7 +12887,7 @@ void __fastcall CLogicProximity::~CLogicProximity(CLogicProximity *const this)
 void __fastcall CLogicProximity::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CLogicProximity::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -12897,7 +12897,7 @@ void __fastcall CLogicProximity::CEntityInstanceEntityClass::~CEntityInstanceEnt
 void __fastcall CLogicProximity::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CLogicProximity::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -13298,7 +13298,7 @@ void *__fastcall CTriggerImpact::CEntityInstanceEntityClass::AllocateInstance(
 void __fastcall CTriggerImpact::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CTriggerImpact::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -13308,7 +13308,7 @@ void __fastcall CTriggerImpact::CEntityInstanceEntityClass::~CEntityInstanceEnti
 void __fastcall CTriggerImpact::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CTriggerImpact::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -13734,7 +13734,7 @@ void *__fastcall CTriggerPlayerMovement::CEntityInstanceEntityClass::AllocateIns
 void __fastcall CTriggerPlayerMovement::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CTriggerPlayerMovement::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -13744,7 +13744,7 @@ void __fastcall CTriggerPlayerMovement::CEntityInstanceEntityClass::~CEntityInst
 void __fastcall CTriggerPlayerMovement::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CTriggerPlayerMovement::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -14098,7 +14098,7 @@ void *__fastcall CServerRagdollTrigger::CEntityInstanceEntityClass::AllocateInst
 void __fastcall CServerRagdollTrigger::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CServerRagdollTrigger::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -14108,7 +14108,7 @@ void __fastcall CServerRagdollTrigger::CEntityInstanceEntityClass::~CEntityInsta
 void __fastcall CServerRagdollTrigger::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CServerRagdollTrigger::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -14451,7 +14451,7 @@ void *__fastcall CTriggerActiveWeaponDetect::CEntityInstanceEntityClass::Allocat
 void __fastcall CTriggerActiveWeaponDetect::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CTriggerActiveWeaponDetect::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -14461,7 +14461,7 @@ void __fastcall CTriggerActiveWeaponDetect::CEntityInstanceEntityClass::~CEntity
 void __fastcall CTriggerActiveWeaponDetect::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CTriggerActiveWeaponDetect::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -14878,7 +14878,7 @@ void *__fastcall CPostProcessingVolume::CEntityInstanceEntityClass::AllocateInst
 void __fastcall CPostProcessingVolume::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CPostProcessingVolume::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -14888,7 +14888,7 @@ void __fastcall CPostProcessingVolume::CEntityInstanceEntityClass::~CEntityInsta
 void __fastcall CPostProcessingVolume::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CPostProcessingVolume::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }

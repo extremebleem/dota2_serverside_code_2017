@@ -17,7 +17,7 @@ int __fastcall GCSDK::CRefCount::Release(GCSDK::CRefCount *const this)
 // GCSDK::CRefCount::~CRefCount  (line 94, @0x0000000003221540, libserver.so)
 void __fastcall GCSDK::CRefCount::~CRefCount(GCSDK::CRefCount *const this)
 {
-  this->_vptr_CRefCount = off_47D0430;
+  this->_vptr_CRefCount = off_47D0430;  // vptr: GCSDK::CRefCount
 }
 
 
@@ -25,7 +25,7 @@ void __fastcall GCSDK::CRefCount::~CRefCount(GCSDK::CRefCount *const this)
 // calls: operator delete
 void __fastcall GCSDK::CRefCount::~CRefCount(GCSDK::CRefCount *const this)
 {
-  this->_vptr_CRefCount = off_47D0430;
+  this->_vptr_CRefCount = off_47D0430;  // vptr: GCSDK::CRefCount
   operator delete(this);
 }
 

@@ -97,7 +97,7 @@ CEntityInstance *__fastcall CPlayerResource::CEntityInstanceEntityClass::Constru
 void __fastcall CPlayerResource::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CPlayerResource::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -107,7 +107,7 @@ void __fastcall CPlayerResource::CEntityInstanceEntityClass::~CEntityInstanceEnt
 void __fastcall CPlayerResource::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CPlayerResource::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }

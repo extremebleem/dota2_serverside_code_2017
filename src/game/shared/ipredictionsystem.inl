@@ -4,7 +4,7 @@
 // IPredictionSystem::~IPredictionSystem  (line 35, @0x00000000020f1ba0, libserver.so)
 void __fastcall IPredictionSystem::~IPredictionSystem(IPredictionSystem *const this)
 {
-  this->_vptr_IPredictionSystem = off_3FFC070;
+  this->_vptr_IPredictionSystem = off_3FFC070;  // vptr: IPredictionSystem
 }
 
 
@@ -12,7 +12,7 @@ void __fastcall IPredictionSystem::~IPredictionSystem(IPredictionSystem *const t
 // calls: operator delete
 void __fastcall IPredictionSystem::~IPredictionSystem(IPredictionSystem *const this)
 {
-  this->_vptr_IPredictionSystem = off_3FFC070;
+  this->_vptr_IPredictionSystem = off_3FFC070;  // vptr: IPredictionSystem
   operator delete(this);
 }
 

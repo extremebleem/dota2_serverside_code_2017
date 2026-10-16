@@ -613,7 +613,7 @@ CEntityInstance *__fastcall CDOTA_Unit_Hero_Viper::CEntityInstanceEntityClass::C
 void __fastcall CDOTA_Unit_Hero_Viper::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Unit_Hero_Viper::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -623,7 +623,7 @@ void __fastcall CDOTA_Unit_Hero_Viper::CEntityInstanceEntityClass::~CEntityInsta
 void __fastcall CDOTA_Unit_Hero_Viper::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Unit_Hero_Viper::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -854,7 +854,7 @@ CEntityInstance *__fastcall CDOTA_Ability_Viper_PoisonAttack::CEntityInstanceEnt
 void __fastcall CDOTA_Ability_Viper_PoisonAttack::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Viper_PoisonAttack::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -864,7 +864,7 @@ void __fastcall CDOTA_Ability_Viper_PoisonAttack::CEntityInstanceEntityClass::~C
 void __fastcall CDOTA_Ability_Viper_PoisonAttack::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Viper_PoisonAttack::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -1800,7 +1800,7 @@ CEntityInstance *__fastcall CDOTA_Ability_Viper_Nethertoxin::CEntityInstanceEnti
 void __fastcall CDOTA_Ability_Viper_Nethertoxin::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Viper_Nethertoxin::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -1810,7 +1810,7 @@ void __fastcall CDOTA_Ability_Viper_Nethertoxin::CEntityInstanceEntityClass::~CE
 void __fastcall CDOTA_Ability_Viper_Nethertoxin::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Viper_Nethertoxin::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -2141,7 +2141,7 @@ CEntityInstance *__fastcall CDOTA_Ability_Viper_CorrosiveSkin::CEntityInstanceEn
 void __fastcall CDOTA_Ability_Viper_CorrosiveSkin::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Viper_CorrosiveSkin::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -2151,7 +2151,7 @@ void __fastcall CDOTA_Ability_Viper_CorrosiveSkin::CEntityInstanceEntityClass::~
 void __fastcall CDOTA_Ability_Viper_CorrosiveSkin::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Viper_CorrosiveSkin::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -2721,7 +2721,7 @@ CEntityInstance *__fastcall CDOTA_Ability_Viper_ViperStrike::CEntityInstanceEnti
 void __fastcall CDOTA_Ability_Viper_ViperStrike::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Viper_ViperStrike::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -2731,7 +2731,7 @@ void __fastcall CDOTA_Ability_Viper_ViperStrike::CEntityInstanceEntityClass::~CE
 void __fastcall CDOTA_Ability_Viper_ViperStrike::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Viper_ViperStrike::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }

@@ -8,7 +8,7 @@ void __fastcall CDOTA_BotMode_Roam::CDOTA_BotMode_Roam(CDOTA_BotMode_Roam *const
 {
   CDOTA_BotMode::CDOTA_BotMode(this, pBot);
   this->m_hRoamTarget.m_Index = -1;
-  this->_vptr_CDOTA_BotMode = off_42B8610;
+  this->_vptr_CDOTA_BotMode = off_42B8610;  // vptr: CDOTA_BotMode_Roam
   CountdownTimer::CountdownTimer(&this->m_LeftVisibilityTimer);
   this->m_fLastStartedRoamTime = 0.0;
   this->m_bAnnouncedRoam = 0;

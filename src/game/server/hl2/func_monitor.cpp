@@ -232,7 +232,7 @@ void *__fastcall CFuncMonitor::CEntityInstanceEntityClass::AllocateInstance(
 void __fastcall CFuncMonitor::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CFuncMonitor::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -242,7 +242,7 @@ void __fastcall CFuncMonitor::CEntityInstanceEntityClass::~CEntityInstanceEntity
 void __fastcall CFuncMonitor::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CFuncMonitor::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }

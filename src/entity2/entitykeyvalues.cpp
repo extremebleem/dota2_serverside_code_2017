@@ -10,30 +10,24 @@ void __cdecl GLOBAL__sub_I_entitykeyvalues_cpp()
   UNSPECIFIED_LOGGING_COLOR._color[1] = 0;
   UNSPECIFIED_LOGGING_COLOR._color[2] = 0;
   UNSPECIFIED_LOGGING_COLOR._color[3] = 0;
-  if ( `guard variable for'CEntityKeyValues::sm_EmptyVariant == 0 )
-  {
-    `guard variable for'CEntityKeyValues::sm_EmptyVariant = 1;
-    CEntityKeyValues::sm_EmptyVariant.m_type = 0;
-    CEntityKeyValues::sm_EmptyVariant.m_flags = 0;
-    CEntityKeyValues::sm_EmptyVariant.m_uint64 = 0;
-    __cxa_atexit(CVariantBase<CEntityVariantAllocator>::~CVariantBase, &CEntityKeyValues::sm_EmptyVariant, &_dso_handle);
-  }
-  if ( `guard variable for'g_HuffmanEncoder == 0 )
-  {
-    `guard variable for'g_HuffmanEncoder = 1;
-    g_HuffmanEncoder.m_pRoot = 0;
-    g_HuffmanEncoder.m_Frequencies.m_Size = 0;
-    g_HuffmanEncoder.m_Frequencies.m_Memory.m_pMemory = 0;
-    g_HuffmanEncoder.m_Frequencies.m_Memory.m_nAllocationCount = 0;
-    g_HuffmanEncoder.m_Frequencies.m_Memory.m_nGrowSize = 0;
-    g_HuffmanEncoder.m_OpCodeToHuffmanLookup.m_Size = 0;
-    g_HuffmanEncoder.m_FixedTree.m_Size = 0;
-    g_HuffmanEncoder.m_FixedTree.m_Memory.m_pMemory = 0;
-    g_HuffmanEncoder.m_FixedTree.m_Memory.m_nAllocationCount = 0;
-    g_HuffmanEncoder.m_FixedTree.m_Memory.m_nGrowSize = 0;
-    CFieldPathHuffmanEncoder::BuildOpCodeCodeToHuffmanLookup(&g_HuffmanEncoder);
-    __cxa_atexit(CFieldPathHuffmanEncoder::~CFieldPathHuffmanEncoder, &g_HuffmanEncoder, &_dso_handle);
-  }
+  // init once: CEntityKeyValues::sm_EmptyVariant
+  CEntityKeyValues::sm_EmptyVariant.m_type = 0;
+  CEntityKeyValues::sm_EmptyVariant.m_flags = 0;
+  CEntityKeyValues::sm_EmptyVariant.m_uint64 = 0;
+  __cxa_atexit(CVariantBase<CEntityVariantAllocator>::~CVariantBase, &CEntityKeyValues::sm_EmptyVariant, &_dso_handle);
+  // init once: g_HuffmanEncoder
+  g_HuffmanEncoder.m_pRoot = 0;
+  g_HuffmanEncoder.m_Frequencies.m_Size = 0;
+  g_HuffmanEncoder.m_Frequencies.m_Memory.m_pMemory = 0;
+  g_HuffmanEncoder.m_Frequencies.m_Memory.m_nAllocationCount = 0;
+  g_HuffmanEncoder.m_Frequencies.m_Memory.m_nGrowSize = 0;
+  g_HuffmanEncoder.m_OpCodeToHuffmanLookup.m_Size = 0;
+  g_HuffmanEncoder.m_FixedTree.m_Size = 0;
+  g_HuffmanEncoder.m_FixedTree.m_Memory.m_pMemory = 0;
+  g_HuffmanEncoder.m_FixedTree.m_Memory.m_nAllocationCount = 0;
+  g_HuffmanEncoder.m_FixedTree.m_Memory.m_nGrowSize = 0;
+  CFieldPathHuffmanEncoder::BuildOpCodeCodeToHuffmanLookup(&g_HuffmanEncoder);
+  __cxa_atexit(CFieldPathHuffmanEncoder::~CFieldPathHuffmanEncoder, &g_HuffmanEncoder, &_dso_handle);
 }
 
 
@@ -176,7 +170,7 @@ void __fastcall CEntityKeyValues::ReleaseAllComplexKeys(CEntityKeyValues *const 
       if ( i == 0 )
         goto LABEL_6;
     }
-    (*m_pKey->_vptr_IEntityKeyComplex)(m_pKey);
+    m_pKey->DeleteThis();
   }
 LABEL_6:
   this->m_pComplexKeys = 0;
@@ -3690,142 +3684,142 @@ void __fastcall ConvertTextDataToNewKeyValues(
   EntityKeyId_t v9; // r15d
   bool v10; // zf
   CSchemaType *v11; // rax
-  const char *v12; // rax
-  const char *v13; // r14
+  __int64 v12; // rdx
+  __int64 v13; // rcx
+  const char *v14; // rax
+  const char *v15; // r14
   CKeyValues_Data::types_t DataType; // eax
-  float v15; // xmm1_4
+  float v17; // xmm1_4
   float Float; // xmm0_4
-  uint32 v17; // ebx
+  uint32 v19; // ebx
   int m_nCount; // esi
-  CUtlLeanVectorFixedGrowableBase<unsigned int,9u,short int>::IndexType_t v19; // cx
-  __int64 v20; // rax
-  CUtlLeanVectorFixedGrowableBase<unsigned int,9u,short int>::ElemType_t *v21; // rdx
+  CUtlLeanVectorFixedGrowableBase<unsigned int,9u,short int>::IndexType_t v21; // cx
+  __int64 v22; // rax
+  CUtlLeanVectorFixedGrowableBase<unsigned int,9u,short int>::ElemType_t *v23; // rdx
   int Int; // r13d
-  uint32 v23; // ebx
-  int v24; // edi
-  CUtlLeanVectorFixedGrowableBase<unsigned int,9u,short int>::IndexType_t v25; // si
-  __int64 v26; // rdx
-  CUtlLeanVectorFixedGrowableBase<unsigned int,9u,short int>::ElemType_t *v27; // rcx
-  uint32 v28; // eax
-  int v29; // eax
-  __int64 v30; // rsi
-  CSchemaType *v31; // rdx
-  int v32; // eax
-  int v33; // esi
-  CUtlLeanVectorFixedGrowableBase<unsigned int,9u,short int>::IndexType_t v34; // cx
-  __int64 v35; // rax
-  CUtlLeanVectorFixedGrowableBase<unsigned int,9u,short int>::ElemType_t *v36; // rdx
-  double v37; // xmm0_8
-  int v38; // esi
-  CUtlLeanVectorFixedGrowableBase<unsigned int,9u,short int>::IndexType_t v39; // cx
-  __int64 v40; // rax
-  CUtlLeanVectorFixedGrowableBase<unsigned int,9u,short int>::ElemType_t *v41; // rdx
-  int v42; // ebx
-  int v43; // edi
-  CUtlLeanVectorFixedGrowableBase<unsigned int,9u,short int>::IndexType_t v44; // si
-  __int64 v45; // rdx
-  CUtlLeanVectorFixedGrowableBase<unsigned int,9u,short int>::ElemType_t *v46; // rcx
-  int v47; // eax
-  int v48; // edx
+  uint32 v25; // ebx
+  int v26; // edi
+  CUtlLeanVectorFixedGrowableBase<unsigned int,9u,short int>::IndexType_t v27; // si
+  __int64 v28; // rdx
+  CUtlLeanVectorFixedGrowableBase<unsigned int,9u,short int>::ElemType_t *v29; // rcx
+  uint32 v30; // eax
+  int v31; // eax
+  __int64 v32; // rsi
+  CSchemaType *v33; // rdx
+  int v34; // eax
+  int v35; // esi
+  CUtlLeanVectorFixedGrowableBase<unsigned int,9u,short int>::IndexType_t v36; // cx
+  __int64 v37; // rax
+  CUtlLeanVectorFixedGrowableBase<unsigned int,9u,short int>::ElemType_t *v38; // rdx
+  double v39; // xmm0_8
+  int v40; // esi
+  CUtlLeanVectorFixedGrowableBase<unsigned int,9u,short int>::IndexType_t v41; // cx
+  __int64 v42; // rax
+  CUtlLeanVectorFixedGrowableBase<unsigned int,9u,short int>::ElemType_t *v43; // rdx
+  int v44; // ebx
+  int v45; // edi
+  CUtlLeanVectorFixedGrowableBase<unsigned int,9u,short int>::IndexType_t v46; // si
+  __int64 v47; // rdx
+  CUtlLeanVectorFixedGrowableBase<unsigned int,9u,short int>::ElemType_t *v48; // rcx
   int v49; // eax
-  int v50; // eax
+  int v50; // edx
   int v51; // eax
   int v52; // eax
   int v53; // eax
   int v54; // eax
-  char v55; // bl
-  int v56; // esi
-  CUtlLeanVectorFixedGrowableBase<unsigned int,9u,short int>::IndexType_t v57; // cx
-  __int64 v58; // rax
-  CUtlLeanVectorFixedGrowableBase<unsigned int,9u,short int>::ElemType_t *v59; // rdx
-  unsigned __int64 v60; // rbx
-  int v61; // edi
-  CUtlLeanVectorFixedGrowableBase<unsigned int,9u,short int>::IndexType_t v62; // si
-  __int64 v63; // rdx
-  CUtlLeanVectorFixedGrowableBase<unsigned int,9u,short int>::ElemType_t *v64; // rcx
-  __int64 v65; // rbx
-  int v66; // edi
-  CUtlLeanVectorFixedGrowableBase<unsigned int,9u,short int>::IndexType_t v67; // si
-  __int64 v68; // rdx
-  CUtlLeanVectorFixedGrowableBase<unsigned int,9u,short int>::ElemType_t *v69; // rcx
-  double v70; // xmm0_8
-  int v71; // esi
-  CUtlLeanVectorFixedGrowableBase<unsigned int,9u,short int>::IndexType_t v72; // cx
-  __int64 v73; // rax
-  CUtlLeanVectorFixedGrowableBase<unsigned int,9u,short int>::ElemType_t *v74; // rdx
-  __int64 v75; // rdx
-  __int64 v76; // rax
-  CVariantBase<CEntityVariantAllocator> *v77; // rdi
-  int v78; // r15d
-  void *v79; // rax
-  float v80; // xmm0_4
-  void *v81; // r13
-  __int16 v82; // r14
+  int v55; // eax
+  int v56; // eax
+  char v57; // bl
+  int v58; // esi
+  CUtlLeanVectorFixedGrowableBase<unsigned int,9u,short int>::IndexType_t v59; // cx
+  __int64 v60; // rax
+  CUtlLeanVectorFixedGrowableBase<unsigned int,9u,short int>::ElemType_t *v61; // rdx
+  unsigned __int64 v62; // rbx
+  int v63; // edi
+  CUtlLeanVectorFixedGrowableBase<unsigned int,9u,short int>::IndexType_t v64; // si
+  __int64 v65; // rdx
+  CUtlLeanVectorFixedGrowableBase<unsigned int,9u,short int>::ElemType_t *v66; // rcx
+  __int64 v67; // rbx
+  int v68; // edi
+  CUtlLeanVectorFixedGrowableBase<unsigned int,9u,short int>::IndexType_t v69; // si
+  __int64 v70; // rdx
+  CUtlLeanVectorFixedGrowableBase<unsigned int,9u,short int>::ElemType_t *v71; // rcx
+  double v72; // xmm0_8
+  int v73; // esi
+  CUtlLeanVectorFixedGrowableBase<unsigned int,9u,short int>::IndexType_t v74; // cx
+  __int64 v75; // rax
+  CUtlLeanVectorFixedGrowableBase<unsigned int,9u,short int>::ElemType_t *v76; // rdx
+  __int64 v77; // rdx
+  __int64 v78; // rax
+  CVariantBase<CEntityVariantAllocator> *v79; // rdi
+  int v80; // r15d
+  void *v81; // rax
+  float v82; // xmm0_4
+  void *v83; // r13
+  __int16 v84; // r14
   unsigned __int64 m_nAllocated; // rax
   CUtlLeanVectorFixedGrowableBase<unsigned int,9u,short int>::ElemType_t *m_pElements; // rax
-  CUtlLeanVectorBase<CEntityKeyValues::KeyValueInfo_t,short int>::ElemType_t *v85; // rax
-  CUtlLeanVectorBase<CEntityKeyValues::KeyValueInfo_t,short int>::ElemType_t *v86; // rax
-  uint16 m_flags; // cx
+  CUtlLeanVectorBase<CEntityKeyValues::KeyValueInfo_t,short int>::ElemType_t *v87; // rax
   CUtlLeanVectorBase<CEntityKeyValues::KeyValueInfo_t,short int>::ElemType_t *v88; // rax
-  int v89; // eax
-  int v90; // ecx
-  void *v91; // rax
+  uint16 m_flags; // cx
+  CUtlLeanVectorBase<CEntityKeyValues::KeyValueInfo_t,short int>::ElemType_t *v90; // rax
+  int v91; // eax
   int v92; // ecx
-  void *v93; // r15
-  __int16 v94; // r14
-  unsigned __int64 v95; // rax
-  CUtlLeanVectorFixedGrowableBase<unsigned int,9u,short int>::ElemType_t *v96; // rax
-  CUtlLeanVectorBase<CEntityKeyValues::KeyValueInfo_t,short int>::ElemType_t *v97; // rax
-  CUtlLeanVectorBase<CEntityKeyValues::KeyValueInfo_t,short int>::ElemType_t *v98; // rax
-  uint16 v99; // cx
+  void *v93; // rax
+  int v94; // ecx
+  void *v95; // r15
+  __int16 v96; // r14
+  unsigned __int64 v97; // rax
+  CUtlLeanVectorFixedGrowableBase<unsigned int,9u,short int>::ElemType_t *v98; // rax
+  CUtlLeanVectorBase<CEntityKeyValues::KeyValueInfo_t,short int>::ElemType_t *v99; // rax
   CUtlLeanVectorBase<CEntityKeyValues::KeyValueInfo_t,short int>::ElemType_t *v100; // rax
-  __int64 v101; // rax
-  __int16 v102; // dx
+  uint16 v101; // cx
+  CUtlLeanVectorBase<CEntityKeyValues::KeyValueInfo_t,short int>::ElemType_t *v102; // rax
   __int64 v103; // rax
   __int16 v104; // dx
-  uint32 v105; // eax
-  unsigned __int64 v106; // rax
-  CUtlLeanVectorFixedGrowableBase<unsigned int,9u,short int>::ElemType_t *v107; // rax
-  __int64 v108; // r13
-  CUtlLeanVectorBase<CEntityKeyValues::KeyValueInfo_t,short int>::ElemType_t *v109; // rax
+  __int64 v105; // rax
+  __int16 v106; // dx
+  uint32 v107; // eax
+  unsigned __int64 v108; // rax
+  CUtlLeanVectorFixedGrowableBase<unsigned int,9u,short int>::ElemType_t *v109; // rax
   __int64 v110; // r13
   CUtlLeanVectorBase<CEntityKeyValues::KeyValueInfo_t,short int>::ElemType_t *v111; // rax
-  uint16 v112; // dx
+  __int64 v112; // r13
   CUtlLeanVectorBase<CEntityKeyValues::KeyValueInfo_t,short int>::ElemType_t *v113; // rax
-  unsigned __int64 v114; // rax
-  CUtlLeanVectorFixedGrowableBase<unsigned int,9u,short int>::ElemType_t *v115; // rax
-  __int64 v116; // r13
-  CUtlLeanVectorBase<CEntityKeyValues::KeyValueInfo_t,short int>::ElemType_t *v117; // rax
-  CUtlLeanVectorBase<CEntityKeyValues::KeyValueInfo_t,short int>::ElemType_t *v118; // rax
-  uint16 v119; // dx
-  unsigned __int64 v120; // rax
-  CUtlLeanVectorFixedGrowableBase<unsigned int,9u,short int>::ElemType_t *v121; // rax
-  __int64 v122; // r13
-  CUtlLeanVectorBase<CEntityKeyValues::KeyValueInfo_t,short int>::ElemType_t *v123; // rax
-  CUtlLeanVectorBase<CEntityKeyValues::KeyValueInfo_t,short int>::ElemType_t *v124; // rax
-  uint16 v125; // dx
-  unsigned __int64 v126; // rax
-  CUtlLeanVectorFixedGrowableBase<unsigned int,9u,short int>::ElemType_t *v127; // rax
-  __int64 v128; // r13
-  CUtlLeanVectorBase<CEntityKeyValues::KeyValueInfo_t,short int>::ElemType_t *v129; // rax
-  CUtlLeanVectorBase<CEntityKeyValues::KeyValueInfo_t,short int>::ElemType_t *v130; // rax
-  uint16 v131; // dx
-  unsigned __int64 v132; // rax
-  CUtlLeanVectorFixedGrowableBase<unsigned int,9u,short int>::ElemType_t *v133; // rax
-  __int64 v134; // rbx
-  CUtlLeanVectorBase<CEntityKeyValues::KeyValueInfo_t,short int>::ElemType_t *v135; // rax
+  uint16 v114; // dx
+  CUtlLeanVectorBase<CEntityKeyValues::KeyValueInfo_t,short int>::ElemType_t *v115; // rax
+  unsigned __int64 v116; // rax
+  CUtlLeanVectorFixedGrowableBase<unsigned int,9u,short int>::ElemType_t *v117; // rax
+  __int64 v118; // r13
+  CUtlLeanVectorBase<CEntityKeyValues::KeyValueInfo_t,short int>::ElemType_t *v119; // rax
+  CUtlLeanVectorBase<CEntityKeyValues::KeyValueInfo_t,short int>::ElemType_t *v120; // rax
+  uint16 v121; // dx
+  unsigned __int64 v122; // rax
+  CUtlLeanVectorFixedGrowableBase<unsigned int,9u,short int>::ElemType_t *v123; // rax
+  __int64 v124; // r13
+  CUtlLeanVectorBase<CEntityKeyValues::KeyValueInfo_t,short int>::ElemType_t *v125; // rax
+  CUtlLeanVectorBase<CEntityKeyValues::KeyValueInfo_t,short int>::ElemType_t *v126; // rax
+  uint16 v127; // dx
+  unsigned __int64 v128; // rax
+  CUtlLeanVectorFixedGrowableBase<unsigned int,9u,short int>::ElemType_t *v129; // rax
+  __int64 v130; // r13
+  CUtlLeanVectorBase<CEntityKeyValues::KeyValueInfo_t,short int>::ElemType_t *v131; // rax
+  CUtlLeanVectorBase<CEntityKeyValues::KeyValueInfo_t,short int>::ElemType_t *v132; // rax
+  uint16 v133; // dx
+  unsigned __int64 v134; // rax
+  CUtlLeanVectorFixedGrowableBase<unsigned int,9u,short int>::ElemType_t *v135; // rax
   __int64 v136; // rbx
   CUtlLeanVectorBase<CEntityKeyValues::KeyValueInfo_t,short int>::ElemType_t *v137; // rax
-  uint16 v138; // dx
+  __int64 v138; // rbx
   CUtlLeanVectorBase<CEntityKeyValues::KeyValueInfo_t,short int>::ElemType_t *v139; // rax
-  unsigned __int64 v140; // rax
-  CUtlLeanVectorFixedGrowableBase<unsigned int,9u,short int>::ElemType_t *v141; // rax
-  __int64 v142; // rbx
-  CUtlLeanVectorBase<CEntityKeyValues::KeyValueInfo_t,short int>::ElemType_t *v143; // rax
-  CUtlLeanVectorBase<CEntityKeyValues::KeyValueInfo_t,short int>::ElemType_t *v144; // rax
-  uint16 v145; // dx
-  __int64 v146; // rax
-  __int16 v147; // dx
+  uint16 v140; // dx
+  CUtlLeanVectorBase<CEntityKeyValues::KeyValueInfo_t,short int>::ElemType_t *v141; // rax
+  unsigned __int64 v142; // rax
+  CUtlLeanVectorFixedGrowableBase<unsigned int,9u,short int>::ElemType_t *v143; // rax
+  __int64 v144; // rbx
+  CUtlLeanVectorBase<CEntityKeyValues::KeyValueInfo_t,short int>::ElemType_t *v145; // rax
+  CUtlLeanVectorBase<CEntityKeyValues::KeyValueInfo_t,short int>::ElemType_t *v146; // rax
+  uint16 v147; // dx
   __int64 v148; // rax
   __int16 v149; // dx
   __int64 v150; // rax
@@ -3834,12 +3828,14 @@ void __fastcall ConvertTextDataToNewKeyValues(
   __int16 v153; // dx
   __int64 v154; // rax
   __int16 v155; // dx
-  void *v156; // rax
-  void *v157; // rax
-  const char *v158; // rax
+  __int64 v156; // rax
+  __int16 v157; // dx
+  void *v158; // rax
   void *v159; // rax
-  void *v160; // rax
-  int v161; // eax
+  const char *v160; // rax
+  void *v161; // rax
+  void *v162; // rax
+  int v163; // eax
   const CSchemaEnumeratorInfo *MemberByValue; // rax
   EnumIntrospectionHandle_t hEnumIntrospection; // [rsp+8h] [rbp-288h]
   EnumIntrospectionHandle_t hEnumIntrospectiong; // [rsp+8h] [rbp-288h]
@@ -3856,13 +3852,13 @@ void __fastcall ConvertTextDataToNewKeyValues(
   float hEnumIntrospectionl; // [rsp+8h] [rbp-288h]
   QAngle a; // [rsp+10h] [rbp-280h] BYREF
   Vector4D v_0; // [rsp+20h] [rbp-270h] BYREF
-  const char *v178; // [rsp+30h] [rbp-260h]
+  const char *v180; // [rsp+30h] [rbp-260h]
   Color v; // [rsp+40h] [rbp-250h] BYREF
   char szKVStringScratch[256]; // [rsp+50h] [rbp-240h] BYREF
   char pResourceName[260]; // [rsp+150h] [rbp-140h] BYREF
-  unsigned __int64 v182; // [rsp+258h] [rbp-38h]
+  unsigned __int64 v184; // [rsp+258h] [rbp-38h]
 
-  v182 = __readfsqword(0x28u);
+  v184 = __readfsqword(0x28u);
   String = KeyValues::GetString(pSubKey, 0, 0, szKVStringScratch, 0x100u);
   if ( String == 0 )
     return;
@@ -3876,7 +3872,7 @@ void __fastcall ConvertTextDataToNewKeyValues(
       ConvertTextDataToNewKeyValues(CEntityKeyValues *,KeyValues *,CSchemaType *)::nPrefixLen = 6;
       __cxa_guard_release(&`guard variable for'ConvertTextDataToNewKeyValues(CEntityKeyValues *,KeyValues *,CSchemaType *)::nPrefixLen);
     }
-    v13 = &v8[ConvertTextDataToNewKeyValues(CEntityKeyValues *,KeyValues *,CSchemaType *)::nPrefixLen];
+    v15 = &v8[ConvertTextDataToNewKeyValues(CEntityKeyValues *,KeyValues *,CSchemaType *)::nPrefixLen];
     DataType = KeyValues::GetDataType(pSubKey, 0);
     if ( DataType != CKeyValues_Data::types_t::TYPE_INT )
     {
@@ -3885,30 +3881,30 @@ void __fastcall ConvertTextDataToNewKeyValues(
         if ( LoggingSystem_IsChannelEnabled(LOG_ENTITY_SYSTEM, 4) != 0 )
         {
           *&v_0.x = "entitykeyvalues.cpp";
-          v178 = "ConvertTextDataToNewKeyValues";
+          v180 = "ConvertTextDataToNewKeyValues";
           LODWORD(v_0.z) = 655;
           LoggingSystem_Log(
             LOG_ENTITY_SYSTEM,
             LoggingSeverity_t::LS_ERROR,
             &v_0,
             "Unsupported field type for entity attribute, field %s\n",
-            v13);
+            v15);
         }
         return;
       }
-      Float = KeyValues::GetFloat(pSubKey, 0, 0.0, v15);
+      Float = KeyValues::GetFloat(pSubKey, 0, 0.0, v17);
       if ( pKeyValues->m_nQueuedForSpawnCount > 0 )
         return;
-      v17 = 0;
-      if ( v13 != 0 && *v13 != 0 )
+      v19 = 0;
+      if ( v15 != 0 && *v15 != 0 )
       {
         hEnumIntrospectiond = Float;
-        v105 = MurmurHash2LowerCase(v13, 0x31415926u);
+        v107 = MurmurHash2LowerCase(v15, 0x31415926u);
         Float = hEnumIntrospectiond;
-        v17 = v105;
+        v19 = v107;
         if ( g_bUpdateStringTokenDatabase )
         {
-          RegisterStringToken(v105, v13, 0, 1);
+          RegisterStringToken(v107, v15, 0, 1);
           Float = hEnumIntrospectiond;
         }
       }
@@ -3916,37 +3912,37 @@ void __fastcall ConvertTextDataToNewKeyValues(
       if ( m_nCount <= 0 )
       {
 LABEL_169:
-        if ( v13 != 0 )
+        if ( v15 != 0 )
         {
           hEnumIntrospectionb = Float;
-          v78 = strlen(v13) + 1;
-          if ( v78 <= 15 )
+          v80 = strlen(v15) + 1;
+          if ( v80 <= 15 )
           {
-            v156 = CUtlScratchMemoryPool::AllocAligned(CEntityVariantAllocator::sm_pMemoryPool, v78, 8);
-            v80 = hEnumIntrospectionb;
-            v81 = v156;
-            if ( v78 < 0 )
+            v158 = CUtlScratchMemoryPool::AllocAligned(CEntityVariantAllocator::sm_pMemoryPool, v80, 8);
+            v82 = hEnumIntrospectionb;
+            v83 = v158;
+            if ( v80 < 0 )
               __debugbreak();
           }
           else
           {
-            v79 = CUtlScratchMemoryPool::AllocAligned(CEntityVariantAllocator::sm_pMemoryPool, v78, 16);
-            v80 = hEnumIntrospectionb;
-            v81 = v79;
+            v81 = CUtlScratchMemoryPool::AllocAligned(CEntityVariantAllocator::sm_pMemoryPool, v80, 16);
+            v82 = hEnumIntrospectionb;
+            v83 = v81;
           }
         }
         else
         {
-          v78 = 1;
+          v80 = 1;
           hEnumIntrospectionl = Float;
-          v159 = CUtlScratchMemoryPool::AllocAligned(CEntityVariantAllocator::sm_pMemoryPool, 1, 8);
-          v80 = hEnumIntrospectionl;
-          v81 = v159;
+          v161 = CUtlScratchMemoryPool::AllocAligned(CEntityVariantAllocator::sm_pMemoryPool, 1, 8);
+          v82 = hEnumIntrospectionl;
+          v83 = v161;
         }
-        hEnumIntrospectionc = LODWORD(v80);
-        memcpy(v81, v13, v78);
+        hEnumIntrospectionc = LODWORD(v82);
+        memcpy(v83, v15, v80);
         CUtlLeanVectorImpl<CUtlLeanVectorFixedGrowableBase<unsigned int,(unsigned short)9,short>,unsigned int,short>::AddToTailGetPtr(&pKeyValues->m_keyHashes);
-        v82 = pKeyValues->m_keyHashes.m_nCount - 1;
+        v84 = pKeyValues->m_keyHashes.m_nCount - 1;
         m_nAllocated = pKeyValues->m_keyHashes.m_nAllocated;
         if ( m_nAllocated != 0 )
         {
@@ -3959,208 +3955,208 @@ LABEL_169:
         {
           m_pElements = 0;
         }
-        m_pElements[v82] = v17;
+        m_pElements[v84] = v19;
         CUtlLeanVectorImpl<CUtlLeanVectorBase<CEntityKeyValues::KeyValueInfo_t,short>,CEntityKeyValues::KeyValueInfo_t,short>::AddToTailGetPtr(&pKeyValues->m_keyValues);
         if ( pKeyValues->m_keyValues.m_nAllocated != 0 )
-          v85 = pKeyValues->m_keyValues.m_pElements;
+          v87 = pKeyValues->m_keyValues.m_pElements;
         else
-          v85 = 0;
-        v86 = &v85[v82];
-        m_flags = v86->m_value.m_flags;
+          v87 = 0;
+        v88 = &v87[v84];
+        m_flags = v88->m_value.m_flags;
         if ( (m_flags & 1) != 0 )
-          v86->m_value.m_flags = m_flags & 0xFFFE;
-        v86->m_value.m_uint64 = 0;
-        v86->m_value.m_type = 1;
-        v86->m_value.m_int = hEnumIntrospectionc;
+          v88->m_value.m_flags = m_flags & 0xFFFE;
+        v88->m_value.m_uint64 = 0;
+        v88->m_value.m_type = 1;
+        v88->m_value.m_int = hEnumIntrospectionc;
         if ( pKeyValues->m_keyValues.m_nAllocated != 0 )
-          v88 = pKeyValues->m_keyValues.m_pElements;
+          v90 = pKeyValues->m_keyValues.m_pElements;
         else
-          v88 = 0;
-        v88[v82].m_pAttributeName = v81;
+          v90 = 0;
+        v90[v84].m_pAttributeName = v83;
         return;
       }
-      v19 = pKeyValues->m_keyHashes.m_nAllocated;
-      v20 = 0;
+      v21 = pKeyValues->m_keyHashes.m_nAllocated;
+      v22 = 0;
       while ( 1 )
       {
-        if ( v19 != 0 )
+        if ( v21 != 0 )
         {
-          v21 = (&pKeyValues->m_keyHashes.m_nAllocAllocated + 1);
-          if ( v19 > 9 )
-            v21 = pKeyValues->m_keyHashes.m_pElements;
+          v23 = (&pKeyValues->m_keyHashes.m_nAllocAllocated + 1);
+          if ( v21 > 9 )
+            v23 = pKeyValues->m_keyHashes.m_pElements;
         }
         else
         {
-          v21 = 0;
+          v23 = 0;
         }
-        if ( v17 == v21[v20] )
+        if ( v19 == v23[v22] )
           break;
-        if ( m_nCount <= ++v20 )
+        if ( m_nCount <= ++v22 )
           goto LABEL_169;
       }
       if ( pKeyValues->m_keyValues.m_nAllocated != 0 )
       {
-        v101 = &pKeyValues->m_keyValues.m_pElements[v20];
-        if ( *(v101 + 16) != 0 )
+        v103 = &pKeyValues->m_keyValues.m_pElements[v22];
+        if ( *(v103 + 16) != 0 )
         {
 LABEL_197:
-          v102 = *(v101 + 10);
-          if ( (v102 & 1) != 0 )
-            *(v101 + 10) = v102 & 0xFFFE;
-          *v101 = 0;
-          *(v101 + 8) = 1;
-          *v101 = Float;
+          v104 = *(v103 + 10);
+          if ( (v104 & 1) != 0 )
+            *(v103 + 10) = v104 & 0xFFFE;
+          *v103 = 0;
+          *(v103 + 8) = 1;
+          *v103 = Float;
           return;
         }
       }
       else
       {
-        v101 = 24 * v20;
-        if ( *(v101 + 16) != 0 )
+        v103 = 24 * v22;
+        if ( *(v103 + 16) != 0 )
           goto LABEL_197;
       }
 LABEL_303:
-      Warning("Attempted to set non-attribute value %s as if it was an attribute!\n", v13);
+      Warning("Attempted to set non-attribute value %s as if it was an attribute!\n", v15);
       return;
     }
     Int = KeyValues::GetInt(pSubKey, 0, 0);
     if ( pKeyValues->m_nQueuedForSpawnCount > 0 )
       return;
-    v23 = 0;
-    if ( v13 != 0 && *v13 != 0 )
+    v25 = 0;
+    if ( v15 != 0 && *v15 != 0 )
     {
-      v23 = MurmurHash2LowerCase(v13, 0x31415926u);
+      v25 = MurmurHash2LowerCase(v15, 0x31415926u);
       if ( g_bUpdateStringTokenDatabase )
-        RegisterStringToken(v23, v13, 0, 1);
+        RegisterStringToken(v25, v15, 0, 1);
     }
-    v24 = pKeyValues->m_keyHashes.m_nCount;
-    if ( v24 <= 0 )
+    v26 = pKeyValues->m_keyHashes.m_nCount;
+    if ( v26 <= 0 )
     {
 LABEL_182:
-      if ( v13 != 0 )
+      if ( v15 != 0 )
       {
-        v89 = strlen(v13);
-        v90 = v89 + 1;
-        if ( v89 + 1 <= 15 )
+        v91 = strlen(v15);
+        v92 = v91 + 1;
+        if ( v91 + 1 <= 15 )
         {
-          hEnumIntrospectionj = v89 + 1;
-          v157 = CUtlScratchMemoryPool::AllocAligned(CEntityVariantAllocator::sm_pMemoryPool, v90, 8);
-          v92 = hEnumIntrospectionj;
-          v93 = v157;
+          hEnumIntrospectionj = v91 + 1;
+          v159 = CUtlScratchMemoryPool::AllocAligned(CEntityVariantAllocator::sm_pMemoryPool, v92, 8);
+          v94 = hEnumIntrospectionj;
+          v95 = v159;
           if ( hEnumIntrospectionj < 0 )
             __debugbreak();
         }
         else
         {
-          hEnumIntrospectioni = v89 + 1;
-          v91 = CUtlScratchMemoryPool::AllocAligned(CEntityVariantAllocator::sm_pMemoryPool, v90, 16);
-          v92 = hEnumIntrospectioni;
-          v93 = v91;
+          hEnumIntrospectioni = v91 + 1;
+          v93 = CUtlScratchMemoryPool::AllocAligned(CEntityVariantAllocator::sm_pMemoryPool, v92, 16);
+          v94 = hEnumIntrospectioni;
+          v95 = v93;
         }
       }
       else
       {
-        v160 = CUtlScratchMemoryPool::AllocAligned(CEntityVariantAllocator::sm_pMemoryPool, 1, 8);
-        v92 = 1;
-        v93 = v160;
+        v162 = CUtlScratchMemoryPool::AllocAligned(CEntityVariantAllocator::sm_pMemoryPool, 1, 8);
+        v94 = 1;
+        v95 = v162;
       }
-      memcpy(v93, v13, v92);
+      memcpy(v95, v15, v94);
       CUtlLeanVectorImpl<CUtlLeanVectorFixedGrowableBase<unsigned int,(unsigned short)9,short>,unsigned int,short>::AddToTailGetPtr(&pKeyValues->m_keyHashes);
-      v94 = pKeyValues->m_keyHashes.m_nCount - 1;
-      v95 = pKeyValues->m_keyHashes.m_nAllocated;
-      if ( v95 != 0 )
+      v96 = pKeyValues->m_keyHashes.m_nCount - 1;
+      v97 = pKeyValues->m_keyHashes.m_nAllocated;
+      if ( v97 != 0 )
       {
-        if ( v95 <= 9 )
-          v96 = (&pKeyValues->m_keyHashes.m_nAllocAllocated + 1);
+        if ( v97 <= 9 )
+          v98 = (&pKeyValues->m_keyHashes.m_nAllocAllocated + 1);
         else
-          v96 = pKeyValues->m_keyHashes.m_pElements;
+          v98 = pKeyValues->m_keyHashes.m_pElements;
       }
       else
       {
-        v96 = 0;
+        v98 = 0;
       }
-      v96[v94] = v23;
+      v98[v96] = v25;
       CUtlLeanVectorImpl<CUtlLeanVectorBase<CEntityKeyValues::KeyValueInfo_t,short>,CEntityKeyValues::KeyValueInfo_t,short>::AddToTailGetPtr(&pKeyValues->m_keyValues);
       if ( pKeyValues->m_keyValues.m_nAllocated != 0 )
-        v97 = pKeyValues->m_keyValues.m_pElements;
+        v99 = pKeyValues->m_keyValues.m_pElements;
       else
-        v97 = 0;
-      v98 = &v97[v94];
-      v99 = v98->m_value.m_flags;
-      if ( (v99 & 1) != 0 )
-        v98->m_value.m_flags = v99 & 0xFFFE;
-      v98->m_value.m_uint64 = 0;
-      v98->m_value.m_type = 5;
-      v98->m_value.m_int = Int;
+        v99 = 0;
+      v100 = &v99[v96];
+      v101 = v100->m_value.m_flags;
+      if ( (v101 & 1) != 0 )
+        v100->m_value.m_flags = v101 & 0xFFFE;
+      v100->m_value.m_uint64 = 0;
+      v100->m_value.m_type = 5;
+      v100->m_value.m_int = Int;
       if ( pKeyValues->m_keyValues.m_nAllocated != 0 )
-        v100 = pKeyValues->m_keyValues.m_pElements;
+        v102 = pKeyValues->m_keyValues.m_pElements;
       else
-        v100 = 0;
-      v100[v94].m_pAttributeName = v93;
+        v102 = 0;
+      v102[v96].m_pAttributeName = v95;
       return;
     }
-    v25 = pKeyValues->m_keyHashes.m_nAllocated;
-    v26 = 0;
+    v27 = pKeyValues->m_keyHashes.m_nAllocated;
+    v28 = 0;
     while ( 1 )
     {
-      if ( v25 != 0 )
+      if ( v27 != 0 )
       {
-        v27 = (&pKeyValues->m_keyHashes.m_nAllocAllocated + 1);
-        if ( v25 > 9 )
-          v27 = pKeyValues->m_keyHashes.m_pElements;
+        v29 = (&pKeyValues->m_keyHashes.m_nAllocAllocated + 1);
+        if ( v27 > 9 )
+          v29 = pKeyValues->m_keyHashes.m_pElements;
       }
       else
       {
-        v27 = 0;
+        v29 = 0;
       }
-      if ( v23 == v27[v26] )
+      if ( v25 == v29[v28] )
         break;
-      if ( v24 <= ++v26 )
+      if ( v26 <= ++v28 )
         goto LABEL_182;
     }
     if ( pKeyValues->m_keyValues.m_nAllocated != 0 )
     {
-      v103 = &pKeyValues->m_keyValues.m_pElements[v26];
-      if ( *(v103 + 16) == 0 )
+      v105 = &pKeyValues->m_keyValues.m_pElements[v28];
+      if ( *(v105 + 16) == 0 )
         goto LABEL_303;
     }
     else
     {
-      v103 = 24 * v26;
-      if ( *(&stru_10.m_Lock.gap0 + 3 * v26) == 0 )
+      v105 = 24 * v28;
+      if ( *(&stru_10.m_Lock.gap0 + 3 * v28) == 0 )
         goto LABEL_303;
     }
-    v104 = *(v103 + 10);
-    if ( (v104 & 1) != 0 )
-      *(v103 + 10) = v104 & 0xFFFE;
-    *v103 = 0;
-    *(v103 + 8) = 5;
-    *v103 = Int;
+    v106 = *(v105 + 10);
+    if ( (v106 & 1) != 0 )
+      *(v105 + 10) = v106 & 0xFFFE;
+    *v105 = 0;
+    *(v105 + 8) = 5;
+    *v105 = Int;
     return;
   }
   v9.m_nHashCode = 0;
   if ( Name != 0 && *Name != 0 )
   {
-    v28 = MurmurHash2LowerCase(Name, 0x31415926u);
+    v30 = MurmurHash2LowerCase(Name, 0x31415926u);
     if ( g_bUpdateStringTokenDatabase )
     {
-      hEnumIntrospectionh = v28;
-      RegisterStringToken(v28, v8, 0, 1);
-      v28 = hEnumIntrospectionh;
+      hEnumIntrospectionh = v30;
+      RegisterStringToken(v30, v8, 0, 1);
+      v30 = hEnumIntrospectionh;
     }
-    v9.m_nHashCode = v28;
+    v9.m_nHashCode = v30;
   }
   if ( (**pFieldType)(pFieldType) != 4 )
     goto LABEL_7;
-  v29 = (**pFieldType)(pFieldType);
-  v31 = 0;
-  if ( v29 == 4 )
+  v31 = (**pFieldType)(pFieldType);
+  v33 = 0;
+  if ( v31 == 4 )
   {
-    (*(*pFieldType + 48LL))(pFieldType, v30, 0);
-    v31 = pFieldType;
+    (*(*pFieldType + 48LL))(pFieldType, v32, 0);
+    v33 = pFieldType;
   }
-  v32 = *(v31 + 16);
-  if ( (v32 - 4007) > 2 && v32 != 4000 )
+  v34 = *(v33 + 16);
+  if ( (v34 - 4007) > 2 && v34 != 4000 )
   {
 LABEL_7:
     if ( (**pFieldType)(pFieldType) == 0 && (*(*pFieldType + 48LL))(pFieldType) == 4 )
@@ -4168,65 +4164,65 @@ LABEL_7:
       switch ( *(pFieldType + 12) )
       {
         case 2:
-          v55 = 127;
+          v57 = 127;
           if ( strtol(String, 0, 10) <= 127 )
           {
-            v55 = 0x80;
+            v57 = 0x80;
             if ( strtol(String, 0, 10) >= -128 )
-              v55 = strtol(String, 0, 10);
+              v57 = strtol(String, 0, 10);
           }
           if ( pKeyValues->m_nQueuedForSpawnCount > 0 )
             return;
-          v56 = pKeyValues->m_keyHashes.m_nCount;
-          if ( v56 <= 0 )
+          v58 = pKeyValues->m_keyHashes.m_nCount;
+          if ( v58 <= 0 )
             goto LABEL_212;
-          v57 = pKeyValues->m_keyHashes.m_nAllocated;
-          v58 = 0;
+          v59 = pKeyValues->m_keyHashes.m_nAllocated;
+          v60 = 0;
           while ( 1 )
           {
-            if ( v57 != 0 )
+            if ( v59 != 0 )
             {
-              v59 = (&pKeyValues->m_keyHashes.m_nAllocAllocated + 1);
-              if ( v57 > 9 )
-                v59 = pKeyValues->m_keyHashes.m_pElements;
+              v61 = (&pKeyValues->m_keyHashes.m_nAllocAllocated + 1);
+              if ( v59 > 9 )
+                v61 = pKeyValues->m_keyHashes.m_pElements;
             }
             else
             {
-              v59 = 0;
+              v61 = 0;
             }
-            if ( v9.m_nHashCode == v59[v58] )
+            if ( v9.m_nHashCode == v61[v60] )
               break;
-            if ( v56 <= ++v58 )
+            if ( v58 <= ++v60 )
             {
 LABEL_212:
               CUtlLeanVectorImpl<CUtlLeanVectorFixedGrowableBase<unsigned int,(unsigned short)9,short>,unsigned int,short>::AddToTailGetPtr(&pKeyValues->m_keyHashes);
-              v106 = pKeyValues->m_keyHashes.m_nAllocated;
-              if ( v106 != 0 )
+              v108 = pKeyValues->m_keyHashes.m_nAllocated;
+              if ( v108 != 0 )
               {
-                if ( v106 <= 9 )
-                  v107 = (&pKeyValues->m_keyHashes.m_nAllocAllocated + 1);
+                if ( v108 <= 9 )
+                  v109 = (&pKeyValues->m_keyHashes.m_nAllocAllocated + 1);
                 else
-                  v107 = pKeyValues->m_keyHashes.m_pElements;
+                  v109 = pKeyValues->m_keyHashes.m_pElements;
               }
               else
               {
-                v107 = 0;
+                v109 = 0;
               }
-              v108 = (pKeyValues->m_keyHashes.m_nCount - 1);
-              v107[v108] = v9.m_nHashCode;
+              v110 = (pKeyValues->m_keyHashes.m_nCount - 1);
+              v109[v110] = v9.m_nHashCode;
               CUtlLeanVectorImpl<CUtlLeanVectorBase<CEntityKeyValues::KeyValueInfo_t,short>,CEntityKeyValues::KeyValueInfo_t,short>::AddToTailGetPtr(&pKeyValues->m_keyValues);
               if ( pKeyValues->m_keyValues.m_nAllocated != 0 )
-                v109 = pKeyValues->m_keyValues.m_pElements;
+                v111 = pKeyValues->m_keyValues.m_pElements;
               else
-                v109 = 0;
-              v110 = v108;
-              v111 = &v109[v110];
-              v112 = v111->m_value.m_flags;
-              if ( (v112 & 1) != 0 )
-                v111->m_value.m_flags = v112 & 0xFFFE;
-              v111->m_value.m_uint64 = 0;
-              v111->m_value.m_type = 8;
-              v111->m_value.m_char = v55;
+                v111 = 0;
+              v112 = v110;
+              v113 = &v111[v112];
+              v114 = v113->m_value.m_flags;
+              if ( (v114 & 1) != 0 )
+                v113->m_value.m_flags = v114 & 0xFFFE;
+              v113->m_value.m_uint64 = 0;
+              v113->m_value.m_type = 8;
+              v113->m_value.m_char = v57;
               if ( pKeyValues->m_keyValues.m_nAllocated == 0 )
                 goto LABEL_230;
               goto LABEL_220;
@@ -4234,75 +4230,75 @@ LABEL_212:
           }
           if ( pKeyValues->m_keyValues.m_nAllocated != 0 )
           {
-            v75 = pKeyValues->m_keyValues.m_pElements;
-            v76 = 24 * v58;
-            if ( *(v75 + v76 + 16) != 0 )
+            v77 = pKeyValues->m_keyValues.m_pElements;
+            v78 = 24 * v60;
+            if ( *(v77 + v78 + 16) != 0 )
               goto LABEL_162;
           }
           else
           {
-            v76 = 24 * v58;
-            v75 = 0;
-            if ( *(v76 + 16) != 0 )
+            v78 = 24 * v60;
+            v77 = 0;
+            if ( *(v78 + 16) != 0 )
               goto LABEL_162;
           }
-          v146 = v75 + v76;
-          v147 = *(v146 + 10);
-          if ( (v147 & 1) != 0 )
-            *(v146 + 10) = v147 & 0xFFFE;
-          *v146 = 0;
-          *(v146 + 8) = 8;
-          *v146 = v55;
+          v148 = v77 + v78;
+          v149 = *(v148 + 10);
+          if ( (v149 & 1) != 0 )
+            *(v148 + 10) = v149 & 0xFFFE;
+          *v148 = 0;
+          *(v148 + 8) = 8;
+          *v148 = v57;
           return;
         case 3:
-          v53 = strtol(String, 0, 10);
-          v48 = 127;
-          if ( v53 <= 127 )
+          v55 = strtol(String, 0, 10);
+          v50 = 127;
+          if ( v55 <= 127 )
           {
-            LOBYTE(v48) = 10;
-            v54 = strtol(String, 0, v48);
-            v48 = -128;
-            if ( v54 >= -128 )
+            LOBYTE(v50) = 10;
+            v56 = strtol(String, 0, v50);
+            v50 = -128;
+            if ( v56 >= -128 )
               goto LABEL_106;
           }
           goto LABEL_103;
         case 4:
-          v51 = strtol(String, 0, 10);
-          v48 = 255;
-          if ( v51 > 255 )
+          v53 = strtol(String, 0, 10);
+          v50 = 255;
+          if ( v53 > 255 )
             goto LABEL_103;
-          LOBYTE(v48) = 10;
+          LOBYTE(v50) = 10;
           goto LABEL_109;
         case 5:
-          v49 = strtol(String, 0, 10);
-          v48 = 0x7FFF;
-          if ( v49 <= 0x7FFF )
+          v51 = strtol(String, 0, 10);
+          v50 = 0x7FFF;
+          if ( v51 <= 0x7FFF )
           {
-            LOWORD(v48) = 10;
-            v50 = strtol(String, 0, v48);
-            v48 = -32768;
-            if ( v50 >= -32768 )
+            LOWORD(v50) = 10;
+            v52 = strtol(String, 0, v50);
+            v50 = -32768;
+            if ( v52 >= -32768 )
 LABEL_106:
-              v48 = strtol(String, 0, 10);
+              v50 = strtol(String, 0, 10);
           }
           goto LABEL_103;
         case 6:
-          v47 = strtol(String, 0, 10);
-          v48 = 0xFFFF;
-          if ( v47 <= 0xFFFF )
+          v49 = strtol(String, 0, 10);
+          v50 = 0xFFFF;
+          if ( v49 <= 0xFFFF )
           {
-            LOWORD(v48) = 10;
+            LOWORD(v50) = 10;
 LABEL_109:
-            v52 = strtol(String, 0, v48);
-            v48 = 0;
-            if ( v52 >= 0 )
+            v54 = strtol(String, 0, v50);
+            v50 = 0;
+            if ( v54 >= 0 )
             {
-              LOBYTE(v48) = 10;
-              v48 = strtol(String, 0, v48);
+              LOBYTE(v50) = 10;
+              v50 = strtol(String, 0, v50);
             }
           }
 LABEL_103:
-          LODWORD(v_0.x) = v48;
+          LODWORD(v_0.x) = v50;
           CEntityKeyValues::SetValue<int>(pKeyValues, v9, &v_0);
           return;
         case 7:
@@ -4310,62 +4306,62 @@ LABEL_103:
           CEntityKeyValues::SetValue<int>(pKeyValues, v9, &v_0);
           return;
         case 8:
-          v42 = strtoul(String, 0, 10);
+          v44 = strtoul(String, 0, 10);
           if ( pKeyValues->m_nQueuedForSpawnCount > 0 )
             return;
-          v43 = pKeyValues->m_keyHashes.m_nCount;
-          if ( v43 <= 0 )
+          v45 = pKeyValues->m_keyHashes.m_nCount;
+          if ( v45 <= 0 )
             goto LABEL_240;
-          v44 = pKeyValues->m_keyHashes.m_nAllocated;
-          v45 = 0;
+          v46 = pKeyValues->m_keyHashes.m_nAllocated;
+          v47 = 0;
           while ( 1 )
           {
-            if ( v44 != 0 )
+            if ( v46 != 0 )
             {
-              v46 = (&pKeyValues->m_keyHashes.m_nAllocAllocated + 1);
-              if ( v44 > 9 )
-                v46 = pKeyValues->m_keyHashes.m_pElements;
+              v48 = (&pKeyValues->m_keyHashes.m_nAllocAllocated + 1);
+              if ( v46 > 9 )
+                v48 = pKeyValues->m_keyHashes.m_pElements;
             }
             else
             {
-              v46 = 0;
+              v48 = 0;
             }
-            if ( v9.m_nHashCode == v46[v45] )
+            if ( v9.m_nHashCode == v48[v47] )
               break;
-            if ( v43 <= ++v45 )
+            if ( v45 <= ++v47 )
             {
 LABEL_240:
               CUtlLeanVectorImpl<CUtlLeanVectorFixedGrowableBase<unsigned int,(unsigned short)9,short>,unsigned int,short>::AddToTailGetPtr(&pKeyValues->m_keyHashes);
-              v126 = pKeyValues->m_keyHashes.m_nAllocated;
-              if ( v126 != 0 )
+              v128 = pKeyValues->m_keyHashes.m_nAllocated;
+              if ( v128 != 0 )
               {
-                if ( v126 <= 9 )
-                  v127 = (&pKeyValues->m_keyHashes.m_nAllocAllocated + 1);
+                if ( v128 <= 9 )
+                  v129 = (&pKeyValues->m_keyHashes.m_nAllocAllocated + 1);
                 else
-                  v127 = pKeyValues->m_keyHashes.m_pElements;
+                  v129 = pKeyValues->m_keyHashes.m_pElements;
               }
               else
               {
-                v127 = 0;
+                v129 = 0;
               }
-              v128 = (pKeyValues->m_keyHashes.m_nCount - 1);
-              v127[v128] = v9.m_nHashCode;
+              v130 = (pKeyValues->m_keyHashes.m_nCount - 1);
+              v129[v130] = v9.m_nHashCode;
               CUtlLeanVectorImpl<CUtlLeanVectorBase<CEntityKeyValues::KeyValueInfo_t,short>,CEntityKeyValues::KeyValueInfo_t,short>::AddToTailGetPtr(&pKeyValues->m_keyValues);
               if ( pKeyValues->m_keyValues.m_nAllocated != 0 )
-                v129 = pKeyValues->m_keyValues.m_pElements;
+                v131 = pKeyValues->m_keyValues.m_pElements;
               else
-                v129 = 0;
-              v110 = v128;
-              v130 = &v129[v110];
-              v131 = v130->m_value.m_flags;
-              if ( (v131 & 1) != 0 )
-                v130->m_value.m_flags = v131 & 0xFFFE;
-              v130->m_value.m_uint64 = 0;
-              v130->m_value.m_type = 37;
-              v130->m_value.m_int = v42;
+                v131 = 0;
+              v112 = v130;
+              v132 = &v131[v112];
+              v133 = v132->m_value.m_flags;
+              if ( (v133 & 1) != 0 )
+                v132->m_value.m_flags = v133 & 0xFFFE;
+              v132->m_value.m_uint64 = 0;
+              v132->m_value.m_type = 37;
+              v132->m_value.m_int = v44;
               if ( pKeyValues->m_keyValues.m_nAllocated == 0 )
               {
-                v113 = 0;
+                v115 = 0;
                 goto LABEL_221;
               }
               goto LABEL_220;
@@ -4373,83 +4369,83 @@ LABEL_240:
           }
           if ( pKeyValues->m_keyValues.m_nAllocated != 0 )
           {
-            v76 = pKeyValues->m_keyValues.m_pElements;
-            v75 = 24 * v45;
-            if ( *(v76 + v75 + 16) != 0 )
+            v78 = pKeyValues->m_keyValues.m_pElements;
+            v77 = 24 * v47;
+            if ( *(v78 + v77 + 16) != 0 )
               goto LABEL_162;
           }
           else
           {
-            v75 = 24 * v45;
-            v76 = 0;
-            if ( *(v75 + 16) != 0 )
+            v77 = 24 * v47;
+            v78 = 0;
+            if ( *(v77 + 16) != 0 )
               goto LABEL_162;
           }
-          v154 = v75 + v76;
-          v155 = *(v154 + 10);
-          if ( (v155 & 1) != 0 )
-            *(v154 + 10) = v155 & 0xFFFE;
-          *v154 = 0;
-          *(v154 + 8) = 37;
-          *v154 = v42;
+          v156 = v77 + v78;
+          v157 = *(v156 + 10);
+          if ( (v157 & 1) != 0 )
+            *(v156 + 10) = v157 & 0xFFFE;
+          *v156 = 0;
+          *(v156 + 8) = 37;
+          *v156 = v44;
           return;
         case 9:
-          v65 = strtoll(String, 0, 10);
+          v67 = strtoll(String, 0, 10);
           if ( pKeyValues->m_nQueuedForSpawnCount > 0 )
             return;
-          v66 = pKeyValues->m_keyHashes.m_nCount;
-          if ( v66 <= 0 )
+          v68 = pKeyValues->m_keyHashes.m_nCount;
+          if ( v68 <= 0 )
             goto LABEL_222;
-          v67 = pKeyValues->m_keyHashes.m_nAllocated;
-          v68 = 0;
+          v69 = pKeyValues->m_keyHashes.m_nAllocated;
+          v70 = 0;
           while ( 1 )
           {
-            if ( v67 != 0 )
+            if ( v69 != 0 )
             {
-              v69 = (&pKeyValues->m_keyHashes.m_nAllocAllocated + 1);
-              if ( v67 > 9 )
-                v69 = pKeyValues->m_keyHashes.m_pElements;
+              v71 = (&pKeyValues->m_keyHashes.m_nAllocAllocated + 1);
+              if ( v69 > 9 )
+                v71 = pKeyValues->m_keyHashes.m_pElements;
             }
             else
             {
-              v69 = 0;
+              v71 = 0;
             }
-            if ( v9.m_nHashCode == v69[v68] )
+            if ( v9.m_nHashCode == v71[v70] )
               break;
-            if ( v66 <= ++v68 )
+            if ( v68 <= ++v70 )
             {
 LABEL_222:
               CUtlLeanVectorImpl<CUtlLeanVectorFixedGrowableBase<unsigned int,(unsigned short)9,short>,unsigned int,short>::AddToTailGetPtr(&pKeyValues->m_keyHashes);
-              v114 = pKeyValues->m_keyHashes.m_nAllocated;
-              if ( v114 != 0 )
+              v116 = pKeyValues->m_keyHashes.m_nAllocated;
+              if ( v116 != 0 )
               {
-                if ( v114 <= 9 )
-                  v115 = (&pKeyValues->m_keyHashes.m_nAllocAllocated + 1);
+                if ( v116 <= 9 )
+                  v117 = (&pKeyValues->m_keyHashes.m_nAllocAllocated + 1);
                 else
-                  v115 = pKeyValues->m_keyHashes.m_pElements;
+                  v117 = pKeyValues->m_keyHashes.m_pElements;
               }
               else
               {
-                v115 = 0;
+                v117 = 0;
               }
-              v116 = (pKeyValues->m_keyHashes.m_nCount - 1);
-              v115[v116] = v9.m_nHashCode;
+              v118 = (pKeyValues->m_keyHashes.m_nCount - 1);
+              v117[v118] = v9.m_nHashCode;
               CUtlLeanVectorImpl<CUtlLeanVectorBase<CEntityKeyValues::KeyValueInfo_t,short>,CEntityKeyValues::KeyValueInfo_t,short>::AddToTailGetPtr(&pKeyValues->m_keyValues);
               if ( pKeyValues->m_keyValues.m_nAllocated != 0 )
-                v117 = pKeyValues->m_keyValues.m_pElements;
+                v119 = pKeyValues->m_keyValues.m_pElements;
               else
-                v117 = 0;
-              v110 = v116;
-              v118 = &v117[v110];
-              v119 = v118->m_value.m_flags;
-              if ( (v119 & 1) != 0 )
-                v118->m_value.m_flags = v119 & 0xFFFE;
-              v118->m_value.m_type = 26;
-              v118->m_value.m_uint64 = v65;
+                v119 = 0;
+              v112 = v118;
+              v120 = &v119[v112];
+              v121 = v120->m_value.m_flags;
+              if ( (v121 & 1) != 0 )
+                v120->m_value.m_flags = v121 & 0xFFFE;
+              v120->m_value.m_type = 26;
+              v120->m_value.m_uint64 = v67;
               if ( pKeyValues->m_keyValues.m_nAllocated == 0 )
               {
 LABEL_230:
-                v113 = 0;
+                v115 = 0;
                 goto LABEL_221;
               }
               goto LABEL_220;
@@ -4457,271 +4453,271 @@ LABEL_230:
           }
           if ( pKeyValues->m_keyValues.m_nAllocated != 0 )
           {
-            v76 = pKeyValues->m_keyValues.m_pElements;
-            v75 = 24 * v68;
-            if ( *(v76 + v75 + 16) != 0 )
+            v78 = pKeyValues->m_keyValues.m_pElements;
+            v77 = 24 * v70;
+            if ( *(v78 + v77 + 16) != 0 )
               goto LABEL_162;
           }
           else
           {
-            v75 = 24 * v68;
-            v76 = 0;
-            if ( *(v75 + 16) != 0 )
+            v77 = 24 * v70;
+            v78 = 0;
+            if ( *(v77 + 16) != 0 )
               goto LABEL_162;
           }
-          v150 = v75 + v76;
-          v151 = *(v150 + 10);
-          if ( (v151 & 1) != 0 )
-            *(v150 + 10) = v151 & 0xFFFE;
-          *(v150 + 8) = 26;
-          *v150 = v65;
+          v152 = v77 + v78;
+          v153 = *(v152 + 10);
+          if ( (v153 & 1) != 0 )
+            *(v152 + 10) = v153 & 0xFFFE;
+          *(v152 + 8) = 26;
+          *v152 = v67;
           return;
         case 0xA:
-          v60 = strtoull(String, 0, 10);
+          v62 = strtoull(String, 0, 10);
           if ( pKeyValues->m_nQueuedForSpawnCount > 0 )
             return;
-          v61 = pKeyValues->m_keyHashes.m_nCount;
-          if ( v61 <= 0 )
+          v63 = pKeyValues->m_keyHashes.m_nCount;
+          if ( v63 <= 0 )
             goto LABEL_231;
-          v62 = pKeyValues->m_keyHashes.m_nAllocated;
-          v63 = 0;
+          v64 = pKeyValues->m_keyHashes.m_nAllocated;
+          v65 = 0;
           while ( 1 )
           {
-            if ( v62 != 0 )
+            if ( v64 != 0 )
             {
-              v64 = (&pKeyValues->m_keyHashes.m_nAllocAllocated + 1);
-              if ( v62 > 9 )
-                v64 = pKeyValues->m_keyHashes.m_pElements;
+              v66 = (&pKeyValues->m_keyHashes.m_nAllocAllocated + 1);
+              if ( v64 > 9 )
+                v66 = pKeyValues->m_keyHashes.m_pElements;
             }
             else
             {
-              v64 = 0;
+              v66 = 0;
             }
-            if ( v9.m_nHashCode == v64[v63] )
+            if ( v9.m_nHashCode == v66[v65] )
               break;
-            if ( v61 <= ++v63 )
+            if ( v63 <= ++v65 )
             {
 LABEL_231:
               CUtlLeanVectorImpl<CUtlLeanVectorFixedGrowableBase<unsigned int,(unsigned short)9,short>,unsigned int,short>::AddToTailGetPtr(&pKeyValues->m_keyHashes);
-              v120 = pKeyValues->m_keyHashes.m_nAllocated;
-              if ( v120 != 0 )
+              v122 = pKeyValues->m_keyHashes.m_nAllocated;
+              if ( v122 != 0 )
               {
-                if ( v120 <= 9 )
-                  v121 = (&pKeyValues->m_keyHashes.m_nAllocAllocated + 1);
+                if ( v122 <= 9 )
+                  v123 = (&pKeyValues->m_keyHashes.m_nAllocAllocated + 1);
                 else
-                  v121 = pKeyValues->m_keyHashes.m_pElements;
+                  v123 = pKeyValues->m_keyHashes.m_pElements;
               }
               else
               {
-                v121 = 0;
+                v123 = 0;
               }
-              v122 = (pKeyValues->m_keyHashes.m_nCount - 1);
-              v121[v122] = v9.m_nHashCode;
+              v124 = (pKeyValues->m_keyHashes.m_nCount - 1);
+              v123[v124] = v9.m_nHashCode;
               CUtlLeanVectorImpl<CUtlLeanVectorBase<CEntityKeyValues::KeyValueInfo_t,short>,CEntityKeyValues::KeyValueInfo_t,short>::AddToTailGetPtr(&pKeyValues->m_keyValues);
               if ( pKeyValues->m_keyValues.m_nAllocated != 0 )
-                v123 = pKeyValues->m_keyValues.m_pElements;
+                v125 = pKeyValues->m_keyValues.m_pElements;
               else
-                v123 = 0;
-              v110 = v122;
-              v124 = &v123[v110];
-              v125 = v124->m_value.m_flags;
-              if ( (v125 & 1) != 0 )
-                v124->m_value.m_flags = v125 & 0xFFFE;
-              v124->m_value.m_type = 33;
-              v124->m_value.m_uint64 = v60;
+                v125 = 0;
+              v112 = v124;
+              v126 = &v125[v112];
+              v127 = v126->m_value.m_flags;
+              if ( (v127 & 1) != 0 )
+                v126->m_value.m_flags = v127 & 0xFFFE;
+              v126->m_value.m_type = 33;
+              v126->m_value.m_uint64 = v62;
               if ( pKeyValues->m_keyValues.m_nAllocated != 0 )
 LABEL_220:
-                v113 = pKeyValues->m_keyValues.m_pElements;
+                v115 = pKeyValues->m_keyValues.m_pElements;
               else
-                v113 = 0;
+                v115 = 0;
 LABEL_221:
-              v113[v110].m_pAttributeName = 0;
+              v115[v112].m_pAttributeName = 0;
               return;
             }
           }
           if ( pKeyValues->m_keyValues.m_nAllocated != 0 )
           {
-            v76 = pKeyValues->m_keyValues.m_pElements;
-            v75 = 24 * v63;
-            if ( *(v76 + v75 + 16) != 0 )
+            v78 = pKeyValues->m_keyValues.m_pElements;
+            v77 = 24 * v65;
+            if ( *(v78 + v77 + 16) != 0 )
               goto LABEL_162;
           }
           else
           {
-            v75 = 24 * v63;
-            v76 = 0;
-            if ( *(v75 + 16) != 0 )
+            v77 = 24 * v65;
+            v78 = 0;
+            if ( *(v77 + 16) != 0 )
               goto LABEL_162;
           }
-          v148 = v75 + v76;
-          v149 = *(v148 + 10);
-          if ( (v149 & 1) != 0 )
-            *(v148 + 10) = v149 & 0xFFFE;
-          *(v148 + 8) = 33;
-          *v148 = v60;
+          v150 = v77 + v78;
+          v151 = *(v150 + 10);
+          if ( (v151 & 1) != 0 )
+            *(v150 + 10) = v151 & 0xFFFE;
+          *(v150 + 8) = 33;
+          *v150 = v62;
           return;
         case 0xB:
-          v70 = strtod(String, 0);
+          v72 = strtod(String, 0);
           if ( pKeyValues->m_nQueuedForSpawnCount > 0 )
             return;
-          v71 = pKeyValues->m_keyHashes.m_nCount;
-          Float = v70;
-          if ( v71 <= 0 )
+          v73 = pKeyValues->m_keyHashes.m_nCount;
+          Float = v72;
+          if ( v73 <= 0 )
             goto LABEL_259;
-          v72 = pKeyValues->m_keyHashes.m_nAllocated;
-          v73 = 0;
+          v74 = pKeyValues->m_keyHashes.m_nAllocated;
+          v75 = 0;
           while ( 1 )
           {
-            if ( v72 != 0 )
+            if ( v74 != 0 )
             {
-              v74 = (&pKeyValues->m_keyHashes.m_nAllocAllocated + 1);
-              if ( v72 > 9 )
-                v74 = pKeyValues->m_keyHashes.m_pElements;
+              v76 = (&pKeyValues->m_keyHashes.m_nAllocAllocated + 1);
+              if ( v74 > 9 )
+                v76 = pKeyValues->m_keyHashes.m_pElements;
             }
             else
             {
-              v74 = 0;
+              v76 = 0;
             }
-            if ( v9.m_nHashCode == v74[v73] )
+            if ( v9.m_nHashCode == v76[v75] )
               break;
-            if ( v71 <= ++v73 )
+            if ( v73 <= ++v75 )
             {
 LABEL_259:
               hEnumIntrospectionf = Float;
               CUtlLeanVectorImpl<CUtlLeanVectorFixedGrowableBase<unsigned int,(unsigned short)9,short>,unsigned int,short>::AddToTailGetPtr(&pKeyValues->m_keyHashes);
-              v140 = pKeyValues->m_keyHashes.m_nAllocated;
-              if ( v140 != 0 )
+              v142 = pKeyValues->m_keyHashes.m_nAllocated;
+              if ( v142 != 0 )
               {
-                if ( v140 <= 9 )
-                  v141 = (&pKeyValues->m_keyHashes.m_nAllocAllocated + 1);
+                if ( v142 <= 9 )
+                  v143 = (&pKeyValues->m_keyHashes.m_nAllocAllocated + 1);
                 else
-                  v141 = pKeyValues->m_keyHashes.m_pElements;
+                  v143 = pKeyValues->m_keyHashes.m_pElements;
               }
               else
               {
-                v141 = 0;
+                v143 = 0;
               }
-              v142 = (pKeyValues->m_keyHashes.m_nCount - 1);
-              v141[v142] = v9.m_nHashCode;
+              v144 = (pKeyValues->m_keyHashes.m_nCount - 1);
+              v143[v144] = v9.m_nHashCode;
               CUtlLeanVectorImpl<CUtlLeanVectorBase<CEntityKeyValues::KeyValueInfo_t,short>,CEntityKeyValues::KeyValueInfo_t,short>::AddToTailGetPtr(&pKeyValues->m_keyValues);
               if ( pKeyValues->m_keyValues.m_nAllocated != 0 )
-                v143 = pKeyValues->m_keyValues.m_pElements;
+                v145 = pKeyValues->m_keyValues.m_pElements;
               else
-                v143 = 0;
-              v136 = v142;
-              v144 = &v143[v136];
-              v145 = v144->m_value.m_flags;
-              if ( (v145 & 1) != 0 )
-                v144->m_value.m_flags = v145 & 0xFFFE;
-              v144->m_value.m_uint64 = 0;
-              v144->m_value.m_type = 1;
-              v144->m_value.m_float = hEnumIntrospectionf;
+                v145 = 0;
+              v138 = v144;
+              v146 = &v145[v138];
+              v147 = v146->m_value.m_flags;
+              if ( (v147 & 1) != 0 )
+                v146->m_value.m_flags = v147 & 0xFFFE;
+              v146->m_value.m_uint64 = 0;
+              v146->m_value.m_type = 1;
+              v146->m_value.m_float = hEnumIntrospectionf;
               if ( pKeyValues->m_keyValues.m_nAllocated == 0 )
                 goto LABEL_267;
 LABEL_257:
-              v139 = pKeyValues->m_keyValues.m_pElements;
+              v141 = pKeyValues->m_keyValues.m_pElements;
               goto LABEL_258;
             }
           }
           if ( pKeyValues->m_keyValues.m_nAllocated != 0 )
           {
-            v75 = pKeyValues->m_keyValues.m_pElements;
-            v76 = 24 * v73;
-            if ( *(v75 + v76 + 16) != 0 )
+            v77 = pKeyValues->m_keyValues.m_pElements;
+            v78 = 24 * v75;
+            if ( *(v77 + v78 + 16) != 0 )
               goto LABEL_162;
           }
           else
           {
-            v76 = 24 * v73;
-            v75 = 0;
-            if ( *(v76 + 16) != 0 )
+            v78 = 24 * v75;
+            v77 = 0;
+            if ( *(v78 + 16) != 0 )
               goto LABEL_162;
           }
-          v101 = v75 + v76;
+          v103 = v77 + v78;
           goto LABEL_197;
         case 0xC:
-          v37 = strtod(String, 0);
+          v39 = strtod(String, 0);
           if ( pKeyValues->m_nQueuedForSpawnCount > 0 )
             return;
-          v38 = pKeyValues->m_keyHashes.m_nCount;
-          if ( v38 <= 0 )
+          v40 = pKeyValues->m_keyHashes.m_nCount;
+          if ( v40 <= 0 )
             goto LABEL_249;
-          v39 = pKeyValues->m_keyHashes.m_nAllocated;
-          v40 = 0;
+          v41 = pKeyValues->m_keyHashes.m_nAllocated;
+          v42 = 0;
           while ( 1 )
           {
-            if ( v39 != 0 )
+            if ( v41 != 0 )
             {
-              v41 = (&pKeyValues->m_keyHashes.m_nAllocAllocated + 1);
-              if ( v39 > 9 )
-                v41 = pKeyValues->m_keyHashes.m_pElements;
+              v43 = (&pKeyValues->m_keyHashes.m_nAllocAllocated + 1);
+              if ( v41 > 9 )
+                v43 = pKeyValues->m_keyHashes.m_pElements;
             }
             else
             {
-              v41 = 0;
+              v43 = 0;
             }
-            if ( v9.m_nHashCode == v41[v40] )
+            if ( v9.m_nHashCode == v43[v42] )
               break;
-            if ( v38 <= ++v40 )
+            if ( v40 <= ++v42 )
             {
 LABEL_249:
-              hEnumIntrospectione = *&v37;
+              hEnumIntrospectione = *&v39;
               CUtlLeanVectorImpl<CUtlLeanVectorFixedGrowableBase<unsigned int,(unsigned short)9,short>,unsigned int,short>::AddToTailGetPtr(&pKeyValues->m_keyHashes);
-              v132 = pKeyValues->m_keyHashes.m_nAllocated;
-              if ( v132 != 0 )
+              v134 = pKeyValues->m_keyHashes.m_nAllocated;
+              if ( v134 != 0 )
               {
-                if ( v132 <= 9 )
-                  v133 = (&pKeyValues->m_keyHashes.m_nAllocAllocated + 1);
+                if ( v134 <= 9 )
+                  v135 = (&pKeyValues->m_keyHashes.m_nAllocAllocated + 1);
                 else
-                  v133 = pKeyValues->m_keyHashes.m_pElements;
+                  v135 = pKeyValues->m_keyHashes.m_pElements;
               }
               else
               {
-                v133 = 0;
+                v135 = 0;
               }
-              v134 = (pKeyValues->m_keyHashes.m_nCount - 1);
-              v133[v134] = v9.m_nHashCode;
+              v136 = (pKeyValues->m_keyHashes.m_nCount - 1);
+              v135[v136] = v9.m_nHashCode;
               CUtlLeanVectorImpl<CUtlLeanVectorBase<CEntityKeyValues::KeyValueInfo_t,short>,CEntityKeyValues::KeyValueInfo_t,short>::AddToTailGetPtr(&pKeyValues->m_keyValues);
               if ( pKeyValues->m_keyValues.m_nAllocated != 0 )
-                v135 = pKeyValues->m_keyValues.m_pElements;
+                v137 = pKeyValues->m_keyValues.m_pElements;
               else
-                v135 = 0;
-              v136 = v134;
-              v137 = &v135[v136];
-              v138 = v137->m_value.m_flags;
-              if ( (v138 & 1) != 0 )
-                v137->m_value.m_flags = v138 & 0xFFFE;
-              v137->m_value.m_type = 34;
-              v137->m_value.m_uint64 = hEnumIntrospectione;
+                v137 = 0;
+              v138 = v136;
+              v139 = &v137[v138];
+              v140 = v139->m_value.m_flags;
+              if ( (v140 & 1) != 0 )
+                v139->m_value.m_flags = v140 & 0xFFFE;
+              v139->m_value.m_type = 34;
+              v139->m_value.m_uint64 = hEnumIntrospectione;
               if ( pKeyValues->m_keyValues.m_nAllocated != 0 )
                 goto LABEL_257;
 LABEL_267:
-              v139 = 0;
+              v141 = 0;
 LABEL_258:
-              v139[v136].m_pAttributeName = 0;
+              v141[v138].m_pAttributeName = 0;
               return;
             }
           }
           if ( pKeyValues->m_keyValues.m_nAllocated != 0 )
           {
-            v75 = pKeyValues->m_keyValues.m_pElements;
-            v76 = 24 * v40;
-            if ( *(v75 + v76 + 16) != 0 )
+            v77 = pKeyValues->m_keyValues.m_pElements;
+            v78 = 24 * v42;
+            if ( *(v77 + v78 + 16) != 0 )
               goto LABEL_162;
           }
           else
           {
-            v76 = 24 * v40;
-            v75 = 0;
-            if ( *(v76 + 16) != 0 )
+            v78 = 24 * v42;
+            v77 = 0;
+            if ( *(v78 + 16) != 0 )
               goto LABEL_162;
           }
-          v152 = v75 + v76;
-          v153 = *(v152 + 10);
-          if ( (v153 & 1) != 0 )
-            *(v152 + 10) = v153 & 0xFFFE;
-          *(v152 + 8) = 34;
-          *v152 = v37;
+          v154 = v77 + v78;
+          v155 = *(v154 + 10);
+          if ( (v155 & 1) != 0 )
+            *(v154 + 10) = v155 & 0xFFFE;
+          *(v154 + 8) = 34;
+          *v154 = v39;
           return;
         case 0xD:
           if ( V_stricmp_fast(String, "true") != 0 )
@@ -4739,7 +4735,7 @@ LABEL_258:
           if ( LoggingSystem_IsChannelEnabled(LOG_ENTITY_SYSTEM, 4) != 0 )
           {
             *&v_0.x = "entitykeyvalues.cpp";
-            v178 = "ConvertTextDataToNewKeyValues";
+            v180 = "ConvertTextDataToNewKeyValues";
             LODWORD(v_0.z) = 721;
             LoggingSystem_Log(
               LOG_ENTITY_SYSTEM,
@@ -4755,15 +4751,15 @@ LABEL_258:
       && (*(*pFieldType + 48LL))(pFieldType) == 4
       && ((hEnumIntrospectiona = *(pFieldType + 6)) != 0
        || (hEnumIntrospectionk = *(**(pFieldType + 5) + 288LL),
-           v158 = CUtlString::Get(pFieldType + 1),
-           (hEnumIntrospectionk)(*(pFieldType + 5), pFieldType + 48, v158),
+           v160 = CUtlString::Get(pFieldType + 1),
+           (hEnumIntrospectionk)(*(pFieldType + 5), pFieldType + 48, v160),
            (hEnumIntrospectiona = *(pFieldType + 6)) != 0)) )
     {
       if ( CSchemaEnumInfo::FindMemberByName(hEnumIntrospectiona, String) == 0 )
       {
         if ( (*String - 48) <= 9u
-          && (v161 = strtol(String, 0, 10),
-              (MemberByValue = CSchemaEnumInfo::FindMemberByValue(hEnumIntrospectiona, v161)) != 0) )
+          && (v163 = strtol(String, 0, 10),
+              (MemberByValue = CSchemaEnumInfo::FindMemberByValue(hEnumIntrospectiona, v163)) != 0) )
         {
           String = MemberByValue->m_Name.m_pImplChars;
         }
@@ -4827,23 +4823,23 @@ LABEL_258:
         else if ( pFieldType == SchemaTypeOf<Color>() || pFieldType == SchemaTypeOf<Color>() )
         {
           v = 0;
-          V_StringToColor(&v, String);
+          V_StringToColor(&v, String, v12, v13);
           *pResourceName = v;
           CEntityKeyValues::SetValue<Color>(pKeyValues, v9, pResourceName);
         }
         else if ( LoggingSystem_IsChannelEnabled(LOG_ENTITY_SYSTEM, 4) != 0 )
         {
-          v12 = CUtlString::Get(pFieldType + 1);
+          v14 = CUtlString::Get(pFieldType + 1);
           LODWORD(v_0.z) = 826;
           *&v_0.x = "entitykeyvalues.cpp";
-          v178 = "ConvertTextDataToNewKeyValues";
+          v180 = "ConvertTextDataToNewKeyValues";
           LoggingSystem_Log(
             LOG_ENTITY_SYSTEM,
             LoggingSeverity_t::LS_ERROR,
             &v_0,
             "Unsupported field type for conversion from old KeyValues, field %s of type %s\n",
             v8,
-            v12);
+            v14);
         }
         return;
       }
@@ -4857,53 +4853,53 @@ LABEL_158:
     goto LABEL_158;
   if ( pKeyValues->m_nQueuedForSpawnCount <= 0 )
   {
-    v33 = pKeyValues->m_keyHashes.m_nCount;
-    if ( v33 <= 0 )
+    v35 = pKeyValues->m_keyHashes.m_nCount;
+    if ( v35 <= 0 )
     {
 LABEL_159:
       CEntityKeyValues::AddKeyValue<char [260]>(pKeyValues, v9, pResourceName, 0);
       return;
     }
-    v34 = pKeyValues->m_keyHashes.m_nAllocated;
-    v35 = 0;
+    v36 = pKeyValues->m_keyHashes.m_nAllocated;
+    v37 = 0;
     while ( 1 )
     {
-      if ( v34 != 0 )
+      if ( v36 != 0 )
       {
-        v36 = (&pKeyValues->m_keyHashes.m_nAllocAllocated + 1);
-        if ( v34 > 9 )
-          v36 = pKeyValues->m_keyHashes.m_pElements;
+        v38 = (&pKeyValues->m_keyHashes.m_nAllocAllocated + 1);
+        if ( v36 > 9 )
+          v38 = pKeyValues->m_keyHashes.m_pElements;
       }
       else
       {
-        v36 = 0;
+        v38 = 0;
       }
-      if ( v9.m_nHashCode == v36[v35] )
+      if ( v9.m_nHashCode == v38[v37] )
         break;
-      if ( v33 <= ++v35 )
+      if ( v35 <= ++v37 )
         goto LABEL_159;
     }
     if ( pKeyValues->m_keyValues.m_nAllocated != 0 )
     {
-      v75 = pKeyValues->m_keyValues.m_pElements;
-      v76 = 24 * v35;
-      v77 = (v75 + v76);
-      if ( *(v75 + v76 + 16) != 0 )
+      v77 = pKeyValues->m_keyValues.m_pElements;
+      v78 = 24 * v37;
+      v79 = (v77 + v78);
+      if ( *(v77 + v78 + 16) != 0 )
       {
 LABEL_162:
-        Warning("Attempted to set attribute %s as if it was a non-attribute key!\n", *(v76 + v75 + 16));
+        Warning("Attempted to set attribute %s as if it was a non-attribute key!\n", *(v78 + v77 + 16));
         return;
       }
     }
     else
     {
-      v76 = 24 * v35;
-      v75 = 0;
-      v77 = v76;
-      if ( *(v76 + 16) != 0 )
+      v78 = 24 * v37;
+      v77 = 0;
+      v79 = v78;
+      if ( *(v78 + 16) != 0 )
         goto LABEL_162;
     }
-    CVariantBase<CEntityVariantAllocator>::CopyData(v77, pResourceName, v75);
+    CVariantBase<CEntityVariantAllocator>::CopyData(v79, pResourceName, v77);
   }
 }
 

@@ -169,7 +169,7 @@ void __fastcall CEconSchemaSymbol::CEconSchemaSymbol(CEconSchemaSymbol *const th
 {
   CUtlSymbolTableLarge_CI *v4; // r13
   int v5; // r15d
-  UtlSymLargeId_t m_String; // rax
+  char *m_String; // rax
   int m_Size; // r9d
   signed int v8; // edx
   CUtlSymbolTableLargeBase<CNonThreadsafeTree<true>,true,2048ul>::StringPool_t **m_pMemory; // rsi
@@ -192,7 +192,7 @@ void __fastcall CEconSchemaSymbol::CEconSchemaSymbol(CEconSchemaSymbol *const th
   unsigned int v26; // eax
   __int64 v27; // r14
   UtlRBTreeNode_t<CUtlSymbolTableLargeBaseTreeEntry_t*,long long int> *v28; // rdi
-  UtlSymLargeId_t v29; // [rsp+10h] [rbp-40h]
+  char *v29; // [rsp+10h] [rbp-40h] BYREF
   CUtlSymbolTableLargeBase<CNonThreadsafeTree<true>,true,2048ul>::StringPool_t *src[7]; // [rsp+18h] [rbp-38h] BYREF
 
   this->u.m_Id = 0;
@@ -206,7 +206,7 @@ void __fastcall CEconSchemaSymbol::CEconSchemaSymbol(CEconSchemaSymbol *const th
   m_String = 0;
   if ( v5 > 0 && *pString != 0 )
   {
-    CUtlSymbolTableLargeBase<CNonThreadsafeTree<true>,true,2048ul>::Find(v4, pString, v5);
+    CUtlSymbolTableLargeBase<CNonThreadsafeTree<true>,true,2048ul>::Find(&v29, v4, pString, v5);
     m_String = v29;
     if ( v29 == 0 )
     {
@@ -333,7 +333,7 @@ CEconSchemaSymbol *__fastcall CEconSchemaSymbol::operator=(CEconSchemaSymbol *co
 {
   CUtlSymbolTableLarge_CI *v4; // r13
   int v5; // r15d
-  UtlSymLargeId_t m_String; // rax
+  char *m_String; // rax
   int m_Size; // r9d
   signed int v9; // edx
   CUtlSymbolTableLargeBase<CNonThreadsafeTree<true>,true,2048ul>::StringPool_t **m_pMemory; // rsi
@@ -356,7 +356,7 @@ CEconSchemaSymbol *__fastcall CEconSchemaSymbol::operator=(CEconSchemaSymbol *co
   unsigned int v27; // eax
   __int64 v28; // r14
   UtlRBTreeNode_t<CUtlSymbolTableLargeBaseTreeEntry_t*,long long int> *v29; // rsi
-  UtlSymLargeId_t v30; // [rsp+10h] [rbp-40h]
+  char *v30; // [rsp+10h] [rbp-40h] BYREF
   CUtlSymbolTableLargeBase<CNonThreadsafeTree<true>,true,2048ul>::StringPool_t *src[7]; // [rsp+18h] [rbp-38h] BYREF
 
   v4 = g_pEconSchemaSymbolTable;
@@ -369,7 +369,7 @@ CEconSchemaSymbol *__fastcall CEconSchemaSymbol::operator=(CEconSchemaSymbol *co
   m_String = 0;
   if ( v5 > 0 && *pString != 0 )
   {
-    CUtlSymbolTableLargeBase<CNonThreadsafeTree<true>,true,2048ul>::Find(v4, pString, v5);
+    CUtlSymbolTableLargeBase<CNonThreadsafeTree<true>,true,2048ul>::Find(&v30, v4, pString, v5);
     m_String = v30;
     if ( v30 == 0 )
     {
@@ -577,7 +577,10 @@ bool __fastcall CEconItemQualityDefinition::BInitFromKV(
     Int = -1;
   this->m_nValue = Int;
   Name = KeyValues::GetName(pKVQuality);
-  CUtlSymbolTableLargeBase<CNonThreadsafeTree<true>,true,2048ul>::AddString(&msg, g_pEconSchemaSymbolTable, Name);
+  CUtlSymbolTableLargeBase<CNonThreadsafeTree<true>,true,2048ul>::AddString(
+    &msg.m_pString,
+    g_pEconSchemaSymbolTable,
+    Name);
   v10 = `guard variable for'CEconItemQualityDefinition::BInitFromKV(KeyValues *,CEconItemSchema &,CUtlVector<CUtlString,CUtlMemory<CUtlString,int>> *)::{lambda(char const*)#2}::operator() const(char const*)::s_sym == 0;
   this->m_symName.u.m_Id = msg.m_pString;
   if ( v10
@@ -623,7 +626,10 @@ bool __fastcall CEconItemQualityDefinition::BInitFromKV(
   String = "";
   if ( v14 != 0 )
     String = CKeyValues_Data::Internal_GetString(v14, "", 0, 0);
-  CUtlSymbolTableLargeBase<CNonThreadsafeTree<true>,true,2048ul>::AddString(&msg, g_pEconSchemaSymbolTable, String);
+  CUtlSymbolTableLargeBase<CNonThreadsafeTree<true>,true,2048ul>::AddString(
+    &msg.m_pString,
+    g_pEconSchemaSymbolTable,
+    String);
   v10 = `guard variable for'CEconItemQualityDefinition::BInitFromKV(KeyValues *,CEconItemSchema &,CUtlVector<CUtlString,CUtlMemory<CUtlString,int>> *)::{lambda(char const*)#5}::operator() const(char const*)::s_sym == 0;
   this->m_symHexColor.u.m_Id = msg.m_pString;
   if ( v10
@@ -655,7 +661,10 @@ bool __fastcall CEconItemQualityDefinition::BInitFromKV(
   v18 = "";
   if ( v17 != 0 )
     v18 = CKeyValues_Data::Internal_GetString(v17, "", 0, 0);
-  CUtlSymbolTableLargeBase<CNonThreadsafeTree<true>,true,2048ul>::AddString(&msg, g_pEconSchemaSymbolTable, v18);
+  CUtlSymbolTableLargeBase<CNonThreadsafeTree<true>,true,2048ul>::AddString(
+    &msg.m_pString,
+    g_pEconSchemaSymbolTable,
+    v18);
   v10 = `guard variable for'CEconItemQualityDefinition::BInitFromKV(KeyValues *,CEconItemSchema &,CUtlVector<CUtlString,CUtlMemory<CUtlString,int>> *)::{lambda(char const*)#7}::operator() const(char const*)::s_sym == 0;
   this->m_symDisplayName.u.m_Id = msg.m_pString;
   if ( v10
@@ -782,7 +791,10 @@ bool __fastcall CEconItemRarityDefinition::BInitFromKV(
     Int = -1;
   this->m_nValue = Int;
   Name = KeyValues::GetName(pKVRarity);
-  CUtlSymbolTableLargeBase<CNonThreadsafeTree<true>,true,2048ul>::AddString(&msg, g_pEconSchemaSymbolTable, Name);
+  CUtlSymbolTableLargeBase<CNonThreadsafeTree<true>,true,2048ul>::AddString(
+    &msg.m_pString,
+    g_pEconSchemaSymbolTable,
+    Name);
   v10 = `guard variable for'CEconItemRarityDefinition::BInitFromKV(KeyValues *,CEconItemSchema &,CUtlVector<CUtlString,CUtlMemory<CUtlString,int>> *)::{lambda(char const*)#2}::operator() const(char const*)::s_sym == 0;
   this->m_symName.u.m_Id = msg.m_pString;
   if ( v10
@@ -799,7 +811,10 @@ bool __fastcall CEconItemRarityDefinition::BInitFromKV(
   String = "";
   if ( v11 != 0 )
     String = CKeyValues_Data::Internal_GetString(v11, "", 0, 0);
-  CUtlSymbolTableLargeBase<CNonThreadsafeTree<true>,true,2048ul>::AddString(&msg, g_pEconSchemaSymbolTable, String);
+  CUtlSymbolTableLargeBase<CNonThreadsafeTree<true>,true,2048ul>::AddString(
+    &msg.m_pString,
+    g_pEconSchemaSymbolTable,
+    String);
   v10 = `guard variable for'CEconItemRarityDefinition::BInitFromKV(KeyValues *,CEconItemSchema &,CUtlVector<CUtlString,CUtlMemory<CUtlString,int>> *)::{lambda(char const*)#3}::operator() const(char const*)::s_sym == 0;
   this->m_symLocKey.u.m_Id = msg.m_pString;
   if ( v10
@@ -833,7 +848,10 @@ bool __fastcall CEconItemRarityDefinition::BInitFromKV(
   v17 = "";
   if ( v16 != 0 )
     v17 = CKeyValues_Data::Internal_GetString(v16, "", 0, 0);
-  CUtlSymbolTableLargeBase<CNonThreadsafeTree<true>,true,2048ul>::AddString(&msg, g_pEconSchemaSymbolTable, v17);
+  CUtlSymbolTableLargeBase<CNonThreadsafeTree<true>,true,2048ul>::AddString(
+    &msg.m_pString,
+    g_pEconSchemaSymbolTable,
+    v17);
   v10 = `guard variable for'CEconItemRarityDefinition::BInitFromKV(KeyValues *,CEconItemSchema &,CUtlVector<CUtlString,CUtlMemory<CUtlString,int>> *)::{lambda(char const*)#5}::operator() const(char const*)::s_sym == 0;
   this->m_symLootList.u.m_Id = msg.m_pString;
   if ( v10
@@ -850,7 +868,10 @@ bool __fastcall CEconItemRarityDefinition::BInitFromKV(
   v19 = "";
   if ( v18 != 0 )
     v19 = CKeyValues_Data::Internal_GetString(v18, "", 0, 0);
-  CUtlSymbolTableLargeBase<CNonThreadsafeTree<true>,true,2048ul>::AddString(&msg, g_pEconSchemaSymbolTable, v19);
+  CUtlSymbolTableLargeBase<CNonThreadsafeTree<true>,true,2048ul>::AddString(
+    &msg.m_pString,
+    g_pEconSchemaSymbolTable,
+    v19);
   v10 = `guard variable for'CEconItemRarityDefinition::BInitFromKV(KeyValues *,CEconItemSchema &,CUtlVector<CUtlString,CUtlMemory<CUtlString,int>> *)::{lambda(char const*)#6}::operator() const(char const*)::s_sym == 0;
   this->m_symRecycleLootList.u.m_Id = msg.m_pString;
   if ( v10
@@ -867,7 +888,10 @@ bool __fastcall CEconItemRarityDefinition::BInitFromKV(
   v21 = "";
   if ( v20 != 0 )
     v21 = CKeyValues_Data::Internal_GetString(v20, "", 0, 0);
-  CUtlSymbolTableLargeBase<CNonThreadsafeTree<true>,true,2048ul>::AddString(&msg, g_pEconSchemaSymbolTable, v21);
+  CUtlSymbolTableLargeBase<CNonThreadsafeTree<true>,true,2048ul>::AddString(
+    &msg.m_pString,
+    g_pEconSchemaSymbolTable,
+    v21);
   v10 = `guard variable for'CEconItemRarityDefinition::BInitFromKV(KeyValues *,CEconItemSchema &,CUtlVector<CUtlString,CUtlMemory<CUtlString,int>> *)::{lambda(char const*)#7}::operator() const(char const*)::s_sym == 0;
   this->m_symNextRarity.u.m_Id = msg.m_pString;
   if ( v10
@@ -1056,7 +1080,7 @@ bool __fastcall CEconColorDefinition::BInitFromKV(
   if ( v10 > 0 && *v9 != 0 )
   {
     isLeft = v10;
-    CUtlSymbolTableLargeBase<CNonThreadsafeTree<true>,true,2048ul>::Find(v8, v9, v10);
+    CUtlSymbolTableLargeBase<CNonThreadsafeTree<true>,true,2048ul>::Find(&msg.m_pString, v8, v9, v10);
     m_pString = msg.m_pString;
     v36 = isLeft;
     if ( msg.m_pString == 0 )
@@ -1192,7 +1216,7 @@ LABEL_4:
     goto LABEL_10;
   }
   isLefta = v16;
-  CUtlSymbolTableLargeBase<CNonThreadsafeTree<true>,true,2048ul>::Find(v14, v15, v16);
+  CUtlSymbolTableLargeBase<CNonThreadsafeTree<true>,true,2048ul>::Find(&msg.m_pString, v14, v15, v16);
   m_String = msg.m_pString;
   v54 = isLefta;
   if ( msg.m_pString != 0 )
@@ -1321,7 +1345,10 @@ LABEL_10:
   v20 = "";
   if ( v19 != 0 )
     v20 = CKeyValues_Data::Internal_GetString(v19, "", 0, 0);
-  CUtlSymbolTableLargeBase<CNonThreadsafeTree<true>,true,2048ul>::AddString(&msg, g_pEconSchemaSymbolTable, v20);
+  CUtlSymbolTableLargeBase<CNonThreadsafeTree<true>,true,2048ul>::AddString(
+    &msg.m_pString,
+    g_pEconSchemaSymbolTable,
+    v20);
   v21 = msg.m_pString;
   hexColor = 0;
   v18 = msg.m_pString == 0;
@@ -1421,7 +1448,7 @@ void __fastcall CEconItemSetDefinition::CEconItemSetDefinition(CEconItemSetDefin
 {
   uint16 m_Data; // ax
 
-  this->_vptr_IEconItemSetDefinition = off_47A7410;
+  this->_vptr_IEconItemSetDefinition = off_47A7410;  // vptr: CEconItemSetDefinition
   m_Data = INVALID_ITEM_DEF_INDEX.m_Data;
   this->m_symName.u.m_Id = 0;
   this->m_symLocalizedName.u.m_Id = 0;
@@ -1445,7 +1472,7 @@ void __fastcall CEconItemSetDefinition::CEconItemSetDefinition(
         CEconItemSetDefinition *const this,
         const CEconItemSetDefinition *const that)
 {
-  this->_vptr_IEconItemSetDefinition = off_47A7410;
+  this->_vptr_IEconItemSetDefinition = off_47A7410;  // vptr: CEconItemSetDefinition
   this->m_symName.u.m_Id = 0;
   this->m_symLocalizedName.u.m_Id = 0;
   this->m_symUnlocalizedName.u.m_Id = 0;
@@ -1582,7 +1609,10 @@ bool __fastcall CEconItemSetDefinition::BInitFromKV(
   CUtlString msg; // [rsp+50h] [rbp-40h] BYREF
 
   Name = KeyValues::GetName(pKVItemSet);
-  CUtlSymbolTableLargeBase<CNonThreadsafeTree<true>,true,2048ul>::AddString(&msg, g_pEconSchemaSymbolTable, Name);
+  CUtlSymbolTableLargeBase<CNonThreadsafeTree<true>,true,2048ul>::AddString(
+    &msg.m_pString,
+    g_pEconSchemaSymbolTable,
+    Name);
   v7 = `guard variable for'CEconItemSetDefinition::BInitFromKV(KeyValues *,CEconItemSchema &,CUtlVector<CUtlString,CUtlMemory<CUtlString,int>> *)::{lambda(char const*)#1}::operator() const(char const*)::s_sym == 0;
   this->m_symName.u.m_Id = msg.m_pString;
   if ( v7
@@ -1599,7 +1629,10 @@ bool __fastcall CEconItemSetDefinition::BInitFromKV(
   String = 0;
   if ( Key != 0 )
     String = CKeyValues_Data::Internal_GetString(Key, 0, 0, 0);
-  CUtlSymbolTableLargeBase<CNonThreadsafeTree<true>,true,2048ul>::AddString(&msg, g_pEconSchemaSymbolTable, String);
+  CUtlSymbolTableLargeBase<CNonThreadsafeTree<true>,true,2048ul>::AddString(
+    &msg.m_pString,
+    g_pEconSchemaSymbolTable,
+    String);
   v7 = `guard variable for'CEconItemSetDefinition::BInitFromKV(KeyValues *,CEconItemSchema &,CUtlVector<CUtlString,CUtlMemory<CUtlString,int>> *)::{lambda(char const*)#2}::operator() const(char const*)::s_sym == 0;
   this->m_symLocalizedName.u.m_Id = msg.m_pString;
   if ( v7
@@ -1616,7 +1649,10 @@ bool __fastcall CEconItemSetDefinition::BInitFromKV(
   v11 = 0;
   if ( v10 != 0 )
     v11 = CKeyValues_Data::Internal_GetString(v10, 0, 0, 0);
-  CUtlSymbolTableLargeBase<CNonThreadsafeTree<true>,true,2048ul>::AddString(&msg, g_pEconSchemaSymbolTable, v11);
+  CUtlSymbolTableLargeBase<CNonThreadsafeTree<true>,true,2048ul>::AddString(
+    &msg.m_pString,
+    g_pEconSchemaSymbolTable,
+    v11);
   v7 = `guard variable for'CEconItemSetDefinition::BInitFromKV(KeyValues *,CEconItemSchema &,CUtlVector<CUtlString,CUtlMemory<CUtlString,int>> *)::{lambda(char const*)#3}::operator() const(char const*)::s_sym == 0;
   this->m_symUnlocalizedName.u.m_Id = msg.m_pString;
   if ( v7
@@ -1783,7 +1819,7 @@ LABEL_43:
         v35 = v33;
         this->m_iAttributes.m_Size = v34 + 1;
         pAttrDefc = &this->m_iAttributes.m_Memory.m_pMemory[v35];
-        LOWORD(pAttrDefc->_vptr_IEconItemAttributeDefinition) = (*AttributeDefinitionByName->_vptr_IEconItemAttributeDefinition)(AttributeDefinitionByName);
+        LOWORD(pAttrDefc->_vptr_IEconItemAttributeDefinition) = AttributeDefinitionByName->GetDefinitionIndex();
         v36 = &this->m_iAttributes.m_Memory.m_pMemory[v35];
         if ( `guard variable for'CEconItemSetDefinition::BInitFromKV(KeyValues *,CEconItemSchema &,CUtlVector<CUtlString,CUtlMemory<CUtlString,int>> *)::{lambda(char const*)#7}::operator() const(char const*)::s_sym == 0
           && __cxa_guard_acquire(&`guard variable for'CEconItemSetDefinition::BInitFromKV(KeyValues *,CEconItemSchema &,CUtlVector<CUtlString,CUtlMemory<CUtlString,int>> *)::{lambda(char const*)#7}::operator() const(char const*)::s_sym) != 0 )
@@ -1888,7 +1924,7 @@ LABEL_68:
                &this->m_iItemDefs,
                &msg) != -1 )
         {
-          this->m_iBundleItemDef.m_Data = (*v39->_vptr_IEconItemDefinition)(v39);
+          this->m_iBundleItemDef.m_Data = v39->GetDefinitionIndex();
           KeyValues::SetString(pKVItemSet, "store_bundle", v39->m_symDefinitionName.u.m_pAsString);
           v44 = "";
           if ( this->m_symName.u.m_Id != 0 )
@@ -1985,7 +2021,7 @@ bool __fastcall CEconItemSetDefinition::IsTestItemSet(const CEconItemSetDefiniti
 // callers: CEconItemSchema::GetLootListIndex, CUtlRBTree<CUtlMap<char const*, CEconLootListDefinition, int, bool (*)(char const* const&, char const* const&)>::Node_t, int, CUtlMap<char const*, CEconLootListDefinition, int, bool (*)(char const* const&, char const* const&)>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<char const*, CEconLootListDefinition, int, bool (*)(char const* const&, char const* const&)>::Node_t, int>, int> >::NewNode, CUtlDict<CEconLootListDefinition, int>::Insert, CEconItemSchema::GetLootListByName, CEconItemSchema::BInitLootLists
 void __fastcall CEconLootListDefinition::CEconLootListDefinition(CEconLootListDefinition *const this)
 {
-  this->_vptr_IEconLootListDefinition = off_47A7470;
+  this->_vptr_IEconLootListDefinition = off_47A7470;  // vptr: CEconLootListDefinition
   this->m_AdditionalDrops.m_Size = 0;
   this->m_AdditionalDrops.m_Memory.m_pMemory = 0;
   this->m_AdditionalDrops.m_Memory.m_nAllocationCount = 0;
@@ -2029,7 +2065,7 @@ void __fastcall CEconLootListDefinition::CEconLootListDefinition(
         CEconLootListDefinition *const this,
         const CEconLootListDefinition *const that)
 {
-  this->_vptr_IEconLootListDefinition = off_47A7470;
+  this->_vptr_IEconLootListDefinition = off_47A7470;  // vptr: CEconLootListDefinition
   this->m_AdditionalDrops.m_Size = 0;
   this->m_AdditionalDrops.m_Memory.m_pMemory = 0;
   this->m_AdditionalDrops.m_Memory.m_nAllocationCount = 0;
@@ -2064,7 +2100,7 @@ void __fastcall CEconLootListDefinition::~CEconLootListDefinition(CEconLootListD
   bool v4; // zf
 
   v1 = 0;
-  this->_vptr_IEconLootListDefinition = off_47A7470;
+  this->_vptr_IEconLootListDefinition = off_47A7470;  // vptr: CEconLootListDefinition
   do
   {
     v3 = this->m_pEscalatingChanceDrops[v1];
@@ -2154,7 +2190,7 @@ CEconLootListDefinition *__fastcall CEconLootListDefinition::operator=(
   unsigned __int64 v21; // rdx
   int v23; // [rsp+Ch] [rbp-44h]
   int v24; // [rsp+Ch] [rbp-44h]
-  __int64 v25[8]; // [rsp+10h] [rbp-40h] BYREF
+  char *v25[8]; // [rsp+10h] [rbp-40h] BYREF
 
   p_m_iItemDefs = &this->m_iItemDefs;
   *&p_m_iItemDefs[-2].m_Memory.m_nAllocationCount = other->m_symName.u.m_Id;
@@ -2345,27 +2381,27 @@ bool __fastcall CEconLootListDefinition::BInitFromKV(
   int v71; // eax
   float *v72; // rax
   unsigned int v73; // eax
-  __int64 v74; // rsi
-  __int64 v75; // r13
-  int v76; // eax
-  CUtlVector<unsigned int,CUtlMemory<unsigned int,int> > *v77; // r12
-  int v78; // r13d
-  unsigned __int64 v79; // rax
-  int v80; // r13d
-  unsigned __int64 v81; // rax
-  CUtlSymbolTableLargeBase<CNonThreadsafeTree<true>,true,2048ul> *v82; // rsi
-  __int64 v83; // r13
-  int v84; // r12d
-  char *v85; // rsi
-  __int64 v86; // r13
-  int v87; // r12d
-  char *v88; // rsi
+  __int64 v74; // r13
+  int v75; // eax
+  CUtlVector<unsigned int,CUtlMemory<unsigned int,int> > *v76; // r12
+  int v77; // r13d
+  unsigned __int64 v78; // rax
+  int v79; // r13d
+  unsigned __int64 v80; // rax
+  CUtlSymbolTableLargeBase<CNonThreadsafeTree<true>,true,2048ul> *v81; // rsi
+  __int64 v82; // r13
+  int v83; // r12d
+  char *v84; // rsi
+  __int64 v85; // r13
+  int v86; // r12d
+  char *v87; // rsi
+  const char *v88; // rdx
   const char *v89; // rdx
-  const char *v90; // rdx
-  unsigned __int16 (__fastcall ***v91)(_QWORD); // rax
+  unsigned __int16 (__fastcall ***v90)(_QWORD); // rax
   const char *m_pAsString; // rdx
-  const char *v93; // rdx
-  double v94; // xmm0_8
+  const char *v92; // rdx
+  double v93; // xmm0_8
+  const char *v94; // rdx
   const char *v95; // rdx
   const char *v96; // rdx
   const char *v97; // rdx
@@ -2377,7 +2413,6 @@ bool __fastcall CEconLootListDefinition::BInitFromKV(
   const char *v103; // rdx
   const char *v104; // rdx
   const char *v105; // rdx
-  const char *v106; // rdx
   const char *pszTreasureRarityOverride; // [rsp+8h] [rbp-138h]
   int pszTreasureRarityOverridea; // [rsp+8h] [rbp-138h]
   bool bReplaceOriginalDrop; // [rsp+10h] [rbp-130h]
@@ -2393,16 +2428,19 @@ bool __fastcall CEconLootListDefinition::BInitFromKV(
   float fItemWeighta; // [rsp+68h] [rbp-D8h]
   unsigned int fItemWeightb; // [rsp+68h] [rbp-D8h]
   float fItemWeightc; // [rsp+68h] [rbp-D8h]
-  __int64 v124; // [rsp+70h] [rbp-D0h] BYREF
-  unsigned int *v125; // [rsp+80h] [rbp-C0h] BYREF
+  char *v123; // [rsp+70h] [rbp-D0h] BYREF
+  char *v124; // [rsp+80h] [rbp-C0h] BYREF
   CUtlStringList lstOpened; // [rsp+90h] [rbp-B0h] BYREF
   CUtlStringList lstChances; // [rsp+B0h] [rbp-90h] BYREF
   CUtlVector<unsigned int,CUtlMemory<unsigned int,int> > vecOpened; // [rsp+D0h] [rbp-70h] BYREF
   CUtlString msg; // [rsp+F0h] [rbp-50h] BYREF
-  CUtlMemory<float,int> v130[4]; // [rsp+F8h] [rbp-48h] BYREF
+  CUtlMemory<float,int> v129[4]; // [rsp+F8h] [rbp-48h] BYREF
 
   Name = KeyValues::GetName(pKVLootList);
-  CUtlSymbolTableLargeBase<CNonThreadsafeTree<true>,true,2048ul>::AddString(&msg, g_pEconSchemaSymbolTable, Name);
+  CUtlSymbolTableLargeBase<CNonThreadsafeTree<true>,true,2048ul>::AddString(
+    &msg.m_pString,
+    g_pEconSchemaSymbolTable,
+    Name);
   m_pString = msg.m_pString;
   this->m_unHeroID = 0;
   this->m_bServerList = bServerList;
@@ -2451,13 +2489,22 @@ bool __fastcall CEconLootListDefinition::BInitFromKV(
     if ( strcmp(v11, "treasure_settings") == 0 )
     {
       String = KeyValues::GetString(FirstSubKey, "treasure_display_override", 0, 0, 0);
-      CUtlSymbolTableLargeBase<CNonThreadsafeTree<true>,true,2048ul>::AddString(&msg, g_pEconSchemaSymbolTable, String);
+      CUtlSymbolTableLargeBase<CNonThreadsafeTree<true>,true,2048ul>::AddString(
+        &msg.m_pString,
+        g_pEconSchemaSymbolTable,
+        String);
       this->m_symTreasureDisplayOverride.u.m_Id = msg.m_pString;
       v24 = KeyValues::GetString(FirstSubKey, "treasure_rarity_override", 0, 0, 0);
-      CUtlSymbolTableLargeBase<CNonThreadsafeTree<true>,true,2048ul>::AddString(&msg, g_pEconSchemaSymbolTable, v24);
+      CUtlSymbolTableLargeBase<CNonThreadsafeTree<true>,true,2048ul>::AddString(
+        &msg.m_pString,
+        g_pEconSchemaSymbolTable,
+        v24);
       this->m_symTreasureRarityOverride.u.m_Id = msg.m_pString;
       v25 = KeyValues::GetString(FirstSubKey, "treasure_class_override", 0, 0, 0);
-      CUtlSymbolTableLargeBase<CNonThreadsafeTree<true>,true,2048ul>::AddString(&msg, g_pEconSchemaSymbolTable, v25);
+      CUtlSymbolTableLargeBase<CNonThreadsafeTree<true>,true,2048ul>::AddString(
+        &msg.m_pString,
+        g_pEconSchemaSymbolTable,
+        v25);
       this->m_symTreasureClassOverride.u.m_Id = msg.m_pString;
       goto LABEL_4;
     }
@@ -2598,10 +2645,10 @@ bool __fastcall CEconLootListDefinition::BInitFromKV(
       {
         v27 = this->m_symName.u.m_Id == 0;
         msg.m_pString = 0;
-        v99 = "";
+        v98 = "";
         if ( !v27 )
-          v99 = this->m_symName.u.m_pAsString;
-        CUtlString::Format(&msg, "Loot list %s: Missing \"additional_drop\" loot list or item name", v99);
+          v98 = this->m_symName.u.m_pAsString;
+        CUtlString::Format(&msg, "Loot list %s: Missing \"additional_drop\" loot list or item name", v98);
         if ( pVecErrors != 0 )
           CUtlVectorBase<CUtlString,CUtlMemory<CUtlString,int>>::AddToTail(pVecErrors, &msg);
         if ( msg.m_pString != 0 )
@@ -2614,10 +2661,10 @@ bool __fastcall CEconLootListDefinition::BInitFromKV(
         {
           v27 = this->m_symName.u.m_Id == 0;
           msg.m_pString = 0;
-          v98 = "";
+          v97 = "";
           if ( !v27 )
-            v98 = this->m_symName.u.m_pAsString;
-          CUtlString::Format(&msg, "Loot list %s: Specified both an item (%s) and a loot list (%s)", v98, v43, v41);
+            v97 = this->m_symName.u.m_pAsString;
+          CUtlString::Format(&msg, "Loot list %s: Specified both an item (%s) and a loot list (%s)", v97, v43, v41);
           if ( pVecErrors != 0 )
             CUtlVectorBase<CUtlString,CUtlMemory<CUtlString,int>>::AddToTail(pVecErrors, &msg);
           if ( msg.m_pString != 0 )
@@ -2646,10 +2693,10 @@ bool __fastcall CEconLootListDefinition::BInitFromKV(
         {
           v27 = this->m_symName.u.m_Id == 0;
           msg.m_pString = 0;
-          v97 = "";
+          v96 = "";
           if ( !v27 )
-            v97 = this->m_symName.u.m_pAsString;
-          CUtlString::Format(&msg, "Loot list %s: Invalid \"additional_drop\" loot list \"%s\"", v97, v41);
+            v96 = this->m_symName.u.m_pAsString;
+          CUtlString::Format(&msg, "Loot list %s: Invalid \"additional_drop\" loot list \"%s\"", v96, v41);
           if ( pVecErrors != 0 )
             CUtlVectorBase<CUtlString,CUtlMemory<CUtlString,int>>::AddToTail(pVecErrors, &msg);
           if ( msg.m_pString != 0 )
@@ -2657,19 +2704,28 @@ bool __fastcall CEconLootListDefinition::BInitFromKV(
           return 0;
         }
 LABEL_96:
-        CUtlSymbolTableLargeBase<CNonThreadsafeTree<true>,true,2048ul>::AddString(&msg, g_pEconSchemaSymbolTable, v41);
+        CUtlSymbolTableLargeBase<CNonThreadsafeTree<true>,true,2048ul>::AddString(
+          &msg.m_pString,
+          g_pEconSchemaSymbolTable,
+          v41);
         v50 = msg.m_pString;
-        CUtlSymbolTableLargeBase<CNonThreadsafeTree<true>,true,2048ul>::AddString(&msg, g_pEconSchemaSymbolTable, v43);
+        CUtlSymbolTableLargeBase<CNonThreadsafeTree<true>,true,2048ul>::AddString(
+          &msg.m_pString,
+          g_pEconSchemaSymbolTable,
+          v43);
         v51 = msg.m_pString;
-        CUtlSymbolTableLargeBase<CNonThreadsafeTree<true>,true,2048ul>::AddString(&msg, g_pEconSchemaSymbolTable, v46);
+        CUtlSymbolTableLargeBase<CNonThreadsafeTree<true>,true,2048ul>::AddString(
+          &msg.m_pString,
+          g_pEconSchemaSymbolTable,
+          v46);
         v52 = msg.m_pString;
         CUtlSymbolTableLargeBase<CNonThreadsafeTree<true>,true,2048ul>::AddString(
-          &msg,
+          &msg.m_pString,
           g_pEconSchemaSymbolTable,
           pKVListItema);
         pKVListItemb = msg.m_pString;
         CUtlSymbolTableLargeBase<CNonThreadsafeTree<true>,true,2048ul>::AddString(
-          &msg,
+          &msg.m_pString,
           g_pEconSchemaSymbolTable,
           pszItem);
         m_Size = this->m_AdditionalDrops.m_Size;
@@ -2736,31 +2792,31 @@ LABEL_96:
           }
           else
           {
-            v91 = (*(pschema->_vptr_IEconItemSchema + 41))(pschema, v12);
-            if ( v91 == 0 )
+            v90 = (*(pschema->_vptr_IEconItemSchema + 41))(pschema, v12);
+            if ( v90 == 0 )
             {
               v27 = this->m_symName.u.m_Id == 0;
               msg.m_pString = 0;
-              v100 = "";
+              v99 = "";
               if ( !v27 )
-                v100 = this->m_symName.u.m_pAsString;
-              CUtlString::Format(&msg, "Loot list %s: Item definition \"%s\" was not found", v100, v12);
+                v99 = this->m_symName.u.m_pAsString;
+              CUtlString::Format(&msg, "Loot list %s: Item definition \"%s\" was not found", v99, v12);
               if ( pVecErrors != 0 )
                 CUtlVectorBase<CUtlString,CUtlMemory<CUtlString,int>>::AddToTail(pVecErrors, &msg);
               if ( msg.m_pString != 0 )
                 goto LABEL_301;
               return 0;
             }
-            v15 = (**v91)(v91);
+            v15 = (**v90)(v90);
           }
           if ( v15 > 0 && CEconItemSchema::GetItemDefinitionMutable(pschema, v15, 0) == 0 )
           {
             v27 = this->m_symName.u.m_Id == 0;
             msg.m_pString = 0;
-            v96 = "";
+            v95 = "";
             if ( !v27 )
-              v96 = this->m_symName.u.m_pAsString;
-            CUtlString::Format(&msg, "Loot list %s: Item definition index \"%s\" (%d) was not found", v96, v12, v15);
+              v95 = this->m_symName.u.m_pAsString;
+            CUtlString::Format(&msg, "Loot list %s: Item definition index \"%s\" (%d) was not found", v95, v12, v15);
             if ( pVecErrors != 0 )
               CUtlVectorBase<CUtlString,CUtlMemory<CUtlString,int>>::AddToTail(pVecErrors, &msg);
             if ( msg.m_pString != 0 )
@@ -2783,17 +2839,17 @@ LABEL_96:
           {
             v27 = this->m_symName.u.m_Id == 0;
             msg.m_pString = 0;
-            v94 = Float;
-            v95 = "";
+            v93 = Float;
+            v94 = "";
             if ( !v27 )
-              v95 = this->m_symName.u.m_pAsString;
+              v94 = this->m_symName.u.m_pAsString;
             CUtlString::Format(
               &msg,
               "Loot list %s: Item definition index \"%s\" (%d) has invalid weight %.2f",
-              v95,
+              v94,
               v12,
               v15,
-              v94);
+              v93);
             if ( pVecErrors != 0 )
               CUtlVectorBase<CUtlString,CUtlMemory<CUtlString,int>>::AddToTail(pVecErrors, &msg);
             if ( msg.m_pString != 0 )
@@ -2901,10 +2957,10 @@ LABEL_96:
         {
           v27 = this->m_symName.u.m_Id == 0;
           msg.m_pString = 0;
-          v90 = "";
+          v89 = "";
           if ( !v27 )
-            v90 = this->m_symName.u.m_pAsString;
-          CUtlString::Format(&msg, "Loot list %s: Invalid \"escalating_chance_drop\" slot name!", v90);
+            v89 = this->m_symName.u.m_pAsString;
+          CUtlString::Format(&msg, "Loot list %s: Invalid \"escalating_chance_drop\" slot name!", v89);
           if ( pVecErrors != 0 )
             CUtlVectorBase<CUtlString,CUtlMemory<CUtlString,int>>::AddToTail(pVecErrors, &msg);
           if ( msg.m_pString != 0 )
@@ -2917,10 +2973,10 @@ LABEL_96:
       {
         v27 = this->m_symName.u.m_Id == 0;
         msg.m_pString = 0;
-        v106 = "";
+        v105 = "";
         if ( !v27 )
-          v106 = this->m_symName.u.m_pAsString;
-        CUtlString::Format(&msg, "Loot list %s: Missing \"escalating_chance_drop\" item name", v106);
+          v105 = this->m_symName.u.m_pAsString;
+        CUtlString::Format(&msg, "Loot list %s: Missing \"escalating_chance_drop\" item name", v105);
         if ( pVecErrors != 0 )
           CUtlVectorBase<CUtlString,CUtlMemory<CUtlString,int>>::AddToTail(pVecErrors, &msg);
         if ( msg.m_pString != 0 )
@@ -2931,10 +2987,10 @@ LABEL_96:
       {
         v27 = this->m_symName.u.m_Id == 0;
         msg.m_pString = 0;
-        v105 = "";
+        v104 = "";
         if ( !v27 )
-          v105 = this->m_symName.u.m_pAsString;
-        CUtlString::Format(&msg, "Loot list %s: Invalid \"escalating_chance_drop\" item \"%s\"", v105, pszItema);
+          v104 = this->m_symName.u.m_pAsString;
+        CUtlString::Format(&msg, "Loot list %s: Invalid \"escalating_chance_drop\" item \"%s\"", v104, pszItema);
         if ( pVecErrors != 0 )
           CUtlVectorBase<CUtlString,CUtlMemory<CUtlString,int>>::AddToTail(pVecErrors, &msg);
         if ( msg.m_pString != 0 )
@@ -2946,13 +3002,13 @@ LABEL_96:
       {
         v27 = this->m_symName.u.m_Id == 0;
         msg.m_pString = 0;
-        v104 = "";
+        v103 = "";
         if ( !v27 )
-          v104 = this->m_symName.u.m_pAsString;
+          v103 = this->m_symName.u.m_pAsString;
         CUtlString::Format(
           &msg,
           "Loot list %s: Multiple \"escalating_chance_drop\" blocks in the same slot not supported!",
-          v104);
+          v103);
         if ( pVecErrors != 0 )
           CUtlVectorBase<CUtlString,CUtlMemory<CUtlString,int>>::AddToTail(pVecErrors, &msg);
         if ( msg.m_pString != 0 )
@@ -2973,10 +3029,10 @@ LABEL_96:
       {
         v27 = this->m_symName.u.m_Id == 0;
         msg.m_pString = 0;
-        v103 = "";
+        v102 = "";
         if ( !v27 )
-          v103 = this->m_symName.u.m_pAsString;
-        CUtlString::Format(&msg, "Loot list %s: Invalid \"escalating_chance_drop\" empty \"opened\" block", v103);
+          v102 = this->m_symName.u.m_pAsString;
+        CUtlString::Format(&msg, "Loot list %s: Invalid \"escalating_chance_drop\" empty \"opened\" block", v102);
         if ( pVecErrors != 0 )
           CUtlVectorBase<CUtlString,CUtlMemory<CUtlString,int>>::AddToTail(pVecErrors, &msg);
         if ( msg.m_pString != 0 )
@@ -2993,10 +3049,10 @@ LABEL_271:
       {
         v27 = this->m_symName.u.m_Id == 0;
         msg.m_pString = 0;
-        v102 = "";
+        v101 = "";
         if ( !v27 )
-          v102 = this->m_symName.u.m_pAsString;
-        CUtlString::Format(&msg, "Loot list %s: Invalid \"escalating_chance_drop\" empty \"chances\" block", v102);
+          v101 = this->m_symName.u.m_pAsString;
+        CUtlString::Format(&msg, "Loot list %s: Invalid \"escalating_chance_drop\" empty \"chances\" block", v101);
         if ( pVecErrors != 0 )
           CUtlVectorBase<CUtlString,CUtlMemory<CUtlString,int>>::AddToTail(pVecErrors, &msg);
         if ( msg.m_pString != 0 )
@@ -3007,13 +3063,13 @@ LABEL_271:
       {
         v27 = this->m_symName.u.m_Id == 0;
         msg.m_pString = 0;
-        v101 = "";
+        v100 = "";
         if ( !v27 )
-          v101 = this->m_symName.u.m_pAsString;
+          v100 = this->m_symName.u.m_pAsString;
         CUtlString::Format(
           &msg,
           "Loot list %s: Invalid \"escalating_chance_drop\" mismatched size on \"opened\" and \"chances\" blocks",
-          v101);
+          v100);
         if ( pVecErrors != 0 )
           CUtlVectorBase<CUtlString,CUtlMemory<CUtlString,int>>::AddToTail(pVecErrors, &msg);
         if ( msg.m_pString != 0 )
@@ -3025,9 +3081,9 @@ LABEL_271:
       vecOpened.m_Memory.m_nAllocationCount = 0;
       vecOpened.m_Memory.m_nGrowSize = 0;
       LODWORD(msg.m_pString) = 0;
-      v130[0].m_pMemory = 0;
-      v130[0].m_nAllocationCount = 0;
-      v130[0].m_nGrowSize = 0;
+      v129[0].m_pMemory = 0;
+      v129[0].m_nAllocationCount = 0;
+      v129[0].m_nGrowSize = 0;
       if ( lstOpened.m_Size > 0 )
       {
         v66 = 0;
@@ -3035,29 +3091,29 @@ LABEL_271:
         do
         {
           v73 = V_atoi(lstOpened.m_Memory.m_pMemory[v66]);
-          v75 = vecOpened.m_Size;
+          v74 = vecOpened.m_Size;
           fItemWeightb = v73;
-          v76 = vecOpened.m_Size;
+          v75 = vecOpened.m_Size;
           if ( vecOpened.m_Size == vecOpened.m_Memory.m_nAllocationCount )
           {
             CUtlMemory<unsigned int,int>::Grow(&vecOpened.m_Memory, 1);
-            v76 = vecOpened.m_Size;
+            v75 = vecOpened.m_Size;
           }
-          vecOpened.m_Size = v76 + 1;
-          v68 = &vecOpened.m_Memory.m_pMemory[v75];
+          vecOpened.m_Size = v75 + 1;
+          v68 = &vecOpened.m_Memory.m_pMemory[v74];
           if ( v68 != 0 )
             *v68 = fItemWeightb;
-          v69 = V_atof(lstChances.m_Memory.m_pMemory[v66], v74);
+          v69 = V_atof(lstChances.m_Memory.m_pMemory[v66]);
           m_pString_low = SLODWORD(msg.m_pString);
           fItemWeighta = v69;
           v71 = msg.m_pString;
-          if ( LODWORD(msg.m_pString) == v130[0].m_nAllocationCount )
+          if ( LODWORD(msg.m_pString) == v129[0].m_nAllocationCount )
           {
-            CUtlMemory<float,int>::Grow(v130, 1);
+            CUtlMemory<float,int>::Grow(v129, 1);
             v71 = msg.m_pString;
           }
           LODWORD(msg.m_pString) = v71 + 1;
-          v72 = &v130[0].m_pMemory[m_pString_low];
+          v72 = &v129[0].m_pMemory[m_pString_low];
           if ( v72 != 0 )
             *v72 = fItemWeighta;
           ++v67;
@@ -3065,54 +3121,54 @@ LABEL_271:
         }
         while ( lstOpened.m_Size > v67 );
       }
-      v77 = operator new(0x40u);
-      memset(v77, 0, 0x40u);
-      if ( v77 != &vecOpened )
+      v76 = operator new(0x40u);
+      memset(v76, 0, 0x40u);
+      if ( v76 != &vecOpened )
       {
-        v78 = vecOpened.m_Size;
-        CUtlVectorBase<unsigned int,CUtlMemory<unsigned int,int>>::SetCount(v77, vecOpened.m_Size);
-        if ( v78 > 0 )
+        v77 = vecOpened.m_Size;
+        CUtlVectorBase<unsigned int,CUtlMemory<unsigned int,int>>::SetCount(v76, vecOpened.m_Size);
+        if ( v77 > 0 )
         {
-          v79 = 0;
+          v78 = 0;
           do
           {
-            v77->m_Memory.m_pMemory[v79 / 4] = vecOpened.m_Memory.m_pMemory[v79 / 4];
-            v79 += 4LL;
+            v76->m_Memory.m_pMemory[v78 / 4] = vecOpened.m_Memory.m_pMemory[v78 / 4];
+            v78 += 4LL;
           }
-          while ( v79 != 4LL * (v78 - 1) + 4 );
+          while ( v78 != 4LL * (v77 - 1) + 4 );
         }
       }
-      if ( &v77[1] != &msg )
+      if ( &v76[1] != &msg )
       {
-        v80 = msg.m_pString;
-        CUtlVectorBase<float,CUtlMemory<float,int>>::SetCount(&v77[1], msg.m_pString);
-        if ( v80 > 0 )
+        v79 = msg.m_pString;
+        CUtlVectorBase<float,CUtlMemory<float,int>>::SetCount(&v76[1], msg.m_pString);
+        if ( v79 > 0 )
         {
-          v81 = 0;
+          v80 = 0;
           do
           {
-            v77[1].m_Memory.m_pMemory[v81 / 4] = LODWORD(v130[0].m_pMemory[v81 / 4]);
-            v81 += 4LL;
+            v76[1].m_Memory.m_pMemory[v80 / 4] = LODWORD(v129[0].m_pMemory[v80 / 4]);
+            v80 += 4LL;
           }
-          while ( v81 != 4LL * (v80 - 1) + 4 );
+          while ( v80 != 4LL * (v79 - 1) + 4 );
         }
       }
       CUtlSymbolTableLargeBase<CNonThreadsafeTree<true>,true,2048ul>::AddString(
-        &v124,
+        &v123,
         g_pEconSchemaSymbolTable,
         pszItema);
-      v82 = g_pEconSchemaSymbolTable;
-      *&v77[2].m_Size = v124;
-      CUtlSymbolTableLargeBase<CNonThreadsafeTree<true>,true,2048ul>::AddString(&v125, v82, pszTreasureRarityOverride);
-      v77[2].m_Memory.m_pMemory = v125;
-      v27 = (v130[0].m_nGrowSize & 0xC0000000) == 0;
+      v81 = g_pEconSchemaSymbolTable;
+      *&v76[2].m_Size = v123;
+      CUtlSymbolTableLargeBase<CNonThreadsafeTree<true>,true,2048ul>::AddString(&v124, v81, pszTreasureRarityOverride);
+      v76[2].m_Memory.m_pMemory = v124;
+      v27 = (v129[0].m_nGrowSize & 0xC0000000) == 0;
       LODWORD(msg.m_pString) = 0;
-      bReplaceOriginalDropa[4] = v77;
+      bReplaceOriginalDropa[4] = v76;
       if ( v27 )
       {
-        CUtlMemory<float,int>::Purge(v130);
-        if ( (v130[0].m_nGrowSize & 0xC0000000) == 0 )
-          CUtlMemory<float,int>::Purge(v130);
+        CUtlMemory<float,int>::Purge(v129);
+        if ( (v129[0].m_nGrowSize & 0xC0000000) == 0 )
+          CUtlMemory<float,int>::Purge(v129);
       }
       vecOpened.m_Size = 0;
       if ( (vecOpened.m_Memory.m_nGrowSize & 0xC0000000) == 0 )
@@ -3123,15 +3179,15 @@ LABEL_271:
       }
       if ( lstChances.m_Size > 0 )
       {
+        v82 = 0;
         v83 = 0;
-        v84 = 0;
         do
         {
-          ++v84;
-          v85 = lstChances.m_Memory.m_pMemory[v83++];
-          (*(*g_pMemAlloc + 16LL))(g_pMemAlloc, v85);
+          ++v83;
+          v84 = lstChances.m_Memory.m_pMemory[v82++];
+          (*(*g_pMemAlloc + 16LL))(g_pMemAlloc, v84);
         }
-        while ( v84 < lstChances.m_Size );
+        while ( v83 < lstChances.m_Size );
       }
       lstChances.m_Size = 0;
       if ( (lstChances.m_Memory.m_nGrowSize & 0xC0000000) == 0 )
@@ -3142,15 +3198,15 @@ LABEL_271:
       }
       if ( lstOpened.m_Size > 0 )
       {
+        v85 = 0;
         v86 = 0;
-        v87 = 0;
         do
         {
-          ++v87;
-          v88 = lstOpened.m_Memory.m_pMemory[v86++];
-          (*(*g_pMemAlloc + 16LL))(g_pMemAlloc, v88);
+          ++v86;
+          v87 = lstOpened.m_Memory.m_pMemory[v85++];
+          (*(*g_pMemAlloc + 16LL))(g_pMemAlloc, v87);
         }
-        while ( v87 < lstOpened.m_Size );
+        while ( v86 < lstOpened.m_Size );
       }
       lstOpened.m_Size = 0;
       if ( (lstOpened.m_Memory.m_nGrowSize & 0xC0000000) == 0 )
@@ -3179,10 +3235,10 @@ LABEL_4:
   {
     v27 = this->m_symName.u.m_Id == 0;
     msg.m_pString = 0;
-    v93 = "";
+    v92 = "";
     if ( !v27 )
-      v93 = this->m_symName.u.m_pAsString;
-    CUtlString::Format(&msg, "Loot List %s: Missing required field \"chance\" in the \"random_attributes\" block.", v93);
+      v92 = this->m_symName.u.m_pAsString;
+    CUtlString::Format(&msg, "Loot List %s: Missing required field \"chance\" in the \"random_attributes\" block.", v92);
     if ( pVecErrors != 0 )
       CUtlVectorBase<CUtlString,CUtlMemory<CUtlString,int>>::AddToTail(pVecErrors, &msg);
     if ( msg.m_pString == 0 )
@@ -3275,10 +3331,10 @@ LABEL_49:
   }
   v27 = this->m_symName.u.m_Id == 0;
   msg.m_pString = 0;
-  v89 = "";
+  v88 = "";
   if ( !v27 )
-    v89 = this->m_symName.u.m_pAsString;
-  CUtlString::Format(&msg, "Loot list %s: Attribute definition \"%s\" was not found", v89, v35);
+    v88 = this->m_symName.u.m_pAsString;
+  CUtlString::Format(&msg, "Loot list %s: Attribute definition \"%s\" was not found", v88, v35);
   if ( pVecErrors != 0 )
     CUtlVectorBase<CUtlString,CUtlMemory<CUtlString,int>>::AddToTail(pVecErrors, &msg);
   if ( msg.m_pString != 0 )
@@ -3597,7 +3653,7 @@ LABEL_12:
           llitem.m_vecAffectingLootLists.m_Memory.m_pMemory = 0;
           llitem.m_vecAffectingLootLists.m_Memory.m_nAllocationCount = 0;
           llitem.m_vecAffectingLootLists.m_Memory.m_nGrowSize = 0;
-          v35 = (*v33->_vptr_IEconItemDefinition)(v33);
+          v35 = v33->GetDefinitionIndex();
           llitem.m_pItemDef = v34;
           v36 = pVecItems->m_Size;
           llitem.m_iItemDef.m_Data = v35;
@@ -3993,7 +4049,7 @@ unsigned int __cdecl Internal_GetAttributeTypeUniqueIdentifierNextValue()
 // CSchemaAttributeType_String::~CSchemaAttributeType_String  (line 1841, @0x0000000002ea20f0, libserver.so)  // inlines: ~CSchemaAttributeTypeBase, ~CSchemaAttributeTypeProtobufBase, ~ISchemaAttributeType, ~ISchemaAttributeTypeBase
 void __fastcall CSchemaAttributeType_String::~CSchemaAttributeType_String(CSchemaAttributeType_String *const this)
 {
-  this->_vptr_ISchemaAttributeType = off_479F1D0;
+  this->_vptr_ISchemaAttributeType = off_479F1D0;  // vptr: ISchemaAttributeType
 }
 
 
@@ -4001,7 +4057,7 @@ void __fastcall CSchemaAttributeType_String::~CSchemaAttributeType_String(CSchem
 // calls: operator delete
 void __fastcall CSchemaAttributeType_String::~CSchemaAttributeType_String(CSchemaAttributeType_String *const this)
 {
-  this->_vptr_ISchemaAttributeType = off_479F1D0;
+  this->_vptr_ISchemaAttributeType = off_479F1D0;  // vptr: ISchemaAttributeType
   operator delete(this);
 }
 
@@ -4051,7 +4107,7 @@ void __fastcall CSchemaAttributeType_String::ConvertEconAttributeValueToString(
 void __fastcall CSchemaAttributeType_DynamicRecipeComponent::~CSchemaAttributeType_DynamicRecipeComponent(
         CSchemaAttributeType_DynamicRecipeComponent *const this)
 {
-  this->_vptr_ISchemaAttributeType = off_479F1D0;
+  this->_vptr_ISchemaAttributeType = off_479F1D0;  // vptr: ISchemaAttributeType
 }
 
 
@@ -4060,7 +4116,7 @@ void __fastcall CSchemaAttributeType_DynamicRecipeComponent::~CSchemaAttributeTy
 void __fastcall CSchemaAttributeType_DynamicRecipeComponent::~CSchemaAttributeType_DynamicRecipeComponent(
         CSchemaAttributeType_DynamicRecipeComponent *const this)
 {
-  this->_vptr_ISchemaAttributeType = off_479F1D0;
+  this->_vptr_ISchemaAttributeType = off_479F1D0;  // vptr: ISchemaAttributeType
   operator delete(this);
 }
 
@@ -4076,7 +4132,7 @@ void __fastcall CopyStringAttributeValueToCharPointerOutput(const CAttribute_Str
 // CSchemaAttributeType_Uint32::~CSchemaAttributeType_Uint32  (line 1971, @0x0000000002ea20d0, libserver.so)  // inlines: ~CSchemaAttributeTypeBase, ~ISchemaAttributeType, ~ISchemaAttributeTypeBase
 void __fastcall CSchemaAttributeType_Uint32::~CSchemaAttributeType_Uint32(CSchemaAttributeType_Uint32 *const this)
 {
-  this->_vptr_ISchemaAttributeType = off_479F1D0;
+  this->_vptr_ISchemaAttributeType = off_479F1D0;  // vptr: ISchemaAttributeType
 }
 
 
@@ -4084,7 +4140,7 @@ void __fastcall CSchemaAttributeType_Uint32::~CSchemaAttributeType_Uint32(CSchem
 // calls: operator delete
 void __fastcall CSchemaAttributeType_Uint32::~CSchemaAttributeType_Uint32(CSchemaAttributeType_Uint32 *const this)
 {
-  this->_vptr_ISchemaAttributeType = off_479F1D0;
+  this->_vptr_ISchemaAttributeType = off_479F1D0;  // vptr: ISchemaAttributeType
   operator delete(this);
 }
 
@@ -4163,7 +4219,7 @@ bool __fastcall CSchemaAttributeType_Uint32::BSupportsGameplayModificationAndNet
 // CSchemaAttributeType_Uint64::~CSchemaAttributeType_Uint64  (line 2042, @0x0000000002ea20c0, libserver.so)  // inlines: ~CSchemaAttributeTypeBase, ~ISchemaAttributeType, ~ISchemaAttributeTypeBase
 void __fastcall CSchemaAttributeType_Uint64::~CSchemaAttributeType_Uint64(CSchemaAttributeType_Uint64 *const this)
 {
-  this->_vptr_ISchemaAttributeType = off_479F1D0;
+  this->_vptr_ISchemaAttributeType = off_479F1D0;  // vptr: ISchemaAttributeType
 }
 
 
@@ -4171,7 +4227,7 @@ void __fastcall CSchemaAttributeType_Uint64::~CSchemaAttributeType_Uint64(CSchem
 // calls: operator delete
 void __fastcall CSchemaAttributeType_Uint64::~CSchemaAttributeType_Uint64(CSchemaAttributeType_Uint64 *const this)
 {
-  this->_vptr_ISchemaAttributeType = off_479F1D0;
+  this->_vptr_ISchemaAttributeType = off_479F1D0;  // vptr: ISchemaAttributeType
   operator delete(this);
 }
 
@@ -4185,7 +4241,7 @@ bool __fastcall CSchemaAttributeType_Uint64::BConvertStringToEconAttributeValue(
         attribute_data_union_t *out_pValue,
         bool bEnableTerribleBackwardsCompatibilitySchemaParsingCode)
 {
-  out_pValue->asUint64 = V_atoui64(pszValue, pAttrDef);
+  out_pValue->asUint64 = V_atoui64(pszValue, pAttrDef, pszValue, out_pValue);
   return 1;
 }
 
@@ -4242,7 +4298,7 @@ void __fastcall CSchemaAttributeType_Uint64::ConvertByteStreamToTypedValue(
 // CSchemaAttributeType_Float::~CSchemaAttributeType_Float  (line 2117, @0x0000000002ea20b0, libserver.so)  // inlines: ~CSchemaAttributeTypeBase, ~ISchemaAttributeType, ~ISchemaAttributeTypeBase
 void __fastcall CSchemaAttributeType_Float::~CSchemaAttributeType_Float(CSchemaAttributeType_Float *const this)
 {
-  this->_vptr_ISchemaAttributeType = off_479F1D0;
+  this->_vptr_ISchemaAttributeType = off_479F1D0;  // vptr: ISchemaAttributeType
 }
 
 
@@ -4250,7 +4306,7 @@ void __fastcall CSchemaAttributeType_Float::~CSchemaAttributeType_Float(CSchemaA
 // calls: operator delete
 void __fastcall CSchemaAttributeType_Float::~CSchemaAttributeType_Float(CSchemaAttributeType_Float *const this)
 {
-  this->_vptr_ISchemaAttributeType = off_479F1D0;
+  this->_vptr_ISchemaAttributeType = off_479F1D0;  // vptr: ISchemaAttributeType
   operator delete(this);
 }
 
@@ -4266,7 +4322,7 @@ bool __fastcall CSchemaAttributeType_Float::BConvertStringToEconAttributeValue(
 {
   float v6; // xmm0_4
 
-  v6 = V_atof(pszValue, pAttrDef);
+  v6 = V_atof(pszValue);
   out_pValue->asFloat = v6;
   return 1;
 }
@@ -4332,7 +4388,7 @@ bool __fastcall CSchemaAttributeType_Float::BSupportsGameplayModificationAndNetw
 // CSchemaAttributeType_Default::~CSchemaAttributeType_Default  (line 2189, @0x0000000002ea20a0, libserver.so)  // inlines: ~CSchemaAttributeTypeBase, ~ISchemaAttributeType, ~ISchemaAttributeTypeBase
 void __fastcall CSchemaAttributeType_Default::~CSchemaAttributeType_Default(CSchemaAttributeType_Default *const this)
 {
-  this->_vptr_ISchemaAttributeType = off_479F1D0;
+  this->_vptr_ISchemaAttributeType = off_479F1D0;  // vptr: ISchemaAttributeType
 }
 
 
@@ -4340,7 +4396,7 @@ void __fastcall CSchemaAttributeType_Default::~CSchemaAttributeType_Default(CSch
 // calls: operator delete
 void __fastcall CSchemaAttributeType_Default::~CSchemaAttributeType_Default(CSchemaAttributeType_Default *const this)
 {
-  this->_vptr_ISchemaAttributeType = off_479F1D0;
+  this->_vptr_ISchemaAttributeType = off_479F1D0;  // vptr: ISchemaAttributeType
   operator delete(this);
 }
 
@@ -4365,12 +4421,12 @@ bool __fastcall CSchemaAttributeType_Default::BConvertStringToEconAttributeValue
   }
   if ( !pAttrDef->m_bStoredAsInteger )
   {
-    v6 = V_atof(pszValue, pAttrDef);
+    v6 = V_atof(pszValue);
 LABEL_4:
     out_pValue->asFloat = v6;
     return 1;
   }
-  out_pValue->asUint32 = V_atoui64(pszValue, pAttrDef);
+  out_pValue->asUint32 = V_atoui64(pszValue, pAttrDef, pszValue, out_pValue);
   return 1;
 }
 
@@ -4441,7 +4497,7 @@ bool __fastcall CSchemaAttributeType_Default::BSupportsGameplayModificationAndNe
 // CSchemaAttributeType_Socket::~CSchemaAttributeType_Socket  (line 2373, @0x0000000002ea2090, libserver.so)  // inlines: ~CSchemaAttributeTypeBase, ~ISchemaAttributeType, ~ISchemaAttributeTypeBase
 void __fastcall CSchemaAttributeType_Socket::~CSchemaAttributeType_Socket(CSchemaAttributeType_Socket *const this)
 {
-  this->_vptr_ISchemaAttributeType = off_479F1D0;
+  this->_vptr_ISchemaAttributeType = off_479F1D0;  // vptr: ISchemaAttributeType
 }
 
 
@@ -4449,7 +4505,7 @@ void __fastcall CSchemaAttributeType_Socket::~CSchemaAttributeType_Socket(CSchem
 // calls: operator delete
 void __fastcall CSchemaAttributeType_Socket::~CSchemaAttributeType_Socket(CSchemaAttributeType_Socket *const this)
 {
-  this->_vptr_ISchemaAttributeType = off_479F1D0;
+  this->_vptr_ISchemaAttributeType = off_479F1D0;  // vptr: ISchemaAttributeType
   operator delete(this);
 }
 
@@ -4538,7 +4594,7 @@ void __fastcall CSchemaAttributeType_Socket::ConvertEconAttributeValueToString(
 // CEconItemAttributeDefinition::CEconItemAttributeDefinition  (line 2445, @0x0000000002e6d1a0, libserver.so)  // inlines: CEconSchemaSymbol, CUtlSymbolLarge
 void __fastcall CEconItemAttributeDefinition::CEconItemAttributeDefinition(CEconItemAttributeDefinition *const this)
 {
-  this->_vptr_IEconItemAttributeDefinition = off_47A5D70;
+  this->_vptr_IEconItemAttributeDefinition = off_47A5D70;  // vptr: CEconItemAttributeDefinition
   this->m_pAttrType = 0;
   this->m_bHidden = 0;
   this->m_bWebSchemaOutputForced = 0;
@@ -4563,7 +4619,7 @@ void __fastcall CEconItemAttributeDefinition::CEconItemAttributeDefinition(
         CEconItemAttributeDefinition *const this,
         const CEconItemAttributeDefinition *const that)
 {
-  this->_vptr_IEconItemAttributeDefinition = off_47A5D70;
+  this->_vptr_IEconItemAttributeDefinition = off_47A5D70;  // vptr: CEconItemAttributeDefinition
   this->m_symDescriptionString.u.m_Id = 0;
   this->m_symArmoryDesc.u.m_Id = 0;
   this->m_symDefinitionName.u.m_Id = 0;
@@ -4604,7 +4660,7 @@ CEconItemAttributeDefinition *__fastcall CEconItemAttributeDefinition::operator=
 // callers: CUtlRBTree<CUtlMap<int, CEconItemAttributeDefinition, int>::Node_t, int, CUtlMap<int, CEconItemAttributeDefinition, int>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<int, CEconItemAttributeDefinition, int>::Node_t, int>, int> >::Purge
 void __fastcall CEconItemAttributeDefinition::~CEconItemAttributeDefinition(CEconItemAttributeDefinition *const this)
 {
-  this->_vptr_IEconItemAttributeDefinition = off_47A5D70;
+  this->_vptr_IEconItemAttributeDefinition = off_47A5D70;  // vptr: CEconItemAttributeDefinition
 }
 
 
@@ -4657,7 +4713,10 @@ bool __fastcall CEconItemAttributeDefinition::BInitFromKV(
   Name = KeyValues::GetName(pKVAttribute);
   this->m_nDefIndex = V_atoi(Name);
   String = KeyValues::GetString(pKVAttribute, "name", "", 0, 0);
-  CUtlSymbolTableLargeBase<CNonThreadsafeTree<true>,true,2048ul>::AddString(&msg, g_pEconSchemaSymbolTable, String);
+  CUtlSymbolTableLargeBase<CNonThreadsafeTree<true>,true,2048ul>::AddString(
+    &msg.m_pString,
+    g_pEconSchemaSymbolTable,
+    String);
   v9 = `guard variable for'CEconItemAttributeDefinition::BInitFromKV(KeyValues *,CEconItemSchema &,CUtlVector<CUtlString,CUtlMemory<CUtlString,int>> *)::{lambda(char const*)#1}::operator() const(char const*)::s_sym == 0;
   this->m_symDefinitionName.u.m_Id = msg.m_pString;
   if ( v9
@@ -4783,7 +4842,10 @@ bool __fastcall CEconItemAttributeDefinition::BInitFromKV(
   v22 = 0;
   if ( v21 != 0 )
     v22 = CKeyValues_Data::Internal_GetString(v21, 0, 0, 0);
-  CUtlSymbolTableLargeBase<CNonThreadsafeTree<true>,true,2048ul>::AddString(&msg, g_pEconSchemaSymbolTable, v22);
+  CUtlSymbolTableLargeBase<CNonThreadsafeTree<true>,true,2048ul>::AddString(
+    &msg.m_pString,
+    g_pEconSchemaSymbolTable,
+    v22);
   v9 = `guard variable for'CEconItemAttributeDefinition::BInitFromKV(KeyValues *,CEconItemSchema &,CUtlVector<CUtlString,CUtlMemory<CUtlString,int>> *)::{lambda(char const*)#9}::operator() const(char const*)::s_sym == 0;
   this->m_symDescriptionString.u.m_Id = msg.m_pString;
   if ( v9
@@ -4800,7 +4862,10 @@ bool __fastcall CEconItemAttributeDefinition::BInitFromKV(
   v24 = 0;
   if ( v23 != 0 )
     v24 = CKeyValues_Data::Internal_GetString(v23, 0, 0, 0);
-  CUtlSymbolTableLargeBase<CNonThreadsafeTree<true>,true,2048ul>::AddString(&msg, g_pEconSchemaSymbolTable, v24);
+  CUtlSymbolTableLargeBase<CNonThreadsafeTree<true>,true,2048ul>::AddString(
+    &msg.m_pString,
+    g_pEconSchemaSymbolTable,
+    v24);
   v9 = `guard variable for'CEconItemAttributeDefinition::BInitFromKV(KeyValues *,CEconItemSchema &,CUtlVector<CUtlString,CUtlMemory<CUtlString,int>> *)::{lambda(char const*)#10}::operator() const(char const*)::s_sym == 0;
   this->m_symArmoryDesc.u.m_Id = msg.m_pString;
   if ( v9
@@ -4817,7 +4882,10 @@ bool __fastcall CEconItemAttributeDefinition::BInitFromKV(
   v26 = 0;
   if ( v25 != 0 )
     v26 = CKeyValues_Data::Internal_GetString(v25, 0, 0, 0);
-  CUtlSymbolTableLargeBase<CNonThreadsafeTree<true>,true,2048ul>::AddString(&msg, g_pEconSchemaSymbolTable, v26);
+  CUtlSymbolTableLargeBase<CNonThreadsafeTree<true>,true,2048ul>::AddString(
+    &msg.m_pString,
+    g_pEconSchemaSymbolTable,
+    v26);
   v9 = `guard variable for'CEconItemAttributeDefinition::BInitFromKV(KeyValues *,CEconItemSchema &,CUtlVector<CUtlString,CUtlMemory<CUtlString,int>> *)::{lambda(char const*)#11}::operator() const(char const*)::s_sym == 0;
   this->m_symAttributeClass.u.m_Id = msg.m_pString;
   if ( v9
@@ -5110,7 +5178,7 @@ bool __fastcall CEconSoundMaterialDefinition::BInitFromKV(
     goto LABEL_13;
   }
   isLeft = v15;
-  CUtlSymbolTableLargeBase<CNonThreadsafeTree<true>,true,2048ul>::Find(v53, v14, v15);
+  CUtlSymbolTableLargeBase<CNonThreadsafeTree<true>,true,2048ul>::Find(&msg.m_pString, v53, v14, v15);
   m_pString = msg.m_pString;
   v20 = isLeft;
   if ( msg.m_pString != 0 )
@@ -5239,7 +5307,10 @@ LABEL_13:
   v18 = "";
   if ( v17 != 0 )
     v18 = CKeyValues_Data::Internal_GetString(v17, "", 0, 0);
-  CUtlSymbolTableLargeBase<CNonThreadsafeTree<true>,true,2048ul>::AddString(&msg, g_pEconSchemaSymbolTable, v18);
+  CUtlSymbolTableLargeBase<CNonThreadsafeTree<true>,true,2048ul>::AddString(
+    &msg.m_pString,
+    g_pEconSchemaSymbolTable,
+    v18);
   v10 = `guard variable for'CEconSoundMaterialDefinition::BInitFromKV(KeyValues *,CEconItemSchema &,CUtlVector<CUtlString,CUtlMemory<CUtlString,int>> *)::{lambda(char const*)#5}::operator() const(char const*)::s_sym == 0;
   this->m_symEquipSound.u.m_Id = msg.m_pString;
   if ( v10
@@ -5274,7 +5345,7 @@ void __fastcall CEconItemDefinition::CEconItemDefinition(CEconItemDefinition *co
   uint16 m_Data; // ax
   uint16 v2; // ax
 
-  this->_vptr_IEconItemDefinition = off_47A7FD0;
+  this->_vptr_IEconItemDefinition = off_47A7FD0;  // vptr: CEconItemDefinition
   this->m_nDefIndex.m_Data = 0;
   m_Data = INVALID_ITEM_DEF_INDEX.m_Data;
   this->m_pKVItem = 0;
@@ -5360,7 +5431,7 @@ void __fastcall CEconItemDefinition::~CEconItemDefinition(CEconItemDefinition *c
   static_attrib_t *v10; // r13
   static_attrib_t *v11; // rdi
 
-  this->_vptr_IEconItemDefinition = off_47A7FD0;
+  this->_vptr_IEconItemDefinition = off_47A7FD0;  // vptr: CEconItemDefinition
   m_pKVItem = this->m_pKVItem;
   if ( m_pKVItem != 0 )
   {
@@ -5946,7 +6017,7 @@ LABEL_10:
             {
               v25 = 0;
             }
-            v23->iDefIndex = (*v25->_vptr_IEconItemAttributeDefinition)(v25);
+            v23->iDefIndex = v25->GetDefinitionIndex();
             v23->m_value.asFloat = flRGBVal;
           }
         }
@@ -6025,7 +6096,7 @@ LABEL_10:
         {
           v37 = 0;
         }
-        v35->iDefIndex = (*v37->_vptr_IEconItemAttributeDefinition)(v37);
+        v35->iDefIndex = v37->GetDefinitionIndex();
         v35->m_value.asFloat = v30;
       }
     }
@@ -6134,7 +6205,7 @@ void __fastcall CEconItemDefinition::BInitBrandInfoFromKV(
       this->m_nPartnerType = EItemPartnerType::ITEM_PARTNER_CORPORATION;
       if ( pVecErrors != 0 && KeyValues::GetInt(v9, "team_id", 0) != 0 )
       {
-        v11 = (*this->_vptr_IEconItemDefinition)(this);
+        v11 = this->GetDefinitionIndex();
         CFmtStrN<256,false>::CFmtStrN(&v17, "Item %d contains both a team + corporation brand which is illegal!", v11);
         v16.m_pString = 0;
         CUtlString::Set(&v16, v17.m_szBuf);
@@ -6229,7 +6300,7 @@ bool __fastcall CEconItemDefinition::IsTestItem(const CEconItemDefinition *const
 
   p_m_itemSchema = &ItemSystem()->m_itemSchema;
   v3 = *(p_m_itemSchema->_vptr_IEconItemSchema + 46);
-  v4 = (*this->_vptr_IEconItemDefinition)(this);
+  v4 = this->GetDefinitionIndex();
   return v3(p_m_itemSchema, v4);
 }
 
@@ -6278,7 +6349,7 @@ void __fastcall CEconStyleInfo::BInitFromKV(
   const char *v37; // r13
   CExpressionCalculator *v38; // rax
   CExpressionCalculator *v39; // r12
-  __int64 v40[6]; // [rsp+0h] [rbp-30h] BYREF
+  char *v40[6]; // [rsp+0h] [rbp-30h] BYREF
 
   Name = KeyValues::GetName(pKVStyle);
   v7 = strtol(Name, 0, 10);
@@ -6608,7 +6679,7 @@ KeyValues *__fastcall CEconItemSchema::FindDefinitionPrefabByName(
   CUtlSymbolTableLarge_CI *v4; // r13
   int v5; // eax
   int v6; // r14d
-  UtlSymLargeId_t m_String; // rax
+  char *m_String; // rax
   int v8; // eax
   __int64 v9; // rcx
   int v10; // edx
@@ -6636,7 +6707,7 @@ KeyValues *__fastcall CEconItemSchema::FindDefinitionPrefabByName(
   UtlRBTreeNode_t<CUtlSymbolTableLargeBaseTreeEntry_t*,long long int> *v32; // r10
   char *v33; // [rsp+8h] [rbp-58h]
   __int64 v34; // [rsp+8h] [rbp-58h]
-  UtlSymLargeId_t v35; // [rsp+10h] [rbp-50h]
+  char *v35; // [rsp+10h] [rbp-50h] BYREF
   CUtlSymbolTableLargeBaseTreeEntry_t *pCopyFrom; // [rsp+18h] [rbp-48h] BYREF
   CUtlMap<CEconSchemaSymbol,KeyValues*,int,bool (*)(const CEconSchemaSymbol&,const CEconSchemaSymbol&)>::Node_t search; // [rsp+20h] [rbp-40h] BYREF
 
@@ -6646,7 +6717,7 @@ KeyValues *__fastcall CEconItemSchema::FindDefinitionPrefabByName(
     m_String = 0;
     goto LABEL_5;
   }
-  CUtlSymbolTableLargeBase<CNonThreadsafeTree<true>,true,2048ul>::Find(v4, pszPrefabName, v5);
+  CUtlSymbolTableLargeBase<CNonThreadsafeTree<true>,true,2048ul>::Find(&v35, v4, pszPrefabName, v5);
   m_String = v35;
   if ( v35 != 0 )
     goto LABEL_5;
@@ -7082,7 +7153,7 @@ bool __fastcall CEconItemDefinition::BInitFromKVOverride(
   if ( Key != 0 )
     String = CKeyValues_Data::Internal_GetString(Key, 0, 0, 0);
   CUtlSymbolTableLargeBase<CNonThreadsafeTree<true>,true,2048ul>::AddString(
-    &vecEquipRegionNames.m_Size,
+    &vecEquipRegionNames,
     g_pEconSchemaSymbolTable,
     String);
   v9 = `guard variable for'CEconItemDefinition::BInitFromKVOverride(KeyValues *,CEconItemSchema &,CUtlVector<CUtlString,CUtlMemory<CUtlString,int>> *)::{lambda(char const*)#2}::operator() const(char const*)::s_sym == 0;
@@ -7219,7 +7290,7 @@ bool __fastcall CEconItemDefinition::BInitFromKVOverride(
   if ( v25 != 0 )
     v26 = CKeyValues_Data::Internal_GetString(v25, 0, 0, 0);
   CUtlSymbolTableLargeBase<CNonThreadsafeTree<true>,true,2048ul>::AddString(
-    &vecEquipRegionNames.m_Size,
+    &vecEquipRegionNames,
     g_pEconSchemaSymbolTable,
     v26);
   v9 = `guard variable for'CEconItemDefinition::BInitFromKVOverride(KeyValues *,CEconItemSchema &,CUtlVector<CUtlString,CUtlMemory<CUtlString,int>> *)::{lambda(char const*)#10}::operator() const(char const*)::s_sym == 0;
@@ -7408,7 +7479,7 @@ LABEL_270:
   if ( v39 != 0 )
     v40 = CKeyValues_Data::Internal_GetString(v39, 0, 0, 0);
   CUtlSymbolTableLargeBase<CNonThreadsafeTree<true>,true,2048ul>::AddString(
-    &vecEquipRegionNames.m_Size,
+    &vecEquipRegionNames,
     g_pEconSchemaSymbolTable,
     v40);
   v9 = `guard variable for'CEconItemDefinition::BInitFromKVOverride(KeyValues *,CEconItemSchema &,CUtlVector<CUtlString,CUtlMemory<CUtlString,int>> *)::{lambda(char const*)#20}::operator() const(char const*)::s_sym == 0;
@@ -7428,7 +7499,7 @@ LABEL_270:
   if ( v41 != 0 )
     v42 = CKeyValues_Data::Internal_GetString(v41, 0, 0, 0);
   CUtlSymbolTableLargeBase<CNonThreadsafeTree<true>,true,2048ul>::AddString(
-    &vecEquipRegionNames.m_Size,
+    &vecEquipRegionNames,
     g_pEconSchemaSymbolTable,
     v42);
   v9 = `guard variable for'CEconItemDefinition::BInitFromKVOverride(KeyValues *,CEconItemSchema &,CUtlVector<CUtlString,CUtlMemory<CUtlString,int>> *)::{lambda(char const*)#21}::operator() const(char const*)::s_sym == 0;
@@ -7448,7 +7519,7 @@ LABEL_270:
   if ( v43 != 0 )
     v44 = CKeyValues_Data::Internal_GetString(v43, 0, 0, 0);
   CUtlSymbolTableLargeBase<CNonThreadsafeTree<true>,true,2048ul>::AddString(
-    &vecEquipRegionNames.m_Size,
+    &vecEquipRegionNames,
     g_pEconSchemaSymbolTable,
     v44);
   v9 = `guard variable for'CEconItemDefinition::BInitFromKVOverride(KeyValues *,CEconItemSchema &,CUtlVector<CUtlString,CUtlMemory<CUtlString,int>> *)::{lambda(char const*)#22}::operator() const(char const*)::s_sym == 0;
@@ -7498,7 +7569,7 @@ LABEL_270:
   if ( v49 != 0 )
     v50 = CKeyValues_Data::Internal_GetString(v49, 0, 0, 0);
   CUtlSymbolTableLargeBase<CNonThreadsafeTree<true>,true,2048ul>::AddString(
-    &vecEquipRegionNames.m_Size,
+    &vecEquipRegionNames,
     g_pEconSchemaSymbolTable,
     v50);
   v9 = `guard variable for'CEconItemDefinition::BInitFromKVOverride(KeyValues *,CEconItemSchema &,CUtlVector<CUtlString,CUtlMemory<CUtlString,int>> *)::{lambda(char const*)#25}::operator() const(char const*)::s_sym == 0;
@@ -7518,7 +7589,7 @@ LABEL_270:
   if ( v51 != 0 )
     v52 = CKeyValues_Data::Internal_GetString(v51, 0, 0, 0);
   CUtlSymbolTableLargeBase<CNonThreadsafeTree<true>,true,2048ul>::AddString(
-    &vecEquipRegionNames.m_Size,
+    &vecEquipRegionNames,
     g_pEconSchemaSymbolTable,
     v52);
   v9 = `guard variable for'CEconItemDefinition::BInitFromKVOverride(KeyValues *,CEconItemSchema &,CUtlVector<CUtlString,CUtlMemory<CUtlString,int>> *)::{lambda(char const*)#26}::operator() const(char const*)::s_sym == 0;
@@ -7602,7 +7673,7 @@ LABEL_270:
   if ( v61 != 0 )
     v62 = CKeyValues_Data::Internal_GetString(v61, "", 0, 0);
   CUtlSymbolTableLargeBase<CNonThreadsafeTree<true>,true,2048ul>::AddString(
-    &vecEquipRegionNames.m_Size,
+    &vecEquipRegionNames,
     g_pEconSchemaSymbolTable,
     v62);
   v9 = `guard variable for'CEconItemDefinition::BInitFromKVOverride(KeyValues *,CEconItemSchema &,CUtlVector<CUtlString,CUtlMemory<CUtlString,int>> *)::{lambda(char const*)#29}::operator() const(char const*)::s_sym == 0;
@@ -7622,7 +7693,7 @@ LABEL_270:
   if ( v63 != 0 )
     v64 = CKeyValues_Data::Internal_GetString(v63, "", 0, 0);
   CUtlSymbolTableLargeBase<CNonThreadsafeTree<true>,true,2048ul>::AddString(
-    &vecEquipRegionNames.m_Size,
+    &vecEquipRegionNames,
     g_pEconSchemaSymbolTable,
     v64);
   v9 = `guard variable for'CEconItemDefinition::BInitFromKVOverride(KeyValues *,CEconItemSchema &,CUtlVector<CUtlString,CUtlMemory<CUtlString,int>> *)::{lambda(char const*)#30}::operator() const(char const*)::s_sym == 0;
@@ -7642,7 +7713,7 @@ LABEL_270:
   if ( v65 != 0 )
     v66 = CKeyValues_Data::Internal_GetString(v65, 0, 0, 0);
   CUtlSymbolTableLargeBase<CNonThreadsafeTree<true>,true,2048ul>::AddString(
-    &vecEquipRegionNames.m_Size,
+    &vecEquipRegionNames,
     g_pEconSchemaSymbolTable,
     v66);
   v9 = `guard variable for'CEconItemDefinition::BInitFromKVOverride(KeyValues *,CEconItemSchema &,CUtlVector<CUtlString,CUtlMemory<CUtlString,int>> *)::{lambda(char const*)#31}::operator() const(char const*)::s_sym == 0;
@@ -7662,7 +7733,7 @@ LABEL_270:
   if ( v67 != 0 )
     v68 = CKeyValues_Data::Internal_GetString(v67, 0, 0, 0);
   CUtlSymbolTableLargeBase<CNonThreadsafeTree<true>,true,2048ul>::AddString(
-    &vecEquipRegionNames.m_Size,
+    &vecEquipRegionNames,
     g_pEconSchemaSymbolTable,
     v68);
   v9 = `guard variable for'CEconItemDefinition::BInitFromKVOverride(KeyValues *,CEconItemSchema &,CUtlVector<CUtlString,CUtlMemory<CUtlString,int>> *)::{lambda(char const*)#32}::operator() const(char const*)::s_sym == 0;
@@ -7682,7 +7753,7 @@ LABEL_270:
   if ( v69 != 0 )
     v70 = CKeyValues_Data::Internal_GetString(v69, 0, 0, 0);
   CUtlSymbolTableLargeBase<CNonThreadsafeTree<true>,true,2048ul>::AddString(
-    &vecEquipRegionNames.m_Size,
+    &vecEquipRegionNames,
     g_pEconSchemaSymbolTable,
     v70);
   v9 = `guard variable for'CEconItemDefinition::BInitFromKVOverride(KeyValues *,CEconItemSchema &,CUtlVector<CUtlString,CUtlMemory<CUtlString,int>> *)::{lambda(char const*)#33}::operator() const(char const*)::s_sym == 0;
@@ -7702,7 +7773,7 @@ LABEL_270:
   if ( v71 != 0 )
     v72 = CKeyValues_Data::Internal_GetString(v71, 0, 0, 0);
   CUtlSymbolTableLargeBase<CNonThreadsafeTree<true>,true,2048ul>::AddString(
-    &vecEquipRegionNames.m_Size,
+    &vecEquipRegionNames,
     g_pEconSchemaSymbolTable,
     v72);
   v9 = `guard variable for'CEconItemDefinition::BInitFromKVOverride(KeyValues *,CEconItemSchema &,CUtlVector<CUtlString,CUtlMemory<CUtlString,int>> *)::{lambda(char const*)#34}::operator() const(char const*)::s_sym == 0;
@@ -7722,7 +7793,7 @@ LABEL_270:
   if ( v73 != 0 )
     v74 = CKeyValues_Data::Internal_GetString(v73, 0, 0, 0);
   CUtlSymbolTableLargeBase<CNonThreadsafeTree<true>,true,2048ul>::AddString(
-    &vecEquipRegionNames.m_Size,
+    &vecEquipRegionNames,
     g_pEconSchemaSymbolTable,
     v74);
   v9 = `guard variable for'CEconItemDefinition::BInitFromKVOverride(KeyValues *,CEconItemSchema &,CUtlVector<CUtlString,CUtlMemory<CUtlString,int>> *)::{lambda(char const*)#35}::operator() const(char const*)::s_sym == 0;
@@ -7802,7 +7873,7 @@ LABEL_270:
   if ( v79 != 0 )
     v80 = CKeyValues_Data::Internal_GetString(v79, 0, 0, 0);
   CUtlSymbolTableLargeBase<CNonThreadsafeTree<true>,true,2048ul>::AddString(
-    &vecEquipRegionNames.m_Size,
+    &vecEquipRegionNames,
     g_pEconSchemaSymbolTable,
     v80);
   v9 = `guard variable for'CEconItemDefinition::BInitFromKVOverride(KeyValues *,CEconItemSchema &,CUtlVector<CUtlString,CUtlMemory<CUtlString,int>> *)::{lambda(char const*)#40}::operator() const(char const*)::s_sym == 0;
@@ -7839,7 +7910,7 @@ LABEL_270:
     if ( v83 != 0 )
     {
       CUtlSymbolTableLargeBase<CNonThreadsafeTree<true>,true,2048ul>::AddString(
-        &vecEquipRegionNames.m_Size,
+        &vecEquipRegionNames,
         g_pEconSchemaSymbolTable,
         v83);
       m_Size = this->m_vecBaseDisplayModels.m_Size;
@@ -7865,7 +7936,7 @@ LABEL_270:
     if ( v89 != 0 )
     {
       CUtlSymbolTableLargeBase<CNonThreadsafeTree<true>,true,2048ul>::AddString(
-        &vecEquipRegionNames.m_Size,
+        &vecEquipRegionNames,
         g_pEconSchemaSymbolTable,
         v89);
       v90 = this->m_vecBaseDisplayModels.m_Size;
@@ -7901,7 +7972,7 @@ LABEL_270:
   if ( v94 != 0 )
     v95 = CKeyValues_Data::Internal_GetString(v94, 0, 0, 0);
   CUtlSymbolTableLargeBase<CNonThreadsafeTree<true>,true,2048ul>::AddString(
-    &vecEquipRegionNames.m_Size,
+    &vecEquipRegionNames,
     g_pEconSchemaSymbolTable,
     v95);
   v9 = `guard variable for'CEconItemDefinition::BInitFromKVOverride(KeyValues *,CEconItemSchema &,CUtlVector<CUtlString,CUtlMemory<CUtlString,int>> *)::{lambda(char const*)#43}::operator() const(char const*)::s_sym == 0;
@@ -8123,7 +8194,7 @@ LABEL_270:
   if ( v123 != 0 )
     v124 = CKeyValues_Data::Internal_GetString(v123, 0, 0, 0);
   CUtlSymbolTableLargeBase<CNonThreadsafeTree<true>,true,2048ul>::AddString(
-    &vecEquipRegionNames.m_Size,
+    &vecEquipRegionNames,
     g_pEconSchemaSymbolTable,
     v124);
   v9 = `guard variable for'CEconItemDefinition::BInitFromKVOverride(KeyValues *,CEconItemSchema &,CUtlVector<CUtlString,CUtlMemory<CUtlString,int>> *)::{lambda(char const*)#57}::operator() const(char const*)::s_sym == 0;
@@ -8187,7 +8258,7 @@ LABEL_270:
   if ( v130 != 0 )
     v131 = CKeyValues_Data::Internal_GetString(v130, 0, 0, 0);
   CUtlSymbolTableLargeBase<CNonThreadsafeTree<true>,true,2048ul>::AddString(
-    &vecEquipRegionNames.m_Size,
+    &vecEquipRegionNames,
     g_pEconSchemaSymbolTable,
     v131);
   v9 = `guard variable for'CEconItemDefinition::BInitFromKVOverride(KeyValues *,CEconItemSchema &,CUtlVector<CUtlString,CUtlMemory<CUtlString,int>> *)::{lambda(char const*)#61}::operator() const(char const*)::s_sym == 0;
@@ -8267,7 +8338,7 @@ LABEL_270:
   if ( v140 != 0 )
     v141 = CKeyValues_Data::Internal_GetString(v140, 0, 0, 0);
   CUtlSymbolTableLargeBase<CNonThreadsafeTree<true>,true,2048ul>::AddString(
-    &vecEquipRegionNames.m_Size,
+    &vecEquipRegionNames,
     g_pEconSchemaSymbolTable,
     v141);
   this->m_symParticleFolder.u.m_Id = *&vecEquipRegionNames.m_Size;
@@ -8411,13 +8482,13 @@ LABEL_220:
     {
       v150 = KeyValues::GetName(k);
       CUtlSymbolTableLargeBase<CNonThreadsafeTree<true>,true,2048ul>::AddString(
-        &vecEquipRegionNames.m_Size,
+        &vecEquipRegionNames,
         g_pEconSchemaSymbolTable,
         v150);
       unThisRegionMaska = *&vecEquipRegionNames.m_Size;
       v151 = KeyValues::GetString(k, "text", "", 0, 0);
       CUtlSymbolTableLargeBase<CNonThreadsafeTree<true>,true,2048ul>::AddString(
-        &vecEquipRegionNames.m_Size,
+        &vecEquipRegionNames,
         g_pEconSchemaSymbolTable,
         v151);
       pszEquipRegionName = *&vecEquipRegionNames.m_Size;
@@ -8481,7 +8552,7 @@ LABEL_220:
            0);
   if ( v165 == 0 )
   {
-    this->m_unSetItemRemapDefIndex.m_Data = (*this->_vptr_IEconItemDefinition)(this);
+    this->m_unSetItemRemapDefIndex.m_Data = this->GetDefinitionIndex();
     goto LABEL_411;
   }
   v166 = (*(pschema->_vptr_IEconItemSchema + 41))(pschema, v165);
@@ -8504,7 +8575,7 @@ LABEL_220:
       return 0;
     goto LABEL_493;
   }
-  if ( this->m_unSetItemRemapDefIndex.m_Data == (*this->_vptr_IEconItemDefinition)(this) )
+  if ( this->m_unSetItemRemapDefIndex.m_Data == this->GetDefinitionIndex() )
   {
     *&vecEquipRegionNames.m_Size = 0;
     v199 = CEconItemDefinition::GetDefinitionName(this);
@@ -8531,7 +8602,7 @@ LABEL_411:
            0,
            0);
   CUtlSymbolTableLargeBase<CNonThreadsafeTree<true>,true,2048ul>::AddString(
-    &vecEquipRegionNames.m_Size,
+    &vecEquipRegionNames,
     g_pEconSchemaSymbolTable,
     v167);
   v9 = `guard variable for'CEconItemDefinition::BInitFromKVOverride(KeyValues *,CEconItemSchema &,CUtlVector<CUtlString,CUtlMemory<CUtlString,int>> *)::{lambda(char const*)#75}::operator() const(char const*)::s_sym == 0;
@@ -8551,7 +8622,7 @@ LABEL_411:
            0,
            0);
   CUtlSymbolTableLargeBase<CNonThreadsafeTree<true>,true,2048ul>::AddString(
-    &vecEquipRegionNames.m_Size,
+    &vecEquipRegionNames,
     g_pEconSchemaSymbolTable,
     v168);
   this->m_symStoreRemap.u.m_Id = *&vecEquipRegionNames.m_Size;
@@ -8835,7 +8906,7 @@ bool __fastcall static_attrib_t::BInitFromKV_MultiLine(
   if ( AttributeDefinitionByName != 0 )
   {
     p_m_value = &this->m_value;
-    LOWORD(p_m_value[-1].asFloat) = (*AttributeDefinitionByName->_vptr_IEconItemAttributeDefinition)(AttributeDefinitionByName);
+    LOWORD(p_m_value[-1].asFloat) = AttributeDefinitionByName->GetDefinitionIndex();
     m_pAttrType = v10->m_pAttrType;
     (*(m_pAttrType->_vptr_ISchemaAttributeType + 8))(m_pAttrType, p_m_value);
     if ( `guard variable for'static_attrib_t::BInitFromKV_MultiLine(char const*,KeyValues *,CUtlVector<CUtlString,CUtlMemory<CUtlString,int>> *)::{lambda(char const*)#1}::operator() const(char const*)::s_sym == 0
@@ -8956,7 +9027,7 @@ bool __fastcall static_attrib_t::BInitFromKV_SingleLine(
   if ( AttributeDefinitionByName != 0 )
   {
     p_m_value = &this->m_value;
-    LOWORD(p_m_value[-1].asFloat) = (*AttributeDefinitionByName->_vptr_IEconItemAttributeDefinition)(AttributeDefinitionByName);
+    LOWORD(p_m_value[-1].asFloat) = AttributeDefinitionByName->GetDefinitionIndex();
     m_pAttrType = v10->m_pAttrType;
     (*(m_pAttrType->_vptr_ISchemaAttributeType + 8))(m_pAttrType, p_m_value);
     String = KeyValues::GetString(pKVAttribute, 0, "", 0, 0);
@@ -9156,7 +9227,7 @@ bool __fastcall CEconItemDefinition::BInitBundleFromKV(
   CUtlSymbolTableLarge_CI *v20; // r14
   const char *v21; // r15
   int v22; // r9d
-  __int64 m_String; // rax
+  char *m_String; // rax
   int v24; // r9d
   int v25; // r11d
   signed int v26; // edx
@@ -9195,7 +9266,7 @@ bool __fastcall CEconItemDefinition::BInitBundleFromKV(
   KeyValues *pKVCurItemb; // [rsp+28h] [rbp-48h]
   bool pKVCurItemc; // [rsp+28h] [rbp-48h]
   __int64 pKVCurItemd; // [rsp+28h] [rbp-48h]
-  __int64 v63; // [rsp+30h] [rbp-40h]
+  char *v63; // [rsp+30h] [rbp-40h] BYREF
   CUtlSymbolTableLargeBaseTreeEntry_t *v64; // [rsp+38h] [rbp-38h] BYREF
 
   m_BundleInfo = this->m_BundleInfo;
@@ -9277,7 +9348,7 @@ bool __fastcall CEconItemDefinition::BInitBundleFromKV(
         if ( v22 > 0 && *v21 != 0 )
         {
           pKVCurItem = v22;
-          CUtlSymbolTableLargeBase<CNonThreadsafeTree<true>,true,2048ul>::Find(v20, v21, v22);
+          CUtlSymbolTableLargeBase<CNonThreadsafeTree<true>,true,2048ul>::Find(&v63, v20, v21, v22);
           m_String = v63;
           v24 = pKVCurItem;
           if ( v63 == 0 )
@@ -10017,7 +10088,7 @@ void __fastcall CEconItemDefinition::IterateAttributesOfType(
     {
       v7 = &this->m_vecStaticAttributes.m_Memory.m_pMemory[v5];
       iDefIndex = v7->iDefIndex;
-      if ( iDefIndex == (*attrDef->_vptr_IEconItemAttributeDefinition)(attrDef)
+      if ( iDefIndex == attrDef->GetDefinitionIndex()
         && (*(attrDef->m_pAttrType->_vptr_ISchemaAttributeType + 10))(
              attrDef->m_pAttrType,
              pIterator,
@@ -10834,9 +10905,9 @@ IEconTool *__fastcall CEconItemSchema::CreateEconToolImpl(
     {
       if ( pszUsageRestriction != 0 || unCapabilities != item_capabilities_t::ITEM_CAP_NONE )
         return 0;
-      v12 = operator new(0x48u);
+      v12 = operator new(0x48u);  // new CEconTool_BackpackExpander (size matches)
       IEconTool::IEconTool(v12, pszToolType, pszUseString, 0, item_capabilities_t::ITEM_CAP_NONE, pUsageKV);
-      v12->_vptr_IEconTool = off_47A70B0;
+      v12->_vptr_IEconTool = off_47A70B0;  // vptr: CEconTool_BackpackExpander
       return v12;
     }
     if ( V_stricmp_fast(pszToolType, "claimcode") == 0 )
@@ -10845,36 +10916,36 @@ IEconTool *__fastcall CEconItemSchema::CreateEconToolImpl(
     {
       if ( pszUsageRestriction != 0 || pUsageKV != 0 )
         return 0;
-      v15 = operator new(0x48u);
+      v15 = operator new(0x48u);  // new CEconTool_PaintCan (size matches)
       IEconTool::IEconTool(v15, pszToolType, 0, 0, unCapabilities, 0);
-      v15->_vptr_IEconTool = off_47A7110;
+      v15->_vptr_IEconTool = off_47A7110;  // vptr: CEconTool_PaintCan
       return v15;
     }
     if ( V_stricmp_fast(pszToolType, "name") == 0 )
     {
       if ( pszUsageRestriction != 0 || pUsageKV != 0 )
         return 0;
-      v16 = operator new(0x48u);
+      v16 = operator new(0x48u);  // new CEconTool_NameTag (size matches)
       IEconTool::IEconTool(v16, pszToolType, 0, 0, unCapabilities, 0);
-      v16->_vptr_IEconTool = off_47A7170;
+      v16->_vptr_IEconTool = off_47A7170;  // vptr: CEconTool_NameTag
       return v16;
     }
     if ( V_stricmp_fast(pszToolType, "desc") == 0 )
     {
       if ( pszUsageRestriction != 0 || pUsageKV != 0 )
         return 0;
-      v17 = operator new(0x48u);
+      v17 = operator new(0x48u);  // new CEconTool_DescTag (size matches)
       IEconTool::IEconTool(v17, pszToolType, 0, 0, unCapabilities, 0);
-      v17->_vptr_IEconTool = off_47A71D0;
+      v17->_vptr_IEconTool = off_47A71D0;  // vptr: CEconTool_DescTag
       return v17;
     }
     if ( V_stricmp_fast(pszToolType, "decoder_ring") == 0 )
     {
       if ( pUsageKV == 0 )
       {
-        v18 = operator new(0x48u);
+        v18 = operator new(0x48u);  // new CEconTool_CrateKey (size matches)
         IEconTool::IEconTool(v18, pszToolType, 0, pszUsageRestriction, unCapabilities, 0);
-        v18->_vptr_IEconTool = off_47A7230;
+        v18->_vptr_IEconTool = off_47A7230;  // vptr: CEconTool_CrateKey
         return v18;
       }
       return 0;
@@ -10883,10 +10954,10 @@ IEconTool *__fastcall CEconItemSchema::CreateEconToolImpl(
     {
       if ( pszUsageRestriction == 0 )
       {
-        v19 = operator new(0x50u);
+        v19 = operator new(0x50u);  // new CEconTool_ItemRedemption (size matches)
         IEconTool::IEconTool(v19, pszToolType, pszUseString, 0, item_capabilities_t::ITEM_CAP_NONE, pUsageKV);
         v19[1]._vptr_IEconTool = 0;
-        v19->_vptr_IEconTool = off_47A7290;
+        v19->_vptr_IEconTool = off_47A7290;  // vptr: CEconTool_ItemRedemption
         return v19;
       }
       return 0;
@@ -10897,9 +10968,9 @@ IEconTool *__fastcall CEconItemSchema::CreateEconToolImpl(
     {
       if ( pszUsageRestriction != 0 || pUsageKV != 0 )
         return 0;
-      v20 = operator new(0x48u);
+      v20 = operator new(0x48u);  // new CEconTool_GiftWrap (size matches)
       IEconTool::IEconTool(v20, pszToolType, 0, 0, unCapabilities, 0);
-      v20->_vptr_IEconTool = off_47A8E90;
+      v20->_vptr_IEconTool = off_47A8E90;  // vptr: CEconTool_GiftWrap
       return v20;
     }
     if ( V_stricmp_fast(pszToolType, "wedding_ring") == 0 )
@@ -10916,9 +10987,9 @@ IEconTool *__fastcall CEconItemSchema::CreateEconToolImpl(
     {
       if ( pszUsageRestriction == 0 )
       {
-        v22 = operator new(0x48u);
+        v22 = operator new(0x48u);  // new CEconTool_Autograph (size matches)
         IEconTool::IEconTool(v22, pszToolType, pszUseString, 0, unCapabilities, pUsageKV);
-        v22->_vptr_IEconTool = off_47A8F50;
+        v22->_vptr_IEconTool = off_47A8F50;  // vptr: CEconTool_Autograph
         return v22;
       }
       return 0;
@@ -10927,9 +10998,9 @@ IEconTool *__fastcall CEconItemSchema::CreateEconToolImpl(
     {
       if ( pszUsageRestriction != 0 || unCapabilities != item_capabilities_t::ITEM_CAP_NONE )
         return 0;
-      v23 = operator new(0x48u);
+      v23 = operator new(0x48u);  // new CEconTool_ItemPack (size matches)
       IEconTool::IEconTool(v23, pszToolType, pszUseString, 0, item_capabilities_t::ITEM_CAP_NONE, pUsageKV);
-      v23->_vptr_IEconTool = off_47A72F0;
+      v23->_vptr_IEconTool = off_47A72F0;  // vptr: CEconTool_ItemPack
       return v23;
     }
     if ( V_stricmp_fast(pszToolType, "socket_hammer") == 0 )
@@ -10937,9 +11008,9 @@ IEconTool *__fastcall CEconItemSchema::CreateEconToolImpl(
       if ( pszUsageRestriction != 0 )
         return 0;
 LABEL_52:
-      v24 = operator new(0x48u);
+      v24 = operator new(0x48u);  // new CEconTool_SocketHammer (size matches)
       IEconTool::IEconTool(v24, pszToolType, pszUseString, 0, unCapabilities, pUsageKV);
-      v24->_vptr_IEconTool = off_47A8B90;
+      v24->_vptr_IEconTool = off_47A8B90;  // vptr: CEconTool_SocketHammer
       return v24;
     }
     if ( V_stricmp_fast(pszToolType, "socket_hammer_safe") == 0 )
@@ -10974,23 +11045,23 @@ LABEL_52:
     }
     if ( V_stricmp_fast(pszToolType, "supply_crate") == 0 )
     {
-      v25 = operator new(0x50u);
+      v25 = operator new(0x50u);  // new CEconTool_SupplyCrate (size matches)
       IEconTool::IEconTool(v25);
       v25[1]._vptr_IEconTool = 0;
-      v25->_vptr_IEconTool = off_47A73B0;
+      v25->_vptr_IEconTool = off_47A73B0;  // vptr: CEconTool_SupplyCrate
       return v25;
     }
 LABEL_13:
-    v14 = operator new(0x48u);
+    v14 = operator new(0x48u);  // new CEconTool_Default (size matches)
     IEconTool::IEconTool(v14, pszToolType, pszUseString, pszUsageRestriction, unCapabilities, 0);
-    v14->_vptr_IEconTool = off_47A7350;
+    v14->_vptr_IEconTool = off_47A7350;  // vptr: CEconTool_Default
     return v14;
   }
   if ( pszUsageRestriction != 0 || pUsageKV != 0 )
     return 0;
-  v13 = operator new(0x48u);
+  v13 = operator new(0x48u);  // new CEconTool_WrappedGift (size matches)
   IEconTool::IEconTool(v13, pszToolType, pszUseString, 0, unCapabilities, 0);
-  v13->_vptr_IEconTool = off_47A7050;
+  v13->_vptr_IEconTool = off_47A7050;  // vptr: CEconTool_WrappedGift
   return v13;
 }
 
@@ -12174,13 +12245,13 @@ bool __fastcall CEconItemSchema::BAddAttributeTypes(
   attr_type_t *v11; // rdx
   ISchemaAttributeType *v12; // r15
   CUtlSymbolTableLarge_CI *v13; // r12
-  CUtlSymbolTableLargeBaseTreeEntry_t *m_String; // r14
+  char *m_String; // r14
   int v15; // r12d
   int v16; // edx
   attr_type_t *v17; // rdx
   ISchemaAttributeType *v18; // r15
   CUtlSymbolTableLarge_CI *v19; // r14
-  __int64 v20; // rax
+  char *v20; // rax
   int v21; // r14d
   int v22; // edx
   attr_type_t *v23; // rdx
@@ -12191,13 +12262,13 @@ bool __fastcall CEconItemSchema::BAddAttributeTypes(
   attr_type_t *v28; // rdx
   ISchemaAttributeType *v29; // r14
   CUtlSymbolTableLarge_CI *v30; // r15
-  __int64 v31; // rax
+  char *v31; // rax
   int v32; // r13d
   int v33; // edx
   attr_type_t *v34; // rdx
   ISchemaAttributeType *v35; // r13
   int v36; // r12d
-  __int64 v37; // r14
+  char *v37; // r14
   int v38; // eax
   attr_type_t *v39; // rdx
   const schema_attribute_stat_bucket_t *v41; // rcx
@@ -12215,9 +12286,9 @@ bool __fastcall CEconItemSchema::BAddAttributeTypes(
   int v53; // edx
   __int64 v54; // rdx
   UtlRBTreeNode_t<CUtlSymbolTableLargeBaseTreeEntry_t*,long long int> *v55; // rcx
-  CUtlSymbolTableLargeBaseTreeEntry_t *v56; // rdi
+  char *v56; // rdi
   UtlRBTreeNode_t<CUtlSymbolTableLargeBaseTreeEntry_t*,long long int> *v57; // r9
-  LargeSymbolTableHashDecoration_t *p_m_Hash; // rsi
+  CUtlSymbolTableLargeBaseTreeEntry_t *m_Data; // rsi
   unsigned int v59; // eax
   __int64 m_Right; // rsi
   int v61; // edi
@@ -12230,7 +12301,7 @@ bool __fastcall CEconItemSchema::BAddAttributeTypes(
   UtlRBTreeNode_t<CUtlSymbolTableLargeBaseTreeEntry_t*,long long int> *v68; // rcx
   CUtlSymbolTableLargeBase<CNonThreadsafeTree<true>,true,2048ul>::StringPool_t *v69; // rdi
   UtlRBTreeNode_t<CUtlSymbolTableLargeBaseTreeEntry_t*,long long int> *v70; // r8
-  CUtlSymbolTableLargeBaseTreeEntry_t *m_Data; // rsi
+  CUtlSymbolTableLargeBaseTreeEntry_t *v71; // rsi
   unsigned int v72; // eax
   __int64 m_Left; // rsi
   int v74; // edi
@@ -12278,9 +12349,9 @@ bool __fastcall CEconItemSchema::BAddAttributeTypes(
   CUtlSymbolTableLargeBaseTreeEntry_t **v116; // [rsp+18h] [rbp-68h]
   bool v117; // [rsp+18h] [rbp-68h]
   __int64 v118; // [rsp+18h] [rbp-68h]
-  __int64 v119; // [rsp+20h] [rbp-60h] BYREF
+  char *v119; // [rsp+20h] [rbp-60h] BYREF
   CUtlSymbolTableLargeBaseTreeEntry_t *pCopyFrom; // [rsp+28h] [rbp-58h] BYREF
-  CUtlSymbolTableLargeBaseTreeEntry_t *v121; // [rsp+30h] [rbp-50h] BYREF
+  char *v121[2]; // [rsp+30h] [rbp-50h] BYREF
   CUtlSymbolTableLargeBase<CNonThreadsafeTree<true>,true,2048ul>::StringPool_t *src[8]; // [rsp+40h] [rbp-40h] BYREF
 
   v3 = operator new(8u);
@@ -12310,8 +12381,8 @@ bool __fastcall CEconItemSchema::BAddAttributeTypes(
     v6->m_sName.u.m_Id = 0;
     v6->m_pAttrType = v3;
   }
-  v7 = operator new(8u);
-  v7->_vptr_ISchemaAttributeType = off_47A7950;
+  v7 = operator new(8u);  // new CSchemaAttributeType_Uint32 (size matches)  [vptr stores: ISchemaAttributeTypeBase<unsigned int>, CSchemaAttributeType_Uint32]
+  v7->_vptr_ISchemaAttributeType = off_47A7950;  // vptr: ISchemaAttributeTypeBase<unsigned int>
   if ( ISchemaAttributeTypeBase<unsigned int>::s_InstanceStats.m_pszDesc == 0 )
   {
     ISchemaAttributeTypeBase<unsigned int>::s_InstanceStats.m_pszDesc = ((**(&`typeinfo for'unsigned int + 1) == 42)
@@ -12320,7 +12391,7 @@ bool __fastcall CEconItemSchema::BAddAttributeTypes(
     CSchemaAttributeStats::m_pHead = &ISchemaAttributeTypeBase<unsigned int>::s_InstanceStats;
     ISchemaAttributeTypeBase<unsigned int>::s_InstanceStats.m_pNext = v47;
   }
-  v7->_vptr_ISchemaAttributeType = off_47A7A50;
+  v7->_vptr_ISchemaAttributeType = off_47A7A50;  // vptr: CSchemaAttributeType_Uint32
   CUtlSymbolTableLargeBase<CNonThreadsafeTree<true>,true,2048ul>::AddString(src, g_pEconSchemaSymbolTable, "uint32");
   v8 = this->m_vecAttributeTypes.m_Size;
   v9 = src[0];
@@ -12337,8 +12408,8 @@ bool __fastcall CEconItemSchema::BAddAttributeTypes(
     v11->m_sName.u.m_Id = v9;
     v11->m_pAttrType = v7;
   }
-  v12 = operator new(8u);
-  v12->_vptr_ISchemaAttributeType = off_47A7C50;
+  v12 = operator new(8u);  // new CSchemaAttributeType_Float (size matches)  [vptr stores: ISchemaAttributeTypeBase<float>, CSchemaAttributeType_Float]
+  v12->_vptr_ISchemaAttributeType = off_47A7C50;  // vptr: ISchemaAttributeTypeBase<float>
   if ( ISchemaAttributeTypeBase<float>::s_InstanceStats.m_pszDesc == 0 )
   {
     ISchemaAttributeTypeBase<float>::s_InstanceStats.m_pszDesc = ((**(&`typeinfo for'float + 1) == 42)
@@ -12347,11 +12418,11 @@ bool __fastcall CEconItemSchema::BAddAttributeTypes(
     CSchemaAttributeStats::m_pHead = &ISchemaAttributeTypeBase<float>::s_InstanceStats;
     ISchemaAttributeTypeBase<float>::s_InstanceStats.m_pNext = v46;
   }
-  v12->_vptr_ISchemaAttributeType = off_47A7D50;
+  v12->_vptr_ISchemaAttributeType = off_47A7D50;  // vptr: CSchemaAttributeType_Float
   v13 = g_pEconSchemaSymbolTable;
-  CUtlSymbolTableLargeBase<CNonThreadsafeTree<true>,true,2048ul>::Find(g_pEconSchemaSymbolTable, "float", 5);
-  m_String = v121;
-  if ( v121 == 0 )
+  CUtlSymbolTableLargeBase<CNonThreadsafeTree<true>,true,2048ul>::Find(v121, g_pEconSchemaSymbolTable, "float", 5);
+  m_String = v121[0];
+  if ( v121[0] == 0 )
   {
     v74 = v13->m_StringPools.m_Size;
     if ( v74 > 0 )
@@ -12459,8 +12530,8 @@ LABEL_16:
     v17->m_sName.u.m_Id = m_String;
     v17->m_pAttrType = v12;
   }
-  v18 = operator new(8u);
-  v18->_vptr_ISchemaAttributeType = off_47A7550;
+  v18 = operator new(8u);  // new CSchemaAttributeType_String (size matches)  [vptr stores: ISchemaAttributeTypeBase<CAttribute_String>, CSchemaAttributeType_String]
+  v18->_vptr_ISchemaAttributeType = off_47A7550;  // vptr: ISchemaAttributeTypeBase<CAttribute_String>
   if ( ISchemaAttributeTypeBase<CAttribute_String>::s_InstanceStats.m_pszDesc == 0 )
   {
     ISchemaAttributeTypeBase<CAttribute_String>::s_InstanceStats.m_pszDesc = &`typeinfo name for'CAttribute_String[`typeinfo name for'CAttribute_String[0] == 42];
@@ -12468,9 +12539,9 @@ LABEL_16:
     CSchemaAttributeStats::m_pHead = &ISchemaAttributeTypeBase<CAttribute_String>::s_InstanceStats;
     ISchemaAttributeTypeBase<CAttribute_String>::s_InstanceStats.m_pNext = v45;
   }
-  v18->_vptr_ISchemaAttributeType = off_47A76D0;
+  v18->_vptr_ISchemaAttributeType = off_47A76D0;  // vptr: CSchemaAttributeType_String
   v19 = g_pEconSchemaSymbolTable;
-  CUtlSymbolTableLargeBase<CNonThreadsafeTree<true>,true,2048ul>::Find(g_pEconSchemaSymbolTable, "string", 6);
+  CUtlSymbolTableLargeBase<CNonThreadsafeTree<true>,true,2048ul>::Find(&v119, g_pEconSchemaSymbolTable, "string", 6);
   v20 = v119;
   if ( v119 == 0 )
   {
@@ -12487,7 +12558,7 @@ LABEL_53:
         *v102 = v50 + v51;
         *(*v102 + 8LL) = MurmurHash2LowerCase("string", 0x3501A674u);
         strcpy((*v102 + 16LL), "string");
-        v121 = (*v102 + 8LL);
+        v121[0] = (*v102 + 8LL);
         v54 = v19->m_Lookup.m_Root;
         if ( v54 == -1 )
         {
@@ -12500,12 +12571,12 @@ LABEL_53:
           while ( 1 )
           {
             v57 = &v55[v54];
-            p_m_Hash = &v57->m_Data->m_Hash;
-            if ( v56->m_Hash == *p_m_Hash )
+            m_Data = v57->m_Data;
+            if ( *v56 == m_Data->m_Hash )
             {
               *v103 = 40 * v54;
               *isLefta = v54;
-              v90 = V_stricmp_fast(v56->m_String, p_m_Hash + 1);
+              v90 = V_stricmp_fast(v56 + 8, m_Data->m_String);
               v55 = v19->m_Lookup.m_Elements.m_pMemory;
               v59 = v90 >> 31;
               v54 = *isLefta;
@@ -12513,14 +12584,14 @@ LABEL_53:
             }
             else
             {
-              LOBYTE(v59) = v56->m_Hash < *p_m_Hash;
+              LOBYTE(v59) = *v56 < m_Data->m_Hash;
             }
             m_Right = v57->m_Right;
             if ( v59 != 0 )
               m_Right = v57->m_Left;
             if ( m_Right == -1 )
               break;
-            v56 = v121;
+            v56 = v121[0];
             v54 = m_Right;
           }
           v100 = v59 != 0;
@@ -12529,7 +12600,7 @@ LABEL_53:
         isLeftf = v54;
         v118 = CUtlRBTree<CUtlSymbolTableLargeBaseTreeEntry_t *,long long,CTreeEntryLess<CNonThreadsafeTree<true>,true>,CUtlMemory<UtlRBTreeNode_t<CUtlSymbolTableLargeBaseTreeEntry_t *,long long>,long long>>::NewNode(
                  &v19->m_Lookup,
-                 &v121);
+                 v121);
         CUtlRBTree<CUtlSymbolTableLargeBaseTreeEntry_t *,long long,CTreeEntryLess<CNonThreadsafeTree<true>,true>,CUtlMemory<UtlRBTreeNode_t<CUtlSymbolTableLargeBaseTreeEntry_t *,long long>,long long>>::LinkToParent(
           &v19->m_Lookup,
           v118,
@@ -12580,8 +12651,8 @@ LABEL_23:
     v23->m_sName.u.m_Id = v20;
     v23->m_pAttrType = v18;
   }
-  v24 = operator new(8u);
-  v24->_vptr_ISchemaAttributeType = off_47A7E50;
+  v24 = operator new(8u);  // new CSchemaAttributeType_Socket (size matches)  [vptr stores: ISchemaAttributeTypeBase<CAttribute_Socket>, CSchemaAttributeType_Socket]
+  v24->_vptr_ISchemaAttributeType = off_47A7E50;  // vptr: ISchemaAttributeTypeBase<CAttribute_Socket>
   if ( ISchemaAttributeTypeBase<CAttribute_Socket>::s_InstanceStats.m_pszDesc == 0 )
   {
     ISchemaAttributeTypeBase<CAttribute_Socket>::s_InstanceStats.m_pszDesc = "17CAttribute_Socket";
@@ -12589,7 +12660,7 @@ LABEL_23:
     CSchemaAttributeStats::m_pHead = &ISchemaAttributeTypeBase<CAttribute_Socket>::s_InstanceStats;
     ISchemaAttributeTypeBase<CAttribute_Socket>::s_InstanceStats.m_pNext = v44;
   }
-  v24->_vptr_ISchemaAttributeType = off_47A7F50;
+  v24->_vptr_ISchemaAttributeType = off_47A7F50;  // vptr: CSchemaAttributeType_Socket
   CUtlSymbolTableLargeBase<CNonThreadsafeTree<true>,true,2048ul>::AddString(src, g_pEconSchemaSymbolTable, "socket");
   v25 = this->m_vecAttributeTypes.m_Size;
   v26 = src[0];
@@ -12608,8 +12679,8 @@ LABEL_23:
     v28->m_sName.u.m_Id = v26;
     v28->m_pAttrType = v24;
   }
-  v29 = operator new(8u);
-  v29->_vptr_ISchemaAttributeType = off_47A7AD0;
+  v29 = operator new(8u);  // new CSchemaAttributeType_Uint64 (size matches)  [vptr stores: ISchemaAttributeTypeBase<unsigned long long>, CSchemaAttributeType_Uint64]
+  v29->_vptr_ISchemaAttributeType = off_47A7AD0;  // vptr: ISchemaAttributeTypeBase<unsigned long long>
   if ( ISchemaAttributeTypeBase<unsigned long long>::s_InstanceStats.m_pszDesc == 0 )
   {
     ISchemaAttributeTypeBase<unsigned long long>::s_InstanceStats.m_pszDesc = ((**(&`typeinfo for'unsigned long long + 1) == 42)
@@ -12618,9 +12689,9 @@ LABEL_23:
     CSchemaAttributeStats::m_pHead = &ISchemaAttributeTypeBase<unsigned long long>::s_InstanceStats;
     ISchemaAttributeTypeBase<unsigned long long>::s_InstanceStats.m_pNext = v43;
   }
-  v29->_vptr_ISchemaAttributeType = off_47A7BD0;
+  v29->_vptr_ISchemaAttributeType = off_47A7BD0;  // vptr: CSchemaAttributeType_Uint64
   v30 = g_pEconSchemaSymbolTable;
-  CUtlSymbolTableLargeBase<CNonThreadsafeTree<true>,true,2048ul>::Find(g_pEconSchemaSymbolTable, "uint64", 6);
+  CUtlSymbolTableLargeBase<CNonThreadsafeTree<true>,true,2048ul>::Find(&v119, g_pEconSchemaSymbolTable, "uint64", 6);
   v31 = v119;
   if ( v119 == 0 )
   {
@@ -12650,12 +12721,12 @@ LABEL_67:
           while ( 1 )
           {
             v70 = &v68[v67];
-            m_Data = v70->m_Data;
-            if ( *&v69->m_TotalLen == m_Data->m_Hash )
+            v71 = v70->m_Data;
+            if ( *&v69->m_TotalLen == v71->m_Hash )
             {
               *isLeftb = 40 * v67;
               v116 = v67;
-              v91 = V_stricmp_fast(v69->m_Data, m_Data->m_String);
+              v91 = V_stricmp_fast(v69->m_Data, v71->m_String);
               v68 = v30->m_Lookup.m_Elements.m_pMemory;
               v72 = v91 >> 31;
               v67 = v116;
@@ -12663,7 +12734,7 @@ LABEL_67:
             }
             else
             {
-              LOBYTE(v72) = *&v69->m_TotalLen < m_Data->m_Hash;
+              LOBYTE(v72) = *&v69->m_TotalLen < v71->m_Hash;
             }
             m_Left = v70->m_Right;
             if ( v72 != 0 )
@@ -12730,8 +12801,8 @@ LABEL_36:
     v34->m_sName.u.m_Id = v31;
     v34->m_pAttrType = v29;
   }
-  v35 = operator new(8u);
-  v35->_vptr_ISchemaAttributeType = off_47A7750;
+  v35 = operator new(8u);  // new CSchemaAttributeType_DynamicRecipeComponent (size matches)  [vptr stores: ISchemaAttributeTypeBase<CAttribute_ItemDynamicRecipeComponent>, CSchemaAttributeType_DynamicRecipeComponent]
+  v35->_vptr_ISchemaAttributeType = off_47A7750;  // vptr: ISchemaAttributeTypeBase<CAttribute_ItemDynamicRecipeComponent>
   if ( ISchemaAttributeTypeBase<CAttribute_ItemDynamicRecipeComponent>::s_InstanceStats.m_pszDesc == 0 )
   {
     ISchemaAttributeTypeBase<CAttribute_ItemDynamicRecipeComponent>::s_InstanceStats.m_pszDesc = &`typeinfo name for'CAttribute_ItemDynamicRecipeComponent[`typeinfo name for'CAttribute_ItemDynamicRecipeComponent[0] == 42];
@@ -12739,7 +12810,7 @@ LABEL_36:
     CSchemaAttributeStats::m_pHead = &ISchemaAttributeTypeBase<CAttribute_ItemDynamicRecipeComponent>::s_InstanceStats;
     ISchemaAttributeTypeBase<CAttribute_ItemDynamicRecipeComponent>::s_InstanceStats.m_pNext = v42;
   }
-  v35->_vptr_ISchemaAttributeType = off_47A78D0;
+  v35->_vptr_ISchemaAttributeType = off_47A78D0;  // vptr: CSchemaAttributeType_DynamicRecipeComponent
   CUtlSymbolTableLargeBase<CNonThreadsafeTree<true>,true,2048ul>::AddString(
     &v119,
     g_pEconSchemaSymbolTable,
@@ -12830,7 +12901,10 @@ bool __fastcall CEconItemSchema::BInitDefinitionPrefabs(
   while ( 1 )
   {
     Name = KeyValues::GetName(FirstTrueSubKey);
-    CUtlSymbolTableLargeBase<CNonThreadsafeTree<true>,true,2048ul>::AddString(&msg, g_pEconSchemaSymbolTable, Name);
+    CUtlSymbolTableLargeBase<CNonThreadsafeTree<true>,true,2048ul>::AddString(
+      &msg.m_pString,
+      g_pEconSchemaSymbolTable,
+      Name);
     v6 = CUtlRBTree<CUtlMap<CEconSchemaSymbol,KeyValues *,int,bool (*)(CEconSchemaSymbol const&,CEconSchemaSymbol const&)>::Node_t,int,CUtlMap<CEconSchemaSymbol,KeyValues *,int,bool (*)(CEconSchemaSymbol const&,CEconSchemaSymbol const&)>::CKeyLess,CUtlMemory<UtlRBTreeNode_t<CUtlMap<CEconSchemaSymbol,KeyValues *,int,bool (*)(CEconSchemaSymbol const&,CEconSchemaSymbol const&)>::Node_t,int>,int>>::Find(
            &p_m_mapDefinitionPrefabs->m_Tree,
            &msg);
@@ -12843,7 +12917,10 @@ bool __fastcall CEconItemSchema::BInitDefinitionPrefabs(
       break;
     }
     Copy = KeyValues::MakeCopy(FirstTrueSubKey);
-    CUtlSymbolTableLargeBase<CNonThreadsafeTree<true>,true,2048ul>::AddString(&msg, g_pEconSchemaSymbolTable, Name);
+    CUtlSymbolTableLargeBase<CNonThreadsafeTree<true>,true,2048ul>::AddString(
+      &msg.m_pString,
+      g_pEconSchemaSymbolTable,
+      Name);
     m_Root = this->m_mapDefinitionPrefabs.m_Tree.m_Root;
     v19 = Copy;
     if ( m_Root != -1 )
@@ -13596,7 +13673,7 @@ bool __fastcall CEconItemSchema::BInitEquipRegions(
   CUtlString *v19; // rbx
   const char *v20; // rax
   const char *v21; // rbx
-  __int64 m_String; // r14
+  char *m_String; // r14
   __int64 v23; // rbx
   int v24; // eax
   __int64 v25; // rbx
@@ -13632,7 +13709,7 @@ bool __fastcall CEconItemSchema::BInitEquipRegions(
   bool v56; // [rsp+38h] [rbp-1B8h]
   CUtlSymbolTableLargeBase<CNonThreadsafeTree<true>,true,2048ul> *v57; // [rsp+50h] [rbp-1A0h]
   CUtlString v59; // [rsp+60h] [rbp-190h] BYREF
-  __int64 v60; // [rsp+70h] [rbp-180h]
+  char *v60; // [rsp+70h] [rbp-180h] BYREF
   CUtlSymbolTableLargeBaseTreeEntry_t *v61; // [rsp+78h] [rbp-178h] BYREF
   CUtlVector<char const*,CUtlMemory<char const*,int> > vecNames; // [rsp+80h] [rbp-170h] BYREF
   CFmtStrN<256,false> v63; // [rsp+A0h] [rbp-150h] BYREF
@@ -13706,7 +13783,7 @@ LABEL_17:
             v55 = strlen(v21);
             if ( v55 > 0 && *v21 != 0 )
             {
-              CUtlSymbolTableLargeBase<CNonThreadsafeTree<true>,true,2048ul>::Find(v57, v21, v55);
+              CUtlSymbolTableLargeBase<CNonThreadsafeTree<true>,true,2048ul>::Find(&v60, v57, v21, v55);
               m_String = v60;
               if ( v60 == 0 )
               {
@@ -15253,7 +15330,7 @@ const IEconItemSetDefinition *__fastcall CEconItemSchema::FindItemSetByName(
   CUtlSymbolTableLarge_CI *v4; // r13
   int v5; // eax
   int v6; // r14d
-  UtlSymLargeId_t m_String; // rax
+  char *m_String; // rax
   int v8; // eax
   int m_Size; // eax
   signed int v11; // edx
@@ -15277,7 +15354,7 @@ const IEconItemSetDefinition *__fastcall CEconItemSchema::FindItemSetByName(
   UtlRBTreeNode_t<CUtlSymbolTableLargeBaseTreeEntry_t*,long long int> *v29; // r8
   char *v30; // [rsp+8h] [rbp-58h]
   __int64 v31; // [rsp+8h] [rbp-58h]
-  UtlSymLargeId_t v32; // [rsp+10h] [rbp-50h]
+  char *v32; // [rsp+10h] [rbp-50h] BYREF
   CUtlSymbolTableLargeBaseTreeEntry_t *pCopyFrom; // [rsp+18h] [rbp-48h] BYREF
   CUtlMap<CEconSchemaSymbol,CEconItemSetDefinition*,int,bool (*)(const CEconSchemaSymbol&,const CEconSchemaSymbol&)>::Node_t search; // [rsp+20h] [rbp-40h] BYREF
 
@@ -15287,7 +15364,7 @@ const IEconItemSetDefinition *__fastcall CEconItemSchema::FindItemSetByName(
     m_String = 0;
     goto LABEL_5;
   }
-  CUtlSymbolTableLargeBase<CNonThreadsafeTree<true>,true,2048ul>::Find(v4, pSetName, v5);
+  CUtlSymbolTableLargeBase<CNonThreadsafeTree<true>,true,2048ul>::Find(&v32, v4, pSetName, v5);
   m_String = v32;
   if ( v32 == 0 )
   {
@@ -15528,7 +15605,7 @@ bool __fastcall CEconItemSchema::BInitItemSets(
         m_pString = 0;
         if ( v15 > 0 && *v13 != 0 )
         {
-          CUtlSymbolTableLargeBase<CNonThreadsafeTree<true>,true,2048ul>::Find(v14, v13, v15);
+          CUtlSymbolTableLargeBase<CNonThreadsafeTree<true>,true,2048ul>::Find(&msg.m_pString, v14, v13, v15);
           m_pString = msg.m_pString;
           if ( msg.m_pString == 0 )
             break;
@@ -15558,7 +15635,7 @@ LABEL_4:
         if ( v8 > 0 && *v13 != 0 )
         {
           setNamea = v8;
-          CUtlSymbolTableLargeBase<CNonThreadsafeTree<true>,true,2048ul>::Find(v7, v13, v8);
+          CUtlSymbolTableLargeBase<CNonThreadsafeTree<true>,true,2048ul>::Find(&msg.m_pString, v7, v13, v8);
           m_String = msg.m_pString;
           v39 = setNamea;
           if ( msg.m_pString == 0 )
@@ -16167,10 +16244,10 @@ bool __fastcall CEconItemSchema::BInitAutographs(
   const char *Name; // rax
   uint32 v20; // r15d
   const char *v21; // rax
-  __int64 v22; // r14
+  char *v22; // r14
   const char *v23; // rax
   __int64 m_Size; // r12
-  __int64 v25; // r13
+  char *v25; // r13
   int v26; // eax
   const char *v27; // rax
   int v28; // eax
@@ -16199,12 +16276,12 @@ bool __fastcall CEconItemSchema::BInitAutographs(
   autograph_t::level_t *v52; // rdi
   CEconItemSchema::AutographMap_t *p_m_mapAutographs; // [rsp+10h] [rbp-1B0h]
   KeyValues *pKVAutograph; // [rsp+28h] [rbp-198h]
-  UtlSymLargeId_t v57[2]; // [rsp+50h] [rbp-170h] BYREF
-  UtlSymLargeId_t v58[2]; // [rsp+60h] [rbp-160h] BYREF
-  UtlSymLargeId_t v59[2]; // [rsp+70h] [rbp-150h] BYREF
-  UtlSymLargeId_t v60[2]; // [rsp+80h] [rbp-140h] BYREF
-  __int64 v61; // [rsp+90h] [rbp-130h] BYREF
-  __int64 v62; // [rsp+A0h] [rbp-120h] BYREF
+  char *v57; // [rsp+50h] [rbp-170h] BYREF
+  char *v58; // [rsp+60h] [rbp-160h] BYREF
+  char *v59; // [rsp+70h] [rbp-150h] BYREF
+  char *v60; // [rsp+80h] [rbp-140h] BYREF
+  char *v61; // [rsp+90h] [rbp-130h] BYREF
+  char *v62; // [rsp+A0h] [rbp-120h] BYREF
   autograph_t autograph; // [rsp+B0h] [rbp-110h] BYREF
   int v64; // [rsp+F0h] [rbp-D0h] BYREF
   __int64 v65; // [rsp+F8h] [rbp-C8h]
@@ -16250,8 +16327,8 @@ bool __fastcall CEconItemSchema::BInitAutographs(
       String = CKeyValues_Data::Internal_GetString(Key, "", 0, 0);
     else
       String = "";
-    CUtlSymbolTableLargeBase<CNonThreadsafeTree<true>,true,2048ul>::AddString(v57, g_pEconSchemaSymbolTable, String);
-    autograph.m_symAutograph.u.m_Id = v57[0];
+    CUtlSymbolTableLargeBase<CNonThreadsafeTree<true>,true,2048ul>::AddString(&v57, g_pEconSchemaSymbolTable, String);
+    autograph.m_symAutograph.u.m_Id = v57;
     if ( `guard variable for'CEconItemSchema::BInitAutographs(KeyValues *,CUtlVector<CUtlString,CUtlMemory<CUtlString,int>> *)::{lambda(char const*)#2}::operator() const(char const*)::s_sym == 0
       && __cxa_guard_acquire(&`guard variable for'CEconItemSchema::BInitAutographs(KeyValues *,CUtlVector<CUtlString,CUtlMemory<CUtlString,int>> *)::{lambda(char const*)#2}::operator() const(char const*)::s_sym) != 0 )
     {
@@ -16267,8 +16344,8 @@ bool __fastcall CEconItemSchema::BInitAutographs(
       v7 = CKeyValues_Data::Internal_GetString(v6, "", 0, 0);
     else
       v7 = "";
-    CUtlSymbolTableLargeBase<CNonThreadsafeTree<true>,true,2048ul>::AddString(v58, g_pEconSchemaSymbolTable, v7);
-    autograph.m_symWorkshopLink.u.m_Id = v58[0];
+    CUtlSymbolTableLargeBase<CNonThreadsafeTree<true>,true,2048ul>::AddString(&v58, g_pEconSchemaSymbolTable, v7);
+    autograph.m_symWorkshopLink.u.m_Id = v58;
     if ( `guard variable for'CEconItemSchema::BInitAutographs(KeyValues *,CUtlVector<CUtlString,CUtlMemory<CUtlString,int>> *)::{lambda(char const*)#3}::operator() const(char const*)::s_sym == 0
       && __cxa_guard_acquire(&`guard variable for'CEconItemSchema::BInitAutographs(KeyValues *,CUtlVector<CUtlString,CUtlMemory<CUtlString,int>> *)::{lambda(char const*)#3}::operator() const(char const*)::s_sym) != 0 )
     {
@@ -16284,8 +16361,8 @@ bool __fastcall CEconItemSchema::BInitAutographs(
       v9 = CKeyValues_Data::Internal_GetString(v8, "", 0, 0);
     else
       v9 = "";
-    CUtlSymbolTableLargeBase<CNonThreadsafeTree<true>,true,2048ul>::AddString(v59, g_pEconSchemaSymbolTable, v9);
-    autograph.m_symNameModifier.u.m_Id = v59[0];
+    CUtlSymbolTableLargeBase<CNonThreadsafeTree<true>,true,2048ul>::AddString(&v59, g_pEconSchemaSymbolTable, v9);
+    autograph.m_symNameModifier.u.m_Id = v59;
     if ( `guard variable for'CEconItemSchema::BInitAutographs(KeyValues *,CUtlVector<CUtlString,CUtlMemory<CUtlString,int>> *)::{lambda(char const*)#4}::operator() const(char const*)::s_sym == 0
       && __cxa_guard_acquire(&`guard variable for'CEconItemSchema::BInitAutographs(KeyValues *,CUtlVector<CUtlString,CUtlMemory<CUtlString,int>> *)::{lambda(char const*)#4}::operator() const(char const*)::s_sym) != 0 )
     {
@@ -16301,8 +16378,8 @@ bool __fastcall CEconItemSchema::BInitAutographs(
       v11 = CKeyValues_Data::Internal_GetString(v10, "", 0, 0);
     else
       v11 = "";
-    CUtlSymbolTableLargeBase<CNonThreadsafeTree<true>,true,2048ul>::AddString(v60, g_pEconSchemaSymbolTable, v11);
-    autograph.m_symImage.u.m_Id = v60[0];
+    CUtlSymbolTableLargeBase<CNonThreadsafeTree<true>,true,2048ul>::AddString(&v60, g_pEconSchemaSymbolTable, v11);
+    autograph.m_symImage.u.m_Id = v60;
     if ( `guard variable for'CEconItemSchema::BInitAutographs(KeyValues *,CUtlVector<CUtlString,CUtlMemory<CUtlString,int>> *)::{lambda(char const*)#5}::operator() const(char const*)::s_sym == 0
       && __cxa_guard_acquire(&`guard variable for'CEconItemSchema::BInitAutographs(KeyValues *,CUtlVector<CUtlString,CUtlMemory<CUtlString,int>> *)::{lambda(char const*)#5}::operator() const(char const*)::s_sym) != 0 )
     {
@@ -16593,9 +16670,9 @@ bool __fastcall CEconItemSchema::BInitAssetModifiers(
   CUtlMap<int,AssetModifier_t,short unsigned int,bool (*)(int const&,int const&)> *p_m_mapAssetModifiers; // [rsp+30h] [rbp-220h]
   int nAssetModifierIndex; // [rsp+3Ch] [rbp-214h]
   KeyValues *pAssetModifierKV; // [rsp+48h] [rbp-208h]
-  UtlSymLargeId_t v41[2]; // [rsp+60h] [rbp-1F0h] BYREF
-  UtlSymLargeId_t v42[2]; // [rsp+70h] [rbp-1E0h] BYREF
-  UtlSymLargeId_t v43[2]; // [rsp+80h] [rbp-1D0h] BYREF
+  char *v41; // [rsp+60h] [rbp-1F0h] BYREF
+  char *v42; // [rsp+70h] [rbp-1E0h] BYREF
+  char *v43; // [rsp+80h] [rbp-1D0h] BYREF
   AssetModifier_t a_mod; // [rsp+90h] [rbp-1C0h] BYREF
   CUtlString msg; // [rsp+C0h] [rbp-190h] BYREF
   UtlSymLargeId_t m_Id; // [rsp+C8h] [rbp-188h]
@@ -16709,8 +16786,8 @@ bool __fastcall CEconItemSchema::BInitAssetModifiers(
       String = CKeyValues_Data::Internal_GetString(Key, "", 0, 0);
     else
       String = "";
-    CUtlSymbolTableLargeBase<CNonThreadsafeTree<true>,true,2048ul>::AddString(v41, g_pEconSchemaSymbolTable, String);
-    a_mod.m_symName.u.m_Id = v41[0];
+    CUtlSymbolTableLargeBase<CNonThreadsafeTree<true>,true,2048ul>::AddString(&v41, g_pEconSchemaSymbolTable, String);
+    a_mod.m_symName.u.m_Id = v41;
     if ( `guard variable for'CEconItemSchema::BInitAssetModifiers(KeyValues *,CUtlVector<CUtlString,CUtlMemory<CUtlString,int>> *)::{lambda(char const*)#2}::operator() const(char const*)::s_sym == 0
       && __cxa_guard_acquire(&`guard variable for'CEconItemSchema::BInitAssetModifiers(KeyValues *,CUtlVector<CUtlString,CUtlMemory<CUtlString,int>> *)::{lambda(char const*)#2}::operator() const(char const*)::s_sym) != 0 )
     {
@@ -16726,8 +16803,8 @@ bool __fastcall CEconItemSchema::BInitAssetModifiers(
       v18 = CKeyValues_Data::Internal_GetString(v17, "", 0, 0);
     else
       v18 = "";
-    CUtlSymbolTableLargeBase<CNonThreadsafeTree<true>,true,2048ul>::AddString(v42, g_pEconSchemaSymbolTable, v18);
-    a_mod.m_symLoc.u.m_Id = v42[0];
+    CUtlSymbolTableLargeBase<CNonThreadsafeTree<true>,true,2048ul>::AddString(&v42, g_pEconSchemaSymbolTable, v18);
+    a_mod.m_symLoc.u.m_Id = v42;
     if ( `guard variable for'CEconItemSchema::BInitAssetModifiers(KeyValues *,CUtlVector<CUtlString,CUtlMemory<CUtlString,int>> *)::{lambda(char const*)#3}::operator() const(char const*)::s_sym == 0
       && __cxa_guard_acquire(&`guard variable for'CEconItemSchema::BInitAssetModifiers(KeyValues *,CUtlVector<CUtlString,CUtlMemory<CUtlString,int>> *)::{lambda(char const*)#3}::operator() const(char const*)::s_sym) != 0 )
     {
@@ -16743,8 +16820,8 @@ bool __fastcall CEconItemSchema::BInitAssetModifiers(
       v20 = CKeyValues_Data::Internal_GetString(v19, "", 0, 0);
     else
       v20 = "";
-    CUtlSymbolTableLargeBase<CNonThreadsafeTree<true>,true,2048ul>::AddString(v43, g_pEconSchemaSymbolTable, v20);
-    a_mod.m_symFile.u.m_Id = v43[0];
+    CUtlSymbolTableLargeBase<CNonThreadsafeTree<true>,true,2048ul>::AddString(&v43, g_pEconSchemaSymbolTable, v20);
+    a_mod.m_symFile.u.m_Id = v43;
     for ( j = KeyValues::GetFirstTrueSubKey(pAssetModifierKV); j != 0; j = KeyValues::GetNextTrueSubKey(j) )
     {
       Instance = CAssetModifier::CreateInstance(j, this, 1, -1);
@@ -16873,43 +16950,47 @@ bool __fastcall CEconItemSchema::BInitPartners(
   const char *v15; // rdx
   KeyValues *v16; // rax
   const char *Name; // rax
-  __int64 v18; // rsi
-  CUtlMap<unsigned int,ItemPartner_t,short unsigned int,bool (*)(unsigned int const&,unsigned int const&)>::KeyType_t v19; // eax
+  __int64 v18; // rdx
+  __int64 v19; // rcx
+  __int64 v20; // rsi
+  CUtlMap<unsigned int,ItemPartner_t,short unsigned int,bool (*)(unsigned int const&,unsigned int const&)>::KeyType_t v21; // eax
   unsigned __int16 m_Root; // r14
   unsigned __int16 m_Left; // ax
-  char v22; // cl
-  bool v23; // zf
+  char v24; // cl
+  bool v25; // zf
   UtlRBTreeNode_t<CUtlMap<unsigned int,ItemPartner_t>::Node_t,short unsigned int> *m_pMemory; // rax
-  unsigned __int16 v25; // ax
-  KeyValues *v26; // rax
-  KeyValues *v27; // rax
-  const char *v28; // rdx
-  UtlSymLargeId_t v29; // r15
-  KeyValues *v30; // rax
-  const char *v31; // rdx
-  UtlSymLargeId_t v32; // r14
-  KeyValues *v33; // rax
-  const char *v34; // rdx
-  UtlSymLargeId_t v35; // r13
-  KeyValues *v36; // rax
-  const char *v37; // rdx
+  unsigned __int16 v27; // ax
+  KeyValues *v28; // rax
+  KeyValues *v29; // rax
+  const char *v30; // rdx
+  UtlSymLargeId_t v31; // r15
+  KeyValues *v32; // rax
+  const char *v33; // rdx
+  UtlSymLargeId_t v34; // r14
+  KeyValues *v35; // rax
+  const char *v36; // rdx
+  UtlSymLargeId_t v37; // r13
   KeyValues *v38; // rax
-  const char *v39; // rax
-  __int64 v40; // rsi
-  CUtlMap<unsigned int,ItemPartner_t,short unsigned int,bool (*)(unsigned int const&,unsigned int const&)>::KeyType_t v41; // eax
-  unsigned __int16 v42; // r14
+  const char *v39; // rdx
+  KeyValues *v40; // rax
+  const char *v41; // rax
+  __int64 v42; // rdx
+  __int64 v43; // rcx
+  __int64 v44; // rsi
+  CUtlMap<unsigned int,ItemPartner_t,short unsigned int,bool (*)(unsigned int const&,unsigned int const&)>::KeyType_t v45; // eax
+  unsigned __int16 v46; // r14
   unsigned __int16 m_Right; // ax
-  char v44; // cl
-  UtlRBTreeNode_t<CUtlMap<unsigned int,ItemPartner_t>::Node_t,short unsigned int> *v45; // rax
-  unsigned __int16 v46; // ax
-  bool v48; // r15
-  bool v49; // r15
+  char v48; // cl
+  UtlRBTreeNode_t<CUtlMap<unsigned int,ItemPartner_t>::Node_t,short unsigned int> *v49; // rax
+  unsigned __int16 v50; // ax
+  bool v52; // r15
+  bool v53; // r15
   CUtlMap<unsigned int,ItemPartner_t,short unsigned int,bool (*)(unsigned int const&,unsigned int const&)> *p_m_mapPartnerCorporations; // [rsp+8h] [rbp-98h]
   CUtlMap<unsigned int,ItemPartner_t,short unsigned int,bool (*)(unsigned int const&,unsigned int const&)> *p_m_mapPartnerTeams; // [rsp+8h] [rbp-98h]
   uint16 m_Data; // [rsp+1Ch] [rbp-84h]
   uint16 Int; // [rsp+1Ch] [rbp-84h]
-  UtlSymLargeId_t v56; // [rsp+20h] [rbp-80h]
-  UtlSymLargeId_t v57; // [rsp+20h] [rbp-80h]
+  UtlSymLargeId_t v60; // [rsp+20h] [rbp-80h]
+  UtlSymLargeId_t v61; // [rsp+20h] [rbp-80h]
   const KeyValues *pTeamKV; // [rsp+28h] [rbp-78h]
   const KeyValues *pTeamKVa; // [rsp+28h] [rbp-78h]
   CUtlMap<unsigned int,ItemPartner_t,short unsigned int,bool (*)(unsigned int const&,unsigned int const&)>::Node_t pCopyFrom; // [rsp+30h] [rbp-70h] BYREF
@@ -17000,7 +17081,7 @@ bool __fastcall CEconItemSchema::BInitPartners(
     if ( v14 != 0 )
       v15 = CKeyValues_Data::Internal_GetString(v14, "", 0, 0);
     CUtlSymbolTableLargeBase<CNonThreadsafeTree<true>,true,2048ul>::AddString(&pCopyFrom, g_pEconSchemaSymbolTable, v15);
-    v56 = *&pCopyFrom.key;
+    v60 = *&pCopyFrom.key;
     m_Data = INVALID_ITEM_DEF_INDEX.m_Data;
     if ( `guard variable for'CEconItemSchema::BInitPartners(KeyValues *,CUtlVector<CUtlString,CUtlMemory<CUtlString,int>> *)::{lambda(char const*)#6}::operator() const(char const*)::s_sym == 0
       && __cxa_guard_acquire(&`guard variable for'CEconItemSchema::BInitPartners(KeyValues *,CUtlVector<CUtlString,CUtlMemory<CUtlString,int>> *)::{lambda(char const*)#6}::operator() const(char const*)::s_sym) != 0 )
@@ -17016,52 +17097,52 @@ bool __fastcall CEconItemSchema::BInitPartners(
     if ( v16 != 0 )
       m_Data = CKeyValues_Data::Internal_GetInt(v16);
     Name = KeyValues::GetName(pTeamKV);
-    v19 = V_atoui64(Name, v18);
+    v21 = V_atoui64(Name, v20, v18, v19);
     pCopyFrom.elem.m_symImage.u.m_Id = v10;
     m_Root = this->m_mapPartnerCorporations.m_Tree.m_Root;
-    pCopyFrom.key = v19;
+    pCopyFrom.key = v21;
     pCopyFrom.elem.m_symImageURLPath.u.m_Id = 0;
     pCopyFrom.elem.m_symBannerURLPath.u.m_Id = 0;
     pCopyFrom.elem.m_symName.u.m_Id = v7;
-    pCopyFrom.elem.m_symBanner.u.m_Id = v56;
+    pCopyFrom.elem.m_symBanner.u.m_Id = v60;
     pCopyFrom.elem.m_symSmallImage.u.m_Id = v13;
     pCopyFrom.elem.m_inGameItemDef.m_Data = m_Data;
     if ( m_Root == 0xFFFF )
     {
       m_Root = -1;
-      v48 = 0;
+      v52 = 0;
       goto LABEL_26;
     }
     while ( 1 )
     {
-      v23 = !this->m_mapPartnerCorporations.m_Tree.m_LessFunc.m_LessFunc(
+      v25 = !this->m_mapPartnerCorporations.m_Tree.m_LessFunc.m_LessFunc(
                &pCopyFrom,
                &this->m_mapPartnerCorporations.m_Tree.m_Elements.m_pMemory[m_Root].m_Data);
       m_pMemory = this->m_mapPartnerCorporations.m_Tree.m_Elements.m_pMemory;
-      if ( v23 )
+      if ( v25 )
         break;
       m_Left = m_pMemory[m_Root].m_Left;
-      v22 = 1;
+      v24 = 1;
       if ( m_Left == 0xFFFF )
         goto LABEL_25;
 LABEL_22:
       m_Root = m_Left;
     }
     m_Left = m_pMemory[m_Root].m_Right;
-    v22 = 0;
+    v24 = 0;
     if ( m_Left != 0xFFFF )
       goto LABEL_22;
 LABEL_25:
-    v48 = v22;
+    v52 = v24;
 LABEL_26:
-    v25 = CUtlRBTree<CUtlMap<unsigned int,ItemPartner_t,unsigned short,bool (*)(unsigned int const&,unsigned int const&)>::Node_t,unsigned short,CUtlMap<unsigned int,ItemPartner_t,unsigned short,bool (*)(unsigned int const&,unsigned int const&)>::CKeyLess,CUtlMemory<UtlRBTreeNode_t<CUtlMap<unsigned int,ItemPartner_t,unsigned short,bool (*)(unsigned int const&,unsigned int const&)>::Node_t,unsigned short>,unsigned short>>::NewNode(
+    v27 = CUtlRBTree<CUtlMap<unsigned int,ItemPartner_t,unsigned short,bool (*)(unsigned int const&,unsigned int const&)>::Node_t,unsigned short,CUtlMap<unsigned int,ItemPartner_t,unsigned short,bool (*)(unsigned int const&,unsigned int const&)>::CKeyLess,CUtlMemory<UtlRBTreeNode_t<CUtlMap<unsigned int,ItemPartner_t,unsigned short,bool (*)(unsigned int const&,unsigned int const&)>::Node_t,unsigned short>,unsigned short>>::NewNode(
             &p_m_mapPartnerCorporations->m_Tree,
             &pCopyFrom);
     CUtlRBTree<CUtlMap<unsigned int,ItemPartner_t,unsigned short,bool (*)(unsigned int const&,unsigned int const&)>::Node_t,unsigned short,CUtlMap<unsigned int,ItemPartner_t,unsigned short,bool (*)(unsigned int const&,unsigned int const&)>::CKeyLess,CUtlMemory<UtlRBTreeNode_t<CUtlMap<unsigned int,ItemPartner_t,unsigned short,bool (*)(unsigned int const&,unsigned int const&)>::Node_t,unsigned short>,unsigned short>>::LinkToParent(
       &p_m_mapPartnerCorporations->m_Tree,
-      v25,
+      v27,
       m_Root,
-      v48);
+      v52);
     ++this->m_mapPartnerCorporations.m_Tree.m_NumElements;
     pTeamKV = KeyValues::GetNextKey(pTeamKV);
   }
@@ -17077,12 +17158,12 @@ LABEL_27:
       "teams");
     __cxa_guard_release(&`guard variable for'CEconItemSchema::BInitPartners(KeyValues *,CUtlVector<CUtlString,CUtlMemory<CUtlString,int>> *)::{lambda(char const*)#7}::operator() const(char const*)::s_sym);
   }
-  v26 = KeyValues::FindKey(
+  v28 = KeyValues::FindKey(
           pKVPartners,
           CEconItemSchema::BInitPartners(KeyValues *,CUtlVector<CUtlString,CUtlMemory<CUtlString,int>> *)::{lambda(char const*)#7}::operator() const(char const*)::s_sym);
-  if ( v26 == 0 )
+  if ( v28 == 0 )
     return pVecErrors == 0 || pVecErrors->m_Size == 0;
-  pTeamKVa = KeyValues::GetFirstSubKey(v26);
+  pTeamKVa = KeyValues::GetFirstSubKey(v28);
   if ( pTeamKVa == 0 )
     return pVecErrors == 0 || pVecErrors->m_Size == 0;
   while ( 2 )
@@ -17095,14 +17176,14 @@ LABEL_27:
         "name");
       __cxa_guard_release(&`guard variable for'CEconItemSchema::BInitPartners(KeyValues *,CUtlVector<CUtlString,CUtlMemory<CUtlString,int>> *)::{lambda(char const*)#8}::operator() const(char const*)::s_sym);
     }
-    v27 = KeyValues::FindKey(
+    v29 = KeyValues::FindKey(
             pTeamKVa,
             CEconItemSchema::BInitPartners(KeyValues *,CUtlVector<CUtlString,CUtlMemory<CUtlString,int>> *)::{lambda(char const*)#8}::operator() const(char const*)::s_sym);
-    v28 = "";
-    if ( v27 != 0 )
-      v28 = CKeyValues_Data::Internal_GetString(v27, "", 0, 0);
-    CUtlSymbolTableLargeBase<CNonThreadsafeTree<true>,true,2048ul>::AddString(&pCopyFrom, g_pEconSchemaSymbolTable, v28);
-    v29 = *&pCopyFrom.key;
+    v30 = "";
+    if ( v29 != 0 )
+      v30 = CKeyValues_Data::Internal_GetString(v29, "", 0, 0);
+    CUtlSymbolTableLargeBase<CNonThreadsafeTree<true>,true,2048ul>::AddString(&pCopyFrom, g_pEconSchemaSymbolTable, v30);
+    v31 = *&pCopyFrom.key;
     if ( `guard variable for'CEconItemSchema::BInitPartners(KeyValues *,CUtlVector<CUtlString,CUtlMemory<CUtlString,int>> *)::{lambda(char const*)#9}::operator() const(char const*)::s_sym == 0
       && __cxa_guard_acquire(&`guard variable for'CEconItemSchema::BInitPartners(KeyValues *,CUtlVector<CUtlString,CUtlMemory<CUtlString,int>> *)::{lambda(char const*)#9}::operator() const(char const*)::s_sym) != 0 )
     {
@@ -17111,14 +17192,14 @@ LABEL_27:
         "icon_path");
       __cxa_guard_release(&`guard variable for'CEconItemSchema::BInitPartners(KeyValues *,CUtlVector<CUtlString,CUtlMemory<CUtlString,int>> *)::{lambda(char const*)#9}::operator() const(char const*)::s_sym);
     }
-    v30 = KeyValues::FindKey(
+    v32 = KeyValues::FindKey(
             pTeamKVa,
             CEconItemSchema::BInitPartners(KeyValues *,CUtlVector<CUtlString,CUtlMemory<CUtlString,int>> *)::{lambda(char const*)#9}::operator() const(char const*)::s_sym);
-    v31 = "";
-    if ( v30 != 0 )
-      v31 = CKeyValues_Data::Internal_GetString(v30, "", 0, 0);
-    CUtlSymbolTableLargeBase<CNonThreadsafeTree<true>,true,2048ul>::AddString(&pCopyFrom, g_pEconSchemaSymbolTable, v31);
-    v32 = *&pCopyFrom.key;
+    v33 = "";
+    if ( v32 != 0 )
+      v33 = CKeyValues_Data::Internal_GetString(v32, "", 0, 0);
+    CUtlSymbolTableLargeBase<CNonThreadsafeTree<true>,true,2048ul>::AddString(&pCopyFrom, g_pEconSchemaSymbolTable, v33);
+    v34 = *&pCopyFrom.key;
     if ( `guard variable for'CEconItemSchema::BInitPartners(KeyValues *,CUtlVector<CUtlString,CUtlMemory<CUtlString,int>> *)::{lambda(char const*)#10}::operator() const(char const*)::s_sym == 0
       && __cxa_guard_acquire(&`guard variable for'CEconItemSchema::BInitPartners(KeyValues *,CUtlVector<CUtlString,CUtlMemory<CUtlString,int>> *)::{lambda(char const*)#10}::operator() const(char const*)::s_sym) != 0 )
     {
@@ -17127,14 +17208,14 @@ LABEL_27:
         "small_icon");
       __cxa_guard_release(&`guard variable for'CEconItemSchema::BInitPartners(KeyValues *,CUtlVector<CUtlString,CUtlMemory<CUtlString,int>> *)::{lambda(char const*)#10}::operator() const(char const*)::s_sym);
     }
-    v33 = KeyValues::FindKey(
+    v35 = KeyValues::FindKey(
             pTeamKVa,
             CEconItemSchema::BInitPartners(KeyValues *,CUtlVector<CUtlString,CUtlMemory<CUtlString,int>> *)::{lambda(char const*)#10}::operator() const(char const*)::s_sym);
-    v34 = "";
-    if ( v33 != 0 )
-      v34 = CKeyValues_Data::Internal_GetString(v33, "", 0, 0);
-    CUtlSymbolTableLargeBase<CNonThreadsafeTree<true>,true,2048ul>::AddString(&pCopyFrom, g_pEconSchemaSymbolTable, v34);
-    v35 = *&pCopyFrom.key;
+    v36 = "";
+    if ( v35 != 0 )
+      v36 = CKeyValues_Data::Internal_GetString(v35, "", 0, 0);
+    CUtlSymbolTableLargeBase<CNonThreadsafeTree<true>,true,2048ul>::AddString(&pCopyFrom, g_pEconSchemaSymbolTable, v36);
+    v37 = *&pCopyFrom.key;
     if ( `guard variable for'CEconItemSchema::BInitPartners(KeyValues *,CUtlVector<CUtlString,CUtlMemory<CUtlString,int>> *)::{lambda(char const*)#11}::operator() const(char const*)::s_sym == 0
       && __cxa_guard_acquire(&`guard variable for'CEconItemSchema::BInitPartners(KeyValues *,CUtlVector<CUtlString,CUtlMemory<CUtlString,int>> *)::{lambda(char const*)#11}::operator() const(char const*)::s_sym) != 0 )
     {
@@ -17143,14 +17224,14 @@ LABEL_27:
         "image_banner");
       __cxa_guard_release(&`guard variable for'CEconItemSchema::BInitPartners(KeyValues *,CUtlVector<CUtlString,CUtlMemory<CUtlString,int>> *)::{lambda(char const*)#11}::operator() const(char const*)::s_sym);
     }
-    v36 = KeyValues::FindKey(
+    v38 = KeyValues::FindKey(
             pTeamKVa,
             CEconItemSchema::BInitPartners(KeyValues *,CUtlVector<CUtlString,CUtlMemory<CUtlString,int>> *)::{lambda(char const*)#11}::operator() const(char const*)::s_sym);
-    v37 = "";
-    if ( v36 != 0 )
-      v37 = CKeyValues_Data::Internal_GetString(v36, "", 0, 0);
-    CUtlSymbolTableLargeBase<CNonThreadsafeTree<true>,true,2048ul>::AddString(&pCopyFrom, g_pEconSchemaSymbolTable, v37);
-    v57 = *&pCopyFrom.key;
+    v39 = "";
+    if ( v38 != 0 )
+      v39 = CKeyValues_Data::Internal_GetString(v38, "", 0, 0);
+    CUtlSymbolTableLargeBase<CNonThreadsafeTree<true>,true,2048ul>::AddString(&pCopyFrom, g_pEconSchemaSymbolTable, v39);
+    v61 = *&pCopyFrom.key;
     Int = INVALID_ITEM_DEF_INDEX.m_Data;
     if ( `guard variable for'CEconItemSchema::BInitPartners(KeyValues *,CUtlVector<CUtlString,CUtlMemory<CUtlString,int>> *)::{lambda(char const*)#12}::operator() const(char const*)::s_sym == 0
       && __cxa_guard_acquire(&`guard variable for'CEconItemSchema::BInitPartners(KeyValues *,CUtlVector<CUtlString,CUtlMemory<CUtlString,int>> *)::{lambda(char const*)#12}::operator() const(char const*)::s_sym) != 0 )
@@ -17160,62 +17241,62 @@ LABEL_27:
         "in_game_item_def");
       __cxa_guard_release(&`guard variable for'CEconItemSchema::BInitPartners(KeyValues *,CUtlVector<CUtlString,CUtlMemory<CUtlString,int>> *)::{lambda(char const*)#12}::operator() const(char const*)::s_sym);
     }
-    v38 = KeyValues::FindKey(
+    v40 = KeyValues::FindKey(
             pTeamKVa,
             CEconItemSchema::BInitPartners(KeyValues *,CUtlVector<CUtlString,CUtlMemory<CUtlString,int>> *)::{lambda(char const*)#12}::operator() const(char const*)::s_sym);
-    if ( v38 != 0 )
-      Int = CKeyValues_Data::Internal_GetInt(v38);
-    v39 = KeyValues::GetName(pTeamKVa);
-    v41 = V_atoui64(v39, v40);
-    pCopyFrom.elem.m_symImage.u.m_Id = v32;
-    v42 = this->m_mapPartnerTeams.m_Tree.m_Root;
-    pCopyFrom.key = v41;
+    if ( v40 != 0 )
+      Int = CKeyValues_Data::Internal_GetInt(v40);
+    v41 = KeyValues::GetName(pTeamKVa);
+    v45 = V_atoui64(v41, v44, v42, v43);
+    pCopyFrom.elem.m_symImage.u.m_Id = v34;
+    v46 = this->m_mapPartnerTeams.m_Tree.m_Root;
+    pCopyFrom.key = v45;
     pCopyFrom.elem.m_symImageURLPath.u.m_Id = 0;
     pCopyFrom.elem.m_symBannerURLPath.u.m_Id = 0;
-    pCopyFrom.elem.m_symName.u.m_Id = v29;
-    pCopyFrom.elem.m_symBanner.u.m_Id = v57;
-    pCopyFrom.elem.m_symSmallImage.u.m_Id = v35;
+    pCopyFrom.elem.m_symName.u.m_Id = v31;
+    pCopyFrom.elem.m_symBanner.u.m_Id = v61;
+    pCopyFrom.elem.m_symSmallImage.u.m_Id = v37;
     pCopyFrom.elem.m_inGameItemDef.m_Data = Int;
-    if ( v42 == 0xFFFF )
+    if ( v46 == 0xFFFF )
     {
-      v42 = -1;
-      v49 = 0;
+      v46 = -1;
+      v53 = 0;
       goto LABEL_52;
     }
     while ( 2 )
     {
-      v23 = !this->m_mapPartnerTeams.m_Tree.m_LessFunc.m_LessFunc(
+      v25 = !this->m_mapPartnerTeams.m_Tree.m_LessFunc.m_LessFunc(
                &pCopyFrom,
-               &this->m_mapPartnerTeams.m_Tree.m_Elements.m_pMemory[v42].m_Data);
-      v45 = this->m_mapPartnerTeams.m_Tree.m_Elements.m_pMemory;
-      if ( !v23 )
+               &this->m_mapPartnerTeams.m_Tree.m_Elements.m_pMemory[v46].m_Data);
+      v49 = this->m_mapPartnerTeams.m_Tree.m_Elements.m_pMemory;
+      if ( !v25 )
       {
-        m_Right = v45[v42].m_Left;
-        v44 = 1;
+        m_Right = v49[v46].m_Left;
+        v48 = 1;
         if ( m_Right == 0xFFFF )
           break;
         goto LABEL_48;
       }
-      m_Right = v45[v42].m_Right;
-      v44 = 0;
+      m_Right = v49[v46].m_Right;
+      v48 = 0;
       if ( m_Right != 0xFFFF )
       {
 LABEL_48:
-        v42 = m_Right;
+        v46 = m_Right;
         continue;
       }
       break;
     }
-    v49 = v44;
+    v53 = v48;
 LABEL_52:
-    v46 = CUtlRBTree<CUtlMap<unsigned int,ItemPartner_t,unsigned short,bool (*)(unsigned int const&,unsigned int const&)>::Node_t,unsigned short,CUtlMap<unsigned int,ItemPartner_t,unsigned short,bool (*)(unsigned int const&,unsigned int const&)>::CKeyLess,CUtlMemory<UtlRBTreeNode_t<CUtlMap<unsigned int,ItemPartner_t,unsigned short,bool (*)(unsigned int const&,unsigned int const&)>::Node_t,unsigned short>,unsigned short>>::NewNode(
+    v50 = CUtlRBTree<CUtlMap<unsigned int,ItemPartner_t,unsigned short,bool (*)(unsigned int const&,unsigned int const&)>::Node_t,unsigned short,CUtlMap<unsigned int,ItemPartner_t,unsigned short,bool (*)(unsigned int const&,unsigned int const&)>::CKeyLess,CUtlMemory<UtlRBTreeNode_t<CUtlMap<unsigned int,ItemPartner_t,unsigned short,bool (*)(unsigned int const&,unsigned int const&)>::Node_t,unsigned short>,unsigned short>>::NewNode(
             &p_m_mapPartnerTeams->m_Tree,
             &pCopyFrom);
     CUtlRBTree<CUtlMap<unsigned int,ItemPartner_t,unsigned short,bool (*)(unsigned int const&,unsigned int const&)>::Node_t,unsigned short,CUtlMap<unsigned int,ItemPartner_t,unsigned short,bool (*)(unsigned int const&,unsigned int const&)>::CKeyLess,CUtlMemory<UtlRBTreeNode_t<CUtlMap<unsigned int,ItemPartner_t,unsigned short,bool (*)(unsigned int const&,unsigned int const&)>::Node_t,unsigned short>,unsigned short>>::LinkToParent(
       &p_m_mapPartnerTeams->m_Tree,
+      v50,
       v46,
-      v42,
-      v49);
+      v53);
     ++this->m_mapPartnerTeams.m_Tree.m_NumElements;
     pTeamKVa = KeyValues::GetNextKey(pTeamKVa);
     if ( pTeamKVa != 0 )
@@ -17353,11 +17434,11 @@ attachedparticlesystem_t *__fastcall CEconItemSchema::GetAttachedParticleSystemI
   signed int v82; // [rsp+28h] [rbp-88h]
   bool v83; // [rsp+28h] [rbp-88h]
   CUtlSymbolTableLargeBase<CNonThreadsafeTree<true>,true,2048ul> *v84; // [rsp+38h] [rbp-78h]
-  UtlSymLargeId_t v85[2]; // [rsp+40h] [rbp-70h] BYREF
-  UtlSymLargeId_t v86[2]; // [rsp+50h] [rbp-60h] BYREF
-  UtlSymLargeId_t v87; // [rsp+60h] [rbp-50h] BYREF
+  char *v85; // [rsp+40h] [rbp-70h] BYREF
+  char *v86; // [rsp+50h] [rbp-60h] BYREF
+  char *v87; // [rsp+60h] [rbp-50h] BYREF
   CUtlSymbolTableLargeBaseTreeEntry_t *v88; // [rsp+68h] [rbp-48h] BYREF
-  float flVec[16]; // [rsp+70h] [rbp-40h] BYREF
+  float flVec[3]; // [rsp+70h] [rbp-40h] BYREF
 
   retstr->symResourceName.u.m_Id = 0;
   v6 = `guard variable for'CEconItemSchema::GetAttachedParticleSystemInfo(KeyValues *,int)::{lambda(char const*)#1}::operator() const(char const*)::s_sym == 0;
@@ -17383,8 +17464,8 @@ attachedparticlesystem_t *__fastcall CEconItemSchema::GetAttachedParticleSystemI
     String = CKeyValues_Data::Internal_GetString(Key, 0, 0, 0);
   else
     String = 0;
-  CUtlSymbolTableLargeBase<CNonThreadsafeTree<true>,true,2048ul>::AddString(v85, g_pEconSchemaSymbolTable, String);
-  retstr->symResourceName.u.m_Id = v85[0];
+  CUtlSymbolTableLargeBase<CNonThreadsafeTree<true>,true,2048ul>::AddString(&v85, g_pEconSchemaSymbolTable, String);
+  retstr->symResourceName.u.m_Id = v85;
   if ( `guard variable for'CEconItemSchema::GetAttachedParticleSystemInfo(KeyValues *,int)::{lambda(char const*)#2}::operator() const(char const*)::s_sym == 0
     && __cxa_guard_acquire(&`guard variable for'CEconItemSchema::GetAttachedParticleSystemInfo(KeyValues *,int)::{lambda(char const*)#2}::operator() const(char const*)::s_sym) != 0 )
   {
@@ -17400,9 +17481,9 @@ attachedparticlesystem_t *__fastcall CEconItemSchema::GetAttachedParticleSystemI
     v10 = CKeyValues_Data::Internal_GetString(v9, 0, 0, 0);
   else
     v10 = 0;
-  CUtlSymbolTableLargeBase<CNonThreadsafeTree<true>,true,2048ul>::AddString(v86, g_pEconSchemaSymbolTable, v10);
+  CUtlSymbolTableLargeBase<CNonThreadsafeTree<true>,true,2048ul>::AddString(&v86, g_pEconSchemaSymbolTable, v10);
   v6 = `guard variable for'CEconItemSchema::GetAttachedParticleSystemInfo(KeyValues *,int)::{lambda(char const*)#3}::operator() const(char const*)::s_sym == 0;
-  retstr->symSystemName.u.m_Id = v86[0];
+  retstr->symSystemName.u.m_Id = v86;
   if ( v6
     && __cxa_guard_acquire(&`guard variable for'CEconItemSchema::GetAttachedParticleSystemInfo(KeyValues *,int)::{lambda(char const*)#3}::operator() const(char const*)::s_sym) != 0 )
   {
@@ -17601,7 +17682,7 @@ attachedparticlesystem_t *__fastcall CEconItemSchema::GetAttachedParticleSystemI
         && (v43 = strlen(v42), v44 = v43, v43 > 0)
         && *v42 != 0 )
       {
-        CUtlSymbolTableLargeBase<CNonThreadsafeTree<true>,true,2048ul>::Find(v84, v42, v43);
+        CUtlSymbolTableLargeBase<CNonThreadsafeTree<true>,true,2048ul>::Find(flVec, v84, v42, v43);
         m_String = *flVec;
         if ( *flVec == 0 )
         {
@@ -18213,7 +18294,10 @@ bool __fastcall CEconItemSchema::BInitKillEaterScoreTypes(
     String = "";
     if ( Key != 0 )
       String = CKeyValues_Data::Internal_GetString(Key, "", 0, 0);
-    CUtlSymbolTableLargeBase<CNonThreadsafeTree<true>,true,2048ul>::AddString(&msg, g_pEconSchemaSymbolTable, String);
+    CUtlSymbolTableLargeBase<CNonThreadsafeTree<true>,true,2048ul>::AddString(
+      &msg.m_pString,
+      g_pEconSchemaSymbolTable,
+      String);
     m_pString = msg.m_pString;
     if ( `guard variable for'CEconItemSchema::BInitKillEaterScoreTypes(KeyValues *,CUtlVector<CUtlString,CUtlMemory<CUtlString,int>> *)::{lambda(char const*)#2}::operator() const(char const*)::s_sym == 0
       && __cxa_guard_acquire(&`guard variable for'CEconItemSchema::BInitKillEaterScoreTypes(KeyValues *,CUtlVector<CUtlString,CUtlMemory<CUtlString,int>> *)::{lambda(char const*)#2}::operator() const(char const*)::s_sym) != 0 )
@@ -18289,7 +18373,10 @@ LABEL_17:
     }
     if ( this->m_vecItemLevelingData.m_Elements.m_Tree.m_Elements.m_pMemory[v14].m_Data.elem == 0 )
       goto LABEL_28;
-    CUtlSymbolTableLargeBase<CNonThreadsafeTree<true>,true,2048ul>::AddString(&msg, g_pEconSchemaSymbolTable, pString);
+    CUtlSymbolTableLargeBase<CNonThreadsafeTree<true>,true,2048ul>::AddString(
+      &msg.m_pString,
+      g_pEconSchemaSymbolTable,
+      pString);
     v16 = msg.m_pString;
     Int = KeyValues::GetInt(pKVScoreType, "allow_count_reset", 1);
     LODWORD(msg.m_pString) = v6;
@@ -18436,7 +18523,7 @@ bool __fastcall CEconItemSchema::BInitCommunityMarketRemaps(
             CUtlString::FreeMemoryBlock(&msg);
           return 0;
         }
-        v9 = (*pBaseItemDef->_vptr_IEconItemDefinition)(pBaseItemDef);
+        v9 = pBaseItemDef->GetDefinitionIndex();
         v10 = (**v8)(v8);
         WORD1(msg.m_pString) = v9;
         m_Root = this->m_mapCommunityMarketDefinitionIndexRemap.m_Tree.m_Root;
@@ -19260,7 +19347,7 @@ LABEL_51:
     v42 = &this->m_mapNameToItem.m_memNodes.m_pMemory[v40];
     if ( v42->m_iNextNode >= -1 )
     {
-      v43 = (*v42->m_elem->_vptr_IEconItemDefinition)(v42->m_elem);
+      v43 = v42->m_elem->GetDefinitionIndex();
       if ( unDefIndexa.m_Data == v43 )
         break;
     }
@@ -19582,10 +19669,7 @@ CEconItemSetDefinition *__fastcall CEconItemSchema::ItemTest_CreateTestItemSet(
       return 0;
     }
   }
-  CUtlSymbolTableLargeBase<CNonThreadsafeTree<true>,true,2048ul>::AddString(
-    &vErrors.m_Size,
-    g_pEconSchemaSymbolTable,
-    v5);
+  CUtlSymbolTableLargeBase<CNonThreadsafeTree<true>,true,2048ul>::AddString(&vErrors, g_pEconSchemaSymbolTable, v5);
   if ( CUtlRBTree<CUtlMap<CEconSchemaSymbol,CEconItemSetDefinition *,int,bool (*)(CEconSchemaSymbol const&,CEconSchemaSymbol const&)>::Node_t,int,CUtlMap<CEconSchemaSymbol,CEconItemSetDefinition *,int,bool (*)(CEconSchemaSymbol const&,CEconSchemaSymbol const&)>::CKeyLess,CUtlMemory<UtlRBTreeNode_t<CUtlMap<CEconSchemaSymbol,CEconItemSetDefinition *,int,bool (*)(CEconSchemaSymbol const&,CEconSchemaSymbol const&)>::Node_t,int>,int>>::Find(
          &this->m_mapItemSets.m_Tree,
          &vErrors) != -1 )
@@ -19596,10 +19680,7 @@ CEconItemSetDefinition *__fastcall CEconItemSchema::ItemTest_CreateTestItemSet(
   }
   v7 = operator new(0x58u);
   CEconItemSetDefinition::CEconItemSetDefinition(v7);
-  CUtlSymbolTableLargeBase<CNonThreadsafeTree<true>,true,2048ul>::AddString(
-    &vErrors.m_Size,
-    g_pEconSchemaSymbolTable,
-    v5);
+  CUtlSymbolTableLargeBase<CNonThreadsafeTree<true>,true,2048ul>::AddString(&vErrors, g_pEconSchemaSymbolTable, v5);
   vErrors.m_Memory.m_pMemory = v7;
   elem = this->m_mapItemSets.m_Tree.m_Elements.m_pMemory[CUtlRBTree<CUtlMap<CEconSchemaSymbol,CEconItemSetDefinition *,int,bool (*)(CEconSchemaSymbol const&,CEconSchemaSymbol const&)>::Node_t,int,CUtlMap<CEconSchemaSymbol,CEconItemSetDefinition *,int,bool (*)(CEconSchemaSymbol const&,CEconSchemaSymbol const&)>::CKeyLess,CUtlMemory<UtlRBTreeNode_t<CUtlMap<CEconSchemaSymbol,CEconItemSetDefinition *,int,bool (*)(CEconSchemaSymbol const&,CEconSchemaSymbol const&)>::Node_t,int>,int>>::Insert(
                                                            &this->m_mapItemSets.m_Tree,
@@ -19720,7 +19801,7 @@ LABEL_9:
       this->m_TestItemSetsCreated.m_Elements.m_Tree.m_Elements.m_pMemory[v6].m_Right = this->m_TestItemSetsCreated.m_Elements.m_Tree.m_FirstFree;
       --this->m_TestItemSetsCreated.m_Elements.m_Tree.m_NumElements;
       this->m_TestItemSetsCreated.m_Elements.m_Tree.m_FirstFree = slot;
-      elem->_vptr_IEconItemSetDefinition = off_47A7410;
+      elem->_vptr_IEconItemSetDefinition = off_47A7410;  // vptr: CEconItemSetDefinition
       elem->m_iAttributes.m_Size = 0;
       if ( (elem->m_iAttributes.m_Memory.m_nGrowSize & 0xC0000000) == 0 )
       {
@@ -19886,14 +19967,14 @@ LABEL_14:
       }
       (*(this->_vptr_IEconItemSchema + 74))(this, v7->m_Data.key);
       CUtlSymbolTableLargeBase<CNonThreadsafeTree<true>,true,2048ul>::AddString(
-        &v14[0].key.u.m_Id,
+        v14,
         g_pEconSchemaSymbolTable,
         this->m_TestItemSetsCreated.m_Elements.m_Tree.m_Elements.m_pMemory[v6].m_Data.key);
       CUtlRBTree<CUtlMap<CEconSchemaSymbol,CEconItemSetDefinition *,int,bool (*)(CEconSchemaSymbol const&,CEconSchemaSymbol const&)>::Node_t,int,CUtlMap<CEconSchemaSymbol,CEconItemSetDefinition *,int,bool (*)(CEconSchemaSymbol const&,CEconSchemaSymbol const&)>::CKeyLess,CUtlMemory<UtlRBTreeNode_t<CUtlMap<CEconSchemaSymbol,CEconItemSetDefinition *,int,bool (*)(CEconSchemaSymbol const&,CEconSchemaSymbol const&)>::Node_t,int>,int>>::Remove(
         &p_m_mapItemSets->m_Tree,
         v14);
       v11 = (elem->m_iAttributes.m_Memory.m_nGrowSize & 0xC0000000) == 0;
-      elem->_vptr_IEconItemSetDefinition = off_47A7410;
+      elem->_vptr_IEconItemSetDefinition = off_47A7410;  // vptr: CEconItemSetDefinition
       elem->m_iAttributes.m_Size = 0;
       if ( v11 )
       {
@@ -20142,12 +20223,12 @@ bool __fastcall CEconItemSchema::BInitArmoryData(
   KeyValues *m; // r14
   const char *v39; // r13
   const char *v40; // rax
-  CUtlSymbolTableLargeBaseTreeEntry_t *v42; // rcx
+  char *v42; // rcx
   __int64 m_Root; // rdx
   UtlRBTreeNode_t<CUtlSymbolTableLargeBaseTreeEntry_t*,long long int> *v44; // r8
   __int64 j; // r15
   UtlRBTreeNode_t<CUtlSymbolTableLargeBaseTreeEntry_t*,long long int> *v46; // rdx
-  LargeSymbolTableHashDecoration_t *p_m_Hash; // rsi
+  CUtlSymbolTableLargeBaseTreeEntry_t *m_Data; // rsi
   unsigned int v48; // eax
   __int64 m_Right; // rsi
   bool v50; // cl
@@ -20158,7 +20239,7 @@ bool __fastcall CEconItemSchema::BInitArmoryData(
   int v55; // [rsp+10h] [rbp-B0h]
   int v56; // [rsp+10h] [rbp-B0h]
   unsigned int v57; // [rsp+18h] [rbp-A8h]
-  CUtlSymbolTableLargeBaseTreeEntry_t *v58; // [rsp+18h] [rbp-A8h]
+  char *v58; // [rsp+18h] [rbp-A8h]
   int v59; // [rsp+18h] [rbp-A8h]
   int parent; // [rsp+20h] [rbp-A0h]
   __int64 parentb; // [rsp+20h] [rbp-A0h]
@@ -20173,7 +20254,7 @@ bool __fastcall CEconItemSchema::BInitArmoryData(
   ArmoryStringDict_t *thisb; // [rsp+58h] [rbp-68h]
   CEconSchemaSymbol v74; // [rsp+60h] [rbp-60h] BYREF
   CEconSchemaSymbol element; // [rsp+70h] [rbp-50h] BYREF
-  CUtlSymbolTableLargeBaseTreeEntry_t *v76[8]; // [rsp+80h] [rbp-40h] BYREF
+  char *v76[8]; // [rsp+80h] [rbp-40h] BYREF
 
   p_m_dictArmoryItemDataStrings = &this->m_dictArmoryItemDataStrings;
   CUtlDict<CEconSchemaSymbol,int>::Purge(&this->m_dictArmoryItemDataStrings);
@@ -20235,7 +20316,7 @@ bool __fastcall CEconItemSchema::BInitArmoryData(
             if ( v15 > 0 && *v14 != 0 )
             {
               isLeft = v15;
-              CUtlSymbolTableLargeBase<CNonThreadsafeTree<true>,true,2048ul>::Find(v13, v14, v15);
+              CUtlSymbolTableLargeBase<CNonThreadsafeTree<true>,true,2048ul>::Find(&element, v13, v14, v15);
               m_Id = element.u.m_Id;
               v17 = isLeft;
               if ( element.u.m_Id == 0 )
@@ -20336,17 +20417,17 @@ LABEL_20:
                   for ( j = v13->m_Lookup.m_Root; ; j = m_Right )
                   {
                     v46 = &v44[j];
-                    p_m_Hash = &v46->m_Data->m_Hash;
-                    if ( v42->m_Hash == *p_m_Hash )
+                    m_Data = v46->m_Data;
+                    if ( *v42 == m_Data->m_Hash )
                     {
-                      v51 = V_stricmp_fast(v42->m_String, p_m_Hash + 1);
+                      v51 = V_stricmp_fast(v42 + 8, m_Data->m_String);
                       v44 = v13->m_Lookup.m_Elements.m_pMemory;
                       v48 = v51 >> 31;
                       v46 = &v44[j];
                     }
                     else
                     {
-                      LOBYTE(v48) = v42->m_Hash < *p_m_Hash;
+                      LOBYTE(v48) = *v42 < m_Data->m_Hash;
                     }
                     m_Right = v46->m_Right;
                     v50 = v48 != 0;
@@ -20406,7 +20487,7 @@ LABEL_20:
         v36 = KeyValues::GetString(k, 0, "", 0, 0);
         v74.u.m_Id = 0;
         CUtlSymbolTableLargeBase<CNonThreadsafeTree<true>,true,2048ul>::AddString(
-          &element.u.m_Id,
+          &element,
           g_pEconSchemaSymbolTable,
           v36);
         v74.u.m_Id = element.u.m_Id;
@@ -20432,7 +20513,7 @@ LABEL_20:
         v40 = KeyValues::GetString(m, 0, "", 0, 0);
         v74.u.m_Id = 0;
         CUtlSymbolTableLargeBase<CNonThreadsafeTree<true>,true,2048ul>::AddString(
-          &element.u.m_Id,
+          &element,
           g_pEconSchemaSymbolTable,
           v40);
         v74.u.m_Id = element.u.m_Id;
@@ -21437,7 +21518,7 @@ CEconItemDefinition *__fastcall CEconItemSchema::GetItemDefinitionByName(
       m_Id = 0;
       goto LABEL_5;
     }
-    CUtlSymbolTableLargeBase<CNonThreadsafeTree<true>,true,2048ul>::Find(v5, pszDefName, v6);
+    CUtlSymbolTableLargeBase<CNonThreadsafeTree<true>,true,2048ul>::Find(&symDefName, v5, pszDefName, v6);
     m_Id = symDefName.u.m_Id;
     if ( symDefName.u.m_Id != 0 )
     {
@@ -21570,7 +21651,7 @@ item_definition_index_t __fastcall CEconItemSchema::FindItemDefinitionIndex(
 
   ItemDefinition = CEconItemSchema::FindItemDefinition(this, pszNumberOrName);
   if ( ItemDefinition != 0 )
-    return (*ItemDefinition->_vptr_IEconItemDefinition)(ItemDefinition);
+    return ItemDefinition->GetDefinitionIndex();
   else
     return INVALID_ITEM_DEF_INDEX;
 }
@@ -21671,7 +21752,7 @@ const CEconItemAttributeDefinition *__fastcall CEconItemSchema::GetAttributeDefi
   {
     m_TargetThreadId = g_VProfCurrentProfile.m_TargetThreadId;
     v16 = __rdtsc();
-    if ( m_TargetThreadId == ThreadGetCurrentId(this) )
+    if ( m_TargetThreadId == ThreadGetCurrentId() )
     {
       m_pCurNode = g_VProfCurrentProfile.m_pCurNode;
       if ( m_pCurNode->m_pszName != "CEconItemSchema::GetAttributeDefinitionByName" )
@@ -21729,7 +21810,7 @@ LABEL_10:
     if ( !g_VProfCurrentProfile.m_fAtRoot || g_VProfCurrentProfile.m_enabled != 0 )
     {
       v13 = g_VProfCurrentProfile.m_TargetThreadId;
-      if ( v13 == ThreadGetCurrentId(this) )
+      if ( v13 == ThreadGetCurrentId() )
       {
         if ( CVProfNode::ExitScope(g_VProfCurrentProfile.m_pCurNode) != 0 )
         {
@@ -22357,7 +22438,7 @@ void __fastcall CEconItemAssetInfo::InitFromVisualsKV(
   __int64 v37; // r14
   CEconSchemaSymbol *v38; // rax
   const char *v39; // rax
-  CEconSchemaSymbol *v40; // r14
+  char **v40; // r14
   CUtlVector<CEconSchemaSymbol,CUtlMemory<CEconSchemaSymbol,int> > *m_pVecAnimationModifiers; // r12
   int m_Size; // r14d
   int v43; // edx
@@ -22367,7 +22448,7 @@ void __fastcall CEconItemAssetInfo::InitFromVisualsKV(
   KeyValues *v47; // rax
   KeyValues *v48; // rax
   CUtlVector<CEconSchemaSymbol,CUtlMemory<CEconSchemaSymbol,int> > *v49; // rax
-  __int64 v53[2]; // [rsp+30h] [rbp-160h] BYREF
+  char *v53[2]; // [rsp+30h] [rbp-160h] BYREF
   CFmtStrN<256,false> v54; // [rsp+40h] [rbp-150h] BYREF
   unsigned __int64 v55; // [rsp+158h] [rbp-38h]
 
@@ -22421,7 +22502,7 @@ void __fastcall CEconItemAssetInfo::InitFromVisualsKV(
                   v53,
                   g_pEconSchemaSymbolTable,
                   v39);
-                v40->u.m_Id = v53[0];
+                *v40 = v53[0];
               }
             }
           }
@@ -22813,7 +22894,10 @@ bool __fastcall CEconItemAssetInfo::InitAlternateIcons(
     String = "";
     if ( Key != 0 )
       String = CKeyValues_Data::Internal_GetString(Key, "", 0, 0);
-    CUtlSymbolTableLargeBase<CNonThreadsafeTree<true>,true,2048ul>::AddString(&msg, g_pEconSchemaSymbolTable, String);
+    CUtlSymbolTableLargeBase<CNonThreadsafeTree<true>,true,2048ul>::AddString(
+      &msg.m_pString,
+      g_pEconSchemaSymbolTable,
+      String);
     m_pString = msg.m_pString;
     LODWORD(msg.m_pString) = v6;
     v12 = this->m_pMapAlternateIcons;
@@ -23012,7 +23096,7 @@ bool __fastcall CItemLevelingDefinition::BInitFromKV(
   char *m_szBuf; // r12
   int v16; // eax
   int v17; // r15d
-  UtlSymLargeId_t m_String; // rax
+  char *m_String; // rax
   int m_Size; // r9d
   signed int v21; // edx
   CUtlSymbolTableLargeBase<CNonThreadsafeTree<true>,true,2048ul>::StringPool_t **m_pMemory; // rdi
@@ -23036,7 +23120,7 @@ bool __fastcall CItemLevelingDefinition::BInitFromKV(
   int v40; // [rsp+10h] [rbp-170h]
   char *v41; // [rsp+18h] [rbp-168h]
   __int64 v42; // [rsp+18h] [rbp-168h]
-  UtlSymLargeId_t v43; // [rsp+20h] [rbp-160h]
+  char *v43; // [rsp+20h] [rbp-160h] BYREF
   CUtlSymbolTableLargeBase<CNonThreadsafeTree<true>,true,2048ul>::StringPool_t *src; // [rsp+28h] [rbp-158h] BYREF
   CFmtStrN<256,false> v45; // [rsp+30h] [rbp-150h] BYREF
   unsigned __int64 v46; // [rsp+148h] [rbp-38h]
@@ -23092,7 +23176,7 @@ LABEL_9:
   v17 = v16;
   if ( v16 <= 0 || *m_szBuf == 0 )
     goto LABEL_9;
-  CUtlSymbolTableLargeBase<CNonThreadsafeTree<true>,true,2048ul>::Find(v14, m_szBuf, v16);
+  CUtlSymbolTableLargeBase<CNonThreadsafeTree<true>,true,2048ul>::Find(&v43, v14, m_szBuf, v16);
   m_String = v43;
   if ( v43 == 0 )
   {

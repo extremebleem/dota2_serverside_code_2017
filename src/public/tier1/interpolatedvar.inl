@@ -4,7 +4,7 @@
 // IInterpolatedVar::~IInterpolatedVar  (line 456, @0x0000000001ec1410, libserver.so)
 void __fastcall IInterpolatedVar::~IInterpolatedVar(IInterpolatedVar *const this)
 {
-  this->_vptr_IInterpolatedVar = off_3FB4250;
+  this->_vptr_IInterpolatedVar = off_3FB4250;  // vptr: IInterpolatedVar
 }
 
 
@@ -12,7 +12,7 @@ void __fastcall IInterpolatedVar::~IInterpolatedVar(IInterpolatedVar *const this
 // calls: operator delete
 void __fastcall IInterpolatedVar::~IInterpolatedVar(IInterpolatedVar *const this)
 {
-  this->_vptr_IInterpolatedVar = off_3FB4250;
+  this->_vptr_IInterpolatedVar = off_3FB4250;  // vptr: IInterpolatedVar
   operator delete(this);
 }
 
@@ -99,7 +99,7 @@ LABEL_7:
   m_pValue = this->m_pValue;
   if ( m_pValue != 0 )
     operator delete[](m_pValue);
-  this->_vptr_IInterpolatedVar = off_3FB4250;
+  this->_vptr_IInterpolatedVar = off_3FB4250;  // vptr: IInterpolatedVar
 }
 
 
@@ -176,7 +176,7 @@ LABEL_7:
   m_pValue = this->m_pValue;
   if ( m_pValue != 0 )
     operator delete[](m_pValue);
-  this->_vptr_IInterpolatedVar = off_3FB4250;
+  this->_vptr_IInterpolatedVar = off_3FB4250;  // vptr: IInterpolatedVar
   operator delete(this);
 }
 
@@ -3380,7 +3380,7 @@ LABEL_7:
   m_pValue = this->m_pValue;
   if ( m_pValue != 0 )
     operator delete[](m_pValue);
-  this->_vptr_IInterpolatedVar = off_3FB4250;
+  this->_vptr_IInterpolatedVar = off_3FB4250;  // vptr: IInterpolatedVar
 }
 
 
@@ -3459,7 +3459,7 @@ LABEL_7:
   m_pValue = this->m_pValue;
   if ( m_pValue != 0 )
     operator delete[](m_pValue);
-  this->_vptr_IInterpolatedVar = off_3FB4250;
+  this->_vptr_IInterpolatedVar = off_3FB4250;  // vptr: IInterpolatedVar
   operator delete(this);
 }
 
@@ -3584,7 +3584,7 @@ LABEL_7:
   m_pValue = this->m_pValue;
   if ( m_pValue != 0 )
     operator delete[](m_pValue);
-  this->_vptr_IInterpolatedVar = off_3FB4250;
+  this->_vptr_IInterpolatedVar = off_3FB4250;  // vptr: IInterpolatedVar
 }
 
 
@@ -3663,7 +3663,7 @@ LABEL_7:
   m_pValue = this->m_pValue;
   if ( m_pValue != 0 )
     operator delete[](m_pValue);
-  this->_vptr_IInterpolatedVar = off_3FB4250;
+  this->_vptr_IInterpolatedVar = off_3FB4250;  // vptr: IInterpolatedVar
   operator delete(this);
 }
 
@@ -3779,7 +3779,7 @@ LABEL_7:
   m_pValue = this->m_pValue;
   if ( m_pValue != 0 )
     operator delete[](m_pValue);
-  this->_vptr_IInterpolatedVar = off_3FB4250;
+  this->_vptr_IInterpolatedVar = off_3FB4250;  // vptr: IInterpolatedVar
 }
 
 
@@ -3858,7 +3858,7 @@ LABEL_7:
   m_pValue = this->m_pValue;
   if ( m_pValue != 0 )
     operator delete[](m_pValue);
-  this->_vptr_IInterpolatedVar = off_3FB4250;
+  this->_vptr_IInterpolatedVar = off_3FB4250;  // vptr: IInterpolatedVar
   operator delete(this);
 }
 

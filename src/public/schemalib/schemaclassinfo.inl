@@ -1505,69 +1505,70 @@ int __fastcall CSchemaClassInfo::CalculateMultipleInheritanceDepth(const CSchema
   // [COLLAPSED LOCAL DECLARATIONS. PRESS NUMPAD "+" TO EXPAND]
 
   v1 = abs32(this->m_BaseClasses.m_Data.m_nImplLength);
-  if ( !v1 )
+  if ( v1 == 0 )
     return 1;
-  v116 = 0;
+  v117 = 0;
   m_pImplElements = this->m_BaseClasses.m_Data.m_pImplElements;
-  v114 = (m_pImplElements + 8);
-  v106 = &m_pImplElements[16 * v1 + 8];
+  v115 = (m_pImplElements + 8);
+  v107 = &m_pImplElements[16 * v1 + 8];
   do
   {
-    v108 = *v114;
-    v3 = abs32((*v114)->m_BaseClasses.m_Data.m_nImplLength);
-    if ( (((*v114)->m_BaseClasses.m_Data.m_nImplLength >> 31) ^ (*v114)->m_BaseClasses.m_Data.m_nImplLength) == (*v114)->m_BaseClasses.m_Data.m_nImplLength >> 31 )
+    v109 = *v115;
+    v3 = abs32((*v115)->m_BaseClasses.m_Data.m_nImplLength);
+    if ( (((*v115)->m_BaseClasses.m_Data.m_nImplLength >> 31) ^ (*v115)->m_BaseClasses.m_Data.m_nImplLength) == (*v115)->m_BaseClasses.m_Data.m_nImplLength >> 31 )
     {
       v27 = 1;
     }
     else
     {
-      v4 = (*v114)->m_BaseClasses.m_Data.m_pImplElements;
-      v115 = 0;
-      v113 = (v4 + 8);
-      v105 = &v4[16 * v3 + 8];
+      v4 = (*v115)->m_BaseClasses.m_Data.m_pImplElements;
+      v116 = 0;
+      v114 = (v4 + 8);
+      v106 = &v4[16 * v3 + 8];
       do
       {
-        v107 = *v113;
-        v5 = abs32((*v113)->m_BaseClasses.m_Data.m_nImplLength);
-        if ( (((*v113)->m_BaseClasses.m_Data.m_nImplLength >> 31) ^ (*v113)->m_BaseClasses.m_Data.m_nImplLength) == (*v113)->m_BaseClasses.m_Data.m_nImplLength >> 31 )
+        v108 = *v114;
+        v5 = abs32((*v114)->m_BaseClasses.m_Data.m_nImplLength);
+        if ( (((*v114)->m_BaseClasses.m_Data.m_nImplLength >> 31) ^ (*v114)->m_BaseClasses.m_Data.m_nImplLength) == (*v114)->m_BaseClasses.m_Data.m_nImplLength >> 31 )
         {
           v26 = 1;
         }
         else
         {
-          v6 = (*v113)->m_BaseClasses.m_Data.m_pImplElements;
+          v6 = (*v114)->m_BaseClasses.m_Data.m_pImplElements;
           v7 = 0;
-          v112 = v6 + 8;
-          v104 = v6 + 16 * v5 + 8;
+          v113 = v6 + 8;
+          v105 = v6 + 16 * v5 + 8;
           do
           {
-            v8 = abs32(*(*v112 + 72LL));
-            if ( v8 )
+            v8 = abs32(*(*v113 + 72LL));
+            if ( v8 != 0 )
             {
-              v9 = *(*v112 + 64LL);
+              v9 = *(*v113 + 64LL);
               v10 = v8 - 1;
               v11 = 0;
-              v124 = v10;
-              v120 = v7;
-              v143 = v9 + 8;
-              v132 = v9 + 16 * v10 + 24;
+              v126 = v10;
+              v121 = v7;
+              v123 = v9;
+              v145 = v9 + 8;
+              v134 = v9 + 16 * v10 + 24;
               do
               {
-                v12 = abs32(*(*v143 + 72LL));
-                if ( v12 )
+                v12 = abs32(*(*v145 + 72LL));
+                if ( v12 != 0 )
                 {
-                  v13 = *(*v143 + 64LL);
+                  v13 = *(*v145 + 64LL);
                   v14 = v12 - 1;
-                  v139 = 0;
-                  v127 = v14;
-                  v117 = v13;
-                  v135 = (v13 + 8);
-                  v129 = v13 + 16 * v14 + 24;
+                  v141 = 0;
+                  v129 = v14;
+                  v118 = v13;
+                  v137 = (v13 + 8);
+                  v131 = v13 + 16 * v14 + 24;
                   do
                   {
-                    v15 = *v135;
-                    v16 = abs32((*v135)->m_BaseClasses.m_Data.m_nImplLength);
-                    if ( v16 )
+                    v15 = *v137;
+                    v16 = abs32((*v137)->m_BaseClasses.m_Data.m_nImplLength);
+                    if ( v16 != 0 )
                     {
                       v17 = v15->m_BaseClasses.m_Data.m_pImplElements;
                       v18 = 0;
@@ -1587,14 +1588,14 @@ int __fastcall CSchemaClassInfo::CalculateMultipleInheritanceDepth(const CSchema
                     {
                       v22 = 1;
                     }
-                    if ( v139 <= v22 )
-                      v139 = CSchemaClassInfo::CalculateMultipleInheritanceDepth(v15);
-                    v135 += 2;
+                    if ( v141 <= v22 )
+                      v141 = CSchemaClassInfo::CalculateMultipleInheritanceDepth(v15);
+                    v137 += 2;
                   }
-                  while ( v135 != v129 );
-                  if ( v11 <= v139 + 1 )
+                  while ( v137 != v131 );
+                  if ( v11 <= v141 + 1 )
                   {
-                    v23 = (v117 + 8);
+                    v23 = (v118 + 8);
                     v24 = 0;
                     do
                     {
@@ -1603,7 +1604,7 @@ int __fastcall CSchemaClassInfo::CalculateMultipleInheritanceDepth(const CSchema
                         v24 = v25;
                       v23 += 2;
                     }
-                    while ( v23 != (v117 + 16LL * v127 + 24) );
+                    while ( v23 != (v118 + 16LL * v129 + 24) );
                     v11 = v24 + 1;
                   }
                 }
@@ -1611,71 +1612,72 @@ int __fastcall CSchemaClassInfo::CalculateMultipleInheritanceDepth(const CSchema
                 {
                   v11 = 1;
                 }
-                v143 += 16;
+                v145 += 16;
               }
-              while ( v143 != v132 );
-              v7 = v120;
-              if ( v120 <= v11 + 1 )
+              while ( v145 != v134 );
+              v7 = v121;
+              if ( v121 <= v11 + 1 )
               {
-                v121 = 0;
-                v111 = v9 + 8;
-                v103 = v9 + 16LL * v124 + 24;
+                v122 = 0;
+                v112 = v123 + 8;
+                v104 = v123 + 16LL * v126 + 24;
                 do
                 {
-                  v29 = abs32(*(*v111 + 72LL));
-                  if ( v29 )
+                  v29 = abs32(*(*v112 + 72LL));
+                  if ( v29 != 0 )
                   {
-                    v30 = *(*v111 + 64LL);
+                    v30 = *(*v112 + 64LL);
                     v31 = v29 - 1;
-                    v118 = 0;
-                    v97 = v31;
-                    v96 = v30;
-                    v110 = v30 + 8;
-                    v102 = v30 + 16 * v31 + 24;
+                    v119 = 0;
+                    v98 = v31;
+                    v97 = v30;
+                    v111 = v30 + 8;
+                    v103 = v30 + 16 * v31 + 24;
                     do
                     {
-                      v32 = abs32(*(*v110 + 72LL));
-                      if ( v32 )
+                      v32 = abs32(*(*v111 + 72LL));
+                      if ( v32 != 0 )
                       {
-                        v33 = *(*v110 + 64LL);
+                        v33 = *(*v111 + 64LL);
                         v34 = v32 - 1;
-                        v119 = 0;
-                        v99 = v34;
-                        v109 = v33 + 8;
-                        v101 = v33 + 16 * v34 + 24;
+                        v120 = 0;
+                        v100 = v34;
+                        v96 = v33;
+                        v110 = v33 + 8;
+                        v102 = v33 + 16 * v34 + 24;
                         do
                         {
-                          v35 = abs32(*(*v109 + 72LL));
-                          if ( v35 )
+                          v35 = abs32(*(*v110 + 72LL));
+                          if ( v35 != 0 )
                           {
-                            v36 = *(*v109 + 64LL);
+                            v36 = *(*v110 + 64LL);
                             v37 = v35 - 1;
-                            v130 = 0;
-                            v98 = v37;
-                            v100 = v36;
-                            v133 = v36 + 8;
-                            v122 = v36 + 16 * v37 + 24;
+                            v132 = 0;
+                            v99 = v37;
+                            v101 = v36;
+                            v135 = v36 + 8;
+                            v124 = v36 + 16 * v37 + 24;
                             do
                             {
-                              v38 = abs32(*(*v133 + 72LL));
-                              if ( v38 )
+                              v38 = abs32(*(*v135 + 72LL));
+                              if ( v38 != 0 )
                               {
-                                v39 = *(*v133 + 64LL);
+                                v39 = *(*v135 + 64LL);
                                 v40 = v38 - 1;
-                                v144 = 0;
-                                v125 = v40;
-                                v128 = v39;
+                                v146 = 0;
+                                v127 = v40;
+                                v130 = v39;
                                 v41 = v39 + 8;
-                                v136 = v39 + 16 * v40 + 24;
+                                v138 = v39 + 16 * v40 + 24;
                                 do
                                 {
                                   v42 = abs32(*(*v41 + 72LL));
-                                  if ( v42 )
+                                  if ( v42 != 0 )
                                   {
                                     v43 = v42 - 1;
                                     v44 = 0;
-                                    v140 = *(*v41 + 64LL);
-                                    v45 = (v140 + 8);
+                                    v142 = *(*v41 + 64LL);
+                                    v45 = (v142 + 8);
                                     do
                                     {
                                       v46 = CSchemaClassInfo::CalculateMultipleInheritanceDepth(*v45);
@@ -1683,12 +1685,12 @@ int __fastcall CSchemaClassInfo::CalculateMultipleInheritanceDepth(const CSchema
                                         v44 = v46;
                                       v45 += 2;
                                     }
-                                    while ( v45 != (v140 + 16LL * v43 + 24) );
-                                    if ( v144 <= v44 + 1 )
+                                    while ( v45 != (v142 + 16LL * v43 + 24) );
+                                    if ( v146 <= v44 + 1 )
                                     {
                                       v47 = 0;
-                                      v48 = (v140 + 8);
-                                      v49 = v140 + 16 * v43 + 24;
+                                      v48 = (v142 + 8);
+                                      v49 = v142 + 16 * v43 + 24;
                                       do
                                       {
                                         v50 = CSchemaClassInfo::CalculateMultipleInheritanceDepth(*v48);
@@ -1697,32 +1699,32 @@ int __fastcall CSchemaClassInfo::CalculateMultipleInheritanceDepth(const CSchema
                                         v48 += 2;
                                       }
                                       while ( v48 != v49 );
-                                      v144 = v47 + 1;
+                                      v146 = v47 + 1;
                                     }
                                   }
                                   else
                                   {
                                     v85 = 1;
-                                    if ( v144 > 1 )
-                                      v85 = v144;
-                                    v144 = v85;
+                                    if ( v146 > 1 )
+                                      v85 = v146;
+                                    v146 = v85;
                                   }
                                   v41 += 16;
                                 }
-                                while ( v41 != v136 );
-                                if ( v130 <= v144 + 1 )
+                                while ( v41 != v138 );
+                                if ( v132 <= v146 + 1 )
                                 {
-                                  v145 = 0;
-                                  v51 = v128 + 8;
+                                  v147 = 0;
+                                  v51 = v130 + 8;
                                   do
                                   {
                                     v52 = abs32(*(*v51 + 72LL));
-                                    if ( v52 )
+                                    if ( v52 != 0 )
                                     {
                                       v53 = v52 - 1;
                                       v54 = 0;
-                                      v141 = *(*v51 + 64LL);
-                                      v55 = (v141 + 8);
+                                      v143 = *(*v51 + 64LL);
+                                      v55 = (v143 + 8);
                                       do
                                       {
                                         v56 = CSchemaClassInfo::CalculateMultipleInheritanceDepth(*v55);
@@ -1730,11 +1732,11 @@ int __fastcall CSchemaClassInfo::CalculateMultipleInheritanceDepth(const CSchema
                                           v54 = v56;
                                         v55 += 2;
                                       }
-                                      while ( v55 != (v141 + 16LL * v53 + 24) );
-                                      if ( v145 <= v54 + 1 )
+                                      while ( v55 != (v143 + 16LL * v53 + 24) );
+                                      if ( v147 <= v54 + 1 )
                                       {
                                         v57 = 0;
-                                        v58 = (v141 + 8);
+                                        v58 = (v143 + 8);
                                         do
                                         {
                                           v59 = CSchemaClassInfo::CalculateMultipleInheritanceDepth(*v58);
@@ -1742,58 +1744,58 @@ int __fastcall CSchemaClassInfo::CalculateMultipleInheritanceDepth(const CSchema
                                             v57 = v59;
                                           v58 += 2;
                                         }
-                                        while ( v58 != (v141 + 16 * v53 + 24) );
-                                        v145 = v57 + 1;
+                                        while ( v58 != (v143 + 16 * v53 + 24) );
+                                        v147 = v57 + 1;
                                       }
                                     }
                                     else
                                     {
                                       v84 = 1;
-                                      if ( v145 > 1 )
-                                        v84 = v145;
-                                      v145 = v84;
+                                      if ( v147 > 1 )
+                                        v84 = v147;
+                                      v147 = v84;
                                     }
                                     v51 += 16;
                                   }
-                                  while ( v51 != v128 + 16LL * v125 + 24 );
-                                  v130 = v145 + 1;
+                                  while ( v51 != v130 + 16LL * v127 + 24 );
+                                  v132 = v147 + 1;
                                 }
                               }
                               else
                               {
                                 v86 = 1;
-                                if ( v130 > 1 )
-                                  v86 = v130;
-                                v130 = v86;
+                                if ( v132 > 1 )
+                                  v86 = v132;
+                                v132 = v86;
                               }
-                              v133 += 16;
+                              v135 += 16;
                             }
-                            while ( v133 != v122 );
-                            if ( v119 <= v130 + 1 )
+                            while ( v135 != v124 );
+                            if ( v120 <= v132 + 1 )
                             {
-                              v131 = 0;
-                              v134 = v100 + 8;
+                              v133 = 0;
+                              v136 = v101 + 8;
                               do
                               {
-                                v60 = abs32(*(*v134 + 72LL));
-                                if ( v60 )
+                                v60 = abs32(*(*v136 + 72LL));
+                                if ( v60 != 0 )
                                 {
-                                  v61 = *(*v134 + 64LL);
+                                  v61 = *(*v136 + 64LL);
                                   v62 = v60 - 1;
-                                  v146 = 0;
-                                  v123 = v62;
-                                  v126 = v61;
+                                  v148 = 0;
+                                  v125 = v62;
+                                  v128 = v61;
                                   v63 = v61 + 8;
-                                  v137 = v61 + 16 * v62 + 24;
+                                  v139 = v61 + 16 * v62 + 24;
                                   do
                                   {
                                     v64 = abs32(*(*v63 + 72LL));
-                                    if ( v64 )
+                                    if ( v64 != 0 )
                                     {
                                       v65 = v64 - 1;
                                       v66 = 0;
-                                      v142 = *(*v63 + 64LL);
-                                      v67 = (v142 + 8);
+                                      v144 = *(*v63 + 64LL);
+                                      v67 = (v144 + 8);
                                       do
                                       {
                                         v68 = CSchemaClassInfo::CalculateMultipleInheritanceDepth(*v67);
@@ -1801,11 +1803,11 @@ int __fastcall CSchemaClassInfo::CalculateMultipleInheritanceDepth(const CSchema
                                           v66 = v68;
                                         v67 += 2;
                                       }
-                                      while ( v67 != (v142 + 16LL * v65 + 24) );
-                                      if ( v146 <= v66 + 1 )
+                                      while ( v67 != (v144 + 16LL * v65 + 24) );
+                                      if ( v148 <= v66 + 1 )
                                       {
                                         v69 = 0;
-                                        v70 = (v142 + 8);
+                                        v70 = (v144 + 8);
                                         do
                                         {
                                           v71 = CSchemaClassInfo::CalculateMultipleInheritanceDepth(*v70);
@@ -1813,33 +1815,33 @@ int __fastcall CSchemaClassInfo::CalculateMultipleInheritanceDepth(const CSchema
                                             v69 = v71;
                                           v70 += 2;
                                         }
-                                        while ( v70 != (v142 + 16 * v65 + 24) );
-                                        v146 = v69 + 1;
+                                        while ( v70 != (v144 + 16 * v65 + 24) );
+                                        v148 = v69 + 1;
                                       }
                                     }
                                     else
                                     {
                                       v82 = 1;
-                                      if ( v146 > 1 )
-                                        v82 = v146;
-                                      v146 = v82;
+                                      if ( v148 > 1 )
+                                        v82 = v148;
+                                      v148 = v82;
                                     }
                                     v63 += 16;
                                   }
-                                  while ( v63 != v137 );
-                                  if ( v131 <= v146 + 1 )
+                                  while ( v63 != v139 );
+                                  if ( v133 <= v148 + 1 )
                                   {
-                                    v147 = 0;
-                                    v72 = v126 + 8;
+                                    v149 = 0;
+                                    v72 = v128 + 8;
                                     do
                                     {
                                       v73 = abs32(*(*v72 + 72LL));
-                                      if ( v73 )
+                                      if ( v73 != 0 )
                                       {
                                         v74 = v73 - 1;
                                         v75 = 0;
-                                        v138 = *(*v72 + 64LL);
-                                        v76 = (v138 + 8);
+                                        v140 = *(*v72 + 64LL);
+                                        v76 = (v140 + 8);
                                         do
                                         {
                                           v77 = CSchemaClassInfo::CalculateMultipleInheritanceDepth(*v76);
@@ -1847,11 +1849,11 @@ int __fastcall CSchemaClassInfo::CalculateMultipleInheritanceDepth(const CSchema
                                             v75 = v77;
                                           v76 += 2;
                                         }
-                                        while ( v76 != (v138 + 16LL * v74 + 24) );
-                                        if ( v147 <= v75 + 1 )
+                                        while ( v76 != (v140 + 16LL * v74 + 24) );
+                                        if ( v149 <= v75 + 1 )
                                         {
                                           v78 = 0;
-                                          v79 = (v138 + 8);
+                                          v79 = (v140 + 8);
                                           do
                                           {
                                             v80 = CSchemaClassInfo::CalculateMultipleInheritanceDepth(*v79);
@@ -1859,50 +1861,50 @@ int __fastcall CSchemaClassInfo::CalculateMultipleInheritanceDepth(const CSchema
                                               v78 = v80;
                                             v79 += 2;
                                           }
-                                          while ( v79 != (v138 + 16 * v74 + 24) );
-                                          v147 = v78 + 1;
+                                          while ( v79 != (v140 + 16 * v74 + 24) );
+                                          v149 = v78 + 1;
                                         }
                                       }
                                       else
                                       {
                                         v81 = 1;
-                                        if ( v147 > 1 )
-                                          v81 = v147;
-                                        v147 = v81;
+                                        if ( v149 > 1 )
+                                          v81 = v149;
+                                        v149 = v81;
                                       }
                                       v72 += 16;
                                     }
-                                    while ( v72 != v126 + 16LL * v123 + 24 );
-                                    v131 = v147 + 1;
+                                    while ( v72 != v128 + 16LL * v125 + 24 );
+                                    v133 = v149 + 1;
                                   }
                                 }
                                 else
                                 {
                                   v83 = 1;
-                                  if ( v131 > 1 )
-                                    v83 = v131;
-                                  v131 = v83;
+                                  if ( v133 > 1 )
+                                    v83 = v133;
+                                  v133 = v83;
                                 }
-                                v134 += 16;
+                                v136 += 16;
                               }
-                              while ( v134 != v100 + 16LL * v98 + 24 );
-                              v119 = v131 + 1;
+                              while ( v136 != v101 + 16LL * v99 + 24 );
+                              v120 = v133 + 1;
                             }
                           }
                           else
                           {
                             v87 = 1;
-                            if ( v119 > 1 )
-                              v87 = v119;
-                            v119 = v87;
+                            if ( v120 > 1 )
+                              v87 = v120;
+                            v120 = v87;
                           }
-                          v109 += 16;
+                          v110 += 16;
                         }
-                        while ( v109 != v101 );
-                        if ( v118 <= v119 + 1 )
+                        while ( v110 != v102 );
+                        if ( v119 <= v120 + 1 )
                         {
                           v88 = 0;
-                          v89 = (v33 + 8);
+                          v89 = (v96 + 8);
                           do
                           {
                             v90 = CSchemaClassInfo::CalculateMultipleInheritanceDepth(*v89);
@@ -1910,24 +1912,24 @@ int __fastcall CSchemaClassInfo::CalculateMultipleInheritanceDepth(const CSchema
                               v88 = v90;
                             v89 += 2;
                           }
-                          while ( v89 != (v33 + 16LL * v99 + 24) );
-                          v118 = v88 + 1;
+                          while ( v89 != (v96 + 16LL * v100 + 24) );
+                          v119 = v88 + 1;
                         }
                       }
                       else
                       {
                         v94 = 1;
-                        if ( v118 > 1 )
-                          v94 = v118;
-                        v118 = v94;
+                        if ( v119 > 1 )
+                          v94 = v119;
+                        v119 = v94;
                       }
-                      v110 += 16;
+                      v111 += 16;
                     }
-                    while ( v110 != v102 );
-                    if ( v121 <= v118 + 1 )
+                    while ( v111 != v103 );
+                    if ( v122 <= v119 + 1 )
                     {
                       v91 = 0;
-                      v92 = (v96 + 8);
+                      v92 = (v97 + 8);
                       do
                       {
                         v93 = CSchemaClassInfo::CalculateMultipleInheritanceDepth(*v92);
@@ -1935,45 +1937,45 @@ int __fastcall CSchemaClassInfo::CalculateMultipleInheritanceDepth(const CSchema
                           v91 = v93;
                         v92 += 2;
                       }
-                      while ( v92 != (v96 + 16LL * v97 + 24) );
-                      v121 = v91 + 1;
+                      while ( v92 != (v97 + 16LL * v98 + 24) );
+                      v122 = v91 + 1;
                     }
                   }
                   else
                   {
                     v95 = 1;
-                    if ( v121 > 1 )
-                      v95 = v121;
-                    v121 = v95;
+                    if ( v122 > 1 )
+                      v95 = v122;
+                    v122 = v95;
                   }
-                  v111 += 16;
+                  v112 += 16;
                 }
-                while ( v111 != v103 );
-                v7 = v121 + 1;
+                while ( v112 != v104 );
+                v7 = v122 + 1;
               }
             }
             else if ( v7 <= 1 )
             {
               v7 = 1;
             }
-            v112 += 16;
+            v113 += 16;
           }
-          while ( v112 != v104 );
+          while ( v113 != v105 );
           v26 = v7 + 1;
         }
-        if ( v115 <= v26 )
-          v115 = CSchemaClassInfo::CalculateMultipleInheritanceDepth(v107);
-        v113 += 2;
+        if ( v116 <= v26 )
+          v116 = CSchemaClassInfo::CalculateMultipleInheritanceDepth(v108);
+        v114 += 2;
       }
-      while ( v113 != v105 );
-      v27 = v115 + 1;
+      while ( v114 != v106 );
+      v27 = v116 + 1;
     }
-    if ( v116 <= v27 )
-      v116 = CSchemaClassInfo::CalculateMultipleInheritanceDepth(v108);
-    v114 += 2;
+    if ( v117 <= v27 )
+      v117 = CSchemaClassInfo::CalculateMultipleInheritanceDepth(v109);
+    v115 += 2;
   }
-  while ( v114 != v106 );
-  return v116 + 1;
+  while ( v115 != v107 );
+  return v117 + 1;
 }
 
 

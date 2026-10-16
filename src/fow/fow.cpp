@@ -1195,7 +1195,7 @@ int __fastcall CFoW::AddViewer(CFoW *const this, FoWViewerType_t FoWViewerType, 
   {
     m_TargetThreadId = g_VProfCurrentProfile.m_TargetThreadId;
     v14 = __rdtsc();
-    if ( m_TargetThreadId == ThreadGetCurrentId(this) )
+    if ( m_TargetThreadId == ThreadGetCurrentId() )
     {
       m_pCurNode = g_VProfCurrentProfile.m_pCurNode;
       if ( m_pCurNode->m_pszName != &stru_352A848.m_ViewerTree.m_Nodes.m_Memory.m_nAllocationCount )
@@ -1402,7 +1402,7 @@ void __fastcall CFoW::UpdateViewerSize(CFoW *const this, int nID, float a3, floa
       {
         v21 = __rdtsc();
         m_TargetThreadId = g_VProfCurrentProfile.m_TargetThreadId;
-        if ( m_TargetThreadId == ThreadGetCurrentId(this) )
+        if ( m_TargetThreadId == ThreadGetCurrentId() )
         {
           m_pCurNode = g_VProfCurrentProfile.m_pCurNode;
           if ( m_pCurNode->m_pszName != &stru_352A848.m_ViewerTree._vptr_CUtlSphereTree + 1 )
@@ -1441,7 +1441,7 @@ void __fastcall CFoW::UpdateViewerSize(CFoW *const this, int nID, float a3, floa
         if ( !g_VProfCurrentProfile.m_fAtRoot || g_VProfCurrentProfile.m_enabled != 0 )
         {
           v12 = g_VProfCurrentProfile.m_TargetThreadId;
-          if ( v12 == ThreadGetCurrentId(this) )
+          if ( v12 == ThreadGetCurrentId() )
           {
             if ( CVProfNode::ExitScope(g_VProfCurrentProfile.m_pCurNode) != 0 )
             {
@@ -1622,17 +1622,16 @@ uint32 __fastcall CFoW::AddBlockingOccluder(CFoW *const this, const Vector *cons
 {
   int m_enabled; // r9d
   bool v5; // r14
-  __int64 v6; // rdi
-  uint32 v7; // r13d
-  unsigned __int8 *v9; // rax
-  unsigned __int64 v10; // r12
-  ThreadId_t v11; // r14
-  uint64 v12; // rcx
-  unsigned __int64 v13; // r15
+  uint32 v6; // r13d
+  unsigned __int8 *v8; // rax
+  unsigned __int64 v9; // r12
+  ThreadId_t v10; // r14
+  uint64 v11; // rcx
+  unsigned __int64 v12; // r15
   uint64 m_numTimeBaseTicks; // rcx
   CVProfNode *m_pParent; // rax
   CVProfNode *m_pCurNode; // rax
-  CVProfile::CBudgetGroup *v17; // rax
+  CVProfile::CBudgetGroup *v16; // rax
   ThreadId_t m_TargetThreadId; // [rsp+8h] [rbp-58h]
   int nGridX; // [rsp+18h] [rbp-48h] BYREF
   int nGridY; // [rsp+1Ch] [rbp-44h] BYREF
@@ -1642,9 +1641,9 @@ uint32 __fastcall CFoW::AddBlockingOccluder(CFoW *const this, const Vector *cons
   v5 = m_enabled != 0;
   if ( m_enabled != 0 )
   {
-    v13 = __rdtsc();
+    v12 = __rdtsc();
     m_TargetThreadId = g_VProfCurrentProfile.m_TargetThreadId;
-    if ( m_TargetThreadId == ThreadGetCurrentId(this) )
+    if ( m_TargetThreadId == ThreadGetCurrentId() )
     {
       m_pCurNode = g_VProfCurrentProfile.m_pCurNode;
       if ( m_pCurNode->m_pszName != &stru_352A848.m_VisibleBits[8].m_Memory.m_pMemory + 5 )
@@ -1657,37 +1656,37 @@ uint32 __fastcall CFoW::AddBlockingOccluder(CFoW *const this, const Vector *cons
                        4);
         g_VProfCurrentProfile.m_pCurNode = m_pCurNode;
       }
-      v17 = &g_VProfCurrentProfile.m_pBudgetGroups[m_pCurNode->m_BudgetGroupID];
-      v17->m_BudgetFlags |= 4u;
+      v16 = &g_VProfCurrentProfile.m_pBudgetGroups[m_pCurNode->m_BudgetGroupID];
+      v16->m_BudgetFlags |= 4u;
       CVProfNode::EnterScope(g_VProfCurrentProfile.m_pCurNode);
       g_VProfCurrentProfile.m_fAtRoot = 0;
     }
     m_numTimeBaseTicks = g_VProfCurrentProfile.m_ScopeProfiler.m_numTimeBaseTicks;
     ++g_VProfCurrentProfile.m_ScopeProfiler.m_numCalls;
-    g_VProfCurrentProfile.m_ScopeProfiler.m_numTimeBaseTicks = m_numTimeBaseTicks - v13 + __rdtsc();
+    g_VProfCurrentProfile.m_ScopeProfiler.m_numTimeBaseTicks = m_numTimeBaseTicks - v12 + __rdtsc();
   }
   CFoW::SnapCoordsToGrid(this, vLocation, &vLocationSnapped);
   if ( CFoW::GetGridUnitsClamped(this, &vLocationSnapped, &nGridX, &nGridY) )
   {
     Warning(&stru_352A848.m_VisibilityGridDegree[4], vLocation->x, vLocation->y);
-    v7 = 0;
+    v6 = 0;
     if ( !v5 )
-      return v7;
+      return v6;
   }
   else
   {
     CFoW::DirtyViewers(this, nGridX, nGridY, this->m_flOccluderRadius);
-    v9 = &this->m_TileInfo.m_Memory.m_pMemory[nGridY + nGridX * this->m_nGridYUnits];
-    v7 = ((nGridY & 0x3FF) << 10) | nGridX & 0x3FF;
-    *v9 |= 0x40u;
+    v8 = &this->m_TileInfo.m_Memory.m_pMemory[nGridY + nGridX * this->m_nGridYUnits];
+    v6 = ((nGridY & 0x3FF) << 10) | nGridX & 0x3FF;
+    *v8 |= 0x40u;
     if ( !v5 )
-      return v7;
+      return v6;
   }
-  v10 = __rdtsc();
+  v9 = __rdtsc();
   if ( !g_VProfCurrentProfile.m_fAtRoot || g_VProfCurrentProfile.m_enabled != 0 )
   {
-    v11 = g_VProfCurrentProfile.m_TargetThreadId;
-    if ( v11 == ThreadGetCurrentId(v6) )
+    v10 = g_VProfCurrentProfile.m_TargetThreadId;
+    if ( v10 == ThreadGetCurrentId() )
     {
       if ( CVProfNode::ExitScope(g_VProfCurrentProfile.m_pCurNode) != 0 )
       {
@@ -1704,10 +1703,10 @@ uint32 __fastcall CFoW::AddBlockingOccluder(CFoW *const this, const Vector *cons
       g_VProfCurrentProfile.m_fAtRoot = m_pParent == &g_VProfCurrentProfile.m_Root;
     }
   }
-  v12 = g_VProfCurrentProfile.m_ScopeProfiler.m_numTimeBaseTicks;
+  v11 = g_VProfCurrentProfile.m_ScopeProfiler.m_numTimeBaseTicks;
   ++g_VProfCurrentProfile.m_ScopeProfiler.m_numCalls;
-  g_VProfCurrentProfile.m_ScopeProfiler.m_numTimeBaseTicks = v12 - v10 + __rdtsc();
-  return v7;
+  g_VProfCurrentProfile.m_ScopeProfiler.m_numTimeBaseTicks = v11 - v9 + __rdtsc();
+  return v6;
 }
 
 
@@ -1740,7 +1739,7 @@ uint32 __fastcall CFoW::AddOccluder(CFoW *const this, const Vector *const vLocat
   {
     v11 = __rdtsc();
     m_TargetThreadId = g_VProfCurrentProfile.m_TargetThreadId;
-    if ( m_TargetThreadId == ThreadGetCurrentId(this) )
+    if ( m_TargetThreadId == ThreadGetCurrentId() )
     {
       m_pCurNode = g_VProfCurrentProfile.m_pCurNode;
       if ( m_pCurNode->m_pszName != &stru_352A848.m_VisibleBits[9].m_Memory.m_pMemory + 7 )
@@ -1886,7 +1885,7 @@ __int64 __fastcall CFoW::SolveVisibility(
   {
     v20 = __rdtsc();
     m_TargetThreadId = g_VProfCurrentProfile.m_TargetThreadId;
-    if ( m_TargetThreadId == ThreadGetCurrentId(this) )
+    if ( m_TargetThreadId == ThreadGetCurrentId() )
     {
       m_pCurNode = g_VProfCurrentProfile.m_pCurNode;
       if ( m_pCurNode->m_pszName != &stru_352A848.m_VisibleBits[4].m_Memory.m_nGrowSize + 1 )
@@ -4182,6 +4181,8 @@ void __fastcall CFoW::PrintStats(CFoW *const this)
   __int64 v2; // rax
   __int64 v3; // rbx
   unsigned int v4; // r12d
+  double v5; // xmm0_8
+  double v6; // xmm0_8
 
   m_Size = this->m_Viewers.m_Size;
   if ( m_Size <= 0 )
@@ -4205,9 +4206,9 @@ void __fastcall CFoW::PrintStats(CFoW *const this)
     }
     while ( m_Size > v2 );
   }
-  Msg(&stru_352A848.m_VisibleBits[6].m_Size + 1);
-  Msg(&stru_352A848.m_VisibleBits[6].m_Memory.m_pMemory + 4, v4);
-  Msg(&stru_352A848.m_VisibleBits[7].m_Memory.m_pMemory + 7, v3);
+  *&v5 = Msg(&stru_352A848.m_VisibleBits[6].m_Size + 1).m128_u64[0];
+  *&v6 = Msg(&stru_352A848.m_VisibleBits[6].m_Memory.m_pMemory + 4, v4, v5).m128_u64[0];
+  Msg(&stru_352A848.m_VisibleBits[7].m_Memory.m_pMemory + 7, v3, v6);
 }
 
 

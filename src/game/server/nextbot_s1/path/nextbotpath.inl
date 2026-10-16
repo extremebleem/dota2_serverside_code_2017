@@ -4,7 +4,7 @@
 // CNavPathNB::~CNavPathNB  (line 112, @0x0000000002f1e0e0, libserver.so)  // inlines: ~CPath, ~CPathData
 void __fastcall CNavPathNB::~CNavPathNB(CNavPathNB *const this)
 {
-  this->_vptr_CPathData = off_47B0E10;
+  this->_vptr_CPathData = off_47B0E10;  // vptr: CPathData
 }
 
 
@@ -12,7 +12,7 @@ void __fastcall CNavPathNB::~CNavPathNB(CNavPathNB *const this)
 // calls: operator delete
 void __fastcall CNavPathNB::~CNavPathNB(CNavPathNB *const this)
 {
-  this->_vptr_CPathData = off_47B0E10;
+  this->_vptr_CPathData = off_47B0E10;  // vptr: CPathData
   operator delete(this);
 }
 
@@ -40,7 +40,7 @@ void __fastcall CNavPathNB::InvalidatePath(CNavPathNB *const this)
   CPathData::InvalidatePath(this);
   m_pPathFollower = this->m_pPathFollower;
   if ( m_pPathFollower != 0 )
-    (*m_pPathFollower->_vptr_IPathFollower)(m_pPathFollower);
+    m_pPathFollower->OnPathInvalidated();
 }
 
 

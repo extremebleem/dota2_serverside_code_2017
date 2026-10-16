@@ -1165,7 +1165,7 @@ void __fastcall CDOTASteamWorksGameStatsServer::CDOTASteamWorksGameStatsServer(
 {
   CSteamWorksGameStatsServer::CSteamWorksGameStatsServer(this);
   this->m_TutorialStats.m_nAttacks = 0;
-  this->_vptr_IGameSystem = off_4169430;
+  this->_vptr_IGameSystem = off_4169430;  // vptr: CDOTASteamWorksGameStatsServer
   this->_vptr_IGameEventListener2 = off_41695C0;
   this->m_TutorialStats.m_nTimesHitOneHealth = 0;
   this->m_TutorialStats.m_nTimeToLevelSix = 0;

@@ -285,7 +285,7 @@ CEntityInstance *__fastcall CDOTA_Item_Recipe_MaskOfMadness::CEntityInstanceEnti
 void __fastcall CDOTA_Item_Recipe_MaskOfMadness::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Item_Recipe_MaskOfMadness::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -295,7 +295,7 @@ void __fastcall CDOTA_Item_Recipe_MaskOfMadness::CEntityInstanceEntityClass::~CE
 void __fastcall CDOTA_Item_Recipe_MaskOfMadness::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Item_Recipe_MaskOfMadness::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -450,7 +450,7 @@ CEntityInstance *__fastcall CDOTA_Item_MaskOfMadness::CEntityInstanceEntityClass
 void __fastcall CDOTA_Item_MaskOfMadness::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Item_MaskOfMadness::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -460,7 +460,7 @@ void __fastcall CDOTA_Item_MaskOfMadness::CEntityInstanceEntityClass::~CEntityIn
 void __fastcall CDOTA_Item_MaskOfMadness::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Item_MaskOfMadness::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }

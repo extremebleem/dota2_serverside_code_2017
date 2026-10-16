@@ -2702,7 +2702,7 @@ LABEL_16:
       fieldInfo.pTypeDesc = pFielda;
       pSaveRestoreOps = pFielda->pSaveRestoreOps;
       fieldInfo.pOwner = &v6[-fieldOffset];
-      (*pSaveRestoreOps->_vptr_ISaveRestoreOps)(pSaveRestoreOps, &fieldInfo, this);
+      pSaveRestoreOps->Save(&fieldInfo, this);
 LABEL_9:
       (*(this->_vptr_ISave + 9))(this);
       return 1;
@@ -3061,7 +3061,7 @@ void __fastcall CRestore::StartBlock(CRestore *const this, SaveRestoreRecordHead
   int *v9; // rdx
 
   (*(this->_vptr_IRestore + 9))(this);
-  v4 = (*this->_vptr_IRestore)(this);
+  v4 = this->GetReadPos();
   size = pHeader->size;
   m_Size = this->m_BlockEndStack.m_Size;
   v7 = v4 + size;
@@ -4514,7 +4514,7 @@ LABEL_9:
       if ( m_pStateChanged != 0 )
       {
         v32 = p_m_vecY;
-        (*m_pStateChanged->_vptr_INetworkStateChangedRouter)(m_pStateChanged, pValue, v29, 0xFFFFFFFFLL, 0xFFFFFFFFLL);
+        m_pStateChanged->NetworkStateChanged(pValue, v29, 0xFFFFFFFFLL, 0xFFFFFFFFLL);
         p_m_vecY = v32;
       }
     }

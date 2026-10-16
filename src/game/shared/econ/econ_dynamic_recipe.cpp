@@ -8,7 +8,7 @@ void __fastcall CRecipeComponentMatchingIterator::CRecipeComponentMatchingIterat
         const IEconItemInterface *pSourceItem,
         const IEconItemInterface *pTargetItem)
 {
-  this->_vptr_IEconItemAttributeIterator = off_47A2770;
+  this->_vptr_IEconItemAttributeIterator = off_47A2770;  // vptr: CRecipeComponentMatchingIterator
   this->m_pSourceItem = pSourceItem;
   this->m_pTargetItem = pTargetItem;
   this->m_bIgnoreCompleted = 1;
@@ -204,7 +204,7 @@ bool __fastcall DecodeAttributeStringIntoAttributes(
       }
       vecAttribs->m_Size = v13 + 1;
       v6 = &vecAttribs->m_Memory.m_pMemory[v12];
-      v6->m_unDefinitionIndex = (*AttributeDefinition->_vptr_IEconItemAttributeDefinition)(AttributeDefinition);
+      v6->m_unDefinitionIndex = AttributeDefinition->GetDefinitionIndex();
       v6 = (v6 + 8);
       m_pAttrType = AttributeDefinition->m_pAttrType;
       (*(m_pAttrType->_vptr_ISchemaAttributeType + 8))(m_pAttrType, v6);

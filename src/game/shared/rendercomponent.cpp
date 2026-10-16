@@ -428,7 +428,7 @@ void __fastcall CRenderComponent::Activate(CRenderComponent *const this, CEntity
   const CSchemaClassInfo *const *v13; // r12
   __int64 v14; // r13
 
-  v3 = *((*pEntity->_vptr_IHandleEntity)(pEntity) + 40);
+  v3 = *(pEntity->Schema_DynamicBinding() + 40);
   if ( v3 == 0 )
     goto LABEL_18;
   v4 = abs32(*(v3 + 136));
@@ -1370,7 +1370,7 @@ void __fastcall CRenderComponent::UpdateEntityRenderAttrs(CRenderComponent *cons
   Vector4D v68; // 0:kr00_16.16
   Vector4D v69; // 0:xmm0_8.8,8:xmm1_8.8
 
-  v1 = *((*this->m_pOwner.m_pObj->_vptr_IHandleEntity)(this->m_pOwner.m_pObj) + 40);
+  v1 = *(this->m_pOwner.m_pObj->Schema_DynamicBinding() + 40);
   v2 = CSchemaClassInfo::MetaGetPtr(v1, "MRenderAttrCount", SchemaBaseClassTraversal_t::SCHEMA_BASE_TRAVERSAL_FULL, 0) >> 16;
   if ( v2 == 0 )
     goto LABEL_2;

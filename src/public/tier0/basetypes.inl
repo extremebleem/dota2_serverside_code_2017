@@ -53,7 +53,7 @@ void __fastcall Swap<COverlapHit>(COverlapHit *const a, COverlapHit *const b)
 // IGenericInterface::~IGenericInterface  (line 688, @0x0000000001b2c2f0, libserver.so)
 void __fastcall IGenericInterface::~IGenericInterface(IGenericInterface *const this)
 {
-  this->_vptr_IGenericInterface = off_3F79210;
+  this->_vptr_IGenericInterface = off_3F79210;  // vptr: IGenericInterface
 }
 
 
@@ -61,7 +61,7 @@ void __fastcall IGenericInterface::~IGenericInterface(IGenericInterface *const t
 // calls: operator delete
 void __fastcall IGenericInterface::~IGenericInterface(IGenericInterface *const this)
 {
-  this->_vptr_IGenericInterface = off_3F79210;
+  this->_vptr_IGenericInterface = off_3F79210;  // vptr: IGenericInterface
   operator delete(this);
 }
 

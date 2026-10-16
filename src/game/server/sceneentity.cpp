@@ -390,7 +390,7 @@ void *__fastcall CSceneEntityAlias_logic_choreographed_scene::CEntityInstanceEnt
 void __fastcall CSceneEntityAlias_logic_choreographed_scene::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CSceneEntityAlias_logic_choreographed_scene::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -400,7 +400,7 @@ void __fastcall CSceneEntityAlias_logic_choreographed_scene::CEntityInstanceEnti
 void __fastcall CSceneEntityAlias_logic_choreographed_scene::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CSceneEntityAlias_logic_choreographed_scene::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -6738,7 +6738,7 @@ void *__fastcall CInstancedSceneEntity::CEntityInstanceEntityClass::AllocateInst
 void __fastcall CInstancedSceneEntity::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CInstancedSceneEntity::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -6748,7 +6748,7 @@ void __fastcall CInstancedSceneEntity::CEntityInstanceEntityClass::~CEntityInsta
 void __fastcall CInstancedSceneEntity::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CInstancedSceneEntity::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }

@@ -20,7 +20,7 @@ void __fastcall GCSDK::CGCClientSharedObjectTypeCache::CGCClientSharedObjectType
 {
   GCSDK::CSharedObjectTypeCache::CSharedObjectTypeCache(this, nTypeID);
   this->m_nServiceID = 0;
-  this->_vptr_CSharedObjectTypeCache = off_47D0B10;
+  this->_vptr_CSharedObjectTypeCache = off_47D0B10;  // vptr: GCSDK::CGCClientSharedObjectTypeCache
 }
 
 
@@ -29,7 +29,7 @@ void __fastcall GCSDK::CGCClientSharedObjectTypeCache::CGCClientSharedObjectType
 void __fastcall GCSDK::CGCClientSharedObjectTypeCache::~CGCClientSharedObjectTypeCache(
         GCSDK::CGCClientSharedObjectTypeCache *const this)
 {
-  this->_vptr_CSharedObjectTypeCache = off_47D0B10;
+  this->_vptr_CSharedObjectTypeCache = off_47D0B10;  // vptr: GCSDK::CGCClientSharedObjectTypeCache
   GCSDK::CSharedObjectTypeCache::~CSharedObjectTypeCache(this);
 }
 
@@ -39,7 +39,7 @@ void __fastcall GCSDK::CGCClientSharedObjectTypeCache::~CGCClientSharedObjectTyp
 void __fastcall GCSDK::CGCClientSharedObjectTypeCache::~CGCClientSharedObjectTypeCache(
         GCSDK::CGCClientSharedObjectTypeCache *const this)
 {
-  this->_vptr_CSharedObjectTypeCache = off_47D0B10;
+  this->_vptr_CSharedObjectTypeCache = off_47D0B10;  // vptr: GCSDK::CGCClientSharedObjectTypeCache
   GCSDK::CSharedObjectTypeCache::~CSharedObjectTypeCache(this);
   operator delete(this);
 }
@@ -474,7 +474,7 @@ void __fastcall GCSDK::CGCClientSharedObjectCache::CGCClientSharedObjectCache(
   GCSDK::CSharedObjectCache::CSharedObjectCache(this);
   this->m_IDOwner.m_id = m_id;
   *&this->m_IDOwner.m_type = v2;
-  this->_vptr_CSharedObjectCache = off_47D0B70;
+  this->_vptr_CSharedObjectCache = off_47D0B70;  // vptr: GCSDK::CGCClientSharedObjectCache
   this->m_bInitialized = 0;
   this->m_bSubscribed = 0;
 }
@@ -485,7 +485,7 @@ void __fastcall GCSDK::CGCClientSharedObjectCache::CGCClientSharedObjectCache(
 void __fastcall GCSDK::CGCClientSharedObjectCache::~CGCClientSharedObjectCache(
         GCSDK::CGCClientSharedObjectCache *const this)
 {
-  this->_vptr_CSharedObjectCache = off_47D0B70;
+  this->_vptr_CSharedObjectCache = off_47D0B70;  // vptr: GCSDK::CGCClientSharedObjectCache
   GCSDK::CSharedObjectCache::~CSharedObjectCache(this);
 }
 
@@ -495,7 +495,7 @@ void __fastcall GCSDK::CGCClientSharedObjectCache::~CGCClientSharedObjectCache(
 void __fastcall GCSDK::CGCClientSharedObjectCache::~CGCClientSharedObjectCache(
         GCSDK::CGCClientSharedObjectCache *const this)
 {
-  this->_vptr_CSharedObjectCache = off_47D0B70;
+  this->_vptr_CSharedObjectCache = off_47D0B70;  // vptr: GCSDK::CGCClientSharedObjectCache
   GCSDK::CSharedObjectCache::~CSharedObjectCache(this);
   operator delete(this);
 }

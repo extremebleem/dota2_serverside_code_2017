@@ -11,7 +11,7 @@ void __fastcall CRopeKeyframe::~CRopeKeyframe(CRopeKeyframe *const this)
   p_m_iRopeMaterialModelIndex[-150].m_Value.m_pBinding = &off_40A57D0;
   p_m_iRopeMaterialModelIndex[-6].m_Value.m_pBinding = off_40A5EA0;
   CStrongHandle<InfoForResourceTypeIMaterial2>::Shutdown(&p_m_iRopeMaterialModelIndex->m_Value);
-  this->_vptr_IWatcherCallback = off_4074030;
+  this->_vptr_IWatcherCallback = off_4074030;  // vptr: IWatcherCallback
   CBaseModelEntity::~CBaseModelEntity(this);
 }
 
@@ -26,7 +26,7 @@ void __fastcall CRopeKeyframe::~CRopeKeyframe(CRopeKeyframe *const this)
   p_m_iRopeMaterialModelIndex[-150].m_Value.m_pBinding = &off_40A57D0;
   p_m_iRopeMaterialModelIndex[-6].m_Value.m_pBinding = off_40A5EA0;
   CStrongHandle<InfoForResourceTypeIMaterial2>::Shutdown(&p_m_iRopeMaterialModelIndex->m_Value);
-  this->_vptr_IWatcherCallback = off_4074030;
+  this->_vptr_IWatcherCallback = off_4074030;  // vptr: IWatcherCallback
   CBaseModelEntity::~CBaseModelEntity(this);
   CBaseEntity::operator delete(this);
 }
@@ -106,7 +106,7 @@ CEntityInstance *__fastcall CRopeKeyframe::CEntityInstanceEntityClass::Construct
 void __fastcall CRopeKeyframe::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CRopeKeyframe::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -116,7 +116,7 @@ void __fastcall CRopeKeyframe::CEntityInstanceEntityClass::~CEntityInstanceEntit
 void __fastcall CRopeKeyframe::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CRopeKeyframe::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }

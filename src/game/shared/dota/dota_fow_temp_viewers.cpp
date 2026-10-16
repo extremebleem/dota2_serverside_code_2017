@@ -411,7 +411,7 @@ void *__fastcall CDOTAFogOfWarTempViewers::CEntityInstanceEntityClass::AllocateI
 void __fastcall CDOTAFogOfWarTempViewers::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTAFogOfWarTempViewers::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -421,7 +421,7 @@ void __fastcall CDOTAFogOfWarTempViewers::CEntityInstanceEntityClass::~CEntityIn
 void __fastcall CDOTAFogOfWarTempViewers::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTAFogOfWarTempViewers::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }

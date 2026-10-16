@@ -520,7 +520,7 @@ CEntityInstance *__fastcall CDOTA_Unit_Hero_Slardar::CEntityInstanceEntityClass:
 void __fastcall CDOTA_Unit_Hero_Slardar::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Unit_Hero_Slardar::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -530,7 +530,7 @@ void __fastcall CDOTA_Unit_Hero_Slardar::CEntityInstanceEntityClass::~CEntityIns
 void __fastcall CDOTA_Unit_Hero_Slardar::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Unit_Hero_Slardar::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -712,7 +712,7 @@ CEntityInstance *__fastcall CDOTA_Ability_Slardar_Sprint::CEntityInstanceEntityC
 void __fastcall CDOTA_Ability_Slardar_Sprint::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Slardar_Sprint::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -722,7 +722,7 @@ void __fastcall CDOTA_Ability_Slardar_Sprint::CEntityInstanceEntityClass::~CEnti
 void __fastcall CDOTA_Ability_Slardar_Sprint::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Slardar_Sprint::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -1061,7 +1061,7 @@ CEntityInstance *__fastcall CDOTA_Ability_Slardar_Slithereen_Crush::CEntityInsta
 void __fastcall CDOTA_Ability_Slardar_Slithereen_Crush::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Slardar_Slithereen_Crush::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -1071,7 +1071,7 @@ void __fastcall CDOTA_Ability_Slardar_Slithereen_Crush::CEntityInstanceEntityCla
 void __fastcall CDOTA_Ability_Slardar_Slithereen_Crush::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Slardar_Slithereen_Crush::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -1522,7 +1522,7 @@ CEntityInstance *__fastcall CDOTA_Ability_Slardar_Bash::CEntityInstanceEntityCla
 void __fastcall CDOTA_Ability_Slardar_Bash::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Slardar_Bash::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -1532,7 +1532,7 @@ void __fastcall CDOTA_Ability_Slardar_Bash::CEntityInstanceEntityClass::~CEntity
 void __fastcall CDOTA_Ability_Slardar_Bash::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Slardar_Bash::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -2057,7 +2057,7 @@ CEntityInstance *__fastcall CDOTA_Ability_Slardar_Amplify_Damage::CEntityInstanc
 void __fastcall CDOTA_Ability_Slardar_Amplify_Damage::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Slardar_Amplify_Damage::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -2067,7 +2067,7 @@ void __fastcall CDOTA_Ability_Slardar_Amplify_Damage::CEntityInstanceEntityClass
 void __fastcall CDOTA_Ability_Slardar_Amplify_Damage::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Slardar_Amplify_Damage::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }

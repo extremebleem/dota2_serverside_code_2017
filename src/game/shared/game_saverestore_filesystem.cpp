@@ -1182,7 +1182,7 @@ FSAsyncStatus_t __fastcall CSaveRestoreFileSystem::AsyncAppendFile(
   __int64 v6; // rax
   UtlRBTreeNode_t<CUtlMap<CUtlSymbol,CSaveDirectory::file_t>::Node_t,short unsigned int> *v7; // rax
 
-  v6 = (*this->_vptr_ISaveRestoreFileSystem)(this, pSrcFileName, "rb", 0);
+  v6 = this->Open(pSrcFileName, "rb", 0);
   if ( v6 == 0 )
     return FSAsyncStatus_t::FSASYNC_ERR_FILEOPEN;
   v7 = &this->m_pSaveDirectory->m_Files.m_Tree.m_Elements.m_pMemory[v6];
@@ -1256,7 +1256,7 @@ void __fastcall CSaveRestoreFileSystem::DirectorCopyToMemory(
   unsigned __int64 v29; // [rsp+158h] [rbp-38h]
 
   v29 = __readfsqword(0x28u);
-  v4 = (*this->_vptr_ISaveRestoreFileSystem)(this, pDestFileName, "ab+", pPath);
+  v4 = this->Open(pDestFileName, "ab+", pPath);
   if ( v4 != 0 )
   {
     v5 = &this->m_pSaveDirectory->m_Files.m_Tree.m_Elements.m_pMemory[v4];
@@ -1396,7 +1396,7 @@ void __fastcall CSaveRestoreFileSystem::DirectoryCopy(
 
   if ( V_stristr_fast(pPath, ".hl") != 0 || V_stristr_fast(pPath, ".vrman") != 0 )
   {
-    v7 = (*this->_vptr_ISaveRestoreFileSystem)(this, pDestFileName, "rb", pPath);
+    v7 = this->Open(pDestFileName, "rb", pPath);
     if ( v7 != 0 )
     {
       m_pSaveDirectory = this->m_pSaveDirectory;
@@ -1562,7 +1562,7 @@ bool __fastcall CSaveRestoreFileSystem::DirectoryExtract(
     (*(this->_vptr_ISaveRestoreFileSystem + 2))(this, &fileSize, 4, pFile);
     if ( fileSize == 0 )
       break;
-    v7 = (*this->_vptr_ISaveRestoreFileSystem)(this, fileName, "wb", 0);
+    v7 = this->Open(fileName, "wb", 0);
     if ( v7 == 0 )
       break;
     v8 = &this->m_pSaveDirectory->m_Files.m_Tree.m_Elements.m_pMemory[v7];
@@ -1608,7 +1608,7 @@ bool __fastcall CSaveRestoreFileSystem::LoadFileFromDisk(CSaveRestoreFileSystem 
   UtlRBTreeNode_t<CUtlMap<CUtlSymbol,CSaveDirectory::file_t>::Node_t,short unsigned int> *v6; // rbx
   char v7; // r12
 
-  v4 = (*this->_vptr_ISaveRestoreFileSystem)(this, pFilename, "wb", 0);
+  v4 = this->Open(pFilename, "wb", 0);
   if ( v4 == 0 )
     return 0;
   v5 = (*(g_pFullFileSystem->_vptr_IAppSystem + 78))(g_pFullFileSystem, pFilename, "rb", 0, 0);
@@ -1833,7 +1833,7 @@ void __fastcall CSaveRestoreFileSystem::WriteSaveDirectoryToDisk(CSaveRestoreFil
     v8 = CUtlSymbolTable::String(&m_pSaveDirectory->m_SymbolTable, &m_Id);
     if ( V_stristr_fast(v8, ".hl") != 0 || V_stristr_fast(v8, ".vrman") != 0 )
     {
-      (*this->_vptr_ISaveRestoreFileSystem)(this, v8, "rb", 0);
+      this->Open(v8, "rb", 0);
       V_snprintf(szPath, 260, "%s%s", "SAVE/", v8);
       (*(g_pFullFileSystem->_vptr_IBaseFileSystem + 15))(
         &g_pFullFileSystem->IBaseFileSystem,
@@ -1870,7 +1870,7 @@ void __fastcall CSaveRestoreFileSystem::LoadSaveDirectoryFromDisk(
         i = (*(g_pFullFileSystem->_vptr_IAppSystem + 38))(g_pFullFileSystem, &hfind) )
   {
     V_snprintf(szPath, 260, "%s%s", "SAVE/", i);
-    v4 = (*this->_vptr_ISaveRestoreFileSystem)(this, i, "wb", 0);
+    v4 = this->Open(i, "wb", 0);
     v5 = v4;
     if ( v4 != 0 )
     {
@@ -2351,7 +2351,7 @@ bool __fastcall CSaveRestoreFileSystemPassthrough::DirectoryExtract(
       break;
     V_snprintf(szName, 260, "%s%s", "SAVE/", fileName);
     V_FixSlashes(szName, 47);
-    v5 = (*g_pSaveRestoreFileSystem->_vptr_ISaveRestoreFileSystem)(g_pSaveRestoreFileSystem, szName, "wb", "MOD");
+    v5 = g_pSaveRestoreFileSystem->Open(szName, "wb", "MOD");
     if ( v5 == 0 )
       break;
     v6 = fileSize;

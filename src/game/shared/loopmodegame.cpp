@@ -1121,7 +1121,7 @@ void __fastcall GameToolEventToolEvent_GetEntityInfo_tHookupGameSystem::SetGameS
 void __fastcall GameToolEventToolEvent_GetEntityInfo_tHookupGameSystem::~GameToolEventToolEvent_GetEntityInfo_tHookupGameSystem(
         GameToolEventToolEvent_GetEntityInfo_tHookupGameSystem *const this)
 {
-  this->_vptr_IGameSystem = off_3FF91F0;
+  this->_vptr_IGameSystem = off_3FF91F0;  // vptr: CStartupHookGameSystem<GameToolEventToolEvent_GetEntityInfo_tInternal,0>
   IGameSystem::~IGameSystem(this);
 }
 
@@ -1131,7 +1131,7 @@ void __fastcall GameToolEventToolEvent_GetEntityInfo_tHookupGameSystem::~GameToo
 void __fastcall GameToolEventToolEvent_GetEntityInfo_tHookupGameSystem::~GameToolEventToolEvent_GetEntityInfo_tHookupGameSystem(
         GameToolEventToolEvent_GetEntityInfo_tHookupGameSystem *const this)
 {
-  this->_vptr_IGameSystem = off_3FF91F0;
+  this->_vptr_IGameSystem = off_3FF91F0;  // vptr: CStartupHookGameSystem<GameToolEventToolEvent_GetEntityInfo_tInternal,0>
   IGameSystem::~IGameSystem(this);
   operator delete(this);
 }
@@ -1179,7 +1179,7 @@ void __fastcall GameToolEventToolEvent_GetEntityInfoResult_tHookupGameSystem::Se
 void __fastcall GameToolEventToolEvent_GetEntityInfoResult_tHookupGameSystem::~GameToolEventToolEvent_GetEntityInfoResult_tHookupGameSystem(
         GameToolEventToolEvent_GetEntityInfoResult_tHookupGameSystem *const this)
 {
-  this->_vptr_IGameSystem = off_3FF9510;
+  this->_vptr_IGameSystem = off_3FF9510;  // vptr: CStartupHookGameSystem<GameToolEventToolEvent_GetEntityInfoResult_tInternal,0>
   IGameSystem::~IGameSystem(this);
 }
 
@@ -1189,7 +1189,7 @@ void __fastcall GameToolEventToolEvent_GetEntityInfoResult_tHookupGameSystem::~G
 void __fastcall GameToolEventToolEvent_GetEntityInfoResult_tHookupGameSystem::~GameToolEventToolEvent_GetEntityInfoResult_tHookupGameSystem(
         GameToolEventToolEvent_GetEntityInfoResult_tHookupGameSystem *const this)
 {
-  this->_vptr_IGameSystem = off_3FF9510;
+  this->_vptr_IGameSystem = off_3FF9510;  // vptr: CStartupHookGameSystem<GameToolEventToolEvent_GetEntityInfoResult_tInternal,0>
   IGameSystem::~IGameSystem(this);
   operator delete(this);
 }
@@ -1237,7 +1237,7 @@ void __fastcall GameToolEventToolEvent_GetEntityInputs_tHookupGameSystem::SetGam
 void __fastcall GameToolEventToolEvent_GetEntityInputs_tHookupGameSystem::~GameToolEventToolEvent_GetEntityInputs_tHookupGameSystem(
         GameToolEventToolEvent_GetEntityInputs_tHookupGameSystem *const this)
 {
-  this->_vptr_IGameSystem = off_3FF9830;
+  this->_vptr_IGameSystem = off_3FF9830;  // vptr: CStartupHookGameSystem<GameToolEventToolEvent_GetEntityInputs_tInternal,0>
   IGameSystem::~IGameSystem(this);
 }
 
@@ -1247,7 +1247,7 @@ void __fastcall GameToolEventToolEvent_GetEntityInputs_tHookupGameSystem::~GameT
 void __fastcall GameToolEventToolEvent_GetEntityInputs_tHookupGameSystem::~GameToolEventToolEvent_GetEntityInputs_tHookupGameSystem(
         GameToolEventToolEvent_GetEntityInputs_tHookupGameSystem *const this)
 {
-  this->_vptr_IGameSystem = off_3FF9830;
+  this->_vptr_IGameSystem = off_3FF9830;  // vptr: CStartupHookGameSystem<GameToolEventToolEvent_GetEntityInputs_tInternal,0>
   IGameSystem::~IGameSystem(this);
   operator delete(this);
 }
@@ -1295,7 +1295,7 @@ void __fastcall GameToolEventToolEvent_GetEntityInputsResult_tHookupGameSystem::
 void __fastcall GameToolEventToolEvent_GetEntityInputsResult_tHookupGameSystem::~GameToolEventToolEvent_GetEntityInputsResult_tHookupGameSystem(
         GameToolEventToolEvent_GetEntityInputsResult_tHookupGameSystem *const this)
 {
-  this->_vptr_IGameSystem = off_3FF9B50;
+  this->_vptr_IGameSystem = off_3FF9B50;  // vptr: CStartupHookGameSystem<GameToolEventToolEvent_GetEntityInputsResult_tInternal,0>
   IGameSystem::~IGameSystem(this);
 }
 
@@ -1305,7 +1305,7 @@ void __fastcall GameToolEventToolEvent_GetEntityInputsResult_tHookupGameSystem::
 void __fastcall GameToolEventToolEvent_GetEntityInputsResult_tHookupGameSystem::~GameToolEventToolEvent_GetEntityInputsResult_tHookupGameSystem(
         GameToolEventToolEvent_GetEntityInputsResult_tHookupGameSystem *const this)
 {
-  this->_vptr_IGameSystem = off_3FF9B50;
+  this->_vptr_IGameSystem = off_3FF9B50;  // vptr: CStartupHookGameSystem<GameToolEventToolEvent_GetEntityInputsResult_tInternal,0>
   IGameSystem::~IGameSystem(this);
   operator delete(this);
 }
@@ -1353,7 +1353,7 @@ void __fastcall GameToolEventToolEvent_FireEntityInput_tHookupGameSystem::SetGam
 void __fastcall GameToolEventToolEvent_FireEntityInput_tHookupGameSystem::~GameToolEventToolEvent_FireEntityInput_tHookupGameSystem(
         GameToolEventToolEvent_FireEntityInput_tHookupGameSystem *const this)
 {
-  this->_vptr_IGameSystem = off_3FF9E70;
+  this->_vptr_IGameSystem = off_3FF9E70;  // vptr: CStartupHookGameSystem<GameToolEventToolEvent_FireEntityInput_tInternal,0>
   IGameSystem::~IGameSystem(this);
 }
 
@@ -1363,7 +1363,7 @@ void __fastcall GameToolEventToolEvent_FireEntityInput_tHookupGameSystem::~GameT
 void __fastcall GameToolEventToolEvent_FireEntityInput_tHookupGameSystem::~GameToolEventToolEvent_FireEntityInput_tHookupGameSystem(
         GameToolEventToolEvent_FireEntityInput_tHookupGameSystem *const this)
 {
-  this->_vptr_IGameSystem = off_3FF9E70;
+  this->_vptr_IGameSystem = off_3FF9E70;  // vptr: CStartupHookGameSystem<GameToolEventToolEvent_FireEntityInput_tInternal,0>
   IGameSystem::~IGameSystem(this);
   operator delete(this);
 }
@@ -1411,7 +1411,7 @@ void __fastcall GameToolEventToolEvent_SFMToolActiveStateChanged_tHookupGameSyst
 void __fastcall GameToolEventToolEvent_SFMToolActiveStateChanged_tHookupGameSystem::~GameToolEventToolEvent_SFMToolActiveStateChanged_tHookupGameSystem(
         GameToolEventToolEvent_SFMToolActiveStateChanged_tHookupGameSystem *const this)
 {
-  this->_vptr_IGameSystem = off_3FFA190;
+  this->_vptr_IGameSystem = off_3FFA190;  // vptr: CStartupHookGameSystem<GameToolEventToolEvent_SFMToolActiveStateChanged_tInternal,0>
   IGameSystem::~IGameSystem(this);
 }
 
@@ -1421,7 +1421,7 @@ void __fastcall GameToolEventToolEvent_SFMToolActiveStateChanged_tHookupGameSyst
 void __fastcall GameToolEventToolEvent_SFMToolActiveStateChanged_tHookupGameSystem::~GameToolEventToolEvent_SFMToolActiveStateChanged_tHookupGameSystem(
         GameToolEventToolEvent_SFMToolActiveStateChanged_tHookupGameSystem *const this)
 {
-  this->_vptr_IGameSystem = off_3FFA190;
+  this->_vptr_IGameSystem = off_3FFA190;  // vptr: CStartupHookGameSystem<GameToolEventToolEvent_SFMToolActiveStateChanged_tInternal,0>
   IGameSystem::~IGameSystem(this);
   operator delete(this);
 }
@@ -1469,7 +1469,7 @@ void __fastcall GameToolEventSpawnEntityToolEvent_tHookupGameSystem::SetGameSyst
 void __fastcall GameToolEventSpawnEntityToolEvent_tHookupGameSystem::~GameToolEventSpawnEntityToolEvent_tHookupGameSystem(
         GameToolEventSpawnEntityToolEvent_tHookupGameSystem *const this)
 {
-  this->_vptr_IGameSystem = off_3FFA4B0;
+  this->_vptr_IGameSystem = off_3FFA4B0;  // vptr: CStartupHookGameSystem<GameToolEventSpawnEntityToolEvent_tInternal,0>
   IGameSystem::~IGameSystem(this);
 }
 
@@ -1479,7 +1479,7 @@ void __fastcall GameToolEventSpawnEntityToolEvent_tHookupGameSystem::~GameToolEv
 void __fastcall GameToolEventSpawnEntityToolEvent_tHookupGameSystem::~GameToolEventSpawnEntityToolEvent_tHookupGameSystem(
         GameToolEventSpawnEntityToolEvent_tHookupGameSystem *const this)
 {
-  this->_vptr_IGameSystem = off_3FFA4B0;
+  this->_vptr_IGameSystem = off_3FFA4B0;  // vptr: CStartupHookGameSystem<GameToolEventSpawnEntityToolEvent_tInternal,0>
   IGameSystem::~IGameSystem(this);
   operator delete(this);
 }
@@ -1527,7 +1527,7 @@ void __fastcall GameToolEventDestroyEntityToolEvent_tHookupGameSystem::SetGameSy
 void __fastcall GameToolEventDestroyEntityToolEvent_tHookupGameSystem::~GameToolEventDestroyEntityToolEvent_tHookupGameSystem(
         GameToolEventDestroyEntityToolEvent_tHookupGameSystem *const this)
 {
-  this->_vptr_IGameSystem = off_3FFA7D0;
+  this->_vptr_IGameSystem = off_3FFA7D0;  // vptr: CStartupHookGameSystem<GameToolEventDestroyEntityToolEvent_tInternal,0>
   IGameSystem::~IGameSystem(this);
 }
 
@@ -1537,7 +1537,7 @@ void __fastcall GameToolEventDestroyEntityToolEvent_tHookupGameSystem::~GameTool
 void __fastcall GameToolEventDestroyEntityToolEvent_tHookupGameSystem::~GameToolEventDestroyEntityToolEvent_tHookupGameSystem(
         GameToolEventDestroyEntityToolEvent_tHookupGameSystem *const this)
 {
-  this->_vptr_IGameSystem = off_3FFA7D0;
+  this->_vptr_IGameSystem = off_3FFA7D0;  // vptr: CStartupHookGameSystem<GameToolEventDestroyEntityToolEvent_tInternal,0>
   IGameSystem::~IGameSystem(this);
   operator delete(this);
 }
@@ -1585,7 +1585,7 @@ void __fastcall GameToolEventRestartMapToolEvent_tHookupGameSystem::SetGameSyste
 void __fastcall GameToolEventRestartMapToolEvent_tHookupGameSystem::~GameToolEventRestartMapToolEvent_tHookupGameSystem(
         GameToolEventRestartMapToolEvent_tHookupGameSystem *const this)
 {
-  this->_vptr_IGameSystem = off_3FFAAF0;
+  this->_vptr_IGameSystem = off_3FFAAF0;  // vptr: CStartupHookGameSystem<GameToolEventRestartMapToolEvent_tInternal,0>
   IGameSystem::~IGameSystem(this);
 }
 
@@ -1595,7 +1595,7 @@ void __fastcall GameToolEventRestartMapToolEvent_tHookupGameSystem::~GameToolEve
 void __fastcall GameToolEventRestartMapToolEvent_tHookupGameSystem::~GameToolEventRestartMapToolEvent_tHookupGameSystem(
         GameToolEventRestartMapToolEvent_tHookupGameSystem *const this)
 {
-  this->_vptr_IGameSystem = off_3FFAAF0;
+  this->_vptr_IGameSystem = off_3FFAAF0;  // vptr: CStartupHookGameSystem<GameToolEventRestartMapToolEvent_tInternal,0>
   IGameSystem::~IGameSystem(this);
   operator delete(this);
 }
@@ -1643,7 +1643,7 @@ void __fastcall GameToolEventDestroyAllEntitiesToolEvent_tHookupGameSystem::SetG
 void __fastcall GameToolEventDestroyAllEntitiesToolEvent_tHookupGameSystem::~GameToolEventDestroyAllEntitiesToolEvent_tHookupGameSystem(
         GameToolEventDestroyAllEntitiesToolEvent_tHookupGameSystem *const this)
 {
-  this->_vptr_IGameSystem = off_3FFAE10;
+  this->_vptr_IGameSystem = off_3FFAE10;  // vptr: CStartupHookGameSystem<GameToolEventDestroyAllEntitiesToolEvent_tInternal,0>
   IGameSystem::~IGameSystem(this);
 }
 
@@ -1653,7 +1653,7 @@ void __fastcall GameToolEventDestroyAllEntitiesToolEvent_tHookupGameSystem::~Gam
 void __fastcall GameToolEventDestroyAllEntitiesToolEvent_tHookupGameSystem::~GameToolEventDestroyAllEntitiesToolEvent_tHookupGameSystem(
         GameToolEventDestroyAllEntitiesToolEvent_tHookupGameSystem *const this)
 {
-  this->_vptr_IGameSystem = off_3FFAE10;
+  this->_vptr_IGameSystem = off_3FFAE10;  // vptr: CStartupHookGameSystem<GameToolEventDestroyAllEntitiesToolEvent_tInternal,0>
   IGameSystem::~IGameSystem(this);
   operator delete(this);
 }
@@ -1701,7 +1701,7 @@ void __fastcall GameToolEventTraceRayServerToolEvent_tHookupGameSystem::SetGameS
 void __fastcall GameToolEventTraceRayServerToolEvent_tHookupGameSystem::~GameToolEventTraceRayServerToolEvent_tHookupGameSystem(
         GameToolEventTraceRayServerToolEvent_tHookupGameSystem *const this)
 {
-  this->_vptr_IGameSystem = off_3FFB130;
+  this->_vptr_IGameSystem = off_3FFB130;  // vptr: CStartupHookGameSystem<GameToolEventTraceRayServerToolEvent_tInternal,0>
   IGameSystem::~IGameSystem(this);
 }
 
@@ -1711,7 +1711,7 @@ void __fastcall GameToolEventTraceRayServerToolEvent_tHookupGameSystem::~GameToo
 void __fastcall GameToolEventTraceRayServerToolEvent_tHookupGameSystem::~GameToolEventTraceRayServerToolEvent_tHookupGameSystem(
         GameToolEventTraceRayServerToolEvent_tHookupGameSystem *const this)
 {
-  this->_vptr_IGameSystem = off_3FFB130;
+  this->_vptr_IGameSystem = off_3FFB130;  // vptr: CStartupHookGameSystem<GameToolEventTraceRayServerToolEvent_tInternal,0>
   IGameSystem::~IGameSystem(this);
   operator delete(this);
 }
@@ -1759,7 +1759,7 @@ void __fastcall GameToolEventToolTraceRayResult_tHookupGameSystem::SetGameSystem
 void __fastcall GameToolEventToolTraceRayResult_tHookupGameSystem::~GameToolEventToolTraceRayResult_tHookupGameSystem(
         GameToolEventToolTraceRayResult_tHookupGameSystem *const this)
 {
-  this->_vptr_IGameSystem = off_3FFB450;
+  this->_vptr_IGameSystem = off_3FFB450;  // vptr: CStartupHookGameSystem<GameToolEventToolTraceRayResult_tInternal,0>
   IGameSystem::~IGameSystem(this);
 }
 
@@ -1769,7 +1769,7 @@ void __fastcall GameToolEventToolTraceRayResult_tHookupGameSystem::~GameToolEven
 void __fastcall GameToolEventToolTraceRayResult_tHookupGameSystem::~GameToolEventToolTraceRayResult_tHookupGameSystem(
         GameToolEventToolTraceRayResult_tHookupGameSystem *const this)
 {
-  this->_vptr_IGameSystem = off_3FFB450;
+  this->_vptr_IGameSystem = off_3FFB450;  // vptr: CStartupHookGameSystem<GameToolEventToolTraceRayResult_tInternal,0>
   IGameSystem::~IGameSystem(this);
   operator delete(this);
 }
@@ -2334,7 +2334,7 @@ void __fastcall CLoopModeGameToolHooks::OnToolRestartMap(
   DestroyAllEntitiesToolEvent::DestroyAllEntitiesToolEvent(v20);
   v20[0] = off_3FF8AB0;
   CLoopModeGameToolHooks::OnToolDestroyAllEntities(this, v20);
-  if ( (*g_pLoopModeGameSharedState->_vptr_ILoopModeGameSharedState)(g_pLoopModeGameSharedState) == 0 )
+  if ( g_pLoopModeGameSharedState->GetWorldSession() == 0 )
     goto LABEL_24;
   list.m_Size = 0;
   list.m_Memory.m_pMemory = 0;
@@ -2353,7 +2353,7 @@ void __fastcall CLoopModeGameToolHooks::OnToolRestartMap(
       v5 = WorldReference;
       if ( WorldReference != 0 && (*(*WorldReference + 16LL))(WorldReference) != 0 )
       {
-        v6 = (*g_pLoopModeGameSharedState->_vptr_ILoopModeGameSharedState)(g_pLoopModeGameSharedState);
+        v6 = g_pLoopModeGameSharedState->GetWorldSession();
         v7 = (*(*v6 + 152LL))(v6, v5, 0);
         if ( *v7 > 0 )
           break;
@@ -2979,7 +2979,7 @@ LABEL_53:
 // CMapLoadEntityFilter::~CMapLoadEntityFilter  (line 596, @0x00000000020f21b0, libserver.so)  // inlines: ~ISpawnGroupEntityFilter
 void __fastcall CMapLoadEntityFilter::~CMapLoadEntityFilter(CMapLoadEntityFilter *const this)
 {
-  this->_vptr_ISpawnGroupEntityFilter = off_3FCAF10;
+  this->_vptr_ISpawnGroupEntityFilter = off_3FCAF10;  // vptr: ISpawnGroupEntityFilter
 }
 
 
@@ -2987,7 +2987,7 @@ void __fastcall CMapLoadEntityFilter::~CMapLoadEntityFilter(CMapLoadEntityFilter
 // calls: operator delete
 void __fastcall CMapLoadEntityFilter::~CMapLoadEntityFilter(CMapLoadEntityFilter *const this)
 {
-  this->_vptr_ISpawnGroupEntityFilter = off_3FCAF10;
+  this->_vptr_ISpawnGroupEntityFilter = off_3FCAF10;  // vptr: ISpawnGroupEntityFilter
   operator delete(this);
 }
 
@@ -3882,9 +3882,9 @@ bool __fastcall CLoopModeGame::LoopInit(
       }
       while ( 1 )
       {
-        v25 = operator new(0x28u);
+        v25 = operator new(0x28u);  // new CResourceManifestPrerequisite (size matches)
         v25->m_nRefCount = 0;
-        v25->_vptr_IPrerequisite = off_3FCABD0;
+        v25->_vptr_IPrerequisite = off_3FCABD0;  // vptr: CResourceManifestPrerequisite
         v25->m_hResourceManifests.m_Size = 0;
         v25->m_hResourceManifests.m_Memory.m_pMemory = 0;
         v25->m_hResourceManifests.m_Memory.m_nAllocationCount = 0;
@@ -4346,8 +4346,8 @@ bool __fastcall CLoopModeGame::ReceivedServerInfo(
 
   if ( this->m_pClientWorldSessionManifest == 0 )
   {
-    v9 = operator new(0x28u);
-    v9->_vptr_IPrerequisite = off_3FCABD0;
+    v9 = operator new(0x28u);  // new CResourceManifestPrerequisite (size matches)
+    v9->_vptr_IPrerequisite = off_3FCABD0;  // vptr: CResourceManifestPrerequisite
     v9->m_nRefCount = 0;
     v9->m_hResourceManifests.m_Size = 0;
     v9->m_hResourceManifests.m_Memory.m_pMemory = 0;

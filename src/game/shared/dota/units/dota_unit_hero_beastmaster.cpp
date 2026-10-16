@@ -1157,7 +1157,7 @@ CEntityInstance *__fastcall CDOTA_Unit_Hero_Beastmaster::CEntityInstanceEntityCl
 void __fastcall CDOTA_Unit_Hero_Beastmaster::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Unit_Hero_Beastmaster::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -1167,7 +1167,7 @@ void __fastcall CDOTA_Unit_Hero_Beastmaster::CEntityInstanceEntityClass::~CEntit
 void __fastcall CDOTA_Unit_Hero_Beastmaster::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Unit_Hero_Beastmaster::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -1369,7 +1369,7 @@ CEntityInstance *__fastcall CDOTA_Beastmaster_Axe::CEntityInstanceEntityClass::C
 void __fastcall CDOTA_Beastmaster_Axe::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Beastmaster_Axe::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -1379,7 +1379,7 @@ void __fastcall CDOTA_Beastmaster_Axe::CEntityInstanceEntityClass::~CEntityInsta
 void __fastcall CDOTA_Beastmaster_Axe::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Beastmaster_Axe::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -1443,13 +1443,13 @@ int __fastcall CDOTA_Beastmaster_Axe::ShouldTransmit(
         const CGameCheckTransmitInfo *pInfo)
 {
   int ShouldTransmit; // eax
-  int v3; // edx
+  int v5; // edx
 
   ShouldTransmit = CBaseEntity::ShouldTransmit(this, pInfo);
-  v3 = 4;
+  v5 = 4;
   if ( pInfo->m_nRecipientTeamNumber != this->m_iTeamNum.m_Value )
     return ShouldTransmit;
-  return v3;
+  return v5;
 }
 
 
@@ -1608,7 +1608,7 @@ CEntityInstance *__fastcall CDOTA_Ability_Beastmaster_WildAxes::CEntityInstanceE
 void __fastcall CDOTA_Ability_Beastmaster_WildAxes::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Beastmaster_WildAxes::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -1618,7 +1618,7 @@ void __fastcall CDOTA_Ability_Beastmaster_WildAxes::CEntityInstanceEntityClass::
 void __fastcall CDOTA_Ability_Beastmaster_WildAxes::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Beastmaster_WildAxes::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -2722,7 +2722,7 @@ CEntityInstance *__fastcall CDOTA_Unit_Hero_Beastmaster_Beasts::CEntityInstanceE
 void __fastcall CDOTA_Unit_Hero_Beastmaster_Beasts::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Unit_Hero_Beastmaster_Beasts::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -2732,7 +2732,7 @@ void __fastcall CDOTA_Unit_Hero_Beastmaster_Beasts::CEntityInstanceEntityClass::
 void __fastcall CDOTA_Unit_Hero_Beastmaster_Beasts::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Unit_Hero_Beastmaster_Beasts::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -2978,7 +2978,7 @@ CEntityInstance *__fastcall CDOTA_Unit_Hero_Beastmaster_Hawk::CEntityInstanceEnt
 void __fastcall CDOTA_Unit_Hero_Beastmaster_Hawk::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Unit_Hero_Beastmaster_Hawk::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -2988,7 +2988,7 @@ void __fastcall CDOTA_Unit_Hero_Beastmaster_Hawk::CEntityInstanceEntityClass::~C
 void __fastcall CDOTA_Unit_Hero_Beastmaster_Hawk::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Unit_Hero_Beastmaster_Hawk::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -3194,7 +3194,7 @@ CEntityInstance *__fastcall CDOTA_Unit_Hero_Beastmaster_Boar::CEntityInstanceEnt
 void __fastcall CDOTA_Unit_Hero_Beastmaster_Boar::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Unit_Hero_Beastmaster_Boar::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -3204,7 +3204,7 @@ void __fastcall CDOTA_Unit_Hero_Beastmaster_Boar::CEntityInstanceEntityClass::~C
 void __fastcall CDOTA_Unit_Hero_Beastmaster_Boar::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Unit_Hero_Beastmaster_Boar::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -3397,7 +3397,7 @@ CEntityInstance *__fastcall CDOTA_Ability_Beastmaster_CallOfTheWild::CEntityInst
 void __fastcall CDOTA_Ability_Beastmaster_CallOfTheWild::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Beastmaster_CallOfTheWild::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -3407,7 +3407,7 @@ void __fastcall CDOTA_Ability_Beastmaster_CallOfTheWild::CEntityInstanceEntityCl
 void __fastcall CDOTA_Ability_Beastmaster_CallOfTheWild::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Beastmaster_CallOfTheWild::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -3711,7 +3711,7 @@ CEntityInstance *__fastcall CDOTA_Ability_Beastmaster_CallOfTheWildBoar::CEntity
 void __fastcall CDOTA_Ability_Beastmaster_CallOfTheWildBoar::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Beastmaster_CallOfTheWildBoar::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -3721,7 +3721,7 @@ void __fastcall CDOTA_Ability_Beastmaster_CallOfTheWildBoar::CEntityInstanceEnti
 void __fastcall CDOTA_Ability_Beastmaster_CallOfTheWildBoar::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Beastmaster_CallOfTheWildBoar::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -4038,7 +4038,7 @@ CEntityInstance *__fastcall CDOTA_Ability_CallOfTheWild_Hawk_Invisibility::CEnti
 void __fastcall CDOTA_Ability_CallOfTheWild_Hawk_Invisibility::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_CallOfTheWild_Hawk_Invisibility::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -4048,7 +4048,7 @@ void __fastcall CDOTA_Ability_CallOfTheWild_Hawk_Invisibility::CEntityInstanceEn
 void __fastcall CDOTA_Ability_CallOfTheWild_Hawk_Invisibility::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_CallOfTheWild_Hawk_Invisibility::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -4390,7 +4390,7 @@ CEntityInstance *__fastcall CDOTA_Ability_CallOfTheWild_Boar_Poison::CEntityInst
 void __fastcall CDOTA_Ability_CallOfTheWild_Boar_Poison::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_CallOfTheWild_Boar_Poison::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -4400,7 +4400,7 @@ void __fastcall CDOTA_Ability_CallOfTheWild_Boar_Poison::CEntityInstanceEntityCl
 void __fastcall CDOTA_Ability_CallOfTheWild_Boar_Poison::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_CallOfTheWild_Boar_Poison::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -4566,7 +4566,7 @@ CEntityInstance *__fastcall CDOTA_Ability_CallOfTheWild_Boar_PoisonGreater::CEnt
 void __fastcall CDOTA_Ability_CallOfTheWild_Boar_PoisonGreater::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_CallOfTheWild_Boar_PoisonGreater::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -4576,7 +4576,7 @@ void __fastcall CDOTA_Ability_CallOfTheWild_Boar_PoisonGreater::CEntityInstanceE
 void __fastcall CDOTA_Ability_CallOfTheWild_Boar_PoisonGreater::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_CallOfTheWild_Boar_PoisonGreater::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -5063,7 +5063,7 @@ CEntityInstance *__fastcall CDOTA_Ability_Beastmaster_InnerBeast::CEntityInstanc
 void __fastcall CDOTA_Ability_Beastmaster_InnerBeast::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Beastmaster_InnerBeast::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -5073,7 +5073,7 @@ void __fastcall CDOTA_Ability_Beastmaster_InnerBeast::CEntityInstanceEntityClass
 void __fastcall CDOTA_Ability_Beastmaster_InnerBeast::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Beastmaster_InnerBeast::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -5495,7 +5495,7 @@ CEntityInstance *__fastcall CDOTA_Ability_Beastmaster_PrimalRoar::CEntityInstanc
 void __fastcall CDOTA_Ability_Beastmaster_PrimalRoar::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Beastmaster_PrimalRoar::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -5505,7 +5505,7 @@ void __fastcall CDOTA_Ability_Beastmaster_PrimalRoar::CEntityInstanceEntityClass
 void __fastcall CDOTA_Ability_Beastmaster_PrimalRoar::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Beastmaster_PrimalRoar::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }

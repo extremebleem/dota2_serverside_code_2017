@@ -194,14 +194,15 @@ void __fastcall nav_flood_select(const CCommandContext *const ctx, const CComman
   CNavArea *AreaForFloodSelect; // rax
   float v5; // xmm1_4
   uint32 v6; // edx
-  char *v7; // r8
+  double v7; // xmm0_8
+  char *v8; // r8
   SelectCollector collector; // [rsp+0h] [rbp-C0h] BYREF
   SelectCollector *p_collector; // [rsp+10h] [rbp-B0h]
-  __int64 v10; // [rsp+18h] [rbp-A8h]
-  CNavBreadthFirstSearch v11; // [rsp+30h] [rbp-90h] BYREF
-  unsigned __int64 v12; // [rsp+A8h] [rbp-18h]
+  __int64 v11; // [rsp+18h] [rbp-A8h]
+  CNavBreadthFirstSearch v12; // [rsp+30h] [rbp-90h] BYREF
+  unsigned __int64 v13; // [rsp+A8h] [rbp-18h]
 
-  v12 = __readfsqword(0x28u);
+  v13 = __readfsqword(0x28u);
   if ( UTIL_IsCommandIssuedByServerAdmin() )
   {
     ListenServerHost = UTIL_GetListenServerHost();
@@ -214,45 +215,45 @@ void __fastcall nav_flood_select(const CCommandContext *const ctx, const CComman
         v6 = 0;
         if ( args->m_nArgc == 2 )
         {
-          v7 = args->m_ppArgv[1];
-          if ( v7 == "out" )
+          v8 = args->m_ppArgv[1];
+          if ( v8 == "out" )
           {
             v6 = 29;
           }
           else
           {
             v6 = strcmp("out", args->m_ppArgv[1]) == 0 ? 0x1D : 0;
-            if ( v7 == "in" || strcmp("in", args->m_ppArgv[1]) == 0 )
+            if ( v8 == "in" || strcmp("in", args->m_ppArgv[1]) == 0 )
               v6 |= 2u;
           }
         }
-        v11.m_SearchHash.m_bSizeLocked = 0;
-        v11.m_nConnectionFlags = v6;
-        v11._vptr_CNavBreadthFirstSearch = off_47AE210;
-        v11.m_NavHull = g_NavHullAAQuad;
+        v12.m_SearchHash.m_bSizeLocked = 0;
+        v12.m_nConnectionFlags = v6;
+        v12._vptr_CNavBreadthFirstSearch = off_47AE210;
+        v12.m_NavHull = g_NavHullAAQuad;
         collector.m_nCount = 0;
         collector.m_rSelectionSet = &TheNavMesh->m_SelectionSet;
-        v11.m_funcOnSearchArea._M_invoker = std::_Function_handler<NavSearchAreaResult_t ()(CNavArea &,NavSearchAreaInfo_t *),std::reference_wrapper<SelectCollector>>::_M_invoke;
-        memset(&v11.m_SearchHash, 0, 20);
+        v12.m_funcOnSearchArea._M_invoker = std::_Function_handler<NavSearchAreaResult_t ()(CNavArea &,NavSearchAreaInfo_t *),std::reference_wrapper<SelectCollector>>::_M_invoke;
+        memset(&v12.m_SearchHash, 0, 20);
         p_collector = &collector;
-        v11.m_funcOnSearchArea._M_functor._M_unused._M_object = &collector;
-        v11.m_funcOnSearchArea._M_functor._M_unused._M_member_pointer.__delta = v10;
-        v11.m_SearchHash.m_nMinSize = 1024;
-        v11.m_pCostFunc = 0;
-        v11.m_nTeamIdForBlockedCheck = -1;
-        v11.m_funcOnSearchArea._M_manager = std::_Function_base::_Ref_manager<SelectCollector>::_M_manager;
-        CNavBreadthFirstSearch::BreadthFirstSearch(&v11, AreaForFloodSelect, -1.0, v5);
-        v11._vptr_CNavBreadthFirstSearch = off_47AE210;
-        if ( v11.m_funcOnSearchArea._M_manager != 0 )
-          v11.m_funcOnSearchArea._M_manager(
-            &v11.m_funcOnSearchArea,
-            &v11.m_funcOnSearchArea,
+        v12.m_funcOnSearchArea._M_functor._M_unused._M_object = &collector;
+        v12.m_funcOnSearchArea._M_functor._M_unused._M_member_pointer.__delta = v11;
+        v12.m_SearchHash.m_nMinSize = 1024;
+        v12.m_pCostFunc = 0;
+        v12.m_nTeamIdForBlockedCheck = -1;
+        v12.m_funcOnSearchArea._M_manager = std::_Function_base::_Ref_manager<SelectCollector>::_M_manager;
+        CNavBreadthFirstSearch::BreadthFirstSearch(&v12, AreaForFloodSelect, -1.0, v5);
+        v12._vptr_CNavBreadthFirstSearch = off_47AE210;
+        if ( v12.m_funcOnSearchArea._M_manager != 0 )
+          v12.m_funcOnSearchArea._M_manager(
+            &v12.m_funcOnSearchArea,
+            &v12.m_funcOnSearchArea,
             std::_Manager_operation::__destroy_functor);
-        CUtlHashtable<int,CNavSearchElement,DefaultHashFunctor<int>,DefaultEqualFunctor<int>,undefined_t,CUtlMemory<CUtlHashtableEntry<int,CNavSearchElement>,int>>::RemoveAll(&v11.m_SearchHash);
-        if ( (v11.m_SearchHash.m_table.m_nGrowSize & 0xC0000000) == 0 )
-          CUtlMemory<CUtlHashtableEntry<int,CNavSearchElement>,int>::Purge(&v11.m_SearchHash.m_table);
-        Msg("Selected %d areas.\n", collector.m_nCount);
-        (*(TheNavMesh->m_pEditor->_vptr_INavEditor + 7))(TheNavMesh->m_pEditor);
+        CUtlHashtable<int,CNavSearchElement,DefaultHashFunctor<int>,DefaultEqualFunctor<int>,undefined_t,CUtlMemory<CUtlHashtableEntry<int,CNavSearchElement>,int>>::RemoveAll(&v12.m_SearchHash);
+        if ( (v12.m_SearchHash.m_table.m_nGrowSize & 0xC0000000) == 0 )
+          CUtlMemory<CUtlHashtableEntry<int,CNavSearchElement>,int>::Purge(&v12.m_SearchHash.m_table);
+        *&v7 = Msg("Selected %d areas.\n", collector.m_nCount).m128_u64[0];
+        (*(TheNavMesh->m_pEditor->_vptr_INavEditor + 7))(TheNavMesh->m_pEditor, v7);
       }
     }
   }
@@ -768,7 +769,7 @@ void __fastcall CommandNavLoadAlt(const char *altSuffix, const CCommandContext *
   while ( v7 == 0 );
   if ( (~v6 & (v6 - 16843009) & 0x8080) == 0 )
   {
-    v7 >>= 16;
+    LOBYTE(v7) = (~v6 & (v6 - 16843009) & 0x80808080) >> 16;
     LODWORD(v5) = v5 + 2;
   }
   filename[v5 - (__CFADD__(v7, v7) + 3) - filename - 4] = 0;

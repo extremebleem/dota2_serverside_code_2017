@@ -110,7 +110,7 @@ void *__fastcall CDotaTutorialNetworker::CEntityInstanceEntityClass::AllocateIns
 void __fastcall CDotaTutorialNetworker::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDotaTutorialNetworker::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -120,7 +120,7 @@ void __fastcall CDotaTutorialNetworker::CEntityInstanceEntityClass::~CEntityInst
 void __fastcall CDotaTutorialNetworker::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDotaTutorialNetworker::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -525,14 +525,14 @@ void __fastcall CDOTA_Tutorial::~CDOTA_Tutorial(CDOTA_Tutorial *const this)
       CUtlMemory<ReactiveTipDescription_t,int>::Purge(&this->m_ReactiveTips.m_Memory);
   }
   v2 = !this->m_bRegisteredForEvents;
-  this->_vptr_IGameEventListener2 = off_3FB3190;
+  this->_vptr_IGameEventListener2 = off_3FB3190;  // vptr: CGameEventListener
   if ( !v2 )
   {
     if ( gameeventmanager != 0 )
       (*(gameeventmanager->_vptr_IBaseInterface + 6))(gameeventmanager, &this->CGameEventListener);
     this->m_bRegisteredForEvents = 0;
   }
-  this->_vptr_IGameEventListener2 = off_3FB3150;
+  this->_vptr_IGameEventListener2 = off_3FB3150;  // vptr: IGameEventListener2
   IGameSystem::~IGameSystem(this);
 }
 
@@ -586,14 +586,14 @@ void __fastcall CDOTA_Tutorial::~CDOTA_Tutorial(CDOTA_Tutorial *const this)
       CUtlMemory<ReactiveTipDescription_t,int>::Purge(&this->m_ReactiveTips.m_Memory);
   }
   v2 = !this->m_bRegisteredForEvents;
-  this->_vptr_IGameEventListener2 = off_3FB3190;
+  this->_vptr_IGameEventListener2 = off_3FB3190;  // vptr: CGameEventListener
   if ( !v2 )
   {
     if ( gameeventmanager != 0 )
       (*(gameeventmanager->_vptr_IBaseInterface + 6))(gameeventmanager, &this->CGameEventListener);
     this->m_bRegisteredForEvents = 0;
   }
-  this->_vptr_IGameEventListener2 = off_3FB3150;
+  this->_vptr_IGameEventListener2 = off_3FB3150;  // vptr: IGameEventListener2
   IGameSystem::~IGameSystem(this);
   operator delete(this);
 }

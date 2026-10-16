@@ -690,7 +690,7 @@ bool __fastcall UTIL_EntityHasMatchingRootParent(CBaseEntity *pRootParent, CBase
 // CTraceFilterEntity::~CTraceFilterEntity  (line 461, @0x00000000020f1bc0, libserver.so)  // inlines: ~CTraceFilter, ~CTraceFilterSimple
 void __fastcall CTraceFilterEntity::~CTraceFilterEntity(CTraceFilterEntity *const this)
 {
-  this->_vptr_CTraceFilter = off_3FE6970;
+  this->_vptr_CTraceFilter = off_3FE6970;  // vptr: CTraceFilter
 }
 
 
@@ -698,7 +698,7 @@ void __fastcall CTraceFilterEntity::~CTraceFilterEntity(CTraceFilterEntity *cons
 // calls: operator delete
 void __fastcall CTraceFilterEntity::~CTraceFilterEntity(CTraceFilterEntity *const this)
 {
-  this->_vptr_CTraceFilter = off_3FE6970;
+  this->_vptr_CTraceFilter = off_3FE6970;  // vptr: CTraceFilter
   operator delete(this);
 }
 
@@ -746,7 +746,7 @@ bool __fastcall CTraceFilterEntity::ShouldHitEntity(CTraceFilterEntity *const th
 void __fastcall CTraceFilterEntityIgnoreOther::~CTraceFilterEntityIgnoreOther(
         CTraceFilterEntityIgnoreOther *const this)
 {
-  this->_vptr_CTraceFilter = off_3FE6970;
+  this->_vptr_CTraceFilter = off_3FE6970;  // vptr: CTraceFilter
 }
 
 
@@ -755,7 +755,7 @@ void __fastcall CTraceFilterEntityIgnoreOther::~CTraceFilterEntityIgnoreOther(
 void __fastcall CTraceFilterEntityIgnoreOther::~CTraceFilterEntityIgnoreOther(
         CTraceFilterEntityIgnoreOther *const this)
 {
-  this->_vptr_CTraceFilter = off_3FE6970;
+  this->_vptr_CTraceFilter = off_3FE6970;  // vptr: CTraceFilter
   operator delete(this);
 }
 
@@ -2611,7 +2611,7 @@ float __fastcall IntervalTimer::Now(const IntervalTimer *const this)
 // callers: CSchemaClassBinding<CountdownTimer>::Allocate, CSchemaClassBinding<CountdownTimer>::ConstructInPlace, CSchemaClassBinding<CountdownTimer>::AllocateAndCopyConstruct, CBasePlayerAnimState::CBasePlayerAnimState, CBaseCombatCharacter::CBaseCombatCharacter, CFish::CFish, CFishPool::CFishPool, CBasePropDoor::CBasePropDoor, CDOTA_ActionDelayer::AddDelayedAction, CDOTA_Ability_Creature_Fire_Breath::CEntityInstanceEntityClass::ConstructInstance, CModifierFactory<CDOTA_Modifier_Creature_HybridFlyer>::Create, DOTA_CombatLog_Record::DOTA_CombatLog_Record (154 total)
 void __fastcall CountdownTimer::CountdownTimer(CountdownTimer *const this)
 {
-  this->_vptr_CountdownTimer = off_3FF42F0;
+  this->_vptr_CountdownTimer = off_3FF42F0;  // vptr: CountdownTimer
   this->m_duration.m_Value = 0.0;
   this->m_timestamp.m_Value = -1.0;
   this->m_bUseGlobalsTime = 0;

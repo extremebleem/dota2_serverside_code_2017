@@ -59,7 +59,7 @@ void __fastcall CDOTA_Bot_AbilityUsage_Warlock_FatalBonds::CDOTA_Bot_AbilityUsag
   this->m_pAbility = pAbility;
   this->m_bUseOnCreeps = 0;
   this->m_pBot = pBot;
-  this->_vptr_CDOTA_Bot_AbilityUsage = off_42D22D0;
+  this->_vptr_CDOTA_Bot_AbilityUsage = off_42D22D0;  // vptr: CDOTA_Bot_AbilityUsage_Warlock_FatalBonds
   this->m_hDesiredTarget.m_Index = -1;
 }
 
@@ -232,7 +232,7 @@ void __fastcall CDOTA_Bot_AbilityUsage_Warlock_ShadowWord::CDOTA_Bot_AbilityUsag
   this->m_pAbility = pAbility;
   this->m_bUseOnCreeps = 0;
   this->m_pBot = pBot;
-  this->_vptr_CDOTA_Bot_AbilityUsage = off_42D2330;
+  this->_vptr_CDOTA_Bot_AbilityUsage = off_42D2330;  // vptr: CDOTA_Bot_AbilityUsage_Warlock_ShadowWord
   this->m_hDesiredTarget.m_Index = -1;
 }
 
@@ -452,7 +452,7 @@ void __fastcall CDOTA_Bot_AbilityUsage_Warlock_Upheaval::CDOTA_Bot_AbilityUsage_
   this->m_pAbility = pAbility;
   this->m_bUseOnCreeps = 0;
   this->m_pBot = pBot;
-  this->_vptr_CDOTA_Bot_AbilityUsage = off_42D2390;
+  this->_vptr_CDOTA_Bot_AbilityUsage = off_42D2390;  // vptr: CDOTA_Bot_AbilityUsage_Warlock_Upheaval
 }
 
 
@@ -682,7 +682,7 @@ void __fastcall CDOTA_Bot_AbilityUsage_Warlock_RainOfChaos::CDOTA_Bot_AbilityUsa
   this->m_pAbility = pAbility;
   this->m_bUseOnCreeps = 0;
   this->m_pBot = pBot;
-  this->_vptr_CDOTA_Bot_AbilityUsage = off_42D23F0;
+  this->_vptr_CDOTA_Bot_AbilityUsage = off_42D23F0;  // vptr: CDOTA_Bot_AbilityUsage_Warlock_RainOfChaos
 }
 
 
@@ -779,9 +779,9 @@ CDOTA_BotMode *__fastcall CDOTA_Bot_Unit_WarlockGolem::CreateMode(CDOTA_Bot_Unit
     return CDOTA_Bot::CreateMode(this, iMode);
   if ( iMode != 2 )
     return 0;
-  v3 = operator new(0xE8u);
+  v3 = operator new(0xE8u);  // new CDOTA_BotMode_Attack_WarlockGolem (size matches)
   CDOTA_BotMode_Attack::CDOTA_BotMode_Attack(v3, this);
-  v3->_vptr_CDOTA_BotMode = off_42D2550;
+  v3->_vptr_CDOTA_BotMode = off_42D2550;  // vptr: CDOTA_BotMode_Attack_WarlockGolem
   return v3;
 }
 

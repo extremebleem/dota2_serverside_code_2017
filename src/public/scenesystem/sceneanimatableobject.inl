@@ -9,7 +9,7 @@ void __fastcall CSceneAnimatableObject::~CSceneAnimatableObject(CSceneAnimatable
   CUtlVectorBase<float,CUtlMemory<float,int> >::CAllocator *p_m_Memory; // r12
 
   v2 = (this->m_flexControllerWeights.m_Memory.m_nGrowSize & 0xC0000000) == 0;
-  this->_vptr_IGenericInterface = off_3FB5110;
+  this->_vptr_IGenericInterface = off_3FB5110;  // vptr: CSceneAnimatableObject
   this->m_flexControllerWeights.m_Size = 0;
   if ( v2 )
   {
@@ -26,9 +26,9 @@ void __fastcall CSceneAnimatableObject::~CSceneAnimatableObject(CSceneAnimatable
     if ( (this->m_worldSpaceRenderBones.m_Memory.m_nGrowSize & 0xC0000000) == 0 )
       CUtlMemory<matrix3x4a_t,int>::Purge(&this->m_worldSpaceRenderBones.m_Memory);
   }
-  this->_vptr_IGenericInterface = off_3F794B0;
+  this->_vptr_IGenericInterface = off_3F794B0;  // vptr: CSceneObject
   (*(*g_pSceneSystem + 800LL))(g_pSceneSystem, this);
-  this->_vptr_IGenericInterface = off_3F79210;
+  this->_vptr_IGenericInterface = off_3F79210;  // vptr: IGenericInterface
 }
 
 
@@ -40,7 +40,7 @@ void __fastcall CSceneAnimatableObject::~CSceneAnimatableObject(CSceneAnimatable
   CUtlVectorBase<float,CUtlMemory<float,int> >::CAllocator *p_m_Memory; // r12
 
   v2 = (this->m_flexControllerWeights.m_Memory.m_nGrowSize & 0xC0000000) == 0;
-  this->_vptr_IGenericInterface = off_3FB5110;
+  this->_vptr_IGenericInterface = off_3FB5110;  // vptr: CSceneAnimatableObject
   this->m_flexControllerWeights.m_Size = 0;
   if ( v2 )
   {
@@ -57,9 +57,9 @@ void __fastcall CSceneAnimatableObject::~CSceneAnimatableObject(CSceneAnimatable
     if ( (this->m_worldSpaceRenderBones.m_Memory.m_nGrowSize & 0xC0000000) == 0 )
       CUtlMemory<matrix3x4a_t,int>::Purge(&this->m_worldSpaceRenderBones.m_Memory);
   }
-  this->_vptr_IGenericInterface = off_3F794B0;
+  this->_vptr_IGenericInterface = off_3F794B0;  // vptr: CSceneObject
   (*(*g_pSceneSystem + 800LL))(g_pSceneSystem, this);
-  this->_vptr_IGenericInterface = off_3F79210;
+  this->_vptr_IGenericInterface = off_3F79210;  // vptr: IGenericInterface
   operator delete(this);
 }
 

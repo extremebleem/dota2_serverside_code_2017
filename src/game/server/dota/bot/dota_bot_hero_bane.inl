@@ -23,7 +23,7 @@ void __fastcall CDOTA_Bot_Hero_Bane::~CDOTA_Bot_Hero_Bane(CDOTA_Bot_Hero_Bane *c
 // CDOTA_BotMode_Attack_Bane::~CDOTA_BotMode_Attack_Bane  (line 36, @0x00000000028b2cb0, libserver.so)  // inlines: ~CDOTA_BotMode, ~CDOTA_BotMode_Attack
 void __fastcall CDOTA_BotMode_Attack_Bane::~CDOTA_BotMode_Attack_Bane(CDOTA_BotMode_Attack_Bane *const this)
 {
-  this->_vptr_CDOTA_BotMode = off_42B75F0;
+  this->_vptr_CDOTA_BotMode = off_42B75F0;  // vptr: CDOTA_BotMode
 }
 
 
@@ -31,7 +31,7 @@ void __fastcall CDOTA_BotMode_Attack_Bane::~CDOTA_BotMode_Attack_Bane(CDOTA_BotM
 // calls: operator delete
 void __fastcall CDOTA_BotMode_Attack_Bane::~CDOTA_BotMode_Attack_Bane(CDOTA_BotMode_Attack_Bane *const this)
 {
-  this->_vptr_CDOTA_BotMode = off_42B75F0;
+  this->_vptr_CDOTA_BotMode = off_42B75F0;  // vptr: CDOTA_BotMode
   operator delete(this);
 }
 

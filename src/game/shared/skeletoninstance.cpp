@@ -2057,7 +2057,7 @@ void __fastcall CModelState::CModelState(CModelState *const this)
   bool v7; // zf
 
   p_m_compositeParentSpaceState = &this->m_compositeParentSpaceState;
-  this->_vptr_CModelState = off_3FF4270;
+  this->_vptr_CModelState = off_3FF4270;  // vptr: CModelState
   CAnimationState::CAnimationState(&this->m_animationState);
   CAnimationState::CAnimationState(p_m_compositeParentSpaceState);
   vptr_CModelState = this->_vptr_CModelState;
@@ -2131,7 +2131,7 @@ void __fastcall CModelState::~CModelState(CModelState *const this)
   matrix3x4a_t *m_pTransforms; // rdi
   uint32 *m_pReadableBones; // rdi
 
-  this->_vptr_CModelState = off_3FF4270;
+  this->_vptr_CModelState = off_3FF4270;  // vptr: CModelState
   CModelState::CleanupJointState(this);
   this->m_ClothSimBoneMap.m_Size = 0;
   (*(*g_pMemAlloc + 16LL))(g_pMemAlloc, this->m_ClothSimBoneMap.m_Memory.m_pMemory);
@@ -6675,14 +6675,14 @@ void __fastcall CSkeletonInstance::OnSetDormant(
         EntityDormancyType_t nPrevDormancyType,
         EntityDormancyType_t nDormancyType)
 {
-  bool v6; // r15
+  bool v8; // r15
   CSkeletonAnimationController *m_pController; // rdi
 
-  v6 = nDormancyType == EntityDormancyType_t::ENTITY_DORMANT;
+  v8 = nDormancyType == EntityDormancyType_t::ENTITY_DORMANT;
   CGameSceneNode::OnSetDormant(this, pEntity, nPrevDormancyType, nDormancyType);
-  if ( v6 != (nPrevDormancyType == EntityDormancyType_t::ENTITY_DORMANT) )
+  if ( v8 != (nPrevDormancyType == EntityDormancyType_t::ENTITY_DORMANT) )
   {
-    if ( v6 )
+    if ( v8 )
     {
       CModelState::CleanupPhysics(&this->m_modelState, this);
     }
@@ -6694,7 +6694,7 @@ void __fastcall CSkeletonInstance::OnSetDormant(
     }
   }
   m_pController = this->m_pController;
-  if ( m_pController )
+  if ( m_pController != 0 )
     (*(m_pController->_vptr_CSkeletonAnimationController + 9))(m_pController, pEntity, nPrevDormancyType, nDormancyType);
 }
 
@@ -7055,9 +7055,7 @@ AttachmentHandle_t __fastcall CSkeletonInstance::LookupAttachment(
 
   m_pAttachmentOverride = this->m_pAttachmentOverride;
   if ( m_pAttachmentOverride != 0
-    && (*m_pAttachmentOverride->_vptr_IAttachmentOverride)(
-         m_pAttachmentOverride,
-         nAttachmentName.m_nHashCode,
+    && m_pAttachmentOverride->LookupOverrideAttachment(nAttachmentName.m_nHashCode,
          hOverride) == 0 )
   {
     return hOverride[0];
@@ -7695,9 +7693,12 @@ void __fastcall CSkeletonInstance::SetAngularVelocity(CSkeletonInstance *const t
 // calls: CAnimationState::GetReadableBones, CAnimationState::MarkAllBonesUnreadable
 void __fastcall CSkeletonInstance::SetAnimationParentSpaceStateDirty(CSkeletonInstance *const this)
 {
+  CAnimationState *p_m_animationState; // rbx
+
+  p_m_animationState = &this->m_modelState.m_animationState;
   this->m_animationParentSpaceValidBoneFlags.m_value = CModelSkeleton::BoneFlags_t::FLAG_NO_BONE_FLAGS;
-  if ( CAnimationState::GetReadableBones(&this->m_modelState.m_animationState) )
-    CAnimationState::MarkAllBonesUnreadable(&this->m_modelState.m_animationState);
+  if ( CAnimationState::GetReadableBones(&this->m_modelState.m_animationState) != 0 )
+    CAnimationState::MarkAllBonesUnreadable(p_m_animationState);
 }
 
 
@@ -7762,37 +7763,45 @@ void __fastcall CSkeletonInstance::PerformInvalidatePhysicsRecursive(
         CSkeletonInstance *const this,
         uint32 nChangeFlags)
 {
-  float v2; // xmm1_4
   HPhysicsSoftbody m_hCloth2; // rdi
+  double v5; // xmm1_8
   CBaseEntity *m_pOwner; // r14
+  CGlobalVars *v7; // r13
   FnGlobalVarsWarningFunc m_pfnWarningFunc; // rax
+  double v9; // xmm0_8
 
   if ( (nChangeFlags & 0xD0) != 0
     && !CRenderGameSystem::IsSuppressingLatchSimulationState()
     && CSkeletonInstance::HasNonAnimationDrivenBones(this) )
   {
     m_pOwner = this->m_pOwner;
-    if ( gpGlobals )
+    v7 = gpGlobals;
+    if ( gpGlobals != 0 )
     {
       if ( !gpGlobals->m_bEnableAssertions && !gpGlobals->m_bInSimulation )
       {
         m_pfnWarningFunc = gpGlobals->m_pfnWarningFunc;
-        if ( m_pfnWarningFunc )
+        if ( m_pfnWarningFunc != 0 )
           m_pfnWarningFunc(GlobalVarsUsageWarning_t::GV_CURTIME_CALLED_DURING_RENDERING);
       }
+      *&v9 = LODWORD(v7->m_flCurrentTime);
     }
-    CBaseEntity::SetSimulationTime(m_pOwner, v2);
+    else
+    {
+      v9 = 0.0;
+    }
+    CBaseEntity::SetSimulationTime(m_pOwner, v9, v5);
   }
-  if ( (nChangeFlags & 0xD3) != 0 && this->m_modelState.m_pVPhysicsAggregate )
+  if ( (nChangeFlags & 0xD3) != 0 && this->m_modelState.m_pVPhysicsAggregate != 0 )
     CPhysicsGameSystem::MarkChanged(g_pPhysicsGameSystem, nChangeFlags, this);
-  if ( (nChangeFlags & 4) != 0 && this->m_modelState.m_pVPhysicsAggregate )
+  if ( (nChangeFlags & 4) != 0 && this->m_modelState.m_pVPhysicsAggregate != 0 )
     CPhysicsGameSystem::QueueScaleChanged(g_pPhysicsGameSystem, this);
   m_hCloth2 = this->m_modelState.m_hCloth2;
-  if ( m_hCloth2 )
+  if ( m_hCloth2 != 0 )
   {
     this->m_modelState.m_nClothUpdateFlags |= nChangeFlags & 7;
     if ( (nChangeFlags & 0x400) != 0
-      && (*(*m_hCloth2 + 616LL))(m_hCloth2)
+      && (*(*m_hCloth2 + 616LL))(m_hCloth2) != 0
       && !CRenderGameSystem::IsSuppressingLatchSimulationState() )
     {
       CBaseEntity::MarkInterpolationLatchFlagsDirty(
@@ -11906,9 +11915,7 @@ LABEL_70:
     v41 = thisa->m_pBoneTransformOverride;
     if ( v41 == 0 )
       goto LABEL_74;
-    v42 = (*v41->_vptr_IBoneTransformOverride)(
-            v41,
-            thisa,
+    v42 = v41->GetBoneTransformOverride(thisa,
             v28,
             &outputParentTransforms,
             &outputWorldTransforms,

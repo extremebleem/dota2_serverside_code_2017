@@ -11,7 +11,7 @@ void __fastcall CDOTA_Bot_AbilityUsage_Butterfly::CDOTA_Bot_AbilityUsage_Butterf
   this->m_pAbility = pAbility;
   this->m_bUseOnCreeps = 0;
   this->m_pBot = pBot;
-  this->_vptr_CDOTA_Bot_AbilityUsage = off_42C5CB0;
+  this->_vptr_CDOTA_Bot_AbilityUsage = off_42C5CB0;  // vptr: CDOTA_Bot_AbilityUsage_Butterfly
 }
 
 

@@ -5,7 +5,7 @@
 // callers: CGridNav::CGridNav
 void __fastcall CGridNavBase::CGridNavBase(CGridNavBase *const this)
 {
-  this->_vptr_IGameSystem = off_40F6C10;
+  this->_vptr_IGameSystem = off_40F6C10;  // vptr: CGridNavBase
   this->m_flEdgeSize = 0.0;
   this->m_flOffsetX = 0.0;
   *&this->m_flOffsetY = 0;

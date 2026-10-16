@@ -1369,7 +1369,7 @@ void __fastcall CBreakableProp::HandleInteractionStick(
     QuaternionAngles(&vecEmbed, &savePosition);
     pInternalData = pEvent->pInternalData;
     angles = savePosition;
-    (*pInternalData->_vptr_IPhysicsCollisionData)(pInternalData, &vecNormal);
+    pInternalData->GetSurfaceNormal(&vecNormal);
     x = vecNormal.x;
     if ( index == 1 )
     {

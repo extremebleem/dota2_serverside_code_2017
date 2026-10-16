@@ -107,15 +107,15 @@ void __fastcall CDotaStatManager::~CDotaStatManager(CDotaStatManager *const this
     this->m_StatStateMap.m_Tree.m_LastAlloc.index = -1;
   }
   v2 = !this->m_bRegisteredForEvents;
-  this->_vptr_IGameEventListener2 = off_3FB3190;
+  this->_vptr_IGameEventListener2 = off_3FB3190;  // vptr: CGameEventListener
   if ( !v2 )
   {
     if ( gameeventmanager != 0 )
       (*(gameeventmanager->_vptr_IBaseInterface + 6))(gameeventmanager, &this->CGameEventListener);
     this->m_bRegisteredForEvents = 0;
   }
-  this->_vptr_IGameEventListener2 = off_3FB3150;
-  this->_vptr_IGameSystem = off_3F7C1B0;
+  this->_vptr_IGameEventListener2 = off_3FB3150;  // vptr: IGameEventListener2
+  this->_vptr_IGameSystem = off_3F7C1B0;  // vptr: CAutoGameSystem
   IGameSystem::~IGameSystem(this);
 }
 

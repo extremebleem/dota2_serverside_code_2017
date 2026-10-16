@@ -736,7 +736,7 @@ void __fastcall CTier2AppSystemDict::~CTier2AppSystemDict(CTier2AppSystemDict *c
   HResourceManifest__ *v6; // rsi
   bool v7; // zf
 
-  this->_vptr_CAppSystemDict = off_408C3D0;
+  this->_vptr_CAppSystemDict = off_408C3D0;  // vptr: CTier2AppSystemDict
   if ( g_pResourceSystem != 0 )
   {
     m_Size = this->m_StartupManifests.m_Size;
@@ -791,7 +791,7 @@ void __fastcall CTier2AppSystemDict::~CTier2AppSystemDict(CTier2AppSystemDict *c
     if ( (this->m_addonRefcounts.m_Vector.m_Memory.m_nGrowSize & 0xC0000000) == 0 )
       CUtlMemory<int,int>::Purge(&this->m_addonRefcounts.m_Vector.m_Memory);
   }
-  this->_vptr_CAppSystemDict = off_408C190;
+  this->_vptr_CAppSystemDict = off_408C190;  // vptr: CTier1AppSystemDict
   CAppSystemDict::~CAppSystemDict(this);
 }
 
@@ -808,7 +808,7 @@ void __fastcall CTier2AppSystemDict::~CTier2AppSystemDict(CTier2AppSystemDict *c
   HResourceManifest__ *v6; // rsi
   bool v7; // zf
 
-  this->_vptr_CAppSystemDict = off_408C3D0;
+  this->_vptr_CAppSystemDict = off_408C3D0;  // vptr: CTier2AppSystemDict
   if ( g_pResourceSystem != 0 )
   {
     m_Size = this->m_StartupManifests.m_Size;
@@ -863,7 +863,7 @@ void __fastcall CTier2AppSystemDict::~CTier2AppSystemDict(CTier2AppSystemDict *c
     if ( (this->m_addonRefcounts.m_Vector.m_Memory.m_nGrowSize & 0xC0000000) == 0 )
       CUtlMemory<int,int>::Purge(&this->m_addonRefcounts.m_Vector.m_Memory);
   }
-  this->_vptr_CAppSystemDict = off_408C190;
+  this->_vptr_CAppSystemDict = off_408C190;  // vptr: CTier1AppSystemDict
   CAppSystemDict::~CAppSystemDict(this);
   operator delete(this);
 }
@@ -2352,7 +2352,7 @@ CUtlString __fastcall CTier2AppSystemDict::GetAddonNameFromID(
     if ( m_pUGCAddonPathResolver != 0 )
     {
       memset(s, 0, 0x400u);
-      (*m_pUGCAddonPathResolver->_vptr_IUGCAddonPathResolver)(m_pUGCAddonPathResolver, sName.m_szBuf, s, 1024);
+      m_pUGCAddonPathResolver->GetFullAddonPathFromAddonName(sName.m_szBuf, s, 1024);
       a1->m_pString = 0;
       CUtlString::Set(a1, s);
     }
@@ -2415,7 +2415,7 @@ CUtlString __fastcall CTier2AppSystemDict::GetFullAddonPathFromAddonName(
     if ( m_pUGCAddonPathResolver != 0 )
     {
       memset(sAddonFullPath, 0, 0x400u);
-      (*m_pUGCAddonPathResolver->_vptr_IUGCAddonPathResolver)(m_pUGCAddonPathResolver, pAddonName, sAddonFullPath, 1024);
+      m_pUGCAddonPathResolver->GetFullAddonPathFromAddonName(pAddonName, sAddonFullPath, 1024);
       a1->m_pString = 0;
       CUtlString::Set(a1, sAddonFullPath);
     }

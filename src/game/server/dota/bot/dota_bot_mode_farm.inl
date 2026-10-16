@@ -9,7 +9,7 @@ void __fastcall CDOTA_BotMode_Farm::~CDOTA_BotMode_Farm(CDOTA_BotMode_Farm *cons
   CUtlVectorBase<CHandle<CBaseEntity>,CUtlMemory<CHandle<CBaseEntity>,int> >::CAllocator *p_m_Memory; // r12
 
   v2 = (this->m_pSpawners.m_Memory.m_nGrowSize & 0xC0000000) == 0;
-  this->_vptr_CDOTA_BotMode = off_42B8070;
+  this->_vptr_CDOTA_BotMode = off_42B8070;  // vptr: CDOTA_BotMode_Farm
   this->m_pSpawners.m_Size = 0;
   if ( v2 )
   {
@@ -18,7 +18,7 @@ void __fastcall CDOTA_BotMode_Farm::~CDOTA_BotMode_Farm(CDOTA_BotMode_Farm *cons
     if ( (this->m_pSpawners.m_Memory.m_nGrowSize & 0xC0000000) == 0 )
       CUtlMemory<CHandle<CBaseEntity>,int>::Purge(p_m_Memory);
   }
-  this->_vptr_CDOTA_BotMode = off_42B75F0;
+  this->_vptr_CDOTA_BotMode = off_42B75F0;  // vptr: CDOTA_BotMode
 }
 
 
@@ -30,7 +30,7 @@ void __fastcall CDOTA_BotMode_Farm::~CDOTA_BotMode_Farm(CDOTA_BotMode_Farm *cons
   CUtlVectorBase<CHandle<CBaseEntity>,CUtlMemory<CHandle<CBaseEntity>,int> >::CAllocator *p_m_Memory; // r12
 
   v2 = (this->m_pSpawners.m_Memory.m_nGrowSize & 0xC0000000) == 0;
-  this->_vptr_CDOTA_BotMode = off_42B8070;
+  this->_vptr_CDOTA_BotMode = off_42B8070;  // vptr: CDOTA_BotMode_Farm
   this->m_pSpawners.m_Size = 0;
   if ( v2 )
   {
@@ -39,7 +39,7 @@ void __fastcall CDOTA_BotMode_Farm::~CDOTA_BotMode_Farm(CDOTA_BotMode_Farm *cons
     if ( (this->m_pSpawners.m_Memory.m_nGrowSize & 0xC0000000) == 0 )
       CUtlMemory<CHandle<CBaseEntity>,int>::Purge(p_m_Memory);
   }
-  this->_vptr_CDOTA_BotMode = off_42B75F0;
+  this->_vptr_CDOTA_BotMode = off_42B75F0;  // vptr: CDOTA_BotMode
   operator delete(this);
 }
 
@@ -73,7 +73,7 @@ void __fastcall CDOTA_BotMode_Farm_Human::~CDOTA_BotMode_Farm_Human(CDOTA_BotMod
   CUtlVectorBase<CHandle<CBaseEntity>,CUtlMemory<CHandle<CBaseEntity>,int> >::CAllocator *p_m_Memory; // r12
 
   v2 = (this->m_pSpawners.m_Memory.m_nGrowSize & 0xC0000000) == 0;
-  this->_vptr_CDOTA_BotMode = off_42B8070;
+  this->_vptr_CDOTA_BotMode = off_42B8070;  // vptr: CDOTA_BotMode_Farm
   this->m_pSpawners.m_Size = 0;
   if ( v2 )
   {
@@ -82,7 +82,7 @@ void __fastcall CDOTA_BotMode_Farm_Human::~CDOTA_BotMode_Farm_Human(CDOTA_BotMod
     if ( (this->m_pSpawners.m_Memory.m_nGrowSize & 0xC0000000) == 0 )
       CUtlMemory<CHandle<CBaseEntity>,int>::Purge(p_m_Memory);
   }
-  this->_vptr_CDOTA_BotMode = off_42B75F0;
+  this->_vptr_CDOTA_BotMode = off_42B75F0;  // vptr: CDOTA_BotMode
 }
 
 
@@ -94,7 +94,7 @@ void __fastcall CDOTA_BotMode_Farm_Human::~CDOTA_BotMode_Farm_Human(CDOTA_BotMod
   CUtlVectorBase<CHandle<CBaseEntity>,CUtlMemory<CHandle<CBaseEntity>,int> >::CAllocator *p_m_Memory; // r12
 
   v2 = (this->m_pSpawners.m_Memory.m_nGrowSize & 0xC0000000) == 0;
-  this->_vptr_CDOTA_BotMode = off_42B8070;
+  this->_vptr_CDOTA_BotMode = off_42B8070;  // vptr: CDOTA_BotMode_Farm
   this->m_pSpawners.m_Size = 0;
   if ( v2 )
   {
@@ -103,7 +103,7 @@ void __fastcall CDOTA_BotMode_Farm_Human::~CDOTA_BotMode_Farm_Human(CDOTA_BotMod
     if ( (this->m_pSpawners.m_Memory.m_nGrowSize & 0xC0000000) == 0 )
       CUtlMemory<CHandle<CBaseEntity>,int>::Purge(p_m_Memory);
   }
-  this->_vptr_CDOTA_BotMode = off_42B75F0;
+  this->_vptr_CDOTA_BotMode = off_42B75F0;  // vptr: CDOTA_BotMode
   operator delete(this);
 }
 

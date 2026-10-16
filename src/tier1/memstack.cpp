@@ -364,15 +364,21 @@ void __fastcall CMemoryStack::PrintContents(const CMemoryStack *const this)
   CUtlString *p_m_name; // rdi
   signed __int64 v4; // r12
   const char *v5; // rax
+  double v6; // xmm0_8
+  double v7; // xmm0_8
+  double v8; // xmm0_8
 
   m_pHighestAllocLimit = this->m_pHighestAllocLimit;
   p_m_name = &this->m_name;
   v4 = m_pHighestAllocLimit - p_m_name[-4].m_pString;
   v5 = CUtlString::Get(p_m_name);
-  Msg("CMemoryStack %s\n", v5);
-  Msg("    Total used memory:      %d KB\n", ((LODWORD(this->m_pNextAlloc) - LODWORD(this->m_pBase)) / 1024));
-  Msg("    Total committed memory: %d KB\n", ((LODWORD(this->m_pCommitLimit) - LODWORD(this->m_pBase)) / 1024));
-  Msg("    Max committed memory: %u KB out of %d KB\n", v4 >> 10, (this->m_maxSize / 1024));
+  *&v6 = Msg("CMemoryStack %s\n", v5).m128_u64[0];
+  *&v7 = Msg("    Total used memory:      %d KB\n", ((LODWORD(this->m_pNextAlloc) - LODWORD(this->m_pBase)) / 1024), v6).m128_u64[0];
+  *&v8 = Msg(
+           "    Total committed memory: %d KB\n",
+           ((LODWORD(this->m_pCommitLimit) - LODWORD(this->m_pBase)) / 1024),
+           v7).m128_u64[0];
+  Msg("    Max committed memory: %u KB out of %d KB\n", v4 >> 10, (this->m_maxSize / 1024), v8);
 }
 
 

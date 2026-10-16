@@ -685,7 +685,7 @@ CEntityInstance *__fastcall CDOTA_Unit_Hero_Terrorblade::CEntityInstanceEntityCl
 void __fastcall CDOTA_Unit_Hero_Terrorblade::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Unit_Hero_Terrorblade::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -695,7 +695,7 @@ void __fastcall CDOTA_Unit_Hero_Terrorblade::CEntityInstanceEntityClass::~CEntit
 void __fastcall CDOTA_Unit_Hero_Terrorblade::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Unit_Hero_Terrorblade::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -1011,7 +1011,7 @@ CEntityInstance *__fastcall CDOTA_Ability_Terrorblade_Reflection::CEntityInstanc
 void __fastcall CDOTA_Ability_Terrorblade_Reflection::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Terrorblade_Reflection::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -1021,7 +1021,7 @@ void __fastcall CDOTA_Ability_Terrorblade_Reflection::CEntityInstanceEntityClass
 void __fastcall CDOTA_Ability_Terrorblade_Reflection::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Terrorblade_Reflection::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -1886,7 +1886,7 @@ CEntityInstance *__fastcall CDOTA_Ability_Terrorblade_ConjureImage::CEntityInsta
 void __fastcall CDOTA_Ability_Terrorblade_ConjureImage::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Terrorblade_ConjureImage::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -1896,7 +1896,7 @@ void __fastcall CDOTA_Ability_Terrorblade_ConjureImage::CEntityInstanceEntityCla
 void __fastcall CDOTA_Ability_Terrorblade_ConjureImage::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Terrorblade_ConjureImage::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -2268,7 +2268,7 @@ CEntityInstance *__fastcall CDOTA_Ability_Terrorblade_Metamorphosis::CEntityInst
 void __fastcall CDOTA_Ability_Terrorblade_Metamorphosis::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Terrorblade_Metamorphosis::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -2278,7 +2278,7 @@ void __fastcall CDOTA_Ability_Terrorblade_Metamorphosis::CEntityInstanceEntityCl
 void __fastcall CDOTA_Ability_Terrorblade_Metamorphosis::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Terrorblade_Metamorphosis::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -3178,7 +3178,7 @@ CEntityInstance *__fastcall CDOTA_Ability_Terrorblade_Sunder::CEntityInstanceEnt
 void __fastcall CDOTA_Ability_Terrorblade_Sunder::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Terrorblade_Sunder::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -3188,7 +3188,7 @@ void __fastcall CDOTA_Ability_Terrorblade_Sunder::CEntityInstanceEntityClass::~C
 void __fastcall CDOTA_Ability_Terrorblade_Sunder::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Terrorblade_Sunder::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }

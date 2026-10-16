@@ -30,7 +30,7 @@ void __fastcall CSteamID::SetFromString(CSteamID *const this, const char *pchSte
   char v3; // r13
   const char *v5; // rbx
   char v6; // al
-  CSteamID::SteamID_t v7; // rax
+  unsigned __int64 v7; // rax
   char v8; // al
   const char *v9; // rbx
   char *v10; // rax
@@ -206,10 +206,10 @@ LABEL_43:
       }
       else
       {
-        v7.m_unAll64Bits = V_atoui64(v5, pchSteamID);
-        if ( v7.m_unAll64Bits > 0xFFFFFFFF )
+        v7 = V_atoui64(v5, pchSteamID);
+        if ( v7 > 0xFFFFFFFF )
         {
-          this->m_steamid.m_comp = v7.m_comp;
+          this->m_steamid.m_unAll64Bits = v7;
           return;
         }
         v15 = 1;

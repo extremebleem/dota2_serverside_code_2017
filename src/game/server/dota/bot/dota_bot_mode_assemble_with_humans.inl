@@ -5,7 +5,7 @@
 void __fastcall CDOTA_BotMode_AssembleWithHumans::~CDOTA_BotMode_AssembleWithHumans(
         CDOTA_BotMode_AssembleWithHumans *const this)
 {
-  this->_vptr_CDOTA_BotMode = off_42B75F0;
+  this->_vptr_CDOTA_BotMode = off_42B75F0;  // vptr: CDOTA_BotMode
 }
 
 
@@ -14,7 +14,7 @@ void __fastcall CDOTA_BotMode_AssembleWithHumans::~CDOTA_BotMode_AssembleWithHum
 void __fastcall CDOTA_BotMode_AssembleWithHumans::~CDOTA_BotMode_AssembleWithHumans(
         CDOTA_BotMode_AssembleWithHumans *const this)
 {
-  this->_vptr_CDOTA_BotMode = off_42B75F0;
+  this->_vptr_CDOTA_BotMode = off_42B75F0;  // vptr: CDOTA_BotMode
   operator delete(this);
 }
 

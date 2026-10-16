@@ -70,16 +70,16 @@ CDOTA_BotMode *__fastcall CDOTA_Bot_Hero_Kunkka::CreateMode(CDOTA_Bot_Hero_Kunkk
   {
     if ( iMode == 2 )
     {
-      v3 = operator new(0xE8u);
+      v3 = operator new(0xE8u);  // new CDOTA_BotMode_Attack_Kunkka (size matches)
       CDOTA_BotMode_Attack::CDOTA_BotMode_Attack(v3, this);
-      v3->_vptr_CDOTA_BotMode = off_42CD070;
+      v3->_vptr_CDOTA_BotMode = off_42CD070;  // vptr: CDOTA_BotMode_Attack_Kunkka
       return v3;
     }
     return CDOTA_Bot::CreateMode(this, iMode);
   }
-  v5 = operator new(0xF0u);
+  v5 = operator new(0xF0u);  // new CDOTA_BotMode_Laning_Kunkka (size matches)
   CDOTA_BotMode_Laning::CDOTA_BotMode_Laning(v5, this);
-  v5->_vptr_CDOTA_BotMode = off_42CCFD0;
+  v5->_vptr_CDOTA_BotMode = off_42CCFD0;  // vptr: CDOTA_BotMode_Laning_Kunkka
   return v5;
 }
 
@@ -491,7 +491,7 @@ void __fastcall CDOTA_Bot_AbilityUsage_Kunkka_Torrent::CDOTA_Bot_AbilityUsage_Ku
   this->m_pAbility = pAbility;
   this->m_bUseOnCreeps = 0;
   this->m_pBot = pBot;
-  this->_vptr_CDOTA_Bot_AbilityUsage = off_42CD110;
+  this->_vptr_CDOTA_Bot_AbilityUsage = off_42CD110;  // vptr: CDOTA_Bot_AbilityUsage_Kunkka_Torrent
 }
 
 
@@ -831,7 +831,7 @@ void __fastcall CDOTA_Bot_AbilityUsage_Kunkka_XMarksTheSpot::CDOTA_Bot_AbilityUs
   this->m_pAbility = pAbility;
   this->m_bUseOnCreeps = 0;
   this->m_pBot = pBot;
-  this->_vptr_CDOTA_Bot_AbilityUsage = off_42CD170;
+  this->_vptr_CDOTA_Bot_AbilityUsage = off_42CD170;  // vptr: CDOTA_Bot_AbilityUsage_Kunkka_XMarksTheSpot
   this->m_hDesiredTarget.m_Index = -1;
 }
 
@@ -1016,7 +1016,7 @@ void __fastcall CDOTA_Bot_AbilityUsage_Kunkka_GhostShip::CDOTA_Bot_AbilityUsage_
   this->m_pAbility = pAbility;
   this->m_bUseOnCreeps = 0;
   this->m_pBot = pBot;
-  this->_vptr_CDOTA_Bot_AbilityUsage = off_42CD1D0;
+  this->_vptr_CDOTA_Bot_AbilityUsage = off_42CD1D0;  // vptr: CDOTA_Bot_AbilityUsage_Kunkka_GhostShip
 }
 
 

@@ -75,7 +75,7 @@ CEntityInstance *__fastcall CBaseViewModel::CEntityInstanceEntityClass::Construc
 void __fastcall CBaseViewModel::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CBaseViewModel::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -85,7 +85,7 @@ void __fastcall CBaseViewModel::CEntityInstanceEntityClass::~CEntityInstanceEnti
 void __fastcall CBaseViewModel::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CBaseViewModel::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }

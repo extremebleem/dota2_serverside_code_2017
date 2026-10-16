@@ -186,7 +186,7 @@ void __fastcall CEconStyleInfo::~CEconStyleInfo(CEconStyleInfo *const this)
   bool v7; // zf
   CExpressionCalculator::Token_t *m_pTokens; // rdi
 
-  this->_vptr_CEconStyleInfo = off_47A80F0;
+  this->_vptr_CEconStyleInfo = off_47A80F0;  // vptr: CEconStyleInfo
   m_pExpression = this->m_pExpression;
   if ( m_pExpression != 0 )
   {
@@ -233,7 +233,7 @@ void __fastcall CEconStyleInfo::~CEconStyleInfo(CEconStyleInfo *const this)
   bool v7; // zf
   CExpressionCalculator::Token_t *m_pTokens; // rdi
 
-  this->_vptr_CEconStyleInfo = off_47A80F0;
+  this->_vptr_CEconStyleInfo = off_47A80F0;  // vptr: CEconStyleInfo
   m_pExpression = this->m_pExpression;
   if ( m_pExpression != 0 )
   {
@@ -273,7 +273,7 @@ void __fastcall CEconStyleInfo::~CEconStyleInfo(CEconStyleInfo *const this)
 // calls: CUtlVectorBase<item_definition_index_t, CUtlMemory<item_definition_index_t, int> >::RemoveAll, CUtlMemory<item_definition_index_t, int>::Purge
 void __fastcall IEconTool::~IEconTool(IEconTool *const this)
 {
-  this->_vptr_IEconTool = off_47A8E30;
+  this->_vptr_IEconTool = off_47A8E30;  // vptr: IEconTool
   CUtlVectorBase<item_definition_index_t,CUtlMemory<item_definition_index_t,int>>::RemoveAll(&this->m_vecBonusItemDef);
   if ( (this->m_vecBonusItemDef.m_Memory.m_nGrowSize & 0xC0000000) == 0 )
   {
@@ -288,7 +288,7 @@ void __fastcall IEconTool::~IEconTool(IEconTool *const this)
 // calls: CUtlVectorBase<item_definition_index_t, CUtlMemory<item_definition_index_t, int> >::RemoveAll, operator delete, CUtlMemory<item_definition_index_t, int>::Purge
 void __fastcall IEconTool::~IEconTool(IEconTool *const this)
 {
-  this->_vptr_IEconTool = off_47A8E30;
+  this->_vptr_IEconTool = off_47A8E30;  // vptr: IEconTool
   CUtlVectorBase<item_definition_index_t,CUtlMemory<item_definition_index_t,int>>::RemoveAll(&this->m_vecBonusItemDef);
   if ( (this->m_vecBonusItemDef.m_Memory.m_nGrowSize & 0xC0000000) != 0
     || (CUtlMemory<item_definition_index_t,int>::Purge(&this->m_vecBonusItemDef.m_Memory),
@@ -470,7 +470,7 @@ item_definition_index_t __fastcall CEconItemDefinition::GetBundleItem(
   if ( m_BundleInfo == 0 )
     return INVALID_ITEM_DEF_INDEX;
   v3 = m_BundleInfo->vecItemDefs.m_Memory.m_pMemory[iIndex];
-  return (*v3->_vptr_IEconItemDefinition)(v3);
+  return v3->GetDefinitionIndex();
 }
 
 
@@ -562,7 +562,7 @@ bool __fastcall CEconItemDefinition::IgnoreInCollectionView(const CEconItemDefin
 // ISchemaAttributeType::~ISchemaAttributeType  (line 1916, @0x0000000002e4e980, libserver.so)
 void __fastcall ISchemaAttributeType::~ISchemaAttributeType(ISchemaAttributeType *const this)
 {
-  this->_vptr_ISchemaAttributeType = off_479F1D0;
+  this->_vptr_ISchemaAttributeType = off_479F1D0;  // vptr: ISchemaAttributeType
 }
 
 
@@ -570,7 +570,7 @@ void __fastcall ISchemaAttributeType::~ISchemaAttributeType(ISchemaAttributeType
 // calls: operator delete
 void __fastcall ISchemaAttributeType::~ISchemaAttributeType(ISchemaAttributeType *const this)
 {
-  this->_vptr_ISchemaAttributeType = off_479F1D0;
+  this->_vptr_ISchemaAttributeType = off_479F1D0;  // vptr: ISchemaAttributeType
   operator delete(this);
 }
 
@@ -586,7 +586,7 @@ bool __fastcall ISchemaAttributeType::BSupportsGameplayModificationAndNetworking
 // IDelayedSchemaData::~IDelayedSchemaData  (line 2009, @0x0000000002ea1940, libserver.so)
 void __fastcall IDelayedSchemaData::~IDelayedSchemaData(IDelayedSchemaData *const this)
 {
-  this->_vptr_IDelayedSchemaData = off_47A5DB0;
+  this->_vptr_IDelayedSchemaData = off_47A5DB0;  // vptr: IDelayedSchemaData
 }
 
 
@@ -594,7 +594,7 @@ void __fastcall IDelayedSchemaData::~IDelayedSchemaData(IDelayedSchemaData *cons
 // calls: operator delete
 void __fastcall IDelayedSchemaData::~IDelayedSchemaData(IDelayedSchemaData *const this)
 {
-  this->_vptr_IDelayedSchemaData = off_47A5DB0;
+  this->_vptr_IDelayedSchemaData = off_47A5DB0;  // vptr: IDelayedSchemaData
   operator delete(this);
 }
 
@@ -1470,12 +1470,12 @@ CEconStyleInfo *__fastcall CEconItemSchema::CreateEconStyleInfo(CEconItemSchema 
   uint16 m_Data; // ax
   uint16 v3; // ax
 
-  v1 = operator new(0x78u);
+  v1 = operator new(0x78u);  // new CEconStyleInfo (size matches)
   v1->m_symName.u.m_Id = 0;
   v1->m_symBasePlayerModel.u.m_Id = 0;
   v1->m_symAutoStyleReason.u.m_Id = 0;
   v1->m_UnlockInfo.pszAttrib.u.m_Id = 0;
-  v1->_vptr_CEconStyleInfo = off_47A80F0;
+  v1->_vptr_CEconStyleInfo = off_47A80F0;  // vptr: CEconStyleInfo
   m_Data = INVALID_ITEM_DEF_INDEX.m_Data;
   v1->m_UnlockInfo.iGemDefIndex.m_Data = 0;
   v1->m_UnlockInfo.pszGemTypeField.u.m_Id = 0;
@@ -1697,7 +1697,7 @@ void __fastcall CSchemaFieldHandle<IEconItemSetDefinition>::Set(
     (*(*g_pMemAlloc + 16LL))(g_pMemAlloc, this->m_szName);
   if ( pVal != 0 )
   {
-    v4 = (*pVal->_vptr_IEconItemSetDefinition)(pVal);
+    v4 = pVal->GetName();
     v5 = v4;
     if ( v4 != 0 )
     {

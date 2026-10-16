@@ -13,7 +13,7 @@ void __fastcall CDOTA_BotMode_PushTower::CDOTA_BotMode_PushTower(
   CDOTA_BotMode::CDOTA_BotMode(this, pBot);
   this->m_Lane = lane;
   this->m_Mode = mode;
-  this->_vptr_CDOTA_BotMode = off_42B8390;
+  this->_vptr_CDOTA_BotMode = off_42B8390;  // vptr: CDOTA_BotMode_PushTower
   this->m_hPotentialTarget.m_Index = -1;
 }
 
@@ -1076,7 +1076,7 @@ void __fastcall CDOTA_BotMode_PushTower_Human::CDOTA_BotMode_PushTower_Human(
   this->m_Lane = lane;
   this->m_Mode = mode;
   this->m_hPotentialTarget.m_Index = -1;
-  this->_vptr_CDOTA_BotMode = off_42B8430;
+  this->_vptr_CDOTA_BotMode = off_42B8430;  // vptr: CDOTA_BotMode_PushTower_Human
   this->m_hTarget.m_Index = -1;
   this->m_bPingConsideredActive = 0;
   this->m_fLastDamageToBuilding = 0.0;

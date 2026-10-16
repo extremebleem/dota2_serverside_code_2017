@@ -522,7 +522,7 @@ bool __fastcall GetContentRootForPathWithinContent(
   unsigned __int64 v12; // [rsp+118h] [rbp-38h]
 
   v12 = __readfsqword(0x28u);
-  if ( V_IsAbsolutePath(pPathOrFileName, pPathID, pDestPathOrFileName) != 0 )
+  if ( V_IsAbsolutePath(pPathOrFileName) != 0 )
   {
     _V_strncpy(pDestPathOrFileName, pPathOrFileName, nDestBufSize);
   }
@@ -564,7 +564,7 @@ bool __fastcall GetGameRootForPathWithinGame(
   unsigned __int64 v12; // [rsp+118h] [rbp-38h]
 
   v12 = __readfsqword(0x28u);
-  if ( V_IsAbsolutePath(pPathOrFileName, pPathID, pDestPathOrFileName) != 0 )
+  if ( V_IsAbsolutePath(pPathOrFileName) != 0 )
   {
     _V_strncpy(pDestPathOrFileName, pPathOrFileName, nDestBufSize);
   }
@@ -615,6 +615,7 @@ bool __fastcall FullPathToModRelativePath(const char *pInputFullPath, char *pDes
 // FullPathToRootPath  (line 385, @0x000000000312ac40, libserver.so)  // inlines: V_strncpy<int>
 // calls: _V_strncpy, V_FixSlashes, SkipToGameOrContentRelativePathFromFullPath, SkipToModRelativePathFromGameOrContentRelativePath
 // callers: ModNameFromFullPath
+// local variable allocation has failed, the output may be wrong!
 bool __fastcall FullPathToRootPath(const char *pInputFullPath, char *pDestPath, int nDestPathBufSize)
 {
   char *v4; // rax
@@ -622,7 +623,7 @@ bool __fastcall FullPathToRootPath(const char *pInputFullPath, char *pDestPath, 
   char *v6; // rax
 
   if ( pInputFullPath != pDestPath )
-    _V_strncpy(pDestPath, pInputFullPath, nDestPathBufSize);
+    _V_strncpy(pDestPath, pInputFullPath, *&nDestPathBufSize);
   V_FixSlashes(pDestPath, 47);
   v4 = SkipToGameOrContentRelativePathFromFullPath(pDestPath);
   v5 = 0;
@@ -1124,14 +1125,12 @@ void __fastcall GetSearchPath(
 bool __fastcall GenerateFullPath(const char *pFileName, const char *pPathID, char *pBuf, int nBufLen)
 {
   __int64 v8; // rax
-  int v9; // edx
-  __int64 v10; // rsi
   bool result; // al
   char pDir[520]; // [rsp+10h] [rbp-240h] BYREF
-  unsigned __int64 v13; // [rsp+218h] [rbp-38h]
+  unsigned __int64 v11; // [rsp+218h] [rbp-38h]
 
-  v13 = __readfsqword(0x28u);
-  if ( V_IsAbsolutePath(pFileName, pPathID, pBuf) != 0 )
+  v11 = __readfsqword(0x28u);
+  if ( V_IsAbsolutePath(pFileName) != 0 )
   {
     _V_strncpy(pBuf, pFileName, nBufLen);
     V_FixSlashes(pBuf, 47);
@@ -1140,7 +1139,7 @@ bool __fastcall GenerateFullPath(const char *pFileName, const char *pPathID, cha
   else
   {
     v8 = (*(g_pFullFileSystem->_vptr_IAppSystem + 23))(g_pFullFileSystem, pFileName, pPathID, pBuf, nBufLen, 0, 0);
-    if ( v8 == 0 || !(result = V_IsAbsolutePath(v8, v10, v9)) )
+    if ( v8 == 0 || !(result = V_IsAbsolutePath(v8)) )
     {
       result = (*(g_pFullFileSystem->_vptr_IAppSystem + 45))(g_pFullFileSystem, pDir, 512);
       if ( result )
@@ -1159,17 +1158,15 @@ bool __fastcall GenerateFullPath(const char *pFileName, const char *pPathID, cha
 bool __fastcall GenerateFullPathForce(const char *pFileName, const char *pPathID, char *pBuf, int nBufLen)
 {
   __int64 v8; // rax
-  int v9; // edx
-  __int64 v10; // rsi
   char IsAbsolutePath; // r15
-  int v12; // ebx
+  int v10; // ebx
   __int64 i; // r12
   CUtlVector<CUtlString,CUtlMemory<CUtlString,int> > list; // [rsp+10h] [rbp-260h] BYREF
   char pDir[520]; // [rsp+30h] [rbp-240h] BYREF
-  unsigned __int64 v17; // [rsp+238h] [rbp-38h]
+  unsigned __int64 v15; // [rsp+238h] [rbp-38h]
 
-  v17 = __readfsqword(0x28u);
-  if ( V_IsAbsolutePath(pFileName, pPathID, pBuf) != 0 )
+  v15 = __readfsqword(0x28u);
+  if ( V_IsAbsolutePath(pFileName) != 0 )
   {
     _V_strncpy(pBuf, pFileName, nBufLen);
     V_FixSlashes(pBuf, 47);
@@ -1178,7 +1175,7 @@ bool __fastcall GenerateFullPathForce(const char *pFileName, const char *pPathID
   else
   {
     v8 = (*(g_pFullFileSystem->_vptr_IAppSystem + 23))(g_pFullFileSystem, pFileName, pPathID, pBuf, nBufLen, 0, 0);
-    if ( v8 == 0 || (IsAbsolutePath = V_IsAbsolutePath(v8, v10, v9)) == 0 )
+    if ( v8 == 0 || (IsAbsolutePath = V_IsAbsolutePath(v8)) == 0 )
     {
       list.m_Memory.m_pMemory = 0;
       list.m_Memory.m_nAllocationCount = 0;
@@ -1190,8 +1187,8 @@ bool __fastcall GenerateFullPathForce(const char *pFileName, const char *pPathID
         _V_ComposeFileName(pDir, pFileName, pBuf, nBufLen);
         IsAbsolutePath = V_RemoveDotSlashes(pBuf, 47);
       }
-      v12 = 0;
-      for ( i = 0x1FFFFFFFFFFFFFFFLL; --v12 >= 0; --i )
+      v10 = 0;
+      for ( i = 0x1FFFFFFFFFFFFFFFLL; --v10 >= 0; --i )
       {
         if ( list.m_Memory.m_pMemory[i].m_pString != 0 )
           CUtlString::FreeMemoryBlock(&list.m_Memory.m_pMemory[i]);
@@ -1214,129 +1211,127 @@ void __fastcall AddFilesToList(
         const char *pPathID,
         const char *pExtension)
 {
-  int v7; // edx
-  __int64 v8; // rsi
-  __int64 v9; // rax
-  const char *v10; // r14
+  __int64 v7; // rax
+  const char *v8; // r14
   __int64 FileExtension; // rax
-  char *v12; // r14
-  __int64 v13; // r14
-  int v14; // eax
-  CUtlString *v15; // r14
-  const char *v16; // rax
+  char *v10; // r14
+  __int64 v11; // r14
+  int v12; // eax
+  CUtlString *v13; // r14
+  const char *v14; // rax
   __int64 m_Size; // r14
-  int v18; // eax
-  CUtlString *v19; // r14
-  const char *v20; // rax
-  int v21; // ebx
-  __int64 v22; // r14
-  unsigned __int64 v23; // rbx
-  const char *v24; // rax
+  int v16; // eax
+  CUtlString *v17; // r14
+  const char *v18; // rax
+  int v19; // ebx
+  __int64 v20; // r14
+  unsigned __int64 v21; // rbx
+  const char *v22; // rax
   __int64 i; // r13
   char bIsAbsolute; // [rsp+1Fh] [rbp-6C1h]
-  CUtlString v30[2]; // [rsp+50h] [rbp-690h] BYREF
-  CUtlString v31[2]; // [rsp+60h] [rbp-680h] BYREF
+  CUtlString v28[2]; // [rsp+50h] [rbp-690h] BYREF
+  CUtlString v29[2]; // [rsp+60h] [rbp-680h] BYREF
   FileFindHandle_t hFind; // [rsp+70h] [rbp-670h] BYREF
   CUtlVector<CUtlString,CUtlMemory<CUtlString,int> > subDirs; // [rsp+80h] [rbp-660h] BYREF
   char pSearchString[512]; // [rsp+A0h] [rbp-640h] BYREF
   char pChildPath[512]; // [rsp+2A0h] [rbp-440h] BYREF
   char pFullPathBuf[520]; // [rsp+4A0h] [rbp-240h] BYREF
-  unsigned __int64 v37; // [rsp+6A8h] [rbp-38h]
+  unsigned __int64 v35; // [rsp+6A8h] [rbp-38h]
 
-  v37 = __readfsqword(0x28u);
+  v35 = __readfsqword(0x28u);
   V_snprintf(pSearchString, 512, "%s\\*", pDirectory);
-  bIsAbsolute = V_IsAbsolutePath(pDirectory, v8, v7);
+  bIsAbsolute = V_IsAbsolutePath(pDirectory);
   hFind.m_pFileSystem = 0;
   hFind.m_nFindDataIndex = 0;
-  v9 = (*(g_pFullFileSystem->_vptr_IAppSystem + 41))(g_pFullFileSystem, pSearchString, pPathID, &hFind);
+  v7 = (*(g_pFullFileSystem->_vptr_IAppSystem + 41))(g_pFullFileSystem, pSearchString, pPathID, &hFind);
   subDirs.m_Size = 0;
-  v10 = v9;
+  v8 = v7;
   subDirs.m_Memory.m_pMemory = 0;
   subDirs.m_Memory.m_nAllocationCount = 0;
   for ( subDirs.m_Memory.m_nGrowSize = 0;
-        v10 != 0;
-        v10 = (*(g_pFullFileSystem->_vptr_IAppSystem + 38))(g_pFullFileSystem, &hFind) )
+        v8 != 0;
+        v8 = (*(g_pFullFileSystem->_vptr_IAppSystem + 38))(g_pFullFileSystem, &hFind) )
   {
-    V_snprintf(pChildPath, 512, "%s\\%s", pDirectory, v10);
+    V_snprintf(pChildPath, 512, "%s\\%s", pDirectory, v8);
     if ( (*(g_pFullFileSystem->_vptr_IAppSystem + 39))(g_pFullFileSystem, &hFind) != 0 )
     {
-      if ( _V_strnicmp_fast(v10, ".", 2) != 0 && _V_strnicmp_fast(v10, "..", 3) != 0 )
+      if ( _V_strnicmp_fast(v8, ".", 2) != 0 && _V_strnicmp_fast(v8, "..", 3) != 0 )
       {
-        v30[0].m_pString = 0;
-        CUtlString::Set(v30, pChildPath);
+        v28[0].m_pString = 0;
+        CUtlString::Set(v28, pChildPath);
         m_Size = subDirs.m_Size;
-        v18 = subDirs.m_Size;
+        v16 = subDirs.m_Size;
         if ( subDirs.m_Size == subDirs.m_Memory.m_nAllocationCount )
         {
           CUtlMemory<CUtlString,int>::Grow(&subDirs.m_Memory, 1);
-          v18 = subDirs.m_Size;
+          v16 = subDirs.m_Size;
         }
-        subDirs.m_Size = v18 + 1;
-        v19 = &subDirs.m_Memory.m_pMemory[m_Size];
-        if ( v19 != 0 )
+        subDirs.m_Size = v16 + 1;
+        v17 = &subDirs.m_Memory.m_pMemory[m_Size];
+        if ( v17 != 0 )
         {
-          v19->m_pString = 0;
-          v20 = CUtlString::Get(v30);
-          CUtlString::Set(v19, v20);
+          v17->m_pString = 0;
+          v18 = CUtlString::Get(v28);
+          CUtlString::Set(v17, v18);
         }
-        if ( v30[0].m_pString != 0 )
-          CUtlString::FreeMemoryBlock(v30);
+        if ( v28[0].m_pString != 0 )
+          CUtlString::FreeMemoryBlock(v28);
       }
     }
     else
     {
-      FileExtension = V_GetFileExtension(v10);
+      FileExtension = V_GetFileExtension(v8);
       if ( FileExtension != 0 && V_stricmp_fast(FileExtension, pExtension) == 0 )
       {
         if ( bIsAbsolute != 0 )
         {
-          v12 = pChildPath;
+          v10 = pChildPath;
         }
         else
         {
-          v12 = pFullPathBuf;
+          v10 = pFullPathBuf;
           (*(g_pFullFileSystem->_vptr_IAppSystem + 23))(g_pFullFileSystem, pChildPath, pPathID, pFullPathBuf, 512, 0, 0);
         }
-        V_strlower_fast(v12);
-        V_FixSlashes(v12, 47);
-        v31[0].m_pString = 0;
-        CUtlString::Set(v31, v12);
-        v13 = list->m_Size;
-        v14 = list->m_Size;
-        if ( v13 == list->m_Memory.m_nAllocationCount )
+        V_strlower_fast(v10);
+        V_FixSlashes(v10, 47);
+        v29[0].m_pString = 0;
+        CUtlString::Set(v29, v10);
+        v11 = list->m_Size;
+        v12 = list->m_Size;
+        if ( v11 == list->m_Memory.m_nAllocationCount )
         {
           CUtlMemory<CUtlString,int>::Grow(&list->m_Memory, 1);
-          v14 = list->m_Size;
+          v12 = list->m_Size;
         }
-        list->m_Size = v14 + 1;
-        v15 = &list->m_Memory.m_pMemory[v13];
-        if ( v15 != 0 )
+        list->m_Size = v12 + 1;
+        v13 = &list->m_Memory.m_pMemory[v11];
+        if ( v13 != 0 )
         {
-          v15->m_pString = 0;
-          v16 = CUtlString::Get(v31);
-          CUtlString::Set(v15, v16);
+          v13->m_pString = 0;
+          v14 = CUtlString::Get(v29);
+          CUtlString::Set(v13, v14);
         }
-        if ( v31[0].m_pString != 0 )
-          CUtlString::FreeMemoryBlock(v31);
+        if ( v29[0].m_pString != 0 )
+          CUtlString::FreeMemoryBlock(v29);
       }
     }
   }
   (*(g_pFullFileSystem->_vptr_IAppSystem + 40))(g_pFullFileSystem, &hFind);
-  v21 = subDirs.m_Size;
+  v19 = subDirs.m_Size;
   if ( subDirs.m_Size > 0 )
   {
-    v22 = 8LL * (subDirs.m_Size - 1) + 8;
-    v23 = 0;
+    v20 = 8LL * (subDirs.m_Size - 1) + 8;
+    v21 = 0;
     do
     {
-      v24 = CUtlString::Get(&subDirs.m_Memory.m_pMemory[v23 / 8]);
-      AddFilesToList(list, v24, pPathID, pExtension);
-      v23 += 8LL;
+      v22 = CUtlString::Get(&subDirs.m_Memory.m_pMemory[v21 / 8]);
+      AddFilesToList(list, v22, pPathID, pExtension);
+      v21 += 8LL;
     }
-    while ( v23 != v22 );
-    v21 = subDirs.m_Size;
+    while ( v21 != v20 );
+    v19 = subDirs.m_Size;
   }
-  for ( i = 8LL * v21 - 8; --v21 >= 0; i -= 8 )
+  for ( i = 8LL * v19 - 8; --v19 >= 0; i -= 8 )
   {
     if ( *(&subDirs.m_Memory.m_pMemory->m_pString + i) != 0 )
       CUtlString::FreeMemoryBlock((subDirs.m_Memory.m_pMemory + i));
@@ -1406,7 +1401,7 @@ bool __fastcall FindLocalCopyOfSourceFile(const char *szFileName, char *szOutput
 
   v22 = __readfsqword(0x28u);
   nOutputSizea = nOutputSize;
-  if ( V_IsAbsolutePath(szFileName, szOutputBuffer, nOutputSize) != 0 )
+  if ( V_IsAbsolutePath(szFileName) != 0 )
   {
     v4 = (*(g_pFullFileSystem->_vptr_IBaseFileSystem + 10))(&g_pFullFileSystem->IBaseFileSystem, szFileName, 0);
     if ( v4 != 0 )
@@ -1905,16 +1900,14 @@ const char *__fastcall V_DescribeFilePathClass(FilePathClass_t nClass)
 // strings: "CONTENTROOT", "GAMEROOT"
 void __fastcall V_ClassifyAndValidatePath(const char *pPathOrFileName, FilePathClass_t *pOutClass, bool *pOutIsInvalid)
 {
-  int v5; // edx
-  __int64 v6; // rsi
   bool HasInvalidChars; // al
   char pExtractedRelativePath[272]; // [rsp+10h] [rbp-570h] BYREF
   char pContentRoot[272]; // [rsp+120h] [rbp-460h] BYREF
   char pGameRoot[272]; // [rsp+230h] [rbp-350h] BYREF
   char pFixedPath[520]; // [rsp+340h] [rbp-240h] BYREF
-  unsigned __int64 v12; // [rsp+548h] [rbp-38h]
+  unsigned __int64 v10; // [rsp+548h] [rbp-38h]
 
-  v12 = __readfsqword(0x28u);
+  v10 = __readfsqword(0x28u);
   _V_FixupPathName(pFixedPath, 520, pPathOrFileName, 0);
   if ( (*(g_pFullFileSystem->_vptr_IAppSystem + 140))(g_pFullFileSystem, pFixedPath) != 0 )
   {
@@ -1931,7 +1924,7 @@ void __fastcall V_ClassifyAndValidatePath(const char *pPathOrFileName, FilePathC
       *pOutIsInvalid = 1;
     return;
   }
-  if ( V_IsAbsolutePath(pFixedPath, v6, v5) == 0 )
+  if ( V_IsAbsolutePath(pFixedPath) == 0 )
   {
     HasInvalidChars = V_RelativePathHasInvalidChars(pFixedPath);
     if ( pOutClass != 0 )

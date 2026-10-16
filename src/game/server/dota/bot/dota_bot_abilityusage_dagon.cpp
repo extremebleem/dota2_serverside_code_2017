@@ -14,7 +14,7 @@ void __fastcall CDOTA_Bot_AbilityUsage_Dagon::CDOTA_Bot_AbilityUsage_Dagon(
   this->m_pAbility = pAbility;
   this->m_bUseOnCreeps = 0;
   this->m_pBot = pBot;
-  this->_vptr_CDOTA_Bot_AbilityUsage = off_42C6030;
+  this->_vptr_CDOTA_Bot_AbilityUsage = off_42C6030;  // vptr: CDOTA_Bot_AbilityUsage_Dagon
   this->m_hTarget.m_Index = -1;
   if ( pAbility != 0 && (*(pAbility->_vptr_IHandleEntity + 223))(pAbility) != 0 )
     v5 = pAbility;

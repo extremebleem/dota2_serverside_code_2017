@@ -1997,7 +1997,7 @@ void __fastcall CAssetModifier::CAssetModifier(
   char v17; // [rsp+A10h] [rbp-20h] BYREF
 
   v6 = nPriority;
-  this->_vptr_CAssetModifier = off_47A3F30;
+  this->_vptr_CAssetModifier = off_47A3F30;  // vptr: CAssetModifier
   this->m_strAsset.m_pString = 0;
   this->m_strModifier.m_pString = 0;
   this->m_pCriteriaExpression = 0;
@@ -2054,7 +2054,7 @@ void __fastcall CAssetModifier::~CAssetModifier(CAssetModifier *const this)
   KeyValues *m_pKV; // r12
 
   m_pKV = this->m_pKV;
-  this->_vptr_CAssetModifier = off_47A3F30;
+  this->_vptr_CAssetModifier = off_47A3F30;  // vptr: CAssetModifier
   if ( m_pKV != 0 )
   {
     KeyValues::~KeyValues(m_pKV);
@@ -2942,7 +2942,7 @@ void __fastcall CSoundModifier::Precache(const CSoundModifier *const this, const
 // calls: CAssetModifier::~CAssetModifier
 void __fastcall CPortraitModifier_Game::~CPortraitModifier_Game(CPortraitModifier_Game *const this)
 {
-  this->_vptr_CAssetModifier = off_47A4110;
+  this->_vptr_CAssetModifier = off_47A4110;  // vptr: CPortraitModifier_Game
   CAssetModifier::~CAssetModifier(this);
 }
 
@@ -2951,7 +2951,7 @@ void __fastcall CPortraitModifier_Game::~CPortraitModifier_Game(CPortraitModifie
 // calls: CAssetModifier::~CAssetModifier, operator delete
 void __fastcall CPortraitModifier_Game::~CPortraitModifier_Game(CPortraitModifier_Game *const this)
 {
-  this->_vptr_CAssetModifier = off_47A4110;
+  this->_vptr_CAssetModifier = off_47A4110;  // vptr: CPortraitModifier_Game
   CAssetModifier::~CAssetModifier(this);
   operator delete(this);
 }
@@ -3116,7 +3116,7 @@ void __fastcall CPetModifier::Precache(const CPetModifier *const this, const CEn
 void __fastcall CPortraitBackgroundCameraModifier::~CPortraitBackgroundCameraModifier(
         CPortraitBackgroundCameraModifier *const this)
 {
-  this->_vptr_CAssetModifier = off_47A42F0;
+  this->_vptr_CAssetModifier = off_47A42F0;  // vptr: CPortraitBackgroundCameraModifier
   CAssetModifier::~CAssetModifier(this);
 }
 
@@ -3126,7 +3126,7 @@ void __fastcall CPortraitBackgroundCameraModifier::~CPortraitBackgroundCameraMod
 void __fastcall CPortraitBackgroundCameraModifier::~CPortraitBackgroundCameraModifier(
         CPortraitBackgroundCameraModifier *const this)
 {
-  this->_vptr_CAssetModifier = off_47A42F0;
+  this->_vptr_CAssetModifier = off_47A42F0;  // vptr: CPortraitBackgroundCameraModifier
   CAssetModifier::~CAssetModifier(this);
   operator delete(this);
 }
@@ -3146,7 +3146,7 @@ void __fastcall CPortraitBackgroundCameraModifier::Init(
 void __fastcall CPortraitBackgroundLightModifier::~CPortraitBackgroundLightModifier(
         CPortraitBackgroundLightModifier *const this)
 {
-  this->_vptr_CAssetModifier = off_47A4350;
+  this->_vptr_CAssetModifier = off_47A4350;  // vptr: CPortraitBackgroundLightModifier
   CAssetModifier::~CAssetModifier(this);
 }
 
@@ -3156,7 +3156,7 @@ void __fastcall CPortraitBackgroundLightModifier::~CPortraitBackgroundLightModif
 void __fastcall CPortraitBackgroundLightModifier::~CPortraitBackgroundLightModifier(
         CPortraitBackgroundLightModifier *const this)
 {
-  this->_vptr_CAssetModifier = off_47A4350;
+  this->_vptr_CAssetModifier = off_47A4350;  // vptr: CPortraitBackgroundLightModifier
   CAssetModifier::~CAssetModifier(this);
   operator delete(this);
 }

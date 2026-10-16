@@ -139,27 +139,25 @@ void __fastcall CConcreteEntityList::AllocEntityChunk(CConcreteEntityList *const
   __int64 v30; // rcx
   __int64 v31; // rdi
   __int64 v32; // rsi
-  __int64 v33; // r8
-  __int64 v34; // r9
-  const char *v35; // r8
-  int v36; // r12d
-  __int64 v37; // rax
-  __int64 v38; // rax
-  int v39; // edx
-  int v40; // ecx
-  int v41; // esi
-  int v42; // r8d
-  int v43; // r9d
+  const char *v33; // r8
+  int v34; // r12d
+  __int64 v35; // rax
+  __int64 v36; // rax
+  int v37; // edx
+  int v38; // ecx
+  int v39; // esi
+  int v40; // r8d
+  int v41; // r9d
   int nChunk; // [rsp+4h] [rbp-8Ch]
-  __int64 v45; // [rsp+8h] [rbp-88h]
-  _QWORD *v46; // [rsp+8h] [rbp-88h]
-  char *v47; // [rsp+10h] [rbp-80h]
+  __int64 v43; // [rsp+8h] [rbp-88h]
+  _QWORD *v44; // [rsp+8h] [rbp-88h]
+  char *v45; // [rsp+10h] [rbp-80h]
   string_t *p_m_designerName; // [rsp+18h] [rbp-78h]
   string_t *p_m_name; // [rsp+20h] [rbp-70h]
-  int v50; // [rsp+28h] [rbp-68h]
-  CEntityIdentity *v51; // [rsp+30h] [rbp-60h]
+  int v48; // [rsp+28h] [rbp-68h]
+  CEntityIdentity *v49; // [rsp+30h] [rbp-60h]
   int nEntries; // [rsp+3Ch] [rbp-54h]
-  LeafCodeInfo_t v54; // [rsp+40h] [rbp-50h] BYREF
+  LeafCodeInfo_t v52; // [rsp+40h] [rbp-50h] BYREF
 
   v5 = bNetworkable;
   m_nNonNetworkableEntityLimit = this->m_nNonNetworkableEntityLimit;
@@ -176,39 +174,39 @@ LABEL_53:
     SpewEntityListSummary(this);
     if ( LoggingSystem_IsChannelEnabled(LOG_GENERAL, 4) != 0 )
     {
-      v54.m_nLine = 776;
-      v35 = "";
+      v52.m_nLine = 776;
+      v33 = "";
       if ( v5 == 0 )
-        v35 = "non-";
-      v54.m_szFile = "../public/entity2/concreteentitylist.h";
-      v54.m_szFunction = "AllocEntityChunk";
+        v33 = "non-";
+      v52.m_szFile = "../public/entity2/concreteentitylist.h";
+      v52.m_szFunction = "AllocEntityChunk";
       LoggingSystem_Log(
         LOG_GENERAL,
         LoggingSeverity_t::LS_ERROR,
-        &v54,
+        &v52,
         "Ran out of %snetworkable entities! (See console spew for entity list summary)\n",
-        v35);
+        v33);
     }
-    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v31, v32, v29, v30, v33, v34) != 0 )
+    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v31, v32, v29, v30) != 0 )
       loc_0 = -559038737;
-    v36 = Plat_ExitProcess(1);
+    v34 = Plat_ExitProcess(1);
     *(v5 + 40) = 0;
-    if ( v45 != 0 )
+    if ( v43 != 0 )
     {
-      v37 = 120 * (511 - v3);
-      if ( v45 != v45 + v37 )
+      v35 = 120 * (511 - v3);
+      if ( v43 != v43 + v35 )
       {
-        v38 = v45 + v37;
+        v36 = v43 + v35;
         do
         {
-          v38 -= 120;
-          *(v38 - 80 + 120) = 0;
+          v36 -= 120;
+          *(v36 - 80 + 120) = 0;
         }
-        while ( v45 != v38 );
+        while ( v43 != v36 );
       }
     }
     operator delete[](v2);
-    Unwind_Resume(v36, v41, v39, v40, v42, v43);
+    Unwind_Resume(v34, v39, v37, v38, v40, v41);
   }
   if ( this->m_pIdentityChunks[v7] != 0 )
   {
@@ -231,7 +229,7 @@ LABEL_53:
   v11 = 511;
   v12 = operator new[](0xF008u);
   *v12 = 512;
-  v46 = v12 + 1;
+  v44 = v12 + 1;
   v13 = (v12 + 1);
   do
   {
@@ -257,12 +255,12 @@ LABEL_53:
     CEntityIdentity::NetworkStateChanged(v13, 0x14u, -1, -1);
     --v11;
     ++v13;
-    *(v46 + v14 + 12) = -1;
+    *(v44 + v14 + 12) = -1;
     v13[-1].m_hSpawnGroup = 0;
   }
   while ( v11 != -1 );
-  v47 = &this->m_Lock.gap0 + 8 * nChunk;
-  *(v47 + 1) = v46;
+  v45 = &this->m_Lock.gap0 + 8 * nChunk;
+  *(v45 + 1) = v44;
   if ( nEntries <= 0x7F0000000000000LL )
   {
     v16 = 16LL * nEntries;
@@ -274,24 +272,24 @@ LABEL_53:
     v16 = -1;
   }
   v17 = operator new[](v16);
-  *(v47 + 66) = v17;
+  *(v45 + 66) = v17;
   memset(v17, 0, v15);
   v18 = 0;
-  v50 = nChunk << 9;
-  v19 = *(v47 + 1);
+  v48 = nChunk << 9;
+  v19 = *(v45 + 1);
   p_m_designerName = &v19->m_designerName;
-  v51 = v19;
+  v49 = v19;
   p_m_nameStringableIndex = &v19->m_nameStringableIndex;
   p_m_name = &v19->m_name;
   do
   {
     v19->m_EHandle.m_Index = (RandomInt(0, 0x1FFFF) << 15) | v19->m_EHandle.m_Index & 0x7FFF;
-    if ( ((v50 + v18) >> 9) <= 0x3F )
+    if ( ((v48 + v18) >> 9) <= 0x3F )
     {
-      v23 = this->m_pIdentityChunks[(v50 + v18) >> 9];
+      v23 = this->m_pIdentityChunks[(v48 + v18) >> 9];
       if ( v23 != 0 )
       {
-        v24 = &v23[(v50 + v18) & 0x1FF];
+        v24 = &v23[(v48 + v18) & 0x1FF];
         if ( v24 != 0 )
           LOWORD(v24->m_EHandle.m_Index) |= 0x7FFFu;
       }
@@ -305,11 +303,11 @@ LABEL_53:
       *m_pId->Data4 = 0;
     }
     v19->m_pClass = 0;
-    v26 = (v19 - v51);
+    v26 = (v19 - v49);
     *(&p_m_designerName->u.m_Id + v26) = 0;
     v19->m_pInstance = 0;
     *(&p_m_name->u.m_Id + v26) = 0;
-    if ( *(&p_m_nameStringableIndex->m_Value + v19 - v51) != -1 )
+    if ( *(&p_m_nameStringableIndex->m_Value + v19 - v49) != -1 )
     {
       CEntityIdentity::NetworkStateChanged(v19, 0x14u, -1, -1);
       *(&p_m_nameStringableIndex->m_Value + v26) = -1;
@@ -317,7 +315,7 @@ LABEL_53:
     v19->m_hSpawnGroup = 0;
     if ( nEntries > v18 )
     {
-      v19->m_pId = (*(v47 + 66) + 16 * v18);
+      v19->m_pId = (*(v45 + 66) + 16 * v18);
       m_pPrev = v19->m_pPrev;
       if ( bNetworkable )
       {

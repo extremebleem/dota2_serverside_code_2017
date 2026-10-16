@@ -726,7 +726,7 @@ CEntityInstance *__fastcall CDOTA_Unit_Hero_Rattletrap::CEntityInstanceEntityCla
 void __fastcall CDOTA_Unit_Hero_Rattletrap::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Unit_Hero_Rattletrap::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -736,7 +736,7 @@ void __fastcall CDOTA_Unit_Hero_Rattletrap::CEntityInstanceEntityClass::~CEntity
 void __fastcall CDOTA_Unit_Hero_Rattletrap::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Unit_Hero_Rattletrap::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -985,7 +985,7 @@ CEntityInstance *__fastcall CDOTA_NPC_Rattletrap_Cog::CEntityInstanceEntityClass
 void __fastcall CDOTA_NPC_Rattletrap_Cog::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_NPC_Rattletrap_Cog::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -995,7 +995,7 @@ void __fastcall CDOTA_NPC_Rattletrap_Cog::CEntityInstanceEntityClass::~CEntityIn
 void __fastcall CDOTA_NPC_Rattletrap_Cog::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_NPC_Rattletrap_Cog::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -1265,7 +1265,7 @@ CEntityInstance *__fastcall CDOTA_Ability_Rattletrap_BatteryAssault::CEntityInst
 void __fastcall CDOTA_Ability_Rattletrap_BatteryAssault::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Rattletrap_BatteryAssault::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -1275,7 +1275,7 @@ void __fastcall CDOTA_Ability_Rattletrap_BatteryAssault::CEntityInstanceEntityCl
 void __fastcall CDOTA_Ability_Rattletrap_BatteryAssault::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Rattletrap_BatteryAssault::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -1818,7 +1818,7 @@ CEntityInstance *__fastcall CDOTA_Ability_Rattletrap_PowerCogs::CEntityInstanceE
 void __fastcall CDOTA_Ability_Rattletrap_PowerCogs::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Rattletrap_PowerCogs::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -1828,7 +1828,7 @@ void __fastcall CDOTA_Ability_Rattletrap_PowerCogs::CEntityInstanceEntityClass::
 void __fastcall CDOTA_Ability_Rattletrap_PowerCogs::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Rattletrap_PowerCogs::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -3212,7 +3212,7 @@ CEntityInstance *__fastcall CDOTA_Ability_Rattletrap_RocketFlare::CEntityInstanc
 void __fastcall CDOTA_Ability_Rattletrap_RocketFlare::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Rattletrap_RocketFlare::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -3222,7 +3222,7 @@ void __fastcall CDOTA_Ability_Rattletrap_RocketFlare::CEntityInstanceEntityClass
 void __fastcall CDOTA_Ability_Rattletrap_RocketFlare::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Rattletrap_RocketFlare::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -4100,7 +4100,7 @@ CEntityInstance *__fastcall CDOTA_Ability_Rattletrap_Hookshot::CEntityInstanceEn
 void __fastcall CDOTA_Ability_Rattletrap_Hookshot::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Rattletrap_Hookshot::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -4110,7 +4110,7 @@ void __fastcall CDOTA_Ability_Rattletrap_Hookshot::CEntityInstanceEntityClass::~
 void __fastcall CDOTA_Ability_Rattletrap_Hookshot::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Rattletrap_Hookshot::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }

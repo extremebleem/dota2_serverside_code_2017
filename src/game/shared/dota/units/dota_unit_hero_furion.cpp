@@ -538,7 +538,7 @@ CEntityInstance *__fastcall CDOTA_Unit_Hero_Furion::CEntityInstanceEntityClass::
 void __fastcall CDOTA_Unit_Hero_Furion::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Unit_Hero_Furion::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -548,7 +548,7 @@ void __fastcall CDOTA_Unit_Hero_Furion::CEntityInstanceEntityClass::~CEntityInst
 void __fastcall CDOTA_Unit_Hero_Furion::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Unit_Hero_Furion::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -750,7 +750,7 @@ CEntityInstance *__fastcall CDOTA_Ability_Furion_Sprout::CEntityInstanceEntityCl
 void __fastcall CDOTA_Ability_Furion_Sprout::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Furion_Sprout::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -760,7 +760,7 @@ void __fastcall CDOTA_Ability_Furion_Sprout::CEntityInstanceEntityClass::~CEntit
 void __fastcall CDOTA_Ability_Furion_Sprout::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Furion_Sprout::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -1081,7 +1081,7 @@ CEntityInstance *__fastcall CDOTA_Ability_Furion_Teleportation::CEntityInstanceE
 void __fastcall CDOTA_Ability_Furion_Teleportation::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Furion_Teleportation::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -1091,7 +1091,7 @@ void __fastcall CDOTA_Ability_Furion_Teleportation::CEntityInstanceEntityClass::
 void __fastcall CDOTA_Ability_Furion_Teleportation::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Furion_Teleportation::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -1635,7 +1635,7 @@ CEntityInstance *__fastcall CDOTA_Ability_Furion_ForceOfNature::CEntityInstanceE
 void __fastcall CDOTA_Ability_Furion_ForceOfNature::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Furion_ForceOfNature::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -1645,7 +1645,7 @@ void __fastcall CDOTA_Ability_Furion_ForceOfNature::CEntityInstanceEntityClass::
 void __fastcall CDOTA_Ability_Furion_ForceOfNature::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Furion_ForceOfNature::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -2093,7 +2093,7 @@ CEntityInstance *__fastcall CDOTA_Ability_Furion_WrathOfNature::CEntityInstanceE
 void __fastcall CDOTA_Ability_Furion_WrathOfNature::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Furion_WrathOfNature::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -2103,7 +2103,7 @@ void __fastcall CDOTA_Ability_Furion_WrathOfNature::CEntityInstanceEntityClass::
 void __fastcall CDOTA_Ability_Furion_WrathOfNature::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Furion_WrathOfNature::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }

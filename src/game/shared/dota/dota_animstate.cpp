@@ -47,7 +47,7 @@ void __fastcall CDOTA_AbilityAnimations::~CDOTA_AbilityAnimations(CDOTA_AbilityA
   CUtlVectorBase<int,CUtlMemory<int,int> >::CAllocator *p_m_Memory; // r12
 
   v2 = (this->m_Activities.m_Memory.m_nGrowSize & 0xC0000000) == 0;
-  this->_vptr_IGameSystem = off_40D70D0;
+  this->_vptr_IGameSystem = off_40D70D0;  // vptr: CDOTA_AbilityAnimations
   this->m_Activities.m_Size = 0;
   if ( v2 )
   {
@@ -56,7 +56,7 @@ void __fastcall CDOTA_AbilityAnimations::~CDOTA_AbilityAnimations(CDOTA_AbilityA
     if ( (this->m_Activities.m_Memory.m_nGrowSize & 0xC0000000) == 0 )
       CUtlMemory<int,int>::Purge(p_m_Memory);
   }
-  this->_vptr_IGameSystem = off_3F7C1B0;
+  this->_vptr_IGameSystem = off_3F7C1B0;  // vptr: CAutoGameSystem
   IGameSystem::~IGameSystem(this);
 }
 
@@ -69,7 +69,7 @@ void __fastcall CDOTA_AbilityAnimations::~CDOTA_AbilityAnimations(CDOTA_AbilityA
   CUtlVectorBase<int,CUtlMemory<int,int> >::CAllocator *p_m_Memory; // r12
 
   v2 = (this->m_Activities.m_Memory.m_nGrowSize & 0xC0000000) == 0;
-  this->_vptr_IGameSystem = off_40D70D0;
+  this->_vptr_IGameSystem = off_40D70D0;  // vptr: CDOTA_AbilityAnimations
   this->m_Activities.m_Size = 0;
   if ( v2 )
   {
@@ -78,7 +78,7 @@ void __fastcall CDOTA_AbilityAnimations::~CDOTA_AbilityAnimations(CDOTA_AbilityA
     if ( (this->m_Activities.m_Memory.m_nGrowSize & 0xC0000000) == 0 )
       CUtlMemory<int,int>::Purge(p_m_Memory);
   }
-  this->_vptr_IGameSystem = off_3F7C1B0;
+  this->_vptr_IGameSystem = off_3F7C1B0;  // vptr: CAutoGameSystem
   IGameSystem::~IGameSystem(this);
   operator delete(this);
 }
@@ -157,7 +157,7 @@ void __fastcall AddAbilityAnimationToList(int iActivity)
 // callers: CDOTA_BaseNPC::Connect
 void __fastcall CDOTAAnimState::CDOTAAnimState(CDOTAAnimState *const this, CDOTA_BaseNPC *pUnit)
 {
-  this->_vptr_CDOTAAnimState = off_40D7230;
+  this->_vptr_CDOTAAnimState = off_40D7230;  // vptr: CDOTAAnimState
   this->m_aGestureSlots.m_Size = 0;
   this->m_aGestureSlots.m_Memory.m_pMemory = 0;
   this->m_aGestureSlots.m_Memory.m_nAllocationCount = 0;
@@ -182,7 +182,7 @@ void __fastcall CDOTAAnimState::~CDOTAAnimState(CDOTAAnimState *const this)
 
   p_m_Memory = &this->m_aGestureSlots.m_Memory;
   v3 = (this->m_aGestureSlots.m_Memory.m_nGrowSize & 0xC0000000) == 0;
-  this->_vptr_CDOTAAnimState = off_40D7230;
+  this->_vptr_CDOTAAnimState = off_40D7230;  // vptr: CDOTAAnimState
   this->m_aGestureSlots.m_Size = 0;
   if ( v3 )
   {

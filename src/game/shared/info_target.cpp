@@ -216,7 +216,7 @@ CEntityInstance *__fastcall CInfoTarget::CEntityInstanceEntityClass::ConstructIn
 void __fastcall CInfoTarget::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CInfoTarget::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -226,7 +226,7 @@ void __fastcall CInfoTarget::CEntityInstanceEntityClass::~CEntityInstanceEntityC
 void __fastcall CInfoTarget::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CInfoTarget::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -452,7 +452,7 @@ CEntityInstance *__fastcall CInfoParticleTarget::CEntityInstanceEntityClass::Con
 void __fastcall CInfoParticleTarget::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CInfoParticleTarget::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -462,7 +462,7 @@ void __fastcall CInfoParticleTarget::CEntityInstanceEntityClass::~CEntityInstanc
 void __fastcall CInfoParticleTarget::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CInfoParticleTarget::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }

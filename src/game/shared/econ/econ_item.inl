@@ -5,7 +5,7 @@
 void __fastcall ISchemaAttributeTypeBase<CAttribute_HeroStatue>::~ISchemaAttributeTypeBase(
         ISchemaAttributeTypeBase<CAttribute_HeroStatue> *const this)
 {
-  this->_vptr_ISchemaAttributeType = off_479F1D0;
+  this->_vptr_ISchemaAttributeType = off_479F1D0;  // vptr: ISchemaAttributeType
 }
 
 
@@ -14,7 +14,7 @@ void __fastcall ISchemaAttributeTypeBase<CAttribute_HeroStatue>::~ISchemaAttribu
 void __fastcall ISchemaAttributeTypeBase<CAttribute_HeroStatue>::~ISchemaAttributeTypeBase(
         ISchemaAttributeTypeBase<CAttribute_HeroStatue> *const this)
 {
-  this->_vptr_ISchemaAttributeType = off_479F1D0;
+  this->_vptr_ISchemaAttributeType = off_479F1D0;  // vptr: ISchemaAttributeType
   operator delete(this);
 }
 
@@ -23,14 +23,14 @@ void __fastcall ISchemaAttributeTypeBase<CAttribute_HeroStatue>::~ISchemaAttribu
 void __fastcall ISchemaAttributeTypeBase<unsigned int>::~ISchemaAttributeTypeBase(
         ISchemaAttributeTypeBase<unsigned int> *const this)
 {
-  this->_vptr_ISchemaAttributeType = off_479F1D0;
+  this->_vptr_ISchemaAttributeType = off_479F1D0;  // vptr: ISchemaAttributeType
 }
 
 
 // ISchemaAttributeTypeBase<float>::~ISchemaAttributeTypeBase  (line 103, @0x0000000002ea1f00, libserver.so)  // inlines: ~ISchemaAttributeType
 void __fastcall ISchemaAttributeTypeBase<float>::~ISchemaAttributeTypeBase(ISchemaAttributeTypeBase<float> *const this)
 {
-  this->_vptr_ISchemaAttributeType = off_479F1D0;
+  this->_vptr_ISchemaAttributeType = off_479F1D0;  // vptr: ISchemaAttributeType
 }
 
 
@@ -38,7 +38,7 @@ void __fastcall ISchemaAttributeTypeBase<float>::~ISchemaAttributeTypeBase(ISche
 void __fastcall ISchemaAttributeTypeBase<CAttribute_String>::~ISchemaAttributeTypeBase(
         ISchemaAttributeTypeBase<CAttribute_String> *const this)
 {
-  this->_vptr_ISchemaAttributeType = off_479F1D0;
+  this->_vptr_ISchemaAttributeType = off_479F1D0;  // vptr: ISchemaAttributeType
 }
 
 
@@ -46,7 +46,7 @@ void __fastcall ISchemaAttributeTypeBase<CAttribute_String>::~ISchemaAttributeTy
 void __fastcall ISchemaAttributeTypeBase<CAttribute_Socket>::~ISchemaAttributeTypeBase(
         ISchemaAttributeTypeBase<CAttribute_Socket> *const this)
 {
-  this->_vptr_ISchemaAttributeType = off_479F1D0;
+  this->_vptr_ISchemaAttributeType = off_479F1D0;  // vptr: ISchemaAttributeType
 }
 
 
@@ -54,7 +54,7 @@ void __fastcall ISchemaAttributeTypeBase<CAttribute_Socket>::~ISchemaAttributeTy
 void __fastcall ISchemaAttributeTypeBase<unsigned long long>::~ISchemaAttributeTypeBase(
         ISchemaAttributeTypeBase<long long unsigned int> *const this)
 {
-  this->_vptr_ISchemaAttributeType = off_479F1D0;
+  this->_vptr_ISchemaAttributeType = off_479F1D0;  // vptr: ISchemaAttributeType
 }
 
 
@@ -62,7 +62,7 @@ void __fastcall ISchemaAttributeTypeBase<unsigned long long>::~ISchemaAttributeT
 void __fastcall ISchemaAttributeTypeBase<CAttribute_ItemDynamicRecipeComponent>::~ISchemaAttributeTypeBase(
         ISchemaAttributeTypeBase<CAttribute_ItemDynamicRecipeComponent> *const this)
 {
-  this->_vptr_ISchemaAttributeType = off_479F1D0;
+  this->_vptr_ISchemaAttributeType = off_479F1D0;  // vptr: ISchemaAttributeType
 }
 
 
@@ -71,7 +71,7 @@ void __fastcall ISchemaAttributeTypeBase<CAttribute_ItemDynamicRecipeComponent>:
 void __fastcall ISchemaAttributeTypeBase<unsigned int>::~ISchemaAttributeTypeBase(
         ISchemaAttributeTypeBase<unsigned int> *const this)
 {
-  this->_vptr_ISchemaAttributeType = off_479F1D0;
+  this->_vptr_ISchemaAttributeType = off_479F1D0;  // vptr: ISchemaAttributeType
   operator delete(this);
 }
 
@@ -80,7 +80,7 @@ void __fastcall ISchemaAttributeTypeBase<unsigned int>::~ISchemaAttributeTypeBas
 // calls: operator delete
 void __fastcall ISchemaAttributeTypeBase<float>::~ISchemaAttributeTypeBase(ISchemaAttributeTypeBase<float> *const this)
 {
-  this->_vptr_ISchemaAttributeType = off_479F1D0;
+  this->_vptr_ISchemaAttributeType = off_479F1D0;  // vptr: ISchemaAttributeType
   operator delete(this);
 }
 
@@ -90,7 +90,7 @@ void __fastcall ISchemaAttributeTypeBase<float>::~ISchemaAttributeTypeBase(ISche
 void __fastcall ISchemaAttributeTypeBase<CAttribute_String>::~ISchemaAttributeTypeBase(
         ISchemaAttributeTypeBase<CAttribute_String> *const this)
 {
-  this->_vptr_ISchemaAttributeType = off_479F1D0;
+  this->_vptr_ISchemaAttributeType = off_479F1D0;  // vptr: ISchemaAttributeType
   operator delete(this);
 }
 
@@ -100,7 +100,7 @@ void __fastcall ISchemaAttributeTypeBase<CAttribute_String>::~ISchemaAttributeTy
 void __fastcall ISchemaAttributeTypeBase<CAttribute_Socket>::~ISchemaAttributeTypeBase(
         ISchemaAttributeTypeBase<CAttribute_Socket> *const this)
 {
-  this->_vptr_ISchemaAttributeType = off_479F1D0;
+  this->_vptr_ISchemaAttributeType = off_479F1D0;  // vptr: ISchemaAttributeType
   operator delete(this);
 }
 
@@ -110,7 +110,7 @@ void __fastcall ISchemaAttributeTypeBase<CAttribute_Socket>::~ISchemaAttributeTy
 void __fastcall ISchemaAttributeTypeBase<unsigned long long>::~ISchemaAttributeTypeBase(
         ISchemaAttributeTypeBase<long long unsigned int> *const this)
 {
-  this->_vptr_ISchemaAttributeType = off_479F1D0;
+  this->_vptr_ISchemaAttributeType = off_479F1D0;  // vptr: ISchemaAttributeType
   operator delete(this);
 }
 
@@ -120,7 +120,7 @@ void __fastcall ISchemaAttributeTypeBase<unsigned long long>::~ISchemaAttributeT
 void __fastcall ISchemaAttributeTypeBase<CAttribute_ItemDynamicRecipeComponent>::~ISchemaAttributeTypeBase(
         ISchemaAttributeTypeBase<CAttribute_ItemDynamicRecipeComponent> *const this)
 {
-  this->_vptr_ISchemaAttributeType = off_479F1D0;
+  this->_vptr_ISchemaAttributeType = off_479F1D0;  // vptr: ISchemaAttributeType
   operator delete(this);
 }
 
@@ -498,7 +498,7 @@ bool __fastcall ISchemaAttributeTypeBase<CAttribute_String>::OnIterateAttributeV
 void __fastcall CSchemaAttributeTypeBase<CAttribute_HeroStatue>::~CSchemaAttributeTypeBase(
         CSchemaAttributeTypeBase<CAttribute_HeroStatue> *const this)
 {
-  this->_vptr_ISchemaAttributeType = off_479F1D0;
+  this->_vptr_ISchemaAttributeType = off_479F1D0;  // vptr: ISchemaAttributeType
 }
 
 
@@ -507,7 +507,7 @@ void __fastcall CSchemaAttributeTypeBase<CAttribute_HeroStatue>::~CSchemaAttribu
 void __fastcall CSchemaAttributeTypeBase<CAttribute_HeroStatue>::~CSchemaAttributeTypeBase(
         CSchemaAttributeTypeBase<CAttribute_HeroStatue> *const this)
 {
-  this->_vptr_ISchemaAttributeType = off_479F1D0;
+  this->_vptr_ISchemaAttributeType = off_479F1D0;  // vptr: ISchemaAttributeType
   operator delete(this);
 }
 
@@ -516,14 +516,14 @@ void __fastcall CSchemaAttributeTypeBase<CAttribute_HeroStatue>::~CSchemaAttribu
 void __fastcall CSchemaAttributeTypeBase<unsigned int>::~CSchemaAttributeTypeBase(
         CSchemaAttributeTypeBase<unsigned int> *const this)
 {
-  this->_vptr_ISchemaAttributeType = off_479F1D0;
+  this->_vptr_ISchemaAttributeType = off_479F1D0;  // vptr: ISchemaAttributeType
 }
 
 
 // CSchemaAttributeTypeBase<float>::~CSchemaAttributeTypeBase  (line 310, @0x0000000002ea1f10, libserver.so)  // inlines: ~ISchemaAttributeType, ~ISchemaAttributeTypeBase
 void __fastcall CSchemaAttributeTypeBase<float>::~CSchemaAttributeTypeBase(CSchemaAttributeTypeBase<float> *const this)
 {
-  this->_vptr_ISchemaAttributeType = off_479F1D0;
+  this->_vptr_ISchemaAttributeType = off_479F1D0;  // vptr: ISchemaAttributeType
 }
 
 
@@ -531,7 +531,7 @@ void __fastcall CSchemaAttributeTypeBase<float>::~CSchemaAttributeTypeBase(CSche
 void __fastcall CSchemaAttributeTypeBase<CAttribute_String>::~CSchemaAttributeTypeBase(
         CSchemaAttributeTypeBase<CAttribute_String> *const this)
 {
-  this->_vptr_ISchemaAttributeType = off_479F1D0;
+  this->_vptr_ISchemaAttributeType = off_479F1D0;  // vptr: ISchemaAttributeType
 }
 
 
@@ -539,7 +539,7 @@ void __fastcall CSchemaAttributeTypeBase<CAttribute_String>::~CSchemaAttributeTy
 void __fastcall CSchemaAttributeTypeBase<CAttribute_Socket>::~CSchemaAttributeTypeBase(
         CSchemaAttributeTypeBase<CAttribute_Socket> *const this)
 {
-  this->_vptr_ISchemaAttributeType = off_479F1D0;
+  this->_vptr_ISchemaAttributeType = off_479F1D0;  // vptr: ISchemaAttributeType
 }
 
 
@@ -547,7 +547,7 @@ void __fastcall CSchemaAttributeTypeBase<CAttribute_Socket>::~CSchemaAttributeTy
 void __fastcall CSchemaAttributeTypeBase<unsigned long long>::~CSchemaAttributeTypeBase(
         CSchemaAttributeTypeBase<long long unsigned int> *const this)
 {
-  this->_vptr_ISchemaAttributeType = off_479F1D0;
+  this->_vptr_ISchemaAttributeType = off_479F1D0;  // vptr: ISchemaAttributeType
 }
 
 
@@ -555,7 +555,7 @@ void __fastcall CSchemaAttributeTypeBase<unsigned long long>::~CSchemaAttributeT
 void __fastcall CSchemaAttributeTypeBase<CAttribute_ItemDynamicRecipeComponent>::~CSchemaAttributeTypeBase(
         CSchemaAttributeTypeBase<CAttribute_ItemDynamicRecipeComponent> *const this)
 {
-  this->_vptr_ISchemaAttributeType = off_479F1D0;
+  this->_vptr_ISchemaAttributeType = off_479F1D0;  // vptr: ISchemaAttributeType
 }
 
 
@@ -564,7 +564,7 @@ void __fastcall CSchemaAttributeTypeBase<CAttribute_ItemDynamicRecipeComponent>:
 void __fastcall CSchemaAttributeTypeBase<unsigned int>::~CSchemaAttributeTypeBase(
         CSchemaAttributeTypeBase<unsigned int> *const this)
 {
-  this->_vptr_ISchemaAttributeType = off_479F1D0;
+  this->_vptr_ISchemaAttributeType = off_479F1D0;  // vptr: ISchemaAttributeType
   operator delete(this);
 }
 
@@ -573,7 +573,7 @@ void __fastcall CSchemaAttributeTypeBase<unsigned int>::~CSchemaAttributeTypeBas
 // calls: operator delete
 void __fastcall CSchemaAttributeTypeBase<float>::~CSchemaAttributeTypeBase(CSchemaAttributeTypeBase<float> *const this)
 {
-  this->_vptr_ISchemaAttributeType = off_479F1D0;
+  this->_vptr_ISchemaAttributeType = off_479F1D0;  // vptr: ISchemaAttributeType
   operator delete(this);
 }
 
@@ -583,7 +583,7 @@ void __fastcall CSchemaAttributeTypeBase<float>::~CSchemaAttributeTypeBase(CSche
 void __fastcall CSchemaAttributeTypeBase<CAttribute_String>::~CSchemaAttributeTypeBase(
         CSchemaAttributeTypeBase<CAttribute_String> *const this)
 {
-  this->_vptr_ISchemaAttributeType = off_479F1D0;
+  this->_vptr_ISchemaAttributeType = off_479F1D0;  // vptr: ISchemaAttributeType
   operator delete(this);
 }
 
@@ -593,7 +593,7 @@ void __fastcall CSchemaAttributeTypeBase<CAttribute_String>::~CSchemaAttributeTy
 void __fastcall CSchemaAttributeTypeBase<CAttribute_Socket>::~CSchemaAttributeTypeBase(
         CSchemaAttributeTypeBase<CAttribute_Socket> *const this)
 {
-  this->_vptr_ISchemaAttributeType = off_479F1D0;
+  this->_vptr_ISchemaAttributeType = off_479F1D0;  // vptr: ISchemaAttributeType
   operator delete(this);
 }
 
@@ -603,7 +603,7 @@ void __fastcall CSchemaAttributeTypeBase<CAttribute_Socket>::~CSchemaAttributeTy
 void __fastcall CSchemaAttributeTypeBase<unsigned long long>::~CSchemaAttributeTypeBase(
         CSchemaAttributeTypeBase<long long unsigned int> *const this)
 {
-  this->_vptr_ISchemaAttributeType = off_479F1D0;
+  this->_vptr_ISchemaAttributeType = off_479F1D0;  // vptr: ISchemaAttributeType
   operator delete(this);
 }
 
@@ -613,7 +613,7 @@ void __fastcall CSchemaAttributeTypeBase<unsigned long long>::~CSchemaAttributeT
 void __fastcall CSchemaAttributeTypeBase<CAttribute_ItemDynamicRecipeComponent>::~CSchemaAttributeTypeBase(
         CSchemaAttributeTypeBase<CAttribute_ItemDynamicRecipeComponent> *const this)
 {
-  this->_vptr_ISchemaAttributeType = off_479F1D0;
+  this->_vptr_ISchemaAttributeType = off_479F1D0;  // vptr: ISchemaAttributeType
   operator delete(this);
 }
 
@@ -622,7 +622,7 @@ void __fastcall CSchemaAttributeTypeBase<CAttribute_ItemDynamicRecipeComponent>:
 void __fastcall CSchemaAttributeTypeProtobufBase<CAttribute_String>::~CSchemaAttributeTypeProtobufBase(
         CSchemaAttributeTypeProtobufBase<CAttribute_String> *const this)
 {
-  this->_vptr_ISchemaAttributeType = off_479F1D0;
+  this->_vptr_ISchemaAttributeType = off_479F1D0;  // vptr: ISchemaAttributeType
 }
 
 
@@ -630,7 +630,7 @@ void __fastcall CSchemaAttributeTypeProtobufBase<CAttribute_String>::~CSchemaAtt
 void __fastcall CSchemaAttributeTypeProtobufBase<CAttribute_ItemDynamicRecipeComponent>::~CSchemaAttributeTypeProtobufBase(
         CSchemaAttributeTypeProtobufBase<CAttribute_ItemDynamicRecipeComponent> *const this)
 {
-  this->_vptr_ISchemaAttributeType = off_479F1D0;
+  this->_vptr_ISchemaAttributeType = off_479F1D0;  // vptr: ISchemaAttributeType
 }
 
 
@@ -639,7 +639,7 @@ void __fastcall CSchemaAttributeTypeProtobufBase<CAttribute_ItemDynamicRecipeCom
 void __fastcall CSchemaAttributeTypeProtobufBase<CAttribute_String>::~CSchemaAttributeTypeProtobufBase(
         CSchemaAttributeTypeProtobufBase<CAttribute_String> *const this)
 {
-  this->_vptr_ISchemaAttributeType = off_479F1D0;
+  this->_vptr_ISchemaAttributeType = off_479F1D0;  // vptr: ISchemaAttributeType
   operator delete(this);
 }
 
@@ -649,7 +649,7 @@ void __fastcall CSchemaAttributeTypeProtobufBase<CAttribute_String>::~CSchemaAtt
 void __fastcall CSchemaAttributeTypeProtobufBase<CAttribute_ItemDynamicRecipeComponent>::~CSchemaAttributeTypeProtobufBase(
         CSchemaAttributeTypeProtobufBase<CAttribute_ItemDynamicRecipeComponent> *const this)
 {
-  this->_vptr_ISchemaAttributeType = off_479F1D0;
+  this->_vptr_ISchemaAttributeType = off_479F1D0;  // vptr: ISchemaAttributeType
   operator delete(this);
 }
 
@@ -908,7 +908,7 @@ void __fastcall ISchemaAttributeTypeBase<CAttribute_HeroStatue>::LoadByteStreamT
       if ( DynamicAttributeInternal == 0 )
       {
         DynamicAttributeInternal = CEconItem::AddDynamicAttributeInternal(pTargetItem);
-        DynamicAttributeInternal->m_unDefinitionIndex = (*pAttrDef->_vptr_IEconItemAttributeDefinition)(pAttrDef);
+        DynamicAttributeInternal->m_unDefinitionIndex = pAttrDef->GetDefinitionIndex();
         (*(*v9 + 64LL))(v9, &DynamicAttributeInternal->m_value);
       }
       CProtoItemHeroStatue::CopyFrom(DynamicAttributeInternal->m_value.asBlobPointer, v22);
@@ -1003,7 +1003,7 @@ void __fastcall ISchemaAttributeTypeBase<unsigned long long>::LoadByteStreamToEc
       if ( DynamicAttributeInternal == 0 )
       {
         DynamicAttributeInternal = CEconItem::AddDynamicAttributeInternal(pTargetItem);
-        DynamicAttributeInternal->m_unDefinitionIndex = (*pAttrDef->_vptr_IEconItemAttributeDefinition)(pAttrDef);
+        DynamicAttributeInternal->m_unDefinitionIndex = pAttrDef->GetDefinitionIndex();
         (*(*v7 + 64LL))(v7, &DynamicAttributeInternal->m_value);
       }
       DynamicAttributeInternal->m_value.asUint64 = typedValue;
@@ -1095,7 +1095,7 @@ void __fastcall ISchemaAttributeTypeBase<unsigned int>::LoadByteStreamToEconAttr
       if ( DynamicAttributeInternal == 0 )
       {
         DynamicAttributeInternal = CEconItem::AddDynamicAttributeInternal(pTargetItem);
-        DynamicAttributeInternal->m_unDefinitionIndex = (*pAttrDef->_vptr_IEconItemAttributeDefinition)(pAttrDef);
+        DynamicAttributeInternal->m_unDefinitionIndex = pAttrDef->GetDefinitionIndex();
         (*(*v7 + 64LL))(v7, &DynamicAttributeInternal->m_value);
       }
       DynamicAttributeInternal->m_value.asUint32 = typedValue;
@@ -1187,7 +1187,7 @@ void __fastcall ISchemaAttributeTypeBase<float>::LoadByteStreamToEconAttributeVa
       if ( DynamicAttributeInternal == 0 )
       {
         DynamicAttributeInternal = CEconItem::AddDynamicAttributeInternal(pTargetItem);
-        DynamicAttributeInternal->m_unDefinitionIndex = (*pAttrDef->_vptr_IEconItemAttributeDefinition)(pAttrDef);
+        DynamicAttributeInternal->m_unDefinitionIndex = pAttrDef->GetDefinitionIndex();
         (*(*v7 + 64LL))(v7, &DynamicAttributeInternal->m_value);
       }
       DynamicAttributeInternal->m_value.asFloat = typedValue;
@@ -1280,7 +1280,7 @@ void __fastcall ISchemaAttributeTypeBase<CAttribute_Socket>::LoadByteStreamToEco
       if ( DynamicAttributeInternal == 0 )
       {
         DynamicAttributeInternal = CEconItem::AddDynamicAttributeInternal(pTargetItem);
-        DynamicAttributeInternal->m_unDefinitionIndex = (*pAttrDef->_vptr_IEconItemAttributeDefinition)(pAttrDef);
+        DynamicAttributeInternal->m_unDefinitionIndex = pAttrDef->GetDefinitionIndex();
         (*(*v7 + 64LL))(v7, &DynamicAttributeInternal->m_value);
       }
       DynamicAttributeInternal->m_value.asUint64 = (*(typedValue.m_pSocket->_vptr_IItemSocket + 2))(typedValue.m_pSocket);
@@ -1378,7 +1378,7 @@ void __fastcall ISchemaAttributeTypeBase<CAttribute_String>::LoadByteStreamToEco
       if ( DynamicAttributeInternal == 0 )
       {
         DynamicAttributeInternal = CEconItem::AddDynamicAttributeInternal(pTargetItem);
-        DynamicAttributeInternal->m_unDefinitionIndex = (*pAttrDef->_vptr_IEconItemAttributeDefinition)(pAttrDef);
+        DynamicAttributeInternal->m_unDefinitionIndex = pAttrDef->GetDefinitionIndex();
         (*(*v9 + 64LL))(v9, &DynamicAttributeInternal->m_value);
       }
       CAttribute_String::CopyFrom(DynamicAttributeInternal->m_value.asBlobPointer, v20);
@@ -1474,7 +1474,7 @@ void __fastcall ISchemaAttributeTypeBase<CAttribute_ItemDynamicRecipeComponent>:
       if ( DynamicAttributeInternal == 0 )
       {
         DynamicAttributeInternal = CEconItem::AddDynamicAttributeInternal(pTargetItem);
-        DynamicAttributeInternal->m_unDefinitionIndex = (*pAttrDef->_vptr_IEconItemAttributeDefinition)(pAttrDef);
+        DynamicAttributeInternal->m_unDefinitionIndex = pAttrDef->GetDefinitionIndex();
         (*(*v9 + 64LL))(v9, &DynamicAttributeInternal->m_value);
       }
       CAttribute_ItemDynamicRecipeComponent::CopyFrom(DynamicAttributeInternal->m_value.asBlobPointer, v22);
@@ -1639,7 +1639,7 @@ void __fastcall ISchemaAttributeTypeBase<CAttribute_HeroStatue>::LoadEconAttribu
       if ( DynamicAttributeInternal == 0 )
       {
         DynamicAttributeInternal = CEconItem::AddDynamicAttributeInternal(pTargetItem);
-        DynamicAttributeInternal->m_unDefinitionIndex = (*pAttrDef->_vptr_IEconItemAttributeDefinition)(pAttrDef);
+        DynamicAttributeInternal->m_unDefinitionIndex = pAttrDef->GetDefinitionIndex();
         (*(*v8 + 64LL))(v8, &DynamicAttributeInternal->m_value);
       }
       CProtoItemHeroStatue::CopyFrom(DynamicAttributeInternal->m_value.asBlobPointer, asUint64);
@@ -1731,7 +1731,7 @@ void __fastcall ISchemaAttributeTypeBase<unsigned long long>::LoadEconAttributeV
       if ( DynamicAttributeInternal == 0 )
       {
         DynamicAttributeInternal = CEconItem::AddDynamicAttributeInternal(pTargetItem);
-        DynamicAttributeInternal->m_unDefinitionIndex = (*pAttrDef->_vptr_IEconItemAttributeDefinition)(pAttrDef);
+        DynamicAttributeInternal->m_unDefinitionIndex = pAttrDef->GetDefinitionIndex();
         (*(*v8 + 64LL))(v8, &DynamicAttributeInternal->m_value);
       }
       DynamicAttributeInternal->m_value = *value;
@@ -1821,7 +1821,7 @@ void __fastcall ISchemaAttributeTypeBase<float>::LoadEconAttributeValue(
       if ( DynamicAttributeInternal == 0 )
       {
         DynamicAttributeInternal = CEconItem::AddDynamicAttributeInternal(pTargetItem);
-        DynamicAttributeInternal->m_unDefinitionIndex = (*pAttrDef->_vptr_IEconItemAttributeDefinition)(pAttrDef);
+        DynamicAttributeInternal->m_unDefinitionIndex = pAttrDef->GetDefinitionIndex();
         (*(*v8 + 64LL))(v8, &DynamicAttributeInternal->m_value);
       }
       DynamicAttributeInternal->m_value.asUint32 = value->asUint32;
@@ -1911,7 +1911,7 @@ void __fastcall ISchemaAttributeTypeBase<unsigned int>::LoadEconAttributeValue(
       if ( DynamicAttributeInternal == 0 )
       {
         DynamicAttributeInternal = CEconItem::AddDynamicAttributeInternal(pTargetItem);
-        DynamicAttributeInternal->m_unDefinitionIndex = (*pAttrDef->_vptr_IEconItemAttributeDefinition)(pAttrDef);
+        DynamicAttributeInternal->m_unDefinitionIndex = pAttrDef->GetDefinitionIndex();
         (*(*v8 + 64LL))(v8, &DynamicAttributeInternal->m_value);
       }
       DynamicAttributeInternal->m_value.asUint32 = value->asUint32;
@@ -2002,7 +2002,7 @@ void __fastcall ISchemaAttributeTypeBase<CAttribute_Socket>::LoadEconAttributeVa
       if ( DynamicAttributeInternal == 0 )
       {
         DynamicAttributeInternal = CEconItem::AddDynamicAttributeInternal(pTargetItem);
-        DynamicAttributeInternal->m_unDefinitionIndex = (*pAttrDef->_vptr_IEconItemAttributeDefinition)(pAttrDef);
+        DynamicAttributeInternal->m_unDefinitionIndex = pAttrDef->GetDefinitionIndex();
         (*(*v8 + 64LL))(v8, &DynamicAttributeInternal->m_value);
       }
       v10 = (*(*value->asBlobPointer + 16LL))(value->asUint64);
@@ -2098,7 +2098,7 @@ void __fastcall ISchemaAttributeTypeBase<CAttribute_String>::LoadEconAttributeVa
       if ( DynamicAttributeInternal == 0 )
       {
         DynamicAttributeInternal = CEconItem::AddDynamicAttributeInternal(pTargetItem);
-        DynamicAttributeInternal->m_unDefinitionIndex = (*pAttrDef->_vptr_IEconItemAttributeDefinition)(pAttrDef);
+        DynamicAttributeInternal->m_unDefinitionIndex = pAttrDef->GetDefinitionIndex();
         (*(*v8 + 64LL))(v8, &DynamicAttributeInternal->m_value);
       }
       CAttribute_String::CopyFrom(DynamicAttributeInternal->m_value.asBlobPointer, asUint64);
@@ -2192,7 +2192,7 @@ void __fastcall ISchemaAttributeTypeBase<CAttribute_ItemDynamicRecipeComponent>:
       if ( DynamicAttributeInternal == 0 )
       {
         DynamicAttributeInternal = CEconItem::AddDynamicAttributeInternal(pTargetItem);
-        DynamicAttributeInternal->m_unDefinitionIndex = (*pAttrDef->_vptr_IEconItemAttributeDefinition)(pAttrDef);
+        DynamicAttributeInternal->m_unDefinitionIndex = pAttrDef->GetDefinitionIndex();
         (*(*v8 + 64LL))(v8, &DynamicAttributeInternal->m_value);
       }
       CAttribute_ItemDynamicRecipeComponent::CopyFrom(DynamicAttributeInternal->m_value.asBlobPointer, asUint64);

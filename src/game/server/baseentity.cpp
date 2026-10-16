@@ -5676,17 +5676,17 @@ int __fastcall CBaseEntity::ShouldTransmit(CBaseEntity *const this, const CGameC
   if ( !pInfo->m_bRecipientLowViolence || (v3 = 8, !this->m_bDisableLowViolence) )
   {
     v3 = 8;
-    if ( this->m_pEntity )
+    if ( this->m_pEntity != 0 )
     {
       v3 = CBaseEntity::DispatchUpdateTransmitState(this) & 0x1C;
-      if ( !v3 )
+      if ( v3 == 0 )
       {
         v3 = 16;
         m_pRecipientTeam = pInfo->m_pRecipientTeam;
-        if ( m_pRecipientTeam )
+        if ( m_pRecipientTeam != 0 )
         {
           v5 = (*(m_pRecipientTeam->_vptr_IHandleEntity + 210))(m_pRecipientTeam, pInfo, this);
-          if ( v5 )
+          if ( v5 != 0 )
             return v5;
         }
       }

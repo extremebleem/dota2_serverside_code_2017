@@ -171,7 +171,7 @@ void __fastcall CThreadSafeMultiMemoryPool::~CThreadSafeMultiMemoryPool(CThreadS
   bool v12; // zf
 
   p_m_mutexRawAllocations = &this->m_mutexRawAllocations;
-  CurrentId = ThreadGetCurrentId(this);
+  CurrentId = ThreadGetCurrentId();
   if ( CurrentId != this->m_mutexRawAllocations.m_ownerID
     && _InterlockedCompareExchange64(p_m_mutexRawAllocations, CurrentId, 0) != 0 )
   {
@@ -251,29 +251,28 @@ void __fastcall CThreadSafeMultiMemoryPool::~CThreadSafeMultiMemoryPool(CThreadS
 void *__fastcall CThreadSafeMultiMemoryPool::Alloc(CThreadSafeMultiMemoryPool *const this, uint32 cubAllocSize)
 {
   uint32 *v4; // rax
-  __int64 v5; // rdi
-  uint32 *v6; // r13
+  uint32 *v5; // r13
   signed __int64 CurrentId; // rsi
-  void *v8; // r13
-  _DWORD *v10; // rax
+  void *v7; // r13
+  _DWORD *v9; // rax
   CUtlMap<void*,CThreadSafeMultiMemoryPool::RawAllocation_t,int,bool (*)(void* const&,void* const&)>::Node_t insert; // [rsp+0h] [rbp-40h] BYREF
 
   if ( cubAllocSize == 0 )
     return 0;
   if ( cubAllocSize <= this->m_nBlockSizeMax )
   {
-    v10 = CThreadSafeMemoryPool::Alloc(
-            this->m_VecMemPoolLookup.m_Memory.m_pMemory[(cubAllocSize - 1) >> 5]->m_pMemPool,
-            cubAllocSize + 4);
-    *v10 = cubAllocSize;
-    return v10 + 1;
+    v9 = CThreadSafeMemoryPool::Alloc(
+           this->m_VecMemPoolLookup.m_Memory.m_pMemory[(cubAllocSize - 1) >> 5]->m_pMemPool,
+           cubAllocSize + 4);
+    *v9 = cubAllocSize;
+    return v9 + 1;
   }
   v4 = (**g_pMemAlloc)(g_pMemAlloc, cubAllocSize + 4);
-  v6 = v4;
+  v5 = v4;
   if ( v4 == 0 )
     return 0;
   *v4 = cubAllocSize;
-  CurrentId = ThreadGetCurrentId(v5);
+  CurrentId = ThreadGetCurrentId();
   if ( CurrentId != this->m_mutexRawAllocations.m_ownerID
     && _InterlockedCompareExchange64(&this->m_mutexRawAllocations, CurrentId, 0) != 0 )
   {
@@ -284,17 +283,17 @@ void *__fastcall CThreadSafeMultiMemoryPool::Alloc(CThreadSafeMultiMemoryPool *c
   {
     ++this->m_mutexRawAllocations.m_depth;
   }
-  insert.key = v6;
-  insert.elem.m_pvMem = v6;
+  insert.key = v5;
+  insert.elem.m_pvMem = v5;
   insert.elem.m_nBlockSize = cubAllocSize;
   CUtlRBTree<CUtlMap<void *,CThreadSafeMultiMemoryPool::RawAllocation_t,int,bool (*)(void * const&,void * const&)>::Node_t,int,CUtlMap<void *,CThreadSafeMultiMemoryPool::RawAllocation_t,int,bool (*)(void * const&,void * const&)>::CKeyLess,CUtlMemory<UtlRBTreeNode_t<CUtlMap<void *,CThreadSafeMultiMemoryPool::RawAllocation_t,int,bool (*)(void * const&,void * const&)>::Node_t,int>,int>>::Insert(
     &this->m_MapRawAllocation.m_Tree,
     &insert,
     ERBTreeInsertBehavior::k_eInsertAssertAboutDupes);
-  v8 = v6 + 1;
+  v7 = v5 + 1;
   if ( --this->m_mutexRawAllocations.m_depth == 0 )
     ThreadInterlockedExchange64(&this->m_mutexRawAllocations, 0);
-  return v8;
+  return v7;
 }
 
 
@@ -322,7 +321,7 @@ void __fastcall CThreadSafeMultiMemoryPool::Free(CThreadSafeMultiMemoryPool *con
       return;
     }
     p_m_mutexRawAllocations = &this->m_mutexRawAllocations;
-    CurrentId = ThreadGetCurrentId(this);
+    CurrentId = ThreadGetCurrentId();
     if ( CurrentId != this->m_mutexRawAllocations.m_ownerID
       && _InterlockedCompareExchange64(p_m_mutexRawAllocations, CurrentId, 0) != 0 )
     {
@@ -382,7 +381,7 @@ void __fastcall CThreadSafeMultiMemoryPool::Clear(CThreadSafeMultiMemoryPool *co
   UtlRBTreeNode_t<CUtlMap<void*,CThreadSafeMultiMemoryPool::RawAllocation_t,int>::Node_t,int> *v9; // rdx
 
   p_m_mutexRawAllocations = &this->m_mutexRawAllocations;
-  CurrentId = ThreadGetCurrentId(this);
+  CurrentId = ThreadGetCurrentId();
   if ( CurrentId != this->m_mutexRawAllocations.m_ownerID
     && _InterlockedCompareExchange64(p_m_mutexRawAllocations, CurrentId, 0) != 0 )
   {
@@ -444,7 +443,7 @@ void __fastcall CThreadSafeMultiMemoryPool::PrintStats(CThreadSafeMultiMemoryPoo
     m_pMemPool = this->m_VecMemPool.m_Memory.m_pMemory[v1++].m_pMemPool;
     CThreadSafeMemoryPool::PrintStats(m_pMemPool);
   }
-  CurrentId = ThreadGetCurrentId(this);
+  CurrentId = ThreadGetCurrentId();
   if ( CurrentId != this->m_mutexRawAllocations.m_ownerID
     && _InterlockedCompareExchange64(&this->m_mutexRawAllocations, CurrentId, 0) != 0 )
   {
@@ -510,7 +509,7 @@ int __fastcall CThreadSafeMultiMemoryPool::CMBPoolSize(const CThreadSafeMultiMem
       v3 += CThreadSafeMemoryPool::CubTotalSize(this->m_VecMemPool.m_Memory.m_pMemory[v2++].m_pMemPool);
     while ( v2 < this->m_VecMemPool.m_Size );
   }
-  CurrentId = ThreadGetCurrentId(this);
+  CurrentId = ThreadGetCurrentId();
   if ( CurrentId != this->m_mutexRawAllocations.m_ownerID
     && _InterlockedCompareExchange64(&this->m_mutexRawAllocations, CurrentId, 0) != 0 )
   {
@@ -571,7 +570,7 @@ int __fastcall CThreadSafeMultiMemoryPool::CMBPoolSizeInUse(const CThreadSafeMul
       v3 += CThreadSafeMemoryPool::CubSizeInUse(this->m_VecMemPool.m_Memory.m_pMemory[v2++].m_pMemPool);
     while ( v2 < this->m_VecMemPool.m_Size );
   }
-  CurrentId = ThreadGetCurrentId(this);
+  CurrentId = ThreadGetCurrentId();
   if ( CurrentId != this->m_mutexRawAllocations.m_ownerID
     && _InterlockedCompareExchange64(&this->m_mutexRawAllocations, CurrentId, 0) != 0 )
   {
@@ -683,7 +682,7 @@ LABEL_16:
 LABEL_4:
   p_m_mutexRawAllocations = &this->m_mutexRawAllocations;
   generated_id_291 = &this->m_mutexRawAllocations;
-  CurrentId = ThreadGetCurrentId(this);
+  CurrentId = ThreadGetCurrentId();
   if ( CurrentId == this->m_mutexRawAllocations.m_ownerID
     || _InterlockedCompareExchange64(p_m_mutexRawAllocations, CurrentId, 0) == 0 )
   {

@@ -144,7 +144,7 @@ void __fastcall NavDrawFilledTriangle(
     v11 = BYTE1(Color) >> 1;
     LOBYTE(v12) = BYTE2(Color) >> 1;
   }
-  NDebugOverlay::Triangle(vPoint1, vPoint2, vPoint3, v10, v11, v12, 255, 1, 0.01023);
+  NDebugOverlay::Triangle(vPoint1, vPoint2, vPoint3, v10, v11, v12, 0.01023, 255, 1);
 }
 
 
@@ -196,8 +196,8 @@ void __fastcall NavDrawHorizontalArrow(
     BYTE1(Color) >> 1,
     BYTE2(Color) >> 1,
     255,
-    1,
-    0.01023);
+    0.01023,
+    1);
   x = vTo->x;
   v14 = vTo->y + 0.0;
   endPos.z = vTo->z + 1.0;
@@ -209,7 +209,7 @@ void __fastcall NavDrawHorizontalArrow(
   startPos.y = v15;
   startPos.z = v16;
   startPos.x = v17;
-  NDebugOverlay::HorzArrow(&startPos, &endPos, flWidth, v7, v19, v18, 255, 0, 0.01023);
+  NDebugOverlay::HorzArrow(&startPos, &endPos, flWidth, v7, v19, v18, 255, 0.01023, 0);
 }
 
 
@@ -560,7 +560,7 @@ void __fastcall CNavDrawPoly::DrawVertHotspot(const CNavPoly *const rPoly, int n
 {
   __int16 v3; // bx
   unsigned __int8 v4; // r15d^2
-  int v5; // r15d
+  unsigned int v5; // r15d
   Vector v6; // [rsp-20h] [rbp-88h] BYREF
   Vector v7; // [rsp-10h] [rbp-78h] BYREF
   Vector vHotspotVerts[4]; // [rsp+0h] [rbp-68h] BYREF
@@ -1861,8 +1861,8 @@ void __fastcall CNavDrawAreaExt::DrawArea_Internal(
   vec_t x; // xmm2_4
   vec_t z; // xmm0_4
   float LightIntensity; // xmm0_4
-  int v12; // r8d
-  int v13; // edx
+  unsigned int v12; // r8d
+  signed int v13; // edx
   ISceneViewDebugOverlays *v14; // rbx
   vec_t v15; // xmm1_4
   vec_t v16; // r13d
@@ -2240,7 +2240,7 @@ LABEL_49:
           p1.y = v85 + v74;
           v81 = v85 + v74;
           p1.z = v84 + 0.0;
-          NDebugOverlay::Triangle(&p1, &target, &origin, bgcolor[0], bgcolor[1], bgcolor[2], bgcolor[3], 1, 0.15000001);
+          NDebugOverlay::Triangle(&p1, &target, &origin, bgcolor[0], bgcolor[1], bgcolor[2], 0.15000001, bgcolor[3], 1);
           target.z = flOffset + 0.0;
           target.x = v78 + vTop_4;
           origin.x = v80;
@@ -2250,7 +2250,7 @@ LABEL_49:
           p1.x = v76;
           p1.y = v77;
           p1.z = v91 + 0.0;
-          NDebugOverlay::Triangle(&p1, &target, &origin, bgcolor[0], bgcolor[1], bgcolor[2], bgcolor[3], 1, 0.15000001);
+          NDebugOverlay::Triangle(&p1, &target, &origin, bgcolor[0], bgcolor[1], bgcolor[2], 0.15000001, bgcolor[3], 1);
           goto LABEL_18;
         }
       }

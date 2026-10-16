@@ -392,7 +392,7 @@ void *__fastcall CDevtestHierarchy::CEntityInstanceEntityClass::AllocateInstance
 void __fastcall CDevtestHierarchy::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDevtestHierarchy::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -402,7 +402,7 @@ void __fastcall CDevtestHierarchy::CEntityInstanceEntityClass::~CEntityInstanceE
 void __fastcall CDevtestHierarchy::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDevtestHierarchy::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -784,7 +784,7 @@ CEntityInstance *__fastcall CDevtestHierarchyChild::CEntityInstanceEntityClass::
 void __fastcall CDevtestHierarchyChild::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDevtestHierarchyChild::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -794,7 +794,7 @@ void __fastcall CDevtestHierarchyChild::CEntityInstanceEntityClass::~CEntityInst
 void __fastcall CDevtestHierarchyChild::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDevtestHierarchyChild::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -2370,7 +2370,7 @@ CEntityInstance *__fastcall CDevtestHierarchy2::CEntityInstanceEntityClass::Cons
 void __fastcall CDevtestHierarchy2::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDevtestHierarchy2::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -2380,7 +2380,7 @@ void __fastcall CDevtestHierarchy2::CEntityInstanceEntityClass::~CEntityInstance
 void __fastcall CDevtestHierarchy2::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDevtestHierarchy2::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }

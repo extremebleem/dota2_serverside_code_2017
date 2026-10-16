@@ -31,7 +31,7 @@ bool __fastcall CSource2GameClients::ClientCanPause(CSource2GameClients *const t
 void __fastcall CGCClientJobGetHLTVChatBanStatus::~CGCClientJobGetHLTVChatBanStatus(
         CGCClientJobGetHLTVChatBanStatus *const this)
 {
-  this->_vptr_CJob = off_40DB690;
+  this->_vptr_CJob = off_40DB690;  // vptr: GCSDK::CGCClientJob
   GCSDK::CJob::~CJob(this);
 }
 
@@ -41,7 +41,7 @@ void __fastcall CGCClientJobGetHLTVChatBanStatus::~CGCClientJobGetHLTVChatBanSta
 void __fastcall CGCClientJobGetHLTVChatBanStatus::~CGCClientJobGetHLTVChatBanStatus(
         CGCClientJobGetHLTVChatBanStatus *const this)
 {
-  this->_vptr_CJob = off_40DB690;
+  this->_vptr_CJob = off_40DB690;  // vptr: GCSDK::CGCClientJob
   GCSDK::CJob::~CJob(this);
   operator delete(this);
 }

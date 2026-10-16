@@ -11,7 +11,7 @@ void __fastcall CDOTA_Bot_AbilityUsage_ObserverWard::CDOTA_Bot_AbilityUsage_Obse
   this->m_pAbility = pAbility;
   this->m_bUseOnCreeps = 0;
   this->m_pBot = pBot;
-  this->_vptr_CDOTA_Bot_AbilityUsage = off_42C6FD0;
+  this->_vptr_CDOTA_Bot_AbilityUsage = off_42C6FD0;  // vptr: CDOTA_Bot_AbilityUsage_ObserverWard
 }
 
 
@@ -170,7 +170,7 @@ void __fastcall CDOTA_Bot_AbilityUsage_WardDispenser::CDOTA_Bot_AbilityUsage_War
   vec_t z; // eax
 
   this->m_pAbility = pAbility;
-  this->_vptr_CDOTA_Bot_AbilityUsage = off_42C7030;
+  this->_vptr_CDOTA_Bot_AbilityUsage = off_42C7030;  // vptr: CDOTA_Bot_AbilityUsage_WardDispenser
   this->m_bUseOnCreeps = 0;
   this->m_pBot = pBot;
   v3 = *&vec3_invalid.x;

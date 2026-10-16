@@ -2736,9 +2736,13 @@ unsigned __int16 __fastcall CUtlLinkedList<CFuncNavBlocker *,unsigned short,fals
   unsigned __int16 v12; // si
   int v13; // ecx
   __int64 v14; // rdi
-  __int64 v15; // rcx
-  unsigned __int16 v16; // [rsp+Ch] [rbp-34h]
-  LeafCodeInfo_t v17; // [rsp+10h] [rbp-30h] BYREF
+  __int64 v15; // rdx
+  __int64 v16; // rcx
+  __int64 v17; // rdi
+  __int64 v18; // rsi
+  __int64 v19; // rcx
+  unsigned __int16 v20; // [rsp+Ch] [rbp-34h]
+  LeafCodeInfo_t v21; // [rsp+10h] [rbp-30h] BYREF
 
   v3 = this;
   result = this->m_FirstFree;
@@ -2761,31 +2765,31 @@ LABEL_24:
       v3 = &LOG_GENERAL;
       if ( LoggingSystem_IsChannelEnabled(LOG_GENERAL, 4) != 0 )
       {
-        v17.m_szFile = "../../public/tier1/utllinkedlist.h";
-        v17.m_szFunction = "AllocInternal";
-        v17.m_nLine = 708;
+        v21.m_szFile = "../../public/tier1/utllinkedlist.h";
+        v21.m_szFunction = "AllocInternal";
+        v21.m_nLine = 708;
         LoggingSystem_Log(
           LOG_GENERAL,
           LoggingSeverity_t::LS_ERROR,
-          &v17,
+          &v21,
           "CUtlLinkedList overflow! (exhausted index range)\n");
       }
       while ( 1 )
       {
-        if ( Plat_ShouldCollectMiniDumpsForFatalErrors() != 0 )
+        if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v17, v18, v15, v16) != 0 )
           loc_0 = -559038737;
         result = Plat_ExitProcess(1);
 LABEL_20:
         v11 = index + 1;
-        v15 = 0xFFFF;
+        v19 = 0xFFFF;
         if ( v9 <= v11 )
           v11 = result;
         else
-          v15 = v11;
-        if ( v9 > v15 )
+          v19 = v11;
+        if ( v9 > v19 )
           break;
 LABEL_10:
-        v16 = result;
+        v20 = result;
         CUtlMemory<UtlLinkedListElem_t<CFuncNavBlocker *,unsigned short>,unsigned short>::Grow(&v3->m_Memory, 1);
         v12 = v3->m_LastAlloc.index;
         v13 = v3->m_Memory.m_nAllocationCount;
@@ -2802,7 +2806,7 @@ LABEL_10:
           v11 = v12 + 1;
           v14 = 0xFFFF;
           if ( v13 <= v11 )
-            v11 = v16;
+            v11 = v20;
           else
             v14 = v11;
         }
@@ -2811,13 +2815,13 @@ LABEL_10:
         v3 = &LOG_GENERAL;
         if ( LoggingSystem_IsChannelEnabled(LOG_GENERAL, 4) != 0 )
         {
-          v17.m_szFile = "../../public/tier1/utllinkedlist.h";
-          v17.m_szFunction = "AllocInternal";
-          v17.m_nLine = 699;
+          v21.m_szFile = "../../public/tier1/utllinkedlist.h";
+          v21.m_szFunction = "AllocInternal";
+          v21.m_nLine = 699;
           LoggingSystem_Log(
             LOG_GENERAL,
             LoggingSeverity_t::LS_ERROR,
-            &v17,
+            &v21,
             "CUtlLinkedList overflow! (exhausted memory allocator)\n");
         }
       }
@@ -2868,9 +2872,13 @@ unsigned __int16 __fastcall CUtlLinkedList<INextBot *,unsigned short,false,unsig
   unsigned __int16 v12; // si
   int v13; // ecx
   __int64 v14; // rdi
-  __int64 v15; // rcx
-  unsigned __int16 v16; // [rsp+Ch] [rbp-34h]
-  LeafCodeInfo_t v17; // [rsp+10h] [rbp-30h] BYREF
+  __int64 v15; // rdx
+  __int64 v16; // rcx
+  __int64 v17; // rdi
+  __int64 v18; // rsi
+  __int64 v19; // rcx
+  unsigned __int16 v20; // [rsp+Ch] [rbp-34h]
+  LeafCodeInfo_t v21; // [rsp+10h] [rbp-30h] BYREF
 
   v3 = this;
   result = this->m_FirstFree;
@@ -2893,31 +2901,31 @@ LABEL_24:
       v3 = &LOG_GENERAL;
       if ( LoggingSystem_IsChannelEnabled(LOG_GENERAL, 4) != 0 )
       {
-        v17.m_szFile = "../../public/tier1/utllinkedlist.h";
-        v17.m_szFunction = "AllocInternal";
-        v17.m_nLine = 708;
+        v21.m_szFile = "../../public/tier1/utllinkedlist.h";
+        v21.m_szFunction = "AllocInternal";
+        v21.m_nLine = 708;
         LoggingSystem_Log(
           LOG_GENERAL,
           LoggingSeverity_t::LS_ERROR,
-          &v17,
+          &v21,
           "CUtlLinkedList overflow! (exhausted index range)\n");
       }
       while ( 1 )
       {
-        if ( Plat_ShouldCollectMiniDumpsForFatalErrors() != 0 )
+        if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v17, v18, v15, v16) != 0 )
           loc_0 = -559038737;
         result = Plat_ExitProcess(1);
 LABEL_20:
         v11 = index + 1;
-        v15 = 0xFFFF;
+        v19 = 0xFFFF;
         if ( v9 <= v11 )
           v11 = result;
         else
-          v15 = v11;
-        if ( v9 > v15 )
+          v19 = v11;
+        if ( v9 > v19 )
           break;
 LABEL_10:
-        v16 = result;
+        v20 = result;
         CUtlMemory<UtlLinkedListElem_t<INextBot *,unsigned short>,unsigned short>::Grow(&v3->m_Memory, 1);
         v12 = v3->m_LastAlloc.index;
         v13 = v3->m_Memory.m_nAllocationCount;
@@ -2934,7 +2942,7 @@ LABEL_10:
           v11 = v12 + 1;
           v14 = 0xFFFF;
           if ( v13 <= v11 )
-            v11 = v16;
+            v11 = v20;
           else
             v14 = v11;
         }
@@ -2943,13 +2951,13 @@ LABEL_10:
         v3 = &LOG_GENERAL;
         if ( LoggingSystem_IsChannelEnabled(LOG_GENERAL, 4) != 0 )
         {
-          v17.m_szFile = "../../public/tier1/utllinkedlist.h";
-          v17.m_szFunction = "AllocInternal";
-          v17.m_nLine = 699;
+          v21.m_szFile = "../../public/tier1/utllinkedlist.h";
+          v21.m_szFunction = "AllocInternal";
+          v21.m_nLine = 699;
           LoggingSystem_Log(
             LOG_GENERAL,
             LoggingSeverity_t::LS_ERROR,
-            &v17,
+            &v21,
             "CUtlLinkedList overflow! (exhausted memory allocator)\n");
         }
       }
@@ -3004,7 +3012,9 @@ int __fastcall CUtlLinkedList<GCSDK::CJobMgr::JobYielding_t,int,false,int,CUtlMe
   __int64 v16; // rsi
   __int64 v17; // r8
   __int64 v18; // r9
-  LeafCodeInfo_t v19; // [rsp+0h] [rbp-30h] BYREF
+  __int64 v19; // r8
+  __int64 v20; // r9
+  LeafCodeInfo_t v21; // [rsp+0h] [rbp-30h] BYREF
 
   v3 = this;
   result = this->m_FirstFree;
@@ -3052,20 +3062,20 @@ LABEL_10:
     v3 = &LOG_GENERAL;
     if ( LoggingSystem_IsChannelEnabled(LOG_GENERAL, 4) != 0 )
     {
-      v19.m_szFile = "../public/tier1/utllinkedlist.h";
-      v19.m_szFunction = "AllocInternal";
-      v19.m_nLine = 708;
+      v21.m_szFile = "../public/tier1/utllinkedlist.h";
+      v21.m_szFunction = "AllocInternal";
+      v21.m_nLine = 708;
       LoggingSystem_Log(
         LOG_GENERAL,
         LoggingSeverity_t::LS_ERROR,
-        &v19,
+        &v21,
         "CUtlLinkedList overflow! (exhausted index range)\n",
-        v17,
-        v18);
+        v19,
+        v20);
     }
     while ( 1 )
     {
-      if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v15, v16, v13, v14, v17, v18) != 0 )
+      if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v15, v16, v13, v14) != 0 )
         loc_0 = -559038737;
       Plat_ExitProcess(1);
 LABEL_23:
@@ -3075,13 +3085,13 @@ LABEL_18:
       v3 = &LOG_GENERAL;
       if ( LoggingSystem_IsChannelEnabled(LOG_GENERAL, 4) != 0 )
       {
-        v19.m_szFile = "../public/tier1/utllinkedlist.h";
-        v19.m_szFunction = "AllocInternal";
-        v19.m_nLine = 699;
+        v21.m_szFile = "../public/tier1/utllinkedlist.h";
+        v21.m_szFunction = "AllocInternal";
+        v21.m_nLine = 699;
         LoggingSystem_Log(
           LOG_GENERAL,
           LoggingSeverity_t::LS_ERROR,
-          &v19,
+          &v21,
           "CUtlLinkedList overflow! (exhausted memory allocator)\n",
           v17,
           v18);
@@ -3134,7 +3144,9 @@ int __fastcall CUtlLinkedList<GCSDK::CJobMgr::JobTimeout_t,int,false,int,CUtlMem
   __int64 v16; // rsi
   __int64 v17; // r8
   __int64 v18; // r9
-  LeafCodeInfo_t v19; // [rsp+0h] [rbp-30h] BYREF
+  __int64 v19; // r8
+  __int64 v20; // r9
+  LeafCodeInfo_t v21; // [rsp+0h] [rbp-30h] BYREF
 
   v3 = this;
   result = this->m_FirstFree;
@@ -3182,20 +3194,20 @@ LABEL_10:
     v3 = &LOG_GENERAL;
     if ( LoggingSystem_IsChannelEnabled(LOG_GENERAL, 4) != 0 )
     {
-      v19.m_szFile = "../public/tier1/utllinkedlist.h";
-      v19.m_szFunction = "AllocInternal";
-      v19.m_nLine = 708;
+      v21.m_szFile = "../public/tier1/utllinkedlist.h";
+      v21.m_szFunction = "AllocInternal";
+      v21.m_nLine = 708;
       LoggingSystem_Log(
         LOG_GENERAL,
         LoggingSeverity_t::LS_ERROR,
-        &v19,
+        &v21,
         "CUtlLinkedList overflow! (exhausted index range)\n",
-        v17,
-        v18);
+        v19,
+        v20);
     }
     while ( 1 )
     {
-      if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v15, v16, v13, v14, v17, v18) != 0 )
+      if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v15, v16, v13, v14) != 0 )
         loc_0 = -559038737;
       Plat_ExitProcess(1);
 LABEL_23:
@@ -3205,13 +3217,13 @@ LABEL_18:
       v3 = &LOG_GENERAL;
       if ( LoggingSystem_IsChannelEnabled(LOG_GENERAL, 4) != 0 )
       {
-        v19.m_szFile = "../public/tier1/utllinkedlist.h";
-        v19.m_szFunction = "AllocInternal";
-        v19.m_nLine = 699;
+        v21.m_szFile = "../public/tier1/utllinkedlist.h";
+        v21.m_szFunction = "AllocInternal";
+        v21.m_nLine = 699;
         LoggingSystem_Log(
           LOG_GENERAL,
           LoggingSeverity_t::LS_ERROR,
-          &v19,
+          &v21,
           "CUtlLinkedList overflow! (exhausted memory allocator)\n",
           v17,
           v18);

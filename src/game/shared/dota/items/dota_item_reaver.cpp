@@ -176,7 +176,7 @@ CEntityInstance *__fastcall CDOTA_Item_Reaver::CEntityInstanceEntityClass::Const
 void __fastcall CDOTA_Item_Reaver::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Item_Reaver::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -186,7 +186,7 @@ void __fastcall CDOTA_Item_Reaver::CEntityInstanceEntityClass::~CEntityInstanceE
 void __fastcall CDOTA_Item_Reaver::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Item_Reaver::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }

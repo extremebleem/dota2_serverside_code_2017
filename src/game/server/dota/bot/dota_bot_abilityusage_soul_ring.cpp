@@ -13,7 +13,7 @@ void __fastcall CDOTA_Bot_AbilityUsage_SoulRing::CDOTA_Bot_AbilityUsage_SoulRing
   this->m_pAbility = pAbility;
   this->m_pBot = pBot;
   this->m_bUseOnCreeps = 0;
-  this->_vptr_CDOTA_Bot_AbilityUsage = off_42C6D90;
+  this->_vptr_CDOTA_Bot_AbilityUsage = off_42C6D90;  // vptr: CDOTA_Bot_AbilityUsage_SoulRing
   this->m_iHealthLoss = CDOTABaseAbility::GetLevelSpecialValueFor<int>(pAbility, "health_sacrifice", -1, 1);
   this->m_iManaGain = CDOTABaseAbility::GetLevelSpecialValueFor<int>(pAbility, "mana_gain", -1, 1);
 }

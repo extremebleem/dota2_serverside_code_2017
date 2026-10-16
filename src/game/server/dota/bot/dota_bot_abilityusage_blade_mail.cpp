@@ -11,7 +11,7 @@ void __fastcall CDOTA_Bot_AbilityUsage_BladeMail::CDOTA_Bot_AbilityUsage_BladeMa
   this->m_pAbility = pAbility;
   this->m_bUseOnCreeps = 0;
   this->m_pBot = pBot;
-  this->_vptr_CDOTA_Bot_AbilityUsage = off_42C5B30;
+  this->_vptr_CDOTA_Bot_AbilityUsage = off_42C5B30;  // vptr: CDOTA_Bot_AbilityUsage_BladeMail
 }
 
 

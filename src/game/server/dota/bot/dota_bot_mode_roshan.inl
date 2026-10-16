@@ -4,7 +4,7 @@
 // CDOTA_BotMode_Roshan::~CDOTA_BotMode_Roshan  (line 15, @0x0000000002826f60, libserver.so)  // inlines: ~CDOTA_BotMode
 void __fastcall CDOTA_BotMode_Roshan::~CDOTA_BotMode_Roshan(CDOTA_BotMode_Roshan *const this)
 {
-  this->_vptr_CDOTA_BotMode = off_42B75F0;
+  this->_vptr_CDOTA_BotMode = off_42B75F0;  // vptr: CDOTA_BotMode
 }
 
 
@@ -12,7 +12,7 @@ void __fastcall CDOTA_BotMode_Roshan::~CDOTA_BotMode_Roshan(CDOTA_BotMode_Roshan
 // calls: operator delete
 void __fastcall CDOTA_BotMode_Roshan::~CDOTA_BotMode_Roshan(CDOTA_BotMode_Roshan *const this)
 {
-  this->_vptr_CDOTA_BotMode = off_42B75F0;
+  this->_vptr_CDOTA_BotMode = off_42B75F0;  // vptr: CDOTA_BotMode
   operator delete(this);
 }
 
@@ -36,7 +36,7 @@ const char *__fastcall CDOTA_BotMode_Roshan::GetDebugValue(CDOTA_BotMode_Roshan 
 // CDOTA_BotMode_Roshan_Human::~CDOTA_BotMode_Roshan_Human  (line 48, @0x0000000002826ff0, libserver.so)  // inlines: ~CDOTA_BotMode, ~CDOTA_BotMode_Roshan
 void __fastcall CDOTA_BotMode_Roshan_Human::~CDOTA_BotMode_Roshan_Human(CDOTA_BotMode_Roshan_Human *const this)
 {
-  this->_vptr_CDOTA_BotMode = off_42B75F0;
+  this->_vptr_CDOTA_BotMode = off_42B75F0;  // vptr: CDOTA_BotMode
 }
 
 
@@ -44,7 +44,7 @@ void __fastcall CDOTA_BotMode_Roshan_Human::~CDOTA_BotMode_Roshan_Human(CDOTA_Bo
 // calls: operator delete
 void __fastcall CDOTA_BotMode_Roshan_Human::~CDOTA_BotMode_Roshan_Human(CDOTA_BotMode_Roshan_Human *const this)
 {
-  this->_vptr_CDOTA_BotMode = off_42B75F0;
+  this->_vptr_CDOTA_BotMode = off_42B75F0;  // vptr: CDOTA_BotMode
   operator delete(this);
 }
 

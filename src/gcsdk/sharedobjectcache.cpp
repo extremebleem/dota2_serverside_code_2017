@@ -22,7 +22,7 @@ void __fastcall GCSDK::CSharedObjectTypeCache::CSharedObjectTypeCache(
   GCSDK::CSharedObject **p_m_FixedMemory; // r12
 
   p_m_FixedMemory = &this->m_vecObjects.m_Memory.m_FixedMemory;
-  this->_vptr_CSharedObjectTypeCache = off_47D0A10;
+  this->_vptr_CSharedObjectTypeCache = off_47D0A10;  // vptr: GCSDK::CSharedObjectTypeCache
   this->m_vecObjects.m_Size = 0;
   this->m_vecObjects.m_Memory.m_pMemory = 0;
   this->m_vecObjects.m_Memory.m_nAllocationCount = 1;
@@ -340,7 +340,7 @@ void __fastcall GCSDK::CSharedObjectTypeCache::Dump(const GCSDK::CSharedObjectTy
 // callers: GCSDK::CGCClientSharedObjectCache::CGCClientSharedObjectCache
 void __fastcall GCSDK::CSharedObjectCache::CSharedObjectCache(GCSDK::CSharedObjectCache *const this)
 {
-  this->_vptr_CSharedObjectCache = off_47D0A70;
+  this->_vptr_CSharedObjectCache = off_47D0A70;  // vptr: GCSDK::CSharedObjectCache
   this->m_ulVersion = 0;
   this->m_CacheObjects.m_Size = 0;
   this->m_CacheObjects.m_Memory.m_pMemory = 0;

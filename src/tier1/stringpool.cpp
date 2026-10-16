@@ -103,7 +103,7 @@ const char *__fastcall CStringPool::Find(CStringPool *const this, const char *ps
   const char *pszValuea; // [rsp+8h] [rbp-18h] BYREF
 
   pszValuea = pszValue;
-  CurrentId = ThreadGetCurrentId(this);
+  CurrentId = ThreadGetCurrentId();
   if ( CurrentId != this->m_Mutex.m_ownerID && _InterlockedCompareExchange64(this, CurrentId, 0) != 0 )
   {
     _mm_pause();
@@ -151,7 +151,7 @@ const char *__fastcall CStringPool::Allocate(CStringPool *const this, const char
   char *pCopyFrom[7]; // [rsp+18h] [rbp-38h] BYREF
 
   pszValuea = pszValue;
-  CurrentId = ThreadGetCurrentId(this);
+  CurrentId = ThreadGetCurrentId();
   if ( CurrentId != this->m_Mutex.m_ownerID && _InterlockedCompareExchange64(this, CurrentId, 0) != 0 )
   {
     _mm_pause();
@@ -284,7 +284,7 @@ void __fastcall CCountedStringPool::CCountedStringPool(
   int m_Size; // eax
 
   p_m_HashTable = &this->m_HashTable;
-  this->_vptr_CCountedStringPool = off_47BF270;
+  this->_vptr_CCountedStringPool = off_47BF270;  // vptr: CCountedStringPool
   this->m_HashTable.m_Size = 0;
   this->m_HashTable.m_Memory.m_pMemory = 0;
   this->m_HashTable.m_Memory.m_nAllocationCount = 0;
@@ -323,7 +323,7 @@ void __fastcall CCountedStringPool::~CCountedStringPool(CCountedStringPool *cons
 {
   bool v2; // zf
 
-  this->_vptr_CCountedStringPool = off_47BF270;
+  this->_vptr_CCountedStringPool = off_47BF270;  // vptr: CCountedStringPool
   CCountedStringPool::FreeAll(this);
   v2 = (this->m_Elements.m_Memory.m_nGrowSize & 0xC0000000) == 0;
   this->m_Elements.m_Size = 0;

@@ -564,7 +564,7 @@ CEntityInstance *__fastcall CDOTA_Unit_Hero_BountyHunter::CEntityInstanceEntityC
 void __fastcall CDOTA_Unit_Hero_BountyHunter::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Unit_Hero_BountyHunter::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -574,7 +574,7 @@ void __fastcall CDOTA_Unit_Hero_BountyHunter::CEntityInstanceEntityClass::~CEnti
 void __fastcall CDOTA_Unit_Hero_BountyHunter::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Unit_Hero_BountyHunter::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -776,7 +776,7 @@ void *__fastcall CDOTA_Ability_BountyHunter_ShurikenToss::CEntityInstanceEntityC
 void __fastcall CDOTA_Ability_BountyHunter_ShurikenToss::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_BountyHunter_ShurikenToss::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -786,7 +786,7 @@ void __fastcall CDOTA_Ability_BountyHunter_ShurikenToss::CEntityInstanceEntityCl
 void __fastcall CDOTA_Ability_BountyHunter_ShurikenToss::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_BountyHunter_ShurikenToss::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -1509,7 +1509,7 @@ CEntityInstance *__fastcall CDOTA_Ability_BountyHunter_Jinada::CEntityInstanceEn
 void __fastcall CDOTA_Ability_BountyHunter_Jinada::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_BountyHunter_Jinada::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -1519,7 +1519,7 @@ void __fastcall CDOTA_Ability_BountyHunter_Jinada::CEntityInstanceEntityClass::~
 void __fastcall CDOTA_Ability_BountyHunter_Jinada::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_BountyHunter_Jinada::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -2350,7 +2350,7 @@ CEntityInstance *__fastcall CDOTA_Ability_BountyHunter_WindWalk::CEntityInstance
 void __fastcall CDOTA_Ability_BountyHunter_WindWalk::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_BountyHunter_WindWalk::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -2360,7 +2360,7 @@ void __fastcall CDOTA_Ability_BountyHunter_WindWalk::CEntityInstanceEntityClass:
 void __fastcall CDOTA_Ability_BountyHunter_WindWalk::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_BountyHunter_WindWalk::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -2781,7 +2781,7 @@ CEntityInstance *__fastcall CDOTA_Ability_BountyHunter_Track::CEntityInstanceEnt
 void __fastcall CDOTA_Ability_BountyHunter_Track::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_BountyHunter_Track::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -2791,7 +2791,7 @@ void __fastcall CDOTA_Ability_BountyHunter_Track::CEntityInstanceEntityClass::~C
 void __fastcall CDOTA_Ability_BountyHunter_Track::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_BountyHunter_Track::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }

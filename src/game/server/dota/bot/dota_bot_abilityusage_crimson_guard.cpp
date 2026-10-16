@@ -13,7 +13,7 @@ void __fastcall CDOTA_Bot_AbilityUsage_CrimsonGuard::CDOTA_Bot_AbilityUsage_Crim
   this->m_pAbility = pAbility;
   this->m_pBot = pBot;
   this->m_bUseOnCreeps = 0;
-  this->_vptr_CDOTA_Bot_AbilityUsage = off_42C5F70;
+  this->_vptr_CDOTA_Bot_AbilityUsage = off_42C5F70;  // vptr: CDOTA_Bot_AbilityUsage_CrimsonGuard
   this->m_iRadius = CDOTABaseAbility::GetLevelSpecialValueFor<int>(pAbility, "bonus_aoe_radius", -1, 1);
 }
 

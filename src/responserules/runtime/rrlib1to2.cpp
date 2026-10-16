@@ -4,7 +4,7 @@
 // Crr2Payload::Crr2Payload  (line 79, @0x000000000310f5b0, libserver.so)  // inlines: CUtlMemoryConservative, CUtlVectorBase, CUtlVectorConservative
 void __fastcall Crr2Payload::Crr2Payload(Crr2Payload *const this, const char *pName, int numResponseGroups)
 {
-  this->_vptr_IRulePayload = off_47C4D10;
+  this->_vptr_IRulePayload = off_47C4D10;  // vptr: Crr2Payload
   this->m_pName = pName;
   this->m_Responses.m_Size = 0;
   this->m_Responses.m_Memory.m_pMemory = 0;
@@ -252,10 +252,10 @@ LABEL_26:
         (*(&v17->m_Data.elem.matcher + 8) & 4) != 0,
         (*(&v17->m_Data.elem.matcher + 8) & 0x10) != 0,
         (*(&v17->m_Data.elem.matcher + 8) & 0x40) != 0);
-      Msg(
-        "\t\t\tusemin: %d\tusemax: %d\n",
-        (*(&v17->m_Data.elem.matcher + 8) & 8) != 0,
-        (*(&v17->m_Data.elem.matcher + 8) & 0x20) != 0);
+      v15 = Msg(
+              "\t\t\tusemin: %d\tusemax: %d\n",
+              (*(&v17->m_Data.elem.matcher + 8) & 8) != 0,
+              (*(&v17->m_Data.elem.matcher + 8) & 0x20) != 0);
     }
     v20 = *(&v17->m_Data.elem.matcher + 8);
     if ( (v20 & 2) == 0 )
@@ -488,10 +488,10 @@ LABEL_53:
       if ( pResponseGroup == 0 )
         goto LABEL_61;
       v59 = ResponseRulePartition::GetElementName(p_m_RulePartitions, &i);
-      v60 = operator new(0x28u);
+      v60 = operator new(0x28u);  // new Crr2Payload (size matches)
       v60->m_pName = v59;
       payloada.m_p = v60;
-      v60->_vptr_IRulePayload = off_47C4D10;
+      v60->_vptr_IRulePayload = off_47C4D10;  // vptr: Crr2Payload
       v60->m_Responses.m_Size = 0;
       v60->m_Responses.m_Memory.m_pMemory = 0;
       v60->m_Responses.m_Memory.m_nCurAllocSize = 0;
@@ -566,7 +566,7 @@ LABEL_134:
   value = v17->m_Data.elem.value;
   id.m_Id = v17->m_Data.elem.nameSym.m_Id;
   v41 = CUtlSymbolTable::String(CResponseCriteriaSet::sm_pCriteriaSymbols, &id.m_Id);
-  Msg("\tCriteria %d: %s %s\n", iResponseGroup, v41, value);
+  v15 = Msg("\tCriteria %d: %s %s\n", iResponseGroup, v41, value);
   if ( v17->m_Data.elem.subcriteria.m_nCount <= 0 )
     goto LABEL_26;
 LABEL_75:

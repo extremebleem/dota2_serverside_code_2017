@@ -110,7 +110,7 @@ CEntityInstance *__fastcall CDotaSubquestBase::CEntityInstanceEntityClass::Const
 void __fastcall CDotaSubquestBase::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDotaSubquestBase::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -120,7 +120,7 @@ void __fastcall CDotaSubquestBase::CEntityInstanceEntityClass::~CEntityInstanceE
 void __fastcall CDotaSubquestBase::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDotaSubquestBase::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -384,7 +384,7 @@ CEntityInstance *__fastcall CDotaQuest::CEntityInstanceEntityClass::ConstructIns
 void __fastcall CDotaQuest::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDotaQuest::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -394,7 +394,7 @@ void __fastcall CDotaQuest::CEntityInstanceEntityClass::~CEntityInstanceEntityCl
 void __fastcall CDotaQuest::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDotaQuest::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -744,7 +744,7 @@ CEntityInstance *__fastcall CDotaSubquestBuyItems::CEntityInstanceEntityClass::C
 void __fastcall CDotaSubquestBuyItems::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDotaSubquestBuyItems::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -754,7 +754,7 @@ void __fastcall CDotaSubquestBuyItems::CEntityInstanceEntityClass::~CEntityInsta
 void __fastcall CDotaSubquestBuyItems::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDotaSubquestBuyItems::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -998,7 +998,7 @@ CEntityInstance *__fastcall CDotaSubquestEntityDeath::CEntityInstanceEntityClass
 void __fastcall CDotaSubquestEntityDeath::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDotaSubquestEntityDeath::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -1008,7 +1008,7 @@ void __fastcall CDotaSubquestEntityDeath::CEntityInstanceEntityClass::~CEntityIn
 void __fastcall CDotaSubquestEntityDeath::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDotaSubquestEntityDeath::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -1223,7 +1223,7 @@ CEntityInstance *__fastcall CDotaSubquestTutorialEvent::CEntityInstanceEntityCla
 void __fastcall CDotaSubquestTutorialEvent::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDotaSubquestTutorialEvent::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -1233,7 +1233,7 @@ void __fastcall CDotaSubquestTutorialEvent::CEntityInstanceEntityClass::~CEntity
 void __fastcall CDotaSubquestTutorialEvent::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDotaSubquestTutorialEvent::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -1447,7 +1447,7 @@ CEntityInstance *__fastcall CDotaSubquestPlayerStat::CEntityInstanceEntityClass:
 void __fastcall CDotaSubquestPlayerStat::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDotaSubquestPlayerStat::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -1457,7 +1457,7 @@ void __fastcall CDotaSubquestPlayerStat::CEntityInstanceEntityClass::~CEntityIns
 void __fastcall CDotaSubquestPlayerStat::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDotaSubquestPlayerStat::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -1673,7 +1673,7 @@ CEntityInstance *__fastcall CDotaSubquestAbilityCastCount::CEntityInstanceEntity
 void __fastcall CDotaSubquestAbilityCastCount::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDotaSubquestAbilityCastCount::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -1683,7 +1683,7 @@ void __fastcall CDotaSubquestAbilityCastCount::CEntityInstanceEntityClass::~CEnt
 void __fastcall CDotaSubquestAbilityCastCount::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDotaSubquestAbilityCastCount::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -1794,16 +1794,16 @@ void __fastcall CDOTA_QuestSystem::~CDOTA_QuestSystem(CDOTA_QuestSystem *const t
 {
   bool v2; // zf
 
-  this->_vptr_IGameSystem = off_4174890;
+  this->_vptr_IGameSystem = off_4174890;  // vptr: CDOTA_QuestSystem
   v2 = !this->m_bRegisteredForEvents;
-  this->_vptr_IGameEventListener2 = off_3FB3190;
+  this->_vptr_IGameEventListener2 = off_3FB3190;  // vptr: CGameEventListener
   if ( !v2 )
   {
     if ( gameeventmanager != 0 )
       (*(gameeventmanager->_vptr_IBaseInterface + 6))(gameeventmanager, &this->CGameEventListener);
     this->m_bRegisteredForEvents = 0;
   }
-  this->_vptr_IGameEventListener2 = off_3FB3150;
+  this->_vptr_IGameEventListener2 = off_3FB3150;  // vptr: IGameEventListener2
   IGameSystem::~IGameSystem(this);
 }
 
@@ -1814,16 +1814,16 @@ void __fastcall CDOTA_QuestSystem::~CDOTA_QuestSystem(CDOTA_QuestSystem *const t
 {
   bool v2; // zf
 
-  this->_vptr_IGameSystem = off_4174890;
+  this->_vptr_IGameSystem = off_4174890;  // vptr: CDOTA_QuestSystem
   v2 = !this->m_bRegisteredForEvents;
-  this->_vptr_IGameEventListener2 = off_3FB3190;
+  this->_vptr_IGameEventListener2 = off_3FB3190;  // vptr: CGameEventListener
   if ( !v2 )
   {
     if ( gameeventmanager != 0 )
       (*(gameeventmanager->_vptr_IBaseInterface + 6))(gameeventmanager, &this->CGameEventListener);
     this->m_bRegisteredForEvents = 0;
   }
-  this->_vptr_IGameEventListener2 = off_3FB3150;
+  this->_vptr_IGameEventListener2 = off_3FB3150;  // vptr: IGameEventListener2
   IGameSystem::~IGameSystem(this);
   operator delete(this);
 }

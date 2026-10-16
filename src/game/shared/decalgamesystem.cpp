@@ -254,7 +254,7 @@ void __fastcall CDecalGameSystem::CDecalGameSystem(CDecalGameSystem *const this)
   CDecalGameSystem *v6; // rdx
   signed __int64 v7; // rdx
 
-  this->_vptr_IGameSystem = off_3FCC330;
+  this->_vptr_IGameSystem = off_3FCC330;  // vptr: CDecalGameSystem
   this->m_ConnectedSignallers.m_Size = 0;
   this->m_ConnectedSignallers.m_Memory.m_pMemory = 0;
   this->m_ConnectedSignallers.m_Memory.m_nAllocationCount = 0;
@@ -443,7 +443,7 @@ void __fastcall CDecalGameSystem::~CDecalGameSystem(CDecalGameSystem *const this
   char *v23; // r12
   CUtlVectorBase<int,CUtlMemory<int,int> >::CAllocator *p_m_Memory; // r12
 
-  this->_vptr_IGameSystem = off_3FCC330;
+  this->_vptr_IGameSystem = off_3FCC330;  // vptr: CDecalGameSystem
   v2 = (this->m_S1ToS2DecalMapping.m_Memory.m_nGrowSize & 0xC0000000) == 0;
   this->m_S1ToS2DecalMapping.m_Size = 0;
   if ( v2 )
@@ -627,7 +627,7 @@ LABEL_7:
   ConCommandBase::Shutdown(&this->m_OnToggleVisualizer_register.m_ConCommandAccessor);
   ConCommand::~ConCommand(&this->m_OnToggleVisualizer_register.m_ConCommandAccessor);
   CUtlSlot::~CUtlSlot(&this->CUtlSlot);
-  this->_vptr_IGameSystem = off_3F7C1B0;
+  this->_vptr_IGameSystem = off_3F7C1B0;  // vptr: CAutoGameSystem
   IGameSystem::~IGameSystem(this);
 }
 
@@ -654,14 +654,14 @@ void __fastcall CDecalGameSystem::GameInit(CDecalGameSystem *const this, const E
   __int64 *v9; // rdx
   __int64 v10; // [rsp+8h] [rbp-28h]
 
-  v4 = operator new(0x28u);
+  v4 = operator new(0x28u);  // new CResourceManifestPrerequisite (size matches)
   v4->m_nRefCount = 0;
   v5 = v4;
   v4->m_hResourceManifests.m_Size = 0;
   v4->m_hResourceManifests.m_Memory.m_pMemory = 0;
   v4->m_hResourceManifests.m_Memory.m_nAllocationCount = 0;
   v4->m_hResourceManifests.m_Memory.m_nGrowSize = 0;
-  v4->_vptr_IPrerequisite = off_3FCABD0;
+  v4->_vptr_IPrerequisite = off_3FCABD0;  // vptr: CResourceManifestPrerequisite
   this->m_pResourceManifestPrerequisite = v4;
   v6 = (*(*g_pResourceSystem + 184LL))(
          g_pResourceSystem,
@@ -4040,9 +4040,9 @@ void __fastcall CDecalGameSystem::EnableVisualizer(CDecalGameSystem *const this,
     }
     else
     {
-      v5 = operator new(0x18u);
+      v5 = operator new(0x18u);  // new CDecalGameSystemDebugVisualizer (size matches)
       v5->m_pDecalGameSystem = this;
-      v5->_vptr_IDebugVisualizer = off_3FCC4F0;
+      v5->_vptr_IDebugVisualizer = off_3FCC4F0;  // vptr: CDecalGameSystemDebugVisualizer
       v5->m_pSceneViewOverlayList = (*(*g_pSceneSystem + 472LL))(g_pSceneSystem, 0);
       this->m_pDebugVisualizer = v5;
       v6 = (*(*g_pEngineServiceMgr + 224LL))(g_pEngineServiceMgr);
@@ -5040,7 +5040,7 @@ void __fastcall CDecalGameSystemDebugVisualizer::CDecalGameSystemDebugVisualizer
         CDecalGameSystemDebugVisualizer *const this,
         CDecalGameSystem *pDecalGameSystem)
 {
-  this->_vptr_IDebugVisualizer = off_3FCC4F0;
+  this->_vptr_IDebugVisualizer = off_3FCC4F0;  // vptr: CDecalGameSystemDebugVisualizer
   this->m_pDecalGameSystem = pDecalGameSystem;
   this->m_pSceneViewOverlayList = (*(*g_pSceneSystem + 472LL))(g_pSceneSystem, 0);
 }
@@ -5050,9 +5050,9 @@ void __fastcall CDecalGameSystemDebugVisualizer::CDecalGameSystemDebugVisualizer
 void __fastcall CDecalGameSystemDebugVisualizer::~CDecalGameSystemDebugVisualizer(
         CDecalGameSystemDebugVisualizer *const this)
 {
-  this->_vptr_IDebugVisualizer = off_3FCC4F0;
+  this->_vptr_IDebugVisualizer = off_3FCC4F0;  // vptr: CDecalGameSystemDebugVisualizer
   (*(*g_pSceneSystem + 480LL))(g_pSceneSystem, this->m_pSceneViewOverlayList);
-  this->_vptr_IDebugVisualizer = off_3FCBB90;
+  this->_vptr_IDebugVisualizer = off_3FCBB90;  // vptr: IDebugVisualizer
 }
 
 
@@ -5061,9 +5061,9 @@ void __fastcall CDecalGameSystemDebugVisualizer::~CDecalGameSystemDebugVisualize
 void __fastcall CDecalGameSystemDebugVisualizer::~CDecalGameSystemDebugVisualizer(
         CDecalGameSystemDebugVisualizer *const this)
 {
-  this->_vptr_IDebugVisualizer = off_3FCC4F0;
+  this->_vptr_IDebugVisualizer = off_3FCC4F0;  // vptr: CDecalGameSystemDebugVisualizer
   (*(*g_pSceneSystem + 480LL))(g_pSceneSystem, this->m_pSceneViewOverlayList);
-  this->_vptr_IDebugVisualizer = off_3FCBB90;
+  this->_vptr_IDebugVisualizer = off_3FCBB90;  // vptr: IDebugVisualizer
   operator delete(this);
 }
 

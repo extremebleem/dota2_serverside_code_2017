@@ -5,13 +5,13 @@
 // calls: strlen, CUtlSymbolTableLargeBase<CNonThreadsafeTree<true>, true, 2048ul>::Find, CUtlVectorBase<CUtlSymbolTableLargeBase<CNonThreadsafeTree<true>, true>::StringPool_t*, CUtlMemory<CUtlSymbolTableLargeBase<CNonThreadsafeTree<true>, true>::StringPool_t*, int> >::AddToTail, MurmurHash2LowerCase, memcpy, V_stricmp_fast, CUtlRBTree<CUtlSymbolTableLargeBaseTreeEntry_t*, long long int, CTreeEntryLess<CNonThreadsafeTree<true>, true>, CUtlMemory<UtlRBTreeNode_t<CUtlSymbolTableLargeBaseTreeEntry_t*, long long int>, long long int> >::NewNode, CUtlRBTree<CUtlSymbolTableLargeBaseTreeEntry_t*, long long int, CTreeEntryLess<CNonThreadsafeTree<true>, true>, CUtlMemory<UtlRBTreeNode_t<CUtlSymbolTableLargeBaseTreeEntry_t*, long long int>, long long int> >::LinkToParent
 // callers: CEconItemSchema::BInitDefinitionPrefabs, CEconItemSchema::ItemTest_CreateTestItemSet, CEconItemSchema::ItemTesting_DiscardTestItemSet, CEconItemSchema::ItemTesting_DiscardAllTestItemSets, CEconItemAssetInfo::InitAlternateIcons, CEconItemQualityDefinition::BInitFromKV, CEconItemRarityDefinition::BInitFromKV, CEconItemSetDefinition::BInitFromKV, CEconLootListDefinition::operator=, CEconItemAttributeDefinition::BInitFromKV, CEconStyleInfo::BInitFromKV, CEconItemSchema::BInitAutographs (26 total)
 CUtlSymbolLarge __fastcall CUtlSymbolTableLargeBase<CNonThreadsafeTree<true>,true,2048ul>::AddString(
-        __int64 *a1,
+        char **a1,
         CUtlSymbolTableLargeBase<CNonThreadsafeTree<true>,true,2048ul> *const this,
         const char *pString)
 {
   int v6; // eax
   int v7; // r15d
-  __int64 m_String; // rax
+  char *m_String; // rax
   int m_Size; // r9d
   signed int v11; // edx
   CUtlSymbolTableLargeBase<CNonThreadsafeTree<true>,true,2048ul>::StringPool_t **m_pMemory; // rsi
@@ -34,7 +34,7 @@ CUtlSymbolLarge __fastcall CUtlSymbolTableLargeBase<CNonThreadsafeTree<true>,tru
   unsigned int v29; // eax
   __int64 v30; // r14
   UtlRBTreeNode_t<CUtlSymbolTableLargeBaseTreeEntry_t*,long long int> *v31; // rcx
-  __int64 v32; // [rsp+10h] [rbp-40h]
+  char *v32; // [rsp+10h] [rbp-40h] BYREF
   CUtlSymbolTableLargeBase<CNonThreadsafeTree<true>,true,2048ul>::StringPool_t *src[7]; // [rsp+18h] [rbp-38h] BYREF
 
   if ( pString != 0 )
@@ -43,7 +43,7 @@ CUtlSymbolLarge __fastcall CUtlSymbolTableLargeBase<CNonThreadsafeTree<true>,tru
     v7 = v6;
     if ( v6 > 0 && *pString != 0 )
     {
-      CUtlSymbolTableLargeBase<CNonThreadsafeTree<true>,true,2048ul>::Find(this, pString, v6);
+      CUtlSymbolTableLargeBase<CNonThreadsafeTree<true>,true,2048ul>::Find(&v32, this, pString, v6);
       m_String = v32;
       if ( v32 != 0 )
       {
@@ -488,7 +488,7 @@ void __fastcall CUtlSymbolTableLargeBase<CThreadsafeTree<true>,true,2048ul>::~CU
     do
     {
       v12 = (p_m_nReaders - 1);
-      CurrentId = ThreadGetCurrentId(this);
+      CurrentId = ThreadGetCurrentId();
       _InterlockedAdd(p_m_nReaders + 2, 1u);
       if ( *p_m_nReaders > 0
         || (v10 = *(p_m_nReaders - 1)) != 0 && CurrentId != v10

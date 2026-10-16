@@ -4,7 +4,7 @@
 // IGameEvent::~IGameEvent  (line 70, @0x00000000020f13d0, libserver.so)
 void __fastcall IGameEvent::~IGameEvent(IGameEvent *const this)
 {
-  this->_vptr_IGameEvent = off_3FF43B0;
+  this->_vptr_IGameEvent = off_3FF43B0;  // vptr: IGameEvent
 }
 
 
@@ -12,7 +12,7 @@ void __fastcall IGameEvent::~IGameEvent(IGameEvent *const this)
 // calls: operator delete
 void __fastcall IGameEvent::~IGameEvent(IGameEvent *const this)
 {
-  this->_vptr_IGameEvent = off_3FF43B0;
+  this->_vptr_IGameEvent = off_3FF43B0;  // vptr: IGameEvent
   operator delete(this);
 }
 
@@ -20,7 +20,7 @@ void __fastcall IGameEvent::~IGameEvent(IGameEvent *const this)
 // IGameEventListener2::~IGameEventListener2  (line 118, @0x0000000001eb2d70, libserver.so)
 void __fastcall IGameEventListener2::~IGameEventListener2(IGameEventListener2 *const this)
 {
-  this->_vptr_IGameEventListener2 = off_3FB3150;
+  this->_vptr_IGameEventListener2 = off_3FB3150;  // vptr: IGameEventListener2
 }
 
 
@@ -28,7 +28,7 @@ void __fastcall IGameEventListener2::~IGameEventListener2(IGameEventListener2 *c
 // calls: operator delete
 void __fastcall IGameEventListener2::~IGameEventListener2(IGameEventListener2 *const this)
 {
-  this->_vptr_IGameEventListener2 = off_3FB3150;
+  this->_vptr_IGameEventListener2 = off_3FB3150;  // vptr: IGameEventListener2
   operator delete(this);
 }
 
@@ -36,7 +36,7 @@ void __fastcall IGameEventListener2::~IGameEventListener2(IGameEventListener2 *c
 // IGameEventManager2::~IGameEventManager2  (line 128, @0x00000000020f13e0, libserver.so)  // inlines: ~IBaseInterface
 void __fastcall IGameEventManager2::~IGameEventManager2(IGameEventManager2 *const this)
 {
-  this->_vptr_IBaseInterface = off_3FF3D10;
+  this->_vptr_IBaseInterface = off_3FF3D10;  // vptr: IBaseInterface
 }
 
 
@@ -44,7 +44,7 @@ void __fastcall IGameEventManager2::~IGameEventManager2(IGameEventManager2 *cons
 // calls: operator delete
 void __fastcall IGameEventManager2::~IGameEventManager2(IGameEventManager2 *const this)
 {
-  this->_vptr_IBaseInterface = off_3FF3D10;
+  this->_vptr_IBaseInterface = off_3FF3D10;  // vptr: IBaseInterface
   operator delete(this);
 }
 

@@ -22,7 +22,7 @@ void __fastcall CNavMeshGameEventListener::CNavMeshGameEventListener(
   IGameEventManager2 *v4; // rdi
   IGameEventManager2 *v5; // rdi
 
-  this->_vptr_IGameEventListener2 = off_47B09B0;
+  this->_vptr_IGameEventListener2 = off_47B09B0;  // vptr: CNavMeshGameEventListener
   this->_vptr_INavMeshGameEventListener = &off_47B09E0;
   this->m_rNavMesh = rNavMesh;
   this->m_bRegisteredForEvents = 1;

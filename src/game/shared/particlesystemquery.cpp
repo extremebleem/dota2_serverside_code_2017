@@ -207,7 +207,7 @@ void __fastcall CParticleSystemQueryGameSystem::~CParticleSystemQueryGameSystem(
   CUtlVectorBase<CParticleSystemQuery*,CUtlMemory<CParticleSystemQuery*,int> >::CAllocator *p_m_Memory; // r12
 
   v2 = (this->m_queuedQueryDeletions.m_Memory.m_nGrowSize & 0xC0000000) == 0;
-  this->_vptr_IGameSystem = off_40740B0;
+  this->_vptr_IGameSystem = off_40740B0;  // vptr: CParticleSystemQueryGameSystem
   this->m_queuedQueryDeletions.m_Size = 0;
   if ( v2 )
   {
@@ -221,7 +221,7 @@ void __fastcall CParticleSystemQueryGameSystem::~CParticleSystemQueryGameSystem(
     CUtlMemory<CUtlHashtableEntry<CUtlStringToken,long long>,int>::Purge(&this->m_lookup.m_table);
   CUtlLinkedList<CParticleSystemQueryGameSystem::QueryInfo_t,long long,true,long long,CUtlFixedMemory<UtlLinkedListElem_t<CParticleSystemQueryGameSystem::QueryInfo_t,long long>>>::RemoveAll(&this->m_queries);
   CUtlFixedMemory<UtlLinkedListElem_t<CParticleSystemQueryGameSystem::QueryInfo_t,long long>>::Purge(&this->m_queries.m_Memory);
-  this->_vptr_IGameSystem = off_3F7C1B0;
+  this->_vptr_IGameSystem = off_3F7C1B0;  // vptr: CAutoGameSystem
   IGameSystem::~IGameSystem(this);
 }
 
@@ -235,7 +235,7 @@ void __fastcall CParticleSystemQueryGameSystem::~CParticleSystemQueryGameSystem(
   CUtlVectorBase<CParticleSystemQuery*,CUtlMemory<CParticleSystemQuery*,int> >::CAllocator *p_m_Memory; // r12
 
   v2 = (this->m_queuedQueryDeletions.m_Memory.m_nGrowSize & 0xC0000000) == 0;
-  this->_vptr_IGameSystem = off_40740B0;
+  this->_vptr_IGameSystem = off_40740B0;  // vptr: CParticleSystemQueryGameSystem
   this->m_queuedQueryDeletions.m_Size = 0;
   if ( v2 )
   {
@@ -249,7 +249,7 @@ void __fastcall CParticleSystemQueryGameSystem::~CParticleSystemQueryGameSystem(
     CUtlMemory<CUtlHashtableEntry<CUtlStringToken,long long>,int>::Purge(&this->m_lookup.m_table);
   CUtlLinkedList<CParticleSystemQueryGameSystem::QueryInfo_t,long long,true,long long,CUtlFixedMemory<UtlLinkedListElem_t<CParticleSystemQueryGameSystem::QueryInfo_t,long long>>>::RemoveAll(&this->m_queries);
   CUtlFixedMemory<UtlLinkedListElem_t<CParticleSystemQueryGameSystem::QueryInfo_t,long long>>::Purge(&this->m_queries.m_Memory);
-  this->_vptr_IGameSystem = off_3F7C1B0;
+  this->_vptr_IGameSystem = off_3F7C1B0;  // vptr: CAutoGameSystem
   IGameSystem::~IGameSystem(this);
   operator delete(this);
 }

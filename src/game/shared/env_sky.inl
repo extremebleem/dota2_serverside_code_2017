@@ -76,7 +76,7 @@ void *__fastcall CEnvSky::CEntityInstanceEntityClass::AllocateInstance(CEnvSky::
 void __fastcall CEnvSky::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CEnvSky::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -86,7 +86,7 @@ void __fastcall CEnvSky::CEntityInstanceEntityClass::~CEntityInstanceEntityClass
 void __fastcall CEnvSky::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CEnvSky::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }

@@ -76,7 +76,7 @@ void __fastcall CDOTA_Bot_AbilityUsage_Viper_PoisonAttack::CDOTA_Bot_AbilityUsag
   this->m_pAbility = pAbility;
   this->m_bUseOnCreeps = 0;
   this->m_pBot = pBot;
-  this->_vptr_CDOTA_Bot_AbilityUsage = off_42D20B0;
+  this->_vptr_CDOTA_Bot_AbilityUsage = off_42D20B0;  // vptr: CDOTA_Bot_AbilityUsage_Viper_PoisonAttack
 }
 
 
@@ -170,7 +170,7 @@ void __fastcall CDOTA_Bot_AbilityUsage_Viper_ViperStrike::CDOTA_Bot_AbilityUsage
   this->m_pAbility = pAbility;
   this->m_bUseOnCreeps = 0;
   this->m_pBot = pBot;
-  this->_vptr_CDOTA_Bot_AbilityUsage = off_42D2110;
+  this->_vptr_CDOTA_Bot_AbilityUsage = off_42D2110;  // vptr: CDOTA_Bot_AbilityUsage_Viper_ViperStrike
   this->m_hDesiredTarget.m_Index = -1;
 }
 

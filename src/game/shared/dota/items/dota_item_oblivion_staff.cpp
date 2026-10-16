@@ -235,7 +235,7 @@ CEntityInstance *__fastcall CDOTA_Item_Recipe_OblivionStaff::CEntityInstanceEnti
 void __fastcall CDOTA_Item_Recipe_OblivionStaff::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Item_Recipe_OblivionStaff::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -245,7 +245,7 @@ void __fastcall CDOTA_Item_Recipe_OblivionStaff::CEntityInstanceEntityClass::~CE
 void __fastcall CDOTA_Item_Recipe_OblivionStaff::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Item_Recipe_OblivionStaff::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -400,7 +400,7 @@ CEntityInstance *__fastcall CDOTA_Item_OblivionStaff::CEntityInstanceEntityClass
 void __fastcall CDOTA_Item_OblivionStaff::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Item_OblivionStaff::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -410,7 +410,7 @@ void __fastcall CDOTA_Item_OblivionStaff::CEntityInstanceEntityClass::~CEntityIn
 void __fastcall CDOTA_Item_OblivionStaff::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Item_OblivionStaff::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }

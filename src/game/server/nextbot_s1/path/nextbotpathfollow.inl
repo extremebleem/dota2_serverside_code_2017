@@ -5,7 +5,7 @@
 // calls: CPathFollower::~CPathFollower
 void __fastcall CPathAndFollower<CNavPathNB>::~CPathAndFollower(CPathAndFollower<CNavPathNB> *const this)
 {
-  this->_vptr_IPathFollower = off_47B4230;
+  this->_vptr_IPathFollower = off_47B4230;  // vptr: CPathAndFollower<CNavPathNB>
   this->m_MyPath._vptr_CPathData = off_47B0E10;
   CPathFollower::~CPathFollower(this);
 }
@@ -15,7 +15,7 @@ void __fastcall CPathAndFollower<CNavPathNB>::~CPathAndFollower(CPathAndFollower
 // calls: CPathFollower::~CPathFollower, operator delete
 void __fastcall CPathAndFollower<CNavPathNB>::~CPathAndFollower(CPathAndFollower<CNavPathNB> *const this)
 {
-  this->_vptr_IPathFollower = off_47B4230;
+  this->_vptr_IPathFollower = off_47B4230;  // vptr: CPathAndFollower<CNavPathNB>
   this->m_MyPath._vptr_CPathData = off_47B0E10;
   CPathFollower::~CPathFollower(this);
   operator delete(this);

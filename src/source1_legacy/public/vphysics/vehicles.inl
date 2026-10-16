@@ -4,7 +4,7 @@
 // IPhysicsVehicleController::~IPhysicsVehicleController  (line 81, @0x0000000002244ee0, libserver.so)
 void __fastcall IPhysicsVehicleController::~IPhysicsVehicleController(IPhysicsVehicleController *const this)
 {
-  this->_vptr_IPhysicsVehicleController = off_403FFF0;
+  this->_vptr_IPhysicsVehicleController = off_403FFF0;  // vptr: IPhysicsVehicleController
 }
 
 
@@ -12,7 +12,7 @@ void __fastcall IPhysicsVehicleController::~IPhysicsVehicleController(IPhysicsVe
 // calls: operator delete
 void __fastcall IPhysicsVehicleController::~IPhysicsVehicleController(IPhysicsVehicleController *const this)
 {
-  this->_vptr_IPhysicsVehicleController = off_403FFF0;
+  this->_vptr_IPhysicsVehicleController = off_403FFF0;  // vptr: IPhysicsVehicleController
   operator delete(this);
 }
 

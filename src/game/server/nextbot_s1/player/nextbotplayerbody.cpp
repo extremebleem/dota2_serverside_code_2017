@@ -194,7 +194,7 @@ void __fastcall PlayerBody::Upkeep(PlayerBody *const this)
   int (**vptr_INextBotEventResponder)(...); // rax
   const Vector *v49; // rax
   int v50; // xmm0_4
-  int v51; // r14d
+  unsigned int v51; // r14d
   const Vector *v52; // rax
   float v53; // xmm0_4
   INextBot *v54; // r14
@@ -344,7 +344,7 @@ LABEL_7:
           v37 = (*(v2->_vptr_IHandleEntity + 164))(v2);
           errorVector.z = v38;
           *&errorVector.x = v37;
-          NDebugOverlay::Circle(&errorVector, radiusb, 0, 255, 0, 255, 1, flDeltaT + flDeltaT);
+          NDebugOverlay::Circle(&errorVector, radiusb, 0, 0xFFu, 0, 255, 1, flDeltaT + flDeltaT);
         }
       }
       v10 = !this->m_bHasBeenSightedIn;
@@ -363,8 +363,7 @@ LABEL_7:
               + (this->m_anchorForward.z * approachRatea))
             * 57.295776) > nb_head_aim_resettle_angle.m_pParent->m_Value.m_fValue )
         {
-          flDeltaTa = RandomFloat(COERCE_DOUBLE(1063675494), 1.1)
-                    * nb_head_aim_resettle_time.m_pParent->m_Value.m_fValue;
+          flDeltaTa = RandomFloat(0.89999998, 1.1) * nb_head_aim_resettle_time.m_pParent->m_Value.m_fValue;
           v40 = CountdownTimer::Now(&this->m_anchorRepositionTimer);
           v41 = flDeltaTa;
           v42 = v40 + flDeltaTa;
@@ -476,7 +475,7 @@ LABEL_7:
                     this->m_lookAtVelocity.y = v73;
                     this->m_lookAtVelocity.z = v74;
                     this->m_lookAtVelocity.x = v75;
-                    trackingIntervalb = v72 * RandomFloat(COERCE_DOUBLE(1061997773), 1.2);
+                    trackingIntervalb = v72 * RandomFloat(0.80000001, 1.2);
                     *&v76 = CountdownTimer::Now(flThicknessa) + trackingIntervalb;
                     if ( *&v76 != this->m_lookAtTrackingTimer.m_timestamp.m_Value )
                     {
@@ -544,7 +543,7 @@ LABEL_7:
                 errorVector.y = v46;
                 errorVector.x = v47;
                 v49 = (vptr_INextBotEventResponder[67])(this);
-                NDebugOverlay::Line(v49, &errorVector, 255, 255, 0, 0, flDeltaT + flDeltaT);
+                NDebugOverlay::Line(v49, &errorVector, 0xFFu, 0xFFu, 0, 0, flDeltaT + flDeltaT);
                 v50 = 1077936128;
                 if ( v8 != 0 )
                   v50 = 0x40000000;
@@ -557,10 +556,10 @@ LABEL_7:
                   flThicknessb,
                   v51,
                   -(g != 0),
+                  0xFFu,
                   255,
-                  255,
-                  0,
-                  flDeltaT + flDeltaT);
+                  flDeltaT + flDeltaT,
+                  0);
               }
             }
             v22 = ((v98 * to.x) + (radius * to.y)) + (approachRatea * to.z);
@@ -986,7 +985,7 @@ void __fastcall PlayerBody::AimHeadTowards(
         && (*(v20->_vptr_INextBotEventResponder + 96))(v20, 2) != 0 )
       {
         v47 = "INTERESTING";
-        NDebugOverlay::Cross3D(vLookAtPos, 2.0, 255, 255, 100, 1, flDurationb + flDurationb);
+        NDebugOverlay::Cross3D(vLookAtPos, 2.0, 0xFFu, 0xFFu, 0x64u, 1, flDurationb + flDurationb);
         v48 = this->m_LookAtPriority;
         if ( v48 != CHeadLookParams::HeadLookPriority_t::INTERESTING )
         {
@@ -1307,7 +1306,7 @@ void __fastcall PlayerBody::AimHeadTowards(
       && (*(v25->_vptr_INextBotEventResponder + 96))(v25, 2) != 0 )
     {
       v35 = "INTERESTING";
-      NDebugOverlay::Cross3D(&this->m_vLookAtPos, 2.0, 100, 100, 100, 1, v62);
+      NDebugOverlay::Cross3D(&this->m_vLookAtPos, 2.0, 0x64u, 0x64u, 0x64u, 1, v62);
       v36 = lookParams->m_LookPriority;
       if ( lookParams->m_LookPriority != CHeadLookParams::HeadLookPriority_t::INTERESTING )
       {

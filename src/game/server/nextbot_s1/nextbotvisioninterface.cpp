@@ -48,7 +48,7 @@ void __fastcall IVision::IVision(IVision *const this, INextBot *bot)
   this->m_primaryThreat.m_Index = -1;
   do
   {
-    m_notVisibleTimer->_vptr_INextBotEventResponder = off_3FD0350;
+    m_notVisibleTimer->_vptr_INextBotEventResponder = off_3FD0350;  // vptr: IntervalTimer
     v6 = m_notVisibleTimer;
     m_notVisibleTimer = (m_notVisibleTimer + 16);
     v6->m_lastUpdateTime = -1.0;
@@ -1058,7 +1058,7 @@ LABEL_61:
                 v96 = (*(v5->_vptr_CKnownEntity + 5))(v5);
                 v97 = (*(this->m_bot->INextBotComponent::_vptr_INextBotEventResponder + 69))(this->m_bot);
                 v98 = (*(*v97 + 536LL))(v97);
-                NDebugOverlay::Line(v98, v96, 255, 255, 0, 0, 0.2);
+                NDebugOverlay::Line(v98, v96, 0xFFu, 0xFFu, 0, 0, 0.2);
               }
               v74 = this->m_bot;
             }
@@ -1235,7 +1235,7 @@ LABEL_89:
       v71 = &this->m_knownEntityVector.m_Memory.m_pMemory[v69];
       if ( v71 != 0 )
       {
-        v71->_vptr_CKnownEntity = off_47B4DD0;
+        v71->_vptr_CKnownEntity = off_47B4DD0;  // vptr: CKnownEntity
         *&v71->m_who.m_Index = knownVector.m_Memory;
         v71->m_hasLastKnownPositionBeenSeen = v135;
         v71->m_lastKnownArea = v136;
@@ -1340,7 +1340,7 @@ LABEL_36:
                 v102 = (v45[5])(v38);
                 v103 = (*(this->m_bot->INextBotComponent::_vptr_INextBotEventResponder + 66))(this->m_bot);
                 v104 = CBaseEntity::GetAbsOrigin(v103);
-                NDebugOverlay::HorzArrow(v104, v102, 1.0, 100, 0, 0, 128, 1, 0.01023);
+                NDebugOverlay::HorzArrow(v104, v102, 1.0, 0x64u, 0, 0, 128, 0.01023, 1);
               }
               else
               {
@@ -1351,14 +1351,14 @@ LABEL_36:
                   v108 = (v46[5])(v38);
                   v109 = (*(this->m_bot->INextBotComponent::_vptr_INextBotEventResponder + 66))(this->m_bot);
                   v110 = CBaseEntity::GetAbsOrigin(v109);
-                  NDebugOverlay::HorzArrow(v110, v108, 2.0, 100, 0, 0, 255, 1, 0.01023);
+                  NDebugOverlay::HorzArrow(v110, v108, 2.0, 0x64u, 0, 0, 255, 0.01023, 1);
                 }
                 else
                 {
                   v47 = (v46[5])(v38);
                   v48 = (*(this->m_bot->INextBotComponent::_vptr_INextBotEventResponder + 66))(this->m_bot);
                   v49 = CBaseEntity::GetAbsOrigin(v48);
-                  NDebugOverlay::HorzArrow(v49, v47, 5.0, 255, 0, 0, 255, 1, 0.01023);
+                  NDebugOverlay::HorzArrow(v49, v47, 5.0, 0xFFu, 0, 0, 255, 0.01023, 1);
                 }
               }
             }
@@ -1373,7 +1373,7 @@ LABEL_36:
                 v99 = (v31[5])(v38);
                 v100 = (*(this->m_bot->INextBotComponent::_vptr_INextBotEventResponder + 66))(this->m_bot);
                 v101 = CBaseEntity::GetAbsOrigin(v100);
-                NDebugOverlay::HorzArrow(v101, v99, 1.0, 0, 100, 0, 128, 1, 0.01023);
+                NDebugOverlay::HorzArrow(v101, v99, 1.0, 0, 0x64u, 0, 128, 0.01023, 1);
               }
               else
               {
@@ -1384,14 +1384,14 @@ LABEL_36:
                   v105 = (v33[5])(v38);
                   v106 = (*(this->m_bot->INextBotComponent::_vptr_INextBotEventResponder + 66))(this->m_bot);
                   v107 = CBaseEntity::GetAbsOrigin(v106);
-                  NDebugOverlay::HorzArrow(v107, v105, 2.0, 0, 100, 0, 255, 1, 0.01023);
+                  NDebugOverlay::HorzArrow(v107, v105, 2.0, 0, 0x64u, 0, 255, 0.01023, 1);
                 }
                 else
                 {
                   v34 = (v33[5])(v38);
                   v35 = (*(this->m_bot->INextBotComponent::_vptr_INextBotEventResponder + 66))(this->m_bot);
                   v36 = CBaseEntity::GetAbsOrigin(v35);
-                  NDebugOverlay::HorzArrow(v36, v34, 5.0, 0, 255, 0, 255, 1, 0.01023);
+                  NDebugOverlay::HorzArrow(v36, v34, 5.0, 0, 0xFFu, 0, 255, 0.01023, 1);
                 }
               }
             }
@@ -1444,7 +1444,7 @@ void __fastcall IVision::Update(IVision *const this)
   {
     m_TargetThreadId = g_VProfCurrentProfile.m_TargetThreadId;
     v8 = __rdtsc();
-    if ( m_TargetThreadId == ThreadGetCurrentId(this) )
+    if ( m_TargetThreadId == ThreadGetCurrentId() )
     {
       m_pCurNode = g_VProfCurrentProfile.m_pCurNode;
       if ( m_pCurNode->m_pszName != "IVision::Update" )
@@ -1523,7 +1523,7 @@ bool __fastcall IVision::IsAbleToSee(
   {
     m_TargetThreadId = g_VProfCurrentProfile.m_TargetThreadId;
     v12 = __rdtsc();
-    if ( m_TargetThreadId == ThreadGetCurrentId(this) )
+    if ( m_TargetThreadId == ThreadGetCurrentId() )
     {
       m_pCurNode = g_VProfCurrentProfile.m_pCurNode;
       if ( m_pCurNode->m_pszName != "IVision::IsAbleToSee" )
@@ -1595,7 +1595,7 @@ bool __fastcall IVision::IsAbleToSee(
   {
     m_TargetThreadId = g_VProfCurrentProfile.m_TargetThreadId;
     v11 = __rdtsc();
-    if ( m_TargetThreadId == ThreadGetCurrentId(this) )
+    if ( m_TargetThreadId == ThreadGetCurrentId() )
     {
       m_pCurNode = g_VProfCurrentProfile.m_pCurNode;
       if ( m_pCurNode->m_pszName != "IVision::IsAbleToSee" )

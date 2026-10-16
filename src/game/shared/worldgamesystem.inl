@@ -7,14 +7,14 @@ void __fastcall CWorldGameSystem::~CWorldGameSystem(CWorldGameSystem *const this
 {
   CUtlHashtable<unsigned int,WorldInfo_t*,DefaultHashFunctor<unsigned int>,DefaultEqualFunctor<unsigned int>,undefined_t,CUtlMemory<CUtlHashtableEntry<unsigned int,WorldInfo_t*>,int> > *p_m_worldInfo; // r12
 
-  this->_vptr_IGameSystem = off_3FCF090;
+  this->_vptr_IGameSystem = off_3FCF090;  // vptr: CWorldGameSystem
   p_m_worldInfo = &this->m_worldInfo;
   (*(*g_pDotaMapUtils + 96LL))(g_pDotaMapUtils, this->m_defaultWorldInfo.m_mapDataHandle);
   this->m_defaultWorldInfo.m_mapDataHandle = -1LL;
   CUtlHashtable<unsigned int,WorldInfo_t *,DefaultHashFunctor<unsigned int>,DefaultEqualFunctor<unsigned int>,undefined_t,CUtlMemory<CUtlHashtableEntry<unsigned int,WorldInfo_t *>,int>>::RemoveAll(p_m_worldInfo);
   if ( (this->m_worldInfo.m_table.m_nGrowSize & 0xC0000000) == 0 )
     CUtlMemory<CUtlHashtableEntry<unsigned int,WorldInfo_t *>,int>::Purge(&p_m_worldInfo->m_table);
-  this->_vptr_IGameSystem = off_3F7C1B0;
+  this->_vptr_IGameSystem = off_3F7C1B0;  // vptr: CAutoGameSystem
   IGameSystem::~IGameSystem(this);
 }
 
@@ -25,14 +25,14 @@ void __fastcall CWorldGameSystem::~CWorldGameSystem(CWorldGameSystem *const this
 {
   CUtlHashtable<unsigned int,WorldInfo_t*,DefaultHashFunctor<unsigned int>,DefaultEqualFunctor<unsigned int>,undefined_t,CUtlMemory<CUtlHashtableEntry<unsigned int,WorldInfo_t*>,int> > *p_m_worldInfo; // r12
 
-  this->_vptr_IGameSystem = off_3FCF090;
+  this->_vptr_IGameSystem = off_3FCF090;  // vptr: CWorldGameSystem
   p_m_worldInfo = &this->m_worldInfo;
   (*(*g_pDotaMapUtils + 96LL))(g_pDotaMapUtils, this->m_defaultWorldInfo.m_mapDataHandle);
   this->m_defaultWorldInfo.m_mapDataHandle = -1LL;
   CUtlHashtable<unsigned int,WorldInfo_t *,DefaultHashFunctor<unsigned int>,DefaultEqualFunctor<unsigned int>,undefined_t,CUtlMemory<CUtlHashtableEntry<unsigned int,WorldInfo_t *>,int>>::RemoveAll(p_m_worldInfo);
   if ( (this->m_worldInfo.m_table.m_nGrowSize & 0xC0000000) == 0 )
     CUtlMemory<CUtlHashtableEntry<unsigned int,WorldInfo_t *>,int>::Purge(&p_m_worldInfo->m_table);
-  this->_vptr_IGameSystem = off_3F7C1B0;
+  this->_vptr_IGameSystem = off_3F7C1B0;  // vptr: CAutoGameSystem
   IGameSystem::~IGameSystem(this);
   operator delete(this);
 }

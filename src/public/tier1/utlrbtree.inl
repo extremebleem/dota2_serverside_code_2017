@@ -16533,16 +16533,14 @@ __int16 __fastcall CUtlRBTree<CUtlMap<char const*,ResponseGroup,short,bool (*)(c
   __int64 v34; // rcx
   __int64 v35; // rdi
   __int64 v36; // rsi
-  __int64 v37; // r8
-  __int64 v38; // r9
-  __int64 v40; // [rsp+8h] [rbp-88h]
+  __int64 v38; // [rsp+8h] [rbp-88h]
   ParserResponse *src; // [rsp+18h] [rbp-78h]
-  unsigned __int64 v43; // [rsp+20h] [rbp-70h]
+  unsigned __int64 v41; // [rsp+20h] [rbp-70h]
   CUtlMemory<UtlRBTreeNode_t<CUtlMap<char const*,ResponseGroup,short int,bool (*)(char const* const&,char const* const&)>::Node_t,short int>,short int>::Iterator_t it; // [rsp+2Ch] [rbp-64h]
-  CUtlLeanVectorBase<ParserResponse,short int>::IndexType_t v45; // [rsp+2Eh] [rbp-62h]
+  CUtlLeanVectorBase<ParserResponse,short int>::IndexType_t v43; // [rsp+2Eh] [rbp-62h]
   CUtlLeanVectorBase<ParserResponse,short int>::ElemType_t *m_pElements; // [rsp+30h] [rbp-60h]
-  __int64 v47; // [rsp+38h] [rbp-58h]
-  LeafCodeInfo_t v48; // [rsp+40h] [rbp-50h] BYREF
+  __int64 v45; // [rsp+38h] [rbp-58h]
+  LeafCodeInfo_t v46; // [rsp+40h] [rbp-50h] BYREF
 
   it.index = this->m_FirstFree;
   if ( it.index != -1 )
@@ -16621,39 +16619,39 @@ LABEL_3:
       v3->m_Data.key = key;
       if ( pCopyFrom->elem.group.m_nCount > 0 )
       {
+        v41 = 0;
         v43 = 0;
-        v45 = 0;
-        v40 = 90 * ((pCopyFrom->elem.group.m_nCount - 1) + 1LL);
+        v38 = 90 * ((pCopyFrom->elem.group.m_nCount - 1) + 1LL);
         v5 = pCopyFrom;
         if ( pCopyFrom->elem.group.m_nAllocated == 0 )
           goto LABEL_31;
 LABEL_7:
         for ( i = v5->elem.group.m_pElements; ; i = 0 )
         {
-          src = &i[v43 / 0x5A];
-          if ( v45 == 0x7FFF )
+          src = &i[v41 / 0x5A];
+          if ( v43 == 0x7FFF )
           {
             if ( LoggingSystem_IsChannelEnabled(LOG_GENERAL, 4) != 0 )
               goto LABEL_65;
             while ( 1 )
             {
-              if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v35, v36, v33, v34, v37, v38) != 0 )
+              if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v35, v36, v33, v34) != 0 )
                 loc_0 = -559038737;
               Plat_ExitProcess(1);
 LABEL_65:
-              v48.m_szFile = "../../public/tier1/utlleanvector.h";
-              v48.m_szFunction = "AddToTailGetPtr";
-              v48.m_nLine = 557;
+              v46.m_szFile = "../../public/tier1/utlleanvector.h";
+              v46.m_szFunction = "AddToTailGetPtr";
+              v46.m_nLine = 557;
               LoggingSystem_Log(
                 LOG_GENERAL,
                 LoggingSeverity_t::LS_ERROR,
-                &v48,
+                &v46,
                 "%s allocation count overflow",
                 "AddToTailGetPtr");
             }
           }
           m_nAllocated = v3->m_Data.elem.group.m_nAllocated;
-          v8 = v45 + 1;
+          v8 = v43 + 1;
           v9 = m_nAllocated;
           if ( v8 > m_nAllocated )
           {
@@ -16678,7 +16676,7 @@ LABEL_65:
                 v9 = 0x7FFF;
               }
             }
-            v47 = (**g_pMemAlloc)(g_pMemAlloc, 90LL * m_nAllocated);
+            v45 = (**g_pMemAlloc)(g_pMemAlloc, 90LL * m_nAllocated);
             if ( v3->m_Data.elem.group.m_nAllocated != 0 )
               m_pElements = v3->m_Data.elem.group.m_pElements;
             else
@@ -16692,9 +16690,9 @@ LABEL_65:
               do
               {
                 v12 = 90LL * v11;
-                v13 = (v12 + v47);
-                if ( v12 + v47 != 0 )
-                  ParserResponse::ParserResponse((v12 + v47));
+                v13 = (v12 + v45);
+                if ( v12 + v45 != 0 )
+                  ParserResponse::ParserResponse((v12 + v45));
                 v14 = &m_pElements[v12 / 0x5A];
                 ParserResponse::operator=(v13, v14);
                 ++v11;
@@ -16707,18 +16705,18 @@ LABEL_65:
             }
             (*(*g_pMemAlloc + 16LL))(g_pMemAlloc, v3->m_Data.elem.group.m_pElements);
             v3->m_Data.elem.group.m_nAllocated = m_nAllocated;
-            v3->m_Data.elem.group.m_pElements = v47;
+            v3->m_Data.elem.group.m_pElements = v45;
           }
           v16 = m_nAllocated != 0 ? v3->m_Data.elem.group.m_pElements : 0LL;
-          v17 = &v16[v45];
+          v17 = &v16[v43];
           if ( v17 != 0 )
             ParserResponse::ParserResponse(v17);
           ++v3->m_Data.elem.group.m_nCount;
           ParserResponse::operator=(v17, src);
-          v43 += 90LL;
-          if ( v43 == v40 )
+          v41 += 90LL;
+          if ( v41 == v38 )
             break;
-          v45 = v3->m_Data.elem.group.m_nCount;
+          v43 = v3->m_Data.elem.group.m_nCount;
           v5 = pCopyFrom;
           if ( pCopyFrom->elem.group.m_nAllocated != 0 )
             goto LABEL_7;
@@ -93158,7 +93156,7 @@ void __fastcall CUtlRBTree<CUtlMap<CEconSchemaSymbol,CEconItemSetDefinition *,in
       {
         v7 = (elem->m_iAttributes.m_Memory.m_nGrowSize & 0xC0000000) == 0;
         elem->m_iAttributes.m_Size = 0;
-        elem->_vptr_IEconItemSetDefinition = off_47A7410;
+        elem->_vptr_IEconItemSetDefinition = off_47A7410;  // vptr: CEconItemSetDefinition
         if ( v7 )
         {
           CUtlMemory<CEconItemSetDefinition::itemset_attrib_t,int>::Purge(&elem->m_iAttributes.m_Memory);

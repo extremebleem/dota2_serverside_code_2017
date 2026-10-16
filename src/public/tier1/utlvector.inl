@@ -12667,16 +12667,14 @@ int __fastcall CUtlVectorBase<ResponseGroup,CUtlMemoryConservative<ResponseGroup
   __int64 v26; // rcx
   __int64 v27; // rdi
   __int64 v28; // rsi
-  __int64 v29; // r8
-  __int64 v30; // r9
-  __int64 v31; // [rsp+8h] [rbp-88h]
-  ParserResponse *v33; // [rsp+18h] [rbp-78h]
-  unsigned __int64 v34; // [rsp+20h] [rbp-70h]
+  __int64 v29; // [rsp+8h] [rbp-88h]
+  ParserResponse *v31; // [rsp+18h] [rbp-78h]
+  unsigned __int64 v32; // [rsp+20h] [rbp-70h]
   int elem; // [rsp+28h] [rbp-68h]
-  __int16 v36; // [rsp+2Eh] [rbp-62h]
+  __int16 v34; // [rsp+2Eh] [rbp-62h]
   CUtlLeanVectorBase<ParserResponse,short int>::ElemType_t *m_pElements; // [rsp+30h] [rbp-60h]
-  __int64 v38; // [rsp+38h] [rbp-58h]
-  LeafCodeInfo_t v39; // [rsp+40h] [rbp-50h] BYREF
+  __int64 v36; // [rsp+38h] [rbp-58h]
+  LeafCodeInfo_t v37; // [rsp+40h] [rbp-50h] BYREF
 
   m_Size = this->m_Size;
   elem = this->m_Size;
@@ -12701,39 +12699,39 @@ int __fastcall CUtlVectorBase<ResponseGroup,CUtlMemoryConservative<ResponseGroup
     v5->group.m_pElements = 0;
     if ( src->group.m_nCount > 0 )
     {
+      v32 = 0;
       v34 = 0;
-      v36 = 0;
-      v31 = 90 * ((src->group.m_nCount - 1) + 1LL);
+      v29 = 90 * ((src->group.m_nCount - 1) + 1LL);
       v6 = src;
       if ( src->group.m_nAllocated == 0 )
         goto LABEL_30;
 LABEL_6:
       for ( i = v6->group.m_pElements; ; i = 0 )
       {
-        v33 = &i[v34 / 0x5A];
-        if ( v36 == 0x7FFF )
+        v31 = &i[v32 / 0x5A];
+        if ( v34 == 0x7FFF )
         {
           if ( LoggingSystem_IsChannelEnabled(LOG_GENERAL, 4) != 0 )
             goto LABEL_43;
           while ( 1 )
           {
-            if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v27, v28, v25, v26, v29, v30) != 0 )
+            if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v27, v28, v25, v26) != 0 )
               loc_0 = -559038737;
             Plat_ExitProcess(1);
 LABEL_43:
-            v39.m_szFile = "../../public/tier1/utlleanvector.h";
-            v39.m_szFunction = "AddToTailGetPtr";
-            v39.m_nLine = 557;
+            v37.m_szFile = "../../public/tier1/utlleanvector.h";
+            v37.m_szFunction = "AddToTailGetPtr";
+            v37.m_nLine = 557;
             LoggingSystem_Log(
               LOG_GENERAL,
               LoggingSeverity_t::LS_ERROR,
-              &v39,
+              &v37,
               "%s allocation count overflow",
               "AddToTailGetPtr");
           }
         }
         m_nAllocated = v5->group.m_nAllocated;
-        v9 = v36 + 1;
+        v9 = v34 + 1;
         v10 = m_nAllocated;
         if ( v9 > m_nAllocated )
         {
@@ -12758,7 +12756,7 @@ LABEL_43:
               v10 = 0x7FFF;
             }
           }
-          v38 = (**g_pMemAlloc)(g_pMemAlloc, 90LL * m_nAllocated);
+          v36 = (**g_pMemAlloc)(g_pMemAlloc, 90LL * m_nAllocated);
           if ( v5->group.m_nAllocated != 0 )
             m_pElements = v5->group.m_pElements;
           else
@@ -12772,9 +12770,9 @@ LABEL_43:
             do
             {
               v13 = 90LL * v12;
-              v14 = (v13 + v38);
-              if ( v13 + v38 != 0 )
-                ParserResponse::ParserResponse((v13 + v38));
+              v14 = (v13 + v36);
+              if ( v13 + v36 != 0 )
+                ParserResponse::ParserResponse((v13 + v36));
               v15 = &m_pElements[v13 / 0x5A];
               ParserResponse::operator=(v14, v15);
               ++v12;
@@ -12787,18 +12785,18 @@ LABEL_43:
           }
           (*(*g_pMemAlloc + 16LL))(g_pMemAlloc, v5->group.m_pElements);
           v5->group.m_nAllocated = m_nAllocated;
-          v5->group.m_pElements = v38;
+          v5->group.m_pElements = v36;
         }
         v17 = m_nAllocated != 0 ? v5->group.m_pElements : 0LL;
-        v18 = &v17[v36];
+        v18 = &v17[v34];
         if ( v18 != 0 )
           ParserResponse::ParserResponse(v18);
         ++v5->group.m_nCount;
-        ParserResponse::operator=(v18, v33);
-        v34 += 90LL;
-        if ( v34 == v31 )
+        ParserResponse::operator=(v18, v31);
+        v32 += 90LL;
+        if ( v32 == v29 )
           break;
-        v36 = v5->group.m_nCount;
+        v34 = v5->group.m_nCount;
         v6 = src;
         if ( src->group.m_nAllocated != 0 )
           goto LABEL_6;

@@ -311,7 +311,7 @@ void __fastcall CBaseAnimatingController::CBaseAnimatingController(CBaseAnimatin
   bool v10; // [rsp+6h] [rbp-1Ah]
 
   CSkeletonAnimationController::CSkeletonAnimationController(this);
-  this->_vptr_CSkeletonAnimationController = off_3FEDBF0;
+  this->_vptr_CSkeletonAnimationController = off_3FEDBF0;  // vptr: CBaseAnimatingController
   this->_vptr_IAnimationStateGraphOwner = &off_3FEDCF8;
   CNetworkedSequenceOperation::CNetworkedSequenceOperation(&this->m_baseLayer);
   this->m_baseLayer._vptr_CNetworkedSequenceOperation = off_3FEC810;
@@ -383,7 +383,7 @@ void __fastcall CBaseAnimatingController::CBaseAnimatingController(CBaseAnimatin
 // callers: CSchemaClassBinding<CBaseAnimatingController>::Deallocate, CSchemaClassBinding<CBaseAnimatingController>::DestructInPlace, CSchemaClassBinding<CBaseAnimatingOverlayController>::DestructInPlace, CSchemaClassBinding<CBaseAnimatingOverlayController>::Deallocate
 void __fastcall CBaseAnimatingController::~CBaseAnimatingController(CBaseAnimatingController *const this)
 {
-  this->_vptr_CSkeletonAnimationController = off_3FEDBF0;
+  this->_vptr_CSkeletonAnimationController = off_3FEDBF0;  // vptr: CBaseAnimatingController
   this->_vptr_IAnimationStateGraphOwner = &off_3FEDCF8;
   CSkeletonAnimationController::~CSkeletonAnimationController(this);
 }
@@ -676,7 +676,7 @@ void __fastcall CBaseAnimatingController::OnTeleported(CBaseAnimatingController 
   float z; // xmm0_4
 
   m_pIk = this->m_pIk;
-  if ( m_pIk )
+  if ( m_pIk != 0 )
     CIKContext::ClearTargets(m_pIk);
   this->m_flIKGroundContactTime = 0.0;
   m_pSkeletonInstance = this->m_pSkeletonInstance;
@@ -4538,7 +4538,7 @@ void __fastcall CBaseAnimatingController::UpdateIKLocks(
 void __fastcall CTraceFilterSkipNPCsAndPlayers::~CTraceFilterSkipNPCsAndPlayers(
         CTraceFilterSkipNPCsAndPlayers *const this)
 {
-  this->_vptr_CTraceFilter = off_3FE6970;
+  this->_vptr_CTraceFilter = off_3FE6970;  // vptr: CTraceFilter
 }
 
 
@@ -4547,7 +4547,7 @@ void __fastcall CTraceFilterSkipNPCsAndPlayers::~CTraceFilterSkipNPCsAndPlayers(
 void __fastcall CTraceFilterSkipNPCsAndPlayers::~CTraceFilterSkipNPCsAndPlayers(
         CTraceFilterSkipNPCsAndPlayers *const this)
 {
-  this->_vptr_CTraceFilter = off_3FE6970;
+  this->_vptr_CTraceFilter = off_3FE6970;  // vptr: CTraceFilter
   operator delete(this);
 }
 

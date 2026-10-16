@@ -2353,45 +2353,47 @@ NavErrorType __fastcall CNavMesh::LoadNavMesh(
   const char *v10; // rax
   NavErrorType v11; // ebx
   uint v13; // r15d
-  unsigned int v14; // esi
-  bool v15; // zf
+  double v14; // xmm0_8
+  unsigned int v15; // esi
+  bool v16; // zf
+  double v17; // xmm0_8
   uint32 m_nFileSubVersion; // ebx
-  bool v17; // cc
+  bool v19; // cc
   uint32 m_nGrowSize; // eax
-  CNavArea **v19; // rsi
-  __int64 v20; // rax
-  CNavArea **v21; // rax
-  float v22; // xmm4_4
+  CNavArea **v21; // rsi
+  __int64 v22; // rax
+  CNavArea **v23; // rax
+  float v24; // xmm4_4
   int i; // r14d
-  float *v24; // rbx
-  float v25; // xmm0_4
-  float v26; // xmm1_4
+  float *v26; // rbx
+  float v27; // xmm0_4
+  float v28; // xmm1_4
   float x; // xmm2_4
   float y; // xmm4_4
   float z; // xmm3_4
   int m_Size; // eax
-  unsigned __int64 v31; // rbx
-  __int64 v32; // r14
-  CNavPrecacheInfo *v33; // r13
-  unsigned int v34; // ebx
+  unsigned __int64 v33; // rbx
+  __int64 v34; // r14
+  CNavPrecacheInfo *v35; // r13
+  unsigned int v36; // ebx
   char *VPKFilename; // rax
-  const char *v36; // rsi
-  CNavPrecacheInfo *v37; // rax
-  vec_t v38; // ebx
-  CNavLadder **v39; // rax
-  CNavLadder *v40; // r14
-  __int64 v41; // rbx
-  int v42; // eax
+  const char *v38; // rsi
+  CNavPrecacheInfo *v39; // rax
+  vec_t v40; // ebx
+  CNavLadder **v41; // rax
+  CNavLadder *v42; // r14
+  __int64 v43; // rbx
+  int v44; // eax
   CNavArea **m_pMemory; // rbx
-  CNavArea **v44; // rax
-  vec_t v45; // [rsp+10h] [rbp-F0h]
+  CNavArea **v46; // rax
+  vec_t v47; // [rsp+10h] [rbp-F0h]
   unsigned int nCounta; // [rsp+18h] [rbp-E8h]
   int nCountb; // [rsp+18h] [rbp-E8h]
   unsigned int dest; // [rsp+2Ch] [rbp-D4h] BYREF
   uint nVersion; // [rsp+30h] [rbp-D0h] BYREF
-  unsigned int v51; // [rsp+34h] [rbp-CCh] BYREF
-  unsigned int v52; // [rsp+38h] [rbp-C8h] BYREF
-  unsigned int v53; // [rsp+3Ch] [rbp-C4h] BYREF
+  unsigned int v53; // [rsp+34h] [rbp-CCh] BYREF
+  unsigned int v54; // [rsp+38h] [rbp-C8h] BYREF
+  unsigned int v55; // [rsp+3Ch] [rbp-C4h] BYREF
   Extent meshExtent; // [rsp+40h] [rbp-C0h]
   Extent areaExtent; // [rsp+60h] [rbp-A0h] BYREF
   CUtlBuffer fileBuffer; // [rsp+80h] [rbp-80h] BYREF
@@ -2399,15 +2401,15 @@ NavErrorType __fastcall CNavMesh::LoadNavMesh(
   m_pPrecacheInfo = this->m_pPrecacheInfo;
   if ( m_pPrecacheInfo == 0 )
   {
-    v33 = operator new(0x28u);
-    v33->m_placeDirectory.m_Directory.m_Size = 0;
-    v33->_vptr_CNavPrecacheInfo = off_47AE070;
-    v33->m_placeDirectory.m_Directory.m_Memory.m_pMemory = 0;
-    v33->m_placeDirectory.m_Directory.m_Memory.m_nAllocationCount = 0;
-    v33->m_placeDirectory.m_Directory.m_Memory.m_nGrowSize = 0;
-    CNavPlaceDirectory::Reset(&v33->m_placeDirectory);
-    this->m_pPrecacheInfo = v33;
-    m_pPrecacheInfo = v33;
+    v35 = operator new(0x28u);  // new CNavPrecacheInfo (size matches)
+    v35->m_placeDirectory.m_Directory.m_Size = 0;
+    v35->_vptr_CNavPrecacheInfo = off_47AE070;  // vptr: CNavPrecacheInfo
+    v35->m_placeDirectory.m_Directory.m_Memory.m_pMemory = 0;
+    v35->m_placeDirectory.m_Directory.m_Memory.m_nAllocationCount = 0;
+    v35->m_placeDirectory.m_Directory.m_Memory.m_nGrowSize = 0;
+    CNavPlaceDirectory::Reset(&v35->m_placeDirectory);
+    this->m_pPrecacheInfo = v35;
+    m_pPrecacheInfo = v35;
   }
   (*(m_pPrecacheInfo->_vptr_CNavPrecacheInfo + 3))(m_pPrecacheInfo);
   (*(this->_vptr_CNavMesh + 7))(this);
@@ -2424,31 +2426,31 @@ LABEL_6:
   }
   CUtlBuffer::GetType<unsigned int>(&fileBuffer, &nVersion);
   v13 = nVersion;
-  Msg("-- Nav file version = %d --\n", nVersion);
+  *&v14 = Msg("-- Nav file version = %d --\n", nVersion).m128_u64[0];
   if ( fileBuffer.m_Error != 0 || v13 > 0x1C )
   {
-    Msg("Unknown navigation file version.\n");
+    Msg("Unknown navigation file version.\n", v14);
 LABEL_59:
     v11 = NavErrorType::NAV_FILE_BAD_VERSION;
     goto LABEL_7;
   }
   this->m_nFileSubVersion = 0;
-  v14 = 0;
+  v15 = 0;
   if ( v13 > 9 )
   {
-    CUtlBuffer::GetType<unsigned int>(&fileBuffer, &v51);
-    v14 = v51;
-    v15 = fileBuffer.m_Error == 0;
-    this->m_nFileSubVersion = v51;
-    if ( !v15 )
+    CUtlBuffer::GetType<unsigned int>(&fileBuffer, &v53);
+    v15 = v53;
+    v16 = fileBuffer.m_Error == 0;
+    this->m_nFileSubVersion = v53;
+    if ( !v16 )
     {
       Msg("Error reading sub-version number.\n");
       goto LABEL_6;
     }
   }
-  Msg("-- Nav file sub-version = %d --\n", v14);
+  *&v17 = Msg("-- Nav file sub-version = %d --\n", v15).m128_u64[0];
   m_nFileSubVersion = this->m_nFileSubVersion;
-  if ( m_nFileSubVersion > (*(this->_vptr_CNavMesh + 12))(this) )
+  if ( m_nFileSubVersion > (*(this->_vptr_CNavMesh + 12))(this, v17) )
   {
     Msg("Unknown sub-version number\n");
     goto LABEL_59;
@@ -2458,24 +2460,24 @@ LABEL_59:
     this->m_bIsAnalyzed = 0;
     goto LABEL_15;
   }
-  CUtlBuffer::GetType<unsigned int>(&fileBuffer, &v52);
-  v34 = v52;
+  CUtlBuffer::GetType<unsigned int>(&fileBuffer, &v54);
+  v36 = v54;
   VPKFilename = GetVPKFilename(pMapName);
   if ( VPKFilename == 0 )
     goto LABEL_6;
-  if ( (*(g_pFullFileSystem->_vptr_IBaseFileSystem + 7))(&g_pFullFileSystem->IBaseFileSystem, VPKFilename, 0) == v34 )
+  if ( (*(g_pFullFileSystem->_vptr_IBaseFileSystem + 7))(&g_pFullFileSystem->IBaseFileSystem, VPKFilename, 0) == v36 )
   {
     if ( v13 > 0xF )
       goto LABEL_66;
   }
   else if ( v13 > 0xF )
   {
-    v36 = "The Navigation Mesh was built using a different version of this map.\n";
+    v38 = "The Navigation Mesh was built using a different version of this map.\n";
     goto LABEL_65;
   }
-  v36 = "The Navigation Mesh was built with an old server dll - reanalyze the mesh!\n";
+  v38 = "The Navigation Mesh was built with an old server dll - reanalyze the mesh!\n";
 LABEL_65:
-  DevWarning("%s", v36);
+  DevWarning("%s", v38);
   this->m_bIsOutOfDate = 1;
   if ( v13 <= 0xD )
   {
@@ -2487,24 +2489,24 @@ LABEL_65:
 LABEL_66:
   this->m_bIsAnalyzed = CUtlBuffer::GetUnsignedChar(&fileBuffer) != 0;
 LABEL_67:
-  v37 = this->m_pPrecacheInfo;
-  if ( v37 != 0 )
-    CNavPlaceDirectory::Load(&v37->m_placeDirectory, &this->m_PlaceDatabase, &fileBuffer, v13);
+  v39 = this->m_pPrecacheInfo;
+  if ( v39 != 0 )
+    CNavPlaceDirectory::Load(&v39->m_placeDirectory, &this->m_PlaceDatabase, &fileBuffer, v13);
 LABEL_15:
   (*(this->_vptr_CNavMesh + 16))(this, &fileBuffer);
   v11 = NavErrorType::NAV_FILE_OK;
   if ( !bPrecacheOnly )
   {
-    CUtlBuffer::GetType<unsigned int>(&fileBuffer, &v53);
+    CUtlBuffer::GetType<unsigned int>(&fileBuffer, &v55);
     meshExtent.lo.x = 3.4028235e38;
     meshExtent.lo.y = 3.4028235e38;
     meshExtent.lo.z = 3.4028235e38;
     meshExtent.hi.x = -3.4028235e38;
-    v17 = v53 <= this->m_NavAreas.m_Memory.m_nAllocationCount;
+    v19 = v55 <= this->m_NavAreas.m_Memory.m_nAllocationCount;
     meshExtent.hi.y = -3.4028235e38;
-    nCounta = v53;
+    nCounta = v55;
     meshExtent.hi.z = -3.4028235e38;
-    if ( !v17 )
+    if ( !v19 )
     {
       m_nGrowSize = this->m_NavAreas.m_Memory.m_nGrowSize;
       if ( (m_nGrowSize & 0x40000000) == 0 )
@@ -2512,21 +2514,21 @@ LABEL_15:
         if ( (m_nGrowSize & 0xC0000000) != 0 )
         {
           m_pMemory = this->m_NavAreas.m_Memory.m_pMemory;
-          v44 = (**g_pMemAlloc)(g_pMemAlloc, 8LL * v53);
-          this->m_NavAreas.m_Memory.m_pMemory = v44;
+          v46 = (**g_pMemAlloc)(g_pMemAlloc, 8LL * v55);
+          this->m_NavAreas.m_Memory.m_pMemory = v46;
           if ( m_pMemory != 0 )
-            memcpy(v44, m_pMemory, 8LL * this->m_NavAreas.m_Memory.m_nAllocationCount);
+            memcpy(v46, m_pMemory, 8LL * this->m_NavAreas.m_Memory.m_nAllocationCount);
           this->m_NavAreas.m_Memory.m_nGrowSize &= 0x3FFFFFFFu;
         }
         else
         {
-          v19 = this->m_NavAreas.m_Memory.m_pMemory;
-          v20 = *g_pMemAlloc;
-          if ( v19 != 0 )
-            v21 = (*(v20 + 8))(g_pMemAlloc, v19, 8LL * v53);
+          v21 = this->m_NavAreas.m_Memory.m_pMemory;
+          v22 = *g_pMemAlloc;
+          if ( v21 != 0 )
+            v23 = (*(v22 + 8))(g_pMemAlloc, v21, 8LL * v55);
           else
-            v21 = (*v20)(g_pMemAlloc, 8LL * v53);
-          this->m_NavAreas.m_Memory.m_pMemory = v21;
+            v23 = (*v22)(g_pMemAlloc, 8LL * v55);
+          this->m_NavAreas.m_Memory.m_pMemory = v23;
         }
         this->m_NavAreas.m_Memory.m_nAllocationCount = nCounta;
       }
@@ -2534,24 +2536,24 @@ LABEL_15:
     (*(this->_vptr_CNavMesh + 2))(this, nCounta);
     for ( i = 0; i != nCounta; ++i )
     {
-      v24 = (*(this->_vptr_CNavMesh + 4))(this);
-      (*(*v24 + 72LL))(v24, &fileBuffer, v13, this->m_nFileSubVersion, 0);
-      v25 = v24[20];
-      areaExtent.lo.x = v25;
-      areaExtent.lo.y = v24[21];
-      areaExtent.lo.z = v24[22];
-      v26 = v24[23];
-      areaExtent.hi.x = v26;
-      areaExtent.hi.y = v24[24];
-      areaExtent.hi.z = v24[25];
+      v26 = (*(this->_vptr_CNavMesh + 4))(this);
+      (*(*v26 + 72LL))(v26, &fileBuffer, v13, this->m_nFileSubVersion, 0);
+      v27 = v26[20];
+      areaExtent.lo.x = v27;
+      areaExtent.lo.y = v26[21];
+      areaExtent.lo.z = v26[22];
+      v28 = v26[23];
+      areaExtent.hi.x = v28;
+      areaExtent.hi.y = v26[24];
+      areaExtent.hi.z = v26[25];
       x = meshExtent.lo.x;
-      if ( meshExtent.lo.x > v25 )
+      if ( meshExtent.lo.x > v27 )
       {
-        meshExtent.lo.x = v25;
-        x = v25;
+        meshExtent.lo.x = v27;
+        x = v27;
       }
-      if ( v25 > meshExtent.hi.x )
-        meshExtent.hi.x = v25;
+      if ( v27 > meshExtent.hi.x )
+        meshExtent.hi.x = v27;
       y = meshExtent.lo.y;
       if ( meshExtent.lo.y > areaExtent.lo.y )
       {
@@ -2568,10 +2570,10 @@ LABEL_15:
       }
       if ( areaExtent.lo.z > meshExtent.hi.z )
         meshExtent.hi.z = areaExtent.lo.z;
-      if ( x > v26 )
-        meshExtent.lo.x = v26;
-      if ( v26 > meshExtent.hi.x )
-        meshExtent.hi.x = v26;
+      if ( x > v28 )
+        meshExtent.lo.x = v28;
+      if ( v28 > meshExtent.hi.x )
+        meshExtent.hi.x = v28;
       if ( y > areaExtent.hi.y )
         meshExtent.lo.y = areaExtent.hi.y;
       if ( areaExtent.hi.y > meshExtent.hi.y )
@@ -2580,49 +2582,49 @@ LABEL_15:
         meshExtent.lo.z = areaExtent.hi.z;
       if ( areaExtent.hi.z > meshExtent.hi.z )
         meshExtent.hi.z = areaExtent.hi.z;
-      (*(*v24 + 32LL))(v24);
+      (*(*v26 + 32LL))(v26);
     }
-    CNavMesh::AllocateGrid(this, meshExtent.hi.x, meshExtent.lo.y, meshExtent.hi.y, v22);
+    CNavMesh::AllocateGrid(this, meshExtent.hi.x, meshExtent.lo.y, meshExtent.hi.y, v24);
     m_Size = this->m_NavAreas.m_Size;
     if ( m_Size != 0 )
     {
-      v31 = 0;
-      v32 = 8LL * (m_Size - 1) + 8;
+      v33 = 0;
+      v34 = 8LL * (m_Size - 1) + 8;
       do
       {
-        (*(this->_vptr_CNavMesh + 28))(this, this->m_NavAreas.m_Memory.m_pMemory[v31 / 8]);
-        v31 += 8LL;
+        (*(this->_vptr_CNavMesh + 28))(this, this->m_NavAreas.m_Memory.m_pMemory[v33 / 8]);
+        v33 += 8LL;
       }
-      while ( v31 != v32 );
+      while ( v33 != v34 );
     }
     if ( v13 <= 5 )
       goto LABEL_53;
     CUtlBuffer::GetType<unsigned int>(&fileBuffer, &areaExtent);
-    v38 = areaExtent.lo.x;
-    v45 = areaExtent.lo.x;
+    v40 = areaExtent.lo.x;
+    v47 = areaExtent.lo.x;
     CUtlMemory<CNavLadder *,int>::EnsureCapacity(&this->m_Ladders.m_Memory, SLODWORD(areaExtent.lo.x));
-    if ( v38 != 0.0 )
+    if ( v40 != 0.0 )
     {
       nCountb = 0;
       do
       {
-        v40 = operator new(0x68u);
-        CNavLadder::CNavLadder(v40, this);
-        CNavLadder::Load(v40, &fileBuffer, v13);
-        v41 = this->m_Ladders.m_Size;
-        v42 = this->m_Ladders.m_Size;
-        if ( v41 == this->m_Ladders.m_Memory.m_nAllocationCount )
+        v42 = operator new(0x68u);
+        CNavLadder::CNavLadder(v42, this);
+        CNavLadder::Load(v42, &fileBuffer, v13);
+        v43 = this->m_Ladders.m_Size;
+        v44 = this->m_Ladders.m_Size;
+        if ( v43 == this->m_Ladders.m_Memory.m_nAllocationCount )
         {
           CUtlMemory<CNavLadder *,int>::Grow(&this->m_Ladders.m_Memory, 1);
-          v42 = this->m_Ladders.m_Size;
+          v44 = this->m_Ladders.m_Size;
         }
-        this->m_Ladders.m_Size = v42 + 1;
-        v39 = &this->m_Ladders.m_Memory.m_pMemory[v41];
-        if ( v39 != 0 )
-          *v39 = v40;
+        this->m_Ladders.m_Size = v44 + 1;
+        v41 = &this->m_Ladders.m_Memory.m_pMemory[v43];
+        if ( v41 != 0 )
+          *v41 = v42;
         ++nCountb;
       }
-      while ( nCountb != LODWORD(v45) );
+      while ( nCountb != LODWORD(v47) );
     }
     if ( v13 <= 0x18 )
     {

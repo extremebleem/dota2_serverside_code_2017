@@ -11,13 +11,18 @@ const char *__fastcall RemapBundledModuleName(const char *pModuleName)
   const char *v2; // rax
   const char *const *v3; // rbx
   const char *result; // rax
-  __int64 v5; // rax
+  __int64 v5; // rdi
   __int64 v6; // rax
-  __int64 v7; // rax
+  __int64 v7; // rdi
   __int64 v8; // rax
-  __int64 v9; // rax
-  int v10; // edx
-  const char *const *v11; // rbx
+  __int64 v9; // rdi
+  __int64 v10; // rax
+  __int64 v11; // rdi
+  __int64 v12; // rax
+  __int64 v13; // rdi
+  __int64 v14; // rax
+  int v15; // edx
+  const char *const *v16; // rbx
 
   if ( RemapBundledModuleName(char const*)::s_bCheckedCmd )
   {
@@ -35,24 +40,24 @@ const char *__fastcall RemapBundledModuleName(const char *pModuleName)
       RemapBundledModuleName(char const*)::s_bNoTier2Bundle = 1;
       RemapBundledModuleName(char const*)::s_bNoTier3Bundle = 1;
     }
-    v5 = CommandLine();
-    if ( (*(*v5 + 32LL))(v5, "-use_tier2_bundle") != 0 )
+    v6 = CommandLine(v5);
+    if ( (*(*v6 + 32LL))(v6, "-use_tier2_bundle") != 0 )
       RemapBundledModuleName(char const*)::s_bNoTier2Bundle = 0;
-    v6 = CommandLine();
-    if ( (*(*v6 + 32LL))(v6, "-use_tier3_bundle") != 0 )
+    v8 = CommandLine(v7);
+    if ( (*(*v8 + 32LL))(v8, "-use_tier3_bundle") != 0 )
       RemapBundledModuleName(char const*)::s_bNoTier3Bundle = 0;
-    v7 = CommandLine();
-    if ( (*(*v7 + 32LL))(v7, "-no_tier2_bundle") != 0 )
+    v10 = CommandLine(v9);
+    if ( (*(*v10 + 32LL))(v10, "-no_tier2_bundle") != 0 )
       RemapBundledModuleName(char const*)::s_bNoTier2Bundle = 1;
-    v8 = CommandLine();
-    if ( (*(*v8 + 32LL))(v8, "-no_tier3_bundle") != 0 )
+    v12 = CommandLine(v11);
+    if ( (*(*v12 + 32LL))(v12, "-no_tier3_bundle") != 0 )
       RemapBundledModuleName(char const*)::s_bNoTier3Bundle = 1;
-    v9 = CommandLine();
-    v2 = (*(*v9 + 80LL))(v9, "-no_bundle_module", "");
+    v14 = CommandLine(v13);
+    v2 = (*(*v14 + 80LL))(v14, "-no_bundle_module", "");
     RemapBundledModuleName(char const*)::s_bCheckedCmd = 1;
     RemapBundledModuleName(char const*)::s_pNoBundleModule = v2;
   }
-  if ( v2 == 0 || *v2 == 0 || (v10 = V_stricmp_fast(pModuleName, v2), result = pModuleName, v10 != 0) )
+  if ( v2 == 0 || *v2 == 0 || (v15 = V_stricmp_fast(pModuleName, v2), result = pModuleName, v15 != 0) )
   {
     v3 = s_pTier2BundleModules;
     if ( RemapBundledModuleName(char const*)::s_bNoTier2Bundle )
@@ -64,10 +69,10 @@ LABEL_6:
       }
       else
       {
-        v11 = s_pTier3BundleModules;
-        while ( V_stricmp_fast(pModuleName, *v11) != 0 )
+        v16 = s_pTier3BundleModules;
+        while ( V_stricmp_fast(pModuleName, *v16) != 0 )
         {
-          if ( ++v11 == &unk_3F6DD70 )
+          if ( ++v16 == &unk_3F6DD70 )
             return pModuleName;
         }
         return "tier3_bundle";

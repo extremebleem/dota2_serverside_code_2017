@@ -4,7 +4,7 @@
 // CDOTA_BotMode::~CDOTA_BotMode  (line 27, @0x0000000002811aa0, libserver.so)
 void __fastcall CDOTA_BotMode::~CDOTA_BotMode(CDOTA_BotMode *const this)
 {
-  this->_vptr_CDOTA_BotMode = off_42B75F0;
+  this->_vptr_CDOTA_BotMode = off_42B75F0;  // vptr: CDOTA_BotMode
 }
 
 
@@ -12,7 +12,7 @@ void __fastcall CDOTA_BotMode::~CDOTA_BotMode(CDOTA_BotMode *const this)
 // calls: operator delete
 void __fastcall CDOTA_BotMode::~CDOTA_BotMode(CDOTA_BotMode *const this)
 {
-  this->_vptr_CDOTA_BotMode = off_42B75F0;
+  this->_vptr_CDOTA_BotMode = off_42B75F0;  // vptr: CDOTA_BotMode
   operator delete(this);
 }
 

@@ -58,9 +58,9 @@ CDOTA_BotMode *__fastcall CDOTA_Bot_Hero_Tidehunter::CreateMode(CDOTA_Bot_Hero_T
 
   if ( this->m_bHuman || iMode != 2 )
     return CDOTA_Bot::CreateMode(this, iMode);
-  v4 = operator new(0xE8u);
+  v4 = operator new(0xE8u);  // new CDOTA_BotMode_Attack_Tidehunter (size matches)
   CDOTA_BotMode_Attack::CDOTA_BotMode_Attack(v4, this);
-  v4->_vptr_CDOTA_BotMode = off_42D1410;
+  v4->_vptr_CDOTA_BotMode = off_42D1410;  // vptr: CDOTA_BotMode_Attack_Tidehunter
   return v4;
 }
 
@@ -185,7 +185,7 @@ void __fastcall CDOTA_Bot_AbilityUsage_Tidehunter_Gush::CDOTA_Bot_AbilityUsage_T
   this->m_pAbility = pAbility;
   this->m_bUseOnCreeps = 0;
   this->m_pBot = pBot;
-  this->_vptr_CDOTA_Bot_AbilityUsage = off_42D14B0;
+  this->_vptr_CDOTA_Bot_AbilityUsage = off_42D14B0;  // vptr: CDOTA_Bot_AbilityUsage_Tidehunter_Gush
   this->m_hDesiredTarget.m_Index = -1;
 }
 
@@ -470,7 +470,7 @@ void __fastcall CDOTA_Bot_AbilityUsage_Tidehunter_AnchorSmash::CDOTA_Bot_Ability
   this->m_pAbility = pAbility;
   this->m_bUseOnCreeps = 0;
   this->m_pBot = pBot;
-  this->_vptr_CDOTA_Bot_AbilityUsage = off_42D1510;
+  this->_vptr_CDOTA_Bot_AbilityUsage = off_42D1510;  // vptr: CDOTA_Bot_AbilityUsage_Tidehunter_AnchorSmash
 }
 
 
@@ -556,7 +556,7 @@ void __fastcall CDOTA_Bot_AbilityUsage_Tidehunter_Ravage::CDOTA_Bot_AbilityUsage
   this->m_pAbility = pAbility;
   this->m_bUseOnCreeps = 0;
   this->m_pBot = pBot;
-  this->_vptr_CDOTA_Bot_AbilityUsage = off_42D1570;
+  this->_vptr_CDOTA_Bot_AbilityUsage = off_42D1570;  // vptr: CDOTA_Bot_AbilityUsage_Tidehunter_Ravage
 }
 
 

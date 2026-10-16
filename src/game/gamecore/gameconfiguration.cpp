@@ -667,7 +667,7 @@ bool __fastcall CGameConfiguration::LoopPostInitAllGameSystems(
 
 
 // CGameConfiguration::AllocateScratchRenderTargets  (line 319, @0x0000000001effcc0, libserver.so)  // inlines: SceneScratchRenderTargetInfo_t
-None
+// decompilation failed: call analysis failed
 
 // CGameConfiguration::GetDesiredRenderingPipeline  (line 411, @0x0000000001f00530, libserver.so)
 CUtlStringToken __fastcall CGameConfiguration::GetDesiredRenderingPipeline(CGameConfiguration *const this)

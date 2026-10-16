@@ -107,7 +107,7 @@ CEntityInstance *__fastcall CDOTASpecGraphPlayerData::CEntityInstanceEntityClass
 void __fastcall CDOTASpecGraphPlayerData::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTASpecGraphPlayerData::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -117,7 +117,7 @@ void __fastcall CDOTASpecGraphPlayerData::CEntityInstanceEntityClass::~CEntityIn
 void __fastcall CDOTASpecGraphPlayerData::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTASpecGraphPlayerData::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -284,7 +284,7 @@ void *__fastcall CDOTASpectatorGraphManagerProxy::CEntityInstanceEntityClass::Al
 void __fastcall CDOTASpectatorGraphManagerProxy::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTASpectatorGraphManagerProxy::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -294,7 +294,7 @@ void __fastcall CDOTASpectatorGraphManagerProxy::CEntityInstanceEntityClass::~CE
 void __fastcall CDOTASpectatorGraphManagerProxy::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTASpectatorGraphManagerProxy::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }

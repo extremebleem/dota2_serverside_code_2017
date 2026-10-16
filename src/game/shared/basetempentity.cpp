@@ -16,7 +16,7 @@ void __fastcall CBaseTempEntity::CBaseTempEntity(CBaseTempEntity *const this)
 {
   CBaseTempEntity *v1; // rax
 
-  this->_vptr_CBaseTempEntity = off_47B7A30;
+  this->_vptr_CBaseTempEntity = off_47B7A30;  // vptr: CBaseTempEntity
   v1 = CBaseTempEntity::s_pTempEntities;
   this->m_ConnectedSignallers.m_Size = 0;
   this->m_ConnectedSignallers.m_Memory.m_pMemory = 0;

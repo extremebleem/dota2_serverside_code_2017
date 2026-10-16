@@ -11,7 +11,7 @@ void __fastcall CDOTA_Bot_AbilityUsage_Tango::CDOTA_Bot_AbilityUsage_Tango(
   this->m_pAbility = pAbility;
   this->m_bUseOnCreeps = 0;
   this->m_pBot = pBot;
-  this->_vptr_CDOTA_Bot_AbilityUsage = off_42C6DF0;
+  this->_vptr_CDOTA_Bot_AbilityUsage = off_42C6DF0;  // vptr: CDOTA_Bot_AbilityUsage_Tango
   this->m_iTree = -1;
 }
 

@@ -533,7 +533,7 @@ int __fastcall CBaseServerVehicle::GetPassengerRole(
         const CBaseServerVehicle *const this,
         const CBaseCombatCharacter *pPassenger)
 {
-  return -(pPassenger != (*this->m_pDrivableVehicle->_vptr_IDrivableVehicle)(this->m_pDrivableVehicle));
+  return -(pPassenger != this->m_pDrivableVehicle->GetDriver());
 }
 
 

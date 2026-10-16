@@ -840,7 +840,7 @@ CEntityInstance *__fastcall CDOTA_Unit_Hero_FacelessVoid::CEntityInstanceEntityC
 void __fastcall CDOTA_Unit_Hero_FacelessVoid::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Unit_Hero_FacelessVoid::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -850,7 +850,7 @@ void __fastcall CDOTA_Unit_Hero_FacelessVoid::CEntityInstanceEntityClass::~CEnti
 void __fastcall CDOTA_Unit_Hero_FacelessVoid::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Unit_Hero_FacelessVoid::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -1047,7 +1047,7 @@ CEntityInstance *__fastcall CDOTA_Ability_FacelessVoid_Backtrack::CEntityInstanc
 void __fastcall CDOTA_Ability_FacelessVoid_Backtrack::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_FacelessVoid_Backtrack::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -1057,7 +1057,7 @@ void __fastcall CDOTA_Ability_FacelessVoid_Backtrack::CEntityInstanceEntityClass
 void __fastcall CDOTA_Ability_FacelessVoid_Backtrack::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_FacelessVoid_Backtrack::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -1346,7 +1346,7 @@ CEntityInstance *__fastcall CDOTA_Ability_FacelessVoid_TimeLock::CEntityInstance
 void __fastcall CDOTA_Ability_FacelessVoid_TimeLock::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_FacelessVoid_TimeLock::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -1356,7 +1356,7 @@ void __fastcall CDOTA_Ability_FacelessVoid_TimeLock::CEntityInstanceEntityClass:
 void __fastcall CDOTA_Ability_FacelessVoid_TimeLock::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_FacelessVoid_TimeLock::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -1815,7 +1815,7 @@ CEntityInstance *__fastcall CDOTA_Ability_FacelessVoid_TimeDilation::CEntityInst
 void __fastcall CDOTA_Ability_FacelessVoid_TimeDilation::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_FacelessVoid_TimeDilation::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -1825,7 +1825,7 @@ void __fastcall CDOTA_Ability_FacelessVoid_TimeDilation::CEntityInstanceEntityCl
 void __fastcall CDOTA_Ability_FacelessVoid_TimeDilation::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_FacelessVoid_TimeDilation::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -2688,7 +2688,7 @@ CEntityInstance *__fastcall CDOTA_Ability_FacelessVoid_TimeWalk::CEntityInstance
 void __fastcall CDOTA_Ability_FacelessVoid_TimeWalk::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_FacelessVoid_TimeWalk::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -2698,7 +2698,7 @@ void __fastcall CDOTA_Ability_FacelessVoid_TimeWalk::CEntityInstanceEntityClass:
 void __fastcall CDOTA_Ability_FacelessVoid_TimeWalk::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_FacelessVoid_TimeWalk::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -3519,7 +3519,7 @@ CEntityInstance *__fastcall CDOTA_Ability_FacelessVoid_Chronosphere::CEntityInst
 void __fastcall CDOTA_Ability_FacelessVoid_Chronosphere::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_FacelessVoid_Chronosphere::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -3529,7 +3529,7 @@ void __fastcall CDOTA_Ability_FacelessVoid_Chronosphere::CEntityInstanceEntityCl
 void __fastcall CDOTA_Ability_FacelessVoid_Chronosphere::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_FacelessVoid_Chronosphere::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }

@@ -23,12 +23,12 @@ const char *__cdecl GetNameOfModule()
 
 // operator new  (line 411, @0x0000000002f694e0, libserver.so)
 // calls: EarlyInit_Tier0
-// callers: std::vector<int, std::allocator<int> >::reserve, std::vector<int, std::allocator<int> >::_M_emplace_back_aux<int const&>, CMsgVector::New, CMsgVector2D::New, CMsgQAngle::New, CNETMsg_SpawnGroup_Load::MergePartialFromCodedStream, CMsgPlayerInfo::SharedCtor, CMsgPlayerInfo::New, CMsg_CVars_CVar::SharedCtor, CMsg_CVars_CVar::New, CMsg_CVars::MergePartialFromCodedStream, CMsg_CVars::New (6464 total)
+// callers: std::vector<int, std::allocator<int> >::reserve, std::vector<int, std::allocator<int> >::_M_emplace_back_aux<int const&>, CMsgVector::New, CMsgVector2D::New, CMsgQAngle::New, CNETMsg_SpawnGroup_Load::MergePartialFromCodedStream, CMsgPlayerInfo::SharedCtor, CMsgPlayerInfo::New, CMsg_CVars_CVar::SharedCtor, CMsg_CVars_CVar::New, CMsg_CVars::MergePartialFromCodedStream, CMsg_CVars::New (6487 total)
 void *__fastcall operator new(size_t nSize)
 {
   if ( g_pMemAlloc != 0 )
     return (**g_pMemAlloc)(g_pMemAlloc, nSize);
-  EarlyInit_Tier0();
+  EarlyInit_Tier0(0);
   return (**g_pMemAlloc)(g_pMemAlloc, nSize);
 }
 
@@ -41,7 +41,7 @@ void *__fastcall operator new(size_t nSize, int nBlockUse, const char *pFileName
 
 
 // operator delete  (line 434, @0x0000000002f69550, libserver.so)
-// callers: std::vector<int, std::allocator<int> >::reserve, std::vector<int, std::allocator<int> >::_M_emplace_back_aux<int const&>, ProtoBufHelper::GenerateMessageChangeString, CMsgVector::~CMsgVector, CMsgVector2D::~CMsgVector2D, CMsgQAngle::~CMsgQAngle, CNETMsg_NOP::~CNETMsg_NOP, CNETMsg_SplitScreenUser::~CNETMsg_SplitScreenUser, CNETMsg_Disconnect::~CNETMsg_Disconnect, CNETMsg_Tick::~CNETMsg_Tick, CNETMsg_SetConVar::~CNETMsg_SetConVar, CSVCMsgList_GameEvents_event_t::~CSVCMsgList_GameEvents_event_t (12236 total)
+// callers: std::vector<int, std::allocator<int> >::reserve, std::vector<int, std::allocator<int> >::_M_emplace_back_aux<int const&>, ProtoBufHelper::GenerateMessageChangeString, CMsgVector::~CMsgVector, CMsgVector2D::~CMsgVector2D, CMsgQAngle::~CMsgQAngle, CNETMsg_NOP::~CNETMsg_NOP, CNETMsg_SplitScreenUser::~CNETMsg_SplitScreenUser, CNETMsg_Disconnect::~CNETMsg_Disconnect, CNETMsg_Tick::~CNETMsg_Tick, CNETMsg_SetConVar::~CNETMsg_SetConVar, CSVCMsgList_GameEvents_event_t::~CSVCMsgList_GameEvents_event_t (12331 total)
 void __fastcall operator delete(void *pMem)
 {
   (*(*g_pMemAlloc + 16LL))(g_pMemAlloc, pMem);
@@ -55,7 +55,7 @@ void *__fastcall operator new[](size_t nSize)
 {
   if ( g_pMemAlloc != 0 )
     return (**g_pMemAlloc)(g_pMemAlloc, nSize);
-  EarlyInit_Tier0();
+  EarlyInit_Tier0(0);
   return (**g_pMemAlloc)(g_pMemAlloc, nSize);
 }
 

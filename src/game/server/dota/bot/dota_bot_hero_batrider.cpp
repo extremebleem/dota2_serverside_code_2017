@@ -88,7 +88,7 @@ void __fastcall CDOTA_Bot_AbilityUsage_Batrider_StickyNapalm::CDOTA_Bot_AbilityU
   this->m_pAbility = pAbility;
   this->m_bUseOnCreeps = 0;
   this->m_pBot = pBot;
-  this->_vptr_CDOTA_Bot_AbilityUsage = off_42C8A30;
+  this->_vptr_CDOTA_Bot_AbilityUsage = off_42C8A30;  // vptr: CDOTA_Bot_AbilityUsage_Batrider_StickyNapalm
 }
 
 
@@ -118,7 +118,7 @@ void __fastcall CDOTA_Bot_AbilityUsage_Batrider_Flamebreak::CDOTA_Bot_AbilityUsa
   this->m_pAbility = pAbility;
   this->m_bUseOnCreeps = 0;
   this->m_pBot = pBot;
-  this->_vptr_CDOTA_Bot_AbilityUsage = off_42C8A90;
+  this->_vptr_CDOTA_Bot_AbilityUsage = off_42C8A90;  // vptr: CDOTA_Bot_AbilityUsage_Batrider_Flamebreak
 }
 
 
@@ -148,7 +148,7 @@ void __fastcall CDOTA_Bot_AbilityUsage_Batrider_Firefly::CDOTA_Bot_AbilityUsage_
   this->m_pAbility = pAbility;
   this->m_bUseOnCreeps = 0;
   this->m_pBot = pBot;
-  this->_vptr_CDOTA_Bot_AbilityUsage = off_42C8AF0;
+  this->_vptr_CDOTA_Bot_AbilityUsage = off_42C8AF0;  // vptr: CDOTA_Bot_AbilityUsage_Batrider_Firefly
 }
 
 
@@ -178,7 +178,7 @@ void __fastcall CDOTA_Bot_AbilityUsage_Batrider_FlamingLasso::CDOTA_Bot_AbilityU
   this->m_pAbility = pAbility;
   this->m_bUseOnCreeps = 0;
   this->m_pBot = pBot;
-  this->_vptr_CDOTA_Bot_AbilityUsage = off_42C8B50;
+  this->_vptr_CDOTA_Bot_AbilityUsage = off_42C8B50;  // vptr: CDOTA_Bot_AbilityUsage_Batrider_FlamingLasso
 }
 
 

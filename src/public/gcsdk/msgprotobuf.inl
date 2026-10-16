@@ -8461,7 +8461,7 @@ void __fastcall GCSDK::CProtoBufMsgMemoryPool<CMsgProtoBufHeader>::InternalFree(
 // calls: GCSDK::CProtoBufMsgBase::~CProtoBufMsgBase
 void __fastcall GCSDK::CProtoBufPtrMsg::~CProtoBufPtrMsg(GCSDK::CProtoBufPtrMsg *const this)
 {
-  this->_vptr_CProtoBufMsgBase = off_47CF7B0;
+  this->_vptr_CProtoBufMsgBase = off_47CF7B0;  // vptr: GCSDK::CProtoBufPtrMsg
   GCSDK::CProtoBufMsgBase::~CProtoBufMsgBase(this);
 }
 
@@ -8470,7 +8470,7 @@ void __fastcall GCSDK::CProtoBufPtrMsg::~CProtoBufPtrMsg(GCSDK::CProtoBufPtrMsg 
 // calls: GCSDK::CProtoBufMsgBase::~CProtoBufMsgBase, operator delete
 void __fastcall GCSDK::CProtoBufPtrMsg::~CProtoBufPtrMsg(GCSDK::CProtoBufPtrMsg *const this)
 {
-  this->_vptr_CProtoBufMsgBase = off_47CF7B0;
+  this->_vptr_CProtoBufMsgBase = off_47CF7B0;  // vptr: GCSDK::CProtoBufPtrMsg
   GCSDK::CProtoBufMsgBase::~CProtoBufMsgBase(this);
   operator delete(this);
 }
@@ -8577,36 +8577,34 @@ void __fastcall GCSDK::CProtoBufMsg<CMsgSOCacheSubscriptionRefresh>::CProtoBufMs
         GCSDK::CProtoBufMsg<CMsgSOCacheSubscriptionRefresh> *const this,
         GCSDK::MsgType_t eMsg)
 {
-  __int64 v3; // rdi
   int m_enabled; // r14d
-  bool v5; // r13
+  bool v4; // r13
   ThreadId_t m_TargetThreadId; // r15
-  unsigned __int64 v7; // r14
+  unsigned __int64 v6; // r14
   uint64 m_numTimeBaseTicks; // rcx
-  GCSDK::CProtoBufMsgMemoryPool<CMsgSOCacheSubscriptionRefresh> *v9; // r14
-  const google::protobuf::Descriptor *v10; // rax
+  GCSDK::CProtoBufMsgMemoryPool<CMsgSOCacheSubscriptionRefresh> *v8; // r14
+  const google::protobuf::Descriptor *v9; // rax
   uint32 Int32; // r15d
-  const google::protobuf::Descriptor *v12; // rax
-  uint32 v13; // eax
-  GCSDK::CProtoBufMsgMemoryPoolMgr *v14; // rax
-  __int64 v15; // rdi
-  unsigned __int64 v16; // r12
-  ThreadId_t v17; // r13
-  uint64 v18; // rcx
+  const google::protobuf::Descriptor *v11; // rax
+  uint32 v12; // eax
+  GCSDK::CProtoBufMsgMemoryPoolMgr *v13; // rax
+  unsigned __int64 v14; // r12
+  ThreadId_t v15; // r13
+  uint64 v16; // rcx
   CVProfNode *m_pCurNode; // rax
-  CVProfile::CBudgetGroup *v20; // rax
+  CVProfile::CBudgetGroup *v18; // rax
   CVProfNode *m_pParent; // rax
 
   GCSDK::CProtoBufMsgBase::CProtoBufMsgBase(this, eMsg);
   this->_vptr_CProtoBufMsgBase = &off_4304FD0;
   this->m_pProtoBufBody = 0;
   m_enabled = g_VProfCurrentProfile.m_enabled;
-  v5 = m_enabled != 0;
+  v4 = m_enabled != 0;
   if ( m_enabled != 0 )
   {
     m_TargetThreadId = g_VProfCurrentProfile.m_TargetThreadId;
-    v7 = __rdtsc();
-    if ( m_TargetThreadId == ThreadGetCurrentId(v3) )
+    v6 = __rdtsc();
+    if ( m_TargetThreadId == ThreadGetCurrentId() )
     {
       m_pCurNode = g_VProfCurrentProfile.m_pCurNode;
       if ( m_pCurNode->m_pszName != "CProtoBufMsg::CProtoBufMsg( MsgType_t )" )
@@ -8619,48 +8617,48 @@ void __fastcall GCSDK::CProtoBufMsg<CMsgSOCacheSubscriptionRefresh>::CProtoBufMs
                        4);
         g_VProfCurrentProfile.m_pCurNode = m_pCurNode;
       }
-      v20 = &g_VProfCurrentProfile.m_pBudgetGroups[m_pCurNode->m_BudgetGroupID];
-      v20->m_BudgetFlags |= 4u;
+      v18 = &g_VProfCurrentProfile.m_pBudgetGroups[m_pCurNode->m_BudgetGroupID];
+      v18->m_BudgetFlags |= 4u;
       CVProfNode::EnterScope(g_VProfCurrentProfile.m_pCurNode);
       g_VProfCurrentProfile.m_fAtRoot = 0;
     }
     m_numTimeBaseTicks = g_VProfCurrentProfile.m_ScopeProfiler.m_numTimeBaseTicks;
     ++g_VProfCurrentProfile.m_ScopeProfiler.m_numCalls;
-    g_VProfCurrentProfile.m_ScopeProfiler.m_numTimeBaseTicks = m_numTimeBaseTicks - v7 + __rdtsc();
+    g_VProfCurrentProfile.m_ScopeProfiler.m_numTimeBaseTicks = m_numTimeBaseTicks - v6 + __rdtsc();
   }
   if ( !GCSDK::CProtoBufMsg<CMsgSOCacheSubscriptionRefresh>::s_bRegisteredWithMemoryPoolMgr )
   {
     pthread_mutex_lock(&GCSDK::CProtoBufMsgBase::s_PoolRegMutex.m_Mutex);
     if ( !GCSDK::CProtoBufMsg<CMsgSOCacheSubscriptionRefresh>::s_bRegisteredWithMemoryPoolMgr )
     {
-      v9 = operator new(0x28u);
-      v10 = CMsgSOCacheSubscriptionRefresh::descriptor();
+      v8 = operator new(0x28u);
+      v9 = CMsgSOCacheSubscriptionRefresh::descriptor();
       Int32 = google::protobuf::internal::ExtensionSet::GetInt32(
-                (v10->options_ + 8),
+                (v9->options_ + 8),
                 msgpool_hard_limit.number_,
                 msgpool_hard_limit.default_value_);
-      v12 = CMsgSOCacheSubscriptionRefresh::descriptor();
-      v13 = google::protobuf::internal::ExtensionSet::GetInt32(
-              (v12->options_ + 8),
+      v11 = CMsgSOCacheSubscriptionRefresh::descriptor();
+      v12 = google::protobuf::internal::ExtensionSet::GetInt32(
+              (v11->options_ + 8),
               msgpool_soft_limit.number_,
               msgpool_soft_limit.default_value_);
-      GCSDK::CProtoBufMsgMemoryPoolBase::CProtoBufMsgMemoryPoolBase(v9, v13, Int32);
-      v9->_vptr_CProtoBufMsgMemoryPoolBase = &off_4306450;
-      GCSDK::CProtoBufMsg<CMsgSOCacheSubscriptionRefresh>::s_pMemoryPool = v9;
-      v14 = GCSDK::GProtoBufMsgMemoryPoolMgr();
-      GCSDK::CProtoBufMsgMemoryPoolMgr::RegisterPool(v14, v9);
+      GCSDK::CProtoBufMsgMemoryPoolBase::CProtoBufMsgMemoryPoolBase(v8, v12, Int32);
+      v8->_vptr_CProtoBufMsgMemoryPoolBase = &off_4306450;
+      GCSDK::CProtoBufMsg<CMsgSOCacheSubscriptionRefresh>::s_pMemoryPool = v8;
+      v13 = GCSDK::GProtoBufMsgMemoryPoolMgr();
+      GCSDK::CProtoBufMsgMemoryPoolMgr::RegisterPool(v13, v8);
       GCSDK::CProtoBufMsg<CMsgSOCacheSubscriptionRefresh>::s_bRegisteredWithMemoryPoolMgr = 1;
     }
     pthread_mutex_unlock(&GCSDK::CProtoBufMsgBase::s_PoolRegMutex.m_Mutex);
   }
   this->m_pProtoBufBody = GCSDK::CProtoBufMsgMemoryPoolBase::Alloc(GCSDK::CProtoBufMsg<CMsgSOCacheSubscriptionRefresh>::s_pMemoryPool);
-  if ( v5 )
+  if ( v4 )
   {
-    v16 = __rdtsc();
+    v14 = __rdtsc();
     if ( !g_VProfCurrentProfile.m_fAtRoot || g_VProfCurrentProfile.m_enabled != 0 )
     {
-      v17 = g_VProfCurrentProfile.m_TargetThreadId;
-      if ( v17 == ThreadGetCurrentId(v15) )
+      v15 = g_VProfCurrentProfile.m_TargetThreadId;
+      if ( v15 == ThreadGetCurrentId() )
       {
         if ( CVProfNode::ExitScope(g_VProfCurrentProfile.m_pCurNode) != 0 )
         {
@@ -8677,9 +8675,9 @@ void __fastcall GCSDK::CProtoBufMsg<CMsgSOCacheSubscriptionRefresh>::CProtoBufMs
         g_VProfCurrentProfile.m_fAtRoot = m_pParent == &g_VProfCurrentProfile.m_Root;
       }
     }
-    v18 = g_VProfCurrentProfile.m_ScopeProfiler.m_numTimeBaseTicks;
+    v16 = g_VProfCurrentProfile.m_ScopeProfiler.m_numTimeBaseTicks;
     ++g_VProfCurrentProfile.m_ScopeProfiler.m_numCalls;
-    g_VProfCurrentProfile.m_ScopeProfiler.m_numTimeBaseTicks = v18 - v16 + __rdtsc();
+    g_VProfCurrentProfile.m_ScopeProfiler.m_numTimeBaseTicks = v16 - v14 + __rdtsc();
   }
 }
 
@@ -11046,7 +11044,7 @@ void __fastcall GCSDK::CProtoBufMsg<CMsgConnectionStatus>::~CProtoBufMsg(
 {
   google::protobuf::Message *m_pProtoBufBody; // rsi
 
-  this->_vptr_CProtoBufMsgBase = off_47CFA50;
+  this->_vptr_CProtoBufMsgBase = off_47CFA50;  // vptr: GCSDK::CProtoBufMsg<CMsgConnectionStatus>
   m_pProtoBufBody = this->m_pProtoBufBody;
   if ( m_pProtoBufBody != 0 )
   {
@@ -11065,7 +11063,7 @@ void __fastcall GCSDK::CProtoBufMsg<CMsgClientHello>::~CProtoBufMsg(GCSDK::CProt
 {
   google::protobuf::Message *m_pProtoBufBody; // rsi
 
-  this->_vptr_CProtoBufMsgBase = off_47CFA90;
+  this->_vptr_CProtoBufMsgBase = off_47CFA90;  // vptr: GCSDK::CProtoBufMsg<CMsgClientHello>
   m_pProtoBufBody = this->m_pProtoBufBody;
   if ( m_pProtoBufBody != 0 )
   {
@@ -11084,7 +11082,7 @@ void __fastcall GCSDK::CProtoBufMsg<CMsgGCClientPing>::~CProtoBufMsg(GCSDK::CPro
 {
   google::protobuf::Message *m_pProtoBufBody; // rsi
 
-  this->_vptr_CProtoBufMsgBase = off_47D0150;
+  this->_vptr_CProtoBufMsgBase = off_47D0150;  // vptr: GCSDK::CProtoBufMsg<CMsgGCClientPing>
   m_pProtoBufBody = this->m_pProtoBufBody;
   if ( m_pProtoBufBody != 0 )
   {
@@ -11104,7 +11102,7 @@ void __fastcall GCSDK::CProtoBufMsg<CMsgGCToClientPollConvarResponse>::~CProtoBu
 {
   google::protobuf::Message *m_pProtoBufBody; // rsi
 
-  this->_vptr_CProtoBufMsgBase = off_47D0250;
+  this->_vptr_CProtoBufMsgBase = off_47D0250;  // vptr: GCSDK::CProtoBufMsg<CMsgGCToClientPollConvarResponse>
   m_pProtoBufBody = this->m_pProtoBufBody;
   if ( m_pProtoBufBody != 0 )
   {
@@ -11126,7 +11124,7 @@ void __fastcall GCSDK::CProtoBufMsg<CMsgGCToClientPollConvarRequest>::~CProtoBuf
 {
   google::protobuf::Message *m_pProtoBufBody; // rsi
 
-  this->_vptr_CProtoBufMsgBase = off_47D0290;
+  this->_vptr_CProtoBufMsgBase = off_47D0290;  // vptr: GCSDK::CProtoBufMsg<CMsgGCToClientPollConvarRequest>
   m_pProtoBufBody = this->m_pProtoBufBody;
   if ( m_pProtoBufBody != 0 )
   {
@@ -11148,7 +11146,7 @@ void __fastcall GCSDK::CProtoBufMsg<CMsgSOCacheUnsubscribed>::~CProtoBufMsg(
 {
   google::protobuf::Message *m_pProtoBufBody; // rsi
 
-  this->_vptr_CProtoBufMsgBase = off_47D0050;
+  this->_vptr_CProtoBufMsgBase = off_47D0050;  // vptr: GCSDK::CProtoBufMsg<CMsgSOCacheUnsubscribed>
   m_pProtoBufBody = this->m_pProtoBufBody;
   if ( m_pProtoBufBody != 0 )
   {
@@ -11170,7 +11168,7 @@ void __fastcall GCSDK::CProtoBufMsg<CMsgSOCacheSubscribedUpToDate>::~CProtoBufMs
 {
   google::protobuf::Message *m_pProtoBufBody; // rsi
 
-  this->_vptr_CProtoBufMsgBase = off_47CFF50;
+  this->_vptr_CProtoBufMsgBase = off_47CFF50;  // vptr: GCSDK::CProtoBufMsg<CMsgSOCacheSubscribedUpToDate>
   m_pProtoBufBody = this->m_pProtoBufBody;
   if ( m_pProtoBufBody != 0 )
   {
@@ -11192,7 +11190,7 @@ void __fastcall GCSDK::CProtoBufMsg<CMsgSOCacheSubscribed>::~CProtoBufMsg(
 {
   google::protobuf::Message *m_pProtoBufBody; // rsi
 
-  this->_vptr_CProtoBufMsgBase = off_47CFE50;
+  this->_vptr_CProtoBufMsgBase = off_47CFE50;  // vptr: GCSDK::CProtoBufMsg<CMsgSOCacheSubscribed>
   m_pProtoBufBody = this->m_pProtoBufBody;
   if ( m_pProtoBufBody != 0 )
   {
@@ -11212,7 +11210,7 @@ void __fastcall GCSDK::CProtoBufMsg<CMsgSOMultipleObjects>::~CProtoBufMsg(
 {
   google::protobuf::Message *m_pProtoBufBody; // rsi
 
-  this->_vptr_CProtoBufMsgBase = off_47CFD50;
+  this->_vptr_CProtoBufMsgBase = off_47CFD50;  // vptr: GCSDK::CProtoBufMsg<CMsgSOMultipleObjects>
   m_pProtoBufBody = this->m_pProtoBufBody;
   if ( m_pProtoBufBody != 0 )
   {
@@ -11232,7 +11230,7 @@ void __fastcall GCSDK::CProtoBufMsg<CMsgSOSingleObject>::~CProtoBufMsg(
 {
   google::protobuf::Message *m_pProtoBufBody; // rsi
 
-  this->_vptr_CProtoBufMsgBase = off_47CFB90;
+  this->_vptr_CProtoBufMsgBase = off_47CFB90;  // vptr: GCSDK::CProtoBufMsg<CMsgSOSingleObject>
   m_pProtoBufBody = this->m_pProtoBufBody;
   if ( m_pProtoBufBody != 0 )
   {
@@ -11251,7 +11249,7 @@ void __fastcall GCSDK::CProtoBufMsg<CMsgGCToClientPollConvarRequest>::~CProtoBuf
 {
   google::protobuf::Message *m_pProtoBufBody; // rsi
 
-  this->_vptr_CProtoBufMsgBase = off_47D0290;
+  this->_vptr_CProtoBufMsgBase = off_47D0290;  // vptr: GCSDK::CProtoBufMsg<CMsgGCToClientPollConvarRequest>
   m_pProtoBufBody = this->m_pProtoBufBody;
   if ( m_pProtoBufBody != 0 )
   {
@@ -11273,7 +11271,7 @@ void __fastcall GCSDK::CProtoBufMsg<CMsgSOCacheUnsubscribed>::~CProtoBufMsg(
 {
   google::protobuf::Message *m_pProtoBufBody; // rsi
 
-  this->_vptr_CProtoBufMsgBase = off_47D0050;
+  this->_vptr_CProtoBufMsgBase = off_47D0050;  // vptr: GCSDK::CProtoBufMsg<CMsgSOCacheUnsubscribed>
   m_pProtoBufBody = this->m_pProtoBufBody;
   if ( m_pProtoBufBody != 0 )
   {
@@ -11295,7 +11293,7 @@ void __fastcall GCSDK::CProtoBufMsg<CMsgSOSingleObject>::~CProtoBufMsg(
 {
   google::protobuf::Message *m_pProtoBufBody; // rsi
 
-  this->_vptr_CProtoBufMsgBase = off_47CFB90;
+  this->_vptr_CProtoBufMsgBase = off_47CFB90;  // vptr: GCSDK::CProtoBufMsg<CMsgSOSingleObject>
   m_pProtoBufBody = this->m_pProtoBufBody;
   if ( m_pProtoBufBody != 0 )
   {
@@ -11315,7 +11313,7 @@ void __fastcall GCSDK::CProtoBufMsg<CMsgSOCacheSubscribed>::~CProtoBufMsg(
 {
   google::protobuf::Message *m_pProtoBufBody; // rsi
 
-  this->_vptr_CProtoBufMsgBase = off_47CFE50;
+  this->_vptr_CProtoBufMsgBase = off_47CFE50;  // vptr: GCSDK::CProtoBufMsg<CMsgSOCacheSubscribed>
   m_pProtoBufBody = this->m_pProtoBufBody;
   if ( m_pProtoBufBody != 0 )
   {
@@ -11335,7 +11333,7 @@ void __fastcall GCSDK::CProtoBufMsg<CMsgSOMultipleObjects>::~CProtoBufMsg(
 {
   google::protobuf::Message *m_pProtoBufBody; // rsi
 
-  this->_vptr_CProtoBufMsgBase = off_47CFD50;
+  this->_vptr_CProtoBufMsgBase = off_47CFD50;  // vptr: GCSDK::CProtoBufMsg<CMsgSOMultipleObjects>
   m_pProtoBufBody = this->m_pProtoBufBody;
   if ( m_pProtoBufBody != 0 )
   {
@@ -11355,7 +11353,7 @@ void __fastcall GCSDK::CProtoBufMsg<CMsgSOCacheSubscribedUpToDate>::~CProtoBufMs
 {
   google::protobuf::Message *m_pProtoBufBody; // rsi
 
-  this->_vptr_CProtoBufMsgBase = off_47CFF50;
+  this->_vptr_CProtoBufMsgBase = off_47CFF50;  // vptr: GCSDK::CProtoBufMsg<CMsgSOCacheSubscribedUpToDate>
   m_pProtoBufBody = this->m_pProtoBufBody;
   if ( m_pProtoBufBody != 0 )
   {
@@ -11377,7 +11375,7 @@ void __fastcall GCSDK::CProtoBufMsg<CMsgConnectionStatus>::~CProtoBufMsg(
 {
   google::protobuf::Message *m_pProtoBufBody; // rsi
 
-  this->_vptr_CProtoBufMsgBase = off_47CFA50;
+  this->_vptr_CProtoBufMsgBase = off_47CFA50;  // vptr: GCSDK::CProtoBufMsg<CMsgConnectionStatus>
   m_pProtoBufBody = this->m_pProtoBufBody;
   if ( m_pProtoBufBody != 0 )
   {
@@ -11396,7 +11394,7 @@ void __fastcall GCSDK::CProtoBufMsg<CMsgClientHello>::~CProtoBufMsg(GCSDK::CProt
 {
   google::protobuf::Message *m_pProtoBufBody; // rsi
 
-  this->_vptr_CProtoBufMsgBase = off_47CFA90;
+  this->_vptr_CProtoBufMsgBase = off_47CFA90;  // vptr: GCSDK::CProtoBufMsg<CMsgClientHello>
   m_pProtoBufBody = this->m_pProtoBufBody;
   if ( m_pProtoBufBody != 0 )
   {
@@ -11416,7 +11414,7 @@ void __fastcall GCSDK::CProtoBufMsg<CMsgGCToClientPollConvarResponse>::~CProtoBu
 {
   google::protobuf::Message *m_pProtoBufBody; // rsi
 
-  this->_vptr_CProtoBufMsgBase = off_47D0250;
+  this->_vptr_CProtoBufMsgBase = off_47D0250;  // vptr: GCSDK::CProtoBufMsg<CMsgGCToClientPollConvarResponse>
   m_pProtoBufBody = this->m_pProtoBufBody;
   if ( m_pProtoBufBody != 0 )
   {
@@ -11437,7 +11435,7 @@ void __fastcall GCSDK::CProtoBufMsg<CMsgGCClientPing>::~CProtoBufMsg(GCSDK::CPro
 {
   google::protobuf::Message *m_pProtoBufBody; // rsi
 
-  this->_vptr_CProtoBufMsgBase = off_47D0150;
+  this->_vptr_CProtoBufMsgBase = off_47D0150;  // vptr: GCSDK::CProtoBufMsg<CMsgGCClientPing>
   m_pProtoBufBody = this->m_pProtoBufBody;
   if ( m_pProtoBufBody != 0 )
   {

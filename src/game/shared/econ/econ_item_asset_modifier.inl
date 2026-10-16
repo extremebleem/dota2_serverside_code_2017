@@ -43,10 +43,10 @@ CAssetModifier *__fastcall createAssetModifierType<CActivityModifier>(
   KeyValues *m_pKV; // rdi
   bool v15; // zf
 
-  v8 = operator new(0x38u);
+  v8 = operator new(0x38u);  // new CActivityModifier (size matches)
   CAssetModifier::CAssetModifier(v8, pKV, pSchema, bParseCriteria, nPriority);
   *(&v8->m_nPriority + 1) = -1;
-  v8->_vptr_CAssetModifier = off_479E510;
+  v8->_vptr_CAssetModifier = off_479E510;  // vptr: CActivityModifier
   v9 = CUtlString::Get(&v8->m_strAsset);
   v10 = -1;
   if ( g_pAnimationSystem != 0 )
@@ -77,9 +77,9 @@ CAssetModifier *__fastcall createAssetModifierType<CAnnouncerModifier>(
 {
   CAssetModifier *v8; // rbx
 
-  v8 = operator new(0x30u);
+  v8 = operator new(0x30u);  // new CAnnouncerModifier (size matches)
   CAssetModifier::CAssetModifier(v8, pKV, pSchema, bParseCriteria, nPriority);
-  v8->_vptr_CAssetModifier = off_479E570;
+  v8->_vptr_CAssetModifier = off_479E570;  // vptr: CAnnouncerModifier
   return v8;
 }
 
@@ -94,9 +94,9 @@ CAssetModifier *__fastcall createAssetModifierType<CAnnouncerPreviewModifier>(
 {
   CAssetModifier *v8; // rbx
 
-  v8 = operator new(0x30u);
+  v8 = operator new(0x30u);  // new CAnnouncerPreviewModifier (size matches)
   CAssetModifier::CAssetModifier(v8, pKV, pSchema, bParseCriteria, nPriority);
-  v8->_vptr_CAssetModifier = off_479E5D0;
+  v8->_vptr_CAssetModifier = off_479E5D0;  // vptr: CAnnouncerPreviewModifier
   return v8;
 }
 
@@ -113,9 +113,9 @@ CAssetModifier *__fastcall createAssetModifierType<CHudSkinModifier>(
   CAssetModifier *v8; // rbx
   const char *v9; // rax
 
-  v8 = operator new(0x30u);
+  v8 = operator new(0x30u);  // new CHudSkinModifier (size matches)
   CAssetModifier::CAssetModifier(v8, pKV, pSchema, bParseCriteria, nPriority);
-  v8->_vptr_CAssetModifier = off_479E630;
+  v8->_vptr_CAssetModifier = off_479E630;  // vptr: CHudSkinModifier
   v9 = CUtlString::Get(&v8->m_strModifier);
   *(&v8->m_nPriority + 1) = V_stricmp_fast(v9, "day_night") == 0;
   return v8;
@@ -132,9 +132,9 @@ CAssetModifier *__fastcall createAssetModifierType<CAbilityNameModifier>(
 {
   CAssetModifier *v8; // rbx
 
-  v8 = operator new(0x30u);
+  v8 = operator new(0x30u);  // new CAbilityNameModifier (size matches)
   CAssetModifier::CAssetModifier(v8, pKV, pSchema, bParseCriteria, nPriority);
-  v8->_vptr_CAssetModifier = off_479E6F0;
+  v8->_vptr_CAssetModifier = off_479E6F0;  // vptr: CAbilityNameModifier
   return v8;
 }
 
@@ -149,9 +149,9 @@ CAssetModifier *__fastcall createAssetModifierType<CSoundModifier>(
 {
   CAssetModifier *v8; // rbx
 
-  v8 = operator new(0x30u);
+  v8 = operator new(0x30u);  // new CSoundModifier (size matches)
   CAssetModifier::CAssetModifier(v8, pKV, pSchema, bParseCriteria, nPriority);
-  v8->_vptr_CAssetModifier = off_47A40B0;
+  v8->_vptr_CAssetModifier = off_47A40B0;  // vptr: CSoundModifier
   return v8;
 }
 
@@ -166,9 +166,9 @@ CAssetModifier *__fastcall createAssetModifierType<CSpeechModifier>(
 {
   CAssetModifier *v8; // rbx
 
-  v8 = operator new(0x30u);
+  v8 = operator new(0x30u);  // new CSpeechModifier (size matches)
   CAssetModifier::CAssetModifier(v8, pKV, pSchema, bParseCriteria, nPriority);
-  v8->_vptr_CAssetModifier = off_479EA50;
+  v8->_vptr_CAssetModifier = off_479EA50;  // vptr: CSpeechModifier
   return v8;
 }
 
@@ -183,9 +183,9 @@ CAssetModifier *__fastcall createAssetModifierType<CParticleModifier>(
 {
   CParticleModifier *v8; // rbx
 
-  v8 = operator new(0x38u);
+  v8 = operator new(0x38u);  // new CParticleModifier (size matches)
   CAssetModifier::CAssetModifier(v8, pKV, pSchema, bParseCriteria, nPriority);
-  v8->_vptr_CAssetModifier = off_47A4170;
+  v8->_vptr_CAssetModifier = off_47A4170;  // vptr: CParticleModifier
   CParticleModifier::Init(v8, pSchema);
   return v8;
 }
@@ -202,10 +202,10 @@ CAssetModifier *__fastcall createAssetModifierType<CParticleCombined>(
   CAssetModifier *v8; // rbx
   KeyValues *m_pKV; // rdi
 
-  v8 = operator new(0x38u);
+  v8 = operator new(0x38u);  // new CParticleCombined (size matches)
   CAssetModifier::CAssetModifier(v8, pKV, pSchema, bParseCriteria, nPriority);
   m_pKV = v8->m_pKV;
-  v8->_vptr_CAssetModifier = off_479EED0;
+  v8->_vptr_CAssetModifier = off_479EED0;  // vptr: CParticleCombined
   HIDWORD(v8[1]._vptr_CAssetModifier) = KeyValues::GetInt(m_pKV, "order", 0);
   return v8;
 }
@@ -221,9 +221,9 @@ CAssetModifier *__fastcall createAssetModifierType<CParticleCreateModifier>(
 {
   CParticleCreateModifier *v8; // rbx
 
-  v8 = operator new(0x38u);
+  v8 = operator new(0x38u);  // new CParticleCreateModifier (size matches)
   CAssetModifier::CAssetModifier(v8, pKV, pSchema, bParseCriteria, nPriority);
-  v8->_vptr_CAssetModifier = off_47A41D0;
+  v8->_vptr_CAssetModifier = off_47A41D0;  // vptr: CParticleCreateModifier
   CParticleCreateModifier::Init(v8, pSchema);
   return v8;
 }
@@ -239,9 +239,9 @@ CAssetModifier *__fastcall createAssetModifierType<CParticleSnapshotModifier>(
 {
   CAssetModifier *v8; // rbx
 
-  v8 = operator new(0x30u);
+  v8 = operator new(0x30u);  // new CParticleSnapshotModifier (size matches)
   CAssetModifier::CAssetModifier(v8, pKV, pSchema, bParseCriteria, nPriority);
-  v8->_vptr_CAssetModifier = off_479EF30;
+  v8->_vptr_CAssetModifier = off_479EF30;  // vptr: CParticleSnapshotModifier
   return v8;
 }
 
@@ -284,9 +284,9 @@ CAssetModifier *__fastcall createAssetModifierType<CModelModifier>(
 {
   CAssetModifier *v8; // rbx
 
-  v8 = operator new(0x30u);
+  v8 = operator new(0x30u);  // new CModelModifier (size matches)
   CAssetModifier::CAssetModifier(v8, pKV, pSchema, bParseCriteria, nPriority);
-  v8->_vptr_CAssetModifier = off_47A3F90;
+  v8->_vptr_CAssetModifier = off_47A3F90;  // vptr: CModelModifier
   return v8;
 }
 
@@ -301,9 +301,9 @@ CAssetModifier *__fastcall createAssetModifierType<CEntityModelModifier>(
 {
   CAssetModifier *v8; // rbx
 
-  v8 = operator new(0x30u);
+  v8 = operator new(0x30u);  // new CEntityModelModifier (size matches)
   CAssetModifier::CAssetModifier(v8, pKV, pSchema, bParseCriteria, nPriority);
-  v8->_vptr_CAssetModifier = off_479EC90;
+  v8->_vptr_CAssetModifier = off_479EC90;  // vptr: CEntityModelModifier
   return v8;
 }
 
@@ -318,9 +318,9 @@ CAssetModifier *__fastcall createAssetModifierType<CCourierModifier>(
 {
   CAssetModifier *v8; // rbx
 
-  v8 = operator new(0x30u);
+  v8 = operator new(0x30u);  // new CCourierModifier (size matches)
   CAssetModifier::CAssetModifier(v8, pKV, pSchema, bParseCriteria, nPriority);
-  v8->_vptr_CAssetModifier = off_479E870;
+  v8->_vptr_CAssetModifier = off_479E870;  // vptr: CCourierModifier
   return v8;
 }
 
@@ -335,9 +335,9 @@ CAssetModifier *__fastcall createAssetModifierType<CCourierFlyingModifier>(
 {
   CAssetModifier *v8; // rbx
 
-  v8 = operator new(0x30u);
+  v8 = operator new(0x30u);  // new CCourierFlyingModifier (size matches)
   CAssetModifier::CAssetModifier(v8, pKV, pSchema, bParseCriteria, nPriority);
-  v8->_vptr_CAssetModifier = off_479E8D0;
+  v8->_vptr_CAssetModifier = off_479E8D0;  // vptr: CCourierFlyingModifier
   return v8;
 }
 
@@ -353,10 +353,10 @@ CAssetModifier *__fastcall createAssetModifierType<CHeroModelChangeModifier>(
   CAssetModifier *v8; // rbx
   KeyValues *m_pKV; // rdi
 
-  v8 = operator new(0x30u);
+  v8 = operator new(0x30u);  // new CHeroModelChangeModifier (size matches)
   CAssetModifier::CAssetModifier(v8, pKV, pSchema, bParseCriteria, nPriority);
   m_pKV = v8->m_pKV;
-  v8->_vptr_CAssetModifier = off_479E930;
+  v8->_vptr_CAssetModifier = off_479E930;  // vptr: CHeroModelChangeModifier
   *(&v8->m_nPriority + 1) = KeyValues::GetInt(m_pKV, "skin", 0);
   return v8;
 }
@@ -372,9 +372,9 @@ CAssetModifier *__fastcall createAssetModifierType<CHexModelModifier>(
 {
   CAssetModifier *v8; // rbx
 
-  v8 = operator new(0x30u);
+  v8 = operator new(0x30u);  // new CHexModelModifier (size matches)
   CAssetModifier::CAssetModifier(v8, pKV, pSchema, bParseCriteria, nPriority);
-  v8->_vptr_CAssetModifier = off_479E990;
+  v8->_vptr_CAssetModifier = off_479E990;  // vptr: CHexModelModifier
   return v8;
 }
 
@@ -393,10 +393,10 @@ CAssetModifier *__fastcall createAssetModifierType<CEntityScaleModifier>(
   float v10; // xmm1_4
   float Float; // xmm0_4
 
-  v8 = operator new(0x30u);
+  v8 = operator new(0x30u);  // new CEntityScaleModifier (size matches)
   CAssetModifier::CAssetModifier(v8, pKV, pSchema, bParseCriteria, nPriority);
   m_pKV = v8->m_pKV;
-  v8->_vptr_CAssetModifier = off_479ECF0;
+  v8->_vptr_CAssetModifier = off_479ECF0;  // vptr: CEntityScaleModifier
   Float = KeyValues::GetFloat(m_pKV, "scale_size", v10);
   *(&v8->m_nPriority + 1) = Float;
   return v8;
@@ -415,10 +415,10 @@ CAssetModifier *__fastcall createAssetModifierType<CIconModifier>(
   CAssetModifier *v8; // rbx
   KeyValues *m_pKV; // rdi
 
-  v8 = operator new(0x30u);
+  v8 = operator new(0x30u);  // new CIconModifier (size matches)
   CAssetModifier::CAssetModifier(v8, pKV, pSchema, bParseCriteria, nPriority);
   m_pKV = v8->m_pKV;
-  v8->_vptr_CAssetModifier = off_479EAB0;
+  v8->_vptr_CAssetModifier = off_479EAB0;  // vptr: CIconModifier
   *(&v8->m_nPriority + 1) = KeyValues::GetInt(m_pKV, "force_display", 0);
   return v8;
 }
@@ -436,10 +436,10 @@ CAssetModifier *__fastcall createAssetModifierType<CIconModifier_Hero>(
   CAssetModifier *v8; // rbx
   KeyValues *m_pKV; // rdi
 
-  v8 = operator new(0x30u);
+  v8 = operator new(0x30u);  // new CIconModifier_Hero (size matches)
   CAssetModifier::CAssetModifier(v8, pKV, pSchema, bParseCriteria, nPriority);
   m_pKV = v8->m_pKV;
-  v8->_vptr_CAssetModifier = off_479EB10;
+  v8->_vptr_CAssetModifier = off_479EB10;  // vptr: CIconModifier_Hero
   *(&v8->m_nPriority + 1) = KeyValues::GetInt(m_pKV, "force_display", 0);
   return v8;
 }
@@ -457,10 +457,10 @@ CAssetModifier *__fastcall createAssetModifierType<CIconModifier_HeroMinimap>(
   CAssetModifier *v8; // rbx
   KeyValues *m_pKV; // rdi
 
-  v8 = operator new(0x30u);
+  v8 = operator new(0x30u);  // new CIconModifier_HeroMinimap (size matches)
   CAssetModifier::CAssetModifier(v8, pKV, pSchema, bParseCriteria, nPriority);
   m_pKV = v8->m_pKV;
-  v8->_vptr_CAssetModifier = off_479EB70;
+  v8->_vptr_CAssetModifier = off_479EB70;  // vptr: CIconModifier_HeroMinimap
   *(&v8->m_nPriority + 1) = KeyValues::GetInt(m_pKV, "force_display", 0);
   return v8;
 }
@@ -478,10 +478,10 @@ CAssetModifier *__fastcall createAssetModifierType<CInventoryIconModifier>(
   CAssetModifier *v8; // rbx
   KeyValues *m_pKV; // rdi
 
-  v8 = operator new(0x30u);
+  v8 = operator new(0x30u);  // new CInventoryIconModifier (size matches)
   CAssetModifier::CAssetModifier(v8, pKV, pSchema, bParseCriteria, nPriority);
   m_pKV = v8->m_pKV;
-  v8->_vptr_CAssetModifier = off_479EBD0;
+  v8->_vptr_CAssetModifier = off_479EBD0;  // vptr: CInventoryIconModifier
   *(&v8->m_nPriority + 1) = KeyValues::GetInt(m_pKV, "force_display", 0);
   return v8;
 }
@@ -497,9 +497,9 @@ CAssetModifier *__fastcall createAssetModifierType<CAbilityIconModifier>(
 {
   CAssetModifier *v8; // rbx
 
-  v8 = operator new(0x30u);
+  v8 = operator new(0x30u);  // new CAbilityIconModifier (size matches)
   CAssetModifier::CAssetModifier(v8, pKV, pSchema, bParseCriteria, nPriority);
-  v8->_vptr_CAssetModifier = off_479EC30;
+  v8->_vptr_CAssetModifier = off_479EC30;  // vptr: CAbilityIconModifier
   return v8;
 }
 
@@ -514,9 +514,9 @@ CAssetModifier *__fastcall createAssetModifierType<CLoadingScreenModifier>(
 {
   CAssetModifier *v8; // rbx
 
-  v8 = operator new(0x30u);
+  v8 = operator new(0x30u);  // new CLoadingScreenModifier (size matches)
   CAssetModifier::CAssetModifier(v8, pKV, pSchema, bParseCriteria, nPriority);
-  v8->_vptr_CAssetModifier = off_479E750;
+  v8->_vptr_CAssetModifier = off_479E750;  // vptr: CLoadingScreenModifier
   return v8;
 }
 
@@ -531,9 +531,9 @@ CAssetModifier *__fastcall createAssetModifierType<CResponseCriteriaModifier>(
 {
   CAssetModifier *v8; // rbx
 
-  v8 = operator new(0x30u);
+  v8 = operator new(0x30u);  // new CResponseCriteriaModifier (size matches)
   CAssetModifier::CAssetModifier(v8, pKV, pSchema, bParseCriteria, nPriority);
-  v8->_vptr_CAssetModifier = off_479EFF0;
+  v8->_vptr_CAssetModifier = off_479EFF0;  // vptr: CResponseCriteriaModifier
   return v8;
 }
 
@@ -548,9 +548,9 @@ CAssetModifier *__fastcall createAssetModifierType<CCustomKillEffectModifier>(
 {
   CAssetModifier *v8; // rbx
 
-  v8 = operator new(0x30u);
+  v8 = operator new(0x30u);  // new CCustomKillEffectModifier (size matches)
   CAssetModifier::CAssetModifier(v8, pKV, pSchema, bParseCriteria, nPriority);
-  v8->_vptr_CAssetModifier = off_479EE10;
+  v8->_vptr_CAssetModifier = off_479EE10;  // vptr: CCustomKillEffectModifier
   return v8;
 }
 
@@ -565,9 +565,9 @@ CAssetModifier *__fastcall createAssetModifierType<CSoundscapeModifier>(
 {
   CAssetModifier *v8; // rbx
 
-  v8 = operator new(0x30u);
+  v8 = operator new(0x30u);  // new CSoundscapeModifier (size matches)
   CAssetModifier::CAssetModifier(v8, pKV, pSchema, bParseCriteria, nPriority);
-  v8->_vptr_CAssetModifier = off_479E9F0;
+  v8->_vptr_CAssetModifier = off_479E9F0;  // vptr: CSoundscapeModifier
   return v8;
 }
 
@@ -584,10 +584,10 @@ CAssetModifier *__fastcall createAssetModifierType<CWeatherModifier>(
   CAssetModifier *v8; // rbx
   KeyValues *m_pKV; // rdi
 
-  v8 = operator new(0x30u);
+  v8 = operator new(0x30u);  // new CWeatherModifier (size matches)
   CAssetModifier::CAssetModifier(v8, pKV, pSchema, bParseCriteria, nPriority);
   m_pKV = v8->m_pKV;
-  v8->_vptr_CAssetModifier = off_479ED50;
+  v8->_vptr_CAssetModifier = off_479ED50;  // vptr: CWeatherModifier
   *(&v8->m_nPriority + 1) = KeyValues::GetInt(m_pKV, "weather_type", 0);
   return v8;
 }
@@ -603,9 +603,9 @@ CAssetModifier *__fastcall createAssetModifierType<CPortraitBackgroundModelModif
 {
   CAssetModifier *v8; // rbx
 
-  v8 = operator new(0x30u);
+  v8 = operator new(0x30u);  // new CPortraitBackgroundModelModifier (size matches)
   CAssetModifier::CAssetModifier(v8, pKV, pSchema, bParseCriteria, nPriority);
-  v8->_vptr_CAssetModifier = off_47A3FF0;
+  v8->_vptr_CAssetModifier = off_47A3FF0;  // vptr: CPortraitBackgroundModelModifier
   return v8;
 }
 
@@ -620,10 +620,10 @@ CAssetModifier *__fastcall createAssetModifierType<CPortraitBackgroundLightModif
 {
   CAssetModifier *v8; // rbx
 
-  v8 = operator new(0x38u);
+  v8 = operator new(0x38u);  // new CPortraitBackgroundLightModifier (size matches)
   CAssetModifier::CAssetModifier(v8, pKV, pSchema, bParseCriteria, nPriority);
   v8[1]._vptr_CAssetModifier = 0;
-  v8->_vptr_CAssetModifier = off_47A4350;
+  v8->_vptr_CAssetModifier = off_47A4350;  // vptr: CPortraitBackgroundLightModifier
   return v8;
 }
 
@@ -638,10 +638,10 @@ CAssetModifier *__fastcall createAssetModifierType<CPortraitBackgroundCameraModi
 {
   CAssetModifier *v8; // rbx
 
-  v8 = operator new(0x38u);
+  v8 = operator new(0x38u);  // new CPortraitBackgroundCameraModifier (size matches)
   CAssetModifier::CAssetModifier(v8, pKV, pSchema, bParseCriteria, nPriority);
   v8[1]._vptr_CAssetModifier = 0;
-  v8->_vptr_CAssetModifier = off_47A42F0;
+  v8->_vptr_CAssetModifier = off_47A42F0;  // vptr: CPortraitBackgroundCameraModifier
   return v8;
 }
 
@@ -656,9 +656,9 @@ CAssetModifier *__fastcall createAssetModifierType<CPortraitBackgroundParticleMo
 {
   CAssetModifier *v8; // rbx
 
-  v8 = operator new(0x30u);
+  v8 = operator new(0x30u);  // new CPortraitBackgroundParticleModifier (size matches)
   CAssetModifier::CAssetModifier(v8, pKV, pSchema, bParseCriteria, nPriority);
-  v8->_vptr_CAssetModifier = off_47A4230;
+  v8->_vptr_CAssetModifier = off_47A4230;  // vptr: CPortraitBackgroundParticleModifier
   return v8;
 }
 
@@ -673,9 +673,9 @@ CAssetModifier *__fastcall createAssetModifierType<CPortraitBackgroundMapModifie
 {
   CAssetModifier *v8; // rbx
 
-  v8 = operator new(0x30u);
+  v8 = operator new(0x30u);  // new CPortraitBackgroundMapModifier (size matches)
   CAssetModifier::CAssetModifier(v8, pKV, pSchema, bParseCriteria, nPriority);
-  v8->_vptr_CAssetModifier = off_479F050;
+  v8->_vptr_CAssetModifier = off_479F050;  // vptr: CPortraitBackgroundMapModifier
   return v8;
 }
 
@@ -690,9 +690,9 @@ CAssetModifier *__fastcall createAssetModifierType<CBuffModifier>(
 {
   CAssetModifier *v8; // rbx
 
-  v8 = operator new(0x30u);
+  v8 = operator new(0x30u);  // new CBuffModifier (size matches)
   CAssetModifier::CAssetModifier(v8, pKV, pSchema, bParseCriteria, nPriority);
-  v8->_vptr_CAssetModifier = off_479EE70;
+  v8->_vptr_CAssetModifier = off_479EE70;  // vptr: CBuffModifier
   return v8;
 }
 
@@ -707,9 +707,9 @@ CAssetModifier *__fastcall createAssetModifierType<CCursorPackModifier>(
 {
   CAssetModifier *v8; // rbx
 
-  v8 = operator new(0x30u);
+  v8 = operator new(0x30u);  // new CCursorPackModifier (size matches)
   CAssetModifier::CAssetModifier(v8, pKV, pSchema, bParseCriteria, nPriority);
-  v8->_vptr_CAssetModifier = off_479E7B0;
+  v8->_vptr_CAssetModifier = off_479E7B0;  // vptr: CCursorPackModifier
   return v8;
 }
 
@@ -730,10 +730,10 @@ CAssetModifier *__fastcall createAssetModifierType<CStrangeControlPointModifier>
   KeyValues *v12; // rdi
   float v13; // xmm1_4
 
-  v8 = operator new(0x38u);
+  v8 = operator new(0x38u);  // new CStrangeControlPointModifier (size matches)
   CAssetModifier::CAssetModifier(v8, pKV, pSchema, bParseCriteria, nPriority);
   m_pKV = v8->m_pKV;
-  v8->_vptr_CAssetModifier = off_479E810;
+  v8->_vptr_CAssetModifier = off_479E810;  // vptr: CStrangeControlPointModifier
   Float = KeyValues::GetFloat(m_pKV, "strange_type", v10);
   v12 = v8->m_pKV;
   *(&v8->m_nPriority + 1) = Float;
@@ -826,10 +826,10 @@ CAssetModifier *__fastcall createAssetModifierType<CHealthBarModifier>(
   CAssetModifier *v8; // rbx
   KeyValues *m_pKV; // rdi
 
-  v8 = operator new(0x30u);
+  v8 = operator new(0x30u);  // new CHealthBarModifier (size matches)
   CAssetModifier::CAssetModifier(v8, pKV, pSchema, bParseCriteria, nPriority);
   m_pKV = v8->m_pKV;
-  v8->_vptr_CAssetModifier = off_479F0B0;
+  v8->_vptr_CAssetModifier = off_479F0B0;  // vptr: CHealthBarModifier
   *(&v8->m_nPriority + 1) = KeyValues::GetInt(m_pKV, "offset", 0);
   return v8;
 }
@@ -846,10 +846,10 @@ CAssetModifier *__fastcall createAssetModifierType<CEntityHealthBarModifier>(
   CAssetModifier *v8; // rbx
   KeyValues *m_pKV; // rdi
 
-  v8 = operator new(0x30u);
+  v8 = operator new(0x30u);  // new CEntityHealthBarModifier (size matches)
   CAssetModifier::CAssetModifier(v8, pKV, pSchema, bParseCriteria, nPriority);
   m_pKV = v8->m_pKV;
-  v8->_vptr_CAssetModifier = off_479F110;
+  v8->_vptr_CAssetModifier = off_479F110;  // vptr: CEntityHealthBarModifier
   *(&v8->m_nPriority + 1) = KeyValues::GetInt(m_pKV, "offset", 0);
   return v8;
 }
@@ -865,10 +865,10 @@ CAssetModifier *__fastcall createAssetModifierType<CPortraitModifier_Game>(
 {
   CAssetModifier *v8; // rbx
 
-  v8 = operator new(0x38u);
+  v8 = operator new(0x38u);  // new CPortraitModifier_Game (size matches)
   CAssetModifier::CAssetModifier(v8, pKV, pSchema, bParseCriteria, nPriority);
   v8[1]._vptr_CAssetModifier = 0;
-  v8->_vptr_CAssetModifier = off_47A4110;
+  v8->_vptr_CAssetModifier = off_47A4110;  // vptr: CPortraitModifier_Game
   return v8;
 }
 
@@ -883,9 +883,9 @@ CAssetModifier *__fastcall createAssetModifierType<CAdditionalWearableModifier>(
 {
   CAssetModifier *v8; // rbx
 
-  v8 = operator new(0x30u);
+  v8 = operator new(0x30u);  // new CAdditionalWearableModifier (size matches)
   CAssetModifier::CAssetModifier(v8, pKV, pSchema, bParseCriteria, nPriority);
-  v8->_vptr_CAssetModifier = off_47A4050;
+  v8->_vptr_CAssetModifier = off_47A4050;  // vptr: CAdditionalWearableModifier
   return v8;
 }
 
@@ -900,9 +900,9 @@ CAssetModifier *__fastcall createAssetModifierType<CMapModifier>(
 {
   CAssetModifier *v8; // rbx
 
-  v8 = operator new(0x30u);
+  v8 = operator new(0x30u);  // new CMapModifier (size matches)
   CAssetModifier::CAssetModifier(v8, pKV, pSchema, bParseCriteria, nPriority);
-  v8->_vptr_CAssetModifier = off_479EDB0;
+  v8->_vptr_CAssetModifier = off_479EDB0;  // vptr: CMapModifier
   return v8;
 }
 
@@ -917,9 +917,9 @@ CAssetModifier *__fastcall createAssetModifierType<CWeatherEffectModifier>(
 {
   CAssetModifier *v8; // rbx
 
-  v8 = operator new(0x30u);
+  v8 = operator new(0x30u);  // new CWeatherEffectModifier (size matches)
   CAssetModifier::CAssetModifier(v8, pKV, pSchema, bParseCriteria, nPriority);
-  v8->_vptr_CAssetModifier = off_47A43B0;
+  v8->_vptr_CAssetModifier = off_47A43B0;  // vptr: CWeatherEffectModifier
   return v8;
 }
 
@@ -934,9 +934,9 @@ CAssetModifier *__fastcall createAssetModifierType<CTerrainParticleEffectModifie
 {
   CAssetModifier *v8; // rbx
 
-  v8 = operator new(0x30u);
+  v8 = operator new(0x30u);  // new CTerrainParticleEffectModifier (size matches)
   CAssetModifier::CAssetModifier(v8, pKV, pSchema, bParseCriteria, nPriority);
-  v8->_vptr_CAssetModifier = off_47A4410;
+  v8->_vptr_CAssetModifier = off_47A4410;  // vptr: CTerrainParticleEffectModifier
   return v8;
 }
 
@@ -952,10 +952,10 @@ CAssetModifier *__fastcall createAssetModifierType<CArcanaLevelModifier>(
   CAssetModifier *v8; // rbx
   KeyValues *m_pKV; // rdi
 
-  v8 = operator new(0x30u);
+  v8 = operator new(0x30u);  // new CArcanaLevelModifier (size matches)
   CAssetModifier::CAssetModifier(v8, pKV, pSchema, bParseCriteria, nPriority);
   m_pKV = v8->m_pKV;
-  v8->_vptr_CAssetModifier = off_479F170;
+  v8->_vptr_CAssetModifier = off_479F170;  // vptr: CArcanaLevelModifier
   *(&v8->m_nPriority + 1) = KeyValues::GetInt(m_pKV, "level", 0);
   return v8;
 }
@@ -971,9 +971,9 @@ CAssetModifier *__fastcall createAssetModifierType<CNPCMaterialOverrideModifier>
 {
   CAssetModifier *v8; // rbx
 
-  v8 = operator new(0x30u);
+  v8 = operator new(0x30u);  // new CNPCMaterialOverrideModifier (size matches)
   CAssetModifier::CAssetModifier(v8, pKV, pSchema, bParseCriteria, nPriority);
-  v8->_vptr_CAssetModifier = off_47A4470;
+  v8->_vptr_CAssetModifier = off_47A4470;  // vptr: CNPCMaterialOverrideModifier
   return v8;
 }
 
@@ -989,10 +989,10 @@ CAssetModifier *__fastcall createAssetModifierType<CSkinChangeModifier>(
   CAssetModifier *v8; // rbx
   KeyValues *m_pKV; // rdi
 
-  v8 = operator new(0x30u);
+  v8 = operator new(0x30u);  // new CSkinChangeModifier (size matches)
   CAssetModifier::CAssetModifier(v8, pKV, pSchema, bParseCriteria, nPriority);
   m_pKV = v8->m_pKV;
-  v8->_vptr_CAssetModifier = off_479E690;
+  v8->_vptr_CAssetModifier = off_479E690;  // vptr: CSkinChangeModifier
   *(&v8->m_nPriority + 1) = KeyValues::GetInt(m_pKV, "skin", 0);
   return v8;
 }
@@ -1008,9 +1008,9 @@ CAssetModifier *__fastcall createAssetModifierType<CWaterMaterialOverrideModifie
 {
   CAssetModifier *v8; // rbx
 
-  v8 = operator new(0x30u);
+  v8 = operator new(0x30u);  // new CWaterMaterialOverrideModifier (size matches)
   CAssetModifier::CAssetModifier(v8, pKV, pSchema, bParseCriteria, nPriority);
-  v8->_vptr_CAssetModifier = off_47A44D0;
+  v8->_vptr_CAssetModifier = off_47A44D0;  // vptr: CWaterMaterialOverrideModifier
   return v8;
 }
 
@@ -1019,7 +1019,7 @@ CAssetModifier *__fastcall createAssetModifierType<CWaterMaterialOverrideModifie
 // calls: CAssetModifier::~CAssetModifier
 void __fastcall CActivityModifier::~CActivityModifier(CActivityModifier *const this)
 {
-  this->_vptr_CAssetModifier = off_479E510;
+  this->_vptr_CAssetModifier = off_479E510;  // vptr: CActivityModifier
   CAssetModifier::~CAssetModifier(this);
 }
 
@@ -1028,7 +1028,7 @@ void __fastcall CActivityModifier::~CActivityModifier(CActivityModifier *const t
 // calls: CAssetModifier::~CAssetModifier, operator delete
 void __fastcall CActivityModifier::~CActivityModifier(CActivityModifier *const this)
 {
-  this->_vptr_CAssetModifier = off_479E510;
+  this->_vptr_CAssetModifier = off_479E510;  // vptr: CActivityModifier
   CAssetModifier::~CAssetModifier(this);
   operator delete(this);
 }
@@ -1091,7 +1091,7 @@ void __fastcall CActivityModifier::Init(CActivityModifier *const this, IEconItem
 // calls: CAssetModifier::~CAssetModifier
 void __fastcall CAnnouncerModifier::~CAnnouncerModifier(CAnnouncerModifier *const this)
 {
-  this->_vptr_CAssetModifier = off_479E570;
+  this->_vptr_CAssetModifier = off_479E570;  // vptr: CAnnouncerModifier
   CAssetModifier::~CAssetModifier(this);
 }
 
@@ -1100,7 +1100,7 @@ void __fastcall CAnnouncerModifier::~CAnnouncerModifier(CAnnouncerModifier *cons
 // calls: CAssetModifier::~CAssetModifier, operator delete
 void __fastcall CAnnouncerModifier::~CAnnouncerModifier(CAnnouncerModifier *const this)
 {
-  this->_vptr_CAssetModifier = off_479E570;
+  this->_vptr_CAssetModifier = off_479E570;  // vptr: CAnnouncerModifier
   CAssetModifier::~CAssetModifier(this);
   operator delete(this);
 }
@@ -1131,7 +1131,7 @@ unsigned int __fastcall CAnnouncerModifier::GetType(const CAnnouncerModifier *co
 // calls: CAssetModifier::~CAssetModifier
 void __fastcall CAnnouncerPreviewModifier::~CAnnouncerPreviewModifier(CAnnouncerPreviewModifier *const this)
 {
-  this->_vptr_CAssetModifier = off_479E5D0;
+  this->_vptr_CAssetModifier = off_479E5D0;  // vptr: CAnnouncerPreviewModifier
   CAssetModifier::~CAssetModifier(this);
 }
 
@@ -1140,7 +1140,7 @@ void __fastcall CAnnouncerPreviewModifier::~CAnnouncerPreviewModifier(CAnnouncer
 // calls: CAssetModifier::~CAssetModifier, operator delete
 void __fastcall CAnnouncerPreviewModifier::~CAnnouncerPreviewModifier(CAnnouncerPreviewModifier *const this)
 {
-  this->_vptr_CAssetModifier = off_479E5D0;
+  this->_vptr_CAssetModifier = off_479E5D0;  // vptr: CAnnouncerPreviewModifier
   CAssetModifier::~CAssetModifier(this);
   operator delete(this);
 }
@@ -1171,7 +1171,7 @@ unsigned int __fastcall CAnnouncerPreviewModifier::GetType(const CAnnouncerPrevi
 // calls: CAssetModifier::~CAssetModifier
 void __fastcall CHudSkinModifier::~CHudSkinModifier(CHudSkinModifier *const this)
 {
-  this->_vptr_CAssetModifier = off_479E630;
+  this->_vptr_CAssetModifier = off_479E630;  // vptr: CHudSkinModifier
   CAssetModifier::~CAssetModifier(this);
 }
 
@@ -1180,7 +1180,7 @@ void __fastcall CHudSkinModifier::~CHudSkinModifier(CHudSkinModifier *const this
 // calls: CAssetModifier::~CAssetModifier, operator delete
 void __fastcall CHudSkinModifier::~CHudSkinModifier(CHudSkinModifier *const this)
 {
-  this->_vptr_CAssetModifier = off_479E630;
+  this->_vptr_CAssetModifier = off_479E630;  // vptr: CHudSkinModifier
   CAssetModifier::~CAssetModifier(this);
   operator delete(this);
 }
@@ -1223,7 +1223,7 @@ void __fastcall CHudSkinModifier::Init(CHudSkinModifier *const this, IEconItemSc
 // calls: CAssetModifier::~CAssetModifier
 void __fastcall CSkinChangeModifier::~CSkinChangeModifier(CSkinChangeModifier *const this)
 {
-  this->_vptr_CAssetModifier = off_479E690;
+  this->_vptr_CAssetModifier = off_479E690;  // vptr: CSkinChangeModifier
   CAssetModifier::~CAssetModifier(this);
 }
 
@@ -1232,7 +1232,7 @@ void __fastcall CSkinChangeModifier::~CSkinChangeModifier(CSkinChangeModifier *c
 // calls: CAssetModifier::~CAssetModifier, operator delete
 void __fastcall CSkinChangeModifier::~CSkinChangeModifier(CSkinChangeModifier *const this)
 {
-  this->_vptr_CAssetModifier = off_479E690;
+  this->_vptr_CAssetModifier = off_479E690;  // vptr: CSkinChangeModifier
   CAssetModifier::~CAssetModifier(this);
   operator delete(this);
 }
@@ -1292,7 +1292,7 @@ bool __fastcall CSkinChangeModifier::Compare(const CSkinChangeModifier *const th
 // calls: CAssetModifier::~CAssetModifier
 void __fastcall CAbilityNameModifier::~CAbilityNameModifier(CAbilityNameModifier *const this)
 {
-  this->_vptr_CAssetModifier = off_479E6F0;
+  this->_vptr_CAssetModifier = off_479E6F0;  // vptr: CAbilityNameModifier
   CAssetModifier::~CAssetModifier(this);
 }
 
@@ -1301,7 +1301,7 @@ void __fastcall CAbilityNameModifier::~CAbilityNameModifier(CAbilityNameModifier
 // calls: CAssetModifier::~CAssetModifier, operator delete
 void __fastcall CAbilityNameModifier::~CAbilityNameModifier(CAbilityNameModifier *const this)
 {
-  this->_vptr_CAssetModifier = off_479E6F0;
+  this->_vptr_CAssetModifier = off_479E6F0;  // vptr: CAbilityNameModifier
   CAssetModifier::~CAssetModifier(this);
   operator delete(this);
 }
@@ -1332,7 +1332,7 @@ unsigned int __fastcall CAbilityNameModifier::GetType(const CAbilityNameModifier
 // calls: CAssetModifier::~CAssetModifier
 void __fastcall CLoadingScreenModifier::~CLoadingScreenModifier(CLoadingScreenModifier *const this)
 {
-  this->_vptr_CAssetModifier = off_479E750;
+  this->_vptr_CAssetModifier = off_479E750;  // vptr: CLoadingScreenModifier
   CAssetModifier::~CAssetModifier(this);
 }
 
@@ -1341,7 +1341,7 @@ void __fastcall CLoadingScreenModifier::~CLoadingScreenModifier(CLoadingScreenMo
 // calls: CAssetModifier::~CAssetModifier, operator delete
 void __fastcall CLoadingScreenModifier::~CLoadingScreenModifier(CLoadingScreenModifier *const this)
 {
-  this->_vptr_CAssetModifier = off_479E750;
+  this->_vptr_CAssetModifier = off_479E750;  // vptr: CLoadingScreenModifier
   CAssetModifier::~CAssetModifier(this);
   operator delete(this);
 }
@@ -1372,7 +1372,7 @@ unsigned int __fastcall CLoadingScreenModifier::GetType(const CLoadingScreenModi
 // calls: CAssetModifier::~CAssetModifier
 void __fastcall CCursorPackModifier::~CCursorPackModifier(CCursorPackModifier *const this)
 {
-  this->_vptr_CAssetModifier = off_479E7B0;
+  this->_vptr_CAssetModifier = off_479E7B0;  // vptr: CCursorPackModifier
   CAssetModifier::~CAssetModifier(this);
 }
 
@@ -1381,7 +1381,7 @@ void __fastcall CCursorPackModifier::~CCursorPackModifier(CCursorPackModifier *c
 // calls: CAssetModifier::~CAssetModifier, operator delete
 void __fastcall CCursorPackModifier::~CCursorPackModifier(CCursorPackModifier *const this)
 {
-  this->_vptr_CAssetModifier = off_479E7B0;
+  this->_vptr_CAssetModifier = off_479E7B0;  // vptr: CCursorPackModifier
   CAssetModifier::~CAssetModifier(this);
   operator delete(this);
 }
@@ -1412,7 +1412,7 @@ unsigned int __fastcall CCursorPackModifier::GetType(const CCursorPackModifier *
 // calls: CAssetModifier::~CAssetModifier
 void __fastcall CStrangeControlPointModifier::~CStrangeControlPointModifier(CStrangeControlPointModifier *const this)
 {
-  this->_vptr_CAssetModifier = off_479E810;
+  this->_vptr_CAssetModifier = off_479E810;  // vptr: CStrangeControlPointModifier
   CAssetModifier::~CAssetModifier(this);
 }
 
@@ -1421,7 +1421,7 @@ void __fastcall CStrangeControlPointModifier::~CStrangeControlPointModifier(CStr
 // calls: CAssetModifier::~CAssetModifier, operator delete
 void __fastcall CStrangeControlPointModifier::~CStrangeControlPointModifier(CStrangeControlPointModifier *const this)
 {
-  this->_vptr_CAssetModifier = off_479E810;
+  this->_vptr_CAssetModifier = off_479E810;  // vptr: CStrangeControlPointModifier
   CAssetModifier::~CAssetModifier(this);
   operator delete(this);
 }
@@ -1469,7 +1469,7 @@ void __fastcall CStrangeControlPointModifier::Init(CStrangeControlPointModifier 
 // calls: CAssetModifier::~CAssetModifier
 void __fastcall CModelModifier::~CModelModifier(CModelModifier *const this)
 {
-  this->_vptr_CAssetModifier = off_47A3F90;
+  this->_vptr_CAssetModifier = off_47A3F90;  // vptr: CModelModifier
   CAssetModifier::~CAssetModifier(this);
 }
 
@@ -1478,7 +1478,7 @@ void __fastcall CModelModifier::~CModelModifier(CModelModifier *const this)
 // calls: CAssetModifier::~CAssetModifier, operator delete
 void __fastcall CModelModifier::~CModelModifier(CModelModifier *const this)
 {
-  this->_vptr_CAssetModifier = off_47A3F90;
+  this->_vptr_CAssetModifier = off_47A3F90;  // vptr: CModelModifier
   CAssetModifier::~CAssetModifier(this);
   operator delete(this);
 }
@@ -1509,7 +1509,7 @@ unsigned int __fastcall CModelModifier::GetType(const CModelModifier *const this
 // calls: CAssetModifier::~CAssetModifier
 void __fastcall CCourierModifier::~CCourierModifier(CCourierModifier *const this)
 {
-  this->_vptr_CAssetModifier = off_47A3F90;
+  this->_vptr_CAssetModifier = off_47A3F90;  // vptr: CModelModifier
   CAssetModifier::~CAssetModifier(this);
 }
 
@@ -1518,7 +1518,7 @@ void __fastcall CCourierModifier::~CCourierModifier(CCourierModifier *const this
 // calls: CAssetModifier::~CAssetModifier, operator delete
 void __fastcall CCourierModifier::~CCourierModifier(CCourierModifier *const this)
 {
-  this->_vptr_CAssetModifier = off_47A3F90;
+  this->_vptr_CAssetModifier = off_47A3F90;  // vptr: CModelModifier
   CAssetModifier::~CAssetModifier(this);
   operator delete(this);
 }
@@ -1549,7 +1549,7 @@ unsigned int __fastcall CCourierModifier::GetType(const CCourierModifier *const 
 // calls: CAssetModifier::~CAssetModifier
 void __fastcall CCourierFlyingModifier::~CCourierFlyingModifier(CCourierFlyingModifier *const this)
 {
-  this->_vptr_CAssetModifier = off_47A3F90;
+  this->_vptr_CAssetModifier = off_47A3F90;  // vptr: CModelModifier
   CAssetModifier::~CAssetModifier(this);
 }
 
@@ -1558,7 +1558,7 @@ void __fastcall CCourierFlyingModifier::~CCourierFlyingModifier(CCourierFlyingMo
 // calls: CAssetModifier::~CAssetModifier, operator delete
 void __fastcall CCourierFlyingModifier::~CCourierFlyingModifier(CCourierFlyingModifier *const this)
 {
-  this->_vptr_CAssetModifier = off_47A3F90;
+  this->_vptr_CAssetModifier = off_47A3F90;  // vptr: CModelModifier
   CAssetModifier::~CAssetModifier(this);
   operator delete(this);
 }
@@ -1589,7 +1589,7 @@ unsigned int __fastcall CCourierFlyingModifier::GetType(const CCourierFlyingModi
 // calls: CAssetModifier::~CAssetModifier
 void __fastcall CHeroModelChangeModifier::~CHeroModelChangeModifier(CHeroModelChangeModifier *const this)
 {
-  this->_vptr_CAssetModifier = off_47A3F90;
+  this->_vptr_CAssetModifier = off_47A3F90;  // vptr: CModelModifier
   CAssetModifier::~CAssetModifier(this);
 }
 
@@ -1598,7 +1598,7 @@ void __fastcall CHeroModelChangeModifier::~CHeroModelChangeModifier(CHeroModelCh
 // calls: CAssetModifier::~CAssetModifier, operator delete
 void __fastcall CHeroModelChangeModifier::~CHeroModelChangeModifier(CHeroModelChangeModifier *const this)
 {
-  this->_vptr_CAssetModifier = off_47A3F90;
+  this->_vptr_CAssetModifier = off_47A3F90;  // vptr: CModelModifier
   CAssetModifier::~CAssetModifier(this);
   operator delete(this);
 }
@@ -1637,7 +1637,7 @@ void __fastcall CHeroModelChangeModifier::Init(CHeroModelChangeModifier *const t
 // calls: CAssetModifier::~CAssetModifier
 void __fastcall CHexModelModifier::~CHexModelModifier(CHexModelModifier *const this)
 {
-  this->_vptr_CAssetModifier = off_47A3F90;
+  this->_vptr_CAssetModifier = off_47A3F90;  // vptr: CModelModifier
   CAssetModifier::~CAssetModifier(this);
 }
 
@@ -1646,7 +1646,7 @@ void __fastcall CHexModelModifier::~CHexModelModifier(CHexModelModifier *const t
 // calls: CAssetModifier::~CAssetModifier, operator delete
 void __fastcall CHexModelModifier::~CHexModelModifier(CHexModelModifier *const this)
 {
-  this->_vptr_CAssetModifier = off_47A3F90;
+  this->_vptr_CAssetModifier = off_47A3F90;  // vptr: CModelModifier
   CAssetModifier::~CAssetModifier(this);
   operator delete(this);
 }
@@ -1677,7 +1677,7 @@ unsigned int __fastcall CHexModelModifier::GetType(const CHexModelModifier *cons
 // calls: CAssetModifier::~CAssetModifier
 void __fastcall CSoundModifier::~CSoundModifier(CSoundModifier *const this)
 {
-  this->_vptr_CAssetModifier = off_47A40B0;
+  this->_vptr_CAssetModifier = off_47A40B0;  // vptr: CSoundModifier
   CAssetModifier::~CAssetModifier(this);
 }
 
@@ -1686,7 +1686,7 @@ void __fastcall CSoundModifier::~CSoundModifier(CSoundModifier *const this)
 // calls: CAssetModifier::~CAssetModifier, operator delete
 void __fastcall CSoundModifier::~CSoundModifier(CSoundModifier *const this)
 {
-  this->_vptr_CAssetModifier = off_47A40B0;
+  this->_vptr_CAssetModifier = off_47A40B0;  // vptr: CSoundModifier
   CAssetModifier::~CAssetModifier(this);
   operator delete(this);
 }
@@ -1717,7 +1717,7 @@ unsigned int __fastcall CSoundModifier::GetType(const CSoundModifier *const this
 // calls: CAssetModifier::~CAssetModifier
 void __fastcall CSoundscapeModifier::~CSoundscapeModifier(CSoundscapeModifier *const this)
 {
-  this->_vptr_CAssetModifier = off_479E9F0;
+  this->_vptr_CAssetModifier = off_479E9F0;  // vptr: CSoundscapeModifier
   CAssetModifier::~CAssetModifier(this);
 }
 
@@ -1726,7 +1726,7 @@ void __fastcall CSoundscapeModifier::~CSoundscapeModifier(CSoundscapeModifier *c
 // calls: CAssetModifier::~CAssetModifier, operator delete
 void __fastcall CSoundscapeModifier::~CSoundscapeModifier(CSoundscapeModifier *const this)
 {
-  this->_vptr_CAssetModifier = off_479E9F0;
+  this->_vptr_CAssetModifier = off_479E9F0;  // vptr: CSoundscapeModifier
   CAssetModifier::~CAssetModifier(this);
   operator delete(this);
 }
@@ -1757,7 +1757,7 @@ unsigned int __fastcall CSoundscapeModifier::GetType(const CSoundscapeModifier *
 // calls: CAssetModifier::~CAssetModifier
 void __fastcall CSpeechModifier::~CSpeechModifier(CSpeechModifier *const this)
 {
-  this->_vptr_CAssetModifier = off_479EA50;
+  this->_vptr_CAssetModifier = off_479EA50;  // vptr: CSpeechModifier
   CAssetModifier::~CAssetModifier(this);
 }
 
@@ -1766,7 +1766,7 @@ void __fastcall CSpeechModifier::~CSpeechModifier(CSpeechModifier *const this)
 // calls: CAssetModifier::~CAssetModifier, operator delete
 void __fastcall CSpeechModifier::~CSpeechModifier(CSpeechModifier *const this)
 {
-  this->_vptr_CAssetModifier = off_479EA50;
+  this->_vptr_CAssetModifier = off_479EA50;  // vptr: CSpeechModifier
   CAssetModifier::~CAssetModifier(this);
   operator delete(this);
 }
@@ -1797,7 +1797,7 @@ unsigned int __fastcall CSpeechModifier::GetType(const CSpeechModifier *const th
 // calls: CAssetModifier::~CAssetModifier
 void __fastcall CIconModifier::~CIconModifier(CIconModifier *const this)
 {
-  this->_vptr_CAssetModifier = off_479EAB0;
+  this->_vptr_CAssetModifier = off_479EAB0;  // vptr: CIconModifier
   CAssetModifier::~CAssetModifier(this);
 }
 
@@ -1806,7 +1806,7 @@ void __fastcall CIconModifier::~CIconModifier(CIconModifier *const this)
 // calls: CAssetModifier::~CAssetModifier, operator delete
 void __fastcall CIconModifier::~CIconModifier(CIconModifier *const this)
 {
-  this->_vptr_CAssetModifier = off_479EAB0;
+  this->_vptr_CAssetModifier = off_479EAB0;  // vptr: CIconModifier
   CAssetModifier::~CAssetModifier(this);
   operator delete(this);
 }
@@ -1846,7 +1846,7 @@ void __fastcall CIconModifier::Init(CIconModifier *const this, IEconItemSchema *
 // calls: CAssetModifier::~CAssetModifier
 void __fastcall CIconModifier_Hero::~CIconModifier_Hero(CIconModifier_Hero *const this)
 {
-  this->_vptr_CAssetModifier = off_479EAB0;
+  this->_vptr_CAssetModifier = off_479EAB0;  // vptr: CIconModifier
   CAssetModifier::~CAssetModifier(this);
 }
 
@@ -1855,7 +1855,7 @@ void __fastcall CIconModifier_Hero::~CIconModifier_Hero(CIconModifier_Hero *cons
 // calls: CAssetModifier::~CAssetModifier, operator delete
 void __fastcall CIconModifier_Hero::~CIconModifier_Hero(CIconModifier_Hero *const this)
 {
-  this->_vptr_CAssetModifier = off_479EAB0;
+  this->_vptr_CAssetModifier = off_479EAB0;  // vptr: CIconModifier
   CAssetModifier::~CAssetModifier(this);
   operator delete(this);
 }
@@ -1886,7 +1886,7 @@ unsigned int __fastcall CIconModifier_Hero::GetType(const CIconModifier_Hero *co
 // calls: CAssetModifier::~CAssetModifier
 void __fastcall CIconModifier_HeroMinimap::~CIconModifier_HeroMinimap(CIconModifier_HeroMinimap *const this)
 {
-  this->_vptr_CAssetModifier = off_479EAB0;
+  this->_vptr_CAssetModifier = off_479EAB0;  // vptr: CIconModifier
   CAssetModifier::~CAssetModifier(this);
 }
 
@@ -1895,7 +1895,7 @@ void __fastcall CIconModifier_HeroMinimap::~CIconModifier_HeroMinimap(CIconModif
 // calls: CAssetModifier::~CAssetModifier, operator delete
 void __fastcall CIconModifier_HeroMinimap::~CIconModifier_HeroMinimap(CIconModifier_HeroMinimap *const this)
 {
-  this->_vptr_CAssetModifier = off_479EAB0;
+  this->_vptr_CAssetModifier = off_479EAB0;  // vptr: CIconModifier
   CAssetModifier::~CAssetModifier(this);
   operator delete(this);
 }
@@ -1926,7 +1926,7 @@ unsigned int __fastcall CIconModifier_HeroMinimap::GetType(const CIconModifier_H
 // calls: CAssetModifier::~CAssetModifier
 void __fastcall CInventoryIconModifier::~CInventoryIconModifier(CInventoryIconModifier *const this)
 {
-  this->_vptr_CAssetModifier = off_479EBD0;
+  this->_vptr_CAssetModifier = off_479EBD0;  // vptr: CInventoryIconModifier
   CAssetModifier::~CAssetModifier(this);
 }
 
@@ -1935,7 +1935,7 @@ void __fastcall CInventoryIconModifier::~CInventoryIconModifier(CInventoryIconMo
 // calls: CAssetModifier::~CAssetModifier, operator delete
 void __fastcall CInventoryIconModifier::~CInventoryIconModifier(CInventoryIconModifier *const this)
 {
-  this->_vptr_CAssetModifier = off_479EBD0;
+  this->_vptr_CAssetModifier = off_479EBD0;  // vptr: CInventoryIconModifier
   CAssetModifier::~CAssetModifier(this);
   operator delete(this);
 }
@@ -1975,7 +1975,7 @@ void __fastcall CInventoryIconModifier::Init(CInventoryIconModifier *const this,
 // calls: CAssetModifier::~CAssetModifier
 void __fastcall CAbilityIconModifier::~CAbilityIconModifier(CAbilityIconModifier *const this)
 {
-  this->_vptr_CAssetModifier = off_479EC30;
+  this->_vptr_CAssetModifier = off_479EC30;  // vptr: CAbilityIconModifier
   CAssetModifier::~CAssetModifier(this);
 }
 
@@ -1984,7 +1984,7 @@ void __fastcall CAbilityIconModifier::~CAbilityIconModifier(CAbilityIconModifier
 // calls: CAssetModifier::~CAssetModifier, operator delete
 void __fastcall CAbilityIconModifier::~CAbilityIconModifier(CAbilityIconModifier *const this)
 {
-  this->_vptr_CAssetModifier = off_479EC30;
+  this->_vptr_CAssetModifier = off_479EC30;  // vptr: CAbilityIconModifier
   CAssetModifier::~CAssetModifier(this);
   operator delete(this);
 }
@@ -2015,7 +2015,7 @@ unsigned int __fastcall CAbilityIconModifier::GetType(const CAbilityIconModifier
 // calls: CAssetModifier::~CAssetModifier
 void __fastcall CEntityModelModifier::~CEntityModelModifier(CEntityModelModifier *const this)
 {
-  this->_vptr_CAssetModifier = off_47A3F90;
+  this->_vptr_CAssetModifier = off_47A3F90;  // vptr: CModelModifier
   CAssetModifier::~CAssetModifier(this);
 }
 
@@ -2024,7 +2024,7 @@ void __fastcall CEntityModelModifier::~CEntityModelModifier(CEntityModelModifier
 // calls: CAssetModifier::~CAssetModifier, operator delete
 void __fastcall CEntityModelModifier::~CEntityModelModifier(CEntityModelModifier *const this)
 {
-  this->_vptr_CAssetModifier = off_47A3F90;
+  this->_vptr_CAssetModifier = off_47A3F90;  // vptr: CModelModifier
   CAssetModifier::~CAssetModifier(this);
   operator delete(this);
 }
@@ -2066,7 +2066,7 @@ bool __fastcall CEntityModelModifier::Compare(const CEntityModelModifier *const 
 // calls: CAssetModifier::~CAssetModifier
 void __fastcall CEntityScaleModifier::~CEntityScaleModifier(CEntityScaleModifier *const this)
 {
-  this->_vptr_CAssetModifier = off_479ECF0;
+  this->_vptr_CAssetModifier = off_479ECF0;  // vptr: CEntityScaleModifier
   CAssetModifier::~CAssetModifier(this);
 }
 
@@ -2075,7 +2075,7 @@ void __fastcall CEntityScaleModifier::~CEntityScaleModifier(CEntityScaleModifier
 // calls: CAssetModifier::~CAssetModifier, operator delete
 void __fastcall CEntityScaleModifier::~CEntityScaleModifier(CEntityScaleModifier *const this)
 {
-  this->_vptr_CAssetModifier = off_479ECF0;
+  this->_vptr_CAssetModifier = off_479ECF0;  // vptr: CEntityScaleModifier
   CAssetModifier::~CAssetModifier(this);
   operator delete(this);
 }
@@ -2128,7 +2128,7 @@ void __fastcall CEntityScaleModifier::Init(CEntityScaleModifier *const this, IEc
 // calls: CAssetModifier::~CAssetModifier
 void __fastcall CWeatherModifier::~CWeatherModifier(CWeatherModifier *const this)
 {
-  this->_vptr_CAssetModifier = off_479ED50;
+  this->_vptr_CAssetModifier = off_479ED50;  // vptr: CWeatherModifier
   CAssetModifier::~CAssetModifier(this);
 }
 
@@ -2137,7 +2137,7 @@ void __fastcall CWeatherModifier::~CWeatherModifier(CWeatherModifier *const this
 // calls: CAssetModifier::~CAssetModifier, operator delete
 void __fastcall CWeatherModifier::~CWeatherModifier(CWeatherModifier *const this)
 {
-  this->_vptr_CAssetModifier = off_479ED50;
+  this->_vptr_CAssetModifier = off_479ED50;  // vptr: CWeatherModifier
   CAssetModifier::~CAssetModifier(this);
   operator delete(this);
 }
@@ -2177,7 +2177,7 @@ void __fastcall CWeatherModifier::Init(CWeatherModifier *const this, IEconItemSc
 // calls: CAssetModifier::~CAssetModifier
 void __fastcall CWeatherEffectModifier::~CWeatherEffectModifier(CWeatherEffectModifier *const this)
 {
-  this->_vptr_CAssetModifier = off_47A43B0;
+  this->_vptr_CAssetModifier = off_47A43B0;  // vptr: CWeatherEffectModifier
   CAssetModifier::~CAssetModifier(this);
 }
 
@@ -2186,7 +2186,7 @@ void __fastcall CWeatherEffectModifier::~CWeatherEffectModifier(CWeatherEffectMo
 // calls: CAssetModifier::~CAssetModifier, operator delete
 void __fastcall CWeatherEffectModifier::~CWeatherEffectModifier(CWeatherEffectModifier *const this)
 {
-  this->_vptr_CAssetModifier = off_47A43B0;
+  this->_vptr_CAssetModifier = off_47A43B0;  // vptr: CWeatherEffectModifier
   CAssetModifier::~CAssetModifier(this);
   operator delete(this);
 }
@@ -2218,7 +2218,7 @@ unsigned int __fastcall CWeatherEffectModifier::GetType(const CWeatherEffectModi
 void __fastcall CTerrainParticleEffectModifier::~CTerrainParticleEffectModifier(
         CTerrainParticleEffectModifier *const this)
 {
-  this->_vptr_CAssetModifier = off_47A4410;
+  this->_vptr_CAssetModifier = off_47A4410;  // vptr: CTerrainParticleEffectModifier
   CAssetModifier::~CAssetModifier(this);
 }
 
@@ -2228,7 +2228,7 @@ void __fastcall CTerrainParticleEffectModifier::~CTerrainParticleEffectModifier(
 void __fastcall CTerrainParticleEffectModifier::~CTerrainParticleEffectModifier(
         CTerrainParticleEffectModifier *const this)
 {
-  this->_vptr_CAssetModifier = off_47A4410;
+  this->_vptr_CAssetModifier = off_47A4410;  // vptr: CTerrainParticleEffectModifier
   CAssetModifier::~CAssetModifier(this);
   operator delete(this);
 }
@@ -2259,7 +2259,7 @@ unsigned int __fastcall CTerrainParticleEffectModifier::GetType(const CTerrainPa
 // calls: CAssetModifier::~CAssetModifier
 void __fastcall CNPCMaterialOverrideModifier::~CNPCMaterialOverrideModifier(CNPCMaterialOverrideModifier *const this)
 {
-  this->_vptr_CAssetModifier = off_47A4470;
+  this->_vptr_CAssetModifier = off_47A4470;  // vptr: CNPCMaterialOverrideModifier
   CAssetModifier::~CAssetModifier(this);
 }
 
@@ -2268,7 +2268,7 @@ void __fastcall CNPCMaterialOverrideModifier::~CNPCMaterialOverrideModifier(CNPC
 // calls: CAssetModifier::~CAssetModifier, operator delete
 void __fastcall CNPCMaterialOverrideModifier::~CNPCMaterialOverrideModifier(CNPCMaterialOverrideModifier *const this)
 {
-  this->_vptr_CAssetModifier = off_47A4470;
+  this->_vptr_CAssetModifier = off_47A4470;  // vptr: CNPCMaterialOverrideModifier
   CAssetModifier::~CAssetModifier(this);
   operator delete(this);
 }
@@ -2300,7 +2300,7 @@ unsigned int __fastcall CNPCMaterialOverrideModifier::GetType(const CNPCMaterial
 void __fastcall CWaterMaterialOverrideModifier::~CWaterMaterialOverrideModifier(
         CWaterMaterialOverrideModifier *const this)
 {
-  this->_vptr_CAssetModifier = off_47A44D0;
+  this->_vptr_CAssetModifier = off_47A44D0;  // vptr: CWaterMaterialOverrideModifier
   CAssetModifier::~CAssetModifier(this);
 }
 
@@ -2310,7 +2310,7 @@ void __fastcall CWaterMaterialOverrideModifier::~CWaterMaterialOverrideModifier(
 void __fastcall CWaterMaterialOverrideModifier::~CWaterMaterialOverrideModifier(
         CWaterMaterialOverrideModifier *const this)
 {
-  this->_vptr_CAssetModifier = off_47A44D0;
+  this->_vptr_CAssetModifier = off_47A44D0;  // vptr: CWaterMaterialOverrideModifier
   CAssetModifier::~CAssetModifier(this);
   operator delete(this);
 }
@@ -2341,7 +2341,7 @@ unsigned int __fastcall CWaterMaterialOverrideModifier::GetType(const CWaterMate
 // calls: CAssetModifier::~CAssetModifier
 void __fastcall CMapModifier::~CMapModifier(CMapModifier *const this)
 {
-  this->_vptr_CAssetModifier = off_479EDB0;
+  this->_vptr_CAssetModifier = off_479EDB0;  // vptr: CMapModifier
   CAssetModifier::~CAssetModifier(this);
 }
 
@@ -2350,7 +2350,7 @@ void __fastcall CMapModifier::~CMapModifier(CMapModifier *const this)
 // calls: CAssetModifier::~CAssetModifier, operator delete
 void __fastcall CMapModifier::~CMapModifier(CMapModifier *const this)
 {
-  this->_vptr_CAssetModifier = off_479EDB0;
+  this->_vptr_CAssetModifier = off_479EDB0;  // vptr: CMapModifier
   CAssetModifier::~CAssetModifier(this);
   operator delete(this);
 }
@@ -2381,7 +2381,7 @@ unsigned int __fastcall CMapModifier::GetType(const CMapModifier *const this)
 // calls: CAssetModifier::~CAssetModifier
 void __fastcall CCustomKillEffectModifier::~CCustomKillEffectModifier(CCustomKillEffectModifier *const this)
 {
-  this->_vptr_CAssetModifier = off_479EE10;
+  this->_vptr_CAssetModifier = off_479EE10;  // vptr: CCustomKillEffectModifier
   CAssetModifier::~CAssetModifier(this);
 }
 
@@ -2390,7 +2390,7 @@ void __fastcall CCustomKillEffectModifier::~CCustomKillEffectModifier(CCustomKil
 // calls: CAssetModifier::~CAssetModifier, operator delete
 void __fastcall CCustomKillEffectModifier::~CCustomKillEffectModifier(CCustomKillEffectModifier *const this)
 {
-  this->_vptr_CAssetModifier = off_479EE10;
+  this->_vptr_CAssetModifier = off_479EE10;  // vptr: CCustomKillEffectModifier
   CAssetModifier::~CAssetModifier(this);
   operator delete(this);
 }
@@ -2421,7 +2421,7 @@ unsigned int __fastcall CCustomKillEffectModifier::GetType(const CCustomKillEffe
 // calls: CAssetModifier::~CAssetModifier
 void __fastcall CBuffModifier::~CBuffModifier(CBuffModifier *const this)
 {
-  this->_vptr_CAssetModifier = off_479EE70;
+  this->_vptr_CAssetModifier = off_479EE70;  // vptr: CBuffModifier
   CAssetModifier::~CAssetModifier(this);
 }
 
@@ -2430,7 +2430,7 @@ void __fastcall CBuffModifier::~CBuffModifier(CBuffModifier *const this)
 // calls: CAssetModifier::~CAssetModifier, operator delete
 void __fastcall CBuffModifier::~CBuffModifier(CBuffModifier *const this)
 {
-  this->_vptr_CAssetModifier = off_479EE70;
+  this->_vptr_CAssetModifier = off_479EE70;  // vptr: CBuffModifier
   CAssetModifier::~CAssetModifier(this);
   operator delete(this);
 }
@@ -2461,7 +2461,7 @@ unsigned int __fastcall CBuffModifier::GetType(const CBuffModifier *const this)
 // calls: CAssetModifier::~CAssetModifier
 void __fastcall CParticleCreateModifier::~CParticleCreateModifier(CParticleCreateModifier *const this)
 {
-  this->_vptr_CAssetModifier = off_47A41D0;
+  this->_vptr_CAssetModifier = off_47A41D0;  // vptr: CParticleCreateModifier
   CAssetModifier::~CAssetModifier(this);
 }
 
@@ -2470,7 +2470,7 @@ void __fastcall CParticleCreateModifier::~CParticleCreateModifier(CParticleCreat
 // calls: CAssetModifier::~CAssetModifier, operator delete
 void __fastcall CParticleCreateModifier::~CParticleCreateModifier(CParticleCreateModifier *const this)
 {
-  this->_vptr_CAssetModifier = off_47A41D0;
+  this->_vptr_CAssetModifier = off_47A41D0;  // vptr: CParticleCreateModifier
   CAssetModifier::~CAssetModifier(this);
   operator delete(this);
 }
@@ -2518,7 +2518,7 @@ bool __fastcall CParticleCreateModifier::Compare(const CParticleCreateModifier *
 // calls: CAssetModifier::~CAssetModifier
 void __fastcall CParticleModifier::~CParticleModifier(CParticleModifier *const this)
 {
-  this->_vptr_CAssetModifier = off_47A4170;
+  this->_vptr_CAssetModifier = off_47A4170;  // vptr: CParticleModifier
   CAssetModifier::~CAssetModifier(this);
 }
 
@@ -2527,7 +2527,7 @@ void __fastcall CParticleModifier::~CParticleModifier(CParticleModifier *const t
 // calls: CAssetModifier::~CAssetModifier, operator delete
 void __fastcall CParticleModifier::~CParticleModifier(CParticleModifier *const this)
 {
-  this->_vptr_CAssetModifier = off_47A4170;
+  this->_vptr_CAssetModifier = off_47A4170;  // vptr: CParticleModifier
   CAssetModifier::~CAssetModifier(this);
   operator delete(this);
 }
@@ -2558,7 +2558,7 @@ unsigned int __fastcall CParticleModifier::GetType(const CParticleModifier *cons
 // calls: CAssetModifier::~CAssetModifier
 void __fastcall CParticleCombined::~CParticleCombined(CParticleCombined *const this)
 {
-  this->_vptr_CAssetModifier = off_47A4170;
+  this->_vptr_CAssetModifier = off_47A4170;  // vptr: CParticleModifier
   CAssetModifier::~CAssetModifier(this);
 }
 
@@ -2567,7 +2567,7 @@ void __fastcall CParticleCombined::~CParticleCombined(CParticleCombined *const t
 // calls: CAssetModifier::~CAssetModifier, operator delete
 void __fastcall CParticleCombined::~CParticleCombined(CParticleCombined *const this)
 {
-  this->_vptr_CAssetModifier = off_47A4170;
+  this->_vptr_CAssetModifier = off_47A4170;  // vptr: CParticleModifier
   CAssetModifier::~CAssetModifier(this);
   operator delete(this);
 }
@@ -2606,7 +2606,7 @@ void __fastcall CParticleCombined::Init(CParticleCombined *const this, IEconItem
 // calls: CAssetModifier::~CAssetModifier
 void __fastcall CParticleSnapshotModifier::~CParticleSnapshotModifier(CParticleSnapshotModifier *const this)
 {
-  this->_vptr_CAssetModifier = off_479EF30;
+  this->_vptr_CAssetModifier = off_479EF30;  // vptr: CParticleSnapshotModifier
   CAssetModifier::~CAssetModifier(this);
 }
 
@@ -2615,7 +2615,7 @@ void __fastcall CParticleSnapshotModifier::~CParticleSnapshotModifier(CParticleS
 // calls: CAssetModifier::~CAssetModifier, operator delete
 void __fastcall CParticleSnapshotModifier::~CParticleSnapshotModifier(CParticleSnapshotModifier *const this)
 {
-  this->_vptr_CAssetModifier = off_479EF30;
+  this->_vptr_CAssetModifier = off_479EF30;  // vptr: CParticleSnapshotModifier
   CAssetModifier::~CAssetModifier(this);
   operator delete(this);
 }
@@ -2647,7 +2647,7 @@ unsigned int __fastcall CParticleSnapshotModifier::GetType(const CParticleSnapsh
 void __fastcall CParticleControlPointModifier::~CParticleControlPointModifier(
         CParticleControlPointModifier *const this)
 {
-  this->_vptr_CAssetModifier = off_479EF90;
+  this->_vptr_CAssetModifier = off_479EF90;  // vptr: CParticleControlPointModifier
   CAssetModifier::~CAssetModifier(this);
 }
 
@@ -2657,7 +2657,7 @@ void __fastcall CParticleControlPointModifier::~CParticleControlPointModifier(
 void __fastcall CParticleControlPointModifier::~CParticleControlPointModifier(
         CParticleControlPointModifier *const this)
 {
-  this->_vptr_CAssetModifier = off_479EF90;
+  this->_vptr_CAssetModifier = off_479EF90;  // vptr: CParticleControlPointModifier
   CAssetModifier::~CAssetModifier(this);
   operator delete(this);
 }
@@ -2707,7 +2707,7 @@ void __fastcall CParticleControlPointModifier::Init(
 // calls: CAssetModifier::~CAssetModifier
 void __fastcall CResponseCriteriaModifier::~CResponseCriteriaModifier(CResponseCriteriaModifier *const this)
 {
-  this->_vptr_CAssetModifier = off_479EFF0;
+  this->_vptr_CAssetModifier = off_479EFF0;  // vptr: CResponseCriteriaModifier
   CAssetModifier::~CAssetModifier(this);
 }
 
@@ -2716,7 +2716,7 @@ void __fastcall CResponseCriteriaModifier::~CResponseCriteriaModifier(CResponseC
 // calls: CAssetModifier::~CAssetModifier, operator delete
 void __fastcall CResponseCriteriaModifier::~CResponseCriteriaModifier(CResponseCriteriaModifier *const this)
 {
-  this->_vptr_CAssetModifier = off_479EFF0;
+  this->_vptr_CAssetModifier = off_479EFF0;  // vptr: CResponseCriteriaModifier
   CAssetModifier::~CAssetModifier(this);
   operator delete(this);
 }
@@ -2748,7 +2748,7 @@ unsigned int __fastcall CResponseCriteriaModifier::GetType(const CResponseCriter
 void __fastcall CPortraitBackgroundModelModifier::~CPortraitBackgroundModelModifier(
         CPortraitBackgroundModelModifier *const this)
 {
-  this->_vptr_CAssetModifier = off_47A3FF0;
+  this->_vptr_CAssetModifier = off_47A3FF0;  // vptr: CPortraitBackgroundModelModifier
   CAssetModifier::~CAssetModifier(this);
 }
 
@@ -2758,7 +2758,7 @@ void __fastcall CPortraitBackgroundModelModifier::~CPortraitBackgroundModelModif
 void __fastcall CPortraitBackgroundModelModifier::~CPortraitBackgroundModelModifier(
         CPortraitBackgroundModelModifier *const this)
 {
-  this->_vptr_CAssetModifier = off_47A3FF0;
+  this->_vptr_CAssetModifier = off_47A3FF0;  // vptr: CPortraitBackgroundModelModifier
   CAssetModifier::~CAssetModifier(this);
   operator delete(this);
 }
@@ -2835,7 +2835,7 @@ unsigned int __fastcall CPortraitBackgroundLightModifier::GetType(const CPortrai
 void __fastcall CPortraitBackgroundParticleModifier::~CPortraitBackgroundParticleModifier(
         CPortraitBackgroundParticleModifier *const this)
 {
-  this->_vptr_CAssetModifier = off_47A4230;
+  this->_vptr_CAssetModifier = off_47A4230;  // vptr: CPortraitBackgroundParticleModifier
   CAssetModifier::~CAssetModifier(this);
 }
 
@@ -2845,7 +2845,7 @@ void __fastcall CPortraitBackgroundParticleModifier::~CPortraitBackgroundParticl
 void __fastcall CPortraitBackgroundParticleModifier::~CPortraitBackgroundParticleModifier(
         CPortraitBackgroundParticleModifier *const this)
 {
-  this->_vptr_CAssetModifier = off_47A4230;
+  this->_vptr_CAssetModifier = off_47A4230;  // vptr: CPortraitBackgroundParticleModifier
   CAssetModifier::~CAssetModifier(this);
   operator delete(this);
 }
@@ -2879,7 +2879,7 @@ unsigned int __fastcall CPortraitBackgroundParticleModifier::GetType(
 void __fastcall CPortraitBackgroundMapModifier::~CPortraitBackgroundMapModifier(
         CPortraitBackgroundMapModifier *const this)
 {
-  this->_vptr_CAssetModifier = off_479F050;
+  this->_vptr_CAssetModifier = off_479F050;  // vptr: CPortraitBackgroundMapModifier
   CAssetModifier::~CAssetModifier(this);
 }
 
@@ -2889,7 +2889,7 @@ void __fastcall CPortraitBackgroundMapModifier::~CPortraitBackgroundMapModifier(
 void __fastcall CPortraitBackgroundMapModifier::~CPortraitBackgroundMapModifier(
         CPortraitBackgroundMapModifier *const this)
 {
-  this->_vptr_CAssetModifier = off_479F050;
+  this->_vptr_CAssetModifier = off_479F050;  // vptr: CPortraitBackgroundMapModifier
   CAssetModifier::~CAssetModifier(this);
   operator delete(this);
 }
@@ -3031,7 +3031,7 @@ void __fastcall CPetModifier::Init(CPetModifier *const this, IEconItemSchema *pS
 // calls: CAssetModifier::~CAssetModifier
 void __fastcall CHealthBarModifier::~CHealthBarModifier(CHealthBarModifier *const this)
 {
-  this->_vptr_CAssetModifier = off_479F0B0;
+  this->_vptr_CAssetModifier = off_479F0B0;  // vptr: CHealthBarModifier
   CAssetModifier::~CAssetModifier(this);
 }
 
@@ -3040,7 +3040,7 @@ void __fastcall CHealthBarModifier::~CHealthBarModifier(CHealthBarModifier *cons
 // calls: CAssetModifier::~CAssetModifier, operator delete
 void __fastcall CHealthBarModifier::~CHealthBarModifier(CHealthBarModifier *const this)
 {
-  this->_vptr_CAssetModifier = off_479F0B0;
+  this->_vptr_CAssetModifier = off_479F0B0;  // vptr: CHealthBarModifier
   CAssetModifier::~CAssetModifier(this);
   operator delete(this);
 }
@@ -3079,7 +3079,7 @@ void __fastcall CHealthBarModifier::Init(CHealthBarModifier *const this, IEconIt
 // calls: CAssetModifier::~CAssetModifier
 void __fastcall CEntityHealthBarModifier::~CEntityHealthBarModifier(CEntityHealthBarModifier *const this)
 {
-  this->_vptr_CAssetModifier = off_479F0B0;
+  this->_vptr_CAssetModifier = off_479F0B0;  // vptr: CHealthBarModifier
   CAssetModifier::~CAssetModifier(this);
 }
 
@@ -3088,7 +3088,7 @@ void __fastcall CEntityHealthBarModifier::~CEntityHealthBarModifier(CEntityHealt
 // calls: CAssetModifier::~CAssetModifier, operator delete
 void __fastcall CEntityHealthBarModifier::~CEntityHealthBarModifier(CEntityHealthBarModifier *const this)
 {
-  this->_vptr_CAssetModifier = off_479F0B0;
+  this->_vptr_CAssetModifier = off_479F0B0;  // vptr: CHealthBarModifier
   CAssetModifier::~CAssetModifier(this);
   operator delete(this);
 }
@@ -3168,7 +3168,7 @@ bool __fastcall CPortraitModifier_Game::Compare(const CPortraitModifier_Game *co
 // calls: CAssetModifier::~CAssetModifier
 void __fastcall CAdditionalWearableModifier::~CAdditionalWearableModifier(CAdditionalWearableModifier *const this)
 {
-  this->_vptr_CAssetModifier = off_47A4050;
+  this->_vptr_CAssetModifier = off_47A4050;  // vptr: CAdditionalWearableModifier
   CAssetModifier::~CAssetModifier(this);
 }
 
@@ -3177,7 +3177,7 @@ void __fastcall CAdditionalWearableModifier::~CAdditionalWearableModifier(CAddit
 // calls: CAssetModifier::~CAssetModifier, operator delete
 void __fastcall CAdditionalWearableModifier::~CAdditionalWearableModifier(CAdditionalWearableModifier *const this)
 {
-  this->_vptr_CAssetModifier = off_47A4050;
+  this->_vptr_CAssetModifier = off_47A4050;  // vptr: CAdditionalWearableModifier
   CAssetModifier::~CAssetModifier(this);
   operator delete(this);
 }
@@ -3208,7 +3208,7 @@ unsigned int __fastcall CAdditionalWearableModifier::GetType(const CAdditionalWe
 // calls: CAssetModifier::~CAssetModifier
 void __fastcall CArcanaLevelModifier::~CArcanaLevelModifier(CArcanaLevelModifier *const this)
 {
-  this->_vptr_CAssetModifier = off_479F170;
+  this->_vptr_CAssetModifier = off_479F170;  // vptr: CArcanaLevelModifier
   CAssetModifier::~CAssetModifier(this);
 }
 
@@ -3217,7 +3217,7 @@ void __fastcall CArcanaLevelModifier::~CArcanaLevelModifier(CArcanaLevelModifier
 // calls: CAssetModifier::~CAssetModifier, operator delete
 void __fastcall CArcanaLevelModifier::~CArcanaLevelModifier(CArcanaLevelModifier *const this)
 {
-  this->_vptr_CAssetModifier = off_479F170;
+  this->_vptr_CAssetModifier = off_479F170;  // vptr: CArcanaLevelModifier
   CAssetModifier::~CAssetModifier(this);
   operator delete(this);
 }

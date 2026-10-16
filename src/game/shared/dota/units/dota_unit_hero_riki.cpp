@@ -619,7 +619,7 @@ CEntityInstance *__fastcall CDOTA_Unit_Hero_Riki::CEntityInstanceEntityClass::Co
 void __fastcall CDOTA_Unit_Hero_Riki::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Unit_Hero_Riki::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -629,7 +629,7 @@ void __fastcall CDOTA_Unit_Hero_Riki::CEntityInstanceEntityClass::~CEntityInstan
 void __fastcall CDOTA_Unit_Hero_Riki::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Unit_Hero_Riki::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -843,7 +843,7 @@ CEntityInstance *__fastcall CDOTA_Ability_Riki_SmokeScreen::CEntityInstanceEntit
 void __fastcall CDOTA_Ability_Riki_SmokeScreen::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Riki_SmokeScreen::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -853,7 +853,7 @@ void __fastcall CDOTA_Ability_Riki_SmokeScreen::CEntityInstanceEntityClass::~CEn
 void __fastcall CDOTA_Ability_Riki_SmokeScreen::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Riki_SmokeScreen::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -1506,7 +1506,7 @@ CEntityInstance *__fastcall CDOTA_Ability_Riki_BlinkStrike::CEntityInstanceEntit
 void __fastcall CDOTA_Ability_Riki_BlinkStrike::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Riki_BlinkStrike::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -1516,7 +1516,7 @@ void __fastcall CDOTA_Ability_Riki_BlinkStrike::CEntityInstanceEntityClass::~CEn
 void __fastcall CDOTA_Ability_Riki_BlinkStrike::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Riki_BlinkStrike::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -1963,7 +1963,7 @@ CEntityInstance *__fastcall CDOTA_Ability_Riki_Permanent_Invisibility::CEntityIn
 void __fastcall CDOTA_Ability_Riki_Permanent_Invisibility::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Riki_Permanent_Invisibility::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -1973,7 +1973,7 @@ void __fastcall CDOTA_Ability_Riki_Permanent_Invisibility::CEntityInstanceEntity
 void __fastcall CDOTA_Ability_Riki_Permanent_Invisibility::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Riki_Permanent_Invisibility::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -2666,7 +2666,7 @@ CEntityInstance *__fastcall CDOTA_Ability_Riki_TricksOfTheTrade::CEntityInstance
 void __fastcall CDOTA_Ability_Riki_TricksOfTheTrade::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Riki_TricksOfTheTrade::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -2676,7 +2676,7 @@ void __fastcall CDOTA_Ability_Riki_TricksOfTheTrade::CEntityInstanceEntityClass:
 void __fastcall CDOTA_Ability_Riki_TricksOfTheTrade::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Riki_TricksOfTheTrade::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }

@@ -92,7 +92,7 @@ LABEL_10:
   {
     v17 = *pFieldInstance;
     if ( v17 != 0 && pFieldInstance + v17 != 0 )
-      (*this->_vptr_CSchemaVisitorBase)(this, pFieldInstance + v17, *(pFieldType + 9), pField);
+      this->VisitRelevantField(pFieldInstance + v17, *(pFieldType + 9), pField);
   }
   else if ( v9 == 4004 )
   {
@@ -109,7 +109,7 @@ LABEL_10:
       do
       {
         ++v22;
-        (*this->_vptr_CSchemaVisitorBase)(this, v21, v19, pField);
+        this->VisitRelevantField(v21, v19, pField);
         v21 += v31;
       }
       while ( v22 < *(pFieldInstance + 1) );
@@ -122,7 +122,7 @@ LABEL_10:
     {
 LABEL_5:
       if ( (**pFieldType)(pFieldType) == 1 && (*(*pFieldType + 48LL))(pFieldType) == 4 && *pFieldInstance != 0 )
-        (*this->_vptr_CSchemaVisitorBase)(this, *pFieldInstance, *(pFieldType + 6), pField);
+        this->VisitRelevantField(*pFieldInstance, *(pFieldType + 6), pField);
       return;
     }
     v30 = (*(*v11 + 48LL))(v11);
@@ -133,7 +133,7 @@ LABEL_5:
       {
         v15 = i;
         v16 = (*(*v12 + 8LL))(v12, pFieldInstance, v15);
-        (*this->_vptr_CSchemaVisitorBase)(this, v16, v30, pField);
+        this->VisitRelevantField(v16, v30, pField);
       }
     }
   }

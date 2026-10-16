@@ -9,7 +9,7 @@ void __fastcall CSoundscapeSystem::~CSoundscapeSystem(CSoundscapeSystem *const t
   CUtlMemory<short unsigned int,int> *p_m_Memory; // r12
 
   v2 = (this->m_soundscapeIndexList.m_Memory.m_nGrowSize & 0xC0000000) == 0;
-  this->_vptr_IGameSystem = off_40AE570;
+  this->_vptr_IGameSystem = off_40AE570;  // vptr: CSoundscapeSystem
   this->m_soundscapeIndexList.m_Size = 0;
   if ( v2 )
   {
@@ -57,7 +57,7 @@ void __fastcall CSoundscapeSystem::~CSoundscapeSystem(CSoundscapeSystem *const t
       CUtlMemory<CUtlVector<CUtlString,CUtlMemory<CUtlString,int>>,int>::Purge(&this->m_globalSoundscapes.m_sounds.m_Memory);
   }
   CStringRegistry::~CStringRegistry(&this->m_globalSoundscapes.m_soundscapes);
-  this->_vptr_IGameSystem = off_3F7C1B0;
+  this->_vptr_IGameSystem = off_3F7C1B0;  // vptr: CAutoGameSystem
   IGameSystem::~IGameSystem(this);
 }
 
@@ -70,7 +70,7 @@ void __fastcall CSoundscapeSystem::~CSoundscapeSystem(CSoundscapeSystem *const t
   CUtlMemory<short unsigned int,int> *p_m_Memory; // r12
 
   v2 = (this->m_soundscapeIndexList.m_Memory.m_nGrowSize & 0xC0000000) == 0;
-  this->_vptr_IGameSystem = off_40AE570;
+  this->_vptr_IGameSystem = off_40AE570;  // vptr: CSoundscapeSystem
   this->m_soundscapeIndexList.m_Size = 0;
   if ( v2 )
   {
@@ -118,7 +118,7 @@ void __fastcall CSoundscapeSystem::~CSoundscapeSystem(CSoundscapeSystem *const t
       CUtlMemory<CUtlVector<CUtlString,CUtlMemory<CUtlString,int>>,int>::Purge(&this->m_globalSoundscapes.m_sounds.m_Memory);
   }
   CStringRegistry::~CStringRegistry(&this->m_globalSoundscapes.m_soundscapes);
-  this->_vptr_IGameSystem = off_3F7C1B0;
+  this->_vptr_IGameSystem = off_3F7C1B0;  // vptr: CAutoGameSystem
   IGameSystem::~IGameSystem(this);
   operator delete(this);
 }

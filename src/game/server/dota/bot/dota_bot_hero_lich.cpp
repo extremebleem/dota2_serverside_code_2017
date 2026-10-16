@@ -59,7 +59,7 @@ void __fastcall CDOTA_Bot_AbilityUsage_Lich_FrostNova::CDOTA_Bot_AbilityUsage_Li
   this->m_pAbility = pAbility;
   this->m_bUseOnCreeps = 0;
   this->m_pBot = pBot;
-  this->_vptr_CDOTA_Bot_AbilityUsage = off_42CD390;
+  this->_vptr_CDOTA_Bot_AbilityUsage = off_42CD390;  // vptr: CDOTA_Bot_AbilityUsage_Lich_FrostNova
   this->m_hDesiredTarget.m_Index = -1;
 }
 
@@ -278,7 +278,7 @@ void __fastcall CDOTA_Bot_AbilityUsage_Lich_FrostArmor::CDOTA_Bot_AbilityUsage_L
   this->m_pAbility = pAbility;
   this->m_bUseOnCreeps = 0;
   this->m_pBot = pBot;
-  this->_vptr_CDOTA_Bot_AbilityUsage = off_42CD3F0;
+  this->_vptr_CDOTA_Bot_AbilityUsage = off_42CD3F0;  // vptr: CDOTA_Bot_AbilityUsage_Lich_FrostArmor
   this->m_hDesiredTarget.m_Index = -1;
 }
 
@@ -536,7 +536,7 @@ void __fastcall CDOTA_Bot_AbilityUsage_Lich_DarkRitual::CDOTA_Bot_AbilityUsage_L
   this->m_pAbility = pAbility;
   this->m_bUseOnCreeps = 0;
   this->m_pBot = pBot;
-  this->_vptr_CDOTA_Bot_AbilityUsage = off_42CD450;
+  this->_vptr_CDOTA_Bot_AbilityUsage = off_42CD450;  // vptr: CDOTA_Bot_AbilityUsage_Lich_DarkRitual
   this->m_hDesiredTarget.m_Index = -1;
 }
 
@@ -846,7 +846,7 @@ void __fastcall CDOTA_Bot_AbilityUsage_Lich_ChainFrost::CDOTA_Bot_AbilityUsage_L
   this->m_pAbility = pAbility;
   this->m_bUseOnCreeps = 0;
   this->m_pBot = pBot;
-  this->_vptr_CDOTA_Bot_AbilityUsage = off_42CD4B0;
+  this->_vptr_CDOTA_Bot_AbilityUsage = off_42CD4B0;  // vptr: CDOTA_Bot_AbilityUsage_Lich_ChainFrost
   this->m_hDesiredTarget.m_Index = -1;
 }
 

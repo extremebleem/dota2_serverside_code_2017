@@ -35,7 +35,7 @@ void __fastcall IEntityListener::OnEntityParentChanged(
 // ISpawnGroupEntityFilter::~ISpawnGroupEntityFilter  (line 50, @0x0000000001f71c20, libserver.so)
 void __fastcall ISpawnGroupEntityFilter::~ISpawnGroupEntityFilter(ISpawnGroupEntityFilter *const this)
 {
-  this->_vptr_ISpawnGroupEntityFilter = off_3FCAF10;
+  this->_vptr_ISpawnGroupEntityFilter = off_3FCAF10;  // vptr: ISpawnGroupEntityFilter
 }
 
 
@@ -43,7 +43,7 @@ void __fastcall ISpawnGroupEntityFilter::~ISpawnGroupEntityFilter(ISpawnGroupEnt
 // calls: operator delete
 void __fastcall ISpawnGroupEntityFilter::~ISpawnGroupEntityFilter(ISpawnGroupEntityFilter *const this)
 {
-  this->_vptr_ISpawnGroupEntityFilter = off_3FCAF10;
+  this->_vptr_ISpawnGroupEntityFilter = off_3FCAF10;  // vptr: ISpawnGroupEntityFilter
   operator delete(this);
 }
 

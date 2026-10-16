@@ -4,7 +4,7 @@
 // CPathData::~CPathData  (line 141, @0x0000000002f04da0, libserver.so)
 void __fastcall CPathData::~CPathData(CPathData *const this)
 {
-  this->_vptr_CPathData = off_47B0E10;
+  this->_vptr_CPathData = off_47B0E10;  // vptr: CPathData
 }
 
 
@@ -12,7 +12,7 @@ void __fastcall CPathData::~CPathData(CPathData *const this)
 // calls: operator delete
 void __fastcall CPathData::~CPathData(CPathData *const this)
 {
-  this->_vptr_CPathData = off_47B0E10;
+  this->_vptr_CPathData = off_47B0E10;  // vptr: CPathData
   operator delete(this);
 }
 
@@ -27,7 +27,7 @@ void __fastcall CPathData::OnPathChanged(CPathData *const this)
 // CPath::~CPath  (line 251, @0x0000000002f05260, libserver.so)  // inlines: ~CPathData
 void __fastcall CPath::~CPath(CPath *const this)
 {
-  this->_vptr_CPathData = off_47B0E10;
+  this->_vptr_CPathData = off_47B0E10;  // vptr: CPathData
 }
 
 
@@ -35,7 +35,7 @@ void __fastcall CPath::~CPath(CPath *const this)
 // calls: operator delete
 void __fastcall CPath::~CPath(CPath *const this)
 {
-  this->_vptr_CPathData = off_47B0E10;
+  this->_vptr_CPathData = off_47B0E10;  // vptr: CPathData
   operator delete(this);
 }
 
@@ -73,7 +73,7 @@ void __fastcall CPathCostRecorder::~CPathCostRecorder(CPathCostRecorder *const t
   CUtlVectorBase<const CNavArea*,CUtlMemory<const CNavArea*,int> >::CAllocator *p_m_Memory; // r12
 
   v2 = (this->m_VisitedAreas.m_Memory.m_nGrowSize & 0xC0000000) == 0;
-  this->_vptr_CPathCostBase = off_47B0DB0;
+  this->_vptr_CPathCostBase = off_47B0DB0;  // vptr: CPathCostRecorder
   this->m_VisitedAreas.m_Size = 0;
   if ( v2 )
   {
@@ -93,7 +93,7 @@ void __fastcall CPathCostRecorder::~CPathCostRecorder(CPathCostRecorder *const t
     if ( v2 )
       goto LABEL_7;
 LABEL_4:
-    this->_vptr_CPathCostBase = off_47AE0B0;
+    this->_vptr_CPathCostBase = off_47AE0B0;  // vptr: CPathCostBase
     return;
   }
   CUtlMemory<CPathCostRecorder::AreaTransition_t,int>::Purge(&this->m_CostPairs.m_Memory);
@@ -106,7 +106,7 @@ LABEL_7:
   if ( (this->m_NonTraversablePairs.m_Memory.m_nGrowSize & 0xC0000000) != 0 )
     goto LABEL_4;
   CUtlMemory<CPathCostRecorder::AreaTransition_t,int>::Purge(&this->m_NonTraversablePairs.m_Memory);
-  this->_vptr_CPathCostBase = off_47AE0B0;
+  this->_vptr_CPathCostBase = off_47AE0B0;  // vptr: CPathCostBase
 }
 
 
@@ -118,7 +118,7 @@ void __fastcall CPathCostRecorder::~CPathCostRecorder(CPathCostRecorder *const t
   CUtlVectorBase<const CNavArea*,CUtlMemory<const CNavArea*,int> >::CAllocator *p_m_Memory; // r12
 
   v2 = (this->m_VisitedAreas.m_Memory.m_nGrowSize & 0xC0000000) == 0;
-  this->_vptr_CPathCostBase = off_47B0DB0;
+  this->_vptr_CPathCostBase = off_47B0DB0;  // vptr: CPathCostRecorder
   this->m_VisitedAreas.m_Size = 0;
   if ( v2 )
   {
@@ -150,7 +150,7 @@ void __fastcall CPathCostRecorder::~CPathCostRecorder(CPathCostRecorder *const t
   if ( (this->m_NonTraversablePairs.m_Memory.m_nGrowSize & 0xC0000000) == 0 )
     CUtlMemory<CPathCostRecorder::AreaTransition_t,int>::Purge(&this->m_NonTraversablePairs.m_Memory);
 LABEL_4:
-  this->_vptr_CPathCostBase = off_47AE0B0;
+  this->_vptr_CPathCostBase = off_47AE0B0;  // vptr: CPathCostBase
   operator delete(this);
 }
 

@@ -271,7 +271,7 @@ void __fastcall CC_GiveCurrentAmmo(const CCommandContext *const ctx, const CComm
         if ( v11 != -1 )
         {
           AmmoDef = GetAmmoDef();
-          v13 = (*AmmoDef->_vptr_CAmmoDef)(AmmoDef, v11, v3);
+          v13 = AmmoDef->MaxCarry(v11, v3);
           v14 = GetAmmoDef();
           AmmoOfIndex = CAmmoDef::GetAmmoOfIndex(v14, v11);
           CBaseCombatCharacter::GiveAmmo(v3, v13, AmmoOfIndex->pName, 0);
@@ -283,7 +283,7 @@ void __fastcall CC_GiveCurrentAmmo(const CCommandContext *const ctx, const CComm
         if ( v6 != -1 )
         {
           v7 = GetAmmoDef();
-          v8 = (*v7->_vptr_CAmmoDef)(v7, v6, v3);
+          v8 = v7->MaxCarry(v6, v3);
           v9 = GetAmmoDef();
           v10 = CAmmoDef::GetAmmoOfIndex(v9, v6);
           CBaseCombatCharacter::GiveAmmo(v3, v8, v10->pName, 0);
@@ -11838,7 +11838,7 @@ CEntityInstance *__fastcall CStripWeapons::CEntityInstanceEntityClass::Construct
 void __fastcall CStripWeapons::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CStripWeapons::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -11848,7 +11848,7 @@ void __fastcall CStripWeapons::CEntityInstanceEntityClass::~CEntityInstanceEntit
 void __fastcall CStripWeapons::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CStripWeapons::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -12358,7 +12358,7 @@ CEntityInstance *__fastcall CRevertSaved::CEntityInstanceEntityClass::ConstructI
 void __fastcall CRevertSaved::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CRevertSaved::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -12368,7 +12368,7 @@ void __fastcall CRevertSaved::CEntityInstanceEntityClass::~CEntityInstanceEntity
 void __fastcall CRevertSaved::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CRevertSaved::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -12793,7 +12793,7 @@ CEntityInstance *__fastcall CMovementSpeedMod::CEntityInstanceEntityClass::Const
 void __fastcall CMovementSpeedMod::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CMovementSpeedMod::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -12803,7 +12803,7 @@ void __fastcall CMovementSpeedMod::CEntityInstanceEntityClass::~CEntityInstanceE
 void __fastcall CMovementSpeedMod::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CMovementSpeedMod::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -16005,7 +16005,7 @@ CBotCmd *__fastcall CPlayerInfo::GetLastUserCommand(CBotCmd *__return_ptr retstr
 
   result = retstr;
   retstr->command_number = 0;
-  retstr->_vptr_CBotCmd = off_4073650;
+  retstr->_vptr_CBotCmd = off_4073650;  // vptr: CBotCmd
   retstr->tick_count = 0;
   retstr->viewangles.x = 0.0;
   retstr->viewangles.y = 0.0;

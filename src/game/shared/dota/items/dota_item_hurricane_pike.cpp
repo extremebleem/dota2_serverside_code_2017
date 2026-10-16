@@ -362,7 +362,7 @@ CEntityInstance *__fastcall CDOTA_Item_Recipe_Hurricane_Pike::CEntityInstanceEnt
 void __fastcall CDOTA_Item_Recipe_Hurricane_Pike::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Item_Recipe_Hurricane_Pike::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -372,7 +372,7 @@ void __fastcall CDOTA_Item_Recipe_Hurricane_Pike::CEntityInstanceEntityClass::~C
 void __fastcall CDOTA_Item_Recipe_Hurricane_Pike::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Item_Recipe_Hurricane_Pike::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -527,7 +527,7 @@ CEntityInstance *__fastcall CDOTA_Item_Hurricane_Pike::CEntityInstanceEntityClas
 void __fastcall CDOTA_Item_Hurricane_Pike::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Item_Hurricane_Pike::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -537,7 +537,7 @@ void __fastcall CDOTA_Item_Hurricane_Pike::CEntityInstanceEntityClass::~CEntityI
 void __fastcall CDOTA_Item_Hurricane_Pike::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Item_Hurricane_Pike::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }

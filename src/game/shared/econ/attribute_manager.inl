@@ -46,7 +46,7 @@ void __fastcall CAttributeManager::~CAttributeManager(CAttributeManager *const t
   CUtlVectorBase<CAttributeManager::cached_attribute_float_t,CUtlMemory<CAttributeManager::cached_attribute_float_t,int> >::CAllocator *p_m_Memory; // r12
 
   v2 = (this->m_CachedResults.m_Memory.m_nGrowSize & 0xC0000000) == 0;
-  this->_vptr_CAttributeManager = off_479F4D0;
+  this->_vptr_CAttributeManager = off_479F4D0;  // vptr: CAttributeManager
   this->m_CachedResults.m_Size = 0;
   if ( !v2
     || (p_m_Memory = &this->m_CachedResults.m_Memory,
@@ -96,7 +96,7 @@ void __fastcall CAttributeManager::~CAttributeManager(CAttributeManager *const t
   CUtlVectorBase<CAttributeManager::cached_attribute_float_t,CUtlMemory<CAttributeManager::cached_attribute_float_t,int> >::CAllocator *p_m_Memory; // r12
 
   v2 = (this->m_CachedResults.m_Memory.m_nGrowSize & 0xC0000000) == 0;
-  this->_vptr_CAttributeManager = off_479F4D0;
+  this->_vptr_CAttributeManager = off_479F4D0;  // vptr: CAttributeManager
   this->m_CachedResults.m_Size = 0;
   if ( !v2
     || (p_m_Memory = &this->m_CachedResults.m_Memory,
@@ -161,7 +161,7 @@ void __fastcall CAttributeContainer::~CAttributeContainer(CAttributeContainer *c
   this->m_Item._vptr_IEconItemInterface = &off_479F2B0;
   CEconItemView::~CEconItemView(&this->m_Item);
   v2 = (this->m_CachedResults.m_Memory.m_nGrowSize & 0xC0000000) == 0;
-  this->_vptr_CAttributeManager = off_479F4D0;
+  this->_vptr_CAttributeManager = off_479F4D0;  // vptr: CAttributeManager
   this->m_CachedResults.m_Size = 0;
   if ( !v2
     || (CUtlMemory<CAttributeManager::cached_attribute_float_t,int>::Purge(&this->m_CachedResults.m_Memory),
@@ -212,7 +212,7 @@ void __fastcall CAttributeContainer::~CAttributeContainer(CAttributeContainer *c
   this->m_Item._vptr_IEconItemInterface = &off_479F2B0;
   CEconItemView::~CEconItemView(&this->m_Item);
   v2 = (this->m_CachedResults.m_Memory.m_nGrowSize & 0xC0000000) == 0;
-  this->_vptr_CAttributeManager = off_479F4D0;
+  this->_vptr_CAttributeManager = off_479F4D0;  // vptr: CAttributeManager
   this->m_CachedResults.m_Size = 0;
   if ( !v2
     || (CUtlMemory<CAttributeManager::cached_attribute_float_t,int>::Purge(&this->m_CachedResults.m_Memory),

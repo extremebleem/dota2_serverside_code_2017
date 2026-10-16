@@ -7,7 +7,7 @@ void __fastcall CGameMovement::~CGameMovement(CGameMovement *const this)
 {
   bool v2; // zf
 
-  this->_vptr_IGameMovement = off_404F270;
+  this->_vptr_IGameMovement = off_404F270;  // vptr: CGameMovement
   CUtlRBTree<CUtlMap<CEntityIndex,float,unsigned short,bool (*)(CEntityIndex const&,CEntityIndex const&)>::Node_t,unsigned short,CUtlMap<CEntityIndex,float,unsigned short,bool (*)(CEntityIndex const&,CEntityIndex const&)>::CKeyLess,CUtlMemory<UtlRBTreeNode_t<CUtlMap<CEntityIndex,float,unsigned short,bool (*)(CEntityIndex const&,CEntityIndex const&)>::Node_t,unsigned short>,unsigned short>>::RemoveAll(&this->m_mapLastVelocitySpewTime.m_Tree);
   v2 = (this->m_mapLastVelocitySpewTime.m_Tree.m_Elements.m_nGrowSize & 0xC0000000) == 0;
   this->m_mapLastVelocitySpewTime.m_Tree.m_FirstFree = -1;
@@ -15,7 +15,7 @@ void __fastcall CGameMovement::~CGameMovement(CGameMovement *const this)
   {
     this->m_mapLastVelocitySpewTime.m_Tree.m_LastAlloc.index = -1;
 LABEL_3:
-    this->_vptr_IGameMovement = off_404F1F0;
+    this->_vptr_IGameMovement = off_404F1F0;  // vptr: IGameMovement
     return;
   }
   CUtlMemory<UtlRBTreeNode_t<CUtlMap<CEntityIndex,float,unsigned short,bool (*)(CEntityIndex const&,CEntityIndex const&)>::Node_t,unsigned short>,unsigned short>::Purge(&this->m_mapLastVelocitySpewTime.m_Tree.m_Elements);
@@ -24,7 +24,7 @@ LABEL_3:
   if ( !v2 )
     goto LABEL_3;
   CUtlMemory<UtlRBTreeNode_t<CUtlMap<CEntityIndex,float,unsigned short,bool (*)(CEntityIndex const&,CEntityIndex const&)>::Node_t,unsigned short>,unsigned short>::Purge(&this->m_mapLastVelocitySpewTime.m_Tree.m_Elements);
-  this->_vptr_IGameMovement = off_404F1F0;
+  this->_vptr_IGameMovement = off_404F1F0;  // vptr: IGameMovement
 }
 
 
@@ -34,7 +34,7 @@ void __fastcall CGameMovement::~CGameMovement(CGameMovement *const this)
 {
   bool v2; // zf
 
-  this->_vptr_IGameMovement = off_404F270;
+  this->_vptr_IGameMovement = off_404F270;  // vptr: CGameMovement
   CUtlRBTree<CUtlMap<CEntityIndex,float,unsigned short,bool (*)(CEntityIndex const&,CEntityIndex const&)>::Node_t,unsigned short,CUtlMap<CEntityIndex,float,unsigned short,bool (*)(CEntityIndex const&,CEntityIndex const&)>::CKeyLess,CUtlMemory<UtlRBTreeNode_t<CUtlMap<CEntityIndex,float,unsigned short,bool (*)(CEntityIndex const&,CEntityIndex const&)>::Node_t,unsigned short>,unsigned short>>::RemoveAll(&this->m_mapLastVelocitySpewTime.m_Tree);
   v2 = (this->m_mapLastVelocitySpewTime.m_Tree.m_Elements.m_nGrowSize & 0xC0000000) == 0;
   this->m_mapLastVelocitySpewTime.m_Tree.m_FirstFree = -1;
@@ -50,7 +50,7 @@ void __fastcall CGameMovement::~CGameMovement(CGameMovement *const this)
   {
     this->m_mapLastVelocitySpewTime.m_Tree.m_LastAlloc.index = -1;
   }
-  this->_vptr_IGameMovement = off_404F1F0;
+  this->_vptr_IGameMovement = off_404F1F0;  // vptr: IGameMovement
   operator delete(this);
 }
 

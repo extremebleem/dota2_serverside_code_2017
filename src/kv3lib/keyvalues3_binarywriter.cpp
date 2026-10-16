@@ -77,7 +77,7 @@ bool __fastcall GatherSymbols_R(KV3BinarySaveContext_t *const saveContext, const
   int v52; // [rsp+10h] [rbp-80h]
   int v53; // [rsp+10h] [rbp-80h]
   int v54; // [rsp+18h] [rbp-78h]
-  CUtlSymbolTableLargeBaseTreeEntry_t *v55; // [rsp+18h] [rbp-78h]
+  char *v55; // [rsp+18h] [rbp-78h]
   int v56; // [rsp+18h] [rbp-78h]
   unsigned int v57; // [rsp+20h] [rbp-70h]
   CUtlSymbolTableLargeBase<CNonThreadsafeTree<false>,false,2048ul>::StringPool_t *v58; // [rsp+20h] [rbp-70h]
@@ -88,8 +88,8 @@ bool __fastcall GatherSymbols_R(KV3BinarySaveContext_t *const saveContext, const
   unsigned int v63; // [rsp+38h] [rbp-58h]
   char *v64; // [rsp+38h] [rbp-58h]
   CUtlSymbolTableLargeBase<CNonThreadsafeTree<false>,false,2048ul>::StringPool_t *v65; // [rsp+38h] [rbp-58h]
-  CUtlSymbolTableLargeBaseTreeEntry_t *insert; // [rsp+40h] [rbp-50h] BYREF
-  CUtlSymbolTableLargeBaseTreeEntry_t *v67; // [rsp+50h] [rbp-40h] BYREF
+  CUtlSymbolTableLargeBaseTreeEntry_t *insert[2]; // [rsp+40h] [rbp-50h] BYREF
+  char *v67[8]; // [rsp+50h] [rbp-40h] BYREF
 
   Type = KeyValues3::GetType(pData);
   if ( Type != KeyValues3Type_t::KEYVALUES3_TYPE_ARRAY )
@@ -109,8 +109,8 @@ bool __fastcall GatherSymbols_R(KV3BinarySaveContext_t *const saveContext, const
       if ( *v7 == 0 )
         return 1;
       p_m_Symbols = &saveContext->m_Symbols;
-      CUtlSymbolTableLargeBase<CNonThreadsafeTree<false>,false,2048ul>::Find(&saveContext->m_Symbols, v7, v8);
-      if ( v67 != 0 )
+      CUtlSymbolTableLargeBase<CNonThreadsafeTree<false>,false,2048ul>::Find(v67, &saveContext->m_Symbols, v7, v8);
+      if ( v67[0] != 0 )
         return 1;
       m_Size = saveContext->m_Symbols.m_StringPools.m_Size;
       v12 = (v9 + 16) & 0xFFFFFFF8;
@@ -127,10 +127,10 @@ LABEL_21:
           *(v25 + 1) = HashString(v7);
           memcpy(v25 + 16, v7, v9);
           v25[v9 + 16] = 0;
-          insert = (v25 + 8);
+          insert[0] = (v25 + 8);
           CUtlRBTree<CUtlSymbolTableLargeBaseTreeEntry_t *,long long,CTreeEntryLess<CNonThreadsafeTree<false>,false>,CUtlMemory<UtlRBTreeNode_t<CUtlSymbolTableLargeBaseTreeEntry_t *,long long>,long long>>::Insert(
             &p_m_Symbols->m_Lookup,
-            &insert,
+            insert,
             ERBTreeInsertBehavior::k_eInsertAssertAboutDupes);
           return 1;
         }
@@ -204,9 +204,9 @@ LABEL_21:
       if ( *v30 == 0 )
         goto LABEL_24;
       v62 = v31;
-      CUtlSymbolTableLargeBase<CNonThreadsafeTree<false>,false,2048ul>::Find(v59, v30, v31);
+      CUtlSymbolTableLargeBase<CNonThreadsafeTree<false>,false,2048ul>::Find(insert, v59, v30, v31);
       v32 = v62;
-      if ( insert != 0 )
+      if ( insert[0] != 0 )
         goto LABEL_24;
       v33 = saveContext->m_Symbols.m_StringPools.m_Size;
       v34 = (v62 + 16) & 0xFFFFFFF8;
@@ -227,10 +227,10 @@ LABEL_49:
       *(v64 + 1) = HashString(v30);
       memcpy(v64 + 16, v30, v52);
       v64[v52 + 16] = 0;
-      v67 = v55;
+      v67[0] = v55;
       CUtlRBTree<CUtlSymbolTableLargeBaseTreeEntry_t *,long long,CTreeEntryLess<CNonThreadsafeTree<false>,false>,CUtlMemory<UtlRBTreeNode_t<CUtlSymbolTableLargeBaseTreeEntry_t *,long long>,long long>>::Insert(
         &v59->m_Lookup,
-        &v67,
+        v67,
         ERBTreeInsertBehavior::k_eInsertAssertAboutDupes);
 LABEL_24:
       Member = KeyValues3::GetMember(pData, v27);

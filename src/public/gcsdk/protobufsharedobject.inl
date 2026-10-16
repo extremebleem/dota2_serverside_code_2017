@@ -5,7 +5,7 @@
 void __fastcall GCSDK::CProtoBufSharedObjectBase::~CProtoBufSharedObjectBase(
         GCSDK::CProtoBufSharedObjectBase *const this)
 {
-  this->_vptr_CSharedObject = off_40DB630;
+  this->_vptr_CSharedObject = off_40DB630;  // vptr: GCSDK::CSharedObject
 }
 
 
@@ -14,7 +14,7 @@ void __fastcall GCSDK::CProtoBufSharedObjectBase::~CProtoBufSharedObjectBase(
 void __fastcall GCSDK::CProtoBufSharedObjectBase::~CProtoBufSharedObjectBase(
         GCSDK::CProtoBufSharedObjectBase *const this)
 {
-  this->_vptr_CSharedObject = off_40DB630;
+  this->_vptr_CSharedObject = off_40DB630;  // vptr: GCSDK::CSharedObject
   operator delete(this);
 }
 

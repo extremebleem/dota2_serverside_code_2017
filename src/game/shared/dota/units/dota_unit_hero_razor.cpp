@@ -642,7 +642,7 @@ CEntityInstance *__fastcall CDOTA_Unit_Hero_Razor::CEntityInstanceEntityClass::C
 void __fastcall CDOTA_Unit_Hero_Razor::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Unit_Hero_Razor::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -652,7 +652,7 @@ void __fastcall CDOTA_Unit_Hero_Razor::CEntityInstanceEntityClass::~CEntityInsta
 void __fastcall CDOTA_Unit_Hero_Razor::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Unit_Hero_Razor::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -836,7 +836,7 @@ CEntityInstance *__fastcall CDOTA_Ability_Razor_PlasmaField::CEntityInstanceEnti
 void __fastcall CDOTA_Ability_Razor_PlasmaField::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Razor_PlasmaField::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -846,7 +846,7 @@ void __fastcall CDOTA_Ability_Razor_PlasmaField::CEntityInstanceEntityClass::~CE
 void __fastcall CDOTA_Ability_Razor_PlasmaField::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Razor_PlasmaField::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -1545,7 +1545,7 @@ CEntityInstance *__fastcall CDOTA_Ability_Razor_StaticLink::CEntityInstanceEntit
 void __fastcall CDOTA_Ability_Razor_StaticLink::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Razor_StaticLink::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -1555,7 +1555,7 @@ void __fastcall CDOTA_Ability_Razor_StaticLink::CEntityInstanceEntityClass::~CEn
 void __fastcall CDOTA_Ability_Razor_StaticLink::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Razor_StaticLink::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -2400,7 +2400,7 @@ CEntityInstance *__fastcall CDOTA_Ability_Razor_UnstableCurrent::CEntityInstance
 void __fastcall CDOTA_Ability_Razor_UnstableCurrent::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Razor_UnstableCurrent::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -2410,7 +2410,7 @@ void __fastcall CDOTA_Ability_Razor_UnstableCurrent::CEntityInstanceEntityClass:
 void __fastcall CDOTA_Ability_Razor_UnstableCurrent::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Razor_UnstableCurrent::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -2996,7 +2996,7 @@ CEntityInstance *__fastcall CDOTA_Ability_Razor_EyeOfTheStorm::CEntityInstanceEn
 void __fastcall CDOTA_Ability_Razor_EyeOfTheStorm::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Razor_EyeOfTheStorm::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -3006,7 +3006,7 @@ void __fastcall CDOTA_Ability_Razor_EyeOfTheStorm::CEntityInstanceEntityClass::~
 void __fastcall CDOTA_Ability_Razor_EyeOfTheStorm::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Razor_EyeOfTheStorm::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }

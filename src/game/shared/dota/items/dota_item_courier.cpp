@@ -216,7 +216,7 @@ CEntityInstance *__fastcall CDOTA_Item_Courier::CEntityInstanceEntityClass::Cons
 void __fastcall CDOTA_Item_Courier::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Item_Courier::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -226,7 +226,7 @@ void __fastcall CDOTA_Item_Courier::CEntityInstanceEntityClass::~CEntityInstance
 void __fastcall CDOTA_Item_Courier::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Item_Courier::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -1477,7 +1477,7 @@ CEntityInstance *__fastcall CDOTA_Item_Flying_Courier::CEntityInstanceEntityClas
 void __fastcall CDOTA_Item_Flying_Courier::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Item_Flying_Courier::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -1487,7 +1487,7 @@ void __fastcall CDOTA_Item_Flying_Courier::CEntityInstanceEntityClass::~CEntityI
 void __fastcall CDOTA_Item_Flying_Courier::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Item_Flying_Courier::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }

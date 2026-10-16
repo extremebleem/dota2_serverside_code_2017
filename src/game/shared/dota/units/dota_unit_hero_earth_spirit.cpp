@@ -989,7 +989,7 @@ CEntityInstance *__fastcall CDOTA_Unit_Earth_Spirit_Stone::CEntityInstanceEntity
 void __fastcall CDOTA_Unit_Earth_Spirit_Stone::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Unit_Earth_Spirit_Stone::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -999,7 +999,7 @@ void __fastcall CDOTA_Unit_Earth_Spirit_Stone::CEntityInstanceEntityClass::~CEnt
 void __fastcall CDOTA_Unit_Earth_Spirit_Stone::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Unit_Earth_Spirit_Stone::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -1435,7 +1435,7 @@ CEntityInstance *__fastcall CDOTA_Ability_EarthSpirit_StoneCaller::CEntityInstan
 void __fastcall CDOTA_Ability_EarthSpirit_StoneCaller::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_EarthSpirit_StoneCaller::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -1445,7 +1445,7 @@ void __fastcall CDOTA_Ability_EarthSpirit_StoneCaller::CEntityInstanceEntityClas
 void __fastcall CDOTA_Ability_EarthSpirit_StoneCaller::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_EarthSpirit_StoneCaller::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -2040,7 +2040,7 @@ CEntityInstance *__fastcall CDOTA_Ability_EarthSpirit_BoulderSmash::CEntityInsta
 void __fastcall CDOTA_Ability_EarthSpirit_BoulderSmash::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_EarthSpirit_BoulderSmash::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -2050,7 +2050,7 @@ void __fastcall CDOTA_Ability_EarthSpirit_BoulderSmash::CEntityInstanceEntityCla
 void __fastcall CDOTA_Ability_EarthSpirit_BoulderSmash::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_EarthSpirit_BoulderSmash::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -3348,7 +3348,7 @@ CEntityInstance *__fastcall CDOTA_Ability_EarthSpirit_RollingBoulder::CEntityIns
 void __fastcall CDOTA_Ability_EarthSpirit_RollingBoulder::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_EarthSpirit_RollingBoulder::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -3358,7 +3358,7 @@ void __fastcall CDOTA_Ability_EarthSpirit_RollingBoulder::CEntityInstanceEntityC
 void __fastcall CDOTA_Ability_EarthSpirit_RollingBoulder::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_EarthSpirit_RollingBoulder::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -4558,7 +4558,7 @@ CEntityInstance *__fastcall CDOTA_Ability_EarthSpirit_GeomagneticGrip::CEntityIn
 void __fastcall CDOTA_Ability_EarthSpirit_GeomagneticGrip::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_EarthSpirit_GeomagneticGrip::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -4568,7 +4568,7 @@ void __fastcall CDOTA_Ability_EarthSpirit_GeomagneticGrip::CEntityInstanceEntity
 void __fastcall CDOTA_Ability_EarthSpirit_GeomagneticGrip::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_EarthSpirit_GeomagneticGrip::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -6081,7 +6081,7 @@ CEntityInstance *__fastcall CDOTA_Ability_EarthSpirit_Magnetize::CEntityInstance
 void __fastcall CDOTA_Ability_EarthSpirit_Magnetize::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_EarthSpirit_Magnetize::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -6091,7 +6091,7 @@ void __fastcall CDOTA_Ability_EarthSpirit_Magnetize::CEntityInstanceEntityClass:
 void __fastcall CDOTA_Ability_EarthSpirit_Magnetize::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_EarthSpirit_Magnetize::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -7012,7 +7012,7 @@ CEntityInstance *__fastcall CDOTA_Ability_EarthSpirit_Petrify::CEntityInstanceEn
 void __fastcall CDOTA_Ability_EarthSpirit_Petrify::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_EarthSpirit_Petrify::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -7022,7 +7022,7 @@ void __fastcall CDOTA_Ability_EarthSpirit_Petrify::CEntityInstanceEntityClass::~
 void __fastcall CDOTA_Ability_EarthSpirit_Petrify::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_EarthSpirit_Petrify::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -7292,7 +7292,7 @@ CEntityInstance *__fastcall CDOTA_Unit_Hero_EarthSpirit::CEntityInstanceEntityCl
 void __fastcall CDOTA_Unit_Hero_EarthSpirit::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Unit_Hero_EarthSpirit::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -7302,7 +7302,7 @@ void __fastcall CDOTA_Unit_Hero_EarthSpirit::CEntityInstanceEntityClass::~CEntit
 void __fastcall CDOTA_Unit_Hero_EarthSpirit::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Unit_Hero_EarthSpirit::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }

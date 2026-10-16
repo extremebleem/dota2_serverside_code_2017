@@ -294,8 +294,11 @@ bool __fastcall CUtlString::IsEqual_FastCaseInsensitive(const CUtlString *const 
 // callers: CEntity2SaveRestore::LoadSaveData, CEntity2SaveRestore::LoadAdjacentEnts, CChangeLevel::AddTransitionToList
 void __fastcall CUtlString::ToLowerFast(CUtlString *const this)
 {
-  if ( this->m_pString != 0 )
-    V_strlower_fast();
+  char *m_pString; // rdi
+
+  m_pString = this->m_pString;
+  if ( m_pString != 0 )
+    V_strlower_fast(m_pString);
 }
 
 
@@ -304,8 +307,11 @@ void __fastcall CUtlString::ToLowerFast(CUtlString *const this)
 // callers: CVScriptGameSystem::InstallScriptBindings, CEntFireAutoCompletionFunctor::CommandCompletionCallback
 void __fastcall CUtlString::ToUpperFast(CUtlString *const this)
 {
-  if ( this->m_pString != 0 )
-    V_strupper_fast();
+  char *m_pString; // rdi
+
+  m_pString = this->m_pString;
+  if ( m_pString != 0 )
+    V_strupper_fast(m_pString);
 }
 
 
@@ -628,16 +634,15 @@ int __fastcall CUtlString::FormatV(CUtlString *const this, const char *pFormat, 
   __int64 v10; // rcx
   __int64 v11; // rdi
   __int64 v12; // rsi
-  __int64 v13; // r8
-  __int64 v14; // r9
+  int v13; // r9d
   int nFullLena; // [rsp+8h] [rbp-1068h]
-  unsigned int nFullLenb; // [rsp+8h] [rbp-1068h]
+  int nFullLenb; // [rsp+8h] [rbp-1068h]
   CReuseVaList ReuseArgs; // [rsp+10h] [rbp-1060h] BYREF
   char tmpBuf[4104]; // [rsp+30h] [rbp-1040h] BYREF
-  unsigned __int64 v20; // [rsp+1038h] [rbp-38h]
+  unsigned __int64 v19; // [rsp+1038h] [rbp-38h]
 
   v5 = 4096;
-  v20 = __readfsqword(0x28u);
+  v19 = __readfsqword(0x28u);
   tmpBuf[0] = 0;
   for ( i = tmpBuf; ; i = this->m_pString )
   {
@@ -660,12 +665,12 @@ int __fastcall CUtlString::FormatV(CUtlString *const this, const char *pFormat, 
     {
       nFullLenb = result;
       IsChannelEnabled = LoggingSystem_IsChannelEnabled(LOG_GENERAL, 4);
-      v14 = nFullLenb;
+      v13 = nFullLenb;
       if ( IsChannelEnabled != 0 )
         goto LABEL_15;
       while ( 1 )
       {
-        if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v11, v12, v9, v10, v13, v14) != 0 )
+        if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v11, v12, v9, v10) != 0 )
           loc_0 = -559038737;
         Plat_ExitProcess(1);
 LABEL_15:
@@ -678,7 +683,7 @@ LABEL_15:
           &ReuseArgs,
           "%s: string format requested %d chars\n",
           "FormatV",
-          v14);
+          v13);
       }
     }
     v5 = result + 1;

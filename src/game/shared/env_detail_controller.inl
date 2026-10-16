@@ -75,7 +75,7 @@ CEntityInstance *__fastcall CEnvDetailController::CEntityInstanceEntityClass::Co
 void __fastcall CEnvDetailController::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CEnvDetailController::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -85,7 +85,7 @@ void __fastcall CEnvDetailController::CEntityInstanceEntityClass::~CEntityInstan
 void __fastcall CEnvDetailController::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CEnvDetailController::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }

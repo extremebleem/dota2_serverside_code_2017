@@ -109,7 +109,7 @@ const ISchemaBinding *__fastcall CBaseClientUIEntity::CEntityInstanceEntityClass
 void __fastcall CBaseClientUIEntity::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CBaseClientUIEntity::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -119,7 +119,7 @@ void __fastcall CBaseClientUIEntity::CEntityInstanceEntityClass::~CEntityInstanc
 void __fastcall CBaseClientUIEntity::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CBaseClientUIEntity::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }

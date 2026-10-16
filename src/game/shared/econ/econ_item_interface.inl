@@ -4,7 +4,7 @@
 // IEconItemAttributeIterator::~IEconItemAttributeIterator  (line 81, @0x0000000002496d20, libserver.so)
 void __fastcall IEconItemAttributeIterator::~IEconItemAttributeIterator(IEconItemAttributeIterator *const this)
 {
-  this->_vptr_IEconItemAttributeIterator = off_40DB570;
+  this->_vptr_IEconItemAttributeIterator = off_40DB570;  // vptr: IEconItemAttributeIterator
 }
 
 
@@ -12,7 +12,7 @@ void __fastcall IEconItemAttributeIterator::~IEconItemAttributeIterator(IEconIte
 // calls: operator delete
 void __fastcall IEconItemAttributeIterator::~IEconItemAttributeIterator(IEconItemAttributeIterator *const this)
 {
-  this->_vptr_IEconItemAttributeIterator = off_40DB570;
+  this->_vptr_IEconItemAttributeIterator = off_40DB570;  // vptr: IEconItemAttributeIterator
   operator delete(this);
 }
 
@@ -21,7 +21,7 @@ void __fastcall IEconItemAttributeIterator::~IEconItemAttributeIterator(IEconIte
 void __fastcall CEconItemSpecificAttributeIterator::~CEconItemSpecificAttributeIterator(
         CEconItemSpecificAttributeIterator *const this)
 {
-  this->_vptr_IEconItemAttributeIterator = off_40DB570;
+  this->_vptr_IEconItemAttributeIterator = off_40DB570;  // vptr: IEconItemAttributeIterator
 }
 
 
@@ -30,7 +30,7 @@ void __fastcall CEconItemSpecificAttributeIterator::~CEconItemSpecificAttributeI
 void __fastcall CEconItemSpecificAttributeIterator::~CEconItemSpecificAttributeIterator(
         CEconItemSpecificAttributeIterator *const this)
 {
-  this->_vptr_IEconItemAttributeIterator = off_40DB570;
+  this->_vptr_IEconItemAttributeIterator = off_40DB570;  // vptr: IEconItemAttributeIterator
   operator delete(this);
 }
 
@@ -110,7 +110,7 @@ bool __fastcall CEconItemSpecificAttributeIterator::OnIterateAttributeValue(
 void __fastcall IEconItemUntypedAttributeIterator::~IEconItemUntypedAttributeIterator(
         IEconItemUntypedAttributeIterator *const this)
 {
-  this->_vptr_IEconItemAttributeIterator = off_40DB570;
+  this->_vptr_IEconItemAttributeIterator = off_40DB570;  // vptr: IEconItemAttributeIterator
 }
 
 
@@ -119,7 +119,7 @@ void __fastcall IEconItemUntypedAttributeIterator::~IEconItemUntypedAttributeIte
 void __fastcall IEconItemUntypedAttributeIterator::~IEconItemUntypedAttributeIterator(
         IEconItemUntypedAttributeIterator *const this)
 {
-  this->_vptr_IEconItemAttributeIterator = off_40DB570;
+  this->_vptr_IEconItemAttributeIterator = off_40DB570;  // vptr: IEconItemAttributeIterator
   operator delete(this);
 }
 
@@ -199,7 +199,7 @@ bool __fastcall IEconItemUntypedAttributeIterator::OnIterateAttributeValue(
 void __fastcall CAttributeIterator_HasAttribute::~CAttributeIterator_HasAttribute(
         CAttributeIterator_HasAttribute *const this)
 {
-  this->_vptr_IEconItemAttributeIterator = off_40DB570;
+  this->_vptr_IEconItemAttributeIterator = off_40DB570;  // vptr: IEconItemAttributeIterator
 }
 
 
@@ -208,7 +208,7 @@ void __fastcall CAttributeIterator_HasAttribute::~CAttributeIterator_HasAttribut
 void __fastcall CAttributeIterator_HasAttribute::~CAttributeIterator_HasAttribute(
         CAttributeIterator_HasAttribute *const this)
 {
-  this->_vptr_IEconItemAttributeIterator = off_40DB570;
+  this->_vptr_IEconItemAttributeIterator = off_40DB570;  // vptr: IEconItemAttributeIterator
   operator delete(this);
 }
 
@@ -229,7 +229,7 @@ bool __fastcall CAttributeIterator_HasAttribute::OnIterateAttributeValueUntyped(
 void __fastcall CAttributeIterator_GetTypedAttributeValue<unsigned int,unsigned int>::~CAttributeIterator_GetTypedAttributeValue(
         CAttributeIterator_GetTypedAttributeValue<unsigned int,unsigned int> *const this)
 {
-  this->_vptr_IEconItemAttributeIterator = off_40DB570;
+  this->_vptr_IEconItemAttributeIterator = off_40DB570;  // vptr: IEconItemAttributeIterator
 }
 
 
@@ -238,7 +238,7 @@ void __fastcall CAttributeIterator_GetTypedAttributeValue<unsigned int,unsigned 
 void __fastcall CAttributeIterator_GetTypedAttributeValue<unsigned int,unsigned int>::~CAttributeIterator_GetTypedAttributeValue(
         CAttributeIterator_GetTypedAttributeValue<unsigned int,unsigned int> *const this)
 {
-  this->_vptr_IEconItemAttributeIterator = off_40DB570;
+  this->_vptr_IEconItemAttributeIterator = off_40DB570;  // vptr: IEconItemAttributeIterator
   operator delete(this);
 }
 
@@ -247,7 +247,7 @@ void __fastcall CAttributeIterator_GetTypedAttributeValue<unsigned int,unsigned 
 void __fastcall CAttributeIterator_GetTypedAttributeValue<unsigned int,float>::~CAttributeIterator_GetTypedAttributeValue(
         CAttributeIterator_GetTypedAttributeValue<unsigned int,float> *const this)
 {
-  this->_vptr_IEconItemAttributeIterator = off_40DB570;
+  this->_vptr_IEconItemAttributeIterator = off_40DB570;  // vptr: IEconItemAttributeIterator
 }
 
 
@@ -255,7 +255,7 @@ void __fastcall CAttributeIterator_GetTypedAttributeValue<unsigned int,float>::~
 void __fastcall CAttributeIterator_GetTypedAttributeValue<CAttribute_HeroStatue,CAttribute_HeroStatue>::~CAttributeIterator_GetTypedAttributeValue(
         CAttributeIterator_GetTypedAttributeValue<CAttribute_HeroStatue,CAttribute_HeroStatue> *const this)
 {
-  this->_vptr_IEconItemAttributeIterator = off_40DB570;
+  this->_vptr_IEconItemAttributeIterator = off_40DB570;  // vptr: IEconItemAttributeIterator
 }
 
 
@@ -264,7 +264,7 @@ void __fastcall CAttributeIterator_GetTypedAttributeValue<CAttribute_HeroStatue,
 void __fastcall CAttributeIterator_GetTypedAttributeValue<unsigned int,float>::~CAttributeIterator_GetTypedAttributeValue(
         CAttributeIterator_GetTypedAttributeValue<unsigned int,float> *const this)
 {
-  this->_vptr_IEconItemAttributeIterator = off_40DB570;
+  this->_vptr_IEconItemAttributeIterator = off_40DB570;  // vptr: IEconItemAttributeIterator
   operator delete(this);
 }
 
@@ -274,7 +274,7 @@ void __fastcall CAttributeIterator_GetTypedAttributeValue<unsigned int,float>::~
 void __fastcall CAttributeIterator_GetTypedAttributeValue<CAttribute_HeroStatue,CAttribute_HeroStatue>::~CAttributeIterator_GetTypedAttributeValue(
         CAttributeIterator_GetTypedAttributeValue<CAttribute_HeroStatue,CAttribute_HeroStatue> *const this)
 {
-  this->_vptr_IEconItemAttributeIterator = off_40DB570;
+  this->_vptr_IEconItemAttributeIterator = off_40DB570;  // vptr: IEconItemAttributeIterator
   operator delete(this);
 }
 
@@ -283,7 +283,7 @@ void __fastcall CAttributeIterator_GetTypedAttributeValue<CAttribute_HeroStatue,
 void __fastcall CAttributeIterator_GetTypedAttributeValue<CAttribute_String,char const*>::~CAttributeIterator_GetTypedAttributeValue(
         CAttributeIterator_GetTypedAttributeValue<CAttribute_String,char const*> *const this)
 {
-  this->_vptr_IEconItemAttributeIterator = off_40DB570;
+  this->_vptr_IEconItemAttributeIterator = off_40DB570;  // vptr: IEconItemAttributeIterator
 }
 
 
@@ -291,7 +291,7 @@ void __fastcall CAttributeIterator_GetTypedAttributeValue<CAttribute_String,char
 void __fastcall CAttributeIterator_GetTypedAttributeValue<CAttribute_Socket,CAttribute_Socket>::~CAttributeIterator_GetTypedAttributeValue(
         CAttributeIterator_GetTypedAttributeValue<CAttribute_Socket,CAttribute_Socket> *const this)
 {
-  this->_vptr_IEconItemAttributeIterator = off_40DB570;
+  this->_vptr_IEconItemAttributeIterator = off_40DB570;  // vptr: IEconItemAttributeIterator
 }
 
 
@@ -299,7 +299,7 @@ void __fastcall CAttributeIterator_GetTypedAttributeValue<CAttribute_Socket,CAtt
 void __fastcall CAttributeIterator_GetTypedAttributeValue<CAttribute_String,CAttribute_String>::~CAttributeIterator_GetTypedAttributeValue(
         CAttributeIterator_GetTypedAttributeValue<CAttribute_String,CAttribute_String> *const this)
 {
-  this->_vptr_IEconItemAttributeIterator = off_40DB570;
+  this->_vptr_IEconItemAttributeIterator = off_40DB570;  // vptr: IEconItemAttributeIterator
 }
 
 
@@ -308,7 +308,7 @@ void __fastcall CAttributeIterator_GetTypedAttributeValue<CAttribute_String,CAtt
 void __fastcall CAttributeIterator_GetTypedAttributeValue<CAttribute_String,char const*>::~CAttributeIterator_GetTypedAttributeValue(
         CAttributeIterator_GetTypedAttributeValue<CAttribute_String,char const*> *const this)
 {
-  this->_vptr_IEconItemAttributeIterator = off_40DB570;
+  this->_vptr_IEconItemAttributeIterator = off_40DB570;  // vptr: IEconItemAttributeIterator
   operator delete(this);
 }
 
@@ -318,7 +318,7 @@ void __fastcall CAttributeIterator_GetTypedAttributeValue<CAttribute_String,char
 void __fastcall CAttributeIterator_GetTypedAttributeValue<CAttribute_Socket,CAttribute_Socket>::~CAttributeIterator_GetTypedAttributeValue(
         CAttributeIterator_GetTypedAttributeValue<CAttribute_Socket,CAttribute_Socket> *const this)
 {
-  this->_vptr_IEconItemAttributeIterator = off_40DB570;
+  this->_vptr_IEconItemAttributeIterator = off_40DB570;  // vptr: IEconItemAttributeIterator
   operator delete(this);
 }
 
@@ -328,7 +328,7 @@ void __fastcall CAttributeIterator_GetTypedAttributeValue<CAttribute_Socket,CAtt
 void __fastcall CAttributeIterator_GetTypedAttributeValue<CAttribute_String,CAttribute_String>::~CAttributeIterator_GetTypedAttributeValue(
         CAttributeIterator_GetTypedAttributeValue<CAttribute_String,CAttribute_String> *const this)
 {
-  this->_vptr_IEconItemAttributeIterator = off_40DB570;
+  this->_vptr_IEconItemAttributeIterator = off_40DB570;  // vptr: IEconItemAttributeIterator
   operator delete(this);
 }
 
@@ -337,7 +337,7 @@ void __fastcall CAttributeIterator_GetTypedAttributeValue<CAttribute_String,CAtt
 void __fastcall CAttributeIterator_GetTypedAttributeValue<unsigned long long,unsigned long long>::~CAttributeIterator_GetTypedAttributeValue(
         CAttributeIterator_GetTypedAttributeValue<long long unsigned int,long long unsigned int> *const this)
 {
-  this->_vptr_IEconItemAttributeIterator = off_40DB570;
+  this->_vptr_IEconItemAttributeIterator = off_40DB570;  // vptr: IEconItemAttributeIterator
 }
 
 
@@ -345,7 +345,7 @@ void __fastcall CAttributeIterator_GetTypedAttributeValue<unsigned long long,uns
 void __fastcall CAttributeIterator_GetTypedAttributeValue<float,float>::~CAttributeIterator_GetTypedAttributeValue(
         CAttributeIterator_GetTypedAttributeValue<float,float> *const this)
 {
-  this->_vptr_IEconItemAttributeIterator = off_40DB570;
+  this->_vptr_IEconItemAttributeIterator = off_40DB570;  // vptr: IEconItemAttributeIterator
 }
 
 
@@ -353,7 +353,7 @@ void __fastcall CAttributeIterator_GetTypedAttributeValue<float,float>::~CAttrib
 void __fastcall CAttributeIterator_GetTypedAttributeValue<CAttribute_ItemDynamicRecipeComponent,CAttribute_ItemDynamicRecipeComponent>::~CAttributeIterator_GetTypedAttributeValue(
         CAttributeIterator_GetTypedAttributeValue<CAttribute_ItemDynamicRecipeComponent,CAttribute_ItemDynamicRecipeComponent> *const this)
 {
-  this->_vptr_IEconItemAttributeIterator = off_40DB570;
+  this->_vptr_IEconItemAttributeIterator = off_40DB570;  // vptr: IEconItemAttributeIterator
 }
 
 
@@ -362,7 +362,7 @@ void __fastcall CAttributeIterator_GetTypedAttributeValue<CAttribute_ItemDynamic
 void __fastcall CAttributeIterator_GetTypedAttributeValue<unsigned long long,unsigned long long>::~CAttributeIterator_GetTypedAttributeValue(
         CAttributeIterator_GetTypedAttributeValue<long long unsigned int,long long unsigned int> *const this)
 {
-  this->_vptr_IEconItemAttributeIterator = off_40DB570;
+  this->_vptr_IEconItemAttributeIterator = off_40DB570;  // vptr: IEconItemAttributeIterator
   operator delete(this);
 }
 
@@ -372,7 +372,7 @@ void __fastcall CAttributeIterator_GetTypedAttributeValue<unsigned long long,uns
 void __fastcall CAttributeIterator_GetTypedAttributeValue<float,float>::~CAttributeIterator_GetTypedAttributeValue(
         CAttributeIterator_GetTypedAttributeValue<float,float> *const this)
 {
-  this->_vptr_IEconItemAttributeIterator = off_40DB570;
+  this->_vptr_IEconItemAttributeIterator = off_40DB570;  // vptr: IEconItemAttributeIterator
   operator delete(this);
 }
 
@@ -382,7 +382,7 @@ void __fastcall CAttributeIterator_GetTypedAttributeValue<float,float>::~CAttrib
 void __fastcall CAttributeIterator_GetTypedAttributeValue<CAttribute_ItemDynamicRecipeComponent,CAttribute_ItemDynamicRecipeComponent>::~CAttributeIterator_GetTypedAttributeValue(
         CAttributeIterator_GetTypedAttributeValue<CAttribute_ItemDynamicRecipeComponent,CAttribute_ItemDynamicRecipeComponent> *const this)
 {
-  this->_vptr_IEconItemAttributeIterator = off_40DB570;
+  this->_vptr_IEconItemAttributeIterator = off_40DB570;  // vptr: IEconItemAttributeIterator
   operator delete(this);
 }
 
@@ -1175,7 +1175,7 @@ bool __fastcall FindAttribute_UnsafeBitwiseCast<unsigned int,unsigned int,CEconI
 // IItemSocket::~IItemSocket  (line 451, @0x0000000002ea1a70, libserver.so)
 void __fastcall IItemSocket::~IItemSocket(IItemSocket *const this)
 {
-  this->_vptr_IItemSocket = off_47A5E50;
+  this->_vptr_IItemSocket = off_47A5E50;  // vptr: IItemSocket
 }
 
 
@@ -1183,7 +1183,7 @@ void __fastcall IItemSocket::~IItemSocket(IItemSocket *const this)
 // calls: operator delete
 void __fastcall IItemSocket::~IItemSocket(IItemSocket *const this)
 {
-  this->_vptr_IItemSocket = off_47A5E50;
+  this->_vptr_IItemSocket = off_47A5E50;  // vptr: IItemSocket
   operator delete(this);
 }
 

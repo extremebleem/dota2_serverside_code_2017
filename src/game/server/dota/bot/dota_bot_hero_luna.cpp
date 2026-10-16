@@ -91,7 +91,7 @@ void __fastcall CDOTA_Bot_AbilityUsage_Luna_LucentBeam::CDOTA_Bot_AbilityUsage_L
   this->m_pAbility = pAbility;
   this->m_bUseOnCreeps = 0;
   this->m_pBot = pBot;
-  this->_vptr_CDOTA_Bot_AbilityUsage = off_42CDC70;
+  this->_vptr_CDOTA_Bot_AbilityUsage = off_42CDC70;  // vptr: CDOTA_Bot_AbilityUsage_Luna_LucentBeam
   this->m_hDesiredTarget.m_Index = -1;
 }
 
@@ -343,7 +343,7 @@ void __fastcall CDOTA_Bot_AbilityUsage_Luna_Eclipse::CDOTA_Bot_AbilityUsage_Luna
   vec_t z; // eax
 
   this->m_pAbility = pAbility;
-  this->_vptr_CDOTA_Bot_AbilityUsage = off_42CDCD0;
+  this->_vptr_CDOTA_Bot_AbilityUsage = off_42CDCD0;  // vptr: CDOTA_Bot_AbilityUsage_Luna_Eclipse
   this->m_pBot = pBot;
   this->m_hTargetUnit.m_Index = -1;
   v3 = *&vec3_invalid.x;

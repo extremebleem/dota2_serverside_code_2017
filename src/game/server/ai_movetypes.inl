@@ -10,7 +10,7 @@ float __fastcall CAI_ProxyMovementSink::CalcYawSpeed(CAI_ProxyMovementSink *cons
   m_pProxied = this->m_pProxied;
   if ( m_pProxied == 0 )
     return -1.0;
-  result = (*m_pProxied->_vptr_IAI_MovementSink)(m_pProxied);
+  result = m_pProxied->CalcYawSpeed();
   if ( result == -1.0 )
     return -1.0;
   return result;

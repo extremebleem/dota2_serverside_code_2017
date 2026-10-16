@@ -445,15 +445,15 @@ void __fastcall CDOTASpectatorGraphManager::~CDOTASpectatorGraphManager(CDOTASpe
   while ( m_vecPlayerSnapshots != p_m_event_dota_player_killed );
 LABEL_6:
   v4 = !this->m_bRegisteredForEvents;
-  this->_vptr_IGameEventListener2 = off_3FB3190;
+  this->_vptr_IGameEventListener2 = off_3FB3190;  // vptr: CGameEventListener
   if ( !v4 )
   {
     if ( gameeventmanager != 0 )
       (*(gameeventmanager->_vptr_IBaseInterface + 6))(gameeventmanager, &this->CGameEventListener);
     this->m_bRegisteredForEvents = 0;
   }
-  this->_vptr_IGameEventListener2 = off_3FB3150;
-  this->_vptr_IGameSystem = off_3F7C1B0;
+  this->_vptr_IGameEventListener2 = off_3FB3150;  // vptr: IGameEventListener2
+  this->_vptr_IGameSystem = off_3F7C1B0;  // vptr: CAutoGameSystem
   IGameSystem::~IGameSystem(this);
 }
 

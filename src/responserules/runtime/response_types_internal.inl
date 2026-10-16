@@ -27,54 +27,52 @@ void __fastcall ResponseGroup::ResponseGroup(ResponseGroup *const this, const Re
   __int64 v21; // rcx
   __int64 v22; // rdi
   __int64 v23; // rsi
-  __int64 v24; // r8
-  __int64 v25; // r9
-  __int64 v26; // [rsp+8h] [rbp-88h]
-  ParserResponse *v28; // [rsp+18h] [rbp-78h]
-  unsigned __int64 v29; // [rsp+20h] [rbp-70h]
-  CUtlLeanVectorBase<ParserResponse,short int>::IndexType_t v30; // [rsp+2Eh] [rbp-62h]
+  __int64 v24; // [rsp+8h] [rbp-88h]
+  ParserResponse *v26; // [rsp+18h] [rbp-78h]
+  unsigned __int64 v27; // [rsp+20h] [rbp-70h]
+  CUtlLeanVectorBase<ParserResponse,short int>::IndexType_t v28; // [rsp+2Eh] [rbp-62h]
   CUtlLeanVectorBase<ParserResponse,short int>::ElemType_t *m_pElements; // [rsp+30h] [rbp-60h]
-  CUtlLeanVectorBase<ParserResponse,short int>::ElemType_t *v32; // [rsp+38h] [rbp-58h]
-  LeafCodeInfo_t v33; // [rsp+40h] [rbp-50h] BYREF
+  CUtlLeanVectorBase<ParserResponse,short int>::ElemType_t *v30; // [rsp+38h] [rbp-58h]
+  LeafCodeInfo_t v31; // [rsp+40h] [rbp-50h] BYREF
 
   this->group.m_nCount = 0;
   this->group.m_nAllocated = 0;
   this->group.m_pElements = 0;
   if ( src->group.m_nCount > 0 )
   {
-    v29 = 0;
-    v30 = 0;
-    v26 = 90 * ((src->group.m_nCount - 1) + 1LL);
+    v27 = 0;
+    v28 = 0;
+    v24 = 90 * ((src->group.m_nCount - 1) + 1LL);
     v3 = src;
     if ( src->group.m_nAllocated == 0 )
       goto LABEL_27;
 LABEL_3:
     for ( i = v3->group.m_pElements; ; i = 0 )
     {
-      v28 = &i[v29 / 0x5A];
-      if ( v30 == 0x7FFF )
+      v26 = &i[v27 / 0x5A];
+      if ( v28 == 0x7FFF )
       {
         if ( LoggingSystem_IsChannelEnabled(LOG_GENERAL, 4) != 0 )
           goto LABEL_38;
         while ( 1 )
         {
-          if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v22, v23, v20, v21, v24, v25) != 0 )
+          if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v22, v23, v20, v21) != 0 )
             loc_0 = -559038737;
           Plat_ExitProcess(1);
 LABEL_38:
-          v33.m_szFile = "../../public/tier1/utlleanvector.h";
-          v33.m_szFunction = "AddToTailGetPtr";
-          v33.m_nLine = 557;
+          v31.m_szFile = "../../public/tier1/utlleanvector.h";
+          v31.m_szFunction = "AddToTailGetPtr";
+          v31.m_nLine = 557;
           LoggingSystem_Log(
             LOG_GENERAL,
             LoggingSeverity_t::LS_ERROR,
-            &v33,
+            &v31,
             "%s allocation count overflow",
             "AddToTailGetPtr");
         }
       }
       m_nAllocated = this->group.m_nAllocated;
-      v6 = v30 + 1;
+      v6 = v28 + 1;
       v7 = m_nAllocated;
       if ( v6 > m_nAllocated )
       {
@@ -99,7 +97,7 @@ LABEL_38:
             v7 = 0x7FFF;
           }
         }
-        v32 = (**g_pMemAlloc)(g_pMemAlloc, 90LL * m_nAllocated);
+        v30 = (**g_pMemAlloc)(g_pMemAlloc, 90LL * m_nAllocated);
         if ( this->group.m_nAllocated != 0 )
           m_pElements = this->group.m_pElements;
         else
@@ -113,9 +111,9 @@ LABEL_38:
           do
           {
             v10 = v9;
-            v11 = &v32[v10];
-            if ( &v32[v10] != 0 )
-              ParserResponse::ParserResponse(&v32[v10]);
+            v11 = &v30[v10];
+            if ( &v30[v10] != 0 )
+              ParserResponse::ParserResponse(&v30[v10]);
             v12 = &m_pElements[v10];
             ParserResponse::operator=(v11, v12);
             ++v9;
@@ -128,18 +126,18 @@ LABEL_38:
         }
         (*(*g_pMemAlloc + 16LL))(g_pMemAlloc, this->group.m_pElements);
         this->group.m_nAllocated = m_nAllocated;
-        this->group.m_pElements = v32;
+        this->group.m_pElements = v30;
       }
       v14 = m_nAllocated != 0 ? this->group.m_pElements : 0LL;
-      v15 = &v14[v30];
+      v15 = &v14[v28];
       if ( v15 != 0 )
         ParserResponse::ParserResponse(v15);
       ++this->group.m_nCount;
-      ParserResponse::operator=(v15, v28);
-      v29 += 90LL;
-      if ( v29 == v26 )
+      ParserResponse::operator=(v15, v26);
+      v27 += 90LL;
+      if ( v27 == v24 )
         break;
-      v30 = this->group.m_nCount;
+      v28 = this->group.m_nCount;
       v3 = src;
       if ( src->group.m_nAllocated != 0 )
         goto LABEL_3;

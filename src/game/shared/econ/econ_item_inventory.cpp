@@ -19,7 +19,7 @@ bool __fastcall CInventoryListLess::Less(
 // callers: CDOTAInventoryManager::CDOTAInventoryManager
 void __fastcall CInventoryManager::CInventoryManager(CInventoryManager *const this)
 {
-  this->_vptr_IGameSystem = off_47A6E10;
+  this->_vptr_IGameSystem = off_47A6E10;  // vptr: CInventoryManager
   this->m_inventories.m_Size = 0;
   this->m_inventories.m_Memory.m_pMemory = 0;
   this->m_inventories.m_Memory.m_nAllocationCount = 0;
@@ -373,7 +373,7 @@ void __fastcall CPlayerInventory::CPlayerInventory(CPlayerInventory *const this)
 {
   CUtlVectorBase<CEconItemView*,CUtlMemory<CEconItemView*,int> >::CAllocator *p_m_Memory; // rdi
 
-  this->_vptr_ISharedObjectListener = off_47A6F90;
+  this->_vptr_ISharedObjectListener = off_47A6F90;  // vptr: CPlayerInventory
   p_m_Memory = &this->m_aInventoryItems.m_Memory;
   *&p_m_Memory[-2].m_nAllocationCount = 0;
   LODWORD(p_m_Memory[-1].m_pMemory) = 0;
@@ -399,7 +399,7 @@ void __fastcall CPlayerInventory::~CPlayerInventory(CPlayerInventory *const this
 {
   bool v2; // zf
 
-  this->_vptr_ISharedObjectListener = off_47A6F90;
+  this->_vptr_ISharedObjectListener = off_47A6F90;  // vptr: CPlayerInventory
   CPlayerInventory::SOClear(this);
   v2 = (this->m_aInventoryItems.m_Memory.m_nGrowSize & 0xC0000000) == 0;
   this->m_aInventoryItems.m_Size = 0;
@@ -418,7 +418,7 @@ void __fastcall CPlayerInventory::~CPlayerInventory(CPlayerInventory *const this
 {
   bool v2; // zf
 
-  this->_vptr_ISharedObjectListener = off_47A6F90;
+  this->_vptr_ISharedObjectListener = off_47A6F90;  // vptr: CPlayerInventory
   CPlayerInventory::SOClear(this);
   v2 = (this->m_aInventoryItems.m_Memory.m_nGrowSize & 0xC0000000) == 0;
   this->m_aInventoryItems.m_Size = 0;
@@ -601,7 +601,7 @@ void __fastcall CPlayerInventory::AddTestItem(CPlayerInventory *const this, CEco
   CEconItemView *pView; // [rsp+18h] [rbp-28h] BYREF
 
   this->m_bHasTestItems = 1;
-  v4.m_Data = (*pTestItem->_vptr_IEconItemDefinition)(pTestItem);
+  v4.m_Data = pTestItem->GetDefinitionIndex();
   FirstItemByDefIndex = CPlayerInventory::FindFirstItemByDefIndex(this, v4);
   if ( FirstItemByDefIndex != -1 )
   {
@@ -834,7 +834,7 @@ LABEL_13:
         gemInfo.m_bIsUntradable = 0;
         if ( (*(v17->_vptr_IEconItemInterface + 27))(v17, &gemInfo) != 0
           && (queryType == GemUsabilityQuery_t::ALL_GEM_TYPES
-           || ((*s_pEconItemUtils->_vptr_CEconItemUtils)(s_pEconItemUtils, gemInfo.m_nGemType, 0) ^ 1) == (queryType == GemUsabilityQuery_t::RARE_GEM_TYPES)) )
+           || (s_pEconItemUtils->IsGemTypeValidForSocketType(gemInfo.m_nGemType, 0) ^ 1) == (queryType == GemUsabilityQuery_t::RARE_GEM_TYPES)) )
         {
           v18 = 0;
           if ( v15 == 0 )
@@ -1326,10 +1326,11 @@ void __fastcall CPlayerInventory::DumpInventoryToConsole(CPlayerInventory *const
   GCSDK::CGCClientSharedObjectCache *m_pSOCache; // rax
   __int64 m_ulVersion; // rsi
   int m_Size; // ebx
-  __int64 v7; // r14
-  unsigned __int64 v8; // rbx
-  __int64 v9; // r13
-  const CEconItemView *v10; // rdi
+  unsigned __int64 v7; // xmm0_8
+  __int64 v8; // r14
+  unsigned __int64 v9; // rbx
+  __int64 v10; // r13
+  const CEconItemView *v11; // rdi
   const GameItemDefinition_t *StaticData; // rax
 
   if ( bRoot )
@@ -1345,20 +1346,22 @@ void __fastcall CPlayerInventory::DumpInventoryToConsole(CPlayerInventory *const
     Msg("  Version: %llu:\n", m_ulVersion);
   }
   m_Size = this->m_aInventoryItems.m_Size;
-  Msg("   Num items: %d\n", m_Size);
+  v7 = Msg("   Num items: %d\n", m_Size).m128_u64[0];
   if ( m_Size > 0 )
   {
-    v7 = 8LL * (m_Size - 1) + 8;
-    v8 = 0;
+    v8 = 8LL * (m_Size - 1) + 8;
+    v9 = 0;
     do
     {
-      v9 = (*(this->m_aInventoryItems.m_Memory.m_pMemory[v8 / 8]->_vptr_IEconItemInterface + 14))(this->m_aInventoryItems.m_Memory.m_pMemory[v8 / 8]);
-      v10 = this->m_aInventoryItems.m_Memory.m_pMemory[v8 / 8];
-      v8 += 8LL;
-      StaticData = CEconItemView::GetStaticData(v10);
-      Msg("      %s (ID %llu)\n", StaticData->m_symDefinitionName.u.m_pAsString, v9);
+      v10 = (*(this->m_aInventoryItems.m_Memory.m_pMemory[v9 / 8]->_vptr_IEconItemInterface + 14))(
+              this->m_aInventoryItems.m_Memory.m_pMemory[v9 / 8],
+              *&v7);
+      v11 = this->m_aInventoryItems.m_Memory.m_pMemory[v9 / 8];
+      v9 += 8LL;
+      StaticData = CEconItemView::GetStaticData(v11);
+      v7 = Msg("      %s (ID %llu)\n", StaticData->m_symDefinitionName.u.m_pAsString, v10).m128_u64[0];
     }
-    while ( v8 != v7 );
+    while ( v9 != v8 );
   }
 }
 

@@ -380,6 +380,7 @@ CSchemaType *__cdecl SchemaTypeOf<CHandle<CBaseEntity>>()
 
 
 // SchemaTypeOf<signed char>  (line 18, @0x0000000003097af0, libserver.so)  // inlines: Get, SchemaTypeScope
+// also named: char> (identical code folded)
 // calls: GetNameOfModule
 // callers: CEntityClass::UnserializeKey
 // globals: SchemaTypeOf<signed char>(void)::s_pTypeOf
@@ -404,6 +405,7 @@ CSchemaType *__cdecl SchemaTypeOf<signed char>()
 
 
 // SchemaTypeOf<unsigned char>  (line 18, @0x0000000003097b40, libserver.so)  // inlines: Get, SchemaTypeScope
+// also named: char> (identical code folded)
 // calls: GetNameOfModule
 // callers: CEntityClass::UnserializeKey
 // globals: SchemaTypeOf<uchar>(void)::s_pTypeOf
@@ -452,6 +454,7 @@ CSchemaType *__cdecl SchemaTypeOf<short>()
 
 
 // SchemaTypeOf<short unsigned int>  (line 18, @0x0000000003097be0, libserver.so)  // inlines: Get, SchemaTypeScope
+// also named: short> (identical code folded)
 // calls: GetNameOfModule
 // callers: CEntityClass::UnserializeKey
 // globals: SchemaTypeOf<ushort>(void)::s_pTypeOf
@@ -476,6 +479,7 @@ CSchemaType *__cdecl SchemaTypeOf<unsigned short>()
 
 
 // SchemaTypeOf<unsigned int>  (line 18, @0x0000000003097c30, libserver.so)  // inlines: Get, SchemaTypeScope
+// also named: int> (identical code folded)
 // calls: GetNameOfModule
 // callers: CEntityClass::UnserializeKey
 // globals: SchemaTypeOf<uint>(void)::s_pTypeOf
@@ -500,6 +504,7 @@ CSchemaType *__cdecl SchemaTypeOf<unsigned int>()
 
 
 // SchemaTypeOf<long long int>  (line 18, @0x0000000003097c80, libserver.so)  // inlines: Get, SchemaTypeScope
+// also named: long> (identical code folded)
 // calls: GetNameOfModule
 // callers: CEntityClass::UnserializeKey
 // globals: SchemaTypeOf<long long>(void)::s_pTypeOf
@@ -524,6 +529,7 @@ CSchemaType *__cdecl SchemaTypeOf<long long>()
 
 
 // SchemaTypeOf<long long unsigned int>  (line 18, @0x0000000003097cd0, libserver.so)  // inlines: Get, SchemaTypeScope
+// also named: long> (identical code folded)
 // calls: GetNameOfModule
 // callers: CEntityClass::UnserializeKey
 // globals: SchemaTypeOf<ulong long>(void)::s_pTypeOf

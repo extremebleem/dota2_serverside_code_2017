@@ -419,7 +419,7 @@ void __fastcall CSoundscapeSystem::InitForSpawnGroup(CSoundscapeSystem *const th
 // globals: CDefOps<uint>::LessFunc(uint const&,uint const&)
 void __fastcall CSoundscapeSystem::CSoundscapeSystem(CSoundscapeSystem *const this)
 {
-  this->_vptr_IGameSystem = off_40AE570;
+  this->_vptr_IGameSystem = off_40AE570;  // vptr: CSoundscapeSystem
   CStringRegistry::CStringRegistry(&this->m_globalSoundscapes.m_soundscapes);
   this->m_globalSoundscapes.m_sounds.m_Size = 0;
   this->m_globalSoundscapes.m_sounds.m_Memory.m_pMemory = 0;
@@ -766,7 +766,7 @@ void __fastcall CSoundscapeSystem::CacheClusterInfoForSpawnGroup(
   clusterbounds.m_Memory.m_pMemory = 0;
   clusterbounds.m_Memory.m_nAllocationCount = 0;
   clusterbounds.m_Memory.m_nGrowSize = 0;
-  v4 = (*g_pPVSManager->_vptr_IPVSManager)(g_pPVSManager, handle);
+  v4 = g_pPVSManager->GetPVS(handle);
   pPVS = v4;
   if ( v4 == 0 )
   {

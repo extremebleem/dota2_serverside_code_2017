@@ -1108,7 +1108,7 @@ void __fastcall CEntitySpawnerBase<CDevtestHierarchyChild>::~CEntitySpawnerBase(
   CEntityKeyValues *m_pEntityKeyValues; // r13
   int m_nEntitySpawnerDataUseCount; // ecx
 
-  this->_vptr_CEntitySpawnerBase = off_3FB0DF0;
+  this->_vptr_CEntitySpawnerBase = off_3FB0DF0;  // vptr: CEntitySpawnerBase<CDevtestHierarchyChild>
   m_pPrevAllocator = this->m_pPrevAllocator;
   v3 = CEntityKeyValuesModifyScope::sm_pAllocatorOverride;
   CEntityKeyValuesModifyScope::sm_pAllocatorOverride = m_pPrevAllocator;
@@ -1146,7 +1146,7 @@ void __fastcall CEntitySpawnerBase<CBaseEntity>::~CEntitySpawnerBase(CEntitySpaw
   CEntityKeyValues *m_pEntityKeyValues; // r13
   int m_nEntitySpawnerDataUseCount; // ecx
 
-  this->_vptr_CEntitySpawnerBase = off_3FCEBB0;
+  this->_vptr_CEntitySpawnerBase = off_3FCEBB0;  // vptr: CEntitySpawnerBase<CBaseEntity>
   m_pPrevAllocator = this->m_pPrevAllocator;
   v3 = CEntityKeyValuesModifyScope::sm_pAllocatorOverride;
   CEntityKeyValuesModifyScope::sm_pAllocatorOverride = m_pPrevAllocator;
@@ -1185,7 +1185,7 @@ void __fastcall CEntitySpawnerBase<CTriggerMultiple>::~CEntitySpawnerBase(
   CEntityKeyValues *m_pEntityKeyValues; // r13
   int m_nEntitySpawnerDataUseCount; // ecx
 
-  this->_vptr_CEntitySpawnerBase = off_3FCECB0;
+  this->_vptr_CEntitySpawnerBase = off_3FCECB0;  // vptr: CEntitySpawnerBase<CTriggerMultiple>
   m_pPrevAllocator = this->m_pPrevAllocator;
   v3 = CEntityKeyValuesModifyScope::sm_pAllocatorOverride;
   CEntityKeyValuesModifyScope::sm_pAllocatorOverride = m_pPrevAllocator;
@@ -1223,7 +1223,7 @@ void __fastcall CEntitySpawnerBase<CWorld>::~CEntitySpawnerBase(CEntitySpawnerBa
   CEntityKeyValues *m_pEntityKeyValues; // r13
   int m_nEntitySpawnerDataUseCount; // ecx
 
-  this->_vptr_CEntitySpawnerBase = off_3FFEEF0;
+  this->_vptr_CEntitySpawnerBase = off_3FFEEF0;  // vptr: CEntitySpawnerBase<CWorld>
   m_pPrevAllocator = this->m_pPrevAllocator;
   v3 = CEntityKeyValuesModifyScope::sm_pAllocatorOverride;
   CEntityKeyValuesModifyScope::sm_pAllocatorOverride = m_pPrevAllocator;
@@ -1261,7 +1261,7 @@ void __fastcall CEntitySpawnerBase<CBeam>::~CEntitySpawnerBase(CEntitySpawnerBas
   CEntityKeyValues *m_pEntityKeyValues; // r13
   int m_nEntitySpawnerDataUseCount; // ecx
 
-  this->_vptr_CEntitySpawnerBase = off_400A3F0;
+  this->_vptr_CEntitySpawnerBase = off_400A3F0;  // vptr: CEntitySpawnerBase<CBeam>
   m_pPrevAllocator = this->m_pPrevAllocator;
   v3 = CEntityKeyValuesModifyScope::sm_pAllocatorOverride;
   CEntityKeyValuesModifyScope::sm_pAllocatorOverride = m_pPrevAllocator;
@@ -1300,7 +1300,7 @@ void __fastcall CEntitySpawnerBase<CEntityDissolve>::~CEntitySpawnerBase(
   CEntityKeyValues *m_pEntityKeyValues; // r13
   int m_nEntitySpawnerDataUseCount; // ecx
 
-  this->_vptr_CEntitySpawnerBase = off_4023A10;
+  this->_vptr_CEntitySpawnerBase = off_4023A10;  // vptr: CEntitySpawnerBase<CEntityDissolve>
   m_pPrevAllocator = this->m_pPrevAllocator;
   v3 = CEntityKeyValuesModifyScope::sm_pAllocatorOverride;
   CEntityKeyValuesModifyScope::sm_pAllocatorOverride = m_pPrevAllocator;
@@ -1338,7 +1338,7 @@ void __fastcall CEntitySpawnerBase<CEntityFlame>::~CEntitySpawnerBase(CEntitySpa
   CEntityKeyValues *m_pEntityKeyValues; // r13
   int m_nEntitySpawnerDataUseCount; // ecx
 
-  this->_vptr_CEntitySpawnerBase = off_40240F0;
+  this->_vptr_CEntitySpawnerBase = off_40240F0;  // vptr: CEntitySpawnerBase<CEntityFlame>
   m_pPrevAllocator = this->m_pPrevAllocator;
   v3 = CEntityKeyValuesModifyScope::sm_pAllocatorOverride;
   CEntityKeyValuesModifyScope::sm_pAllocatorOverride = m_pPrevAllocator;
@@ -1376,7 +1376,7 @@ void __fastcall CEntitySpawnerBase<CDebugHistory>::~CEntitySpawnerBase(CEntitySp
   CEntityKeyValues *m_pEntityKeyValues; // r13
   int m_nEntitySpawnerDataUseCount; // ecx
 
-  this->_vptr_CEntitySpawnerBase = off_4029050;
+  this->_vptr_CEntitySpawnerBase = off_4029050;  // vptr: CEntitySpawnerBase<CDebugHistory>
   m_pPrevAllocator = this->m_pPrevAllocator;
   v3 = CEntityKeyValuesModifyScope::sm_pAllocatorOverride;
   CEntityKeyValuesModifyScope::sm_pAllocatorOverride = m_pPrevAllocator;
@@ -1414,7 +1414,7 @@ void __fastcall CEntitySpawnerBase<CEnvExplosion>::~CEntitySpawnerBase(CEntitySp
   CEntityKeyValues *m_pEntityKeyValues; // r13
   int m_nEntitySpawnerDataUseCount; // ecx
 
-  this->_vptr_CEntitySpawnerBase = off_4032B50;
+  this->_vptr_CEntitySpawnerBase = off_4032B50;  // vptr: CEntitySpawnerBase<CEnvExplosion>
   m_pPrevAllocator = this->m_pPrevAllocator;
   v3 = CEntityKeyValuesModifyScope::sm_pAllocatorOverride;
   CEntityKeyValuesModifyScope::sm_pAllocatorOverride = m_pPrevAllocator;
@@ -1452,7 +1452,7 @@ void __fastcall CEntitySpawnerBase<CFireSmoke>::~CEntitySpawnerBase(CEntitySpawn
   CEntityKeyValues *m_pEntityKeyValues; // r13
   int m_nEntitySpawnerDataUseCount; // ecx
 
-  this->_vptr_CEntitySpawnerBase = off_4039590;
+  this->_vptr_CEntitySpawnerBase = off_4039590;  // vptr: CEntitySpawnerBase<CFireSmoke>
   m_pPrevAllocator = this->m_pPrevAllocator;
   v3 = CEntityKeyValuesModifyScope::sm_pAllocatorOverride;
   CEntityKeyValuesModifyScope::sm_pAllocatorOverride = m_pPrevAllocator;
@@ -1490,7 +1490,7 @@ void __fastcall CEntitySpawnerBase<CPlasma>::~CEntitySpawnerBase(CEntitySpawnerB
   CEntityKeyValues *m_pEntityKeyValues; // r13
   int m_nEntitySpawnerDataUseCount; // ecx
 
-  this->_vptr_CEntitySpawnerBase = off_40395D0;
+  this->_vptr_CEntitySpawnerBase = off_40395D0;  // vptr: CEntitySpawnerBase<CPlasma>
   m_pPrevAllocator = this->m_pPrevAllocator;
   v3 = CEntityKeyValuesModifyScope::sm_pAllocatorOverride;
   CEntityKeyValuesModifyScope::sm_pAllocatorOverride = m_pPrevAllocator;
@@ -1528,7 +1528,7 @@ void __fastcall CEntitySpawnerBase<CFuncOccluder>::~CEntitySpawnerBase(CEntitySp
   CEntityKeyValues *m_pEntityKeyValues; // r13
   int m_nEntitySpawnerDataUseCount; // ecx
 
-  this->_vptr_CEntitySpawnerBase = off_40432F0;
+  this->_vptr_CEntitySpawnerBase = off_40432F0;  // vptr: CEntitySpawnerBase<CFuncOccluder>
   m_pPrevAllocator = this->m_pPrevAllocator;
   v3 = CEntityKeyValuesModifyScope::sm_pAllocatorOverride;
   CEntityKeyValuesModifyScope::sm_pAllocatorOverride = m_pPrevAllocator;
@@ -1567,7 +1567,7 @@ void __fastcall CEntitySpawnerBase<CShatterGlassShardPhysics>::~CEntitySpawnerBa
   CEntityKeyValues *m_pEntityKeyValues; // r13
   int m_nEntitySpawnerDataUseCount; // ecx
 
-  this->_vptr_CEntitySpawnerBase = off_404B510;
+  this->_vptr_CEntitySpawnerBase = off_404B510;  // vptr: CEntitySpawnerBase<CShatterGlassShardPhysics>
   m_pPrevAllocator = this->m_pPrevAllocator;
   v3 = CEntityKeyValuesModifyScope::sm_pAllocatorOverride;
   CEntityKeyValuesModifyScope::sm_pAllocatorOverride = m_pPrevAllocator;
@@ -1605,7 +1605,7 @@ void __fastcall CEntitySpawnerBase<CGib>::~CEntitySpawnerBase(CEntitySpawnerBase
   CEntityKeyValues *m_pEntityKeyValues; // r13
   int m_nEntitySpawnerDataUseCount; // ecx
 
-  this->_vptr_CEntitySpawnerBase = off_40516B0;
+  this->_vptr_CEntitySpawnerBase = off_40516B0;  // vptr: CEntitySpawnerBase<CGib>
   m_pPrevAllocator = this->m_pPrevAllocator;
   v3 = CEntityKeyValuesModifyScope::sm_pAllocatorOverride;
   CEntityKeyValuesModifyScope::sm_pAllocatorOverride = m_pPrevAllocator;
@@ -1643,7 +1643,7 @@ void __fastcall CEntitySpawnerBase<CRagGib>::~CEntitySpawnerBase(CEntitySpawnerB
   CEntityKeyValues *m_pEntityKeyValues; // r13
   int m_nEntitySpawnerDataUseCount; // ecx
 
-  this->_vptr_CEntitySpawnerBase = off_4051F50;
+  this->_vptr_CEntitySpawnerBase = off_4051F50;  // vptr: CEntitySpawnerBase<CRagGib>
   m_pPrevAllocator = this->m_pPrevAllocator;
   v3 = CEntityKeyValuesModifyScope::sm_pAllocatorOverride;
   CEntityKeyValuesModifyScope::sm_pAllocatorOverride = m_pPrevAllocator;
@@ -1682,7 +1682,7 @@ void __fastcall CEntitySpawnerBase<CItemGenericTriggerHelper>::~CEntitySpawnerBa
   CEntityKeyValues *m_pEntityKeyValues; // r13
   int m_nEntitySpawnerDataUseCount; // ecx
 
-  this->_vptr_CEntitySpawnerBase = off_4054790;
+  this->_vptr_CEntitySpawnerBase = off_4054790;  // vptr: CEntitySpawnerBase<CItemGenericTriggerHelper>
   m_pPrevAllocator = this->m_pPrevAllocator;
   v3 = CEntityKeyValuesModifyScope::sm_pAllocatorOverride;
   CEntityKeyValuesModifyScope::sm_pAllocatorOverride = m_pPrevAllocator;
@@ -1720,7 +1720,7 @@ void __fastcall CEntitySpawnerBase<CKeepUpright>::~CEntitySpawnerBase(CEntitySpa
   CEntityKeyValues *m_pEntityKeyValues; // r13
   int m_nEntitySpawnerDataUseCount; // ecx
 
-  this->_vptr_CEntitySpawnerBase = off_4077F50;
+  this->_vptr_CEntitySpawnerBase = off_4077F50;  // vptr: CEntitySpawnerBase<CKeepUpright>
   m_pPrevAllocator = this->m_pPrevAllocator;
   v3 = CEntityKeyValuesModifyScope::sm_pAllocatorOverride;
   CEntityKeyValuesModifyScope::sm_pAllocatorOverride = m_pPrevAllocator;
@@ -1758,7 +1758,7 @@ void __fastcall CEntitySpawnerBase<CRagdollProp>::~CEntitySpawnerBase(CEntitySpa
   CEntityKeyValues *m_pEntityKeyValues; // r13
   int m_nEntitySpawnerDataUseCount; // ecx
 
-  this->_vptr_CEntitySpawnerBase = off_4081810;
+  this->_vptr_CEntitySpawnerBase = off_4081810;  // vptr: CEntitySpawnerBase<CRagdollProp>
   m_pPrevAllocator = this->m_pPrevAllocator;
   v3 = CEntityKeyValuesModifyScope::sm_pAllocatorOverride;
   CEntityKeyValuesModifyScope::sm_pAllocatorOverride = m_pPrevAllocator;
@@ -1797,7 +1797,7 @@ void __fastcall CEntitySpawnerBase<CRagdollPropAttached>::~CEntitySpawnerBase(
   CEntityKeyValues *m_pEntityKeyValues; // r13
   int m_nEntitySpawnerDataUseCount; // ecx
 
-  this->_vptr_CEntitySpawnerBase = off_4081850;
+  this->_vptr_CEntitySpawnerBase = off_4081850;  // vptr: CEntitySpawnerBase<CRagdollPropAttached>
   m_pPrevAllocator = this->m_pPrevAllocator;
   v3 = CEntityKeyValuesModifyScope::sm_pAllocatorOverride;
   CEntityKeyValuesModifyScope::sm_pAllocatorOverride = m_pPrevAllocator;
@@ -1836,7 +1836,7 @@ void __fastcall CEntitySpawnerBase<CSimplePhysicsProp>::~CEntitySpawnerBase(
   CEntityKeyValues *m_pEntityKeyValues; // r13
   int m_nEntitySpawnerDataUseCount; // ecx
 
-  this->_vptr_CEntitySpawnerBase = off_4084990;
+  this->_vptr_CEntitySpawnerBase = off_4084990;  // vptr: CEntitySpawnerBase<CSimplePhysicsProp>
   m_pPrevAllocator = this->m_pPrevAllocator;
   v3 = CEntityKeyValuesModifyScope::sm_pAllocatorOverride;
   CEntityKeyValuesModifyScope::sm_pAllocatorOverride = m_pPrevAllocator;
@@ -1875,7 +1875,7 @@ void __fastcall CEntitySpawnerBase<CPointHMDAnchor>::~CEntitySpawnerBase(
   CEntityKeyValues *m_pEntityKeyValues; // r13
   int m_nEntitySpawnerDataUseCount; // ecx
 
-  this->_vptr_CEntitySpawnerBase = off_4087DF0;
+  this->_vptr_CEntitySpawnerBase = off_4087DF0;  // vptr: CEntitySpawnerBase<CPointHMDAnchor>
   m_pPrevAllocator = this->m_pPrevAllocator;
   v3 = CEntityKeyValuesModifyScope::sm_pAllocatorOverride;
   CEntityKeyValuesModifyScope::sm_pAllocatorOverride = m_pPrevAllocator;
@@ -1913,7 +1913,7 @@ void __fastcall CEntitySpawnerBase<CPropVRHand>::~CEntitySpawnerBase(CEntitySpaw
   CEntityKeyValues *m_pEntityKeyValues; // r13
   int m_nEntitySpawnerDataUseCount; // ecx
 
-  this->_vptr_CEntitySpawnerBase = off_4099D90;
+  this->_vptr_CEntitySpawnerBase = off_4099D90;  // vptr: CEntitySpawnerBase<CPropVRHand>
   m_pPrevAllocator = this->m_pPrevAllocator;
   v3 = CEntityKeyValuesModifyScope::sm_pAllocatorOverride;
   CEntityKeyValuesModifyScope::sm_pAllocatorOverride = m_pPrevAllocator;
@@ -1952,7 +1952,7 @@ void __fastcall CEntitySpawnerBase<CVRHandModelOverride>::~CEntitySpawnerBase(
   CEntityKeyValues *m_pEntityKeyValues; // r13
   int m_nEntitySpawnerDataUseCount; // ecx
 
-  this->_vptr_CEntitySpawnerBase = off_409A7D0;
+  this->_vptr_CEntitySpawnerBase = off_409A7D0;  // vptr: CEntitySpawnerBase<CVRHandModelOverride>
   m_pPrevAllocator = this->m_pPrevAllocator;
   v3 = CEntityKeyValuesModifyScope::sm_pAllocatorOverride;
   CEntityKeyValuesModifyScope::sm_pAllocatorOverride = m_pPrevAllocator;
@@ -1990,7 +1990,7 @@ void __fastcall CEntitySpawnerBase<CFuncLadder>::~CEntitySpawnerBase(CEntitySpaw
   CEntityKeyValues *m_pEntityKeyValues; // r13
   int m_nEntitySpawnerDataUseCount; // ecx
 
-  this->_vptr_CEntitySpawnerBase = off_409BC10;
+  this->_vptr_CEntitySpawnerBase = off_409BC10;  // vptr: CEntitySpawnerBase<CFuncLadder>
   m_pPrevAllocator = this->m_pPrevAllocator;
   v3 = CEntityKeyValuesModifyScope::sm_pAllocatorOverride;
   CEntityKeyValuesModifyScope::sm_pAllocatorOverride = m_pPrevAllocator;
@@ -2028,7 +2028,7 @@ void __fastcall CEntitySpawnerBase<CDynamicProp>::~CEntitySpawnerBase(CEntitySpa
   CEntityKeyValues *m_pEntityKeyValues; // r13
   int m_nEntitySpawnerDataUseCount; // ecx
 
-  this->_vptr_CEntitySpawnerBase = off_40A1590;
+  this->_vptr_CEntitySpawnerBase = off_40A1590;  // vptr: CEntitySpawnerBase<CDynamicProp>
   m_pPrevAllocator = this->m_pPrevAllocator;
   v3 = CEntityKeyValuesModifyScope::sm_pAllocatorOverride;
   CEntityKeyValuesModifyScope::sm_pAllocatorOverride = m_pPrevAllocator;
@@ -2066,7 +2066,7 @@ void __fastcall CEntitySpawnerBase<CPhysicsProp>::~CEntitySpawnerBase(CEntitySpa
   CEntityKeyValues *m_pEntityKeyValues; // r13
   int m_nEntitySpawnerDataUseCount; // ecx
 
-  this->_vptr_CEntitySpawnerBase = off_409F330;
+  this->_vptr_CEntitySpawnerBase = off_409F330;  // vptr: CEntitySpawnerBase<CPhysicsProp>
   m_pPrevAllocator = this->m_pPrevAllocator;
   v3 = CEntityKeyValuesModifyScope::sm_pAllocatorOverride;
   CEntityKeyValuesModifyScope::sm_pAllocatorOverride = m_pPrevAllocator;
@@ -2104,7 +2104,7 @@ void __fastcall CEntitySpawnerBase<CSprite>::~CEntitySpawnerBase(CEntitySpawnerB
   CEntityKeyValues *m_pEntityKeyValues; // r13
   int m_nEntitySpawnerDataUseCount; // ecx
 
-  this->_vptr_CEntitySpawnerBase = off_40B14F0;
+  this->_vptr_CEntitySpawnerBase = off_40B14F0;  // vptr: CEntitySpawnerBase<CSprite>
   m_pPrevAllocator = this->m_pPrevAllocator;
   v3 = CEntityKeyValuesModifyScope::sm_pAllocatorOverride;
   CEntityKeyValuesModifyScope::sm_pAllocatorOverride = m_pPrevAllocator;
@@ -2143,7 +2143,7 @@ void __fastcall CEntitySpawnerBase<CDOTABaseAbility>::~CEntitySpawnerBase(
   CEntityKeyValues *m_pEntityKeyValues; // r13
   int m_nEntitySpawnerDataUseCount; // ecx
 
-  this->_vptr_CEntitySpawnerBase = off_40D7590;
+  this->_vptr_CEntitySpawnerBase = off_40D7590;  // vptr: CEntitySpawnerBase<CDOTABaseAbility>
   m_pPrevAllocator = this->m_pPrevAllocator;
   v3 = CEntityKeyValuesModifyScope::sm_pAllocatorOverride;
   CEntityKeyValuesModifyScope::sm_pAllocatorOverride = m_pPrevAllocator;
@@ -2182,7 +2182,7 @@ void __fastcall CEntitySpawnerBase<CDOTA_Item_Rune>::~CEntitySpawnerBase(
   CEntityKeyValues *m_pEntityKeyValues; // r13
   int m_nEntitySpawnerDataUseCount; // ecx
 
-  this->_vptr_CEntitySpawnerBase = off_40DD270;
+  this->_vptr_CEntitySpawnerBase = off_40DD270;  // vptr: CEntitySpawnerBase<CDOTA_Item_Rune>
   m_pPrevAllocator = this->m_pPrevAllocator;
   v3 = CEntityKeyValuesModifyScope::sm_pAllocatorOverride;
   CEntityKeyValuesModifyScope::sm_pAllocatorOverride = m_pPrevAllocator;
@@ -2220,7 +2220,7 @@ void __fastcall CEntitySpawnerBase<CDOTATeam>::~CEntitySpawnerBase(CEntitySpawne
   CEntityKeyValues *m_pEntityKeyValues; // r13
   int m_nEntitySpawnerDataUseCount; // ecx
 
-  this->_vptr_CEntitySpawnerBase = off_40FBA70;
+  this->_vptr_CEntitySpawnerBase = off_40FBA70;  // vptr: CEntitySpawnerBase<CDOTATeam>
   m_pPrevAllocator = this->m_pPrevAllocator;
   v3 = CEntityKeyValuesModifyScope::sm_pAllocatorOverride;
   CEntityKeyValuesModifyScope::sm_pAllocatorOverride = m_pPrevAllocator;
@@ -2259,7 +2259,7 @@ void __fastcall CEntitySpawnerBase<CDOTA_Unit_Announcer>::~CEntitySpawnerBase(
   CEntityKeyValues *m_pEntityKeyValues; // r13
   int m_nEntitySpawnerDataUseCount; // ecx
 
-  this->_vptr_CEntitySpawnerBase = off_40FBE70;
+  this->_vptr_CEntitySpawnerBase = off_40FBE70;  // vptr: CEntitySpawnerBase<CDOTA_Unit_Announcer>
   m_pPrevAllocator = this->m_pPrevAllocator;
   v3 = CEntityKeyValuesModifyScope::sm_pAllocatorOverride;
   CEntityKeyValuesModifyScope::sm_pAllocatorOverride = m_pPrevAllocator;
@@ -2297,7 +2297,7 @@ void __fastcall CEntitySpawnerBase<CDOTA_BaseNPC>::~CEntitySpawnerBase(CEntitySp
   CEntityKeyValues *m_pEntityKeyValues; // r13
   int m_nEntitySpawnerDataUseCount; // ecx
 
-  this->_vptr_CEntitySpawnerBase = off_40FBED0;
+  this->_vptr_CEntitySpawnerBase = off_40FBED0;  // vptr: CEntitySpawnerBase<CDOTA_BaseNPC>
   m_pPrevAllocator = this->m_pPrevAllocator;
   v3 = CEntityKeyValuesModifyScope::sm_pAllocatorOverride;
   CEntityKeyValuesModifyScope::sm_pAllocatorOverride = m_pPrevAllocator;
@@ -2336,7 +2336,7 @@ void __fastcall CEntitySpawnerBase<CDOTA_Hero_Recorder>::~CEntitySpawnerBase(
   CEntityKeyValues *m_pEntityKeyValues; // r13
   int m_nEntitySpawnerDataUseCount; // ecx
 
-  this->_vptr_CEntitySpawnerBase = off_4101710;
+  this->_vptr_CEntitySpawnerBase = off_4101710;  // vptr: CEntitySpawnerBase<CDOTA_Hero_Recorder>
   m_pPrevAllocator = this->m_pPrevAllocator;
   v3 = CEntityKeyValuesModifyScope::sm_pAllocatorOverride;
   CEntityKeyValuesModifyScope::sm_pAllocatorOverride = m_pPrevAllocator;
@@ -2375,7 +2375,7 @@ void __fastcall CEntitySpawnerBase<CDOTAInGamePredictionState>::~CEntitySpawnerB
   CEntityKeyValues *m_pEntityKeyValues; // r13
   int m_nEntitySpawnerDataUseCount; // ecx
 
-  this->_vptr_CEntitySpawnerBase = off_4107AF0;
+  this->_vptr_CEntitySpawnerBase = off_4107AF0;  // vptr: CEntitySpawnerBase<CDOTAInGamePredictionState>
   m_pPrevAllocator = this->m_pPrevAllocator;
   v3 = CEntityKeyValuesModifyScope::sm_pAllocatorOverride;
   CEntityKeyValuesModifyScope::sm_pAllocatorOverride = m_pPrevAllocator;
@@ -2413,7 +2413,7 @@ void __fastcall CEntitySpawnerBase<CDOTA_Item>::~CEntitySpawnerBase(CEntitySpawn
   CEntityKeyValues *m_pEntityKeyValues; // r13
   int m_nEntitySpawnerDataUseCount; // ecx
 
-  this->_vptr_CEntitySpawnerBase = off_410B2B0;
+  this->_vptr_CEntitySpawnerBase = off_410B2B0;  // vptr: CEntitySpawnerBase<CDOTA_Item>
   m_pPrevAllocator = this->m_pPrevAllocator;
   v3 = CEntityKeyValuesModifyScope::sm_pAllocatorOverride;
   CEntityKeyValuesModifyScope::sm_pAllocatorOverride = m_pPrevAllocator;
@@ -2452,7 +2452,7 @@ void __fastcall CEntitySpawnerBase<CDOTA_Item_Physical>::~CEntitySpawnerBase(
   CEntityKeyValues *m_pEntityKeyValues; // r13
   int m_nEntitySpawnerDataUseCount; // ecx
 
-  this->_vptr_CEntitySpawnerBase = off_410C6D0;
+  this->_vptr_CEntitySpawnerBase = off_410C6D0;  // vptr: CEntitySpawnerBase<CDOTA_Item_Physical>
   m_pPrevAllocator = this->m_pPrevAllocator;
   v3 = CEntityKeyValuesModifyScope::sm_pAllocatorOverride;
   CEntityKeyValuesModifyScope::sm_pAllocatorOverride = m_pPrevAllocator;
@@ -2490,7 +2490,7 @@ void __fastcall CEntitySpawnerBase<CDotaQuest>::~CEntitySpawnerBase(CEntitySpawn
   CEntityKeyValues *m_pEntityKeyValues; // r13
   int m_nEntitySpawnerDataUseCount; // ecx
 
-  this->_vptr_CEntitySpawnerBase = off_41726F0;
+  this->_vptr_CEntitySpawnerBase = off_41726F0;  // vptr: CEntitySpawnerBase<CDotaQuest>
   m_pPrevAllocator = this->m_pPrevAllocator;
   v3 = CEntityKeyValuesModifyScope::sm_pAllocatorOverride;
   CEntityKeyValuesModifyScope::sm_pAllocatorOverride = m_pPrevAllocator;
@@ -2529,7 +2529,7 @@ void __fastcall CEntitySpawnerBase<CDotaSubquestBase>::~CEntitySpawnerBase(
   CEntityKeyValues *m_pEntityKeyValues; // r13
   int m_nEntitySpawnerDataUseCount; // ecx
 
-  this->_vptr_CEntitySpawnerBase = off_4172730;
+  this->_vptr_CEntitySpawnerBase = off_4172730;  // vptr: CEntitySpawnerBase<CDotaSubquestBase>
   m_pPrevAllocator = this->m_pPrevAllocator;
   v3 = CEntityKeyValuesModifyScope::sm_pAllocatorOverride;
   CEntityKeyValuesModifyScope::sm_pAllocatorOverride = m_pPrevAllocator;
@@ -2567,7 +2567,7 @@ void __fastcall CEntitySpawnerBase<CDOTA_TempTree>::~CEntitySpawnerBase(CEntityS
   CEntityKeyValues *m_pEntityKeyValues; // r13
   int m_nEntitySpawnerDataUseCount; // ecx
 
-  this->_vptr_CEntitySpawnerBase = off_42AD270;
+  this->_vptr_CEntitySpawnerBase = off_42AD270;  // vptr: CEntitySpawnerBase<CDOTA_TempTree>
   m_pPrevAllocator = this->m_pPrevAllocator;
   v3 = CEntityKeyValuesModifyScope::sm_pAllocatorOverride;
   CEntityKeyValuesModifyScope::sm_pAllocatorOverride = m_pPrevAllocator;
@@ -2606,7 +2606,7 @@ void __fastcall CEntitySpawnerBase<CDOTA_Unit_Courier>::~CEntitySpawnerBase(
   CEntityKeyValues *m_pEntityKeyValues; // r13
   int m_nEntitySpawnerDataUseCount; // ecx
 
-  this->_vptr_CEntitySpawnerBase = off_42F88F0;
+  this->_vptr_CEntitySpawnerBase = off_42F88F0;  // vptr: CEntitySpawnerBase<CDOTA_Unit_Courier>
   m_pPrevAllocator = this->m_pPrevAllocator;
   v3 = CEntityKeyValuesModifyScope::sm_pAllocatorOverride;
   CEntityKeyValuesModifyScope::sm_pAllocatorOverride = m_pPrevAllocator;
@@ -2645,7 +2645,7 @@ void __fastcall CEntitySpawnerBase<CDOTA_Pet_CarriedItem>::~CEntitySpawnerBase(
   CEntityKeyValues *m_pEntityKeyValues; // r13
   int m_nEntitySpawnerDataUseCount; // ecx
 
-  this->_vptr_CEntitySpawnerBase = off_42FA470;
+  this->_vptr_CEntitySpawnerBase = off_42FA470;  // vptr: CEntitySpawnerBase<CDOTA_Pet_CarriedItem>
   m_pPrevAllocator = this->m_pPrevAllocator;
   v3 = CEntityKeyValuesModifyScope::sm_pAllocatorOverride;
   CEntityKeyValuesModifyScope::sm_pAllocatorOverride = m_pPrevAllocator;
@@ -2684,7 +2684,7 @@ void __fastcall CEntitySpawnerBase<CDOTA_DeathProphet_Exorcism_Spirit>::~CEntity
   CEntityKeyValues *m_pEntityKeyValues; // r13
   int m_nEntitySpawnerDataUseCount; // ecx
 
-  this->_vptr_CEntitySpawnerBase = off_43EEF30;
+  this->_vptr_CEntitySpawnerBase = off_43EEF30;  // vptr: CEntitySpawnerBase<CDOTA_DeathProphet_Exorcism_Spirit>
   m_pPrevAllocator = this->m_pPrevAllocator;
   v3 = CEntityKeyValuesModifyScope::sm_pAllocatorOverride;
   CEntityKeyValuesModifyScope::sm_pAllocatorOverride = m_pPrevAllocator;
@@ -2723,7 +2723,7 @@ void __fastcall CEntitySpawnerBase<CAdditionalWearable>::~CEntitySpawnerBase(
   CEntityKeyValues *m_pEntityKeyValues; // r13
   int m_nEntitySpawnerDataUseCount; // ecx
 
-  this->_vptr_CEntitySpawnerBase = off_47A24B0;
+  this->_vptr_CEntitySpawnerBase = off_47A24B0;  // vptr: CEntitySpawnerBase<CAdditionalWearable>
   m_pPrevAllocator = this->m_pPrevAllocator;
   v3 = CEntityKeyValuesModifyScope::sm_pAllocatorOverride;
   CEntityKeyValuesModifyScope::sm_pAllocatorOverride = m_pPrevAllocator;
@@ -3660,7 +3660,7 @@ void __fastcall CEntitySpawner<CBaseEntity>::CEntitySpawner(
   CEntityKeyValuesModifyScope::BeginModify(p_m_modifyScope, 0);
   this->m_pContext = pContext;
   this->m_scriptClassName.m_pString = 0;
-  this->_vptr_CEntitySpawnerBase = off_3FCEBD0;
+  this->_vptr_CEntitySpawnerBase = off_3FCEBD0;  // vptr: CEntitySpawner<CBaseEntity>
   v7 = CEntityKeyValuesModifyScope::sm_pAllocatorOverride;
   this->m_pSpawnBatch = pSpawnBatch;
   v8 = g_pEntitySystem;
@@ -3716,7 +3716,7 @@ void __fastcall CEntitySpawner<CDOTA_Hero_Recorder>::CEntitySpawner(
   CEntityKeyValuesModifyScope::BeginModify(p_m_modifyScope, 0);
   this->m_pContext = pContext;
   this->m_scriptClassName.m_pString = 0;
-  this->_vptr_CEntitySpawnerBase = off_4101730;
+  this->_vptr_CEntitySpawnerBase = off_4101730;  // vptr: CEntitySpawner<CDOTA_Hero_Recorder>
   v7 = CEntityKeyValuesModifyScope::sm_pAllocatorOverride;
   this->m_pSpawnBatch = pSpawnBatch;
   v8 = g_pEntitySystem;

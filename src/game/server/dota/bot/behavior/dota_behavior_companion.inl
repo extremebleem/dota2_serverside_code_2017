@@ -158,14 +158,14 @@ void __fastcall CDOTABehaviorPet::~CDOTABehaviorPet(CDOTABehaviorPet *const this
   this->_vptr_INextBotEventResponder = &off_42C0410;
   this->_vptr_IContextualQuery = &off_42C0848;
   this->_vptr_IDOTABehaviorMoveTo = &off_42C08B0;
-  this->_vptr_IGameEventListener2 = off_3FB3190;
+  this->_vptr_IGameEventListener2 = off_3FB3190;  // vptr: CGameEventListener
   if ( !v2 )
   {
     if ( gameeventmanager != 0 )
       (*(gameeventmanager->_vptr_IBaseInterface + 6))(gameeventmanager, &this->CGameEventListener);
     this->m_bRegisteredForEvents = 0;
   }
-  this->_vptr_IGameEventListener2 = off_3FB3150;
+  this->_vptr_IGameEventListener2 = off_3FB3150;  // vptr: IGameEventListener2
   this->_vptr_INextBotEventResponder = &off_42BFA90;
   this->_vptr_IContextualQuery = &off_42BFEC0;
   this->_vptr_IDOTABehaviorMoveTo = &off_42BFF28;
@@ -202,14 +202,14 @@ void __fastcall CDOTABehaviorPet::~CDOTABehaviorPet(CDOTABehaviorPet *const this
   this->_vptr_INextBotEventResponder = &off_42C0410;
   this->_vptr_IContextualQuery = &off_42C0848;
   this->_vptr_IDOTABehaviorMoveTo = &off_42C08B0;
-  this->_vptr_IGameEventListener2 = off_3FB3190;
+  this->_vptr_IGameEventListener2 = off_3FB3190;  // vptr: CGameEventListener
   if ( !v2 )
   {
     if ( gameeventmanager != 0 )
       (*(gameeventmanager->_vptr_IBaseInterface + 6))(gameeventmanager, &this->CGameEventListener);
     this->m_bRegisteredForEvents = 0;
   }
-  this->_vptr_IGameEventListener2 = off_3FB3150;
+  this->_vptr_IGameEventListener2 = off_3FB3150;  // vptr: IGameEventListener2
   this->_vptr_INextBotEventResponder = &off_42BFA90;
   this->_vptr_IContextualQuery = &off_42BFEC0;
   this->_vptr_IDOTABehaviorMoveTo = &off_42BFF28;

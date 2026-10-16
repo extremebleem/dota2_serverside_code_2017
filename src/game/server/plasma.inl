@@ -73,7 +73,7 @@ CEntityInstance *__fastcall CPlasma::CEntityInstanceEntityClass::ConstructInstan
 void __fastcall CPlasma::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CPlasma::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -83,7 +83,7 @@ void __fastcall CPlasma::CEntityInstanceEntityClass::~CEntityInstanceEntityClass
 void __fastcall CPlasma::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CPlasma::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }

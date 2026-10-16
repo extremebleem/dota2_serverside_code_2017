@@ -655,7 +655,7 @@ CEntityInstance *__fastcall CDOTA_Unit_Hero_Gyrocopter::CEntityInstanceEntityCla
 void __fastcall CDOTA_Unit_Hero_Gyrocopter::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Unit_Hero_Gyrocopter::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -665,7 +665,7 @@ void __fastcall CDOTA_Unit_Hero_Gyrocopter::CEntityInstanceEntityClass::~CEntity
 void __fastcall CDOTA_Unit_Hero_Gyrocopter::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Unit_Hero_Gyrocopter::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -900,7 +900,7 @@ CEntityInstance *__fastcall CDOTA_Ability_Gyrocopter_Rocket_Barrage::CEntityInst
 void __fastcall CDOTA_Ability_Gyrocopter_Rocket_Barrage::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Gyrocopter_Rocket_Barrage::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -910,7 +910,7 @@ void __fastcall CDOTA_Ability_Gyrocopter_Rocket_Barrage::CEntityInstanceEntityCl
 void __fastcall CDOTA_Ability_Gyrocopter_Rocket_Barrage::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Gyrocopter_Rocket_Barrage::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -1505,7 +1505,7 @@ CEntityInstance *__fastcall CDOTA_Ability_Gyrocopter_Homing_Missile::CEntityInst
 void __fastcall CDOTA_Ability_Gyrocopter_Homing_Missile::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Gyrocopter_Homing_Missile::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -1515,7 +1515,7 @@ void __fastcall CDOTA_Ability_Gyrocopter_Homing_Missile::CEntityInstanceEntityCl
 void __fastcall CDOTA_Ability_Gyrocopter_Homing_Missile::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Gyrocopter_Homing_Missile::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -2715,7 +2715,7 @@ CEntityInstance *__fastcall CDOTA_Ability_Gyrocopter_Flak_Cannon::CEntityInstanc
 void __fastcall CDOTA_Ability_Gyrocopter_Flak_Cannon::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Gyrocopter_Flak_Cannon::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -2725,7 +2725,7 @@ void __fastcall CDOTA_Ability_Gyrocopter_Flak_Cannon::CEntityInstanceEntityClass
 void __fastcall CDOTA_Ability_Gyrocopter_Flak_Cannon::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Gyrocopter_Flak_Cannon::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -3271,7 +3271,7 @@ CEntityInstance *__fastcall CDOTA_Ability_Gyrocopter_Call_Down::CEntityInstanceE
 void __fastcall CDOTA_Ability_Gyrocopter_Call_Down::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Gyrocopter_Call_Down::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -3281,7 +3281,7 @@ void __fastcall CDOTA_Ability_Gyrocopter_Call_Down::CEntityInstanceEntityClass::
 void __fastcall CDOTA_Ability_Gyrocopter_Call_Down::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Gyrocopter_Call_Down::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }

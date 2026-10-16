@@ -277,7 +277,7 @@ LABEL_26:
     v22 = this->m_DirtyEntities.m_Head;
   }
   while ( _InterlockedCompareExchange128(&this->m_DirtyEntities, v21, 0, &v22) == 0 );
-  this->_vptr_IGameSystem = off_3F7C1B0;
+  this->_vptr_IGameSystem = off_3F7C1B0;  // vptr: CAutoGameSystem
   IGameSystem::~IGameSystem(this);
 }
 
@@ -2387,7 +2387,7 @@ void __fastcall CCollisionProperty::CCollisionProperty(CCollisionProperty *const
 {
   CCollisionAttributeWriter<RnCollisionAttr_t>_0 writer; // [rsp+0h] [rbp-60h] BYREF
 
-  this->_vptr_ICollideable = off_4010590;
+  this->_vptr_ICollideable = off_4010590;  // vptr: CCollisionProperty
   this->m_collisionAttribute.m_nInteractsAs.m_Value = 0;
   this->m_collisionAttribute.m_nInteractsWith.m_Value = 0;
   this->m_collisionAttribute.m_nInteractsExclude.m_Value = 0;
@@ -2536,7 +2536,7 @@ void __fastcall CCollisionProperty::CCollisionProperty(CCollisionProperty *const
 // callers: CSchemaClassBinding<CCollisionProperty>::Deallocate, CSchemaClassBinding<CCollisionProperty>::DestructInPlace, CBaseModelEntity::~CBaseModelEntity, CBaseModelEntity::CBaseModelEntity
 void __fastcall CCollisionProperty::~CCollisionProperty(CCollisionProperty *const this)
 {
-  this->_vptr_ICollideable = off_4010590;
+  this->_vptr_ICollideable = off_4010590;  // vptr: CCollisionProperty
 }
 
 

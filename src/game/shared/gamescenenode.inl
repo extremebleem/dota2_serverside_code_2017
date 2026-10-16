@@ -179,7 +179,7 @@ void __fastcall CGameSceneNodeHandle::CGameSceneNodeHandle(
   __int64 v8; // [rsp-8h] [rbp-8h]
 
   this->m_hOwner.m_Value.m_Index = -1;
-  this->_vptr_CGameSceneNodeHandle = off_3FB43F0;
+  this->_vptr_CGameSceneNodeHandle = off_3FB43F0;  // vptr: CGameSceneNodeHandle
   this->m_name.m_Value.m_nHashCode = 0;
   if ( pNode != 0 )
   {

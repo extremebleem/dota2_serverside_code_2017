@@ -66,7 +66,7 @@ CEconItemSystem *__cdecl ItemSystem()
   result = ItemSystem(void)::pSystem;
   if ( ItemSystem(void)::pSystem == 0 )
   {
-    v1 = operator new(0x858u);
+    v1 = operator new(0x858u);  // new CDOTAItemSystem (size matches)
     memset(v1, 0, sizeof(GameItemSystem_t));
     CEconItemSystem::CEconItemSystem(v1);
     v1->m_bRegisteredForEvents = 0;
@@ -74,7 +74,7 @@ CEconItemSystem *__cdecl ItemSystem()
     v1->m_vecLeagueImageNames.m_Memory.m_pMemory = 0;
     v1->m_vecLeagueImageNames.m_Memory.m_nAllocationCount = 0;
     ItemSystem(void)::pSystem = v1;
-    v1->_vptr_IEconItemSystem = off_47A0C50;
+    v1->_vptr_IEconItemSystem = off_47A0C50;  // vptr: CDOTAItemSystem
     v1->_vptr_IGameEventListener2 = off_47A0D18;
     v1->_vptr_IDotaItemSystem = &off_47A0CF0;
     v1->m_vecLeagueImageNames.m_Memory.m_nGrowSize = 0;
@@ -416,7 +416,7 @@ void __fastcall item_show_whitelistable_definitions(const CCommandContext *const
         if ( m_elem != 0 && m_elem->m_nItemQuality != 0 && (*(m_elem + 272) & 2) == 0 )
         {
           m_pAsString = m_elem->m_symDefinitionName.u.m_pAsString;
-          v8 = (*m_elem->_vptr_IEconItemDefinition)(m_elem);
+          v8 = m_elem->GetDefinitionIndex();
           Msg("   %d: '%s'\n", v8, m_pAsString);
         }
       }
@@ -713,7 +713,7 @@ void __fastcall DelayedSchemaData_HTTPResponseData::~DelayedSchemaData_HTTPRespo
   p_m_bufRawData = &this->m_bufRawData;
   p_m_bufRawData[-1].m_PutOverflowFunc.__delta = off_47A8D10;
   CUtlMemory<unsigned char,int>::Purge(&p_m_bufRawData->m_Memory);
-  this->_vptr_IDelayedSchemaData = off_47A5DB0;
+  this->_vptr_IDelayedSchemaData = off_47A5DB0;  // vptr: IDelayedSchemaData
 }
 
 
@@ -727,7 +727,7 @@ void __fastcall DelayedSchemaData_HTTPResponseData::~DelayedSchemaData_HTTPRespo
   p_m_bufRawData = &this->m_bufRawData;
   p_m_bufRawData[-1].m_PutOverflowFunc.__delta = off_47A8D10;
   CUtlMemory<unsigned char,int>::Purge(&p_m_bufRawData->m_Memory);
-  this->_vptr_IDelayedSchemaData = off_47A5DB0;
+  this->_vptr_IDelayedSchemaData = off_47A5DB0;  // vptr: IDelayedSchemaData
   operator delete(this);
 }
 
@@ -754,7 +754,7 @@ void __fastcall CGCUpdateItemSchema::~CGCUpdateItemSchema(CGCUpdateItemSchema *c
 {
   SteamAPICall_t m_hAPICall; // rsi
 
-  this->_vptr_CJob = off_47A8D90;
+  this->_vptr_CJob = off_47A8D90;  // vptr: CGCUpdateItemSchema
   m_hAPICall = this->callback.m_hAPICall;
   this->callback._vptr_CCallbackBase = off_47A8D50;
   if ( m_hAPICall != 0 )
@@ -762,7 +762,7 @@ void __fastcall CGCUpdateItemSchema::~CGCUpdateItemSchema(CGCUpdateItemSchema *c
     SteamAPI_UnregisterCallResult(&this->callback);
     this->callback.m_hAPICall = 0;
   }
-  this->_vptr_CJob = off_40DB690;
+  this->_vptr_CJob = off_40DB690;  // vptr: GCSDK::CGCClientJob
   GCSDK::CJob::~CJob(this);
 }
 
@@ -773,7 +773,7 @@ void __fastcall CGCUpdateItemSchema::~CGCUpdateItemSchema(CGCUpdateItemSchema *c
 {
   SteamAPICall_t m_hAPICall; // rsi
 
-  this->_vptr_CJob = off_47A8D90;
+  this->_vptr_CJob = off_47A8D90;  // vptr: CGCUpdateItemSchema
   m_hAPICall = this->callback.m_hAPICall;
   this->callback._vptr_CCallbackBase = off_47A8D50;
   if ( m_hAPICall != 0 )
@@ -781,7 +781,7 @@ void __fastcall CGCUpdateItemSchema::~CGCUpdateItemSchema(CGCUpdateItemSchema *c
     SteamAPI_UnregisterCallResult(&this->callback);
     this->callback.m_hAPICall = 0;
   }
-  this->_vptr_CJob = off_40DB690;
+  this->_vptr_CJob = off_40DB690;  // vptr: GCSDK::CGCClientJob
   GCSDK::CJob::~CJob(this);
   operator delete(this);
 }
@@ -1004,10 +1004,10 @@ GCSDK::CJob *__fastcall CreateJob_CGCUpdateItemSchema(GCSDK::CGCClient *pGC)
 {
   GCSDK::CJob *v2; // rbx
 
-  v2 = operator new(0x378u);
+  v2 = operator new(0x378u);  // new CGCUpdateItemSchema (size matches)
   GCSDK::CJob::CJob(v2, (pGC + 48));
   v2[1]._vptr_CJob = pGC;
-  v2->_vptr_CJob = off_47A8D90;
+  v2->_vptr_CJob = off_47A8D90;  // vptr: CGCUpdateItemSchema
   v2[2].m_JobMgr = off_47A8D50;
   v2->m_pJobType = &g_JobType_CGCUpdateItemSchema;
   *(&v2[1] + 2) = 4;

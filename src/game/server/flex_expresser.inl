@@ -109,7 +109,7 @@ CEntityInstance *__fastcall CFlexExpresserShim::CEntityInstanceEntityClass::Cons
 void __fastcall CFlexExpresserShim::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CFlexExpresserShim::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -119,7 +119,7 @@ void __fastcall CFlexExpresserShim::CEntityInstanceEntityClass::~CEntityInstance
 void __fastcall CFlexExpresserShim::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CFlexExpresserShim::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -304,7 +304,7 @@ void *__fastcall CFlexExpresser::CEntityInstanceEntityClass::AllocateInstance(
 void __fastcall CFlexExpresser::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CFlexExpresser::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -314,7 +314,7 @@ void __fastcall CFlexExpresser::CEntityInstanceEntityClass::~CEntityInstanceEnti
 void __fastcall CFlexExpresser::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CFlexExpresser::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }

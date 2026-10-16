@@ -86,9 +86,9 @@ CDOTA_BotMode *__fastcall CDOTA_Bot_Hero_Bane::CreateMode(CDOTA_Bot_Hero_Bane *c
 
   if ( this->m_bHuman || iMode != 2 )
     return CDOTA_Bot::CreateMode(this, iMode);
-  v4 = operator new(0xE8u);
+  v4 = operator new(0xE8u);  // new CDOTA_BotMode_Attack_Bane (size matches)
   CDOTA_BotMode_Attack::CDOTA_BotMode_Attack(v4, this);
-  v4->_vptr_CDOTA_BotMode = off_42C86B0;
+  v4->_vptr_CDOTA_BotMode = off_42C86B0;  // vptr: CDOTA_BotMode_Attack_Bane
   return v4;
 }
 
@@ -143,7 +143,7 @@ void __fastcall CDOTA_Bot_AbilityUsage_Bane_Enfeeble::CDOTA_Bot_AbilityUsage_Ban
   this->m_pAbility = pAbility;
   this->m_bUseOnCreeps = 0;
   this->m_pBot = pBot;
-  this->_vptr_CDOTA_Bot_AbilityUsage = off_42C8750;
+  this->_vptr_CDOTA_Bot_AbilityUsage = off_42C8750;  // vptr: CDOTA_Bot_AbilityUsage_Bane_Enfeeble
   this->m_hDesiredTarget.m_Index = -1;
 }
 
@@ -287,7 +287,7 @@ void __fastcall CDOTA_Bot_AbilityUsage_Bane_BrainSap::CDOTA_Bot_AbilityUsage_Ban
   this->m_pAbility = pAbility;
   this->m_bUseOnCreeps = 0;
   this->m_pBot = pBot;
-  this->_vptr_CDOTA_Bot_AbilityUsage = off_42C87B0;
+  this->_vptr_CDOTA_Bot_AbilityUsage = off_42C87B0;  // vptr: CDOTA_Bot_AbilityUsage_Bane_BrainSap
   this->m_hDesiredTarget.m_Index = -1;
 }
 
@@ -574,7 +574,7 @@ void __fastcall CDOTA_Bot_AbilityUsage_Bane_Nightmare::CDOTA_Bot_AbilityUsage_Ba
   this->m_pAbility = pAbility;
   this->m_bUseOnCreeps = 0;
   this->m_pBot = pBot;
-  this->_vptr_CDOTA_Bot_AbilityUsage = off_42C8810;
+  this->_vptr_CDOTA_Bot_AbilityUsage = off_42C8810;  // vptr: CDOTA_Bot_AbilityUsage_Bane_Nightmare
   this->m_hDesiredTarget.m_Index = -1;
 }
 
@@ -832,7 +832,7 @@ void __fastcall CDOTA_Bot_AbilityUsage_Bane_FiendsGrip::CDOTA_Bot_AbilityUsage_B
   this->m_pAbility = pAbility;
   this->m_bUseOnCreeps = 0;
   this->m_pBot = pBot;
-  this->_vptr_CDOTA_Bot_AbilityUsage = off_42C8870;
+  this->_vptr_CDOTA_Bot_AbilityUsage = off_42C8870;  // vptr: CDOTA_Bot_AbilityUsage_Bane_FiendsGrip
   this->m_hDesiredTarget.m_Index = -1;
 }
 

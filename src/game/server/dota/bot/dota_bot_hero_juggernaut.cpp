@@ -57,9 +57,9 @@ CDOTA_BotMode *__fastcall CDOTA_Bot_Hero_Juggernaut::CreateMode(CDOTA_Bot_Hero_J
 
   if ( this->m_bHuman || iMode != 2 )
     return CDOTA_Bot::CreateMode(this, iMode);
-  v4 = operator new(0xE8u);
+  v4 = operator new(0xE8u);  // new CDOTA_BotMode_Attack_Juggernaut (size matches)
   CDOTA_BotMode_Attack::CDOTA_BotMode_Attack(v4, this);
-  v4->_vptr_CDOTA_BotMode = off_42CC8F0;
+  v4->_vptr_CDOTA_BotMode = off_42CC8F0;  // vptr: CDOTA_BotMode_Attack_Juggernaut
   return v4;
 }
 
@@ -467,7 +467,7 @@ void __fastcall CDOTA_Bot_AbilityUsage_Juggernaut_BladeFury::CDOTA_Bot_AbilityUs
   this->m_pAbility = pAbility;
   this->m_bUseOnCreeps = 0;
   this->m_pBot = pBot;
-  this->_vptr_CDOTA_Bot_AbilityUsage = off_42CC990;
+  this->_vptr_CDOTA_Bot_AbilityUsage = off_42CC990;  // vptr: CDOTA_Bot_AbilityUsage_Juggernaut_BladeFury
 }
 
 
@@ -665,7 +665,7 @@ void __fastcall CDOTA_Bot_AbilityUsage_Juggernaut_HealingWard::CDOTA_Bot_Ability
   this->m_pAbility = pAbility;
   this->m_bUseOnCreeps = 0;
   this->m_pBot = pBot;
-  this->_vptr_CDOTA_Bot_AbilityUsage = off_42CC9F0;
+  this->_vptr_CDOTA_Bot_AbilityUsage = off_42CC9F0;  // vptr: CDOTA_Bot_AbilityUsage_Juggernaut_HealingWard
 }
 
 
@@ -850,7 +850,7 @@ void __fastcall CDOTA_Bot_AbilityUsage_Juggernaut_Omnislash::CDOTA_Bot_AbilityUs
   this->m_pAbility = pAbility;
   this->m_bUseOnCreeps = 0;
   this->m_pBot = pBot;
-  this->_vptr_CDOTA_Bot_AbilityUsage = off_42CCA50;
+  this->_vptr_CDOTA_Bot_AbilityUsage = off_42CCA50;  // vptr: CDOTA_Bot_AbilityUsage_Juggernaut_Omnislash
   this->m_hDesiredTarget.m_Index = -1;
 }
 

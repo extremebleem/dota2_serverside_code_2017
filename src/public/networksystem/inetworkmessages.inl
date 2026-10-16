@@ -38347,7 +38347,7 @@ const char *__fastcall CNetMessagePB<283,CClientMsg_DevPaletteVisibilityChangedE
 
   v14 = __readfsqword(0x28u);
   google::protobuf::Message::DebugString(&str);
-  v5 = (*this->_vptr_IProtobufBinding)(this);
+  v5 = this->GetName();
   CFmtStrN<256,false>::CFmtStrN(&v13, "%s\n{\n", v5);
   CUtlString::operator+=(out, v13.m_szBuf);
   CUtlString::operator+=(out, str._M_dataplus._M_p);
@@ -38399,7 +38399,7 @@ const char *__fastcall CNetMessagePB<282,CClientMsg_ClientUIEvent,(SignonGroup_t
 
   v14 = __readfsqword(0x28u);
   google::protobuf::Message::DebugString(&str);
-  v5 = (*this->_vptr_IProtobufBinding)(this);
+  v5 = this->GetName();
   CFmtStrN<256,false>::CFmtStrN(&v13, "%s\n{\n", v5);
   CUtlString::operator+=(out, v13.m_szBuf);
   CUtlString::operator+=(out, str._M_dataplus._M_p);
@@ -38451,7 +38451,7 @@ const char *__fastcall CNetMessagePB<363,CDOTAClientMsg_FlipCoin,(SignonGroup_t)
 
   v14 = __readfsqword(0x28u);
   google::protobuf::Message::DebugString(&str);
-  v5 = (*this->_vptr_IProtobufBinding)(this);
+  v5 = this->GetName();
   CFmtStrN<256,false>::CFmtStrN(&v13, "%s\n{\n", v5);
   CUtlString::operator+=(out, v13.m_szBuf);
   CUtlString::operator+=(out, str._M_dataplus._M_p);
@@ -38503,7 +38503,7 @@ const char *__fastcall CNetMessagePB<362,CDOTAClientMsg_RollDice,(SignonGroup_t)
 
   v14 = __readfsqword(0x28u);
   google::protobuf::Message::DebugString(&str);
-  v5 = (*this->_vptr_IProtobufBinding)(this);
+  v5 = this->GetName();
   CFmtStrN<256,false>::CFmtStrN(&v13, "%s\n{\n", v5);
   CUtlString::operator+=(out, v13.m_szBuf);
   CUtlString::operator+=(out, str._M_dataplus._M_p);
@@ -38555,7 +38555,7 @@ const char *__fastcall CNetMessagePB<361,CDOTAClientMsg_SetDesiredWardPlacement,
 
   v14 = __readfsqword(0x28u);
   google::protobuf::Message::DebugString(&str);
-  v5 = (*this->_vptr_IProtobufBinding)(this);
+  v5 = this->GetName();
   CFmtStrN<256,false>::CFmtStrN(&v13, "%s\n{\n", v5);
   CUtlString::operator+=(out, v13.m_szBuf);
   CUtlString::operator+=(out, str._M_dataplus._M_p);
@@ -38607,7 +38607,7 @@ const char *__fastcall CNetMessagePB<360,CDOTAClientMsg_SetEnemyStartingPosition
 
   v14 = __readfsqword(0x28u);
   google::protobuf::Message::DebugString(&str);
-  v5 = (*this->_vptr_IProtobufBinding)(this);
+  v5 = this->GetName();
   CFmtStrN<256,false>::CFmtStrN(&v13, "%s\n{\n", v5);
   CUtlString::operator+=(out, v13.m_szBuf);
   CUtlString::operator+=(out, str._M_dataplus._M_p);
@@ -38659,7 +38659,7 @@ const char *__fastcall CNetMessagePB<359,CDOTAClientMsg_KillcamDamageTaken,(Sign
 
   v14 = __readfsqword(0x28u);
   google::protobuf::Message::DebugString(&str);
-  v5 = (*this->_vptr_IProtobufBinding)(this);
+  v5 = this->GetName();
   CFmtStrN<256,false>::CFmtStrN(&v13, "%s\n{\n", v5);
   CUtlString::operator+=(out, v13.m_szBuf);
   CUtlString::operator+=(out, str._M_dataplus._M_p);
@@ -38711,7 +38711,7 @@ const char *__fastcall CNetMessagePB<358,CDOTAClientMsg_SpecialAbility,(SignonGr
 
   v14 = __readfsqword(0x28u);
   google::protobuf::Message::DebugString(&str);
-  v5 = (*this->_vptr_IProtobufBinding)(this);
+  v5 = this->GetName();
   CFmtStrN<256,false>::CFmtStrN(&v13, "%s\n{\n", v5);
   CUtlString::operator+=(out, v13.m_szBuf);
   CUtlString::operator+=(out, str._M_dataplus._M_p);
@@ -38763,7 +38763,7 @@ const char *__fastcall CNetMessagePB<357,CDOTAClientMsg_ToggleAutoattack,(Signon
 
   v14 = __readfsqword(0x28u);
   google::protobuf::Message::DebugString(&str);
-  v5 = (*this->_vptr_IProtobufBinding)(this);
+  v5 = this->GetName();
   CFmtStrN<256,false>::CFmtStrN(&v13, "%s\n{\n", v5);
   CUtlString::operator+=(out, v13.m_szBuf);
   CUtlString::operator+=(out, str._M_dataplus._M_p);
@@ -38815,7 +38815,7 @@ const char *__fastcall CNetMessagePB<356,CDOTAClientMsg_QuestStatus,(SignonGroup
 
   v14 = __readfsqword(0x28u);
   google::protobuf::Message::DebugString(&str);
-  v5 = (*this->_vptr_IProtobufBinding)(this);
+  v5 = this->GetName();
   CFmtStrN<256,false>::CFmtStrN(&v13, "%s\n{\n", v5);
   CUtlString::operator+=(out, v13.m_szBuf);
   CUtlString::operator+=(out, str._M_dataplus._M_p);
@@ -38867,7 +38867,7 @@ const char *__fastcall CNetMessagePB<354,CDOTAClientMsg_MatchMetadata,(SignonGro
 
   v14 = __readfsqword(0x28u);
   google::protobuf::Message::DebugString(&str);
-  v5 = (*this->_vptr_IProtobufBinding)(this);
+  v5 = this->GetName();
   CFmtStrN<256,false>::CFmtStrN(&v13, "%s\n{\n", v5);
   CUtlString::operator+=(out, v13.m_szBuf);
   CUtlString::operator+=(out, str._M_dataplus._M_p);
@@ -38919,7 +38919,7 @@ const char *__fastcall CNetMessagePB<351,CDOTAClientMsg_XPAlert,(SignonGroup_t)1
 
   v14 = __readfsqword(0x28u);
   google::protobuf::Message::DebugString(&str);
-  v5 = (*this->_vptr_IProtobufBinding)(this);
+  v5 = this->GetName();
   CFmtStrN<256,false>::CFmtStrN(&v13, "%s\n{\n", v5);
   CUtlString::operator+=(out, v13.m_szBuf);
   CUtlString::operator+=(out, str._M_dataplus._M_p);
@@ -38971,7 +38971,7 @@ const char *__fastcall CNetMessagePB<350,CDOTAClientMsg_ExecuteOrders,(SignonGro
 
   v14 = __readfsqword(0x28u);
   google::protobuf::Message::DebugString(&str);
-  v5 = (*this->_vptr_IProtobufBinding)(this);
+  v5 = this->GetName();
   CFmtStrN<256,false>::CFmtStrN(&v13, "%s\n{\n", v5);
   CUtlString::operator+=(out, v13.m_szBuf);
   CUtlString::operator+=(out, str._M_dataplus._M_p);
@@ -39023,7 +39023,7 @@ const char *__fastcall CNetMessagePB<353,CDOTAClientMsg_EventPointsTip,(SignonGr
 
   v14 = __readfsqword(0x28u);
   google::protobuf::Message::DebugString(&str);
-  v5 = (*this->_vptr_IProtobufBinding)(this);
+  v5 = this->GetName();
   CFmtStrN<256,false>::CFmtStrN(&v13, "%s\n{\n", v5);
   CUtlString::operator+=(out, v13.m_szBuf);
   CUtlString::operator+=(out, str._M_dataplus._M_p);
@@ -39075,7 +39075,7 @@ const char *__fastcall CNetMessagePB<349,CDOTAClientMsg_CoinWager,(SignonGroup_t
 
   v14 = __readfsqword(0x28u);
   google::protobuf::Message::DebugString(&str);
-  v5 = (*this->_vptr_IProtobufBinding)(this);
+  v5 = this->GetName();
   CFmtStrN<256,false>::CFmtStrN(&v13, "%s\n{\n", v5);
   CUtlString::operator+=(out, v13.m_szBuf);
   CUtlString::operator+=(out, str._M_dataplus._M_p);
@@ -39127,7 +39127,7 @@ const char *__fastcall CNetMessagePB<348,CDOTAClientMsg_ClickedBuff,(SignonGroup
 
   v14 = __readfsqword(0x28u);
   google::protobuf::Message::DebugString(&str);
-  v5 = (*this->_vptr_IProtobufBinding)(this);
+  v5 = this->GetName();
   CFmtStrN<256,false>::CFmtStrN(&v13, "%s\n{\n", v5);
   CUtlString::operator+=(out, v13.m_szBuf);
   CUtlString::operator+=(out, str._M_dataplus._M_p);
@@ -39179,7 +39179,7 @@ const char *__fastcall CNetMessagePB<347,CDOTAClientMsg_ChallengeReroll,(SignonG
 
   v14 = __readfsqword(0x28u);
   google::protobuf::Message::DebugString(&str);
-  v5 = (*this->_vptr_IProtobufBinding)(this);
+  v5 = this->GetName();
   CFmtStrN<256,false>::CFmtStrN(&v13, "%s\n{\n", v5);
   CUtlString::operator+=(out, v13.m_szBuf);
   CUtlString::operator+=(out, str._M_dataplus._M_p);
@@ -39231,7 +39231,7 @@ const char *__fastcall CNetMessagePB<346,CDOTAClientMsg_ChallengeSelect,(SignonG
 
   v14 = __readfsqword(0x28u);
   google::protobuf::Message::DebugString(&str);
-  v5 = (*this->_vptr_IProtobufBinding)(this);
+  v5 = this->GetName();
   CFmtStrN<256,false>::CFmtStrN(&v13, "%s\n{\n", v5);
   CUtlString::operator+=(out, v13.m_szBuf);
   CUtlString::operator+=(out, str._M_dataplus._M_p);
@@ -39283,7 +39283,7 @@ const char *__fastcall CNetMessagePB<343,CDOTAClientMsg_DemoHero,(SignonGroup_t)
 
   v14 = __readfsqword(0x28u);
   google::protobuf::Message::DebugString(&str);
-  v5 = (*this->_vptr_IProtobufBinding)(this);
+  v5 = this->GetName();
   CFmtStrN<256,false>::CFmtStrN(&v13, "%s\n{\n", v5);
   CUtlString::operator+=(out, v13.m_szBuf);
   CUtlString::operator+=(out, str._M_dataplus._M_p);
@@ -39335,7 +39335,7 @@ const char *__fastcall CNetMessagePB<342,CDOTAClientMsg_FillEmptySlotsWithBots,(
 
   v14 = __readfsqword(0x28u);
   google::protobuf::Message::DebugString(&str);
-  v5 = (*this->_vptr_IProtobufBinding)(this);
+  v5 = this->GetName();
   CFmtStrN<256,false>::CFmtStrN(&v13, "%s\n{\n", v5);
   CUtlString::operator+=(out, v13.m_szBuf);
   CUtlString::operator+=(out, str._M_dataplus._M_p);
@@ -39387,7 +39387,7 @@ const char *__fastcall CNetMessagePB<341,CDOTAClientMsg_EventCNY2015Cmd,(SignonG
 
   v14 = __readfsqword(0x28u);
   google::protobuf::Message::DebugString(&str);
-  v5 = (*this->_vptr_IProtobufBinding)(this);
+  v5 = this->GetName();
   CFmtStrN<256,false>::CFmtStrN(&v13, "%s\n{\n", v5);
   CUtlString::operator+=(out, v13.m_szBuf);
   CUtlString::operator+=(out, str._M_dataplus._M_p);
@@ -39439,7 +39439,7 @@ const char *__fastcall CNetMessagePB<338,CDOTAClientMsg_GlyphAlert,(SignonGroup_
 
   v14 = __readfsqword(0x28u);
   google::protobuf::Message::DebugString(&str);
-  v5 = (*this->_vptr_IProtobufBinding)(this);
+  v5 = this->GetName();
   CFmtStrN<256,false>::CFmtStrN(&v13, "%s\n{\n", v5);
   CUtlString::operator+=(out, v13.m_szBuf);
   CUtlString::operator+=(out, str._M_dataplus._M_p);
@@ -39491,7 +39491,7 @@ const char *__fastcall CNetMessagePB<337,CDOTAClientMsg_HPManaAlert,(SignonGroup
 
   v14 = __readfsqword(0x28u);
   google::protobuf::Message::DebugString(&str);
-  v5 = (*this->_vptr_IProtobufBinding)(this);
+  v5 = this->GetName();
   CFmtStrN<256,false>::CFmtStrN(&v13, "%s\n{\n", v5);
   CUtlString::operator+=(out, v13.m_szBuf);
   CUtlString::operator+=(out, str._M_dataplus._M_p);
@@ -39543,7 +39543,7 @@ const char *__fastcall CNetMessagePB<335,CDOTAClientMsg_ModifierAlert,(SignonGro
 
   v14 = __readfsqword(0x28u);
   google::protobuf::Message::DebugString(&str);
-  v5 = (*this->_vptr_IProtobufBinding)(this);
+  v5 = this->GetName();
   CFmtStrN<256,false>::CFmtStrN(&v13, "%s\n{\n", v5);
   CUtlString::operator+=(out, v13.m_szBuf);
   CUtlString::operator+=(out, str._M_dataplus._M_p);
@@ -39595,7 +39595,7 @@ const char *__fastcall CNetMessagePB<334,CDOTAClientMsg_HeroStatueLike,(SignonGr
 
   v14 = __readfsqword(0x28u);
   google::protobuf::Message::DebugString(&str);
-  v5 = (*this->_vptr_IProtobufBinding)(this);
+  v5 = this->GetName();
   CFmtStrN<256,false>::CFmtStrN(&v13, "%s\n{\n", v5);
   CUtlString::operator+=(out, v13.m_szBuf);
   CUtlString::operator+=(out, str._M_dataplus._M_p);
@@ -39647,7 +39647,7 @@ const char *__fastcall CNetMessagePB<333,CDOTAClientMsg_QuickBuyAlert,(SignonGro
 
   v14 = __readfsqword(0x28u);
   google::protobuf::Message::DebugString(&str);
-  v5 = (*this->_vptr_IProtobufBinding)(this);
+  v5 = this->GetName();
   CFmtStrN<256,false>::CFmtStrN(&v13, "%s\n{\n", v5);
   CUtlString::operator+=(out, v13.m_szBuf);
   CUtlString::operator+=(out, str._M_dataplus._M_p);
@@ -39699,7 +39699,7 @@ const char *__fastcall CNetMessagePB<332,CDOTAClientMsg_BuyBackStateAlert,(Signo
 
   v14 = __readfsqword(0x28u);
   google::protobuf::Message::DebugString(&str);
-  v5 = (*this->_vptr_IProtobufBinding)(this);
+  v5 = this->GetName();
   CFmtStrN<256,false>::CFmtStrN(&v13, "%s\n{\n", v5);
   CUtlString::operator+=(out, v13.m_szBuf);
   CUtlString::operator+=(out, str._M_dataplus._M_p);
@@ -39751,7 +39751,7 @@ const char *__fastcall CNetMessagePB<331,CDOTAClientMsg_FreeInventory,(SignonGro
 
   v14 = __readfsqword(0x28u);
   google::protobuf::Message::DebugString(&str);
-  v5 = (*this->_vptr_IProtobufBinding)(this);
+  v5 = this->GetName();
   CFmtStrN<256,false>::CFmtStrN(&v13, "%s\n{\n", v5);
   CUtlString::operator+=(out, v13.m_szBuf);
   CUtlString::operator+=(out, str._M_dataplus._M_p);
@@ -39803,7 +39803,7 @@ const char *__fastcall CNetMessagePB<330,CDOTAClientMsg_EnemyItemAlert,(SignonGr
 
   v14 = __readfsqword(0x28u);
   google::protobuf::Message::DebugString(&str);
-  v5 = (*this->_vptr_IProtobufBinding)(this);
+  v5 = this->GetName();
   CFmtStrN<256,false>::CFmtStrN(&v13, "%s\n{\n", v5);
   CUtlString::operator+=(out, v13.m_szBuf);
   CUtlString::operator+=(out, str._M_dataplus._M_p);
@@ -39855,7 +39855,7 @@ const char *__fastcall CNetMessagePB<329,CDOTAClientMsg_BroadcasterUsingAssisted
 
   v14 = __readfsqword(0x28u);
   google::protobuf::Message::DebugString(&str);
-  v5 = (*this->_vptr_IProtobufBinding)(this);
+  v5 = this->GetName();
   CFmtStrN<256,false>::CFmtStrN(&v13, "%s\n{\n", v5);
   CUtlString::operator+=(out, v13.m_szBuf);
   CUtlString::operator+=(out, str._M_dataplus._M_p);
@@ -39907,7 +39907,7 @@ const char *__fastcall CNetMessagePB<328,CDOTAClientMsg_BroadcasterUsingCamerama
 
   v14 = __readfsqword(0x28u);
   google::protobuf::Message::DebugString(&str);
-  v5 = (*this->_vptr_IProtobufBinding)(this);
+  v5 = this->GetName();
   CFmtStrN<256,false>::CFmtStrN(&v13, "%s\n{\n", v5);
   CUtlString::operator+=(out, v13.m_szBuf);
   CUtlString::operator+=(out, str._M_dataplus._M_p);
@@ -39959,7 +39959,7 @@ const char *__fastcall CNetMessagePB<327,CDOTAClientMsg_CameraZoomAmount,(Signon
 
   v14 = __readfsqword(0x28u);
   google::protobuf::Message::DebugString(&str);
-  v5 = (*this->_vptr_IProtobufBinding)(this);
+  v5 = this->GetName();
   CFmtStrN<256,false>::CFmtStrN(&v13, "%s\n{\n", v5);
   CUtlString::operator+=(out, v13.m_szBuf);
   CUtlString::operator+=(out, str._M_dataplus._M_p);
@@ -40011,7 +40011,7 @@ const char *__fastcall CNetMessagePB<326,CDOTAClientMsg_TeleportRequiresHalt,(Si
 
   v14 = __readfsqword(0x28u);
   google::protobuf::Message::DebugString(&str);
-  v5 = (*this->_vptr_IProtobufBinding)(this);
+  v5 = this->GetName();
   CFmtStrN<256,false>::CFmtStrN(&v13, "%s\n{\n", v5);
   CUtlString::operator+=(out, v13.m_szBuf);
   CUtlString::operator+=(out, str._M_dataplus._M_p);
@@ -40063,7 +40063,7 @@ const char *__fastcall CNetMessagePB<325,CDOTAClientMsg_PlayerShowCase,(SignonGr
 
   v14 = __readfsqword(0x28u);
   google::protobuf::Message::DebugString(&str);
-  v5 = (*this->_vptr_IProtobufBinding)(this);
+  v5 = this->GetName();
   CFmtStrN<256,false>::CFmtStrN(&v13, "%s\n{\n", v5);
   CUtlString::operator+=(out, v13.m_szBuf);
   CUtlString::operator+=(out, str._M_dataplus._M_p);
@@ -40115,7 +40115,7 @@ const char *__fastcall CNetMessagePB<324,CDOTAClientMsg_WillPurchaseAlert,(Signo
 
   v14 = __readfsqword(0x28u);
   google::protobuf::Message::DebugString(&str);
-  v5 = (*this->_vptr_IProtobufBinding)(this);
+  v5 = this->GetName();
   CFmtStrN<256,false>::CFmtStrN(&v13, "%s\n{\n", v5);
   CUtlString::operator+=(out, v13.m_szBuf);
   CUtlString::operator+=(out, str._M_dataplus._M_p);
@@ -40167,7 +40167,7 @@ const char *__fastcall CNetMessagePB<322,CDOTAClientMsg_RecordVote,(SignonGroup_
 
   v14 = __readfsqword(0x28u);
   google::protobuf::Message::DebugString(&str);
-  v5 = (*this->_vptr_IProtobufBinding)(this);
+  v5 = this->GetName();
   CFmtStrN<256,false>::CFmtStrN(&v13, "%s\n{\n", v5);
   CUtlString::operator+=(out, v13.m_szBuf);
   CUtlString::operator+=(out, str._M_dataplus._M_p);
@@ -40219,7 +40219,7 @@ const char *__fastcall CNetMessagePB<319,CDOTAClientMsg_UpdateQuickBuy,(SignonGr
 
   v14 = __readfsqword(0x28u);
   google::protobuf::Message::DebugString(&str);
-  v5 = (*this->_vptr_IProtobufBinding)(this);
+  v5 = this->GetName();
   CFmtStrN<256,false>::CFmtStrN(&v13, "%s\n{\n", v5);
   CUtlString::operator+=(out, v13.m_szBuf);
   CUtlString::operator+=(out, str._M_dataplus._M_p);
@@ -40271,7 +40271,7 @@ const char *__fastcall CNetMessagePB<318,CDOTAClientMsg_BeginLastHitChallenge,(S
 
   v14 = __readfsqword(0x28u);
   google::protobuf::Message::DebugString(&str);
-  v5 = (*this->_vptr_IProtobufBinding)(this);
+  v5 = this->GetName();
   CFmtStrN<256,false>::CFmtStrN(&v13, "%s\n{\n", v5);
   CUtlString::operator+=(out, v13.m_szBuf);
   CUtlString::operator+=(out, str._M_dataplus._M_p);
@@ -40323,7 +40323,7 @@ const char *__fastcall CNetMessagePB<317,CDOTAClientMsg_SendStatPopup,(SignonGro
 
   v14 = __readfsqword(0x28u);
   google::protobuf::Message::DebugString(&str);
-  v5 = (*this->_vptr_IProtobufBinding)(this);
+  v5 = this->GetName();
   CFmtStrN<256,false>::CFmtStrN(&v13, "%s\n{\n", v5);
   CUtlString::operator+=(out, v13.m_szBuf);
   CUtlString::operator+=(out, str._M_dataplus._M_p);
@@ -40375,7 +40375,7 @@ const char *__fastcall CNetMessagePB<316,CDOTAClientMsg_ChatWheel,(SignonGroup_t
 
   v14 = __readfsqword(0x28u);
   google::protobuf::Message::DebugString(&str);
-  v5 = (*this->_vptr_IProtobufBinding)(this);
+  v5 = this->GetName();
   CFmtStrN<256,false>::CFmtStrN(&v13, "%s\n{\n", v5);
   CUtlString::operator+=(out, v13.m_szBuf);
   CUtlString::operator+=(out, str._M_dataplus._M_p);
@@ -40427,7 +40427,7 @@ const char *__fastcall CNetMessagePB<315,CDOTAClientMsg_ItemAlert,(SignonGroup_t
 
   v14 = __readfsqword(0x28u);
   google::protobuf::Message::DebugString(&str);
-  v5 = (*this->_vptr_IProtobufBinding)(this);
+  v5 = this->GetName();
   CFmtStrN<256,false>::CFmtStrN(&v13, "%s\n{\n", v5);
   CUtlString::operator+=(out, v13.m_szBuf);
   CUtlString::operator+=(out, str._M_dataplus._M_p);
@@ -40479,7 +40479,7 @@ const char *__fastcall CNetMessagePB<314,CDOTAClientMsg_RequestGraphUpdate,(Sign
 
   v14 = __readfsqword(0x28u);
   google::protobuf::Message::DebugString(&str);
-  v5 = (*this->_vptr_IProtobufBinding)(this);
+  v5 = this->GetName();
   CFmtStrN<256,false>::CFmtStrN(&v13, "%s\n{\n", v5);
   CUtlString::operator+=(out, v13.m_szBuf);
   CUtlString::operator+=(out, str._M_dataplus._M_p);
@@ -40531,7 +40531,7 @@ const char *__fastcall CNetMessagePB<313,CDOTAClientMsg_WorldLine,(SignonGroup_t
 
   v14 = __readfsqword(0x28u);
   google::protobuf::Message::DebugString(&str);
-  v5 = (*this->_vptr_IProtobufBinding)(this);
+  v5 = this->GetName();
   CFmtStrN<256,false>::CFmtStrN(&v13, "%s\n{\n", v5);
   CUtlString::operator+=(out, v13.m_szBuf);
   CUtlString::operator+=(out, str._M_dataplus._M_p);
@@ -40583,7 +40583,7 @@ const char *__fastcall CNetMessagePB<312,CDOTAClientMsg_SwapAccept,(SignonGroup_
 
   v14 = __readfsqword(0x28u);
   google::protobuf::Message::DebugString(&str);
-  v5 = (*this->_vptr_IProtobufBinding)(this);
+  v5 = this->GetName();
   CFmtStrN<256,false>::CFmtStrN(&v13, "%s\n{\n", v5);
   CUtlString::operator+=(out, v13.m_szBuf);
   CUtlString::operator+=(out, str._M_dataplus._M_p);
@@ -40635,7 +40635,7 @@ const char *__fastcall CNetMessagePB<311,CDOTAClientMsg_SwapRequest,(SignonGroup
 
   v14 = __readfsqword(0x28u);
   google::protobuf::Message::DebugString(&str);
-  v5 = (*this->_vptr_IProtobufBinding)(this);
+  v5 = this->GetName();
   CFmtStrN<256,false>::CFmtStrN(&v13, "%s\n{\n", v5);
   CUtlString::operator+=(out, v13.m_szBuf);
   CUtlString::operator+=(out, str._M_dataplus._M_p);
@@ -40687,7 +40687,7 @@ const char *__fastcall CNetMessagePB<310,CDOTAClientMsg_SetUnitShareFlag,(Signon
 
   v14 = __readfsqword(0x28u);
   google::protobuf::Message::DebugString(&str);
-  v5 = (*this->_vptr_IProtobufBinding)(this);
+  v5 = this->GetName();
   CFmtStrN<256,false>::CFmtStrN(&v13, "%s\n{\n", v5);
   CUtlString::operator+=(out, v13.m_szBuf);
   CUtlString::operator+=(out, str._M_dataplus._M_p);
@@ -40739,7 +40739,7 @@ const char *__fastcall CNetMessagePB<309,CDOTAClientMsg_ShopViewMode,(SignonGrou
 
   v14 = __readfsqword(0x28u);
   google::protobuf::Message::DebugString(&str);
-  v5 = (*this->_vptr_IProtobufBinding)(this);
+  v5 = this->GetName();
   CFmtStrN<256,false>::CFmtStrN(&v13, "%s\n{\n", v5);
   CUtlString::operator+=(out, v13.m_szBuf);
   CUtlString::operator+=(out, str._M_dataplus._M_p);
@@ -40791,7 +40791,7 @@ const char *__fastcall CNetMessagePB<308,CDOTAClientMsg_Pause,(SignonGroup_t)14,
 
   v14 = __readfsqword(0x28u);
   google::protobuf::Message::DebugString(&str);
-  v5 = (*this->_vptr_IProtobufBinding)(this);
+  v5 = this->GetName();
   CFmtStrN<256,false>::CFmtStrN(&v13, "%s\n{\n", v5);
   CUtlString::operator+=(out, v13.m_szBuf);
   CUtlString::operator+=(out, str._M_dataplus._M_p);
@@ -40843,7 +40843,7 @@ const char *__fastcall CNetMessagePB<307,CDOTAClientMsg_SearchString,(SignonGrou
 
   v14 = __readfsqword(0x28u);
   google::protobuf::Message::DebugString(&str);
-  v5 = (*this->_vptr_IProtobufBinding)(this);
+  v5 = this->GetName();
   CFmtStrN<256,false>::CFmtStrN(&v13, "%s\n{\n", v5);
   CUtlString::operator+=(out, v13.m_szBuf);
   CUtlString::operator+=(out, str._M_dataplus._M_p);
@@ -40895,7 +40895,7 @@ const char *__fastcall CNetMessagePB<304,CDOTAClientMsg_UnitsAutoAttackMode,(Sig
 
   v14 = __readfsqword(0x28u);
   google::protobuf::Message::DebugString(&str);
-  v5 = (*this->_vptr_IProtobufBinding)(this);
+  v5 = this->GetName();
   CFmtStrN<256,false>::CFmtStrN(&v13, "%s\n{\n", v5);
   CUtlString::operator+=(out, v13.m_szBuf);
   CUtlString::operator+=(out, str._M_dataplus._M_p);
@@ -40947,7 +40947,7 @@ const char *__fastcall CNetMessagePB<303,CDOTAClientMsg_MapPing,(SignonGroup_t)1
 
   v14 = __readfsqword(0x28u);
   google::protobuf::Message::DebugString(&str);
-  v5 = (*this->_vptr_IProtobufBinding)(this);
+  v5 = this->GetName();
   CFmtStrN<256,false>::CFmtStrN(&v13, "%s\n{\n", v5);
   CUtlString::operator+=(out, v13.m_szBuf);
   CUtlString::operator+=(out, str._M_dataplus._M_p);
@@ -40999,7 +40999,7 @@ const char *__fastcall CNetMessagePB<302,CDOTAClientMsg_AspectRatio,(SignonGroup
 
   v14 = __readfsqword(0x28u);
   google::protobuf::Message::DebugString(&str);
-  v5 = (*this->_vptr_IProtobufBinding)(this);
+  v5 = this->GetName();
   CFmtStrN<256,false>::CFmtStrN(&v13, "%s\n{\n", v5);
   CUtlString::operator+=(out, v13.m_szBuf);
   CUtlString::operator+=(out, str._M_dataplus._M_p);
@@ -41051,7 +41051,7 @@ const char *__fastcall CNetMessagePB<301,CDOTAClientMsg_MapLine,(SignonGroup_t)1
 
   v14 = __readfsqword(0x28u);
   google::protobuf::Message::DebugString(&str);
-  v5 = (*this->_vptr_IProtobufBinding)(this);
+  v5 = this->GetName();
   CFmtStrN<256,false>::CFmtStrN(&v13, "%s\n{\n", v5);
   CUtlString::operator+=(out, v13.m_szBuf);
   CUtlString::operator+=(out, str._M_dataplus._M_p);
@@ -41103,7 +41103,7 @@ const char *__fastcall CNetMessagePB<565,CDOTAUserMsg_FlipCoinResult,(SignonGrou
 
   v14 = __readfsqword(0x28u);
   google::protobuf::Message::DebugString(&str);
-  v5 = (*this->_vptr_IProtobufBinding)(this);
+  v5 = this->GetName();
   CFmtStrN<256,false>::CFmtStrN(&v13, "%s\n{\n", v5);
   CUtlString::operator+=(out, v13.m_szBuf);
   CUtlString::operator+=(out, str._M_dataplus._M_p);
@@ -41155,7 +41155,7 @@ const char *__fastcall CNetMessagePB<564,CDOTAUserMsg_RollDiceResult,(SignonGrou
 
   v14 = __readfsqword(0x28u);
   google::protobuf::Message::DebugString(&str);
-  v5 = (*this->_vptr_IProtobufBinding)(this);
+  v5 = this->GetName();
   CFmtStrN<256,false>::CFmtStrN(&v13, "%s\n{\n", v5);
   CUtlString::operator+=(out, v13.m_szBuf);
   CUtlString::operator+=(out, str._M_dataplus._M_p);
@@ -41207,7 +41207,7 @@ const char *__fastcall CNetMessagePB<563,CDOTAUserMsg_SelectPenaltyGold,(SignonG
 
   v14 = __readfsqword(0x28u);
   google::protobuf::Message::DebugString(&str);
-  v5 = (*this->_vptr_IProtobufBinding)(this);
+  v5 = this->GetName();
   CFmtStrN<256,false>::CFmtStrN(&v13, "%s\n{\n", v5);
   CUtlString::operator+=(out, v13.m_szBuf);
   CUtlString::operator+=(out, str._M_dataplus._M_p);
@@ -41259,7 +41259,7 @@ const char *__fastcall CNetMessagePB<562,CDOTAUserMsg_KillcamDamageTaken,(Signon
 
   v14 = __readfsqword(0x28u);
   google::protobuf::Message::DebugString(&str);
-  v5 = (*this->_vptr_IProtobufBinding)(this);
+  v5 = this->GetName();
   CFmtStrN<256,false>::CFmtStrN(&v13, "%s\n{\n", v5);
   CUtlString::operator+=(out, v13.m_szBuf);
   CUtlString::operator+=(out, str._M_dataplus._M_p);
@@ -41311,7 +41311,7 @@ const char *__fastcall CNetMessagePB<561,CDOTAUserMsg_SuggestHeroRole,(SignonGro
 
   v14 = __readfsqword(0x28u);
   google::protobuf::Message::DebugString(&str);
-  v5 = (*this->_vptr_IProtobufBinding)(this);
+  v5 = this->GetName();
   CFmtStrN<256,false>::CFmtStrN(&v13, "%s\n{\n", v5);
   CUtlString::operator+=(out, v13.m_szBuf);
   CUtlString::operator+=(out, str._M_dataplus._M_p);
@@ -41363,7 +41363,7 @@ const char *__fastcall CNetMessagePB<560,CDOTAUserMsg_SuggestHeroPick,(SignonGro
 
   v14 = __readfsqword(0x28u);
   google::protobuf::Message::DebugString(&str);
-  v5 = (*this->_vptr_IProtobufBinding)(this);
+  v5 = this->GetName();
   CFmtStrN<256,false>::CFmtStrN(&v13, "%s\n{\n", v5);
   CUtlString::operator+=(out, v13.m_szBuf);
   CUtlString::operator+=(out, str._M_dataplus._M_p);
@@ -41415,7 +41415,7 @@ const char *__fastcall CNetMessagePB<559,CDOTAUserMsg_QuestStatus,(SignonGroup_t
 
   v14 = __readfsqword(0x28u);
   google::protobuf::Message::DebugString(&str);
-  v5 = (*this->_vptr_IProtobufBinding)(this);
+  v5 = this->GetName();
   CFmtStrN<256,false>::CFmtStrN(&v13, "%s\n{\n", v5);
   CUtlString::operator+=(out, v13.m_szBuf);
   CUtlString::operator+=(out, str._M_dataplus._M_p);
@@ -41467,7 +41467,7 @@ const char *__fastcall CNetMessagePB<558,CMsgDOTAMatch,(SignonGroup_t)13,(NetCha
 
   v14 = __readfsqword(0x28u);
   google::protobuf::Message::DebugString(&str);
-  v5 = (*this->_vptr_IProtobufBinding)(this);
+  v5 = this->GetName();
   CFmtStrN<256,false>::CFmtStrN(&v13, "%s\n{\n", v5);
   CUtlString::operator+=(out, v13.m_szBuf);
   CUtlString::operator+=(out, str._M_dataplus._M_p);
@@ -41519,7 +41519,7 @@ const char *__fastcall CNetMessagePB<557,CDOTAMatchMetadataFile,(SignonGroup_t)1
 
   v14 = __readfsqword(0x28u);
   google::protobuf::Message::DebugString(&str);
-  v5 = (*this->_vptr_IProtobufBinding)(this);
+  v5 = this->GetName();
   CFmtStrN<256,false>::CFmtStrN(&v13, "%s\n{\n", v5);
   CUtlString::operator+=(out, v13.m_szBuf);
   CUtlString::operator+=(out, str._M_dataplus._M_p);
@@ -41571,7 +41571,7 @@ const char *__fastcall CNetMessagePB<556,CDOTAUserMsg_UpdateQuestProgress,(Signo
 
   v14 = __readfsqword(0x28u);
   google::protobuf::Message::DebugString(&str);
-  v5 = (*this->_vptr_IProtobufBinding)(this);
+  v5 = this->GetName();
   CFmtStrN<256,false>::CFmtStrN(&v13, "%s\n{\n", v5);
   CUtlString::operator+=(out, v13.m_szBuf);
   CUtlString::operator+=(out, str._M_dataplus._M_p);
@@ -41623,7 +41623,7 @@ const char *__fastcall CNetMessagePB<555,CDOTAUserMsg_XPAlert,(SignonGroup_t)13,
 
   v14 = __readfsqword(0x28u);
   google::protobuf::Message::DebugString(&str);
-  v5 = (*this->_vptr_IProtobufBinding)(this);
+  v5 = this->GetName();
   CFmtStrN<256,false>::CFmtStrN(&v13, "%s\n{\n", v5);
   CUtlString::operator+=(out, v13.m_szBuf);
   CUtlString::operator+=(out, str._M_dataplus._M_p);
@@ -41675,7 +41675,7 @@ const char *__fastcall CNetMessagePB<554,CMsgDOTACombatLogEntry,(SignonGroup_t)1
 
   v14 = __readfsqword(0x28u);
   google::protobuf::Message::DebugString(&str);
-  v5 = (*this->_vptr_IProtobufBinding)(this);
+  v5 = this->GetName();
   CFmtStrN<256,false>::CFmtStrN(&v13, "%s\n{\n", v5);
   CUtlString::operator+=(out, v13.m_szBuf);
   CUtlString::operator+=(out, str._M_dataplus._M_p);
@@ -41727,7 +41727,7 @@ const char *__fastcall CNetMessagePB<553,CDOTAUserMsg_ProjectionEvent,(SignonGro
 
   v14 = __readfsqword(0x28u);
   google::protobuf::Message::DebugString(&str);
-  v5 = (*this->_vptr_IProtobufBinding)(this);
+  v5 = this->GetName();
   CFmtStrN<256,false>::CFmtStrN(&v13, "%s\n{\n", v5);
   CUtlString::operator+=(out, v13.m_szBuf);
   CUtlString::operator+=(out, str._M_dataplus._M_p);
@@ -41779,7 +41779,7 @@ const char *__fastcall CNetMessagePB<552,CDOTAUserMsg_ProjectionAbility,(SignonG
 
   v14 = __readfsqword(0x28u);
   google::protobuf::Message::DebugString(&str);
-  v5 = (*this->_vptr_IProtobufBinding)(this);
+  v5 = this->GetName();
   CFmtStrN<256,false>::CFmtStrN(&v13, "%s\n{\n", v5);
   CUtlString::operator+=(out, v13.m_szBuf);
   CUtlString::operator+=(out, str._M_dataplus._M_p);
@@ -41831,7 +41831,7 @@ const char *__fastcall CNetMessagePB<551,CDOTAUserMsg_CompendiumState,(SignonGro
 
   v14 = __readfsqword(0x28u);
   google::protobuf::Message::DebugString(&str);
-  v5 = (*this->_vptr_IProtobufBinding)(this);
+  v5 = this->GetName();
   CFmtStrN<256,false>::CFmtStrN(&v13, "%s\n{\n", v5);
   CUtlString::operator+=(out, v13.m_szBuf);
   CUtlString::operator+=(out, str._M_dataplus._M_p);
@@ -41883,7 +41883,7 @@ const char *__fastcall CNetMessagePB<550,CDOTAUserMsg_CustomHudElement_Destroy,(
 
   v14 = __readfsqword(0x28u);
   google::protobuf::Message::DebugString(&str);
-  v5 = (*this->_vptr_IProtobufBinding)(this);
+  v5 = this->GetName();
   CFmtStrN<256,false>::CFmtStrN(&v13, "%s\n{\n", v5);
   CUtlString::operator+=(out, v13.m_szBuf);
   CUtlString::operator+=(out, str._M_dataplus._M_p);
@@ -41935,7 +41935,7 @@ const char *__fastcall CNetMessagePB<549,CBaseCmdKeyValues<CDOTAUserMsg_CustomHu
 
   v14 = __readfsqword(0x28u);
   google::protobuf::Message::DebugString(&str);
-  v5 = (*this->_vptr_IProtobufBinding)(this);
+  v5 = this->GetName();
   CFmtStrN<256,false>::CFmtStrN(&v13, "%s\n{\n", v5);
   CUtlString::operator+=(out, v13.m_szBuf);
   CUtlString::operator+=(out, str._M_dataplus._M_p);
@@ -41987,7 +41987,7 @@ const char *__fastcall CNetMessagePB<548,CBaseCmdKeyValues<CDOTAUserMsg_CustomHu
 
   v14 = __readfsqword(0x28u);
   google::protobuf::Message::DebugString(&str);
-  v5 = (*this->_vptr_IProtobufBinding)(this);
+  v5 = this->GetName();
   CFmtStrN<256,false>::CFmtStrN(&v13, "%s\n{\n", v5);
   CUtlString::operator+=(out, v13.m_szBuf);
   CUtlString::operator+=(out, str._M_dataplus._M_p);
@@ -42039,7 +42039,7 @@ const char *__fastcall CNetMessagePB<547,CDOTAUserMsg_SpectatorPlayerUnitOrders,
 
   v14 = __readfsqword(0x28u);
   google::protobuf::Message::DebugString(&str);
-  v5 = (*this->_vptr_IProtobufBinding)(this);
+  v5 = this->GetName();
   CFmtStrN<256,false>::CFmtStrN(&v13, "%s\n{\n", v5);
   CUtlString::operator+=(out, v13.m_szBuf);
   CUtlString::operator+=(out, str._M_dataplus._M_p);
@@ -42091,7 +42091,7 @@ const char *__fastcall CNetMessagePB<546,CDOTAUserMsg_BeastChat,(SignonGroup_t)1
 
   v14 = __readfsqword(0x28u);
   google::protobuf::Message::DebugString(&str);
-  v5 = (*this->_vptr_IProtobufBinding)(this);
+  v5 = this->GetName();
   CFmtStrN<256,false>::CFmtStrN(&v13, "%s\n{\n", v5);
   CUtlString::operator+=(out, v13.m_szBuf);
   CUtlString::operator+=(out, str._M_dataplus._M_p);
@@ -42143,7 +42143,7 @@ const char *__fastcall CNetMessagePB<545,CDOTAUserMsg_GlyphAlert,(SignonGroup_t)
 
   v14 = __readfsqword(0x28u);
   google::protobuf::Message::DebugString(&str);
-  v5 = (*this->_vptr_IProtobufBinding)(this);
+  v5 = this->GetName();
   CFmtStrN<256,false>::CFmtStrN(&v13, "%s\n{\n", v5);
   CUtlString::operator+=(out, v13.m_szBuf);
   CUtlString::operator+=(out, str._M_dataplus._M_p);
@@ -42195,7 +42195,7 @@ const char *__fastcall CNetMessagePB<544,CDOTAUserMsg_HPManaAlert,(SignonGroup_t
 
   v14 = __readfsqword(0x28u);
   google::protobuf::Message::DebugString(&str);
-  v5 = (*this->_vptr_IProtobufBinding)(this);
+  v5 = this->GetName();
   CFmtStrN<256,false>::CFmtStrN(&v13, "%s\n{\n", v5);
   CUtlString::operator+=(out, v13.m_szBuf);
   CUtlString::operator+=(out, str._M_dataplus._M_p);
@@ -42247,7 +42247,7 @@ const char *__fastcall CNetMessagePB<543,CDOTAUserMsg_ModifierAlert,(SignonGroup
 
   v14 = __readfsqword(0x28u);
   google::protobuf::Message::DebugString(&str);
-  v5 = (*this->_vptr_IProtobufBinding)(this);
+  v5 = this->GetName();
   CFmtStrN<256,false>::CFmtStrN(&v13, "%s\n{\n", v5);
   CUtlString::operator+=(out, v13.m_szBuf);
   CUtlString::operator+=(out, str._M_dataplus._M_p);
@@ -42299,7 +42299,7 @@ const char *__fastcall CNetMessagePB<542,CDOTAUserMsg_PredictionResult,(SignonGr
 
   v14 = __readfsqword(0x28u);
   google::protobuf::Message::DebugString(&str);
-  v5 = (*this->_vptr_IProtobufBinding)(this);
+  v5 = this->GetName();
   CFmtStrN<256,false>::CFmtStrN(&v13, "%s\n{\n", v5);
   CUtlString::operator+=(out, v13.m_szBuf);
   CUtlString::operator+=(out, str._M_dataplus._M_p);
@@ -42351,7 +42351,7 @@ const char *__fastcall CNetMessagePB<541,CMsgCombatAnalyzerStats,(SignonGroup_t)
 
   v14 = __readfsqword(0x28u);
   google::protobuf::Message::DebugString(&str);
-  v5 = (*this->_vptr_IProtobufBinding)(this);
+  v5 = this->GetName();
   CFmtStrN<256,false>::CFmtStrN(&v13, "%s\n{\n", v5);
   CUtlString::operator+=(out, v13.m_szBuf);
   CUtlString::operator+=(out, str._M_dataplus._M_p);
@@ -42403,7 +42403,7 @@ const char *__fastcall CNetMessagePB<540,CDOTAUserMsg_QuickBuyAlert,(SignonGroup
 
   v14 = __readfsqword(0x28u);
   google::protobuf::Message::DebugString(&str);
-  v5 = (*this->_vptr_IProtobufBinding)(this);
+  v5 = this->GetName();
   CFmtStrN<256,false>::CFmtStrN(&v13, "%s\n{\n", v5);
   CUtlString::operator+=(out, v13.m_szBuf);
   CUtlString::operator+=(out, str._M_dataplus._M_p);
@@ -42455,7 +42455,7 @@ const char *__fastcall CNetMessagePB<539,CDOTAUserMsg_CustomHeaderMessage,(Signo
 
   v14 = __readfsqword(0x28u);
   google::protobuf::Message::DebugString(&str);
-  v5 = (*this->_vptr_IProtobufBinding)(this);
+  v5 = this->GetName();
   CFmtStrN<256,false>::CFmtStrN(&v13, "%s\n{\n", v5);
   CUtlString::operator+=(out, v13.m_szBuf);
   CUtlString::operator+=(out, str._M_dataplus._M_p);
@@ -42507,7 +42507,7 @@ const char *__fastcall CNetMessagePB<538,CDOTAUserMsg_SpeechBubble,(SignonGroup_
 
   v14 = __readfsqword(0x28u);
   google::protobuf::Message::DebugString(&str);
-  v5 = (*this->_vptr_IProtobufBinding)(this);
+  v5 = this->GetName();
   CFmtStrN<256,false>::CFmtStrN(&v13, "%s\n{\n", v5);
   CUtlString::operator+=(out, v13.m_szBuf);
   CUtlString::operator+=(out, str._M_dataplus._M_p);
@@ -42559,7 +42559,7 @@ const char *__fastcall CNetMessagePB<537,CDOTAUserMsg_BuyBackStateAlert,(SignonG
 
   v14 = __readfsqword(0x28u);
   google::protobuf::Message::DebugString(&str);
-  v5 = (*this->_vptr_IProtobufBinding)(this);
+  v5 = this->GetName();
   CFmtStrN<256,false>::CFmtStrN(&v13, "%s\n{\n", v5);
   CUtlString::operator+=(out, v13.m_szBuf);
   CUtlString::operator+=(out, str._M_dataplus._M_p);
@@ -42611,7 +42611,7 @@ const char *__fastcall CNetMessagePB<536,CDOTAUserMsg_MiniTaunt,(SignonGroup_t)1
 
   v14 = __readfsqword(0x28u);
   google::protobuf::Message::DebugString(&str);
-  v5 = (*this->_vptr_IProtobufBinding)(this);
+  v5 = this->GetName();
   CFmtStrN<256,false>::CFmtStrN(&v13, "%s\n{\n", v5);
   CUtlString::operator+=(out, v13.m_szBuf);
   CUtlString::operator+=(out, str._M_dataplus._M_p);
@@ -42663,7 +42663,7 @@ const char *__fastcall CNetMessagePB<535,CDOTAUserMsg_StatsMatchDetails,(SignonG
 
   v14 = __readfsqword(0x28u);
   google::protobuf::Message::DebugString(&str);
-  v5 = (*this->_vptr_IProtobufBinding)(this);
+  v5 = this->GetName();
   CFmtStrN<256,false>::CFmtStrN(&v13, "%s\n{\n", v5);
   CUtlString::operator+=(out, v13.m_szBuf);
   CUtlString::operator+=(out, str._M_dataplus._M_p);
@@ -42715,7 +42715,7 @@ const char *__fastcall CNetMessagePB<534,CDOTAUserMsg_EnemyItemAlert,(SignonGrou
 
   v14 = __readfsqword(0x28u);
   google::protobuf::Message::DebugString(&str);
-  v5 = (*this->_vptr_IProtobufBinding)(this);
+  v5 = this->GetName();
   CFmtStrN<256,false>::CFmtStrN(&v13, "%s\n{\n", v5);
   CUtlString::operator+=(out, v13.m_szBuf);
   CUtlString::operator+=(out, str._M_dataplus._M_p);
@@ -42767,7 +42767,7 @@ const char *__fastcall CNetMessagePB<533,CDOTAUserMsg_CourierKilledAlert,(Signon
 
   v14 = __readfsqword(0x28u);
   google::protobuf::Message::DebugString(&str);
-  v5 = (*this->_vptr_IProtobufBinding)(this);
+  v5 = this->GetName();
   CFmtStrN<256,false>::CFmtStrN(&v13, "%s\n{\n", v5);
   CUtlString::operator+=(out, v13.m_szBuf);
   CUtlString::operator+=(out, str._M_dataplus._M_p);
@@ -42819,7 +42819,7 @@ const char *__fastcall CNetMessagePB<532,CDOTAUserMsg_AbilitySteal,(SignonGroup_
 
   v14 = __readfsqword(0x28u);
   google::protobuf::Message::DebugString(&str);
-  v5 = (*this->_vptr_IProtobufBinding)(this);
+  v5 = this->GetName();
   CFmtStrN<256,false>::CFmtStrN(&v13, "%s\n{\n", v5);
   CUtlString::operator+=(out, v13.m_szBuf);
   CUtlString::operator+=(out, str._M_dataplus._M_p);
@@ -42871,7 +42871,7 @@ const char *__fastcall CNetMessagePB<531,CDOTAUserMsg_PlayerMMR,(SignonGroup_t)1
 
   v14 = __readfsqword(0x28u);
   google::protobuf::Message::DebugString(&str);
-  v5 = (*this->_vptr_IProtobufBinding)(this);
+  v5 = this->GetName();
   CFmtStrN<256,false>::CFmtStrN(&v13, "%s\n{\n", v5);
   CUtlString::operator+=(out, v13.m_szBuf);
   CUtlString::operator+=(out, str._M_dataplus._M_p);
@@ -42923,7 +42923,7 @@ const char *__fastcall CNetMessagePB<530,CDOTAUserMsg_TutorialMinimapPosition,(S
 
   v14 = __readfsqword(0x28u);
   google::protobuf::Message::DebugString(&str);
-  v5 = (*this->_vptr_IProtobufBinding)(this);
+  v5 = this->GetName();
   CFmtStrN<256,false>::CFmtStrN(&v13, "%s\n{\n", v5);
   CUtlString::operator+=(out, v13.m_szBuf);
   CUtlString::operator+=(out, str._M_dataplus._M_p);
@@ -42975,7 +42975,7 @@ const char *__fastcall CNetMessagePB<529,CDOTAUserMsg_WillPurchaseAlert,(SignonG
 
   v14 = __readfsqword(0x28u);
   google::protobuf::Message::DebugString(&str);
-  v5 = (*this->_vptr_IProtobufBinding)(this);
+  v5 = this->GetName();
   CFmtStrN<256,false>::CFmtStrN(&v13, "%s\n{\n", v5);
   CUtlString::operator+=(out, v13.m_szBuf);
   CUtlString::operator+=(out, str._M_dataplus._M_p);
@@ -43027,7 +43027,7 @@ const char *__fastcall CNetMessagePB<528,CDOTAUserMsg_BoosterState,(SignonGroup_
 
   v14 = __readfsqword(0x28u);
   google::protobuf::Message::DebugString(&str);
-  v5 = (*this->_vptr_IProtobufBinding)(this);
+  v5 = this->GetName();
   CFmtStrN<256,false>::CFmtStrN(&v13, "%s\n{\n", v5);
   CUtlString::operator+=(out, v13.m_szBuf);
   CUtlString::operator+=(out, str._M_dataplus._M_p);
@@ -43079,7 +43079,7 @@ const char *__fastcall CNetMessagePB<527,CDOTAUserMsg_VoteEnd,(SignonGroup_t)13,
 
   v14 = __readfsqword(0x28u);
   google::protobuf::Message::DebugString(&str);
-  v5 = (*this->_vptr_IProtobufBinding)(this);
+  v5 = this->GetName();
   CFmtStrN<256,false>::CFmtStrN(&v13, "%s\n{\n", v5);
   CUtlString::operator+=(out, v13.m_szBuf);
   CUtlString::operator+=(out, str._M_dataplus._M_p);
@@ -43131,7 +43131,7 @@ const char *__fastcall CNetMessagePB<526,CDOTAUserMsg_VoteUpdate,(SignonGroup_t)
 
   v14 = __readfsqword(0x28u);
   google::protobuf::Message::DebugString(&str);
-  v5 = (*this->_vptr_IProtobufBinding)(this);
+  v5 = this->GetName();
   CFmtStrN<256,false>::CFmtStrN(&v13, "%s\n{\n", v5);
   CUtlString::operator+=(out, v13.m_szBuf);
   CUtlString::operator+=(out, str._M_dataplus._M_p);
@@ -43183,7 +43183,7 @@ const char *__fastcall CNetMessagePB<525,CDOTAUserMsg_VoteStart,(SignonGroup_t)1
 
   v14 = __readfsqword(0x28u);
   google::protobuf::Message::DebugString(&str);
-  v5 = (*this->_vptr_IProtobufBinding)(this);
+  v5 = this->GetName();
   CFmtStrN<256,false>::CFmtStrN(&v13, "%s\n{\n", v5);
   CUtlString::operator+=(out, v13.m_szBuf);
   CUtlString::operator+=(out, str._M_dataplus._M_p);
@@ -43235,7 +43235,7 @@ const char *__fastcall CNetMessagePB<524,CDOTAUserMsg_ShowGenericPopup,(SignonGr
 
   v14 = __readfsqword(0x28u);
   google::protobuf::Message::DebugString(&str);
-  v5 = (*this->_vptr_IProtobufBinding)(this);
+  v5 = this->GetName();
   CFmtStrN<256,false>::CFmtStrN(&v13, "%s\n{\n", v5);
   CUtlString::operator+=(out, v13.m_szBuf);
   CUtlString::operator+=(out, str._M_dataplus._M_p);
@@ -43287,7 +43287,7 @@ const char *__fastcall CNetMessagePB<522,CDOTAUserMsg_TE_UnitAnimationEnd,(Signo
 
   v14 = __readfsqword(0x28u);
   google::protobuf::Message::DebugString(&str);
-  v5 = (*this->_vptr_IProtobufBinding)(this);
+  v5 = this->GetName();
   CFmtStrN<256,false>::CFmtStrN(&v13, "%s\n{\n", v5);
   CUtlString::operator+=(out, v13.m_szBuf);
   CUtlString::operator+=(out, str._M_dataplus._M_p);
@@ -43339,7 +43339,7 @@ const char *__fastcall CNetMessagePB<521,CDOTAUserMsg_TE_UnitAnimation,(SignonGr
 
   v14 = __readfsqword(0x28u);
   google::protobuf::Message::DebugString(&str);
-  v5 = (*this->_vptr_IProtobufBinding)(this);
+  v5 = this->GetName();
   CFmtStrN<256,false>::CFmtStrN(&v13, "%s\n{\n", v5);
   CUtlString::operator+=(out, v13.m_szBuf);
   CUtlString::operator+=(out, str._M_dataplus._M_p);
@@ -43391,7 +43391,7 @@ const char *__fastcall CNetMessagePB<523,CDOTAUserMsg_AbilityPing,(SignonGroup_t
 
   v14 = __readfsqword(0x28u);
   google::protobuf::Message::DebugString(&str);
-  v5 = (*this->_vptr_IProtobufBinding)(this);
+  v5 = this->GetName();
   CFmtStrN<256,false>::CFmtStrN(&v13, "%s\n{\n", v5);
   CUtlString::operator+=(out, v13.m_szBuf);
   CUtlString::operator+=(out, str._M_dataplus._M_p);
@@ -43443,7 +43443,7 @@ const char *__fastcall CNetMessagePB<520,CDOTAUserMsg_TE_DotaBloodImpact,(Signon
 
   v14 = __readfsqword(0x28u);
   google::protobuf::Message::DebugString(&str);
-  v5 = (*this->_vptr_IProtobufBinding)(this);
+  v5 = this->GetName();
   CFmtStrN<256,false>::CFmtStrN(&v13, "%s\n{\n", v5);
   CUtlString::operator+=(out, v13.m_szBuf);
   CUtlString::operator+=(out, str._M_dataplus._M_p);
@@ -43495,7 +43495,7 @@ const char *__fastcall CNetMessagePB<519,CDOTAUserMsg_TE_ProjectileLoc,(SignonGr
 
   v14 = __readfsqword(0x28u);
   google::protobuf::Message::DebugString(&str);
-  v5 = (*this->_vptr_IProtobufBinding)(this);
+  v5 = this->GetName();
   CFmtStrN<256,false>::CFmtStrN(&v13, "%s\n{\n", v5);
   CUtlString::operator+=(out, v13.m_szBuf);
   CUtlString::operator+=(out, str._M_dataplus._M_p);
@@ -43547,7 +43547,7 @@ const char *__fastcall CNetMessagePB<518,CDOTAUserMsg_TE_Projectile,(SignonGroup
 
   v14 = __readfsqword(0x28u);
   google::protobuf::Message::DebugString(&str);
-  v5 = (*this->_vptr_IProtobufBinding)(this);
+  v5 = this->GetName();
   CFmtStrN<256,false>::CFmtStrN(&v13, "%s\n{\n", v5);
   CUtlString::operator+=(out, v13.m_szBuf);
   CUtlString::operator+=(out, str._M_dataplus._M_p);
@@ -43599,7 +43599,7 @@ const char *__fastcall CNetMessagePB<517,CDOTAUserMsg_ClientLoadGridNav,(SignonG
 
   v14 = __readfsqword(0x28u);
   google::protobuf::Message::DebugString(&str);
-  v5 = (*this->_vptr_IProtobufBinding)(this);
+  v5 = this->GetName();
   CFmtStrN<256,false>::CFmtStrN(&v13, "%s\n{\n", v5);
   CUtlString::operator+=(out, v13.m_szBuf);
   CUtlString::operator+=(out, str._M_dataplus._M_p);
@@ -43651,7 +43651,7 @@ const char *__fastcall CNetMessagePB<516,CDOTAUserMsg_CoachHUDPing,(SignonGroup_
 
   v14 = __readfsqword(0x28u);
   google::protobuf::Message::DebugString(&str);
-  v5 = (*this->_vptr_IProtobufBinding)(this);
+  v5 = this->GetName();
   CFmtStrN<256,false>::CFmtStrN(&v13, "%s\n{\n", v5);
   CUtlString::operator+=(out, v13.m_szBuf);
   CUtlString::operator+=(out, str._M_dataplus._M_p);
@@ -43703,7 +43703,7 @@ const char *__fastcall CNetMessagePB<515,CDOTAUserMsg_CustomMsg,(SignonGroup_t)1
 
   v14 = __readfsqword(0x28u);
   google::protobuf::Message::DebugString(&str);
-  v5 = (*this->_vptr_IProtobufBinding)(this);
+  v5 = this->GetName();
   CFmtStrN<256,false>::CFmtStrN(&v13, "%s\n{\n", v5);
   CUtlString::operator+=(out, v13.m_szBuf);
   CUtlString::operator+=(out, str._M_dataplus._M_p);
@@ -43755,7 +43755,7 @@ const char *__fastcall CNetMessagePB<514,CDOTAUserMsg_SendFinalGold,(SignonGroup
 
   v14 = __readfsqword(0x28u);
   google::protobuf::Message::DebugString(&str);
-  v5 = (*this->_vptr_IProtobufBinding)(this);
+  v5 = this->GetName();
   CFmtStrN<256,false>::CFmtStrN(&v13, "%s\n{\n", v5);
   CUtlString::operator+=(out, v13.m_szBuf);
   CUtlString::operator+=(out, str._M_dataplus._M_p);
@@ -43807,7 +43807,7 @@ const char *__fastcall CNetMessagePB<513,CDOTAUserMsg_SendGenericToolTip,(Signon
 
   v14 = __readfsqword(0x28u);
   google::protobuf::Message::DebugString(&str);
-  v5 = (*this->_vptr_IProtobufBinding)(this);
+  v5 = this->GetName();
   CFmtStrN<256,false>::CFmtStrN(&v13, "%s\n{\n", v5);
   CUtlString::operator+=(out, v13.m_szBuf);
   CUtlString::operator+=(out, str._M_dataplus._M_p);
@@ -43859,7 +43859,7 @@ const char *__fastcall CNetMessagePB<512,CDOTAUserMsg_SendRoshanPopup,(SignonGro
 
   v14 = __readfsqword(0x28u);
   google::protobuf::Message::DebugString(&str);
-  v5 = (*this->_vptr_IProtobufBinding)(this);
+  v5 = this->GetName();
   CFmtStrN<256,false>::CFmtStrN(&v13, "%s\n{\n", v5);
   CUtlString::operator+=(out, v13.m_szBuf);
   CUtlString::operator+=(out, str._M_dataplus._M_p);
@@ -43911,7 +43911,7 @@ const char *__fastcall CNetMessagePB<511,CDOTAUserMsg_TutorialFinish,(SignonGrou
 
   v14 = __readfsqword(0x28u);
   google::protobuf::Message::DebugString(&str);
-  v5 = (*this->_vptr_IProtobufBinding)(this);
+  v5 = this->GetName();
   CFmtStrN<256,false>::CFmtStrN(&v13, "%s\n{\n", v5);
   CUtlString::operator+=(out, v13.m_szBuf);
   CUtlString::operator+=(out, str._M_dataplus._M_p);
@@ -43963,7 +43963,7 @@ const char *__fastcall CNetMessagePB<510,CDOTAUserMsg_SendStatPopup,(SignonGroup
 
   v14 = __readfsqword(0x28u);
   google::protobuf::Message::DebugString(&str);
-  v5 = (*this->_vptr_IProtobufBinding)(this);
+  v5 = this->GetName();
   CFmtStrN<256,false>::CFmtStrN(&v13, "%s\n{\n", v5);
   CUtlString::operator+=(out, v13.m_szBuf);
   CUtlString::operator+=(out, str._M_dataplus._M_p);
@@ -44015,7 +44015,7 @@ const char *__fastcall CNetMessagePB<509,CDOTAUserMsg_AddQuestLogEntry,(SignonGr
 
   v14 = __readfsqword(0x28u);
   google::protobuf::Message::DebugString(&str);
-  v5 = (*this->_vptr_IProtobufBinding)(this);
+  v5 = this->GetName();
   CFmtStrN<256,false>::CFmtStrN(&v13, "%s\n{\n", v5);
   CUtlString::operator+=(out, v13.m_szBuf);
   CUtlString::operator+=(out, str._M_dataplus._M_p);
@@ -44067,7 +44067,7 @@ const char *__fastcall CNetMessagePB<508,CDOTAUserMsg_TutorialFade,(SignonGroup_
 
   v14 = __readfsqword(0x28u);
   google::protobuf::Message::DebugString(&str);
-  v5 = (*this->_vptr_IProtobufBinding)(this);
+  v5 = this->GetName();
   CFmtStrN<256,false>::CFmtStrN(&v13, "%s\n{\n", v5);
   CUtlString::operator+=(out, v13.m_szBuf);
   CUtlString::operator+=(out, str._M_dataplus._M_p);
@@ -44119,7 +44119,7 @@ const char *__fastcall CNetMessagePB<507,CDOTAUserMsg_ShowSurvey,(SignonGroup_t)
 
   v14 = __readfsqword(0x28u);
   google::protobuf::Message::DebugString(&str);
-  v5 = (*this->_vptr_IProtobufBinding)(this);
+  v5 = this->GetName();
   CFmtStrN<256,false>::CFmtStrN(&v13, "%s\n{\n", v5);
   CUtlString::operator+=(out, v13.m_szBuf);
   CUtlString::operator+=(out, str._M_dataplus._M_p);
@@ -44171,7 +44171,7 @@ const char *__fastcall CNetMessagePB<506,CDOTAUserMsg_GamerulesStateChanged,(Sig
 
   v14 = __readfsqword(0x28u);
   google::protobuf::Message::DebugString(&str);
-  v5 = (*this->_vptr_IProtobufBinding)(this);
+  v5 = this->GetName();
   CFmtStrN<256,false>::CFmtStrN(&v13, "%s\n{\n", v5);
   CUtlString::operator+=(out, v13.m_szBuf);
   CUtlString::operator+=(out, str._M_dataplus._M_p);
@@ -44223,7 +44223,7 @@ const char *__fastcall CNetMessagePB<505,CDOTAUserMsg_TutorialPingMinimap,(Signo
 
   v14 = __readfsqword(0x28u);
   google::protobuf::Message::DebugString(&str);
-  v5 = (*this->_vptr_IProtobufBinding)(this);
+  v5 = this->GetName();
   CFmtStrN<256,false>::CFmtStrN(&v13, "%s\n{\n", v5);
   CUtlString::operator+=(out, v13.m_szBuf);
   CUtlString::operator+=(out, str._M_dataplus._M_p);
@@ -44275,7 +44275,7 @@ const char *__fastcall CNetMessagePB<504,CDOTAUserMsg_TutorialRequestExp,(Signon
 
   v14 = __readfsqword(0x28u);
   google::protobuf::Message::DebugString(&str);
-  v5 = (*this->_vptr_IProtobufBinding)(this);
+  v5 = this->GetName();
   CFmtStrN<256,false>::CFmtStrN(&v13, "%s\n{\n", v5);
   CUtlString::operator+=(out, v13.m_szBuf);
   CUtlString::operator+=(out, str._M_dataplus._M_p);
@@ -44327,7 +44327,7 @@ const char *__fastcall CNetMessagePB<503,CDOTAUserMsg_UpdateSharedContent,(Signo
 
   v14 = __readfsqword(0x28u);
   google::protobuf::Message::DebugString(&str);
-  v5 = (*this->_vptr_IProtobufBinding)(this);
+  v5 = this->GetName();
   CFmtStrN<256,false>::CFmtStrN(&v13, "%s\n{\n", v5);
   CUtlString::operator+=(out, v13.m_szBuf);
   CUtlString::operator+=(out, str._M_dataplus._M_p);
@@ -44379,7 +44379,7 @@ const char *__fastcall CNetMessagePB<502,CDOTAUserMsg_ReceivedXmasGift,(SignonGr
 
   v14 = __readfsqword(0x28u);
   google::protobuf::Message::DebugString(&str);
-  v5 = (*this->_vptr_IProtobufBinding)(this);
+  v5 = this->GetName();
   CFmtStrN<256,false>::CFmtStrN(&v13, "%s\n{\n", v5);
   CUtlString::operator+=(out, v13.m_szBuf);
   CUtlString::operator+=(out, str._M_dataplus._M_p);
@@ -44431,7 +44431,7 @@ const char *__fastcall CNetMessagePB<501,CDOTAUserMsg_ChatWheel,(SignonGroup_t)1
 
   v14 = __readfsqword(0x28u);
   google::protobuf::Message::DebugString(&str);
-  v5 = (*this->_vptr_IProtobufBinding)(this);
+  v5 = this->GetName();
   CFmtStrN<256,false>::CFmtStrN(&v13, "%s\n{\n", v5);
   CUtlString::operator+=(out, v13.m_szBuf);
   CUtlString::operator+=(out, str._M_dataplus._M_p);
@@ -44483,7 +44483,7 @@ const char *__fastcall CNetMessagePB<500,CDOTAUserMsg_HalloweenDrops,(SignonGrou
 
   v14 = __readfsqword(0x28u);
   google::protobuf::Message::DebugString(&str);
-  v5 = (*this->_vptr_IProtobufBinding)(this);
+  v5 = this->GetName();
   CFmtStrN<256,false>::CFmtStrN(&v13, "%s\n{\n", v5);
   CUtlString::operator+=(out, v13.m_szBuf);
   CUtlString::operator+=(out, str._M_dataplus._M_p);
@@ -44535,7 +44535,7 @@ const char *__fastcall CNetMessagePB<499,CDOTAUserMsg_ItemAlert,(SignonGroup_t)1
 
   v14 = __readfsqword(0x28u);
   google::protobuf::Message::DebugString(&str);
-  v5 = (*this->_vptr_IProtobufBinding)(this);
+  v5 = this->GetName();
   CFmtStrN<256,false>::CFmtStrN(&v13, "%s\n{\n", v5);
   CUtlString::operator+=(out, v13.m_szBuf);
   CUtlString::operator+=(out, str._M_dataplus._M_p);
@@ -44587,7 +44587,7 @@ const char *__fastcall CNetMessagePB<497,CDOTAUserMsg_WorldLine,(SignonGroup_t)1
 
   v14 = __readfsqword(0x28u);
   google::protobuf::Message::DebugString(&str);
-  v5 = (*this->_vptr_IProtobufBinding)(this);
+  v5 = this->GetName();
   CFmtStrN<256,false>::CFmtStrN(&v13, "%s\n{\n", v5);
   CUtlString::operator+=(out, v13.m_szBuf);
   CUtlString::operator+=(out, str._M_dataplus._M_p);
@@ -44639,7 +44639,7 @@ const char *__fastcall CNetMessagePB<496,CDOTAUserMsg_SwapVerify,(SignonGroup_t)
 
   v14 = __readfsqword(0x28u);
   google::protobuf::Message::DebugString(&str);
-  v5 = (*this->_vptr_IProtobufBinding)(this);
+  v5 = this->GetName();
   CFmtStrN<256,false>::CFmtStrN(&v13, "%s\n{\n", v5);
   CUtlString::operator+=(out, v13.m_szBuf);
   CUtlString::operator+=(out, str._M_dataplus._M_p);
@@ -44691,7 +44691,7 @@ const char *__fastcall CNetMessagePB<494,CDOTAUserMsg_ItemFound,(SignonGroup_t)1
 
   v14 = __readfsqword(0x28u);
   google::protobuf::Message::DebugString(&str);
-  v5 = (*this->_vptr_IProtobufBinding)(this);
+  v5 = this->GetName();
   CFmtStrN<256,false>::CFmtStrN(&v13, "%s\n{\n", v5);
   CUtlString::operator+=(out, v13.m_szBuf);
   CUtlString::operator+=(out, str._M_dataplus._M_p);
@@ -44743,7 +44743,7 @@ const char *__fastcall CNetMessagePB<493,CDOTAUserMsg_Ping,(SignonGroup_t)13,(Ne
 
   v14 = __readfsqword(0x28u);
   google::protobuf::Message::DebugString(&str);
-  v5 = (*this->_vptr_IProtobufBinding)(this);
+  v5 = this->GetName();
   CFmtStrN<256,false>::CFmtStrN(&v13, "%s\n{\n", v5);
   CUtlString::operator+=(out, v13.m_szBuf);
   CUtlString::operator+=(out, str._M_dataplus._M_p);
@@ -44795,7 +44795,7 @@ const char *__fastcall CNetMessagePB<492,CDOTAUserMsg_ItemPurchased,(SignonGroup
 
   v14 = __readfsqword(0x28u);
   google::protobuf::Message::DebugString(&str);
-  v5 = (*this->_vptr_IProtobufBinding)(this);
+  v5 = this->GetName();
   CFmtStrN<256,false>::CFmtStrN(&v13, "%s\n{\n", v5);
   CUtlString::operator+=(out, v13.m_szBuf);
   CUtlString::operator+=(out, str._M_dataplus._M_p);
@@ -44847,7 +44847,7 @@ const char *__fastcall CNetMessagePB<491,CDOTAUserMsg_HudError,(SignonGroup_t)13
 
   v14 = __readfsqword(0x28u);
   google::protobuf::Message::DebugString(&str);
-  v5 = (*this->_vptr_IProtobufBinding)(this);
+  v5 = this->GetName();
   CFmtStrN<256,false>::CFmtStrN(&v13, "%s\n{\n", v5);
   CUtlString::operator+=(out, v13.m_szBuf);
   CUtlString::operator+=(out, str._M_dataplus._M_p);
@@ -44899,7 +44899,7 @@ const char *__fastcall CNetMessagePB<490,CDOTAUserMsg_BotChat,(SignonGroup_t)13,
 
   v14 = __readfsqword(0x28u);
   google::protobuf::Message::DebugString(&str);
-  v5 = (*this->_vptr_IProtobufBinding)(this);
+  v5 = this->GetName();
   CFmtStrN<256,false>::CFmtStrN(&v13, "%s\n{\n", v5);
   CUtlString::operator+=(out, v13.m_szBuf);
   CUtlString::operator+=(out, str._M_dataplus._M_p);
@@ -44951,7 +44951,7 @@ const char *__fastcall CNetMessagePB<489,CDOTAUserMsg_ParticleManager,(SignonGro
 
   v14 = __readfsqword(0x28u);
   google::protobuf::Message::DebugString(&str);
-  v5 = (*this->_vptr_IProtobufBinding)(this);
+  v5 = this->GetName();
   CFmtStrN<256,false>::CFmtStrN(&v13, "%s\n{\n", v5);
   CUtlString::operator+=(out, v13.m_szBuf);
   CUtlString::operator+=(out, str._M_dataplus._M_p);
@@ -45003,7 +45003,7 @@ const char *__fastcall CNetMessagePB<488,CDOTAUserMsg_UnitEvent,(SignonGroup_t)1
 
   v14 = __readfsqword(0x28u);
   google::protobuf::Message::DebugString(&str);
-  v5 = (*this->_vptr_IProtobufBinding)(this);
+  v5 = this->GetName();
   CFmtStrN<256,false>::CFmtStrN(&v13, "%s\n{\n", v5);
   CUtlString::operator+=(out, v13.m_szBuf);
   CUtlString::operator+=(out, str._M_dataplus._M_p);
@@ -45055,7 +45055,7 @@ const char *__fastcall CNetMessagePB<487,CDOTAUserMsg_TutorialTipInfo,(SignonGro
 
   v14 = __readfsqword(0x28u);
   google::protobuf::Message::DebugString(&str);
-  v5 = (*this->_vptr_IProtobufBinding)(this);
+  v5 = this->GetName();
   CFmtStrN<256,false>::CFmtStrN(&v13, "%s\n{\n", v5);
   CUtlString::operator+=(out, v13.m_szBuf);
   CUtlString::operator+=(out, str._M_dataplus._M_p);
@@ -45107,7 +45107,7 @@ const char *__fastcall CNetMessagePB<486,CDOTAUserMsg_SpectatorPlayerClick,(Sign
 
   v14 = __readfsqword(0x28u);
   google::protobuf::Message::DebugString(&str);
-  v5 = (*this->_vptr_IProtobufBinding)(this);
+  v5 = this->GetName();
   CFmtStrN<256,false>::CFmtStrN(&v13, "%s\n{\n", v5);
   CUtlString::operator+=(out, v13.m_szBuf);
   CUtlString::operator+=(out, str._M_dataplus._M_p);
@@ -45159,7 +45159,7 @@ const char *__fastcall CNetMessagePB<485,CDOTAUserMsg_SharedCooldown,(SignonGrou
 
   v14 = __readfsqword(0x28u);
   google::protobuf::Message::DebugString(&str);
-  v5 = (*this->_vptr_IProtobufBinding)(this);
+  v5 = this->GetName();
   CFmtStrN<256,false>::CFmtStrN(&v13, "%s\n{\n", v5);
   CUtlString::operator+=(out, v13.m_szBuf);
   CUtlString::operator+=(out, str._M_dataplus._M_p);
@@ -45211,7 +45211,7 @@ const char *__fastcall CNetMessagePB<484,CDOTAUserMsg_SetNextAutobuyItem,(Signon
 
   v14 = __readfsqword(0x28u);
   google::protobuf::Message::DebugString(&str);
-  v5 = (*this->_vptr_IProtobufBinding)(this);
+  v5 = this->GetName();
   CFmtStrN<256,false>::CFmtStrN(&v13, "%s\n{\n", v5);
   CUtlString::operator+=(out, v13.m_szBuf);
   CUtlString::operator+=(out, str._M_dataplus._M_p);
@@ -45263,7 +45263,7 @@ const char *__fastcall CNetMessagePB<483,CDOTAUserMsg_OverheadEvent,(SignonGroup
 
   v14 = __readfsqword(0x28u);
   google::protobuf::Message::DebugString(&str);
-  v5 = (*this->_vptr_IProtobufBinding)(this);
+  v5 = this->GetName();
   CFmtStrN<256,false>::CFmtStrN(&v13, "%s\n{\n", v5);
   CUtlString::operator+=(out, v13.m_szBuf);
   CUtlString::operator+=(out, str._M_dataplus._M_p);
@@ -45315,7 +45315,7 @@ const char *__fastcall CNetMessagePB<482,CDOTAUserMsg_NevermoreRequiem,(SignonGr
 
   v14 = __readfsqword(0x28u);
   google::protobuf::Message::DebugString(&str);
-  v5 = (*this->_vptr_IProtobufBinding)(this);
+  v5 = this->GetName();
   CFmtStrN<256,false>::CFmtStrN(&v13, "%s\n{\n", v5);
   CUtlString::operator+=(out, v13.m_szBuf);
   CUtlString::operator+=(out, str._M_dataplus._M_p);
@@ -45367,7 +45367,7 @@ const char *__fastcall CNetMessagePB<481,CDOTAUserMsg_MinimapEvent,(SignonGroup_
 
   v14 = __readfsqword(0x28u);
   google::protobuf::Message::DebugString(&str);
-  v5 = (*this->_vptr_IProtobufBinding)(this);
+  v5 = this->GetName();
   CFmtStrN<256,false>::CFmtStrN(&v13, "%s\n{\n", v5);
   CUtlString::operator+=(out, v13.m_szBuf);
   CUtlString::operator+=(out, str._M_dataplus._M_p);
@@ -45419,7 +45419,7 @@ const char *__fastcall CNetMessagePB<480,CDOTAUserMsg_MinimapDebugPoint,(SignonG
 
   v14 = __readfsqword(0x28u);
   google::protobuf::Message::DebugString(&str);
-  v5 = (*this->_vptr_IProtobufBinding)(this);
+  v5 = this->GetName();
   CFmtStrN<256,false>::CFmtStrN(&v13, "%s\n{\n", v5);
   CUtlString::operator+=(out, v13.m_szBuf);
   CUtlString::operator+=(out, str._M_dataplus._M_p);
@@ -45471,7 +45471,7 @@ const char *__fastcall CNetMessagePB<479,CDOTAUserMsg_MiniKillCamInfo,(SignonGro
 
   v14 = __readfsqword(0x28u);
   google::protobuf::Message::DebugString(&str);
-  v5 = (*this->_vptr_IProtobufBinding)(this);
+  v5 = this->GetName();
   CFmtStrN<256,false>::CFmtStrN(&v13, "%s\n{\n", v5);
   CUtlString::operator+=(out, v13.m_szBuf);
   CUtlString::operator+=(out, str._M_dataplus._M_p);
@@ -45523,7 +45523,7 @@ const char *__fastcall CNetMessagePB<478,CDOTAUserMsg_MapLine,(SignonGroup_t)13,
 
   v14 = __readfsqword(0x28u);
   google::protobuf::Message::DebugString(&str);
-  v5 = (*this->_vptr_IProtobufBinding)(this);
+  v5 = this->GetName();
   CFmtStrN<256,false>::CFmtStrN(&v13, "%s\n{\n", v5);
   CUtlString::operator+=(out, v13.m_szBuf);
   CUtlString::operator+=(out, str._M_dataplus._M_p);
@@ -45575,7 +45575,7 @@ const char *__fastcall CNetMessagePB<477,CDOTAUserMsg_LocationPing,(SignonGroup_
 
   v14 = __readfsqword(0x28u);
   google::protobuf::Message::DebugString(&str);
-  v5 = (*this->_vptr_IProtobufBinding)(this);
+  v5 = this->GetName();
   CFmtStrN<256,false>::CFmtStrN(&v13, "%s\n{\n", v5);
   CUtlString::operator+=(out, v13.m_szBuf);
   CUtlString::operator+=(out, str._M_dataplus._M_p);
@@ -45627,7 +45627,7 @@ const char *__fastcall CNetMessagePB<476,CDOTAUserMsg_InvalidCommand,(SignonGrou
 
   v14 = __readfsqword(0x28u);
   google::protobuf::Message::DebugString(&str);
-  v5 = (*this->_vptr_IProtobufBinding)(this);
+  v5 = this->GetName();
   CFmtStrN<256,false>::CFmtStrN(&v13, "%s\n{\n", v5);
   CUtlString::operator+=(out, v13.m_szBuf);
   CUtlString::operator+=(out, str._M_dataplus._M_p);
@@ -45679,7 +45679,7 @@ const char *__fastcall CNetMessagePB<475,CDOTAUserMsg_GlobalLightDirection,(Sign
 
   v14 = __readfsqword(0x28u);
   google::protobuf::Message::DebugString(&str);
-  v5 = (*this->_vptr_IProtobufBinding)(this);
+  v5 = this->GetName();
   CFmtStrN<256,false>::CFmtStrN(&v13, "%s\n{\n", v5);
   CUtlString::operator+=(out, v13.m_szBuf);
   CUtlString::operator+=(out, str._M_dataplus._M_p);
@@ -45731,7 +45731,7 @@ const char *__fastcall CNetMessagePB<474,CDOTAUserMsg_GlobalLightColor,(SignonGr
 
   v14 = __readfsqword(0x28u);
   google::protobuf::Message::DebugString(&str);
-  v5 = (*this->_vptr_IProtobufBinding)(this);
+  v5 = this->GetName();
   CFmtStrN<256,false>::CFmtStrN(&v13, "%s\n{\n", v5);
   CUtlString::operator+=(out, v13.m_szBuf);
   CUtlString::operator+=(out, str._M_dataplus._M_p);
@@ -45783,7 +45783,7 @@ const char *__fastcall CNetMessagePB<473,CDOTAUserMsg_DodgeTrackingProjectiles,(
 
   v14 = __readfsqword(0x28u);
   google::protobuf::Message::DebugString(&str);
-  v5 = (*this->_vptr_IProtobufBinding)(this);
+  v5 = this->GetName();
   CFmtStrN<256,false>::CFmtStrN(&v13, "%s\n{\n", v5);
   CUtlString::operator+=(out, v13.m_szBuf);
   CUtlString::operator+=(out, str._M_dataplus._M_p);
@@ -45835,7 +45835,7 @@ const char *__fastcall CNetMessagePB<472,CDOTAUserMsg_DestroyLinearProjectile,(S
 
   v14 = __readfsqword(0x28u);
   google::protobuf::Message::DebugString(&str);
-  v5 = (*this->_vptr_IProtobufBinding)(this);
+  v5 = this->GetName();
   CFmtStrN<256,false>::CFmtStrN(&v13, "%s\n{\n", v5);
   CUtlString::operator+=(out, v13.m_szBuf);
   CUtlString::operator+=(out, str._M_dataplus._M_p);
@@ -45887,7 +45887,7 @@ const char *__fastcall CNetMessagePB<471,CDOTAUserMsg_CreateLinearProjectile,(Si
 
   v14 = __readfsqword(0x28u);
   google::protobuf::Message::DebugString(&str);
-  v5 = (*this->_vptr_IProtobufBinding)(this);
+  v5 = this->GetName();
   CFmtStrN<256,false>::CFmtStrN(&v13, "%s\n{\n", v5);
   CUtlString::operator+=(out, v13.m_szBuf);
   CUtlString::operator+=(out, str._M_dataplus._M_p);
@@ -45939,7 +45939,7 @@ const char *__fastcall CNetMessagePB<470,CDOTAUserMsg_CombatLogShowDeath,(Signon
 
   v14 = __readfsqword(0x28u);
   google::protobuf::Message::DebugString(&str);
-  v5 = (*this->_vptr_IProtobufBinding)(this);
+  v5 = this->GetName();
   CFmtStrN<256,false>::CFmtStrN(&v13, "%s\n{\n", v5);
   CUtlString::operator+=(out, v13.m_szBuf);
   CUtlString::operator+=(out, str._M_dataplus._M_p);
@@ -45991,7 +45991,7 @@ const char *__fastcall CNetMessagePB<468,CMsgDOTACombatLogEntry,(SignonGroup_t)1
 
   v14 = __readfsqword(0x28u);
   google::protobuf::Message::DebugString(&str);
-  v5 = (*this->_vptr_IProtobufBinding)(this);
+  v5 = this->GetName();
   CFmtStrN<256,false>::CFmtStrN(&v13, "%s\n{\n", v5);
   CUtlString::operator+=(out, v13.m_szBuf);
   CUtlString::operator+=(out, str._M_dataplus._M_p);
@@ -46043,7 +46043,7 @@ const char *__fastcall CNetMessagePB<467,CDOTAUserMsg_CombatHeroPositions,(Signo
 
   v14 = __readfsqword(0x28u);
   google::protobuf::Message::DebugString(&str);
-  v5 = (*this->_vptr_IProtobufBinding)(this);
+  v5 = this->GetName();
   CFmtStrN<256,false>::CFmtStrN(&v13, "%s\n{\n", v5);
   CUtlString::operator+=(out, v13.m_szBuf);
   CUtlString::operator+=(out, str._M_dataplus._M_p);
@@ -46095,7 +46095,7 @@ const char *__fastcall CNetMessagePB<466,CDOTAUserMsg_ChatEvent,(SignonGroup_t)1
 
   v14 = __readfsqword(0x28u);
   google::protobuf::Message::DebugString(&str);
-  v5 = (*this->_vptr_IProtobufBinding)(this);
+  v5 = this->GetName();
   CFmtStrN<256,false>::CFmtStrN(&v13, "%s\n{\n", v5);
   CUtlString::operator+=(out, v13.m_szBuf);
   CUtlString::operator+=(out, str._M_dataplus._M_p);
@@ -46147,7 +46147,7 @@ const char *__fastcall CNetMessagePB<465,CDOTAUserMsg_AIDebugLine,(SignonGroup_t
 
   v14 = __readfsqword(0x28u);
   google::protobuf::Message::DebugString(&str);
-  v5 = (*this->_vptr_IProtobufBinding)(this);
+  v5 = this->GetName();
   CFmtStrN<256,false>::CFmtStrN(&v13, "%s\n{\n", v5);
   CUtlString::operator+=(out, v13.m_szBuf);
   CUtlString::operator+=(out, str._M_dataplus._M_p);
@@ -46199,7 +46199,7 @@ const char *__fastcall CNetMessagePB<-1,ToolEvent_SFMRecordingStateChanged,(Sign
 
   v14 = __readfsqword(0x28u);
   google::protobuf::Message::DebugString(&str);
-  v5 = (*this->_vptr_IProtobufBinding)(this);
+  v5 = this->GetName();
   CFmtStrN<256,false>::CFmtStrN(&v13, "%s\n{\n", v5);
   CUtlString::operator+=(out, v13.m_szBuf);
   CUtlString::operator+=(out, str._M_dataplus._M_p);
@@ -46251,7 +46251,7 @@ const char *__fastcall CNetMessagePB<211,CMsgSosSetLibraryStackFields,(SignonGro
 
   v14 = __readfsqword(0x28u);
   google::protobuf::Message::DebugString(&str);
-  v5 = (*this->_vptr_IProtobufBinding)(this);
+  v5 = this->GetName();
   CFmtStrN<256,false>::CFmtStrN(&v13, "%s\n{\n", v5);
   CUtlString::operator+=(out, v13.m_szBuf);
   CUtlString::operator+=(out, str._M_dataplus._M_p);
@@ -46303,7 +46303,7 @@ const char *__fastcall CNetMessagePB<210,CMsgSosSetSoundEventParams,(SignonGroup
 
   v14 = __readfsqword(0x28u);
   google::protobuf::Message::DebugString(&str);
-  v5 = (*this->_vptr_IProtobufBinding)(this);
+  v5 = this->GetName();
   CFmtStrN<256,false>::CFmtStrN(&v13, "%s\n{\n", v5);
   CUtlString::operator+=(out, v13.m_szBuf);
   CUtlString::operator+=(out, str._M_dataplus._M_p);
@@ -46355,7 +46355,7 @@ const char *__fastcall CNetMessagePB<212,CMsgSosStopSoundEventHash,(SignonGroup_
 
   v14 = __readfsqword(0x28u);
   google::protobuf::Message::DebugString(&str);
-  v5 = (*this->_vptr_IProtobufBinding)(this);
+  v5 = this->GetName();
   CFmtStrN<256,false>::CFmtStrN(&v13, "%s\n{\n", v5);
   CUtlString::operator+=(out, v13.m_szBuf);
   CUtlString::operator+=(out, str._M_dataplus._M_p);
@@ -46407,7 +46407,7 @@ const char *__fastcall CNetMessagePB<209,CMsgSosStopSoundEvent,(SignonGroup_t)4,
 
   v14 = __readfsqword(0x28u);
   google::protobuf::Message::DebugString(&str);
-  v5 = (*this->_vptr_IProtobufBinding)(this);
+  v5 = this->GetName();
   CFmtStrN<256,false>::CFmtStrN(&v13, "%s\n{\n", v5);
   CUtlString::operator+=(out, v13.m_szBuf);
   CUtlString::operator+=(out, str._M_dataplus._M_p);
@@ -46459,7 +46459,7 @@ const char *__fastcall CNetMessagePB<208,CMsgSosStartSoundEvent,(SignonGroup_t)4
 
   v14 = __readfsqword(0x28u);
   google::protobuf::Message::DebugString(&str);
-  v5 = (*this->_vptr_IProtobufBinding)(this);
+  v5 = this->GetName();
   CFmtStrN<256,false>::CFmtStrN(&v13, "%s\n{\n", v5);
   CUtlString::operator+=(out, v13.m_szBuf);
   CUtlString::operator+=(out, str._M_dataplus._M_p);
@@ -46511,7 +46511,7 @@ const char *__fastcall CNetMessagePB<204,CMsgClearDecalsForSkeletonInstanceEvent
 
   v14 = __readfsqword(0x28u);
   google::protobuf::Message::DebugString(&str);
-  v5 = (*this->_vptr_IProtobufBinding)(this);
+  v5 = this->GetName();
   CFmtStrN<256,false>::CFmtStrN(&v13, "%s\n{\n", v5);
   CUtlString::operator+=(out, v13.m_szBuf);
   CUtlString::operator+=(out, str._M_dataplus._M_p);
@@ -46563,7 +46563,7 @@ const char *__fastcall CNetMessagePB<203,CMsgClearEntityDecalsEvent,(SignonGroup
 
   v14 = __readfsqword(0x28u);
   google::protobuf::Message::DebugString(&str);
-  v5 = (*this->_vptr_IProtobufBinding)(this);
+  v5 = this->GetName();
   CFmtStrN<256,false>::CFmtStrN(&v13, "%s\n{\n", v5);
   CUtlString::operator+=(out, v13.m_szBuf);
   CUtlString::operator+=(out, str._M_dataplus._M_p);
@@ -46615,7 +46615,7 @@ const char *__fastcall CNetMessagePB<202,CMsgClearWorldDecalsEvent,(SignonGroup_
 
   v14 = __readfsqword(0x28u);
   google::protobuf::Message::DebugString(&str);
-  v5 = (*this->_vptr_IProtobufBinding)(this);
+  v5 = this->GetName();
   CFmtStrN<256,false>::CFmtStrN(&v13, "%s\n{\n", v5);
   CUtlString::operator+=(out, v13.m_szBuf);
   CUtlString::operator+=(out, str._M_dataplus._M_p);
@@ -46667,7 +46667,7 @@ const char *__fastcall CNetMessagePB<201,CMsgPlaceDecalEvent,(SignonGroup_t)12,(
 
   v14 = __readfsqword(0x28u);
   google::protobuf::Message::DebugString(&str);
-  v5 = (*this->_vptr_IProtobufBinding)(this);
+  v5 = this->GetName();
   CFmtStrN<256,false>::CFmtStrN(&v13, "%s\n{\n", v5);
   CUtlString::operator+=(out, v13.m_szBuf);
   CUtlString::operator+=(out, str._M_dataplus._M_p);
@@ -46719,7 +46719,7 @@ const char *__fastcall CNetMessagePB<148,CBaseCmdKeyValues<CUserMsg_CustomGameEv
 
   v14 = __readfsqword(0x28u);
   google::protobuf::Message::DebugString(&str);
-  v5 = (*this->_vptr_IProtobufBinding)(this);
+  v5 = this->GetName();
   CFmtStrN<256,false>::CFmtStrN(&v13, "%s\n{\n", v5);
   CUtlString::operator+=(out, v13.m_szBuf);
   CUtlString::operator+=(out, str._M_dataplus._M_p);
@@ -46771,7 +46771,7 @@ const char *__fastcall CNetMessagePB<280,CBaseCmdKeyValues<CClientMsg_CustomGame
 
   v14 = __readfsqword(0x28u);
   google::protobuf::Message::DebugString(&str);
-  v5 = (*this->_vptr_IProtobufBinding)(this);
+  v5 = this->GetName();
   CFmtStrN<256,false>::CFmtStrN(&v13, "%s\n{\n", v5);
   CUtlString::operator+=(out, v13.m_szBuf);
   CUtlString::operator+=(out, str._M_dataplus._M_p);
@@ -46823,7 +46823,7 @@ const char *__fastcall CNetMessagePB<-1,ToolEvent_SFMToolActiveStateChanged,(Sig
 
   v14 = __readfsqword(0x28u);
   google::protobuf::Message::DebugString(&str);
-  v5 = (*this->_vptr_IProtobufBinding)(this);
+  v5 = this->GetName();
   CFmtStrN<256,false>::CFmtStrN(&v13, "%s\n{\n", v5);
   CUtlString::operator+=(out, v13.m_szBuf);
   CUtlString::operator+=(out, str._M_dataplus._M_p);
@@ -46875,7 +46875,7 @@ const char *__fastcall CNetMessagePB<-1,ToolEvent_FireEntityInput,(SignonGroup_t
 
   v14 = __readfsqword(0x28u);
   google::protobuf::Message::DebugString(&str);
-  v5 = (*this->_vptr_IProtobufBinding)(this);
+  v5 = this->GetName();
   CFmtStrN<256,false>::CFmtStrN(&v13, "%s\n{\n", v5);
   CUtlString::operator+=(out, v13.m_szBuf);
   CUtlString::operator+=(out, str._M_dataplus._M_p);
@@ -46927,7 +46927,7 @@ const char *__fastcall CNetMessagePB<-1,ToolEvent_GetEntityInputsResult,(SignonG
 
   v14 = __readfsqword(0x28u);
   google::protobuf::Message::DebugString(&str);
-  v5 = (*this->_vptr_IProtobufBinding)(this);
+  v5 = this->GetName();
   CFmtStrN<256,false>::CFmtStrN(&v13, "%s\n{\n", v5);
   CUtlString::operator+=(out, v13.m_szBuf);
   CUtlString::operator+=(out, str._M_dataplus._M_p);
@@ -46979,7 +46979,7 @@ const char *__fastcall CNetMessagePB<-1,ToolEvent_GetEntityInputs,(SignonGroup_t
 
   v14 = __readfsqword(0x28u);
   google::protobuf::Message::DebugString(&str);
-  v5 = (*this->_vptr_IProtobufBinding)(this);
+  v5 = this->GetName();
   CFmtStrN<256,false>::CFmtStrN(&v13, "%s\n{\n", v5);
   CUtlString::operator+=(out, v13.m_szBuf);
   CUtlString::operator+=(out, str._M_dataplus._M_p);
@@ -47031,7 +47031,7 @@ const char *__fastcall CNetMessagePB<-1,ToolEvent_GetEntityInfoResult,(SignonGro
 
   v14 = __readfsqword(0x28u);
   google::protobuf::Message::DebugString(&str);
-  v5 = (*this->_vptr_IProtobufBinding)(this);
+  v5 = this->GetName();
   CFmtStrN<256,false>::CFmtStrN(&v13, "%s\n{\n", v5);
   CUtlString::operator+=(out, v13.m_szBuf);
   CUtlString::operator+=(out, str._M_dataplus._M_p);
@@ -47083,7 +47083,7 @@ const char *__fastcall CNetMessagePB<-1,ToolEvent_GetEntityInfo,(SignonGroup_t)1
 
   v14 = __readfsqword(0x28u);
   google::protobuf::Message::DebugString(&str);
-  v5 = (*this->_vptr_IProtobufBinding)(this);
+  v5 = this->GetName();
   CFmtStrN<256,false>::CFmtStrN(&v13, "%s\n{\n", v5);
   CUtlString::operator+=(out, v13.m_szBuf);
   CUtlString::operator+=(out, str._M_dataplus._M_p);
@@ -47135,7 +47135,7 @@ const char *__fastcall CNetMessagePB<-1,RestartMapToolEvent,(SignonGroup_t)11,(N
 
   v14 = __readfsqword(0x28u);
   google::protobuf::Message::DebugString(&str);
-  v5 = (*this->_vptr_IProtobufBinding)(this);
+  v5 = this->GetName();
   CFmtStrN<256,false>::CFmtStrN(&v13, "%s\n{\n", v5);
   CUtlString::operator+=(out, v13.m_szBuf);
   CUtlString::operator+=(out, str._M_dataplus._M_p);
@@ -47187,7 +47187,7 @@ const char *__fastcall CNetMessagePB<-1,DestroyAllEntitiesToolEvent,(SignonGroup
 
   v14 = __readfsqword(0x28u);
   google::protobuf::Message::DebugString(&str);
-  v5 = (*this->_vptr_IProtobufBinding)(this);
+  v5 = this->GetName();
   CFmtStrN<256,false>::CFmtStrN(&v13, "%s\n{\n", v5);
   CUtlString::operator+=(out, v13.m_szBuf);
   CUtlString::operator+=(out, str._M_dataplus._M_p);
@@ -47239,7 +47239,7 @@ const char *__fastcall CNetMessagePB<-1,DestroyEntityToolEvent,(SignonGroup_t)11
 
   v14 = __readfsqword(0x28u);
   google::protobuf::Message::DebugString(&str);
-  v5 = (*this->_vptr_IProtobufBinding)(this);
+  v5 = this->GetName();
   CFmtStrN<256,false>::CFmtStrN(&v13, "%s\n{\n", v5);
   CUtlString::operator+=(out, v13.m_szBuf);
   CUtlString::operator+=(out, str._M_dataplus._M_p);
@@ -47291,7 +47291,7 @@ const char *__fastcall CNetMessagePB<-1,SpawnEntityToolEventResult,(SignonGroup_
 
   v14 = __readfsqword(0x28u);
   google::protobuf::Message::DebugString(&str);
-  v5 = (*this->_vptr_IProtobufBinding)(this);
+  v5 = this->GetName();
   CFmtStrN<256,false>::CFmtStrN(&v13, "%s\n{\n", v5);
   CUtlString::operator+=(out, v13.m_szBuf);
   CUtlString::operator+=(out, str._M_dataplus._M_p);
@@ -47343,7 +47343,7 @@ const char *__fastcall CNetMessagePB<-1,SpawnEntityToolEvent,(SignonGroup_t)11,(
 
   v14 = __readfsqword(0x28u);
   google::protobuf::Message::DebugString(&str);
-  v5 = (*this->_vptr_IProtobufBinding)(this);
+  v5 = this->GetName();
   CFmtStrN<256,false>::CFmtStrN(&v13, "%s\n{\n", v5);
   CUtlString::operator+=(out, v13.m_szBuf);
   CUtlString::operator+=(out, str._M_dataplus._M_p);
@@ -47395,7 +47395,7 @@ const char *__fastcall CNetMessagePB<-1,ToolTraceRayResult,(SignonGroup_t)11,(Ne
 
   v14 = __readfsqword(0x28u);
   google::protobuf::Message::DebugString(&str);
-  v5 = (*this->_vptr_IProtobufBinding)(this);
+  v5 = this->GetName();
   CFmtStrN<256,false>::CFmtStrN(&v13, "%s\n{\n", v5);
   CUtlString::operator+=(out, v13.m_szBuf);
   CUtlString::operator+=(out, str._M_dataplus._M_p);
@@ -47447,7 +47447,7 @@ const char *__fastcall CNetMessagePB<-1,TraceRayServerToolEvent,(SignonGroup_t)1
 
   v14 = __readfsqword(0x28u);
   google::protobuf::Message::DebugString(&str);
-  v5 = (*this->_vptr_IProtobufBinding)(this);
+  v5 = this->GetName();
   CFmtStrN<256,false>::CFmtStrN(&v13, "%s\n{\n", v5);
   CUtlString::operator+=(out, v13.m_szBuf);
   CUtlString::operator+=(out, str._M_dataplus._M_p);
@@ -47499,7 +47499,7 @@ const char *__fastcall CNetMessagePB<207,CMsgSource1LegacyGameEvent,(SignonGroup
 
   v14 = __readfsqword(0x28u);
   google::protobuf::Message::DebugString(&str);
-  v5 = (*this->_vptr_IProtobufBinding)(this);
+  v5 = this->GetName();
   CFmtStrN<256,false>::CFmtStrN(&v13, "%s\n{\n", v5);
   CUtlString::operator+=(out, v13.m_szBuf);
   CUtlString::operator+=(out, str._M_dataplus._M_p);
@@ -47551,7 +47551,7 @@ const char *__fastcall CNetMessagePB<206,CMsgSource1LegacyListenEvents,(SignonGr
 
   v14 = __readfsqword(0x28u);
   google::protobuf::Message::DebugString(&str);
-  v5 = (*this->_vptr_IProtobufBinding)(this);
+  v5 = this->GetName();
   CFmtStrN<256,false>::CFmtStrN(&v13, "%s\n{\n", v5);
   CUtlString::operator+=(out, v13.m_szBuf);
   CUtlString::operator+=(out, str._M_dataplus._M_p);
@@ -47603,7 +47603,7 @@ const char *__fastcall CNetMessagePB<205,CMsgSource1LegacyGameEventList,(SignonG
 
   v14 = __readfsqword(0x28u);
   google::protobuf::Message::DebugString(&str);
-  v5 = (*this->_vptr_IProtobufBinding)(this);
+  v5 = this->GetName();
   CFmtStrN<256,false>::CFmtStrN(&v13, "%s\n{\n", v5);
   CUtlString::operator+=(out, v13.m_szBuf);
   CUtlString::operator+=(out, str._M_dataplus._M_p);
@@ -47655,7 +47655,7 @@ const char *__fastcall CNetMessagePB<146,CUserMsg_HudError,(SignonGroup_t)13,(Ne
 
   v14 = __readfsqword(0x28u);
   google::protobuf::Message::DebugString(&str);
-  v5 = (*this->_vptr_IProtobufBinding)(this);
+  v5 = this->GetName();
   CFmtStrN<256,false>::CFmtStrN(&v13, "%s\n{\n", v5);
   CUtlString::operator+=(out, v13.m_szBuf);
   CUtlString::operator+=(out, str._M_dataplus._M_p);
@@ -47707,7 +47707,7 @@ const char *__fastcall CNetMessagePB<145,CUserMsg_ParticleManager,(SignonGroup_t
 
   v14 = __readfsqword(0x28u);
   google::protobuf::Message::DebugString(&str);
-  v5 = (*this->_vptr_IProtobufBinding)(this);
+  v5 = this->GetName();
   CFmtStrN<256,false>::CFmtStrN(&v13, "%s\n{\n", v5);
   CUtlString::operator+=(out, v13.m_szBuf);
   CUtlString::operator+=(out, str._M_dataplus._M_p);
@@ -47759,7 +47759,7 @@ const char *__fastcall CNetMessagePB<141,CEntityMessageFixAngle,(SignonGroup_t)1
 
   v14 = __readfsqword(0x28u);
   google::protobuf::Message::DebugString(&str);
-  v5 = (*this->_vptr_IProtobufBinding)(this);
+  v5 = this->GetName();
   CFmtStrN<256,false>::CFmtStrN(&v13, "%s\n{\n", v5);
   CUtlString::operator+=(out, v13.m_szBuf);
   CUtlString::operator+=(out, str._M_dataplus._M_p);
@@ -47811,7 +47811,7 @@ const char *__fastcall CNetMessagePB<140,CEntityMessageDoSpark,(SignonGroup_t)13
 
   v14 = __readfsqword(0x28u);
   google::protobuf::Message::DebugString(&str);
-  v5 = (*this->_vptr_IProtobufBinding)(this);
+  v5 = this->GetName();
   CFmtStrN<256,false>::CFmtStrN(&v13, "%s\n{\n", v5);
   CUtlString::operator+=(out, v13.m_szBuf);
   CUtlString::operator+=(out, str._M_dataplus._M_p);
@@ -47863,7 +47863,7 @@ const char *__fastcall CNetMessagePB<139,CEntityMessagePropagateForce,(SignonGro
 
   v14 = __readfsqword(0x28u);
   google::protobuf::Message::DebugString(&str);
-  v5 = (*this->_vptr_IProtobufBinding)(this);
+  v5 = this->GetName();
   CFmtStrN<256,false>::CFmtStrN(&v13, "%s\n{\n", v5);
   CUtlString::operator+=(out, v13.m_szBuf);
   CUtlString::operator+=(out, str._M_dataplus._M_p);
@@ -47915,7 +47915,7 @@ const char *__fastcall CNetMessagePB<138,CEntityMessageRemoveAllDecals,(SignonGr
 
   v14 = __readfsqword(0x28u);
   google::protobuf::Message::DebugString(&str);
-  v5 = (*this->_vptr_IProtobufBinding)(this);
+  v5 = this->GetName();
   CFmtStrN<256,false>::CFmtStrN(&v13, "%s\n{\n", v5);
   CUtlString::operator+=(out, v13.m_szBuf);
   CUtlString::operator+=(out, str._M_dataplus._M_p);
@@ -47967,7 +47967,7 @@ const char *__fastcall CNetMessagePB<137,CEntityMessageScreenOverlay,(SignonGrou
 
   v14 = __readfsqword(0x28u);
   google::protobuf::Message::DebugString(&str);
-  v5 = (*this->_vptr_IProtobufBinding)(this);
+  v5 = this->GetName();
   CFmtStrN<256,false>::CFmtStrN(&v13, "%s\n{\n", v5);
   CUtlString::operator+=(out, v13.m_szBuf);
   CUtlString::operator+=(out, str._M_dataplus._M_p);
@@ -48019,7 +48019,7 @@ const char *__fastcall CNetMessagePB<136,CEntityMessagePlayJingle,(SignonGroup_t
 
   v14 = __readfsqword(0x28u);
   google::protobuf::Message::DebugString(&str);
-  v5 = (*this->_vptr_IProtobufBinding)(this);
+  v5 = this->GetName();
   CFmtStrN<256,false>::CFmtStrN(&v13, "%s\n{\n", v5);
   CUtlString::operator+=(out, v13.m_szBuf);
   CUtlString::operator+=(out, str._M_dataplus._M_p);
@@ -48071,7 +48071,7 @@ const char *__fastcall CNetMessagePB<135,CUserMessageCreditsMsg,(SignonGroup_t)1
 
   v14 = __readfsqword(0x28u);
   google::protobuf::Message::DebugString(&str);
-  v5 = (*this->_vptr_IProtobufBinding)(this);
+  v5 = this->GetName();
   CFmtStrN<256,false>::CFmtStrN(&v13, "%s\n{\n", v5);
   CUtlString::operator+=(out, v13.m_szBuf);
   CUtlString::operator+=(out, str._M_dataplus._M_p);
@@ -48123,7 +48123,7 @@ const char *__fastcall CNetMessagePB<126,CUserMessageTrain,(SignonGroup_t)13,(Ne
 
   v14 = __readfsqword(0x28u);
   google::protobuf::Message::DebugString(&str);
-  v5 = (*this->_vptr_IProtobufBinding)(this);
+  v5 = this->GetName();
   CFmtStrN<256,false>::CFmtStrN(&v13, "%s\n{\n", v5);
   CUtlString::operator+=(out, v13.m_szBuf);
   CUtlString::operator+=(out, str._M_dataplus._M_p);
@@ -48175,7 +48175,7 @@ const char *__fastcall CNetMessagePB<107,CUserMessageGameTitle,(SignonGroup_t)13
 
   v14 = __readfsqword(0x28u);
   google::protobuf::Message::DebugString(&str);
-  v5 = (*this->_vptr_IProtobufBinding)(this);
+  v5 = this->GetName();
   CFmtStrN<256,false>::CFmtStrN(&v13, "%s\n{\n", v5);
   CUtlString::operator+=(out, v13.m_szBuf);
   CUtlString::operator+=(out, str._M_dataplus._M_p);
@@ -48227,7 +48227,7 @@ const char *__fastcall CNetMessagePB<115,CUserMessageResetHUD,(SignonGroup_t)13,
 
   v14 = __readfsqword(0x28u);
   google::protobuf::Message::DebugString(&str);
-  v5 = (*this->_vptr_IProtobufBinding)(this);
+  v5 = this->GetName();
   CFmtStrN<256,false>::CFmtStrN(&v13, "%s\n{\n", v5);
   CUtlString::operator+=(out, v13.m_szBuf);
   CUtlString::operator+=(out, str._M_dataplus._M_p);
@@ -48279,7 +48279,7 @@ const char *__fastcall CNetMessagePB<111,CUserMessageHudText,(SignonGroup_t)13,(
 
   v14 = __readfsqword(0x28u);
   google::protobuf::Message::DebugString(&str);
-  v5 = (*this->_vptr_IProtobufBinding)(this);
+  v5 = this->GetName();
   CFmtStrN<256,false>::CFmtStrN(&v13, "%s\n{\n", v5);
   CUtlString::operator+=(out, v13.m_szBuf);
   CUtlString::operator+=(out, str._M_dataplus._M_p);
@@ -48331,7 +48331,7 @@ const char *__fastcall CNetMessagePB<110,CUserMessageHudMsg,(SignonGroup_t)13,(N
 
   v14 = __readfsqword(0x28u);
   google::protobuf::Message::DebugString(&str);
-  v5 = (*this->_vptr_IProtobufBinding)(this);
+  v5 = this->GetName();
   CFmtStrN<256,false>::CFmtStrN(&v13, "%s\n{\n", v5);
   CUtlString::operator+=(out, v13.m_szBuf);
   CUtlString::operator+=(out, str._M_dataplus._M_p);
@@ -48383,7 +48383,7 @@ const char *__fastcall CNetMessagePB<144,CUserMessageAudioParameter,(SignonGroup
 
   v14 = __readfsqword(0x28u);
   google::protobuf::Message::DebugString(&str);
-  v5 = (*this->_vptr_IProtobufBinding)(this);
+  v5 = this->GetName();
   CFmtStrN<256,false>::CFmtStrN(&v13, "%s\n{\n", v5);
   CUtlString::operator+=(out, v13.m_szBuf);
   CUtlString::operator+=(out, str._M_dataplus._M_p);
@@ -48435,7 +48435,7 @@ const char *__fastcall CNetMessagePB<149,CUserMessageHapticPulse,(SignonGroup_t)
 
   v14 = __readfsqword(0x28u);
   google::protobuf::Message::DebugString(&str);
-  v5 = (*this->_vptr_IProtobufBinding)(this);
+  v5 = this->GetName();
   CFmtStrN<256,false>::CFmtStrN(&v13, "%s\n{\n", v5);
   CUtlString::operator+=(out, v13.m_szBuf);
   CUtlString::operator+=(out, str._M_dataplus._M_p);
@@ -48487,7 +48487,7 @@ const char *__fastcall CNetMessagePB<143,CUserMessageCameraTransition,(SignonGro
 
   v14 = __readfsqword(0x28u);
   google::protobuf::Message::DebugString(&str);
-  v5 = (*this->_vptr_IProtobufBinding)(this);
+  v5 = this->GetName();
   CFmtStrN<256,false>::CFmtStrN(&v13, "%s\n{\n", v5);
   CUtlString::operator+=(out, v13.m_szBuf);
   CUtlString::operator+=(out, str._M_dataplus._M_p);
@@ -48539,7 +48539,7 @@ const char *__fastcall CNetMessagePB<142,CUserMessageCloseCaptionPlaceholder,(Si
 
   v14 = __readfsqword(0x28u);
   google::protobuf::Message::DebugString(&str);
-  v5 = (*this->_vptr_IProtobufBinding)(this);
+  v5 = this->GetName();
   CFmtStrN<256,false>::CFmtStrN(&v13, "%s\n{\n", v5);
   CUtlString::operator+=(out, v13.m_szBuf);
   CUtlString::operator+=(out, str._M_dataplus._M_p);
@@ -48591,7 +48591,7 @@ const char *__fastcall CNetMessagePB<103,CUserMessageCloseCaptionDirect,(SignonG
 
   v14 = __readfsqword(0x28u);
   google::protobuf::Message::DebugString(&str);
-  v5 = (*this->_vptr_IProtobufBinding)(this);
+  v5 = this->GetName();
   CFmtStrN<256,false>::CFmtStrN(&v13, "%s\n{\n", v5);
   CUtlString::operator+=(out, v13.m_szBuf);
   CUtlString::operator+=(out, str._M_dataplus._M_p);
@@ -48643,7 +48643,7 @@ const char *__fastcall CNetMessagePB<102,CUserMessageCloseCaption,(SignonGroup_t
 
   v14 = __readfsqword(0x28u);
   google::protobuf::Message::DebugString(&str);
-  v5 = (*this->_vptr_IProtobufBinding)(this);
+  v5 = this->GetName();
   CFmtStrN<256,false>::CFmtStrN(&v13, "%s\n{\n", v5);
   CUtlString::operator+=(out, v13.m_szBuf);
   CUtlString::operator+=(out, str._M_dataplus._M_p);
@@ -48695,7 +48695,7 @@ const char *__fastcall CNetMessagePB<130,CUserMessageSendAudio,(SignonGroup_t)13
 
   v14 = __readfsqword(0x28u);
   google::protobuf::Message::DebugString(&str);
-  v5 = (*this->_vptr_IProtobufBinding)(this);
+  v5 = this->GetName();
   CFmtStrN<256,false>::CFmtStrN(&v13, "%s\n{\n", v5);
   CUtlString::operator+=(out, v13.m_szBuf);
   CUtlString::operator+=(out, str._M_dataplus._M_p);
@@ -48747,7 +48747,7 @@ const char *__fastcall CNetMessagePB<129,CUserMessageVoiceSubtitle,(SignonGroup_
 
   v14 = __readfsqword(0x28u);
   google::protobuf::Message::DebugString(&str);
-  v5 = (*this->_vptr_IProtobufBinding)(this);
+  v5 = this->GetName();
   CFmtStrN<256,false>::CFmtStrN(&v13, "%s\n{\n", v5);
   CUtlString::operator+=(out, v13.m_szBuf);
   CUtlString::operator+=(out, str._M_dataplus._M_p);
@@ -48799,7 +48799,7 @@ const char *__fastcall CNetMessagePB<134,CUserMessageShowMenu,(SignonGroup_t)13,
 
   v14 = __readfsqword(0x28u);
   google::protobuf::Message::DebugString(&str);
-  v5 = (*this->_vptr_IProtobufBinding)(this);
+  v5 = this->GetName();
   CFmtStrN<256,false>::CFmtStrN(&v13, "%s\n{\n", v5);
   CUtlString::operator+=(out, v13.m_szBuf);
   CUtlString::operator+=(out, str._M_dataplus._M_p);
@@ -48851,7 +48851,7 @@ const char *__fastcall CNetMessagePB<125,CUserMessageScreenTilt,(SignonGroup_t)1
 
   v14 = __readfsqword(0x28u);
   google::protobuf::Message::DebugString(&str);
-  v5 = (*this->_vptr_IProtobufBinding)(this);
+  v5 = this->GetName();
   CFmtStrN<256,false>::CFmtStrN(&v13, "%s\n{\n", v5);
   CUtlString::operator+=(out, v13.m_szBuf);
   CUtlString::operator+=(out, str._M_dataplus._M_p);
@@ -48903,7 +48903,7 @@ const char *__fastcall CNetMessagePB<116,CUserMessageRumble,(SignonGroup_t)13,(N
 
   v14 = __readfsqword(0x28u);
   google::protobuf::Message::DebugString(&str);
-  v5 = (*this->_vptr_IProtobufBinding)(this);
+  v5 = this->GetName();
   CFmtStrN<256,false>::CFmtStrN(&v13, "%s\n{\n", v5);
   CUtlString::operator+=(out, v13.m_szBuf);
   CUtlString::operator+=(out, str._M_dataplus._M_p);
@@ -48955,7 +48955,7 @@ const char *__fastcall CNetMessagePB<101,CUserMessageAchievementEvent,(SignonGro
 
   v14 = __readfsqword(0x28u);
   google::protobuf::Message::DebugString(&str);
-  v5 = (*this->_vptr_IProtobufBinding)(this);
+  v5 = this->GetName();
   CFmtStrN<256,false>::CFmtStrN(&v13, "%s\n{\n", v5);
   CUtlString::operator+=(out, v13.m_szBuf);
   CUtlString::operator+=(out, str._M_dataplus._M_p);
@@ -49007,7 +49007,7 @@ const char *__fastcall CNetMessagePB<124,CUserMessageTextMsg,(SignonGroup_t)13,(
 
   v14 = __readfsqword(0x28u);
   google::protobuf::Message::DebugString(&str);
-  v5 = (*this->_vptr_IProtobufBinding)(this);
+  v5 = this->GetName();
   CFmtStrN<256,false>::CFmtStrN(&v13, "%s\n{\n", v5);
   CUtlString::operator+=(out, v13.m_szBuf);
   CUtlString::operator+=(out, str._M_dataplus._M_p);
@@ -49059,7 +49059,7 @@ const char *__fastcall CNetMessagePB<106,CUserMessageFade,(SignonGroup_t)13,(Net
 
   v14 = __readfsqword(0x28u);
   google::protobuf::Message::DebugString(&str);
-  v5 = (*this->_vptr_IProtobufBinding)(this);
+  v5 = this->GetName();
   CFmtStrN<256,false>::CFmtStrN(&v13, "%s\n{\n", v5);
   CUtlString::operator+=(out, v13.m_szBuf);
   CUtlString::operator+=(out, str._M_dataplus._M_p);
@@ -49111,7 +49111,7 @@ const char *__fastcall CNetMessagePB<121,CUserMessageShakeDir,(SignonGroup_t)13,
 
   v14 = __readfsqword(0x28u);
   google::protobuf::Message::DebugString(&str);
-  v5 = (*this->_vptr_IProtobufBinding)(this);
+  v5 = this->GetName();
   CFmtStrN<256,false>::CFmtStrN(&v13, "%s\n{\n", v5);
   CUtlString::operator+=(out, v13.m_szBuf);
   CUtlString::operator+=(out, str._M_dataplus._M_p);
@@ -49163,7 +49163,7 @@ const char *__fastcall CNetMessagePB<120,CUserMessageShake,(SignonGroup_t)13,(Ne
 
   v14 = __readfsqword(0x28u);
   google::protobuf::Message::DebugString(&str);
-  v5 = (*this->_vptr_IProtobufBinding)(this);
+  v5 = this->GetName();
   CFmtStrN<256,false>::CFmtStrN(&v13, "%s\n{\n", v5);
   CUtlString::operator+=(out, v13.m_szBuf);
   CUtlString::operator+=(out, str._M_dataplus._M_p);
@@ -49215,7 +49215,7 @@ const char *__fastcall CNetMessagePB<119,CUserMessageSayTextChannel,(SignonGroup
 
   v14 = __readfsqword(0x28u);
   google::protobuf::Message::DebugString(&str);
-  v5 = (*this->_vptr_IProtobufBinding)(this);
+  v5 = this->GetName();
   CFmtStrN<256,false>::CFmtStrN(&v13, "%s\n{\n", v5);
   CUtlString::operator+=(out, v13.m_szBuf);
   CUtlString::operator+=(out, str._M_dataplus._M_p);
@@ -49267,7 +49267,7 @@ const char *__fastcall CNetMessagePB<113,CUserMessageColoredText,(SignonGroup_t)
 
   v14 = __readfsqword(0x28u);
   google::protobuf::Message::DebugString(&str);
-  v5 = (*this->_vptr_IProtobufBinding)(this);
+  v5 = this->GetName();
   CFmtStrN<256,false>::CFmtStrN(&v13, "%s\n{\n", v5);
   CUtlString::operator+=(out, v13.m_szBuf);
   CUtlString::operator+=(out, str._M_dataplus._M_p);
@@ -49319,7 +49319,7 @@ const char *__fastcall CNetMessagePB<118,CUserMessageSayText2,(SignonGroup_t)13,
 
   v14 = __readfsqword(0x28u);
   google::protobuf::Message::DebugString(&str);
-  v5 = (*this->_vptr_IProtobufBinding)(this);
+  v5 = this->GetName();
   CFmtStrN<256,false>::CFmtStrN(&v13, "%s\n{\n", v5);
   CUtlString::operator+=(out, v13.m_szBuf);
   CUtlString::operator+=(out, str._M_dataplus._M_p);
@@ -49371,7 +49371,7 @@ const char *__fastcall CNetMessagePB<117,CUserMessageSayText,(SignonGroup_t)13,(
 
   v14 = __readfsqword(0x28u);
   google::protobuf::Message::DebugString(&str);
-  v5 = (*this->_vptr_IProtobufBinding)(this);
+  v5 = this->GetName();
   CFmtStrN<256,false>::CFmtStrN(&v13, "%s\n{\n", v5);
   CUtlString::operator+=(out, v13.m_szBuf);
   CUtlString::operator+=(out, str._M_dataplus._M_p);
@@ -49423,7 +49423,7 @@ const char *__fastcall CNetMessagePB<127,CUserMessageVGUIMenu,(SignonGroup_t)13,
 
   v14 = __readfsqword(0x28u);
   google::protobuf::Message::DebugString(&str);
-  v5 = (*this->_vptr_IProtobufBinding)(this);
+  v5 = this->GetName();
   CFmtStrN<256,false>::CFmtStrN(&v13, "%s\n{\n", v5);
   CUtlString::operator+=(out, v13.m_szBuf);
   CUtlString::operator+=(out, str._M_dataplus._M_p);
@@ -49475,7 +49475,7 @@ const char *__fastcall CNetMessagePB<133,CUserMessageCrosshairAngle,(SignonGroup
 
   v14 = __readfsqword(0x28u);
   google::protobuf::Message::DebugString(&str);
-  v5 = (*this->_vptr_IProtobufBinding)(this);
+  v5 = this->GetName();
   CFmtStrN<256,false>::CFmtStrN(&v13, "%s\n{\n", v5);
   CUtlString::operator+=(out, v13.m_szBuf);
   CUtlString::operator+=(out, str._M_dataplus._M_p);
@@ -49527,7 +49527,7 @@ const char *__fastcall CNetMessagePB<132,CUserMessageAmmoDenied,(SignonGroup_t)1
 
   v14 = __readfsqword(0x28u);
   google::protobuf::Message::DebugString(&str);
-  v5 = (*this->_vptr_IProtobufBinding)(this);
+  v5 = this->GetName();
   CFmtStrN<256,false>::CFmtStrN(&v13, "%s\n{\n", v5);
   CUtlString::operator+=(out, v13.m_szBuf);
   CUtlString::operator+=(out, str._M_dataplus._M_p);
@@ -49579,7 +49579,7 @@ const char *__fastcall CNetMessagePB<131,CUserMessageItemPickup,(SignonGroup_t)1
 
   v14 = __readfsqword(0x28u);
   google::protobuf::Message::DebugString(&str);
-  v5 = (*this->_vptr_IProtobufBinding)(this);
+  v5 = this->GetName();
   CFmtStrN<256,false>::CFmtStrN(&v13, "%s\n{\n", v5);
   CUtlString::operator+=(out, v13.m_szBuf);
   CUtlString::operator+=(out, str._M_dataplus._M_p);
@@ -49631,7 +49631,7 @@ const char *__fastcall CNetMessagePB<112,CUserMessageKeyHintText,(SignonGroup_t)
 
   v14 = __readfsqword(0x28u);
   google::protobuf::Message::DebugString(&str);
-  v5 = (*this->_vptr_IProtobufBinding)(this);
+  v5 = this->GetName();
   CFmtStrN<256,false>::CFmtStrN(&v13, "%s\n{\n", v5);
   CUtlString::operator+=(out, v13.m_szBuf);
   CUtlString::operator+=(out, str._M_dataplus._M_p);
@@ -49683,7 +49683,7 @@ const char *__fastcall CNetMessagePB<128,CUserMessageVoiceMask,(SignonGroup_t)13
 
   v14 = __readfsqword(0x28u);
   google::protobuf::Message::DebugString(&str);
-  v5 = (*this->_vptr_IProtobufBinding)(this);
+  v5 = this->GetName();
   CFmtStrN<256,false>::CFmtStrN(&v13, "%s\n{\n", v5);
   CUtlString::operator+=(out, v13.m_szBuf);
   CUtlString::operator+=(out, str._M_dataplus._M_p);
@@ -49735,7 +49735,7 @@ const char *__fastcall CNetMessagePB<114,CUserMessageRequestState,(SignonGroup_t
 
   v14 = __readfsqword(0x28u);
   google::protobuf::Message::DebugString(&str);
-  v5 = (*this->_vptr_IProtobufBinding)(this);
+  v5 = this->GetName();
   CFmtStrN<256,false>::CFmtStrN(&v13, "%s\n{\n", v5);
   CUtlString::operator+=(out, v13.m_szBuf);
   CUtlString::operator+=(out, str._M_dataplus._M_p);
@@ -49787,7 +49787,7 @@ const char *__fastcall CNetMessagePB<109,CUserMessageHintText,(SignonGroup_t)13,
 
   v14 = __readfsqword(0x28u);
   google::protobuf::Message::DebugString(&str);
-  v5 = (*this->_vptr_IProtobufBinding)(this);
+  v5 = this->GetName();
   CFmtStrN<256,false>::CFmtStrN(&v13, "%s\n{\n", v5);
   CUtlString::operator+=(out, v13.m_szBuf);
   CUtlString::operator+=(out, str._M_dataplus._M_p);
@@ -49839,7 +49839,7 @@ const char *__fastcall CNetMessagePB<105,CUserMessageDesiredTimescale,(SignonGro
 
   v14 = __readfsqword(0x28u);
   google::protobuf::Message::DebugString(&str);
-  v5 = (*this->_vptr_IProtobufBinding)(this);
+  v5 = this->GetName();
   CFmtStrN<256,false>::CFmtStrN(&v13, "%s\n{\n", v5);
   CUtlString::operator+=(out, v13.m_szBuf);
   CUtlString::operator+=(out, str._M_dataplus._M_p);
@@ -49891,7 +49891,7 @@ const char *__fastcall CNetMessagePB<104,CUserMessageCurrentTimescale,(SignonGro
 
   v14 = __readfsqword(0x28u);
   google::protobuf::Message::DebugString(&str);
-  v5 = (*this->_vptr_IProtobufBinding)(this);
+  v5 = this->GetName();
   CFmtStrN<256,false>::CFmtStrN(&v13, "%s\n{\n", v5);
   CUtlString::operator+=(out, v13.m_szBuf);
   CUtlString::operator+=(out, str._M_dataplus._M_p);
@@ -49943,7 +49943,7 @@ const char *__fastcall CNetMessagePB<62,CSVCMsg_HLTVStatus,(SignonGroup_t)0,(Net
 
   v14 = __readfsqword(0x28u);
   google::protobuf::Message::DebugString(&str);
-  v5 = (*this->_vptr_IProtobufBinding)(this);
+  v5 = this->GetName();
   CFmtStrN<256,false>::CFmtStrN(&v13, "%s\n{\n", v5);
   CUtlString::operator+=(out, v13.m_szBuf);
   CUtlString::operator+=(out, str._M_dataplus._M_p);
@@ -49995,7 +49995,7 @@ const char *__fastcall CNetMessagePB<285,CClientMsg_RotateAnchor,(SignonGroup_t)
 
   v14 = __readfsqword(0x28u);
   google::protobuf::Message::DebugString(&str);
-  v5 = (*this->_vptr_IProtobufBinding)(this);
+  v5 = this->GetName();
   CFmtStrN<256,false>::CFmtStrN(&v13, "%s\n{\n", v5);
   CUtlString::operator+=(out, v13.m_szBuf);
   CUtlString::operator+=(out, str._M_dataplus._M_p);
@@ -50047,7 +50047,7 @@ const char *__fastcall CNetMessagePB<420,CMsgTEDust,(SignonGroup_t)5,(NetChannel
 
   v14 = __readfsqword(0x28u);
   google::protobuf::Message::DebugString(&str);
-  v5 = (*this->_vptr_IProtobufBinding)(this);
+  v5 = this->GetName();
   CFmtStrN<256,false>::CFmtStrN(&v13, "%s\n{\n", v5);
   CUtlString::operator+=(out, v13.m_szBuf);
   CUtlString::operator+=(out, str._M_dataplus._M_p);
@@ -50099,7 +50099,7 @@ const char *__fastcall CNetMessagePB<413,CMsgTEFizz,(SignonGroup_t)5,(NetChannel
 
   v14 = __readfsqword(0x28u);
   google::protobuf::Message::DebugString(&str);
-  v5 = (*this->_vptr_IProtobufBinding)(this);
+  v5 = this->GetName();
   CFmtStrN<256,false>::CFmtStrN(&v13, "%s\n{\n", v5);
   CUtlString::operator+=(out, v13.m_szBuf);
   CUtlString::operator+=(out, str._M_dataplus._M_p);
@@ -50151,7 +50151,7 @@ const char *__fastcall CNetMessagePB<419,CMsgTEExplosion,(SignonGroup_t)5,(NetCh
 
   v14 = __readfsqword(0x28u);
   google::protobuf::Message::DebugString(&str);
-  v5 = (*this->_vptr_IProtobufBinding)(this);
+  v5 = this->GetName();
   CFmtStrN<256,false>::CFmtStrN(&v13, "%s\n{\n", v5);
   CUtlString::operator+=(out, v13.m_szBuf);
   CUtlString::operator+=(out, str._M_dataplus._M_p);
@@ -50203,7 +50203,7 @@ const char *__fastcall CNetMessagePB<412,CMsgTEEnergySplash,(SignonGroup_t)5,(Ne
 
   v14 = __readfsqword(0x28u);
   google::protobuf::Message::DebugString(&str);
-  v5 = (*this->_vptr_IProtobufBinding)(this);
+  v5 = this->GetName();
   CFmtStrN<256,false>::CFmtStrN(&v13, "%s\n{\n", v5);
   CUtlString::operator+=(out, v13.m_szBuf);
   CUtlString::operator+=(out, str._M_dataplus._M_p);
@@ -50255,7 +50255,7 @@ const char *__fastcall CNetMessagePB<400,CMsgTEEffectDispatch,(SignonGroup_t)5,(
 
   v14 = __readfsqword(0x28u);
   google::protobuf::Message::DebugString(&str);
-  v5 = (*this->_vptr_IProtobufBinding)(this);
+  v5 = this->GetName();
   CFmtStrN<256,false>::CFmtStrN(&v13, "%s\n{\n", v5);
   CUtlString::operator+=(out, v13.m_szBuf);
   CUtlString::operator+=(out, str._M_dataplus._M_p);
@@ -50307,7 +50307,7 @@ const char *__fastcall CNetMessagePB<410,CMsgTEDecal,(SignonGroup_t)5,(NetChanne
 
   v14 = __readfsqword(0x28u);
   google::protobuf::Message::DebugString(&str);
-  v5 = (*this->_vptr_IProtobufBinding)(this);
+  v5 = this->GetName();
   CFmtStrN<256,false>::CFmtStrN(&v13, "%s\n{\n", v5);
   CUtlString::operator+=(out, v13.m_szBuf);
   CUtlString::operator+=(out, str._M_dataplus._M_p);
@@ -50359,7 +50359,7 @@ const char *__fastcall CNetMessagePB<409,CMsgTEBubbleTrail,(SignonGroup_t)5,(Net
 
   v14 = __readfsqword(0x28u);
   google::protobuf::Message::DebugString(&str);
-  v5 = (*this->_vptr_IProtobufBinding)(this);
+  v5 = this->GetName();
   CFmtStrN<256,false>::CFmtStrN(&v13, "%s\n{\n", v5);
   CUtlString::operator+=(out, v13.m_szBuf);
   CUtlString::operator+=(out, str._M_dataplus._M_p);
@@ -50411,7 +50411,7 @@ const char *__fastcall CNetMessagePB<408,CMsgTEBubbles,(SignonGroup_t)5,(NetChan
 
   v14 = __readfsqword(0x28u);
   google::protobuf::Message::DebugString(&str);
-  v5 = (*this->_vptr_IProtobufBinding)(this);
+  v5 = this->GetName();
   CFmtStrN<256,false>::CFmtStrN(&v13, "%s\n{\n", v5);
   CUtlString::operator+=(out, v13.m_szBuf);
   CUtlString::operator+=(out, str._M_dataplus._M_p);
@@ -50463,7 +50463,7 @@ const char *__fastcall CNetMessagePB<407,CMsgTEBSPDecal,(SignonGroup_t)5,(NetCha
 
   v14 = __readfsqword(0x28u);
   google::protobuf::Message::DebugString(&str);
-  v5 = (*this->_vptr_IProtobufBinding)(this);
+  v5 = this->GetName();
   CFmtStrN<256,false>::CFmtStrN(&v13, "%s\n{\n", v5);
   CUtlString::operator+=(out, v13.m_szBuf);
   CUtlString::operator+=(out, str._M_dataplus._M_p);
@@ -50515,7 +50515,7 @@ const char *__fastcall CNetMessagePB<406,CMsgTEBreakModel,(SignonGroup_t)5,(NetC
 
   v14 = __readfsqword(0x28u);
   google::protobuf::Message::DebugString(&str);
-  v5 = (*this->_vptr_IProtobufBinding)(this);
+  v5 = this->GetName();
   CFmtStrN<256,false>::CFmtStrN(&v13, "%s\n{\n", v5);
   CUtlString::operator+=(out, v13.m_szBuf);
   CUtlString::operator+=(out, str._M_dataplus._M_p);
@@ -50567,7 +50567,7 @@ const char *__fastcall CNetMessagePB<418,CMsgTEBloodStream,(SignonGroup_t)5,(Net
 
   v14 = __readfsqword(0x28u);
   google::protobuf::Message::DebugString(&str);
-  v5 = (*this->_vptr_IProtobufBinding)(this);
+  v5 = this->GetName();
   CFmtStrN<256,false>::CFmtStrN(&v13, "%s\n{\n", v5);
   CUtlString::operator+=(out, v13.m_szBuf);
   CUtlString::operator+=(out, str._M_dataplus._M_p);
@@ -50619,7 +50619,7 @@ const char *__fastcall CNetMessagePB<405,CMsgTEBeamRing,(SignonGroup_t)5,(NetCha
 
   v14 = __readfsqword(0x28u);
   google::protobuf::Message::DebugString(&str);
-  v5 = (*this->_vptr_IProtobufBinding)(this);
+  v5 = this->GetName();
   CFmtStrN<256,false>::CFmtStrN(&v13, "%s\n{\n", v5);
   CUtlString::operator+=(out, v13.m_szBuf);
   CUtlString::operator+=(out, str._M_dataplus._M_p);
@@ -50671,7 +50671,7 @@ const char *__fastcall CNetMessagePB<404,CMsgTEBeamPoints,(SignonGroup_t)5,(NetC
 
   v14 = __readfsqword(0x28u);
   google::protobuf::Message::DebugString(&str);
-  v5 = (*this->_vptr_IProtobufBinding)(this);
+  v5 = this->GetName();
   CFmtStrN<256,false>::CFmtStrN(&v13, "%s\n{\n", v5);
   CUtlString::operator+=(out, v13.m_szBuf);
   CUtlString::operator+=(out, str._M_dataplus._M_p);
@@ -50723,7 +50723,7 @@ const char *__fastcall CNetMessagePB<403,CMsgTEBeamEnts,(SignonGroup_t)5,(NetCha
 
   v14 = __readfsqword(0x28u);
   google::protobuf::Message::DebugString(&str);
-  v5 = (*this->_vptr_IProtobufBinding)(this);
+  v5 = this->GetName();
   CFmtStrN<256,false>::CFmtStrN(&v13, "%s\n{\n", v5);
   CUtlString::operator+=(out, v13.m_szBuf);
   CUtlString::operator+=(out, str._M_dataplus._M_p);
@@ -50775,7 +50775,7 @@ const char *__fastcall CNetMessagePB<402,CMsgTEBeamEntPoint,(SignonGroup_t)5,(Ne
 
   v14 = __readfsqword(0x28u);
   google::protobuf::Message::DebugString(&str);
-  v5 = (*this->_vptr_IProtobufBinding)(this);
+  v5 = this->GetName();
   CFmtStrN<256,false>::CFmtStrN(&v13, "%s\n{\n", v5);
   CUtlString::operator+=(out, v13.m_szBuf);
   CUtlString::operator+=(out, str._M_dataplus._M_p);
@@ -50827,7 +50827,7 @@ const char *__fastcall CNetMessagePB<401,CMsgTEArmorRicochet,(SignonGroup_t)5,(N
 
   v14 = __readfsqword(0x28u);
   google::protobuf::Message::DebugString(&str);
-  v5 = (*this->_vptr_IProtobufBinding)(this);
+  v5 = this->GetName();
   CFmtStrN<256,false>::CFmtStrN(&v13, "%s\n{\n", v5);
   CUtlString::operator+=(out, v13.m_szBuf);
   CUtlString::operator+=(out, str._M_dataplus._M_p);
@@ -50879,7 +50879,7 @@ const char *__fastcall CNetMessagePB<411,CMsgTEWorldDecal,(SignonGroup_t)5,(NetC
 
   v14 = __readfsqword(0x28u);
   google::protobuf::Message::DebugString(&str);
-  v5 = (*this->_vptr_IProtobufBinding)(this);
+  v5 = this->GetName();
   CFmtStrN<256,false>::CFmtStrN(&v13, "%s\n{\n", v5);
   CUtlString::operator+=(out, v13.m_szBuf);
   CUtlString::operator+=(out, str._M_dataplus._M_p);
@@ -50931,7 +50931,7 @@ const char *__fastcall CNetMessagePB<422,CMsgTESparks,(SignonGroup_t)5,(NetChann
 
   v14 = __readfsqword(0x28u);
   google::protobuf::Message::DebugString(&str);
-  v5 = (*this->_vptr_IProtobufBinding)(this);
+  v5 = this->GetName();
   CFmtStrN<256,false>::CFmtStrN(&v13, "%s\n{\n", v5);
   CUtlString::operator+=(out, v13.m_szBuf);
   CUtlString::operator+=(out, str._M_dataplus._M_p);
@@ -50983,7 +50983,7 @@ const char *__fastcall CNetMessagePB<426,CMsgTESmoke,(SignonGroup_t)5,(NetChanne
 
   v14 = __readfsqword(0x28u);
   google::protobuf::Message::DebugString(&str);
-  v5 = (*this->_vptr_IProtobufBinding)(this);
+  v5 = this->GetName();
   CFmtStrN<256,false>::CFmtStrN(&v13, "%s\n{\n", v5);
   CUtlString::operator+=(out, v13.m_szBuf);
   CUtlString::operator+=(out, str._M_dataplus._M_p);
@@ -51035,7 +51035,7 @@ const char *__fastcall CNetMessagePB<425,CMsgTEProjectedDecal,(SignonGroup_t)5,(
 
   v14 = __readfsqword(0x28u);
   google::protobuf::Message::DebugString(&str);
-  v5 = (*this->_vptr_IProtobufBinding)(this);
+  v5 = this->GetName();
   CFmtStrN<256,false>::CFmtStrN(&v13, "%s\n{\n", v5);
   CUtlString::operator+=(out, v13.m_szBuf);
   CUtlString::operator+=(out, str._M_dataplus._M_p);
@@ -51087,7 +51087,7 @@ const char *__fastcall CNetMessagePB<424,CMsgTEPlayerDecal,(SignonGroup_t)5,(Net
 
   v14 = __readfsqword(0x28u);
   google::protobuf::Message::DebugString(&str);
-  v5 = (*this->_vptr_IProtobufBinding)(this);
+  v5 = this->GetName();
   CFmtStrN<256,false>::CFmtStrN(&v13, "%s\n{\n", v5);
   CUtlString::operator+=(out, v13.m_szBuf);
   CUtlString::operator+=(out, str._M_dataplus._M_p);
@@ -51139,7 +51139,7 @@ const char *__fastcall CNetMessagePB<423,CMsgTEPhysicsProp,(SignonGroup_t)5,(Net
 
   v14 = __readfsqword(0x28u);
   google::protobuf::Message::DebugString(&str);
-  v5 = (*this->_vptr_IProtobufBinding)(this);
+  v5 = this->GetName();
   CFmtStrN<256,false>::CFmtStrN(&v13, "%s\n{\n", v5);
   CUtlString::operator+=(out, v13.m_szBuf);
   CUtlString::operator+=(out, str._M_dataplus._M_p);
@@ -51191,7 +51191,7 @@ const char *__fastcall CNetMessagePB<417,CMsgTEMuzzleFlash,(SignonGroup_t)5,(Net
 
   v14 = __readfsqword(0x28u);
   google::protobuf::Message::DebugString(&str);
-  v5 = (*this->_vptr_IProtobufBinding)(this);
+  v5 = this->GetName();
   CFmtStrN<256,false>::CFmtStrN(&v13, "%s\n{\n", v5);
   CUtlString::operator+=(out, v13.m_szBuf);
   CUtlString::operator+=(out, str._M_dataplus._M_p);
@@ -51243,7 +51243,7 @@ const char *__fastcall CNetMessagePB<421,CMsgTELargeFunnel,(SignonGroup_t)5,(Net
 
   v14 = __readfsqword(0x28u);
   google::protobuf::Message::DebugString(&str);
-  v5 = (*this->_vptr_IProtobufBinding)(this);
+  v5 = this->GetName();
   CFmtStrN<256,false>::CFmtStrN(&v13, "%s\n{\n", v5);
   CUtlString::operator+=(out, v13.m_szBuf);
   CUtlString::operator+=(out, str._M_dataplus._M_p);
@@ -51295,7 +51295,7 @@ const char *__fastcall CNetMessagePB<416,CMsgTEImpact,(SignonGroup_t)5,(NetChann
 
   v14 = __readfsqword(0x28u);
   google::protobuf::Message::DebugString(&str);
-  v5 = (*this->_vptr_IProtobufBinding)(this);
+  v5 = this->GetName();
   CFmtStrN<256,false>::CFmtStrN(&v13, "%s\n{\n", v5);
   CUtlString::operator+=(out, v13.m_szBuf);
   CUtlString::operator+=(out, str._M_dataplus._M_p);
@@ -51347,7 +51347,7 @@ const char *__fastcall CNetMessagePB<415,CMsgTEGlowSprite,(SignonGroup_t)5,(NetC
 
   v14 = __readfsqword(0x28u);
   google::protobuf::Message::DebugString(&str);
-  v5 = (*this->_vptr_IProtobufBinding)(this);
+  v5 = this->GetName();
   CFmtStrN<256,false>::CFmtStrN(&v13, "%s\n{\n", v5);
   CUtlString::operator+=(out, v13.m_szBuf);
   CUtlString::operator+=(out, str._M_dataplus._M_p);
@@ -51399,7 +51399,7 @@ const char *__fastcall CNetMessagePB<414,CMsgTEShatterSurface,(SignonGroup_t)5,(
 
   v14 = __readfsqword(0x28u);
   google::protobuf::Message::DebugString(&str);
-  v5 = (*this->_vptr_IProtobufBinding)(this);
+  v5 = this->GetName();
   CFmtStrN<256,false>::CFmtStrN(&v13, "%s\n{\n", v5);
   CUtlString::operator+=(out, v13.m_szBuf);
   CUtlString::operator+=(out, str._M_dataplus._M_p);
@@ -101135,7 +101135,7 @@ void __fastcall CNetMessagePB<414,CMsgTEShatterSurface,(SignonGroup_t)5,(NetChan
 void __fastcall INetworkSerializerBindingBuildFilter::~INetworkSerializerBindingBuildFilter(
         INetworkSerializerBindingBuildFilter *const this)
 {
-  this->_vptr_INetworkSerializerBindingBuildFilter = off_47C32F0;
+  this->_vptr_INetworkSerializerBindingBuildFilter = off_47C32F0;  // vptr: INetworkSerializerBindingBuildFilter
 }
 
 
@@ -101144,7 +101144,7 @@ void __fastcall INetworkSerializerBindingBuildFilter::~INetworkSerializerBinding
 void __fastcall INetworkSerializerBindingBuildFilter::~INetworkSerializerBindingBuildFilter(
         INetworkSerializerBindingBuildFilter *const this)
 {
-  this->_vptr_INetworkSerializerBindingBuildFilter = off_47C32F0;
+  this->_vptr_INetworkSerializerBindingBuildFilter = off_47C32F0;  // vptr: INetworkSerializerBindingBuildFilter
   operator delete(this);
 }
 
@@ -104527,7 +104527,7 @@ NetMessageHandle_t __fastcall INetworkMessages::FindOrCreateNetMessage<TEWorldDe
 // IFlattenedSerializerSpewFunc::~IFlattenedSerializerSpewFunc  (line 1490, @0x0000000001ec13d0, libserver.so)
 void __fastcall IFlattenedSerializerSpewFunc::~IFlattenedSerializerSpewFunc(IFlattenedSerializerSpewFunc *const this)
 {
-  this->_vptr_IFlattenedSerializerSpewFunc = off_3FB4190;
+  this->_vptr_IFlattenedSerializerSpewFunc = off_3FB4190;  // vptr: IFlattenedSerializerSpewFunc
 }
 
 
@@ -104535,7 +104535,7 @@ void __fastcall IFlattenedSerializerSpewFunc::~IFlattenedSerializerSpewFunc(IFla
 // calls: operator delete
 void __fastcall IFlattenedSerializerSpewFunc::~IFlattenedSerializerSpewFunc(IFlattenedSerializerSpewFunc *const this)
 {
-  this->_vptr_IFlattenedSerializerSpewFunc = off_3FB4190;
+  this->_vptr_IFlattenedSerializerSpewFunc = off_3FB4190;  // vptr: IFlattenedSerializerSpewFunc
   operator delete(this);
 }
 
@@ -104544,7 +104544,7 @@ void __fastcall IFlattenedSerializerSpewFunc::~IFlattenedSerializerSpewFunc(IFla
 void __fastcall CFlattenedSerializerSpewFunc_Log::~CFlattenedSerializerSpewFunc_Log(
         CFlattenedSerializerSpewFunc_Log *const this)
 {
-  this->_vptr_IFlattenedSerializerSpewFunc = off_3FB4190;
+  this->_vptr_IFlattenedSerializerSpewFunc = off_3FB4190;  // vptr: IFlattenedSerializerSpewFunc
 }
 
 
@@ -104553,7 +104553,7 @@ void __fastcall CFlattenedSerializerSpewFunc_Log::~CFlattenedSerializerSpewFunc_
 void __fastcall CFlattenedSerializerSpewFunc_Log::~CFlattenedSerializerSpewFunc_Log(
         CFlattenedSerializerSpewFunc_Log *const this)
 {
-  this->_vptr_IFlattenedSerializerSpewFunc = off_3FB4190;
+  this->_vptr_IFlattenedSerializerSpewFunc = off_3FB4190;  // vptr: IFlattenedSerializerSpewFunc
   operator delete(this);
 }
 
@@ -104575,7 +104575,7 @@ void __fastcall CFlattenedSerializerSpewFunc_Log::Spew(CFlattenedSerializerSpewF
 // INetworkFieldScratchData::~INetworkFieldScratchData  (line 2025, @0x00000000030becc0, libserver.so)
 void __fastcall INetworkFieldScratchData::~INetworkFieldScratchData(INetworkFieldScratchData *const this)
 {
-  this->_vptr_INetworkFieldScratchData = off_47C3050;
+  this->_vptr_INetworkFieldScratchData = off_47C3050;  // vptr: INetworkFieldScratchData
 }
 
 
@@ -104583,7 +104583,7 @@ void __fastcall INetworkFieldScratchData::~INetworkFieldScratchData(INetworkFiel
 // calls: operator delete
 void __fastcall INetworkFieldScratchData::~INetworkFieldScratchData(INetworkFieldScratchData *const this)
 {
-  this->_vptr_INetworkFieldScratchData = off_47C3050;
+  this->_vptr_INetworkFieldScratchData = off_47C3050;  // vptr: INetworkFieldScratchData
   operator delete(this);
 }
 
@@ -104600,25 +104600,23 @@ void __fastcall __noreturn CNetworkFieldChangedEventQueueChangeInfo_t::operator=
   __int64 v3; // rcx
   __int64 v4; // rdi
   __int64 v5; // rsi
-  __int64 v6; // r8
-  __int64 v7; // r9
-  LeafCodeInfo_t v8; // [rsp+0h] [rbp-30h] BYREF
+  LeafCodeInfo_t v6; // [rsp+0h] [rbp-30h] BYREF
 
   if ( LoggingSystem_IsChannelEnabled(LOG_GENERAL, 4) != 0 )
     goto LABEL_5;
   while ( 1 )
   {
-    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v4, v5, v2, v3, v6, v7) != 0 )
+    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v4, v5, v2, v3) != 0 )
       loc_0 = -559038737;
     Plat_ExitProcess(1);
 LABEL_5:
-    v8.m_szFile = "../public/tier2/fieldpath.h";
-    v8.m_szFunction = "Path_SetCount";
-    v8.m_nLine = 442;
+    v6.m_szFile = "../public/tier2/fieldpath.h";
+    v6.m_szFunction = "Path_SetCount";
+    v6.m_nLine = 442;
     LoggingSystem_Log(
       LOG_GENERAL,
       LoggingSeverity_t::LS_ERROR,
-      &v8,
+      &v6,
       "Path_SetCount failed, depth already == DEFAULT_MAX_PATH_DEPTH(%d)",
       6);
   }

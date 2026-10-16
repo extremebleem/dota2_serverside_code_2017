@@ -330,9 +330,9 @@ LABEL_24:
 // CSceneObject::~CSceneObject  (line 1079, @0x0000000001b2c550, libserver.so)  // inlines: ~IGenericInterface
 void __fastcall CSceneObject::~CSceneObject(CSceneObject *const this)
 {
-  this->_vptr_IGenericInterface = off_3F794B0;
+  this->_vptr_IGenericInterface = off_3F794B0;  // vptr: CSceneObject
   (*(*g_pSceneSystem + 800LL))(g_pSceneSystem, this);
-  this->_vptr_IGenericInterface = off_3F79210;
+  this->_vptr_IGenericInterface = off_3F79210;  // vptr: IGenericInterface
 }
 
 
@@ -340,9 +340,9 @@ void __fastcall CSceneObject::~CSceneObject(CSceneObject *const this)
 // calls: operator delete
 void __fastcall CSceneObject::~CSceneObject(CSceneObject *const this)
 {
-  this->_vptr_IGenericInterface = off_3F794B0;
+  this->_vptr_IGenericInterface = off_3F794B0;  // vptr: CSceneObject
   (*(*g_pSceneSystem + 800LL))(g_pSceneSystem, this);
-  this->_vptr_IGenericInterface = off_3F79210;
+  this->_vptr_IGenericInterface = off_3F79210;  // vptr: IGenericInterface
   operator delete(this);
 }
 

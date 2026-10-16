@@ -205,7 +205,7 @@ void *__fastcall CDOTA_BaseNPC_Creature::CEntityInstanceEntityClass::AllocateIns
 void __fastcall CDOTA_BaseNPC_Creature::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_BaseNPC_Creature::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -215,7 +215,7 @@ void __fastcall CDOTA_BaseNPC_Creature::CEntityInstanceEntityClass::~CEntityInst
 void __fastcall CDOTA_BaseNPC_Creature::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_BaseNPC_Creature::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }

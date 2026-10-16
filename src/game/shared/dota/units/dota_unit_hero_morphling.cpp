@@ -919,7 +919,7 @@ CEntityInstance *__fastcall CDOTA_Unit_Hero_Morphling::CEntityInstanceEntityClas
 void __fastcall CDOTA_Unit_Hero_Morphling::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Unit_Hero_Morphling::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -929,7 +929,7 @@ void __fastcall CDOTA_Unit_Hero_Morphling::CEntityInstanceEntityClass::~CEntityI
 void __fastcall CDOTA_Unit_Hero_Morphling::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Unit_Hero_Morphling::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -1210,7 +1210,7 @@ CEntityInstance *__fastcall CDOTA_Ability_Morphling_Waveform::CEntityInstanceEnt
 void __fastcall CDOTA_Ability_Morphling_Waveform::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Morphling_Waveform::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -1220,7 +1220,7 @@ void __fastcall CDOTA_Ability_Morphling_Waveform::CEntityInstanceEntityClass::~C
 void __fastcall CDOTA_Ability_Morphling_Waveform::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Morphling_Waveform::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -1788,7 +1788,7 @@ CEntityInstance *__fastcall CDOTA_Ability_Morphling_AdaptiveStrike::CEntityInsta
 void __fastcall CDOTA_Ability_Morphling_AdaptiveStrike::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Morphling_AdaptiveStrike::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -1798,7 +1798,7 @@ void __fastcall CDOTA_Ability_Morphling_AdaptiveStrike::CEntityInstanceEntityCla
 void __fastcall CDOTA_Ability_Morphling_AdaptiveStrike::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Morphling_AdaptiveStrike::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -2469,7 +2469,7 @@ CEntityInstance *__fastcall CDOTA_Ability_Morphling_Morph::CEntityInstanceEntity
 void __fastcall CDOTA_Ability_Morphling_Morph::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Morphling_Morph::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -2479,7 +2479,7 @@ void __fastcall CDOTA_Ability_Morphling_Morph::CEntityInstanceEntityClass::~CEnt
 void __fastcall CDOTA_Ability_Morphling_Morph::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Morphling_Morph::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -2769,7 +2769,7 @@ CEntityInstance *__fastcall CDOTA_Ability_Morphling_Morph_Agi::CEntityInstanceEn
 void __fastcall CDOTA_Ability_Morphling_Morph_Agi::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Morphling_Morph_Agi::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -2779,7 +2779,7 @@ void __fastcall CDOTA_Ability_Morphling_Morph_Agi::CEntityInstanceEntityClass::~
 void __fastcall CDOTA_Ability_Morphling_Morph_Agi::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Morphling_Morph_Agi::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -3182,7 +3182,7 @@ CEntityInstance *__fastcall CDOTA_Ability_Morphling_Morph_Str::CEntityInstanceEn
 void __fastcall CDOTA_Ability_Morphling_Morph_Str::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Morphling_Morph_Str::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -3192,7 +3192,7 @@ void __fastcall CDOTA_Ability_Morphling_Morph_Str::CEntityInstanceEntityClass::~
 void __fastcall CDOTA_Ability_Morphling_Morph_Str::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Morphling_Morph_Str::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -3630,7 +3630,7 @@ CEntityInstance *__fastcall CDOTA_Ability_Morphling_Replicate::CEntityInstanceEn
 void __fastcall CDOTA_Ability_Morphling_Replicate::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Morphling_Replicate::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -3640,7 +3640,7 @@ void __fastcall CDOTA_Ability_Morphling_Replicate::CEntityInstanceEntityClass::~
 void __fastcall CDOTA_Ability_Morphling_Replicate::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Morphling_Replicate::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -4455,7 +4455,7 @@ CEntityInstance *__fastcall CDOTA_Ability_Morphling_MorphReplicate::CEntityInsta
 void __fastcall CDOTA_Ability_Morphling_MorphReplicate::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Morphling_MorphReplicate::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -4465,7 +4465,7 @@ void __fastcall CDOTA_Ability_Morphling_MorphReplicate::CEntityInstanceEntityCla
 void __fastcall CDOTA_Ability_Morphling_MorphReplicate::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Morphling_MorphReplicate::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -5000,7 +5000,7 @@ CEntityInstance *__fastcall CDOTA_Ability_Morphling_Hybrid::CEntityInstanceEntit
 void __fastcall CDOTA_Ability_Morphling_Hybrid::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Morphling_Hybrid::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -5010,7 +5010,7 @@ void __fastcall CDOTA_Ability_Morphling_Hybrid::CEntityInstanceEntityClass::~CEn
 void __fastcall CDOTA_Ability_Morphling_Hybrid::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Morphling_Hybrid::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }

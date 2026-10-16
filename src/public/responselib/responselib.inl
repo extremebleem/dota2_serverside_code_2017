@@ -4,7 +4,7 @@
 // rr2::IRulePayload::~IRulePayload  (line 131, @0x000000000204e420, libserver.so)
 void __fastcall rr2::IRulePayload::~IRulePayload(rr2::IRulePayload *const this)
 {
-  this->_vptr_IRulePayload = off_3FEAC70;
+  this->_vptr_IRulePayload = off_3FEAC70;  // vptr: rr2::IRulePayload
 }
 
 
@@ -12,7 +12,7 @@ void __fastcall rr2::IRulePayload::~IRulePayload(rr2::IRulePayload *const this)
 // calls: operator delete
 void __fastcall rr2::IRulePayload::~IRulePayload(rr2::IRulePayload *const this)
 {
-  this->_vptr_IRulePayload = off_3FEAC70;
+  this->_vptr_IRulePayload = off_3FEAC70;  // vptr: rr2::IRulePayload
   operator delete(this);
 }
 
@@ -20,7 +20,7 @@ void __fastcall rr2::IRulePayload::~IRulePayload(rr2::IRulePayload *const this)
 // rr2::ICriterionFunctor::~ICriterionFunctor  (line 221, @0x000000000204e430, libserver.so)  // inlines: ~CRefCountServiceBase, ~CRefCounted
 void __fastcall rr2::ICriterionFunctor::~ICriterionFunctor(rr2::ICriterionFunctor *const this)
 {
-  this->_vptr_CRefCountServiceBase = off_3FEABF0;
+  this->_vptr_CRefCountServiceBase = off_3FEABF0;  // vptr: CRefCountServiceBase<true,CRefMT>
 }
 
 
@@ -28,7 +28,7 @@ void __fastcall rr2::ICriterionFunctor::~ICriterionFunctor(rr2::ICriterionFuncto
 // calls: operator delete
 void __fastcall rr2::ICriterionFunctor::~ICriterionFunctor(rr2::ICriterionFunctor *const this)
 {
-  this->_vptr_CRefCountServiceBase = off_3FEABF0;
+  this->_vptr_CRefCountServiceBase = off_3FEABF0;  // vptr: CRefCountServiceBase<true,CRefMT>
   operator delete(this);
 }
 
@@ -36,7 +36,7 @@ void __fastcall rr2::ICriterionFunctor::~ICriterionFunctor(rr2::ICriterionFuncto
 // rr2::ICriterionFunctorString::~ICriterionFunctorString  (line 256, @0x0000000003111fd0, libserver.so)  // inlines: ~CRefCountServiceBase, ~CRefCounted, ~ICriterionFunctor
 void __fastcall rr2::ICriterionFunctorString::~ICriterionFunctorString(rr2::ICriterionFunctorString *const this)
 {
-  this->_vptr_CRefCountServiceBase = off_3FEABF0;
+  this->_vptr_CRefCountServiceBase = off_3FEABF0;  // vptr: CRefCountServiceBase<true,CRefMT>
 }
 
 
@@ -44,7 +44,7 @@ void __fastcall rr2::ICriterionFunctorString::~ICriterionFunctorString(rr2::ICri
 // calls: operator delete
 void __fastcall rr2::ICriterionFunctorString::~ICriterionFunctorString(rr2::ICriterionFunctorString *const this)
 {
-  this->_vptr_CRefCountServiceBase = off_3FEABF0;
+  this->_vptr_CRefCountServiceBase = off_3FEABF0;  // vptr: CRefCountServiceBase<true,CRefMT>
   operator delete(this);
 }
 

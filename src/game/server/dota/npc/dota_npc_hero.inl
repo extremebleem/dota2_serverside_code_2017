@@ -98,7 +98,7 @@ void *__fastcall CInfoPlayerStartDota::CEntityInstanceEntityClass::AllocateInsta
 void __fastcall CInfoPlayerStartDota::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CInfoPlayerStartDota::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -108,7 +108,7 @@ void __fastcall CInfoPlayerStartDota::CEntityInstanceEntityClass::~CEntityInstan
 void __fastcall CInfoPlayerStartDota::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CInfoPlayerStartDota::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -390,7 +390,7 @@ void *__fastcall CDOTA_BaseNPC_Hero::CEntityInstanceEntityClass::AllocateInstanc
 void __fastcall CDOTA_BaseNPC_Hero::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_BaseNPC_Hero::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -400,7 +400,7 @@ void __fastcall CDOTA_BaseNPC_Hero::CEntityInstanceEntityClass::~CEntityInstance
 void __fastcall CDOTA_BaseNPC_Hero::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_BaseNPC_Hero::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -1197,7 +1197,7 @@ bool __fastcall HeroLimitedUnitTracker_t::LessFunc(
 // calls: CUtlRBTree<CUtlMap<HeroLimitedUnitTracker_t, CUtlVector<CHandle<CBaseEntity> >*>::Node_t, short unsigned int, CUtlMap<HeroLimitedUnitTracker_t, CUtlVector<CHandle<CBaseEntity> >*>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<HeroLimitedUnitTracker_t, CUtlVector<CHandle<CBaseEntity> >*>::Node_t, short unsigned int>, short unsigned int> >::Purge, CUtlMemory<UtlRBTreeNode_t<CUtlMap<HeroLimitedUnitTracker_t, CUtlVector<CHandle<CBaseEntity> >*>::Node_t, short unsigned int>, short unsigned int>::Purge, CUtlVectorBase<CDOTAMusicSystemElement, CUtlMemory<CDOTAMusicSystemElement, int> >::RemoveAll, CUtlVectorBase<CHandle<CDOTA_BaseNPC_Hero>, CUtlMemory<CHandle<CDOTA_BaseNPC_Hero>, int> >::RemoveAll, CUtlRBTree<CUtlMap<CHandle<CBaseEntity>, CDOTAHeroPositions*>::Node_t, short unsigned int, CUtlMap<CHandle<CBaseEntity>, CDOTAHeroPositions*>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<CHandle<CBaseEntity>, CDOTAHeroPositions*>::Node_t, short unsigned int>, short unsigned int> >::Purge, CUtlMemory<UtlRBTreeNode_t<CUtlMap<CHandle<CBaseEntity>, CDOTAHeroPositions*>::Node_t, short unsigned int>, short unsigned int>::Purge, IGameSystem::~IGameSystem, CUtlMemory<CHandle<CDOTA_BaseNPC_Hero>, int>::Purge, CUtlMemory<CDOTAMusicSystemElement, int>::Purge
 void __fastcall CDOTAHeroList::~CDOTAHeroList(CDOTAHeroList *const this)
 {
-  this->_vptr_IGameSystem = off_42F7430;
+  this->_vptr_IGameSystem = off_42F7430;  // vptr: CDOTAHeroList
   CUtlRBTree<CUtlMap<HeroLimitedUnitTracker_t,CUtlVector<CHandle<CBaseEntity>,CUtlMemory<CHandle<CBaseEntity>,int>> *,unsigned short,bool (*)(HeroLimitedUnitTracker_t const&,HeroLimitedUnitTracker_t const&)>::Node_t,unsigned short,CUtlMap<HeroLimitedUnitTracker_t,CUtlVector<CHandle<CBaseEntity>,CUtlMemory<CHandle<CBaseEntity>,int>> *,unsigned short,bool (*)(HeroLimitedUnitTracker_t const&,HeroLimitedUnitTracker_t const&)>::CKeyLess,CUtlMemory<UtlRBTreeNode_t<CUtlMap<HeroLimitedUnitTracker_t,CUtlVector<CHandle<CBaseEntity>,CUtlMemory<CHandle<CBaseEntity>,int>> *,unsigned short,bool (*)(HeroLimitedUnitTracker_t const&,HeroLimitedUnitTracker_t const&)>::Node_t,unsigned short>,unsigned short>>::Purge(&this->m_mapHeroToLimitedUnits.m_Tree);
   if ( (this->m_mapHeroToLimitedUnits.m_Tree.m_Elements.m_nGrowSize & 0xC0000000) == 0 )
     CUtlMemory<UtlRBTreeNode_t<CUtlMap<HeroLimitedUnitTracker_t,CUtlVector<CHandle<CBaseEntity>,CUtlMemory<CHandle<CBaseEntity>,int>> *,unsigned short,bool (*)(HeroLimitedUnitTracker_t const&,HeroLimitedUnitTracker_t const&)>::Node_t,unsigned short>,unsigned short>::Purge(&this->m_mapHeroToLimitedUnits.m_Tree.m_Elements);
@@ -1218,7 +1218,7 @@ void __fastcall CDOTAHeroList::~CDOTAHeroList(CDOTAHeroList *const this)
   CUtlRBTree<CUtlMap<CHandle<CBaseEntity>,CDOTAHeroPositions *,unsigned short,bool (*)(CHandle<CBaseEntity> const&,CHandle<CBaseEntity> const&)>::Node_t,unsigned short,CUtlMap<CHandle<CBaseEntity>,CDOTAHeroPositions *,unsigned short,bool (*)(CHandle<CBaseEntity> const&,CHandle<CBaseEntity> const&)>::CKeyLess,CUtlMemory<UtlRBTreeNode_t<CUtlMap<CHandle<CBaseEntity>,CDOTAHeroPositions *,unsigned short,bool (*)(CHandle<CBaseEntity> const&,CHandle<CBaseEntity> const&)>::Node_t,unsigned short>,unsigned short>>::Purge(&this->m_HeroPositionHistory.m_Tree);
   if ( (this->m_HeroPositionHistory.m_Tree.m_Elements.m_nGrowSize & 0xC0000000) == 0 )
     CUtlMemory<UtlRBTreeNode_t<CUtlMap<CHandle<CBaseEntity>,CDOTAHeroPositions *,unsigned short,bool (*)(CHandle<CBaseEntity> const&,CHandle<CBaseEntity> const&)>::Node_t,unsigned short>,unsigned short>::Purge(&this->m_HeroPositionHistory.m_Tree.m_Elements);
-  this->_vptr_IGameSystem = off_3F7C1B0;
+  this->_vptr_IGameSystem = off_3F7C1B0;  // vptr: CAutoGameSystem
   IGameSystem::~IGameSystem(this);
 }
 
@@ -1227,7 +1227,7 @@ void __fastcall CDOTAHeroList::~CDOTAHeroList(CDOTAHeroList *const this)
 // calls: CUtlRBTree<CUtlMap<HeroLimitedUnitTracker_t, CUtlVector<CHandle<CBaseEntity> >*>::Node_t, short unsigned int, CUtlMap<HeroLimitedUnitTracker_t, CUtlVector<CHandle<CBaseEntity> >*>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<HeroLimitedUnitTracker_t, CUtlVector<CHandle<CBaseEntity> >*>::Node_t, short unsigned int>, short unsigned int> >::Purge, CUtlMemory<UtlRBTreeNode_t<CUtlMap<HeroLimitedUnitTracker_t, CUtlVector<CHandle<CBaseEntity> >*>::Node_t, short unsigned int>, short unsigned int>::Purge, CUtlVectorBase<CDOTAMusicSystemElement, CUtlMemory<CDOTAMusicSystemElement, int> >::RemoveAll, CUtlVectorBase<CHandle<CDOTA_BaseNPC_Hero>, CUtlMemory<CHandle<CDOTA_BaseNPC_Hero>, int> >::RemoveAll, CUtlRBTree<CUtlMap<CHandle<CBaseEntity>, CDOTAHeroPositions*>::Node_t, short unsigned int, CUtlMap<CHandle<CBaseEntity>, CDOTAHeroPositions*>::CKeyLess, CUtlMemory<UtlRBTreeNode_t<CUtlMap<CHandle<CBaseEntity>, CDOTAHeroPositions*>::Node_t, short unsigned int>, short unsigned int> >::Purge, CUtlMemory<UtlRBTreeNode_t<CUtlMap<CHandle<CBaseEntity>, CDOTAHeroPositions*>::Node_t, short unsigned int>, short unsigned int>::Purge, IGameSystem::~IGameSystem, operator delete, CUtlMemory<CHandle<CDOTA_BaseNPC_Hero>, int>::Purge, CUtlMemory<CDOTAMusicSystemElement, int>::Purge
 void __fastcall CDOTAHeroList::~CDOTAHeroList(CDOTAHeroList *const this)
 {
-  this->_vptr_IGameSystem = off_42F7430;
+  this->_vptr_IGameSystem = off_42F7430;  // vptr: CDOTAHeroList
   CUtlRBTree<CUtlMap<HeroLimitedUnitTracker_t,CUtlVector<CHandle<CBaseEntity>,CUtlMemory<CHandle<CBaseEntity>,int>> *,unsigned short,bool (*)(HeroLimitedUnitTracker_t const&,HeroLimitedUnitTracker_t const&)>::Node_t,unsigned short,CUtlMap<HeroLimitedUnitTracker_t,CUtlVector<CHandle<CBaseEntity>,CUtlMemory<CHandle<CBaseEntity>,int>> *,unsigned short,bool (*)(HeroLimitedUnitTracker_t const&,HeroLimitedUnitTracker_t const&)>::CKeyLess,CUtlMemory<UtlRBTreeNode_t<CUtlMap<HeroLimitedUnitTracker_t,CUtlVector<CHandle<CBaseEntity>,CUtlMemory<CHandle<CBaseEntity>,int>> *,unsigned short,bool (*)(HeroLimitedUnitTracker_t const&,HeroLimitedUnitTracker_t const&)>::Node_t,unsigned short>,unsigned short>>::Purge(&this->m_mapHeroToLimitedUnits.m_Tree);
   if ( (this->m_mapHeroToLimitedUnits.m_Tree.m_Elements.m_nGrowSize & 0xC0000000) == 0 )
     CUtlMemory<UtlRBTreeNode_t<CUtlMap<HeroLimitedUnitTracker_t,CUtlVector<CHandle<CBaseEntity>,CUtlMemory<CHandle<CBaseEntity>,int>> *,unsigned short,bool (*)(HeroLimitedUnitTracker_t const&,HeroLimitedUnitTracker_t const&)>::Node_t,unsigned short>,unsigned short>::Purge(&this->m_mapHeroToLimitedUnits.m_Tree.m_Elements);
@@ -1248,7 +1248,7 @@ void __fastcall CDOTAHeroList::~CDOTAHeroList(CDOTAHeroList *const this)
   CUtlRBTree<CUtlMap<CHandle<CBaseEntity>,CDOTAHeroPositions *,unsigned short,bool (*)(CHandle<CBaseEntity> const&,CHandle<CBaseEntity> const&)>::Node_t,unsigned short,CUtlMap<CHandle<CBaseEntity>,CDOTAHeroPositions *,unsigned short,bool (*)(CHandle<CBaseEntity> const&,CHandle<CBaseEntity> const&)>::CKeyLess,CUtlMemory<UtlRBTreeNode_t<CUtlMap<CHandle<CBaseEntity>,CDOTAHeroPositions *,unsigned short,bool (*)(CHandle<CBaseEntity> const&,CHandle<CBaseEntity> const&)>::Node_t,unsigned short>,unsigned short>>::Purge(&this->m_HeroPositionHistory.m_Tree);
   if ( (this->m_HeroPositionHistory.m_Tree.m_Elements.m_nGrowSize & 0xC0000000) == 0 )
     CUtlMemory<UtlRBTreeNode_t<CUtlMap<CHandle<CBaseEntity>,CDOTAHeroPositions *,unsigned short,bool (*)(CHandle<CBaseEntity> const&,CHandle<CBaseEntity> const&)>::Node_t,unsigned short>,unsigned short>::Purge(&this->m_HeroPositionHistory.m_Tree.m_Elements);
-  this->_vptr_IGameSystem = off_3F7C1B0;
+  this->_vptr_IGameSystem = off_3F7C1B0;  // vptr: CAutoGameSystem
   IGameSystem::~IGameSystem(this);
   operator delete(this);
 }
@@ -1446,7 +1446,7 @@ CEntityInstance *__fastcall CDOTA_Pet_CarriedItem::CEntityInstanceEntityClass::C
 void __fastcall CDOTA_Pet_CarriedItem::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Pet_CarriedItem::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -1456,7 +1456,7 @@ void __fastcall CDOTA_Pet_CarriedItem::CEntityInstanceEntityClass::~CEntityInsta
 void __fastcall CDOTA_Pet_CarriedItem::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Pet_CarriedItem::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -1656,7 +1656,7 @@ void *__fastcall CDOTA_BaseNPC_Pet::CEntityInstanceEntityClass::AllocateInstance
 void __fastcall CDOTA_BaseNPC_Pet::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_BaseNPC_Pet::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -1666,7 +1666,7 @@ void __fastcall CDOTA_BaseNPC_Pet::CEntityInstanceEntityClass::~CEntityInstanceE
 void __fastcall CDOTA_BaseNPC_Pet::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_BaseNPC_Pet::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }

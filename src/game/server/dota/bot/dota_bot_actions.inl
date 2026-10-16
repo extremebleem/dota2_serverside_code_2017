@@ -4,7 +4,7 @@
 // CDOTA_BotAction::~CDOTA_BotAction  (line 45, @0x0000000002811bf0, libserver.so)
 void __fastcall CDOTA_BotAction::~CDOTA_BotAction(CDOTA_BotAction *const this)
 {
-  this->_vptr_CDOTA_BotAction = off_42B6970;
+  this->_vptr_CDOTA_BotAction = off_42B6970;  // vptr: CDOTA_BotAction
 }
 
 
@@ -12,7 +12,7 @@ void __fastcall CDOTA_BotAction::~CDOTA_BotAction(CDOTA_BotAction *const this)
 // calls: operator delete
 void __fastcall CDOTA_BotAction::~CDOTA_BotAction(CDOTA_BotAction *const this)
 {
-  this->_vptr_CDOTA_BotAction = off_42B6970;
+  this->_vptr_CDOTA_BotAction = off_42B6970;  // vptr: CDOTA_BotAction
   operator delete(this);
 }
 
@@ -83,7 +83,7 @@ bool __fastcall CDOTA_BotAction::ShouldBeQueued(CDOTA_BotAction *const this)
 // CDOTA_BotAction_Idle::~CDOTA_BotAction_Idle  (line 79, @0x0000000002812010, libserver.so)  // inlines: ~CDOTA_BotAction
 void __fastcall CDOTA_BotAction_Idle::~CDOTA_BotAction_Idle(CDOTA_BotAction_Idle *const this)
 {
-  this->_vptr_CDOTA_BotAction = off_42B6970;
+  this->_vptr_CDOTA_BotAction = off_42B6970;  // vptr: CDOTA_BotAction
 }
 
 
@@ -91,7 +91,7 @@ void __fastcall CDOTA_BotAction_Idle::~CDOTA_BotAction_Idle(CDOTA_BotAction_Idle
 // calls: operator delete
 void __fastcall CDOTA_BotAction_Idle::~CDOTA_BotAction_Idle(CDOTA_BotAction_Idle *const this)
 {
-  this->_vptr_CDOTA_BotAction = off_42B6970;
+  this->_vptr_CDOTA_BotAction = off_42B6970;  // vptr: CDOTA_BotAction
   operator delete(this);
 }
 
@@ -114,18 +114,18 @@ DOTA_BOT_ACTION __fastcall CDOTA_BotAction_Idle::GetActionType(CDOTA_BotAction_I
 // calls: CUtlVectorBase<Vector, CUtlMemory<Vector, int> >::RemoveAll, CUtlMemory<Vector, int>::Purge
 void __fastcall CDOTA_BotAction_MoveTo::~CDOTA_BotAction_MoveTo(CDOTA_BotAction_MoveTo *const this)
 {
-  this->_vptr_CDOTA_BotAction = off_42B6F30;
+  this->_vptr_CDOTA_BotAction = off_42B6F30;  // vptr: CDOTA_BotAction_MoveTo
   CUtlVectorBase<Vector,CUtlMemory<Vector,int>>::RemoveAll(&this->m_vWaypoints);
   if ( (this->m_vWaypoints.m_Memory.m_nGrowSize & 0xC0000000) != 0
     || (CUtlMemory<Vector,int>::Purge(&this->m_vWaypoints.m_Memory),
         (this->m_vWaypoints.m_Memory.m_nGrowSize & 0xC0000000) != 0) )
   {
-    this->_vptr_CDOTA_BotAction = off_42B6970;
+    this->_vptr_CDOTA_BotAction = off_42B6970;  // vptr: CDOTA_BotAction
   }
   else
   {
     CUtlMemory<Vector,int>::Purge(&this->m_vWaypoints.m_Memory);
-    this->_vptr_CDOTA_BotAction = off_42B6970;
+    this->_vptr_CDOTA_BotAction = off_42B6970;  // vptr: CDOTA_BotAction
   }
 }
 
@@ -134,7 +134,7 @@ void __fastcall CDOTA_BotAction_MoveTo::~CDOTA_BotAction_MoveTo(CDOTA_BotAction_
 // calls: CUtlVectorBase<Vector, CUtlMemory<Vector, int> >::RemoveAll, operator delete, CUtlMemory<Vector, int>::Purge
 void __fastcall CDOTA_BotAction_MoveTo::~CDOTA_BotAction_MoveTo(CDOTA_BotAction_MoveTo *const this)
 {
-  this->_vptr_CDOTA_BotAction = off_42B6F30;
+  this->_vptr_CDOTA_BotAction = off_42B6F30;  // vptr: CDOTA_BotAction_MoveTo
   CUtlVectorBase<Vector,CUtlMemory<Vector,int>>::RemoveAll(&this->m_vWaypoints);
   if ( (this->m_vWaypoints.m_Memory.m_nGrowSize & 0xC0000000) == 0 )
   {
@@ -142,7 +142,7 @@ void __fastcall CDOTA_BotAction_MoveTo::~CDOTA_BotAction_MoveTo(CDOTA_BotAction_
     if ( (this->m_vWaypoints.m_Memory.m_nGrowSize & 0xC0000000) == 0 )
       CUtlMemory<Vector,int>::Purge(&this->m_vWaypoints.m_Memory);
   }
-  this->_vptr_CDOTA_BotAction = off_42B6970;
+  this->_vptr_CDOTA_BotAction = off_42B6970;  // vptr: CDOTA_BotAction
   operator delete(this);
 }
 
@@ -164,7 +164,7 @@ DOTA_BOT_ACTION __fastcall CDOTA_BotAction_MoveTo::GetActionType(CDOTA_BotAction
 // CDOTA_BotAction_Attack::~CDOTA_BotAction_Attack  (line 170, @0x0000000002812000, libserver.so)  // inlines: ~CDOTA_BotAction
 void __fastcall CDOTA_BotAction_Attack::~CDOTA_BotAction_Attack(CDOTA_BotAction_Attack *const this)
 {
-  this->_vptr_CDOTA_BotAction = off_42B6970;
+  this->_vptr_CDOTA_BotAction = off_42B6970;  // vptr: CDOTA_BotAction
 }
 
 
@@ -172,7 +172,7 @@ void __fastcall CDOTA_BotAction_Attack::~CDOTA_BotAction_Attack(CDOTA_BotAction_
 // calls: operator delete
 void __fastcall CDOTA_BotAction_Attack::~CDOTA_BotAction_Attack(CDOTA_BotAction_Attack *const this)
 {
-  this->_vptr_CDOTA_BotAction = off_42B6970;
+  this->_vptr_CDOTA_BotAction = off_42B6970;  // vptr: CDOTA_BotAction
   operator delete(this);
 }
 
@@ -221,7 +221,7 @@ DOTA_BOT_ACTION __fastcall CDOTA_BotAction_Attack::GetActionType(CDOTA_BotAction
 // CDOTA_BotAction_AttackMove::~CDOTA_BotAction_AttackMove  (line 215, @0x0000000002811ff0, libserver.so)  // inlines: ~CDOTA_BotAction
 void __fastcall CDOTA_BotAction_AttackMove::~CDOTA_BotAction_AttackMove(CDOTA_BotAction_AttackMove *const this)
 {
-  this->_vptr_CDOTA_BotAction = off_42B6970;
+  this->_vptr_CDOTA_BotAction = off_42B6970;  // vptr: CDOTA_BotAction
 }
 
 
@@ -229,7 +229,7 @@ void __fastcall CDOTA_BotAction_AttackMove::~CDOTA_BotAction_AttackMove(CDOTA_Bo
 // calls: operator delete
 void __fastcall CDOTA_BotAction_AttackMove::~CDOTA_BotAction_AttackMove(CDOTA_BotAction_AttackMove *const this)
 {
-  this->_vptr_CDOTA_BotAction = off_42B6970;
+  this->_vptr_CDOTA_BotAction = off_42B6970;  // vptr: CDOTA_BotAction
   operator delete(this);
 }
 
@@ -251,7 +251,7 @@ DOTA_BOT_ACTION __fastcall CDOTA_BotAction_AttackMove::GetActionType(CDOTA_BotAc
 // CDOTA_BotAction_UseAbility::~CDOTA_BotAction_UseAbility  (line 246, @0x0000000002811f10, libserver.so)  // inlines: ~CDOTA_BotAction
 void __fastcall CDOTA_BotAction_UseAbility::~CDOTA_BotAction_UseAbility(CDOTA_BotAction_UseAbility *const this)
 {
-  this->_vptr_CDOTA_BotAction = off_42B6970;
+  this->_vptr_CDOTA_BotAction = off_42B6970;  // vptr: CDOTA_BotAction
 }
 
 
@@ -259,7 +259,7 @@ void __fastcall CDOTA_BotAction_UseAbility::~CDOTA_BotAction_UseAbility(CDOTA_Bo
 // calls: operator delete
 void __fastcall CDOTA_BotAction_UseAbility::~CDOTA_BotAction_UseAbility(CDOTA_BotAction_UseAbility *const this)
 {
-  this->_vptr_CDOTA_BotAction = off_42B6970;
+  this->_vptr_CDOTA_BotAction = off_42B6970;  // vptr: CDOTA_BotAction
   operator delete(this);
 }
 
@@ -316,7 +316,7 @@ DOTA_BOT_ACTION __fastcall CDOTA_BotAction_UseAbility::GetActionType(CDOTA_BotAc
 // CDOTA_BotAction_DispenseWard::~CDOTA_BotAction_DispenseWard  (line 310, @0x0000000002811fe0, libserver.so)  // inlines: ~CDOTA_BotAction, ~CDOTA_BotAction_UseAbility
 void __fastcall CDOTA_BotAction_DispenseWard::~CDOTA_BotAction_DispenseWard(CDOTA_BotAction_DispenseWard *const this)
 {
-  this->_vptr_CDOTA_BotAction = off_42B6970;
+  this->_vptr_CDOTA_BotAction = off_42B6970;  // vptr: CDOTA_BotAction
 }
 
 
@@ -324,7 +324,7 @@ void __fastcall CDOTA_BotAction_DispenseWard::~CDOTA_BotAction_DispenseWard(CDOT
 // calls: operator delete
 void __fastcall CDOTA_BotAction_DispenseWard::~CDOTA_BotAction_DispenseWard(CDOTA_BotAction_DispenseWard *const this)
 {
-  this->_vptr_CDOTA_BotAction = off_42B6970;
+  this->_vptr_CDOTA_BotAction = off_42B6970;  // vptr: CDOTA_BotAction
   operator delete(this);
 }
 
@@ -332,7 +332,7 @@ void __fastcall CDOTA_BotAction_DispenseWard::~CDOTA_BotAction_DispenseWard(CDOT
 // CDOTA_BotAction_PickUpRune::~CDOTA_BotAction_PickUpRune  (line 325, @0x0000000002811fd0, libserver.so)  // inlines: ~CDOTA_BotAction
 void __fastcall CDOTA_BotAction_PickUpRune::~CDOTA_BotAction_PickUpRune(CDOTA_BotAction_PickUpRune *const this)
 {
-  this->_vptr_CDOTA_BotAction = off_42B6970;
+  this->_vptr_CDOTA_BotAction = off_42B6970;  // vptr: CDOTA_BotAction
 }
 
 
@@ -340,7 +340,7 @@ void __fastcall CDOTA_BotAction_PickUpRune::~CDOTA_BotAction_PickUpRune(CDOTA_Bo
 // calls: operator delete
 void __fastcall CDOTA_BotAction_PickUpRune::~CDOTA_BotAction_PickUpRune(CDOTA_BotAction_PickUpRune *const this)
 {
-  this->_vptr_CDOTA_BotAction = off_42B6970;
+  this->_vptr_CDOTA_BotAction = off_42B6970;  // vptr: CDOTA_BotAction
   operator delete(this);
 }
 
@@ -369,7 +369,7 @@ DOTA_BOT_ACTION __fastcall CDOTA_BotAction_PickUpRune::GetActionType(CDOTA_BotAc
 // CDOTA_BotAction_PickUpItem::~CDOTA_BotAction_PickUpItem  (line 348, @0x0000000002811fc0, libserver.so)  // inlines: ~CDOTA_BotAction
 void __fastcall CDOTA_BotAction_PickUpItem::~CDOTA_BotAction_PickUpItem(CDOTA_BotAction_PickUpItem *const this)
 {
-  this->_vptr_CDOTA_BotAction = off_42B6970;
+  this->_vptr_CDOTA_BotAction = off_42B6970;  // vptr: CDOTA_BotAction
 }
 
 
@@ -377,7 +377,7 @@ void __fastcall CDOTA_BotAction_PickUpItem::~CDOTA_BotAction_PickUpItem(CDOTA_Bo
 // calls: operator delete
 void __fastcall CDOTA_BotAction_PickUpItem::~CDOTA_BotAction_PickUpItem(CDOTA_BotAction_PickUpItem *const this)
 {
-  this->_vptr_CDOTA_BotAction = off_42B6970;
+  this->_vptr_CDOTA_BotAction = off_42B6970;  // vptr: CDOTA_BotAction
   operator delete(this);
 }
 
@@ -406,7 +406,7 @@ DOTA_BOT_ACTION __fastcall CDOTA_BotAction_PickUpItem::GetActionType(CDOTA_BotAc
 // CDOTA_BotAction_DropItem::~CDOTA_BotAction_DropItem  (line 381, @0x0000000002811fb0, libserver.so)  // inlines: ~CDOTA_BotAction
 void __fastcall CDOTA_BotAction_DropItem::~CDOTA_BotAction_DropItem(CDOTA_BotAction_DropItem *const this)
 {
-  this->_vptr_CDOTA_BotAction = off_42B6970;
+  this->_vptr_CDOTA_BotAction = off_42B6970;  // vptr: CDOTA_BotAction
 }
 
 
@@ -414,7 +414,7 @@ void __fastcall CDOTA_BotAction_DropItem::~CDOTA_BotAction_DropItem(CDOTA_BotAct
 // calls: operator delete
 void __fastcall CDOTA_BotAction_DropItem::~CDOTA_BotAction_DropItem(CDOTA_BotAction_DropItem *const this)
 {
-  this->_vptr_CDOTA_BotAction = off_42B6970;
+  this->_vptr_CDOTA_BotAction = off_42B6970;  // vptr: CDOTA_BotAction
   operator delete(this);
 }
 

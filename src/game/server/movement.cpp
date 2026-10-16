@@ -315,7 +315,7 @@ CEntityInstance *__fastcall CPathKeyFrame::CEntityInstanceEntityClass::Construct
 void __fastcall CPathKeyFrame::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CPathKeyFrame::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -325,7 +325,7 @@ void __fastcall CPathKeyFrame::CEntityInstanceEntityClass::~CEntityInstanceEntit
 void __fastcall CPathKeyFrame::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CPathKeyFrame::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -782,7 +782,7 @@ CEntityInstance *__fastcall CBaseMoveBehavior::CEntityInstanceEntityClass::Const
 void __fastcall CBaseMoveBehavior::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CBaseMoveBehavior::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -792,7 +792,7 @@ void __fastcall CBaseMoveBehavior::CEntityInstanceEntityClass::~CEntityInstanceE
 void __fastcall CBaseMoveBehavior::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CBaseMoveBehavior::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }

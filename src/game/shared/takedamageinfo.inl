@@ -57,7 +57,7 @@ void __fastcall CMultiDamage::~CMultiDamage(CMultiDamage *const this)
   HSCRIPT m_hScriptInstance; // rsi
 
   m_hScriptInstance = this->m_hScriptInstance;
-  this->_vptr_CTakeDamageInfo = off_3FC92D0;
+  this->_vptr_CTakeDamageInfo = off_3FC92D0;  // vptr: CTakeDamageInfo
   if ( m_hScriptInstance != 0 )
   {
     (*(*g_pScriptVM + 136LL))(g_pScriptVM);

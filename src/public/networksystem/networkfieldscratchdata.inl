@@ -12,7 +12,7 @@ void __fastcall CNetworkFieldScratchData::~CNetworkFieldScratchData(CNetworkFiel
   CMemoryStack *v6; // r12
   bool v7; // zf
 
-  this->_vptr_INetworkFieldScratchData = off_47C3090;
+  this->_vptr_INetworkFieldScratchData = off_47C3090;  // vptr: CNetworkFieldScratchData
   v2 = this->m_MemoryStacks.m_Size - 1;
   if ( v2 >= 0 )
   {
@@ -50,7 +50,7 @@ void __fastcall CNetworkFieldScratchData::~CNetworkFieldScratchData(CNetworkFiel
   {
     this->m_MemoryStacks.m_Size = 0;
   }
-  this->_vptr_INetworkFieldScratchData = off_47C3050;
+  this->_vptr_INetworkFieldScratchData = off_47C3050;  // vptr: INetworkFieldScratchData
 }
 
 
@@ -65,7 +65,7 @@ void __fastcall CNetworkFieldScratchData::~CNetworkFieldScratchData(CNetworkFiel
   CMemoryStack *v6; // r12
   bool v7; // zf
 
-  this->_vptr_INetworkFieldScratchData = off_47C3090;
+  this->_vptr_INetworkFieldScratchData = off_47C3090;  // vptr: CNetworkFieldScratchData
   v2 = this->m_MemoryStacks.m_Size - 1;
   if ( v2 >= 0 )
   {
@@ -103,7 +103,7 @@ void __fastcall CNetworkFieldScratchData::~CNetworkFieldScratchData(CNetworkFiel
   {
     this->m_MemoryStacks.m_Size = 0;
   }
-  this->_vptr_INetworkFieldScratchData = off_47C3050;
+  this->_vptr_INetworkFieldScratchData = off_47C3050;  // vptr: INetworkFieldScratchData
   operator delete(this);
 }
 
@@ -124,10 +124,8 @@ void __fastcall CNetworkFieldScratchData::Init(
   __int64 v9; // rcx
   __int64 v10; // rdi
   __int64 v11; // rsi
-  __int64 v12; // r8
-  __int64 v13; // r9
   uint32 m_unBufferSize; // r8d
-  LeafCodeInfo_t v15; // [rsp+0h] [rbp-40h] BYREF
+  LeafCodeInfo_t v13; // [rsp+0h] [rbp-40h] BYREF
 
   this->m_LoggingChannel = nLogChannel;
   this->m_unBufferSize = unBufferSize;
@@ -145,18 +143,18 @@ void __fastcall CNetworkFieldScratchData::Init(
       goto LABEL_11;
     while ( 1 )
     {
-      if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v10, v11, v8, v9, v12, v13) != 0 )
+      if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v10, v11, v8, v9) != 0 )
         loc_0 = -559038737;
       Plat_ExitProcess(1);
 LABEL_11:
       m_unBufferSize = this->m_unBufferSize;
-      v15.m_szFile = "../public/networksystem/networkfieldscratchdata.h";
-      v15.m_szFunction = "Init";
-      v15.m_nLine = 34;
+      v13.m_szFile = "../public/networksystem/networkfieldscratchdata.h";
+      v13.m_szFunction = "Init";
+      v13.m_nLine = 34;
       LoggingSystem_Log(
         LOG_GENERAL,
         LoggingSeverity_t::LS_ERROR,
-        &v15,
+        &v13,
         "CNetworkFieldScratchData::Init failed on buffer of %u bytes.",
         m_unBufferSize);
     }
@@ -198,20 +196,18 @@ void *__fastcall CNetworkFieldScratchData::Alloc(CNetworkFieldScratchData *const
   __int64 v20; // rcx
   __int64 v21; // rdi
   __int64 v22; // rsi
-  __int64 v23; // r8
-  __int64 v24; // r9
-  int v25; // r12d
-  int v26; // edx
-  int v27; // ecx
-  int v28; // esi
-  int v29; // r8d
-  int v30; // r9d
+  int v23; // r12d
+  int v24; // edx
+  int v25; // ecx
+  int v26; // esi
+  int v27; // r8d
+  int v28; // r9d
   signed int unMinBufferSize; // [rsp+Ch] [rbp-174h]
-  LeafCodeInfo_t v32; // [rsp+10h] [rbp-170h] BYREF
+  LeafCodeInfo_t v30; // [rsp+10h] [rbp-170h] BYREF
   CFmtStr dbName; // [rsp+30h] [rbp-150h] BYREF
-  unsigned __int64 v34; // [rsp+148h] [rbp-38h]
+  unsigned __int64 v32; // [rsp+148h] [rbp-38h]
 
-  v34 = __readfsqword(0x28u);
+  v32 = __readfsqword(0x28u);
   v4 = this->m_MemoryStacks.m_Size - 1;
   v5 = this->m_MemoryStacks.m_Memory.m_pMemory[v4];
   if ( unAllocSize == 0 )
@@ -240,22 +236,22 @@ void *__fastcall CNetworkFieldScratchData::Alloc(CNetworkFieldScratchData *const
     {
       if ( LoggingSystem_IsChannelEnabled(LOG_GENERAL, 4) != 0 )
       {
-        v32.m_nLine = 56;
-        v32.m_szFile = "../public/networksystem/networkfieldscratchdata.h";
-        v32.m_szFunction = "Alloc";
+        v30.m_nLine = 56;
+        v30.m_szFile = "../public/networksystem/networkfieldscratchdata.h";
+        v30.m_szFunction = "Alloc";
         LoggingSystem_Log(
           LOG_GENERAL,
           LoggingSeverity_t::LS_ERROR,
-          &v32,
+          &v30,
           "CNetworkFieldScratchData::Alloc, failed to add new CMemoryStack at slot %d of size %u bytes.",
           v4,
           unMinBufferSize);
       }
-      if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v21, v22, v19, v20, v23, v24) != 0 )
+      if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v21, v22, v19, v20) != 0 )
         loc_0 = -559038737;
-      v25 = Plat_ExitProcess(1);
+      v23 = Plat_ExitProcess(1);
       operator delete(&LOG_GENERAL);
-      Unwind_Resume(v25, v28, v26, v27, v29, v30);
+      Unwind_Resume(v23, v26, v24, v25, v27, v28);
     }
     m_Size = this->m_MemoryStacks.m_Size;
     v16 = this->m_MemoryStacks.m_Size;
@@ -290,7 +286,7 @@ LABEL_11:
   }
   while ( 1 )
   {
-    CurrentId = ThreadGetCurrentId(this);
+    CurrentId = ThreadGetCurrentId();
     if ( CurrentId == v5->m_allocMutex.m_ownerID || _InterlockedCompareExchange64(&v5->m_allocMutex, CurrentId, 0) == 0 )
       break;
     _mm_pause();

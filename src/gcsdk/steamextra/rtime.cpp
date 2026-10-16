@@ -318,7 +318,7 @@ RTime32 __fastcall CRTime::RTime32FromFmtString(const char *pchFmt, const char *
   char *v7; // r14
   char *v8; // rax
   __int64 v9; // rbx
-  char *v10; // r15
+  const char *v10; // r15
   __int64 v11; // kr00_8
   int v12; // eax
   RTime32 result; // eax

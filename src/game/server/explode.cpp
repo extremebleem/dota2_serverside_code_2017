@@ -239,7 +239,7 @@ CEntityInstance *__fastcall CShower::CEntityInstanceEntityClass::ConstructInstan
 void __fastcall CShower::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CShower::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -249,7 +249,7 @@ void __fastcall CShower::CEntityInstanceEntityClass::~CEntityInstanceEntityClass
 void __fastcall CShower::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CShower::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -546,7 +546,7 @@ CEntityInstance *__fastcall CEnvExplosion::CEntityInstanceEntityClass::Construct
 void __fastcall CEnvExplosion::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CEnvExplosion::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -556,7 +556,7 @@ void __fastcall CEnvExplosion::CEntityInstanceEntityClass::~CEntityInstanceEntit
 void __fastcall CEnvExplosion::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CEnvExplosion::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }

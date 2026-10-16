@@ -189,7 +189,7 @@ void __fastcall CGCClientSystem::SetupGC(CGCClientSystem *const this)
 
   if ( *(this + 16) != 0 )
     return;
-  v2 = CommandLine();
+  v2 = CommandLine(this);
   if ( (*(*v2 + 64LL))(v2, "+dev_simulate_gcdown") != 0 )
     GCSDK::CGCClient::SetSimulateGCConnectionFailure((this + 24), 1);
   m_pszString = "FCVAR_NEVER_AS_STRING";
@@ -224,25 +224,31 @@ LABEL_7:
 // globals: SteamGameServerInternal_ModuleContext(void)::ctx
 void __fastcall CGCClientSystem::InitGC(CGCClientSystem *const this)
 {
+  __int64 v2; // rdi
   ISteamClient *m_pSteamClient; // r12
-  HSteamUser v3; // r14d
-  HSteamPipe v4; // r13d
-  uint32 v5; // esi
-  bool v6; // al
-  const char *v7; // rdx
+  HSteamUser v4; // r14d
+  __int64 v5; // rdi
+  HSteamPipe v6; // r13d
+  uint32 v7; // esi
+  bool v8; // al
+  const char *v9; // rdx
+  __int64 v10; // rdi
   char IsChannelEnabled; // al
   unsigned int HSteamUser; // r13d
+  __int64 v13; // rdi
+  __int64 v14; // rdi
   unsigned int HSteamPipe; // r12d
-  uint32 v11; // eax
+  __int64 v16; // rdi
+  uint32 v17; // eax
   ISteamClient *Interface; // rax
 
-  if ( SteamGameServer_GetHSteamPipe() == 0 )
+  if ( SteamGameServer_GetHSteamPipe(this) == 0 )
     goto LABEL_9;
   m_pSteamClient = SteamGameServerInternal_ModuleContext(void)::ctx.m_pSteamClient;
   if ( SteamGameServerInternal_ModuleContext(void)::ctx.m_pSteamClient == 0 )
   {
-    HSteamUser = SteamGameServer_GetHSteamUser();
-    HSteamPipe = SteamGameServer_GetHSteamPipe();
+    HSteamUser = SteamGameServer_GetHSteamUser(v2);
+    HSteamPipe = SteamGameServer_GetHSteamPipe(v13);
     if ( HSteamPipe == 0 )
       goto LABEL_13;
     Interface = SteamInternal_CreateInterface("SteamClient017");
@@ -316,38 +322,38 @@ void __fastcall CGCClientSystem::InitGC(CGCClientSystem *const this)
       }
 LABEL_13:
       m_pSteamClient = SteamGameServerInternal_ModuleContext(void)::ctx.m_pSteamClient;
-      v3 = SteamGameServer_GetHSteamUser();
-      v4 = SteamGameServer_GetHSteamPipe();
-      v11 = (*(*engine + 712LL))(engine);
+      v4 = SteamGameServer_GetHSteamUser(v14);
+      v6 = SteamGameServer_GetHSteamPipe(v16);
+      v17 = (*(*engine + 712LL))(engine);
       if ( m_pSteamClient != 0 )
       {
-        v5 = v11;
+        v7 = v17;
         goto LABEL_4;
       }
 LABEL_10:
       IsChannelEnabled = LoggingSystem_IsChannelEnabled(LOG_GCCLIENT, 2);
-      v7 = "CGCClientSystem - no ISteamClient interface!\n";
+      v9 = "CGCClientSystem - no ISteamClient interface!\n";
       if ( IsChannelEnabled != 0 )
         goto LABEL_8;
       return;
     }
 LABEL_9:
-    SteamGameServer_GetHSteamUser();
-    SteamGameServer_GetHSteamPipe();
+    SteamGameServer_GetHSteamUser(v2);
+    SteamGameServer_GetHSteamPipe(v10);
     (*(*engine + 712LL))(engine);
     goto LABEL_10;
   }
-  v3 = SteamGameServer_GetHSteamUser();
-  v4 = SteamGameServer_GetHSteamPipe();
-  v5 = (*(*engine + 712LL))(engine);
+  v4 = SteamGameServer_GetHSteamUser(v2);
+  v6 = SteamGameServer_GetHSteamPipe(v5);
+  v7 = (*(*engine + 712LL))(engine);
 LABEL_4:
-  v6 = GCSDK::CGCClient::BInit((this + 24), v5, m_pSteamClient, v3, v4);
-  *(this + 16) = v6;
-  if ( !v6 && LoggingSystem_IsChannelEnabled(LOG_GCCLIENT, 2) != 0 )
+  v8 = GCSDK::CGCClient::BInit((this + 24), v7, m_pSteamClient, v4, v6);
+  *(this + 16) = v8;
+  if ( !v8 && LoggingSystem_IsChannelEnabled(LOG_GCCLIENT, 2) != 0 )
   {
-    v7 = "CGCClientSystem - failed to init GCClient!\n";
+    v9 = "CGCClientSystem - failed to init GCClient!\n";
 LABEL_8:
-    LoggingSystem_Log(LOG_GCCLIENT, 2, v7);
+    LoggingSystem_Log(LOG_GCCLIENT, 2, v9);
   }
 }
 

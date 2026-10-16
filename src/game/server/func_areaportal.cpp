@@ -176,7 +176,7 @@ void *__fastcall CAreaPortal::CEntityInstanceEntityClass::AllocateInstance(
 void __fastcall CAreaPortal::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CAreaPortal::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -186,7 +186,7 @@ void __fastcall CAreaPortal::CEntityInstanceEntityClass::~CEntityInstanceEntityC
 void __fastcall CAreaPortal::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CAreaPortal::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }

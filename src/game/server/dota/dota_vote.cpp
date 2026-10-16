@@ -103,7 +103,7 @@ LABEL_10:
 // callers: _GLOBAL__sub_I__unity_dota_08.cpp
 void __fastcall CDOTAVoteSystem::CDOTAVoteSystem(CDOTAVoteSystem *const this)
 {
-  this->_vptr_IGameSystem = off_42B47B0;
+  this->_vptr_IGameSystem = off_42B47B0;  // vptr: CDOTAVoteSystem
   this->_vptr_IGameEventListener2 = off_42B4908;
   this->m_bRegisteredForEvents = 0;
   this->m_CDOTAClientMsg_RecordVote_tHook.m_ConnectedSignallers.m_Size = 0;
@@ -140,14 +140,14 @@ void __fastcall CDOTAVoteSystem::~CDOTAVoteSystem(CDOTAVoteSystem *const this)
 
   v1 = 0;
   v2 = 0;
-  this->_vptr_IGameSystem = off_42B47B0;
+  this->_vptr_IGameSystem = off_42B47B0;  // vptr: CDOTAVoteSystem
   this->_vptr_IGameEventListener2 = off_42B4908;
   while ( this->m_ClientMessageContainer.m_Size > v1 )
   {
     ++v1;
     (*(this->m_ClientMessageContainer.m_Memory.m_pMemory[v2]->_vptr_IClientMessageDelegateHook + 1))(this->m_ClientMessageContainer.m_Memory.m_pMemory[v2]);
     v4 = this->m_ClientMessageContainer.m_Memory.m_pMemory[v2++];
-    (*v4->_vptr_IClientMessageDelegateHook)(v4);
+    v4->Release();
   }
   v5 = (this->m_ClientMessageContainer.m_Memory.m_nGrowSize & 0xC0000000) == 0;
   this->m_ClientMessageContainer.m_Size = 0;
@@ -173,15 +173,15 @@ void __fastcall CDOTAVoteSystem::~CDOTAVoteSystem(CDOTAVoteSystem *const this)
   CClientMessageDelegateHook<CDOTAClientMsg_RecordVote_t>::Release(&this->m_CDOTAClientMsg_RecordVote_tHook);
   CUtlSlot::~CUtlSlot(&this->m_CDOTAClientMsg_RecordVote_tHook.CUtlSlot);
   v5 = !this->m_bRegisteredForEvents;
-  this->_vptr_IGameEventListener2 = off_3FB3190;
+  this->_vptr_IGameEventListener2 = off_3FB3190;  // vptr: CGameEventListener
   if ( !v5 )
   {
     if ( gameeventmanager != 0 )
       (*(gameeventmanager->_vptr_IBaseInterface + 6))(gameeventmanager, &this->CGameEventListener);
     this->m_bRegisteredForEvents = 0;
   }
-  this->_vptr_IGameEventListener2 = off_3FB3150;
-  this->_vptr_IGameSystem = off_3F7C1B0;
+  this->_vptr_IGameEventListener2 = off_3FB3150;  // vptr: IGameEventListener2
+  this->_vptr_IGameSystem = off_3F7C1B0;  // vptr: CAutoGameSystem
   IGameSystem::~IGameSystem(this);
 }
 

@@ -37,36 +37,34 @@ bool __fastcall CResponseFileParser::TokenWaiting(CResponseFileParser *const thi
   __int64 v2; // rcx
   __int64 v3; // rdi
   __int64 v4; // rsi
-  __int64 v5; // r8
-  __int64 v6; // r9
-  bool v7; // dl
-  CUtlLeanVectorFixedGrowableBase<CFieldPathReconstruct_t,3u,short int> *const v8; // rdi
-  int v9; // esi
+  bool v5; // dl
+  CUtlLeanVectorFixedGrowableBase<CFieldPathReconstruct_t,3u,short int> *const v6; // rdi
+  int v7; // esi
   bool result; // al
-  LeafCodeInfo_t v11; // [rsp+0h] [rbp-A0h] BYREF
+  LeafCodeInfo_t v9; // [rsp+0h] [rbp-A0h] BYREF
   char szScriptName[104]; // [rsp+20h] [rbp-80h] BYREF
-  unsigned __int64 v13; // [rsp+88h] [rbp-18h]
+  unsigned __int64 v11; // [rsp+88h] [rbp-18h]
 
   szScriptName[0] = 0;
-  v13 = __readfsqword(0x28u);
+  v11 = __readfsqword(0x28u);
   if ( this->m_ScriptStack.m_Size > 0 )
     CResponseFileParser::GetCurrentScript(this, szScriptName, 0x64u);
   if ( LoggingSystem_IsChannelEnabled(LOG_GENERAL, 4) != 0 )
   {
-    v11.m_szFile = "response_system.h";
-    v11.m_szFunction = "TokenWaiting";
-    v11.m_nLine = 88;
+    v9.m_szFile = "response_system.h";
+    v9.m_szFunction = "TokenWaiting";
+    v9.m_nLine = 88;
     LoggingSystem_Log(
       LOG_GENERAL,
       LoggingSeverity_t::LS_ERROR,
-      &v11,
+      &v9,
       "AI_ResponseSystem:  Unxpected TokenWaiting() with NULL buffer in %s",
       szScriptName);
   }
-  if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v3, v4, v1, v2, v5, v6) != 0 )
+  if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v3, v4, v1, v2) != 0 )
     loc_0 = -559038737;
   Plat_ExitProcess(1);
-  CUtlLeanVectorFixedGrowableBase<CFieldPathReconstruct_t,(unsigned short)3,short>::EnsureCapacity(v8, v9, v7);
+  CUtlLeanVectorFixedGrowableBase<CFieldPathReconstruct_t,(unsigned short)3,short>::EnsureCapacity(v6, v7, v5);
   return result;
 }
 

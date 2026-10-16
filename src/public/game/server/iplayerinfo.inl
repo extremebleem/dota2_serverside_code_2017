@@ -4,7 +4,7 @@
 // CBotCmd::~CBotCmd  (line 23, @0x0000000002302e00, libserver.so)
 void __fastcall CBotCmd::~CBotCmd(CBotCmd *const this)
 {
-  this->_vptr_CBotCmd = off_4073650;
+  this->_vptr_CBotCmd = off_4073650;  // vptr: CBotCmd
 }
 
 
@@ -12,7 +12,7 @@ void __fastcall CBotCmd::~CBotCmd(CBotCmd *const this)
 // calls: operator delete
 void __fastcall CBotCmd::~CBotCmd(CBotCmd *const this)
 {
-  this->_vptr_CBotCmd = off_4073650;
+  this->_vptr_CBotCmd = off_4073650;  // vptr: CBotCmd
   operator delete(this);
 }
 

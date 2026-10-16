@@ -412,7 +412,7 @@ void __fastcall CFuncWater::~CFuncWater(CFuncWater *const this)
 void __fastcall CFuncWater::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CFuncWater::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -422,7 +422,7 @@ void __fastcall CFuncWater::CEntityInstanceEntityClass::~CEntityInstanceEntityCl
 void __fastcall CFuncWater::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CFuncWater::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -706,14 +706,14 @@ void __fastcall CBaseDoor::~CBaseDoor(CBaseDoor *const this)
   *&p_m_NavBlocker[-8].m_blockedAreas.m_Size = off_4016A50;
   CNavDoorBlocker::~CNavDoorBlocker(p_m_NavBlocker);
   v3 = !this->m_bRegisteredForEvents;
-  this->_vptr_IGameEventListener2 = off_3FB3190;
+  this->_vptr_IGameEventListener2 = off_3FB3190;  // vptr: CGameEventListener
   if ( !v3 )
   {
     if ( gameeventmanager != 0 )
       (*(gameeventmanager->_vptr_IBaseInterface + 6))(gameeventmanager, &this->CGameEventListener);
     this->m_bRegisteredForEvents = 0;
   }
-  this->_vptr_IGameEventListener2 = off_3FB3150;
+  this->_vptr_IGameEventListener2 = off_3FB3150;  // vptr: IGameEventListener2
   this->_vptr_IHandleEntity = &off_40B41B0;
   CBaseModelEntity::~CBaseModelEntity(this);
 }
@@ -2696,7 +2696,7 @@ void *__fastcall CRotDoor::CEntityInstanceEntityClass::AllocateInstance(
 void __fastcall CRotDoor::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CRotDoor::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -2706,7 +2706,7 @@ void __fastcall CRotDoor::CEntityInstanceEntityClass::~CEntityInstanceEntityClas
 void __fastcall CRotDoor::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CRotDoor::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }

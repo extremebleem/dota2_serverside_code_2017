@@ -13,7 +13,7 @@ void __fastcall CDOTA_Bot_AbilityUsage_SmokeOfDeceit::CDOTA_Bot_AbilityUsage_Smo
   this->m_pAbility = pAbility;
   this->m_pBot = pBot;
   this->m_bUseOnCreeps = 0;
-  this->_vptr_CDOTA_Bot_AbilityUsage = off_42C6D30;
+  this->_vptr_CDOTA_Bot_AbilityUsage = off_42C6D30;  // vptr: CDOTA_Bot_AbilityUsage_SmokeOfDeceit
   this->m_iRadius = CDOTABaseAbility::GetLevelSpecialValueFor<int>(pAbility, "visibility_radius", -1, 1);
 }
 

@@ -627,7 +627,7 @@ PlayerLocomotion::LadderState __fastcall PlayerLocomotion::DismountLadderTop(Pla
       *&endPos[1] = v26;
       *&startPos.x = (v27[98])(this);
       startPos.z = v28;
-      NDebugOverlay::HorzArrow(&startPos, endPos, 5.0, 255, 255, 0, 255, 1, 0.1);
+      NDebugOverlay::HorzArrow(&startPos, endPos, 5.0, 0xFFu, 0xFFu, 0, 255, 0.1, 1);
     }
     v17 = this->m_bot;
   }
@@ -898,7 +898,7 @@ void __fastcall PlayerLocomotion::Approach(
     {
       *&endPos.x = (*(this->_vptr_INextBotEventResponder + 98))(this);
       endPos.z = v34;
-      NDebugOverlay::Line(&endPos, vPos, 255, 255, 0, 1, 0.1);
+      NDebugOverlay::Line(&endPos, vPos, 0xFFu, 0xFFu, 0, 1, 0.1);
     }
     m_bot = this->m_bot;
     if ( m_bot == 0 )
@@ -1033,7 +1033,7 @@ LABEL_24:
             endPos.y = v25;
             endPos.x = v26;
             v27 = CBaseEntity::GetAbsOrigin(m_player);
-            NDebugOverlay::HorzArrow(v27, &endPos, 15.0, 0, 255, 0, 255, 1, 0.1);
+            NDebugOverlay::HorzArrow(v27, &endPos, 15.0, 0, 0xFFu, 0, 255, 0.1, 1);
             *&v14 = goalDistance;
           }
         }
@@ -1063,7 +1063,7 @@ LABEL_24:
             endPos.y = v49;
             endPos.x = v50 - (forward * 50.0);
             v51 = CBaseEntity::GetAbsOrigin(v48);
-            NDebugOverlay::HorzArrow(v51, &endPos, 15.0, 255, 0, 0, 255, 1, 0.1);
+            NDebugOverlay::HorzArrow(v51, &endPos, 15.0, 0xFFu, 0, 0, 255, 0.1, 1);
             *&v14 = goalDistancea;
           }
         }
@@ -1085,7 +1085,7 @@ LABEL_24:
         endPos.y = v31;
         endPos.x = v32 - (v79 * 50.0);
         v33 = CBaseEntity::GetAbsOrigin(v30);
-        NDebugOverlay::HorzArrow(v33, &endPos, 15.0, 255, 0, 255, 255, 1, 0.1);
+        NDebugOverlay::HorzArrow(v33, &endPos, 15.0, 0xFFu, 0, 0xFFu, 255, 0.1, 1);
       }
     }
     else if ( *&v14 >= 0.25 )
@@ -1104,7 +1104,7 @@ LABEL_24:
         endPos.y = v38;
         endPos.x = v39;
         v40 = CBaseEntity::GetAbsOrigin(v37);
-        NDebugOverlay::HorzArrow(v40, &endPos, 15.0, 0, 255, 255, 255, 1, 0.1);
+        NDebugOverlay::HorzArrow(v40, &endPos, 15.0, 0, 0xFFu, 0xFFu, 255, 0.1, 1);
       }
     }
   }

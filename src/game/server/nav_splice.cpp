@@ -1330,7 +1330,7 @@ LABEL_7:
             origin.z = v7 + *(v3 - 1);
             origin.y = v27 + v22;
             origin.x = v28 + v22;
-            NDebugOverlay::Line(&origin, &target, 200, 200, 200, 0, v22);
+            NDebugOverlay::Line(&origin, &target, 0xC8u, 0xC8u, 0xC8u, 0, v22);
             v22 = v30;
             v7 = v29;
           }
@@ -1408,7 +1408,7 @@ void __fastcall CNavSplice::DrawHotEdges(CNavSplice *const this)
       v19.z = v15;
       v19.y = v14 + v4;
       v19.x = v13 + v4;
-      NDebugOverlay::Line(&v18, &v19, 200, 200, 200, 1, v4);
+      NDebugOverlay::Line(&v18, &v19, 0xC8u, 0xC8u, 0xC8u, 1, v4);
       v4 = v17;
     }
     while ( this->m_HotEdges.m_Size > v3 );

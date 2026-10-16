@@ -4,7 +4,7 @@
 // CDOTA_BotAction::CDOTA_BotAction  (line 31, @0x00000000027eb300, libserver.so)
 void __fastcall CDOTA_BotAction::CDOTA_BotAction(CDOTA_BotAction *const this, CDOTA_Bot *pBot)
 {
-  this->_vptr_CDOTA_BotAction = off_42B6970;
+  this->_vptr_CDOTA_BotAction = off_42B6970;  // vptr: CDOTA_BotAction
   this->m_pBot = pBot;
 }
 
@@ -13,7 +13,7 @@ void __fastcall CDOTA_BotAction::CDOTA_BotAction(CDOTA_BotAction *const this, CD
 void __fastcall CDOTA_BotAction_Idle::CDOTA_BotAction_Idle(CDOTA_BotAction_Idle *const this, CDOTA_Bot *pBot)
 {
   this->m_pBot = pBot;
-  this->_vptr_CDOTA_BotAction = off_42B6EB0;
+  this->_vptr_CDOTA_BotAction = off_42B6EB0;  // vptr: CDOTA_BotAction_Idle
 }
 
 
@@ -921,7 +921,7 @@ void __fastcall CDOTA_BotAction_Attack::CDOTA_BotAction_Attack(
 
   this->m_hTarget.m_Index = -1;
   this->m_pBot = pBot;
-  this->_vptr_CDOTA_BotAction = off_42B6FB0;
+  this->_vptr_CDOTA_BotAction = off_42B6FB0;  // vptr: CDOTA_BotAction_Attack
   v5 = **&hTarget.m_Index;
   this->m_bOnce = bOnce;
   this->m_hTarget.m_Index = v5;
@@ -1144,7 +1144,7 @@ void __fastcall CDOTA_BotAction_AttackMove::CDOTA_BotAction_AttackMove(
         const Vector *const vLoc)
 {
   this->m_pBot = pBot;
-  this->_vptr_CDOTA_BotAction = off_42B7030;
+  this->_vptr_CDOTA_BotAction = off_42B7030;  // vptr: CDOTA_BotAction_AttackMove
   this->m_vLoc = *vLoc;
 }
 
@@ -1254,7 +1254,7 @@ void __fastcall CDOTA_BotAction_UseAbility::CDOTA_BotAction_UseAbility(
   __int16 v5; // cx
 
   this->m_pBot = pBot;
-  this->_vptr_CDOTA_BotAction = off_42B70B0;
+  this->_vptr_CDOTA_BotAction = off_42B70B0;  // vptr: CDOTA_BotAction_UseAbility
   this->m_hAbility.m_Index = -1;
   this->m_hTarget.m_Index = -1;
   if ( pAbility != 0 )
@@ -1296,7 +1296,7 @@ void __fastcall CDOTA_BotAction_UseAbility::CDOTA_BotAction_UseAbility(
   const CBaseEntity *m_pInstance; // rdi
 
   this->m_pBot = pBot;
-  this->_vptr_CDOTA_BotAction = off_42B70B0;
+  this->_vptr_CDOTA_BotAction = off_42B70B0;  // vptr: CDOTA_BotAction_UseAbility
   this->m_hAbility.m_Index = -1;
   this->m_hTarget.m_Index = -1;
   if ( pAbility != 0 )
@@ -1354,7 +1354,7 @@ void __fastcall CDOTA_BotAction_UseAbility::CDOTA_BotAction_UseAbility(
   vec_t z; // xmm0_4
 
   this->m_pBot = pBot;
-  this->_vptr_CDOTA_BotAction = off_42B70B0;
+  this->_vptr_CDOTA_BotAction = off_42B70B0;  // vptr: CDOTA_BotAction_UseAbility
   this->m_hAbility.m_Index = -1;
   this->m_hTarget.m_Index = -1;
   if ( pAbility != 0 )
@@ -1391,7 +1391,7 @@ void __fastcall CDOTA_BotAction_UseAbility::CDOTA_BotAction_UseAbility(
   __int16 v6; // si
 
   this->m_pBot = pBot;
-  this->_vptr_CDOTA_BotAction = off_42B70B0;
+  this->_vptr_CDOTA_BotAction = off_42B70B0;  // vptr: CDOTA_BotAction_UseAbility
   this->m_hAbility.m_Index = -1;
   this->m_hTarget.m_Index = -1;
   if ( pAbility != 0 )
@@ -1923,7 +1923,7 @@ void __fastcall CDOTA_BotAction_DispenseWard::CDOTA_BotAction_DispenseWard(
 {
   CDOTA_BotAction_UseAbility::CDOTA_BotAction_UseAbility(this, pBot, pAbility, vLocation);
   this->m_bObserverWard = bObserverWard;
-  this->_vptr_CDOTA_BotAction = off_42B7130;
+  this->_vptr_CDOTA_BotAction = off_42B7130;  // vptr: CDOTA_BotAction_DispenseWard
 }
 
 
@@ -1970,7 +1970,7 @@ void __fastcall CDOTA_BotAction_PickUpRune::CDOTA_BotAction_PickUpRune(
 {
   this->m_hTarget.m_Index = -1;
   this->m_pBot = pBot;
-  this->_vptr_CDOTA_BotAction = off_42B71B0;
+  this->_vptr_CDOTA_BotAction = off_42B71B0;  // vptr: CDOTA_BotAction_PickUpRune
   this->m_hTarget.m_Index = **&hTarget.m_Index;
 }
 
@@ -2096,7 +2096,7 @@ void __fastcall CDOTA_BotAction_PickUpItem::CDOTA_BotAction_PickUpItem(
 {
   this->m_hTarget.m_Index = -1;
   this->m_pBot = pBot;
-  this->_vptr_CDOTA_BotAction = off_42B7230;
+  this->_vptr_CDOTA_BotAction = off_42B7230;  // vptr: CDOTA_BotAction_PickUpItem
   this->m_hTarget.m_Index = **&hTarget.m_Index;
 }
 
@@ -2227,7 +2227,7 @@ void __fastcall CDOTA_BotAction_DropItem::CDOTA_BotAction_DropItem(
 {
   this->m_hTarget.m_Index = -1;
   this->m_pBot = pBot;
-  this->_vptr_CDOTA_BotAction = off_42B72B0;
+  this->_vptr_CDOTA_BotAction = off_42B72B0;  // vptr: CDOTA_BotAction_DropItem
   this->m_hTarget.m_Index = **&hTarget.m_Index;
   this->m_vLocation = *vLocation;
 }

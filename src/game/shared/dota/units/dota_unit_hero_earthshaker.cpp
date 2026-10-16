@@ -586,7 +586,7 @@ CEntityInstance *__fastcall CDOTA_Unit_Hero_Earthshaker::CEntityInstanceEntityCl
 void __fastcall CDOTA_Unit_Hero_Earthshaker::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Unit_Hero_Earthshaker::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -596,7 +596,7 @@ void __fastcall CDOTA_Unit_Hero_Earthshaker::CEntityInstanceEntityClass::~CEntit
 void __fastcall CDOTA_Unit_Hero_Earthshaker::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Unit_Hero_Earthshaker::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -781,7 +781,7 @@ CEntityInstance *__fastcall CDOTA_Ability_Earthshaker_Fissure::CEntityInstanceEn
 void __fastcall CDOTA_Ability_Earthshaker_Fissure::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Earthshaker_Fissure::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -791,7 +791,7 @@ void __fastcall CDOTA_Ability_Earthshaker_Fissure::CEntityInstanceEntityClass::~
 void __fastcall CDOTA_Ability_Earthshaker_Fissure::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Earthshaker_Fissure::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -1544,7 +1544,7 @@ CEntityInstance *__fastcall CDOTA_Ability_Earthshaker_EnchantTotem::CEntityInsta
 void __fastcall CDOTA_Ability_Earthshaker_EnchantTotem::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Earthshaker_EnchantTotem::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -1554,7 +1554,7 @@ void __fastcall CDOTA_Ability_Earthshaker_EnchantTotem::CEntityInstanceEntityCla
 void __fastcall CDOTA_Ability_Earthshaker_EnchantTotem::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Earthshaker_EnchantTotem::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -2927,7 +2927,7 @@ CEntityInstance *__fastcall CDOTA_Ability_Earthshaker_Aftershock::CEntityInstanc
 void __fastcall CDOTA_Ability_Earthshaker_Aftershock::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Earthshaker_Aftershock::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -2937,7 +2937,7 @@ void __fastcall CDOTA_Ability_Earthshaker_Aftershock::CEntityInstanceEntityClass
 void __fastcall CDOTA_Ability_Earthshaker_Aftershock::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Earthshaker_Aftershock::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -3374,7 +3374,7 @@ CEntityInstance *__fastcall CDOTA_Ability_Earthshaker_EchoSlam::CEntityInstanceE
 void __fastcall CDOTA_Ability_Earthshaker_EchoSlam::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Earthshaker_EchoSlam::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -3384,7 +3384,7 @@ void __fastcall CDOTA_Ability_Earthshaker_EchoSlam::CEntityInstanceEntityClass::
 void __fastcall CDOTA_Ability_Earthshaker_EchoSlam::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Earthshaker_EchoSlam::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }

@@ -197,7 +197,7 @@ CEntityInstance *__fastcall CLogicAuto::CEntityInstanceEntityClass::ConstructIns
 void __fastcall CLogicAuto::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CLogicAuto::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -207,7 +207,7 @@ void __fastcall CLogicAuto::CEntityInstanceEntityClass::~CEntityInstanceEntityCl
 void __fastcall CLogicAuto::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CLogicAuto::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }

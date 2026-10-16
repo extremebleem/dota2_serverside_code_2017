@@ -186,7 +186,7 @@ CChoreoScene *__fastcall CChoreoScene::operator=(CChoreoScene *const this, const
       {
         v6 = (v5->m_Channels.m_Memory.m_nGrowSize & 0xC0000000) == 0;
         v5->m_Channels.m_Size = 0;
-        v5->_vptr_CChoreoObjectBase = off_47C2810;
+        v5->_vptr_CChoreoObjectBase = off_47C2810;  // vptr: CChoreoActor
         if ( v6 )
         {
           CUtlMemory<CChoreoChannel *,int>::Purge(&v5->m_Channels.m_Memory);
@@ -439,7 +439,7 @@ void __fastcall CChoreoScene::~CChoreoScene(CChoreoScene *const this)
     {
       v5 = (v4->m_Channels.m_Memory.m_nGrowSize & 0xC0000000) == 0;
       v4->m_Channels.m_Size = 0;
-      v4->_vptr_CChoreoObjectBase = off_47C2810;
+      v4->_vptr_CChoreoObjectBase = off_47C2810;  // vptr: CChoreoActor
       if ( v5 )
       {
         CUtlMemory<CChoreoChannel *,int>::Purge(&v4->m_Channels.m_Memory);
@@ -970,10 +970,10 @@ void __fastcall CChoreoScene::ParseEdgeInfo(
 
   (*(tokenizer->_vptr_ISceneTokenProcessor + 1))(tokenizer, 0);
   edgeinfo->m_bActive = 1;
-  v5 = (*tokenizer->_vptr_ISceneTokenProcessor)(tokenizer);
+  v5 = tokenizer->CurrentToken();
   edgeinfo->m_ZeroPos.m_curvetype = Interpolator_CurveTypeForName(v5);
   (*(tokenizer->_vptr_ISceneTokenProcessor + 1))(tokenizer, 0);
-  v6 = (*tokenizer->_vptr_ISceneTokenProcessor)(tokenizer);
+  v6 = tokenizer->CurrentToken();
   v7.m128d_f64[0] = strtod(v6, 0);
   v8 = _mm_movedup_pd(v7).m128d_f64[0];
   edgeinfo->m_ZeroPos.m_AnchorPos.y = v8;
@@ -1058,22 +1058,22 @@ void __fastcall CChoreoScene::ParseFlexAnimations(
   event_timea = CChoreoEvent::GetEndTime(e);
   event_time = event_timea - CChoreoEvent::GetStartTime(e);
   (*(this->_vptr_ICurveDataAccessor + 2))(this);
-  v7 = (*tokenizer->_vptr_ISceneTokenProcessor)(tokenizer);
+  v7 = tokenizer->CurrentToken();
   samples_use_realtime = 0;
   if ( V_stricmp_fast(v7, "samples_use_time") == 0 )
   {
     (*(tokenizer->_vptr_ISceneTokenProcessor + 1))(tokenizer, 1);
     samples_use_realtime = 1;
   }
-  v8 = (*tokenizer->_vptr_ISceneTokenProcessor)(tokenizer);
+  v8 = tokenizer->CurrentToken();
   if ( _V_strnicmp_fast(v8, "defaultcurvetype", 16) == 0 )
   {
-    v46 = ((*tokenizer->_vptr_ISceneTokenProcessor)(tokenizer) + 16);
+    v46 = (tokenizer->CurrentToken() + 16);
     v47 = *v46;
     if ( *v46 == 0 )
     {
       (*(tokenizer->_vptr_ISceneTokenProcessor + 1))(tokenizer, 1);
-      v46 = (*tokenizer->_vptr_ISceneTokenProcessor)(tokenizer);
+      v46 = tokenizer->CurrentToken();
       v47 = *v46;
     }
     if ( v47 != 61 )
@@ -1082,25 +1082,25 @@ void __fastcall CChoreoScene::ParseFlexAnimations(
     if ( v46[1] == 0 )
     {
       (*(tokenizer->_vptr_ISceneTokenProcessor + 1))(tokenizer, 1);
-      v48 = (*tokenizer->_vptr_ISceneTokenProcessor)(tokenizer);
+      v48 = tokenizer->CurrentToken();
     }
     v49 = Interpolator_CurveTypeForName(v48);
     (*(tokenizer->_vptr_ISceneTokenProcessor + 1))(tokenizer, 1);
     CChoreoEvent::SetDefaultCurveType(e, v49);
   }
-  v9 = (*tokenizer->_vptr_ISceneTokenProcessor)(tokenizer);
+  v9 = tokenizer->CurrentToken();
   if ( V_stricmp_fast(v9, "{") != 0 )
     (*(tokenizer->_vptr_ISceneTokenProcessor + 3))(tokenizer, "expecting {\n");
   while ( 1 )
   {
     (*(tokenizer->_vptr_ISceneTokenProcessor + 1))(tokenizer, 1);
-    v10 = (*tokenizer->_vptr_ISceneTokenProcessor)(tokenizer);
+    v10 = tokenizer->CurrentToken();
     if ( v10 == 0 || strlen(v10) <= 0 )
       break;
-    v11 = (*tokenizer->_vptr_ISceneTokenProcessor)(tokenizer);
+    v11 = tokenizer->CurrentToken();
     if ( V_stricmp_fast(v11, "}") == 0 )
       return;
-    v12 = (*tokenizer->_vptr_ISceneTokenProcessor)(tokenizer);
+    v12 = tokenizer->CurrentToken();
     flexcontroller.m_pString = 0;
     CUtlString::Set(&flexcontroller, v12);
     (*(tokenizer->_vptr_ISceneTokenProcessor + 1))(tokenizer, 1);
@@ -1115,7 +1115,7 @@ void __fastcall CChoreoScene::ParseFlexAnimations(
     edgeinfo[1].m_ZeroPos.m_AnchorPos.y = y;
     *(&edgeinfo[0].m_ZeroPos + 5) = 0x7FFF;
     *(&edgeinfo[1].m_ZeroPos + 5) = 0x7FFF;
-    v14 = (*tokenizer->_vptr_ISceneTokenProcessor)(tokenizer);
+    v14 = tokenizer->CurrentToken();
     if ( V_stricmp_fast(v14, "disabled") != 0 )
     {
       pCurveData = 1;
@@ -1125,7 +1125,7 @@ void __fastcall CChoreoScene::ParseFlexAnimations(
       (*(tokenizer->_vptr_ISceneTokenProcessor + 1))(tokenizer, 1);
       pCurveData = 0;
     }
-    v15 = (*tokenizer->_vptr_ISceneTokenProcessor)(tokenizer);
+    v15 = tokenizer->CurrentToken();
     if ( V_stricmp_fast(v15, "combo") != 0 )
     {
       combo = 0;
@@ -1135,7 +1135,7 @@ void __fastcall CChoreoScene::ParseFlexAnimations(
       (*(tokenizer->_vptr_ISceneTokenProcessor + 1))(tokenizer, 1);
       combo = 1;
     }
-    v16 = (*tokenizer->_vptr_ISceneTokenProcessor)(tokenizer);
+    v16 = tokenizer->CurrentToken();
     if ( V_stricmp_fast(v16, "range") != 0 )
     {
       range_min = 0.0;
@@ -1144,21 +1144,21 @@ void __fastcall CChoreoScene::ParseFlexAnimations(
     else
     {
       (*(tokenizer->_vptr_ISceneTokenProcessor + 1))(tokenizer, 0);
-      v17 = (*tokenizer->_vptr_ISceneTokenProcessor)(tokenizer);
+      v17 = tokenizer->CurrentToken();
       v18.m128d_f64[0] = strtod(v17, 0);
       v19 = _mm_movedup_pd(v18).m128d_f64[0];
       range_min = v19;
       (*(tokenizer->_vptr_ISceneTokenProcessor + 1))(tokenizer, 0);
-      v20 = (*tokenizer->_vptr_ISceneTokenProcessor)(tokenizer);
+      v20 = tokenizer->CurrentToken();
       v21.m128d_f64[0] = strtod(v20, 0);
       v22 = _mm_movedup_pd(v21).m128d_f64[0];
       t = v22;
       (*(tokenizer->_vptr_ISceneTokenProcessor + 1))(tokenizer, 1);
     }
-    v23 = (*tokenizer->_vptr_ISceneTokenProcessor)(tokenizer);
+    v23 = tokenizer->CurrentToken();
     if ( V_stricmp_fast(v23, "leftedge") == 0 )
       CChoreoScene::ParseEdgeInfo(this, tokenizer, edgeinfo);
-    v24 = (*tokenizer->_vptr_ISceneTokenProcessor)(tokenizer);
+    v24 = tokenizer->CurrentToken();
     if ( V_stricmp_fast(v24, "rightedge") == 0 )
       CChoreoScene::ParseEdgeInfo(this, tokenizer, &edgeinfo[1]);
     v25 = restore;
@@ -1181,16 +1181,16 @@ void __fastcall CChoreoScene::ParseFlexAnimations(
     restore[1].m_handles.m_Memory.m_nGrowSize = 0;
     while ( v26 < 2 - (combo == 0) )
     {
-      v27 = (*tokenizer->_vptr_ISceneTokenProcessor)(tokenizer);
+      v27 = tokenizer->CurrentToken();
       if ( V_stricmp_fast(v27, "{") != 0 )
         (*(tokenizer->_vptr_ISceneTokenProcessor + 3))(tokenizer, "expecting {\n");
       while ( 1 )
       {
         (*(tokenizer->_vptr_ISceneTokenProcessor + 1))(tokenizer, 1);
-        v29 = (*tokenizer->_vptr_ISceneTokenProcessor)(tokenizer);
+        v29 = tokenizer->CurrentToken();
         if ( v29 == 0 || strlen(v29) <= 0 )
           break;
-        v28 = (*tokenizer->_vptr_ISceneTokenProcessor)(tokenizer);
+        v28 = tokenizer->CurrentToken();
         if ( V_stricmp_fast(v28, "}") == 0 )
           goto LABEL_30;
         CCurveData::ParseSample(tokenizer, this, v25, samples_use_realtime, event_time);
@@ -1498,14 +1498,14 @@ CChoreoEvent *__fastcall CChoreoScene::ParseEvent(
   v193 = __readfsqword(0x28u);
   v6 = CChoreoScene::AllocEvent(this);
   (*(this->m_pTokenizer->_vptr_ISceneTokenProcessor + 1))(this->m_pTokenizer, 0);
-  v7 = (*this->m_pTokenizer->_vptr_ISceneTokenProcessor)(this->m_pTokenizer);
+  v7 = this->m_pTokenizer->CurrentToken();
   v8 = CChoreoEvent::TypeForName(v7);
   CChoreoEvent::SetType(v6, v8);
   (*(this->m_pTokenizer->_vptr_ISceneTokenProcessor + 1))(this->m_pTokenizer, 0);
-  v9 = (*this->m_pTokenizer->_vptr_ISceneTokenProcessor)(this->m_pTokenizer);
+  v9 = this->m_pTokenizer->CurrentToken();
   CChoreoEvent::SetName(v6, v9);
   (*(this->m_pTokenizer->_vptr_ISceneTokenProcessor + 1))(this->m_pTokenizer, 1);
-  v10 = (*this->m_pTokenizer->_vptr_ISceneTokenProcessor)(this->m_pTokenizer);
+  v10 = this->m_pTokenizer->CurrentToken();
   if ( V_stricmp_fast(v10, "{") != 0 )
     (*(this->m_pTokenizer->_vptr_ISceneTokenProcessor + 3))(this->m_pTokenizer, "expecting {\n");
   v11 = 0;
@@ -1516,16 +1516,16 @@ LABEL_4:
   while ( 1 )
   {
     (*(this->m_pTokenizer->_vptr_ISceneTokenProcessor + 1))(this->m_pTokenizer, 1);
-    v12 = (*this->m_pTokenizer->_vptr_ISceneTokenProcessor)(this->m_pTokenizer);
+    v12 = this->m_pTokenizer->CurrentToken();
     if ( V_stricmp_fast(v12, "}") == 0 )
       break;
-    v13 = (*this->m_pTokenizer->_vptr_ISceneTokenProcessor)(this->m_pTokenizer);
+    v13 = this->m_pTokenizer->CurrentToken();
     if ( v13 == 0 || strlen(v13) <= 0 )
     {
       (*(this->m_pTokenizer->_vptr_ISceneTokenProcessor + 3))(this->m_pTokenizer, "expecting more tokens!");
       break;
     }
-    v14 = (*this->m_pTokenizer->_vptr_ISceneTokenProcessor)(this->m_pTokenizer);
+    v14 = this->m_pTokenizer->CurrentToken();
     v15 = V_stricmp_fast(v14, "time");
     m_pTokenizer = this->m_pTokenizer;
     v17 = v15 == 0;
@@ -1533,7 +1533,7 @@ LABEL_4:
     if ( v17 )
     {
       vptr_ISceneTokenProcessor[1](m_pTokenizer, 0);
-      v19 = (*this->m_pTokenizer->_vptr_ISceneTokenProcessor)(this->m_pTokenizer);
+      v19 = this->m_pTokenizer->CurrentToken();
       v20.m128d_f64[0] = strtod(v19, 0);
       v21 = _mm_movedup_pd(v20).m128d_f64[0];
       attacktime = v21;
@@ -1542,7 +1542,7 @@ LABEL_4:
       if ( v22 != 0 )
       {
         (*(this->m_pTokenizer->_vptr_ISceneTokenProcessor + 1))(this->m_pTokenizer, 0, v23, 1.0);
-        v40 = (*this->m_pTokenizer->_vptr_ISceneTokenProcessor)(this->m_pTokenizer);
+        v40 = this->m_pTokenizer->CurrentToken();
         v41.m128d_f64[0] = strtod(v40, 0);
         v24 = _mm_movedup_pd(v41).m128d_f64[0];
       }
@@ -1560,14 +1560,14 @@ LABEL_4:
       if ( v17 )
       {
         v28[1](v27, 0);
-        v29 = (*this->m_pTokenizer->_vptr_ISceneTokenProcessor)(this->m_pTokenizer);
+        v29 = this->m_pTokenizer->CurrentToken();
         v30.m128d_f64[0] = strtod(v29, 0);
         v31 = _mm_movedup_pd(v30).m128d_f64[0];
         attack = v31;
         if ( (*(this->m_pTokenizer->_vptr_ISceneTokenProcessor + 2))(this->m_pTokenizer) != 0 )
         {
           (*(this->m_pTokenizer->_vptr_ISceneTokenProcessor + 1))(this->m_pTokenizer, 0);
-          v47 = (*this->m_pTokenizer->_vptr_ISceneTokenProcessor)(this->m_pTokenizer);
+          v47 = this->m_pTokenizer->CurrentToken();
           v48.m128d_f64[0] = strtod(v47, 0);
           sustain = _mm_movedup_pd(v48).m128d_f64[0];
         }
@@ -1575,7 +1575,7 @@ LABEL_4:
         if ( (*(this->m_pTokenizer->_vptr_ISceneTokenProcessor + 2))(this->m_pTokenizer) != 0 )
         {
           (*(this->m_pTokenizer->_vptr_ISceneTokenProcessor + 1))(this->m_pTokenizer, 0);
-          v32 = (*this->m_pTokenizer->_vptr_ISceneTokenProcessor)(this->m_pTokenizer);
+          v32 = this->m_pTokenizer->CurrentToken();
           v33.m128d_f64[0] = strtod(v32, 0);
           decay = _mm_movedup_pd(v33).m128d_f64[0];
         }
@@ -1590,7 +1590,7 @@ LABEL_4:
         if ( v17 )
         {
           v37[1](v36, 0);
-          v38 = (*this->m_pTokenizer->_vptr_ISceneTokenProcessor)(this->m_pTokenizer);
+          v38 = this->m_pTokenizer->CurrentToken();
           CChoreoEvent::SetParameters(v6, v38);
         }
         else
@@ -1603,7 +1603,7 @@ LABEL_4:
           if ( v17 )
           {
             v45[1](v44, 0);
-            v46 = (*this->m_pTokenizer->_vptr_ISceneTokenProcessor)(this->m_pTokenizer);
+            v46 = this->m_pTokenizer->CurrentToken();
             CChoreoEvent::SetParameters2(v6, v46);
           }
           else
@@ -1616,7 +1616,7 @@ LABEL_4:
             if ( v17 )
             {
               v52[1](v51, 0);
-              v53 = (*this->m_pTokenizer->_vptr_ISceneTokenProcessor)(this->m_pTokenizer);
+              v53 = this->m_pTokenizer->CurrentToken();
               CChoreoEvent::SetParameters3(v6, v53);
             }
             else
@@ -1629,7 +1629,7 @@ LABEL_4:
               if ( v17 )
               {
                 v57[1](v56, 0);
-                v58 = (*this->m_pTokenizer->_vptr_ISceneTokenProcessor)(this->m_pTokenizer);
+                v58 = this->m_pTokenizer->CurrentToken();
                 v59 = strtol(v58, 0, 10);
                 CChoreoEvent::SetPitch(v6, v59);
               }
@@ -1643,7 +1643,7 @@ LABEL_4:
                 if ( v17 )
                 {
                   v63[1](v62, 0);
-                  v71 = (*this->m_pTokenizer->_vptr_ISceneTokenProcessor)(this->m_pTokenizer);
+                  v71 = this->m_pTokenizer->CurrentToken();
                   v72 = strtol(v71, 0, 10);
                   CChoreoEvent::SetYaw(v6, v72);
                 }
@@ -1657,7 +1657,7 @@ LABEL_4:
                   if ( v17 )
                   {
                     v67[1](v66, 0);
-                    v68 = (*this->m_pTokenizer->_vptr_ISceneTokenProcessor)(this->m_pTokenizer);
+                    v68 = this->m_pTokenizer->CurrentToken();
                     v69 = strtol(v68, 0, 10);
                     CChoreoEvent::SetForwardDistance(v6, v69);
                   }
@@ -1671,7 +1671,7 @@ LABEL_4:
                     if ( v17 )
                     {
                       v76[1](v75, 0);
-                      v77 = (*this->m_pTokenizer->_vptr_ISceneTokenProcessor)(this->m_pTokenizer);
+                      v77 = this->m_pTokenizer->CurrentToken();
                       v78 = strtol(v77, 0, 10);
                       CChoreoEvent::SetRightDistance(v6, v78);
                     }
@@ -1685,13 +1685,13 @@ LABEL_4:
                       if ( v17 )
                       {
                         v82[1](v81, 0);
-                        v89 = (*this->m_pTokenizer->_vptr_ISceneTokenProcessor)(this->m_pTokenizer);
+                        v89 = this->m_pTokenizer->CurrentToken();
                         decaytimeb.x = V_atof(v89);
                         (*(this->m_pTokenizer->_vptr_ISceneTokenProcessor + 1))(this->m_pTokenizer, 0);
-                        v90 = (*this->m_pTokenizer->_vptr_ISceneTokenProcessor)(this->m_pTokenizer);
+                        v90 = this->m_pTokenizer->CurrentToken();
                         decaytimeb.y = V_atof(v90);
                         (*(this->m_pTokenizer->_vptr_ISceneTokenProcessor + 1))(this->m_pTokenizer, 0);
-                        v91 = (*this->m_pTokenizer->_vptr_ISceneTokenProcessor)(this->m_pTokenizer);
+                        v91 = this->m_pTokenizer->CurrentToken();
                         *&s.m_curvetype = V_atof(v91);
                         s.m_AnchorPos = decaytimeb;
                         CChoreoEvent::SetTargetLocation(v6, &s);
@@ -1706,7 +1706,7 @@ LABEL_4:
                         if ( v17 )
                         {
                           v86[1](v85, 0);
-                          v87 = (*this->m_pTokenizer->_vptr_ISceneTokenProcessor)(this->m_pTokenizer);
+                          v87 = this->m_pTokenizer->CurrentToken();
                           v88 = strtol(v87, 0, 10);
                           CChoreoEvent::SetLoopCount(v6, v88);
                         }
@@ -1715,13 +1715,13 @@ LABEL_4:
                           v92 = (*v86)();
                           if ( V_stricmp_fast(v92, "resumecondition") != 0 )
                           {
-                            v93 = (*this->m_pTokenizer->_vptr_ISceneTokenProcessor)(this->m_pTokenizer);
+                            v93 = this->m_pTokenizer->CurrentToken();
                             if ( V_stricmp_fast(v93, "fixedlength") != 0 )
                             {
-                              v94 = (*this->m_pTokenizer->_vptr_ISceneTokenProcessor)(this->m_pTokenizer);
+                              v94 = this->m_pTokenizer->CurrentToken();
                               if ( V_stricmp_fast(v94, "lockbodyfacing") != 0 )
                               {
-                                v95 = (*this->m_pTokenizer->_vptr_ISceneTokenProcessor)(this->m_pTokenizer);
+                                v95 = this->m_pTokenizer->CurrentToken();
                                 v96 = V_stricmp_fast(v95, "distancetotarget");
                                 v97 = this->m_pTokenizer;
                                 v17 = v96 == 0;
@@ -1729,7 +1729,7 @@ LABEL_4:
                                 if ( v17 )
                                 {
                                   v98[1](v97, 0);
-                                  v99 = (*this->m_pTokenizer->_vptr_ISceneTokenProcessor)(this->m_pTokenizer);
+                                  v99 = this->m_pTokenizer->CurrentToken();
                                   v100 = strtod(v99, 0);
                                   CChoreoEvent::SetDistanceToTarget(v6, v100, v101);
                                 }
@@ -1738,10 +1738,10 @@ LABEL_4:
                                   v102 = (*v98)();
                                   if ( V_stricmp_fast(v102, "forceshortmovement") != 0 )
                                   {
-                                    v103 = (*this->m_pTokenizer->_vptr_ISceneTokenProcessor)(this->m_pTokenizer);
+                                    v103 = this->m_pTokenizer->CurrentToken();
                                     if ( V_stricmp_fast(v103, "synctofollowinggesture") != 0 )
                                     {
-                                      v104 = (*this->m_pTokenizer->_vptr_ISceneTokenProcessor)(this->m_pTokenizer);
+                                      v104 = this->m_pTokenizer->CurrentToken();
                                       v105 = V_stricmp_fast(v104, "active");
                                       v106 = this->m_pTokenizer;
                                       v17 = v105 == 0;
@@ -1749,7 +1749,7 @@ LABEL_4:
                                       if ( v17 )
                                       {
                                         v107[1](v106, 0);
-                                        v108 = (*this->m_pTokenizer->_vptr_ISceneTokenProcessor)(this->m_pTokenizer);
+                                        v108 = this->m_pTokenizer->CurrentToken();
                                         v109 = strtol(v108, 0, 10);
                                         CChoreoEvent::SetActive(v6, v109 != 0);
                                       }
@@ -1758,7 +1758,7 @@ LABEL_4:
                                         v110 = (*v107)();
                                         if ( V_stricmp_fast(v110, "playoverscript") != 0 )
                                         {
-                                          v111 = (*this->m_pTokenizer->_vptr_ISceneTokenProcessor)(this->m_pTokenizer);
+                                          v111 = this->m_pTokenizer->CurrentToken();
                                           v112 = V_stricmp_fast(v111, "tags");
                                           v113 = this->m_pTokenizer;
                                           v17 = v112 == 0;
@@ -1766,7 +1766,7 @@ LABEL_4:
                                           if ( v17 )
                                           {
                                             v114[1](v113, 1);
-                                            v115 = (*this->m_pTokenizer->_vptr_ISceneTokenProcessor)(this->m_pTokenizer);
+                                            v115 = this->m_pTokenizer->CurrentToken();
                                             if ( V_stricmp_fast(v115, "{") != 0 )
                                               (*(this->m_pTokenizer->_vptr_ISceneTokenProcessor + 3))(
                                                 this->m_pTokenizer,
@@ -1776,19 +1776,19 @@ LABEL_4:
                                               (*(this->m_pTokenizer->_vptr_ISceneTokenProcessor + 1))(
                                                 this->m_pTokenizer,
                                                 1);
-                                              v116 = (*this->m_pTokenizer->_vptr_ISceneTokenProcessor)(this->m_pTokenizer);
+                                              v116 = this->m_pTokenizer->CurrentToken();
                                               if ( v116 == 0 || strlen(v116) <= 0 )
                                                 goto LABEL_71;
-                                              v117 = (*this->m_pTokenizer->_vptr_ISceneTokenProcessor)(this->m_pTokenizer);
+                                              v117 = this->m_pTokenizer->CurrentToken();
                                               if ( V_stricmp_fast(v117, "}") == 0 )
                                                 goto LABEL_4;
-                                              v118 = (*this->m_pTokenizer->_vptr_ISceneTokenProcessor)(this->m_pTokenizer);
+                                              v118 = this->m_pTokenizer->CurrentToken();
                                               s.m_AnchorPos = 0;
                                               CUtlString::Set(&s, v118);
                                               (*(this->m_pTokenizer->_vptr_ISceneTokenProcessor + 1))(
                                                 this->m_pTokenizer,
                                                 0);
-                                              v119 = (*this->m_pTokenizer->_vptr_ISceneTokenProcessor)(this->m_pTokenizer);
+                                              v119 = this->m_pTokenizer->CurrentToken();
                                               attacktimec = V_atof(v119);
                                               v120 = CUtlString::Get(&s);
                                               CChoreoEvent::AddRelativeTag(v6, v120, LODWORD(attacktimec), v121);
@@ -1804,7 +1804,7 @@ LABEL_4:
                                           if ( v17 )
                                           {
                                             v125[1](v124, 0);
-                                            v126 = (*this->m_pTokenizer->_vptr_ISceneTokenProcessor)(this->m_pTokenizer);
+                                            v126 = this->m_pTokenizer->CurrentToken();
                                             v127 = strtod(v126, 0);
                                             CChoreoEvent::SetGestureSequenceDuration(v6, v127, v128);
                                           }
@@ -1818,7 +1818,7 @@ LABEL_4:
                                             if ( v17 )
                                             {
                                               v132[1](v131, 1);
-                                              v133 = (*this->m_pTokenizer->_vptr_ISceneTokenProcessor)(this->m_pTokenizer);
+                                              v133 = this->m_pTokenizer->CurrentToken();
                                               attacktimea = CChoreoEvent::TypeForAbsoluteTagName(v133);
                                               if ( attacktimea == -1 )
                                                 (*(this->m_pTokenizer->_vptr_ISceneTokenProcessor + 3))(
@@ -1827,7 +1827,7 @@ LABEL_4:
                                               (*(this->m_pTokenizer->_vptr_ISceneTokenProcessor + 1))(
                                                 this->m_pTokenizer,
                                                 1);
-                                              v134 = (*this->m_pTokenizer->_vptr_ISceneTokenProcessor)(this->m_pTokenizer);
+                                              v134 = this->m_pTokenizer->CurrentToken();
                                               if ( V_stricmp_fast(v134, "{") != 0 )
                                                 (*(this->m_pTokenizer->_vptr_ISceneTokenProcessor + 3))(
                                                   this->m_pTokenizer,
@@ -1837,19 +1837,19 @@ LABEL_4:
                                                 (*(this->m_pTokenizer->_vptr_ISceneTokenProcessor + 1))(
                                                   this->m_pTokenizer,
                                                   1);
-                                                v135 = (*this->m_pTokenizer->_vptr_ISceneTokenProcessor)(this->m_pTokenizer);
+                                                v135 = this->m_pTokenizer->CurrentToken();
                                                 if ( v135 == 0 || strlen(v135) <= 0 )
                                                   goto LABEL_71;
-                                                v136 = (*this->m_pTokenizer->_vptr_ISceneTokenProcessor)(this->m_pTokenizer);
+                                                v136 = this->m_pTokenizer->CurrentToken();
                                                 if ( V_stricmp_fast(v136, "}") == 0 )
                                                   goto LABEL_4;
-                                                v137 = (*this->m_pTokenizer->_vptr_ISceneTokenProcessor)(this->m_pTokenizer);
+                                                v137 = this->m_pTokenizer->CurrentToken();
                                                 s.m_AnchorPos = 0;
                                                 CUtlString::Set(&s, v137);
                                                 (*(this->m_pTokenizer->_vptr_ISceneTokenProcessor + 1))(
                                                   this->m_pTokenizer,
                                                   0);
-                                                v138 = (*this->m_pTokenizer->_vptr_ISceneTokenProcessor)(this->m_pTokenizer);
+                                                v138 = this->m_pTokenizer->CurrentToken();
                                                 decaytimec = V_atof(v138);
                                                 v139 = CUtlString::Get(&s);
                                                 CChoreoEvent::AddAbsoluteTag(v6, attacktimea, v139, LODWORD(decaytimec));
@@ -1865,7 +1865,7 @@ LABEL_4:
                                             if ( v17 )
                                             {
                                               v143[1](v142, 1);
-                                              v144 = (*this->m_pTokenizer->_vptr_ISceneTokenProcessor)(this->m_pTokenizer);
+                                              v144 = this->m_pTokenizer->CurrentToken();
                                               if ( V_stricmp_fast(v144, "{") != 0 )
                                                 (*(this->m_pTokenizer->_vptr_ISceneTokenProcessor + 3))(
                                                   this->m_pTokenizer,
@@ -1875,24 +1875,24 @@ LABEL_4:
                                                 (*(this->m_pTokenizer->_vptr_ISceneTokenProcessor + 1))(
                                                   this->m_pTokenizer,
                                                   1);
-                                                v145 = (*this->m_pTokenizer->_vptr_ISceneTokenProcessor)(this->m_pTokenizer);
+                                                v145 = this->m_pTokenizer->CurrentToken();
                                                 if ( v145 == 0 || strlen(v145) <= 0 )
                                                   break;
-                                                v146 = (*this->m_pTokenizer->_vptr_ISceneTokenProcessor)(this->m_pTokenizer);
+                                                v146 = this->m_pTokenizer->CurrentToken();
                                                 if ( V_stricmp_fast(v146, "}") == 0 )
                                                   goto LABEL_4;
-                                                v147 = (*this->m_pTokenizer->_vptr_ISceneTokenProcessor)(this->m_pTokenizer);
+                                                v147 = this->m_pTokenizer->CurrentToken();
                                                 s.m_AnchorPos = 0;
                                                 CUtlString::Set(&s, v147);
                                                 (*(this->m_pTokenizer->_vptr_ISceneTokenProcessor + 1))(
                                                   this->m_pTokenizer,
                                                   0);
-                                                v148 = (*this->m_pTokenizer->_vptr_ISceneTokenProcessor)(this->m_pTokenizer);
+                                                v148 = this->m_pTokenizer->CurrentToken();
                                                 attacktimed = V_atof(v148);
                                                 (*(this->m_pTokenizer->_vptr_ISceneTokenProcessor + 1))(
                                                   this->m_pTokenizer,
                                                   0);
-                                                v149 = (*this->m_pTokenizer->_vptr_ISceneTokenProcessor)(this->m_pTokenizer);
+                                                v149 = this->m_pTokenizer->CurrentToken();
                                                 decaytimed = V_atoi(v149) != 0;
                                                 v150 = CUtlString::Get(&s);
                                                 CChoreoEvent::AddTimingTag(v6, v150, LODWORD(attacktimed), decaytimed);
@@ -1914,12 +1914,12 @@ LABEL_71:
                                               if ( v17 )
                                               {
                                                 v154[1](v153, 0);
-                                                v155 = (*this->m_pTokenizer->_vptr_ISceneTokenProcessor)(this->m_pTokenizer);
+                                                v155 = this->m_pTokenizer->CurrentToken();
                                                 _V_strncpy(tagname, v155, 128);
                                                 (*(this->m_pTokenizer->_vptr_ISceneTokenProcessor + 1))(
                                                   this->m_pTokenizer,
                                                   0);
-                                                v156 = (*this->m_pTokenizer->_vptr_ISceneTokenProcessor)(this->m_pTokenizer);
+                                                v156 = this->m_pTokenizer->CurrentToken();
                                                 _V_strncpy(wavname, v156, 128);
                                                 CChoreoEvent::SetUsingRelativeTag(v6, 1, tagname, wavname);
                                               }
@@ -1928,10 +1928,10 @@ LABEL_71:
                                                 v157 = (*v154)();
                                                 if ( V_stricmp_fast(v157, "flexanimations") != 0 )
                                                 {
-                                                  v158 = (*this->m_pTokenizer->_vptr_ISceneTokenProcessor)(this->m_pTokenizer);
+                                                  v158 = this->m_pTokenizer->CurrentToken();
                                                   if ( V_stricmp_fast(v158, "event_ramp") != 0 )
                                                   {
-                                                    v159 = (*this->m_pTokenizer->_vptr_ISceneTokenProcessor)(this->m_pTokenizer);
+                                                    v159 = this->m_pTokenizer->CurrentToken();
                                                     v160 = V_stricmp_fast(v159, "cctype");
                                                     v161 = this->m_pTokenizer;
                                                     v17 = v160 == 0;
@@ -1939,7 +1939,7 @@ LABEL_71:
                                                     if ( v17 )
                                                     {
                                                       v162[1](v161, 0);
-                                                      v163 = (*this->m_pTokenizer->_vptr_ISceneTokenProcessor)(this->m_pTokenizer);
+                                                      v163 = this->m_pTokenizer->CurrentToken();
                                                       v164 = CChoreoEvent::CCTypeForName(v163);
                                                       CChoreoEvent::SetCloseCaptionType(v6, v164);
                                                     }
@@ -1953,7 +1953,7 @@ LABEL_71:
                                                       if ( v17 )
                                                       {
                                                         v168[1](v167, 0);
-                                                        v169 = (*this->m_pTokenizer->_vptr_ISceneTokenProcessor)(this->m_pTokenizer);
+                                                        v169 = this->m_pTokenizer->CurrentToken();
                                                         CChoreoEvent::SetCloseCaptionToken(v6, v169);
                                                       }
                                                       else
@@ -1961,22 +1961,22 @@ LABEL_71:
                                                         v170 = (*v168)();
                                                         if ( V_stricmp_fast(v170, "cc_usingcombinedfile") != 0 )
                                                         {
-                                                          v171 = (*this->m_pTokenizer->_vptr_ISceneTokenProcessor)(this->m_pTokenizer);
+                                                          v171 = this->m_pTokenizer->CurrentToken();
                                                           if ( V_stricmp_fast(v171, "cc_combinedusesgender") != 0 )
                                                           {
-                                                            v172 = (*this->m_pTokenizer->_vptr_ISceneTokenProcessor)(this->m_pTokenizer);
+                                                            v172 = this->m_pTokenizer->CurrentToken();
                                                             if ( V_stricmp_fast(v172, "cc_noattenuate") != 0 )
                                                             {
-                                                              v173 = (*this->m_pTokenizer->_vptr_ISceneTokenProcessor)(this->m_pTokenizer);
+                                                              v173 = this->m_pTokenizer->CurrentToken();
                                                               if ( V_stricmp_fast(v173, "hardstopspeakevent") != 0 )
                                                               {
-                                                                v174 = (*this->m_pTokenizer->_vptr_ISceneTokenProcessor)(this->m_pTokenizer);
+                                                                v174 = this->m_pTokenizer->CurrentToken();
                                                                 if ( V_stricmp_fast(v174, "startdelay") == 0 )
                                                                 {
                                                                   (*(this->m_pTokenizer->_vptr_ISceneTokenProcessor + 1))(
                                                                     this->m_pTokenizer,
                                                                     0);
-                                                                  v175 = (*this->m_pTokenizer->_vptr_ISceneTokenProcessor)(this->m_pTokenizer);
+                                                                  v175 = this->m_pTokenizer->CurrentToken();
                                                                   v176 = V_atof(v175);
                                                                   CChoreoEvent::SetSoundStartDelay(v6, v176, v177);
                                                                 }
@@ -2107,25 +2107,25 @@ CChoreoActor *__fastcall CChoreoScene::ParseActor(CChoreoScene *const this)
 
   v2 = CChoreoScene::AllocActor(this);
   (*(this->m_pTokenizer->_vptr_ISceneTokenProcessor + 1))(this->m_pTokenizer, 0);
-  v3 = (*this->m_pTokenizer->_vptr_ISceneTokenProcessor)(this->m_pTokenizer);
+  v3 = this->m_pTokenizer->CurrentToken();
   CChoreoActor::SetName(v2, v3);
   (*(this->m_pTokenizer->_vptr_ISceneTokenProcessor + 1))(this->m_pTokenizer, 1);
-  v4 = (*this->m_pTokenizer->_vptr_ISceneTokenProcessor)(this->m_pTokenizer);
+  v4 = this->m_pTokenizer->CurrentToken();
   if ( V_stricmp_fast(v4, "{") != 0 )
     (*(this->m_pTokenizer->_vptr_ISceneTokenProcessor + 3))(this->m_pTokenizer, "expecting {");
   while ( 1 )
   {
     (*(this->m_pTokenizer->_vptr_ISceneTokenProcessor + 1))(this->m_pTokenizer, 1);
-    v5 = (*this->m_pTokenizer->_vptr_ISceneTokenProcessor)(this->m_pTokenizer);
+    v5 = this->m_pTokenizer->CurrentToken();
     if ( V_stricmp_fast(v5, "}") == 0 )
       break;
-    v6 = (*this->m_pTokenizer->_vptr_ISceneTokenProcessor)(this->m_pTokenizer);
+    v6 = this->m_pTokenizer->CurrentToken();
     if ( V_stricmp_fast(v6, "channel") != 0 )
     {
-      v7 = (*this->m_pTokenizer->_vptr_ISceneTokenProcessor)(this->m_pTokenizer);
+      v7 = this->m_pTokenizer->CurrentToken();
       if ( V_stricmp_fast(v7, "faceposermodel") != 0 )
       {
-        v8 = (*this->m_pTokenizer->_vptr_ISceneTokenProcessor)(this->m_pTokenizer);
+        v8 = this->m_pTokenizer->CurrentToken();
         v9 = V_stricmp_fast(v8, "active");
         m_pTokenizer = this->m_pTokenizer;
         v11 = v9 == 0;
@@ -2133,7 +2133,7 @@ CChoreoActor *__fastcall CChoreoScene::ParseActor(CChoreoScene *const this)
         if ( v11 )
         {
           vptr_ISceneTokenProcessor[1](m_pTokenizer, 1);
-          v13 = (*this->m_pTokenizer->_vptr_ISceneTokenProcessor)(this->m_pTokenizer);
+          v13 = this->m_pTokenizer->CurrentToken();
           v14 = strtol(v13, 0, 10);
           CChoreoActor::SetActive(v2, v14 != 0);
         }
@@ -2182,7 +2182,7 @@ void __fastcall CChoreoScene::ParseMapname(CChoreoScene *const this)
   const char *v2; // rax
 
   (*(this->m_pTokenizer->_vptr_ISceneTokenProcessor + 1))(this->m_pTokenizer, 1);
-  v2 = (*this->m_pTokenizer->_vptr_ISceneTokenProcessor)(this->m_pTokenizer);
+  v2 = this->m_pTokenizer->CurrentToken();
   CUtlString::operator=(&this->m_sMapname, v2);
 }
 
@@ -2198,7 +2198,7 @@ void __fastcall CChoreoScene::ParseFPS(CChoreoScene *const this)
   int v5; // eax
 
   (*(this->m_pTokenizer->_vptr_ISceneTokenProcessor + 1))(this->m_pTokenizer, 1);
-  v2 = (*this->m_pTokenizer->_vptr_ISceneTokenProcessor)(this->m_pTokenizer);
+  v2 = this->m_pTokenizer->CurrentToken();
   v3 = strtol(v2, 0, 10);
   v4 = 10;
   if ( v3 >= 10 )
@@ -2218,7 +2218,7 @@ void __fastcall CChoreoScene::ParseSnap(CChoreoScene *const this)
   __int64 v2; // rax
 
   (*(this->m_pTokenizer->_vptr_ISceneTokenProcessor + 1))(this->m_pTokenizer, 1);
-  v2 = (*this->m_pTokenizer->_vptr_ISceneTokenProcessor)(this->m_pTokenizer);
+  v2 = this->m_pTokenizer->CurrentToken();
   *(this + 356) = (8 * (V_stricmp_fast(v2, "on") == 0)) | *(this + 356) & 0xF7;
 }
 
@@ -2231,7 +2231,7 @@ void __fastcall CChoreoScene::ParseIgnorePhonemes(CChoreoScene *const this)
   __int64 v2; // rax
 
   (*(this->m_pTokenizer->_vptr_ISceneTokenProcessor + 1))(this->m_pTokenizer, 1);
-  v2 = (*this->m_pTokenizer->_vptr_ISceneTokenProcessor)(this->m_pTokenizer);
+  v2 = this->m_pTokenizer->CurrentToken();
   *(this + 356) = (2 * (V_stricmp_fast(v2, "on") == 0)) | *(this + 356) & 0xFD;
 }
 
@@ -2244,7 +2244,7 @@ void __fastcall CChoreoScene::ParseFacePoserModel(CChoreoScene *const this, CCho
   const char *v4; // rax
 
   (*(this->m_pTokenizer->_vptr_ISceneTokenProcessor + 1))(this->m_pTokenizer, 1);
-  v4 = (*this->m_pTokenizer->_vptr_ISceneTokenProcessor)(this->m_pTokenizer);
+  v4 = this->m_pTokenizer->CurrentToken();
   CChoreoActor::SetFacePoserModelName(actor, v4);
 }
 
@@ -2272,22 +2272,22 @@ CChoreoChannel_0 *__fastcall CChoreoScene::ParseChannel(CChoreoScene *const this
 
   v4 = CChoreoScene::AllocChannel(this);
   (*(this->m_pTokenizer->_vptr_ISceneTokenProcessor + 1))(this->m_pTokenizer, 0);
-  v5 = (*this->m_pTokenizer->_vptr_ISceneTokenProcessor)(this->m_pTokenizer);
+  v5 = this->m_pTokenizer->CurrentToken();
   CChoreoChannel::SetName(v4, v5);
   (*(this->m_pTokenizer->_vptr_ISceneTokenProcessor + 1))(this->m_pTokenizer, 1);
-  v6 = (*this->m_pTokenizer->_vptr_ISceneTokenProcessor)(this->m_pTokenizer);
+  v6 = this->m_pTokenizer->CurrentToken();
   if ( V_stricmp_fast(v6, "{") != 0 )
     (*(this->m_pTokenizer->_vptr_ISceneTokenProcessor + 3))(this->m_pTokenizer, "expecting {");
   while ( 1 )
   {
     (*(this->m_pTokenizer->_vptr_ISceneTokenProcessor + 1))(this->m_pTokenizer, 1);
-    v7 = (*this->m_pTokenizer->_vptr_ISceneTokenProcessor)(this->m_pTokenizer);
+    v7 = this->m_pTokenizer->CurrentToken();
     if ( V_stricmp_fast(v7, "}") == 0 )
       break;
-    v8 = (*this->m_pTokenizer->_vptr_ISceneTokenProcessor)(this->m_pTokenizer);
+    v8 = this->m_pTokenizer->CurrentToken();
     if ( V_stricmp_fast(v8, "event") != 0 )
     {
-      v9 = (*this->m_pTokenizer->_vptr_ISceneTokenProcessor)(this->m_pTokenizer);
+      v9 = this->m_pTokenizer->CurrentToken();
       v10 = V_stricmp_fast(v9, "active");
       m_pTokenizer = this->m_pTokenizer;
       v12 = v10 == 0;
@@ -2295,7 +2295,7 @@ CChoreoChannel_0 *__fastcall CChoreoScene::ParseChannel(CChoreoScene *const this
       if ( v12 )
       {
         vptr_ISceneTokenProcessor[1](m_pTokenizer, 1);
-        v14 = (*this->m_pTokenizer->_vptr_ISceneTokenProcessor)(this->m_pTokenizer);
+        v14 = this->m_pTokenizer->CurrentToken();
         v15 = strtol(v14, 0, 10);
         CChoreoChannel::SetActive(v4, v15 != 0);
       }
@@ -2352,36 +2352,36 @@ bool __fastcall CChoreoScene::ParseFromBuffer(
   this->m_pTokenizer = tokenizer;
   for ( i = tokenizer; (*(i->_vptr_ISceneTokenProcessor + 1))(i, 1) != 0; i = this->m_pTokenizer )
   {
-    v7 = (*this->m_pTokenizer->_vptr_ISceneTokenProcessor)(this->m_pTokenizer);
+    v7 = this->m_pTokenizer->CurrentToken();
     if ( v7 == 0 || strlen(v7) <= 0 )
       break;
-    v8 = (*this->m_pTokenizer->_vptr_ISceneTokenProcessor)(this->m_pTokenizer);
+    v8 = this->m_pTokenizer->CurrentToken();
     if ( V_stricmp_fast(v8, "event") != 0 )
     {
-      v9 = (*this->m_pTokenizer->_vptr_ISceneTokenProcessor)(this->m_pTokenizer);
+      v9 = this->m_pTokenizer->CurrentToken();
       if ( V_stricmp_fast(v9, "actor") != 0 )
       {
-        v10 = (*this->m_pTokenizer->_vptr_ISceneTokenProcessor)(this->m_pTokenizer);
+        v10 = this->m_pTokenizer->CurrentToken();
         if ( V_stricmp_fast(v10, "mapname") != 0 )
         {
-          v11 = (*this->m_pTokenizer->_vptr_ISceneTokenProcessor)(this->m_pTokenizer);
+          v11 = this->m_pTokenizer->CurrentToken();
           if ( V_stricmp_fast(v11, "fps") != 0 )
           {
-            v18 = (*this->m_pTokenizer->_vptr_ISceneTokenProcessor)(this->m_pTokenizer);
+            v18 = this->m_pTokenizer->CurrentToken();
             if ( V_stricmp_fast(v18, "snap") != 0 )
             {
-              v19 = (*this->m_pTokenizer->_vptr_ISceneTokenProcessor)(this->m_pTokenizer);
+              v19 = this->m_pTokenizer->CurrentToken();
               if ( V_stricmp_fast(v19, "ignorePhonemes") != 0 )
               {
-                v20 = (*this->m_pTokenizer->_vptr_ISceneTokenProcessor)(this->m_pTokenizer);
+                v20 = this->m_pTokenizer->CurrentToken();
                 if ( V_stricmp_fast(v20, "scene_ramp") != 0 )
                 {
-                  v21 = (*this->m_pTokenizer->_vptr_ISceneTokenProcessor)(this->m_pTokenizer);
+                  v21 = this->m_pTokenizer->CurrentToken();
                   if ( V_stricmp_fast(v21, "scalesettings") != 0 )
                   {
                     m_pTokenizer = this->m_pTokenizer;
                     v13 = *(m_pTokenizer->_vptr_ISceneTokenProcessor + 3);
-                    v14 = (*m_pTokenizer->_vptr_ISceneTokenProcessor)(m_pTokenizer);
+                    v14 = m_pTokenizer->CurrentToken();
                     v15 = CUtlString::Get(p_m_sFileName);
                     v13(this->m_pTokenizer, "%s: unexpected token %s\n", v15, v14);
                     break;
@@ -4269,7 +4269,7 @@ void __fastcall CChoreoScene::DestroyActor(CChoreoScene *const this, CChoreoActo
   {
     v7 = (actor->m_Channels.m_Memory.m_nGrowSize & 0xC0000000) == 0;
     actor->m_Channels.m_Size = 0;
-    actor->_vptr_CChoreoObjectBase = off_47C2810;
+    actor->_vptr_CChoreoObjectBase = off_47C2810;  // vptr: CChoreoActor
     if ( v7 )
     {
       CUtlMemory<CChoreoChannel *,int>::Purge(&actor->m_Channels.m_Memory);
@@ -4670,15 +4670,15 @@ void __fastcall CChoreoScene::ImportEvents(
   this->m_pTokenizer = tokenizer;
   for ( i = tokenizer; (*(i->_vptr_ISceneTokenProcessor + 1))(i, 1) != 0; i = this->m_pTokenizer )
   {
-    v9 = (*this->m_pTokenizer->_vptr_ISceneTokenProcessor)(this->m_pTokenizer);
+    v9 = this->m_pTokenizer->CurrentToken();
     if ( v9 == 0 || strlen(v9) <= 0 )
       break;
-    v8 = (*this->m_pTokenizer->_vptr_ISceneTokenProcessor)(this->m_pTokenizer);
+    v8 = this->m_pTokenizer->CurrentToken();
     if ( V_stricmp_fast(v8, "event") != 0 )
     {
       m_pTokenizer = this->m_pTokenizer;
       v11 = *(m_pTokenizer->_vptr_ISceneTokenProcessor + 3);
-      v12 = (*m_pTokenizer->_vptr_ISceneTokenProcessor)(m_pTokenizer);
+      v12 = m_pTokenizer->CurrentToken();
       v11(this->m_pTokenizer, "unexpected token %s\n", v12);
       break;
     }
@@ -4892,22 +4892,22 @@ void __fastcall CChoreoScene::ParseScaleSettings(CChoreoScene *const this, IScen
 
   v11 = __readfsqword(0x28u);
   (*(tokenizer->_vptr_ISceneTokenProcessor + 1))(tokenizer, 1);
-  v4 = (*tokenizer->_vptr_ISceneTokenProcessor)(tokenizer);
+  v4 = tokenizer->CurrentToken();
   if ( V_stricmp_fast(v4, "{") != 0 )
     (*(tokenizer->_vptr_ISceneTokenProcessor + 3))(tokenizer, "expecting {\n");
   while ( 1 )
   {
     (*(tokenizer->_vptr_ISceneTokenProcessor + 1))(tokenizer, 1);
-    v9 = (*tokenizer->_vptr_ISceneTokenProcessor)(tokenizer);
+    v9 = tokenizer->CurrentToken();
     if ( v9 == 0 || strlen(v9) <= 0 )
       break;
-    v5 = (*tokenizer->_vptr_ISceneTokenProcessor)(tokenizer);
+    v5 = tokenizer->CurrentToken();
     if ( V_stricmp_fast(v5, "}") == 0 )
       return;
-    v6 = (*tokenizer->_vptr_ISceneTokenProcessor)(tokenizer);
+    v6 = tokenizer->CurrentToken();
     _V_strncpy(tool, v6, 256);
     (*(tokenizer->_vptr_ISceneTokenProcessor + 1))(tokenizer, 0);
-    v7 = (*tokenizer->_vptr_ISceneTokenProcessor)(tokenizer);
+    v7 = tokenizer->CurrentToken();
     v8 = V_atoi(v7);
     if ( v8 <= 0 )
       v8 = 100;

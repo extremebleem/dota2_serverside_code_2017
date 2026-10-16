@@ -974,9 +974,7 @@ void __fastcall CDOTA_Speech::SpeakQueuedConceptAndSetupCallback(CDOTA_Speech *c
     m_pCallbackAfterSpeech = this->m_QueuedConcept.m_pCallbackAfterSpeech;
     if ( m_pCallbackAfterSpeech != 0 )
     {
-      (*m_pCallbackAfterSpeech->_vptr_IDOTA_SpeechQueuedCallback)(
-        m_pCallbackAfterSpeech,
-        this,
+      m_pCallbackAfterSpeech->Go(this,
         0,
         &this->m_QueuedConcept);
       v12 = 3212836864LL;
@@ -1237,9 +1235,7 @@ void __fastcall CDOTA_Speech::Think(CDOTA_Speech *const this)
     m_pCallbackAfterSpeech = this->m_QueuedConcept.m_pCallbackAfterSpeech;
     if ( m_pCallbackAfterSpeech != 0 )
     {
-      (*m_pCallbackAfterSpeech->_vptr_IDOTA_SpeechQueuedCallback)(
-        m_pCallbackAfterSpeech,
-        this,
+      m_pCallbackAfterSpeech->Go(this,
         1,
         &this->m_QueuedConcept);
       v3 = 3212836864LL;

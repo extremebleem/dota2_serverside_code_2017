@@ -267,7 +267,7 @@ void __fastcall CDOTA_ModifierManager::CDOTA_ModifierManager(CDOTA_ModifierManag
 {
   unsigned __int8 *m_buffsForModifiers; // rdi
 
-  this->_vptr_CDOTA_ModifierManager = off_41161D0;
+  this->_vptr_CDOTA_ModifierManager = off_41161D0;  // vptr: CDOTA_ModifierManager
   this->m_hModifierParent.m_Value.m_Index = -1;
   this->m_bufflist.m_Size = 0;
   this->m_bufflist.m_Memory.m_pMemory = 0;

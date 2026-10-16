@@ -171,7 +171,7 @@ void __fastcall CBaseGameStats_Driver::~CBaseGameStats_Driver(CBaseGameStats_Dri
   p_m_PrevMapName[8].m_pString = off_403F950;
   if ( this->m_PrevMapName.m_pString != 0 )
     CUtlString::FreeMemoryBlock(p_m_PrevMapName);
-  this->_vptr_IGameSystem = off_3F7C1B0;
+  this->_vptr_IGameSystem = off_3F7C1B0;  // vptr: CAutoGameSystem
   IGameSystem::~IGameSystem(this);
 }
 
@@ -187,7 +187,7 @@ void __fastcall CBaseGameStats_Driver::~CBaseGameStats_Driver(CBaseGameStats_Dri
   p_m_PrevMapName[8].m_pString = off_403F950;
   if ( this->m_PrevMapName.m_pString != 0 )
     CUtlString::FreeMemoryBlock(p_m_PrevMapName);
-  this->_vptr_IGameSystem = off_3F7C1B0;
+  this->_vptr_IGameSystem = off_3F7C1B0;  // vptr: CAutoGameSystem
   IGameSystem::~IGameSystem(this);
   operator delete(this);
 }
@@ -1034,7 +1034,7 @@ bool __fastcall CBaseGameStats::SaveToFileNOW(CBaseGameStats *const this, bool b
     return 0;
   if ( !StatsTrackingIsFullyEnabled() )
     return 0;
-  v2 = (*gamestats->_vptr_CBaseGameStats)(gamestats);
+  v2 = gamestats->UseOldFormat();
   if ( v2 == 0 )
     return 0;
   CUtlBuffer::CUtlBuffer(&buf, 0, 0, 0);
@@ -1325,7 +1325,7 @@ bool __fastcall CBaseGameStats::UploadStatsFileNOW(CBaseGameStats *const this)
     return 0;
   if ( !StatsTrackingIsFullyEnabled()
     || (*(this->_vptr_CBaseGameStats + 14))(this) == 0
-    || (*gamestats->_vptr_CBaseGameStats)(gamestats) == 0 )
+    || gamestats->UseOldFormat() == 0 )
   {
     return 0;
   }
@@ -1586,7 +1586,7 @@ bool __fastcall CBaseGameStats_Driver::Init(CBaseGameStats_Driver *const this)
   if ( s_szPseudoUniqueID[0] != 0 )
   {
     (*(gamestats->_vptr_CBaseGameStats + 4))(gamestats);
-    if ( (*gamestats->_vptr_CBaseGameStats)(gamestats) != 0 )
+    if ( gamestats->UseOldFormat() != 0 )
     {
       if ( (*(gamestats->_vptr_CBaseGameStats + 43))(gamestats) != 0 )
         (*(gamestats->_vptr_CBaseGameStats + 41))(gamestats, 0);
@@ -1613,7 +1613,7 @@ void __fastcall CBaseGameStats_Driver::Shutdown(CBaseGameStats_Driver *const thi
 
   this->m_bShuttingDown = 1;
   (*(gamestats->_vptr_CBaseGameStats + 5))(gamestats);
-  v2 = (*gamestats->_vptr_CBaseGameStats)(gamestats) == 0;
+  v2 = gamestats->UseOldFormat() == 0;
   vptr_CBaseGameStats = gamestats->_vptr_CBaseGameStats;
   if ( v2 )
   {
@@ -1677,7 +1677,7 @@ void __fastcall CBaseGameStats_Driver::PossibleMapChange(CBaseGameStats_Driver *
     v6 = gpGlobals->mapname;
     v7 = CUtlString::Get(&PrevMapBackup);
     v5(gamestats, v7, v6);
-    if ( (*gamestats->_vptr_CBaseGameStats)(gamestats) != 0 )
+    if ( gamestats->UseOldFormat() != 0 )
     {
       if ( (*(gamestats->_vptr_CBaseGameStats + 45))(gamestats) != 0 )
         (*(gamestats->_vptr_CBaseGameStats + 41))(gamestats, 0);
@@ -1728,7 +1728,7 @@ void __fastcall CBaseGameStats_Driver::GameInit(CBaseGameStats_Driver *const thi
   v3 = gamestats;
   this->m_flLevelStartTime = gpGlobals->realtime;
   (*(v3->_vptr_CBaseGameStats + 7))(v3);
-  if ( (*gamestats->_vptr_CBaseGameStats)(gamestats) != 0 )
+  if ( gamestats->UseOldFormat() != 0 )
   {
     if ( (*(gamestats->_vptr_CBaseGameStats + 46))(gamestats) != 0 )
       (*(gamestats->_vptr_CBaseGameStats + 41))(gamestats, 0);
@@ -1769,7 +1769,7 @@ void __fastcall CBaseGameStats_Driver::GameDeactivate(
     v6 = gamestats;
     this->m_flTotalTimeInLevels = m_flTotalTimeInLevels + v4;
     (*(v6->_vptr_CBaseGameStats + 8))(v6, msg);
-    if ( (*gamestats->_vptr_CBaseGameStats)(gamestats) != 0 )
+    if ( gamestats->UseOldFormat() != 0 )
     {
       if ( (*(gamestats->_vptr_CBaseGameStats + 47))(gamestats) != 0 )
         (*(gamestats->_vptr_CBaseGameStats + 41))(gamestats, 1);
@@ -2414,7 +2414,7 @@ CEntityInstance *__fastcall CPointGamestatsCounter::CEntityInstanceEntityClass::
 void __fastcall CPointGamestatsCounter::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CPointGamestatsCounter::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -2424,7 +2424,7 @@ void __fastcall CPointGamestatsCounter::CEntityInstanceEntityClass::~CEntityInst
 void __fastcall CPointGamestatsCounter::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CPointGamestatsCounter::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }

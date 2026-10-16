@@ -202,7 +202,7 @@ void __fastcall CDOTA_Bot_AbilityUsage_Beastmaster_WildAxes::CDOTA_Bot_AbilityUs
   this->m_pAbility = pAbility;
   this->m_bUseOnCreeps = 0;
   this->m_pBot = pBot;
-  this->_vptr_CDOTA_Bot_AbilityUsage = off_42C8D10;
+  this->_vptr_CDOTA_Bot_AbilityUsage = off_42C8D10;  // vptr: CDOTA_Bot_AbilityUsage_Beastmaster_WildAxes
 }
 
 
@@ -242,7 +242,7 @@ void __fastcall CDOTA_Bot_AbilityUsage_Beastmaster_CallOfTheWild::CDOTA_Bot_Abil
   this->m_pAbility = pAbility;
   this->m_bUseOnCreeps = 0;
   this->m_pBot = pBot;
-  this->_vptr_CDOTA_Bot_AbilityUsage = off_42C8D70;
+  this->_vptr_CDOTA_Bot_AbilityUsage = off_42C8D70;  // vptr: CDOTA_Bot_AbilityUsage_Beastmaster_CallOfTheWild
 }
 
 
@@ -272,7 +272,7 @@ void __fastcall CDOTA_Bot_AbilityUsage_Beastmaster_PrimalRoar::CDOTA_Bot_Ability
   this->m_pAbility = pAbility;
   this->m_bUseOnCreeps = 0;
   this->m_pBot = pBot;
-  this->_vptr_CDOTA_Bot_AbilityUsage = off_42C8DD0;
+  this->_vptr_CDOTA_Bot_AbilityUsage = off_42C8DD0;  // vptr: CDOTA_Bot_AbilityUsage_Beastmaster_PrimalRoar
   this->m_hDesiredTarget.m_Index = -1;
 }
 

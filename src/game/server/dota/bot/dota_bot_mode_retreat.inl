@@ -4,7 +4,7 @@
 // CDOTA_BotMode_Retreat::~CDOTA_BotMode_Retreat  (line 15, @0x0000000002826e20, libserver.so)  // inlines: ~CDOTA_BotMode
 void __fastcall CDOTA_BotMode_Retreat::~CDOTA_BotMode_Retreat(CDOTA_BotMode_Retreat *const this)
 {
-  this->_vptr_CDOTA_BotMode = off_42B75F0;
+  this->_vptr_CDOTA_BotMode = off_42B75F0;  // vptr: CDOTA_BotMode
 }
 
 
@@ -12,7 +12,7 @@ void __fastcall CDOTA_BotMode_Retreat::~CDOTA_BotMode_Retreat(CDOTA_BotMode_Retr
 // calls: operator delete
 void __fastcall CDOTA_BotMode_Retreat::~CDOTA_BotMode_Retreat(CDOTA_BotMode_Retreat *const this)
 {
-  this->_vptr_CDOTA_BotMode = off_42B75F0;
+  this->_vptr_CDOTA_BotMode = off_42B75F0;  // vptr: CDOTA_BotMode
   operator delete(this);
 }
 
@@ -34,7 +34,7 @@ const char *__fastcall CDOTA_BotMode_Retreat::GetDebugString(CDOTA_BotMode_Retre
 // CDOTA_BotMode_Retreat_Human::~CDOTA_BotMode_Retreat_Human  (line 53, @0x0000000002827030, libserver.so)  // inlines: ~CDOTA_BotMode, ~CDOTA_BotMode_Retreat
 void __fastcall CDOTA_BotMode_Retreat_Human::~CDOTA_BotMode_Retreat_Human(CDOTA_BotMode_Retreat_Human *const this)
 {
-  this->_vptr_CDOTA_BotMode = off_42B75F0;
+  this->_vptr_CDOTA_BotMode = off_42B75F0;  // vptr: CDOTA_BotMode
 }
 
 
@@ -42,7 +42,7 @@ void __fastcall CDOTA_BotMode_Retreat_Human::~CDOTA_BotMode_Retreat_Human(CDOTA_
 // calls: operator delete
 void __fastcall CDOTA_BotMode_Retreat_Human::~CDOTA_BotMode_Retreat_Human(CDOTA_BotMode_Retreat_Human *const this)
 {
-  this->_vptr_CDOTA_BotMode = off_42B75F0;
+  this->_vptr_CDOTA_BotMode = off_42B75F0;  // vptr: CDOTA_BotMode
   operator delete(this);
 }
 

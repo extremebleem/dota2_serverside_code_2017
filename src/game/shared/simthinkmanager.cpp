@@ -316,7 +316,7 @@ void __fastcall report_simthinklist(const CCommandContext *const ctx, const CCom
   CSimThinkEntityList tmpList; // [rsp+40h] [rbp-1020h] BYREF
 
   memset(&tmpList, 0, sizeof(tmpList));
-  (*g_pSimThinkManager->_vptr_ISimulationThinkManager)(g_pSimThinkManager, &tmpList, &nFirstSetBit, &nLastSetBit);
+  g_pSimThinkManager->GetSimThinkList(&tmpList, &nFirstSetBit, &nLastSetBit);
   CSortedEntityList::CSortedEntityList(&list);
   for ( i = nFirstSetBit; nLastSetBit >= i; ++i )
   {
@@ -374,7 +374,7 @@ LABEL_14:
 // calls: IGameSystem::~IGameSystem
 void __fastcall CSimThinkHook::~CSimThinkHook(CSimThinkHook *const this)
 {
-  this->_vptr_IGameSystem = off_3F7C1B0;
+  this->_vptr_IGameSystem = off_3F7C1B0;  // vptr: CAutoGameSystem
   IGameSystem::~IGameSystem(this);
 }
 
@@ -383,7 +383,7 @@ void __fastcall CSimThinkHook::~CSimThinkHook(CSimThinkHook *const this)
 // calls: IGameSystem::~IGameSystem, operator delete
 void __fastcall CSimThinkHook::~CSimThinkHook(CSimThinkHook *const this)
 {
-  this->_vptr_IGameSystem = off_3F7C1B0;
+  this->_vptr_IGameSystem = off_3F7C1B0;  // vptr: CAutoGameSystem
   IGameSystem::~IGameSystem(this);
   operator delete(this);
 }

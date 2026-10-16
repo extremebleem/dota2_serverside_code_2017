@@ -445,7 +445,7 @@ CEntityInstance *__fastcall CDOTAInGamePredictionState::CEntityInstanceEntityCla
 void __fastcall CDOTAInGamePredictionState::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTAInGamePredictionState::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -455,7 +455,7 @@ void __fastcall CDOTAInGamePredictionState::CEntityInstanceEntityClass::~CEntity
 void __fastcall CDOTAInGamePredictionState::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTAInGamePredictionState::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -606,7 +606,7 @@ void __fastcall CDOTAInGamePredictionGameSystem::PredictionInfo_t::~PredictionIn
 void __fastcall CDOTAInGamePredictionGameSystem::CDOTAInGamePredictionGameSystem(
         CDOTAInGamePredictionGameSystem *const this)
 {
-  this->_vptr_IGameSystem = off_41078F0;
+  this->_vptr_IGameSystem = off_41078F0;  // vptr: CDOTAInGamePredictionGameSystem
   this->m_bRegisteredForEvents = 0;
   this->_vptr_IGameEventListener2 = off_4107A48;
   this->m_hPredictionState.m_Index = -1;

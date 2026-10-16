@@ -44,7 +44,11 @@ void __fastcall CGlobalConfigValueRegistry::HookUpConfigValue(
         const void **ppValuePointer)
 {
   const void *v7; // rax
-  LeafCodeInfo_t v8; // [rsp+0h] [rbp-30h] BYREF
+  __int64 v8; // rdx
+  __int64 v9; // rcx
+  __int64 v10; // rdi
+  __int64 v11; // rsi
+  LeafCodeInfo_t v12; // [rsp+0h] [rbp-30h] BYREF
 
   v7 = (*(*g_pConfigurationSystem + 416LL))(g_pConfigurationSystem, pConfigValueName, nType, nValueType, opt);
   *ppValuePointer = v7;
@@ -54,17 +58,17 @@ void __fastcall CGlobalConfigValueRegistry::HookUpConfigValue(
       goto LABEL_6;
     while ( 1 )
     {
-      if ( Plat_ShouldCollectMiniDumpsForFatalErrors() != 0 )
+      if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v10, v11, v8, v9) != 0 )
         loc_0 = -559038737;
       Plat_ExitProcess(1);
 LABEL_6:
-      v8.m_szFile = "configvalue.cpp";
-      v8.m_szFunction = "HookUpConfigValue";
-      v8.m_nLine = 39;
+      v12.m_szFile = "configvalue.cpp";
+      v12.m_szFunction = "HookUpConfigValue";
+      v12.m_nLine = 39;
       LoggingSystem_Log(
         LOG_GENERAL,
         LoggingSeverity_t::LS_ERROR,
-        &v8,
+        &v12,
         "RegisterConfigValue: Unknown error constructing config value \"%s\"!\n",
         pConfigValueName);
     }

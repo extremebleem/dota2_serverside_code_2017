@@ -102,7 +102,7 @@ CEntityInstance *__fastcall CParticleSystem::CEntityInstanceEntityClass::Constru
 void __fastcall CParticleSystem::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CParticleSystem::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -112,7 +112,7 @@ void __fastcall CParticleSystem::CEntityInstanceEntityClass::~CEntityInstanceEnt
 void __fastcall CParticleSystem::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CParticleSystem::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }

@@ -113,7 +113,7 @@ void __fastcall CDOTA_Bot_AbilityUsage_Clinkz_Strafe::CDOTA_Bot_AbilityUsage_Cli
   this->m_pAbility = pAbility;
   this->m_bUseOnCreeps = 0;
   this->m_pBot = pBot;
-  this->_vptr_CDOTA_Bot_AbilityUsage = off_42CAA90;
+  this->_vptr_CDOTA_Bot_AbilityUsage = off_42CAA90;  // vptr: CDOTA_Bot_AbilityUsage_Clinkz_Strafe
 }
 
 
@@ -142,7 +142,7 @@ void __fastcall CDOTA_Bot_AbilityUsage_Clinkz_SearingArrows::CDOTA_Bot_AbilityUs
   this->m_pAbility = pAbility;
   this->m_bUseOnCreeps = 0;
   this->m_pBot = pBot;
-  this->_vptr_CDOTA_Bot_AbilityUsage = off_42CAAF0;
+  this->_vptr_CDOTA_Bot_AbilityUsage = off_42CAAF0;  // vptr: CDOTA_Bot_AbilityUsage_Clinkz_SearingArrows
 }
 
 
@@ -172,7 +172,7 @@ void __fastcall CDOTA_Bot_AbilityUsage_Clinkz_Windwalk::CDOTA_Bot_AbilityUsage_C
   this->m_pAbility = pAbility;
   this->m_bUseOnCreeps = 0;
   this->m_pBot = pBot;
-  this->_vptr_CDOTA_Bot_AbilityUsage = off_42CAB50;
+  this->_vptr_CDOTA_Bot_AbilityUsage = off_42CAB50;  // vptr: CDOTA_Bot_AbilityUsage_Clinkz_Windwalk
 }
 
 
@@ -201,7 +201,7 @@ void __fastcall CDOTA_Bot_AbilityUsage_Clinkz_DeathPact::CDOTA_Bot_AbilityUsage_
   this->m_pAbility = pAbility;
   this->m_bUseOnCreeps = 0;
   this->m_pBot = pBot;
-  this->_vptr_CDOTA_Bot_AbilityUsage = off_42CABB0;
+  this->_vptr_CDOTA_Bot_AbilityUsage = off_42CABB0;  // vptr: CDOTA_Bot_AbilityUsage_Clinkz_DeathPact
 }
 
 

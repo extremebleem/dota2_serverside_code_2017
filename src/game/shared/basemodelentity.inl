@@ -95,7 +95,7 @@ CEntityInstance *__fastcall CBaseModelEntity::CEntityInstanceEntityClass::Constr
 void __fastcall CBaseModelEntity::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CBaseModelEntity::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -105,7 +105,7 @@ void __fastcall CBaseModelEntity::CEntityInstanceEntityClass::~CEntityInstanceEn
 void __fastcall CBaseModelEntity::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CBaseModelEntity::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -554,7 +554,7 @@ CEntityInstance *__fastcall CServerOnlyModelEntity::CEntityInstanceEntityClass::
 void __fastcall CServerOnlyModelEntity::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CServerOnlyModelEntity::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -564,7 +564,7 @@ void __fastcall CServerOnlyModelEntity::CEntityInstanceEntityClass::~CEntityInst
 void __fastcall CServerOnlyModelEntity::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CServerOnlyModelEntity::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -739,7 +739,7 @@ CEntityInstance *__fastcall CModelPointEntity::CEntityInstanceEntityClass::Const
 void __fastcall CModelPointEntity::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CModelPointEntity::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -749,7 +749,7 @@ void __fastcall CModelPointEntity::CEntityInstanceEntityClass::~CEntityInstanceE
 void __fastcall CModelPointEntity::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CModelPointEntity::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -927,9 +927,7 @@ void __fastcall CBaseModelEntity::SetViewOffset(CBaseModelEntity *const this, co
       if ( m_pStateChanged != 0 )
       {
         v15 = p_m_vecY;
-        (*m_pStateChanged->_vptr_INetworkStateChangedRouter)(
-          m_pStateChanged,
-          p_m_vecViewOffset,
+        m_pStateChanged->NetworkStateChanged(p_m_vecViewOffset,
           v14,
           0xFFFFFFFFLL,
           0xFFFFFFFFLL);

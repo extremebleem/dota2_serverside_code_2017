@@ -59,7 +59,7 @@ void __fastcall CDOTA_Bot_AbilityUsage_Jakiro_DualBreath::CDOTA_Bot_AbilityUsage
   this->m_pAbility = pAbility;
   this->m_bUseOnCreeps = 0;
   this->m_pBot = pBot;
-  this->_vptr_CDOTA_Bot_AbilityUsage = off_42CC610;
+  this->_vptr_CDOTA_Bot_AbilityUsage = off_42CC610;  // vptr: CDOTA_Bot_AbilityUsage_Jakiro_DualBreath
 }
 
 
@@ -267,7 +267,7 @@ void __fastcall CDOTA_Bot_AbilityUsage_Jakiro_IcePath::CDOTA_Bot_AbilityUsage_Ja
   this->m_pAbility = pAbility;
   this->m_bUseOnCreeps = 0;
   this->m_pBot = pBot;
-  this->_vptr_CDOTA_Bot_AbilityUsage = off_42CC670;
+  this->_vptr_CDOTA_Bot_AbilityUsage = off_42CC670;  // vptr: CDOTA_Bot_AbilityUsage_Jakiro_IcePath
 }
 
 
@@ -558,7 +558,7 @@ void __fastcall CDOTA_Bot_AbilityUsage_Jakiro_Macropyre::CDOTA_Bot_AbilityUsage_
   this->m_pAbility = pAbility;
   this->m_bUseOnCreeps = 0;
   this->m_pBot = pBot;
-  this->_vptr_CDOTA_Bot_AbilityUsage = off_42CC6D0;
+  this->_vptr_CDOTA_Bot_AbilityUsage = off_42CC6D0;  // vptr: CDOTA_Bot_AbilityUsage_Jakiro_Macropyre
   this->m_hDesiredTarget.m_Index = -1;
 }
 
@@ -687,7 +687,7 @@ void __fastcall CDOTA_Bot_AbilityUsage_Jakiro_LiquidFire::CDOTA_Bot_AbilityUsage
   this->m_pAbility = pAbility;
   this->m_bUseOnCreeps = 0;
   this->m_pBot = pBot;
-  this->_vptr_CDOTA_Bot_AbilityUsage = off_42CC730;
+  this->_vptr_CDOTA_Bot_AbilityUsage = off_42CC730;  // vptr: CDOTA_Bot_AbilityUsage_Jakiro_LiquidFire
   this->m_hDesiredTarget.m_Index = -1;
 }
 

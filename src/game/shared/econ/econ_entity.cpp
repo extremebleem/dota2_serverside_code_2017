@@ -335,10 +335,11 @@ void __fastcall CEconEntity::DebugDescribe(CEconEntity *const this)
   const char *QualityString; // r12
   int v5; // eax
   const char *v6; // rsi
+  double v7; // xmm0_8
   char tempstr[1032]; // [rsp+0h] [rbp-430h] BYREF
-  unsigned __int64 v8; // [rsp+408h] [rbp-28h]
+  unsigned __int64 v9; // [rsp+408h] [rbp-28h]
 
-  v8 = __readfsqword(0x28u);
+  v9 = __readfsqword(0x28u);
   v1 = (*(this->_vptr_IHandleEntity + 265))(this);
   v2 = v1 + 104;
   v3 = v1;
@@ -349,8 +350,8 @@ void __fastcall CEconEntity::DebugDescribe(CEconEntity *const this)
   if ( QualityString != 0 )
     v6 = QualityString;
   Msg("%s \"%s\" (level %d)\n", v6, tempstr, v5);
-  Msg("%s", tempstr);
-  Msg("\n============================================\n");
+  *&v7 = Msg("%s", tempstr).m128_u64[0];
+  Msg("\n============================================\n", v7);
 }
 
 

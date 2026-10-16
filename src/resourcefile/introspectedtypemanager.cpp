@@ -693,7 +693,7 @@ bool __fastcall CBaseIntrospectedTypeManager::Init(
       goto LABEL_7;
     while ( 1 )
     {
-      if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v8, v9, v6, v7, v10, v11) != 0 )
+      if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v8, v9, v6, v7) != 0 )
         loc_0 = -559038737;
       Plat_ExitProcess(1);
 LABEL_7:
@@ -726,7 +726,7 @@ void *__fastcall CBaseIntrospectedTypeManager::Allocate(
         const void *pDataFromDisk,
         IResourceAllocatorUtils *pUtils)
 {
-  return (*pUtils->_vptr_IResourceAllocatorUtils)(pUtils, pDataFromDisk);
+  return pUtils->AssumeControl(pDataFromDisk);
 }
 
 
@@ -737,7 +737,7 @@ void __fastcall CBaseIntrospectedTypeManager::Deallocate(
         IResourceDeallocatorUtils *pUtils)
 {
   if ( pData != 0 && (*(pUtils->_vptr_IResourceDeallocatorUtils + 1))(pUtils) != 0 )
-    (*pUtils->_vptr_IResourceDeallocatorUtils)(pUtils, pData);
+    pUtils->ReleaseControl(pData);
 }
 
 
@@ -792,8 +792,6 @@ void __fastcall CBaseIntrospectedTypeManager::AllocateResource(
   __int64 v25; // rcx
   __int64 v26; // rdi
   __int64 v27; // rsi
-  __int64 v28; // r8
-  __int64 v29; // r9
   ResourceSystemStats_t *pRS_STATS_LocalPtrToStats; // [rsp+8h] [rbp-F8h]
   __int64 profileHelper_Allocate; // [rsp+30h] [rbp-D0h]
   volatile signed __int64 *profileHelper_Allocate_8; // [rsp+38h] [rbp-C8h]
@@ -806,7 +804,7 @@ void __fastcall CBaseIntrospectedTypeManager::AllocateResource(
       goto LABEL_18;
     while ( 1 )
     {
-      if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v26, v27, v24, v25, v28, v29) != 0 )
+      if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v26, v27, v24, v25) != 0 )
         loc_0 = -559038737;
       Plat_ExitProcess(1);
 LABEL_18:

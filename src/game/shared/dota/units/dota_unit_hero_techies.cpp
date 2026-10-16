@@ -1136,7 +1136,7 @@ CEntityInstance *__fastcall CDOTA_Unit_Hero_Techies::CEntityInstanceEntityClass:
 void __fastcall CDOTA_Unit_Hero_Techies::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Unit_Hero_Techies::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -1146,7 +1146,7 @@ void __fastcall CDOTA_Unit_Hero_Techies::CEntityInstanceEntityClass::~CEntityIns
 void __fastcall CDOTA_Unit_Hero_Techies::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Unit_Hero_Techies::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -1537,7 +1537,7 @@ CEntityInstance *__fastcall CDOTA_Ability_Techies_LandMines::CEntityInstanceEnti
 void __fastcall CDOTA_Ability_Techies_LandMines::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Techies_LandMines::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -1547,7 +1547,7 @@ void __fastcall CDOTA_Ability_Techies_LandMines::CEntityInstanceEntityClass::~CE
 void __fastcall CDOTA_Ability_Techies_LandMines::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Techies_LandMines::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -2409,7 +2409,7 @@ CEntityInstance *__fastcall CDOTA_Ability_Techies_StasisTrap::CEntityInstanceEnt
 void __fastcall CDOTA_Ability_Techies_StasisTrap::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Techies_StasisTrap::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -2419,7 +2419,7 @@ void __fastcall CDOTA_Ability_Techies_StasisTrap::CEntityInstanceEntityClass::~C
 void __fastcall CDOTA_Ability_Techies_StasisTrap::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Techies_StasisTrap::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -3413,7 +3413,7 @@ CEntityInstance *__fastcall CDOTA_Ability_Techies_Suicide::CEntityInstanceEntity
 void __fastcall CDOTA_Ability_Techies_Suicide::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Techies_Suicide::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -3423,7 +3423,7 @@ void __fastcall CDOTA_Ability_Techies_Suicide::CEntityInstanceEntityClass::~CEnt
 void __fastcall CDOTA_Ability_Techies_Suicide::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Techies_Suicide::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -4522,7 +4522,7 @@ CEntityInstance *__fastcall CDOTA_NPC_TechiesMines::CEntityInstanceEntityClass::
 void __fastcall CDOTA_NPC_TechiesMines::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_NPC_TechiesMines::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -4532,7 +4532,7 @@ void __fastcall CDOTA_NPC_TechiesMines::CEntityInstanceEntityClass::~CEntityInst
 void __fastcall CDOTA_NPC_TechiesMines::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_NPC_TechiesMines::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -4759,7 +4759,7 @@ CEntityInstance *__fastcall CDOTA_Ability_Techies_RemoteMines::CEntityInstanceEn
 void __fastcall CDOTA_Ability_Techies_RemoteMines::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Techies_RemoteMines::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -4769,7 +4769,7 @@ void __fastcall CDOTA_Ability_Techies_RemoteMines::CEntityInstanceEntityClass::~
 void __fastcall CDOTA_Ability_Techies_RemoteMines::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Techies_RemoteMines::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -5801,7 +5801,7 @@ CEntityInstance *__fastcall CDOTA_Ability_Techies_FocusedDetonate::CEntityInstan
 void __fastcall CDOTA_Ability_Techies_FocusedDetonate::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Techies_FocusedDetonate::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -5811,7 +5811,7 @@ void __fastcall CDOTA_Ability_Techies_FocusedDetonate::CEntityInstanceEntityClas
 void __fastcall CDOTA_Ability_Techies_FocusedDetonate::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Techies_FocusedDetonate::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -6110,7 +6110,7 @@ CEntityInstance *__fastcall CDOTA_Ability_Techies_RemoteMines_SelfDetonate::CEnt
 void __fastcall CDOTA_Ability_Techies_RemoteMines_SelfDetonate::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Techies_RemoteMines_SelfDetonate::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -6120,7 +6120,7 @@ void __fastcall CDOTA_Ability_Techies_RemoteMines_SelfDetonate::CEntityInstanceE
 void __fastcall CDOTA_Ability_Techies_RemoteMines_SelfDetonate::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Techies_RemoteMines_SelfDetonate::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -6362,7 +6362,7 @@ CEntityInstance *__fastcall CDOTA_Ability_Techies_Minefield_Sign::CEntityInstanc
 void __fastcall CDOTA_Ability_Techies_Minefield_Sign::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Techies_Minefield_Sign::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -6372,7 +6372,7 @@ void __fastcall CDOTA_Ability_Techies_Minefield_Sign::CEntityInstanceEntityClass
 void __fastcall CDOTA_Ability_Techies_Minefield_Sign::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Techies_Minefield_Sign::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -6883,7 +6883,7 @@ CEntityInstance *__fastcall CDOTA_NPC_Techies_Minefield_Sign::CEntityInstanceEnt
 void __fastcall CDOTA_NPC_Techies_Minefield_Sign::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_NPC_Techies_Minefield_Sign::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -6893,7 +6893,7 @@ void __fastcall CDOTA_NPC_Techies_Minefield_Sign::CEntityInstanceEntityClass::~C
 void __fastcall CDOTA_NPC_Techies_Minefield_Sign::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_NPC_Techies_Minefield_Sign::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }

@@ -85,7 +85,7 @@ void __cdecl CHLTVDirector::YouForgot::ToDefine_DEFINE_GAME_SYSTEM()
 // globals: GameEventLessFunc(CHLTVGameEvent const&,CHLTVGameEvent const&)
 void __fastcall CHLTVDirector::CHLTVDirector(CHLTVDirector *const this)
 {
-  this->_vptr_IGameEventListener2 = off_4052AF0;
+  this->_vptr_IGameEventListener2 = off_4052AF0;  // vptr: CHLTVDirector
   this->_vptr_IGameSystem = &off_4052C50;
   this->_vptr_IHLTVDirector = off_4052DA0;
   this->m_EventHistory.m_Root = -1;
@@ -127,17 +127,17 @@ void __fastcall CHLTVDirector::~CHLTVDirector(CHLTVDirector *const this)
   CUtlRBTree<CHLTVGameEvent,unsigned short,bool (*)(CHLTVGameEvent const&,CHLTVGameEvent const&),CUtlMemory<UtlRBTreeNode_t<CHLTVGameEvent,unsigned short>,unsigned short>>::Purge(p_m_EventHistory);
   if ( (this->m_EventHistory.m_Elements.m_nGrowSize & 0xC0000000) == 0 )
     CUtlMemory<UtlRBTreeNode_t<CHLTVGameEvent,unsigned short>,unsigned short>::Purge(&this->m_EventHistory.m_Elements);
-  this->_vptr_IHLTVDirector = off_404F150;
+  this->_vptr_IHLTVDirector = off_404F150;  // vptr: IHLTVDirector
   IGameSystem::~IGameSystem(&this->IGameSystem);
   v3 = !this->m_bRegisteredForEvents;
-  this->_vptr_IGameEventListener2 = off_3FB3190;
+  this->_vptr_IGameEventListener2 = off_3FB3190;  // vptr: CGameEventListener
   if ( !v3 )
   {
     if ( gameeventmanager != 0 )
       (*(gameeventmanager->_vptr_IBaseInterface + 6))(gameeventmanager, this);
     this->m_bRegisteredForEvents = 0;
   }
-  this->_vptr_IGameEventListener2 = off_3FB3150;
+  this->_vptr_IGameEventListener2 = off_3FB3150;  // vptr: IGameEventListener2
 }
 
 

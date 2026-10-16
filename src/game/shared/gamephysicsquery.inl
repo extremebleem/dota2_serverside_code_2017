@@ -4,7 +4,7 @@
 // CTraceFilter::~CTraceFilter  (line 159, @0x00000000020327e0, libserver.so)
 void __fastcall CTraceFilter::~CTraceFilter(CTraceFilter *const this)
 {
-  this->_vptr_CTraceFilter = off_3FE6970;
+  this->_vptr_CTraceFilter = off_3FE6970;  // vptr: CTraceFilter
 }
 
 
@@ -12,7 +12,7 @@ void __fastcall CTraceFilter::~CTraceFilter(CTraceFilter *const this)
 // calls: operator delete
 void __fastcall CTraceFilter::~CTraceFilter(CTraceFilter *const this)
 {
-  this->_vptr_CTraceFilter = off_3FE6970;
+  this->_vptr_CTraceFilter = off_3FE6970;  // vptr: CTraceFilter
   operator delete(this);
 }
 
@@ -20,7 +20,7 @@ void __fastcall CTraceFilter::~CTraceFilter(CTraceFilter *const this)
 // CTraceFilterEntitiesOnly::~CTraceFilterEntitiesOnly  (line 220, @0x0000000002370ac0, libserver.so)  // inlines: ~CTraceFilter
 void __fastcall CTraceFilterEntitiesOnly::~CTraceFilterEntitiesOnly(CTraceFilterEntitiesOnly *const this)
 {
-  this->_vptr_CTraceFilter = off_3FE6970;
+  this->_vptr_CTraceFilter = off_3FE6970;  // vptr: CTraceFilter
 }
 
 
@@ -28,7 +28,7 @@ void __fastcall CTraceFilterEntitiesOnly::~CTraceFilterEntitiesOnly(CTraceFilter
 // calls: operator delete
 void __fastcall CTraceFilterEntitiesOnly::~CTraceFilterEntitiesOnly(CTraceFilterEntitiesOnly *const this)
 {
-  this->_vptr_CTraceFilter = off_3FE6970;
+  this->_vptr_CTraceFilter = off_3FE6970;  // vptr: CTraceFilter
   operator delete(this);
 }
 
@@ -45,7 +45,7 @@ bool __fastcall CTraceFilterEntitiesOnly::ShouldHitEntity(
 // CTraceFilterSimple::~CTraceFilterSimple  (line 233, @0x00000000020f10b0, libserver.so)  // inlines: ~CTraceFilter
 void __fastcall CTraceFilterSimple::~CTraceFilterSimple(CTraceFilterSimple *const this)
 {
-  this->_vptr_CTraceFilter = off_3FE6970;
+  this->_vptr_CTraceFilter = off_3FE6970;  // vptr: CTraceFilter
 }
 
 
@@ -53,7 +53,7 @@ void __fastcall CTraceFilterSimple::~CTraceFilterSimple(CTraceFilterSimple *cons
 // calls: operator delete
 void __fastcall CTraceFilterSimple::~CTraceFilterSimple(CTraceFilterSimple *const this)
 {
-  this->_vptr_CTraceFilter = off_3FE6970;
+  this->_vptr_CTraceFilter = off_3FE6970;  // vptr: CTraceFilter
   operator delete(this);
 }
 
@@ -74,7 +74,7 @@ void __fastcall CTraceFilterSimple::SetPassEntity(CTraceFilterSimple *const this
 // CTraceFilterSkipTwoEntities::~CTraceFilterSkipTwoEntities  (line 257, @0x00000000020f1400, libserver.so)  // inlines: ~CTraceFilter, ~CTraceFilterSimple
 void __fastcall CTraceFilterSkipTwoEntities::~CTraceFilterSkipTwoEntities(CTraceFilterSkipTwoEntities *const this)
 {
-  this->_vptr_CTraceFilter = off_3FE6970;
+  this->_vptr_CTraceFilter = off_3FE6970;  // vptr: CTraceFilter
 }
 
 
@@ -82,7 +82,7 @@ void __fastcall CTraceFilterSkipTwoEntities::~CTraceFilterSkipTwoEntities(CTrace
 // calls: operator delete
 void __fastcall CTraceFilterSkipTwoEntities::~CTraceFilterSkipTwoEntities(CTraceFilterSkipTwoEntities *const this)
 {
-  this->_vptr_CTraceFilter = off_3FE6970;
+  this->_vptr_CTraceFilter = off_3FE6970;  // vptr: CTraceFilter
   operator delete(this);
 }
 
@@ -104,19 +104,19 @@ void __fastcall CTraceFilterSimpleList::~CTraceFilterSimpleList(CTraceFilterSimp
   CUtlVectorBase<CBaseEntity*,CUtlMemory<CBaseEntity*,int> >::CAllocator *p_m_Memory; // r12
 
   v2 = (this->m_PassEntities.m_Memory.m_nGrowSize & 0xC0000000) == 0;
-  this->_vptr_CTraceFilter = off_3FF78D0;
+  this->_vptr_CTraceFilter = off_3FF78D0;  // vptr: CTraceFilterSimpleList
   this->m_PassEntities.m_Size = 0;
   if ( !v2
     || (p_m_Memory = &this->m_PassEntities.m_Memory,
         CUtlMemory<CBaseEntity *,int>::Purge(&this->m_PassEntities.m_Memory),
         (this->m_PassEntities.m_Memory.m_nGrowSize & 0xC0000000) != 0) )
   {
-    this->_vptr_CTraceFilter = off_3FE6970;
+    this->_vptr_CTraceFilter = off_3FE6970;  // vptr: CTraceFilter
   }
   else
   {
     CUtlMemory<CBaseEntity *,int>::Purge(p_m_Memory);
-    this->_vptr_CTraceFilter = off_3FE6970;
+    this->_vptr_CTraceFilter = off_3FE6970;  // vptr: CTraceFilter
   }
 }
 
@@ -129,7 +129,7 @@ void __fastcall CTraceFilterSimpleList::~CTraceFilterSimpleList(CTraceFilterSimp
   CUtlVectorBase<CBaseEntity*,CUtlMemory<CBaseEntity*,int> >::CAllocator *p_m_Memory; // r12
 
   v2 = (this->m_PassEntities.m_Memory.m_nGrowSize & 0xC0000000) == 0;
-  this->_vptr_CTraceFilter = off_3FF78D0;
+  this->_vptr_CTraceFilter = off_3FF78D0;  // vptr: CTraceFilterSimpleList
   this->m_PassEntities.m_Size = 0;
   if ( v2 )
   {
@@ -138,7 +138,7 @@ void __fastcall CTraceFilterSimpleList::~CTraceFilterSimpleList(CTraceFilterSimp
     if ( (this->m_PassEntities.m_Memory.m_nGrowSize & 0xC0000000) == 0 )
       CUtlMemory<CBaseEntity *,int>::Purge(p_m_Memory);
   }
-  this->_vptr_CTraceFilter = off_3FE6970;
+  this->_vptr_CTraceFilter = off_3FE6970;  // vptr: CTraceFilter
   operator delete(this);
 }
 
@@ -146,7 +146,7 @@ void __fastcall CTraceFilterSimpleList::~CTraceFilterSimpleList(CTraceFilterSimp
 // CTraceFilterNoNPCsOrPlayer::~CTraceFilterNoNPCsOrPlayer  (line 290, @0x00000000020f21f0, libserver.so)  // inlines: ~CTraceFilter, ~CTraceFilterSimple
 void __fastcall CTraceFilterNoNPCsOrPlayer::~CTraceFilterNoNPCsOrPlayer(CTraceFilterNoNPCsOrPlayer *const this)
 {
-  this->_vptr_CTraceFilter = off_3FE6970;
+  this->_vptr_CTraceFilter = off_3FE6970;  // vptr: CTraceFilter
 }
 
 
@@ -154,7 +154,7 @@ void __fastcall CTraceFilterNoNPCsOrPlayer::~CTraceFilterNoNPCsOrPlayer(CTraceFi
 // calls: operator delete
 void __fastcall CTraceFilterNoNPCsOrPlayer::~CTraceFilterNoNPCsOrPlayer(CTraceFilterNoNPCsOrPlayer *const this)
 {
-  this->_vptr_CTraceFilter = off_3FE6970;
+  this->_vptr_CTraceFilter = off_3FE6970;  // vptr: CTraceFilter
   operator delete(this);
 }
 
@@ -162,7 +162,7 @@ void __fastcall CTraceFilterNoNPCsOrPlayer::~CTraceFilterNoNPCsOrPlayer(CTraceFi
 // CTraceFilterLOS::~CTraceFilterLOS  (line 303, @0x00000000020f21e0, libserver.so)  // inlines: ~CTraceFilter, ~CTraceFilterSimple, ~CTraceFilterSkipTwoEntities
 void __fastcall CTraceFilterLOS::~CTraceFilterLOS(CTraceFilterLOS *const this)
 {
-  this->_vptr_CTraceFilter = off_3FE6970;
+  this->_vptr_CTraceFilter = off_3FE6970;  // vptr: CTraceFilter
 }
 
 
@@ -170,7 +170,7 @@ void __fastcall CTraceFilterLOS::~CTraceFilterLOS(CTraceFilterLOS *const this)
 // calls: operator delete
 void __fastcall CTraceFilterLOS::~CTraceFilterLOS(CTraceFilterLOS *const this)
 {
-  this->_vptr_CTraceFilter = off_3FE6970;
+  this->_vptr_CTraceFilter = off_3FE6970;  // vptr: CTraceFilter
   operator delete(this);
 }
 
@@ -184,19 +184,19 @@ void __fastcall CTraceFilterSimpleClassnameList::~CTraceFilterSimpleClassnameLis
   CUtlVectorBase<char const*,CUtlMemory<char const*,int> >::CAllocator *p_m_Memory; // r12
 
   v2 = (this->m_PassClassnames.m_Memory.m_nGrowSize & 0xC0000000) == 0;
-  this->_vptr_CTraceFilter = off_3FF7990;
+  this->_vptr_CTraceFilter = off_3FF7990;  // vptr: CTraceFilterSimpleClassnameList
   this->m_PassClassnames.m_Size = 0;
   if ( !v2
     || (p_m_Memory = &this->m_PassClassnames.m_Memory,
         CUtlMemory<char const*,int>::Purge(&this->m_PassClassnames.m_Memory),
         (this->m_PassClassnames.m_Memory.m_nGrowSize & 0xC0000000) != 0) )
   {
-    this->_vptr_CTraceFilter = off_3FE6970;
+    this->_vptr_CTraceFilter = off_3FE6970;  // vptr: CTraceFilter
   }
   else
   {
     CUtlMemory<char const*,int>::Purge(p_m_Memory);
-    this->_vptr_CTraceFilter = off_3FE6970;
+    this->_vptr_CTraceFilter = off_3FE6970;  // vptr: CTraceFilter
   }
 }
 
@@ -210,7 +210,7 @@ void __fastcall CTraceFilterSimpleClassnameList::~CTraceFilterSimpleClassnameLis
   CUtlVectorBase<char const*,CUtlMemory<char const*,int> >::CAllocator *p_m_Memory; // r12
 
   v2 = (this->m_PassClassnames.m_Memory.m_nGrowSize & 0xC0000000) == 0;
-  this->_vptr_CTraceFilter = off_3FF7990;
+  this->_vptr_CTraceFilter = off_3FF7990;  // vptr: CTraceFilterSimpleClassnameList
   this->m_PassClassnames.m_Size = 0;
   if ( v2 )
   {
@@ -219,7 +219,7 @@ void __fastcall CTraceFilterSimpleClassnameList::~CTraceFilterSimpleClassnameLis
     if ( (this->m_PassClassnames.m_Memory.m_nGrowSize & 0xC0000000) == 0 )
       CUtlMemory<char const*,int>::Purge(p_m_Memory);
   }
-  this->_vptr_CTraceFilter = off_3FE6970;
+  this->_vptr_CTraceFilter = off_3FE6970;  // vptr: CTraceFilter
   operator delete(this);
 }
 
@@ -227,7 +227,7 @@ void __fastcall CTraceFilterSimpleClassnameList::~CTraceFilterSimpleClassnameLis
 // CTraceFilterChain::~CTraceFilterChain  (line 346, @0x00000000020f21c0, libserver.so)  // inlines: ~CTraceFilter
 void __fastcall CTraceFilterChain::~CTraceFilterChain(CTraceFilterChain *const this)
 {
-  this->_vptr_CTraceFilter = off_3FE6970;
+  this->_vptr_CTraceFilter = off_3FE6970;  // vptr: CTraceFilter
 }
 
 
@@ -235,7 +235,7 @@ void __fastcall CTraceFilterChain::~CTraceFilterChain(CTraceFilterChain *const t
 // calls: operator delete
 void __fastcall CTraceFilterChain::~CTraceFilterChain(CTraceFilterChain *const this)
 {
-  this->_vptr_CTraceFilter = off_3FE6970;
+  this->_vptr_CTraceFilter = off_3FE6970;  // vptr: CTraceFilter
   operator delete(this);
 }
 
@@ -243,7 +243,7 @@ void __fastcall CTraceFilterChain::~CTraceFilterChain(CTraceFilterChain *const t
 // CTraceFilterSkipClassname::~CTraceFilterSkipClassname  (line 361, @0x00000000020f21d0, libserver.so)  // inlines: ~CTraceFilter
 void __fastcall CTraceFilterSkipClassname::~CTraceFilterSkipClassname(CTraceFilterSkipClassname *const this)
 {
-  this->_vptr_CTraceFilter = off_3FE6970;
+  this->_vptr_CTraceFilter = off_3FE6970;  // vptr: CTraceFilter
 }
 
 
@@ -251,7 +251,7 @@ void __fastcall CTraceFilterSkipClassname::~CTraceFilterSkipClassname(CTraceFilt
 // calls: operator delete
 void __fastcall CTraceFilterSkipClassname::~CTraceFilterSkipClassname(CTraceFilterSkipClassname *const this)
 {
-  this->_vptr_CTraceFilter = off_3FE6970;
+  this->_vptr_CTraceFilter = off_3FE6970;  // vptr: CTraceFilter
   operator delete(this);
 }
 

@@ -10,7 +10,7 @@ void __fastcall CDOTA_UnitFilterCache::~CDOTA_UnitFilterCache(CDOTA_UnitFilterCa
 
   m_unitcategories = this->m_unitcategories;
   v3 = (this + 1);
-  this->_vptr_IGameSystem = off_42B4430;
+  this->_vptr_IGameSystem = off_42B4430;  // vptr: CDOTA_UnitFilterCache
   this->_vptr_IEntityListener = &off_42B4588;
   do
   {
@@ -30,7 +30,7 @@ void __fastcall CDOTA_UnitFilterCache::~CDOTA_UnitFilterCache(CDOTA_UnitFilterCa
   }
   while ( m_unitcategories != v3 );
 LABEL_6:
-  this->_vptr_IGameSystem = off_3F7C1B0;
+  this->_vptr_IGameSystem = off_3F7C1B0;  // vptr: CAutoGameSystem
   IGameSystem::~IGameSystem(this);
 }
 
@@ -44,7 +44,7 @@ void __fastcall CDOTA_UnitFilterCache::~CDOTA_UnitFilterCache(CDOTA_UnitFilterCa
 
   m_unitcategories = this->m_unitcategories;
   v3 = (this + 1);
-  this->_vptr_IGameSystem = off_42B4430;
+  this->_vptr_IGameSystem = off_42B4430;  // vptr: CDOTA_UnitFilterCache
   this->_vptr_IEntityListener = &off_42B4588;
   do
   {
@@ -64,7 +64,7 @@ void __fastcall CDOTA_UnitFilterCache::~CDOTA_UnitFilterCache(CDOTA_UnitFilterCa
   }
   while ( m_unitcategories != v3 );
 LABEL_6:
-  this->_vptr_IGameSystem = off_3F7C1B0;
+  this->_vptr_IGameSystem = off_3F7C1B0;  // vptr: CAutoGameSystem
   IGameSystem::~IGameSystem(this);
   operator delete(this);
 }
@@ -99,7 +99,7 @@ void __fastcall CDOTA_UnitFilterCache::SetGameSystemGlobalPtrs(CDOTA_UnitFilterC
 // calls: CUtlVectorBase<CEntityHandle, CUtlMemory<CEntityHandle, int> >::RemoveAll, IGameSystem::~IGameSystem, CUtlMemory<CEntityHandle, int>::Purge
 void __fastcall CDOTA_Grinder::~CDOTA_Grinder(CDOTA_Grinder *const this)
 {
-  this->_vptr_IGameSystem = off_42B45D0;
+  this->_vptr_IGameSystem = off_42B45D0;  // vptr: CDOTA_Grinder
   CUtlVectorBase<CEntityHandle,CUtlMemory<CEntityHandle,int>>::RemoveAll(&this->m_Buildings);
   if ( (this->m_Buildings.m_Memory.m_nGrowSize & 0xC0000000) == 0 )
   {
@@ -107,7 +107,7 @@ void __fastcall CDOTA_Grinder::~CDOTA_Grinder(CDOTA_Grinder *const this)
     if ( (this->m_Buildings.m_Memory.m_nGrowSize & 0xC0000000) == 0 )
       CUtlMemory<CEntityHandle,int>::Purge(&this->m_Buildings.m_Memory);
   }
-  this->_vptr_IGameSystem = off_3F7C1B0;
+  this->_vptr_IGameSystem = off_3F7C1B0;  // vptr: CAutoGameSystem
   IGameSystem::~IGameSystem(this);
 }
 
@@ -116,7 +116,7 @@ void __fastcall CDOTA_Grinder::~CDOTA_Grinder(CDOTA_Grinder *const this)
 // calls: CUtlVectorBase<CEntityHandle, CUtlMemory<CEntityHandle, int> >::RemoveAll, IGameSystem::~IGameSystem, operator delete, CUtlMemory<CEntityHandle, int>::Purge
 void __fastcall CDOTA_Grinder::~CDOTA_Grinder(CDOTA_Grinder *const this)
 {
-  this->_vptr_IGameSystem = off_42B45D0;
+  this->_vptr_IGameSystem = off_42B45D0;  // vptr: CDOTA_Grinder
   CUtlVectorBase<CEntityHandle,CUtlMemory<CEntityHandle,int>>::RemoveAll(&this->m_Buildings);
   if ( (this->m_Buildings.m_Memory.m_nGrowSize & 0xC0000000) == 0 )
   {
@@ -124,7 +124,7 @@ void __fastcall CDOTA_Grinder::~CDOTA_Grinder(CDOTA_Grinder *const this)
     if ( (this->m_Buildings.m_Memory.m_nGrowSize & 0xC0000000) == 0 )
       CUtlMemory<CEntityHandle,int>::Purge(&this->m_Buildings.m_Memory);
   }
-  this->_vptr_IGameSystem = off_3F7C1B0;
+  this->_vptr_IGameSystem = off_3F7C1B0;  // vptr: CAutoGameSystem
   IGameSystem::~IGameSystem(this);
   operator delete(this);
 }

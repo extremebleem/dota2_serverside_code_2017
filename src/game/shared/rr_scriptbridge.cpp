@@ -447,13 +447,13 @@ void __fastcall CRuleScriptBridge::TermDB(CRuleScriptBridge *const this)
 // CScriptFunctionCriterion::~CScriptFunctionCriterion  (line 176, @0x000000000204e480, libserver.so)  // inlines: Term, VM, ~CRefCountServiceBase, ~CRefCounted, ~CScriptAutoRef, ~ICriterionFunctor
 void __fastcall CScriptFunctionCriterion::~CScriptFunctionCriterion(CScriptFunctionCriterion *const this)
 {
-  this->_vptr_CRefCountServiceBase = off_3FEACF0;
+  this->_vptr_CRefCountServiceBase = off_3FEACF0;  // vptr: CScriptFunctionCriterion
   if ( this->m_hFunc.m_h != 0 )
   {
     (*(*g_pScriptVM + 96LL))(g_pScriptVM);
     this->m_hFunc.m_h = 0;
   }
-  this->_vptr_CRefCountServiceBase = off_3FEABF0;
+  this->_vptr_CRefCountServiceBase = off_3FEABF0;  // vptr: CRefCountServiceBase<true,CRefMT>
 }
 
 
@@ -461,13 +461,13 @@ void __fastcall CScriptFunctionCriterion::~CScriptFunctionCriterion(CScriptFunct
 // calls: operator delete
 void __fastcall CScriptFunctionCriterion::~CScriptFunctionCriterion(CScriptFunctionCriterion *const this)
 {
-  this->_vptr_CRefCountServiceBase = off_3FEACF0;
+  this->_vptr_CRefCountServiceBase = off_3FEACF0;  // vptr: CScriptFunctionCriterion
   if ( this->m_hFunc.m_h != 0 )
   {
     (*(*g_pScriptVM + 96LL))(g_pScriptVM);
     this->m_hFunc.m_h = 0;
   }
-  this->_vptr_CRefCountServiceBase = off_3FEABF0;
+  this->_vptr_CRefCountServiceBase = off_3FEABF0;  // vptr: CRefCountServiceBase<true,CRefMT>
   operator delete(this);
 }
 
@@ -528,7 +528,7 @@ void __fastcall CSpeechScriptBridge::CSpeechResponse_t::CSpeechResponse_t(
 
   CRuleScriptBridge::CScriptResponse_t::CScriptResponse_t(this, hRule, hResponse);
   m_h = this->m_hRule.m_h;
-  this->_vptr_IRulePayload = off_3FEAD30;
+  this->_vptr_IRulePayload = off_3FEAD30;  // vptr: CSpeechScriptBridge::CSpeechResponse_t
   this->m_hFuncToCall.m_h = 0;
   GetValueToAutoRef(&this->m_hFuncToCall, m_h, "SelectResponse");
 }
@@ -540,7 +540,7 @@ void __fastcall CSpeechScriptBridge::CSpeechResponse_t::CSpeechResponse_t(
 void __fastcall CSpeechScriptBridge::CSpeechResponse_t::~CSpeechResponse_t(
         CSpeechScriptBridge::CSpeechResponse_t *const this)
 {
-  this->_vptr_IRulePayload = off_3FEAD30;
+  this->_vptr_IRulePayload = off_3FEAD30;  // vptr: CSpeechScriptBridge::CSpeechResponse_t
   if ( this->m_hFuncToCall.m_h != 0 )
   {
     (*(*g_pScriptVM + 96LL))(g_pScriptVM);
@@ -3900,7 +3900,7 @@ void __fastcall CRuleScriptBridge::CScriptResponse_t::CScriptResponse_t(
         const HSCRIPT rule,
         const HSCRIPT response)
 {
-  this->_vptr_IRulePayload = off_3FEAD70;
+  this->_vptr_IRulePayload = off_3FEAD70;  // vptr: CRuleScriptBridge::CScriptResponse_t
   this->m_hRule.m_h = 0;
   if ( rule != 0 )
     this->m_hRule.m_h = (*(*g_pScriptVM + 128LL))(g_pScriptVM);
@@ -3915,7 +3915,7 @@ void __fastcall CRuleScriptBridge::CScriptResponse_t::CScriptResponse_t(
 void __fastcall CRuleScriptBridge::CScriptResponse_t::~CScriptResponse_t(
         CRuleScriptBridge::CScriptResponse_t *const this)
 {
-  this->_vptr_IRulePayload = off_3FEAD70;
+  this->_vptr_IRulePayload = off_3FEAD70;  // vptr: CRuleScriptBridge::CScriptResponse_t
   if ( this->m_hResponse.m_h != 0 )
   {
     (*(*g_pScriptVM + 96LL))(g_pScriptVM);
@@ -3926,7 +3926,7 @@ void __fastcall CRuleScriptBridge::CScriptResponse_t::~CScriptResponse_t(
     (*(*g_pScriptVM + 96LL))(g_pScriptVM);
     this->m_hRule.m_h = 0;
   }
-  this->_vptr_IRulePayload = off_3FEAC70;
+  this->_vptr_IRulePayload = off_3FEAC70;  // vptr: rr2::IRulePayload
 }
 
 

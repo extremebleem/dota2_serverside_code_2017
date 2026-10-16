@@ -656,7 +656,7 @@ CEntityInstance *__fastcall CDOTA_Unit_Hero_Shadow_Demon::CEntityInstanceEntityC
 void __fastcall CDOTA_Unit_Hero_Shadow_Demon::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Unit_Hero_Shadow_Demon::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -666,7 +666,7 @@ void __fastcall CDOTA_Unit_Hero_Shadow_Demon::CEntityInstanceEntityClass::~CEnti
 void __fastcall CDOTA_Unit_Hero_Shadow_Demon::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Unit_Hero_Shadow_Demon::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -859,7 +859,7 @@ CEntityInstance *__fastcall CDOTA_Ability_Shadow_Demon_Disruption::CEntityInstan
 void __fastcall CDOTA_Ability_Shadow_Demon_Disruption::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Shadow_Demon_Disruption::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -869,7 +869,7 @@ void __fastcall CDOTA_Ability_Shadow_Demon_Disruption::CEntityInstanceEntityClas
 void __fastcall CDOTA_Ability_Shadow_Demon_Disruption::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Shadow_Demon_Disruption::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -1514,7 +1514,7 @@ CEntityInstance *__fastcall CDOTA_Ability_Shadow_Demon_Soul_Catcher::CEntityInst
 void __fastcall CDOTA_Ability_Shadow_Demon_Soul_Catcher::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Shadow_Demon_Soul_Catcher::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -1524,7 +1524,7 @@ void __fastcall CDOTA_Ability_Shadow_Demon_Soul_Catcher::CEntityInstanceEntityCl
 void __fastcall CDOTA_Ability_Shadow_Demon_Soul_Catcher::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Shadow_Demon_Soul_Catcher::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -2078,7 +2078,7 @@ void *__fastcall CDOTA_Ability_Shadow_Demon_Shadow_Poison::CEntityInstanceEntity
 void __fastcall CDOTA_Ability_Shadow_Demon_Shadow_Poison::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Shadow_Demon_Shadow_Poison::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -2088,7 +2088,7 @@ void __fastcall CDOTA_Ability_Shadow_Demon_Shadow_Poison::CEntityInstanceEntityC
 void __fastcall CDOTA_Ability_Shadow_Demon_Shadow_Poison::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Shadow_Demon_Shadow_Poison::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -3207,7 +3207,7 @@ CEntityInstance *__fastcall CDOTA_Ability_Shadow_Demon_Shadow_Poison_Release::CE
 void __fastcall CDOTA_Ability_Shadow_Demon_Shadow_Poison_Release::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Shadow_Demon_Shadow_Poison_Release::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -3217,7 +3217,7 @@ void __fastcall CDOTA_Ability_Shadow_Demon_Shadow_Poison_Release::CEntityInstanc
 void __fastcall CDOTA_Ability_Shadow_Demon_Shadow_Poison_Release::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Shadow_Demon_Shadow_Poison_Release::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -3558,7 +3558,7 @@ CEntityInstance *__fastcall CDOTA_Ability_Shadow_Demon_Demonic_Purge::CEntityIns
 void __fastcall CDOTA_Ability_Shadow_Demon_Demonic_Purge::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Shadow_Demon_Demonic_Purge::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -3568,7 +3568,7 @@ void __fastcall CDOTA_Ability_Shadow_Demon_Demonic_Purge::CEntityInstanceEntityC
 void __fastcall CDOTA_Ability_Shadow_Demon_Demonic_Purge::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Shadow_Demon_Demonic_Purge::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }

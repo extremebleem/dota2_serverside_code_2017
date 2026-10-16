@@ -151,7 +151,7 @@ void *__fastcall CIngameEvent_FM2015::CEntityInstanceEntityClass::AllocateInstan
 void __fastcall CIngameEvent_FM2015::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CIngameEvent_FM2015::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -161,7 +161,7 @@ void __fastcall CIngameEvent_FM2015::CEntityInstanceEntityClass::~CEntityInstanc
 void __fastcall CIngameEvent_FM2015::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CIngameEvent_FM2015::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -715,7 +715,7 @@ void *__fastcall CIngameEvent_WM2016::CEntityInstanceEntityClass::AllocateInstan
 void __fastcall CIngameEvent_WM2016::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CIngameEvent_WM2016::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -725,7 +725,7 @@ void __fastcall CIngameEvent_WM2016::CEntityInstanceEntityClass::~CEntityInstanc
 void __fastcall CIngameEvent_WM2016::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CIngameEvent_WM2016::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -1351,7 +1351,7 @@ void *__fastcall CIngameEvent_TI6::CEntityInstanceEntityClass::AllocateInstance(
 void __fastcall CIngameEvent_TI6::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CIngameEvent_TI6::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -1361,7 +1361,7 @@ void __fastcall CIngameEvent_TI6::CEntityInstanceEntityClass::~CEntityInstanceEn
 void __fastcall CIngameEvent_TI6::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CIngameEvent_TI6::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -1921,7 +1921,7 @@ void *__fastcall CIngameEvent_FM2016::CEntityInstanceEntityClass::AllocateInstan
 void __fastcall CIngameEvent_FM2016::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CIngameEvent_FM2016::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -1931,7 +1931,7 @@ void __fastcall CIngameEvent_FM2016::CEntityInstanceEntityClass::~CEntityInstanc
 void __fastcall CIngameEvent_FM2016::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CIngameEvent_FM2016::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -2491,7 +2491,7 @@ void *__fastcall CIngameEvent_WM2017::CEntityInstanceEntityClass::AllocateInstan
 void __fastcall CIngameEvent_WM2017::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CIngameEvent_WM2017::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -2501,7 +2501,7 @@ void __fastcall CIngameEvent_WM2017::CEntityInstanceEntityClass::~CEntityInstanc
 void __fastcall CIngameEvent_WM2017::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CIngameEvent_WM2017::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }

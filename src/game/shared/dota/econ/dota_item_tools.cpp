@@ -522,7 +522,7 @@ void __fastcall CDOTAStaticRecipeComponentEvent::CDOTAStaticRecipeComponentEvent
         bool bIsOutput)
 {
   CEconTool_ItemDynamicRecipe::CBaseRecipeComponent::CBaseRecipeComponent(this, bIsOutput);
-  this->_vptr_CBaseRecipeComponent = off_47A0F30;
+  this->_vptr_CBaseRecipeComponent = off_47A0F30;  // vptr: CDOTAStaticRecipeComponentEvent
   this->m_mapActionGrants.m_Tree.m_LessFunc.m_LessFunc = CDefOps<unsigned int>::LessFunc;
   this->m_unEventID = 0;
   this->m_unNormalPoints = 0;
@@ -922,10 +922,10 @@ CEconTool_ItemDynamicRecipe::CBaseRecipeComponent *__fastcall CreateGameSpecific
   }
   else if ( strcmp(pszComponentType, "own_league_id") == 0 )
   {
-    v4 = operator new(0x68u);
+    v4 = operator new(0x68u);  // new CDOTAStaticRecipeComponentLeagueOwnership (size matches)
     CEconTool_ItemDynamicRecipe::CBaseRecipeComponent::CBaseRecipeComponent(v4, bIsOutput);
     *(&v4->m_bCannotMatchInput + 1) = 0;
-    v4->_vptr_CBaseRecipeComponent = off_47A0F90;
+    v4->_vptr_CBaseRecipeComponent = off_47A0F90;  // vptr: CDOTAStaticRecipeComponentLeagueOwnership
     return v4;
   }
   else

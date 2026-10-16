@@ -97,7 +97,7 @@ CEntityInstance *__fastcall CRagdollMagnet::CEntityInstanceEntityClass::Construc
 void __fastcall CRagdollMagnet::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CRagdollMagnet::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -107,7 +107,7 @@ void __fastcall CRagdollMagnet::CEntityInstanceEntityClass::~CEntityInstanceEnti
 void __fastcall CRagdollMagnet::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CRagdollMagnet::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }

@@ -11,26 +11,23 @@ void __cdecl GLOBAL__sub_I_model_old_disk_cpp()
   UNSPECIFIED_LOGGING_COLOR._color[1] = 0;
   UNSPECIFIED_LOGGING_COLOR._color[2] = 0;
   UNSPECIFIED_LOGGING_COLOR._color[3] = 0;
-  if ( `guard variable for'g_AnimOpSourceColors == 0 )
-  {
-    `guard variable for'g_AnimOpSourceColors = 1;
-    g_AnimOpSourceColors[0]._color[0] = -1;
-    g_AnimOpSourceColors[0]._color[1] = -1;
-    g_AnimOpSourceColors[0]._color[2] = 0;
-    g_AnimOpSourceColors[0]._color[3] = -1;
-    g_AnimOpSourceColors[1]._color[0] = -36;
-    g_AnimOpSourceColors[1]._color[1] = -36;
-    g_AnimOpSourceColors[1]._color[2] = -36;
-    g_AnimOpSourceColors[1]._color[3] = -1;
-    g_AnimOpSourceColors[2]._color[0] = 0;
-    g_AnimOpSourceColors[2]._color[1] = -1;
-    g_AnimOpSourceColors[2]._color[2] = 50;
-    g_AnimOpSourceColors[2]._color[3] = -1;
-    g_AnimOpSourceColors[3]._color[0] = -1;
-    g_AnimOpSourceColors[3]._color[1] = 50;
-    g_AnimOpSourceColors[3]._color[2] = 50;
-    g_AnimOpSourceColors[3]._color[3] = -1;
-  }
+  // init once: g_AnimOpSourceColors
+  g_AnimOpSourceColors[0]._color[0] = -1;
+  g_AnimOpSourceColors[0]._color[1] = -1;
+  g_AnimOpSourceColors[0]._color[2] = 0;
+  g_AnimOpSourceColors[0]._color[3] = -1;
+  g_AnimOpSourceColors[1]._color[0] = -36;
+  g_AnimOpSourceColors[1]._color[1] = -36;
+  g_AnimOpSourceColors[1]._color[2] = -36;
+  g_AnimOpSourceColors[1]._color[3] = -1;
+  g_AnimOpSourceColors[2]._color[0] = 0;
+  g_AnimOpSourceColors[2]._color[1] = -1;
+  g_AnimOpSourceColors[2]._color[2] = 50;
+  g_AnimOpSourceColors[2]._color[3] = -1;
+  g_AnimOpSourceColors[3]._color[0] = -1;
+  g_AnimOpSourceColors[3]._color[1] = 50;
+  g_AnimOpSourceColors[3]._color[2] = 50;
+  g_AnimOpSourceColors[3]._color[3] = -1;
   s_ConversionCountMutex.m_ownerID = 0;
   s_ConversionCountMutex.m_depth = 0;
   ConCommand::ConCommand(
@@ -414,38 +411,37 @@ void __fastcall CModel::InitFromV0Data(
   __int64 v96; // rax
   unsigned __int64 v97; // rax
   signed int v98; // ebx
-  __int64 v99; // rdi
-  char *v100; // rbx
-  int32 v101; // eax
-  char *v102; // rbx
-  const char *v103; // rsi
-  __int64 v104; // rax
-  const char *v105; // rax
-  int v106; // r13d
-  CModel *v107; // r15
-  __int64 v108; // r13
-  __int64 v109; // r12
-  char *v110; // r14
-  int v111; // eax
-  const char *v112; // rsi
-  _DWORD *v113; // r12
+  char *v99; // rbx
+  int32 v100; // eax
+  char *v101; // rbx
+  const char *v102; // rsi
+  __int64 v103; // rax
+  const char *v104; // rax
+  int v105; // r13d
+  CModel *v106; // r15
+  __int64 v107; // r13
+  __int64 v108; // r12
+  char *v109; // r14
+  int v110; // eax
+  const char *v111; // rsi
+  _DWORD *v112; // r12
+  __int64 v113; // rax
   __int64 v114; // rax
-  __int64 v115; // rax
-  __int64 v116; // rbx
+  __int64 v115; // rbx
   signed __int64 CurrentId; // rsi
   __int64 CPUFrequency; // rax
-  double v119; // xmm0_8
-  double v120; // xmm6_8
+  double v118; // xmm0_8
+  double v119; // xmm6_8
   CFastTimer timer; // [rsp+0h] [rbp-290h]
-  CModel *v122; // [rsp+10h] [rbp-280h]
+  CModel *v121; // [rsp+10h] [rbp-280h]
   CUtlHashtable<const ResourceBindingBase_t*,empty_t,DefaultHashFunctor<const ResourceBindingBase_t*>,DefaultEqualFunctor<const ResourceBindingBase_t*>,undefined_t,CUtlMemory<CUtlHashtableEntry<const ResourceBindingBase_t*,empty_t>,int> > *p_m_HandledSubResources; // [rsp+18h] [rbp-278h]
+  CUtlHashtable<const ResourceBindingBase_t*,empty_t,DefaultHashFunctor<const ResourceBindingBase_t*>,DefaultEqualFunctor<const ResourceBindingBase_t*>,undefined_t,CUtlMemory<CUtlHashtableEntry<const ResourceBindingBase_t*,empty_t>,int> > *v123; // [rsp+18h] [rbp-278h]
   CUtlHashtable<const ResourceBindingBase_t*,empty_t,DefaultHashFunctor<const ResourceBindingBase_t*>,DefaultEqualFunctor<const ResourceBindingBase_t*>,undefined_t,CUtlMemory<CUtlHashtableEntry<const ResourceBindingBase_t*,empty_t>,int> > *v124; // [rsp+18h] [rbp-278h]
-  CUtlHashtable<const ResourceBindingBase_t*,empty_t,DefaultHashFunctor<const ResourceBindingBase_t*>,DefaultEqualFunctor<const ResourceBindingBase_t*>,undefined_t,CUtlMemory<CUtlHashtableEntry<const ResourceBindingBase_t*,empty_t>,int> > *v125; // [rsp+18h] [rbp-278h]
+  __int64 v125; // [rsp+20h] [rbp-270h]
   __int64 v126; // [rsp+20h] [rbp-270h]
-  __int64 v127; // [rsp+20h] [rbp-270h]
-  __int64 (__fastcall *v128)(IAnimationSystem *, CConvertOldDiskCtx *, CModelMemoryPool *, _BYTE *); // [rsp+28h] [rbp-268h]
-  __int64 v129; // [rsp+28h] [rbp-268h]
-  CUtlHashtable<const ResourceBindingBase_t*,empty_t,DefaultHashFunctor<const ResourceBindingBase_t*>,DefaultEqualFunctor<const ResourceBindingBase_t*>,undefined_t,CUtlMemory<CUtlHashtableEntry<const ResourceBindingBase_t*,empty_t>,int> > *v130; // [rsp+28h] [rbp-268h]
+  __int64 (__fastcall *v127)(IAnimationSystem *, CConvertOldDiskCtx *, CModelMemoryPool *, _BYTE *); // [rsp+28h] [rbp-268h]
+  __int64 v128; // [rsp+28h] [rbp-268h]
+  CUtlHashtable<const ResourceBindingBase_t*,empty_t,DefaultHashFunctor<const ResourceBindingBase_t*>,DefaultEqualFunctor<const ResourceBindingBase_t*>,undefined_t,CUtlMemory<CUtlHashtableEntry<const ResourceBindingBase_t*,empty_t>,int> > *v129; // [rsp+28h] [rbp-268h]
   CConvertOldDiskCtx *convertCtxb; // [rsp+30h] [rbp-260h]
   CConvertOldDiskCtx *convertCtxc; // [rsp+30h] [rbp-260h]
   CConvertOldDiskCtx *convertCtxd; // [rsp+30h] [rbp-260h]
@@ -453,16 +449,16 @@ void __fastcall CModel::InitFromV0Data(
   CModel *thisa; // [rsp+40h] [rbp-250h]
   CModel *thisc; // [rsp+40h] [rbp-250h]
   CModel *thisb; // [rsp+40h] [rbp-250h]
+  CUtlString *v139; // [rsp+48h] [rbp-248h]
   CUtlString *v140; // [rsp+48h] [rbp-248h]
   CUtlString *v141; // [rsp+48h] [rbp-248h]
   CUtlString *v142; // [rsp+48h] [rbp-248h]
-  CUtlString *v143; // [rsp+48h] [rbp-248h]
-  double v144; // [rsp+48h] [rbp-248h]
-  _BYTE v145[520]; // [rsp+50h] [rbp-240h] BYREF
-  unsigned __int64 v146; // [rsp+258h] [rbp-38h]
+  double v143; // [rsp+48h] [rbp-248h]
+  _BYTE v144[520]; // [rsp+50h] [rbp-240h] BYREF
+  unsigned __int64 v145; // [rsp+258h] [rbp-38h]
 
   v3 = this;
-  v146 = __readfsqword(0x28u);
+  v145 = __readfsqword(0x28u);
   v4 = "";
   timer.m_Duration.m_Int64 = __rdtsc();
   m_nOffset = pOldModel->m_name.m_nOffset;
@@ -517,7 +513,7 @@ void __fastcall CModel::InitFromV0Data(
     thisa = v3;
     v15 = (m_nCount - 1) + 1LL;
     v16 = 0;
-    v140 = (v15 << 6);
+    v139 = (v15 << 6);
     do
     {
       v17 = 0;
@@ -565,7 +561,7 @@ void __fastcall CModel::InitFromV0Data(
       v16 += 8;
       v14 += 48;
     }
-    while ( v16 != v140 );
+    while ( v16 != v139 );
     v3 = thisa;
   }
   v31 = pOldModel->m_refMeshes.m_nCount;
@@ -660,7 +656,7 @@ void __fastcall CModel::InitFromV0Data(
   if ( v52 > 0 )
   {
     v53 = 0;
-    v141 = (8LL * (v52 - 1) + 8);
+    v140 = (8LL * (v52 - 1) + 8);
     v54 = convertCtx;
     p_m_HandledSubResources = &convertCtx->m_HandledSubResources;
     do
@@ -680,7 +676,7 @@ void __fastcall CModel::InitFromV0Data(
         }
         *(v3->m_AnimGroups.m_Memory.m_pMemory + v53) = 0;
 LABEL_73:
-        if ( ++v53 == v141 )
+        if ( ++v53 == v140 )
           goto LABEL_74;
       }
       v55 = 33 * (((4097 * v65 + 2127912214) >> 19) ^ (4097 * v65 + 2127912214) ^ 0xC761C23C);
@@ -711,23 +707,23 @@ LABEL_73:
       if ( v60 != -4 )
         *(v60 + 4) = convertCtxb;
       convertCtxc = (v3->m_AnimGroups.m_Memory.m_pMemory + v53);
-      v128 = *(*g_pAnimationSystem + 376LL);
+      v127 = *(*g_pAnimationSystem + 376LL);
       m_pPool = v59->m_pPool;
       if ( m_pPool != 0 )
       {
         v62 = "";
         if ( *m_pPool != 0 )
           v62 = *m_pPool;
-        _V_strncpy(v145, v62, 512);
+        _V_strncpy(v144, v62, 512);
       }
       else
       {
-        _V_strncpy(v145, "", 512);
+        _V_strncpy(v144, "", 512);
       }
       ++v53;
-      convertCtxc->m_pModelPool = v128(g_pAnimationSystem, v54, m_pModelPool, v145);
+      convertCtxc->m_pModelPool = v127(g_pAnimationSystem, v54, m_pModelPool, v144);
     }
-    while ( v53 != v141 );
+    while ( v53 != v140 );
   }
 LABEL_74:
   v67 = pOldModel->m_meshGroups.m_nCount;
@@ -761,18 +757,18 @@ LABEL_74:
   CUtlVectorBase<CModelMaterialGroup,CUtlMemory<CModelMaterialGroup,int>>::SetCount(&v3->m_materialGroups, v77);
   if ( v77 > 0 )
   {
-    v129 = 0;
+    v128 = 0;
     convertCtxd = 0;
-    v124 = v3;
-    v126 = 32 * ((v77 - 1) + 1LL);
+    v123 = v3;
+    v125 = 32 * ((v77 - 1) + 1LL);
     do
     {
       v78 = 0;
-      v79 = convertCtxd + *&v124[9].m_table.m_nAllocationCount;
+      v79 = convertCtxd + *&v123[9].m_table.m_nAllocationCount;
       v80 = pOldModel->m_materialGroups.m_nOffset;
       if ( v80 != 0 )
         v78 = &pOldModel->m_materialGroups + v80;
-      v81 = &v78[v129];
+      v81 = &v78[v128];
       v82 = "";
       v83 = *v81;
       if ( v83 != 0 )
@@ -781,7 +777,7 @@ LABEL_74:
         if ( v84 != 0 )
           v82 = v84;
       }
-      CUtlString::operator=((convertCtxd + *&v124[9].m_table.m_nAllocationCount), v82);
+      CUtlString::operator=((convertCtxd + *&v123[9].m_table.m_nAllocationCount), v82);
       v85 = *(v81 + 2);
       CUtlVectorBase<CStrongHandle<InfoForResourceTypeIMaterial2>,CUtlMemory<CStrongHandle<InfoForResourceTypeIMaterial2>,int>>::SetCount(
         (v79 + 8),
@@ -789,7 +785,7 @@ LABEL_74:
       if ( v85 > 0 )
       {
         v86 = 0;
-        v142 = (8LL * (v85 - 1) + 8);
+        v141 = (8LL * (v85 - 1) + 8);
         do
         {
           v87 = *(v81 + 1);
@@ -812,13 +808,13 @@ LABEL_74:
           }
           ++v86;
         }
-        while ( v86 != v142 );
+        while ( v86 != v141 );
       }
       convertCtxd = (convertCtxd + 32);
-      v129 += 12;
+      v128 += 12;
     }
-    while ( convertCtxd != v126 );
-    v3 = v124;
+    while ( convertCtxd != v125 );
+    v3 = v123;
   }
   v3->m_nDefaultMeshGroupMask = pOldModel->m_nDefaultMeshGroupMask;
   CModelSkeleton::InitFromOldData(&v3->m_modelSkeleton, &pOldModel->m_modelSkeleton);
@@ -850,99 +846,99 @@ LABEL_74:
   CUtlVectorBase<CBoneFlexDriver,CUtlMemory<CBoneFlexDriver,int>>::SetCount(&v3->m_boneFlexDrivers, v98);
   if ( v98 > 0 )
   {
-    v127 = 0;
-    v130 = 0;
-    v122 = v3;
-    v125 = (8 * (5LL * (v98 - 1) + 5));
+    v126 = 0;
+    v129 = 0;
+    v121 = v3;
+    v124 = (8 * (5LL * (v98 - 1) + 5));
     do
     {
-      v100 = 0;
-      v143 = (&v122->m_boneFlexDrivers.m_Memory.m_pMemory->m_boneName + v130);
-      v101 = pOldModel->m_boneFlexDrivers.m_nOffset;
-      if ( v101 != 0 )
-        v100 = &pOldModel->m_boneFlexDrivers + v101;
-      v102 = &v100[v127];
-      v103 = "";
-      v104 = *v102;
-      if ( v104 != 0 )
+      v99 = 0;
+      v142 = (&v121->m_boneFlexDrivers.m_Memory.m_pMemory->m_boneName + v129);
+      v100 = pOldModel->m_boneFlexDrivers.m_nOffset;
+      if ( v100 != 0 )
+        v99 = &pOldModel->m_boneFlexDrivers + v100;
+      v101 = &v99[v126];
+      v102 = "";
+      v103 = *v101;
+      if ( v103 != 0 )
       {
-        v105 = &v102[v104];
-        if ( v105 != 0 )
-          v103 = v105;
+        v104 = &v101[v103];
+        if ( v104 != 0 )
+          v102 = v104;
       }
-      CUtlString::operator=(v143, v103);
-      LODWORD(v143[1].m_pString) = *(v102 + 1);
-      v106 = *(v102 + 3);
-      CUtlVectorBase<CBoneFlexDriverControl,CUtlMemory<CBoneFlexDriverControl,int>>::SetCount(&v143[2], v106);
-      if ( v106 > 0 )
+      CUtlString::operator=(v142, v102);
+      LODWORD(v142[1].m_pString) = *(v101 + 1);
+      v105 = *(v101 + 3);
+      CUtlVectorBase<CBoneFlexDriverControl,CUtlMemory<CBoneFlexDriverControl,int>>::SetCount(&v142[2], v105);
+      if ( v105 > 0 )
       {
+        v106 = 0;
+        thisc = ((v105 - 1) + 1LL);
         v107 = 0;
-        thisc = ((v106 - 1) + 1LL);
-        v108 = 0;
         thisb = (32LL * thisc);
         do
         {
-          v109 = 0;
-          v110 = &v143[3].m_pString[v107];
-          v111 = *(v102 + 2);
-          if ( v111 != 0 )
-            v109 = &v102[v111 + 8];
-          v112 = "";
-          v113 = (v108 + v109);
-          *v110 = *v113;
-          v114 = v113[1];
-          if ( v114 != 0 )
+          v108 = 0;
+          v109 = &v142[3].m_pString[v106];
+          v110 = *(v101 + 2);
+          if ( v110 != 0 )
+            v108 = &v101[v110 + 8];
+          v111 = "";
+          v112 = (v107 + v108);
+          *v109 = *v112;
+          v113 = v112[1];
+          if ( v113 != 0 )
           {
-            v115 = v113 + v114 + 4;
-            if ( v115 != 0 )
-              v112 = v115;
+            v114 = v112 + v113 + 4;
+            if ( v114 != 0 )
+              v111 = v114;
           }
-          v107 = (v107 + 32);
-          v108 += 20;
-          CUtlString::operator=(v110 + 1, v112);
-          *(v110 + 4) = v113[2];
-          *(v110 + 5) = v113[3];
-          *(v110 + 6) = v113[4];
+          v106 = (v106 + 32);
+          v107 += 20;
+          CUtlString::operator=(v109 + 1, v111);
+          *(v109 + 4) = v112[2];
+          *(v109 + 5) = v112[3];
+          *(v109 + 6) = v112[4];
         }
-        while ( v107 != thisb );
+        while ( v106 != thisb );
       }
-      v130 = (v130 + 40);
-      v127 += 16;
+      v129 = (v129 + 40);
+      v126 += 16;
     }
-    while ( v130 != v125 );
+    while ( v129 != v124 );
   }
-  v116 = __rdtsc() - timer.m_Duration.m_Int64;
-  CurrentId = ThreadGetCurrentId(v99);
+  v115 = __rdtsc() - timer.m_Duration.m_Int64;
+  CurrentId = ThreadGetCurrentId();
   if ( CurrentId != s_ConversionCountMutex.m_ownerID
     && _InterlockedCompareExchange64(&s_ConversionCountMutex, CurrentId, 0) != 0 )
   {
     _mm_pause();
     CThreadFastMutex::Lock(&s_ConversionCountMutex, CurrentId, 0);
     ++s_nConversionTotalCount;
-    if ( v116 >= 0 )
+    if ( v115 >= 0 )
       goto LABEL_130;
   }
   else
   {
     ++s_nConversionTotalCount;
     ++s_ConversionCountMutex.m_depth;
-    if ( v116 >= 0 )
+    if ( v115 >= 0 )
     {
 LABEL_130:
-      v144 = v116;
+      v143 = v115;
       goto LABEL_131;
     }
   }
-  v120 = (v116 & 1 | (v116 >> 1));
-  v144 = v120 + v120;
+  v119 = (v115 & 1 | (v115 >> 1));
+  v143 = v119 + v119;
 LABEL_131:
   CPUFrequency = Plat_GetCPUFrequency();
   if ( CPUFrequency < 0 )
-    v119 = (CPUFrequency & 1 | (CPUFrequency >> 1)) + (CPUFrequency & 1 | (CPUFrequency >> 1));
+    v118 = (CPUFrequency & 1 | (CPUFrequency >> 1)) + (CPUFrequency & 1 | (CPUFrequency >> 1));
   else
-    v119 = CPUFrequency;
+    v118 = CPUFrequency;
   --s_ConversionCountMutex.m_depth;
-  s_flConversionTotalTime = s_flConversionTotalTime + v144 / v119;
+  s_flConversionTotalTime = s_flConversionTotalTime + v143 / v118;
   if ( s_ConversionCountMutex.m_depth == 0 )
     ThreadInterlockedExchange64(&s_ConversionCountMutex, 0);
 }

@@ -292,7 +292,7 @@ CEntityInstance *__fastcall CDOTA_Item_Recipe_Medallion_Of_Courage::CEntityInsta
 void __fastcall CDOTA_Item_Recipe_Medallion_Of_Courage::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Item_Recipe_Medallion_Of_Courage::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -302,7 +302,7 @@ void __fastcall CDOTA_Item_Recipe_Medallion_Of_Courage::CEntityInstanceEntityCla
 void __fastcall CDOTA_Item_Recipe_Medallion_Of_Courage::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Item_Recipe_Medallion_Of_Courage::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -459,7 +459,7 @@ CEntityInstance *__fastcall CDOTA_Item_Medallion_Of_Courage::CEntityInstanceEnti
 void __fastcall CDOTA_Item_Medallion_Of_Courage::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Item_Medallion_Of_Courage::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -469,7 +469,7 @@ void __fastcall CDOTA_Item_Medallion_Of_Courage::CEntityInstanceEntityClass::~CE
 void __fastcall CDOTA_Item_Medallion_Of_Courage::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Item_Medallion_Of_Courage::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }

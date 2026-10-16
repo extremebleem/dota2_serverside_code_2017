@@ -170,7 +170,7 @@ void __fastcall CDOTA_Bot_AbilityUsage_SkywrathMage_ArcaneBolt::CDOTA_Bot_Abilit
 {
   this->m_pAbility = pAbility;
   this->m_pBot = pBot;
-  this->_vptr_CDOTA_Bot_AbilityUsage = off_42D0470;
+  this->_vptr_CDOTA_Bot_AbilityUsage = off_42D0470;  // vptr: CDOTA_Bot_AbilityUsage_SkywrathMage_ArcaneBolt
   this->m_hDesiredTarget.m_Index = -1;
   this->m_bUseOnCreeps = 1;
 }
@@ -462,7 +462,7 @@ void __fastcall CDOTA_Bot_AbilityUsage_SkywrathMage_ConcussiveShot::CDOTA_Bot_Ab
   this->m_pAbility = pAbility;
   this->m_bUseOnCreeps = 0;
   this->m_pBot = pBot;
-  this->_vptr_CDOTA_Bot_AbilityUsage = off_42D04D0;
+  this->_vptr_CDOTA_Bot_AbilityUsage = off_42D04D0;  // vptr: CDOTA_Bot_AbilityUsage_SkywrathMage_ConcussiveShot
 }
 
 
@@ -620,7 +620,7 @@ void __fastcall CDOTA_Bot_AbilityUsage_SkywrathMage_AncientSeal::CDOTA_Bot_Abili
   this->m_pAbility = pAbility;
   this->m_bUseOnCreeps = 0;
   this->m_pBot = pBot;
-  this->_vptr_CDOTA_Bot_AbilityUsage = off_42D0530;
+  this->_vptr_CDOTA_Bot_AbilityUsage = off_42D0530;  // vptr: CDOTA_Bot_AbilityUsage_SkywrathMage_AncientSeal
   this->m_hDesiredTarget.m_Index = -1;
 }
 
@@ -738,7 +738,7 @@ void __fastcall CDOTA_Bot_AbilityUsage_SkywrathMage_MysticFlare::CDOTA_Bot_Abili
   vec_t z; // eax
 
   this->m_pAbility = pAbility;
-  this->_vptr_CDOTA_Bot_AbilityUsage = off_42D0590;
+  this->_vptr_CDOTA_Bot_AbilityUsage = off_42D0590;  // vptr: CDOTA_Bot_AbilityUsage_SkywrathMage_MysticFlare
   this->m_bUseOnCreeps = 0;
   this->m_pBot = pBot;
   z = vec3_invalid.z;

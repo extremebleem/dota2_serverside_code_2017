@@ -79,7 +79,7 @@ void __fastcall CSpawnGroupMgrGameSystem::~CSpawnGroupMgrGameSystem(CSpawnGroupM
   this->m_OnSpawnGroupActivate_register.m_ConCommandAccessor._vptr_ICommandCompletionCallback = &off_3FCCE70;
   ConCommandBase::Shutdown(&this->m_OnSpawnGroupActivate_register.m_ConCommandAccessor);
   ConCommand::~ConCommand(&this->m_OnSpawnGroupActivate_register.m_ConCommandAccessor);
-  this->_vptr_IGameSystem = off_3F7C1B0;
+  this->_vptr_IGameSystem = off_3F7C1B0;  // vptr: CAutoGameSystem
   IGameSystem::~IGameSystem(&this->CAutoGameSystem);
 }
 
@@ -150,7 +150,7 @@ void __fastcall CSpawnGroupMgrGameSystem::~CSpawnGroupMgrGameSystem(CSpawnGroupM
   this->m_OnSpawnGroupActivate_register.m_ConCommandAccessor._vptr_ICommandCompletionCallback = &off_3FCCE70;
   ConCommandBase::Shutdown(&this->m_OnSpawnGroupActivate_register.m_ConCommandAccessor);
   ConCommand::~ConCommand(&this->m_OnSpawnGroupActivate_register.m_ConCommandAccessor);
-  this->_vptr_IGameSystem = off_3F7C1B0;
+  this->_vptr_IGameSystem = off_3F7C1B0;  // vptr: CAutoGameSystem
   IGameSystem::~IGameSystem(&this->CAutoGameSystem);
   operator delete(this);
 }

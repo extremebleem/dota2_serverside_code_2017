@@ -32,7 +32,7 @@ CVoiceGameMgr *__cdecl GetVoiceGameMgr()
 // CVoiceGameMgr::CVoiceGameMgr  (line 97, @0x00000000024098d0, libserver.so)
 void __fastcall CVoiceGameMgr::CVoiceGameMgr(CVoiceGameMgr *const this)
 {
-  this->_vptr_CVoiceGameMgr = off_40D30F0;
+  this->_vptr_CVoiceGameMgr = off_40D30F0;  // vptr: CVoiceGameMgr
   this->m_UpdateInterval = 0.0;
   this->m_nMaxPlayers = 0;
   this->m_iProximityDistance = -1;
@@ -42,7 +42,7 @@ void __fastcall CVoiceGameMgr::CVoiceGameMgr(CVoiceGameMgr *const this)
 // CVoiceGameMgr::~CVoiceGameMgr  (line 105, @0x00000000023f8a90, libserver.so)
 void __fastcall CVoiceGameMgr::~CVoiceGameMgr(CVoiceGameMgr *const this)
 {
-  this->_vptr_CVoiceGameMgr = off_40D30F0;
+  this->_vptr_CVoiceGameMgr = off_40D30F0;  // vptr: CVoiceGameMgr
 }
 
 
@@ -50,7 +50,7 @@ void __fastcall CVoiceGameMgr::~CVoiceGameMgr(CVoiceGameMgr *const this)
 // calls: operator delete
 void __fastcall CVoiceGameMgr::~CVoiceGameMgr(CVoiceGameMgr *const this)
 {
-  this->_vptr_CVoiceGameMgr = off_40D30F0;
+  this->_vptr_CVoiceGameMgr = off_40D30F0;  // vptr: CVoiceGameMgr
   operator delete(this);
 }
 

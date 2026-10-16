@@ -71,7 +71,7 @@ void *__fastcall CSimpleBot::CEntityInstanceEntityClass::AllocateInstance(
 void __fastcall CSimpleBot::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CSimpleBot::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -81,7 +81,7 @@ void __fastcall CSimpleBot::CEntityInstanceEntityClass::~CEntityInstanceEntityCl
 void __fastcall CSimpleBot::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CSimpleBot::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -232,7 +232,7 @@ NextBotGroundLocomotion *__fastcall CSimpleBot::GetLocomotionInterface(const CSi
 // CSimpleBotPathCost::~CSimpleBotPathCost  (line 46, @0x0000000002f1e220, libserver.so)  // inlines: ~CNavShortestPathCost, ~CPathCostBase
 void __fastcall CSimpleBotPathCost::~CSimpleBotPathCost(CSimpleBotPathCost *const this)
 {
-  this->_vptr_CPathCostBase = off_47AE0B0;
+  this->_vptr_CPathCostBase = off_47AE0B0;  // vptr: CPathCostBase
 }
 
 
@@ -240,7 +240,7 @@ void __fastcall CSimpleBotPathCost::~CSimpleBotPathCost(CSimpleBotPathCost *cons
 // calls: operator delete
 void __fastcall CSimpleBotPathCost::~CSimpleBotPathCost(CSimpleBotPathCost *const this)
 {
-  this->_vptr_CPathCostBase = off_47AE0B0;
+  this->_vptr_CPathCostBase = off_47AE0B0;  // vptr: CPathCostBase
   operator delete(this);
 }
 

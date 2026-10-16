@@ -1314,7 +1314,7 @@ CEntityInstance *__fastcall CScriptNavBlocker::CEntityInstanceEntityClass::Const
 void __fastcall CScriptNavBlocker::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CScriptNavBlocker::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -1324,7 +1324,7 @@ void __fastcall CScriptNavBlocker::CEntityInstanceEntityClass::~CEntityInstanceE
 void __fastcall CScriptNavBlocker::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CScriptNavBlocker::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -1658,7 +1658,7 @@ CEntityInstance *__fastcall CFuncNavObstruction::CEntityInstanceEntityClass::Con
 void __fastcall CFuncNavObstruction::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CFuncNavObstruction::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -1668,7 +1668,7 @@ void __fastcall CFuncNavObstruction::CEntityInstanceEntityClass::~CEntityInstanc
 void __fastcall CFuncNavObstruction::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CFuncNavObstruction::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }

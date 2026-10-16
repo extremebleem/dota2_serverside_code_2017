@@ -13,7 +13,7 @@ void __fastcall CDOTAVScriptGameSystem::~CDOTAVScriptGameSystem(CDOTAVScriptGame
   CUtlVectorUltraConservative<HSCRIPT__**,CUtlVectorUltraConservativeAllocator>::Data_t *v7; // rsi
   CUtlVectorUltraConservative<HSCRIPT__**,CUtlVectorUltraConservativeAllocator>::Data_t *m_pData; // rsi
 
-  this->_vptr_IGameSystem = off_3FCECF0;
+  this->_vptr_IGameSystem = off_3FCECF0;  // vptr: CVScriptGameSystem
   this->_vptr_IVScriptGameSystem = off_3FCEED0;
   CUtlRBTree<CUtlMap<CUtlSymbol,HSCRIPT__ *,unsigned short,bool (*)(CUtlSymbol const&,CUtlSymbol const&)>::Node_t,unsigned short,CUtlMap<CUtlSymbol,HSCRIPT__ *,unsigned short,bool (*)(CUtlSymbol const&,CUtlSymbol const&)>::CKeyLess,CUtlMemory<UtlRBTreeNode_t<CUtlMap<CUtlSymbol,HSCRIPT__ *,unsigned short,bool (*)(CUtlSymbol const&,CUtlSymbol const&)>::Node_t,unsigned short>,unsigned short>>::RemoveAll(&this->m_CompiledScriptCache.m_Tree);
   v2 = (this->m_CompiledScriptCache.m_Tree.m_Elements.m_nGrowSize & 0xC0000000) == 0;
@@ -111,7 +111,7 @@ void __fastcall CDOTAVScriptGameSystem::~CDOTAVScriptGameSystem(CDOTAVScriptGame
   CUtlVectorUltraConservative<HSCRIPT__**,CUtlVectorUltraConservativeAllocator>::Data_t *m_pData; // rsi
 
   this->_vptr_IVScriptGameSystem = off_3FCEED0;
-  this->_vptr_IGameSystem = off_3FCECF0;
+  this->_vptr_IGameSystem = off_3FCECF0;  // vptr: CVScriptGameSystem
   CUtlRBTree<CUtlMap<CUtlSymbol,HSCRIPT__ *,unsigned short,bool (*)(CUtlSymbol const&,CUtlSymbol const&)>::Node_t,unsigned short,CUtlMap<CUtlSymbol,HSCRIPT__ *,unsigned short,bool (*)(CUtlSymbol const&,CUtlSymbol const&)>::CKeyLess,CUtlMemory<UtlRBTreeNode_t<CUtlMap<CUtlSymbol,HSCRIPT__ *,unsigned short,bool (*)(CUtlSymbol const&,CUtlSymbol const&)>::Node_t,unsigned short>,unsigned short>>::RemoveAll(&this->m_CompiledScriptCache.m_Tree);
   v2 = (this->m_CompiledScriptCache.m_Tree.m_Elements.m_nGrowSize & 0xC0000000) == 0;
   this->m_CompiledScriptCache.m_Tree.m_FirstFree = -1;

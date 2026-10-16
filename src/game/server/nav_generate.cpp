@@ -895,7 +895,7 @@ void __fastcall CNavGenerator::CNavGenerator(CNavGenerator *const this, CNavMesh
   this->m_simplifyGenerationExtent.lo.x = 3.4028235e38;
   this->m_simplifyGenerationExtent.lo.y = 3.4028235e38;
   this->m_simplifyGenerationExtent.lo.z = 3.4028235e38;
-  this->_vptr_CNavGeneratorBase = off_47B0BF0;
+  this->_vptr_CNavGeneratorBase = off_47B0BF0;  // vptr: CNavGenerator
   this->m_navGenMarkup.m_Memory.m_pMemory = 0;
   this->m_navGenMarkup.m_Memory.m_nAllocationCount = 0;
   this->m_navGenMarkup.m_Memory.m_nGrowSize = 0;
@@ -915,7 +915,7 @@ void __fastcall CNavGenerator::~CNavGenerator(CNavGenerator *const this)
   char *m_pSpawnName; // rdi
   bool v3; // zf
 
-  this->_vptr_CNavGeneratorBase = off_47B0BF0;
+  this->_vptr_CNavGeneratorBase = off_47B0BF0;  // vptr: CNavGenerator
   m_pSpawnName = this->m_pSpawnName;
   if ( m_pSpawnName != 0 )
     operator delete[](m_pSpawnName);
@@ -1100,35 +1100,35 @@ bool __fastcall CNavGenerator::Update(CNavGenerator *const this)
       target.x = (v3 * spot.vNormal.x) + spot.vPos.x;
       target.z = (*(&v7 + 1) * v3) + spot.vPos.z;
       target.y = (*&v7 * v3) + spot.vPos.y;
-      NDebugOverlay::Line(&spot.vPos, &target, 255, 0, 255, 1, 0.1);
+      NDebugOverlay::Line(&spot.vPos, &target, 0xFFu, 0, 0xFFu, 1, 0.1);
       target.z = (spot.vNormal.z * v9) + spot.vPos.z;
       target.y = (spot.vNormal.y * v9) + spot.vPos.y;
       target.x = (spot.vNormal.x * v9) + spot.vPos.x;
       v10.y = spot.vPos.y + 0.0;
       v10.z = spot.vPos.z + 0.0;
       v10.x = spot.vPos.x + 25.0;
-      NDebugOverlay::Line(&v10, &target, 255, 0, 255, 1, 0.1);
+      NDebugOverlay::Line(&v10, &target, 0xFFu, 0, 0xFFu, 1, 0.1);
       target.z = (spot.vNormal.z * v9) + spot.vPos.z;
       target.y = (spot.vNormal.y * v9) + spot.vPos.y;
       target.x = (spot.vNormal.x * v9) + spot.vPos.x;
       v10.y = spot.vPos.y + 0.0;
       v10.z = spot.vPos.z + 0.0;
       v10.x = spot.vPos.x - 25.0;
-      NDebugOverlay::Line(&v10, &target, 255, 0, 255, 1, 0.1);
+      NDebugOverlay::Line(&v10, &target, 0xFFu, 0, 0xFFu, 1, 0.1);
       target.z = (spot.vNormal.z * v9) + spot.vPos.z;
       target.y = (spot.vNormal.y * v9) + spot.vPos.y;
       target.x = (spot.vNormal.x * v9) + spot.vPos.x;
       v10.z = spot.vPos.z + 0.0;
       v10.x = spot.vPos.x + 0.0;
       v10.y = spot.vPos.y + 25.0;
-      NDebugOverlay::Line(&v10, &target, 255, 0, 255, 1, 0.1);
+      NDebugOverlay::Line(&v10, &target, 0xFFu, 0, 0xFFu, 1, 0.1);
       target.z = (spot.vNormal.z * v9) + spot.vPos.z;
       target.y = (spot.vNormal.y * v9) + spot.vPos.y;
       target.x = (spot.vNormal.x * v9) + spot.vPos.x;
       v10.y = spot.vPos.y - 25.0;
       v10.x = spot.vPos.x + 0.0;
       v10.z = spot.vPos.z + 0.0;
-      NDebugOverlay::Line(&v10, &target, 255, 0, 255, 1, 0.1);
+      NDebugOverlay::Line(&v10, &target, 0xFFu, 0, 0xFFu, 1, 0.1);
       v3 = v9;
     }
     while ( v4 != v5 );
@@ -1142,11 +1142,10 @@ bool __fastcall CNavGenerator::Update(CNavGenerator *const this)
 bool __fastcall CNavGenerator::Update(CNavGenerator *const this)
 {
   float v1; // xmm1_4
-  float v2; // xmm2_4
 
   if ( this->m_generationMode == CNavGeneratorBase::GenerationModeType::GENERATE_NONE )
     return CNavGenerator::Update(this);
-  CNavGenerator::UpdateGeneration(this, COERCE_DOUBLE(1036831949), v1, v2);
+  CNavGenerator::UpdateGeneration(this, 0.1, v1);
   return 1;
 }
 
@@ -1272,62 +1271,59 @@ LABEL_4:
 // callers: CNavGenerator::Update
 // strings: "Generation complete!  %0.1f seconds elapsed.\n", "nav_progress", "Navigation map '%s' saved.\n", "Creating navigation areas from sampled data...\n", "Finding light intensity...", "-skipcustomnavmeshgeneration" (18 total)
 // globals: `guard variable for'CNavGenerator::UpdateGeneration(float)::s_playerSettleTimer, `guard variable for'CNavGenerator::UpdateGeneration(float)::s_unlitAreas, `guard variable for'CNavGenerator::UpdateGeneration(float)::s_unlitSeedAreas, jpt_2F04221, CNavGenerator::UpdateGeneration(float)::s_unlitSeedAreas, __dso_handle, CUtlVector<CNavArea *,CUtlMemory<CNavArea *,int>>::~CUtlVector(), CNavGenerator::UpdateGeneration(float)::s_unlitAreas (10 total)
-__int64 __fastcall CNavGenerator::UpdateGeneration(CNavGenerator *const this, double a2, float flMaxTime, float a4)
+__int64 __fastcall CNavGenerator::UpdateGeneration(CNavGenerator *const this, float a2, float flMaxTime)
 {
-  double v5; // xmm0_8
-  float v6; // xmm1_4
-  float v7; // xmm2_4
+  __int64 v4; // rdi
   CNavGeneratorBase::GenerationModeType m_generationMode; // eax
-  bool v9; // r13
-  float v10; // xmm0_4
-  KeyValues *v11; // r12
-  bool v12; // zf
-  bool v13; // al
-  const CNavMesh *v14; // rdi
+  bool v6; // r13
+  float v7; // xmm0_4
+  KeyValues *v8; // r12
+  bool v9; // zf
+  bool v10; // al
+  const CNavMesh *v11; // rdi
   const char *mapname; // rsi
   const char *Filename; // rax
+  unsigned __int64 v14; // xmm0_8
   __int64 result; // rax
+  double v16; // xmm0_8
   CBasePlayer *ListenServerHost; // r13
   int i; // esi
-  CNavArea *v20; // r14
+  CNavArea *v19; // r14
   const CNavMesh *m_rNavMesh; // rdi
   vec_t z; // xmm1_4
   vec_t x; // xmm0_4
-  __m128d v24; // xmm0
-  float v25; // xmm0_4
-  __int64 v26; // rax
+  __m128d v23; // xmm0
+  float v24; // xmm0_4
+  __int64 v25; // rax
   int m_nGenerationIndex; // eax
-  CNavArea *v28; // rdi
+  CNavArea *v27; // rdi
+  const NavAreaVector *v28; // rdx
   double v29; // xmm0_8
-  float v30; // xmm1_4
-  float v31; // xmm2_4
-  const NavAreaVector *v32; // rdx
-  unsigned int v33; // eax
+  double v30; // xmm0_8
+  unsigned int v31; // eax
   const NavAreaVector *m_rNavAreas; // rax
-  unsigned __int64 v35; // r12
-  __int64 v36; // r13
-  __int64 v37; // r14
-  CNavArea **v38; // rax
-  __int64 v39; // r13
-  CNavArea **v40; // r15
-  int v41; // eax
-  CNavArea **v42; // rax
-  CNavArea **v43; // r15
+  unsigned __int64 v33; // r12
+  __int64 v34; // r13
+  __int64 v35; // r14
+  CNavArea **v36; // rax
+  __int64 v37; // r13
+  CNavArea **v38; // r15
+  int v39; // eax
+  CNavArea **v40; // rax
+  CNavArea **v41; // r15
   int m_Size; // eax
-  const char *v45; // rax
-  const char *v46; // rsi
-  __int64 v47; // r13
-  int v48; // r12d
-  CNavArea *v49; // rax
-  float flMaxTimea; // [rsp+4h] [rbp-5Ch]
+  double v43; // xmm0_8
+  const char *v44; // rax
+  const char *v45; // rsi
+  __int64 v46; // r13
+  int v47; // r12d
+  CNavArea *v48; // rax
   double flStartTime; // [rsp+8h] [rbp-58h]
   _BOOL4 flStartTimea; // [rsp+8h] [rbp-58h]
   unsigned int flHeight; // [rsp+1Ch] [rbp-44h] BYREF
   Vector vEyePos; // [rsp+20h] [rbp-40h] BYREF
 
-  flMaxTimea = *&a2;
-  v5 = Plat_FloatTime(a2, flMaxTime, a4);
-  flStartTime = v5;
+  flStartTime = Plat_FloatTime();
   if ( `guard variable for'CNavGenerator::UpdateGeneration(float)::s_playerSettleTimer == 0
     && __cxa_guard_acquire(&`guard variable for'CNavGenerator::UpdateGeneration(float)::s_playerSettleTimer) != 0 )
   {
@@ -1363,68 +1359,68 @@ __int64 __fastcall CNavGenerator::UpdateGeneration(CNavGenerator *const this, do
   switch ( this->m_generationState )
   {
     case CNavGenerator::GenerationStateType::SAMPLE_WALKABLE_SPACE:
-      result = (*(this->_vptr_CNavGeneratorBase + 8))(this, flStartTime, flMaxTimea);
+      result = (*(this->_vptr_CNavGeneratorBase + 8))(this, flStartTime, a2);
       if ( result == 0 )
         return 1;
       this->m_generationState = CNavGenerator::GenerationStateType::CREATE_AREAS_FROM_SAMPLES;
       return result;
     case CNavGenerator::GenerationStateType::CREATE_AREAS_FROM_SAMPLES:
-      Msg("Creating navigation areas from sampled data...\n");
-      (*(this->_vptr_CNavGeneratorBase + 7))(this);
+      *&v16 = Msg("Creating navigation areas from sampled data...\n").m128_u64[0];
+      (*(this->_vptr_CNavGeneratorBase + 7))(this, v16);
       this->m_generationState = CNavGenerator::GenerationStateType::PRE_ANALYSIS_STEP;
       this->m_nGenerationIndex = 0;
       return 1;
     case CNavGenerator::GenerationStateType::PRE_ANALYSIS_STEP:
-      Msg("Starting analysis steps.\n");
+      *&v30 = Msg("Starting analysis steps.\n").m128_u64[0];
       if ( this->m_generationMode == CNavGeneratorBase::GenerationModeType::GENERATE_INCREMENTAL
-        || (*(*engine + 160LL))(engine) != 0 )
+        || (*(*engine + 160LL))(engine, v30) != 0 )
       {
         goto LABEL_69;
       }
       this->m_generationState = CNavGenerator::GenerationStateType::FIND_LIGHT_INTENSITY;
       if ( CNavGenerator::UpdateGeneration(float)::s_playerSettleTimer.m_timestamp.m_Value != -1.0 )
         CNavGenerator::UpdateGeneration(float)::s_playerSettleTimer.m_timestamp.m_Value = -1.0;
-      v33 = 1;
+      v31 = 1;
       CNavGenerator::UpdateGeneration(float)::s_unlitAreas.m_Size = 0;
       if ( CNavArea::ms_nMasterMarker != -1 )
-        v33 = CNavArea::ms_nMasterMarker + 1;
-      CNavArea::ms_nMasterMarker = v33;
+        v31 = CNavArea::ms_nMasterMarker + 1;
+      CNavArea::ms_nMasterMarker = v31;
       m_rNavAreas = this->m_rNavAreas;
       if ( m_rNavAreas->m_Size != 0 )
       {
-        v35 = 0;
-        v36 = 0;
-        v37 = 8LL * (m_rNavAreas->m_Size - 1) + 8;
+        v33 = 0;
+        v34 = 0;
+        v35 = 8LL * (m_rNavAreas->m_Size - 1) + 8;
         while ( 1 )
         {
-          v43 = &m_rNavAreas->m_Memory.m_pMemory[v35 / 8];
-          m_Size = v36;
-          if ( v36 == CNavGenerator::UpdateGeneration(float)::s_unlitAreas.m_Memory.m_nAllocationCount )
+          v41 = &m_rNavAreas->m_Memory.m_pMemory[v33 / 8];
+          m_Size = v34;
+          if ( v34 == CNavGenerator::UpdateGeneration(float)::s_unlitAreas.m_Memory.m_nAllocationCount )
           {
             CUtlMemory<CNavArea *,int>::Grow(&CNavGenerator::UpdateGeneration(float)::s_unlitAreas.m_Memory, 1);
             m_Size = CNavGenerator::UpdateGeneration(float)::s_unlitAreas.m_Size;
           }
           CNavGenerator::UpdateGeneration(float)::s_unlitAreas.m_Size = m_Size + 1;
-          v38 = &CNavGenerator::UpdateGeneration(float)::s_unlitAreas.m_Memory.m_pMemory[v36];
-          if ( v38 != 0 )
-            *v38 = *v43;
+          v36 = &CNavGenerator::UpdateGeneration(float)::s_unlitAreas.m_Memory.m_pMemory[v34];
+          if ( v36 != 0 )
+            *v36 = *v41;
+          v37 = CNavGenerator::UpdateGeneration(float)::s_unlitSeedAreas.m_Size;
+          v38 = &this->m_rNavAreas->m_Memory.m_pMemory[v33 / 8];
           v39 = CNavGenerator::UpdateGeneration(float)::s_unlitSeedAreas.m_Size;
-          v40 = &this->m_rNavAreas->m_Memory.m_pMemory[v35 / 8];
-          v41 = CNavGenerator::UpdateGeneration(float)::s_unlitSeedAreas.m_Size;
           if ( CNavGenerator::UpdateGeneration(float)::s_unlitSeedAreas.m_Size == CNavGenerator::UpdateGeneration(float)::s_unlitSeedAreas.m_Memory.m_nAllocationCount )
           {
             CUtlMemory<CNavArea *,int>::Grow(&CNavGenerator::UpdateGeneration(float)::s_unlitSeedAreas.m_Memory, 1);
-            v41 = CNavGenerator::UpdateGeneration(float)::s_unlitSeedAreas.m_Size;
+            v39 = CNavGenerator::UpdateGeneration(float)::s_unlitSeedAreas.m_Size;
           }
-          CNavGenerator::UpdateGeneration(float)::s_unlitSeedAreas.m_Size = v41 + 1;
-          v42 = &CNavGenerator::UpdateGeneration(float)::s_unlitSeedAreas.m_Memory.m_pMemory[v39];
-          if ( v42 != 0 )
-            *v42 = *v40;
-          v35 += 8LL;
-          if ( v35 == v37 )
+          CNavGenerator::UpdateGeneration(float)::s_unlitSeedAreas.m_Size = v39 + 1;
+          v40 = &CNavGenerator::UpdateGeneration(float)::s_unlitSeedAreas.m_Memory.m_pMemory[v37];
+          if ( v40 != 0 )
+            *v40 = *v38;
+          v33 += 8LL;
+          if ( v33 == v35 )
             break;
           m_rNavAreas = this->m_rNavAreas;
-          v36 = CNavGenerator::UpdateGeneration(float)::s_unlitAreas.m_Size;
+          v34 = CNavGenerator::UpdateGeneration(float)::s_unlitAreas.m_Size;
         }
       }
       goto LABEL_70;
@@ -1450,21 +1446,21 @@ __int64 __fastcall CNavGenerator::UpdateGeneration(CNavGenerator *const this, do
         goto LABEL_68;
       if ( CNavGenerator::UpdateGeneration(float)::s_unlitSeedAreas.m_Size != 0 )
       {
-        v20 = *CNavGenerator::UpdateGeneration(float)::s_unlitSeedAreas.m_Memory.m_pMemory;
+        v19 = *CNavGenerator::UpdateGeneration(float)::s_unlitSeedAreas.m_Memory.m_pMemory;
         CUtlVectorBase<CNavArea *,CUtlMemory<CNavArea *,int>>::FastRemove(
           &CNavGenerator::UpdateGeneration(float)::s_unlitSeedAreas,
           0);
         m_rNavMesh = this->m_rNavMesh;
-        z = v20->m_vCenter.z;
-        x = v20->m_vCenter.x;
-        vEyePos.y = v20->m_vCenter.y;
+        z = v19->m_vCenter.z;
+        x = v19->m_vCenter.x;
+        vEyePos.y = v19->m_vCenter.y;
         vEyePos.z = z;
         vEyePos.x = x;
         if ( CNavMesh::GetGroundHeight(m_rNavMesh, &vEyePos, &flHeight, 0) )
         {
-          v24 = _mm_cvtps_pd(flHeight);
-          v24.m128d_f64[0] = v24.m128d_f64[0] + 35.5 - 18.0;
-          vEyePos.z = _mm_movedup_pd(v24).m128d_f64[0];
+          v23 = _mm_cvtps_pd(flHeight);
+          v23.m128d_f64[0] = v23.m128d_f64[0] + 35.5 - 18.0;
+          vEyePos.z = _mm_movedup_pd(v23).m128d_f64[0];
         }
         else
         {
@@ -1478,30 +1474,30 @@ __int64 __fastcall CNavGenerator::UpdateGeneration(CNavGenerator *const this, do
         * (this->m_rNavMesh->m_NavAreas.m_Size - CNavGenerator::UpdateGeneration(float)::s_unlitAreas.m_Size)
         / this->m_rNavMesh->m_NavAreas.m_Size,
           1);
-        CNavGenerator::UpdateGeneration(float)::s_movedPlayerToArea = v20->m_AreaId;
-        v25 = CountdownTimer::Now(&CNavGenerator::UpdateGeneration(float)::s_playerSettleTimer) + 0.1;
-        if ( v25 != CNavGenerator::UpdateGeneration(float)::s_playerSettleTimer.m_timestamp.m_Value )
-          CNavGenerator::UpdateGeneration(float)::s_playerSettleTimer.m_timestamp.m_Value = v25;
+        CNavGenerator::UpdateGeneration(float)::s_movedPlayerToArea = v19->m_AreaId;
+        v24 = CountdownTimer::Now(&CNavGenerator::UpdateGeneration(float)::s_playerSettleTimer) + 0.1;
+        if ( v24 != CNavGenerator::UpdateGeneration(float)::s_playerSettleTimer.m_timestamp.m_Value )
+          CNavGenerator::UpdateGeneration(float)::s_playerSettleTimer.m_timestamp.m_Value = v24;
         if ( CNavGenerator::UpdateGeneration(float)::s_playerSettleTimer.m_duration.m_Value != 0.1 )
           CNavGenerator::UpdateGeneration(float)::s_playerSettleTimer.m_duration.m_Value = 0.1;
       }
       else
       {
-        Msg("Finding light intensity...DONE (%d unlit areas)\n", i);
+        *&v43 = Msg("Finding light intensity...DONE (%d unlit areas)\n", i).m128_u64[0];
         if ( CNavGenerator::UpdateGeneration(float)::s_unlitAreas.m_Size != 0 )
         {
-          Warning("To see unlit areas:\n");
+          Warning("To see unlit areas:\n", v43);
           if ( CNavGenerator::UpdateGeneration(float)::s_unlitAreas.m_Size > 0 )
           {
+            v46 = 0;
             v47 = 0;
-            v48 = 0;
             do
             {
-              ++v48;
-              v49 = CNavGenerator::UpdateGeneration(float)::s_unlitAreas.m_Memory.m_pMemory[v47++];
-              Warning("nav_unmark; nav_mark %d; nav_warp_to_mark;\n", v49->m_AreaId);
+              ++v47;
+              v48 = CNavGenerator::UpdateGeneration(float)::s_unlitAreas.m_Memory.m_pMemory[v46++];
+              Warning("nav_unmark; nav_mark %d; nav_warp_to_mark;\n", v48->m_AreaId);
             }
-            while ( CNavGenerator::UpdateGeneration(float)::s_unlitAreas.m_Size > v48 );
+            while ( CNavGenerator::UpdateGeneration(float)::s_unlitAreas.m_Size > v47 );
           }
         }
         this->m_generationState = CNavGenerator::GenerationStateType::CUSTOM;
@@ -1515,8 +1511,8 @@ LABEL_70:
       }
       return 1;
     case CNavGenerator::GenerationStateType::CUSTOM:
-      v26 = CommandLine();
-      if ( (*(*v26 + 64LL))(v26, "-skipcustomnavmeshgeneration") != 0 )
+      v25 = CommandLine(v4);
+      if ( (*(*v25 + 64LL))(v25, "-skipcustomnavmeshgeneration") != 0 )
         goto LABEL_46;
       m_nGenerationIndex = this->m_nGenerationIndex;
       if ( m_nGenerationIndex == 0 )
@@ -1535,53 +1531,53 @@ LABEL_70:
       {
         this->m_rNavMesh->m_bIsAnalyzed = 1;
       }
-      v9 = 0;
-      v10 = Plat_FloatTime(v5, v6, v7) - this->m_flGenerationStartTime;
-      Msg("Generation complete!  %0.1f seconds elapsed.\n", v10);
+      v6 = 0;
+      v7 = Plat_FloatTime() - this->m_flGenerationStartTime;
+      Msg("Generation complete!  %0.1f seconds elapsed.\n", v7);
       if ( this->m_generationMode != CNavGeneratorBase::GenerationModeType::GENERATE_INCREMENTAL )
-        v9 = nav_generate_no_restart.m_pParent->m_Value.m_nValue == 0;
+        v6 = nav_generate_no_restart.m_pParent->m_Value.m_nValue == 0;
       this->m_rNavMesh->m_bIsLoaded = 1;
       this->m_walkableSeeds.m_Size = 0;
-      v11 = KeyValues::operator new(0x14u);
-      KeyValues::KeyValues(v11, "data");
-      ShowViewPortPanelToAll("nav_progress", 0, v11);
-      KeyValues::deleteThis(v11);
-      v12 = !this->m_bIncrementalSelection;
+      v8 = KeyValues::operator new(0x14u);
+      KeyValues::KeyValues(v8, "data");
+      ShowViewPortPanelToAll("nav_progress", 0, v8);
+      KeyValues::deleteThis(v8);
+      v9 = !this->m_bIncrementalSelection;
       CNavGeneratorBase::sm_flGenerationStepSize = nav_area_res.m_pParent->m_Value.m_fValue;
-      if ( !v12 )
+      if ( !v9 )
       {
         CNavEditor::CommandNavToggleSelectionSet(this->m_rNavMesh->m_pEditor);
         this->m_bIncrementalSelection = 0;
       }
       this->m_generationMode = CNavGeneratorBase::GenerationModeType::GENERATE_NONE;
-      v13 = CNavMesh::SaveNavMesh(this->m_rNavMesh, gpGlobals->mapname);
-      v14 = this->m_rNavMesh;
+      v10 = CNavMesh::SaveNavMesh(this->m_rNavMesh, gpGlobals->mapname);
+      v11 = this->m_rNavMesh;
       mapname = gpGlobals->mapname;
-      if ( v13 )
+      if ( v10 )
       {
-        Filename = CNavMesh::GetFilename(v14, mapname);
-        Msg("Navigation map '%s' saved.\n", Filename);
+        Filename = CNavMesh::GetFilename(v11, mapname);
+        v14 = Msg("Navigation map '%s' saved.\n", Filename).m128_u64[0];
       }
       else
       {
-        v45 = CNavMesh::GetFilename(v14, mapname);
-        v46 = "(null)";
-        if ( v45 != 0 )
-          v46 = v45;
-        Msg("ERROR: Cannot save navigation map '%s'.\n", v46);
+        v44 = CNavMesh::GetFilename(v11, mapname);
+        v45 = "(null)";
+        if ( v44 != 0 )
+          v45 = v44;
+        v14 = Msg("ERROR: Cannot save navigation map '%s'.\n", v45).m128_u64[0];
       }
       if ( this->m_bQuitWhenFinished )
       {
-        (*(*engine + 280LL))(engine, "quit\n");
+        (*(*engine + 280LL))(engine, "quit\n", *&v14);
         return 0;
       }
       else
       {
         flStartTimea = this->m_bQuitWhenFinished;
-        if ( v9 )
-          (*(*engine + 144LL))(engine, gpGlobals->mapname, 0);
+        if ( v6 )
+          (*(*engine + 144LL))(engine, gpGlobals->mapname, 0, *&v14);
         else
-          (*(this->_vptr_CNavGeneratorBase + 5))(this);
+          (*(this->_vptr_CNavGeneratorBase + 5))(this, *&v14);
         return flStartTimea;
       }
     default:
@@ -1589,22 +1585,22 @@ LABEL_70:
   }
   while ( 1 )
   {
-    v32 = this->m_rNavAreas;
-    if ( v32->m_Size <= m_nGenerationIndex )
+    v28 = this->m_rNavAreas;
+    if ( v28->m_Size <= m_nGenerationIndex )
       break;
-    v12 = this->m_generationMode == CNavGeneratorBase::GenerationModeType::GENERATE_INCREMENTAL;
-    v28 = v32->m_Memory.m_pMemory[m_nGenerationIndex];
+    v9 = this->m_generationMode == CNavGeneratorBase::GenerationModeType::GENERATE_INCREMENTAL;
+    v27 = v28->m_Memory.m_pMemory[m_nGenerationIndex];
     this->m_nGenerationIndex = m_nGenerationIndex + 1;
-    v29 = (*(v28->_vptr_CNavPoly + 28))(v28, v12);
-    if ( Plat_FloatTime(v29, v30, v31) - flStartTime > flMaxTimea )
+    (*(v27->_vptr_CNavPoly + 28))(v27, v9);
+    if ( Plat_FloatTime() - flStartTime > a2 )
     {
       AnalysisProgress("Custom game-specific analysis...", this->m_rNavAreas->m_Size, this->m_nGenerationIndex, 1);
       return 1;
     }
     m_nGenerationIndex = this->m_nGenerationIndex;
   }
-  Msg("Post custom...\n ");
-  (*(this->_vptr_CNavGeneratorBase + 15))(this);
+  *&v29 = Msg("Post custom...\n ").m128_u64[0];
+  (*(this->_vptr_CNavGeneratorBase + 15))(this, v29);
   (*(this->_vptr_CNavGeneratorBase + 10))(this);
   Msg("Custom game-specific analysis...DONE\n");
 LABEL_46:
@@ -3009,23 +3005,20 @@ __int64 __fastcall CNavGeneratorAAQuad::SampleWalkableSpace(
         float flStartTime,
         float flMaxTime)
 {
-  double v5; // xmm0_8
-  float v6; // xmm1_4
-  float v7; // xmm2_4
   unsigned int IsChannelEnabled; // ebx
   double flMaxTimeb; // [rsp+0h] [rbp-20h]
   double flStartTimeb; // [rsp+8h] [rbp-18h]
 
   if ( CNavGeneratorAAQuad::SampleWalkableSpace(float,float)::flFirstWalkTime < 0.0 )
-    CNavGeneratorAAQuad::SampleWalkableSpace(float,float)::flFirstWalkTime = Plat_FloatTime(0.0, flStartTime, flMaxTime);
+    CNavGeneratorAAQuad::SampleWalkableSpace(float,float)::flFirstWalkTime = Plat_FloatTime();
   AnalysisProgress("Sampling walkable space...", 100, this->m_nSampleTick / 10, 0);
   this->m_nSampleTick = (this->m_nSampleTick + 1) % 1000;
   while ( CNavGeneratorAAQuad::GenerationSampleStep(this) )
   {
-    if ( Plat_FloatTime(v5, v6, v7) - a2 > flStartTime )
+    if ( Plat_FloatTime() - a2 > flStartTime )
       return 0;
   }
-  flStartTimeb = Plat_FloatTime(v5, v6, v7);
+  flStartTimeb = Plat_FloatTime();
   flMaxTimeb = CNavGeneratorAAQuad::SampleWalkableSpace(float,float)::flFirstWalkTime;
   IsChannelEnabled = LoggingSystem_IsChannelEnabled(LOG_NAV, 1);
   if ( IsChannelEnabled == 0 )
@@ -4054,13 +4047,17 @@ void __fastcall CNavGeneratorAAQuad::CreateNavAreasFromNodes(CNavGeneratorAAQuad
   __int64 CPUFrequency; // rax
   double v9; // xmm0_8
   double v10; // xmm1_8
-  __int64 v11; // [rsp+0h] [rbp-60h]
-  __int64 v12; // [rsp+8h] [rbp-58h]
-  LeafCodeInfo_t v13; // [rsp+10h] [rbp-50h] BYREF
+  __int64 v11; // rdx
+  __int64 v12; // rcx
+  __int64 v13; // rdi
+  __int64 v14; // rsi
+  __int64 v15; // [rsp+0h] [rbp-60h]
+  __int64 v16; // [rsp+8h] [rbp-58h]
+  LeafCodeInfo_t v17; // [rsp+10h] [rbp-50h] BYREF
 
   v1 = __rdtsc();
-  v12 = v1;
-  v11 = HIDWORD(v1);
+  v16 = v1;
+  v15 = HIDWORD(v1);
   m_nValue = nav_area_max_size.m_pParent->m_Value.m_nValue;
   v4 = m_nValue;
   v5 = CNavNode::m_listLength;
@@ -4081,12 +4078,12 @@ void __fastcall CNavGeneratorAAQuad::CreateNavAreasFromNodes(CNavGeneratorAAQuad
         {
           if ( LoggingSystem_IsChannelEnabled(LOG_GENERAL, 4) != 0 )
           {
-            v13.m_szFile = "/home/buildbot/buildslave/source2_dota_rel_linuxsteamrt64/build/src/game/server/nav_generate.cpp";
-            v13.m_szFunction = "CreateNavAreasFromNodes";
-            v13.m_nLine = 2280;
-            LoggingSystem_Log(LOG_GENERAL, LoggingSeverity_t::LS_ERROR, &v13, "Generate: Error - Data corrupt.\n");
+            v17.m_szFile = "/home/buildbot/buildslave/source2_dota_rel_linuxsteamrt64/build/src/game/server/nav_generate.cpp";
+            v17.m_szFunction = "CreateNavAreasFromNodes";
+            v17.m_nLine = 2280;
+            LoggingSystem_Log(LOG_GENERAL, LoggingSeverity_t::LS_ERROR, &v17, "Generate: Error - Data corrupt.\n");
           }
-          if ( Plat_ShouldCollectMiniDumpsForFatalErrors() != 0 )
+          if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v13, v14, v11, v12) != 0 )
             loc_0 = -559038737;
           Plat_ExitProcess(1);
           JUMPOUT(0x2EDD5D7);
@@ -4104,15 +4101,15 @@ LABEL_9:
   if ( LoggingSystem_IsChannelEnabled(LOG_NAV, 1) != 0 )
   {
     CPUFrequency = Plat_GetCPUFrequency();
-    if ( (v12 | (v11 << 32)) < 0 )
+    if ( (v16 | (v15 << 32)) < 0 )
     {
-      v9 = (v12 & 1 | ((v12 | (v11 << 32)) >> 1)) + (v12 & 1 | ((v12 | (v11 << 32)) >> 1));
+      v9 = (v16 & 1 | ((v16 | (v15 << 32)) >> 1)) + (v16 & 1 | ((v16 | (v15 << 32)) >> 1));
       if ( CPUFrequency >= 0 )
         goto LABEL_19;
     }
     else
     {
-      v9 = v12;
+      v9 = v16;
       if ( CPUFrequency >= 0 )
       {
 LABEL_19:
@@ -4868,8 +4865,12 @@ int __fastcall CNavGeneratorAAQuad::BuildArea(
   CNavArea *v14; // rax
   CNavGeneratorAAQuad *v15; // rdi
   uint64 m_Flags; // rdx
+  __int64 v18; // rdx
+  __int64 v19; // rcx
+  __int64 v20; // rdi
+  __int64 v21; // rsi
   CNavArea *pAreaa; // [rsp+8h] [rbp-58h]
-  LeafCodeInfo_t v20; // [rsp+10h] [rbp-50h] BYREF
+  LeafCodeInfo_t v24; // [rsp+10h] [rbp-50h] BYREF
 
   v6 = pNode;
   if ( nHeight <= 0 )
@@ -4918,23 +4919,23 @@ int __fastcall CNavGeneratorAAQuad::BuildArea(
   {
     if ( LoggingSystem_IsChannelEnabled(LOG_GENERAL, 4) != 0 )
     {
-      v20.m_szFile = "/home/buildbot/buildslave/source2_dota_rel_linuxsteamrt64/build/src/game/server/nav_generate.cpp";
-      v20.m_szFunction = "BuildArea";
-      v20.m_nLine = 2470;
-      LoggingSystem_Log(LOG_GENERAL, LoggingSeverity_t::LS_ERROR, &v20, "BuildArea: Out of memory.\n");
+      v24.m_szFile = "/home/buildbot/buildslave/source2_dota_rel_linuxsteamrt64/build/src/game/server/nav_generate.cpp";
+      v24.m_szFunction = "BuildArea";
+      v24.m_nLine = 2470;
+      LoggingSystem_Log(LOG_GENERAL, LoggingSeverity_t::LS_ERROR, &v24, "BuildArea: Out of memory.\n");
     }
     while ( 1 )
     {
-      if ( Plat_ShouldCollectMiniDumpsForFatalErrors() != 0 )
+      if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v20, v21, v18, v19) != 0 )
         loc_0 = -559038737;
       Plat_ExitProcess(1);
 LABEL_38:
       if ( LoggingSystem_IsChannelEnabled(LOG_GENERAL, 4) != 0 )
       {
-        v20.m_szFile = "/home/buildbot/buildslave/source2_dota_rel_linuxsteamrt64/build/src/game/server/nav_generate.cpp";
-        v20.m_szFunction = "BuildArea";
-        v20.m_nLine = 2463;
-        LoggingSystem_Log(LOG_GENERAL, LoggingSeverity_t::LS_ERROR, &v20, "BuildArea - nullptr node.\n");
+        v24.m_szFile = "/home/buildbot/buildslave/source2_dota_rel_linuxsteamrt64/build/src/game/server/nav_generate.cpp";
+        v24.m_szFunction = "BuildArea";
+        v24.m_nLine = 2463;
+        LoggingSystem_Log(LOG_GENERAL, LoggingSeverity_t::LS_ERROR, &v24, "BuildArea - nullptr node.\n");
       }
     }
   }

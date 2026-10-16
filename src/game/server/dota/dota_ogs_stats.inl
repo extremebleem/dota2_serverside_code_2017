@@ -22,7 +22,7 @@ void __fastcall CDOTA_OGS::~CDOTA_OGS(CDOTA_OGS *const this)
 void __fastcall CDOTASteamWorksGameStatsServer::~CDOTASteamWorksGameStatsServer(
         CDOTASteamWorksGameStatsServer *const this)
 {
-  this->_vptr_IGameSystem = off_3FE7610;
+  this->_vptr_IGameSystem = off_3FE7610;  // vptr: CSteamWorksGameStatsServer
   this->_vptr_IGameEventListener2 = off_3FE77A0;
   CSteamWorksGameStatsUploader::~CSteamWorksGameStatsUploader(this);
 }
@@ -33,7 +33,7 @@ void __fastcall CDOTASteamWorksGameStatsServer::~CDOTASteamWorksGameStatsServer(
 void __fastcall CDOTASteamWorksGameStatsServer::~CDOTASteamWorksGameStatsServer(
         CDOTASteamWorksGameStatsServer *const this)
 {
-  this->_vptr_IGameSystem = off_3FE7610;
+  this->_vptr_IGameSystem = off_3FE7610;  // vptr: CSteamWorksGameStatsServer
   this->_vptr_IGameEventListener2 = off_3FE77A0;
   CSteamWorksGameStatsUploader::~CSteamWorksGameStatsUploader(this);
   operator delete(this);

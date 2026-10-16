@@ -524,7 +524,7 @@ CEntityInstance *__fastcall CDOTA_Unit_Hero_Skywrath_Mage::CEntityInstanceEntity
 void __fastcall CDOTA_Unit_Hero_Skywrath_Mage::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Unit_Hero_Skywrath_Mage::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -534,7 +534,7 @@ void __fastcall CDOTA_Unit_Hero_Skywrath_Mage::CEntityInstanceEntityClass::~CEnt
 void __fastcall CDOTA_Unit_Hero_Skywrath_Mage::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Unit_Hero_Skywrath_Mage::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -731,7 +731,7 @@ CEntityInstance *__fastcall CDOTA_Ability_Skywrath_Mage_Arcane_Bolt::CEntityInst
 void __fastcall CDOTA_Ability_Skywrath_Mage_Arcane_Bolt::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Skywrath_Mage_Arcane_Bolt::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -741,7 +741,7 @@ void __fastcall CDOTA_Ability_Skywrath_Mage_Arcane_Bolt::CEntityInstanceEntityCl
 void __fastcall CDOTA_Ability_Skywrath_Mage_Arcane_Bolt::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Skywrath_Mage_Arcane_Bolt::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -1264,7 +1264,7 @@ CEntityInstance *__fastcall CDOTA_Ability_Skywrath_Mage_Concussive_Shot::CEntity
 void __fastcall CDOTA_Ability_Skywrath_Mage_Concussive_Shot::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Skywrath_Mage_Concussive_Shot::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -1274,7 +1274,7 @@ void __fastcall CDOTA_Ability_Skywrath_Mage_Concussive_Shot::CEntityInstanceEnti
 void __fastcall CDOTA_Ability_Skywrath_Mage_Concussive_Shot::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Skywrath_Mage_Concussive_Shot::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -1982,7 +1982,7 @@ CEntityInstance *__fastcall CDOTA_Ability_Skywrath_Mage_Ancient_Seal::CEntityIns
 void __fastcall CDOTA_Ability_Skywrath_Mage_Ancient_Seal::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Skywrath_Mage_Ancient_Seal::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -1992,7 +1992,7 @@ void __fastcall CDOTA_Ability_Skywrath_Mage_Ancient_Seal::CEntityInstanceEntityC
 void __fastcall CDOTA_Ability_Skywrath_Mage_Ancient_Seal::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Skywrath_Mage_Ancient_Seal::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -2524,7 +2524,7 @@ CEntityInstance *__fastcall CDOTA_Ability_Skywrath_Mage_Mystic_Flare::CEntityIns
 void __fastcall CDOTA_Ability_Skywrath_Mage_Mystic_Flare::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Skywrath_Mage_Mystic_Flare::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -2534,7 +2534,7 @@ void __fastcall CDOTA_Ability_Skywrath_Mage_Mystic_Flare::CEntityInstanceEntityC
 void __fastcall CDOTA_Ability_Skywrath_Mage_Mystic_Flare::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Skywrath_Mage_Mystic_Flare::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }

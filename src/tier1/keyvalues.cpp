@@ -534,7 +534,7 @@ int __fastcall KeyValues::GetSymbolForStringGrowable(const char *name, bool bCre
   int nameb; // [rsp+18h] [rbp-38h]
 
   v3 = KeyValues::s_pGrowableStringTable;
-  CurrentId = ThreadGetCurrentId(name);
+  CurrentId = ThreadGetCurrentId();
   if ( CurrentId != v3->m_mutex.m_ownerID && _InterlockedCompareExchange64(v3, CurrentId, 0) != 0 )
   {
     _mm_pause();
@@ -2874,24 +2874,27 @@ const wchar_t *__fastcall CKeyValues_Data::Internal_GetWString(
         wchar_t *pScratchSpace,
         size_t nScratchSpaceCount)
 {
-  int v6; // r12d
-  int v8; // eax
+  __int64 v4; // r8
+  __int64 v5; // r9
+  int v8; // r12d
+  uintp v10; // rcx
+  int v11; // eax
   const wchar_t *result; // rax
   const char *m_uValue; // r13
-  int v11; // esi
-  size_t v12; // rdi
-  wchar_t *v13; // rax
   int v14; // esi
-  int v15; // eax
-  int v16; // r13d
-  int v17; // eax
+  size_t v15; // rdi
+  wchar_t *v16; // rax
+  int v17; // esi
   int v18; // eax
+  int v19; // r13d
+  int v20; // eax
+  int v21; // eax
   wchar_t *pDelete; // [rsp+0h] [rbp-2040h]
   int pWBuf; // [rsp+8h] [rbp-2038h]
   const wchar_t *pWBufa; // [rsp+8h] [rbp-2038h]
   wchar_t conversionBuf[2060]; // [rsp+10h] [rbp-2030h] BYREF
 
-  v6 = nScratchSpaceCount;
+  v8 = nScratchSpaceCount;
   switch ( *(this + 11) & 7 )
   {
     case 0:
@@ -2905,43 +2908,43 @@ const wchar_t *__fastcall CKeyValues_Data::Internal_GetWString(
         {
           pDelete = 0;
           pWBufa = conversionBuf;
-          v15 = V_UTF8ToUTF32(0, conversionBuf, 4, 4);
-          goto LABEL_12;
+          v18 = V_UTF8ToUTF32(0, conversionBuf, 4, 4);
+          goto LABEL_13;
         }
       }
       else
       {
         m_uValue = this;
       }
-      v11 = strlen(m_uValue) + 1;
-      if ( v11 <= 0x800 )
+      v14 = strlen(m_uValue) + 1;
+      if ( v14 <= 0x800 )
       {
         pDelete = 0;
         pWBufa = conversionBuf;
-        v15 = V_UTF8ToUTF32(m_uValue, conversionBuf, (4 * v11), 4);
+        v18 = V_UTF8ToUTF32(m_uValue, conversionBuf, (4 * v14), 4);
       }
       else
       {
-        v12 = -1;
-        pWBuf = v11;
-        if ( v11 <= 0x1FC0000000000000LL )
-          v12 = 4LL * v11;
-        v13 = operator new[](v12);
-        v14 = pWBuf;
-        pDelete = v13;
-        pWBufa = v13;
-        v15 = V_UTF8ToUTF32(m_uValue, v13, (4 * v14), 4);
+        v15 = -1;
+        pWBuf = v14;
+        if ( v14 <= 0x1FC0000000000000LL )
+          v15 = 4LL * v14;
+        v16 = operator new[](v15);
+        v17 = pWBuf;
+        pDelete = v16;
+        pWBufa = v16;
+        v18 = V_UTF8ToUTF32(m_uValue, v16, (4 * v17), 4);
       }
-LABEL_12:
-      v16 = v15;
-      if ( v15 >= 0 )
+LABEL_13:
+      v19 = v18;
+      if ( v18 >= 0 )
       {
         if ( pScratchSpace != 0 )
         {
-          v17 = wcslen(pWBufa);
-          if ( v17 < v6 )
+          v20 = wcslen(pWBufa);
+          if ( v20 < v8 )
           {
-            memcpy(pScratchSpace, conversionBuf, 4LL * (v17 + 1));
+            memcpy(pScratchSpace, conversionBuf, 4LL * (v20 + 1));
             return pScratchSpace;
           }
         }
@@ -2949,45 +2952,52 @@ LABEL_12:
       }
       if ( pDelete != 0 )
         operator delete[](pDelete);
-      if ( v16 < 0 )
+      if ( v19 < 0 )
         return defaultValue;
-      goto LABEL_4;
+      goto LABEL_5;
     case 2:
-      v8 = V_snwprintf(conversionBuf, 2048, &dword_33EEEC4);
+      v11 = V_snwprintf(conversionBuf, 2048, U"%d", this->m_iValue, v4, v5);
       if ( pScratchSpace != 0 )
-        goto LABEL_24;
-      goto LABEL_3;
+        goto LABEL_25;
+      goto LABEL_4;
     case 3:
-      v8 = V_snwprintf(conversionBuf, 2048, &unk_3500594);
+      v11 = V_snwprintf(conversionBuf, 2048, &unk_3500594, nScratchSpaceCount, v4, v5);
       if ( pScratchSpace == 0 )
-        goto LABEL_3;
-      goto LABEL_24;
+        goto LABEL_4;
+      goto LABEL_25;
     case 4:
+      v10 = this->m_uValue;
+      goto LABEL_3;
+    case 5:
+      goto LABEL_5;
     case 7:
-      v8 = V_snwprintf(conversionBuf, 2048, &unk_3500580);
-      if ( pScratchSpace == 0 )
-        goto LABEL_3;
-LABEL_24:
-      if ( v8 >= v6 )
-      {
+      if ( (*(this + 11) & 0x10) != 0 )
+        v10 = *this->m_pValue;
+      else
+        v10 = this->m_uValue;
 LABEL_3:
-        CKeyValues_Data::Internal_SetWString(this, conversionBuf);
+      v11 = V_snwprintf(conversionBuf, 2048, &unk_3500580, v10, v4, v5);
+      if ( pScratchSpace == 0 )
+        goto LABEL_4;
+LABEL_25:
+      if ( v11 >= v8 )
+      {
 LABEL_4:
+        CKeyValues_Data::Internal_SetWString(this, conversionBuf);
+LABEL_5:
         result = &this->0;
         if ( (*(this + 11) & 0x10) != 0 )
           return this->m_uValue;
       }
       else
       {
-        v18 = v8 + 1;
-        if ( v18 < 0 )
+        v21 = v11 + 1;
+        if ( v21 < 0 )
           __debugbreak();
-        memcpy(pScratchSpace, conversionBuf, v18);
+        memcpy(pScratchSpace, conversionBuf, v21);
         return pScratchSpace;
       }
       return result;
-    case 5:
-      goto LABEL_4;
   }
 }
 
@@ -4656,24 +4666,23 @@ void __fastcall KeyValues::RecursiveLoadFromBuffer(
   char *v17; // rbx
   char v18; // al
   int v19; // r14d
-  double v20; // xmm0_8
-  __m128d v21; // xmm0
-  float v22; // xmm1_4
+  __m128d v20; // xmm0
+  float v21; // xmm1_4
+  const char *v22; // rax
   const char *v23; // rax
-  const char *v24; // rax
-  HKeySymbol v25; // eax
+  HKeySymbol v24; // eax
   KeyValues *Key; // rax
-  KeyValues *v27; // r14
-  __int64 v28; // rdx
-  __int64 v29; // r14
+  KeyValues *v26; // r14
+  __int64 v27; // rdx
+  __int64 v28; // r14
+  char v29; // al
   char v30; // al
   char v31; // al
-  char v32; // al
   int64 ival; // [rsp+20h] [rbp-90h]
   int Errno; // [rsp+28h] [rbp-88h]
   float fval; // [rsp+2Ch] [rbp-84h]
   char *pSEnd; // [rsp+30h] [rbp-80h]
-  int v40; // [rsp+40h] [rbp-70h]
+  int v39; // [rsp+40h] [rbp-70h]
   char bAccepted; // [rsp+47h] [rbp-69h]
   bool wasQuoted; // [rsp+6Eh] [rbp-42h] BYREF
   bool bFoundConditional; // [rsp+6Fh] [rbp-41h] BYREF
@@ -4687,7 +4696,7 @@ void __fastcall KeyValues::RecursiveLoadFromBuffer(
   m_errorIndex = pErrorStack->m_errorIndex;
   if ( m_errorIndex <= 63 )
     pErrorStack->m_errorStack[m_errorIndex].nIndex = v6;
-  v40 = m_errorIndex + 1;
+  v39 = m_errorIndex + 1;
   m_maxErrorIndex = pErrorStack->m_maxErrorIndex;
   pErrorStack->m_errorIndex = m_errorIndex + 1;
   if ( m_errorIndex + 1 > m_maxErrorIndex )
@@ -4699,14 +4708,14 @@ void __fastcall KeyValues::RecursiveLoadFromBuffer(
     --pErrorStack->m_errorIndex;
     return;
   }
-  if ( v40 <= 63 )
+  if ( v39 <= 63 )
   {
-    pErrorStack->m_errorStack[v40].nIndex = 0xFFFFFF;
+    pErrorStack->m_errorStack[v39].nIndex = 0xFFFFFF;
     m_maxErrorIndex = pErrorStack->m_maxErrorIndex;
   }
   v9 = m_errorIndex + 2;
   if ( v9 > m_maxErrorIndex )
-    m_maxErrorIndex = v40;
+    m_maxErrorIndex = v39;
   m_uValue = 0;
   pErrorStack->m_errorIndex = v9;
   pErrorStack->m_maxErrorIndex = m_maxErrorIndex;
@@ -4746,8 +4755,8 @@ void __fastcall KeyValues::RecursiveLoadFromBuffer(
       v15 = (*(&KeyUsingKnownLastChild->CKeyValues_Data + 10) << 16) | *(&KeyUsingKnownLastChild->CKeyValues_Data + 4);
     else
       v15 = 0xFFFFFF;
-    if ( v40 <= 63 )
-      pErrorStack->m_errorStack[v40].nIndex = v15;
+    if ( v39 <= 63 )
+      pErrorStack->m_errorStack[v39].nIndex = v15;
     v16 = CKeyValuesTokenReader::ReadToken(tokenReader, &wasQuoted, &bFoundConditional);
     v17 = v16;
     if ( bFoundConditional )
@@ -4772,24 +4781,24 @@ LABEL_64:
     {
       if ( wasQuoted )
         goto LABEL_37;
-      v24 = CKeyValuesTokenReader::ReadToken(tokenReader, &wasQuoted, &bFoundConditional);
-      v17 = v24;
+      v23 = CKeyValuesTokenReader::ReadToken(tokenReader, &wasQuoted, &bFoundConditional);
+      v17 = v23;
       if ( bFoundConditional )
       {
-        if ( v24 != 0 )
+        if ( v23 != 0 )
         {
-          bAccepted = KeyValues::EvaluateConditional(this, pErrorStack, v24, pfnEvaluateSymbolProc);
+          bAccepted = KeyValues::EvaluateConditional(this, pErrorStack, v23, pfnEvaluateSymbolProc);
           v17 = CKeyValuesTokenReader::ReadToken(tokenReader, &wasQuoted, &bFoundConditional);
         }
         if ( bAccepted != 0 )
         {
-          v25.nIndex = KeyValues::GetNameSymbol(v14).nIndex;
-          Key = KeyValues::FindKey(this, v25);
-          v27 = Key;
+          v24.nIndex = KeyValues::GetNameSymbol(v14).nIndex;
+          Key = KeyValues::FindKey(this, v24);
+          v26 = Key;
           if ( v14 != Key && Key != 0 )
           {
             KeyValues::RemoveSubKey(this, Key, 0);
-            KeyValues::deleteThis(v27);
+            KeyValues::deleteThis(v26);
           }
         }
       }
@@ -4801,8 +4810,8 @@ LABEL_64:
     {
       if ( v18 == 123 && !wasQuoted )
       {
-        if ( v40 <= 63 )
-          pErrorStack->m_errorStack[v40].nIndex = 0xFFFFFF;
+        if ( v39 <= 63 )
+          pErrorStack->m_errorStack[v39].nIndex = 0xFFFFFF;
         KeyValues::RecursiveLoadFromBuffer(v14, pErrorStack, resourceName, tokenReader, pfnEvaluateSymbolProc);
         goto LABEL_34;
       }
@@ -4820,10 +4829,10 @@ LABEL_37:
     v19 = strlen(v17);
     pSEnd = &v17[v19];
     ival = V_strtoi64(v17, &pIEnd, 10);
-    v20 = V_SetErrno(0);
-    v21.m128d_f64[0] = V_strtod(v17, &pFEnd, v20);
-    v22 = _mm_movedup_pd(v21).m128d_f64[0];
-    fval = v22;
+    V_SetErrno(0);
+    v20.m128d_f64[0] = V_strtod(v17, &pFEnd);
+    v21 = _mm_movedup_pd(v20).m128d_f64[0];
+    fval = v21;
     Errno = V_GetErrno();
     if ( v19 > 1 && tolower(v17[1]) == 120 )
     {
@@ -4834,35 +4843,35 @@ LABEL_37:
       goto LABEL_46;
     if ( v19 == 18 && *v17 == 48 && v17[1] == 120 )
     {
+      v27 = 0;
       v28 = 0;
-      v29 = 0;
       do
       {
-        v30 = v17[v28 + 2];
-        if ( v30 > 96 )
+        v29 = v17[v27 + 2];
+        if ( v29 > 96 )
         {
-          v30 -= 39;
+          v29 -= 39;
         }
-        else if ( v30 >= 65 )
+        else if ( v29 >= 65 )
         {
-          v30 -= 7;
+          v29 -= 7;
         }
-        ++v28;
-        v29 = v30 - 48 + 16 * v29;
+        ++v27;
+        v28 = v29 - 48 + 16 * v28;
       }
-      while ( v28 != 16 );
+      while ( v27 != 16 );
       CKeyValues_Data::Internal_ClearData(v14);
-      v32 = *(&v14->CKeyValues_Data + 11);
-      v14->m_uValue = v29;
-      *(&v14->CKeyValues_Data + 11) = v32 & 0xE8 | 7;
+      v31 = *(&v14->CKeyValues_Data + 11);
+      v14->m_uValue = v28;
+      *(&v14->CKeyValues_Data + 11) = v31 & 0xE8 | 7;
       goto LABEL_47;
     }
     if ( pFEnd > pIEnd && pSEnd == pFEnd && Errno != 34 )
     {
       CKeyValues_Data::Internal_ClearData(v14);
-      v31 = *(&v14->CKeyValues_Data + 11);
+      v30 = *(&v14->CKeyValues_Data + 11);
       v14->m_flValue = fval;
-      *(&v14->CKeyValues_Data + 11) = v31 & 0xF8 | 3;
+      *(&v14->CKeyValues_Data + 11) = v30 & 0xF8 | 3;
       goto LABEL_47;
     }
     if ( pSEnd == pIEnd && (ival + 0x80000000LL) <= 0xFFFFFFFF )
@@ -4877,10 +4886,10 @@ LABEL_46:
       CKeyValues_Data::Internal_SetString(v14, v17);
     }
 LABEL_47:
-    v23 = CKeyValuesTokenReader::ReadToken(tokenReader, &wasQuoted, &bFoundConditional);
+    v22 = CKeyValuesTokenReader::ReadToken(tokenReader, &wasQuoted, &bFoundConditional);
     if ( bFoundConditional )
     {
-      bAccepted = KeyValues::EvaluateConditional(this, pErrorStack, v23, pfnEvaluateSymbolProc);
+      bAccepted = KeyValues::EvaluateConditional(this, pErrorStack, v22, pfnEvaluateSymbolProc);
       goto LABEL_34;
     }
     if ( tokenReader->m_bUsePriorToken || tokenReader->m_nTokensRead == 0 )
@@ -5652,7 +5661,7 @@ LABEL_58:
             {
               v103[0] = &buffer->m_Memory.m_pMemory[buffer->m_Get - buffer->m_nOffset];
               v69 = v103[0];
-              v33 = V_strtod(v103[0], v103, 0.0);
+              v33 = V_strtod(v103[0], v103);
               v101 = LODWORD(v33);
               if ( LODWORD(v103[0]) != v69 )
                 buffer->m_Get += LODWORD(v103[0]) - v69;
@@ -6768,7 +6777,7 @@ LABEL_8:
             {
               v96 = &buffer->m_Memory.m_pMemory[buffer->m_Get - buffer->m_nOffset];
               v72 = v96;
-              v73.m128d_f64[0] = V_strtod(v96, &v96, 0.0);
+              v73.m128d_f64[0] = V_strtod(v96, &v96);
               v31 = _mm_cvtpd_ps(_mm_unpacklo_pd(v73, v73));
               v94 = v31.m128i_i32[0];
               if ( v96 != v72 )

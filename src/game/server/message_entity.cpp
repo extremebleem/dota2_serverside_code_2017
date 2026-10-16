@@ -192,7 +192,7 @@ CEntityInstance *__fastcall CMessageEntity::CEntityInstanceEntityClass::Construc
 void __fastcall CMessageEntity::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CMessageEntity::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -202,7 +202,7 @@ void __fastcall CMessageEntity::CEntityInstanceEntityClass::~CEntityInstanceEnti
 void __fastcall CMessageEntity::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CMessageEntity::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }

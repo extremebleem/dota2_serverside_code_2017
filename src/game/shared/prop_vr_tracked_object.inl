@@ -79,7 +79,7 @@ void *__fastcall CPropVRTrackedObject::CEntityInstanceEntityClass::AllocateInsta
 void __fastcall CPropVRTrackedObject::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CPropVRTrackedObject::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -89,7 +89,7 @@ void __fastcall CPropVRTrackedObject::CEntityInstanceEntityClass::~CEntityInstan
 void __fastcall CPropVRTrackedObject::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CPropVRTrackedObject::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }

@@ -1146,49 +1146,50 @@ LABEL_95:
 // strings: "-- COpenList open list\n", "i = %d, area = %p, cost = %0.2f, heuristic = %0.2f, total cost = %0.2f, path length = %0., "-- end\n"
 void __fastcall CNavOpenList::DebugPrint(const CNavOpenList *const this)
 {
-  __int64 v2; // r12
-  int v3; // ebx
-  int v4; // esi
+  unsigned __int64 v2; // xmm0_8
+  __int64 v3; // r12
+  int v4; // ebx
+  int v5; // esi
   CNavArea *m_pData; // rdx
-  CNavOpenListElement *v6; // rax
+  CNavOpenListElement *v7; // rax
   float m_flCostSoFar; // xmm0_4
   float m_flTotalCost; // xmm1_4
-  double v9; // xmm2_8
-  float v10; // xmm1_4
-  double v11; // xmm0_8
-  double v12; // xmm1_8
+  double v10; // xmm2_8
+  float v11; // xmm1_4
+  double v12; // xmm0_8
+  double v13; // xmm1_8
 
-  Msg("-- COpenList open list\n");
+  v2 = Msg("-- COpenList open list\n").m128_u64[0];
   if ( this->m_PriorityQueue.m_heap.m_Size > 0 )
   {
-    v2 = 0;
     v3 = 0;
+    v4 = 0;
     do
     {
       m_pData = 0;
-      v6 = &this->m_PriorityQueue.m_heap.m_Memory.m_pMemory[v2];
-      m_flCostSoFar = v6->m_flCostSoFar;
-      m_flTotalCost = v6->m_flTotalCost;
-      v9 = m_flTotalCost;
-      v10 = m_flTotalCost - m_flCostSoFar;
-      v11 = m_flCostSoFar;
-      v12 = v10;
-      if ( v6->m_pNavArea.m_pAssociatedNavMesh == TheNavMesh )
-        m_pData = v6->m_pNavArea.m_pData;
-      v4 = v3++;
-      ++v2;
-      Msg(
-        "i = %d, area = %p, cost = %0.2f, heuristic = %0.2f, total cost = %0.2f, path length = %0.2f\n",
-        v4,
-        m_pData,
-        v11,
-        v12,
-        v9,
-        v6->m_flPathLengthSoFar);
+      v7 = &this->m_PriorityQueue.m_heap.m_Memory.m_pMemory[v3];
+      m_flCostSoFar = v7->m_flCostSoFar;
+      m_flTotalCost = v7->m_flTotalCost;
+      v10 = m_flTotalCost;
+      v11 = m_flTotalCost - m_flCostSoFar;
+      v12 = m_flCostSoFar;
+      v13 = v11;
+      if ( v7->m_pNavArea.m_pAssociatedNavMesh == TheNavMesh )
+        m_pData = v7->m_pNavArea.m_pData;
+      v5 = v4++;
+      ++v3;
+      v2 = Msg(
+             "i = %d, area = %p, cost = %0.2f, heuristic = %0.2f, total cost = %0.2f, path length = %0.2f\n",
+             v5,
+             m_pData,
+             v12,
+             v13,
+             v10,
+             v7->m_flPathLengthSoFar).m128_u64[0];
     }
-    while ( v3 < this->m_PriorityQueue.m_heap.m_Size );
+    while ( v4 < this->m_PriorityQueue.m_heap.m_Size );
   }
-  Msg("-- end\n");
+  Msg("-- end\n", *&v2);
 }
 
 
@@ -3110,7 +3111,7 @@ void __fastcall CNavSearchHexLattice::CNavSearchHexLattice(
   this->m_funcOnSearchArea._M_manager = std::_Function_base::_Ref_manager<CNavSearchHexLattice>::_M_manager;
   this->m_funcOnSearchArea._M_invoker = std::_Function_handler<NavSearchAreaResult_t ()(CNavArea &,NavSearchAreaInfo_t *),std::reference_wrapper<CNavSearchHexLattice>>::_M_invoke;
   v12 = 0;
-  this->_vptr_CNavBreadthFirstSearch = off_47AE230;
+  this->_vptr_CNavBreadthFirstSearch = off_47AE230;  // vptr: CNavSearchHexLattice
   this->m_funcOnSearchPos._M_manager = 0;
   if ( rFunc->_M_manager != 0 )
   {

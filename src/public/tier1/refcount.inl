@@ -4,7 +4,7 @@
 // CRefCountServiceBase<true, CRefMT>::~CRefCountServiceBase  (line 182, @0x000000000204e450, libserver.so)
 void __fastcall CRefCountServiceBase<true,CRefMT>::~CRefCountServiceBase(CRefCountServiceBase<true,CRefMT> *const this)
 {
-  this->_vptr_CRefCountServiceBase = off_3FEABF0;
+  this->_vptr_CRefCountServiceBase = off_3FEABF0;  // vptr: CRefCountServiceBase<true,CRefMT>
 }
 
 
@@ -12,7 +12,7 @@ void __fastcall CRefCountServiceBase<true,CRefMT>::~CRefCountServiceBase(CRefCou
 // calls: operator delete
 void __fastcall CRefCountServiceBase<true,CRefMT>::~CRefCountServiceBase(CRefCountServiceBase<true,CRefMT> *const this)
 {
-  this->_vptr_CRefCountServiceBase = off_3FEABF0;
+  this->_vptr_CRefCountServiceBase = off_3FEABF0;  // vptr: CRefCountServiceBase<true,CRefMT>
   operator delete(this);
 }
 
@@ -42,7 +42,7 @@ int __fastcall CRefCountServiceBase<true,CRefMT>::DoRelease(CRefCountServiceBase
 void __fastcall CRefCounted<CRefCountServiceBase<true,CRefMT>>::~CRefCounted(
         CRefCounted<CRefCountServiceBase<true,CRefMT> > *const this)
 {
-  this->_vptr_CRefCountServiceBase = off_3FEABF0;
+  this->_vptr_CRefCountServiceBase = off_3FEABF0;  // vptr: CRefCountServiceBase<true,CRefMT>
 }
 
 
@@ -51,7 +51,7 @@ void __fastcall CRefCounted<CRefCountServiceBase<true,CRefMT>>::~CRefCounted(
 void __fastcall CRefCounted<CRefCountServiceBase<true,CRefMT>>::~CRefCounted(
         CRefCounted<CRefCountServiceBase<true,CRefMT> > *const this)
 {
-  this->_vptr_CRefCountServiceBase = off_3FEABF0;
+  this->_vptr_CRefCountServiceBase = off_3FEABF0;  // vptr: CRefCountServiceBase<true,CRefMT>
   operator delete(this);
 }
 
@@ -60,8 +60,8 @@ void __fastcall CRefCounted<CRefCountServiceBase<true,CRefMT>>::~CRefCounted(
 void __fastcall CRefCounted1<CFunctor,CRefCountServiceBase<true,CRefMT>>::~CRefCounted1(
         CRefCounted1<CFunctor,CRefCountServiceBase<true,CRefMT> > *const this)
 {
-  this->_vptr_IRefCounted = off_3FF1FD0;
-  this->_vptr_CRefCountServiceBase = off_3FEABF0;
+  this->_vptr_IRefCounted = off_3FF1FD0;  // vptr: CRefCounted1<CFunctor,CRefCountServiceBase<true,CRefMT>>
+  this->_vptr_CRefCountServiceBase = off_3FEABF0;  // vptr: CRefCountServiceBase<true,CRefMT>
 }
 
 
@@ -70,8 +70,8 @@ void __fastcall CRefCounted1<CFunctor,CRefCountServiceBase<true,CRefMT>>::~CRefC
 void __fastcall CRefCounted1<CFunctor,CRefCountServiceBase<true,CRefMT>>::~CRefCounted1(
         CRefCounted1<CFunctor,CRefCountServiceBase<true,CRefMT> > *const this)
 {
-  this->_vptr_IRefCounted = off_3FF1FD0;
-  this->_vptr_CRefCountServiceBase = off_3FEABF0;
+  this->_vptr_IRefCounted = off_3FF1FD0;  // vptr: CRefCounted1<CFunctor,CRefCountServiceBase<true,CRefMT>>
+  this->_vptr_CRefCountServiceBase = off_3FEABF0;  // vptr: CRefCountServiceBase<true,CRefMT>
   operator delete(this);
 }
 

@@ -10,7 +10,7 @@ void __fastcall CDOTAItemSystem::~CDOTAItemSystem(CDOTAItemSystem *const this)
   CUtlString *v4; // rdi
   bool v5; // zf
 
-  this->_vptr_IEconItemSystem = off_47A0C50;
+  this->_vptr_IEconItemSystem = off_47A0C50;  // vptr: CDOTAItemSystem
   m_Size = this->m_vecLeagueImageNames.m_Size;
   this->_vptr_IDotaItemSystem = &off_47A0CF0;
   this->_vptr_IGameEventListener2 = off_47A0D18;
@@ -29,14 +29,14 @@ void __fastcall CDOTAItemSystem::~CDOTAItemSystem(CDOTAItemSystem *const this)
       CUtlMemory<CUtlString,int>::Purge(&this->m_vecLeagueImageNames.m_Memory);
   }
   v5 = !this->m_bRegisteredForEvents;
-  this->_vptr_IGameEventListener2 = off_3FB3190;
+  this->_vptr_IGameEventListener2 = off_3FB3190;  // vptr: CGameEventListener
   if ( !v5 )
   {
     if ( gameeventmanager != 0 )
       (*(gameeventmanager->_vptr_IBaseInterface + 6))(gameeventmanager, &this->CGameEventListener);
     this->m_bRegisteredForEvents = 0;
   }
-  this->_vptr_IGameEventListener2 = off_3FB3150;
+  this->_vptr_IGameEventListener2 = off_3FB3150;  // vptr: IGameEventListener2
   CEconItemSystem::~CEconItemSystem(this);
 }
 
@@ -50,7 +50,7 @@ void __fastcall CDOTAItemSystem::~CDOTAItemSystem(CDOTAItemSystem *const this)
   CUtlString *v4; // rdi
   bool v5; // zf
 
-  this->_vptr_IEconItemSystem = off_47A0C50;
+  this->_vptr_IEconItemSystem = off_47A0C50;  // vptr: CDOTAItemSystem
   m_Size = this->m_vecLeagueImageNames.m_Size;
   this->_vptr_IDotaItemSystem = &off_47A0CF0;
   this->_vptr_IGameEventListener2 = off_47A0D18;
@@ -69,14 +69,14 @@ void __fastcall CDOTAItemSystem::~CDOTAItemSystem(CDOTAItemSystem *const this)
       CUtlMemory<CUtlString,int>::Purge(&this->m_vecLeagueImageNames.m_Memory);
   }
   v5 = !this->m_bRegisteredForEvents;
-  this->_vptr_IGameEventListener2 = off_3FB3190;
+  this->_vptr_IGameEventListener2 = off_3FB3190;  // vptr: CGameEventListener
   if ( !v5 )
   {
     if ( gameeventmanager != 0 )
       (*(gameeventmanager->_vptr_IBaseInterface + 6))(gameeventmanager, &this->CGameEventListener);
     this->m_bRegisteredForEvents = 0;
   }
-  this->_vptr_IGameEventListener2 = off_3FB3150;
+  this->_vptr_IGameEventListener2 = off_3FB3150;  // vptr: IGameEventListener2
   CEconItemSystem::~CEconItemSystem(this);
   operator delete(this);
 }

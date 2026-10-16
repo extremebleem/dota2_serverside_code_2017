@@ -89,7 +89,7 @@ ICLSearchFields *__fastcall ICLSearchFieldFactory::CreateSearchFields(
     if ( v4 == 0 )
       return 0;
   }
-  result = (*v4->_vptr_ICLSearchFieldFactory)(v4, pPlayer, pKeyValues);
+  result = v4->CreateSearchFields(pPlayer, pKeyValues);
   result->m_iType = nType;
   return result;
 }
@@ -103,7 +103,7 @@ void __fastcall ICLSearchFields::~ICLSearchFields(ICLSearchFields *const this)
   CUtlVector<ICLSearchFields::DynamicValueLookup_t,CUtlMemory<ICLSearchFields::DynamicValueLookup_t,int> > *m_pDynamicValues; // rbx
   bool v3; // zf
 
-  this->_vptr_ICLSearchFields = off_40DF690;
+  this->_vptr_ICLSearchFields = off_40DF690;  // vptr: ICLSearchFields
   m_pDynamicValues = this->m_pDynamicValues;
   if ( m_pDynamicValues != 0 )
   {
@@ -848,7 +848,7 @@ void __cdecl CDOTA_CombatLog::YouForgot::ToDefine_DEFINE_GAME_SYSTEM()
 // callers: _GLOBAL__sub_I__unity_dota_02.cpp
 void __fastcall CDOTA_CombatLog::CDOTA_CombatLog(CDOTA_CombatLog *const this)
 {
-  this->_vptr_IGameSystem = off_40DF730;
+  this->_vptr_IGameSystem = off_40DF730;  // vptr: CDOTA_CombatLog
   this->m_MemoryStack.m_Size = 0;
   this->m_MemoryStack.m_Memory.m_pMemory = 0;
   this->m_MemoryStack.m_Memory.m_nAllocationCount = 0;
@@ -887,7 +887,7 @@ void __fastcall CDOTA_CombatLog::~CDOTA_CombatLog(CDOTA_CombatLog *const this)
   CDOTAUserMsg_StatsMatchDetails_t *m_StatsMsg; // rdi
   bool v3; // zf
 
-  this->_vptr_IGameSystem = off_40DF730;
+  this->_vptr_IGameSystem = off_40DF730;  // vptr: CDOTA_CombatLog
   m_StatsMsg = this->m_StatsMsg;
   if ( m_StatsMsg != 0 )
   {
@@ -973,7 +973,7 @@ LABEL_18:
       CUtlMemory<unsigned char,int>::Purge(&this->m_MemoryStack.m_Memory);
   }
 LABEL_9:
-  this->_vptr_IGameSystem = off_3F7C1B0;
+  this->_vptr_IGameSystem = off_3F7C1B0;  // vptr: CAutoGameSystem
   IGameSystem::~IGameSystem(this);
 }
 
@@ -8008,7 +8008,7 @@ void __fastcall CKillCamAttackerEntry::CKillCamAttackerEntry(CKillCamAttackerEnt
   CKillCamAbilityDamage *v5; // rdi
   bool v6; // zf
 
-  this->_vptr_CKillCamBase = off_40DF8D0;
+  this->_vptr_CKillCamBase = off_40DF8D0;  // vptr: CKillCamAttackerEntry
   this->m_hAttacker.m_Index = -1;
   this->m_strAttackerName.m_pString = 0;
   this->m_abilityinfo.m_Size = 0;
@@ -8590,7 +8590,7 @@ LABEL_11:
       {
         v40 = 0;
         v41 = 0;
-        v39->_vptr_CKillCamBase = off_40DF8D0;
+        v39->_vptr_CKillCamBase = off_40DF8D0;  // vptr: CKillCamAttackerEntry
         while ( v41 < v39->m_abilityinfo.m_Size )
         {
           ++v41;

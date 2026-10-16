@@ -1246,7 +1246,7 @@ void __fastcall RegisterMessageHandlerIfOverridden<EventGameFrameBoundary_t>(
 // callers: CAutoGameSystem::~CAutoGameSystem, CClientUIDialogManager::~CClientUIDialogManager, CServerAchievementManager::~CServerAchievementManager, CFogSystem::~CFogSystem, CResourcePrecacherGameSystem::~CResourcePrecacherGameSystem, CStepSimulationHook::~CStepSimulationHook, CSimThinkHook::~CSimThinkHook, CLightQueryGameSystem::~CLightQueryGameSystem, CStartupHookGameSystem<GameToolEventToolEvent_SFMRecordingStateChanged_tInternal, 0>::~CStartupHookGameSystem, GameToolEventToolEvent_SFMRecordingStateChanged_tHookupGameSystem::~GameToolEventToolEvent_SFMRecordingStateChanged_tHookupGameSystem, CNotifyManager::~CNotifyManager, CBodyGameSystem::~CBodyGameSystem (177 total)
 void __fastcall IGameSystem::~IGameSystem(IGameSystem *const this)
 {
-  this->_vptr_IGameSystem = off_3FC4070;
+  this->_vptr_IGameSystem = off_3FC4070;  // vptr: IGameSystem
 }
 
 
@@ -1254,7 +1254,7 @@ void __fastcall IGameSystem::~IGameSystem(IGameSystem *const this)
 // calls: operator delete
 void __fastcall IGameSystem::~IGameSystem(IGameSystem *const this)
 {
-  this->_vptr_IGameSystem = off_3FC4070;
+  this->_vptr_IGameSystem = off_3FC4070;  // vptr: IGameSystem
   operator delete(this);
 }
 
@@ -1521,7 +1521,7 @@ bool __cdecl IGameSystem::InitAllSystems()
       m_pFactory = IGameSystem::sm_GameSystemFactories.m_Vector.m_Memory.m_pMemory[LOWORD(IGameSystem::sm_GameSystemSortIndex.m_Memory.m_pMemory[v13 / 4])].m_pFactory;
       (*(m_pFactory->_vptr_IGameSystemFactory + 6))(m_pFactory);
       v16 = Plat_RelativeTicks();
-      if ( (*m_pFactory->_vptr_IGameSystemFactory)(m_pFactory) == 0 )
+      if ( m_pFactory->Init() == 0 )
       {
         while ( 1 )
         {
@@ -1814,7 +1814,7 @@ LABEL_9:
         v25 = EventGameInit_t::GetVTableIndex(void)::s_nComputedIndex;
       }
       if ( off_3FC3E30[v25] != v26->_vptr_IGameSystem[v25] )
-        (*i->_vptr_IGameSystemEventDispatcher)(i, v25, v26);
+        i->RegisterListener(v25, v26);
       v20 = EventGameShutdown_t::GetVTableIndex(void)::s_nComputedIndex;
       if ( EventGameShutdown_t::GetVTableIndex(void)::s_nComputedIndex < 0 )
       {
@@ -1831,7 +1831,7 @@ LABEL_9:
         v20 = EventGameShutdown_t::GetVTableIndex(void)::s_nComputedIndex;
       }
       if ( off_3FC3E30[v20] != v26->_vptr_IGameSystem[v20] )
-        (*i->_vptr_IGameSystemEventDispatcher)(i, v20, v26);
+        i->RegisterListener(v20, v26);
       v21 = EventGamePostInit_t::GetVTableIndex(void)::s_nComputedIndex;
       if ( EventGamePostInit_t::GetVTableIndex(void)::s_nComputedIndex < 0 )
       {
@@ -1848,7 +1848,7 @@ LABEL_9:
         v21 = EventGamePostInit_t::GetVTableIndex(void)::s_nComputedIndex;
       }
       if ( off_3FC3E30[v21] != v26->_vptr_IGameSystem[v21] )
-        (*i->_vptr_IGameSystemEventDispatcher)(i, v21, v26);
+        i->RegisterListener(v21, v26);
       v22 = EventGamePreShutdown_t::GetVTableIndex(void)::s_nComputedIndex;
       if ( EventGamePreShutdown_t::GetVTableIndex(void)::s_nComputedIndex < 0 )
       {
@@ -1865,7 +1865,7 @@ LABEL_9:
         v22 = EventGamePreShutdown_t::GetVTableIndex(void)::s_nComputedIndex;
       }
       if ( off_3FC3E30[v22] != v26->_vptr_IGameSystem[v22] )
-        (*i->_vptr_IGameSystemEventDispatcher)(i, v22, v26);
+        i->RegisterListener(v22, v26);
       RegisterMessageHandlerIfOverridden<EventBuildGameSessionManifest_t>(v26, i);
       v23 = EventGameActivate_t::GetVTableIndex(void)::s_nComputedIndex;
       if ( EventGameActivate_t::GetVTableIndex(void)::s_nComputedIndex < 0 )
@@ -1883,7 +1883,7 @@ LABEL_9:
         v23 = EventGameActivate_t::GetVTableIndex(void)::s_nComputedIndex;
       }
       if ( off_3FC3E30[v23] != v26->_vptr_IGameSystem[v23] )
-        (*i->_vptr_IGameSystemEventDispatcher)(i, v23, v26);
+        i->RegisterListener(v23, v26);
       v24 = EventGameDeactivate_t::GetVTableIndex(void)::s_nComputedIndex;
       if ( EventGameDeactivate_t::GetVTableIndex(void)::s_nComputedIndex < 0 )
       {
@@ -1900,7 +1900,7 @@ LABEL_9:
         v24 = EventGameDeactivate_t::GetVTableIndex(void)::s_nComputedIndex;
       }
       if ( off_3FC3E30[v24] != v26->_vptr_IGameSystem[v24] )
-        (*i->_vptr_IGameSystemEventDispatcher)(i, v24, v26);
+        i->RegisterListener(v24, v26);
       ++v18;
       RegisterMessageHandlerIfOverridden<EventClientFullySignedOn_t>(v26, i);
       RegisterMessageHandlerIfOverridden<EventClientDisconnect_t>(v26, i);

@@ -820,7 +820,7 @@ CEntityInstance *__fastcall CDOTA_BaseNPC_Warlock_Golem::CEntityInstanceEntityCl
 void __fastcall CDOTA_BaseNPC_Warlock_Golem::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_BaseNPC_Warlock_Golem::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -830,7 +830,7 @@ void __fastcall CDOTA_BaseNPC_Warlock_Golem::CEntityInstanceEntityClass::~CEntit
 void __fastcall CDOTA_BaseNPC_Warlock_Golem::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_BaseNPC_Warlock_Golem::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -1029,7 +1029,7 @@ CEntityInstance *__fastcall CDOTA_Unit_Hero_Warlock::CEntityInstanceEntityClass:
 void __fastcall CDOTA_Unit_Hero_Warlock::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Unit_Hero_Warlock::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -1039,7 +1039,7 @@ void __fastcall CDOTA_Unit_Hero_Warlock::CEntityInstanceEntityClass::~CEntityIns
 void __fastcall CDOTA_Unit_Hero_Warlock::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Unit_Hero_Warlock::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -1317,7 +1317,7 @@ CEntityInstance *__fastcall CDOTA_Ability_Warlock_Fatal_Bonds::CEntityInstanceEn
 void __fastcall CDOTA_Ability_Warlock_Fatal_Bonds::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Warlock_Fatal_Bonds::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -1327,7 +1327,7 @@ void __fastcall CDOTA_Ability_Warlock_Fatal_Bonds::CEntityInstanceEntityClass::~
 void __fastcall CDOTA_Ability_Warlock_Fatal_Bonds::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Warlock_Fatal_Bonds::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -2048,7 +2048,7 @@ CEntityInstance *__fastcall CDOTA_Ability_Warlock_Shadow_Word::CEntityInstanceEn
 void __fastcall CDOTA_Ability_Warlock_Shadow_Word::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Warlock_Shadow_Word::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -2058,7 +2058,7 @@ void __fastcall CDOTA_Ability_Warlock_Shadow_Word::CEntityInstanceEntityClass::~
 void __fastcall CDOTA_Ability_Warlock_Shadow_Word::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Warlock_Shadow_Word::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -2468,7 +2468,7 @@ CEntityInstance *__fastcall CDOTA_Ability_Warlock_Upheaval::CEntityInstanceEntit
 void __fastcall CDOTA_Ability_Warlock_Upheaval::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Warlock_Upheaval::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -2478,7 +2478,7 @@ void __fastcall CDOTA_Ability_Warlock_Upheaval::CEntityInstanceEntityClass::~CEn
 void __fastcall CDOTA_Ability_Warlock_Upheaval::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Warlock_Upheaval::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -2999,7 +2999,7 @@ CEntityInstance *__fastcall CDOTA_Ability_Warlock_RainOfChaos::CEntityInstanceEn
 void __fastcall CDOTA_Ability_Warlock_RainOfChaos::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Warlock_RainOfChaos::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -3009,7 +3009,7 @@ void __fastcall CDOTA_Ability_Warlock_RainOfChaos::CEntityInstanceEntityClass::~
 void __fastcall CDOTA_Ability_Warlock_RainOfChaos::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Warlock_RainOfChaos::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -3768,7 +3768,7 @@ CEntityInstance *__fastcall CDOTA_Ability_Warlock_Golem_Flaming_Fists::CEntityIn
 void __fastcall CDOTA_Ability_Warlock_Golem_Flaming_Fists::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Warlock_Golem_Flaming_Fists::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -3778,7 +3778,7 @@ void __fastcall CDOTA_Ability_Warlock_Golem_Flaming_Fists::CEntityInstanceEntity
 void __fastcall CDOTA_Ability_Warlock_Golem_Flaming_Fists::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Warlock_Golem_Flaming_Fists::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -4136,7 +4136,7 @@ CEntityInstance *__fastcall CDOTA_Ability_Warlock_Golem_Permanent_Immolation::CE
 void __fastcall CDOTA_Ability_Warlock_Golem_Permanent_Immolation::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Warlock_Golem_Permanent_Immolation::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -4146,7 +4146,7 @@ void __fastcall CDOTA_Ability_Warlock_Golem_Permanent_Immolation::CEntityInstanc
 void __fastcall CDOTA_Ability_Warlock_Golem_Permanent_Immolation::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Warlock_Golem_Permanent_Immolation::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }

@@ -234,7 +234,7 @@ CEntityInstance *__fastcall CDOTA_Item_Recipe_DragonLance::CEntityInstanceEntity
 void __fastcall CDOTA_Item_Recipe_DragonLance::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Item_Recipe_DragonLance::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -244,7 +244,7 @@ void __fastcall CDOTA_Item_Recipe_DragonLance::CEntityInstanceEntityClass::~CEnt
 void __fastcall CDOTA_Item_Recipe_DragonLance::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Item_Recipe_DragonLance::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -399,7 +399,7 @@ CEntityInstance *__fastcall CDOTA_Item_DragonLance::CEntityInstanceEntityClass::
 void __fastcall CDOTA_Item_DragonLance::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Item_DragonLance::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -409,7 +409,7 @@ void __fastcall CDOTA_Item_DragonLance::CEntityInstanceEntityClass::~CEntityInst
 void __fastcall CDOTA_Item_DragonLance::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Item_DragonLance::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }

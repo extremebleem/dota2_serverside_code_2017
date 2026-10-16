@@ -5,7 +5,7 @@
 // callers: CDOTA_Bot_AbilityUsage_Flask::~CDOTA_Bot_AbilityUsage_Flask, CDOTA_Bot_AbilityUsage_EtherealBlade::~CDOTA_Bot_AbilityUsage_EtherealBlade, CDOTA_Bot_AbilityUsage_Dust::~CDOTA_Bot_AbilityUsage_Dust, CDOTA_Bot_AbilityUsage_DiffusalBlade::~CDOTA_Bot_AbilityUsage_DiffusalBlade, CDOTA_Bot_AbilityUsage_Dagon::~CDOTA_Bot_AbilityUsage_Dagon, CDOTA_Bot_AbilityUsage_Cyclone::~CDOTA_Bot_AbilityUsage_Cyclone, CDOTA_Bot_AbilityUsage_CrimsonGuard::~CDOTA_Bot_AbilityUsage_CrimsonGuard, CDOTA_Bot_AbilityUsage_Courier::~CDOTA_Bot_AbilityUsage_Courier, CDOTA_Bot_AbilityUsage_Clarity::~CDOTA_Bot_AbilityUsage_Clarity, CDOTA_Bot_AbilityUsage_Cheese::~CDOTA_Bot_AbilityUsage_Cheese, CDOTA_Bot_AbilityUsage_CrimsonGuard::CDOTA_Bot_AbilityUsage_CrimsonGuard, CDOTA_Bot_AbilityUsage_Dagon::CDOTA_Bot_AbilityUsage_Dagon (254 total)
 void __fastcall CDOTA_Bot_AbilityUsage::~CDOTA_Bot_AbilityUsage(CDOTA_Bot_AbilityUsage *const this)
 {
-  this->_vptr_CDOTA_Bot_AbilityUsage = off_42C5890;
+  this->_vptr_CDOTA_Bot_AbilityUsage = off_42C5890;  // vptr: CDOTA_Bot_AbilityUsage
 }
 
 
@@ -13,7 +13,7 @@ void __fastcall CDOTA_Bot_AbilityUsage::~CDOTA_Bot_AbilityUsage(CDOTA_Bot_Abilit
 // calls: operator delete
 void __fastcall CDOTA_Bot_AbilityUsage::~CDOTA_Bot_AbilityUsage(CDOTA_Bot_AbilityUsage *const this)
 {
-  this->_vptr_CDOTA_Bot_AbilityUsage = off_42C5890;
+  this->_vptr_CDOTA_Bot_AbilityUsage = off_42C5890;  // vptr: CDOTA_Bot_AbilityUsage
   operator delete(this);
 }
 

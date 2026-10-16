@@ -16,7 +16,7 @@ struct sDamageEvent {
 void __fastcall CDOTA_BotMode_Laning::CDOTA_BotMode_Laning(CDOTA_BotMode_Laning *const this, CDOTA_Bot *pBot)
 {
   CDOTA_BotMode::CDOTA_BotMode(this, pBot);
-  this->_vptr_CDOTA_BotMode = off_42B8250;
+  this->_vptr_CDOTA_BotMode = off_42B8250;  // vptr: CDOTA_BotMode_Laning
   this->m_vForceMove = vec3_origin;
 }
 

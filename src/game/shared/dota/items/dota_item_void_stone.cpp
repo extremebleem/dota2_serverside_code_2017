@@ -177,7 +177,7 @@ CEntityInstance *__fastcall CDOTA_Item_VoidStone::CEntityInstanceEntityClass::Co
 void __fastcall CDOTA_Item_VoidStone::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Item_VoidStone::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -187,7 +187,7 @@ void __fastcall CDOTA_Item_VoidStone::CEntityInstanceEntityClass::~CEntityInstan
 void __fastcall CDOTA_Item_VoidStone::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Item_VoidStone::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }

@@ -112,7 +112,7 @@ CEntityInstance *__fastcall CBaseButton::CEntityInstanceEntityClass::ConstructIn
 void __fastcall CBaseButton::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CBaseButton::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -122,7 +122,7 @@ void __fastcall CBaseButton::CEntityInstanceEntityClass::~CEntityInstanceEntityC
 void __fastcall CBaseButton::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CBaseButton::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -393,7 +393,7 @@ CEntityInstance *__fastcall CRotButton::CEntityInstanceEntityClass::ConstructIns
 void __fastcall CRotButton::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CRotButton::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -403,7 +403,7 @@ void __fastcall CRotButton::CEntityInstanceEntityClass::~CEntityInstanceEntityCl
 void __fastcall CRotButton::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CRotButton::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -633,7 +633,7 @@ CEntityInstance *__fastcall CMomentaryRotButton::CEntityInstanceEntityClass::Con
 void __fastcall CMomentaryRotButton::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CMomentaryRotButton::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -643,7 +643,7 @@ void __fastcall CMomentaryRotButton::CEntityInstanceEntityClass::~CEntityInstanc
 void __fastcall CMomentaryRotButton::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CMomentaryRotButton::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -803,7 +803,7 @@ CEntityInstance *__fastcall CButtonTimed::CEntityInstanceEntityClass::ConstructI
 void __fastcall CButtonTimed::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CButtonTimed::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -813,7 +813,7 @@ void __fastcall CButtonTimed::CEntityInstanceEntityClass::~CEntityInstanceEntity
 void __fastcall CButtonTimed::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CButtonTimed::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }

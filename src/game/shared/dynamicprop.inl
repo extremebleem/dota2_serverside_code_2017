@@ -108,7 +108,7 @@ CEntityInstance *__fastcall CDynamicProp::CEntityInstanceEntityClass::ConstructI
 void __fastcall CDynamicProp::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDynamicProp::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -118,7 +118,7 @@ void __fastcall CDynamicProp::CEntityInstanceEntityClass::~CEntityInstanceEntity
 void __fastcall CDynamicProp::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDynamicProp::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -381,7 +381,7 @@ void __fastcall CDynamicPropAlias_dynamic_prop::~CDynamicPropAlias_dynamic_prop(
 void __fastcall CDynamicPropAlias_dynamic_prop::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDynamicPropAlias_dynamic_prop::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -391,7 +391,7 @@ void __fastcall CDynamicPropAlias_dynamic_prop::CEntityInstanceEntityClass::~CEn
 void __fastcall CDynamicPropAlias_dynamic_prop::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDynamicPropAlias_dynamic_prop::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -562,7 +562,7 @@ void __fastcall CDynamicPropAlias_prop_dynamic_override::~CDynamicPropAlias_prop
 void __fastcall CDynamicPropAlias_prop_dynamic_override::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDynamicPropAlias_prop_dynamic_override::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -572,7 +572,7 @@ void __fastcall CDynamicPropAlias_prop_dynamic_override::CEntityInstanceEntityCl
 void __fastcall CDynamicPropAlias_prop_dynamic_override::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDynamicPropAlias_prop_dynamic_override::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }

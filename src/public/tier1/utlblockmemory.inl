@@ -22,10 +22,8 @@ void __fastcall CUtlBlockMemory<float const*,int>::ChangeSize(
   __int64 v13; // rcx
   __int64 v14; // rdi
   __int64 v15; // rsi
-  __int64 v16; // r8
-  __int64 v17; // r9
-  __int64 v18; // [rsp+8h] [rbp-58h]
-  LeafCodeInfo_t v19; // [rsp+10h] [rbp-50h] BYREF
+  __int64 v16; // [rsp+8h] [rbp-58h]
+  LeafCodeInfo_t v17; // [rsp+10h] [rbp-50h] BYREF
 
   v2 = nBlocks;
   m_nBlocks = this->m_nBlocks;
@@ -53,12 +51,12 @@ void __fastcall CUtlBlockMemory<float const*,int>::ChangeSize(
   {
     if ( LoggingSystem_IsChannelEnabled(LOG_GENERAL, 4) != 0 )
     {
-      v19.m_szFile = "../public/tier1/utlblockmemory.h";
-      v19.m_szFunction = "ChangeSize";
-      v19.m_nLine = 286;
-      LoggingSystem_Log(LOG_GENERAL, LoggingSeverity_t::LS_ERROR, &v19, "CUtlBlockMemory overflow!\n");
+      v17.m_szFile = "../public/tier1/utlblockmemory.h";
+      v17.m_szFunction = "ChangeSize";
+      v17.m_nLine = 286;
+      LoggingSystem_Log(LOG_GENERAL, LoggingSeverity_t::LS_ERROR, &v17, "CUtlBlockMemory overflow!\n");
     }
-    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v14, v15, v12, v13, v16, v17) != 0 )
+    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v14, v15, v12, v13) != 0 )
       loc_0 = -559038737;
     Plat_ExitProcess(1);
     JUMPOUT(0x31D3438);
@@ -66,13 +64,13 @@ void __fastcall CUtlBlockMemory<float const*,int>::ChangeSize(
   if ( m_nBlocks < this->m_nBlocks )
   {
     v10 = m_nBlocks;
-    v18 = 8LL * ((*(this + 3) & 0x7FFFFFF) + 1);
+    v16 = 8LL * ((*(this + 3) & 0x7FFFFFF) + 1);
     while ( 1 )
     {
       v11 = &m_pMemory[v10];
       ++m_nBlocks;
       ++v10;
-      *v11 = (**g_pMemAlloc)(g_pMemAlloc, v18);
+      *v11 = (**g_pMemAlloc)(g_pMemAlloc, v16);
       if ( this->m_nBlocks <= m_nBlocks )
         break;
       m_pMemory = this->m_pMemory;

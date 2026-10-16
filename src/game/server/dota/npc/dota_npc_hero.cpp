@@ -242,7 +242,7 @@ void *__fastcall CInfoPlayerStartGoodGuys::CEntityInstanceEntityClass::AllocateI
 void __fastcall CInfoPlayerStartGoodGuys::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CInfoPlayerStartGoodGuys::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -252,7 +252,7 @@ void __fastcall CInfoPlayerStartGoodGuys::CEntityInstanceEntityClass::~CEntityIn
 void __fastcall CInfoPlayerStartGoodGuys::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CInfoPlayerStartGoodGuys::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -481,7 +481,7 @@ void *__fastcall CInfoPlayerStartBadGuys::CEntityInstanceEntityClass::AllocateIn
 void __fastcall CInfoPlayerStartBadGuys::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CInfoPlayerStartBadGuys::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -491,7 +491,7 @@ void __fastcall CInfoPlayerStartBadGuys::CEntityInstanceEntityClass::~CEntityIns
 void __fastcall CInfoPlayerStartBadGuys::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CInfoPlayerStartBadGuys::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -872,7 +872,7 @@ void __cdecl CDOTAHeroList::YouForgot::ToDefine_DEFINE_GAME_SYSTEM()
 // globals: CDefOps<CHandle<CBaseEntity>>::LessFunc(CHandle<CBaseEntity> const&,CHandle<CBaseEntity> const&), HeroLimitedUnitTracker_t::LessFunc(HeroLimitedUnitTracker_t const&,HeroLimitedUnitTracker_t const&)
 void __fastcall CDOTAHeroList::CDOTAHeroList(CDOTAHeroList *const this)
 {
-  this->_vptr_IGameSystem = off_42F7430;
+  this->_vptr_IGameSystem = off_42F7430;  // vptr: CDOTAHeroList
   this->m_HeroPositionHistory.m_Tree.m_Elements.m_pMemory = 0;
   this->m_HeroPositionHistory.m_Tree.m_LessFunc.m_LessFunc = CDefOps<CHandle<CBaseEntity>>::LessFunc;
   this->m_HeroPositionHistory.m_Tree.m_LastAlloc.index = -1;

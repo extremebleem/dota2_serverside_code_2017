@@ -7,7 +7,7 @@
 void __fastcall CDOTA_BotMode_Rune::CDOTA_BotMode_Rune(CDOTA_BotMode_Rune *const this, CDOTA_Bot *pBot)
 {
   CDOTA_BotMode::CDOTA_BotMode(this, pBot);
-  this->_vptr_CDOTA_BotMode = off_42B88D0;
+  this->_vptr_CDOTA_BotMode = off_42B88D0;  // vptr: CDOTA_BotMode_Rune
   this->m_iSpawner = -1;
   this->m_fRuneDesire = 0.0;
   this->m_bWaitForNextSpawn = 0;

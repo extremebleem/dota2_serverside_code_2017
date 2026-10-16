@@ -13,7 +13,7 @@ void __fastcall CDOTA_Bot_AbilityUsage_Urn::CDOTA_Bot_AbilityUsage_Urn(
   this->m_pAbility = pAbility;
   this->m_pBot = pBot;
   this->m_bUseOnCreeps = 0;
-  this->_vptr_CDOTA_Bot_AbilityUsage = off_42C6F10;
+  this->_vptr_CDOTA_Bot_AbilityUsage = off_42C6F10;  // vptr: CDOTA_Bot_AbilityUsage_Urn
   this->m_hTarget.m_Index = -1;
   this->m_iHeal = CDOTABaseAbility::GetLevelSpecialValueFor<int>(pAbility, "soul_heal_amount", -1, 1);
   this->m_iDamage = CDOTABaseAbility::GetLevelSpecialValueFor<int>(pAbility, "soul_damage_amount", -1, 1);

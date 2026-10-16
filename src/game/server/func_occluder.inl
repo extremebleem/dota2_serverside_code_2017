@@ -94,7 +94,7 @@ CEntityInstance *__fastcall CFuncOccluder::CEntityInstanceEntityClass::Construct
 void __fastcall CFuncOccluder::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CFuncOccluder::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -104,7 +104,7 @@ void __fastcall CFuncOccluder::CEntityInstanceEntityClass::~CEntityInstanceEntit
 void __fastcall CFuncOccluder::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CFuncOccluder::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }

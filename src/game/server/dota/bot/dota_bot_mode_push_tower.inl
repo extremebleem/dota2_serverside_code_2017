@@ -4,7 +4,7 @@
 // CDOTA_BotMode_PushTower::~CDOTA_BotMode_PushTower  (line 16, @0x0000000002826de0, libserver.so)  // inlines: ~CDOTA_BotMode
 void __fastcall CDOTA_BotMode_PushTower::~CDOTA_BotMode_PushTower(CDOTA_BotMode_PushTower *const this)
 {
-  this->_vptr_CDOTA_BotMode = off_42B75F0;
+  this->_vptr_CDOTA_BotMode = off_42B75F0;  // vptr: CDOTA_BotMode
 }
 
 
@@ -12,7 +12,7 @@ void __fastcall CDOTA_BotMode_PushTower::~CDOTA_BotMode_PushTower(CDOTA_BotMode_
 // calls: operator delete
 void __fastcall CDOTA_BotMode_PushTower::~CDOTA_BotMode_PushTower(CDOTA_BotMode_PushTower *const this)
 {
-  this->_vptr_CDOTA_BotMode = off_42B75F0;
+  this->_vptr_CDOTA_BotMode = off_42B75F0;  // vptr: CDOTA_BotMode
   operator delete(this);
 }
 
@@ -46,7 +46,7 @@ const char *__fastcall CDOTA_BotMode_PushTower::GetDebugString(CDOTA_BotMode_Pus
 void __fastcall CDOTA_BotMode_PushTower_Human::~CDOTA_BotMode_PushTower_Human(
         CDOTA_BotMode_PushTower_Human *const this)
 {
-  this->_vptr_CDOTA_BotMode = off_42B75F0;
+  this->_vptr_CDOTA_BotMode = off_42B75F0;  // vptr: CDOTA_BotMode
 }
 
 
@@ -55,7 +55,7 @@ void __fastcall CDOTA_BotMode_PushTower_Human::~CDOTA_BotMode_PushTower_Human(
 void __fastcall CDOTA_BotMode_PushTower_Human::~CDOTA_BotMode_PushTower_Human(
         CDOTA_BotMode_PushTower_Human *const this)
 {
-  this->_vptr_CDOTA_BotMode = off_42B75F0;
+  this->_vptr_CDOTA_BotMode = off_42B75F0;  // vptr: CDOTA_BotMode
   operator delete(this);
 }
 

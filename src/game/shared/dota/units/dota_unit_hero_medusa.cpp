@@ -604,7 +604,7 @@ CEntityInstance *__fastcall CDOTA_Ability_Medusa_SplitShot::CEntityInstanceEntit
 void __fastcall CDOTA_Ability_Medusa_SplitShot::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Medusa_SplitShot::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -614,7 +614,7 @@ void __fastcall CDOTA_Ability_Medusa_SplitShot::CEntityInstanceEntityClass::~CEn
 void __fastcall CDOTA_Ability_Medusa_SplitShot::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Medusa_SplitShot::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -887,7 +887,7 @@ CEntityInstance *__fastcall CDOTA_Unit_Hero_Medusa::CEntityInstanceEntityClass::
 void __fastcall CDOTA_Unit_Hero_Medusa::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Unit_Hero_Medusa::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -897,7 +897,7 @@ void __fastcall CDOTA_Unit_Hero_Medusa::CEntityInstanceEntityClass::~CEntityInst
 void __fastcall CDOTA_Unit_Hero_Medusa::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Unit_Hero_Medusa::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -1457,7 +1457,7 @@ CEntityInstance *__fastcall CDOTA_Ability_Medusa_MysticSnake::CEntityInstanceEnt
 void __fastcall CDOTA_Ability_Medusa_MysticSnake::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Medusa_MysticSnake::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -1467,7 +1467,7 @@ void __fastcall CDOTA_Ability_Medusa_MysticSnake::CEntityInstanceEntityClass::~C
 void __fastcall CDOTA_Ability_Medusa_MysticSnake::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Medusa_MysticSnake::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -2267,7 +2267,7 @@ CEntityInstance *__fastcall CDOTA_Ability_Medusa_ManaShield::CEntityInstanceEnti
 void __fastcall CDOTA_Ability_Medusa_ManaShield::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Medusa_ManaShield::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -2277,7 +2277,7 @@ void __fastcall CDOTA_Ability_Medusa_ManaShield::CEntityInstanceEntityClass::~CE
 void __fastcall CDOTA_Ability_Medusa_ManaShield::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Medusa_ManaShield::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -2746,7 +2746,7 @@ CEntityInstance *__fastcall CDOTA_Ability_Medusa_StoneGaze::CEntityInstanceEntit
 void __fastcall CDOTA_Ability_Medusa_StoneGaze::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Medusa_StoneGaze::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -2756,7 +2756,7 @@ void __fastcall CDOTA_Ability_Medusa_StoneGaze::CEntityInstanceEntityClass::~CEn
 void __fastcall CDOTA_Ability_Medusa_StoneGaze::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Medusa_StoneGaze::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }

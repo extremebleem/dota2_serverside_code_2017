@@ -12,7 +12,7 @@ void __fastcall CDOTA_Bot_AbilityUsage_BlinkDagger::CDOTA_Bot_AbilityUsage_Blink
   this->m_pAbility = pAbility;
   this->m_pBot = pBot;
   this->m_bUseOnCreeps = 0;
-  this->_vptr_CDOTA_Bot_AbilityUsage = off_42C5B90;
+  this->_vptr_CDOTA_Bot_AbilityUsage = off_42C5B90;  // vptr: CDOTA_Bot_AbilityUsage_BlinkDagger
   this->m_iBlinkRange = CDOTABaseAbility::GetLevelSpecialValueFor<int>(pAbility, "blink_range", -1, 1);
 }
 

@@ -221,7 +221,7 @@ CEntityInstance *__fastcall CFuncMoveLinearAlias_momentary_door::CEntityInstance
 void __fastcall CFuncMoveLinearAlias_momentary_door::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CFuncMoveLinearAlias_momentary_door::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -231,7 +231,7 @@ void __fastcall CFuncMoveLinearAlias_momentary_door::CEntityInstanceEntityClass:
 void __fastcall CFuncMoveLinearAlias_momentary_door::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CFuncMoveLinearAlias_momentary_door::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -437,7 +437,7 @@ CEntityInstance *__fastcall CFuncWaterAnalog::CEntityInstanceEntityClass::Constr
 void __fastcall CFuncWaterAnalog::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CFuncWaterAnalog::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -447,7 +447,7 @@ void __fastcall CFuncWaterAnalog::CEntityInstanceEntityClass::~CEntityInstanceEn
 void __fastcall CFuncWaterAnalog::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CFuncWaterAnalog::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }

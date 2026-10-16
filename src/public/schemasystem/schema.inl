@@ -52014,9 +52014,9 @@ void *__fastcall CSchemaClassBinding<DOTA_AssassinMinigameNetworkState>::Allocat
 {
   DOTA_AssassinMinigameNetworkState *v3; // rbx
 
-  v3 = operator new(0x10u);
+  v3 = operator new(0x10u);  // new DOTA_AssassinMinigameNetworkState (size matches)
   v3->nAssassinState.m_Value = 0;
-  v3->_vptr_DOTA_AssassinMinigameNetworkState = off_40F5BF0;
+  v3->_vptr_DOTA_AssassinMinigameNetworkState = off_40F5BF0;  // vptr: DOTA_AssassinMinigameNetworkState
   v3->nVictimHeroID.m_Value = 0;
   if ( *(pMemory + 4) != 0 )
   {
@@ -54252,13 +54252,17 @@ void *__fastcall CSchemaClassBinding<CAttributeList>::AllocateAndCopyConstruct(
   char *v13; // rsi
   __int64 v14; // rdx
   char v15; // al
-  int v17; // ebx
-  int v18; // edx
-  int v19; // ecx
-  int v20; // esi
-  int v21; // r8d
-  int v22; // r9d
-  LeafCodeInfo_t v23; // [rsp+0h] [rbp-40h] BYREF
+  __int64 v17; // rdx
+  __int64 v18; // rcx
+  __int64 v19; // rdi
+  __int64 v20; // rsi
+  int v21; // ebx
+  int v22; // edx
+  int v23; // ecx
+  int v24; // esi
+  int v25; // r8d
+  int v26; // r9d
+  LeafCodeInfo_t v27; // [rsp+0h] [rbp-40h] BYREF
 
   v3 = operator new(0x58u);
   CAttributeList::CAttributeList(v3);
@@ -54294,21 +54298,21 @@ void *__fastcall CSchemaClassBinding<CAttributeList>::AllocateAndCopyConstruct(
     {
       if ( LoggingSystem_IsChannelEnabled(LOG_GENERAL, 4) != 0 )
       {
-        v23.m_szFile = "../../public/tier2/fieldpath.h";
-        v23.m_szFunction = "Path_SetCount";
-        v23.m_nLine = 442;
+        v27.m_szFile = "../../public/tier2/fieldpath.h";
+        v27.m_szFunction = "Path_SetCount";
+        v27.m_nLine = 442;
         LoggingSystem_Log(
           LOG_GENERAL,
           LoggingSeverity_t::LS_ERROR,
-          &v23,
+          &v27,
           "Path_SetCount failed, depth already == DEFAULT_MAX_PATH_DEPTH(%d)",
           6);
       }
-      if ( Plat_ShouldCollectMiniDumpsForFatalErrors() != 0 )
+      if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v19, v20, v17, v18) != 0 )
         loc_0 = -559038737;
-      v17 = Plat_ExitProcess(1);
+      v21 = Plat_ExitProcess(1);
       operator delete(v3);
-      Unwind_Resume(v17, v20, v18, v19, v21, v22);
+      Unwind_Resume(v21, v24, v22, v23, v25, v26);
     }
     v3->m_Attributes.m_PathToVector.m_nCount = v11;
     v12 = *(pMemory + 28);
@@ -64981,7 +64985,11 @@ void __fastcall CSchemaClassBinding<CAttributeList>::Copy(
   char *v14; // rsi
   size_t v15; // rdx
   char v16; // al
-  LeafCodeInfo_t v17; // [rsp+0h] [rbp-40h] BYREF
+  __int64 v17; // rdx
+  __int64 v18; // rcx
+  __int64 v19; // rdi
+  __int64 v20; // rsi
+  LeafCodeInfo_t v21; // [rsp+0h] [rbp-40h] BYREF
 
   if ( pDst + 8 != pSrc + 8 )
   {
@@ -65013,17 +65021,17 @@ void __fastcall CSchemaClassBinding<CAttributeList>::Copy(
     {
       if ( LoggingSystem_IsChannelEnabled(LOG_GENERAL, 4) != 0 )
       {
-        v17.m_szFile = "../../public/tier2/fieldpath.h";
-        v17.m_szFunction = "Path_SetCount";
-        v17.m_nLine = 442;
+        v21.m_szFile = "../../public/tier2/fieldpath.h";
+        v21.m_szFunction = "Path_SetCount";
+        v21.m_nLine = 442;
         LoggingSystem_Log(
           LOG_GENERAL,
           LoggingSeverity_t::LS_ERROR,
-          &v17,
+          &v21,
           "Path_SetCount failed, depth already == DEFAULT_MAX_PATH_DEPTH(%d)",
           6);
       }
-      if ( Plat_ShouldCollectMiniDumpsForFatalErrors() != 0 )
+      if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v19, v20, v17, v18) != 0 )
         loc_0 = -559038737;
       Plat_ExitProcess(1);
       JUMPOUT(0x2EAFAA7);
@@ -84153,7 +84161,7 @@ const CSchemaClassBindingBase *__fastcall CSchemaClassBinding<Extent>::DeduceDer
 }
 
 
-// CSchemaNonConstructibleClassBindingBase::ReportClassError  (line 475, @0x0000000001e9cc50 libserver.so, @0x0000000001ea6d20 libserver.so, @0x0000000001ea81e0 libserver.so, @0x0000000001ea9350 libserver.so, @0x0000000001eaba20 libserver.so, @0x0000000001ead060 libserver.so (+57 more))  // inlines: LeafCodeInfo_t
+// CSchemaNonConstructibleClassBindingBase::ReportClassError  (line 475, @0x0000000001e9cc50 libserver.so, @0x0000000001ea6d20 libserver.so, @0x0000000001ea81e0 libserver.so, @0x0000000001ea9350 libserver.so, @0x0000000001eaba20 libserver.so, @0x0000000001ead060 libserver.so (+65 more))  // inlines: LeafCodeInfo_t
 // calls: LoggingSystem_IsChannelEnabled, Plat_ShouldCollectMiniDumpsForFatalErrors, Plat_ExitProcess, LoggingSystem_Log(int,LoggingSeverity_t,LeafCodeInfo_t const&,char const*,...)
 // callers: CSchemaNonConstructibleClassBindingBase::Allocate, CSchemaNonConstructibleClassBindingBase::Deallocate, CSchemaNonConstructibleClassBindingBase::AllocateAndCopyConstruct, CSchemaNonConstructibleClassBindingBase::Copy, CSchemaNonConstructibleClassBindingBase::ConstructInPlace, CSchemaNonConstructibleClassBindingBase::DestructInPlace
 // strings: "../../public/schemasystem/schema.h", "ReportClassError", "%s: %s\n"
@@ -84185,33 +84193,6 @@ LABEL_5:
 }
 
 
-// CSchemaNonConstructibleClassBindingBase::ReportClassError  (line 475, @0x0000000002e315c0 libserver.so, @0x0000000002e69ee0 libserver.so, @0x0000000002ec2900 libserver.so, @0x0000000002ec74c0 libserver.so, @0x0000000002f12540 libserver.so, @0x0000000002f2eb30 libserver.so (+2 more))  // inlines: LeafCodeInfo_t
-// calls: LoggingSystem_IsChannelEnabled, Plat_ShouldCollectMiniDumpsForFatalErrors, Plat_ExitProcess, LoggingSystem_Log(int,LoggingSeverity_t,LeafCodeInfo_t const&,char const*,...)
-// strings: "../../public/schemasystem/schema.h", "ReportClassError", "%s: %s\n"
-void __fastcall __noreturn CSchemaNonConstructibleClassBindingBase::ReportClassError(
-        const CSchemaNonConstructibleClassBindingBase *const this,
-        const char *pMessage)
-{
-  int (**vptr_ISchemaBinding)(...); // r9
-  LeafCodeInfo_t v5; // [rsp+0h] [rbp-40h] BYREF
-
-  if ( LoggingSystem_IsChannelEnabled(LOG_GENERAL, 4) != 0 )
-    goto LABEL_5;
-  while ( 1 )
-  {
-    if ( Plat_ShouldCollectMiniDumpsForFatalErrors() != 0 )
-      loc_0 = -559038737;
-    Plat_ExitProcess(1);
-LABEL_5:
-    vptr_ISchemaBinding = this->_vptr_ISchemaBinding;
-    v5.m_szFile = "../../public/schemasystem/schema.h";
-    v5.m_szFunction = "ReportClassError";
-    v5.m_nLine = 477;
-    LoggingSystem_Log(LOG_GENERAL, LoggingSeverity_t::LS_ERROR, &v5, "%s: %s\n", pMessage, vptr_ISchemaBinding);
-  }
-}
-
-
 // CSchemaNonConstructibleClassBindingBase::ReportClassError  (line 475, @0x00000000030d4420 libserver.so, @0x00000000030d5ff0 libserver.so, @0x00000000030d8a90 libserver.so, @0x00000000030daed0 libserver.so, @0x000000000317d220 libserver.so, @0x000000000320e8c0 libserver.so)  // inlines: LeafCodeInfo_t
 // calls: LoggingSystem_IsChannelEnabled, Plat_ShouldCollectMiniDumpsForFatalErrors, Plat_ExitProcess, LoggingSystem_Log(int,LoggingSeverity_t,LeafCodeInfo_t const&,char const*,...)
 // strings: "../public/schemasystem/schema.h", "ReportClassError", "%s: %s\n"
@@ -84223,24 +84204,22 @@ void __fastcall __noreturn CSchemaNonConstructibleClassBindingBase::ReportClassE
   __int64 v5; // rcx
   __int64 v6; // rdi
   __int64 v7; // rsi
-  __int64 v8; // r8
-  __int64 v9; // r9
   int (**vptr_ISchemaBinding)(...); // r9
-  LeafCodeInfo_t v11; // [rsp+0h] [rbp-40h] BYREF
+  LeafCodeInfo_t v9; // [rsp+0h] [rbp-40h] BYREF
 
   if ( LoggingSystem_IsChannelEnabled(LOG_GENERAL, 4) != 0 )
     goto LABEL_5;
   while ( 1 )
   {
-    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v6, v7, v4, v5, v8, v9) != 0 )
+    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v6, v7, v4, v5) != 0 )
       loc_0 = -559038737;
     Plat_ExitProcess(1);
 LABEL_5:
     vptr_ISchemaBinding = this->_vptr_ISchemaBinding;
-    v11.m_szFile = "../public/schemasystem/schema.h";
-    v11.m_szFunction = "ReportClassError";
-    v11.m_nLine = 477;
-    LoggingSystem_Log(LOG_GENERAL, LoggingSeverity_t::LS_ERROR, &v11, "%s: %s\n", pMessage, vptr_ISchemaBinding);
+    v9.m_szFile = "../public/schemasystem/schema.h";
+    v9.m_szFunction = "ReportClassError";
+    v9.m_nLine = 477;
+    LoggingSystem_Log(LOG_GENERAL, LoggingSeverity_t::LS_ERROR, &v9, "%s: %s\n", pMessage, vptr_ISchemaBinding);
   }
 }
 
@@ -104678,58 +104657,58 @@ void __fastcall CSchemaNonConstructibleClassBinding<CBasePlayer>::Register(
         const char *pBinaryName,
         const char *pProjectName)
 {
-  CSchemaClassInfo *v6; // rax
+  CSchemaClassInfo *v7; // rax
   CSchemaClassBindingBase **m_ppThisModuleBindingPointer; // r12
   CSchemaClassInfo *m_pClassInfo_N; // r12
-  __int64 v9; // rax
-  int16 v10; // ax
+  __int64 v10; // rax
+  int16 v11; // ax
   int32 m_nImplLength; // r8d
-  CSchemaClassInfo *v12; // rax
-  int16 v13; // dx
+  CSchemaClassInfo *v13; // rax
+  int16 v14; // dx
 
-  v6 = CBasePlayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
+  v7 = CBasePlayer::RegisterClassSchema_N__MISSING_DECL_MEANS_MACRO__UNRESOLVED_EXT_MEANS_SCHEMA_GENERATED_CODE(
          pSchemaSystem,
          pBinaryName,
          pProjectName);
-  if ( !this->m_pClassInfo_N )
+  if ( this->m_pClassInfo_N == 0 )
   {
     this->m_pBinaryName = pBinaryName;
-    this->m_pClassInfo_N = v6;
+    this->m_pClassInfo_N = v7;
     this->m_pProjectName = pProjectName;
     this->m_pClassInfo_Old_Synthesized = 0;
-    v6->m_pBinding = this;
+    v7->m_pBinding = this;
     m_ppThisModuleBindingPointer = this->m_ppThisModuleBindingPointer;
     *m_ppThisModuleBindingPointer = (**this->m_pClassInfo_N->m_pOuterTypeScope)(
                                       this->m_pClassInfo_N->m_pOuterTypeScope,
                                       this,
-                                      v6,
+                                      v7,
                                       "CBasePlayer");
     m_pClassInfo_N = this->m_pClassInfo_N;
-    v9 = (*(*m_pClassInfo_N->m_pOuterTypeScope + 88LL))(
-           m_pClassInfo_N->m_pOuterTypeScope,
-           m_pClassInfo_N->m_Name.m_pImplChars);
+    v10 = (*(*m_pClassInfo_N->m_pOuterTypeScope + 88LL))(
+            m_pClassInfo_N->m_pOuterTypeScope,
+            m_pClassInfo_N->m_Name.m_pImplChars);
     if ( !m_pClassInfo_N->m_bInitialized )
     {
-      m_pClassInfo_N->m_pTypeOf = v9;
-      v10 = CSchemaClassInfo::CalculateMultipleInheritanceDepth(m_pClassInfo_N);
+      m_pClassInfo_N->m_pTypeOf = v10;
+      v11 = CSchemaClassInfo::CalculateMultipleInheritanceDepth(m_pClassInfo_N);
       m_nImplLength = m_pClassInfo_N->m_BaseClasses.m_Data.m_nImplLength;
-      m_pClassInfo_N->m_nMultipleInheritanceDepth = v10;
-      if ( m_nImplLength )
+      m_pClassInfo_N->m_nMultipleInheritanceDepth = v11;
+      if ( m_nImplLength != 0 )
       {
-        v12 = m_pClassInfo_N;
-        v13 = 0;
+        v13 = m_pClassInfo_N;
+        v14 = 0;
         do
         {
-          ++v13;
-          v12 = *(v12->m_BaseClasses.m_Data.m_pImplElements + 1);
+          ++v14;
+          v13 = *(v13->m_BaseClasses.m_Data.m_pImplElements + 1);
         }
-        while ( v12->m_BaseClasses.m_Data.m_nImplLength );
+        while ( v13->m_BaseClasses.m_Data.m_nImplLength != 0 );
       }
       else
       {
-        v13 = 0;
+        v14 = 0;
       }
-      m_pClassInfo_N->m_nSingleInheritanceDepth = v13;
+      m_pClassInfo_N->m_nSingleInheritanceDepth = v14;
       m_pClassInfo_N->m_bInitialized = 1;
     }
     this->m_pSchemaType = this->m_pClassInfo_N->m_pTypeOf;

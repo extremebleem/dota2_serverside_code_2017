@@ -234,13 +234,11 @@ void __fastcall CResponseFileParser::LoadFromBuffer(
   __int64 v19; // rcx
   __int64 v20; // rdi
   __int64 v21; // rsi
-  __int64 v22; // r8
-  __int64 v23; // r9
-  LeafCodeInfo_t v24; // [rsp+10h] [rbp-160h] BYREF
+  LeafCodeInfo_t v22; // [rsp+10h] [rbp-160h] BYREF
   char cur[264]; // [rsp+30h] [rbp-140h] BYREF
-  unsigned __int64 v26; // [rsp+138h] [rbp-38h]
+  unsigned __int64 v24; // [rsp+138h] [rbp-38h]
 
-  v26 = __readfsqword(0x28u);
+  v24 = __readfsqword(0x28u);
   CStringPool::Allocate(&this->m_IncludedFiles, scriptfile);
   CResponseFileParser::PushScript(this, scriptfile, buffer);
   if ( `guard variable for'CResponseFileParser::LoadFromBuffer(char const*,char const*)::rr_dumpresponses == 0
@@ -270,18 +268,18 @@ LABEL_8:
         goto LABEL_24;
       while ( 1 )
       {
-        if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v20, v21, v18, v19, v22, v23) != 0 )
+        if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v20, v21, v18, v19) != 0 )
           loc_0 = -559038737;
         Plat_ExitProcess(1);
 LABEL_24:
         currenttoken -= v17;
-        v24.m_szFile = "response_system_parser.cpp";
-        v24.m_szFunction = "LoadFromBuffer";
-        v24.m_nLine = 155;
+        v22.m_szFile = "response_system_parser.cpp";
+        v22.m_szFunction = "LoadFromBuffer";
+        v22.m_nLine = 155;
         LoggingSystem_Log(
           LOG_GENERAL,
           LoggingSeverity_t::LS_ERROR,
-          &v24,
+          &v22,
           "CResponseFileParser::LoadFromBuffer:  Unknown entry type '%s', expecting 'response', 'criterion', 'enumeration"
           "' or 'rules' in file %s(offset:%i)\n",
           this->token,
@@ -2884,36 +2882,37 @@ int __fastcall CResponseFileParser::ParseOneCriterion(CResponseFileParser *const
   signed __int16 m_Left; // r12
   UtlRBTreeNode_t<CUtlMap<char const*,Criteria,short int,bool (*)(char const* const&,char const* const&)>::Node_t,short int> *v18; // rax
   __int64 v19; // rbx
-  float v21; // xmm1_4
-  __int16 v22; // ax
+  float v21; // xmm0_4
+  float v22; // xmm1_4
+  __int16 v23; // ax
   int idx; // [rsp+Ch] [rbp-2C4h]
   CUtlMap<char const*,Criteria,short int,bool (*)(char const* const&,char const* const&)>::ElemType_t *pNewCriterion; // [rsp+18h] [rbp-2B8h]
-  __int64 v26; // [rsp+30h] [rbp-2A0h]
+  __int64 v27; // [rsp+30h] [rbp-2A0h]
   char *i; // [rsp+38h] [rbp-298h]
   int ia; // [rsp+38h] [rbp-298h]
-  UtlSymId_t v29; // [rsp+40h] [rbp-290h]
-  unsigned int v30; // [rsp+44h] [rbp-28Ch] BYREF
-  CUtlMap<char const*,Criteria,short int,bool (*)(char const* const&,char const* const&)>::KeyType_t v31; // [rsp+48h] [rbp-288h] BYREF
+  UtlSymId_t v30; // [rsp+40h] [rbp-290h]
+  unsigned int v31; // [rsp+44h] [rbp-28Ch] BYREF
+  CUtlMap<char const*,Criteria,short int,bool (*)(char const* const&,char const* const&)>::KeyType_t v32; // [rsp+48h] [rbp-288h] BYREF
   char *token; // [rsp+50h] [rbp-280h] BYREF
-  Criteria v33; // [rsp+58h] [rbp-278h] BYREF
+  Criteria v34; // [rsp+58h] [rbp-278h] BYREF
   char key[256]; // [rsp+90h] [rbp-240h] BYREF
   char value[264]; // [rsp+190h] [rbp-140h] BYREF
-  unsigned __int64 v36; // [rsp+298h] [rbp-38h]
+  unsigned __int64 v37; // [rsp+298h] [rbp-38h]
 
-  v36 = __readfsqword(0x28u);
+  v37 = __readfsqword(0x28u);
   m_owner = this->m_owner;
-  v31 = criterionName;
+  v32 = criterionName;
   if ( criterionName == 0 )
     goto LABEL_49;
   if ( CUtlMap<char const*,Criteria,short,bool (*)(char const* const&,char const* const&)>::Find(
          &m_owner->m_Criteria.m_Elements,
-         &v31) == -1 )
+         &v32) == -1 )
   {
     m_owner = this->m_owner;
 LABEL_49:
-    v22 = CUtlDict<Criteria,short>::Insert(&m_owner->m_Criteria, criterionName);
-    idx = v22;
-    pNewCriterion = &this->m_owner->m_Criteria.m_Elements.m_Tree.m_Elements.m_pMemory[v22].m_Data.elem;
+    v23 = CUtlDict<Criteria,short>::Insert(&m_owner->m_Criteria, criterionName);
+    idx = v23;
+    pNewCriterion = &this->m_owner->m_Criteria.m_Elements.m_Tree.m_Elements.m_pMemory[v23].m_Data.elem;
     goto LABEL_7;
   }
   if ( `guard variable for'CResponseFileParser::ParseOneCriterion(char const*)::dummy == 0
@@ -2938,10 +2937,10 @@ LABEL_8:
     {
       CResponseFileParser::ParseToken(this);
       i = this->token;
-      v30 = HashStringConventional(this->token);
+      v31 = HashStringConventional(this->token);
       if ( CUtlRBTree<unsigned int,unsigned short,bool (*)(unsigned int const&,unsigned int const&),CUtlMemory<UtlRBTreeNode_t<unsigned int,unsigned short>,unsigned short>>::Find(
              &this->m_RootCommandHashes,
-             &v30) != 0xFFFF )
+             &v31) != 0xFFFF )
       {
         v12 = pNewCriterion;
         this->m_bUnget = 1;
@@ -2961,14 +2960,14 @@ LABEL_8:
             V_strlower_fast(key);
             CResponseCriteriaSet::ComputeCriteriaSymbol(key);
             v5 = 1;
-            pNewCriterion->nameSym.m_Id = v29;
+            pNewCriterion->nameSym.m_Id = v30;
             pNewCriterion->value = ResponseCopyString(value);
           }
           else
           {
             CResponseFileParser::ParseToken(this);
-            strtod(i, 0);
-            pNewCriterion->weight.m_storage.rawWord = float16::ConvertFloatTo16bits(v21);
+            v21 = strtod(i, 0);
+            pNewCriterion->weight.m_storage.rawWord = float16::ConvertFloatTo16bits(v21, v22);
           }
         }
         else
@@ -2997,7 +2996,7 @@ LABEL_14:
         if ( V_stricmp_fast(i, "}") == 0 )
           break;
         v8 = this->m_owner;
-        Criteria::Criteria(&v33);
+        Criteria::Criteria(&v34);
         token = this->token;
         m_Root = v8->m_Criteria.m_Elements.m_Tree.m_Root;
         if ( m_Root != -1 )
@@ -3024,12 +3023,12 @@ LABEL_14:
             if ( m_Root == -1 )
               goto LABEL_21;
           }
-          Criteria::~Criteria(&v33);
+          Criteria::~Criteria(&v34);
           *CUtlLeanVectorImpl<CUtlLeanVectorFixedGrowableBase<unsigned short,(unsigned short)6,short>,unsigned short,short>::AddToTailGetPtr(&pNewCriterion->subcriteria) = m_Root;
           goto LABEL_11;
         }
 LABEL_21:
-        Criteria::~Criteria(&v33);
+        Criteria::~Criteria(&v34);
         CResponseFileParser::ResponseWarning(
           this,
           "Skipping unrecongized subcriterion '%s' in '%s'\n",
@@ -3054,21 +3053,21 @@ LABEL_27:
   ia = v13->m_PendingCriterion.m_Size - 1;
   if ( ia >= 0 )
   {
-    v26 = ia;
+    v27 = ia;
     while ( 1 )
     {
-      v14 = CUtlString::Get(&v13->m_PendingCriterion.m_Memory.m_pMemory[v26].szToken);
+      v14 = CUtlString::Get(&v13->m_PendingCriterion.m_Memory.m_pMemory[v27].szToken);
       v15 = this->m_owner;
       v16 = v14;
       if ( v14 != 0 )
       {
-        Criteria::Criteria(&v33);
+        Criteria::Criteria(&v34);
         token = v16;
         m_Left = v15->m_Criteria.m_Elements.m_Tree.m_Root;
         if ( m_Left == -1 )
         {
 LABEL_36:
-          Criteria::~Criteria(&v33);
+          Criteria::~Criteria(&v34);
         }
         else
         {
@@ -3094,15 +3093,15 @@ LABEL_36:
             if ( m_Left == -1 )
               goto LABEL_36;
           }
-          Criteria::~Criteria(&v33);
-          *CUtlLeanVectorImpl<CUtlLeanVectorFixedGrowableBase<unsigned short,(unsigned short)6,short>,unsigned short,short>::AddToTailGetPtr(&this->m_owner->m_PendingCriterion.m_Memory.m_pMemory[v26].pRule->m_Criteria) = m_Left;
+          Criteria::~Criteria(&v34);
+          *CUtlLeanVectorImpl<CUtlLeanVectorFixedGrowableBase<unsigned short,(unsigned short)6,short>,unsigned short,short>::AddToTailGetPtr(&this->m_owner->m_PendingCriterion.m_Memory.m_pMemory[v27].pRule->m_Criteria) = m_Left;
           CUtlVectorBase<CResponseSystem::PendingCriterionRule,CUtlMemory<CResponseSystem::PendingCriterionRule,int>>::Remove(
             &this->m_owner->m_PendingCriterion,
             ia);
         }
       }
       --ia;
-      --v26;
+      --v27;
       if ( ia == -1 )
         break;
       v13 = this->m_owner;

@@ -51,7 +51,7 @@ void __fastcall CDOTA_Bot_AbilityUsage_Omniknight_Purification::CDOTA_Bot_Abilit
   this->m_pAbility = pAbility;
   this->m_bUseOnCreeps = 0;
   this->m_pBot = pBot;
-  this->_vptr_CDOTA_Bot_AbilityUsage = off_42CEAB0;
+  this->_vptr_CDOTA_Bot_AbilityUsage = off_42CEAB0;  // vptr: CDOTA_Bot_AbilityUsage_Omniknight_Purification
   this->m_hDesiredTarget.m_Index = -1;
 }
 
@@ -339,7 +339,7 @@ void __fastcall CDOTA_Bot_AbilityUsage_Omniknight_Repel::CDOTA_Bot_AbilityUsage_
 {
   this->m_pAbility = pAbility;
   this->m_pBot = pBot;
-  this->_vptr_CDOTA_Bot_AbilityUsage = off_42CEB10;
+  this->_vptr_CDOTA_Bot_AbilityUsage = off_42CEB10;  // vptr: CDOTA_Bot_AbilityUsage_Omniknight_Repel
   this->m_hDesiredTarget.m_Index = -1;
   this->m_bUseOnCreeps = 1;
 }
@@ -575,7 +575,7 @@ void __fastcall CDOTA_Bot_AbilityUsage_Omniknight_GuardianAngel::CDOTA_Bot_Abili
 {
   this->m_pAbility = pAbility;
   this->m_pBot = pBot;
-  this->_vptr_CDOTA_Bot_AbilityUsage = off_42CEB70;
+  this->_vptr_CDOTA_Bot_AbilityUsage = off_42CEB70;  // vptr: CDOTA_Bot_AbilityUsage_Omniknight_GuardianAngel
   this->m_bUseOnCreeps = 1;
 }
 

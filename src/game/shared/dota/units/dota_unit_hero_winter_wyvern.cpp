@@ -736,7 +736,7 @@ CEntityInstance *__fastcall CDOTA_Unit_Hero_Winter_Wyvern::CEntityInstanceEntity
 void __fastcall CDOTA_Unit_Hero_Winter_Wyvern::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Unit_Hero_Winter_Wyvern::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -746,7 +746,7 @@ void __fastcall CDOTA_Unit_Hero_Winter_Wyvern::CEntityInstanceEntityClass::~CEnt
 void __fastcall CDOTA_Unit_Hero_Winter_Wyvern::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Unit_Hero_Winter_Wyvern::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -1064,7 +1064,7 @@ CEntityInstance *__fastcall CDOTA_Ability_Winter_Wyvern_Arctic_Burn::CEntityInst
 void __fastcall CDOTA_Ability_Winter_Wyvern_Arctic_Burn::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Winter_Wyvern_Arctic_Burn::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -1074,7 +1074,7 @@ void __fastcall CDOTA_Ability_Winter_Wyvern_Arctic_Burn::CEntityInstanceEntityCl
 void __fastcall CDOTA_Ability_Winter_Wyvern_Arctic_Burn::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Winter_Wyvern_Arctic_Burn::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -2550,7 +2550,7 @@ CEntityInstance *__fastcall CDOTA_Ability_Winter_Wyvern_Splinter_Blast::CEntityI
 void __fastcall CDOTA_Ability_Winter_Wyvern_Splinter_Blast::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Winter_Wyvern_Splinter_Blast::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -2560,7 +2560,7 @@ void __fastcall CDOTA_Ability_Winter_Wyvern_Splinter_Blast::CEntityInstanceEntit
 void __fastcall CDOTA_Ability_Winter_Wyvern_Splinter_Blast::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Winter_Wyvern_Splinter_Blast::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -3280,7 +3280,7 @@ CEntityInstance *__fastcall CDOTA_Ability_Winter_Wyvern_Cold_Embrace::CEntityIns
 void __fastcall CDOTA_Ability_Winter_Wyvern_Cold_Embrace::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Winter_Wyvern_Cold_Embrace::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -3290,7 +3290,7 @@ void __fastcall CDOTA_Ability_Winter_Wyvern_Cold_Embrace::CEntityInstanceEntityC
 void __fastcall CDOTA_Ability_Winter_Wyvern_Cold_Embrace::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Winter_Wyvern_Cold_Embrace::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -3824,7 +3824,7 @@ CEntityInstance *__fastcall CDOTA_Ability_Winter_Wyvern_Winters_Curse::CEntityIn
 void __fastcall CDOTA_Ability_Winter_Wyvern_Winters_Curse::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Winter_Wyvern_Winters_Curse::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -3834,7 +3834,7 @@ void __fastcall CDOTA_Ability_Winter_Wyvern_Winters_Curse::CEntityInstanceEntity
 void __fastcall CDOTA_Ability_Winter_Wyvern_Winters_Curse::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Winter_Wyvern_Winters_Curse::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }

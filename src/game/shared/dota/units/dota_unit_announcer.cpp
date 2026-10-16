@@ -263,7 +263,7 @@ CEntityInstance *__fastcall CDOTA_Unit_Announcer_Killing_Spree::CEntityInstanceE
 void __fastcall CDOTA_Unit_Announcer_Killing_Spree::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Unit_Announcer_Killing_Spree::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -273,7 +273,7 @@ void __fastcall CDOTA_Unit_Announcer_Killing_Spree::CEntityInstanceEntityClass::
 void __fastcall CDOTA_Unit_Announcer_Killing_Spree::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Unit_Announcer_Killing_Spree::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -419,7 +419,7 @@ float __fastcall CDOTA_Unit_Announcer::GetLastTimeSaidAnything(CDOTA_Unit_Announ
 // calls: IGameSystem::~IGameSystem
 void __fastcall CAnnouncerSharedThinker::~CAnnouncerSharedThinker(CAnnouncerSharedThinker *const this)
 {
-  this->_vptr_IGameSystem = off_3F7C1B0;
+  this->_vptr_IGameSystem = off_3F7C1B0;  // vptr: CAutoGameSystem
   IGameSystem::~IGameSystem(this);
 }
 
@@ -428,7 +428,7 @@ void __fastcall CAnnouncerSharedThinker::~CAnnouncerSharedThinker(CAnnouncerShar
 // calls: IGameSystem::~IGameSystem, operator delete
 void __fastcall CAnnouncerSharedThinker::~CAnnouncerSharedThinker(CAnnouncerSharedThinker *const this)
 {
-  this->_vptr_IGameSystem = off_3F7C1B0;
+  this->_vptr_IGameSystem = off_3F7C1B0;  // vptr: CAutoGameSystem
   IGameSystem::~IGameSystem(this);
   operator delete(this);
 }
@@ -462,7 +462,7 @@ void __fastcall CAnnouncerSharedThinker::SetGameSystemGlobalPtrs(CAnnouncerShare
 // CAnnouncerSharedThinker::CAnnouncerSharedThinker  (line 280, @0x0000000002a8b150, libserver.so)
 void __fastcall CAnnouncerSharedThinker::CAnnouncerSharedThinker(CAnnouncerSharedThinker *const this)
 {
-  this->_vptr_IGameSystem = off_43CDF50;
+  this->_vptr_IGameSystem = off_43CDF50;  // vptr: CAnnouncerSharedThinker
   this->m_fLastRadiantIdle = 0.0;
   this->m_fLastDireIdle = 0.0;
   this->m_fLastSpectatorIdle = 0.0;

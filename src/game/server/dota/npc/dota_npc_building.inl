@@ -113,7 +113,7 @@ void *__fastcall CDOTA_BaseNPC_Building::CEntityInstanceEntityClass::AllocateIns
 void __fastcall CDOTA_BaseNPC_Building::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_BaseNPC_Building::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -123,7 +123,7 @@ void __fastcall CDOTA_BaseNPC_Building::CEntityInstanceEntityClass::~CEntityInst
 void __fastcall CDOTA_BaseNPC_Building::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_BaseNPC_Building::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -451,7 +451,7 @@ void *__fastcall CDOTA_BaseNPC_Tower::CEntityInstanceEntityClass::AllocateInstan
 void __fastcall CDOTA_BaseNPC_Tower::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_BaseNPC_Tower::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -461,7 +461,7 @@ void __fastcall CDOTA_BaseNPC_Tower::CEntityInstanceEntityClass::~CEntityInstanc
 void __fastcall CDOTA_BaseNPC_Tower::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_BaseNPC_Tower::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -790,7 +790,7 @@ void *__fastcall CDOTA_BaseNPC_Filler::CEntityInstanceEntityClass::AllocateInsta
 void __fastcall CDOTA_BaseNPC_Filler::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_BaseNPC_Filler::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -800,7 +800,7 @@ void __fastcall CDOTA_BaseNPC_Filler::CEntityInstanceEntityClass::~CEntityInstan
 void __fastcall CDOTA_BaseNPC_Filler::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_BaseNPC_Filler::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -1038,7 +1038,7 @@ void *__fastcall CDOTA_BaseNPC_Healer::CEntityInstanceEntityClass::AllocateInsta
 void __fastcall CDOTA_BaseNPC_Healer::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_BaseNPC_Healer::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -1048,7 +1048,7 @@ void __fastcall CDOTA_BaseNPC_Healer::CEntityInstanceEntityClass::~CEntityInstan
 void __fastcall CDOTA_BaseNPC_Healer::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_BaseNPC_Healer::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -1302,7 +1302,7 @@ void *__fastcall CDOTA_BaseNPC_RespawningTower::CEntityInstanceEntityClass::Allo
 void __fastcall CDOTA_BaseNPC_RespawningTower::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_BaseNPC_RespawningTower::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -1312,7 +1312,7 @@ void __fastcall CDOTA_BaseNPC_RespawningTower::CEntityInstanceEntityClass::~CEnt
 void __fastcall CDOTA_BaseNPC_RespawningTower::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_BaseNPC_RespawningTower::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -1559,7 +1559,7 @@ void *__fastcall CDOTA_BaseNPC_Fort::CEntityInstanceEntityClass::AllocateInstanc
 void __fastcall CDOTA_BaseNPC_Fort::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_BaseNPC_Fort::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -1569,7 +1569,7 @@ void __fastcall CDOTA_BaseNPC_Fort::CEntityInstanceEntityClass::~CEntityInstance
 void __fastcall CDOTA_BaseNPC_Fort::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_BaseNPC_Fort::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -1807,7 +1807,7 @@ void *__fastcall CDOTA_BaseNPC_Barracks::CEntityInstanceEntityClass::AllocateIns
 void __fastcall CDOTA_BaseNPC_Barracks::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_BaseNPC_Barracks::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -1817,7 +1817,7 @@ void __fastcall CDOTA_BaseNPC_Barracks::CEntityInstanceEntityClass::~CEntityInst
 void __fastcall CDOTA_BaseNPC_Barracks::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_BaseNPC_Barracks::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -2055,7 +2055,7 @@ void *__fastcall CDOTA_BaseNPC_SDKTower::CEntityInstanceEntityClass::AllocateIns
 void __fastcall CDOTA_BaseNPC_SDKTower::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_BaseNPC_SDKTower::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -2065,7 +2065,7 @@ void __fastcall CDOTA_BaseNPC_SDKTower::CEntityInstanceEntityClass::~CEntityInst
 void __fastcall CDOTA_BaseNPC_SDKTower::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_BaseNPC_SDKTower::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -2312,7 +2312,7 @@ void *__fastcall CDOTA_BaseNPC_HoldoutTower::CEntityInstanceEntityClass::Allocat
 void __fastcall CDOTA_BaseNPC_HoldoutTower::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_BaseNPC_HoldoutTower::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -2322,7 +2322,7 @@ void __fastcall CDOTA_BaseNPC_HoldoutTower::CEntityInstanceEntityClass::~CEntity
 void __fastcall CDOTA_BaseNPC_HoldoutTower::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_BaseNPC_HoldoutTower::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -2618,7 +2618,7 @@ void *__fastcall CDOTA_BaseNPC_HoldoutTower_LightFast::CEntityInstanceEntityClas
 void __fastcall CDOTA_BaseNPC_HoldoutTower_LightFast::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_BaseNPC_HoldoutTower_LightFast::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -2628,7 +2628,7 @@ void __fastcall CDOTA_BaseNPC_HoldoutTower_LightFast::CEntityInstanceEntityClass
 void __fastcall CDOTA_BaseNPC_HoldoutTower_LightFast::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_BaseNPC_HoldoutTower_LightFast::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -2870,7 +2870,7 @@ void *__fastcall CDOTA_BaseNPC_HoldoutTower_HeavySlow::CEntityInstanceEntityClas
 void __fastcall CDOTA_BaseNPC_HoldoutTower_HeavySlow::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_BaseNPC_HoldoutTower_HeavySlow::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -2880,7 +2880,7 @@ void __fastcall CDOTA_BaseNPC_HoldoutTower_HeavySlow::CEntityInstanceEntityClass
 void __fastcall CDOTA_BaseNPC_HoldoutTower_HeavySlow::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_BaseNPC_HoldoutTower_HeavySlow::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -3122,7 +3122,7 @@ void *__fastcall CDOTA_BaseNPC_HoldoutTower_ReduceSpeed::CEntityInstanceEntityCl
 void __fastcall CDOTA_BaseNPC_HoldoutTower_ReduceSpeed::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_BaseNPC_HoldoutTower_ReduceSpeed::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -3132,7 +3132,7 @@ void __fastcall CDOTA_BaseNPC_HoldoutTower_ReduceSpeed::CEntityInstanceEntityCla
 void __fastcall CDOTA_BaseNPC_HoldoutTower_ReduceSpeed::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_BaseNPC_HoldoutTower_ReduceSpeed::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -3372,7 +3372,7 @@ void *__fastcall CDOTA_BaseNPC_Effigy_Statue::CEntityInstanceEntityClass::Alloca
 void __fastcall CDOTA_BaseNPC_Effigy_Statue::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_BaseNPC_Effigy_Statue::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -3382,7 +3382,7 @@ void __fastcall CDOTA_BaseNPC_Effigy_Statue::CEntityInstanceEntityClass::~CEntit
 void __fastcall CDOTA_BaseNPC_Effigy_Statue::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_BaseNPC_Effigy_Statue::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -3622,7 +3622,7 @@ void *__fastcall CDOTA_BaseNPC_Effigy_BattleCup::CEntityInstanceEntityClass::All
 void __fastcall CDOTA_BaseNPC_Effigy_BattleCup::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_BaseNPC_Effigy_BattleCup::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -3632,7 +3632,7 @@ void __fastcall CDOTA_BaseNPC_Effigy_BattleCup::CEntityInstanceEntityClass::~CEn
 void __fastcall CDOTA_BaseNPC_Effigy_BattleCup::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_BaseNPC_Effigy_BattleCup::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }

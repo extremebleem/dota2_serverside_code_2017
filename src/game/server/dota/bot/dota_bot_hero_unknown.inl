@@ -49,7 +49,7 @@ DOTA_BOT_MODE __fastcall CDOTA_Bot_Unit_GenericMinion::GetInitialMode(CDOTA_Bot_
 // CDOTA_BotMode_GenericMinion::~CDOTA_BotMode_GenericMinion  (line 41, @0x00000000028efe80, libserver.so)  // inlines: ~CDOTA_BotMode
 void __fastcall CDOTA_BotMode_GenericMinion::~CDOTA_BotMode_GenericMinion(CDOTA_BotMode_GenericMinion *const this)
 {
-  this->_vptr_CDOTA_BotMode = off_42B75F0;
+  this->_vptr_CDOTA_BotMode = off_42B75F0;  // vptr: CDOTA_BotMode
 }
 
 
@@ -57,7 +57,7 @@ void __fastcall CDOTA_BotMode_GenericMinion::~CDOTA_BotMode_GenericMinion(CDOTA_
 // calls: operator delete
 void __fastcall CDOTA_BotMode_GenericMinion::~CDOTA_BotMode_GenericMinion(CDOTA_BotMode_GenericMinion *const this)
 {
-  this->_vptr_CDOTA_BotMode = off_42B75F0;
+  this->_vptr_CDOTA_BotMode = off_42B75F0;  // vptr: CDOTA_BotMode
   operator delete(this);
 }
 
@@ -94,7 +94,7 @@ const char *__fastcall CDOTA_BotMode_GenericMinion::GetDebugString(CDOTA_BotMode
 // CDOTA_BotModeMinionNone::~CDOTA_BotModeMinionNone  (line 63, @0x00000000028efea0, libserver.so)  // inlines: ~CDOTA_BotMode
 void __fastcall CDOTA_BotModeMinionNone::~CDOTA_BotModeMinionNone(CDOTA_BotModeMinionNone *const this)
 {
-  this->_vptr_CDOTA_BotMode = off_42B75F0;
+  this->_vptr_CDOTA_BotMode = off_42B75F0;  // vptr: CDOTA_BotMode
 }
 
 
@@ -102,7 +102,7 @@ void __fastcall CDOTA_BotModeMinionNone::~CDOTA_BotModeMinionNone(CDOTA_BotModeM
 // calls: operator delete
 void __fastcall CDOTA_BotModeMinionNone::~CDOTA_BotModeMinionNone(CDOTA_BotModeMinionNone *const this)
 {
-  this->_vptr_CDOTA_BotMode = off_42B75F0;
+  this->_vptr_CDOTA_BotMode = off_42B75F0;  // vptr: CDOTA_BotMode
   operator delete(this);
 }
 

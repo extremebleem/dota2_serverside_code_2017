@@ -9,7 +9,7 @@ void __fastcall CDOTA_BotMode_TutorialBoss::CDOTA_BotMode_TutorialBoss(
         CDOTA_Bot *pBot)
 {
   CDOTA_BotMode::CDOTA_BotMode(this, pBot);
-  this->_vptr_CDOTA_BotMode = off_42B8F70;
+  this->_vptr_CDOTA_BotMode = off_42B8F70;  // vptr: CDOTA_BotMode_TutorialBoss
   this->m_hEnemy.m_Index = -1;
   this->m_nSubMode = 0;
   this->m_nLastSubMode = 0;

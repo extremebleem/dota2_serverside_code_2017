@@ -606,7 +606,7 @@ int __fastcall CStudioHdr::bodypartmeshindexformask(const CStudioHdr *const this
 // CStudioHdr::GetActivityListVersion  (line 458, @0x0000000002f47e40, libserver.so)
 int __fastcall CStudioHdr::GetActivityListVersion(CStudioHdr *const this)
 {
-  return (*this->m_pModel->_vptr_CModel)(this->m_pModel);
+  return this->m_pModel->GetActivityListVersion();
 }
 
 

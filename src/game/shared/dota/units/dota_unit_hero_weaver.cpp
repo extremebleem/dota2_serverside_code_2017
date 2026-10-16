@@ -593,7 +593,7 @@ CEntityInstance *__fastcall CDOTA_Unit_Hero_Weaver::CEntityInstanceEntityClass::
 void __fastcall CDOTA_Unit_Hero_Weaver::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Unit_Hero_Weaver::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -603,7 +603,7 @@ void __fastcall CDOTA_Unit_Hero_Weaver::CEntityInstanceEntityClass::~CEntityInst
 void __fastcall CDOTA_Unit_Hero_Weaver::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Unit_Hero_Weaver::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -808,7 +808,7 @@ CEntityInstance *__fastcall CDOTA_Ability_Weaver_TheSwarm::CEntityInstanceEntity
 void __fastcall CDOTA_Ability_Weaver_TheSwarm::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Weaver_TheSwarm::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -818,7 +818,7 @@ void __fastcall CDOTA_Ability_Weaver_TheSwarm::CEntityInstanceEntityClass::~CEnt
 void __fastcall CDOTA_Ability_Weaver_TheSwarm::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Weaver_TheSwarm::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -1873,7 +1873,7 @@ CEntityInstance *__fastcall CDOTA_Ability_Weaver_Shukuchi::CEntityInstanceEntity
 void __fastcall CDOTA_Ability_Weaver_Shukuchi::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Weaver_Shukuchi::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -1883,7 +1883,7 @@ void __fastcall CDOTA_Ability_Weaver_Shukuchi::CEntityInstanceEntityClass::~CEnt
 void __fastcall CDOTA_Ability_Weaver_Shukuchi::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Weaver_Shukuchi::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -2514,7 +2514,7 @@ CEntityInstance *__fastcall CDOTA_Ability_Weaver_GeminateAttack::CEntityInstance
 void __fastcall CDOTA_Ability_Weaver_GeminateAttack::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Weaver_GeminateAttack::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -2524,7 +2524,7 @@ void __fastcall CDOTA_Ability_Weaver_GeminateAttack::CEntityInstanceEntityClass:
 void __fastcall CDOTA_Ability_Weaver_GeminateAttack::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Weaver_GeminateAttack::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -2804,14 +2804,14 @@ void __fastcall CDOTA_Ability_Weaver_TimeLapse::~CDOTA_Ability_Weaver_TimeLapse(
 
   this->_vptr_IHandleEntity = &off_45708F0;
   v2 = !this->m_bRegisteredForEvents;
-  this->_vptr_IGameEventListener2 = off_3FB3190;
+  this->_vptr_IGameEventListener2 = off_3FB3190;  // vptr: CGameEventListener
   if ( !v2 )
   {
     if ( gameeventmanager != 0 )
       (*(gameeventmanager->_vptr_IBaseInterface + 6))(gameeventmanager, &this->CGameEventListener);
     this->m_bRegisteredForEvents = 0;
   }
-  this->_vptr_IGameEventListener2 = off_3FB3150;
+  this->_vptr_IGameEventListener2 = off_3FB3150;  // vptr: IGameEventListener2
   CDOTABaseAbility::~CDOTABaseAbility(this);
 }
 
@@ -2825,14 +2825,14 @@ void __fastcall CDOTA_Ability_Weaver_TimeLapse::~CDOTA_Ability_Weaver_TimeLapse(
 
   this->_vptr_IHandleEntity = &off_45708F0;
   v2 = !this->m_bRegisteredForEvents;
-  this->_vptr_IGameEventListener2 = off_3FB3190;
+  this->_vptr_IGameEventListener2 = off_3FB3190;  // vptr: CGameEventListener
   if ( !v2 )
   {
     if ( gameeventmanager != 0 )
       (*(gameeventmanager->_vptr_IBaseInterface + 6))(gameeventmanager, &this->CGameEventListener);
     this->m_bRegisteredForEvents = 0;
   }
-  this->_vptr_IGameEventListener2 = off_3FB3150;
+  this->_vptr_IGameEventListener2 = off_3FB3150;  // vptr: IGameEventListener2
   CDOTABaseAbility::~CDOTABaseAbility(this);
   CBaseEntity::operator delete(this);
 }
@@ -2926,7 +2926,7 @@ CEntityInstance *__fastcall CDOTA_Ability_Weaver_TimeLapse::CEntityInstanceEntit
 void __fastcall CDOTA_Ability_Weaver_TimeLapse::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Weaver_TimeLapse::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -2936,7 +2936,7 @@ void __fastcall CDOTA_Ability_Weaver_TimeLapse::CEntityInstanceEntityClass::~CEn
 void __fastcall CDOTA_Ability_Weaver_TimeLapse::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Weaver_TimeLapse::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }

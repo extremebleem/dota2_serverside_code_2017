@@ -11,7 +11,7 @@ void __fastcall CDOTA_Bot_AbilityUsage_PhaseBoots::CDOTA_Bot_AbilityUsage_PhaseB
   this->m_pAbility = pAbility;
   this->m_bUseOnCreeps = 0;
   this->m_pBot = pBot;
-  this->_vptr_CDOTA_Bot_AbilityUsage = off_42C6970;
+  this->_vptr_CDOTA_Bot_AbilityUsage = off_42C6970;  // vptr: CDOTA_Bot_AbilityUsage_PhaseBoots
 }
 
 

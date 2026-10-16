@@ -660,60 +660,57 @@ int __fastcall CreatePackedInputLayout(
   const char *v44; // rax
   __int64 v45; // rdx
   ColorFormat_t v46; // eax
-  char IsChannelEnabled; // al
-  __int64 v48; // rdx
-  __int64 v49; // rcx
-  __int64 v50; // rdi
-  __int64 v51; // rsi
-  __int64 v52; // r9
-  __int64 v53; // r8
-  const char *v54; // rax
+  __int64 v47; // rdx
+  __int64 v48; // rcx
+  __int64 v49; // rdi
+  __int64 v50; // rsi
+  const char *v51; // rax
   __int64 m_nSizeFloats; // rdx
-  ColorFormat_t v56; // eax
-  RenderInputLayoutField_t *v57; // r12
-  int v58; // eax
-  unsigned __int64 v59; // rdx
-  __int64 v60; // rsi
-  __int64 v61; // rax
-  RenderInputLayoutField_t *v62; // rax
-  int v63; // r12d
-  CMesh::InputLayoutToAttributeMap *v64; // r8
-  CUtlVector<RenderInputLayoutField_t,CUtlMemory<RenderInputLayoutField_t,int> > *v65; // r14
-  __int64 v66; // rsi
-  __int64 v67; // rax
-  __int64 v68; // rsi
-  __int64 v69; // r15
-  int *v70; // rdx
-  int v71; // eax
+  ColorFormat_t v53; // eax
+  RenderInputLayoutField_t *v54; // r12
+  int v55; // eax
+  unsigned __int64 v56; // rdx
+  __int64 v57; // rsi
+  __int64 v58; // rax
+  RenderInputLayoutField_t *v59; // rax
+  int v60; // r12d
+  CMesh::InputLayoutToAttributeMap *v61; // r8
+  CUtlVector<RenderInputLayoutField_t,CUtlMemory<RenderInputLayoutField_t,int> > *v62; // r14
+  __int64 v63; // rsi
+  __int64 v64; // rax
+  __int64 v65; // rsi
+  __int64 v66; // r15
+  int *v67; // rdx
+  int v68; // eax
+  int v69; // eax
+  __int64 v70; // r13
+  __int64 v71; // rbx
   int v72; // eax
-  __int64 v73; // r13
-  __int64 v74; // rbx
-  int v75; // eax
-  __int64 v76; // rdi
-  int v77; // esi
+  __int64 v73; // rdi
+  int v74; // esi
   int result; // eax
-  unsigned int v79; // edx
+  unsigned int v76; // edx
   unsigned int i; // r11d
   unsigned int *m_pSemanticName; // rcx
-  unsigned int v82; // r8d
+  unsigned int v79; // r8d
   int m_nTotalBytes; // ecx
-  const char *v84; // rax
+  const char *v81; // rax
   RenderInputLayoutField_t *m_pMemory; // r12
-  RenderInputLayoutField_t *v86; // rax
-  int *v87; // r12
-  int *v88; // rax
+  RenderInputLayoutField_t *v83; // rax
+  int *v84; // r12
+  int *v85; // rax
   bool bHasPackedNormal; // [rsp+2Eh] [rbp-432h]
-  CMesh::InputLayoutToAttributeMap *v92; // [rsp+40h] [rbp-420h]
-  CMesh::InputLayoutToAttributeMap *v93; // [rsp+40h] [rbp-420h]
+  CMesh::InputLayoutToAttributeMap *v89; // [rsp+40h] [rbp-420h]
+  CMesh::InputLayoutToAttributeMap *v90; // [rsp+40h] [rbp-420h]
   int nOrJointIndices; // [rsp+48h] [rbp-418h]
   CMesh::InputLayoutToAttributeMap inputToInputRemap; // [rsp+50h] [rbp-410h] BYREF
   RenderInputLayoutField_t pMaterialPackedFields[16]; // [rsp+70h] [rbp-3F0h] BYREF
   _BYTE nSlot[56]; // [rsp+3F0h] [rbp-70h] OVERLAPPED BYREF
-  unsigned __int64 v98; // [rsp+428h] [rbp-38h]
+  unsigned __int64 v95; // [rsp+428h] [rbp-38h]
 
   v11 = fields;
   nOrJointIndices = nAttributeCount;
-  v98 = __readfsqword(0x28u);
+  v95 = __readfsqword(0x28u);
   CUtlVectorBase<RenderInputLayoutField_t,CUtlMemory<RenderInputLayoutField_t,int>>::SetCount(fields, 0);
   if ( nAttributeCount > v11->m_Memory.m_nAllocationCount )
   {
@@ -723,10 +720,10 @@ int __fastcall CreatePackedInputLayout(
       if ( (m_nGrowSize & 0xC0000000) != 0 )
       {
         m_pMemory = v11->m_Memory.m_pMemory;
-        v86 = (**g_pMemAlloc)(g_pMemAlloc, 56LL * nOrJointIndices);
-        v11->m_Memory.m_pMemory = v86;
+        v83 = (**g_pMemAlloc)(g_pMemAlloc, 56LL * nOrJointIndices);
+        v11->m_Memory.m_pMemory = v83;
         if ( m_pMemory != 0 )
-          memcpy(v86, m_pMemory, 56LL * v11->m_Memory.m_nAllocationCount);
+          memcpy(v83, m_pMemory, 56LL * v11->m_Memory.m_nAllocationCount);
         v11->m_Memory.m_nGrowSize &= 0x3FFFFFFFu;
       }
       else
@@ -749,11 +746,11 @@ int __fastcall CreatePackedInputLayout(
     {
       if ( (v16 & 0xC0000000) != 0 )
       {
-        v87 = mapInputLayoutToAttribute->m_Memory.m_pMemory;
-        v88 = (**g_pMemAlloc)(g_pMemAlloc, 4LL * nOrJointIndices);
-        mapInputLayoutToAttribute->m_Memory.m_pMemory = v88;
-        if ( v87 != 0 )
-          memcpy(v88, v87, 4LL * mapInputLayoutToAttribute->m_Memory.m_nAllocationCount);
+        v84 = mapInputLayoutToAttribute->m_Memory.m_pMemory;
+        v85 = (**g_pMemAlloc)(g_pMemAlloc, 4LL * nOrJointIndices);
+        mapInputLayoutToAttribute->m_Memory.m_pMemory = v85;
+        if ( v84 != 0 )
+          memcpy(v85, v84, 4LL * mapInputLayoutToAttribute->m_Memory.m_nAllocationCount);
         mapInputLayoutToAttribute->m_Memory.m_nGrowSize &= 0x3FFFFFFFu;
       }
       else
@@ -814,10 +811,10 @@ LABEL_18:
           if ( bUseUncompressedVertices || pAttributes->m_bNoCompression )
           {
             m_nSizeFloats = pAttributes->m_nSizeFloats;
-            v56 = ColorFormat_t::COLOR_FORMAT_UNKNOWN;
+            v53 = ColorFormat_t::COLOR_FORMAT_UNKNOWN;
             if ( m_nSizeFloats <= 4 )
-              v56 = g_DefaultFormatTable[m_nSizeFloats];
-            *&nSlot[36] = v56;
+              v53 = g_DefaultFormatTable[m_nSizeFloats];
+            *&nSlot[36] = v53;
             if ( bUseUncompressedVertices )
               goto LABEL_19;
           }
@@ -825,11 +822,11 @@ LABEL_18:
           {
             *&nSlot[36] = DefaultColorFormatForAttribute;
           }
-          v54 = CUtlString::Get(&pAttributes->m_name);
-          if ( V_stricmp_fast(v54, "normal") != 0 )
+          v51 = CUtlString::Get(&pAttributes->m_name);
+          if ( V_stricmp_fast(v51, "normal") != 0 )
           {
-            v84 = CUtlString::Get(&pAttributes->m_name);
-            if ( V_stricmp_fast(v84, "tangent") == 0 && bHasPackedNormal )
+            v81 = CUtlString::Get(&pAttributes->m_name);
+            if ( V_stricmp_fast(v81, "tangent") == 0 && bHasPackedNormal )
               *&nSlot[36] = 0;
           }
           else
@@ -900,9 +897,7 @@ LABEL_56:
           goto LABEL_42;
         pAttributes = &LOG_GENERAL;
         nOrJointIndices = v32;
-        IsChannelEnabled = LoggingSystem_IsChannelEnabled(LOG_GENERAL, 4);
-        v53 = nOrJointIndices;
-        if ( IsChannelEnabled != 0 )
+        if ( LoggingSystem_IsChannelEnabled(LOG_GENERAL, 4) != 0 )
         {
           *pMaterialPackedFields[0].m_pSemanticName = "formats.cpp";
           *&pMaterialPackedFields[0].m_pSemanticName[16] = "CreatePackedInputLayout";
@@ -914,7 +909,7 @@ LABEL_56:
             "CMesh Cannot create packed input layout, because the bone indices are out of range (0x%X)\n",
             nOrJointIndices);
         }
-        if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v50, v51, v48, v49, v53, v52) != 0 )
+        if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v49, v50, v47, v48) != 0 )
           loc_0 = -559038737;
         Plat_ExitProcess(1);
 LABEL_70:
@@ -993,102 +988,102 @@ LABEL_21:
 LABEL_82:
   if ( pShaderInputSignatureDesc == 0 )
     goto LABEL_101;
-  v57 = pMaterialPackedFields;
+  v54 = pMaterialPackedFields;
   inputToInputRemap.m_Size = 0;
   inputToInputRemap.m_Memory.m_pMemory = 0;
   inputToInputRemap.m_Memory.m_nAllocationCount = 0;
   inputToInputRemap.m_Memory.m_nGrowSize = 0;
   memset(pMaterialPackedFields, 0, sizeof(pMaterialPackedFields));
-  v58 = CreateMaterialSpecificInputLayoutFromPackedInputLayout(
+  v55 = CreateMaterialSpecificInputLayoutFromPackedInputLayout(
           pMaterialPackedFields,
           16,
           v11->m_Memory.m_pMemory,
           v11->m_Size,
           &pShaderInputSignatureDesc->m_inputElements,
           &inputToInputRemap);
-  if ( v58 > 0 )
+  if ( v55 > 0 )
   {
-    v59 = 0;
-    v60 = 4LL * (v58 - 1) + 4;
+    v56 = 0;
+    v57 = 4LL * (v55 - 1) + 4;
     do
     {
-      ++v57;
-      v61 = inputToInputRemap.m_Memory.m_pMemory[v59 / 4];
-      v59 += 4LL;
-      v62 = &v11->m_Memory.m_pMemory[v61];
-      *v62->m_pSemanticName = *v57[-1].m_pSemanticName;
-      *&v62->m_pSemanticName[8] = *&v57[-1].m_pSemanticName[8];
-      *&v62->m_pSemanticName[16] = *&v57[-1].m_pSemanticName[16];
-      *&v62->m_pSemanticName[24] = *&v57[-1].m_pSemanticName[24];
-      *&v62->m_nSemanticIndex = *&v57[-1].m_nSemanticIndex;
-      *&v62->m_nOffset = *&v57[-1].m_nOffset;
-      *&v62->m_nSlotType = *&v57[-1].m_nSlotType;
+      ++v54;
+      v58 = inputToInputRemap.m_Memory.m_pMemory[v56 / 4];
+      v56 += 4LL;
+      v59 = &v11->m_Memory.m_pMemory[v58];
+      *v59->m_pSemanticName = *v54[-1].m_pSemanticName;
+      *&v59->m_pSemanticName[8] = *&v54[-1].m_pSemanticName[8];
+      *&v59->m_pSemanticName[16] = *&v54[-1].m_pSemanticName[16];
+      *&v59->m_pSemanticName[24] = *&v54[-1].m_pSemanticName[24];
+      *&v59->m_nSemanticIndex = *&v54[-1].m_nSemanticIndex;
+      *&v59->m_nOffset = *&v54[-1].m_nOffset;
+      *&v59->m_nSlotType = *&v54[-1].m_nSlotType;
     }
-    while ( v59 != v60 );
+    while ( v56 != v57 );
   }
-  v63 = v11->m_Size - 1;
-  if ( v63 >= 0 )
+  v60 = v11->m_Size - 1;
+  if ( v60 >= 0 )
   {
-    v64 = mapInputLayoutToAttribute;
-    v65 = v11;
-    v66 = v63 + 1LL;
-    v67 = 8 * v66;
-    v68 = 4 * v66;
-    v69 = ((v63 + 1LL) << 6) - v67;
+    v61 = mapInputLayoutToAttribute;
+    v62 = v11;
+    v63 = v60 + 1LL;
+    v64 = 8 * v63;
+    v65 = 4 * v63;
+    v66 = ((v60 + 1LL) << 6) - v64;
     while ( 1 )
     {
       if ( inputToInputRemap.m_Size <= 0 )
         goto LABEL_93;
-      if ( v63 != *inputToInputRemap.m_Memory.m_pMemory )
+      if ( v60 != *inputToInputRemap.m_Memory.m_pMemory )
         break;
 LABEL_111:
-      v73 = v68 - 4;
-      v74 = v69 - 56;
+      v70 = v65 - 4;
+      v71 = v66 - 56;
 LABEL_98:
-      --v63;
-      v69 = v74;
-      v68 = v73;
-      if ( v63 == -1 )
+      --v60;
+      v66 = v71;
+      v65 = v70;
+      if ( v60 == -1 )
       {
-        v11 = v65;
+        v11 = v62;
         goto LABEL_100;
       }
     }
-    v70 = inputToInputRemap.m_Memory.m_pMemory + 1;
-    v71 = 0;
-    while ( ++v71 != inputToInputRemap.m_Size )
+    v67 = inputToInputRemap.m_Memory.m_pMemory + 1;
+    v68 = 0;
+    while ( ++v68 != inputToInputRemap.m_Size )
     {
-      if ( v63 == *v70++ )
+      if ( v60 == *v67++ )
       {
-        if ( v71 == -1 )
+        if ( v68 == -1 )
           break;
         goto LABEL_111;
       }
     }
 LABEL_93:
-    v72 = v64->m_Size;
-    v73 = v68 - 4;
-    if ( v64->m_Size - v63 - 1 > 0 )
+    v69 = v61->m_Size;
+    v70 = v65 - 4;
+    if ( v61->m_Size - v60 - 1 > 0 )
     {
-      v92 = v64;
-      memmove(v64->m_Memory.m_pMemory + v73, v64->m_Memory.m_pMemory + v68, 4LL * (v64->m_Size - v63 - 1));
-      v64 = v92;
-      v72 = v92->m_Size;
+      v89 = v61;
+      memmove(v61->m_Memory.m_pMemory + v70, v61->m_Memory.m_pMemory + v65, 4LL * (v61->m_Size - v60 - 1));
+      v61 = v89;
+      v69 = v89->m_Size;
     }
-    v74 = v69 - 56;
-    v64->m_Size = v72 - 1;
-    v75 = v65->m_Size;
-    if ( v65->m_Size - v63 - 1 > 0 )
+    v71 = v66 - 56;
+    v61->m_Size = v69 - 1;
+    v72 = v62->m_Size;
+    if ( v62->m_Size - v60 - 1 > 0 )
     {
-      v93 = v64;
+      v90 = v61;
       memmove(
-        &v65->m_Memory.m_pMemory->m_pSemanticName[v74],
-        &v65->m_Memory.m_pMemory->m_pSemanticName[v69],
-        56LL * (v65->m_Size - v63 - 1));
-      v75 = v65->m_Size;
-      v64 = v93;
+        &v62->m_Memory.m_pMemory->m_pSemanticName[v71],
+        &v62->m_Memory.m_pMemory->m_pSemanticName[v66],
+        56LL * (v62->m_Size - v60 - 1));
+      v72 = v62->m_Size;
+      v61 = v90;
     }
-    v65->m_Size = v75 - 1;
+    v62->m_Size = v72 - 1;
     goto LABEL_98;
   }
 LABEL_100:
@@ -1111,23 +1106,23 @@ LABEL_120:
     if ( v11->m_Size <= 0 )
       goto LABEL_120;
   }
-  v76 = 0;
-  v77 = 0;
+  v73 = 0;
+  v74 = 0;
   result = 0;
-  v79 = 0;
-  for ( i = 0; ; i = v82 )
+  v76 = 0;
+  for ( i = 0; ; i = v79 )
   {
-    m_pSemanticName = v11->m_Memory.m_pMemory[v76].m_pSemanticName;
-    v82 = m_pSemanticName[11];
-    if ( v82 != i )
-      v79 = 0;
-    ++v77;
-    ++v76;
-    m_pSemanticName[10] = v79;
+    m_pSemanticName = v11->m_Memory.m_pMemory[v73].m_pSemanticName;
+    v79 = m_pSemanticName[11];
+    if ( v79 != i )
+      v76 = 0;
+    ++v74;
+    ++v73;
+    m_pSemanticName[10] = v76;
     m_nTotalBytes = g_FormatInfo[m_pSemanticName[9]].m_nTotalBytes;
-    v79 += m_nTotalBytes;
+    v76 += m_nTotalBytes;
     result += m_nTotalBytes;
-    if ( v11->m_Size <= v77 )
+    if ( v11->m_Size <= v74 )
       break;
   }
 LABEL_107:
@@ -1346,60 +1341,58 @@ void __fastcall FillVBForAttribute(
   __int64 v52; // rcx
   __int64 v53; // rdi
   __int64 v54; // rsi
-  __int64 v55; // r8
-  __int64 v56; // r9
-  __int64 v57; // rax
-  int v58; // edx
-  int v59; // r13d
-  __int64 v60; // rcx
-  int v61; // r15d
-  int v62; // esi
-  uint v63; // r14d
-  uint8 *v64; // r12
-  __int64 v65; // rax
-  int v66; // edx
-  int v67; // r13d
-  __int64 v68; // rcx
-  int v69; // r15d
-  int v70; // esi
-  uint v71; // r14d
-  uint8 *v72; // r12
-  int v73; // eax
-  __m128i v74; // xmm0
-  int v75; // edx
-  const char *v76; // rax
-  float v77; // xmm2_4
-  float v78; // xmm4_4
-  float v79; // xmm1_4
-  float v80; // xmm11_4
-  float v81; // xmm8_4
-  float v82; // xmm10_4
-  float v83; // xmm5_4
-  float v84; // xmm9_4
-  float v85; // xmm7_4
-  int v86; // edx
-  float v87; // xmm13_4
-  float v88; // xmm11_4
-  float v89; // xmm0_4
-  float v90; // xmm7_4
-  float v91; // xmm1_4
-  float v92; // xmm12_4
-  float v93; // xmm10_4
-  float v94; // xmm9_4
-  int v95; // eax
-  uint32 v96; // r8d
-  const char *v97; // rax
-  int v98; // eax
-  int v99; // edi
+  __int64 v55; // rax
+  int v56; // edx
+  int v57; // r13d
+  __int64 v58; // rcx
+  int v59; // r15d
+  int v60; // esi
+  uint v61; // r14d
+  uint8 *v62; // r12
+  __int64 v63; // rax
+  int v64; // edx
+  int v65; // r13d
+  __int64 v66; // rcx
+  int v67; // r15d
+  int v68; // esi
+  uint v69; // r14d
+  uint8 *v70; // r12
+  int v71; // eax
+  __m128i v72; // xmm0
+  int v73; // edx
+  const char *v74; // rax
+  float v75; // xmm2_4
+  float v76; // xmm4_4
+  float v77; // xmm1_4
+  float v78; // xmm11_4
+  float v79; // xmm8_4
+  float v80; // xmm10_4
+  float v81; // xmm5_4
+  float v82; // xmm9_4
+  float v83; // xmm7_4
+  int v84; // edx
+  float v85; // xmm13_4
+  float v86; // xmm11_4
+  float v87; // xmm0_4
+  float v88; // xmm7_4
+  float v89; // xmm1_4
+  float v90; // xmm12_4
+  float v91; // xmm10_4
+  float v92; // xmm9_4
+  int v93; // eax
+  uint32 v94; // r8d
+  const char *v95; // rax
+  int v96; // eax
+  int v97; // edi
+  float v98; // xmm1_4
+  int v99; // edx
   float v100; // xmm1_4
-  int v101; // edx
+  Elf64_Rela *v101; // rcx
   float v102; // xmm1_4
-  Elf64_Rela *v103; // rcx
-  float v104; // xmm1_4
-  float v105; // xmm0_4
-  float v106; // [rsp+0h] [rbp-70h]
-  __int64 v107; // [rsp+0h] [rbp-70h]
-  __int64 v108; // [rsp+0h] [rbp-70h]
+  float v103; // xmm0_4
+  float v104; // [rsp+0h] [rbp-70h]
+  __int64 v105; // [rsp+0h] [rbp-70h]
+  __int64 v106; // [rsp+0h] [rbp-70h]
   int *nNormalOffsetb; // [rsp+8h] [rbp-68h]
   uint8 *nNormalOffsetc; // [rsp+8h] [rbp-68h]
   uint8 *nNormalOffsetd; // [rsp+8h] [rbp-68h]
@@ -1412,7 +1405,7 @@ void __fastcall FillVBForAttribute(
   __int32 flSumWeightb; // [rsp+10h] [rbp-60h]
   float *pVertexDataa; // [rsp+18h] [rbp-58h] BYREF
   float flTmpColor[4]; // [rsp+20h] [rbp-50h] BYREF
-  const char *v122; // [rsp+30h] [rbp-40h]
+  const char *v120; // [rsp+30h] [rbp-40h]
 
   pVertexDataa = pVertexData;
   v14 = CUtlString::Get(&pAttribute->m_name);
@@ -1425,46 +1418,46 @@ void __fastcall FillVBForAttribute(
       if ( V_stricmp_fast(v38, "blendweights") != 0 )
       {
         if ( !bCompressNormalAndTangent
-          || (v76 = CUtlString::Get(&pAttribute->m_name), V_stricmp_fast(v76, "normal") != 0) )
+          || (v74 = CUtlString::Get(&pAttribute->m_name), V_stricmp_fast(v74, "normal") != 0) )
         {
           if ( bCompressPerVertexLighting )
           {
-            v97 = CUtlString::Get(&pAttribute->m_name);
-            v98 = V_stricmp_fast(v97, "pervertexlighting");
-            if ( v98 == 0 )
+            v95 = CUtlString::Get(&pAttribute->m_name);
+            v96 = V_stricmp_fast(v95, "pervertexlighting");
+            if ( v96 == 0 )
             {
+              v97 = 0;
+              v98 = *pVertexDataa * 255.0;
+              if ( v98 >= 0.0 )
+              {
+                v97 = 255;
+                if ( v98 <= 255.0 )
+                  v97 = v98;
+              }
               v99 = 0;
-              v100 = *pVertexDataa * 255.0;
+              v100 = pVertexDataa[1] * 255.0;
               if ( v100 >= 0.0 )
               {
-                v99 = 255;
+                LOWORD(v99) = -256;
                 if ( v100 <= 255.0 )
-                  v99 = v100;
+                  v99 = v100 << 8;
               }
-              v101 = 0;
-              v102 = pVertexDataa[1] * 255.0;
+              LODWORD(v101) = 0;
+              v102 = pVertexDataa[2] * 255.0;
               if ( v102 >= 0.0 )
               {
-                LOWORD(v101) = -256;
+                v101 = &stru_FF0000;
                 if ( v102 <= 255.0 )
-                  v101 = v102 << 8;
+                  LODWORD(v101) = v102 << 16;
               }
-              LODWORD(v103) = 0;
-              v104 = pVertexDataa[2] * 255.0;
-              if ( v104 >= 0.0 )
+              v103 = 255.0 * pVertexDataa[3];
+              if ( v103 >= 0.0 )
               {
-                v103 = &stru_FF0000;
-                if ( v104 <= 255.0 )
-                  LODWORD(v103) = v104 << 16;
+                v96 = -16777216;
+                if ( v103 <= 255.0 )
+                  v96 = v103 << 24;
               }
-              v105 = 255.0 * pVertexDataa[3];
-              if ( v105 >= 0.0 )
-              {
-                v98 = -16777216;
-                if ( v105 <= 255.0 )
-                  v98 = v105 << 24;
-              }
-              *&pOutputStream[*nOutOffset] = v98 | v103 | v99 | v101;
+              *&pOutputStream[*nOutOffset] = v96 | v101 | v97 | v99;
               goto LABEL_65;
             }
           }
@@ -1528,80 +1521,80 @@ void __fastcall FillVBForAttribute(
         }
         else
         {
-          v77 = 0.0;
+          v75 = 0.0;
           *nNormalOffset = *nOutOffset;
-          v78 = pVertexDataa[2];
-          v79 = pVertexDataa[1];
+          v76 = pVertexDataa[2];
+          v77 = pVertexDataa[1];
           if ( *pVertexDataa < 0.0 )
           {
-            v81 = -1.0;
-            v80 = 1.0;
+            v79 = -1.0;
+            v78 = 1.0;
           }
           else
           {
-            v80 = 0.0;
-            v81 = 1.0;
+            v78 = 0.0;
+            v79 = 1.0;
+          }
+          v80 = 0.0;
+          v81 = 1.0;
+          if ( v77 < 0.0 )
+          {
+            v80 = 1.0;
+            v81 = -1.0;
           }
           v82 = 0.0;
           v83 = 1.0;
-          if ( v79 < 0.0 )
+          if ( v76 < 0.0 )
           {
             v82 = 1.0;
             v83 = -1.0;
           }
-          v84 = 0.0;
-          v85 = 1.0;
-          if ( v78 < 0.0 )
-          {
-            v84 = 1.0;
-            v85 = -1.0;
-          }
-          v86 = ((((((((v79 * v83) / ((v78 * v85) + ((*pVertexDataa * v81) + (v79 * v83)))) * 63.0) * v83) - v82) + 64.0)
+          v84 = ((((((((v77 * v81) / ((v76 * v83) + ((*pVertexDataa * v79) + (v77 * v81)))) * 63.0) * v81) - v80) + 64.0)
                 + 128.0) << 8)
-              | (((((((((*pVertexDataa * v81) / ((v78 * v85) + ((*pVertexDataa * v81) + (v79 * v83)))) * 63.0) * v81)
-                   - v80)
+              | (((((((((*pVertexDataa * v79) / ((v76 * v83) + ((*pVertexDataa * v79) + (v77 * v81)))) * 63.0) * v79)
+                   - v78)
                   + 64.0)
-                 * v85)
-                - v84)
+                 * v83)
+                - v82)
                + 128.0);
           if ( pTangent4D != 0 )
           {
-            v87 = 0.0;
-            v88 = 1.0;
-            v90 = pTangent4D[2];
-            v91 = pTangent4D[1];
+            v85 = 0.0;
+            v86 = 1.0;
+            v88 = pTangent4D[2];
+            v89 = pTangent4D[1];
             if ( *pTangent4D < 0.0 )
             {
-              v88 = -1.0;
-              v87 = 1.0;
+              v86 = -1.0;
+              v85 = 1.0;
             }
-            v92 = 0.0;
-            v93 = 1.0;
-            if ( v91 < 0.0 )
+            v90 = 0.0;
+            v91 = 1.0;
+            if ( v89 < 0.0 )
             {
-              v93 = -1.0;
-              v92 = 1.0;
+              v91 = -1.0;
+              v90 = 1.0;
             }
-            v94 = 1.0;
-            if ( v90 < 0.0 )
+            v92 = 1.0;
+            if ( v88 < 0.0 )
             {
-              v94 = -1.0;
-              v77 = 1.0;
+              v92 = -1.0;
+              v75 = 1.0;
             }
-            v89 = *pTangent4D;
-            v95 = ((((((((((v89 * v88) / ((v90 * v94) + ((v89 * v88) + (v91 * v93)))) * 63.0) * v88) - v87) + 64.0) * v94)
-                   - v77)
+            v87 = *pTangent4D;
+            v93 = ((((((((((v87 * v86) / ((v88 * v92) + ((v87 * v86) + (v89 * v91)))) * 63.0) * v86) - v85) + 64.0) * v92)
+                   - v75)
                   + 128.0) << 16)
-                | ((((((((((v91 * v93) / ((v90 * v94) + ((v89 * v88) + (v91 * v93)))) * 63.0) * v93) - v92) + 64.0)
+                | ((((((((((v89 * v91) / ((v88 * v92) + ((v87 * v86) + (v89 * v91)))) * 63.0) * v91) - v90) + 64.0)
                     * pTangent4D[3])
                    - ((1.0 - pTangent4D[3]) * 0.5))
                   + 128.0) << 24);
           }
           else
           {
-            v95 = 0;
+            v93 = 0;
           }
-          *&pOutputStream[*nOutOffset] = v86 | v95;
+          *&pOutputStream[*nOutOffset] = v84 | v93;
           *nOutOffset += 4;
         }
         return;
@@ -1612,18 +1605,18 @@ void __fastcall FillVBForAttribute(
       pOutputStream += *nOutOffset;
       if ( pAttribute->m_nSizeFloats == 2 )
       {
-        v74 = *(pVertexDataa + 1);
-        *v74.m128i_i32 = *v74.m128i_i32 + *pVertexDataa;
-        if ( (_mm_cvtsi128_si32(v74) & 0x7F800000) == 0x7F800000 || *v74.m128i_i32 <= 0.0099999998 )
+        v72 = *(pVertexDataa + 1);
+        *v72.m128i_i32 = *v72.m128i_i32 + *pVertexDataa;
+        if ( (_mm_cvtsi128_si32(v72) & 0x7F800000) == 0x7F800000 || *v72.m128i_i32 <= 0.0099999998 )
         {
           *pOutputStream = 0x7FFF;
           *(pOutputStream + 1) = 0x8000;
         }
         else
         {
-          v75 = ((*pVertexDataa * 65535.0) / *v74.m128i_i32);
-          *(pOutputStream + 1) = v75;
-          *pOutputStream = -1 - v75;
+          v73 = ((*pVertexDataa * 65535.0) / *v72.m128i_i32);
+          *(pOutputStream + 1) = v73;
+          *pOutputStream = -1 - v73;
         }
         goto LABEL_65;
       }
@@ -1631,7 +1624,7 @@ void __fastcall FillVBForAttribute(
       if ( LoggingSystem_IsChannelEnabled(LOG_GENERAL, 4) != 0 )
       {
         *flTmpColor = "formats.cpp";
-        v122 = "FillVBForAttribute";
+        v120 = "FillVBForAttribute";
         LODWORD(flTmpColor[2]) = 941;
         LoggingSystem_Log(
           LOG_GENERAL,
@@ -1703,12 +1696,12 @@ LABEL_29:
                   v35 = *v33 * 255.0;
                 else
                   v35 = 0.0;
-                v106 = v23;
+                v104 = v23;
                 nNormalOffsetb = v33;
                 flSumWeightc = v24.m128i_i32[0];
                 v36 = floorf((v35 / *v24.m128i_i32) + 0.5);
                 v24.m128i_i32[0] = flSumWeightc;
-                v23 = v106;
+                v23 = v104;
                 if ( v36 > v34 )
                   v36 = v34;
                 v37 = v32 + *nOutOffset;
@@ -1724,9 +1717,9 @@ LABEL_29:
             }
             do
             {
-              v73 = v21 + *nOutOffset;
+              v71 = v21 + *nOutOffset;
               ++v21;
-              pOutputStream[v73] = 0;
+              pOutputStream[v71] = 0;
             }
             while ( v21 != 4 );
 LABEL_65:
@@ -1778,43 +1771,43 @@ LABEL_25:
   m_Format = inputLayoutField->m_Format;
   if ( m_Format == 25 )
   {
-    v65 = pAttribute->m_nSizeFloats;
-    v66 = *nOutOffset;
-    if ( v65 <= 3 )
+    v63 = pAttribute->m_nSizeFloats;
+    v64 = *nOutOffset;
+    if ( v63 <= 3 )
     {
-      v67 = pAttribute->m_nSizeFloats;
-      if ( v65 <= 0 )
+      v65 = pAttribute->m_nSizeFloats;
+      if ( v63 <= 0 )
       {
-        v71 = 0;
-        v108 = v66;
+        v69 = 0;
+        v106 = v64;
 LABEL_71:
-        v72 = &pOutputStream[v108];
+        v70 = &pOutputStream[v106];
         do
-          SetBoneIndexUint10(v72, v67++, v71);
-        while ( v67 != 4 );
+          SetBoneIndexUint10(v70, v65++, v69);
+        while ( v65 != 4 );
         *nOutOffset += 4;
         return;
       }
     }
     else
     {
-      v67 = 4;
+      v65 = 4;
     }
-    v68 = 4 * v65 - 4;
-    v69 = 0;
-    v108 = v66;
-    nNormalOffsetd = &pOutputStream[v66];
+    v66 = 4 * v63 - 4;
+    v67 = 0;
+    v106 = v64;
+    nNormalOffsetd = &pOutputStream[v64];
     do
     {
-      v70 = v69;
-      flSumWeighte = v68;
-      ++v69;
-      v71 = *(pVertexDataa + v68);
-      SetBoneIndexUint10(nNormalOffsetd, v70, v71);
-      v68 = flSumWeighte - 4;
+      v68 = v67;
+      flSumWeighte = v66;
+      ++v67;
+      v69 = *(pVertexDataa + v66);
+      SetBoneIndexUint10(nNormalOffsetd, v68, v69);
+      v66 = flSumWeighte - 4;
     }
-    while ( v67 > v69 );
-    if ( v67 == 4 )
+    while ( v65 > v67 );
+    if ( v65 == 4 )
       goto LABEL_65;
     goto LABEL_71;
   }
@@ -1842,58 +1835,58 @@ LABEL_53:
     nOutOffset = &LOG_GENERAL;
     if ( LoggingSystem_IsChannelEnabled(LOG_GENERAL, 4) != 0 )
     {
-      v96 = inputLayoutField->m_Format;
+      v94 = inputLayoutField->m_Format;
       *flTmpColor = "formats.cpp";
-      v122 = "FillVBForAttribute";
+      v120 = "FillVBForAttribute";
       LODWORD(flTmpColor[2]) = 924;
       LoggingSystem_Log(
         LOG_GENERAL,
         LoggingSeverity_t::LS_ERROR,
         flTmpColor,
         "Invalid input layout field format %d for joint indices\n",
-        v96);
+        v94);
     }
 LABEL_55:
-    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v53, v54, v51, v52, v55, v56) != 0 )
+    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v53, v54, v51, v52) != 0 )
       loc_0 = -559038737;
     Plat_ExitProcess(1);
 LABEL_58:
-    v57 = pAttribute->m_nSizeFloats;
-    v58 = *nOutOffset;
-    if ( v57 <= 3 )
+    v55 = pAttribute->m_nSizeFloats;
+    v56 = *nOutOffset;
+    if ( v55 <= 3 )
     {
-      v59 = pAttribute->m_nSizeFloats;
-      if ( v57 <= 0 )
+      v57 = pAttribute->m_nSizeFloats;
+      if ( v55 <= 0 )
       {
-        v63 = 0;
-        v107 = v58;
+        v61 = 0;
+        v105 = v56;
 LABEL_63:
-        v64 = &pOutputStream[v107];
+        v62 = &pOutputStream[v105];
         do
-          SetBoneIndexUint8(v64, v59++, v63);
-        while ( v59 != 4 );
+          SetBoneIndexUint8(v62, v57++, v61);
+        while ( v57 != 4 );
         goto LABEL_65;
       }
     }
     else
     {
-      v59 = 4;
+      v57 = 4;
     }
-    v60 = 4 * v57 - 4;
-    v61 = 0;
-    v107 = v58;
-    nNormalOffsetc = &pOutputStream[v58];
+    v58 = 4 * v55 - 4;
+    v59 = 0;
+    v105 = v56;
+    nNormalOffsetc = &pOutputStream[v56];
     do
     {
-      v62 = v61;
-      flSumWeightd = v60;
-      ++v61;
-      v63 = *(pVertexDataa + v60);
-      SetBoneIndexUint8(nNormalOffsetc, v62, v63);
-      v60 = flSumWeightd - 4;
+      v60 = v59;
+      flSumWeightd = v58;
+      ++v59;
+      v61 = *(pVertexDataa + v58);
+      SetBoneIndexUint8(nNormalOffsetc, v60, v61);
+      v58 = flSumWeightd - 4;
     }
-    while ( v61 < v59 );
-    if ( v59 == 4 )
+    while ( v59 < v57 );
+    if ( v57 == 4 )
       goto LABEL_65;
     goto LABEL_63;
   }

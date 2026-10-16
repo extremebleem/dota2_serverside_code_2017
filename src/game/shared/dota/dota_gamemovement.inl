@@ -12,7 +12,7 @@ void __fastcall CDOTAGameMovement::~CDOTAGameMovement(CDOTAGameMovement *const t
   bool v6; // zf
 
   index = this->m_mapLastVelocitySpewTime.m_Tree.m_LastAlloc.index;
-  this->_vptr_IGameMovement = off_404F270;
+  this->_vptr_IGameMovement = off_404F270;  // vptr: CGameMovement
   if ( index != 0xFFFF )
   {
     m_nAllocationCount = this->m_mapLastVelocitySpewTime.m_Tree.m_Elements.m_nAllocationCount;
@@ -50,7 +50,7 @@ void __fastcall CDOTAGameMovement::~CDOTAGameMovement(CDOTAGameMovement *const t
   {
     this->m_mapLastVelocitySpewTime.m_Tree.m_LastAlloc.index = -1;
 LABEL_13:
-    this->_vptr_IGameMovement = off_404F1F0;
+    this->_vptr_IGameMovement = off_404F1F0;  // vptr: IGameMovement
     return;
   }
   CUtlMemory<UtlRBTreeNode_t<CUtlMap<CEntityIndex,float,unsigned short,bool (*)(CEntityIndex const&,CEntityIndex const&)>::Node_t,unsigned short>,unsigned short>::Purge(&this->m_mapLastVelocitySpewTime.m_Tree.m_Elements);
@@ -59,7 +59,7 @@ LABEL_13:
   if ( !v6 )
     goto LABEL_13;
   CUtlMemory<UtlRBTreeNode_t<CUtlMap<CEntityIndex,float,unsigned short,bool (*)(CEntityIndex const&,CEntityIndex const&)>::Node_t,unsigned short>,unsigned short>::Purge(&this->m_mapLastVelocitySpewTime.m_Tree.m_Elements);
-  this->_vptr_IGameMovement = off_404F1F0;
+  this->_vptr_IGameMovement = off_404F1F0;  // vptr: IGameMovement
 }
 
 
@@ -74,7 +74,7 @@ void __fastcall CDOTAGameMovement::~CDOTAGameMovement(CDOTAGameMovement *const t
   bool v6; // zf
 
   index = this->m_mapLastVelocitySpewTime.m_Tree.m_LastAlloc.index;
-  this->_vptr_IGameMovement = off_404F270;
+  this->_vptr_IGameMovement = off_404F270;  // vptr: CGameMovement
   if ( index != 0xFFFF )
   {
     m_nAllocationCount = this->m_mapLastVelocitySpewTime.m_Tree.m_Elements.m_nAllocationCount;
@@ -120,7 +120,7 @@ void __fastcall CDOTAGameMovement::~CDOTAGameMovement(CDOTAGameMovement *const t
   {
     this->m_mapLastVelocitySpewTime.m_Tree.m_LastAlloc.index = -1;
   }
-  this->_vptr_IGameMovement = off_404F1F0;
+  this->_vptr_IGameMovement = off_404F1F0;  // vptr: IGameMovement
   operator delete(this);
 }
 

@@ -100,13 +100,15 @@ void __fastcall CFlexExpresser::Precache(CFlexExpresser *const this, const CEnti
 void __fastcall CFlexExpresser::Spawn(CFlexExpresser *const this, const CEntityKeyValues *pKeyValues)
 {
   CBaseAnimatingController *BaseAnimatingController; // rax
-  float v5; // xmm1_4
+  double v5; // xmm1_8
+  CGlobalVars *v6; // r12
   FnGlobalVarsWarningFunc m_pfnWarningFunc; // rax
-  __int64 v7; // [rsp+0h] [rbp-20h]
+  double v8; // xmm0_8
+  _QWORD v9[4]; // [rsp+0h] [rbp-20h] BYREF
 
   CFlexCycler::Spawn(this, pKeyValues);
-  CBaseEntity::GetModel(this);
-  if ( v7 == 0 )
+  CBaseEntity::GetModel(v9, this);
+  if ( v9[0] == 0 )
     CBaseModelEntity::SetModelFromKeyValues(this, pKeyValues, 0);
   if ( (this->m_spawnflags.m_Value & 1) != 0 )
   {
@@ -122,13 +124,23 @@ void __fastcall CFlexExpresser::Spawn(CFlexExpresser *const this, const CEntityK
   (*(this->_vptr_IHandleEntity + 157))(this, 80000);
   BaseAnimatingController = CBaseAnimating::GetBaseAnimatingController(this);
   (*(BaseAnimatingController->_vptr_CSkeletonAnimationController + 22))(BaseAnimatingController, 1.0);
-  if ( gpGlobals != 0 && !gpGlobals->m_bEnableAssertions && !gpGlobals->m_bInSimulation )
+  v6 = gpGlobals;
+  if ( gpGlobals != 0 )
   {
-    m_pfnWarningFunc = gpGlobals->m_pfnWarningFunc;
-    if ( m_pfnWarningFunc != 0 )
-      m_pfnWarningFunc(GlobalVarsUsageWarning_t::GV_CURTIME_CALLED_DURING_RENDERING);
+    if ( !gpGlobals->m_bEnableAssertions && !gpGlobals->m_bInSimulation )
+    {
+      m_pfnWarningFunc = gpGlobals->m_pfnWarningFunc;
+      if ( m_pfnWarningFunc != 0 )
+        m_pfnWarningFunc(GlobalVarsUsageWarning_t::GV_CURTIME_CALLED_DURING_RENDERING);
+    }
+    HIDWORD(v8) = 0;
+    *&v8 = v6->m_flCurrentTime + 1.0;
   }
-  CBaseEntity::SetNextThink(this, v5, 0);
+  else
+  {
+    *&v8 = 1065353216;
+  }
+  CBaseEntity::SetNextThink(this, v8, v5, 0);
   CBaseAnimating::ResetSequenceInfo(this);
   (*(this->_vptr_IHandleEntity + 219))(this);
   CFlexExpresser::CreateExpresser(this);
@@ -139,16 +151,28 @@ void __fastcall CFlexExpresser::Spawn(CFlexExpresser *const this, const CEntityK
 // calls: CBaseEntity::SetNextThink, CBaseAnimating::StudioFrameAdvance
 void __fastcall CFlexExpresser::Think(CFlexExpresser *const this)
 {
-  float v1; // xmm1_4
+  double v1; // xmm1_8
+  CGlobalVars *v3; // rbx
   FnGlobalVarsWarningFunc m_pfnWarningFunc; // rax
+  double v5; // xmm0_8
 
-  if ( gpGlobals != 0 && !gpGlobals->m_bEnableAssertions && !gpGlobals->m_bInSimulation )
+  v3 = gpGlobals;
+  if ( gpGlobals != 0 )
   {
-    m_pfnWarningFunc = gpGlobals->m_pfnWarningFunc;
-    if ( m_pfnWarningFunc != 0 )
-      m_pfnWarningFunc(GlobalVarsUsageWarning_t::GV_CURTIME_CALLED_DURING_RENDERING);
+    if ( !gpGlobals->m_bEnableAssertions && !gpGlobals->m_bInSimulation )
+    {
+      m_pfnWarningFunc = gpGlobals->m_pfnWarningFunc;
+      if ( m_pfnWarningFunc != 0 )
+        m_pfnWarningFunc(GlobalVarsUsageWarning_t::GV_CURTIME_CALLED_DURING_RENDERING);
+    }
+    HIDWORD(v5) = 0;
+    *&v5 = v3->m_flCurrentTime + 0.1;
   }
-  CBaseEntity::SetNextThink(this, v1, 0);
+  else
+  {
+    *&v5 = 1036831949;
+  }
+  CBaseEntity::SetNextThink(this, v5, v1, 0);
   CBaseAnimating::StudioFrameAdvance(this, AnimationAdvanceType_t::ANIM_ADVANCE_NORMAL);
 }
 

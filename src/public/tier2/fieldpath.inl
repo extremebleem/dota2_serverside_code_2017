@@ -34,7 +34,7 @@ void __fastcall CFieldPathHuffmanEncoder::~CFieldPathHuffmanEncoder(CFieldPathHu
 // CFieldPathHuffmanEncoder::INode::~INode  (line 732, @0x0000000003129910, libserver.so)
 void __fastcall CFieldPathHuffmanEncoder::INode::~INode(CFieldPathHuffmanEncoder::INode *const this)
 {
-  this->_vptr_INode = off_47C4F10;
+  this->_vptr_INode = off_47C4F10;  // vptr: CFieldPathHuffmanEncoder::INode
 }
 
 
@@ -42,7 +42,7 @@ void __fastcall CFieldPathHuffmanEncoder::INode::~INode(CFieldPathHuffmanEncoder
 // calls: operator delete
 void __fastcall CFieldPathHuffmanEncoder::INode::~INode(CFieldPathHuffmanEncoder::INode *const this)
 {
-  this->_vptr_INode = off_47C4F10;
+  this->_vptr_INode = off_47C4F10;  // vptr: CFieldPathHuffmanEncoder::INode
   operator delete(this);
 }
 
@@ -54,14 +54,14 @@ void __fastcall CFieldPathHuffmanEncoder::InternalNode::~InternalNode(
   CFieldPathHuffmanEncoder::INode *left; // rdi
   CFieldPathHuffmanEncoder::INode *right; // rdi
 
-  this->_vptr_INode = off_47C4F50;
+  this->_vptr_INode = off_47C4F50;  // vptr: CFieldPathHuffmanEncoder::InternalNode
   left = this->left;
   if ( left != 0 )
     (*(left->_vptr_INode + 1))(left);
   right = this->right;
   if ( right != 0 )
     (*(right->_vptr_INode + 1))(right);
-  this->_vptr_INode = off_47C4F10;
+  this->_vptr_INode = off_47C4F10;  // vptr: CFieldPathHuffmanEncoder::INode
 }
 
 
@@ -73,14 +73,14 @@ void __fastcall CFieldPathHuffmanEncoder::InternalNode::~InternalNode(
   CFieldPathHuffmanEncoder::INode *left; // rdi
   CFieldPathHuffmanEncoder::INode *right; // rdi
 
-  this->_vptr_INode = off_47C4F50;
+  this->_vptr_INode = off_47C4F50;  // vptr: CFieldPathHuffmanEncoder::InternalNode
   left = this->left;
   if ( left != 0 )
     (*(left->_vptr_INode + 1))(left);
   right = this->right;
   if ( right != 0 )
     (*(right->_vptr_INode + 1))(right);
-  this->_vptr_INode = off_47C4F10;
+  this->_vptr_INode = off_47C4F10;  // vptr: CFieldPathHuffmanEncoder::INode
   operator delete(this);
 }
 
@@ -96,7 +96,7 @@ bool __fastcall CFieldPathHuffmanEncoder::InternalNode::IsLeafNode(
 // CFieldPathHuffmanEncoder::LeafNode::~LeafNode  (line 756, @0x00000000031299c0, libserver.so)  // inlines: ~INode
 void __fastcall CFieldPathHuffmanEncoder::LeafNode::~LeafNode(CFieldPathHuffmanEncoder::LeafNode *const this)
 {
-  this->_vptr_INode = off_47C4F10;
+  this->_vptr_INode = off_47C4F10;  // vptr: CFieldPathHuffmanEncoder::INode
 }
 
 
@@ -104,7 +104,7 @@ void __fastcall CFieldPathHuffmanEncoder::LeafNode::~LeafNode(CFieldPathHuffmanE
 // calls: operator delete
 void __fastcall CFieldPathHuffmanEncoder::LeafNode::~LeafNode(CFieldPathHuffmanEncoder::LeafNode *const this)
 {
-  this->_vptr_INode = off_47C4F10;
+  this->_vptr_INode = off_47C4F10;  // vptr: CFieldPathHuffmanEncoder::INode
   operator delete(this);
 }
 

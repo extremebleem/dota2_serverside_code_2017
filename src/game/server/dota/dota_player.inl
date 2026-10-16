@@ -71,7 +71,7 @@ void *__fastcall CDOTAPlayer::CEntityInstanceEntityClass::AllocateInstance(
 void __fastcall CDOTAPlayer::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTAPlayer::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -81,7 +81,7 @@ void __fastcall CDOTAPlayer::CEntityInstanceEntityClass::~CEntityInstanceEntityC
 void __fastcall CDOTAPlayer::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTAPlayer::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }

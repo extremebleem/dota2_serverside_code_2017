@@ -153,7 +153,7 @@ void __fastcall CLightComponent::CLightComponent(CLightComponent *const this)
   CEntityInstance *v6; // rdi
   CUtlString v7; // [rsp+0h] [rbp-30h] BYREF
 
-  this->_vptr_CLightComponent = off_3FB50D0;
+  this->_vptr_CLightComponent = off_3FB50D0;  // vptr: CLightComponent
   this->m_ConnectedSignallers.m_Size = 0;
   this->m_ConnectedSignallers.m_Memory.m_pMemory = 0;
   this->m_ConnectedSignallers.m_Memory.m_nAllocationCount = 0;
@@ -289,7 +289,7 @@ void __fastcall CLightComponent::~CLightComponent(CLightComponent *const this)
   _QWORD *v7; // rdi
   bool v8; // zf
 
-  this->_vptr_CLightComponent = off_3FB50D0;
+  this->_vptr_CLightComponent = off_3FB50D0;  // vptr: CLightComponent
   CLightComponent::DestroyLightObject(this);
   (*(g_pLightQuery->_vptr_ILightQuery + 4))(g_pLightQuery, this->m_hQueryLight);
   p_m_Pattern = &this->m_Pattern;

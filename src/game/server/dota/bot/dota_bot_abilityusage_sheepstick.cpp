@@ -11,7 +11,7 @@ void __fastcall CDOTA_Bot_AbilityUsage_Sheepstick::CDOTA_Bot_AbilityUsage_Sheeps
   this->m_pAbility = pAbility;
   this->m_bUseOnCreeps = 0;
   this->m_pBot = pBot;
-  this->_vptr_CDOTA_Bot_AbilityUsage = off_42C6B50;
+  this->_vptr_CDOTA_Bot_AbilityUsage = off_42C6B50;  // vptr: CDOTA_Bot_AbilityUsage_Sheepstick
   this->m_hTarget.m_Index = -1;
 }
 

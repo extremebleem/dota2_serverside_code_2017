@@ -208,7 +208,7 @@ CEntityInstance *__fastcall CEnvSpark::CEntityInstanceEntityClass::ConstructInst
 void __fastcall CEnvSpark::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CEnvSpark::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -218,7 +218,7 @@ void __fastcall CEnvSpark::CEntityInstanceEntityClass::~CEntityInstanceEntityCla
 void __fastcall CEnvSpark::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CEnvSpark::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }

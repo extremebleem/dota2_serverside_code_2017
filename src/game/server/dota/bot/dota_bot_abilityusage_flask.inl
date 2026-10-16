@@ -5,7 +5,7 @@
 // calls: CDOTA_Bot_AbilityUsage::~CDOTA_Bot_AbilityUsage
 void __fastcall CDOTA_Bot_AbilityUsage_Flask::~CDOTA_Bot_AbilityUsage_Flask(CDOTA_Bot_AbilityUsage_Flask *const this)
 {
-  this->_vptr_CDOTA_Bot_AbilityUsage = off_42C58F0;
+  this->_vptr_CDOTA_Bot_AbilityUsage = off_42C58F0;  // vptr: CDOTA_Bot_AbilityUsageSpecific<CDOTA_Bot>
   CDOTA_Bot_AbilityUsage::~CDOTA_Bot_AbilityUsage(this);
 }
 
@@ -14,7 +14,7 @@ void __fastcall CDOTA_Bot_AbilityUsage_Flask::~CDOTA_Bot_AbilityUsage_Flask(CDOT
 // calls: CDOTA_Bot_AbilityUsage::~CDOTA_Bot_AbilityUsage, operator delete
 void __fastcall CDOTA_Bot_AbilityUsage_Flask::~CDOTA_Bot_AbilityUsage_Flask(CDOTA_Bot_AbilityUsage_Flask *const this)
 {
-  this->_vptr_CDOTA_Bot_AbilityUsage = off_42C58F0;
+  this->_vptr_CDOTA_Bot_AbilityUsage = off_42C58F0;  // vptr: CDOTA_Bot_AbilityUsageSpecific<CDOTA_Bot>
   CDOTA_Bot_AbilityUsage::~CDOTA_Bot_AbilityUsage(this);
   operator delete(this);
 }

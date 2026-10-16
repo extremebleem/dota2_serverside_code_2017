@@ -298,7 +298,7 @@ void *__fastcall CEnvScreenOverlay::CEntityInstanceEntityClass::AllocateInstance
 void __fastcall CEnvScreenOverlay::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CEnvScreenOverlay::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -308,7 +308,7 @@ void __fastcall CEnvScreenOverlay::CEntityInstanceEntityClass::~CEntityInstanceE
 void __fastcall CEnvScreenOverlay::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CEnvScreenOverlay::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -780,7 +780,7 @@ CEntityInstance *__fastcall CEnvScreenEffect::CEntityInstanceEntityClass::Constr
 void __fastcall CEnvScreenEffect::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CEnvScreenEffect::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -790,7 +790,7 @@ void __fastcall CEnvScreenEffect::CEntityInstanceEntityClass::~CEntityInstanceEn
 void __fastcall CEnvScreenEffect::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CEnvScreenEffect::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }

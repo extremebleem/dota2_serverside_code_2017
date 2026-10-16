@@ -215,7 +215,7 @@ void __fastcall CResponseSystem::CResponseSystem(CResponseSystem *const this)
 {
   CResponseFileParser *v2; // r12
 
-  this->_vptr_IResponseSystem = off_47C4C50;
+  this->_vptr_IResponseSystem = off_47C4C50;  // vptr: CResponseSystem
   this->m_iRefs = 1;
   this->_vptr_CRefCountServiceBase = off_47C4C98;
   this->m_Responses.m_Elements.m_Tree.m_Root = -1;
@@ -272,7 +272,7 @@ void __fastcall CResponseSystem::~CResponseSystem(CResponseSystem *const this)
   __int64 i; // r14
   CUtlString *v6; // rbx
 
-  this->_vptr_IResponseSystem = off_47C4C50;
+  this->_vptr_IResponseSystem = off_47C4C50;  // vptr: CResponseSystem
   this->_vptr_CRefCountServiceBase = off_47C4C98;
   CResponseSystem::Clear(this);
   v2 = this->m_pParserWhichIsLoadedAllTheTimeWhichKindOfSucks;
@@ -343,8 +343,8 @@ void __fastcall CResponseSystem::~CResponseSystem(CResponseSystem *const this)
   CUtlRBTree<CUtlMap<char const*,ResponseGroup,short,bool (*)(char const* const&,char const* const&)>::Node_t,short,CUtlMap<char const*,ResponseGroup,short,bool (*)(char const* const&,char const* const&)>::CKeyLess,CUtlMemory<UtlRBTreeNode_t<CUtlMap<char const*,ResponseGroup,short,bool (*)(char const* const&,char const* const&)>::Node_t,short>,short>>::Purge(&this->m_Responses.m_Elements.m_Tree);
   if ( (this->m_Responses.m_Elements.m_Tree.m_Elements.m_nGrowSize & 0xC0000000) == 0 )
     CUtlMemory<UtlRBTreeNode_t<CUtlMap<char const*,ResponseGroup,short,bool (*)(char const* const&,char const* const&)>::Node_t,short>,short>::Purge(&this->m_Responses.m_Elements.m_Tree.m_Elements);
-  this->_vptr_CRefCountServiceBase = off_3FEABF0;
-  this->_vptr_IResponseSystem = off_3FECD30;
+  this->_vptr_CRefCountServiceBase = off_3FEABF0;  // vptr: CRefCountServiceBase<true,CRefMT>
+  this->_vptr_IResponseSystem = off_3FECD30;  // vptr: IResponseSystem
 }
 
 
@@ -1627,7 +1627,7 @@ LABEL_23:
         if ( v18->depletioncount != g->m_nDepletionCount )
         {
           v27 = v3;
-          v19 = (*v3->_vptr_IResponseFilter)(v3, *(v18 + 81) & 0x3F, v18->value);
+          v19 = v3->IsValidResponse(*(v18 + 81) & 0x3F, v18->value);
           v3 = v27;
           if ( v19 == 0 )
           {
@@ -2005,7 +2005,7 @@ LABEL_21:
       slota = v24;
       v67 = v14;
       totalweight = v12;
-      v25 = (*v12->_vptr_IResponseFilter)(v12, *(v19 + 81) & 0x3F, v19->value);
+      v25 = v12->IsValidResponse(*(v19 + 81) & 0x3F, v19->value);
       v12 = totalweight;
       v14 = v67;
       v24 = slota;
@@ -2273,7 +2273,7 @@ LABEL_8:
       }
       if ( pFilter == 0
         || (*(v14 + 18) == 0 ? (v20 = *(v18 + 82), v19 = v18) : (v19 = *(v14 + 24) + v18, v20 = *(v19 + 82)),
-            (*pFilter->_vptr_IResponseFilter)(pFilter, *(v19 + 81) & 0x3F, v20) != 0) )
+            pFilter->IsValidResponse(*(v19 + 81) & 0x3F, v20) != 0) )
       {
         v23 = v18;
         v6 = thisa;
@@ -2479,7 +2479,7 @@ LABEL_11:
         value = *(v18 + 82);
         v19 = v18;
       }
-      if ( (*pFilter->_vptr_IResponseFilter)(pFilter, *(v19 + 81) & 0x3F, value) != 0 )
+      if ( pFilter->IsValidResponse(*(v19 + 81) & 0x3F, value) != 0 )
         break;
       v16 = v15->m_Data.elem.m_nCurrentIndex;
       if ( m_nCurrentIndex == v16 )
@@ -3107,40 +3107,34 @@ void __fastcall CResponseSystem::CopyCriteriaFrom(
   __int64 v55; // rcx
   __int64 v56; // rdi
   __int64 v57; // rsi
-  __int64 v58; // r8
-  __int64 v59; // r9
-  __int64 v60; // rdx
-  __int64 v61; // rcx
-  __int64 v62; // rdi
-  __int64 v63; // rsi
-  __int64 v64; // r8
-  __int64 v65; // r9
-  __int64 v66; // rdx
-  __int64 v67; // rcx
-  __int64 v68; // rdi
-  __int64 v69; // rsi
-  __int64 v70; // r8
-  __int64 v71; // r9
-  __int64 v73; // [rsp+18h] [rbp-138h]
+  __int64 v58; // rdx
+  __int64 v59; // rcx
+  __int64 v60; // rdi
+  __int64 v61; // rsi
+  __int64 v62; // rdx
+  __int64 v63; // rcx
+  __int64 v64; // rdi
+  __int64 v65; // rsi
+  __int64 v67; // [rsp+18h] [rbp-138h]
   unsigned __int64 i; // [rsp+30h] [rbp-120h]
-  __int64 v76; // [rsp+38h] [rbp-118h]
+  __int64 v70; // [rsp+38h] [rbp-118h]
   CUtlDict<Criteria,short int> *p_m_Criteria; // [rsp+48h] [rbp-108h]
-  __int64 v79; // [rsp+50h] [rbp-100h]
-  __int16 v80; // [rsp+62h] [rbp-EEh]
-  __int16 v81; // [rsp+64h] [rbp-ECh]
-  CUtlLeanVectorFixedGrowableBase<short unsigned int,6u,short int>::IndexType_t v82; // [rsp+64h] [rbp-ECh]
-  LeafCodeInfo_t v83; // [rsp+70h] [rbp-E0h] BYREF
-  LeafCodeInfo_t v84; // [rsp+90h] [rbp-C0h] BYREF
+  __int64 v73; // [rsp+50h] [rbp-100h]
+  __int16 v74; // [rsp+62h] [rbp-EEh]
+  __int16 v75; // [rsp+64h] [rbp-ECh]
+  CUtlLeanVectorFixedGrowableBase<short unsigned int,6u,short int>::IndexType_t v76; // [rsp+64h] [rbp-ECh]
+  LeafCodeInfo_t v77; // [rsp+70h] [rbp-E0h] BYREF
+  LeafCodeInfo_t v78; // [rsp+90h] [rbp-C0h] BYREF
   Criteria dstCriteria; // [rsp+B0h] [rbp-A0h] BYREF
   Criteria dstSubCriteria; // [rsp+E0h] [rbp-70h] BYREF
-  unsigned __int64 v87; // [rsp+118h] [rbp-38h]
+  unsigned __int64 v81; // [rsp+118h] [rbp-38h]
 
-  v87 = __readfsqword(0x28u);
+  v81 = __readfsqword(0x28u);
   m_nCount = pSrcRule->m_Criteria.m_nCount;
   if ( m_nCount > 0 )
   {
-    v73 = 2LL * (m_nCount - 1) + 2;
-    for ( i = 0; i != v73; i += 2LL )
+    v67 = 2LL * (m_nCount - 1) + 2;
+    for ( i = 0; i != v67; i += 2LL )
     {
       m_nAllocated = pSrcRule->m_Criteria.m_nAllocated;
       if ( m_nAllocated != 0 )
@@ -3154,8 +3148,8 @@ void __fastcall CResponseSystem::CopyCriteriaFrom(
       {
         m_pElements = 0;
       }
-      v76 = m_pElements[i / 2] << 6;
-      v8 = this->m_Criteria.m_Elements.m_Tree.m_Elements.m_pMemory + v76;
+      v70 = m_pElements[i / 2] << 6;
+      v8 = this->m_Criteria.m_Elements.m_Tree.m_Elements.m_pMemory + v70;
       if ( v8 == -16LL )
         continue;
       v9 = *(v8 + 1);
@@ -3174,17 +3168,17 @@ void __fastcall CResponseSystem::CopyCriteriaFrom(
           {
             if ( LoggingSystem_IsChannelEnabled(LOG_GENERAL, 4) != 0 )
             {
-              v84.m_szFile = "../../public/tier1/utlleanvector.h";
-              v84.m_szFunction = "AddToTailGetPtr";
-              v84.m_nLine = 557;
+              v78.m_szFile = "../../public/tier1/utlleanvector.h";
+              v78.m_szFunction = "AddToTailGetPtr";
+              v78.m_nLine = 557;
               LoggingSystem_Log(
                 LOG_GENERAL,
                 LoggingSeverity_t::LS_ERROR,
-                &v84,
+                &v78,
                 "%s allocation count overflow",
                 "AddToTailGetPtr");
             }
-            if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v68, v69, v66, v67, v70, v71) != 0 )
+            if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v64, v65, v62, v63) != 0 )
               loc_0 = -559038737;
             Plat_ExitProcess(1);
           }
@@ -3289,7 +3283,7 @@ void __fastcall CResponseSystem::CopyCriteriaFrom(
       if ( *(v8 + 24) > 0 )
       {
         v23 = 0;
-        v79 = 2LL * (*(v8 + 24) - 1) + 2;
+        v73 = 2LL * (*(v8 + 24) - 1) + 2;
         p_m_Criteria = &pCustomSystem->m_Criteria;
         while ( 1 )
         {
@@ -3307,14 +3301,14 @@ void __fastcall CResponseSystem::CopyCriteriaFrom(
             Criteria::Criteria(&dstSubCriteria.value);
             *&dstSubCriteria.nameSym.m_Id = value;
             v27 = &pCustomSystem->m_Criteria;
-            v81 = CUtlRBTree<CUtlMap<char const*,Criteria,short,bool (*)(char const* const&,char const* const&)>::Node_t,short,CUtlMap<char const*,Criteria,short,bool (*)(char const* const&,char const* const&)>::CKeyLess,CUtlMemory<UtlRBTreeNode_t<CUtlMap<char const*,Criteria,short,bool (*)(char const* const&,char const* const&)>::Node_t,short>,short>>::Find(
+            v75 = CUtlRBTree<CUtlMap<char const*,Criteria,short,bool (*)(char const* const&,char const* const&)>::Node_t,short,CUtlMap<char const*,Criteria,short,bool (*)(char const* const&,char const* const&)>::CKeyLess,CUtlMemory<UtlRBTreeNode_t<CUtlMap<char const*,Criteria,short,bool (*)(char const* const&,char const* const&)>::Node_t,short>,short>>::Find(
                     &p_m_Criteria->m_Elements.m_Tree,
                     &dstSubCriteria);
             Criteria::~Criteria(&dstSubCriteria.value);
-            if ( v81 == -1 )
+            if ( v75 == -1 )
               break;
             v23 += 2;
-            if ( v23 == v79 )
+            if ( v23 == v73 )
               goto LABEL_48;
           }
           Criteria::Criteria(&dstSubCriteria);
@@ -3337,25 +3331,25 @@ void __fastcall CResponseSystem::CopyCriteriaFrom(
                                          | *(&dstSubCriteria.matcher + 8) & 0xBF;
           dstSubCriteria.matcher.token.m_Id = v25->m_Data.elem.matcher.token.m_Id;
           dstSubCriteria.matcher.rawtoken.m_Id = v25->m_Data.elem.matcher.rawtoken.m_Id;
-          v80 = CUtlDict<Criteria,short>::Insert(p_m_Criteria, v25->m_Data.elem.value, &dstSubCriteria);
-          v82 = dstCriteria.subcriteria.m_nCount;
+          v74 = CUtlDict<Criteria,short>::Insert(p_m_Criteria, v25->m_Data.elem.value, &dstSubCriteria);
+          v76 = dstCriteria.subcriteria.m_nCount;
           if ( dstCriteria.subcriteria.m_nCount == 0x7FFF )
           {
             if ( LoggingSystem_IsChannelEnabled(LOG_GENERAL, 4) != 0 )
               goto LABEL_104;
             while ( 1 )
             {
-              if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v56, v57, v54, v55, v58, v59) != 0 )
+              if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v56, v57, v54, v55) != 0 )
                 loc_0 = -559038737;
               Plat_ExitProcess(1);
 LABEL_104:
-              v83.m_szFile = "../../public/tier1/utlleanvector.h";
-              v83.m_szFunction = "AddToTailGetPtr";
-              v83.m_nLine = 557;
+              v77.m_szFile = "../../public/tier1/utlleanvector.h";
+              v77.m_szFunction = "AddToTailGetPtr";
+              v77.m_nLine = 557;
               LoggingSystem_Log(
                 LOG_GENERAL,
                 LoggingSeverity_t::LS_ERROR,
-                &v83,
+                &v77,
                 "%s allocation count overflow",
                 "AddToTailGetPtr");
             }
@@ -3435,9 +3429,9 @@ LABEL_45:
 LABEL_47:
           v23 += 2;
           dstCriteria.subcriteria.m_nCount = v33 + 1;
-          v34[v82] = v80;
+          v34[v76] = v74;
           Criteria::~Criteria(&dstSubCriteria);
-          if ( v23 == v79 )
+          if ( v23 == v73 )
             goto LABEL_48;
         }
       }
@@ -3445,7 +3439,7 @@ LABEL_47:
 LABEL_48:
       v35 = CUtlDict<Criteria,short>::Insert(
               v27,
-              *(&this->m_Criteria.m_Elements.m_Tree.m_Elements.m_pMemory->m_Data.key + v76),
+              *(&this->m_Criteria.m_Elements.m_Tree.m_Elements.m_pMemory->m_Data.key + v70),
               &dstCriteria);
       v36 = pDstRule->m_Criteria.m_nCount;
       if ( v36 == 0x7FFF )
@@ -3454,17 +3448,17 @@ LABEL_48:
           goto LABEL_109;
         while ( 1 )
         {
-          if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v62, v63, v60, v61, v64, v65) != 0 )
+          if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v60, v61, v58, v59) != 0 )
             loc_0 = -559038737;
           Plat_ExitProcess(1);
 LABEL_109:
-          v84.m_szFile = "../../public/tier1/utlleanvector.h";
-          v84.m_szFunction = "AddToTailGetPtr";
-          v84.m_nLine = 557;
+          v78.m_szFile = "../../public/tier1/utlleanvector.h";
+          v78.m_szFunction = "AddToTailGetPtr";
+          v78.m_nLine = 557;
           LoggingSystem_Log(
             LOG_GENERAL,
             LoggingSeverity_t::LS_ERROR,
-            &v84,
+            &v78,
             "%s allocation count overflow",
             "AddToTailGetPtr");
         }
@@ -3626,48 +3620,42 @@ void __fastcall CResponseSystem::CopyResponsesFrom(
   __int64 v64; // rcx
   __int64 v65; // rdi
   __int64 v66; // rsi
-  __int64 v67; // r8
-  __int64 v68; // r9
-  __int64 v69; // rdx
-  __int64 v70; // rcx
-  __int64 v71; // rdi
-  __int64 v72; // rsi
-  __int64 v73; // r8
-  __int64 v74; // r9
-  __int64 v75; // rdx
-  __int64 v76; // rcx
-  __int64 v77; // rdi
-  __int64 v78; // rsi
-  __int64 v79; // r8
-  __int64 v80; // r9
+  __int64 v67; // rdx
+  __int64 v68; // rcx
+  __int64 v69; // rdi
+  __int64 v70; // rsi
+  __int64 v71; // rdx
+  __int64 v72; // rcx
+  __int64 v73; // rdi
+  __int64 v74; // rsi
   CUtlDict<ResponseGroup,short int> *p_m_Responses; // [rsp+8h] [rbp-188h]
-  __int64 v82; // [rsp+10h] [rbp-180h]
-  __int64 v83; // [rsp+18h] [rbp-178h]
-  unsigned __int64 v86; // [rsp+30h] [rbp-160h]
-  __int64 v89; // [rsp+48h] [rbp-148h]
-  ParserResponse *v90; // [rsp+50h] [rbp-140h]
-  ParserResponse *v91; // [rsp+50h] [rbp-140h]
-  __int64 v92; // [rsp+60h] [rbp-130h]
+  __int64 v76; // [rsp+10h] [rbp-180h]
+  __int64 v77; // [rsp+18h] [rbp-178h]
+  unsigned __int64 v80; // [rsp+30h] [rbp-160h]
+  __int64 v83; // [rsp+48h] [rbp-148h]
+  ParserResponse *v84; // [rsp+50h] [rbp-140h]
+  ParserResponse *v85; // [rsp+50h] [rbp-140h]
+  __int64 v86; // [rsp+60h] [rbp-130h]
   float16::float16bits src; // [rsp+68h] [rbp-128h]
-  __int64 v94; // [rsp+70h] [rbp-120h]
-  __int64 v95; // [rsp+70h] [rbp-120h]
-  __int64 v96; // [rsp+78h] [rbp-118h]
-  __int64 v97; // [rsp+78h] [rbp-118h]
+  __int64 v88; // [rsp+70h] [rbp-120h]
+  __int64 v89; // [rsp+70h] [rbp-120h]
+  __int64 v90; // [rsp+78h] [rbp-118h]
+  __int64 v91; // [rsp+78h] [rbp-118h]
   __int16 dstResponseGroup; // [rsp+80h] [rbp-110h]
   __int16 dstResponseGroup_2; // [rsp+82h] [rbp-10Eh]
   __int64 dstResponseGroup_8; // [rsp+88h] [rbp-108h]
   bool dstResponseGroup_16; // [rsp+90h] [rbp-100h]
   __int16 dstResponseGroup_17; // [rsp+91h] [rbp-FFh]
   char dstResponseGroup_19; // [rsp+93h] [rbp-FDh]
-  LeafCodeInfo_t v104; // [rsp+A0h] [rbp-F0h] BYREF
-  LeafCodeInfo_t v105; // [rsp+C0h] [rbp-D0h] BYREF
-  LeafCodeInfo_t v106; // [rsp+E0h] [rbp-B0h] BYREF
+  LeafCodeInfo_t v98; // [rsp+A0h] [rbp-F0h] BYREF
+  LeafCodeInfo_t v99; // [rsp+C0h] [rbp-D0h] BYREF
+  LeafCodeInfo_t v100; // [rsp+E0h] [rbp-B0h] BYREF
   ParserResponse dstResponse; // [rsp+100h] [rbp-90h] BYREF
 
   if ( pSrcRule->m_Responses.m_nCount > 0 )
   {
-    v86 = 0;
-    v82 = 2LL * (pSrcRule->m_Responses.m_nCount - 1) + 2;
+    v80 = 0;
+    v76 = 2LL * (pSrcRule->m_Responses.m_nCount - 1) + 2;
     p_m_Responses = &pCustomSystem->m_Responses;
     do
     {
@@ -3683,9 +3671,9 @@ void __fastcall CResponseSystem::CopyResponsesFrom(
       {
         m_pElements = 0;
       }
-      v83 = m_pElements[v86 / 2];
-      v6 = &this->m_Responses.m_Elements.m_Tree.m_Elements.m_pMemory[v83];
-      v90 = v6;
+      v77 = m_pElements[v80 / 2];
+      v6 = &this->m_Responses.m_Elements.m_Tree.m_Elements.m_pMemory[v77];
+      v84 = v6;
       if ( v6 == -16LL )
         goto LABEL_102;
       dstResponseGroup = 0;
@@ -3701,19 +3689,19 @@ void __fastcall CResponseSystem::CopyResponsesFrom(
       dstResponseGroup_16 = v6->m_Data.elem.m_bEnabled;
       if ( v6->m_Data.elem.group.m_nCount <= 0 )
       {
-        v21 = &this->m_Responses.m_Elements.m_Tree.m_Elements.m_pMemory[v83];
+        v21 = &this->m_Responses.m_Elements.m_Tree.m_Elements.m_pMemory[v77];
       }
       else
       {
-        v94 = 0;
-        v89 = 90 * ((v6->m_Data.elem.group.m_nCount - 1) + 1LL);
+        v88 = 0;
+        v83 = 90 * ((v6->m_Data.elem.group.m_nCount - 1) + 1LL);
         do
         {
-          if ( v90->params.flags != 0 )
-            v7 = *(&v90->params.m_pFollowup + 3);
+          if ( v84->params.flags != 0 )
+            v7 = *(&v84->params.m_pFollowup + 3);
           else
             v7 = 0;
-          v8 = v94 + v7;
+          v8 = v88 + v7;
           if ( v8 != 0 )
           {
             ParserResponse::ParserResponse(&dstResponse);
@@ -3729,17 +3717,17 @@ void __fastcall CResponseSystem::CopyResponsesFrom(
                 goto LABEL_141;
               while ( 1 )
               {
-                if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v71, v72, v69, v70, v73, v74) != 0 )
+                if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v69, v70, v67, v68) != 0 )
                   loc_0 = -559038737;
                 Plat_ExitProcess(1);
 LABEL_141:
-                v104.m_szFile = "../../public/tier1/utlleanvector.h";
-                v104.m_szFunction = "AddToTailGetPtr";
-                v104.m_nLine = 557;
+                v98.m_szFile = "../../public/tier1/utlleanvector.h";
+                v98.m_szFunction = "AddToTailGetPtr";
+                v98.m_nLine = 557;
                 LoggingSystem_Log(
                   LOG_GENERAL,
                   LoggingSeverity_t::LS_ERROR,
-                  &v104,
+                  &v98,
                   "%s allocation count overflow",
                   "AddToTailGetPtr");
               }
@@ -3772,9 +3760,9 @@ LABEL_141:
               }
               v12 = (**g_pMemAlloc)(g_pMemAlloc, 90LL * v9);
               if ( dstResponseGroup_2 != 0 )
-                v96 = dstResponseGroup_8;
+                v90 = dstResponseGroup_8;
               else
-                v96 = 0;
+                v90 = 0;
               v13 = dstResponseGroup;
               if ( v9 <= dstResponseGroup )
                 v13 = v9;
@@ -3787,7 +3775,7 @@ LABEL_141:
                   v16 = (v15 + v12);
                   if ( v15 + v12 != 0 )
                     ParserResponse::ParserResponse((v15 + v12));
-                  v17 = (v96 + v15);
+                  v17 = (v90 + v15);
                   ParserResponse::operator=(v16, v17);
                   ++v14;
                   ParserResponse::~ParserResponse(v17);
@@ -3812,10 +3800,10 @@ LABEL_141:
             ParserResponse::operator=(v20, &dstResponse);
             ParserResponse::~ParserResponse(&dstResponse);
           }
-          v94 += 90;
+          v88 += 90;
         }
-        while ( v94 != v89 );
-        v21 = &this->m_Responses.m_Elements.m_Tree.m_Elements.m_pMemory[v83];
+        while ( v88 != v83 );
+        v21 = &this->m_Responses.m_Elements.m_Tree.m_Elements.m_pMemory[v77];
       }
       key = v21->m_Data.key;
       if ( key != 0 )
@@ -3838,7 +3826,7 @@ LABEL_141:
       if ( dstResponseGroup > 0 )
       {
         src.rawWord = 0;
-        v92 = 0;
+        v86 = 0;
         if ( dstResponseGroup_2 != 0 )
         {
 LABEL_40:
@@ -3849,24 +3837,24 @@ LABEL_40:
         {
           v26 = 0;
 LABEL_41:
-          v91 = (v92 + v26);
+          v85 = (v86 + v26);
           if ( src.rawWord == 0x7FFF )
           {
             if ( LoggingSystem_IsChannelEnabled(LOG_GENERAL, 4) != 0 )
               goto LABEL_146;
             while ( 1 )
             {
-              if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v77, v78, v75, v76, v79, v80) != 0 )
+              if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v73, v74, v71, v72) != 0 )
                 loc_0 = -559038737;
               Plat_ExitProcess(1);
 LABEL_146:
-              v105.m_szFile = "../../public/tier1/utlleanvector.h";
-              v105.m_szFunction = "AddToTailGetPtr";
-              v105.m_nLine = 557;
+              v99.m_szFile = "../../public/tier1/utlleanvector.h";
+              v99.m_szFunction = "AddToTailGetPtr";
+              v99.m_nLine = 557;
               LoggingSystem_Log(
                 LOG_GENERAL,
                 LoggingSeverity_t::LS_ERROR,
-                &v105,
+                &v99,
                 "%s allocation count overflow",
                 "AddToTailGetPtr");
             }
@@ -3897,11 +3885,11 @@ LABEL_146:
                 v29 = 0x7FFF;
               }
             }
-            v97 = (**g_pMemAlloc)(g_pMemAlloc, 90LL * rawWord);
+            v91 = (**g_pMemAlloc)(g_pMemAlloc, 90LL * rawWord);
             if ( dstResponse.params.weapondelay.range.m_storage.rawWord != 0 )
-              v95 = *&dstResponse.params.odds;
+              v89 = *&dstResponse.params.odds;
             else
-              v95 = 0;
+              v89 = 0;
             v30.rawWord = dstResponse.params.weapondelay.start.m_storage;
             if ( rawWord <= dstResponse.params.weapondelay.start.m_storage.rawWord )
               v30.rawWord = rawWord;
@@ -3911,10 +3899,10 @@ LABEL_146:
               do
               {
                 v32 = 90LL * v31.rawWord;
-                v33 = (v32 + v97);
-                if ( v32 + v97 != 0 )
-                  ParserResponse::ParserResponse((v32 + v97));
-                v34 = (v95 + v32);
+                v33 = (v32 + v91);
+                if ( v32 + v91 != 0 )
+                  ParserResponse::ParserResponse((v32 + v91));
+                v34 = (v89 + v32);
                 ParserResponse::operator=(v33, v34);
                 ++v31.rawWord;
                 ParserResponse::~ParserResponse(v34);
@@ -3926,7 +3914,7 @@ LABEL_146:
             }
             (*(*g_pMemAlloc + 16LL))(g_pMemAlloc, *&dstResponse.params.odds);
             dstResponse.params.weapondelay.range.m_storage.rawWord = rawWord;
-            *&dstResponse.params.odds = v97;
+            *&dstResponse.params.odds = v91;
           }
           if ( rawWord != 0 )
             v36 = *&dstResponse.params.odds;
@@ -3936,9 +3924,9 @@ LABEL_146:
           if ( v37 != 0 )
             ParserResponse::ParserResponse(v37);
           ++dstResponse.params.weapondelay.start.m_storage.rawWord;
-          ParserResponse::operator=(v37, v91);
-          v92 += 90;
-          if ( v92 == 90 * ((dstResponseGroup - 1) + 1LL) )
+          ParserResponse::operator=(v37, v85);
+          v86 += 90;
+          if ( v86 == 90 * ((dstResponseGroup - 1) + 1LL) )
             break;
           src.rawWord = dstResponse.params.weapondelay.start.m_storage;
           if ( dstResponseGroup_2 != 0 )
@@ -4013,17 +4001,17 @@ LABEL_146:
           goto LABEL_136;
         while ( 1 )
         {
-          if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v65, v66, v63, v64, v67, v68) != 0 )
+          if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v65, v66, v63, v64) != 0 )
             loc_0 = -559038737;
           Plat_ExitProcess(1);
 LABEL_136:
-          v106.m_szFile = "../../public/tier1/utlleanvector.h";
-          v106.m_szFunction = "AddToTailGetPtr";
-          v106.m_nLine = 557;
+          v100.m_szFile = "../../public/tier1/utlleanvector.h";
+          v100.m_szFunction = "AddToTailGetPtr";
+          v100.m_nLine = 557;
           LoggingSystem_Log(
             LOG_GENERAL,
             LoggingSeverity_t::LS_ERROR,
-            &v106,
+            &v100,
             "%s allocation count overflow",
             "AddToTailGetPtr");
         }
@@ -4125,9 +4113,9 @@ LABEL_94:
       if ( v50 > 0 )
         (*(*g_pMemAlloc + 16LL))(g_pMemAlloc, dstResponseGroup_8);
 LABEL_102:
-      v86 += 2LL;
+      v80 += 2LL;
     }
-    while ( v86 != v82 );
+    while ( v80 != v76 );
   }
 }
 

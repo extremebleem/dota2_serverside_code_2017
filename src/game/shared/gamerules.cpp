@@ -508,7 +508,7 @@ void __fastcall CGameRules::CGameRules(CGameRules *const this)
   IVoiceGameMgrHelper *v3; // r12
   CVoiceGameMgr *VoiceGameMgr; // rax
 
-  this->_vptr_CGameRules = off_404FD70;
+  this->_vptr_CGameRules = off_404FD70;  // vptr: CGameRules
   g_pGameRules = this;
   maxClients = gpGlobals->maxClients;
   v3 = g_pVoiceGameMgrHelper;
@@ -547,7 +547,7 @@ bool __fastcall CGameRules::CanHaveAmmo(CGameRules *const this, CBaseCombatChara
   if ( iAmmoIndex >= 0 )
   {
     AmmoDef = GetAmmoDef();
-    v7 = (*AmmoDef->_vptr_CAmmoDef)(AmmoDef, iAmmoIndex, pPlayer);
+    v7 = AmmoDef->MaxCarry(iAmmoIndex, pPlayer);
     return v7 > CBaseCombatCharacter::GetAmmoCount(pPlayer, iAmmoIndex);
   }
   return result;
@@ -1278,7 +1278,7 @@ CBaseEntity *__fastcall CGameRules::DoFindClientInPVS(
 // globals: g_pGameRules
 void __fastcall CGameRules::~CGameRules(CGameRules *const this)
 {
-  this->_vptr_CGameRules = off_404FD70;
+  this->_vptr_CGameRules = off_404FD70;  // vptr: CGameRules
   g_pGameRules = 0;
   if ( LoggingSystem_IsChannelEnabled(LOG_SERVER, 1) != 0 )
     LoggingSystem_Log(LOG_SERVER, 1, "%s:  CGameRules::CGameRules destructed\n", "SV");

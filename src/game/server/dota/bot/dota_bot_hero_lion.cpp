@@ -72,7 +72,7 @@ void __fastcall CDOTA_Bot_AbilityUsage_Lion_Impale::CDOTA_Bot_AbilityUsage_Lion_
   this->m_pAbility = pAbility;
   this->m_bUseOnCreeps = 0;
   this->m_pBot = pBot;
-  this->_vptr_CDOTA_Bot_AbilityUsage = off_42CD990;
+  this->_vptr_CDOTA_Bot_AbilityUsage = off_42CD990;  // vptr: CDOTA_Bot_AbilityUsage_Lion_Impale
   this->m_hDesiredTarget.m_Index = -1;
 }
 
@@ -226,7 +226,7 @@ void __fastcall CDOTA_Bot_AbilityUsage_Lion_Voodoo::CDOTA_Bot_AbilityUsage_Lion_
   this->m_pAbility = pAbility;
   this->m_bUseOnCreeps = 0;
   this->m_pBot = pBot;
-  this->_vptr_CDOTA_Bot_AbilityUsage = off_42CD9F0;
+  this->_vptr_CDOTA_Bot_AbilityUsage = off_42CD9F0;  // vptr: CDOTA_Bot_AbilityUsage_Lion_Voodoo
   this->m_hDesiredTarget.m_Index = -1;
 }
 
@@ -291,7 +291,7 @@ void __fastcall CDOTA_Bot_AbilityUsage_Lion_ManaDrain::CDOTA_Bot_AbilityUsage_Li
   this->m_pAbility = pAbility;
   this->m_bUseOnCreeps = 0;
   this->m_pBot = pBot;
-  this->_vptr_CDOTA_Bot_AbilityUsage = off_42CDA50;
+  this->_vptr_CDOTA_Bot_AbilityUsage = off_42CDA50;  // vptr: CDOTA_Bot_AbilityUsage_Lion_ManaDrain
   this->m_hDesiredTarget.m_Index = -1;
 }
 
@@ -458,7 +458,7 @@ void __fastcall CDOTA_Bot_AbilityUsage_Lion_FingerOfDeath::CDOTA_Bot_AbilityUsag
   this->m_pAbility = pAbility;
   this->m_bUseOnCreeps = 0;
   this->m_pBot = pBot;
-  this->_vptr_CDOTA_Bot_AbilityUsage = off_42CDAB0;
+  this->_vptr_CDOTA_Bot_AbilityUsage = off_42CDAB0;  // vptr: CDOTA_Bot_AbilityUsage_Lion_FingerOfDeath
   this->m_hDesiredTarget.m_Index = -1;
 }
 

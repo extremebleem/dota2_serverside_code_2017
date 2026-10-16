@@ -112,6 +112,7 @@ const char *__fastcall netadr_t::ToString(const netadr_t *const this, bool onlyB
 // calls: _V_strncpy, V_snprintf
 // callers: CGCClientJobDOTAGCToRelayConnect::BYieldingRunJobFromMsg, netadr_t::ToString
 // strings: "%i.%i.%i.%i:%i", "loopback", "broadcast", "%i.%i.%i.%i"
+// local variable allocation has failed, the output may be wrong!
 void __fastcall netadr_t::ToString(const netadr_t *const this, char *pchBuffer, uint32 unBufferSize, bool onlyBase)
 {
   netadrtype_t type; // eax
@@ -119,11 +120,11 @@ void __fastcall netadr_t::ToString(const netadr_t *const this, char *pchBuffer, 
   type = this->type;
   if ( this->type == NA_LOOPBACK )
   {
-    _V_strncpy(pchBuffer, "loopback", unBufferSize);
+    _V_strncpy(pchBuffer, "loopback", *&unBufferSize);
   }
   else if ( type == NA_BROADCAST )
   {
-    _V_strncpy(pchBuffer, "broadcast", unBufferSize);
+    _V_strncpy(pchBuffer, "broadcast", *&unBufferSize);
   }
   else if ( type == NA_IP )
   {
@@ -142,7 +143,7 @@ void __fastcall netadr_t::ToString(const netadr_t *const this, char *pchBuffer, 
   }
   else
   {
-    _V_strncpy(pchBuffer, "unknown", unBufferSize);
+    _V_strncpy(pchBuffer, "unknown", *&unBufferSize);
   }
 }
 

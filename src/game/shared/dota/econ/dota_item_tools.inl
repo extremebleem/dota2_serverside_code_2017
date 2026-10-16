@@ -7,7 +7,7 @@ void __fastcall CEconTool_LeagueViewPass::~CEconTool_LeagueViewPass(CEconTool_Le
 {
   bool v2; // zf
 
-  this->_vptr_IEconTool = off_47A0ED0;
+  this->_vptr_IEconTool = off_47A0ED0;  // vptr: CEconTool_LeagueViewPass
   CUtlVectorBase<CEconTool_LeagueViewPass::ItemContribution_t,CUtlMemory<CEconTool_LeagueViewPass::ItemContribution_t,int>>::RemoveAll(&this->m_vecItemContributions);
   if ( (this->m_vecItemContributions.m_Memory.m_nGrowSize & 0xC0000000) != 0
     || (CUtlMemory<CEconTool_LeagueViewPass::ItemContribution_t,int>::Purge(&this->m_vecItemContributions.m_Memory),
@@ -32,7 +32,7 @@ void __fastcall CEconTool_LeagueViewPass::~CEconTool_LeagueViewPass(CEconTool_Le
 LABEL_3:
   this->m_vecBonusItemDef.m_Size = 0;
   v2 = (this->m_vecBonusItemDef.m_Memory.m_nGrowSize & 0xC0000000) == 0;
-  this->_vptr_IEconTool = off_47A8E30;
+  this->_vptr_IEconTool = off_47A8E30;  // vptr: IEconTool
   if ( v2 )
   {
     CUtlMemory<item_definition_index_t,int>::Purge(&this->m_vecBonusItemDef.m_Memory);
@@ -48,7 +48,7 @@ void __fastcall CEconTool_LeagueViewPass::~CEconTool_LeagueViewPass(CEconTool_Le
 {
   bool v2; // zf
 
-  this->_vptr_IEconTool = off_47A0ED0;
+  this->_vptr_IEconTool = off_47A0ED0;  // vptr: CEconTool_LeagueViewPass
   CUtlVectorBase<CEconTool_LeagueViewPass::ItemContribution_t,CUtlMemory<CEconTool_LeagueViewPass::ItemContribution_t,int>>::RemoveAll(&this->m_vecItemContributions);
   if ( (this->m_vecItemContributions.m_Memory.m_nGrowSize & 0xC0000000) != 0
     || (CUtlMemory<CEconTool_LeagueViewPass::ItemContribution_t,int>::Purge(&this->m_vecItemContributions.m_Memory),
@@ -73,7 +73,7 @@ void __fastcall CEconTool_LeagueViewPass::~CEconTool_LeagueViewPass(CEconTool_Le
 LABEL_3:
   this->m_vecBonusItemDef.m_Size = 0;
   v2 = (this->m_vecBonusItemDef.m_Memory.m_nGrowSize & 0xC0000000) == 0;
-  this->_vptr_IEconTool = off_47A8E30;
+  this->_vptr_IEconTool = off_47A8E30;  // vptr: IEconTool
   if ( !v2
     || (CUtlMemory<item_definition_index_t,int>::Purge(&this->m_vecBonusItemDef.m_Memory),
         (this->m_vecBonusItemDef.m_Memory.m_nGrowSize & 0xC0000000) != 0) )
@@ -99,7 +99,7 @@ void __fastcall CEconTool_LeagueViewPass::CEconTool_LeagueViewPass(
 {
   IEconTool::IEconTool(this, pszTypeName, pszUseString, 0, item_capabilities_t::ITEM_CAP_NONE, pUsageKV);
   this->m_vecTeams.m_Size = 0;
-  this->_vptr_IEconTool = off_47A0ED0;
+  this->_vptr_IEconTool = off_47A0ED0;  // vptr: CEconTool_LeagueViewPass
   this->m_vecTeams.m_Memory.m_pMemory = 0;
   this->m_vecTeams.m_Memory.m_nAllocationCount = 0;
   this->m_vecTeams.m_Memory.m_nGrowSize = 0;
@@ -125,7 +125,7 @@ void __fastcall CEconTool_EventTicket::~CEconTool_EventTicket(CEconTool_EventTic
 
   this->m_vecBonusItemDef.m_Size = 0;
   v2 = (this->m_vecBonusItemDef.m_Memory.m_nGrowSize & 0xC0000000) == 0;
-  this->_vptr_IEconTool = off_47A8E30;
+  this->_vptr_IEconTool = off_47A8E30;  // vptr: IEconTool
   if ( v2 )
   {
     p_m_Memory = &this->m_vecBonusItemDef.m_Memory;
@@ -145,7 +145,7 @@ void __fastcall CEconTool_EventTicket::~CEconTool_EventTicket(CEconTool_EventTic
 
   this->m_vecBonusItemDef.m_Size = 0;
   v2 = (this->m_vecBonusItemDef.m_Memory.m_nGrowSize & 0xC0000000) == 0;
-  this->_vptr_IEconTool = off_47A8E30;
+  this->_vptr_IEconTool = off_47A8E30;  // vptr: IEconTool
   if ( !v2
     || (p_m_Memory = &this->m_vecBonusItemDef.m_Memory,
         CUtlMemory<item_definition_index_t,int>::Purge(&this->m_vecBonusItemDef.m_Memory),
@@ -205,7 +205,7 @@ void __fastcall CEconTool_TournamentPassport::~CEconTool_TournamentPassport(CEco
 
   this->m_vecBonusItemDef.m_Size = 0;
   v2 = (this->m_vecBonusItemDef.m_Memory.m_nGrowSize & 0xC0000000) == 0;
-  this->_vptr_IEconTool = off_47A8E30;
+  this->_vptr_IEconTool = off_47A8E30;  // vptr: IEconTool
   if ( v2 )
   {
     p_m_Memory = &this->m_vecBonusItemDef.m_Memory;
@@ -225,7 +225,7 @@ void __fastcall CEconTool_TournamentPassport::~CEconTool_TournamentPassport(CEco
 
   this->m_vecBonusItemDef.m_Size = 0;
   v2 = (this->m_vecBonusItemDef.m_Memory.m_nGrowSize & 0xC0000000) == 0;
-  this->_vptr_IEconTool = off_47A8E30;
+  this->_vptr_IEconTool = off_47A8E30;  // vptr: IEconTool
   if ( !v2
     || (p_m_Memory = &this->m_vecBonusItemDef.m_Memory,
         CUtlMemory<item_definition_index_t,int>::Purge(&this->m_vecBonusItemDef.m_Memory),
@@ -285,7 +285,7 @@ void __fastcall CEconTool_DropRateBooster::~CEconTool_DropRateBooster(CEconTool_
 
   this->m_vecBonusItemDef.m_Size = 0;
   v2 = (this->m_vecBonusItemDef.m_Memory.m_nGrowSize & 0xC0000000) == 0;
-  this->_vptr_IEconTool = off_47A8E30;
+  this->_vptr_IEconTool = off_47A8E30;  // vptr: IEconTool
   if ( v2 )
   {
     p_m_Memory = &this->m_vecBonusItemDef.m_Memory;
@@ -305,7 +305,7 @@ void __fastcall CEconTool_DropRateBooster::~CEconTool_DropRateBooster(CEconTool_
 
   this->m_vecBonusItemDef.m_Size = 0;
   v2 = (this->m_vecBonusItemDef.m_Memory.m_nGrowSize & 0xC0000000) == 0;
-  this->_vptr_IEconTool = off_47A8E30;
+  this->_vptr_IEconTool = off_47A8E30;  // vptr: IEconTool
   if ( !v2
     || (p_m_Memory = &this->m_vecBonusItemDef.m_Memory,
         CUtlMemory<item_definition_index_t,int>::Purge(&this->m_vecBonusItemDef.m_Memory),
@@ -335,7 +335,7 @@ void __fastcall CEconTool_DropRateBooster::CEconTool_DropRateBooster(
 
   IEconTool::IEconTool(this, pszTypeName, pszUseString, 0, item_capabilities_t::ITEM_CAP_NONE, pUsageKV);
   this->m_symExpirationDate.u.m_Id = 0;
-  this->_vptr_IEconTool = off_479FA30;
+  this->_vptr_IEconTool = off_479FA30;  // vptr: CEconTool_DropRateBooster
   m_Data = INVALID_ITEM_DEF_INDEX.m_Data;
   this->m_flDropRateBonus = 0.0;
   this->m_rtExpiration = 0;
@@ -409,7 +409,7 @@ void __fastcall CEconTool_TeamShowcaseForge::~CEconTool_TeamShowcaseForge(CEconT
 
   this->m_vecBonusItemDef.m_Size = 0;
   v2 = (this->m_vecBonusItemDef.m_Memory.m_nGrowSize & 0xC0000000) == 0;
-  this->_vptr_IEconTool = off_47A8E30;
+  this->_vptr_IEconTool = off_47A8E30;  // vptr: IEconTool
   if ( v2 )
   {
     p_m_Memory = &this->m_vecBonusItemDef.m_Memory;
@@ -429,7 +429,7 @@ void __fastcall CEconTool_TeamShowcaseForge::~CEconTool_TeamShowcaseForge(CEconT
 
   this->m_vecBonusItemDef.m_Size = 0;
   v2 = (this->m_vecBonusItemDef.m_Memory.m_nGrowSize & 0xC0000000) == 0;
-  this->_vptr_IEconTool = off_47A8E30;
+  this->_vptr_IEconTool = off_47A8E30;  // vptr: IEconTool
   if ( !v2
     || (p_m_Memory = &this->m_vecBonusItemDef.m_Memory,
         CUtlMemory<item_definition_index_t,int>::Purge(&this->m_vecBonusItemDef.m_Memory),
@@ -500,7 +500,7 @@ void __fastcall CEconTool_EffigyReforgeItem::~CEconTool_EffigyReforgeItem(CEconT
 
   this->m_vecBonusItemDef.m_Size = 0;
   v2 = (this->m_vecBonusItemDef.m_Memory.m_nGrowSize & 0xC0000000) == 0;
-  this->_vptr_IEconTool = off_47A8E30;
+  this->_vptr_IEconTool = off_47A8E30;  // vptr: IEconTool
   if ( v2 )
   {
     p_m_Memory = &this->m_vecBonusItemDef.m_Memory;
@@ -520,7 +520,7 @@ void __fastcall CEconTool_EffigyReforgeItem::~CEconTool_EffigyReforgeItem(CEconT
 
   this->m_vecBonusItemDef.m_Size = 0;
   v2 = (this->m_vecBonusItemDef.m_Memory.m_nGrowSize & 0xC0000000) == 0;
-  this->_vptr_IEconTool = off_47A8E30;
+  this->_vptr_IEconTool = off_47A8E30;  // vptr: IEconTool
   if ( !v2
     || (p_m_Memory = &this->m_vecBonusItemDef.m_Memory,
         CUtlMemory<item_definition_index_t,int>::Purge(&this->m_vecBonusItemDef.m_Memory),
@@ -546,7 +546,7 @@ void __fastcall CEconTool_CompendiumSetSelection::~CEconTool_CompendiumSetSelect
 
   this->m_vecBonusItemDef.m_Size = 0;
   v2 = (this->m_vecBonusItemDef.m_Memory.m_nGrowSize & 0xC0000000) == 0;
-  this->_vptr_IEconTool = off_47A8E30;
+  this->_vptr_IEconTool = off_47A8E30;  // vptr: IEconTool
   if ( v2 )
   {
     p_m_Memory = &this->m_vecBonusItemDef.m_Memory;
@@ -567,7 +567,7 @@ void __fastcall CEconTool_CompendiumSetSelection::~CEconTool_CompendiumSetSelect
 
   this->m_vecBonusItemDef.m_Size = 0;
   v2 = (this->m_vecBonusItemDef.m_Memory.m_nGrowSize & 0xC0000000) == 0;
-  this->_vptr_IEconTool = off_47A8E30;
+  this->_vptr_IEconTool = off_47A8E30;  // vptr: IEconTool
   if ( !v2
     || (p_m_Memory = &this->m_vecBonusItemDef.m_Memory,
         CUtlMemory<item_definition_index_t,int>::Purge(&this->m_vecBonusItemDef.m_Memory),
@@ -637,7 +637,7 @@ void __fastcall CEconTool_PassportFantasyTeam::~CEconTool_PassportFantasyTeam(
 
   this->m_vecBonusItemDef.m_Size = 0;
   v2 = (this->m_vecBonusItemDef.m_Memory.m_nGrowSize & 0xC0000000) == 0;
-  this->_vptr_IEconTool = off_47A8E30;
+  this->_vptr_IEconTool = off_47A8E30;  // vptr: IEconTool
   if ( v2 )
   {
     p_m_Memory = &this->m_vecBonusItemDef.m_Memory;
@@ -658,7 +658,7 @@ void __fastcall CEconTool_PassportFantasyTeam::~CEconTool_PassportFantasyTeam(
 
   this->m_vecBonusItemDef.m_Size = 0;
   v2 = (this->m_vecBonusItemDef.m_Memory.m_nGrowSize & 0xC0000000) == 0;
-  this->_vptr_IEconTool = off_47A8E30;
+  this->_vptr_IEconTool = off_47A8E30;  // vptr: IEconTool
   if ( !v2
     || (p_m_Memory = &this->m_vecBonusItemDef.m_Memory,
         CUtlMemory<item_definition_index_t,int>::Purge(&this->m_vecBonusItemDef.m_Memory),
@@ -683,7 +683,7 @@ void __fastcall CEconTool_FantasyTicket::~CEconTool_FantasyTicket(CEconTool_Fant
 
   this->m_vecBonusItemDef.m_Size = 0;
   v2 = (this->m_vecBonusItemDef.m_Memory.m_nGrowSize & 0xC0000000) == 0;
-  this->_vptr_IEconTool = off_47A8E30;
+  this->_vptr_IEconTool = off_47A8E30;  // vptr: IEconTool
   if ( v2 )
   {
     p_m_Memory = &this->m_vecBonusItemDef.m_Memory;
@@ -703,7 +703,7 @@ void __fastcall CEconTool_FantasyTicket::~CEconTool_FantasyTicket(CEconTool_Fant
 
   this->m_vecBonusItemDef.m_Size = 0;
   v2 = (this->m_vecBonusItemDef.m_Memory.m_nGrowSize & 0xC0000000) == 0;
-  this->_vptr_IEconTool = off_47A8E30;
+  this->_vptr_IEconTool = off_47A8E30;  // vptr: IEconTool
   if ( !v2
     || (p_m_Memory = &this->m_vecBonusItemDef.m_Memory,
         CUtlMemory<item_definition_index_t,int>::Purge(&this->m_vecBonusItemDef.m_Memory),
@@ -764,7 +764,7 @@ void __fastcall CEconTool_AwardEventPoints::~CEconTool_AwardEventPoints(CEconToo
 
   this->m_vecBonusItemDef.m_Size = 0;
   v2 = (this->m_vecBonusItemDef.m_Memory.m_nGrowSize & 0xC0000000) == 0;
-  this->_vptr_IEconTool = off_47A8E30;
+  this->_vptr_IEconTool = off_47A8E30;  // vptr: IEconTool
   if ( v2 )
   {
     p_m_Memory = &this->m_vecBonusItemDef.m_Memory;
@@ -784,7 +784,7 @@ void __fastcall CEconTool_AwardEventPoints::~CEconTool_AwardEventPoints(CEconToo
 
   this->m_vecBonusItemDef.m_Size = 0;
   v2 = (this->m_vecBonusItemDef.m_Memory.m_nGrowSize & 0xC0000000) == 0;
-  this->_vptr_IEconTool = off_47A8E30;
+  this->_vptr_IEconTool = off_47A8E30;  // vptr: IEconTool
   if ( !v2
     || (p_m_Memory = &this->m_vecBonusItemDef.m_Memory,
         CUtlMemory<item_definition_index_t,int>::Purge(&this->m_vecBonusItemDef.m_Memory),
@@ -878,7 +878,7 @@ void __fastcall CEconTool_Compendium::~CEconTool_Compendium(CEconTool_Compendium
   CUtlMemory<unsigned int,int> *p_m_Memory; // r12
 
   v2 = (this->m_vecGrantLeagueDefs.m_Memory.m_nGrowSize & 0xC0000000) == 0;
-  this->_vptr_IEconTool = off_479FCD0;
+  this->_vptr_IEconTool = off_479FCD0;  // vptr: CEconTool_Compendium
   this->m_vecGrantLeagueDefs.m_Size = 0;
   if ( v2 )
   {
@@ -889,7 +889,7 @@ void __fastcall CEconTool_Compendium::~CEconTool_Compendium(CEconTool_Compendium
   }
   this->m_vecBonusItemDef.m_Size = 0;
   v2 = (this->m_vecBonusItemDef.m_Memory.m_nGrowSize & 0xC0000000) == 0;
-  this->_vptr_IEconTool = off_47A8E30;
+  this->_vptr_IEconTool = off_47A8E30;  // vptr: IEconTool
   if ( v2 )
   {
     CUtlMemory<item_definition_index_t,int>::Purge(&this->m_vecBonusItemDef.m_Memory);
@@ -907,7 +907,7 @@ void __fastcall CEconTool_Compendium::~CEconTool_Compendium(CEconTool_Compendium
   CUtlMemory<unsigned int,int> *p_m_Memory; // r12
 
   v2 = (this->m_vecGrantLeagueDefs.m_Memory.m_nGrowSize & 0xC0000000) == 0;
-  this->_vptr_IEconTool = off_479FCD0;
+  this->_vptr_IEconTool = off_479FCD0;  // vptr: CEconTool_Compendium
   this->m_vecGrantLeagueDefs.m_Size = 0;
   if ( v2 )
   {
@@ -918,7 +918,7 @@ void __fastcall CEconTool_Compendium::~CEconTool_Compendium(CEconTool_Compendium
   }
   this->m_vecBonusItemDef.m_Size = 0;
   v2 = (this->m_vecBonusItemDef.m_Memory.m_nGrowSize & 0xC0000000) == 0;
-  this->_vptr_IEconTool = off_47A8E30;
+  this->_vptr_IEconTool = off_47A8E30;  // vptr: IEconTool
   if ( !v2
     || (CUtlMemory<item_definition_index_t,int>::Purge(&this->m_vecBonusItemDef.m_Memory),
         (this->m_vecBonusItemDef.m_Memory.m_nGrowSize & 0xC0000000) != 0) )
@@ -944,7 +944,7 @@ void __fastcall CEconTool_Compendium::CEconTool_Compendium(
 {
   IEconTool::IEconTool(this, pszTypeName, pszUseString, 0, item_capabilities_t::ITEM_CAP_NONE, pUsageKV);
   this->m_vecGrantLeagueDefs.m_Size = 0;
-  this->_vptr_IEconTool = off_479FCD0;
+  this->_vptr_IEconTool = off_479FCD0;  // vptr: CEconTool_Compendium
   this->m_vecGrantLeagueDefs.m_Memory.m_pMemory = 0;
   this->m_vecGrantLeagueDefs.m_Memory.m_nAllocationCount = 0;
   this->m_vecGrantLeagueDefs.m_Memory.m_nGrowSize = 0;
@@ -1091,7 +1091,7 @@ void __fastcall CEconTool_EmoticonUnlock::~CEconTool_EmoticonUnlock(CEconTool_Em
 
   this->m_vecBonusItemDef.m_Size = 0;
   v2 = (this->m_vecBonusItemDef.m_Memory.m_nGrowSize & 0xC0000000) == 0;
-  this->_vptr_IEconTool = off_47A8E30;
+  this->_vptr_IEconTool = off_47A8E30;  // vptr: IEconTool
   if ( v2 )
   {
     p_m_Memory = &this->m_vecBonusItemDef.m_Memory;
@@ -1111,7 +1111,7 @@ void __fastcall CEconTool_EmoticonUnlock::~CEconTool_EmoticonUnlock(CEconTool_Em
 
   this->m_vecBonusItemDef.m_Size = 0;
   v2 = (this->m_vecBonusItemDef.m_Memory.m_nGrowSize & 0xC0000000) == 0;
-  this->_vptr_IEconTool = off_47A8E30;
+  this->_vptr_IEconTool = off_47A8E30;  // vptr: IEconTool
   if ( !v2
     || (p_m_Memory = &this->m_vecBonusItemDef.m_Memory,
         CUtlMemory<item_definition_index_t,int>::Purge(&this->m_vecBonusItemDef.m_Memory),
@@ -1189,7 +1189,7 @@ void __fastcall CEconTool_CustomGameTicket::~CEconTool_CustomGameTicket(CEconToo
 
   this->m_vecBonusItemDef.m_Size = 0;
   v2 = (this->m_vecBonusItemDef.m_Memory.m_nGrowSize & 0xC0000000) == 0;
-  this->_vptr_IEconTool = off_47A8E30;
+  this->_vptr_IEconTool = off_47A8E30;  // vptr: IEconTool
   if ( v2 )
   {
     p_m_Memory = &this->m_vecBonusItemDef.m_Memory;
@@ -1209,7 +1209,7 @@ void __fastcall CEconTool_CustomGameTicket::~CEconTool_CustomGameTicket(CEconToo
 
   this->m_vecBonusItemDef.m_Size = 0;
   v2 = (this->m_vecBonusItemDef.m_Memory.m_nGrowSize & 0xC0000000) == 0;
-  this->_vptr_IEconTool = off_47A8E30;
+  this->_vptr_IEconTool = off_47A8E30;  // vptr: IEconTool
   if ( !v2
     || (p_m_Memory = &this->m_vecBonusItemDef.m_Memory,
         CUtlMemory<item_definition_index_t,int>::Purge(&this->m_vecBonusItemDef.m_Memory),
@@ -1288,7 +1288,7 @@ void __fastcall CEconTool_PennantUpgrade::~CEconTool_PennantUpgrade(CEconTool_Pe
   CUtlVectorBase<int,CUtlMemory<int,int> >::CAllocator *p_m_Memory; // r12
 
   v2 = (this->m_vecRequiredTags.m_Memory.m_nGrowSize & 0xC0000000) == 0;
-  this->_vptr_IEconTool = off_47A0D50;
+  this->_vptr_IEconTool = off_47A0D50;  // vptr: CEconTool_PennantUpgrade
   this->m_vecRequiredTags.m_Size = 0;
   if ( v2 )
   {
@@ -1299,7 +1299,7 @@ void __fastcall CEconTool_PennantUpgrade::~CEconTool_PennantUpgrade(CEconTool_Pe
   }
   this->m_vecBonusItemDef.m_Size = 0;
   v2 = (this->m_vecBonusItemDef.m_Memory.m_nGrowSize & 0xC0000000) == 0;
-  this->_vptr_IEconTool = off_47A8E30;
+  this->_vptr_IEconTool = off_47A8E30;  // vptr: IEconTool
   if ( v2 )
   {
     CUtlMemory<item_definition_index_t,int>::Purge(&this->m_vecBonusItemDef.m_Memory);
@@ -1317,7 +1317,7 @@ void __fastcall CEconTool_PennantUpgrade::~CEconTool_PennantUpgrade(CEconTool_Pe
   CUtlVectorBase<int,CUtlMemory<int,int> >::CAllocator *p_m_Memory; // r12
 
   v2 = (this->m_vecRequiredTags.m_Memory.m_nGrowSize & 0xC0000000) == 0;
-  this->_vptr_IEconTool = off_47A0D50;
+  this->_vptr_IEconTool = off_47A0D50;  // vptr: CEconTool_PennantUpgrade
   this->m_vecRequiredTags.m_Size = 0;
   if ( v2 )
   {
@@ -1328,7 +1328,7 @@ void __fastcall CEconTool_PennantUpgrade::~CEconTool_PennantUpgrade(CEconTool_Pe
   }
   this->m_vecBonusItemDef.m_Size = 0;
   v2 = (this->m_vecBonusItemDef.m_Memory.m_nGrowSize & 0xC0000000) == 0;
-  this->_vptr_IEconTool = off_47A8E30;
+  this->_vptr_IEconTool = off_47A8E30;  // vptr: IEconTool
   if ( !v2
     || (CUtlMemory<item_definition_index_t,int>::Purge(&this->m_vecBonusItemDef.m_Memory),
         (this->m_vecBonusItemDef.m_Memory.m_nGrowSize & 0xC0000000) != 0) )
@@ -1355,7 +1355,7 @@ void __fastcall CEconTool_PennantUpgrade::CEconTool_PennantUpgrade(
 {
   IEconTool::IEconTool(this, pszTypeName, pszUseString, 0, unCapabilities, pUsageKV);
   this->m_vecRequiredTags.m_Size = 0;
-  this->_vptr_IEconTool = off_47A0D50;
+  this->_vptr_IEconTool = off_47A0D50;  // vptr: CEconTool_PennantUpgrade
   this->m_vecRequiredTags.m_Memory.m_pMemory = 0;
   this->m_vecRequiredTags.m_Memory.m_nAllocationCount = 0;
   this->m_vecRequiredTags.m_Memory.m_nGrowSize = 0;
@@ -1438,7 +1438,7 @@ void __fastcall CEconTool_GemCombiner::~CEconTool_GemCombiner(CEconTool_GemCombi
 
   this->m_vecBonusItemDef.m_Size = 0;
   v2 = (this->m_vecBonusItemDef.m_Memory.m_nGrowSize & 0xC0000000) == 0;
-  this->_vptr_IEconTool = off_47A8E30;
+  this->_vptr_IEconTool = off_47A8E30;  // vptr: IEconTool
   if ( v2 )
   {
     p_m_Memory = &this->m_vecBonusItemDef.m_Memory;
@@ -1458,7 +1458,7 @@ void __fastcall CEconTool_GemCombiner::~CEconTool_GemCombiner(CEconTool_GemCombi
 
   this->m_vecBonusItemDef.m_Size = 0;
   v2 = (this->m_vecBonusItemDef.m_Memory.m_nGrowSize & 0xC0000000) == 0;
-  this->_vptr_IEconTool = off_47A8E30;
+  this->_vptr_IEconTool = off_47A8E30;  // vptr: IEconTool
   if ( !v2
     || (p_m_Memory = &this->m_vecBonusItemDef.m_Memory,
         CUtlMemory<item_definition_index_t,int>::Purge(&this->m_vecBonusItemDef.m_Memory),
@@ -1519,7 +1519,7 @@ void __fastcall CEconTool_EggEssence::~CEconTool_EggEssence(CEconTool_EggEssence
   CUtlVectorBase<int,CUtlMemory<int,int> >::CAllocator *p_m_Memory; // r12
 
   v2 = (this->m_vecRequiredTags.m_Memory.m_nGrowSize & 0xC0000000) == 0;
-  this->_vptr_IEconTool = off_47A0E70;
+  this->_vptr_IEconTool = off_47A0E70;  // vptr: CEconTool_EggEssence
   this->m_vecRequiredTags.m_Size = 0;
   if ( v2 )
   {
@@ -1530,7 +1530,7 @@ void __fastcall CEconTool_EggEssence::~CEconTool_EggEssence(CEconTool_EggEssence
   }
   this->m_vecBonusItemDef.m_Size = 0;
   v2 = (this->m_vecBonusItemDef.m_Memory.m_nGrowSize & 0xC0000000) == 0;
-  this->_vptr_IEconTool = off_47A8E30;
+  this->_vptr_IEconTool = off_47A8E30;  // vptr: IEconTool
   if ( v2 )
   {
     CUtlMemory<item_definition_index_t,int>::Purge(&this->m_vecBonusItemDef.m_Memory);
@@ -1548,7 +1548,7 @@ void __fastcall CEconTool_EggEssence::~CEconTool_EggEssence(CEconTool_EggEssence
   CUtlVectorBase<int,CUtlMemory<int,int> >::CAllocator *p_m_Memory; // r12
 
   v2 = (this->m_vecRequiredTags.m_Memory.m_nGrowSize & 0xC0000000) == 0;
-  this->_vptr_IEconTool = off_47A0E70;
+  this->_vptr_IEconTool = off_47A0E70;  // vptr: CEconTool_EggEssence
   this->m_vecRequiredTags.m_Size = 0;
   if ( v2 )
   {
@@ -1559,7 +1559,7 @@ void __fastcall CEconTool_EggEssence::~CEconTool_EggEssence(CEconTool_EggEssence
   }
   this->m_vecBonusItemDef.m_Size = 0;
   v2 = (this->m_vecBonusItemDef.m_Memory.m_nGrowSize & 0xC0000000) == 0;
-  this->_vptr_IEconTool = off_47A8E30;
+  this->_vptr_IEconTool = off_47A8E30;  // vptr: IEconTool
   if ( !v2
     || (CUtlMemory<item_definition_index_t,int>::Purge(&this->m_vecBonusItemDef.m_Memory),
         (this->m_vecBonusItemDef.m_Memory.m_nGrowSize & 0xC0000000) != 0) )
@@ -1586,7 +1586,7 @@ void __fastcall CEconTool_EggEssence::CEconTool_EggEssence(
 {
   IEconTool::IEconTool(this, pszTypeName, pszUseString, 0, unCapabilities, pUsageKV);
   this->m_vecRequiredTags.m_Size = 0;
-  this->_vptr_IEconTool = off_47A0E70;
+  this->_vptr_IEconTool = off_47A0E70;  // vptr: CEconTool_EggEssence
   this->m_vecRequiredTags.m_Memory.m_pMemory = 0;
   this->m_vecRequiredTags.m_Memory.m_nAllocationCount = 0;
   this->m_vecRequiredTags.m_Memory.m_nGrowSize = 0;
@@ -1668,7 +1668,7 @@ void __fastcall CEconTool_UnusualPaint::~CEconTool_UnusualPaint(CEconTool_Unusua
 
   this->m_vecBonusItemDef.m_Size = 0;
   v2 = (this->m_vecBonusItemDef.m_Memory.m_nGrowSize & 0xC0000000) == 0;
-  this->_vptr_IEconTool = off_47A8E30;
+  this->_vptr_IEconTool = off_47A8E30;  // vptr: IEconTool
   if ( v2 )
   {
     p_m_Memory = &this->m_vecBonusItemDef.m_Memory;
@@ -1688,7 +1688,7 @@ void __fastcall CEconTool_UnusualPaint::~CEconTool_UnusualPaint(CEconTool_Unusua
 
   this->m_vecBonusItemDef.m_Size = 0;
   v2 = (this->m_vecBonusItemDef.m_Memory.m_nGrowSize & 0xC0000000) == 0;
-  this->_vptr_IEconTool = off_47A8E30;
+  this->_vptr_IEconTool = off_47A8E30;  // vptr: IEconTool
   if ( !v2
     || (p_m_Memory = &this->m_vecBonusItemDef.m_Memory,
         CUtlMemory<item_definition_index_t,int>::Purge(&this->m_vecBonusItemDef.m_Memory),
@@ -1713,7 +1713,7 @@ void __fastcall CEconTool_PlayerCard::~CEconTool_PlayerCard(CEconTool_PlayerCard
 
   this->m_vecBonusItemDef.m_Size = 0;
   v2 = (this->m_vecBonusItemDef.m_Memory.m_nGrowSize & 0xC0000000) == 0;
-  this->_vptr_IEconTool = off_47A8E30;
+  this->_vptr_IEconTool = off_47A8E30;  // vptr: IEconTool
   if ( v2 )
   {
     p_m_Memory = &this->m_vecBonusItemDef.m_Memory;
@@ -1733,7 +1733,7 @@ void __fastcall CEconTool_PlayerCard::~CEconTool_PlayerCard(CEconTool_PlayerCard
 
   this->m_vecBonusItemDef.m_Size = 0;
   v2 = (this->m_vecBonusItemDef.m_Memory.m_nGrowSize & 0xC0000000) == 0;
-  this->_vptr_IEconTool = off_47A8E30;
+  this->_vptr_IEconTool = off_47A8E30;  // vptr: IEconTool
   if ( !v2
     || (p_m_Memory = &this->m_vecBonusItemDef.m_Memory,
         CUtlMemory<item_definition_index_t,int>::Purge(&this->m_vecBonusItemDef.m_Memory),
@@ -1760,7 +1760,7 @@ void __fastcall CEconTool_PlayerCard::CEconTool_PlayerCard(
 {
   IEconTool::IEconTool(this, pszTypeName, pszUseString, 0, item_capabilities_t::ITEM_CAP_NONE, pUsageKV);
   this->m_symName.u.m_Id = 0;
-  this->_vptr_IEconTool = off_479FDF0;
+  this->_vptr_IEconTool = off_479FDF0;  // vptr: CEconTool_PlayerCard
   this->m_symTeamName.u.m_Id = 0;
   this->m_symCountryCode.u.m_Id = 0;
   this->m_symRole.u.m_Id = 0;
@@ -1822,7 +1822,7 @@ void __fastcall CEconTool_PlayerCardPack::~CEconTool_PlayerCardPack(CEconTool_Pl
   CUtlVectorBase<CEconTool_PlayerCardPack::TeamInfo_t,CUtlMemory<CEconTool_PlayerCardPack::TeamInfo_t,int> >::CAllocator *p_m_Memory; // r12
 
   v2 = (this->m_vecTeams.m_Memory.m_nGrowSize & 0xC0000000) == 0;
-  this->_vptr_IEconTool = off_479FE50;
+  this->_vptr_IEconTool = off_479FE50;  // vptr: CEconTool_PlayerCardPack
   this->m_vecTeams.m_Size = 0;
   if ( v2 )
   {
@@ -1841,7 +1841,7 @@ void __fastcall CEconTool_PlayerCardPack::~CEconTool_PlayerCardPack(CEconTool_Pl
   }
   this->m_vecBonusItemDef.m_Size = 0;
   v2 = (this->m_vecBonusItemDef.m_Memory.m_nGrowSize & 0xC0000000) == 0;
-  this->_vptr_IEconTool = off_47A8E30;
+  this->_vptr_IEconTool = off_47A8E30;  // vptr: IEconTool
   if ( v2 )
   {
     CUtlMemory<item_definition_index_t,int>::Purge(&this->m_vecBonusItemDef.m_Memory);
@@ -1859,7 +1859,7 @@ void __fastcall CEconTool_PlayerCardPack::~CEconTool_PlayerCardPack(CEconTool_Pl
   CUtlVectorBase<CEconTool_PlayerCardPack::TeamInfo_t,CUtlMemory<CEconTool_PlayerCardPack::TeamInfo_t,int> >::CAllocator *p_m_Memory; // r12
 
   v2 = (this->m_vecTeams.m_Memory.m_nGrowSize & 0xC0000000) == 0;
-  this->_vptr_IEconTool = off_479FE50;
+  this->_vptr_IEconTool = off_479FE50;  // vptr: CEconTool_PlayerCardPack
   this->m_vecTeams.m_Size = 0;
   if ( v2 )
   {
@@ -1878,7 +1878,7 @@ void __fastcall CEconTool_PlayerCardPack::~CEconTool_PlayerCardPack(CEconTool_Pl
   }
   this->m_vecBonusItemDef.m_Size = 0;
   v2 = (this->m_vecBonusItemDef.m_Memory.m_nGrowSize & 0xC0000000) == 0;
-  this->_vptr_IEconTool = off_47A8E30;
+  this->_vptr_IEconTool = off_47A8E30;  // vptr: IEconTool
   if ( !v2
     || (CUtlMemory<item_definition_index_t,int>::Purge(&this->m_vecBonusItemDef.m_Memory),
         (this->m_vecBonusItemDef.m_Memory.m_nGrowSize & 0xC0000000) != 0) )
@@ -1905,7 +1905,7 @@ void __fastcall CEconTool_PlayerCardPack::CEconTool_PlayerCardPack(
 {
   IEconTool::IEconTool(this, pszTypeName, pszUseString, 0, unCapabilities, pUsageKV);
   this->m_vecPlayerAccountIDs.m_Size = 0;
-  this->_vptr_IEconTool = off_479FE50;
+  this->_vptr_IEconTool = off_479FE50;  // vptr: CEconTool_PlayerCardPack
   this->m_unPlayerCardDefinitionIndex.m_Data = 0;
   this->m_vecPlayerAccountIDs.m_Memory.m_pMemory = 0;
   this->m_vecPlayerAccountIDs.m_Memory.m_nAllocationCount = 0;
@@ -2062,7 +2062,7 @@ void __fastcall CEconTool_HeroStatueForge::~CEconTool_HeroStatueForge(CEconTool_
 
   this->m_vecBonusItemDef.m_Size = 0;
   v2 = (this->m_vecBonusItemDef.m_Memory.m_nGrowSize & 0xC0000000) == 0;
-  this->_vptr_IEconTool = off_47A8E30;
+  this->_vptr_IEconTool = off_47A8E30;  // vptr: IEconTool
   if ( v2 )
   {
     p_m_Memory = &this->m_vecBonusItemDef.m_Memory;
@@ -2082,7 +2082,7 @@ void __fastcall CEconTool_HeroStatueForge::~CEconTool_HeroStatueForge(CEconTool_
 
   this->m_vecBonusItemDef.m_Size = 0;
   v2 = (this->m_vecBonusItemDef.m_Memory.m_nGrowSize & 0xC0000000) == 0;
-  this->_vptr_IEconTool = off_47A8E30;
+  this->_vptr_IEconTool = off_47A8E30;  // vptr: IEconTool
   if ( !v2
     || (p_m_Memory = &this->m_vecBonusItemDef.m_Memory,
         CUtlMemory<item_definition_index_t,int>::Purge(&this->m_vecBonusItemDef.m_Memory),
@@ -2148,7 +2148,7 @@ void __fastcall CEconTool_HeroStatueReforge::~CEconTool_HeroStatueReforge(CEconT
 
   this->m_vecBonusItemDef.m_Size = 0;
   v2 = (this->m_vecBonusItemDef.m_Memory.m_nGrowSize & 0xC0000000) == 0;
-  this->_vptr_IEconTool = off_47A8E30;
+  this->_vptr_IEconTool = off_47A8E30;  // vptr: IEconTool
   if ( v2 )
   {
     p_m_Memory = &this->m_vecBonusItemDef.m_Memory;
@@ -2168,7 +2168,7 @@ void __fastcall CEconTool_HeroStatueReforge::~CEconTool_HeroStatueReforge(CEconT
 
   this->m_vecBonusItemDef.m_Size = 0;
   v2 = (this->m_vecBonusItemDef.m_Memory.m_nGrowSize & 0xC0000000) == 0;
-  this->_vptr_IEconTool = off_47A8E30;
+  this->_vptr_IEconTool = off_47A8E30;  // vptr: IEconTool
   if ( !v2
     || (p_m_Memory = &this->m_vecBonusItemDef.m_Memory,
         CUtlMemory<item_definition_index_t,int>::Purge(&this->m_vecBonusItemDef.m_Memory),
@@ -2193,7 +2193,7 @@ void __fastcall CEconTool_Gift::~CEconTool_Gift(CEconTool_Gift *const this)
 
   this->m_vecBonusItemDef.m_Size = 0;
   v2 = (this->m_vecBonusItemDef.m_Memory.m_nGrowSize & 0xC0000000) == 0;
-  this->_vptr_IEconTool = off_47A8E30;
+  this->_vptr_IEconTool = off_47A8E30;  // vptr: IEconTool
   if ( v2 )
   {
     p_m_Memory = &this->m_vecBonusItemDef.m_Memory;
@@ -2213,7 +2213,7 @@ void __fastcall CEconTool_Gift::~CEconTool_Gift(CEconTool_Gift *const this)
 
   this->m_vecBonusItemDef.m_Size = 0;
   v2 = (this->m_vecBonusItemDef.m_Memory.m_nGrowSize & 0xC0000000) == 0;
-  this->_vptr_IEconTool = off_47A8E30;
+  this->_vptr_IEconTool = off_47A8E30;  // vptr: IEconTool
   if ( !v2
     || (p_m_Memory = &this->m_vecBonusItemDef.m_Memory,
         CUtlMemory<item_definition_index_t,int>::Purge(&this->m_vecBonusItemDef.m_Memory),
@@ -2296,7 +2296,7 @@ void __fastcall CDOTAStaticRecipeComponentEvent::~CDOTAStaticRecipeComponentEven
 {
   bool v2; // zf
 
-  this->_vptr_CBaseRecipeComponent = off_47A0F30;
+  this->_vptr_CBaseRecipeComponent = off_47A0F30;  // vptr: CDOTAStaticRecipeComponentEvent
   CUtlRBTree<CUtlMap<unsigned int,unsigned int,unsigned short,bool (*)(unsigned int const&,unsigned int const&)>::Node_t,unsigned short,CUtlMap<unsigned int,unsigned int,unsigned short,bool (*)(unsigned int const&,unsigned int const&)>::CKeyLess,CUtlMemory<UtlRBTreeNode_t<CUtlMap<unsigned int,unsigned int,unsigned short,bool (*)(unsigned int const&,unsigned int const&)>::Node_t,unsigned short>,unsigned short>>::RemoveAll(&this->m_mapActionGrants.m_Tree);
   v2 = (this->m_mapActionGrants.m_Tree.m_Elements.m_nGrowSize & 0xC0000000) == 0;
   this->m_mapActionGrants.m_Tree.m_FirstFree = -1;
@@ -2312,7 +2312,7 @@ void __fastcall CDOTAStaticRecipeComponentEvent::~CDOTAStaticRecipeComponentEven
   {
     this->m_mapActionGrants.m_Tree.m_LastAlloc.index = -1;
   }
-  this->_vptr_CBaseRecipeComponent = off_47A91F0;
+  this->_vptr_CBaseRecipeComponent = off_47A91F0;  // vptr: CEconTool_ItemDynamicRecipe::CStaticRecipeComponent
   CEconTool_ItemDynamicRecipe::CBaseRecipeComponent::~CBaseRecipeComponent(this);
 }
 
@@ -2324,7 +2324,7 @@ void __fastcall CDOTAStaticRecipeComponentEvent::~CDOTAStaticRecipeComponentEven
 {
   bool v2; // zf
 
-  this->_vptr_CBaseRecipeComponent = off_47A0F30;
+  this->_vptr_CBaseRecipeComponent = off_47A0F30;  // vptr: CDOTAStaticRecipeComponentEvent
   CUtlRBTree<CUtlMap<unsigned int,unsigned int,unsigned short,bool (*)(unsigned int const&,unsigned int const&)>::Node_t,unsigned short,CUtlMap<unsigned int,unsigned int,unsigned short,bool (*)(unsigned int const&,unsigned int const&)>::CKeyLess,CUtlMemory<UtlRBTreeNode_t<CUtlMap<unsigned int,unsigned int,unsigned short,bool (*)(unsigned int const&,unsigned int const&)>::Node_t,unsigned short>,unsigned short>>::RemoveAll(&this->m_mapActionGrants.m_Tree);
   v2 = (this->m_mapActionGrants.m_Tree.m_Elements.m_nGrowSize & 0xC0000000) == 0;
   this->m_mapActionGrants.m_Tree.m_FirstFree = -1;
@@ -2340,7 +2340,7 @@ void __fastcall CDOTAStaticRecipeComponentEvent::~CDOTAStaticRecipeComponentEven
   {
     this->m_mapActionGrants.m_Tree.m_LastAlloc.index = -1;
   }
-  this->_vptr_CBaseRecipeComponent = off_47A91F0;
+  this->_vptr_CBaseRecipeComponent = off_47A91F0;  // vptr: CEconTool_ItemDynamicRecipe::CStaticRecipeComponent
   CEconTool_ItemDynamicRecipe::CBaseRecipeComponent::~CBaseRecipeComponent(this);
   operator delete(this);
 }
@@ -2351,7 +2351,7 @@ void __fastcall CDOTAStaticRecipeComponentEvent::~CDOTAStaticRecipeComponentEven
 void __fastcall CDOTAStaticRecipeComponentLeagueOwnership::~CDOTAStaticRecipeComponentLeagueOwnership(
         CDOTAStaticRecipeComponentLeagueOwnership *const this)
 {
-  this->_vptr_CBaseRecipeComponent = off_47A91F0;
+  this->_vptr_CBaseRecipeComponent = off_47A91F0;  // vptr: CEconTool_ItemDynamicRecipe::CStaticRecipeComponent
   CEconTool_ItemDynamicRecipe::CBaseRecipeComponent::~CBaseRecipeComponent(this);
 }
 
@@ -2361,7 +2361,7 @@ void __fastcall CDOTAStaticRecipeComponentLeagueOwnership::~CDOTAStaticRecipeCom
 void __fastcall CDOTAStaticRecipeComponentLeagueOwnership::~CDOTAStaticRecipeComponentLeagueOwnership(
         CDOTAStaticRecipeComponentLeagueOwnership *const this)
 {
-  this->_vptr_CBaseRecipeComponent = off_47A91F0;
+  this->_vptr_CBaseRecipeComponent = off_47A91F0;  // vptr: CEconTool_ItemDynamicRecipe::CStaticRecipeComponent
   CEconTool_ItemDynamicRecipe::CBaseRecipeComponent::~CBaseRecipeComponent(this);
   operator delete(this);
 }

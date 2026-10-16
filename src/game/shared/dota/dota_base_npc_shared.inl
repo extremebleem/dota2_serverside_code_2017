@@ -102,7 +102,7 @@ CEntityInstance *__fastcall CDOTA_Ability_Brewmaster_PrimalSplit::CEntityInstanc
 void __fastcall CDOTA_Ability_Brewmaster_PrimalSplit::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Brewmaster_PrimalSplit::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -112,7 +112,7 @@ void __fastcall CDOTA_Ability_Brewmaster_PrimalSplit::CEntityInstanceEntityClass
 void __fastcall CDOTA_Ability_Brewmaster_PrimalSplit::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Brewmaster_PrimalSplit::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -325,7 +325,7 @@ CEntityInstance *__fastcall CDOTA_Ability_DeathProphet_Exorcism::CEntityInstance
 void __fastcall CDOTA_Ability_DeathProphet_Exorcism::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_DeathProphet_Exorcism::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -335,7 +335,7 @@ void __fastcall CDOTA_Ability_DeathProphet_Exorcism::CEntityInstanceEntityClass:
 void __fastcall CDOTA_Ability_DeathProphet_Exorcism::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_DeathProphet_Exorcism::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }

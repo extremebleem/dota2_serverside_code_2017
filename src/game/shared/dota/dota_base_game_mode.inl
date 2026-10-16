@@ -318,7 +318,7 @@ void *__fastcall CDOTABaseGameMode::CEntityInstanceEntityClass::AllocateInstance
 void __fastcall CDOTABaseGameMode::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTABaseGameMode::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -328,7 +328,7 @@ void __fastcall CDOTABaseGameMode::CEntityInstanceEntityClass::~CEntityInstanceE
 void __fastcall CDOTABaseGameMode::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTABaseGameMode::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }

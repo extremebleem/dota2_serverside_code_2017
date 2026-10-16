@@ -107,7 +107,7 @@ int __fastcall StringFieldToInt(
 // callers: CEconItem::DeserializeFromProtoBufItem, GCSDK::CreateSharedObjectSubclass<CEconItem>, CPlayerInventory::GetSOCDataForItem
 void __fastcall CEconItem::CEconItem(CEconItem *const this)
 {
-  this->_vptr_CSharedObject = off_47A3D10;
+  this->_vptr_CSharedObject = off_47A3D10;  // vptr: CEconItem
   this->_vptr_IEconItemInterface = &off_47A3E18;
   this->m_ulID.m_Data = 0;
   this->m_ulOriginalID.m_Data = 0;
@@ -130,7 +130,7 @@ void __fastcall CEconItem::~CEconItem(CEconItem *const this)
   CEconItemCustomData *m_pCustomData; // r12
 
   v2 = (*&this->m_dirtyBits & 4) == 0;
-  this->_vptr_CSharedObject = off_47A3D10;
+  this->_vptr_CSharedObject = off_47A3D10;  // vptr: CEconItem
   this->_vptr_IEconItemInterface = &off_47A3E18;
   if ( !v2 )
     CEconItemCustomData::FreeAttributeMemory(&this->m_CustomAttribSingleton);
@@ -141,7 +141,7 @@ void __fastcall CEconItem::~CEconItem(CEconItem *const this)
     operator delete(m_pCustomData);
   }
   this->_vptr_IEconItemInterface = &off_47A67F0;
-  this->_vptr_CSharedObject = off_40DB630;
+  this->_vptr_CSharedObject = off_40DB630;  // vptr: GCSDK::CSharedObject
 }
 
 
@@ -258,7 +258,7 @@ LABEL_4:
 // callers: CDOTA_BaseNPC::UpdateAssetModifiers, CDOTA_BaseNPC::PrecacheWearables, AddEconItemToStringTable, CEconItemView::CopyInternal
 void __fastcall CEconItem::CEconItem(CEconItem *const this, const CEconItem *const that)
 {
-  this->_vptr_CSharedObject = off_47A3D10;
+  this->_vptr_CSharedObject = off_47A3D10;  // vptr: CEconItem
   this->m_ulID.m_Data = 0;
   this->_vptr_IEconItemInterface = &off_47A3E18;
   this->m_EquipInstanceSingleton.m_unEquippedClass = 0;
@@ -491,7 +491,7 @@ void __fastcall SetCustomNameOrDescAttribute(
           if ( DynamicAttributeInternal == 0 )
           {
             DynamicAttributeInternal = CEconItem::AddDynamicAttributeInternal(pItem);
-            DynamicAttributeInternal->m_unDefinitionIndex = (*pAttrDef->_vptr_IEconItemAttributeDefinition)(pAttrDef);
+            DynamicAttributeInternal->m_unDefinitionIndex = pAttrDef->GetDefinitionIndex();
             (*(*v8 + 64LL))(v8, &DynamicAttributeInternal->m_value);
           }
           CAttribute_String::CopyFrom(DynamicAttributeInternal->m_value.asBlobPointer, v19);
@@ -1445,7 +1445,7 @@ void __fastcall CEconItem::FastIterateAttributesOfType(
       {
         v7 = v4;
         m_unDefinitionIndex = pAttributes[v7].m_unDefinitionIndex;
-        if ( m_unDefinitionIndex == (*attrDef->_vptr_IEconItemAttributeDefinition)(attrDef) )
+        if ( m_unDefinitionIndex == attrDef->GetDefinitionIndex() )
           break;
         if ( CustomAttributeList <= ++v4 )
           goto LABEL_7;
@@ -1532,7 +1532,7 @@ CEconItem::attribute_t *__fastcall CEconItem::FindDynamicAttributeInternal(
     while ( 1 )
     {
       m_unDefinitionIndex = m_pCustomData->m_vecAttributes.m_Memory.m_pMemory[v5].m_unDefinitionIndex;
-      if ( m_unDefinitionIndex == (*pAttrDef->_vptr_IEconItemAttributeDefinition)(pAttrDef) )
+      if ( m_unDefinitionIndex == pAttrDef->GetDefinitionIndex() )
         break;
       m_pCustomData = this->m_pCustomData;
       ++v6;
@@ -1548,7 +1548,7 @@ CEconItem::attribute_t *__fastcall CEconItem::FindDynamicAttributeInternal(
       return 0;
     p_m_CustomAttribSingleton = &this->m_CustomAttribSingleton;
     v10 = this->m_CustomAttribSingleton.m_unDefinitionIndex;
-    v11 = v10 == (*pAttrDef->_vptr_IEconItemAttributeDefinition)(pAttrDef);
+    v11 = v10 == pAttrDef->GetDefinitionIndex();
     result = 0;
     if ( v11 )
       return p_m_CustomAttribSingleton;
@@ -1642,7 +1642,7 @@ void __fastcall CEconItem::SetDynamicMaxTimeAttributeValue(
         if ( DynamicAttributeInternal == 0 )
         {
           DynamicAttributeInternal = CEconItem::AddDynamicAttributeInternal(this);
-          DynamicAttributeInternal->m_unDefinitionIndex = (*pAttrDef->_vptr_IEconItemAttributeDefinition)(pAttrDef);
+          DynamicAttributeInternal->m_unDefinitionIndex = pAttrDef->GetDefinitionIndex();
           (*(*v8 + 64LL))(v8, &DynamicAttributeInternal->m_value);
         }
         DynamicAttributeInternal->m_value.asUint32 = rtTimea[0];
@@ -1801,7 +1801,7 @@ void __fastcall CEconItem::RemoveDynamicAttribute(CEconItem *const this, const C
         while ( 1 )
         {
           m_unDefinitionIndex = m_pCustomData->m_vecAttributes.m_Memory.m_pMemory[v5].m_unDefinitionIndex;
-          if ( m_unDefinitionIndex == (*pAttrDef->_vptr_IEconItemAttributeDefinition)(pAttrDef) )
+          if ( m_unDefinitionIndex == pAttrDef->GetDefinitionIndex() )
             break;
           m_pCustomData = this->m_pCustomData;
           ++v6;
@@ -1831,7 +1831,7 @@ void __fastcall CEconItem::RemoveDynamicAttribute(CEconItem *const this, const C
     else if ( (*&this->m_dirtyBits & 4) != 0 )
     {
       v14 = this->m_CustomAttribSingleton.m_unDefinitionIndex;
-      if ( v14 == (*pAttrDef->_vptr_IEconItemAttributeDefinition)(pAttrDef) )
+      if ( v14 == pAttrDef->GetDefinitionIndex() )
       {
         CEconItemCustomData::FreeAttributeMemory(&this->m_CustomAttribSingleton);
         *&this->m_dirtyBits &= ~4u;
@@ -1971,25 +1971,24 @@ bool __fastcall CEconItem::BAddToMessage(const CEconItem *const this, std::strin
 {
   int m_enabled; // eax
   bool v5; // r12
-  __int64 v6; // rdi
-  char v7; // r13
-  unsigned __int64 v9; // r12
-  ThreadId_t v10; // r14
-  uint64 v11; // rcx
-  unsigned __int64 v12; // r15
+  char v6; // r13
+  unsigned __int64 v8; // r12
+  ThreadId_t v9; // r14
+  uint64 v10; // rcx
+  unsigned __int64 v11; // r15
   uint64 m_numTimeBaseTicks; // rcx
   CVProfNode *m_pParent; // rax
   CVProfNode *m_pCurNode; // rax
-  CVProfile::CBudgetGroup *v16; // rax
+  CVProfile::CBudgetGroup *v15; // rax
   ThreadId_t m_TargetThreadId; // [rsp+8h] [rbp-38h]
 
   m_enabled = g_VProfCurrentProfile.m_enabled;
   v5 = m_enabled != 0;
   if ( m_enabled != 0 )
   {
-    v12 = __rdtsc();
+    v11 = __rdtsc();
     m_TargetThreadId = g_VProfCurrentProfile.m_TargetThreadId;
-    if ( m_TargetThreadId == ThreadGetCurrentId(this) )
+    if ( m_TargetThreadId == ThreadGetCurrentId() )
     {
       m_pCurNode = g_VProfCurrentProfile.m_pCurNode;
       if ( m_pCurNode->m_pszName != "CEconItem::BAddToMessage::std::string" )
@@ -2002,25 +2001,25 @@ bool __fastcall CEconItem::BAddToMessage(const CEconItem *const this, std::strin
                        4);
         g_VProfCurrentProfile.m_pCurNode = m_pCurNode;
       }
-      v16 = &g_VProfCurrentProfile.m_pBudgetGroups[m_pCurNode->m_BudgetGroupID];
-      v16->m_BudgetFlags |= 4u;
+      v15 = &g_VProfCurrentProfile.m_pBudgetGroups[m_pCurNode->m_BudgetGroupID];
+      v15->m_BudgetFlags |= 4u;
       CVProfNode::EnterScope(g_VProfCurrentProfile.m_pCurNode);
       g_VProfCurrentProfile.m_fAtRoot = 0;
     }
     m_numTimeBaseTicks = g_VProfCurrentProfile.m_ScopeProfiler.m_numTimeBaseTicks;
     ++g_VProfCurrentProfile.m_ScopeProfiler.m_numCalls;
-    g_VProfCurrentProfile.m_ScopeProfiler.m_numTimeBaseTicks = m_numTimeBaseTicks - v12 + __rdtsc();
+    g_VProfCurrentProfile.m_ScopeProfiler.m_numTimeBaseTicks = m_numTimeBaseTicks - v11 + __rdtsc();
   }
   CSOEconItem::Clear(&g_msgEconItem);
   CEconItem::SerializeToProtoBufItem(this, &g_msgEconItem);
-  v7 = google::protobuf::MessageLite::SerializeToString(&g_msgEconItem, pBuffer);
+  v6 = google::protobuf::MessageLite::SerializeToString(&g_msgEconItem, pBuffer);
   if ( v5 )
   {
-    v9 = __rdtsc();
+    v8 = __rdtsc();
     if ( !g_VProfCurrentProfile.m_fAtRoot || g_VProfCurrentProfile.m_enabled != 0 )
     {
-      v10 = g_VProfCurrentProfile.m_TargetThreadId;
-      if ( v10 == ThreadGetCurrentId(v6) )
+      v9 = g_VProfCurrentProfile.m_TargetThreadId;
+      if ( v9 == ThreadGetCurrentId() )
       {
         if ( CVProfNode::ExitScope(g_VProfCurrentProfile.m_pCurNode) != 0 )
         {
@@ -2037,11 +2036,11 @@ bool __fastcall CEconItem::BAddToMessage(const CEconItem *const this, std::strin
         g_VProfCurrentProfile.m_fAtRoot = m_pParent == &g_VProfCurrentProfile.m_Root;
       }
     }
-    v11 = g_VProfCurrentProfile.m_ScopeProfiler.m_numTimeBaseTicks;
+    v10 = g_VProfCurrentProfile.m_ScopeProfiler.m_numTimeBaseTicks;
     ++g_VProfCurrentProfile.m_ScopeProfiler.m_numCalls;
-    g_VProfCurrentProfile.m_ScopeProfiler.m_numTimeBaseTicks = v11 - v9 + __rdtsc();
+    g_VProfCurrentProfile.m_ScopeProfiler.m_numTimeBaseTicks = v10 - v8 + __rdtsc();
   }
-  return v7;
+  return v6;
 }
 
 
@@ -2349,7 +2348,7 @@ void __fastcall CEconItem::DeserializeFromProtoBufItem(CEconItem *const this, co
   {
     v20 = __rdtsc();
     m_TargetThreadId = g_VProfCurrentProfile.m_TargetThreadId;
-    if ( m_TargetThreadId == ThreadGetCurrentId(this) )
+    if ( m_TargetThreadId == ThreadGetCurrentId() )
     {
       m_pCurNode = g_VProfCurrentProfile.m_pCurNode;
       if ( m_pCurNode->m_pszName != "CEconItem::DeserializeFromProtoBufItem()" )

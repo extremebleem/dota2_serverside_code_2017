@@ -104,7 +104,7 @@ CEntityInstance *__fastcall CPropVehicle::CEntityInstanceEntityClass::ConstructI
 void __fastcall CPropVehicle::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CPropVehicle::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -114,7 +114,7 @@ void __fastcall CPropVehicle::CEntityInstanceEntityClass::~CEntityInstanceEntity
 void __fastcall CPropVehicle::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CPropVehicle::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -372,7 +372,7 @@ CEntityInstance *__fastcall CPropVehicleDriveable::CEntityInstanceEntityClass::C
 void __fastcall CPropVehicleDriveable::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CPropVehicleDriveable::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -382,7 +382,7 @@ void __fastcall CPropVehicleDriveable::CEntityInstanceEntityClass::~CEntityInsta
 void __fastcall CPropVehicleDriveable::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CPropVehicleDriveable::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }

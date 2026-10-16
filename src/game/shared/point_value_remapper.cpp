@@ -339,7 +339,7 @@ void *__fastcall CPointValueRemapper::CEntityInstanceEntityClass::AllocateInstan
 void __fastcall CPointValueRemapper::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CPointValueRemapper::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -349,7 +349,7 @@ void __fastcall CPointValueRemapper::CEntityInstanceEntityClass::~CEntityInstanc
 void __fastcall CPointValueRemapper::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CPointValueRemapper::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }

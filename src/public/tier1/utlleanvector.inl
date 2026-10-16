@@ -14,18 +14,16 @@ void __fastcall CUtlLeanVectorFixedGrowableBase<unsigned int,(unsigned short)9,s
   __int64 v4; // rcx
   __int64 v5; // rdi
   __int64 v6; // rsi
-  __int64 v7; // r8
-  __int64 v8; // r9
-  LeafCodeInfo_t v9; // [rsp+0h] [rbp-30h] BYREF
+  LeafCodeInfo_t v7; // [rsp+0h] [rbp-30h] BYREF
 
   if ( LoggingSystem_IsChannelEnabled(LOG_GENERAL, 4) != 0 )
   {
-    v9.m_szFile = "../public/tier1/utlleanvector.h";
-    v9.m_szFunction = "EnsureCapacity";
-    v9.m_nLine = 104;
-    LoggingSystem_Log(LOG_GENERAL, LoggingSeverity_t::LS_ERROR, &v9, "%s allocation count overflow", "EnsureCapacity");
+    v7.m_szFile = "../public/tier1/utlleanvector.h";
+    v7.m_szFunction = "EnsureCapacity";
+    v7.m_nLine = 104;
+    LoggingSystem_Log(LOG_GENERAL, LoggingSeverity_t::LS_ERROR, &v7, "%s allocation count overflow", "EnsureCapacity");
   }
-  if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v5, v6, v3, v4, v7, v8) != 0 )
+  if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v5, v6, v3, v4) != 0 )
     loc_0 = -559038737;
   Plat_ExitProcess(1);
   JUMPOUT(0x199AA7F);
@@ -44,18 +42,16 @@ void __fastcall CUtlLeanVectorFixedGrowableBase<unsigned short,(unsigned short)6
   __int64 v4; // rcx
   __int64 v5; // rdi
   __int64 v6; // rsi
-  __int64 v7; // r8
-  __int64 v8; // r9
-  LeafCodeInfo_t v9; // [rsp+0h] [rbp-30h] BYREF
+  LeafCodeInfo_t v7; // [rsp+0h] [rbp-30h] BYREF
 
   if ( LoggingSystem_IsChannelEnabled(LOG_GENERAL, 4) != 0 )
   {
-    v9.m_szFile = "../../public/tier1/utlleanvector.h";
-    v9.m_szFunction = "EnsureCapacity";
-    v9.m_nLine = 104;
-    LoggingSystem_Log(LOG_GENERAL, LoggingSeverity_t::LS_ERROR, &v9, "%s allocation count overflow", "EnsureCapacity");
+    v7.m_szFile = "../../public/tier1/utlleanvector.h";
+    v7.m_szFunction = "EnsureCapacity";
+    v7.m_nLine = 104;
+    LoggingSystem_Log(LOG_GENERAL, LoggingSeverity_t::LS_ERROR, &v7, "%s allocation count overflow", "EnsureCapacity");
   }
-  if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v5, v6, v3, v4, v7, v8) != 0 )
+  if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v5, v6, v3, v4) != 0 )
     loc_0 = -559038737;
   Plat_ExitProcess(1);
   JUMPOUT(0x199ACAF);
@@ -75,18 +71,16 @@ void __fastcall CUtlLeanVectorFixedGrowableBase<CFieldPathReconstruct_t,(unsigne
   __int64 v4; // rcx
   __int64 v5; // rdi
   __int64 v6; // rsi
-  __int64 v7; // r8
-  __int64 v8; // r9
-  LeafCodeInfo_t v9; // [rsp+0h] [rbp-30h] BYREF
+  LeafCodeInfo_t v7; // [rsp+0h] [rbp-30h] BYREF
 
   if ( LoggingSystem_IsChannelEnabled(LOG_GENERAL, 4) != 0 )
   {
-    v9.m_szFile = "../public/tier1/utlleanvector.h";
-    v9.m_szFunction = "EnsureCapacity";
-    v9.m_nLine = 104;
-    LoggingSystem_Log(LOG_GENERAL, LoggingSeverity_t::LS_ERROR, &v9, "%s allocation count overflow", "EnsureCapacity");
+    v7.m_szFile = "../public/tier1/utlleanvector.h";
+    v7.m_szFunction = "EnsureCapacity";
+    v7.m_nLine = 104;
+    LoggingSystem_Log(LOG_GENERAL, LoggingSeverity_t::LS_ERROR, &v7, "%s allocation count overflow", "EnsureCapacity");
   }
-  if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v5, v6, v3, v4, v7, v8) != 0 )
+  if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v5, v6, v3, v4) != 0 )
     loc_0 = -559038737;
   Plat_ExitProcess(1);
   JUMPOUT(0x199AE4D);
@@ -106,18 +100,16 @@ void __fastcall CUtlLeanVectorFixedGrowableBase<CFieldPath::Path_t,(unsigned sho
   __int64 v4; // rcx
   __int64 v5; // rdi
   __int64 v6; // rsi
-  __int64 v7; // r8
-  __int64 v8; // r9
-  LeafCodeInfo_t v9; // [rsp+0h] [rbp-30h] BYREF
+  LeafCodeInfo_t v7; // [rsp+0h] [rbp-30h] BYREF
 
   if ( LoggingSystem_IsChannelEnabled(LOG_GENERAL, 4) != 0 )
   {
-    v9.m_szFile = "../public/tier1/utlleanvector.h";
-    v9.m_szFunction = "EnsureCapacity";
-    v9.m_nLine = 104;
-    LoggingSystem_Log(LOG_GENERAL, LoggingSeverity_t::LS_ERROR, &v9, "%s allocation count overflow", "EnsureCapacity");
+    v7.m_szFile = "../public/tier1/utlleanvector.h";
+    v7.m_szFunction = "EnsureCapacity";
+    v7.m_nLine = 104;
+    LoggingSystem_Log(LOG_GENERAL, LoggingSeverity_t::LS_ERROR, &v7, "%s allocation count overflow", "EnsureCapacity");
   }
-  if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v5, v6, v3, v4, v7, v8) != 0 )
+  if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v5, v6, v3, v4) != 0 )
     loc_0 = -559038737;
   Plat_ExitProcess(1);
   JUMPOUT(0x199AEC5);
@@ -263,18 +255,16 @@ void __fastcall CUtlLeanVectorBase<CEntityKeyValues::KeyValueInfo_t,short>::Ensu
   __int64 v4; // rcx
   __int64 v5; // rdi
   __int64 v6; // rsi
-  __int64 v7; // r8
-  __int64 v8; // r9
-  LeafCodeInfo_t v9; // [rsp+0h] [rbp-30h] BYREF
+  LeafCodeInfo_t v7; // [rsp+0h] [rbp-30h] BYREF
 
   if ( LoggingSystem_IsChannelEnabled(LOG_GENERAL, 4) != 0 )
   {
-    v9.m_szFile = "../public/tier1/utlleanvector.h";
-    v9.m_szFunction = "EnsureCapacity";
-    v9.m_nLine = 327;
-    LoggingSystem_Log(LOG_GENERAL, LoggingSeverity_t::LS_ERROR, &v9, "%s allocation count overflow", "EnsureCapacity");
+    v7.m_szFile = "../public/tier1/utlleanvector.h";
+    v7.m_szFunction = "EnsureCapacity";
+    v7.m_nLine = 327;
+    LoggingSystem_Log(LOG_GENERAL, LoggingSeverity_t::LS_ERROR, &v7, "%s allocation count overflow", "EnsureCapacity");
   }
-  if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v5, v6, v3, v4, v7, v8) != 0 )
+  if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v5, v6, v3, v4) != 0 )
     loc_0 = -559038737;
   Plat_ExitProcess(1);
   JUMPOUT(0x199AB6F);
@@ -329,18 +319,16 @@ void __fastcall CUtlLeanVectorImpl<CUtlLeanVectorFixedGrowableBase<unsigned int,
   __int64 v2; // rcx
   __int64 v3; // rdi
   __int64 v4; // rsi
-  __int64 v5; // r8
-  __int64 v6; // r9
-  LeafCodeInfo_t v7; // [rsp+0h] [rbp-30h] BYREF
+  LeafCodeInfo_t v5; // [rsp+0h] [rbp-30h] BYREF
 
   if ( LoggingSystem_IsChannelEnabled(LOG_GENERAL, 4) != 0 )
   {
-    v7.m_szFile = "../public/tier1/utlleanvector.h";
-    v7.m_szFunction = "AddToTailGetPtr";
-    v7.m_nLine = 557;
-    LoggingSystem_Log(LOG_GENERAL, LoggingSeverity_t::LS_ERROR, &v7, "%s allocation count overflow", "AddToTailGetPtr");
+    v5.m_szFile = "../public/tier1/utlleanvector.h";
+    v5.m_szFunction = "AddToTailGetPtr";
+    v5.m_nLine = 557;
+    LoggingSystem_Log(LOG_GENERAL, LoggingSeverity_t::LS_ERROR, &v5, "%s allocation count overflow", "AddToTailGetPtr");
   }
-  if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v3, v4, v1, v2, v5, v6) != 0 )
+  if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v3, v4, v1, v2) != 0 )
     loc_0 = -559038737;
   Plat_ExitProcess(1);
   JUMPOUT(0x199AAF7);
@@ -357,18 +345,16 @@ void __fastcall CUtlLeanVectorImpl<CUtlLeanVectorBase<CEntityKeyValues::KeyValue
   __int64 v2; // rcx
   __int64 v3; // rdi
   __int64 v4; // rsi
-  __int64 v5; // r8
-  __int64 v6; // r9
-  LeafCodeInfo_t v7; // [rsp+0h] [rbp-30h] BYREF
+  LeafCodeInfo_t v5; // [rsp+0h] [rbp-30h] BYREF
 
   if ( LoggingSystem_IsChannelEnabled(LOG_GENERAL, 4) != 0 )
   {
-    v7.m_szFile = "../public/tier1/utlleanvector.h";
-    v7.m_szFunction = "AddToTailGetPtr";
-    v7.m_nLine = 557;
-    LoggingSystem_Log(LOG_GENERAL, LoggingSeverity_t::LS_ERROR, &v7, "%s allocation count overflow", "AddToTailGetPtr");
+    v5.m_szFile = "../public/tier1/utlleanvector.h";
+    v5.m_szFunction = "AddToTailGetPtr";
+    v5.m_nLine = 557;
+    LoggingSystem_Log(LOG_GENERAL, LoggingSeverity_t::LS_ERROR, &v5, "%s allocation count overflow", "AddToTailGetPtr");
   }
-  if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v3, v4, v1, v2, v5, v6) != 0 )
+  if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v3, v4, v1, v2) != 0 )
     loc_0 = -559038737;
   Plat_ExitProcess(1);
   JUMPOUT(0x199ABE7);
@@ -386,18 +372,16 @@ void __fastcall CUtlLeanVectorImpl<CUtlLeanVectorBase<ParserResponse,short>,Pars
   __int64 v2; // rcx
   __int64 v3; // rdi
   __int64 v4; // rsi
-  __int64 v5; // r8
-  __int64 v6; // r9
-  LeafCodeInfo_t v7; // [rsp+0h] [rbp-30h] BYREF
+  LeafCodeInfo_t v5; // [rsp+0h] [rbp-30h] BYREF
 
   if ( LoggingSystem_IsChannelEnabled(LOG_GENERAL, 4) != 0 )
   {
-    v7.m_szFile = "../../public/tier1/utlleanvector.h";
-    v7.m_szFunction = "AddToTailGetPtr";
-    v7.m_nLine = 557;
-    LoggingSystem_Log(LOG_GENERAL, LoggingSeverity_t::LS_ERROR, &v7, "%s allocation count overflow", "AddToTailGetPtr");
+    v5.m_szFile = "../../public/tier1/utlleanvector.h";
+    v5.m_szFunction = "AddToTailGetPtr";
+    v5.m_nLine = 557;
+    LoggingSystem_Log(LOG_GENERAL, LoggingSeverity_t::LS_ERROR, &v5, "%s allocation count overflow", "AddToTailGetPtr");
   }
-  if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v3, v4, v1, v2, v5, v6) != 0 )
+  if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v3, v4, v1, v2) != 0 )
     loc_0 = -559038737;
   Plat_ExitProcess(1);
   JUMPOUT(0x199AD27);
@@ -798,9 +782,7 @@ unsigned __int16 *__fastcall CUtlLeanVectorImpl<CUtlLeanVectorFixedGrowableBase<
   __int64 v15; // rcx
   __int64 v16; // rdi
   __int64 v17; // rsi
-  __int64 v18; // r8
-  __int64 v19; // r9
-  LeafCodeInfo_t v20; // [rsp+0h] [rbp-40h] BYREF
+  LeafCodeInfo_t v18; // [rsp+0h] [rbp-40h] BYREF
 
   m_nCount = this->m_nCount;
   if ( m_nCount == 0x7FFF )
@@ -809,17 +791,17 @@ unsigned __int16 *__fastcall CUtlLeanVectorImpl<CUtlLeanVectorFixedGrowableBase<
       goto LABEL_29;
     while ( 1 )
     {
-      if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v16, v17, v14, v15, v18, v19) != 0 )
+      if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v16, v17, v14, v15) != 0 )
         loc_0 = -559038737;
       Plat_ExitProcess(1);
 LABEL_29:
-      v20.m_szFile = "../../public/tier1/utlleanvector.h";
-      v20.m_szFunction = "AddToTailGetPtr";
-      v20.m_nLine = 557;
+      v18.m_szFile = "../../public/tier1/utlleanvector.h";
+      v18.m_szFunction = "AddToTailGetPtr";
+      v18.m_nLine = 557;
       LoggingSystem_Log(
         LOG_GENERAL,
         LoggingSeverity_t::LS_ERROR,
-        &v20,
+        &v18,
         "%s allocation count overflow",
         "AddToTailGetPtr");
     }

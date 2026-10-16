@@ -77,7 +77,7 @@ CEntityInstance *__fastcall CDOTA_BaseNPC::CEntityInstanceEntityClass::Construct
 void __fastcall CDOTA_BaseNPC::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_BaseNPC::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -87,7 +87,7 @@ void __fastcall CDOTA_BaseNPC::CEntityInstanceEntityClass::~CEntityInstanceEntit
 void __fastcall CDOTA_BaseNPC::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_BaseNPC::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -2679,7 +2679,7 @@ CEntityInstance *__fastcall CDOTA_BaseNPC_Additive::CEntityInstanceEntityClass::
 void __fastcall CDOTA_BaseNPC_Additive::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_BaseNPC_Additive::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -2689,7 +2689,7 @@ void __fastcall CDOTA_BaseNPC_Additive::CEntityInstanceEntityClass::~CEntityInst
 void __fastcall CDOTA_BaseNPC_Additive::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_BaseNPC_Additive::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }

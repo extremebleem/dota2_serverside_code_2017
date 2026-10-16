@@ -75,7 +75,7 @@ CEntityInstance *__fastcall CBaseCombatWeapon::CEntityInstanceEntityClass::Const
 void __fastcall CBaseCombatWeapon::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CBaseCombatWeapon::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -85,7 +85,7 @@ void __fastcall CBaseCombatWeapon::CEntityInstanceEntityClass::~CEntityInstanceE
 void __fastcall CBaseCombatWeapon::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CBaseCombatWeapon::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }

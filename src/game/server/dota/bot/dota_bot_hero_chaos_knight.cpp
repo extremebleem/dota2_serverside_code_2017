@@ -66,7 +66,7 @@ void __fastcall CDOTA_Bot_AbilityUsage_ChaosKnight_ChaosBolt::CDOTA_Bot_AbilityU
   this->m_pAbility = pAbility;
   this->m_bUseOnCreeps = 0;
   this->m_pBot = pBot;
-  this->_vptr_CDOTA_Bot_AbilityUsage = off_42CA530;
+  this->_vptr_CDOTA_Bot_AbilityUsage = off_42CA530;  // vptr: CDOTA_Bot_AbilityUsage_ChaosKnight_ChaosBolt
   this->m_hDesiredTarget.m_Index = -1;
 }
 
@@ -478,7 +478,7 @@ void __fastcall CDOTA_Bot_AbilityUsage_ChaosKnight_RealityRift::CDOTA_Bot_Abilit
   this->m_pAbility = pAbility;
   this->m_bUseOnCreeps = 0;
   this->m_pBot = pBot;
-  this->_vptr_CDOTA_Bot_AbilityUsage = off_42CA590;
+  this->_vptr_CDOTA_Bot_AbilityUsage = off_42CA590;  // vptr: CDOTA_Bot_AbilityUsage_ChaosKnight_RealityRift
   this->m_hDesiredTarget.m_Index = -1;
 }
 
@@ -724,7 +724,7 @@ void __fastcall CDOTA_Bot_AbilityUsage_ChaosKnight_Phantasm::CDOTA_Bot_AbilityUs
   this->m_pAbility = pAbility;
   this->m_bUseOnCreeps = 0;
   this->m_pBot = pBot;
-  this->_vptr_CDOTA_Bot_AbilityUsage = off_42CA5F0;
+  this->_vptr_CDOTA_Bot_AbilityUsage = off_42CA5F0;  // vptr: CDOTA_Bot_AbilityUsage_ChaosKnight_Phantasm
 }
 
 

@@ -605,7 +605,7 @@ CEntityInstance *__fastcall CDOTA_Unit_Hero_Enchantress::CEntityInstanceEntityCl
 void __fastcall CDOTA_Unit_Hero_Enchantress::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Unit_Hero_Enchantress::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -615,7 +615,7 @@ void __fastcall CDOTA_Unit_Hero_Enchantress::CEntityInstanceEntityClass::~CEntit
 void __fastcall CDOTA_Unit_Hero_Enchantress::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Unit_Hero_Enchantress::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -800,7 +800,7 @@ CEntityInstance *__fastcall CDOTA_Ability_Enchantress_Untouchable::CEntityInstan
 void __fastcall CDOTA_Ability_Enchantress_Untouchable::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Enchantress_Untouchable::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -810,7 +810,7 @@ void __fastcall CDOTA_Ability_Enchantress_Untouchable::CEntityInstanceEntityClas
 void __fastcall CDOTA_Ability_Enchantress_Untouchable::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Enchantress_Untouchable::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -1292,7 +1292,7 @@ CEntityInstance *__fastcall CDOTA_Ability_Enchantress_Enchant::CEntityInstanceEn
 void __fastcall CDOTA_Ability_Enchantress_Enchant::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Enchantress_Enchant::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -1302,7 +1302,7 @@ void __fastcall CDOTA_Ability_Enchantress_Enchant::CEntityInstanceEntityClass::~
 void __fastcall CDOTA_Ability_Enchantress_Enchant::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Enchantress_Enchant::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -1915,7 +1915,7 @@ CEntityInstance *__fastcall CDOTA_Ability_Enchantress_NaturesAttendants::CEntity
 void __fastcall CDOTA_Ability_Enchantress_NaturesAttendants::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Enchantress_NaturesAttendants::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -1925,7 +1925,7 @@ void __fastcall CDOTA_Ability_Enchantress_NaturesAttendants::CEntityInstanceEnti
 void __fastcall CDOTA_Ability_Enchantress_NaturesAttendants::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Enchantress_NaturesAttendants::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -2529,7 +2529,7 @@ CEntityInstance *__fastcall CDOTA_Ability_Enchantress_Impetus::CEntityInstanceEn
 void __fastcall CDOTA_Ability_Enchantress_Impetus::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Enchantress_Impetus::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -2539,7 +2539,7 @@ void __fastcall CDOTA_Ability_Enchantress_Impetus::CEntityInstanceEntityClass::~
 void __fastcall CDOTA_Ability_Enchantress_Impetus::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Enchantress_Impetus::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }

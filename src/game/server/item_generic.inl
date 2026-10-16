@@ -94,7 +94,7 @@ CEntityInstance *__fastcall CItemGenericTriggerHelper::CEntityInstanceEntityClas
 void __fastcall CItemGenericTriggerHelper::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CItemGenericTriggerHelper::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -104,7 +104,7 @@ void __fastcall CItemGenericTriggerHelper::CEntityInstanceEntityClass::~CEntityI
 void __fastcall CItemGenericTriggerHelper::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CItemGenericTriggerHelper::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -325,7 +325,7 @@ CEntityInstance *__fastcall CItemGeneric::CEntityInstanceEntityClass::ConstructI
 void __fastcall CItemGeneric::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CItemGeneric::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -335,7 +335,7 @@ void __fastcall CItemGeneric::CEntityInstanceEntityClass::~CEntityInstanceEntity
 void __fastcall CItemGeneric::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CItemGeneric::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }

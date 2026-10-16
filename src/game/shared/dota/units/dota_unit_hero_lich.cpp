@@ -652,7 +652,7 @@ CEntityInstance *__fastcall CDOTA_Unit_Hero_Lich::CEntityInstanceEntityClass::Co
 void __fastcall CDOTA_Unit_Hero_Lich::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Unit_Hero_Lich::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -662,7 +662,7 @@ void __fastcall CDOTA_Unit_Hero_Lich::CEntityInstanceEntityClass::~CEntityInstan
 void __fastcall CDOTA_Unit_Hero_Lich::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Unit_Hero_Lich::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -1247,7 +1247,7 @@ CEntityInstance *__fastcall CDOTA_Ability_Lich_FrostNova::CEntityInstanceEntityC
 void __fastcall CDOTA_Ability_Lich_FrostNova::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Lich_FrostNova::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -1257,7 +1257,7 @@ void __fastcall CDOTA_Ability_Lich_FrostNova::CEntityInstanceEntityClass::~CEnti
 void __fastcall CDOTA_Ability_Lich_FrostNova::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Lich_FrostNova::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -2007,7 +2007,7 @@ CEntityInstance *__fastcall CDOTA_Ability_Lich_FrostArmor::CEntityInstanceEntity
 void __fastcall CDOTA_Ability_Lich_FrostArmor::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Lich_FrostArmor::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -2017,7 +2017,7 @@ void __fastcall CDOTA_Ability_Lich_FrostArmor::CEntityInstanceEntityClass::~CEnt
 void __fastcall CDOTA_Ability_Lich_FrostArmor::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Lich_FrostArmor::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -2697,7 +2697,7 @@ CEntityInstance *__fastcall CDOTA_Ability_Lich_DarkRitual::CEntityInstanceEntity
 void __fastcall CDOTA_Ability_Lich_DarkRitual::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Lich_DarkRitual::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -2707,7 +2707,7 @@ void __fastcall CDOTA_Ability_Lich_DarkRitual::CEntityInstanceEntityClass::~CEnt
 void __fastcall CDOTA_Ability_Lich_DarkRitual::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Lich_DarkRitual::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -3070,7 +3070,7 @@ CEntityInstance *__fastcall CDOTA_Ability_Lich_ChainFrost::CEntityInstanceEntity
 void __fastcall CDOTA_Ability_Lich_ChainFrost::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Lich_ChainFrost::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -3080,7 +3080,7 @@ void __fastcall CDOTA_Ability_Lich_ChainFrost::CEntityInstanceEntityClass::~CEnt
 void __fastcall CDOTA_Ability_Lich_ChainFrost::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Lich_ChainFrost::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }

@@ -8,7 +8,7 @@ void __fastcall CDOTA_BotMode_TeamRoam::CDOTA_BotMode_TeamRoam(CDOTA_BotMode_Tea
 {
   CDOTA_BotMode::CDOTA_BotMode(this, pBot);
   this->m_hPotentialRoamTarget.m_Index = -1;
-  this->_vptr_CDOTA_BotMode = off_42B8ED0;
+  this->_vptr_CDOTA_BotMode = off_42B8ED0;  // vptr: CDOTA_BotMode_TeamRoam
   this->m_fCurrentTargetScore = 0.0;
 }
 

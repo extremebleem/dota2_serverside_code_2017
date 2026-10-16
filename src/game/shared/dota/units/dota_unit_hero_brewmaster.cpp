@@ -1307,7 +1307,7 @@ CEntityInstance *__fastcall CDOTA_Unit_Hero_Brewmaster::CEntityInstanceEntityCla
 void __fastcall CDOTA_Unit_Hero_Brewmaster::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Unit_Hero_Brewmaster::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -1317,7 +1317,7 @@ void __fastcall CDOTA_Unit_Hero_Brewmaster::CEntityInstanceEntityClass::~CEntity
 void __fastcall CDOTA_Unit_Hero_Brewmaster::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Unit_Hero_Brewmaster::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -1862,7 +1862,7 @@ CEntityInstance *__fastcall CDOTA_Unit_Brewmaster_PrimalEarth::CEntityInstanceEn
 void __fastcall CDOTA_Unit_Brewmaster_PrimalEarth::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Unit_Brewmaster_PrimalEarth::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -1872,7 +1872,7 @@ void __fastcall CDOTA_Unit_Brewmaster_PrimalEarth::CEntityInstanceEntityClass::~
 void __fastcall CDOTA_Unit_Brewmaster_PrimalEarth::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Unit_Brewmaster_PrimalEarth::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -2220,7 +2220,7 @@ CEntityInstance *__fastcall CDOTA_Unit_Brewmaster_PrimalStorm::CEntityInstanceEn
 void __fastcall CDOTA_Unit_Brewmaster_PrimalStorm::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Unit_Brewmaster_PrimalStorm::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -2230,7 +2230,7 @@ void __fastcall CDOTA_Unit_Brewmaster_PrimalStorm::CEntityInstanceEntityClass::~
 void __fastcall CDOTA_Unit_Brewmaster_PrimalStorm::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Unit_Brewmaster_PrimalStorm::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -2529,7 +2529,7 @@ CEntityInstance *__fastcall CDOTA_Unit_Brewmaster_PrimalFire::CEntityInstanceEnt
 void __fastcall CDOTA_Unit_Brewmaster_PrimalFire::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Unit_Brewmaster_PrimalFire::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -2539,7 +2539,7 @@ void __fastcall CDOTA_Unit_Brewmaster_PrimalFire::CEntityInstanceEntityClass::~C
 void __fastcall CDOTA_Unit_Brewmaster_PrimalFire::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Unit_Brewmaster_PrimalFire::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -2830,7 +2830,7 @@ CEntityInstance *__fastcall CDOTA_Ability_Brewmaster_ThunderClap::CEntityInstanc
 void __fastcall CDOTA_Ability_Brewmaster_ThunderClap::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Brewmaster_ThunderClap::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -2840,7 +2840,7 @@ void __fastcall CDOTA_Ability_Brewmaster_ThunderClap::CEntityInstanceEntityClass
 void __fastcall CDOTA_Ability_Brewmaster_ThunderClap::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Brewmaster_ThunderClap::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -3331,7 +3331,7 @@ CEntityInstance *__fastcall CDOTA_Ability_Brewmaster_DrunkenHaze::CEntityInstanc
 void __fastcall CDOTA_Ability_Brewmaster_DrunkenHaze::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Brewmaster_DrunkenHaze::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -3341,7 +3341,7 @@ void __fastcall CDOTA_Ability_Brewmaster_DrunkenHaze::CEntityInstanceEntityClass
 void __fastcall CDOTA_Ability_Brewmaster_DrunkenHaze::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Brewmaster_DrunkenHaze::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -3831,7 +3831,7 @@ CEntityInstance *__fastcall CDOTA_Ability_Brewmaster_DrunkenBrawler::CEntityInst
 void __fastcall CDOTA_Ability_Brewmaster_DrunkenBrawler::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Brewmaster_DrunkenBrawler::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -3841,7 +3841,7 @@ void __fastcall CDOTA_Ability_Brewmaster_DrunkenBrawler::CEntityInstanceEntityCl
 void __fastcall CDOTA_Ability_Brewmaster_DrunkenBrawler::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Brewmaster_DrunkenBrawler::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -5942,7 +5942,7 @@ CEntityInstance *__fastcall CDOTA_Ability_Brewmaster_HurlBoulder::CEntityInstanc
 void __fastcall CDOTA_Ability_Brewmaster_HurlBoulder::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Brewmaster_HurlBoulder::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -5952,7 +5952,7 @@ void __fastcall CDOTA_Ability_Brewmaster_HurlBoulder::CEntityInstanceEntityClass
 void __fastcall CDOTA_Ability_Brewmaster_HurlBoulder::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Brewmaster_HurlBoulder::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -6259,7 +6259,7 @@ CEntityInstance *__fastcall CDOTA_Ability_Brewmaster_SpellImmunity::CEntityInsta
 void __fastcall CDOTA_Ability_Brewmaster_SpellImmunity::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Brewmaster_SpellImmunity::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -6269,7 +6269,7 @@ void __fastcall CDOTA_Ability_Brewmaster_SpellImmunity::CEntityInstanceEntityCla
 void __fastcall CDOTA_Ability_Brewmaster_SpellImmunity::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Brewmaster_SpellImmunity::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -6463,7 +6463,7 @@ CEntityInstance *__fastcall CDOTA_Ability_Brewmaster_Pulverize::CEntityInstanceE
 void __fastcall CDOTA_Ability_Brewmaster_Pulverize::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Brewmaster_Pulverize::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -6473,7 +6473,7 @@ void __fastcall CDOTA_Ability_Brewmaster_Pulverize::CEntityInstanceEntityClass::
 void __fastcall CDOTA_Ability_Brewmaster_Pulverize::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Brewmaster_Pulverize::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -6772,7 +6772,7 @@ CEntityInstance *__fastcall CDOTA_Ability_Brewmaster_DispelMagic::CEntityInstanc
 void __fastcall CDOTA_Ability_Brewmaster_DispelMagic::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Brewmaster_DispelMagic::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -6782,7 +6782,7 @@ void __fastcall CDOTA_Ability_Brewmaster_DispelMagic::CEntityInstanceEntityClass
 void __fastcall CDOTA_Ability_Brewmaster_DispelMagic::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Brewmaster_DispelMagic::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -7131,7 +7131,7 @@ CEntityInstance *__fastcall CDOTA_Ability_Brewmaster_Cyclone::CEntityInstanceEnt
 void __fastcall CDOTA_Ability_Brewmaster_Cyclone::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Brewmaster_Cyclone::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -7141,7 +7141,7 @@ void __fastcall CDOTA_Ability_Brewmaster_Cyclone::CEntityInstanceEntityClass::~C
 void __fastcall CDOTA_Ability_Brewmaster_Cyclone::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Brewmaster_Cyclone::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -7378,7 +7378,7 @@ CEntityInstance *__fastcall CDOTA_Ability_Brewmaster_WindWalk::CEntityInstanceEn
 void __fastcall CDOTA_Ability_Brewmaster_WindWalk::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Brewmaster_WindWalk::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -7388,7 +7388,7 @@ void __fastcall CDOTA_Ability_Brewmaster_WindWalk::CEntityInstanceEntityClass::~
 void __fastcall CDOTA_Ability_Brewmaster_WindWalk::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Brewmaster_WindWalk::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -7760,7 +7760,7 @@ CEntityInstance *__fastcall CDOTA_Ability_Brewmaster_PermanentImmolation::CEntit
 void __fastcall CDOTA_Ability_Brewmaster_PermanentImmolation::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Brewmaster_PermanentImmolation::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -7770,7 +7770,7 @@ void __fastcall CDOTA_Ability_Brewmaster_PermanentImmolation::CEntityInstanceEnt
 void __fastcall CDOTA_Ability_Brewmaster_PermanentImmolation::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Brewmaster_PermanentImmolation::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }

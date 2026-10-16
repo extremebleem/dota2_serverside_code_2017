@@ -10136,7 +10136,7 @@ void __fastcall CDOTA_UnitFilterCache::AddEntity(CDOTA_UnitFilterCache *const th
 // callers: _GLOBAL__sub_I__unity_dota_08.cpp
 void __fastcall CDOTA_Grinder::CDOTA_Grinder(CDOTA_Grinder *const this)
 {
-  this->_vptr_IGameSystem = off_42B45D0;
+  this->_vptr_IGameSystem = off_42B45D0;  // vptr: CDOTA_Grinder
   this->m_Buildings.m_Size = 0;
   this->m_Buildings.m_Memory.m_pMemory = 0;
   this->m_Buildings.m_Memory.m_nAllocationCount = 0;

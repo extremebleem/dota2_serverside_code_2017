@@ -995,7 +995,7 @@ CEntityInstance *__fastcall CDOTA_Unit_Hero_KeeperOfTheLight::CEntityInstanceEnt
 void __fastcall CDOTA_Unit_Hero_KeeperOfTheLight::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Unit_Hero_KeeperOfTheLight::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -1005,7 +1005,7 @@ void __fastcall CDOTA_Unit_Hero_KeeperOfTheLight::CEntityInstanceEntityClass::~C
 void __fastcall CDOTA_Unit_Hero_KeeperOfTheLight::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Unit_Hero_KeeperOfTheLight::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -1300,7 +1300,7 @@ CEntityInstance *__fastcall CDOTA_Ability_KeeperOfTheLight_Illuminate::CEntityIn
 void __fastcall CDOTA_Ability_KeeperOfTheLight_Illuminate::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_KeeperOfTheLight_Illuminate::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -1310,7 +1310,7 @@ void __fastcall CDOTA_Ability_KeeperOfTheLight_Illuminate::CEntityInstanceEntity
 void __fastcall CDOTA_Ability_KeeperOfTheLight_Illuminate::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_KeeperOfTheLight_Illuminate::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -2630,7 +2630,7 @@ CEntityInstance *__fastcall CDOTA_Ability_KeeperOfTheLight_IlluminateEnd::CEntit
 void __fastcall CDOTA_Ability_KeeperOfTheLight_IlluminateEnd::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_KeeperOfTheLight_IlluminateEnd::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -2640,7 +2640,7 @@ void __fastcall CDOTA_Ability_KeeperOfTheLight_IlluminateEnd::CEntityInstanceEnt
 void __fastcall CDOTA_Ability_KeeperOfTheLight_IlluminateEnd::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_KeeperOfTheLight_IlluminateEnd::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -2886,7 +2886,7 @@ CEntityInstance *__fastcall CDOTA_Ability_KeeperOfTheLight_SpiritFormIlluminate:
 void __fastcall CDOTA_Ability_KeeperOfTheLight_SpiritFormIlluminate::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_KeeperOfTheLight_SpiritFormIlluminate::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -2896,7 +2896,7 @@ void __fastcall CDOTA_Ability_KeeperOfTheLight_SpiritFormIlluminate::CEntityInst
 void __fastcall CDOTA_Ability_KeeperOfTheLight_SpiritFormIlluminate::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_KeeperOfTheLight_SpiritFormIlluminate::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -4259,7 +4259,7 @@ CEntityInstance *__fastcall CDOTA_Ability_KeeperOfTheLight_SpiritFormIlluminateE
 void __fastcall CDOTA_Ability_KeeperOfTheLight_SpiritFormIlluminateEnd::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_KeeperOfTheLight_SpiritFormIlluminateEnd::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -4269,7 +4269,7 @@ void __fastcall CDOTA_Ability_KeeperOfTheLight_SpiritFormIlluminateEnd::CEntityI
 void __fastcall CDOTA_Ability_KeeperOfTheLight_SpiritFormIlluminateEnd::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_KeeperOfTheLight_SpiritFormIlluminateEnd::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -4539,7 +4539,7 @@ CEntityInstance *__fastcall CDOTA_Ability_KeeperOfTheLight_ManaLeak::CEntityInst
 void __fastcall CDOTA_Ability_KeeperOfTheLight_ManaLeak::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_KeeperOfTheLight_ManaLeak::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -4549,7 +4549,7 @@ void __fastcall CDOTA_Ability_KeeperOfTheLight_ManaLeak::CEntityInstanceEntityCl
 void __fastcall CDOTA_Ability_KeeperOfTheLight_ManaLeak::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_KeeperOfTheLight_ManaLeak::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -5026,7 +5026,7 @@ CEntityInstance *__fastcall CDOTA_Ability_KeeperOfTheLight_ChakraMagic::CEntityI
 void __fastcall CDOTA_Ability_KeeperOfTheLight_ChakraMagic::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_KeeperOfTheLight_ChakraMagic::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -5036,7 +5036,7 @@ void __fastcall CDOTA_Ability_KeeperOfTheLight_ChakraMagic::CEntityInstanceEntit
 void __fastcall CDOTA_Ability_KeeperOfTheLight_ChakraMagic::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_KeeperOfTheLight_ChakraMagic::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -5481,7 +5481,7 @@ CEntityInstance *__fastcall CDOTA_Ability_KeeperOfTheLight_SpiritForm::CEntityIn
 void __fastcall CDOTA_Ability_KeeperOfTheLight_SpiritForm::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_KeeperOfTheLight_SpiritForm::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -5491,7 +5491,7 @@ void __fastcall CDOTA_Ability_KeeperOfTheLight_SpiritForm::CEntityInstanceEntity
 void __fastcall CDOTA_Ability_KeeperOfTheLight_SpiritForm::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_KeeperOfTheLight_SpiritForm::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -6088,7 +6088,7 @@ CEntityInstance *__fastcall CDOTA_Ability_KeeperOfTheLight_Recall::CEntityInstan
 void __fastcall CDOTA_Ability_KeeperOfTheLight_Recall::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_KeeperOfTheLight_Recall::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -6098,7 +6098,7 @@ void __fastcall CDOTA_Ability_KeeperOfTheLight_Recall::CEntityInstanceEntityClas
 void __fastcall CDOTA_Ability_KeeperOfTheLight_Recall::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_KeeperOfTheLight_Recall::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -6851,7 +6851,7 @@ CEntityInstance *__fastcall CDOTA_Ability_KeeperOfTheLight_BlindingLight::CEntit
 void __fastcall CDOTA_Ability_KeeperOfTheLight_BlindingLight::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_KeeperOfTheLight_BlindingLight::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -6861,7 +6861,7 @@ void __fastcall CDOTA_Ability_KeeperOfTheLight_BlindingLight::CEntityInstanceEnt
 void __fastcall CDOTA_Ability_KeeperOfTheLight_BlindingLight::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_KeeperOfTheLight_BlindingLight::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }

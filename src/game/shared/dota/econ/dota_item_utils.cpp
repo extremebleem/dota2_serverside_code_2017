@@ -80,7 +80,7 @@ GemInSocketResult_t __fastcall CDOTAItemUtils::CanGemBePlacedInSocketType(
         if ( !gemInfo.m_bIsUnremovableGem )
         {
           LOBYTE(v5) = 5;
-          if ( (*this->_vptr_CEconItemUtils)(this, gemInfo.m_nGemType, socketType) != 0 )
+          if ( this->IsGemTypeValidForSocketType(gemInfo.m_nGemType, socketType) != 0 )
           {
             if ( gemInfo.m_nRequiredHeroID < 0
               || (v10 = (*(pItemToSocket->_vptr_IEconItemInterface + 12))(pItemToSocket),

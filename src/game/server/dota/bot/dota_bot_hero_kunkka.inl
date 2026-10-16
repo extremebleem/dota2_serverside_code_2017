@@ -23,7 +23,7 @@ void __fastcall CDOTA_Bot_Hero_Kunkka::~CDOTA_Bot_Hero_Kunkka(CDOTA_Bot_Hero_Kun
 // CDOTA_BotMode_Laning_Kunkka::~CDOTA_BotMode_Laning_Kunkka  (line 41, @0x00000000028d01f0, libserver.so)  // inlines: ~CDOTA_BotMode, ~CDOTA_BotMode_Laning
 void __fastcall CDOTA_BotMode_Laning_Kunkka::~CDOTA_BotMode_Laning_Kunkka(CDOTA_BotMode_Laning_Kunkka *const this)
 {
-  this->_vptr_CDOTA_BotMode = off_42B75F0;
+  this->_vptr_CDOTA_BotMode = off_42B75F0;  // vptr: CDOTA_BotMode
 }
 
 
@@ -31,7 +31,7 @@ void __fastcall CDOTA_BotMode_Laning_Kunkka::~CDOTA_BotMode_Laning_Kunkka(CDOTA_
 // calls: operator delete
 void __fastcall CDOTA_BotMode_Laning_Kunkka::~CDOTA_BotMode_Laning_Kunkka(CDOTA_BotMode_Laning_Kunkka *const this)
 {
-  this->_vptr_CDOTA_BotMode = off_42B75F0;
+  this->_vptr_CDOTA_BotMode = off_42B75F0;  // vptr: CDOTA_BotMode
   operator delete(this);
 }
 
@@ -39,7 +39,7 @@ void __fastcall CDOTA_BotMode_Laning_Kunkka::~CDOTA_BotMode_Laning_Kunkka(CDOTA_
 // CDOTA_BotMode_Attack_Kunkka::~CDOTA_BotMode_Attack_Kunkka  (line 52, @0x00000000028d01d0, libserver.so)  // inlines: ~CDOTA_BotMode, ~CDOTA_BotMode_Attack
 void __fastcall CDOTA_BotMode_Attack_Kunkka::~CDOTA_BotMode_Attack_Kunkka(CDOTA_BotMode_Attack_Kunkka *const this)
 {
-  this->_vptr_CDOTA_BotMode = off_42B75F0;
+  this->_vptr_CDOTA_BotMode = off_42B75F0;  // vptr: CDOTA_BotMode
 }
 
 
@@ -47,7 +47,7 @@ void __fastcall CDOTA_BotMode_Attack_Kunkka::~CDOTA_BotMode_Attack_Kunkka(CDOTA_
 // calls: operator delete
 void __fastcall CDOTA_BotMode_Attack_Kunkka::~CDOTA_BotMode_Attack_Kunkka(CDOTA_BotMode_Attack_Kunkka *const this)
 {
-  this->_vptr_CDOTA_BotMode = off_42B75F0;
+  this->_vptr_CDOTA_BotMode = off_42B75F0;  // vptr: CDOTA_BotMode
   operator delete(this);
 }
 

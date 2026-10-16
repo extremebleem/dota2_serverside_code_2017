@@ -264,7 +264,7 @@ CEntityInstance *__fastcall CEnvEffectsScript::CEntityInstanceEntityClass::Const
 void __fastcall CEnvEffectsScript::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CEnvEffectsScript::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -274,7 +274,7 @@ void __fastcall CEnvEffectsScript::CEntityInstanceEntityClass::~CEntityInstanceE
 void __fastcall CEnvEffectsScript::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CEnvEffectsScript::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }

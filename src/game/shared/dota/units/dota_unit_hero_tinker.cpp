@@ -461,7 +461,7 @@ CEntityInstance *__fastcall CDOTA_Unit_Hero_Tinker::CEntityInstanceEntityClass::
 void __fastcall CDOTA_Unit_Hero_Tinker::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Unit_Hero_Tinker::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -471,7 +471,7 @@ void __fastcall CDOTA_Unit_Hero_Tinker::CEntityInstanceEntityClass::~CEntityInst
 void __fastcall CDOTA_Unit_Hero_Tinker::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Unit_Hero_Tinker::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -675,7 +675,7 @@ CEntityInstance *__fastcall CDOTA_Ability_Tinker_Laser::CEntityInstanceEntityCla
 void __fastcall CDOTA_Ability_Tinker_Laser::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Tinker_Laser::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -685,7 +685,7 @@ void __fastcall CDOTA_Ability_Tinker_Laser::CEntityInstanceEntityClass::~CEntity
 void __fastcall CDOTA_Ability_Tinker_Laser::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Tinker_Laser::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -1315,7 +1315,7 @@ CEntityInstance *__fastcall CDOTA_Ability_Tinker_HeatSeekingMissile::CEntityInst
 void __fastcall CDOTA_Ability_Tinker_HeatSeekingMissile::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Tinker_HeatSeekingMissile::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -1325,7 +1325,7 @@ void __fastcall CDOTA_Ability_Tinker_HeatSeekingMissile::CEntityInstanceEntityCl
 void __fastcall CDOTA_Ability_Tinker_HeatSeekingMissile::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Tinker_HeatSeekingMissile::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -1752,7 +1752,7 @@ CEntityInstance *__fastcall CDOTA_Ability_Tinker_MarchOfTheMachines::CEntityInst
 void __fastcall CDOTA_Ability_Tinker_MarchOfTheMachines::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Tinker_MarchOfTheMachines::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -1762,7 +1762,7 @@ void __fastcall CDOTA_Ability_Tinker_MarchOfTheMachines::CEntityInstanceEntityCl
 void __fastcall CDOTA_Ability_Tinker_MarchOfTheMachines::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Tinker_MarchOfTheMachines::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -2298,7 +2298,7 @@ CEntityInstance *__fastcall CDOTA_Ability_Tinker_Rearm::CEntityInstanceEntityCla
 void __fastcall CDOTA_Ability_Tinker_Rearm::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Tinker_Rearm::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -2308,7 +2308,7 @@ void __fastcall CDOTA_Ability_Tinker_Rearm::CEntityInstanceEntityClass::~CEntity
 void __fastcall CDOTA_Ability_Tinker_Rearm::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Tinker_Rearm::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }

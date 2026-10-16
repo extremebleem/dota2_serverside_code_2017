@@ -9,7 +9,7 @@ void __fastcall CDOTAHLTVDirector::~CDOTAHLTVDirector(CDOTAHLTVDirector *const t
   CUtlVectorBase<int,CUtlMemory<int,int> >::CAllocator *p_m_Memory; // r12
 
   v2 = (this->m_replayUploadChildren.m_Memory.m_nGrowSize & 0xC0000000) == 0;
-  this->_vptr_IGameEventListener2 = off_41018F0;
+  this->_vptr_IGameEventListener2 = off_41018F0;  // vptr: CDOTAHLTVDirector
   this->_vptr_IGameSystem = &off_4101A50;
   this->m_replayUploadChildren.m_Size = 0;
   this->_vptr_IHLTVDirector = off_4101BA0;
@@ -36,7 +36,7 @@ void __fastcall CDOTAHLTVDirector::~CDOTAHLTVDirector(CDOTAHLTVDirector *const t
   CUtlVectorBase<int,CUtlMemory<int,int> >::CAllocator *p_m_Memory; // r12
 
   v2 = (this->m_replayUploadChildren.m_Memory.m_nGrowSize & 0xC0000000) == 0;
-  this->_vptr_IGameEventListener2 = off_41018F0;
+  this->_vptr_IGameEventListener2 = off_41018F0;  // vptr: CDOTAHLTVDirector
   this->_vptr_IGameSystem = &off_4101A50;
   this->m_replayUploadChildren.m_Size = 0;
   this->_vptr_IHLTVDirector = off_4101BA0;

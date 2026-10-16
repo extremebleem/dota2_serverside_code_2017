@@ -117,7 +117,7 @@ CEntityInstance *__fastcall CLogicPlayerProxy::CEntityInstanceEntityClass::Const
 void __fastcall CLogicPlayerProxy::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CLogicPlayerProxy::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -127,7 +127,7 @@ void __fastcall CLogicPlayerProxy::CEntityInstanceEntityClass::~CEntityInstanceE
 void __fastcall CLogicPlayerProxy::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CLogicPlayerProxy::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }

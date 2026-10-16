@@ -10,7 +10,7 @@ void __fastcall CDOTA_BotMode_SecretShop::CDOTA_BotMode_SecretShop(
 {
   CDOTA_BotMode::CDOTA_BotMode(this, pBot);
   this->m_fSecretShopDesire = 0.0;
-  this->_vptr_CDOTA_BotMode = off_42B8970;
+  this->_vptr_CDOTA_BotMode = off_42B8970;  // vptr: CDOTA_BotMode_SecretShop
 }
 
 

@@ -80,7 +80,7 @@ void __fastcall CDOTA_Bot_AbilityUsage_Sniper_Shrapnel::CDOTA_Bot_AbilityUsage_S
   this->m_pAbility = pAbility;
   this->m_bUseOnCreeps = 0;
   this->m_pBot = pBot;
-  this->_vptr_CDOTA_Bot_AbilityUsage = off_42D0ED0;
+  this->_vptr_CDOTA_Bot_AbilityUsage = off_42D0ED0;  // vptr: CDOTA_Bot_AbilityUsage_Sniper_Shrapnel
   this->m_flLastUsage = -1000.0;
 }
 
@@ -177,7 +177,7 @@ void __fastcall CDOTA_Bot_AbilityUsage_Sniper_Assassinate::CDOTA_Bot_AbilityUsag
   this->m_pAbility = pAbility;
   this->m_bUseOnCreeps = 0;
   this->m_pBot = pBot;
-  this->_vptr_CDOTA_Bot_AbilityUsage = off_42D0F30;
+  this->_vptr_CDOTA_Bot_AbilityUsage = off_42D0F30;  // vptr: CDOTA_Bot_AbilityUsage_Sniper_Assassinate
   this->m_hDesiredTarget.m_Index = -1;
 }
 

@@ -78,7 +78,7 @@ void *__fastcall CFogController::CEntityInstanceEntityClass::AllocateInstance(
 void __fastcall CFogController::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CFogController::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -88,7 +88,7 @@ void __fastcall CFogController::CEntityInstanceEntityClass::~CEntityInstanceEnti
 void __fastcall CFogController::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CFogController::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -255,7 +255,7 @@ void __fastcall CFogSystem::SetGameSystemGlobalPtrs(CFogSystem *const this, void
 void __fastcall CFogSystem::~CFogSystem(CFogSystem *const this)
 {
   this->m_hMasterController.m_Index = -1;
-  this->_vptr_IGameSystem = off_3F7C1B0;
+  this->_vptr_IGameSystem = off_3F7C1B0;  // vptr: CAutoGameSystem
   IGameSystem::~IGameSystem(this);
 }
 
@@ -265,7 +265,7 @@ void __fastcall CFogSystem::~CFogSystem(CFogSystem *const this)
 void __fastcall CFogSystem::~CFogSystem(CFogSystem *const this)
 {
   this->m_hMasterController.m_Index = -1;
-  this->_vptr_IGameSystem = off_3F7C1B0;
+  this->_vptr_IGameSystem = off_3F7C1B0;  // vptr: CAutoGameSystem
   IGameSystem::~IGameSystem(this);
   operator delete(this);
 }

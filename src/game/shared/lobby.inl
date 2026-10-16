@@ -4,7 +4,7 @@
 // GCSDK::ILobby::~ILobby  (line 23, @0x00000000029a7440, libserver.so)  // inlines: ~IPlayerGroup
 void __fastcall GCSDK::ILobby::~ILobby(GCSDK::ILobby *const this)
 {
-  this->_vptr_IPlayerGroup = off_4303FD0;
+  this->_vptr_IPlayerGroup = off_4303FD0;  // vptr: GCSDK::IPlayerGroup
 }
 
 
@@ -12,7 +12,7 @@ void __fastcall GCSDK::ILobby::~ILobby(GCSDK::ILobby *const this)
 // calls: operator delete
 void __fastcall GCSDK::ILobby::~ILobby(GCSDK::ILobby *const this)
 {
-  this->_vptr_IPlayerGroup = off_4303FD0;
+  this->_vptr_IPlayerGroup = off_4303FD0;  // vptr: GCSDK::IPlayerGroup
   operator delete(this);
 }
 

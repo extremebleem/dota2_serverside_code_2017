@@ -526,18 +526,14 @@ void __fastcall CMesh::RemapBlendIndices(
   int v21; // r13d
   int v22; // r12d
   int v23; // r10d
-  char IsChannelEnabled; // al
-  __int64 v25; // rdx
-  __int64 v26; // rcx
-  __int64 v27; // rdi
-  __int64 v28; // rsi
-  __int64 v29; // r9
-  __int64 v30; // r8
-  char v31; // al
-  int v32; // eax
-  unsigned int ia; // [rsp+28h] [rbp-58h]
-  unsigned int ib; // [rsp+28h] [rbp-58h]
-  LeafCodeInfo_t v37; // [rsp+30h] [rbp-50h] BYREF
+  __int64 v24; // rdx
+  __int64 v25; // rcx
+  __int64 v26; // rdi
+  __int64 v27; // rsi
+  int v28; // eax
+  int ia; // [rsp+28h] [rbp-58h]
+  int ib; // [rsp+28h] [rbp-58h]
+  LeafCodeInfo_t v33; // [rsp+30h] [rbp-50h] BYREF
   __int64 SkinningDataFields; // 0:rax.8
 
   LODWORD(v5) = nPreRemapBoneCount;
@@ -582,23 +578,21 @@ void __fastcall CMesh::RemapBlendIndices(
       {
         v5 = &LOG_GENERAL;
         ia = v15;
-        IsChannelEnabled = LoggingSystem_IsChannelEnabled(LOG_GENERAL, 4);
-        v30 = ia;
-        if ( IsChannelEnabled != 0 )
+        if ( LoggingSystem_IsChannelEnabled(LOG_GENERAL, 4) != 0 )
         {
-          v32 = *v19;
-          v37.m_szFile = "mesh.cpp";
-          v37.m_szFunction = "RemapBlendIndices";
-          v37.m_nLine = 239;
+          v28 = *v19;
+          v33.m_szFile = "mesh.cpp";
+          v33.m_szFunction = "RemapBlendIndices";
+          v33.m_nLine = 239;
           LoggingSystem_Log(
             LOG_GENERAL,
             LoggingSeverity_t::LS_ERROR,
-            &v37,
+            &v33,
             "remapping vertex %d[w%d] invalid: %d->%d >= %d",
             ia,
             v21,
             v22,
-            v32,
+            v28,
             nPostRemapBoneCount);
         }
         goto LABEL_16;
@@ -610,17 +604,15 @@ LABEL_8:
         goto LABEL_19;
     }
     ib = v15;
-    v31 = LoggingSystem_IsChannelEnabled(LOG_GENERAL, 4);
-    v30 = ib;
-    if ( v31 != 0 )
+    if ( LoggingSystem_IsChannelEnabled(LOG_GENERAL, 4) != 0 )
     {
-      v37.m_szFile = "mesh.cpp";
-      v37.m_szFunction = "RemapBlendIndices";
-      v37.m_nLine = 234;
+      v33.m_szFile = "mesh.cpp";
+      v33.m_szFunction = "RemapBlendIndices";
+      v33.m_nLine = 234;
       LoggingSystem_Log(
         LOG_GENERAL,
         LoggingSeverity_t::LS_ERROR,
-        &v37,
+        &v33,
         "remapping vertex %d[w%d] invalid: %d->? >= %d",
         ib,
         v21,
@@ -628,7 +620,7 @@ LABEL_8:
         v5);
     }
 LABEL_16:
-    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v27, v28, v25, v26, v30, v29) != 0 )
+    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v26, v27, v24, v25) != 0 )
       loc_0 = -559038737;
     Plat_ExitProcess(1);
 LABEL_19:

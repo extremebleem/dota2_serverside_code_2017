@@ -5,7 +5,7 @@
 // calls: CGameRules::~CGameRules
 void __fastcall CSingleplayRules::~CSingleplayRules(CSingleplayRules *const this)
 {
-  this->_vptr_CGameRules = off_40A94B0;
+  this->_vptr_CGameRules = off_40A94B0;  // vptr: CSingleplayRules
   CGameRules::~CGameRules(this);
 }
 
@@ -14,7 +14,7 @@ void __fastcall CSingleplayRules::~CSingleplayRules(CSingleplayRules *const this
 // calls: CGameRules::~CGameRules
 void __fastcall CSingleplayRules::~CSingleplayRules(CSingleplayRules *const this)
 {
-  this->_vptr_CGameRules = off_40A94B0;
+  this->_vptr_CGameRules = off_40A94B0;  // vptr: CSingleplayRules
   CGameRules::~CGameRules(this);
   (*(*g_pMemAlloc + 16LL))(g_pMemAlloc, this);
 }

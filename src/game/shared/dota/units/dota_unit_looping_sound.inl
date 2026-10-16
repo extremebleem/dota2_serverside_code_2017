@@ -113,7 +113,7 @@ CEntityInstance *__fastcall CDOTA_Unit_LoopingSound::CEntityInstanceEntityClass:
 void __fastcall CDOTA_Unit_LoopingSound::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Unit_LoopingSound::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -123,7 +123,7 @@ void __fastcall CDOTA_Unit_LoopingSound::CEntityInstanceEntityClass::~CEntityIns
 void __fastcall CDOTA_Unit_LoopingSound::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Unit_LoopingSound::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }

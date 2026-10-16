@@ -502,7 +502,7 @@ CEntityInstance *__fastcall CDOTA_Unit_Hero_AntiMage::CEntityInstanceEntityClass
 void __fastcall CDOTA_Unit_Hero_AntiMage::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Unit_Hero_AntiMage::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -512,7 +512,7 @@ void __fastcall CDOTA_Unit_Hero_AntiMage::CEntityInstanceEntityClass::~CEntityIn
 void __fastcall CDOTA_Unit_Hero_AntiMage::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Unit_Hero_AntiMage::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -712,7 +712,7 @@ CEntityInstance *__fastcall CDOTA_Ability_AntiMage_ManaBreak::CEntityInstanceEnt
 void __fastcall CDOTA_Ability_AntiMage_ManaBreak::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_AntiMage_ManaBreak::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -722,7 +722,7 @@ void __fastcall CDOTA_Ability_AntiMage_ManaBreak::CEntityInstanceEntityClass::~C
 void __fastcall CDOTA_Ability_AntiMage_ManaBreak::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_AntiMage_ManaBreak::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -1194,7 +1194,7 @@ CEntityInstance *__fastcall CDOTA_Ability_AntiMage_Blink::CEntityInstanceEntityC
 void __fastcall CDOTA_Ability_AntiMage_Blink::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_AntiMage_Blink::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -1204,7 +1204,7 @@ void __fastcall CDOTA_Ability_AntiMage_Blink::CEntityInstanceEntityClass::~CEnti
 void __fastcall CDOTA_Ability_AntiMage_Blink::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_AntiMage_Blink::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -1583,7 +1583,7 @@ CEntityInstance *__fastcall CDOTA_Ability_AntiMage_SpellShield::CEntityInstanceE
 void __fastcall CDOTA_Ability_AntiMage_SpellShield::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_AntiMage_SpellShield::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -1593,7 +1593,7 @@ void __fastcall CDOTA_Ability_AntiMage_SpellShield::CEntityInstanceEntityClass::
 void __fastcall CDOTA_Ability_AntiMage_SpellShield::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_AntiMage_SpellShield::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -2310,7 +2310,7 @@ CEntityInstance *__fastcall CDOTA_Ability_AntiMage_ManaVoid::CEntityInstanceEnti
 void __fastcall CDOTA_Ability_AntiMage_ManaVoid::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_AntiMage_ManaVoid::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -2320,7 +2320,7 @@ void __fastcall CDOTA_Ability_AntiMage_ManaVoid::CEntityInstanceEntityClass::~CE
 void __fastcall CDOTA_Ability_AntiMage_ManaVoid::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_AntiMage_ManaVoid::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }

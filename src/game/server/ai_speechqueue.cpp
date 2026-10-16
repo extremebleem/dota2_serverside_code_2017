@@ -788,7 +788,7 @@ void __fastcall CResponseQueueManager::~CResponseQueueManager(CResponseQueueMana
   CResponseQueue *m_pQueue; // r12
   bool v3; // zf
 
-  this->_vptr_IGameSystem = off_4001810;
+  this->_vptr_IGameSystem = off_4001810;  // vptr: CResponseQueueManager
   m_pQueue = this->m_pQueue;
   if ( m_pQueue != 0 )
   {
@@ -806,7 +806,7 @@ void __fastcall CResponseQueueManager::~CResponseQueueManager(CResponseQueueMana
     operator delete(m_pQueue);
     this->m_pQueue = 0;
   }
-  this->_vptr_IGameSystem = off_3F7C1B0;
+  this->_vptr_IGameSystem = off_3F7C1B0;  // vptr: CAutoGameSystem
   IGameSystem::~IGameSystem(this);
 }
 

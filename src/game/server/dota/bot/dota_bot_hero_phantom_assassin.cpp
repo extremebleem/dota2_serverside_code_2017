@@ -51,9 +51,9 @@ CDOTA_BotMode *__fastcall CDOTA_Bot_Hero_PhantomAssassin::CreateMode(
 
   if ( this->m_bHuman || iMode != 17 )
     return CDOTA_Bot::CreateMode(this, iMode);
-  v4 = operator new(0x110u);
+  v4 = operator new(0x110u);  // new CDOTA_BotMode_Farm_PhantomAssassin (size matches)
   CDOTA_BotMode_Farm::CDOTA_BotMode_Farm(v4, this);
-  v4->_vptr_CDOTA_BotMode = off_42CF0B0;
+  v4->_vptr_CDOTA_BotMode = off_42CF0B0;  // vptr: CDOTA_BotMode_Farm_PhantomAssassin
   return v4;
 }
 
@@ -252,7 +252,7 @@ void __fastcall CDOTA_Bot_AbilityUsage_PhantomAssassin_StiflingDagger::CDOTA_Bot
   this->m_pAbility = pAbility;
   this->m_bUseOnCreeps = 0;
   this->m_pBot = pBot;
-  this->_vptr_CDOTA_Bot_AbilityUsage = off_42CF150;
+  this->_vptr_CDOTA_Bot_AbilityUsage = off_42CF150;  // vptr: CDOTA_Bot_AbilityUsage_PhantomAssassin_StiflingDagger
   this->m_hDesiredTarget.m_Index = -1;
 }
 
@@ -585,7 +585,7 @@ void __fastcall CDOTA_Bot_AbilityUsage_PhantomAssassin_PhantomStrike::CDOTA_Bot_
 {
   this->m_pAbility = pAbility;
   this->m_pBot = pBot;
-  this->_vptr_CDOTA_Bot_AbilityUsage = off_42CF1B0;
+  this->_vptr_CDOTA_Bot_AbilityUsage = off_42CF1B0;  // vptr: CDOTA_Bot_AbilityUsage_PhantomAssassin_PhantomStrike
   this->m_hDesiredTarget.m_Index = -1;
   this->m_bUseOnCreeps = 1;
 }

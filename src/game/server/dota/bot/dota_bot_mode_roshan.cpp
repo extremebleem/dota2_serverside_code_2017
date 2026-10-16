@@ -8,7 +8,7 @@ void __fastcall CDOTA_BotMode_Roshan::CDOTA_BotMode_Roshan(CDOTA_BotMode_Roshan 
 {
   CDOTA_BotMode::CDOTA_BotMode(this, pBot);
   this->m_fRoshanScore = 0.0;
-  this->_vptr_CDOTA_BotMode = off_42B8790;
+  this->_vptr_CDOTA_BotMode = off_42B8790;  // vptr: CDOTA_BotMode_Roshan
 }
 
 
@@ -571,7 +571,7 @@ void __fastcall CDOTA_BotMode_Roshan_Human::CDOTA_BotMode_Roshan_Human(
   p_m_AbilityUseTimer = &this->m_AbilityUseTimer;
   CDOTA_BotMode::CDOTA_BotMode(this, pBot);
   this->m_fRoshanScore = 0.0;
-  this->_vptr_CDOTA_BotMode = off_42B8830;
+  this->_vptr_CDOTA_BotMode = off_42B8830;  // vptr: CDOTA_BotMode_Roshan_Human
   CountdownTimer::CountdownTimer(p_m_AbilityUseTimer);
   CountdownTimer::CountdownTimer(&this->m_AttackTimer);
   v4 = 3212836864LL;

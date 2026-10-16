@@ -591,7 +591,7 @@ CEntityInstance *__fastcall CDOTA_Unit_Hero_Silencer::CEntityInstanceEntityClass
 void __fastcall CDOTA_Unit_Hero_Silencer::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Unit_Hero_Silencer::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -601,7 +601,7 @@ void __fastcall CDOTA_Unit_Hero_Silencer::CEntityInstanceEntityClass::~CEntityIn
 void __fastcall CDOTA_Unit_Hero_Silencer::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Unit_Hero_Silencer::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -1009,7 +1009,7 @@ CEntityInstance *__fastcall CDOTA_Ability_Silencer_CurseOfTheSilent::CEntityInst
 void __fastcall CDOTA_Ability_Silencer_CurseOfTheSilent::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Silencer_CurseOfTheSilent::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -1019,7 +1019,7 @@ void __fastcall CDOTA_Ability_Silencer_CurseOfTheSilent::CEntityInstanceEntityCl
 void __fastcall CDOTA_Ability_Silencer_CurseOfTheSilent::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Silencer_CurseOfTheSilent::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -1633,7 +1633,7 @@ CEntityInstance *__fastcall CDOTA_Ability_Silencer_GlaivesOfWisdom::CEntityInsta
 void __fastcall CDOTA_Ability_Silencer_GlaivesOfWisdom::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Silencer_GlaivesOfWisdom::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -1643,7 +1643,7 @@ void __fastcall CDOTA_Ability_Silencer_GlaivesOfWisdom::CEntityInstanceEntityCla
 void __fastcall CDOTA_Ability_Silencer_GlaivesOfWisdom::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Silencer_GlaivesOfWisdom::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -2220,7 +2220,7 @@ CEntityInstance *__fastcall CDOTA_Ability_Silencer_LastWord::CEntityInstanceEnti
 void __fastcall CDOTA_Ability_Silencer_LastWord::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Silencer_LastWord::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -2230,7 +2230,7 @@ void __fastcall CDOTA_Ability_Silencer_LastWord::CEntityInstanceEntityClass::~CE
 void __fastcall CDOTA_Ability_Silencer_LastWord::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Silencer_LastWord::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -2890,7 +2890,7 @@ CEntityInstance *__fastcall CDOTA_Ability_Silencer_GlobalSilence::CEntityInstanc
 void __fastcall CDOTA_Ability_Silencer_GlobalSilence::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Silencer_GlobalSilence::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -2900,7 +2900,7 @@ void __fastcall CDOTA_Ability_Silencer_GlobalSilence::CEntityInstanceEntityClass
 void __fastcall CDOTA_Ability_Silencer_GlobalSilence::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Silencer_GlobalSilence::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }

@@ -393,7 +393,7 @@ void __fastcall CGCSubmitGameserverCrashReportJob::~CGCSubmitGameserverCrashRepo
 {
   CMsgGameserverCrash *m_pProtoBufBody; // rsi
 
-  this->_vptr_CJob = off_43042F0;
+  this->_vptr_CJob = off_43042F0;  // vptr: CGCSubmitGameserverCrashReportJob
   m_pProtoBufBody = this->m_msg.m_pProtoBufBody;
   this->m_msg._vptr_CProtoBufMsgBase = &off_43042B0;
   if ( m_pProtoBufBody != 0 )
@@ -402,7 +402,7 @@ void __fastcall CGCSubmitGameserverCrashReportJob::~CGCSubmitGameserverCrashRepo
     this->m_msg.m_pProtoBufBody = 0;
   }
   GCSDK::CProtoBufMsgBase::~CProtoBufMsgBase(&this->m_msg);
-  this->_vptr_CJob = off_40DB690;
+  this->_vptr_CJob = off_40DB690;  // vptr: GCSDK::CGCClientJob
   GCSDK::CJob::~CJob(this);
 }
 
@@ -415,7 +415,7 @@ void __fastcall CGCSubmitGameserverCrashReportJob::~CGCSubmitGameserverCrashRepo
 {
   CMsgGameserverCrash *m_pProtoBufBody; // rsi
 
-  this->_vptr_CJob = off_43042F0;
+  this->_vptr_CJob = off_43042F0;  // vptr: CGCSubmitGameserverCrashReportJob
   m_pProtoBufBody = this->m_msg.m_pProtoBufBody;
   this->m_msg._vptr_CProtoBufMsgBase = &off_43042B0;
   if ( m_pProtoBufBody != 0 )
@@ -424,7 +424,7 @@ void __fastcall CGCSubmitGameserverCrashReportJob::~CGCSubmitGameserverCrashRepo
     this->m_msg.m_pProtoBufBody = 0;
   }
   GCSDK::CProtoBufMsgBase::~CProtoBufMsgBase(&this->m_msg);
-  this->_vptr_CJob = off_40DB690;
+  this->_vptr_CJob = off_40DB690;  // vptr: GCSDK::CGCClientJob
   GCSDK::CJob::~CJob(this);
   operator delete(this);
 }
@@ -1517,7 +1517,7 @@ void __fastcall CDOTAGCServerSystem::Shutdown(CDOTAGCServerSystem *const this)
   if ( v2 != 0 )
   {
     vptr_ISharedObjectListener = v2[1]._vptr_ISharedObjectListener;
-    v2->_vptr_ISharedObjectListener = off_4304270;
+    v2->_vptr_ISharedObjectListener = off_4304270;  // vptr: CClientLobbyWatcher
     if ( vptr_ISharedObjectListener != 0 )
       GCSDK::CGCClient::RemoveSOCacheListener(vptr_ISharedObjectListener, v2);
     operator delete(v2);
@@ -3186,7 +3186,7 @@ void __fastcall CGCServerJobSendRealtimeStats::~CGCServerJobSendRealtimeStats(
 {
   google::protobuf::Message *m_pProtoBufBody; // rsi
 
-  this->_vptr_CJob = off_4304ED0;
+  this->_vptr_CJob = off_4304ED0;  // vptr: CGCServerJobSendRealtimeStats
   m_pProtoBufBody = this->m_msg.m_pProtoBufBody;
   this->m_msg._vptr_CProtoBufMsgBase = &off_4304E90;
   if ( m_pProtoBufBody != 0 )
@@ -3197,7 +3197,7 @@ void __fastcall CGCServerJobSendRealtimeStats::~CGCServerJobSendRealtimeStats(
     this->m_msg.m_pProtoBufBody = 0;
   }
   GCSDK::CProtoBufMsgBase::~CProtoBufMsgBase(&this->m_msg);
-  this->_vptr_CJob = off_40DB690;
+  this->_vptr_CJob = off_40DB690;  // vptr: GCSDK::CGCClientJob
   GCSDK::CJob::~CJob(this);
 }
 
@@ -3210,7 +3210,7 @@ void __fastcall CGCServerJobSendRealtimeStats::~CGCServerJobSendRealtimeStats(
 {
   google::protobuf::Message *m_pProtoBufBody; // rsi
 
-  this->_vptr_CJob = off_4304ED0;
+  this->_vptr_CJob = off_4304ED0;  // vptr: CGCServerJobSendRealtimeStats
   m_pProtoBufBody = this->m_msg.m_pProtoBufBody;
   this->m_msg._vptr_CProtoBufMsgBase = &off_4304E90;
   if ( m_pProtoBufBody != 0 )
@@ -3221,7 +3221,7 @@ void __fastcall CGCServerJobSendRealtimeStats::~CGCServerJobSendRealtimeStats(
     this->m_msg.m_pProtoBufBody = 0;
   }
   GCSDK::CProtoBufMsgBase::~CProtoBufMsgBase(&this->m_msg);
-  this->_vptr_CJob = off_40DB690;
+  this->_vptr_CJob = off_40DB690;  // vptr: GCSDK::CGCClientJob
   GCSDK::CJob::~CJob(this);
   operator delete(this);
 }
@@ -3261,7 +3261,7 @@ void __fastcall CGCServerJobSendRealtimeStats::CGCServerJobSendRealtimeStats(
   GCSDK::CProtoBufMsgMemoryPool<CMsgServerToGCRealtimeStats> *VProf_1597b; // [rsp+18h] [rbp-38h]
 
   GCSDK::CJob::CJob(this, (pGCClient + 48));
-  this->_vptr_CJob = off_4304ED0;
+  this->_vptr_CJob = off_4304ED0;  // vptr: CGCServerJobSendRealtimeStats
   this->m_pGCClient = pGCClient;
   this->m_cHeartbeatsBeforeTimeout = 4;
   GCSDK::CProtoBufMsgBase::CProtoBufMsgBase(&this->m_msg, 0x1F69u);
@@ -5864,7 +5864,7 @@ LABEL_46:
 void __fastcall CGCClientJobRealtimeStateStartStop::~CGCClientJobRealtimeStateStartStop(
         CGCClientJobRealtimeStateStartStop *const this)
 {
-  this->_vptr_CJob = off_40DB690;
+  this->_vptr_CJob = off_40DB690;  // vptr: GCSDK::CGCClientJob
   GCSDK::CJob::~CJob(this);
 }
 
@@ -5874,7 +5874,7 @@ void __fastcall CGCClientJobRealtimeStateStartStop::~CGCClientJobRealtimeStateSt
 void __fastcall CGCClientJobRealtimeStateStartStop::~CGCClientJobRealtimeStateStartStop(
         CGCClientJobRealtimeStateStartStop *const this)
 {
-  this->_vptr_CJob = off_40DB690;
+  this->_vptr_CJob = off_40DB690;  // vptr: GCSDK::CGCClientJob
   GCSDK::CJob::~CJob(this);
   operator delete(this);
 }
@@ -5957,10 +5957,10 @@ GCSDK::CJob *__fastcall CreateJob_CGCClientJobRealtimeStateStartStop(GCSDK::CGCC
 {
   GCSDK::CJob *v2; // rbx
 
-  v2 = operator new(0x140u);
+  v2 = operator new(0x140u);  // new CGCClientJobRealtimeStateStartStop (size matches)
   GCSDK::CJob::CJob(v2, (pGC + 48));
   v2[1]._vptr_CJob = pGC;
-  v2->_vptr_CJob = off_4304F30;
+  v2->_vptr_CJob = off_4304F30;  // vptr: CGCClientJobRealtimeStateStartStop
   v2->m_pJobType = &g_JobType_CGCClientJobRealtimeStateStartStop;
   *(&v2[1] + 2) = 4;
   return v2;
@@ -6047,7 +6047,7 @@ void __fastcall CDOTAGCServerSystem::SOCacheUnsubscribed(
     if ( v4 != 0 )
     {
       vptr_ISharedObjectListener = v4[1]._vptr_ISharedObjectListener;
-      v4->_vptr_ISharedObjectListener = off_4304270;
+      v4->_vptr_ISharedObjectListener = off_4304270;  // vptr: CClientLobbyWatcher
       if ( vptr_ISharedObjectListener != 0 )
         GCSDK::CGCClient::RemoveSOCacheListener(vptr_ISharedObjectListener, v4);
       operator delete(v4);
@@ -6253,7 +6253,7 @@ void __fastcall CDOTAGCServerSystem::SOChanged(
     if ( v8 != 0 )
     {
       vptr_ISharedObjectListener = v8[1]._vptr_ISharedObjectListener;
-      v8->_vptr_ISharedObjectListener = off_4304270;
+      v8->_vptr_ISharedObjectListener = off_4304270;  // vptr: CClientLobbyWatcher
       if ( vptr_ISharedObjectListener != 0 )
         GCSDK::CGCClient::RemoveSOCacheListener(vptr_ISharedObjectListener, v8);
       operator delete(v8);
@@ -6269,7 +6269,7 @@ void __fastcall CDOTAGCServerSystem::SOChanged(
       CMsgPoorNetworkConditions::Clear((this + 1760));
       m_pConVar = CDOTAGCServerSystem::SOChanged(GCSDK::SOID_t,GCSDK::CSharedObject const*,SOChangeType_t)::con_logfile_suffix.m_pConVar;
       *(this + 242) = 0;
-      (*m_pConVar->_vptr_IConVar)(m_pConVar, "");
+      m_pConVar->SetValue("");
     }
     else
     {
@@ -6399,9 +6399,9 @@ void __fastcall CDOTAGCServerSystem::UseLobbyFromClient(CDOTAGCServerSystem *con
       *(this + 260) = m_pCachedDotaLobby;
       if ( v7 )
       {
-        v8 = operator new(0x18u);
+        v8 = operator new(0x18u);  // new CClientLobbyWatcher (size matches)
         v8[1]._vptr_ISharedObjectListener = v5;
-        v8->_vptr_ISharedObjectListener = off_4304270;
+        v8->_vptr_ISharedObjectListener = off_4304270;  // vptr: CClientLobbyWatcher
         v8[2]._vptr_ISharedObjectListener = (this + 2080);
         GCSDK::CGCClient::AddSOCacheListener(v5, v8);
         *(this + 261) = v8;
@@ -7130,7 +7130,7 @@ void __fastcall dota_server_lobby_debug(const CCommandContext *const ctx, const 
 // calls: GCSDK::CJob::~CJob
 void __fastcall CGCServerJobSendFantasyMatch::~CGCServerJobSendFantasyMatch(CGCServerJobSendFantasyMatch *const this)
 {
-  this->_vptr_CJob = off_40DB690;
+  this->_vptr_CJob = off_40DB690;  // vptr: GCSDK::CGCClientJob
   GCSDK::CJob::~CJob(this);
 }
 
@@ -7139,7 +7139,7 @@ void __fastcall CGCServerJobSendFantasyMatch::~CGCServerJobSendFantasyMatch(CGCS
 // calls: GCSDK::CJob::~CJob, operator delete
 void __fastcall CGCServerJobSendFantasyMatch::~CGCServerJobSendFantasyMatch(CGCServerJobSendFantasyMatch *const this)
 {
-  this->_vptr_CJob = off_40DB690;
+  this->_vptr_CJob = off_40DB690;  // vptr: GCSDK::CGCClientJob
   GCSDK::CJob::~CJob(this);
   operator delete(this);
 }
@@ -7255,11 +7255,11 @@ LABEL_4:
   v12 = *(v4 + 264);
   v11 = *(v4 + 356);
   v13 = *(v4 + 216);
-  v8 = operator new(0x160u);
+  v8 = operator new(0x160u);  // new CGCServerJobSendFantasyMatch (size matches)
   v15 = *(this + 424);
   GCSDK::CJob::CJob(v8, (v9 + 72));
   v8[1]._vptr_CJob = (v9 + 24);
-  v8->_vptr_CJob = off_4305050;
+  v8->_vptr_CJob = off_4305050;  // vptr: CGCServerJobSendFantasyMatch
   v8[1].m_cLocksAttempted = v7;
   *(&v8[1] + 2) = 4;
   v8[1].m_JobID = v13;
@@ -7304,13 +7304,13 @@ void __fastcall CGCClientJobUploadMatchStats::~CGCClientJobUploadMatchStats(CGCC
 {
   GCSDK::CProtoBufMsg<CMsgGameMatchSignOut> *m_pMsgSignOut; // rdi
 
-  this->_vptr_CJob = off_43052F0;
+  this->_vptr_CJob = off_43052F0;  // vptr: CGCClientJobUploadMatchStats
   if ( !this->m_bStatsSubmitted )
     CDOTAGCServerSystem::OnFailedToSubmitStats(s_DOTAGCServerSystem);
   m_pMsgSignOut = this->m_pMsgSignOut;
   if ( m_pMsgSignOut != 0 )
     (*(m_pMsgSignOut->_vptr_CProtoBufMsgBase + 1))(m_pMsgSignOut);
-  this->_vptr_CJob = off_40DB690;
+  this->_vptr_CJob = off_40DB690;  // vptr: GCSDK::CGCClientJob
   GCSDK::CJob::~CJob(this);
 }
 
@@ -7322,13 +7322,13 @@ void __fastcall CGCClientJobUploadMatchStats::~CGCClientJobUploadMatchStats(CGCC
 {
   GCSDK::CProtoBufMsg<CMsgGameMatchSignOut> *m_pMsgSignOut; // rdi
 
-  this->_vptr_CJob = off_43052F0;
+  this->_vptr_CJob = off_43052F0;  // vptr: CGCClientJobUploadMatchStats
   if ( !this->m_bStatsSubmitted )
     CDOTAGCServerSystem::OnFailedToSubmitStats(s_DOTAGCServerSystem);
   m_pMsgSignOut = this->m_pMsgSignOut;
   if ( m_pMsgSignOut != 0 )
     (*(m_pMsgSignOut->_vptr_CProtoBufMsgBase + 1))(m_pMsgSignOut);
-  this->_vptr_CJob = off_40DB690;
+  this->_vptr_CJob = off_40DB690;  // vptr: GCSDK::CGCClientJob
   GCSDK::CJob::~CJob(this);
   operator delete(this);
 }
@@ -11885,10 +11885,10 @@ LABEL_129:
     v120 = GCClientSystem();
     v121 = (v120 + 24);
     v122 = v120;
-    v123 = operator new(0x158u);
+    v123 = operator new(0x158u);  // new CGCClientJobUploadMatchStats (size matches)
     GCSDK::CJob::CJob(v123, (v122 + 72));
     v123[1]._vptr_CJob = v121;
-    v123->_vptr_CJob = off_43052F0;
+    v123->_vptr_CJob = off_43052F0;  // vptr: CGCClientJobUploadMatchStats
     *(&v123[1] + 2) = 4;
     LOBYTE(v123[1].m_pvStartParam) = 0;
     *&v123[1].m_hCoroutine = pMsgSignOut;
@@ -13962,7 +13962,7 @@ bool __fastcall UpdateServerVersion(uint32 nVersion)
 // calls: GCSDK::CJob::~CJob
 void __fastcall CGCClientJobServerWelcome::~CGCClientJobServerWelcome(CGCClientJobServerWelcome *const this)
 {
-  this->_vptr_CJob = off_40DB690;
+  this->_vptr_CJob = off_40DB690;  // vptr: GCSDK::CGCClientJob
   GCSDK::CJob::~CJob(this);
 }
 
@@ -13971,7 +13971,7 @@ void __fastcall CGCClientJobServerWelcome::~CGCClientJobServerWelcome(CGCClientJ
 // calls: GCSDK::CJob::~CJob, operator delete
 void __fastcall CGCClientJobServerWelcome::~CGCClientJobServerWelcome(CGCClientJobServerWelcome *const this)
 {
-  this->_vptr_CJob = off_40DB690;
+  this->_vptr_CJob = off_40DB690;  // vptr: GCSDK::CGCClientJob
   GCSDK::CJob::~CJob(this);
   operator delete(this);
 }
@@ -14048,10 +14048,10 @@ GCSDK::CJob *__fastcall CreateJob_CGCClientJobServerWelcome(GCSDK::CGCClient *pG
 {
   GCSDK::CJob *v2; // rbx
 
-  v2 = operator new(0x140u);
+  v2 = operator new(0x140u);  // new CGCClientJobServerWelcome (size matches)
   GCSDK::CJob::CJob(v2, (pGC + 48));
   v2[1]._vptr_CJob = pGC;
-  v2->_vptr_CJob = off_4305550;
+  v2->_vptr_CJob = off_4305550;  // vptr: CGCClientJobServerWelcome
   v2->m_pJobType = &g_JobType_CGCClientJobServerWelcome;
   *(&v2[1] + 2) = 4;
   return v2;
@@ -14063,7 +14063,7 @@ GCSDK::CJob *__fastcall CreateJob_CGCClientJobServerWelcome(GCSDK::CGCClient *pG
 void __fastcall CGCClientJobServerUpdateVersion::~CGCClientJobServerUpdateVersion(
         CGCClientJobServerUpdateVersion *const this)
 {
-  this->_vptr_CJob = off_40DB690;
+  this->_vptr_CJob = off_40DB690;  // vptr: GCSDK::CGCClientJob
   GCSDK::CJob::~CJob(this);
 }
 
@@ -14073,7 +14073,7 @@ void __fastcall CGCClientJobServerUpdateVersion::~CGCClientJobServerUpdateVersio
 void __fastcall CGCClientJobServerUpdateVersion::~CGCClientJobServerUpdateVersion(
         CGCClientJobServerUpdateVersion *const this)
 {
-  this->_vptr_CJob = off_40DB690;
+  this->_vptr_CJob = off_40DB690;  // vptr: GCSDK::CGCClientJob
   GCSDK::CJob::~CJob(this);
   operator delete(this);
 }
@@ -14145,10 +14145,10 @@ GCSDK::CJob *__fastcall CreateJob_CGCClientJobServerUpdateVersion(GCSDK::CGCClie
 {
   GCSDK::CJob *v2; // rbx
 
-  v2 = operator new(0x140u);
+  v2 = operator new(0x140u);  // new CGCClientJobServerUpdateVersion (size matches)
   GCSDK::CJob::CJob(v2, (pGC + 48));
   v2[1]._vptr_CJob = pGC;
-  v2->_vptr_CJob = off_43055F0;
+  v2->_vptr_CJob = off_43055F0;  // vptr: CGCClientJobServerUpdateVersion
   v2->m_pJobType = &g_JobType_CGCClientJobServerUpdateVersion;
   *(&v2[1] + 2) = 4;
   return v2;
@@ -14159,7 +14159,7 @@ GCSDK::CJob *__fastcall CreateJob_CGCClientJobServerUpdateVersion(GCSDK::CGCClie
 // calls: GCSDK::CJob::~CJob
 void __fastcall CGCClientJobGetGCStatus::~CGCClientJobGetGCStatus(CGCClientJobGetGCStatus *const this)
 {
-  this->_vptr_CJob = off_40DB690;
+  this->_vptr_CJob = off_40DB690;  // vptr: GCSDK::CGCClientJob
   GCSDK::CJob::~CJob(this);
 }
 
@@ -14168,7 +14168,7 @@ void __fastcall CGCClientJobGetGCStatus::~CGCClientJobGetGCStatus(CGCClientJobGe
 // calls: GCSDK::CJob::~CJob, operator delete
 void __fastcall CGCClientJobGetGCStatus::~CGCClientJobGetGCStatus(CGCClientJobGetGCStatus *const this)
 {
-  this->_vptr_CJob = off_40DB690;
+  this->_vptr_CJob = off_40DB690;  // vptr: GCSDK::CGCClientJob
   GCSDK::CJob::~CJob(this);
   operator delete(this);
 }
@@ -14223,11 +14223,11 @@ void __fastcall server_gc_status(const CCommandContext *const ctx, const CComman
   v2 = GCClientSystem();
   v3 = (v2 + 24);
   v4 = v2;
-  v5 = operator new(0x140u);
+  v5 = operator new(0x140u);  // new CGCClientJobGetGCStatus (size matches)
   GCSDK::CJob::CJob(v5, (v4 + 72));
   v5[1]._vptr_CJob = v3;
   *(&v5[1] + 2) = 4;
-  v5->_vptr_CJob = off_4305690;
+  v5->_vptr_CJob = off_4305690;  // vptr: CGCClientJobGetGCStatus
   GCSDK::CJob::StartJob(v5, 0);
 }
 
@@ -14237,7 +14237,7 @@ void __fastcall server_gc_status(const CCommandContext *const ctx, const CComman
 void __fastcall CGCClientJobDOTABroadcastNotificationServer::~CGCClientJobDOTABroadcastNotificationServer(
         CGCClientJobDOTABroadcastNotificationServer *const this)
 {
-  this->_vptr_CJob = off_40DB690;
+  this->_vptr_CJob = off_40DB690;  // vptr: GCSDK::CGCClientJob
   GCSDK::CJob::~CJob(this);
 }
 
@@ -14247,7 +14247,7 @@ void __fastcall CGCClientJobDOTABroadcastNotificationServer::~CGCClientJobDOTABr
 void __fastcall CGCClientJobDOTABroadcastNotificationServer::~CGCClientJobDOTABroadcastNotificationServer(
         CGCClientJobDOTABroadcastNotificationServer *const this)
 {
-  this->_vptr_CJob = off_40DB690;
+  this->_vptr_CJob = off_40DB690;  // vptr: GCSDK::CGCClientJob
   GCSDK::CJob::~CJob(this);
   operator delete(this);
 }
@@ -14324,10 +14324,10 @@ GCSDK::CJob *__fastcall CreateJob_CGCClientJobDOTABroadcastNotificationServer(GC
 {
   GCSDK::CJob *v2; // rbx
 
-  v2 = operator new(0x140u);
+  v2 = operator new(0x140u);  // new CGCClientJobDOTABroadcastNotificationServer (size matches)
   GCSDK::CJob::CJob(v2, (pGC + 48));
   v2[1]._vptr_CJob = pGC;
-  v2->_vptr_CJob = off_4305930;
+  v2->_vptr_CJob = off_4305930;  // vptr: CGCClientJobDOTABroadcastNotificationServer
   v2->m_pJobType = &g_JobType_CGCClientJobDOTABroadcastNotificationServer;
   *(&v2[1] + 2) = 4;
   return v2;
@@ -14339,7 +14339,7 @@ GCSDK::CJob *__fastcall CreateJob_CGCClientJobDOTABroadcastNotificationServer(GC
 void __fastcall CGCClientJobDOTAGCToRelayConnect::~CGCClientJobDOTAGCToRelayConnect(
         CGCClientJobDOTAGCToRelayConnect *const this)
 {
-  this->_vptr_CJob = off_40DB690;
+  this->_vptr_CJob = off_40DB690;  // vptr: GCSDK::CGCClientJob
   GCSDK::CJob::~CJob(this);
 }
 
@@ -14349,7 +14349,7 @@ void __fastcall CGCClientJobDOTAGCToRelayConnect::~CGCClientJobDOTAGCToRelayConn
 void __fastcall CGCClientJobDOTAGCToRelayConnect::~CGCClientJobDOTAGCToRelayConnect(
         CGCClientJobDOTAGCToRelayConnect *const this)
 {
-  this->_vptr_CJob = off_40DB690;
+  this->_vptr_CJob = off_40DB690;  // vptr: GCSDK::CGCClientJob
   GCSDK::CJob::~CJob(this);
   operator delete(this);
 }
@@ -14541,10 +14541,10 @@ GCSDK::CJob *__fastcall CreateJob_CGCClientJobDOTAGCToRelayConnect(GCSDK::CGCCli
 {
   GCSDK::CJob *v2; // rbx
 
-  v2 = operator new(0x140u);
+  v2 = operator new(0x140u);  // new CGCClientJobDOTAGCToRelayConnect (size matches)
   GCSDK::CJob::CJob(v2, (pGC + 48));
   v2[1]._vptr_CJob = pGC;
-  v2->_vptr_CJob = off_43059D0;
+  v2->_vptr_CJob = off_43059D0;  // vptr: CGCClientJobDOTAGCToRelayConnect
   v2->m_pJobType = &g_JobType_CGCClientJobDOTAGCToRelayConnect;
   *(&v2[1] + 2) = 4;
   return v2;
@@ -14556,7 +14556,7 @@ GCSDK::CJob *__fastcall CreateJob_CGCClientJobDOTAGCToRelayConnect(GCSDK::CGCCli
 void __fastcall CGCClientJobLANServerRelayConnect::~CGCClientJobLANServerRelayConnect(
         CGCClientJobLANServerRelayConnect *const this)
 {
-  this->_vptr_CJob = off_40DB690;
+  this->_vptr_CJob = off_40DB690;  // vptr: GCSDK::CGCClientJob
   GCSDK::CJob::~CJob(this);
 }
 
@@ -14566,7 +14566,7 @@ void __fastcall CGCClientJobLANServerRelayConnect::~CGCClientJobLANServerRelayCo
 void __fastcall CGCClientJobLANServerRelayConnect::~CGCClientJobLANServerRelayConnect(
         CGCClientJobLANServerRelayConnect *const this)
 {
-  this->_vptr_CJob = off_40DB690;
+  this->_vptr_CJob = off_40DB690;  // vptr: GCSDK::CGCClientJob
   GCSDK::CJob::~CJob(this);
   operator delete(this);
 }
@@ -14638,10 +14638,10 @@ GCSDK::CJob *__fastcall CreateJob_CGCClientJobLANServerRelayConnect(GCSDK::CGCCl
 {
   GCSDK::CJob *v2; // rbx
 
-  v2 = operator new(0x140u);
+  v2 = operator new(0x140u);  // new CGCClientJobLANServerRelayConnect (size matches)
   GCSDK::CJob::CJob(v2, (pGC + 48));
   v2[1]._vptr_CJob = pGC;
-  v2->_vptr_CJob = off_4305A70;
+  v2->_vptr_CJob = off_4305A70;  // vptr: CGCClientJobLANServerRelayConnect
   v2->m_pJobType = &g_JobType_CGCClientJobLANServerRelayConnect;
   *(&v2[1] + 2) = 4;
   return v2;
@@ -14652,7 +14652,7 @@ GCSDK::CJob *__fastcall CreateJob_CGCClientJobLANServerRelayConnect(GCSDK::CGCCl
 // calls: GCSDK::CJob::~CJob
 void __fastcall CGCItemAcknowledged::~CGCItemAcknowledged(CGCItemAcknowledged *const this)
 {
-  this->_vptr_CJob = off_40DB690;
+  this->_vptr_CJob = off_40DB690;  // vptr: GCSDK::CGCClientJob
   GCSDK::CJob::~CJob(this);
 }
 
@@ -14661,7 +14661,7 @@ void __fastcall CGCItemAcknowledged::~CGCItemAcknowledged(CGCItemAcknowledged *c
 // calls: GCSDK::CJob::~CJob, operator delete
 void __fastcall CGCItemAcknowledged::~CGCItemAcknowledged(CGCItemAcknowledged *const this)
 {
-  this->_vptr_CJob = off_40DB690;
+  this->_vptr_CJob = off_40DB690;  // vptr: GCSDK::CGCClientJob
   GCSDK::CJob::~CJob(this);
   operator delete(this);
 }
@@ -14800,10 +14800,10 @@ GCSDK::CJob *__fastcall CreateJob_CGCItemAcknowledged(GCSDK::CGCClient *pGC)
 {
   GCSDK::CJob *v2; // rbx
 
-  v2 = operator new(0x140u);
+  v2 = operator new(0x140u);  // new CGCItemAcknowledged (size matches)
   GCSDK::CJob::CJob(v2, (pGC + 48));
   v2[1]._vptr_CJob = pGC;
-  v2->_vptr_CJob = off_4305B10;
+  v2->_vptr_CJob = off_4305B10;  // vptr: CGCItemAcknowledged
   v2->m_pJobType = &g_JobType_CGCItemAcknowledged;
   *(&v2[1] + 2) = 4;
   return v2;
@@ -14822,7 +14822,7 @@ uint32 __fastcall CDOTAGCServerSystem::GetBuildVersionForGCMessage(CDOTAGCServer
 void __fastcall CGCClientJobGCToServerPingRequest::~CGCClientJobGCToServerPingRequest(
         CGCClientJobGCToServerPingRequest *const this)
 {
-  this->_vptr_CJob = off_40DB690;
+  this->_vptr_CJob = off_40DB690;  // vptr: GCSDK::CGCClientJob
   GCSDK::CJob::~CJob(this);
 }
 
@@ -14832,7 +14832,7 @@ void __fastcall CGCClientJobGCToServerPingRequest::~CGCClientJobGCToServerPingRe
 void __fastcall CGCClientJobGCToServerPingRequest::~CGCClientJobGCToServerPingRequest(
         CGCClientJobGCToServerPingRequest *const this)
 {
-  this->_vptr_CJob = off_40DB690;
+  this->_vptr_CJob = off_40DB690;  // vptr: GCSDK::CGCClientJob
   GCSDK::CJob::~CJob(this);
   operator delete(this);
 }
@@ -14988,10 +14988,10 @@ GCSDK::CJob *__fastcall CreateJob_CGCClientJobGCToServerPingRequest(GCSDK::CGCCl
 {
   GCSDK::CJob *v2; // rbx
 
-  v2 = operator new(0x140u);
+  v2 = operator new(0x140u);  // new CGCClientJobGCToServerPingRequest (size matches)
   GCSDK::CJob::CJob(v2, (pGC + 48));
   v2[1]._vptr_CJob = pGC;
-  v2->_vptr_CJob = off_4305BB0;
+  v2->_vptr_CJob = off_4305BB0;  // vptr: CGCClientJobGCToServerPingRequest
   v2->m_pJobType = &g_JobType_CGCClientJobGCToServerPingRequest;
   *(&v2[1] + 2) = 4;
   return v2;
@@ -15003,7 +15003,7 @@ GCSDK::CJob *__fastcall CreateJob_CGCClientJobGCToServerPingRequest(GCSDK::CGCCl
 void __fastcall CGCClientJobGCToServerConsoleCommand::~CGCClientJobGCToServerConsoleCommand(
         CGCClientJobGCToServerConsoleCommand *const this)
 {
-  this->_vptr_CJob = off_40DB690;
+  this->_vptr_CJob = off_40DB690;  // vptr: GCSDK::CGCClientJob
   GCSDK::CJob::~CJob(this);
 }
 
@@ -15013,7 +15013,7 @@ void __fastcall CGCClientJobGCToServerConsoleCommand::~CGCClientJobGCToServerCon
 void __fastcall CGCClientJobGCToServerConsoleCommand::~CGCClientJobGCToServerConsoleCommand(
         CGCClientJobGCToServerConsoleCommand *const this)
 {
-  this->_vptr_CJob = off_40DB690;
+  this->_vptr_CJob = off_40DB690;  // vptr: GCSDK::CGCClientJob
   GCSDK::CJob::~CJob(this);
   operator delete(this);
 }
@@ -15106,10 +15106,10 @@ GCSDK::CJob *__fastcall CreateJob_CGCClientJobGCToServerConsoleCommand(GCSDK::CG
 {
   GCSDK::CJob *v2; // rbx
 
-  v2 = operator new(0x140u);
+  v2 = operator new(0x140u);  // new CGCClientJobGCToServerConsoleCommand (size matches)
   GCSDK::CJob::CJob(v2, (pGC + 48));
   v2[1]._vptr_CJob = pGC;
-  v2->_vptr_CJob = off_4305C90;
+  v2->_vptr_CJob = off_4305C90;  // vptr: CGCClientJobGCToServerConsoleCommand
   v2->m_pJobType = &g_JobType_CGCClientJobGCToServerConsoleCommand;
   *(&v2[1] + 2) = 4;
   return v2;
@@ -15121,7 +15121,7 @@ GCSDK::CJob *__fastcall CreateJob_CGCClientJobGCToServerConsoleCommand(GCSDK::CG
 void __fastcall CGCClientJobGCToServerPredictionResult::~CGCClientJobGCToServerPredictionResult(
         CGCClientJobGCToServerPredictionResult *const this)
 {
-  this->_vptr_CJob = off_40DB690;
+  this->_vptr_CJob = off_40DB690;  // vptr: GCSDK::CGCClientJob
   GCSDK::CJob::~CJob(this);
 }
 
@@ -15131,7 +15131,7 @@ void __fastcall CGCClientJobGCToServerPredictionResult::~CGCClientJobGCToServerP
 void __fastcall CGCClientJobGCToServerPredictionResult::~CGCClientJobGCToServerPredictionResult(
         CGCClientJobGCToServerPredictionResult *const this)
 {
-  this->_vptr_CJob = off_40DB690;
+  this->_vptr_CJob = off_40DB690;  // vptr: GCSDK::CGCClientJob
   GCSDK::CJob::~CJob(this);
   operator delete(this);
 }
@@ -15222,10 +15222,10 @@ GCSDK::CJob *__fastcall CreateJob_CGCClientJobGCToServerPredictionResult(GCSDK::
 {
   GCSDK::CJob *v2; // rbx
 
-  v2 = operator new(0x140u);
+  v2 = operator new(0x140u);  // new CGCClientJobGCToServerPredictionResult (size matches)
   GCSDK::CJob::CJob(v2, (pGC + 48));
   v2[1]._vptr_CJob = pGC;
-  v2->_vptr_CJob = off_4305D30;
+  v2->_vptr_CJob = off_4305D30;  // vptr: CGCClientJobGCToServerPredictionResult
   v2->m_pJobType = &g_JobType_CGCClientJobGCToServerPredictionResult;
   *(&v2[1] + 2) = 4;
   return v2;

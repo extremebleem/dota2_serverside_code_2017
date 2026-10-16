@@ -60,9 +60,9 @@ CDOTA_BotMode *__fastcall CDOTA_Bot_Hero_Tiny::CreateMode(CDOTA_Bot_Hero_Tiny *c
 
   if ( this->m_bHuman || iMode != 2 )
     return CDOTA_Bot::CreateMode(this, iMode);
-  v4 = operator new(0xE8u);
+  v4 = operator new(0xE8u);  // new CDOTA_BotMode_Attack_Tiny (size matches)
   CDOTA_BotMode_Attack::CDOTA_BotMode_Attack(v4, this);
-  v4->_vptr_CDOTA_BotMode = off_42D1830;
+  v4->_vptr_CDOTA_BotMode = off_42D1830;  // vptr: CDOTA_BotMode_Attack_Tiny
   return v4;
 }
 
@@ -350,7 +350,7 @@ void __fastcall CDOTA_Bot_AbilityUsage_Tiny_Avalanche::CDOTA_Bot_AbilityUsage_Ti
   this->m_pAbility = pAbility;
   this->m_bUseOnCreeps = 0;
   this->m_pBot = pBot;
-  this->_vptr_CDOTA_Bot_AbilityUsage = off_42D18D0;
+  this->_vptr_CDOTA_Bot_AbilityUsage = off_42D18D0;  // vptr: CDOTA_Bot_AbilityUsage_Tiny_Avalanche
 }
 
 
@@ -813,7 +813,7 @@ void __fastcall CDOTA_Bot_AbilityUsage_Tiny_Toss::CDOTA_Bot_AbilityUsage_Tiny_To
   this->m_pAbility = pAbility;
   this->m_bUseOnCreeps = 0;
   this->m_pBot = pBot;
-  this->_vptr_CDOTA_Bot_AbilityUsage = off_42D1930;
+  this->_vptr_CDOTA_Bot_AbilityUsage = off_42D1930;  // vptr: CDOTA_Bot_AbilityUsage_Tiny_Toss
   this->m_hDesiredTarget.m_Index = -1;
 }
 

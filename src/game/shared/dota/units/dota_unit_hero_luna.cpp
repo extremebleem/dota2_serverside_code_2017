@@ -577,7 +577,7 @@ CEntityInstance *__fastcall CDOTA_Unit_Hero_Luna::CEntityInstanceEntityClass::Co
 void __fastcall CDOTA_Unit_Hero_Luna::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Unit_Hero_Luna::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -587,7 +587,7 @@ void __fastcall CDOTA_Unit_Hero_Luna::CEntityInstanceEntityClass::~CEntityInstan
 void __fastcall CDOTA_Unit_Hero_Luna::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Unit_Hero_Luna::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -771,7 +771,7 @@ CEntityInstance *__fastcall CDOTA_Ability_Luna_LucentBeam::CEntityInstanceEntity
 void __fastcall CDOTA_Ability_Luna_LucentBeam::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Luna_LucentBeam::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -781,7 +781,7 @@ void __fastcall CDOTA_Ability_Luna_LucentBeam::CEntityInstanceEntityClass::~CEnt
 void __fastcall CDOTA_Ability_Luna_LucentBeam::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Luna_LucentBeam::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -1244,7 +1244,7 @@ CEntityInstance *__fastcall CDOTA_Ability_Luna_MoonGlaive::CEntityInstanceEntity
 void __fastcall CDOTA_Ability_Luna_MoonGlaive::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Luna_MoonGlaive::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -1254,7 +1254,7 @@ void __fastcall CDOTA_Ability_Luna_MoonGlaive::CEntityInstanceEntityClass::~CEnt
 void __fastcall CDOTA_Ability_Luna_MoonGlaive::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Luna_MoonGlaive::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -2138,7 +2138,7 @@ CEntityInstance *__fastcall CDOTA_Ability_Luna_LunarBlessing::CEntityInstanceEnt
 void __fastcall CDOTA_Ability_Luna_LunarBlessing::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Luna_LunarBlessing::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -2148,7 +2148,7 @@ void __fastcall CDOTA_Ability_Luna_LunarBlessing::CEntityInstanceEntityClass::~C
 void __fastcall CDOTA_Ability_Luna_LunarBlessing::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Luna_LunarBlessing::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -2614,7 +2614,7 @@ CEntityInstance *__fastcall CDOTA_Ability_Luna_Eclipse::CEntityInstanceEntityCla
 void __fastcall CDOTA_Ability_Luna_Eclipse::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Luna_Eclipse::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -2624,7 +2624,7 @@ void __fastcall CDOTA_Ability_Luna_Eclipse::CEntityInstanceEntityClass::~CEntity
 void __fastcall CDOTA_Ability_Luna_Eclipse::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Luna_Eclipse::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }

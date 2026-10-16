@@ -857,7 +857,7 @@ void __fastcall CTraceFilterSimple::CTraceFilterSimple(
   CCollisionProperty *m_pCollision; // rax
 
   v6 = collisionGroup;
-  this->_vptr_CTraceFilter = off_3FE6970;
+  this->_vptr_CTraceFilter = off_3FE6970;  // vptr: CTraceFilter
   this->m_attr.m_nHierarchyId = 0;
   v9 = *(&this->m_attr.RnQueryShapeAttr_t + 31);
   this->m_attr.m_nInteractsWith = 0;
@@ -878,7 +878,7 @@ void __fastcall CTraceFilterSimple::CTraceFilterSimple(
   this->m_pPassEnt = passedict;
   this->m_attr.m_nCollisionGroup = v6;
   this->m_pExtraShouldHitCheckFunction = pExtraShouldHitFunc;
-  this->_vptr_CTraceFilter = off_3FF7810;
+  this->_vptr_CTraceFilter = off_3FF7810;  // vptr: CTraceFilterSimple
 }
 
 
@@ -896,7 +896,7 @@ void __fastcall CTraceFilterSimple::CTraceFilterSimple(
   CCollisionProperty *m_pCollision; // rax
 
   v5 = collisionGroup;
-  this->_vptr_CTraceFilter = off_3FE6970;
+  this->_vptr_CTraceFilter = off_3FE6970;  // vptr: CTraceFilter
   this->m_attr.m_nHierarchyId = 0;
   v8 = *(&this->m_attr.RnQueryShapeAttr_t + 31);
   this->m_attr.m_nInteractsWith = 0;
@@ -917,7 +917,7 @@ void __fastcall CTraceFilterSimple::CTraceFilterSimple(
   this->m_pPassEnt = passentity;
   this->m_attr.m_nCollisionGroup = v5;
   this->m_pExtraShouldHitCheckFunction = pExtraShouldHitCheckFn;
-  this->_vptr_CTraceFilter = off_3FF7810;
+  this->_vptr_CTraceFilter = off_3FF7810;  // vptr: CTraceFilterSimple
 }
 
 
@@ -1009,7 +1009,7 @@ void __fastcall CTraceFilterSkipTwoEntities::CTraceFilterSkipTwoEntities(
   CCollisionProperty *m_pCollision; // rax
 
   v4 = collisionGroup;
-  this->_vptr_CTraceFilter = off_3FE6970;
+  this->_vptr_CTraceFilter = off_3FE6970;  // vptr: CTraceFilter
   this->m_attr.m_nHierarchyId = 0;
   v8 = *(&this->m_attr.RnQueryShapeAttr_t + 31);
   this->m_attr.m_nInteractsWith = 0;
@@ -1031,7 +1031,7 @@ void __fastcall CTraceFilterSkipTwoEntities::CTraceFilterSkipTwoEntities(
   this->m_attr.m_nCollisionGroup = v4;
   this->m_pPassEnt2 = passentity2;
   this->m_pExtraShouldHitCheckFunction = 0;
-  this->_vptr_CTraceFilter = off_3FF7890;
+  this->_vptr_CTraceFilter = off_3FF7890;  // vptr: CTraceFilterSkipTwoEntities
 }
 
 
@@ -1064,7 +1064,7 @@ void __fastcall CTraceFilterSimpleList::CTraceFilterSimpleList(CTraceFilterSimpl
   this->m_pPassEnt = 0;
   this->m_attr.m_nCollisionGroup = collisionGroup;
   this->m_pExtraShouldHitCheckFunction = 0;
-  this->_vptr_CTraceFilter = off_3FF78D0;
+  this->_vptr_CTraceFilter = off_3FF78D0;  // vptr: CTraceFilterSimpleList
   this->m_PassEntities.m_Size = 0;
   this->m_PassEntities.m_Memory.m_pMemory = 0;
   this->m_PassEntities.m_Memory.m_nAllocationCount = 0;
@@ -1164,7 +1164,7 @@ void __fastcall CTraceFilterLOS::CTraceFilterLOS(
   CCollisionProperty *m_pCollision; // rax
 
   v5 = collisionGroup;
-  this->_vptr_CTraceFilter = off_3FE6970;
+  this->_vptr_CTraceFilter = off_3FE6970;  // vptr: CTraceFilter
   this->m_attr.m_nHierarchyId = 0;
   v8 = *(&this->m_attr.RnQueryShapeAttr_t + 31);
   this->m_attr.m_nInteractsWith = 0;
@@ -1186,7 +1186,7 @@ void __fastcall CTraceFilterLOS::CTraceFilterLOS(
   this->m_attr.m_nCollisionGroup = v5;
   this->m_pPassEnt2 = pHandleEntity2;
   this->m_pExtraShouldHitCheckFunction = 0;
-  this->_vptr_CTraceFilter = off_3FF7910;
+  this->_vptr_CTraceFilter = off_3FF7910;  // vptr: CTraceFilterLOS
 }
 
 
@@ -1210,7 +1210,7 @@ void __fastcall CTraceFilterSkipClassname::CTraceFilterSkipClassname(
   char v8; // al
   CCollisionProperty *m_pCollision; // rax
 
-  this->_vptr_CTraceFilter = off_3FE6970;
+  this->_vptr_CTraceFilter = off_3FE6970;  // vptr: CTraceFilter
   v8 = *(&this->m_attr.RnQueryShapeAttr_t + 31);
   this->m_attr.m_nInteractsExclude = 0;
   this->m_attr.m_nInteractsAs = 0;
@@ -1229,7 +1229,7 @@ void __fastcall CTraceFilterSkipClassname::CTraceFilterSkipClassname(
     this->m_attr.m_nHierarchyId = m_pCollision;
   }
   this->m_pchClassname = pchClassname;
-  this->_vptr_CTraceFilter = off_3FF7950;
+  this->_vptr_CTraceFilter = off_3FF7950;  // vptr: CTraceFilterSkipClassname
 }
 
 
@@ -1253,7 +1253,7 @@ void __fastcall CTraceFilterSimpleClassnameList::CTraceFilterSimpleClassnameList
   CCollisionProperty *m_pCollision; // rax
 
   v3 = collisionGroup;
-  this->_vptr_CTraceFilter = off_3FE6970;
+  this->_vptr_CTraceFilter = off_3FE6970;  // vptr: CTraceFilter
   this->m_attr.m_nHierarchyId = 0;
   v6 = *(&this->m_attr.RnQueryShapeAttr_t + 31);
   this->m_attr.m_nInteractsWith = 0;
@@ -1274,7 +1274,7 @@ void __fastcall CTraceFilterSimpleClassnameList::CTraceFilterSimpleClassnameList
   this->m_pPassEnt = passentity;
   this->m_attr.m_nCollisionGroup = v3;
   this->m_pExtraShouldHitCheckFunction = 0;
-  this->_vptr_CTraceFilter = off_3FF7990;
+  this->_vptr_CTraceFilter = off_3FF7990;  // vptr: CTraceFilterSimpleClassnameList
   this->m_PassClassnames.m_Size = 0;
   this->m_PassClassnames.m_Memory.m_pMemory = 0;
   this->m_PassClassnames.m_Memory.m_nAllocationCount = 0;
@@ -1348,7 +1348,7 @@ void __fastcall CTraceFilterChain::CTraceFilterChain(
   *(&this->m_attr.RnQueryShapeAttr_t + 31) = v3 & 0xF0 | 9;
   this->m_attr.m_nCollisionGroup = 0;
   this->m_attr.m_nObjectSetMask = 7;
-  this->_vptr_CTraceFilter = off_3FF79D0;
+  this->_vptr_CTraceFilter = off_3FF79D0;  // vptr: CTraceFilterChain
   this->m_pTraceFilter1 = pTraceFilter1;
   this->m_pTraceFilter2 = pTraceFilter2;
   if ( pTraceFilter1 != 0 )

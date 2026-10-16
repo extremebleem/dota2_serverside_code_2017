@@ -866,7 +866,7 @@ void __fastcall CAnchorList::~CAnchorList(CAnchorList *const this)
   CUtlVectorBase<constraint_anchor_t,CUtlMemory<constraint_anchor_t,int> >::CAllocator *p_m_Memory; // r12
 
   v2 = (this->m_list.m_Memory.m_nGrowSize & 0xC0000000) == 0;
-  this->_vptr_IGameSystem = off_4078710;
+  this->_vptr_IGameSystem = off_4078710;  // vptr: CAnchorList
   this->m_list.m_Size = 0;
   if ( v2 )
   {
@@ -875,7 +875,7 @@ void __fastcall CAnchorList::~CAnchorList(CAnchorList *const this)
     if ( (this->m_list.m_Memory.m_nGrowSize & 0xC0000000) == 0 )
       CUtlMemory<constraint_anchor_t,int>::Purge(p_m_Memory);
   }
-  this->_vptr_IGameSystem = off_3F7C1B0;
+  this->_vptr_IGameSystem = off_3F7C1B0;  // vptr: CAutoGameSystem
   IGameSystem::~IGameSystem(this);
   operator delete(this);
 }
@@ -889,7 +889,7 @@ void __fastcall CAnchorList::~CAnchorList(CAnchorList *const this)
   CUtlVectorBase<constraint_anchor_t,CUtlMemory<constraint_anchor_t,int> >::CAllocator *p_m_Memory; // r12
 
   v2 = (this->m_list.m_Memory.m_nGrowSize & 0xC0000000) == 0;
-  this->_vptr_IGameSystem = off_4078710;
+  this->_vptr_IGameSystem = off_4078710;  // vptr: CAnchorList
   this->m_list.m_Size = 0;
   if ( v2 )
   {
@@ -898,7 +898,7 @@ void __fastcall CAnchorList::~CAnchorList(CAnchorList *const this)
     if ( (this->m_list.m_Memory.m_nGrowSize & 0xC0000000) == 0 )
       CUtlMemory<constraint_anchor_t,int>::Purge(p_m_Memory);
   }
-  this->_vptr_IGameSystem = off_3F7C1B0;
+  this->_vptr_IGameSystem = off_3F7C1B0;  // vptr: CAutoGameSystem
   IGameSystem::~IGameSystem(this);
 }
 
@@ -1059,7 +1059,7 @@ CEntityInstance *__fastcall CConstraintAnchor::CEntityInstanceEntityClass::Const
 void __fastcall CConstraintAnchor::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CConstraintAnchor::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -1069,7 +1069,7 @@ void __fastcall CConstraintAnchor::CEntityInstanceEntityClass::~CEntityInstanceE
 void __fastcall CConstraintAnchor::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CConstraintAnchor::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -1446,7 +1446,7 @@ const ISchemaBinding *__fastcall CPhysConstraint::CEntityInstanceEntityClass::Ge
 void __fastcall CPhysConstraint::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CPhysConstraint::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -1456,7 +1456,7 @@ void __fastcall CPhysConstraint::CEntityInstanceEntityClass::~CEntityInstanceEnt
 void __fastcall CPhysConstraint::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CPhysConstraint::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -2635,7 +2635,7 @@ void __fastcall CPhysConstraint::NotifySystemEvent(
 // calls: CBaseEntity::~CBaseEntity
 void __fastcall CPhysHinge::~CPhysHinge(CPhysHinge *const this)
 {
-  this->_vptr_IWatcherCallback = off_4074030;
+  this->_vptr_IWatcherCallback = off_4074030;  // vptr: IWatcherCallback
   this->_vptr_IHandleEntity = &off_4005410;
   CBaseEntity::~CBaseEntity(this);
 }
@@ -2645,7 +2645,7 @@ void __fastcall CPhysHinge::~CPhysHinge(CPhysHinge *const this)
 // calls: CBaseEntity::~CBaseEntity, CBaseEntity::operator delete
 void __fastcall CPhysHinge::~CPhysHinge(CPhysHinge *const this)
 {
-  this->_vptr_IWatcherCallback = off_4074030;
+  this->_vptr_IWatcherCallback = off_4074030;  // vptr: IWatcherCallback
   this->_vptr_IHandleEntity = &off_4005410;
   CBaseEntity::~CBaseEntity(this);
   CBaseEntity::operator delete(this);
@@ -2729,7 +2729,7 @@ void *__fastcall CPhysHinge::CEntityInstanceEntityClass::AllocateInstance(
 void __fastcall CPhysHinge::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CPhysHinge::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -2739,7 +2739,7 @@ void __fastcall CPhysHinge::CEntityInstanceEntityClass::~CEntityInstanceEntityCl
 void __fastcall CPhysHinge::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CPhysHinge::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -3231,7 +3231,7 @@ void *__fastcall CPhysHingeAlias_phys_hinge_local::CEntityInstanceEntityClass::A
 void __fastcall CPhysHingeAlias_phys_hinge_local::~CPhysHingeAlias_phys_hinge_local(
         CPhysHingeAlias_phys_hinge_local *const this)
 {
-  this->_vptr_IWatcherCallback = off_4074030;
+  this->_vptr_IWatcherCallback = off_4074030;  // vptr: IWatcherCallback
   this->_vptr_IHandleEntity = &off_4005410;
   CBaseEntity::~CBaseEntity(this);
 }
@@ -3242,7 +3242,7 @@ void __fastcall CPhysHingeAlias_phys_hinge_local::~CPhysHingeAlias_phys_hinge_lo
 void __fastcall CPhysHingeAlias_phys_hinge_local::~CPhysHingeAlias_phys_hinge_local(
         CPhysHingeAlias_phys_hinge_local *const this)
 {
-  this->_vptr_IWatcherCallback = off_4074030;
+  this->_vptr_IWatcherCallback = off_4074030;  // vptr: IWatcherCallback
   this->_vptr_IHandleEntity = &off_4005410;
   CBaseEntity::~CBaseEntity(this);
   CBaseEntity::operator delete(this);
@@ -3254,7 +3254,7 @@ void __fastcall CPhysHingeAlias_phys_hinge_local::~CPhysHingeAlias_phys_hinge_lo
 void __fastcall CPhysHingeAlias_phys_hinge_local::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CPhysHingeAlias_phys_hinge_local::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -3264,7 +3264,7 @@ void __fastcall CPhysHingeAlias_phys_hinge_local::CEntityInstanceEntityClass::~C
 void __fastcall CPhysHingeAlias_phys_hinge_local::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CPhysHingeAlias_phys_hinge_local::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -3902,7 +3902,7 @@ void *__fastcall CPhysBallSocket::CEntityInstanceEntityClass::AllocateInstance(
 void __fastcall CPhysBallSocket::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CPhysBallSocket::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -3912,7 +3912,7 @@ void __fastcall CPhysBallSocket::CEntityInstanceEntityClass::~CEntityInstanceEnt
 void __fastcall CPhysBallSocket::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CPhysBallSocket::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -4173,7 +4173,7 @@ HPhysicsJoint __fastcall CPhysBallSocket::CreateConstraint(
 // calls: CBaseEntity::~CBaseEntity
 void __fastcall CPhysSlideConstraint::~CPhysSlideConstraint(CPhysSlideConstraint *const this)
 {
-  this->_vptr_IWatcherCallback = off_4074030;
+  this->_vptr_IWatcherCallback = off_4074030;  // vptr: IWatcherCallback
   this->_vptr_IHandleEntity = &off_4005410;
   CBaseEntity::~CBaseEntity(this);
 }
@@ -4183,7 +4183,7 @@ void __fastcall CPhysSlideConstraint::~CPhysSlideConstraint(CPhysSlideConstraint
 // calls: CBaseEntity::~CBaseEntity, CBaseEntity::operator delete
 void __fastcall CPhysSlideConstraint::~CPhysSlideConstraint(CPhysSlideConstraint *const this)
 {
-  this->_vptr_IWatcherCallback = off_4074030;
+  this->_vptr_IWatcherCallback = off_4074030;  // vptr: IWatcherCallback
   this->_vptr_IHandleEntity = &off_4005410;
   CBaseEntity::~CBaseEntity(this);
   CBaseEntity::operator delete(this);
@@ -4268,7 +4268,7 @@ void *__fastcall CPhysSlideConstraint::CEntityInstanceEntityClass::AllocateInsta
 void __fastcall CPhysSlideConstraint::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CPhysSlideConstraint::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -4278,7 +4278,7 @@ void __fastcall CPhysSlideConstraint::CEntityInstanceEntityClass::~CEntityInstan
 void __fastcall CPhysSlideConstraint::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CPhysSlideConstraint::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -4753,7 +4753,7 @@ void *__fastcall CPhysFixed::CEntityInstanceEntityClass::AllocateInstance(
 void __fastcall CPhysFixed::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CPhysFixed::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -4763,7 +4763,7 @@ void __fastcall CPhysFixed::CEntityInstanceEntityClass::~CEntityInstanceEntityCl
 void __fastcall CPhysFixed::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CPhysFixed::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -5198,7 +5198,7 @@ void *__fastcall CPhysPulley::CEntityInstanceEntityClass::AllocateInstance(
 void __fastcall CPhysPulley::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CPhysPulley::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -5208,7 +5208,7 @@ void __fastcall CPhysPulley::CEntityInstanceEntityClass::~CEntityInstanceEntityC
 void __fastcall CPhysPulley::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CPhysPulley::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -5554,7 +5554,7 @@ void *__fastcall CPhysLength::CEntityInstanceEntityClass::AllocateInstance(
 void __fastcall CPhysLength::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CPhysLength::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -5564,7 +5564,7 @@ void __fastcall CPhysLength::CEntityInstanceEntityClass::~CEntityInstanceEntityC
 void __fastcall CPhysLength::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CPhysLength::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -5942,7 +5942,7 @@ void *__fastcall CRagdollConstraint::CEntityInstanceEntityClass::AllocateInstanc
 void __fastcall CRagdollConstraint::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CRagdollConstraint::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -5952,7 +5952,7 @@ void __fastcall CRagdollConstraint::CEntityInstanceEntityClass::~CEntityInstance
 void __fastcall CRagdollConstraint::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CRagdollConstraint::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -6315,7 +6315,7 @@ void *__fastcall CGenericConstraint::CEntityInstanceEntityClass::AllocateInstanc
 void __fastcall CGenericConstraint::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CGenericConstraint::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -6325,7 +6325,7 @@ void __fastcall CGenericConstraint::CEntityInstanceEntityClass::~CEntityInstance
 void __fastcall CGenericConstraint::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CGenericConstraint::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }

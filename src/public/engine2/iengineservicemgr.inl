@@ -49,7 +49,7 @@ void __fastcall CResourceManifestPrerequisite::~CResourceManifestPrerequisite(
   HResourceManifest__ *v5; // rsi
   bool v6; // zf
 
-  this->_vptr_IPrerequisite = off_3FCABD0;
+  this->_vptr_IPrerequisite = off_3FCABD0;  // vptr: CResourceManifestPrerequisite
   m_Size = this->m_hResourceManifests.m_Size;
   if ( m_Size > 0 )
   {
@@ -71,7 +71,7 @@ void __fastcall CResourceManifestPrerequisite::~CResourceManifestPrerequisite(
     if ( (this->m_hResourceManifests.m_Memory.m_nGrowSize & 0xC0000000) == 0 )
       CUtlMemory<HResourceManifest__ *,int>::Purge(&this->m_hResourceManifests.m_Memory);
   }
-  this->_vptr_IPrerequisite = off_3FCAB50;
+  this->_vptr_IPrerequisite = off_3FCAB50;  // vptr: IPrerequisite
 }
 
 
@@ -86,7 +86,7 @@ void __fastcall CResourceManifestPrerequisite::~CResourceManifestPrerequisite(
   HResourceManifest__ *v5; // rsi
   bool v6; // zf
 
-  this->_vptr_IPrerequisite = off_3FCABD0;
+  this->_vptr_IPrerequisite = off_3FCABD0;  // vptr: CResourceManifestPrerequisite
   m_Size = this->m_hResourceManifests.m_Size;
   if ( m_Size > 0 )
   {
@@ -108,7 +108,7 @@ void __fastcall CResourceManifestPrerequisite::~CResourceManifestPrerequisite(
     if ( (this->m_hResourceManifests.m_Memory.m_nGrowSize & 0xC0000000) == 0 )
       CUtlMemory<HResourceManifest__ *,int>::Purge(&this->m_hResourceManifests.m_Memory);
   }
-  this->_vptr_IPrerequisite = off_3FCAB50;
+  this->_vptr_IPrerequisite = off_3FCAB50;  // vptr: IPrerequisite
   operator delete(this);
 }
 
@@ -122,8 +122,8 @@ bool __fastcall CLoopModeBase::LoopInit(
 {
   CResourceManifestPrerequisite *v5; // rax
 
-  v5 = operator new(0x28u);
-  v5->_vptr_IPrerequisite = off_3FCABD0;
+  v5 = operator new(0x28u);  // new CResourceManifestPrerequisite (size matches)
+  v5->_vptr_IPrerequisite = off_3FCABD0;  // vptr: CResourceManifestPrerequisite
   v5->m_nRefCount = 0;
   v5->m_hResourceManifests.m_Size = 0;
   v5->m_hResourceManifests.m_Memory.m_pMemory = 0;

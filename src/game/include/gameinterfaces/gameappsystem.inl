@@ -10,7 +10,7 @@ void __fastcall CGameAppSystem<ISource2GameEntities,0>::~CGameAppSystem(
   CUtlVectorBase<ResourceManifestDesc_t*,CUtlMemory<ResourceManifestDesc_t*,int> >::CAllocator *p_m_Memory; // r12
 
   v2 = (this->m_manualManifests.m_Memory.m_nGrowSize & 0xC0000000) == 0;
-  this->_vptr_IAppSystem = off_404E270;
+  this->_vptr_IAppSystem = off_404E270;  // vptr: CTier2AppSystem<ISource2GameEntities,0>
   this->m_manualManifests.m_Size = 0;
   if ( !v2
     || (p_m_Memory = &this->m_manualManifests.m_Memory,
@@ -36,7 +36,7 @@ void __fastcall CGameAppSystem<ISource2GameEntities,0>::~CGameAppSystem(
   CUtlVectorBase<ResourceManifestDesc_t*,CUtlMemory<ResourceManifestDesc_t*,int> >::CAllocator *p_m_Memory; // r12
 
   v2 = (this->m_manualManifests.m_Memory.m_nGrowSize & 0xC0000000) == 0;
-  this->_vptr_IAppSystem = off_404E270;
+  this->_vptr_IAppSystem = off_404E270;  // vptr: CTier2AppSystem<ISource2GameEntities,0>
   this->m_manualManifests.m_Size = 0;
   if ( v2 )
   {

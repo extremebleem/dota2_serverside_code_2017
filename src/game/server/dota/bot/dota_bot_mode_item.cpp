@@ -8,7 +8,7 @@ void __fastcall CDOTA_BotMode_Item::CDOTA_BotMode_Item(CDOTA_BotMode_Item *const
 {
   CDOTA_BotMode::CDOTA_BotMode(this, pBot);
   this->m_hItem.m_Index = -1;
-  this->_vptr_CDOTA_BotMode = off_42B81B0;
+  this->_vptr_CDOTA_BotMode = off_42B81B0;  // vptr: CDOTA_BotMode_Item
 }
 
 

@@ -74,9 +74,7 @@ const flexsettinghdr_t *__fastcall CBaseFlex::FindSceneFile(CBaseFlex *const thi
       if ( (&v15[-__CFADD__(v17, v17) - 3] - szExtendedPath) <= 2 )
         break;
       _V_ComposeFileName(szExtendedPath, filename, CBaseFlex::FindSceneFile(char const*)::szExtendedName, 260);
-      result = (*g_pFlexSceneFileManager->_vptr_IFlexSceneFileManager)(
-                 g_pFlexSceneFileManager,
-                 this,
+      result = g_pFlexSceneFileManager->FindSceneFile(this,
                  CBaseFlex::FindSceneFile(char const*)::szExtendedName,
                  0);
       if ( result != 0 )
@@ -89,7 +87,7 @@ const flexsettinghdr_t *__fastcall CBaseFlex::FindSceneFile(CBaseFlex *const thi
   {
     v19 = g_pFlexSceneFileManager;
   }
-  return (*v19->_vptr_IFlexSceneFileManager)(v19, this, filename, 0);
+  return v19->FindSceneFile(this, filename, 0);
 }
 
 

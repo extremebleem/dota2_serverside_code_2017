@@ -211,7 +211,7 @@ CEntityInstance *__fastcall CEnvFade::CEntityInstanceEntityClass::ConstructInsta
 void __fastcall CEnvFade::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CEnvFade::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -221,7 +221,7 @@ void __fastcall CEnvFade::CEntityInstanceEntityClass::~CEntityInstanceEntityClas
 void __fastcall CEnvFade::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CEnvFade::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }

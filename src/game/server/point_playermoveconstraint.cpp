@@ -217,7 +217,7 @@ CEntityInstance *__fastcall CPointPlayerMoveConstraint::CEntityInstanceEntityCla
 void __fastcall CPointPlayerMoveConstraint::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CPointPlayerMoveConstraint::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -227,7 +227,7 @@ void __fastcall CPointPlayerMoveConstraint::CEntityInstanceEntityClass::~CEntity
 void __fastcall CPointPlayerMoveConstraint::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CPointPlayerMoveConstraint::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }

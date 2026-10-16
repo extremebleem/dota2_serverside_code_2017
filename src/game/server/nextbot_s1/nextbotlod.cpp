@@ -163,10 +163,10 @@ void __fastcall CNextbotLodManager::InvalidateSource(CNextbotLodManager *const t
 int __fastcall CNextbotLodManager::DebugDisplay(const CNextbotLodManager *const this)
 {
   int result; // eax
-  int v3; // r15d
+  unsigned int v3; // r15d
   int v4; // r13d
   CUtlArray<int,3ul> *p_m_nCounts; // r14
-  int v6; // edx
+  unsigned int v6; // edx
   signed __int64 v7; // rax
   const CNextbotLodManager *v8; // rax
   __int64 v9; // r12
@@ -207,7 +207,7 @@ int __fastcall CNextbotLodManager::DebugDisplay(const CNextbotLodManager *const 
     }
     while ( v3 != 2 );
     V_sprintf_safe<512ul>(textBuf, "LOD %d, range -------, limit --- (%2d)", 2, nTotalNextbots - v4);
-    NDebugOverlay::ScreenTextLine(10.0, 10.0, 3, textBuf, 255, 255, 255, 255, 0.01023);
+    NDebugOverlay::ScreenTextLine(10.0, 10.0, 3u, textBuf, 255, 255, 255, 255, 0.01023);
     if ( nb_lod_stats.m_pParent->m_Value.m_nValue <= 1 )
     {
       return 4;
@@ -215,7 +215,7 @@ int __fastcall CNextbotLodManager::DebugDisplay(const CNextbotLodManager *const 
     else
     {
       V_sprintf_safe<512ul>(textBuf, "-- LOD num sources = %d", this->m_Sources.m_Size);
-      NDebugOverlay::ScreenTextLine(10.0, 10.0, 4, textBuf, 255, 255, 255, 255, 0.01023);
+      NDebugOverlay::ScreenTextLine(10.0, 10.0, 4u, textBuf, 255, 255, 255, 255, 0.01023);
       m_Size = this->m_Sources.m_Size;
       if ( m_Size != 0 )
       {

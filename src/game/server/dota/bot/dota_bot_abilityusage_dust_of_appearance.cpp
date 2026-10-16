@@ -12,7 +12,7 @@ void __fastcall CDOTA_Bot_AbilityUsage_Dust::CDOTA_Bot_AbilityUsage_Dust(
   this->m_pAbility = pAbility;
   this->m_pBot = pBot;
   this->m_bUseOnCreeps = 0;
-  this->_vptr_CDOTA_Bot_AbilityUsage = off_42C60F0;
+  this->_vptr_CDOTA_Bot_AbilityUsage = off_42C60F0;  // vptr: CDOTA_Bot_AbilityUsage_Dust
   this->m_iRadius = CDOTABaseAbility::GetLevelSpecialValueFor<int>(pAbility, "radius", -1, 1);
 }
 

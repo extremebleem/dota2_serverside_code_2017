@@ -9,12 +9,12 @@ float __fastcall CGlobalVarsBase::curtime(const CGlobalVarsBase *const this, boo
   FnGlobalVarsWarningFunc m_pfnWarningFunc; // rax
 
   result = 0.0;
-  if ( this )
+  if ( this != 0 )
   {
     if ( !this->m_bEnableAssertions && !bIgnoreSimulationCheck && !this->m_bInSimulation )
     {
       m_pfnWarningFunc = this->m_pfnWarningFunc;
-      if ( m_pfnWarningFunc )
+      if ( m_pfnWarningFunc != 0 )
         (m_pfnWarningFunc)(1, 0.0);
     }
     return this->m_flCurrentTime;

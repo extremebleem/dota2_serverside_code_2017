@@ -71,7 +71,7 @@ public:
 // calls: CUtlVectorBase<vehiclescript_t, CUtlMemory<vehiclescript_t, int> >::RemoveAll, IGameSystem::~IGameSystem, CUtlMemory<vehiclescript_t, int>::Purge
 void __fastcall CPhysicsHook::~CPhysicsHook(CPhysicsHook *const this)
 {
-  this->_vptr_IGameSystem = off_407E610;
+  this->_vptr_IGameSystem = off_407E610;  // vptr: CPhysicsHook
   CUtlVectorBase<vehiclescript_t,CUtlMemory<vehiclescript_t,int>>::RemoveAll(&this->m_vehicleScripts);
   if ( (this->m_vehicleScripts.m_Memory.m_nGrowSize & 0xC0000000) != 0
     || (CUtlMemory<vehiclescript_t,int>::Purge(&this->m_vehicleScripts.m_Memory),
@@ -91,7 +91,7 @@ void __fastcall CPhysicsHook::~CPhysicsHook(CPhysicsHook *const this)
 // calls: CUtlVectorBase<vehiclescript_t, CUtlMemory<vehiclescript_t, int> >::RemoveAll, IGameSystem::~IGameSystem, operator delete, CUtlMemory<vehiclescript_t, int>::Purge
 void __fastcall CPhysicsHook::~CPhysicsHook(CPhysicsHook *const this)
 {
-  this->_vptr_IGameSystem = off_407E610;
+  this->_vptr_IGameSystem = off_407E610;  // vptr: CPhysicsHook
   CUtlVectorBase<vehiclescript_t,CUtlMemory<vehiclescript_t,int>>::RemoveAll(&this->m_vehicleScripts);
   if ( (this->m_vehicleScripts.m_Memory.m_nGrowSize & 0xC0000000) == 0 )
   {
@@ -966,7 +966,7 @@ void __fastcall PhysCollisionDust(gamevcollisionevent_t *pEvent, const CPhysSurf
     {
 LABEL_6:
       (*(pEvent->pInternalData->_vptr_IPhysicsCollisionData + 1))(pEvent->pInternalData, &vecPos);
-      (*pEvent->pInternalData->_vptr_IPhysicsCollisionData)(pEvent->pInternalData, &vecNormal);
+      pEvent->pInternalData->GetSurfaceNormal(&vecNormal);
       VectorAngles(&vecNormal, &angNormal);
       vecVel.x = pEvent->collisionSpeed;
       vecVel.y = vecVel.x;

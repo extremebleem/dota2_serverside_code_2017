@@ -4,7 +4,7 @@
 // CDOTA_BotMode_Assemble::~CDOTA_BotMode_Assemble  (line 16, @0x0000000002811dc0, libserver.so)  // inlines: ~CDOTA_BotMode
 void __fastcall CDOTA_BotMode_Assemble::~CDOTA_BotMode_Assemble(CDOTA_BotMode_Assemble *const this)
 {
-  this->_vptr_CDOTA_BotMode = off_42B75F0;
+  this->_vptr_CDOTA_BotMode = off_42B75F0;  // vptr: CDOTA_BotMode
 }
 
 
@@ -12,7 +12,7 @@ void __fastcall CDOTA_BotMode_Assemble::~CDOTA_BotMode_Assemble(CDOTA_BotMode_As
 // calls: operator delete
 void __fastcall CDOTA_BotMode_Assemble::~CDOTA_BotMode_Assemble(CDOTA_BotMode_Assemble *const this)
 {
-  this->_vptr_CDOTA_BotMode = off_42B75F0;
+  this->_vptr_CDOTA_BotMode = off_42B75F0;  // vptr: CDOTA_BotMode
   operator delete(this);
 }
 
@@ -34,7 +34,7 @@ const char *__fastcall CDOTA_BotMode_Assemble::GetDebugString(CDOTA_BotMode_Asse
 // CDOTA_BotMode_Assemble_Human::~CDOTA_BotMode_Assemble_Human  (line 41, @0x0000000002811fa0, libserver.so)  // inlines: ~CDOTA_BotMode, ~CDOTA_BotMode_Assemble
 void __fastcall CDOTA_BotMode_Assemble_Human::~CDOTA_BotMode_Assemble_Human(CDOTA_BotMode_Assemble_Human *const this)
 {
-  this->_vptr_CDOTA_BotMode = off_42B75F0;
+  this->_vptr_CDOTA_BotMode = off_42B75F0;  // vptr: CDOTA_BotMode
 }
 
 
@@ -42,7 +42,7 @@ void __fastcall CDOTA_BotMode_Assemble_Human::~CDOTA_BotMode_Assemble_Human(CDOT
 // calls: operator delete
 void __fastcall CDOTA_BotMode_Assemble_Human::~CDOTA_BotMode_Assemble_Human(CDOTA_BotMode_Assemble_Human *const this)
 {
-  this->_vptr_CDOTA_BotMode = off_42B75F0;
+  this->_vptr_CDOTA_BotMode = off_42B75F0;  // vptr: CDOTA_BotMode
   operator delete(this);
 }
 

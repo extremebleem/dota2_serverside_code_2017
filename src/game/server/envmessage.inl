@@ -100,7 +100,7 @@ CEntityInstance *__fastcall CMessage::CEntityInstanceEntityClass::ConstructInsta
 void __fastcall CMessage::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CMessage::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -110,7 +110,7 @@ void __fastcall CMessage::CEntityInstanceEntityClass::~CEntityInstanceEntityClas
 void __fastcall CMessage::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CMessage::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }

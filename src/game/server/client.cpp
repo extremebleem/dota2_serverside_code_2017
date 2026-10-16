@@ -326,7 +326,7 @@ ResourceManifestDesc_t *__fastcall InitManifestDesc<ClientPrecacheRegistry_serve
 // calls: IGameSystem::~IGameSystem
 void __fastcall CClientPrecacheGameSystem::~CClientPrecacheGameSystem(CClientPrecacheGameSystem *const this)
 {
-  this->_vptr_IGameSystem = off_3F7C1B0;
+  this->_vptr_IGameSystem = off_3F7C1B0;  // vptr: CAutoGameSystem
   IGameSystem::~IGameSystem(this);
 }
 
@@ -335,7 +335,7 @@ void __fastcall CClientPrecacheGameSystem::~CClientPrecacheGameSystem(CClientPre
 // calls: IGameSystem::~IGameSystem, operator delete
 void __fastcall CClientPrecacheGameSystem::~CClientPrecacheGameSystem(CClientPrecacheGameSystem *const this)
 {
-  this->_vptr_IGameSystem = off_3F7C1B0;
+  this->_vptr_IGameSystem = off_3F7C1B0;  // vptr: CAutoGameSystem
   IGameSystem::~IGameSystem(this);
   operator delete(this);
 }

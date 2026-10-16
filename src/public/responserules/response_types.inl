@@ -49,7 +49,7 @@ float __fastcall CRR_Response::GetMatchScore(CRR_Response *const this)
 // IResponseSystem::~IResponseSystem  (line 417, @0x000000000208eb20, libserver.so)
 void __fastcall IResponseSystem::~IResponseSystem(IResponseSystem *const this)
 {
-  this->_vptr_IResponseSystem = off_3FECD30;
+  this->_vptr_IResponseSystem = off_3FECD30;  // vptr: IResponseSystem
 }
 
 
@@ -57,7 +57,7 @@ void __fastcall IResponseSystem::~IResponseSystem(IResponseSystem *const this)
 // calls: operator delete
 void __fastcall IResponseSystem::~IResponseSystem(IResponseSystem *const this)
 {
-  this->_vptr_IResponseSystem = off_3FECD30;
+  this->_vptr_IResponseSystem = off_3FECD30;  // vptr: IResponseSystem
   operator delete(this);
 }
 

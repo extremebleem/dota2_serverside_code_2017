@@ -114,7 +114,7 @@ CEntityInstance *__fastcall CVRHandModelOverride::CEntityInstanceEntityClass::Co
 void __fastcall CVRHandModelOverride::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CVRHandModelOverride::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -124,7 +124,7 @@ void __fastcall CVRHandModelOverride::CEntityInstanceEntityClass::~CEntityInstan
 void __fastcall CVRHandModelOverride::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CVRHandModelOverride::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }

@@ -619,7 +619,7 @@ CEntityInstance *__fastcall CDOTA_Unit_Hero_Oracle::CEntityInstanceEntityClass::
 void __fastcall CDOTA_Unit_Hero_Oracle::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Unit_Hero_Oracle::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -629,7 +629,7 @@ void __fastcall CDOTA_Unit_Hero_Oracle::CEntityInstanceEntityClass::~CEntityInst
 void __fastcall CDOTA_Unit_Hero_Oracle::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Unit_Hero_Oracle::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -991,7 +991,7 @@ CEntityInstance *__fastcall CDOTA_Ability_Oracle_FortunesEnd::CEntityInstanceEnt
 void __fastcall CDOTA_Ability_Oracle_FortunesEnd::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Oracle_FortunesEnd::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -1001,7 +1001,7 @@ void __fastcall CDOTA_Ability_Oracle_FortunesEnd::CEntityInstanceEntityClass::~C
 void __fastcall CDOTA_Ability_Oracle_FortunesEnd::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Oracle_FortunesEnd::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -1819,7 +1819,7 @@ CEntityInstance *__fastcall CDOTA_Ability_Oracle_FatesEdict::CEntityInstanceEnti
 void __fastcall CDOTA_Ability_Oracle_FatesEdict::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Oracle_FatesEdict::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -1829,7 +1829,7 @@ void __fastcall CDOTA_Ability_Oracle_FatesEdict::CEntityInstanceEntityClass::~CE
 void __fastcall CDOTA_Ability_Oracle_FatesEdict::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Oracle_FatesEdict::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -2344,7 +2344,7 @@ CEntityInstance *__fastcall CDOTA_Ability_Oracle_PurifyingFlames::CEntityInstanc
 void __fastcall CDOTA_Ability_Oracle_PurifyingFlames::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Oracle_PurifyingFlames::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -2354,7 +2354,7 @@ void __fastcall CDOTA_Ability_Oracle_PurifyingFlames::CEntityInstanceEntityClass
 void __fastcall CDOTA_Ability_Oracle_PurifyingFlames::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Oracle_PurifyingFlames::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -2876,7 +2876,7 @@ CEntityInstance *__fastcall CDOTA_Ability_Oracle_FalsePromise::CEntityInstanceEn
 void __fastcall CDOTA_Ability_Oracle_FalsePromise::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Oracle_FalsePromise::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -2886,7 +2886,7 @@ void __fastcall CDOTA_Ability_Oracle_FalsePromise::CEntityInstanceEntityClass::~
 void __fastcall CDOTA_Ability_Oracle_FalsePromise::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Oracle_FalsePromise::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }

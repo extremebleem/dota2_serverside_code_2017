@@ -426,9 +426,7 @@ NetworkFieldResult_t __fastcall CValidatingNetworkFieldSerializer<CGameSceneNode
       m_pStateChanged = m_pStructBase->m_pStateChanged;
       m_pStructBase->m_cellZ = pIn->m_iVal64;
       if ( m_pStateChanged != 0 )
-        (*m_pStateChanged->_vptr_INetworkStateChangedRouter)(
-          m_pStateChanged,
-          m_pStructBase,
+        m_pStateChanged->NetworkStateChanged(m_pStructBase,
           16,
           0xFFFFFFFFLL,
           0xFFFFFFFFLL);
@@ -469,9 +467,7 @@ NetworkFieldResult_t __fastcall CValidatingNetworkFieldSerializer<CGameSceneNode
       m_pStateChanged = m_pStructBase->m_pStateChanged;
       m_pStructBase->m_cellY = pIn->m_iVal64;
       if ( m_pStateChanged != 0 )
-        (*m_pStateChanged->_vptr_INetworkStateChangedRouter)(
-          m_pStateChanged,
-          m_pStructBase,
+        m_pStateChanged->NetworkStateChanged(m_pStructBase,
           14,
           0xFFFFFFFFLL,
           0xFFFFFFFFLL);
@@ -512,9 +508,7 @@ NetworkFieldResult_t __fastcall CValidatingNetworkFieldSerializer<CGameSceneNode
       m_pStateChanged = m_pStructBase->m_pStateChanged;
       m_pStructBase->m_cellX = pIn->m_iVal64;
       if ( m_pStateChanged != 0 )
-        (*m_pStateChanged->_vptr_INetworkStateChangedRouter)(
-          m_pStateChanged,
-          m_pStructBase,
+        m_pStateChanged->NetworkStateChanged(m_pStructBase,
           12,
           0xFFFFFFFFLL,
           0xFFFFFFFFLL);
@@ -569,9 +563,7 @@ NetworkFieldResult_t __fastcall CValidatingNetworkFieldSerializer<CGameSceneNode
         m_pStateChanged = m_pFieldData->m_pStateChanged;
         if ( m_pStateChanged != 0 )
         {
-          (*m_pStateChanged->_vptr_INetworkStateChangedRouter)(
-            m_pStateChanged,
-            m_pFieldData,
+          m_pStateChanged->NetworkStateChanged(m_pFieldData,
             p_m_vecX - m_pFieldData,
             0xFFFFFFFFLL,
             0xFFFFFFFFLL);
@@ -586,9 +578,7 @@ NetworkFieldResult_t __fastcall CValidatingNetworkFieldSerializer<CGameSceneNode
         }
         v11 = p_m_cellX - m_pFieldData;
         if ( m_pStateChanged != 0 )
-          (*m_pStateChanged->_vptr_INetworkStateChangedRouter)(
-            m_pStateChanged,
-            m_pFieldData,
+          m_pStateChanged->NetworkStateChanged(m_pFieldData,
             v11,
             0xFFFFFFFFLL,
             0xFFFFFFFFLL);

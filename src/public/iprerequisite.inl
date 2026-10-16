@@ -4,7 +4,7 @@
 // IPrerequisite::~IPrerequisite  (line 33, @0x0000000001f719f0, libserver.so)
 void __fastcall IPrerequisite::~IPrerequisite(IPrerequisite *const this)
 {
-  this->_vptr_IPrerequisite = off_3FCAB50;
+  this->_vptr_IPrerequisite = off_3FCAB50;  // vptr: IPrerequisite
 }
 
 
@@ -12,7 +12,7 @@ void __fastcall IPrerequisite::~IPrerequisite(IPrerequisite *const this)
 // calls: operator delete
 void __fastcall IPrerequisite::~IPrerequisite(IPrerequisite *const this)
 {
-  this->_vptr_IPrerequisite = off_3FCAB50;
+  this->_vptr_IPrerequisite = off_3FCAB50;  // vptr: IPrerequisite
   operator delete(this);
 }
 
@@ -61,7 +61,7 @@ void __fastcall CAsyncFileLoadPrerequisite::~CAsyncFileLoadPrerequisite(CAsyncFi
 {
   IAsyncFileRequest *m_pRequest; // rsi
 
-  this->_vptr_IPrerequisite = off_40F1690;
+  this->_vptr_IPrerequisite = off_40F1690;  // vptr: CAsyncFileLoadPrerequisite
   m_pRequest = this->m_pRequest;
   if ( m_pRequest != 0 )
   {
@@ -75,7 +75,7 @@ void __fastcall CAsyncFileLoadPrerequisite::~CAsyncFileLoadPrerequisite(CAsyncFi
     this->m_nFileDataSize = 0;
   }
   this->m_AsyncRequestStatus = AsyncRequestStatus_t::ASYNC_REQUEST_STATUS_UNDEFINED;
-  this->_vptr_IPrerequisite = off_3FCAB50;
+  this->_vptr_IPrerequisite = off_3FCAB50;  // vptr: IPrerequisite
 }
 
 
@@ -85,7 +85,7 @@ void __fastcall CAsyncFileLoadPrerequisite::~CAsyncFileLoadPrerequisite(CAsyncFi
 {
   IAsyncFileRequest *m_pRequest; // rsi
 
-  this->_vptr_IPrerequisite = off_40F1690;
+  this->_vptr_IPrerequisite = off_40F1690;  // vptr: CAsyncFileLoadPrerequisite
   m_pRequest = this->m_pRequest;
   if ( m_pRequest != 0 )
   {
@@ -99,7 +99,7 @@ void __fastcall CAsyncFileLoadPrerequisite::~CAsyncFileLoadPrerequisite(CAsyncFi
     this->m_nFileDataSize = 0;
   }
   this->m_AsyncRequestStatus = AsyncRequestStatus_t::ASYNC_REQUEST_STATUS_UNDEFINED;
-  this->_vptr_IPrerequisite = off_3FCAB50;
+  this->_vptr_IPrerequisite = off_3FCAB50;  // vptr: IPrerequisite
   operator delete(this);
 }
 
@@ -156,7 +156,7 @@ void __fastcall CAsyncFileLoadPrerequisiteLambda<CGridNav::SpawnGroupPrecache(Ev
   if ( this->m_lambda.__worldName.m_pString != 0 )
     CUtlString::FreeMemoryBlock(p_worldName);
   m_pRequest = this->m_pRequest;
-  this->_vptr_IPrerequisite = off_40F1690;
+  this->_vptr_IPrerequisite = off_40F1690;  // vptr: CAsyncFileLoadPrerequisite
   if ( m_pRequest != 0 )
   {
     (*(*g_pAsyncFileSystem + 112LL))(g_pAsyncFileSystem, m_pRequest, 0);
@@ -169,7 +169,7 @@ void __fastcall CAsyncFileLoadPrerequisiteLambda<CGridNav::SpawnGroupPrecache(Ev
     this->m_nFileDataSize = 0;
   }
   this->m_AsyncRequestStatus = AsyncRequestStatus_t::ASYNC_REQUEST_STATUS_UNDEFINED;
-  this->_vptr_IPrerequisite = off_3FCAB50;
+  this->_vptr_IPrerequisite = off_3FCAB50;  // vptr: IPrerequisite
 }
 
 
@@ -186,7 +186,7 @@ void __fastcall CAsyncFileLoadPrerequisiteLambda<CGridNav::SpawnGroupPrecache(Ev
   if ( this->m_lambda.__worldName.m_pString != 0 )
     CUtlString::FreeMemoryBlock(p_worldName);
   m_pRequest = this->m_pRequest;
-  this->_vptr_IPrerequisite = off_40F1690;
+  this->_vptr_IPrerequisite = off_40F1690;  // vptr: CAsyncFileLoadPrerequisite
   if ( m_pRequest != 0 )
   {
     (*(*g_pAsyncFileSystem + 112LL))(g_pAsyncFileSystem, m_pRequest, 0);
@@ -199,7 +199,7 @@ void __fastcall CAsyncFileLoadPrerequisiteLambda<CGridNav::SpawnGroupPrecache(Ev
     this->m_nFileDataSize = 0;
   }
   this->m_AsyncRequestStatus = AsyncRequestStatus_t::ASYNC_REQUEST_STATUS_UNDEFINED;
-  this->_vptr_IPrerequisite = off_3FCAB50;
+  this->_vptr_IPrerequisite = off_3FCAB50;  // vptr: IPrerequisite
   operator delete(this);
 }
 

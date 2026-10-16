@@ -51,7 +51,7 @@ void __fastcall CResourcePrecacherGameSystem::~CResourcePrecacherGameSystem(CRes
 {
   bool v2; // zf
 
-  this->_vptr_IGameSystem = off_3FC2410;
+  this->_vptr_IGameSystem = off_3FC2410;  // vptr: CResourcePrecacherGameSystem
   CUtlRBTree<CUtlMap<unsigned int,CUtlDelegate<void ()(EventSpawnGroupPrecache_t const&)>,unsigned short,bool (*)(unsigned int const&,unsigned int const&)>::Node_t,unsigned short,CUtlMap<unsigned int,CUtlDelegate<void ()(EventSpawnGroupPrecache_t const&)>,unsigned short,bool (*)(unsigned int const&,unsigned int const&)>::CKeyLess,CUtlMemory<UtlRBTreeNode_t<CUtlMap<unsigned int,CUtlDelegate<void ()(EventSpawnGroupPrecache_t const&)>,unsigned short,bool (*)(unsigned int const&,unsigned int const&)>::Node_t,unsigned short>,unsigned short>>::RemoveAll(&this->m_SpawnGroupPrecacheDelegates.m_Tree);
   v2 = (this->m_SpawnGroupPrecacheDelegates.m_Tree.m_Elements.m_nGrowSize & 0xC0000000) == 0;
   this->m_SpawnGroupPrecacheDelegates.m_Tree.m_FirstFree = -1;
@@ -67,7 +67,7 @@ void __fastcall CResourcePrecacherGameSystem::~CResourcePrecacherGameSystem(CRes
   {
     this->m_SpawnGroupPrecacheDelegates.m_Tree.m_LastAlloc.index = -1;
   }
-  this->_vptr_IGameSystem = off_3F7C1B0;
+  this->_vptr_IGameSystem = off_3F7C1B0;  // vptr: CAutoGameSystem
   IGameSystem::~IGameSystem(this);
 }
 
@@ -78,7 +78,7 @@ void __fastcall CResourcePrecacherGameSystem::~CResourcePrecacherGameSystem(CRes
 {
   bool v2; // zf
 
-  this->_vptr_IGameSystem = off_3FC2410;
+  this->_vptr_IGameSystem = off_3FC2410;  // vptr: CResourcePrecacherGameSystem
   CUtlRBTree<CUtlMap<unsigned int,CUtlDelegate<void ()(EventSpawnGroupPrecache_t const&)>,unsigned short,bool (*)(unsigned int const&,unsigned int const&)>::Node_t,unsigned short,CUtlMap<unsigned int,CUtlDelegate<void ()(EventSpawnGroupPrecache_t const&)>,unsigned short,bool (*)(unsigned int const&,unsigned int const&)>::CKeyLess,CUtlMemory<UtlRBTreeNode_t<CUtlMap<unsigned int,CUtlDelegate<void ()(EventSpawnGroupPrecache_t const&)>,unsigned short,bool (*)(unsigned int const&,unsigned int const&)>::Node_t,unsigned short>,unsigned short>>::RemoveAll(&this->m_SpawnGroupPrecacheDelegates.m_Tree);
   v2 = (this->m_SpawnGroupPrecacheDelegates.m_Tree.m_Elements.m_nGrowSize & 0xC0000000) == 0;
   this->m_SpawnGroupPrecacheDelegates.m_Tree.m_FirstFree = -1;
@@ -94,7 +94,7 @@ void __fastcall CResourcePrecacherGameSystem::~CResourcePrecacherGameSystem(CRes
   {
     this->m_SpawnGroupPrecacheDelegates.m_Tree.m_LastAlloc.index = -1;
   }
-  this->_vptr_IGameSystem = off_3F7C1B0;
+  this->_vptr_IGameSystem = off_3F7C1B0;  // vptr: CAutoGameSystem
   IGameSystem::~IGameSystem(this);
   operator delete(this);
 }

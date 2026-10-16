@@ -317,7 +317,7 @@ void __fastcall CWorldGameSystem::PreSpawnGroupLoad(
     v9 = operator new(0x68u);
     WorldInfo_t::WorldInfo_t(v9);
     v9->m_nRefCount = 1;
-    if ( (*g_pLoopModeGameSharedState->_vptr_ILoopModeGameSharedState)(g_pLoopModeGameSharedState) != 0 )
+    if ( g_pLoopModeGameSharedState->GetWorldSession() != 0 )
       (*(*g_pWorldRendererMgr + 192LL))(g_pWorldRendererMgr, v8.m_nHashCode, v9, &v9->m_WorldMaxs);
     m_nCount = WorldSpawnKeys->m_keyHashes.m_nCount;
     if ( m_nCount > 0 )

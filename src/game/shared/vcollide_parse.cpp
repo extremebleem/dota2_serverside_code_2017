@@ -77,7 +77,7 @@ void __fastcall ReadVector(const char *pString, Vector *const out)
 // CVPhysicsParse::~CVPhysicsParse  (line 63, @0x00000000020f1bd0, libserver.so)  // inlines: ~IVPhysicsKeyParser
 void __fastcall CVPhysicsParse::~CVPhysicsParse(CVPhysicsParse *const this)
 {
-  this->_vptr_IVPhysicsKeyParser = off_3FF4510;
+  this->_vptr_IVPhysicsKeyParser = off_3FF4510;  // vptr: IVPhysicsKeyParser
 }
 
 
@@ -85,7 +85,7 @@ void __fastcall CVPhysicsParse::~CVPhysicsParse(CVPhysicsParse *const this)
 // calls: operator delete
 void __fastcall CVPhysicsParse::~CVPhysicsParse(CVPhysicsParse *const this)
 {
-  this->_vptr_IVPhysicsKeyParser = off_3FF4510;
+  this->_vptr_IVPhysicsKeyParser = off_3FF4510;  // vptr: IVPhysicsKeyParser
   operator delete(this);
 }
 
@@ -101,7 +101,7 @@ void __fastcall CVPhysicsParse::SkipBlock(CVPhysicsParse *const this)
 // calls: CVPhysicsParse::NextBlock, _Unwind_Resume
 void __fastcall CVPhysicsParse::CVPhysicsParse(CVPhysicsParse *const this, const char *pKeyData)
 {
-  this->_vptr_IVPhysicsKeyParser = off_3FFCB30;
+  this->_vptr_IVPhysicsKeyParser = off_3FFCB30;  // vptr: CVPhysicsParse
   this->m_pText = pKeyData;
   CVPhysicsParse::NextBlock(this);
 }
@@ -220,7 +220,7 @@ void __fastcall CVPhysicsParse::ParseSolid(
                   if ( V_stricmp_fast(key, "drag") != 0 )
                   {
                     if ( V_stricmp_fast(key, "rollingdrag") != 0 && unknownKeyHandler != 0 )
-                      (*unknownKeyHandler->_vptr_IVPhysicsKeyHandler)(unknownKeyHandler, pSolid, key, value);
+                      unknownKeyHandler->ParseKeyValue(pSolid, key, value);
                   }
                   else
                   {
@@ -352,7 +352,7 @@ void __fastcall CVPhysicsParse::ParseRagdollConstraint(
                       if ( V_stricmp_fast(key, "zfriction") != 0 )
                       {
                         if ( unknownKeyHandler != 0 )
-                          (*unknownKeyHandler->_vptr_IVPhysicsKeyHandler)(unknownKeyHandler, pConstraint, key, value);
+                          unknownKeyHandler->ParseKeyValue(pConstraint, key, value);
                       }
                       else
                       {
@@ -484,7 +484,7 @@ void __fastcall CVPhysicsParse::ParseFluid(
             if ( V_stricmp_fast(key, "surfaceprop") != 0 )
             {
               if ( unknownKeyHandler != 0 )
-                (*unknownKeyHandler->_vptr_IVPhysicsKeyHandler)(unknownKeyHandler, pFluid, key, value);
+                unknownKeyHandler->ParseKeyValue(pFluid, key, value);
             }
             else
             {
@@ -1406,7 +1406,7 @@ void __fastcall CVPhysicsParse::ParseCustom(
       if ( unknownKeyHandler == 0 )
         continue;
     }
-    (*unknownKeyHandler->_vptr_IVPhysicsKeyHandler)(unknownKeyHandler, pCustom, key, value);
+    unknownKeyHandler->ParseKeyValue(pCustom, key, value);
     m_pText = this->m_pText;
   }
 }
@@ -1510,9 +1510,9 @@ IVPhysicsKeyParser *__fastcall CreateVPhysicsKeyParser(const char *pKeyData, boo
 {
   CVPhysicsParse *v3; // rbx
 
-  v3 = operator new(0x410u);
+  v3 = operator new(0x410u);  // new CVPhysicsParse (size matches)
   v3->m_pText = pKeyData;
-  v3->_vptr_IVPhysicsKeyParser = off_3FFCB30;
+  v3->_vptr_IVPhysicsKeyParser = off_3FFCB30;  // vptr: CVPhysicsParse
   CVPhysicsParse::NextBlock(v3);
   return v3;
 }

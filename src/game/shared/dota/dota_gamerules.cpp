@@ -2078,7 +2078,7 @@ void __fastcall CDOTAGamerulesProxy::CDOTAGamerulesProxy(CDOTAGamerulesProxy *co
 // calls: GCSDK::CJob::~CJob
 void __fastcall CGCClientJobTeamFanfare::~CGCClientJobTeamFanfare(CGCClientJobTeamFanfare *const this)
 {
-  this->_vptr_CJob = off_40DB690;
+  this->_vptr_CJob = off_40DB690;  // vptr: GCSDK::CGCClientJob
   GCSDK::CJob::~CJob(this);
 }
 
@@ -2087,7 +2087,7 @@ void __fastcall CGCClientJobTeamFanfare::~CGCClientJobTeamFanfare(CGCClientJobTe
 // calls: GCSDK::CJob::~CJob, operator delete
 void __fastcall CGCClientJobTeamFanfare::~CGCClientJobTeamFanfare(CGCClientJobTeamFanfare *const this)
 {
-  this->_vptr_CJob = off_40DB690;
+  this->_vptr_CJob = off_40DB690;  // vptr: GCSDK::CGCClientJob
   GCSDK::CJob::~CJob(this);
   operator delete(this);
 }
@@ -11866,7 +11866,7 @@ void __fastcall CDOTAGamerules::Shutdown(CDOTAGamerules *const this)
       ++v1;
       (*(this->m_ClientMessageContainer.m_Memory.m_pMemory[v3]->_vptr_IClientMessageDelegateHook + 1))(this->m_ClientMessageContainer.m_Memory.m_pMemory[v3]);
       v4 = this->m_ClientMessageContainer.m_Memory.m_pMemory[v3++];
-      (*v4->_vptr_IClientMessageDelegateHook)(v4);
+      v4->Release();
     }
     while ( this->m_ClientMessageContainer.m_Size > v1 );
   }
@@ -11943,11 +11943,11 @@ void __fastcall CDOTAGamerules::UpdateFanfareCount(CDOTAGamerules *const this, f
     v4 = GCClientSystem();
     v5 = (v4 + 24);
     v6 = v4;
-    v7 = operator new(0x140u);
+    v7 = operator new(0x140u);  // new CGCClientJobTeamFanfare (size matches)
     GCSDK::CJob::CJob(v7, (v6 + 72));
     v7[1]._vptr_CJob = v5;
     *(&v7[1] + 2) = 4;
-    v7->_vptr_CJob = off_40FAD90;
+    v7->_vptr_CJob = off_40FAD90;  // vptr: CGCClientJobTeamFanfare
     GCSDK::CJob::StartJob(v7, 0);
     this->m_flFanfareTime = a2 + 5.0;
   }
@@ -12059,7 +12059,7 @@ void __fastcall CDOTAGamerules::SetFanfareForTeam(CDOTAGamerules *const this, in
 // CVoiceGameMgrHelper::~CVoiceGameMgrHelper  (line 3049, @0x0000000002552a90, libserver.so)  // inlines: ~IVoiceGameMgrHelper
 void __fastcall CVoiceGameMgrHelper::~CVoiceGameMgrHelper(CVoiceGameMgrHelper *const this)
 {
-  this->_vptr_IVoiceGameMgrHelper = off_40F9970;
+  this->_vptr_IVoiceGameMgrHelper = off_40F9970;  // vptr: IVoiceGameMgrHelper
 }
 
 
@@ -12067,7 +12067,7 @@ void __fastcall CVoiceGameMgrHelper::~CVoiceGameMgrHelper(CVoiceGameMgrHelper *c
 // calls: operator delete
 void __fastcall CVoiceGameMgrHelper::~CVoiceGameMgrHelper(CVoiceGameMgrHelper *const this)
 {
-  this->_vptr_IVoiceGameMgrHelper = off_40F9970;
+  this->_vptr_IVoiceGameMgrHelper = off_40F9970;  // vptr: IVoiceGameMgrHelper
   operator delete(this);
 }
 
@@ -12353,7 +12353,7 @@ void __fastcall CVoiceGameMgrHelper::SetPlayerListenerState(
 void __fastcall CGCUserUpdatedAdditionalItems::~CGCUserUpdatedAdditionalItems(
         CGCUserUpdatedAdditionalItems *const this)
 {
-  this->_vptr_CJob = off_40DB690;
+  this->_vptr_CJob = off_40DB690;  // vptr: GCSDK::CGCClientJob
   GCSDK::CJob::~CJob(this);
 }
 
@@ -12363,7 +12363,7 @@ void __fastcall CGCUserUpdatedAdditionalItems::~CGCUserUpdatedAdditionalItems(
 void __fastcall CGCUserUpdatedAdditionalItems::~CGCUserUpdatedAdditionalItems(
         CGCUserUpdatedAdditionalItems *const this)
 {
-  this->_vptr_CJob = off_40DB690;
+  this->_vptr_CJob = off_40DB690;  // vptr: GCSDK::CGCClientJob
   GCSDK::CJob::~CJob(this);
   operator delete(this);
 }
@@ -12486,10 +12486,10 @@ GCSDK::CJob *__fastcall CreateJob_CGCUserUpdatedAdditionalItems(GCSDK::CGCClient
 {
   GCSDK::CJob *v2; // rbx
 
-  v2 = operator new(0x140u);
+  v2 = operator new(0x140u);  // new CGCUserUpdatedAdditionalItems (size matches)
   GCSDK::CJob::CJob(v2, (pGC + 48));
   v2[1]._vptr_CJob = pGC;
-  v2->_vptr_CJob = off_40FBAF0;
+  v2->_vptr_CJob = off_40FBAF0;  // vptr: CGCUserUpdatedAdditionalItems
   v2->m_pJobType = &g_JobType_CGCUserUpdatedAdditionalItems;
   *(&v2[1] + 2) = 4;
   return v2;
@@ -12501,7 +12501,7 @@ GCSDK::CJob *__fastcall CreateJob_CGCUserUpdatedAdditionalItems(GCSDK::CGCClient
 void __fastcall CGCServerJobGetAdditionalItems::~CGCServerJobGetAdditionalItems(
         CGCServerJobGetAdditionalItems *const this)
 {
-  this->_vptr_CJob = off_40DB690;
+  this->_vptr_CJob = off_40DB690;  // vptr: GCSDK::CGCClientJob
   GCSDK::CJob::~CJob(this);
 }
 
@@ -12511,7 +12511,7 @@ void __fastcall CGCServerJobGetAdditionalItems::~CGCServerJobGetAdditionalItems(
 void __fastcall CGCServerJobGetAdditionalItems::~CGCServerJobGetAdditionalItems(
         CGCServerJobGetAdditionalItems *const this)
 {
-  this->_vptr_CJob = off_40DB690;
+  this->_vptr_CJob = off_40DB690;  // vptr: GCSDK::CGCClientJob
   GCSDK::CJob::~CJob(this);
   operator delete(this);
 }
@@ -12749,11 +12749,11 @@ void __fastcall CDOTAGamerules::SERVER_RequestPCBangAdditionalItems(CDOTAGamerul
   v1 = GCClientSystem();
   v2 = (v1 + 24);
   v3 = v1;
-  v4 = operator new(0x140u);
+  v4 = operator new(0x140u);  // new CGCServerJobGetAdditionalItems (size matches)
   GCSDK::CJob::CJob(v4, (v3 + 72));
   v4[1]._vptr_CJob = v2;
   *(&v4[1] + 2) = 4;
-  v4->_vptr_CJob = off_40FBB90;
+  v4->_vptr_CJob = off_40FBB90;  // vptr: CGCServerJobGetAdditionalItems
   GCSDK::CJob::StartJob(v4, 0);
 }
 
@@ -12922,7 +12922,7 @@ void __fastcall PerformDOTASaveGame(uint32 nGameID, bool bSendToGC, bool bSpewKe
 // calls: IGameSystem::~IGameSystem
 void __fastcall CDOTA_AutoSaveGameSystem::~CDOTA_AutoSaveGameSystem(CDOTA_AutoSaveGameSystem *const this)
 {
-  this->_vptr_IGameSystem = off_3F7C1B0;
+  this->_vptr_IGameSystem = off_3F7C1B0;  // vptr: CAutoGameSystem
   IGameSystem::~IGameSystem(this);
 }
 
@@ -12931,7 +12931,7 @@ void __fastcall CDOTA_AutoSaveGameSystem::~CDOTA_AutoSaveGameSystem(CDOTA_AutoSa
 // calls: IGameSystem::~IGameSystem, operator delete
 void __fastcall CDOTA_AutoSaveGameSystem::~CDOTA_AutoSaveGameSystem(CDOTA_AutoSaveGameSystem *const this)
 {
-  this->_vptr_IGameSystem = off_3F7C1B0;
+  this->_vptr_IGameSystem = off_3F7C1B0;  // vptr: CAutoGameSystem
   IGameSystem::~IGameSystem(this);
   operator delete(this);
 }
@@ -14961,7 +14961,7 @@ LABEL_13:
 // CDotaRespawnEntitiesFilter::~CDotaRespawnEntitiesFilter  (line 4495, @0x0000000002552a80, libserver.so)  // inlines: ~ISpawnGroupEntityFilter
 void __fastcall CDotaRespawnEntitiesFilter::~CDotaRespawnEntitiesFilter(CDotaRespawnEntitiesFilter *const this)
 {
-  this->_vptr_ISpawnGroupEntityFilter = off_3FCAF10;
+  this->_vptr_ISpawnGroupEntityFilter = off_3FCAF10;  // vptr: ISpawnGroupEntityFilter
 }
 
 
@@ -14969,7 +14969,7 @@ void __fastcall CDotaRespawnEntitiesFilter::~CDotaRespawnEntitiesFilter(CDotaRes
 // calls: operator delete
 void __fastcall CDotaRespawnEntitiesFilter::~CDotaRespawnEntitiesFilter(CDotaRespawnEntitiesFilter *const this)
 {
-  this->_vptr_ISpawnGroupEntityFilter = off_3FCAF10;
+  this->_vptr_ISpawnGroupEntityFilter = off_3FCAF10;  // vptr: ISpawnGroupEntityFilter
   operator delete(this);
 }
 
@@ -35641,12 +35641,12 @@ LABEL_16:
       v7 = *(v2 + 69);
       v8 = (v6 + 24);
       v9 = v6;
-      v10 = operator new(0x140u);
+      v10 = operator new(0x140u);  // new CGCJobLoadSaveGame (size matches)
       GCSDK::CJob::CJob(v10, (v9 + 72));
       v10[1]._vptr_CJob = v8;
       *(&v10[1] + 2) = 4;
       *(&v10[1] + 3) = v7;
-      v10->_vptr_CJob = off_4304B70;
+      v10->_vptr_CJob = off_4304B70;  // vptr: CGCJobLoadSaveGame
       GCSDK::CJob::StartJob(v10, 0);
     }
     return;
@@ -36195,7 +36195,7 @@ void __fastcall CGCClientJobGrantSurveyPermission::~CGCClientJobGrantSurveyPermi
 {
   google::protobuf::Message *m_pProtoBufBody; // rsi
 
-  this->_vptr_CJob = off_40FBF90;
+  this->_vptr_CJob = off_40FBF90;  // vptr: CGCClientJobGrantSurveyPermission
   m_pProtoBufBody = this->m_Msg.m_pProtoBufBody;
   this->m_Msg._vptr_CProtoBufMsgBase = &off_40FBF50;
   if ( m_pProtoBufBody != 0 )
@@ -36206,7 +36206,7 @@ void __fastcall CGCClientJobGrantSurveyPermission::~CGCClientJobGrantSurveyPermi
     this->m_Msg.m_pProtoBufBody = 0;
   }
   GCSDK::CProtoBufMsgBase::~CProtoBufMsgBase(&this->m_Msg);
-  this->_vptr_CJob = off_40DB690;
+  this->_vptr_CJob = off_40DB690;  // vptr: GCSDK::CGCClientJob
   GCSDK::CJob::~CJob(this);
 }
 
@@ -36219,7 +36219,7 @@ void __fastcall CGCClientJobGrantSurveyPermission::~CGCClientJobGrantSurveyPermi
 {
   google::protobuf::Message *m_pProtoBufBody; // rsi
 
-  this->_vptr_CJob = off_40FBF90;
+  this->_vptr_CJob = off_40FBF90;  // vptr: CGCClientJobGrantSurveyPermission
   m_pProtoBufBody = this->m_Msg.m_pProtoBufBody;
   this->m_Msg._vptr_CProtoBufMsgBase = &off_40FBF50;
   if ( m_pProtoBufBody != 0 )
@@ -36230,7 +36230,7 @@ void __fastcall CGCClientJobGrantSurveyPermission::~CGCClientJobGrantSurveyPermi
     this->m_Msg.m_pProtoBufBody = 0;
   }
   GCSDK::CProtoBufMsgBase::~CProtoBufMsgBase(&this->m_Msg);
-  this->_vptr_CJob = off_40DB690;
+  this->_vptr_CJob = off_40DB690;  // vptr: GCSDK::CGCClientJob
   GCSDK::CJob::~CJob(this);
   operator delete(this);
 }
@@ -39396,10 +39396,10 @@ LABEL_13:
     v55 = GCClientSystem();
     v56 = (v55 + 24);
     v57 = v55;
-    v104 = operator new(0x168u);
+    v104 = operator new(0x168u);  // new CGCClientJobGrantSurveyPermission (size matches)
     GCSDK::CJob::CJob(v104, (v57 + 72));
     v104[1]._vptr_CJob = v56;
-    v104->_vptr_CJob = off_40FBF90;
+    v104->_vptr_CJob = off_40FBF90;  // vptr: CGCClientJobGrantSurveyPermission
     *(&v104[1] + 2) = 4;
     GCSDK::CProtoBufMsgBase::CProtoBufMsgBase(&v104[1].m_JobID, 0x1D33u);
     *&v104[1].m_cLocksWaitedFor = 0;
@@ -46419,7 +46419,7 @@ LABEL_33:
 void __fastcall CGCTournamentItemEventResponse::~CGCTournamentItemEventResponse(
         CGCTournamentItemEventResponse *const this)
 {
-  this->_vptr_CJob = off_40DB690;
+  this->_vptr_CJob = off_40DB690;  // vptr: GCSDK::CGCClientJob
   GCSDK::CJob::~CJob(this);
 }
 
@@ -46429,7 +46429,7 @@ void __fastcall CGCTournamentItemEventResponse::~CGCTournamentItemEventResponse(
 void __fastcall CGCTournamentItemEventResponse::~CGCTournamentItemEventResponse(
         CGCTournamentItemEventResponse *const this)
 {
-  this->_vptr_CJob = off_40DB690;
+  this->_vptr_CJob = off_40DB690;  // vptr: GCSDK::CGCClientJob
   GCSDK::CJob::~CJob(this);
   operator delete(this);
 }
@@ -46554,10 +46554,10 @@ GCSDK::CJob *__fastcall CreateJob_CGCTournamentItemEventResponse(GCSDK::CGCClien
 {
   GCSDK::CJob *v2; // rbx
 
-  v2 = operator new(0x140u);
+  v2 = operator new(0x140u);  // new CGCTournamentItemEventResponse (size matches)
   GCSDK::CJob::CJob(v2, (pGC + 48));
   v2[1]._vptr_CJob = pGC;
-  v2->_vptr_CJob = off_40FC7B0;
+  v2->_vptr_CJob = off_40FC7B0;  // vptr: CGCTournamentItemEventResponse
   v2->m_pJobType = &g_JobType_CGCTournamentItemEventResponse;
   *(&v2[1] + 2) = 4;
   return v2;

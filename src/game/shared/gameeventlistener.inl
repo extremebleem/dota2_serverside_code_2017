@@ -5,14 +5,14 @@
 // callers: CSteamWorksGameStatsUploader::CSteamWorksGameStatsUploader, CBaseDoor::CBaseDoor, CFishPool::CFishPool, CBasePropDoor::CBasePropDoor, CDOTAGameManager::CDOTAGameManager, CDOTABehaviorCompanion::OnStart, CDOTA_BaseNPC_HallofFame::CDOTA_BaseNPC_HallofFame, CNavMeshGameEventListener::CNavMeshGameEventListener
 void __fastcall CGameEventListener::~CGameEventListener(CGameEventListener *const this)
 {
-  this->_vptr_IGameEventListener2 = off_3FB3190;
+  this->_vptr_IGameEventListener2 = off_3FB3190;  // vptr: CGameEventListener
   if ( this->m_bRegisteredForEvents )
   {
     if ( gameeventmanager != 0 )
       (*(gameeventmanager->_vptr_IBaseInterface + 6))(gameeventmanager, this);
     this->m_bRegisteredForEvents = 0;
   }
-  this->_vptr_IGameEventListener2 = off_3FB3150;
+  this->_vptr_IGameEventListener2 = off_3FB3150;  // vptr: IGameEventListener2
 }
 
 
@@ -20,14 +20,14 @@ void __fastcall CGameEventListener::~CGameEventListener(CGameEventListener *cons
 // calls: operator delete
 void __fastcall CGameEventListener::~CGameEventListener(CGameEventListener *const this)
 {
-  this->_vptr_IGameEventListener2 = off_3FB3190;
+  this->_vptr_IGameEventListener2 = off_3FB3190;  // vptr: CGameEventListener
   if ( this->m_bRegisteredForEvents )
   {
     if ( gameeventmanager != 0 )
       (*(gameeventmanager->_vptr_IBaseInterface + 6))(gameeventmanager, this);
     this->m_bRegisteredForEvents = 0;
   }
-  this->_vptr_IGameEventListener2 = off_3FB3150;
+  this->_vptr_IGameEventListener2 = off_3FB3150;  // vptr: IGameEventListener2
   operator delete(this);
 }
 

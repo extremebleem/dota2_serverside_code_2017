@@ -16,7 +16,7 @@ void __fastcall CSchemaFieldVisitor::VisitRelevantClass(
 void __fastcall CSchemaFieldVisitorInfoMap<CExtrefTraversal>::~CSchemaFieldVisitorInfoMap(
         CSchemaFieldVisitorInfoMap<CExtrefTraversal> *const this)
 {
-  this->_vptr_CSchemaVisitorInfoMapBase = off_47D12F0;
+  this->_vptr_CSchemaVisitorInfoMapBase = off_47D12F0;  // vptr: CSchemaFieldVisitorInfoMap<CExtrefTraversal>
   CSchemaVisitorInfoMapBase::~CSchemaVisitorInfoMapBase(this);
 }
 

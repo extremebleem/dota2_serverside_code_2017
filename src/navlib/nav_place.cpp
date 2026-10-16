@@ -422,14 +422,15 @@ void __fastcall CNavPlaceDatabase::PrintAllPlaces(const CNavPlaceDatabase *const
   __int64 v11; // r15
   int v12; // r12d
   const char *v13; // r13
-  int v14; // r15d
-  CUtlMemory<char const*,int> *v15; // r12
+  unsigned __int64 v14; // xmm0_8
+  int v15; // r15d
+  CUtlMemory<char const*,int> *v16; // r12
   CUtlMemory<char const*,int> *p_m_nAllocationCount; // r15
-  SortStringType *v17; // r13
-  SortStringType *v18; // r12
-  SortStringType v19; // rax
-  int v20; // [rsp+4h] [rbp-5Ch]
-  CUtlMemory<char const*,int> *v21; // [rsp+8h] [rbp-58h]
+  SortStringType *v18; // r13
+  SortStringType *v19; // r12
+  SortStringType v20; // rax
+  int v21; // [rsp+4h] [rbp-5Ch]
+  CUtlMemory<char const*,int> *v22; // [rsp+8h] [rbp-58h]
   CUtlVector<char const*,CUtlMemory<char const*,int> > placeNames; // [rsp+10h] [rbp-50h] BYREF
 
   if ( this->m_nPlaceCount == 0 )
@@ -470,36 +471,36 @@ void __fastcall CNavPlaceDatabase::PrintAllPlaces(const CNavPlaceDatabase *const
     V_qsort(placeNames.m_Memory.m_pMemory, v7, 8, StringSort);
     goto LABEL_12;
   }
-  v14 = v7 - 1;
+  v15 = v7 - 1;
   while ( 2 )
   {
-    v15 = 0;
-    v20 = v14 - 1;
-    v21 = (8LL * (v14 - 1) + 8);
+    v16 = 0;
+    v21 = v15 - 1;
+    v22 = (8LL * (v15 - 1) + 8);
     while ( 1 )
     {
-      p_m_nAllocationCount = &v15->m_nAllocationCount;
-      v17 = (placeNames.m_Memory.m_pMemory + &v15->m_nAllocationCount);
-      v18 = (placeNames.m_Memory.m_pMemory + v15);
-      if ( StringSort(v18, v17) < 0 )
+      p_m_nAllocationCount = &v16->m_nAllocationCount;
+      v18 = (placeNames.m_Memory.m_pMemory + &v16->m_nAllocationCount);
+      v19 = (placeNames.m_Memory.m_pMemory + v16);
+      if ( StringSort(v19, v18) < 0 )
         break;
-      if ( p_m_nAllocationCount == v21 )
+      if ( p_m_nAllocationCount == v22 )
         goto LABEL_30;
 LABEL_27:
-      v15 = p_m_nAllocationCount;
+      v16 = p_m_nAllocationCount;
     }
-    v19 = *v18;
-    *v18 = *v17;
-    *v17 = v19;
-    if ( p_m_nAllocationCount != v21 )
+    v20 = *v19;
+    *v19 = *v18;
+    *v18 = v20;
+    if ( p_m_nAllocationCount != v22 )
       goto LABEL_27;
 LABEL_30:
-    v14 = v20;
-    if ( v20 != -1 )
+    v15 = v21;
+    if ( v21 != -1 )
     {
-      while ( v14 <= 0 )
+      while ( v15 <= 0 )
       {
-        if ( --v14 == -1 )
+        if ( --v15 == -1 )
           goto LABEL_12;
       }
       continue;
@@ -515,12 +516,12 @@ LABEL_13:
   {
     v13 = placeNames.m_Memory.m_pMemory[v11];
     if ( CNavPlaceDatabase::NameToPlace(this, v13) == editPlace )
-      Msg("--> %-26s", v13);
+      v14 = Msg("--> %-26s", v13).m128_u64[0];
     else
-      Msg("%-30s", v13);
+      v14 = Msg("%-30s", v13).m128_u64[0];
     ++v12;
     if ( v12 == 3 * (v12 / 3) )
-      Msg("\n");
+      Msg("\n", *&v14);
     v7 = placeNames.m_Size;
     ++v11;
   }

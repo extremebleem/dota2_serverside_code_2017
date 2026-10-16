@@ -21,7 +21,7 @@ void __fastcall CDOTA_BotMode_Farm::CDOTA_BotMode_Farm(CDOTA_BotMode_Farm *const
   p_m_Memory = &this->m_pSpawners.m_Memory;
   CDOTA_BotMode::CDOTA_BotMode(this, pBot);
   this->m_pSpawners.m_Size = 0;
-  this->_vptr_CDOTA_BotMode = off_42B8070;
+  this->_vptr_CDOTA_BotMode = off_42B8070;  // vptr: CDOTA_BotMode_Farm
   this->m_pSpawners.m_Memory.m_pMemory = 0;
   this->m_pSpawners.m_Memory.m_nAllocationCount = 0;
   this->m_pSpawners.m_Memory.m_nGrowSize = 0;

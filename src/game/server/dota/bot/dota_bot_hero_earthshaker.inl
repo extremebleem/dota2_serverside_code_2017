@@ -24,7 +24,7 @@ void __fastcall CDOTA_Bot_Hero_Earthshaker::~CDOTA_Bot_Hero_Earthshaker(CDOTA_Bo
 void __fastcall CDOTA_BotMode_Attack_Earthshaker::~CDOTA_BotMode_Attack_Earthshaker(
         CDOTA_BotMode_Attack_Earthshaker *const this)
 {
-  this->_vptr_CDOTA_BotMode = off_42B75F0;
+  this->_vptr_CDOTA_BotMode = off_42B75F0;  // vptr: CDOTA_BotMode
 }
 
 
@@ -33,7 +33,7 @@ void __fastcall CDOTA_BotMode_Attack_Earthshaker::~CDOTA_BotMode_Attack_Earthsha
 void __fastcall CDOTA_BotMode_Attack_Earthshaker::~CDOTA_BotMode_Attack_Earthshaker(
         CDOTA_BotMode_Attack_Earthshaker *const this)
 {
-  this->_vptr_CDOTA_BotMode = off_42B75F0;
+  this->_vptr_CDOTA_BotMode = off_42B75F0;  // vptr: CDOTA_BotMode
   operator delete(this);
 }
 

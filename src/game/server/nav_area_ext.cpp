@@ -184,7 +184,7 @@ NavErrorType __fastcall CNavAreaExtended::Load(
         {
           v27[0] = &rFileBuffer->m_Memory.m_pMemory[rFileBuffer->m_Get - rFileBuffer->m_nOffset];
           v15 = v27[0];
-          v10 = V_strtod(v27[0], v27, 0.0);
+          v10 = V_strtod(v27[0], v27);
           v25 = v10;
           if ( LODWORD(v27[0]) != v15 )
             rFileBuffer->m_Get += LODWORD(v27[0]) - v15;
@@ -529,7 +529,7 @@ LABEL_14:
         v13.m128d_f64[0] = v13.m128d_f64[0] + 35.5 - 18.0;
         vPos.z = _mm_movedup_pd(v13).m128d_f64[0];
       }
-      *&vLight.x = (*g_pLightQuery->_vptr_ILightQuery)(g_pLightQuery, 3, &vPos, 0xFFFFFFFFLL);
+      *&vLight.x = g_pLightQuery->GetLightForPoint(3, &vPos, 0xFFFFFFFFLL);
       vLight.z = v14;
       result = GetTerrainAmbientLightAtPoint(&vPos, &vAmbientColor, 0);
       if ( !result )

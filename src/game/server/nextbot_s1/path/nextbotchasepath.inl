@@ -4,7 +4,7 @@
 // ChasePath::~ChasePath  (line 27, @0x0000000002f40d50, libserver.so)  // inlines: ~CNavPathNB, ~CPath, ~CPathData
 void __fastcall ChasePath::~ChasePath(ChasePath *const this)
 {
-  this->_vptr_CPathData = off_47B0E10;
+  this->_vptr_CPathData = off_47B0E10;  // vptr: CPathData
 }
 
 
@@ -12,7 +12,7 @@ void __fastcall ChasePath::~ChasePath(ChasePath *const this)
 // calls: operator delete
 void __fastcall ChasePath::~ChasePath(ChasePath *const this)
 {
-  this->_vptr_CPathData = off_47B0E10;
+  this->_vptr_CPathData = off_47B0E10;  // vptr: CPathData
   operator delete(this);
 }
 
@@ -40,7 +40,7 @@ void __fastcall ChasePath::InvalidatePath(ChasePath *const this)
   CPathData::InvalidatePath(this);
   m_pPathFollower = this->m_pPathFollower;
   if ( m_pPathFollower != 0 )
-    (*m_pPathFollower->_vptr_IPathFollower)(m_pPathFollower);
+    m_pPathFollower->OnPathInvalidated();
 }
 
 
@@ -123,7 +123,7 @@ void __fastcall ChasePath::PostUpdate(ChasePath *const this)
     startPos.y = v28[1] + 0.0;
     startPos.z = v29;
     startPos.x = v30;
-    NDebugOverlay::VertArrow(&startPos, v27, 3.0, 100, 255, 100, 255, 1, 30.0);
+    NDebugOverlay::VertArrow(&startPos, v27, 3.0, 0x64u, 0xFFu, 0x64u, 255, 30.0, 1);
     goto LABEL_6;
   }
   p_m_failTimer = &this->m_failTimer;
@@ -221,9 +221,9 @@ LABEL_9:
     startPos.y = v11[1] + 0.0;
     startPos.x = v12;
     startPos.z = v13;
-    NDebugOverlay::VertArrow(&startPos, v10, 20.0, 100, 255, 255, 255, 1, 90.0);
+    NDebugOverlay::VertArrow(&startPos, v10, 20.0, 0x64u, 0xFFu, 0xFFu, 255, 90.0, 1);
     v14 = (*(this->m_pBot->_vptr_INextBotEventResponder + 73))(this->m_pBot);
-    NDebugOverlay::HorzArrow(v14, &vTargetPositionForVis, 5.0, 100, 255, 255, 255, 1, 90.0);
+    NDebugOverlay::HorzArrow(v14, &vTargetPositionForVis, 5.0, 0x64u, 0xFFu, 0xFFu, 255, 90.0, 1);
     v15 = (*(this->m_pBot->_vptr_INextBotEventResponder + 66))(this->m_pBot);
     v16.m_Data = CEntityInstance::GetEntityIndex(v15).m_Data;
     m_flCurrentTime = 0.0;
@@ -258,7 +258,7 @@ void __fastcall CPathFollowerDirect::~CPathFollowerDirect(CPathFollowerDirect *c
   __int64 v4; // rbx
 
   this->m_ChasePath._vptr_CPathData = off_47B0E10;
-  this->_vptr_IPathFollower = off_47B6610;
+  this->_vptr_IPathFollower = off_47B6610;  // vptr: CPathFollower
   m_Head = g_NextBotManager.m_botList.m_Head;
   if ( m_Head != 0xFFFF )
   {
@@ -284,7 +284,7 @@ void __fastcall CPathFollowerDirect::~CPathFollowerDirect(CPathFollowerDirect *c
   __int64 v4; // rbx
 
   this->m_ChasePath._vptr_CPathData = off_47B0E10;
-  this->_vptr_IPathFollower = off_47B6610;
+  this->_vptr_IPathFollower = off_47B6610;  // vptr: CPathFollower
   m_Head = g_NextBotManager.m_botList.m_Head;
   if ( m_Head != 0xFFFF )
   {

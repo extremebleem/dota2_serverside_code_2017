@@ -4,7 +4,7 @@
 // IToolObject::~IToolObject  (line 50, @0x0000000001eea610, libserver.so)
 void __fastcall IToolObject::~IToolObject(IToolObject *const this)
 {
-  this->_vptr_IToolObject = off_3FB7BF0;
+  this->_vptr_IToolObject = off_3FB7BF0;  // vptr: IToolObject
 }
 
 
@@ -12,7 +12,7 @@ void __fastcall IToolObject::~IToolObject(IToolObject *const this)
 // calls: operator delete
 void __fastcall IToolObject::~IToolObject(IToolObject *const this)
 {
-  this->_vptr_IToolObject = off_3FB7BF0;
+  this->_vptr_IToolObject = off_3FB7BF0;  // vptr: IToolObject
   operator delete(this);
 }
 

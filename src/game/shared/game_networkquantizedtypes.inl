@@ -73,7 +73,7 @@ void __fastcall CNetworkOriginCellCoordQuantizedVector::LatchComponent(
       if ( m_pStateChanged != 0 )
       {
         vala = v7;
-        (*m_pStateChanged->_vptr_INetworkStateChangedRouter)(m_pStateChanged, this, 18, 0xFFFFFFFFLL, 0xFFFFFFFFLL);
+        m_pStateChanged->NetworkStateChanged(this, 18, 0xFFFFFFFFLL, 0xFFFFFFFFLL);
         v5 = 0.0;
         v7 = vala;
       }
@@ -89,7 +89,7 @@ void __fastcall CNetworkOriginCellCoordQuantizedVector::LatchComponent(
       if ( v12 != 0 )
       {
         val = v7;
-        (*v12->_vptr_INetworkStateChangedRouter)(v12, this, 18, 0xFFFFFFFFLL, 0xFFFFFFFFLL);
+        v12->NetworkStateChanged(this, 18, 0xFFFFFFFFLL, 0xFFFFFFFFLL);
         v7 = val;
       }
       qmemcpy(&cLetter, "XYZ", 3);
@@ -191,9 +191,7 @@ void __fastcall CNetworkOriginCellCoordQuantizedVector::NetworkComponentChanged(
   m_pStateChanged = this->m_pStateChanged;
   if ( m_pStateChanged != 0 )
   {
-    (*m_pStateChanged->_vptr_INetworkStateChangedRouter)(
-      m_pStateChanged,
-      this,
+    m_pStateChanged->NetworkStateChanged(this,
       p_m_vecX - this,
       0xFFFFFFFFLL,
       0xFFFFFFFFLL);
@@ -208,7 +206,7 @@ void __fastcall CNetworkOriginCellCoordQuantizedVector::NetworkComponentChanged(
   }
   v7 = p_m_cellX - this;
   if ( m_pStateChanged != 0 )
-    (*m_pStateChanged->_vptr_INetworkStateChangedRouter)(m_pStateChanged, this, v7, 0xFFFFFFFFLL, 0xFFFFFFFFLL);
+    m_pStateChanged->NetworkStateChanged(this, v7, 0xFFFFFFFFLL, 0xFFFFFFFFLL);
 }
 
 
@@ -276,7 +274,7 @@ const Vector *__fastcall CNetworkVelocityVector::Set(CNetworkVelocityVector *con
       m_pStateChanged = this->m_pStateChanged;
       v14 = v12 - this;
       if ( m_pStateChanged != 0 )
-        (*m_pStateChanged->_vptr_INetworkStateChangedRouter)(m_pStateChanged, this, v14, 0xFFFFFFFFLL, 0xFFFFFFFFLL);
+        m_pStateChanged->NetworkStateChanged(this, v14, 0xFFFFFFFFLL, 0xFFFFFFFFLL);
     }
   }
   return &this->m_Value;

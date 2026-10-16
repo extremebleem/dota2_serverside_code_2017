@@ -1814,7 +1814,7 @@ void __fastcall CBodyComponent::SetAnimationSequence(CBodyComponent *const this,
 {
   __int64 v3; // rax
 
-  v3 = (*this->_vptr_CBodyComponent)(this);
+  v3 = this->GetAnimationController();
   (*(*v3 + 184LL))(v3, hSequence.m_Data, 1);
 }
 
@@ -1825,7 +1825,7 @@ void __fastcall CBodyComponent::SetAnimationSequence(CBodyComponent *const this,
 {
   CSkeletonAnimationController *v3; // rax
 
-  v3 = (*this->_vptr_CBodyComponent)(this);
+  v3 = this->GetAnimationController();
   CSkeletonAnimationController::SetSequence(v3, pSequenceName, SetSequenceBehavior_t::SET_SEQUENCE_RESET_CYCLE);
 }
 
@@ -1835,7 +1835,7 @@ HSequence __fastcall CBodyComponent::GetSequence(const CBodyComponent *const thi
 {
   __int64 v1; // rax
 
-  v1 = (*this->_vptr_CBodyComponent)(this);
+  v1 = this->GetAnimationController();
   return (*(*v1 + 192LL))(v1);
 }
 
@@ -1846,7 +1846,7 @@ float __fastcall CBodyComponent::SequenceDuration(const CBodyComponent *const th
 {
   const CSkeletonAnimationController *v3; // rax
 
-  v3 = (*this->_vptr_CBodyComponent)(this);
+  v3 = this->GetAnimationController();
   return CSkeletonAnimationController::SequenceDuration(v3, pSequenceName);
 }
 
@@ -1858,7 +1858,7 @@ HSequence __fastcall CBodyComponent::LookupSequence(const CBodyComponent *const 
 {
   __int64 v3; // rax
 
-  v3 = (*this->_vptr_CBodyComponent)(this);
+  v3 = this->GetAnimationController();
   return CSkeletonInstance::LookupSequence(*(v3 + 8), pSequenceName);
 }
 

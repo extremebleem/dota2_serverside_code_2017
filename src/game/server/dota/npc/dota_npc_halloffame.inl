@@ -11,14 +11,14 @@ void __fastcall CDOTA_BaseNPC_HallofFame::~CDOTA_BaseNPC_HallofFame(CDOTA_BaseNP
   v2 = !this->m_bRegisteredForEvents;
   this->_vptr_INextBotEventResponder = &off_42F5988;
   this->_vptr_CObstructionObject = &off_42F5CB8;
-  this->_vptr_IGameEventListener2 = off_3FB3190;
+  this->_vptr_IGameEventListener2 = off_3FB3190;  // vptr: CGameEventListener
   if ( !v2 )
   {
     if ( gameeventmanager != 0 )
       (*(gameeventmanager->_vptr_IBaseInterface + 6))(gameeventmanager, &this->CGameEventListener);
     this->m_bRegisteredForEvents = 0;
   }
-  this->_vptr_IGameEventListener2 = off_3FB3150;
+  this->_vptr_IGameEventListener2 = off_3FB3150;  // vptr: IGameEventListener2
   this->_vptr_IHandleEntity = &off_42DB1F0;
   this->_vptr_INextBotEventResponder = &off_42DC150;
   this->_vptr_CObstructionObject = &off_42DC480;
@@ -38,14 +38,14 @@ void __fastcall CDOTA_BaseNPC_HallofFame::~CDOTA_BaseNPC_HallofFame(CDOTA_BaseNP
   v2 = !this->m_bRegisteredForEvents;
   this->_vptr_INextBotEventResponder = &off_42F5988;
   this->_vptr_CObstructionObject = &off_42F5CB8;
-  this->_vptr_IGameEventListener2 = off_3FB3190;
+  this->_vptr_IGameEventListener2 = off_3FB3190;  // vptr: CGameEventListener
   if ( !v2 )
   {
     if ( gameeventmanager != 0 )
       (*(gameeventmanager->_vptr_IBaseInterface + 6))(gameeventmanager, &this->CGameEventListener);
     this->m_bRegisteredForEvents = 0;
   }
-  this->_vptr_IGameEventListener2 = off_3FB3150;
+  this->_vptr_IGameEventListener2 = off_3FB3150;  // vptr: IGameEventListener2
   this->_vptr_IHandleEntity = &off_42DB1F0;
   this->_vptr_INextBotEventResponder = &off_42DC150;
   this->_vptr_CObstructionObject = &off_42DC480;
@@ -127,7 +127,7 @@ void *__fastcall CDOTA_BaseNPC_HallofFame::CEntityInstanceEntityClass::AllocateI
 void __fastcall CDOTA_BaseNPC_HallofFame::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_BaseNPC_HallofFame::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -137,7 +137,7 @@ void __fastcall CDOTA_BaseNPC_HallofFame::CEntityInstanceEntityClass::~CEntityIn
 void __fastcall CDOTA_BaseNPC_HallofFame::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_BaseNPC_HallofFame::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }

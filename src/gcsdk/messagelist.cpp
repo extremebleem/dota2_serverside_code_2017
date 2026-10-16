@@ -181,11 +181,10 @@ bool __fastcall GCSDK::CMessageList::BInit(GCSDK::CMessageList *const this)
   int v11; // eax
   GCSDK::MsgInfo_t *v12; // rdi
   __int16 *v13; // rdx
-  __int64 v14; // rax
   GCSDK::MsgInfo_t *m_pMemory; // r13
-  GCSDK::MsgInfo_t *v17; // rax
+  GCSDK::MsgInfo_t *v16; // rax
   GCSDK::MsgType_t eMsg; // [rsp+14h] [rbp-3Ch]
-  GCSDK::MsgInfo_t *v19; // [rsp+18h] [rbp-38h]
+  GCSDK::MsgInfo_t *v18; // [rsp+18h] [rbp-38h]
 
   v1 = 0;
   this->m_bProfiling = 0;
@@ -200,10 +199,10 @@ bool __fastcall GCSDK::CMessageList::BInit(GCSDK::CMessageList *const this)
       if ( (m_nGrowSize & 0xC0000000) != 0 )
       {
         m_pMemory = this->m_vecMsgInfo.m_Memory.m_pMemory;
-        v17 = (**g_pMemAlloc)(g_pMemAlloc, 400LL * v1);
-        this->m_vecMsgInfo.m_Memory.m_pMemory = v17;
+        v16 = (**g_pMemAlloc)(g_pMemAlloc, 400LL * v1);
+        this->m_vecMsgInfo.m_Memory.m_pMemory = v16;
         if ( m_pMemory != 0 )
-          memcpy(v17, m_pMemory, 400LL * this->m_vecMsgInfo.m_Memory.m_nAllocationCount);
+          memcpy(v16, m_pMemory, 400LL * this->m_vecMsgInfo.m_Memory.m_nAllocationCount);
         this->m_vecMsgInfo.m_Memory.m_nGrowSize &= 0x3FFFFFFFu;
       }
       else
@@ -232,10 +231,10 @@ bool __fastcall GCSDK::CMessageList::BInit(GCSDK::CMessageList *const this)
         v11 = m_Size;
         if ( m_Size == this->m_vecMsgInfo.m_Memory.m_nAllocationCount )
         {
-          v19 = &v6->m_pMsgInfo[v7];
+          v18 = &v6->m_pMsgInfo[v7];
           CUtlMemory<GCSDK::MsgInfo_t,int>::Grow(&this->m_vecMsgInfo.m_Memory, 1);
           v11 = this->m_vecMsgInfo.m_Size;
-          v10 = v19;
+          v10 = v18;
         }
         this->m_vecMsgInfo.m_Size = v11 + 1;
         v12 = &this->m_vecMsgInfo.m_Memory.m_pMemory[m_Size];
@@ -244,16 +243,13 @@ bool __fastcall GCSDK::CMessageList::BInit(GCSDK::CMessageList *const this)
         eMsg = v6->m_pMsgInfo[v7].eMsg;
         GCSDK::CMessageList::AssureBucket(this, eMsg >> 4);
         v13 = &this->m_vecMessageInfoBuckets.m_Memory.m_pMemory[eMsg >> 4][eMsg & 0xF];
-        v14 = *v13;
-        if ( v14 == 0xFFFF )
+        if ( *v13 == -1 )
         {
           *v13 = m_Size;
         }
         else if ( AssertMsg_ConditionFailed(
                     &GCSDK::CMessageList::BInit(void)::_assertionConstants,
-                    "Message collision: %s redefined as %s",
-                    this->m_vecMsgInfo.m_Memory.m_pMemory[v14].pchMsgName,
-                    v6->m_pMsgInfo[v7].pchMsgName) != 0 )
+                    "Message collision: %s redefined as %s") != 0 )
         {
           __debugbreak();
         }
@@ -1163,20 +1159,19 @@ bool __fastcall GCSDK::CMessageList::GetMessage(
   int m_enabled; // eax
   bool v8; // r14
   __int16 v9; // ax
-  __int64 v10; // rdi
-  GCSDK::MsgInfo_t *v11; // rax
-  bool v12; // r12
-  unsigned __int64 v14; // r13
-  ThreadId_t v15; // r14
-  uint64 v16; // rcx
-  unsigned __int64 v17; // rax
+  GCSDK::MsgInfo_t *v10; // rax
+  bool v11; // r12
+  unsigned __int64 v13; // r13
+  ThreadId_t v14; // r14
+  uint64 v15; // rcx
+  unsigned __int64 v16; // rax
   uint64 m_numTimeBaseTicks; // rcx
   __int16 MessageIndex; // ax
   CVProfNode *m_pParent; // rax
   CVProfNode *m_pCurNode; // rax
-  CVProfile::CBudgetGroup *v22; // rax
+  CVProfile::CBudgetGroup *v21; // rax
   ThreadId_t m_TargetThreadId; // [rsp+8h] [rbp-48h]
-  unsigned __int64 v24; // [rsp+10h] [rbp-40h]
+  unsigned __int64 v23; // [rsp+10h] [rbp-40h]
 
   m_enabled = g_VProfCurrentProfile.m_enabled;
   v8 = m_enabled != 0;
@@ -1185,23 +1180,23 @@ bool __fastcall GCSDK::CMessageList::GetMessage(
     if ( ppMsgName != 0 )
       goto LABEL_3;
 LABEL_15:
-    v12 = 0;
+    v11 = 0;
     MessageIndex = GCSDK::CMessageList::GetMessageIndex(this, eMsg);
     if ( MessageIndex == -1 )
     {
 LABEL_6:
       if ( !v8 )
-        return v12;
+        return v11;
       goto LABEL_9;
     }
-    v11 = &this->m_vecMsgInfo.m_Memory.m_pMemory[MessageIndex];
+    v10 = &this->m_vecMsgInfo.m_Memory.m_pMemory[MessageIndex];
 LABEL_5:
-    v12 = (nTypeMask & v11->nFlags) != 0;
+    v11 = (nTypeMask & v10->nFlags) != 0;
     goto LABEL_6;
   }
-  v24 = __rdtsc();
+  v23 = __rdtsc();
   m_TargetThreadId = g_VProfCurrentProfile.m_TargetThreadId;
-  if ( m_TargetThreadId == ThreadGetCurrentId(this) )
+  if ( m_TargetThreadId == ThreadGetCurrentId() )
   {
     m_pCurNode = g_VProfCurrentProfile.m_pCurNode;
     if ( m_pCurNode->m_pszName != "GetMessage" )
@@ -1209,15 +1204,15 @@ LABEL_5:
       m_pCurNode = CVProfNode::GetSubNode(g_VProfCurrentProfile.m_pCurNode, "GetMessage", 0, "Jobs/Coroutines", 4);
       g_VProfCurrentProfile.m_pCurNode = m_pCurNode;
     }
-    v22 = &g_VProfCurrentProfile.m_pBudgetGroups[m_pCurNode->m_BudgetGroupID];
-    v22->m_BudgetFlags |= 4u;
+    v21 = &g_VProfCurrentProfile.m_pBudgetGroups[m_pCurNode->m_BudgetGroupID];
+    v21->m_BudgetFlags |= 4u;
     CVProfNode::EnterScope(g_VProfCurrentProfile.m_pCurNode);
     g_VProfCurrentProfile.m_fAtRoot = 0;
   }
-  v17 = __rdtsc();
+  v16 = __rdtsc();
   m_numTimeBaseTicks = g_VProfCurrentProfile.m_ScopeProfiler.m_numTimeBaseTicks;
   ++g_VProfCurrentProfile.m_ScopeProfiler.m_numCalls;
-  g_VProfCurrentProfile.m_ScopeProfiler.m_numTimeBaseTicks = m_numTimeBaseTicks - v24 + (v17 | (HIDWORD(v17) << 32));
+  g_VProfCurrentProfile.m_ScopeProfiler.m_numTimeBaseTicks = m_numTimeBaseTicks - v23 + (v16 | (HIDWORD(v16) << 32));
   if ( ppMsgName == 0 )
     goto LABEL_15;
 LABEL_3:
@@ -1225,20 +1220,20 @@ LABEL_3:
   v9 = GCSDK::CMessageList::GetMessageIndex(this, eMsg);
   if ( v9 != -1 )
   {
-    v11 = &this->m_vecMsgInfo.m_Memory.m_pMemory[v9];
-    *ppMsgName = v11->pchMsgName;
+    v10 = &this->m_vecMsgInfo.m_Memory.m_pMemory[v9];
+    *ppMsgName = v10->pchMsgName;
     goto LABEL_5;
   }
   *ppMsgName = "Unknown MsgType - Not Found";
-  v12 = 0;
+  v11 = 0;
   if ( !v8 )
-    return v12;
+    return v11;
 LABEL_9:
-  v14 = __rdtsc();
+  v13 = __rdtsc();
   if ( !g_VProfCurrentProfile.m_fAtRoot || g_VProfCurrentProfile.m_enabled != 0 )
   {
-    v15 = g_VProfCurrentProfile.m_TargetThreadId;
-    if ( v15 == ThreadGetCurrentId(v10) )
+    v14 = g_VProfCurrentProfile.m_TargetThreadId;
+    if ( v14 == ThreadGetCurrentId() )
     {
       if ( CVProfNode::ExitScope(g_VProfCurrentProfile.m_pCurNode) != 0 )
       {
@@ -1255,10 +1250,10 @@ LABEL_9:
       g_VProfCurrentProfile.m_fAtRoot = m_pParent == &g_VProfCurrentProfile.m_Root;
     }
   }
-  v16 = g_VProfCurrentProfile.m_ScopeProfiler.m_numTimeBaseTicks;
+  v15 = g_VProfCurrentProfile.m_ScopeProfiler.m_numTimeBaseTicks;
   ++g_VProfCurrentProfile.m_ScopeProfiler.m_numCalls;
-  g_VProfCurrentProfile.m_ScopeProfiler.m_numTimeBaseTicks = v16 - v14 + __rdtsc();
-  return v12;
+  g_VProfCurrentProfile.m_ScopeProfiler.m_numTimeBaseTicks = v15 - v13 + __rdtsc();
+  return v11;
 }
 
 

@@ -9,7 +9,7 @@ void __fastcall CUtlSphereTree::~CUtlSphereTree(CUtlSphereTree *const this)
   CUtlVectorBase<CUtlSphereTree::Node,CUtlMemory<CUtlSphereTree::Node,int> >::CAllocator *p_m_Memory; // r12
 
   v2 = (this->m_Nodes.m_Memory.m_nGrowSize & 0xC0000000) == 0;
-  this->_vptr_CUtlSphereTree = off_3FCF010;
+  this->_vptr_CUtlSphereTree = off_3FCF010;  // vptr: CUtlSphereTree
   this->m_Nodes.m_Size = 0;
   if ( v2 )
   {
@@ -29,7 +29,7 @@ void __fastcall CUtlSphereTree::~CUtlSphereTree(CUtlSphereTree *const this)
   CUtlVectorBase<CUtlSphereTree::Node,CUtlMemory<CUtlSphereTree::Node,int> >::CAllocator *p_m_Memory; // r12
 
   v2 = (this->m_Nodes.m_Memory.m_nGrowSize & 0xC0000000) == 0;
-  this->_vptr_CUtlSphereTree = off_3FCF010;
+  this->_vptr_CUtlSphereTree = off_3FCF010;  // vptr: CUtlSphereTree
   this->m_Nodes.m_Size = 0;
   if ( !v2
     || (p_m_Memory = &this->m_Nodes.m_Memory,

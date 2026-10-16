@@ -453,7 +453,7 @@ void __fastcall CTier1Application::GetAvailableAddonMaps(
 // calls: CAppSystemDict::~CAppSystemDict
 void __fastcall CTier1AppSystemDict::~CTier1AppSystemDict(CTier1AppSystemDict *const this)
 {
-  this->_vptr_CAppSystemDict = off_408C190;
+  this->_vptr_CAppSystemDict = off_408C190;  // vptr: CTier1AppSystemDict
   CAppSystemDict::~CAppSystemDict(this);
 }
 
@@ -462,7 +462,7 @@ void __fastcall CTier1AppSystemDict::~CTier1AppSystemDict(CTier1AppSystemDict *c
 // calls: CAppSystemDict::~CAppSystemDict, operator delete
 void __fastcall CTier1AppSystemDict::~CTier1AppSystemDict(CTier1AppSystemDict *const this)
 {
-  this->_vptr_CAppSystemDict = off_408C190;
+  this->_vptr_CAppSystemDict = off_408C190;  // vptr: CTier1AppSystemDict
   CAppSystemDict::~CAppSystemDict(this);
   operator delete(this);
 }

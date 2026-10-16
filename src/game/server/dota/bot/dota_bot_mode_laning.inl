@@ -4,7 +4,7 @@
 // CDOTA_BotMode_Laning::~CDOTA_BotMode_Laning  (line 15, @0x0000000002826d10, libserver.so)  // inlines: ~CDOTA_BotMode
 void __fastcall CDOTA_BotMode_Laning::~CDOTA_BotMode_Laning(CDOTA_BotMode_Laning *const this)
 {
-  this->_vptr_CDOTA_BotMode = off_42B75F0;
+  this->_vptr_CDOTA_BotMode = off_42B75F0;  // vptr: CDOTA_BotMode
 }
 
 
@@ -12,7 +12,7 @@ void __fastcall CDOTA_BotMode_Laning::~CDOTA_BotMode_Laning(CDOTA_BotMode_Laning
 // calls: operator delete
 void __fastcall CDOTA_BotMode_Laning::~CDOTA_BotMode_Laning(CDOTA_BotMode_Laning *const this)
 {
-  this->_vptr_CDOTA_BotMode = off_42B75F0;
+  this->_vptr_CDOTA_BotMode = off_42B75F0;  // vptr: CDOTA_BotMode
   operator delete(this);
 }
 
@@ -34,7 +34,7 @@ const char *__fastcall CDOTA_BotMode_Laning::GetDebugString(CDOTA_BotMode_Laning
 // CDOTA_BotMode_Laning_Human::~CDOTA_BotMode_Laning_Human  (line 50, @0x0000000002827070, libserver.so)  // inlines: ~CDOTA_BotMode, ~CDOTA_BotMode_Laning
 void __fastcall CDOTA_BotMode_Laning_Human::~CDOTA_BotMode_Laning_Human(CDOTA_BotMode_Laning_Human *const this)
 {
-  this->_vptr_CDOTA_BotMode = off_42B75F0;
+  this->_vptr_CDOTA_BotMode = off_42B75F0;  // vptr: CDOTA_BotMode
 }
 
 
@@ -42,7 +42,7 @@ void __fastcall CDOTA_BotMode_Laning_Human::~CDOTA_BotMode_Laning_Human(CDOTA_Bo
 // calls: operator delete
 void __fastcall CDOTA_BotMode_Laning_Human::~CDOTA_BotMode_Laning_Human(CDOTA_BotMode_Laning_Human *const this)
 {
-  this->_vptr_CDOTA_BotMode = off_42B75F0;
+  this->_vptr_CDOTA_BotMode = off_42B75F0;  // vptr: CDOTA_BotMode
   operator delete(this);
 }
 

@@ -80,7 +80,7 @@ private:
 // CTempEntsSystem::~CTempEntsSystem  (line 76, @0x0000000002f4fa30, libserver.so)  // inlines: ~IPredictionSystem, ~ITempEntsSystem
 void __fastcall CTempEntsSystem::~CTempEntsSystem(CTempEntsSystem *const this)
 {
-  this->_vptr_IPredictionSystem = off_3FFC070;
+  this->_vptr_IPredictionSystem = off_3FFC070;  // vptr: IPredictionSystem
 }
 
 
@@ -88,7 +88,7 @@ void __fastcall CTempEntsSystem::~CTempEntsSystem(CTempEntsSystem *const this)
 // calls: operator delete
 void __fastcall CTempEntsSystem::~CTempEntsSystem(CTempEntsSystem *const this)
 {
-  this->_vptr_IPredictionSystem = off_3FFC070;
+  this->_vptr_IPredictionSystem = off_3FFC070;  // vptr: IPredictionSystem
   operator delete(this);
 }
 

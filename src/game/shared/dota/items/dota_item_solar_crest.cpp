@@ -303,7 +303,7 @@ CEntityInstance *__fastcall CDOTA_Item_Recipe_Solar_Crest::CEntityInstanceEntity
 void __fastcall CDOTA_Item_Recipe_Solar_Crest::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Item_Recipe_Solar_Crest::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -313,7 +313,7 @@ void __fastcall CDOTA_Item_Recipe_Solar_Crest::CEntityInstanceEntityClass::~CEnt
 void __fastcall CDOTA_Item_Recipe_Solar_Crest::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Item_Recipe_Solar_Crest::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -468,7 +468,7 @@ CEntityInstance *__fastcall CDOTA_Item_Solar_Crest::CEntityInstanceEntityClass::
 void __fastcall CDOTA_Item_Solar_Crest::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Item_Solar_Crest::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -478,7 +478,7 @@ void __fastcall CDOTA_Item_Solar_Crest::CEntityInstanceEntityClass::~CEntityInst
 void __fastcall CDOTA_Item_Solar_Crest::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Item_Solar_Crest::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }

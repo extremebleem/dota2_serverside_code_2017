@@ -10,22 +10,19 @@ void __cdecl GLOBAL__sub_I_fieldpath_cpp()
   UNSPECIFIED_LOGGING_COLOR._color[1] = 0;
   UNSPECIFIED_LOGGING_COLOR._color[2] = 0;
   UNSPECIFIED_LOGGING_COLOR._color[3] = 0;
-  if ( `guard variable for'g_HuffmanEncoder == 0 )
-  {
-    `guard variable for'g_HuffmanEncoder = 1;
-    g_HuffmanEncoder.m_pRoot = 0;
-    g_HuffmanEncoder.m_Frequencies.m_Size = 0;
-    g_HuffmanEncoder.m_Frequencies.m_Memory.m_pMemory = 0;
-    g_HuffmanEncoder.m_Frequencies.m_Memory.m_nAllocationCount = 0;
-    g_HuffmanEncoder.m_Frequencies.m_Memory.m_nGrowSize = 0;
-    g_HuffmanEncoder.m_OpCodeToHuffmanLookup.m_Size = 0;
-    g_HuffmanEncoder.m_FixedTree.m_Size = 0;
-    g_HuffmanEncoder.m_FixedTree.m_Memory.m_pMemory = 0;
-    g_HuffmanEncoder.m_FixedTree.m_Memory.m_nAllocationCount = 0;
-    g_HuffmanEncoder.m_FixedTree.m_Memory.m_nGrowSize = 0;
-    CFieldPathHuffmanEncoder::BuildOpCodeCodeToHuffmanLookup(&g_HuffmanEncoder);
-    __cxa_atexit(CFieldPathHuffmanEncoder::~CFieldPathHuffmanEncoder, &g_HuffmanEncoder, &_dso_handle);
-  }
+  // init once: g_HuffmanEncoder
+  g_HuffmanEncoder.m_pRoot = 0;
+  g_HuffmanEncoder.m_Frequencies.m_Size = 0;
+  g_HuffmanEncoder.m_Frequencies.m_Memory.m_pMemory = 0;
+  g_HuffmanEncoder.m_Frequencies.m_Memory.m_nAllocationCount = 0;
+  g_HuffmanEncoder.m_Frequencies.m_Memory.m_nGrowSize = 0;
+  g_HuffmanEncoder.m_OpCodeToHuffmanLookup.m_Size = 0;
+  g_HuffmanEncoder.m_FixedTree.m_Size = 0;
+  g_HuffmanEncoder.m_FixedTree.m_Memory.m_pMemory = 0;
+  g_HuffmanEncoder.m_FixedTree.m_Memory.m_nAllocationCount = 0;
+  g_HuffmanEncoder.m_FixedTree.m_Memory.m_nGrowSize = 0;
+  CFieldPathHuffmanEncoder::BuildOpCodeCodeToHuffmanLookup(&g_HuffmanEncoder);
+  __cxa_atexit(CFieldPathHuffmanEncoder::~CFieldPathHuffmanEncoder, &g_HuffmanEncoder, &_dso_handle);
   CTempPackedFieldPathVec::s_allVectors = 0LL;
   __cxa_atexit(
     CTSSimpleList<CTempPackedFieldPathVec::SListElement>::~CTSSimpleList,
@@ -119,10 +116,8 @@ void __fastcall CFieldPath::ToString(CFieldPath *const this, char *buffer, size_
   __int64 v13; // rcx
   __int64 v14; // rdi
   __int64 v15; // rsi
-  __int64 v16; // r8
-  __int64 v17; // r9
-  int v18; // [rsp+Ch] [rbp-54h]
-  LeafCodeInfo_t v19; // [rsp+10h] [rbp-50h] BYREF
+  int v16; // [rsp+Ch] [rbp-54h]
+  LeafCodeInfo_t v17; // [rsp+10h] [rbp-50h] BYREF
 
   v3 = buffer;
   v4 = &buffer[maxLenInChars];
@@ -132,12 +127,12 @@ void __fastcall CFieldPath::ToString(CFieldPath *const this, char *buffer, size_
   {
     if ( LoggingSystem_IsChannelEnabled(LOG_GENERAL, 4) != 0 )
     {
-      v19.m_szFile = "../public/tier2/fieldpath.h";
-      v19.m_szFunction = "GetPathData";
-      v19.m_nLine = 514;
-      LoggingSystem_Log(LOG_GENERAL, LoggingSeverity_t::LS_ERROR, &v19, "GetPathData failed for read only CFieldPath");
+      v17.m_szFile = "../public/tier2/fieldpath.h";
+      v17.m_szFunction = "GetPathData";
+      v17.m_nLine = 514;
+      LoggingSystem_Log(LOG_GENERAL, LoggingSeverity_t::LS_ERROR, &v17, "GetPathData failed for read only CFieldPath");
     }
-    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v14, v15, v12, v13, v16, v17) != 0 )
+    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v14, v15, v12, v13) != 0 )
       loc_0 = -559038737;
     Plat_ExitProcess(1);
     JUMPOUT(0x312738A);
@@ -148,7 +143,7 @@ void __fastcall CFieldPath::ToString(CFieldPath *const this, char *buffer, size_
     v7 = m_nCount - 1;
     v8 = 1;
     v9 = m_nCount + 1;
-    v18 = v7;
+    v16 = v7;
     do
     {
       V_snprintf(v3, v4 - v3, "%d", v6->u.m_FixedPaths[0].m_nValue);
@@ -157,7 +152,7 @@ void __fastcall CFieldPath::ToString(CFieldPath *const this, char *buffer, size_
       else
         v10 = 0;
       v3 += v10;
-      if ( v8 - 1 != v18 )
+      if ( v8 - 1 != v16 )
       {
         _V_strncat(v3, "/", v4 - v3, 0xFFFFFFFFLL);
         if ( v3 != 0 )
@@ -187,23 +182,19 @@ void __fastcall CFieldPath::FromString(CFieldPath *const this, const char *pchSt
   __int64 v8; // rcx
   __int64 v9; // rdi
   __int64 v10; // rsi
-  __int64 v11; // r8
-  __int64 v12; // r9
-  __int64 v13; // rdx
-  __int64 v14; // rcx
-  __int64 v15; // rdi
-  __int64 v16; // rsi
-  __int64 v17; // r8
-  __int64 v18; // r9
-  int v19; // edx
-  int v20; // ecx
-  int v21; // ebx
-  int v22; // esi
-  int v23; // r8d
-  int v24; // r9d
+  __int64 v11; // rdx
+  __int64 v12; // rcx
+  __int64 v13; // rdi
+  __int64 v14; // rsi
+  int v15; // edx
+  int v16; // ecx
+  int v17; // ebx
+  int v18; // esi
+  int v19; // r8d
+  int v20; // r9d
   CUtlString temp; // [rsp+0h] [rbp-60h] BYREF
-  LeafCodeInfo_t v26; // [rsp+10h] [rbp-50h] BYREF
-  LeafCodeInfo_t v27; // [rsp+30h] [rbp-30h] BYREF
+  LeafCodeInfo_t v22; // [rsp+10h] [rbp-50h] BYREF
+  LeafCodeInfo_t v23; // [rsp+30h] [rbp-30h] BYREF
 
   temp.m_pString = 0;
   CUtlString::Set(&temp, pchString);
@@ -215,16 +206,16 @@ void __fastcall CFieldPath::FromString(CFieldPath *const this, const char *pchSt
     {
       if ( LoggingSystem_IsChannelEnabled(LOG_GENERAL, 4) != 0 )
       {
-        v27.m_szFile = "../public/tier2/fieldpath.h";
-        v27.m_szFunction = "Path_AddToTail";
-        v27.m_nLine = 428;
+        v23.m_szFile = "../public/tier2/fieldpath.h";
+        v23.m_szFunction = "Path_AddToTail";
+        v23.m_nLine = 428;
         LoggingSystem_Log(
           LOG_GENERAL,
           LoggingSeverity_t::LS_ERROR,
-          &v27,
+          &v23,
           "Path_AddToTail failed for read only CFieldPath");
       }
-      if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v9, v10, v7, v8, v11, v12) != 0 )
+      if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v9, v10, v7, v8) != 0 )
         loc_0 = -559038737;
       Plat_ExitProcess(1);
       break;
@@ -234,22 +225,22 @@ void __fastcall CFieldPath::FromString(CFieldPath *const this, const char *pchSt
     {
       if ( LoggingSystem_IsChannelEnabled(LOG_GENERAL, 4) != 0 )
       {
-        v26.m_szFile = "../public/tier2/fieldpath.h";
-        v26.m_szFunction = "Path_AddToTail";
-        v26.m_nLine = 425;
+        v22.m_szFile = "../public/tier2/fieldpath.h";
+        v22.m_szFunction = "Path_AddToTail";
+        v22.m_nLine = 425;
         LoggingSystem_Log(
           LOG_GENERAL,
           LoggingSeverity_t::LS_ERROR,
-          &v26,
+          &v22,
           "Path_AddToTail failed, depth already == DEFAULT_MAX_PATH_DEPTH(%d)",
           6);
       }
-      if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v15, v16, v13, v14, v17, v18) != 0 )
+      if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v13, v14, v11, v12) != 0 )
         loc_0 = -559038737;
-      v21 = Plat_ExitProcess(1);
+      v17 = Plat_ExitProcess(1);
       if ( temp.m_pString != 0 )
         CUtlString::FreeMemoryBlock(&temp);
-      Unwind_Resume(v21, v22, v19, v20, v23, v24);
+      Unwind_Resume(v17, v18, v15, v16, v19, v20);
     }
     this->m_nCount = m_nCount + 1;
     this->u.m_FixedPaths[m_nCount].m_nValue = v6;
@@ -284,7 +275,7 @@ void __fastcall FieldOp_Write_PlusOne(CFieldPath *const from, const CFieldPath *
       goto LABEL_7;
     while ( 1 )
     {
-      if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v7, v8, v5, v6, v9, v10) != 0 )
+      if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v7, v8, v5, v6) != 0 )
         loc_0 = -559038737;
       Plat_ExitProcess(1);
 LABEL_7:
@@ -329,7 +320,7 @@ void __fastcall FieldOp_Write_PlusTwo(CFieldPath *const from, const CFieldPath *
       goto LABEL_7;
     while ( 1 )
     {
-      if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v7, v8, v5, v6, v9, v10) != 0 )
+      if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v7, v8, v5, v6) != 0 )
         loc_0 = -559038737;
       Plat_ExitProcess(1);
 LABEL_7:
@@ -374,7 +365,7 @@ void __fastcall FieldOp_Write_PlusThree(CFieldPath *const from, const CFieldPath
       goto LABEL_7;
     while ( 1 )
     {
-      if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v7, v8, v5, v6, v9, v10) != 0 )
+      if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v7, v8, v5, v6) != 0 )
         loc_0 = -559038737;
       Plat_ExitProcess(1);
 LABEL_7:
@@ -419,7 +410,7 @@ void __fastcall FieldOp_Write_PlusFour(CFieldPath *const from, const CFieldPath 
       goto LABEL_7;
     while ( 1 )
     {
-      if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v7, v8, v5, v6, v9, v10) != 0 )
+      if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v7, v8, v5, v6) != 0 )
         loc_0 = -559038737;
       Plat_ExitProcess(1);
 LABEL_7:
@@ -511,7 +502,7 @@ void __fastcall FieldOp_Write_PlusN(CFieldPath *const from, const CFieldPath *co
         v23,
         v24);
     }
-    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v21, v22, v19, v20, v23, v24) != 0 )
+    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v21, v22, v19, v20) != 0 )
       loc_0 = -559038737;
     Plat_ExitProcess(1);
 LABEL_14:
@@ -732,7 +723,7 @@ void __fastcall FieldOp_Write_PushOneLeftDeltaZeroRightZero(
     while ( 1 )
     {
 LABEL_5:
-      if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v6, v7, v4, v5, v8, v9) != 0 )
+      if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v6, v7, v4, v5) != 0 )
         loc_0 = -559038737;
       Plat_ExitProcess(1);
 LABEL_8:
@@ -853,7 +844,7 @@ void __fastcall FieldOp_Write_PushOneLeftDeltaZeroRightNonZero(
         6);
     }
 LABEL_13:
-    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v19, v20, v17, v18, v21, v22) != 0 )
+    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v19, v20, v17, v18) != 0 )
       loc_0 = -559038737;
     v3 = Plat_ExitProcess(1);
 LABEL_16:
@@ -1064,19 +1055,21 @@ void __fastcall FieldOp_Write_PushOneLeftDeltaOneRightZero(
   __int64 v7; // rsi
   __int64 v8; // r8
   __int64 v9; // r9
-  LeafCodeInfo_t v10; // [rsp+0h] [rbp-30h] BYREF
+  __int64 v10; // r8
+  __int64 v11; // r9
+  LeafCodeInfo_t v12; // [rsp+0h] [rbp-30h] BYREF
 
   if ( from->m_bUsingExternalPaths )
   {
     if ( LoggingSystem_IsChannelEnabled(LOG_GENERAL, 4) != 0 )
     {
-      v10.m_szFile = "../public/tier2/fieldpath.h";
-      v10.m_szFunction = "GetPathData";
-      v10.m_nLine = 514;
+      v12.m_szFile = "../public/tier2/fieldpath.h";
+      v12.m_szFunction = "GetPathData";
+      v12.m_nLine = 514;
       LoggingSystem_Log(
         LOG_GENERAL,
         LoggingSeverity_t::LS_ERROR,
-        &v10,
+        &v12,
         "GetPathData failed for read only CFieldPath",
         v8,
         v9);
@@ -1088,16 +1081,16 @@ void __fastcall FieldOp_Write_PushOneLeftDeltaOneRightZero(
   {
     if ( LoggingSystem_IsChannelEnabled(LOG_GENERAL, 4) != 0 )
     {
-      v10.m_szFile = "../public/tier2/fieldpath.h";
-      v10.m_szFunction = "Path_AddToTail";
-      v10.m_nLine = 428;
+      v12.m_szFile = "../public/tier2/fieldpath.h";
+      v12.m_szFunction = "Path_AddToTail";
+      v12.m_nLine = 428;
       LoggingSystem_Log(
         LOG_GENERAL,
         LoggingSeverity_t::LS_ERROR,
-        &v10,
+        &v12,
         "Path_AddToTail failed for read only CFieldPath",
-        v8,
-        v9);
+        v10,
+        v11);
     }
     goto LABEL_9;
   }
@@ -1108,18 +1101,18 @@ void __fastcall FieldOp_Write_PushOneLeftDeltaOneRightZero(
     {
       if ( LoggingSystem_IsChannelEnabled(LOG_GENERAL, 4) != 0 )
       {
-        v10.m_szFile = "../public/tier2/fieldpath.h";
-        v10.m_szFunction = "Path_AddToTail";
-        v10.m_nLine = 425;
+        v12.m_szFile = "../public/tier2/fieldpath.h";
+        v12.m_szFunction = "Path_AddToTail";
+        v12.m_nLine = 425;
         LoggingSystem_Log(
           LOG_GENERAL,
           LoggingSeverity_t::LS_ERROR,
-          &v10,
+          &v12,
           "Path_AddToTail failed, depth already == DEFAULT_MAX_PATH_DEPTH(%d)",
           6);
       }
 LABEL_9:
-      if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v6, v7, v4, v5, v8, v9) != 0 )
+      if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v6, v7, v4, v5) != 0 )
         loc_0 = -559038737;
       Plat_ExitProcess(1);
     }
@@ -1156,33 +1149,35 @@ void __fastcall FieldOp_Write_PushOneLeftDeltaOneRightNonZero(
   __int64 v19; // rsi
   __int64 v20; // r8
   __int64 v21; // r9
+  __int64 v22; // r8
+  __int64 v23; // r9
   int m_iCurBit; // ecx
   int m_nDataBits; // eax
-  int v24; // esi
-  uint32 *v25; // rcx
-  int v26; // eax
-  int v27; // esi
-  uint32 *v28; // rcx
-  int v29; // eax
-  int v30; // esi
-  uint32 *v31; // rcx
-  int v32; // eax
-  int v33; // esi
-  uint32 *v34; // rcx
-  int v35; // eax
-  LeafCodeInfo_t v36; // [rsp+0h] [rbp-30h] BYREF
+  int v26; // esi
+  uint32 *v27; // rcx
+  int v28; // eax
+  int v29; // esi
+  uint32 *v30; // rcx
+  int v31; // eax
+  int v32; // esi
+  uint32 *v33; // rcx
+  int v34; // eax
+  int v35; // esi
+  uint32 *v36; // rcx
+  int v37; // eax
+  LeafCodeInfo_t v38; // [rsp+0h] [rbp-30h] BYREF
 
   if ( from->m_bUsingExternalPaths )
   {
     if ( LoggingSystem_IsChannelEnabled(LOG_GENERAL, 4) != 0 )
     {
-      v36.m_szFile = "../public/tier2/fieldpath.h";
-      v36.m_szFunction = "GetPathData";
-      v36.m_nLine = 514;
+      v38.m_szFile = "../public/tier2/fieldpath.h";
+      v38.m_szFunction = "GetPathData";
+      v38.m_nLine = 514;
       LoggingSystem_Log(
         LOG_GENERAL,
         LoggingSeverity_t::LS_ERROR,
-        &v36,
+        &v38,
         "GetPathData failed for read only CFieldPath",
         v20,
         v21);
@@ -1199,16 +1194,16 @@ void __fastcall FieldOp_Write_PushOneLeftDeltaOneRightNonZero(
 LABEL_14:
     if ( LoggingSystem_IsChannelEnabled(LOG_GENERAL, 4) != 0 )
     {
-      v36.m_szFile = "../public/tier2/fieldpath.h";
-      v36.m_szFunction = "Path_AddToTail";
-      v36.m_nLine = 428;
+      v38.m_szFile = "../public/tier2/fieldpath.h";
+      v38.m_szFunction = "Path_AddToTail";
+      v38.m_nLine = 428;
       LoggingSystem_Log(
         LOG_GENERAL,
         LoggingSeverity_t::LS_ERROR,
-        &v36,
+        &v38,
         "Path_AddToTail failed for read only CFieldPath",
-        v20,
-        v21);
+        v22,
+        v23);
     }
     goto LABEL_16;
   }
@@ -1221,18 +1216,18 @@ LABEL_4:
   {
     if ( LoggingSystem_IsChannelEnabled(LOG_GENERAL, 4) != 0 )
     {
-      v36.m_szFile = "../public/tier2/fieldpath.h";
-      v36.m_szFunction = "Path_AddToTail";
-      v36.m_nLine = 425;
+      v38.m_szFile = "../public/tier2/fieldpath.h";
+      v38.m_szFunction = "Path_AddToTail";
+      v38.m_nLine = 425;
       LoggingSystem_Log(
         LOG_GENERAL,
         LoggingSeverity_t::LS_ERROR,
-        &v36,
+        &v38,
         "Path_AddToTail failed, depth already == DEFAULT_MAX_PATH_DEPTH(%d)",
         6);
     }
 LABEL_16:
-    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v18, v19, v16, v17, v20, v21) != 0 )
+    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v18, v19, v16, v17) != 0 )
       loc_0 = -559038737;
     Plat_ExitProcess(1);
 LABEL_19:
@@ -1260,12 +1255,12 @@ LABEL_21:
           pWriteBuf->m_iCurBit = m_iCurBit + 4;
           v8 = m_iCurBit & 0x1F;
           v10 = &pWriteBuf->m_pData[m_iCurBit >> 5];
-          v33 = __ROL4__(m_nValue, m_iCurBit & 0x1F);
+          v35 = __ROL4__(m_nValue, m_iCurBit & 0x1F);
           v11 = *v10;
-          v34 = &v10[(7u >> (31 - (m_iCurBit & 0x1F))) & 1];
-          v35 = v33 ^ *v34;
-          v14 = *v10 ^ v33;
-          *v34 ^= (7u >> (31 - v8)) & v35;
+          v36 = &v10[(7u >> (31 - (m_iCurBit & 0x1F))) & 1];
+          v37 = v35 ^ *v36;
+          v14 = *v10 ^ v35;
+          *v36 ^= (7u >> (31 - v8)) & v37;
           v15 = 15;
           goto LABEL_10;
         }
@@ -1316,12 +1311,12 @@ LABEL_42:
               pWriteBuf->m_iCurBit = m_iCurBit + 17;
               v8 = m_iCurBit & 0x1F;
               v10 = &pWriteBuf->m_pData[m_iCurBit >> 5];
-              v30 = __ROL4__(m_nValue, m_iCurBit & 0x1F);
+              v32 = __ROL4__(m_nValue, m_iCurBit & 0x1F);
               v11 = *v10;
-              v31 = &v10[(0xFFFFu >> (31 - (m_iCurBit & 0x1F))) & 1];
-              v32 = v30 ^ *v31;
-              v14 = *v10 ^ v30;
-              *v31 ^= (0xFFFFu >> (31 - v8)) & v32;
+              v33 = &v10[(0xFFFFu >> (31 - (m_iCurBit & 0x1F))) & 1];
+              v34 = v32 ^ *v33;
+              v14 = *v10 ^ v32;
+              *v33 ^= (0xFFFFu >> (31 - v8)) & v34;
               v15 = 0x1FFFF;
               goto LABEL_10;
             }
@@ -1339,12 +1334,12 @@ LABEL_37:
               pWriteBuf->m_iCurBit = m_iCurBit + 31;
               v8 = m_iCurBit & 0x1F;
               v10 = &pWriteBuf->m_pData[m_iCurBit >> 5];
-              v27 = __ROL4__(m_nValue, m_iCurBit & 0x1F);
+              v29 = __ROL4__(m_nValue, m_iCurBit & 0x1F);
               v11 = *v10;
-              v28 = &v10[(0x3FFFFFFFu >> (31 - (m_iCurBit & 0x1F))) & 1];
-              v29 = v27 ^ *v28;
-              v14 = *v10 ^ v27;
-              *v28 ^= (0x3FFFFFFFu >> (31 - v8)) & v29;
+              v30 = &v10[(0x3FFFFFFFu >> (31 - (m_iCurBit & 0x1F))) & 1];
+              v31 = v29 ^ *v30;
+              v14 = *v10 ^ v29;
+              *v30 ^= (0x3FFFFFFFu >> (31 - v8)) & v31;
               v15 = 0x7FFFFFFF;
               goto LABEL_10;
             }
@@ -1381,12 +1376,12 @@ LABEL_27:
         pWriteBuf->m_iCurBit = m_iCurBit + 10;
         v8 = m_iCurBit & 0x1F;
         v10 = &pWriteBuf->m_pData[m_iCurBit >> 5];
-        v24 = __ROL4__(m_nValue, m_iCurBit & 0x1F);
+        v26 = __ROL4__(m_nValue, m_iCurBit & 0x1F);
         v11 = *v10;
-        v25 = &v10[(0x1FFu >> (31 - (m_iCurBit & 0x1F))) & 1];
-        v26 = v24 ^ *v25;
-        v14 = *v10 ^ v24;
-        *v25 ^= (0x1FFu >> (31 - v8)) & v26;
+        v27 = &v10[(0x1FFu >> (31 - (m_iCurBit & 0x1F))) & 1];
+        v28 = v26 ^ *v27;
+        v14 = *v10 ^ v26;
+        *v27 ^= (0x1FFu >> (31 - v8)) & v28;
         v15 = 1023;
         goto LABEL_10;
       }
@@ -1467,16 +1462,18 @@ void __fastcall FieldOp_Write_PushOneLeftDeltaNRightZero(
   __int64 v27; // rsi
   __int64 v28; // r8
   __int64 v29; // r9
-  int v30; // edx
-  uint32 *v31; // rcx
-  int v32; // esi
-  int v33; // edx
-  uint32 *v34; // rcx
-  int v35; // esi
-  int v36; // edx
-  uint32 *v37; // rcx
-  int v38; // esi
-  LeafCodeInfo_t v39; // [rsp+0h] [rbp-30h] BYREF
+  __int64 v30; // r8
+  __int64 v31; // r9
+  int v32; // edx
+  uint32 *v33; // rcx
+  int v34; // esi
+  int v35; // edx
+  uint32 *v36; // rcx
+  int v37; // esi
+  int v38; // edx
+  uint32 *v39; // rcx
+  int v40; // esi
+  LeafCodeInfo_t v41; // [rsp+0h] [rbp-30h] BYREF
 
   v3 = from->m_nCount - 1;
   v4 = (to + 2 * v3);
@@ -1512,13 +1509,13 @@ LABEL_11:
 LABEL_27:
       if ( LoggingSystem_IsChannelEnabled(LOG_GENERAL, 4) != 0 )
       {
-        v39.m_szFile = "../public/tier2/fieldpath.h";
-        v39.m_szFunction = "GetPathData";
-        v39.m_nLine = 514;
+        v41.m_szFile = "../public/tier2/fieldpath.h";
+        v41.m_szFunction = "GetPathData";
+        v41.m_nLine = 514;
         LoggingSystem_Log(
           LOG_GENERAL,
           LoggingSeverity_t::LS_ERROR,
-          &v39,
+          &v41,
           "GetPathData failed for read only CFieldPath",
           v28,
           v29);
@@ -1526,22 +1523,22 @@ LABEL_27:
       while ( 1 )
       {
 LABEL_29:
-        if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v26, v27, v24, v25, v28, v29) != 0 )
+        if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v26, v27, v24, v25) != 0 )
           loc_0 = -559038737;
         Plat_ExitProcess(1);
 LABEL_32:
         if ( LoggingSystem_IsChannelEnabled(LOG_GENERAL, 4) != 0 )
         {
-          v39.m_szFile = "../public/tier2/fieldpath.h";
-          v39.m_szFunction = "Path_AddToTail";
-          v39.m_nLine = 428;
+          v41.m_szFile = "../public/tier2/fieldpath.h";
+          v41.m_szFunction = "Path_AddToTail";
+          v41.m_nLine = 428;
           LoggingSystem_Log(
             LOG_GENERAL,
             LoggingSeverity_t::LS_ERROR,
-            &v39,
+            &v41,
             "Path_AddToTail failed for read only CFieldPath",
-            v28,
-            v29);
+            v30,
+            v31);
         }
       }
     }
@@ -1602,12 +1599,12 @@ LABEL_45:
             pWriteBuf->m_iCurBit = v19 + 17;
             v10 = v19 & 0x1F;
             v11 = &pWriteBuf->m_pData[v19 >> 5];
-            v33 = __ROL4__(v7, v19 & 0x1F);
+            v35 = __ROL4__(v7, v19 & 0x1F);
             v13 = *v11;
-            v34 = &v11[(0xFFFFu >> (31 - (v19 & 0x1F))) & 1];
-            v35 = v33 ^ *v34;
-            v16 = *v11 ^ v33;
-            *v34 ^= (0xFFFFu >> (31 - v10)) & v35;
+            v36 = &v11[(0xFFFFu >> (31 - (v19 & 0x1F))) & 1];
+            v37 = v35 ^ *v36;
+            v16 = *v11 ^ v35;
+            *v36 ^= (0xFFFFu >> (31 - v10)) & v37;
             v17 = 0x1FFFF;
             goto LABEL_10;
           }
@@ -1625,12 +1622,12 @@ LABEL_39:
             pWriteBuf->m_iCurBit = v19 + 31;
             v10 = v19 & 0x1F;
             v11 = &pWriteBuf->m_pData[v19 >> 5];
-            v30 = __ROL4__(v7, v19 & 0x1F);
+            v32 = __ROL4__(v7, v19 & 0x1F);
             v13 = *v11;
-            v31 = &v11[(0x3FFFFFFFu >> (31 - (v19 & 0x1F))) & 1];
-            v32 = v30 ^ *v31;
-            v16 = *v11 ^ v30;
-            *v31 ^= (0x3FFFFFFFu >> (31 - v10)) & v32;
+            v33 = &v11[(0x3FFFFFFFu >> (31 - (v19 & 0x1F))) & 1];
+            v34 = v32 ^ *v33;
+            v16 = *v11 ^ v32;
+            *v33 ^= (0x3FFFFFFFu >> (31 - v10)) & v34;
             v17 = 0x7FFFFFFF;
             goto LABEL_10;
           }
@@ -1667,12 +1664,12 @@ LABEL_23:
         pWriteBuf->m_iCurBit = v19 + 10;
         v10 = v19 & 0x1F;
         v11 = &pWriteBuf->m_pData[v19 >> 5];
-        v36 = __ROL4__(v7, v19 & 0x1F);
+        v38 = __ROL4__(v7, v19 & 0x1F);
         v13 = *v11;
-        v37 = &v11[(0x1FFu >> (31 - (v19 & 0x1F))) & 1];
-        v38 = v36 ^ *v37;
-        v16 = *v11 ^ v36;
-        *v37 ^= (0x1FFu >> (31 - v10)) & v38;
+        v39 = &v11[(0x1FFu >> (31 - (v19 & 0x1F))) & 1];
+        v40 = v38 ^ *v39;
+        v16 = *v11 ^ v38;
+        *v39 ^= (0x1FFu >> (31 - v10)) & v40;
         v17 = 1023;
         goto LABEL_10;
       }
@@ -1723,13 +1720,13 @@ LABEL_12:
   {
     if ( LoggingSystem_IsChannelEnabled(LOG_GENERAL, 4) != 0 )
     {
-      v39.m_szFile = "../public/tier2/fieldpath.h";
-      v39.m_szFunction = "Path_AddToTail";
-      v39.m_nLine = 425;
+      v41.m_szFile = "../public/tier2/fieldpath.h";
+      v41.m_szFunction = "Path_AddToTail";
+      v41.m_nLine = 425;
       LoggingSystem_Log(
         LOG_GENERAL,
         LoggingSeverity_t::LS_ERROR,
-        &v39,
+        &v41,
         "Path_AddToTail failed, depth already == DEFAULT_MAX_PATH_DEPTH(%d)",
         6);
     }
@@ -1787,41 +1784,39 @@ void __fastcall FieldOp_Write_PushOneLeftDeltaNRightNonZero(
   __int64 v41; // rcx
   __int64 v42; // rdi
   __int64 v43; // rsi
-  __int64 v44; // r8
-  __int64 v45; // r9
-  int v46; // ecx
-  int v47; // eax
-  int v48; // ebx
-  uint32 *v49; // rcx
-  int v50; // eax
-  int v51; // eax
-  int v52; // ecx
-  int v53; // r11d
-  uint32 *v54; // rcx
-  int v55; // esi
-  int v56; // ebx
-  uint32 *v57; // rcx
-  int v58; // eax
-  int v59; // ecx
-  int v60; // r11d
-  uint32 *v61; // rcx
-  int v62; // esi
-  int v63; // eax
-  int v64; // ebx
-  uint32 *v65; // rcx
-  int v66; // eax
-  int v67; // r11d
-  uint32 *v68; // rcx
-  int v69; // esi
-  int v70; // ebx
-  uint32 *v71; // rcx
-  int v72; // eax
-  int v73; // [rsp+0h] [rbp-60h]
+  int v44; // ecx
+  int v45; // eax
+  int v46; // ebx
+  uint32 *v47; // rcx
+  int v48; // eax
+  int v49; // eax
+  int v50; // ecx
+  int v51; // r11d
+  uint32 *v52; // rcx
+  int v53; // esi
+  int v54; // ebx
+  uint32 *v55; // rcx
+  int v56; // eax
+  int v57; // ecx
+  int v58; // r11d
+  uint32 *v59; // rcx
+  int v60; // esi
+  int v61; // eax
+  int v62; // ebx
+  uint32 *v63; // rcx
+  int v64; // eax
+  int v65; // r11d
+  uint32 *v66; // rcx
+  int v67; // esi
+  int v68; // ebx
+  uint32 *v69; // rcx
+  int v70; // eax
+  int v71; // [rsp+0h] [rbp-60h]
   bf_write *pWriteBufa; // [rsp+8h] [rbp-58h]
   bf_write *pWriteBufb; // [rsp+8h] [rbp-58h]
   bf_write *pWriteBufc; // [rsp+8h] [rbp-58h]
   bf_write *pWriteBufd; // [rsp+8h] [rbp-58h]
-  LeafCodeInfo_t v78; // [rsp+10h] [rbp-50h] BYREF
+  LeafCodeInfo_t v76; // [rsp+10h] [rbp-50h] BYREF
 
   m_nCount = from->m_nCount;
   v6 = m_nCount;
@@ -1904,12 +1899,12 @@ LABEL_29:
           pWriteBuf->m_iCurBit = m_iCurBit + 10;
           v15 = m_iCurBit & 0x1F;
           v16 = &pWriteBuf->m_pData[m_iCurBit >> 5];
-          v67 = __ROL4__(v14, m_iCurBit & 0x1F);
+          v65 = __ROL4__(v14, m_iCurBit & 0x1F);
           v18 = *v16;
-          v68 = &v16[(0x1FFu >> (31 - (m_iCurBit & 0x1F))) & 1];
-          v69 = v67 ^ *v68;
-          v21 = *v16 ^ v67;
-          *v68 ^= (0x1FFu >> (31 - v15)) & v69;
+          v66 = &v16[(0x1FFu >> (31 - (m_iCurBit & 0x1F))) & 1];
+          v67 = v65 ^ *v66;
+          v21 = *v16 ^ v65;
+          *v66 ^= (0x1FFu >> (31 - v15)) & v67;
           v22 = 1023;
 LABEL_10:
           *v16 = v18 ^ (v22 << v15) & v21;
@@ -1918,31 +1913,31 @@ LABEL_10:
 LABEL_33:
           if ( LoggingSystem_IsChannelEnabled(LOG_GENERAL, 4) != 0 )
           {
-            v78.m_szFile = "../public/tier2/fieldpath.h";
-            v78.m_szFunction = "GetPathData";
-            v78.m_nLine = 514;
+            v76.m_szFile = "../public/tier2/fieldpath.h";
+            v76.m_szFunction = "GetPathData";
+            v76.m_nLine = 514;
             LoggingSystem_Log(
               LOG_GENERAL,
               LoggingSeverity_t::LS_ERROR,
-              &v78,
+              &v76,
               "GetPathData failed for read only CFieldPath");
           }
           while ( 1 )
           {
 LABEL_35:
-            if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v42, v43, v40, v41, v44, v45) != 0 )
+            if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v42, v43, v40, v41) != 0 )
               loc_0 = -559038737;
             Plat_ExitProcess(1);
 LABEL_38:
             if ( LoggingSystem_IsChannelEnabled(LOG_GENERAL, 4) != 0 )
             {
-              v78.m_szFile = "../public/tier2/fieldpath.h";
-              v78.m_szFunction = "Path_AddToTail";
-              v78.m_nLine = 428;
+              v76.m_szFile = "../public/tier2/fieldpath.h";
+              v76.m_szFunction = "Path_AddToTail";
+              v76.m_nLine = 428;
               LoggingSystem_Log(
                 LOG_GENERAL,
                 LoggingSeverity_t::LS_ERROR,
-                &v78,
+                &v76,
                 "Path_AddToTail failed for read only CFieldPath");
             }
           }
@@ -1952,7 +1947,7 @@ LABEL_38:
           pWriteBuf->m_pData[m_iCurBit >> 5] &= ~(1 << m_iCurBit);
           ++pWriteBuf->m_iCurBit;
 LABEL_70:
-          v73 = v12 - 2;
+          v71 = v12 - 2;
           if ( v14 > 0x1FFFF )
           {
             pWriteBufc = pWriteBuf;
@@ -1960,18 +1955,18 @@ LABEL_70:
             pWriteBuf = pWriteBufc;
             v6 = m_nCount;
             m_nDataBits = pWriteBufc->m_nDataBits;
-            v59 = pWriteBufc->m_iCurBit;
-            if ( m_nDataBits - v59 <= 30 )
+            v57 = pWriteBufc->m_iCurBit;
+            if ( m_nDataBits - v57 <= 30 )
               goto LABEL_32;
-            pWriteBufc->m_iCurBit = v59 + 31;
-            v15 = v59 & 0x1F;
-            v16 = &pWriteBufc->m_pData[v59 >> 5];
-            v60 = __ROL4__(v73, v59 & 0x1F);
+            pWriteBufc->m_iCurBit = v57 + 31;
+            v15 = v57 & 0x1F;
+            v16 = &pWriteBufc->m_pData[v57 >> 5];
+            v58 = __ROL4__(v71, v57 & 0x1F);
             v18 = *v16;
-            v61 = &v16[(0x3FFFFFFFu >> (31 - (v59 & 0x1F))) & 1];
-            v62 = v60 ^ *v61;
-            v21 = *v16 ^ v60;
-            *v61 ^= (0x3FFFFFFFu >> (31 - v15)) & v62;
+            v59 = &v16[(0x3FFFFFFFu >> (31 - (v57 & 0x1F))) & 1];
+            v60 = v58 ^ *v59;
+            v21 = *v16 ^ v58;
+            *v59 ^= (0x3FFFFFFFu >> (31 - v15)) & v60;
             v22 = 0x7FFFFFFF;
           }
           else
@@ -1981,18 +1976,18 @@ LABEL_70:
             pWriteBuf = pWriteBufb;
             v6 = m_nCount;
             m_nDataBits = pWriteBufb->m_nDataBits;
-            v52 = pWriteBufb->m_iCurBit;
-            if ( m_nDataBits - v52 <= 16 )
+            v50 = pWriteBufb->m_iCurBit;
+            if ( m_nDataBits - v50 <= 16 )
               goto LABEL_32;
-            pWriteBufb->m_iCurBit = v52 + 17;
-            v15 = v52 & 0x1F;
-            v16 = &pWriteBufb->m_pData[v52 >> 5];
-            v53 = __ROL4__(v73, v52 & 0x1F);
+            pWriteBufb->m_iCurBit = v50 + 17;
+            v15 = v50 & 0x1F;
+            v16 = &pWriteBufb->m_pData[v50 >> 5];
+            v51 = __ROL4__(v71, v50 & 0x1F);
             v18 = *v16;
-            v54 = &v16[(0xFFFFu >> (31 - (v52 & 0x1F))) & 1];
-            v55 = v53 ^ *v54;
-            v21 = *v16 ^ v53;
-            *v54 ^= (0xFFFFu >> (31 - v15)) & v55;
+            v52 = &v16[(0xFFFFu >> (31 - (v50 & 0x1F))) & 1];
+            v53 = v51 ^ *v52;
+            v21 = *v16 ^ v51;
+            *v52 ^= (0xFFFFu >> (31 - v15)) & v53;
             v22 = 0x1FFFF;
           }
           goto LABEL_10;
@@ -2051,13 +2046,13 @@ LABEL_11:
   {
     if ( LoggingSystem_IsChannelEnabled(LOG_GENERAL, 4) != 0 )
     {
-      v78.m_szFile = "../public/tier2/fieldpath.h";
-      v78.m_szFunction = "Path_AddToTail";
-      v78.m_nLine = 425;
+      v76.m_szFile = "../public/tier2/fieldpath.h";
+      v76.m_szFunction = "Path_AddToTail";
+      v76.m_nLine = 425;
       LoggingSystem_Log(
         LOG_GENERAL,
         LoggingSeverity_t::LS_ERROR,
-        &v78,
+        &v76,
         "Path_AddToTail failed, depth already == DEFAULT_MAX_PATH_DEPTH(%d)",
         6);
     }
@@ -2099,41 +2094,41 @@ LABEL_20:
     }
     goto LABEL_57;
   }
-  v46 = pWriteBuf->m_iCurBit;
-  v47 = pWriteBuf->m_nDataBits;
-  if ( v46 >= v47 )
+  v44 = pWriteBuf->m_iCurBit;
+  v45 = pWriteBuf->m_nDataBits;
+  if ( v44 >= v45 )
   {
     pWriteBuf->m_bOverflow = 1;
     if ( v26 <= 0xF )
     {
 LABEL_43:
-      if ( v46 >= v47 )
+      if ( v44 >= v45 )
       {
         pWriteBuf->m_bOverflow = 1;
       }
       else
       {
-        pWriteBuf->m_pData[v46 >> 5] |= 1 << v46;
-        v46 = pWriteBuf->m_iCurBit + 1;
-        v47 = pWriteBuf->m_nDataBits;
-        pWriteBuf->m_iCurBit = v46;
+        pWriteBuf->m_pData[v44 >> 5] |= 1 << v44;
+        v44 = pWriteBuf->m_iCurBit + 1;
+        v45 = pWriteBuf->m_nDataBits;
+        pWriteBuf->m_iCurBit = v44;
       }
-      if ( v47 - v46 > 3 )
+      if ( v45 - v44 > 3 )
       {
-        pWriteBuf->m_iCurBit = v46 + 4;
-        v29 = v46 & 0x1F;
-        v31 = &pWriteBuf->m_pData[v46 >> 5];
-        v56 = __ROL4__(v26, v46 & 0x1F);
+        pWriteBuf->m_iCurBit = v44 + 4;
+        v29 = v44 & 0x1F;
+        v31 = &pWriteBuf->m_pData[v44 >> 5];
+        v54 = __ROL4__(v26, v44 & 0x1F);
         v32 = *v31;
-        v57 = &v31[(7u >> (31 - (v46 & 0x1F))) & 1];
-        v58 = v56 ^ *v57;
-        v35 = *v31 ^ v56;
-        *v57 ^= (7u >> (31 - v29)) & v58;
+        v55 = &v31[(7u >> (31 - (v44 & 0x1F))) & 1];
+        v56 = v54 ^ *v55;
+        v35 = *v31 ^ v54;
+        *v55 ^= (7u >> (31 - v29)) & v56;
         v36 = 15;
         goto LABEL_20;
       }
 LABEL_46:
-      pWriteBuf->m_iCurBit = v47;
+      pWriteBuf->m_iCurBit = v45;
       pWriteBuf->m_bOverflow = 1;
       return;
     }
@@ -2142,28 +2137,28 @@ LABEL_65:
     if ( v26 <= 0x3FF )
     {
 LABEL_49:
-      if ( v47 <= v46 )
+      if ( v45 <= v44 )
       {
         pWriteBuf->m_bOverflow = 1;
       }
       else
       {
-        pWriteBuf->m_pData[v46 >> 5] |= 1 << v46;
-        v46 = pWriteBuf->m_iCurBit + 1;
-        v47 = pWriteBuf->m_nDataBits;
-        pWriteBuf->m_iCurBit = v46;
+        pWriteBuf->m_pData[v44 >> 5] |= 1 << v44;
+        v44 = pWriteBuf->m_iCurBit + 1;
+        v45 = pWriteBuf->m_nDataBits;
+        pWriteBuf->m_iCurBit = v44;
       }
-      if ( v47 - v46 > 9 )
+      if ( v45 - v44 > 9 )
       {
-        pWriteBuf->m_iCurBit = v46 + 10;
-        v29 = v46 & 0x1F;
-        v31 = &pWriteBuf->m_pData[v46 >> 5];
-        v48 = __ROL4__(v26, v46 & 0x1F);
+        pWriteBuf->m_iCurBit = v44 + 10;
+        v29 = v44 & 0x1F;
+        v31 = &pWriteBuf->m_pData[v44 >> 5];
+        v46 = __ROL4__(v26, v44 & 0x1F);
         v32 = *v31;
-        v49 = &v31[(0x1FFu >> (31 - (v46 & 0x1F))) & 1];
-        v50 = v48 ^ *v49;
-        v35 = *v31 ^ v48;
-        *v49 ^= (0x1FFu >> (31 - v29)) & v50;
+        v47 = &v31[(0x1FFu >> (31 - (v44 & 0x1F))) & 1];
+        v48 = v46 ^ *v47;
+        v35 = *v31 ^ v46;
+        *v47 ^= (0x1FFu >> (31 - v29)) & v48;
         v36 = 1023;
         goto LABEL_20;
       }
@@ -2171,23 +2166,23 @@ LABEL_49:
     }
     goto LABEL_66;
   }
-  pWriteBuf->m_pData[v46 >> 5] &= ~(1 << v46);
-  v46 = pWriteBuf->m_iCurBit + 1;
-  v47 = pWriteBuf->m_nDataBits;
-  pWriteBuf->m_iCurBit = v46;
+  pWriteBuf->m_pData[v44 >> 5] &= ~(1 << v44);
+  v44 = pWriteBuf->m_iCurBit + 1;
+  v45 = pWriteBuf->m_nDataBits;
+  pWriteBuf->m_iCurBit = v44;
   if ( v26 <= 0xF )
     goto LABEL_43;
-  if ( v47 <= v46 )
+  if ( v45 <= v44 )
     goto LABEL_65;
-  pWriteBuf->m_pData[v46 >> 5] &= ~(1 << v46);
-  v46 = pWriteBuf->m_iCurBit + 1;
-  v47 = pWriteBuf->m_nDataBits;
-  pWriteBuf->m_iCurBit = v46;
+  pWriteBuf->m_pData[v44 >> 5] &= ~(1 << v44);
+  v44 = pWriteBuf->m_iCurBit + 1;
+  v45 = pWriteBuf->m_nDataBits;
+  pWriteBuf->m_iCurBit = v44;
   if ( v26 <= 0x3FF )
     goto LABEL_49;
-  if ( v47 > v46 )
+  if ( v45 > v44 )
   {
-    pWriteBuf->m_pData[v46 >> 5] &= ~(1 << v46);
+    pWriteBuf->m_pData[v44 >> 5] &= ~(1 << v44);
     ++pWriteBuf->m_iCurBit;
     goto LABEL_55;
   }
@@ -2200,18 +2195,18 @@ LABEL_55:
     bf_write::WriteOneBit(pWriteBuf, 0);
     pWriteBuf = pWriteBufd;
     v28 = pWriteBufd->m_nDataBits;
-    v63 = pWriteBufd->m_iCurBit;
-    if ( v28 - v63 > 30 )
+    v61 = pWriteBufd->m_iCurBit;
+    if ( v28 - v61 > 30 )
     {
-      pWriteBufd->m_iCurBit = v63 + 31;
-      v29 = v63 & 0x1F;
-      v64 = __ROL4__(v26, v63 & 0x1F);
-      v31 = &pWriteBufd->m_pData[v63 >> 5];
+      pWriteBufd->m_iCurBit = v61 + 31;
+      v29 = v61 & 0x1F;
+      v62 = __ROL4__(v26, v61 & 0x1F);
+      v31 = &pWriteBufd->m_pData[v61 >> 5];
       v32 = *v31;
-      v65 = &v31[(0x3FFFFFFFu >> (31 - (v63 & 0x1F))) & 1];
-      v66 = v64 ^ *v65;
-      v35 = *v31 ^ v64;
-      *v65 ^= (0x3FFFFFFFu >> (31 - v29)) & v66;
+      v63 = &v31[(0x3FFFFFFFu >> (31 - (v61 & 0x1F))) & 1];
+      v64 = v62 ^ *v63;
+      v35 = *v31 ^ v62;
+      *v63 ^= (0x3FFFFFFFu >> (31 - v29)) & v64;
       v36 = 0x7FFFFFFF;
       goto LABEL_20;
     }
@@ -2222,18 +2217,18 @@ LABEL_55:
     bf_write::WriteOneBit(pWriteBuf, 1);
     pWriteBuf = pWriteBufa;
     v28 = pWriteBufa->m_nDataBits;
-    v51 = pWriteBufa->m_iCurBit;
-    if ( v28 - v51 > 16 )
+    v49 = pWriteBufa->m_iCurBit;
+    if ( v28 - v49 > 16 )
     {
-      pWriteBufa->m_iCurBit = v51 + 17;
-      v29 = v51 & 0x1F;
-      v70 = __ROL4__(v26, v51 & 0x1F);
-      v31 = &pWriteBufa->m_pData[v51 >> 5];
+      pWriteBufa->m_iCurBit = v49 + 17;
+      v29 = v49 & 0x1F;
+      v68 = __ROL4__(v26, v49 & 0x1F);
+      v31 = &pWriteBufa->m_pData[v49 >> 5];
       v32 = *v31;
-      v71 = &v31[(0xFFFFu >> (31 - (v51 & 0x1F))) & 1];
-      v72 = v70 ^ *v71;
-      v35 = *v31 ^ v70;
-      *v71 ^= (0xFFFFu >> (31 - v29)) & v72;
+      v69 = &v31[(0xFFFFu >> (31 - (v49 & 0x1F))) & 1];
+      v70 = v68 ^ *v69;
+      v35 = *v31 ^ v68;
+      *v69 ^= (0xFFFFu >> (31 - v29)) & v70;
       v36 = 0x1FFFF;
       goto LABEL_20;
     }
@@ -2268,16 +2263,18 @@ void __fastcall FieldOp_Write_PushOneLeftDeltaNRightNonZeroPack6Bits(
   __int64 v16; // rsi
   __int64 v17; // r8
   __int64 v18; // r9
-  int v19; // esi
-  uint32 *v20; // rdi
-  uint32 v21; // r9d
-  uint32 *v22; // rcx
-  char v23; // r14
-  uint32 *v24; // r13
-  int v25; // ebx
-  uint32 v26; // r15d
-  uint32 *v27; // rcx
-  LeafCodeInfo_t v28; // [rsp+0h] [rbp-50h] BYREF
+  __int64 v19; // r8
+  __int64 v20; // r9
+  int v21; // esi
+  uint32 *v22; // rdi
+  uint32 v23; // r9d
+  uint32 *v24; // rcx
+  char v25; // r14
+  uint32 *v26; // r13
+  int v27; // ebx
+  uint32 v28; // r15d
+  uint32 *v29; // rcx
+  LeafCodeInfo_t v30; // [rsp+0h] [rbp-50h] BYREF
 
   m_nCount = from->m_nCount;
   v4 = m_nCount - 1;
@@ -2293,13 +2290,13 @@ void __fastcall FieldOp_Write_PushOneLeftDeltaNRightNonZeroPack6Bits(
   if ( pWriteBuf->m_nDataBits - m_iCurBit > 2 )
   {
     pWriteBuf->m_iCurBit = m_iCurBit + 3;
-    v23 = m_iCurBit & 0x1F;
-    v24 = &pWriteBuf->m_pData[m_iCurBit >> 5];
-    v25 = __ROL4__(v8 - 2, m_iCurBit & 0x1F);
-    v26 = *v24;
-    v27 = &v24[(3u >> (31 - (m_iCurBit & 0x1F))) & 1];
-    *v27 ^= (3u >> (31 - v23)) & (v25 ^ *v27);
-    *v24 = v26 ^ (7 << v23) & (v26 ^ v25);
+    v25 = m_iCurBit & 0x1F;
+    v26 = &pWriteBuf->m_pData[m_iCurBit >> 5];
+    v27 = __ROL4__(v8 - 2, m_iCurBit & 0x1F);
+    v28 = *v26;
+    v29 = &v26[(3u >> (31 - (m_iCurBit & 0x1F))) & 1];
+    *v29 ^= (3u >> (31 - v25)) & (v27 ^ *v29);
+    *v26 = v28 ^ (7 << v25) & (v28 ^ v27);
   }
   else
   {
@@ -2310,13 +2307,13 @@ void __fastcall FieldOp_Write_PushOneLeftDeltaNRightNonZeroPack6Bits(
   {
     if ( LoggingSystem_IsChannelEnabled(LOG_GENERAL, 4) != 0 )
     {
-      v28.m_szFile = "../public/tier2/fieldpath.h";
-      v28.m_szFunction = "GetPathData";
-      v28.m_nLine = 514;
+      v30.m_szFile = "../public/tier2/fieldpath.h";
+      v30.m_szFunction = "GetPathData";
+      v30.m_nLine = 514;
       LoggingSystem_Log(
         LOG_GENERAL,
         LoggingSeverity_t::LS_ERROR,
-        &v28,
+        &v30,
         "GetPathData failed for read only CFieldPath",
         v17,
         v18);
@@ -2332,16 +2329,16 @@ void __fastcall FieldOp_Write_PushOneLeftDeltaNRightNonZeroPack6Bits(
 LABEL_16:
     if ( LoggingSystem_IsChannelEnabled(LOG_GENERAL, 4) != 0 )
     {
-      v28.m_szFile = "../public/tier2/fieldpath.h";
-      v28.m_szFunction = "Path_AddToTail";
-      v28.m_nLine = 428;
+      v30.m_szFile = "../public/tier2/fieldpath.h";
+      v30.m_szFunction = "Path_AddToTail";
+      v30.m_nLine = 428;
       LoggingSystem_Log(
         LOG_GENERAL,
         LoggingSeverity_t::LS_ERROR,
-        &v28,
+        &v30,
         "Path_AddToTail failed for read only CFieldPath",
-        v17,
-        v18);
+        v19,
+        v20);
     }
     goto LABEL_18;
   }
@@ -2354,18 +2351,18 @@ LABEL_10:
   {
     if ( LoggingSystem_IsChannelEnabled(LOG_GENERAL, 4) != 0 )
     {
-      v28.m_szFile = "../public/tier2/fieldpath.h";
-      v28.m_szFunction = "Path_AddToTail";
-      v28.m_nLine = 425;
+      v30.m_szFile = "../public/tier2/fieldpath.h";
+      v30.m_szFunction = "Path_AddToTail";
+      v30.m_nLine = 425;
       LoggingSystem_Log(
         LOG_GENERAL,
         LoggingSeverity_t::LS_ERROR,
-        &v28,
+        &v30,
         "Path_AddToTail failed, depth already == DEFAULT_MAX_PATH_DEPTH(%d)",
         6);
     }
 LABEL_18:
-    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v15, v16, v13, v14, v17, v18) != 0 )
+    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v15, v16, v13, v14) != 0 )
       loc_0 = -559038737;
     v12 = Plat_ExitProcess(1);
     goto LABEL_21;
@@ -2381,12 +2378,12 @@ LABEL_18:
   }
 LABEL_21:
   pWriteBuf->m_iCurBit = v12 + 3;
-  v19 = __ROL4__(v10 - 1, v12 & 0x1F);
-  v20 = &pWriteBuf->m_pData[v12 >> 5];
-  v21 = *v20;
-  v22 = &v20[(3u >> (31 - (v12 & 0x1F))) & 1];
-  *v22 ^= (3u >> (31 - (v12 & 0x1F))) & (v19 ^ *v22);
-  *v20 = v21 ^ (7 << (v12 & 0x1F)) & (v21 ^ v19);
+  v21 = __ROL4__(v10 - 1, v12 & 0x1F);
+  v22 = &pWriteBuf->m_pData[v12 >> 5];
+  v23 = *v22;
+  v24 = &v22[(3u >> (31 - (v12 & 0x1F))) & 1];
+  *v24 ^= (3u >> (31 - (v12 & 0x1F))) & (v21 ^ *v24);
+  *v22 = v23 ^ (7 << (v12 & 0x1F)) & (v23 ^ v21);
 }
 
 
@@ -2414,16 +2411,18 @@ void __fastcall FieldOp_Write_PushOneLeftDeltaNRightNonZeroPack8Bits(
   __int64 v16; // rsi
   __int64 v17; // r8
   __int64 v18; // r9
-  int v19; // esi
-  uint32 *v20; // rdi
-  uint32 v21; // r9d
-  uint32 *v22; // rcx
-  char v23; // r14
-  uint32 *v24; // r13
-  int v25; // ebx
-  uint32 v26; // r15d
-  uint32 *v27; // rcx
-  LeafCodeInfo_t v28; // [rsp+0h] [rbp-50h] BYREF
+  __int64 v19; // r8
+  __int64 v20; // r9
+  int v21; // esi
+  uint32 *v22; // rdi
+  uint32 v23; // r9d
+  uint32 *v24; // rcx
+  char v25; // r14
+  uint32 *v26; // r13
+  int v27; // ebx
+  uint32 v28; // r15d
+  uint32 *v29; // rcx
+  LeafCodeInfo_t v30; // [rsp+0h] [rbp-50h] BYREF
 
   m_nCount = from->m_nCount;
   v4 = m_nCount - 1;
@@ -2439,13 +2438,13 @@ void __fastcall FieldOp_Write_PushOneLeftDeltaNRightNonZeroPack8Bits(
   if ( pWriteBuf->m_nDataBits - m_iCurBit > 3 )
   {
     pWriteBuf->m_iCurBit = m_iCurBit + 4;
-    v23 = m_iCurBit & 0x1F;
-    v24 = &pWriteBuf->m_pData[m_iCurBit >> 5];
-    v25 = __ROL4__(v8 - 2, m_iCurBit & 0x1F);
-    v26 = *v24;
-    v27 = &v24[(7u >> (31 - (m_iCurBit & 0x1F))) & 1];
-    *v27 ^= (7u >> (31 - v23)) & (v25 ^ *v27);
-    *v24 = v26 ^ (15 << v23) & (v26 ^ v25);
+    v25 = m_iCurBit & 0x1F;
+    v26 = &pWriteBuf->m_pData[m_iCurBit >> 5];
+    v27 = __ROL4__(v8 - 2, m_iCurBit & 0x1F);
+    v28 = *v26;
+    v29 = &v26[(7u >> (31 - (m_iCurBit & 0x1F))) & 1];
+    *v29 ^= (7u >> (31 - v25)) & (v27 ^ *v29);
+    *v26 = v28 ^ (15 << v25) & (v28 ^ v27);
   }
   else
   {
@@ -2456,13 +2455,13 @@ void __fastcall FieldOp_Write_PushOneLeftDeltaNRightNonZeroPack8Bits(
   {
     if ( LoggingSystem_IsChannelEnabled(LOG_GENERAL, 4) != 0 )
     {
-      v28.m_szFile = "../public/tier2/fieldpath.h";
-      v28.m_szFunction = "GetPathData";
-      v28.m_nLine = 514;
+      v30.m_szFile = "../public/tier2/fieldpath.h";
+      v30.m_szFunction = "GetPathData";
+      v30.m_nLine = 514;
       LoggingSystem_Log(
         LOG_GENERAL,
         LoggingSeverity_t::LS_ERROR,
-        &v28,
+        &v30,
         "GetPathData failed for read only CFieldPath",
         v17,
         v18);
@@ -2478,16 +2477,16 @@ void __fastcall FieldOp_Write_PushOneLeftDeltaNRightNonZeroPack8Bits(
 LABEL_16:
     if ( LoggingSystem_IsChannelEnabled(LOG_GENERAL, 4) != 0 )
     {
-      v28.m_szFile = "../public/tier2/fieldpath.h";
-      v28.m_szFunction = "Path_AddToTail";
-      v28.m_nLine = 428;
+      v30.m_szFile = "../public/tier2/fieldpath.h";
+      v30.m_szFunction = "Path_AddToTail";
+      v30.m_nLine = 428;
       LoggingSystem_Log(
         LOG_GENERAL,
         LoggingSeverity_t::LS_ERROR,
-        &v28,
+        &v30,
         "Path_AddToTail failed for read only CFieldPath",
-        v17,
-        v18);
+        v19,
+        v20);
     }
     goto LABEL_18;
   }
@@ -2500,18 +2499,18 @@ LABEL_10:
   {
     if ( LoggingSystem_IsChannelEnabled(LOG_GENERAL, 4) != 0 )
     {
-      v28.m_szFile = "../public/tier2/fieldpath.h";
-      v28.m_szFunction = "Path_AddToTail";
-      v28.m_nLine = 425;
+      v30.m_szFile = "../public/tier2/fieldpath.h";
+      v30.m_szFunction = "Path_AddToTail";
+      v30.m_nLine = 425;
       LoggingSystem_Log(
         LOG_GENERAL,
         LoggingSeverity_t::LS_ERROR,
-        &v28,
+        &v30,
         "Path_AddToTail failed, depth already == DEFAULT_MAX_PATH_DEPTH(%d)",
         6);
     }
 LABEL_18:
-    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v15, v16, v13, v14, v17, v18) != 0 )
+    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v15, v16, v13, v14) != 0 )
       loc_0 = -559038737;
     v12 = Plat_ExitProcess(1);
     goto LABEL_21;
@@ -2527,12 +2526,12 @@ LABEL_18:
   }
 LABEL_21:
   pWriteBuf->m_iCurBit = v12 + 4;
-  v19 = __ROL4__(v10 - 1, v12 & 0x1F);
-  v20 = &pWriteBuf->m_pData[v12 >> 5];
-  v21 = *v20;
-  v22 = &v20[(7u >> (31 - (v12 & 0x1F))) & 1];
-  *v22 ^= (7u >> (31 - (v12 & 0x1F))) & (v19 ^ *v22);
-  *v20 = v21 ^ (15 << (v12 & 0x1F)) & (v21 ^ v19);
+  v21 = __ROL4__(v10 - 1, v12 & 0x1F);
+  v22 = &pWriteBuf->m_pData[v12 >> 5];
+  v23 = *v22;
+  v24 = &v22[(7u >> (31 - (v12 & 0x1F))) & 1];
+  *v24 ^= (7u >> (31 - (v12 & 0x1F))) & (v21 ^ *v24);
+  *v22 = v23 ^ (15 << (v12 & 0x1F)) & (v23 ^ v21);
 }
 
 
@@ -2625,7 +2624,7 @@ void __fastcall FieldOp_Write_PushTwoLeftDeltaZero(
           6);
       }
 LABEL_23:
-      if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v19, v20, v17, v18, v21, v22) != 0 )
+      if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v19, v20, v17, v18) != 0 )
         loc_0 = -559038737;
       m_nDataBits = Plat_ExitProcess(1);
 LABEL_26:
@@ -2887,7 +2886,7 @@ void __fastcall FieldOp_Write_PushTwoPack5LeftDeltaZero(
           6);
       }
 LABEL_12:
-      if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v11, v12, v9, v10, v13, v14) != 0 )
+      if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v11, v12, v9, v10) != 0 )
         loc_0 = -559038737;
       v3 = Plat_ExitProcess(1);
       goto LABEL_15;
@@ -2956,32 +2955,34 @@ void __fastcall FieldOp_Write_PushTwoLeftDeltaOne(
   int v30; // eax
   int v31; // r12d
   int v32; // eax
-  int v33; // r12d
-  uint32 *v34; // rcx
-  int v35; // eax
-  int v36; // r12d
-  uint32 *v37; // rcx
-  int v38; // eax
-  int v39; // r12d
-  uint32 *v40; // rcx
-  int v41; // eax
-  LeafCodeInfo_t v42; // [rsp+0h] [rbp-50h] BYREF
+  __int64 v33; // r8
+  __int64 v34; // r9
+  int v35; // r12d
+  uint32 *v36; // rcx
+  int v37; // eax
+  int v38; // r12d
+  uint32 *v39; // rcx
+  int v40; // eax
+  int v41; // r12d
+  uint32 *v42; // rcx
+  int v43; // eax
+  LeafCodeInfo_t v44; // [rsp+0h] [rbp-50h] BYREF
 
   m_nCount = to->m_nCount;
   if ( from->m_bUsingExternalPaths )
   {
     if ( LoggingSystem_IsChannelEnabled(LOG_GENERAL, 4) != 0 )
     {
-      v42.m_szFile = "../public/tier2/fieldpath.h";
-      v42.m_szFunction = "GetPathData";
-      v42.m_nLine = 514;
+      v44.m_szFile = "../public/tier2/fieldpath.h";
+      v44.m_szFunction = "GetPathData";
+      v44.m_nLine = 514;
       LoggingSystem_Log(
         LOG_GENERAL,
         LoggingSeverity_t::LS_ERROR,
-        &v42,
+        &v44,
         "GetPathData failed for read only CFieldPath",
-        v23,
-        v24);
+        v33,
+        v34);
     }
     goto LABEL_25;
   }
@@ -3005,18 +3006,18 @@ void __fastcall FieldOp_Write_PushTwoLeftDeltaOne(
       {
         if ( LoggingSystem_IsChannelEnabled(LOG_GENERAL, 4) != 0 )
         {
-          v42.m_szFile = "../public/tier2/fieldpath.h";
-          v42.m_szFunction = "Path_AddToTail";
-          v42.m_nLine = 425;
+          v44.m_szFile = "../public/tier2/fieldpath.h";
+          v44.m_szFunction = "Path_AddToTail";
+          v44.m_nLine = 425;
           LoggingSystem_Log(
             LOG_GENERAL,
             LoggingSeverity_t::LS_ERROR,
-            &v42,
+            &v44,
             "Path_AddToTail failed, depth already == DEFAULT_MAX_PATH_DEPTH(%d)",
             6);
         }
 LABEL_25:
-        if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v21, v22, v19, v20, v23, v24) != 0 )
+        if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v21, v22, v19, v20) != 0 )
           loc_0 = -559038737;
         m_nDataBits = Plat_ExitProcess(1);
         goto LABEL_28;
@@ -3060,12 +3061,12 @@ LABEL_19:
                   pWriteBuf->m_iCurBit = m_iCurBit + 10;
                   v25 = m_iCurBit & 0x1F;
                   v26 = &pWriteBuf->m_pData[m_iCurBit >> 5];
-                  v39 = __ROL4__(m_nValue, m_iCurBit & 0x1F);
+                  v41 = __ROL4__(m_nValue, m_iCurBit & 0x1F);
                   v28 = *v26;
-                  v40 = &v26[(0x1FFu >> (v5 - (m_iCurBit & 0x1F))) & 1];
-                  v41 = v39 ^ *v40;
-                  v31 = *v26 ^ v39;
-                  *v40 ^= (0x1FFu >> (v5 - v25)) & v41;
+                  v42 = &v26[(0x1FFu >> (v5 - (m_iCurBit & 0x1F))) & 1];
+                  v43 = v41 ^ *v42;
+                  v31 = *v26 ^ v41;
+                  *v42 ^= (0x1FFu >> (v5 - v25)) & v43;
                   v32 = 1023;
                   goto LABEL_33;
                 }
@@ -3099,12 +3100,12 @@ LABEL_45:
                     pWriteBuf->m_iCurBit = m_iCurBit + 17;
                     v25 = m_iCurBit & 0x1F;
                     v26 = &pWriteBuf->m_pData[m_iCurBit >> 5];
-                    v36 = __ROL4__(m_nValue, m_iCurBit & 0x1F);
+                    v38 = __ROL4__(m_nValue, m_iCurBit & 0x1F);
                     v28 = *v26;
-                    v37 = &v26[(0xFFFFu >> (v5 - (m_iCurBit & 0x1F))) & 1];
-                    v38 = v36 ^ *v37;
-                    v31 = *v26 ^ v36;
-                    *v37 ^= (0xFFFFu >> (v5 - v25)) & v38;
+                    v39 = &v26[(0xFFFFu >> (v5 - (m_iCurBit & 0x1F))) & 1];
+                    v40 = v38 ^ *v39;
+                    v31 = *v26 ^ v38;
+                    *v39 ^= (0xFFFFu >> (v5 - v25)) & v40;
                     v32 = 0x1FFFF;
                     goto LABEL_33;
                   }
@@ -3122,12 +3123,12 @@ LABEL_41:
                     pWriteBuf->m_iCurBit = m_iCurBit + 31;
                     v25 = m_iCurBit & 0x1F;
                     v26 = &pWriteBuf->m_pData[m_iCurBit >> 5];
-                    v33 = __ROL4__(m_nValue, m_iCurBit & 0x1F);
+                    v35 = __ROL4__(m_nValue, m_iCurBit & 0x1F);
                     v28 = *v26;
-                    v34 = &v26[(0x3FFFFFFFu >> (v5 - (m_iCurBit & 0x1F))) & 1];
-                    v35 = v33 ^ *v34;
-                    v31 = *v26 ^ v33;
-                    *v34 ^= (0x3FFFFFFFu >> (v5 - v25)) & v35;
+                    v36 = &v26[(0x3FFFFFFFu >> (v5 - (m_iCurBit & 0x1F))) & 1];
+                    v37 = v35 ^ *v36;
+                    v31 = *v26 ^ v35;
+                    *v36 ^= (0x3FFFFFFFu >> (v5 - v25)) & v37;
                     v32 = 0x7FFFFFFF;
                     goto LABEL_33;
                   }
@@ -3216,13 +3217,13 @@ LABEL_13:
     }
     if ( LoggingSystem_IsChannelEnabled(LOG_GENERAL, 4) != 0 )
     {
-      v42.m_szFile = "../public/tier2/fieldpath.h";
-      v42.m_szFunction = "Path_AddToTail";
-      v42.m_nLine = 428;
+      v44.m_szFile = "../public/tier2/fieldpath.h";
+      v44.m_szFunction = "Path_AddToTail";
+      v44.m_nLine = 428;
       LoggingSystem_Log(
         LOG_GENERAL,
         LoggingSeverity_t::LS_ERROR,
-        &v42,
+        &v44,
         "Path_AddToTail failed for read only CFieldPath",
         v23,
         v24);
@@ -3260,23 +3261,25 @@ void __fastcall FieldOp_Write_PushTwoPack5LeftDeltaOne(
   int v20; // r10d
   uint32 v21; // r12d
   uint32 *v22; // rcx
-  LeafCodeInfo_t v23; // [rsp+0h] [rbp-50h] BYREF
+  __int64 v23; // r8
+  __int64 v24; // r9
+  LeafCodeInfo_t v25; // [rsp+0h] [rbp-50h] BYREF
 
   m_nCount = to->m_nCount;
   if ( from->m_bUsingExternalPaths )
   {
     if ( LoggingSystem_IsChannelEnabled(LOG_GENERAL, 4) != 0 )
     {
-      v23.m_szFile = "../public/tier2/fieldpath.h";
-      v23.m_szFunction = "GetPathData";
-      v23.m_nLine = 514;
+      v25.m_szFile = "../public/tier2/fieldpath.h";
+      v25.m_szFunction = "GetPathData";
+      v25.m_nLine = 514;
       LoggingSystem_Log(
         LOG_GENERAL,
         LoggingSeverity_t::LS_ERROR,
-        &v23,
+        &v25,
         "GetPathData failed for read only CFieldPath",
-        v16,
-        v17);
+        v23,
+        v24);
     }
     goto LABEL_13;
   }
@@ -3300,18 +3303,18 @@ void __fastcall FieldOp_Write_PushTwoPack5LeftDeltaOne(
       {
         if ( LoggingSystem_IsChannelEnabled(LOG_GENERAL, 4) != 0 )
         {
-          v23.m_szFile = "../public/tier2/fieldpath.h";
-          v23.m_szFunction = "Path_AddToTail";
-          v23.m_nLine = 425;
+          v25.m_szFile = "../public/tier2/fieldpath.h";
+          v25.m_szFunction = "Path_AddToTail";
+          v25.m_nLine = 425;
           LoggingSystem_Log(
             LOG_GENERAL,
             LoggingSeverity_t::LS_ERROR,
-            &v23,
+            &v25,
             "Path_AddToTail failed, depth already == DEFAULT_MAX_PATH_DEPTH(%d)",
             6);
         }
 LABEL_13:
-        if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v14, v15, v12, v13, v16, v17) != 0 )
+        if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v14, v15, v12, v13) != 0 )
           loc_0 = -559038737;
         v6 = Plat_ExitProcess(1);
 LABEL_16:
@@ -3340,13 +3343,13 @@ LABEL_9:
     }
     if ( LoggingSystem_IsChannelEnabled(LOG_GENERAL, 4) != 0 )
     {
-      v23.m_szFile = "../public/tier2/fieldpath.h";
-      v23.m_szFunction = "Path_AddToTail";
-      v23.m_nLine = 428;
+      v25.m_szFile = "../public/tier2/fieldpath.h";
+      v25.m_szFunction = "Path_AddToTail";
+      v25.m_nLine = 428;
       LoggingSystem_Log(
         LOG_GENERAL,
         LoggingSeverity_t::LS_ERROR,
-        &v23,
+        &v25,
         "Path_AddToTail failed for read only CFieldPath",
         v16,
         v17);
@@ -3396,48 +3399,46 @@ void __fastcall FieldOp_Write_PushTwoLeftDeltaN(
   __int64 v33; // rcx
   __int64 v34; // rdi
   __int64 v35; // rsi
-  __int64 v36; // r8
-  __int64 v37; // r9
-  int v38; // ecx
-  int v39; // eax
-  int v40; // r12d
-  uint32 *v41; // rcx
-  int v42; // eax
-  int v43; // eax
-  int v44; // r12d
-  uint32 *v45; // rcx
-  int v46; // eax
-  char v47; // r11
-  int v48; // r9d
-  uint32 *v49; // rcx
+  int v36; // ecx
+  int v37; // eax
+  int v38; // r12d
+  uint32 *v39; // rcx
+  int v40; // eax
+  int v41; // eax
+  int v42; // r12d
+  uint32 *v43; // rcx
+  int v44; // eax
+  char v45; // r11
+  int v46; // r9d
+  uint32 *v47; // rcx
+  int v48; // esi
+  unsigned int v49; // r9d
   int v50; // esi
-  unsigned int v51; // r9d
-  int v52; // esi
-  int v53; // r12d
-  uint32 *v54; // rcx
-  int v55; // eax
-  int v56; // r9d
-  uint32 *v57; // rcx
-  int v58; // esi
-  int v59; // eax
-  int v60; // r12d
-  uint32 *v61; // rcx
-  int v62; // eax
-  uint32 *v63; // r10
-  int v64; // esi
-  uint32 *v65; // rcx
-  int v66; // r9d
-  unsigned int *v67; // rcx
-  unsigned int v68; // r10d
-  int v69; // r9d
-  int v70; // r9d
-  uint32 *v71; // r10
-  int v72; // esi
-  uint32 v73; // r11d
-  uint32 *v74; // rcx
-  unsigned __int64 v75; // [rsp+0h] [rbp-60h]
-  int v76; // [rsp+Ch] [rbp-54h]
-  LeafCodeInfo_t v77; // [rsp+10h] [rbp-50h] BYREF
+  int v51; // r12d
+  uint32 *v52; // rcx
+  int v53; // eax
+  int v54; // r9d
+  uint32 *v55; // rcx
+  int v56; // esi
+  int v57; // eax
+  int v58; // r12d
+  uint32 *v59; // rcx
+  int v60; // eax
+  uint32 *v61; // r10
+  int v62; // esi
+  uint32 *v63; // rcx
+  int v64; // r9d
+  unsigned int *v65; // rcx
+  unsigned int v66; // r10d
+  int v67; // r9d
+  int v68; // r9d
+  uint32 *v69; // r10
+  int v70; // esi
+  uint32 v71; // r11d
+  uint32 *v72; // rcx
+  unsigned __int64 v73; // [rsp+0h] [rbp-60h]
+  int v74; // [rsp+Ch] [rbp-54h]
+  LeafCodeInfo_t v75; // [rsp+10h] [rbp-50h] BYREF
 
   v6 = to;
   m_nCount = to->m_nCount;
@@ -3465,60 +3466,60 @@ void __fastcall FieldOp_Write_PushTwoLeftDeltaN(
         pWriteBuf->m_iCurBit = m_iCurBit + 6;
         v4 = m_iCurBit & 0x1F;
         v3 = &pWriteBuf->m_pData[m_iCurBit >> 5];
-        v66 = __ROL4__(v16 & 0xF | 0x30, v4);
-        v67 = &v3[(0x1Fu >> (31 - v4)) & 1];
+        v64 = __ROL4__(v16 & 0xF | 0x30, v4);
+        v65 = &v3[(0x1Fu >> (31 - v4)) & 1];
         v5 = *v3;
-        v68 = *v67 ^ (0x1Fu >> (31 - v4)) & (v66 ^ *v67);
-        v69 = *v3 ^ v66;
-        *v67 = v68;
-        *v3 = v5 ^ (63 << v4) & v69;
+        v66 = *v65 ^ (0x1Fu >> (31 - v4)) & (v64 ^ *v65);
+        v67 = *v3 ^ v64;
+        *v65 = v66;
+        *v3 = v5 ^ (63 << v4) & v67;
         m_nDataBits = pWriteBuf->m_nDataBits;
-        v70 = pWriteBuf->m_iCurBit;
-        if ( m_nDataBits - v70 <= 27 )
+        v68 = pWriteBuf->m_iCurBit;
+        if ( m_nDataBits - v68 <= 27 )
           goto LABEL_7;
-        pWriteBuf->m_iCurBit = v70 + 28;
-        LODWORD(v3) = v70 & 0x1F;
-        v71 = &pWriteBuf->m_pData[v70 >> 5];
-        v72 = __ROL4__(v16 >> 4, v3);
-        v73 = *v71;
+        pWriteBuf->m_iCurBit = v68 + 28;
+        LODWORD(v3) = v68 & 0x1F;
+        v69 = &pWriteBuf->m_pData[v68 >> 5];
+        v70 = __ROL4__(v16 >> 4, v3);
+        v71 = *v69;
         v4 = 0x7FFFFFFu >> (31 - v3);
-        v74 = &v71[(0x7FFFFFFu >> (31 - v3)) & 1];
-        v5 = *v74;
-        *v74 = v5 ^ v4 & (v72 ^ *v74);
-        *v71 = v73 ^ (0xFFFFFFF << v3) & (v73 ^ v72);
+        v72 = &v69[(0x7FFFFFFu >> (31 - v3)) & 1];
+        v5 = *v72;
+        *v72 = v5 ^ v4 & (v70 ^ *v72);
+        *v69 = v71 ^ (0xFFFFFFF << v3) & (v71 ^ v70);
         goto LABEL_8;
       }
       if ( v17 <= 13 )
         goto LABEL_7;
       pWriteBuf->m_iCurBit = m_iCurBit + 14;
-      v47 = m_iCurBit & 0x1F;
+      v45 = m_iCurBit & 0x1F;
       v3 = &pWriteBuf->m_pData[m_iCurBit >> 5];
       v4 = *v3;
-      v56 = __ROL4__((4 * (v16 & 0xFFFFFFF0)) | v16 & 0xF | 0x20, m_iCurBit & 0x1F);
-      v57 = &v3[(0x1FFFu >> (31 - v47)) & 1];
-      v5 = *v57;
-      v58 = v56 ^ *v57;
-      v51 = v4 ^ v56;
-      *v57 = v5 ^ (0x1FFFu >> (31 - v47)) & v58;
-      v52 = 0x3FFF;
+      v54 = __ROL4__((4 * (v16 & 0xFFFFFFF0)) | v16 & 0xF | 0x20, m_iCurBit & 0x1F);
+      v55 = &v3[(0x1FFFu >> (31 - v45)) & 1];
+      v5 = *v55;
+      v56 = v54 ^ *v55;
+      v49 = v4 ^ v54;
+      *v55 = v5 ^ (0x1FFFu >> (31 - v45)) & v56;
+      v50 = 0x3FFF;
     }
     else
     {
       if ( v17 <= 9 )
         goto LABEL_7;
       pWriteBuf->m_iCurBit = m_iCurBit + 10;
-      v47 = m_iCurBit & 0x1F;
+      v45 = m_iCurBit & 0x1F;
       v3 = &pWriteBuf->m_pData[m_iCurBit >> 5];
       v4 = *v3;
-      v48 = __ROL4__((4 * (v16 & 0xFFFFFFF0)) | v16 & 0xF | 0x10, m_iCurBit & 0x1F);
-      v49 = &v3[(0x1FFu >> (31 - v47)) & 1];
-      v5 = *v49;
-      v50 = v48 ^ *v49;
-      v51 = v4 ^ v48;
-      *v49 = v5 ^ (0x1FFu >> (31 - v47)) & v50;
-      v52 = 1023;
+      v46 = __ROL4__((4 * (v16 & 0xFFFFFFF0)) | v16 & 0xF | 0x10, m_iCurBit & 0x1F);
+      v47 = &v3[(0x1FFu >> (31 - v45)) & 1];
+      v5 = *v47;
+      v48 = v46 ^ *v47;
+      v49 = v4 ^ v46;
+      *v47 = v5 ^ (0x1FFu >> (31 - v45)) & v48;
+      v50 = 1023;
     }
-    *v3 = v4 ^ (v52 << v47) & v51;
+    *v3 = v4 ^ (v50 << v45) & v49;
     goto LABEL_8;
   }
   if ( v17 <= 5 )
@@ -3529,24 +3530,24 @@ LABEL_7:
     goto LABEL_8;
   }
   pWriteBuf->m_iCurBit = m_iCurBit + 6;
-  v63 = &pWriteBuf->m_pData[m_iCurBit >> 5];
-  v64 = __ROL4__(v16, m_iCurBit & 0x1F);
-  LODWORD(v3) = *v63;
+  v61 = &pWriteBuf->m_pData[m_iCurBit >> 5];
+  v62 = __ROL4__(v16, m_iCurBit & 0x1F);
+  LODWORD(v3) = *v61;
   v5 = 0x1Fu >> (31 - (m_iCurBit & 0x1F));
-  v65 = &v63[(0x1Fu >> (31 - (m_iCurBit & 0x1F))) & 1];
-  v4 = *v65;
-  *v65 = v4 ^ v5 & (v64 ^ *v65);
-  *v63 = v3 ^ (63 << (m_iCurBit & 0x1F)) & (v3 ^ v64);
+  v63 = &v61[(0x1Fu >> (31 - (m_iCurBit & 0x1F))) & 1];
+  v4 = *v63;
+  *v63 = v4 ^ v5 & (v62 ^ *v63);
+  *v61 = v3 ^ (63 << (m_iCurBit & 0x1F)) & (v3 ^ v62);
 LABEL_8:
   if ( from->m_bUsingExternalPaths )
   {
     from = &LOG_GENERAL;
     if ( LoggingSystem_IsChannelEnabled(LOG_GENERAL, 4) != 0 )
     {
-      v77.m_szFile = "../public/tier2/fieldpath.h";
-      v77.m_szFunction = "GetPathData";
-      v77.m_nLine = 514;
-      LoggingSystem_Log(LOG_GENERAL, LoggingSeverity_t::LS_ERROR, &v77, "GetPathData failed for read only CFieldPath");
+      v75.m_szFile = "../public/tier2/fieldpath.h";
+      v75.m_szFunction = "GetPathData";
+      v75.m_nLine = 514;
+      LoggingSystem_Log(LOG_GENERAL, LoggingSeverity_t::LS_ERROR, &v75, "GetPathData failed for read only CFieldPath");
     }
     goto LABEL_24;
   }
@@ -3572,18 +3573,18 @@ LABEL_8:
         from = &LOG_GENERAL;
         if ( LoggingSystem_IsChannelEnabled(LOG_GENERAL, 4) != 0 )
         {
-          v77.m_szFile = "../public/tier2/fieldpath.h";
-          v77.m_szFunction = "Path_AddToTail";
-          v77.m_nLine = 425;
+          v75.m_szFile = "../public/tier2/fieldpath.h";
+          v75.m_szFunction = "Path_AddToTail";
+          v75.m_nLine = 425;
           LoggingSystem_Log(
             LOG_GENERAL,
             LoggingSeverity_t::LS_ERROR,
-            &v77,
+            &v75,
             "Path_AddToTail failed, depth already == DEFAULT_MAX_PATH_DEPTH(%d)",
             6);
         }
 LABEL_24:
-        if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v34, v35, v32, v33, v36, v37) != 0 )
+        if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v34, v35, v32, v33) != 0 )
           loc_0 = -559038737;
         Plat_ExitProcess(1);
         goto LABEL_27;
@@ -3620,59 +3621,59 @@ LABEL_24:
         goto LABEL_19;
       }
 LABEL_27:
-      v38 = *(v4 + 16);
-      v39 = *(v4 + 12);
-      if ( v38 >= v39 )
+      v36 = *(v4 + 16);
+      v37 = *(v4 + 12);
+      if ( v36 >= v37 )
       {
         *(v4 + 20) = 1;
         if ( v6 <= 0xF )
         {
 LABEL_29:
-          if ( v39 <= v38 )
+          if ( v37 <= v36 )
           {
             *(v4 + 20) = 1;
-            if ( v39 - v38 <= 3 )
+            if ( v37 - v36 <= 3 )
               goto LABEL_31;
           }
           else
           {
-            *(*v4 + 4LL * (v38 >> 5)) |= 1 << v38;
-            v38 = *(v4 + 16) + 1;
-            v39 = *(v4 + 12);
-            *(v4 + 16) = v38;
-            if ( v39 - v38 <= 3 )
+            *(*v4 + 4LL * (v36 >> 5)) |= 1 << v36;
+            v36 = *(v4 + 16) + 1;
+            v37 = *(v4 + 12);
+            *(v4 + 16) = v36;
+            if ( v37 - v36 <= 3 )
               goto LABEL_31;
           }
-          *(v4 + 16) = v38 + 4;
-          v24 = v38 & 0x1F;
-          v25 = (*v4 + 4LL * (v38 >> 5));
-          v53 = __ROL4__(v6, v38 & 0x1F);
+          *(v4 + 16) = v36 + 4;
+          v24 = v36 & 0x1F;
+          v25 = (*v4 + 4LL * (v36 >> 5));
+          v51 = __ROL4__(v6, v36 & 0x1F);
           v27 = *v25;
-          v54 = &v25[(7u >> (v18 - (v38 & 0x1F))) & 1];
-          v55 = v53 ^ *v54;
-          v30 = *v25 ^ v53;
-          *v54 ^= (7u >> (v18 - v24)) & v55;
+          v52 = &v25[(7u >> (v18 - (v36 & 0x1F))) & 1];
+          v53 = v51 ^ *v52;
+          v30 = *v25 ^ v51;
+          *v52 ^= (7u >> (v18 - v24)) & v53;
           v31 = 15;
           goto LABEL_19;
         }
       }
       else
       {
-        *(*v4 + 4LL * (v38 >> 5)) &= ~(1 << v38);
-        v38 = *(v4 + 16) + 1;
-        v39 = *(v4 + 12);
-        *(v4 + 16) = v38;
+        *(*v4 + 4LL * (v36 >> 5)) &= ~(1 << v36);
+        v36 = *(v4 + 16) + 1;
+        v37 = *(v4 + 12);
+        *(v4 + 16) = v36;
         if ( v6 <= 0xF )
           goto LABEL_29;
-        if ( v38 < v39 )
+        if ( v36 < v37 )
         {
-          *(*v4 + 4LL * (v38 >> 5)) &= ~(1 << v38);
-          v38 = *(v4 + 16) + 1;
-          v39 = *(v4 + 12);
-          *(v4 + 16) = v38;
+          *(*v4 + 4LL * (v36 >> 5)) &= ~(1 << v36);
+          v36 = *(v4 + 16) + 1;
+          v37 = *(v4 + 12);
+          *(v4 + 16) = v36;
           if ( v6 > 0x3FF )
           {
-            if ( v39 <= v38 )
+            if ( v37 <= v36 )
             {
 LABEL_41:
               *(v4 + 20) = 1;
@@ -3681,62 +3682,62 @@ LABEL_41:
             }
             else
             {
-              *(*v4 + 4LL * (v38 >> 5)) &= ~(1 << v38);
+              *(*v4 + 4LL * (v36 >> 5)) &= ~(1 << v36);
               ++*(v4 + 16);
               if ( v6 <= 0x1FFFF )
               {
 LABEL_42:
-                v43 = *(v4 + 16);
+                v41 = *(v4 + 16);
                 v23 = *(v4 + 12);
-                if ( v43 >= v23 )
+                if ( v41 >= v23 )
                 {
                   *(v4 + 20) = 1;
                 }
                 else
                 {
-                  *(*v4 + 4LL * (v43 >> 5)) |= 1 << v43;
+                  *(*v4 + 4LL * (v41 >> 5)) |= 1 << v41;
                   v23 = *(v4 + 12);
-                  v43 = *(v4 + 16) + 1;
-                  *(v4 + 16) = v43;
+                  v41 = *(v4 + 16) + 1;
+                  *(v4 + 16) = v41;
                 }
-                if ( v23 - v43 <= 16 )
+                if ( v23 - v41 <= 16 )
                 {
 LABEL_38:
                   *(v4 + 16) = v23;
                   *(v4 + 20) = 1;
                   goto LABEL_20;
                 }
-                *(v4 + 16) = v43 + 17;
-                v24 = v43 & 0x1F;
-                v25 = (*v4 + 4LL * (v43 >> 5));
-                v44 = __ROL4__(v6, v43 & 0x1F);
+                *(v4 + 16) = v41 + 17;
+                v24 = v41 & 0x1F;
+                v25 = (*v4 + 4LL * (v41 >> 5));
+                v42 = __ROL4__(v6, v41 & 0x1F);
                 v27 = *v25;
-                v45 = &v25[(0xFFFFu >> (v18 - (v43 & 0x1F))) & 1];
-                v46 = v44 ^ *v45;
-                v30 = *v25 ^ v44;
-                *v45 ^= (0xFFFFu >> (v18 - v24)) & v46;
+                v43 = &v25[(0xFFFFu >> (v18 - (v41 & 0x1F))) & 1];
+                v44 = v42 ^ *v43;
+                v30 = *v25 ^ v42;
+                *v43 ^= (0xFFFFu >> (v18 - v24)) & v44;
                 v31 = 0x1FFFF;
                 goto LABEL_19;
               }
             }
-            v75 = v19;
-            v76 = v18;
+            v73 = v19;
+            v74 = v18;
             bf_write::WriteOneBit(v4, 0);
             v23 = *(v4 + 12);
-            v59 = *(v4 + 16);
-            v18 = v76;
-            v19 = v75;
-            if ( v23 - v59 <= 30 )
+            v57 = *(v4 + 16);
+            v18 = v74;
+            v19 = v73;
+            if ( v23 - v57 <= 30 )
               goto LABEL_38;
-            *(v4 + 16) = v59 + 31;
-            v24 = v59 & 0x1F;
-            v25 = (*v4 + 4LL * (v59 >> 5));
-            v60 = __ROL4__(v6, v59 & 0x1F);
+            *(v4 + 16) = v57 + 31;
+            v24 = v57 & 0x1F;
+            v25 = (*v4 + 4LL * (v57 >> 5));
+            v58 = __ROL4__(v6, v57 & 0x1F);
             v27 = *v25;
-            v61 = &v25[(0x3FFFFFFFu >> (v76 - (v59 & 0x1F))) & 1];
-            v62 = v60 ^ *v61;
-            v30 = *v25 ^ v60;
-            *v61 ^= (0x3FFFFFFFu >> (v76 - v24)) & v62;
+            v59 = &v25[(0x3FFFFFFFu >> (v74 - (v57 & 0x1F))) & 1];
+            v60 = v58 ^ *v59;
+            v30 = *v25 ^ v58;
+            *v59 ^= (0x3FFFFFFFu >> (v74 - v24)) & v60;
             v31 = 0x7FFFFFFF;
             goto LABEL_19;
           }
@@ -3747,33 +3748,33 @@ LABEL_38:
       if ( v6 > 0x3FF )
         goto LABEL_41;
 LABEL_34:
-      if ( v39 <= v38 )
+      if ( v37 <= v36 )
       {
         *(v4 + 20) = 1;
       }
       else
       {
-        *(*v4 + 4LL * (v38 >> 5)) |= 1 << v38;
-        v38 = *(v4 + 16) + 1;
-        v39 = *(v4 + 12);
-        *(v4 + 16) = v38;
+        *(*v4 + 4LL * (v36 >> 5)) |= 1 << v36;
+        v36 = *(v4 + 16) + 1;
+        v37 = *(v4 + 12);
+        *(v4 + 16) = v36;
       }
-      if ( v39 - v38 <= 9 )
+      if ( v37 - v36 <= 9 )
       {
 LABEL_31:
-        *(v4 + 16) = v39;
+        *(v4 + 16) = v37;
         *(v4 + 20) = 1;
         goto LABEL_20;
       }
-      *(v4 + 16) = v38 + 10;
-      v24 = v38 & 0x1F;
-      v25 = (*v4 + 4LL * (v38 >> 5));
-      v40 = __ROL4__(v6, v38 & 0x1F);
+      *(v4 + 16) = v36 + 10;
+      v24 = v36 & 0x1F;
+      v25 = (*v4 + 4LL * (v36 >> 5));
+      v38 = __ROL4__(v6, v36 & 0x1F);
       v27 = *v25;
-      v41 = &v25[(0x1FFu >> (v18 - (v38 & 0x1F))) & 1];
-      v42 = v40 ^ *v41;
-      v30 = *v25 ^ v40;
-      *v41 ^= (0x1FFu >> (v18 - v24)) & v42;
+      v39 = &v25[(0x1FFu >> (v18 - (v36 & 0x1F))) & 1];
+      v40 = v38 ^ *v39;
+      v30 = *v25 ^ v38;
+      *v39 ^= (0x1FFu >> (v18 - v24)) & v40;
       v31 = 1023;
 LABEL_19:
       *v25 = v27 ^ (v31 << v24) & v30;
@@ -3786,13 +3787,13 @@ LABEL_20:
     from = &LOG_GENERAL;
     if ( LoggingSystem_IsChannelEnabled(LOG_GENERAL, 4) != 0 )
     {
-      v77.m_szFile = "../public/tier2/fieldpath.h";
-      v77.m_szFunction = "Path_AddToTail";
-      v77.m_nLine = 428;
+      v75.m_szFile = "../public/tier2/fieldpath.h";
+      v75.m_szFunction = "Path_AddToTail";
+      v75.m_nLine = 428;
       LoggingSystem_Log(
         LOG_GENERAL,
         LoggingSeverity_t::LS_ERROR,
-        &v77,
+        &v75,
         "Path_AddToTail failed for read only CFieldPath");
     }
     goto LABEL_24;
@@ -3830,35 +3831,33 @@ void __fastcall FieldOp_Write_PushTwoPack5LeftDeltaN(
   __int64 v22; // rcx
   __int64 v23; // rdi
   __int64 v24; // rsi
-  __int64 v25; // r8
-  __int64 v26; // r9
-  char v27; // bl
-  uint32 *v28; // r11
-  int v29; // r10d
-  uint32 v30; // r12d
-  uint32 *v31; // rcx
-  char v32; // r12
-  int v33; // r11d
-  uint32 *v34; // rcx
+  char v25; // bl
+  uint32 *v26; // r11
+  int v27; // r10d
+  uint32 v28; // r12d
+  uint32 *v29; // rcx
+  char v30; // r12
+  int v31; // r11d
+  uint32 *v32; // rcx
+  int v33; // r9d
+  int v34; // r11d
   int v35; // r9d
   int v36; // r11d
-  int v37; // r9d
-  int v38; // r11d
-  uint32 *v39; // rcx
+  uint32 *v37; // rcx
+  int v38; // r9d
+  uint32 *v39; // rbx
   int v40; // r9d
-  uint32 *v41; // rbx
-  int v42; // r9d
-  int *v43; // rcx
-  int v44; // r11d
-  unsigned int *v45; // rcx
-  int v46; // r15d
-  unsigned int v47; // ebx
-  int v48; // r11d
-  int v49; // r11d
-  uint32 *v50; // rbx
-  int v51; // r9d
-  uint32 v52; // r12d
-  LeafCodeInfo_t v53; // [rsp+10h] [rbp-50h] BYREF
+  int *v41; // rcx
+  int v42; // r11d
+  unsigned int *v43; // rcx
+  int v44; // r15d
+  unsigned int v45; // ebx
+  int v46; // r11d
+  int v47; // r11d
+  uint32 *v48; // rbx
+  int v49; // r9d
+  uint32 v50; // r12d
+  LeafCodeInfo_t v51; // [rsp+10h] [rbp-50h] BYREF
 
   m_nCount = to->m_nCount;
   v6 = m_nCount - 3;
@@ -3885,56 +3884,56 @@ void __fastcall FieldOp_Write_PushTwoPack5LeftDeltaN(
         pWriteBuf->m_iCurBit = m_iCurBit + 6;
         v4 = m_iCurBit & 0x1F;
         v3 = &pWriteBuf->m_pData[m_iCurBit >> 5];
-        v44 = __ROL4__(v13 & 0xF | 0x30, v4);
-        v45 = &v3[(0x1Fu >> (31 - v4)) & 1];
-        v46 = *v3;
-        v47 = *v45 ^ (0x1Fu >> (31 - v4)) & (v44 ^ *v45);
-        v48 = *v3 ^ v44;
-        *v45 = v47;
-        *v3 = v46 ^ (63 << v4) & v48;
+        v42 = __ROL4__(v13 & 0xF | 0x30, v4);
+        v43 = &v3[(0x1Fu >> (31 - v4)) & 1];
+        v44 = *v3;
+        v45 = *v43 ^ (0x1Fu >> (31 - v4)) & (v42 ^ *v43);
+        v46 = *v3 ^ v42;
+        *v43 = v45;
+        *v3 = v44 ^ (63 << v4) & v46;
         m_nDataBits = pWriteBuf->m_nDataBits;
-        v49 = pWriteBuf->m_iCurBit;
-        if ( m_nDataBits - v49 <= 27 )
+        v47 = pWriteBuf->m_iCurBit;
+        if ( m_nDataBits - v47 <= 27 )
           goto LABEL_7;
-        pWriteBuf->m_iCurBit = v49 + 28;
-        LODWORD(v3) = v49 & 0x1F;
-        v50 = &pWriteBuf->m_pData[v49 >> 5];
-        v51 = __ROL4__(v13 >> 4, v3);
-        v52 = *v50;
+        pWriteBuf->m_iCurBit = v47 + 28;
+        LODWORD(v3) = v47 & 0x1F;
+        v48 = &pWriteBuf->m_pData[v47 >> 5];
+        v49 = __ROL4__(v13 >> 4, v3);
+        v50 = *v48;
         v4 = 0x7FFFFFFu >> (31 - v3);
-        v50[v4 & 1] ^= v4 & (v51 ^ v50[v4 & 1]);
-        *v50 = v52 ^ (0xFFFFFFF << v3) & (v52 ^ v51);
+        v48[v4 & 1] ^= v4 & (v49 ^ v48[v4 & 1]);
+        *v48 = v50 ^ (0xFFFFFFF << v3) & (v50 ^ v49);
         goto LABEL_8;
       }
       if ( v14 <= 13 )
         goto LABEL_7;
       pWriteBuf->m_iCurBit = m_iCurBit + 14;
-      v32 = m_iCurBit & 0x1F;
+      v30 = m_iCurBit & 0x1F;
       v3 = &pWriteBuf->m_pData[m_iCurBit >> 5];
       v4 = *v3;
-      v38 = __ROL4__((4 * (v13 & 0xFFFFFFF0)) | v13 & 0xF | 0x20, m_iCurBit & 0x1F);
-      v39 = &v3[(0x1FFFu >> (31 - v32)) & 1];
-      v40 = v38 ^ *v39;
-      v36 = *v3 ^ v38;
-      *v39 ^= (0x1FFFu >> (31 - v32)) & v40;
-      v37 = 0x3FFF;
+      v36 = __ROL4__((4 * (v13 & 0xFFFFFFF0)) | v13 & 0xF | 0x20, m_iCurBit & 0x1F);
+      v37 = &v3[(0x1FFFu >> (31 - v30)) & 1];
+      v38 = v36 ^ *v37;
+      v34 = *v3 ^ v36;
+      *v37 ^= (0x1FFFu >> (31 - v30)) & v38;
+      v35 = 0x3FFF;
     }
     else
     {
       if ( v14 <= 9 )
         goto LABEL_7;
       pWriteBuf->m_iCurBit = m_iCurBit + 10;
-      v32 = m_iCurBit & 0x1F;
+      v30 = m_iCurBit & 0x1F;
       v3 = &pWriteBuf->m_pData[m_iCurBit >> 5];
       v4 = *v3;
-      v33 = __ROL4__((4 * (v13 & 0xFFFFFFF0)) | v13 & 0xF | 0x10, m_iCurBit & 0x1F);
-      v34 = &v3[(0x1FFu >> (31 - v32)) & 1];
-      v35 = v33 ^ *v34;
-      v36 = *v3 ^ v33;
-      *v34 ^= (0x1FFu >> (31 - v32)) & v35;
-      v37 = 1023;
+      v31 = __ROL4__((4 * (v13 & 0xFFFFFFF0)) | v13 & 0xF | 0x10, m_iCurBit & 0x1F);
+      v32 = &v3[(0x1FFu >> (31 - v30)) & 1];
+      v33 = v31 ^ *v32;
+      v34 = *v3 ^ v31;
+      *v32 ^= (0x1FFu >> (31 - v30)) & v33;
+      v35 = 1023;
     }
-    *v3 = v4 ^ (v37 << v32) & v36;
+    *v3 = v4 ^ (v35 << v30) & v34;
     goto LABEL_8;
   }
   if ( v14 <= 5 )
@@ -3945,22 +3944,22 @@ LABEL_7:
     goto LABEL_8;
   }
   pWriteBuf->m_iCurBit = m_iCurBit + 6;
-  v41 = &pWriteBuf->m_pData[m_iCurBit >> 5];
-  v42 = __ROL4__(v13, m_iCurBit & 0x1F);
-  LODWORD(v3) = *v41;
-  v43 = &v41[(0x1Fu >> (31 - (m_iCurBit & 0x1F))) & 1];
-  v4 = *v43;
-  *v43 ^= (0x1Fu >> (31 - (m_iCurBit & 0x1F))) & (v42 ^ *v43);
-  *v41 = v3 ^ (63 << (m_iCurBit & 0x1F)) & (v3 ^ v42);
+  v39 = &pWriteBuf->m_pData[m_iCurBit >> 5];
+  v40 = __ROL4__(v13, m_iCurBit & 0x1F);
+  LODWORD(v3) = *v39;
+  v41 = &v39[(0x1Fu >> (31 - (m_iCurBit & 0x1F))) & 1];
+  v4 = *v41;
+  *v41 ^= (0x1Fu >> (31 - (m_iCurBit & 0x1F))) & (v40 ^ *v41);
+  *v39 = v3 ^ (63 << (m_iCurBit & 0x1F)) & (v3 ^ v40);
 LABEL_8:
   if ( from->m_bUsingExternalPaths )
   {
     if ( LoggingSystem_IsChannelEnabled(LOG_GENERAL, 4) != 0 )
     {
-      v53.m_szFile = "../public/tier2/fieldpath.h";
-      v53.m_szFunction = "GetPathData";
-      v53.m_nLine = 514;
-      LoggingSystem_Log(LOG_GENERAL, LoggingSeverity_t::LS_ERROR, &v53, "GetPathData failed for read only CFieldPath");
+      v51.m_szFile = "../public/tier2/fieldpath.h";
+      v51.m_szFunction = "GetPathData";
+      v51.m_nLine = 514;
+      LoggingSystem_Log(LOG_GENERAL, LoggingSeverity_t::LS_ERROR, &v51, "GetPathData failed for read only CFieldPath");
     }
     goto LABEL_20;
   }
@@ -3984,29 +3983,29 @@ LABEL_8:
       {
         if ( LoggingSystem_IsChannelEnabled(LOG_GENERAL, 4) != 0 )
         {
-          v53.m_szFile = "../public/tier2/fieldpath.h";
-          v53.m_szFunction = "Path_AddToTail";
-          v53.m_nLine = 425;
+          v51.m_szFile = "../public/tier2/fieldpath.h";
+          v51.m_szFunction = "Path_AddToTail";
+          v51.m_nLine = 425;
           LoggingSystem_Log(
             LOG_GENERAL,
             LoggingSeverity_t::LS_ERROR,
-            &v53,
+            &v51,
             "Path_AddToTail failed, depth already == DEFAULT_MAX_PATH_DEPTH(%d)",
             6);
         }
 LABEL_20:
-        if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v23, v24, v21, v22, v25, v26) != 0 )
+        if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v23, v24, v21, v22) != 0 )
           loc_0 = -559038737;
         v15 = Plat_ExitProcess(1);
 LABEL_23:
         pWriteBuf->m_iCurBit = v20 + 5;
-        v27 = v20 & 0x1F;
-        v28 = &pWriteBuf->m_pData[v20 >> 5];
-        v29 = __ROL4__(v18, v20 & 0x1F);
-        v30 = *v28;
-        v31 = &v28[(v3 >> (v4 - (v20 & 0x1F))) & 1];
-        *v31 ^= (v3 >> (v4 - v27)) & (v29 ^ *v31);
-        *v28 = v30 ^ (v4 << v27) & (v30 ^ v29);
+        v25 = v20 & 0x1F;
+        v26 = &pWriteBuf->m_pData[v20 >> 5];
+        v27 = __ROL4__(v18, v20 & 0x1F);
+        v28 = *v26;
+        v29 = &v26[(v3 >> (v4 - (v20 & 0x1F))) & 1];
+        *v29 ^= (v3 >> (v4 - v25)) & (v27 ^ *v29);
+        *v26 = v28 ^ (v4 << v25) & (v28 ^ v27);
         goto LABEL_16;
       }
       from->m_nCount = v19 + 1;
@@ -4024,13 +4023,13 @@ LABEL_16:
     }
     if ( LoggingSystem_IsChannelEnabled(LOG_GENERAL, 4) != 0 )
     {
-      v53.m_szFile = "../public/tier2/fieldpath.h";
-      v53.m_szFunction = "Path_AddToTail";
-      v53.m_nLine = 428;
+      v51.m_szFile = "../public/tier2/fieldpath.h";
+      v51.m_szFunction = "Path_AddToTail";
+      v51.m_nLine = 428;
       LoggingSystem_Log(
         LOG_GENERAL,
         LoggingSeverity_t::LS_ERROR,
-        &v53,
+        &v51,
         "Path_AddToTail failed for read only CFieldPath");
     }
     goto LABEL_20;
@@ -4127,7 +4126,7 @@ void __fastcall FieldOp_Write_PushThreeLeftDeltaZero(
           6);
       }
 LABEL_23:
-      if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v19, v20, v17, v18, v21, v22) != 0 )
+      if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v19, v20, v17, v18) != 0 )
         loc_0 = -559038737;
       m_nDataBits = Plat_ExitProcess(1);
 LABEL_26:
@@ -4359,32 +4358,34 @@ void __fastcall FieldOp_Write_PushThreeLeftDeltaOne(
   int v30; // eax
   int v31; // r12d
   int v32; // eax
-  int v33; // r12d
-  uint32 *v34; // rcx
-  int v35; // eax
-  int v36; // r12d
-  uint32 *v37; // rcx
-  int v38; // eax
-  int v39; // r12d
-  uint32 *v40; // rcx
-  int v41; // eax
-  LeafCodeInfo_t v42; // [rsp+0h] [rbp-50h] BYREF
+  __int64 v33; // r8
+  __int64 v34; // r9
+  int v35; // r12d
+  uint32 *v36; // rcx
+  int v37; // eax
+  int v38; // r12d
+  uint32 *v39; // rcx
+  int v40; // eax
+  int v41; // r12d
+  uint32 *v42; // rcx
+  int v43; // eax
+  LeafCodeInfo_t v44; // [rsp+0h] [rbp-50h] BYREF
 
   m_nCount = to->m_nCount;
   if ( from->m_bUsingExternalPaths )
   {
     if ( LoggingSystem_IsChannelEnabled(LOG_GENERAL, 4) != 0 )
     {
-      v42.m_szFile = "../public/tier2/fieldpath.h";
-      v42.m_szFunction = "GetPathData";
-      v42.m_nLine = 514;
+      v44.m_szFile = "../public/tier2/fieldpath.h";
+      v44.m_szFunction = "GetPathData";
+      v44.m_nLine = 514;
       LoggingSystem_Log(
         LOG_GENERAL,
         LoggingSeverity_t::LS_ERROR,
-        &v42,
+        &v44,
         "GetPathData failed for read only CFieldPath",
-        v23,
-        v24);
+        v33,
+        v34);
     }
     goto LABEL_25;
   }
@@ -4408,18 +4409,18 @@ void __fastcall FieldOp_Write_PushThreeLeftDeltaOne(
       {
         if ( LoggingSystem_IsChannelEnabled(LOG_GENERAL, 4) != 0 )
         {
-          v42.m_szFile = "../public/tier2/fieldpath.h";
-          v42.m_szFunction = "Path_AddToTail";
-          v42.m_nLine = 425;
+          v44.m_szFile = "../public/tier2/fieldpath.h";
+          v44.m_szFunction = "Path_AddToTail";
+          v44.m_nLine = 425;
           LoggingSystem_Log(
             LOG_GENERAL,
             LoggingSeverity_t::LS_ERROR,
-            &v42,
+            &v44,
             "Path_AddToTail failed, depth already == DEFAULT_MAX_PATH_DEPTH(%d)",
             6);
         }
 LABEL_25:
-        if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v21, v22, v19, v20, v23, v24) != 0 )
+        if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v21, v22, v19, v20) != 0 )
           loc_0 = -559038737;
         m_nDataBits = Plat_ExitProcess(1);
         goto LABEL_28;
@@ -4463,12 +4464,12 @@ LABEL_19:
                   pWriteBuf->m_iCurBit = m_iCurBit + 10;
                   v25 = m_iCurBit & 0x1F;
                   v26 = &pWriteBuf->m_pData[m_iCurBit >> 5];
-                  v39 = __ROL4__(m_nValue, m_iCurBit & 0x1F);
+                  v41 = __ROL4__(m_nValue, m_iCurBit & 0x1F);
                   v28 = *v26;
-                  v40 = &v26[(0x1FFu >> (v5 - (m_iCurBit & 0x1F))) & 1];
-                  v41 = v39 ^ *v40;
-                  v31 = *v26 ^ v39;
-                  *v40 ^= (0x1FFu >> (v5 - v25)) & v41;
+                  v42 = &v26[(0x1FFu >> (v5 - (m_iCurBit & 0x1F))) & 1];
+                  v43 = v41 ^ *v42;
+                  v31 = *v26 ^ v41;
+                  *v42 ^= (0x1FFu >> (v5 - v25)) & v43;
                   v32 = 1023;
                   goto LABEL_33;
                 }
@@ -4502,12 +4503,12 @@ LABEL_45:
                     pWriteBuf->m_iCurBit = m_iCurBit + 17;
                     v25 = m_iCurBit & 0x1F;
                     v26 = &pWriteBuf->m_pData[m_iCurBit >> 5];
-                    v36 = __ROL4__(m_nValue, m_iCurBit & 0x1F);
+                    v38 = __ROL4__(m_nValue, m_iCurBit & 0x1F);
                     v28 = *v26;
-                    v37 = &v26[(0xFFFFu >> (v5 - (m_iCurBit & 0x1F))) & 1];
-                    v38 = v36 ^ *v37;
-                    v31 = *v26 ^ v36;
-                    *v37 ^= (0xFFFFu >> (v5 - v25)) & v38;
+                    v39 = &v26[(0xFFFFu >> (v5 - (m_iCurBit & 0x1F))) & 1];
+                    v40 = v38 ^ *v39;
+                    v31 = *v26 ^ v38;
+                    *v39 ^= (0xFFFFu >> (v5 - v25)) & v40;
                     v32 = 0x1FFFF;
                     goto LABEL_33;
                   }
@@ -4525,12 +4526,12 @@ LABEL_41:
                     pWriteBuf->m_iCurBit = m_iCurBit + 31;
                     v25 = m_iCurBit & 0x1F;
                     v26 = &pWriteBuf->m_pData[m_iCurBit >> 5];
-                    v33 = __ROL4__(m_nValue, m_iCurBit & 0x1F);
+                    v35 = __ROL4__(m_nValue, m_iCurBit & 0x1F);
                     v28 = *v26;
-                    v34 = &v26[(0x3FFFFFFFu >> (v5 - (m_iCurBit & 0x1F))) & 1];
-                    v35 = v33 ^ *v34;
-                    v31 = *v26 ^ v33;
-                    *v34 ^= (0x3FFFFFFFu >> (v5 - v25)) & v35;
+                    v36 = &v26[(0x3FFFFFFFu >> (v5 - (m_iCurBit & 0x1F))) & 1];
+                    v37 = v35 ^ *v36;
+                    v31 = *v26 ^ v35;
+                    *v36 ^= (0x3FFFFFFFu >> (v5 - v25)) & v37;
                     v32 = 0x7FFFFFFF;
                     goto LABEL_33;
                   }
@@ -4619,13 +4620,13 @@ LABEL_13:
     }
     if ( LoggingSystem_IsChannelEnabled(LOG_GENERAL, 4) != 0 )
     {
-      v42.m_szFile = "../public/tier2/fieldpath.h";
-      v42.m_szFunction = "Path_AddToTail";
-      v42.m_nLine = 428;
+      v44.m_szFile = "../public/tier2/fieldpath.h";
+      v44.m_szFunction = "Path_AddToTail";
+      v44.m_nLine = 428;
       LoggingSystem_Log(
         LOG_GENERAL,
         LoggingSeverity_t::LS_ERROR,
-        &v42,
+        &v44,
         "Path_AddToTail failed for read only CFieldPath",
         v23,
         v24);
@@ -4675,48 +4676,46 @@ void __fastcall FieldOp_Write_PushThreeLeftDeltaN(
   __int64 v33; // rcx
   __int64 v34; // rdi
   __int64 v35; // rsi
-  __int64 v36; // r8
-  __int64 v37; // r9
-  int v38; // ecx
-  int v39; // eax
-  int v40; // r12d
-  uint32 *v41; // rcx
-  int v42; // eax
-  int v43; // eax
-  int v44; // r12d
-  uint32 *v45; // rcx
-  int v46; // eax
-  char v47; // r11
-  int v48; // r9d
-  uint32 *v49; // rcx
+  int v36; // ecx
+  int v37; // eax
+  int v38; // r12d
+  uint32 *v39; // rcx
+  int v40; // eax
+  int v41; // eax
+  int v42; // r12d
+  uint32 *v43; // rcx
+  int v44; // eax
+  char v45; // r11
+  int v46; // r9d
+  uint32 *v47; // rcx
+  int v48; // esi
+  unsigned int v49; // r9d
   int v50; // esi
-  unsigned int v51; // r9d
-  int v52; // esi
-  int v53; // r12d
-  uint32 *v54; // rcx
-  int v55; // eax
-  int v56; // r9d
-  uint32 *v57; // rcx
-  int v58; // esi
-  int v59; // eax
-  int v60; // r12d
-  uint32 *v61; // rcx
-  int v62; // eax
-  uint32 *v63; // r10
-  int v64; // esi
-  uint32 *v65; // rcx
-  int v66; // r9d
-  unsigned int *v67; // rcx
-  unsigned int v68; // r10d
-  int v69; // r9d
-  int v70; // r9d
-  uint32 *v71; // r10
-  int v72; // esi
-  uint32 v73; // r11d
-  uint32 *v74; // rcx
-  unsigned __int64 v75; // [rsp+0h] [rbp-60h]
-  int v76; // [rsp+Ch] [rbp-54h]
-  LeafCodeInfo_t v77; // [rsp+10h] [rbp-50h] BYREF
+  int v51; // r12d
+  uint32 *v52; // rcx
+  int v53; // eax
+  int v54; // r9d
+  uint32 *v55; // rcx
+  int v56; // esi
+  int v57; // eax
+  int v58; // r12d
+  uint32 *v59; // rcx
+  int v60; // eax
+  uint32 *v61; // r10
+  int v62; // esi
+  uint32 *v63; // rcx
+  int v64; // r9d
+  unsigned int *v65; // rcx
+  unsigned int v66; // r10d
+  int v67; // r9d
+  int v68; // r9d
+  uint32 *v69; // r10
+  int v70; // esi
+  uint32 v71; // r11d
+  uint32 *v72; // rcx
+  unsigned __int64 v73; // [rsp+0h] [rbp-60h]
+  int v74; // [rsp+Ch] [rbp-54h]
+  LeafCodeInfo_t v75; // [rsp+10h] [rbp-50h] BYREF
 
   v6 = to;
   m_nCount = to->m_nCount;
@@ -4744,60 +4743,60 @@ void __fastcall FieldOp_Write_PushThreeLeftDeltaN(
         pWriteBuf->m_iCurBit = m_iCurBit + 6;
         v4 = m_iCurBit & 0x1F;
         v3 = &pWriteBuf->m_pData[m_iCurBit >> 5];
-        v66 = __ROL4__(v16 & 0xF | 0x30, v4);
-        v67 = &v3[(0x1Fu >> (31 - v4)) & 1];
+        v64 = __ROL4__(v16 & 0xF | 0x30, v4);
+        v65 = &v3[(0x1Fu >> (31 - v4)) & 1];
         v5 = *v3;
-        v68 = *v67 ^ (0x1Fu >> (31 - v4)) & (v66 ^ *v67);
-        v69 = *v3 ^ v66;
-        *v67 = v68;
-        *v3 = v5 ^ (63 << v4) & v69;
+        v66 = *v65 ^ (0x1Fu >> (31 - v4)) & (v64 ^ *v65);
+        v67 = *v3 ^ v64;
+        *v65 = v66;
+        *v3 = v5 ^ (63 << v4) & v67;
         m_nDataBits = pWriteBuf->m_nDataBits;
-        v70 = pWriteBuf->m_iCurBit;
-        if ( m_nDataBits - v70 <= 27 )
+        v68 = pWriteBuf->m_iCurBit;
+        if ( m_nDataBits - v68 <= 27 )
           goto LABEL_7;
-        pWriteBuf->m_iCurBit = v70 + 28;
-        LODWORD(v3) = v70 & 0x1F;
-        v71 = &pWriteBuf->m_pData[v70 >> 5];
-        v72 = __ROL4__(v16 >> 4, v3);
-        v73 = *v71;
+        pWriteBuf->m_iCurBit = v68 + 28;
+        LODWORD(v3) = v68 & 0x1F;
+        v69 = &pWriteBuf->m_pData[v68 >> 5];
+        v70 = __ROL4__(v16 >> 4, v3);
+        v71 = *v69;
         v4 = 0x7FFFFFFu >> (31 - v3);
-        v74 = &v71[(0x7FFFFFFu >> (31 - v3)) & 1];
-        v5 = *v74;
-        *v74 = v5 ^ v4 & (v72 ^ *v74);
-        *v71 = v73 ^ (0xFFFFFFF << v3) & (v73 ^ v72);
+        v72 = &v69[(0x7FFFFFFu >> (31 - v3)) & 1];
+        v5 = *v72;
+        *v72 = v5 ^ v4 & (v70 ^ *v72);
+        *v69 = v71 ^ (0xFFFFFFF << v3) & (v71 ^ v70);
         goto LABEL_8;
       }
       if ( v17 <= 13 )
         goto LABEL_7;
       pWriteBuf->m_iCurBit = m_iCurBit + 14;
-      v47 = m_iCurBit & 0x1F;
+      v45 = m_iCurBit & 0x1F;
       v3 = &pWriteBuf->m_pData[m_iCurBit >> 5];
       v4 = *v3;
-      v56 = __ROL4__((4 * (v16 & 0xFFFFFFF0)) | v16 & 0xF | 0x20, m_iCurBit & 0x1F);
-      v57 = &v3[(0x1FFFu >> (31 - v47)) & 1];
-      v5 = *v57;
-      v58 = v56 ^ *v57;
-      v51 = v4 ^ v56;
-      *v57 = v5 ^ (0x1FFFu >> (31 - v47)) & v58;
-      v52 = 0x3FFF;
+      v54 = __ROL4__((4 * (v16 & 0xFFFFFFF0)) | v16 & 0xF | 0x20, m_iCurBit & 0x1F);
+      v55 = &v3[(0x1FFFu >> (31 - v45)) & 1];
+      v5 = *v55;
+      v56 = v54 ^ *v55;
+      v49 = v4 ^ v54;
+      *v55 = v5 ^ (0x1FFFu >> (31 - v45)) & v56;
+      v50 = 0x3FFF;
     }
     else
     {
       if ( v17 <= 9 )
         goto LABEL_7;
       pWriteBuf->m_iCurBit = m_iCurBit + 10;
-      v47 = m_iCurBit & 0x1F;
+      v45 = m_iCurBit & 0x1F;
       v3 = &pWriteBuf->m_pData[m_iCurBit >> 5];
       v4 = *v3;
-      v48 = __ROL4__((4 * (v16 & 0xFFFFFFF0)) | v16 & 0xF | 0x10, m_iCurBit & 0x1F);
-      v49 = &v3[(0x1FFu >> (31 - v47)) & 1];
-      v5 = *v49;
-      v50 = v48 ^ *v49;
-      v51 = v4 ^ v48;
-      *v49 = v5 ^ (0x1FFu >> (31 - v47)) & v50;
-      v52 = 1023;
+      v46 = __ROL4__((4 * (v16 & 0xFFFFFFF0)) | v16 & 0xF | 0x10, m_iCurBit & 0x1F);
+      v47 = &v3[(0x1FFu >> (31 - v45)) & 1];
+      v5 = *v47;
+      v48 = v46 ^ *v47;
+      v49 = v4 ^ v46;
+      *v47 = v5 ^ (0x1FFu >> (31 - v45)) & v48;
+      v50 = 1023;
     }
-    *v3 = v4 ^ (v52 << v47) & v51;
+    *v3 = v4 ^ (v50 << v45) & v49;
     goto LABEL_8;
   }
   if ( v17 <= 5 )
@@ -4808,24 +4807,24 @@ LABEL_7:
     goto LABEL_8;
   }
   pWriteBuf->m_iCurBit = m_iCurBit + 6;
-  v63 = &pWriteBuf->m_pData[m_iCurBit >> 5];
-  v64 = __ROL4__(v16, m_iCurBit & 0x1F);
-  LODWORD(v3) = *v63;
+  v61 = &pWriteBuf->m_pData[m_iCurBit >> 5];
+  v62 = __ROL4__(v16, m_iCurBit & 0x1F);
+  LODWORD(v3) = *v61;
   v5 = 0x1Fu >> (31 - (m_iCurBit & 0x1F));
-  v65 = &v63[(0x1Fu >> (31 - (m_iCurBit & 0x1F))) & 1];
-  v4 = *v65;
-  *v65 = v4 ^ v5 & (v64 ^ *v65);
-  *v63 = v3 ^ (63 << (m_iCurBit & 0x1F)) & (v3 ^ v64);
+  v63 = &v61[(0x1Fu >> (31 - (m_iCurBit & 0x1F))) & 1];
+  v4 = *v63;
+  *v63 = v4 ^ v5 & (v62 ^ *v63);
+  *v61 = v3 ^ (63 << (m_iCurBit & 0x1F)) & (v3 ^ v62);
 LABEL_8:
   if ( from->m_bUsingExternalPaths )
   {
     from = &LOG_GENERAL;
     if ( LoggingSystem_IsChannelEnabled(LOG_GENERAL, 4) != 0 )
     {
-      v77.m_szFile = "../public/tier2/fieldpath.h";
-      v77.m_szFunction = "GetPathData";
-      v77.m_nLine = 514;
-      LoggingSystem_Log(LOG_GENERAL, LoggingSeverity_t::LS_ERROR, &v77, "GetPathData failed for read only CFieldPath");
+      v75.m_szFile = "../public/tier2/fieldpath.h";
+      v75.m_szFunction = "GetPathData";
+      v75.m_nLine = 514;
+      LoggingSystem_Log(LOG_GENERAL, LoggingSeverity_t::LS_ERROR, &v75, "GetPathData failed for read only CFieldPath");
     }
     goto LABEL_24;
   }
@@ -4851,18 +4850,18 @@ LABEL_8:
         from = &LOG_GENERAL;
         if ( LoggingSystem_IsChannelEnabled(LOG_GENERAL, 4) != 0 )
         {
-          v77.m_szFile = "../public/tier2/fieldpath.h";
-          v77.m_szFunction = "Path_AddToTail";
-          v77.m_nLine = 425;
+          v75.m_szFile = "../public/tier2/fieldpath.h";
+          v75.m_szFunction = "Path_AddToTail";
+          v75.m_nLine = 425;
           LoggingSystem_Log(
             LOG_GENERAL,
             LoggingSeverity_t::LS_ERROR,
-            &v77,
+            &v75,
             "Path_AddToTail failed, depth already == DEFAULT_MAX_PATH_DEPTH(%d)",
             6);
         }
 LABEL_24:
-        if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v34, v35, v32, v33, v36, v37) != 0 )
+        if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v34, v35, v32, v33) != 0 )
           loc_0 = -559038737;
         Plat_ExitProcess(1);
         goto LABEL_27;
@@ -4899,59 +4898,59 @@ LABEL_24:
         goto LABEL_19;
       }
 LABEL_27:
-      v38 = *(v4 + 16);
-      v39 = *(v4 + 12);
-      if ( v38 >= v39 )
+      v36 = *(v4 + 16);
+      v37 = *(v4 + 12);
+      if ( v36 >= v37 )
       {
         *(v4 + 20) = 1;
         if ( v6 <= 0xF )
         {
 LABEL_29:
-          if ( v39 <= v38 )
+          if ( v37 <= v36 )
           {
             *(v4 + 20) = 1;
-            if ( v39 - v38 <= 3 )
+            if ( v37 - v36 <= 3 )
               goto LABEL_31;
           }
           else
           {
-            *(*v4 + 4LL * (v38 >> 5)) |= 1 << v38;
-            v38 = *(v4 + 16) + 1;
-            v39 = *(v4 + 12);
-            *(v4 + 16) = v38;
-            if ( v39 - v38 <= 3 )
+            *(*v4 + 4LL * (v36 >> 5)) |= 1 << v36;
+            v36 = *(v4 + 16) + 1;
+            v37 = *(v4 + 12);
+            *(v4 + 16) = v36;
+            if ( v37 - v36 <= 3 )
               goto LABEL_31;
           }
-          *(v4 + 16) = v38 + 4;
-          v24 = v38 & 0x1F;
-          v25 = (*v4 + 4LL * (v38 >> 5));
-          v53 = __ROL4__(v6, v38 & 0x1F);
+          *(v4 + 16) = v36 + 4;
+          v24 = v36 & 0x1F;
+          v25 = (*v4 + 4LL * (v36 >> 5));
+          v51 = __ROL4__(v6, v36 & 0x1F);
           v27 = *v25;
-          v54 = &v25[(7u >> (v18 - (v38 & 0x1F))) & 1];
-          v55 = v53 ^ *v54;
-          v30 = *v25 ^ v53;
-          *v54 ^= (7u >> (v18 - v24)) & v55;
+          v52 = &v25[(7u >> (v18 - (v36 & 0x1F))) & 1];
+          v53 = v51 ^ *v52;
+          v30 = *v25 ^ v51;
+          *v52 ^= (7u >> (v18 - v24)) & v53;
           v31 = 15;
           goto LABEL_19;
         }
       }
       else
       {
-        *(*v4 + 4LL * (v38 >> 5)) &= ~(1 << v38);
-        v38 = *(v4 + 16) + 1;
-        v39 = *(v4 + 12);
-        *(v4 + 16) = v38;
+        *(*v4 + 4LL * (v36 >> 5)) &= ~(1 << v36);
+        v36 = *(v4 + 16) + 1;
+        v37 = *(v4 + 12);
+        *(v4 + 16) = v36;
         if ( v6 <= 0xF )
           goto LABEL_29;
-        if ( v38 < v39 )
+        if ( v36 < v37 )
         {
-          *(*v4 + 4LL * (v38 >> 5)) &= ~(1 << v38);
-          v38 = *(v4 + 16) + 1;
-          v39 = *(v4 + 12);
-          *(v4 + 16) = v38;
+          *(*v4 + 4LL * (v36 >> 5)) &= ~(1 << v36);
+          v36 = *(v4 + 16) + 1;
+          v37 = *(v4 + 12);
+          *(v4 + 16) = v36;
           if ( v6 > 0x3FF )
           {
-            if ( v39 <= v38 )
+            if ( v37 <= v36 )
             {
 LABEL_41:
               *(v4 + 20) = 1;
@@ -4960,62 +4959,62 @@ LABEL_41:
             }
             else
             {
-              *(*v4 + 4LL * (v38 >> 5)) &= ~(1 << v38);
+              *(*v4 + 4LL * (v36 >> 5)) &= ~(1 << v36);
               ++*(v4 + 16);
               if ( v6 <= 0x1FFFF )
               {
 LABEL_42:
-                v43 = *(v4 + 16);
+                v41 = *(v4 + 16);
                 v23 = *(v4 + 12);
-                if ( v43 >= v23 )
+                if ( v41 >= v23 )
                 {
                   *(v4 + 20) = 1;
                 }
                 else
                 {
-                  *(*v4 + 4LL * (v43 >> 5)) |= 1 << v43;
+                  *(*v4 + 4LL * (v41 >> 5)) |= 1 << v41;
                   v23 = *(v4 + 12);
-                  v43 = *(v4 + 16) + 1;
-                  *(v4 + 16) = v43;
+                  v41 = *(v4 + 16) + 1;
+                  *(v4 + 16) = v41;
                 }
-                if ( v23 - v43 <= 16 )
+                if ( v23 - v41 <= 16 )
                 {
 LABEL_38:
                   *(v4 + 16) = v23;
                   *(v4 + 20) = 1;
                   goto LABEL_20;
                 }
-                *(v4 + 16) = v43 + 17;
-                v24 = v43 & 0x1F;
-                v25 = (*v4 + 4LL * (v43 >> 5));
-                v44 = __ROL4__(v6, v43 & 0x1F);
+                *(v4 + 16) = v41 + 17;
+                v24 = v41 & 0x1F;
+                v25 = (*v4 + 4LL * (v41 >> 5));
+                v42 = __ROL4__(v6, v41 & 0x1F);
                 v27 = *v25;
-                v45 = &v25[(0xFFFFu >> (v18 - (v43 & 0x1F))) & 1];
-                v46 = v44 ^ *v45;
-                v30 = *v25 ^ v44;
-                *v45 ^= (0xFFFFu >> (v18 - v24)) & v46;
+                v43 = &v25[(0xFFFFu >> (v18 - (v41 & 0x1F))) & 1];
+                v44 = v42 ^ *v43;
+                v30 = *v25 ^ v42;
+                *v43 ^= (0xFFFFu >> (v18 - v24)) & v44;
                 v31 = 0x1FFFF;
                 goto LABEL_19;
               }
             }
-            v75 = v19;
-            v76 = v18;
+            v73 = v19;
+            v74 = v18;
             bf_write::WriteOneBit(v4, 0);
             v23 = *(v4 + 12);
-            v59 = *(v4 + 16);
-            v18 = v76;
-            v19 = v75;
-            if ( v23 - v59 <= 30 )
+            v57 = *(v4 + 16);
+            v18 = v74;
+            v19 = v73;
+            if ( v23 - v57 <= 30 )
               goto LABEL_38;
-            *(v4 + 16) = v59 + 31;
-            v24 = v59 & 0x1F;
-            v25 = (*v4 + 4LL * (v59 >> 5));
-            v60 = __ROL4__(v6, v59 & 0x1F);
+            *(v4 + 16) = v57 + 31;
+            v24 = v57 & 0x1F;
+            v25 = (*v4 + 4LL * (v57 >> 5));
+            v58 = __ROL4__(v6, v57 & 0x1F);
             v27 = *v25;
-            v61 = &v25[(0x3FFFFFFFu >> (v76 - (v59 & 0x1F))) & 1];
-            v62 = v60 ^ *v61;
-            v30 = *v25 ^ v60;
-            *v61 ^= (0x3FFFFFFFu >> (v76 - v24)) & v62;
+            v59 = &v25[(0x3FFFFFFFu >> (v74 - (v57 & 0x1F))) & 1];
+            v60 = v58 ^ *v59;
+            v30 = *v25 ^ v58;
+            *v59 ^= (0x3FFFFFFFu >> (v74 - v24)) & v60;
             v31 = 0x7FFFFFFF;
             goto LABEL_19;
           }
@@ -5026,33 +5025,33 @@ LABEL_38:
       if ( v6 > 0x3FF )
         goto LABEL_41;
 LABEL_34:
-      if ( v39 <= v38 )
+      if ( v37 <= v36 )
       {
         *(v4 + 20) = 1;
       }
       else
       {
-        *(*v4 + 4LL * (v38 >> 5)) |= 1 << v38;
-        v38 = *(v4 + 16) + 1;
-        v39 = *(v4 + 12);
-        *(v4 + 16) = v38;
+        *(*v4 + 4LL * (v36 >> 5)) |= 1 << v36;
+        v36 = *(v4 + 16) + 1;
+        v37 = *(v4 + 12);
+        *(v4 + 16) = v36;
       }
-      if ( v39 - v38 <= 9 )
+      if ( v37 - v36 <= 9 )
       {
 LABEL_31:
-        *(v4 + 16) = v39;
+        *(v4 + 16) = v37;
         *(v4 + 20) = 1;
         goto LABEL_20;
       }
-      *(v4 + 16) = v38 + 10;
-      v24 = v38 & 0x1F;
-      v25 = (*v4 + 4LL * (v38 >> 5));
-      v40 = __ROL4__(v6, v38 & 0x1F);
+      *(v4 + 16) = v36 + 10;
+      v24 = v36 & 0x1F;
+      v25 = (*v4 + 4LL * (v36 >> 5));
+      v38 = __ROL4__(v6, v36 & 0x1F);
       v27 = *v25;
-      v41 = &v25[(0x1FFu >> (v18 - (v38 & 0x1F))) & 1];
-      v42 = v40 ^ *v41;
-      v30 = *v25 ^ v40;
-      *v41 ^= (0x1FFu >> (v18 - v24)) & v42;
+      v39 = &v25[(0x1FFu >> (v18 - (v36 & 0x1F))) & 1];
+      v40 = v38 ^ *v39;
+      v30 = *v25 ^ v38;
+      *v39 ^= (0x1FFu >> (v18 - v24)) & v40;
       v31 = 1023;
 LABEL_19:
       *v25 = v27 ^ (v31 << v24) & v30;
@@ -5065,13 +5064,13 @@ LABEL_20:
     from = &LOG_GENERAL;
     if ( LoggingSystem_IsChannelEnabled(LOG_GENERAL, 4) != 0 )
     {
-      v77.m_szFile = "../public/tier2/fieldpath.h";
-      v77.m_szFunction = "Path_AddToTail";
-      v77.m_nLine = 428;
+      v75.m_szFile = "../public/tier2/fieldpath.h";
+      v75.m_szFunction = "Path_AddToTail";
+      v75.m_nLine = 428;
       LoggingSystem_Log(
         LOG_GENERAL,
         LoggingSeverity_t::LS_ERROR,
-        &v77,
+        &v75,
         "Path_AddToTail failed for read only CFieldPath");
     }
     goto LABEL_24;
@@ -5147,7 +5146,7 @@ void __fastcall FieldOp_Write_PushThreePack5LeftDeltaZero(
           6);
       }
 LABEL_12:
-      if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v11, v12, v9, v10, v13, v14) != 0 )
+      if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v11, v12, v9, v10) != 0 )
         loc_0 = -559038737;
       v3 = Plat_ExitProcess(1);
       goto LABEL_15;
@@ -5206,23 +5205,25 @@ void __fastcall FieldOp_Write_PushThreePack5LeftDeltaOne(
   int v20; // r10d
   uint32 v21; // r12d
   uint32 *v22; // rcx
-  LeafCodeInfo_t v23; // [rsp+0h] [rbp-50h] BYREF
+  __int64 v23; // r8
+  __int64 v24; // r9
+  LeafCodeInfo_t v25; // [rsp+0h] [rbp-50h] BYREF
 
   m_nCount = to->m_nCount;
   if ( from->m_bUsingExternalPaths )
   {
     if ( LoggingSystem_IsChannelEnabled(LOG_GENERAL, 4) != 0 )
     {
-      v23.m_szFile = "../public/tier2/fieldpath.h";
-      v23.m_szFunction = "GetPathData";
-      v23.m_nLine = 514;
+      v25.m_szFile = "../public/tier2/fieldpath.h";
+      v25.m_szFunction = "GetPathData";
+      v25.m_nLine = 514;
       LoggingSystem_Log(
         LOG_GENERAL,
         LoggingSeverity_t::LS_ERROR,
-        &v23,
+        &v25,
         "GetPathData failed for read only CFieldPath",
-        v16,
-        v17);
+        v23,
+        v24);
     }
     goto LABEL_13;
   }
@@ -5246,18 +5247,18 @@ void __fastcall FieldOp_Write_PushThreePack5LeftDeltaOne(
       {
         if ( LoggingSystem_IsChannelEnabled(LOG_GENERAL, 4) != 0 )
         {
-          v23.m_szFile = "../public/tier2/fieldpath.h";
-          v23.m_szFunction = "Path_AddToTail";
-          v23.m_nLine = 425;
+          v25.m_szFile = "../public/tier2/fieldpath.h";
+          v25.m_szFunction = "Path_AddToTail";
+          v25.m_nLine = 425;
           LoggingSystem_Log(
             LOG_GENERAL,
             LoggingSeverity_t::LS_ERROR,
-            &v23,
+            &v25,
             "Path_AddToTail failed, depth already == DEFAULT_MAX_PATH_DEPTH(%d)",
             6);
         }
 LABEL_13:
-        if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v14, v15, v12, v13, v16, v17) != 0 )
+        if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v14, v15, v12, v13) != 0 )
           loc_0 = -559038737;
         v6 = Plat_ExitProcess(1);
 LABEL_16:
@@ -5286,13 +5287,13 @@ LABEL_9:
     }
     if ( LoggingSystem_IsChannelEnabled(LOG_GENERAL, 4) != 0 )
     {
-      v23.m_szFile = "../public/tier2/fieldpath.h";
-      v23.m_szFunction = "Path_AddToTail";
-      v23.m_nLine = 428;
+      v25.m_szFile = "../public/tier2/fieldpath.h";
+      v25.m_szFunction = "Path_AddToTail";
+      v25.m_nLine = 428;
       LoggingSystem_Log(
         LOG_GENERAL,
         LoggingSeverity_t::LS_ERROR,
-        &v23,
+        &v25,
         "Path_AddToTail failed for read only CFieldPath",
         v16,
         v17);
@@ -5332,35 +5333,33 @@ void __fastcall FieldOp_Write_PushThreePack5LeftDeltaN(
   __int64 v22; // rcx
   __int64 v23; // rdi
   __int64 v24; // rsi
-  __int64 v25; // r8
-  __int64 v26; // r9
-  char v27; // bl
-  uint32 *v28; // r11
-  int v29; // r10d
-  uint32 v30; // r12d
-  uint32 *v31; // rcx
-  char v32; // r12
-  int v33; // r11d
-  uint32 *v34; // rcx
+  char v25; // bl
+  uint32 *v26; // r11
+  int v27; // r10d
+  uint32 v28; // r12d
+  uint32 *v29; // rcx
+  char v30; // r12
+  int v31; // r11d
+  uint32 *v32; // rcx
+  int v33; // r9d
+  int v34; // r11d
   int v35; // r9d
   int v36; // r11d
-  int v37; // r9d
-  int v38; // r11d
-  uint32 *v39; // rcx
+  uint32 *v37; // rcx
+  int v38; // r9d
+  uint32 *v39; // rbx
   int v40; // r9d
-  uint32 *v41; // rbx
-  int v42; // r9d
-  int *v43; // rcx
-  int v44; // r11d
-  unsigned int *v45; // rcx
-  int v46; // r15d
-  unsigned int v47; // ebx
-  int v48; // r11d
-  int v49; // r11d
-  uint32 *v50; // rbx
-  int v51; // r9d
-  uint32 v52; // r12d
-  LeafCodeInfo_t v53; // [rsp+10h] [rbp-50h] BYREF
+  int *v41; // rcx
+  int v42; // r11d
+  unsigned int *v43; // rcx
+  int v44; // r15d
+  unsigned int v45; // ebx
+  int v46; // r11d
+  int v47; // r11d
+  uint32 *v48; // rbx
+  int v49; // r9d
+  uint32 v50; // r12d
+  LeafCodeInfo_t v51; // [rsp+10h] [rbp-50h] BYREF
 
   m_nCount = to->m_nCount;
   v6 = m_nCount - 4;
@@ -5387,56 +5386,56 @@ void __fastcall FieldOp_Write_PushThreePack5LeftDeltaN(
         pWriteBuf->m_iCurBit = m_iCurBit + 6;
         v4 = m_iCurBit & 0x1F;
         v3 = &pWriteBuf->m_pData[m_iCurBit >> 5];
-        v44 = __ROL4__(v13 & 0xF | 0x30, v4);
-        v45 = &v3[(0x1Fu >> (31 - v4)) & 1];
-        v46 = *v3;
-        v47 = *v45 ^ (0x1Fu >> (31 - v4)) & (v44 ^ *v45);
-        v48 = *v3 ^ v44;
-        *v45 = v47;
-        *v3 = v46 ^ (63 << v4) & v48;
+        v42 = __ROL4__(v13 & 0xF | 0x30, v4);
+        v43 = &v3[(0x1Fu >> (31 - v4)) & 1];
+        v44 = *v3;
+        v45 = *v43 ^ (0x1Fu >> (31 - v4)) & (v42 ^ *v43);
+        v46 = *v3 ^ v42;
+        *v43 = v45;
+        *v3 = v44 ^ (63 << v4) & v46;
         m_nDataBits = pWriteBuf->m_nDataBits;
-        v49 = pWriteBuf->m_iCurBit;
-        if ( m_nDataBits - v49 <= 27 )
+        v47 = pWriteBuf->m_iCurBit;
+        if ( m_nDataBits - v47 <= 27 )
           goto LABEL_7;
-        pWriteBuf->m_iCurBit = v49 + 28;
-        LODWORD(v3) = v49 & 0x1F;
-        v50 = &pWriteBuf->m_pData[v49 >> 5];
-        v51 = __ROL4__(v13 >> 4, v3);
-        v52 = *v50;
+        pWriteBuf->m_iCurBit = v47 + 28;
+        LODWORD(v3) = v47 & 0x1F;
+        v48 = &pWriteBuf->m_pData[v47 >> 5];
+        v49 = __ROL4__(v13 >> 4, v3);
+        v50 = *v48;
         v4 = 0x7FFFFFFu >> (31 - v3);
-        v50[v4 & 1] ^= v4 & (v51 ^ v50[v4 & 1]);
-        *v50 = v52 ^ (0xFFFFFFF << v3) & (v52 ^ v51);
+        v48[v4 & 1] ^= v4 & (v49 ^ v48[v4 & 1]);
+        *v48 = v50 ^ (0xFFFFFFF << v3) & (v50 ^ v49);
         goto LABEL_8;
       }
       if ( v14 <= 13 )
         goto LABEL_7;
       pWriteBuf->m_iCurBit = m_iCurBit + 14;
-      v32 = m_iCurBit & 0x1F;
+      v30 = m_iCurBit & 0x1F;
       v3 = &pWriteBuf->m_pData[m_iCurBit >> 5];
       v4 = *v3;
-      v38 = __ROL4__((4 * (v13 & 0xFFFFFFF0)) | v13 & 0xF | 0x20, m_iCurBit & 0x1F);
-      v39 = &v3[(0x1FFFu >> (31 - v32)) & 1];
-      v40 = v38 ^ *v39;
-      v36 = *v3 ^ v38;
-      *v39 ^= (0x1FFFu >> (31 - v32)) & v40;
-      v37 = 0x3FFF;
+      v36 = __ROL4__((4 * (v13 & 0xFFFFFFF0)) | v13 & 0xF | 0x20, m_iCurBit & 0x1F);
+      v37 = &v3[(0x1FFFu >> (31 - v30)) & 1];
+      v38 = v36 ^ *v37;
+      v34 = *v3 ^ v36;
+      *v37 ^= (0x1FFFu >> (31 - v30)) & v38;
+      v35 = 0x3FFF;
     }
     else
     {
       if ( v14 <= 9 )
         goto LABEL_7;
       pWriteBuf->m_iCurBit = m_iCurBit + 10;
-      v32 = m_iCurBit & 0x1F;
+      v30 = m_iCurBit & 0x1F;
       v3 = &pWriteBuf->m_pData[m_iCurBit >> 5];
       v4 = *v3;
-      v33 = __ROL4__((4 * (v13 & 0xFFFFFFF0)) | v13 & 0xF | 0x10, m_iCurBit & 0x1F);
-      v34 = &v3[(0x1FFu >> (31 - v32)) & 1];
-      v35 = v33 ^ *v34;
-      v36 = *v3 ^ v33;
-      *v34 ^= (0x1FFu >> (31 - v32)) & v35;
-      v37 = 1023;
+      v31 = __ROL4__((4 * (v13 & 0xFFFFFFF0)) | v13 & 0xF | 0x10, m_iCurBit & 0x1F);
+      v32 = &v3[(0x1FFu >> (31 - v30)) & 1];
+      v33 = v31 ^ *v32;
+      v34 = *v3 ^ v31;
+      *v32 ^= (0x1FFu >> (31 - v30)) & v33;
+      v35 = 1023;
     }
-    *v3 = v4 ^ (v37 << v32) & v36;
+    *v3 = v4 ^ (v35 << v30) & v34;
     goto LABEL_8;
   }
   if ( v14 <= 5 )
@@ -5447,22 +5446,22 @@ LABEL_7:
     goto LABEL_8;
   }
   pWriteBuf->m_iCurBit = m_iCurBit + 6;
-  v41 = &pWriteBuf->m_pData[m_iCurBit >> 5];
-  v42 = __ROL4__(v13, m_iCurBit & 0x1F);
-  LODWORD(v3) = *v41;
-  v43 = &v41[(0x1Fu >> (31 - (m_iCurBit & 0x1F))) & 1];
-  v4 = *v43;
-  *v43 ^= (0x1Fu >> (31 - (m_iCurBit & 0x1F))) & (v42 ^ *v43);
-  *v41 = v3 ^ (63 << (m_iCurBit & 0x1F)) & (v3 ^ v42);
+  v39 = &pWriteBuf->m_pData[m_iCurBit >> 5];
+  v40 = __ROL4__(v13, m_iCurBit & 0x1F);
+  LODWORD(v3) = *v39;
+  v41 = &v39[(0x1Fu >> (31 - (m_iCurBit & 0x1F))) & 1];
+  v4 = *v41;
+  *v41 ^= (0x1Fu >> (31 - (m_iCurBit & 0x1F))) & (v40 ^ *v41);
+  *v39 = v3 ^ (63 << (m_iCurBit & 0x1F)) & (v3 ^ v40);
 LABEL_8:
   if ( from->m_bUsingExternalPaths )
   {
     if ( LoggingSystem_IsChannelEnabled(LOG_GENERAL, 4) != 0 )
     {
-      v53.m_szFile = "../public/tier2/fieldpath.h";
-      v53.m_szFunction = "GetPathData";
-      v53.m_nLine = 514;
-      LoggingSystem_Log(LOG_GENERAL, LoggingSeverity_t::LS_ERROR, &v53, "GetPathData failed for read only CFieldPath");
+      v51.m_szFile = "../public/tier2/fieldpath.h";
+      v51.m_szFunction = "GetPathData";
+      v51.m_nLine = 514;
+      LoggingSystem_Log(LOG_GENERAL, LoggingSeverity_t::LS_ERROR, &v51, "GetPathData failed for read only CFieldPath");
     }
     goto LABEL_20;
   }
@@ -5486,29 +5485,29 @@ LABEL_8:
       {
         if ( LoggingSystem_IsChannelEnabled(LOG_GENERAL, 4) != 0 )
         {
-          v53.m_szFile = "../public/tier2/fieldpath.h";
-          v53.m_szFunction = "Path_AddToTail";
-          v53.m_nLine = 425;
+          v51.m_szFile = "../public/tier2/fieldpath.h";
+          v51.m_szFunction = "Path_AddToTail";
+          v51.m_nLine = 425;
           LoggingSystem_Log(
             LOG_GENERAL,
             LoggingSeverity_t::LS_ERROR,
-            &v53,
+            &v51,
             "Path_AddToTail failed, depth already == DEFAULT_MAX_PATH_DEPTH(%d)",
             6);
         }
 LABEL_20:
-        if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v23, v24, v21, v22, v25, v26) != 0 )
+        if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v23, v24, v21, v22) != 0 )
           loc_0 = -559038737;
         v15 = Plat_ExitProcess(1);
 LABEL_23:
         pWriteBuf->m_iCurBit = v20 + 5;
-        v27 = v20 & 0x1F;
-        v28 = &pWriteBuf->m_pData[v20 >> 5];
-        v29 = __ROL4__(v18, v20 & 0x1F);
-        v30 = *v28;
-        v31 = &v28[(v3 >> (v4 - (v20 & 0x1F))) & 1];
-        *v31 ^= (v3 >> (v4 - v27)) & (v29 ^ *v31);
-        *v28 = v30 ^ (v4 << v27) & (v30 ^ v29);
+        v25 = v20 & 0x1F;
+        v26 = &pWriteBuf->m_pData[v20 >> 5];
+        v27 = __ROL4__(v18, v20 & 0x1F);
+        v28 = *v26;
+        v29 = &v26[(v3 >> (v4 - (v20 & 0x1F))) & 1];
+        *v29 ^= (v3 >> (v4 - v25)) & (v27 ^ *v29);
+        *v26 = v28 ^ (v4 << v25) & (v28 ^ v27);
         goto LABEL_16;
       }
       from->m_nCount = v19 + 1;
@@ -5526,13 +5525,13 @@ LABEL_16:
     }
     if ( LoggingSystem_IsChannelEnabled(LOG_GENERAL, 4) != 0 )
     {
-      v53.m_szFile = "../public/tier2/fieldpath.h";
-      v53.m_szFunction = "Path_AddToTail";
-      v53.m_nLine = 428;
+      v51.m_szFile = "../public/tier2/fieldpath.h";
+      v51.m_szFunction = "Path_AddToTail";
+      v51.m_nLine = 428;
       LoggingSystem_Log(
         LOG_GENERAL,
         LoggingSeverity_t::LS_ERROR,
-        &v53,
+        &v51,
         "Path_AddToTail failed for read only CFieldPath");
     }
     goto LABEL_20;
@@ -5580,80 +5579,78 @@ void __fastcall FieldOp_Write_PushN(CFieldPath *const from, const CFieldPath *co
   __int64 v37; // rcx
   __int64 v38; // rdi
   __int64 v39; // rsi
-  __int64 v40; // r8
-  __int64 v41; // r9
-  char v42; // r11
-  uint32 *v43; // r10
-  int v44; // edi
-  uint32 *v45; // rcx
+  char v40; // r11
+  uint32 *v41; // r10
+  int v42; // edi
+  uint32 *v43; // rcx
+  int v44; // r8d
+  int v45; // edi
   int v46; // r8d
-  int v47; // edi
-  int v48; // r8d
-  char v49; // r8
-  uint32 *v50; // rdi
-  uint32 v51; // r9d
-  int v52; // edx
-  uint32 *v53; // rcx
+  char v47; // r8
+  uint32 *v48; // rdi
+  uint32 v49; // r9d
+  int v50; // edx
+  uint32 *v51; // rcx
+  int v52; // eax
+  int v53; // edx
   int v54; // eax
-  int v55; // edx
-  int v56; // eax
-  int v57; // edi
-  uint32 *v58; // rcx
-  int v59; // r8d
-  int v60; // edx
-  uint32 *v61; // rcx
+  int v55; // edi
+  uint32 *v56; // rcx
+  int v57; // r8d
+  int v58; // edx
+  uint32 *v59; // rcx
+  int v60; // eax
+  int v61; // ecx
   int v62; // eax
-  int v63; // ecx
-  int v64; // eax
-  int v65; // r15d
-  uint32 *v66; // rcx
-  int v67; // eax
-  int v68; // eax
-  int v69; // r15d
-  uint32 *v70; // rcx
-  int v71; // eax
-  int v72; // r15d
-  uint32 *v73; // rcx
-  int v74; // eax
-  int v75; // eax
-  int v76; // r15d
-  uint32 *v77; // rcx
+  int v63; // r15d
+  uint32 *v64; // rcx
+  int v65; // eax
+  int v66; // eax
+  int v67; // r15d
+  uint32 *v68; // rcx
+  int v69; // eax
+  int v70; // r15d
+  uint32 *v71; // rcx
+  int v72; // eax
+  int v73; // eax
+  int v74; // r15d
+  uint32 *v75; // rcx
+  int v76; // eax
+  uint32 *v77; // rsi
   int v78; // eax
-  uint32 *v79; // rsi
-  int v80; // eax
-  uint32 v81; // r8d
-  char v82; // r9
-  uint32 *v83; // r8
-  int v84; // r11d
-  uint32 v85; // r10d
-  uint32 *v86; // rcx
-  char v87; // r8
-  uint32 *v88; // rdi
-  uint32 v89; // r10d
+  uint32 v79; // r8d
+  char v80; // r9
+  uint32 *v81; // r8
+  int v82; // r11d
+  uint32 v83; // r10d
+  uint32 *v84; // rcx
+  char v85; // r8
+  uint32 *v86; // rdi
+  uint32 v87; // r10d
+  int v88; // edx
+  uint32 *v89; // rcx
   int v90; // edx
-  uint32 *v91; // rcx
-  int v92; // edx
-  char v93; // r8
-  uint32 *v94; // rdi
-  int v95; // eax
-  uint32 v96; // r9d
-  uint32 *v97; // rcx
-  int v98; // edx
-  int v99; // eax
-  char v100; // r11
-  uint32 *v101; // r10
-  int v102; // edi
-  unsigned int *v103; // rcx
-  unsigned int v104; // r8d
-  int v105; // edi
-  int v106; // ecx
-  uint32 *v107; // r11
-  int v108; // r8d
-  uint32 v109; // r9d
-  uint32 *v110; // rcx
-  const CFieldPath *v111; // [rsp+0h] [rbp-60h]
-  int v112; // [rsp+Ch] [rbp-54h]
-  LeafCodeInfo_t v113; // [rsp+10h] [rbp-50h] BYREF
+  char v91; // r8
+  uint32 *v92; // rdi
+  int v93; // eax
+  uint32 v94; // r9d
+  uint32 *v95; // rcx
+  int v96; // edx
+  int v97; // eax
+  char v98; // r11
+  uint32 *v99; // r10
+  int v100; // edi
+  unsigned int *v101; // rcx
+  unsigned int v102; // r8d
+  int v103; // edi
+  int v104; // ecx
+  uint32 *v105; // r11
+  int v106; // r8d
+  uint32 v107; // r9d
+  uint32 *v108; // rcx
+  const CFieldPath *v109; // [rsp+0h] [rbp-60h]
+  int v110; // [rsp+Ch] [rbp-54h]
+  LeafCodeInfo_t v111; // [rsp+10h] [rbp-50h] BYREF
 
   v4 = to;
   m_nCount = from->m_nCount;
@@ -5670,27 +5667,27 @@ void __fastcall FieldOp_Write_PushN(CFieldPath *const from, const CFieldPath *co
         if ( v11 <= 5 )
           goto LABEL_3;
         pWriteBuf->m_iCurBit = m_iCurBit + 6;
-        v87 = m_iCurBit & 0x1F;
-        v88 = &pWriteBuf->m_pData[m_iCurBit >> 5];
-        v89 = *v88;
-        v90 = __ROL4__(v9 & 0xF | 0x30, m_iCurBit & 0x1F);
-        v91 = &v88[(0x1Fu >> (31 - v87)) & 1];
-        *v91 ^= (0x1Fu >> (31 - v87)) & (v90 ^ *v91);
-        *v88 = v89 ^ (63 << v87) & (v89 ^ v90);
+        v85 = m_iCurBit & 0x1F;
+        v86 = &pWriteBuf->m_pData[m_iCurBit >> 5];
+        v87 = *v86;
+        v88 = __ROL4__(v9 & 0xF | 0x30, m_iCurBit & 0x1F);
+        v89 = &v86[(0x1Fu >> (31 - v85)) & 1];
+        *v89 ^= (0x1Fu >> (31 - v85)) & (v88 ^ *v89);
+        *v86 = v87 ^ (63 << v85) & (v87 ^ v88);
         m_nDataBits = pWriteBuf->m_nDataBits;
-        v92 = pWriteBuf->m_iCurBit;
-        if ( m_nDataBits - v92 <= 27 )
+        v90 = pWriteBuf->m_iCurBit;
+        if ( m_nDataBits - v90 <= 27 )
           goto LABEL_3;
-        pWriteBuf->m_iCurBit = v92 + 28;
-        v93 = v92 & 0x1F;
-        v94 = &pWriteBuf->m_pData[v92 >> 5];
-        v95 = __ROL4__(v9 >> 4, v92 & 0x1F);
-        v96 = *v94;
-        v97 = &v94[(0x7FFFFFFu >> (31 - (v92 & 0x1F))) & 1];
-        v98 = v95 ^ *v97;
-        v99 = *v94 ^ v95;
-        *v97 ^= (0x7FFFFFFu >> (31 - v93)) & v98;
-        *v94 = v96 ^ (0xFFFFFFF << v93) & v99;
+        pWriteBuf->m_iCurBit = v90 + 28;
+        v91 = v90 & 0x1F;
+        v92 = &pWriteBuf->m_pData[v90 >> 5];
+        v93 = __ROL4__(v9 >> 4, v90 & 0x1F);
+        v94 = *v92;
+        v95 = &v92[(0x7FFFFFFu >> (31 - (v90 & 0x1F))) & 1];
+        v96 = v93 ^ *v95;
+        v97 = *v92 ^ v93;
+        *v95 ^= (0x7FFFFFFu >> (31 - v91)) & v96;
+        *v92 = v94 ^ (0xFFFFFFF << v91) & v97;
         m_nDataBits = pWriteBuf->m_nDataBits;
         v12 = pWriteBuf->m_iCurBit;
         v13 = m_nDataBits - v12;
@@ -5699,32 +5696,32 @@ void __fastcall FieldOp_Write_PushN(CFieldPath *const from, const CFieldPath *co
       if ( v11 <= 13 )
         goto LABEL_3;
       pWriteBuf->m_iCurBit = m_iCurBit + 14;
-      v49 = m_iCurBit & 0x1F;
-      v50 = &pWriteBuf->m_pData[m_iCurBit >> 5];
-      v51 = *v50;
-      v60 = __ROL4__((4 * (v9 & 0xFFFFFFF0)) | v9 & 0xF | 0x20, m_iCurBit & 0x1F);
-      v61 = &v50[(0x1FFFu >> (31 - v49)) & 1];
-      v62 = v60 ^ *v61;
-      v55 = *v50 ^ v60;
-      *v61 ^= (0x1FFFu >> (31 - v49)) & v62;
-      v56 = 0x3FFF;
+      v47 = m_iCurBit & 0x1F;
+      v48 = &pWriteBuf->m_pData[m_iCurBit >> 5];
+      v49 = *v48;
+      v58 = __ROL4__((4 * (v9 & 0xFFFFFFF0)) | v9 & 0xF | 0x20, m_iCurBit & 0x1F);
+      v59 = &v48[(0x1FFFu >> (31 - v47)) & 1];
+      v60 = v58 ^ *v59;
+      v53 = *v48 ^ v58;
+      *v59 ^= (0x1FFFu >> (31 - v47)) & v60;
+      v54 = 0x3FFF;
     }
     else
     {
       if ( v11 <= 9 )
         goto LABEL_3;
       pWriteBuf->m_iCurBit = m_iCurBit + 10;
-      v49 = m_iCurBit & 0x1F;
-      v50 = &pWriteBuf->m_pData[m_iCurBit >> 5];
-      v51 = *v50;
-      v52 = __ROL4__((4 * (v9 & 0xFFFFFFF0)) | v9 & 0xF | 0x10, m_iCurBit & 0x1F);
-      v53 = &v50[(0x1FFu >> (31 - v49)) & 1];
-      v54 = v52 ^ *v53;
-      v55 = *v50 ^ v52;
-      *v53 ^= (0x1FFu >> (31 - v49)) & v54;
-      v56 = 1023;
+      v47 = m_iCurBit & 0x1F;
+      v48 = &pWriteBuf->m_pData[m_iCurBit >> 5];
+      v49 = *v48;
+      v50 = __ROL4__((4 * (v9 & 0xFFFFFFF0)) | v9 & 0xF | 0x10, m_iCurBit & 0x1F);
+      v51 = &v48[(0x1FFu >> (31 - v47)) & 1];
+      v52 = v50 ^ *v51;
+      v53 = *v48 ^ v50;
+      *v51 ^= (0x1FFu >> (31 - v47)) & v52;
+      v54 = 1023;
     }
-    *v50 = v51 ^ (v56 << v49) & v55;
+    *v48 = v49 ^ (v54 << v47) & v53;
     m_nDataBits = pWriteBuf->m_nDataBits;
     v12 = pWriteBuf->m_iCurBit;
     v13 = m_nDataBits - v12;
@@ -5740,13 +5737,13 @@ LABEL_3:
     goto LABEL_4;
   }
   pWriteBuf->m_iCurBit = m_iCurBit + 6;
-  v79 = &pWriteBuf->m_pData[m_iCurBit >> 5];
-  v80 = __ROL4__(v9, m_iCurBit & 0x1F);
-  v81 = *v79;
-  v79[(0x1Fu >> (31 - (m_iCurBit & 0x1F))) & 1] ^= (0x1Fu >> (31 - (m_iCurBit & 0x1F)))
-                                                 & (v80
-                                                  ^ v79[(0x1Fu >> (31 - (m_iCurBit & 0x1F))) & 1]);
-  *v79 = v81 ^ (63 << (m_iCurBit & 0x1F)) & (v81 ^ v80);
+  v77 = &pWriteBuf->m_pData[m_iCurBit >> 5];
+  v78 = __ROL4__(v9, m_iCurBit & 0x1F);
+  v79 = *v77;
+  v77[(0x1Fu >> (31 - (m_iCurBit & 0x1F))) & 1] ^= (0x1Fu >> (31 - (m_iCurBit & 0x1F)))
+                                                 & (v78
+                                                  ^ v77[(0x1Fu >> (31 - (m_iCurBit & 0x1F))) & 1]);
+  *v77 = v79 ^ (63 << (m_iCurBit & 0x1F)) & (v79 ^ v78);
   m_nDataBits = pWriteBuf->m_nDataBits;
   v12 = pWriteBuf->m_iCurBit;
   v13 = m_nDataBits - v12;
@@ -5771,58 +5768,58 @@ LABEL_4:
         if ( v13 <= 5 )
           goto LABEL_10;
         pWriteBuf->m_iCurBit = v12 + 6;
-        v100 = v12 & 0x1F;
-        v101 = &pWriteBuf->m_pData[v12 >> 5];
-        v102 = __ROL4__(v20 & 0xF | 0x30, v12 & 0x1F);
-        v103 = &v101[(0x1Fu >> (31 - (v12 & 0x1F))) & 1];
-        v3 = *v101;
-        v104 = *v103 ^ (0x1Fu >> (31 - v100)) & (v102 ^ *v103);
-        v105 = *v101 ^ v102;
-        *v103 = v104;
-        *v101 = v3 ^ (63 << v100) & v105;
+        v98 = v12 & 0x1F;
+        v99 = &pWriteBuf->m_pData[v12 >> 5];
+        v100 = __ROL4__(v20 & 0xF | 0x30, v12 & 0x1F);
+        v101 = &v99[(0x1Fu >> (31 - (v12 & 0x1F))) & 1];
+        v3 = *v99;
+        v102 = *v101 ^ (0x1Fu >> (31 - v98)) & (v100 ^ *v101);
+        v103 = *v99 ^ v100;
+        *v101 = v102;
+        *v99 = v3 ^ (63 << v98) & v103;
         m_nDataBits = pWriteBuf->m_nDataBits;
-        v106 = pWriteBuf->m_iCurBit;
-        if ( m_nDataBits - v106 <= 27 )
+        v104 = pWriteBuf->m_iCurBit;
+        if ( m_nDataBits - v104 <= 27 )
           goto LABEL_10;
-        pWriteBuf->m_iCurBit = v106 + 28;
-        v3 = v106 & 0x1F;
-        v107 = &pWriteBuf->m_pData[v106 >> 5];
-        v108 = __ROL4__(v20 >> 4, v3);
-        v109 = *v107;
-        v110 = &v107[(0x7FFFFFFu >> (31 - v3)) & 1];
-        *v110 ^= (0x7FFFFFFu >> (31 - v3)) & (v108 ^ *v110);
-        *v107 = v109 ^ (0xFFFFFFF << v3) & (v109 ^ v108);
+        pWriteBuf->m_iCurBit = v104 + 28;
+        v3 = v104 & 0x1F;
+        v105 = &pWriteBuf->m_pData[v104 >> 5];
+        v106 = __ROL4__(v20 >> 4, v3);
+        v107 = *v105;
+        v108 = &v105[(0x7FFFFFFu >> (31 - v3)) & 1];
+        *v108 ^= (0x7FFFFFFu >> (31 - v3)) & (v106 ^ *v108);
+        *v105 = v107 ^ (0xFFFFFFF << v3) & (v107 ^ v106);
         goto LABEL_11;
       }
       if ( v13 <= 13 )
         goto LABEL_10;
       pWriteBuf->m_iCurBit = v12 + 14;
-      v42 = v12 & 0x1F;
-      v43 = &pWriteBuf->m_pData[v12 >> 5];
-      v3 = *v43;
-      v57 = __ROL4__((4 * (v20 & 0xFFFFFFF0)) | v20 & 0xF | 0x20, v12 & 0x1F);
-      v58 = &v43[(0x1FFFu >> (31 - (v12 & 0x1F))) & 1];
-      v59 = v57 ^ *v58;
-      v47 = v3 ^ v57;
-      *v58 ^= (0x1FFFu >> (31 - v42)) & v59;
-      v48 = 0x3FFF;
+      v40 = v12 & 0x1F;
+      v41 = &pWriteBuf->m_pData[v12 >> 5];
+      v3 = *v41;
+      v55 = __ROL4__((4 * (v20 & 0xFFFFFFF0)) | v20 & 0xF | 0x20, v12 & 0x1F);
+      v56 = &v41[(0x1FFFu >> (31 - (v12 & 0x1F))) & 1];
+      v57 = v55 ^ *v56;
+      v45 = v3 ^ v55;
+      *v56 ^= (0x1FFFu >> (31 - v40)) & v57;
+      v46 = 0x3FFF;
     }
     else
     {
       if ( v13 <= 9 )
         goto LABEL_10;
       pWriteBuf->m_iCurBit = v12 + 10;
-      v42 = v12 & 0x1F;
-      v43 = &pWriteBuf->m_pData[v12 >> 5];
-      v3 = *v43;
-      v44 = __ROL4__((4 * (v20 & 0xFFFFFFF0)) | v20 & 0xF | 0x10, v12 & 0x1F);
-      v45 = &v43[(0x1FFu >> (31 - (v12 & 0x1F))) & 1];
-      v46 = v44 ^ *v45;
-      v47 = v3 ^ v44;
-      *v45 ^= (0x1FFu >> (31 - v42)) & v46;
-      v48 = 1023;
+      v40 = v12 & 0x1F;
+      v41 = &pWriteBuf->m_pData[v12 >> 5];
+      v3 = *v41;
+      v42 = __ROL4__((4 * (v20 & 0xFFFFFFF0)) | v20 & 0xF | 0x10, v12 & 0x1F);
+      v43 = &v41[(0x1FFu >> (31 - (v12 & 0x1F))) & 1];
+      v44 = v42 ^ *v43;
+      v45 = v3 ^ v42;
+      *v43 ^= (0x1FFu >> (31 - v40)) & v44;
+      v46 = 1023;
     }
-    *v43 = v3 ^ (v48 << v42) & v47;
+    *v41 = v3 ^ (v46 << v40) & v45;
     goto LABEL_11;
   }
   if ( v13 <= 5 )
@@ -5833,24 +5830,24 @@ LABEL_10:
     goto LABEL_11;
   }
   pWriteBuf->m_iCurBit = v12 + 6;
-  v82 = v12 & 0x1F;
-  v83 = &pWriteBuf->m_pData[v12 >> 5];
-  v84 = __ROL4__(v20, v12 & 0x1F);
-  v85 = *v83;
+  v80 = v12 & 0x1F;
+  v81 = &pWriteBuf->m_pData[v12 >> 5];
+  v82 = __ROL4__(v20, v12 & 0x1F);
+  v83 = *v81;
   v3 = 0x1Fu >> (31 - (v12 & 0x1F));
-  v86 = &v83[(0x1Fu >> (31 - (v12 & 0x1F))) & 1];
-  *v86 ^= v3 & (v84 ^ *v86);
-  *v83 = v85 ^ (63 << v82) & (v85 ^ v84);
+  v84 = &v81[(0x1Fu >> (31 - (v12 & 0x1F))) & 1];
+  *v84 ^= v3 & (v82 ^ *v84);
+  *v81 = v83 ^ (63 << v80) & (v83 ^ v82);
 LABEL_11:
   if ( from->m_bUsingExternalPaths )
   {
     pWriteBuf = &LOG_GENERAL;
     if ( LoggingSystem_IsChannelEnabled(LOG_GENERAL, 4) != 0 )
     {
-      v113.m_szFile = "../public/tier2/fieldpath.h";
-      v113.m_szFunction = "GetPathData";
-      v113.m_nLine = 514;
-      LoggingSystem_Log(LOG_GENERAL, LoggingSeverity_t::LS_ERROR, &v113, "GetPathData failed for read only CFieldPath");
+      v111.m_szFile = "../public/tier2/fieldpath.h";
+      v111.m_szFunction = "GetPathData";
+      v111.m_nLine = 514;
+      LoggingSystem_Log(LOG_GENERAL, LoggingSeverity_t::LS_ERROR, &v111, "GetPathData failed for read only CFieldPath");
     }
     goto LABEL_44;
   }
@@ -5875,18 +5872,18 @@ LABEL_11:
         pWriteBuf = &LOG_GENERAL;
         if ( LoggingSystem_IsChannelEnabled(LOG_GENERAL, 4) != 0 )
         {
-          v113.m_szFile = "../public/tier2/fieldpath.h";
-          v113.m_szFunction = "Path_AddToTail";
-          v113.m_nLine = 425;
+          v111.m_szFile = "../public/tier2/fieldpath.h";
+          v111.m_szFunction = "Path_AddToTail";
+          v111.m_nLine = 425;
           LoggingSystem_Log(
             LOG_GENERAL,
             LoggingSeverity_t::LS_ERROR,
-            &v113,
+            &v111,
             "Path_AddToTail failed, depth already == DEFAULT_MAX_PATH_DEPTH(%d)",
             6);
         }
 LABEL_44:
-        if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v38, v39, v36, v37, v40, v41) != 0 )
+        if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v38, v39, v36, v37) != 0 )
           loc_0 = -559038737;
         Plat_ExitProcess(1);
         goto LABEL_47;
@@ -5928,108 +5925,108 @@ LABEL_52:
         goto LABEL_23;
       }
 LABEL_47:
-      v63 = pWriteBuf->m_iCurBit;
-      v64 = pWriteBuf->m_nDataBits;
-      if ( v63 >= v64 )
+      v61 = pWriteBuf->m_iCurBit;
+      v62 = pWriteBuf->m_nDataBits;
+      if ( v61 >= v62 )
       {
         pWriteBuf->m_bOverflow = 1;
         if ( v3 <= 0xF )
         {
 LABEL_49:
-          if ( v63 >= v64 )
+          if ( v61 >= v62 )
           {
             pWriteBuf->m_bOverflow = 1;
-            if ( v64 - v63 <= 3 )
+            if ( v62 - v61 <= 3 )
               goto LABEL_51;
           }
           else
           {
-            pWriteBuf->m_pData[v63 >> 5] |= 1 << v63;
-            v63 = pWriteBuf->m_iCurBit + 1;
-            v64 = pWriteBuf->m_nDataBits;
-            pWriteBuf->m_iCurBit = v63;
-            if ( v64 - v63 <= 3 )
+            pWriteBuf->m_pData[v61 >> 5] |= 1 << v61;
+            v61 = pWriteBuf->m_iCurBit + 1;
+            v62 = pWriteBuf->m_nDataBits;
+            pWriteBuf->m_iCurBit = v61;
+            if ( v62 - v61 <= 3 )
               goto LABEL_51;
           }
-          pWriteBuf->m_iCurBit = v63 + 4;
-          v28 = v63 & 0x1F;
-          v29 = &pWriteBuf->m_pData[v63 >> 5];
-          v72 = __ROL4__(v3, v63 & 0x1F);
+          pWriteBuf->m_iCurBit = v61 + 4;
+          v28 = v61 & 0x1F;
+          v29 = &pWriteBuf->m_pData[v61 >> 5];
+          v70 = __ROL4__(v3, v61 & 0x1F);
           v31 = *v29;
-          v73 = &v29[(7u >> (v21 - (v63 & 0x1F))) & 1];
-          v74 = v72 ^ *v73;
-          v34 = *v29 ^ v72;
-          *v73 ^= (7u >> (v21 - v28)) & v74;
+          v71 = &v29[(7u >> (v21 - (v61 & 0x1F))) & 1];
+          v72 = v70 ^ *v71;
+          v34 = *v29 ^ v70;
+          *v71 ^= (7u >> (v21 - v28)) & v72;
           v35 = 15;
           goto LABEL_23;
         }
       }
       else
       {
-        pWriteBuf->m_pData[v63 >> 5] &= ~(1 << v63);
-        v63 = pWriteBuf->m_iCurBit + 1;
-        v64 = pWriteBuf->m_nDataBits;
-        pWriteBuf->m_iCurBit = v63;
+        pWriteBuf->m_pData[v61 >> 5] &= ~(1 << v61);
+        v61 = pWriteBuf->m_iCurBit + 1;
+        v62 = pWriteBuf->m_nDataBits;
+        pWriteBuf->m_iCurBit = v61;
         if ( v3 <= 0xF )
           goto LABEL_49;
-        if ( v63 < v64 )
+        if ( v61 < v62 )
         {
-          pWriteBuf->m_pData[v63 >> 5] &= ~(1 << v63);
-          v63 = pWriteBuf->m_iCurBit + 1;
-          v64 = pWriteBuf->m_nDataBits;
-          pWriteBuf->m_iCurBit = v63;
+          pWriteBuf->m_pData[v61 >> 5] &= ~(1 << v61);
+          v61 = pWriteBuf->m_iCurBit + 1;
+          v62 = pWriteBuf->m_nDataBits;
+          pWriteBuf->m_iCurBit = v61;
           if ( v3 > 0x3FF )
           {
-            if ( v64 <= v63 )
+            if ( v62 <= v61 )
             {
 LABEL_61:
               pWriteBuf->m_bOverflow = 1;
             }
             else
             {
-              pWriteBuf->m_pData[v63 >> 5] &= ~(1 << v63);
+              pWriteBuf->m_pData[v61 >> 5] &= ~(1 << v61);
               ++pWriteBuf->m_iCurBit;
             }
-            v111 = v23;
-            v112 = v21;
+            v109 = v23;
+            v110 = v21;
             if ( v3 > 0x1FFFF )
             {
               bf_write::WriteOneBit(pWriteBuf, 0);
               v27 = pWriteBuf->m_nDataBits;
-              v75 = pWriteBuf->m_iCurBit;
-              v21 = v112;
-              v23 = v111;
-              if ( v27 - v75 <= 30 )
+              v73 = pWriteBuf->m_iCurBit;
+              v21 = v110;
+              v23 = v109;
+              if ( v27 - v73 <= 30 )
                 goto LABEL_52;
-              pWriteBuf->m_iCurBit = v75 + 31;
-              v28 = v75 & 0x1F;
-              v29 = &pWriteBuf->m_pData[v75 >> 5];
-              v76 = __ROL4__(v3, v75 & 0x1F);
+              pWriteBuf->m_iCurBit = v73 + 31;
+              v28 = v73 & 0x1F;
+              v29 = &pWriteBuf->m_pData[v73 >> 5];
+              v74 = __ROL4__(v3, v73 & 0x1F);
               v31 = *v29;
-              v77 = &v29[(0x3FFFFFFFu >> (v112 - (v75 & 0x1F))) & 1];
-              v78 = v76 ^ *v77;
-              v34 = *v29 ^ v76;
-              *v77 ^= (0x3FFFFFFFu >> (v112 - v28)) & v78;
+              v75 = &v29[(0x3FFFFFFFu >> (v110 - (v73 & 0x1F))) & 1];
+              v76 = v74 ^ *v75;
+              v34 = *v29 ^ v74;
+              *v75 ^= (0x3FFFFFFFu >> (v110 - v28)) & v76;
               v35 = 0x7FFFFFFF;
             }
             else
             {
               bf_write::WriteOneBit(pWriteBuf, 1);
               v27 = pWriteBuf->m_nDataBits;
-              v68 = pWriteBuf->m_iCurBit;
-              v21 = v112;
-              v23 = v111;
-              if ( v27 - v68 <= 16 )
+              v66 = pWriteBuf->m_iCurBit;
+              v21 = v110;
+              v23 = v109;
+              if ( v27 - v66 <= 16 )
                 goto LABEL_52;
-              pWriteBuf->m_iCurBit = v68 + 17;
-              v28 = v68 & 0x1F;
-              v29 = &pWriteBuf->m_pData[v68 >> 5];
-              v69 = __ROL4__(v3, v68 & 0x1F);
+              pWriteBuf->m_iCurBit = v66 + 17;
+              v28 = v66 & 0x1F;
+              v29 = &pWriteBuf->m_pData[v66 >> 5];
+              v67 = __ROL4__(v3, v66 & 0x1F);
               v31 = *v29;
-              v70 = &v29[(0xFFFFu >> (v112 - (v68 & 0x1F))) & 1];
-              v71 = v69 ^ *v70;
-              v34 = *v29 ^ v69;
-              *v70 ^= (0xFFFFu >> (v112 - v28)) & v71;
+              v68 = &v29[(0xFFFFu >> (v110 - (v66 & 0x1F))) & 1];
+              v69 = v67 ^ *v68;
+              v34 = *v29 ^ v67;
+              *v68 ^= (0xFFFFu >> (v110 - v28)) & v69;
               v35 = 0x1FFFF;
             }
             goto LABEL_23;
@@ -6041,33 +6038,33 @@ LABEL_61:
       if ( v3 > 0x3FF )
         goto LABEL_61;
 LABEL_55:
-      if ( v63 >= v64 )
+      if ( v61 >= v62 )
       {
         pWriteBuf->m_bOverflow = 1;
       }
       else
       {
-        pWriteBuf->m_pData[v63 >> 5] |= 1 << v63;
-        v63 = pWriteBuf->m_iCurBit + 1;
-        v64 = pWriteBuf->m_nDataBits;
-        pWriteBuf->m_iCurBit = v63;
+        pWriteBuf->m_pData[v61 >> 5] |= 1 << v61;
+        v61 = pWriteBuf->m_iCurBit + 1;
+        v62 = pWriteBuf->m_nDataBits;
+        pWriteBuf->m_iCurBit = v61;
       }
-      if ( v64 - v63 <= 9 )
+      if ( v62 - v61 <= 9 )
       {
 LABEL_51:
-        pWriteBuf->m_iCurBit = v64;
+        pWriteBuf->m_iCurBit = v62;
         pWriteBuf->m_bOverflow = 1;
         goto LABEL_24;
       }
-      pWriteBuf->m_iCurBit = v63 + 10;
-      v28 = v63 & 0x1F;
-      v29 = &pWriteBuf->m_pData[v63 >> 5];
-      v65 = __ROL4__(v3, v63 & 0x1F);
+      pWriteBuf->m_iCurBit = v61 + 10;
+      v28 = v61 & 0x1F;
+      v29 = &pWriteBuf->m_pData[v61 >> 5];
+      v63 = __ROL4__(v3, v61 & 0x1F);
       v31 = *v29;
-      v66 = &v29[(0x1FFu >> (v21 - (v63 & 0x1F))) & 1];
-      v67 = v65 ^ *v66;
-      v34 = *v29 ^ v65;
-      *v66 ^= (0x1FFu >> (v21 - v28)) & v67;
+      v64 = &v29[(0x1FFu >> (v21 - (v61 & 0x1F))) & 1];
+      v65 = v63 ^ *v64;
+      v34 = *v29 ^ v63;
+      *v64 ^= (0x1FFu >> (v21 - v28)) & v65;
       v35 = 1023;
 LABEL_23:
       *v29 = v31 ^ (v35 << v28) & v34;
@@ -6080,13 +6077,13 @@ LABEL_24:
     pWriteBuf = &LOG_GENERAL;
     if ( LoggingSystem_IsChannelEnabled(LOG_GENERAL, 4) != 0 )
     {
-      v113.m_szFile = "../public/tier2/fieldpath.h";
-      v113.m_szFunction = "Path_AddToTail";
-      v113.m_nLine = 428;
+      v111.m_szFile = "../public/tier2/fieldpath.h";
+      v111.m_szFunction = "Path_AddToTail";
+      v111.m_nLine = 428;
       LoggingSystem_Log(
         LOG_GENERAL,
         LoggingSeverity_t::LS_ERROR,
-        &v113,
+        &v111,
         "Path_AddToTail failed for read only CFieldPath");
     }
     goto LABEL_44;
@@ -6134,62 +6131,60 @@ void __fastcall FieldOp_Write_PushNAndNonTopographical(
   __int64 v33; // rcx
   __int64 v34; // rdi
   __int64 v35; // rsi
-  __int64 v36; // r8
-  __int64 v37; // r9
-  char v38; // r11
-  uint32 *v39; // r10
-  uint32 v40; // ebx
-  int v41; // esi
-  uint32 *v42; // rcx
+  char v36; // r11
+  uint32 *v37; // r10
+  uint32 v38; // ebx
+  int v39; // esi
+  uint32 *v40; // rcx
+  int v41; // edi
+  int v42; // esi
   int v43; // edi
-  int v44; // esi
-  int v45; // edi
-  int v46; // ecx
+  int v44; // ecx
+  int v45; // eax
+  int v46; // eax
   int v47; // eax
-  int v48; // eax
-  int v49; // eax
-  int v50; // r13d
-  uint32 *v51; // rcx
-  int v52; // eax
-  int v53; // r13d
-  uint32 *v54; // rcx
-  int v55; // eax
-  int v56; // esi
-  uint32 *v57; // rcx
-  int v58; // edi
-  int v59; // eax
-  int v60; // r13d
-  uint32 *v61; // rcx
-  int v62; // eax
-  char v63; // r11
-  uint32 *v64; // r10
-  uint32 v65; // ebx
-  int v66; // esi
-  uint32 *v67; // rcx
-  int v68; // edi
-  uint32 *v69; // rbx
-  int v70; // esi
-  uint32 v71; // r9d
+  int v48; // r13d
+  uint32 *v49; // rcx
+  int v50; // eax
+  int v51; // r13d
+  uint32 *v52; // rcx
+  int v53; // eax
+  int v54; // esi
+  uint32 *v55; // rcx
+  int v56; // edi
+  int v57; // eax
+  int v58; // r13d
+  uint32 *v59; // rcx
+  int v60; // eax
+  char v61; // r11
+  uint32 *v62; // r10
+  uint32 v63; // ebx
+  int v64; // esi
+  uint32 *v65; // rcx
+  int v66; // edi
+  uint32 *v67; // rbx
+  int v68; // esi
+  uint32 v69; // r9d
+  uint32 *v70; // rcx
+  int v71; // r13d
   uint32 *v72; // rcx
-  int v73; // r13d
-  uint32 *v74; // rcx
-  int v75; // eax
-  char v76; // r9
-  uint32 *v77; // rdi
-  int v78; // eax
-  uint32 v79; // r10d
-  uint32 *v80; // rcx
-  int16 v81; // [rsp+Ah] [rbp-66h]
+  int v73; // eax
+  char v74; // r9
+  uint32 *v75; // rdi
+  int v76; // eax
+  uint32 v77; // r10d
+  uint32 *v78; // rcx
+  int16 v79; // [rsp+Ah] [rbp-66h]
   int nStart; // [rsp+Ch] [rbp-64h]
   unsigned int nDepthDelta; // [rsp+10h] [rbp-60h]
   __int16 nDelta; // [rsp+14h] [rbp-5Ch]
-  __int64 v85; // [rsp+18h] [rbp-58h]
-  LeafCodeInfo_t v86; // [rsp+20h] [rbp-50h] BYREF
+  __int64 v83; // [rsp+18h] [rbp-58h]
+  LeafCodeInfo_t v84; // [rsp+20h] [rbp-50h] BYREF
 
   v3 = to;
   v5 = from;
   m_nCount = from->m_nCount;
-  v81 = from->m_nCount;
+  v79 = from->m_nCount;
   nDepthDelta = to->m_nCount - m_nCount;
   nStart = m_nCount;
   if ( m_nCount <= 0 )
@@ -6202,7 +6197,7 @@ void __fastcall FieldOp_Write_PushNAndNonTopographical(
     m_nValue = 0;
     m_nDataBits = pWriteBuf->m_nDataBits;
     m_iCurBit = pWriteBuf->m_iCurBit;
-    v85 = 2LL * (m_nCount - 1) + 2;
+    v83 = 2LL * (m_nCount - 1) + 2;
     v10 = v3;
     v11 = from;
     v12 = v10;
@@ -6233,7 +6228,7 @@ void __fastcall FieldOp_Write_PushNAndNonTopographical(
         }
         m_nValue += 2LL;
         v5 = (v5 + 2);
-        if ( m_nValue == v85 )
+        if ( m_nValue == v83 )
           goto LABEL_15;
       }
       if ( m_nDataBits > m_iCurBit )
@@ -6253,17 +6248,17 @@ LABEL_13:
         v12 = &LOG_GENERAL;
         if ( LoggingSystem_IsChannelEnabled(LOG_GENERAL, 4) != 0 )
         {
-          v86.m_szFile = "../public/tier2/fieldpath.h";
-          v86.m_szFunction = "GetPathData";
-          v86.m_nLine = 514;
+          v84.m_szFile = "../public/tier2/fieldpath.h";
+          v84.m_szFunction = "GetPathData";
+          v84.m_nLine = 514;
           LoggingSystem_Log(
             LOG_GENERAL,
             LoggingSeverity_t::LS_ERROR,
-            &v86,
+            &v84,
             "GetPathData failed for read only CFieldPath");
         }
 LABEL_35:
-        if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v34, v35, v32, v33, v36, v37) != 0 )
+        if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v34, v35, v32, v33) != 0 )
           loc_0 = -559038737;
         Plat_ExitProcess(1);
       }
@@ -6273,7 +6268,7 @@ LABEL_35:
       m_iCurBit = pWriteBuf->m_iCurBit;
       m_nDataBits = pWriteBuf->m_nDataBits;
     }
-    while ( m_nValue != v85 );
+    while ( m_nValue != v83 );
 LABEL_15:
     v5 = v11;
     v3 = v12;
@@ -6288,55 +6283,55 @@ LABEL_15:
         if ( v17 <= 5 )
           goto LABEL_18;
         pWriteBuf->m_iCurBit = m_iCurBit + 6;
-        v63 = m_iCurBit & 0x1F;
-        v64 = &pWriteBuf->m_pData[m_iCurBit >> 5];
-        v65 = *v64;
-        v66 = __ROL4__(nDepthDelta & 0xF | 0x30, m_iCurBit & 0x1F);
-        v67 = &v64[(0x1Fu >> (31 - (m_iCurBit & 0x1F))) & 1];
-        *v67 ^= (0x1Fu >> (31 - v63)) & (v66 ^ *v67);
-        *v64 = v65 ^ (63 << v63) & (v65 ^ v66);
+        v61 = m_iCurBit & 0x1F;
+        v62 = &pWriteBuf->m_pData[m_iCurBit >> 5];
+        v63 = *v62;
+        v64 = __ROL4__(nDepthDelta & 0xF | 0x30, m_iCurBit & 0x1F);
+        v65 = &v62[(0x1Fu >> (31 - (m_iCurBit & 0x1F))) & 1];
+        *v65 ^= (0x1Fu >> (31 - v61)) & (v64 ^ *v65);
+        *v62 = v63 ^ (63 << v61) & (v63 ^ v64);
         m_nDataBits = pWriteBuf->m_nDataBits;
-        v68 = pWriteBuf->m_iCurBit;
-        if ( m_nDataBits - v68 <= 27 )
+        v66 = pWriteBuf->m_iCurBit;
+        if ( m_nDataBits - v66 <= 27 )
           goto LABEL_18;
-        pWriteBuf->m_iCurBit = v68 + 28;
-        v69 = &pWriteBuf->m_pData[v68 >> 5];
-        v70 = __ROL4__(nDepthDelta >> 4, v68 & 0x1F);
-        v71 = *v69;
-        v72 = &v69[(0x7FFFFFFu >> (31 - (v68 & 0x1F))) & 1];
-        *v72 ^= (0x7FFFFFFu >> (31 - (v68 & 0x1F))) & (v70 ^ *v72);
-        *v69 = v71 ^ (0xFFFFFFF << (v68 & 0x1F)) & (v71 ^ v70);
+        pWriteBuf->m_iCurBit = v66 + 28;
+        v67 = &pWriteBuf->m_pData[v66 >> 5];
+        v68 = __ROL4__(nDepthDelta >> 4, v66 & 0x1F);
+        v69 = *v67;
+        v70 = &v67[(0x7FFFFFFu >> (31 - (v66 & 0x1F))) & 1];
+        *v70 ^= (0x7FFFFFFu >> (31 - (v66 & 0x1F))) & (v68 ^ *v70);
+        *v67 = v69 ^ (0xFFFFFFF << (v66 & 0x1F)) & (v69 ^ v68);
         goto LABEL_19;
       }
       if ( v17 <= 13 )
         goto LABEL_18;
       pWriteBuf->m_iCurBit = m_iCurBit + 14;
-      v38 = m_iCurBit & 0x1F;
-      v39 = &pWriteBuf->m_pData[m_iCurBit >> 5];
-      v40 = *v39;
-      v56 = __ROL4__((4 * (nDepthDelta & 0xFFFFFFF0)) | nDepthDelta & 0xF | 0x20, m_iCurBit & 0x1F);
-      v57 = &v39[(0x1FFFu >> (31 - (m_iCurBit & 0x1F))) & 1];
-      v58 = v56 ^ *v57;
-      v44 = *v39 ^ v56;
-      *v57 ^= (0x1FFFu >> (31 - v38)) & v58;
-      v45 = 0x3FFF;
+      v36 = m_iCurBit & 0x1F;
+      v37 = &pWriteBuf->m_pData[m_iCurBit >> 5];
+      v38 = *v37;
+      v54 = __ROL4__((4 * (nDepthDelta & 0xFFFFFFF0)) | nDepthDelta & 0xF | 0x20, m_iCurBit & 0x1F);
+      v55 = &v37[(0x1FFFu >> (31 - (m_iCurBit & 0x1F))) & 1];
+      v56 = v54 ^ *v55;
+      v42 = *v37 ^ v54;
+      *v55 ^= (0x1FFFu >> (31 - v36)) & v56;
+      v43 = 0x3FFF;
     }
     else
     {
       if ( v17 <= 9 )
         goto LABEL_18;
       pWriteBuf->m_iCurBit = m_iCurBit + 10;
-      v38 = m_iCurBit & 0x1F;
-      v39 = &pWriteBuf->m_pData[m_iCurBit >> 5];
-      v40 = *v39;
-      v41 = __ROL4__((4 * (nDepthDelta & 0xFFFFFFF0)) | nDepthDelta & 0xF | 0x10, m_iCurBit & 0x1F);
-      v42 = &v39[(0x1FFu >> (31 - (m_iCurBit & 0x1F))) & 1];
-      v43 = v41 ^ *v42;
-      v44 = *v39 ^ v41;
-      *v42 ^= (0x1FFu >> (31 - v38)) & v43;
-      v45 = 1023;
+      v36 = m_iCurBit & 0x1F;
+      v37 = &pWriteBuf->m_pData[m_iCurBit >> 5];
+      v38 = *v37;
+      v39 = __ROL4__((4 * (nDepthDelta & 0xFFFFFFF0)) | nDepthDelta & 0xF | 0x10, m_iCurBit & 0x1F);
+      v40 = &v37[(0x1FFu >> (31 - (m_iCurBit & 0x1F))) & 1];
+      v41 = v39 ^ *v40;
+      v42 = *v37 ^ v39;
+      *v40 ^= (0x1FFu >> (31 - v36)) & v41;
+      v43 = 1023;
     }
-    *v39 = v40 ^ (v45 << v38) & v44;
+    *v37 = v38 ^ (v43 << v36) & v42;
     goto LABEL_19;
   }
   if ( v17 <= 5 )
@@ -6347,18 +6342,18 @@ LABEL_18:
     goto LABEL_19;
   }
   pWriteBuf->m_iCurBit = m_iCurBit + 6;
-  v76 = m_iCurBit & 0x1F;
-  v77 = &pWriteBuf->m_pData[m_iCurBit >> 5];
-  v78 = __ROL4__(nDepthDelta, m_iCurBit & 0x1F);
-  v79 = *v77;
-  v80 = &v77[(0x1Fu >> (31 - (m_iCurBit & 0x1F))) & 1];
-  *v80 ^= (0x1Fu >> (31 - v76)) & (v78 ^ *v80);
-  *v77 = v79 ^ (63 << v76) & (v79 ^ v78);
+  v74 = m_iCurBit & 0x1F;
+  v75 = &pWriteBuf->m_pData[m_iCurBit >> 5];
+  v76 = __ROL4__(nDepthDelta, m_iCurBit & 0x1F);
+  v77 = *v75;
+  v78 = &v75[(0x1Fu >> (31 - (m_iCurBit & 0x1F))) & 1];
+  *v78 ^= (0x1Fu >> (31 - v74)) & (v76 ^ *v78);
+  *v75 = v77 ^ (63 << v74) & (v77 ^ v76);
 LABEL_19:
   if ( nStart < v3->m_nCount )
   {
     v18 = v3;
-    v11 = (2LL * v81);
+    v11 = (2LL * v79);
     for ( i = nStart; i < *(v18 + 16); ++i )
     {
       v20 = (v11 + v18);
@@ -6370,13 +6365,13 @@ LABEL_19:
         v12 = &LOG_GENERAL;
         if ( LoggingSystem_IsChannelEnabled(LOG_GENERAL, 4) != 0 )
         {
-          v86.m_szFile = "../public/tier2/fieldpath.h";
-          v86.m_szFunction = "Path_AddToTail";
-          v86.m_nLine = 428;
+          v84.m_szFile = "../public/tier2/fieldpath.h";
+          v84.m_szFunction = "Path_AddToTail";
+          v84.m_nLine = 428;
           LoggingSystem_Log(
             LOG_GENERAL,
             LoggingSeverity_t::LS_ERROR,
-            &v86,
+            &v84,
             "Path_AddToTail failed for read only CFieldPath");
         }
         goto LABEL_35;
@@ -6387,13 +6382,13 @@ LABEL_19:
         v12 = &LOG_GENERAL;
         if ( LoggingSystem_IsChannelEnabled(LOG_GENERAL, 4) != 0 )
         {
-          v86.m_szFile = "../public/tier2/fieldpath.h";
-          v86.m_szFunction = "Path_AddToTail";
-          v86.m_nLine = 425;
+          v84.m_szFile = "../public/tier2/fieldpath.h";
+          v84.m_szFunction = "Path_AddToTail";
+          v84.m_nLine = 425;
           LoggingSystem_Log(
             LOG_GENERAL,
             LoggingSeverity_t::LS_ERROR,
-            &v86,
+            &v84,
             "Path_AddToTail failed, depth already == DEFAULT_MAX_PATH_DEPTH(%d)",
             6);
         }
@@ -6435,9 +6430,9 @@ LABEL_54:
         v31 = 3;
         goto LABEL_30;
       }
-      v46 = pWriteBuf->m_iCurBit;
-      v47 = pWriteBuf->m_nDataBits;
-      if ( v46 >= v47 )
+      v44 = pWriteBuf->m_iCurBit;
+      v45 = pWriteBuf->m_nDataBits;
+      if ( v44 >= v45 )
       {
         pWriteBuf->m_bOverflow = 1;
         if ( m_nValue > 0xF )
@@ -6445,17 +6440,17 @@ LABEL_54:
       }
       else
       {
-        pWriteBuf->m_pData[v46 >> 5] &= ~(1 << v46);
-        v46 = pWriteBuf->m_iCurBit + 1;
-        v47 = pWriteBuf->m_nDataBits;
-        pWriteBuf->m_iCurBit = v46;
+        pWriteBuf->m_pData[v44 >> 5] &= ~(1 << v44);
+        v44 = pWriteBuf->m_iCurBit + 1;
+        v45 = pWriteBuf->m_nDataBits;
+        pWriteBuf->m_iCurBit = v44;
         if ( m_nValue > 0xF )
         {
-          if ( v47 <= v46 )
+          if ( v45 <= v44 )
           {
 LABEL_56:
             pWriteBuf->m_bOverflow = 1;
-            v85 = v18;
+            v83 = v18;
             if ( m_nValue > 0x3FF )
             {
 LABEL_57:
@@ -6464,38 +6459,38 @@ LABEL_57:
               {
                 bf_write::WriteOneBit(pWriteBuf, 0);
                 v23 = pWriteBuf->m_nDataBits;
-                v59 = pWriteBuf->m_iCurBit;
-                v18 = v85;
-                if ( v23 - v59 <= 30 )
+                v57 = pWriteBuf->m_iCurBit;
+                v18 = v83;
+                if ( v23 - v57 <= 30 )
                   goto LABEL_54;
-                pWriteBuf->m_iCurBit = v59 + 31;
-                v24 = v59 & 0x1F;
-                v25 = &pWriteBuf->m_pData[v59 >> 5];
-                v60 = __ROL4__(m_nValue, v59 & 0x1F);
+                pWriteBuf->m_iCurBit = v57 + 31;
+                v24 = v57 & 0x1F;
+                v25 = &pWriteBuf->m_pData[v57 >> 5];
+                v58 = __ROL4__(m_nValue, v57 & 0x1F);
                 v27 = *v25;
-                v61 = &v25[(0x3FFFFFFFu >> (31 - (v59 & 0x1F))) & 1];
-                v62 = v60 ^ *v61;
-                v30 = *v25 ^ v60;
-                *v61 ^= (0x3FFFFFFFu >> (31 - v24)) & v62;
+                v59 = &v25[(0x3FFFFFFFu >> (31 - (v57 & 0x1F))) & 1];
+                v60 = v58 ^ *v59;
+                v30 = *v25 ^ v58;
+                *v59 ^= (0x3FFFFFFFu >> (31 - v24)) & v60;
                 v31 = 0x7FFFFFFF;
               }
               else
               {
                 bf_write::WriteOneBit(pWriteBuf, 1);
                 v23 = pWriteBuf->m_nDataBits;
-                v49 = pWriteBuf->m_iCurBit;
-                v18 = v85;
-                if ( v23 - v49 <= 16 )
+                v47 = pWriteBuf->m_iCurBit;
+                v18 = v83;
+                if ( v23 - v47 <= 16 )
                   goto LABEL_54;
-                pWriteBuf->m_iCurBit = v49 + 17;
-                v24 = v49 & 0x1F;
-                v25 = &pWriteBuf->m_pData[v49 >> 5];
-                v50 = __ROL4__(m_nValue, v49 & 0x1F);
+                pWriteBuf->m_iCurBit = v47 + 17;
+                v24 = v47 & 0x1F;
+                v25 = &pWriteBuf->m_pData[v47 >> 5];
+                v48 = __ROL4__(m_nValue, v47 & 0x1F);
                 v27 = *v25;
-                v51 = &v25[(0xFFFFu >> (31 - (v49 & 0x1F))) & 1];
-                v52 = v50 ^ *v51;
-                v30 = *v25 ^ v50;
-                *v51 ^= (0xFFFFu >> (31 - v24)) & v52;
+                v49 = &v25[(0xFFFFu >> (31 - (v47 & 0x1F))) & 1];
+                v50 = v48 ^ *v49;
+                v30 = *v25 ^ v48;
+                *v49 ^= (0xFFFFu >> (31 - v24)) & v50;
                 v31 = 0x1FFFF;
               }
               goto LABEL_30;
@@ -6503,60 +6498,60 @@ LABEL_57:
           }
           else
           {
-            v85 = v18;
-            pWriteBuf->m_pData[v46 >> 5] &= ~(1 << v46);
+            v83 = v18;
+            pWriteBuf->m_pData[v44 >> 5] &= ~(1 << v44);
             ++pWriteBuf->m_iCurBit;
             if ( m_nValue > 0x3FF )
               goto LABEL_57;
           }
           bf_write::WriteOneBit(pWriteBuf, 1);
           v23 = pWriteBuf->m_nDataBits;
-          v48 = pWriteBuf->m_iCurBit;
-          v18 = v85;
-          if ( v23 - v48 <= 9 )
+          v46 = pWriteBuf->m_iCurBit;
+          v18 = v83;
+          if ( v23 - v46 <= 9 )
             goto LABEL_54;
-          pWriteBuf->m_iCurBit = v48 + 10;
-          v24 = v48 & 0x1F;
-          v25 = &pWriteBuf->m_pData[v48 >> 5];
-          v73 = __ROL4__(m_nValue, v48 & 0x1F);
+          pWriteBuf->m_iCurBit = v46 + 10;
+          v24 = v46 & 0x1F;
+          v25 = &pWriteBuf->m_pData[v46 >> 5];
+          v71 = __ROL4__(m_nValue, v46 & 0x1F);
           v27 = *v25;
-          v74 = &v25[(0x1FFu >> (31 - (v48 & 0x1F))) & 1];
-          v75 = v73 ^ *v74;
-          v30 = *v25 ^ v73;
-          *v74 ^= (0x1FFu >> (31 - v24)) & v75;
+          v72 = &v25[(0x1FFu >> (31 - (v46 & 0x1F))) & 1];
+          v73 = v71 ^ *v72;
+          v30 = *v25 ^ v71;
+          *v72 ^= (0x1FFu >> (31 - v24)) & v73;
           v31 = 1023;
           goto LABEL_30;
         }
       }
-      if ( v46 >= v47 )
+      if ( v44 >= v45 )
       {
         pWriteBuf->m_bOverflow = 1;
-        if ( v47 - v46 <= 3 )
+        if ( v45 - v44 <= 3 )
         {
 LABEL_50:
-          pWriteBuf->m_iCurBit = v47;
+          pWriteBuf->m_iCurBit = v45;
           pWriteBuf->m_bOverflow = 1;
           goto LABEL_31;
         }
       }
       else
       {
-        pWriteBuf->m_pData[v46 >> 5] |= 1 << v46;
-        v46 = pWriteBuf->m_iCurBit + 1;
-        v47 = pWriteBuf->m_nDataBits;
-        pWriteBuf->m_iCurBit = v46;
-        if ( v47 - v46 <= 3 )
+        pWriteBuf->m_pData[v44 >> 5] |= 1 << v44;
+        v44 = pWriteBuf->m_iCurBit + 1;
+        v45 = pWriteBuf->m_nDataBits;
+        pWriteBuf->m_iCurBit = v44;
+        if ( v45 - v44 <= 3 )
           goto LABEL_50;
       }
-      pWriteBuf->m_iCurBit = v46 + 4;
-      v24 = v46 & 0x1F;
-      v25 = &pWriteBuf->m_pData[v46 >> 5];
-      v53 = __ROL4__(m_nValue, v46 & 0x1F);
+      pWriteBuf->m_iCurBit = v44 + 4;
+      v24 = v44 & 0x1F;
+      v25 = &pWriteBuf->m_pData[v44 >> 5];
+      v51 = __ROL4__(m_nValue, v44 & 0x1F);
       v27 = *v25;
-      v54 = &v25[(7u >> (31 - (v46 & 0x1F))) & 1];
-      v55 = v53 ^ *v54;
-      v30 = *v25 ^ v53;
-      *v54 ^= (7u >> (31 - v24)) & v55;
+      v52 = &v25[(7u >> (31 - (v44 & 0x1F))) & 1];
+      v53 = v51 ^ *v52;
+      v30 = *v25 ^ v51;
+      *v52 ^= (7u >> (31 - v24)) & v53;
       v31 = 15;
 LABEL_30:
       *v25 = v27 ^ (v31 << v24) & v30;
@@ -6593,7 +6588,7 @@ void __fastcall FieldOp_Write_PopOnePlusOne(CFieldPath *const from, const CField
       goto LABEL_7;
     while ( 1 )
     {
-      if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v8, v9, v6, v7, v10, v11) != 0 )
+      if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v8, v9, v6, v7) != 0 )
         loc_0 = -559038737;
       Plat_ExitProcess(1);
 LABEL_7:
@@ -6643,33 +6638,35 @@ void __fastcall FieldOp_Write_PopOnePlusN(CFieldPath *const from, const CFieldPa
   __int64 v23; // rsi
   __int64 v24; // r8
   __int64 v25; // r9
-  int v26; // ecx
-  int v27; // esi
-  int v28; // r10d
-  uint32 *v29; // rcx
-  int v30; // edx
-  int v31; // r10d
-  uint32 *v32; // rcx
-  int v33; // edx
-  int v34; // r10d
-  uint32 *v35; // rcx
-  int v36; // edx
-  int v37; // r10d
-  uint32 *v38; // rcx
-  int v39; // edx
-  LeafCodeInfo_t v40; // [rsp+0h] [rbp-30h] BYREF
+  __int64 v26; // r8
+  __int64 v27; // r9
+  int v28; // ecx
+  int v29; // esi
+  int v30; // r10d
+  uint32 *v31; // rcx
+  int v32; // edx
+  int v33; // r10d
+  uint32 *v34; // rcx
+  int v35; // edx
+  int v36; // r10d
+  uint32 *v37; // rcx
+  int v38; // edx
+  int v39; // r10d
+  uint32 *v40; // rcx
+  int v41; // edx
+  LeafCodeInfo_t v42; // [rsp+0h] [rbp-30h] BYREF
 
   if ( from->m_bUsingExternalPaths )
   {
     if ( LoggingSystem_IsChannelEnabled(LOG_GENERAL, 4) != 0 )
     {
-      v40.m_szFile = "../public/tier2/fieldpath.h";
-      v40.m_szFunction = "Path_PopLast";
-      v40.m_nLine = 477;
+      v42.m_szFile = "../public/tier2/fieldpath.h";
+      v42.m_szFunction = "Path_PopLast";
+      v42.m_nLine = 477;
       LoggingSystem_Log(
         LOG_GENERAL,
         LoggingSeverity_t::LS_ERROR,
-        &v40,
+        &v42,
         "Path_PopLast failed for read only CFieldPath",
         v24,
         v25);
@@ -6725,52 +6722,52 @@ LABEL_10:
   {
     if ( LoggingSystem_IsChannelEnabled(LOG_GENERAL, 4) != 0 )
     {
-      v40.m_szFile = "../public/tier2/fieldpath.h";
-      v40.m_szFunction = "GetPathData";
-      v40.m_nLine = 514;
+      v42.m_szFile = "../public/tier2/fieldpath.h";
+      v42.m_szFunction = "GetPathData";
+      v42.m_nLine = 514;
       LoggingSystem_Log(
         LOG_GENERAL,
         LoggingSeverity_t::LS_ERROR,
-        &v40,
+        &v42,
         "GetPathData failed for read only CFieldPath",
-        v24,
-        v25);
+        v26,
+        v27);
     }
 LABEL_17:
-    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v22, v23, v20, v21, v24, v25) != 0 )
+    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v22, v23, v20, v21) != 0 )
       loc_0 = -559038737;
     LOWORD(v7) = Plat_ExitProcess(1);
 LABEL_20:
-    v26 = pWriteBuf->m_iCurBit;
-    v27 = pWriteBuf->m_nDataBits;
-    if ( v26 >= v27 )
+    v28 = pWriteBuf->m_iCurBit;
+    v29 = pWriteBuf->m_nDataBits;
+    if ( v28 >= v29 )
     {
       pWriteBuf->m_bOverflow = 1;
       if ( v9 <= 0xF )
       {
 LABEL_22:
-        if ( v27 <= v26 )
+        if ( v29 <= v28 )
         {
           pWriteBuf->m_bOverflow = 1;
         }
         else
         {
-          pWriteBuf->m_pData[v26 >> 5] |= 1 << v26;
-          v27 = pWriteBuf->m_nDataBits;
-          v26 = pWriteBuf->m_iCurBit + 1;
-          pWriteBuf->m_iCurBit = v26;
+          pWriteBuf->m_pData[v28 >> 5] |= 1 << v28;
+          v29 = pWriteBuf->m_nDataBits;
+          v28 = pWriteBuf->m_iCurBit + 1;
+          pWriteBuf->m_iCurBit = v28;
         }
-        if ( v27 - v26 > 3 )
+        if ( v29 - v28 > 3 )
         {
-          pWriteBuf->m_iCurBit = v26 + 4;
-          v12 = v26 & 0x1F;
-          v14 = &pWriteBuf->m_pData[v26 >> 5];
-          v37 = __ROL4__(v8, v26 & 0x1F);
+          pWriteBuf->m_iCurBit = v28 + 4;
+          v12 = v28 & 0x1F;
+          v14 = &pWriteBuf->m_pData[v28 >> 5];
+          v39 = __ROL4__(v8, v28 & 0x1F);
           v15 = *v14;
-          v38 = &v14[(7u >> (31 - (v26 & 0x1F))) & 1];
-          v39 = v37 ^ *v38;
-          v18 = *v14 ^ v37;
-          *v38 ^= (7u >> (31 - v12)) & v39;
+          v40 = &v14[(7u >> (31 - (v28 & 0x1F))) & 1];
+          v41 = v39 ^ *v40;
+          v18 = *v14 ^ v39;
+          *v40 ^= (7u >> (31 - v12)) & v41;
           v19 = 15;
           goto LABEL_9;
         }
@@ -6782,21 +6779,21 @@ LABEL_35:
         goto LABEL_36;
       goto LABEL_28;
     }
-    pWriteBuf->m_pData[v26 >> 5] &= ~(1 << v26);
-    v26 = pWriteBuf->m_iCurBit + 1;
-    v27 = pWriteBuf->m_nDataBits;
-    pWriteBuf->m_iCurBit = v26;
+    pWriteBuf->m_pData[v28 >> 5] &= ~(1 << v28);
+    v28 = pWriteBuf->m_iCurBit + 1;
+    v29 = pWriteBuf->m_nDataBits;
+    pWriteBuf->m_iCurBit = v28;
     if ( v9 <= 0xF )
       goto LABEL_22;
-    if ( v26 >= v27 )
+    if ( v28 >= v29 )
       goto LABEL_35;
-    pWriteBuf->m_pData[v26 >> 5] &= ~(1 << v26);
-    v26 = pWriteBuf->m_iCurBit + 1;
-    v27 = pWriteBuf->m_nDataBits;
-    pWriteBuf->m_iCurBit = v26;
+    pWriteBuf->m_pData[v28 >> 5] &= ~(1 << v28);
+    v28 = pWriteBuf->m_iCurBit + 1;
+    v29 = pWriteBuf->m_nDataBits;
+    pWriteBuf->m_iCurBit = v28;
     if ( v9 > 0x3FF )
     {
-      if ( v27 <= v26 )
+      if ( v29 <= v28 )
       {
 LABEL_36:
         pWriteBuf->m_bOverflow = 1;
@@ -6805,58 +6802,58 @@ LABEL_36:
       }
       else
       {
-        pWriteBuf->m_pData[v26 >> 5] &= ~(1 << v26);
-        v26 = pWriteBuf->m_iCurBit + 1;
-        v27 = pWriteBuf->m_nDataBits;
-        pWriteBuf->m_iCurBit = v26;
+        pWriteBuf->m_pData[v28 >> 5] &= ~(1 << v28);
+        v28 = pWriteBuf->m_iCurBit + 1;
+        v29 = pWriteBuf->m_nDataBits;
+        pWriteBuf->m_iCurBit = v28;
         if ( v9 <= 0x1FFFF )
         {
 LABEL_43:
-          if ( v26 >= v27 )
+          if ( v28 >= v29 )
           {
             pWriteBuf->m_bOverflow = 1;
           }
           else
           {
-            pWriteBuf->m_pData[v26 >> 5] |= 1 << v26;
-            v27 = pWriteBuf->m_nDataBits;
-            v26 = pWriteBuf->m_iCurBit + 1;
-            pWriteBuf->m_iCurBit = v26;
+            pWriteBuf->m_pData[v28 >> 5] |= 1 << v28;
+            v29 = pWriteBuf->m_nDataBits;
+            v28 = pWriteBuf->m_iCurBit + 1;
+            pWriteBuf->m_iCurBit = v28;
           }
-          if ( v27 - v26 > 16 )
+          if ( v29 - v28 > 16 )
           {
-            pWriteBuf->m_iCurBit = v26 + 17;
-            v12 = v26 & 0x1F;
-            v14 = &pWriteBuf->m_pData[v26 >> 5];
-            v34 = __ROL4__(v8, v26 & 0x1F);
+            pWriteBuf->m_iCurBit = v28 + 17;
+            v12 = v28 & 0x1F;
+            v14 = &pWriteBuf->m_pData[v28 >> 5];
+            v36 = __ROL4__(v8, v28 & 0x1F);
             v15 = *v14;
-            v35 = &v14[(0xFFFFu >> (31 - (v26 & 0x1F))) & 1];
-            v36 = v34 ^ *v35;
-            v18 = *v14 ^ v34;
-            *v35 ^= (0xFFFFu >> (31 - v12)) & v36;
+            v37 = &v14[(0xFFFFu >> (31 - (v28 & 0x1F))) & 1];
+            v38 = v36 ^ *v37;
+            v18 = *v14 ^ v36;
+            *v37 ^= (0xFFFFu >> (31 - v12)) & v38;
             v19 = 0x1FFFF;
             goto LABEL_9;
           }
           goto LABEL_25;
         }
-        if ( v27 > v26 )
+        if ( v29 > v28 )
         {
-          pWriteBuf->m_pData[v26 >> 5] &= ~(1 << v26);
-          v27 = pWriteBuf->m_nDataBits;
-          v26 = pWriteBuf->m_iCurBit + 1;
-          pWriteBuf->m_iCurBit = v26;
+          pWriteBuf->m_pData[v28 >> 5] &= ~(1 << v28);
+          v29 = pWriteBuf->m_nDataBits;
+          v28 = pWriteBuf->m_iCurBit + 1;
+          pWriteBuf->m_iCurBit = v28;
 LABEL_38:
-          if ( v27 - v26 > 30 )
+          if ( v29 - v28 > 30 )
           {
-            pWriteBuf->m_iCurBit = v26 + 31;
-            v12 = v26 & 0x1F;
-            v14 = &pWriteBuf->m_pData[v26 >> 5];
-            v31 = __ROL4__(v8, v26 & 0x1F);
+            pWriteBuf->m_iCurBit = v28 + 31;
+            v12 = v28 & 0x1F;
+            v14 = &pWriteBuf->m_pData[v28 >> 5];
+            v33 = __ROL4__(v8, v28 & 0x1F);
             v15 = *v14;
-            v32 = &v14[(0x3FFFFFFFu >> (31 - (v26 & 0x1F))) & 1];
-            v33 = v31 ^ *v32;
-            v18 = *v14 ^ v31;
-            *v32 ^= (0x3FFFFFFFu >> (31 - v12)) & v33;
+            v34 = &v14[(0x3FFFFFFFu >> (31 - (v28 & 0x1F))) & 1];
+            v35 = v33 ^ *v34;
+            v18 = *v14 ^ v33;
+            *v34 ^= (0x3FFFFFFFu >> (31 - v12)) & v35;
             v19 = 0x7FFFFFFF;
             goto LABEL_9;
           }
@@ -6867,33 +6864,33 @@ LABEL_38:
       goto LABEL_38;
     }
 LABEL_28:
-    if ( v27 <= v26 )
+    if ( v29 <= v28 )
     {
       pWriteBuf->m_bOverflow = 1;
     }
     else
     {
-      pWriteBuf->m_pData[v26 >> 5] |= 1 << v26;
-      v27 = pWriteBuf->m_nDataBits;
-      v26 = pWriteBuf->m_iCurBit + 1;
-      pWriteBuf->m_iCurBit = v26;
+      pWriteBuf->m_pData[v28 >> 5] |= 1 << v28;
+      v29 = pWriteBuf->m_nDataBits;
+      v28 = pWriteBuf->m_iCurBit + 1;
+      pWriteBuf->m_iCurBit = v28;
     }
-    if ( v27 - v26 > 9 )
+    if ( v29 - v28 > 9 )
     {
-      pWriteBuf->m_iCurBit = v26 + 10;
-      v12 = v26 & 0x1F;
-      v14 = &pWriteBuf->m_pData[v26 >> 5];
-      v28 = __ROL4__(v8, v26 & 0x1F);
+      pWriteBuf->m_iCurBit = v28 + 10;
+      v12 = v28 & 0x1F;
+      v14 = &pWriteBuf->m_pData[v28 >> 5];
+      v30 = __ROL4__(v8, v28 & 0x1F);
       v15 = *v14;
-      v29 = &v14[(0x1FFu >> (31 - (v26 & 0x1F))) & 1];
-      v30 = v28 ^ *v29;
-      v18 = *v14 ^ v28;
-      *v29 ^= (0x1FFu >> (31 - v12)) & v30;
+      v31 = &v14[(0x1FFu >> (31 - (v28 & 0x1F))) & 1];
+      v32 = v30 ^ *v31;
+      v18 = *v14 ^ v30;
+      *v31 ^= (0x1FFu >> (31 - v12)) & v32;
       v19 = 1023;
       goto LABEL_9;
     }
 LABEL_25:
-    pWriteBuf->m_iCurBit = v27;
+    pWriteBuf->m_iCurBit = v29;
     pWriteBuf->m_bOverflow = 1;
   }
   v6->u.m_FixedPaths[0].m_nValue += v7;
@@ -6920,7 +6917,9 @@ void __fastcall FieldOp_Write_PopAllButOnePlusOne(
   __int64 v12; // rdx
   const CFieldPath::Path_t *v13; // rax
   int16 m_nValue; // ax
-  LeafCodeInfo_t v15; // [rsp+0h] [rbp-30h] BYREF
+  __int64 v15; // r8
+  __int64 v16; // r9
+  LeafCodeInfo_t v17; // [rsp+0h] [rbp-30h] BYREF
 
   m_nCount = from->m_nCount;
   if ( from->m_nCount <= 1 )
@@ -6933,20 +6932,20 @@ void __fastcall FieldOp_Write_PopAllButOnePlusOne(
     goto LABEL_9;
   if ( LoggingSystem_IsChannelEnabled(LOG_GENERAL, 4) != 0 )
   {
-    v15.m_szFile = "../public/tier2/fieldpath.h";
-    v15.m_szFunction = "Path_PopLast";
-    v15.m_nLine = 477;
+    v17.m_szFile = "../public/tier2/fieldpath.h";
+    v17.m_szFunction = "Path_PopLast";
+    v17.m_nLine = 477;
     LoggingSystem_Log(
       LOG_GENERAL,
       LoggingSeverity_t::LS_ERROR,
-      &v15,
+      &v17,
       "Path_PopLast failed for read only CFieldPath",
       v9,
       v10);
   }
   while ( 1 )
   {
-    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v7, v8, v5, v6, v9, v10) != 0 )
+    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v7, v8, v5, v6) != 0 )
       loc_0 = -559038737;
     v4 = Plat_ExitProcess(1);
     do
@@ -6968,16 +6967,16 @@ LABEL_11:
       break;
     if ( LoggingSystem_IsChannelEnabled(LOG_GENERAL, 4) != 0 )
     {
-      v15.m_szFile = "../public/tier2/fieldpath.h";
-      v15.m_szFunction = "GetPathData";
-      v15.m_nLine = 514;
+      v17.m_szFile = "../public/tier2/fieldpath.h";
+      v17.m_szFunction = "GetPathData";
+      v17.m_nLine = 514;
       LoggingSystem_Log(
         LOG_GENERAL,
         LoggingSeverity_t::LS_ERROR,
-        &v15,
+        &v17,
         "GetPathData failed for read only CFieldPath",
-        v9,
-        v10);
+        v15,
+        v16);
     }
   }
   from->u.m_FixedPaths[v12].m_nValue = m_nValue;
@@ -6999,45 +6998,43 @@ void __fastcall FieldOp_Write_PopAllButOnePlusN(
   __int64 v7; // rcx
   __int64 v8; // rdi
   __int64 v9; // rsi
-  __int64 v10; // r8
-  __int64 v11; // r9
   bool m_bUsingExternalPaths; // di
-  int v13; // ecx
-  __int64 v14; // r12
-  const CFieldPath::Path_t *v15; // rax
+  int v11; // ecx
+  __int64 v12; // r12
+  const CFieldPath::Path_t *v13; // rax
   int m_nValue; // r13d
-  const CFieldPath::Path_t *v17; // rax
-  int v18; // r13d
-  int v19; // r14d
+  const CFieldPath::Path_t *v15; // rax
+  int v16; // r13d
+  int v17; // r14d
   int m_iCurBit; // eax
   int m_nDataBits; // ecx
-  char v22; // di
-  int v23; // r14d
-  uint32 *v24; // rsi
-  uint32 v25; // r8d
-  uint32 *v26; // rcx
+  char v20; // di
+  int v21; // r14d
+  uint32 *v22; // rsi
+  uint32 v23; // r8d
+  uint32 *v24; // rcx
+  int v25; // eax
+  int v26; // r14d
   int v27; // eax
-  int v28; // r14d
+  int v28; // ecx
   int v29; // eax
-  int v30; // ecx
-  int v31; // eax
-  int v32; // r14d
-  uint32 *v33; // rcx
-  int v34; // eax
-  int v35; // eax
-  int v36; // r14d
-  uint32 *v37; // rcx
-  int v38; // eax
-  int v39; // eax
-  int v40; // r14d
-  uint32 *v41; // rcx
-  int v42; // eax
-  int v43; // r14d
-  uint32 *v44; // rcx
-  int v45; // eax
+  int v30; // r14d
+  uint32 *v31; // rcx
+  int v32; // eax
+  int v33; // eax
+  int v34; // r14d
+  uint32 *v35; // rcx
+  int v36; // eax
+  int v37; // eax
+  int v38; // r14d
+  uint32 *v39; // rcx
+  int v40; // eax
+  int v41; // r14d
+  uint32 *v42; // rcx
+  int v43; // eax
   bf_write *pWriteBufa; // [rsp+8h] [rbp-48h]
   bf_write *pWriteBufb; // [rsp+8h] [rbp-48h]
-  LeafCodeInfo_t v48; // [rsp+10h] [rbp-40h] BYREF
+  LeafCodeInfo_t v46; // [rsp+10h] [rbp-40h] BYREF
 
   v3 = from;
   m_nCount = from->m_nCount;
@@ -7052,14 +7049,14 @@ void __fastcall FieldOp_Write_PopAllButOnePlusN(
   v3 = &LOG_GENERAL;
   if ( LoggingSystem_IsChannelEnabled(LOG_GENERAL, 4) != 0 )
   {
-    v48.m_szFile = "../public/tier2/fieldpath.h";
-    v48.m_szFunction = "Path_PopLast";
-    v48.m_nLine = 477;
-    LoggingSystem_Log(LOG_GENERAL, LoggingSeverity_t::LS_ERROR, &v48, "Path_PopLast failed for read only CFieldPath");
+    v46.m_szFile = "../public/tier2/fieldpath.h";
+    v46.m_szFunction = "Path_PopLast";
+    v46.m_nLine = 477;
+    LoggingSystem_Log(LOG_GENERAL, LoggingSeverity_t::LS_ERROR, &v46, "Path_PopLast failed for read only CFieldPath");
   }
   while ( 1 )
   {
-    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v8, v9, v6, v7, v10, v11) != 0 )
+    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v8, v9, v6, v7) != 0 )
       loc_0 = -559038737;
     v5 = Plat_ExitProcess(1);
     do
@@ -7072,18 +7069,18 @@ LABEL_9:
     m_bUsingExternalPaths = 0;
     v3->m_nCount = 1;
 LABEL_11:
-    v13 = m_nCount - 1;
-    v14 = v13;
-    v15 = (to + 2 * v13);
+    v11 = m_nCount - 1;
+    v12 = v11;
+    v13 = (to + 2 * v11);
     if ( to->m_bUsingExternalPaths )
-      v15 = &to->u.m_pPaths[v13];
-    m_nValue = v15->m_nValue;
-    v17 = (v3 + 2 * v13);
+      v13 = &to->u.m_pPaths[v11];
+    m_nValue = v13->m_nValue;
+    v15 = (v3 + 2 * v11);
     if ( m_bUsingExternalPaths )
-      v17 = &v3->u.m_pPaths[v13];
-    v18 = m_nValue - v17->m_nValue;
-    v19 = v18 - 1;
-    if ( (v18 - 1) <= 3 )
+      v15 = &v3->u.m_pPaths[v11];
+    v16 = m_nValue - v15->m_nValue;
+    v17 = v16 - 1;
+    if ( (v16 - 1) <= 3 )
     {
       m_iCurBit = pWriteBuf->m_iCurBit;
       m_nDataBits = pWriteBuf->m_nDataBits;
@@ -7101,52 +7098,52 @@ LABEL_11:
       if ( m_nDataBits - m_iCurBit > 1 )
       {
         pWriteBuf->m_iCurBit = m_iCurBit + 2;
-        v22 = m_iCurBit & 0x1F;
-        v23 = __ROL4__(v19, m_iCurBit & 0x1F);
-        v24 = &pWriteBuf->m_pData[m_iCurBit >> 5];
-        v25 = *v24;
-        v26 = &v24[1u >> (31 - (m_iCurBit & 0x1F))];
-        v27 = v23 ^ *v26;
-        v28 = *v24 ^ v23;
-        *v26 ^= (1u >> (31 - v22)) & v27;
-        v29 = 3;
+        v20 = m_iCurBit & 0x1F;
+        v21 = __ROL4__(v17, m_iCurBit & 0x1F);
+        v22 = &pWriteBuf->m_pData[m_iCurBit >> 5];
+        v23 = *v22;
+        v24 = &v22[1u >> (31 - (m_iCurBit & 0x1F))];
+        v25 = v21 ^ *v24;
+        v26 = *v22 ^ v21;
+        *v24 ^= (1u >> (31 - v20)) & v25;
+        v27 = 3;
 LABEL_20:
-        *v24 = v25 ^ (v29 << v22) & v28;
+        *v22 = v23 ^ (v27 << v20) & v26;
         goto LABEL_21;
       }
       goto LABEL_41;
     }
-    v30 = pWriteBuf->m_iCurBit;
-    v31 = pWriteBuf->m_nDataBits;
-    if ( v30 >= v31 )
+    v28 = pWriteBuf->m_iCurBit;
+    v29 = pWriteBuf->m_nDataBits;
+    if ( v28 >= v29 )
     {
       pWriteBuf->m_bOverflow = 1;
-      if ( v19 <= 0xF )
+      if ( v17 <= 0xF )
       {
 LABEL_27:
-        if ( v31 <= v30 )
+        if ( v29 <= v28 )
         {
           pWriteBuf->m_bOverflow = 1;
         }
         else
         {
-          pWriteBuf->m_pData[v30 >> 5] |= 1 << v30;
-          v30 = pWriteBuf->m_iCurBit + 1;
-          v31 = pWriteBuf->m_nDataBits;
-          pWriteBuf->m_iCurBit = v30;
+          pWriteBuf->m_pData[v28 >> 5] |= 1 << v28;
+          v28 = pWriteBuf->m_iCurBit + 1;
+          v29 = pWriteBuf->m_nDataBits;
+          pWriteBuf->m_iCurBit = v28;
         }
-        if ( v31 - v30 > 3 )
+        if ( v29 - v28 > 3 )
         {
-          pWriteBuf->m_iCurBit = v30 + 4;
-          v22 = v30 & 0x1F;
-          v24 = &pWriteBuf->m_pData[v30 >> 5];
-          v36 = __ROL4__(v19, v30 & 0x1F);
-          v25 = *v24;
-          v37 = &v24[(7u >> (31 - (v30 & 0x1F))) & 1];
-          v38 = v36 ^ *v37;
-          v28 = *v24 ^ v36;
-          *v37 ^= (7u >> (31 - v22)) & v38;
-          v29 = 15;
+          pWriteBuf->m_iCurBit = v28 + 4;
+          v20 = v28 & 0x1F;
+          v22 = &pWriteBuf->m_pData[v28 >> 5];
+          v34 = __ROL4__(v17, v28 & 0x1F);
+          v23 = *v22;
+          v35 = &v22[(7u >> (31 - (v28 & 0x1F))) & 1];
+          v36 = v34 ^ *v35;
+          v26 = *v22 ^ v34;
+          *v35 ^= (7u >> (31 - v20)) & v36;
+          v27 = 15;
           goto LABEL_20;
         }
       }
@@ -7154,81 +7151,81 @@ LABEL_27:
       {
 LABEL_44:
         pWriteBuf->m_bOverflow = 1;
-        if ( v19 > 0x3FF )
+        if ( v17 > 0x3FF )
           goto LABEL_45;
 LABEL_33:
-        if ( v30 >= v31 )
+        if ( v28 >= v29 )
         {
           pWriteBuf->m_bOverflow = 1;
         }
         else
         {
-          pWriteBuf->m_pData[v30 >> 5] |= 1 << v30;
-          v30 = pWriteBuf->m_iCurBit + 1;
-          v31 = pWriteBuf->m_nDataBits;
-          pWriteBuf->m_iCurBit = v30;
+          pWriteBuf->m_pData[v28 >> 5] |= 1 << v28;
+          v28 = pWriteBuf->m_iCurBit + 1;
+          v29 = pWriteBuf->m_nDataBits;
+          pWriteBuf->m_iCurBit = v28;
         }
-        if ( v31 - v30 > 9 )
+        if ( v29 - v28 > 9 )
         {
-          pWriteBuf->m_iCurBit = v30 + 10;
-          v22 = v30 & 0x1F;
-          v24 = &pWriteBuf->m_pData[v30 >> 5];
-          v32 = __ROL4__(v19, v30 & 0x1F);
-          v25 = *v24;
-          v33 = &v24[(0x1FFu >> (31 - (v30 & 0x1F))) & 1];
-          v34 = v32 ^ *v33;
-          v28 = *v24 ^ v32;
-          *v33 ^= (0x1FFu >> (31 - v22)) & v34;
-          v29 = 1023;
+          pWriteBuf->m_iCurBit = v28 + 10;
+          v20 = v28 & 0x1F;
+          v22 = &pWriteBuf->m_pData[v28 >> 5];
+          v30 = __ROL4__(v17, v28 & 0x1F);
+          v23 = *v22;
+          v31 = &v22[(0x1FFu >> (31 - (v28 & 0x1F))) & 1];
+          v32 = v30 ^ *v31;
+          v26 = *v22 ^ v30;
+          *v31 ^= (0x1FFu >> (31 - v20)) & v32;
+          v27 = 1023;
           goto LABEL_20;
         }
       }
-      pWriteBuf->m_iCurBit = v31;
+      pWriteBuf->m_iCurBit = v29;
       pWriteBuf->m_bOverflow = 1;
       goto LABEL_21;
     }
-    pWriteBuf->m_pData[v30 >> 5] &= ~(1 << v30);
-    v30 = pWriteBuf->m_iCurBit + 1;
-    v31 = pWriteBuf->m_nDataBits;
-    pWriteBuf->m_iCurBit = v30;
-    if ( v19 <= 0xF )
+    pWriteBuf->m_pData[v28 >> 5] &= ~(1 << v28);
+    v28 = pWriteBuf->m_iCurBit + 1;
+    v29 = pWriteBuf->m_nDataBits;
+    pWriteBuf->m_iCurBit = v28;
+    if ( v17 <= 0xF )
       goto LABEL_27;
-    if ( v30 >= v31 )
+    if ( v28 >= v29 )
       goto LABEL_44;
-    pWriteBuf->m_pData[v30 >> 5] &= ~(1 << v30);
-    v30 = pWriteBuf->m_iCurBit + 1;
-    v31 = pWriteBuf->m_nDataBits;
-    pWriteBuf->m_iCurBit = v30;
-    if ( v19 <= 0x3FF )
+    pWriteBuf->m_pData[v28 >> 5] &= ~(1 << v28);
+    v28 = pWriteBuf->m_iCurBit + 1;
+    v29 = pWriteBuf->m_nDataBits;
+    pWriteBuf->m_iCurBit = v28;
+    if ( v17 <= 0x3FF )
       goto LABEL_33;
-    if ( v31 > v30 )
+    if ( v29 > v28 )
     {
-      pWriteBuf->m_pData[v30 >> 5] &= ~(1 << v30);
+      pWriteBuf->m_pData[v28 >> 5] &= ~(1 << v28);
       ++pWriteBuf->m_iCurBit;
       goto LABEL_39;
     }
 LABEL_45:
     pWriteBuf->m_bOverflow = 1;
 LABEL_39:
-    if ( v19 > 0x1FFFF )
+    if ( v17 > 0x1FFFF )
     {
       pWriteBufb = pWriteBuf;
       bf_write::WriteOneBit(pWriteBuf, 0);
       pWriteBuf = pWriteBufb;
       m_nDataBits = pWriteBufb->m_nDataBits;
-      v39 = pWriteBufb->m_iCurBit;
-      if ( m_nDataBits - v39 > 30 )
+      v37 = pWriteBufb->m_iCurBit;
+      if ( m_nDataBits - v37 > 30 )
       {
-        pWriteBufb->m_iCurBit = v39 + 31;
-        v22 = v39 & 0x1F;
-        v24 = &pWriteBufb->m_pData[v39 >> 5];
-        v40 = __ROL4__(v19, v39 & 0x1F);
-        v25 = *v24;
-        v41 = &v24[(0x3FFFFFFFu >> (31 - (v39 & 0x1F))) & 1];
-        v42 = v40 ^ *v41;
-        v28 = *v24 ^ v40;
-        *v41 ^= (0x3FFFFFFFu >> (31 - v22)) & v42;
-        v29 = 0x7FFFFFFF;
+        pWriteBufb->m_iCurBit = v37 + 31;
+        v20 = v37 & 0x1F;
+        v22 = &pWriteBufb->m_pData[v37 >> 5];
+        v38 = __ROL4__(v17, v37 & 0x1F);
+        v23 = *v22;
+        v39 = &v22[(0x3FFFFFFFu >> (31 - (v37 & 0x1F))) & 1];
+        v40 = v38 ^ *v39;
+        v26 = *v22 ^ v38;
+        *v39 ^= (0x3FFFFFFFu >> (31 - v20)) & v40;
+        v27 = 0x7FFFFFFF;
         goto LABEL_20;
       }
     }
@@ -7238,19 +7235,19 @@ LABEL_39:
       bf_write::WriteOneBit(pWriteBuf, 1);
       pWriteBuf = pWriteBufa;
       m_nDataBits = pWriteBufa->m_nDataBits;
-      v35 = pWriteBufa->m_iCurBit;
-      if ( m_nDataBits - v35 > 16 )
+      v33 = pWriteBufa->m_iCurBit;
+      if ( m_nDataBits - v33 > 16 )
       {
-        pWriteBufa->m_iCurBit = v35 + 17;
-        v22 = v35 & 0x1F;
-        v24 = &pWriteBufa->m_pData[v35 >> 5];
-        v43 = __ROL4__(v19, v35 & 0x1F);
-        v25 = *v24;
-        v44 = &v24[(0xFFFFu >> (31 - (v35 & 0x1F))) & 1];
-        v45 = v43 ^ *v44;
-        v28 = *v24 ^ v43;
-        *v44 ^= (0xFFFFu >> (31 - v22)) & v45;
-        v29 = 0x1FFFF;
+        pWriteBufa->m_iCurBit = v33 + 17;
+        v20 = v33 & 0x1F;
+        v22 = &pWriteBufa->m_pData[v33 >> 5];
+        v41 = __ROL4__(v17, v33 & 0x1F);
+        v23 = *v22;
+        v42 = &v22[(0xFFFFu >> (31 - (v33 & 0x1F))) & 1];
+        v43 = v41 ^ *v42;
+        v26 = *v22 ^ v41;
+        *v42 ^= (0xFFFFu >> (31 - v20)) & v43;
+        v27 = 0x1FFFF;
         goto LABEL_20;
       }
     }
@@ -7263,13 +7260,13 @@ LABEL_21:
     v3 = &LOG_GENERAL;
     if ( LoggingSystem_IsChannelEnabled(LOG_GENERAL, 4) != 0 )
     {
-      v48.m_szFile = "../public/tier2/fieldpath.h";
-      v48.m_szFunction = "GetPathData";
-      v48.m_nLine = 514;
-      LoggingSystem_Log(LOG_GENERAL, LoggingSeverity_t::LS_ERROR, &v48, "GetPathData failed for read only CFieldPath");
+      v46.m_szFile = "../public/tier2/fieldpath.h";
+      v46.m_szFunction = "GetPathData";
+      v46.m_nLine = 514;
+      LoggingSystem_Log(LOG_GENERAL, LoggingSeverity_t::LS_ERROR, &v46, "GetPathData failed for read only CFieldPath");
     }
   }
-  v3->u.m_FixedPaths[v14].m_nValue += v18;
+  v3->u.m_FixedPaths[v12].m_nValue += v16;
 }
 
 
@@ -7296,11 +7293,13 @@ void __fastcall FieldOp_Write_PopAllButOnePlusNPack3Bits(
   const CFieldPath::Path_t *v15; // rcx
   int v16; // r9d
   int m_iCurBit; // esi
-  uint32 *v18; // r10
-  uint32 v19; // ebx
-  int v20; // edx
-  uint32 *v21; // rcx
-  LeafCodeInfo_t v22; // [rsp+0h] [rbp-30h] BYREF
+  __int64 v18; // r8
+  __int64 v19; // r9
+  uint32 *v20; // r10
+  uint32 v21; // ebx
+  int v22; // edx
+  uint32 *v23; // rcx
+  LeafCodeInfo_t v24; // [rsp+0h] [rbp-30h] BYREF
 
   m_nCount = from->m_nCount;
   if ( from->m_nCount <= 1 )
@@ -7313,20 +7312,20 @@ void __fastcall FieldOp_Write_PopAllButOnePlusNPack3Bits(
     goto LABEL_9;
   if ( LoggingSystem_IsChannelEnabled(LOG_GENERAL, 4) != 0 )
   {
-    v22.m_szFile = "../public/tier2/fieldpath.h";
-    v22.m_szFunction = "Path_PopLast";
-    v22.m_nLine = 477;
+    v24.m_szFile = "../public/tier2/fieldpath.h";
+    v24.m_szFunction = "Path_PopLast";
+    v24.m_nLine = 477;
     LoggingSystem_Log(
       LOG_GENERAL,
       LoggingSeverity_t::LS_ERROR,
-      &v22,
+      &v24,
       "Path_PopLast failed for read only CFieldPath",
       v9,
       v10);
   }
   while ( 1 )
   {
-    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v7, v8, v5, v6, v9, v10) != 0 )
+    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v7, v8, v5, v6) != 0 )
       loc_0 = -559038737;
     v4 = Plat_ExitProcess(1);
     do
@@ -7352,12 +7351,12 @@ LABEL_11:
     if ( pWriteBuf->m_nDataBits - m_iCurBit > 2 )
     {
       pWriteBuf->m_iCurBit = m_iCurBit + 3;
-      v18 = &pWriteBuf->m_pData[m_iCurBit >> 5];
-      v19 = *v18;
-      v20 = __ROL4__(v16 - 1, m_iCurBit & 0x1F);
-      v21 = &v18[(3u >> (31 - (m_iCurBit & 0x1F))) & 1];
-      *v21 ^= (3u >> (31 - (m_iCurBit & 0x1F))) & (v20 ^ *v21);
-      *v18 = v19 ^ (7 << (m_iCurBit & 0x1F)) & (v19 ^ v20);
+      v20 = &pWriteBuf->m_pData[m_iCurBit >> 5];
+      v21 = *v20;
+      v22 = __ROL4__(v16 - 1, m_iCurBit & 0x1F);
+      v23 = &v20[(3u >> (31 - (m_iCurBit & 0x1F))) & 1];
+      *v23 ^= (3u >> (31 - (m_iCurBit & 0x1F))) & (v22 ^ *v23);
+      *v20 = v21 ^ (7 << (m_iCurBit & 0x1F)) & (v21 ^ v22);
     }
     else
     {
@@ -7368,16 +7367,16 @@ LABEL_11:
       break;
     if ( LoggingSystem_IsChannelEnabled(LOG_GENERAL, 4) != 0 )
     {
-      v22.m_szFile = "../public/tier2/fieldpath.h";
-      v22.m_szFunction = "GetPathData";
-      v22.m_nLine = 514;
+      v24.m_szFile = "../public/tier2/fieldpath.h";
+      v24.m_szFunction = "GetPathData";
+      v24.m_nLine = 514;
       LoggingSystem_Log(
         LOG_GENERAL,
         LoggingSeverity_t::LS_ERROR,
-        &v22,
+        &v24,
         "GetPathData failed for read only CFieldPath",
-        v9,
-        v10);
+        v18,
+        v19);
     }
   }
   from->u.m_FixedPaths[v12].m_nValue += v16;
@@ -7407,11 +7406,13 @@ void __fastcall FieldOp_Write_PopAllButOnePlusNPack6Bits(
   const CFieldPath::Path_t *v15; // rcx
   int v16; // r9d
   int m_iCurBit; // esi
-  uint32 *v18; // r8
-  uint32 v19; // r11d
-  int v20; // edx
-  uint32 *v21; // rcx
-  LeafCodeInfo_t v22; // [rsp+0h] [rbp-30h] BYREF
+  __int64 v18; // r8
+  __int64 v19; // r9
+  uint32 *v20; // r8
+  uint32 v21; // r11d
+  int v22; // edx
+  uint32 *v23; // rcx
+  LeafCodeInfo_t v24; // [rsp+0h] [rbp-30h] BYREF
 
   m_nCount = from->m_nCount;
   if ( from->m_nCount <= 1 )
@@ -7424,20 +7425,20 @@ void __fastcall FieldOp_Write_PopAllButOnePlusNPack6Bits(
     goto LABEL_9;
   if ( LoggingSystem_IsChannelEnabled(LOG_GENERAL, 4) != 0 )
   {
-    v22.m_szFile = "../public/tier2/fieldpath.h";
-    v22.m_szFunction = "Path_PopLast";
-    v22.m_nLine = 477;
+    v24.m_szFile = "../public/tier2/fieldpath.h";
+    v24.m_szFunction = "Path_PopLast";
+    v24.m_nLine = 477;
     LoggingSystem_Log(
       LOG_GENERAL,
       LoggingSeverity_t::LS_ERROR,
-      &v22,
+      &v24,
       "Path_PopLast failed for read only CFieldPath",
       v9,
       v10);
   }
   while ( 1 )
   {
-    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v7, v8, v5, v6, v9, v10) != 0 )
+    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v7, v8, v5, v6) != 0 )
       loc_0 = -559038737;
     v4 = Plat_ExitProcess(1);
     do
@@ -7463,12 +7464,12 @@ LABEL_11:
     if ( pWriteBuf->m_nDataBits - m_iCurBit > 5 )
     {
       pWriteBuf->m_iCurBit = m_iCurBit + 6;
-      v18 = &pWriteBuf->m_pData[m_iCurBit >> 5];
-      v19 = *v18;
-      v20 = __ROL4__(v16 - 1, m_iCurBit & 0x1F);
-      v21 = &v18[(0x1Fu >> (31 - (m_iCurBit & 0x1F))) & 1];
-      *v21 ^= (0x1Fu >> (31 - (m_iCurBit & 0x1F))) & (v20 ^ *v21);
-      *v18 = v19 ^ (63 << (m_iCurBit & 0x1F)) & (v19 ^ v20);
+      v20 = &pWriteBuf->m_pData[m_iCurBit >> 5];
+      v21 = *v20;
+      v22 = __ROL4__(v16 - 1, m_iCurBit & 0x1F);
+      v23 = &v20[(0x1Fu >> (31 - (m_iCurBit & 0x1F))) & 1];
+      *v23 ^= (0x1Fu >> (31 - (m_iCurBit & 0x1F))) & (v22 ^ *v23);
+      *v20 = v21 ^ (63 << (m_iCurBit & 0x1F)) & (v21 ^ v22);
     }
     else
     {
@@ -7479,16 +7480,16 @@ LABEL_11:
       break;
     if ( LoggingSystem_IsChannelEnabled(LOG_GENERAL, 4) != 0 )
     {
-      v22.m_szFile = "../public/tier2/fieldpath.h";
-      v22.m_szFunction = "GetPathData";
-      v22.m_nLine = 514;
+      v24.m_szFile = "../public/tier2/fieldpath.h";
+      v24.m_szFunction = "GetPathData";
+      v24.m_nLine = 514;
       LoggingSystem_Log(
         LOG_GENERAL,
         LoggingSeverity_t::LS_ERROR,
-        &v22,
+        &v24,
         "GetPathData failed for read only CFieldPath",
-        v9,
-        v10);
+        v18,
+        v19);
     }
   }
   from->u.m_FixedPaths[v12].m_nValue += v16;
@@ -7525,22 +7526,20 @@ void __fastcall FieldOp_Write_PopNPlusOne(CFieldPath *const from, const CFieldPa
   __int64 v27; // rcx
   __int64 v28; // rdi
   __int64 v29; // rsi
-  __int64 v30; // r8
-  __int64 v31; // r9
-  int v32; // eax
-  int v33; // eax
-  int v34; // r13d
-  uint32 *v35; // rcx
-  int v36; // eax
-  int v37; // r13d
-  uint32 *v38; // rcx
-  int v39; // eax
-  int v40; // r13d
-  uint32 *v41; // rcx
-  int v42; // eax
+  int v30; // eax
+  int v31; // eax
+  int v32; // r13d
+  uint32 *v33; // rcx
+  int v34; // eax
+  int v35; // r13d
+  uint32 *v36; // rcx
+  int v37; // eax
+  int v38; // r13d
+  uint32 *v39; // rcx
+  int v40; // eax
   bf_write *pWriteBufa; // [rsp+8h] [rbp-48h]
   bf_write *pWriteBufb; // [rsp+8h] [rbp-48h]
-  LeafCodeInfo_t v45; // [rsp+10h] [rbp-40h] BYREF
+  LeafCodeInfo_t v43; // [rsp+10h] [rbp-40h] BYREF
 
   v5 = from->m_nCount - to->m_nCount;
   if ( v5 > 3 )
@@ -7620,18 +7619,18 @@ LABEL_37:
           bf_write::WriteOneBit(pWriteBuf, 0);
           pWriteBuf = pWriteBufb;
           v7 = pWriteBufb->m_nDataBits;
-          v33 = pWriteBufb->m_iCurBit;
-          if ( v7 - v33 > 30 )
+          v31 = pWriteBufb->m_iCurBit;
+          if ( v7 - v31 > 30 )
           {
-            pWriteBufb->m_iCurBit = v33 + 31;
-            v8 = v33 & 0x1F;
-            v10 = &pWriteBufb->m_pData[v33 >> 5];
-            v34 = __ROL4__(v5, v33 & 0x1F);
+            pWriteBufb->m_iCurBit = v31 + 31;
+            v8 = v31 & 0x1F;
+            v10 = &pWriteBufb->m_pData[v31 >> 5];
+            v32 = __ROL4__(v5, v31 & 0x1F);
             v11 = *v10;
-            v35 = &v10[(0x3FFFFFFFu >> (31 - (v33 & 0x1F))) & 1];
-            v36 = v34 ^ *v35;
-            v14 = *v10 ^ v34;
-            *v35 ^= (0x3FFFFFFFu >> (31 - v8)) & v36;
+            v33 = &v10[(0x3FFFFFFFu >> (31 - (v31 & 0x1F))) & 1];
+            v34 = v32 ^ *v33;
+            v14 = *v10 ^ v32;
+            *v33 ^= (0x3FFFFFFFu >> (31 - v8)) & v34;
             v15 = 0x7FFFFFFF;
             goto LABEL_6;
           }
@@ -7642,18 +7641,18 @@ LABEL_37:
           bf_write::WriteOneBit(pWriteBuf, 1);
           pWriteBuf = pWriteBufa;
           v7 = pWriteBufa->m_nDataBits;
-          v32 = pWriteBufa->m_iCurBit;
-          if ( v7 - v32 > 16 )
+          v30 = pWriteBufa->m_iCurBit;
+          if ( v7 - v30 > 16 )
           {
-            pWriteBufa->m_iCurBit = v32 + 17;
-            v8 = v32 & 0x1F;
-            v10 = &pWriteBufa->m_pData[v32 >> 5];
-            v37 = __ROL4__(v5, v32 & 0x1F);
+            pWriteBufa->m_iCurBit = v30 + 17;
+            v8 = v30 & 0x1F;
+            v10 = &pWriteBufa->m_pData[v30 >> 5];
+            v35 = __ROL4__(v5, v30 & 0x1F);
             v11 = *v10;
-            v38 = &v10[(0xFFFFu >> (31 - (v32 & 0x1F))) & 1];
-            v39 = v37 ^ *v38;
-            v14 = *v10 ^ v37;
-            *v38 ^= (0xFFFFu >> (31 - v8)) & v39;
+            v36 = &v10[(0xFFFFu >> (31 - (v30 & 0x1F))) & 1];
+            v37 = v35 ^ *v36;
+            v14 = *v10 ^ v35;
+            *v36 ^= (0xFFFFu >> (31 - v8)) & v37;
             v15 = 0x1FFFF;
             goto LABEL_6;
           }
@@ -7681,12 +7680,12 @@ LABEL_23:
         pWriteBuf->m_iCurBit = m_iCurBit + 10;
         v8 = m_iCurBit & 0x1F;
         v10 = &pWriteBuf->m_pData[m_iCurBit >> 5];
-        v40 = __ROL4__(v5, m_iCurBit & 0x1F);
+        v38 = __ROL4__(v5, m_iCurBit & 0x1F);
         v11 = *v10;
-        v41 = &v10[(0x1FFu >> (31 - (m_iCurBit & 0x1F))) & 1];
-        v42 = v40 ^ *v41;
-        v14 = *v10 ^ v40;
-        *v41 ^= (0x1FFu >> (31 - v8)) & v42;
+        v39 = &v10[(0x1FFu >> (31 - (m_iCurBit & 0x1F))) & 1];
+        v40 = v38 ^ *v39;
+        v14 = *v10 ^ v38;
+        *v39 ^= (0x1FFu >> (31 - v8)) & v40;
         v15 = 1023;
         goto LABEL_6;
       }
@@ -7735,10 +7734,10 @@ LABEL_8:
   {
     if ( LoggingSystem_IsChannelEnabled(LOG_GENERAL, 4) != 0 )
     {
-      v45.m_szFile = "../public/tier2/fieldpath.h";
-      v45.m_szFunction = "Path_PopLast";
-      v45.m_nLine = 477;
-      LoggingSystem_Log(LOG_GENERAL, LoggingSeverity_t::LS_ERROR, &v45, "Path_PopLast failed for read only CFieldPath");
+      v43.m_szFile = "../public/tier2/fieldpath.h";
+      v43.m_szFunction = "Path_PopLast";
+      v43.m_nLine = 477;
+      LoggingSystem_Log(LOG_GENERAL, LoggingSeverity_t::LS_ERROR, &v43, "Path_PopLast failed for read only CFieldPath");
     }
     goto LABEL_30;
   }
@@ -7758,13 +7757,13 @@ LABEL_11:
     {
       if ( LoggingSystem_IsChannelEnabled(LOG_GENERAL, 4) != 0 )
       {
-        v45.m_szFile = "../public/tier2/fieldpath.h";
-        v45.m_szFunction = "GetPathData";
-        v45.m_nLine = 514;
-        LoggingSystem_Log(LOG_GENERAL, LoggingSeverity_t::LS_ERROR, &v45, "GetPathData failed for read only CFieldPath");
+        v43.m_szFile = "../public/tier2/fieldpath.h";
+        v43.m_szFunction = "GetPathData";
+        v43.m_nLine = 514;
+        LoggingSystem_Log(LOG_GENERAL, LoggingSeverity_t::LS_ERROR, &v43, "GetPathData failed for read only CFieldPath");
       }
 LABEL_30:
-      if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v28, v29, v26, v27, v30, v31) != 0 )
+      if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v28, v29, v26, v27) != 0 )
         loc_0 = -559038737;
       Plat_ExitProcess(1);
     }
@@ -7805,22 +7804,20 @@ void __fastcall FieldOp_Write_PopNPlusN(CFieldPath *const from, const CFieldPath
   __int64 v29; // rcx
   __int64 v30; // rdi
   __int64 v31; // rsi
-  __int64 v32; // r8
-  __int64 v33; // r9
-  int v34; // eax
-  int v35; // eax
-  int v36; // r13d
-  uint32 *v37; // rcx
-  int v38; // eax
-  int v39; // r13d
-  uint32 *v40; // rcx
-  int v41; // eax
-  int v42; // r13d
-  uint32 *v43; // rcx
-  int v44; // eax
+  int v32; // eax
+  int v33; // eax
+  int v34; // r13d
+  uint32 *v35; // rcx
+  int v36; // eax
+  int v37; // r13d
+  uint32 *v38; // rcx
+  int v39; // eax
+  int v40; // r13d
+  uint32 *v41; // rcx
+  int v42; // eax
   bf_write *pWriteBufa; // [rsp+8h] [rbp-48h]
   bf_write *pWriteBufb; // [rsp+8h] [rbp-48h]
-  LeafCodeInfo_t v47; // [rsp+10h] [rbp-40h] BYREF
+  LeafCodeInfo_t v45; // [rsp+10h] [rbp-40h] BYREF
 
   v5 = from->m_nCount - to->m_nCount;
   if ( v5 > 3 )
@@ -7900,18 +7897,18 @@ LABEL_37:
           bf_write::WriteOneBit(pWriteBuf, 0);
           pWriteBuf = pWriteBufb;
           v7 = pWriteBufb->m_nDataBits;
-          v35 = pWriteBufb->m_iCurBit;
-          if ( v7 - v35 > 30 )
+          v33 = pWriteBufb->m_iCurBit;
+          if ( v7 - v33 > 30 )
           {
-            pWriteBufb->m_iCurBit = v35 + 31;
-            v8 = v35 & 0x1F;
-            v9 = &pWriteBufb->m_pData[v35 >> 5];
-            v36 = __ROL4__(v5, v35 & 0x1F);
+            pWriteBufb->m_iCurBit = v33 + 31;
+            v8 = v33 & 0x1F;
+            v9 = &pWriteBufb->m_pData[v33 >> 5];
+            v34 = __ROL4__(v5, v33 & 0x1F);
             v11 = *v9;
-            v37 = &v9[(0x3FFFFFFFu >> (31 - (v35 & 0x1F))) & 1];
-            v38 = v36 ^ *v37;
-            v14 = *v9 ^ v36;
-            *v37 ^= (0x3FFFFFFFu >> (31 - v8)) & v38;
+            v35 = &v9[(0x3FFFFFFFu >> (31 - (v33 & 0x1F))) & 1];
+            v36 = v34 ^ *v35;
+            v14 = *v9 ^ v34;
+            *v35 ^= (0x3FFFFFFFu >> (31 - v8)) & v36;
             v15 = 0x7FFFFFFF;
             goto LABEL_6;
           }
@@ -7922,18 +7919,18 @@ LABEL_37:
           bf_write::WriteOneBit(pWriteBuf, 1);
           pWriteBuf = pWriteBufa;
           v7 = pWriteBufa->m_nDataBits;
-          v34 = pWriteBufa->m_iCurBit;
-          if ( v7 - v34 > 16 )
+          v32 = pWriteBufa->m_iCurBit;
+          if ( v7 - v32 > 16 )
           {
-            pWriteBufa->m_iCurBit = v34 + 17;
-            v8 = v34 & 0x1F;
-            v9 = &pWriteBufa->m_pData[v34 >> 5];
-            v39 = __ROL4__(v5, v34 & 0x1F);
+            pWriteBufa->m_iCurBit = v32 + 17;
+            v8 = v32 & 0x1F;
+            v9 = &pWriteBufa->m_pData[v32 >> 5];
+            v37 = __ROL4__(v5, v32 & 0x1F);
             v11 = *v9;
-            v40 = &v9[(0xFFFFu >> (31 - (v34 & 0x1F))) & 1];
-            v41 = v39 ^ *v40;
-            v14 = *v9 ^ v39;
-            *v40 ^= (0xFFFFu >> (31 - v8)) & v41;
+            v38 = &v9[(0xFFFFu >> (31 - (v32 & 0x1F))) & 1];
+            v39 = v37 ^ *v38;
+            v14 = *v9 ^ v37;
+            *v38 ^= (0xFFFFu >> (31 - v8)) & v39;
             v15 = 0x1FFFF;
             goto LABEL_6;
           }
@@ -7961,12 +7958,12 @@ LABEL_23:
         pWriteBuf->m_iCurBit = m_iCurBit + 10;
         v8 = m_iCurBit & 0x1F;
         v9 = &pWriteBuf->m_pData[m_iCurBit >> 5];
-        v42 = __ROL4__(v5, m_iCurBit & 0x1F);
+        v40 = __ROL4__(v5, m_iCurBit & 0x1F);
         v11 = *v9;
-        v43 = &v9[(0x1FFu >> (31 - (m_iCurBit & 0x1F))) & 1];
-        v44 = v42 ^ *v43;
-        v14 = *v9 ^ v42;
-        *v43 ^= (0x1FFu >> (31 - v8)) & v44;
+        v41 = &v9[(0x1FFu >> (31 - (m_iCurBit & 0x1F))) & 1];
+        v42 = v40 ^ *v41;
+        v14 = *v9 ^ v40;
+        *v41 ^= (0x1FFu >> (31 - v8)) & v42;
         v15 = 1023;
         goto LABEL_6;
       }
@@ -8015,10 +8012,10 @@ LABEL_8:
   {
     if ( LoggingSystem_IsChannelEnabled(LOG_GENERAL, 4) != 0 )
     {
-      v47.m_szFile = "../public/tier2/fieldpath.h";
-      v47.m_szFunction = "Path_PopLast";
-      v47.m_nLine = 477;
-      LoggingSystem_Log(LOG_GENERAL, LoggingSeverity_t::LS_ERROR, &v47, "Path_PopLast failed for read only CFieldPath");
+      v45.m_szFile = "../public/tier2/fieldpath.h";
+      v45.m_szFunction = "Path_PopLast";
+      v45.m_nLine = 477;
+      LoggingSystem_Log(LOG_GENERAL, LoggingSeverity_t::LS_ERROR, &v45, "Path_PopLast failed for read only CFieldPath");
     }
     goto LABEL_30;
   }
@@ -8038,13 +8035,13 @@ LABEL_11:
     {
       if ( LoggingSystem_IsChannelEnabled(LOG_GENERAL, 4) != 0 )
       {
-        v47.m_szFile = "../public/tier2/fieldpath.h";
-        v47.m_szFunction = "GetPathData";
-        v47.m_nLine = 514;
-        LoggingSystem_Log(LOG_GENERAL, LoggingSeverity_t::LS_ERROR, &v47, "GetPathData failed for read only CFieldPath");
+        v45.m_szFile = "../public/tier2/fieldpath.h";
+        v45.m_szFunction = "GetPathData";
+        v45.m_nLine = 514;
+        LoggingSystem_Log(LOG_GENERAL, LoggingSeverity_t::LS_ERROR, &v45, "GetPathData failed for read only CFieldPath");
       }
 LABEL_30:
-      if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v30, v31, v28, v29, v32, v33) != 0 )
+      if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v30, v31, v28, v29) != 0 )
         loc_0 = -559038737;
       Plat_ExitProcess(1);
     }
@@ -8083,39 +8080,37 @@ void __fastcall FieldOp_Write_PopNAndNonTopographical(
   __int64 v21; // rcx
   __int64 v22; // rdi
   __int64 v23; // rsi
-  __int64 v24; // r8
-  __int64 v25; // r9
-  int v26; // ecx
-  int v27; // eax
-  const CFieldPath *v28; // r8
-  const CFieldPath::Path_t *v29; // rax
+  int v24; // ecx
+  int v25; // eax
+  const CFieldPath *v26; // r8
+  const CFieldPath::Path_t *v27; // rax
   int m_nValue; // edx
-  const CFieldPath::Path_t *v31; // rax
-  int v32; // ecx
-  int32 v33; // edx
-  int v34; // edx
-  int v35; // eax
-  char v36; // r8
-  uint32 *v37; // rdi
-  int v38; // eax
-  uint32 v39; // r10d
-  uint32 *v40; // rcx
+  const CFieldPath::Path_t *v29; // rax
+  int v30; // ecx
+  int32 v31; // edx
+  int v32; // edx
+  int v33; // eax
+  char v34; // r8
+  uint32 *v35; // rdi
+  int v36; // eax
+  uint32 v37; // r10d
+  uint32 *v38; // rcx
+  int v39; // edx
+  int v40; // eax
   int v41; // edx
-  int v42; // eax
-  int v43; // edx
-  int v44; // r12d
-  uint32 *v45; // rcx
+  int v42; // r12d
+  uint32 *v43; // rcx
+  int v44; // eax
+  int v45; // eax
   int v46; // eax
-  int v47; // eax
-  int v48; // eax
-  uint32 *v49; // rcx
-  int v50; // edx
-  int v51; // eax
-  uint32 *v52; // rcx
-  int v53; // edx
-  const CFieldPath *v54; // [rsp+0h] [rbp-60h]
+  uint32 *v47; // rcx
+  int v48; // edx
+  int v49; // eax
+  uint32 *v50; // rcx
+  int v51; // edx
+  const CFieldPath *v52; // [rsp+0h] [rbp-60h]
   __int16 nDelta; // [rsp+Ch] [rbp-54h]
-  LeafCodeInfo_t v56; // [rsp+10h] [rbp-50h] BYREF
+  LeafCodeInfo_t v54; // [rsp+10h] [rbp-50h] BYREF
 
   v5 = pWriteBuf;
   LODWORD(v6) = from->m_nCount - to->m_nCount;
@@ -8160,28 +8155,28 @@ LABEL_7:
       v5 = &LOG_GENERAL;
       if ( LoggingSystem_IsChannelEnabled(LOG_GENERAL, 4) != 0 )
       {
-        v56.m_szFile = "../public/tier2/fieldpath.h";
-        v56.m_szFunction = "Path_PopLast";
-        v56.m_nLine = 477;
+        v54.m_szFile = "../public/tier2/fieldpath.h";
+        v54.m_szFunction = "Path_PopLast";
+        v54.m_nLine = 477;
         LoggingSystem_Log(
           LOG_GENERAL,
           LoggingSeverity_t::LS_ERROR,
-          &v56,
+          &v54,
           "Path_PopLast failed for read only CFieldPath");
       }
 LABEL_11:
-      if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v22, v23, v20, v21, v24, v25) != 0 )
+      if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v22, v23, v20, v21) != 0 )
         loc_0 = -559038737;
       Plat_ExitProcess(1);
 LABEL_14:
-      v26 = pWriteBuf->m_iCurBit;
-      if ( v26 >= pWriteBuf->m_nDataBits )
+      v24 = pWriteBuf->m_iCurBit;
+      if ( v24 >= pWriteBuf->m_nDataBits )
       {
         pWriteBuf->m_bOverflow = 1;
       }
       else
       {
-        pWriteBuf->m_pData[v26 >> 5] &= ~(1 << v26);
+        pWriteBuf->m_pData[v24 >> 5] &= ~(1 << v24);
         ++v5->m_iCurBit;
       }
       if ( v7 > 0xF )
@@ -8190,23 +8185,23 @@ LABEL_14:
         if ( v7 <= 0x3FF )
         {
           bf_write::WriteOneBit(v5, 1);
-          v34 = v5->m_iCurBit;
-          if ( v5->m_nDataBits - v34 <= 9 )
+          v32 = v5->m_iCurBit;
+          if ( v5->m_nDataBits - v32 <= 9 )
           {
             v5->m_iCurBit = v5->m_nDataBits;
             v5->m_bOverflow = 1;
             goto LABEL_7;
           }
-          v5->m_iCurBit = v34 + 10;
-          v36 = v34 & 0x1F;
-          v37 = &v5->m_pData[v34 >> 5];
-          v51 = __ROL4__(v6, v34 & 0x1F);
-          v39 = *v37;
-          v52 = &v37[(0x1FFu >> (31 - (v34 & 0x1F))) & 1];
-          v53 = v51 ^ *v52;
-          v42 = *v37 ^ v51;
-          *v52 ^= (0x1FFu >> (31 - v36)) & v53;
-          v43 = 1023;
+          v5->m_iCurBit = v32 + 10;
+          v34 = v32 & 0x1F;
+          v35 = &v5->m_pData[v32 >> 5];
+          v49 = __ROL4__(v6, v32 & 0x1F);
+          v37 = *v35;
+          v50 = &v35[(0x1FFu >> (31 - (v32 & 0x1F))) & 1];
+          v51 = v49 ^ *v50;
+          v40 = *v35 ^ v49;
+          *v50 ^= (0x1FFu >> (31 - v34)) & v51;
+          v41 = 1023;
           goto LABEL_51;
         }
         bf_write::WriteOneBit(v5, 0);
@@ -8214,19 +8209,19 @@ LABEL_14:
         {
           bf_write::WriteOneBit(v5, 0);
           m_nDataBits = v5->m_nDataBits;
-          v47 = v5->m_iCurBit;
-          if ( m_nDataBits - v47 > 30 )
+          v45 = v5->m_iCurBit;
+          if ( m_nDataBits - v45 > 30 )
           {
-            v5->m_iCurBit = v47 + 31;
-            v36 = v47 & 0x1F;
-            v37 = &v5->m_pData[v47 >> 5];
-            v48 = __ROL4__(v6, v47 & 0x1F);
-            v39 = *v37;
-            v49 = &v37[(0x3FFFFFFFu >> (31 - v36)) & 1];
-            v50 = v48 ^ *v49;
-            v42 = *v37 ^ v48;
-            *v49 ^= (0x3FFFFFFFu >> (31 - v36)) & v50;
-            v43 = 0x7FFFFFFF;
+            v5->m_iCurBit = v45 + 31;
+            v34 = v45 & 0x1F;
+            v35 = &v5->m_pData[v45 >> 5];
+            v46 = __ROL4__(v6, v45 & 0x1F);
+            v37 = *v35;
+            v47 = &v35[(0x3FFFFFFFu >> (31 - v34)) & 1];
+            v48 = v46 ^ *v47;
+            v40 = *v35 ^ v46;
+            *v47 ^= (0x3FFFFFFFu >> (31 - v34)) & v48;
+            v41 = 0x7FFFFFFF;
             goto LABEL_51;
           }
         }
@@ -8234,21 +8229,21 @@ LABEL_14:
         {
           bf_write::WriteOneBit(v5, 1);
           m_nDataBits = v5->m_nDataBits;
-          v35 = v5->m_iCurBit;
-          if ( m_nDataBits - v35 > 16 )
+          v33 = v5->m_iCurBit;
+          if ( m_nDataBits - v33 > 16 )
           {
-            v5->m_iCurBit = v35 + 17;
-            v36 = v35 & 0x1F;
-            v37 = &v5->m_pData[v35 >> 5];
-            v38 = __ROL4__(v6, v35 & 0x1F);
-            v39 = *v37;
-            v40 = &v37[(0xFFFFu >> (31 - v36)) & 1];
-            v41 = v38 ^ *v40;
-            v42 = *v37 ^ v38;
-            *v40 ^= (0xFFFFu >> (31 - v36)) & v41;
-            v43 = 0x1FFFF;
+            v5->m_iCurBit = v33 + 17;
+            v34 = v33 & 0x1F;
+            v35 = &v5->m_pData[v33 >> 5];
+            v36 = __ROL4__(v6, v33 & 0x1F);
+            v37 = *v35;
+            v38 = &v35[(0xFFFFu >> (31 - v34)) & 1];
+            v39 = v36 ^ *v38;
+            v40 = *v35 ^ v36;
+            *v38 ^= (0xFFFFu >> (31 - v34)) & v39;
+            v41 = 0x1FFFF;
 LABEL_51:
-            *v37 = v39 ^ (v43 << v36) & v42;
+            *v35 = v37 ^ (v41 << v34) & v40;
             goto LABEL_7;
           }
         }
@@ -8257,18 +8252,18 @@ LABEL_51:
       {
         bf_write::WriteOneBit(v5, 1);
         m_nDataBits = v5->m_nDataBits;
-        v27 = v5->m_iCurBit;
-        if ( m_nDataBits - v27 > 3 )
+        v25 = v5->m_iCurBit;
+        if ( m_nDataBits - v25 > 3 )
         {
-          v5->m_iCurBit = v27 + 4;
-          v10 = v27 & 0x1F;
-          v44 = __ROL4__(v6, v27 & 0x1F);
-          v12 = &v5->m_pData[v27 >> 5];
+          v5->m_iCurBit = v25 + 4;
+          v10 = v25 & 0x1F;
+          v42 = __ROL4__(v6, v25 & 0x1F);
+          v12 = &v5->m_pData[v25 >> 5];
           v13 = *v12;
-          v45 = &v12[(7u >> (31 - (v27 & 0x1F))) & 1];
-          v46 = v44 ^ *v45;
-          v16 = *v12 ^ v44;
-          *v45 ^= (7u >> (31 - v10)) & v46;
+          v43 = &v12[(7u >> (31 - (v25 & 0x1F))) & 1];
+          v44 = v42 ^ *v43;
+          v16 = *v12 ^ v42;
+          *v43 ^= (7u >> (31 - v10)) & v44;
           v17 = 15;
           goto LABEL_6;
         }
@@ -8291,65 +8286,65 @@ LABEL_18:
 LABEL_19:
   v6 = 0;
   v7 = from;
-  v28 = to;
+  v26 = to;
   if ( v19 > 0 )
   {
     do
     {
-      v29 = v28;
+      v27 = v26;
       if ( to->m_bUsingExternalPaths )
-        v29 = &to->u.m_pPaths[v6];
-      m_nValue = v29->m_nValue;
-      v31 = v7;
+        v27 = &to->u.m_pPaths[v6];
+      m_nValue = v27->m_nValue;
+      v29 = v7;
       if ( from->m_bUsingExternalPaths )
-        v31 = &from->u.m_pPaths[v6];
-      v32 = v5->m_iCurBit;
-      v33 = m_nValue - v31->m_nValue;
-      if ( v33 != 0 )
+        v29 = &from->u.m_pPaths[v6];
+      v30 = v5->m_iCurBit;
+      v31 = m_nValue - v29->m_nValue;
+      if ( v31 != 0 )
       {
-        if ( v32 >= v5->m_nDataBits )
+        if ( v30 >= v5->m_nDataBits )
         {
           v5->m_bOverflow = 1;
         }
         else
         {
-          v5->m_pData[v32 >> 5] |= 1 << v32;
+          v5->m_pData[v30 >> 5] |= 1 << v30;
           ++v5->m_iCurBit;
         }
-        v54 = v28;
-        nDelta = v33;
-        bf_write::WriteSignedVarInt32(v5, v33);
-        v28 = v54;
+        v52 = v26;
+        nDelta = v31;
+        bf_write::WriteSignedVarInt32(v5, v31);
+        v26 = v52;
         if ( from->m_bUsingExternalPaths )
         {
           v5 = &LOG_GENERAL;
           if ( LoggingSystem_IsChannelEnabled(LOG_GENERAL, 4) != 0 )
           {
-            v56.m_szFile = "../public/tier2/fieldpath.h";
-            v56.m_szFunction = "GetPathData";
-            v56.m_nLine = 514;
+            v54.m_szFile = "../public/tier2/fieldpath.h";
+            v54.m_szFunction = "GetPathData";
+            v54.m_nLine = 514;
             LoggingSystem_Log(
               LOG_GENERAL,
               LoggingSeverity_t::LS_ERROR,
-              &v56,
+              &v54,
               "GetPathData failed for read only CFieldPath");
           }
           goto LABEL_11;
         }
         *v7 += nDelta;
       }
-      else if ( v32 >= v5->m_nDataBits )
+      else if ( v30 >= v5->m_nDataBits )
       {
         v5->m_bOverflow = 1;
       }
       else
       {
-        v5->m_pData[v32 >> 5] &= ~(1 << v32);
+        v5->m_pData[v30 >> 5] &= ~(1 << v30);
         ++v5->m_iCurBit;
       }
       v7 += 2LL;
       ++v6;
-      v28 = (v28 + 2);
+      v26 = (v26 + 2);
     }
     while ( v6 < to->m_nCount );
   }
@@ -8374,11 +8369,9 @@ void __fastcall FieldOp_Write_NonTopoComplex(CFieldPath *const from, const CFiel
   __int64 v15; // rcx
   __int64 v16; // rdi
   __int64 v17; // rsi
-  __int64 v18; // r8
-  __int64 v19; // r9
-  CFieldPath *v20; // [rsp+0h] [rbp-60h]
+  CFieldPath *v18; // [rsp+0h] [rbp-60h]
   __int16 nDelta; // [rsp+Ch] [rbp-54h]
-  LeafCodeInfo_t v22; // [rsp+10h] [rbp-50h] BYREF
+  LeafCodeInfo_t v20; // [rsp+10h] [rbp-50h] BYREF
 
   v3 = from;
   v5 = to;
@@ -8406,25 +8399,25 @@ void __fastcall FieldOp_Write_NonTopoComplex(CFieldPath *const from, const CFiel
       {
         pWriteBuf->m_bOverflow = 1;
 LABEL_13:
-        v20 = v3;
+        v18 = v3;
         nDelta = v13;
         bf_write::WriteSignedVarInt32(pWriteBuf, v13);
-        v3 = v20;
-        if ( !v20->m_bUsingExternalPaths )
+        v3 = v18;
+        if ( !v18->m_bUsingExternalPaths )
           break;
         pWriteBuf = &LOG_GENERAL;
         if ( LoggingSystem_IsChannelEnabled(LOG_GENERAL, 4) != 0 )
         {
-          v22.m_szFile = "../public/tier2/fieldpath.h";
-          v22.m_szFunction = "GetPathData";
-          v22.m_nLine = 514;
+          v20.m_szFile = "../public/tier2/fieldpath.h";
+          v20.m_szFunction = "GetPathData";
+          v20.m_nLine = 514;
           LoggingSystem_Log(
             LOG_GENERAL,
             LoggingSeverity_t::LS_ERROR,
-            &v22,
+            &v20,
             "GetPathData failed for read only CFieldPath");
         }
-        if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v16, v17, v14, v15, v18, v19) != 0 )
+        if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v16, v17, v14, v15) != 0 )
           loc_0 = -559038737;
         Plat_ExitProcess(1);
       }
@@ -8473,7 +8466,7 @@ void __fastcall FieldOp_Write_NonTopoPenultimatePluseOne(
       goto LABEL_7;
     while ( 1 )
     {
-      if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v7, v8, v5, v6, v9, v10) != 0 )
+      if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v7, v8, v5, v6) != 0 )
         loc_0 = -559038737;
       Plat_ExitProcess(1);
 LABEL_7:
@@ -8514,14 +8507,12 @@ void __fastcall FieldOp_Write_NonTopoComplexPack4Bits(
   __int64 v13; // rcx
   __int64 v14; // rdi
   __int64 v15; // rsi
-  __int64 v16; // r8
-  __int64 v17; // r9
-  char v18; // r13
-  uint32 *v19; // r12
-  int v20; // ebx
-  uint32 *v21; // rcx
-  uint32 v22; // r15d
-  LeafCodeInfo_t v23; // [rsp-58h] [rbp-58h] BYREF
+  char v16; // r13
+  uint32 *v17; // r12
+  int v18; // ebx
+  uint32 *v19; // rcx
+  uint32 v20; // r15d
+  LeafCodeInfo_t v21; // [rsp-58h] [rbp-58h] BYREF
 
   v3 = 0;
   v4 = 0;
@@ -8562,28 +8553,28 @@ LABEL_13:
             goto LABEL_13;
 LABEL_22:
           pWriteBuf->m_iCurBit = m_iCurBit + 4;
-          v18 = m_iCurBit & 0x1F;
-          v19 = &pWriteBuf->m_pData[m_iCurBit >> 5];
-          v20 = __ROL4__(v9 + 7, m_iCurBit & 0x1F);
-          v21 = &v19[(7u >> (31 - (m_iCurBit & 0x1F))) & 1];
-          v22 = *v19;
-          *v21 ^= (7u >> (31 - v18)) & (v20 ^ *v21);
-          *v19 = v22 ^ (15 << v18) & (v22 ^ v20);
+          v16 = m_iCurBit & 0x1F;
+          v17 = &pWriteBuf->m_pData[m_iCurBit >> 5];
+          v18 = __ROL4__(v9 + 7, m_iCurBit & 0x1F);
+          v19 = &v17[(7u >> (31 - (m_iCurBit & 0x1F))) & 1];
+          v20 = *v17;
+          *v19 ^= (7u >> (31 - v16)) & (v18 ^ *v19);
+          *v17 = v20 ^ (15 << v16) & (v20 ^ v18);
 LABEL_14:
           if ( !from->m_bUsingExternalPaths )
             break;
           if ( LoggingSystem_IsChannelEnabled(LOG_GENERAL, 4) != 0 )
           {
-            v23.m_szFile = "../public/tier2/fieldpath.h";
-            v23.m_szFunction = "GetPathData";
-            v23.m_nLine = 514;
+            v21.m_szFile = "../public/tier2/fieldpath.h";
+            v21.m_szFunction = "GetPathData";
+            v21.m_nLine = 514;
             LoggingSystem_Log(
               LOG_GENERAL,
               LoggingSeverity_t::LS_ERROR,
-              &v23,
+              &v21,
               "GetPathData failed for read only CFieldPath");
           }
-          if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v14, v15, v12, v13, v16, v17) != 0 )
+          if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v14, v15, v12, v13) != 0 )
             loc_0 = -559038737;
           v3 = Plat_ExitProcess(1);
         }
@@ -8642,7 +8633,7 @@ void __fastcall FieldOp_Read_PlusOne(CFieldPath *const from, bf_read *pReadBuf)
       goto LABEL_7;
     while ( 1 )
     {
-      if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v6, v7, v4, v5, v8, v9) != 0 )
+      if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v6, v7, v4, v5) != 0 )
         loc_0 = -559038737;
       Plat_ExitProcess(1);
 LABEL_7:
@@ -8687,7 +8678,7 @@ void __fastcall FieldOp_Read_PlusTwo(CFieldPath *const from, bf_read *pReadBuf)
       goto LABEL_7;
     while ( 1 )
     {
-      if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v6, v7, v4, v5, v8, v9) != 0 )
+      if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v6, v7, v4, v5) != 0 )
         loc_0 = -559038737;
       Plat_ExitProcess(1);
 LABEL_7:
@@ -8732,7 +8723,7 @@ void __fastcall FieldOp_Read_PlusThree(CFieldPath *const from, bf_read *pReadBuf
       goto LABEL_7;
     while ( 1 )
     {
-      if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v6, v7, v4, v5, v8, v9) != 0 )
+      if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v6, v7, v4, v5) != 0 )
         loc_0 = -559038737;
       Plat_ExitProcess(1);
 LABEL_7:
@@ -8777,7 +8768,7 @@ void __fastcall FieldOp_Read_PlusFour(CFieldPath *const from, bf_read *pReadBuf)
       goto LABEL_7;
     while ( 1 )
     {
-      if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v6, v7, v4, v5, v8, v9) != 0 )
+      if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v6, v7, v4, v5) != 0 )
         loc_0 = -559038737;
       Plat_ExitProcess(1);
 LABEL_7:
@@ -8814,24 +8805,22 @@ void __fastcall FieldOp_Read_PlusN(CFieldPath *const from, bf_read *pReadBuf)
   __int64 v11; // rcx
   __int64 v12; // rdi
   __int64 v13; // rsi
-  __int64 v14; // r8
-  __int64 v15; // r9
-  const unsigned __int8 *v16; // r8
-  signed int v17; // edi
-  int v18; // eax
-  const unsigned __int8 *v19; // r8
-  int v20; // edx
-  int v21; // eax
+  const unsigned __int8 *v14; // r8
+  signed int v15; // edi
+  int v16; // eax
+  const unsigned __int8 *v17; // r8
+  int v18; // edx
+  int v19; // eax
   int OneBit; // eax
-  int v23; // edx
-  int v24; // ecx
-  const unsigned __int8 *v25; // r8
-  const unsigned __int8 *v26; // r8
+  int v21; // edx
+  int v22; // ecx
+  const unsigned __int8 *v23; // r8
+  const unsigned __int8 *v24; // r8
   bf_read *pReadBufb; // [rsp+8h] [rbp-38h]
   bf_read *pReadBufc; // [rsp+8h] [rbp-38h]
   bf_read *pReadBufd; // [rsp+8h] [rbp-38h]
   bf_read *pReadBufa; // [rsp+8h] [rbp-38h]
-  LeafCodeInfo_t v31; // [rsp+10h] [rbp-30h] BYREF
+  LeafCodeInfo_t v29; // [rsp+10h] [rbp-30h] BYREF
 
   v2 = from;
   m_nDataBits = pReadBuf->m_nDataBits;
@@ -8855,12 +8844,12 @@ void __fastcall FieldOp_Read_PlusN(CFieldPath *const from, bf_read *pReadBuf)
     v2 = &LOG_GENERAL;
     if ( LoggingSystem_IsChannelEnabled(LOG_GENERAL, 4) != 0 )
     {
-      v31.m_szFile = "../public/tier2/fieldpath.h";
-      v31.m_szFunction = "GetPathData";
-      v31.m_nLine = 514;
-      LoggingSystem_Log(LOG_GENERAL, LoggingSeverity_t::LS_ERROR, &v31, "GetPathData failed for read only CFieldPath");
+      v29.m_szFile = "../public/tier2/fieldpath.h";
+      v29.m_szFunction = "GetPathData";
+      v29.m_nLine = 514;
+      LoggingSystem_Log(LOG_GENERAL, LoggingSeverity_t::LS_ERROR, &v29, "GetPathData failed for read only CFieldPath");
     }
-    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v12, v13, v10, v11, v14, v15) != 0 )
+    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v12, v13, v10, v11) != 0 )
       loc_0 = -559038737;
     Plat_ExitProcess(1);
 LABEL_12:
@@ -8876,25 +8865,25 @@ LABEL_13:
       bf_read::SetOverflowFlag(pReadBuf);
       pReadBuf = pReadBufc;
       m_nDataBits = pReadBufc->m_nDataBits;
-      v17 = pReadBufc->m_iCurBit;
+      v15 = pReadBufc->m_iCurBit;
 LABEL_18:
-      if ( m_nDataBits - v17 <= 0 )
+      if ( m_nDataBits - v15 <= 0 )
       {
         pReadBufd = pReadBuf;
         bf_read::SetOverflowFlag(pReadBuf);
         pReadBuf = pReadBufd;
         goto LABEL_24;
       }
-      v19 = pReadBuf->m_pData;
-      v20 = v17 + 1;
-      v21 = *&pReadBuf->m_pData[4 * (v17 >> 5)];
-      pReadBuf->m_iCurBit = v17 + 1;
-      if ( _bittest(&v21, v17) )
+      v17 = pReadBuf->m_pData;
+      v18 = v15 + 1;
+      v19 = *&pReadBuf->m_pData[4 * (v15 >> 5)];
+      pReadBuf->m_iCurBit = v15 + 1;
+      if ( _bittest(&v19, v15) )
       {
-        if ( m_nDataBits - v20 > 9 )
+        if ( m_nDataBits - v18 > 9 )
         {
-          pReadBuf->m_iCurBit = v17 + 11;
-          v9 = (((*&v19[4 * (v20 >> 5)] >> (v20 & 0x1F)) | (*&v19[4 * ((v17 + 10) >> 5)] << (32 - (v20 & 0x1F)))) & 0x3FF)
+          pReadBuf->m_iCurBit = v15 + 11;
+          v9 = (((*&v17[4 * (v18 >> 5)] >> (v18 & 0x1F)) | (*&v17[4 * ((v15 + 10) >> 5)] << (32 - (v18 & 0x1F)))) & 0x3FF)
              + 5;
         }
         else
@@ -8910,17 +8899,17 @@ LABEL_21:
 LABEL_24:
         pReadBufa = pReadBuf;
         OneBit = bf_read::ReadOneBit(pReadBuf);
-        v23 = pReadBufa->m_iCurBit;
-        v24 = pReadBufa->m_nDataBits;
+        v21 = pReadBufa->m_iCurBit;
+        v22 = pReadBufa->m_nDataBits;
         if ( OneBit != 0 )
         {
-          if ( v24 - v23 <= 16 )
+          if ( v22 - v21 <= 16 )
             goto LABEL_29;
-          v25 = pReadBufa->m_pData;
-          pReadBufa->m_iCurBit = v23 + 17;
-          v9 = ((*&v25[4 * (v23 >> 5)] >> (v23 & 0x1F)) | (*&v25[4 * ((v23 + 16) >> 5)] << (32 - (v23 & 0x1F)))) + 5;
+          v23 = pReadBufa->m_pData;
+          pReadBufa->m_iCurBit = v21 + 17;
+          v9 = ((*&v23[4 * (v21 >> 5)] >> (v21 & 0x1F)) | (*&v23[4 * ((v21 + 16) >> 5)] << (32 - (v21 & 0x1F)))) + 5;
         }
-        else if ( v24 - v23 <= 30 )
+        else if ( v22 - v21 <= 30 )
         {
 LABEL_29:
           pReadBufa->m_iCurBit = pReadBufa->m_nDataBits;
@@ -8929,24 +8918,24 @@ LABEL_29:
         }
         else
         {
-          v26 = pReadBufa->m_pData;
-          pReadBufa->m_iCurBit = v23 + 31;
-          v9 = ((*&v26[4 * (v23 >> 5)] >> (v23 & 0x1F)) | (*&v26[4 * ((v23 + 30) >> 5)] << (32 - (v23 & 0x1F)))) + 5;
+          v24 = pReadBufa->m_pData;
+          pReadBufa->m_iCurBit = v21 + 31;
+          v9 = ((*&v24[4 * (v21 >> 5)] >> (v21 & 0x1F)) | (*&v24[4 * ((v21 + 30) >> 5)] << (32 - (v21 & 0x1F)))) + 5;
         }
       }
     }
     else
     {
-      v16 = pReadBuf->m_pData;
-      v17 = v8 + 1;
-      v18 = *&pReadBuf->m_pData[4 * (v8 >> 5)];
+      v14 = pReadBuf->m_pData;
+      v15 = v8 + 1;
+      v16 = *&pReadBuf->m_pData[4 * (v8 >> 5)];
       pReadBuf->m_iCurBit = v8 + 1;
-      if ( !_bittest(&v18, v8) )
+      if ( !_bittest(&v16, v8) )
         goto LABEL_18;
-      if ( m_nDataBits - v17 <= 3 )
+      if ( m_nDataBits - v15 <= 3 )
         goto LABEL_21;
       pReadBuf->m_iCurBit = v8 + 5;
-      v9 = (((*&v16[4 * (v17 >> 5)] >> (v17 & 0x1F)) | (*&v16[4 * ((v8 + 4) >> 5)] << (32 - (v17 & 0x1F)))) & 0xF) + 5;
+      v9 = (((*&v14[4 * (v15 >> 5)] >> (v15 & 0x1F)) | (*&v14[4 * ((v8 + 4) >> 5)] << (32 - (v15 & 0x1F)))) & 0xF) + 5;
     }
   }
   v2->u.m_FixedPaths[m_nCount - 1].m_nValue += v9;
@@ -8974,7 +8963,7 @@ void __fastcall FieldOp_Read_PushOneLeftDeltaZeroRightZero(CFieldPath *const fro
     while ( 1 )
     {
 LABEL_5:
-      if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v5, v6, v3, v4, v7, v8) != 0 )
+      if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v5, v6, v3, v4) != 0 )
         loc_0 = -559038737;
       Plat_ExitProcess(1);
 LABEL_8:
@@ -9027,25 +9016,23 @@ void __fastcall FieldOp_Read_PushOneLeftDeltaZeroRightNonZero(CFieldPath *const 
   __int64 v10; // rcx
   __int64 v11; // rdi
   __int64 v12; // rsi
-  __int64 v13; // r8
-  __int64 v14; // r9
-  const unsigned __int8 *v15; // r8
-  signed int v16; // edi
-  int v17; // eax
-  const unsigned __int8 *v18; // r8
-  int v19; // edx
-  int v20; // eax
+  const unsigned __int8 *v13; // r8
+  signed int v14; // edi
+  int v15; // eax
+  const unsigned __int8 *v16; // r8
+  int v17; // edx
+  int v18; // eax
   int OneBit; // eax
-  int v22; // edx
+  int v20; // edx
+  int v21; // ecx
+  const unsigned __int8 *v22; // r8
   int v23; // ecx
-  const unsigned __int8 *v24; // r8
-  int v25; // ecx
-  char v26; // di
+  char v24; // di
   bf_read *pReadBufb; // [rsp+8h] [rbp-38h]
   bf_read *pReadBufc; // [rsp+8h] [rbp-38h]
   bf_read *pReadBufd; // [rsp+8h] [rbp-38h]
   bf_read *pReadBufa; // [rsp+8h] [rbp-38h]
-  LeafCodeInfo_t v31; // [rsp+10h] [rbp-30h] BYREF
+  LeafCodeInfo_t v29; // [rsp+10h] [rbp-30h] BYREF
 
   m_nDataBits = pReadBuf->m_nDataBits;
   m_iCurBit = pReadBuf->m_iCurBit;
@@ -9068,17 +9055,17 @@ void __fastcall FieldOp_Read_PushOneLeftDeltaZeroRightNonZero(CFieldPath *const 
     from = &LOG_GENERAL;
     if ( LoggingSystem_IsChannelEnabled(LOG_GENERAL, 4) != 0 )
     {
-      v31.m_szFile = "../public/tier2/fieldpath.h";
-      v31.m_szFunction = "Path_AddToTail";
-      v31.m_nLine = 428;
+      v29.m_szFile = "../public/tier2/fieldpath.h";
+      v29.m_szFunction = "Path_AddToTail";
+      v29.m_nLine = 428;
       LoggingSystem_Log(
         LOG_GENERAL,
         LoggingSeverity_t::LS_ERROR,
-        &v31,
+        &v29,
         "Path_AddToTail failed for read only CFieldPath");
     }
 LABEL_10:
-    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v11, v12, v9, v10, v13, v14) != 0 )
+    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v11, v12, v9, v10) != 0 )
       loc_0 = -559038737;
     Plat_ExitProcess(1);
 LABEL_13:
@@ -9094,26 +9081,26 @@ LABEL_14:
       bf_read::SetOverflowFlag(pReadBuf);
       pReadBuf = pReadBufc;
       m_nDataBits = pReadBufc->m_nDataBits;
-      v16 = pReadBufc->m_iCurBit;
+      v14 = pReadBufc->m_iCurBit;
 LABEL_19:
-      if ( m_nDataBits - v16 <= 0 )
+      if ( m_nDataBits - v14 <= 0 )
       {
         pReadBufd = pReadBuf;
         bf_read::SetOverflowFlag(pReadBuf);
         pReadBuf = pReadBufd;
         goto LABEL_27;
       }
-      v18 = pReadBuf->m_pData;
-      v19 = v16 + 1;
-      v20 = *&pReadBuf->m_pData[4 * (v16 >> 5)];
-      pReadBuf->m_iCurBit = v16 + 1;
-      if ( _bittest(&v20, v16) )
+      v16 = pReadBuf->m_pData;
+      v17 = v14 + 1;
+      v18 = *&pReadBuf->m_pData[4 * (v14 >> 5)];
+      pReadBuf->m_iCurBit = v14 + 1;
+      if ( _bittest(&v18, v14) )
       {
-        if ( m_nDataBits - v19 > 9 )
+        if ( m_nDataBits - v17 > 9 )
         {
-          pReadBuf->m_iCurBit = v16 + 11;
-          LOWORD(m_iCurBit) = ((*&v18[4 * (v19 >> 5)] >> (v19 & 0x1F))
-                             | (*&v18[4 * ((v16 + 10) >> 5)] << (32 - (v19 & 0x1F))))
+          pReadBuf->m_iCurBit = v14 + 11;
+          LOWORD(m_iCurBit) = ((*&v16[4 * (v17 >> 5)] >> (v17 & 0x1F))
+                             | (*&v16[4 * ((v14 + 10) >> 5)] << (32 - (v17 & 0x1F))))
                             & 0x3FF;
         }
         else
@@ -9129,16 +9116,16 @@ LABEL_22:
 LABEL_27:
         pReadBufa = pReadBuf;
         OneBit = bf_read::ReadOneBit(pReadBuf);
-        v22 = pReadBufa->m_iCurBit;
-        v23 = pReadBufa->m_nDataBits;
+        v20 = pReadBufa->m_iCurBit;
+        v21 = pReadBufa->m_nDataBits;
         if ( OneBit != 0 )
         {
-          if ( v23 - v22 > 16 )
+          if ( v21 - v20 > 16 )
           {
-            v24 = pReadBufa->m_pData;
-            pReadBufa->m_iCurBit = v22 + 17;
-            v25 = v22 + 16;
-            v26 = v22 & 0x1F;
+            v22 = pReadBufa->m_pData;
+            pReadBufa->m_iCurBit = v20 + 17;
+            v23 = v20 + 16;
+            v24 = v20 & 0x1F;
             goto LABEL_30;
           }
 LABEL_33:
@@ -9148,29 +9135,29 @@ LABEL_33:
         }
         else
         {
-          if ( v23 - v22 <= 30 )
+          if ( v21 - v20 <= 30 )
             goto LABEL_33;
-          v24 = pReadBufa->m_pData;
-          pReadBufa->m_iCurBit = v22 + 31;
-          v25 = v22 + 30;
-          v26 = v22 & 0x1F;
+          v22 = pReadBufa->m_pData;
+          pReadBufa->m_iCurBit = v20 + 31;
+          v23 = v20 + 30;
+          v24 = v20 & 0x1F;
 LABEL_30:
-          m_iCurBit = (*&v24[4 * (v25 >> 5)] << (32 - v26)) | (*&v24[4 * (v22 >> 5)] >> v26);
+          m_iCurBit = (*&v22[4 * (v23 >> 5)] << (32 - v24)) | (*&v22[4 * (v20 >> 5)] >> v24);
         }
       }
     }
     else
     {
-      v15 = pReadBuf->m_pData;
-      v16 = v7 + 1;
-      v17 = *&pReadBuf->m_pData[4 * (v7 >> 5)];
+      v13 = pReadBuf->m_pData;
+      v14 = v7 + 1;
+      v15 = *&pReadBuf->m_pData[4 * (v7 >> 5)];
       pReadBuf->m_iCurBit = v7 + 1;
-      if ( !_bittest(&v17, v7) )
+      if ( !_bittest(&v15, v7) )
         goto LABEL_19;
-      if ( m_nDataBits - v16 <= 3 )
+      if ( m_nDataBits - v14 <= 3 )
         goto LABEL_22;
       pReadBuf->m_iCurBit = v7 + 5;
-      LOWORD(m_iCurBit) = ((*&v15[4 * (v16 >> 5)] >> (v16 & 0x1F)) | (*&v15[4 * ((v7 + 4) >> 5)] << (32 - (v16 & 0x1F))))
+      LOWORD(m_iCurBit) = ((*&v13[4 * (v14 >> 5)] >> (v14 & 0x1F)) | (*&v13[4 * ((v7 + 4) >> 5)] << (32 - (v14 & 0x1F))))
                         & 0xF;
     }
   }
@@ -9180,13 +9167,13 @@ LABEL_30:
     from = &LOG_GENERAL;
     if ( LoggingSystem_IsChannelEnabled(LOG_GENERAL, 4) != 0 )
     {
-      v31.m_szFile = "../public/tier2/fieldpath.h";
-      v31.m_szFunction = "Path_AddToTail";
-      v31.m_nLine = 425;
+      v29.m_szFile = "../public/tier2/fieldpath.h";
+      v29.m_szFunction = "Path_AddToTail";
+      v29.m_nLine = 425;
       LoggingSystem_Log(
         LOG_GENERAL,
         LoggingSeverity_t::LS_ERROR,
-        &v31,
+        &v29,
         "Path_AddToTail failed, depth already == DEFAULT_MAX_PATH_DEPTH(%d)",
         6);
     }
@@ -9209,19 +9196,21 @@ void __fastcall FieldOp_Read_PushOneLeftDeltaOneRightZero(CFieldPath *const from
   __int64 v6; // rsi
   __int64 v7; // r8
   __int64 v8; // r9
-  LeafCodeInfo_t v9; // [rsp+0h] [rbp-30h] BYREF
+  __int64 v9; // r8
+  __int64 v10; // r9
+  LeafCodeInfo_t v11; // [rsp+0h] [rbp-30h] BYREF
 
   if ( from->m_bUsingExternalPaths )
   {
     if ( LoggingSystem_IsChannelEnabled(LOG_GENERAL, 4) != 0 )
     {
-      v9.m_szFile = "../public/tier2/fieldpath.h";
-      v9.m_szFunction = "GetPathData";
-      v9.m_nLine = 514;
+      v11.m_szFile = "../public/tier2/fieldpath.h";
+      v11.m_szFunction = "GetPathData";
+      v11.m_nLine = 514;
       LoggingSystem_Log(
         LOG_GENERAL,
         LoggingSeverity_t::LS_ERROR,
-        &v9,
+        &v11,
         "GetPathData failed for read only CFieldPath",
         v7,
         v8);
@@ -9233,16 +9222,16 @@ void __fastcall FieldOp_Read_PushOneLeftDeltaOneRightZero(CFieldPath *const from
   {
     if ( LoggingSystem_IsChannelEnabled(LOG_GENERAL, 4) != 0 )
     {
-      v9.m_szFile = "../public/tier2/fieldpath.h";
-      v9.m_szFunction = "Path_AddToTail";
-      v9.m_nLine = 428;
+      v11.m_szFile = "../public/tier2/fieldpath.h";
+      v11.m_szFunction = "Path_AddToTail";
+      v11.m_nLine = 428;
       LoggingSystem_Log(
         LOG_GENERAL,
         LoggingSeverity_t::LS_ERROR,
-        &v9,
+        &v11,
         "Path_AddToTail failed for read only CFieldPath",
-        v7,
-        v8);
+        v9,
+        v10);
     }
     goto LABEL_9;
   }
@@ -9253,18 +9242,18 @@ void __fastcall FieldOp_Read_PushOneLeftDeltaOneRightZero(CFieldPath *const from
     {
       if ( LoggingSystem_IsChannelEnabled(LOG_GENERAL, 4) != 0 )
       {
-        v9.m_szFile = "../public/tier2/fieldpath.h";
-        v9.m_szFunction = "Path_AddToTail";
-        v9.m_nLine = 425;
+        v11.m_szFile = "../public/tier2/fieldpath.h";
+        v11.m_szFunction = "Path_AddToTail";
+        v11.m_nLine = 425;
         LoggingSystem_Log(
           LOG_GENERAL,
           LoggingSeverity_t::LS_ERROR,
-          &v9,
+          &v11,
           "Path_AddToTail failed, depth already == DEFAULT_MAX_PATH_DEPTH(%d)",
           6);
       }
 LABEL_9:
-      if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v5, v6, v3, v4, v7, v8) != 0 )
+      if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v5, v6, v3, v4) != 0 )
         loc_0 = -559038737;
       Plat_ExitProcess(1);
     }
@@ -9290,25 +9279,23 @@ void __fastcall FieldOp_Read_PushOneLeftDeltaOneRightNonZero(CFieldPath *const f
   __int64 v10; // rcx
   __int64 v11; // rdi
   __int64 v12; // rsi
-  __int64 v13; // r8
-  __int64 v14; // r9
-  const unsigned __int8 *v15; // r8
-  signed int v16; // edi
+  const unsigned __int8 *v13; // r8
+  signed int v14; // edi
+  int v15; // edx
+  const unsigned __int8 *v16; // r8
   int v17; // edx
-  const unsigned __int8 *v18; // r8
-  int v19; // edx
+  int v18; // eax
+  bool v19; // zf
   int v20; // eax
-  bool v21; // zf
-  int v22; // eax
-  int v23; // ecx
-  const unsigned __int8 *v24; // r8
-  int v25; // edx
-  char v26; // di
+  int v21; // ecx
+  const unsigned __int8 *v22; // r8
+  int v23; // edx
+  char v24; // di
   bf_read *pReadBufb; // [rsp+8h] [rbp-38h]
   bf_read *pReadBufc; // [rsp+8h] [rbp-38h]
   bf_read *pReadBufd; // [rsp+8h] [rbp-38h]
   bf_read *pReadBufa; // [rsp+8h] [rbp-38h]
-  LeafCodeInfo_t v31; // [rsp+10h] [rbp-30h] BYREF
+  LeafCodeInfo_t v29; // [rsp+10h] [rbp-30h] BYREF
 
   v2 = from;
   if ( from->m_bUsingExternalPaths )
@@ -9316,10 +9303,10 @@ void __fastcall FieldOp_Read_PushOneLeftDeltaOneRightNonZero(CFieldPath *const f
     v2 = &LOG_GENERAL;
     if ( LoggingSystem_IsChannelEnabled(LOG_GENERAL, 4) != 0 )
     {
-      v31.m_szFile = "../public/tier2/fieldpath.h";
-      v31.m_szFunction = "GetPathData";
-      v31.m_nLine = 514;
-      LoggingSystem_Log(LOG_GENERAL, LoggingSeverity_t::LS_ERROR, &v31, "GetPathData failed for read only CFieldPath");
+      v29.m_szFile = "../public/tier2/fieldpath.h";
+      v29.m_szFunction = "GetPathData";
+      v29.m_nLine = 514;
+      LoggingSystem_Log(LOG_GENERAL, LoggingSeverity_t::LS_ERROR, &v29, "GetPathData failed for read only CFieldPath");
     }
     goto LABEL_13;
   }
@@ -9345,17 +9332,17 @@ void __fastcall FieldOp_Read_PushOneLeftDeltaOneRightNonZero(CFieldPath *const f
     v2 = &LOG_GENERAL;
     if ( LoggingSystem_IsChannelEnabled(LOG_GENERAL, 4) != 0 )
     {
-      v31.m_szFile = "../public/tier2/fieldpath.h";
-      v31.m_szFunction = "Path_AddToTail";
-      v31.m_nLine = 428;
+      v29.m_szFile = "../public/tier2/fieldpath.h";
+      v29.m_szFunction = "Path_AddToTail";
+      v29.m_nLine = 428;
       LoggingSystem_Log(
         LOG_GENERAL,
         LoggingSeverity_t::LS_ERROR,
-        &v31,
+        &v29,
         "Path_AddToTail failed for read only CFieldPath");
     }
 LABEL_13:
-    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v11, v12, v9, v10, v13, v14) != 0 )
+    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v11, v12, v9, v10) != 0 )
       loc_0 = -559038737;
     Plat_ExitProcess(1);
 LABEL_16:
@@ -9371,26 +9358,26 @@ LABEL_17:
       bf_read::SetOverflowFlag(pReadBuf);
       pReadBuf = pReadBufc;
       m_nDataBits = pReadBufc->m_nDataBits;
-      v16 = pReadBufc->m_iCurBit;
+      v14 = pReadBufc->m_iCurBit;
 LABEL_22:
-      if ( m_nDataBits - v16 <= 0 )
+      if ( m_nDataBits - v14 <= 0 )
       {
         pReadBufd = pReadBuf;
         bf_read::SetOverflowFlag(pReadBuf);
         pReadBuf = pReadBufd;
         goto LABEL_28;
       }
-      v18 = pReadBuf->m_pData;
-      v19 = *&pReadBuf->m_pData[4 * (v16 >> 5)];
-      v20 = v16 + 1;
-      pReadBuf->m_iCurBit = v16 + 1;
-      if ( _bittest(&v19, v16) )
+      v16 = pReadBuf->m_pData;
+      v17 = *&pReadBuf->m_pData[4 * (v14 >> 5)];
+      v18 = v14 + 1;
+      pReadBuf->m_iCurBit = v14 + 1;
+      if ( _bittest(&v17, v14) )
       {
-        if ( m_nDataBits - v20 > 9 )
+        if ( m_nDataBits - v18 > 9 )
         {
-          pReadBuf->m_iCurBit = v16 + 11;
-          LOWORD(m_iCurBit) = ((*&v18[4 * (v20 >> 5)] >> (v20 & 0x1F))
-                             | (*&v18[4 * ((v16 + 10) >> 5)] << (32 - (v20 & 0x1F))))
+          pReadBuf->m_iCurBit = v14 + 11;
+          LOWORD(m_iCurBit) = ((*&v16[4 * (v18 >> 5)] >> (v18 & 0x1F))
+                             | (*&v16[4 * ((v14 + 10) >> 5)] << (32 - (v18 & 0x1F))))
                             & 0x3FF;
         }
         else
@@ -9405,28 +9392,28 @@ LABEL_25:
       {
 LABEL_28:
         pReadBufa = pReadBuf;
-        v21 = bf_read::ReadOneBit(pReadBuf) == 0;
-        v22 = pReadBufa->m_iCurBit;
-        v23 = pReadBufa->m_nDataBits;
-        if ( v21 )
+        v19 = bf_read::ReadOneBit(pReadBuf) == 0;
+        v20 = pReadBufa->m_iCurBit;
+        v21 = pReadBufa->m_nDataBits;
+        if ( v19 )
         {
-          if ( v23 - v22 <= 30 )
+          if ( v21 - v20 <= 30 )
             goto LABEL_34;
-          v24 = pReadBufa->m_pData;
-          pReadBufa->m_iCurBit = v22 + 31;
-          v25 = v22 + 30;
-          v26 = v22 & 0x1F;
+          v22 = pReadBufa->m_pData;
+          pReadBufa->m_iCurBit = v20 + 31;
+          v23 = v20 + 30;
+          v24 = v20 & 0x1F;
 LABEL_31:
-          m_iCurBit = (*&v24[4 * (v22 >> 5)] >> v26) | (*&v24[4 * (v25 >> 5)] << (32 - v26));
+          m_iCurBit = (*&v22[4 * (v20 >> 5)] >> v24) | (*&v22[4 * (v23 >> 5)] << (32 - v24));
         }
         else
         {
-          if ( v23 - v22 > 16 )
+          if ( v21 - v20 > 16 )
           {
-            v24 = pReadBufa->m_pData;
-            pReadBufa->m_iCurBit = v22 + 17;
-            v25 = v22 + 16;
-            v26 = v22 & 0x1F;
+            v22 = pReadBufa->m_pData;
+            pReadBufa->m_iCurBit = v20 + 17;
+            v23 = v20 + 16;
+            v24 = v20 & 0x1F;
             goto LABEL_31;
           }
 LABEL_34:
@@ -9438,16 +9425,16 @@ LABEL_34:
     }
     else
     {
-      v15 = pReadBuf->m_pData;
-      v16 = v7 + 1;
-      v17 = *&pReadBuf->m_pData[4 * (v7 >> 5)];
+      v13 = pReadBuf->m_pData;
+      v14 = v7 + 1;
+      v15 = *&pReadBuf->m_pData[4 * (v7 >> 5)];
       pReadBuf->m_iCurBit = v7 + 1;
-      if ( !_bittest(&v17, v7) )
+      if ( !_bittest(&v15, v7) )
         goto LABEL_22;
-      if ( m_nDataBits - v16 <= 3 )
+      if ( m_nDataBits - v14 <= 3 )
         goto LABEL_25;
       pReadBuf->m_iCurBit = v7 + 5;
-      LOWORD(m_iCurBit) = ((*&v15[4 * (v16 >> 5)] >> (v16 & 0x1F)) | (*&v15[4 * ((v7 + 4) >> 5)] << (32 - (v16 & 0x1F))))
+      LOWORD(m_iCurBit) = ((*&v13[4 * (v14 >> 5)] >> (v14 & 0x1F)) | (*&v13[4 * ((v7 + 4) >> 5)] << (32 - (v14 & 0x1F))))
                         & 0xF;
     }
   }
@@ -9457,13 +9444,13 @@ LABEL_34:
     v2 = &LOG_GENERAL;
     if ( LoggingSystem_IsChannelEnabled(LOG_GENERAL, 4) != 0 )
     {
-      v31.m_szFile = "../public/tier2/fieldpath.h";
-      v31.m_szFunction = "Path_AddToTail";
-      v31.m_nLine = 425;
+      v29.m_szFile = "../public/tier2/fieldpath.h";
+      v29.m_szFunction = "Path_AddToTail";
+      v29.m_nLine = 425;
       LoggingSystem_Log(
         LOG_GENERAL,
         LoggingSeverity_t::LS_ERROR,
-        &v31,
+        &v29,
         "Path_AddToTail failed, depth already == DEFAULT_MAX_PATH_DEPTH(%d)",
         6);
     }
@@ -9491,23 +9478,21 @@ void __fastcall FieldOp_Read_PushOneLeftDeltaNRightZero(CFieldPath *const from, 
   __int64 v11; // rcx
   __int64 v12; // rdi
   __int64 v13; // rsi
-  __int64 v14; // r8
-  __int64 v15; // r9
-  const unsigned __int8 *v16; // r8
-  signed int v17; // edi
-  int v18; // eax
-  const unsigned __int8 *v19; // r8
+  const unsigned __int8 *v14; // r8
+  signed int v15; // edi
+  int v16; // eax
+  const unsigned __int8 *v17; // r8
+  int v18; // edx
+  int v19; // eax
   int v20; // edx
-  int v21; // eax
+  const unsigned __int8 *v21; // r8
   int v22; // edx
   const unsigned __int8 *v23; // r8
-  int v24; // edx
-  const unsigned __int8 *v25; // r8
   bf_read *pReadBufb; // [rsp+8h] [rbp-38h]
   bf_read *pReadBufc; // [rsp+8h] [rbp-38h]
   bf_read *pReadBufd; // [rsp+8h] [rbp-38h]
   bf_read *pReadBufa; // [rsp+8h] [rbp-38h]
-  LeafCodeInfo_t v30; // [rsp+10h] [rbp-30h] BYREF
+  LeafCodeInfo_t v28; // [rsp+10h] [rbp-30h] BYREF
 
   v2 = from;
   m_nDataBits = pReadBuf->m_nDataBits;
@@ -9532,13 +9517,13 @@ void __fastcall FieldOp_Read_PushOneLeftDeltaNRightZero(CFieldPath *const from, 
     v2 = &LOG_GENERAL;
     if ( LoggingSystem_IsChannelEnabled(LOG_GENERAL, 4) != 0 )
     {
-      v30.m_szFile = "../public/tier2/fieldpath.h";
-      v30.m_szFunction = "GetPathData";
-      v30.m_nLine = 514;
-      LoggingSystem_Log(LOG_GENERAL, LoggingSeverity_t::LS_ERROR, &v30, "GetPathData failed for read only CFieldPath");
+      v28.m_szFile = "../public/tier2/fieldpath.h";
+      v28.m_szFunction = "GetPathData";
+      v28.m_nLine = 514;
+      LoggingSystem_Log(LOG_GENERAL, LoggingSeverity_t::LS_ERROR, &v28, "GetPathData failed for read only CFieldPath");
     }
 LABEL_13:
-    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v12, v13, v10, v11, v14, v15) != 0 )
+    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v12, v13, v10, v11) != 0 )
       loc_0 = -559038737;
     Plat_ExitProcess(1);
 LABEL_16:
@@ -9554,26 +9539,26 @@ LABEL_17:
       bf_read::SetOverflowFlag(pReadBuf);
       pReadBuf = pReadBufc;
       m_nDataBits = pReadBufc->m_nDataBits;
-      v17 = pReadBufc->m_iCurBit;
+      v15 = pReadBufc->m_iCurBit;
 LABEL_22:
-      if ( m_nDataBits - v17 <= 0 )
+      if ( m_nDataBits - v15 <= 0 )
       {
         pReadBufd = pReadBuf;
         bf_read::SetOverflowFlag(pReadBuf);
         pReadBuf = pReadBufd;
         goto LABEL_28;
       }
-      v19 = pReadBuf->m_pData;
-      v20 = v17 + 1;
-      v21 = *&pReadBuf->m_pData[4 * (v17 >> 5)];
-      pReadBuf->m_iCurBit = v17 + 1;
-      if ( _bittest(&v21, v17) )
+      v17 = pReadBuf->m_pData;
+      v18 = v15 + 1;
+      v19 = *&pReadBuf->m_pData[4 * (v15 >> 5)];
+      pReadBuf->m_iCurBit = v15 + 1;
+      if ( _bittest(&v19, v15) )
       {
-        if ( m_nDataBits - v20 > 9 )
+        if ( m_nDataBits - v18 > 9 )
         {
-          pReadBuf->m_iCurBit = v17 + 11;
-          LOWORD(m_iCurBit) = ((*&v19[4 * (v20 >> 5)] >> (v20 & 0x1F))
-                             | (*&v19[4 * ((v17 + 10) >> 5)] << (32 - (v20 & 0x1F))))
+          pReadBuf->m_iCurBit = v15 + 11;
+          LOWORD(m_iCurBit) = ((*&v17[4 * (v18 >> 5)] >> (v18 & 0x1F))
+                             | (*&v17[4 * ((v15 + 10) >> 5)] << (32 - (v18 & 0x1F))))
                             & 0x3FF;
         }
         else
@@ -9590,18 +9575,18 @@ LABEL_28:
         pReadBufa = pReadBuf;
         if ( bf_read::ReadOneBit(pReadBuf) != 0 )
         {
-          v22 = pReadBufa->m_iCurBit;
-          if ( pReadBufa->m_nDataBits - v22 <= 16 )
+          v20 = pReadBufa->m_iCurBit;
+          if ( pReadBufa->m_nDataBits - v20 <= 16 )
             goto LABEL_33;
-          v23 = pReadBufa->m_pData;
-          pReadBufa->m_iCurBit = v22 + 17;
-          m_iCurBit = ((*&v23[4 * (v22 >> 5)] >> (v22 & 0x1F)) | (*&v23[4 * ((v22 + 16) >> 5)] << (32 - (v22 & 0x1F))))
+          v21 = pReadBufa->m_pData;
+          pReadBufa->m_iCurBit = v20 + 17;
+          m_iCurBit = ((*&v21[4 * (v20 >> 5)] >> (v20 & 0x1F)) | (*&v21[4 * ((v20 + 16) >> 5)] << (32 - (v20 & 0x1F))))
                     & 0x1FFFF;
         }
         else
         {
-          v24 = pReadBufa->m_iCurBit;
-          if ( pReadBufa->m_nDataBits - v24 <= 30 )
+          v22 = pReadBufa->m_iCurBit;
+          if ( pReadBufa->m_nDataBits - v22 <= 30 )
           {
 LABEL_33:
             pReadBufa->m_iCurBit = pReadBufa->m_nDataBits;
@@ -9610,9 +9595,9 @@ LABEL_33:
           }
           else
           {
-            v25 = pReadBufa->m_pData;
-            pReadBufa->m_iCurBit = v24 + 31;
-            m_iCurBit = ((*&v25[4 * (v24 >> 5)] >> (v24 & 0x1F)) | (*&v25[4 * ((v24 + 30) >> 5)] << (32 - (v24 & 0x1F))))
+            v23 = pReadBufa->m_pData;
+            pReadBufa->m_iCurBit = v22 + 31;
+            m_iCurBit = ((*&v23[4 * (v22 >> 5)] >> (v22 & 0x1F)) | (*&v23[4 * ((v22 + 30) >> 5)] << (32 - (v22 & 0x1F))))
                       & 0x7FFFFFFF;
           }
         }
@@ -9620,16 +9605,16 @@ LABEL_33:
     }
     else
     {
-      v16 = pReadBuf->m_pData;
-      v17 = v8 + 1;
-      v18 = *&pReadBuf->m_pData[4 * (v8 >> 5)];
+      v14 = pReadBuf->m_pData;
+      v15 = v8 + 1;
+      v16 = *&pReadBuf->m_pData[4 * (v8 >> 5)];
       pReadBuf->m_iCurBit = v8 + 1;
-      if ( !_bittest(&v18, v8) )
+      if ( !_bittest(&v16, v8) )
         goto LABEL_22;
-      if ( m_nDataBits - v17 <= 3 )
+      if ( m_nDataBits - v15 <= 3 )
         goto LABEL_25;
       pReadBuf->m_iCurBit = v8 + 5;
-      LOWORD(m_iCurBit) = ((*&v16[4 * (v17 >> 5)] >> (v17 & 0x1F)) | (*&v16[4 * ((v8 + 4) >> 5)] << (32 - (v17 & 0x1F))))
+      LOWORD(m_iCurBit) = ((*&v14[4 * (v15 >> 5)] >> (v15 & 0x1F)) | (*&v14[4 * ((v8 + 4) >> 5)] << (32 - (v15 & 0x1F))))
                         & 0xF;
     }
   }
@@ -9640,13 +9625,13 @@ LABEL_33:
     v2 = &LOG_GENERAL;
     if ( LoggingSystem_IsChannelEnabled(LOG_GENERAL, 4) != 0 )
     {
-      v30.m_szFile = "../public/tier2/fieldpath.h";
-      v30.m_szFunction = "Path_AddToTail";
-      v30.m_nLine = 428;
+      v28.m_szFile = "../public/tier2/fieldpath.h";
+      v28.m_szFunction = "Path_AddToTail";
+      v28.m_nLine = 428;
       LoggingSystem_Log(
         LOG_GENERAL,
         LoggingSeverity_t::LS_ERROR,
-        &v30,
+        &v28,
         "Path_AddToTail failed for read only CFieldPath");
     }
     goto LABEL_13;
@@ -9657,13 +9642,13 @@ LABEL_33:
     v2 = &LOG_GENERAL;
     if ( LoggingSystem_IsChannelEnabled(LOG_GENERAL, 4) != 0 )
     {
-      v30.m_szFile = "../public/tier2/fieldpath.h";
-      v30.m_szFunction = "Path_AddToTail";
-      v30.m_nLine = 425;
+      v28.m_szFile = "../public/tier2/fieldpath.h";
+      v28.m_szFunction = "Path_AddToTail";
+      v28.m_nLine = 425;
       LoggingSystem_Log(
         LOG_GENERAL,
         LoggingSeverity_t::LS_ERROR,
-        &v30,
+        &v28,
         "Path_AddToTail failed, depth already == DEFAULT_MAX_PATH_DEPTH(%d)",
         6);
     }
@@ -9700,30 +9685,32 @@ void __fastcall FieldOp_Read_PushOneLeftDeltaNRightNonZero(CFieldPath *const fro
   __int64 v21; // rsi
   __int64 v22; // r8
   __int64 v23; // r9
-  const unsigned __int8 *v24; // rdi
-  signed int v25; // esi
-  int v26; // eax
-  const unsigned __int8 *v27; // rdi
-  signed int v28; // esi
-  int v29; // edx
-  const unsigned __int8 *v30; // rdi
+  __int64 v24; // r8
+  __int64 v25; // r9
+  const unsigned __int8 *v26; // rdi
+  signed int v27; // esi
+  int v28; // eax
+  const unsigned __int8 *v29; // rdi
+  signed int v30; // esi
   int v31; // edx
-  int v32; // eax
-  const unsigned __int8 *v33; // rdi
-  int v34; // edx
-  int v35; // eax
+  const unsigned __int8 *v32; // rdi
+  int v33; // edx
+  int v34; // eax
+  const unsigned __int8 *v35; // rdi
+  int v36; // edx
+  int v37; // eax
   int OneBit; // eax
-  int v37; // edx
-  int v38; // ecx
-  const unsigned __int8 *v39; // r8
-  bool v40; // zf
-  int v41; // eax
-  int v42; // ecx
-  const unsigned __int8 *v43; // r8
-  int v44; // edx
-  char v45; // di
-  const unsigned __int8 *v46; // r8
-  LeafCodeInfo_t v47; // [rsp+0h] [rbp-40h] BYREF
+  int v39; // edx
+  int v40; // ecx
+  const unsigned __int8 *v41; // r8
+  bool v42; // zf
+  int v43; // eax
+  int v44; // ecx
+  const unsigned __int8 *v45; // r8
+  int v46; // edx
+  char v47; // di
+  const unsigned __int8 *v48; // r8
+  LeafCodeInfo_t v49; // [rsp+0h] [rbp-40h] BYREF
 
   v3 = pReadBuf;
   m_nDataBits = pReadBuf->m_nDataBits;
@@ -9747,19 +9734,19 @@ void __fastcall FieldOp_Read_PushOneLeftDeltaNRightNonZero(CFieldPath *const fro
     v3 = &LOG_GENERAL;
     if ( LoggingSystem_IsChannelEnabled(LOG_GENERAL, 4) != 0 )
     {
-      v47.m_szFile = "../public/tier2/fieldpath.h";
-      v47.m_szFunction = "GetPathData";
-      v47.m_nLine = 514;
+      v49.m_szFile = "../public/tier2/fieldpath.h";
+      v49.m_szFunction = "GetPathData";
+      v49.m_nLine = 514;
       LoggingSystem_Log(
         LOG_GENERAL,
         LoggingSeverity_t::LS_ERROR,
-        &v47,
+        &v49,
         "GetPathData failed for read only CFieldPath",
         v22,
         v23);
     }
 LABEL_17:
-    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v20, v21, v18, v19, v22, v23) != 0 )
+    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v20, v21, v18, v19) != 0 )
       loc_0 = -559038737;
     Plat_ExitProcess(1);
 LABEL_20:
@@ -9771,23 +9758,23 @@ LABEL_21:
     {
       bf_read::SetOverflowFlag(v3);
       m_nDataBits = v3->m_nDataBits;
-      v25 = v3->m_iCurBit;
+      v27 = v3->m_iCurBit;
 LABEL_31:
-      if ( m_nDataBits - v25 <= 0 )
+      if ( m_nDataBits - v27 <= 0 )
       {
         bf_read::SetOverflowFlag(v3);
         goto LABEL_43;
       }
-      v30 = v3->m_pData;
-      v31 = v25 + 1;
-      v32 = *&v3->m_pData[4 * (v25 >> 5)];
-      v3->m_iCurBit = v25 + 1;
-      if ( _bittest(&v32, v25) )
+      v32 = v3->m_pData;
+      v33 = v27 + 1;
+      v34 = *&v3->m_pData[4 * (v27 >> 5)];
+      v3->m_iCurBit = v27 + 1;
+      if ( _bittest(&v34, v27) )
       {
-        if ( m_nDataBits - v31 > 9 )
+        if ( m_nDataBits - v33 > 9 )
         {
-          v3->m_iCurBit = v25 + 11;
-          v10 = (((*&v30[4 * (v31 >> 5)] >> (v31 & 0x1F)) | (*&v30[4 * ((v25 + 10) >> 5)] << (32 - (v31 & 0x1F))))
+          v3->m_iCurBit = v27 + 11;
+          v10 = (((*&v32[4 * (v33 >> 5)] >> (v33 & 0x1F)) | (*&v32[4 * ((v27 + 10) >> 5)] << (32 - (v33 & 0x1F))))
                & 0x3FF)
               + 2;
         }
@@ -9803,17 +9790,17 @@ LABEL_34:
       {
 LABEL_43:
         OneBit = bf_read::ReadOneBit(v3);
-        v37 = v3->m_iCurBit;
-        v38 = v3->m_nDataBits;
+        v39 = v3->m_iCurBit;
+        v40 = v3->m_nDataBits;
         if ( OneBit != 0 )
         {
-          if ( v38 - v37 <= 16 )
+          if ( v40 - v39 <= 16 )
             goto LABEL_55;
-          v39 = v3->m_pData;
-          v3->m_iCurBit = v37 + 17;
-          v10 = ((*&v39[4 * (v37 >> 5)] >> (v37 & 0x1F)) | (*&v39[4 * ((v37 + 16) >> 5)] << (32 - (v37 & 0x1F)))) + 2;
+          v41 = v3->m_pData;
+          v3->m_iCurBit = v39 + 17;
+          v10 = ((*&v41[4 * (v39 >> 5)] >> (v39 & 0x1F)) | (*&v41[4 * ((v39 + 16) >> 5)] << (32 - (v39 & 0x1F)))) + 2;
         }
-        else if ( v38 - v37 <= 30 )
+        else if ( v40 - v39 <= 30 )
         {
 LABEL_55:
           v3->m_iCurBit = v3->m_nDataBits;
@@ -9822,24 +9809,24 @@ LABEL_55:
         }
         else
         {
-          v46 = v3->m_pData;
-          v3->m_iCurBit = v37 + 31;
-          v10 = ((*&v46[4 * (v37 >> 5)] >> (v37 & 0x1F)) | (*&v46[4 * ((v37 + 30) >> 5)] << (32 - (v37 & 0x1F)))) + 2;
+          v48 = v3->m_pData;
+          v3->m_iCurBit = v39 + 31;
+          v10 = ((*&v48[4 * (v39 >> 5)] >> (v39 & 0x1F)) | (*&v48[4 * ((v39 + 30) >> 5)] << (32 - (v39 & 0x1F)))) + 2;
         }
       }
     }
     else
     {
-      v24 = v3->m_pData;
-      v25 = v9 + 1;
-      v26 = *&v3->m_pData[4 * (v9 >> 5)];
+      v26 = v3->m_pData;
+      v27 = v9 + 1;
+      v28 = *&v3->m_pData[4 * (v9 >> 5)];
       v3->m_iCurBit = v9 + 1;
-      if ( !_bittest(&v26, v9) )
+      if ( !_bittest(&v28, v9) )
         goto LABEL_31;
-      if ( m_nDataBits - v25 <= 3 )
+      if ( m_nDataBits - v27 <= 3 )
         goto LABEL_34;
       v3->m_iCurBit = v9 + 5;
-      v10 = (((*&v24[4 * (v25 >> 5)] >> (v25 & 0x1F)) | (*&v24[4 * ((v9 + 4) >> 5)] << (32 - (v25 & 0x1F)))) & 0xF) + 2;
+      v10 = (((*&v26[4 * (v27 >> 5)] >> (v27 & 0x1F)) | (*&v26[4 * ((v9 + 4) >> 5)] << (32 - (v27 & 0x1F)))) & 0xF) + 2;
     }
   }
   v6 = v6 - 1;
@@ -9873,52 +9860,52 @@ LABEL_55:
   {
     bf_read::SetOverflowFlag(v3);
     v11 = v3->m_nDataBits;
-    v28 = v3->m_iCurBit;
+    v30 = v3->m_iCurBit;
   }
   else
   {
-    v27 = v3->m_pData;
-    v28 = v15 + 1;
-    v29 = *&v3->m_pData[4 * (v15 >> 5)];
+    v29 = v3->m_pData;
+    v30 = v15 + 1;
+    v31 = *&v3->m_pData[4 * (v15 >> 5)];
     v3->m_iCurBit = v15 + 1;
-    if ( _bittest(&v29, v15) )
+    if ( _bittest(&v31, v15) )
     {
-      if ( v11 - v28 > 3 )
+      if ( v11 - v30 > 3 )
       {
         v3->m_iCurBit = v15 + 5;
-        v16 = (((*&v27[4 * (v28 >> 5)] >> (v28 & 0x1F)) | (*&v27[4 * ((v15 + 4) >> 5)] << (32 - (v28 & 0x1F)))) & 0xF)
+        v16 = (((*&v29[4 * (v30 >> 5)] >> (v30 & 0x1F)) | (*&v29[4 * ((v15 + 4) >> 5)] << (32 - (v30 & 0x1F)))) & 0xF)
             + 1;
         goto LABEL_10;
       }
       goto LABEL_39;
     }
   }
-  if ( v11 - v28 <= 0 )
+  if ( v11 - v30 <= 0 )
   {
     bf_read::SetOverflowFlag(v3);
 LABEL_47:
-    v40 = bf_read::ReadOneBit(v3) == 0;
-    v41 = v3->m_iCurBit;
-    v42 = v3->m_nDataBits;
-    if ( v40 )
+    v42 = bf_read::ReadOneBit(v3) == 0;
+    v43 = v3->m_iCurBit;
+    v44 = v3->m_nDataBits;
+    if ( v42 )
     {
-      if ( v42 - v41 > 30 )
+      if ( v44 - v43 > 30 )
       {
-        v43 = v3->m_pData;
-        v3->m_iCurBit = v41 + 31;
-        v44 = v41 + 30;
-        v45 = v41 & 0x1F;
+        v45 = v3->m_pData;
+        v3->m_iCurBit = v43 + 31;
+        v46 = v43 + 30;
+        v47 = v43 & 0x1F;
         goto LABEL_50;
       }
     }
-    else if ( v42 - v41 > 16 )
+    else if ( v44 - v43 > 16 )
     {
-      v43 = v3->m_pData;
-      v3->m_iCurBit = v41 + 17;
-      v44 = v41 + 16;
-      v45 = v41 & 0x1F;
+      v45 = v3->m_pData;
+      v3->m_iCurBit = v43 + 17;
+      v46 = v43 + 16;
+      v47 = v43 & 0x1F;
 LABEL_50:
-      v16 = ((*&v43[4 * (v41 >> 5)] >> v45) | (*&v43[4 * (v44 >> 5)] << (32 - v45))) + 1;
+      v16 = ((*&v45[4 * (v43 >> 5)] >> v47) | (*&v45[4 * (v46 >> 5)] << (32 - v47))) + 1;
       goto LABEL_10;
     }
     v3->m_iCurBit = v3->m_nDataBits;
@@ -9926,13 +9913,13 @@ LABEL_50:
     v16 = 1;
     goto LABEL_10;
   }
-  v33 = v3->m_pData;
-  v34 = *&v3->m_pData[4 * (v28 >> 5)];
-  v35 = v28 + 1;
-  v3->m_iCurBit = v28 + 1;
-  if ( !_bittest(&v34, v28) )
+  v35 = v3->m_pData;
+  v36 = *&v3->m_pData[4 * (v30 >> 5)];
+  v37 = v30 + 1;
+  v3->m_iCurBit = v30 + 1;
+  if ( !_bittest(&v36, v30) )
     goto LABEL_47;
-  if ( v11 - v35 <= 9 )
+  if ( v11 - v37 <= 9 )
   {
 LABEL_39:
     v3->m_iCurBit = v11;
@@ -9940,24 +9927,24 @@ LABEL_39:
     v16 = 1;
     goto LABEL_10;
   }
-  v3->m_iCurBit = v28 + 11;
-  v16 = (((*&v33[4 * (v35 >> 5)] >> (v35 & 0x1F)) | (*&v33[4 * ((v28 + 10) >> 5)] << (32 - (v35 & 0x1F)))) & 0x3FF) + 1;
+  v3->m_iCurBit = v30 + 11;
+  v16 = (((*&v35[4 * (v37 >> 5)] >> (v37 & 0x1F)) | (*&v35[4 * ((v30 + 10) >> 5)] << (32 - (v37 & 0x1F)))) & 0x3FF) + 1;
 LABEL_10:
   if ( from->m_bUsingExternalPaths )
   {
     v3 = &LOG_GENERAL;
     if ( LoggingSystem_IsChannelEnabled(LOG_GENERAL, 4) != 0 )
     {
-      v47.m_szFile = "../public/tier2/fieldpath.h";
-      v47.m_szFunction = "Path_AddToTail";
-      v47.m_nLine = 428;
+      v49.m_szFile = "../public/tier2/fieldpath.h";
+      v49.m_szFunction = "Path_AddToTail";
+      v49.m_nLine = 428;
       LoggingSystem_Log(
         LOG_GENERAL,
         LoggingSeverity_t::LS_ERROR,
-        &v47,
+        &v49,
         "Path_AddToTail failed for read only CFieldPath",
-        v22,
-        v23);
+        v24,
+        v25);
     }
     goto LABEL_17;
   }
@@ -9967,13 +9954,13 @@ LABEL_10:
     v3 = &LOG_GENERAL;
     if ( LoggingSystem_IsChannelEnabled(LOG_GENERAL, 4) != 0 )
     {
-      v47.m_szFile = "../public/tier2/fieldpath.h";
-      v47.m_szFunction = "Path_AddToTail";
-      v47.m_nLine = 425;
+      v49.m_szFile = "../public/tier2/fieldpath.h";
+      v49.m_szFunction = "Path_AddToTail";
+      v49.m_nLine = 425;
       LoggingSystem_Log(
         LOG_GENERAL,
         LoggingSeverity_t::LS_ERROR,
-        &v47,
+        &v49,
         "Path_AddToTail failed, depth already == DEFAULT_MAX_PATH_DEPTH(%d)",
         6);
     }
@@ -10003,10 +9990,8 @@ void __fastcall FieldOp_Read_PushOneLeftDeltaNRightNonZeroPack6Bits(CFieldPath *
   __int64 v13; // rcx
   __int64 v14; // rdi
   __int64 v15; // rsi
-  __int64 v16; // r8
-  __int64 v17; // r9
   bf_read *pReadBufa; // [rsp+8h] [rbp-38h]
-  LeafCodeInfo_t v19; // [rsp+10h] [rbp-30h] BYREF
+  LeafCodeInfo_t v17; // [rsp+10h] [rbp-30h] BYREF
 
   v2 = from;
   m_iCurBit = pReadBuf->m_iCurBit;
@@ -10033,10 +10018,10 @@ void __fastcall FieldOp_Read_PushOneLeftDeltaNRightNonZeroPack6Bits(CFieldPath *
     v2 = &LOG_GENERAL;
     if ( LoggingSystem_IsChannelEnabled(LOG_GENERAL, 4) != 0 )
     {
-      v19.m_szFile = "../public/tier2/fieldpath.h";
-      v19.m_szFunction = "GetPathData";
-      v19.m_nLine = 514;
-      LoggingSystem_Log(LOG_GENERAL, LoggingSeverity_t::LS_ERROR, &v19, "GetPathData failed for read only CFieldPath");
+      v17.m_szFile = "../public/tier2/fieldpath.h";
+      v17.m_szFunction = "GetPathData";
+      v17.m_nLine = 514;
+      LoggingSystem_Log(LOG_GENERAL, LoggingSeverity_t::LS_ERROR, &v17, "GetPathData failed for read only CFieldPath");
     }
     goto LABEL_13;
   }
@@ -10054,13 +10039,13 @@ void __fastcall FieldOp_Read_PushOneLeftDeltaNRightNonZeroPack6Bits(CFieldPath *
       v2 = &LOG_GENERAL;
       if ( LoggingSystem_IsChannelEnabled(LOG_GENERAL, 4) != 0 )
       {
-        v19.m_szFile = "../public/tier2/fieldpath.h";
-        v19.m_szFunction = "Path_AddToTail";
-        v19.m_nLine = 428;
+        v17.m_szFile = "../public/tier2/fieldpath.h";
+        v17.m_szFunction = "Path_AddToTail";
+        v17.m_nLine = 428;
         LoggingSystem_Log(
           LOG_GENERAL,
           LoggingSeverity_t::LS_ERROR,
-          &v19,
+          &v17,
           "Path_AddToTail failed for read only CFieldPath");
       }
       goto LABEL_13;
@@ -10071,18 +10056,18 @@ void __fastcall FieldOp_Read_PushOneLeftDeltaNRightNonZeroPack6Bits(CFieldPath *
     v2 = &LOG_GENERAL;
     if ( LoggingSystem_IsChannelEnabled(LOG_GENERAL, 4) != 0 )
     {
-      v19.m_szFile = "../public/tier2/fieldpath.h";
-      v19.m_szFunction = "Path_AddToTail";
-      v19.m_nLine = 425;
+      v17.m_szFile = "../public/tier2/fieldpath.h";
+      v17.m_szFunction = "Path_AddToTail";
+      v17.m_nLine = 425;
       LoggingSystem_Log(
         LOG_GENERAL,
         LoggingSeverity_t::LS_ERROR,
-        &v19,
+        &v17,
         "Path_AddToTail failed, depth already == DEFAULT_MAX_PATH_DEPTH(%d)",
         6);
     }
 LABEL_13:
-    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v14, v15, v12, v13, v16, v17) != 0 )
+    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v14, v15, v12, v13) != 0 )
       loc_0 = -559038737;
     m_nDataBits = Plat_ExitProcess(1);
 LABEL_16:
@@ -10113,10 +10098,8 @@ void __fastcall FieldOp_Read_PushOneLeftDeltaNRightNonZeroPack8Bits(CFieldPath *
   __int64 v13; // rcx
   __int64 v14; // rdi
   __int64 v15; // rsi
-  __int64 v16; // r8
-  __int64 v17; // r9
   bf_read *pReadBufa; // [rsp+8h] [rbp-38h]
-  LeafCodeInfo_t v19; // [rsp+10h] [rbp-30h] BYREF
+  LeafCodeInfo_t v17; // [rsp+10h] [rbp-30h] BYREF
 
   v2 = from;
   m_iCurBit = pReadBuf->m_iCurBit;
@@ -10143,10 +10126,10 @@ void __fastcall FieldOp_Read_PushOneLeftDeltaNRightNonZeroPack8Bits(CFieldPath *
     v2 = &LOG_GENERAL;
     if ( LoggingSystem_IsChannelEnabled(LOG_GENERAL, 4) != 0 )
     {
-      v19.m_szFile = "../public/tier2/fieldpath.h";
-      v19.m_szFunction = "GetPathData";
-      v19.m_nLine = 514;
-      LoggingSystem_Log(LOG_GENERAL, LoggingSeverity_t::LS_ERROR, &v19, "GetPathData failed for read only CFieldPath");
+      v17.m_szFile = "../public/tier2/fieldpath.h";
+      v17.m_szFunction = "GetPathData";
+      v17.m_nLine = 514;
+      LoggingSystem_Log(LOG_GENERAL, LoggingSeverity_t::LS_ERROR, &v17, "GetPathData failed for read only CFieldPath");
     }
     goto LABEL_13;
   }
@@ -10164,13 +10147,13 @@ void __fastcall FieldOp_Read_PushOneLeftDeltaNRightNonZeroPack8Bits(CFieldPath *
       v2 = &LOG_GENERAL;
       if ( LoggingSystem_IsChannelEnabled(LOG_GENERAL, 4) != 0 )
       {
-        v19.m_szFile = "../public/tier2/fieldpath.h";
-        v19.m_szFunction = "Path_AddToTail";
-        v19.m_nLine = 428;
+        v17.m_szFile = "../public/tier2/fieldpath.h";
+        v17.m_szFunction = "Path_AddToTail";
+        v17.m_nLine = 428;
         LoggingSystem_Log(
           LOG_GENERAL,
           LoggingSeverity_t::LS_ERROR,
-          &v19,
+          &v17,
           "Path_AddToTail failed for read only CFieldPath");
       }
       goto LABEL_13;
@@ -10181,18 +10164,18 @@ void __fastcall FieldOp_Read_PushOneLeftDeltaNRightNonZeroPack8Bits(CFieldPath *
     v2 = &LOG_GENERAL;
     if ( LoggingSystem_IsChannelEnabled(LOG_GENERAL, 4) != 0 )
     {
-      v19.m_szFile = "../public/tier2/fieldpath.h";
-      v19.m_szFunction = "Path_AddToTail";
-      v19.m_nLine = 425;
+      v17.m_szFile = "../public/tier2/fieldpath.h";
+      v17.m_szFunction = "Path_AddToTail";
+      v17.m_nLine = 425;
       LoggingSystem_Log(
         LOG_GENERAL,
         LoggingSeverity_t::LS_ERROR,
-        &v19,
+        &v17,
         "Path_AddToTail failed, depth already == DEFAULT_MAX_PATH_DEPTH(%d)",
         6);
     }
 LABEL_13:
-    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v14, v15, v12, v13, v16, v17) != 0 )
+    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v14, v15, v12, v13) != 0 )
       loc_0 = -559038737;
     m_nDataBits = Plat_ExitProcess(1);
 LABEL_16:
@@ -10355,7 +10338,7 @@ LABEL_6:
           v16);
       }
 LABEL_12:
-      if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v13, v14, v11, v12, v15, v16) != 0 )
+      if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v13, v14, v11, v12) != 0 )
         loc_0 = -559038737;
       Plat_ExitProcess(1);
     }
@@ -10405,29 +10388,31 @@ void __fastcall FieldOp_Read_PushTwoLeftDeltaOne(CFieldPath *const from, bf_read
   const unsigned __int8 *v18; // rdi
   signed int v19; // esi
   int v20; // eax
-  const unsigned __int8 *v21; // rdi
-  signed int v22; // edx
-  int v23; // eax
-  const unsigned __int8 *v24; // rdi
-  int v25; // esi
-  int v26; // eax
-  LeafCodeInfo_t v27; // [rsp+0h] [rbp-40h] BYREF
+  __int64 v21; // r8
+  __int64 v22; // r9
+  const unsigned __int8 *v23; // rdi
+  signed int v24; // edx
+  int v25; // eax
+  const unsigned __int8 *v26; // rdi
+  int v27; // esi
+  int v28; // eax
+  LeafCodeInfo_t v29; // [rsp+0h] [rbp-40h] BYREF
 
   if ( from->m_bUsingExternalPaths )
   {
     pReadBuf = &LOG_GENERAL;
     if ( LoggingSystem_IsChannelEnabled(LOG_GENERAL, 4) != 0 )
     {
-      v27.m_szFile = "../public/tier2/fieldpath.h";
-      v27.m_szFunction = "GetPathData";
-      v27.m_nLine = 514;
+      v29.m_szFile = "../public/tier2/fieldpath.h";
+      v29.m_szFunction = "GetPathData";
+      v29.m_nLine = 514;
       LoggingSystem_Log(
         LOG_GENERAL,
         LoggingSeverity_t::LS_ERROR,
-        &v27,
+        &v29,
         "GetPathData failed for read only CFieldPath",
-        v16,
-        v17);
+        v21,
+        v22);
     }
     goto LABEL_13;
   }
@@ -10493,70 +10478,70 @@ LABEL_17:
       {
         bf_read::SetOverflowFlag(pReadBuf);
         m_nDataBits = pReadBuf->m_nDataBits;
-        v22 = pReadBuf->m_iCurBit;
+        v24 = pReadBuf->m_iCurBit;
       }
       else
       {
-        v21 = pReadBuf->m_pData;
-        v22 = v19 + 1;
-        v23 = *&pReadBuf->m_pData[4 * (v19 >> 5)];
+        v23 = pReadBuf->m_pData;
+        v24 = v19 + 1;
+        v25 = *&pReadBuf->m_pData[4 * (v19 >> 5)];
         pReadBuf->m_iCurBit = v19 + 1;
-        if ( _bittest(&v23, v19) )
+        if ( _bittest(&v25, v19) )
         {
-          if ( m_nDataBits - v22 <= 9 )
+          if ( m_nDataBits - v24 <= 9 )
             goto LABEL_23;
           pReadBuf->m_iCurBit = v19 + 11;
-          LOWORD(m_iCurBit) = ((*&v21[4 * (v22 >> 5)] >> (v22 & 0x1F))
-                             | (*&v21[4 * ((v19 + 10) >> 5)] << (v3 - (v22 & 0x1F))))
+          LOWORD(m_iCurBit) = ((*&v23[4 * (v24 >> 5)] >> (v24 & 0x1F))
+                             | (*&v23[4 * ((v19 + 10) >> 5)] << (v3 - (v24 & 0x1F))))
                             & 0x3FF;
           goto LABEL_7;
         }
       }
-      if ( m_nDataBits - v22 <= 0 )
+      if ( m_nDataBits - v24 <= 0 )
       {
         bf_read::SetOverflowFlag(pReadBuf);
         m_nDataBits = pReadBuf->m_nDataBits;
-        v25 = pReadBuf->m_iCurBit;
+        v27 = pReadBuf->m_iCurBit;
       }
       else
       {
-        v24 = pReadBuf->m_pData;
-        v25 = v22 + 1;
-        v26 = *&pReadBuf->m_pData[4 * (v22 >> 5)];
-        pReadBuf->m_iCurBit = v22 + 1;
-        if ( _bittest(&v26, v22) )
+        v26 = pReadBuf->m_pData;
+        v27 = v24 + 1;
+        v28 = *&pReadBuf->m_pData[4 * (v24 >> 5)];
+        pReadBuf->m_iCurBit = v24 + 1;
+        if ( _bittest(&v28, v24) )
         {
-          if ( m_nDataBits - v25 <= 16 )
+          if ( m_nDataBits - v27 <= 16 )
             goto LABEL_23;
-          pReadBuf->m_iCurBit = v22 + 18;
-          m_iCurBit = (*&v24[4 * ((v22 + 17) >> 5)] << (v3 - (v25 & 0x1F))) | (*&v24[4 * (v25 >> 5)] >> (v25 & 0x1F));
+          pReadBuf->m_iCurBit = v24 + 18;
+          m_iCurBit = (*&v26[4 * ((v24 + 17) >> 5)] << (v3 - (v27 & 0x1F))) | (*&v26[4 * (v27 >> 5)] >> (v27 & 0x1F));
           goto LABEL_7;
         }
       }
-      if ( m_nDataBits - v25 <= 30 )
+      if ( m_nDataBits - v27 <= 30 )
         goto LABEL_23;
-      pReadBuf->m_iCurBit = v25 + 31;
-      m_iCurBit = (*&pReadBuf->m_pData[4 * ((v25 + 30) >> 5)] << (v3 - (v25 & 0x1F)))
-                | (*&pReadBuf->m_pData[4 * (v25 >> 5)] >> (v25 & 0x1F));
+      pReadBuf->m_iCurBit = v27 + 31;
+      m_iCurBit = (*&pReadBuf->m_pData[4 * ((v27 + 30) >> 5)] << (v3 - (v27 & 0x1F)))
+                | (*&pReadBuf->m_pData[4 * (v27 >> 5)] >> (v27 & 0x1F));
 LABEL_7:
       if ( !from->m_bUsingExternalPaths )
         break;
       pReadBuf = &LOG_GENERAL;
       if ( LoggingSystem_IsChannelEnabled(LOG_GENERAL, 4) != 0 )
       {
-        v27.m_szFile = "../public/tier2/fieldpath.h";
-        v27.m_szFunction = "Path_AddToTail";
-        v27.m_nLine = 428;
+        v29.m_szFile = "../public/tier2/fieldpath.h";
+        v29.m_szFunction = "Path_AddToTail";
+        v29.m_nLine = 428;
         LoggingSystem_Log(
           LOG_GENERAL,
           LoggingSeverity_t::LS_ERROR,
-          &v27,
+          &v29,
           "Path_AddToTail failed for read only CFieldPath",
           v16,
           v17);
       }
 LABEL_13:
-      if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v14, v15, v12, v13, v16, v17) != 0 )
+      if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v14, v15, v12, v13) != 0 )
         loc_0 = -559038737;
       Plat_ExitProcess(1);
     }
@@ -10566,13 +10551,13 @@ LABEL_13:
       pReadBuf = &LOG_GENERAL;
       if ( LoggingSystem_IsChannelEnabled(LOG_GENERAL, 4) != 0 )
       {
-        v27.m_szFile = "../public/tier2/fieldpath.h";
-        v27.m_szFunction = "Path_AddToTail";
-        v27.m_nLine = 425;
+        v29.m_szFile = "../public/tier2/fieldpath.h";
+        v29.m_szFunction = "Path_AddToTail";
+        v29.m_nLine = 425;
         LoggingSystem_Log(
           LOG_GENERAL,
           LoggingSeverity_t::LS_ERROR,
-          &v27,
+          &v29,
           "Path_AddToTail failed, depth already == DEFAULT_MAX_PATH_DEPTH(%d)",
           6);
       }
@@ -10610,19 +10595,21 @@ void __fastcall FieldOp_Read_PushTwoLeftDeltaN(CFieldPath *const from, bf_read *
   __int64 v19; // rsi
   __int64 v20; // r8
   __int64 v21; // r9
-  const unsigned __int8 *v22; // rdi
-  signed int v23; // esi
-  int v24; // eax
-  const unsigned __int8 *v25; // rdi
-  int v26; // edx
-  int v27; // eax
+  __int64 v22; // r8
+  __int64 v23; // r9
+  const unsigned __int8 *v24; // rdi
+  signed int v25; // esi
+  int v26; // eax
+  const unsigned __int8 *v27; // rdi
+  int v28; // edx
+  int v29; // eax
   int OneBit; // eax
-  int v29; // edx
-  int v30; // ecx
-  const unsigned __int8 *v31; // rax
-  char v32; // di
-  int v33; // esi
-  LeafCodeInfo_t v34; // [rsp+0h] [rbp-40h] BYREF
+  int v31; // edx
+  int v32; // ecx
+  const unsigned __int8 *v33; // rax
+  char v34; // di
+  int v35; // esi
+  LeafCodeInfo_t v36; // [rsp+0h] [rbp-40h] BYREF
 
   v4 = pReadBuf;
   m_iCurBit = pReadBuf->m_iCurBit;
@@ -10651,13 +10638,13 @@ LABEL_15:
       v4 = &LOG_GENERAL;
       if ( LoggingSystem_IsChannelEnabled(LOG_GENERAL, 4) != 0 )
       {
-        v34.m_szFile = "../public/tier2/fieldpath.h";
-        v34.m_szFunction = "GetPathData";
-        v34.m_nLine = 514;
+        v36.m_szFile = "../public/tier2/fieldpath.h";
+        v36.m_szFunction = "GetPathData";
+        v36.m_nLine = 514;
         LoggingSystem_Log(
           LOG_GENERAL,
           LoggingSeverity_t::LS_ERROR,
-          &v34,
+          &v36,
           "GetPathData failed for read only CFieldPath",
           v20,
           v21);
@@ -10706,66 +10693,66 @@ LABEL_23:
       {
         bf_read::SetOverflowFlag(v4);
         m_nDataBits = v4->m_nDataBits;
-        v23 = v4->m_iCurBit;
+        v25 = v4->m_iCurBit;
       }
       else
       {
-        v22 = v4->m_pData;
-        v23 = v14 + 1;
-        v24 = *&v4->m_pData[4 * (v14 >> 5)];
+        v24 = v4->m_pData;
+        v25 = v14 + 1;
+        v26 = *&v4->m_pData[4 * (v14 >> 5)];
         v4->m_iCurBit = v14 + 1;
-        if ( _bittest(&v24, v14) )
+        if ( _bittest(&v26, v14) )
         {
-          if ( m_nDataBits - v23 <= 3 )
+          if ( m_nDataBits - v25 <= 3 )
             goto LABEL_27;
           v4->m_iCurBit = v14 + 5;
-          LOWORD(v11) = ((*&v22[4 * (v23 >> 5)] >> (v23 & 0x1F)) | (*&v22[4 * ((v14 + 4) >> 5)] << (v2 - (v23 & 0x1F))))
+          LOWORD(v11) = ((*&v24[4 * (v25 >> 5)] >> (v25 & 0x1F)) | (*&v24[4 * ((v14 + 4) >> 5)] << (v2 - (v25 & 0x1F))))
                       & 0xF;
           goto LABEL_10;
         }
       }
-      if ( m_nDataBits - v23 <= 0 )
+      if ( m_nDataBits - v25 <= 0 )
       {
         bf_read::SetOverflowFlag(v4);
       }
       else
       {
-        v25 = v4->m_pData;
-        v26 = v23 + 1;
-        v27 = *&v4->m_pData[4 * (v23 >> 5)];
-        v4->m_iCurBit = v23 + 1;
-        if ( _bittest(&v27, v23) )
+        v27 = v4->m_pData;
+        v28 = v25 + 1;
+        v29 = *&v4->m_pData[4 * (v25 >> 5)];
+        v4->m_iCurBit = v25 + 1;
+        if ( _bittest(&v29, v25) )
         {
-          if ( m_nDataBits - v26 <= 9 )
+          if ( m_nDataBits - v28 <= 9 )
             goto LABEL_27;
-          v4->m_iCurBit = v23 + 11;
-          LOWORD(v11) = ((*&v25[4 * (v26 >> 5)] >> (v26 & 0x1F)) | (*&v25[4 * ((v23 + 10) >> 5)] << (v2 - (v26 & 0x1F))))
+          v4->m_iCurBit = v25 + 11;
+          LOWORD(v11) = ((*&v27[4 * (v28 >> 5)] >> (v28 & 0x1F)) | (*&v27[4 * ((v25 + 10) >> 5)] << (v2 - (v28 & 0x1F))))
                       & 0x3FF;
           goto LABEL_10;
         }
       }
       OneBit = bf_read::ReadOneBit(v4);
-      v29 = v4->m_iCurBit;
-      v30 = v4->m_nDataBits;
+      v31 = v4->m_iCurBit;
+      v32 = v4->m_nDataBits;
       if ( OneBit != 0 )
       {
-        if ( v30 - v29 > 16 )
+        if ( v32 - v31 > 16 )
         {
-          v4->m_iCurBit = v29 + 17;
-          v31 = v4->m_pData;
-          v32 = v29 & 0x1F;
-          v33 = v29 + 16;
+          v4->m_iCurBit = v31 + 17;
+          v33 = v4->m_pData;
+          v34 = v31 & 0x1F;
+          v35 = v31 + 16;
 LABEL_38:
-          v11 = (*&v31[4 * (v33 >> 5)] << (v2 - v32)) | (*&v31[4 * (v29 >> 5)] >> v32);
+          v11 = (*&v33[4 * (v35 >> 5)] << (v2 - v34)) | (*&v33[4 * (v31 >> 5)] >> v34);
           goto LABEL_10;
         }
       }
-      else if ( v30 - v29 > 30 )
+      else if ( v32 - v31 > 30 )
       {
-        v4->m_iCurBit = v29 + 31;
-        v32 = v29 & 0x1F;
-        v31 = v4->m_pData;
-        v33 = v29 + 30;
+        v4->m_iCurBit = v31 + 31;
+        v34 = v31 & 0x1F;
+        v33 = v4->m_pData;
+        v35 = v31 + 30;
         goto LABEL_38;
       }
       v4->m_iCurBit = v4->m_nDataBits;
@@ -10777,19 +10764,19 @@ LABEL_10:
       v4 = &LOG_GENERAL;
       if ( LoggingSystem_IsChannelEnabled(LOG_GENERAL, 4) != 0 )
       {
-        v34.m_szFile = "../public/tier2/fieldpath.h";
-        v34.m_szFunction = "Path_AddToTail";
-        v34.m_nLine = 428;
+        v36.m_szFile = "../public/tier2/fieldpath.h";
+        v36.m_szFunction = "Path_AddToTail";
+        v36.m_nLine = 428;
         LoggingSystem_Log(
           LOG_GENERAL,
           LoggingSeverity_t::LS_ERROR,
-          &v34,
+          &v36,
           "Path_AddToTail failed for read only CFieldPath",
-          v20,
-          v21);
+          v22,
+          v23);
       }
 LABEL_19:
-      if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v18, v19, v16, v17, v20, v21) != 0 )
+      if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v18, v19, v16, v17) != 0 )
         loc_0 = -559038737;
       Plat_ExitProcess(1);
     }
@@ -10799,13 +10786,13 @@ LABEL_19:
       v4 = &LOG_GENERAL;
       if ( LoggingSystem_IsChannelEnabled(LOG_GENERAL, 4) != 0 )
       {
-        v34.m_szFile = "../public/tier2/fieldpath.h";
-        v34.m_szFunction = "Path_AddToTail";
-        v34.m_nLine = 425;
+        v36.m_szFile = "../public/tier2/fieldpath.h";
+        v36.m_szFunction = "Path_AddToTail";
+        v36.m_nLine = 425;
         LoggingSystem_Log(
           LOG_GENERAL,
           LoggingSeverity_t::LS_ERROR,
-          &v34,
+          &v36,
           "Path_AddToTail failed, depth already == DEFAULT_MAX_PATH_DEPTH(%d)",
           6);
       }
@@ -10872,7 +10859,7 @@ LABEL_4:
           v15);
       }
 LABEL_10:
-      if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v12, v13, v10, v11, v14, v15) != 0 )
+      if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v12, v13, v10, v11) != 0 )
         loc_0 = -559038737;
       Plat_ExitProcess(1);
     }
@@ -10920,7 +10907,9 @@ void __fastcall FieldOp_Read_PushTwoPack5LeftDeltaOne(CFieldPath *const from, bf
   __int64 v14; // rsi
   __int64 v15; // r8
   __int64 v16; // r9
-  LeafCodeInfo_t v17; // [rsp+0h] [rbp-40h] BYREF
+  __int64 v17; // r8
+  __int64 v18; // r9
+  LeafCodeInfo_t v19; // [rsp+0h] [rbp-40h] BYREF
 
   v5 = from;
   if ( from->m_bUsingExternalPaths )
@@ -10928,16 +10917,16 @@ void __fastcall FieldOp_Read_PushTwoPack5LeftDeltaOne(CFieldPath *const from, bf
     v5 = &LOG_GENERAL;
     if ( LoggingSystem_IsChannelEnabled(LOG_GENERAL, 4) != 0 )
     {
-      v17.m_szFile = "../public/tier2/fieldpath.h";
-      v17.m_szFunction = "GetPathData";
-      v17.m_nLine = 514;
+      v19.m_szFile = "../public/tier2/fieldpath.h";
+      v19.m_szFunction = "GetPathData";
+      v19.m_nLine = 514;
       LoggingSystem_Log(
         LOG_GENERAL,
         LoggingSeverity_t::LS_ERROR,
-        &v17,
+        &v19,
         "GetPathData failed for read only CFieldPath",
-        v15,
-        v16);
+        v17,
+        v18);
     }
     goto LABEL_11;
   }
@@ -10969,19 +10958,19 @@ LABEL_5:
       v5 = &LOG_GENERAL;
       if ( LoggingSystem_IsChannelEnabled(LOG_GENERAL, 4) != 0 )
       {
-        v17.m_szFile = "../public/tier2/fieldpath.h";
-        v17.m_szFunction = "Path_AddToTail";
-        v17.m_nLine = 428;
+        v19.m_szFile = "../public/tier2/fieldpath.h";
+        v19.m_szFunction = "Path_AddToTail";
+        v19.m_nLine = 428;
         LoggingSystem_Log(
           LOG_GENERAL,
           LoggingSeverity_t::LS_ERROR,
-          &v17,
+          &v19,
           "Path_AddToTail failed for read only CFieldPath",
           v15,
           v16);
       }
 LABEL_11:
-      if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v13, v14, v11, v12, v15, v16) != 0 )
+      if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v13, v14, v11, v12) != 0 )
         loc_0 = -559038737;
       Plat_ExitProcess(1);
     }
@@ -10991,13 +10980,13 @@ LABEL_11:
       v5 = &LOG_GENERAL;
       if ( LoggingSystem_IsChannelEnabled(LOG_GENERAL, 4) != 0 )
       {
-        v17.m_szFile = "../public/tier2/fieldpath.h";
-        v17.m_szFunction = "Path_AddToTail";
-        v17.m_nLine = 425;
+        v19.m_szFile = "../public/tier2/fieldpath.h";
+        v19.m_szFunction = "Path_AddToTail";
+        v19.m_nLine = 425;
         LoggingSystem_Log(
           LOG_GENERAL,
           LoggingSeverity_t::LS_ERROR,
-          &v17,
+          &v19,
           "Path_AddToTail failed, depth already == DEFAULT_MAX_PATH_DEPTH(%d)",
           6);
       }
@@ -11034,7 +11023,9 @@ void __fastcall FieldOp_Read_PushTwoPack5LeftDeltaN(CFieldPath *const from, bf_r
   __int64 v18; // rsi
   __int64 v19; // r8
   __int64 v20; // r9
-  LeafCodeInfo_t v21; // [rsp+0h] [rbp-40h] BYREF
+  __int64 v21; // r8
+  __int64 v22; // r9
+  LeafCodeInfo_t v23; // [rsp+0h] [rbp-40h] BYREF
 
   v4 = pReadBuf;
   m_iCurBit = pReadBuf->m_iCurBit;
@@ -11063,13 +11054,13 @@ LABEL_13:
       v4 = &LOG_GENERAL;
       if ( LoggingSystem_IsChannelEnabled(LOG_GENERAL, 4) != 0 )
       {
-        v21.m_szFile = "../public/tier2/fieldpath.h";
-        v21.m_szFunction = "GetPathData";
-        v21.m_nLine = 514;
+        v23.m_szFile = "../public/tier2/fieldpath.h";
+        v23.m_szFunction = "GetPathData";
+        v23.m_nLine = 514;
         LoggingSystem_Log(
           LOG_GENERAL,
           LoggingSeverity_t::LS_ERROR,
-          &v21,
+          &v23,
           "GetPathData failed for read only CFieldPath",
           v19,
           v20);
@@ -11105,19 +11096,19 @@ LABEL_8:
       v4 = &LOG_GENERAL;
       if ( LoggingSystem_IsChannelEnabled(LOG_GENERAL, 4) != 0 )
       {
-        v21.m_szFile = "../public/tier2/fieldpath.h";
-        v21.m_szFunction = "Path_AddToTail";
-        v21.m_nLine = 428;
+        v23.m_szFile = "../public/tier2/fieldpath.h";
+        v23.m_szFunction = "Path_AddToTail";
+        v23.m_nLine = 428;
         LoggingSystem_Log(
           LOG_GENERAL,
           LoggingSeverity_t::LS_ERROR,
-          &v21,
+          &v23,
           "Path_AddToTail failed for read only CFieldPath",
-          v19,
-          v20);
+          v21,
+          v22);
       }
 LABEL_17:
-      if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v17, v18, v15, v16, v19, v20) != 0 )
+      if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v17, v18, v15, v16) != 0 )
         loc_0 = -559038737;
       Plat_ExitProcess(1);
     }
@@ -11127,13 +11118,13 @@ LABEL_17:
       v4 = &LOG_GENERAL;
       if ( LoggingSystem_IsChannelEnabled(LOG_GENERAL, 4) != 0 )
       {
-        v21.m_szFile = "../public/tier2/fieldpath.h";
-        v21.m_szFunction = "Path_AddToTail";
-        v21.m_nLine = 425;
+        v23.m_szFile = "../public/tier2/fieldpath.h";
+        v23.m_szFunction = "Path_AddToTail";
+        v23.m_nLine = 425;
         LoggingSystem_Log(
           LOG_GENERAL,
           LoggingSeverity_t::LS_ERROR,
-          &v21,
+          &v23,
           "Path_AddToTail failed, depth already == DEFAULT_MAX_PATH_DEPTH(%d)",
           6);
       }
@@ -11298,7 +11289,7 @@ LABEL_6:
           v16);
       }
 LABEL_12:
-      if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v13, v14, v11, v12, v15, v16) != 0 )
+      if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v13, v14, v11, v12) != 0 )
         loc_0 = -559038737;
       Plat_ExitProcess(1);
     }
@@ -11348,32 +11339,34 @@ void __fastcall FieldOp_Read_PushThreeLeftDeltaOne(CFieldPath *const from, bf_re
   const unsigned __int8 *v18; // rdi
   signed int v19; // esi
   int v20; // eax
-  const unsigned __int8 *v21; // rdi
-  int v22; // edx
-  int v23; // eax
+  __int64 v21; // r8
+  __int64 v22; // r9
+  const unsigned __int8 *v23; // rdi
+  int v24; // edx
+  int v25; // eax
   int OneBit; // eax
-  int v25; // edx
-  int v26; // ecx
-  const unsigned __int8 *v27; // rax
-  char v28; // di
-  int v29; // esi
-  LeafCodeInfo_t v30; // [rsp+0h] [rbp-40h] BYREF
+  int v27; // edx
+  int v28; // ecx
+  const unsigned __int8 *v29; // rax
+  char v30; // di
+  int v31; // esi
+  LeafCodeInfo_t v32; // [rsp+0h] [rbp-40h] BYREF
 
   if ( from->m_bUsingExternalPaths )
   {
     pReadBuf = &LOG_GENERAL;
     if ( LoggingSystem_IsChannelEnabled(LOG_GENERAL, 4) != 0 )
     {
-      v30.m_szFile = "../public/tier2/fieldpath.h";
-      v30.m_szFunction = "GetPathData";
-      v30.m_nLine = 514;
+      v32.m_szFile = "../public/tier2/fieldpath.h";
+      v32.m_szFunction = "GetPathData";
+      v32.m_nLine = 514;
       LoggingSystem_Log(
         LOG_GENERAL,
         LoggingSeverity_t::LS_ERROR,
-        &v30,
+        &v32,
         "GetPathData failed for read only CFieldPath",
-        v16,
-        v17);
+        v21,
+        v22);
     }
     goto LABEL_13;
   }
@@ -11441,43 +11434,43 @@ LABEL_17:
       }
       else
       {
-        v21 = pReadBuf->m_pData;
-        v22 = v19 + 1;
-        v23 = *&pReadBuf->m_pData[4 * (v19 >> 5)];
+        v23 = pReadBuf->m_pData;
+        v24 = v19 + 1;
+        v25 = *&pReadBuf->m_pData[4 * (v19 >> 5)];
         pReadBuf->m_iCurBit = v19 + 1;
-        if ( _bittest(&v23, v19) )
+        if ( _bittest(&v25, v19) )
         {
-          if ( m_nDataBits - v22 <= 9 )
+          if ( m_nDataBits - v24 <= 9 )
             goto LABEL_21;
           pReadBuf->m_iCurBit = v19 + 11;
-          LOWORD(m_iCurBit) = ((*&v21[4 * (v22 >> 5)] >> (v22 & 0x1F))
-                             | (*&v21[4 * ((v19 + 10) >> 5)] << (v3 - (v22 & 0x1F))))
+          LOWORD(m_iCurBit) = ((*&v23[4 * (v24 >> 5)] >> (v24 & 0x1F))
+                             | (*&v23[4 * ((v19 + 10) >> 5)] << (v3 - (v24 & 0x1F))))
                             & 0x3FF;
           goto LABEL_7;
         }
       }
       OneBit = bf_read::ReadOneBit(pReadBuf);
-      v25 = pReadBuf->m_iCurBit;
-      v26 = pReadBuf->m_nDataBits;
+      v27 = pReadBuf->m_iCurBit;
+      v28 = pReadBuf->m_nDataBits;
       if ( OneBit != 0 )
       {
-        if ( v26 - v25 > 16 )
+        if ( v28 - v27 > 16 )
         {
-          pReadBuf->m_iCurBit = v25 + 17;
-          v28 = v25 & 0x1F;
-          v27 = pReadBuf->m_pData;
-          v29 = v25 + 16;
+          pReadBuf->m_iCurBit = v27 + 17;
+          v30 = v27 & 0x1F;
+          v29 = pReadBuf->m_pData;
+          v31 = v27 + 16;
           goto LABEL_33;
         }
       }
-      else if ( v26 - v25 > 30 )
+      else if ( v28 - v27 > 30 )
       {
-        pReadBuf->m_iCurBit = v25 + 31;
-        v27 = pReadBuf->m_pData;
-        v28 = v25 & 0x1F;
-        v29 = v25 + 30;
+        pReadBuf->m_iCurBit = v27 + 31;
+        v29 = pReadBuf->m_pData;
+        v30 = v27 & 0x1F;
+        v31 = v27 + 30;
 LABEL_33:
-        m_iCurBit = (*&v27[4 * (v29 >> 5)] << (v3 - v28)) | (*&v27[4 * (v25 >> 5)] >> v28);
+        m_iCurBit = (*&v29[4 * (v31 >> 5)] << (v3 - v30)) | (*&v29[4 * (v27 >> 5)] >> v30);
         goto LABEL_7;
       }
       pReadBuf->m_iCurBit = pReadBuf->m_nDataBits;
@@ -11489,19 +11482,19 @@ LABEL_7:
       pReadBuf = &LOG_GENERAL;
       if ( LoggingSystem_IsChannelEnabled(LOG_GENERAL, 4) != 0 )
       {
-        v30.m_szFile = "../public/tier2/fieldpath.h";
-        v30.m_szFunction = "Path_AddToTail";
-        v30.m_nLine = 428;
+        v32.m_szFile = "../public/tier2/fieldpath.h";
+        v32.m_szFunction = "Path_AddToTail";
+        v32.m_nLine = 428;
         LoggingSystem_Log(
           LOG_GENERAL,
           LoggingSeverity_t::LS_ERROR,
-          &v30,
+          &v32,
           "Path_AddToTail failed for read only CFieldPath",
           v16,
           v17);
       }
 LABEL_13:
-      if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v14, v15, v12, v13, v16, v17) != 0 )
+      if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v14, v15, v12, v13) != 0 )
         loc_0 = -559038737;
       Plat_ExitProcess(1);
     }
@@ -11511,13 +11504,13 @@ LABEL_13:
       pReadBuf = &LOG_GENERAL;
       if ( LoggingSystem_IsChannelEnabled(LOG_GENERAL, 4) != 0 )
       {
-        v30.m_szFile = "../public/tier2/fieldpath.h";
-        v30.m_szFunction = "Path_AddToTail";
-        v30.m_nLine = 425;
+        v32.m_szFile = "../public/tier2/fieldpath.h";
+        v32.m_szFunction = "Path_AddToTail";
+        v32.m_nLine = 425;
         LoggingSystem_Log(
           LOG_GENERAL,
           LoggingSeverity_t::LS_ERROR,
-          &v30,
+          &v32,
           "Path_AddToTail failed, depth already == DEFAULT_MAX_PATH_DEPTH(%d)",
           6);
       }
@@ -11555,19 +11548,21 @@ void __fastcall FieldOp_Read_PushThreeLeftDeltaN(CFieldPath *const from, bf_read
   __int64 v19; // rsi
   __int64 v20; // r8
   __int64 v21; // r9
-  const unsigned __int8 *v22; // rdi
-  signed int v23; // esi
-  int v24; // eax
-  const unsigned __int8 *v25; // rdi
-  int v26; // edx
-  int v27; // eax
+  __int64 v22; // r8
+  __int64 v23; // r9
+  const unsigned __int8 *v24; // rdi
+  signed int v25; // esi
+  int v26; // eax
+  const unsigned __int8 *v27; // rdi
+  int v28; // edx
+  int v29; // eax
   int OneBit; // eax
-  int v29; // edx
-  int v30; // ecx
-  const unsigned __int8 *v31; // rax
-  char v32; // di
-  int v33; // esi
-  LeafCodeInfo_t v34; // [rsp+0h] [rbp-40h] BYREF
+  int v31; // edx
+  int v32; // ecx
+  const unsigned __int8 *v33; // rax
+  char v34; // di
+  int v35; // esi
+  LeafCodeInfo_t v36; // [rsp+0h] [rbp-40h] BYREF
 
   v4 = pReadBuf;
   m_iCurBit = pReadBuf->m_iCurBit;
@@ -11596,13 +11591,13 @@ LABEL_15:
       v4 = &LOG_GENERAL;
       if ( LoggingSystem_IsChannelEnabled(LOG_GENERAL, 4) != 0 )
       {
-        v34.m_szFile = "../public/tier2/fieldpath.h";
-        v34.m_szFunction = "GetPathData";
-        v34.m_nLine = 514;
+        v36.m_szFile = "../public/tier2/fieldpath.h";
+        v36.m_szFunction = "GetPathData";
+        v36.m_nLine = 514;
         LoggingSystem_Log(
           LOG_GENERAL,
           LoggingSeverity_t::LS_ERROR,
-          &v34,
+          &v36,
           "GetPathData failed for read only CFieldPath",
           v20,
           v21);
@@ -11651,66 +11646,66 @@ LABEL_23:
       {
         bf_read::SetOverflowFlag(v4);
         m_nDataBits = v4->m_nDataBits;
-        v23 = v4->m_iCurBit;
+        v25 = v4->m_iCurBit;
       }
       else
       {
-        v22 = v4->m_pData;
-        v23 = v14 + 1;
-        v24 = *&v4->m_pData[4 * (v14 >> 5)];
+        v24 = v4->m_pData;
+        v25 = v14 + 1;
+        v26 = *&v4->m_pData[4 * (v14 >> 5)];
         v4->m_iCurBit = v14 + 1;
-        if ( _bittest(&v24, v14) )
+        if ( _bittest(&v26, v14) )
         {
-          if ( m_nDataBits - v23 <= 3 )
+          if ( m_nDataBits - v25 <= 3 )
             goto LABEL_27;
           v4->m_iCurBit = v14 + 5;
-          LOWORD(v11) = ((*&v22[4 * (v23 >> 5)] >> (v23 & 0x1F)) | (*&v22[4 * ((v14 + 4) >> 5)] << (v2 - (v23 & 0x1F))))
+          LOWORD(v11) = ((*&v24[4 * (v25 >> 5)] >> (v25 & 0x1F)) | (*&v24[4 * ((v14 + 4) >> 5)] << (v2 - (v25 & 0x1F))))
                       & 0xF;
           goto LABEL_10;
         }
       }
-      if ( m_nDataBits - v23 <= 0 )
+      if ( m_nDataBits - v25 <= 0 )
       {
         bf_read::SetOverflowFlag(v4);
       }
       else
       {
-        v25 = v4->m_pData;
-        v26 = v23 + 1;
-        v27 = *&v4->m_pData[4 * (v23 >> 5)];
-        v4->m_iCurBit = v23 + 1;
-        if ( _bittest(&v27, v23) )
+        v27 = v4->m_pData;
+        v28 = v25 + 1;
+        v29 = *&v4->m_pData[4 * (v25 >> 5)];
+        v4->m_iCurBit = v25 + 1;
+        if ( _bittest(&v29, v25) )
         {
-          if ( m_nDataBits - v26 <= 9 )
+          if ( m_nDataBits - v28 <= 9 )
             goto LABEL_27;
-          v4->m_iCurBit = v23 + 11;
-          LOWORD(v11) = ((*&v25[4 * (v26 >> 5)] >> (v26 & 0x1F)) | (*&v25[4 * ((v23 + 10) >> 5)] << (v2 - (v26 & 0x1F))))
+          v4->m_iCurBit = v25 + 11;
+          LOWORD(v11) = ((*&v27[4 * (v28 >> 5)] >> (v28 & 0x1F)) | (*&v27[4 * ((v25 + 10) >> 5)] << (v2 - (v28 & 0x1F))))
                       & 0x3FF;
           goto LABEL_10;
         }
       }
       OneBit = bf_read::ReadOneBit(v4);
-      v29 = v4->m_iCurBit;
-      v30 = v4->m_nDataBits;
+      v31 = v4->m_iCurBit;
+      v32 = v4->m_nDataBits;
       if ( OneBit != 0 )
       {
-        if ( v30 - v29 > 16 )
+        if ( v32 - v31 > 16 )
         {
-          v4->m_iCurBit = v29 + 17;
-          v32 = v29 & 0x1F;
-          v31 = v4->m_pData;
-          v33 = v29 + 16;
+          v4->m_iCurBit = v31 + 17;
+          v34 = v31 & 0x1F;
+          v33 = v4->m_pData;
+          v35 = v31 + 16;
           goto LABEL_38;
         }
       }
-      else if ( v30 - v29 > 30 )
+      else if ( v32 - v31 > 30 )
       {
-        v4->m_iCurBit = v29 + 31;
-        v31 = v4->m_pData;
-        v32 = v29 & 0x1F;
-        v33 = v29 + 30;
+        v4->m_iCurBit = v31 + 31;
+        v33 = v4->m_pData;
+        v34 = v31 & 0x1F;
+        v35 = v31 + 30;
 LABEL_38:
-        v11 = (*&v31[4 * (v33 >> 5)] << (v2 - v32)) | (*&v31[4 * (v29 >> 5)] >> v32);
+        v11 = (*&v33[4 * (v35 >> 5)] << (v2 - v34)) | (*&v33[4 * (v31 >> 5)] >> v34);
         goto LABEL_10;
       }
       v4->m_iCurBit = v4->m_nDataBits;
@@ -11722,19 +11717,19 @@ LABEL_10:
       v4 = &LOG_GENERAL;
       if ( LoggingSystem_IsChannelEnabled(LOG_GENERAL, 4) != 0 )
       {
-        v34.m_szFile = "../public/tier2/fieldpath.h";
-        v34.m_szFunction = "Path_AddToTail";
-        v34.m_nLine = 428;
+        v36.m_szFile = "../public/tier2/fieldpath.h";
+        v36.m_szFunction = "Path_AddToTail";
+        v36.m_nLine = 428;
         LoggingSystem_Log(
           LOG_GENERAL,
           LoggingSeverity_t::LS_ERROR,
-          &v34,
+          &v36,
           "Path_AddToTail failed for read only CFieldPath",
-          v20,
-          v21);
+          v22,
+          v23);
       }
 LABEL_19:
-      if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v18, v19, v16, v17, v20, v21) != 0 )
+      if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v18, v19, v16, v17) != 0 )
         loc_0 = -559038737;
       Plat_ExitProcess(1);
     }
@@ -11744,13 +11739,13 @@ LABEL_19:
       v4 = &LOG_GENERAL;
       if ( LoggingSystem_IsChannelEnabled(LOG_GENERAL, 4) != 0 )
       {
-        v34.m_szFile = "../public/tier2/fieldpath.h";
-        v34.m_szFunction = "Path_AddToTail";
-        v34.m_nLine = 425;
+        v36.m_szFile = "../public/tier2/fieldpath.h";
+        v36.m_szFunction = "Path_AddToTail";
+        v36.m_nLine = 425;
         LoggingSystem_Log(
           LOG_GENERAL,
           LoggingSeverity_t::LS_ERROR,
-          &v34,
+          &v36,
           "Path_AddToTail failed, depth already == DEFAULT_MAX_PATH_DEPTH(%d)",
           6);
       }
@@ -11817,7 +11812,7 @@ LABEL_4:
           v15);
       }
 LABEL_10:
-      if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v12, v13, v10, v11, v14, v15) != 0 )
+      if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v12, v13, v10, v11) != 0 )
         loc_0 = -559038737;
       Plat_ExitProcess(1);
     }
@@ -11865,7 +11860,9 @@ void __fastcall FieldOp_Read_PushThreePack5LeftDeltaOne(CFieldPath *const from, 
   __int64 v14; // rsi
   __int64 v15; // r8
   __int64 v16; // r9
-  LeafCodeInfo_t v17; // [rsp+0h] [rbp-40h] BYREF
+  __int64 v17; // r8
+  __int64 v18; // r9
+  LeafCodeInfo_t v19; // [rsp+0h] [rbp-40h] BYREF
 
   v5 = from;
   if ( from->m_bUsingExternalPaths )
@@ -11873,16 +11870,16 @@ void __fastcall FieldOp_Read_PushThreePack5LeftDeltaOne(CFieldPath *const from, 
     v5 = &LOG_GENERAL;
     if ( LoggingSystem_IsChannelEnabled(LOG_GENERAL, 4) != 0 )
     {
-      v17.m_szFile = "../public/tier2/fieldpath.h";
-      v17.m_szFunction = "GetPathData";
-      v17.m_nLine = 514;
+      v19.m_szFile = "../public/tier2/fieldpath.h";
+      v19.m_szFunction = "GetPathData";
+      v19.m_nLine = 514;
       LoggingSystem_Log(
         LOG_GENERAL,
         LoggingSeverity_t::LS_ERROR,
-        &v17,
+        &v19,
         "GetPathData failed for read only CFieldPath",
-        v15,
-        v16);
+        v17,
+        v18);
     }
     goto LABEL_11;
   }
@@ -11914,19 +11911,19 @@ LABEL_5:
       v5 = &LOG_GENERAL;
       if ( LoggingSystem_IsChannelEnabled(LOG_GENERAL, 4) != 0 )
       {
-        v17.m_szFile = "../public/tier2/fieldpath.h";
-        v17.m_szFunction = "Path_AddToTail";
-        v17.m_nLine = 428;
+        v19.m_szFile = "../public/tier2/fieldpath.h";
+        v19.m_szFunction = "Path_AddToTail";
+        v19.m_nLine = 428;
         LoggingSystem_Log(
           LOG_GENERAL,
           LoggingSeverity_t::LS_ERROR,
-          &v17,
+          &v19,
           "Path_AddToTail failed for read only CFieldPath",
           v15,
           v16);
       }
 LABEL_11:
-      if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v13, v14, v11, v12, v15, v16) != 0 )
+      if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v13, v14, v11, v12) != 0 )
         loc_0 = -559038737;
       Plat_ExitProcess(1);
     }
@@ -11936,13 +11933,13 @@ LABEL_11:
       v5 = &LOG_GENERAL;
       if ( LoggingSystem_IsChannelEnabled(LOG_GENERAL, 4) != 0 )
       {
-        v17.m_szFile = "../public/tier2/fieldpath.h";
-        v17.m_szFunction = "Path_AddToTail";
-        v17.m_nLine = 425;
+        v19.m_szFile = "../public/tier2/fieldpath.h";
+        v19.m_szFunction = "Path_AddToTail";
+        v19.m_nLine = 425;
         LoggingSystem_Log(
           LOG_GENERAL,
           LoggingSeverity_t::LS_ERROR,
-          &v17,
+          &v19,
           "Path_AddToTail failed, depth already == DEFAULT_MAX_PATH_DEPTH(%d)",
           6);
       }
@@ -11979,7 +11976,9 @@ void __fastcall FieldOp_Read_PushThreePack5LeftDeltaN(CFieldPath *const from, bf
   __int64 v18; // rsi
   __int64 v19; // r8
   __int64 v20; // r9
-  LeafCodeInfo_t v21; // [rsp+0h] [rbp-40h] BYREF
+  __int64 v21; // r8
+  __int64 v22; // r9
+  LeafCodeInfo_t v23; // [rsp+0h] [rbp-40h] BYREF
 
   v4 = pReadBuf;
   m_iCurBit = pReadBuf->m_iCurBit;
@@ -12008,13 +12007,13 @@ LABEL_13:
       v4 = &LOG_GENERAL;
       if ( LoggingSystem_IsChannelEnabled(LOG_GENERAL, 4) != 0 )
       {
-        v21.m_szFile = "../public/tier2/fieldpath.h";
-        v21.m_szFunction = "GetPathData";
-        v21.m_nLine = 514;
+        v23.m_szFile = "../public/tier2/fieldpath.h";
+        v23.m_szFunction = "GetPathData";
+        v23.m_nLine = 514;
         LoggingSystem_Log(
           LOG_GENERAL,
           LoggingSeverity_t::LS_ERROR,
-          &v21,
+          &v23,
           "GetPathData failed for read only CFieldPath",
           v19,
           v20);
@@ -12050,19 +12049,19 @@ LABEL_8:
       v4 = &LOG_GENERAL;
       if ( LoggingSystem_IsChannelEnabled(LOG_GENERAL, 4) != 0 )
       {
-        v21.m_szFile = "../public/tier2/fieldpath.h";
-        v21.m_szFunction = "Path_AddToTail";
-        v21.m_nLine = 428;
+        v23.m_szFile = "../public/tier2/fieldpath.h";
+        v23.m_szFunction = "Path_AddToTail";
+        v23.m_nLine = 428;
         LoggingSystem_Log(
           LOG_GENERAL,
           LoggingSeverity_t::LS_ERROR,
-          &v21,
+          &v23,
           "Path_AddToTail failed for read only CFieldPath",
-          v19,
-          v20);
+          v21,
+          v22);
       }
 LABEL_17:
-      if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v17, v18, v15, v16, v19, v20) != 0 )
+      if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v17, v18, v15, v16) != 0 )
         loc_0 = -559038737;
       Plat_ExitProcess(1);
     }
@@ -12072,13 +12071,13 @@ LABEL_17:
       v4 = &LOG_GENERAL;
       if ( LoggingSystem_IsChannelEnabled(LOG_GENERAL, 4) != 0 )
       {
-        v21.m_szFile = "../public/tier2/fieldpath.h";
-        v21.m_szFunction = "Path_AddToTail";
-        v21.m_nLine = 425;
+        v23.m_szFile = "../public/tier2/fieldpath.h";
+        v23.m_szFunction = "Path_AddToTail";
+        v23.m_nLine = 425;
         LoggingSystem_Log(
           LOG_GENERAL,
           LoggingSeverity_t::LS_ERROR,
-          &v21,
+          &v23,
           "Path_AddToTail failed, depth already == DEFAULT_MAX_PATH_DEPTH(%d)",
           6);
       }
@@ -12118,19 +12117,21 @@ void __fastcall FieldOp_Read_PushN(CFieldPath *const from, bf_read *pReadBuf)
   __int64 v23; // rsi
   __int64 v24; // r8
   __int64 v25; // r9
-  const unsigned __int8 *v26; // rsi
-  int v27; // edx
-  signed int v28; // eax
-  const unsigned __int8 *v29; // rdi
-  int v30; // esi
-  int v31; // edx
-  bool v32; // zf
-  int v33; // eax
-  int v34; // ecx
-  const unsigned __int8 *v35; // rdi
-  int v36; // edx
-  char v37; // si
-  LeafCodeInfo_t v38; // [rsp+0h] [rbp-50h] BYREF
+  __int64 v26; // r8
+  __int64 v27; // r9
+  const unsigned __int8 *v28; // rsi
+  int v29; // edx
+  signed int v30; // eax
+  const unsigned __int8 *v31; // rdi
+  int v32; // esi
+  int v33; // edx
+  bool v34; // zf
+  int v35; // eax
+  int v36; // ecx
+  const unsigned __int8 *v37; // rdi
+  int v38; // edx
+  char v39; // si
+  LeafCodeInfo_t v40; // [rsp+0h] [rbp-50h] BYREF
 
   v4 = pReadBuf;
   m_nDataBits = pReadBuf->m_nDataBits;
@@ -12156,13 +12157,13 @@ LABEL_19:
     v4 = &LOG_GENERAL;
     if ( LoggingSystem_IsChannelEnabled(LOG_GENERAL, 4) != 0 )
     {
-      v38.m_szFile = "../public/tier2/fieldpath.h";
-      v38.m_szFunction = "GetPathData";
-      v38.m_nLine = 514;
+      v40.m_szFile = "../public/tier2/fieldpath.h";
+      v40.m_szFunction = "GetPathData";
+      v40.m_nLine = 514;
       LoggingSystem_Log(
         LOG_GENERAL,
         LoggingSeverity_t::LS_ERROR,
-        &v38,
+        &v40,
         "GetPathData failed for read only CFieldPath",
         v24,
         v25);
@@ -12244,66 +12245,66 @@ LABEL_27:
       {
         bf_read::SetOverflowFlag(v4);
         v13 = v4->m_nDataBits;
-        v28 = v4->m_iCurBit;
+        v30 = v4->m_iCurBit;
       }
       else
       {
-        v26 = v4->m_pData;
-        v27 = *&v4->m_pData[4 * (v16 >> 5)];
-        v28 = v16 + 1;
+        v28 = v4->m_pData;
+        v29 = *&v4->m_pData[4 * (v16 >> 5)];
+        v30 = v16 + 1;
         v4->m_iCurBit = v16 + 1;
-        if ( _bittest(&v27, v16) )
+        if ( _bittest(&v29, v16) )
         {
-          if ( v13 - v28 <= 3 )
+          if ( v13 - v30 <= 3 )
             goto LABEL_31;
           v4->m_iCurBit = v16 + 5;
-          LOWORD(v14) = ((*&v26[4 * (v28 >> 5)] >> (v28 & 0x1F)) | (*&v26[4 * ((v16 + 4) >> 5)] << (v2 - (v28 & 0x1F))))
+          LOWORD(v14) = ((*&v28[4 * (v30 >> 5)] >> (v30 & 0x1F)) | (*&v28[4 * ((v16 + 4) >> 5)] << (v2 - (v30 & 0x1F))))
                       & 0xF;
           goto LABEL_13;
         }
       }
-      if ( v13 - v28 <= 0 )
+      if ( v13 - v30 <= 0 )
       {
         bf_read::SetOverflowFlag(v4);
       }
       else
       {
-        v29 = v4->m_pData;
-        v30 = v28 + 1;
-        v31 = *&v4->m_pData[4 * (v28 >> 5)];
-        v4->m_iCurBit = v28 + 1;
-        if ( _bittest(&v31, v28) )
+        v31 = v4->m_pData;
+        v32 = v30 + 1;
+        v33 = *&v4->m_pData[4 * (v30 >> 5)];
+        v4->m_iCurBit = v30 + 1;
+        if ( _bittest(&v33, v30) )
         {
-          if ( v13 - v30 <= 9 )
+          if ( v13 - v32 <= 9 )
             goto LABEL_31;
-          v4->m_iCurBit = v28 + 11;
-          LOWORD(v14) = ((*&v29[4 * (v30 >> 5)] >> (v30 & 0x1F)) | (*&v29[4 * ((v28 + 10) >> 5)] << (v2 - (v30 & 0x1F))))
+          v4->m_iCurBit = v30 + 11;
+          LOWORD(v14) = ((*&v31[4 * (v32 >> 5)] >> (v32 & 0x1F)) | (*&v31[4 * ((v30 + 10) >> 5)] << (v2 - (v32 & 0x1F))))
                       & 0x3FF;
           goto LABEL_13;
         }
       }
-      v32 = bf_read::ReadOneBit(v4) == 0;
-      v33 = v4->m_iCurBit;
-      v34 = v4->m_nDataBits;
-      if ( v32 )
+      v34 = bf_read::ReadOneBit(v4) == 0;
+      v35 = v4->m_iCurBit;
+      v36 = v4->m_nDataBits;
+      if ( v34 )
       {
-        if ( v34 - v33 > 30 )
+        if ( v36 - v35 > 30 )
         {
-          v35 = v4->m_pData;
-          v4->m_iCurBit = v33 + 31;
-          v36 = v33 + 30;
-          v37 = v33 & 0x1F;
+          v37 = v4->m_pData;
+          v4->m_iCurBit = v35 + 31;
+          v38 = v35 + 30;
+          v39 = v35 & 0x1F;
           goto LABEL_43;
         }
       }
-      else if ( v34 - v33 > 16 )
+      else if ( v36 - v35 > 16 )
       {
-        v35 = v4->m_pData;
-        v4->m_iCurBit = v33 + 17;
-        v36 = v33 + 16;
-        v37 = v33 & 0x1F;
+        v37 = v4->m_pData;
+        v4->m_iCurBit = v35 + 17;
+        v38 = v35 + 16;
+        v39 = v35 & 0x1F;
 LABEL_43:
-        v14 = (*&v35[4 * (v33 >> 5)] >> v37) | (*&v35[4 * (v36 >> 5)] << (v2 - v37));
+        v14 = (*&v37[4 * (v35 >> 5)] >> v39) | (*&v37[4 * (v38 >> 5)] << (v2 - v39));
         goto LABEL_13;
       }
       v4->m_iCurBit = v4->m_nDataBits;
@@ -12315,19 +12316,19 @@ LABEL_13:
       v4 = &LOG_GENERAL;
       if ( LoggingSystem_IsChannelEnabled(LOG_GENERAL, 4) != 0 )
       {
-        v38.m_szFile = "../public/tier2/fieldpath.h";
-        v38.m_szFunction = "Path_AddToTail";
-        v38.m_nLine = 428;
+        v40.m_szFile = "../public/tier2/fieldpath.h";
+        v40.m_szFunction = "Path_AddToTail";
+        v40.m_nLine = 428;
         LoggingSystem_Log(
           LOG_GENERAL,
           LoggingSeverity_t::LS_ERROR,
-          &v38,
+          &v40,
           "Path_AddToTail failed for read only CFieldPath",
-          v24,
-          v25);
+          v26,
+          v27);
       }
 LABEL_23:
-      if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v22, v23, v20, v21, v24, v25) != 0 )
+      if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v22, v23, v20, v21) != 0 )
         loc_0 = -559038737;
       Plat_ExitProcess(1);
     }
@@ -12337,13 +12338,13 @@ LABEL_23:
       v4 = &LOG_GENERAL;
       if ( LoggingSystem_IsChannelEnabled(LOG_GENERAL, 4) != 0 )
       {
-        v38.m_szFile = "../public/tier2/fieldpath.h";
-        v38.m_szFunction = "Path_AddToTail";
-        v38.m_nLine = 425;
+        v40.m_szFile = "../public/tier2/fieldpath.h";
+        v40.m_szFunction = "Path_AddToTail";
+        v40.m_nLine = 425;
         LoggingSystem_Log(
           LOG_GENERAL,
           LoggingSeverity_t::LS_ERROR,
-          &v38,
+          &v40,
           "Path_AddToTail failed, depth already == DEFAULT_MAX_PATH_DEPTH(%d)",
           6);
       }
@@ -12383,19 +12384,21 @@ void __fastcall FieldOp_Read_PushNAndNonTopographical(CFieldPath *const from, bf
   signed int v21; // edi
   int v22; // eax
   __int64 m_nCount; // rcx
-  const unsigned __int8 *v24; // rsi
-  int v25; // edx
-  int v26; // eax
+  __int64 v24; // r8
+  __int64 v25; // r9
+  const unsigned __int8 *v26; // rsi
   int v27; // edx
   int v28; // eax
-  const unsigned __int8 *v29; // rdi
+  int v29; // edx
+  int v30; // eax
+  const unsigned __int8 *v31; // rdi
   int OneBit; // eax
-  bool v31; // zf
-  int v32; // eax
-  const unsigned __int8 *v33; // rdi
-  int v34; // edx
-  char v35; // si
-  LeafCodeInfo_t v36; // [rsp+0h] [rbp-50h] BYREF
+  bool v33; // zf
+  int v34; // eax
+  const unsigned __int8 *v35; // rdi
+  int v36; // edx
+  char v37; // si
+  LeafCodeInfo_t v38; // [rsp+0h] [rbp-50h] BYREF
 
   UBitVarInternal = from;
   v4 = 0;
@@ -12456,16 +12459,16 @@ LABEL_34:
       }
       else
       {
-        v24 = v5->m_pData;
-        v25 = *&v5->m_pData[4 * (v21 >> 5)];
-        v26 = v21 + 1;
+        v26 = v5->m_pData;
+        v27 = *&v5->m_pData[4 * (v21 >> 5)];
+        v28 = v21 + 1;
         v5->m_iCurBit = v21 + 1;
-        if ( _bittest(&v25, v21) )
+        if ( _bittest(&v27, v21) )
         {
-          if ( v18 - v26 > 3 )
+          if ( v18 - v28 > 3 )
           {
             v5->m_iCurBit = v21 + 5;
-            LOWORD(v19) = ((*&v24[4 * (v26 >> 5)] >> (v26 & 0x1F)) | (*&v24[4 * ((v21 + 4) >> 5)] << (32 - (v26 & 0x1F))))
+            LOWORD(v19) = ((*&v26[4 * (v28 >> 5)] >> (v28 & 0x1F)) | (*&v26[4 * ((v21 + 4) >> 5)] << (32 - (v28 & 0x1F))))
                         & 0xF;
             goto LABEL_23;
           }
@@ -12474,45 +12477,45 @@ LABEL_34:
       }
       if ( bf_read::ReadOneBit(v5) != 0 )
       {
-        v27 = v5->m_nDataBits;
-        v28 = v5->m_iCurBit;
-        if ( v27 - v28 > 9 )
+        v29 = v5->m_nDataBits;
+        v30 = v5->m_iCurBit;
+        if ( v29 - v30 > 9 )
         {
-          v29 = v5->m_pData;
-          v5->m_iCurBit = v28 + 10;
-          LOWORD(v19) = ((*&v29[4 * (v28 >> 5)] >> (v28 & 0x1F)) | (*&v29[4 * ((v28 + 9) >> 5)] << (32 - (v28 & 0x1F))))
+          v31 = v5->m_pData;
+          v5->m_iCurBit = v30 + 10;
+          LOWORD(v19) = ((*&v31[4 * (v30 >> 5)] >> (v30 & 0x1F)) | (*&v31[4 * ((v30 + 9) >> 5)] << (32 - (v30 & 0x1F))))
                       & 0x3FF;
           goto LABEL_23;
         }
 LABEL_40:
-        v5->m_iCurBit = v27;
+        v5->m_iCurBit = v29;
         bf_read::SetOverflowFlag(v5);
         LOWORD(v19) = 0;
         goto LABEL_23;
       }
       OneBit = bf_read::ReadOneBit(v5);
-      v27 = v5->m_nDataBits;
-      v31 = OneBit == 0;
-      v32 = v5->m_iCurBit;
-      if ( v31 )
+      v29 = v5->m_nDataBits;
+      v33 = OneBit == 0;
+      v34 = v5->m_iCurBit;
+      if ( v33 )
       {
-        if ( v27 - v32 <= 30 )
+        if ( v29 - v34 <= 30 )
           goto LABEL_40;
-        v33 = v5->m_pData;
-        v5->m_iCurBit = v32 + 31;
-        v34 = v32 + 30;
-        v35 = v32 & 0x1F;
+        v35 = v5->m_pData;
+        v5->m_iCurBit = v34 + 31;
+        v36 = v34 + 30;
+        v37 = v34 & 0x1F;
       }
       else
       {
-        if ( v27 - v32 <= 16 )
+        if ( v29 - v34 <= 16 )
           goto LABEL_40;
-        v33 = v5->m_pData;
-        v5->m_iCurBit = v32 + 17;
-        v34 = v32 + 16;
-        v35 = v32 & 0x1F;
+        v35 = v5->m_pData;
+        v5->m_iCurBit = v34 + 17;
+        v36 = v34 + 16;
+        v37 = v34 & 0x1F;
       }
-      v19 = (*&v33[4 * (v32 >> 5)] >> v35) | (*&v33[4 * (v34 >> 5)] << (32 - v35));
+      v19 = (*&v35[4 * (v34 >> 5)] >> v37) | (*&v35[4 * (v36 >> 5)] << (32 - v37));
 LABEL_23:
       if ( from->m_bUsingExternalPaths )
         break;
@@ -12522,13 +12525,13 @@ LABEL_23:
         v5 = &LOG_GENERAL;
         if ( LoggingSystem_IsChannelEnabled(LOG_GENERAL, 4) != 0 )
         {
-          v36.m_szFile = "../public/tier2/fieldpath.h";
-          v36.m_szFunction = "Path_AddToTail";
-          v36.m_nLine = 425;
+          v38.m_szFile = "../public/tier2/fieldpath.h";
+          v38.m_szFunction = "Path_AddToTail";
+          v38.m_nLine = 425;
           LoggingSystem_Log(
             LOG_GENERAL,
             LoggingSeverity_t::LS_ERROR,
-            &v36,
+            &v38,
             "Path_AddToTail failed, depth already == DEFAULT_MAX_PATH_DEPTH(%d)",
             6);
         }
@@ -12543,19 +12546,19 @@ LABEL_23:
     v5 = &LOG_GENERAL;
     if ( LoggingSystem_IsChannelEnabled(LOG_GENERAL, 4) != 0 )
     {
-      v36.m_szFile = "../public/tier2/fieldpath.h";
-      v36.m_szFunction = "Path_AddToTail";
-      v36.m_nLine = 428;
+      v38.m_szFile = "../public/tier2/fieldpath.h";
+      v38.m_szFunction = "Path_AddToTail";
+      v38.m_nLine = 428;
       LoggingSystem_Log(
         LOG_GENERAL,
         LoggingSeverity_t::LS_ERROR,
-        &v36,
+        &v38,
         "Path_AddToTail failed for read only CFieldPath",
-        v15,
-        v16);
+        v24,
+        v25);
     }
 LABEL_10:
-    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v13, v14, v11, v12, v15, v16) != 0 )
+    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v13, v14, v11, v12) != 0 )
       loc_0 = -559038737;
     Plat_ExitProcess(1);
 LABEL_13:
@@ -12582,13 +12585,13 @@ LABEL_4:
           v5 = &LOG_GENERAL;
           if ( LoggingSystem_IsChannelEnabled(LOG_GENERAL, 4) != 0 )
           {
-            v36.m_szFile = "../public/tier2/fieldpath.h";
-            v36.m_szFunction = "GetPathData";
-            v36.m_nLine = 514;
+            v38.m_szFile = "../public/tier2/fieldpath.h";
+            v38.m_szFunction = "GetPathData";
+            v38.m_nLine = 514;
             LoggingSystem_Log(
               LOG_GENERAL,
               LoggingSeverity_t::LS_ERROR,
-              &v36,
+              &v38,
               "GetPathData failed for read only CFieldPath",
               v15,
               v16);
@@ -12632,7 +12635,7 @@ void __fastcall FieldOp_Read_PopOnePlusOne(CFieldPath *const from, bf_read *pRea
       goto LABEL_7;
     while ( 1 )
     {
-      if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v7, v8, v5, v6, v9, v10) != 0 )
+      if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v7, v8, v5, v6) != 0 )
         loc_0 = -559038737;
       Plat_ExitProcess(1);
 LABEL_7:
@@ -12671,24 +12674,22 @@ void __fastcall FieldOp_Read_PopOnePlusN(CFieldPath *const from, bf_read *pReadB
   __int64 v12; // rcx
   __int64 v13; // rdi
   __int64 v14; // rsi
-  __int64 v15; // r8
-  __int64 v16; // r9
-  const unsigned __int8 *v17; // r8
-  signed int v18; // edi
+  const unsigned __int8 *v15; // r8
+  signed int v16; // edi
+  int v17; // edx
+  const unsigned __int8 *v18; // r8
   int v19; // edx
-  const unsigned __int8 *v20; // r8
-  int v21; // edx
+  int v20; // eax
+  bool v21; // zf
   int v22; // eax
-  bool v23; // zf
-  int v24; // eax
-  int v25; // ecx
-  const unsigned __int8 *v26; // r8
-  const unsigned __int8 *v27; // r8
+  int v23; // ecx
+  const unsigned __int8 *v24; // r8
+  const unsigned __int8 *v25; // r8
   bf_read *pReadBufb; // [rsp+8h] [rbp-38h]
   bf_read *pReadBufc; // [rsp+8h] [rbp-38h]
   bf_read *pReadBufd; // [rsp+8h] [rbp-38h]
   bf_read *pReadBufa; // [rsp+8h] [rbp-38h]
-  LeafCodeInfo_t v32; // [rsp+10h] [rbp-30h] BYREF
+  LeafCodeInfo_t v30; // [rsp+10h] [rbp-30h] BYREF
 
   if ( from->m_bUsingExternalPaths )
     goto LABEL_12;
@@ -12730,27 +12731,27 @@ void __fastcall FieldOp_Read_PopOnePlusN(CFieldPath *const from, bf_read *pReadB
     bf_read::SetOverflowFlag(pReadBuf);
     pReadBuf = pReadBufc;
     m_nDataBits = pReadBufc->m_nDataBits;
-    v18 = pReadBufc->m_iCurBit;
+    v16 = pReadBufc->m_iCurBit;
   }
   else
   {
-    v17 = pReadBuf->m_pData;
-    v18 = v9 + 1;
-    v19 = *&pReadBuf->m_pData[4 * (v9 >> 5)];
+    v15 = pReadBuf->m_pData;
+    v16 = v9 + 1;
+    v17 = *&pReadBuf->m_pData[4 * (v9 >> 5)];
     pReadBuf->m_iCurBit = v9 + 1;
-    if ( _bittest(&v19, v9) )
+    if ( _bittest(&v17, v9) )
     {
-      if ( m_nDataBits - v18 > 3 )
+      if ( m_nDataBits - v16 > 3 )
       {
         pReadBuf->m_iCurBit = v9 + 5;
-        v10 = (((*&v17[4 * (v18 >> 5)] >> (v18 & 0x1F)) | (*&v17[4 * ((v9 + 4) >> 5)] << (32 - (v18 & 0x1F)))) & 0xF)
+        v10 = (((*&v15[4 * (v16 >> 5)] >> (v16 & 0x1F)) | (*&v15[4 * ((v9 + 4) >> 5)] << (32 - (v16 & 0x1F)))) & 0xF)
             + 1;
         goto LABEL_6;
       }
       goto LABEL_24;
     }
   }
-  if ( m_nDataBits - v18 <= 0 )
+  if ( m_nDataBits - v16 <= 0 )
   {
     pReadBufd = pReadBuf;
     bf_read::SetOverflowFlag(pReadBuf);
@@ -12758,13 +12759,13 @@ void __fastcall FieldOp_Read_PopOnePlusN(CFieldPath *const from, bf_read *pReadB
   }
   else
   {
-    v20 = pReadBuf->m_pData;
-    v21 = *&pReadBuf->m_pData[4 * (v18 >> 5)];
-    v22 = v18 + 1;
-    pReadBuf->m_iCurBit = v18 + 1;
-    if ( _bittest(&v21, v18) )
+    v18 = pReadBuf->m_pData;
+    v19 = *&pReadBuf->m_pData[4 * (v16 >> 5)];
+    v20 = v16 + 1;
+    pReadBuf->m_iCurBit = v16 + 1;
+    if ( _bittest(&v19, v16) )
     {
-      if ( m_nDataBits - v22 <= 9 )
+      if ( m_nDataBits - v20 <= 9 )
       {
 LABEL_24:
         pReadBuf->m_iCurBit = m_nDataBits;
@@ -12772,31 +12773,31 @@ LABEL_24:
         v10 = 1;
         goto LABEL_6;
       }
-      pReadBuf->m_iCurBit = v18 + 11;
-      v10 = (((*&v20[4 * (v22 >> 5)] >> (v22 & 0x1F)) | (*&v20[4 * ((v18 + 10) >> 5)] << (32 - (v22 & 0x1F)))) & 0x3FF)
+      pReadBuf->m_iCurBit = v16 + 11;
+      v10 = (((*&v18[4 * (v20 >> 5)] >> (v20 & 0x1F)) | (*&v18[4 * ((v16 + 10) >> 5)] << (32 - (v20 & 0x1F)))) & 0x3FF)
           + 1;
       goto LABEL_6;
     }
   }
   pReadBufa = pReadBuf;
-  v23 = bf_read::ReadOneBit(pReadBuf) == 0;
-  v24 = pReadBufa->m_iCurBit;
-  v25 = pReadBufa->m_nDataBits;
-  if ( v23 )
+  v21 = bf_read::ReadOneBit(pReadBuf) == 0;
+  v22 = pReadBufa->m_iCurBit;
+  v23 = pReadBufa->m_nDataBits;
+  if ( v21 )
   {
-    if ( v25 - v24 > 30 )
+    if ( v23 - v22 > 30 )
     {
-      v27 = pReadBufa->m_pData;
-      pReadBufa->m_iCurBit = v24 + 31;
-      v10 = ((*&v27[4 * (v24 >> 5)] >> (v24 & 0x1F)) | (*&v27[4 * ((v24 + 30) >> 5)] << (32 - (v24 & 0x1F)))) + 1;
+      v25 = pReadBufa->m_pData;
+      pReadBufa->m_iCurBit = v22 + 31;
+      v10 = ((*&v25[4 * (v22 >> 5)] >> (v22 & 0x1F)) | (*&v25[4 * ((v22 + 30) >> 5)] << (32 - (v22 & 0x1F)))) + 1;
       goto LABEL_6;
     }
   }
-  else if ( v25 - v24 > 16 )
+  else if ( v23 - v22 > 16 )
   {
-    v26 = pReadBufa->m_pData;
-    pReadBufa->m_iCurBit = v24 + 17;
-    v10 = ((*&v26[4 * (v24 >> 5)] >> (v24 & 0x1F)) | (*&v26[4 * ((v24 + 16) >> 5)] << (32 - (v24 & 0x1F)))) + 1;
+    v24 = pReadBufa->m_pData;
+    pReadBufa->m_iCurBit = v22 + 17;
+    v10 = ((*&v24[4 * (v22 >> 5)] >> (v22 & 0x1F)) | (*&v24[4 * ((v22 + 16) >> 5)] << (32 - (v22 & 0x1F)))) + 1;
     goto LABEL_6;
   }
   pReadBufa->m_iCurBit = pReadBufa->m_nDataBits;
@@ -12807,26 +12808,26 @@ LABEL_6:
   {
     if ( LoggingSystem_IsChannelEnabled(LOG_GENERAL, 4) != 0 )
     {
-      v32.m_szFile = "../public/tier2/fieldpath.h";
-      v32.m_szFunction = "GetPathData";
-      v32.m_nLine = 514;
-      LoggingSystem_Log(LOG_GENERAL, LoggingSeverity_t::LS_ERROR, &v32, "GetPathData failed for read only CFieldPath");
+      v30.m_szFile = "../public/tier2/fieldpath.h";
+      v30.m_szFunction = "GetPathData";
+      v30.m_nLine = 514;
+      LoggingSystem_Log(LOG_GENERAL, LoggingSeverity_t::LS_ERROR, &v30, "GetPathData failed for read only CFieldPath");
     }
     while ( 1 )
     {
-      if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v13, v14, v11, v12, v15, v16) != 0 )
+      if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v13, v14, v11, v12) != 0 )
         loc_0 = -559038737;
       Plat_ExitProcess(1);
 LABEL_12:
       if ( LoggingSystem_IsChannelEnabled(LOG_GENERAL, 4) != 0 )
       {
-        v32.m_szFile = "../public/tier2/fieldpath.h";
-        v32.m_szFunction = "Path_PopLast";
-        v32.m_nLine = 477;
+        v30.m_szFile = "../public/tier2/fieldpath.h";
+        v30.m_szFunction = "Path_PopLast";
+        v30.m_nLine = 477;
         LoggingSystem_Log(
           LOG_GENERAL,
           LoggingSeverity_t::LS_ERROR,
-          &v32,
+          &v30,
           "Path_PopLast failed for read only CFieldPath");
       }
     }
@@ -12848,7 +12849,9 @@ void __fastcall FieldOp_Read_PopAllButOnePlusOne(CFieldPath *const from, bf_read
   __int64 v7; // rsi
   __int64 v8; // r8
   __int64 v9; // r9
-  LeafCodeInfo_t v10; // [rsp+0h] [rbp-30h] BYREF
+  __int64 v10; // r8
+  __int64 v11; // r9
+  LeafCodeInfo_t v12; // [rsp+0h] [rbp-30h] BYREF
 
   m_nCount = from->m_nCount;
   if ( from->m_nCount <= 1 )
@@ -12857,16 +12860,16 @@ void __fastcall FieldOp_Read_PopAllButOnePlusOne(CFieldPath *const from, bf_read
       goto LABEL_11;
     if ( LoggingSystem_IsChannelEnabled(LOG_GENERAL, 4) != 0 )
     {
-      v10.m_szFile = "../public/tier2/fieldpath.h";
-      v10.m_szFunction = "GetPathData";
-      v10.m_nLine = 514;
+      v12.m_szFile = "../public/tier2/fieldpath.h";
+      v12.m_szFunction = "GetPathData";
+      v12.m_nLine = 514;
       LoggingSystem_Log(
         LOG_GENERAL,
         LoggingSeverity_t::LS_ERROR,
-        &v10,
+        &v12,
         "GetPathData failed for read only CFieldPath",
-        v8,
-        v9);
+        v10,
+        v11);
     }
   }
   else
@@ -12876,19 +12879,19 @@ void __fastcall FieldOp_Read_PopAllButOnePlusOne(CFieldPath *const from, bf_read
       goto LABEL_9;
     if ( LoggingSystem_IsChannelEnabled(LOG_GENERAL, 4) != 0 )
     {
-      v10.m_szFile = "../public/tier2/fieldpath.h";
-      v10.m_szFunction = "Path_PopLast";
-      v10.m_nLine = 477;
+      v12.m_szFile = "../public/tier2/fieldpath.h";
+      v12.m_szFunction = "Path_PopLast";
+      v12.m_nLine = 477;
       LoggingSystem_Log(
         LOG_GENERAL,
         LoggingSeverity_t::LS_ERROR,
-        &v10,
+        &v12,
         "Path_PopLast failed for read only CFieldPath",
         v8,
         v9);
     }
   }
-  if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v6, v7, v4, v5, v8, v9) != 0 )
+  if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v6, v7, v4, v5) != 0 )
     loc_0 = -559038737;
   v3 = Plat_ExitProcess(1);
   do
@@ -12915,31 +12918,29 @@ void __fastcall FieldOp_Read_PopAllButOnePlusN(CFieldPath *const from, bf_read *
   __int64 v6; // rcx
   __int64 v7; // rdi
   __int64 v8; // rsi
-  __int64 v9; // r8
-  __int64 v10; // r9
   int m_nDataBits; // ecx
   signed int m_iCurBit; // eax
   const unsigned __int8 *m_pData; // rdi
-  int v14; // r8d
-  signed int v15; // edx
-  __int16 v16; // ax
-  const unsigned __int8 *v17; // r8
-  int v18; // edi
-  int v19; // eax
+  int v12; // r8d
+  signed int v13; // edx
+  __int16 v14; // ax
+  const unsigned __int8 *v15; // r8
+  int v16; // edi
+  int v17; // eax
   int OneBit; // eax
-  bf_read *v21; // rsi
-  int v22; // eax
-  int v23; // edx
-  const unsigned __int8 *v24; // r8
-  int v25; // eax
-  bool v26; // zf
-  int v27; // edx
-  const unsigned __int8 *v28; // r8
-  const unsigned __int8 *v29; // r8
+  bf_read *v19; // rsi
+  int v20; // eax
+  int v21; // edx
+  const unsigned __int8 *v22; // r8
+  int v23; // eax
+  bool v24; // zf
+  int v25; // edx
+  const unsigned __int8 *v26; // r8
+  const unsigned __int8 *v27; // r8
   bf_read *pReadBufb; // [rsp+8h] [rbp-38h]
   bf_read *pReadBufc; // [rsp+8h] [rbp-38h]
   bf_read *pReadBufa; // [rsp+8h] [rbp-38h]
-  LeafCodeInfo_t v33; // [rsp+10h] [rbp-30h] BYREF
+  LeafCodeInfo_t v31; // [rsp+10h] [rbp-30h] BYREF
 
   m_nCount = from->m_nCount;
   if ( m_nCount <= 1 )
@@ -12949,14 +12950,14 @@ void __fastcall FieldOp_Read_PopAllButOnePlusN(CFieldPath *const from, bf_read *
     goto LABEL_9;
   if ( LoggingSystem_IsChannelEnabled(LOG_GENERAL, 4) != 0 )
   {
-    v33.m_szFile = "../public/tier2/fieldpath.h";
-    v33.m_szFunction = "Path_PopLast";
-    v33.m_nLine = 477;
-    LoggingSystem_Log(LOG_GENERAL, LoggingSeverity_t::LS_ERROR, &v33, "Path_PopLast failed for read only CFieldPath");
+    v31.m_szFile = "../public/tier2/fieldpath.h";
+    v31.m_szFunction = "Path_PopLast";
+    v31.m_nLine = 477;
+    LoggingSystem_Log(LOG_GENERAL, LoggingSeverity_t::LS_ERROR, &v31, "Path_PopLast failed for read only CFieldPath");
   }
   while ( 1 )
   {
-    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v7, v8, v5, v6, v9, v10) != 0 )
+    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v7, v8, v5, v6) != 0 )
       loc_0 = -559038737;
     v4 = Plat_ExitProcess(1);
     do
@@ -12976,21 +12977,21 @@ LABEL_11:
       bf_read::SetOverflowFlag(pReadBuf);
       pReadBuf = pReadBufb;
       m_nDataBits = pReadBufb->m_nDataBits;
-      v15 = pReadBufb->m_iCurBit;
+      v13 = pReadBufb->m_iCurBit;
     }
     else
     {
       m_pData = pReadBuf->m_pData;
-      v14 = *&pReadBuf->m_pData[4 * (m_iCurBit >> 5)];
-      v15 = m_iCurBit + 1;
+      v12 = *&pReadBuf->m_pData[4 * (m_iCurBit >> 5)];
+      v13 = m_iCurBit + 1;
       pReadBuf->m_iCurBit = m_iCurBit + 1;
-      if ( _bittest(&v14, m_iCurBit) )
+      if ( _bittest(&v12, m_iCurBit) )
       {
-        if ( m_nDataBits - v15 > 1 )
+        if ( m_nDataBits - v13 > 1 )
         {
           pReadBuf->m_iCurBit = m_iCurBit + 3;
-          v16 = (((*&m_pData[4 * (v15 >> 5)] >> (v15 & 0x1F))
-                | (*&m_pData[4 * ((m_iCurBit + 2) >> 5)] << (32 - (v15 & 0x1F))))
+          v14 = (((*&m_pData[4 * (v13 >> 5)] >> (v13 & 0x1F))
+                | (*&m_pData[4 * ((m_iCurBit + 2) >> 5)] << (32 - (v13 & 0x1F))))
                & 3)
               + 1;
           goto LABEL_15;
@@ -12998,11 +12999,11 @@ LABEL_11:
 LABEL_24:
         pReadBuf->m_iCurBit = m_nDataBits;
         bf_read::SetOverflowFlag(pReadBuf);
-        v16 = 1;
+        v14 = 1;
         goto LABEL_15;
       }
     }
-    if ( m_nDataBits - v15 <= 0 )
+    if ( m_nDataBits - v13 <= 0 )
     {
       pReadBufc = pReadBuf;
       bf_read::SetOverflowFlag(pReadBuf);
@@ -13010,16 +13011,16 @@ LABEL_24:
     }
     else
     {
-      v17 = pReadBuf->m_pData;
-      v18 = v15 + 1;
-      v19 = *&pReadBuf->m_pData[4 * (v15 >> 5)];
-      pReadBuf->m_iCurBit = v15 + 1;
-      if ( _bittest(&v19, v15) )
+      v15 = pReadBuf->m_pData;
+      v16 = v13 + 1;
+      v17 = *&pReadBuf->m_pData[4 * (v13 >> 5)];
+      pReadBuf->m_iCurBit = v13 + 1;
+      if ( _bittest(&v17, v13) )
       {
-        if ( m_nDataBits - v18 > 3 )
+        if ( m_nDataBits - v16 > 3 )
         {
-          pReadBuf->m_iCurBit = v15 + 5;
-          v16 = (((*&v17[4 * (v18 >> 5)] >> (v18 & 0x1F)) | (*&v17[4 * ((v15 + 4) >> 5)] << (32 - (v18 & 0x1F)))) & 0xF)
+          pReadBuf->m_iCurBit = v13 + 5;
+          v14 = (((*&v15[4 * (v16 >> 5)] >> (v16 & 0x1F)) | (*&v15[4 * ((v13 + 4) >> 5)] << (32 - (v16 & 0x1F)))) & 0xF)
               + 1;
           goto LABEL_15;
         }
@@ -13028,58 +13029,58 @@ LABEL_24:
     }
     pReadBufa = pReadBuf;
     OneBit = bf_read::ReadOneBit(pReadBuf);
-    v21 = pReadBufa;
+    v19 = pReadBufa;
     if ( OneBit != 0 )
     {
-      v22 = pReadBufa->m_nDataBits;
-      v23 = pReadBufa->m_iCurBit;
-      if ( v22 - v23 > 9 )
+      v20 = pReadBufa->m_nDataBits;
+      v21 = pReadBufa->m_iCurBit;
+      if ( v20 - v21 > 9 )
       {
-        v24 = pReadBufa->m_pData;
-        pReadBufa->m_iCurBit = v23 + 10;
-        v16 = (((*&v24[4 * (v23 >> 5)] >> (v23 & 0x1F)) | (*&v24[4 * ((v23 + 9) >> 5)] << (32 - (v23 & 0x1F)))) & 0x3FF)
+        v22 = pReadBufa->m_pData;
+        pReadBufa->m_iCurBit = v21 + 10;
+        v14 = (((*&v22[4 * (v21 >> 5)] >> (v21 & 0x1F)) | (*&v22[4 * ((v21 + 9) >> 5)] << (32 - (v21 & 0x1F)))) & 0x3FF)
             + 1;
         goto LABEL_15;
       }
 LABEL_29:
-      v21->m_iCurBit = v22;
-      bf_read::SetOverflowFlag(v21);
-      v16 = 1;
+      v19->m_iCurBit = v20;
+      bf_read::SetOverflowFlag(v19);
+      v14 = 1;
       goto LABEL_15;
     }
-    v25 = bf_read::ReadOneBit(pReadBufa);
-    v21 = pReadBufa;
-    v26 = v25 == 0;
-    v22 = pReadBufa->m_nDataBits;
-    v27 = pReadBufa->m_iCurBit;
-    if ( v26 )
+    v23 = bf_read::ReadOneBit(pReadBufa);
+    v19 = pReadBufa;
+    v24 = v23 == 0;
+    v20 = pReadBufa->m_nDataBits;
+    v25 = pReadBufa->m_iCurBit;
+    if ( v24 )
     {
-      if ( v22 - v27 <= 30 )
+      if ( v20 - v25 <= 30 )
         goto LABEL_29;
-      v29 = pReadBufa->m_pData;
-      pReadBufa->m_iCurBit = v27 + 31;
-      v16 = ((*&v29[4 * (v27 >> 5)] >> (v27 & 0x1F)) | (*&v29[4 * ((v27 + 30) >> 5)] << (32 - (v27 & 0x1F)))) + 1;
+      v27 = pReadBufa->m_pData;
+      pReadBufa->m_iCurBit = v25 + 31;
+      v14 = ((*&v27[4 * (v25 >> 5)] >> (v25 & 0x1F)) | (*&v27[4 * ((v25 + 30) >> 5)] << (32 - (v25 & 0x1F)))) + 1;
     }
     else
     {
-      if ( v22 - v27 <= 16 )
+      if ( v20 - v25 <= 16 )
         goto LABEL_29;
-      v28 = pReadBufa->m_pData;
-      pReadBufa->m_iCurBit = v27 + 17;
-      v16 = ((*&v28[4 * (v27 >> 5)] >> (v27 & 0x1F)) | (*&v28[4 * ((v27 + 16) >> 5)] << (32 - (v27 & 0x1F)))) + 1;
+      v26 = pReadBufa->m_pData;
+      pReadBufa->m_iCurBit = v25 + 17;
+      v14 = ((*&v26[4 * (v25 >> 5)] >> (v25 & 0x1F)) | (*&v26[4 * ((v25 + 16) >> 5)] << (32 - (v25 & 0x1F)))) + 1;
     }
 LABEL_15:
     if ( !from->m_bUsingExternalPaths )
       break;
     if ( LoggingSystem_IsChannelEnabled(LOG_GENERAL, 4) != 0 )
     {
-      v33.m_szFile = "../public/tier2/fieldpath.h";
-      v33.m_szFunction = "GetPathData";
-      v33.m_nLine = 514;
-      LoggingSystem_Log(LOG_GENERAL, LoggingSeverity_t::LS_ERROR, &v33, "GetPathData failed for read only CFieldPath");
+      v31.m_szFile = "../public/tier2/fieldpath.h";
+      v31.m_szFunction = "GetPathData";
+      v31.m_nLine = 514;
+      LoggingSystem_Log(LOG_GENERAL, LoggingSeverity_t::LS_ERROR, &v31, "GetPathData failed for read only CFieldPath");
     }
   }
-  from->u.m_FixedPaths[m_nCount - 1].m_nValue += v16;
+  from->u.m_FixedPaths[m_nCount - 1].m_nValue += v14;
 }
 
 
@@ -13099,7 +13100,9 @@ void __fastcall FieldOp_Read_PopAllButOnePlusNPack3Bits(CFieldPath *const from, 
   int m_iCurBit; // edx
   const unsigned __int8 *m_pData; // r8
   __int16 v13; // ax
-  LeafCodeInfo_t v14; // [rsp+0h] [rbp-30h] BYREF
+  __int64 v14; // r8
+  __int64 v15; // r9
+  LeafCodeInfo_t v16; // [rsp+0h] [rbp-30h] BYREF
 
   m_nCount = from->m_nCount;
   if ( from->m_nCount <= 1 )
@@ -13109,20 +13112,20 @@ void __fastcall FieldOp_Read_PopAllButOnePlusNPack3Bits(CFieldPath *const from, 
     goto LABEL_9;
   if ( LoggingSystem_IsChannelEnabled(LOG_GENERAL, 4) != 0 )
   {
-    v14.m_szFile = "../public/tier2/fieldpath.h";
-    v14.m_szFunction = "Path_PopLast";
-    v14.m_nLine = 477;
+    v16.m_szFile = "../public/tier2/fieldpath.h";
+    v16.m_szFunction = "Path_PopLast";
+    v16.m_nLine = 477;
     LoggingSystem_Log(
       LOG_GENERAL,
       LoggingSeverity_t::LS_ERROR,
-      &v14,
+      &v16,
       "Path_PopLast failed for read only CFieldPath",
       v9,
       v10);
   }
   while ( 1 )
   {
-    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v7, v8, v5, v6, v9, v10) != 0 )
+    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v7, v8, v5, v6) != 0 )
       loc_0 = -559038737;
     v4 = Plat_ExitProcess(1);
     do
@@ -13154,16 +13157,16 @@ LABEL_11:
       break;
     if ( LoggingSystem_IsChannelEnabled(LOG_GENERAL, 4) != 0 )
     {
-      v14.m_szFile = "../public/tier2/fieldpath.h";
-      v14.m_szFunction = "GetPathData";
-      v14.m_nLine = 514;
+      v16.m_szFile = "../public/tier2/fieldpath.h";
+      v16.m_szFunction = "GetPathData";
+      v16.m_nLine = 514;
       LoggingSystem_Log(
         LOG_GENERAL,
         LoggingSeverity_t::LS_ERROR,
-        &v14,
+        &v16,
         "GetPathData failed for read only CFieldPath",
-        v9,
-        v10);
+        v14,
+        v15);
     }
   }
   from->u.m_FixedPaths[m_nCount - 1].m_nValue += v13;
@@ -13186,7 +13189,9 @@ void __fastcall FieldOp_Read_PopAllButOnePlusNPack6Bits(CFieldPath *const from, 
   int m_iCurBit; // edx
   const unsigned __int8 *m_pData; // r8
   __int16 v13; // ax
-  LeafCodeInfo_t v14; // [rsp+0h] [rbp-30h] BYREF
+  __int64 v14; // r8
+  __int64 v15; // r9
+  LeafCodeInfo_t v16; // [rsp+0h] [rbp-30h] BYREF
 
   m_nCount = from->m_nCount;
   if ( from->m_nCount <= 1 )
@@ -13196,20 +13201,20 @@ void __fastcall FieldOp_Read_PopAllButOnePlusNPack6Bits(CFieldPath *const from, 
     goto LABEL_9;
   if ( LoggingSystem_IsChannelEnabled(LOG_GENERAL, 4) != 0 )
   {
-    v14.m_szFile = "../public/tier2/fieldpath.h";
-    v14.m_szFunction = "Path_PopLast";
-    v14.m_nLine = 477;
+    v16.m_szFile = "../public/tier2/fieldpath.h";
+    v16.m_szFunction = "Path_PopLast";
+    v16.m_nLine = 477;
     LoggingSystem_Log(
       LOG_GENERAL,
       LoggingSeverity_t::LS_ERROR,
-      &v14,
+      &v16,
       "Path_PopLast failed for read only CFieldPath",
       v9,
       v10);
   }
   while ( 1 )
   {
-    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v7, v8, v5, v6, v9, v10) != 0 )
+    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v7, v8, v5, v6) != 0 )
       loc_0 = -559038737;
     v4 = Plat_ExitProcess(1);
     do
@@ -13241,16 +13246,16 @@ LABEL_11:
       break;
     if ( LoggingSystem_IsChannelEnabled(LOG_GENERAL, 4) != 0 )
     {
-      v14.m_szFile = "../public/tier2/fieldpath.h";
-      v14.m_szFunction = "GetPathData";
-      v14.m_nLine = 514;
+      v16.m_szFile = "../public/tier2/fieldpath.h";
+      v16.m_szFunction = "GetPathData";
+      v16.m_nLine = 514;
       LoggingSystem_Log(
         LOG_GENERAL,
         LoggingSeverity_t::LS_ERROR,
-        &v14,
+        &v16,
         "GetPathData failed for read only CFieldPath",
-        v9,
-        v10);
+        v14,
+        v15);
     }
   }
   from->u.m_FixedPaths[m_nCount - 1].m_nValue += v13;
@@ -13274,26 +13279,24 @@ void __fastcall FieldOp_Read_PopNPlusOne(CFieldPath *const from, bf_read *pReadB
   __int64 v12; // rcx
   __int64 v13; // rdi
   __int64 v14; // rsi
-  __int64 v15; // r8
-  __int64 v16; // r9
-  int v17; // eax
-  bf_read *v18; // rsi
-  const unsigned __int8 *v19; // r8
-  signed int v20; // edi
-  int v21; // eax
-  const unsigned __int8 *v22; // r8
-  int v23; // edx
-  int v24; // eax
+  int v15; // eax
+  bf_read *v16; // rsi
+  const unsigned __int8 *v17; // r8
+  signed int v18; // edi
+  int v19; // eax
+  const unsigned __int8 *v20; // r8
+  int v21; // edx
+  int v22; // eax
   int OneBit; // eax
-  bool v26; // zf
-  int v27; // edx
-  const unsigned __int8 *v28; // r8
-  const unsigned __int8 *v29; // r8
+  bool v24; // zf
+  int v25; // edx
+  const unsigned __int8 *v26; // r8
+  const unsigned __int8 *v27; // r8
   bf_read *pReadBufb; // [rsp+8h] [rbp-38h]
   bf_read *pReadBufc; // [rsp+8h] [rbp-38h]
   bf_read *pReadBufd; // [rsp+8h] [rbp-38h]
   bf_read *pReadBufa; // [rsp+8h] [rbp-38h]
-  LeafCodeInfo_t v34; // [rsp+10h] [rbp-30h] BYREF
+  LeafCodeInfo_t v32; // [rsp+10h] [rbp-30h] BYREF
 
   m_nDataBits = pReadBuf->m_nDataBits;
   m_iCurBit = pReadBuf->m_iCurBit;
@@ -13332,9 +13335,9 @@ LABEL_30:
     bf_read::SetOverflowFlag(pReadBuf);
     pReadBuf = pReadBufc;
     m_nDataBits = pReadBufc->m_nDataBits;
-    v20 = pReadBufc->m_iCurBit;
+    v18 = pReadBufc->m_iCurBit;
 LABEL_27:
-    if ( m_nDataBits - v20 <= 0 )
+    if ( m_nDataBits - v18 <= 0 )
     {
       pReadBufd = pReadBuf;
       bf_read::SetOverflowFlag(pReadBuf);
@@ -13342,54 +13345,54 @@ LABEL_27:
     }
     else
     {
-      v22 = pReadBuf->m_pData;
-      v23 = v20 + 1;
-      v24 = *&pReadBuf->m_pData[4 * (v20 >> 5)];
-      pReadBuf->m_iCurBit = v20 + 1;
-      if ( _bittest(&v24, v20) )
+      v20 = pReadBuf->m_pData;
+      v21 = v18 + 1;
+      v22 = *&pReadBuf->m_pData[4 * (v18 >> 5)];
+      pReadBuf->m_iCurBit = v18 + 1;
+      if ( _bittest(&v22, v18) )
       {
-        if ( m_nDataBits - v23 <= 9 )
+        if ( m_nDataBits - v21 <= 9 )
           goto LABEL_30;
-        pReadBuf->m_iCurBit = v20 + 11;
-        v8 = ((*&v22[4 * (v23 >> 5)] >> (v23 & 0x1F)) | (*&v22[4 * ((v20 + 10) >> 5)] << (32 - (v23 & 0x1F)))) & 0x3FF;
+        pReadBuf->m_iCurBit = v18 + 11;
+        v8 = ((*&v20[4 * (v21 >> 5)] >> (v21 & 0x1F)) | (*&v20[4 * ((v18 + 10) >> 5)] << (32 - (v21 & 0x1F)))) & 0x3FF;
         goto LABEL_5;
       }
     }
     pReadBufa = pReadBuf;
     OneBit = bf_read::ReadOneBit(pReadBuf);
-    v18 = pReadBufa;
-    v26 = OneBit == 0;
-    v17 = pReadBufa->m_nDataBits;
-    v27 = pReadBufa->m_iCurBit;
-    if ( v26 )
+    v16 = pReadBufa;
+    v24 = OneBit == 0;
+    v15 = pReadBufa->m_nDataBits;
+    v25 = pReadBufa->m_iCurBit;
+    if ( v24 )
     {
-      if ( v17 - v27 <= 30 )
+      if ( v15 - v25 <= 30 )
         goto LABEL_17;
-      v29 = pReadBufa->m_pData;
-      pReadBufa->m_iCurBit = v27 + 31;
-      v8 = ((*&v29[4 * (v27 >> 5)] >> (v27 & 0x1F)) | (*&v29[4 * ((v27 + 30) >> 5)] << (32 - (v27 & 0x1F))))
+      v27 = pReadBufa->m_pData;
+      pReadBufa->m_iCurBit = v25 + 31;
+      v8 = ((*&v27[4 * (v25 >> 5)] >> (v25 & 0x1F)) | (*&v27[4 * ((v25 + 30) >> 5)] << (32 - (v25 & 0x1F))))
          & 0x7FFFFFFF;
     }
     else
     {
-      if ( v17 - v27 <= 16 )
+      if ( v15 - v25 <= 16 )
         goto LABEL_17;
-      v28 = pReadBufa->m_pData;
-      pReadBufa->m_iCurBit = v27 + 17;
-      v8 = ((*&v28[4 * (v27 >> 5)] >> (v27 & 0x1F)) | (*&v28[4 * ((v27 + 16) >> 5)] << (32 - (v27 & 0x1F)))) & 0x1FFFF;
+      v26 = pReadBufa->m_pData;
+      pReadBufa->m_iCurBit = v25 + 17;
+      v8 = ((*&v26[4 * (v25 >> 5)] >> (v25 & 0x1F)) | (*&v26[4 * ((v25 + 16) >> 5)] << (32 - (v25 & 0x1F)))) & 0x1FFFF;
     }
     goto LABEL_5;
   }
-  v19 = pReadBuf->m_pData;
-  v20 = v7 + 1;
-  v21 = *&pReadBuf->m_pData[4 * (v7 >> 5)];
+  v17 = pReadBuf->m_pData;
+  v18 = v7 + 1;
+  v19 = *&pReadBuf->m_pData[4 * (v7 >> 5)];
   pReadBuf->m_iCurBit = v7 + 1;
-  if ( !_bittest(&v21, v7) )
+  if ( !_bittest(&v19, v7) )
     goto LABEL_27;
-  if ( m_nDataBits - v20 <= 3 )
+  if ( m_nDataBits - v18 <= 3 )
     goto LABEL_30;
   pReadBuf->m_iCurBit = v7 + 5;
-  v8 = ((*&v19[4 * (v20 >> 5)] >> (v20 & 0x1F)) | (*&v19[4 * ((v7 + 4) >> 5)] << (32 - (v20 & 0x1F)))) & 0xF;
+  v8 = ((*&v17[4 * (v18 >> 5)] >> (v18 & 0x1F)) | (*&v17[4 * ((v7 + 4) >> 5)] << (32 - (v18 & 0x1F)))) & 0xF;
 LABEL_5:
   if ( v8 <= 0 )
     goto LABEL_18;
@@ -13398,19 +13401,19 @@ LABEL_5:
     from = &LOG_GENERAL;
     if ( LoggingSystem_IsChannelEnabled(LOG_GENERAL, &loc_2 + 2) != 0 )
     {
-      v34.m_szFile = "../public/tier2/fieldpath.h";
-      v34.m_szFunction = "Path_PopLast";
-      v34.m_nLine = 477;
-      LoggingSystem_Log(LOG_GENERAL, LoggingSeverity_t::LS_ERROR, &v34, "Path_PopLast failed for read only CFieldPath");
+      v32.m_szFile = "../public/tier2/fieldpath.h";
+      v32.m_szFunction = "Path_PopLast";
+      v32.m_nLine = 477;
+      LoggingSystem_Log(LOG_GENERAL, LoggingSeverity_t::LS_ERROR, &v32, "Path_PopLast failed for read only CFieldPath");
     }
     while ( 1 )
     {
-      if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v13, v14, v11, v12, v15, v16) != 0 )
+      if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v13, v14, v11, v12) != 0 )
         loc_0 = -559038737;
-      v17 = Plat_ExitProcess(1);
+      v15 = Plat_ExitProcess(1);
 LABEL_17:
-      v18->m_iCurBit = v17;
-      bf_read::SetOverflowFlag(v18);
+      v16->m_iCurBit = v15;
+      bf_read::SetOverflowFlag(v16);
 LABEL_18:
       m_nCount = from->m_nCount;
       if ( !from->m_bUsingExternalPaths )
@@ -13418,10 +13421,10 @@ LABEL_18:
       from = &LOG_GENERAL;
       if ( LoggingSystem_IsChannelEnabled(LOG_GENERAL, 4) != 0 )
       {
-        v34.m_szFile = "../public/tier2/fieldpath.h";
-        v34.m_szFunction = "GetPathData";
-        v34.m_nLine = 514;
-        LoggingSystem_Log(LOG_GENERAL, LoggingSeverity_t::LS_ERROR, &v34, "GetPathData failed for read only CFieldPath");
+        v32.m_szFile = "../public/tier2/fieldpath.h";
+        v32.m_szFunction = "GetPathData";
+        v32.m_nLine = 514;
+        LoggingSystem_Log(LOG_GENERAL, LoggingSeverity_t::LS_ERROR, &v32, "GetPathData failed for read only CFieldPath");
       }
     }
   }
@@ -13458,25 +13461,23 @@ void __fastcall FieldOp_Read_PopNPlusN(CFieldPath *const from, bf_read *pReadBuf
   __int64 v14; // rcx
   __int64 v15; // rdi
   __int64 v16; // rsi
-  __int64 v17; // r8
-  __int64 v18; // r9
-  const unsigned __int8 *v19; // r8
-  signed int v20; // edi
-  int v21; // eax
-  const unsigned __int8 *v22; // r8
-  int v23; // edx
-  int v24; // eax
+  const unsigned __int8 *v17; // r8
+  signed int v18; // edi
+  int v19; // eax
+  const unsigned __int8 *v20; // r8
+  int v21; // edx
+  int v22; // eax
   int OneBit; // eax
-  int v26; // edx
-  int v27; // ecx
-  const unsigned __int8 *v28; // r9
-  const unsigned __int8 *v29; // r9
+  int v24; // edx
+  int v25; // ecx
+  const unsigned __int8 *v26; // r9
+  const unsigned __int8 *v27; // r9
   bf_read *pReadBufb; // [rsp+8h] [rbp-38h]
   bf_read *pReadBufc; // [rsp+8h] [rbp-38h]
   bf_read *pReadBufd; // [rsp+8h] [rbp-38h]
   bf_read *pReadBufe; // [rsp+8h] [rbp-38h]
   bf_read *pReadBufa; // [rsp+8h] [rbp-38h]
-  LeafCodeInfo_t v35; // [rsp+10h] [rbp-30h] BYREF
+  LeafCodeInfo_t v33; // [rsp+10h] [rbp-30h] BYREF
 
   m_nDataBits = pReadBuf->m_nDataBits;
   m_iCurBit = pReadBuf->m_iCurBit;
@@ -13517,9 +13518,9 @@ LABEL_29:
     bf_read::SetOverflowFlag(pReadBuf);
     pReadBuf = pReadBufc;
     m_nDataBits = pReadBufc->m_nDataBits;
-    v20 = pReadBufc->m_iCurBit;
+    v18 = pReadBufc->m_iCurBit;
 LABEL_26:
-    if ( m_nDataBits - v20 <= 0 )
+    if ( m_nDataBits - v18 <= 0 )
     {
       pReadBufe = pReadBuf;
       bf_read::SetOverflowFlag(pReadBuf);
@@ -13527,39 +13528,39 @@ LABEL_26:
     }
     else
     {
-      v22 = pReadBuf->m_pData;
-      v23 = v20 + 1;
-      v24 = *&pReadBuf->m_pData[4 * (v20 >> 5)];
-      pReadBuf->m_iCurBit = v20 + 1;
-      if ( _bittest(&v24, v20) )
+      v20 = pReadBuf->m_pData;
+      v21 = v18 + 1;
+      v22 = *&pReadBuf->m_pData[4 * (v18 >> 5)];
+      pReadBuf->m_iCurBit = v18 + 1;
+      if ( _bittest(&v22, v18) )
       {
-        if ( m_nDataBits - v23 <= 9 )
+        if ( m_nDataBits - v21 <= 9 )
           goto LABEL_29;
-        pReadBuf->m_iCurBit = v20 + 11;
-        v8 = ((*&v22[4 * (v23 >> 5)] >> (v23 & 0x1F)) | (*&v22[4 * ((v20 + 10) >> 5)] << (32 - (v23 & 0x1F)))) & 0x3FF;
+        pReadBuf->m_iCurBit = v18 + 11;
+        v8 = ((*&v20[4 * (v21 >> 5)] >> (v21 & 0x1F)) | (*&v20[4 * ((v18 + 10) >> 5)] << (32 - (v21 & 0x1F)))) & 0x3FF;
         goto LABEL_5;
       }
     }
     pReadBufa = pReadBuf;
     OneBit = bf_read::ReadOneBit(pReadBuf);
     pReadBuf = pReadBufa;
-    v26 = pReadBufa->m_iCurBit;
-    v27 = pReadBufa->m_nDataBits;
+    v24 = pReadBufa->m_iCurBit;
+    v25 = pReadBufa->m_nDataBits;
     if ( OneBit != 0 )
     {
-      if ( v27 - v26 > 16 )
+      if ( v25 - v24 > 16 )
       {
-        v28 = pReadBufa->m_pData;
-        pReadBufa->m_iCurBit = v26 + 17;
-        v8 = ((*&v28[4 * (v26 >> 5)] >> (v26 & 0x1F)) | (*&v28[4 * ((v26 + 16) >> 5)] << (32 - (v26 & 0x1F)))) & 0x1FFFF;
+        v26 = pReadBufa->m_pData;
+        pReadBufa->m_iCurBit = v24 + 17;
+        v8 = ((*&v26[4 * (v24 >> 5)] >> (v24 & 0x1F)) | (*&v26[4 * ((v24 + 16) >> 5)] << (32 - (v24 & 0x1F)))) & 0x1FFFF;
         goto LABEL_5;
       }
     }
-    else if ( v27 - v26 > 30 )
+    else if ( v25 - v24 > 30 )
     {
-      v29 = pReadBufa->m_pData;
-      pReadBufa->m_iCurBit = v26 + 31;
-      v8 = ((*&v29[4 * (v26 >> 5)] >> (v26 & 0x1F)) | (*&v29[4 * ((v26 + 30) >> 5)] << (32 - (v26 & 0x1F))))
+      v27 = pReadBufa->m_pData;
+      pReadBufa->m_iCurBit = v24 + 31;
+      v8 = ((*&v27[4 * (v24 >> 5)] >> (v24 & 0x1F)) | (*&v27[4 * ((v24 + 30) >> 5)] << (32 - (v24 & 0x1F))))
          & 0x7FFFFFFF;
       goto LABEL_5;
     }
@@ -13568,16 +13569,16 @@ LABEL_26:
     pReadBuf = pReadBufa;
     goto LABEL_30;
   }
-  v19 = pReadBuf->m_pData;
-  v20 = v7 + 1;
-  v21 = *&pReadBuf->m_pData[4 * (v7 >> 5)];
+  v17 = pReadBuf->m_pData;
+  v18 = v7 + 1;
+  v19 = *&pReadBuf->m_pData[4 * (v7 >> 5)];
   pReadBuf->m_iCurBit = v7 + 1;
-  if ( !_bittest(&v21, v7) )
+  if ( !_bittest(&v19, v7) )
     goto LABEL_26;
-  if ( m_nDataBits - v20 <= 3 )
+  if ( m_nDataBits - v18 <= 3 )
     goto LABEL_29;
   pReadBuf->m_iCurBit = v7 + 5;
-  v8 = ((*&v19[4 * (v20 >> 5)] >> (v20 & 0x1F)) | (*&v19[4 * ((v7 + 4) >> 5)] << (32 - (v20 & 0x1F)))) & 0xF;
+  v8 = ((*&v17[4 * (v18 >> 5)] >> (v18 & 0x1F)) | (*&v17[4 * ((v7 + 4) >> 5)] << (32 - (v18 & 0x1F)))) & 0xF;
 LABEL_5:
   if ( v8 <= 0 )
   {
@@ -13589,10 +13590,10 @@ LABEL_30:
   {
     if ( LoggingSystem_IsChannelEnabled(LOG_GENERAL, 4) != 0 )
     {
-      v35.m_szFile = "../public/tier2/fieldpath.h";
-      v35.m_szFunction = "Path_PopLast";
-      v35.m_nLine = 477;
-      LoggingSystem_Log(LOG_GENERAL, LoggingSeverity_t::LS_ERROR, &v35, "Path_PopLast failed for read only CFieldPath");
+      v33.m_szFile = "../public/tier2/fieldpath.h";
+      v33.m_szFunction = "Path_PopLast";
+      v33.m_nLine = 477;
+      LoggingSystem_Log(LOG_GENERAL, LoggingSeverity_t::LS_ERROR, &v33, "Path_PopLast failed for read only CFieldPath");
     }
     goto LABEL_15;
   }
@@ -13612,13 +13613,13 @@ LABEL_11:
     {
       if ( LoggingSystem_IsChannelEnabled(LOG_GENERAL, 4) != 0 )
       {
-        v35.m_szFile = "../public/tier2/fieldpath.h";
-        v35.m_szFunction = "GetPathData";
-        v35.m_nLine = 514;
-        LoggingSystem_Log(LOG_GENERAL, LoggingSeverity_t::LS_ERROR, &v35, "GetPathData failed for read only CFieldPath");
+        v33.m_szFile = "../public/tier2/fieldpath.h";
+        v33.m_szFunction = "GetPathData";
+        v33.m_nLine = 514;
+        LoggingSystem_Log(LOG_GENERAL, LoggingSeverity_t::LS_ERROR, &v33, "GetPathData failed for read only CFieldPath");
       }
 LABEL_15:
-      if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v15, v16, v13, v14, v17, v18) != 0 )
+      if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v15, v16, v13, v14) != 0 )
         loc_0 = -559038737;
       Plat_ExitProcess(1);
     }
@@ -13651,18 +13652,20 @@ void __fastcall FieldOp_Read_PopNAndNonTopographical(CFieldPath *const from, bf_
   __int64 v20; // rsi
   __int64 v21; // r8
   __int64 v22; // r9
-  int v23; // eax
-  int v24; // edx
-  const unsigned __int8 *v25; // rdi
-  int v26; // esi
-  int v27; // eax
-  const unsigned __int8 *v28; // r8
+  __int64 v23; // r8
+  __int64 v24; // r9
+  int v25; // eax
+  int v26; // edx
+  const unsigned __int8 *v27; // rdi
+  int v28; // esi
+  int v29; // eax
+  const unsigned __int8 *v30; // r8
   int OneBit; // eax
-  int v30; // edx
-  bool v31; // zf
-  const unsigned __int8 *v32; // r8
-  const unsigned __int8 *v33; // r8
-  LeafCodeInfo_t v34; // [rsp+0h] [rbp-40h] BYREF
+  int v32; // edx
+  bool v33; // zf
+  const unsigned __int8 *v34; // r8
+  const unsigned __int8 *v35; // r8
+  LeafCodeInfo_t v36; // [rsp+0h] [rbp-40h] BYREF
 
   m_nDataBits = pReadBuf->m_nDataBits;
   m_iCurBit = pReadBuf->m_iCurBit;
@@ -13699,58 +13702,58 @@ LABEL_37:
     bf_read::SetOverflowFlag(pReadBuf);
     goto LABEL_28;
   }
-  v25 = pReadBuf->m_pData;
-  v26 = v8 + 1;
-  v27 = *&pReadBuf->m_pData[4 * (v8 >> 5)];
+  v27 = pReadBuf->m_pData;
+  v28 = v8 + 1;
+  v29 = *&pReadBuf->m_pData[4 * (v8 >> 5)];
   pReadBuf->m_iCurBit = v8 + 1;
-  if ( !_bittest(&v27, v8) )
+  if ( !_bittest(&v29, v8) )
   {
 LABEL_28:
     if ( bf_read::ReadOneBit(pReadBuf) != 0 )
     {
-      v23 = pReadBuf->m_nDataBits;
-      v24 = pReadBuf->m_iCurBit;
-      if ( v23 - v24 > 9 )
+      v25 = pReadBuf->m_nDataBits;
+      v26 = pReadBuf->m_iCurBit;
+      if ( v25 - v26 > 9 )
       {
-        v28 = pReadBuf->m_pData;
-        pReadBuf->m_iCurBit = v24 + 10;
-        v9 = ((*&v28[4 * (v24 >> 5)] >> (v24 & 0x1F)) | (*&v28[4 * ((v24 + 9) >> 5)] << (32 - (v24 & 0x1F)))) & 0x3FF;
+        v30 = pReadBuf->m_pData;
+        pReadBuf->m_iCurBit = v26 + 10;
+        v9 = ((*&v30[4 * (v26 >> 5)] >> (v26 & 0x1F)) | (*&v30[4 * ((v26 + 9) >> 5)] << (32 - (v26 & 0x1F)))) & 0x3FF;
         goto LABEL_5;
       }
     }
     else
     {
       OneBit = bf_read::ReadOneBit(pReadBuf);
-      v30 = pReadBuf->m_iCurBit;
-      v31 = OneBit == 0;
-      v23 = pReadBuf->m_nDataBits;
-      if ( v31 )
+      v32 = pReadBuf->m_iCurBit;
+      v33 = OneBit == 0;
+      v25 = pReadBuf->m_nDataBits;
+      if ( v33 )
       {
-        if ( v23 - v30 > 30 )
+        if ( v25 - v32 > 30 )
         {
-          v33 = pReadBuf->m_pData;
-          pReadBuf->m_iCurBit = v30 + 31;
-          v9 = ((*&v33[4 * (v30 >> 5)] >> (v30 & 0x1F)) | (*&v33[4 * ((v30 + 30) >> 5)] << (32 - (v30 & 0x1F))))
+          v35 = pReadBuf->m_pData;
+          pReadBuf->m_iCurBit = v32 + 31;
+          v9 = ((*&v35[4 * (v32 >> 5)] >> (v32 & 0x1F)) | (*&v35[4 * ((v32 + 30) >> 5)] << (32 - (v32 & 0x1F))))
              & 0x7FFFFFFF;
           goto LABEL_5;
         }
       }
-      else if ( v23 - v30 > 16 )
+      else if ( v25 - v32 > 16 )
       {
-        v32 = pReadBuf->m_pData;
-        pReadBuf->m_iCurBit = v30 + 17;
-        v9 = ((*&v32[4 * (v30 >> 5)] >> (v30 & 0x1F)) | (*&v32[4 * ((v30 + 16) >> 5)] << (32 - (v30 & 0x1F)))) & 0x1FFFF;
+        v34 = pReadBuf->m_pData;
+        pReadBuf->m_iCurBit = v32 + 17;
+        v9 = ((*&v34[4 * (v32 >> 5)] >> (v32 & 0x1F)) | (*&v34[4 * ((v32 + 16) >> 5)] << (32 - (v32 & 0x1F)))) & 0x1FFFF;
         goto LABEL_5;
       }
     }
-    pReadBuf->m_iCurBit = v23;
+    pReadBuf->m_iCurBit = v25;
     bf_read::SetOverflowFlag(pReadBuf);
     goto LABEL_31;
   }
-  if ( m_nDataBits - v26 <= 3 )
+  if ( m_nDataBits - v28 <= 3 )
     goto LABEL_37;
   pReadBuf->m_iCurBit = v8 + 5;
-  v9 = ((*&v25[4 * (v26 >> 5)] >> (v26 & 0x1F)) | (*&v25[4 * ((v8 + 4) >> 5)] << (32 - (v26 & 0x1F)))) & 0xF;
+  v9 = ((*&v27[4 * (v28 >> 5)] >> (v28 & 0x1F)) | (*&v27[4 * ((v8 + 4) >> 5)] << (32 - (v28 & 0x1F)))) & 0xF;
 LABEL_5:
   if ( v9 <= 0 )
   {
@@ -13762,13 +13765,13 @@ LABEL_31:
   {
     if ( LoggingSystem_IsChannelEnabled(LOG_GENERAL, 4) != 0 )
     {
-      v34.m_szFile = "../public/tier2/fieldpath.h";
-      v34.m_szFunction = "Path_PopLast";
-      v34.m_nLine = 477;
+      v36.m_szFile = "../public/tier2/fieldpath.h";
+      v36.m_szFunction = "Path_PopLast";
+      v36.m_nLine = 477;
       LoggingSystem_Log(
         LOG_GENERAL,
         LoggingSeverity_t::LS_ERROR,
-        &v34,
+        &v36,
         "Path_PopLast failed for read only CFieldPath",
         v21,
         v22);
@@ -13807,19 +13810,19 @@ LABEL_11:
             {
               if ( LoggingSystem_IsChannelEnabled(LOG_GENERAL, 4) != 0 )
               {
-                v34.m_szFile = "../public/tier2/fieldpath.h";
-                v34.m_szFunction = "GetPathData";
-                v34.m_nLine = 514;
+                v36.m_szFile = "../public/tier2/fieldpath.h";
+                v36.m_szFunction = "GetPathData";
+                v36.m_nLine = 514;
                 LoggingSystem_Log(
                   LOG_GENERAL,
                   LoggingSeverity_t::LS_ERROR,
-                  &v34,
+                  &v36,
                   "GetPathData failed for read only CFieldPath",
-                  v21,
-                  v22);
+                  v23,
+                  v24);
               }
 LABEL_20:
-              if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v19, v20, v17, v18, v21, v22) != 0 )
+              if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v19, v20, v17, v18) != 0 )
                 loc_0 = -559038737;
               Plat_ExitProcess(1);
             }
@@ -13880,7 +13883,7 @@ void __fastcall FieldOp_Read_NonTopoComplex(CFieldPath *const from, bf_read *pRe
             v13,
             v14);
         }
-        if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v11, v12, v9, v10, v13, v14) != 0 )
+        if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v11, v12, v9, v10) != 0 )
           loc_0 = -559038737;
         Plat_ExitProcess(1);
 LABEL_13:
@@ -13920,7 +13923,7 @@ void __fastcall FieldOp_Read_NonTopoPenultimatePluseOne(CFieldPath *const from, 
       goto LABEL_7;
     while ( 1 )
     {
-      if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v6, v7, v4, v5, v8, v9) != 0 )
+      if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v6, v7, v4, v5) != 0 )
         loc_0 = -559038737;
       Plat_ExitProcess(1);
 LABEL_7:
@@ -14009,7 +14012,7 @@ LABEL_9:
               v16,
               v17);
           }
-          if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v14, v15, v12, v13, v16, v17) != 0 )
+          if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v14, v15, v12, v13) != 0 )
             loc_0 = -559038737;
           Plat_ExitProcess(1);
         }
@@ -14046,7 +14049,7 @@ void __fastcall FieldOp_Read_FieldPathEncodeFinish(CFieldPath *const from, bf_re
       goto LABEL_7;
     while ( 1 )
     {
-      if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v6, v7, v4, v5, v8, v9) != 0 )
+      if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v6, v7, v4, v5) != 0 )
         loc_0 = -559038737;
       Plat_ExitProcess(1);
 LABEL_7:
@@ -15733,11 +15736,11 @@ CFieldPathHuffmanEncoder::INode *__fastcall CFieldPathHuffmanEncoder::BuildTree(
       if ( m_pMemory[v3] > 0 )
         v6 = m_pMemory[v3];
       slot = i + 1;
-      v7 = operator new(0x18u);
+      v7 = operator new(0x18u);  // new CFieldPathHuffmanEncoder::LeafNode
       v7->slot = i;
       v8 = v7;
       v7->f = v6;
-      v7->_vptr_INode = off_47C4F90;
+      v7->_vptr_INode = off_47C4F90;  // vptr: CFieldPathHuffmanEncoder::LeafNode
       v9 = trees.m_heap.m_Size;
       LODWORD(v7[1]._vptr_INode) = v3;
       childR = v3;
@@ -15863,13 +15866,13 @@ LABEL_39:
         v24 = v25;
       }
     }
-    v29 = operator new(0x20u);
+    v29 = operator new(0x20u);  // new CFieldPathHuffmanEncoder::InternalNode
     v30 = childL->f + childRa->f;
     v29->slot = slot;
     v29[1]._vptr_INode = childRa;
     *&v29[1].f = childL;
     v29->f = v30;
-    v29->_vptr_INode = off_47C4F50;
+    v29->_vptr_INode = off_47C4F50;  // vptr: CFieldPathHuffmanEncoder::InternalNode
     v31 = trees.m_heap.m_Size;
     v32 = trees.m_heap.m_Size;
     if ( trees.m_heap.m_Size == trees.m_heap.m_Memory.m_nAllocationCount )
@@ -16017,9 +16020,7 @@ int __fastcall PackedFieldPathList_t::Unpack(PackedFieldPathList_t *const this, 
   __int64 v16; // rcx
   __int64 v17; // rdi
   __int64 v18; // rsi
-  __int64 v19; // r8
-  __int64 v20; // r9
-  LeafCodeInfo_t v21; // [rsp+0h] [rbp-40h] BYREF
+  LeafCodeInfo_t v19; // [rsp+0h] [rbp-40h] BYREF
 
   m_nAllocated = pPaths->m_nAllocated;
   m_nCount = this->m_nCount;
@@ -16059,17 +16060,17 @@ LABEL_9:
       {
         if ( LoggingSystem_IsChannelEnabled(LOG_GENERAL, 4) != 0 )
         {
-          v21.m_szFile = "../public/tier1/utlleanvector.h";
-          v21.m_szFunction = "EnsureCapacity";
-          v21.m_nLine = 104;
+          v19.m_szFile = "../public/tier1/utlleanvector.h";
+          v19.m_szFunction = "EnsureCapacity";
+          v19.m_nLine = 104;
           LoggingSystem_Log(
             LOG_GENERAL,
             LoggingSeverity_t::LS_ERROR,
-            &v21,
+            &v19,
             "%s allocation count overflow",
             "EnsureCapacity");
         }
-        if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v17, v18, v15, v16, v19, v20) != 0 )
+        if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v17, v18, v15, v16) != 0 )
           loc_0 = -559038737;
         Plat_ExitProcess(1);
         JUMPOUT(0x3128DC9);

@@ -13,7 +13,7 @@ void __fastcall CDOTA_Bot_AbilityUsage_ArcaneBoots::CDOTA_Bot_AbilityUsage_Arcan
   this->m_pAbility = pAbility;
   this->m_pBot = pBot;
   this->m_bUseOnCreeps = 0;
-  this->_vptr_CDOTA_Bot_AbilityUsage = off_42C5A10;
+  this->_vptr_CDOTA_Bot_AbilityUsage = off_42C5A10;  // vptr: CDOTA_Bot_AbilityUsage_ArcaneBoots
   this->m_iManaAmount = CDOTABaseAbility::GetLevelSpecialValueFor<int>(pAbility, "replenish_amount", -1, 1);
   this->m_iRadius = CDOTABaseAbility::GetLevelSpecialValueFor<int>(pAbility, "replenish_radius", -1, 1);
 }

@@ -107,7 +107,7 @@ CEntityInstance *__fastcall CGib::CEntityInstanceEntityClass::ConstructInstance(
 void __fastcall CGib::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CGib::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -117,7 +117,7 @@ void __fastcall CGib::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
 void __fastcall CGib::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CGib::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -348,7 +348,7 @@ CEntityInstance *__fastcall CRagGib::CEntityInstanceEntityClass::ConstructInstan
 void __fastcall CRagGib::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CRagGib::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -358,7 +358,7 @@ void __fastcall CRagGib::CEntityInstanceEntityClass::~CEntityInstanceEntityClass
 void __fastcall CRagGib::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CRagGib::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }

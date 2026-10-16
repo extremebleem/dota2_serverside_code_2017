@@ -224,7 +224,7 @@ void __fastcall CPhysicsGameSystem::CPhysicsGameSystem(CPhysicsGameSystem *const
 {
   PhysicsGlobalProfiler::Stats_t *v2; // rax
 
-  this->_vptr_IGameSystem = off_3FCDAD0;
+  this->_vptr_IGameSystem = off_3FCDAD0;  // vptr: CPhysicsGameSystem
   this->m_PhysicsSpawnGroups.m_Tree.m_Elements.m_pMemory = 0;
   this->_vptr_IPhysicsWorldEventListener = &off_3FCDC28;
   this->m_PhysicsSpawnGroups.m_Tree.m_LessFunc.m_LessFunc = CDefOps<unsigned int>::LessFunc;
@@ -701,8 +701,8 @@ void __fastcall CPhysicsGameSystem::GameInit(CPhysicsGameSystem *const this, con
   m_pResourceManifestPrerequisite = this->m_pResourceManifestPrerequisite;
   if ( m_pResourceManifestPrerequisite == 0 )
   {
-    v16 = operator new(0x28u);
-    v16->_vptr_IPrerequisite = off_3FCABD0;
+    v16 = operator new(0x28u);  // new CResourceManifestPrerequisite (size matches)
+    v16->_vptr_IPrerequisite = off_3FCABD0;  // vptr: CResourceManifestPrerequisite
     v16->m_nRefCount = 0;
     v16->m_hResourceManifests.m_Size = 0;
     v16->m_hResourceManifests.m_Memory.m_pMemory = 0;
@@ -3959,11 +3959,11 @@ bool __fastcall CPhysicsGameSystem::DispatchCallbacks(CPhysicsGameSystem *const 
         v10->m_pStartTouchAdaptor = 0;
         goto LABEL_18;
       }
-      v17 = operator new(0x100u);
+      v17 = operator new(0x100u);  // new CGameEventStartTouchAdaptor (size matches)
       v17->m_Contact.m_pShape1 = 0;
       v17->m_Contact.m_pShape2 = 0;
       v17->m_Contact.m_Manifolds.m_pObj = 0;
-      v17->_vptr_IPhysicsCollisionData = off_3FCDC90;
+      v17->_vptr_IPhysicsCollisionData = off_3FCDC90;  // vptr: CGameEventStartTouchAdaptor
       v17->m_Event.surfaceProps[0].m_nHashCode = 0;
       v17->m_Event.surfaceProps[1].m_nHashCode = 0;
       v17->m_Event.m_Contact.m_pShape1 = 0;
@@ -4181,7 +4181,7 @@ LABEL_64:
         if ( v68 != 0 )
         {
           v69 = v68->m_Event.m_Contact.m_Manifolds.m_pObj;
-          v68->_vptr_IPhysicsCollisionData = off_3FCDC90;
+          v68->_vptr_IPhysicsCollisionData = off_3FCDC90;  // vptr: CGameEventStartTouchAdaptor
           if ( v69 != 0 )
           {
             v20 = v69->m_nRefCount-- == 1;
@@ -4189,7 +4189,7 @@ LABEL_64:
               (*(*g_pMemAlloc + 16LL))(g_pMemAlloc);
           }
           v70 = v68->m_Contact.m_Manifolds.m_pObj;
-          v68->_vptr_IPhysicsCollisionData = off_3FCDC50;
+          v68->_vptr_IPhysicsCollisionData = off_3FCDC50;  // vptr: CLegacyCollisionData
           if ( v70 != 0 )
           {
             v20 = v70->m_nRefCount-- == 1;
@@ -4434,7 +4434,7 @@ void __fastcall CPhysicsGameSystem::UpdateDebugSceneSession(
   __int64 v4; // rdx
   ISceneWorld *pDebugSceneWorld; // rsi
 
-  v3 = (*g_pLoopModeGameSharedState->_vptr_ILoopModeGameSharedState)(g_pLoopModeGameSharedState);
+  v3 = g_pLoopModeGameSharedState->GetWorldSession();
   if ( v3 != 0 )
   {
     v4 = *v3;
@@ -5362,7 +5362,7 @@ void __fastcall CPhysicsGameSystem::QueueScaleChanged(
   if ( v10 != 0 )
   {
     v10->m_hOwner.m_Value.m_Index = -1;
-    v10->_vptr_CGameSceneNodeHandle = off_3FB43F0;
+    v10->_vptr_CGameSceneNodeHandle = off_3FB43F0;  // vptr: CGameSceneNodeHandle
     v10->m_name.m_Value.m_nHashCode = 0;
     if ( v4 != -1 )
       v10->m_hOwner.m_Value.m_Index = v4;
@@ -5413,27 +5413,27 @@ bool __fastcall IsAnimatedPhysics(CSkeletonInstance *pSkeleton)
   IPhysAggregateInstance *m_pVPhysicsAggregate; // rbx
   const ResourceBindingBase_t *m_pBinding; // rax
   const CModel *m_pData; // r12
-  __int64 v4; // r13
-  bool v5; // bl
+  __int64 v5; // r13
+  bool v6; // bl
 
   m_pVPhysicsAggregate = pSkeleton->m_modelState.m_pVPhysicsAggregate;
-  if ( !m_pVPhysicsAggregate
+  if ( m_pVPhysicsAggregate == 0
     || ((*(m_pVPhysicsAggregate->_vptr_IPhysAggregateInstance + 26))(pSkeleton->m_modelState.m_pVPhysicsAggregate) & 2) == 0 )
   {
     return 0;
   }
   m_pBinding = pSkeleton->m_modelState.m_hModel.m_Value.m_pBinding;
-  if ( !m_pBinding )
+  if ( m_pBinding == 0 )
   {
     (*(m_pVPhysicsAggregate->_vptr_IPhysAggregateInstance + 41))(m_pVPhysicsAggregate);
     return 0;
   }
   m_pData = m_pBinding->m_pData;
-  v4 = (*(m_pVPhysicsAggregate->_vptr_IPhysAggregateInstance + 41))(m_pVPhysicsAggregate);
-  v5 = m_pData != 0 && v4 != 0;
-  if ( !v5 || CModel::NumBones(m_pData) <= 0 || *(v4 + 32) <= 0 )
+  v5 = (*(m_pVPhysicsAggregate->_vptr_IPhysAggregateInstance + 41))(m_pVPhysicsAggregate);
+  v6 = m_pData != 0 && v5 != 0;
+  if ( !v6 || CModel::NumBones(m_pData) <= 0 || *(v5 + 32) <= 0 )
     return 0;
-  return v5;
+  return v6;
 }
 
 

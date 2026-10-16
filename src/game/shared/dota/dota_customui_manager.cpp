@@ -247,7 +247,7 @@ LABEL_32:
 // CDOTA_CustomUIManager::CDOTA_CustomUIManager  (line 49, @0x00000000024724b0, libserver.so)
 void __fastcall CDOTA_CustomUIManager::CDOTA_CustomUIManager(CDOTA_CustomUIManager *const this)
 {
-  this->_vptr_IGameSystem = off_40EC150;
+  this->_vptr_IGameSystem = off_40EC150;  // vptr: CDOTA_CustomUIManager
   this->m_bCustomUISetup = 0;
 }
 
@@ -256,7 +256,7 @@ void __fastcall CDOTA_CustomUIManager::CDOTA_CustomUIManager(CDOTA_CustomUIManag
 // calls: IGameSystem::~IGameSystem
 void __fastcall CDOTA_CustomUIManager::~CDOTA_CustomUIManager(CDOTA_CustomUIManager *const this)
 {
-  this->_vptr_IGameSystem = off_3F7C1B0;
+  this->_vptr_IGameSystem = off_3F7C1B0;  // vptr: CAutoGameSystem
   IGameSystem::~IGameSystem(this);
 }
 
@@ -265,7 +265,7 @@ void __fastcall CDOTA_CustomUIManager::~CDOTA_CustomUIManager(CDOTA_CustomUIMana
 // calls: IGameSystem::~IGameSystem, operator delete
 void __fastcall CDOTA_CustomUIManager::~CDOTA_CustomUIManager(CDOTA_CustomUIManager *const this)
 {
-  this->_vptr_IGameSystem = off_3F7C1B0;
+  this->_vptr_IGameSystem = off_3F7C1B0;  // vptr: CAutoGameSystem
   IGameSystem::~IGameSystem(this);
   operator delete(this);
 }

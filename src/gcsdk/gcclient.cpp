@@ -576,40 +576,38 @@ bool __fastcall GCSDK::CProtoBufGCClientSendHandler::BAsyncSend(
   int m_enabled; // eax
   bool v7; // r12
   bool v8; // r13
-  __int64 v9; // rdi
-  bool v10; // r14
-  unsigned __int64 v12; // r12
-  ThreadId_t v13; // r13
-  uint64 v14; // rcx
-  unsigned __int64 v15; // r13
-  ThreadId_t v16; // r15
+  bool v9; // r14
+  unsigned __int64 v11; // r12
+  ThreadId_t v12; // r13
+  uint64 v13; // rcx
+  unsigned __int64 v14; // r13
+  ThreadId_t v15; // r15
   CVProfNode *m_pParent; // rax
-  uint64 v18; // rcx
-  unsigned __int64 v19; // r13
-  __int64 v20; // rdi
-  unsigned __int64 v21; // rax
+  uint64 v17; // rcx
+  unsigned __int64 v18; // r13
+  unsigned __int64 v19; // rax
   uint64 m_numTimeBaseTicks; // rcx
-  uint64 v23; // rcx
-  int v24; // r13d
-  unsigned __int64 v25; // r13
-  uint64 v26; // rcx
-  uint64 v27; // rcx
-  CVProfNode *v28; // rax
+  uint64 v21; // rcx
+  int v22; // r13d
+  unsigned __int64 v23; // r13
+  uint64 v24; // rcx
+  uint64 v25; // rcx
+  CVProfNode *v26; // rax
   CVProfNode *SubNode; // rax
-  CVProfile::CBudgetGroup *v30; // rax
+  CVProfile::CBudgetGroup *v28; // rax
   CVProfNode *m_pCurNode; // rax
-  CVProfile::CBudgetGroup *v32; // rax
+  CVProfile::CBudgetGroup *v30; // rax
   ThreadId_t m_TargetThreadId; // [rsp+8h] [rbp-48h]
-  ThreadId_t v34; // [rsp+8h] [rbp-48h]
+  ThreadId_t v32; // [rsp+8h] [rbp-48h]
 
   m_enabled = g_VProfCurrentProfile.m_enabled;
   v7 = m_enabled != 0;
   v8 = 0;
   if ( m_enabled != 0 )
   {
-    v19 = __rdtsc();
+    v18 = __rdtsc();
     m_TargetThreadId = g_VProfCurrentProfile.m_TargetThreadId;
-    if ( m_TargetThreadId == ThreadGetCurrentId(this) )
+    if ( m_TargetThreadId == ThreadGetCurrentId() )
     {
       m_pCurNode = g_VProfCurrentProfile.m_pCurNode;
       if ( m_pCurNode->m_pszName != "CGCClient" )
@@ -617,22 +615,22 @@ bool __fastcall GCSDK::CProtoBufGCClientSendHandler::BAsyncSend(
         m_pCurNode = CVProfNode::GetSubNode(g_VProfCurrentProfile.m_pCurNode, "CGCClient", 0, "Steam", 4);
         g_VProfCurrentProfile.m_pCurNode = m_pCurNode;
       }
-      v32 = &g_VProfCurrentProfile.m_pBudgetGroups[m_pCurNode->m_BudgetGroupID];
-      v32->m_BudgetFlags |= 4u;
+      v30 = &g_VProfCurrentProfile.m_pBudgetGroups[m_pCurNode->m_BudgetGroupID];
+      v30->m_BudgetFlags |= 4u;
       CVProfNode::EnterScope(g_VProfCurrentProfile.m_pCurNode);
       g_VProfCurrentProfile.m_fAtRoot = 0;
     }
-    v21 = __rdtsc();
+    v19 = __rdtsc();
     m_numTimeBaseTicks = g_VProfCurrentProfile.m_ScopeProfiler.m_numTimeBaseTicks;
     ++g_VProfCurrentProfile.m_ScopeProfiler.m_numCalls;
-    v23 = m_numTimeBaseTicks - v19;
-    v24 = g_VProfCurrentProfile.m_enabled;
-    g_VProfCurrentProfile.m_ScopeProfiler.m_numTimeBaseTicks = v23 + (v21 | (HIDWORD(v21) << 32));
-    if ( v24 != 0 )
+    v21 = m_numTimeBaseTicks - v18;
+    v22 = g_VProfCurrentProfile.m_enabled;
+    g_VProfCurrentProfile.m_ScopeProfiler.m_numTimeBaseTicks = v21 + (v19 | (HIDWORD(v19) << 32));
+    if ( v22 != 0 )
     {
-      v25 = __rdtsc();
-      v34 = g_VProfCurrentProfile.m_TargetThreadId;
-      if ( v34 == ThreadGetCurrentId(v20) )
+      v23 = __rdtsc();
+      v32 = g_VProfCurrentProfile.m_TargetThreadId;
+      if ( v32 == ThreadGetCurrentId() )
       {
         SubNode = g_VProfCurrentProfile.m_pCurNode;
         if ( SubNode->m_pszName != "CGCClient - BSendGCMsgToClient (ProtoBuf)" )
@@ -645,30 +643,30 @@ bool __fastcall GCSDK::CProtoBufGCClientSendHandler::BAsyncSend(
                       4);
           g_VProfCurrentProfile.m_pCurNode = SubNode;
         }
-        v30 = &g_VProfCurrentProfile.m_pBudgetGroups[SubNode->m_BudgetGroupID];
-        v30->m_BudgetFlags |= 4u;
+        v28 = &g_VProfCurrentProfile.m_pBudgetGroups[SubNode->m_BudgetGroupID];
+        v28->m_BudgetFlags |= 4u;
         CVProfNode::EnterScope(g_VProfCurrentProfile.m_pCurNode);
         g_VProfCurrentProfile.m_fAtRoot = 0;
       }
-      v26 = g_VProfCurrentProfile.m_ScopeProfiler.m_numTimeBaseTicks;
+      v24 = g_VProfCurrentProfile.m_ScopeProfiler.m_numTimeBaseTicks;
       ++g_VProfCurrentProfile.m_ScopeProfiler.m_numCalls;
-      v27 = v26 - v25;
+      v25 = v24 - v23;
       v8 = v7;
-      g_VProfCurrentProfile.m_ScopeProfiler.m_numTimeBaseTicks = v27 + __rdtsc();
+      g_VProfCurrentProfile.m_ScopeProfiler.m_numTimeBaseTicks = v25 + __rdtsc();
     }
     else
     {
       v8 = 0;
     }
   }
-  v10 = GCSDK::CGCClient::BSendMessage(this->m_pClient, eMsg | 0x80000000, pubMsgBytes, cubSize);
+  v9 = GCSDK::CGCClient::BSendMessage(this->m_pClient, eMsg | 0x80000000, pubMsgBytes, cubSize);
   if ( v8 )
   {
-    v15 = __rdtsc();
+    v14 = __rdtsc();
     if ( !g_VProfCurrentProfile.m_fAtRoot || g_VProfCurrentProfile.m_enabled != 0 )
     {
-      v16 = g_VProfCurrentProfile.m_TargetThreadId;
-      if ( v16 == ThreadGetCurrentId(v9) )
+      v15 = g_VProfCurrentProfile.m_TargetThreadId;
+      if ( v15 == ThreadGetCurrentId() )
       {
         if ( CVProfNode::ExitScope(g_VProfCurrentProfile.m_pCurNode) != 0 )
         {
@@ -685,38 +683,38 @@ bool __fastcall GCSDK::CProtoBufGCClientSendHandler::BAsyncSend(
         g_VProfCurrentProfile.m_fAtRoot = m_pParent == &g_VProfCurrentProfile.m_Root;
       }
     }
-    v18 = g_VProfCurrentProfile.m_ScopeProfiler.m_numTimeBaseTicks;
+    v17 = g_VProfCurrentProfile.m_ScopeProfiler.m_numTimeBaseTicks;
     ++g_VProfCurrentProfile.m_ScopeProfiler.m_numCalls;
-    g_VProfCurrentProfile.m_ScopeProfiler.m_numTimeBaseTicks = v18 - v15 + __rdtsc();
+    g_VProfCurrentProfile.m_ScopeProfiler.m_numTimeBaseTicks = v17 - v14 + __rdtsc();
   }
   if ( v7 )
   {
-    v12 = __rdtsc();
+    v11 = __rdtsc();
     if ( !g_VProfCurrentProfile.m_fAtRoot || g_VProfCurrentProfile.m_enabled != 0 )
     {
-      v13 = g_VProfCurrentProfile.m_TargetThreadId;
-      if ( v13 == ThreadGetCurrentId(v9) )
+      v12 = g_VProfCurrentProfile.m_TargetThreadId;
+      if ( v12 == ThreadGetCurrentId() )
       {
         if ( CVProfNode::ExitScope(g_VProfCurrentProfile.m_pCurNode) != 0 )
         {
-          v28 = g_VProfCurrentProfile.m_pCurNode->m_pParent;
-          if ( v28 != 0 )
-            g_VProfCurrentProfile.m_pCurNode = v28;
+          v26 = g_VProfCurrentProfile.m_pCurNode->m_pParent;
+          if ( v26 != 0 )
+            g_VProfCurrentProfile.m_pCurNode = v26;
           else
-            v28 = g_VProfCurrentProfile.m_pCurNode;
+            v26 = g_VProfCurrentProfile.m_pCurNode;
         }
         else
         {
-          v28 = g_VProfCurrentProfile.m_pCurNode;
+          v26 = g_VProfCurrentProfile.m_pCurNode;
         }
-        g_VProfCurrentProfile.m_fAtRoot = v28 == &g_VProfCurrentProfile.m_Root;
+        g_VProfCurrentProfile.m_fAtRoot = v26 == &g_VProfCurrentProfile.m_Root;
       }
     }
-    v14 = g_VProfCurrentProfile.m_ScopeProfiler.m_numTimeBaseTicks;
+    v13 = g_VProfCurrentProfile.m_ScopeProfiler.m_numTimeBaseTicks;
     ++g_VProfCurrentProfile.m_ScopeProfiler.m_numCalls;
-    g_VProfCurrentProfile.m_ScopeProfiler.m_numTimeBaseTicks = v14 - v12 + __rdtsc();
+    g_VProfCurrentProfile.m_ScopeProfiler.m_numTimeBaseTicks = v13 - v11 + __rdtsc();
   }
-  return v10;
+  return v9;
 }
 
 
@@ -4417,7 +4415,7 @@ void __fastcall GCSDK::CGCClient::SOCacheUpdateMultipleMsg(
 // calls: GCSDK::CJob::~CJob
 void __fastcall GCSDK::CGCSOCreateJob::~CGCSOCreateJob(GCSDK::CGCSOCreateJob *const this)
 {
-  this->_vptr_CJob = off_40DB690;
+  this->_vptr_CJob = off_40DB690;  // vptr: GCSDK::CGCClientJob
   GCSDK::CJob::~CJob(this);
 }
 
@@ -4426,7 +4424,7 @@ void __fastcall GCSDK::CGCSOCreateJob::~CGCSOCreateJob(GCSDK::CGCSOCreateJob *co
 // calls: GCSDK::CJob::~CJob, operator delete
 void __fastcall GCSDK::CGCSOCreateJob::~CGCSOCreateJob(GCSDK::CGCSOCreateJob *const this)
 {
-  this->_vptr_CJob = off_40DB690;
+  this->_vptr_CJob = off_40DB690;  // vptr: GCSDK::CGCClientJob
   GCSDK::CJob::~CJob(this);
   operator delete(this);
 }
@@ -4468,10 +4466,10 @@ GCSDK::CJob *__fastcall GCSDK::CreateJob_CGCSOCreateJob(GCSDK::CGCClient *pGC)
 {
   GCSDK::CJob *v2; // rbx
 
-  v2 = operator new(0x140u);
+  v2 = operator new(0x140u);  // new GCSDK::CGCSOCreateJob
   GCSDK::CJob::CJob(v2, (pGC + 48));
   v2[1]._vptr_CJob = pGC;
-  v2->_vptr_CJob = off_47CFB30;
+  v2->_vptr_CJob = off_47CFB30;  // vptr: GCSDK::CGCSOCreateJob
   v2->m_pJobType = &GCSDK::g_JobType_CGCSOCreateJob;
   *(&v2[1] + 2) = 4;
   return v2;
@@ -4482,7 +4480,7 @@ GCSDK::CJob *__fastcall GCSDK::CreateJob_CGCSOCreateJob(GCSDK::CGCClient *pGC)
 // calls: GCSDK::CJob::~CJob
 void __fastcall GCSDK::CGCSODestroyJob::~CGCSODestroyJob(GCSDK::CGCSODestroyJob *const this)
 {
-  this->_vptr_CJob = off_40DB690;
+  this->_vptr_CJob = off_40DB690;  // vptr: GCSDK::CGCClientJob
   GCSDK::CJob::~CJob(this);
 }
 
@@ -4491,7 +4489,7 @@ void __fastcall GCSDK::CGCSODestroyJob::~CGCSODestroyJob(GCSDK::CGCSODestroyJob 
 // calls: GCSDK::CJob::~CJob, operator delete
 void __fastcall GCSDK::CGCSODestroyJob::~CGCSODestroyJob(GCSDK::CGCSODestroyJob *const this)
 {
-  this->_vptr_CJob = off_40DB690;
+  this->_vptr_CJob = off_40DB690;  // vptr: GCSDK::CGCClientJob
   GCSDK::CJob::~CJob(this);
   operator delete(this);
 }
@@ -4533,10 +4531,10 @@ GCSDK::CJob *__fastcall GCSDK::CreateJob_CGCSODestroyJob(GCSDK::CGCClient *pGC)
 {
   GCSDK::CJob *v2; // rbx
 
-  v2 = operator new(0x140u);
+  v2 = operator new(0x140u);  // new GCSDK::CGCSODestroyJob
   GCSDK::CJob::CJob(v2, (pGC + 48));
   v2[1]._vptr_CJob = pGC;
-  v2->_vptr_CJob = off_47CFBD0;
+  v2->_vptr_CJob = off_47CFBD0;  // vptr: GCSDK::CGCSODestroyJob
   v2->m_pJobType = &GCSDK::g_JobType_CGCSODestroyJob;
   *(&v2[1] + 2) = 4;
   return v2;
@@ -4547,7 +4545,7 @@ GCSDK::CJob *__fastcall GCSDK::CreateJob_CGCSODestroyJob(GCSDK::CGCClient *pGC)
 // calls: GCSDK::CJob::~CJob
 void __fastcall GCSDK::CGCSOUpdateJob::~CGCSOUpdateJob(GCSDK::CGCSOUpdateJob *const this)
 {
-  this->_vptr_CJob = off_40DB690;
+  this->_vptr_CJob = off_40DB690;  // vptr: GCSDK::CGCClientJob
   GCSDK::CJob::~CJob(this);
 }
 
@@ -4556,7 +4554,7 @@ void __fastcall GCSDK::CGCSOUpdateJob::~CGCSOUpdateJob(GCSDK::CGCSOUpdateJob *co
 // calls: GCSDK::CJob::~CJob, operator delete
 void __fastcall GCSDK::CGCSOUpdateJob::~CGCSOUpdateJob(GCSDK::CGCSOUpdateJob *const this)
 {
-  this->_vptr_CJob = off_40DB690;
+  this->_vptr_CJob = off_40DB690;  // vptr: GCSDK::CGCClientJob
   GCSDK::CJob::~CJob(this);
   operator delete(this);
 }
@@ -4598,10 +4596,10 @@ GCSDK::CJob *__fastcall GCSDK::CreateJob_CGCSOUpdateJob(GCSDK::CGCClient *pGC)
 {
   GCSDK::CJob *v2; // rbx
 
-  v2 = operator new(0x140u);
+  v2 = operator new(0x140u);  // new GCSDK::CGCSOUpdateJob
   GCSDK::CJob::CJob(v2, (pGC + 48));
   v2[1]._vptr_CJob = pGC;
-  v2->_vptr_CJob = off_47CFC30;
+  v2->_vptr_CJob = off_47CFC30;  // vptr: GCSDK::CGCSOUpdateJob
   v2->m_pJobType = &GCSDK::g_JobType_CGCSOUpdateJob;
   *(&v2[1] + 2) = 4;
   return v2;
@@ -4612,7 +4610,7 @@ GCSDK::CJob *__fastcall GCSDK::CreateJob_CGCSOUpdateJob(GCSDK::CGCClient *pGC)
 // calls: GCSDK::CJob::~CJob
 void __fastcall GCSDK::CGCSOUpdateMultipleJob::~CGCSOUpdateMultipleJob(GCSDK::CGCSOUpdateMultipleJob *const this)
 {
-  this->_vptr_CJob = off_40DB690;
+  this->_vptr_CJob = off_40DB690;  // vptr: GCSDK::CGCClientJob
   GCSDK::CJob::~CJob(this);
 }
 
@@ -4621,7 +4619,7 @@ void __fastcall GCSDK::CGCSOUpdateMultipleJob::~CGCSOUpdateMultipleJob(GCSDK::CG
 // calls: GCSDK::CJob::~CJob, operator delete
 void __fastcall GCSDK::CGCSOUpdateMultipleJob::~CGCSOUpdateMultipleJob(GCSDK::CGCSOUpdateMultipleJob *const this)
 {
-  this->_vptr_CJob = off_40DB690;
+  this->_vptr_CJob = off_40DB690;  // vptr: GCSDK::CGCClientJob
   GCSDK::CJob::~CJob(this);
   operator delete(this);
 }
@@ -4663,10 +4661,10 @@ GCSDK::CJob *__fastcall GCSDK::CreateJob_CGCSOUpdateMultipleJob(GCSDK::CGCClient
 {
   GCSDK::CJob *v2; // rbx
 
-  v2 = operator new(0x140u);
+  v2 = operator new(0x140u);  // new GCSDK::CGCSOUpdateMultipleJob
   GCSDK::CJob::CJob(v2, (pGC + 48));
   v2[1]._vptr_CJob = pGC;
-  v2->_vptr_CJob = off_47CFCF0;
+  v2->_vptr_CJob = off_47CFCF0;  // vptr: GCSDK::CGCSOUpdateMultipleJob
   v2->m_pJobType = &GCSDK::g_JobType_CGCSOUpdateMultipleJob;
   *(&v2[1] + 2) = 4;
   return v2;
@@ -4677,7 +4675,7 @@ GCSDK::CJob *__fastcall GCSDK::CreateJob_CGCSOUpdateMultipleJob(GCSDK::CGCClient
 // calls: GCSDK::CJob::~CJob
 void __fastcall GCSDK::CGCSOCacheSubscribedJob::~CGCSOCacheSubscribedJob(GCSDK::CGCSOCacheSubscribedJob *const this)
 {
-  this->_vptr_CJob = off_40DB690;
+  this->_vptr_CJob = off_40DB690;  // vptr: GCSDK::CGCClientJob
   GCSDK::CJob::~CJob(this);
 }
 
@@ -4686,7 +4684,7 @@ void __fastcall GCSDK::CGCSOCacheSubscribedJob::~CGCSOCacheSubscribedJob(GCSDK::
 // calls: GCSDK::CJob::~CJob, operator delete
 void __fastcall GCSDK::CGCSOCacheSubscribedJob::~CGCSOCacheSubscribedJob(GCSDK::CGCSOCacheSubscribedJob *const this)
 {
-  this->_vptr_CJob = off_40DB690;
+  this->_vptr_CJob = off_40DB690;  // vptr: GCSDK::CGCClientJob
   GCSDK::CJob::~CJob(this);
   operator delete(this);
 }
@@ -4710,10 +4708,10 @@ GCSDK::CJob *__fastcall GCSDK::CreateJob_CGCSOCacheSubscribedJob(GCSDK::CGCClien
 {
   GCSDK::CJob *v2; // rbx
 
-  v2 = operator new(0x140u);
+  v2 = operator new(0x140u);  // new GCSDK::CGCSOCacheSubscribedJob
   GCSDK::CJob::CJob(v2, (pGC + 48));
   v2[1]._vptr_CJob = pGC;
-  v2->_vptr_CJob = off_47CFDF0;
+  v2->_vptr_CJob = off_47CFDF0;  // vptr: GCSDK::CGCSOCacheSubscribedJob
   v2->m_pJobType = &GCSDK::g_JobType_CGCSOCacheSubscribedJob;
   *(&v2[1] + 2) = 4;
   return v2;
@@ -4725,7 +4723,7 @@ GCSDK::CJob *__fastcall GCSDK::CreateJob_CGCSOCacheSubscribedJob(GCSDK::CGCClien
 void __fastcall GCSDK::CGCSOCacheSubscribedJobUpToDate::~CGCSOCacheSubscribedJobUpToDate(
         GCSDK::CGCSOCacheSubscribedJobUpToDate *const this)
 {
-  this->_vptr_CJob = off_40DB690;
+  this->_vptr_CJob = off_40DB690;  // vptr: GCSDK::CGCClientJob
   GCSDK::CJob::~CJob(this);
 }
 
@@ -4735,7 +4733,7 @@ void __fastcall GCSDK::CGCSOCacheSubscribedJobUpToDate::~CGCSOCacheSubscribedJob
 void __fastcall GCSDK::CGCSOCacheSubscribedJobUpToDate::~CGCSOCacheSubscribedJobUpToDate(
         GCSDK::CGCSOCacheSubscribedJobUpToDate *const this)
 {
-  this->_vptr_CJob = off_40DB690;
+  this->_vptr_CJob = off_40DB690;  // vptr: GCSDK::CGCClientJob
   GCSDK::CJob::~CJob(this);
   operator delete(this);
 }
@@ -4759,10 +4757,10 @@ GCSDK::CJob *__fastcall GCSDK::CreateJob_CGCSOCacheSubscribedJobUpToDate(GCSDK::
 {
   GCSDK::CJob *v2; // rbx
 
-  v2 = operator new(0x140u);
+  v2 = operator new(0x140u);  // new GCSDK::CGCSOCacheSubscribedJobUpToDate
   GCSDK::CJob::CJob(v2, (pGC + 48));
   v2[1]._vptr_CJob = pGC;
-  v2->_vptr_CJob = off_47CFEF0;
+  v2->_vptr_CJob = off_47CFEF0;  // vptr: GCSDK::CGCSOCacheSubscribedJobUpToDate
   v2->m_pJobType = &GCSDK::g_JobType_CGCSOCacheSubscribedJobUpToDate;
   *(&v2[1] + 2) = 4;
   return v2;
@@ -4774,7 +4772,7 @@ GCSDK::CJob *__fastcall GCSDK::CreateJob_CGCSOCacheSubscribedJobUpToDate(GCSDK::
 void __fastcall GCSDK::CGCSOCacheUnsubscribedJob::~CGCSOCacheUnsubscribedJob(
         GCSDK::CGCSOCacheUnsubscribedJob *const this)
 {
-  this->_vptr_CJob = off_40DB690;
+  this->_vptr_CJob = off_40DB690;  // vptr: GCSDK::CGCClientJob
   GCSDK::CJob::~CJob(this);
 }
 
@@ -4784,7 +4782,7 @@ void __fastcall GCSDK::CGCSOCacheUnsubscribedJob::~CGCSOCacheUnsubscribedJob(
 void __fastcall GCSDK::CGCSOCacheUnsubscribedJob::~CGCSOCacheUnsubscribedJob(
         GCSDK::CGCSOCacheUnsubscribedJob *const this)
 {
-  this->_vptr_CJob = off_40DB690;
+  this->_vptr_CJob = off_40DB690;  // vptr: GCSDK::CGCClientJob
   GCSDK::CJob::~CJob(this);
   operator delete(this);
 }
@@ -4823,10 +4821,10 @@ GCSDK::CJob *__fastcall GCSDK::CreateJob_CGCSOCacheUnsubscribedJob(GCSDK::CGCCli
 {
   GCSDK::CJob *v2; // rbx
 
-  v2 = operator new(0x140u);
+  v2 = operator new(0x140u);  // new GCSDK::CGCSOCacheUnsubscribedJob
   GCSDK::CJob::CJob(v2, (pGC + 48));
   v2[1]._vptr_CJob = pGC;
-  v2->_vptr_CJob = off_47CFFF0;
+  v2->_vptr_CJob = off_47CFFF0;  // vptr: GCSDK::CGCSOCacheUnsubscribedJob
   v2->m_pJobType = &GCSDK::g_JobType_CGCSOCacheUnsubscribedJob;
   *(&v2[1] + 2) = 4;
   return v2;
@@ -4837,7 +4835,7 @@ GCSDK::CJob *__fastcall GCSDK::CreateJob_CGCSOCacheUnsubscribedJob(GCSDK::CGCCli
 // calls: GCSDK::CJob::~CJob
 void __fastcall GCSDK::CGCPingJob::~CGCPingJob(GCSDK::CGCPingJob *const this)
 {
-  this->_vptr_CJob = off_40DB690;
+  this->_vptr_CJob = off_40DB690;  // vptr: GCSDK::CGCClientJob
   GCSDK::CJob::~CJob(this);
 }
 
@@ -4846,7 +4844,7 @@ void __fastcall GCSDK::CGCPingJob::~CGCPingJob(GCSDK::CGCPingJob *const this)
 // calls: GCSDK::CJob::~CJob, operator delete
 void __fastcall GCSDK::CGCPingJob::~CGCPingJob(GCSDK::CGCPingJob *const this)
 {
-  this->_vptr_CJob = off_40DB690;
+  this->_vptr_CJob = off_40DB690;  // vptr: GCSDK::CGCClientJob
   GCSDK::CJob::~CJob(this);
   operator delete(this);
 }
@@ -4860,7 +4858,7 @@ bool __fastcall GCSDK::CGCPingJob::BYieldingRunJobFromProtoMsg(
         GCSDK::CGCPingJob *const this,
         const GCSDK::CGCClientProtoJob<CMsgGCClientPing>::TProtoMsg *const msgRequest)
 {
-  __int64 m_enabled; // rdi
+  int m_enabled; // edi
   bool v5; // r14
   uint64 m_numTimeBaseTicks; // rcx
   google::protobuf::Message *m_pProtoBufBody; // rdi
@@ -4894,7 +4892,7 @@ bool __fastcall GCSDK::CGCPingJob::BYieldingRunJobFromProtoMsg(
   {
     pPool = __rdtsc();
     *unTargetHigh = g_VProfCurrentProfile.m_TargetThreadId;
-    if ( *unTargetHigh == ThreadGetCurrentId(m_enabled) )
+    if ( *unTargetHigh == ThreadGetCurrentId() )
     {
       m_pCurNode = g_VProfCurrentProfile.m_pCurNode;
       if ( m_pCurNode->m_pszName != "CProtoBufMsg::CProtoBufMsg( MsgType_t )" )
@@ -4949,7 +4947,7 @@ bool __fastcall GCSDK::CGCPingJob::BYieldingRunJobFromProtoMsg(
     if ( !g_VProfCurrentProfile.m_fAtRoot || g_VProfCurrentProfile.m_enabled != 0 )
     {
       pPoolb = g_VProfCurrentProfile.m_TargetThreadId;
-      if ( pPoolb == ThreadGetCurrentId(m_pProtoBufBody) )
+      if ( pPoolb == ThreadGetCurrentId() )
       {
         if ( CVProfNode::ExitScope(g_VProfCurrentProfile.m_pCurNode) != 0 )
         {
@@ -5007,10 +5005,10 @@ GCSDK::CJob *__fastcall GCSDK::CreateJob_CGCPingJob(GCSDK::CGCClient *pGC)
 {
   GCSDK::CJob *v2; // rbx
 
-  v2 = operator new(0x140u);
+  v2 = operator new(0x140u);  // new GCSDK::CGCPingJob
   GCSDK::CJob::CJob(v2, (pGC + 48));
   v2[1]._vptr_CJob = pGC;
-  v2->_vptr_CJob = off_47D00F0;
+  v2->_vptr_CJob = off_47D00F0;  // vptr: GCSDK::CGCPingJob
   v2->m_pJobType = &GCSDK::g_JobType_CGCPingJob;
   *(&v2[1] + 2) = 4;
   return v2;
@@ -5021,7 +5019,7 @@ GCSDK::CJob *__fastcall GCSDK::CreateJob_CGCPingJob(GCSDK::CGCClient *pGC)
 // calls: GCSDK::CJob::~CJob
 void __fastcall GCSDK::CGCToClientPollConvarJob::~CGCToClientPollConvarJob(GCSDK::CGCToClientPollConvarJob *const this)
 {
-  this->_vptr_CJob = off_40DB690;
+  this->_vptr_CJob = off_40DB690;  // vptr: GCSDK::CGCClientJob
   GCSDK::CJob::~CJob(this);
 }
 
@@ -5030,7 +5028,7 @@ void __fastcall GCSDK::CGCToClientPollConvarJob::~CGCToClientPollConvarJob(GCSDK
 // calls: GCSDK::CJob::~CJob, operator delete
 void __fastcall GCSDK::CGCToClientPollConvarJob::~CGCToClientPollConvarJob(GCSDK::CGCToClientPollConvarJob *const this)
 {
-  this->_vptr_CJob = off_40DB690;
+  this->_vptr_CJob = off_40DB690;  // vptr: GCSDK::CGCClientJob
   GCSDK::CJob::~CJob(this);
   operator delete(this);
 }
@@ -5044,33 +5042,31 @@ bool __fastcall GCSDK::CGCToClientPollConvarJob::BYieldingRunJobFromProtoMsg(
         GCSDK::CGCToClientPollConvarJob *const this,
         const GCSDK::CGCClientProtoJob<CMsgGCToClientPollConvarRequest>::TProtoMsg *const msgRequest)
 {
-  __int64 v4; // rdi
   int m_enabled; // r9d
-  bool v6; // r14
+  bool v5; // r14
   uint64 m_numTimeBaseTicks; // rcx
   google::protobuf::Message *m_pProtoBufBody; // rcx
-  __int64 v9; // rdi
-  __int64 v10; // rsi
-  int v11; // eax
-  IConfigurationSystem *v12; // rdi
-  const char *v13; // r13
-  __int64 (__fastcall *v14)(IConfigurationSystem *, __int64, __int64); // r14
-  __int64 v15; // rax
-  __int64 v16; // r14
-  int v17; // eax
-  const google::protobuf::Descriptor *v19; // rax
-  const google::protobuf::Descriptor *v20; // rax
+  __int64 v8; // rsi
+  int v9; // eax
+  IConfigurationSystem *v10; // rdi
+  const char *v11; // r13
+  __int64 (__fastcall *v12)(IConfigurationSystem *, __int64, __int64); // r14
+  __int64 v13; // rax
+  __int64 v14; // r14
+  int v15; // eax
+  const google::protobuf::Descriptor *v17; // rax
+  const google::protobuf::Descriptor *v18; // rax
   uint32 Int32; // eax
-  GCSDK::CProtoBufMsgMemoryPoolMgr *v22; // rax
-  CMsgGCToClientPollConvarResponse *v23; // rsi
+  GCSDK::CProtoBufMsgMemoryPoolMgr *v20; // rax
+  CMsgGCToClientPollConvarResponse *v21; // rsi
   ConVar *m_pGCClient; // rax
-  unsigned __int64 v25; // r14
-  uint64 v26; // rsi
-  CMsgGCToClientPollConvarResponse *v27; // r13
+  unsigned __int64 v23; // r14
+  uint64 v24; // rsi
+  CMsgGCToClientPollConvarResponse *v25; // r13
   char *m_pszString; // r14
-  size_t v29; // rax
+  size_t v27; // rax
   CVProfNode *m_pCurNode; // rax
-  CVProfile::CBudgetGroup *v31; // rax
+  CVProfile::CBudgetGroup *v29; // rax
   CVProfNode *m_pParent; // rax
   uint32 unTargetHigh[2]; // [rsp+0h] [rbp-490h]
   uint32 unTargetHigha; // [rsp+0h] [rbp-490h]
@@ -5081,19 +5077,19 @@ bool __fastcall GCSDK::CGCToClientPollConvarJob::BYieldingRunJobFromProtoMsg(
   ConVarRef refConvar; // [rsp+10h] [rbp-480h] BYREF
   GCSDK::CProtoBufMsg<CMsgGCToClientPollConvarResponse> msgReply; // [rsp+20h] [rbp-470h] BYREF
   char szConfigValue[1032]; // [rsp+50h] [rbp-440h] BYREF
-  unsigned __int64 v42; // [rsp+458h] [rbp-38h]
+  unsigned __int64 v40; // [rsp+458h] [rbp-38h]
 
-  v42 = __readfsqword(0x28u);
+  v40 = __readfsqword(0x28u);
   GCSDK::CProtoBufMsgBase::CProtoBufMsgBase(&msgReply, 0xBBCu);
   msgReply._vptr_CProtoBufMsgBase = off_47D0250;
   msgReply.m_pProtoBufBody = 0;
   m_enabled = g_VProfCurrentProfile.m_enabled;
-  v6 = m_enabled != 0;
+  v5 = m_enabled != 0;
   if ( m_enabled != 0 )
   {
     pPool = __rdtsc();
     *unTargetHigh = g_VProfCurrentProfile.m_TargetThreadId;
-    if ( *unTargetHigh == ThreadGetCurrentId(v4) )
+    if ( *unTargetHigh == ThreadGetCurrentId() )
     {
       m_pCurNode = g_VProfCurrentProfile.m_pCurNode;
       if ( m_pCurNode->m_pszName != "CProtoBufMsg::CProtoBufMsg( MsgType_t )" )
@@ -5106,8 +5102,8 @@ bool __fastcall GCSDK::CGCToClientPollConvarJob::BYieldingRunJobFromProtoMsg(
                        4);
         g_VProfCurrentProfile.m_pCurNode = m_pCurNode;
       }
-      v31 = &g_VProfCurrentProfile.m_pBudgetGroups[m_pCurNode->m_BudgetGroupID];
-      v31->m_BudgetFlags |= 4u;
+      v29 = &g_VProfCurrentProfile.m_pBudgetGroups[m_pCurNode->m_BudgetGroupID];
+      v29->m_BudgetFlags |= 4u;
       CVProfNode::EnterScope(g_VProfCurrentProfile.m_pCurNode);
       g_VProfCurrentProfile.m_fAtRoot = 0;
     }
@@ -5121,34 +5117,34 @@ bool __fastcall GCSDK::CGCToClientPollConvarJob::BYieldingRunJobFromProtoMsg(
     if ( !GCSDK::CProtoBufMsg<CMsgGCToClientPollConvarResponse>::s_bRegisteredWithMemoryPoolMgr )
     {
       pPoolb = operator new(0x28u);
-      v19 = CMsgGCToClientPollConvarResponse::descriptor();
+      v17 = CMsgGCToClientPollConvarResponse::descriptor();
       unTargetHigha = google::protobuf::internal::ExtensionSet::GetInt32(
-                        (v19->options_ + 8),
+                        (v17->options_ + 8),
                         msgpool_hard_limit.number_,
                         msgpool_hard_limit.default_value_);
-      v20 = CMsgGCToClientPollConvarResponse::descriptor();
+      v18 = CMsgGCToClientPollConvarResponse::descriptor();
       Int32 = google::protobuf::internal::ExtensionSet::GetInt32(
-                (v20->options_ + 8),
+                (v18->options_ + 8),
                 msgpool_soft_limit.number_,
                 msgpool_soft_limit.default_value_);
       GCSDK::CProtoBufMsgMemoryPoolBase::CProtoBufMsgMemoryPoolBase(pPoolb, Int32, unTargetHigha);
       pPoolb->_vptr_CProtoBufMsgMemoryPoolBase = &off_47D0390;
       GCSDK::CProtoBufMsg<CMsgGCToClientPollConvarResponse>::s_pMemoryPool = pPoolb;
-      v22 = GCSDK::GProtoBufMsgMemoryPoolMgr();
-      GCSDK::CProtoBufMsgMemoryPoolMgr::RegisterPool(v22, pPoolb);
+      v20 = GCSDK::GProtoBufMsgMemoryPoolMgr();
+      GCSDK::CProtoBufMsgMemoryPoolMgr::RegisterPool(v20, pPoolb);
       GCSDK::CProtoBufMsg<CMsgGCToClientPollConvarResponse>::s_bRegisteredWithMemoryPoolMgr = 1;
     }
     pthread_mutex_unlock(&GCSDK::CProtoBufMsgBase::s_PoolRegMutex.m_Mutex);
   }
   m_pProtoBufBody = GCSDK::CProtoBufMsgMemoryPoolBase::Alloc(GCSDK::CProtoBufMsg<CMsgGCToClientPollConvarResponse>::s_pMemoryPool);
   msgReply.m_pProtoBufBody = m_pProtoBufBody;
-  if ( v6 )
+  if ( v5 )
   {
-    v25 = __rdtsc();
+    v23 = __rdtsc();
     if ( !g_VProfCurrentProfile.m_fAtRoot || g_VProfCurrentProfile.m_enabled != 0 )
     {
       pPoolc = g_VProfCurrentProfile.m_TargetThreadId;
-      if ( pPoolc == ThreadGetCurrentId(v9) )
+      if ( pPoolc == ThreadGetCurrentId() )
       {
         if ( CVProfNode::ExitScope(g_VProfCurrentProfile.m_pCurNode) != 0 )
         {
@@ -5170,45 +5166,45 @@ bool __fastcall GCSDK::CGCToClientPollConvarJob::BYieldingRunJobFromProtoMsg(
         m_pProtoBufBody = msgReply.m_pProtoBufBody;
       }
     }
-    v26 = g_VProfCurrentProfile.m_ScopeProfiler.m_numTimeBaseTicks;
+    v24 = g_VProfCurrentProfile.m_ScopeProfiler.m_numTimeBaseTicks;
     ++g_VProfCurrentProfile.m_ScopeProfiler.m_numCalls;
-    g_VProfCurrentProfile.m_ScopeProfiler.m_numTimeBaseTicks = v26 - v25 + __rdtsc();
+    g_VProfCurrentProfile.m_ScopeProfiler.m_numTimeBaseTicks = v24 - v23 + __rdtsc();
   }
-  v10 = 0;
-  v11 = *(msgRequest->m_pProtoBufBody + 8);
+  v8 = 0;
+  v9 = *(msgRequest->m_pProtoBufBody + 8);
   *(m_pProtoBufBody + 4) |= 1u;
-  v12 = g_pConfigurationSystem;
-  *(m_pProtoBufBody + 8) = v11;
-  v13 = **(msgRequest->m_pProtoBufBody + 3);
-  v14 = *(*v12 + 272LL);
-  if ( v13 != 0 && *v13 != 0 )
+  v10 = g_pConfigurationSystem;
+  *(m_pProtoBufBody + 8) = v9;
+  v11 = **(msgRequest->m_pProtoBufBody + 3);
+  v12 = *(*v10 + 272LL);
+  if ( v11 != 0 && *v11 != 0 )
   {
-    pPoola = MurmurHash2LowerCase(v13, 0x31415926u);
+    pPoola = MurmurHash2LowerCase(v11, 0x31415926u);
     if ( g_bUpdateStringTokenDatabase )
-      RegisterStringToken(pPoola, v13, 0, 1);
-    v12 = g_pConfigurationSystem;
-    v10 = pPoola;
+      RegisterStringToken(pPoola, v11, 0, 1);
+    v10 = g_pConfigurationSystem;
+    v8 = pPoola;
   }
-  v15 = v14(v12, v10, 0xFFFFFFFFLL);
-  v16 = v15;
-  if ( v15 != -1 )
+  v13 = v12(v10, v8, 0xFFFFFFFFLL);
+  v14 = v13;
+  if ( v13 != -1 )
   {
-    v17 = (*(*g_pConfigurationSystem + 256LL))(g_pConfigurationSystem, v15);
-    if ( (*(*g_pConfigurationSystem + 280LL))(g_pConfigurationSystem, v16, szConfigValue, 1024, (v17 == 3) - 1) == 0 )
+    v15 = (*(*g_pConfigurationSystem + 256LL))(g_pConfigurationSystem, v13);
+    if ( (*(*g_pConfigurationSystem + 280LL))(g_pConfigurationSystem, v14, szConfigValue, 1024, (v15 == 3) - 1) == 0 )
       goto LABEL_13;
-    v23 = msgReply.m_pProtoBufBody;
+    v21 = msgReply.m_pProtoBufBody;
     *(msgReply.m_pProtoBufBody + 4) |= 2u;
-    std::string::assign(*(v23 + 3), szConfigValue, strlen(szConfigValue));
+    std::string::assign(*(v21 + 3), szConfigValue, strlen(szConfigValue));
     goto LABEL_17;
   }
-  ConVarRef::ConVarRef(&refConvar, v13, 1);
+  ConVarRef::ConVarRef(&refConvar, v11, 1);
   if ( ConVarRef::IsValid(&refConvar) )
   {
-    v27 = msgReply.m_pProtoBufBody;
+    v25 = msgReply.m_pProtoBufBody;
     m_pszString = refConvar.m_pConVarState->m_Value.m_pszString;
     *(msgReply.m_pProtoBufBody + 4) |= 2u;
-    v29 = strlen(m_pszString);
-    std::string::assign(*(v27 + 3), m_pszString, v29);
+    v27 = strlen(m_pszString);
+    std::string::assign(*(v25 + 3), m_pszString, v27);
 LABEL_17:
     m_pGCClient = this->m_pGCClient;
     refConvar.m_pConVar = &off_47CFA30;
@@ -5236,10 +5232,10 @@ GCSDK::CJob *__fastcall GCSDK::CreateJob_CGCToClientPollConvarJob(GCSDK::CGCClie
 {
   GCSDK::CJob *v2; // rbx
 
-  v2 = operator new(0x140u);
+  v2 = operator new(0x140u);  // new GCSDK::CGCToClientPollConvarJob
   GCSDK::CJob::CJob(v2, (pGC + 48));
   v2[1]._vptr_CJob = pGC;
-  v2->_vptr_CJob = off_47D01F0;
+  v2->_vptr_CJob = off_47D01F0;  // vptr: GCSDK::CGCToClientPollConvarJob
   v2->m_pJobType = &GCSDK::g_JobType_CGCToClientPollConvarJob;
   *(&v2[1] + 2) = 4;
   return v2;

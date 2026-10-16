@@ -346,7 +346,7 @@ CEntityInstance *__fastcall CDOTA_ShopTrigger::CEntityInstanceEntityClass::Const
 void __fastcall CDOTA_ShopTrigger::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_ShopTrigger::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -356,7 +356,7 @@ void __fastcall CDOTA_ShopTrigger::CEntityInstanceEntityClass::~CEntityInstanceE
 void __fastcall CDOTA_ShopTrigger::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_ShopTrigger::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }

@@ -705,7 +705,7 @@ CEntityInstance *__fastcall CDOTA_Unit_Hero_Necrolyte::CEntityInstanceEntityClas
 void __fastcall CDOTA_Unit_Hero_Necrolyte::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Unit_Hero_Necrolyte::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -715,7 +715,7 @@ void __fastcall CDOTA_Unit_Hero_Necrolyte::CEntityInstanceEntityClass::~CEntityI
 void __fastcall CDOTA_Unit_Hero_Necrolyte::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Unit_Hero_Necrolyte::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -912,7 +912,7 @@ CEntityInstance *__fastcall CDOTA_Ability_Necrolyte_Sadist_Stop::CEntityInstance
 void __fastcall CDOTA_Ability_Necrolyte_Sadist_Stop::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Necrolyte_Sadist_Stop::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -922,7 +922,7 @@ void __fastcall CDOTA_Ability_Necrolyte_Sadist_Stop::CEntityInstanceEntityClass:
 void __fastcall CDOTA_Ability_Necrolyte_Sadist_Stop::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Necrolyte_Sadist_Stop::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -1118,7 +1118,7 @@ CEntityInstance *__fastcall CDOTA_Ability_Necrolyte_Sadist::CEntityInstanceEntit
 void __fastcall CDOTA_Ability_Necrolyte_Sadist::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Necrolyte_Sadist::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -1128,7 +1128,7 @@ void __fastcall CDOTA_Ability_Necrolyte_Sadist::CEntityInstanceEntityClass::~CEn
 void __fastcall CDOTA_Ability_Necrolyte_Sadist::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Necrolyte_Sadist::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -1692,7 +1692,7 @@ CEntityInstance *__fastcall CDOTA_Ability_Necrolyte_Death_Pulse::CEntityInstance
 void __fastcall CDOTA_Ability_Necrolyte_Death_Pulse::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Necrolyte_Death_Pulse::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -1702,7 +1702,7 @@ void __fastcall CDOTA_Ability_Necrolyte_Death_Pulse::CEntityInstanceEntityClass:
 void __fastcall CDOTA_Ability_Necrolyte_Death_Pulse::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Necrolyte_Death_Pulse::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -2593,7 +2593,7 @@ CEntityInstance *__fastcall CDOTA_Ability_Necrolyte_Heartstopper_Aura::CEntityIn
 void __fastcall CDOTA_Ability_Necrolyte_Heartstopper_Aura::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Necrolyte_Heartstopper_Aura::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -2603,7 +2603,7 @@ void __fastcall CDOTA_Ability_Necrolyte_Heartstopper_Aura::CEntityInstanceEntity
 void __fastcall CDOTA_Ability_Necrolyte_Heartstopper_Aura::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Necrolyte_Heartstopper_Aura::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -2942,7 +2942,7 @@ CEntityInstance *__fastcall CDOTA_Ability_Necrolyte_ReapersScythe::CEntityInstan
 void __fastcall CDOTA_Ability_Necrolyte_ReapersScythe::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Necrolyte_ReapersScythe::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -2952,7 +2952,7 @@ void __fastcall CDOTA_Ability_Necrolyte_ReapersScythe::CEntityInstanceEntityClas
 void __fastcall CDOTA_Ability_Necrolyte_ReapersScythe::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Necrolyte_ReapersScythe::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }

@@ -77,7 +77,7 @@ CEntityInstance *__fastcall CBaseFire::CEntityInstanceEntityClass::ConstructInst
 void __fastcall CBaseFire::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CBaseFire::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -87,7 +87,7 @@ void __fastcall CBaseFire::CEntityInstanceEntityClass::~CEntityInstanceEntityCla
 void __fastcall CBaseFire::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CBaseFire::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -271,7 +271,7 @@ CEntityInstance *__fastcall CFireSmoke::CEntityInstanceEntityClass::ConstructIns
 void __fastcall CFireSmoke::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CFireSmoke::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -281,7 +281,7 @@ void __fastcall CFireSmoke::CEntityInstanceEntityClass::~CEntityInstanceEntityCl
 void __fastcall CFireSmoke::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CFireSmoke::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }

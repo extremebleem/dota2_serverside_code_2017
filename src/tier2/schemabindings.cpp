@@ -26,7 +26,7 @@ void __fastcall CSchemaRegistration::RegisterAllModuleData(ISchemaSystem *pSchem
   for ( i = 0; i != 2; ++i )
   {
     for ( j = CSchemaRegistration::s_pSchemaRegistrationList; j != 0; j = j->m_pNext )
-      (*j->_vptr_CSchemaRegistration)(j, pSchemaSystem, i);
+      j->RegisterAllBindings(pSchemaSystem, i);
   }
   v4 = *(*pSchemaSystem + 200LL);
   NameOfModule = GetNameOfModule();

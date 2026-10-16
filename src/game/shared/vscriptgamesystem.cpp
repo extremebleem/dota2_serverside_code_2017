@@ -407,7 +407,7 @@ void __fastcall CScriptConvarAccessor::SetStr(
 
   ConVarRef::ConVarRef(&cref, pszVarName);
   if ( ConVarRef::IsValid(&cref) )
-    (*cref.m_pConVar->_vptr_IConVar)(cref.m_pConVar, pszValue);
+    cref.m_pConVar->SetValue(pszValue);
 }
 
 
@@ -3880,14 +3880,14 @@ void __fastcall CVScriptGameEventListener::~CVScriptGameEventListener(CVScriptGa
   if ( (this->m_GameEventFunctions.m_Tree.m_Elements.m_nGrowSize & 0xC0000000) == 0 )
     CUtlMemory<UtlRBTreeNode_t<CUtlMap<int,CUtlVector<CVScriptGameEventListener::GameEventFunc_t,CUtlMemory<CVScriptGameEventListener::GameEventFunc_t,int>> *,unsigned short,bool (*)(int const&,int const&)>::Node_t,unsigned short>,unsigned short>::Purge(&this->m_GameEventFunctions.m_Tree.m_Elements);
   v3 = !this->m_bRegisteredForEvents;
-  this->_vptr_IGameEventListener2 = off_3FB3190;
+  this->_vptr_IGameEventListener2 = off_3FB3190;  // vptr: CGameEventListener
   if ( !v3 )
   {
     if ( gameeventmanager != 0 )
       (*(gameeventmanager->_vptr_IBaseInterface + 6))(gameeventmanager, this);
     this->m_bRegisteredForEvents = 0;
   }
-  this->_vptr_IGameEventListener2 = off_3FB3150;
+  this->_vptr_IGameEventListener2 = off_3FB3150;  // vptr: IGameEventListener2
 }
 
 
@@ -3904,14 +3904,14 @@ void __fastcall CVScriptGameEventListener::~CVScriptGameEventListener(CVScriptGa
   if ( (this->m_GameEventFunctions.m_Tree.m_Elements.m_nGrowSize & 0xC0000000) == 0 )
     CUtlMemory<UtlRBTreeNode_t<CUtlMap<int,CUtlVector<CVScriptGameEventListener::GameEventFunc_t,CUtlMemory<CVScriptGameEventListener::GameEventFunc_t,int>> *,unsigned short,bool (*)(int const&,int const&)>::Node_t,unsigned short>,unsigned short>::Purge(&this->m_GameEventFunctions.m_Tree.m_Elements);
   v3 = !this->m_bRegisteredForEvents;
-  this->_vptr_IGameEventListener2 = off_3FB3190;
+  this->_vptr_IGameEventListener2 = off_3FB3190;  // vptr: CGameEventListener
   if ( !v3 )
   {
     if ( gameeventmanager != 0 )
       (*(gameeventmanager->_vptr_IBaseInterface + 6))(gameeventmanager, this);
     this->m_bRegisteredForEvents = 0;
   }
-  this->_vptr_IGameEventListener2 = off_3FB3150;
+  this->_vptr_IGameEventListener2 = off_3FB3150;  // vptr: IGameEventListener2
   operator delete(this);
 }
 
@@ -8547,7 +8547,7 @@ void __fastcall Script_PrecacheEntityListFromTable(HSCRIPT hSpawnTableList, HSCR
 void __fastcall CScriptSpawnGroupEntityFilterProxy::~CScriptSpawnGroupEntityFilterProxy(
         CScriptSpawnGroupEntityFilterProxy *const this)
 {
-  this->_vptr_ISpawnGroupEntityFilter = off_3FCAF10;
+  this->_vptr_ISpawnGroupEntityFilter = off_3FCAF10;  // vptr: ISpawnGroupEntityFilter
 }
 
 
@@ -8556,7 +8556,7 @@ void __fastcall CScriptSpawnGroupEntityFilterProxy::~CScriptSpawnGroupEntityFilt
 void __fastcall CScriptSpawnGroupEntityFilterProxy::~CScriptSpawnGroupEntityFilterProxy(
         CScriptSpawnGroupEntityFilterProxy *const this)
 {
-  this->_vptr_ISpawnGroupEntityFilter = off_3FCAF10;
+  this->_vptr_ISpawnGroupEntityFilter = off_3FCAF10;  // vptr: ISpawnGroupEntityFilter
   operator delete(this);
 }
 
@@ -8579,8 +8579,8 @@ void __fastcall Script_RegisterSpawnGroupFilterProxy(const char *pFilterName)
 {
   ISpawnGroupEntityFilter *v2; // rax
 
-  v2 = operator new(8u);
-  v2->_vptr_ISpawnGroupEntityFilter = off_3FCEC70;
+  v2 = operator new(8u);  // new CScriptSpawnGroupEntityFilterProxy (size matches)
+  v2->_vptr_ISpawnGroupEntityFilter = off_3FCEC70;  // vptr: CScriptSpawnGroupEntityFilterProxy
   CGameEntitySystem::RegisterSpawnGroupEntityFilter(
     g_pGameEntitySystem,
     pFilterName,
@@ -12870,7 +12870,7 @@ LABEL_20:
 // callers: CGameSystemReallocatingFactory<CDOTAVScriptGameSystem, CDOTAVScriptGameSystem>::CreateGameSystem
 void __fastcall CVScriptGameSystem::CVScriptGameSystem(CVScriptGameSystem *const this)
 {
-  this->_vptr_IGameSystem = off_3FCECF0;
+  this->_vptr_IGameSystem = off_3FCECF0;  // vptr: CVScriptGameSystem
   this->_vptr_IVScriptGameSystem = off_3FCEED0;
   this->m_CompiledScriptCache.m_Tree.m_NumElements = 0;
   this->m_CompiledScriptCache.m_Tree.m_FirstFree = -1;

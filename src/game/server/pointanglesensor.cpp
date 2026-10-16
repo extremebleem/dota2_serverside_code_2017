@@ -285,7 +285,7 @@ CEntityInstance *__fastcall CPointAngleSensor::CEntityInstanceEntityClass::Const
 void __fastcall CPointAngleSensor::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CPointAngleSensor::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -295,7 +295,7 @@ void __fastcall CPointAngleSensor::CEntityInstanceEntityClass::~CEntityInstanceE
 void __fastcall CPointAngleSensor::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CPointAngleSensor::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -1790,7 +1790,7 @@ CEntityInstance *__fastcall CPointProximitySensor::CEntityInstanceEntityClass::C
 void __fastcall CPointProximitySensor::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CPointProximitySensor::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -1800,7 +1800,7 @@ void __fastcall CPointProximitySensor::CEntityInstanceEntityClass::~CEntityInsta
 void __fastcall CPointProximitySensor::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CPointProximitySensor::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }

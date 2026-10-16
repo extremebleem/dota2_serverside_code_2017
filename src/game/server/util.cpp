@@ -141,7 +141,7 @@ float __cdecl UTIL_GetSimulationInterval()
 // CTracePassFilter::~CTracePassFilter  (line 105, @0x0000000002410570, libserver.so)  // inlines: ~CTraceFilter
 void __fastcall CTracePassFilter::~CTracePassFilter(CTracePassFilter *const this)
 {
-  this->_vptr_CTraceFilter = off_3FE6970;
+  this->_vptr_CTraceFilter = off_3FE6970;  // vptr: CTraceFilter
 }
 
 
@@ -149,7 +149,7 @@ void __fastcall CTracePassFilter::~CTracePassFilter(CTracePassFilter *const this
 // calls: operator delete
 void __fastcall CTracePassFilter::~CTracePassFilter(CTracePassFilter *const this)
 {
-  this->_vptr_CTraceFilter = off_3FE6970;
+  this->_vptr_CTraceFilter = off_3FE6970;  // vptr: CTraceFilter
   operator delete(this);
 }
 
@@ -2647,7 +2647,7 @@ vec_t __fastcall UTIL_WaterLevel(const Vector *const position, vec_t a2, vec_t m
 // CWaterTraceFilter::~CWaterTraceFilter  (line 1297, @0x0000000002410560, libserver.so)  // inlines: ~CTraceFilter
 void __fastcall CWaterTraceFilter::~CWaterTraceFilter(CWaterTraceFilter *const this)
 {
-  this->_vptr_CTraceFilter = off_3FE6970;
+  this->_vptr_CTraceFilter = off_3FE6970;  // vptr: CTraceFilter
 }
 
 
@@ -2655,7 +2655,7 @@ void __fastcall CWaterTraceFilter::~CWaterTraceFilter(CWaterTraceFilter *const t
 // calls: operator delete
 void __fastcall CWaterTraceFilter::~CWaterTraceFilter(CWaterTraceFilter *const this)
 {
-  this->_vptr_CTraceFilter = off_3FE6970;
+  this->_vptr_CTraceFilter = off_3FE6970;  // vptr: CTraceFilter
   operator delete(this);
 }
 
@@ -3246,7 +3246,7 @@ void __fastcall UTIL_SetAudioMixControlInput(
 // calls: IGameSystem::~IGameSystem
 void __fastcall CCheckClient::~CCheckClient(CCheckClient *const this)
 {
-  this->_vptr_IGameSystem = off_3F7C1B0;
+  this->_vptr_IGameSystem = off_3F7C1B0;  // vptr: CAutoGameSystem
   IGameSystem::~IGameSystem(this);
 }
 
@@ -3255,7 +3255,7 @@ void __fastcall CCheckClient::~CCheckClient(CCheckClient *const this)
 // calls: IGameSystem::~IGameSystem, operator delete
 void __fastcall CCheckClient::~CCheckClient(CCheckClient *const this)
 {
-  this->_vptr_IGameSystem = off_3F7C1B0;
+  this->_vptr_IGameSystem = off_3F7C1B0;  // vptr: CAutoGameSystem
   IGameSystem::~IGameSystem(this);
   operator delete(this);
 }

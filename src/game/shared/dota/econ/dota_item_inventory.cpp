@@ -2586,93 +2586,94 @@ void __fastcall AddItemToLoadoutList(
   const CEconItemAttributeDefinition *m_pRef; // rsi
   CEconItemSchema *v19; // rax
   GameItemSchema_t *ItemSchema; // rax
-  __int64 v21; // rax
-  char v22; // al
-  __int64 v23; // rdx
-  int v24; // ecx
-  unsigned __int64 v25; // r12
-  DOTAEconItemPackaging_t v26; // dl
-  rolled_item_defs_t *v27; // r13
+  __int64 v21; // rdi
+  __int64 v22; // rax
+  char v23; // al
+  __int64 v24; // rdx
+  int v25; // ecx
+  unsigned __int64 v26; // r12
+  DOTAEconItemPackaging_t v27; // dl
+  rolled_item_defs_t *v28; // r13
   const CEconItemDefinition *m_pItemDef; // rdi
-  const GameItemDefinition_t *v29; // r9
-  char v30; // al
-  char v31; // dl
+  const GameItemDefinition_t *v30; // r9
+  char v31; // al
+  char v32; // dl
   bundleinfo_t *m_BundleInfo; // r15
-  DOTAEconItemPackaging_t v33; // r12
-  __int64 v34; // r12
+  DOTAEconItemPackaging_t v34; // r12
+  __int64 v35; // r12
   int m_nHeroID; // r15d
   _BOOL4 m_bHasComputedPrice; // ecx
   int m_bSuppressAddingItem; // ecx
   int m_Size; // r14d
-  int v39; // edx
-  DOTAEconItemInfo_t *v40; // rax
+  int v40; // edx
+  DOTAEconItemInfo_t *v41; // rax
   uint16 m_Data; // si
-  DOTAEconItemInfo_t *v42; // rdx
-  char v43; // al
-  __int64 v44; // rsi
-  uint16 v45; // ax
-  __int64 v46; // rsi
-  DOTAEconItemInfo_t *v47; // rdx
-  char v48; // cl
-  __int64 v49; // rax
-  uint16 v50; // ax
-  char v51; // al
-  DOTAEconItemInfo_t *v52; // rdx
-  char v53; // si
-  bool v54; // cl
-  HeroSlotLoadoutPreviewMode_t v55; // al
-  CEconItemView *v56; // rdx
-  CEconItemSchema *v57; // rax
-  uint32 v58; // r14d
-  const IEconItemSetDefinition *v59; // rax
-  char v60; // al
-  char v61; // cl
-  char v62; // al
+  DOTAEconItemInfo_t *v43; // rdx
+  char v44; // al
+  __int64 v45; // rsi
+  uint16 v46; // ax
+  __int64 v47; // rsi
+  DOTAEconItemInfo_t *v48; // rdx
+  char v49; // cl
+  __int64 v50; // rax
+  uint16 v51; // ax
+  char v52; // al
+  DOTAEconItemInfo_t *v53; // rdx
+  char v54; // si
+  bool v55; // cl
+  HeroSlotLoadoutPreviewMode_t v56; // al
+  CEconItemView *v57; // rdx
+  CEconItemSchema *v58; // rax
+  uint32 v59; // r14d
+  const IEconItemSetDefinition *v60; // rax
+  char v61; // al
+  char v62; // cl
+  char v63; // al
   CUtlVector<CEconStyleInfo*,CUtlMemory<CEconStyleInfo*,int> > *m_pStyles; // rax
-  int v64; // ecx
-  CEconItemView *v65; // rdi
+  int v65; // ecx
+  CEconItemView *v66; // rdi
   int (**vptr_IEconItemInterface)(...); // rax
-  char v67; // al
-  uint8 v68; // al
+  char v68; // al
+  uint8 v69; // al
   DOTAEconItemOwnershipType_t m_nOwnershipType; // cl
   uint8 m_unClientFlags; // cl
-  uint8 v71; // al
-  bool v72; // cl
-  __int64 v73; // rax
-  signed int v74; // esi
-  char v75; // al
-  CEconItemSchema *v76; // rax
+  uint8 v72; // al
+  bool v73; // cl
+  __int64 v74; // rax
+  signed int v75; // esi
+  char v76; // al
+  CEconItemSchema *v77; // rax
   uint32 m_unResetCount; // eax
   const GameItemDefinition_t *m_pOwningItemDef; // rdx
   CEconItemView *m_pOwningEconItemView; // rax
-  CEconItemSchema *v80; // rax
-  __int64 (__fastcall *v81)(GameItemSchema_t *, _QWORD); // r14
-  unsigned int v82; // eax
-  char v83; // al
-  CUtlHashtable<int,CDOTAHeroSlots,DefaultHashFunctor<int>,DefaultEqualFunctor<int>,undefined_t,CUtlMemory<CUtlHashtableEntry<int,CDOTAHeroSlots>,int> >::handle_t *v84; // rcx
-  unsigned int v85; // edx
-  int v86; // edx
-  int v87; // eax
-  int *v88; // rdx
-  __int64 v89; // rax
+  CEconItemSchema *v81; // rax
+  __int64 (__fastcall *v82)(GameItemSchema_t *, _QWORD); // r14
+  unsigned int v83; // eax
+  char v84; // al
+  CUtlHashtable<int,CDOTAHeroSlots,DefaultHashFunctor<int>,DefaultEqualFunctor<int>,undefined_t,CUtlMemory<CUtlHashtableEntry<int,CDOTAHeroSlots>,int> >::handle_t *v85; // rcx
+  unsigned int v86; // edx
+  int v87; // edx
+  int v88; // eax
+  int *v89; // rdx
   __int64 v90; // rax
+  __int64 v91; // rax
   int *p_m_Size; // rax
-  int v92; // eax
-  bool v93; // [rsp+Ch] [rbp-94h]
-  unsigned int v94; // [rsp+10h] [rbp-90h]
+  int v93; // eax
+  bool v94; // [rsp+Ch] [rbp-94h]
   unsigned int v95; // [rsp+10h] [rbp-90h]
-  char v96; // [rsp+10h] [rbp-90h]
-  bool v97; // [rsp+10h] [rbp-90h]
-  DOTAEconItemInfo_t *v98; // [rsp+10h] [rbp-90h]
-  DOTAEconItemInfo_t *v99; // [rsp+18h] [rbp-88h]
+  unsigned int v96; // [rsp+10h] [rbp-90h]
+  char v97; // [rsp+10h] [rbp-90h]
+  bool v98; // [rsp+10h] [rbp-90h]
+  DOTAEconItemInfo_t *v99; // [rsp+10h] [rbp-90h]
   DOTAEconItemInfo_t *v100; // [rsp+18h] [rbp-88h]
   DOTAEconItemInfo_t *v101; // [rsp+18h] [rbp-88h]
   DOTAEconItemInfo_t *v102; // [rsp+18h] [rbp-88h]
   DOTAEconItemInfo_t *v103; // [rsp+18h] [rbp-88h]
-  CEconItemView *v104; // [rsp+18h] [rbp-88h]
-  _BOOL4 v105; // [rsp+18h] [rbp-88h]
+  DOTAEconItemInfo_t *v104; // [rsp+18h] [rbp-88h]
+  CEconItemView *v105; // [rsp+18h] [rbp-88h]
+  _BOOL4 v106; // [rsp+18h] [rbp-88h]
   GameItemSchema_t *p_m_itemSchema; // [rsp+18h] [rbp-88h]
-  int v107; // [rsp+18h] [rbp-88h]
+  int v108; // [rsp+18h] [rbp-88h]
   uint32 iSlotIndexa; // [rsp+20h] [rbp-80h]
   signed int iSlotIndex; // [rsp+20h] [rbp-80h]
   const char *pLootListDefb; // [rsp+28h] [rbp-78h]
@@ -2709,7 +2710,7 @@ void __fastcall AddItemToLoadoutList(
   if ( !v14 )
   {
 LABEL_26:
-    v23 = 0;
+    v24 = 0;
     goto LABEL_27;
   }
   v16 = packaging;
@@ -2717,8 +2718,8 @@ LABEL_26:
     && __cxa_guard_acquire(&`guard variable for'AddItemToLoadoutList(LoadoutListBuildInfo_t const&,OwningItemInfo_t *,DOTAEconItemPackaging_t,int,CEconItemView *,CDOTAItemDefinition const*,CUtlVector<DOTAEconItemInfo_t,CUtlMemory<DOTAEconItemInfo_t,int>> *)::pAttrDef_TreasureLootList) != 0 )
   {
     AddItemToLoadoutList(LoadoutListBuildInfo_t const&,OwningItemInfo_t *,DOTAEconItemPackaging_t,int,CEconItemView *,CDOTAItemDefinition const*,CUtlVector<DOTAEconItemInfo_t,CUtlMemory<DOTAEconItemInfo_t,int>> *)::pAttrDef_TreasureLootList.m_szName = "treasure loot list";
-    v76 = GEconItemSchema();
-    AddItemToLoadoutList(LoadoutListBuildInfo_t const&,OwningItemInfo_t *,DOTAEconItemPackaging_t,int,CEconItemView *,CDOTAItemDefinition const*,CUtlVector<DOTAEconItemInfo_t,CUtlMemory<DOTAEconItemInfo_t,int>> *)::pAttrDef_TreasureLootList.m_pRef = CEconItemSchema::GetAttributeDefinitionByName(v76, "treasure loot list");
+    v77 = GEconItemSchema();
+    AddItemToLoadoutList(LoadoutListBuildInfo_t const&,OwningItemInfo_t *,DOTAEconItemPackaging_t,int,CEconItemView *,CDOTAItemDefinition const*,CUtlVector<DOTAEconItemInfo_t,CUtlMemory<DOTAEconItemInfo_t,int>> *)::pAttrDef_TreasureLootList.m_pRef = CEconItemSchema::GetAttributeDefinitionByName(v77, "treasure loot list");
     m_unResetCount = GEconItemSchema()->m_unResetCount;
     AddItemToLoadoutList(LoadoutListBuildInfo_t const&,OwningItemInfo_t *,DOTAEconItemPackaging_t,int,CEconItemView *,CDOTAItemDefinition const*,CUtlVector<DOTAEconItemInfo_t,CUtlMemory<DOTAEconItemInfo_t,int>> *)::pAttrDef_TreasureLootList.m_bDestructName = 0;
     AddItemToLoadoutList(LoadoutListBuildInfo_t const&,OwningItemInfo_t *,DOTAEconItemPackaging_t,int,CEconItemView *,CDOTAItemDefinition const*,CUtlVector<DOTAEconItemInfo_t,CUtlMemory<DOTAEconItemInfo_t,int>> *)::pAttrDef_TreasureLootList.m_unSchemaGeneration = m_unResetCount;
@@ -2756,12 +2757,12 @@ LABEL_26:
     pLootListDef = CEconItemSchema::GetLootListByName(ItemSchema, pLootListDefc, 0);
     if ( pLootListDef != 0 )
     {
-      v21 = CommandLine();
-      v22 = (*(*v21 + 32LL))(v21, "-perfectworld");
+      v22 = CommandLine(v21);
+      v23 = (*(*v22 + 32LL))(v22, "-perfectworld");
       v12 = pLootListDef;
-      if ( v22 == 0 || (*(pItemDef + 529) & 0x10) != 0 )
+      if ( v23 == 0 || (*(pItemDef + 529) & 0x10) != 0 )
       {
-        v23 = 1;
+        v24 = 1;
         if ( build->m_bExplodeTreasureItems )
         {
           vecItems.m_Size = 0;
@@ -2771,49 +2772,49 @@ LABEL_26:
           (*(pLootListDef->_vptr_IEconLootListDefinition + 23))(pLootListDef, &vecItems, 1);
           if ( vecItems.m_Size > 0 )
           {
-            v24 = nNestingLevel;
-            v25 = 0;
+            v25 = nNestingLevel;
+            v26 = 0;
             nNestingLevelb = 16 * (3LL * (vecItems.m_Size - 1) + 3);
-            pEconItemViewb = v24 + 1;
+            pEconItemViewb = v25 + 1;
             do
             {
-              v27 = &vecItems.m_Memory.m_pMemory[v25 / 0x30];
-              m_pItemDef = vecItems.m_Memory.m_pMemory[v25 / 0x30].m_pItemDef;
+              v28 = &vecItems.m_Memory.m_pMemory[v26 / 0x30];
+              m_pItemDef = vecItems.m_Memory.m_pMemory[v26 / 0x30].m_pItemDef;
               if ( m_pItemDef != 0 )
-                v29 = __dynamic_cast(
+                v30 = __dynamic_cast(
                         m_pItemDef,
                         &`typeinfo for'CEconItemDefinition,
                         &`typeinfo for'CDOTAItemDefinition,
                         0);
               else
-                v29 = 0;
+                v30 = 0;
               if ( v16 != DOTAEconItemPackaging_t::DOTA_ITEM_IS_UNPACKED )
-                v26 = v16;
+                v27 = v16;
               else
-                v26 = 3 - !v27->m_bIsAdditionalDrop;
-              AddItemToLoadoutList(build, pOwningItemInfo, v26, pEconItemViewb, 0, v29, pList);
-              v25 += 48LL;
+                v27 = 3 - !v28->m_bIsAdditionalDrop;
+              AddItemToLoadoutList(build, pOwningItemInfo, v27, pEconItemViewb, 0, v30, pList);
+              v26 += 48LL;
             }
-            while ( v25 != nNestingLevelb );
+            while ( v26 != nNestingLevelb );
           }
           CUtlVectorBase<rolled_item_defs_t,CUtlMemory<rolled_item_defs_t,int>>::~CUtlVectorBase(&vecItems);
           return;
         }
 LABEL_27:
-        pLootListDefd = v23;
-        v30 = (*(pItemDef->_vptr_IEconItemDefinition + 16))(pItemDef, v13, v23, v12);
-        v31 = pLootListDefd;
-        if ( v30 != 0 )
+        pLootListDefd = v24;
+        v31 = (*(pItemDef->_vptr_IEconItemDefinition + 16))(pItemDef, v13, v24, v12);
+        v32 = pLootListDefd;
+        if ( v31 != 0 )
         {
           m_BundleInfo = pItemDef->m_BundleInfo;
           if ( m_BundleInfo != 0 && m_BundleInfo->vecItemDefs.m_Size > 0 )
           {
-            v33 = DOTAEconItemPackaging_t::DOTA_ITEM_IS_IN_BUNDLE;
+            v34 = DOTAEconItemPackaging_t::DOTA_ITEM_IS_IN_BUNDLE;
             if ( packaging != DOTAEconItemPackaging_t::DOTA_ITEM_IS_UNPACKED )
-              v33 = packaging;
+              v34 = packaging;
             nNestingLevelc = nNestingLevel + 1;
-            pEconItemViewc = v33;
-            v34 = 0;
+            pEconItemViewc = v34;
+            v35 = 0;
             do
               AddItemToLoadoutList(
                 build,
@@ -2821,15 +2822,15 @@ LABEL_27:
                 pEconItemViewc,
                 nNestingLevelc,
                 0,
-                m_BundleInfo->vecItemDefs.m_Memory.m_pMemory[v34++],
+                m_BundleInfo->vecItemDefs.m_Memory.m_pMemory[v35++],
                 pList);
-            while ( m_BundleInfo->vecItemDefs.m_Size > v34 );
+            while ( m_BundleInfo->vecItemDefs.m_Size > v35 );
           }
           return;
         }
         m_nHeroID = build->m_nHeroID;
         pLootListDefa = build->m_pHeroSlots;
-        if ( v31 != 0 )
+        if ( v32 != 0 )
         {
           m_nHeroID = -1;
           pLootListDefa = 0;
@@ -2841,13 +2842,13 @@ LABEL_27:
           {
             if ( !CEconItemDefinition::HasHeroID(pItemDef, m_nHeroID) )
               return;
-            v73 = 0;
+            v74 = 0;
             while ( 1 )
             {
-              v74 = v73;
-              if ( pItemDef->m_nSlotType == pLootListDefa->m_nSlotTypes[v73] )
+              v75 = v74;
+              if ( pItemDef->m_nSlotType == pLootListDefa->m_nSlotTypes[v74] )
                 break;
-              if ( ++v73 == 16 )
+              if ( ++v74 == 16 )
                 return;
             }
           }
@@ -2857,33 +2858,33 @@ LABEL_27:
             m_nHeroID = (*(pItemDef->_vptr_IEconItemDefinition + 9))(pItemDef);
             if ( stru_4D583D0.m_nUsed == 0 )
               goto LABEL_37;
-            v85 = 33 * (((4097 * m_nHeroID + 2127912214) >> 19) ^ (4097 * m_nHeroID + 2127912214) ^ 0xC761C23C);
-            v86 = 9 * ((v85 - 369570787) ^ ((v85 + 374761393) << 9)) - 42973499;
-            v87 = CUtlHashtable<int,CDOTAHeroSlots,DefaultHashFunctor<int>,DefaultEqualFunctor<int>,undefined_t,CUtlMemory<CUtlHashtableEntry<int,CDOTAHeroSlots>,int>>::DoLookup<int>(
+            v86 = 33 * (((4097 * m_nHeroID + 2127912214) >> 19) ^ (4097 * m_nHeroID + 2127912214) ^ 0xC761C23C);
+            v87 = 9 * ((v86 - 369570787) ^ ((v86 + 374761393) << 9)) - 42973499;
+            v88 = CUtlHashtable<int,CDOTAHeroSlots,DefaultHashFunctor<int>,DefaultEqualFunctor<int>,undefined_t,CUtlMemory<CUtlHashtableEntry<int,CDOTAHeroSlots>,int>>::DoLookup<int>(
                     &stru_4D583D0,
                     m_nHeroID,
-                    HIWORD(v86) ^ v86 ^ 0xB55A4F09,
-                    v84);
-            if ( v87 == -1 )
+                    HIWORD(v87) ^ v87 ^ 0xB55A4F09,
+                    v85);
+            if ( v88 == -1 )
               goto LABEL_37;
-            v88 = &stru_4D583D0.m_table.m_pMemory[v87].data[2];
-            pLootListDefa = v88;
-            if ( &stru_4D583D0.m_table.m_pMemory[v87] == -12LL )
+            v89 = &stru_4D583D0.m_table.m_pMemory[v88].data[2];
+            pLootListDefa = v89;
+            if ( &stru_4D583D0.m_table.m_pMemory[v88] == -12LL )
               goto LABEL_37;
-            v89 = 0;
+            v90 = 0;
             while ( 1 )
             {
-              v74 = v89;
-              if ( pItemDef->m_nSlotType == v88[v89 + 32] )
+              v75 = v90;
+              if ( pItemDef->m_nSlotType == v89[v90 + 32] )
                 break;
-              if ( ++v89 == 16 )
+              if ( ++v90 == 16 )
               {
                 iSlotIndex = -1;
                 goto LABEL_37;
               }
             }
           }
-          iSlotIndex = v74;
+          iSlotIndex = v75;
         }
 LABEL_37:
         m_bHasComputedPrice = pOwningItemInfo->m_bHasComputedPrice;
@@ -2891,13 +2892,13 @@ LABEL_37:
           goto LABEL_38;
         m_pOwningItemDef = pOwningItemInfo->m_pOwningItemDef;
         pOwningItemInfo->m_bHasComputedPrice = 1;
-        v105 = m_bHasComputedPrice;
+        v106 = m_bHasComputedPrice;
         pOwningItemInfo->m_nPackagingFlags = ComputePackagingFlagsForHero(m_nHeroID, pLootListDefa, m_pOwningItemDef);
         m_pOwningEconItemView = pOwningItemInfo->m_pOwningEconItemView;
         if ( pOwningItemInfo->m_pOwningEconItemView != 0 )
         {
           pOwningItemInfo->m_nRegularPrice = 0;
-          m_bSuppressAddingItem = v105;
+          m_bSuppressAddingItem = v106;
           pOwningItemInfo->m_nPrice = 0;
           pOwningItemInfo->m_nOwnershipType = (m_pOwningEconItemView->m_iInventoryPosition.m_Value & 0x20000000) != 0
                                             ? DOTAEconItemOwnershipType_t::DOTA_ITEM_OWNED_IN_PURGATORY
@@ -2915,199 +2916,199 @@ LABEL_38:
         if ( m_bSuppressAddingItem == 0 )
         {
           m_Size = pList->m_Size;
-          v39 = pList->m_Size;
+          v40 = pList->m_Size;
           if ( pList->m_Size == pList->m_Memory.m_nAllocationCount )
           {
-            v107 = m_bSuppressAddingItem;
+            v108 = m_bSuppressAddingItem;
             CUtlMemory<DOTAEconItemInfo_t,int>::Grow(&pList->m_Memory, 1);
-            m_bSuppressAddingItem = v107;
-            v39 = pList->m_Size;
+            m_bSuppressAddingItem = v108;
+            v40 = pList->m_Size;
           }
-          pList->m_Size = v39 + 1;
-          v40 = &pList->m_Memory.m_pMemory[m_Size];
-          if ( v40 != 0 )
+          pList->m_Size = v40 + 1;
+          v41 = &pList->m_Memory.m_pMemory[m_Size];
+          if ( v41 != 0 )
           {
             m_Data = INVALID_ITEM_DEF_INDEX.m_Data;
-            v40->m_Id.m_nItemID.m_Data = 0;
-            v40->m_packageId.m_nItemID.m_Data = 0;
-            v40->m_pSet.m_szName = 0;
-            v40->m_pSet.m_pRef = 0;
-            v40->m_Id.m_nItemDefIndex.m_Data = m_Data;
-            v40->m_packageId.m_nItemDefIndex.m_Data = m_Data;
-            v40->m_pSet.m_bDestructName = 0;
-            v40->m_pSet.m_unSchemaGeneration = 0;
-            v42 = &pList->m_Memory.m_pMemory[m_Size];
+            v41->m_Id.m_nItemID.m_Data = 0;
+            v41->m_packageId.m_nItemID.m_Data = 0;
+            v41->m_pSet.m_szName = 0;
+            v41->m_pSet.m_pRef = 0;
+            v41->m_Id.m_nItemDefIndex.m_Data = m_Data;
+            v41->m_packageId.m_nItemDefIndex.m_Data = m_Data;
+            v41->m_pSet.m_bDestructName = 0;
+            v41->m_pSet.m_unSchemaGeneration = 0;
+            v43 = &pList->m_Memory.m_pMemory[m_Size];
           }
           else
           {
-            v42 = 0;
+            v43 = 0;
           }
           if ( pEconItemView != 0
-            && (v94 = m_bSuppressAddingItem,
-                v99 = v42,
-                v43 = (*(pItemDef->_vptr_IEconItemDefinition + 14))(pItemDef),
-                v42 = v99,
-                m_bSuppressAddingItem = v94,
-                v43 == 0) )
+            && (v95 = m_bSuppressAddingItem,
+                v100 = v43,
+                v44 = (*(pItemDef->_vptr_IEconItemDefinition + 14))(pItemDef),
+                v43 = v100,
+                m_bSuppressAddingItem = v95,
+                v44 == 0) )
           {
-            v90 = (*(pEconItemView->_vptr_IEconItemInterface + 14))(pEconItemView, v44, v99, v94);
-            v42 = v99;
-            m_bSuppressAddingItem = v94;
-            v99->m_Id.m_nItemID.m_Data = v90;
+            v91 = (*(pEconItemView->_vptr_IEconItemInterface + 14))(pEconItemView, v45, v100, v95);
+            v43 = v100;
+            m_bSuppressAddingItem = v95;
+            v100->m_Id.m_nItemID.m_Data = v91;
           }
           else
           {
-            v42->m_Id.m_nItemID.m_Data = 0;
+            v43->m_Id.m_nItemID.m_Data = 0;
           }
-          v95 = m_bSuppressAddingItem;
-          v100 = v42;
-          v45 = (*pItemDef->_vptr_IEconItemDefinition)(pItemDef);
-          v47 = v100;
-          v48 = v95;
-          v100->m_Id.m_nItemDefIndex.m_Data = v45;
+          v96 = m_bSuppressAddingItem;
+          v101 = v43;
+          v46 = pItemDef->GetDefinitionIndex();
+          v48 = v101;
+          v49 = v96;
+          v101->m_Id.m_nItemDefIndex.m_Data = v46;
           if ( pOwningItemInfo->m_pOwningItemDef != pItemDef )
           {
             if ( pOwningItemInfo->m_pOwningEconItemView != 0 )
             {
-              v49 = (*(pOwningItemInfo->m_pOwningEconItemView->_vptr_IEconItemInterface + 14))(
+              v50 = (*(pOwningItemInfo->m_pOwningEconItemView->_vptr_IEconItemInterface + 14))(
                       pOwningItemInfo->m_pOwningEconItemView,
-                      v46,
-                      v100,
-                      v95);
-              v47 = v100;
-              v48 = v95;
-              v100->m_packageId.m_nItemID.m_Data = v49;
+                      v47,
+                      v101,
+                      v96);
+              v48 = v101;
+              v49 = v96;
+              v101->m_packageId.m_nItemID.m_Data = v50;
             }
             else
             {
-              v100->m_packageId.m_nItemID.m_Data = 0;
+              v101->m_packageId.m_nItemID.m_Data = 0;
             }
-            v96 = v48;
-            v101 = v47;
-            v50 = (*pOwningItemInfo->m_pOwningItemDef->_vptr_IEconItemDefinition)(pOwningItemInfo->m_pOwningItemDef);
-            v47 = v101;
-            v48 = v96;
-            v101->m_packageId.m_nItemDefIndex.m_Data = v50;
+            v97 = v49;
+            v102 = v48;
+            v51 = pOwningItemInfo->m_pOwningItemDef->GetDefinitionIndex();
+            v48 = v102;
+            v49 = v97;
+            v102->m_packageId.m_nItemDefIndex.m_Data = v51;
           }
-          v97 = v48;
-          v102 = v47;
-          v51 = (*(pItemDef->_vptr_IEconItemDefinition + 14))(pItemDef);
-          v52 = v102;
-          v53 = (v51 << 7) | *(v102 + 61) & 0x7F;
-          *(v102 + 61) = v53;
-          v54 = v97;
-          if ( v53 < 0 )
+          v98 = v49;
+          v103 = v48;
+          v52 = (*(pItemDef->_vptr_IEconItemDefinition + 14))(pItemDef);
+          v53 = v103;
+          v54 = (v52 << 7) | *(v103 + 61) & 0x7F;
+          *(v103 + 61) = v54;
+          v55 = v98;
+          if ( v54 < 0 )
           {
-            v98 = v102;
-            v93 = v54;
+            v99 = v103;
+            v94 = v55;
             p_m_itemSchema = &ItemSystem()->m_itemSchema;
-            v81 = *(p_m_itemSchema->_vptr_IEconItemSchema + 46);
-            v82 = (*pItemDef->_vptr_IEconItemDefinition)(pItemDef);
-            v83 = v81(p_m_itemSchema, v82);
-            v52 = v98;
-            v54 = v93;
-            if ( v83 != 0 )
-              *(v98 + 61) &= ~0x80u;
+            v82 = *(p_m_itemSchema->_vptr_IEconItemSchema + 46);
+            v83 = pItemDef->GetDefinitionIndex();
+            v84 = v82(p_m_itemSchema, v83);
+            v53 = v99;
+            v55 = v94;
+            if ( v84 != 0 )
+              *(v99 + 61) &= ~0x80u;
           }
-          v52->m_nHeroID = m_nHeroID;
+          v53->m_nHeroID = m_nHeroID;
           if ( pLootListDefa != 0 )
           {
             if ( iSlotIndex <= 0xF )
             {
-              v55 = pLootListDefa->m_nLoadoutPreviewMode[iSlotIndex];
-              if ( v55 == HeroSlotLoadoutPreviewMode_t::HERO_SLOT_LOADOUT_PREVIEW_AUTODETECT )
+              v56 = pLootListDefa->m_nLoadoutPreviewMode[iSlotIndex];
+              if ( v56 == HeroSlotLoadoutPreviewMode_t::HERO_SLOT_LOADOUT_PREVIEW_AUTODETECT )
               {
                 p_m_Size = &pLootListDefa->m_pSlotUnits[iSlotIndex]->m_Size;
-                if ( p_m_Size == 0 || (v54 = 1, *p_m_Size <= 0) )
+                if ( p_m_Size == 0 || (v55 = 1, *p_m_Size <= 0) )
                 {
-                  v54 = 1;
-                  v92 = pLootListDefa->m_nSlotTypes[iSlotIndex];
-                  if ( (v92 & 0xFFFFFFF7) != 0x13 && (v92 - 29) > 4 && v92 != 37 && v92 != 35 )
-                    v54 = v92 == 43;
+                  v55 = 1;
+                  v93 = pLootListDefa->m_nSlotTypes[iSlotIndex];
+                  if ( (v93 & 0xFFFFFFF7) != 0x13 && (v93 - 29) > 4 && v93 != 37 && v93 != 35 )
+                    v55 = v93 == 43;
                 }
               }
               else
               {
-                v54 = v55 != HeroSlotLoadoutPreviewMode_t::HERO_SLOT_LOADOUT_PREVIEW_HERO;
+                v55 = v56 != HeroSlotLoadoutPreviewMode_t::HERO_SLOT_LOADOUT_PREVIEW_HERO;
               }
             }
           }
           else
           {
-            v54 = 1;
+            v55 = 1;
           }
-          *(v52 + 62) = v54 | *(v52 + 62) & 0xFE;
-          v103 = v52;
-          CSchemaFieldHandle<IEconItemSetDefinition>::Set(&v52->m_pSet, pItemDef->m_pItemSetDef);
-          v56 = v103;
-          if ( v103->m_pSet.m_szName == 0 )
+          *(v53 + 62) = v55 | *(v53 + 62) & 0xFE;
+          v104 = v53;
+          CSchemaFieldHandle<IEconItemSetDefinition>::Set(&v53->m_pSet, pItemDef->m_pItemSetDef);
+          v57 = v104;
+          if ( v104->m_pSet.m_szName == 0 )
             goto LABEL_60;
-          v57 = GEconItemSchema();
-          v56 = v103;
-          v58 = v57->m_unResetCount;
-          if ( v58 == v103->m_pSet.m_unSchemaGeneration )
+          v58 = GEconItemSchema();
+          v57 = v104;
+          v59 = v58->m_unResetCount;
+          if ( v59 == v104->m_pSet.m_unSchemaGeneration )
           {
-            v59 = v103->m_pSet.m_pRef;
+            v60 = v104->m_pSet.m_pRef;
           }
           else
           {
-            v80 = GEconItemSchema();
-            v59 = (*(v80->_vptr_IEconItemSchema + 30))(v80, v103->m_pSet.m_szName);
-            v56 = v103;
-            v103->m_pSet.m_pRef = v59;
-            v103->m_pSet.m_unSchemaGeneration = v58;
+            v81 = GEconItemSchema();
+            v60 = (*(v81->_vptr_IEconItemSchema + 30))(v81, v104->m_pSet.m_szName);
+            v57 = v104;
+            v104->m_pSet.m_pRef = v60;
+            v104->m_pSet.m_unSchemaGeneration = v59;
           }
-          if ( v59 != 0 && pLootListDefa != 0 )
+          if ( v60 != 0 && pLootListDefa != 0 )
           {
-            v104 = v56;
-            v75 = ComputeItemCountInSetWithNoSpecialPreview(pLootListDefa, v59);
-            v56 = v104;
-            v60 = v75 & 0xF;
+            v105 = v57;
+            v76 = ComputeItemCountInSetWithNoSpecialPreview(pLootListDefa, v60);
+            v57 = v105;
+            v61 = v76 & 0xF;
           }
           else
           {
 LABEL_60:
-            v60 = 0;
+            v61 = 0;
           }
-          v61 = v60 | HIBYTE(v56->m_iEntityQuantity) & 0xF0;
-          v62 = BYTE2(v56->m_iEntityQuantity);
-          HIBYTE(v56->m_iEntityQuantity) = v61;
-          BYTE2(v56->m_iEntityQuantity) = iSlotIndex & 0x1F | v62 & 0xE0;
+          v62 = v61 | HIBYTE(v57->m_iEntityQuantity) & 0xF0;
+          v63 = BYTE2(v57->m_iEntityQuantity);
+          HIBYTE(v57->m_iEntityQuantity) = v62;
+          BYTE2(v57->m_iEntityQuantity) = iSlotIndex & 0x1F | v63 & 0xE0;
           m_pStyles = pItemDef->m_pAssetInfo->m_pStyles;
           if ( m_pStyles != 0 )
-            v64 = m_pStyles->m_Size & 0x1F;
+            v65 = m_pStyles->m_Size & 0x1F;
           else
-            LOBYTE(v64) = 0;
-          v56->m_unClientFlags = v64 | v56->m_unClientFlags & 0xE0;
-          v65 = pEconItemView;
+            LOBYTE(v65) = 0;
+          v57->m_unClientFlags = v65 | v57->m_unClientFlags & 0xE0;
+          v66 = pEconItemView;
           if ( pEconItemView != 0 )
           {
             vptr_IEconItemInterface = pEconItemView->_vptr_IEconItemInterface;
-            pEconItemViewe = v56;
-            v67 = vptr_IEconItemInterface[16](v65);
-            v56 = pEconItemViewe;
-            *(&pEconItemViewe->m_unClientFlags + 1) = v67 & 0x1F | *(&pEconItemViewe->m_unClientFlags + 1) & 0xE0;
+            pEconItemViewe = v57;
+            v68 = vptr_IEconItemInterface[16](v66);
+            v57 = pEconItemViewe;
+            *(&pEconItemViewe->m_unClientFlags + 1) = v68 & 0x1F | *(&pEconItemViewe->m_unClientFlags + 1) & 0xE0;
           }
           else
           {
-            *(&v56->m_unClientFlags + 1) &= 0xE0u;
+            *(&v57->m_unClientFlags + 1) &= 0xE0u;
           }
-          pEconItemViewd = v56;
-          v68 = (2 * CDOTAInventoryManager::HasTeamSpecificViews(g_DOTAInventoryManager, pItemDef))
-              | *(&v56->m_unClientFlags + 2) & 0xFD;
-          *(&pEconItemViewd->m_unClientFlags + 2) = v68;
+          pEconItemViewd = v57;
+          v69 = (2 * CDOTAInventoryManager::HasTeamSpecificViews(g_DOTAInventoryManager, pItemDef))
+              | *(&v57->m_unClientFlags + 2) & 0xFD;
+          *(&pEconItemViewd->m_unClientFlags + 2) = v69;
           m_nOwnershipType = pOwningItemInfo->m_nOwnershipType;
           LOBYTE(pEconItemViewd->m_unOverrideOrigin) = packaging;
           *(&pEconItemViewd->m_unClientFlags + 3) = m_nOwnershipType;
           m_unClientFlags = pEconItemViewd->m_unClientFlags;
-          v71 = (8 * (nNestingLevel & 7)) | v68 & 0xC7;
-          *(&pEconItemViewd->m_unClientFlags + 2) = v71;
+          v72 = (8 * (nNestingLevel & 7)) | v69 & 0xC7;
+          *(&pEconItemViewd->m_unClientFlags + 2) = v72;
           pEconItemViewd->m_unClientFlags = (32 * (pOwningItemInfo->m_nPackagingFlags & 3)) | m_unClientFlags & 0x9F;
           *(&pEconItemViewd->m_unOverrideOrigin + 1) = pOwningItemInfo->m_nPrice;
           LODWORD(pEconItemViewd->m_pDescription) = pOwningItemInfo->m_nRegularPrice;
-          v72 = pOwningItemInfo->m_pOwningEconItemView != 0
+          v73 = pOwningItemInfo->m_pOwningEconItemView != 0
              && (pOwningItemInfo->m_pOwningEconItemView->m_iInventoryPosition.m_Value & 0x20000000) != 0;
-          *(&pEconItemViewd->m_unClientFlags + 2) = (4 * v72) | v71 & 0xFB;
+          *(&pEconItemViewd->m_unClientFlags + 2) = (4 * v73) | v72 & 0xFB;
           HIDWORD(pEconItemViewd->m_pDescription) = CRTime::sm_nTimeCur
                                                   - pOwningItemInfo->m_pOwningItemDef->m_rtDefCreation;
           *(&pEconItemViewd->m_unClientFlags + 1) = (32
@@ -4672,23 +4673,27 @@ CEconItemView *__fastcall CDOTAPlayerInventory::GetOverriddenItemInLoadout(
 {
   __int64 v3; // r13
   CEconItemView *result; // rax
-  __int64 v7; // rax
+  __int64 v7; // rdi
   __int64 v8; // rax
+  __int64 v9; // rdi
+  __int64 v10; // rax
 
   v3 = iSlotIndex;
   if ( `guard variable for'CDOTAPlayerInventory::GetOverriddenItemInLoadout(int,int,bool)::bHeroRecorder == 0
     && __cxa_guard_acquire(&`guard variable for'CDOTAPlayerInventory::GetOverriddenItemInLoadout(int,int,bool)::bHeroRecorder) != 0 )
   {
-    v8 = CommandLine();
-    CDOTAPlayerInventory::GetOverriddenItemInLoadout(int,int,bool)::bHeroRecorder = (*(*v8 + 64LL))(v8, "-herorecorder") != 0;
+    v10 = CommandLine(v9);
+    CDOTAPlayerInventory::GetOverriddenItemInLoadout(int,int,bool)::bHeroRecorder = (*(*v10 + 64LL))(
+                                                                                      v10,
+                                                                                      "-herorecorder") != 0;
     __cxa_guard_release(&`guard variable for'CDOTAPlayerInventory::GetOverriddenItemInLoadout(int,int,bool)::bHeroRecorder);
   }
   if ( `guard variable for'CDOTAPlayerInventory::GetOverriddenItemInLoadout(int,int,bool)::bHeroRecorderPreview == 0
     && __cxa_guard_acquire(&`guard variable for'CDOTAPlayerInventory::GetOverriddenItemInLoadout(int,int,bool)::bHeroRecorderPreview) != 0 )
   {
-    v7 = CommandLine();
-    CDOTAPlayerInventory::GetOverriddenItemInLoadout(int,int,bool)::bHeroRecorderPreview = (*(*v7 + 64LL))(
-                                                                                             v7,
+    v8 = CommandLine(v7);
+    CDOTAPlayerInventory::GetOverriddenItemInLoadout(int,int,bool)::bHeroRecorderPreview = (*(*v8 + 64LL))(
+                                                                                             v8,
                                                                                              "-herorecorder_preview") != 0;
     __cxa_guard_release(&`guard variable for'CDOTAPlayerInventory::GetOverriddenItemInLoadout(int,int,bool)::bHeroRecorderPreview);
   }

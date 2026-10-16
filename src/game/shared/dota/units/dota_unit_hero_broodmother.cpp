@@ -1080,7 +1080,7 @@ CEntityInstance *__fastcall CDOTA_Unit_Hero_Broodmother::CEntityInstanceEntityCl
 void __fastcall CDOTA_Unit_Hero_Broodmother::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Unit_Hero_Broodmother::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -1090,7 +1090,7 @@ void __fastcall CDOTA_Unit_Hero_Broodmother::CEntityInstanceEntityClass::~CEntit
 void __fastcall CDOTA_Unit_Hero_Broodmother::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Unit_Hero_Broodmother::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -1355,7 +1355,7 @@ CEntityInstance *__fastcall CDOTA_Unit_Broodmother_Spiderling::CEntityInstanceEn
 void __fastcall CDOTA_Unit_Broodmother_Spiderling::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Unit_Broodmother_Spiderling::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -1365,7 +1365,7 @@ void __fastcall CDOTA_Unit_Broodmother_Spiderling::CEntityInstanceEntityClass::~
 void __fastcall CDOTA_Unit_Broodmother_Spiderling::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Unit_Broodmother_Spiderling::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -1585,7 +1585,7 @@ CEntityInstance *__fastcall CDOTA_Ability_Broodmother_SpawnSpiderlings::CEntityI
 void __fastcall CDOTA_Ability_Broodmother_SpawnSpiderlings::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Broodmother_SpawnSpiderlings::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -1595,7 +1595,7 @@ void __fastcall CDOTA_Ability_Broodmother_SpawnSpiderlings::CEntityInstanceEntit
 void __fastcall CDOTA_Ability_Broodmother_SpawnSpiderlings::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Broodmother_SpawnSpiderlings::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -2176,7 +2176,7 @@ CEntityInstance *__fastcall CDOTA_Ability_Broodmother_SpawnSpiderite::CEntityIns
 void __fastcall CDOTA_Ability_Broodmother_SpawnSpiderite::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Broodmother_SpawnSpiderite::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -2186,7 +2186,7 @@ void __fastcall CDOTA_Ability_Broodmother_SpawnSpiderite::CEntityInstanceEntityC
 void __fastcall CDOTA_Ability_Broodmother_SpawnSpiderite::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Broodmother_SpawnSpiderite::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -2702,7 +2702,7 @@ CEntityInstance *__fastcall CDOTA_Ability_Broodmother_PoisonSting::CEntityInstan
 void __fastcall CDOTA_Ability_Broodmother_PoisonSting::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Broodmother_PoisonSting::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -2712,7 +2712,7 @@ void __fastcall CDOTA_Ability_Broodmother_PoisonSting::CEntityInstanceEntityClas
 void __fastcall CDOTA_Ability_Broodmother_PoisonSting::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Broodmother_PoisonSting::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -3149,7 +3149,7 @@ CEntityInstance *__fastcall CDOTA_Unit_Broodmother_Web::CEntityInstanceEntityCla
 void __fastcall CDOTA_Unit_Broodmother_Web::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Unit_Broodmother_Web::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -3159,7 +3159,7 @@ void __fastcall CDOTA_Unit_Broodmother_Web::CEntityInstanceEntityClass::~CEntity
 void __fastcall CDOTA_Unit_Broodmother_Web::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Unit_Broodmother_Web::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -3553,7 +3553,7 @@ CEntityInstance *__fastcall CDOTA_Ability_Broodmother_SpinWeb::CEntityInstanceEn
 void __fastcall CDOTA_Ability_Broodmother_SpinWeb::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Broodmother_SpinWeb::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -3563,7 +3563,7 @@ void __fastcall CDOTA_Ability_Broodmother_SpinWeb::CEntityInstanceEntityClass::~
 void __fastcall CDOTA_Ability_Broodmother_SpinWeb::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Broodmother_SpinWeb::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -5005,7 +5005,7 @@ CEntityInstance *__fastcall CDOTA_Ability_Broodmother_SpinWeb_Destroy::CEntityIn
 void __fastcall CDOTA_Ability_Broodmother_SpinWeb_Destroy::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Broodmother_SpinWeb_Destroy::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -5015,7 +5015,7 @@ void __fastcall CDOTA_Ability_Broodmother_SpinWeb_Destroy::CEntityInstanceEntity
 void __fastcall CDOTA_Ability_Broodmother_SpinWeb_Destroy::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Broodmother_SpinWeb_Destroy::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -5192,7 +5192,7 @@ CEntityInstance *__fastcall CDOTA_Ability_Broodmother_IncapacitatingBite::CEntit
 void __fastcall CDOTA_Ability_Broodmother_IncapacitatingBite::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Broodmother_IncapacitatingBite::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -5202,7 +5202,7 @@ void __fastcall CDOTA_Ability_Broodmother_IncapacitatingBite::CEntityInstanceEnt
 void __fastcall CDOTA_Ability_Broodmother_IncapacitatingBite::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Broodmother_IncapacitatingBite::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -5683,7 +5683,7 @@ CEntityInstance *__fastcall CDOTA_Ability_Broodmother_InsatiableHunger::CEntityI
 void __fastcall CDOTA_Ability_Broodmother_InsatiableHunger::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Broodmother_InsatiableHunger::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -5693,7 +5693,7 @@ void __fastcall CDOTA_Ability_Broodmother_InsatiableHunger::CEntityInstanceEntit
 void __fastcall CDOTA_Ability_Broodmother_InsatiableHunger::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Broodmother_InsatiableHunger::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }

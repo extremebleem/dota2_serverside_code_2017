@@ -90,7 +90,7 @@ void __fastcall CDOTA_ProjectileManager::~CDOTA_ProjectileManager(CDOTA_Projecti
   CUtlVectorBase<CDOTA_LinearProjectileInfo*,CUtlMemory<CDOTA_LinearProjectileInfo*,int> >::CAllocator *p_m_Memory; // r12
 
   v2 = (this->m_LinearProjectiles.m_Memory.m_nGrowSize & 0xC0000000) == 0;
-  this->_vptr_IGameSystem = off_41703D0;
+  this->_vptr_IGameSystem = off_41703D0;  // vptr: CDOTA_ProjectileManager
   this->m_LinearProjectiles.m_Size = 0;
   if ( v2 )
   {
@@ -106,7 +106,7 @@ void __fastcall CDOTA_ProjectileManager::~CDOTA_ProjectileManager(CDOTA_Projecti
     if ( (this->m_TrackingProjectiles.m_Memory.m_nGrowSize & 0xC0000000) == 0 )
       CUtlMemory<CDOTA_TrackingProjectileInfo,int>::Purge(&this->m_TrackingProjectiles.m_Memory);
   }
-  this->_vptr_IGameSystem = off_3F7C1B0;
+  this->_vptr_IGameSystem = off_3F7C1B0;  // vptr: CAutoGameSystem
   IGameSystem::~IGameSystem(this);
 }
 
@@ -119,7 +119,7 @@ void __fastcall CDOTA_ProjectileManager::~CDOTA_ProjectileManager(CDOTA_Projecti
   CUtlVectorBase<CDOTA_LinearProjectileInfo*,CUtlMemory<CDOTA_LinearProjectileInfo*,int> >::CAllocator *p_m_Memory; // r12
 
   v2 = (this->m_LinearProjectiles.m_Memory.m_nGrowSize & 0xC0000000) == 0;
-  this->_vptr_IGameSystem = off_41703D0;
+  this->_vptr_IGameSystem = off_41703D0;  // vptr: CDOTA_ProjectileManager
   this->m_LinearProjectiles.m_Size = 0;
   if ( v2 )
   {
@@ -135,7 +135,7 @@ void __fastcall CDOTA_ProjectileManager::~CDOTA_ProjectileManager(CDOTA_Projecti
     if ( (this->m_TrackingProjectiles.m_Memory.m_nGrowSize & 0xC0000000) == 0 )
       CUtlMemory<CDOTA_TrackingProjectileInfo,int>::Purge(&this->m_TrackingProjectiles.m_Memory);
   }
-  this->_vptr_IGameSystem = off_3F7C1B0;
+  this->_vptr_IGameSystem = off_3F7C1B0;  // vptr: CAutoGameSystem
   IGameSystem::~IGameSystem(this);
   operator delete(this);
 }

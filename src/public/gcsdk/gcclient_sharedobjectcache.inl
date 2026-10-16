@@ -17,10 +17,10 @@ GCSDK::CSharedObjectTypeCache *__fastcall GCSDK::CGCClientSharedObjectCache::All
 {
   GCSDK::CSharedObjectTypeCache *v3; // rbx
 
-  v3 = operator new(0x30u);
+  v3 = operator new(0x30u);  // new GCSDK::CGCClientSharedObjectTypeCache
   GCSDK::CSharedObjectTypeCache::CSharedObjectTypeCache(v3, nClassID);
   *(&v3->m_nTypeID + 1) = 0;
-  v3->_vptr_CSharedObjectTypeCache = off_47D0B10;
+  v3->_vptr_CSharedObjectTypeCache = off_47D0B10;  // vptr: GCSDK::CGCClientSharedObjectTypeCache
   return v3;
 }
 

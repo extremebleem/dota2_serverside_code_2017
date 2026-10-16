@@ -399,15 +399,19 @@ void __fastcall CEconItemView::InitInternal(
   CEconItem *m_pNonSOEconItem; // rdi
   int m_nItemQuality; // ebx
   unsigned int v25; // ebx
-  CUtlVectorEmbeddedNetworkVar<CEconItemAttribute,CAttributeList::NetworkVar_m_Attributes,-1> *v26; // [rsp+8h] [rbp-98h]
-  CEntityInstance *v27; // [rsp+18h] [rbp-88h]
+  __int64 v26; // rdx
+  __int64 v27; // rcx
+  __int64 v28; // rdi
+  __int64 v29; // rsi
+  CUtlVectorEmbeddedNetworkVar<CEconItemAttribute,CAttributeList::NetworkVar_m_Attributes,-1> *v30; // [rsp+8h] [rbp-98h]
+  CEntityInstance *v31; // [rsp+18h] [rbp-88h]
   void (__fastcall *testItemID)(void **, IFlattenedSerializers *, FlattenedSerializerHandle_t, CEntityInstance *, CUtlVectorEmbeddedNetworkVar<CEconItemAttribute,CAttributeList::NetworkVar_m_Attributes,-1> *, bool *); // [rsp+20h] [rbp-80h]
   itemid_t testItemIDb; // [rsp+20h] [rbp-80h]
   itemid_t testItemIDa; // [rsp+20h] [rbp-80h]
-  LeafCodeInfo_t v32; // [rsp+30h] [rbp-70h] BYREF
+  LeafCodeInfo_t v36; // [rsp+30h] [rbp-70h] BYREF
   void *src[2]; // [rsp+50h] [rbp-50h] BYREF
-  __int16 v34; // [rsp+60h] [rbp-40h]
-  char v35; // [rsp+62h] [rbp-3Eh]
+  __int16 v38; // [rsp+60h] [rbp-40h]
+  char v39; // [rsp+62h] [rbp-3Eh]
 
   p_m_Attributes = &this->m_AttributeList.m_Attributes;
   if ( this->m_AttributeList.m_Attributes.m_Vector.m_Size > 0 )
@@ -418,22 +422,22 @@ void __fastcall CEconItemView::InitInternal(
       this->m_AttributeList.m_Attributes.m_bResolved = 1;
       if ( m_pObj != 0 )
       {
-        v26 = &this->m_AttributeList.m_Attributes;
-        v27 = m_pObj;
+        v30 = &this->m_AttributeList.m_Attributes;
+        v31 = m_pObj;
         testItemID = *(*g_pFlattenedSerializers + 272LL);
         NetworkSerializerForEntityInstance = GetNetworkSerializerForEntityInstance(m_pObj);
         testItemID(
           src,
           g_pFlattenedSerializers,
           NetworkSerializerForEntityInstance,
-          v27,
-          v26,
+          v31,
+          v30,
           &this->m_AttributeList.m_Attributes.m_bIsNetworkVarExcluded);
         v15 = src;
-        p_m_Attributes = v26;
+        p_m_Attributes = v30;
         if ( &this->m_AttributeList.m_Attributes.m_PathToVector != src )
         {
-          v16 = v34;
+          v16 = v38;
           this->m_AttributeList.m_Attributes.m_PathToVector.m_bUsingExternalPaths = 0;
           if ( v16 > 6 )
           {
@@ -441,17 +445,17 @@ void __fastcall CEconItemView::InitInternal(
               goto LABEL_58;
             while ( 1 )
             {
-              if ( Plat_ShouldCollectMiniDumpsForFatalErrors() != 0 )
+              if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v28, v29, v26, v27) != 0 )
                 loc_0 = -559038737;
               Plat_ExitProcess(1);
 LABEL_58:
-              v32.m_szFile = "../../public/tier2/fieldpath.h";
-              v32.m_szFunction = "Path_SetCount";
-              v32.m_nLine = 442;
+              v36.m_szFile = "../../public/tier2/fieldpath.h";
+              v36.m_szFunction = "Path_SetCount";
+              v36.m_nLine = 442;
               LoggingSystem_Log(
                 LOG_GENERAL,
                 LoggingSeverity_t::LS_ERROR,
-                &v32,
+                &v36,
                 "Path_SetCount failed, depth already == DEFAULT_MAX_PATH_DEPTH(%d)",
                 6);
             }
@@ -460,10 +464,10 @@ LABEL_58:
           if ( v16 > 0 )
           {
             v17 = 2 * v16;
-            if ( v35 != 0 )
+            if ( v39 != 0 )
               v15 = src[0];
             memcpy(&this->m_AttributeList.m_Attributes.m_PathToVector, v15, v17);
-            p_m_Attributes = v26;
+            p_m_Attributes = v30;
           }
         }
       }
@@ -660,13 +664,17 @@ void __fastcall CEconItemView::CopyInternal(CEconItemView *const this, const CEc
   CFieldPath *p_m_PathToVector; // rsi
   size_t v13; // rdx
   bool m_bResolved; // al
-  int v15; // ebx
-  int v16; // edx
-  int v17; // ecx
-  int v18; // esi
-  int v19; // r8d
-  int v20; // r9d
-  LeafCodeInfo_t v21; // [rsp+10h] [rbp-50h] BYREF
+  __int64 v15; // rdx
+  __int64 v16; // rcx
+  __int64 v17; // rdi
+  __int64 v18; // rsi
+  int v19; // ebx
+  int v20; // edx
+  int v21; // ecx
+  int v22; // esi
+  int v23; // r8d
+  int v24; // r9d
+  LeafCodeInfo_t v25; // [rsp+10h] [rbp-50h] BYREF
 
   if ( src->m_iItemDefinitionIndex.m_Value.m_Data != this->m_iItemDefinitionIndex.m_Value.m_Data )
   {
@@ -756,21 +764,21 @@ void __fastcall CEconItemView::CopyInternal(CEconItemView *const this, const CEc
     {
       if ( LoggingSystem_IsChannelEnabled(LOG_GENERAL, 4) != 0 )
       {
-        v21.m_szFile = "../../public/tier2/fieldpath.h";
-        v21.m_szFunction = "Path_SetCount";
-        v21.m_nLine = 442;
+        v25.m_szFile = "../../public/tier2/fieldpath.h";
+        v25.m_szFunction = "Path_SetCount";
+        v25.m_nLine = 442;
         LoggingSystem_Log(
           LOG_GENERAL,
           LoggingSeverity_t::LS_ERROR,
-          &v21,
+          &v25,
           "Path_SetCount failed, depth already == DEFAULT_MAX_PATH_DEPTH(%d)",
           6);
       }
-      if ( Plat_ShouldCollectMiniDumpsForFatalErrors() != 0 )
+      if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v17, v18, v15, v16) != 0 )
         loc_0 = -559038737;
-      v15 = Plat_ExitProcess(1);
+      v19 = Plat_ExitProcess(1);
       operator delete(m_Size);
-      Unwind_Resume(v15, v18, v16, v17, v19, v20);
+      Unwind_Resume(v19, v22, v20, v21, v23, v24);
     }
     this->m_AttributeList.m_Attributes.m_PathToVector.m_nCount = m_nCount;
     v11 = src->m_AttributeList.m_Attributes.m_PathToVector.m_nCount;
@@ -1142,7 +1150,7 @@ LABEL_4:
 void __fastcall CEconItemAttributeIterator_EconItemViewWrapper::~CEconItemAttributeIterator_EconItemViewWrapper(
         CEconItemAttributeIterator_EconItemViewWrapper *const this)
 {
-  this->_vptr_IEconItemAttributeIterator = off_40DB570;
+  this->_vptr_IEconItemAttributeIterator = off_40DB570;  // vptr: IEconItemAttributeIterator
 }
 
 
@@ -1151,7 +1159,7 @@ void __fastcall CEconItemAttributeIterator_EconItemViewWrapper::~CEconItemAttrib
 void __fastcall CEconItemAttributeIterator_EconItemViewWrapper::~CEconItemAttributeIterator_EconItemViewWrapper(
         CEconItemAttributeIterator_EconItemViewWrapper *const this)
 {
-  this->_vptr_IEconItemAttributeIterator = off_40DB570;
+  this->_vptr_IEconItemAttributeIterator = off_40DB570;  // vptr: IEconItemAttributeIterator
   operator delete(this);
 }
 
@@ -1165,7 +1173,7 @@ bool __fastcall CEconItemAttributeIterator_EconItemViewWrapper::OnIterateAttribu
 {
   unsigned __int16 v6; // ax
 
-  v6 = (*pAttrDef->_vptr_IEconItemAttributeDefinition)(pAttrDef);
+  v6 = pAttrDef->GetDefinitionIndex();
   return CAttributeList::GetAttributeByID(this->m_pAttributeList, v6) != 0
       || (*(this->m_pIterator->_vptr_IEconItemAttributeIterator + 2))(this->m_pIterator, pAttrDef, value);
 }
@@ -1198,7 +1206,7 @@ bool __fastcall CEconItemAttributeIterator_EconItemViewWrapper::OnIterateAttribu
 {
   unsigned __int16 v6; // ax
 
-  v6 = (*pAttrDef->_vptr_IEconItemAttributeDefinition)(pAttrDef);
+  v6 = pAttrDef->GetDefinitionIndex();
   return CAttributeList::GetAttributeByID(this->m_pAttributeList, v6) != 0
       || (*(this->m_pIterator->_vptr_IEconItemAttributeIterator + 4))(this->m_pIterator, pAttrDef, value);
 }
@@ -1213,7 +1221,7 @@ bool __fastcall CEconItemAttributeIterator_EconItemViewWrapper::OnIterateAttribu
 {
   unsigned __int16 v6; // ax
 
-  v6 = (*pAttrDef->_vptr_IEconItemAttributeDefinition)(pAttrDef);
+  v6 = pAttrDef->GetDefinitionIndex();
   return CAttributeList::GetAttributeByID(this->m_pAttributeList, v6) != 0
       || (*(this->m_pIterator->_vptr_IEconItemAttributeIterator + 5))(this->m_pIterator, pAttrDef, value);
 }
@@ -1228,7 +1236,7 @@ bool __fastcall CEconItemAttributeIterator_EconItemViewWrapper::OnIterateAttribu
 {
   unsigned __int16 v6; // ax
 
-  v6 = (*pAttrDef->_vptr_IEconItemAttributeDefinition)(pAttrDef);
+  v6 = pAttrDef->GetDefinitionIndex();
   return CAttributeList::GetAttributeByID(this->m_pAttributeList, v6) != 0
       || (*(this->m_pIterator->_vptr_IEconItemAttributeIterator + 6))(this->m_pIterator, pAttrDef, value);
 }
@@ -1243,7 +1251,7 @@ bool __fastcall CEconItemAttributeIterator_EconItemViewWrapper::OnIterateAttribu
 {
   unsigned __int16 v6; // ax
 
-  v6 = (*pAttrDef->_vptr_IEconItemAttributeDefinition)(pAttrDef);
+  v6 = pAttrDef->GetDefinitionIndex();
   return CAttributeList::GetAttributeByID(this->m_pAttributeList, v6) != 0
       || (*(this->m_pIterator->_vptr_IEconItemAttributeIterator + 7))(this->m_pIterator, pAttrDef, value);
 }
@@ -1258,7 +1266,7 @@ bool __fastcall CEconItemAttributeIterator_EconItemViewWrapper::OnIterateAttribu
 {
   unsigned __int16 v6; // ax
 
-  v6 = (*pAttrDef->_vptr_IEconItemAttributeDefinition)(pAttrDef);
+  v6 = pAttrDef->GetDefinitionIndex();
   return CAttributeList::GetAttributeByID(this->m_pAttributeList, v6) != 0
       || (*(this->m_pIterator->_vptr_IEconItemAttributeIterator + 8))(this->m_pIterator, pAttrDef, value);
 }
@@ -2015,9 +2023,13 @@ void __fastcall CEconItemView::ComputeItemCriteria(CEconItemView *const this, CA
   CUtlLeanVectorFixedGrowableBase<CAssetModifierCriteria::CriteriaVal_t,8u,short int>::IndexType_t ii; // dx
   CUtlLeanVectorFixedGrowableBase<CAssetModifierCriteria::CriteriaVal_t,8u,short int>::ElemType_t *v68; // rcx
   CUtlLeanVectorFixedGrowableBase<CAssetModifierCriteria::CriteriaVal_t,8u,short int>::ElemType_t v69; // rsi
-  CUtlLeanVectorFixedGrowableBase<CAssetModifierCriteria::CriteriaVal_t,8u,short int>::ElemType_t *v70; // [rsp+8h] [rbp-58h]
-  CUtlLeanVectorFixedGrowableBase<CAssetModifierCriteria::CriteriaVal_t,8u,short int>::ElemType_t *v71; // [rsp+8h] [rbp-58h]
-  LeafCodeInfo_t v72; // [rsp+10h] [rbp-50h] BYREF
+  __int64 v70; // rdx
+  __int64 v71; // rcx
+  __int64 v72; // rdi
+  __int64 v73; // rsi
+  CUtlLeanVectorFixedGrowableBase<CAssetModifierCriteria::CriteriaVal_t,8u,short int>::ElemType_t *v74; // [rsp+8h] [rbp-58h]
+  CUtlLeanVectorFixedGrowableBase<CAssetModifierCriteria::CriteriaVal_t,8u,short int>::ElemType_t *v75; // [rsp+8h] [rbp-58h]
+  LeafCodeInfo_t v76; // [rsp+10h] [rbp-50h] BYREF
 
   v4 = (*(this->_vptr_IEconItemInterface + 16))(this);
   m_nCount = criteria->m_values.m_nCount;
@@ -2071,9 +2083,9 @@ void __fastcall CEconItemView::ComputeItemCriteria(CEconItemView *const this, CA
           v18->m_id.m_nHashCode = 0;
         v19 = m_pElements[i++];
       }
-      v70 = v14;
+      v74 = v14;
       (*(*g_pMemAlloc + 16LL))(g_pMemAlloc, criteria->m_values.m_pElements);
-      criteria->m_values.m_pElements = v70;
+      criteria->m_values.m_pElements = v74;
     }
     else if ( v9 > 8 )
     {
@@ -2177,9 +2189,9 @@ void __fastcall CEconItemView::ComputeItemCriteria(CEconItemView *const this, CA
               v50->m_id.m_nHashCode = 0;
             v51 = v48[k++];
           }
-          v71 = v46;
+          v75 = v46;
           (*(*g_pMemAlloc + 16LL))(g_pMemAlloc, criteria->m_values.m_pElements);
-          criteria->m_values.m_pElements = v71;
+          criteria->m_values.m_pElements = v75;
         }
         else if ( v27 > 8 )
         {
@@ -2330,17 +2342,17 @@ LABEL_121:
       goto LABEL_125;
     while ( 1 )
     {
-      if ( Plat_ShouldCollectMiniDumpsForFatalErrors() != 0 )
+      if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v72, v73, v70, v71) != 0 )
         loc_0 = -559038737;
       Plat_ExitProcess(1);
 LABEL_125:
-      v72.m_nLine = 557;
-      v72.m_szFile = "../../public/tier1/utlleanvector.h";
-      v72.m_szFunction = "AddToTailGetPtr";
+      v76.m_nLine = 557;
+      v76.m_szFile = "../../public/tier1/utlleanvector.h";
+      v76.m_szFunction = "AddToTailGetPtr";
       LoggingSystem_Log(
         LOG_GENERAL,
         LoggingSeverity_t::LS_ERROR,
-        &v72,
+        &v76,
         "%s allocation count overflow",
         "AddToTailGetPtr");
     }
@@ -2914,7 +2926,7 @@ void __fastcall CAttributeList::CAttributeList(CAttributeList *const this)
   void (*pfn)(detail::GenericClass *); // rdx
   detail::GenericClass *v6; // rdi
 
-  this->_vptr_CAttributeList = off_47A92B0;
+  this->_vptr_CAttributeList = off_47A92B0;  // vptr: CAttributeList
   p_m_Memory = &this->m_Attributes.m_Vector.m_Memory;
   this->m_Attributes.m_Vector.m_Size = 0;
   this->m_Attributes.m_Vector.m_Memory.m_pMemory = 0;
@@ -2966,10 +2978,14 @@ void __fastcall CAttributeList::Init(CAttributeList *const this)
   CUtlDelegate<void()> *m_pArraySizeChangedDelegate; // rax
   void (*pfn)(detail::GenericClass *); // rdx
   detail::GenericClass *v11; // rdi
-  LeafCodeInfo_t v12; // [rsp+0h] [rbp-70h] BYREF
+  __int64 v12; // rdx
+  __int64 v13; // rcx
+  __int64 v14; // rdi
+  __int64 v15; // rsi
+  LeafCodeInfo_t v16; // [rsp+0h] [rbp-70h] BYREF
   void *src[2]; // [rsp+20h] [rbp-50h] BYREF
-  __int16 v14; // [rsp+30h] [rbp-40h]
-  char v15; // [rsp+32h] [rbp-3Eh]
+  __int16 v18; // [rsp+30h] [rbp-40h]
+  char v19; // [rsp+32h] [rbp-3Eh]
 
   p_m_Attributes = &this->m_Attributes;
   if ( this->m_Attributes.m_Vector.m_Size > 0 )
@@ -2991,7 +3007,7 @@ void __fastcall CAttributeList::Init(CAttributeList *const this)
           &this->m_Attributes.m_bIsNetworkVarExcluded);
         if ( &this->m_Attributes.m_PathToVector != src )
         {
-          v6 = v14;
+          v6 = v18;
           this->m_Attributes.m_PathToVector.m_bUsingExternalPaths = 0;
           if ( v6 > 6 )
           {
@@ -2999,17 +3015,17 @@ void __fastcall CAttributeList::Init(CAttributeList *const this)
               goto LABEL_26;
             while ( 1 )
             {
-              if ( Plat_ShouldCollectMiniDumpsForFatalErrors() != 0 )
+              if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v14, v15, v12, v13) != 0 )
                 loc_0 = -559038737;
               Plat_ExitProcess(1);
 LABEL_26:
-              v12.m_szFile = "../../public/tier2/fieldpath.h";
-              v12.m_szFunction = "Path_SetCount";
-              v12.m_nLine = 442;
+              v16.m_szFile = "../../public/tier2/fieldpath.h";
+              v16.m_szFunction = "Path_SetCount";
+              v16.m_nLine = 442;
               LoggingSystem_Log(
                 LOG_GENERAL,
                 LoggingSeverity_t::LS_ERROR,
-                &v12,
+                &v16,
                 "Path_SetCount failed, depth already == DEFAULT_MAX_PATH_DEPTH(%d)",
                 6);
             }
@@ -3019,7 +3035,7 @@ LABEL_26:
           {
             v7 = 2 * v6;
             v8 = src;
-            if ( v15 != 0 )
+            if ( v19 != 0 )
               v8 = src[0];
             memcpy(&this->m_Attributes.m_PathToVector, v8, v7);
           }
@@ -3098,10 +3114,14 @@ void __fastcall CAttributeList::DestroyAllAttributes(CAttributeList *const this)
   void (*pfn)(detail::GenericClass *); // rdx
   detail::GenericClass *v12; // rdi
   CAttributeManager *m_pManager; // rdi
-  LeafCodeInfo_t v14; // [rsp+0h] [rbp-70h] BYREF
+  __int64 v14; // rdx
+  __int64 v15; // rcx
+  __int64 v16; // rdi
+  __int64 v17; // rsi
+  LeafCodeInfo_t v18; // [rsp+0h] [rbp-70h] BYREF
   void *src[2]; // [rsp+20h] [rbp-50h] BYREF
-  __int16 v16; // [rsp+30h] [rbp-40h]
-  char v17; // [rsp+32h] [rbp-3Eh]
+  __int16 v20; // [rsp+30h] [rbp-40h]
+  char v21; // [rsp+32h] [rbp-3Eh]
 
   m_Size = this->m_Attributes.m_Vector.m_Size;
   if ( m_Size != 0 )
@@ -3126,23 +3146,23 @@ void __fastcall CAttributeList::DestroyAllAttributes(CAttributeList *const this)
             &this->m_Attributes.m_bIsNetworkVarExcluded);
           if ( &this->m_Attributes.m_PathToVector != src )
           {
-            v7 = v16;
+            v7 = v20;
             this->m_Attributes.m_PathToVector.m_bUsingExternalPaths = 0;
             if ( v7 > 6 )
             {
               if ( LoggingSystem_IsChannelEnabled(LOG_GENERAL, 4) != 0 )
               {
-                v14.m_szFile = "../../public/tier2/fieldpath.h";
-                v14.m_szFunction = "Path_SetCount";
-                v14.m_nLine = 442;
+                v18.m_szFile = "../../public/tier2/fieldpath.h";
+                v18.m_szFunction = "Path_SetCount";
+                v18.m_nLine = 442;
                 LoggingSystem_Log(
                   LOG_GENERAL,
                   LoggingSeverity_t::LS_ERROR,
-                  &v14,
+                  &v18,
                   "Path_SetCount failed, depth already == DEFAULT_MAX_PATH_DEPTH(%d)",
                   6);
               }
-              if ( Plat_ShouldCollectMiniDumpsForFatalErrors() != 0 )
+              if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v16, v17, v14, v15) != 0 )
                 loc_0 = -559038737;
               Plat_ExitProcess(1);
               JUMPOUT(0x2E775FE);
@@ -3152,7 +3172,7 @@ void __fastcall CAttributeList::DestroyAllAttributes(CAttributeList *const this)
             {
               v8 = 2 * v7;
               v9 = src;
-              if ( v17 != 0 )
+              if ( v21 != 0 )
                 v9 = src[0];
               memcpy(&this->m_Attributes.m_PathToVector, v9, v8);
             }
@@ -3220,25 +3240,29 @@ void __fastcall CAttributeList::SetRuntimeAttributeValue(
   const void *m_szFile; // rsi
   __int64 m_nCount; // rax
   CFieldPath *p_m_PathToVector; // rsi
-  __int64 v30; // rax
-  CEntityInstance *v31; // rdi
-  ChangeAccessorFieldPathIndex_t *v32; // r13
-  CEntityInstance *v33; // rax
+  __int64 v30; // rdx
+  __int64 v31; // rcx
+  __int64 v32; // rdi
+  __int64 v33; // rsi
+  __int64 v34; // rax
+  CEntityInstance *v35; // rdi
+  ChangeAccessorFieldPathIndex_t *v36; // r13
+  CEntityInstance *v37; // rax
   CUtlDelegate<void()> *m_pArraySizeChangedDelegate; // rax
   void (*pfn)(detail::GenericClass *); // rdx
-  _QWORD *v36; // rdi
-  CEntityInstance *v37; // rdi
+  _QWORD *v40; // rdi
+  CEntityInstance *v41; // rdi
   const LeafCodeInfo_t *p_path; // rdx
   float flValuea; // [rsp+0h] [rbp-C0h]
   void (__fastcall *flValueb)(LeafCodeInfo_t *, IFlattenedSerializers *, FlattenedSerializerHandle_t, CEntityInstance *, CUtlVectorEmbeddedNetworkVar<CEconItemAttribute,CAttributeList::NetworkVar_m_Attributes,-1> *, bool *); // [rsp+0h] [rbp-C0h]
-  __int64 v41; // [rsp+8h] [rbp-B8h]
-  unsigned __int16 v42; // [rsp+8h] [rbp-B8h]
+  __int64 v45; // [rsp+8h] [rbp-B8h]
+  unsigned __int16 v46; // [rsp+8h] [rbp-B8h]
   CEconItemAttribute attribute; // [rsp+10h] [rbp-B0h] BYREF
   void *src[2]; // [rsp+30h] [rbp-90h] BYREF
-  __int16 v45; // [rsp+40h] [rbp-80h]
-  char v46; // [rsp+42h] [rbp-7Eh]
+  __int16 v49; // [rsp+40h] [rbp-80h]
+  char v50; // [rsp+42h] [rbp-7Eh]
   CFieldPath path; // [rsp+50h] [rbp-70h] BYREF
-  LeafCodeInfo_t v48; // [rsp+70h] [rbp-50h] BYREF
+  LeafCodeInfo_t v52; // [rsp+70h] [rbp-50h] BYREF
 
   flValuea = *&a3;
   m_Size = this->m_Attributes.m_Vector.m_Size;
@@ -3246,7 +3270,7 @@ void __fastcall CAttributeList::SetRuntimeAttributeValue(
   {
 LABEL_9:
     CEconItemAttribute::CEconItemAttribute(&attribute);
-    v12 = (*pAttrDef->_vptr_IEconItemAttributeDefinition)(pAttrDef);
+    v12 = pAttrDef->GetDefinitionIndex();
     if ( v12 != attribute.m_iAttributeDefinitionIndex.m_Value )
     {
       m_pObj = attribute.__m_pChainEntity.m_pObj;
@@ -3254,13 +3278,13 @@ LABEL_9:
         && (attribute.__m_pChainEntity.m_pObj->m_pEntity->m_flags & 0x400) == 0
         && attribute.__m_PathIndex.m_Value != -1 )
       {
-        v42 = v12;
+        v46 = v12;
         (*(attribute.__m_pChainEntity.m_pObj->_vptr_IHandleEntity + 22))(
           attribute.__m_pChainEntity.m_pObj,
           18,
           0xFFFFFFFFLL,
           attribute.__m_PathIndex.m_Value);
-        v12 = v42;
+        v12 = v46;
       }
       attribute.m_iAttributeDefinitionIndex.m_Value = v12;
     }
@@ -3301,7 +3325,7 @@ LABEL_9:
         m_pObj = &this->m_Attributes.m_PathToVector;
         if ( &this->m_Attributes.m_PathToVector != src )
         {
-          v19 = v45;
+          v19 = v49;
           this->m_Attributes.m_PathToVector.m_bUsingExternalPaths = 0;
           if ( v19 > 6 )
           {
@@ -3309,17 +3333,17 @@ LABEL_80:
             v21 = &LOG_GENERAL;
             if ( LoggingSystem_IsChannelEnabled(LOG_GENERAL, 4) == 0 )
               goto LABEL_48;
-            v48.m_nLine = 442;
-            v48.m_szFile = "../../public/tier2/fieldpath.h";
-            v48.m_szFunction = "Path_SetCount";
-            p_path = &v48;
+            v52.m_nLine = 442;
+            v52.m_szFile = "../../public/tier2/fieldpath.h";
+            v52.m_szFunction = "Path_SetCount";
+            p_path = &v52;
             goto LABEL_79;
           }
           this->m_Attributes.m_PathToVector.m_nCount = v19;
           if ( v19 > 0 )
           {
             v20 = src;
-            if ( v46 != 0 )
+            if ( v50 != 0 )
               v20 = src[0];
             memcpy(m_pObj, v20, 2 * v19);
           }
@@ -3365,16 +3389,16 @@ LABEL_80:
         flValueb = *(*g_pFlattenedSerializers + 272LL);
         v25 = GetNetworkSerializerForEntityInstance(v24);
         flValueb(
-          &v48,
+          &v52,
           g_pFlattenedSerializers,
           v25,
           v24,
           &this->m_Attributes,
           &this->m_Attributes.m_bIsNetworkVarExcluded);
         m_pObj = &this->m_Attributes.m_PathToVector;
-        if ( &this->m_Attributes.m_PathToVector != &v48 )
+        if ( &this->m_Attributes.m_PathToVector != &v52 )
         {
-          m_szFunction_low = SLOWORD(v48.m_szFunction);
+          m_szFunction_low = SLOWORD(v52.m_szFunction);
           this->m_Attributes.m_PathToVector.m_bUsingExternalPaths = 0;
           if ( m_szFunction_low > 6 )
           {
@@ -3397,9 +3421,9 @@ LABEL_79:
           this->m_Attributes.m_PathToVector.m_nCount = m_szFunction_low;
           if ( m_szFunction_low > 0 )
           {
-            m_szFile = &v48;
-            if ( BYTE2(v48.m_szFunction) != 0 )
-              m_szFile = v48.m_szFile;
+            m_szFile = &v52;
+            if ( BYTE2(v52.m_szFunction) != 0 )
+              m_szFile = v52.m_szFile;
             memcpy(m_pObj, m_szFile, 2 * m_szFunction_low);
           }
         }
@@ -3418,11 +3442,11 @@ LABEL_56:
       if ( m_pArraySizeChangedDelegate != 0 )
       {
         pfn = m_pArraySizeChangedDelegate->m_Closure.m_pFunction.__pfn;
-        v36 = (m_pArraySizeChangedDelegate->m_Closure.m_pthis
+        v40 = (m_pArraySizeChangedDelegate->m_Closure.m_pthis
              + m_pArraySizeChangedDelegate->m_Closure.m_pFunction.__delta);
         if ( (pfn & 1) != 0 )
-          pfn = *(pfn + *v36 - 1);
-        (pfn)(v36, a3, flValue);
+          pfn = *(pfn + *v40 - 1);
+        (pfn)(v40, a3, flValue);
       }
       goto LABEL_6;
     }
@@ -3443,43 +3467,43 @@ LABEL_56:
         v21 = &LOG_GENERAL;
         if ( LoggingSystem_IsChannelEnabled(LOG_GENERAL, 4) != 0 )
         {
-          v48.m_szFile = "../../public/tier2/fieldpath.h";
-          v48.m_szFunction = "Path_AddToTail";
-          v48.m_nLine = 428;
+          v52.m_szFile = "../../public/tier2/fieldpath.h";
+          v52.m_szFunction = "Path_AddToTail";
+          v52.m_nLine = 428;
           LoggingSystem_Log(
             LOG_GENERAL,
             LoggingSeverity_t::LS_ERROR,
-            &v48,
+            &v52,
             "Path_AddToTail failed for read only CFieldPath");
         }
 LABEL_48:
-        if ( Plat_ShouldCollectMiniDumpsForFatalErrors() != 0 )
+        if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v32, v33, v30, v31) != 0 )
           loc_0 = -559038737;
         Plat_ExitProcess(&loc_0 + 1);
       }
 LABEL_51:
-      v30 = path.m_nCount;
+      v34 = path.m_nCount;
       if ( path.m_nCount > 5 )
         CUtlVectorEmbeddedNetworkVar<CEconItemAttribute,CAttributeList::NetworkVar_m_Attributes,-1>::AssignPathIdToElement(
           m_pObj,
           v14);
-      v31 = this->m_Attributes.m_pOwnerEntity.m_pObj;
-      v32 = (this->m_Attributes.m_Vector.m_Memory.m_pMemory + v18);
+      v35 = this->m_Attributes.m_pOwnerEntity.m_pObj;
+      v36 = (this->m_Attributes.m_Vector.m_Memory.m_pMemory + v18);
       ++path.m_nCount;
-      path.u.m_FixedPaths[v30].m_nValue = v21;
-      if ( v31 != 0 )
-        v32[8].m_Value = EntityInstanceAddChangeAccessorPath(v31, &path).m_Value;
+      path.u.m_FixedPaths[v34].m_nValue = v21;
+      if ( v35 != 0 )
+        v36[8].m_Value = EntityInstanceAddChangeAccessorPath(v35, &path).m_Value;
       else
-        v32[8].m_Value = -1;
-      v33 = this->m_Attributes.m_pOwnerEntity.m_pObj;
-      if ( v33 != *&v32[4].m_Value )
-        *&v32[4].m_Value = v33;
+        v36[8].m_Value = -1;
+      v37 = this->m_Attributes.m_pOwnerEntity.m_pObj;
+      if ( v37 != *&v36[4].m_Value )
+        *&v36[4].m_Value = v37;
       goto LABEL_56;
     }
     goto LABEL_80;
   }
   v7 = 0;
-  v41 = 8 * (3LL * (m_Size - 1) + 3);
+  v45 = 8 * (3LL * (m_Size - 1) + 3);
   while ( 1 )
   {
     v8 = &this->m_Attributes.m_Vector.m_Memory.m_pMemory[v7 / 0x18];
@@ -3487,15 +3511,15 @@ LABEL_51:
     if ( (*pAttrDef->_vptr_IEconItemAttributeDefinition)(pAttrDef, a3, flValue) == m_Value )
       break;
     v7 += 24LL;
-    if ( v7 == v41 )
+    if ( v7 == v45 )
       goto LABEL_9;
   }
   *&v10 = LODWORD(flValuea);
   if ( flValuea != v8->m_flValue.m_Value )
   {
-    v37 = v8->__m_pChainEntity.m_pObj;
-    if ( v37 != 0 && (v37->m_pEntity->m_flags & 0x400) == 0 && v8->__m_PathIndex.m_Value != -1 )
-      (*(v37->_vptr_IHandleEntity + 22))(v37, 20, 0xFFFFFFFFLL, v8->__m_PathIndex.m_Value, a3, flValue, flValuea);
+    v41 = v8->__m_pChainEntity.m_pObj;
+    if ( v41 != 0 && (v41->m_pEntity->m_flags & 0x400) == 0 && v8->__m_PathIndex.m_Value != -1 )
+      (*(v41->_vptr_IHandleEntity + 22))(v41, 20, 0xFFFFFFFFLL, v8->__m_PathIndex.m_Value, a3, flValue, flValuea);
     v8->m_flValue.m_Value = flValuea;
   }
 LABEL_6:
@@ -3536,29 +3560,33 @@ void __fastcall CAttributeList::RemoveAttribute(
   __int64 v24; // rdx
   const CFieldPath::Path_t *m_pPaths; // rsi
   int16 v26; // cx
-  __int64 v27; // rax
-  ChangeAccessorFieldPathIndex_t *v28; // rdx
-  ChangeAccessorFieldPathIndex_t v29; // ax
-  CEntityInstance *v30; // rax
+  __int64 v27; // rdx
+  __int64 v28; // rcx
+  __int64 v29; // rdi
+  __int64 v30; // rsi
+  __int64 v31; // rax
+  ChangeAccessorFieldPathIndex_t *v32; // rdx
+  ChangeAccessorFieldPathIndex_t v33; // ax
+  CEntityInstance *v34; // rax
   CUtlDelegate<void()> *m_pArraySizeChangedDelegate; // rax
   void (*pfn)(detail::GenericClass *); // rdx
-  detail::GenericClass *v33; // rdi
+  detail::GenericClass *v37; // rdi
   CAttributeManager *m_pManager; // rdi
-  const LeafCodeInfo_t *v35; // rdx
+  const LeafCodeInfo_t *v39; // rdx
   bool *p_m_bIsNetworkVarExcluded; // [rsp+0h] [rbp-E0h]
   CUtlVectorBase<CEconItemAttribute,CNetworkUtlVector_MemoryType<CEconItemAttribute,-1> > *p_m_Vector; // [rsp+8h] [rbp-D8h]
-  void (__fastcall *v38)(CEntityInstance *, IFlattenedSerializers *, FlattenedSerializerHandle_t, CEntityInstance *, CUtlVectorBase<CEconItemAttribute,CNetworkUtlVector_MemoryType<CEconItemAttribute,-1> > *, bool *); // [rsp+18h] [rbp-C8h]
-  CEntityInstance *v39; // [rsp+20h] [rbp-C0h]
-  ChangeAccessorFieldPathIndex_t *v40; // [rsp+20h] [rbp-C0h]
+  void (__fastcall *v42)(CEntityInstance *, IFlattenedSerializers *, FlattenedSerializerHandle_t, CEntityInstance *, CUtlVectorBase<CEconItemAttribute,CNetworkUtlVector_MemoryType<CEconItemAttribute,-1> > *, bool *); // [rsp+18h] [rbp-C8h]
+  CEntityInstance *v43; // [rsp+20h] [rbp-C0h]
+  ChangeAccessorFieldPathIndex_t *v44; // [rsp+20h] [rbp-C0h]
   CEntityInstance *dest; // [rsp+28h] [rbp-B8h]
   void *src[2]; // [rsp+30h] [rbp-B0h] BYREF
-  __int16 v43; // [rsp+40h] [rbp-A0h]
-  char v44; // [rsp+42h] [rbp-9Eh]
-  void *v45[2]; // [rsp+50h] [rbp-90h] BYREF
-  __int16 v46; // [rsp+60h] [rbp-80h]
-  char v47; // [rsp+62h] [rbp-7Eh]
+  __int16 v47; // [rsp+40h] [rbp-A0h]
+  char v48; // [rsp+42h] [rbp-9Eh]
+  void *v49[2]; // [rsp+50h] [rbp-90h] BYREF
+  __int16 v50; // [rsp+60h] [rbp-80h]
+  char v51; // [rsp+62h] [rbp-7Eh]
   CFieldPath path; // [rsp+70h] [rbp-70h] BYREF
-  LeafCodeInfo_t v49; // [rsp+90h] [rbp-50h] BYREF
+  LeafCodeInfo_t v53; // [rsp+90h] [rbp-50h] BYREF
 
   p_path = 0;
   v4 = 0;
@@ -3592,7 +3620,7 @@ void __fastcall CAttributeList::RemoveAttribute(
         &v5->m_Attributes.m_bIsNetworkVarExcluded);
       if ( &v5->m_Attributes.m_PathToVector != src )
       {
-        v11 = v43;
+        v11 = v47;
         v5->m_Attributes.m_PathToVector.m_bUsingExternalPaths = 0;
         if ( v11 > 6 )
           goto LABEL_69;
@@ -3600,7 +3628,7 @@ void __fastcall CAttributeList::RemoveAttribute(
         if ( v11 > 0 )
         {
           v12 = src;
-          if ( v44 != 0 )
+          if ( v48 != 0 )
             v12 = src[0];
           memcpy(&v5->m_Attributes.m_PathToVector, v12, 2 * v11);
         }
@@ -3638,21 +3666,21 @@ LABEL_64:
   }
   m_pObj = *(*g_pFlattenedSerializers + 272LL);
   v14 = GetNetworkSerializerForEntityInstance(v4);
-  p_path = v45;
-  (m_pObj)(v45, g_pFlattenedSerializers, v14, v4, p_m_Vector, &v5->m_Attributes.m_bIsNetworkVarExcluded);
+  p_path = v49;
+  (m_pObj)(v49, g_pFlattenedSerializers, v14, v4, p_m_Vector, &v5->m_Attributes.m_bIsNetworkVarExcluded);
   p_m_PathToVector = &v5->m_Attributes.m_PathToVector;
-  if ( &v5->m_Attributes.m_PathToVector != v45 )
+  if ( &v5->m_Attributes.m_PathToVector != v49 )
   {
-    v15 = v46;
+    v15 = v50;
     v5->m_Attributes.m_PathToVector.m_bUsingExternalPaths = 0;
     if ( v15 > 6 )
       goto LABEL_69;
     v5->m_Attributes.m_PathToVector.m_nCount = v15;
     if ( v15 > 0 )
     {
-      v16 = v45;
-      if ( v47 != 0 )
-        v16 = v45[0];
+      v16 = v49;
+      if ( v51 != 0 )
+        v16 = v49[0];
       memcpy(p_m_PathToVector, v16, 2 * v15);
     }
   }
@@ -3662,7 +3690,7 @@ LABEL_23:
     v4 = 0;
     LODWORD(v10) = 0;
     p_m_bIsNetworkVarExcluded = &v5->m_Attributes.m_bIsNetworkVarExcluded;
-    m_pObj = &v49;
+    m_pObj = &v53;
     dest = &v5->m_Attributes.m_PathToVector;
     p_path = &path;
     do
@@ -3673,13 +3701,13 @@ LABEL_23:
         v5->m_Attributes.m_bResolved = 1;
         if ( v17 != 0 )
         {
-          v39 = v17;
-          v38 = *(*g_pFlattenedSerializers + 272LL);
+          v43 = v17;
+          v42 = *(*g_pFlattenedSerializers + 272LL);
           v18 = GetNetworkSerializerForEntityInstance(v17);
-          v38(m_pObj, g_pFlattenedSerializers, v18, v39, p_m_Vector, p_m_bIsNetworkVarExcluded);
+          v42(m_pObj, g_pFlattenedSerializers, v18, v43, p_m_Vector, p_m_bIsNetworkVarExcluded);
           if ( dest != m_pObj )
           {
-            m_szFunction_low = SLOWORD(v49.m_szFunction);
+            m_szFunction_low = SLOWORD(v53.m_szFunction);
             v5->m_Attributes.m_PathToVector.m_bUsingExternalPaths = 0;
             if ( m_szFunction_low > 6 )
             {
@@ -3689,7 +3717,7 @@ LABEL_23:
               *&path.u.m_FixedPaths[4].m_nValue = 442;
               path.u.m_pPaths = "../../public/tier2/fieldpath.h";
               *&path.m_nCount = "Path_SetCount";
-              v35 = &path;
+              v39 = &path;
               goto LABEL_71;
             }
             v5->m_Attributes.m_PathToVector.m_nCount = m_szFunction_low;
@@ -3697,8 +3725,8 @@ LABEL_23:
             {
               v20 = 2 * m_szFunction_low;
               m_szFile = m_pObj;
-              if ( BYTE2(v49.m_szFunction) != 0 )
-                m_szFile = v49.m_szFile;
+              if ( BYTE2(v53.m_szFunction) != 0 )
+                m_szFile = v53.m_szFile;
               memcpy(dest, m_szFile, v20);
             }
           }
@@ -3733,61 +3761,61 @@ LABEL_23:
             v5 = &LOG_GENERAL;
             if ( LoggingSystem_IsChannelEnabled(LOG_GENERAL, 4) != 0 )
             {
-              v49.m_szFile = "../../public/tier2/fieldpath.h";
-              v49.m_szFunction = "Path_AddToTail";
-              v49.m_nLine = 428;
+              v53.m_szFile = "../../public/tier2/fieldpath.h";
+              v53.m_szFunction = "Path_AddToTail";
+              v53.m_nLine = 428;
               LoggingSystem_Log(
                 LOG_GENERAL,
                 LoggingSeverity_t::LS_ERROR,
-                &v49,
+                &v53,
                 "Path_AddToTail failed for read only CFieldPath");
             }
 LABEL_42:
-            if ( Plat_ShouldCollectMiniDumpsForFatalErrors() != 0 )
+            if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v29, v30, v27, v28) != 0 )
               loc_0 = -559038737;
             Plat_ExitProcess(&loc_0 + 1);
 LABEL_45:
             v26 = v10;
           }
-          v27 = path.m_nCount;
+          v31 = path.m_nCount;
           if ( path.m_nCount > 5 )
             CUtlVectorEmbeddedNetworkVar<CEconItemAttribute,CAttributeList::NetworkVar_m_Attributes,-1>::AssignPathIdToElement(
               v23,
               v13);
           p_m_PathToVector = v5->m_Attributes.m_pOwnerEntity.m_pObj;
           ++path.m_nCount;
-          v28 = (v5->m_Attributes.m_Vector.m_Memory.m_pMemory + v4);
-          p_path->u.m_FixedPaths[v27].m_nValue = v26;
+          v32 = (v5->m_Attributes.m_Vector.m_Memory.m_pMemory + v4);
+          p_path->u.m_FixedPaths[v31].m_nValue = v26;
           if ( p_m_PathToVector != 0 )
           {
-            v40 = v28;
-            v29.m_Value = EntityInstanceAddChangeAccessorPath(p_m_PathToVector, p_path).m_Value;
-            v28 = v40;
-            v40[8].m_Value = v29.m_Value;
+            v44 = v32;
+            v33.m_Value = EntityInstanceAddChangeAccessorPath(p_m_PathToVector, p_path).m_Value;
+            v32 = v44;
+            v44[8].m_Value = v33.m_Value;
           }
           else
           {
             v13 = -1;
-            v28[8].m_Value = -1;
+            v32[8].m_Value = -1;
           }
-          v30 = v5->m_Attributes.m_pOwnerEntity.m_pObj;
-          if ( v30 != *&v28[4].m_Value )
-            *&v28[4].m_Value = v30;
+          v34 = v5->m_Attributes.m_pOwnerEntity.m_pObj;
+          if ( v34 != *&v32[4].m_Value )
+            *&v32[4].m_Value = v34;
           goto LABEL_51;
         }
 LABEL_69:
         v5 = &LOG_GENERAL;
         if ( LoggingSystem_IsChannelEnabled(LOG_GENERAL, 4) == 0 )
           goto LABEL_42;
-        v49.m_nLine = 442;
-        v49.m_szFile = "../../public/tier2/fieldpath.h";
-        v49.m_szFunction = "Path_SetCount";
-        v35 = &v49;
+        v53.m_nLine = 442;
+        v53.m_szFile = "../../public/tier2/fieldpath.h";
+        v53.m_szFunction = "Path_SetCount";
+        v39 = &v53;
 LABEL_71:
         LoggingSystem_Log(
           LOG_GENERAL,
           LoggingSeverity_t::LS_ERROR,
-          v35,
+          v39,
           "Path_SetCount failed, depth already == DEFAULT_MAX_PATH_DEPTH(%d)",
           6);
         goto LABEL_42;
@@ -3802,10 +3830,10 @@ LABEL_51:
   if ( m_pArraySizeChangedDelegate != 0 )
   {
     pfn = m_pArraySizeChangedDelegate->m_Closure.m_pFunction.__pfn;
-    v33 = (m_pArraySizeChangedDelegate->m_Closure.m_pthis + m_pArraySizeChangedDelegate->m_Closure.m_pFunction.__delta);
+    v37 = (m_pArraySizeChangedDelegate->m_Closure.m_pthis + m_pArraySizeChangedDelegate->m_Closure.m_pFunction.__delta);
     if ( (pfn & 1) != 0 )
-      pfn = *(pfn + *v33 - 1);
-    pfn(v33);
+      pfn = *(pfn + *v37 - 1);
+    pfn(v37);
   }
   m_pManager = v5->m_pManager;
   if ( m_pManager != 0 )
@@ -3839,29 +3867,33 @@ void __fastcall CAttributeList::RemoveAttributeByIndex(CAttributeList *const thi
   __int64 v20; // rdx
   const CFieldPath::Path_t *m_pPaths; // rsi
   __int16 v22; // cx
-  __int64 v23; // rax
-  ChangeAccessorFieldPathIndex_t *v24; // rdx
-  ChangeAccessorFieldPathIndex_t v25; // ax
-  CEntityInstance *v26; // rax
+  __int64 v23; // rdx
+  __int64 v24; // rcx
+  __int64 v25; // rdi
+  __int64 v26; // rsi
+  __int64 v27; // rax
+  ChangeAccessorFieldPathIndex_t *v28; // rdx
+  ChangeAccessorFieldPathIndex_t v29; // ax
+  CEntityInstance *v30; // rax
   CUtlDelegate<void()> *m_pArraySizeChangedDelegate; // rax
   void (*pfn)(detail::GenericClass *); // rdx
-  detail::GenericClass *v29; // rdi
+  detail::GenericClass *v33; // rdi
   CAttributeManager *m_pManager; // rdi
   const LeafCodeInfo_t *p_path; // rdx
   bool *p_m_bIsNetworkVarExcluded; // [rsp+0h] [rbp-E0h]
   CUtlVectorEmbeddedNetworkVar<CEconItemAttribute,CAttributeList::NetworkVar_m_Attributes,-1> *p_m_Attributes; // [rsp+8h] [rbp-D8h]
-  void (__fastcall *v34)(LeafCodeInfo_t *, IFlattenedSerializers *, FlattenedSerializerHandle_t, CEntityInstance *, CUtlVectorEmbeddedNetworkVar<CEconItemAttribute,CAttributeList::NetworkVar_m_Attributes,-1> *, bool *); // [rsp+18h] [rbp-C8h]
-  CEntityInstance *v35; // [rsp+20h] [rbp-C0h]
-  ChangeAccessorFieldPathIndex_t *v36; // [rsp+20h] [rbp-C0h]
+  void (__fastcall *v38)(LeafCodeInfo_t *, IFlattenedSerializers *, FlattenedSerializerHandle_t, CEntityInstance *, CUtlVectorEmbeddedNetworkVar<CEconItemAttribute,CAttributeList::NetworkVar_m_Attributes,-1> *, bool *); // [rsp+18h] [rbp-C8h]
+  CEntityInstance *v39; // [rsp+20h] [rbp-C0h]
+  ChangeAccessorFieldPathIndex_t *v40; // [rsp+20h] [rbp-C0h]
   LeafCodeInfo_t *dest; // [rsp+28h] [rbp-B8h]
   void *src[2]; // [rsp+30h] [rbp-B0h] BYREF
-  __int16 v39; // [rsp+40h] [rbp-A0h]
-  char v40; // [rsp+42h] [rbp-9Eh]
-  void *v41[2]; // [rsp+50h] [rbp-90h] BYREF
-  __int16 v42; // [rsp+60h] [rbp-80h]
-  char v43; // [rsp+62h] [rbp-7Eh]
+  __int16 v43; // [rsp+40h] [rbp-A0h]
+  char v44; // [rsp+42h] [rbp-9Eh]
+  void *v45[2]; // [rsp+50h] [rbp-90h] BYREF
+  __int16 v46; // [rsp+60h] [rbp-80h]
+  char v47; // [rsp+62h] [rbp-7Eh]
   CFieldPath path; // [rsp+70h] [rbp-70h] BYREF
-  LeafCodeInfo_t v45; // [rsp+90h] [rbp-50h] BYREF
+  LeafCodeInfo_t v49; // [rsp+90h] [rbp-50h] BYREF
 
   v2 = iIndex;
   if ( iIndex < 0 )
@@ -3888,7 +3920,7 @@ void __fastcall CAttributeList::RemoveAttributeByIndex(CAttributeList *const thi
         &v3->m_Attributes.m_bIsNetworkVarExcluded);
       if ( &v3->m_Attributes.m_PathToVector != src )
       {
-        v8 = v39;
+        v8 = v43;
         v3->m_Attributes.m_PathToVector.m_bUsingExternalPaths = 0;
         if ( v8 > 6 )
           goto LABEL_66;
@@ -3896,7 +3928,7 @@ void __fastcall CAttributeList::RemoveAttributeByIndex(CAttributeList *const thi
         if ( v8 > 0 )
         {
           v9 = src;
-          if ( v40 != 0 )
+          if ( v44 != 0 )
             v9 = src[0];
           memcpy(&v3->m_Attributes.m_PathToVector, v9, 2 * v8);
         }
@@ -3926,21 +3958,21 @@ void __fastcall CAttributeList::RemoveAttributeByIndex(CAttributeList *const thi
   {
     v7 = *(*g_pFlattenedSerializers + 272LL);
     v11 = GetNetworkSerializerForEntityInstance(v2);
-    m_pObj = v41;
-    (v7)(v41, g_pFlattenedSerializers, v11, v2, p_m_Attributes, &v3->m_Attributes.m_bIsNetworkVarExcluded);
+    m_pObj = v45;
+    (v7)(v45, g_pFlattenedSerializers, v11, v2, p_m_Attributes, &v3->m_Attributes.m_bIsNetworkVarExcluded);
     this = &v3->m_Attributes.m_PathToVector;
-    if ( &v3->m_Attributes.m_PathToVector != v41 )
+    if ( &v3->m_Attributes.m_PathToVector != v45 )
     {
-      v12 = v42;
+      v12 = v46;
       v3->m_Attributes.m_PathToVector.m_bUsingExternalPaths = 0;
       if ( v12 > 6 )
         goto LABEL_66;
       v3->m_Attributes.m_PathToVector.m_nCount = v12;
       if ( v12 > 0 )
       {
-        v13 = v41;
-        if ( v43 != 0 )
-          v13 = v41[0];
+        v13 = v45;
+        if ( v47 != 0 )
+          v13 = v45[0];
         memcpy(this, v13, 2 * v12);
       }
     }
@@ -3957,7 +3989,7 @@ LABEL_21:
     v2 = 0;
     LODWORD(v5) = 0;
     p_m_bIsNetworkVarExcluded = &v3->m_Attributes.m_bIsNetworkVarExcluded;
-    v7 = &v45;
+    v7 = &v49;
     dest = &v3->m_Attributes.m_PathToVector;
     m_pObj = &path;
     do
@@ -3968,13 +4000,13 @@ LABEL_21:
         v3->m_Attributes.m_bResolved = 1;
         if ( v14 != 0 )
         {
-          v35 = v14;
-          v34 = *(*g_pFlattenedSerializers + 272LL);
+          v39 = v14;
+          v38 = *(*g_pFlattenedSerializers + 272LL);
           v15 = GetNetworkSerializerForEntityInstance(v14);
-          v34(v7, g_pFlattenedSerializers, v15, v35, p_m_Attributes, p_m_bIsNetworkVarExcluded);
+          v38(v7, g_pFlattenedSerializers, v15, v39, p_m_Attributes, p_m_bIsNetworkVarExcluded);
           if ( dest != v7 )
           {
-            m_szFunction_low = SLOWORD(v45.m_szFunction);
+            m_szFunction_low = SLOWORD(v49.m_szFunction);
             v3->m_Attributes.m_PathToVector.m_bUsingExternalPaths = 0;
             if ( m_szFunction_low > 6 )
             {
@@ -3992,8 +4024,8 @@ LABEL_21:
             {
               v17 = 2 * m_szFunction_low;
               m_szFile = v7;
-              if ( BYTE2(v45.m_szFunction) != 0 )
-                m_szFile = v45.m_szFile;
+              if ( BYTE2(v49.m_szFunction) != 0 )
+                m_szFile = v49.m_szFile;
               memcpy(dest, m_szFile, v17);
             }
           }
@@ -4028,55 +4060,55 @@ LABEL_21:
             v3 = &LOG_GENERAL;
             if ( LoggingSystem_IsChannelEnabled(LOG_GENERAL, 4) != 0 )
             {
-              v45.m_szFile = "../../public/tier2/fieldpath.h";
-              v45.m_szFunction = "Path_AddToTail";
-              v45.m_nLine = 428;
+              v49.m_szFile = "../../public/tier2/fieldpath.h";
+              v49.m_szFunction = "Path_AddToTail";
+              v49.m_nLine = 428;
               LoggingSystem_Log(
                 LOG_GENERAL,
                 LoggingSeverity_t::LS_ERROR,
-                &v45,
+                &v49,
                 "Path_AddToTail failed for read only CFieldPath");
             }
 LABEL_40:
-            if ( Plat_ShouldCollectMiniDumpsForFatalErrors() != 0 )
+            if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v25, v26, v23, v24) != 0 )
               loc_0 = -559038737;
             Plat_ExitProcess(&loc_0 + 1);
 LABEL_43:
             v22 = v5;
           }
-          v23 = path.m_nCount;
+          v27 = path.m_nCount;
           if ( path.m_nCount > 5 )
             CUtlVectorEmbeddedNetworkVar<CEconItemAttribute,CAttributeList::NetworkVar_m_Attributes,-1>::AssignPathIdToElement(
               this,
               v10);
           this = v3->m_Attributes.m_pOwnerEntity.m_pObj;
           ++path.m_nCount;
-          v24 = (v3->m_Attributes.m_Vector.m_Memory.m_pMemory + v2);
-          *(&m_pObj->_vptr_IHandleEntity + v23) = v22;
+          v28 = (v3->m_Attributes.m_Vector.m_Memory.m_pMemory + v2);
+          *(&m_pObj->_vptr_IHandleEntity + v27) = v22;
           if ( this != 0 )
           {
-            v36 = v24;
-            v25.m_Value = EntityInstanceAddChangeAccessorPath(this, m_pObj).m_Value;
-            v24 = v36;
-            v36[8].m_Value = v25.m_Value;
+            v40 = v28;
+            v29.m_Value = EntityInstanceAddChangeAccessorPath(this, m_pObj).m_Value;
+            v28 = v40;
+            v40[8].m_Value = v29.m_Value;
           }
           else
           {
-            v24[8].m_Value = -1;
+            v28[8].m_Value = -1;
           }
-          v26 = v3->m_Attributes.m_pOwnerEntity.m_pObj;
-          if ( v26 != *&v24[4].m_Value )
-            *&v24[4].m_Value = v26;
+          v30 = v3->m_Attributes.m_pOwnerEntity.m_pObj;
+          if ( v30 != *&v28[4].m_Value )
+            *&v28[4].m_Value = v30;
           goto LABEL_49;
         }
 LABEL_66:
         v3 = &LOG_GENERAL;
         if ( LoggingSystem_IsChannelEnabled(LOG_GENERAL, 4) == 0 )
           goto LABEL_40;
-        v45.m_nLine = 442;
-        v45.m_szFile = "../../public/tier2/fieldpath.h";
-        v45.m_szFunction = "Path_SetCount";
-        p_path = &v45;
+        v49.m_nLine = 442;
+        v49.m_szFile = "../../public/tier2/fieldpath.h";
+        v49.m_szFunction = "Path_SetCount";
+        p_path = &v49;
 LABEL_68:
         LoggingSystem_Log(
           LOG_GENERAL,
@@ -4096,10 +4128,10 @@ LABEL_49:
   if ( m_pArraySizeChangedDelegate != 0 )
   {
     pfn = m_pArraySizeChangedDelegate->m_Closure.m_pFunction.__pfn;
-    v29 = (m_pArraySizeChangedDelegate->m_Closure.m_pthis + m_pArraySizeChangedDelegate->m_Closure.m_pFunction.__delta);
+    v33 = (m_pArraySizeChangedDelegate->m_Closure.m_pthis + m_pArraySizeChangedDelegate->m_Closure.m_pFunction.__delta);
     if ( (pfn & 1) != 0 )
-      pfn = *(pfn + *v29 - 1);
-    pfn(v29);
+      pfn = *(pfn + *v33 - 1);
+    pfn(v33);
   }
   m_pManager = v3->m_pManager;
   if ( m_pManager != 0 )
@@ -4127,7 +4159,7 @@ const CEconItemAttribute *__fastcall CAttributeList::GetAttributeByID(
   while ( 1 )
   {
     StaticData = CEconItemAttribute::GetStaticData(&this->m_Attributes.m_Vector.m_Memory.m_pMemory[v5 / 0x18]);
-    if ( (*StaticData->_vptr_IEconItemAttributeDefinition)(StaticData) == iAttributeID )
+    if ( StaticData->GetDefinitionIndex() == iAttributeID )
       break;
     v5 += 24LL;
     if ( v5 == v6 )
@@ -4163,8 +4195,8 @@ const CEconItemAttribute *__fastcall CAttributeList::GetAttributeByName(
   while ( 1 )
   {
     StaticData = CEconItemAttribute::GetStaticData(&this->m_Attributes.m_Vector.m_Memory.m_pMemory[v7 / 0x18]);
-    v10 = (*StaticData->_vptr_IEconItemAttributeDefinition)(StaticData);
-    if ( v10 == (*AttributeDefinitionByName->_vptr_IEconItemAttributeDefinition)(AttributeDefinitionByName) )
+    v10 = StaticData->GetDefinitionIndex();
+    if ( v10 == AttributeDefinitionByName->GetDefinitionIndex() )
       break;
     v7 += 24LL;
     if ( v7 == v8 )
@@ -4192,7 +4224,11 @@ void __fastcall CAttributeList::operator=(CAttributeList *const this, const CAtt
   CFieldPath *p_m_PathToVector; // rsi
   size_t v15; // rdx
   bool m_bResolved; // al
-  LeafCodeInfo_t v17; // [rsp+0h] [rbp-40h] BYREF
+  __int64 v17; // rdx
+  __int64 v18; // rcx
+  __int64 v19; // rdi
+  __int64 v20; // rsi
+  LeafCodeInfo_t v21; // [rsp+0h] [rbp-40h] BYREF
 
   p_m_Attributes = &this->m_Attributes;
   if ( p_m_Attributes != &src->m_Attributes )
@@ -4229,17 +4265,17 @@ void __fastcall CAttributeList::operator=(CAttributeList *const this, const CAtt
     {
       if ( LoggingSystem_IsChannelEnabled(LOG_GENERAL, 4) != 0 )
       {
-        v17.m_szFile = "../../public/tier2/fieldpath.h";
-        v17.m_szFunction = "Path_SetCount";
-        v17.m_nLine = 442;
+        v21.m_szFile = "../../public/tier2/fieldpath.h";
+        v21.m_szFunction = "Path_SetCount";
+        v21.m_nLine = 442;
         LoggingSystem_Log(
           LOG_GENERAL,
           LoggingSeverity_t::LS_ERROR,
-          &v17,
+          &v21,
           "Path_SetCount failed, depth already == DEFAULT_MAX_PATH_DEPTH(%d)",
           6);
       }
-      if ( Plat_ShouldCollectMiniDumpsForFatalErrors() != 0 )
+      if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v19, v20, v17, v18) != 0 )
         loc_0 = -559038737;
       Plat_ExitProcess(1);
       JUMPOUT(0x2E78E97);

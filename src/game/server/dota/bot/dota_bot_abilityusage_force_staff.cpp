@@ -13,7 +13,7 @@ void __fastcall CDOTA_Bot_AbilityUsage_ForceStaff::CDOTA_Bot_AbilityUsage_ForceS
   this->m_pAbility = pAbility;
   this->m_pBot = pBot;
   this->m_bUseOnCreeps = 0;
-  this->_vptr_CDOTA_Bot_AbilityUsage = off_42C6350;
+  this->_vptr_CDOTA_Bot_AbilityUsage = off_42C6350;  // vptr: CDOTA_Bot_AbilityUsage_ForceStaff
   this->m_hTarget.m_Index = -1;
   this->m_iPushLength = CDOTABaseAbility::GetLevelSpecialValueFor<int>(pAbility, "push_length", -1, 1);
 }

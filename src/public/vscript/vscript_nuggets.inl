@@ -7,7 +7,7 @@ void __fastcall CBaseNugget_Private::~CBaseNugget_Private(CBaseNugget_Private *c
 {
   CUtlString *p_m_NuggetName; // rdi
 
-  this->_vptr_CBaseNugget_Private = off_3FEA9F0;
+  this->_vptr_CBaseNugget_Private = off_3FEA9F0;  // vptr: CBaseNugget_Private
   p_m_NuggetName = &this->m_NuggetName;
   if ( this->m_NuggetName.m_pString != 0 )
     CUtlString::FreeMemoryBlock(p_m_NuggetName);
@@ -41,7 +41,7 @@ void __fastcall CBaseNugget::~CBaseNugget(CBaseNugget *const this)
 {
   CUtlString *p_m_NuggetName; // rdi
 
-  this->_vptr_CBaseNugget_Private = off_3FEA9F0;
+  this->_vptr_CBaseNugget_Private = off_3FEA9F0;  // vptr: CBaseNugget_Private
   p_m_NuggetName = &this->m_NuggetName;
   if ( this->m_NuggetName.m_pString != 0 )
     CUtlString::FreeMemoryBlock(p_m_NuggetName);

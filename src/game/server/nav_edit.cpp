@@ -63,7 +63,7 @@ void __fastcall CNavEditor::OnNavMeshDestroy(CNavEditor *const this)
   {
     v2 = (this->m_StoredSelectionSet.m_Memory.m_nGrowSize & 0xC0000000) == 0;
     this->m_StoredSelectionSet.m_Size = 0;
-    this->_vptr_INavEditor = off_47AE310;
+    this->_vptr_INavEditor = off_47AE310;  // vptr: CNavEditor
     if ( v2 )
     {
       p_m_Memory = &this->m_StoredSelectionSet.m_Memory;
@@ -651,93 +651,94 @@ bool __fastcall CNavEditor::UpdateSelection(CNavEditor *const this)
   float i; // xmm1_4
   float v19; // xmm0_4
   float v20; // xmm1_4
+  unsigned __int64 v21; // xmm0_8
   const CNavPoly *m_pSelectedArea; // rdi
+  float v23; // xmm1_4
   float m_flDiameterMax; // xmm8_4
-  float v23; // xmm5_4
-  float v24; // xmm4_4
-  float v25; // xmm8_4
-  NavEdgeIndex v26; // r12
-  NavEdgeIndex v27; // al
-  float v28; // xmm2_4
-  float v29; // xmm5_4
-  float v30; // xmm6_4
-  float v31; // xmm4_4
-  float v32; // xmm3_4
-  float v33; // xmm7_4
-  float v34; // xmm0_4
-  vec_t v35; // xmm7_4
-  float v36; // xmm10_4
-  vec_t v37; // xmm6_4
-  vec_t v38; // xmm2_4
-  vec_t v39; // xmm1_4
-  vec_t v40; // xmm3_4
-  vec_t v41; // xmm0_4
-  float v42; // xmm0_4
-  __int64 v43; // rdx
-  ISceneViewDebugOverlays *v44; // r15
+  float v25; // xmm5_4
+  float v26; // xmm4_4
+  float v27; // xmm8_4
+  NavEdgeIndex v28; // r12
+  NavEdgeIndex v29; // al
+  float v30; // xmm2_4
+  float v31; // xmm5_4
+  float v32; // xmm6_4
+  float v33; // xmm4_4
+  float v34; // xmm3_4
+  float v35; // xmm7_4
+  float v36; // xmm0_4
+  vec_t v37; // xmm7_4
+  float v38; // xmm10_4
+  vec_t v39; // xmm6_4
+  vec_t v40; // xmm2_4
+  vec_t v41; // xmm1_4
+  vec_t v42; // xmm3_4
+  vec_t v43; // xmm0_4
+  float v44; // xmm0_4
+  unsigned __int64 v45; // rdx
+  ISceneViewDebugOverlays *v46; // r15
   CNavArea *NavArea; // rax
-  __int64 v46; // rax
-  bool v47; // al
-  ISceneViewDebugOverlays *v48; // r12
-  __int128 v49; // [rsp-64h] [rbp-6B18h]
-  float v50; // [rsp-5Ch] [rbp-6B10h]
-  bool v51; // [rsp-54h] [rbp-6B08h]
+  __int64 v48; // rax
+  bool v49; // al
+  ISceneViewDebugOverlays *v50; // r12
+  __int128 v51; // [rsp-64h] [rbp-6B18h]
+  float v52; // [rsp-5Ch] [rbp-6B10h]
+  bool v53; // [rsp-54h] [rbp-6B08h]
   CBasePlayer *ListenServerHost; // [rsp-44h] [rbp-6AF8h]
-  float v53; // [rsp-44h] [rbp-6AF8h]
-  float v54; // [rsp-3Ch] [rbp-6AF0h]
-  float v55; // [rsp-34h] [rbp-6AE8h]
-  float v56; // [rsp-30h] [rbp-6AE4h]
-  float v57; // [rsp-2Ch] [rbp-6AE0h]
-  float v58; // [rsp-2Ch] [rbp-6AE0h]
-  float v59; // [rsp-28h] [rbp-6ADCh]
-  float v60; // [rsp-28h] [rbp-6ADCh]
-  CNavEditor *v61; // [rsp-24h] [rbp-6AD8h]
-  float v62; // [rsp-24h] [rbp-6AD8h]
-  float v63; // [rsp-1Ch] [rbp-6AD0h]
-  bool v64; // [rsp-18h] [rbp-6ACCh]
-  float v65; // [rsp-18h] [rbp-6ACCh]
-  float v66; // [rsp-18h] [rbp-6ACCh]
-  float v67; // [rsp-8h] [rbp-6ABCh] BYREF
-  _QWORD (**v68)(CPathOptimizerStraightener *__hidden, CPath *, const CPathCostBase *); // [rsp-4h] [rbp-6AB8h] OVERLAPPED BYREF
-  __int64 v69; // [rsp+Ch] [rbp-6AA8h] BYREF
+  float v55; // [rsp-44h] [rbp-6AF8h]
+  float v56; // [rsp-3Ch] [rbp-6AF0h]
+  float v57; // [rsp-34h] [rbp-6AE8h]
+  float v58; // [rsp-30h] [rbp-6AE4h]
+  float v59; // [rsp-2Ch] [rbp-6AE0h]
+  float v60; // [rsp-2Ch] [rbp-6AE0h]
+  float v61; // [rsp-28h] [rbp-6ADCh]
+  float v62; // [rsp-28h] [rbp-6ADCh]
+  CNavEditor *v63; // [rsp-24h] [rbp-6AD8h]
+  float v64; // [rsp-24h] [rbp-6AD8h]
+  float v65; // [rsp-1Ch] [rbp-6AD0h]
+  bool v66; // [rsp-18h] [rbp-6ACCh]
+  float v67; // [rsp-18h] [rbp-6ACCh]
+  float v68; // [rsp-18h] [rbp-6ACCh]
+  float v69; // [rsp-8h] [rbp-6ABCh] BYREF
+  _QWORD (**v70)(CPathOptimizerStraightener *__hidden, CPath *, const CPathCostBase *); // [rsp-4h] [rbp-6AB8h] OVERLAPPED BYREF
+  __int64 v71; // [rsp+Ch] [rbp-6AA8h] BYREF
   __int128 vFrom; // [rsp+14h] [rbp-6AA0h] OVERLAPPED BYREF
   __int128 vDir; // [rsp+24h] [rbp-6A90h] OVERLAPPED BYREF
   __int128 vLastTest; // [rsp+34h] [rbp-6A80h] OVERLAPPED BYREF
   __int128 vStart_0; // [rsp+44h] [rbp-6A70h] OVERLAPPED BYREF
   vec_t flT0; // [rsp+54h] [rbp-6A60h]
-  NavHull_t v75; // [rsp+5Ch] [rbp-6A58h] OVERLAPPED BYREF
-  __int64 v76; // [rsp+6Ch] [rbp-6A48h] BYREF
+  NavHull_t v77; // [rsp+5Ch] [rbp-6A58h] OVERLAPPED BYREF
+  unsigned __int64 v78; // [rsp+6Ch] [rbp-6A48h] BYREF
   __int128 vForward; // [rsp+74h] [rbp-6A40h] OVERLAPPED
-  int v78; // [rsp+84h] [rbp-6A30h]
-  int v79; // [rsp+88h] [rbp-6A2Ch]
-  void (__fastcall **v80)(CNavPathCostCore *__hidden); // [rsp+8Ch] [rbp-6A28h] BYREF
+  int v80; // [rsp+84h] [rbp-6A30h]
+  int v81; // [rsp+88h] [rbp-6A2Ch]
+  void (__fastcall **v82)(CNavPathCostCore *__hidden); // [rsp+8Ch] [rbp-6A28h] BYREF
   Ray2D_t testRayForward; // [rsp+94h] [rbp-6A20h]
-  __int64 v82; // [rsp+A4h] [rbp-6A10h]
-  char v83; // [rsp+ACh] [rbp-6A08h]
-  char v84; // [rsp+ADh] [rbp-6A07h]
-  int v85; // [rsp+B0h] [rbp-6A04h]
-  int v86; // [rsp+B4h] [rbp-6A00h]
-  int v87; // [rsp+B8h] [rbp-69FCh]
-  int v88; // [rsp+BCh] [rbp-69F8h]
-  __int64 v89; // [rsp+CCh] [rbp-69E8h] BYREF
+  __int64 v84; // [rsp+A4h] [rbp-6A10h]
+  char v85; // [rsp+ACh] [rbp-6A08h]
+  char v86; // [rsp+ADh] [rbp-6A07h]
+  int v87; // [rsp+B0h] [rbp-6A04h]
+  int v88; // [rsp+B4h] [rbp-6A00h]
+  int v89; // [rsp+B8h] [rbp-69FCh]
+  int v90; // [rsp+BCh] [rbp-69F8h]
+  __int64 v91; // [rsp+CCh] [rbp-69E8h] BYREF
   Ray2D_t testRayBack; // [rsp+D4h] [rbp-69E0h]
-  int v91; // [rsp+E8h] [rbp-69CCh]
-  vec_t v92; // [rsp+F8h] [rbp-69BCh]
-  _QWORD (***v93)(CPathOptimizerStraightener *__hidden, CPath *, const CPathCostBase *); // [rsp+596Ch] [rbp-1148h]
-  void *v94; // [rsp+598Ch] [rbp-1128h] BYREF
+  int v93; // [rsp+E8h] [rbp-69CCh]
+  vec_t v94; // [rsp+F8h] [rbp-69BCh]
+  _QWORD (***v95)(CPathOptimizerStraightener *__hidden, CPath *, const CPathCostBase *); // [rsp+596Ch] [rbp-1148h]
+  void *v96; // [rsp+598Ch] [rbp-1128h] BYREF
   FuncNavOnSearchPosSimple_t funcDummy; // [rsp+5994h] [rbp-1120h] BYREF
   CNavSearchHexLattice searchLattice; // [rsp+59B4h] [rbp-1100h] BYREF
-  unsigned __int64 v97; // [rsp+6A74h] [rbp-40h]
+  unsigned __int64 v99; // [rsp+6A74h] [rbp-40h]
   Vector2D m_start; // 0:^48.8
-  Vector v99; // 0:kr00_12.12
-  Vector v100; // 0:kr14_12.12
-  NavHull_t v101; // 0:kr20_12.12
-  Vector v102; // 0:kr54_12.12
+  Vector v101; // 0:kr00_12.12
+  NavHull_t v102; // 0:kr14_12.12
+  Vector v103; // 0:kr40_12.12
   NavHull_t NavHullForSelectionConstraints; // 0:rdx.8,8:xmm0_4.4
 
   v1 = this;
   this->m_bSplitAlongX = 0;
-  v97 = __readfsqword(0x28u);
+  v99 = __readfsqword(0x28u);
   this->m_bClimbableSurface = 0;
   this->m_flSplitEdge = 0.0;
   this->m_SplitRay.m_flRadius = 0.0;
@@ -763,94 +764,94 @@ bool __fastcall CNavEditor::UpdateSelection(CNavEditor *const this)
   ListenServerHost = UTIL_GetListenServerHost();
   if ( ListenServerHost == 0 )
     return 0;
-  LODWORD(v49) = v1->m_EditMode;
-  v6 = v49 == 2;
-  *(&v49 + 1) = &v69;
-  v51 = v49 == 3;
-  CNavEditor::GetEditVectors(&v69, (&vFrom + 8), v5);
+  LODWORD(v51) = v1->m_EditMode;
+  v6 = v51 == 2;
+  *(&v51 + 1) = &v71;
+  v53 = v51 == 3;
+  CNavEditor::GetEditVectors(&v71, (&vFrom + 8), v5);
   if ( nav_create_area_at_feet.m_pParent->m_Value.m_nValue == 0
     || *&vDir >= 0.0
     || (v17 = *((*(ListenServerHost->_vptr_IHandleEntity + 171))(ListenServerHost) + 8)) == 0.0 )
   {
     v7 = 2000.0;
-    BYTE7(v49) = 0;
+    BYTE7(v51) = 0;
   }
   else
   {
-    BYTE7(v49) = 1;
+    BYTE7(v51) = 1;
     v7 = (v17 * 2000.0) / (-*&vDir * 2000.0);
   }
-  *(&vDir + 1) = v69;
+  *(&vDir + 1) = v71;
   LODWORD(vLastTest) = vFrom;
   if ( nav_select_arc.m_pParent->m_Value.m_fValue != 0.0 )
   {
     testRayBack.m_start.x = 0.0;
-    *(&v80 + 1) = *(&v69 + 1) + 0.0;
+    *(&v82 + 1) = *(&v71 + 1) + 0.0;
     testRayForward.m_start.x = *&vFrom + 75.0;
-    *&v80 = *&v69 + 0.0;
-    v89 = *(&vFrom + 1);
-    VectorNormalize(&v89);
-    v61 = v1;
-    v59 = *&v89 * 30.0;
-    v57 = 30.0 * *(&v89 + 1);
-    v8 = *&v80;
-    v9 = *(&v80 + 1);
+    *&v82 = *&v71 + 0.0;
+    v91 = *(&vFrom + 1);
+    VectorNormalize(&v91);
+    v63 = v1;
+    v61 = *&v91 * 30.0;
+    v59 = 30.0 * *(&v91 + 1);
+    v8 = *&v82;
+    v9 = *(&v82 + 1);
     v10 = (10.0 * nav_select_arc.m_pParent->m_Value.m_fValue) + (25.0 * *&vDir);
     v11 = testRayForward.m_start.x;
     while ( 1 )
     {
-      v63 = v10 - 1.0;
+      v65 = v10 - 1.0;
       *&vLastTest = v11 + (v10 - 1.0);
-      *(&vDir + 2) = v8 + v59;
-      *(&vDir + 3) = v9 + v57;
-      v12 = CNavEditor::DoSelectionTrace(v61, &v80, (&vDir + 8), v6, v51);
+      *(&vDir + 2) = v8 + v61;
+      *(&vDir + 3) = v9 + v59;
+      v12 = CNavEditor::DoSelectionTrace(v63, &v82, (&vDir + 8), v6, v53);
       v13 = debugoverlay;
-      v64 = v12;
-      LODWORD(v76) = -1;
-      SetIdentityMatrix(&v89);
-      v91 = HIDWORD(vDir);
+      v66 = v12;
+      LODWORD(v78) = -1;
+      SetIdentityMatrix(&v91);
+      v93 = HIDWORD(vDir);
       testRayBack.m_start.y = *(&vDir + 2);
-      v92 = *&vLastTest;
-      (*(v13->_vptr_ISceneViewDebugOverlays + 18))(v13, &v89, &v76, 0, 1.0, 0.0);
+      v94 = *&vLastTest;
+      (*(v13->_vptr_ISceneViewDebugOverlays + 18))(v13, &v91, &v78, 0, 1.0, 0.0);
       v14 = *(debugoverlay->_vptr_ISceneViewDebugOverlays + 13);
-      LODWORD(v89) = -1;
-      v14(debugoverlay, &v80, &vDir + 8, &v89, 0, 0.0);
-      v10 = v63;
-      if ( v64 )
+      LODWORD(v91) = -1;
+      v14(debugoverlay, &v82, &vDir + 8, &v91, 0, 0.0);
+      v10 = v65;
+      if ( v66 )
         break;
       v15 = testRayForward.m_start.x;
       v8 = *(&vDir + 2);
       v9 = *(&vDir + 3);
       v11 = *&vLastTest;
-      v80 = *(&vDir + 1);
+      v82 = *(&vDir + 1);
       LODWORD(testRayForward.m_start.x) = vLastTest;
       if ( (*&vFrom - 1000.0) > v15 )
       {
-        v1 = v61;
+        v1 = v63;
         goto LABEL_11;
       }
     }
-    v1 = v61;
+    v1 = v63;
     goto LABEL_20;
   }
-  *(&vDir + 3) = (*(&vFrom + 3) * v7) + *(&v69 + 1);
+  *(&vDir + 3) = (*(&vFrom + 3) * v7) + *(&v71 + 1);
   *&vLastTest = (*&vDir * v7) + *&vFrom;
-  *(&vDir + 2) = (v7 * *(&vFrom + 2)) + *&v69;
-  if ( CNavEditor::DoSelectionTrace(v1, &v69, (&vDir + 8), v6, v49 == 3) )
+  *(&vDir + 2) = (v7 * *(&vFrom + 2)) + *&v71;
+  if ( CNavEditor::DoSelectionTrace(v1, &v71, (&vDir + 8), v6, v51 == 3) )
   {
 LABEL_20:
     if ( nav_edit_test_search_lattice.m_pParent->m_Value.m_nValue != 0 )
     {
       funcDummy._M_functor._M_unused._M_member_pointer.__delta = 0;
-      v94 = operator new(1u);
+      v96 = operator new(1u);
       funcDummy._M_manager = std::_Function_handler<NavSearchPosResult_t ()(Vector const&),CNavEditor::UpdateSelection(void)::{lambda(Vector const&)#1}>::_M_invoke;
       funcDummy._M_functor._M_unused._M_member_pointer.__delta = std::_Function_base::_Base_manager<CNavEditor::UpdateSelection(void)::{lambda(Vector const&)#1}>::_M_manager;
       NavHullForSelectionConstraints = GetNavHullForSelectionConstraints();
-      v89 = *&NavHullForSelectionConstraints.m_hullCategory;
+      v91 = *&NavHullForSelectionConstraints.m_hullCategory;
       testRayBack.m_start.x = NavHullForSelectionConstraints.m_flHullHeight;
       CNavSearchHexLattice::CNavSearchHexLattice(
         &funcDummy._M_invoker,
-        &v94,
+        &v96,
         NavHullForSelectionConstraints,
         &v1->m_vEditCursorPos,
         0,
@@ -883,71 +884,71 @@ LABEL_20:
       if ( (HIDWORD(searchLattice.m_SearchHash.m_table.m_pMemory) & 0xC0000000) == 0 )
         CUtlMemory<CUtlHashtableEntry<int,CNavSearchElement>,int>::Purge(&searchLattice);
       if ( funcDummy._M_functor._M_unused._M_member_pointer.__delta != 0 )
-        (funcDummy._M_functor._M_unused._M_member_pointer.__delta)(&v94, &v94, 3);
+        (funcDummy._M_functor._M_unused._M_member_pointer.__delta)(&v96, &v96, 3);
     }
     if ( nav_edit_find_nearest.m_pParent->m_Value.m_nValue != 0 )
     {
-      v101 = GetNavHullForSelectionConstraints();
-      v43 = *&v1->m_vEditCursorPos.x;
-      v75 = v101;
-      v76 = v43;
+      v102 = GetNavHullForSelectionConstraints();
+      v45 = *&v1->m_vEditCursorPos.x;
+      v77 = v102;
+      v78 = v45;
       *&vForward = v1->m_vEditCursorPos.z;
-      if ( CNavMesh::GetNearestPointOnMeshWithHullClearance(TheNavMesh, &v76, v49, &v80, 0) )
+      if ( CNavMesh::GetNearestPointOnMeshWithHullClearance(TheNavMesh, &v78, v51, &v82, 0) )
       {
-        v44 = debugoverlay;
+        v46 = debugoverlay;
         DWORD2(vStart_0) = -13435086;
-        SetIdentityMatrix(&v89);
-        v91 = HIDWORD(v80);
-        LODWORD(testRayBack.m_start.y) = v80;
-        v92 = testRayForward.m_start.x;
-        (*(v44->_vptr_ISceneViewDebugOverlays + 18))(v44, &v89, &vStart_0 + 8, 1, 3.0, 0.0);
-        NavArea = CNavMesh::GetNavArea(TheNavMesh, &v80, v75, 2, 120.0, 5.0, 0);
+        SetIdentityMatrix(&v91);
+        v93 = HIDWORD(v82);
+        LODWORD(testRayBack.m_start.y) = v82;
+        v94 = testRayForward.m_start.x;
+        (*(v46->_vptr_ISceneViewDebugOverlays + 18))(v46, &v91, &vStart_0 + 8, 1, 3.0, 0.0);
+        NavArea = CNavMesh::GetNavArea(TheNavMesh, &v82, v77, 2, 120.0, 5.0, 0);
         if ( NavArea != 0 )
-          CNavPoly::GetClosestPointOnPolyWithHullClearance(NavArea, &v80, v49, &v89);
+          CNavPoly::GetClosestPointOnPolyWithHullClearance(NavArea, &v82, v51, &v91);
       }
       else
       {
-        v48 = debugoverlay;
+        v50 = debugoverlay;
         DWORD2(vStart_0) = -13487361;
-        SetIdentityMatrix(&v89);
-        v91 = HIDWORD(v76);
-        LODWORD(testRayBack.m_start.y) = v76;
-        v92 = *&vForward;
-        (*(v48->_vptr_ISceneViewDebugOverlays + 18))(v48, &v89, &vStart_0 + 8, 1, 5.0, 0.0);
+        SetIdentityMatrix(&v91);
+        v93 = HIDWORD(v78);
+        LODWORD(testRayBack.m_start.y) = v78;
+        v94 = *&vForward;
+        (*(v50->_vptr_ISceneViewDebugOverlays + 18))(v50, &v91, &vStart_0 + 8, 1, 5.0, 0.0);
       }
     }
     if ( nav_edit_path.m_pParent->m_Value.m_nValue != 0 )
     {
-      *(&vLastTest + 1) = v69;
+      *(&vLastTest + 1) = v71;
       LODWORD(vStart_0) = vFrom;
-      v46 = *&v1->m_vEditCursorPos.x;
-      LODWORD(v67) = vFrom;
-      *(&vStart_0 + 1) = v46;
+      v48 = *&v1->m_vEditCursorPos.x;
+      LODWORD(v69) = vFrom;
+      *(&vStart_0 + 1) = v48;
       flT0 = v1->m_vEditCursorPos.z;
-      if ( CNavMesh::GetGroundHeight(TheNavMesh, *(&v49 + 1), &v67, 0) )
-        *&vStart_0 = v67;
-      v68 = &off_47B0ED0;
-      CPath::CPath(&v89);
+      if ( CNavMesh::GetGroundHeight(TheNavMesh, *(&v51 + 1), &v69, 0) )
+        *&vStart_0 = v69;
+      v70 = &off_47B0ED0;
+      CPath::CPath(&v91);
       if ( nav_edit_path_opt.m_pParent->m_Value.m_nValue != 0 )
-        v93 = &v68;
-      v75 = GetNavHullForSelectionConstraints();
-      *&testRayForward.m_start.x = v75;
-      *(&vForward + 1) = &v80;
-      v80 = off_47AE190;
-      v82 = 0;
-      v83 = 1;
+        v95 = &v70;
+      v77 = GetNavHullForSelectionConstraints();
+      *&testRayForward.m_start.x = v77;
+      *(&vForward + 1) = &v82;
+      v82 = off_47AE190;
       v84 = 0;
-      v85 = 1132068864;
-      v86 = 1092616192;
-      v87 = -1082130432;
-      v88 = -1082130432;
-      v76 = 0;
+      v85 = 1;
+      v86 = 0;
+      v87 = 1132068864;
+      v88 = 1092616192;
+      v89 = -1082130432;
+      v90 = -1082130432;
+      v78 = 0;
       LOBYTE(vForward) = 0;
-      v78 = 1065353216;
-      v79 = 1065353216;
-      v47 = CPath::ComputePathPosToPosCore(&v89, &v76, (&vLastTest + 8), (&vStart_0 + 8), &v80);
-      CPath::FinishComputePathWrapper(&v89, v47);
-      (*(v89 + 32))(&v89, 0, 0.0);
+      v80 = 1065353216;
+      v81 = 1065353216;
+      v49 = CPath::ComputePathPosToPosCore(&v91, &v78, (&vLastTest + 8), (&vStart_0 + 8), &v82);
+      CPath::FinishComputePathWrapper(&v91, v49);
+      (*(v91 + 32))(&v91, 0, 0.0);
     }
     if ( v1->m_pSelectedArea != 0 )
     {
@@ -957,54 +958,54 @@ LABEL_20:
         ;
       if ( i >= 45.0 && i <= 315.0 && (i <= 135.0 || i >= 225.0) )
       {
-        v66 = i;
-        v42 = CNavMesh::SnapToGrid(v1->m_rNavMesh, i, 1);
+        v68 = i;
+        v44 = CNavMesh::SnapToGrid(v1->m_rNavMesh, i, 1);
         v1->m_bSplitAlongX = 0;
-        v20 = v66;
-        v1->m_flSplitEdge = v42;
+        v20 = v68;
+        v1->m_flSplitEdge = v44;
       }
       else
       {
-        v65 = i;
+        v67 = i;
         v19 = CNavMesh::SnapToGrid(v1->m_rNavMesh, i, 1);
-        v20 = v65;
+        v20 = v67;
         v1->m_bSplitAlongX = 1;
         v1->m_flSplitEdge = v19;
       }
-      v99 = UTIL_YawToVector(v20);
+      v21 = UTIL_YawToVector(v20, v20).m128i_u64[0];
       m_pSelectedArea = v1->m_pSelectedArea;
-      v76 = *&v99.x;
-      *&vForward = v99.z;
+      v78 = v21;
+      *&vForward = v23;
       m_flDiameterMax = m_pSelectedArea->m_flDiameterMax;
-      v23 = v99.x * m_flDiameterMax;
-      v24 = v99.y * m_flDiameterMax;
-      v25 = m_flDiameterMax * v99.z;
-      *&v80 = *(&vDir + 2) - v23;
-      *(&v80 + 1) = *(&vDir + 3) - v24;
-      *&v89 = v23 + *(&vDir + 2);
-      *(&v89 + 1) = v24 + *(&vDir + 3);
-      v56 = *(&vDir + 3) - v24;
-      v50 = *&vLastTest - v25;
-      testRayForward.m_start.x = (v23 + *(&vDir + 2)) - (*(&vDir + 2) - v23);
-      v54 = testRayForward.m_start.x;
-      testRayForward.m_start.y = (v24 + *(&vDir + 3)) - (*(&vDir + 3) - v24);
-      v53 = v25 + *&vLastTest;
-      v55 = testRayForward.m_start.y;
-      v58 = v24 + *(&vDir + 3);
-      v60 = *(&vDir + 2) - v23;
-      v62 = v23 + *(&vDir + 2);
-      testRayBack.m_start.x = (*(&vDir + 2) - v23) - (v23 + *(&vDir + 2));
-      testRayBack.m_start.y = (*(&vDir + 3) - v24) - (v24 + *(&vDir + 3));
+      v25 = *&v21 * m_flDiameterMax;
+      v26 = *(&v21 + 1) * m_flDiameterMax;
+      v27 = m_flDiameterMax * v23;
+      *&v82 = *(&vDir + 2) - v25;
+      *(&v82 + 1) = *(&vDir + 3) - v26;
+      *&v91 = v25 + *(&vDir + 2);
+      *(&v91 + 1) = v26 + *(&vDir + 3);
+      v58 = *(&vDir + 3) - v26;
+      v52 = *&vLastTest - v27;
+      testRayForward.m_start.x = (v25 + *(&vDir + 2)) - (*(&vDir + 2) - v25);
+      v56 = testRayForward.m_start.x;
+      testRayForward.m_start.y = (v26 + *(&vDir + 3)) - (*(&vDir + 3) - v26);
+      v55 = v27 + *&vLastTest;
+      v57 = testRayForward.m_start.y;
+      v60 = v26 + *(&vDir + 3);
+      v62 = *(&vDir + 2) - v25;
+      v64 = v25 + *(&vDir + 2);
+      testRayBack.m_start.x = (*(&vDir + 2) - v25) - (v25 + *(&vDir + 2));
+      testRayBack.m_start.y = (*(&vDir + 3) - v26) - (v26 + *(&vDir + 3));
       m_start = testRayBack.m_start;
-      v26 = CNavPoly::IntersectRayWithPolyEdge2D(m_pSelectedArea, &v80, 1, &vStart_0 + 2);
-      v27 = CNavPoly::IntersectRayWithPolyEdge2D(v1->m_pSelectedArea, &v89, 1, &v75.m_hullCategory);
-      v28 = m_start.x;
-      v29 = v62;
-      v30 = v60;
-      v31 = v58;
-      v32 = v56;
-      v33 = v54;
-      if ( (v27 == -1 || v26 == -1) && INavDrawArea::ms_pInst != 0 )
+      v28 = CNavPoly::IntersectRayWithPolyEdge2D(m_pSelectedArea, &v82, 1, &vStart_0 + 2);
+      v29 = CNavPoly::IntersectRayWithPolyEdge2D(v1->m_pSelectedArea, &v91, 1, &v77.m_hullCategory);
+      v30 = m_start.x;
+      v31 = v64;
+      v32 = v62;
+      v33 = v60;
+      v34 = v58;
+      v35 = v56;
+      if ( (v29 == -1 || v28 == -1) && INavDrawArea::ms_pInst != 0 )
       {
         (*INavDrawArea::ms_pInst->_vptr_INavDrawArea)(
           INavDrawArea::ms_pInst,
@@ -1013,15 +1014,15 @@ LABEL_20:
           1,
           &vec3_origin,
           0.0);
-        v28 = m_start.x;
-        v33 = v54;
-        v31 = v58;
-        v29 = v62;
-        v32 = v56;
-        v30 = v60;
+        v30 = m_start.x;
+        v35 = v56;
+        v33 = v60;
+        v31 = v64;
+        v34 = v58;
+        v32 = v62;
       }
       v1->m_SplitRay.m_IsRay = 1;
-      v34 = *(&vStart_0 + 2);
+      v36 = *(&vStart_0 + 2);
       v1->m_SplitRay.m_flRadius = 0.0;
       v1->m_SplitRay.m_Extents.z = 0.0;
       v1->m_SplitRay.m_Extents.y = 0.0;
@@ -1029,47 +1030,47 @@ LABEL_20:
       v1->m_SplitRay.m_StartOffset.z = 0.0;
       v1->m_SplitRay.m_StartOffset.y = 0.0;
       v1->m_SplitRay.m_StartOffset.x = 0.0;
-      v35 = (v33 * v34) + v30;
-      v36 = *&v75.m_hullCategory;
-      v1->m_SplitRay.m_Start.x = v35;
-      v37 = (v55 * v34) + v32;
-      v1->m_SplitRay.m_Start.y = v37;
-      v38 = ((v28 * v36) + v29) - v35;
-      v39 = ((m_start.y * v36) + v31) - v37;
-      v40 = ((v53 - v50) * v34) + v50;
-      v1->m_SplitRay.m_Delta.x = v38;
-      v1->m_SplitRay.m_Delta.y = v39;
-      v1->m_SplitRay.m_Start.z = v40;
-      v41 = (((v50 - v53) * v36) + v53) - v40;
-      v1->m_SplitRay.m_Delta.z = v41;
-      v1->m_SplitRay.m_IsSwept = (((v38 * v38) + (v39 * v39)) + (v41 * v41)) != 0.0;
+      v37 = (v35 * v36) + v32;
+      v38 = *&v77.m_hullCategory;
+      v1->m_SplitRay.m_Start.x = v37;
+      v39 = (v57 * v36) + v34;
+      v1->m_SplitRay.m_Start.y = v39;
+      v40 = ((v30 * v38) + v31) - v37;
+      v41 = ((m_start.y * v38) + v33) - v39;
+      v42 = ((v55 - v52) * v36) + v52;
+      v1->m_SplitRay.m_Delta.x = v40;
+      v1->m_SplitRay.m_Delta.y = v41;
+      v1->m_SplitRay.m_Start.z = v42;
+      v43 = (((v52 - v55) * v38) + v55) - v42;
+      v1->m_SplitRay.m_Delta.z = v43;
+      v1->m_SplitRay.m_IsSwept = (((v40 * v40) + (v41 * v41)) + (v43 * v43)) != 0.0;
     }
-    if ( !v1->m_bClimbableSurface && !v51 )
+    if ( !v1->m_bClimbableSurface && !v53 )
     {
-      v100 = CNavMesh::SnapToGrid(v1->m_rNavMesh, &v1->m_vEditCursorPos, 1, 1, 0);
-      v89 = *&v100.x;
-      testRayBack.m_start.x = v100.z;
-      v1->m_vEditCursorPos.z = v100.z;
-      v1->m_vEditCursorPos.x = v100.x;
-      v1->m_vEditCursorPos.y = *(&v89 + 1);
+      v101 = CNavMesh::SnapToGrid(v1->m_rNavMesh, &v1->m_vEditCursorPos, 1, 1, 0);
+      v91 = *&v101.x;
+      testRayBack.m_start.x = v101.z;
+      v1->m_vEditCursorPos.z = v101.z;
+      v1->m_vEditCursorPos.x = v101.x;
+      v1->m_vEditCursorPos.y = *(&v91 + 1);
     }
     return 1;
   }
 LABEL_11:
-  if ( BYTE7(v49) != 0 )
+  if ( BYTE7(v51) != 0 )
   {
-    v102 = CNavMesh::SnapToGrid(v1->m_rNavMesh, (&vDir + 8), 1, 1, 0);
-    v89 = *&v102.x;
-    testRayBack.m_start.x = v102.z;
-    v1->m_vEditCursorPos.z = v102.z;
-    v1->m_vEditCursorPos.x = v102.x;
-    v1->m_vEditCursorPos.y = *(&v89 + 1);
+    v103 = CNavMesh::SnapToGrid(v1->m_rNavMesh, (&vDir + 8), 1, 1, 0);
+    v91 = *&v103.x;
+    testRayBack.m_start.x = v103.z;
+    v1->m_vEditCursorPos.z = v103.z;
+    v1->m_vEditCursorPos.x = v103.x;
+    v1->m_vEditCursorPos.y = *(&v91 + 1);
   }
-  if ( (v49 - 2) <= 1 )
+  if ( (v51 - 2) <= 1 )
     return 0;
   if ( v1->m_pSelectedArea != 0 || v1->m_pSelectedLadder != 0 )
     return 1;
-  return BYTE7(v49);
+  return BYTE7(v51);
 }
 
 
@@ -1648,10 +1649,10 @@ void __fastcall CNavEditor::DrawEditMode(CNavEditor *const this)
   Color v93; // eax
   float v94; // r15d
   unsigned int v95; // eax
-  int v96; // ecx
+  unsigned int v96; // ecx
   float v97; // xmm2_4
   unsigned int v98; // r8d
-  int v99; // edx
+  unsigned int v99; // edx
   vec_t z; // xmm1_4
   float v101; // xmm0_4
   vec_t v102; // xmm1_4
@@ -1782,7 +1783,7 @@ LABEL_13:
     {
       if ( this->m_bClimbableSurface )
       {
-        NDebugOverlay::Cross3D(&this->m_vEditCursorPos, 10.0, 0, 255, 0, 1, 0.01023);
+        NDebugOverlay::Cross3D(&this->m_vEditCursorPos, 10.0, 0, 0xFFu, 0, 1, 0.01023);
       }
       else
       {
@@ -2417,6 +2418,7 @@ void __fastcall CNavEditor::CommandNavDelete(CNavEditor *const this)
   __int64 v7; // r14
   CNavArea *v8; // r13
   int v9; // esi
+  double v10; // xmm0_8
   CNavArea *m_pMarkedArea; // r13
   CNavLadder *m_pSelectedLadder; // r12
   CNavArea *m_pSelectedArea; // r12
@@ -2452,7 +2454,7 @@ void __fastcall CNavEditor::CommandNavDelete(CNavEditor *const this)
         {
           v9 = 0;
         }
-        Msg("Deleted %d areas\n", v9);
+        *&v10 = Msg("Deleted %d areas\n", v9).m128_u64[0];
         this->m_rNavMesh->m_SelectionSet.m_SetAreas.m_Size = 0;
         goto LABEL_14;
       }
@@ -2502,7 +2504,7 @@ LABEL_19:
         }
       }
 LABEL_14:
-      (*(this->m_rNavMesh->_vptr_CNavMesh + 27))(this->m_rNavMesh);
+      (*(this->m_rNavMesh->_vptr_CNavMesh + 27))(this->m_rNavMesh, v10);
       (*(this->_vptr_INavEditor + 7))(this);
     }
   }
@@ -2592,11 +2594,12 @@ void __fastcall CNavEditor::CommandNavToggleSelectionSet(CNavEditor *const this)
   CNavArea *v14; // r12
   int v15; // eax
   CNavArea **v16; // rax
-  __int64 v17; // [rsp+20h] [rbp-70h]
-  int v18; // [rsp+20h] [rbp-70h]
-  CNavMesh *v19; // [rsp+28h] [rbp-68h]
-  CNavArea *v20; // [rsp+30h] [rbp-60h] BYREF
-  CNavArea *v21; // [rsp+38h] [rbp-58h] BYREF
+  double v17; // xmm0_8
+  __int64 v18; // [rsp+20h] [rbp-70h]
+  int v19; // [rsp+20h] [rbp-70h]
+  CNavMesh *v20; // [rsp+28h] [rbp-68h]
+  CNavArea *v21; // [rsp+30h] [rbp-60h] BYREF
+  CNavArea *v22; // [rsp+38h] [rbp-58h] BYREF
   NavAreaVector notInSelectionSet; // [rsp+40h] [rbp-50h] BYREF
 
   ListenServerHost = UTIL_GetListenServerHost();
@@ -2615,15 +2618,15 @@ void __fastcall CNavEditor::CommandNavToggleSelectionSet(CNavEditor *const this)
     v9 = 0;
     goto LABEL_22;
   }
-  v19 = m_rNavMesh;
+  v20 = m_rNavMesh;
   v5 = 0;
   v6 = 0;
-  v17 = 8LL * (m_Size - 1) + 8;
+  v18 = 8LL * (m_Size - 1) + 8;
   while ( 1 )
   {
     v7 = m_rNavMesh->m_NavAreas.m_Memory.m_pMemory[v5 / 8];
-    v20 = v7;
-    v8 = CUtlVectorBase<CNavArea *,CUtlMemory<CNavArea *,int>>::Find(&v19->m_SelectionSet.m_SetAreas, &v20);
+    v21 = v7;
+    v8 = CUtlVectorBase<CNavArea *,CUtlMemory<CNavArea *,int>>::Find(&v20->m_SelectionSet.m_SetAreas, &v21);
     v9 = v6;
     if ( v8 == -1 )
     {
@@ -2636,10 +2639,10 @@ void __fastcall CNavEditor::CommandNavToggleSelectionSet(CNavEditor *const this)
       v10 = &notInSelectionSet.m_Memory.m_pMemory[v6];
       if ( v10 != 0 )
         break;
-      v19 = this->m_rNavMesh;
+      v20 = this->m_rNavMesh;
     }
     v5 += 8LL;
-    if ( v5 == v17 )
+    if ( v5 == v18 )
       goto LABEL_12;
 LABEL_6:
     v6 = v9;
@@ -2647,11 +2650,11 @@ LABEL_6:
   *v10 = v7;
   v5 += 8LL;
   v9 = notInSelectionSet.m_Size;
-  v19 = this->m_rNavMesh;
-  if ( v5 != v17 )
+  v20 = this->m_rNavMesh;
+  if ( v5 != v18 )
     goto LABEL_6;
 LABEL_12:
-  v19->m_SelectionSet.m_SetAreas.m_Size = 0;
+  v20->m_SelectionSet.m_SetAreas.m_Size = 0;
   if ( v9 != 0 )
   {
     v11 = 0;
@@ -2661,20 +2664,20 @@ LABEL_12:
       while ( 1 )
       {
         v13 = this->m_rNavMesh;
-        v21 = notInSelectionSet.m_Memory.m_pMemory[v11 / 8];
-        v14 = v21;
-        if ( v21 != 0
-          && CUtlVectorBase<CNavArea *,CUtlMemory<CNavArea *,int>>::Find(&v13->m_SelectionSet.m_SetAreas, &v21) == -1 )
+        v22 = notInSelectionSet.m_Memory.m_pMemory[v11 / 8];
+        v14 = v22;
+        if ( v22 != 0
+          && CUtlVectorBase<CNavArea *,CUtlMemory<CNavArea *,int>>::Find(&v13->m_SelectionSet.m_SetAreas, &v22) == -1 )
         {
           v15 = v13->m_SelectionSet.m_SetAreas.m_Size;
-          v18 = v15;
+          v19 = v15;
           if ( v15 == v13->m_SelectionSet.m_SetAreas.m_Memory.m_nAllocationCount )
           {
             CUtlMemory<CNavArea *,int>::Grow(&v13->m_SelectionSet.m_SetAreas.m_Memory, 1);
             v15 = v13->m_SelectionSet.m_SetAreas.m_Size;
           }
           v13->m_SelectionSet.m_SetAreas.m_Size = v15 + 1;
-          v16 = &v13->m_SelectionSet.m_SetAreas.m_Memory.m_pMemory[v18];
+          v16 = &v13->m_SelectionSet.m_SetAreas.m_Memory.m_pMemory[v19];
           if ( v16 != 0 )
             break;
         }
@@ -2690,8 +2693,8 @@ LABEL_21:
     v9 = notInSelectionSet.m_Size;
   }
 LABEL_22:
-  Msg("Selected %d areas.\n", v9);
-  (*(this->_vptr_INavEditor + 7))(this);
+  *&v17 = Msg("Selected %d areas.\n", v9).m128_u64[0];
+  (*(this->_vptr_INavEditor + 7))(this, v17);
   notInSelectionSet.m_Size = 0;
   if ( (notInSelectionSet.m_Memory.m_nGrowSize & 0xC0000000) == 0 )
   {
@@ -4035,32 +4038,33 @@ void __fastcall CNavEditor::CommandNavMark(
 {
   CBasePlayer *ListenServerHost; // r12
   CNavMesh *m_rNavMesh; // rdi
+  double v7; // xmm0_8
   CNavSelectionSet *p_m_SelectionSet; // rdi
-  CNavArea *v8; // r12
-  CNavMesh *v9; // rbx
-  __int64 v10; // r13
-  int v11; // eax
-  CNavArea **v12; // rax
-  char *v13; // rax
-  int v14; // eax
-  int v15; // edx
-  CNavMesh *v16; // rcx
+  CNavArea *v9; // r12
+  CNavMesh *v10; // rbx
+  __int64 v11; // r13
+  int v12; // eax
+  CNavArea **v13; // rax
+  char *v14; // rax
+  int v15; // eax
+  int v16; // edx
+  CNavMesh *v17; // rcx
   int m_Size; // esi
   CNavArea **m_pMemory; // rcx
-  CNavArea *v19; // r13
-  CNavArea **v20; // rax
-  __int64 v21; // rcx
+  CNavArea *v20; // r13
+  CNavArea **v21; // rax
+  __int64 v22; // rcx
   CNavArea *m_pSelectedArea; // rdi
   int TotalAdjacentCount; // eax
-  const char *v24; // rdi
-  unsigned int v25; // eax
+  const char *v25; // rdi
+  unsigned int v26; // eax
   CNavLadder *LadderByID; // r13
-  int v27; // esi
-  bool v28; // zf
+  int v28; // esi
+  bool v29; // zf
   CNavLadder *m_pSelectedLadder; // rax
   CNavArea *src; // [rsp+8h] [rbp-38h] BYREF
-  CNavArea *v31; // [rsp+10h] [rbp-30h] BYREF
-  CNavArea *v32; // [rsp+18h] [rbp-28h] BYREF
+  CNavArea *v32; // [rsp+10h] [rbp-30h] BYREF
+  CNavArea *v33; // [rsp+18h] [rbp-28h] BYREF
 
   ListenServerHost = UTIL_GetListenServerHost();
   if ( ListenServerHost != 0 && this->m_EditMode == INavEditor::EditModeType::NORMAL )
@@ -4072,8 +4076,8 @@ void __fastcall CNavEditor::CommandNavMark(
       if ( this->m_pMarkedArea != 0 || this->m_pMarkedLadder != 0 )
       {
         CBaseEntity::EmitSound(ListenServerHost, "EDIT_MARK.Enable", 0.0, 0);
-        Msg("Area or ladder unmarked.\n");
-        (*(this->_vptr_INavEditor + 7))(this);
+        *&v7 = Msg("Area or ladder unmarked.\n").m128_u64[0];
+        (*(this->_vptr_INavEditor + 7))(this, v7);
 LABEL_6:
         this->m_MarkedCorner = NavCornerType::NUM_CORNERS;
         return;
@@ -4097,98 +4101,98 @@ LABEL_28:
         this->m_pMarkedArea = 0;
         this->m_MarkedCorner = NavCornerType::NUM_CORNERS;
         this->m_pMarkedLadder = m_pSelectedLadder;
-        v27 = (m_pSelectedLadder->m_pTopBehindArea != 0)
+        v28 = (m_pSelectedLadder->m_pTopBehindArea != 0)
             + (m_pSelectedLadder->m_pTopRightArea != 0)
             + (m_pSelectedLadder->m_pTopForwardArea != 0)
             + (m_pSelectedLadder->m_pTopLeftArea != 0);
-        v28 = m_pSelectedLadder->m_pBottomArea == 0;
+        v29 = m_pSelectedLadder->m_pBottomArea == 0;
       }
       else
       {
-        v13 = args->m_ppArgv[1];
-        if ( v13 != "ladder" && strcmp(args->m_ppArgv[1], "ladder") != 0 )
+        v14 = args->m_ppArgv[1];
+        if ( v14 != "ladder" && strcmp(args->m_ppArgv[1], "ladder") != 0 )
         {
-          if ( v13 == 0 )
-            goto LABEL_6;
-          v14 = strtol(args->m_ppArgv[1], 0, 10);
-          v15 = v14;
           if ( v14 == 0 )
             goto LABEL_6;
-          v16 = this->m_rNavMesh;
-          m_Size = v16->m_NavAreas.m_Size;
+          v15 = strtol(args->m_ppArgv[1], 0, 10);
+          v16 = v15;
+          if ( v15 == 0 )
+            goto LABEL_6;
+          v17 = this->m_rNavMesh;
+          m_Size = v17->m_NavAreas.m_Size;
           if ( m_Size == 0 )
             goto LABEL_6;
-          m_pMemory = v16->m_NavAreas.m_Memory.m_pMemory;
-          v19 = *m_pMemory;
-          if ( v14 != (*m_pMemory)->m_AreaId )
+          m_pMemory = v17->m_NavAreas.m_Memory.m_pMemory;
+          v20 = *m_pMemory;
+          if ( v15 != (*m_pMemory)->m_AreaId )
           {
-            v20 = m_pMemory + 1;
-            v21 = &m_pMemory[(m_Size - 1) + 1];
-            while ( v20 != v21 )
+            v21 = m_pMemory + 1;
+            v22 = &m_pMemory[(m_Size - 1) + 1];
+            while ( v21 != v22 )
             {
-              v19 = *v20++;
-              if ( v15 == v19->m_AreaId )
+              v20 = *v21++;
+              if ( v16 == v20->m_AreaId )
                 goto LABEL_27;
             }
             goto LABEL_6;
           }
 LABEL_27:
           CBaseEntity::EmitSound(ListenServerHost, "EDIT_MARK.Disable", 0.0, 0);
-          this->m_pMarkedArea = v19;
-          m_pSelectedArea = v19;
+          this->m_pMarkedArea = v20;
+          m_pSelectedArea = v20;
           goto LABEL_28;
         }
         if ( args->m_nArgc == 2 )
           goto LABEL_6;
-        v24 = args->m_ppArgv[2];
-        if ( v24 == 0 )
-          goto LABEL_6;
-        v25 = strtol(v24, 0, 10);
+        v25 = args->m_ppArgv[2];
         if ( v25 == 0 )
           goto LABEL_6;
-        LadderByID = CNavMesh::GetLadderByID(this->m_rNavMesh, v25);
+        v26 = strtol(v25, 0, 10);
+        if ( v26 == 0 )
+          goto LABEL_6;
+        LadderByID = CNavMesh::GetLadderByID(this->m_rNavMesh, v26);
         if ( LadderByID == 0 )
           goto LABEL_6;
         CBaseEntity::EmitSound(ListenServerHost, "EDIT_MARK.Disable", 0.0, 0);
         this->m_pMarkedLadder = LadderByID;
-        v27 = (LadderByID->m_pTopBehindArea != 0)
+        v28 = (LadderByID->m_pTopBehindArea != 0)
             + (LadderByID->m_pTopRightArea != 0)
             + (LadderByID->m_pTopLeftArea != 0)
             + (LadderByID->m_pTopForwardArea != 0);
-        v28 = LadderByID->m_pBottomArea == 0;
+        v29 = LadderByID->m_pBottomArea == 0;
       }
-      Msg("Newly marked ladder is connected to %d Areas\n", !v28 + v27);
+      Msg("Newly marked ladder is connected to %d Areas\n", !v29 + v28);
       goto LABEL_6;
     }
     src = this->m_pSelectedArea;
     if ( CUtlVectorBase<CNavArea *,CUtlMemory<CNavArea *,int>>::Find(&m_rNavMesh->m_SelectionSet.m_SetAreas, &src) == -1 )
     {
       CBaseEntity::EmitSound(ListenServerHost, "EDIT_MARK.Enable", 0.0, 0);
-      v8 = this->m_pSelectedArea;
-      v9 = this->m_rNavMesh;
-      v32 = v8;
-      if ( v8 != 0
-        && CUtlVectorBase<CNavArea *,CUtlMemory<CNavArea *,int>>::Find(&v9->m_SelectionSet.m_SetAreas, &v32) == -1 )
+      v9 = this->m_pSelectedArea;
+      v10 = this->m_rNavMesh;
+      v33 = v9;
+      if ( v9 != 0
+        && CUtlVectorBase<CNavArea *,CUtlMemory<CNavArea *,int>>::Find(&v10->m_SelectionSet.m_SetAreas, &v33) == -1 )
       {
-        v10 = v9->m_SelectionSet.m_SetAreas.m_Size;
-        v11 = v9->m_SelectionSet.m_SetAreas.m_Size;
-        if ( v10 == v9->m_SelectionSet.m_SetAreas.m_Memory.m_nAllocationCount )
+        v11 = v10->m_SelectionSet.m_SetAreas.m_Size;
+        v12 = v10->m_SelectionSet.m_SetAreas.m_Size;
+        if ( v11 == v10->m_SelectionSet.m_SetAreas.m_Memory.m_nAllocationCount )
         {
-          CUtlMemory<CNavArea *,int>::Grow(&v9->m_SelectionSet.m_SetAreas.m_Memory, 1);
-          v11 = v9->m_SelectionSet.m_SetAreas.m_Size;
+          CUtlMemory<CNavArea *,int>::Grow(&v10->m_SelectionSet.m_SetAreas.m_Memory, 1);
+          v12 = v10->m_SelectionSet.m_SetAreas.m_Size;
         }
-        v9->m_SelectionSet.m_SetAreas.m_Size = v11 + 1;
-        v12 = &v9->m_SelectionSet.m_SetAreas.m_Memory.m_pMemory[v10];
-        if ( v12 != 0 )
-          *v12 = v8;
+        v10->m_SelectionSet.m_SetAreas.m_Size = v12 + 1;
+        v13 = &v10->m_SelectionSet.m_SetAreas.m_Memory.m_pMemory[v11];
+        if ( v13 != 0 )
+          *v13 = v9;
       }
     }
     else
     {
       CBaseEntity::EmitSound(ListenServerHost, "EDIT_MARK.Disable", 0.0, 0);
       p_m_SelectionSet = &this->m_rNavMesh->m_SelectionSet;
-      v31 = this->m_pSelectedArea;
-      CUtlVectorBase<CNavArea *,CUtlMemory<CNavArea *,int>>::FindAndRemove(&p_m_SelectionSet->m_SetAreas, &v31);
+      v32 = this->m_pSelectedArea;
+      CUtlVectorBase<CNavArea *,CUtlMemory<CNavArea *,int>>::FindAndRemove(&p_m_SelectionSet->m_SetAreas, &v32);
     }
   }
 }
@@ -5305,7 +5309,7 @@ LABEL_76:
       *&v73 = clipped.m_Memory.m_pMemory[v70].hi.x - clipped.m_Memory.m_pMemory[v70].lo.x;
       *&maxs_8 = clipped.m_Memory.m_pMemory[v70].hi.z - clipped.m_Memory.m_pMemory[v70].lo.z;
       maxs = __PAIR64__(v72, v73);
-      NDebugOverlay::Box(&clipped.m_Memory.m_pMemory[v70].lo, &vec3_origin, &maxs, 0, 255, 0, 0, 10.0);
+      NDebugOverlay::Box(&clipped.m_Memory.m_pMemory[v70].lo, &vec3_origin, &maxs, 0, 255, 0, 10.0, 0);
       ++v71;
       ++v70;
     }
@@ -5372,8 +5376,8 @@ void __fastcall CNavEditor::CommandAutoBuildOffGridAreas(CNavEditor *const this)
     areaBox.hi.z = v8;
     vMaxsY.y = areaBox.hi.y - areaBox.lo.y;
     vMaxsY.z = v8 - areaBox.lo.z;
-    NDebugOverlay::Box(&areaBox.lo, &vec3_origin, &vMaxsY, 255, 255, 0, 0, 10.0);
-    NDebugOverlay::Cross3D(&vCorner, 8.0, 255, 0, 0, 0, 10.0);
+    NDebugOverlay::Box(&areaBox.lo, &vec3_origin, &vMaxsY, 0xFFu, 255, 0, 10.0, 0);
+    NDebugOverlay::Cross3D(&vCorner, 8.0, 0xFFu, 0, 0, 0, 10.0);
     return;
   }
   if ( FindRow(&vMinsX, &vMaxsX, 0, &vCorner, v7) && FindArea(&vMinsX, &vMaxsX, 0, 1, v9) )
@@ -5874,10 +5878,11 @@ void __fastcall CNavEditor::CommandNavToggleAttribute(CNavEditor *const this, CN
   __int64 v11; // rax
   uint64 m_Flags; // rdx
   int v13; // esi
+  double v14; // xmm0_8
   CNavArea *m_pSelectedArea; // rdi
   int i; // ecx
-  __int64 v16; // rax
-  uint64 v17; // rdx
+  __int64 v17; // rax
+  uint64 v18; // rdx
 
   if ( CNavMesh::TestFilesWritable(this->m_rNavMesh, gpGlobals->mapname) )
   {
@@ -5927,7 +5932,7 @@ LABEL_14:
         }
         v13 = 0;
 LABEL_16:
-        Msg("Changed attribute in %d areas\n", v13);
+        *&v14 = Msg("Changed attribute in %d areas\n", v13).m128_u64[0];
         this->m_rNavMesh->m_SelectionSet.m_SetAreas.m_Size = 0;
       }
       else
@@ -5939,19 +5944,19 @@ LABEL_16:
           m_pSelectedArea = this->m_pSelectedArea;
           for ( i = 0; i != 64; ++i )
           {
-            v16 = 1LL << i;
+            v17 = 1LL << i;
             if ( (attribute.m_Flags & (1LL << i)) != 0 )
             {
-              v17 = m_pSelectedArea->m_AreaAttributes.m_Flags;
-              if ( (v17 & v16) != 0 )
-                m_pSelectedArea->m_AreaAttributes.m_Flags = v17 & ~v16;
+              v18 = m_pSelectedArea->m_AreaAttributes.m_Flags;
+              if ( (v18 & v17) != 0 )
+                m_pSelectedArea->m_AreaAttributes.m_Flags = v18 & ~v17;
               else
-                m_pSelectedArea->m_AreaAttributes.m_Flags = v17 | v16;
+                m_pSelectedArea->m_AreaAttributes.m_Flags = v18 | v17;
             }
           }
         }
       }
-      (*(this->_vptr_INavEditor + 7))(this);
+      (*(this->_vptr_INavEditor + 7))(this, v14);
     }
   }
 }
@@ -6524,28 +6529,27 @@ void __fastcall CNavEditor::CommandNavTestTestRayToMesh(
         const CCommandContext *const ctx,
         const CCommand *const args)
 {
-  __int64 v5; // rsi
-  float v6; // xmm0_4
-  float v7; // xmm3_4
-  int v8; // r13d
+  float v5; // xmm0_4
+  float v6; // xmm3_4
+  int v7; // r13d
+  float v8; // xmm0_4
   float v9; // xmm0_4
-  float v10; // xmm0_4
   vec_t z; // eax
-  float v12; // xmm3_4
+  float v11; // xmm3_4
   int (**vptr_ISceneViewDebugOverlays)(...); // rax
-  __int128 v14; // [rsp+0h] [rbp-100h]
-  double v15; // [rsp+40h] [rbp-C0h]
-  float v16; // [rsp+48h] [rbp-B8h]
+  __int128 v13; // [rsp+0h] [rbp-100h]
+  double v14; // [rsp+40h] [rbp-C0h]
+  float v15; // [rsp+48h] [rbp-B8h]
   float flRayLen; // [rsp+4Ch] [rbp-B4h]
   int nNumRays; // [rsp+50h] [rbp-B0h]
-  float v19; // [rsp+54h] [rbp-ACh]
-  float v20; // [rsp+58h] [rbp-A8h] BYREF
-  float v21; // [rsp+5Ch] [rbp-A4h] BYREF
-  _BYTE v22[16]; // [rsp+60h] [rbp-A0h] BYREF
+  float v18; // [rsp+54h] [rbp-ACh]
+  float v19; // [rsp+58h] [rbp-A8h] BYREF
+  float v20; // [rsp+5Ch] [rbp-A4h] BYREF
+  _BYTE v21[16]; // [rsp+60h] [rbp-A0h] BYREF
   Vector vStart; // [rsp+70h] [rbp-90h] BYREF
   Vector vEnd; // [rsp+80h] [rbp-80h] BYREF
-  float v25[4]; // [rsp+90h] [rbp-70h] BYREF
-  NavHull_t v26; // [rsp+A0h] [rbp-60h] BYREF
+  float v24[4]; // [rsp+90h] [rbp-70h] BYREF
+  NavHull_t v25; // [rsp+A0h] [rbp-60h] BYREF
   CNavTraceResult traceResult; // [rsp+B0h] [rbp-50h] BYREF
 
   if ( nav_edit.m_pParent->m_Value.m_nValue == 0 )
@@ -6558,60 +6562,60 @@ void __fastcall CNavEditor::CommandNavTestTestRayToMesh(
     flRayLen = 300.0;
     goto LABEL_9;
   }
-  flRayLen = V_atof(args->m_ppArgv[1], ctx);
+  flRayLen = V_atof(args->m_ppArgv[1]);
   if ( args->m_nArgc <= 2 )
   {
 LABEL_9:
     nNumRays = 25;
-    v7 = 0.0;
     v6 = 0.0;
+    v5 = 0.0;
 LABEL_10:
-    v8 = 0;
-    v15 = v6;
-    *&v14 = &vStart;
-    v16 = flRayLen * 0.0;
-    *(&v14 + 1) = v25;
+    v7 = 0;
+    v14 = v5;
+    *&v13 = &vStart;
+    v15 = flRayLen * 0.0;
+    *(&v13 + 1) = v24;
     do
     {
-      v9 = v8++;
-      v19 = v7;
+      v8 = v7++;
+      v18 = v6;
       vStart = this->m_vEditCursorPos;
-      v10 = v9 * 6.283185307179586 / nNumRays + v15;
-      sincosf(v10, &v21, &v20);
+      v9 = v8 * 6.283185307179586 / nNumRays + v14;
+      sincosf(v9, &v20, &v19);
       traceResult.m_flEndT = -1.0;
       z = vec3_invalid.z;
       *&traceResult.m_vEndPos.x = *&vec3_invalid.x;
       *&traceResult.m_vExitNormal.x = *&vec3_invalid.x;
-      vEnd.z = v16 + vStart.z;
-      vEnd.y = (v21 * flRayLen) + vStart.y;
-      vEnd.x = (flRayLen * v20) + vStart.x;
+      vEnd.z = v15 + vStart.z;
+      vEnd.y = (v20 * flRayLen) + vStart.y;
+      vEnd.x = (flRayLen * v19) + vStart.x;
       traceResult.m_vEndPos.z = z;
       traceResult.m_vExitNormal.z = z;
-      NavHull_t::NavHull_t(&v26, 0.0, v16 + vStart.z, 1u);
-      CNavMesh::TestRayToMesh(this->m_rNavMesh, v14, &vEnd, v14, &traceResult, 0, -1.0, v12);
-      v26.m_flHullRadius = traceResult.m_vEndPos.y + v19;
-      v26.m_flHullHeight = traceResult.m_vEndPos.z + 2.0;
-      *&v26.m_hullCategory = traceResult.m_vEndPos.x + v19;
-      v25[1] = vStart.y + v19;
-      v25[2] = vStart.z + 2.0;
-      v25[0] = vStart.x + v19;
+      NavHull_t::NavHull_t(&v25, 0.0, v15 + vStart.z, 1u);
+      CNavMesh::TestRayToMesh(this->m_rNavMesh, v13, &vEnd, v13, &traceResult, 0, -1.0, v11);
+      v25.m_flHullRadius = traceResult.m_vEndPos.y + v18;
+      v25.m_flHullHeight = traceResult.m_vEndPos.z + 2.0;
+      *&v25.m_hullCategory = traceResult.m_vEndPos.x + v18;
+      v24[1] = vStart.y + v18;
+      v24[2] = vStart.z + 2.0;
+      v24[0] = vStart.x + v18;
       vptr_ISceneViewDebugOverlays = debugoverlay->_vptr_ISceneViewDebugOverlays;
-      v22[0] = 0;
-      v22[1] = -1;
-      v22[2] = 0;
-      v22[3] = -1;
-      vptr_ISceneViewDebugOverlays[13](debugoverlay, *(&v14 + 1), &v26, v22, 1, 5.0);
-      v7 = v19;
+      v21[0] = 0;
+      v21[1] = -1;
+      v21[2] = 0;
+      v21[3] = -1;
+      vptr_ISceneViewDebugOverlays[13](debugoverlay, *(&v13 + 1), &v25, v21, 1, 5.0);
+      v6 = v18;
     }
-    while ( v8 != nNumRays );
+    while ( v7 != nNumRays );
     return;
   }
   nNumRays = V_atoi(args->m_ppArgv[2]);
   if ( args->m_nArgc <= 3 )
-    v6 = 0.0;
+    v5 = 0.0;
   else
-    v6 = V_atof(args->m_ppArgv[3], v5);
-  v7 = 0.0;
+    v5 = V_atof(args->m_ppArgv[3]);
+  v6 = 0.0;
   if ( nNumRays > 0 )
     goto LABEL_10;
 }

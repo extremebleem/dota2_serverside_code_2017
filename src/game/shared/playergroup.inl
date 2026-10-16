@@ -4,7 +4,7 @@
 // GCSDK::IPlayerGroup::~IPlayerGroup  (line 49, @0x00000000029a73b0, libserver.so)
 void __fastcall GCSDK::IPlayerGroup::~IPlayerGroup(GCSDK::IPlayerGroup *const this)
 {
-  this->_vptr_IPlayerGroup = off_4303FD0;
+  this->_vptr_IPlayerGroup = off_4303FD0;  // vptr: GCSDK::IPlayerGroup
 }
 
 
@@ -12,7 +12,7 @@ void __fastcall GCSDK::IPlayerGroup::~IPlayerGroup(GCSDK::IPlayerGroup *const th
 // calls: operator delete
 void __fastcall GCSDK::IPlayerGroup::~IPlayerGroup(GCSDK::IPlayerGroup *const this)
 {
-  this->_vptr_IPlayerGroup = off_4303FD0;
+  this->_vptr_IPlayerGroup = off_4303FD0;  // vptr: GCSDK::IPlayerGroup
   operator delete(this);
 }
 

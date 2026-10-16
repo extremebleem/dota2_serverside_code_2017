@@ -604,7 +604,7 @@ const ISchemaBinding *__fastcall dota_minimap_boundary::CEntityInstanceEntityCla
 void __fastcall dota_minimap_boundary::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         dota_minimap_boundary::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_40F1710;
+  this->_vptr_CEntityClass = off_40F1710;  // vptr: CEmptyEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -614,7 +614,7 @@ void __fastcall dota_minimap_boundary::CEntityInstanceEntityClass::~CEntityInsta
 void __fastcall dota_minimap_boundary::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         dota_minimap_boundary::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_40F1710;
+  this->_vptr_CEntityClass = off_40F1710;  // vptr: CEmptyEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -776,7 +776,7 @@ void __cdecl CDOTAFogOfWarSystem::YouForgot::ToDefine_DEFINE_GAME_SYSTEM()
 // callers: _GLOBAL__sub_I__unity_dota_03.cpp
 void __fastcall CDOTAFogOfWarSystem::CDOTAFogOfWarSystem(CDOTAFogOfWarSystem *const this)
 {
-  this->_vptr_IGameSystem = off_40F7C90;
+  this->_vptr_IGameSystem = off_40F7C90;  // vptr: CDOTAFogOfWarSystem
   this->m_fowLookup.m_table.m_pMemory = 0;
   this->m_fowLookup.m_table.m_nAllocationCount = 0;
   this->m_fowLookup.m_table.m_nGrowSize = 0;

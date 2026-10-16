@@ -1548,7 +1548,7 @@ bool __fastcall CGameEntitySystem::IsEntityPtr(CGameEntitySystem *const this, vo
 void __fastcall CSpawnGroupCompletionCallbackGameSystem::~CSpawnGroupCompletionCallbackGameSystem(
         CSpawnGroupCompletionCallbackGameSystem *const this)
 {
-  this->_vptr_IGameSystem = off_3FF6450;
+  this->_vptr_IGameSystem = off_3FF6450;  // vptr: CSpawnGroupCompletionCallbackGameSystem
   CUtlVectorBase<CSpawnGroupCompletionCallbackGameSystem::SpawnGroupFinishListener_t,CUtlMemory<CSpawnGroupCompletionCallbackGameSystem::SpawnGroupFinishListener_t,int>>::RemoveAll(&this->m_listenForSpawnGroup);
   if ( (this->m_listenForSpawnGroup.m_Memory.m_nGrowSize & 0xC0000000) == 0 )
   {
@@ -1556,7 +1556,7 @@ void __fastcall CSpawnGroupCompletionCallbackGameSystem::~CSpawnGroupCompletionC
     if ( (this->m_listenForSpawnGroup.m_Memory.m_nGrowSize & 0xC0000000) == 0 )
       CUtlMemory<CSpawnGroupCompletionCallbackGameSystem::SpawnGroupFinishListener_t,int>::Purge(&this->m_listenForSpawnGroup.m_Memory);
   }
-  this->_vptr_IGameSystem = off_3F7C1B0;
+  this->_vptr_IGameSystem = off_3F7C1B0;  // vptr: CAutoGameSystem
   IGameSystem::~IGameSystem(this);
 }
 
@@ -1566,7 +1566,7 @@ void __fastcall CSpawnGroupCompletionCallbackGameSystem::~CSpawnGroupCompletionC
 void __fastcall CSpawnGroupCompletionCallbackGameSystem::~CSpawnGroupCompletionCallbackGameSystem(
         CSpawnGroupCompletionCallbackGameSystem *const this)
 {
-  this->_vptr_IGameSystem = off_3FF6450;
+  this->_vptr_IGameSystem = off_3FF6450;  // vptr: CSpawnGroupCompletionCallbackGameSystem
   CUtlVectorBase<CSpawnGroupCompletionCallbackGameSystem::SpawnGroupFinishListener_t,CUtlMemory<CSpawnGroupCompletionCallbackGameSystem::SpawnGroupFinishListener_t,int>>::RemoveAll(&this->m_listenForSpawnGroup);
   if ( (this->m_listenForSpawnGroup.m_Memory.m_nGrowSize & 0xC0000000) == 0 )
   {
@@ -1574,7 +1574,7 @@ void __fastcall CSpawnGroupCompletionCallbackGameSystem::~CSpawnGroupCompletionC
     if ( (this->m_listenForSpawnGroup.m_Memory.m_nGrowSize & 0xC0000000) == 0 )
       CUtlMemory<CSpawnGroupCompletionCallbackGameSystem::SpawnGroupFinishListener_t,int>::Purge(&this->m_listenForSpawnGroup.m_Memory);
   }
-  this->_vptr_IGameSystem = off_3F7C1B0;
+  this->_vptr_IGameSystem = off_3F7C1B0;  // vptr: CAutoGameSystem
   IGameSystem::~IGameSystem(this);
   operator delete(this);
 }
@@ -2585,7 +2585,7 @@ void __fastcall CLoadingSpawnGroup::Release(CLoadingSpawnGroup *const this)
   CUtlVectorBase<EntitySpawnInfo_t,CUtlMemory<EntitySpawnInfo_t,int>>::RemoveAll(&this->m_spawnInfo);
   CEntitySystem::ExecuteQueuedOperations(g_pGameEntitySystem, 0);
   v8 = this->m_sLevelTransitionLandmarkName.m_pString == 0;
-  this->_vptr_ILoadingSpawnGroup = off_3FF6610;
+  this->_vptr_ILoadingSpawnGroup = off_3FF6610;  // vptr: CLoadingSpawnGroup
   if ( !v8 )
     CUtlString::FreeMemoryBlock(&this->m_sLevelTransitionLandmarkName);
   if ( this->m_sLevelTransitionPreviousMap.m_pString != 0 )
@@ -4382,9 +4382,9 @@ ILoadingSpawnGroup *__fastcall CGameEntitySystem::CreateSpawnGroupEntities(
   if ( pKeyValues == 0 )
     p_scratchEmptyKeyValues = &scratchEmptyKeyValues;
   SpawnGroupFilter = CGameEntitySystem::FindSpawnGroupFilter(this, pFilterName);
-  v10 = operator new(0x90u);
+  v10 = operator new(0x90u);  // new CLoadingSpawnGroup (size matches)
   LODWORD(v10[1]._vptr_ILoadingSpawnGroup) = 0;
-  v10->_vptr_ILoadingSpawnGroup = off_3FF6610;
+  v10->_vptr_ILoadingSpawnGroup = off_3FF6610;  // vptr: CLoadingSpawnGroup
   v10[2]._vptr_ILoadingSpawnGroup = 0;
   LODWORD(v10[3]._vptr_ILoadingSpawnGroup) = 0;
   HIDWORD(v10[3]._vptr_ILoadingSpawnGroup) = 0;
@@ -4529,7 +4529,7 @@ LABEL_27:
   if ( createTypea == CreateSpawnGroupType_t::CREATE_SPAWN_GROUP_ASYNCHRONOUSLY
     || (v33 = *(*g_pGameResourceService + 280LL),
         v34 = (*(v10->_vptr_ILoadingSpawnGroup + 1))(v10),
-        v35 = (*v10->_vptr_ILoadingSpawnGroup)(v10),
+        v35 = v10->EntityCount(),
         v33(g_pGameResourceService, hSpawnGroupa, v35, v34, vecSpawnOffseta),
         createTypea != CreateSpawnGroupType_t::CREATE_SPAWN_GROUP_IMMEDIATELY) )
   {
@@ -6598,7 +6598,7 @@ void __fastcall CGameEntitySystem::NotifyCreateEntity(CGameEntitySystem *const t
       {
         v7 = this->m_entityListeners.m_Memory.m_pMemory[v5 / 8];
         v5 -= 8LL;
-        (*v7->_vptr_IEntityListener)(v7, pEnt);
+        v7->OnEntityCreated(pEnt);
       }
       while ( v5 != v6 );
     }
@@ -7104,7 +7104,7 @@ void __fastcall UTIL_RemoveImmediate(CEntityInstance *oldObj)
 // CRespawnEntitiesFilter::~CRespawnEntitiesFilter  (line 2872, @0x00000000020f2210, libserver.so)  // inlines: ~ISpawnGroupEntityFilter
 void __fastcall CRespawnEntitiesFilter::~CRespawnEntitiesFilter(CRespawnEntitiesFilter *const this)
 {
-  this->_vptr_ISpawnGroupEntityFilter = off_3FCAF10;
+  this->_vptr_ISpawnGroupEntityFilter = off_3FCAF10;  // vptr: ISpawnGroupEntityFilter
 }
 
 
@@ -7112,7 +7112,7 @@ void __fastcall CRespawnEntitiesFilter::~CRespawnEntitiesFilter(CRespawnEntities
 // calls: operator delete
 void __fastcall CRespawnEntitiesFilter::~CRespawnEntitiesFilter(CRespawnEntitiesFilter *const this)
 {
-  this->_vptr_ISpawnGroupEntityFilter = off_3FCAF10;
+  this->_vptr_ISpawnGroupEntityFilter = off_3FCAF10;  // vptr: ISpawnGroupEntityFilter
   operator delete(this);
 }
 
@@ -7235,7 +7235,7 @@ LABEL_24:
 // calls: IGameSystem::~IGameSystem
 void __fastcall CRespawnAllEntitiesSystem::~CRespawnAllEntitiesSystem(CRespawnAllEntitiesSystem *const this)
 {
-  this->_vptr_IGameSystem = off_3F7C1B0;
+  this->_vptr_IGameSystem = off_3F7C1B0;  // vptr: CAutoGameSystem
   IGameSystem::~IGameSystem(this);
 }
 
@@ -7244,7 +7244,7 @@ void __fastcall CRespawnAllEntitiesSystem::~CRespawnAllEntitiesSystem(CRespawnAl
 // calls: IGameSystem::~IGameSystem, operator delete
 void __fastcall CRespawnAllEntitiesSystem::~CRespawnAllEntitiesSystem(CRespawnAllEntitiesSystem *const this)
 {
-  this->_vptr_IGameSystem = off_3F7C1B0;
+  this->_vptr_IGameSystem = off_3F7C1B0;  // vptr: CAutoGameSystem
   IGameSystem::~IGameSystem(this);
   operator delete(this);
 }
@@ -8754,7 +8754,7 @@ LABEL_58:
 // calls: IGameSystem::~IGameSystem
 void __fastcall CSource2EntitySystem::~CSource2EntitySystem(CSource2EntitySystem *const this)
 {
-  this->_vptr_IGameSystem = off_3F7C1B0;
+  this->_vptr_IGameSystem = off_3F7C1B0;  // vptr: CAutoGameSystem
   IGameSystem::~IGameSystem(this);
 }
 
@@ -8763,7 +8763,7 @@ void __fastcall CSource2EntitySystem::~CSource2EntitySystem(CSource2EntitySystem
 // calls: IGameSystem::~IGameSystem, operator delete
 void __fastcall CSource2EntitySystem::~CSource2EntitySystem(CSource2EntitySystem *const this)
 {
-  this->_vptr_IGameSystem = off_3F7C1B0;
+  this->_vptr_IGameSystem = off_3F7C1B0;  // vptr: CAutoGameSystem
   IGameSystem::~IGameSystem(this);
   operator delete(this);
 }
@@ -8804,7 +8804,7 @@ void __cdecl CSource2EntitySystem::YouForgot::ToDefine_DEFINE_GAME_SYSTEM()
 // CSource2EntitySystem::CSource2EntitySystem  (line 3508, @0x00000000020a6a60, libserver.so)
 void __fastcall CSource2EntitySystem::CSource2EntitySystem(CSource2EntitySystem *const this)
 {
-  this->_vptr_IGameSystem = off_3FF6950;
+  this->_vptr_IGameSystem = off_3FF6950;  // vptr: CSource2EntitySystem
 }
 
 
@@ -8836,7 +8836,7 @@ bool __cdecl CSource2EntitySystem::StaticInit()
   }
   g_pGameEntitySystem = g_pEntitySystem;
   v1 = AllocEntity2SaveRestore();
-  (*v1->_vptr_IEntity2SaveRestore)(v1);
+  v1->Init();
   *(&stru_1A0B8.r_offset + g_pGameEntitySystem) = v1;
   v2 = *(v1->_vptr_IEntity2SaveRestore + 16);
   v3 = (*(g_pGameConfiguration->ISource2ClientConfig::IAppSystem::_vptr_IAppSystem + 23))(g_pGameConfiguration);
@@ -8938,7 +8938,7 @@ void __fastcall CSource2ServerSerializers::~CSource2ServerSerializers(CSource2Se
   }
   v2 = (this->m_manualManifests.m_Memory.m_nGrowSize & 0xC0000000) == 0;
   this->m_manualManifests.m_Size = 0;
-  this->_vptr_IAppSystem = off_3FF6C90;
+  this->_vptr_IAppSystem = off_3FF6C90;  // vptr: CTier2AppSystem<ISource2ServerSerializers,0>
   if ( v2 )
   {
     CUtlMemory<ResourceManifestDesc_t *,int>::Purge(&this->m_manualManifests.m_Memory);

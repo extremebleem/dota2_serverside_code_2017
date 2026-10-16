@@ -61,7 +61,7 @@ void __fastcall CThreadSafeMemoryPool::~CThreadSafeMemoryPool(CThreadSafeMemoryP
   bool v9; // zf
   __int128 v10; // rt0
 
-  CurrentId = ThreadGetCurrentId(this);
+  CurrentId = ThreadGetCurrentId();
   _InterlockedAdd(&this->m_threadRWLock.m_nWriters.m_value, 1u);
   if ( this->m_threadRWLock.m_lockInfo.m_nReaders > 0
     || this->m_threadRWLock.m_lockInfo.m_writerId != 0 && CurrentId != this->m_threadRWLock.m_lockInfo.m_writerId
@@ -114,7 +114,7 @@ void __fastcall CThreadSafeMemoryPool::Clear(CThreadSafeMemoryPool *const this)
   __int64 CurrentId; // rsi
   __int128 v3; // rt0
 
-  CurrentId = ThreadGetCurrentId(this);
+  CurrentId = ThreadGetCurrentId();
   _InterlockedAdd(&this->m_threadRWLock.m_nWriters.m_value, 1u);
   if ( this->m_threadRWLock.m_lockInfo.m_nReaders > 0
     || this->m_threadRWLock.m_lockInfo.m_writerId != 0 && CurrentId != this->m_threadRWLock.m_lockInfo.m_writerId
@@ -186,21 +186,20 @@ void *__fastcall CThreadSafeMemoryPool::Alloc(CThreadSafeMemoryPool *const this,
   unsigned __int64 v8; // rcx
   __int128 v9; // rt0
   signed __int64 *v10; // rbx
-  __int64 v12; // rdi
   __int64 CurrentId; // rax
   int m_nGrowMode; // eax
-  __int64 v15; // rax
-  unsigned __int64 v16; // rcx
-  uint8 *v17; // rbx
-  CTSListBase *v18; // rsi
+  __int64 v14; // rax
+  unsigned __int64 v15; // rcx
+  uint8 *v16; // rbx
+  CTSListBase *v17; // rsi
   TSLHead_t m_Head; // rax
-  TSLHead_t v20; // rt0
+  TSLHead_t v19; // rt0
   __int64 m_Size; // rbx
-  int v22; // eax
-  __int64 v23; // rbx
-  bool v24; // zf
-  CThreadSafeMemoryPool::BlockSet_t *v25; // rbx
-  __int128 v26; // rt0
+  int v21; // eax
+  __int64 v22; // rbx
+  bool v23; // zf
+  CThreadSafeMemoryPool::BlockSet_t *v24; // rbx
+  __int128 v25; // rt0
   CUtlVectorBase<CThreadSafeMemoryPool::BlockSet_t,CUtlMemory<CThreadSafeMemoryPool::BlockSet_t,int> >::CAllocator *p_m_Memory; // [rsp+0h] [rbp-50h]
   int cAttempts; // [rsp+Ch] [rbp-44h]
   uint8 *pBlob; // [rsp+10h] [rbp-40h]
@@ -237,11 +236,11 @@ void *__fastcall CThreadSafeMemoryPool::Alloc(CThreadSafeMemoryPool *const this,
       v3 = v8;
     }
     CThreadSpinRWLock::UnlockRead(&this->m_threadRWLock);
-    CurrentId = ThreadGetCurrentId(v12);
+    CurrentId = ThreadGetCurrentId();
     _InterlockedAdd(&this->m_threadRWLock.m_nWriters.m_value, 1u);
     if ( this->m_threadRWLock.m_lockInfo.m_nReaders > 0
       || this->m_threadRWLock.m_lockInfo.m_writerId != 0 && CurrentId != this->m_threadRWLock.m_lockInfo.m_writerId
-      || (v26 = 0u, _InterlockedCompareExchange128(this, 0, CurrentId, &v26) == 0) )
+      || (v25 = 0u, _InterlockedCompareExchange128(this, 0, CurrentId, &v25) == 0) )
     {
       _mm_pause();
       CThreadSpinRWLock::SpinLockForWrite(&this->m_threadRWLock, CurrentId);
@@ -260,51 +259,51 @@ void *__fastcall CThreadSafeMemoryPool::Alloc(CThreadSafeMemoryPool *const this,
     if ( m_nGrowMode == 0 && this->m_vecBlockSets.m_Size == 1 || this->m_cubBlockSize * this->m_nGrowSize == 0 )
       break;
 LABEL_15:
-    v15 = (**g_pMemAlloc)(g_pMemAlloc, cubBlob + 23);
-    LODWORD(v16) = v2;
-    pBlob = ((v15 + 23) & 0xFFFFFFFFFFFFFFF0LL);
-    *(pBlob - 1) = v15;
-    v17 = pBlob;
+    v14 = (**g_pMemAlloc)(g_pMemAlloc, cubBlob + 23);
+    LODWORD(v15) = v2;
+    pBlob = ((v14 + 23) & 0xFFFFFFFFFFFFFFF0LL);
+    *(pBlob - 1) = v14;
+    v16 = pBlob;
     if ( &pBlob[cubBlob] > pBlob )
     {
       do
       {
-        v18 = this->m_ptslistFreeBlocks;
-        v16 = v16;
+        v17 = this->m_ptslistFreeBlocks;
+        v15 = v15;
         while ( 1 )
         {
-          m_Head = v18->m_Head;
-          v16 = (*(&v18->m_Head.value64x128 + 1) + 65537) | v16 & 0xFFFFFFFF00000000LL;
-          *v17 = v18->m_Head.value.Next;
-          v20 = m_Head;
-          if ( _InterlockedCompareExchange128(v18, v16, v17, &v20) != 0 )
+          m_Head = v17->m_Head;
+          v15 = (*(&v17->m_Head.value64x128 + 1) + 65537) | v15 & 0xFFFFFFFF00000000LL;
+          *v16 = v17->m_Head.value.Next;
+          v19 = m_Head;
+          if ( _InterlockedCompareExchange128(v17, v15, v16, &v19) != 0 )
             break;
           _mm_pause();
         }
-        v17 += this->m_cubBlockSize;
+        v16 += this->m_cubBlockSize;
       }
-      while ( &pBlob[cubBlob] > v17 );
-      v2 = v16;
+      while ( &pBlob[cubBlob] > v16 );
+      v2 = v15;
     }
     m_Size = this->m_vecBlockSets.m_Size;
     this->m_cubAllocated += cubBlob;
     if ( m_Size == this->m_vecBlockSets.m_Memory.m_nAllocationCount )
     {
       CUtlMemory<CThreadSafeMemoryPool::BlockSet_t,int>::Grow(p_m_Memory, 1);
-      v22 = this->m_vecBlockSets.m_Size;
+      v21 = this->m_vecBlockSets.m_Size;
     }
     else
     {
-      v22 = m_Size;
+      v21 = m_Size;
     }
-    v23 = m_Size;
-    v24 = &this->m_vecBlockSets.m_Memory.m_pMemory[v23] == 0;
-    v25 = &this->m_vecBlockSets.m_Memory.m_pMemory[v23];
-    this->m_vecBlockSets.m_Size = v22 + 1;
-    if ( !v24 )
+    v22 = m_Size;
+    v23 = &this->m_vecBlockSets.m_Memory.m_pMemory[v22] == 0;
+    v24 = &this->m_vecBlockSets.m_Memory.m_pMemory[v22];
+    this->m_vecBlockSets.m_Size = v21 + 1;
+    if ( !v23 )
     {
-      v25->m_pubBlockSet = pBlob;
-      v25->m_cubAllocated = cubBlob;
+      v24->m_pubBlockSet = pBlob;
+      v24->m_cubAllocated = cubBlob;
     }
 LABEL_24:
     CThreadSpinRWLock::UnlockWrite(&this->m_threadRWLock);
@@ -334,9 +333,8 @@ void __fastcall CThreadSafeMemoryPool::Free(CThreadSafeMemoryPool *const this, v
   unsigned __int64 v6; // rcx
   TSLHead_t m_Head; // rax
   TSLHead_t v8; // rt0
-  __int64 v9; // rdi
   __int64 CurrentId; // rsi
-  __int128 v11; // rt0
+  __int128 v10; // rt0
 
   CThreadSpinRWLock::LockForRead(&this->m_threadRWLock);
   m_ptslistFreeBlocks = this->m_ptslistFreeBlocks;
@@ -355,11 +353,11 @@ void __fastcall CThreadSafeMemoryPool::Free(CThreadSafeMemoryPool *const this, v
   CThreadSpinRWLock::UnlockRead(&this->m_threadRWLock);
   if ( this->m_cBlocksInUse.m_value == 0 && this->m_cubAllocated > 0x4FFFFF && this->m_vecBlockSets.m_Size > 9 )
   {
-    CurrentId = ThreadGetCurrentId(v9);
+    CurrentId = ThreadGetCurrentId();
     _InterlockedAdd(&this->m_threadRWLock.m_nWriters.m_value, 1u);
     if ( this->m_threadRWLock.m_lockInfo.m_nReaders > 0
       || this->m_threadRWLock.m_lockInfo.m_writerId != 0 && CurrentId != this->m_threadRWLock.m_lockInfo.m_writerId
-      || (v11 = 0u, _InterlockedCompareExchange128(this, 0, CurrentId, &v11) == 0) )
+      || (v10 = 0u, _InterlockedCompareExchange128(this, 0, CurrentId, &v10) == 0) )
     {
       _mm_pause();
       CThreadSpinRWLock::SpinLockForWrite(&this->m_threadRWLock, CurrentId);
@@ -388,7 +386,7 @@ void __fastcall CThreadSafeMemoryPool::PrintStats(CThreadSafeMemoryPool *const t
   __int128 v9; // rt0
   size_t v10; // rdx
 
-  CurrentId = ThreadGetCurrentId(this);
+  CurrentId = ThreadGetCurrentId();
   _InterlockedAdd(&this->m_threadRWLock.m_nWriters.m_value, 1u);
   if ( this->m_threadRWLock.m_lockInfo.m_nReaders > 0
     || this->m_threadRWLock.m_lockInfo.m_writerId != 0 && CurrentId != this->m_threadRWLock.m_lockInfo.m_writerId

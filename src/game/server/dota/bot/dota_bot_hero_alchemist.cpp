@@ -237,7 +237,7 @@ void __fastcall CDOTA_Bot_AbilityUsage_Alchemist_AcidSpray::CDOTA_Bot_AbilityUsa
   this->m_pAbility = pAbility;
   this->m_bUseOnCreeps = 0;
   this->m_pBot = pBot;
-  this->_vptr_CDOTA_Bot_AbilityUsage = off_42C79B0;
+  this->_vptr_CDOTA_Bot_AbilityUsage = off_42C79B0;  // vptr: CDOTA_Bot_AbilityUsage_Alchemist_AcidSpray
 }
 
 
@@ -267,7 +267,7 @@ void __fastcall CDOTA_Bot_AbilityUsage_Alchemist_UnstableConcoction::CDOTA_Bot_A
   this->m_pAbility = pAbility;
   this->m_bUseOnCreeps = 0;
   this->m_pBot = pBot;
-  this->_vptr_CDOTA_Bot_AbilityUsage = off_42C7A10;
+  this->_vptr_CDOTA_Bot_AbilityUsage = off_42C7A10;  // vptr: CDOTA_Bot_AbilityUsage_Alchemist_UnstableConcoction
 }
 
 
@@ -297,7 +297,7 @@ void __fastcall CDOTA_Bot_AbilityUsage_Alchemist_UnstableConcoctionThrow::CDOTA_
   this->m_pAbility = pAbility;
   this->m_bUseOnCreeps = 0;
   this->m_pBot = pBot;
-  this->_vptr_CDOTA_Bot_AbilityUsage = off_42C7A70;
+  this->_vptr_CDOTA_Bot_AbilityUsage = off_42C7A70;  // vptr: CDOTA_Bot_AbilityUsage_Alchemist_UnstableConcoctionThrow
 }
 
 
@@ -327,7 +327,7 @@ void __fastcall CDOTA_Bot_AbilityUsage_Alchemist_ChemicalRage::CDOTA_Bot_Ability
   this->m_pAbility = pAbility;
   this->m_bUseOnCreeps = 0;
   this->m_pBot = pBot;
-  this->_vptr_CDOTA_Bot_AbilityUsage = off_42C7AD0;
+  this->_vptr_CDOTA_Bot_AbilityUsage = off_42C7AD0;  // vptr: CDOTA_Bot_AbilityUsage_Alchemist_ChemicalRage
 }
 
 

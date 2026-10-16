@@ -287,7 +287,7 @@ void __fastcall CSosFilterStartSoundEventInfo_t::~CSosFilterStartSoundEventInfo_
   void (__fastcall *v5)(_QWORD *, CUtlLeanVectorFixedGrowableBase<CSosPackedFieldData::Entry_t,3u,short int>::ElemType_t *); // rdx
 
   v2 = (this->m_recipientFilter.m_Recipients.m_Memory.m_nGrowSize & 0xC0000000) == 0;
-  this->_vptr_CSosEventInfo_t = off_3FCD8F0;
+  this->_vptr_CSosEventInfo_t = off_3FCD8F0;  // vptr: CSosFilterStartSoundEventInfo_t
   this->m_recipientFilter._vptr_IRecipientFilter = &off_3FCCE90;
   this->m_recipientFilter.m_Recipients.m_Size = 0;
   if ( v2 )
@@ -298,7 +298,7 @@ void __fastcall CSosFilterStartSoundEventInfo_t::~CSosFilterStartSoundEventInfo_
       CUtlMemory<CEntityIndex,int>::Purge(p_m_Memory);
   }
   this->m_recipientFilter._vptr_IRecipientFilter = &off_3FCAC70;
-  this->_vptr_CSosEventInfo_t = off_3FCACF0;
+  this->_vptr_CSosEventInfo_t = off_3FCACF0;  // vptr: CSosEventInfoWithFieldData_t
   CUtlMemory<unsigned char,int>::Purge(&this->m_fieldData.m_data.m_Memory);
   m_nAllocated = this->m_fieldData.m_entries.m_nAllocated;
   this->m_fieldData.m_entries.m_nCount = 0;
@@ -311,7 +311,7 @@ void __fastcall CSosFilterStartSoundEventInfo_t::~CSosFilterStartSoundEventInfo_
       v5(g_pMemAlloc, 0);
   }
   this->m_fieldData.m_entries.m_nAllocated = 3;
-  this->_vptr_CSosEventInfo_t = off_3FCACD0;
+  this->_vptr_CSosEventInfo_t = off_3FCACD0;  // vptr: CSosEventInfo_t
 }
 
 
@@ -326,7 +326,7 @@ void __fastcall CSosFilterStartSoundEventInfo_t::~CSosFilterStartSoundEventInfo_
   void (__fastcall *v5)(_QWORD *, CUtlLeanVectorFixedGrowableBase<CSosPackedFieldData::Entry_t,3u,short int>::ElemType_t *); // rdx
 
   v2 = (this->m_recipientFilter.m_Recipients.m_Memory.m_nGrowSize & 0xC0000000) == 0;
-  this->_vptr_CSosEventInfo_t = off_3FCD8F0;
+  this->_vptr_CSosEventInfo_t = off_3FCD8F0;  // vptr: CSosFilterStartSoundEventInfo_t
   this->m_recipientFilter._vptr_IRecipientFilter = &off_3FCCE90;
   this->m_recipientFilter.m_Recipients.m_Size = 0;
   if ( v2 )
@@ -337,7 +337,7 @@ void __fastcall CSosFilterStartSoundEventInfo_t::~CSosFilterStartSoundEventInfo_
       CUtlMemory<CEntityIndex,int>::Purge(p_m_Memory);
   }
   this->m_recipientFilter._vptr_IRecipientFilter = &off_3FCAC70;
-  this->_vptr_CSosEventInfo_t = off_3FCACF0;
+  this->_vptr_CSosEventInfo_t = off_3FCACF0;  // vptr: CSosEventInfoWithFieldData_t
   CUtlMemory<unsigned char,int>::Purge(&this->m_fieldData.m_data.m_Memory);
   m_nAllocated = this->m_fieldData.m_entries.m_nAllocated;
   this->m_fieldData.m_entries.m_nCount = 0;
@@ -350,7 +350,7 @@ void __fastcall CSosFilterStartSoundEventInfo_t::~CSosFilterStartSoundEventInfo_
       v5(g_pMemAlloc, 0);
   }
   this->m_fieldData.m_entries.m_nAllocated = 3;
-  this->_vptr_CSosEventInfo_t = off_3FCACD0;
+  this->_vptr_CSosEventInfo_t = off_3FCACD0;  // vptr: CSosEventInfo_t
   operator delete(this);
 }
 
@@ -364,7 +364,7 @@ void __fastcall CSosFilterStopSoundEventInfo_t::~CSosFilterStopSoundEventInfo_t(
   CUtlVectorBase<CEntityIndex,CUtlMemory<CEntityIndex,int> >::CAllocator *p_m_Memory; // r12
 
   v2 = (this->m_recipientFilter.m_Recipients.m_Memory.m_nGrowSize & 0xC0000000) == 0;
-  this->_vptr_CSosEventInfo_t = off_3FCD910;
+  this->_vptr_CSosEventInfo_t = off_3FCD910;  // vptr: CSosFilterStopSoundEventInfo_t
   this->m_recipientFilter._vptr_IRecipientFilter = &off_3FCCE90;
   this->m_recipientFilter.m_Recipients.m_Size = 0;
   if ( v2 )
@@ -375,7 +375,7 @@ void __fastcall CSosFilterStopSoundEventInfo_t::~CSosFilterStopSoundEventInfo_t(
       CUtlMemory<CEntityIndex,int>::Purge(p_m_Memory);
   }
   this->m_recipientFilter._vptr_IRecipientFilter = &off_3FCAC70;
-  this->_vptr_CSosEventInfo_t = off_3FCACD0;
+  this->_vptr_CSosEventInfo_t = off_3FCACD0;  // vptr: CSosEventInfo_t
 }
 
 
@@ -388,7 +388,7 @@ void __fastcall CSosFilterStopSoundEventInfo_t::~CSosFilterStopSoundEventInfo_t(
   CUtlVectorBase<CEntityIndex,CUtlMemory<CEntityIndex,int> >::CAllocator *p_m_Memory; // r12
 
   v2 = (this->m_recipientFilter.m_Recipients.m_Memory.m_nGrowSize & 0xC0000000) == 0;
-  this->_vptr_CSosEventInfo_t = off_3FCD910;
+  this->_vptr_CSosEventInfo_t = off_3FCD910;  // vptr: CSosFilterStopSoundEventInfo_t
   this->m_recipientFilter._vptr_IRecipientFilter = &off_3FCCE90;
   this->m_recipientFilter.m_Recipients.m_Size = 0;
   if ( v2 )
@@ -399,7 +399,7 @@ void __fastcall CSosFilterStopSoundEventInfo_t::~CSosFilterStopSoundEventInfo_t(
       CUtlMemory<CEntityIndex,int>::Purge(p_m_Memory);
   }
   this->m_recipientFilter._vptr_IRecipientFilter = &off_3FCAC70;
-  this->_vptr_CSosEventInfo_t = off_3FCACD0;
+  this->_vptr_CSosEventInfo_t = off_3FCACD0;  // vptr: CSosEventInfo_t
   operator delete(this);
 }
 
@@ -413,7 +413,7 @@ void __fastcall CSosFilterStopSoundEventHashInfo_t::~CSosFilterStopSoundEventHas
   CUtlVectorBase<CEntityIndex,CUtlMemory<CEntityIndex,int> >::CAllocator *p_m_Memory; // r12
 
   v2 = (this->m_recipientFilter.m_Recipients.m_Memory.m_nGrowSize & 0xC0000000) == 0;
-  this->_vptr_CSosEventInfo_t = off_3FCD930;
+  this->_vptr_CSosEventInfo_t = off_3FCD930;  // vptr: CSosFilterStopSoundEventHashInfo_t
   this->m_recipientFilter._vptr_IRecipientFilter = &off_3FCCE90;
   this->m_recipientFilter.m_Recipients.m_Size = 0;
   if ( v2 )
@@ -424,7 +424,7 @@ void __fastcall CSosFilterStopSoundEventHashInfo_t::~CSosFilterStopSoundEventHas
       CUtlMemory<CEntityIndex,int>::Purge(p_m_Memory);
   }
   this->m_recipientFilter._vptr_IRecipientFilter = &off_3FCAC70;
-  this->_vptr_CSosEventInfo_t = off_3FCACD0;
+  this->_vptr_CSosEventInfo_t = off_3FCACD0;  // vptr: CSosEventInfo_t
 }
 
 
@@ -437,7 +437,7 @@ void __fastcall CSosFilterStopSoundEventHashInfo_t::~CSosFilterStopSoundEventHas
   CUtlVectorBase<CEntityIndex,CUtlMemory<CEntityIndex,int> >::CAllocator *p_m_Memory; // r12
 
   v2 = (this->m_recipientFilter.m_Recipients.m_Memory.m_nGrowSize & 0xC0000000) == 0;
-  this->_vptr_CSosEventInfo_t = off_3FCD930;
+  this->_vptr_CSosEventInfo_t = off_3FCD930;  // vptr: CSosFilterStopSoundEventHashInfo_t
   this->m_recipientFilter._vptr_IRecipientFilter = &off_3FCCE90;
   this->m_recipientFilter.m_Recipients.m_Size = 0;
   if ( v2 )
@@ -448,7 +448,7 @@ void __fastcall CSosFilterStopSoundEventHashInfo_t::~CSosFilterStopSoundEventHas
       CUtlMemory<CEntityIndex,int>::Purge(p_m_Memory);
   }
   this->m_recipientFilter._vptr_IRecipientFilter = &off_3FCAC70;
-  this->_vptr_CSosEventInfo_t = off_3FCACD0;
+  this->_vptr_CSosEventInfo_t = off_3FCACD0;  // vptr: CSosEventInfo_t
   operator delete(this);
 }
 
@@ -464,7 +464,7 @@ void __fastcall CSosFilterSetSoundEventFieldsInfo_t::~CSosFilterSetSoundEventFie
   void (__fastcall *v5)(_QWORD *, CUtlLeanVectorFixedGrowableBase<CSosPackedFieldData::Entry_t,3u,short int>::ElemType_t *); // rdx
 
   v2 = (this->m_recipientFilter.m_Recipients.m_Memory.m_nGrowSize & 0xC0000000) == 0;
-  this->_vptr_CSosEventInfo_t = off_3FCD950;
+  this->_vptr_CSosEventInfo_t = off_3FCD950;  // vptr: CSosFilterSetSoundEventFieldsInfo_t
   this->m_recipientFilter._vptr_IRecipientFilter = &off_3FCCE90;
   this->m_recipientFilter.m_Recipients.m_Size = 0;
   if ( v2 )
@@ -475,7 +475,7 @@ void __fastcall CSosFilterSetSoundEventFieldsInfo_t::~CSosFilterSetSoundEventFie
       CUtlMemory<CEntityIndex,int>::Purge(p_m_Memory);
   }
   this->m_recipientFilter._vptr_IRecipientFilter = &off_3FCAC70;
-  this->_vptr_CSosEventInfo_t = off_3FCACF0;
+  this->_vptr_CSosEventInfo_t = off_3FCACF0;  // vptr: CSosEventInfoWithFieldData_t
   CUtlMemory<unsigned char,int>::Purge(&this->m_fieldData.m_data.m_Memory);
   m_nAllocated = this->m_fieldData.m_entries.m_nAllocated;
   this->m_fieldData.m_entries.m_nCount = 0;
@@ -488,7 +488,7 @@ void __fastcall CSosFilterSetSoundEventFieldsInfo_t::~CSosFilterSetSoundEventFie
       v5(g_pMemAlloc, 0);
   }
   this->m_fieldData.m_entries.m_nAllocated = 3;
-  this->_vptr_CSosEventInfo_t = off_3FCACD0;
+  this->_vptr_CSosEventInfo_t = off_3FCACD0;  // vptr: CSosEventInfo_t
 }
 
 
@@ -503,7 +503,7 @@ void __fastcall CSosFilterSetSoundEventFieldsInfo_t::~CSosFilterSetSoundEventFie
   void (__fastcall *v5)(_QWORD *, CUtlLeanVectorFixedGrowableBase<CSosPackedFieldData::Entry_t,3u,short int>::ElemType_t *); // rdx
 
   v2 = (this->m_recipientFilter.m_Recipients.m_Memory.m_nGrowSize & 0xC0000000) == 0;
-  this->_vptr_CSosEventInfo_t = off_3FCD950;
+  this->_vptr_CSosEventInfo_t = off_3FCD950;  // vptr: CSosFilterSetSoundEventFieldsInfo_t
   this->m_recipientFilter._vptr_IRecipientFilter = &off_3FCCE90;
   this->m_recipientFilter.m_Recipients.m_Size = 0;
   if ( v2 )
@@ -514,7 +514,7 @@ void __fastcall CSosFilterSetSoundEventFieldsInfo_t::~CSosFilterSetSoundEventFie
       CUtlMemory<CEntityIndex,int>::Purge(p_m_Memory);
   }
   this->m_recipientFilter._vptr_IRecipientFilter = &off_3FCAC70;
-  this->_vptr_CSosEventInfo_t = off_3FCACF0;
+  this->_vptr_CSosEventInfo_t = off_3FCACF0;  // vptr: CSosEventInfoWithFieldData_t
   CUtlMemory<unsigned char,int>::Purge(&this->m_fieldData.m_data.m_Memory);
   this->m_fieldData.m_entries.m_nCount = 0;
   m_nAllocated = this->m_fieldData.m_entries.m_nAllocated;
@@ -527,7 +527,7 @@ void __fastcall CSosFilterSetSoundEventFieldsInfo_t::~CSosFilterSetSoundEventFie
       v5(g_pMemAlloc, 0);
   }
   this->m_fieldData.m_entries.m_nAllocated = 3;
-  this->_vptr_CSosEventInfo_t = off_3FCACD0;
+  this->_vptr_CSosEventInfo_t = off_3FCACD0;  // vptr: CSosEventInfo_t
   operator delete(this);
 }
 
@@ -543,7 +543,7 @@ void __fastcall CSosFilterSetLibraryStackFieldsInfo_t::~CSosFilterSetLibraryStac
   void (__fastcall *v5)(_QWORD *, CUtlLeanVectorFixedGrowableBase<CSosPackedFieldData::Entry_t,3u,short int>::ElemType_t *); // rdx
 
   v2 = (this->m_recipientFilter.m_Recipients.m_Memory.m_nGrowSize & 0xC0000000) == 0;
-  this->_vptr_CSosEventInfo_t = off_3FCD970;
+  this->_vptr_CSosEventInfo_t = off_3FCD970;  // vptr: CSosFilterSetLibraryStackFieldsInfo_t
   this->m_recipientFilter._vptr_IRecipientFilter = &off_3FCCE90;
   this->m_recipientFilter.m_Recipients.m_Size = 0;
   if ( v2 )
@@ -554,7 +554,7 @@ void __fastcall CSosFilterSetLibraryStackFieldsInfo_t::~CSosFilterSetLibraryStac
       CUtlMemory<CEntityIndex,int>::Purge(p_m_Memory);
   }
   this->m_recipientFilter._vptr_IRecipientFilter = &off_3FCAC70;
-  this->_vptr_CSosEventInfo_t = off_3FCACF0;
+  this->_vptr_CSosEventInfo_t = off_3FCACF0;  // vptr: CSosEventInfoWithFieldData_t
   CUtlMemory<unsigned char,int>::Purge(&this->m_fieldData.m_data.m_Memory);
   m_nAllocated = this->m_fieldData.m_entries.m_nAllocated;
   this->m_fieldData.m_entries.m_nCount = 0;
@@ -567,7 +567,7 @@ void __fastcall CSosFilterSetLibraryStackFieldsInfo_t::~CSosFilterSetLibraryStac
       v5(g_pMemAlloc, 0);
   }
   this->m_fieldData.m_entries.m_nAllocated = 3;
-  this->_vptr_CSosEventInfo_t = off_3FCACD0;
+  this->_vptr_CSosEventInfo_t = off_3FCACD0;  // vptr: CSosEventInfo_t
 }
 
 
@@ -582,7 +582,7 @@ void __fastcall CSosFilterSetLibraryStackFieldsInfo_t::~CSosFilterSetLibraryStac
   void (__fastcall *v5)(_QWORD *, CUtlLeanVectorFixedGrowableBase<CSosPackedFieldData::Entry_t,3u,short int>::ElemType_t *); // rdx
 
   v2 = (this->m_recipientFilter.m_Recipients.m_Memory.m_nGrowSize & 0xC0000000) == 0;
-  this->_vptr_CSosEventInfo_t = off_3FCD970;
+  this->_vptr_CSosEventInfo_t = off_3FCD970;  // vptr: CSosFilterSetLibraryStackFieldsInfo_t
   this->m_recipientFilter._vptr_IRecipientFilter = &off_3FCCE90;
   this->m_recipientFilter.m_Recipients.m_Size = 0;
   if ( v2 )
@@ -593,7 +593,7 @@ void __fastcall CSosFilterSetLibraryStackFieldsInfo_t::~CSosFilterSetLibraryStac
       CUtlMemory<CEntityIndex,int>::Purge(p_m_Memory);
   }
   this->m_recipientFilter._vptr_IRecipientFilter = &off_3FCAC70;
-  this->_vptr_CSosEventInfo_t = off_3FCACF0;
+  this->_vptr_CSosEventInfo_t = off_3FCACF0;  // vptr: CSosEventInfoWithFieldData_t
   CUtlMemory<unsigned char,int>::Purge(&this->m_fieldData.m_data.m_Memory);
   this->m_fieldData.m_entries.m_nCount = 0;
   m_nAllocated = this->m_fieldData.m_entries.m_nAllocated;
@@ -606,7 +606,7 @@ void __fastcall CSosFilterSetLibraryStackFieldsInfo_t::~CSosFilterSetLibraryStac
       v5(g_pMemAlloc, 0);
   }
   this->m_fieldData.m_entries.m_nAllocated = 3;
-  this->_vptr_CSosEventInfo_t = off_3FCACD0;
+  this->_vptr_CSosEventInfo_t = off_3FCACD0;  // vptr: CSosEventInfo_t
   operator delete(this);
 }
 

@@ -1,6 +1,72 @@
 
 // ==== functions (decompiled by Hex-Rays; names/signatures from DWARF) ====
 
+// google::protobuf::Message::CheckTypeAndMergeFrom  (line 0, @0x000000000303fe5a, libserver.so)
+// calls: google::protobuf::internal::down_cast<google::protobuf::Message const*,google::protobuf::MessageLite const>(google::protobuf::MessageLite const *)
+__int64 __fastcall google::protobuf::Message::CheckTypeAndMergeFrom(
+        google::protobuf::Message *this,
+        const google::protobuf::MessageLite *a2)
+{
+  __int64 (__fastcall *v2)(google::protobuf::Message *, __int64); // rbx
+  __int64 v3; // rax
+
+  v2 = *(*this + 112LL);
+  v3 = google::protobuf::internal::down_cast<google::protobuf::Message const*,google::protobuf::MessageLite const>(a2);
+  return v2(this, v3);
+}
+
+
+// google::protobuf::Message::GetTypeName  (line 0, @0x000000000303ffea, libserver.so)
+// calls: google::protobuf::Message::GetDescriptor(void), google::protobuf::Descriptor::full_name(void), std::string::string(std::string const&)
+std::string *__fastcall google::protobuf::Message::GetTypeName(std::string *this, google::protobuf::Message *a2)
+{
+  google::protobuf::Descriptor *Descriptor; // rax
+  const std::string *v3; // rax
+
+  Descriptor = google::protobuf::Message::GetDescriptor(a2);
+  v3 = google::protobuf::Descriptor::full_name(Descriptor);
+  std::string::string(this, v3);
+  return this;
+}
+
+
+// google::protobuf::Message::InitializationErrorString  (line 0, @0x00000000030400f2, libserver.so)
+// calls: std::vector<std::string,std::allocator<std::string>>::vector(void), google::protobuf::Message::FindInitializationErrors(std::vector<std::string,std::allocator<std::string>> *), google::protobuf::Join<std::vector<std::string,std::allocator<std::string>>>(std::vector<std::string,std::allocator<std::string>> const&,char const*), std::vector<std::string,std::allocator<std::string>>::~vector(), _Unwind_Resume
+// strings: ", "
+google::protobuf::Message *__fastcall google::protobuf::Message::InitializationErrorString(
+        google::protobuf::Message *this,
+        __int64 a2)
+{
+  _BYTE v5[48]; // [rsp+10h] [rbp-30h] BYREF
+
+  std::vector<std::string>::vector(v5);
+  google::protobuf::Message::FindInitializationErrors(a2, v5);
+  google::protobuf::Join<std::vector<std::string>>(this, v5, ", ");
+  std::vector<std::string>::~vector(v5);
+  return this;
+}
+
+
+// google::protobuf::Message::DiscardUnknownFields  (line 0, @0x00000000030402e8, libserver.so)
+// calls: google::protobuf::internal::ReflectionOps::DiscardUnknownFields(google::protobuf::Message *)
+__int64 __fastcall google::protobuf::Message::DiscardUnknownFields(
+        google::protobuf::internal::ReflectionOps *this,
+        google::protobuf::Message *a2)
+{
+  return google::protobuf::internal::ReflectionOps::DiscardUnknownFields(this, a2);
+}
+
+
+// google::protobuf::Message::SpaceUsed  (line 0, @0x00000000030406c4, libserver.so)
+__int64 __fastcall google::protobuf::Message::SpaceUsed(google::protobuf::Message *this)
+{
+  __int64 v1; // rax
+
+  v1 = (*(*this + 144LL))(this);
+  return (*(*v1 + 32LL))(v1, this);
+}
+
+
 // CMsgVector::GetCachedSize  (line 168, @0x0000000001a8ce60, libserver.so)
 int __fastcall CMsgVector::GetCachedSize(const CMsgVector *const this)
 {

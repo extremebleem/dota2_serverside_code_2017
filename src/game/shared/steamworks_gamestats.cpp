@@ -28,7 +28,7 @@ void __fastcall CSteamWorksGameStatsUploader::CSteamWorksGameStatsUploader(
         const char *pszSystemName,
         const char *pszSessionConVarName)
 {
-  this->_vptr_IGameSystem = off_3FE7450;
+  this->_vptr_IGameSystem = off_3FE7450;  // vptr: CSteamWorksGameStatsUploader
   this->m_bRegisteredForEvents = 0;
   this->_vptr_IGameEventListener2 = off_3FE75E0;
   this->m_CallbackSteamSessionInfoIssued._vptr_CCallbackBase = off_3FE73D0;
@@ -65,7 +65,7 @@ void __fastcall CSteamWorksGameStatsUploader::~CSteamWorksGameStatsUploader(CSte
   SteamAPICall_t m_hAPICall; // rsi
   SteamAPICall_t v5; // rsi
 
-  this->_vptr_IGameSystem = off_3FE7450;
+  this->_vptr_IGameSystem = off_3FE7450;  // vptr: CSteamWorksGameStatsUploader
   this->_vptr_IGameEventListener2 = off_3FE75E0;
   m_pSessionConVar = this->m_pSessionConVar;
   if ( m_pSessionConVar != 0 )
@@ -95,15 +95,15 @@ void __fastcall CSteamWorksGameStatsUploader::~CSteamWorksGameStatsUploader(CSte
     this->m_CallbackSteamSessionInfoIssued.m_hAPICall = 0;
   }
   v3 = !this->m_bRegisteredForEvents;
-  this->_vptr_IGameEventListener2 = off_3FB3190;
+  this->_vptr_IGameEventListener2 = off_3FB3190;  // vptr: CGameEventListener
   if ( !v3 )
   {
     if ( gameeventmanager != 0 )
       (*(gameeventmanager->_vptr_IBaseInterface + 6))(gameeventmanager, &this->CGameEventListener);
     this->m_bRegisteredForEvents = 0;
   }
-  this->_vptr_IGameEventListener2 = off_3FB3150;
-  this->_vptr_IGameSystem = off_3F7C1B0;
+  this->_vptr_IGameEventListener2 = off_3FB3150;  // vptr: IGameEventListener2
+  this->_vptr_IGameSystem = off_3F7C1B0;  // vptr: CAutoGameSystem
   IGameSystem::~IGameSystem(this);
 }
 
@@ -393,7 +393,7 @@ LABEL_5:
     V_snprintf(sessionIDString, 32, "%llu", v9);
     v10 = this->m_pSessionConVar;
     if ( v10 != 0 )
-      (*v10->m_pConVar->_vptr_IConVar)(v10->m_pConVar, sessionIDString);
+      v10->m_pConVar->SetValue(sessionIDString);
   }
 }
 

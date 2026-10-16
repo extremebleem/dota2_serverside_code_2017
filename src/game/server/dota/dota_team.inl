@@ -9,7 +9,7 @@ void __fastcall CDOTATeam::~CDOTATeam(CDOTATeam *const this)
 
   v2 = !this->m_bRegisteredForEvents;
   this->_vptr_IHandleEntity = &off_42AB8F0;
-  this->_vptr_IGameEventListener2 = off_3FB3190;
+  this->_vptr_IGameEventListener2 = off_3FB3190;  // vptr: CGameEventListener
   if ( !v2 )
   {
     if ( gameeventmanager != 0 )
@@ -17,7 +17,7 @@ void __fastcall CDOTATeam::~CDOTATeam(CDOTATeam *const this)
     this->m_bRegisteredForEvents = 0;
   }
   this->m_aPlayers.m_Vector.m_Size = 0;
-  this->_vptr_IGameEventListener2 = off_3FB3150;
+  this->_vptr_IGameEventListener2 = off_3FB3150;  // vptr: IGameEventListener2
   v2 = (this->m_aPlayers.m_Vector.m_Memory.m_nGrowSize & 0xC0000000) == 0;
   this->_vptr_IHandleEntity = &off_40B6DF0;
   if ( v2 )
@@ -50,7 +50,7 @@ void __fastcall CDOTATeam::~CDOTATeam(CDOTATeam *const this)
 
   v2 = !this->m_bRegisteredForEvents;
   this->_vptr_IHandleEntity = &off_42AB8F0;
-  this->_vptr_IGameEventListener2 = off_3FB3190;
+  this->_vptr_IGameEventListener2 = off_3FB3190;  // vptr: CGameEventListener
   if ( !v2 )
   {
     if ( gameeventmanager != 0 )
@@ -58,7 +58,7 @@ void __fastcall CDOTATeam::~CDOTATeam(CDOTATeam *const this)
     this->m_bRegisteredForEvents = 0;
   }
   this->m_aPlayers.m_Vector.m_Size = 0;
-  this->_vptr_IGameEventListener2 = off_3FB3150;
+  this->_vptr_IGameEventListener2 = off_3FB3150;  // vptr: IGameEventListener2
   v2 = (this->m_aPlayers.m_Vector.m_Memory.m_nGrowSize & 0xC0000000) == 0;
   this->_vptr_IHandleEntity = &off_40B6DF0;
   if ( v2 )
@@ -150,7 +150,7 @@ void *__fastcall CDOTATeam::CEntityInstanceEntityClass::AllocateInstance(
 void __fastcall CDOTATeam::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTATeam::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -160,7 +160,7 @@ void __fastcall CDOTATeam::CEntityInstanceEntityClass::~CEntityInstanceEntityCla
 void __fastcall CDOTATeam::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTATeam::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }

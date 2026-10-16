@@ -13,7 +13,7 @@ void __fastcall CNavObstructionManager::~CNavObstructionManager(CNavObstructionM
 
   this->m_doorBlockers.m_Size = 0;
   v2 = (this->m_doorBlockers.m_Memory.m_nGrowSize & 0xC0000000) == 0;
-  this->_vptr_INavObstructionManager = off_47B0D30;
+  this->_vptr_INavObstructionManager = off_47B0D30;  // vptr: CNavObstructionManager
   if ( v2 )
   {
     p_m_Memory = &this->m_doorBlockers.m_Memory;

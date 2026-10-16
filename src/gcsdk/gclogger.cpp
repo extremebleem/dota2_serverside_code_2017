@@ -39,27 +39,26 @@ void __fastcall GCSDK::EmitBaseMessageV(
 {
   int m_enabled; // esi
   bool v9; // r12
-  __int64 v10; // rdi
-  unsigned __int64 v11; // r12
-  ThreadId_t v12; // r13
-  uint64 v13; // rcx
-  unsigned __int64 v14; // r15
+  unsigned __int64 v10; // r12
+  ThreadId_t v11; // r13
+  uint64 v12; // rcx
+  unsigned __int64 v13; // r15
   uint64 m_numTimeBaseTicks; // rcx
   CVProfNode *m_pParent; // rax
   CVProfNode *m_pCurNode; // rax
-  CVProfile::CBudgetGroup *v18; // rax
+  CVProfile::CBudgetGroup *v17; // rax
   ThreadId_t m_TargetThreadId; // [rsp+8h] [rbp-848h]
   char pchBuf[2056]; // [rsp+10h] [rbp-840h] BYREF
-  unsigned __int64 v21; // [rsp+818h] [rbp-38h]
+  unsigned __int64 v20; // [rsp+818h] [rbp-38h]
 
-  v21 = __readfsqword(0x28u);
+  v20 = __readfsqword(0x28u);
   m_enabled = g_VProfCurrentProfile.m_enabled;
   v9 = m_enabled != 0;
   if ( m_enabled != 0 )
   {
-    v14 = __rdtsc();
+    v13 = __rdtsc();
     m_TargetThreadId = g_VProfCurrentProfile.m_TargetThreadId;
-    if ( m_TargetThreadId == ThreadGetCurrentId(pchGroupName) )
+    if ( m_TargetThreadId == ThreadGetCurrentId() )
     {
       m_pCurNode = g_VProfCurrentProfile.m_pCurNode;
       if ( m_pCurNode->m_pszName != "GCHost" )
@@ -67,24 +66,24 @@ void __fastcall GCSDK::EmitBaseMessageV(
         m_pCurNode = CVProfNode::GetSubNode(g_VProfCurrentProfile.m_pCurNode, "GCHost", 0, "Steam", 4);
         g_VProfCurrentProfile.m_pCurNode = m_pCurNode;
       }
-      v18 = &g_VProfCurrentProfile.m_pBudgetGroups[m_pCurNode->m_BudgetGroupID];
-      v18->m_BudgetFlags |= 4u;
+      v17 = &g_VProfCurrentProfile.m_pBudgetGroups[m_pCurNode->m_BudgetGroupID];
+      v17->m_BudgetFlags |= 4u;
       CVProfNode::EnterScope(g_VProfCurrentProfile.m_pCurNode);
       g_VProfCurrentProfile.m_fAtRoot = 0;
     }
     m_numTimeBaseTicks = g_VProfCurrentProfile.m_ScopeProfiler.m_numTimeBaseTicks;
     ++g_VProfCurrentProfile.m_ScopeProfiler.m_numCalls;
-    g_VProfCurrentProfile.m_ScopeProfiler.m_numTimeBaseTicks = m_numTimeBaseTicks - v14 + __rdtsc();
+    g_VProfCurrentProfile.m_ScopeProfiler.m_numTimeBaseTicks = m_numTimeBaseTicks - v13 + __rdtsc();
   }
   V_vsnprintf(pchBuf, 2048, pchMsg, vaArgs);
   DevMsg("%s", pchBuf);
   if ( v9 )
   {
-    v11 = __rdtsc();
+    v10 = __rdtsc();
     if ( !g_VProfCurrentProfile.m_fAtRoot || g_VProfCurrentProfile.m_enabled != 0 )
     {
-      v12 = g_VProfCurrentProfile.m_TargetThreadId;
-      if ( v12 == ThreadGetCurrentId(v10) )
+      v11 = g_VProfCurrentProfile.m_TargetThreadId;
+      if ( v11 == ThreadGetCurrentId() )
       {
         if ( CVProfNode::ExitScope(g_VProfCurrentProfile.m_pCurNode) != 0 )
         {
@@ -101,9 +100,9 @@ void __fastcall GCSDK::EmitBaseMessageV(
         g_VProfCurrentProfile.m_fAtRoot = m_pParent == &g_VProfCurrentProfile.m_Root;
       }
     }
-    v13 = g_VProfCurrentProfile.m_ScopeProfiler.m_numTimeBaseTicks;
+    v12 = g_VProfCurrentProfile.m_ScopeProfiler.m_numTimeBaseTicks;
     ++g_VProfCurrentProfile.m_ScopeProfiler.m_numCalls;
-    g_VProfCurrentProfile.m_ScopeProfiler.m_numTimeBaseTicks = v13 - v11 + __rdtsc();
+    g_VProfCurrentProfile.m_ScopeProfiler.m_numTimeBaseTicks = v12 - v10 + __rdtsc();
   }
 }
 

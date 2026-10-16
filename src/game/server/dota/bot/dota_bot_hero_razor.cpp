@@ -59,7 +59,7 @@ void __fastcall CDOTA_Bot_AbilityUsage_Razor_PlasmaField::CDOTA_Bot_AbilityUsage
   this->m_pAbility = pAbility;
   this->m_bUseOnCreeps = 0;
   this->m_pBot = pBot;
-  this->_vptr_CDOTA_Bot_AbilityUsage = off_42CF730;
+  this->_vptr_CDOTA_Bot_AbilityUsage = off_42CF730;  // vptr: CDOTA_Bot_AbilityUsage_Razor_PlasmaField
 }
 
 
@@ -325,7 +325,7 @@ void __fastcall CDOTA_Bot_AbilityUsage_Razor_StaticLink::CDOTA_Bot_AbilityUsage_
   this->m_pAbility = pAbility;
   this->m_bUseOnCreeps = 0;
   this->m_pBot = pBot;
-  this->_vptr_CDOTA_Bot_AbilityUsage = off_42CF790;
+  this->_vptr_CDOTA_Bot_AbilityUsage = off_42CF790;  // vptr: CDOTA_Bot_AbilityUsage_Razor_StaticLink
   this->m_hDesiredTarget.m_Index = -1;
 }
 
@@ -449,7 +449,7 @@ void __fastcall CDOTA_Bot_AbilityUsage_Razor_EyeOfTheStorm::CDOTA_Bot_AbilityUsa
   this->m_pAbility = pAbility;
   this->m_bUseOnCreeps = 0;
   this->m_pBot = pBot;
-  this->_vptr_CDOTA_Bot_AbilityUsage = off_42CF7F0;
+  this->_vptr_CDOTA_Bot_AbilityUsage = off_42CF7F0;  // vptr: CDOTA_Bot_AbilityUsage_Razor_EyeOfTheStorm
 }
 
 

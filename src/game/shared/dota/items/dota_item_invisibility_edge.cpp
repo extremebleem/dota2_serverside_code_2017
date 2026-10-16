@@ -257,7 +257,7 @@ CEntityInstance *__fastcall CDOTA_Item_Recipe_InvisibilityEdge::CEntityInstanceE
 void __fastcall CDOTA_Item_Recipe_InvisibilityEdge::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Item_Recipe_InvisibilityEdge::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -267,7 +267,7 @@ void __fastcall CDOTA_Item_Recipe_InvisibilityEdge::CEntityInstanceEntityClass::
 void __fastcall CDOTA_Item_Recipe_InvisibilityEdge::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Item_Recipe_InvisibilityEdge::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -422,7 +422,7 @@ CEntityInstance *__fastcall CDOTA_Item_InvisibilityEdge::CEntityInstanceEntityCl
 void __fastcall CDOTA_Item_InvisibilityEdge::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Item_InvisibilityEdge::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -432,7 +432,7 @@ void __fastcall CDOTA_Item_InvisibilityEdge::CEntityInstanceEntityClass::~CEntit
 void __fastcall CDOTA_Item_InvisibilityEdge::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Item_InvisibilityEdge::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }

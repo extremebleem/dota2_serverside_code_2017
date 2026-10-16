@@ -23,7 +23,7 @@ void __fastcall CDOTA_Bot_Hero_Oracle::~CDOTA_Bot_Hero_Oracle(CDOTA_Bot_Hero_Ora
 // CDOTA_BotMode_Attack_Oracle::~CDOTA_BotMode_Attack_Oracle  (line 33, @0x00000000028e0c70, libserver.so)  // inlines: ~CDOTA_BotMode, ~CDOTA_BotMode_Attack
 void __fastcall CDOTA_BotMode_Attack_Oracle::~CDOTA_BotMode_Attack_Oracle(CDOTA_BotMode_Attack_Oracle *const this)
 {
-  this->_vptr_CDOTA_BotMode = off_42B75F0;
+  this->_vptr_CDOTA_BotMode = off_42B75F0;  // vptr: CDOTA_BotMode
 }
 
 
@@ -31,7 +31,7 @@ void __fastcall CDOTA_BotMode_Attack_Oracle::~CDOTA_BotMode_Attack_Oracle(CDOTA_
 // calls: operator delete
 void __fastcall CDOTA_BotMode_Attack_Oracle::~CDOTA_BotMode_Attack_Oracle(CDOTA_BotMode_Attack_Oracle *const this)
 {
-  this->_vptr_CDOTA_BotMode = off_42B75F0;
+  this->_vptr_CDOTA_BotMode = off_42B75F0;  // vptr: CDOTA_BotMode
   operator delete(this);
 }
 

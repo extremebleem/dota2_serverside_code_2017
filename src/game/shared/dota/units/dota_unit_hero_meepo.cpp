@@ -595,7 +595,7 @@ CEntityInstance *__fastcall CDOTA_Unit_Hero_Meepo::CEntityInstanceEntityClass::C
 void __fastcall CDOTA_Unit_Hero_Meepo::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Unit_Hero_Meepo::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -605,7 +605,7 @@ void __fastcall CDOTA_Unit_Hero_Meepo::CEntityInstanceEntityClass::~CEntityInsta
 void __fastcall CDOTA_Unit_Hero_Meepo::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Unit_Hero_Meepo::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -797,7 +797,7 @@ CEntityInstance *__fastcall CDOTA_Ability_Meepo_Earthbind::CEntityInstanceEntity
 void __fastcall CDOTA_Ability_Meepo_Earthbind::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Meepo_Earthbind::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -807,7 +807,7 @@ void __fastcall CDOTA_Ability_Meepo_Earthbind::CEntityInstanceEntityClass::~CEnt
 void __fastcall CDOTA_Ability_Meepo_Earthbind::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Meepo_Earthbind::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -1355,7 +1355,7 @@ CEntityInstance *__fastcall CDOTA_Ability_Meepo_Geostrike::CEntityInstanceEntity
 void __fastcall CDOTA_Ability_Meepo_Geostrike::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Meepo_Geostrike::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -1365,7 +1365,7 @@ void __fastcall CDOTA_Ability_Meepo_Geostrike::CEntityInstanceEntityClass::~CEnt
 void __fastcall CDOTA_Ability_Meepo_Geostrike::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Meepo_Geostrike::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -1837,7 +1837,7 @@ CEntityInstance *__fastcall CDOTA_Ability_Meepo_DividedWeStand::CEntityInstanceE
 void __fastcall CDOTA_Ability_Meepo_DividedWeStand::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Meepo_DividedWeStand::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -1847,7 +1847,7 @@ void __fastcall CDOTA_Ability_Meepo_DividedWeStand::CEntityInstanceEntityClass::
 void __fastcall CDOTA_Ability_Meepo_DividedWeStand::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Meepo_DividedWeStand::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -4344,7 +4344,7 @@ CEntityInstance *__fastcall CDOTA_Ability_Meepo_Poof::CEntityInstanceEntityClass
 void __fastcall CDOTA_Ability_Meepo_Poof::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Meepo_Poof::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -4354,7 +4354,7 @@ void __fastcall CDOTA_Ability_Meepo_Poof::CEntityInstanceEntityClass::~CEntityIn
 void __fastcall CDOTA_Ability_Meepo_Poof::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Meepo_Poof::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }

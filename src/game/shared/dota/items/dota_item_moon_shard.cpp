@@ -246,7 +246,7 @@ CEntityInstance *__fastcall CDOTA_Item_Recipe_Moonshard::CEntityInstanceEntityCl
 void __fastcall CDOTA_Item_Recipe_Moonshard::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Item_Recipe_Moonshard::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -256,7 +256,7 @@ void __fastcall CDOTA_Item_Recipe_Moonshard::CEntityInstanceEntityClass::~CEntit
 void __fastcall CDOTA_Item_Recipe_Moonshard::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Item_Recipe_Moonshard::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -411,7 +411,7 @@ CEntityInstance *__fastcall CDOTA_Item_Moonshard::CEntityInstanceEntityClass::Co
 void __fastcall CDOTA_Item_Moonshard::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Item_Moonshard::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -421,7 +421,7 @@ void __fastcall CDOTA_Item_Moonshard::CEntityInstanceEntityClass::~CEntityInstan
 void __fastcall CDOTA_Item_Moonshard::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Item_Moonshard::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }

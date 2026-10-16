@@ -201,7 +201,7 @@ CEntityInstance *__fastcall CGunTarget::CEntityInstanceEntityClass::ConstructIns
 void __fastcall CGunTarget::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CGunTarget::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -211,7 +211,7 @@ void __fastcall CGunTarget::CEntityInstanceEntityClass::~CEntityInstanceEntityCl
 void __fastcall CGunTarget::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CGunTarget::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }

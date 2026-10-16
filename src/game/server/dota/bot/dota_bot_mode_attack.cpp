@@ -20,7 +20,7 @@ void __fastcall CDOTA_BotMode_Attack::CDOTA_BotMode_Attack(CDOTA_BotMode_Attack 
   this->m_fCurrentTargetScore = 0.0;
   this->m_vDesiredLocation.y = y;
   z = vec3_origin.z;
-  this->_vptr_CDOTA_BotMode = off_42B7870;
+  this->_vptr_CDOTA_BotMode = off_42B7870;  // vptr: CDOTA_BotMode_Attack
   this->m_vDesiredLocation.z = z;
 }
 
@@ -2378,7 +2378,7 @@ void __fastcall CDOTA_BotMode_Attack_Human::CDOTA_BotMode_Attack_Human(
   this->m_vDesiredLocation.x = vec3_origin.x;
   this->m_vDesiredLocation.y = vec3_origin.y;
   z = vec3_origin.z;
-  this->_vptr_CDOTA_BotMode = off_42B7910;
+  this->_vptr_CDOTA_BotMode = off_42B7910;  // vptr: CDOTA_BotMode_Attack_Human
   this->m_vDesiredLocation.z = z;
   CountdownTimer::CountdownTimer(&this->m_AbilityUseTimer);
   CountdownTimer::CountdownTimer(&this->m_AggroTimer);

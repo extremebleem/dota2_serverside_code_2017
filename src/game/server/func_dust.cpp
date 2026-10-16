@@ -382,7 +382,7 @@ void *__fastcall CFunc_Dust::CEntityInstanceEntityClass::AllocateInstance(
 void __fastcall CFunc_Dust::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CFunc_Dust::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -392,7 +392,7 @@ void __fastcall CFunc_Dust::CEntityInstanceEntityClass::~CEntityInstanceEntityCl
 void __fastcall CFunc_Dust::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CFunc_Dust::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -626,7 +626,7 @@ void *__fastcall CFunc_DustMotes::CEntityInstanceEntityClass::AllocateInstance(
 void __fastcall CFunc_DustMotes::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CFunc_DustMotes::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -636,7 +636,7 @@ void __fastcall CFunc_DustMotes::CEntityInstanceEntityClass::~CEntityInstanceEnt
 void __fastcall CFunc_DustMotes::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CFunc_DustMotes::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -834,7 +834,7 @@ void *__fastcall CFunc_DustCloud::CEntityInstanceEntityClass::AllocateInstance(
 void __fastcall CFunc_DustCloud::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CFunc_DustCloud::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -844,7 +844,7 @@ void __fastcall CFunc_DustCloud::CEntityInstanceEntityClass::~CEntityInstanceEnt
 void __fastcall CFunc_DustCloud::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CFunc_DustCloud::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -1518,7 +1518,7 @@ CEntityInstance *__fastcall CEnvDustPuff::CEntityInstanceEntityClass::ConstructI
 void __fastcall CEnvDustPuff::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CEnvDustPuff::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -1528,7 +1528,7 @@ void __fastcall CEnvDustPuff::CEntityInstanceEntityClass::~CEntityInstanceEntity
 void __fastcall CEnvDustPuff::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CEnvDustPuff::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }

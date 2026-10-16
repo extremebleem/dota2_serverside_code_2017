@@ -21,26 +21,23 @@ void __cdecl GLOBAL__sub_I_modelbuilder_cpp()
   UNSPECIFIED_LOGGING_COLOR._color[1] = 0;
   UNSPECIFIED_LOGGING_COLOR._color[2] = 0;
   UNSPECIFIED_LOGGING_COLOR._color[3] = 0;
-  if ( `guard variable for'g_AnimOpSourceColors == 0 )
-  {
-    `guard variable for'g_AnimOpSourceColors = 1;
-    g_AnimOpSourceColors[0]._color[0] = -1;
-    g_AnimOpSourceColors[0]._color[1] = -1;
-    g_AnimOpSourceColors[0]._color[2] = 0;
-    g_AnimOpSourceColors[0]._color[3] = -1;
-    g_AnimOpSourceColors[1]._color[0] = -36;
-    g_AnimOpSourceColors[1]._color[1] = -36;
-    g_AnimOpSourceColors[1]._color[2] = -36;
-    g_AnimOpSourceColors[1]._color[3] = -1;
-    g_AnimOpSourceColors[2]._color[0] = 0;
-    g_AnimOpSourceColors[2]._color[1] = -1;
-    g_AnimOpSourceColors[2]._color[2] = 50;
-    g_AnimOpSourceColors[2]._color[3] = -1;
-    g_AnimOpSourceColors[3]._color[0] = -1;
-    g_AnimOpSourceColors[3]._color[1] = 50;
-    g_AnimOpSourceColors[3]._color[2] = 50;
-    g_AnimOpSourceColors[3]._color[3] = -1;
-  }
+  // init once: g_AnimOpSourceColors
+  g_AnimOpSourceColors[0]._color[0] = -1;
+  g_AnimOpSourceColors[0]._color[1] = -1;
+  g_AnimOpSourceColors[0]._color[2] = 0;
+  g_AnimOpSourceColors[0]._color[3] = -1;
+  g_AnimOpSourceColors[1]._color[0] = -36;
+  g_AnimOpSourceColors[1]._color[1] = -36;
+  g_AnimOpSourceColors[1]._color[2] = -36;
+  g_AnimOpSourceColors[1]._color[3] = -1;
+  g_AnimOpSourceColors[2]._color[0] = 0;
+  g_AnimOpSourceColors[2]._color[1] = -1;
+  g_AnimOpSourceColors[2]._color[2] = 50;
+  g_AnimOpSourceColors[2]._color[3] = -1;
+  g_AnimOpSourceColors[3]._color[0] = -1;
+  g_AnimOpSourceColors[3]._color[1] = 50;
+  g_AnimOpSourceColors[3]._color[2] = 50;
+  g_AnimOpSourceColors[3]._color[3] = -1;
   LOG_MODELLIB = LoggingSystem_RegisterLoggingChannel("modellib", 0, 0, 2, *&UNSPECIFIED_LOGGING_COLOR);
 }
 

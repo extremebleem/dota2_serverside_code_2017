@@ -94,7 +94,7 @@ CEntityInstance *__fastcall CColorCorrection::CEntityInstanceEntityClass::Constr
 void __fastcall CColorCorrection::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CColorCorrection::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -104,7 +104,7 @@ void __fastcall CColorCorrection::CEntityInstanceEntityClass::~CEntityInstanceEn
 void __fastcall CColorCorrection::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CColorCorrection::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -213,18 +213,18 @@ void __fastcall CColorCorrectionSystem::~CColorCorrectionSystem(CColorCorrection
 {
   bool v2; // zf
 
-  this->_vptr_IGameSystem = off_4010DB0;
+  this->_vptr_IGameSystem = off_4010DB0;  // vptr: CColorCorrectionSystem
   v2 = !this->m_bRegisteredForEvents;
   this->m_hMasterController.m_Index = -1;
-  this->_vptr_IGameEventListener2 = off_3FB3190;
+  this->_vptr_IGameEventListener2 = off_3FB3190;  // vptr: CGameEventListener
   if ( !v2 )
   {
     if ( gameeventmanager != 0 )
       (*(gameeventmanager->_vptr_IBaseInterface + 6))(gameeventmanager, &this->CGameEventListener);
     this->m_bRegisteredForEvents = 0;
   }
-  this->_vptr_IGameEventListener2 = off_3FB3150;
-  this->_vptr_IGameSystem = off_3F7C1B0;
+  this->_vptr_IGameEventListener2 = off_3FB3150;  // vptr: IGameEventListener2
+  this->_vptr_IGameSystem = off_3F7C1B0;  // vptr: CAutoGameSystem
   IGameSystem::~IGameSystem(this);
 }
 
@@ -235,18 +235,18 @@ void __fastcall CColorCorrectionSystem::~CColorCorrectionSystem(CColorCorrection
 {
   bool v2; // zf
 
-  this->_vptr_IGameSystem = off_4010DB0;
+  this->_vptr_IGameSystem = off_4010DB0;  // vptr: CColorCorrectionSystem
   v2 = !this->m_bRegisteredForEvents;
   this->m_hMasterController.m_Index = -1;
-  this->_vptr_IGameEventListener2 = off_3FB3190;
+  this->_vptr_IGameEventListener2 = off_3FB3190;  // vptr: CGameEventListener
   if ( !v2 )
   {
     if ( gameeventmanager != 0 )
       (*(gameeventmanager->_vptr_IBaseInterface + 6))(gameeventmanager, &this->CGameEventListener);
     this->m_bRegisteredForEvents = 0;
   }
-  this->_vptr_IGameEventListener2 = off_3FB3150;
-  this->_vptr_IGameSystem = off_3F7C1B0;
+  this->_vptr_IGameEventListener2 = off_3FB3150;  // vptr: IGameEventListener2
+  this->_vptr_IGameSystem = off_3F7C1B0;  // vptr: CAutoGameSystem
   IGameSystem::~IGameSystem(this);
   operator delete(this);
 }

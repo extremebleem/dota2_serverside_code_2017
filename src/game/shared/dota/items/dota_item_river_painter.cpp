@@ -474,7 +474,7 @@ CEntityInstance *__fastcall CDOTA_Item_RiverPainter::CEntityInstanceEntityClass:
 void __fastcall CDOTA_Item_RiverPainter::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Item_RiverPainter::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -484,7 +484,7 @@ void __fastcall CDOTA_Item_RiverPainter::CEntityInstanceEntityClass::~CEntityIns
 void __fastcall CDOTA_Item_RiverPainter::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Item_RiverPainter::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -727,7 +727,7 @@ void __fastcall CDOTA_Item_RiverPainter2::~CDOTA_Item_RiverPainter2(CDOTA_Item_R
 void __fastcall CDOTA_Item_RiverPainter2::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Item_RiverPainter2::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -737,7 +737,7 @@ void __fastcall CDOTA_Item_RiverPainter2::CEntityInstanceEntityClass::~CEntityIn
 void __fastcall CDOTA_Item_RiverPainter2::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Item_RiverPainter2::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -893,7 +893,7 @@ void __fastcall CDOTA_Item_RiverPainter3::~CDOTA_Item_RiverPainter3(CDOTA_Item_R
 void __fastcall CDOTA_Item_RiverPainter3::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Item_RiverPainter3::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -903,7 +903,7 @@ void __fastcall CDOTA_Item_RiverPainter3::CEntityInstanceEntityClass::~CEntityIn
 void __fastcall CDOTA_Item_RiverPainter3::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Item_RiverPainter3::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -1059,7 +1059,7 @@ void __fastcall CDOTA_Item_RiverPainter4::~CDOTA_Item_RiverPainter4(CDOTA_Item_R
 void __fastcall CDOTA_Item_RiverPainter4::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Item_RiverPainter4::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -1069,7 +1069,7 @@ void __fastcall CDOTA_Item_RiverPainter4::CEntityInstanceEntityClass::~CEntityIn
 void __fastcall CDOTA_Item_RiverPainter4::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Item_RiverPainter4::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -1225,7 +1225,7 @@ void __fastcall CDOTA_Item_RiverPainter5::~CDOTA_Item_RiverPainter5(CDOTA_Item_R
 void __fastcall CDOTA_Item_RiverPainter5::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Item_RiverPainter5::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -1235,7 +1235,7 @@ void __fastcall CDOTA_Item_RiverPainter5::CEntityInstanceEntityClass::~CEntityIn
 void __fastcall CDOTA_Item_RiverPainter5::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Item_RiverPainter5::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -1391,7 +1391,7 @@ void __fastcall CDOTA_Item_RiverPainter6::~CDOTA_Item_RiverPainter6(CDOTA_Item_R
 void __fastcall CDOTA_Item_RiverPainter6::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Item_RiverPainter6::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -1401,7 +1401,7 @@ void __fastcall CDOTA_Item_RiverPainter6::CEntityInstanceEntityClass::~CEntityIn
 void __fastcall CDOTA_Item_RiverPainter6::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Item_RiverPainter6::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -1557,7 +1557,7 @@ void __fastcall CDOTA_Item_RiverPainter7::~CDOTA_Item_RiverPainter7(CDOTA_Item_R
 void __fastcall CDOTA_Item_RiverPainter7::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Item_RiverPainter7::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -1567,7 +1567,7 @@ void __fastcall CDOTA_Item_RiverPainter7::CEntityInstanceEntityClass::~CEntityIn
 void __fastcall CDOTA_Item_RiverPainter7::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Item_RiverPainter7::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }

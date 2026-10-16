@@ -22,14 +22,15 @@ void __cdecl GLOBAL__sub_I_jobmgr_cpp()
 void __fastcall GCSDK::CJobMgr::CJobMgr(GCSDK::CJobMgr *const this)
 {
   GCSDK::CWorkThreadPool *v2; // r12
-  int v3; // r14d
-  int v4; // eax
-  __int64 v5; // rsi
-  __int64 v6; // rax
+  __int64 v3; // rdi
+  int v4; // r14d
+  int v5; // eax
+  __int64 v6; // rsi
   __int64 v7; // rax
   __int64 v8; // rax
-  const void *v9; // r15
-  void *v10; // rax
+  __int64 v9; // rax
+  const void *v10; // r15
+  void *v11; // rax
 
   v2 = (this + 320);
   *this = 0;
@@ -140,38 +141,38 @@ void __fastcall GCSDK::CJobMgr::CJobMgr(GCSDK::CJobMgr *const this)
   GCSDK::CWorkThreadPool::SetWorkThreadAutoConstruct(v2, 1, 0);
   if ( (*(*g_pMemAlloc + 232LL))(g_pMemAlloc) != 0 )
   {
-    v3 = (*(*g_pMemAlloc + 232LL))(g_pMemAlloc);
-    if ( v3 > *(this + 260) )
+    v4 = (*(*g_pMemAlloc + 232LL))(g_pMemAlloc);
+    if ( v4 > *(this + 260) )
     {
-      v4 = *(this + 261);
-      if ( (v4 & 0x40000000) == 0 )
+      v5 = *(this + 261);
+      if ( (v5 & 0x40000000) == 0 )
       {
-        if ( (v4 & 0xC0000000) != 0 )
+        if ( (v5 & 0xC0000000) != 0 )
         {
-          v9 = *(this + 129);
-          v10 = (**g_pMemAlloc)(g_pMemAlloc, v3);
-          *(this + 129) = v10;
-          if ( v9 != 0 )
-            memcpy(v10, v9, *(this + 260));
+          v10 = *(this + 129);
+          v11 = (**g_pMemAlloc)(g_pMemAlloc, v4);
+          *(this + 129) = v11;
+          if ( v10 != 0 )
+            memcpy(v11, v10, *(this + 260));
           *(this + 261) &= 0x3FFFFFFFu;
         }
         else
         {
-          v5 = *(this + 129);
-          v6 = *g_pMemAlloc;
-          if ( v5 != 0 )
-            v7 = (*(v6 + 8))(g_pMemAlloc, v5, v3);
+          v6 = *(this + 129);
+          v7 = *g_pMemAlloc;
+          if ( v6 != 0 )
+            v8 = (*(v7 + 8))(g_pMemAlloc, v6, v4);
           else
-            v7 = (*v6)(g_pMemAlloc, v3);
-          *(this + 129) = v7;
+            v8 = (*v7)(g_pMemAlloc, v4);
+          *(this + 129) = v8;
         }
-        *(this + 260) = v3;
+        *(this + 260) = v4;
       }
     }
   }
   *(this + 262) = 0;
-  v8 = CommandLine();
-  if ( (*(*v8 + 32LL))(v8, "-slowmsgreceipt") != 0 )
+  v9 = CommandLine(v3);
+  if ( (*(*v9 + 32LL))(v9, "-slowmsgreceipt") != 0 )
     *(this + 262) = 1000;
 }
 
@@ -380,34 +381,32 @@ JobID_t __fastcall GCSDK::CJobMgr::GetNewJobID(GCSDK::CJobMgr *const this)
 bool __fastcall GCSDK::CJobMgr::BFrameFuncRunSleepingJobs(GCSDK::CJobMgr *const this, CLimitTimer *const limitTimer)
 {
   int CurrentId; // eax
-  __int64 v5; // rdi
   int m_enabled; // r9d
-  bool v7; // r15
-  __int64 v8; // rdi
-  bool v9; // r13
-  int v10; // r8d
-  bool v11; // r15
-  uint64 v13; // rcx
-  unsigned __int64 v14; // r13
+  bool v6; // r15
+  bool v7; // r13
+  int v8; // r8d
+  bool v9; // r15
+  uint64 v11; // rcx
+  unsigned __int64 v12; // r13
   uint64 m_numTimeBaseTicks; // rcx
   CVProfNode *SubNode; // rax
-  CVProfile::CBudgetGroup *v17; // rax
+  CVProfile::CBudgetGroup *v15; // rax
   CVProfNode *m_pCurNode; // rax
-  CVProfile::CBudgetGroup *v19; // rax
-  ThreadId_t v20; // [rsp+0h] [rbp-40h]
-  unsigned __int64 v21; // [rsp+8h] [rbp-38h]
+  CVProfile::CBudgetGroup *v17; // rax
+  ThreadId_t v18; // [rsp+0h] [rbp-40h]
+  unsigned __int64 v19; // [rsp+8h] [rbp-38h]
   ThreadId_t m_TargetThreadId; // [rsp+8h] [rbp-38h]
 
-  CurrentId = ThreadGetCurrentId(this);
+  CurrentId = ThreadGetCurrentId();
   if ( *(this + 210) == 0 )
     *(this + 210) = CurrentId;
   m_enabled = g_VProfCurrentProfile.m_enabled;
-  v7 = m_enabled != 0;
+  v6 = m_enabled != 0;
   if ( m_enabled != 0 )
   {
-    v14 = __rdtsc();
+    v12 = __rdtsc();
     m_TargetThreadId = g_VProfCurrentProfile.m_TargetThreadId;
-    if ( m_TargetThreadId == ThreadGetCurrentId(v5) )
+    if ( m_TargetThreadId == ThreadGetCurrentId() )
     {
       m_pCurNode = g_VProfCurrentProfile.m_pCurNode;
       if ( m_pCurNode->m_pszName != "CJobMgr::BResumeSleepingJobs" )
@@ -420,25 +419,25 @@ bool __fastcall GCSDK::CJobMgr::BFrameFuncRunSleepingJobs(GCSDK::CJobMgr *const 
                        4);
         g_VProfCurrentProfile.m_pCurNode = m_pCurNode;
       }
-      v19 = &g_VProfCurrentProfile.m_pBudgetGroups[m_pCurNode->m_BudgetGroupID];
-      v19->m_BudgetFlags |= 4u;
+      v17 = &g_VProfCurrentProfile.m_pBudgetGroups[m_pCurNode->m_BudgetGroupID];
+      v17->m_BudgetFlags |= 4u;
       CVProfNode::EnterScope(g_VProfCurrentProfile.m_pCurNode);
       g_VProfCurrentProfile.m_fAtRoot = 0;
     }
     m_numTimeBaseTicks = g_VProfCurrentProfile.m_ScopeProfiler.m_numTimeBaseTicks;
     ++g_VProfCurrentProfile.m_ScopeProfiler.m_numCalls;
-    g_VProfCurrentProfile.m_ScopeProfiler.m_numTimeBaseTicks = m_numTimeBaseTicks - v14 + __rdtsc();
+    g_VProfCurrentProfile.m_ScopeProfiler.m_numTimeBaseTicks = m_numTimeBaseTicks - v12 + __rdtsc();
   }
-  v9 = GCSDK::CJobMgr::BResumeSleepingJobs(this, limitTimer);
-  if ( v7 )
+  v7 = GCSDK::CJobMgr::BResumeSleepingJobs(this, limitTimer);
+  if ( v6 )
     CVProfile::ExitScope(&g_VProfCurrentProfile);
-  v10 = g_VProfCurrentProfile.m_enabled;
-  v11 = v10 != 0;
-  if ( v10 != 0 )
+  v8 = g_VProfCurrentProfile.m_enabled;
+  v9 = v8 != 0;
+  if ( v8 != 0 )
   {
-    v21 = __rdtsc();
-    v20 = g_VProfCurrentProfile.m_TargetThreadId;
-    if ( v20 == ThreadGetCurrentId(v8) )
+    v19 = __rdtsc();
+    v18 = g_VProfCurrentProfile.m_TargetThreadId;
+    if ( v18 == ThreadGetCurrentId() )
     {
       SubNode = g_VProfCurrentProfile.m_pCurNode;
       if ( SubNode->m_pszName != "CJobMgr::CheckForJobTimeouts" )
@@ -451,20 +450,20 @@ bool __fastcall GCSDK::CJobMgr::BFrameFuncRunSleepingJobs(GCSDK::CJobMgr *const 
                     4);
         g_VProfCurrentProfile.m_pCurNode = SubNode;
       }
-      v17 = &g_VProfCurrentProfile.m_pBudgetGroups[SubNode->m_BudgetGroupID];
-      v17->m_BudgetFlags |= 4u;
+      v15 = &g_VProfCurrentProfile.m_pBudgetGroups[SubNode->m_BudgetGroupID];
+      v15->m_BudgetFlags |= 4u;
       CVProfNode::EnterScope(g_VProfCurrentProfile.m_pCurNode);
       g_VProfCurrentProfile.m_fAtRoot = 0;
     }
-    v13 = g_VProfCurrentProfile.m_ScopeProfiler.m_numTimeBaseTicks;
+    v11 = g_VProfCurrentProfile.m_ScopeProfiler.m_numTimeBaseTicks;
     ++g_VProfCurrentProfile.m_ScopeProfiler.m_numCalls;
-    g_VProfCurrentProfile.m_ScopeProfiler.m_numTimeBaseTicks = v13 - v21 + __rdtsc();
+    g_VProfCurrentProfile.m_ScopeProfiler.m_numTimeBaseTicks = v11 - v19 + __rdtsc();
   }
   GCSDK::CJobMgr::CheckForJobTimeouts(this, limitTimer);
-  if ( v11 )
+  if ( v9 )
     CVProfile::ExitScope(&g_VProfCurrentProfile);
   *(this + 196) = *(this + 17);
-  return v9;
+  return v7;
 }
 
 
@@ -475,36 +474,34 @@ bool __fastcall GCSDK::CJobMgr::BFrameFuncRunSleepingJobs(GCSDK::CJobMgr *const 
 bool __fastcall GCSDK::CJobMgr::BFrameFuncRunYieldingJobs(GCSDK::CJobMgr *const this, CLimitTimer *const limitTimer)
 {
   int CurrentId; // eax
-  __int64 v5; // rdi
   int m_enabled; // r15d
-  bool v7; // r14
-  uint v8; // edx
-  __int64 v9; // rdi
-  bool v10; // r15
-  bool v11; // r14
+  bool v6; // r14
+  uint v7; // edx
+  bool v8; // r15
+  bool v9; // r14
   bool result; // al
-  uint64 v13; // rcx
-  unsigned __int64 v14; // r15
+  uint64 v11; // rcx
+  unsigned __int64 v12; // r15
   uint64 m_numTimeBaseTicks; // rcx
   CVProfNode *SubNode; // rax
-  CVProfile::CBudgetGroup *v17; // rax
+  CVProfile::CBudgetGroup *v15; // rax
   CVProfNode *m_pCurNode; // rax
-  CVProfile::CBudgetGroup *v19; // rax
+  CVProfile::CBudgetGroup *v17; // rax
   ThreadId_t m_TargetThreadId; // [rsp+0h] [rbp-40h]
   bool bWorkRemaininga; // [rsp+8h] [rbp-38h]
   unsigned __int64 bWorkRemaining; // [rsp+8h] [rbp-38h]
   ThreadId_t bWorkRemainingb; // [rsp+8h] [rbp-38h]
 
-  CurrentId = ThreadGetCurrentId(this);
+  CurrentId = ThreadGetCurrentId();
   if ( *(this + 210) == 0 )
     *(this + 210) = CurrentId;
   m_enabled = g_VProfCurrentProfile.m_enabled;
-  v7 = m_enabled != 0;
+  v6 = m_enabled != 0;
   if ( m_enabled != 0 )
   {
-    v14 = __rdtsc();
+    v12 = __rdtsc();
     bWorkRemainingb = g_VProfCurrentProfile.m_TargetThreadId;
-    if ( bWorkRemainingb == ThreadGetCurrentId(v5) )
+    if ( bWorkRemainingb == ThreadGetCurrentId() )
     {
       m_pCurNode = g_VProfCurrentProfile.m_pCurNode;
       if ( m_pCurNode->m_pszName != "CJobMgr::BResumeYieldingJobs" )
@@ -517,26 +514,26 @@ bool __fastcall GCSDK::CJobMgr::BFrameFuncRunYieldingJobs(GCSDK::CJobMgr *const 
                        4);
         g_VProfCurrentProfile.m_pCurNode = m_pCurNode;
       }
-      v19 = &g_VProfCurrentProfile.m_pBudgetGroups[m_pCurNode->m_BudgetGroupID];
-      v19->m_BudgetFlags |= 4u;
+      v17 = &g_VProfCurrentProfile.m_pBudgetGroups[m_pCurNode->m_BudgetGroupID];
+      v17->m_BudgetFlags |= 4u;
       CVProfNode::EnterScope(g_VProfCurrentProfile.m_pCurNode);
       g_VProfCurrentProfile.m_fAtRoot = 0;
     }
     m_numTimeBaseTicks = g_VProfCurrentProfile.m_ScopeProfiler.m_numTimeBaseTicks;
     ++g_VProfCurrentProfile.m_ScopeProfiler.m_numCalls;
-    g_VProfCurrentProfile.m_ScopeProfiler.m_numTimeBaseTicks = m_numTimeBaseTicks - v14 + __rdtsc();
+    g_VProfCurrentProfile.m_ScopeProfiler.m_numTimeBaseTicks = m_numTimeBaseTicks - v12 + __rdtsc();
   }
-  v8 = *(this + 34);
-  *(this + 34) = v8 + 1;
-  v10 = GCSDK::CJobMgr::BResumeYieldingJobsFromList(this, (this + 88), v8, limitTimer);
-  if ( v7 )
+  v7 = *(this + 34);
+  *(this + 34) = v7 + 1;
+  v8 = GCSDK::CJobMgr::BResumeYieldingJobsFromList(this, (this + 88), v7, limitTimer);
+  if ( v6 )
     CVProfile::ExitScope(&g_VProfCurrentProfile);
-  v11 = g_VProfCurrentProfile.m_enabled != 0;
+  v9 = g_VProfCurrentProfile.m_enabled != 0;
   if ( g_VProfCurrentProfile.m_enabled != 0 )
   {
     bWorkRemaining = __rdtsc();
     m_TargetThreadId = g_VProfCurrentProfile.m_TargetThreadId;
-    if ( m_TargetThreadId == ThreadGetCurrentId(v9) )
+    if ( m_TargetThreadId == ThreadGetCurrentId() )
     {
       SubNode = g_VProfCurrentProfile.m_pCurNode;
       if ( SubNode->m_pszName != "CJobMgr -- Dispatch completed work items" )
@@ -549,17 +546,17 @@ bool __fastcall GCSDK::CJobMgr::BFrameFuncRunYieldingJobs(GCSDK::CJobMgr *const 
                     4);
         g_VProfCurrentProfile.m_pCurNode = SubNode;
       }
-      v17 = &g_VProfCurrentProfile.m_pBudgetGroups[SubNode->m_BudgetGroupID];
-      v17->m_BudgetFlags |= 4u;
+      v15 = &g_VProfCurrentProfile.m_pBudgetGroups[SubNode->m_BudgetGroupID];
+      v15->m_BudgetFlags |= 4u;
       CVProfNode::EnterScope(g_VProfCurrentProfile.m_pCurNode);
       g_VProfCurrentProfile.m_fAtRoot = 0;
     }
-    v13 = g_VProfCurrentProfile.m_ScopeProfiler.m_numTimeBaseTicks;
+    v11 = g_VProfCurrentProfile.m_ScopeProfiler.m_numTimeBaseTicks;
     ++g_VProfCurrentProfile.m_ScopeProfiler.m_numCalls;
-    g_VProfCurrentProfile.m_ScopeProfiler.m_numTimeBaseTicks = v13 - bWorkRemaining + __rdtsc();
+    g_VProfCurrentProfile.m_ScopeProfiler.m_numTimeBaseTicks = v11 - bWorkRemaining + __rdtsc();
   }
-  result = v10 | GCSDK::CWorkThreadPool::BDispatchCompletedWorkItems((this + 320), limitTimer, this);
-  if ( v11 )
+  result = v8 | GCSDK::CWorkThreadPool::BDispatchCompletedWorkItems((this + 320), limitTimer, this);
+  if ( v9 )
   {
     bWorkRemaininga = result;
     CVProfile::ExitScope(&g_VProfCurrentProfile);
@@ -1662,22 +1659,21 @@ bool __fastcall GCSDK::CJobMgr::BRouteMsgToJob(
         GCSDK::IMsgNetPacket *pNetPacket,
         GCSDK::EGCMsgContext nCreateContext)
 {
-  __int64 v8; // rdi
-  int v9; // ecx
-  bool v10; // r14
-  int v11; // eax
+  int v8; // ecx
+  bool v9; // r14
+  int v10; // eax
   bool result; // al
   int m_enabled; // eax
-  GCSDK::MsgType_t v14; // eax
-  unsigned __int64 v15; // r15
-  uint64 v16; // rcx
+  GCSDK::MsgType_t v13; // eax
+  unsigned __int64 v14; // r15
+  uint64 v15; // rcx
   uint64 m_numTimeBaseTicks; // rcx
   CVProfNode *m_pCurNode; // rax
-  CVProfile::CBudgetGroup *v19; // rax
+  CVProfile::CBudgetGroup *v18; // rax
   CVProfNode *SubNode; // rax
-  CVProfile::CBudgetGroup *v21; // rax
+  CVProfile::CBudgetGroup *v20; // rax
   ThreadId_t m_TargetThreadId; // [rsp+8h] [rbp-58h]
-  unsigned __int64 v23; // [rsp+10h] [rbp-50h]
+  unsigned __int64 v22; // [rsp+10h] [rbp-50h]
   bool VProf_709a; // [rsp+18h] [rbp-48h]
   bool VProf_709; // [rsp+18h] [rbp-48h]
   bool VProf_709b; // [rsp+18h] [rbp-48h]
@@ -1693,9 +1689,9 @@ bool __fastcall GCSDK::CJobMgr::BRouteMsgToJob(
     VProf_709 = m_enabled != 0;
     if ( m_enabled != 0 )
     {
-      v23 = __rdtsc();
+      v22 = __rdtsc();
       m_TargetThreadId = g_VProfCurrentProfile.m_TargetThreadId;
-      if ( m_TargetThreadId == ThreadGetCurrentId(v8) )
+      if ( m_TargetThreadId == ThreadGetCurrentId() )
       {
         m_pCurNode = g_VProfCurrentProfile.m_pCurNode;
         if ( m_pCurNode->m_pszName != "CJobMgr::BRouteMsgToJob() - job" )
@@ -1708,14 +1704,14 @@ bool __fastcall GCSDK::CJobMgr::BRouteMsgToJob(
                          4);
           g_VProfCurrentProfile.m_pCurNode = m_pCurNode;
         }
-        v19 = &g_VProfCurrentProfile.m_pBudgetGroups[m_pCurNode->m_BudgetGroupID];
-        v19->m_BudgetFlags |= 4u;
+        v18 = &g_VProfCurrentProfile.m_pBudgetGroups[m_pCurNode->m_BudgetGroupID];
+        v18->m_BudgetFlags |= 4u;
         CVProfNode::EnterScope(g_VProfCurrentProfile.m_pCurNode);
         g_VProfCurrentProfile.m_fAtRoot = 0;
       }
       m_numTimeBaseTicks = g_VProfCurrentProfile.m_ScopeProfiler.m_numTimeBaseTicks;
       ++g_VProfCurrentProfile.m_ScopeProfiler.m_numCalls;
-      g_VProfCurrentProfile.m_ScopeProfiler.m_numTimeBaseTicks = m_numTimeBaseTicks - v23 + __rdtsc();
+      g_VProfCurrentProfile.m_ScopeProfiler.m_numTimeBaseTicks = m_numTimeBaseTicks - v22 + __rdtsc();
     }
     if ( !GCSDK::CJobMgr::BLaunchJobFromNetworkMsg(this, pParent, pNetPacket, nCreateContext) )
     {
@@ -1731,19 +1727,19 @@ LABEL_14:
         }
         return result;
       }
-      v14 = (*(pNetPacket->_vptr_CRefCount + 7))(pNetPacket);
-      GCSDK::CJobMgr::RecordOrphanedMessage(this, v14, jobIDTarget[0]);
+      v13 = (*(pNetPacket->_vptr_CRefCount + 7))(pNetPacket);
+      GCSDK::CJobMgr::RecordOrphanedMessage(this, v13, jobIDTarget[0]);
     }
     result = 1;
     goto LABEL_14;
   }
-  v9 = g_VProfCurrentProfile.m_enabled;
-  v10 = v9 != 0;
-  if ( v9 != 0 )
+  v8 = g_VProfCurrentProfile.m_enabled;
+  v9 = v8 != 0;
+  if ( v8 != 0 )
   {
-    v15 = __rdtsc();
+    v14 = __rdtsc();
     VProf_709c = g_VProfCurrentProfile.m_TargetThreadId;
-    if ( VProf_709c == ThreadGetCurrentId(v8) )
+    if ( VProf_709c == ThreadGetCurrentId() )
     {
       SubNode = g_VProfCurrentProfile.m_pCurNode;
       if ( SubNode->m_pszName != "CJobMgr::BRouteMsgToJob() - continue job" )
@@ -1756,23 +1752,23 @@ LABEL_14:
                     4);
         g_VProfCurrentProfile.m_pCurNode = SubNode;
       }
-      v21 = &g_VProfCurrentProfile.m_pBudgetGroups[SubNode->m_BudgetGroupID];
-      v21->m_BudgetFlags |= 4u;
+      v20 = &g_VProfCurrentProfile.m_pBudgetGroups[SubNode->m_BudgetGroupID];
+      v20->m_BudgetFlags |= 4u;
       CVProfNode::EnterScope(g_VProfCurrentProfile.m_pCurNode);
       g_VProfCurrentProfile.m_fAtRoot = 0;
     }
-    v16 = g_VProfCurrentProfile.m_ScopeProfiler.m_numTimeBaseTicks;
+    v15 = g_VProfCurrentProfile.m_ScopeProfiler.m_numTimeBaseTicks;
     ++g_VProfCurrentProfile.m_ScopeProfiler.m_numCalls;
-    g_VProfCurrentProfile.m_ScopeProfiler.m_numTimeBaseTicks = v16 - v15 + __rdtsc();
+    g_VProfCurrentProfile.m_ScopeProfiler.m_numTimeBaseTicks = v15 - v14 + __rdtsc();
   }
-  v11 = CUtlHashMapLarge<unsigned long long,GCSDK::CJob *,CUtlHashMapLargeDefEquals<unsigned long long>,MurmurHash3Functor<unsigned long long>>::Find(
+  v10 = CUtlHashMapLarge<unsigned long long,GCSDK::CJob *,CUtlHashMapLargeDefEquals<unsigned long long>,MurmurHash3Functor<unsigned long long>>::Find(
           this,
           jobIDTarget);
-  if ( v11 != -1 )
+  if ( v10 != -1 )
   {
-    GCSDK::CJobMgr::PassMsgToJob(this, *(*(this + 6) + 24LL * v11 + 8), pNetPacket);
+    GCSDK::CJobMgr::PassMsgToJob(this, *(*(this + 6) + 24LL * v10 + 8), pNetPacket);
     result = 1;
-    if ( !v10 )
+    if ( !v9 )
       return result;
 LABEL_8:
     VProf_709a = result;
@@ -1780,7 +1776,7 @@ LABEL_8:
     return VProf_709a;
   }
   result = 0;
-  if ( v10 )
+  if ( v9 )
     goto LABEL_8;
   return result;
 }
@@ -2040,7 +2036,7 @@ bool __fastcall GCSDK::CJobMgr::BRouteWorkItemCompletedInternal(
   int iJob; // [rsp+Ch] [rbp-44h] BYREF
   GCSDK::CJobMgr::JobYielding_t src; // [rsp+10h] [rbp-40h] BYREF
 
-  CurrentId = ThreadGetCurrentId(this);
+  CurrentId = ThreadGetCurrentId();
   if ( *(this + 210) == 0 )
     *(this + 210) = CurrentId;
   v11 = GCSDK::CJobMgr::BGetIJob(this, jobID, GCSDK::EJobPauseReason::k_EJobPauseReasonWorkItem, bShouldExist, &iJob);
@@ -5068,7 +5064,7 @@ void __fastcall GCSDK::CJobMgr::CheckThreadID(GCSDK::CJobMgr *const this)
 {
   int CurrentId; // eax
 
-  CurrentId = ThreadGetCurrentId(this);
+  CurrentId = ThreadGetCurrentId();
   if ( *(this + 210) == 0 )
     *(this + 210) = CurrentId;
 }

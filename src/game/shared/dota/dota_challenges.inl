@@ -14,7 +14,7 @@ void __fastcall CDOTAChallengeSystem::~CDOTAChallengeSystem(CDOTAChallengeSystem
   CUtlVectorBase<challenge_quest_t*,CUtlMemory<challenge_quest_t*,int> >::CAllocator *p_m_Memory; // r12
 
   v2 = (this->m_pQuests.m_Memory.m_nGrowSize & 0xC0000000) == 0;
-  this->_vptr_IGameSystem = off_40DE410;
+  this->_vptr_IGameSystem = off_40DE410;  // vptr: CDOTAChallengeSystem
   this->_vptr_IGameEventListener2 = off_40DE580;
   this->m_pQuests.m_Size = 0;
   this->_vptr_ICombatAnalyzerQueryUpdateNotify = &off_40DE5A8;
@@ -101,15 +101,15 @@ void __fastcall CDOTAChallengeSystem::~CDOTAChallengeSystem(CDOTAChallengeSystem
       CUtlMemory<challenge_template_t,int>::Purge(&this->m_pTemplates.m_Memory);
   }
   v2 = !this->m_bRegisteredForEvents;
-  this->_vptr_IGameEventListener2 = off_3FB3190;
+  this->_vptr_IGameEventListener2 = off_3FB3190;  // vptr: CGameEventListener
   if ( !v2 )
   {
     if ( gameeventmanager != 0 )
       (*(gameeventmanager->_vptr_IBaseInterface + 6))(gameeventmanager, &this->CGameEventListener);
     this->m_bRegisteredForEvents = 0;
   }
-  this->_vptr_IGameEventListener2 = off_3FB3150;
-  this->_vptr_IGameSystem = off_3F7C1B0;
+  this->_vptr_IGameEventListener2 = off_3FB3150;  // vptr: IGameEventListener2
+  this->_vptr_IGameSystem = off_3F7C1B0;  // vptr: CAutoGameSystem
   IGameSystem::~IGameSystem(this);
 }
 
@@ -118,7 +118,7 @@ void __fastcall CDOTAChallengeSystem::~CDOTAChallengeSystem(CDOTAChallengeSystem
 // callers: _GLOBAL__sub_I__unity_dota_02.cpp
 void __fastcall CDOTAChallengeSystem::CDOTAChallengeSystem(CDOTAChallengeSystem *const this)
 {
-  this->_vptr_IGameSystem = off_40DE410;
+  this->_vptr_IGameSystem = off_40DE410;  // vptr: CDOTAChallengeSystem
   this->_vptr_IGameEventListener2 = off_40DE580;
   this->_vptr_ICombatAnalyzerQueryUpdateNotify = &off_40DE5A8;
   this->m_CDOTAClientMsg_ChallengeSelect_tHook._vptr_IClientMessageDelegateHook = off_40DE270;
@@ -201,7 +201,7 @@ void __fastcall CDOTAChallengeSystem::~CDOTAChallengeSystem(CDOTAChallengeSystem
   CUtlVectorBase<challenge_quest_t*,CUtlMemory<challenge_quest_t*,int> >::CAllocator *p_m_Memory; // r12
 
   v2 = (this->m_pQuests.m_Memory.m_nGrowSize & 0xC0000000) == 0;
-  this->_vptr_IGameSystem = off_40DE410;
+  this->_vptr_IGameSystem = off_40DE410;  // vptr: CDOTAChallengeSystem
   this->_vptr_IGameEventListener2 = off_40DE580;
   this->m_pQuests.m_Size = 0;
   this->_vptr_ICombatAnalyzerQueryUpdateNotify = &off_40DE5A8;
@@ -288,15 +288,15 @@ void __fastcall CDOTAChallengeSystem::~CDOTAChallengeSystem(CDOTAChallengeSystem
       CUtlMemory<challenge_template_t,int>::Purge(&this->m_pTemplates.m_Memory);
   }
   v2 = !this->m_bRegisteredForEvents;
-  this->_vptr_IGameEventListener2 = off_3FB3190;
+  this->_vptr_IGameEventListener2 = off_3FB3190;  // vptr: CGameEventListener
   if ( !v2 )
   {
     if ( gameeventmanager != 0 )
       (*(gameeventmanager->_vptr_IBaseInterface + 6))(gameeventmanager, &this->CGameEventListener);
     this->m_bRegisteredForEvents = 0;
   }
-  this->_vptr_IGameEventListener2 = off_3FB3150;
-  this->_vptr_IGameSystem = off_3F7C1B0;
+  this->_vptr_IGameEventListener2 = off_3FB3150;  // vptr: IGameEventListener2
+  this->_vptr_IGameSystem = off_3F7C1B0;  // vptr: CAutoGameSystem
   IGameSystem::~IGameSystem(this);
   operator delete(this);
 }

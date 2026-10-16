@@ -57,9 +57,9 @@ CDOTA_BotMode *__fastcall CDOTA_Bot_Hero_Lina::CreateMode(CDOTA_Bot_Hero_Lina *c
 
   if ( this->m_bHuman || iMode != 2 )
     return CDOTA_Bot::CreateMode(this, iMode);
-  v4 = operator new(0xE8u);
+  v4 = operator new(0xE8u);  // new CDOTA_BotMode_Attack_Lina (size matches)
   CDOTA_BotMode_Attack::CDOTA_BotMode_Attack(v4, this);
-  v4->_vptr_CDOTA_BotMode = off_42CD670;
+  v4->_vptr_CDOTA_BotMode = off_42CD670;  // vptr: CDOTA_BotMode_Attack_Lina
   return v4;
 }
 
@@ -338,7 +338,7 @@ void __fastcall CDOTA_Bot_AbilityUsage_Lina_LightStrikearray::CDOTA_Bot_AbilityU
   this->m_pAbility = pAbility;
   this->m_bUseOnCreeps = 0;
   this->m_pBot = pBot;
-  this->_vptr_CDOTA_Bot_AbilityUsage = off_42CD710;
+  this->_vptr_CDOTA_Bot_AbilityUsage = off_42CD710;  // vptr: CDOTA_Bot_AbilityUsage_Lina_LightStrikearray
 }
 
 
@@ -709,7 +709,7 @@ void __fastcall CDOTA_Bot_AbilityUsage_Lina_DragonSlave::CDOTA_Bot_AbilityUsage_
   this->m_pAbility = pAbility;
   this->m_bUseOnCreeps = 0;
   this->m_pBot = pBot;
-  this->_vptr_CDOTA_Bot_AbilityUsage = off_42CD770;
+  this->_vptr_CDOTA_Bot_AbilityUsage = off_42CD770;  // vptr: CDOTA_Bot_AbilityUsage_Lina_DragonSlave
 }
 
 
@@ -991,7 +991,7 @@ void __fastcall CDOTA_Bot_AbilityUsage_Lina_LagunaBlade::CDOTA_Bot_AbilityUsage_
   this->m_pAbility = pAbility;
   this->m_bUseOnCreeps = 0;
   this->m_pBot = pBot;
-  this->_vptr_CDOTA_Bot_AbilityUsage = off_42CD7D0;
+  this->_vptr_CDOTA_Bot_AbilityUsage = off_42CD7D0;  // vptr: CDOTA_Bot_AbilityUsage_Lina_LagunaBlade
   this->m_hDesiredTarget.m_Index = -1;
 }
 

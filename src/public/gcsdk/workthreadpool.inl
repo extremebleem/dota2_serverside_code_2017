@@ -4,7 +4,7 @@
 // GCSDK::CWorkItem::~CWorkItem  (line 117, @0x0000000003241cf0, libserver.so)  // inlines: ~CRefCount
 void __fastcall GCSDK::CWorkItem::~CWorkItem(GCSDK::CWorkItem *const this)
 {
-  this->_vptr_CRefCount = off_47D0430;
+  this->_vptr_CRefCount = off_47D0430;  // vptr: GCSDK::CRefCount
 }
 
 
@@ -12,7 +12,7 @@ void __fastcall GCSDK::CWorkItem::~CWorkItem(GCSDK::CWorkItem *const this)
 // calls: operator delete
 void __fastcall GCSDK::CWorkItem::~CWorkItem(GCSDK::CWorkItem *const this)
 {
-  this->_vptr_CRefCount = off_47D0430;
+  this->_vptr_CRefCount = off_47D0430;  // vptr: GCSDK::CRefCount
   operator delete(this);
 }
 

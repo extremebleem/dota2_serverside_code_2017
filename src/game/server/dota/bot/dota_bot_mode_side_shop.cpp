@@ -8,7 +8,7 @@ void __fastcall CDOTA_BotMode_SideShop::CDOTA_BotMode_SideShop(CDOTA_BotMode_Sid
 {
   CDOTA_BotMode::CDOTA_BotMode(this, pBot);
   this->m_hShop.m_Index = -1;
-  this->_vptr_CDOTA_BotMode = off_42B8E30;
+  this->_vptr_CDOTA_BotMode = off_42B8E30;  // vptr: CDOTA_BotMode_SideShop
   this->m_iShop = DOTA_SHOP_TYPE::DOTA_SHOP_NONE;
 }
 

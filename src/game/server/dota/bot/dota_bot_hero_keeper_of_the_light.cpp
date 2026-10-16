@@ -43,7 +43,7 @@ void __fastcall CDOTA_Bot_AbilityUsage_Keeper_ChakraMagic::CDOTA_Bot_AbilityUsag
   this->m_pAbility = pAbility;
   this->m_bUseOnCreeps = 0;
   this->m_pBot = pBot;
-  this->_vptr_CDOTA_Bot_AbilityUsage = off_42CCD10;
+  this->_vptr_CDOTA_Bot_AbilityUsage = off_42CCD10;  // vptr: CDOTA_Bot_AbilityUsage_Keeper_ChakraMagic
   this->m_hDesiredTarget.m_Index = -1;
   this->m_flDelay = 0.0;
 }

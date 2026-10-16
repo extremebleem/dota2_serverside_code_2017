@@ -281,7 +281,7 @@ void __fastcall CScenePrecacheSystem::~CScenePrecacheSystem(CScenePrecacheSystem
   CUtlRBTree<CUtlMap<int,int,unsigned short,bool (*)(int const&,int const&)>::Node_t,unsigned short,CUtlMap<int,int,unsigned short,bool (*)(int const&,int const&)>::CKeyLess,CUtlMemory<UtlRBTreeNode_t<CUtlMap<int,int,unsigned short,bool (*)(int const&,int const&)>::Node_t,unsigned short>,unsigned short>>::Purge(&p_m_RepeatCounts->m_Tree);
   if ( (this->m_RepeatCounts.m_Tree.m_Elements.m_nGrowSize & 0xC0000000) == 0 )
     CUtlMemory<UtlRBTreeNode_t<CUtlMap<int,int,unsigned short,bool (*)(int const&,int const&)>::Node_t,unsigned short>,unsigned short>::Purge(&this->m_RepeatCounts.m_Tree.m_Elements);
-  this->_vptr_IGameSystem = off_3F7C1B0;
+  this->_vptr_IGameSystem = off_3F7C1B0;  // vptr: CAutoGameSystem
   IGameSystem::~IGameSystem(this);
 }
 
@@ -297,7 +297,7 @@ void __fastcall CScenePrecacheSystem::~CScenePrecacheSystem(CScenePrecacheSystem
   CUtlRBTree<CUtlMap<int,int,unsigned short,bool (*)(int const&,int const&)>::Node_t,unsigned short,CUtlMap<int,int,unsigned short,bool (*)(int const&,int const&)>::CKeyLess,CUtlMemory<UtlRBTreeNode_t<CUtlMap<int,int,unsigned short,bool (*)(int const&,int const&)>::Node_t,unsigned short>,unsigned short>>::Purge(&p_m_RepeatCounts->m_Tree);
   if ( (this->m_RepeatCounts.m_Tree.m_Elements.m_nGrowSize & 0xC0000000) == 0 )
     CUtlMemory<UtlRBTreeNode_t<CUtlMap<int,int,unsigned short,bool (*)(int const&,int const&)>::Node_t,unsigned short>,unsigned short>::Purge(&this->m_RepeatCounts.m_Tree.m_Elements);
-  this->_vptr_IGameSystem = off_3F7C1B0;
+  this->_vptr_IGameSystem = off_3F7C1B0;  // vptr: CAutoGameSystem
   IGameSystem::~IGameSystem(this);
   operator delete(this);
 }
@@ -590,7 +590,7 @@ void __fastcall CInstancedResponseSystem::~CInstancedResponseSystem(CInstancedRe
 {
   CGameResponseSystem *m_pWrapped; // rbx
 
-  this->_vptr_IResponseSystem = off_3FED010;
+  this->_vptr_IResponseSystem = off_3FED010;  // vptr: CInstancedResponseSystem
   m_pWrapped = this->m_pWrapped;
   if ( m_pWrapped != 0 )
   {
@@ -601,7 +601,7 @@ void __fastcall CInstancedResponseSystem::~CInstancedResponseSystem(CInstancedRe
     }
     this->m_pWrapped = 0;
   }
-  this->_vptr_IResponseSystem = off_3FECD30;
+  this->_vptr_IResponseSystem = off_3FECD30;  // vptr: IResponseSystem
 }
 
 
@@ -611,7 +611,7 @@ void __fastcall CInstancedResponseSystem::~CInstancedResponseSystem(CInstancedRe
 {
   CGameResponseSystem *m_pWrapped; // r12
 
-  this->_vptr_IResponseSystem = off_3FED010;
+  this->_vptr_IResponseSystem = off_3FED010;  // vptr: CInstancedResponseSystem
   m_pWrapped = this->m_pWrapped;
   if ( m_pWrapped != 0 )
   {
@@ -622,7 +622,7 @@ void __fastcall CInstancedResponseSystem::~CInstancedResponseSystem(CInstancedRe
     }
     this->m_pWrapped = 0;
   }
-  this->_vptr_IResponseSystem = off_3FECD30;
+  this->_vptr_IResponseSystem = off_3FECD30;  // vptr: IResponseSystem
   operator delete(this);
 }
 
@@ -707,7 +707,7 @@ void __fastcall CDefaultResponseSystem::~CDefaultResponseSystem(CDefaultResponse
   int m_Left; // esi
 
   m_pPreviousWrapped = this->m_pPreviousWrapped;
-  this->_vptr_IGameSystem = off_3FED150;
+  this->_vptr_IGameSystem = off_3FED150;  // vptr: CDefaultResponseSystem
   this->_vptr_IResponseSystem = off_3FED2B8;
   if ( m_pPreviousWrapped != 0 )
   {
@@ -761,8 +761,8 @@ void __fastcall CDefaultResponseSystem::~CDefaultResponseSystem(CDefaultResponse
   CUtlRBTree<CUtlMap<char const*,CInstancedResponseSystem *,int,bool (*)(char const* const&,char const* const&)>::Node_t,int,CUtlMap<char const*,CInstancedResponseSystem *,int,bool (*)(char const* const&,char const* const&)>::CKeyLess,CUtlMemory<UtlRBTreeNode_t<CUtlMap<char const*,CInstancedResponseSystem *,int,bool (*)(char const* const&,char const* const&)>::Node_t,int>,int>>::Purge(&this->m_InstancedSystems.m_Elements.m_Tree);
   if ( (this->m_InstancedSystems.m_Elements.m_Tree.m_Elements.m_nGrowSize & 0xC0000000) == 0 )
     CUtlMemory<UtlRBTreeNode_t<CUtlMap<char const*,CInstancedResponseSystem *,int,bool (*)(char const* const&,char const* const&)>::Node_t,int>,int>::Purge(&this->m_InstancedSystems.m_Elements.m_Tree.m_Elements);
-  this->_vptr_IResponseSystem = off_3FECD30;
-  this->_vptr_IGameSystem = off_3F7C1B0;
+  this->_vptr_IResponseSystem = off_3FECD30;  // vptr: IResponseSystem
+  this->_vptr_IGameSystem = off_3F7C1B0;  // vptr: CAutoGameSystem
   IGameSystem::~IGameSystem(this);
 }
 
@@ -780,7 +780,7 @@ void __fastcall CDefaultResponseSystem::~CDefaultResponseSystem(CDefaultResponse
   int m_Left; // esi
 
   m_pPreviousWrapped = this->m_pPreviousWrapped;
-  this->_vptr_IGameSystem = off_3FED150;
+  this->_vptr_IGameSystem = off_3FED150;  // vptr: CDefaultResponseSystem
   this->_vptr_IResponseSystem = off_3FED2B8;
   if ( m_pPreviousWrapped != 0 )
   {
@@ -834,8 +834,8 @@ void __fastcall CDefaultResponseSystem::~CDefaultResponseSystem(CDefaultResponse
   CUtlRBTree<CUtlMap<char const*,CInstancedResponseSystem *,int,bool (*)(char const* const&,char const* const&)>::Node_t,int,CUtlMap<char const*,CInstancedResponseSystem *,int,bool (*)(char const* const&,char const* const&)>::CKeyLess,CUtlMemory<UtlRBTreeNode_t<CUtlMap<char const*,CInstancedResponseSystem *,int,bool (*)(char const* const&,char const* const&)>::Node_t,int>,int>>::Purge(&this->m_InstancedSystems.m_Elements.m_Tree);
   if ( (this->m_InstancedSystems.m_Elements.m_Tree.m_Elements.m_nGrowSize & 0xC0000000) == 0 )
     CUtlMemory<UtlRBTreeNode_t<CUtlMap<char const*,CInstancedResponseSystem *,int,bool (*)(char const* const&,char const* const&)>::Node_t,int>,int>::Purge(&this->m_InstancedSystems.m_Elements.m_Tree.m_Elements);
-  this->_vptr_IResponseSystem = off_3FECD30;
-  this->_vptr_IGameSystem = off_3F7C1B0;
+  this->_vptr_IResponseSystem = off_3FECD30;  // vptr: IResponseSystem
+  this->_vptr_IGameSystem = off_3F7C1B0;  // vptr: CAutoGameSystem
   IGameSystem::~IGameSystem(this);
   operator delete(this);
 }
@@ -1965,8 +1965,8 @@ IResponseSystem *__fastcall PrecacheCustomResponseSystem(IEntityResourceManifest
                 &search)) == -1)
     || (v6 = v3[6]._vptr_IResponseSystem[4 * v5 + 3]) == 0 )
   {
-    v6 = operator new(0x18u);
-    v6->_vptr_IResponseSystem = off_3FED010;
+    v6 = operator new(0x18u);  // new CInstancedResponseSystem (size matches)
+    v6->_vptr_IResponseSystem = off_3FED010;  // vptr: CInstancedResponseSystem
     v6[2]._vptr_IResponseSystem = &g_ExpresserRRScriptBridge;
     v6[1]._vptr_IResponseSystem = (*(*responserulesfilecache + 88LL))(responserulesfilecache, scriptfile, 0);
     search.key = v6;
@@ -2026,8 +2026,8 @@ IResponseSystem *__fastcall FindOrCreateCustomResponseSystem(const char *scriptf
                 &search)) == -1)
     || (v4 = v1[6]._vptr_IResponseSystem[4 * v3 + 3]) == 0 )
   {
-    v4 = operator new(0x18u);
-    v4->_vptr_IResponseSystem = off_3FED010;
+    v4 = operator new(0x18u);  // new CInstancedResponseSystem (size matches)
+    v4->_vptr_IResponseSystem = off_3FED010;  // vptr: CInstancedResponseSystem
     v4[2]._vptr_IResponseSystem = &g_ExpresserRRScriptBridge;
     v4[1]._vptr_IResponseSystem = (*(*responserulesfilecache + 88LL))(responserulesfilecache, scriptfile, 0);
     search.key = v4;

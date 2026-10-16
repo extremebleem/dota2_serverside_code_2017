@@ -11,7 +11,7 @@ void __fastcall CRecipeComponentMatchingIterator::~CRecipeComponentMatchingItera
   CUtlVectorBase<const CEconItemAttributeDefinition*,CUtlMemory<const CEconItemAttributeDefinition*,int> >::CAllocator *p_m_Memory; // r12
 
   v2 = (this->m_vecMatchingOutputs.m_Memory.m_nGrowSize & 0xC0000000) == 0;
-  this->_vptr_IEconItemAttributeIterator = off_47A2770;
+  this->_vptr_IEconItemAttributeIterator = off_47A2770;  // vptr: CRecipeComponentMatchingIterator
   this->m_vecMatchingOutputs.m_Size = 0;
   if ( !v2
     || (p_m_Memory = &this->m_vecMatchingOutputs.m_Memory,
@@ -23,7 +23,7 @@ void __fastcall CRecipeComponentMatchingIterator::~CRecipeComponentMatchingItera
     if ( v2 )
       goto LABEL_6;
 LABEL_3:
-    this->_vptr_IEconItemAttributeIterator = off_40DB570;
+    this->_vptr_IEconItemAttributeIterator = off_40DB570;  // vptr: IEconItemAttributeIterator
     return;
   }
   CUtlMemory<CEconItemAttributeDefinition const*,int>::Purge(p_m_Memory);
@@ -36,7 +36,7 @@ LABEL_6:
   if ( (this->m_vecMatchingInputs.m_Memory.m_nGrowSize & 0xC0000000) != 0 )
     goto LABEL_3;
   CUtlMemory<CEconItemAttributeDefinition const*,int>::Purge(&this->m_vecMatchingInputs.m_Memory);
-  this->_vptr_IEconItemAttributeIterator = off_40DB570;
+  this->_vptr_IEconItemAttributeIterator = off_40DB570;  // vptr: IEconItemAttributeIterator
 }
 
 
@@ -49,7 +49,7 @@ void __fastcall CRecipeComponentMatchingIterator::~CRecipeComponentMatchingItera
   CUtlVectorBase<const CEconItemAttributeDefinition*,CUtlMemory<const CEconItemAttributeDefinition*,int> >::CAllocator *p_m_Memory; // r12
 
   v2 = (this->m_vecMatchingOutputs.m_Memory.m_nGrowSize & 0xC0000000) == 0;
-  this->_vptr_IEconItemAttributeIterator = off_47A2770;
+  this->_vptr_IEconItemAttributeIterator = off_47A2770;  // vptr: CRecipeComponentMatchingIterator
   this->m_vecMatchingOutputs.m_Size = 0;
   if ( !v2
     || (p_m_Memory = &this->m_vecMatchingOutputs.m_Memory,
@@ -73,7 +73,7 @@ void __fastcall CRecipeComponentMatchingIterator::~CRecipeComponentMatchingItera
   if ( (this->m_vecMatchingInputs.m_Memory.m_nGrowSize & 0xC0000000) == 0 )
     CUtlMemory<CEconItemAttributeDefinition const*,int>::Purge(&this->m_vecMatchingInputs.m_Memory);
 LABEL_3:
-  this->_vptr_IEconItemAttributeIterator = off_40DB570;
+  this->_vptr_IEconItemAttributeIterator = off_40DB570;  // vptr: IEconItemAttributeIterator
   operator delete(this);
 }
 

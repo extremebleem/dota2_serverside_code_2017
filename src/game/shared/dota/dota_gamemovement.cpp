@@ -14,7 +14,7 @@ void *__cdecl __CreateCGameMovementIGameMovement_interface()
 void __fastcall CDOTAGameMovement::CDOTAGameMovement(CDOTAGameMovement *const this)
 {
   CGameMovement::CGameMovement(this);
-  this->_vptr_IGameMovement = off_40F96D0;
+  this->_vptr_IGameMovement = off_40F96D0;  // vptr: CDOTAGameMovement
 }
 
 

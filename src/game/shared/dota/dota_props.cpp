@@ -188,7 +188,7 @@ CEntityInstance *__fastcall CDOTAPropCustomTexture::CEntityInstanceEntityClass::
 void __fastcall CDOTAPropCustomTexture::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTAPropCustomTexture::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -198,7 +198,7 @@ void __fastcall CDOTAPropCustomTexture::CEntityInstanceEntityClass::~CEntityInst
 void __fastcall CDOTAPropCustomTexture::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTAPropCustomTexture::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }

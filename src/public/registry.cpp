@@ -45,8 +45,8 @@ IRegistry *__fastcall InstanceRegistry(const char *subDirectoryUnderValve)
 {
   IRegistry *result; // rax
 
-  result = operator new(0x10u);
-  result->_vptr_IRegistry = off_47B70F0;
+  result = operator new(0x10u);  // new CRegistry (size matches)
+  result->_vptr_IRegistry = off_47B70F0;  // vptr: CRegistry
   LOBYTE(result[1]._vptr_IRegistry) = 0;
   return result;
 }
@@ -207,7 +207,7 @@ LABEL_4:
 // CRegistry::CRegistry  (line 337, @0x0000000002f48f40, libserver.so)
 void __fastcall CRegistry::CRegistry(CRegistry *const this)
 {
-  this->_vptr_IRegistry = off_47B70F0;
+  this->_vptr_IRegistry = off_47B70F0;  // vptr: CRegistry
   this->m_bValid = 0;
 }
 
@@ -215,7 +215,7 @@ void __fastcall CRegistry::CRegistry(CRegistry *const this)
 // CRegistry::~CRegistry  (line 346, @0x0000000002f46f90, libserver.so)  // inlines: ~IRegistry
 void __fastcall CRegistry::~CRegistry(CRegistry *const this)
 {
-  this->_vptr_IRegistry = off_47B7070;
+  this->_vptr_IRegistry = off_47B7070;  // vptr: IRegistry
 }
 
 
@@ -223,7 +223,7 @@ void __fastcall CRegistry::~CRegistry(CRegistry *const this)
 // calls: operator delete
 void __fastcall CRegistry::~CRegistry(CRegistry *const this)
 {
-  this->_vptr_IRegistry = off_47B7070;
+  this->_vptr_IRegistry = off_47B7070;  // vptr: IRegistry
   operator delete(this);
 }
 

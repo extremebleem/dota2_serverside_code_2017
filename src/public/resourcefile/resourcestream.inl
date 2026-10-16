@@ -427,7 +427,7 @@ void *__fastcall __noreturn CAtomicManipulator<CResourceArray<VPhysXCollisionAtt
     goto LABEL_5;
   while ( 1 )
   {
-    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v3, v4, v1, v2, v5, v6) != 0 )
+    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v3, v4, v1, v2) != 0 )
       loc_0 = -559038737;
     Plat_ExitProcess(1);
 LABEL_5:
@@ -464,7 +464,7 @@ void *__fastcall __noreturn CAtomicManipulator<CResourceArray<VPhysXCollisionAtt
     goto LABEL_5;
   while ( 1 )
   {
-    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v4, v5, v2, v3, v6, v7) != 0 )
+    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v4, v5, v2, v3) != 0 )
       loc_0 = -559038737;
     Plat_ExitProcess(1);
 LABEL_5:
@@ -502,7 +502,7 @@ void __fastcall __noreturn CAtomicManipulator<CResourceArray<VPhysXCollisionAttr
     goto LABEL_5;
   while ( 1 )
   {
-    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v5, v6, v3, v4, v7, v8) != 0 )
+    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v5, v6, v3, v4) != 0 )
       loc_0 = -559038737;
     Plat_ExitProcess(1);
 LABEL_5:
@@ -539,7 +539,7 @@ void __fastcall __noreturn CAtomicManipulator<CResourceArray<VPhysXCollisionAttr
     goto LABEL_5;
   while ( 1 )
   {
-    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v4, v5, v2, v3, v6, v7) != 0 )
+    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v4, v5, v2, v3) != 0 )
       loc_0 = -559038737;
     Plat_ExitProcess(1);
 LABEL_5:
@@ -575,7 +575,7 @@ void *__fastcall __noreturn CAtomicManipulator<CResourceArray<VPhysXJoint_t>>::A
     goto LABEL_5;
   while ( 1 )
   {
-    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v3, v4, v1, v2, v5, v6) != 0 )
+    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v3, v4, v1, v2) != 0 )
       loc_0 = -559038737;
     Plat_ExitProcess(1);
 LABEL_5:
@@ -612,7 +612,7 @@ void *__fastcall __noreturn CAtomicManipulator<CResourceArray<VPhysXJoint_t>>::A
     goto LABEL_5;
   while ( 1 )
   {
-    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v4, v5, v2, v3, v6, v7) != 0 )
+    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v4, v5, v2, v3) != 0 )
       loc_0 = -559038737;
     Plat_ExitProcess(1);
 LABEL_5:
@@ -650,7 +650,7 @@ void __fastcall __noreturn CAtomicManipulator<CResourceArray<VPhysXJoint_t>>::Co
     goto LABEL_5;
   while ( 1 )
   {
-    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v5, v6, v3, v4, v7, v8) != 0 )
+    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v5, v6, v3, v4) != 0 )
       loc_0 = -559038737;
     Plat_ExitProcess(1);
 LABEL_5:
@@ -687,7 +687,7 @@ void __fastcall __noreturn CAtomicManipulator<CResourceArray<VPhysXJoint_t>>::De
     goto LABEL_5;
   while ( 1 )
   {
-    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v4, v5, v2, v3, v6, v7) != 0 )
+    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v4, v5, v2, v3) != 0 )
       loc_0 = -559038737;
     Plat_ExitProcess(1);
 LABEL_5:
@@ -723,7 +723,7 @@ void *__fastcall __noreturn CAtomicManipulator<CResourceArray<VPhysXConstraint2_
     goto LABEL_5;
   while ( 1 )
   {
-    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v3, v4, v1, v2, v5, v6) != 0 )
+    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v3, v4, v1, v2) != 0 )
       loc_0 = -559038737;
     Plat_ExitProcess(1);
 LABEL_5:
@@ -760,7 +760,7 @@ void *__fastcall __noreturn CAtomicManipulator<CResourceArray<VPhysXConstraint2_
     goto LABEL_5;
   while ( 1 )
   {
-    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v4, v5, v2, v3, v6, v7) != 0 )
+    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v4, v5, v2, v3) != 0 )
       loc_0 = -559038737;
     Plat_ExitProcess(1);
 LABEL_5:
@@ -798,7 +798,7 @@ void __fastcall __noreturn CAtomicManipulator<CResourceArray<VPhysXConstraint2_t
     goto LABEL_5;
   while ( 1 )
   {
-    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v5, v6, v3, v4, v7, v8) != 0 )
+    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v5, v6, v3, v4) != 0 )
       loc_0 = -559038737;
     Plat_ExitProcess(1);
 LABEL_5:
@@ -835,7 +835,7 @@ void __fastcall __noreturn CAtomicManipulator<CResourceArray<VPhysXConstraint2_t
     goto LABEL_5;
   while ( 1 )
   {
-    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v4, v5, v2, v3, v6, v7) != 0 )
+    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v4, v5, v2, v3) != 0 )
       loc_0 = -559038737;
     Plat_ExitProcess(1);
 LABEL_5:
@@ -871,7 +871,7 @@ void *__fastcall __noreturn CAtomicManipulator<CResourceArray<VPhysXBodyPart_t>>
     goto LABEL_5;
   while ( 1 )
   {
-    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v3, v4, v1, v2, v5, v6) != 0 )
+    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v3, v4, v1, v2) != 0 )
       loc_0 = -559038737;
     Plat_ExitProcess(1);
 LABEL_5:
@@ -908,7 +908,7 @@ void *__fastcall __noreturn CAtomicManipulator<CResourceArray<VPhysXBodyPart_t>>
     goto LABEL_5;
   while ( 1 )
   {
-    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v4, v5, v2, v3, v6, v7) != 0 )
+    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v4, v5, v2, v3) != 0 )
       loc_0 = -559038737;
     Plat_ExitProcess(1);
 LABEL_5:
@@ -946,7 +946,7 @@ void __fastcall __noreturn CAtomicManipulator<CResourceArray<VPhysXBodyPart_t>>:
     goto LABEL_5;
   while ( 1 )
   {
-    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v5, v6, v3, v4, v7, v8) != 0 )
+    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v5, v6, v3, v4) != 0 )
       loc_0 = -559038737;
     Plat_ExitProcess(1);
 LABEL_5:
@@ -983,7 +983,7 @@ void __fastcall __noreturn CAtomicManipulator<CResourceArray<VPhysXBodyPart_t>>:
     goto LABEL_5;
   while ( 1 )
   {
-    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v4, v5, v2, v3, v6, v7) != 0 )
+    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v4, v5, v2, v3) != 0 )
       loc_0 = -559038737;
     Plat_ExitProcess(1);
 LABEL_5:
@@ -1019,7 +1019,7 @@ void *__fastcall __noreturn CAtomicManipulator<CResourceArray<matrix3x4a_t>>::Al
     goto LABEL_5;
   while ( 1 )
   {
-    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v3, v4, v1, v2, v5, v6) != 0 )
+    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v3, v4, v1, v2) != 0 )
       loc_0 = -559038737;
     Plat_ExitProcess(1);
 LABEL_5:
@@ -1056,7 +1056,7 @@ void *__fastcall __noreturn CAtomicManipulator<CResourceArray<matrix3x4a_t>>::Al
     goto LABEL_5;
   while ( 1 )
   {
-    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v4, v5, v2, v3, v6, v7) != 0 )
+    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v4, v5, v2, v3) != 0 )
       loc_0 = -559038737;
     Plat_ExitProcess(1);
 LABEL_5:
@@ -1094,7 +1094,7 @@ void __fastcall __noreturn CAtomicManipulator<CResourceArray<matrix3x4a_t>>::Cop
     goto LABEL_5;
   while ( 1 )
   {
-    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v5, v6, v3, v4, v7, v8) != 0 )
+    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v5, v6, v3, v4) != 0 )
       loc_0 = -559038737;
     Plat_ExitProcess(1);
 LABEL_5:
@@ -1131,7 +1131,7 @@ void __fastcall __noreturn CAtomicManipulator<CResourceArray<matrix3x4a_t>>::Dea
     goto LABEL_5;
   while ( 1 )
   {
-    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v4, v5, v2, v3, v6, v7) != 0 )
+    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v4, v5, v2, v3) != 0 )
       loc_0 = -559038737;
     Plat_ExitProcess(1);
 LABEL_5:
@@ -1167,7 +1167,7 @@ void *__fastcall __noreturn CAtomicManipulator<CResourceArray<CTransform>>::Allo
     goto LABEL_5;
   while ( 1 )
   {
-    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v3, v4, v1, v2, v5, v6) != 0 )
+    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v3, v4, v1, v2) != 0 )
       loc_0 = -559038737;
     Plat_ExitProcess(1);
 LABEL_5:
@@ -1204,7 +1204,7 @@ void *__fastcall __noreturn CAtomicManipulator<CResourceArray<CTransform>>::Allo
     goto LABEL_5;
   while ( 1 )
   {
-    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v4, v5, v2, v3, v6, v7) != 0 )
+    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v4, v5, v2, v3) != 0 )
       loc_0 = -559038737;
     Plat_ExitProcess(1);
 LABEL_5:
@@ -1242,7 +1242,7 @@ void __fastcall __noreturn CAtomicManipulator<CResourceArray<CTransform>>::Copy(
     goto LABEL_5;
   while ( 1 )
   {
-    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v5, v6, v3, v4, v7, v8) != 0 )
+    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v5, v6, v3, v4) != 0 )
       loc_0 = -559038737;
     Plat_ExitProcess(1);
 LABEL_5:
@@ -1279,7 +1279,7 @@ void __fastcall __noreturn CAtomicManipulator<CResourceArray<CTransform>>::Deall
     goto LABEL_5;
   while ( 1 )
   {
-    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v4, v5, v2, v3, v6, v7) != 0 )
+    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v4, v5, v2, v3) != 0 )
       loc_0 = -559038737;
     Plat_ExitProcess(1);
 LABEL_5:
@@ -1315,7 +1315,7 @@ void *__fastcall __noreturn CAtomicManipulator<CResourceArray<RnSoftbodyCapsule_
     goto LABEL_5;
   while ( 1 )
   {
-    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v3, v4, v1, v2, v5, v6) != 0 )
+    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v3, v4, v1, v2) != 0 )
       loc_0 = -559038737;
     Plat_ExitProcess(1);
 LABEL_5:
@@ -1352,7 +1352,7 @@ void *__fastcall __noreturn CAtomicManipulator<CResourceArray<RnSoftbodyCapsule_
     goto LABEL_5;
   while ( 1 )
   {
-    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v4, v5, v2, v3, v6, v7) != 0 )
+    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v4, v5, v2, v3) != 0 )
       loc_0 = -559038737;
     Plat_ExitProcess(1);
 LABEL_5:
@@ -1390,7 +1390,7 @@ void __fastcall __noreturn CAtomicManipulator<CResourceArray<RnSoftbodyCapsule_t
     goto LABEL_5;
   while ( 1 )
   {
-    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v5, v6, v3, v4, v7, v8) != 0 )
+    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v5, v6, v3, v4) != 0 )
       loc_0 = -559038737;
     Plat_ExitProcess(1);
 LABEL_5:
@@ -1427,7 +1427,7 @@ void __fastcall __noreturn CAtomicManipulator<CResourceArray<RnSoftbodyCapsule_t
     goto LABEL_5;
   while ( 1 )
   {
-    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v4, v5, v2, v3, v6, v7) != 0 )
+    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v4, v5, v2, v3) != 0 )
       loc_0 = -559038737;
     Plat_ExitProcess(1);
 LABEL_5:
@@ -1463,7 +1463,7 @@ void *__fastcall __noreturn CAtomicManipulator<CResourceArray<RnSoftbodySpring_t
     goto LABEL_5;
   while ( 1 )
   {
-    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v3, v4, v1, v2, v5, v6) != 0 )
+    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v3, v4, v1, v2) != 0 )
       loc_0 = -559038737;
     Plat_ExitProcess(1);
 LABEL_5:
@@ -1500,7 +1500,7 @@ void *__fastcall __noreturn CAtomicManipulator<CResourceArray<RnSoftbodySpring_t
     goto LABEL_5;
   while ( 1 )
   {
-    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v4, v5, v2, v3, v6, v7) != 0 )
+    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v4, v5, v2, v3) != 0 )
       loc_0 = -559038737;
     Plat_ExitProcess(1);
 LABEL_5:
@@ -1538,7 +1538,7 @@ void __fastcall __noreturn CAtomicManipulator<CResourceArray<RnSoftbodySpring_t>
     goto LABEL_5;
   while ( 1 )
   {
-    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v5, v6, v3, v4, v7, v8) != 0 )
+    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v5, v6, v3, v4) != 0 )
       loc_0 = -559038737;
     Plat_ExitProcess(1);
 LABEL_5:
@@ -1575,7 +1575,7 @@ void __fastcall __noreturn CAtomicManipulator<CResourceArray<RnSoftbodySpring_t>
     goto LABEL_5;
   while ( 1 )
   {
-    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v4, v5, v2, v3, v6, v7) != 0 )
+    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v4, v5, v2, v3) != 0 )
       loc_0 = -559038737;
     Plat_ExitProcess(1);
 LABEL_5:
@@ -1611,7 +1611,7 @@ void *__fastcall __noreturn CAtomicManipulator<CResourceArray<RnSoftbodyParticle
     goto LABEL_5;
   while ( 1 )
   {
-    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v3, v4, v1, v2, v5, v6) != 0 )
+    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v3, v4, v1, v2) != 0 )
       loc_0 = -559038737;
     Plat_ExitProcess(1);
 LABEL_5:
@@ -1648,7 +1648,7 @@ void *__fastcall __noreturn CAtomicManipulator<CResourceArray<RnSoftbodyParticle
     goto LABEL_5;
   while ( 1 )
   {
-    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v4, v5, v2, v3, v6, v7) != 0 )
+    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v4, v5, v2, v3) != 0 )
       loc_0 = -559038737;
     Plat_ExitProcess(1);
 LABEL_5:
@@ -1686,7 +1686,7 @@ void __fastcall __noreturn CAtomicManipulator<CResourceArray<RnSoftbodyParticle_
     goto LABEL_5;
   while ( 1 )
   {
-    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v5, v6, v3, v4, v7, v8) != 0 )
+    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v5, v6, v3, v4) != 0 )
       loc_0 = -559038737;
     Plat_ExitProcess(1);
 LABEL_5:
@@ -1723,7 +1723,7 @@ void __fastcall __noreturn CAtomicManipulator<CResourceArray<RnSoftbodyParticle_
     goto LABEL_5;
   while ( 1 )
   {
-    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v4, v5, v2, v3, v6, v7) != 0 )
+    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v4, v5, v2, v3) != 0 )
       loc_0 = -559038737;
     Plat_ExitProcess(1);
 LABEL_5:
@@ -1759,7 +1759,7 @@ void *__fastcall __noreturn CAtomicManipulator<CResourceArray<CResourceString>>:
     goto LABEL_5;
   while ( 1 )
   {
-    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v3, v4, v1, v2, v5, v6) != 0 )
+    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v3, v4, v1, v2) != 0 )
       loc_0 = -559038737;
     Plat_ExitProcess(1);
 LABEL_5:
@@ -1796,7 +1796,7 @@ void *__fastcall __noreturn CAtomicManipulator<CResourceArray<CResourceString>>:
     goto LABEL_5;
   while ( 1 )
   {
-    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v4, v5, v2, v3, v6, v7) != 0 )
+    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v4, v5, v2, v3) != 0 )
       loc_0 = -559038737;
     Plat_ExitProcess(1);
 LABEL_5:
@@ -1834,7 +1834,7 @@ void __fastcall __noreturn CAtomicManipulator<CResourceArray<CResourceString>>::
     goto LABEL_5;
   while ( 1 )
   {
-    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v5, v6, v3, v4, v7, v8) != 0 )
+    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v5, v6, v3, v4) != 0 )
       loc_0 = -559038737;
     Plat_ExitProcess(1);
 LABEL_5:
@@ -1871,7 +1871,7 @@ void __fastcall __noreturn CAtomicManipulator<CResourceArray<CResourceString>>::
     goto LABEL_5;
   while ( 1 )
   {
-    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v4, v5, v2, v3, v6, v7) != 0 )
+    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v4, v5, v2, v3) != 0 )
       loc_0 = -559038737;
     Plat_ExitProcess(1);
 LABEL_5:
@@ -1907,7 +1907,7 @@ void *__fastcall __noreturn CAtomicManipulator<CResourceArray<unsigned int>>::Al
     goto LABEL_5;
   while ( 1 )
   {
-    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v3, v4, v1, v2, v5, v6) != 0 )
+    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v3, v4, v1, v2) != 0 )
       loc_0 = -559038737;
     Plat_ExitProcess(1);
 LABEL_5:
@@ -1944,7 +1944,7 @@ void *__fastcall __noreturn CAtomicManipulator<CResourceArray<unsigned int>>::Al
     goto LABEL_5;
   while ( 1 )
   {
-    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v4, v5, v2, v3, v6, v7) != 0 )
+    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v4, v5, v2, v3) != 0 )
       loc_0 = -559038737;
     Plat_ExitProcess(1);
 LABEL_5:
@@ -1982,7 +1982,7 @@ void __fastcall __noreturn CAtomicManipulator<CResourceArray<unsigned int>>::Cop
     goto LABEL_5;
   while ( 1 )
   {
-    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v5, v6, v3, v4, v7, v8) != 0 )
+    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v5, v6, v3, v4) != 0 )
       loc_0 = -559038737;
     Plat_ExitProcess(1);
 LABEL_5:
@@ -2019,7 +2019,7 @@ void __fastcall __noreturn CAtomicManipulator<CResourceArray<unsigned int>>::Dea
     goto LABEL_5;
   while ( 1 )
   {
-    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v4, v5, v2, v3, v6, v7) != 0 )
+    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v4, v5, v2, v3) != 0 )
       loc_0 = -559038737;
     Plat_ExitProcess(1);
 LABEL_5:
@@ -2055,7 +2055,7 @@ void *__fastcall __noreturn CAtomicManipulator<CResourceArray<unsigned char>>::A
     goto LABEL_5;
   while ( 1 )
   {
-    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v3, v4, v1, v2, v5, v6) != 0 )
+    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v3, v4, v1, v2) != 0 )
       loc_0 = -559038737;
     Plat_ExitProcess(1);
 LABEL_5:
@@ -2092,7 +2092,7 @@ void *__fastcall __noreturn CAtomicManipulator<CResourceArray<unsigned char>>::A
     goto LABEL_5;
   while ( 1 )
   {
-    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v4, v5, v2, v3, v6, v7) != 0 )
+    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v4, v5, v2, v3) != 0 )
       loc_0 = -559038737;
     Plat_ExitProcess(1);
 LABEL_5:
@@ -2130,7 +2130,7 @@ void __fastcall __noreturn CAtomicManipulator<CResourceArray<unsigned char>>::Co
     goto LABEL_5;
   while ( 1 )
   {
-    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v5, v6, v3, v4, v7, v8) != 0 )
+    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v5, v6, v3, v4) != 0 )
       loc_0 = -559038737;
     Plat_ExitProcess(1);
 LABEL_5:
@@ -2167,7 +2167,7 @@ void __fastcall __noreturn CAtomicManipulator<CResourceArray<unsigned char>>::De
     goto LABEL_5;
   while ( 1 )
   {
-    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v4, v5, v2, v3, v6, v7) != 0 )
+    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v4, v5, v2, v3) != 0 )
       loc_0 = -559038737;
     Plat_ExitProcess(1);
 LABEL_5:
@@ -2203,7 +2203,7 @@ void *__fastcall __noreturn CAtomicManipulator<CResourceArray<unsigned short>>::
     goto LABEL_5;
   while ( 1 )
   {
-    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v3, v4, v1, v2, v5, v6) != 0 )
+    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v3, v4, v1, v2) != 0 )
       loc_0 = -559038737;
     Plat_ExitProcess(1);
 LABEL_5:
@@ -2240,7 +2240,7 @@ void *__fastcall __noreturn CAtomicManipulator<CResourceArray<unsigned short>>::
     goto LABEL_5;
   while ( 1 )
   {
-    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v4, v5, v2, v3, v6, v7) != 0 )
+    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v4, v5, v2, v3) != 0 )
       loc_0 = -559038737;
     Plat_ExitProcess(1);
 LABEL_5:
@@ -2278,7 +2278,7 @@ void __fastcall __noreturn CAtomicManipulator<CResourceArray<unsigned short>>::C
     goto LABEL_5;
   while ( 1 )
   {
-    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v5, v6, v3, v4, v7, v8) != 0 )
+    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v5, v6, v3, v4) != 0 )
       loc_0 = -559038737;
     Plat_ExitProcess(1);
 LABEL_5:
@@ -2315,7 +2315,7 @@ void __fastcall __noreturn CAtomicManipulator<CResourceArray<unsigned short>>::D
     goto LABEL_5;
   while ( 1 )
   {
-    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v4, v5, v2, v3, v6, v7) != 0 )
+    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v4, v5, v2, v3) != 0 )
       loc_0 = -559038737;
     Plat_ExitProcess(1);
 LABEL_5:
@@ -2351,7 +2351,7 @@ void *__fastcall __noreturn CAtomicManipulator<CResourceArray<RnMeshDesc_t>>::Al
     goto LABEL_5;
   while ( 1 )
   {
-    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v3, v4, v1, v2, v5, v6) != 0 )
+    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v3, v4, v1, v2) != 0 )
       loc_0 = -559038737;
     Plat_ExitProcess(1);
 LABEL_5:
@@ -2388,7 +2388,7 @@ void *__fastcall __noreturn CAtomicManipulator<CResourceArray<RnMeshDesc_t>>::Al
     goto LABEL_5;
   while ( 1 )
   {
-    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v4, v5, v2, v3, v6, v7) != 0 )
+    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v4, v5, v2, v3) != 0 )
       loc_0 = -559038737;
     Plat_ExitProcess(1);
 LABEL_5:
@@ -2426,7 +2426,7 @@ void __fastcall __noreturn CAtomicManipulator<CResourceArray<RnMeshDesc_t>>::Cop
     goto LABEL_5;
   while ( 1 )
   {
-    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v5, v6, v3, v4, v7, v8) != 0 )
+    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v5, v6, v3, v4) != 0 )
       loc_0 = -559038737;
     Plat_ExitProcess(1);
 LABEL_5:
@@ -2463,7 +2463,7 @@ void __fastcall __noreturn CAtomicManipulator<CResourceArray<RnMeshDesc_t>>::Dea
     goto LABEL_5;
   while ( 1 )
   {
-    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v4, v5, v2, v3, v6, v7) != 0 )
+    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v4, v5, v2, v3) != 0 )
       loc_0 = -559038737;
     Plat_ExitProcess(1);
 LABEL_5:
@@ -2499,7 +2499,7 @@ void *__fastcall __noreturn CAtomicManipulator<CResourceArray<RnHullDesc_t>>::Al
     goto LABEL_5;
   while ( 1 )
   {
-    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v3, v4, v1, v2, v5, v6) != 0 )
+    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v3, v4, v1, v2) != 0 )
       loc_0 = -559038737;
     Plat_ExitProcess(1);
 LABEL_5:
@@ -2536,7 +2536,7 @@ void *__fastcall __noreturn CAtomicManipulator<CResourceArray<RnHullDesc_t>>::Al
     goto LABEL_5;
   while ( 1 )
   {
-    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v4, v5, v2, v3, v6, v7) != 0 )
+    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v4, v5, v2, v3) != 0 )
       loc_0 = -559038737;
     Plat_ExitProcess(1);
 LABEL_5:
@@ -2574,7 +2574,7 @@ void __fastcall __noreturn CAtomicManipulator<CResourceArray<RnHullDesc_t>>::Cop
     goto LABEL_5;
   while ( 1 )
   {
-    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v5, v6, v3, v4, v7, v8) != 0 )
+    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v5, v6, v3, v4) != 0 )
       loc_0 = -559038737;
     Plat_ExitProcess(1);
 LABEL_5:
@@ -2611,7 +2611,7 @@ void __fastcall __noreturn CAtomicManipulator<CResourceArray<RnHullDesc_t>>::Dea
     goto LABEL_5;
   while ( 1 )
   {
-    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v4, v5, v2, v3, v6, v7) != 0 )
+    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v4, v5, v2, v3) != 0 )
       loc_0 = -559038737;
     Plat_ExitProcess(1);
 LABEL_5:
@@ -2647,7 +2647,7 @@ void *__fastcall __noreturn CAtomicManipulator<CResourceArray<RnCapsuleDesc_t>>:
     goto LABEL_5;
   while ( 1 )
   {
-    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v3, v4, v1, v2, v5, v6) != 0 )
+    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v3, v4, v1, v2) != 0 )
       loc_0 = -559038737;
     Plat_ExitProcess(1);
 LABEL_5:
@@ -2684,7 +2684,7 @@ void *__fastcall __noreturn CAtomicManipulator<CResourceArray<RnCapsuleDesc_t>>:
     goto LABEL_5;
   while ( 1 )
   {
-    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v4, v5, v2, v3, v6, v7) != 0 )
+    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v4, v5, v2, v3) != 0 )
       loc_0 = -559038737;
     Plat_ExitProcess(1);
 LABEL_5:
@@ -2722,7 +2722,7 @@ void __fastcall __noreturn CAtomicManipulator<CResourceArray<RnCapsuleDesc_t>>::
     goto LABEL_5;
   while ( 1 )
   {
-    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v5, v6, v3, v4, v7, v8) != 0 )
+    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v5, v6, v3, v4) != 0 )
       loc_0 = -559038737;
     Plat_ExitProcess(1);
 LABEL_5:
@@ -2759,7 +2759,7 @@ void __fastcall __noreturn CAtomicManipulator<CResourceArray<RnCapsuleDesc_t>>::
     goto LABEL_5;
   while ( 1 )
   {
-    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v4, v5, v2, v3, v6, v7) != 0 )
+    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v4, v5, v2, v3) != 0 )
       loc_0 = -559038737;
     Plat_ExitProcess(1);
 LABEL_5:
@@ -2795,7 +2795,7 @@ void *__fastcall __noreturn CAtomicManipulator<CResourceArray<RnSphereDesc_t>>::
     goto LABEL_5;
   while ( 1 )
   {
-    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v3, v4, v1, v2, v5, v6) != 0 )
+    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v3, v4, v1, v2) != 0 )
       loc_0 = -559038737;
     Plat_ExitProcess(1);
 LABEL_5:
@@ -2832,7 +2832,7 @@ void *__fastcall __noreturn CAtomicManipulator<CResourceArray<RnSphereDesc_t>>::
     goto LABEL_5;
   while ( 1 )
   {
-    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v4, v5, v2, v3, v6, v7) != 0 )
+    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v4, v5, v2, v3) != 0 )
       loc_0 = -559038737;
     Plat_ExitProcess(1);
 LABEL_5:
@@ -2870,7 +2870,7 @@ void __fastcall __noreturn CAtomicManipulator<CResourceArray<RnSphereDesc_t>>::C
     goto LABEL_5;
   while ( 1 )
   {
-    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v5, v6, v3, v4, v7, v8) != 0 )
+    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v5, v6, v3, v4) != 0 )
       loc_0 = -559038737;
     Plat_ExitProcess(1);
 LABEL_5:
@@ -2907,7 +2907,7 @@ void __fastcall __noreturn CAtomicManipulator<CResourceArray<RnSphereDesc_t>>::D
     goto LABEL_5;
   while ( 1 )
   {
-    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v4, v5, v2, v3, v6, v7) != 0 )
+    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v4, v5, v2, v3) != 0 )
       loc_0 = -559038737;
     Plat_ExitProcess(1);
 LABEL_5:
@@ -2967,7 +2967,7 @@ void *__fastcall __noreturn CAtomicManipulator<CResourceArray<CResourceArray<uns
     goto LABEL_5;
   while ( 1 )
   {
-    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v3, v4, v1, v2, v5, v6) != 0 )
+    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v3, v4, v1, v2) != 0 )
       loc_0 = -559038737;
     Plat_ExitProcess(1);
 LABEL_5:
@@ -3004,7 +3004,7 @@ void *__fastcall __noreturn CAtomicManipulator<CResourceArray<CResourceArray<uns
     goto LABEL_5;
   while ( 1 )
   {
-    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v4, v5, v2, v3, v6, v7) != 0 )
+    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v4, v5, v2, v3) != 0 )
       loc_0 = -559038737;
     Plat_ExitProcess(1);
 LABEL_5:
@@ -3042,7 +3042,7 @@ void __fastcall __noreturn CAtomicManipulator<CResourceArray<CResourceArray<unsi
     goto LABEL_5;
   while ( 1 )
   {
-    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v5, v6, v3, v4, v7, v8) != 0 )
+    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v5, v6, v3, v4) != 0 )
       loc_0 = -559038737;
     Plat_ExitProcess(1);
 LABEL_5:
@@ -3079,7 +3079,7 @@ void __fastcall __noreturn CAtomicManipulator<CResourceArray<CResourceArray<unsi
     goto LABEL_5;
   while ( 1 )
   {
-    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v4, v5, v2, v3, v6, v7) != 0 )
+    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v4, v5, v2, v3) != 0 )
       loc_0 = -559038737;
     Plat_ExitProcess(1);
 LABEL_5:
@@ -3427,7 +3427,7 @@ void *__fastcall __noreturn CAtomicManipulator<CResourceArray<OnDiskBufferData_t
     goto LABEL_5;
   while ( 1 )
   {
-    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v3, v4, v1, v2, v5, v6) != 0 )
+    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v3, v4, v1, v2) != 0 )
       loc_0 = -559038737;
     Plat_ExitProcess(1);
 LABEL_5:
@@ -3464,7 +3464,7 @@ void *__fastcall __noreturn CAtomicManipulator<CResourceArray<OnDiskBufferData_t
     goto LABEL_5;
   while ( 1 )
   {
-    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v4, v5, v2, v3, v6, v7) != 0 )
+    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v4, v5, v2, v3) != 0 )
       loc_0 = -559038737;
     Plat_ExitProcess(1);
 LABEL_5:
@@ -3502,7 +3502,7 @@ void __fastcall __noreturn CAtomicManipulator<CResourceArray<OnDiskBufferData_t>
     goto LABEL_5;
   while ( 1 )
   {
-    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v5, v6, v3, v4, v7, v8) != 0 )
+    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v5, v6, v3, v4) != 0 )
       loc_0 = -559038737;
     Plat_ExitProcess(1);
 LABEL_5:
@@ -3539,7 +3539,7 @@ void __fastcall __noreturn CAtomicManipulator<CResourceArray<OnDiskBufferData_t>
     goto LABEL_5;
   while ( 1 )
   {
-    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v4, v5, v2, v3, v6, v7) != 0 )
+    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v4, v5, v2, v3) != 0 )
       loc_0 = -559038737;
     Plat_ExitProcess(1);
 LABEL_5:
@@ -3575,7 +3575,7 @@ void *__fastcall __noreturn CAtomicManipulator<CResourceArray<BaseConstraint_t>>
     goto LABEL_5;
   while ( 1 )
   {
-    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v3, v4, v1, v2, v5, v6) != 0 )
+    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v3, v4, v1, v2) != 0 )
       loc_0 = -559038737;
     Plat_ExitProcess(1);
 LABEL_5:
@@ -3612,7 +3612,7 @@ void *__fastcall __noreturn CAtomicManipulator<CResourceArray<BaseConstraint_t>>
     goto LABEL_5;
   while ( 1 )
   {
-    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v4, v5, v2, v3, v6, v7) != 0 )
+    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v4, v5, v2, v3) != 0 )
       loc_0 = -559038737;
     Plat_ExitProcess(1);
 LABEL_5:
@@ -3650,7 +3650,7 @@ void __fastcall __noreturn CAtomicManipulator<CResourceArray<BaseConstraint_t>>:
     goto LABEL_5;
   while ( 1 )
   {
-    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v5, v6, v3, v4, v7, v8) != 0 )
+    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v5, v6, v3, v4) != 0 )
       loc_0 = -559038737;
     Plat_ExitProcess(1);
 LABEL_5:
@@ -3687,7 +3687,7 @@ void __fastcall __noreturn CAtomicManipulator<CResourceArray<BaseConstraint_t>>:
     goto LABEL_5;
   while ( 1 )
   {
-    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v4, v5, v2, v3, v6, v7) != 0 )
+    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v4, v5, v2, v3) != 0 )
       loc_0 = -559038737;
     Plat_ExitProcess(1);
 LABEL_5:
@@ -3723,7 +3723,7 @@ void *__fastcall __noreturn CAtomicManipulator<CResourceArray<HitBoxSet_t>>::All
     goto LABEL_5;
   while ( 1 )
   {
-    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v3, v4, v1, v2, v5, v6) != 0 )
+    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v3, v4, v1, v2) != 0 )
       loc_0 = -559038737;
     Plat_ExitProcess(1);
 LABEL_5:
@@ -3760,7 +3760,7 @@ void *__fastcall __noreturn CAtomicManipulator<CResourceArray<HitBoxSet_t>>::All
     goto LABEL_5;
   while ( 1 )
   {
-    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v4, v5, v2, v3, v6, v7) != 0 )
+    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v4, v5, v2, v3) != 0 )
       loc_0 = -559038737;
     Plat_ExitProcess(1);
 LABEL_5:
@@ -3798,7 +3798,7 @@ void __fastcall __noreturn CAtomicManipulator<CResourceArray<HitBoxSet_t>>::Copy
     goto LABEL_5;
   while ( 1 )
   {
-    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v5, v6, v3, v4, v7, v8) != 0 )
+    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v5, v6, v3, v4) != 0 )
       loc_0 = -559038737;
     Plat_ExitProcess(1);
 LABEL_5:
@@ -3835,7 +3835,7 @@ void __fastcall __noreturn CAtomicManipulator<CResourceArray<HitBoxSet_t>>::Deal
     goto LABEL_5;
   while ( 1 )
   {
-    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v4, v5, v2, v3, v6, v7) != 0 )
+    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v4, v5, v2, v3) != 0 )
       loc_0 = -559038737;
     Plat_ExitProcess(1);
 LABEL_5:
@@ -3871,7 +3871,7 @@ void *__fastcall __noreturn CAtomicManipulator<CResourceArray<AttachmentData_t>>
     goto LABEL_5;
   while ( 1 )
   {
-    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v3, v4, v1, v2, v5, v6) != 0 )
+    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v3, v4, v1, v2) != 0 )
       loc_0 = -559038737;
     Plat_ExitProcess(1);
 LABEL_5:
@@ -3908,7 +3908,7 @@ void *__fastcall __noreturn CAtomicManipulator<CResourceArray<AttachmentData_t>>
     goto LABEL_5;
   while ( 1 )
   {
-    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v4, v5, v2, v3, v6, v7) != 0 )
+    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v4, v5, v2, v3) != 0 )
       loc_0 = -559038737;
     Plat_ExitProcess(1);
 LABEL_5:
@@ -3946,7 +3946,7 @@ void __fastcall __noreturn CAtomicManipulator<CResourceArray<AttachmentData_t>>:
     goto LABEL_5;
   while ( 1 )
   {
-    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v5, v6, v3, v4, v7, v8) != 0 )
+    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v5, v6, v3, v4) != 0 )
       loc_0 = -559038737;
     Plat_ExitProcess(1);
 LABEL_5:
@@ -3983,7 +3983,7 @@ void __fastcall __noreturn CAtomicManipulator<CResourceArray<AttachmentData_t>>:
     goto LABEL_5;
   while ( 1 )
   {
-    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v4, v5, v2, v3, v6, v7) != 0 )
+    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v4, v5, v2, v3) != 0 )
       loc_0 = -559038737;
     Plat_ExitProcess(1);
 LABEL_5:
@@ -4019,7 +4019,7 @@ void *__fastcall __noreturn CAtomicManipulator<CResourceArray<SceneObjectData_t>
     goto LABEL_5;
   while ( 1 )
   {
-    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v3, v4, v1, v2, v5, v6) != 0 )
+    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v3, v4, v1, v2) != 0 )
       loc_0 = -559038737;
     Plat_ExitProcess(1);
 LABEL_5:
@@ -4056,7 +4056,7 @@ void *__fastcall __noreturn CAtomicManipulator<CResourceArray<SceneObjectData_t>
     goto LABEL_5;
   while ( 1 )
   {
-    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v4, v5, v2, v3, v6, v7) != 0 )
+    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v4, v5, v2, v3) != 0 )
       loc_0 = -559038737;
     Plat_ExitProcess(1);
 LABEL_5:
@@ -4094,7 +4094,7 @@ void __fastcall __noreturn CAtomicManipulator<CResourceArray<SceneObjectData_t>>
     goto LABEL_5;
   while ( 1 )
   {
-    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v5, v6, v3, v4, v7, v8) != 0 )
+    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v5, v6, v3, v4) != 0 )
       loc_0 = -559038737;
     Plat_ExitProcess(1);
 LABEL_5:
@@ -4131,7 +4131,7 @@ void __fastcall __noreturn CAtomicManipulator<CResourceArray<SceneObjectData_t>>
     goto LABEL_5;
   while ( 1 )
   {
-    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v4, v5, v2, v3, v6, v7) != 0 )
+    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v4, v5, v2, v3) != 0 )
       loc_0 = -559038737;
     Plat_ExitProcess(1);
 LABEL_5:
@@ -4167,7 +4167,7 @@ void *__fastcall __noreturn CAtomicManipulator<CResourceArray<ConstraintTarget_t
     goto LABEL_5;
   while ( 1 )
   {
-    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v3, v4, v1, v2, v5, v6) != 0 )
+    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v3, v4, v1, v2) != 0 )
       loc_0 = -559038737;
     Plat_ExitProcess(1);
 LABEL_5:
@@ -4204,7 +4204,7 @@ void *__fastcall __noreturn CAtomicManipulator<CResourceArray<ConstraintTarget_t
     goto LABEL_5;
   while ( 1 )
   {
-    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v4, v5, v2, v3, v6, v7) != 0 )
+    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v4, v5, v2, v3) != 0 )
       loc_0 = -559038737;
     Plat_ExitProcess(1);
 LABEL_5:
@@ -4242,7 +4242,7 @@ void __fastcall __noreturn CAtomicManipulator<CResourceArray<ConstraintTarget_t>
     goto LABEL_5;
   while ( 1 )
   {
-    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v5, v6, v3, v4, v7, v8) != 0 )
+    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v5, v6, v3, v4) != 0 )
       loc_0 = -559038737;
     Plat_ExitProcess(1);
 LABEL_5:
@@ -4279,7 +4279,7 @@ void __fastcall __noreturn CAtomicManipulator<CResourceArray<ConstraintTarget_t>
     goto LABEL_5;
   while ( 1 )
   {
-    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v4, v5, v2, v3, v6, v7) != 0 )
+    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v4, v5, v2, v3) != 0 )
       loc_0 = -559038737;
     Plat_ExitProcess(1);
 LABEL_5:
@@ -4315,7 +4315,7 @@ void *__fastcall __noreturn CAtomicManipulator<CResourceArray<ConstraintSlave_t>
     goto LABEL_5;
   while ( 1 )
   {
-    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v3, v4, v1, v2, v5, v6) != 0 )
+    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v3, v4, v1, v2) != 0 )
       loc_0 = -559038737;
     Plat_ExitProcess(1);
 LABEL_5:
@@ -4352,7 +4352,7 @@ void *__fastcall __noreturn CAtomicManipulator<CResourceArray<ConstraintSlave_t>
     goto LABEL_5;
   while ( 1 )
   {
-    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v4, v5, v2, v3, v6, v7) != 0 )
+    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v4, v5, v2, v3) != 0 )
       loc_0 = -559038737;
     Plat_ExitProcess(1);
 LABEL_5:
@@ -4390,7 +4390,7 @@ void __fastcall __noreturn CAtomicManipulator<CResourceArray<ConstraintSlave_t>>
     goto LABEL_5;
   while ( 1 )
   {
-    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v5, v6, v3, v4, v7, v8) != 0 )
+    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v5, v6, v3, v4) != 0 )
       loc_0 = -559038737;
     Plat_ExitProcess(1);
 LABEL_5:
@@ -4427,7 +4427,7 @@ void __fastcall __noreturn CAtomicManipulator<CResourceArray<ConstraintSlave_t>>
     goto LABEL_5;
   while ( 1 )
   {
-    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v4, v5, v2, v3, v6, v7) != 0 )
+    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v4, v5, v2, v3) != 0 )
       loc_0 = -559038737;
     Plat_ExitProcess(1);
 LABEL_5:
@@ -4463,7 +4463,7 @@ void *__fastcall __noreturn CAtomicManipulator<CResourceArray<HitBox_t>>::Alloca
     goto LABEL_5;
   while ( 1 )
   {
-    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v3, v4, v1, v2, v5, v6) != 0 )
+    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v3, v4, v1, v2) != 0 )
       loc_0 = -559038737;
     Plat_ExitProcess(1);
 LABEL_5:
@@ -4500,7 +4500,7 @@ void *__fastcall __noreturn CAtomicManipulator<CResourceArray<HitBox_t>>::Alloca
     goto LABEL_5;
   while ( 1 )
   {
-    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v4, v5, v2, v3, v6, v7) != 0 )
+    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v4, v5, v2, v3) != 0 )
       loc_0 = -559038737;
     Plat_ExitProcess(1);
 LABEL_5:
@@ -4538,7 +4538,7 @@ void __fastcall __noreturn CAtomicManipulator<CResourceArray<HitBox_t>>::Copy(
     goto LABEL_5;
   while ( 1 )
   {
-    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v5, v6, v3, v4, v7, v8) != 0 )
+    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v5, v6, v3, v4) != 0 )
       loc_0 = -559038737;
     Plat_ExitProcess(1);
 LABEL_5:
@@ -4575,7 +4575,7 @@ void __fastcall __noreturn CAtomicManipulator<CResourceArray<HitBox_t>>::Dealloc
     goto LABEL_5;
   while ( 1 )
   {
-    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v4, v5, v2, v3, v6, v7) != 0 )
+    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v4, v5, v2, v3) != 0 )
       loc_0 = -559038737;
     Plat_ExitProcess(1);
 LABEL_5:
@@ -4611,7 +4611,7 @@ void *__fastcall __noreturn CAtomicManipulator<CResourceArray<MaterialDrawDescri
     goto LABEL_5;
   while ( 1 )
   {
-    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v3, v4, v1, v2, v5, v6) != 0 )
+    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v3, v4, v1, v2) != 0 )
       loc_0 = -559038737;
     Plat_ExitProcess(1);
 LABEL_5:
@@ -4648,7 +4648,7 @@ void *__fastcall __noreturn CAtomicManipulator<CResourceArray<MaterialDrawDescri
     goto LABEL_5;
   while ( 1 )
   {
-    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v4, v5, v2, v3, v6, v7) != 0 )
+    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v4, v5, v2, v3) != 0 )
       loc_0 = -559038737;
     Plat_ExitProcess(1);
 LABEL_5:
@@ -4686,7 +4686,7 @@ void __fastcall __noreturn CAtomicManipulator<CResourceArray<MaterialDrawDescrip
     goto LABEL_5;
   while ( 1 )
   {
-    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v5, v6, v3, v4, v7, v8) != 0 )
+    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v5, v6, v3, v4) != 0 )
       loc_0 = -559038737;
     Plat_ExitProcess(1);
 LABEL_5:
@@ -4723,7 +4723,7 @@ void __fastcall __noreturn CAtomicManipulator<CResourceArray<MaterialDrawDescrip
     goto LABEL_5;
   while ( 1 )
   {
-    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v4, v5, v2, v3, v6, v7) != 0 )
+    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v4, v5, v2, v3) != 0 )
       loc_0 = -559038737;
     Plat_ExitProcess(1);
 LABEL_5:
@@ -4759,7 +4759,7 @@ void *__fastcall __noreturn CAtomicManipulator<CResourceArray<RenderInputLayoutF
     goto LABEL_5;
   while ( 1 )
   {
-    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v3, v4, v1, v2, v5, v6) != 0 )
+    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v3, v4, v1, v2) != 0 )
       loc_0 = -559038737;
     Plat_ExitProcess(1);
 LABEL_5:
@@ -4796,7 +4796,7 @@ void *__fastcall __noreturn CAtomicManipulator<CResourceArray<RenderInputLayoutF
     goto LABEL_5;
   while ( 1 )
   {
-    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v4, v5, v2, v3, v6, v7) != 0 )
+    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v4, v5, v2, v3) != 0 )
       loc_0 = -559038737;
     Plat_ExitProcess(1);
 LABEL_5:
@@ -4834,7 +4834,7 @@ void __fastcall __noreturn CAtomicManipulator<CResourceArray<RenderInputLayoutFi
     goto LABEL_5;
   while ( 1 )
   {
-    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v5, v6, v3, v4, v7, v8) != 0 )
+    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v5, v6, v3, v4) != 0 )
       loc_0 = -559038737;
     Plat_ExitProcess(1);
 LABEL_5:
@@ -4871,7 +4871,7 @@ void __fastcall __noreturn CAtomicManipulator<CResourceArray<RenderInputLayoutFi
     goto LABEL_5;
   while ( 1 )
   {
-    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v4, v5, v2, v3, v6, v7) != 0 )
+    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v4, v5, v2, v3) != 0 )
       loc_0 = -559038737;
     Plat_ExitProcess(1);
 LABEL_5:
@@ -4907,7 +4907,7 @@ void *__fastcall __noreturn CAtomicManipulator<CResourceArray<RenderBufferBindin
     goto LABEL_5;
   while ( 1 )
   {
-    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v3, v4, v1, v2, v5, v6) != 0 )
+    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v3, v4, v1, v2) != 0 )
       loc_0 = -559038737;
     Plat_ExitProcess(1);
 LABEL_5:
@@ -4944,7 +4944,7 @@ void *__fastcall __noreturn CAtomicManipulator<CResourceArray<RenderBufferBindin
     goto LABEL_5;
   while ( 1 )
   {
-    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v4, v5, v2, v3, v6, v7) != 0 )
+    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v4, v5, v2, v3) != 0 )
       loc_0 = -559038737;
     Plat_ExitProcess(1);
 LABEL_5:
@@ -4982,7 +4982,7 @@ void __fastcall __noreturn CAtomicManipulator<CResourceArray<RenderBufferBinding
     goto LABEL_5;
   while ( 1 )
   {
-    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v5, v6, v3, v4, v7, v8) != 0 )
+    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v5, v6, v3, v4) != 0 )
       loc_0 = -559038737;
     Plat_ExitProcess(1);
 LABEL_5:
@@ -5019,7 +5019,7 @@ void __fastcall __noreturn CAtomicManipulator<CResourceArray<RenderBufferBinding
     goto LABEL_5;
   while ( 1 )
   {
-    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v4, v5, v2, v3, v6, v7) != 0 )
+    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v4, v5, v2, v3) != 0 )
       loc_0 = -559038737;
     Plat_ExitProcess(1);
 LABEL_5:
@@ -5055,7 +5055,7 @@ void *__fastcall __noreturn CAtomicManipulator<CResourceArray<float>>::Allocate(
     goto LABEL_5;
   while ( 1 )
   {
-    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v3, v4, v1, v2, v5, v6) != 0 )
+    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v3, v4, v1, v2) != 0 )
       loc_0 = -559038737;
     Plat_ExitProcess(1);
 LABEL_5:
@@ -5092,7 +5092,7 @@ void *__fastcall __noreturn CAtomicManipulator<CResourceArray<float>>::AllocateA
     goto LABEL_5;
   while ( 1 )
   {
-    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v4, v5, v2, v3, v6, v7) != 0 )
+    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v4, v5, v2, v3) != 0 )
       loc_0 = -559038737;
     Plat_ExitProcess(1);
 LABEL_5:
@@ -5130,7 +5130,7 @@ void __fastcall __noreturn CAtomicManipulator<CResourceArray<float>>::Copy(
     goto LABEL_5;
   while ( 1 )
   {
-    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v5, v6, v3, v4, v7, v8) != 0 )
+    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v5, v6, v3, v4) != 0 )
       loc_0 = -559038737;
     Plat_ExitProcess(1);
 LABEL_5:
@@ -5167,7 +5167,7 @@ void __fastcall __noreturn CAtomicManipulator<CResourceArray<float>>::Deallocate
     goto LABEL_5;
   while ( 1 )
   {
-    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v4, v5, v2, v3, v6, v7) != 0 )
+    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v4, v5, v2, v3) != 0 )
       loc_0 = -559038737;
     Plat_ExitProcess(1);
 LABEL_5:
@@ -5203,7 +5203,7 @@ void *__fastcall __noreturn CAtomicManipulator<CResourceArray<SkeletonBoneBbox_t
     goto LABEL_5;
   while ( 1 )
   {
-    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v3, v4, v1, v2, v5, v6) != 0 )
+    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v3, v4, v1, v2) != 0 )
       loc_0 = -559038737;
     Plat_ExitProcess(1);
 LABEL_5:
@@ -5240,7 +5240,7 @@ void *__fastcall __noreturn CAtomicManipulator<CResourceArray<SkeletonBoneBbox_t
     goto LABEL_5;
   while ( 1 )
   {
-    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v4, v5, v2, v3, v6, v7) != 0 )
+    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v4, v5, v2, v3) != 0 )
       loc_0 = -559038737;
     Plat_ExitProcess(1);
 LABEL_5:
@@ -5278,7 +5278,7 @@ void __fastcall __noreturn CAtomicManipulator<CResourceArray<SkeletonBoneBbox_t>
     goto LABEL_5;
   while ( 1 )
   {
-    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v5, v6, v3, v4, v7, v8) != 0 )
+    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v5, v6, v3, v4) != 0 )
       loc_0 = -559038737;
     Plat_ExitProcess(1);
 LABEL_5:
@@ -5315,7 +5315,7 @@ void __fastcall __noreturn CAtomicManipulator<CResourceArray<SkeletonBoneBbox_t>
     goto LABEL_5;
   while ( 1 )
   {
-    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v4, v5, v2, v3, v6, v7) != 0 )
+    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v4, v5, v2, v3) != 0 )
       loc_0 = -559038737;
     Plat_ExitProcess(1);
 LABEL_5:
@@ -5663,7 +5663,7 @@ void *__fastcall __noreturn CAtomicManipulator<CResourceArray<ModelBoneFlexDrive
     goto LABEL_5;
   while ( 1 )
   {
-    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v3, v4, v1, v2, v5, v6) != 0 )
+    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v3, v4, v1, v2) != 0 )
       loc_0 = -559038737;
     Plat_ExitProcess(1);
 LABEL_5:
@@ -5700,7 +5700,7 @@ void *__fastcall __noreturn CAtomicManipulator<CResourceArray<ModelBoneFlexDrive
     goto LABEL_5;
   while ( 1 )
   {
-    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v4, v5, v2, v3, v6, v7) != 0 )
+    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v4, v5, v2, v3) != 0 )
       loc_0 = -559038737;
     Plat_ExitProcess(1);
 LABEL_5:
@@ -5738,7 +5738,7 @@ void __fastcall __noreturn CAtomicManipulator<CResourceArray<ModelBoneFlexDriver
     goto LABEL_5;
   while ( 1 )
   {
-    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v5, v6, v3, v4, v7, v8) != 0 )
+    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v5, v6, v3, v4) != 0 )
       loc_0 = -559038737;
     Plat_ExitProcess(1);
 LABEL_5:
@@ -5775,7 +5775,7 @@ void __fastcall __noreturn CAtomicManipulator<CResourceArray<ModelBoneFlexDriver
     goto LABEL_5;
   while ( 1 )
   {
-    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v4, v5, v2, v3, v6, v7) != 0 )
+    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v4, v5, v2, v3) != 0 )
       loc_0 = -559038737;
     Plat_ExitProcess(1);
 LABEL_5:
@@ -5811,7 +5811,7 @@ void *__fastcall __noreturn CAtomicManipulator<CResourceArray<MaterialGroup_t>>:
     goto LABEL_5;
   while ( 1 )
   {
-    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v3, v4, v1, v2, v5, v6) != 0 )
+    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v3, v4, v1, v2) != 0 )
       loc_0 = -559038737;
     Plat_ExitProcess(1);
 LABEL_5:
@@ -5848,7 +5848,7 @@ void *__fastcall __noreturn CAtomicManipulator<CResourceArray<MaterialGroup_t>>:
     goto LABEL_5;
   while ( 1 )
   {
-    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v4, v5, v2, v3, v6, v7) != 0 )
+    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v4, v5, v2, v3) != 0 )
       loc_0 = -559038737;
     Plat_ExitProcess(1);
 LABEL_5:
@@ -5886,7 +5886,7 @@ void __fastcall __noreturn CAtomicManipulator<CResourceArray<MaterialGroup_t>>::
     goto LABEL_5;
   while ( 1 )
   {
-    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v5, v6, v3, v4, v7, v8) != 0 )
+    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v5, v6, v3, v4) != 0 )
       loc_0 = -559038737;
     Plat_ExitProcess(1);
 LABEL_5:
@@ -5923,7 +5923,7 @@ void __fastcall __noreturn CAtomicManipulator<CResourceArray<MaterialGroup_t>>::
     goto LABEL_5;
   while ( 1 )
   {
-    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v4, v5, v2, v3, v6, v7) != 0 )
+    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v4, v5, v2, v3) != 0 )
       loc_0 = -559038737;
     Plat_ExitProcess(1);
 LABEL_5:
@@ -5959,7 +5959,7 @@ void *__fastcall __noreturn CAtomicManipulator<CResourceArray<CResourceExtRefere
     goto LABEL_5;
   while ( 1 )
   {
-    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v3, v4, v1, v2, v5, v6) != 0 )
+    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v3, v4, v1, v2) != 0 )
       loc_0 = -559038737;
     Plat_ExitProcess(1);
 LABEL_5:
@@ -5996,7 +5996,7 @@ void *__fastcall __noreturn CAtomicManipulator<CResourceArray<CResourceExtRefere
     goto LABEL_5;
   while ( 1 )
   {
-    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v4, v5, v2, v3, v6, v7) != 0 )
+    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v4, v5, v2, v3) != 0 )
       loc_0 = -559038737;
     Plat_ExitProcess(1);
 LABEL_5:
@@ -6034,7 +6034,7 @@ void __fastcall __noreturn CAtomicManipulator<CResourceArray<CResourceExtReferen
     goto LABEL_5;
   while ( 1 )
   {
-    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v5, v6, v3, v4, v7, v8) != 0 )
+    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v5, v6, v3, v4) != 0 )
       loc_0 = -559038737;
     Plat_ExitProcess(1);
 LABEL_5:
@@ -6071,7 +6071,7 @@ void __fastcall __noreturn CAtomicManipulator<CResourceArray<CResourceExtReferen
     goto LABEL_5;
   while ( 1 )
   {
-    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v4, v5, v2, v3, v6, v7) != 0 )
+    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v4, v5, v2, v3) != 0 )
       loc_0 = -559038737;
     Plat_ExitProcess(1);
 LABEL_5:
@@ -6107,7 +6107,7 @@ void *__fastcall __noreturn CAtomicManipulator<CResourceArray<CResourceExtRefere
     goto LABEL_5;
   while ( 1 )
   {
-    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v3, v4, v1, v2, v5, v6) != 0 )
+    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v3, v4, v1, v2) != 0 )
       loc_0 = -559038737;
     Plat_ExitProcess(1);
 LABEL_5:
@@ -6144,7 +6144,7 @@ void *__fastcall __noreturn CAtomicManipulator<CResourceArray<CResourceExtRefere
     goto LABEL_5;
   while ( 1 )
   {
-    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v4, v5, v2, v3, v6, v7) != 0 )
+    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v4, v5, v2, v3) != 0 )
       loc_0 = -559038737;
     Plat_ExitProcess(1);
 LABEL_5:
@@ -6182,7 +6182,7 @@ void __fastcall __noreturn CAtomicManipulator<CResourceArray<CResourceExtReferen
     goto LABEL_5;
   while ( 1 )
   {
-    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v5, v6, v3, v4, v7, v8) != 0 )
+    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v5, v6, v3, v4) != 0 )
       loc_0 = -559038737;
     Plat_ExitProcess(1);
 LABEL_5:
@@ -6219,7 +6219,7 @@ void __fastcall __noreturn CAtomicManipulator<CResourceArray<CResourceExtReferen
     goto LABEL_5;
   while ( 1 )
   {
-    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v4, v5, v2, v3, v6, v7) != 0 )
+    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v4, v5, v2, v3) != 0 )
       loc_0 = -559038737;
     Plat_ExitProcess(1);
 LABEL_5:
@@ -6255,7 +6255,7 @@ void *__fastcall __noreturn CAtomicManipulator<CResourceArray<CResourceExtRefere
     goto LABEL_5;
   while ( 1 )
   {
-    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v3, v4, v1, v2, v5, v6) != 0 )
+    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v3, v4, v1, v2) != 0 )
       loc_0 = -559038737;
     Plat_ExitProcess(1);
 LABEL_5:
@@ -6292,7 +6292,7 @@ void *__fastcall __noreturn CAtomicManipulator<CResourceArray<CResourceExtRefere
     goto LABEL_5;
   while ( 1 )
   {
-    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v4, v5, v2, v3, v6, v7) != 0 )
+    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v4, v5, v2, v3) != 0 )
       loc_0 = -559038737;
     Plat_ExitProcess(1);
 LABEL_5:
@@ -6330,7 +6330,7 @@ void __fastcall __noreturn CAtomicManipulator<CResourceArray<CResourceExtReferen
     goto LABEL_5;
   while ( 1 )
   {
-    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v5, v6, v3, v4, v7, v8) != 0 )
+    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v5, v6, v3, v4) != 0 )
       loc_0 = -559038737;
     Plat_ExitProcess(1);
 LABEL_5:
@@ -6367,7 +6367,7 @@ void __fastcall __noreturn CAtomicManipulator<CResourceArray<CResourceExtReferen
     goto LABEL_5;
   while ( 1 )
   {
-    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v4, v5, v2, v3, v6, v7) != 0 )
+    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v4, v5, v2, v3) != 0 )
       loc_0 = -559038737;
     Plat_ExitProcess(1);
 LABEL_5:
@@ -6403,7 +6403,7 @@ void *__fastcall __noreturn CAtomicManipulator<CResourceArray<unsigned long long
     goto LABEL_5;
   while ( 1 )
   {
-    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v3, v4, v1, v2, v5, v6) != 0 )
+    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v3, v4, v1, v2) != 0 )
       loc_0 = -559038737;
     Plat_ExitProcess(1);
 LABEL_5:
@@ -6440,7 +6440,7 @@ void *__fastcall __noreturn CAtomicManipulator<CResourceArray<unsigned long long
     goto LABEL_5;
   while ( 1 )
   {
-    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v4, v5, v2, v3, v6, v7) != 0 )
+    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v4, v5, v2, v3) != 0 )
       loc_0 = -559038737;
     Plat_ExitProcess(1);
 LABEL_5:
@@ -6478,7 +6478,7 @@ void __fastcall __noreturn CAtomicManipulator<CResourceArray<unsigned long long>
     goto LABEL_5;
   while ( 1 )
   {
-    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v5, v6, v3, v4, v7, v8) != 0 )
+    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v5, v6, v3, v4) != 0 )
       loc_0 = -559038737;
     Plat_ExitProcess(1);
 LABEL_5:
@@ -6515,7 +6515,7 @@ void __fastcall __noreturn CAtomicManipulator<CResourceArray<unsigned long long>
     goto LABEL_5;
   while ( 1 )
   {
-    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v4, v5, v2, v3, v6, v7) != 0 )
+    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v4, v5, v2, v3) != 0 )
       loc_0 = -559038737;
     Plat_ExitProcess(1);
 LABEL_5:
@@ -6551,7 +6551,7 @@ void *__fastcall __noreturn CAtomicManipulator<CResourceArray<CResourceExtRefere
     goto LABEL_5;
   while ( 1 )
   {
-    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v3, v4, v1, v2, v5, v6) != 0 )
+    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v3, v4, v1, v2) != 0 )
       loc_0 = -559038737;
     Plat_ExitProcess(1);
 LABEL_5:
@@ -6588,7 +6588,7 @@ void *__fastcall __noreturn CAtomicManipulator<CResourceArray<CResourceExtRefere
     goto LABEL_5;
   while ( 1 )
   {
-    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v4, v5, v2, v3, v6, v7) != 0 )
+    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v4, v5, v2, v3) != 0 )
       loc_0 = -559038737;
     Plat_ExitProcess(1);
 LABEL_5:
@@ -6626,7 +6626,7 @@ void __fastcall __noreturn CAtomicManipulator<CResourceArray<CResourceExtReferen
     goto LABEL_5;
   while ( 1 )
   {
-    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v5, v6, v3, v4, v7, v8) != 0 )
+    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v5, v6, v3, v4) != 0 )
       loc_0 = -559038737;
     Plat_ExitProcess(1);
 LABEL_5:
@@ -6663,7 +6663,7 @@ void __fastcall __noreturn CAtomicManipulator<CResourceArray<CResourceExtReferen
     goto LABEL_5;
   while ( 1 )
   {
-    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v4, v5, v2, v3, v6, v7) != 0 )
+    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v4, v5, v2, v3) != 0 )
       loc_0 = -559038737;
     Plat_ExitProcess(1);
 LABEL_5:
@@ -6699,7 +6699,7 @@ void *__fastcall __noreturn CAtomicManipulator<CResourceArray<PermModelExtPart_t
     goto LABEL_5;
   while ( 1 )
   {
-    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v3, v4, v1, v2, v5, v6) != 0 )
+    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v3, v4, v1, v2) != 0 )
       loc_0 = -559038737;
     Plat_ExitProcess(1);
 LABEL_5:
@@ -6736,7 +6736,7 @@ void *__fastcall __noreturn CAtomicManipulator<CResourceArray<PermModelExtPart_t
     goto LABEL_5;
   while ( 1 )
   {
-    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v4, v5, v2, v3, v6, v7) != 0 )
+    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v4, v5, v2, v3) != 0 )
       loc_0 = -559038737;
     Plat_ExitProcess(1);
 LABEL_5:
@@ -6774,7 +6774,7 @@ void __fastcall __noreturn CAtomicManipulator<CResourceArray<PermModelExtPart_t>
     goto LABEL_5;
   while ( 1 )
   {
-    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v5, v6, v3, v4, v7, v8) != 0 )
+    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v5, v6, v3, v4) != 0 )
       loc_0 = -559038737;
     Plat_ExitProcess(1);
 LABEL_5:
@@ -6811,7 +6811,7 @@ void __fastcall __noreturn CAtomicManipulator<CResourceArray<PermModelExtPart_t>
     goto LABEL_5;
   while ( 1 )
   {
-    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v4, v5, v2, v3, v6, v7) != 0 )
+    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v4, v5, v2, v3) != 0 )
       loc_0 = -559038737;
     Plat_ExitProcess(1);
 LABEL_5:
@@ -6847,7 +6847,7 @@ void *__fastcall __noreturn CAtomicManipulator<CResourceArray<ModelBoneFlexDrive
     goto LABEL_5;
   while ( 1 )
   {
-    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v3, v4, v1, v2, v5, v6) != 0 )
+    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v3, v4, v1, v2) != 0 )
       loc_0 = -559038737;
     Plat_ExitProcess(1);
 LABEL_5:
@@ -6884,7 +6884,7 @@ void *__fastcall __noreturn CAtomicManipulator<CResourceArray<ModelBoneFlexDrive
     goto LABEL_5;
   while ( 1 )
   {
-    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v4, v5, v2, v3, v6, v7) != 0 )
+    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v4, v5, v2, v3) != 0 )
       loc_0 = -559038737;
     Plat_ExitProcess(1);
 LABEL_5:
@@ -6922,7 +6922,7 @@ void __fastcall __noreturn CAtomicManipulator<CResourceArray<ModelBoneFlexDriver
     goto LABEL_5;
   while ( 1 )
   {
-    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v5, v6, v3, v4, v7, v8) != 0 )
+    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v5, v6, v3, v4) != 0 )
       loc_0 = -559038737;
     Plat_ExitProcess(1);
 LABEL_5:
@@ -6959,7 +6959,7 @@ void __fastcall __noreturn CAtomicManipulator<CResourceArray<ModelBoneFlexDriver
     goto LABEL_5;
   while ( 1 )
   {
-    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v4, v5, v2, v3, v6, v7) != 0 )
+    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v4, v5, v2, v3) != 0 )
       loc_0 = -559038737;
     Plat_ExitProcess(1);
 LABEL_5:
@@ -6995,7 +6995,7 @@ void *__fastcall __noreturn CAtomicManipulator<CResourceArray<Quaternion>>::Allo
     goto LABEL_5;
   while ( 1 )
   {
-    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v3, v4, v1, v2, v5, v6) != 0 )
+    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v3, v4, v1, v2) != 0 )
       loc_0 = -559038737;
     Plat_ExitProcess(1);
 LABEL_5:
@@ -7032,7 +7032,7 @@ void *__fastcall __noreturn CAtomicManipulator<CResourceArray<Quaternion>>::Allo
     goto LABEL_5;
   while ( 1 )
   {
-    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v4, v5, v2, v3, v6, v7) != 0 )
+    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v4, v5, v2, v3) != 0 )
       loc_0 = -559038737;
     Plat_ExitProcess(1);
 LABEL_5:
@@ -7070,7 +7070,7 @@ void __fastcall __noreturn CAtomicManipulator<CResourceArray<Quaternion>>::Copy(
     goto LABEL_5;
   while ( 1 )
   {
-    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v5, v6, v3, v4, v7, v8) != 0 )
+    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v5, v6, v3, v4) != 0 )
       loc_0 = -559038737;
     Plat_ExitProcess(1);
 LABEL_5:
@@ -7107,7 +7107,7 @@ void __fastcall __noreturn CAtomicManipulator<CResourceArray<Quaternion>>::Deall
     goto LABEL_5;
   while ( 1 )
   {
-    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v4, v5, v2, v3, v6, v7) != 0 )
+    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v4, v5, v2, v3) != 0 )
       loc_0 = -559038737;
     Plat_ExitProcess(1);
 LABEL_5:
@@ -7143,7 +7143,7 @@ void *__fastcall __noreturn CAtomicManipulator<CResourceArray<Vector>>::Allocate
     goto LABEL_5;
   while ( 1 )
   {
-    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v3, v4, v1, v2, v5, v6) != 0 )
+    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v3, v4, v1, v2) != 0 )
       loc_0 = -559038737;
     Plat_ExitProcess(1);
 LABEL_5:
@@ -7180,7 +7180,7 @@ void *__fastcall __noreturn CAtomicManipulator<CResourceArray<Vector>>::Allocate
     goto LABEL_5;
   while ( 1 )
   {
-    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v4, v5, v2, v3, v6, v7) != 0 )
+    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v4, v5, v2, v3) != 0 )
       loc_0 = -559038737;
     Plat_ExitProcess(1);
 LABEL_5:
@@ -7218,7 +7218,7 @@ void __fastcall __noreturn CAtomicManipulator<CResourceArray<Vector>>::Copy(
     goto LABEL_5;
   while ( 1 )
   {
-    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v5, v6, v3, v4, v7, v8) != 0 )
+    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v5, v6, v3, v4) != 0 )
       loc_0 = -559038737;
     Plat_ExitProcess(1);
 LABEL_5:
@@ -7255,7 +7255,7 @@ void __fastcall __noreturn CAtomicManipulator<CResourceArray<Vector>>::Deallocat
     goto LABEL_5;
   while ( 1 )
   {
-    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v4, v5, v2, v3, v6, v7) != 0 )
+    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v4, v5, v2, v3) != 0 )
       loc_0 = -559038737;
     Plat_ExitProcess(1);
 LABEL_5:
@@ -7291,7 +7291,7 @@ void *__fastcall __noreturn CAtomicManipulator<CResourceArray<short>>::Allocate(
     goto LABEL_5;
   while ( 1 )
   {
-    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v3, v4, v1, v2, v5, v6) != 0 )
+    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v3, v4, v1, v2) != 0 )
       loc_0 = -559038737;
     Plat_ExitProcess(1);
 LABEL_5:
@@ -7328,7 +7328,7 @@ void *__fastcall __noreturn CAtomicManipulator<CResourceArray<short>>::AllocateA
     goto LABEL_5;
   while ( 1 )
   {
-    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v4, v5, v2, v3, v6, v7) != 0 )
+    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v4, v5, v2, v3) != 0 )
       loc_0 = -559038737;
     Plat_ExitProcess(1);
 LABEL_5:
@@ -7366,7 +7366,7 @@ void __fastcall __noreturn CAtomicManipulator<CResourceArray<short>>::Copy(
     goto LABEL_5;
   while ( 1 )
   {
-    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v5, v6, v3, v4, v7, v8) != 0 )
+    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v5, v6, v3, v4) != 0 )
       loc_0 = -559038737;
     Plat_ExitProcess(1);
 LABEL_5:
@@ -7403,7 +7403,7 @@ void __fastcall __noreturn CAtomicManipulator<CResourceArray<short>>::Deallocate
     goto LABEL_5;
   while ( 1 )
   {
-    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v4, v5, v2, v3, v6, v7) != 0 )
+    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v4, v5, v2, v3) != 0 )
       loc_0 = -559038737;
     Plat_ExitProcess(1);
 LABEL_5:
@@ -7439,7 +7439,7 @@ void *__fastcall __noreturn CAtomicManipulator<CResourceArray<CResourceExtRefere
     goto LABEL_5;
   while ( 1 )
   {
-    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v3, v4, v1, v2, v5, v6) != 0 )
+    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v3, v4, v1, v2) != 0 )
       loc_0 = -559038737;
     Plat_ExitProcess(1);
 LABEL_5:
@@ -7476,7 +7476,7 @@ void *__fastcall __noreturn CAtomicManipulator<CResourceArray<CResourceExtRefere
     goto LABEL_5;
   while ( 1 )
   {
-    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v4, v5, v2, v3, v6, v7) != 0 )
+    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v4, v5, v2, v3) != 0 )
       loc_0 = -559038737;
     Plat_ExitProcess(1);
 LABEL_5:
@@ -7514,7 +7514,7 @@ void __fastcall __noreturn CAtomicManipulator<CResourceArray<CResourceExtReferen
     goto LABEL_5;
   while ( 1 )
   {
-    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v5, v6, v3, v4, v7, v8) != 0 )
+    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v5, v6, v3, v4) != 0 )
       loc_0 = -559038737;
     Plat_ExitProcess(1);
 LABEL_5:
@@ -7551,7 +7551,7 @@ void __fastcall __noreturn CAtomicManipulator<CResourceArray<CResourceExtReferen
     goto LABEL_5;
   while ( 1 )
   {
-    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v4, v5, v2, v3, v6, v7) != 0 )
+    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v4, v5, v2, v3) != 0 )
       loc_0 = -559038737;
     Plat_ExitProcess(1);
 LABEL_5:
@@ -7779,7 +7779,7 @@ void *__fastcall __noreturn CAtomicManipulator<CResourceArray<FlexRule_t>>::Allo
     goto LABEL_5;
   while ( 1 )
   {
-    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v3, v4, v1, v2, v5, v6) != 0 )
+    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v3, v4, v1, v2) != 0 )
       loc_0 = -559038737;
     Plat_ExitProcess(1);
 LABEL_5:
@@ -7816,7 +7816,7 @@ void *__fastcall __noreturn CAtomicManipulator<CResourceArray<FlexRule_t>>::Allo
     goto LABEL_5;
   while ( 1 )
   {
-    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v4, v5, v2, v3, v6, v7) != 0 )
+    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v4, v5, v2, v3) != 0 )
       loc_0 = -559038737;
     Plat_ExitProcess(1);
 LABEL_5:
@@ -7854,7 +7854,7 @@ void __fastcall __noreturn CAtomicManipulator<CResourceArray<FlexRule_t>>::Copy(
     goto LABEL_5;
   while ( 1 )
   {
-    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v5, v6, v3, v4, v7, v8) != 0 )
+    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v5, v6, v3, v4) != 0 )
       loc_0 = -559038737;
     Plat_ExitProcess(1);
 LABEL_5:
@@ -7891,7 +7891,7 @@ void __fastcall __noreturn CAtomicManipulator<CResourceArray<FlexRule_t>>::Deall
     goto LABEL_5;
   while ( 1 )
   {
-    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v4, v5, v2, v3, v6, v7) != 0 )
+    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v4, v5, v2, v3) != 0 )
       loc_0 = -559038737;
     Plat_ExitProcess(1);
 LABEL_5:
@@ -7927,7 +7927,7 @@ void *__fastcall __noreturn CAtomicManipulator<CResourceArray<FlexController_t>>
     goto LABEL_5;
   while ( 1 )
   {
-    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v3, v4, v1, v2, v5, v6) != 0 )
+    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v3, v4, v1, v2) != 0 )
       loc_0 = -559038737;
     Plat_ExitProcess(1);
 LABEL_5:
@@ -7964,7 +7964,7 @@ void *__fastcall __noreturn CAtomicManipulator<CResourceArray<FlexController_t>>
     goto LABEL_5;
   while ( 1 )
   {
-    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v4, v5, v2, v3, v6, v7) != 0 )
+    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v4, v5, v2, v3) != 0 )
       loc_0 = -559038737;
     Plat_ExitProcess(1);
 LABEL_5:
@@ -8002,7 +8002,7 @@ void __fastcall __noreturn CAtomicManipulator<CResourceArray<FlexController_t>>:
     goto LABEL_5;
   while ( 1 )
   {
-    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v5, v6, v3, v4, v7, v8) != 0 )
+    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v5, v6, v3, v4) != 0 )
       loc_0 = -559038737;
     Plat_ExitProcess(1);
 LABEL_5:
@@ -8039,7 +8039,7 @@ void __fastcall __noreturn CAtomicManipulator<CResourceArray<FlexController_t>>:
     goto LABEL_5;
   while ( 1 )
   {
-    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v4, v5, v2, v3, v6, v7) != 0 )
+    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v4, v5, v2, v3) != 0 )
       loc_0 = -559038737;
     Plat_ExitProcess(1);
 LABEL_5:
@@ -8075,7 +8075,7 @@ void *__fastcall __noreturn CAtomicManipulator<CResourceArray<FlexDesc_t>>::Allo
     goto LABEL_5;
   while ( 1 )
   {
-    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v3, v4, v1, v2, v5, v6) != 0 )
+    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v3, v4, v1, v2) != 0 )
       loc_0 = -559038737;
     Plat_ExitProcess(1);
 LABEL_5:
@@ -8112,7 +8112,7 @@ void *__fastcall __noreturn CAtomicManipulator<CResourceArray<FlexDesc_t>>::Allo
     goto LABEL_5;
   while ( 1 )
   {
-    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v4, v5, v2, v3, v6, v7) != 0 )
+    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v4, v5, v2, v3) != 0 )
       loc_0 = -559038737;
     Plat_ExitProcess(1);
 LABEL_5:
@@ -8150,7 +8150,7 @@ void __fastcall __noreturn CAtomicManipulator<CResourceArray<FlexDesc_t>>::Copy(
     goto LABEL_5;
   while ( 1 )
   {
-    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v5, v6, v3, v4, v7, v8) != 0 )
+    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v5, v6, v3, v4) != 0 )
       loc_0 = -559038737;
     Plat_ExitProcess(1);
 LABEL_5:
@@ -8187,7 +8187,7 @@ void __fastcall __noreturn CAtomicManipulator<CResourceArray<FlexDesc_t>>::Deall
     goto LABEL_5;
   while ( 1 )
   {
-    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v4, v5, v2, v3, v6, v7) != 0 )
+    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v4, v5, v2, v3) != 0 )
       loc_0 = -559038737;
     Plat_ExitProcess(1);
 LABEL_5:
@@ -8223,7 +8223,7 @@ void *__fastcall __noreturn CAtomicManipulator<CResourceArray<MorphData_t>>::All
     goto LABEL_5;
   while ( 1 )
   {
-    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v3, v4, v1, v2, v5, v6) != 0 )
+    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v3, v4, v1, v2) != 0 )
       loc_0 = -559038737;
     Plat_ExitProcess(1);
 LABEL_5:
@@ -8260,7 +8260,7 @@ void *__fastcall __noreturn CAtomicManipulator<CResourceArray<MorphData_t>>::All
     goto LABEL_5;
   while ( 1 )
   {
-    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v4, v5, v2, v3, v6, v7) != 0 )
+    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v4, v5, v2, v3) != 0 )
       loc_0 = -559038737;
     Plat_ExitProcess(1);
 LABEL_5:
@@ -8298,7 +8298,7 @@ void __fastcall __noreturn CAtomicManipulator<CResourceArray<MorphData_t>>::Copy
     goto LABEL_5;
   while ( 1 )
   {
-    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v5, v6, v3, v4, v7, v8) != 0 )
+    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v5, v6, v3, v4) != 0 )
       loc_0 = -559038737;
     Plat_ExitProcess(1);
 LABEL_5:
@@ -8335,7 +8335,7 @@ void __fastcall __noreturn CAtomicManipulator<CResourceArray<MorphData_t>>::Deal
     goto LABEL_5;
   while ( 1 )
   {
-    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v4, v5, v2, v3, v6, v7) != 0 )
+    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v4, v5, v2, v3) != 0 )
       loc_0 = -559038737;
     Plat_ExitProcess(1);
 LABEL_5:
@@ -8371,7 +8371,7 @@ void *__fastcall __noreturn CAtomicManipulator<CResourceArray<BundleType_t>>::Al
     goto LABEL_5;
   while ( 1 )
   {
-    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v3, v4, v1, v2, v5, v6) != 0 )
+    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v3, v4, v1, v2) != 0 )
       loc_0 = -559038737;
     Plat_ExitProcess(1);
 LABEL_5:
@@ -8408,7 +8408,7 @@ void *__fastcall __noreturn CAtomicManipulator<CResourceArray<BundleType_t>>::Al
     goto LABEL_5;
   while ( 1 )
   {
-    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v4, v5, v2, v3, v6, v7) != 0 )
+    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v4, v5, v2, v3) != 0 )
       loc_0 = -559038737;
     Plat_ExitProcess(1);
 LABEL_5:
@@ -8446,7 +8446,7 @@ void __fastcall __noreturn CAtomicManipulator<CResourceArray<BundleType_t>>::Cop
     goto LABEL_5;
   while ( 1 )
   {
-    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v5, v6, v3, v4, v7, v8) != 0 )
+    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v5, v6, v3, v4) != 0 )
       loc_0 = -559038737;
     Plat_ExitProcess(1);
 LABEL_5:
@@ -8483,7 +8483,7 @@ void __fastcall __noreturn CAtomicManipulator<CResourceArray<BundleType_t>>::Dea
     goto LABEL_5;
   while ( 1 )
   {
-    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v4, v5, v2, v3, v6, v7) != 0 )
+    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v4, v5, v2, v3) != 0 )
       loc_0 = -559038737;
     Plat_ExitProcess(1);
 LABEL_5:
@@ -8519,7 +8519,7 @@ void *__fastcall __noreturn CAtomicManipulator<CResourceArray<MorphRectData_t>>:
     goto LABEL_5;
   while ( 1 )
   {
-    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v3, v4, v1, v2, v5, v6) != 0 )
+    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v3, v4, v1, v2) != 0 )
       loc_0 = -559038737;
     Plat_ExitProcess(1);
 LABEL_5:
@@ -8556,7 +8556,7 @@ void *__fastcall __noreturn CAtomicManipulator<CResourceArray<MorphRectData_t>>:
     goto LABEL_5;
   while ( 1 )
   {
-    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v4, v5, v2, v3, v6, v7) != 0 )
+    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v4, v5, v2, v3) != 0 )
       loc_0 = -559038737;
     Plat_ExitProcess(1);
 LABEL_5:
@@ -8594,7 +8594,7 @@ void __fastcall __noreturn CAtomicManipulator<CResourceArray<MorphRectData_t>>::
     goto LABEL_5;
   while ( 1 )
   {
-    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v5, v6, v3, v4, v7, v8) != 0 )
+    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v5, v6, v3, v4) != 0 )
       loc_0 = -559038737;
     Plat_ExitProcess(1);
 LABEL_5:
@@ -8631,7 +8631,7 @@ void __fastcall __noreturn CAtomicManipulator<CResourceArray<MorphRectData_t>>::
     goto LABEL_5;
   while ( 1 )
   {
-    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v4, v5, v2, v3, v6, v7) != 0 )
+    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v4, v5, v2, v3) != 0 )
       loc_0 = -559038737;
     Plat_ExitProcess(1);
 LABEL_5:
@@ -8667,7 +8667,7 @@ void *__fastcall __noreturn CAtomicManipulator<CResourceArray<BundleData_t>>::Al
     goto LABEL_5;
   while ( 1 )
   {
-    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v3, v4, v1, v2, v5, v6) != 0 )
+    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v3, v4, v1, v2) != 0 )
       loc_0 = -559038737;
     Plat_ExitProcess(1);
 LABEL_5:
@@ -8704,7 +8704,7 @@ void *__fastcall __noreturn CAtomicManipulator<CResourceArray<BundleData_t>>::Al
     goto LABEL_5;
   while ( 1 )
   {
-    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v4, v5, v2, v3, v6, v7) != 0 )
+    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v4, v5, v2, v3) != 0 )
       loc_0 = -559038737;
     Plat_ExitProcess(1);
 LABEL_5:
@@ -8742,7 +8742,7 @@ void __fastcall __noreturn CAtomicManipulator<CResourceArray<BundleData_t>>::Cop
     goto LABEL_5;
   while ( 1 )
   {
-    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v5, v6, v3, v4, v7, v8) != 0 )
+    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v5, v6, v3, v4) != 0 )
       loc_0 = -559038737;
     Plat_ExitProcess(1);
 LABEL_5:
@@ -8779,7 +8779,7 @@ void __fastcall __noreturn CAtomicManipulator<CResourceArray<BundleData_t>>::Dea
     goto LABEL_5;
   while ( 1 )
   {
-    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v4, v5, v2, v3, v6, v7) != 0 )
+    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v4, v5, v2, v3) != 0 )
       loc_0 = -559038737;
     Plat_ExitProcess(1);
 LABEL_5:
@@ -8815,7 +8815,7 @@ void *__fastcall __noreturn CAtomicManipulator<CResourceArray<FlexOp_t>>::Alloca
     goto LABEL_5;
   while ( 1 )
   {
-    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v3, v4, v1, v2, v5, v6) != 0 )
+    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v3, v4, v1, v2) != 0 )
       loc_0 = -559038737;
     Plat_ExitProcess(1);
 LABEL_5:
@@ -8852,7 +8852,7 @@ void *__fastcall __noreturn CAtomicManipulator<CResourceArray<FlexOp_t>>::Alloca
     goto LABEL_5;
   while ( 1 )
   {
-    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v4, v5, v2, v3, v6, v7) != 0 )
+    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v4, v5, v2, v3) != 0 )
       loc_0 = -559038737;
     Plat_ExitProcess(1);
 LABEL_5:
@@ -8890,7 +8890,7 @@ void __fastcall __noreturn CAtomicManipulator<CResourceArray<FlexOp_t>>::Copy(
     goto LABEL_5;
   while ( 1 )
   {
-    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v5, v6, v3, v4, v7, v8) != 0 )
+    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v5, v6, v3, v4) != 0 )
       loc_0 = -559038737;
     Plat_ExitProcess(1);
 LABEL_5:
@@ -8927,7 +8927,7 @@ void __fastcall __noreturn CAtomicManipulator<CResourceArray<FlexOp_t>>::Dealloc
     goto LABEL_5;
   while ( 1 )
   {
-    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v4, v5, v2, v3, v6, v7) != 0 )
+    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v4, v5, v2, v3) != 0 )
       loc_0 = -559038737;
     Plat_ExitProcess(1);
 LABEL_5:
@@ -8948,7 +8948,7 @@ LABEL_5:
 // CResourceStream::~CResourceStream  (line 518, @0x0000000003268c60, libserver.so)
 void __fastcall CResourceStream::~CResourceStream(CResourceStream *const this)
 {
-  this->_vptr_CResourceStream = off_47D0ED0;
+  this->_vptr_CResourceStream = off_47D0ED0;  // vptr: CResourceStream
 }
 
 
@@ -8956,7 +8956,7 @@ void __fastcall CResourceStream::~CResourceStream(CResourceStream *const this)
 // calls: operator delete
 void __fastcall CResourceStream::~CResourceStream(CResourceStream *const this)
 {
-  this->_vptr_CResourceStream = off_47D0ED0;
+  this->_vptr_CResourceStream = off_47D0ED0;  // vptr: CResourceStream
   operator delete(this);
 }
 

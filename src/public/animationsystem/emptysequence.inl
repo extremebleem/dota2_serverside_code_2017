@@ -4,7 +4,7 @@
 // CEmptySequence::~CEmptySequence  (line 18, @0x0000000003145b00, libserver.so)  // inlines: ~IBaseSequence, ~ISequence, ~IVSSequence
 void __fastcall CEmptySequence::~CEmptySequence(CEmptySequence *const this)
 {
-  this->_vptr_IBaseSequence = off_47C52D0;
+  this->_vptr_IBaseSequence = off_47C52D0;  // vptr: IBaseSequence
 }
 
 
@@ -12,7 +12,7 @@ void __fastcall CEmptySequence::~CEmptySequence(CEmptySequence *const this)
 // calls: operator delete
 void __fastcall CEmptySequence::~CEmptySequence(CEmptySequence *const this)
 {
-  this->_vptr_IBaseSequence = off_47C52D0;
+  this->_vptr_IBaseSequence = off_47C52D0;  // vptr: IBaseSequence
   operator delete(this);
 }
 

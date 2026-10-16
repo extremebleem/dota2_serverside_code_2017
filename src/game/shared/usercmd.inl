@@ -4,7 +4,7 @@
 // CUserCmd::~CUserCmd  (line 39, @0x0000000002244ed0, libserver.so)
 void __fastcall CUserCmd::~CUserCmd(CUserCmd *const this)
 {
-  this->_vptr_CUserCmd = off_403F950;
+  this->_vptr_CUserCmd = off_403F950;  // vptr: CUserCmd
 }
 
 
@@ -12,7 +12,7 @@ void __fastcall CUserCmd::~CUserCmd(CUserCmd *const this)
 // calls: operator delete
 void __fastcall CUserCmd::~CUserCmd(CUserCmd *const this)
 {
-  this->_vptr_CUserCmd = off_403F950;
+  this->_vptr_CUserCmd = off_403F950;  // vptr: CUserCmd
   operator delete(this);
 }
 

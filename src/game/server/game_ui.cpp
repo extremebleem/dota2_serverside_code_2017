@@ -216,7 +216,7 @@ CEntityInstance *__fastcall CGameUI::CEntityInstanceEntityClass::ConstructInstan
 void __fastcall CGameUI::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CGameUI::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -226,7 +226,7 @@ void __fastcall CGameUI::CEntityInstanceEntityClass::~CEntityInstanceEntityClass
 void __fastcall CGameUI::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CGameUI::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }

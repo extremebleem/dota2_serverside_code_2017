@@ -240,7 +240,7 @@ CEntityInstance *__fastcall CEnvBeam::CEntityInstanceEntityClass::ConstructInsta
 void __fastcall CEnvBeam::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CEnvBeam::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -250,7 +250,7 @@ void __fastcall CEnvBeam::CEntityInstanceEntityClass::~CEntityInstanceEntityClas
 void __fastcall CEnvBeam::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CEnvBeam::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }

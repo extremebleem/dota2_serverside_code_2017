@@ -32,30 +32,24 @@ void __cdecl GLOBAL__sub_I_entity2_networking_cpp()
   UNSPECIFIED_LOGGING_COLOR._color[1] = 0;
   UNSPECIFIED_LOGGING_COLOR._color[2] = 0;
   UNSPECIFIED_LOGGING_COLOR._color[3] = 0;
-  if ( `guard variable for'g_HuffmanEncoder == 0 )
-  {
-    `guard variable for'g_HuffmanEncoder = 1;
-    g_HuffmanEncoder.m_pRoot = 0;
-    g_HuffmanEncoder.m_Frequencies.m_Size = 0;
-    g_HuffmanEncoder.m_Frequencies.m_Memory.m_pMemory = 0;
-    g_HuffmanEncoder.m_Frequencies.m_Memory.m_nAllocationCount = 0;
-    g_HuffmanEncoder.m_Frequencies.m_Memory.m_nGrowSize = 0;
-    g_HuffmanEncoder.m_OpCodeToHuffmanLookup.m_Size = 0;
-    g_HuffmanEncoder.m_FixedTree.m_Size = 0;
-    g_HuffmanEncoder.m_FixedTree.m_Memory.m_pMemory = 0;
-    g_HuffmanEncoder.m_FixedTree.m_Memory.m_nAllocationCount = 0;
-    g_HuffmanEncoder.m_FixedTree.m_Memory.m_nGrowSize = 0;
-    CFieldPathHuffmanEncoder::BuildOpCodeCodeToHuffmanLookup(&g_HuffmanEncoder);
-    __cxa_atexit(CFieldPathHuffmanEncoder::~CFieldPathHuffmanEncoder, &g_HuffmanEncoder, &_dso_handle);
-  }
-  if ( `guard variable for'CEntityKeyValues::sm_EmptyVariant == 0 )
-  {
-    `guard variable for'CEntityKeyValues::sm_EmptyVariant = 1;
-    CEntityKeyValues::sm_EmptyVariant.m_type = 0;
-    CEntityKeyValues::sm_EmptyVariant.m_flags = 0;
-    CEntityKeyValues::sm_EmptyVariant.m_uint64 = 0;
-    __cxa_atexit(CVariantBase<CEntityVariantAllocator>::~CVariantBase, &CEntityKeyValues::sm_EmptyVariant, &_dso_handle);
-  }
+  // init once: g_HuffmanEncoder
+  g_HuffmanEncoder.m_pRoot = 0;
+  g_HuffmanEncoder.m_Frequencies.m_Size = 0;
+  g_HuffmanEncoder.m_Frequencies.m_Memory.m_pMemory = 0;
+  g_HuffmanEncoder.m_Frequencies.m_Memory.m_nAllocationCount = 0;
+  g_HuffmanEncoder.m_Frequencies.m_Memory.m_nGrowSize = 0;
+  g_HuffmanEncoder.m_OpCodeToHuffmanLookup.m_Size = 0;
+  g_HuffmanEncoder.m_FixedTree.m_Size = 0;
+  g_HuffmanEncoder.m_FixedTree.m_Memory.m_pMemory = 0;
+  g_HuffmanEncoder.m_FixedTree.m_Memory.m_nAllocationCount = 0;
+  g_HuffmanEncoder.m_FixedTree.m_Memory.m_nGrowSize = 0;
+  CFieldPathHuffmanEncoder::BuildOpCodeCodeToHuffmanLookup(&g_HuffmanEncoder);
+  __cxa_atexit(CFieldPathHuffmanEncoder::~CFieldPathHuffmanEncoder, &g_HuffmanEncoder, &_dso_handle);
+  // init once: CEntityKeyValues::sm_EmptyVariant
+  CEntityKeyValues::sm_EmptyVariant.m_type = 0;
+  CEntityKeyValues::sm_EmptyVariant.m_flags = 0;
+  CEntityKeyValues::sm_EmptyVariant.m_uint64 = 0;
+  __cxa_atexit(CVariantBase<CEntityVariantAllocator>::~CVariantBase, &CEntityKeyValues::sm_EmptyVariant, &_dso_handle);
 }
 
 
@@ -63,7 +57,7 @@ void __cdecl GLOBAL__sub_I_entity2_networking_cpp()
 void __fastcall CNetworkSerializerBindingBuildFilter::~CNetworkSerializerBindingBuildFilter(
         CNetworkSerializerBindingBuildFilter *const this)
 {
-  this->_vptr_INetworkSerializerBindingBuildFilter = off_47C32F0;
+  this->_vptr_INetworkSerializerBindingBuildFilter = off_47C32F0;  // vptr: INetworkSerializerBindingBuildFilter
 }
 
 
@@ -72,7 +66,7 @@ void __fastcall CNetworkSerializerBindingBuildFilter::~CNetworkSerializerBinding
 void __fastcall CNetworkSerializerBindingBuildFilter::~CNetworkSerializerBindingBuildFilter(
         CNetworkSerializerBindingBuildFilter *const this)
 {
-  this->_vptr_INetworkSerializerBindingBuildFilter = off_47C32F0;
+  this->_vptr_INetworkSerializerBindingBuildFilter = off_47C32F0;  // vptr: INetworkSerializerBindingBuildFilter
   operator delete(this);
 }
 
@@ -97,8 +91,7 @@ int __fastcall CNetworkSerializerBindingBuildFilter::GetFieldPriority(
     if ( m_nPriority == 0x80000000
       && AssertMsg_ConditionFailed(
            &CNetworkSerializerBindingBuildFilter::GetFieldPriority(CSchemaClassInfo const*)const::_assertionConstants,
-           "Component %s illegally specified INT_MIN as its priority!\n",
-           pInfo->m_Name.m_pImplChars) != 0 )
+           "Component %s illegally specified INT_MIN as its priority!\n") != 0 )
     {
       __debugbreak();
     }
@@ -262,9 +255,9 @@ LABEL_26:
             v22 = 0;
           }
           v22->m_pClassIntrospection = v17;
-          v23 = operator new(0x10u);
+          v23 = operator new(0x10u);  // new CNetworkSerializerBindingBuildFilter (size matches)
           v23[1]._vptr_INetworkSerializerBindingBuildFilter = v24;
-          v23->_vptr_INetworkSerializerBindingBuildFilter = off_47C3330;
+          v23->_vptr_INetworkSerializerBindingBuildFilter = off_47C3330;  // vptr: CNetworkSerializerBindingBuildFilter
           v22->m_pFilter = v23;
           v22->m_pSerializerHandle = &v24->m_hNetworkSerializer;
           v22->m_bForceCannotBeNetworked = 1;

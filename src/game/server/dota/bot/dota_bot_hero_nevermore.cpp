@@ -57,9 +57,9 @@ CDOTA_BotMode *__fastcall CDOTA_Bot_Hero_Nevermore::CreateMode(CDOTA_Bot_Hero_Ne
 
   if ( this->m_bHuman || iMode != 2 )
     return CDOTA_Bot::CreateMode(this, iMode);
-  v4 = operator new(0xE8u);
+  v4 = operator new(0xE8u);  // new CDOTA_BotMode_Attack_Nevermore (size matches)
   CDOTA_BotMode_Attack::CDOTA_BotMode_Attack(v4, this);
-  v4->_vptr_CDOTA_BotMode = off_42CE7F0;
+  v4->_vptr_CDOTA_BotMode = off_42CE7F0;  // vptr: CDOTA_BotMode_Attack_Nevermore
   return v4;
 }
 
@@ -251,7 +251,7 @@ void __fastcall CDOTA_Bot_AbilityUsage_Nevermore_Shadowraze::CDOTA_Bot_AbilityUs
 {
   this->m_pAbility = pAbility;
   this->m_pBot = pBot;
-  this->_vptr_CDOTA_Bot_AbilityUsage = off_42CE890;
+  this->_vptr_CDOTA_Bot_AbilityUsage = off_42CE890;  // vptr: CDOTA_Bot_AbilityUsage_Nevermore_Shadowraze
   this->m_iShadowrazeLevel = iShadowrazeLevel;
   this->m_bUseOnCreeps = 1;
 }
@@ -528,7 +528,7 @@ void __fastcall CDOTA_Bot_AbilityUsage_Nevermore_Requiem::CDOTA_Bot_AbilityUsage
   this->m_pAbility = pAbility;
   this->m_bUseOnCreeps = 0;
   this->m_pBot = pBot;
-  this->_vptr_CDOTA_Bot_AbilityUsage = off_42CE8F0;
+  this->_vptr_CDOTA_Bot_AbilityUsage = off_42CE8F0;  // vptr: CDOTA_Bot_AbilityUsage_Nevermore_Requiem
 }
 
 

@@ -4,7 +4,7 @@
 // CDOTA_BotMode_Attack::~CDOTA_BotMode_Attack  (line 15, @0x0000000002811f20, libserver.so)  // inlines: ~CDOTA_BotMode
 void __fastcall CDOTA_BotMode_Attack::~CDOTA_BotMode_Attack(CDOTA_BotMode_Attack *const this)
 {
-  this->_vptr_CDOTA_BotMode = off_42B75F0;
+  this->_vptr_CDOTA_BotMode = off_42B75F0;  // vptr: CDOTA_BotMode
 }
 
 
@@ -12,7 +12,7 @@ void __fastcall CDOTA_BotMode_Attack::~CDOTA_BotMode_Attack(CDOTA_BotMode_Attack
 // calls: operator delete
 void __fastcall CDOTA_BotMode_Attack::~CDOTA_BotMode_Attack(CDOTA_BotMode_Attack *const this)
 {
-  this->_vptr_CDOTA_BotMode = off_42B75F0;
+  this->_vptr_CDOTA_BotMode = off_42B75F0;  // vptr: CDOTA_BotMode
   operator delete(this);
 }
 
@@ -27,7 +27,7 @@ DOTA_BOT_MODE __fastcall CDOTA_BotMode_Attack::GetModeType(CDOTA_BotMode_Attack 
 // CDOTA_BotMode_Attack_Human::~CDOTA_BotMode_Attack_Human  (line 52, @0x0000000002811f80, libserver.so)  // inlines: ~CDOTA_BotMode, ~CDOTA_BotMode_Attack
 void __fastcall CDOTA_BotMode_Attack_Human::~CDOTA_BotMode_Attack_Human(CDOTA_BotMode_Attack_Human *const this)
 {
-  this->_vptr_CDOTA_BotMode = off_42B75F0;
+  this->_vptr_CDOTA_BotMode = off_42B75F0;  // vptr: CDOTA_BotMode
 }
 
 
@@ -35,7 +35,7 @@ void __fastcall CDOTA_BotMode_Attack_Human::~CDOTA_BotMode_Attack_Human(CDOTA_Bo
 // calls: operator delete
 void __fastcall CDOTA_BotMode_Attack_Human::~CDOTA_BotMode_Attack_Human(CDOTA_BotMode_Attack_Human *const this)
 {
-  this->_vptr_CDOTA_BotMode = off_42B75F0;
+  this->_vptr_CDOTA_BotMode = off_42B75F0;  // vptr: CDOTA_BotMode
   operator delete(this);
 }
 

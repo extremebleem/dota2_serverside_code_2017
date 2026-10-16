@@ -9,7 +9,7 @@ void __fastcall CGridNavBase::~CGridNavBase(CGridNavBase *const this)
   CUtlMemory<unsigned char,int> *p_m_Memory; // r12
 
   v2 = (this->m_CellFlags.m_Memory.m_nGrowSize & 0xC0000000) == 0;
-  this->_vptr_IGameSystem = off_40F6C10;
+  this->_vptr_IGameSystem = off_40F6C10;  // vptr: CGridNavBase
   this->m_CellFlags.m_Size = 0;
   if ( v2 )
   {
@@ -18,7 +18,7 @@ void __fastcall CGridNavBase::~CGridNavBase(CGridNavBase *const this)
     if ( (this->m_CellFlags.m_Memory.m_nGrowSize & 0xC0000000) == 0 )
       CUtlMemory<unsigned char,int>::Purge(p_m_Memory);
   }
-  this->_vptr_IGameSystem = off_3F7C1B0;
+  this->_vptr_IGameSystem = off_3F7C1B0;  // vptr: CAutoGameSystem
   IGameSystem::~IGameSystem(this);
 }
 
@@ -31,7 +31,7 @@ void __fastcall CGridNavBase::~CGridNavBase(CGridNavBase *const this)
   CUtlMemory<unsigned char,int> *p_m_Memory; // r12
 
   v2 = (this->m_CellFlags.m_Memory.m_nGrowSize & 0xC0000000) == 0;
-  this->_vptr_IGameSystem = off_40F6C10;
+  this->_vptr_IGameSystem = off_40F6C10;  // vptr: CGridNavBase
   this->m_CellFlags.m_Size = 0;
   if ( v2 )
   {
@@ -40,7 +40,7 @@ void __fastcall CGridNavBase::~CGridNavBase(CGridNavBase *const this)
     if ( (this->m_CellFlags.m_Memory.m_nGrowSize & 0xC0000000) == 0 )
       CUtlMemory<unsigned char,int>::Purge(p_m_Memory);
   }
-  this->_vptr_IGameSystem = off_3F7C1B0;
+  this->_vptr_IGameSystem = off_3F7C1B0;  // vptr: CAutoGameSystem
   IGameSystem::~IGameSystem(this);
   operator delete(this);
 }

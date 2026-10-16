@@ -25,7 +25,7 @@ public:
 // CDOTAPlayerMove::~CDOTAPlayerMove  (line 32, @0x000000000269d8d0, libserver.so)  // inlines: ~CPlayerMove
 void __fastcall CDOTAPlayerMove::~CDOTAPlayerMove(CDOTAPlayerMove *const this)
 {
-  this->_vptr_CPlayerMove = off_408A030;
+  this->_vptr_CPlayerMove = off_408A030;  // vptr: CPlayerMove
 }
 
 
@@ -33,7 +33,7 @@ void __fastcall CDOTAPlayerMove::~CDOTAPlayerMove(CDOTAPlayerMove *const this)
 // calls: operator delete
 void __fastcall CDOTAPlayerMove::~CDOTAPlayerMove(CDOTAPlayerMove *const this)
 {
-  this->_vptr_CPlayerMove = off_408A030;
+  this->_vptr_CPlayerMove = off_408A030;  // vptr: CPlayerMove
   operator delete(this);
 }
 

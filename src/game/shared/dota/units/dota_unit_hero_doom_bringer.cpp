@@ -705,7 +705,7 @@ CEntityInstance *__fastcall CDOTA_Unit_Hero_DoomBringer::CEntityInstanceEntityCl
 void __fastcall CDOTA_Unit_Hero_DoomBringer::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Unit_Hero_DoomBringer::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -715,7 +715,7 @@ void __fastcall CDOTA_Unit_Hero_DoomBringer::CEntityInstanceEntityClass::~CEntit
 void __fastcall CDOTA_Unit_Hero_DoomBringer::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Unit_Hero_DoomBringer::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -926,7 +926,7 @@ CEntityInstance *__fastcall CDOTA_Ability_DoomBringer_Devour::CEntityInstanceEnt
 void __fastcall CDOTA_Ability_DoomBringer_Devour::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_DoomBringer_Devour::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -936,7 +936,7 @@ void __fastcall CDOTA_Ability_DoomBringer_Devour::CEntityInstanceEntityClass::~C
 void __fastcall CDOTA_Ability_DoomBringer_Devour::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_DoomBringer_Devour::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -1404,7 +1404,7 @@ CEntityInstance *__fastcall CDOTA_Ability_DoomBringer_ScorchedEarth::CEntityInst
 void __fastcall CDOTA_Ability_DoomBringer_ScorchedEarth::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_DoomBringer_ScorchedEarth::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -1414,7 +1414,7 @@ void __fastcall CDOTA_Ability_DoomBringer_ScorchedEarth::CEntityInstanceEntityCl
 void __fastcall CDOTA_Ability_DoomBringer_ScorchedEarth::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_DoomBringer_ScorchedEarth::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -2007,7 +2007,7 @@ CEntityInstance *__fastcall CDOTA_Ability_DoomBringer_InfernalBlade::CEntityInst
 void __fastcall CDOTA_Ability_DoomBringer_InfernalBlade::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_DoomBringer_InfernalBlade::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -2017,7 +2017,7 @@ void __fastcall CDOTA_Ability_DoomBringer_InfernalBlade::CEntityInstanceEntityCl
 void __fastcall CDOTA_Ability_DoomBringer_InfernalBlade::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_DoomBringer_InfernalBlade::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -2742,7 +2742,7 @@ CEntityInstance *__fastcall CDOTA_Ability_DoomBringer_Doom::CEntityInstanceEntit
 void __fastcall CDOTA_Ability_DoomBringer_Doom::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_DoomBringer_Doom::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -2752,7 +2752,7 @@ void __fastcall CDOTA_Ability_DoomBringer_Doom::CEntityInstanceEntityClass::~CEn
 void __fastcall CDOTA_Ability_DoomBringer_Doom::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_DoomBringer_Doom::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -3301,7 +3301,7 @@ CEntityInstance *__fastcall CDOTA_Ability_DoomBringer_Empty1::CEntityInstanceEnt
 void __fastcall CDOTA_Ability_DoomBringer_Empty1::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_DoomBringer_Empty1::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -3311,7 +3311,7 @@ void __fastcall CDOTA_Ability_DoomBringer_Empty1::CEntityInstanceEntityClass::~C
 void __fastcall CDOTA_Ability_DoomBringer_Empty1::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_DoomBringer_Empty1::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -3468,7 +3468,7 @@ CEntityInstance *__fastcall CDOTA_Ability_DoomBringer_Empty2::CEntityInstanceEnt
 void __fastcall CDOTA_Ability_DoomBringer_Empty2::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_DoomBringer_Empty2::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -3478,7 +3478,7 @@ void __fastcall CDOTA_Ability_DoomBringer_Empty2::CEntityInstanceEntityClass::~C
 void __fastcall CDOTA_Ability_DoomBringer_Empty2::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_DoomBringer_Empty2::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }

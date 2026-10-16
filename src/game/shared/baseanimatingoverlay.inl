@@ -77,7 +77,7 @@ CEntityInstance *__fastcall CBaseAnimatingOverlay::CEntityInstanceEntityClass::C
 void __fastcall CBaseAnimatingOverlay::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CBaseAnimatingOverlay::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -87,7 +87,7 @@ void __fastcall CBaseAnimatingOverlay::CEntityInstanceEntityClass::~CEntityInsta
 void __fastcall CBaseAnimatingOverlay::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CBaseAnimatingOverlay::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }

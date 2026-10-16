@@ -245,7 +245,7 @@ void __fastcall CPhysicsPushedEntities::ComputeRotationalPushDirection(
 // CTraceFilterPushFinal::~CTraceFilterPushFinal  (line 128, @0x0000000002304820, libserver.so)  // inlines: ~CTraceFilter, ~CTraceFilterSimple
 void __fastcall CTraceFilterPushFinal::~CTraceFilterPushFinal(CTraceFilterPushFinal *const this)
 {
-  this->_vptr_CTraceFilter = off_3FE6970;
+  this->_vptr_CTraceFilter = off_3FE6970;  // vptr: CTraceFilter
 }
 
 
@@ -253,7 +253,7 @@ void __fastcall CTraceFilterPushFinal::~CTraceFilterPushFinal(CTraceFilterPushFi
 // calls: operator delete
 void __fastcall CTraceFilterPushFinal::~CTraceFilterPushFinal(CTraceFilterPushFinal *const this)
 {
-  this->_vptr_CTraceFilter = off_3FE6970;
+  this->_vptr_CTraceFilter = off_3FE6970;  // vptr: CTraceFilter
   operator delete(this);
 }
 
@@ -841,19 +841,19 @@ void __fastcall CTraceFilterAgainstEntityList::~CTraceFilterAgainstEntityList(
   CUtlVectorBase<CBaseEntity*,CUtlMemory<CBaseEntity*,int> >::CAllocator *p_m_Memory; // r12
 
   v2 = (this->m_entityList.m_Memory.m_nGrowSize & 0xC0000000) == 0;
-  this->_vptr_CTraceFilter = off_407F4B0;
+  this->_vptr_CTraceFilter = off_407F4B0;  // vptr: CTraceFilterAgainstEntityList
   this->m_entityList.m_Size = 0;
   if ( !v2
     || (p_m_Memory = &this->m_entityList.m_Memory,
         CUtlMemory<CBaseEntity *,int>::Purge(&this->m_entityList.m_Memory),
         (this->m_entityList.m_Memory.m_nGrowSize & 0xC0000000) != 0) )
   {
-    this->_vptr_CTraceFilter = off_3FE6970;
+    this->_vptr_CTraceFilter = off_3FE6970;  // vptr: CTraceFilter
   }
   else
   {
     CUtlMemory<CBaseEntity *,int>::Purge(p_m_Memory);
-    this->_vptr_CTraceFilter = off_3FE6970;
+    this->_vptr_CTraceFilter = off_3FE6970;  // vptr: CTraceFilter
   }
 }
 
@@ -867,7 +867,7 @@ void __fastcall CTraceFilterAgainstEntityList::~CTraceFilterAgainstEntityList(
   CUtlVectorBase<CBaseEntity*,CUtlMemory<CBaseEntity*,int> >::CAllocator *p_m_Memory; // r12
 
   v2 = (this->m_entityList.m_Memory.m_nGrowSize & 0xC0000000) == 0;
-  this->_vptr_CTraceFilter = off_407F4B0;
+  this->_vptr_CTraceFilter = off_407F4B0;  // vptr: CTraceFilterAgainstEntityList
   this->m_entityList.m_Size = 0;
   if ( v2 )
   {
@@ -876,7 +876,7 @@ void __fastcall CTraceFilterAgainstEntityList::~CTraceFilterAgainstEntityList(
     if ( (this->m_entityList.m_Memory.m_nGrowSize & 0xC0000000) == 0 )
       CUtlMemory<CBaseEntity *,int>::Purge(p_m_Memory);
   }
-  this->_vptr_CTraceFilter = off_3FE6970;
+  this->_vptr_CTraceFilter = off_3FE6970;  // vptr: CTraceFilter
   operator delete(this);
 }
 
@@ -917,7 +917,7 @@ void __fastcall CPushBlockerEnum::~CPushBlockerEnum(CPushBlockerEnum *const this
   CUtlVectorBase<CBaseEntity*,CUtlMemory<CBaseEntity*,int> >::CAllocator *p_m_Memory; // r12
 
   v2 = (this->m_pushersOnly.m_entityList.m_Memory.m_nGrowSize & 0xC0000000) == 0;
-  this->_vptr_CTraceFilter = off_407F4F0;
+  this->_vptr_CTraceFilter = off_407F4F0;  // vptr: CPushBlockerEnum
   this->m_pushersOnly._vptr_CTraceFilter = off_407F4B0;
   this->m_pushersOnly.m_entityList.m_Size = 0;
   if ( v2 )
@@ -928,7 +928,7 @@ void __fastcall CPushBlockerEnum::~CPushBlockerEnum(CPushBlockerEnum *const this
       CUtlMemory<CBaseEntity *,int>::Purge(p_m_Memory);
   }
   this->m_pushersOnly._vptr_CTraceFilter = off_3FE6970;
-  this->_vptr_CTraceFilter = off_3FE6970;
+  this->_vptr_CTraceFilter = off_3FE6970;  // vptr: CTraceFilter
 }
 
 
@@ -940,7 +940,7 @@ void __fastcall CPushBlockerEnum::~CPushBlockerEnum(CPushBlockerEnum *const this
   CUtlVectorBase<CBaseEntity*,CUtlMemory<CBaseEntity*,int> >::CAllocator *p_m_Memory; // r12
 
   v2 = (this->m_pushersOnly.m_entityList.m_Memory.m_nGrowSize & 0xC0000000) == 0;
-  this->_vptr_CTraceFilter = off_407F4F0;
+  this->_vptr_CTraceFilter = off_407F4F0;  // vptr: CPushBlockerEnum
   this->m_pushersOnly._vptr_CTraceFilter = off_407F4B0;
   this->m_pushersOnly.m_entityList.m_Size = 0;
   if ( v2 )
@@ -951,7 +951,7 @@ void __fastcall CPushBlockerEnum::~CPushBlockerEnum(CPushBlockerEnum *const this
       CUtlMemory<CBaseEntity *,int>::Purge(p_m_Memory);
   }
   this->m_pushersOnly._vptr_CTraceFilter = off_3FE6970;
-  this->_vptr_CTraceFilter = off_3FE6970;
+  this->_vptr_CTraceFilter = off_3FE6970;  // vptr: CTraceFilter
   operator delete(this);
 }
 
@@ -1391,7 +1391,7 @@ CBaseEntity *__fastcall CPhysicsPushedEntities::PerformRotatePush(
   angPrevAngles = *CBaseEntity::GetLocalAngles(pRoot);
   CPhysicsPushedEntities::RotateRootEntity(this, pRoot, a3, &rotPushMove);
   CPhysicsPushedEntities::GenerateBlockingEntityList(this, &vec3_origin);
-  if ( (*this->_vptr_CPhysicsPushedEntities)(this, &rotPushMove, pRoot) != 0 )
+  if ( this->SpeculativelyCheckRotPush(&rotPushMove, pRoot) != 0 )
   {
     CPhysicsPushedEntities::FinishPush(this, 1, &rotPushMove);
     return 0;

@@ -65,7 +65,7 @@ void __fastcall CDOTAEventLog::SetGameSystemGlobalPtrs(CDOTAEventLog *const this
 // calls: CEventLog::~CEventLog
 void __fastcall CDOTAEventLog::~CDOTAEventLog(CDOTAEventLog *const this)
 {
-  this->_vptr_IGameEventListener2 = off_40F69D0;
+  this->_vptr_IGameEventListener2 = off_40F69D0;  // vptr: CDOTAEventLog
   this->_vptr_IGameSystem = off_40F6A48;
   CEventLog::~CEventLog(this);
 }
@@ -75,7 +75,7 @@ void __fastcall CDOTAEventLog::~CDOTAEventLog(CDOTAEventLog *const this)
 // calls: CEventLog::~CEventLog, operator delete
 void __fastcall CDOTAEventLog::~CDOTAEventLog(CDOTAEventLog *const this)
 {
-  this->_vptr_IGameEventListener2 = off_40F69D0;
+  this->_vptr_IGameEventListener2 = off_40F69D0;  // vptr: CDOTAEventLog
   this->_vptr_IGameSystem = off_40F6A48;
   CEventLog::~CEventLog(this);
   operator delete(this);

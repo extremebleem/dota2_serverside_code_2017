@@ -42,7 +42,7 @@ void __fastcall CAppSystemDict::CAppSystemDict(
   unsigned __int64 v14; // [rsp+228h] [rbp-38h]
 
   v14 = __readfsqword(0x28u);
-  this->_vptr_CAppSystemDict = off_47C2750;
+  this->_vptr_CAppSystemDict = off_47C2750;  // vptr: CAppSystemDict
   this->m_modules.m_Size = 0;
   this->m_modules.m_Memory.m_pMemory = 0;
   this->m_modules.m_Memory.m_nAllocationCount = 0;
@@ -128,7 +128,7 @@ void __fastcall CAppSystemDict::~CAppSystemDict(CAppSystemDict *const this)
   int v12; // r12d
   char *v13; // rsi
 
-  this->_vptr_CAppSystemDict = off_47C2750;
+  this->_vptr_CAppSystemDict = off_47C2750;  // vptr: CAppSystemDict
   CAppSystemDict::Shutdown(this, 0);
   LoggingSystem_PopLoggingState(0);
   m_nExpectedShutdownLoggingStateIndex = this->m_nExpectedShutdownLoggingStateIndex;
@@ -260,8 +260,8 @@ IApplication *__fastcall CAppSystemDict::CreateApplication(CAppSystemDict *const
 {
   IApplication *result; // rax
 
-  result = operator new(0x10u);
-  result->_vptr_IAppSystem = off_408BFB0;
+  result = operator new(0x10u);  // new CTier1Application (size matches)
+  result->_vptr_IAppSystem = off_408BFB0;  // vptr: CTier1Application
   result[1]._vptr_IAppSystem = this;
   return result;
 }
@@ -551,10 +551,8 @@ IAppSystem *__fastcall CAppSystemDict::AddSystem(
   __int64 v15; // rcx
   __int64 v16; // rdi
   __int64 v17; // rsi
-  __int64 v18; // r8
-  __int64 v19; // r9
-  CUtlMemory<CAppSystemDict::AppSystemRequest_t,int> *v20; // r13
-  IAppSystem *v21; // rax
+  CUtlMemory<CAppSystemDict::AppSystemRequest_t,int> *v18; // r13
+  IAppSystem *v19; // rax
   const char *m_pInterfaceName; // r9
   CUtlVector<CAppSystemDict::AppSystemRequest_t,CUtlMemory<CAppSystemDict::AppSystemRequest_t,int> > requests; // [rsp+20h] [rbp-90h] BYREF
   CAppSystemDict::AppSystemRequest_t request; // [rsp+40h] [rbp-70h] BYREF
@@ -574,7 +572,7 @@ IAppSystem *__fastcall CAppSystemDict::AddSystem(
       m_pSystem = &LOG_GENERAL;
       if ( LoggingSystem_IsChannelEnabled(LOG_GENERAL, 4) != 0 )
       {
-        v21 = v13->m_pSystem;
+        v19 = v13->m_pSystem;
         m_pInterfaceName = v13->m_pInterfaceName;
         request.m_pRequestingModuleName = "appsystemdict.cpp";
         request.m_pModuleName = "AddSystem";
@@ -587,11 +585,11 @@ IAppSystem *__fastcall CAppSystemDict::AddSystem(
           "(Addresses differ: existing '%s' @ '%p' != requested '%s' @ '%p')\n",
           pInterfaceName,
           m_pInterfaceName,
-          v21,
+          v19,
           pInterfaceName,
           pAppSystem);
       }
-      if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v16, v17, v14, v15, v18, v19) != 0 )
+      if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v16, v17, v14, v15) != 0 )
         loc_0 = -559038737;
       Plat_ExitProcess(1);
       goto LABEL_18;
@@ -622,10 +620,10 @@ IAppSystem *__fastcall CAppSystemDict::AddSystem(
   if ( (requests.m_Memory.m_nGrowSize & 0xC0000000) == 0 )
   {
 LABEL_18:
-    v20 = (p_request + 8);
-    CUtlMemory<CAppSystemDict::AppSystemRequest_t,int>::Purge(v20);
+    v18 = (p_request + 8);
+    CUtlMemory<CAppSystemDict::AppSystemRequest_t,int>::Purge(v18);
     if ( (requests.m_Memory.m_nGrowSize & 0xC0000000) == 0 )
-      CUtlMemory<CAppSystemDict::AppSystemRequest_t,int>::Purge(v20);
+      CUtlMemory<CAppSystemDict::AppSystemRequest_t,int>::Purge(v18);
   }
   return m_pSystem;
 }
@@ -646,45 +644,43 @@ IAppSystem *__fastcall CAppSystemDict::AddSystem(
   __int64 v8; // rcx
   __int64 v9; // rdi
   __int64 v10; // rsi
-  __int64 v11; // r8
-  __int64 v12; // r9
   int m_Size; // eax
   CAppSystemDict::AppSystemRequest_t *m_pMemory; // rax
-  bool v15; // al
+  bool v13; // al
   IAppSystem *m_pSystem; // rbx
   CUtlVector<CAppSystemDict::AppSystemRequest_t,CUtlMemory<CAppSystemDict::AppSystemRequest_t,int> > requests; // [rsp+0h] [rbp-80h] BYREF
-  _BYTE v19[56]; // [rsp+20h] [rbp-60h] OVERLAPPED BYREF
+  _BYTE v17[56]; // [rsp+20h] [rbp-60h] OVERLAPPED BYREF
 
   if ( factory == 0 )
     return 0;
   v4 = this;
-  CUtlSymbolTable::Find(v19, &this->m_SystemDict.m_SymbolTable, pInterfaceName);
-  if ( *v19 != 0xFFFF )
+  CUtlSymbolTable::Find(v17, &this->m_SystemDict.m_SymbolTable, pInterfaceName);
+  if ( *v17 != 0xFFFF )
   {
-    v6 = &v4->m_Systems.m_Memory.m_pMemory[v4->m_SystemDict.m_Vector.m_Memory.m_pMemory[*v19]];
+    v6 = &v4->m_Systems.m_Memory.m_pMemory[v4->m_SystemDict.m_Vector.m_Memory.m_pMemory[*v17]];
     if ( *(v6 + 24) != 0 && (*(**(v6 + 16) + 72LL))(*(v6 + 16)) != 0 )
     {
       v4 = &LOG_GENERAL;
       if ( LoggingSystem_IsChannelEnabled(LOG_GENERAL, 4) != 0 )
       {
-        *v19 = "appsystemdict.cpp";
-        *&v19[16] = "AddSystem";
-        *&v19[8] = 460;
+        *v17 = "appsystemdict.cpp";
+        *&v17[16] = "AddSystem";
+        *&v17[8] = 460;
         LoggingSystem_Log(
           LOG_GENERAL,
           LoggingSeverity_t::LS_ERROR,
-          v19,
+          v17,
           "AppSystemDict: Attempted to add two different systems with the same interface name %s!\n(Existing entry.)\n",
           pInterfaceName);
       }
-      if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v9, v10, v7, v8, v11, v12) != 0 )
+      if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v9, v10, v7, v8) != 0 )
         loc_0 = -559038737;
       Plat_ExitProcess(1);
     }
   }
-  memset(v19, 0, sizeof(v19));
-  *&v19[48] = factory;
-  *&v19[24] = pInterfaceName;
+  memset(v17, 0, sizeof(v17));
+  *&v17[48] = factory;
+  *&v17[24] = pInterfaceName;
   requests.m_Size = 0;
   CUtlMemory<CAppSystemDict::AppSystemRequest_t,int>::CUtlMemory(&requests.m_Memory, 0, 64);
   m_Size = 0;
@@ -697,17 +693,17 @@ IAppSystem *__fastcall CAppSystemDict::AddSystem(
   m_pMemory = requests.m_Memory.m_pMemory;
   if ( requests.m_Memory.m_pMemory != 0 )
   {
-    requests.m_Memory.m_pMemory->m_pRequestingModuleName = *v19;
-    m_pMemory->m_pRequestingInterfaceName = *&v19[8];
-    m_pMemory->m_pModuleName = *&v19[16];
-    m_pMemory->m_pInterfaceName = *&v19[24];
-    m_pMemory->m_pSystem = *&v19[32];
-    m_pMemory->m_hModule = *&v19[40];
-    m_pMemory->m_pModuleFactory = *&v19[48];
+    requests.m_Memory.m_pMemory->m_pRequestingModuleName = *v17;
+    m_pMemory->m_pRequestingInterfaceName = *&v17[8];
+    m_pMemory->m_pModuleName = *&v17[16];
+    m_pMemory->m_pInterfaceName = *&v17[24];
+    m_pMemory->m_pSystem = *&v17[32];
+    m_pMemory->m_hModule = *&v17[40];
+    m_pMemory->m_pModuleFactory = *&v17[48];
   }
-  v15 = CAppSystemDict::LoadSystemAndDependencies(v4, &requests, ErrorResponse_t::QUIT_ON_ERROR);
+  v13 = CAppSystemDict::LoadSystemAndDependencies(v4, &requests, ErrorResponse_t::QUIT_ON_ERROR);
   m_pSystem = 0;
-  if ( v15 )
+  if ( v13 )
     m_pSystem = requests.m_Memory.m_pMemory->m_pSystem;
   requests.m_Size = 0;
   if ( (requests.m_Memory.m_nGrowSize & 0xC0000000) != 0 )
@@ -740,45 +736,43 @@ IAppSystem *__fastcall CAppSystemDict::AddSystem(
   __int64 v15; // rcx
   __int64 v16; // rdi
   __int64 v17; // rsi
-  __int64 v18; // r8
-  __int64 v19; // r9
-  CAppSystemDict::AppSystem_t *v20; // rdx
+  CAppSystemDict::AppSystem_t *v18; // rdx
   PlatModule_t m_hModule; // r9
-  CAppSystemDict::AppSystem_t *v22; // [rsp+8h] [rbp-98h]
+  CAppSystemDict::AppSystem_t *v20; // [rsp+8h] [rbp-98h]
   CUtlVector<CAppSystemDict::AppSystemRequest_t,CUtlMemory<CAppSystemDict::AppSystemRequest_t,int> > requests; // [rsp+10h] [rbp-90h] BYREF
-  _BYTE v24[56]; // [rsp+30h] [rbp-70h] OVERLAPPED BYREF
+  _BYTE v22[56]; // [rsp+30h] [rbp-70h] OVERLAPPED BYREF
 
   if ( hModule == 0 )
     return 0;
-  CUtlSymbolTable::Find(v24, &this->m_SystemDict.m_SymbolTable, pInterfaceName);
-  if ( *v24 != 0xFFFF )
+  CUtlSymbolTable::Find(v22, &this->m_SystemDict.m_SymbolTable, pInterfaceName);
+  if ( *v22 != 0xFFFF )
   {
-    v8 = &this->m_Systems.m_Memory.m_pMemory[this->m_SystemDict.m_Vector.m_Memory.m_pMemory[*v24]];
+    v8 = &this->m_Systems.m_Memory.m_pMemory[this->m_SystemDict.m_Vector.m_Memory.m_pMemory[*v22]];
     if ( v8->m_hModule != hModule )
     {
-      v22 = &this->m_Systems.m_Memory.m_pMemory[this->m_SystemDict.m_Vector.m_Memory.m_pMemory[*v24]];
+      v20 = &this->m_Systems.m_Memory.m_pMemory[this->m_SystemDict.m_Vector.m_Memory.m_pMemory[*v22]];
       if ( (*(v8->m_pSystem->_vptr_IAppSystem + 9))(v8->m_pSystem) != 0 )
       {
         if ( errResponse == ErrorResponse_t::QUIT_ON_ERROR )
         {
           IsChannelEnabled = LoggingSystem_IsChannelEnabled(LOG_GENERAL, 4);
-          v20 = v22;
+          v18 = v20;
           if ( IsChannelEnabled != 0 )
             goto LABEL_23;
           while ( 1 )
           {
-            if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v16, v17, v20, v15, v18, v19) != 0 )
+            if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v16, v17, v18, v15) != 0 )
               loc_0 = -559038737;
             Plat_ExitProcess(1);
 LABEL_23:
-            m_hModule = v20->m_hModule;
-            *v24 = "appsystemdict.cpp";
-            *&v24[16] = "AddSystem";
-            *&v24[8] = 492;
+            m_hModule = v18->m_hModule;
+            *v22 = "appsystemdict.cpp";
+            *&v22[16] = "AddSystem";
+            *&v22[8] = 492;
             LoggingSystem_Log(
               LOG_GENERAL,
               LoggingSeverity_t::LS_ERROR,
-              v24,
+              v22,
               "AppSystemDict: Attempted to add two different systems with the same interface name %s!\n"
               "(Modules differ: existing '%p' != requested '%p')\n",
               pInterfaceName,
@@ -793,7 +787,7 @@ LABEL_23:
             "AppSystemDict: Attempted to add two different systems with the same interface name %s!\n"
             "(Modules differ: existing '%p' != requested '%p')\n",
             pInterfaceName,
-            v22->m_hModule,
+            v20->m_hModule,
             hModule);
           return m_pSystem;
         }
@@ -801,9 +795,9 @@ LABEL_23:
       }
     }
   }
-  memset(v24, 0, sizeof(v24));
-  *&v24[40] = hModule;
-  *&v24[24] = pInterfaceName;
+  memset(v22, 0, sizeof(v22));
+  *&v22[40] = hModule;
+  *&v22[24] = pInterfaceName;
   requests.m_Size = 0;
   CUtlMemory<CAppSystemDict::AppSystemRequest_t,int>::CUtlMemory(&requests.m_Memory, 0, 64);
   m_Size = 0;
@@ -816,13 +810,13 @@ LABEL_23:
   m_pMemory = requests.m_Memory.m_pMemory;
   if ( requests.m_Memory.m_pMemory != 0 )
   {
-    requests.m_Memory.m_pMemory->m_pRequestingModuleName = *v24;
-    m_pMemory->m_pRequestingInterfaceName = *&v24[8];
-    m_pMemory->m_pModuleName = *&v24[16];
-    m_pMemory->m_pInterfaceName = *&v24[24];
-    m_pMemory->m_pSystem = *&v24[32];
-    m_pMemory->m_hModule = *&v24[40];
-    m_pMemory->m_pModuleFactory = *&v24[48];
+    requests.m_Memory.m_pMemory->m_pRequestingModuleName = *v22;
+    m_pMemory->m_pRequestingInterfaceName = *&v22[8];
+    m_pMemory->m_pModuleName = *&v22[16];
+    m_pMemory->m_pInterfaceName = *&v22[24];
+    m_pMemory->m_pSystem = *&v22[32];
+    m_pMemory->m_hModule = *&v22[40];
+    m_pMemory->m_pModuleFactory = *&v22[48];
   }
   v13 = CAppSystemDict::LoadSystemAndDependencies(this, &requests, errResponse);
   m_pSystem = 0;
@@ -859,27 +853,25 @@ IAppSystem *__fastcall CAppSystemDict::AddSystem(
   __int64 v14; // rcx
   __int64 v15; // rdi
   __int64 v16; // rsi
-  __int64 v17; // r8
-  __int64 v18; // r9
   const char *m_pModuleName; // r9
-  int v20; // ebx
-  int v21; // edx
-  int v22; // ecx
-  int v23; // esi
-  int v24; // r8d
-  int v25; // r9d
+  int v18; // ebx
+  int v19; // edx
+  int v20; // ecx
+  int v21; // esi
+  int v22; // r8d
+  int v23; // r9d
   CUtlVector<CAppSystemDict::AppSystemRequest_t,CUtlMemory<CAppSystemDict::AppSystemRequest_t,int> > requests; // [rsp+20h] [rbp-2A0h] BYREF
-  _BYTE v28[56]; // [rsp+40h] [rbp-280h] OVERLAPPED BYREF
+  _BYTE v26[56]; // [rsp+40h] [rbp-280h] OVERLAPPED BYREF
   char pModuleBuf[520]; // [rsp+80h] [rbp-240h] BYREF
-  unsigned __int64 v30; // [rsp+288h] [rbp-38h]
+  unsigned __int64 v28; // [rsp+288h] [rbp-38h]
 
-  v30 = __readfsqword(0x28u);
+  v28 = __readfsqword(0x28u);
   if ( pModuleName == 0 )
     return 0;
-  CUtlSymbolTable::Find(v28, &this->m_SystemDict.m_SymbolTable, pInterfaceName);
-  if ( *v28 != 0xFFFF )
+  CUtlSymbolTable::Find(v26, &this->m_SystemDict.m_SymbolTable, pInterfaceName);
+  if ( *v26 != 0xFFFF )
   {
-    v7 = &this->m_Systems.m_Memory.m_pMemory[this->m_SystemDict.m_Vector.m_Memory.m_pMemory[*v28]];
+    v7 = &this->m_Systems.m_Memory.m_pMemory[this->m_SystemDict.m_Vector.m_Memory.m_pMemory[*v26]];
     if ( (*(v7->m_pSystem->_vptr_IAppSystem + 9))(v7->m_pSystem) != 0 )
     {
       _V_StripExtension(pModuleName, pModuleBuf, 512);
@@ -890,24 +882,24 @@ IAppSystem *__fastcall CAppSystemDict::AddSystem(
           if ( LoggingSystem_IsChannelEnabled(LOG_GENERAL, 4) != 0 )
           {
             m_pModuleName = v7->m_pModuleName;
-            *v28 = "appsystemdict.cpp";
-            *&v28[8] = 528;
-            *&v28[16] = "AddSystem";
+            *v26 = "appsystemdict.cpp";
+            *&v26[8] = 528;
+            *&v26[16] = "AddSystem";
             LoggingSystem_Log(
               LOG_GENERAL,
               LoggingSeverity_t::LS_ERROR,
-              v28,
+              v26,
               "AppSystemDict: Attempted to add two different systems with the same interface name %s!\n"
               "(Module names differ: existing '%s' != requested '%s')\n",
               pInterfaceName,
               m_pModuleName,
               pModuleBuf);
           }
-          if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v15, v16, v13, v14, v17, v18) != 0 )
+          if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v15, v16, v13, v14) != 0 )
             loc_0 = -559038737;
-          v20 = Plat_ExitProcess(1);
-          CUtlVectorBase<CAppSystemDict::AppSystemRequest_t,CUtlMemory<CAppSystemDict::AppSystemRequest_t,int>>::~CUtlVectorBase(v28);
-          Unwind_Resume(v20, v23, v21, v22, v24, v25);
+          v18 = Plat_ExitProcess(1);
+          CUtlVectorBase<CAppSystemDict::AppSystemRequest_t,CUtlMemory<CAppSystemDict::AppSystemRequest_t,int>>::~CUtlVectorBase(v26);
+          Unwind_Resume(v18, v21, v19, v20, v22, v23);
         }
         if ( errResponse == ErrorResponse_t::WARN_ON_ERROR )
         {
@@ -924,9 +916,9 @@ IAppSystem *__fastcall CAppSystemDict::AddSystem(
       }
     }
   }
-  memset(v28, 0, sizeof(v28));
-  *&v28[24] = pInterfaceName;
-  *&v28[16] = pModuleName;
+  memset(v26, 0, sizeof(v26));
+  *&v26[24] = pInterfaceName;
+  *&v26[16] = pModuleName;
   requests.m_Size = 0;
   CUtlMemory<CAppSystemDict::AppSystemRequest_t,int>::CUtlMemory(&requests.m_Memory, 0, 64);
   m_Size = 0;
@@ -939,13 +931,13 @@ IAppSystem *__fastcall CAppSystemDict::AddSystem(
   m_pMemory = requests.m_Memory.m_pMemory;
   if ( requests.m_Memory.m_pMemory != 0 )
   {
-    requests.m_Memory.m_pMemory->m_pRequestingModuleName = *v28;
-    m_pMemory->m_pRequestingInterfaceName = *&v28[8];
-    m_pMemory->m_pModuleName = *&v28[16];
-    m_pMemory->m_pInterfaceName = *&v28[24];
-    m_pMemory->m_pSystem = *&v28[32];
-    m_pMemory->m_hModule = *&v28[40];
-    m_pMemory->m_pModuleFactory = *&v28[48];
+    requests.m_Memory.m_pMemory->m_pRequestingModuleName = *v26;
+    m_pMemory->m_pRequestingInterfaceName = *&v26[8];
+    m_pMemory->m_pModuleName = *&v26[16];
+    m_pMemory->m_pInterfaceName = *&v26[24];
+    m_pMemory->m_pSystem = *&v26[32];
+    m_pMemory->m_hModule = *&v26[40];
+    m_pMemory->m_pModuleFactory = *&v26[48];
   }
   v10 = CAppSystemDict::LoadSystemAndDependencies(this, &requests, errResponse);
   m_pSystem = 0;
@@ -977,27 +969,23 @@ bool __fastcall CAppSystemDict::AddSystems(CAppSystemDict *const this, int nCoun
   __int64 v11; // rcx
   __int64 v12; // rdi
   __int64 v13; // rsi
-  __int64 v14; // r8
-  __int64 v15; // r9
-  const char *v16; // r9
+  const char *v14; // r9
   const char *m_pInterfaceName; // r8
   bool result; // al
-  __int64 v19; // rdx
-  __int64 v20; // rcx
-  __int64 v21; // rdi
-  __int64 v22; // rsi
-  __int64 v23; // r8
-  __int64 v24; // r9
-  const AppSystemInfo_t *v25; // [rsp+28h] [rbp-2C8h]
-  bool v26; // [rsp+28h] [rbp-2C8h]
+  __int64 v17; // rdx
+  __int64 v18; // rcx
+  __int64 v19; // rdi
+  __int64 v20; // rsi
+  const AppSystemInfo_t *v21; // [rsp+28h] [rbp-2C8h]
+  bool v22; // [rsp+28h] [rbp-2C8h]
   CUtlVector<CAppSystemDict::AppSystemRequest_t,CUtlMemory<CAppSystemDict::AppSystemRequest_t,int> > requests; // [rsp+30h] [rbp-2C0h] BYREF
-  LeafCodeInfo_t v28; // [rsp+50h] [rbp-2A0h] BYREF
+  LeafCodeInfo_t v24; // [rsp+50h] [rbp-2A0h] BYREF
   CAppSystemDict::AppSystemRequest_t request; // [rsp+70h] [rbp-280h] BYREF
   char pModuleBuf[520]; // [rsp+B0h] [rbp-240h] BYREF
-  unsigned __int64 v31; // [rsp+2B8h] [rbp-38h]
+  unsigned __int64 v27; // [rsp+2B8h] [rbp-38h]
 
   v3 = this;
-  v31 = __readfsqword(0x28u);
+  v27 = __readfsqword(0x28u);
   if ( !this->m_bInitialized )
   {
     if ( LoggingSystem_IsChannelEnabled(LOG_GENERAL, 4) != 0 )
@@ -1011,7 +999,7 @@ bool __fastcall CAppSystemDict::AddSystems(CAppSystemDict *const this, int nCoun
         &request,
         "***************** ERROR: Cannot call CAppSystemDict::AddSystems without initializing first!\n");
     }
-    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v21, v22, v19, v20, v23, v24) != 0 )
+    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v19, v20, v17, v18) != 0 )
       loc_0 = -559038737;
     Plat_ExitProcess(1);
     JUMPOUT(0x306C236);
@@ -1022,13 +1010,13 @@ bool __fastcall CAppSystemDict::AddSystems(CAppSystemDict *const this, int nCoun
   if ( nCount > 0 )
   {
     p_m_SymbolTable = &v3->m_SystemDict.m_SymbolTable;
-    v25 = &pSystemList[(nCount - 1) + 1];
+    v21 = &pSystemList[(nCount - 1) + 1];
     while ( 1 )
     {
-      CUtlSymbolTable::Find(&v28, p_m_SymbolTable, pSystemList->m_pInterfaceName);
-      if ( LOWORD(v28.m_szFile) != 0xFFFF )
+      CUtlSymbolTable::Find(&v24, p_m_SymbolTable, pSystemList->m_pInterfaceName);
+      if ( LOWORD(v24.m_szFile) != 0xFFFF )
       {
-        m_Size = &v3->m_Systems.m_Memory.m_pMemory[v3->m_SystemDict.m_Vector.m_Memory.m_pMemory[LOWORD(v28.m_szFile)]];
+        m_Size = &v3->m_Systems.m_Memory.m_pMemory[v3->m_SystemDict.m_Vector.m_Memory.m_pMemory[LOWORD(v24.m_szFile)]];
         if ( (*(**(m_Size + 16) + 72LL))(*(m_Size + 16)) != 0 )
         {
           _V_StripExtension(pSystemList->m_pModuleName, pModuleBuf, 512);
@@ -1047,28 +1035,28 @@ LABEL_5:
       v9 = &requests.m_Memory.m_pMemory[m_Size];
       if ( v9 != 0 )
         *v9 = request;
-      if ( ++pSystemList == v25 )
+      if ( ++pSystemList == v21 )
         goto LABEL_17;
     }
     v3 = &LOG_GENERAL;
     if ( LoggingSystem_IsChannelEnabled(LOG_GENERAL, 4) != 0 )
     {
-      v16 = *m_Size;
-      v28.m_szFile = "appsystemdict.cpp";
+      v14 = *m_Size;
+      v24.m_szFile = "appsystemdict.cpp";
       m_pInterfaceName = pSystemList->m_pInterfaceName;
-      v28.m_nLine = 580;
-      v28.m_szFunction = "AddSystems";
+      v24.m_nLine = 580;
+      v24.m_szFunction = "AddSystems";
       LoggingSystem_Log(
         LOG_GENERAL,
         LoggingSeverity_t::LS_ERROR,
-        &v28,
+        &v24,
         "AppSystemDict: Attempted to add two different systems with the same interface name %s!\n"
         "(Module names differ: existing '%s' != requested '%s')\n",
         m_pInterfaceName,
-        v16,
+        v14,
         pModuleBuf);
     }
-    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v12, v13, v10, v11, v14, v15) != 0 )
+    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v12, v13, v10, v11) != 0 )
       loc_0 = -559038737;
     Plat_ExitProcess(1);
 LABEL_16:
@@ -1081,13 +1069,13 @@ LABEL_17:
   requests.m_Size = 0;
   if ( (requests.m_Memory.m_nGrowSize & 0xC0000000) == 0 )
   {
-    v26 = result;
+    v22 = result;
     CUtlMemory<CAppSystemDict::AppSystemRequest_t,int>::Purge(&requests.m_Memory);
-    result = v26;
+    result = v22;
     if ( (requests.m_Memory.m_nGrowSize & 0xC0000000) == 0 )
     {
       CUtlMemory<CAppSystemDict::AppSystemRequest_t,int>::Purge(&requests.m_Memory);
-      return v26;
+      return v22;
     }
   }
   return result;
@@ -1265,9 +1253,7 @@ IAppSystem *__fastcall CAppSystemDict::ReplaceSystem(
   __int64 v15; // rcx
   __int64 v16; // rdi
   __int64 v17; // rsi
-  __int64 v18; // r8
-  __int64 v19; // r9
-  CAppSystemDict::AppSystem_t *v20; // [rsp+0h] [rbp-A0h]
+  CAppSystemDict::AppSystem_t *v18; // [rsp+0h] [rbp-A0h]
   IAppSystem *pOldSystem; // [rsp+8h] [rbp-98h]
   CUtlVector<CAppSystemDict::AppSystemRequest_t,CUtlMemory<CAppSystemDict::AppSystemRequest_t,int> > requests; // [rsp+10h] [rbp-90h] BYREF
   CAppSystemDict::AppSystemRequest_t request; // [rsp+30h] [rbp-70h] BYREF
@@ -1294,8 +1280,8 @@ IAppSystem *__fastcall CAppSystemDict::ReplaceSystem(
   CUtlSymbolTable::Find(&request, &this->m_SystemDict.m_SymbolTable, pInterfaceName);
   if ( LOWORD(request.m_pRequestingModuleName) != 0xFFFF )
   {
-    v20 = &this->m_Systems.m_Memory.m_pMemory[this->m_SystemDict.m_Vector.m_Memory.m_pMemory[LOWORD(request.m_pRequestingModuleName)]];
-    pOldSystem = v20->m_pSystem;
+    v18 = &this->m_Systems.m_Memory.m_pMemory[this->m_SystemDict.m_Vector.m_Memory.m_pMemory[LOWORD(request.m_pRequestingModuleName)]];
+    pOldSystem = v18->m_pSystem;
     if ( (*(pOldSystem->_vptr_IAppSystem + 9))(pOldSystem) == 0 )
     {
       while ( 1 )
@@ -1313,7 +1299,7 @@ IAppSystem *__fastcall CAppSystemDict::ReplaceSystem(
             pInterfaceName);
         }
 LABEL_21:
-        if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v16, v17, v14, v15, v18, v19) != 0 )
+        if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v16, v17, v14, v15) != 0 )
           loc_0 = -559038737;
         Plat_ExitProcess(1);
       }
@@ -1324,8 +1310,8 @@ LABEL_21:
     }
     else
     {
-      v20->m_bInvisible = 1;
-      v20->m_pSystem = 0;
+      v18->m_bInvisible = 1;
+      v18->m_pSystem = 0;
     }
   }
   memset(&request, 0, sizeof(request));
@@ -1665,36 +1651,34 @@ bool __fastcall CAppSystemDict::DictSortLessFunc(
   __int64 v46; // rcx
   __int64 v47; // rdi
   __int64 v48; // rsi
-  __int64 v49; // r8
-  __int64 v50; // r9
-  AppSystemTier_t v51; // r13d
-  AppSystemTier_t v52; // r9d
+  AppSystemTier_t v49; // r13d
+  AppSystemTier_t v50; // r9d
+  int v51; // [rsp+18h] [rbp-68h]
+  __int64 v52; // [rsp+18h] [rbp-68h]
   int v53; // [rsp+18h] [rbp-68h]
   __int64 v54; // [rsp+18h] [rbp-68h]
   int v55; // [rsp+18h] [rbp-68h]
-  __int64 v56; // [rsp+18h] [rbp-68h]
+  int v56; // [rsp+18h] [rbp-68h]
   int v57; // [rsp+18h] [rbp-68h]
-  int v58; // [rsp+18h] [rbp-68h]
-  int v59; // [rsp+18h] [rbp-68h]
+  int v58; // [rsp+20h] [rbp-60h]
+  int v59; // [rsp+20h] [rbp-60h]
   int v60; // [rsp+20h] [rbp-60h]
-  int v61; // [rsp+20h] [rbp-60h]
+  __int64 v61; // [rsp+20h] [rbp-60h]
   int v62; // [rsp+20h] [rbp-60h]
-  __int64 v63; // [rsp+20h] [rbp-60h]
+  int v63; // [rsp+20h] [rbp-60h]
   int v64; // [rsp+20h] [rbp-60h]
-  int v65; // [rsp+20h] [rbp-60h]
-  int v66; // [rsp+20h] [rbp-60h]
-  __int64 v67; // [rsp+20h] [rbp-60h]
+  __int64 v65; // [rsp+20h] [rbp-60h]
+  int v66; // [rsp+28h] [rbp-58h]
+  int v67; // [rsp+28h] [rbp-58h]
   int v68; // [rsp+28h] [rbp-58h]
-  int v69; // [rsp+28h] [rbp-58h]
-  int v70; // [rsp+28h] [rbp-58h]
-  AppSystemTier_t v71; // [rsp+2Ch] [rbp-54h]
+  AppSystemTier_t v69; // [rsp+2Ch] [rbp-54h]
+  int v70; // [rsp+2Ch] [rbp-54h]
+  int v71; // [rsp+2Ch] [rbp-54h]
   int v72; // [rsp+2Ch] [rbp-54h]
   int v73; // [rsp+2Ch] [rbp-54h]
   int v74; // [rsp+2Ch] [rbp-54h]
   int v75; // [rsp+2Ch] [rbp-54h]
   int v76; // [rsp+2Ch] [rbp-54h]
-  int v77; // [rsp+2Ch] [rbp-54h]
-  int v78; // [rsp+2Ch] [rbp-54h]
   LeafCodeInfo_t id[3]; // [rsp+30h] [rbp-50h] BYREF
 
   p_m_SymbolTable = &depend->m_SymbolTable;
@@ -1707,7 +1691,7 @@ bool __fastcall CAppSystemDict::DictSortLessFunc(
   m_Size = depend->m_Vector.m_Size;
   if ( LOWORD(id[0].m_szFile) < m_Size
     || (v10 = LOWORD(id[0].m_szFile) + 1, m_Size >= v10)
-    || (v68 = v10 - m_Size, v10 == m_Size) )
+    || (v66 = v10 - m_Size, v10 == m_Size) )
   {
     m_pMemory = depend->m_Vector.m_Memory.m_pMemory;
   }
@@ -1716,17 +1700,17 @@ bool __fastcall CAppSystemDict::DictSortLessFunc(
     m_nAllocationCount = depend->m_Vector.m_Memory.m_nAllocationCount;
     if ( v10 > m_nAllocationCount )
     {
-      v53 = depend->m_Vector.m_Size;
-      v60 = LOWORD(id[0].m_szFile);
-      v72 = LOWORD(id[0].m_szFile) + 1;
+      v51 = depend->m_Vector.m_Size;
+      v58 = LOWORD(id[0].m_szFile);
+      v70 = LOWORD(id[0].m_szFile) + 1;
       CUtlMemory<CAppSystemDict::InterfaceInfo_t,int>::Grow(&depend->m_Vector.m_Memory, v10 - m_nAllocationCount);
-      m_Size = v53;
-      m_szFile_low = v60;
-      v10 = v72;
+      m_Size = v51;
+      m_szFile_low = v58;
+      v10 = v70;
     }
     depend->m_Vector.m_Size = v10;
     m_pMemory = depend->m_Vector.m_Memory.m_pMemory;
-    if ( v68 > 0 )
+    if ( v66 > 0 )
     {
       v22 = 0;
       v23 = 120 * m_Size;
@@ -1734,19 +1718,19 @@ bool __fastcall CAppSystemDict::DictSortLessFunc(
       {
         if ( (m_pMemory + v23) != 0 )
         {
-          v54 = v23;
-          v61 = v22;
-          v73 = m_szFile_low;
+          v52 = v23;
+          v59 = v22;
+          v71 = m_szFile_low;
           CUtlSymbolTable::CUtlSymbolTable((&m_pMemory->m_Dependencies + v23), 0, 16, 0);
           m_pMemory = depend->m_Vector.m_Memory.m_pMemory;
-          v23 = v54;
-          v22 = v61;
-          m_szFile_low = v73;
+          v23 = v52;
+          v22 = v59;
+          m_szFile_low = v71;
         }
         ++v22;
         v23 += 120;
       }
-      while ( v68 > v22 );
+      while ( v66 > v22 );
     }
   }
   CUtlSymbolTable::Find(id, &m_pMemory[m_szFile_low].m_Dependencies, v6);
@@ -1755,7 +1739,7 @@ bool __fastcall CAppSystemDict::DictSortLessFunc(
     CUtlSymbolTable::AddString(id, p_m_SymbolTable, v6);
     m_szFile = id[0].m_szFile;
     v25 = depend->m_Vector.m_Size;
-    if ( LOWORD(id[0].m_szFile) < v25 || (v26 = LOWORD(id[0].m_szFile) + 1, v25 >= v26) || (v55 = v26 - v25, v26 == v25) )
+    if ( LOWORD(id[0].m_szFile) < v25 || (v26 = LOWORD(id[0].m_szFile) + 1, v25 >= v26) || (v53 = v26 - v25, v26 == v25) )
     {
       v27 = depend->m_Vector.m_Memory.m_pMemory;
     }
@@ -1764,15 +1748,15 @@ bool __fastcall CAppSystemDict::DictSortLessFunc(
       v39 = depend->m_Vector.m_Memory.m_nAllocationCount;
       if ( v26 > v39 )
       {
-        v66 = depend->m_Vector.m_Size;
-        v77 = LOWORD(id[0].m_szFile) + 1;
+        v64 = depend->m_Vector.m_Size;
+        v75 = LOWORD(id[0].m_szFile) + 1;
         CUtlMemory<CAppSystemDict::InterfaceInfo_t,int>::Grow(&depend->m_Vector.m_Memory, v26 - v39);
-        v25 = v66;
-        v26 = v77;
+        v25 = v64;
+        v26 = v75;
       }
       depend->m_Vector.m_Size = v26;
       v27 = depend->m_Vector.m_Memory.m_pMemory;
-      if ( v55 > 0 )
+      if ( v53 > 0 )
       {
         v40 = 0;
         v41 = 120 * v25;
@@ -1780,24 +1764,24 @@ bool __fastcall CAppSystemDict::DictSortLessFunc(
         {
           if ( (v27 + v41) != 0 )
           {
-            v67 = v41;
-            v78 = v40;
+            v65 = v41;
+            v76 = v40;
             CUtlSymbolTable::CUtlSymbolTable((&v27->m_Dependencies + v41), 0, 16, 0);
             v27 = depend->m_Vector.m_Memory.m_pMemory;
-            v41 = v67;
-            v40 = v78;
+            v41 = v65;
+            v40 = v76;
           }
           ++v40;
           v41 += 120;
         }
-        while ( v55 > v40 );
+        while ( v53 > v40 );
       }
     }
     m_Tier = v27[m_szFile].m_Tier;
     CUtlSymbolTable::AddString(id, p_m_SymbolTable, v7);
     v29 = id[0].m_szFile;
     v30 = depend->m_Vector.m_Size;
-    if ( LOWORD(id[0].m_szFile) < v30 || (v31 = LOWORD(id[0].m_szFile) + 1, v30 >= v31) || (v74 = v31 - v30, v31 == v30) )
+    if ( LOWORD(id[0].m_szFile) < v30 || (v31 = LOWORD(id[0].m_szFile) + 1, v30 >= v31) || (v72 = v31 - v30, v31 == v30) )
     {
       v32 = depend->m_Vector.m_Memory.m_pMemory;
     }
@@ -1808,7 +1792,7 @@ bool __fastcall CAppSystemDict::DictSortLessFunc(
         CUtlMemory<CAppSystemDict::InterfaceInfo_t,int>::Grow(&depend->m_Vector.m_Memory, v31 - v42);
       depend->m_Vector.m_Size = v31;
       v32 = depend->m_Vector.m_Memory.m_pMemory;
-      if ( v74 > 0 )
+      if ( v72 > 0 )
       {
         v43 = 0;
         v44 = v30;
@@ -1822,7 +1806,7 @@ bool __fastcall CAppSystemDict::DictSortLessFunc(
           ++v43;
           ++v44;
         }
-        while ( v74 > v43 );
+        while ( v72 > v43 );
       }
     }
     return m_Tier < v32[v29].m_Tier;
@@ -1832,7 +1816,7 @@ bool __fastcall CAppSystemDict::DictSortLessFunc(
     CUtlSymbolTable::AddString(id, p_m_SymbolTable, v7);
     v12 = LOWORD(id[0].m_szFile);
     v13 = depend->m_Vector.m_Size;
-    if ( LOWORD(id[0].m_szFile) < v13 || (v14 = LOWORD(id[0].m_szFile) + 1, v13 >= v14) || (v69 = v14 - v13, v14 == v13) )
+    if ( LOWORD(id[0].m_szFile) < v13 || (v14 = LOWORD(id[0].m_szFile) + 1, v13 >= v14) || (v67 = v14 - v13, v14 == v13) )
     {
       v15 = depend->m_Vector.m_Memory.m_pMemory;
     }
@@ -1841,17 +1825,17 @@ bool __fastcall CAppSystemDict::DictSortLessFunc(
       v33 = depend->m_Vector.m_Memory.m_nAllocationCount;
       if ( v14 > v33 )
       {
-        v59 = depend->m_Vector.m_Size;
-        v65 = LOWORD(id[0].m_szFile);
-        v76 = LOWORD(id[0].m_szFile) + 1;
+        v57 = depend->m_Vector.m_Size;
+        v63 = LOWORD(id[0].m_szFile);
+        v74 = LOWORD(id[0].m_szFile) + 1;
         CUtlMemory<CAppSystemDict::InterfaceInfo_t,int>::Grow(&depend->m_Vector.m_Memory, v14 - v33);
-        v13 = v59;
-        v12 = v65;
-        v14 = v76;
+        v13 = v57;
+        v12 = v63;
+        v14 = v74;
       }
       depend->m_Vector.m_Size = v14;
       v15 = depend->m_Vector.m_Memory.m_pMemory;
-      if ( v69 > 0 )
+      if ( v67 > 0 )
       {
         v34 = 0;
         v35 = 120 * v13;
@@ -1859,26 +1843,26 @@ bool __fastcall CAppSystemDict::DictSortLessFunc(
         {
           if ( (v15 + v35) != 0 )
           {
-            v56 = v35;
-            v62 = v34;
-            v75 = v12;
+            v54 = v35;
+            v60 = v34;
+            v73 = v12;
             CUtlSymbolTable::CUtlSymbolTable((&v15->m_Dependencies + v35), 0, 16, 0);
             v15 = depend->m_Vector.m_Memory.m_pMemory;
-            v35 = v56;
-            v34 = v62;
-            v12 = v75;
+            v35 = v54;
+            v34 = v60;
+            v12 = v73;
           }
           ++v34;
           v35 += 120;
         }
-        while ( v69 > v34 );
+        while ( v67 > v34 );
       }
     }
-    v71 = v15[v12].m_Tier;
+    v69 = v15[v12].m_Tier;
     CUtlSymbolTable::AddString(id, p_m_SymbolTable, v6);
     v16 = id[0].m_szFile;
     v17 = depend->m_Vector.m_Size;
-    if ( LOWORD(id[0].m_szFile) < v17 || (v18 = LOWORD(id[0].m_szFile) + 1, v17 >= v18) || (v70 = v18 - v17, v18 == v17) )
+    if ( LOWORD(id[0].m_szFile) < v17 || (v18 = LOWORD(id[0].m_szFile) + 1, v17 >= v18) || (v68 = v18 - v17, v18 == v17) )
     {
       v19 = depend->m_Vector.m_Memory.m_pMemory;
     }
@@ -1887,15 +1871,15 @@ bool __fastcall CAppSystemDict::DictSortLessFunc(
       v36 = depend->m_Vector.m_Memory.m_nAllocationCount;
       if ( v18 > v36 )
       {
-        v58 = depend->m_Vector.m_Size;
-        v64 = LOWORD(id[0].m_szFile) + 1;
+        v56 = depend->m_Vector.m_Size;
+        v62 = LOWORD(id[0].m_szFile) + 1;
         CUtlMemory<CAppSystemDict::InterfaceInfo_t,int>::Grow(&depend->m_Vector.m_Memory, v18 - v36);
-        v17 = v58;
-        v18 = v64;
+        v17 = v56;
+        v18 = v62;
       }
       depend->m_Vector.m_Size = v18;
       v19 = depend->m_Vector.m_Memory.m_pMemory;
-      if ( v70 > 0 )
+      if ( v68 > 0 )
       {
         v37 = 0;
         v38 = 120 * v17;
@@ -1903,25 +1887,25 @@ bool __fastcall CAppSystemDict::DictSortLessFunc(
         {
           if ( (v19 + v38) != 0 )
           {
-            v57 = v37;
-            v63 = v38;
+            v55 = v37;
+            v61 = v38;
             CUtlSymbolTable::CUtlSymbolTable((&v19->m_Dependencies + v38), 0, 16, 0);
             v19 = depend->m_Vector.m_Memory.m_pMemory;
-            v37 = v57;
-            v38 = v63;
+            v37 = v55;
+            v38 = v61;
           }
           ++v37;
           v38 += 120;
         }
-        while ( v70 > v37 );
+        while ( v68 > v37 );
       }
     }
-    if ( v71 < v19[v16].m_Tier )
+    if ( v69 < v19[v16].m_Tier )
     {
       if ( LoggingSystem_IsChannelEnabled(LOG_GENERAL, 4) != 0 )
       {
-        v51 = CUtlStringMap<CAppSystemDict::InterfaceInfo_t,CUtlSymbolTable>::operator[](depend, v6)->m_Tier;
-        v52 = CUtlStringMap<CAppSystemDict::InterfaceInfo_t,CUtlSymbolTable>::operator[](depend, v7)->m_Tier;
+        v49 = CUtlStringMap<CAppSystemDict::InterfaceInfo_t,CUtlSymbolTable>::operator[](depend, v6)->m_Tier;
+        v50 = CUtlStringMap<CAppSystemDict::InterfaceInfo_t,CUtlSymbolTable>::operator[](depend, v7)->m_Tier;
         id[0].m_szFile = "appsystemdict.cpp";
         id[0].m_szFunction = "DictSortLessFunc";
         id[0].m_nLine = 857;
@@ -1931,11 +1915,11 @@ bool __fastcall CAppSystemDict::DictSortLessFunc(
           id,
           "AppSystemDict: Interface '%s' (tier %d) depends on interface '%s' (tier %d) but is in a lower tier!\n",
           v7,
-          v52,
+          v50,
           v6,
-          v51);
+          v49);
       }
-      if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v47, v48, v45, v46, v49, v50) != 0 )
+      if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v47, v48, v45, v46) != 0 )
         loc_0 = -559038737;
       Plat_ExitProcess(1);
       JUMPOUT(0x3069F02);
@@ -2267,7 +2251,7 @@ LABEL_16:
       v21 = (**g_pMemAlloc)(g_pMemAlloc, strlen(pModuleBuf) + 1);
       v20->m_pModuleName = strcpy(v21, pModuleBuf);
       v22 = Plat_RelativeTicks();
-      v23 = Plat_TickDiffMilliSecF(0, v22 - timer.m_Duration.m_Int64);
+      Plat_TickDiffMilliSecF(0, v22 - timer.m_Duration.m_Int64);
       COM_TimestampedLog("CAppSystemDict::LoadModuleInPath( %-23s ) %8.3f msec", pRemap, v23);
       return hModule;
     }
@@ -2433,63 +2417,53 @@ bool __fastcall CAppSystemDict::LoadSystemAndDependencies(
   __int64 v65; // rcx
   __int64 v66; // rdi
   __int64 v67; // rsi
-  __int64 v68; // r8
-  __int64 v69; // r9
-  int v70; // ebx
-  int v71; // edx
-  int v72; // ecx
-  int v73; // esi
-  int v74; // r8d
-  int v75; // r9d
+  int v68; // ebx
+  int v69; // edx
+  int v70; // ecx
+  int v71; // esi
+  int v72; // r8d
+  int v73; // r9d
   PlatModule_t ModuleInPath; // rax
-  const char *v77; // r8
-  const char *v78; // rcx
-  const char *v79; // rsi
-  const char *v80; // rdx
-  const char *v81; // rdi
-  __int64 v82; // rdx
-  __int64 v83; // rcx
-  __int64 v84; // rdi
-  __int64 v85; // rsi
-  __int64 v86; // r8
-  __int64 v87; // r9
-  const char *v88; // r8
-  const char *v89; // rsi
-  const char *v90; // rdx
-  __int64 v91; // rdx
-  __int64 v92; // rcx
-  __int64 v93; // rdi
-  __int64 v94; // rsi
-  __int64 v95; // r8
-  __int64 v96; // r9
-  const char *v97; // r9
-  const char *v98; // r8
-  const char *v99; // rax
-  __int64 v100; // rdx
-  __int64 v101; // rcx
-  __int64 v102; // rdi
-  __int64 v103; // rsi
-  __int64 v104; // r8
-  __int64 v105; // r9
-  const char *v106; // rax
-  const char *v107; // r8
-  const char *v108; // r9
-  const char *v109; // rdx
-  const char *v110; // rcx
-  const char *v111; // rdx
-  __int64 v112; // rdx
-  __int64 v113; // rcx
-  __int64 v114; // rdi
-  __int64 v115; // rsi
-  __int64 v116; // r8
-  __int64 v117; // r9
+  const char *v75; // r8
+  const char *v76; // rcx
+  const char *v77; // rsi
+  const char *v78; // rdx
+  const char *v79; // rdi
+  __int64 v80; // rdx
+  __int64 v81; // rcx
+  __int64 v82; // rdi
+  __int64 v83; // rsi
+  const char *v84; // r8
+  const char *v85; // rsi
+  const char *v86; // rdx
+  __int64 v87; // rdx
+  __int64 v88; // rcx
+  __int64 v89; // rdi
+  __int64 v90; // rsi
+  const char *v91; // r9
+  const char *v92; // r8
+  const char *v93; // rax
+  __int64 v94; // rdx
+  __int64 v95; // rcx
+  __int64 v96; // rdi
+  __int64 v97; // rsi
+  const char *v98; // rax
+  const char *v99; // r8
+  const char *v100; // r9
+  const char *v101; // rdx
+  const char *v102; // rcx
+  const char *v103; // rdx
+  __int64 v104; // rdx
+  __int64 v105; // rcx
+  __int64 v106; // rdi
+  __int64 v107; // rsi
   const char *m_pRequestingInterfaceName; // rax
   const char *m_pInterfaceName; // r8
-  const char *v120; // r9
+  const char *v110; // r9
   const char *m_pModuleName; // rdx
-  __int64 v122; // [rsp+0h] [rbp-3D0h]
+  __int64 v112; // [rsp+0h] [rbp-3D0h]
   int i_0; // [rsp+48h] [rbp-388h]
-  int v125; // [rsp+58h] [rbp-378h]
+  int v115; // [rsp+58h] [rbp-378h]
   PlatModule_t hModule; // [rsp+60h] [rbp-370h]
   int hModulea; // [rsp+60h] [rbp-370h]
   int hModuleb; // [rsp+60h] [rbp-370h]
@@ -2497,18 +2471,18 @@ bool __fastcall CAppSystemDict::LoadSystemAndDependencies(
   unsigned __int16 pModuleNamea; // [rsp+68h] [rbp-368h]
   const char *pModuleNameb; // [rsp+68h] [rbp-368h]
   int i; // [rsp+70h] [rbp-360h]
-  unsigned __int16 v134[8]; // [rsp+80h] [rbp-350h] BYREF
-  unsigned __int16 v135[8]; // [rsp+90h] [rbp-340h] BYREF
-  unsigned __int16 v136[8]; // [rsp+A0h] [rbp-330h] BYREF
+  unsigned __int16 v124[8]; // [rsp+80h] [rbp-350h] BYREF
+  unsigned __int16 v125[8]; // [rsp+90h] [rbp-340h] BYREF
+  unsigned __int16 v126[8]; // [rsp+A0h] [rbp-330h] BYREF
   int nLoadError[4]; // [rsp+B0h] [rbp-320h] BYREF
   int retval; // [rsp+C0h] [rbp-310h] BYREF
-  CUtlMemory<int,int> v139; // [rsp+C8h] [rbp-308h] BYREF
+  CUtlMemory<int,int> v129; // [rsp+C8h] [rbp-308h] BYREF
   CAppSystemDict::AppSystemRequest_t depRequest; // [rsp+E0h] [rbp-2F0h] BYREF
   CAppSystemDict::LibraryDependencies_t dependencies; // [rsp+120h] [rbp-2B0h] BYREF
   char pModuleBuf[520]; // [rsp+190h] [rbp-240h] BYREF
-  unsigned __int64 v143; // [rsp+398h] [rbp-38h]
+  unsigned __int64 v133; // [rsp+398h] [rbp-38h]
 
-  v143 = __readfsqword(0x28u);
+  v133 = __readfsqword(0x28u);
   dependencies.m_Vector.m_Size = 0;
   dependencies.m_Vector.m_Memory.m_pMemory = 0;
   dependencies.m_Vector.m_Memory.m_nAllocationCount = 32;
@@ -2571,7 +2545,7 @@ bool __fastcall CAppSystemDict::LoadSystemAndDependencies(
                 {
                   m_pRequestingInterfaceName = "application";
                   m_pInterfaceName = v5->m_pInterfaceName;
-                  v120 = "<unknown>";
+                  v110 = "<unknown>";
                   if ( v5->m_pRequestingInterfaceName != 0 )
                     m_pRequestingInterfaceName = v5->m_pRequestingInterfaceName;
                   m_pModuleName = v5->m_pModuleName;
@@ -2579,35 +2553,35 @@ bool __fastcall CAppSystemDict::LoadSystemAndDependencies(
                   LODWORD(depRequest.m_pRequestingInterfaceName) = 1153;
                   depRequest.m_pModuleName = "LoadSystemAndDependencies";
                   if ( m_pModuleName != 0 )
-                    v120 = m_pModuleName;
+                    v110 = m_pModuleName;
                   LoggingSystem_Log(
                     LOG_GENERAL,
                     LoggingSeverity_t::LS_ERROR,
                     &depRequest,
                     "CAppSystemDict:Unable to load interface factory %s from %s (Dependency of %s), error %d\n",
                     m_pInterfaceName,
-                    v120,
+                    v110,
                     m_pRequestingInterfaceName,
                     nLoadError[0]);
                 }
-                if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v114, v115, v112, v113, v116, v117) != 0 )
+                if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v106, v107, v104, v105) != 0 )
                   loc_0 = -559038737;
                 Plat_ExitProcess(1);
                 JUMPOUT(0x306B3CE);
               }
               if ( errResponse == ErrorResponse_t::WARN_ON_ERROR )
               {
-                v110 = "application";
-                v111 = "<unknown>";
+                v102 = "application";
+                v103 = "<unknown>";
                 if ( v5->m_pRequestingInterfaceName != 0 )
-                  v110 = v5->m_pRequestingInterfaceName;
+                  v102 = v5->m_pRequestingInterfaceName;
                 if ( v5->m_pModuleName != 0 )
-                  v111 = v5->m_pModuleName;
+                  v103 = v5->m_pModuleName;
                 Warning(
                   "CAppSystemDict:Unable to load interface factory %s from %s (Dependency of %s), error %d\n",
                   v5->m_pInterfaceName,
-                  v111,
-                  v110,
+                  v103,
+                  v102,
                   nLoadError[0]);
               }
               goto LABEL_82;
@@ -2619,47 +2593,47 @@ LABEL_116:
             {
               if ( nLoadError[0] == 12 )
               {
-                v89 = "The system ran out of memory while loading the game.";
-                v90 = "#AppFramework_OutOfMemory";
+                v85 = "The system ran out of memory while loading the game.";
+                v86 = "#AppFramework_OutOfMemory";
               }
               else
               {
                 if ( g_pFullFileSystem != 0 )
                   (*(g_pFullFileSystem->_vptr_IAppSystem + 146))(g_pFullFileSystem, 0, 0);
-                v89 = "A game file appears to be missing or corrupted.  In the Steam client go to the game's properties. "
+                v85 = "A game file appears to be missing or corrupted.  In the Steam client go to the game's properties. "
                       " In the 'Local Files' tab select 'Verify Integrity of Game Cache' to have Steam double-check the g"
                       "ame's installation.";
-                v90 = "#AppFramework_InvalidLocalFiles";
+                v86 = "#AppFramework_InvalidLocalFiles";
               }
               if ( g_pLocalize != 0 )
-                (*(*g_pLocalize + 320LL))(g_pLocalize, "#General_UnableToStartGame", v90);
+                (*(*g_pLocalize + 320LL))(g_pLocalize, "#General_UnableToStartGame", v86);
               else
-                Plat_MessageBox("Unable to Start Game", v89);
+                Plat_MessageBox("Unable to Start Game", v85);
               do
               {
                 if ( LoggingSystem_IsChannelEnabled(LOG_GENERAL, 4) != 0 )
                 {
-                  v97 = "application";
-                  v98 = "<unknown>";
+                  v91 = "application";
+                  v92 = "<unknown>";
                   if ( v5->m_pRequestingInterfaceName != 0 )
-                    v97 = v5->m_pRequestingInterfaceName;
-                  v99 = v5->m_pModuleName;
+                    v91 = v5->m_pRequestingInterfaceName;
+                  v93 = v5->m_pModuleName;
                   LODWORD(depRequest.m_pRequestingInterfaceName) = 1146;
-                  if ( v99 != 0 )
-                    v98 = v99;
+                  if ( v93 != 0 )
+                    v92 = v93;
                   depRequest.m_pRequestingModuleName = "appsystemdict.cpp";
                   depRequest.m_pModuleName = "LoadSystemAndDependencies";
-                  LODWORD(v122) = nLoadError[0];
+                  LODWORD(v112) = nLoadError[0];
                   LoggingSystem_Log(
                     LOG_GENERAL,
                     LoggingSeverity_t::LS_ERROR,
                     &depRequest,
                     "CAppSystemDict:Unable to load module %s (Dependency of %s), error %d\n",
-                    v98,
-                    v97,
-                    v122);
+                    v92,
+                    v91,
+                    v112);
                 }
-                if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v93, v94, v91, v92, v95, v96) != 0 )
+                if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v89, v90, v87, v88) != 0 )
                   loc_0 = -559038737;
                 Plat_ExitProcess(1);
 LABEL_133:
@@ -2669,14 +2643,14 @@ LABEL_133:
             }
             if ( errResponse == ErrorResponse_t::WARN_ON_ERROR )
             {
-              v80 = "application";
-              v78 = nLoadError[0];
-              v79 = "<unknown>";
-              v81 = "CAppSystemDict:Unable to load module %s (Dependency of %s), error %d\n";
+              v78 = "application";
+              v76 = nLoadError[0];
+              v77 = "<unknown>";
+              v79 = "CAppSystemDict:Unable to load module %s (Dependency of %s), error %d\n";
               if ( v5->m_pRequestingInterfaceName != 0 )
-                v80 = v5->m_pRequestingInterfaceName;
+                v78 = v5->m_pRequestingInterfaceName;
               if ( v5->m_pModuleName != 0 )
-                v79 = v5->m_pModuleName;
+                v77 = v5->m_pModuleName;
               goto LABEL_110;
             }
             goto LABEL_82;
@@ -2690,43 +2664,43 @@ LABEL_133:
           {
             if ( LoggingSystem_IsChannelEnabled(LOG_GENERAL, 4) != 0 )
             {
-              v106 = "application";
-              v107 = v5->m_pInterfaceName;
-              v108 = "<unknown>";
+              v98 = "application";
+              v99 = v5->m_pInterfaceName;
+              v100 = "<unknown>";
               if ( v5->m_pRequestingInterfaceName != 0 )
-                v106 = v5->m_pRequestingInterfaceName;
-              v109 = v5->m_pModuleName;
+                v98 = v5->m_pRequestingInterfaceName;
+              v101 = v5->m_pModuleName;
               depRequest.m_pRequestingModuleName = "appsystemdict.cpp";
               depRequest.m_pModuleName = "LoadSystemAndDependencies";
               LODWORD(depRequest.m_pRequestingInterfaceName) = 1164;
-              if ( v109 != 0 )
-                v108 = v109;
+              if ( v101 != 0 )
+                v100 = v101;
               LoggingSystem_Log(
                 LOG_GENERAL,
                 LoggingSeverity_t::LS_ERROR,
                 &depRequest,
                 "CAppSystemDict:Unable to create interface %s from %s (Dependency of %s)\n",
-                v107,
-                v108,
-                v106);
+                v99,
+                v100,
+                v98);
             }
-            if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v102, v103, v100, v101, v104, v105) != 0 )
+            if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v96, v97, v94, v95) != 0 )
               loc_0 = -559038737;
-            v70 = Plat_ExitProcess(1);
+            v68 = Plat_ExitProcess(1);
             goto LABEL_101;
           }
           if ( errResponse == ErrorResponse_t::WARN_ON_ERROR )
           {
-            v78 = "application";
-            v79 = v5->m_pInterfaceName;
-            v80 = "<unknown>";
-            v81 = "CAppSystemDict:Unable to create interface %s from %s (Dependency of %s)\n";
+            v76 = "application";
+            v77 = v5->m_pInterfaceName;
+            v78 = "<unknown>";
+            v79 = "CAppSystemDict:Unable to create interface %s from %s (Dependency of %s)\n";
             if ( v5->m_pRequestingInterfaceName != 0 )
-              v78 = v5->m_pRequestingInterfaceName;
+              v76 = v5->m_pRequestingInterfaceName;
             if ( v5->m_pModuleName != 0 )
-              v80 = v5->m_pModuleName;
+              v78 = v5->m_pModuleName;
 LABEL_110:
-            Warning(v81, v79, v80, v78);
+            Warning(v79, v77, v78, v76);
           }
 LABEL_82:
           v25 = 0;
@@ -2734,18 +2708,18 @@ LABEL_82:
         }
       }
       v5->m_pSystem = m_pSystem;
-      CUtlSymbolTable::AddString(v135, &dependencies.m_SymbolTable, v5->m_pInterfaceName);
-      v10 = v135[0];
-      if ( v135[0] >= dependencies.m_Vector.m_Size )
+      CUtlSymbolTable::AddString(v125, &dependencies.m_SymbolTable, v5->m_pInterfaceName);
+      v10 = v125[0];
+      if ( v125[0] >= dependencies.m_Vector.m_Size )
       {
-        v11 = v135[0] + 1;
+        v11 = v125[0] + 1;
         if ( dependencies.m_Vector.m_Size < v11 )
         {
           CUtlVectorBase<CAppSystemDict::InterfaceInfo_t,CUtlMemory<CAppSystemDict::InterfaceInfo_t,int>>::InsertMultipleBefore(
             &dependencies.m_Vector,
             dependencies.m_Vector.m_Size,
             v11 - dependencies.m_Vector.m_Size);
-          v10 = v135[0];
+          v10 = v125[0];
         }
       }
       v12 = &dependencies.m_Vector.m_Memory.m_pMemory[v10];
@@ -2761,17 +2735,17 @@ LABEL_82:
         for ( j = *(v13 + 8); j != 0 && *j != 0; j = v14[1] )
         {
           CUtlSymbolTable::AddString(
-            v136,
+            v126,
             &dependencies.m_SymbolTable,
             requests->m_Memory.m_pMemory[v4].m_pInterfaceName);
-          pModuleNamea = v136[0];
+          pModuleNamea = v126[0];
           hModulea = dependencies.m_Vector.m_Size;
-          if ( v136[0] < dependencies.m_Vector.m_Size )
+          if ( v126[0] < dependencies.m_Vector.m_Size )
             goto LABEL_19;
-          v22 = v136[0] + 1;
+          v22 = v126[0] + 1;
           if ( dependencies.m_Vector.m_Size >= v22 )
             goto LABEL_19;
-          v125 = v22 - dependencies.m_Vector.m_Size;
+          v115 = v22 - dependencies.m_Vector.m_Size;
           if ( v22 == dependencies.m_Vector.m_Size )
             goto LABEL_19;
           if ( v22 > dependencies.m_Vector.m_Memory.m_nAllocationCount )
@@ -2779,7 +2753,7 @@ LABEL_82:
               &dependencies.m_Vector.m_Memory,
               v22 - dependencies.m_Vector.m_Memory.m_nAllocationCount);
           dependencies.m_Vector.m_Size = v22;
-          if ( v125 <= 0 )
+          if ( v115 <= 0 )
           {
 LABEL_19:
             m_pMemory = dependencies.m_Vector.m_Memory.m_pMemory;
@@ -2800,9 +2774,9 @@ LABEL_19:
               ++hModuleb;
               ++v24;
             }
-            while ( v125 > hModuleb );
+            while ( v115 > hModuleb );
           }
-          CUtlSymbolTable::AddString(v134, &m_pMemory[pModuleNamea].m_Dependencies, j);
+          CUtlSymbolTable::AddString(v124, &m_pMemory[pModuleNamea].m_Dependencies, j);
           m_Size = requests->m_Size;
           memset(&depRequest, 0, sizeof(depRequest));
           v18 = m_Size == requests->m_Memory.m_nAllocationCount;
@@ -2845,13 +2819,13 @@ LABEL_37:
   CAppSystemDict::ComputeDependencies(this, &dependencies);
   retval = 0;
   v33 = requests->m_Size;
-  v139.m_pMemory = 0;
-  v139.m_nGrowSize = 0;
-  v139.m_nAllocationCount = v33;
+  v129.m_pMemory = 0;
+  v129.m_nGrowSize = 0;
+  v129.m_nAllocationCount = v33;
   if ( v33 != 0 )
   {
     CMemAllocSystemInitialize(v31, v32);
-    v139.m_pMemory = (**g_pMemAlloc)(g_pMemAlloc, 4LL * v139.m_nAllocationCount);
+    v129.m_pMemory = (**g_pMemAlloc)(g_pMemAlloc, 4LL * v129.m_nAllocationCount);
   }
   CAppSystemDict::SortDependentLibraries(this, &dependencies, &retval);
   v34 = this->m_Systems.m_Size;
@@ -2873,7 +2847,7 @@ LABEL_37:
     }
     this->m_Systems.m_Size = v40 + 1;
     v41 = &this->m_Systems.m_Memory.m_pMemory[v34];
-    v42 = &dependencies.m_Vector.m_Memory.m_pMemory[*(v139.m_pMemory + v35)];
+    v42 = &dependencies.m_Vector.m_Memory.m_pMemory[*(v129.m_pMemory + v35)];
     v41->m_pSystem = v42->m_pSystem;
     v41->m_hModule = v42->m_hModule;
     m_nAppSystemPhase = this->m_nAppSystemPhase;
@@ -2935,10 +2909,10 @@ LABEL_49:
     {
       v53 = this->m_Systems.m_Memory.m_pMemory[v50].m_pSystem;
       v54 = Plat_RelativeTicks();
-      if ( (*v53->_vptr_IAppSystem)(v53, AppSystemDictCreateInterfaceFn) == 0 )
+      if ( v53->Connect(AppSystemDictCreateInterfaceFn) == 0 )
         break;
       v51 = Plat_RelativeTicks();
-      v52 = Plat_TickDiffMilliSecF(0, v51 - v54);
+      Plat_TickDiffMilliSecF(0, v51 - v54);
       COM_TimestampedLog(
         "CAppSystemDict::Connect( %-32s ) %8.3f msec",
         this->m_Systems.m_Memory.m_pMemory[v50++].m_pInterfaceName,
@@ -2956,7 +2930,7 @@ LABEL_49:
     }
     if ( LoggingSystem_IsChannelEnabled(LOG_GENERAL, 4) != 0 )
     {
-      v77 = this->m_Systems.m_Memory.m_pMemory[v50].m_pInterfaceName;
+      v75 = this->m_Systems.m_Memory.m_pMemory[v50].m_pInterfaceName;
       LODWORD(depRequest.m_pRequestingInterfaceName) = 1269;
       depRequest.m_pRequestingModuleName = "appsystemdict.cpp";
       depRequest.m_pModuleName = "LoadSystemAndDependencies";
@@ -2965,23 +2939,23 @@ LABEL_49:
         LoggingSeverity_t::LS_ERROR,
         &depRequest,
         "AppSystemDict: Error in Connect() of interface '%s'!\n",
-        v77);
+        v75);
     }
-    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v66, v67, v64, v65, v68, v69) != 0 )
+    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v66, v67, v64, v65) != 0 )
       loc_0 = -559038737;
 LABEL_100:
-    v70 = Plat_ExitProcess(1);
+    v68 = Plat_ExitProcess(1);
     retval = 0;
-    if ( (v139.m_nGrowSize & 0xC0000000) == 0 )
+    if ( (v129.m_nGrowSize & 0xC0000000) == 0 )
     {
-      CUtlMemory<int,int>::Purge(&v139);
-      if ( (v139.m_nGrowSize & 0xC0000000) == 0 )
-        CUtlMemory<int,int>::Purge(&v139);
+      CUtlMemory<int,int>::Purge(&v129);
+      if ( (v129.m_nGrowSize & 0xC0000000) == 0 )
+        CUtlMemory<int,int>::Purge(&v129);
     }
 LABEL_101:
     CUtlSymbolTable::~CUtlSymbolTable(&dependencies.m_SymbolTable);
     CUtlVectorBase<CAppSystemDict::InterfaceInfo_t,CUtlMemory<CAppSystemDict::InterfaceInfo_t,int>>::~CUtlVectorBase(&dependencies.m_Vector);
-    Unwind_Resume(v70, v73, v71, v72, v74, v75);
+    Unwind_Resume(v68, v71, v69, v70, v72, v73);
   }
 LABEL_84:
   if ( i_0 > 0 )
@@ -3011,7 +2985,7 @@ LABEL_95:
       if ( (*(v62->_vptr_IAppSystem + 3))(v62) != 1 )
         break;
       v60 = Plat_RelativeTicks();
-      v61 = Plat_TickDiffMilliSecF(0, v60 - v63);
+      Plat_TickDiffMilliSecF(0, v60 - v63);
       COM_TimestampedLog(
         "CAppSystemDict::Init   ( %-32s ) %8.3f msec",
         this->m_Systems.m_Memory.m_pMemory[v59++].m_pInterfaceName,
@@ -3023,7 +2997,7 @@ LABEL_95:
     {
       if ( LoggingSystem_IsChannelEnabled(LOG_GENERAL, 4) != 0 )
       {
-        v88 = this->m_Systems.m_Memory.m_pMemory[v59].m_pInterfaceName;
+        v84 = this->m_Systems.m_Memory.m_pMemory[v59].m_pInterfaceName;
         LODWORD(depRequest.m_pRequestingInterfaceName) = 1293;
         depRequest.m_pRequestingModuleName = "appsystemdict.cpp";
         depRequest.m_pModuleName = "LoadSystemAndDependencies";
@@ -3032,9 +3006,9 @@ LABEL_95:
           LoggingSeverity_t::LS_ERROR,
           &depRequest,
           "AppSystemDict: Error in Init() of interface '%s'!\n",
-          v88);
+          v84);
       }
-      if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v84, v85, v82, v83, v86, v87) != 0 )
+      if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v82, v83, v80, v81) != 0 )
         loc_0 = -559038737;
       goto LABEL_100;
     }
@@ -3046,11 +3020,11 @@ LABEL_70:
     v25 = 0;
   }
   retval = 0;
-  if ( (v139.m_nGrowSize & 0xC0000000) == 0 )
+  if ( (v129.m_nGrowSize & 0xC0000000) == 0 )
   {
-    CUtlMemory<int,int>::Purge(&v139);
-    if ( (v139.m_nGrowSize & 0xC0000000) == 0 )
-      CUtlMemory<int,int>::Purge(&v139);
+    CUtlMemory<int,int>::Purge(&v129);
+    if ( (v129.m_nGrowSize & 0xC0000000) == 0 )
+      CUtlMemory<int,int>::Purge(&v129);
   }
 LABEL_38:
   CUtlSymbolTable::~CUtlSymbolTable(&dependencies.m_SymbolTable);
@@ -3098,9 +3072,11 @@ PlatWindow_t __fastcall CAppSystemDict::CreateAppWindow(
   unsigned int DefaultMonitorIndex; // eax
   unsigned int v14; // eax
   unsigned int v15; // eax
-  __int64 v16; // rax
+  __int64 v16; // rdi
   __int64 v17; // rax
-  unsigned int v18; // eax
+  __int64 v18; // rdi
+  __int64 v19; // rax
+  unsigned int v20; // eax
   PlatWindow_t hWnd; // [rsp+8h] [rbp-48h]
   int wa; // [rsp+14h] [rbp-3Ch] BYREF
   __int64 ya; // [rsp+18h] [rbp-38h] OVERLAPPED BYREF
@@ -3140,13 +3116,13 @@ PlatWindow_t __fastcall CAppSystemDict::CreateAppWindow(
       Plat_GetDesktopBounds(v15, &nDesktopX, &nDesktopY, &nIgnoreWidth, nIgnoreHeight);
       HIDWORD(ya) = nDesktopX + (nIgnoreWidth - wa) / 2;
       LODWORD(ya) = nDesktopY + (nIgnoreHeight[0] - h) / 2;
-      v16 = CommandLine();
-      HIDWORD(ya) = (*(*v16 + 88LL))(v16, "-x", HIDWORD(ya));
-      v17 = CommandLine();
-      v18 = (*(*v17 + 88LL))(v17, "-y", ya);
+      v17 = CommandLine(v16);
+      HIDWORD(ya) = (*(*v17 + 88LL))(v17, "-x", HIDWORD(ya));
+      v19 = CommandLine(v18);
+      v20 = (*(*v19 + 88LL))(v19, "-y", ya);
       v10 = HIDWORD(ya);
-      v11 = v18;
-      LODWORD(ya) = v18;
+      v11 = v20;
+      LODWORD(ya) = v20;
     }
   }
   result = Plat_CreateWindow(this->m_hInstance, pTitle, v10, v11, wa, h, v9);

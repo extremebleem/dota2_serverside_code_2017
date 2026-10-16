@@ -465,7 +465,7 @@ void __fastcall CIngameEvent_FM2015::UpdateOnRemove(CIngameEvent_FM2015 *const t
     ++v1;
     (*(this->m_ClientMessageContainer.m_Memory.m_pMemory[v3]->_vptr_IClientMessageDelegateHook + 1))(this->m_ClientMessageContainer.m_Memory.m_pMemory[v3]);
     v4 = this->m_ClientMessageContainer.m_Memory.m_pMemory[v3++];
-    (*v4->_vptr_IClientMessageDelegateHook)(v4);
+    v4->Release();
   }
   v5 = (this->m_ClientMessageContainer.m_Memory.m_nGrowSize & 0xC0000000) == 0;
   this->m_ClientMessageContainer.m_Size = 0;
@@ -1952,7 +1952,7 @@ void __fastcall CIngameEvent_WM2016::UpdateOnRemove(CIngameEvent_WM2016 *const t
     ++v1;
     (*(this->m_ClientMessageContainer.m_Memory.m_pMemory[v3]->_vptr_IClientMessageDelegateHook + 1))(this->m_ClientMessageContainer.m_Memory.m_pMemory[v3]);
     v4 = this->m_ClientMessageContainer.m_Memory.m_pMemory[v3++];
-    (*v4->_vptr_IClientMessageDelegateHook)(v4);
+    v4->Release();
   }
   v5 = (this->m_ClientMessageContainer.m_Memory.m_nGrowSize & 0xC0000000) == 0;
   this->m_ClientMessageContainer.m_Size = 0;

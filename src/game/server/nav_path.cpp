@@ -510,7 +510,7 @@ void __fastcall CPathCostRecorder::DebugDraw(const CPathCostRecorder *const this
 // calls: CPathData::InvalidatePath
 void __fastcall CPathData::CPathData(CPathData *const this)
 {
-  this->_vptr_CPathData = off_47B0E10;
+  this->_vptr_CPathData = off_47B0E10;  // vptr: CPathData
   this->m_ageTimer.m_timestamp.m_Value = -1.0;
   this->m_ageTimer._vptr_IntervalTimer = off_3FD0350;
   CPathData::InvalidatePath(this);
@@ -1157,11 +1157,11 @@ void __fastcall CPathData::Draw(const CPathData *const this, CPathSegment *pStar
   double v11; // xmm2_8
   double v12; // xmm3_8
   bool v13; // dl
-  int v14; // r10d
-  int v15; // r15d
-  int v16; // r14d
+  unsigned int v14; // r10d
+  unsigned int v15; // r15d
+  unsigned int v16; // r14d
   const Vector *p_m_vTop; // rsi
-  int v18; // r10d
+  unsigned int v18; // r10d
   const Vector *p_vPos; // r11
   float v20; // xmm2_4
   float v21; // xmm3_4
@@ -1175,9 +1175,9 @@ void __fastcall CPathData::Draw(const CPathData *const this, CPathSegment *pStar
   bool bDrawJumpSegments; // [rsp+1Bh] [rbp-55h]
   float v30; // [rsp+1Ch] [rbp-54h]
   float v31; // [rsp+1Ch] [rbp-54h]
-  int b; // [rsp+20h] [rbp-50h]
+  unsigned int b; // [rsp+20h] [rbp-50h]
   float v33; // [rsp+28h] [rbp-48h]
-  int v34; // [rsp+28h] [rbp-48h]
+  unsigned int v34; // [rsp+28h] [rbp-48h]
   Vector endPos; // [rsp+30h] [rbp-40h] BYREF
 
   if ( this->m_nSegmentCount > 0 )
@@ -1264,7 +1264,7 @@ void __fastcall CPathData::Draw(const CPathData *const this, CPathSegment *pStar
           v30 = *&v12;
           v33 = *&v11;
           b = v14;
-          NDebugOverlay::VertArrow(p_m_vTop + 1, p_m_vTop, 3.0, v16, v15, v14, 255, 1, a3);
+          NDebugOverlay::VertArrow(p_m_vTop + 1, p_m_vTop, 3.0, v16, v15, v14, 255, a3, 1);
           v18 = b;
           p_vPos = &m_path->vPos;
           v20 = v33;
@@ -1287,9 +1287,9 @@ void __fastcall CPathData::Draw(const CPathData *const this, CPathSegment *pStar
         endPos.z = v22;
         endPos.x = v23;
         if ( v21 <= v20 )
-          NDebugOverlay::VertArrow(p_vPos, &endPos, 3.0, v16, v15, v18, 255, 1, a3);
+          NDebugOverlay::VertArrow(p_vPos, &endPos, 3.0, v16, v15, v18, 255, a3, 1);
         else
-          NDebugOverlay::HorzArrow(p_vPos, &endPos, 3.0, v16, v15, v18, 255, 1, a3);
+          NDebugOverlay::HorzArrow(p_vPos, &endPos, 3.0, v16, v15, v18, 255, a3, 1);
       }
       if ( nav_path_draw_areas.m_pParent->m_Value.m_nValue != 0 && INavDrawArea::ms_pInst != 0 )
         (*(INavDrawArea::ms_pInst->_vptr_INavDrawArea + 3))(
@@ -1326,8 +1326,8 @@ void __fastcall CPathData::DrawInterpolated(CPathData *const this, float a2, __m
   float v8; // xmm2_4
   const Vector *p_vPos; // r13
   float v10; // xmm1_4
-  int v11; // ecx
-  int v12; // edx
+  signed int v11; // ecx
+  signed int v12; // edx
   float t; // [rsp+Ch] [rbp-34h]
   Vector vLastPos; // [rsp+10h] [rbp-30h] BYREF
 
@@ -1371,11 +1371,11 @@ void __fastcall CPathData::DrawInterpolated(CPathData *const this, float a2, __m
 // callers: CNavEditor::UpdateSelection, CSimpleBot::CSimpleBotIntention::Reset, CSimpleBot::CSimpleBotIntention::CSimpleBotIntention, ChasePath::ChasePath
 void __fastcall CPath::CPath(CPath *const this)
 {
-  this->_vptr_CPathData = off_47B0E10;
+  this->_vptr_CPathData = off_47B0E10;  // vptr: CPathData
   this->m_ageTimer.m_timestamp.m_Value = -1.0;
   this->m_ageTimer._vptr_IntervalTimer = off_3FD0350;
   CPathData::InvalidatePath(this);
-  this->_vptr_CPathData = off_47B0E50;
+  this->_vptr_CPathData = off_47B0E50;  // vptr: CPath
   this->m_pPartialPathDelegate = 0;
   this->m_PathCaps.m_pPathingEntity = 0;
   this->m_PathCaps.m_bIsDebugging = 0;
@@ -1683,9 +1683,9 @@ LABEL_25:
       if ( !v35 )
       {
         v80 = v33;
-        NDebugOverlay::Cross3D(&vStartDrop, 5.0, 255, 0, 0, 1, 5.0);
-        NDebugOverlay::Cross3D(&traceFilter, 5.0, 0, 255, 0, 1, 5.0);
-        NDebugOverlay::HorzArrow(&vStartDrop, &traceFilter, 5.0, 255, 100, 0, 255, 1, 5.0);
+        NDebugOverlay::Cross3D(&vStartDrop, 5.0, 0xFFu, 0, 0, 1, 5.0);
+        NDebugOverlay::Cross3D(&traceFilter, 5.0, 0, 0xFFu, 0, 1, 5.0);
+        NDebugOverlay::HorzArrow(&vStartDrop, &traceFilter, 5.0, 0xFFu, 0x64u, 0, 255, 5.0, 1);
         v33 = v80;
       }
       v82 = v33;
@@ -1941,7 +1941,7 @@ LABEL_12:
     v12 = (p_m_nAreaIndex + 2);
     if ( !v9 )
     {
-      NDebugOverlay::Line(&vCloseFrom, &vCloseTo, 255, 0, 255, 1, 5.0);
+      NDebugOverlay::Line(&vCloseFrom, &vCloseTo, 0xFFu, 0, 0xFFu, 1, 5.0);
       v10 = pAreaTo;
       v12 = (p_m_nAreaIndex + 2);
       v11 = &this->m_path[i];
@@ -2006,7 +2006,7 @@ LABEL_12:
       v9 = !this->m_PathCaps.m_bIsDebugging;
       vForward = v61;
       if ( !v9 )
-        NDebugOverlay::Cross3D(&vForward, 15.0, 255, 100, 255, 1, 3.0);
+        NDebugOverlay::Cross3D(&vForward, 15.0, 0xFFu, 0x64u, 0xFFu, 1, 3.0);
       v36 = &this->_vptr_CPathData + 11 * i;
       newSegment.vPos.x = vForward.x;
       v37 = v36[1];
@@ -2081,7 +2081,7 @@ LABEL_12:
       *&newSegment.flPortalHalfWidth = v22;
       *&newSegment.m_nAreaIndex = v23;
       if ( !v9 )
-        NDebugOverlay::Cross3D(&newSegment.vPos, 15.0, 255, 0, 255, 1, 3.0);
+        NDebugOverlay::Cross3D(&newSegment.vPos, 15.0, 0xFFu, 0, 0xFFu, 1, 3.0);
     }
     CPathData::InsertSegment(this, &newSegment, v5);
     v14 = i + 2;
@@ -3852,7 +3852,7 @@ void __fastcall CPath::StartRecordLastFailedPath(
   v11 = CPath::m_pLastFailedPath;
   if ( CPath::m_pLastFailedPath == 0 )
   {
-    v12 = operator new(0xA0u);
+    v12 = operator new(0xA0u);  // new CPathCostRecorder (size matches)
     NavHull_t::NavHull_t(&v18, -1.0, v13, 7u);
     m_hullCategory = v18.m_hullCategory;
     v12->m_pPathCost = 0;
@@ -3863,7 +3863,7 @@ void __fastcall CPath::StartRecordLastFailedPath(
     v12->m_pStartArea = 0;
     v12->m_navHull.m_flHullHeight = m_flHullHeight;
     v12->m_navHull.m_hullCategory = m_hullCategory;
-    v12->_vptr_CPathCostBase = off_47B0DB0;
+    v12->_vptr_CPathCostBase = off_47B0DB0;  // vptr: CPathCostRecorder
     v12->m_navHull.m_flHullRadius = m_flHullRadius;
     v12->m_pGoalArea = 0;
     v12->m_NonTraversablePairs.m_Size = 0;

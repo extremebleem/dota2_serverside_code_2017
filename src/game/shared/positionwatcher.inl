@@ -4,7 +4,7 @@
 // IWatcherCallback::~IWatcherCallback  (line 19, @0x0000000002302fa0, libserver.so)
 void __fastcall IWatcherCallback::~IWatcherCallback(IWatcherCallback *const this)
 {
-  this->_vptr_IWatcherCallback = off_4074030;
+  this->_vptr_IWatcherCallback = off_4074030;  // vptr: IWatcherCallback
 }
 
 
@@ -12,7 +12,7 @@ void __fastcall IWatcherCallback::~IWatcherCallback(IWatcherCallback *const this
 // calls: operator delete
 void __fastcall IWatcherCallback::~IWatcherCallback(IWatcherCallback *const this)
 {
-  this->_vptr_IWatcherCallback = off_4074030;
+  this->_vptr_IWatcherCallback = off_4074030;  // vptr: IWatcherCallback
   operator delete(this);
 }
 
@@ -20,7 +20,7 @@ void __fastcall IWatcherCallback::~IWatcherCallback(IWatcherCallback *const this
 // IPositionWatcher::~IPositionWatcher  (line 22, @0x00000000023a8bf0, libserver.so)  // inlines: ~IWatcherCallback
 void __fastcall IPositionWatcher::~IPositionWatcher(IPositionWatcher *const this)
 {
-  this->_vptr_IWatcherCallback = off_4074030;
+  this->_vptr_IWatcherCallback = off_4074030;  // vptr: IWatcherCallback
 }
 
 
@@ -28,7 +28,7 @@ void __fastcall IPositionWatcher::~IPositionWatcher(IPositionWatcher *const this
 // calls: operator delete
 void __fastcall IPositionWatcher::~IPositionWatcher(IPositionWatcher *const this)
 {
-  this->_vptr_IWatcherCallback = off_4074030;
+  this->_vptr_IWatcherCallback = off_4074030;  // vptr: IWatcherCallback
   operator delete(this);
 }
 
@@ -36,7 +36,7 @@ void __fastcall IPositionWatcher::~IPositionWatcher(IPositionWatcher *const this
 // IVPhysicsWatcher::~IVPhysicsWatcher  (line 38, @0x00000000023047a0, libserver.so)  // inlines: ~IWatcherCallback
 void __fastcall IVPhysicsWatcher::~IVPhysicsWatcher(IVPhysicsWatcher *const this)
 {
-  this->_vptr_IWatcherCallback = off_4074030;
+  this->_vptr_IWatcherCallback = off_4074030;  // vptr: IWatcherCallback
 }
 
 
@@ -44,7 +44,7 @@ void __fastcall IVPhysicsWatcher::~IVPhysicsWatcher(IVPhysicsWatcher *const this
 // calls: operator delete
 void __fastcall IVPhysicsWatcher::~IVPhysicsWatcher(IVPhysicsWatcher *const this)
 {
-  this->_vptr_IWatcherCallback = off_4074030;
+  this->_vptr_IWatcherCallback = off_4074030;  // vptr: IWatcherCallback
   operator delete(this);
 }
 

@@ -688,7 +688,7 @@ void __fastcall CDOTAChallengeSystem::GameShutdown(
       this->m_ClientMessageContainer.m_Memory.m_pMemory[v4],
       msg);
     v5 = this->m_ClientMessageContainer.m_Memory.m_pMemory[v4++];
-    (*v5->_vptr_IClientMessageDelegateHook)(v5);
+    v5->Release();
   }
   v6 = (this->m_ClientMessageContainer.m_Memory.m_nGrowSize & 0xC0000000) == 0;
   this->m_ClientMessageContainer.m_Size = 0;

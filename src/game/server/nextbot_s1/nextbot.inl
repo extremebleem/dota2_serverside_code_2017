@@ -77,7 +77,7 @@ CEntityInstance *__fastcall NextBotCombatCharacter::CEntityInstanceEntityClass::
 void __fastcall NextBotCombatCharacter::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         NextBotCombatCharacter::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -87,7 +87,7 @@ void __fastcall NextBotCombatCharacter::CEntityInstanceEntityClass::~CEntityInst
 void __fastcall NextBotCombatCharacter::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         NextBotCombatCharacter::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }

@@ -1315,9 +1315,9 @@ LABEL_19:
   CEntitySystem::BuildComponentUnserializers(this);
   if ( this->m_bInvokePostDataUpdates )
   {
-    v29 = operator new(0x28u);
+    v29 = operator new(0x28u);  // new CNetworkFieldScratchData (size matches)
     LODWORD(v29[1]._vptr_INetworkFieldScratchData) = 0;
-    v29->_vptr_INetworkFieldScratchData = off_47C3090;
+    v29->_vptr_INetworkFieldScratchData = off_47C3090;  // vptr: CNetworkFieldScratchData
     v29[2]._vptr_INetworkFieldScratchData = 0;
     LODWORD(v29[3]._vptr_INetworkFieldScratchData) = 0;
     v30 = LOG_ENTITY_SYSTEM;
@@ -9292,7 +9292,7 @@ CEntityInstance *__fastcall CEntitySystem::FindEntityInheritingFrom(
   for ( ; m_pNext != 0; m_pNext = m_pNext->m_pNext )
   {
     m_pInstance = m_pNext->m_pInstance;
-    v6 = (*m_pNext->m_pInstance->_vptr_IHandleEntity)(m_pNext->m_pInstance);
+    v6 = m_pNext->m_pInstance->Schema_DynamicBinding();
     m_pClassInfo_N = pInheritsFrom->m_pClassInfo_N;
     v8 = *(v6 + 40);
     if ( v8 != 0 )
@@ -9442,7 +9442,7 @@ CEntityInstance *__fastcall EntityInstanceIter_t::Next(EntityInstanceIter_t *con
     if ( m_pNext == 0 )
       return 0;
     while ( (m_pNext->m_flags & 0x200) != 0
-         || (*this->m_pFilter->_vptr_IEntityFindFilter)(this->m_pFilter, m_pNext->m_pInstance) == 0 )
+         || this->m_pFilter->ShouldFindEntity(m_pNext->m_pInstance) == 0 )
     {
       m_pNext = this->m_pCur->m_pNext;
       this->m_pCur = m_pNext;
@@ -9599,7 +9599,7 @@ CEntityInstance *__fastcall EntityInstanceByClassIter_t::Next(EntityInstanceByCl
           if ( m_pFilter == 0 )
             break;
           v7 = this->m_pCur != 0 ? this->m_pCur->m_pInstance : 0LL;
-          if ( (*m_pFilter->_vptr_IEntityFindFilter)(m_pFilter, v7) != 0 )
+          if ( m_pFilter->ShouldFindEntity(v7) != 0 )
             break;
         }
         m_pNext = this->m_pCur->m_pNext;
@@ -9622,7 +9622,7 @@ LABEL_22:
     if ( m_pCur == 0 )
       return 0;
     while ( (m_pCur->m_flags & 0x200) != 0
-         || (*this->m_pFilter->_vptr_IEntityFindFilter)(this->m_pFilter, m_pCur->m_pInstance) == 0 )
+         || this->m_pFilter->ShouldFindEntity(m_pCur->m_pInstance) == 0 )
     {
       m_pCur = this->m_pCur->m_pNextByClass;
       this->m_pCur = m_pCur;
@@ -9955,7 +9955,7 @@ CEntityInstance *__fastcall EntityInstanceByNameIter_t::Next(EntityInstanceByNam
           m_pFilter = this->m_pFilter;
           if ( m_pFilter == 0 )
             return m_pCur->m_pInstance;
-          if ( (*m_pFilter->_vptr_IEntityFindFilter)(m_pFilter, m_pCur->m_pInstance) != 0 )
+          if ( m_pFilter->ShouldFindEntity(m_pCur->m_pInstance) != 0 )
             break;
         }
         v6 = this->m_nCurNameInList - 1;
@@ -9992,7 +9992,7 @@ CEntityInstance *__fastcall EntityInstanceByNameIter_t::Next(EntityInstanceByNam
           if ( v14 == 0 )
             break;
           v15 = this->m_pCur != 0 ? this->m_pCur->m_pInstance : 0LL;
-          if ( (*v14->_vptr_IEntityFindFilter)(v14, v15) != 0 )
+          if ( v14->ShouldFindEntity(v15) != 0 )
             break;
         }
         m_pNext = this->m_pCur->m_pNext;
@@ -13107,40 +13107,34 @@ void __fastcall CEntitySystem::BuildResourceManifestForEntity(
   __int64 v59; // rcx
   __int64 v60; // rdi
   __int64 v61; // rsi
-  __int64 v62; // r8
-  __int64 v63; // r9
-  __int64 v64; // rdx
-  __int64 v65; // rcx
-  __int64 v66; // rdi
-  __int64 v67; // rsi
-  __int64 v68; // r8
-  __int64 v69; // r9
-  __int64 v70; // rdx
-  __int64 v71; // rcx
-  __int64 v72; // rdi
-  __int64 v73; // rsi
-  __int64 v74; // r8
-  __int64 v75; // r9
-  signed int v76; // [rsp+Ch] [rbp-104h]
-  __int64 v77; // [rsp+10h] [rbp-100h]
+  __int64 v62; // rdx
+  __int64 v63; // rcx
+  __int64 v64; // rdi
+  __int64 v65; // rsi
+  __int64 v66; // rdx
+  __int64 v67; // rcx
+  __int64 v68; // rdi
+  __int64 v69; // rsi
+  signed int v70; // [rsp+Ch] [rbp-104h]
+  __int64 v71; // [rsp+10h] [rbp-100h]
   char *s; // [rsp+18h] [rbp-F8h]
   char *sa; // [rsp+18h] [rbp-F8h]
   char *sb; // [rsp+18h] [rbp-F8h]
   char *sc; // [rsp+18h] [rbp-F8h]
-  CUtlLeanVectorBase<CEntityKeyValues::KeyValueInfo_t,short int>::ElemType_t *v82; // [rsp+20h] [rbp-F0h]
-  __int64 v83; // [rsp+28h] [rbp-E8h]
-  CUtlLeanVectorBase<CEntityKeyValues::KeyValueInfo_t,short int>::IndexType_t v84; // [rsp+30h] [rbp-E0h]
-  CUtlLeanVectorBase<CEntityKeyValues::KeyValueInfo_t,short int>::IndexType_t v85; // [rsp+32h] [rbp-DEh]
-  __int16 v86; // [rsp+34h] [rbp-DCh]
-  signed int v87; // [rsp+34h] [rbp-DCh]
-  CUtlLeanVectorBase<CEntityKeyValues::KeyValueInfo_t,short int>::ElemType_t *v89; // [rsp+40h] [rbp-D0h]
-  signed int v90; // [rsp+40h] [rbp-D0h]
+  CUtlLeanVectorBase<CEntityKeyValues::KeyValueInfo_t,short int>::ElemType_t *v76; // [rsp+20h] [rbp-F0h]
+  __int64 v77; // [rsp+28h] [rbp-E8h]
+  CUtlLeanVectorBase<CEntityKeyValues::KeyValueInfo_t,short int>::IndexType_t v78; // [rsp+30h] [rbp-E0h]
+  CUtlLeanVectorBase<CEntityKeyValues::KeyValueInfo_t,short int>::IndexType_t v79; // [rsp+32h] [rbp-DEh]
+  __int16 v80; // [rsp+34h] [rbp-DCh]
+  signed int v81; // [rsp+34h] [rbp-DCh]
+  CUtlLeanVectorBase<CEntityKeyValues::KeyValueInfo_t,short int>::ElemType_t *v83; // [rsp+40h] [rbp-D0h]
+  signed int v84; // [rsp+40h] [rbp-D0h]
   CEntityKeyValuesModifyScope_0 sg; // [rsp+50h] [rbp-C0h] BYREF
   EntitySpawnInfo_t currEntity; // [rsp+60h] [rbp-B0h] BYREF
   EntitySpawnInfo_t prevEntity; // [rsp+70h] [rbp-A0h] BYREF
-  LeafCodeInfo_t v95; // [rsp+80h] [rbp-90h] BYREF
-  LeafCodeInfo_t v96; // [rsp+A0h] [rbp-70h] BYREF
-  LeafCodeInfo_t v97; // [rsp+C0h] [rbp-50h] BYREF
+  LeafCodeInfo_t v89; // [rsp+80h] [rbp-90h] BYREF
+  LeafCodeInfo_t v90; // [rsp+A0h] [rbp-70h] BYREF
+  LeafCodeInfo_t v91; // [rsp+C0h] [rbp-50h] BYREF
 
   v6 = operator new(0x70u);
   CEntityKeyValues::CEntityKeyValues(v6);
@@ -13160,17 +13154,17 @@ LABEL_13:
         goto LABEL_113;
       while ( 1 )
       {
-        if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v60, v61, v58, v59, v62, v63) != 0 )
+        if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v60, v61, v58, v59) != 0 )
           loc_0 = -559038737;
         Plat_ExitProcess(1);
 LABEL_113:
-        v95.m_szFile = "../public/tier1/utlleanvector.h";
-        v95.m_szFunction = "AddToTailGetPtr";
-        v95.m_nLine = 557;
+        v89.m_szFile = "../public/tier1/utlleanvector.h";
+        v89.m_szFunction = "AddToTailGetPtr";
+        v89.m_nLine = 557;
         LoggingSystem_Log(
           LOG_GENERAL,
           LoggingSeverity_t::LS_ERROR,
-          &v95,
+          &v89,
           "%s allocation count overflow",
           "AddToTailGetPtr");
       }
@@ -13188,17 +13182,17 @@ LABEL_113:
             goto LABEL_123;
           while ( 1 )
           {
-            if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v72, v73, v70, v71, v74, v75) != 0 )
+            if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v68, v69, v66, v67) != 0 )
               loc_0 = -559038737;
             Plat_ExitProcess(1);
 LABEL_123:
-            v96.m_szFile = "../public/tier1/utlleanvector.h";
-            v96.m_szFunction = "EnsureCapacity";
-            v96.m_nLine = 104;
+            v90.m_szFile = "../public/tier1/utlleanvector.h";
+            v90.m_szFunction = "EnsureCapacity";
+            v90.m_nLine = 104;
             LoggingSystem_Log(
               LOG_GENERAL,
               LoggingSeverity_t::LS_ERROR,
-              &v96,
+              &v90,
               "%s allocation count overflow",
               "EnsureCapacity");
           }
@@ -13259,32 +13253,32 @@ LABEL_123:
       v20 = 0;
     }
     v20[m_nCount] = -971301790;
-    v77 = m_nCount;
-    v84 = v6->m_keyValues.m_nCount;
-    if ( v84 == 0x7FFF )
+    v71 = m_nCount;
+    v78 = v6->m_keyValues.m_nCount;
+    if ( v78 == 0x7FFF )
     {
       if ( LoggingSystem_IsChannelEnabled(LOG_GENERAL, 4) != 0 )
         goto LABEL_118;
       while ( 1 )
       {
-        if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v66, v67, v64, v65, v68, v69) != 0 )
+        if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v64, v65, v62, v63) != 0 )
           loc_0 = -559038737;
         Plat_ExitProcess(1);
 LABEL_118:
-        v97.m_szFile = "../public/tier1/utlleanvector.h";
-        v97.m_szFunction = "AddToTailGetPtr";
-        v97.m_nLine = 557;
+        v91.m_szFile = "../public/tier1/utlleanvector.h";
+        v91.m_szFunction = "AddToTailGetPtr";
+        v91.m_nLine = 557;
         LoggingSystem_Log(
           LOG_GENERAL,
           LoggingSeverity_t::LS_ERROR,
-          &v97,
+          &v91,
           "%s allocation count overflow",
           "AddToTailGetPtr");
       }
     }
     v21 = v6->m_keyValues.m_nAllocated;
-    v22 = v84 + 1;
-    v85 = v6->m_keyValues.m_nAllocated;
+    v22 = v78 + 1;
+    v79 = v6->m_keyValues.m_nAllocated;
     if ( v22 > v21 )
     {
       v23 = v6->m_keyValues.m_nAllocated;
@@ -13307,40 +13301,40 @@ LABEL_118:
           v21 = 0x7FFF;
         }
       }
-      v85 = v23;
-      v83 = (**g_pMemAlloc)(g_pMemAlloc, 24LL * v23);
+      v79 = v23;
+      v77 = (**g_pMemAlloc)(g_pMemAlloc, 24LL * v23);
       if ( v6->m_keyValues.m_nAllocated != 0 )
-        v82 = v6->m_keyValues.m_pElements;
+        v76 = v6->m_keyValues.m_pElements;
       else
-        v82 = 0;
+        v76 = 0;
       v24 = v6->m_keyValues.m_nCount;
-      if ( v85 <= v24 )
-        v24 = v85;
-      v86 = 0;
+      if ( v79 <= v24 )
+        v24 = v79;
+      v80 = 0;
       if ( v24 > 0 )
       {
         do
         {
-          v25 = v86;
-          v26 = v25 * 24 + v83;
-          if ( v25 * 24 + v83 != 0 )
+          v25 = v80;
+          v26 = v25 * 24 + v77;
+          if ( v25 * 24 + v77 != 0 )
           {
-            v27 = &v82[v25];
+            v27 = &v76[v25];
             *v26 = 0;
             *(v26 + 10) = 0;
           }
           else
           {
-            v27 = &v82[v25];
+            v27 = &v76[v25];
           }
-          v89 = v27;
+          v83 = v27;
           *v26 = 0;
           *(v26 + 8) = 0;
           m_type = v27->m_value.m_type;
           switch ( m_type )
           {
             case 3:
-              s = v89->m_value.m_uint64;
+              s = v83->m_value.m_uint64;
               v49 = *(v26 + 10);
               if ( (v49 & 1) != 0 )
                 *(v26 + 10) = v49 & 0xFFFE;
@@ -13348,7 +13342,7 @@ LABEL_118:
               v33 = CEntityVariantAllocator::Allocate(0xCu);
               goto LABEL_47;
             case 4:
-              sa = v89->m_value.m_uint64;
+              sa = v83->m_value.m_uint64;
               v48 = *(v26 + 10);
               if ( (v48 & 1) != 0 )
                 *(v26 + 10) = v48 & 0xFFFE;
@@ -13356,7 +13350,7 @@ LABEL_118:
               v45 = CEntityVariantAllocator::Allocate(0x10u);
               goto LABEL_70;
             case 25:
-              sc = v89->m_value.m_uint64;
+              sc = v83->m_value.m_uint64;
               v50 = *(v26 + 10);
               if ( (v50 & 1) != 0 )
                 *(v26 + 10) = v50 & 0xFFFE;
@@ -13368,7 +13362,7 @@ LABEL_118:
               *(v26 + 10) |= 1u;
               break;
             case 27:
-              sa = v89->m_value.m_uint64;
+              sa = v83->m_value.m_uint64;
               v44 = *(v26 + 10);
               if ( (v44 & 1) != 0 )
                 *(v26 + 10) = v44 & 0xFFFE;
@@ -13383,22 +13377,22 @@ LABEL_70:
               *(v26 + 10) |= 1u;
               break;
             case 30:
-              sb = v89->m_value.m_uint64;
+              sb = v83->m_value.m_uint64;
               v46 = *(v26 + 10);
               if ( (v46 & 1) != 0 )
                 *(v26 + 10) = v46 & 0xFFFE;
               *(v26 + 8) = 30;
               if ( sb != 0 )
               {
-                v76 = strlen(sb) + 1;
-                v47 = CEntityVariantAllocator::Allocate(v76);
+                v70 = strlen(sb) + 1;
+                v47 = CEntityVariantAllocator::Allocate(v70);
                 *v26 = v47;
-                memcpy(v47, sb, v76);
+                memcpy(v47, sb, v70);
                 *(v26 + 10) |= 1u;
               }
               break;
             case 39:
-              s = v89->m_value.m_uint64;
+              s = v83->m_value.m_uint64;
               v32 = *(v26 + 10);
               if ( (v32 & 1) != 0 )
                 *(v26 + 10) = v32 & 0xFFFE;
@@ -13413,31 +13407,31 @@ LABEL_47:
               break;
             default:
               *(v26 + 8) = m_type;
-              *v26 = v89->m_value.m_uint64;
+              *v26 = v83->m_value.m_uint64;
               break;
           }
-          *(v26 + 16) = v89->m_pAttributeName;
-          m_flags = v89->m_value.m_flags;
+          *(v26 + 16) = v83->m_pAttributeName;
+          m_flags = v83->m_value.m_flags;
           if ( (m_flags & 1) != 0 )
-            v89->m_value.m_flags = m_flags & 0xFFFE;
-          ++v86;
-          v89->m_value.m_uint64 = 0;
-          v89->m_value.m_type = 0;
+            v83->m_value.m_flags = m_flags & 0xFFFE;
+          ++v80;
+          v83->m_value.m_uint64 = 0;
+          v83->m_value.m_type = 0;
           v35 = v6->m_keyValues.m_nCount;
-          if ( v85 <= v35 )
-            v35 = v85;
+          if ( v79 <= v35 )
+            v35 = v79;
         }
-        while ( v86 < v35 );
+        while ( v80 < v35 );
       }
       (*(*g_pMemAlloc + 16LL))(g_pMemAlloc, v6->m_keyValues.m_pElements);
-      v6->m_keyValues.m_pElements = v83;
-      v6->m_keyValues.m_nAllocated = v85;
+      v6->m_keyValues.m_pElements = v77;
+      v6->m_keyValues.m_nAllocated = v79;
     }
-    if ( v85 != 0 )
+    if ( v79 != 0 )
       v36 = v6->m_keyValues.m_pElements;
     else
       v36 = 0;
-    v37 = &v36[v84];
+    v37 = &v36[v78];
     if ( v37 != 0 )
     {
       v37->m_value.m_uint64 = 0;
@@ -13447,14 +13441,14 @@ LABEL_47:
     }
     else
     {
-      v38 = v85;
+      v38 = v79;
     }
     ++v6->m_keyValues.m_nCount;
     if ( v38 != 0 )
       v39 = v6->m_keyValues.m_pElements;
     else
       v39 = 0;
-    v40 = &v39[v77];
+    v40 = &v39[v71];
     v41 = v40->m_value.m_flags;
     if ( (v41 & 1) != 0 )
       v40->m_value.m_flags = v41 & 0xFFFE;
@@ -13462,17 +13456,17 @@ LABEL_47:
     v40->m_value.m_type = 30;
     if ( pEntityDesignerName != 0 )
     {
-      v87 = strlen(pEntityDesignerName) + 1;
-      v42 = CEntityVariantAllocator::Allocate(v87);
+      v81 = strlen(pEntityDesignerName) + 1;
+      v42 = CEntityVariantAllocator::Allocate(v81);
       v40->m_value.m_uint64 = v42;
-      memcpy(v42, pEntityDesignerName, v87);
+      memcpy(v42, pEntityDesignerName, v81);
       v40->m_value.m_flags |= 1u;
     }
     if ( v6->m_keyValues.m_nAllocated != 0 )
       v43 = v6->m_keyValues.m_pElements;
     else
       v43 = 0;
-    v43[v77].m_pAttributeName = 0;
+    v43[v71].m_pAttributeName = 0;
   }
   else
   {
@@ -13522,10 +13516,10 @@ LABEL_43:
     *(v31 + 8) = 30;
     if ( pEntityDesignerName != 0 )
     {
-      v90 = strlen(pEntityDesignerName) + 1;
-      v53 = CEntityVariantAllocator::Allocate(v90);
+      v84 = strlen(pEntityDesignerName) + 1;
+      v53 = CEntityVariantAllocator::Allocate(v84);
       *v31 = v53;
-      memcpy(v53, pEntityDesignerName, v90);
+      memcpy(v53, pEntityDesignerName, v84);
       *(v31 + 10) |= 1u;
     }
   }

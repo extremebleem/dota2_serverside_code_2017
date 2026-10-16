@@ -683,7 +683,7 @@ LABEL_10:
 // CDotaMapLoadEntityFilter::~CDotaMapLoadEntityFilter  (line 248, @0x000000000262bf10, libserver.so)  // inlines: ~ISpawnGroupEntityFilter
 void __fastcall CDotaMapLoadEntityFilter::~CDotaMapLoadEntityFilter(CDotaMapLoadEntityFilter *const this)
 {
-  this->_vptr_ISpawnGroupEntityFilter = off_3FCAF10;
+  this->_vptr_ISpawnGroupEntityFilter = off_3FCAF10;  // vptr: ISpawnGroupEntityFilter
 }
 
 
@@ -691,7 +691,7 @@ void __fastcall CDotaMapLoadEntityFilter::~CDotaMapLoadEntityFilter(CDotaMapLoad
 // calls: operator delete
 void __fastcall CDotaMapLoadEntityFilter::~CDotaMapLoadEntityFilter(CDotaMapLoadEntityFilter *const this)
 {
-  this->_vptr_ISpawnGroupEntityFilter = off_3FCAF10;
+  this->_vptr_ISpawnGroupEntityFilter = off_3FCAF10;  // vptr: ISpawnGroupEntityFilter
   operator delete(this);
 }
 

@@ -152,7 +152,7 @@ void __fastcall CLocomotionBase::Update(CLocomotionBase *const this)
     endPos.x = v10 + *&v12;
     *&startPos.x = (vptr_INextBotEventResponder[98])(this);
     startPos.z = v15;
-    NDebugOverlay::HorzArrow(&startPos, &endPos, 3.0, 100, 255, 0, 255, 1, 0.1);
+    NDebugOverlay::HorzArrow(&startPos, &endPos, 3.0, 0x64u, 0xFFu, 0, 255, 0.1, 1);
     v19 = this->m_vMotionVector.x * 25.0;
     v20 = this->m_vMotionVector.y * 25.0;
     v22 = 25.0 * this->m_vMotionVector.z;
@@ -164,7 +164,7 @@ void __fastcall CLocomotionBase::Update(CLocomotionBase *const this)
     endPos.z = v16 + v22;
     *&startPos.x = (v17[98])(this);
     startPos.z = v18;
-    NDebugOverlay::HorzArrow(&startPos, &endPos, 5.0, 255, 255, 0, 255, 1, 0.1);
+    NDebugOverlay::HorzArrow(&startPos, &endPos, 5.0, 0xFFu, 0xFFu, 0, 255, 0.1, 1);
   }
 }
 
@@ -929,7 +929,7 @@ void __fastcall CLocomotionBase::StuckMonitor(CLocomotionBase *const this)
             position.x = v34;
             position.y = y + 0.0;
             position.z = v35;
-            NDebugOverlay::Circle(&position, &origin, 5.0, 255, 0, 0, 255, 1, 1.0);
+            NDebugOverlay::Circle(&position, &origin, 5.0, 0xFFu, 0, 0, 255, 1.0, 1);
           }
           v14 = this->m_bot;
         }
@@ -947,7 +947,7 @@ void __fastcall CLocomotionBase::StuckMonitor(CLocomotionBase *const this)
         v15 = (*(this->m_bot->INextBotComponent::_vptr_INextBotEventResponder + 66))(this->m_bot);
         *&origin.x = (*(*v15 + 496LL))(v15);
         origin.z = v16;
-        NDebugOverlay::Line(&origin, &this->m_vStuckPos, 255, 0, 255, 1, 0.1);
+        NDebugOverlay::Line(&origin, &this->m_vStuckPos, 0xFFu, 0, 0xFFu, 1, 0.1);
       }
       v40 = (*(this->_vptr_INextBotEventResponder + 80))(this);
       if ( (IntervalTimer::Now(&this->m_stuckTimer) - this->m_stuckTimer.m_timestamp.m_Value) > (100.0
@@ -996,7 +996,7 @@ void __fastcall CLocomotionBase::StuckMonitor(CLocomotionBase *const this)
           origin.z = 0.0;
           position.x = v25;
           origin.x = -90.0;
-          NDebugOverlay::Circle(&position, &origin, 3.0, 255, 255, 0, 255, 1, 1.0);
+          NDebugOverlay::Circle(&position, &origin, 3.0, 0xFFu, 0xFFu, 0, 255, 1.0, 1);
           v26 = this->m_vStuckPos.z;
           v27 = this->m_vStuckPos.y;
           origin.y = 0.0;
@@ -1006,7 +1006,7 @@ void __fastcall CLocomotionBase::StuckMonitor(CLocomotionBase *const this)
           origin.x = -90.0;
           position.y = v27 + 0.0;
           position.x = v28;
-          NDebugOverlay::Circle(&position, &origin, 5.0, 255, 0, 0, 255, 1, 10000000.0);
+          NDebugOverlay::Circle(&position, &origin, 5.0, 0xFFu, 0, 0, 255, 10000000.0, 1);
         }
         v5 = IntervalTimer::Now(&this->m_stuckTimer);
         if ( v5 != this->m_stuckTimer.m_timestamp.m_Value )
@@ -1031,7 +1031,7 @@ void __fastcall CLocomotionBase::StuckMonitor(CLocomotionBase *const this)
       && NextBotManager::IsDebugFilterMatch(&g_NextBotManager, v10)
       && (*(v10->_vptr_INextBotEventResponder + 96))(v10, 16) != 0 )
     {
-      NDebugOverlay::Cross3D(&this->m_vStuckPos, 3.0, 255, 0, 255, 1, 3.0);
+      NDebugOverlay::Cross3D(&this->m_vStuckPos, 3.0, 0xFFu, 0, 0xFFu, 1, 3.0);
     }
   }
   v8 = IntervalTimer::Now(&this->m_stuckTimer);

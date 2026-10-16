@@ -60,7 +60,7 @@ void __fastcall IntervalTimer::NetworkStateChangedLog(
 // callers: CNavDrawArea::DrawArea_Internal
 void __fastcall IntervalTimer::IntervalTimer(IntervalTimer *const this)
 {
-  this->_vptr_IntervalTimer = off_3FD0350;
+  this->_vptr_IntervalTimer = off_3FD0350;  // vptr: IntervalTimer
   this->m_timestamp.m_Value = -1.0;
 }
 

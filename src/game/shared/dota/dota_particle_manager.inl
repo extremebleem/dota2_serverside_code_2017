@@ -5,7 +5,7 @@
 // calls: IGameSystem::~IGameSystem
 void __fastcall CDOTA_ParticleManagerSystem::~CDOTA_ParticleManagerSystem(CDOTA_ParticleManagerSystem *const this)
 {
-  this->_vptr_IGameSystem = off_3F7C1B0;
+  this->_vptr_IGameSystem = off_3F7C1B0;  // vptr: CAutoGameSystem
   IGameSystem::~IGameSystem(this);
 }
 
@@ -14,7 +14,7 @@ void __fastcall CDOTA_ParticleManagerSystem::~CDOTA_ParticleManagerSystem(CDOTA_
 // calls: IGameSystem::~IGameSystem, operator delete
 void __fastcall CDOTA_ParticleManagerSystem::~CDOTA_ParticleManagerSystem(CDOTA_ParticleManagerSystem *const this)
 {
-  this->_vptr_IGameSystem = off_3F7C1B0;
+  this->_vptr_IGameSystem = off_3F7C1B0;  // vptr: CAutoGameSystem
   IGameSystem::~IGameSystem(this);
   operator delete(this);
 }

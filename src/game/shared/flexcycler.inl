@@ -100,7 +100,7 @@ CEntityInstance *__fastcall CFlexCycler::CEntityInstanceEntityClass::ConstructIn
 void __fastcall CFlexCycler::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CFlexCycler::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -110,7 +110,7 @@ void __fastcall CFlexCycler::CEntityInstanceEntityClass::~CEntityInstanceEntityC
 void __fastcall CFlexCycler::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CFlexCycler::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -355,7 +355,7 @@ CEntityInstance *__fastcall CGenericFlexCycler::CEntityInstanceEntityClass::Cons
 void __fastcall CGenericFlexCycler::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CGenericFlexCycler::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -365,7 +365,7 @@ void __fastcall CGenericFlexCycler::CEntityInstanceEntityClass::~CEntityInstance
 void __fastcall CGenericFlexCycler::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CGenericFlexCycler::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }

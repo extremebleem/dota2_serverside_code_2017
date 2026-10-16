@@ -118,7 +118,7 @@ CEntityInstance *__fastcall CDOTAGameEvents::CEntityInstanceEntityClass::Constru
 void __fastcall CDOTAGameEvents::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTAGameEvents::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -128,7 +128,7 @@ void __fastcall CDOTAGameEvents::CEntityInstanceEntityClass::~CEntityInstanceEnt
 void __fastcall CDOTAGameEvents::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTAGameEvents::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -387,7 +387,7 @@ CEntityInstance *__fastcall CDOTACustomGameEvents::CEntityInstanceEntityClass::C
 void __fastcall CDOTACustomGameEvents::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTACustomGameEvents::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -397,7 +397,7 @@ void __fastcall CDOTACustomGameEvents::CEntityInstanceEntityClass::~CEntityInsta
 void __fastcall CDOTACustomGameEvents::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTACustomGameEvents::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -584,7 +584,7 @@ void *__fastcall CDOTAGamerulesProxy::CEntityInstanceEntityClass::AllocateInstan
 void __fastcall CDOTAGamerulesProxy::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTAGamerulesProxy::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -594,7 +594,7 @@ void __fastcall CDOTAGamerulesProxy::CEntityInstanceEntityClass::~CEntityInstanc
 void __fastcall CDOTAGamerulesProxy::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTAGamerulesProxy::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -1690,7 +1690,7 @@ void *__fastcall CDOTA_DisplacementVisibility::CEntityInstanceEntityClass::Alloc
 void __fastcall CDOTA_DisplacementVisibility::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_DisplacementVisibility::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -1700,7 +1700,7 @@ void __fastcall CDOTA_DisplacementVisibility::CEntityInstanceEntityClass::~CEnti
 void __fastcall CDOTA_DisplacementVisibility::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_DisplacementVisibility::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }

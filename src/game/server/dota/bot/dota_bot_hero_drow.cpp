@@ -84,7 +84,7 @@ void __fastcall CDOTA_Bot_AbilityUsage_Drow_FrostArrows::CDOTA_Bot_AbilityUsage_
   this->m_pAbility = pAbility;
   this->m_bUseOnCreeps = 0;
   this->m_pBot = pBot;
-  this->_vptr_CDOTA_Bot_AbilityUsage = off_42CB9D0;
+  this->_vptr_CDOTA_Bot_AbilityUsage = off_42CB9D0;  // vptr: CDOTA_Bot_AbilityUsage_Drow_FrostArrows
 }
 
 
@@ -129,7 +129,7 @@ void __fastcall CDOTA_Bot_AbilityUsage_Drow_WaveOfSilence::CDOTA_Bot_AbilityUsag
   this->m_pAbility = pAbility;
   this->m_bUseOnCreeps = 0;
   this->m_pBot = pBot;
-  this->_vptr_CDOTA_Bot_AbilityUsage = off_42CBA30;
+  this->_vptr_CDOTA_Bot_AbilityUsage = off_42CBA30;  // vptr: CDOTA_Bot_AbilityUsage_Drow_WaveOfSilence
 }
 
 

@@ -749,7 +749,7 @@ LABEL_13:
   else
     v3 = CCurveData::GetEdgeZeroValue(this, *&number);
   v13 = v3;
-  v4 = (*this->m_pAccessor->_vptr_ICurveDataAccessor)(this->m_pAccessor);
+  v4 = this->m_pAccessor->GetDuration();
   v5 = 0;
   *(&CCurveData::GetBoundedSample(int)const::nullend + 11) &= ~0x80u;
   CCurveData::GetBoundedSample(int)const::nullend.m_AnchorPos.x = v4;
@@ -771,7 +771,7 @@ void __fastcall CCurveData::RemoveOutOfRangeSamples(CCurveData *const this)
   float x; // xmm0_4
   float duration; // [rsp+Ch] [rbp-24h]
 
-  duration = (*this->m_pAccessor->_vptr_ICurveDataAccessor)(this->m_pAccessor);
+  duration = this->m_pAccessor->GetDuration();
   v2 = this->m_Ramp.m_Size - 1;
   if ( v2 >= 0 )
   {
@@ -1637,12 +1637,16 @@ vec_t __fastcall CCurveData::GetIntensity(const CCurveData *const this, double a
   float v19; // xmm4_4
   int m_curvetype; // r8d
   int v21; // r14d
-  __int64 v22; // rdi
+  float v22; // xmm2_4
+  float v23; // xmm3_4
+  int v24; // edi
   vec_t result; // xmm0_4
+  float v26; // xmm2_4
+  float v27; // xmm3_4
   const CBezierHandlesForSample *BoundedBezierSample; // r12
-  const CBezierHandlesForSample *v25; // r14
-  vec_t v26; // xmm0_4
-  vec_t v27; // xmm0_4
+  const CBezierHandlesForSample *v29; // r14
+  vec_t v30; // xmm0_4
+  vec_t v31; // xmm0_4
   int number; // [rsp+8h] [rbp-D8h]
   int startCurve; // [rsp+10h] [rbp-D0h]
   float f; // [rsp+18h] [rbp-C8h]
@@ -1717,7 +1721,7 @@ vec_t __fastcall CCurveData::GetIntensity(const CCurveData *const this, double a
       }
       Interpolator_CurveInterpolatorsForType(m_curvetype, &dummy, &earlypart);
       Interpolator_CurveInterpolatorsForType(v21, &laterpart, &dummy);
-      v22 = earlypart;
+      v24 = earlypart;
       result = vStart.y;
       if ( earlypart == 15 || (result = vEnd.y, laterpart == 15) )
       {
@@ -1733,32 +1737,34 @@ LABEL_20:
       if ( earlypart == 16 || laterpart == 16 )
       {
         BoundedBezierSample = CCurveData::GetBoundedBezierSample(this, v6);
-        v25 = CCurveData::GetBoundedBezierSample(this, number);
+        v29 = CCurveData::GetBoundedBezierSample(this, number);
         if ( BoundedBezierSample != 0 )
         {
           CBezierHandlesForSample::CBezierHandleTangent::GetTangentPoint(&vOut2.x, &BoundedBezierSample->m_Tangents[1]);
-          v26 = vOut2.y + v8->m_AnchorPos.y;
-          handleStart.x = vOut2.x + v8->m_AnchorPos.x;
-          handleStart.y = v26;
+          v22 = vOut2.x + v8->m_AnchorPos.x;
+          v30 = vOut2.y + v8->m_AnchorPos.y;
+          handleStart.x = v22;
+          handleStart.y = v30;
         }
         else
         {
           handleStart.x = vPre.x;
           handleStart.y = vPre.y;
         }
-        if ( v25 != 0 )
+        if ( v29 != 0 )
         {
-          CBezierHandlesForSample::CBezierHandleTangent::GetTangentPoint(&vOut2.x, v25->m_Tangents);
-          v27 = vOut2.y + v9->m_AnchorPos.y;
-          handleEnd.x = vOut2.x + v9->m_AnchorPos.x;
-          handleEnd.y = v27;
+          CBezierHandlesForSample::CBezierHandleTangent::GetTangentPoint(&vOut2.x, v29->m_Tangents);
+          v22 = vOut2.x + v9->m_AnchorPos.x;
+          v31 = vOut2.y + v9->m_AnchorPos.y;
+          handleEnd.x = v22;
+          handleEnd.y = v31;
         }
         else
         {
           handleEnd.x = vNext.x;
           handleEnd.y = vNext.y;
         }
-        v22 = earlypart;
+        v24 = earlypart;
         if ( earlypart != laterpart )
         {
           if ( earlypart == 16 )
@@ -1769,12 +1775,12 @@ LABEL_20:
             goto LABEL_17;
           }
 LABEL_16:
-          Interpolator_CurveInterpolate(v22, &vPre, &vStart, &vEnd, &vNext, f, &vOut1);
+          Interpolator_CurveInterpolate(v24, &vPre, &vStart, &vEnd, &vNext, f, &vOut1, 0.0, v22, v23);
 LABEL_17:
           if ( laterpart == 16 )
             CalculateBezierPoint(f, &vOut2, &v8->m_AnchorPos, &handleStart, &handleEnd, &v9->m_AnchorPos);
           else
-            Interpolator_CurveInterpolate(laterpart, &vPre, &vStart, &vEnd, &vNext, f, &vOut2);
+            Interpolator_CurveInterpolate(laterpart, &vPre, &vStart, &vEnd, &vNext, f, &vOut2, 0.0, v26, v27);
           result = ((vOut2.y - vOut1.y) * f) + vOut1.y;
           goto LABEL_20;
         }
@@ -1789,7 +1795,7 @@ LABEL_17:
       {
         goto LABEL_16;
       }
-      Interpolator_CurveInterpolate(v22, &vPre, &vStart, &vEnd, &vNext, f, &vOut2);
+      Interpolator_CurveInterpolate(v24, &vPre, &vStart, &vEnd, &vNext, f, &vOut2, 0.0, v22, v23);
       result = vOut2.y;
       goto LABEL_20;
     }
@@ -2589,7 +2595,7 @@ void __fastcall CCurveData::ParseSample(
   v10 = _mm_movedup_pd(v9).m128d_f64[0];
   time = v10;
   (*(tokenizer->_vptr_ISceneTokenProcessor + 1))(tokenizer, 0);
-  v11 = (*tokenizer->_vptr_ISceneTokenProcessor)(tokenizer);
+  v11 = tokenizer->CurrentToken();
   v12.m128d_f64[0] = strtod(v11, 0);
   value = _mm_movedup_pd(v12).m128d_f64[0];
   if ( !bUseRealTime )
@@ -2602,7 +2608,7 @@ LABEL_4:
     while ( 1 )
     {
       (*(tokenizer->_vptr_ISceneTokenProcessor + 1))(tokenizer, 0);
-      v15 = (*tokenizer->_vptr_ISceneTokenProcessor)(tokenizer);
+      v15 = tokenizer->CurrentToken();
       if ( V_stricmp_fast(v15, "bezier") != 0 )
         break;
       vptr_ISceneTokenProcessor = tokenizer->_vptr_ISceneTokenProcessor;
@@ -2611,13 +2617,13 @@ LABEL_4:
       while ( 1 )
       {
         (*(tokenizer->_vptr_ISceneTokenProcessor + 1))(tokenizer, 1);
-        v19 = (*tokenizer->_vptr_ISceneTokenProcessor)(tokenizer);
+        v19 = tokenizer->CurrentToken();
         if ( v19 == 0 || strlen(v19) <= 0 )
           break;
-        v17 = (*tokenizer->_vptr_ISceneTokenProcessor)(tokenizer);
+        v17 = tokenizer->CurrentToken();
         if ( V_stricmp_fast(v17, "}") == 0 )
           goto LABEL_12;
-        v18 = (*tokenizer->_vptr_ISceneTokenProcessor)(tokenizer);
+        v18 = tokenizer->CurrentToken();
         CUtlString::operator+=(&bezierstuff, v18);
         CUtlString::operator+=(&bezierstuff, " ");
       }
@@ -2651,7 +2657,7 @@ LABEL_12:
       if ( (*(tokenizer->_vptr_ISceneTokenProcessor + 2))(tokenizer) == 0 )
         goto LABEL_15;
     }
-    v25 = (*tokenizer->_vptr_ISceneTokenProcessor)(tokenizer);
+    v25 = tokenizer->CurrentToken();
     v14 = Interpolator_CurveTypeForName(v25);
   }
 LABEL_15:
@@ -2699,22 +2705,22 @@ void __fastcall CCurveData::Parse(CCurveData *const this, ISceneTokenProcessor *
 
   CCurveData::Clear(this);
   (*(tokenizer->_vptr_ISceneTokenProcessor + 1))(tokenizer, 1);
-  v5 = (*tokenizer->_vptr_ISceneTokenProcessor)(tokenizer);
+  v5 = tokenizer->CurrentToken();
   if ( V_stricmp_fast(v5, "leftedge") == 0 )
     CChoreoScene::ParseEdgeInfo(scene, tokenizer, this->m_RampEdgeInfo);
-  v6 = (*tokenizer->_vptr_ISceneTokenProcessor)(tokenizer);
+  v6 = tokenizer->CurrentToken();
   if ( V_stricmp_fast(v6, "rightedge") == 0 )
     CChoreoScene::ParseEdgeInfo(scene, tokenizer, &this->m_RampEdgeInfo[1]);
-  v7 = (*tokenizer->_vptr_ISceneTokenProcessor)(tokenizer);
+  v7 = tokenizer->CurrentToken();
   if ( V_stricmp_fast(v7, "{") != 0 )
     (*(tokenizer->_vptr_ISceneTokenProcessor + 3))(tokenizer, "expecting {\n");
   while ( 1 )
   {
     (*(tokenizer->_vptr_ISceneTokenProcessor + 1))(tokenizer, 1);
-    v8 = (*tokenizer->_vptr_ISceneTokenProcessor)(tokenizer);
+    v8 = tokenizer->CurrentToken();
     if ( v8 == 0 || strlen(v8) <= 0 )
       break;
-    v9 = (*tokenizer->_vptr_ISceneTokenProcessor)(tokenizer);
+    v9 = tokenizer->CurrentToken();
     if ( V_stricmp_fast(v9, "}") == 0 )
       goto LABEL_22;
     restore.m_samples.m_Size = 0;

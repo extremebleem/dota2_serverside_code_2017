@@ -628,7 +628,7 @@ CEntityInstance *__fastcall CDOTA_Unit_Hero_Batrider::CEntityInstanceEntityClass
 void __fastcall CDOTA_Unit_Hero_Batrider::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Unit_Hero_Batrider::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -638,7 +638,7 @@ void __fastcall CDOTA_Unit_Hero_Batrider::CEntityInstanceEntityClass::~CEntityIn
 void __fastcall CDOTA_Unit_Hero_Batrider::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Unit_Hero_Batrider::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -848,7 +848,7 @@ CEntityInstance *__fastcall CDOTA_Ability_Batrider_StickyNapalm::CEntityInstance
 void __fastcall CDOTA_Ability_Batrider_StickyNapalm::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Batrider_StickyNapalm::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -858,7 +858,7 @@ void __fastcall CDOTA_Ability_Batrider_StickyNapalm::CEntityInstanceEntityClass:
 void __fastcall CDOTA_Ability_Batrider_StickyNapalm::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Batrider_StickyNapalm::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -1559,7 +1559,7 @@ CEntityInstance *__fastcall CDOTA_Ability_Batrider_Flamebreak::CEntityInstanceEn
 void __fastcall CDOTA_Ability_Batrider_Flamebreak::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Batrider_Flamebreak::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -1569,7 +1569,7 @@ void __fastcall CDOTA_Ability_Batrider_Flamebreak::CEntityInstanceEntityClass::~
 void __fastcall CDOTA_Ability_Batrider_Flamebreak::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Batrider_Flamebreak::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -2280,7 +2280,7 @@ CEntityInstance *__fastcall CDOTA_Ability_Batrider_Firefly::CEntityInstanceEntit
 void __fastcall CDOTA_Ability_Batrider_Firefly::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Batrider_Firefly::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -2290,7 +2290,7 @@ void __fastcall CDOTA_Ability_Batrider_Firefly::CEntityInstanceEntityClass::~CEn
 void __fastcall CDOTA_Ability_Batrider_Firefly::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Batrider_Firefly::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -3166,7 +3166,7 @@ CEntityInstance *__fastcall CDOTA_Ability_Batrider_FlamingLasso::CEntityInstance
 void __fastcall CDOTA_Ability_Batrider_FlamingLasso::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Batrider_FlamingLasso::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -3176,7 +3176,7 @@ void __fastcall CDOTA_Ability_Batrider_FlamingLasso::CEntityInstanceEntityClass:
 void __fastcall CDOTA_Ability_Batrider_FlamingLasso::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Batrider_FlamingLasso::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }

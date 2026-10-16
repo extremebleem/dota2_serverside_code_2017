@@ -60,7 +60,7 @@ HSCRIPT __fastcall CDOTABaseAbility_BotScript::GetScriptHandle(CDOTABaseAbility_
     v6 = DOTACommander();
     ActiveScriptVM = CDOTA_Commander::GetActiveScriptVM(v6);
     v8 = *(*ActiveScriptVM + 184LL);
-    v9 = (*this->_vptr_CDOTABaseAbility_BotScript)(this);
+    v9 = this->GetScriptDesc();
     result = v8(ActiveScriptVM, v9, this);
     v4[2] = result;
   }

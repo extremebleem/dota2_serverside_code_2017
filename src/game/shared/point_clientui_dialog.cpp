@@ -27,105 +27,87 @@ void __cdecl GLOBAL__sub_I_point_clientui_dialog_cpp()
   UNSPECIFIED_LOGGING_COLOR._color[1] = 0;
   UNSPECIFIED_LOGGING_COLOR._color[2] = 0;
   UNSPECIFIED_LOGGING_COLOR._color[3] = 0;
-  if ( `guard variable for'g_HuffmanEncoder == 0 )
+  // init once: g_HuffmanEncoder
+  g_HuffmanEncoder.m_pRoot = 0;
+  g_HuffmanEncoder.m_Frequencies.m_Size = 0;
+  g_HuffmanEncoder.m_Frequencies.m_Memory.m_pMemory = 0;
+  g_HuffmanEncoder.m_Frequencies.m_Memory.m_nAllocationCount = 0;
+  g_HuffmanEncoder.m_Frequencies.m_Memory.m_nGrowSize = 0;
+  g_HuffmanEncoder.m_OpCodeToHuffmanLookup.m_Size = 0;
+  g_HuffmanEncoder.m_FixedTree.m_Size = 0;
+  g_HuffmanEncoder.m_FixedTree.m_Memory.m_pMemory = 0;
+  g_HuffmanEncoder.m_FixedTree.m_Memory.m_nAllocationCount = 0;
+  g_HuffmanEncoder.m_FixedTree.m_Memory.m_nGrowSize = 0;
+  CFieldPathHuffmanEncoder::BuildOpCodeCodeToHuffmanLookup(&g_HuffmanEncoder);
+  __cxa_atexit(CFieldPathHuffmanEncoder::~CFieldPathHuffmanEncoder, &g_HuffmanEncoder, &_dso_handle);
+  // init once: CEntityKeyValues::sm_EmptyVariant
+  CEntityKeyValues::sm_EmptyVariant.m_type = 0;
+  CEntityKeyValues::sm_EmptyVariant.m_flags = 0;
+  CEntityKeyValues::sm_EmptyVariant.m_uint64 = 0;
+  __cxa_atexit(CVariantBase<CEntityVariantAllocator>::~CVariantBase, &CEntityKeyValues::sm_EmptyVariant, &_dso_handle);
+  // init once: g_AnimOpSourceColors
+  g_AnimOpSourceColors[0]._color[0] = -1;
+  g_AnimOpSourceColors[0]._color[1] = -1;
+  g_AnimOpSourceColors[0]._color[2] = 0;
+  g_AnimOpSourceColors[0]._color[3] = -1;
+  g_AnimOpSourceColors[1]._color[0] = -36;
+  g_AnimOpSourceColors[1]._color[1] = -36;
+  g_AnimOpSourceColors[1]._color[2] = -36;
+  g_AnimOpSourceColors[1]._color[3] = -1;
+  g_AnimOpSourceColors[2]._color[0] = 0;
+  g_AnimOpSourceColors[2]._color[1] = -1;
+  g_AnimOpSourceColors[2]._color[2] = 50;
+  g_AnimOpSourceColors[2]._color[3] = -1;
+  g_AnimOpSourceColors[3]._color[0] = -1;
+  g_AnimOpSourceColors[3]._color[1] = 50;
+  g_AnimOpSourceColors[3]._color[2] = 50;
+  g_AnimOpSourceColors[3]._color[3] = -1;
+  // init once: g_EntAttrDamageOptionsID
+  g_EntAttrDamageOptionsID.m_nHashCode = -1517776886;
+  // init once: IWrappedInterpolatedVar::s_WrappedInterpolatedVarState
+  IWrappedInterpolatedVar::s_WrappedInterpolatedVarState.m_InterpolationTimeStack.m_Memory.m_pMemory = 0;
+  IWrappedInterpolatedVar::s_WrappedInterpolatedVarState.m_InterpolationTimeStack.m_Memory.m_nAllocationCount = 0;
+  IWrappedInterpolatedVar::s_WrappedInterpolatedVarState.m_InterpolationTimeStack.m_Memory.m_nGrowSize = 0;
+  IWrappedInterpolatedVar::s_WrappedInterpolatedVarState.m_InterpolationTimeStack.m_Size = 0;
+  IWrappedInterpolatedVar::s_WrappedInterpolatedVarState.m_InterpolationTimeStack.m_pElements = 0;
+  __cxa_atexit(
+    IWrappedInterpolatedVar::State_t::~State_t,
+    &IWrappedInterpolatedVar::s_WrappedInterpolatedVarState,
+    &_dso_handle);
+  // init once: IWrappedInterpolatedVar::s_LatchList
+  v0 = &IWrappedInterpolatedVar::s_LatchList;
+  for ( i = 1; i != -1; --i )
   {
-    `guard variable for'g_HuffmanEncoder = 1;
-    g_HuffmanEncoder.m_pRoot = 0;
-    g_HuffmanEncoder.m_Frequencies.m_Size = 0;
-    g_HuffmanEncoder.m_Frequencies.m_Memory.m_pMemory = 0;
-    g_HuffmanEncoder.m_Frequencies.m_Memory.m_nAllocationCount = 0;
-    g_HuffmanEncoder.m_Frequencies.m_Memory.m_nGrowSize = 0;
-    g_HuffmanEncoder.m_OpCodeToHuffmanLookup.m_Size = 0;
-    g_HuffmanEncoder.m_FixedTree.m_Size = 0;
-    g_HuffmanEncoder.m_FixedTree.m_Memory.m_pMemory = 0;
-    g_HuffmanEncoder.m_FixedTree.m_Memory.m_nAllocationCount = 0;
-    g_HuffmanEncoder.m_FixedTree.m_Memory.m_nGrowSize = 0;
-    CFieldPathHuffmanEncoder::BuildOpCodeCodeToHuffmanLookup(&g_HuffmanEncoder);
-    __cxa_atexit(CFieldPathHuffmanEncoder::~CFieldPathHuffmanEncoder, &g_HuffmanEncoder, &_dso_handle);
-  }
-  if ( `guard variable for'CEntityKeyValues::sm_EmptyVariant == 0 )
-  {
-    `guard variable for'CEntityKeyValues::sm_EmptyVariant = 1;
-    CEntityKeyValues::sm_EmptyVariant.m_type = 0;
-    CEntityKeyValues::sm_EmptyVariant.m_flags = 0;
-    CEntityKeyValues::sm_EmptyVariant.m_uint64 = 0;
-    __cxa_atexit(CVariantBase<CEntityVariantAllocator>::~CVariantBase, &CEntityKeyValues::sm_EmptyVariant, &_dso_handle);
-  }
-  if ( `guard variable for'g_AnimOpSourceColors == 0 )
-  {
-    `guard variable for'g_AnimOpSourceColors = 1;
-    g_AnimOpSourceColors[0]._color[0] = -1;
-    g_AnimOpSourceColors[0]._color[1] = -1;
-    g_AnimOpSourceColors[0]._color[2] = 0;
-    g_AnimOpSourceColors[0]._color[3] = -1;
-    g_AnimOpSourceColors[1]._color[0] = -36;
-    g_AnimOpSourceColors[1]._color[1] = -36;
-    g_AnimOpSourceColors[1]._color[2] = -36;
-    g_AnimOpSourceColors[1]._color[3] = -1;
-    g_AnimOpSourceColors[2]._color[0] = 0;
-    g_AnimOpSourceColors[2]._color[1] = -1;
-    g_AnimOpSourceColors[2]._color[2] = 50;
-    g_AnimOpSourceColors[2]._color[3] = -1;
-    g_AnimOpSourceColors[3]._color[0] = -1;
-    g_AnimOpSourceColors[3]._color[1] = 50;
-    g_AnimOpSourceColors[3]._color[2] = 50;
-    g_AnimOpSourceColors[3]._color[3] = -1;
-  }
-  if ( `guard variable for'g_EntAttrDamageOptionsID == 0 )
-  {
-    `guard variable for'g_EntAttrDamageOptionsID = 1;
-    g_EntAttrDamageOptionsID.m_nHashCode = -1517776886;
-  }
-  if ( `guard variable for'IWrappedInterpolatedVar::s_WrappedInterpolatedVarState == 0 )
-  {
-    `guard variable for'IWrappedInterpolatedVar::s_WrappedInterpolatedVarState = 1;
-    IWrappedInterpolatedVar::s_WrappedInterpolatedVarState.m_InterpolationTimeStack.m_Memory.m_pMemory = 0;
-    IWrappedInterpolatedVar::s_WrappedInterpolatedVarState.m_InterpolationTimeStack.m_Memory.m_nAllocationCount = 0;
-    IWrappedInterpolatedVar::s_WrappedInterpolatedVarState.m_InterpolationTimeStack.m_Memory.m_nGrowSize = 0;
-    IWrappedInterpolatedVar::s_WrappedInterpolatedVarState.m_InterpolationTimeStack.m_Size = 0;
-    IWrappedInterpolatedVar::s_WrappedInterpolatedVarState.m_InterpolationTimeStack.m_pElements = 0;
-    __cxa_atexit(
-      IWrappedInterpolatedVar::State_t::~State_t,
-      &IWrappedInterpolatedVar::s_WrappedInterpolatedVarState,
-      &_dso_handle);
-  }
-  if ( `guard variable for'IWrappedInterpolatedVar::s_LatchList == 0 )
-  {
-    `guard variable for'IWrappedInterpolatedVar::s_LatchList = 1;
-    v0 = &IWrappedInterpolatedVar::s_LatchList;
-    for ( i = 1; i != -1; --i )
+    p_m_Memory = &v0->m_Memory;
+    v2 = v0;
+    v3 = 1;
+    do
     {
-      p_m_Memory = &v0->m_Memory;
-      v2 = v0;
-      v3 = 1;
-      do
+      v2->m_Size = 0;
+      p_m_Memory->m_pMemory = 0;
+      p_m_Memory->m_nAllocationCount = 0;
+      p_m_Memory->m_nGrowSize = 0;
+      CUtlVectorBase<CUtlVector<IWrappedInterpolatedVar::CWrappedIVHashElement_t,CUtlMemory<IWrappedInterpolatedVar::CWrappedIVHashElement_t,int>>,CUtlMemory<CUtlVector<IWrappedInterpolatedVar::CWrappedIVHashElement_t,CUtlMemory<IWrappedInterpolatedVar::CWrappedIVHashElement_t,int>>,int>>::SetCount(
+        v2,
+        1024);
+      for ( j = 0; j != 1024; ++j )
       {
-        v2->m_Size = 0;
-        p_m_Memory->m_pMemory = 0;
-        p_m_Memory->m_nAllocationCount = 0;
-        p_m_Memory->m_nGrowSize = 0;
-        CUtlVectorBase<CUtlVector<IWrappedInterpolatedVar::CWrappedIVHashElement_t,CUtlMemory<IWrappedInterpolatedVar::CWrappedIVHashElement_t,int>>,CUtlMemory<CUtlVector<IWrappedInterpolatedVar::CWrappedIVHashElement_t,CUtlMemory<IWrappedInterpolatedVar::CWrappedIVHashElement_t,int>>,int>>::SetCount(
-          v2,
-          1024);
-        for ( j = 0; j != 1024; ++j )
-        {
-          CUtlVectorBase<IWrappedInterpolatedVar::CWrappedIVHashElement_t,CUtlMemory<IWrappedInterpolatedVar::CWrappedIVHashElement_t,int>>::SetCount(
-            &v2->m_Memory.m_pMemory[j],
-            0);
-          v5 = j * 24;
-          *(&v2->m_Memory.m_pMemory->m_Memory.m_nGrowSize + v5) &= 0xC0000000;
-        }
-        --v3;
-        BYTE2(v2[1].m_Size) = 1;
-        p_m_Memory += 2;
-        *(&v2[1].m_Size + 1) = 1023;
-        v2 = (v2 + 32);
+        CUtlVectorBase<IWrappedInterpolatedVar::CWrappedIVHashElement_t,CUtlMemory<IWrappedInterpolatedVar::CWrappedIVHashElement_t,int>>::SetCount(
+          &v2->m_Memory.m_pMemory[j],
+          0);
+        v5 = j * 24;
+        *(&v2->m_Memory.m_pMemory->m_Memory.m_nGrowSize + v5) &= 0xC0000000;
       }
-      while ( v3 != -1 );
-      v0 = (v0 + 64);
+      --v3;
+      BYTE2(v2[1].m_Size) = 1;
+      p_m_Memory += 2;
+      *(&v2[1].m_Size + 1) = 1023;
+      v2 = (v2 + 32);
     }
-    __cxa_atexit(_tcf_0_29, 0, &_dso_handle);
+    while ( v3 != -1 );
+    v0 = (v0 + 64);
   }
+  __cxa_atexit(_tcf_0_29, 0, &_dso_handle);
   INVALID_STYLE_INDEX.m_Data = -1;
   DEFAULT_STYLE_INDEX.m_Data = 0;
   ITEM_DEF_INDEX_TEST_DEFINITIONS_COUNT.m_Data = 1500;
@@ -136,16 +118,13 @@ void __cdecl GLOBAL__sub_I_point_clientui_dialog_cpp()
   DOTA_DESIRED_WARD_PLACEMENT_INVALID.y = -1.0;
   INT_VECTOR2_ORIGIN.x = 0;
   INT_VECTOR2_ORIGIN.y = 0;
-  if ( `guard variable for'CHeadLookParams::ms_Defaults == 0 )
-  {
-    `guard variable for'CHeadLookParams::ms_Defaults = 1;
-    CHeadLookParams::ms_Defaults.m_LookPriority = CHeadLookParams::HeadLookPriority_t::BORING;
-    CHeadLookParams::ms_Defaults.m_flLookDuration = 0.0;
-    CHeadLookParams::ms_Defaults.m_pReplyWhenAimed = 0;
-    CHeadLookParams::ms_Defaults.m_pReasonStr = 0;
-    CHeadLookParams::ms_Defaults.m_bWaitForSteady = 1;
-    CHeadLookParams::ms_Defaults.m_flEaseInTime = 0.25;
-  }
+  // init once: CHeadLookParams::ms_Defaults
+  CHeadLookParams::ms_Defaults.m_LookPriority = CHeadLookParams::HeadLookPriority_t::BORING;
+  CHeadLookParams::ms_Defaults.m_flLookDuration = 0.0;
+  CHeadLookParams::ms_Defaults.m_pReplyWhenAimed = 0;
+  CHeadLookParams::ms_Defaults.m_pReasonStr = 0;
+  CHeadLookParams::ms_Defaults.m_bWaitForSteady = 1;
+  CHeadLookParams::ms_Defaults.m_flEaseInTime = 0.25;
   INVALID_CUSTOM_PLAYER_COLOR._color[0] = 0;
   INVALID_CUSTOM_PLAYER_COLOR._color[1] = 0;
   INVALID_CUSTOM_PLAYER_COLOR._color[2] = 0;
@@ -159,24 +138,18 @@ void __cdecl GLOBAL__sub_I_point_clientui_dialog_cpp()
     __cxa_guard_release(&`guard variable for'C_CPointClientUIDialog_MapInstall::C_CPointClientUIDialog_MapInstall(void)::CPointClientUIDialog_mapping);
   }
   AddServerToClientClassMapping(&C_CPointClientUIDialog_MapInstall::C_CPointClientUIDialog_MapInstall(void)::CPointClientUIDialog_mapping);
-  if ( `guard variable for'CNetMessagePB<353,CDOTAClientMsg_EventPointsTip,(SignonGroup_t)14,(NetChannelBufType_t)1,true>::CProtobufBinding::s_typeName == 0 )
-  {
-    `guard variable for'CNetMessagePB<353,CDOTAClientMsg_EventPointsTip,(SignonGroup_t)14,(NetChannelBufType_t)1,true>::CProtobufBinding::s_typeName = 1;
-    CNetMessagePB<353,CDOTAClientMsg_EventPointsTip,(SignonGroup_t)14,(NetChannelBufType_t)1,true>::CProtobufBinding::s_typeName._M_dataplus._M_p = &std::string::_Rep::_S_empty_rep_storage + 24;
-    __cxa_atexit(
-      &std::string::~string,
-      &CNetMessagePB<353,CDOTAClientMsg_EventPointsTip,(SignonGroup_t)14,(NetChannelBufType_t)1,true>::CProtobufBinding::s_typeName,
-      &_dso_handle);
-  }
-  if ( `guard variable for'CNetMessagePB<349,CDOTAClientMsg_CoinWager,(SignonGroup_t)14,(NetChannelBufType_t)1,true>::CProtobufBinding::s_typeName == 0 )
-  {
-    `guard variable for'CNetMessagePB<349,CDOTAClientMsg_CoinWager,(SignonGroup_t)14,(NetChannelBufType_t)1,true>::CProtobufBinding::s_typeName = 1;
-    CNetMessagePB<349,CDOTAClientMsg_CoinWager,(SignonGroup_t)14,(NetChannelBufType_t)1,true>::CProtobufBinding::s_typeName._M_dataplus._M_p = &std::string::_Rep::_S_empty_rep_storage + 24;
-    __cxa_atexit(
-      &std::string::~string,
-      &CNetMessagePB<349,CDOTAClientMsg_CoinWager,(SignonGroup_t)14,(NetChannelBufType_t)1,true>::CProtobufBinding::s_typeName,
-      &_dso_handle);
-  }
+  // init once: CNetMessagePB<353,CDOTAClientMsg_EventPointsTip,(SignonGroup_t)14,(NetChannelBufType_t)1,true>::CProtobufBinding::s_typeName
+  CNetMessagePB<353,CDOTAClientMsg_EventPointsTip,(SignonGroup_t)14,(NetChannelBufType_t)1,true>::CProtobufBinding::s_typeName._M_dataplus._M_p = &std::string::_Rep::_S_empty_rep_storage + 24;
+  __cxa_atexit(
+    &std::string::~string,
+    &CNetMessagePB<353,CDOTAClientMsg_EventPointsTip,(SignonGroup_t)14,(NetChannelBufType_t)1,true>::CProtobufBinding::s_typeName,
+    &_dso_handle);
+  // init once: CNetMessagePB<349,CDOTAClientMsg_CoinWager,(SignonGroup_t)14,(NetChannelBufType_t)1,true>::CProtobufBinding::s_typeName
+  CNetMessagePB<349,CDOTAClientMsg_CoinWager,(SignonGroup_t)14,(NetChannelBufType_t)1,true>::CProtobufBinding::s_typeName._M_dataplus._M_p = &std::string::_Rep::_S_empty_rep_storage + 24;
+  __cxa_atexit(
+    &std::string::~string,
+    &CNetMessagePB<349,CDOTAClientMsg_CoinWager,(SignonGroup_t)14,(NetChannelBufType_t)1,true>::CProtobufBinding::s_typeName,
+    &_dso_handle);
 }
 
 

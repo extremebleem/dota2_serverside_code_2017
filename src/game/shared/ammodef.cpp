@@ -416,7 +416,7 @@ void __fastcall CAmmoDef::~CAmmoDef(CAmmoDef *const this)
 // callers: CBaseEntity::HandleShotImpactingWater, CBaseEntity::FireBullets, CBaseCombatCharacter::GetAmmoCount, CBaseCombatCharacter::RemoveAmmo, CBaseCombatCharacter::GiveAmmo, CBaseEntity::HandleShotImpactingGlass, CBasePlayer::ItemPostFrame, CBaseCombatWeapon::SetupWeaponFileInfo, CGameRules::CanHaveAmmo, CGameRules::GetAmmoDamage, CC_GiveCurrentAmmo, CBasePlayer::GiveNamedItem (15 total)
 CAmmoDef *__cdecl GetAmmoDef()
 {
-  return (*g_pWeaponInfo->_vptr_IWeaponInfo)(g_pWeaponInfo);
+  return g_pWeaponInfo->GetAmmoDef();
 }
 
 

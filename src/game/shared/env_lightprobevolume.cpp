@@ -212,7 +212,7 @@ void *__fastcall CEnvLightProbeVolume::CEntityInstanceEntityClass::AllocateInsta
 void __fastcall CEnvLightProbeVolume::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CEnvLightProbeVolume::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -222,7 +222,7 @@ void __fastcall CEnvLightProbeVolume::CEntityInstanceEntityClass::~CEntityInstan
 void __fastcall CEnvLightProbeVolume::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CEnvLightProbeVolume::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -400,7 +400,7 @@ void __fastcall CBaseLightProbeVolume::CBaseLightProbeVolume(
         IToolObjectContext *pContext)
 {
   this->m_pContext = pContext;
-  this->_vptr_IToolObject = off_3FB9790;
+  this->_vptr_IToolObject = off_3FB9790;  // vptr: CBaseLightProbeVolume
   this->m_hLightProbeTexture.m_pBinding = 0;
   this->m_LightGroups.u.m_Id = 0;
 }
@@ -415,7 +415,7 @@ void __fastcall CBaseLightProbeVolume::~CBaseLightProbeVolume(CBaseLightProbeVol
   p_m_hLightProbeTexture = &this->m_hLightProbeTexture;
   p_m_hLightProbeTexture[-2].m_pBinding = off_3FB9790;
   CStrongHandle<InfoForResourceTypeCTextureBase>::Shutdown(p_m_hLightProbeTexture);
-  this->_vptr_IToolObject = off_3FB7BF0;
+  this->_vptr_IToolObject = off_3FB7BF0;  // vptr: IToolObject
 }
 
 
@@ -428,7 +428,7 @@ void __fastcall CBaseLightProbeVolume::~CBaseLightProbeVolume(CBaseLightProbeVol
   p_m_hLightProbeTexture = &this->m_hLightProbeTexture;
   p_m_hLightProbeTexture[-2].m_pBinding = off_3FB9790;
   CStrongHandle<InfoForResourceTypeCTextureBase>::Shutdown(p_m_hLightProbeTexture);
-  this->_vptr_IToolObject = off_3FB7BF0;
+  this->_vptr_IToolObject = off_3FB7BF0;  // vptr: IToolObject
   operator delete(this);
 }
 
@@ -1179,9 +1179,9 @@ void __fastcall CEnvLightProbeVolume::~CEnvLightProbeVolume(CEnvLightProbeVolume
   p_m_hLightProbeTexture[-106].m_Value.m_pBinding = &off_3FB97F0;
   p_m_hLightProbeTexture[-9].m_Value.m_pBinding = off_3FB9E78;
   CStrongHandle<InfoForResourceTypeCTextureBase>::Shutdown(&p_m_hLightProbeTexture->m_Value);
-  this->_vptr_IToolObject = off_3FB9790;
+  this->_vptr_IToolObject = off_3FB9790;  // vptr: CBaseLightProbeVolume
   CStrongHandle<InfoForResourceTypeCTextureBase>::Shutdown(&this->CBaseLightProbeVolume::m_hLightProbeTexture);
-  this->_vptr_IToolObject = off_3FB7BF0;
+  this->_vptr_IToolObject = off_3FB7BF0;  // vptr: IToolObject
   CBaseEntity::~CBaseEntity(this);
 }
 

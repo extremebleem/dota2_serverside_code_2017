@@ -9,7 +9,7 @@ void __fastcall CDOTA_BotMode_EvasiveManeuvers::CDOTA_BotMode_EvasiveManeuvers(
         CDOTA_Bot *pBot)
 {
   CDOTA_BotMode::CDOTA_BotMode(this, pBot);
-  this->_vptr_CDOTA_BotMode = off_42B7FD0;
+  this->_vptr_CDOTA_BotMode = off_42B7FD0;  // vptr: CDOTA_BotMode_EvasiveManeuvers
 }
 
 

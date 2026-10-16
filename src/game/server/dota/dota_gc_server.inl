@@ -33,13 +33,13 @@ void __fastcall CGCJobUploadSaveGame::~CGCJobUploadSaveGame(CGCJobUploadSaveGame
   KeyValues *v2; // r12
 
   v2 = *(&this->m_cHeartbeatsBeforeTimeout + 1);
-  this->_vptr_CJob = off_43048D0;
+  this->_vptr_CJob = off_43048D0;  // vptr: CGCJobUploadSaveGame
   if ( v2 != 0 )
   {
     KeyValues::~KeyValues(v2);
     KeyValues::operator delete(v2);
   }
-  this->_vptr_CJob = off_40DB690;
+  this->_vptr_CJob = off_40DB690;  // vptr: GCSDK::CGCClientJob
   GCSDK::CJob::~CJob(this);
 }
 
@@ -51,13 +51,13 @@ void __fastcall CGCJobUploadSaveGame::~CGCJobUploadSaveGame(CGCJobUploadSaveGame
   KeyValues *v2; // r12
 
   v2 = *(&this->m_cHeartbeatsBeforeTimeout + 1);
-  this->_vptr_CJob = off_43048D0;
+  this->_vptr_CJob = off_43048D0;  // vptr: CGCJobUploadSaveGame
   if ( v2 != 0 )
   {
     KeyValues::~KeyValues(v2);
     KeyValues::operator delete(v2);
   }
-  this->_vptr_CJob = off_40DB690;
+  this->_vptr_CJob = off_40DB690;  // vptr: GCSDK::CGCClientJob
   GCSDK::CJob::~CJob(this);
   operator delete(this);
 }
@@ -67,7 +67,7 @@ void __fastcall CGCJobUploadSaveGame::~CGCJobUploadSaveGame(CGCJobUploadSaveGame
 // calls: GCSDK::CJob::~CJob
 void __fastcall CGCJobLoadSaveGame::~CGCJobLoadSaveGame(CGCJobLoadSaveGame *const this)
 {
-  this->_vptr_CJob = off_40DB690;
+  this->_vptr_CJob = off_40DB690;  // vptr: GCSDK::CGCClientJob
   GCSDK::CJob::~CJob(this);
 }
 
@@ -76,7 +76,7 @@ void __fastcall CGCJobLoadSaveGame::~CGCJobLoadSaveGame(CGCJobLoadSaveGame *cons
 // calls: GCSDK::CJob::~CJob, operator delete
 void __fastcall CGCJobLoadSaveGame::~CGCJobLoadSaveGame(CGCJobLoadSaveGame *const this)
 {
-  this->_vptr_CJob = off_40DB690;
+  this->_vptr_CJob = off_40DB690;  // vptr: GCSDK::CGCClientJob
   GCSDK::CJob::~CJob(this);
   operator delete(this);
 }

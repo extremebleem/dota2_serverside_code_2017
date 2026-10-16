@@ -98,7 +98,7 @@ void __fastcall CDOTA_Bot_AbilityUsage_DragonKnight_BreatheFire::CDOTA_Bot_Abili
   this->m_pAbility = pAbility;
   this->m_bUseOnCreeps = 0;
   this->m_pBot = pBot;
-  this->_vptr_CDOTA_Bot_AbilityUsage = off_42CB650;
+  this->_vptr_CDOTA_Bot_AbilityUsage = off_42CB650;  // vptr: CDOTA_Bot_AbilityUsage_DragonKnight_BreatheFire
 }
 
 
@@ -408,7 +408,7 @@ void __fastcall CDOTA_Bot_AbilityUsage_DragonKnight_DragonTail::CDOTA_Bot_Abilit
   this->m_pAbility = pAbility;
   this->m_bUseOnCreeps = 0;
   this->m_pBot = pBot;
-  this->_vptr_CDOTA_Bot_AbilityUsage = off_42CB6B0;
+  this->_vptr_CDOTA_Bot_AbilityUsage = off_42CB6B0;  // vptr: CDOTA_Bot_AbilityUsage_DragonKnight_DragonTail
   this->m_hDesiredTarget.m_Index = -1;
 }
 
@@ -810,7 +810,7 @@ void __fastcall CDOTA_Bot_AbilityUsage_DragonKnight_ElderDragonForm::CDOTA_Bot_A
   this->m_pAbility = pAbility;
   this->m_bUseOnCreeps = 0;
   this->m_pBot = pBot;
-  this->_vptr_CDOTA_Bot_AbilityUsage = off_42CB710;
+  this->_vptr_CDOTA_Bot_AbilityUsage = off_42CB710;  // vptr: CDOTA_Bot_AbilityUsage_DragonKnight_ElderDragonForm
 }
 
 

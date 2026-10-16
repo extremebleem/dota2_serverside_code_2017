@@ -98,7 +98,7 @@ void *__fastcall CTonemapController2::CEntityInstanceEntityClass::AllocateInstan
 void __fastcall CTonemapController2::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CTonemapController2::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -108,7 +108,7 @@ void __fastcall CTonemapController2::CEntityInstanceEntityClass::~CEntityInstanc
 void __fastcall CTonemapController2::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CTonemapController2::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -408,7 +408,7 @@ CEntityInstance *__fastcall CTonemapTrigger::CEntityInstanceEntityClass::Constru
 void __fastcall CTonemapTrigger::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CTonemapTrigger::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -418,7 +418,7 @@ void __fastcall CTonemapTrigger::CEntityInstanceEntityClass::~CEntityInstanceEnt
 void __fastcall CTonemapTrigger::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CTonemapTrigger::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }

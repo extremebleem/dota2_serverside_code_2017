@@ -615,7 +615,7 @@ CEntityInstance *__fastcall CDOTA_Unit_Hero_Enigma::CEntityInstanceEntityClass::
 void __fastcall CDOTA_Unit_Hero_Enigma::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Unit_Hero_Enigma::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -625,7 +625,7 @@ void __fastcall CDOTA_Unit_Hero_Enigma::CEntityInstanceEntityClass::~CEntityInst
 void __fastcall CDOTA_Unit_Hero_Enigma::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Unit_Hero_Enigma::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -837,7 +837,7 @@ CEntityInstance *__fastcall CDOTA_Ability_Enigma_Malefice::CEntityInstanceEntity
 void __fastcall CDOTA_Ability_Enigma_Malefice::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Enigma_Malefice::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -847,7 +847,7 @@ void __fastcall CDOTA_Ability_Enigma_Malefice::CEntityInstanceEntityClass::~CEnt
 void __fastcall CDOTA_Ability_Enigma_Malefice::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Enigma_Malefice::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -1260,7 +1260,7 @@ CEntityInstance *__fastcall CDOTA_Ability_Enigma_DemonicConversion::CEntityInsta
 void __fastcall CDOTA_Ability_Enigma_DemonicConversion::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Enigma_DemonicConversion::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -1270,7 +1270,7 @@ void __fastcall CDOTA_Ability_Enigma_DemonicConversion::CEntityInstanceEntityCla
 void __fastcall CDOTA_Ability_Enigma_DemonicConversion::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Enigma_DemonicConversion::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -1891,7 +1891,7 @@ CEntityInstance *__fastcall CDOTA_Ability_Enigma_MidnightPulse::CEntityInstanceE
 void __fastcall CDOTA_Ability_Enigma_MidnightPulse::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Enigma_MidnightPulse::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -1901,7 +1901,7 @@ void __fastcall CDOTA_Ability_Enigma_MidnightPulse::CEntityInstanceEntityClass::
 void __fastcall CDOTA_Ability_Enigma_MidnightPulse::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Enigma_MidnightPulse::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -2356,7 +2356,7 @@ CEntityInstance *__fastcall CDOTA_Ability_Enigma_BlackHole::CEntityInstanceEntit
 void __fastcall CDOTA_Ability_Enigma_BlackHole::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Enigma_BlackHole::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -2366,7 +2366,7 @@ void __fastcall CDOTA_Ability_Enigma_BlackHole::CEntityInstanceEntityClass::~CEn
 void __fastcall CDOTA_Ability_Enigma_BlackHole::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Enigma_BlackHole::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }

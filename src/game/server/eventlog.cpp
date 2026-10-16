@@ -12,7 +12,7 @@ void __cdecl CEventLog::YouForgot::ToDefine_DEFINE_GAME_SYSTEM()
 // callers: CGameSystemReallocatingFactory<CDOTAEventLog, CDOTAEventLog>::CreateGameSystem
 void __fastcall CEventLog::CEventLog(CEventLog *const this)
 {
-  this->_vptr_IGameEventListener2 = off_4031B10;
+  this->_vptr_IGameEventListener2 = off_4031B10;  // vptr: CEventLog
   this->m_bRegisteredForEvents = 0;
   this->_vptr_IGameSystem = off_4031B88;
 }
@@ -31,14 +31,14 @@ void __fastcall CEventLog::~CEventLog(CEventLog *const this)
   v2->_vptr_IGameSystem = off_4031B88;
   IGameSystem::~IGameSystem(v2);
   v3 = !this->m_bRegisteredForEvents;
-  this->_vptr_IGameEventListener2 = off_3FB3190;
+  this->_vptr_IGameEventListener2 = off_3FB3190;  // vptr: CGameEventListener
   if ( !v3 )
   {
     if ( gameeventmanager != 0 )
       (*(gameeventmanager->_vptr_IBaseInterface + 6))(gameeventmanager, this);
     this->m_bRegisteredForEvents = 0;
   }
-  this->_vptr_IGameEventListener2 = off_3FB3150;
+  this->_vptr_IGameEventListener2 = off_3FB3150;  // vptr: IGameEventListener2
 }
 
 
@@ -54,14 +54,14 @@ void __fastcall CEventLog::~CEventLog(CEventLog *const this)
   v2->_vptr_IGameSystem = off_4031B88;
   IGameSystem::~IGameSystem(v2);
   v3 = !this->m_bRegisteredForEvents;
-  this->_vptr_IGameEventListener2 = off_3FB3190;
+  this->_vptr_IGameEventListener2 = off_3FB3190;  // vptr: CGameEventListener
   if ( !v3 )
   {
     if ( gameeventmanager != 0 )
       (*(gameeventmanager->_vptr_IBaseInterface + 6))(gameeventmanager, this);
     this->m_bRegisteredForEvents = 0;
   }
-  this->_vptr_IGameEventListener2 = off_3FB3150;
+  this->_vptr_IGameEventListener2 = off_3FB3150;  // vptr: IGameEventListener2
   operator delete(this);
 }
 

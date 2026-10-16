@@ -524,7 +524,7 @@ void __fastcall CLightQueryGameSystem::GameDeactivate(
 // CLightQueryGameSystem::CLightQueryGameSystem  (line 270, @0x0000000001f35db0, libserver.so)  // inlines: CEntityHandle
 void __fastcall CLightQueryGameSystem::CLightQueryGameSystem(CLightQueryGameSystem *const this)
 {
-  this->_vptr_IGameSystem = off_3FCC9F0;
+  this->_vptr_IGameSystem = off_3FCC9F0;  // vptr: CLightQueryGameSystem
   this->m_hGlobalLights[0].m_Index = -1;
   this->m_hGlobalLights[1].m_Index = -1;
 }
@@ -534,7 +534,7 @@ void __fastcall CLightQueryGameSystem::CLightQueryGameSystem(CLightQueryGameSyst
 // calls: IGameSystem::~IGameSystem
 void __fastcall CLightQueryGameSystem::~CLightQueryGameSystem(CLightQueryGameSystem *const this)
 {
-  this->_vptr_IGameSystem = off_3FCC9F0;
+  this->_vptr_IGameSystem = off_3FCC9F0;  // vptr: CLightQueryGameSystem
   IGameSystem::~IGameSystem(this);
 }
 
@@ -543,7 +543,7 @@ void __fastcall CLightQueryGameSystem::~CLightQueryGameSystem(CLightQueryGameSys
 // calls: IGameSystem::~IGameSystem, operator delete
 void __fastcall CLightQueryGameSystem::~CLightQueryGameSystem(CLightQueryGameSystem *const this)
 {
-  this->_vptr_IGameSystem = off_3FCC9F0;
+  this->_vptr_IGameSystem = off_3FCC9F0;  // vptr: CLightQueryGameSystem
   IGameSystem::~IGameSystem(this);
   operator delete(this);
 }
@@ -626,7 +626,7 @@ void __fastcall CLightQueryGameSystem::OnPostSimulate(
       COERCE_DOUBLE(LODWORD(v19[1])),
       COERCE_DOUBLE(v17),
       v4);
-    v7 = (*g_pLoopModeGameSharedState->_vptr_ILoopModeGameSharedState)(g_pLoopModeGameSharedState);
+    v7 = g_pLoopModeGameSharedState->GetWorldSession();
     v8 = (*(*v7 + 120LL))(v7, 0);
     v9 = (*(*v8 + 8LL))(v8);
     DrawAmbientCube(g_pDebugOverlay, &camera[24], v15, v9, v12, v10, v11);

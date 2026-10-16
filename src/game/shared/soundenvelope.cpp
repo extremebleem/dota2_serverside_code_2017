@@ -562,7 +562,7 @@ const CSchemaClassBindingBase *__fastcall CSoundPatch::Schema_DynamicBinding(con
 
 
 // CSoundPatch::operator delete  (line 336, @0x00000000023aec90, libserver.so)  // inlines: Free
-// calls: CUtlMemoryPoolBase::Free
+// calls: CUtlMemoryPoolBase::Free, _Unwind_Resume, __cxa_call_unexpected
 // globals: CSoundPatch::s_Allocator
 void __fastcall CSoundPatch::operator delete(void *p)
 {
@@ -1593,7 +1593,7 @@ void __fastcall CSoundControllerImp::~CSoundControllerImp(CSoundControllerImp *c
   CUtlVectorBase<SoundCommand_t*,CUtlMemory<SoundCommand_t*,int> >::CAllocator *p_m_Memory; // r12
 
   v2 = (this->m_commandList.m_heap.m_Memory.m_nGrowSize & 0xC0000000) == 0;
-  this->_vptr_CSoundEnvelopeController = off_40ABB10;
+  this->_vptr_CSoundEnvelopeController = off_40ABB10;  // vptr: CSoundControllerImp
   this->_vptr_IGameSystem = off_40ABC20;
   this->m_commandList.m_heap.m_Size = 0;
   if ( !v2
@@ -1618,7 +1618,7 @@ void __fastcall CSoundControllerImp::~CSoundControllerImp(CSoundControllerImp *c
   if ( (this->m_soundList.m_Memory.m_nGrowSize & 0xC0000000) == 0 )
     CUtlMemory<CSoundPatch *,int>::Purge(&this->m_soundList.m_Memory);
 LABEL_3:
-  this->_vptr_IGameSystem = off_3F7C1B0;
+  this->_vptr_IGameSystem = off_3F7C1B0;  // vptr: CAutoGameSystem
   IGameSystem::~IGameSystem(&this->CAutoGameSystem);
 }
 
@@ -1631,7 +1631,7 @@ void __fastcall CSoundControllerImp::~CSoundControllerImp(CSoundControllerImp *c
   CUtlVectorBase<SoundCommand_t*,CUtlMemory<SoundCommand_t*,int> >::CAllocator *p_m_Memory; // r12
 
   v2 = (this->m_commandList.m_heap.m_Memory.m_nGrowSize & 0xC0000000) == 0;
-  this->_vptr_CSoundEnvelopeController = off_40ABB10;
+  this->_vptr_CSoundEnvelopeController = off_40ABB10;  // vptr: CSoundControllerImp
   this->_vptr_IGameSystem = off_40ABC20;
   this->m_commandList.m_heap.m_Size = 0;
   if ( !v2
@@ -1656,7 +1656,7 @@ void __fastcall CSoundControllerImp::~CSoundControllerImp(CSoundControllerImp *c
   if ( (this->m_soundList.m_Memory.m_nGrowSize & 0xC0000000) == 0 )
     CUtlMemory<CSoundPatch *,int>::Purge(&this->m_soundList.m_Memory);
 LABEL_3:
-  this->_vptr_IGameSystem = off_3F7C1B0;
+  this->_vptr_IGameSystem = off_3F7C1B0;  // vptr: CAutoGameSystem
   IGameSystem::~IGameSystem(&this->CAutoGameSystem);
   operator delete(this);
 }
@@ -1739,7 +1739,7 @@ void __fastcall CSoundControllerImp::GameDeactivate(
 
 
 // CSoundControllerImp::ProcessCommand  (line 902, @0x00000000023962a0, libserver.so)  // inlines: Free, Purge, RemoveAll, Shutdown, operator delete, ~CCopyRecipientFilter, ~CSoundPatch, ~CUtlMemory, ~CUtlVector, ~CUtlVectorBase, ~IRecipientFilter
-// calls: CSoundControllerImp::RemoveFromList, CUtlMemoryPoolBase::Free, CSoundPatch::FadeOut, CSoundPatch::ChangeVolume, CSoundPatch::ChangePitch, CSoundPatch::Shutdown, CUtlMemory<CEntityIndex, int>::Purge
+// calls: CSoundControllerImp::RemoveFromList, CUtlMemoryPoolBase::Free, CSoundPatch::FadeOut, CSoundPatch::ChangeVolume, CSoundPatch::ChangePitch, CSoundPatch::Shutdown, CUtlMemory<CEntityIndex, int>::Purge, _Unwind_Resume, __cxa_call_unexpected
 // callers: CSoundControllerImp::SystemUpdate
 // globals: jpt_23962CB, CSoundPatch::g_SoundPatchCount, CSoundPatch::s_Allocator
 void __fastcall CSoundControllerImp::ProcessCommand(CSoundControllerImp *const this, SoundCommand_t *pCmd)
@@ -1931,7 +1931,7 @@ void __fastcall CSoundControllerImp::CommandInsert(CSoundControllerImp *const th
 
 
 // CSoundControllerImp::CommandAdd  (line 983, @0x00000000023a5280, libserver.so)  // inlines: AddToTail, Alloc, CommandInsert, GrowMemory, Insert, PercolateUp, SoundCommand_t, Swap, operator new, operator(), operator[]
-// calls: CUtlMemoryPoolBase::Alloc, CUtlMemory<SoundCommand_t*, int>::Grow
+// calls: CUtlMemoryPoolBase::Alloc, CUtlMemory<SoundCommand_t*, int>::Grow, _Unwind_Resume, __cxa_call_unexpected
 // globals: SoundCommand_t::s_Allocator
 void __fastcall CSoundControllerImp::CommandAdd(
         CSoundControllerImp *const this,
@@ -2044,7 +2044,7 @@ LABEL_6:
 
 
 // CSoundControllerImp::SystemUpdate  (line 1011, @0x000000000239e780, libserver.so)  // inlines: Element, FastRemove, Free, PercolateDown, RemoveAtHead, Reset, Swap, memcpy, operator delete, operator(), operator[]
-// calls: CUtlVectorBase<SoundCommand_t*, CUtlMemory<SoundCommand_t*, int> >::FastRemove, CSoundControllerImp::ProcessCommand, CUtlMemoryPoolBase::Free, CSoundPatch::Update
+// calls: CUtlVectorBase<SoundCommand_t*, CUtlMemory<SoundCommand_t*, int> >::FastRemove, CSoundControllerImp::ProcessCommand, CUtlMemoryPoolBase::Free, CSoundPatch::Update, _Unwind_Resume, __cxa_call_unexpected
 // globals: SoundCommand_t::s_Allocator
 void __fastcall CSoundControllerImp::SystemUpdate(CSoundControllerImp *const this)
 {
@@ -2174,7 +2174,7 @@ LABEL_17:
 
 
 // CSoundControllerImp::CommandClear  (line 1060, @0x000000000239e990, libserver.so)  // inlines: Free, PercolateDown, PercolateUp, RemoveAt, RevaluateElement, Swap, operator delete, operator(), operator[]
-// calls: CUtlVectorBase<SoundCommand_t*, CUtlMemory<SoundCommand_t*, int> >::FastRemove, CUtlMemoryPoolBase::Free
+// calls: CUtlVectorBase<SoundCommand_t*, CUtlMemory<SoundCommand_t*, int> >::FastRemove, CUtlMemoryPoolBase::Free, _Unwind_Resume, __cxa_call_unexpected
 // globals: SoundCommand_t::s_Allocator
 void __fastcall CSoundControllerImp::CommandClear(CSoundControllerImp *const this, CSoundPatch *pSound)
 {
@@ -2382,7 +2382,7 @@ LABEL_6:
 
 
 // CSoundControllerImp::RestoreSoundPatch  (line 1118, @0x00000000023a4e30, libserver.so)  // inlines: AddToTail, Alloc, CCopyRecipientFilter, CEntityHandle, CEntityIndex, CHandle, CSoundEnvelope, CSoundPatch, CUtlMemory, CUtlSymbolLarge, CUtlVector, CUtlVectorBase, CommandInsert, CopyConstruct<CSoundPatch*>, Element, GetFloat, GrowMemory, InValidate, Init, Insert, PercolateUp, ReadAll<CSoundPatch>, ReadAll<SoundCommand_t>, SndOpEventGuid_t, SoundCommand_t, SoundEventGuid_t, Swap, memset, operator new, operator(), operator[]
-// calls: CUtlMemoryPoolBase::Alloc, CUtlMemory<SoundCommand_t*, int>::Grow, CUtlMemory<CSoundPatch*, int>::Grow
+// calls: CUtlMemoryPoolBase::Alloc, CUtlMemory<SoundCommand_t*, int>::Grow, CUtlMemory<CSoundPatch*, int>::Grow, _Unwind_Resume, __cxa_call_unexpected
 // callers: CSoundPatchSaveRestoreOps::Restore
 // globals: CSoundPatch::s_Allocator, CSoundPatch::g_SoundPatchCount, CSoundPatch::m_DataMap, SoundCommand_t::s_Allocator, SoundCommand_t::m_DataMap
 void __fastcall CSoundControllerImp::RestoreSoundPatch(
@@ -2537,7 +2537,7 @@ void __fastcall CSoundControllerImp::ShutdownSoundPatch(CSoundControllerImp *con
 
 
 // CSoundControllerImp::SoundCreate  (line 1174, @0x00000000023a1810, libserver.so)  // inlines: Alloc, CCopyRecipientFilter, CEntityHandle, CEntityIndex, CHandle, CSoundEnvelope, CSoundPatch, CUtlMemory, CUtlSymbolLarge, CUtlVector, CUtlVectorBase, GetFloat, GetInstance, InValidate, IndexToIdentity, Init, Instance, IsUsed, LookupEntityByIndex, LookupEntityByNetworkIndex, SndOpEventGuid_t, SoundEventGuid_t, operator new
-// calls: CUtlMemoryPoolBase::Alloc, CSoundPatch::Init
+// calls: CUtlMemoryPoolBase::Alloc, CSoundPatch::Init, _Unwind_Resume, __cxa_call_unexpected
 // globals: CSoundPatch::s_Allocator, CSoundPatch::g_SoundPatchCount
 CSoundPatch *__fastcall CSoundControllerImp::SoundCreate(
         CSoundControllerImp *const this,
@@ -2604,7 +2604,7 @@ CSoundPatch *__fastcall CSoundControllerImp::SoundCreate(
 
 
 // CSoundControllerImp::SoundCreate  (line 1184, @0x00000000023a19c0, libserver.so)  // inlines: Alloc, CCopyRecipientFilter, CEntityHandle, CEntityIndex, CHandle, CSoundEnvelope, CSoundPatch, CUtlMemory, CUtlSymbolLarge, CUtlVector, CUtlVectorBase, GetFloat, GetInstance, InValidate, IndexToIdentity, Init, Instance, IsUsed, LookupEntityByIndex, LookupEntityByNetworkIndex, SndOpEventGuid_t, SoundEventGuid_t, operator new
-// calls: CUtlMemoryPoolBase::Alloc, CSoundPatch::Init
+// calls: CUtlMemoryPoolBase::Alloc, CSoundPatch::Init, _Unwind_Resume, __cxa_call_unexpected
 // globals: CSoundPatch::s_Allocator, CSoundPatch::g_SoundPatchCount
 CSoundPatch *__fastcall CSoundControllerImp::SoundCreate(
         CSoundControllerImp *const this,
@@ -2676,7 +2676,7 @@ CSoundPatch *__fastcall CSoundControllerImp::SoundCreate(
 
 
 // CSoundControllerImp::SoundCreate  (line 1193, @0x00000000023a1b80, libserver.so)  // inlines: Alloc, CCopyRecipientFilter, CEntityHandle, CEntityIndex, CHandle, CSoundEnvelope, CSoundPatch, CUtlMemory, CUtlSymbolLarge, CUtlVector, CUtlVectorBase, GetFloat, GetInstance, InValidate, IndexToIdentity, Init, Instance, IsUsed, LookupEntityByIndex, LookupEntityByNetworkIndex, SndOpEventGuid_t, SoundEventGuid_t, operator new
-// calls: CUtlMemoryPoolBase::Alloc, CSoundPatch::Init
+// calls: CUtlMemoryPoolBase::Alloc, CSoundPatch::Init, _Unwind_Resume, __cxa_call_unexpected
 // globals: CSoundPatch::s_Allocator, CSoundPatch::g_SoundPatchCount
 CSoundPatch *__fastcall CSoundControllerImp::SoundCreate(
         CSoundControllerImp *const this,
@@ -2749,7 +2749,7 @@ CSoundPatch *__fastcall CSoundControllerImp::SoundCreate(
 
 
 // CSoundControllerImp::SoundCreate  (line 1201, @0x00000000023a1d40, libserver.so)  // inlines: Alloc, CCopyRecipientFilter, CEntityHandle, CEntityIndex, CHandle, CSoundEnvelope, CSoundPatch, CUtlMemory, CUtlSymbolLarge, CUtlVector, CUtlVectorBase, GetFloat, GetInstance, InValidate, IndexToIdentity, Init, Instance, IsUsed, LookupEntityByIndex, LookupEntityByNetworkIndex, SndOpEventGuid_t, SoundEventGuid_t, operator new
-// calls: CUtlMemoryPoolBase::Alloc, CSoundPatch::Init
+// calls: CUtlMemoryPoolBase::Alloc, CSoundPatch::Init, _Unwind_Resume, __cxa_call_unexpected
 // globals: CSoundPatch::s_Allocator, CSoundPatch::g_SoundPatchCount
 CSoundPatch *__fastcall CSoundControllerImp::SoundCreate(
         CSoundControllerImp *const this,
@@ -2817,7 +2817,7 @@ CSoundPatch *__fastcall CSoundControllerImp::SoundCreate(
 
 
 // CSoundControllerImp::SoundCreate  (line 1210, @0x00000000023a1ef0, libserver.so)  // inlines: Alloc, CCopyRecipientFilter, CEntityHandle, CEntityIndex, CHandle, CSoundEnvelope, CSoundPatch, CUtlMemory, CUtlSymbolLarge, CUtlVector, CUtlVectorBase, GetFloat, GetInstance, InValidate, IndexToIdentity, Init, Instance, IsUsed, LookupEntityByIndex, LookupEntityByNetworkIndex, SetBaseFlags, SndOpEventGuid_t, SoundEventGuid_t, operator new
-// calls: CUtlMemoryPoolBase::Alloc, CSoundPatch::Init, CSoundPatch::ChangeVolume, CSoundPatch::ChangePitch
+// calls: CUtlMemoryPoolBase::Alloc, CSoundPatch::Init, CSoundPatch::ChangeVolume, CSoundPatch::ChangePitch, _Unwind_Resume, __cxa_call_unexpected
 // globals: CSoundPatch::s_Allocator, CSoundPatch::g_SoundPatchCount
 CSoundPatch *__fastcall CSoundControllerImp::SoundCreate(
         CSoundControllerImp *const this,
@@ -2890,7 +2890,7 @@ CSoundPatch *__fastcall CSoundControllerImp::SoundCreate(
 
 
 // CSoundControllerImp::SoundDestroy  (line 1227, @0x0000000002383ae0, libserver.so)  // inlines: Free, Purge, RemoveAll, operator delete, ~CCopyRecipientFilter, ~CSoundPatch, ~CUtlMemory, ~CUtlVector, ~CUtlVectorBase, ~IRecipientFilter
-// calls: CUtlMemoryPoolBase::Free, CUtlMemory<CEntityIndex, int>::Purge
+// calls: CUtlMemoryPoolBase::Free, CUtlMemory<CEntityIndex, int>::Purge, _Unwind_Resume, __cxa_call_unexpected
 // globals: CSoundPatch::g_SoundPatchCount, CSoundPatch::s_Allocator
 void __fastcall CSoundControllerImp::SoundDestroy(CSoundControllerImp *const this, CSoundPatch *pSound)
 {

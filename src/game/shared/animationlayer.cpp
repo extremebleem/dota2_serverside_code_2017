@@ -97,7 +97,7 @@ void __fastcall CAnimationLayer::CAnimationLayer(CAnimationLayer *const this)
 // callers: CSchemaUtlVectorManipulator<CUtlVector<CAnimationLayer, CUtlMemory<CAnimationLayer, int> >, CAnimationLayer>::SwapItems, CSchemaUtlVectorManipulator<CUtlVector<CAnimationLayer, CUtlMemory<CAnimationLayer, int> >, CAnimationLayer>::RemoveMultiple, CSchemaClassBinding<CSequenceTransitioner>::DestructInPlace, CAtomicManipulator<CUtlVector<CAnimationLayer, CUtlMemory<CAnimationLayer, int> > >::Deallocate, CSchemaClassBinding<CSequenceTransitioner>::Deallocate, CSchemaUtlVectorManipulator<CUtlVector<CAnimationLayer, CUtlMemory<CAnimationLayer, int> >, CAnimationLayer>::DeallocateUtlVector, CUtlVectorBase<CAnimationLayer, CUtlMemory<CAnimationLayer, int> >::SetCount, CSchemaClassBinding<CAnimationLayer>::Deallocate, CSchemaClassBinding<CAnimationLayer>::DestructInPlace, CSchemaUtlVectorManipulator<CUtlVector<CAnimationLayer, CNetworkUtlVector_MemoryType<CAnimationLayer, -1> >, CAnimationLayer>::SwapItems, CSchemaUtlVectorManipulator<CUtlVector<CAnimationLayer, CNetworkUtlVector_MemoryType<CAnimationLayer, -1> >, CAnimationLayer>::RemoveMultiple, CAtomicManipulator<CUtlVector<CAnimationLayer, CNetworkUtlVector_MemoryType<CAnimationLayer, -1> > >::Deallocate (18 total)
 void __fastcall CAnimationLayer::~CAnimationLayer(CAnimationLayer *const this)
 {
-  this->_vptr_CAnimationLayer = off_3FEC7F0;
+  this->_vptr_CAnimationLayer = off_3FEC7F0;  // vptr: CAnimationLayer
 }
 
 

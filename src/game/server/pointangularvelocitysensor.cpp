@@ -258,7 +258,7 @@ void *__fastcall CPointAngularVelocitySensor::CEntityInstanceEntityClass::Alloca
 void __fastcall CPointAngularVelocitySensor::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CPointAngularVelocitySensor::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -268,7 +268,7 @@ void __fastcall CPointAngularVelocitySensor::CEntityInstanceEntityClass::~CEntit
 void __fastcall CPointAngularVelocitySensor::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CPointAngularVelocitySensor::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -1307,7 +1307,7 @@ CEntityInstance *__fastcall CPointVelocitySensor::CEntityInstanceEntityClass::Co
 void __fastcall CPointVelocitySensor::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CPointVelocitySensor::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -1317,7 +1317,7 @@ void __fastcall CPointVelocitySensor::CEntityInstanceEntityClass::~CEntityInstan
 void __fastcall CPointVelocitySensor::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CPointVelocitySensor::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }

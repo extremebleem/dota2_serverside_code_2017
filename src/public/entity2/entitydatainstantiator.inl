@@ -4,7 +4,7 @@
 // IEntityDataInstantiator::~IEntityDataInstantiator  (line 24, @0x00000000020f1410, libserver.so)
 void __fastcall IEntityDataInstantiator::~IEntityDataInstantiator(IEntityDataInstantiator *const this)
 {
-  this->_vptr_IEntityDataInstantiator = off_3FF60F0;
+  this->_vptr_IEntityDataInstantiator = off_3FF60F0;  // vptr: IEntityDataInstantiator
 }
 
 
@@ -12,7 +12,7 @@ void __fastcall IEntityDataInstantiator::~IEntityDataInstantiator(IEntityDataIns
 // calls: operator delete
 void __fastcall IEntityDataInstantiator::~IEntityDataInstantiator(IEntityDataInstantiator *const this)
 {
-  this->_vptr_IEntityDataInstantiator = off_3FF60F0;
+  this->_vptr_IEntityDataInstantiator = off_3FF60F0;  // vptr: IEntityDataInstantiator
   operator delete(this);
 }
 
@@ -52,7 +52,7 @@ void __fastcall CEntityDataInstantiator<touchlink_t>::~CEntityDataInstantiator(
     if ( (this->m_HashTable.m_Buckets.m_Memory.m_nGrowSize & 0xC0000000) == 0 )
       CUtlMemory<CUtlVector<CEntityDataInstantiator<touchlink_t>::HashEntry,CUtlMemory<CEntityDataInstantiator<touchlink_t>::HashEntry,int>>,int>::Purge(&this->m_HashTable.m_Buckets.m_Memory);
   }
-  this->_vptr_IEntityDataInstantiator = off_3FF60F0;
+  this->_vptr_IEntityDataInstantiator = off_3FF60F0;  // vptr: IEntityDataInstantiator
   operator delete(this);
 }
 
@@ -92,7 +92,7 @@ void __fastcall CEntityDataInstantiator<touchlink_t>::~CEntityDataInstantiator(
     if ( (this->m_HashTable.m_Buckets.m_Memory.m_nGrowSize & 0xC0000000) == 0 )
       CUtlMemory<CUtlVector<CEntityDataInstantiator<touchlink_t>::HashEntry,CUtlMemory<CEntityDataInstantiator<touchlink_t>::HashEntry,int>>,int>::Purge(&this->m_HashTable.m_Buckets.m_Memory);
   }
-  this->_vptr_IEntityDataInstantiator = off_3FF60F0;
+  this->_vptr_IEntityDataInstantiator = off_3FF60F0;  // vptr: IEntityDataInstantiator
 }
 
 
@@ -131,7 +131,7 @@ void __fastcall CEntityDataInstantiator<groundlink_t>::~CEntityDataInstantiator(
     if ( (this->m_HashTable.m_Buckets.m_Memory.m_nGrowSize & 0xC0000000) == 0 )
       CUtlMemory<CUtlVector<CEntityDataInstantiator<groundlink_t>::HashEntry,CUtlMemory<CEntityDataInstantiator<groundlink_t>::HashEntry,int>>,int>::Purge(&this->m_HashTable.m_Buckets.m_Memory);
   }
-  this->_vptr_IEntityDataInstantiator = off_3FF60F0;
+  this->_vptr_IEntityDataInstantiator = off_3FF60F0;  // vptr: IEntityDataInstantiator
   operator delete(this);
 }
 
@@ -171,7 +171,7 @@ void __fastcall CEntityDataInstantiator<groundlink_t>::~CEntityDataInstantiator(
     if ( (this->m_HashTable.m_Buckets.m_Memory.m_nGrowSize & 0xC0000000) == 0 )
       CUtlMemory<CUtlVector<CEntityDataInstantiator<groundlink_t>::HashEntry,CUtlMemory<CEntityDataInstantiator<groundlink_t>::HashEntry,int>>,int>::Purge(&this->m_HashTable.m_Buckets.m_Memory);
   }
-  this->_vptr_IEntityDataInstantiator = off_3FF60F0;
+  this->_vptr_IEntityDataInstantiator = off_3FF60F0;  // vptr: IEntityDataInstantiator
 }
 
 
@@ -210,7 +210,7 @@ void __fastcall CEntityDataInstantiator<StepSimulationData>::~CEntityDataInstant
     if ( (this->m_HashTable.m_Buckets.m_Memory.m_nGrowSize & 0xC0000000) == 0 )
       CUtlMemory<CUtlVector<CEntityDataInstantiator<StepSimulationData>::HashEntry,CUtlMemory<CEntityDataInstantiator<StepSimulationData>::HashEntry,int>>,int>::Purge(&this->m_HashTable.m_Buckets.m_Memory);
   }
-  this->_vptr_IEntityDataInstantiator = off_3FF60F0;
+  this->_vptr_IEntityDataInstantiator = off_3FF60F0;  // vptr: IEntityDataInstantiator
   operator delete(this);
 }
 
@@ -250,7 +250,7 @@ void __fastcall CEntityDataInstantiator<StepSimulationData>::~CEntityDataInstant
     if ( (this->m_HashTable.m_Buckets.m_Memory.m_nGrowSize & 0xC0000000) == 0 )
       CUtlMemory<CUtlVector<CEntityDataInstantiator<StepSimulationData>::HashEntry,CUtlMemory<CEntityDataInstantiator<StepSimulationData>::HashEntry,int>>,int>::Purge(&this->m_HashTable.m_Buckets.m_Memory);
   }
-  this->_vptr_IEntityDataInstantiator = off_3FF60F0;
+  this->_vptr_IEntityDataInstantiator = off_3FF60F0;  // vptr: IEntityDataInstantiator
 }
 
 
@@ -289,7 +289,7 @@ void __fastcall CEntityDataInstantiator<ModelScale>::~CEntityDataInstantiator(
     if ( (this->m_HashTable.m_Buckets.m_Memory.m_nGrowSize & 0xC0000000) == 0 )
       CUtlMemory<CUtlVector<CEntityDataInstantiator<ModelScale>::HashEntry,CUtlMemory<CEntityDataInstantiator<ModelScale>::HashEntry,int>>,int>::Purge(&this->m_HashTable.m_Buckets.m_Memory);
   }
-  this->_vptr_IEntityDataInstantiator = off_3FF60F0;
+  this->_vptr_IEntityDataInstantiator = off_3FF60F0;  // vptr: IEntityDataInstantiator
   operator delete(this);
 }
 
@@ -329,7 +329,7 @@ void __fastcall CEntityDataInstantiator<ModelScale>::~CEntityDataInstantiator(
     if ( (this->m_HashTable.m_Buckets.m_Memory.m_nGrowSize & 0xC0000000) == 0 )
       CUtlMemory<CUtlVector<CEntityDataInstantiator<ModelScale>::HashEntry,CUtlMemory<CEntityDataInstantiator<ModelScale>::HashEntry,int>>,int>::Purge(&this->m_HashTable.m_Buckets.m_Memory);
   }
-  this->_vptr_IEntityDataInstantiator = off_3FF60F0;
+  this->_vptr_IEntityDataInstantiator = off_3FF60F0;  // vptr: IEntityDataInstantiator
 }
 
 
@@ -368,7 +368,7 @@ void __fastcall CEntityDataInstantiator<CWatcherList>::~CEntityDataInstantiator(
     if ( (this->m_HashTable.m_Buckets.m_Memory.m_nGrowSize & 0xC0000000) == 0 )
       CUtlMemory<CUtlVector<CEntityDataInstantiator<CWatcherList>::HashEntry,CUtlMemory<CEntityDataInstantiator<CWatcherList>::HashEntry,int>>,int>::Purge(&this->m_HashTable.m_Buckets.m_Memory);
   }
-  this->_vptr_IEntityDataInstantiator = off_3FF60F0;
+  this->_vptr_IEntityDataInstantiator = off_3FF60F0;  // vptr: IEntityDataInstantiator
   operator delete(this);
 }
 
@@ -408,7 +408,7 @@ void __fastcall CEntityDataInstantiator<CWatcherList>::~CEntityDataInstantiator(
     if ( (this->m_HashTable.m_Buckets.m_Memory.m_nGrowSize & 0xC0000000) == 0 )
       CUtlMemory<CUtlVector<CEntityDataInstantiator<CWatcherList>::HashEntry,CUtlMemory<CEntityDataInstantiator<CWatcherList>::HashEntry,int>>,int>::Purge(&this->m_HashTable.m_Buckets.m_Memory);
   }
-  this->_vptr_IEntityDataInstantiator = off_3FF60F0;
+  this->_vptr_IEntityDataInstantiator = off_3FF60F0;  // vptr: IEntityDataInstantiator
 }
 
 
@@ -447,7 +447,7 @@ void __fastcall CEntityDataInstantiator<physicspushlist_t>::~CEntityDataInstanti
     if ( (this->m_HashTable.m_Buckets.m_Memory.m_nGrowSize & 0xC0000000) == 0 )
       CUtlMemory<CUtlVector<CEntityDataInstantiator<physicspushlist_t>::HashEntry,CUtlMemory<CEntityDataInstantiator<physicspushlist_t>::HashEntry,int>>,int>::Purge(&this->m_HashTable.m_Buckets.m_Memory);
   }
-  this->_vptr_IEntityDataInstantiator = off_3FF60F0;
+  this->_vptr_IEntityDataInstantiator = off_3FF60F0;  // vptr: IEntityDataInstantiator
   operator delete(this);
 }
 
@@ -487,7 +487,7 @@ void __fastcall CEntityDataInstantiator<physicspushlist_t>::~CEntityDataInstanti
     if ( (this->m_HashTable.m_Buckets.m_Memory.m_nGrowSize & 0xC0000000) == 0 )
       CUtlMemory<CUtlVector<CEntityDataInstantiator<physicspushlist_t>::HashEntry,CUtlMemory<CEntityDataInstantiator<physicspushlist_t>::HashEntry,int>>,int>::Purge(&this->m_HashTable.m_Buckets.m_Memory);
   }
-  this->_vptr_IEntityDataInstantiator = off_3FF60F0;
+  this->_vptr_IEntityDataInstantiator = off_3FF60F0;  // vptr: IEntityDataInstantiator
 }
 
 
@@ -526,7 +526,7 @@ void __fastcall CEntityDataInstantiator<vphysicsupdateai_t>::~CEntityDataInstant
     if ( (this->m_HashTable.m_Buckets.m_Memory.m_nGrowSize & 0xC0000000) == 0 )
       CUtlMemory<CUtlVector<CEntityDataInstantiator<vphysicsupdateai_t>::HashEntry,CUtlMemory<CEntityDataInstantiator<vphysicsupdateai_t>::HashEntry,int>>,int>::Purge(&this->m_HashTable.m_Buckets.m_Memory);
   }
-  this->_vptr_IEntityDataInstantiator = off_3FF60F0;
+  this->_vptr_IEntityDataInstantiator = off_3FF60F0;  // vptr: IEntityDataInstantiator
   operator delete(this);
 }
 
@@ -566,7 +566,7 @@ void __fastcall CEntityDataInstantiator<vphysicsupdateai_t>::~CEntityDataInstant
     if ( (this->m_HashTable.m_Buckets.m_Memory.m_nGrowSize & 0xC0000000) == 0 )
       CUtlMemory<CUtlVector<CEntityDataInstantiator<vphysicsupdateai_t>::HashEntry,CUtlMemory<CEntityDataInstantiator<vphysicsupdateai_t>::HashEntry,int>>,int>::Purge(&this->m_HashTable.m_Buckets.m_Memory);
   }
-  this->_vptr_IEntityDataInstantiator = off_3FF60F0;
+  this->_vptr_IEntityDataInstantiator = off_3FF60F0;  // vptr: IEntityDataInstantiator
 }
 
 
@@ -886,7 +886,7 @@ void *__fastcall CEntityDataInstantiator<ModelScale>::GetDataObject(
 
 
 // CEntityDataInstantiator<touchlink_t>::CreateDataObject  (line 58, @0x00000000021215b0, libserver.so)  // inlines: AddToTail, Alloc, BuildHandle, CEntityHandle, CHandle, CopyConstruct<CEntityDataInstantiator<touchlink_t>::HashEntry>, DoFind, Element, Find, GetBucketIndex, GrowMemory, HashEntry, Insert, V_memset, memset, operator new, operator[], touchlink_t
-// calls: CUtlMemoryPoolBase::Alloc, CUtlMemory<CEntityDataInstantiator<touchlink_t>::HashEntry, int>::Grow
+// calls: CUtlMemoryPoolBase::Alloc, CUtlMemory<CEntityDataInstantiator<touchlink_t>::HashEntry, int>::Grow, _Unwind_Resume, __cxa_call_unexpected
 void *__fastcall CEntityDataInstantiator<touchlink_t>::CreateDataObject(
         CEntityDataInstantiator<touchlink_t> *const this,
         const CEntityInstance *instance)
@@ -1010,7 +1010,7 @@ LABEL_25:
 
 
 // CEntityDataInstantiator<groundlink_t>::CreateDataObject  (line 58, @0x0000000002121c30, libserver.so)  // inlines: AddToTail, Alloc, BuildHandle, CEntityHandle, CHandle, CopyConstruct<CEntityDataInstantiator<groundlink_t>::HashEntry>, DoFind, Element, Find, GetBucketIndex, GrowMemory, HashEntry, Insert, V_memset, groundlink_t, memset, operator new, operator[]
-// calls: CUtlMemoryPoolBase::Alloc, CUtlMemory<CEntityDataInstantiator<groundlink_t>::HashEntry, int>::Grow
+// calls: CUtlMemoryPoolBase::Alloc, CUtlMemory<CEntityDataInstantiator<groundlink_t>::HashEntry, int>::Grow, _Unwind_Resume, __cxa_call_unexpected
 void *__fastcall CEntityDataInstantiator<groundlink_t>::CreateDataObject(
         CEntityDataInstantiator<groundlink_t> *const this,
         const CEntityInstance *instance)
@@ -2062,7 +2062,7 @@ void __fastcall CEntityDataInstantiator<vphysicsupdateai_t>::DestroyDataObject(
 
 
 // CEntityDataInstantiator<touchlink_t>::DestroyDataObject  (line 80, @0x00000000020fd7c0, libserver.so)  // inlines: BuildHandle, DoFind, Element, FastRemove, Find, Free, GetBucketIndex, GetKeyDataIndex, HashEntry, IsValidIndex, Remove, memcpy, operator delete, operator[]
-// calls: CUtlMemoryPoolBase::Free
+// calls: CUtlMemoryPoolBase::Free, _Unwind_Resume, __cxa_call_unexpected
 void __fastcall CEntityDataInstantiator<touchlink_t>::DestroyDataObject(
         CEntityDataInstantiator<touchlink_t> *const this,
         const CEntityInstance *instance)
@@ -2141,7 +2141,7 @@ void __fastcall CEntityDataInstantiator<touchlink_t>::DestroyDataObject(
 
 
 // CEntityDataInstantiator<groundlink_t>::DestroyDataObject  (line 80, @0x00000000020fd920, libserver.so)  // inlines: BuildHandle, DoFind, Element, FastRemove, Find, Free, GetBucketIndex, GetKeyDataIndex, HashEntry, IsValidIndex, Remove, memcpy, operator delete, operator[]
-// calls: CUtlMemoryPoolBase::Free
+// calls: CUtlMemoryPoolBase::Free, _Unwind_Resume, __cxa_call_unexpected
 void __fastcall CEntityDataInstantiator<groundlink_t>::DestroyDataObject(
         CEntityDataInstantiator<groundlink_t> *const this,
         const CEntityInstance *instance)

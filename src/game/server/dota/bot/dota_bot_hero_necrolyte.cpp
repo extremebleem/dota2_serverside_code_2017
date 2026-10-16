@@ -51,7 +51,7 @@ void __fastcall CDOTA_Bot_AbilityUsage_Necrolyte_DeathPulse::CDOTA_Bot_AbilityUs
   this->m_pAbility = pAbility;
   this->m_bUseOnCreeps = 0;
   this->m_pBot = pBot;
-  this->_vptr_CDOTA_Bot_AbilityUsage = off_42CDE90;
+  this->_vptr_CDOTA_Bot_AbilityUsage = off_42CDE90;  // vptr: CDOTA_Bot_AbilityUsage_Necrolyte_DeathPulse
 }
 
 
@@ -455,7 +455,7 @@ void __fastcall CDOTA_Bot_AbilityUsage_Necrolyte_Scythe::CDOTA_Bot_AbilityUsage_
   this->m_pAbility = pAbility;
   this->m_bUseOnCreeps = 0;
   this->m_pBot = pBot;
-  this->_vptr_CDOTA_Bot_AbilityUsage = off_42CDEF0;
+  this->_vptr_CDOTA_Bot_AbilityUsage = off_42CDEF0;  // vptr: CDOTA_Bot_AbilityUsage_Necrolyte_Scythe
   this->m_hDesiredTarget.m_Index = -1;
 }
 

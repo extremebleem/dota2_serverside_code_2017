@@ -42,7 +42,7 @@ void __fastcall CPathFollower::~CPathFollower(CPathFollower *const this)
   UtlLinkedListElem_t<INextBot*,short unsigned int> *m_pMemory; // rax
   __int64 v4; // rbx
 
-  this->_vptr_IPathFollower = off_47B6610;
+  this->_vptr_IPathFollower = off_47B6610;  // vptr: CPathFollower
   m_Head = g_NextBotManager.m_botList.m_Head;
   if ( m_Head != 0xFFFF )
   {
@@ -67,7 +67,7 @@ void __fastcall CPathFollower::~CPathFollower(CPathFollower *const this)
   UtlLinkedListElem_t<INextBot*,short unsigned int> *m_pMemory; // rax
   __int64 v4; // rbx
 
-  this->_vptr_IPathFollower = off_47B6610;
+  this->_vptr_IPathFollower = off_47B6610;  // vptr: CPathFollower
   m_Head = g_NextBotManager.m_botList.m_Head;
   if ( m_Head != 0xFFFF )
   {
@@ -658,7 +658,7 @@ LABEL_24:
     {
       v79 = vMountPoint.y - *(&v43 + 1);
       v83 = vMountPoint.x - *&v43;
-      NDebugOverlay::Sphere(&vMountPoint, 5.0, 255, 0, 255, 1, 0.1);
+      NDebugOverlay::Sphere(&vMountPoint, COERCE_DOUBLE(1084227584), 0xFFu, 0, 0xFFu, 1, 0.1);
       v46 = v79;
       v45 = v83;
     }
@@ -1096,7 +1096,7 @@ LABEL_25:
           target.x = (v66 * 25.0) + vGoalPos.x;
           *&origin.x = ((*v5)[98])(v5);
           origin.z = v23;
-          NDebugOverlay::Line(&origin, &target, 255, 0, 0, 1, 0.1);
+          NDebugOverlay::Line(&origin, &target, 0xFFu, 0, 0, 1, 0.1);
           *&vGoalPos.x = ((*v5)[98])(v5);
           vGoalPos.z = v24;
           target.y = (*(&v68 + 1) * 25.0) + vGoalPos.y;
@@ -1104,7 +1104,7 @@ LABEL_25:
           target.x = (*&v68 * 25.0) + vGoalPos.x;
           *&origin.x = ((*v5)[98])(v5);
           origin.z = v25;
-          NDebugOverlay::Line(&origin, &target, 0, 255, 0, 1, 0.1);
+          NDebugOverlay::Line(&origin, &target, 0, 0xFFu, 0, 1, 0.1);
           *&v68 = vLeft.x * 25.0;
           *(&v68 + 1) = vLeft.y * 25.0;
           v70 = 25.0 * vLeft.z;
@@ -1115,7 +1115,7 @@ LABEL_25:
           target.x = *&v68 + vGoalPos.x;
           *&origin.x = ((*v5)[98])(v5);
           origin.z = v27;
-          NDebugOverlay::Line(&origin, &target, 0, 0, 255, 1, 0.1);
+          NDebugOverlay::Line(&origin, &target, 0, 0, 0xFFu, 1, 0.1);
         }
         if ( CPathFollower::Climbing(this, this->m_pGoal, &vForward, &vLeft, flTooHighDistance) == 0 )
         {
@@ -1235,11 +1235,11 @@ LABEL_37:
         }
         if ( this->m_bIsDebugging )
         {
-          NDebugOverlay::Cross3D(&vGoalPos, 5.0, 150, 150, 255, 1, 0.1);
+          NDebugOverlay::Cross3D(&vGoalPos, 5.0, 0x96u, 0x96u, 0xFFu, 1, 0.1);
           v38 = (*(this->m_pBot->_vptr_INextBotEventResponder + 66))(this->m_pBot);
           *&target.x = (*(*v38 + 496LL))(v38);
           target.z = v39;
-          NDebugOverlay::Line(&target, &vGoalPos, 255, 255, 0, 1, 0.1);
+          NDebugOverlay::Line(&target, &vGoalPos, 0xFFu, 0xFFu, 0, 1, 0.1);
         }
       }
     }
@@ -1425,13 +1425,13 @@ LABEL_7:
     v27 = (*(m_pBot->_vptr_INextBotEventResponder + 68))(m_pBot);
     *&position.x = (*(*v27 + 784LL))(v27);
     position.z = v28;
-    NDebugOverlay::Circle(&position, &vPos, 10.0, 255, 0, 0, 255, 1, 1.0);
+    NDebugOverlay::Circle(&position, &vPos, 10.0, 0xFFu, 0, 0, 255, 1.0, 1);
     v29 = CBaseEntity::GetAbsOrigin(v52.m_pEnt);
     v30 = (*(this->m_pBot->_vptr_INextBotEventResponder + 68))(this->m_pBot);
     v31 = (*(*v30 + 784LL))(v30);
     vPos.m_Start.z = v32;
     *&vPos.m_Start.x = v31;
-    NDebugOverlay::HorzArrow(&vPos.m_Start, v29, 1.0, 255, 0, 0, 255, 1, 1.0);
+    NDebugOverlay::HorzArrow(&vPos.m_Start, v29, 1.0, 0xFFu, 0, 0, 255, 1.0, 1);
   }
   return v52.m_pEnt;
 }
@@ -1807,7 +1807,7 @@ LABEL_37:
                   v61 = CBaseEntity::GetAbsOrigin(pDoorb);
                   NDebugOverlay::Axis(v61, v60, 20.0, 1, 10.0);
                   v62 = CBaseEntity::GetAbsOrigin(pDoorb);
-                  NDebugOverlay::Line(v62, &vDoorEdge, 255, 255, 0, 1, 10.0);
+                  NDebugOverlay::Line(v62, &vDoorEdge, 0xFFu, 0xFFu, 0, 1, 10.0);
                 }
                 vAdjustedGoal_4 = vDoorEdge.x;
                 vAdjustedGoal_8 = vDoorEdge.y;
@@ -1918,7 +1918,7 @@ LABEL_29:
     }
     goto LABEL_45;
   }
-  flRightAvoidb = 0.5 * RandomFloat(COERCE_DOUBLE(1065353216), 2.0);
+  flRightAvoidb = 0.5 * RandomFloat(1.0, 2.0);
   v73 = CountdownTimer::Now(&this->m_waitTimer);
   v74 = flRightAvoidb;
   v75 = v73 + flRightAvoidb;
@@ -2258,7 +2258,7 @@ __int64 __fastcall CPathFollower::Climbing(
       v71 = (*(*v7 + 784LL))(v7);
       ledgeRight.z = v72;
       *&ledgeRight.x = v71;
-      NDebugOverlay::Cross3D(&ledgeRight, 5.0, 0, 255, 255, 1, 5.0);
+      NDebugOverlay::Cross3D(&ledgeRight, 5.0, 0, 0xFFu, 0xFFu, 1, 5.0);
       v73 = (*(this->m_pBot->_vptr_INextBotEventResponder + 97))(this->m_pBot);
       v74 = CGlobalVarsBase::curtime(gpGlobals, 0);
       DevMsg("%3.2f: %s ON STAIRS\n", v73, v74);
@@ -2482,10 +2482,10 @@ LABEL_29:
           &climbHullMax,
           &vec3_angle,
           255,
+          0.1,
           100,
           0,
-          255,
-          0.1);
+          255);
         v44 = flMinHullHeighta;
       }
       if ( v188 < 1.0 && v190 == 0 )
@@ -2503,14 +2503,14 @@ LABEL_29:
             &climbHullMax,
             &vec3_angle,
             255,
+            4.0,
             100,
             0,
-            100,
-            4.0);
+            100);
           ledgeRight.y = (vClimbDirection.y * 50.0) + vFeet.y;
           ledgeRight.z = (vClimbDirection.z * 50.0) + vFeet.z;
           ledgeRight.x = (50.0 * vClimbDirection.x) + vFeet.x;
-          NDebugOverlay::HorzArrow(&vFeet, &ledgeRight, 2.0, 0, 255, 0, 255, 1, 4.0);
+          NDebugOverlay::HorzArrow(&vFeet, &ledgeRight, 2.0, 0, 0xFFu, 0, 255, 4.0, 1);
           v44 = flMinHullHeighti;
           v114 = pObstacle;
           if ( v188 >= 1.0 && v190 == 0 )
@@ -2691,10 +2691,10 @@ LABEL_46:
                               &vClimbHullMax,
                               &vec3_angle,
                               255,
+                              v85,
                               0,
                               0,
-                              255,
-                              v85);
+                              255);
                             v53 = pSegd;
                             v84 = flMinHullHeighte;
                           }
@@ -2755,10 +2755,10 @@ LABEL_46:
                           &vClimbHullMax,
                           &vec3_angle,
                           0,
+                          4.0,
                           255,
                           0,
-                          255,
-                          4.0);
+                          255);
                         *&v87 = LODWORD(vLedgePos.x);
                         *&v88 = LODWORD(vLedgePos.y);
                         *&v93 = pSegg;
@@ -2774,10 +2774,10 @@ LABEL_46:
                             &vClimbHullMax,
                             &vec3_angle,
                             255,
+                            4.0,
                             0,
                             0,
-                            255,
-                            4.0);
+                            255);
                           m_bIsDebugging = this->m_bIsDebugging;
                           *&v92 = LODWORD(flMinHullHeightf);
                           *&v93 = pSegg;
@@ -2798,7 +2798,7 @@ LABEL_100:
                           if ( NextBotDebugClimbing.m_pParent->m_Value.m_nValue != 0 )
                           {
                             v131 = flLedgeHeightb;
-                            NDebugOverlay::Cross3D(&vLedgePos, 10.0, 0, 255, 0, 1, 4.0);
+                            NDebugOverlay::Cross3D(&vLedgePos, 10.0, 0, 0xFFu, 0, 1, 4.0);
                             v98 = pSegf;
                             v99 = (vClimbDirection.z * flHalfSize) + vFeet.z;
                             v100 = vFeet.x + (vClimbDirection.x * flHalfSize);
@@ -2822,30 +2822,30 @@ LABEL_100:
                               &wallBottomRight,
                               &wallBottomLeft,
                               &wallTopLeft,
-                              255,
-                              100,
+                              0xFFu,
+                              0x64u,
                               0,
+                              4.0,
                               100,
-                              1,
-                              4.0);
+                              1);
                             NDebugOverlay::Triangle(
                               &wallBottomRight,
                               &wallTopLeft,
                               &wallTopRight,
-                              255,
-                              100,
+                              0xFFu,
+                              0x64u,
                               0,
+                              4.0,
                               100,
-                              1,
-                              4.0);
+                              1);
                             ledgeLeft.x = flMinHullHeightn + vLedgePos.x;
                             ledgeRight.x = vLedgePos.x - flMinHullHeightn;
                             ledgeLeft.y = pSegi + vLedgePos.y;
                             ledgeRight.y = vLedgePos.y - pSegi;
                             ledgeLeft.z = flLedgeHeighte + vLedgePos.z;
                             ledgeRight.z = vLedgePos.z - flLedgeHeighte;
-                            NDebugOverlay::Triangle(&wallTopRight, &wallTopLeft, &ledgeLeft, 0, 100, 255, 100, 1, 4.0);
-                            NDebugOverlay::Triangle(&wallTopRight, &ledgeLeft, &ledgeRight, 0, 100, 255, 100, 1, 4.0);
+                            NDebugOverlay::Triangle(&wallTopRight, &wallTopLeft, &ledgeLeft, 0, 0x64u, 255, 4.0, 100, 1);
+                            NDebugOverlay::Triangle(&wallTopRight, &ledgeLeft, &ledgeRight, 0, 0x64u, 255, 4.0, 100, 1);
                           }
                         }
                       }
@@ -2874,7 +2874,7 @@ LABEL_100:
                       ledgeRight.y = (20.0 * v184) + v182.y;
                       ledgeRight.z = (20.0 * v185) + v182.z;
                       ledgeRight.x = (20.0 * v183) + v182.x;
-                      NDebugOverlay::HorzArrow(&v182, &ledgeRight, 5.0, 255, 100, 0, 255, 1, 4.0);
+                      NDebugOverlay::HorzArrow(&v182, &ledgeRight, 5.0, 0xFFu, 0x64u, 0, 255, 4.0, 1);
                       v53 = flLedgeHeighta;
                       v51 = flMinHullHeightd;
                       v55 = flLedgeTopLookAheadRange;
@@ -3092,7 +3092,7 @@ LABEL_25:
   result = v41;
   if ( m_bIsDebugging )
   {
-    NDebugOverlay::Cross3D(v33, 5.0, 0, 255, 255, 1, 5.0);
+    NDebugOverlay::Cross3D(v33, 5.0, 0, 0xFFu, 0xFFu, 1, 5.0);
     m_flCurrentTime = 0.0;
     v37 = gpGlobals;
     if ( gpGlobals != 0 )
@@ -3150,21 +3150,21 @@ void __fastcall CPathFollower::Draw(const CPathFollower *const this, const CPath
     p_m_vLeftTo = &this->m_vLeftTo;
     p_m_vLeftFrom = &this->m_vLeftFrom;
     if ( v3 )
-      NDebugOverlay::SweptBox(p_m_vLeftFrom, p_m_vLeftTo, p_m_hullMin, p_m_hullMax, &angles, 255, 0, 0, 255, 0.1);
+      NDebugOverlay::SweptBox(p_m_vLeftFrom, p_m_vLeftTo, p_m_hullMin, p_m_hullMax, &angles, 255, 0.1, 0, 0, 255);
     else
-      NDebugOverlay::SweptBox(p_m_vLeftFrom, p_m_vLeftTo, p_m_hullMin, p_m_hullMax, &angles, 0, 255, 0, 255, 0.1);
+      NDebugOverlay::SweptBox(p_m_vLeftFrom, p_m_vLeftTo, p_m_hullMin, p_m_hullMax, &angles, 0, 0.1, 255, 0, 255);
     p_m_rightTo = &this->m_rightTo;
     p_m_rightFrom = &this->m_rightFrom;
     if ( this->m_isRightClear )
-      NDebugOverlay::SweptBox(p_m_rightFrom, p_m_rightTo, p_m_hullMin, p_m_hullMax, &angles, 0, 255, 0, 255, 0.1);
+      NDebugOverlay::SweptBox(p_m_rightFrom, p_m_rightTo, p_m_hullMin, p_m_hullMax, &angles, 0, 0.1, 255, 0, 255);
     else
-      NDebugOverlay::SweptBox(p_m_rightFrom, p_m_rightTo, p_m_hullMin, p_m_hullMax, &angles, 255, 0, 0, 255, 0.1);
+      NDebugOverlay::SweptBox(p_m_rightFrom, p_m_rightTo, p_m_hullMin, p_m_hullMax, &angles, 255, 0.1, 0, 0, 255);
     this->m_bDidAvoidCheck = 0;
   }
   m_pGoal = this->m_pGoal;
   if ( m_pGoal == 0 )
     goto LABEL_19;
-  NDebugOverlay::Sphere(&m_pGoal->vPos, 5.0, 255, 255, 0, 1, 0.1);
+  NDebugOverlay::Sphere(&m_pGoal->vPos, COERCE_DOUBLE(1084227584), 0xFFu, 0xFFu, 0, 1, 0.1);
   v11 = this->m_pGoal;
   if ( v11->how == NavTraverseType::GO_NORTH || v11->how == NavTraverseType::GO_SOUTH )
   {
@@ -3191,7 +3191,7 @@ void __fastcall CPathFollower::Draw(const CPathFollower *const this, const CPath
     origin.y = y - flPortalHalfWidth;
   }
   origin.z = z;
-  NDebugOverlay::Line(&origin, &angles, 255, 0, 255, 1, 0.1);
+  NDebugOverlay::Line(&origin, &angles, 0xFFu, 0, 0xFFu, 1, 0.1);
   v16 = this->m_pGoal;
   m_rPath = this->m_rPath;
   if ( v16 != 0 )
@@ -3202,7 +3202,7 @@ void __fastcall CPathFollower::Draw(const CPathFollower *const this, const CPath
       v19 = 0x2E8BA2E8BA2E8BA3LL * ((v16 - m_rPath->m_path) >> 3);
       if ( v19 > 0 && m_nSegmentCount > v19 )
       {
-        NDebugOverlay::Line(&m_rPath->m_path[v19 - 1].vPos, &v16->vPos, 255, 255, 0, 1, 0.1);
+        NDebugOverlay::Line(&m_rPath->m_path[v19 - 1].vPos, &v16->vPos, 0xFFu, 0xFFu, 0, 1, 0.1);
 LABEL_19:
         m_rPath = this->m_rPath;
       }

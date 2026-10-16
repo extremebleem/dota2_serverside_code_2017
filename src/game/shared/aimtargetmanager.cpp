@@ -68,7 +68,7 @@ void __fastcall CAimTargetManager::~CAimTargetManager(CAimTargetManager *const t
   CUtlVectorBase<CBaseEntity*,CUtlMemory<CBaseEntity*,int> >::CAllocator *p_m_Memory; // r12
 
   v2 = (this->m_targetList.m_Memory.m_nGrowSize & 0xC0000000) == 0;
-  this->_vptr_IGameSystem = off_3FCB610;
+  this->_vptr_IGameSystem = off_3FCB610;  // vptr: CAimTargetManager
   this->_vptr_IEntityListener = off_3FCB778;
   this->m_targetList.m_Size = 0;
   if ( v2 )
@@ -78,7 +78,7 @@ void __fastcall CAimTargetManager::~CAimTargetManager(CAimTargetManager *const t
     if ( (this->m_targetList.m_Memory.m_nGrowSize & 0xC0000000) == 0 )
       CUtlMemory<CBaseEntity *,int>::Purge(p_m_Memory);
   }
-  this->_vptr_IGameSystem = off_3F7C1B0;
+  this->_vptr_IGameSystem = off_3F7C1B0;  // vptr: CAutoGameSystem
   IGameSystem::~IGameSystem(this);
 }
 
@@ -91,7 +91,7 @@ void __fastcall CAimTargetManager::~CAimTargetManager(CAimTargetManager *const t
   CUtlVectorBase<CBaseEntity*,CUtlMemory<CBaseEntity*,int> >::CAllocator *p_m_Memory; // r12
 
   v2 = (this->m_targetList.m_Memory.m_nGrowSize & 0xC0000000) == 0;
-  this->_vptr_IGameSystem = off_3FCB610;
+  this->_vptr_IGameSystem = off_3FCB610;  // vptr: CAimTargetManager
   this->_vptr_IEntityListener = off_3FCB778;
   this->m_targetList.m_Size = 0;
   if ( v2 )
@@ -101,7 +101,7 @@ void __fastcall CAimTargetManager::~CAimTargetManager(CAimTargetManager *const t
     if ( (this->m_targetList.m_Memory.m_nGrowSize & 0xC0000000) == 0 )
       CUtlMemory<CBaseEntity *,int>::Purge(p_m_Memory);
   }
-  this->_vptr_IGameSystem = off_3F7C1B0;
+  this->_vptr_IGameSystem = off_3F7C1B0;  // vptr: CAutoGameSystem
   IGameSystem::~IGameSystem(this);
   operator delete(this);
 }

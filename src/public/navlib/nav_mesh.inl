@@ -9,7 +9,7 @@ void __fastcall CNavPrecacheInfo::~CNavPrecacheInfo(CNavPrecacheInfo *const this
   CUtlMemory<unsigned int,int> *p_m_Memory; // r12
 
   v2 = (this->m_placeDirectory.m_Directory.m_Memory.m_nGrowSize & 0xC0000000) == 0;
-  this->_vptr_CNavPrecacheInfo = off_47AE070;
+  this->_vptr_CNavPrecacheInfo = off_47AE070;  // vptr: CNavPrecacheInfo
   this->m_placeDirectory.m_Directory.m_Size = 0;
   if ( v2 )
   {
@@ -29,7 +29,7 @@ void __fastcall CNavPrecacheInfo::~CNavPrecacheInfo(CNavPrecacheInfo *const this
   CUtlMemory<unsigned int,int> *p_m_Memory; // r12
 
   v2 = (this->m_placeDirectory.m_Directory.m_Memory.m_nGrowSize & 0xC0000000) == 0;
-  this->_vptr_CNavPrecacheInfo = off_47AE070;
+  this->_vptr_CNavPrecacheInfo = off_47AE070;  // vptr: CNavPrecacheInfo
   this->m_placeDirectory.m_Directory.m_Size = 0;
   if ( !v2
     || (p_m_Memory = &this->m_placeDirectory.m_Directory.m_Memory,
@@ -598,7 +598,7 @@ bool __fastcall CNavMesh::ForAllAreasOverlappingExtent<std::function<bool ()(CNa
   {
     v26 = __rdtsc();
     m_TargetThreadId = g_VProfCurrentProfile.m_TargetThreadId;
-    if ( m_TargetThreadId == ThreadGetCurrentId(this) )
+    if ( m_TargetThreadId == ThreadGetCurrentId() )
     {
       m_pCurNode = g_VProfCurrentProfile.m_pCurNode;
       if ( m_pCurNode->m_pszName != "CNavMesh::ForAllAreasOverlappingExtent" )

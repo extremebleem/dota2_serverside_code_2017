@@ -568,7 +568,7 @@ CEntityInstance *__fastcall CDOTA_Unit_Hero_Tidehunter::CEntityInstanceEntityCla
 void __fastcall CDOTA_Unit_Hero_Tidehunter::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Unit_Hero_Tidehunter::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -578,7 +578,7 @@ void __fastcall CDOTA_Unit_Hero_Tidehunter::CEntityInstanceEntityClass::~CEntity
 void __fastcall CDOTA_Unit_Hero_Tidehunter::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Unit_Hero_Tidehunter::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -785,7 +785,7 @@ CEntityInstance *__fastcall CDOTA_Ability_Tidehunter_Gush::CEntityInstanceEntity
 void __fastcall CDOTA_Ability_Tidehunter_Gush::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Tidehunter_Gush::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -795,7 +795,7 @@ void __fastcall CDOTA_Ability_Tidehunter_Gush::CEntityInstanceEntityClass::~CEnt
 void __fastcall CDOTA_Ability_Tidehunter_Gush::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Tidehunter_Gush::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -1551,7 +1551,7 @@ CEntityInstance *__fastcall CDOTA_Ability_Tidehunter_KrakenShell::CEntityInstanc
 void __fastcall CDOTA_Ability_Tidehunter_KrakenShell::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Tidehunter_KrakenShell::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -1561,7 +1561,7 @@ void __fastcall CDOTA_Ability_Tidehunter_KrakenShell::CEntityInstanceEntityClass
 void __fastcall CDOTA_Ability_Tidehunter_KrakenShell::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Tidehunter_KrakenShell::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -2010,7 +2010,7 @@ CEntityInstance *__fastcall CDOTA_Ability_Tidehunter_AnchorSmash::CEntityInstanc
 void __fastcall CDOTA_Ability_Tidehunter_AnchorSmash::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Tidehunter_AnchorSmash::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -2020,7 +2020,7 @@ void __fastcall CDOTA_Ability_Tidehunter_AnchorSmash::CEntityInstanceEntityClass
 void __fastcall CDOTA_Ability_Tidehunter_AnchorSmash::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Tidehunter_AnchorSmash::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -2485,7 +2485,7 @@ CEntityInstance *__fastcall CDOTA_Ability_Tidehunter_Ravage::CEntityInstanceEnti
 void __fastcall CDOTA_Ability_Tidehunter_Ravage::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Tidehunter_Ravage::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -2495,7 +2495,7 @@ void __fastcall CDOTA_Ability_Tidehunter_Ravage::CEntityInstanceEntityClass::~CE
 void __fastcall CDOTA_Ability_Tidehunter_Ravage::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Tidehunter_Ravage::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }

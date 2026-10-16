@@ -23,7 +23,7 @@ void __fastcall CDOTA_BotMode_DefendTower::CDOTA_BotMode_DefendTower(
   this->m_Mode = mode;
   this->m_vDesiredLocation.y = y;
   z = vec3_origin.z;
-  this->_vptr_CDOTA_BotMode = off_42B7B90;
+  this->_vptr_CDOTA_BotMode = off_42B7B90;  // vptr: CDOTA_BotMode_DefendTower
   this->m_vDesiredLocation.z = z;
   this->m_fDesire = 0.0;
 }
@@ -1008,7 +1008,7 @@ void __fastcall CDOTA_BotMode_DefendTower_Human::CDOTA_BotMode_DefendTower_Human
   z = vec3_origin.z;
   this->m_fDesire = 0.0;
   this->m_vDesiredLocation.z = z;
-  this->_vptr_CDOTA_BotMode = off_42B7C30;
+  this->_vptr_CDOTA_BotMode = off_42B7C30;  // vptr: CDOTA_BotMode_DefendTower_Human
   this->m_bPingConsideredActive = 0;
 }
 

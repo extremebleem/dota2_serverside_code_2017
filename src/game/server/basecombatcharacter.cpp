@@ -190,7 +190,7 @@ datamap_t *__fastcall DataMapInit<Relationship_t>(Relationship_t *a1)
 // calls: IGameSystem::~IGameSystem
 void __fastcall CCleanupDefaultRelationships::~CCleanupDefaultRelationships(CCleanupDefaultRelationships *const this)
 {
-  this->_vptr_IGameSystem = off_3F7C1B0;
+  this->_vptr_IGameSystem = off_3F7C1B0;  // vptr: CAutoGameSystem
   IGameSystem::~IGameSystem(this);
 }
 
@@ -199,7 +199,7 @@ void __fastcall CCleanupDefaultRelationships::~CCleanupDefaultRelationships(CCle
 // calls: IGameSystem::~IGameSystem, operator delete
 void __fastcall CCleanupDefaultRelationships::~CCleanupDefaultRelationships(CCleanupDefaultRelationships *const this)
 {
-  this->_vptr_IGameSystem = off_3F7C1B0;
+  this->_vptr_IGameSystem = off_3F7C1B0;  // vptr: CAutoGameSystem
   IGameSystem::~IGameSystem(this);
   operator delete(this);
 }
@@ -5690,7 +5690,7 @@ int __fastcall CBaseCombatCharacter::GiveAmmo(
   if ( iCount <= 0 || (*(g_pGameRules->_vptr_CGameRules + 102))(g_pGameRules, this) == 0 || iAmmoIndex > 0x1F )
     return 0;
   AmmoDef = GetAmmoDef();
-  v10 = (*AmmoDef->_vptr_CAmmoDef)(AmmoDef, iAmmoIndex, this);
+  v10 = AmmoDef->MaxCarry(iAmmoIndex, this);
   v11 = iAmmoIndex;
   v12 = this + 4 * iAmmoIndex;
   v13 = *(v12 + 373);

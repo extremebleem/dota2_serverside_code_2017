@@ -11,7 +11,7 @@ void __fastcall CDOTA_Bot_AbilityUsage_HandOfMidas::CDOTA_Bot_AbilityUsage_HandO
   this->m_pAbility = pAbility;
   this->m_bUseOnCreeps = 0;
   this->m_pBot = pBot;
-  this->_vptr_CDOTA_Bot_AbilityUsage = off_42C6410;
+  this->_vptr_CDOTA_Bot_AbilityUsage = off_42C6410;  // vptr: CDOTA_Bot_AbilityUsage_HandOfMidas
   this->m_hTarget.m_Index = -1;
 }
 

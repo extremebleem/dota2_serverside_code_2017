@@ -389,7 +389,7 @@ void __fastcall CNavToolsPhysicsInterface::Nav_TraceLine(
         CTraceFilter *pFilter,
         trace_t *pTraceOut)
 {
-  (*this->_vptr_INavPhysicsInterface)(this, vStart, vEnd, nMask, 0, 0xFFFFFFFFLL, pTraceOut);
+  this->Nav_TraceLine(vStart, vEnd, nMask, 0, 0xFFFFFFFFLL, pTraceOut);
 }
 
 

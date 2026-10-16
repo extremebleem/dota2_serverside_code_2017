@@ -812,7 +812,7 @@ CEntityInstance *__fastcall CDOTA_Unit_Hero_Nevermore::CEntityInstanceEntityClas
 void __fastcall CDOTA_Unit_Hero_Nevermore::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Unit_Hero_Nevermore::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -822,7 +822,7 @@ void __fastcall CDOTA_Unit_Hero_Nevermore::CEntityInstanceEntityClass::~CEntityI
 void __fastcall CDOTA_Unit_Hero_Nevermore::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Unit_Hero_Nevermore::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -1073,7 +1073,7 @@ CEntityInstance *__fastcall CDOTA_Ability_Nevermore_Shadowraze::CEntityInstanceE
 void __fastcall CDOTA_Ability_Nevermore_Shadowraze::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Nevermore_Shadowraze::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -1083,7 +1083,7 @@ void __fastcall CDOTA_Ability_Nevermore_Shadowraze::CEntityInstanceEntityClass::
 void __fastcall CDOTA_Ability_Nevermore_Shadowraze::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Nevermore_Shadowraze::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -1968,7 +1968,7 @@ CEntityInstance *__fastcall CDOTA_Ability_Nevermore_Shadowraze1::CEntityInstance
 void __fastcall CDOTA_Ability_Nevermore_Shadowraze1::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Nevermore_Shadowraze1::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -1978,7 +1978,7 @@ void __fastcall CDOTA_Ability_Nevermore_Shadowraze1::CEntityInstanceEntityClass:
 void __fastcall CDOTA_Ability_Nevermore_Shadowraze1::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Nevermore_Shadowraze1::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -2226,7 +2226,7 @@ CEntityInstance *__fastcall CDOTA_Ability_Nevermore_Shadowraze2::CEntityInstance
 void __fastcall CDOTA_Ability_Nevermore_Shadowraze2::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Nevermore_Shadowraze2::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -2236,7 +2236,7 @@ void __fastcall CDOTA_Ability_Nevermore_Shadowraze2::CEntityInstanceEntityClass:
 void __fastcall CDOTA_Ability_Nevermore_Shadowraze2::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Nevermore_Shadowraze2::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -2437,7 +2437,7 @@ CEntityInstance *__fastcall CDOTA_Ability_Nevermore_Shadowraze3::CEntityInstance
 void __fastcall CDOTA_Ability_Nevermore_Shadowraze3::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Nevermore_Shadowraze3::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -2447,7 +2447,7 @@ void __fastcall CDOTA_Ability_Nevermore_Shadowraze3::CEntityInstanceEntityClass:
 void __fastcall CDOTA_Ability_Nevermore_Shadowraze3::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Nevermore_Shadowraze3::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -2648,7 +2648,7 @@ CEntityInstance *__fastcall CDOTA_Ability_Nevermore_Presence::CEntityInstanceEnt
 void __fastcall CDOTA_Ability_Nevermore_Presence::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Nevermore_Presence::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -2658,7 +2658,7 @@ void __fastcall CDOTA_Ability_Nevermore_Presence::CEntityInstanceEntityClass::~C
 void __fastcall CDOTA_Ability_Nevermore_Presence::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Nevermore_Presence::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -3047,7 +3047,7 @@ void *__fastcall CDOTA_Ability_Nevermore_Requiem::CEntityInstanceEntityClass::Al
 void __fastcall CDOTA_Ability_Nevermore_Requiem::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Nevermore_Requiem::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -3057,7 +3057,7 @@ void __fastcall CDOTA_Ability_Nevermore_Requiem::CEntityInstanceEntityClass::~CE
 void __fastcall CDOTA_Ability_Nevermore_Requiem::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Nevermore_Requiem::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -4469,7 +4469,7 @@ CEntityInstance *__fastcall CDOTA_Ability_Nevermore_Necromastery::CEntityInstanc
 void __fastcall CDOTA_Ability_Nevermore_Necromastery::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Nevermore_Necromastery::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -4479,7 +4479,7 @@ void __fastcall CDOTA_Ability_Nevermore_Necromastery::CEntityInstanceEntityClass
 void __fastcall CDOTA_Ability_Nevermore_Necromastery::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Nevermore_Necromastery::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }

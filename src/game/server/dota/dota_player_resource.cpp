@@ -7385,7 +7385,7 @@ LABEL_23:
 void __fastcall CGCJobRequestBatchPlayerResourcesResponse::~CGCJobRequestBatchPlayerResourcesResponse(
         CGCJobRequestBatchPlayerResourcesResponse *const this)
 {
-  this->_vptr_CJob = off_40DB690;
+  this->_vptr_CJob = off_40DB690;  // vptr: GCSDK::CGCClientJob
   GCSDK::CJob::~CJob(this);
 }
 
@@ -7395,7 +7395,7 @@ void __fastcall CGCJobRequestBatchPlayerResourcesResponse::~CGCJobRequestBatchPl
 void __fastcall CGCJobRequestBatchPlayerResourcesResponse::~CGCJobRequestBatchPlayerResourcesResponse(
         CGCJobRequestBatchPlayerResourcesResponse *const this)
 {
-  this->_vptr_CJob = off_40DB690;
+  this->_vptr_CJob = off_40DB690;  // vptr: GCSDK::CGCClientJob
   GCSDK::CJob::~CJob(this);
   operator delete(this);
 }
@@ -7532,10 +7532,10 @@ GCSDK::CJob *__fastcall CreateJob_CGCJobRequestBatchPlayerResourcesResponse(GCSD
 {
   GCSDK::CJob *v2; // rbx
 
-  v2 = operator new(0x140u);
+  v2 = operator new(0x140u);  // new CGCJobRequestBatchPlayerResourcesResponse (size matches)
   GCSDK::CJob::CJob(v2, (pGC + 48));
   v2[1]._vptr_CJob = pGC;
-  v2->_vptr_CJob = off_416FB30;
+  v2->_vptr_CJob = off_416FB30;  // vptr: CGCJobRequestBatchPlayerResourcesResponse
   v2->m_pJobType = &g_JobType_CGCJobRequestBatchPlayerResourcesResponse;
   *(&v2[1] + 2) = 4;
   return v2;
@@ -7841,7 +7841,7 @@ void __fastcall CGCClientJobSetLeaverDetected::~CGCClientJobSetLeaverDetected(
 {
   google::protobuf::Message *m_pProtoBufBody; // rsi
 
-  this->_vptr_CJob = off_416FC10;
+  this->_vptr_CJob = off_416FC10;  // vptr: CGCClientJobSetLeaverDetected
   m_pProtoBufBody = this->m_msg.m_pProtoBufBody;
   this->m_msg._vptr_CProtoBufMsgBase = &off_416FBD0;
   if ( m_pProtoBufBody != 0 )
@@ -7850,7 +7850,7 @@ void __fastcall CGCClientJobSetLeaverDetected::~CGCClientJobSetLeaverDetected(
     this->m_msg.m_pProtoBufBody = 0;
   }
   GCSDK::CProtoBufMsgBase::~CProtoBufMsgBase(&this->m_msg);
-  this->_vptr_CJob = off_40DB690;
+  this->_vptr_CJob = off_40DB690;  // vptr: GCSDK::CGCClientJob
   GCSDK::CJob::~CJob(this);
 }
 
@@ -7863,7 +7863,7 @@ void __fastcall CGCClientJobSetLeaverDetected::~CGCClientJobSetLeaverDetected(
 {
   google::protobuf::Message *m_pProtoBufBody; // rsi
 
-  this->_vptr_CJob = off_416FC10;
+  this->_vptr_CJob = off_416FC10;  // vptr: CGCClientJobSetLeaverDetected
   m_pProtoBufBody = this->m_msg.m_pProtoBufBody;
   this->m_msg._vptr_CProtoBufMsgBase = &off_416FBD0;
   if ( m_pProtoBufBody != 0 )
@@ -7872,7 +7872,7 @@ void __fastcall CGCClientJobSetLeaverDetected::~CGCClientJobSetLeaverDetected(
     this->m_msg.m_pProtoBufBody = 0;
   }
   GCSDK::CProtoBufMsgBase::~CProtoBufMsgBase(&this->m_msg);
-  this->_vptr_CJob = off_40DB690;
+  this->_vptr_CJob = off_40DB690;  // vptr: GCSDK::CGCClientJob
   GCSDK::CJob::~CJob(this);
   operator delete(this);
 }
@@ -7923,7 +7923,7 @@ void __fastcall CGCClientJobSetLeaverDetected::CGCClientJobSetLeaverDetected(
   unsigned __int64 v41; // [rsp+28h] [rbp-38h]
 
   GCSDK::CJob::CJob(this, (pGCClient + 48));
-  this->_vptr_CJob = off_416FC10;
+  this->_vptr_CJob = off_416FC10;  // vptr: CGCClientJobSetLeaverDetected
   this->m_pGCClient = pGCClient;
   this->m_cHeartbeatsBeforeTimeout = 4;
   GCSDK::CProtoBufMsgBase::CProtoBufMsgBase(&this->m_msg, 0x1BA0u);

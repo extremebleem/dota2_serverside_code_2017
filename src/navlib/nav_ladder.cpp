@@ -411,9 +411,7 @@ void __fastcall CNavLadder::SetDir(CNavLadder *const this, NavDirType dir)
     vTo.x = v7 - (x * 32.0);
     vTo.y = v9 - (32.0 * y);
     CGameTrace::Init(&result);
-    (*m_pPhysicsInterface->_vptr_INavPhysicsInterface)(
-      m_pPhysicsInterface,
-      &vFrom,
+    m_pPhysicsInterface->Nav_TraceLine(&vFrom,
       &vTo,
       CNavConfig::ms_TraceMaskSolidBrushOnly,
       0,

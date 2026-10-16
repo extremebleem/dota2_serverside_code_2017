@@ -707,7 +707,7 @@ CEntityInstance *__fastcall CDOTA_Unit_Hero_Alchemist::CEntityInstanceEntityClas
 void __fastcall CDOTA_Unit_Hero_Alchemist::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Unit_Hero_Alchemist::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -717,7 +717,7 @@ void __fastcall CDOTA_Unit_Hero_Alchemist::CEntityInstanceEntityClass::~CEntityI
 void __fastcall CDOTA_Unit_Hero_Alchemist::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Unit_Hero_Alchemist::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -984,7 +984,7 @@ CEntityInstance *__fastcall CDOTA_Ability_Alchemist_AcidSpray::CEntityInstanceEn
 void __fastcall CDOTA_Ability_Alchemist_AcidSpray::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Alchemist_AcidSpray::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -994,7 +994,7 @@ void __fastcall CDOTA_Ability_Alchemist_AcidSpray::CEntityInstanceEntityClass::~
 void __fastcall CDOTA_Ability_Alchemist_AcidSpray::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Alchemist_AcidSpray::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -1699,7 +1699,7 @@ CEntityInstance *__fastcall CDOTA_Ability_Alchemist_UnstableConcoction::CEntityI
 void __fastcall CDOTA_Ability_Alchemist_UnstableConcoction::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Alchemist_UnstableConcoction::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -1709,7 +1709,7 @@ void __fastcall CDOTA_Ability_Alchemist_UnstableConcoction::CEntityInstanceEntit
 void __fastcall CDOTA_Ability_Alchemist_UnstableConcoction::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Alchemist_UnstableConcoction::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -1949,7 +1949,7 @@ CEntityInstance *__fastcall CDOTA_Ability_Alchemist_UnstableConcoctionThrow::CEn
 void __fastcall CDOTA_Ability_Alchemist_UnstableConcoctionThrow::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Alchemist_UnstableConcoctionThrow::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -1959,7 +1959,7 @@ void __fastcall CDOTA_Ability_Alchemist_UnstableConcoctionThrow::CEntityInstance
 void __fastcall CDOTA_Ability_Alchemist_UnstableConcoctionThrow::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Alchemist_UnstableConcoctionThrow::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -3268,7 +3268,7 @@ CEntityInstance *__fastcall CDOTA_Ability_Alchemist_GoblinsGreed::CEntityInstanc
 void __fastcall CDOTA_Ability_Alchemist_GoblinsGreed::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Alchemist_GoblinsGreed::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -3278,7 +3278,7 @@ void __fastcall CDOTA_Ability_Alchemist_GoblinsGreed::CEntityInstanceEntityClass
 void __fastcall CDOTA_Ability_Alchemist_GoblinsGreed::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Alchemist_GoblinsGreed::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -3866,7 +3866,7 @@ CEntityInstance *__fastcall CDOTA_Ability_Alchemist_ChemicalRage::CEntityInstanc
 void __fastcall CDOTA_Ability_Alchemist_ChemicalRage::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Alchemist_ChemicalRage::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -3876,7 +3876,7 @@ void __fastcall CDOTA_Ability_Alchemist_ChemicalRage::CEntityInstanceEntityClass
 void __fastcall CDOTA_Ability_Alchemist_ChemicalRage::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Alchemist_ChemicalRage::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }

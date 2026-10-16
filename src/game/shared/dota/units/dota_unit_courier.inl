@@ -72,7 +72,7 @@ void *__fastcall CDOTA_Unit_Courier::CEntityInstanceEntityClass::AllocateInstanc
 void __fastcall CDOTA_Unit_Courier::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Unit_Courier::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -82,7 +82,7 @@ void __fastcall CDOTA_Unit_Courier::CEntityInstanceEntityClass::~CEntityInstance
 void __fastcall CDOTA_Unit_Courier::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Unit_Courier::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }

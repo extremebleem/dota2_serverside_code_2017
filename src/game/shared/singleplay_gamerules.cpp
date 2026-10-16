@@ -142,7 +142,7 @@ void __fastcall sv_save_session_persisters(const CCommandContext *const ctx, con
 void __fastcall CSingleplayRules::CSingleplayRules(CSingleplayRules *const this)
 {
   CGameRules::CGameRules(this);
-  this->_vptr_CGameRules = off_40A94B0;
+  this->_vptr_CGameRules = off_40A94B0;  // vptr: CSingleplayRules
 }
 
 

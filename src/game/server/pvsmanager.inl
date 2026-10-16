@@ -6,7 +6,7 @@
 void __fastcall CPVSManager::~CPVSManager(CPVSManager *const this)
 {
   this->_vptr_IPVSManager = &off_40A29D0;
-  this->_vptr_IGameSystem = off_3F7C1B0;
+  this->_vptr_IGameSystem = off_3F7C1B0;  // vptr: CAutoGameSystem
   IGameSystem::~IGameSystem(this);
 }
 
@@ -16,7 +16,7 @@ void __fastcall CPVSManager::~CPVSManager(CPVSManager *const this)
 void __fastcall CPVSManager::~CPVSManager(CPVSManager *const this)
 {
   this->_vptr_IPVSManager = &off_40A29D0;
-  this->_vptr_IGameSystem = off_3F7C1B0;
+  this->_vptr_IGameSystem = off_3F7C1B0;  // vptr: CAutoGameSystem
   IGameSystem::~IGameSystem(this);
   operator delete(this);
 }

@@ -277,7 +277,7 @@ LABEL_7:
             CSchemaFieldIterator::Advance(&it);
             goto LABEL_8;
           }
-          if ( (*pParentInfoMap->_vptr_CSchemaVisitorInfoMapBase)(pParentInfoMap, i) != 0 )
+          if ( pParentInfoMap->IsRelevantFieldType(i) != 0 )
           {
             m_Size = this->m_FieldsThatAreRelevant.m_Size;
             v15 = this->m_FieldsThatAreRelevant.m_Size;

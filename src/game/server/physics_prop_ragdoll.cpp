@@ -262,7 +262,7 @@ void __fastcall CRagdollPropAlias_physics_prop_ragdoll::~CRagdollPropAlias_physi
 void __fastcall CRagdollPropAlias_physics_prop_ragdoll::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CRagdollPropAlias_physics_prop_ragdoll::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -272,7 +272,7 @@ void __fastcall CRagdollPropAlias_physics_prop_ragdoll::CEntityInstanceEntityCla
 void __fastcall CRagdollPropAlias_physics_prop_ragdoll::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CRagdollPropAlias_physics_prop_ragdoll::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -2983,7 +2983,7 @@ void *__fastcall CRagdollPropAttached::CEntityInstanceEntityClass::AllocateInsta
 void __fastcall CRagdollPropAttached::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CRagdollPropAttached::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -2993,7 +2993,7 @@ void __fastcall CRagdollPropAttached::CEntityInstanceEntityClass::~CEntityInstan
 void __fastcall CRagdollPropAttached::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CRagdollPropAttached::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }

@@ -830,7 +830,7 @@ CEntityInstance *__fastcall CDOTA_Unit_Hero_Shredder::CEntityInstanceEntityClass
 void __fastcall CDOTA_Unit_Hero_Shredder::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Unit_Hero_Shredder::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -840,7 +840,7 @@ void __fastcall CDOTA_Unit_Hero_Shredder::CEntityInstanceEntityClass::~CEntityIn
 void __fastcall CDOTA_Unit_Hero_Shredder::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Unit_Hero_Shredder::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -1172,7 +1172,7 @@ CEntityInstance *__fastcall CDOTA_Ability_Shredder_WhirlingDeath::CEntityInstanc
 void __fastcall CDOTA_Ability_Shredder_WhirlingDeath::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Shredder_WhirlingDeath::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -1182,7 +1182,7 @@ void __fastcall CDOTA_Ability_Shredder_WhirlingDeath::CEntityInstanceEntityClass
 void __fastcall CDOTA_Ability_Shredder_WhirlingDeath::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Shredder_WhirlingDeath::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -1816,7 +1816,7 @@ CEntityInstance *__fastcall CDOTA_Ability_Shredder_TimberChain::CEntityInstanceE
 void __fastcall CDOTA_Ability_Shredder_TimberChain::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Shredder_TimberChain::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -1826,7 +1826,7 @@ void __fastcall CDOTA_Ability_Shredder_TimberChain::CEntityInstanceEntityClass::
 void __fastcall CDOTA_Ability_Shredder_TimberChain::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Shredder_TimberChain::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -3249,7 +3249,7 @@ CEntityInstance *__fastcall CDOTA_Ability_Shredder_Reactive_Armor::CEntityInstan
 void __fastcall CDOTA_Ability_Shredder_Reactive_Armor::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Shredder_Reactive_Armor::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -3259,7 +3259,7 @@ void __fastcall CDOTA_Ability_Shredder_Reactive_Armor::CEntityInstanceEntityClas
 void __fastcall CDOTA_Ability_Shredder_Reactive_Armor::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Shredder_Reactive_Armor::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -3888,7 +3888,7 @@ CEntityInstance *__fastcall CDOTA_Ability_Shredder_Chakram::CEntityInstanceEntit
 void __fastcall CDOTA_Ability_Shredder_Chakram::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Shredder_Chakram::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -3898,7 +3898,7 @@ void __fastcall CDOTA_Ability_Shredder_Chakram::CEntityInstanceEntityClass::~CEn
 void __fastcall CDOTA_Ability_Shredder_Chakram::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Shredder_Chakram::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -4251,7 +4251,7 @@ CEntityInstance *__fastcall CDOTA_Ability_Shredder_ChakramAlias_shredder_chakram
 void __fastcall CDOTA_Ability_Shredder_ChakramAlias_shredder_chakram_2::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Shredder_ChakramAlias_shredder_chakram_2::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -4261,7 +4261,7 @@ void __fastcall CDOTA_Ability_Shredder_ChakramAlias_shredder_chakram_2::CEntityI
 void __fastcall CDOTA_Ability_Shredder_ChakramAlias_shredder_chakram_2::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Shredder_ChakramAlias_shredder_chakram_2::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -5973,7 +5973,7 @@ CEntityInstance *__fastcall CDOTA_Ability_Shredder_ReturnChakram::CEntityInstanc
 void __fastcall CDOTA_Ability_Shredder_ReturnChakram::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Shredder_ReturnChakram::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -5983,7 +5983,7 @@ void __fastcall CDOTA_Ability_Shredder_ReturnChakram::CEntityInstanceEntityClass
 void __fastcall CDOTA_Ability_Shredder_ReturnChakram::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Shredder_ReturnChakram::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -6319,7 +6319,7 @@ void __fastcall CDOTA_Ability_Shredder_ReturnChakramAlias_shredder_return_chakra
 void __fastcall CDOTA_Ability_Shredder_ReturnChakramAlias_shredder_return_chakram_2::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Shredder_ReturnChakramAlias_shredder_return_chakram_2::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -6329,7 +6329,7 @@ void __fastcall CDOTA_Ability_Shredder_ReturnChakramAlias_shredder_return_chakra
 void __fastcall CDOTA_Ability_Shredder_ReturnChakramAlias_shredder_return_chakram_2::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Shredder_ReturnChakramAlias_shredder_return_chakram_2::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }

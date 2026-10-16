@@ -557,7 +557,7 @@ const char *__fastcall GetItemNameFromEventBlock(KeyValues *pKVStatsEvent)
 // calls: ICLSearchFields::~ICLSearchFields
 void __fastcall SCLDeathFields::~SCLDeathFields(SCLDeathFields *const this)
 {
-  this->_vptr_ICLSearchFields = off_40DE9D0;
+  this->_vptr_ICLSearchFields = off_40DE9D0;  // vptr: SCLDeathFields
   ICLSearchFields::~ICLSearchFields(this);
 }
 
@@ -566,7 +566,7 @@ void __fastcall SCLDeathFields::~SCLDeathFields(SCLDeathFields *const this)
 // calls: ICLSearchFields::~ICLSearchFields, operator delete
 void __fastcall SCLDeathFields::~SCLDeathFields(SCLDeathFields *const this)
 {
-  this->_vptr_ICLSearchFields = off_40DE9D0;
+  this->_vptr_ICLSearchFields = off_40DE9D0;  // vptr: SCLDeathFields
   ICLSearchFields::~ICLSearchFields(this);
   operator delete(this);
 }
@@ -657,7 +657,7 @@ LABEL_27:
 // calls: ICLSearchFields::~ICLSearchFields
 void __fastcall SCLKillstreakFields::~SCLKillstreakFields(SCLKillstreakFields *const this)
 {
-  this->_vptr_ICLSearchFields = off_40DEA30;
+  this->_vptr_ICLSearchFields = off_40DEA30;  // vptr: SCLKillstreakFields
   ICLSearchFields::~ICLSearchFields(this);
 }
 
@@ -666,7 +666,7 @@ void __fastcall SCLKillstreakFields::~SCLKillstreakFields(SCLKillstreakFields *c
 // calls: ICLSearchFields::~ICLSearchFields, operator delete
 void __fastcall SCLKillstreakFields::~SCLKillstreakFields(SCLKillstreakFields *const this)
 {
-  this->_vptr_ICLSearchFields = off_40DEA30;
+  this->_vptr_ICLSearchFields = off_40DEA30;  // vptr: SCLKillstreakFields
   ICLSearchFields::~ICLSearchFields(this);
   operator delete(this);
 }
@@ -704,7 +704,7 @@ SCLSearchFieldMatchResult_t __fastcall SCLKillstreakFields::MatchEventFields(
 // calls: ICLSearchFields::~ICLSearchFields
 void __fastcall SCLPlayerStatsFields::~SCLPlayerStatsFields(SCLPlayerStatsFields *const this)
 {
-  this->_vptr_ICLSearchFields = off_40DEA90;
+  this->_vptr_ICLSearchFields = off_40DEA90;  // vptr: SCLPlayerStatsFields
   ICLSearchFields::~ICLSearchFields(this);
 }
 
@@ -713,7 +713,7 @@ void __fastcall SCLPlayerStatsFields::~SCLPlayerStatsFields(SCLPlayerStatsFields
 // calls: ICLSearchFields::~ICLSearchFields, operator delete
 void __fastcall SCLPlayerStatsFields::~SCLPlayerStatsFields(SCLPlayerStatsFields *const this)
 {
-  this->_vptr_ICLSearchFields = off_40DEA90;
+  this->_vptr_ICLSearchFields = off_40DEA90;  // vptr: SCLPlayerStatsFields
   ICLSearchFields::~ICLSearchFields(this);
   operator delete(this);
 }
@@ -733,7 +733,7 @@ SCLSearchFieldMatchResult_t __fastcall SCLPlayerStatsFields::MatchEventFields(
 // calls: ICLSearchFields::~ICLSearchFields
 void __fastcall SCLAttackFields::~SCLAttackFields(SCLAttackFields *const this)
 {
-  this->_vptr_ICLSearchFields = off_40DEAF0;
+  this->_vptr_ICLSearchFields = off_40DEAF0;  // vptr: SCLAttackFields
   ICLSearchFields::~ICLSearchFields(this);
 }
 
@@ -742,7 +742,7 @@ void __fastcall SCLAttackFields::~SCLAttackFields(SCLAttackFields *const this)
 // calls: ICLSearchFields::~ICLSearchFields, operator delete
 void __fastcall SCLAttackFields::~SCLAttackFields(SCLAttackFields *const this)
 {
-  this->_vptr_ICLSearchFields = off_40DEAF0;
+  this->_vptr_ICLSearchFields = off_40DEAF0;  // vptr: SCLAttackFields
   ICLSearchFields::~ICLSearchFields(this);
   operator delete(this);
 }
@@ -812,7 +812,7 @@ SCLSearchFieldMatchResult_t __fastcall SCLAttackFields::MatchEventFields(
 // calls: ICLSearchFields::~ICLSearchFields
 void __fastcall SCLModifierAddFields::~SCLModifierAddFields(SCLModifierAddFields *const this)
 {
-  this->_vptr_ICLSearchFields = off_40DEB50;
+  this->_vptr_ICLSearchFields = off_40DEB50;  // vptr: SCLModifierAddFields
   ICLSearchFields::~ICLSearchFields(this);
 }
 
@@ -821,7 +821,7 @@ void __fastcall SCLModifierAddFields::~SCLModifierAddFields(SCLModifierAddFields
 // calls: ICLSearchFields::~ICLSearchFields, operator delete
 void __fastcall SCLModifierAddFields::~SCLModifierAddFields(SCLModifierAddFields *const this)
 {
-  this->_vptr_ICLSearchFields = off_40DEB50;
+  this->_vptr_ICLSearchFields = off_40DEB50;  // vptr: SCLModifierAddFields
   ICLSearchFields::~ICLSearchFields(this);
   operator delete(this);
 }
@@ -864,7 +864,7 @@ SCLSearchFieldMatchResult_t __fastcall SCLModifierAddFields::MatchEventFields(
 // calls: ICLSearchFields::~ICLSearchFields
 void __fastcall SCLModifierRemoveFields::~SCLModifierRemoveFields(SCLModifierRemoveFields *const this)
 {
-  this->_vptr_ICLSearchFields = off_40DEBB0;
+  this->_vptr_ICLSearchFields = off_40DEBB0;  // vptr: SCLModifierRemoveFields
   ICLSearchFields::~ICLSearchFields(this);
 }
 
@@ -873,7 +873,7 @@ void __fastcall SCLModifierRemoveFields::~SCLModifierRemoveFields(SCLModifierRem
 // calls: ICLSearchFields::~ICLSearchFields, operator delete
 void __fastcall SCLModifierRemoveFields::~SCLModifierRemoveFields(SCLModifierRemoveFields *const this)
 {
-  this->_vptr_ICLSearchFields = off_40DEBB0;
+  this->_vptr_ICLSearchFields = off_40DEBB0;  // vptr: SCLModifierRemoveFields
   ICLSearchFields::~ICLSearchFields(this);
   operator delete(this);
 }
@@ -938,7 +938,7 @@ SCLSearchFieldMatchResult_t __fastcall SCLModifierRemoveFields::MatchEventFields
 // calls: ICLSearchFields::~ICLSearchFields
 void __fastcall SCLModifierRefreshFields::~SCLModifierRefreshFields(SCLModifierRefreshFields *const this)
 {
-  this->_vptr_ICLSearchFields = off_40DEC10;
+  this->_vptr_ICLSearchFields = off_40DEC10;  // vptr: SCLModifierRefreshFields
   ICLSearchFields::~ICLSearchFields(this);
 }
 
@@ -947,7 +947,7 @@ void __fastcall SCLModifierRefreshFields::~SCLModifierRefreshFields(SCLModifierR
 // calls: ICLSearchFields::~ICLSearchFields, operator delete
 void __fastcall SCLModifierRefreshFields::~SCLModifierRefreshFields(SCLModifierRefreshFields *const this)
 {
-  this->_vptr_ICLSearchFields = off_40DEC10;
+  this->_vptr_ICLSearchFields = off_40DEC10;  // vptr: SCLModifierRefreshFields
   ICLSearchFields::~ICLSearchFields(this);
   operator delete(this);
 }
@@ -981,7 +981,7 @@ SCLSearchFieldMatchResult_t __fastcall SCLModifierRefreshFields::MatchEventField
 // calls: ICLSearchFields::~ICLSearchFields
 void __fastcall SCLMultiKillFields::~SCLMultiKillFields(SCLMultiKillFields *const this)
 {
-  this->_vptr_ICLSearchFields = off_40DEC70;
+  this->_vptr_ICLSearchFields = off_40DEC70;  // vptr: SCLMultiKillFields
   ICLSearchFields::~ICLSearchFields(this);
 }
 
@@ -990,7 +990,7 @@ void __fastcall SCLMultiKillFields::~SCLMultiKillFields(SCLMultiKillFields *cons
 // calls: ICLSearchFields::~ICLSearchFields, operator delete
 void __fastcall SCLMultiKillFields::~SCLMultiKillFields(SCLMultiKillFields *const this)
 {
-  this->_vptr_ICLSearchFields = off_40DEC70;
+  this->_vptr_ICLSearchFields = off_40DEC70;  // vptr: SCLMultiKillFields
   ICLSearchFields::~ICLSearchFields(this);
   operator delete(this);
 }
@@ -1028,7 +1028,7 @@ SCLSearchFieldMatchResult_t __fastcall SCLMultiKillFields::MatchEventFields(
 // calls: ICLSearchFields::~ICLSearchFields
 void __fastcall SCLAbilityUseFields::~SCLAbilityUseFields(SCLAbilityUseFields *const this)
 {
-  this->_vptr_ICLSearchFields = off_40DECD0;
+  this->_vptr_ICLSearchFields = off_40DECD0;  // vptr: SCLAbilityUseFields
   ICLSearchFields::~ICLSearchFields(this);
 }
 
@@ -1037,7 +1037,7 @@ void __fastcall SCLAbilityUseFields::~SCLAbilityUseFields(SCLAbilityUseFields *c
 // calls: ICLSearchFields::~ICLSearchFields, operator delete
 void __fastcall SCLAbilityUseFields::~SCLAbilityUseFields(SCLAbilityUseFields *const this)
 {
-  this->_vptr_ICLSearchFields = off_40DECD0;
+  this->_vptr_ICLSearchFields = off_40DECD0;  // vptr: SCLAbilityUseFields
   ICLSearchFields::~ICLSearchFields(this);
   operator delete(this);
 }
@@ -1068,7 +1068,7 @@ SCLSearchFieldMatchResult_t __fastcall SCLAbilityUseFields::MatchEventFields(
 // calls: ICLSearchFields::~ICLSearchFields
 void __fastcall SCLAbilityTriggerFields::~SCLAbilityTriggerFields(SCLAbilityTriggerFields *const this)
 {
-  this->_vptr_ICLSearchFields = off_40DED30;
+  this->_vptr_ICLSearchFields = off_40DED30;  // vptr: SCLAbilityTriggerFields
   ICLSearchFields::~ICLSearchFields(this);
 }
 
@@ -1077,7 +1077,7 @@ void __fastcall SCLAbilityTriggerFields::~SCLAbilityTriggerFields(SCLAbilityTrig
 // calls: ICLSearchFields::~ICLSearchFields, operator delete
 void __fastcall SCLAbilityTriggerFields::~SCLAbilityTriggerFields(SCLAbilityTriggerFields *const this)
 {
-  this->_vptr_ICLSearchFields = off_40DED30;
+  this->_vptr_ICLSearchFields = off_40DED30;  // vptr: SCLAbilityTriggerFields
   ICLSearchFields::~ICLSearchFields(this);
   operator delete(this);
 }
@@ -1097,7 +1097,7 @@ SCLSearchFieldMatchResult_t __fastcall SCLAbilityTriggerFields::MatchEventFields
 // calls: ICLSearchFields::~ICLSearchFields
 void __fastcall SCLHealFields::~SCLHealFields(SCLHealFields *const this)
 {
-  this->_vptr_ICLSearchFields = off_40DED90;
+  this->_vptr_ICLSearchFields = off_40DED90;  // vptr: SCLHealFields
   ICLSearchFields::~ICLSearchFields(this);
 }
 
@@ -1106,7 +1106,7 @@ void __fastcall SCLHealFields::~SCLHealFields(SCLHealFields *const this)
 // calls: ICLSearchFields::~ICLSearchFields, operator delete
 void __fastcall SCLHealFields::~SCLHealFields(SCLHealFields *const this)
 {
-  this->_vptr_ICLSearchFields = off_40DED90;
+  this->_vptr_ICLSearchFields = off_40DED90;  // vptr: SCLHealFields
   ICLSearchFields::~ICLSearchFields(this);
   operator delete(this);
 }
@@ -1142,7 +1142,7 @@ SCLSearchFieldMatchResult_t __fastcall SCLHealFields::MatchEventFields(
 // calls: ICLSearchFields::~ICLSearchFields
 void __fastcall SCLItemUseFields::~SCLItemUseFields(SCLItemUseFields *const this)
 {
-  this->_vptr_ICLSearchFields = off_40DEDF0;
+  this->_vptr_ICLSearchFields = off_40DEDF0;  // vptr: SCLItemUseFields
   ICLSearchFields::~ICLSearchFields(this);
 }
 
@@ -1151,7 +1151,7 @@ void __fastcall SCLItemUseFields::~SCLItemUseFields(SCLItemUseFields *const this
 // calls: ICLSearchFields::~ICLSearchFields, operator delete
 void __fastcall SCLItemUseFields::~SCLItemUseFields(SCLItemUseFields *const this)
 {
-  this->_vptr_ICLSearchFields = off_40DEDF0;
+  this->_vptr_ICLSearchFields = off_40DEDF0;  // vptr: SCLItemUseFields
   ICLSearchFields::~ICLSearchFields(this);
   operator delete(this);
 }
@@ -1192,7 +1192,7 @@ SCLSearchFieldMatchResult_t __fastcall SCLItemUseFields::MatchEventFields(
 // calls: ICLSearchFields::~ICLSearchFields
 void __fastcall SCLItemPurchaseFields::~SCLItemPurchaseFields(SCLItemPurchaseFields *const this)
 {
-  this->_vptr_ICLSearchFields = off_40DEE50;
+  this->_vptr_ICLSearchFields = off_40DEE50;  // vptr: SCLItemPurchaseFields
   ICLSearchFields::~ICLSearchFields(this);
 }
 
@@ -1201,7 +1201,7 @@ void __fastcall SCLItemPurchaseFields::~SCLItemPurchaseFields(SCLItemPurchaseFie
 // calls: ICLSearchFields::~ICLSearchFields, operator delete
 void __fastcall SCLItemPurchaseFields::~SCLItemPurchaseFields(SCLItemPurchaseFields *const this)
 {
-  this->_vptr_ICLSearchFields = off_40DEE50;
+  this->_vptr_ICLSearchFields = off_40DEE50;  // vptr: SCLItemPurchaseFields
   ICLSearchFields::~ICLSearchFields(this);
   operator delete(this);
 }
@@ -1234,7 +1234,7 @@ SCLSearchFieldMatchResult_t __fastcall SCLItemPurchaseFields::MatchEventFields(
 // calls: ICLSearchFields::~ICLSearchFields
 void __fastcall SCLTeamBuildingKillFields::~SCLTeamBuildingKillFields(SCLTeamBuildingKillFields *const this)
 {
-  this->_vptr_ICLSearchFields = off_40DEEB0;
+  this->_vptr_ICLSearchFields = off_40DEEB0;  // vptr: SCLTeamBuildingKillFields
   ICLSearchFields::~ICLSearchFields(this);
 }
 
@@ -1243,7 +1243,7 @@ void __fastcall SCLTeamBuildingKillFields::~SCLTeamBuildingKillFields(SCLTeamBui
 // calls: ICLSearchFields::~ICLSearchFields, operator delete
 void __fastcall SCLTeamBuildingKillFields::~SCLTeamBuildingKillFields(SCLTeamBuildingKillFields *const this)
 {
-  this->_vptr_ICLSearchFields = off_40DEEB0;
+  this->_vptr_ICLSearchFields = off_40DEEB0;  // vptr: SCLTeamBuildingKillFields
   ICLSearchFields::~ICLSearchFields(this);
   operator delete(this);
 }
@@ -1290,7 +1290,7 @@ SCLSearchFieldMatchResult_t __fastcall SCLTeamBuildingKillFields::MatchEventFiel
 // calls: ICLSearchFields::~ICLSearchFields
 void __fastcall SCLFirstBloodFields::~SCLFirstBloodFields(SCLFirstBloodFields *const this)
 {
-  this->_vptr_ICLSearchFields = off_40DEF10;
+  this->_vptr_ICLSearchFields = off_40DEF10;  // vptr: SCLFirstBloodFields
   ICLSearchFields::~ICLSearchFields(this);
 }
 
@@ -1299,7 +1299,7 @@ void __fastcall SCLFirstBloodFields::~SCLFirstBloodFields(SCLFirstBloodFields *c
 // calls: ICLSearchFields::~ICLSearchFields, operator delete
 void __fastcall SCLFirstBloodFields::~SCLFirstBloodFields(SCLFirstBloodFields *const this)
 {
-  this->_vptr_ICLSearchFields = off_40DEF10;
+  this->_vptr_ICLSearchFields = off_40DEF10;  // vptr: SCLFirstBloodFields
   ICLSearchFields::~ICLSearchFields(this);
   operator delete(this);
 }
@@ -1357,7 +1357,7 @@ SCLSearchFieldMatchResult_t __fastcall SCLFirstBloodFields::MatchEventFields(
 // calls: ICLSearchFields::~ICLSearchFields
 void __fastcall SCLNeutralCampStackFields::~SCLNeutralCampStackFields(SCLNeutralCampStackFields *const this)
 {
-  this->_vptr_ICLSearchFields = off_40DEF70;
+  this->_vptr_ICLSearchFields = off_40DEF70;  // vptr: SCLNeutralCampStackFields
   ICLSearchFields::~ICLSearchFields(this);
 }
 
@@ -1366,7 +1366,7 @@ void __fastcall SCLNeutralCampStackFields::~SCLNeutralCampStackFields(SCLNeutral
 // calls: ICLSearchFields::~ICLSearchFields, operator delete
 void __fastcall SCLNeutralCampStackFields::~SCLNeutralCampStackFields(SCLNeutralCampStackFields *const this)
 {
-  this->_vptr_ICLSearchFields = off_40DEF70;
+  this->_vptr_ICLSearchFields = off_40DEF70;  // vptr: SCLNeutralCampStackFields
   ICLSearchFields::~ICLSearchFields(this);
   operator delete(this);
 }
@@ -1413,7 +1413,7 @@ SCLSearchFieldMatchResult_t __fastcall SCLNeutralCampStackFields::MatchEventFiel
 // calls: ICLSearchFields::~ICLSearchFields
 void __fastcall SCLPickupRuneFields::~SCLPickupRuneFields(SCLPickupRuneFields *const this)
 {
-  this->_vptr_ICLSearchFields = off_40DEFD0;
+  this->_vptr_ICLSearchFields = off_40DEFD0;  // vptr: SCLPickupRuneFields
   ICLSearchFields::~ICLSearchFields(this);
 }
 
@@ -1422,7 +1422,7 @@ void __fastcall SCLPickupRuneFields::~SCLPickupRuneFields(SCLPickupRuneFields *c
 // calls: ICLSearchFields::~ICLSearchFields, operator delete
 void __fastcall SCLPickupRuneFields::~SCLPickupRuneFields(SCLPickupRuneFields *const this)
 {
-  this->_vptr_ICLSearchFields = off_40DEFD0;
+  this->_vptr_ICLSearchFields = off_40DEFD0;  // vptr: SCLPickupRuneFields
   ICLSearchFields::~ICLSearchFields(this);
   operator delete(this);
 }
@@ -1469,7 +1469,7 @@ SCLSearchFieldMatchResult_t __fastcall SCLPickupRuneFields::MatchEventFields(
 // calls: ICLSearchFields::~ICLSearchFields
 void __fastcall SCLRevealInvisibleFields::~SCLRevealInvisibleFields(SCLRevealInvisibleFields *const this)
 {
-  this->_vptr_ICLSearchFields = off_40DF030;
+  this->_vptr_ICLSearchFields = off_40DF030;  // vptr: SCLRevealInvisibleFields
   ICLSearchFields::~ICLSearchFields(this);
 }
 
@@ -1478,7 +1478,7 @@ void __fastcall SCLRevealInvisibleFields::~SCLRevealInvisibleFields(SCLRevealInv
 // calls: ICLSearchFields::~ICLSearchFields, operator delete
 void __fastcall SCLRevealInvisibleFields::~SCLRevealInvisibleFields(SCLRevealInvisibleFields *const this)
 {
-  this->_vptr_ICLSearchFields = off_40DF030;
+  this->_vptr_ICLSearchFields = off_40DF030;  // vptr: SCLRevealInvisibleFields
   ICLSearchFields::~ICLSearchFields(this);
   operator delete(this);
 }
@@ -1498,7 +1498,7 @@ SCLSearchFieldMatchResult_t __fastcall SCLRevealInvisibleFields::MatchEventField
 // calls: ICLSearchFields::~ICLSearchFields
 void __fastcall SCLHeroSavedFields::~SCLHeroSavedFields(SCLHeroSavedFields *const this)
 {
-  this->_vptr_ICLSearchFields = off_40DF090;
+  this->_vptr_ICLSearchFields = off_40DF090;  // vptr: SCLHeroSavedFields
   ICLSearchFields::~ICLSearchFields(this);
 }
 
@@ -1507,7 +1507,7 @@ void __fastcall SCLHeroSavedFields::~SCLHeroSavedFields(SCLHeroSavedFields *cons
 // calls: ICLSearchFields::~ICLSearchFields, operator delete
 void __fastcall SCLHeroSavedFields::~SCLHeroSavedFields(SCLHeroSavedFields *const this)
 {
-  this->_vptr_ICLSearchFields = off_40DF090;
+  this->_vptr_ICLSearchFields = off_40DF090;  // vptr: SCLHeroSavedFields
   ICLSearchFields::~ICLSearchFields(this);
   operator delete(this);
 }
@@ -1538,7 +1538,7 @@ SCLSearchFieldMatchResult_t __fastcall SCLHeroSavedFields::MatchEventFields(
 // calls: ICLSearchFields::~ICLSearchFields
 void __fastcall SCLManaRestoreFields::~SCLManaRestoreFields(SCLManaRestoreFields *const this)
 {
-  this->_vptr_ICLSearchFields = off_40DF0F0;
+  this->_vptr_ICLSearchFields = off_40DF0F0;  // vptr: SCLManaRestoreFields
   ICLSearchFields::~ICLSearchFields(this);
 }
 
@@ -1547,7 +1547,7 @@ void __fastcall SCLManaRestoreFields::~SCLManaRestoreFields(SCLManaRestoreFields
 // calls: ICLSearchFields::~ICLSearchFields, operator delete
 void __fastcall SCLManaRestoreFields::~SCLManaRestoreFields(SCLManaRestoreFields *const this)
 {
-  this->_vptr_ICLSearchFields = off_40DF0F0;
+  this->_vptr_ICLSearchFields = off_40DF0F0;  // vptr: SCLManaRestoreFields
   ICLSearchFields::~ICLSearchFields(this);
   operator delete(this);
 }
@@ -1588,7 +1588,7 @@ SCLSearchFieldMatchResult_t __fastcall SCLManaRestoreFields::MatchEventFields(
 // calls: ICLSearchFields::~ICLSearchFields
 void __fastcall SCLHeroGainedLevelFields::~SCLHeroGainedLevelFields(SCLHeroGainedLevelFields *const this)
 {
-  this->_vptr_ICLSearchFields = off_40DF150;
+  this->_vptr_ICLSearchFields = off_40DF150;  // vptr: SCLHeroGainedLevelFields
   ICLSearchFields::~ICLSearchFields(this);
 }
 
@@ -1597,7 +1597,7 @@ void __fastcall SCLHeroGainedLevelFields::~SCLHeroGainedLevelFields(SCLHeroGaine
 // calls: ICLSearchFields::~ICLSearchFields, operator delete
 void __fastcall SCLHeroGainedLevelFields::~SCLHeroGainedLevelFields(SCLHeroGainedLevelFields *const this)
 {
-  this->_vptr_ICLSearchFields = off_40DF150;
+  this->_vptr_ICLSearchFields = off_40DF150;  // vptr: SCLHeroGainedLevelFields
   ICLSearchFields::~ICLSearchFields(this);
   operator delete(this);
 }
@@ -1630,7 +1630,7 @@ SCLSearchFieldMatchResult_t __fastcall SCLHeroGainedLevelFields::MatchEventField
 // calls: ICLSearchFields::~ICLSearchFields
 void __fastcall SCLBottleHealedAllyFields::~SCLBottleHealedAllyFields(SCLBottleHealedAllyFields *const this)
 {
-  this->_vptr_ICLSearchFields = off_40DF1B0;
+  this->_vptr_ICLSearchFields = off_40DF1B0;  // vptr: SCLBottleHealedAllyFields
   ICLSearchFields::~ICLSearchFields(this);
 }
 
@@ -1639,7 +1639,7 @@ void __fastcall SCLBottleHealedAllyFields::~SCLBottleHealedAllyFields(SCLBottleH
 // calls: ICLSearchFields::~ICLSearchFields, operator delete
 void __fastcall SCLBottleHealedAllyFields::~SCLBottleHealedAllyFields(SCLBottleHealedAllyFields *const this)
 {
-  this->_vptr_ICLSearchFields = off_40DF1B0;
+  this->_vptr_ICLSearchFields = off_40DF1B0;  // vptr: SCLBottleHealedAllyFields
   ICLSearchFields::~ICLSearchFields(this);
   operator delete(this);
 }
@@ -1659,7 +1659,7 @@ SCLSearchFieldMatchResult_t __fastcall SCLBottleHealedAllyFields::MatchEventFiel
 // calls: ICLSearchFields::~ICLSearchFields
 void __fastcall SCLEndGameStatsFields::~SCLEndGameStatsFields(SCLEndGameStatsFields *const this)
 {
-  this->_vptr_ICLSearchFields = off_40DF210;
+  this->_vptr_ICLSearchFields = off_40DF210;  // vptr: SCLEndGameStatsFields
   ICLSearchFields::~ICLSearchFields(this);
 }
 
@@ -1668,7 +1668,7 @@ void __fastcall SCLEndGameStatsFields::~SCLEndGameStatsFields(SCLEndGameStatsFie
 // calls: ICLSearchFields::~ICLSearchFields, operator delete
 void __fastcall SCLEndGameStatsFields::~SCLEndGameStatsFields(SCLEndGameStatsFields *const this)
 {
-  this->_vptr_ICLSearchFields = off_40DF210;
+  this->_vptr_ICLSearchFields = off_40DF210;  // vptr: SCLEndGameStatsFields
   ICLSearchFields::~ICLSearchFields(this);
   operator delete(this);
 }
@@ -1688,7 +1688,7 @@ SCLSearchFieldMatchResult_t __fastcall SCLEndGameStatsFields::MatchEventFields(
 // calls: ICLSearchFields::~ICLSearchFields
 void __fastcall SCLInterruptChannelFields::~SCLInterruptChannelFields(SCLInterruptChannelFields *const this)
 {
-  this->_vptr_ICLSearchFields = off_40DF270;
+  this->_vptr_ICLSearchFields = off_40DF270;  // vptr: SCLInterruptChannelFields
   ICLSearchFields::~ICLSearchFields(this);
 }
 
@@ -1697,7 +1697,7 @@ void __fastcall SCLInterruptChannelFields::~SCLInterruptChannelFields(SCLInterru
 // calls: ICLSearchFields::~ICLSearchFields, operator delete
 void __fastcall SCLInterruptChannelFields::~SCLInterruptChannelFields(SCLInterruptChannelFields *const this)
 {
-  this->_vptr_ICLSearchFields = off_40DF270;
+  this->_vptr_ICLSearchFields = off_40DF270;  // vptr: SCLInterruptChannelFields
   ICLSearchFields::~ICLSearchFields(this);
   operator delete(this);
 }
@@ -1717,7 +1717,7 @@ SCLSearchFieldMatchResult_t __fastcall SCLInterruptChannelFields::MatchEventFiel
 // calls: ICLSearchFields::~ICLSearchFields
 void __fastcall SCLAlliedGoldFields::~SCLAlliedGoldFields(SCLAlliedGoldFields *const this)
 {
-  this->_vptr_ICLSearchFields = off_40DF2D0;
+  this->_vptr_ICLSearchFields = off_40DF2D0;  // vptr: SCLAlliedGoldFields
   ICLSearchFields::~ICLSearchFields(this);
 }
 
@@ -1726,7 +1726,7 @@ void __fastcall SCLAlliedGoldFields::~SCLAlliedGoldFields(SCLAlliedGoldFields *c
 // calls: ICLSearchFields::~ICLSearchFields, operator delete
 void __fastcall SCLAlliedGoldFields::~SCLAlliedGoldFields(SCLAlliedGoldFields *const this)
 {
-  this->_vptr_ICLSearchFields = off_40DF2D0;
+  this->_vptr_ICLSearchFields = off_40DF2D0;  // vptr: SCLAlliedGoldFields
   ICLSearchFields::~ICLSearchFields(this);
   operator delete(this);
 }
@@ -1746,7 +1746,7 @@ SCLSearchFieldMatchResult_t __fastcall SCLAlliedGoldFields::MatchEventFields(
 // calls: ICLSearchFields::~ICLSearchFields
 void __fastcall SCLAegisTakenFields::~SCLAegisTakenFields(SCLAegisTakenFields *const this)
 {
-  this->_vptr_ICLSearchFields = off_40DF330;
+  this->_vptr_ICLSearchFields = off_40DF330;  // vptr: SCLAegisTakenFields
   ICLSearchFields::~ICLSearchFields(this);
 }
 
@@ -1755,7 +1755,7 @@ void __fastcall SCLAegisTakenFields::~SCLAegisTakenFields(SCLAegisTakenFields *c
 // calls: ICLSearchFields::~ICLSearchFields, operator delete
 void __fastcall SCLAegisTakenFields::~SCLAegisTakenFields(SCLAegisTakenFields *const this)
 {
-  this->_vptr_ICLSearchFields = off_40DF330;
+  this->_vptr_ICLSearchFields = off_40DF330;  // vptr: SCLAegisTakenFields
   ICLSearchFields::~ICLSearchFields(this);
   operator delete(this);
 }
@@ -1786,7 +1786,7 @@ SCLSearchFieldMatchResult_t __fastcall SCLAegisTakenFields::MatchEventFields(
 // calls: ICLSearchFields::~ICLSearchFields
 void __fastcall SCLManaDamageFields::~SCLManaDamageFields(SCLManaDamageFields *const this)
 {
-  this->_vptr_ICLSearchFields = off_40DF390;
+  this->_vptr_ICLSearchFields = off_40DF390;  // vptr: SCLManaDamageFields
   ICLSearchFields::~ICLSearchFields(this);
 }
 
@@ -1795,7 +1795,7 @@ void __fastcall SCLManaDamageFields::~SCLManaDamageFields(SCLManaDamageFields *c
 // calls: ICLSearchFields::~ICLSearchFields, operator delete
 void __fastcall SCLManaDamageFields::~SCLManaDamageFields(SCLManaDamageFields *const this)
 {
-  this->_vptr_ICLSearchFields = off_40DF390;
+  this->_vptr_ICLSearchFields = off_40DF390;  // vptr: SCLManaDamageFields
   ICLSearchFields::~ICLSearchFields(this);
   operator delete(this);
 }
@@ -1834,7 +1834,7 @@ SCLSearchFieldMatchResult_t __fastcall SCLManaDamageFields::MatchEventFields(
 void __fastcall SCLPhysicalDamagePreventedFields::~SCLPhysicalDamagePreventedFields(
         SCLPhysicalDamagePreventedFields *const this)
 {
-  this->_vptr_ICLSearchFields = off_40DF3F0;
+  this->_vptr_ICLSearchFields = off_40DF3F0;  // vptr: SCLPhysicalDamagePreventedFields
   ICLSearchFields::~ICLSearchFields(this);
 }
 
@@ -1844,7 +1844,7 @@ void __fastcall SCLPhysicalDamagePreventedFields::~SCLPhysicalDamagePreventedFie
 void __fastcall SCLPhysicalDamagePreventedFields::~SCLPhysicalDamagePreventedFields(
         SCLPhysicalDamagePreventedFields *const this)
 {
-  this->_vptr_ICLSearchFields = off_40DF3F0;
+  this->_vptr_ICLSearchFields = off_40DF3F0;  // vptr: SCLPhysicalDamagePreventedFields
   ICLSearchFields::~ICLSearchFields(this);
   operator delete(this);
 }
@@ -1877,7 +1877,7 @@ SCLSearchFieldMatchResult_t __fastcall SCLPhysicalDamagePreventedFields::MatchEv
 // calls: ICLSearchFields::~ICLSearchFields
 void __fastcall SCLUnitSummonedFields::~SCLUnitSummonedFields(SCLUnitSummonedFields *const this)
 {
-  this->_vptr_ICLSearchFields = off_40DF450;
+  this->_vptr_ICLSearchFields = off_40DF450;  // vptr: SCLUnitSummonedFields
   ICLSearchFields::~ICLSearchFields(this);
 }
 
@@ -1886,7 +1886,7 @@ void __fastcall SCLUnitSummonedFields::~SCLUnitSummonedFields(SCLUnitSummonedFie
 // calls: ICLSearchFields::~ICLSearchFields, operator delete
 void __fastcall SCLUnitSummonedFields::~SCLUnitSummonedFields(SCLUnitSummonedFields *const this)
 {
-  this->_vptr_ICLSearchFields = off_40DF450;
+  this->_vptr_ICLSearchFields = off_40DF450;  // vptr: SCLUnitSummonedFields
   ICLSearchFields::~ICLSearchFields(this);
   operator delete(this);
 }
@@ -1906,7 +1906,7 @@ SCLSearchFieldMatchResult_t __fastcall SCLUnitSummonedFields::MatchEventFields(
 // calls: ICLSearchFields::~ICLSearchFields
 void __fastcall SCLAttackEvadeFields::~SCLAttackEvadeFields(SCLAttackEvadeFields *const this)
 {
-  this->_vptr_ICLSearchFields = off_40DF4B0;
+  this->_vptr_ICLSearchFields = off_40DF4B0;  // vptr: SCLAttackEvadeFields
   ICLSearchFields::~ICLSearchFields(this);
 }
 
@@ -1915,7 +1915,7 @@ void __fastcall SCLAttackEvadeFields::~SCLAttackEvadeFields(SCLAttackEvadeFields
 // calls: ICLSearchFields::~ICLSearchFields, operator delete
 void __fastcall SCLAttackEvadeFields::~SCLAttackEvadeFields(SCLAttackEvadeFields *const this)
 {
-  this->_vptr_ICLSearchFields = off_40DF4B0;
+  this->_vptr_ICLSearchFields = off_40DF4B0;  // vptr: SCLAttackEvadeFields
   ICLSearchFields::~ICLSearchFields(this);
   operator delete(this);
 }
@@ -1946,7 +1946,7 @@ SCLSearchFieldMatchResult_t __fastcall SCLAttackEvadeFields::MatchEventFields(
 // calls: ICLSearchFields::~ICLSearchFields
 void __fastcall SCLGoldChangeFields::~SCLGoldChangeFields(SCLGoldChangeFields *const this)
 {
-  this->_vptr_ICLSearchFields = off_40DF510;
+  this->_vptr_ICLSearchFields = off_40DF510;  // vptr: SCLGoldChangeFields
   ICLSearchFields::~ICLSearchFields(this);
 }
 
@@ -1955,7 +1955,7 @@ void __fastcall SCLGoldChangeFields::~SCLGoldChangeFields(SCLGoldChangeFields *c
 // calls: ICLSearchFields::~ICLSearchFields, operator delete
 void __fastcall SCLGoldChangeFields::~SCLGoldChangeFields(SCLGoldChangeFields *const this)
 {
-  this->_vptr_ICLSearchFields = off_40DF510;
+  this->_vptr_ICLSearchFields = off_40DF510;  // vptr: SCLGoldChangeFields
   ICLSearchFields::~ICLSearchFields(this);
   operator delete(this);
 }
@@ -1975,7 +1975,7 @@ SCLSearchFieldMatchResult_t __fastcall SCLGoldChangeFields::MatchEventFields(
 // calls: ICLSearchFields::~ICLSearchFields
 void __fastcall SCLTreeCutDownFields::~SCLTreeCutDownFields(SCLTreeCutDownFields *const this)
 {
-  this->_vptr_ICLSearchFields = off_40DF570;
+  this->_vptr_ICLSearchFields = off_40DF570;  // vptr: SCLTreeCutDownFields
   ICLSearchFields::~ICLSearchFields(this);
 }
 
@@ -1984,7 +1984,7 @@ void __fastcall SCLTreeCutDownFields::~SCLTreeCutDownFields(SCLTreeCutDownFields
 // calls: ICLSearchFields::~ICLSearchFields, operator delete
 void __fastcall SCLTreeCutDownFields::~SCLTreeCutDownFields(SCLTreeCutDownFields *const this)
 {
-  this->_vptr_ICLSearchFields = off_40DF570;
+  this->_vptr_ICLSearchFields = off_40DF570;  // vptr: SCLTreeCutDownFields
   ICLSearchFields::~ICLSearchFields(this);
   operator delete(this);
 }
@@ -2004,7 +2004,7 @@ SCLSearchFieldMatchResult_t __fastcall SCLTreeCutDownFields::MatchEventFields(
 // calls: ICLSearchFields::~ICLSearchFields
 void __fastcall SCLSuccessfulScanFields::~SCLSuccessfulScanFields(SCLSuccessfulScanFields *const this)
 {
-  this->_vptr_ICLSearchFields = off_40DF5D0;
+  this->_vptr_ICLSearchFields = off_40DF5D0;  // vptr: SCLSuccessfulScanFields
   ICLSearchFields::~ICLSearchFields(this);
 }
 
@@ -2013,7 +2013,7 @@ void __fastcall SCLSuccessfulScanFields::~SCLSuccessfulScanFields(SCLSuccessfulS
 // calls: ICLSearchFields::~ICLSearchFields, operator delete
 void __fastcall SCLSuccessfulScanFields::~SCLSuccessfulScanFields(SCLSuccessfulScanFields *const this)
 {
-  this->_vptr_ICLSearchFields = off_40DF5D0;
+  this->_vptr_ICLSearchFields = off_40DF5D0;  // vptr: SCLSuccessfulScanFields
   ICLSearchFields::~ICLSearchFields(this);
   operator delete(this);
 }
@@ -2033,7 +2033,7 @@ SCLSearchFieldMatchResult_t __fastcall SCLSuccessfulScanFields::MatchEventFields
 // calls: ICLSearchFields::~ICLSearchFields
 void __fastcall SCLEndKillstreakFields::~SCLEndKillstreakFields(SCLEndKillstreakFields *const this)
 {
-  this->_vptr_ICLSearchFields = off_40DF630;
+  this->_vptr_ICLSearchFields = off_40DF630;  // vptr: SCLEndKillstreakFields
   ICLSearchFields::~ICLSearchFields(this);
 }
 
@@ -2042,7 +2042,7 @@ void __fastcall SCLEndKillstreakFields::~SCLEndKillstreakFields(SCLEndKillstreak
 // calls: ICLSearchFields::~ICLSearchFields, operator delete
 void __fastcall SCLEndKillstreakFields::~SCLEndKillstreakFields(SCLEndKillstreakFields *const this)
 {
-  this->_vptr_ICLSearchFields = off_40DF630;
+  this->_vptr_ICLSearchFields = off_40DF630;  // vptr: SCLEndKillstreakFields
   ICLSearchFields::~ICLSearchFields(this);
   operator delete(this);
 }

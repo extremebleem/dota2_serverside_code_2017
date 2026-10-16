@@ -75,7 +75,7 @@ CEntityInstance *__fastcall CEnvSoundscape::CEntityInstanceEntityClass::Construc
 void __fastcall CEnvSoundscape::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CEnvSoundscape::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -85,7 +85,7 @@ void __fastcall CEnvSoundscape::CEntityInstanceEntityClass::~CEntityInstanceEnti
 void __fastcall CEnvSoundscape::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CEnvSoundscape::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -357,7 +357,7 @@ CEntityInstance *__fastcall CEnvSoundscapeProxy::CEntityInstanceEntityClass::Con
 void __fastcall CEnvSoundscapeProxy::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CEnvSoundscapeProxy::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -367,7 +367,7 @@ void __fastcall CEnvSoundscapeProxy::CEntityInstanceEntityClass::~CEntityInstanc
 void __fastcall CEnvSoundscapeProxy::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CEnvSoundscapeProxy::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -581,7 +581,7 @@ CEntityInstance *__fastcall CEnvSoundscapeTriggerable::CEntityInstanceEntityClas
 void __fastcall CEnvSoundscapeTriggerable::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CEnvSoundscapeTriggerable::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -591,7 +591,7 @@ void __fastcall CEnvSoundscapeTriggerable::CEntityInstanceEntityClass::~CEntityI
 void __fastcall CEnvSoundscapeTriggerable::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CEnvSoundscapeTriggerable::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }

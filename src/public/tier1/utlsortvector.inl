@@ -358,7 +358,7 @@ void __fastcall CUtlSortVector<CEconItemView *,CInventoryListLess,CUtlVector<CEc
     ctx.m_pLessFunc = less;
     m_pMemory = this->m_Memory.m_pMemory;
     ctx.m_pLessContext = m_pLessContext;
-    (V_qsort_s)(
+    V_qsort_s(
       m_pMemory,
       m_Size,
       8,

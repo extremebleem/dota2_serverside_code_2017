@@ -1275,7 +1275,7 @@ void *__fastcall CFuncLadderAlias_func_useableladder::CEntityInstanceEntityClass
 void __fastcall CFuncLadderAlias_func_useableladder::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CFuncLadderAlias_func_useableladder::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -1285,7 +1285,7 @@ void __fastcall CFuncLadderAlias_func_useableladder::CEntityInstanceEntityClass:
 void __fastcall CFuncLadderAlias_func_useableladder::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CFuncLadderAlias_func_useableladder::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }

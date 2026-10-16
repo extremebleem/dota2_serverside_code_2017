@@ -568,7 +568,7 @@ CEntityInstance *__fastcall CDOTA_Unit_Hero_Chen::CEntityInstanceEntityClass::Co
 void __fastcall CDOTA_Unit_Hero_Chen::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Unit_Hero_Chen::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -578,7 +578,7 @@ void __fastcall CDOTA_Unit_Hero_Chen::CEntityInstanceEntityClass::~CEntityInstan
 void __fastcall CDOTA_Unit_Hero_Chen::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Unit_Hero_Chen::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -760,7 +760,7 @@ CEntityInstance *__fastcall CDOTA_Ability_Chen_Penitence::CEntityInstanceEntityC
 void __fastcall CDOTA_Ability_Chen_Penitence::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Chen_Penitence::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -770,7 +770,7 @@ void __fastcall CDOTA_Ability_Chen_Penitence::CEntityInstanceEntityClass::~CEnti
 void __fastcall CDOTA_Ability_Chen_Penitence::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Chen_Penitence::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -1219,7 +1219,7 @@ CEntityInstance *__fastcall CDOTA_Ability_Chen_TestOfFaith::CEntityInstanceEntit
 void __fastcall CDOTA_Ability_Chen_TestOfFaith::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Chen_TestOfFaith::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -1229,7 +1229,7 @@ void __fastcall CDOTA_Ability_Chen_TestOfFaith::CEntityInstanceEntityClass::~CEn
 void __fastcall CDOTA_Ability_Chen_TestOfFaith::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Chen_TestOfFaith::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -1512,7 +1512,7 @@ CEntityInstance *__fastcall CDOTA_Ability_Chen_HolyPersuasion::CEntityInstanceEn
 void __fastcall CDOTA_Ability_Chen_HolyPersuasion::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Chen_HolyPersuasion::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -1522,7 +1522,7 @@ void __fastcall CDOTA_Ability_Chen_HolyPersuasion::CEntityInstanceEntityClass::~
 void __fastcall CDOTA_Ability_Chen_HolyPersuasion::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Chen_HolyPersuasion::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -2275,7 +2275,7 @@ CEntityInstance *__fastcall CDOTA_Ability_Chen_TestOfFaithTeleport::CEntityInsta
 void __fastcall CDOTA_Ability_Chen_TestOfFaithTeleport::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Chen_TestOfFaithTeleport::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -2285,7 +2285,7 @@ void __fastcall CDOTA_Ability_Chen_TestOfFaithTeleport::CEntityInstanceEntityCla
 void __fastcall CDOTA_Ability_Chen_TestOfFaithTeleport::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Chen_TestOfFaithTeleport::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -2962,7 +2962,7 @@ CEntityInstance *__fastcall CDOTA_Ability_Chen_HandOfGod::CEntityInstanceEntityC
 void __fastcall CDOTA_Ability_Chen_HandOfGod::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Chen_HandOfGod::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -2972,7 +2972,7 @@ void __fastcall CDOTA_Ability_Chen_HandOfGod::CEntityInstanceEntityClass::~CEnti
 void __fastcall CDOTA_Ability_Chen_HandOfGod::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Chen_HandOfGod::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }

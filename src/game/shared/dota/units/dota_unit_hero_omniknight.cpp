@@ -521,7 +521,7 @@ CEntityInstance *__fastcall CDOTA_Unit_Hero_Omniknight::CEntityInstanceEntityCla
 void __fastcall CDOTA_Unit_Hero_Omniknight::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Unit_Hero_Omniknight::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -531,7 +531,7 @@ void __fastcall CDOTA_Unit_Hero_Omniknight::CEntityInstanceEntityClass::~CEntity
 void __fastcall CDOTA_Unit_Hero_Omniknight::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Unit_Hero_Omniknight::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -716,7 +716,7 @@ CEntityInstance *__fastcall CDOTA_Ability_Omniknight_Purification::CEntityInstan
 void __fastcall CDOTA_Ability_Omniknight_Purification::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Omniknight_Purification::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -726,7 +726,7 @@ void __fastcall CDOTA_Ability_Omniknight_Purification::CEntityInstanceEntityClas
 void __fastcall CDOTA_Ability_Omniknight_Purification::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Omniknight_Purification::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -1149,7 +1149,7 @@ CEntityInstance *__fastcall CDOTA_Ability_Omniknight_Repel::CEntityInstanceEntit
 void __fastcall CDOTA_Ability_Omniknight_Repel::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Omniknight_Repel::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -1159,7 +1159,7 @@ void __fastcall CDOTA_Ability_Omniknight_Repel::CEntityInstanceEntityClass::~CEn
 void __fastcall CDOTA_Ability_Omniknight_Repel::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Omniknight_Repel::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -1478,7 +1478,7 @@ CEntityInstance *__fastcall CDOTA_Ability_Omniknight_Degen_Aura::CEntityInstance
 void __fastcall CDOTA_Ability_Omniknight_Degen_Aura::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Omniknight_Degen_Aura::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -1488,7 +1488,7 @@ void __fastcall CDOTA_Ability_Omniknight_Degen_Aura::CEntityInstanceEntityClass:
 void __fastcall CDOTA_Ability_Omniknight_Degen_Aura::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Omniknight_Degen_Aura::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -1929,7 +1929,7 @@ CEntityInstance *__fastcall CDOTA_Ability_Omniknight_GuardianAngel::CEntityInsta
 void __fastcall CDOTA_Ability_Omniknight_GuardianAngel::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Omniknight_GuardianAngel::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -1939,7 +1939,7 @@ void __fastcall CDOTA_Ability_Omniknight_GuardianAngel::CEntityInstanceEntityCla
 void __fastcall CDOTA_Ability_Omniknight_GuardianAngel::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_Ability_Omniknight_GuardianAngel::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }

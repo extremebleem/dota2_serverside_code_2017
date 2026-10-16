@@ -99,7 +99,7 @@ datamap_t *__fastcall DataMapInit<CFailableAchievement>(CFailableAchievement *a1
 // callers: CFailableAchievement::CFailableAchievement
 void __fastcall CBaseAchievement::CBaseAchievement(CBaseAchievement *const this)
 {
-  this->_vptr_IGameEventListener2 = off_3FB3370;
+  this->_vptr_IGameEventListener2 = off_3FB3370;  // vptr: CBaseAchievement
   this->m_bRegisteredForEvents = 0;
   this->_vptr_IAchievement = off_3FB34E0;
   this->m_iFlags = 0;
@@ -691,7 +691,7 @@ void __fastcall CFailableAchievement::CFailableAchievement(CFailableAchievement 
 {
   CBaseAchievement::CBaseAchievement(this);
   this->m_bFailed = 0;
-  this->_vptr_IGameEventListener2 = off_3FB3590;
+  this->_vptr_IGameEventListener2 = off_3FB3590;  // vptr: CFailableAchievement
   this->_vptr_IAchievement = off_3FB3720;
   this->m_bActivated = 0;
 }
@@ -863,7 +863,7 @@ void __fastcall CAchievement_AchievedCount::OnSteamUserStatsStored(CAchievement_
     {
       while ( 1 )
       {
-        v5 = (*this->m_pAchievementMgr->_vptr_IAchievementMgr)(this->m_pAchievementMgr, v3, this->m_nUserSlot);
+        v5 = this->m_pAchievementMgr->GetAchievementByIndex(v3, this->m_nUserSlot);
         v6 = (**v5)(v5);
         if ( v6 >= this->m_iLowRange && v6 <= this->m_iHighRange )
           break;

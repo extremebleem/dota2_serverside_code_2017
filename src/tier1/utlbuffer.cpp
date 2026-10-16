@@ -889,7 +889,7 @@ int __fastcall CUtlBuffer::PeekDelimitedStringLength(
       nLength[0] = pConv->m_nMaxConversionLength;
       if ( !CUtlBuffer::CheckArbitraryPeekGet(this, v8, nLength) )
         break;
-      (*pConv->_vptr_CUtlCharConversion)(pConv, &this->m_Memory.m_pMemory[v8 + this->m_Get - this->m_nOffset], nLength);
+      pConv->FindConversion(&this->m_Memory.m_pMemory[v8 + this->m_Get - this->m_nOffset], nLength);
       v8 += nLength[0];
     }
     m_nDelimiterLength = pConv->m_nDelimiterLength;
@@ -1019,7 +1019,7 @@ char __fastcall CUtlBuffer::GetDelimitedCharInternal(CUtlBuffer *const this, CUt
     result = CUtlBuffer::CheckArbitraryPeekGet(this, 0, nLength);
     if ( result != 0 )
     {
-      v9 = (*pConv->_vptr_CUtlCharConversion)(pConv, &this->m_Memory.m_pMemory[this->m_Get - this->m_nOffset], nLength);
+      v9 = pConv->FindConversion(&this->m_Memory.m_pMemory[this->m_Get - this->m_nOffset], nLength);
       CUtlBuffer::SeekGet(this, CUtlBuffer::SeekType_t::SEEK_CURRENT, nLength[0]);
       return v9;
     }
@@ -1303,57 +1303,55 @@ int __fastcall CUtlBuffer::VaScanf(CUtlBuffer *const this, const char *pFmt, ___
   _QWORD *v40; // rdx
   _DWORD *v41; // rax
   _DWORD *v42; // r13
-  double v43; // xmm0_8
+  char v43; // al
   char v44; // al
-  char v45; // al
-  unsigned int v46; // eax
-  _QWORD *v47; // rdx
-  _QWORD *v48; // rax
-  _QWORD *v49; // r13
-  unsigned int v50; // eax
-  char **v51; // rdx
-  char *v52; // r8
-  bool v53; // al
-  unsigned int v54; // eax
-  _QWORD *v55; // rdx
-  _WORD *v56; // rax
-  _WORD *v57; // r13
-  int v58; // r13d
-  __m128d v59; // xmm0
-  int v60; // edx
-  unsigned int v61; // edx
+  unsigned int v45; // eax
+  _QWORD *v46; // rdx
+  _QWORD *v47; // rax
+  _QWORD *v48; // r13
+  unsigned int v49; // eax
+  char **v50; // rdx
+  char *v51; // r8
+  bool v52; // al
+  unsigned int v53; // eax
+  _QWORD *v54; // rdx
+  _WORD *v55; // rax
+  _WORD *v56; // r13
+  int v57; // r13d
+  __m128d v58; // xmm0
+  int v59; // edx
+  unsigned int v60; // edx
+  _QWORD *v61; // rax
   _QWORD *v62; // rax
-  _QWORD *v63; // rax
-  _QWORD *v64; // r13
-  double v65; // xmm0_8
-  unsigned int v66; // edx
-  _QWORD *v67; // rax
-  _QWORD *v68; // rax
-  int v69; // r13d
+  _QWORD *v63; // r13
+  unsigned int v64; // edx
+  _QWORD *v65; // rax
+  _QWORD *v66; // rax
+  int v67; // r13d
   unsigned int gp_offset; // edx
   __int64 **overflow_arg_area; // rax
-  unsigned __int8 *v72; // r13
-  __int64 v73; // rax
-  unsigned int v74; // edx
-  __int64 **v75; // rax
-  __int64 v76; // rdx
-  int v77; // r13d
-  int v78; // eax
-  unsigned int v79; // edx
-  _QWORD *v80; // rax
-  _BYTE *v81; // rax
-  int v82; // r13d
-  char v83; // al
-  unsigned int v84; // edx
-  _QWORD *v85; // rax
-  _WORD *v86; // rax
-  int v87; // r13d
-  int v88; // r13d
-  unsigned int v89; // edx
-  _QWORD *v90; // rax
-  _QWORD *v91; // rax
-  __int64 v92; // rdx
-  unsigned __int8 *v93; // r13
+  unsigned __int8 *v70; // r13
+  __int64 v71; // rax
+  unsigned int v72; // edx
+  __int64 **v73; // rax
+  __int64 v74; // rdx
+  int v75; // r13d
+  int v76; // eax
+  unsigned int v77; // edx
+  _QWORD *v78; // rax
+  _BYTE *v79; // rax
+  int v80; // r13d
+  char v81; // al
+  unsigned int v82; // edx
+  _QWORD *v83; // rax
+  _WORD *v84; // rax
+  int v85; // r13d
+  int v86; // r13d
+  unsigned int v87; // edx
+  _QWORD *v88; // rax
+  _QWORD *v89; // rax
+  __int64 v90; // rdx
+  unsigned __int8 *v91; // r13
   char *ch_0; // [rsp+8h] [rbp-58h]
   char *ch_0a; // [rsp+8h] [rbp-58h]
   char *ch_0b; // [rsp+8h] [rbp-58h]
@@ -1364,8 +1362,8 @@ int __fastcall CUtlBuffer::VaScanf(CUtlBuffer *const this, const char *pFmt, ___
   char *ch_0g; // [rsp+8h] [rbp-58h]
   char *ch_0h; // [rsp+8h] [rbp-58h]
   char *ch_0i; // [rsp+8h] [rbp-58h]
-  int v104; // [rsp+24h] [rbp-3Ch] BYREF
-  _QWORD v105[7]; // [rsp+28h] [rbp-38h] BYREF
+  int v102; // [rsp+24h] [rbp-3Ch] BYREF
+  _QWORD v103[7]; // [rsp+28h] [rbp-38h] BYREF
 
   result = 0;
   if ( this->m_Error == 0 && (this->m_Flags & 1) != 0 )
@@ -1427,36 +1425,36 @@ int __fastcall CUtlBuffer::VaScanf(CUtlBuffer *const this, const char *pFmt, ___
             }
             ch_0 = pFmt;
             v15 = *overflow_arg_area;
-            v104 = 128;
-            if ( !CUtlBuffer::CheckArbitraryPeekGet(this, 0, &v104) )
+            v102 = 128;
+            if ( !CUtlBuffer::CheckArbitraryPeekGet(this, 0, &v102) )
               goto LABEL_18;
-            v105[0] = &this->m_Memory.m_pMemory[this->m_Get - this->m_nOffset];
-            LODWORD(v72) = v105[0];
-            v73 = V_strtoi64(v105[0], v105, 10);
+            v103[0] = &this->m_Memory.m_pMemory[this->m_Get - this->m_nOffset];
+            LODWORD(v70) = v103[0];
+            v71 = V_strtoi64(v103[0], v103, 10);
           }
           else
           {
             if ( v12 == 117 )
             {
-              v74 = list->gp_offset;
+              v72 = list->gp_offset;
               if ( list->gp_offset >= 0x30 )
               {
-                v75 = list->overflow_arg_area;
-                list->overflow_arg_area = v75 + 1;
+                v73 = list->overflow_arg_area;
+                list->overflow_arg_area = v73 + 1;
               }
               else
               {
-                v75 = (list->reg_save_area + v74);
-                list->gp_offset = v74 + 8;
+                v73 = (list->reg_save_area + v72);
+                list->gp_offset = v72 + 8;
               }
               ch_0 = pFmt;
-              v15 = *v75;
-              v104 = 128;
-              if ( !CUtlBuffer::CheckArbitraryPeekGet(this, 0, &v104) )
+              v15 = *v73;
+              v102 = 128;
+              if ( !CUtlBuffer::CheckArbitraryPeekGet(this, 0, &v102) )
                 goto LABEL_18;
-              v76 = 10;
-              v72 = &this->m_Memory.m_pMemory[this->m_Get - this->m_nOffset];
-              v105[0] = v72;
+              v74 = 10;
+              v70 = &this->m_Memory.m_pMemory[this->m_Get - this->m_nOffset];
+              v103[0] = v70;
             }
             else
             {
@@ -1475,41 +1473,41 @@ int __fastcall CUtlBuffer::VaScanf(CUtlBuffer *const this, const char *pFmt, ___
               }
               v15 = *v14;
               ch_0 = pFmt;
-              v104 = 128;
-              if ( !CUtlBuffer::CheckArbitraryPeekGet(this, 0, &v104) )
+              v102 = 128;
+              if ( !CUtlBuffer::CheckArbitraryPeekGet(this, 0, &v102) )
               {
 LABEL_18:
                 *v15 = 0;
                 return v7;
               }
-              v76 = 16;
-              v72 = &this->m_Memory.m_pMemory[this->m_Get - this->m_nOffset];
-              v105[0] = v72;
+              v74 = 16;
+              v70 = &this->m_Memory.m_pMemory[this->m_Get - this->m_nOffset];
+              v103[0] = v70;
             }
-            v73 = V_strtoui64(v72, v105, v76);
+            v71 = V_strtoui64(v70, v103, v74);
           }
-          *v15 = v73;
-          if ( LODWORD(v105[0]) == v72 )
+          *v15 = v71;
+          if ( LODWORD(v103[0]) == v70 )
             return v7;
-          this->m_Get += LODWORD(v105[0]) - v72;
+          this->m_Get += LODWORD(v103[0]) - v70;
           pFmt = ch_0 + 5;
           goto LABEL_47;
         case 'c':
-          v50 = list->gp_offset;
+          v49 = list->gp_offset;
           if ( list->gp_offset >= 0x30 )
           {
-            v51 = list->overflow_arg_area;
-            list->overflow_arg_area = v51 + 1;
+            v50 = list->overflow_arg_area;
+            list->overflow_arg_area = v50 + 1;
           }
           else
           {
-            v51 = (list->reg_save_area + v50);
-            list->gp_offset = v50 + 8;
+            v50 = (list->reg_save_area + v49);
+            list->gp_offset = v49 + 8;
           }
-          v52 = *v51;
-          if ( (this->m_Error & 2) != 0 || (ch_0e = *v51, v53 = CUtlBuffer::CheckPeekGet(this, 0, 1), v52 = ch_0e, !v53) )
+          v51 = *v50;
+          if ( (this->m_Error & 2) != 0 || (ch_0e = *v50, v52 = CUtlBuffer::CheckPeekGet(this, 0, 1), v51 = ch_0e, !v52) )
           {
-            *v52 = 0;
+            *v51 = 0;
             return v7;
           }
           *ch_0e = this->m_Memory.m_pMemory[this->m_Get - this->m_nOffset];
@@ -1530,21 +1528,21 @@ LABEL_18:
             list->gp_offset = v35 + 8;
           }
           v37 = *v36;
-          v104 = 128;
+          v102 = 128;
           v38 = v37;
           ch_0b = v37;
-          if ( !CUtlBuffer::CheckArbitraryPeekGet(this, 0, &v104) )
+          if ( !CUtlBuffer::CheckArbitraryPeekGet(this, 0, &v102) )
           {
             *v38 = 0;
             return v7;
           }
-          v105[0] = &this->m_Memory.m_pMemory[this->m_Get - this->m_nOffset];
-          LODWORD(v30) = v105[0];
-          v31 = V_strtoi64(v105[0], v105, 10);
+          v103[0] = &this->m_Memory.m_pMemory[this->m_Get - this->m_nOffset];
+          LODWORD(v30) = v103[0];
+          v31 = V_strtoi64(v103[0], v103, 10);
 LABEL_45:
           *ch_0b = v31;
-          v32 = LODWORD(v105[0]) - v30;
-          if ( LODWORD(v105[0]) == v30 )
+          v32 = LODWORD(v103[0]) - v30;
+          if ( LODWORD(v103[0]) == v30 )
             return v7;
           goto LABEL_46;
         case 'f':
@@ -1560,20 +1558,20 @@ LABEL_45:
             list->gp_offset = v39 + 8;
           }
           v41 = *v40;
-          v104 = 128;
+          v102 = 128;
           v42 = v41;
           ch_0c = v41;
-          if ( !CUtlBuffer::CheckArbitraryPeekGet(this, 0, &v104) )
+          if ( !CUtlBuffer::CheckArbitraryPeekGet(this, 0, &v102) )
           {
             *v42 = 0;
             return v7;
           }
-          v105[0] = &this->m_Memory.m_pMemory[this->m_Get - this->m_nOffset];
-          v58 = v105[0];
-          v59.m128d_f64[0] = V_strtod(v105[0], v105, v43);
-          *ch_0c = _mm_movedup_pd(v59).m128d_f64[0];
-          v60 = LODWORD(v105[0]) - v58;
-          if ( LODWORD(v105[0]) == v58 )
+          v103[0] = &this->m_Memory.m_pMemory[this->m_Get - this->m_nOffset];
+          v57 = v103[0];
+          v58.m128d_f64[0] = V_strtod(v103[0], v103);
+          *ch_0c = _mm_movedup_pd(v58).m128d_f64[0];
+          v59 = LODWORD(v103[0]) - v57;
+          if ( LODWORD(v103[0]) == v57 )
             return v7;
           goto LABEL_85;
         case 'h':
@@ -1582,57 +1580,57 @@ LABEL_45:
           {
             case 'i':
             case 'd':
-              v54 = list->gp_offset;
+              v53 = list->gp_offset;
               if ( list->gp_offset >= 0x30 )
               {
-                v55 = list->overflow_arg_area;
-                list->overflow_arg_area = v55 + 1;
+                v54 = list->overflow_arg_area;
+                list->overflow_arg_area = v54 + 1;
               }
               else
               {
-                v55 = list->reg_save_area + v54;
-                list->gp_offset = v54 + 8;
+                v54 = list->reg_save_area + v53;
+                list->gp_offset = v53 + 8;
               }
-              v56 = *v55;
-              v104 = 128;
-              v57 = v56;
-              ch_0f = v56;
-              if ( !CUtlBuffer::CheckArbitraryPeekGet(this, 0, &v104) )
+              v55 = *v54;
+              v102 = 128;
+              v56 = v55;
+              ch_0f = v55;
+              if ( !CUtlBuffer::CheckArbitraryPeekGet(this, 0, &v102) )
               {
 LABEL_76:
-                *v57 = 0;
+                *v56 = 0;
                 return v7;
               }
-              v105[0] = &this->m_Memory.m_pMemory[this->m_Get - this->m_nOffset];
-              v77 = v105[0];
-              *ch_0f = V_strtoi64(v105[0], v105, 10);
-              v78 = LODWORD(v105[0]) - v77;
-              if ( LODWORD(v105[0]) == v77 )
+              v103[0] = &this->m_Memory.m_pMemory[this->m_Get - this->m_nOffset];
+              v75 = v103[0];
+              *ch_0f = V_strtoi64(v103[0], v103, 10);
+              v76 = LODWORD(v103[0]) - v75;
+              if ( LODWORD(v103[0]) == v75 )
                 return v7;
               break;
             case 'u':
-              v84 = list->gp_offset;
+              v82 = list->gp_offset;
               if ( list->gp_offset >= 0x30 )
               {
-                v85 = list->overflow_arg_area;
-                list->overflow_arg_area = v85 + 1;
+                v83 = list->overflow_arg_area;
+                list->overflow_arg_area = v83 + 1;
               }
               else
               {
-                v85 = list->reg_save_area + v84;
-                list->gp_offset = v84 + 8;
+                v83 = list->reg_save_area + v82;
+                list->gp_offset = v82 + 8;
               }
-              v86 = *v85;
-              v104 = 128;
-              v57 = v86;
-              ch_0i = v86;
-              if ( !CUtlBuffer::CheckArbitraryPeekGet(this, 0, &v104) )
+              v84 = *v83;
+              v102 = 128;
+              v56 = v84;
+              ch_0i = v84;
+              if ( !CUtlBuffer::CheckArbitraryPeekGet(this, 0, &v102) )
                 goto LABEL_76;
-              v105[0] = &this->m_Memory.m_pMemory[this->m_Get - this->m_nOffset];
-              v87 = v105[0];
-              *ch_0i = V_strtoui64(v105[0], v105, 10);
-              v78 = LODWORD(v105[0]) - v87;
-              if ( LODWORD(v105[0]) == v87 )
+              v103[0] = &this->m_Memory.m_pMemory[this->m_Get - this->m_nOffset];
+              v85 = v103[0];
+              *ch_0i = V_strtoui64(v103[0], v103, 10);
+              v76 = LODWORD(v103[0]) - v85;
+              if ( LODWORD(v103[0]) == v85 )
                 return v7;
               break;
             case 'h':
@@ -1652,181 +1650,181 @@ LABEL_76:
                   list->gp_offset = v18 + 8;
                 }
                 v20 = *v19;
-                v104 = 128;
+                v102 = 128;
                 v21 = v20;
                 ch_0a = v20;
-                if ( !CUtlBuffer::CheckArbitraryPeekGet(this, 0, &v104) )
+                if ( !CUtlBuffer::CheckArbitraryPeekGet(this, 0, &v102) )
                   goto LABEL_29;
-                v105[0] = &this->m_Memory.m_pMemory[this->m_Get - this->m_nOffset];
-                v82 = v105[0];
-                v83 = V_strtoi64(v105[0], v105, 10);
+                v103[0] = &this->m_Memory.m_pMemory[this->m_Get - this->m_nOffset];
+                v80 = v103[0];
+                v81 = V_strtoi64(v103[0], v103, 10);
               }
               else
               {
                 if ( v17 != 117 )
                   goto LABEL_114;
-                v79 = list->gp_offset;
+                v77 = list->gp_offset;
                 if ( list->gp_offset >= 0x30 )
                 {
-                  v80 = list->overflow_arg_area;
-                  list->overflow_arg_area = v80 + 1;
+                  v78 = list->overflow_arg_area;
+                  list->overflow_arg_area = v78 + 1;
                 }
                 else
                 {
-                  v80 = list->reg_save_area + v79;
-                  list->gp_offset = v79 + 8;
+                  v78 = list->reg_save_area + v77;
+                  list->gp_offset = v77 + 8;
                 }
-                v81 = *v80;
-                v104 = 128;
-                v21 = v81;
-                ch_0a = v81;
-                if ( !CUtlBuffer::CheckArbitraryPeekGet(this, 0, &v104) )
+                v79 = *v78;
+                v102 = 128;
+                v21 = v79;
+                ch_0a = v79;
+                if ( !CUtlBuffer::CheckArbitraryPeekGet(this, 0, &v102) )
                 {
 LABEL_29:
                   *v21 = 0;
                   return v7;
                 }
-                v105[0] = &this->m_Memory.m_pMemory[this->m_Get - this->m_nOffset];
-                v82 = v105[0];
-                v83 = V_strtoui64(v105[0], v105, 10);
+                v103[0] = &this->m_Memory.m_pMemory[this->m_Get - this->m_nOffset];
+                v80 = v103[0];
+                v81 = V_strtoui64(v103[0], v103, 10);
               }
-              *ch_0a = v83;
-              v78 = LODWORD(v105[0]) - v82;
-              if ( LODWORD(v105[0]) == v82 )
+              *ch_0a = v81;
+              v76 = LODWORD(v103[0]) - v80;
+              if ( LODWORD(v103[0]) == v80 )
                 return v7;
               break;
             default:
               return v7;
           }
-          this->m_Get += v78;
+          this->m_Get += v76;
 LABEL_114:
           pFmt = v11 + 1;
 LABEL_47:
           ++v7;
           break;
         case 'l':
-          v44 = pFmt[2];
+          v43 = pFmt[2];
           v11 = pFmt + 3;
-          if ( v44 == 102 )
+          if ( v43 == 102 )
           {
-            v61 = list->gp_offset;
+            v60 = list->gp_offset;
             if ( list->gp_offset >= 0x30 )
             {
-              v62 = list->overflow_arg_area;
-              list->overflow_arg_area = v62 + 1;
+              v61 = list->overflow_arg_area;
+              list->overflow_arg_area = v61 + 1;
             }
             else
             {
-              v62 = list->reg_save_area + v61;
-              list->gp_offset = v61 + 8;
+              v61 = list->reg_save_area + v60;
+              list->gp_offset = v60 + 8;
             }
-            v63 = *v62;
-            v104 = 128;
-            v64 = v63;
-            ch_0g = v63;
-            if ( !CUtlBuffer::CheckArbitraryPeekGet(this, 0, &v104) )
+            v62 = *v61;
+            v102 = 128;
+            v63 = v62;
+            ch_0g = v62;
+            if ( !CUtlBuffer::CheckArbitraryPeekGet(this, 0, &v102) )
             {
-              *v64 = 0;
+              *v63 = 0;
               return v7;
             }
-            v105[0] = &this->m_Memory.m_pMemory[this->m_Get - this->m_nOffset];
-            v88 = v105[0];
-            *ch_0g = V_strtod(v105[0], v105, v65);
-            v60 = LODWORD(v105[0]) - v88;
-            if ( LODWORD(v105[0]) == v88 )
+            v103[0] = &this->m_Memory.m_pMemory[this->m_Get - this->m_nOffset];
+            v86 = v103[0];
+            *ch_0g = V_strtod(v103[0], v103);
+            v59 = LODWORD(v103[0]) - v86;
+            if ( LODWORD(v103[0]) == v86 )
               return v7;
 LABEL_85:
-            this->m_Get += v60;
+            this->m_Get += v59;
             pFmt = v11;
           }
           else
           {
-            if ( v44 != 108 )
+            if ( v43 != 108 )
               return v7;
-            v45 = pFmt[3];
-            if ( v45 == 100 )
+            v44 = pFmt[3];
+            if ( v44 == 100 )
             {
-              v66 = list->gp_offset;
+              v64 = list->gp_offset;
               if ( list->gp_offset >= 0x30 )
               {
-                v67 = list->overflow_arg_area;
-                list->overflow_arg_area = v67 + 1;
+                v65 = list->overflow_arg_area;
+                list->overflow_arg_area = v65 + 1;
               }
               else
               {
-                v67 = list->reg_save_area + v66;
-                list->gp_offset = v66 + 8;
+                v65 = list->reg_save_area + v64;
+                list->gp_offset = v64 + 8;
               }
-              v68 = *v67;
-              v104 = 128;
-              v49 = v68;
-              ch_0h = v68;
-              if ( !CUtlBuffer::CheckArbitraryPeekGet(this, 0, &v104) )
+              v66 = *v65;
+              v102 = 128;
+              v48 = v66;
+              ch_0h = v66;
+              if ( !CUtlBuffer::CheckArbitraryPeekGet(this, 0, &v102) )
                 goto LABEL_67;
-              v105[0] = &this->m_Memory.m_pMemory[this->m_Get - this->m_nOffset];
-              v69 = v105[0];
-              *ch_0h = V_strtoi64(v105[0], v105, 10);
-              v32 = LODWORD(v105[0]) - v69;
-              if ( LODWORD(v105[0]) == v69 )
+              v103[0] = &this->m_Memory.m_pMemory[this->m_Get - this->m_nOffset];
+              v67 = v103[0];
+              *ch_0h = V_strtoi64(v103[0], v103, 10);
+              v32 = LODWORD(v103[0]) - v67;
+              if ( LODWORD(v103[0]) == v67 )
                 return v7;
             }
             else
             {
-              if ( v45 == 117 )
+              if ( v44 == 117 )
               {
-                v89 = list->gp_offset;
+                v87 = list->gp_offset;
                 if ( list->gp_offset >= 0x30 )
                 {
-                  v90 = list->overflow_arg_area;
-                  list->overflow_arg_area = v90 + 1;
+                  v88 = list->overflow_arg_area;
+                  list->overflow_arg_area = v88 + 1;
                 }
                 else
                 {
-                  v90 = list->reg_save_area + v89;
-                  list->gp_offset = v89 + 8;
+                  v88 = list->reg_save_area + v87;
+                  list->gp_offset = v87 + 8;
                 }
-                v91 = *v90;
-                v104 = 128;
-                v49 = v91;
-                ch_0d = v91;
-                if ( !CUtlBuffer::CheckArbitraryPeekGet(this, 0, &v104) )
+                v89 = *v88;
+                v102 = 128;
+                v48 = v89;
+                ch_0d = v89;
+                if ( !CUtlBuffer::CheckArbitraryPeekGet(this, 0, &v102) )
                   goto LABEL_67;
-                v92 = 10;
-                v93 = &this->m_Memory.m_pMemory[this->m_Get - this->m_nOffset];
-                v105[0] = v93;
+                v90 = 10;
+                v91 = &this->m_Memory.m_pMemory[this->m_Get - this->m_nOffset];
+                v103[0] = v91;
               }
               else
               {
-                if ( v45 != 120 )
+                if ( v44 != 120 )
                   return v7;
-                v46 = list->gp_offset;
+                v45 = list->gp_offset;
                 if ( list->gp_offset >= 0x30 )
                 {
-                  v47 = list->overflow_arg_area;
-                  list->overflow_arg_area = v47 + 1;
+                  v46 = list->overflow_arg_area;
+                  list->overflow_arg_area = v46 + 1;
                 }
                 else
                 {
-                  v47 = list->reg_save_area + v46;
-                  list->gp_offset = v46 + 8;
+                  v46 = list->reg_save_area + v45;
+                  list->gp_offset = v45 + 8;
                 }
-                v48 = *v47;
-                v104 = 128;
-                v49 = v48;
-                ch_0d = v48;
-                if ( !CUtlBuffer::CheckArbitraryPeekGet(this, 0, &v104) )
+                v47 = *v46;
+                v102 = 128;
+                v48 = v47;
+                ch_0d = v47;
+                if ( !CUtlBuffer::CheckArbitraryPeekGet(this, 0, &v102) )
                 {
 LABEL_67:
-                  *v49 = 0;
+                  *v48 = 0;
                   return v7;
                 }
-                v92 = 16;
-                v93 = &this->m_Memory.m_pMemory[this->m_Get - this->m_nOffset];
-                v105[0] = v93;
+                v90 = 16;
+                v91 = &this->m_Memory.m_pMemory[this->m_Get - this->m_nOffset];
+                v103[0] = v91;
               }
-              *ch_0d = V_strtoui64(v93, v105, v92);
-              v32 = LODWORD(v105[0]) - v93;
-              if ( LODWORD(v105[0]) == v93 )
+              *ch_0d = V_strtoui64(v91, v103, v90);
+              v32 = LODWORD(v103[0]) - v91;
+              if ( LODWORD(v103[0]) == v91 )
                 return v7;
             }
 LABEL_46:
@@ -1862,14 +1860,14 @@ LABEL_46:
             list->gp_offset = v26 + 8;
           }
           v28 = *v27;
-          v104 = 128;
+          v102 = 128;
           v25 = v28;
           ch_0b = v28;
-          if ( !CUtlBuffer::CheckArbitraryPeekGet(this, 0, &v104) )
+          if ( !CUtlBuffer::CheckArbitraryPeekGet(this, 0, &v102) )
             goto LABEL_39;
           v29 = 10;
           v30 = &this->m_Memory.m_pMemory[this->m_Get - this->m_nOffset];
-          v105[0] = v30;
+          v103[0] = v30;
           goto LABEL_44;
         case 'x':
           v22 = list->gp_offset;
@@ -1884,10 +1882,10 @@ LABEL_46:
             list->gp_offset = v22 + 8;
           }
           v24 = *v23;
-          v104 = 128;
+          v102 = 128;
           v25 = v24;
           ch_0b = v24;
-          if ( !CUtlBuffer::CheckArbitraryPeekGet(this, 0, &v104) )
+          if ( !CUtlBuffer::CheckArbitraryPeekGet(this, 0, &v102) )
           {
 LABEL_39:
             *v25 = 0;
@@ -1895,9 +1893,9 @@ LABEL_39:
           }
           v29 = 16;
           v30 = &this->m_Memory.m_pMemory[this->m_Get - this->m_nOffset];
-          v105[0] = v30;
+          v103[0] = v30;
 LABEL_44:
-          v31 = V_strtoui64(v30, v105, v29);
+          v31 = V_strtoui64(v30, v103, v29);
           goto LABEL_45;
         default:
           return v7;
@@ -2699,26 +2697,30 @@ LABEL_38:
 // strings: "utlbuffer.cpp", "VaPrintf", "CUtlBuffer::VaPrintf: String overflowed buffer [%llu]\n"
 void __fastcall CUtlBuffer::VaPrintf(CUtlBuffer *const this, const char *pFmt, ___va_list_tag *list)
 {
-  LeafCodeInfo_t v4; // [rsp+0h] [rbp-2040h] BYREF
+  __int64 v4; // rdx
+  __int64 v5; // rcx
+  __int64 v6; // rdi
+  __int64 v7; // rsi
+  LeafCodeInfo_t v8; // [rsp+0h] [rbp-2040h] BYREF
   char temp[8200]; // [rsp+20h] [rbp-2020h] BYREF
-  unsigned __int64 v6; // [rsp+2028h] [rbp-18h]
+  unsigned __int64 v10; // [rsp+2028h] [rbp-18h]
 
-  v6 = __readfsqword(0x28u);
+  v10 = __readfsqword(0x28u);
   if ( V_vsnprintf(temp, 0x2000, pFmt, list) > 0x1FFE )
   {
     if ( LoggingSystem_IsChannelEnabled(LOG_GENERAL, 4) != 0 )
     {
-      v4.m_szFile = "utlbuffer.cpp";
-      v4.m_szFunction = "VaPrintf";
-      v4.m_nLine = 1570;
+      v8.m_szFile = "utlbuffer.cpp";
+      v8.m_szFunction = "VaPrintf";
+      v8.m_nLine = 1570;
       LoggingSystem_Log(
         LOG_GENERAL,
         LoggingSeverity_t::LS_ERROR,
-        &v4,
+        &v8,
         "CUtlBuffer::VaPrintf: String overflowed buffer [%llu]\n",
         0x2000);
     }
-    if ( Plat_ShouldCollectMiniDumpsForFatalErrors() != 0 )
+    if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v6, v7, v4, v5) != 0 )
       loc_0 = -559038737;
     Plat_ExitProcess(1);
   }

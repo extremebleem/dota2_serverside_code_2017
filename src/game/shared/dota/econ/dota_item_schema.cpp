@@ -51,7 +51,7 @@ void __fastcall CDOTAItemDefinition::CDOTAItemDefinition(CDOTAItemDefinition *co
 
   CEconItemDefinition::CEconItemDefinition(this);
   this->m_pPortraitData = 0;
-  this->_vptr_IEconItemDefinition = off_47A0710;
+  this->_vptr_IEconItemDefinition = off_47A0710;  // vptr: CDOTAItemDefinition
   m_Data = INVALID_ITEM_DEF_INDEX.m_Data;
   this->m_symBannerName.u.m_Id = 0;
   this->m_symTournamentURL.u.m_Id = 0;
@@ -87,7 +87,7 @@ void __fastcall CDOTAItemDefinition::~CDOTAItemDefinition(CDOTAItemDefinition *c
   CDOTAItemDefinition::PortraitNode_t *m_pNext; // r12
   bool v4; // zf
 
-  this->_vptr_IEconItemDefinition = off_47A0710;
+  this->_vptr_IEconItemDefinition = off_47A0710;  // vptr: CDOTAItemDefinition
   m_pPortraitData = this->m_pPortraitData;
   if ( m_pPortraitData != 0 )
   {
@@ -418,7 +418,7 @@ LABEL_25:
               if ( v55 != 0 )
                 v56 = nFlagsb | 4;
               nFlagsc = v56;
-              v57.m_Data = (*this->_vptr_IEconItemDefinition)(this);
+              v57.m_Data = this->GetDefinitionIndex();
               CDOTAItemSchema::AddInfoToLeagueCache(pMaterialName, this->m_nLeagueID, v57, nFlagsc, unTier);
             }
           }
@@ -580,7 +580,7 @@ LABEL_5:
               if ( ++v14 == 16 )
                 goto LABEL_10;
             }
-            v17 = (*v13->_vptr_IEconItemDefinition)(v13);
+            v17 = v13->GetDefinitionIndex();
             m_Size = pItems->m_Size;
             v19 = pItems->m_Size;
             if ( m_Size == pItems->m_Memory.m_nAllocationCount )
@@ -1327,7 +1327,7 @@ void __fastcall CDOTAItemDefinition::InitCustomizableCourierData(
     courierWearable.m_nIndex = KeyValues::GetInt(v13, "index", 0);
     courierWearable.m_bFlyingOnly = KeyValues::GetInt(v13, "flying", 0) != 0;
     *(this + 529) = (4 * courierWearable.m_bFlyingOnly) | *(this + 529) & 0xFB;
-    v16.m_Data = (*this->_vptr_IEconItemDefinition)(this);
+    v16.m_Data = this->GetDefinitionIndex();
     CDOTAItemSchema::AddCourierWearable(pSchema, &courierWearable, v16);
   }
 }
@@ -2034,7 +2034,7 @@ LABEL_26:
 LABEL_21:
           pTicketList = v12->m_elem;
 LABEL_22:
-          v20 = (*pItemDef->_vptr_IEconItemDefinition)(pItemDef);
+          v20 = pItemDef->GetDefinitionIndex();
           v21 = pTicketList->m_Size;
           v22 = pTicketList->m_Size;
           if ( v21 == pTicketList->m_Memory.m_nAllocationCount )
@@ -4793,7 +4793,7 @@ void __fastcall CDOTAItemSchema::OnTestItemSetRemoved(CDOTAItemSchema *const thi
 void __fastcall CSchemaAttributeType_HeroStatue::~CSchemaAttributeType_HeroStatue(
         CSchemaAttributeType_HeroStatue *const this)
 {
-  this->_vptr_ISchemaAttributeType = off_479F1D0;
+  this->_vptr_ISchemaAttributeType = off_479F1D0;  // vptr: ISchemaAttributeType
 }
 
 
@@ -4802,7 +4802,7 @@ void __fastcall CSchemaAttributeType_HeroStatue::~CSchemaAttributeType_HeroStatu
 void __fastcall CSchemaAttributeType_HeroStatue::~CSchemaAttributeType_HeroStatue(
         CSchemaAttributeType_HeroStatue *const this)
 {
-  this->_vptr_ISchemaAttributeType = off_479F1D0;
+  this->_vptr_ISchemaAttributeType = off_479F1D0;  // vptr: ISchemaAttributeType
   operator delete(this);
 }
 
@@ -4899,15 +4899,15 @@ bool __fastcall CDOTAItemSchema::BAddAttributeTypes(
   const ISchemaAttributeType *v9; // [rsp+8h] [rbp-18h]
 
   CEconItemSchema::BAddAttributeTypes(this, pVecErrors);
-  v3 = operator new(8u);
-  v3->_vptr_ISchemaAttributeType = off_47A0AD0;
+  v3 = operator new(8u);  // new CSchemaAttributeType_HeroStatue (size matches)  [vptr stores: ISchemaAttributeTypeBase<CAttribute_HeroStatue>, CSchemaAttributeType_HeroStatue]
+  v3->_vptr_ISchemaAttributeType = off_47A0AD0;  // vptr: ISchemaAttributeTypeBase<CAttribute_HeroStatue>
   if ( ISchemaAttributeTypeBase<CAttribute_HeroStatue>::s_InstanceStats.m_pszDesc == 0 )
   {
     ISchemaAttributeTypeBase<CAttribute_HeroStatue>::s_InstanceStats.m_pszDesc = "21CAttribute_HeroStatue";
     ISchemaAttributeTypeBase<CAttribute_HeroStatue>::s_InstanceStats.m_pNext = CSchemaAttributeStats::m_pHead;
     CSchemaAttributeStats::m_pHead = &ISchemaAttributeTypeBase<CAttribute_HeroStatue>::s_InstanceStats;
   }
-  v3->_vptr_ISchemaAttributeType = off_47A0BD0;
+  v3->_vptr_ISchemaAttributeType = off_47A0BD0;  // vptr: CSchemaAttributeType_HeroStatue
   CEconSchemaSymbol::CEconSchemaSymbol(&v8, "hero_statue");
   v9 = v3;
   m_Size = this->m_vecAttributeTypes.m_Size;
@@ -4972,9 +4972,9 @@ IEconTool *__fastcall CDOTAItemSchema::CreateEconToolImpl(
   {
     if ( pszUsageRestriction == 0 && unCapabilities == item_capabilities_t::ITEM_CAP_NONE )
     {
-      v11 = operator new(0x48u);
+      v11 = operator new(0x48u);  // new CEconTool_TournamentPassport (size matches)
       IEconTool::IEconTool(v11, pszToolType, pszUseString, 0, item_capabilities_t::ITEM_CAP_NONE, pUsageKV);
-      v11->_vptr_IEconTool = off_479F9D0;
+      v11->_vptr_IEconTool = off_479F9D0;  // vptr: CEconTool_TournamentPassport
       return v11;
     }
     return 0;
@@ -4983,9 +4983,9 @@ IEconTool *__fastcall CDOTAItemSchema::CreateEconToolImpl(
   {
     if ( pszUsageRestriction == 0 && unCapabilities == item_capabilities_t::ITEM_CAP_NONE )
     {
-      v13 = operator new(0x50u);
+      v13 = operator new(0x50u);  // new CEconTool_EmoticonUnlock (size matches)
       IEconTool::IEconTool(v13, pszToolType, pszUseString, 0, item_capabilities_t::ITEM_CAP_NONE, pUsageKV);
-      v13->_vptr_IEconTool = off_479FD30;
+      v13->_vptr_IEconTool = off_479FD30;  // vptr: CEconTool_EmoticonUnlock
       return v13;
     }
     return 0;
@@ -4994,9 +4994,9 @@ IEconTool *__fastcall CDOTAItemSchema::CreateEconToolImpl(
   {
     if ( pszUsageRestriction == 0 && unCapabilities == item_capabilities_t::ITEM_CAP_NONE )
     {
-      v14 = operator new(0x58u);
+      v14 = operator new(0x58u);  // new CEconTool_CustomGameTicket (size matches)
       IEconTool::IEconTool(v14, pszToolType, pszUseString, 0, item_capabilities_t::ITEM_CAP_NONE, pUsageKV);
-      v14->_vptr_IEconTool = off_479FD90;
+      v14->_vptr_IEconTool = off_479FD90;  // vptr: CEconTool_CustomGameTicket
       return v14;
     }
     return 0;
@@ -5005,10 +5005,10 @@ IEconTool *__fastcall CDOTAItemSchema::CreateEconToolImpl(
   {
     if ( pszUsageRestriction != 0 || unCapabilities != item_capabilities_t::ITEM_CAP_NONE )
       return 0;
-    v15 = operator new(0x68u);
+    v15 = operator new(0x68u);  // new CEconTool_AwardEventPoints (size matches)
     IEconTool::IEconTool(v15, pszToolType, pszUseString, 0, item_capabilities_t::ITEM_CAP_NONE, pUsageKV);
     v15[1].m_symUsageRestriction.u.m_Id = 0;
-    v15->_vptr_IEconTool = off_479FC70;
+    v15->_vptr_IEconTool = off_479FC70;  // vptr: CEconTool_AwardEventPoints
     return v15;
   }
   if ( V_stricmp_fast(pszToolType, "compendium") == 0 )
@@ -5031,10 +5031,10 @@ IEconTool *__fastcall CDOTAItemSchema::CreateEconToolImpl(
   {
     if ( pszUsageRestriction != 0 || unCapabilities != item_capabilities_t::ITEM_CAP_NONE )
       return 0;
-    v18 = operator new(0x60u);
+    v18 = operator new(0x60u);  // new CEconTool_Gift (size matches)
     IEconTool::IEconTool(v18, pszToolType, pszUseString, 0, item_capabilities_t::ITEM_CAP_NONE, pUsageKV);
     v18[1]._vptr_IEconTool = 0;
-    v18->_vptr_IEconTool = off_479FF70;
+    v18->_vptr_IEconTool = off_479FF70;  // vptr: CEconTool_Gift
     LODWORD(v18[1].m_symTypeName.u.m_Id) = 0;
     HIDWORD(v18[1].m_symTypeName.u.m_pAsString) = 1;
     HIDWORD(v18[1].m_symUseString.u.m_pAsString) = 1;
@@ -5044,36 +5044,36 @@ IEconTool *__fastcall CDOTAItemSchema::CreateEconToolImpl(
   {
     if ( pszUsageRestriction != 0 || unCapabilities != item_capabilities_t::ITEM_CAP_NONE )
       return 0;
-    v19 = operator new(0x60u);
+    v19 = operator new(0x60u);  // new CEconTool_CompendiumSetSelection (size matches)
     IEconTool::IEconTool(v19, pszToolType, pszUseString, 0, item_capabilities_t::ITEM_CAP_NONE, pUsageKV);
-    v19->_vptr_IEconTool = off_479FB50;
+    v19->_vptr_IEconTool = off_479FB50;  // vptr: CEconTool_CompendiumSetSelection
     return v19;
   }
   if ( V_stricmp_fast(pszToolType, "passport_fantasy_team") == 0 )
   {
     if ( pszUsageRestriction != 0 || unCapabilities != item_capabilities_t::ITEM_CAP_NONE )
       return 0;
-    v20 = operator new(0x48u);
+    v20 = operator new(0x48u);  // new CEconTool_PassportFantasyTeam (size matches)
     IEconTool::IEconTool(v20, pszToolType, pszUseString, 0, item_capabilities_t::ITEM_CAP_NONE, pUsageKV);
-    v20->_vptr_IEconTool = off_479FBB0;
+    v20->_vptr_IEconTool = off_479FBB0;  // vptr: CEconTool_PassportFantasyTeam
     return v20;
   }
   if ( V_stricmp_fast(pszToolType, "fantasy_ticket") == 0 )
   {
     if ( pszUsageRestriction != 0 || unCapabilities != item_capabilities_t::ITEM_CAP_NONE )
       return 0;
-    v21 = operator new(0x48u);
+    v21 = operator new(0x48u);  // new CEconTool_FantasyTicket (size matches)
     IEconTool::IEconTool(v21, pszToolType, pszUseString, 0, item_capabilities_t::ITEM_CAP_NONE, pUsageKV);
-    v21->_vptr_IEconTool = off_479FC10;
+    v21->_vptr_IEconTool = off_479FC10;  // vptr: CEconTool_FantasyTicket
     return v21;
   }
   if ( V_stricmp_fast(pszToolType, "unusual_paint") == 0 )
   {
     if ( pszUsageRestriction != 0 || pUsageKV != 0 )
       return 0;
-    v22 = operator new(0x48u);
+    v22 = operator new(0x48u);  // new CEconTool_UnusualPaint (size matches)
     IEconTool::IEconTool(v22, pszToolType, 0, 0, unCapabilities, 0);
-    v22->_vptr_IEconTool = off_47A0DB0;
+    v22->_vptr_IEconTool = off_47A0DB0;  // vptr: CEconTool_UnusualPaint
     return v22;
   }
   if ( V_stricmp_fast(pszToolType, "gem_combiner") != 0 )
@@ -5090,18 +5090,18 @@ IEconTool *__fastcall CDOTAItemSchema::CreateEconToolImpl(
     {
       if ( pszUsageRestriction != 0 || unCapabilities != item_capabilities_t::ITEM_CAP_NONE )
         return 0;
-      v24 = operator new(0x48u);
+      v24 = operator new(0x48u);  // new CEconTool_Egg (size matches)
       IEconTool::IEconTool(v24, pszToolType, pszUseString, 0, item_capabilities_t::ITEM_CAP_NONE, pUsageKV);
-      v24->_vptr_IEconTool = off_479F910;
+      v24->_vptr_IEconTool = off_479F910;  // vptr: CEconTool_Egg
       return v24;
     }
     if ( V_stricmp_fast(pszToolType, "hero_taunt") == 0 )
     {
       if ( pszUsageRestriction != 0 || pUsageKV != 0 )
         return 0;
-      v25 = operator new(0x48u);
+      v25 = operator new(0x48u);  // new CEconTool_HeroTaunt (size matches)
       IEconTool::IEconTool(v25, pszToolType, pszUseString, 0, unCapabilities, 0);
-      v25->_vptr_IEconTool = off_47A00F0;
+      v25->_vptr_IEconTool = off_47A00F0;  // vptr: CEconTool_HeroTaunt
       return v25;
     }
     if ( V_stricmp_fast(pszToolType, "victory_prediction") == 0 )
@@ -5116,9 +5116,9 @@ IEconTool *__fastcall CDOTAItemSchema::CreateEconToolImpl(
     {
       if ( pszUsageRestriction != 0 || pUsageKV != 0 )
         return 0;
-      v26 = operator new(0x48u);
+      v26 = operator new(0x48u);  // new CEconTool_HeroAbility (size matches)
       IEconTool::IEconTool(v26);
-      v26->_vptr_IEconTool = off_47A0270;
+      v26->_vptr_IEconTool = off_47A0270;  // vptr: CEconTool_HeroAbility
       return v26;
     }
     if ( V_stricmp_fast(pszToolType, "fortunate_soul") == 0 )
@@ -5141,9 +5141,9 @@ IEconTool *__fastcall CDOTAItemSchema::CreateEconToolImpl(
     {
       if ( pszUsageRestriction != 0 || unCapabilities != item_capabilities_t::ITEM_CAP_NONE )
         return 0;
-      v27 = operator new(0x48u);
+      v27 = operator new(0x48u);  // new CEconTool_EventTicket (size matches)
       IEconTool::IEconTool(v27, pszToolType, pszUseString, 0, item_capabilities_t::ITEM_CAP_NONE, pUsageKV);
-      v27->_vptr_IEconTool = off_479F970;
+      v27->_vptr_IEconTool = off_479F970;  // vptr: CEconTool_EventTicket
       return v27;
     }
     if ( V_stricmp_fast(pszToolType, "player_card") == 0 )
@@ -5171,38 +5171,38 @@ IEconTool *__fastcall CDOTAItemSchema::CreateEconToolImpl(
     {
       if ( pszUsageRestriction != 0 || unCapabilities != item_capabilities_t::ITEM_CAP_NONE )
         return 0;
-      v28 = operator new(0x50u);
+      v28 = operator new(0x50u);  // new CEconTool_HeroStatueForge (size matches)
       IEconTool::IEconTool(v28, pszToolType, pszUseString, 0, item_capabilities_t::ITEM_CAP_NONE, pUsageKV);
       LOWORD(v28[1]._vptr_IEconTool) = 0;
-      v28->_vptr_IEconTool = off_479FEB0;
+      v28->_vptr_IEconTool = off_479FEB0;  // vptr: CEconTool_HeroStatueForge
       return v28;
     }
     if ( V_stricmp_fast(pszToolType, "hero_statue_reforgeitem") == 0 )
     {
       if ( pszUsageRestriction != 0 || unCapabilities != item_capabilities_t::ITEM_CAP_NONE )
         return 0;
-      v29 = operator new(0x48u);
+      v29 = operator new(0x48u);  // new CEconTool_EffigyReforgeItem (size matches)
       IEconTool::IEconTool(v29, pszToolType, pszUseString, 0, item_capabilities_t::ITEM_CAP_NONE, pUsageKV);
-      v29->_vptr_IEconTool = off_479FAF0;
+      v29->_vptr_IEconTool = off_479FAF0;  // vptr: CEconTool_EffigyReforgeItem
       return v29;
     }
     if ( V_stricmp_fast(pszToolType, "hero_statue_reforge") == 0 )
     {
       if ( pszUsageRestriction != 0 || unCapabilities != item_capabilities_t::ITEM_CAP_NONE )
         return 0;
-      v30 = operator new(0x48u);
+      v30 = operator new(0x48u);  // new CEconTool_HeroStatueReforge (size matches)
       IEconTool::IEconTool(v30, pszToolType, pszUseString, 0, item_capabilities_t::ITEM_CAP_NONE, pUsageKV);
-      v30->_vptr_IEconTool = off_479FF10;
+      v30->_vptr_IEconTool = off_479FF10;  // vptr: CEconTool_HeroStatueReforge
       return v30;
     }
     if ( V_stricmp_fast(pszToolType, "team_showcase_forge") == 0 )
     {
       if ( pszUsageRestriction != 0 || unCapabilities != item_capabilities_t::ITEM_CAP_NONE )
         return 0;
-      v31 = operator new(0x50u);
+      v31 = operator new(0x50u);  // new CEconTool_TeamShowcaseForge (size matches)
       IEconTool::IEconTool(v31, pszToolType, pszUseString, 0, item_capabilities_t::ITEM_CAP_NONE, pUsageKV);
       LOWORD(v31[1]._vptr_IEconTool) = 0;
-      v31->_vptr_IEconTool = off_479FA90;
+      v31->_vptr_IEconTool = off_479FA90;  // vptr: CEconTool_TeamShowcaseForge
       return v31;
     }
     return CEconItemSchema::CreateEconToolImpl(
@@ -5215,9 +5215,9 @@ IEconTool *__fastcall CDOTAItemSchema::CreateEconToolImpl(
   }
   if ( pszUsageRestriction != 0 )
     return 0;
-  v23 = operator new(0x48u);
+  v23 = operator new(0x48u);  // new CEconTool_GemCombiner (size matches)
   IEconTool::IEconTool(v23, pszToolType, pszUseString, 0, unCapabilities, pUsageKV);
-  v23->_vptr_IEconTool = off_47A0E10;
+  v23->_vptr_IEconTool = off_47A0E10;  // vptr: CEconTool_GemCombiner
   return v23;
 }
 

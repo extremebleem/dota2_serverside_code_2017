@@ -15,7 +15,7 @@ void __cdecl GLOBAL__sub_I_resourcestream_cpp()
 // CResourceStream::CResourceStream  (line 13, @0x00000000032683e0, libserver.so)
 void __fastcall CResourceStream::CResourceStream(CResourceStream *const this)
 {
-  this->_vptr_CResourceStream = off_47D0ED0;
+  this->_vptr_CResourceStream = off_47D0ED0;  // vptr: CResourceStream
   this->m_pData = 0;
   this->m_nCommitted = 0;
   this->m_nUsed = 0;
@@ -34,7 +34,7 @@ void __fastcall CResourceStreamVM::CResourceStreamVM(CResourceStreamVM *const th
   this->m_nUsed = 0;
   this->m_nAlignBits = 3;
   this->m_nMaxAlignment = 4;
-  this->_vptr_CResourceStream = off_47D0F10;
+  this->_vptr_CResourceStream = off_47D0F10;  // vptr: CResourceStreamVM
   this->m_nReserved = 0;
   CResourceStreamVM::ReserveVirtualMemory(this, nReserveSize);
   this->m_nAlignBits = 3;
@@ -50,9 +50,9 @@ void __fastcall CResourceStreamVM::CResourceStreamVM(CResourceStreamVM *const th
 // callers: CreateAggregateData
 void __fastcall CResourceStreamVM::~CResourceStreamVM(CResourceStreamVM *const this)
 {
-  this->_vptr_CResourceStream = off_47D0F10;
+  this->_vptr_CResourceStream = off_47D0F10;  // vptr: CResourceStreamVM
   CResourceStreamVM::ReleaseVirtualMemory(this);
-  this->_vptr_CResourceStream = off_47D0ED0;
+  this->_vptr_CResourceStream = off_47D0ED0;  // vptr: CResourceStream
 }
 
 
@@ -60,9 +60,9 @@ void __fastcall CResourceStreamVM::~CResourceStreamVM(CResourceStreamVM *const t
 // calls: CResourceStreamVM::ReleaseVirtualMemory, operator delete
 void __fastcall CResourceStreamVM::~CResourceStreamVM(CResourceStreamVM *const this)
 {
-  this->_vptr_CResourceStream = off_47D0F10;
+  this->_vptr_CResourceStream = off_47D0F10;  // vptr: CResourceStreamVM
   CResourceStreamVM::ReleaseVirtualMemory(this);
-  this->_vptr_CResourceStream = off_47D0ED0;
+  this->_vptr_CResourceStream = off_47D0ED0;  // vptr: CResourceStream
   operator delete(this);
 }
 
@@ -79,7 +79,7 @@ void __fastcall CResourceStreamFixed::CResourceStreamFixed(
   this->m_nUsed = 0;
   this->m_nAlignBits = 3;
   this->m_nMaxAlignment = 4;
-  this->_vptr_CResourceStream = off_47D0F50;
+  this->_vptr_CResourceStream = off_47D0F50;  // vptr: CResourceStreamFixed
   this->m_bOwnMemory = 0;
   memset(pPreallocatedData, 0, nPreallocatedDataSize);
 }
@@ -101,7 +101,7 @@ void __fastcall CResourceStreamFixed::CResourceStreamFixed(
   this->m_nUsed = 0;
   this->m_nAlignBits = 3;
   this->m_nMaxAlignment = 4;
-  this->_vptr_CResourceStream = off_47D0F50;
+  this->_vptr_CResourceStream = off_47D0F50;  // vptr: CResourceStreamFixed
   this->m_bOwnMemory = 1;
   v5 = operator new[](nPreallocatedDataSize);
   this->m_nCommitted = nPreallocatedDataSize;
@@ -117,7 +117,7 @@ void __fastcall CResourceStreamFixed::~CResourceStreamFixed(CResourceStreamFixed
 {
   uint8 *m_pData; // rdi
 
-  this->_vptr_CResourceStream = off_47D0F50;
+  this->_vptr_CResourceStream = off_47D0F50;  // vptr: CResourceStreamFixed
   if ( this->m_bOwnMemory )
   {
     m_pData = this->m_pData;
@@ -126,7 +126,7 @@ void __fastcall CResourceStreamFixed::~CResourceStreamFixed(CResourceStreamFixed
   }
   this->m_pData = 0;
   this->m_nCommitted = 0;
-  this->_vptr_CResourceStream = off_47D0ED0;
+  this->_vptr_CResourceStream = off_47D0ED0;  // vptr: CResourceStream
 }
 
 
@@ -148,10 +148,8 @@ void __fastcall CResourceStreamFixed::Commit(CResourceStreamFixed *const this, u
   __int64 v5; // rcx
   __int64 v6; // rdi
   __int64 v7; // rsi
-  __int64 v8; // r8
-  __int64 v9; // r9
   uint m_nCommitted; // r9d
-  LeafCodeInfo_t v11; // [rsp+0h] [rbp-40h] BYREF
+  LeafCodeInfo_t v9; // [rsp+0h] [rbp-40h] BYREF
 
   if ( this->m_nCommitted < nNewCommit )
   {
@@ -159,18 +157,18 @@ void __fastcall CResourceStreamFixed::Commit(CResourceStreamFixed *const this, u
       goto LABEL_6;
     while ( 1 )
     {
-      if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v6, v7, v4, v5, v8, v9) != 0 )
+      if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v6, v7, v4, v5) != 0 )
         loc_0 = -559038737;
       Plat_ExitProcess(1);
 LABEL_6:
       m_nCommitted = this->m_nCommitted;
-      v11.m_szFile = "resourcestream.cpp";
-      v11.m_szFunction = "Commit";
-      v11.m_nLine = 77;
+      v9.m_szFile = "resourcestream.cpp";
+      v9.m_szFunction = "Commit";
+      v9.m_nLine = 77;
       LoggingSystem_Log(
         LOG_GENERAL,
         LoggingSeverity_t::LS_ERROR,
-        &v11,
+        &v9,
         "CResourceStreamFixed: trying to write past the end of allocated memory (new commit %u, allocated %u)\n",
         nNewCommit,
         m_nCommitted);
@@ -193,7 +191,7 @@ void __fastcall CResourceStreamGrowable::CResourceStreamGrowable(
   this->m_nUsed = 0;
   this->m_nAlignBits = 3;
   this->m_nMaxAlignment = 4;
-  this->_vptr_CResourceStream = off_47D0F90;
+  this->_vptr_CResourceStream = off_47D0F90;  // vptr: CResourceStreamGrowable
   if ( nReserveDataSize != 0 )
   {
     v4 = nReserveDataSize;
@@ -215,11 +213,11 @@ void __fastcall CResourceStreamGrowable::~CResourceStreamGrowable(CResourceStrea
 {
   uint8 *m_pData; // rdi
 
-  this->_vptr_CResourceStream = off_47D0F90;
+  this->_vptr_CResourceStream = off_47D0F90;  // vptr: CResourceStreamGrowable
   m_pData = this->m_pData;
   if ( m_pData != 0 )
     operator delete[](m_pData);
-  this->_vptr_CResourceStream = off_47D0ED0;
+  this->_vptr_CResourceStream = off_47D0ED0;  // vptr: CResourceStream
 }
 
 
@@ -229,11 +227,11 @@ void __fastcall CResourceStreamGrowable::~CResourceStreamGrowable(CResourceStrea
 {
   uint8 *m_pData; // rdi
 
-  this->_vptr_CResourceStream = off_47D0F90;
+  this->_vptr_CResourceStream = off_47D0F90;  // vptr: CResourceStreamGrowable
   m_pData = this->m_pData;
   if ( m_pData != 0 )
     operator delete[](m_pData);
-  this->_vptr_CResourceStream = off_47D0ED0;
+  this->_vptr_CResourceStream = off_47D0ED0;  // vptr: CResourceStream
   operator delete(this);
 }
 
@@ -273,10 +271,8 @@ void __fastcall CResourceStreamVM::ReserveVirtualMemory(CResourceStreamVM *const
   __int64 v6; // rcx
   __int64 v7; // rdi
   __int64 v8; // rsi
-  __int64 v9; // r8
-  __int64 v10; // r9
   int PlatformError; // eax
-  LeafCodeInfo_t v12; // [rsp+0h] [rbp-30h] BYREF
+  LeafCodeInfo_t v10; // [rsp+0h] [rbp-30h] BYREF
 
   v2 = nAddressSize + 0xFFFF;
   LOWORD(v2) = 0;
@@ -297,18 +293,18 @@ void __fastcall CResourceStreamVM::ReserveVirtualMemory(CResourceStreamVM *const
         goto LABEL_11;
       while ( 1 )
       {
-        if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v7, v8, v5, v6, v9, v10) != 0 )
+        if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v7, v8, v5, v6) != 0 )
           loc_0 = -559038737;
         Plat_ExitProcess(1);
 LABEL_11:
         PlatformError = Plat_GetPlatformError();
-        v12.m_nLine = 134;
-        v12.m_szFile = "resourcestream.cpp";
-        v12.m_szFunction = "ReserveVirtualMemory";
+        v10.m_nLine = 134;
+        v10.m_szFile = "resourcestream.cpp";
+        v10.m_szFunction = "ReserveVirtualMemory";
         LoggingSystem_Log(
           LOG_GENERAL,
           LoggingSeverity_t::LS_ERROR,
-          &v12,
+          &v10,
           "Cannot allocate virtual address space in CResourceStreamVM::ReserveVirtualMemory, error %u\n",
           PlatformError);
       }
@@ -415,11 +411,9 @@ void __fastcall CResourceStreamVM::Commit(CResourceStreamVM *const this, uint nN
   __int64 v11; // rcx
   __int64 v12; // rdi
   __int64 v13; // rsi
-  __int64 v14; // r8
-  __int64 v15; // r9
   uint m_nReserved; // eax
   uint m_nUsed; // r9d
-  LeafCodeInfo_t v18; // [rsp+10h] [rbp-40h] BYREF
+  LeafCodeInfo_t v16; // [rsp+10h] [rbp-40h] BYREF
 
   v2 = nNewCommit;
   if ( this->m_nReserved < nNewCommit )
@@ -435,9 +429,9 @@ void __fastcall CResourceStreamVM::Commit(CResourceStreamVM *const this, uint nN
     if ( LoggingSystem_IsChannelEnabled(LOG_GENERAL, 4) == 0 )
       goto LABEL_6;
     m_nReserved = this->m_nReserved;
-    v18.m_nLine = 214;
+    v16.m_nLine = 214;
     m_nUsed = this->m_nUsed;
-    v18.m_szFile = "resourcestream.cpp";
+    v16.m_szFile = "resourcestream.cpp";
     goto LABEL_11;
   }
   if ( nNewCommit > this->m_nCommitted )
@@ -452,22 +446,22 @@ void __fastcall CResourceStreamVM::Commit(CResourceStreamVM *const this, uint nN
         if ( LoggingSystem_IsChannelEnabled(LOG_GENERAL, 4) != 0 )
         {
           m_nReserved = this->m_nReserved;
-          v18.m_nLine = 224;
+          v16.m_nLine = 224;
           m_nUsed = this->m_nUsed;
-          v18.m_szFile = "resourcestream.cpp";
+          v16.m_szFile = "resourcestream.cpp";
 LABEL_11:
-          v18.m_szFunction = "Commit";
+          v16.m_szFunction = "Commit";
           LoggingSystem_Log(
             LOG_GENERAL,
             LoggingSeverity_t::LS_ERROR,
-            &v18,
+            &v16,
             "Failed trying to Commit %u bytes, used %u bytes, reserved %u bytes\n",
             v2,
             m_nUsed,
             m_nReserved);
         }
 LABEL_6:
-        if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v12, v13, v10, v11, v14, v15) != 0 )
+        if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v12, v13, v10, v11) != 0 )
           loc_0 = -559038737;
         Plat_ExitProcess(1);
       }
@@ -540,9 +534,7 @@ void __fastcall CResourceStream::Align(CResourceStream *const this, uint nAlignm
   __int64 v13; // rcx
   __int64 v14; // rdi
   __int64 v15; // rsi
-  __int64 v16; // r8
-  __int64 v17; // r9
-  LeafCodeInfo_t v18; // [rsp+0h] [rbp-30h] BYREF
+  LeafCodeInfo_t v16; // [rsp+0h] [rbp-30h] BYREF
 
   v3 = nAlignment - 1;
   m_nMaxAlignment = this->m_nMaxAlignment;
@@ -555,14 +547,14 @@ void __fastcall CResourceStream::Align(CResourceStream *const this, uint nAlignm
       goto LABEL_13;
     while ( 1 )
     {
-      if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v14, v15, v12, v13, v16, v17) != 0 )
+      if ( Plat_ShouldCollectMiniDumpsForFatalErrors(v14, v15, v12, v13) != 0 )
         loc_0 = -559038737;
       Plat_ExitProcess(1);
 LABEL_13:
-      v18.m_szFile = "resourcestream.cpp";
-      v18.m_szFunction = "Align";
-      v18.m_nLine = 270;
-      LoggingSystem_Log(LOG_GENERAL, LoggingSeverity_t::LS_ERROR, &v18, "Wrong alignment %d\n", nAlignment);
+      v16.m_szFile = "resourcestream.cpp";
+      v16.m_szFunction = "Align";
+      v16.m_nLine = 270;
+      LoggingSystem_Log(LOG_GENERAL, LoggingSeverity_t::LS_ERROR, &v16, "Wrong alignment %d\n", nAlignment);
     }
   }
   m_nUsed = this->m_nUsed;

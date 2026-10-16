@@ -120,7 +120,7 @@ void __fastcall CDOTA_Bot_AbilityUsage_Zuus_ArcLightning::CDOTA_Bot_AbilityUsage
   this->m_pAbility = pAbility;
   this->m_bUseOnCreeps = 0;
   this->m_pBot = pBot;
-  this->_vptr_CDOTA_Bot_AbilityUsage = off_42D3190;
+  this->_vptr_CDOTA_Bot_AbilityUsage = off_42D3190;  // vptr: CDOTA_Bot_AbilityUsage_Zuus_ArcLightning
   this->m_hDesiredTarget.m_Index = -1;
 }
 
@@ -507,7 +507,7 @@ void __fastcall CDOTA_Bot_AbilityUsage_Zuus_LightningBolt::CDOTA_Bot_AbilityUsag
   this->m_pAbility = pAbility;
   this->m_bUseOnCreeps = 0;
   this->m_pBot = pBot;
-  this->_vptr_CDOTA_Bot_AbilityUsage = off_42D31F0;
+  this->_vptr_CDOTA_Bot_AbilityUsage = off_42D31F0;  // vptr: CDOTA_Bot_AbilityUsage_Zuus_LightningBolt
   this->m_hDesiredTarget.m_Index = -1;
 }
 
@@ -862,7 +862,7 @@ void __fastcall CDOTA_Bot_AbilityUsage_Zuus_ThundergodsWrath::CDOTA_Bot_AbilityU
   this->m_pAbility = pAbility;
   this->m_bUseOnCreeps = 0;
   this->m_pBot = pBot;
-  this->_vptr_CDOTA_Bot_AbilityUsage = off_42D3250;
+  this->_vptr_CDOTA_Bot_AbilityUsage = off_42D3250;  // vptr: CDOTA_Bot_AbilityUsage_Zuus_ThundergodsWrath
 }
 
 

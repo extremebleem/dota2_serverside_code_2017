@@ -607,7 +607,7 @@ const ISchemaBinding *__fastcall CPhysForce::CEntityInstanceEntityClass::GetInst
 void __fastcall CPhysForce::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CPhysForce::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -617,7 +617,7 @@ void __fastcall CPhysForce::CEntityInstanceEntityClass::~CEntityInstanceEntityCl
 void __fastcall CPhysForce::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CPhysForce::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -1307,7 +1307,7 @@ CEntityInstance *__fastcall CPhysThruster::CEntityInstanceEntityClass::Construct
 void __fastcall CPhysThruster::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CPhysThruster::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -1317,7 +1317,7 @@ void __fastcall CPhysThruster::CEntityInstanceEntityClass::~CEntityInstanceEntit
 void __fastcall CPhysThruster::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CPhysThruster::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -1724,7 +1724,7 @@ CEntityInstance *__fastcall CPhysTorque::CEntityInstanceEntityClass::ConstructIn
 void __fastcall CPhysTorque::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CPhysTorque::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -1734,7 +1734,7 @@ void __fastcall CPhysTorque::CEntityInstanceEntityClass::~CEntityInstanceEntityC
 void __fastcall CPhysTorque::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CPhysTorque::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -2084,7 +2084,7 @@ CEntityInstance *__fastcall CPhysMotor::CEntityInstanceEntityClass::ConstructIns
 void __fastcall CPhysMotor::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CPhysMotor::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -2094,7 +2094,7 @@ void __fastcall CPhysMotor::CEntityInstanceEntityClass::~CEntityInstanceEntityCl
 void __fastcall CPhysMotor::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CPhysMotor::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
@@ -2975,7 +2975,7 @@ CEntityInstance *__fastcall CKeepUpright::CEntityInstanceEntityClass::ConstructI
 void __fastcall CKeepUpright::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CKeepUpright::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -2985,7 +2985,7 @@ void __fastcall CKeepUpright::CEntityInstanceEntityClass::~CEntityInstanceEntity
 void __fastcall CKeepUpright::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CKeepUpright::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }

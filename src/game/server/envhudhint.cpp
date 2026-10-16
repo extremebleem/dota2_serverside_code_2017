@@ -177,7 +177,7 @@ CEntityInstance *__fastcall CEnvHudHint::CEntityInstanceEntityClass::ConstructIn
 void __fastcall CEnvHudHint::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CEnvHudHint::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -187,7 +187,7 @@ void __fastcall CEnvHudHint::CEntityInstanceEntityClass::~CEntityInstanceEntityC
 void __fastcall CEnvHudHint::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CEnvHudHint::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }

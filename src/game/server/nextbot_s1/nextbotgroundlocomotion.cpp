@@ -467,13 +467,13 @@ void __fastcall NextBotGroundLocomotion::Update(NextBotGroundLocomotion *const t
       {
         *&position.x = (v21[98])(this);
         position.z = v39;
-        NDebugOverlay::Cross3D(&position, 1.0, 0, 255, 255, 1, 15.0);
+        NDebugOverlay::Cross3D(&position, 1.0, 0, 0xFFu, 0xFFu, 1, 15.0);
       }
       else
       {
         *&position.x = (v21[98])(this);
         position.z = v22;
-        NDebugOverlay::Cross3D(&position, 1.0, 0, 255, 0, 1, 15.0);
+        NDebugOverlay::Cross3D(&position, 1.0, 0, 0xFFu, 0, 1, 15.0);
       }
     }
   }
@@ -650,7 +650,7 @@ void __fastcall NextBotGroundLocomotion::DriveTo(NextBotGroundLocomotion *const 
 void __fastcall GroundLocomotionCollisionTraceFilter::~GroundLocomotionCollisionTraceFilter(
         GroundLocomotionCollisionTraceFilter *const this)
 {
-  this->_vptr_CTraceFilter = off_3FE6970;
+  this->_vptr_CTraceFilter = off_3FE6970;  // vptr: CTraceFilter
 }
 
 
@@ -659,7 +659,7 @@ void __fastcall GroundLocomotionCollisionTraceFilter::~GroundLocomotionCollision
 void __fastcall GroundLocomotionCollisionTraceFilter::~GroundLocomotionCollisionTraceFilter(
         GroundLocomotionCollisionTraceFilter *const this)
 {
-  this->_vptr_CTraceFilter = off_3FE6970;
+  this->_vptr_CTraceFilter = off_3FE6970;  // vptr: CTraceFilter
   operator delete(this);
 }
 
@@ -1220,7 +1220,7 @@ LABEL_16:
           crouchTrace.startpos.y = (trace.plane.normal.y * 20.0) + trace.endpos.y;
           crouchTrace.startpos.z = (trace.plane.normal.z * 20.0) + trace.endpos.z;
           crouchTrace.startpos.x = (20.0 * trace.plane.normal.x) + trace.endpos.x;
-          NDebugOverlay::Line(&trace.endpos, &crouchTrace.startpos, 255, 0, 150, 1, 15.0);
+          NDebugOverlay::Line(&trace.endpos, &crouchTrace.startpos, 0xFFu, 0, 0x96u, 1, 15.0);
           v27 = pTraceFiltera;
           v26 = vFullMove_8a;
           v25 = vLeftToMovea;
@@ -1641,7 +1641,7 @@ void __fastcall NextBotGroundLocomotion::UpdateGroundConstraint(NextBotGroundLoc
           ray.m_Start.z = v57 + v73;
           *&origin.x = (v56[98])(this);
           origin.z = v58;
-          NDebugOverlay::Line(&origin, &ray.m_Start, 255, 150, 0, 1, 5.0);
+          NDebugOverlay::Line(&origin, &ray.m_Start, 0xFFu, 0x96u, 0, 1, 5.0);
           v43 = v67;
         }
         z_low = LODWORD(this->m_vVelocity.z);
@@ -1791,17 +1791,17 @@ bool __fastcall NextBotGroundLocomotion::ClimbUpToLedge(
     v71 = (*(this->_vptr_INextBotEventResponder + 98))(this);
     upResult.startpos.z = v72;
     *&upResult.startpos.x = v71;
-    NDebugOverlay::Cross3D(&upResult.startpos, 5.0, 0, 255, 0, 1, 10.0);
-    NDebugOverlay::Cross3D(vLandingGoal, 5.0, 0, 255, 0, 1, 10.0);
+    NDebugOverlay::Cross3D(&upResult.startpos, 5.0, 0, 0xFFu, 0, 1, 10.0);
+    NDebugOverlay::Cross3D(vLandingGoal, 5.0, 0, 0xFFu, 0, 1, 10.0);
     *&upResult.startpos.x = (*(this->_vptr_INextBotEventResponder + 98))(this);
     upResult.startpos.z = v73;
-    NDebugOverlay::Line(&upResult.startpos, vLandingGoal, 0, 255, 0, 1, 10.0);
+    NDebugOverlay::Line(&upResult.startpos, vLandingGoal, 0, 0xFFu, 0, 1, 10.0);
     v74 = (vLandingForward->y * 10.0) + vLandingGoal->y;
     v75 = (vLandingForward->x * 10.0) + vLandingGoal->x;
     upResult.startpos.z = (vLandingForward->z * 10.0) + vLandingGoal->z;
     upResult.startpos.y = v74;
     upResult.startpos.x = v75;
-    NDebugOverlay::HorzArrow(vLandingGoal, &upResult.startpos, 2.0, 0, 255, 0, 255, 1, 10.0);
+    NDebugOverlay::HorzArrow(vLandingGoal, &upResult.startpos, 2.0, 0, 0xFFu, 0, 255, 10.0, 1);
   }
   if ( (*(this->_vptr_INextBotEventResponder + 83))(this) == 0 )
     return 0;
@@ -1929,7 +1929,7 @@ bool __fastcall NextBotGroundLocomotion::ClimbUpToLedge(
         start.y = vLedgePos.y - (y * flBackup);
         start.z = vLedgePos.z - v41;
         start.x = vLedgePos.x - v42;
-        NDebugOverlay::SweptBox(&start, &upResult.startpos, &vHullBottom, &vHullTop, &vec3_angle, rb, 255, 0, 255, 15.0);
+        NDebugOverlay::SweptBox(&start, &upResult.startpos, &vHullBottom, &vHullTop, &vec3_angle, rb, 15.0, 255, 0, 255);
         v26 = ray;
         v37 = flBackup;
       }
@@ -2018,7 +2018,7 @@ bool __fastcall NextBotGroundLocomotion::ClimbUpToLedge(
           start.y = (v115.plane.normal.y * pTracec) + vLedgePos.y;
           start.x = (v115.plane.normal.x * pTracec) + vLedgePos.x;
           start.z = (v115.plane.normal.z * pTracec) + vLedgePos.z;
-          NDebugOverlay::SweptBox(&start, &v114.m_Start, v59, maxsc, &vec3_angle, v86, 0, 255, 255, 15.0);
+          NDebugOverlay::SweptBox(&start, &v114.m_Start, v59, maxsc, &vec3_angle, v86, 15.0, 0, 255, 255);
           v44 = r;
           v57 = pTracec;
         }
@@ -2054,13 +2054,13 @@ LABEL_29:
       v114.m_Start.y = (vLedgeNormal.y * 25.0) + vLedgePos.y;
       v114.m_Start.z = (vLedgeNormal.z * 25.0) + vLedgePos.z;
       v114.m_Start.x = (25.0 * vLedgeNormal.x) + vLedgePos.x;
-      NDebugOverlay::HorzArrow(&vLedgePos, &v114.m_Start, 2.0, 255, 255, 0, 255, 1, 15.0);
+      NDebugOverlay::HorzArrow(&vLedgePos, &v114.m_Start, 2.0, 0xFFu, 0xFFu, 0, 255, 15.0, 1);
       *&v114.m_Start.x = 0xBF80000000000000LL;
       v114.m_Start.z = 0.0;
       start.x = 1.0;
       start.y = 0.0;
       start.z = 0.0;
-      NDebugOverlay::Circle(&vLedgePos, &start, &v114.m_Start, 3.0, 255, 0, 0, 255, 1, 15.0);
+      NDebugOverlay::Circle(&vLedgePos, &start, &v114.m_Start, 3.0, 0xFFu, 0, 0, 15.0, 255, 1);
     }
     m_bIsClimbingUpToLedge = (*(*v10 + 616LL))(v10, climbActivity, 11);
     if ( m_bIsClimbingUpToLedge != 0 )

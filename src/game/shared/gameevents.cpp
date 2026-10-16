@@ -290,7 +290,7 @@ void __fastcall GameEvent_RegisterHookupGameSystem::SetGameSystemGlobalPtrs(
 void __fastcall GameEvent_RegisterHookupGameSystem::~GameEvent_RegisterHookupGameSystem(
         GameEvent_RegisterHookupGameSystem *const this)
 {
-  this->_vptr_IGameSystem = off_3FF74F0;
+  this->_vptr_IGameSystem = off_3FF74F0;  // vptr: CStartupHookGameSystem<GameEvent_RegisterInternal,17408>
   IGameSystem::~IGameSystem(this);
 }
 
@@ -300,7 +300,7 @@ void __fastcall GameEvent_RegisterHookupGameSystem::~GameEvent_RegisterHookupGam
 void __fastcall GameEvent_RegisterHookupGameSystem::~GameEvent_RegisterHookupGameSystem(
         GameEvent_RegisterHookupGameSystem *const this)
 {
-  this->_vptr_IGameSystem = off_3FF74F0;
+  this->_vptr_IGameSystem = off_3FF74F0;  // vptr: CStartupHookGameSystem<GameEvent_RegisterInternal,17408>
   IGameSystem::~IGameSystem(this);
   operator delete(this);
 }

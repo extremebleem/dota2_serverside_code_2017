@@ -471,22 +471,21 @@ FileNameHandle_t __fastcall CUtlFilenameSymbolTable::FindOrAddFileName(
   char *v4; // rdx
   int v5; // ecx
   unsigned int v6; // eax
-  __int64 v7; // rdi
   __int64 CurrentId; // rsi
   CThreadSpinRWLock *p_m_lock; // r14
-  int v10; // eax
-  FileNameHandle_t v11; // r13d
-  unsigned __int16 v12; // r13
-  int v13; // eax
+  int v9; // eax
+  FileNameHandle_t v10; // r13d
+  unsigned __int16 v11; // r13
+  int v12; // eax
   ThreadId_t m_writerId; // rax
-  __int128 v15; // rt0
+  __int128 v14; // rt0
   unsigned __int16 StringHandle; // [rsp+4h] [rbp-64Ch]
   char fn[512]; // [rsp+10h] [rbp-640h] BYREF
   char basepath[512]; // [rsp+210h] [rbp-440h] BYREF
   char filename[520]; // [rsp+410h] [rbp-240h] BYREF
-  unsigned __int64 v21; // [rsp+618h] [rbp-38h]
+  unsigned __int64 v20; // [rsp+618h] [rbp-38h]
 
-  v21 = __readfsqword(0x28u);
+  v20 = __readfsqword(0x28u);
   result = 0;
   if ( pFileName != 0 )
   {
@@ -510,27 +509,27 @@ FileNameHandle_t __fastcall CUtlFilenameSymbolTable::FindOrAddFileName(
         LODWORD(v4) = v4 + 2;
       }
       _V_strncpy(filename, &fn[v4 - (__CFADD__(v6, v6) + 3) - basepath], 512);
-      CurrentId = ThreadGetCurrentId(v7);
+      CurrentId = ThreadGetCurrentId();
       p_m_lock = &this->m_lock;
       _InterlockedAdd(&this->m_lock.m_nWriters.m_value, 1u);
       if ( this->m_lock.m_lockInfo.m_nReaders > 0
         || (m_writerId = this->m_lock.m_lockInfo.m_writerId) != 0 && CurrentId != m_writerId
-        || (v15 = 0u, _InterlockedCompareExchange128(p_m_lock, 0, CurrentId, &v15) == 0) )
+        || (v14 = 0u, _InterlockedCompareExchange128(p_m_lock, 0, CurrentId, &v14) == 0) )
       {
         _mm_pause();
         CThreadSpinRWLock::SpinLockForWrite(p_m_lock, CurrentId);
       }
       StringHandle = CCountedStringPool::FindStringHandle(&this->m_StringPool, basepath);
-      LOWORD(v10) = CCountedStringPool::FindStringHandle(&this->m_StringPool, filename);
-      v11 = (v10 << 16) | StringHandle;
-      if ( StringHandle == 0 || v10 == 0 )
+      LOWORD(v9) = CCountedStringPool::FindStringHandle(&this->m_StringPool, filename);
+      v10 = (v9 << 16) | StringHandle;
+      if ( StringHandle == 0 || v9 == 0 )
       {
-        v12 = CCountedStringPool::ReferenceStringHandle(&this->m_StringPool, basepath);
-        LOWORD(v13) = CCountedStringPool::ReferenceStringHandle(&this->m_StringPool, filename);
-        v11 = (v13 << 16) | v12;
+        v11 = CCountedStringPool::ReferenceStringHandle(&this->m_StringPool, basepath);
+        LOWORD(v12) = CCountedStringPool::ReferenceStringHandle(&this->m_StringPool, filename);
+        v10 = (v12 << 16) | v11;
       }
       CThreadSpinRWLock::UnlockWrite(p_m_lock);
-      return v11;
+      return v10;
     }
   }
   return result;
@@ -656,7 +655,7 @@ bool __fastcall CUtlFilenameSymbolTable::RestoreFromBuffer(
   bool bResult; // [rsp+Ch] [rbp-24h]
 
   p_m_lock = &this->m_lock;
-  CurrentId = ThreadGetCurrentId(this);
+  CurrentId = ThreadGetCurrentId();
   _InterlockedAdd(&this->m_lock.m_nWriters.m_value, 1u);
   if ( this->m_lock.m_lockInfo.m_nReaders > 0
     || (m_writerId = this->m_lock.m_lockInfo.m_writerId) != 0 && CurrentId != m_writerId

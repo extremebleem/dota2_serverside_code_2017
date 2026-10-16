@@ -1787,7 +1787,7 @@ void __fastcall Abilities_UserGroupFunc(
         CSendProxyRecipients *pRecipients,
         int objectID)
 {
-  if ( !CDOTA_BaseNPC::GetAbilityByIndex(pStructBase, 0) )
+  if ( CDOTA_BaseNPC::GetAbilityByIndex(pStructBase, 0) == 0 )
     *pRecipients = 0;
 }
 
@@ -19458,7 +19458,7 @@ CEntityInstance *__fastcall CDOTA_BossAttackableTrigger::CEntityInstanceEntityCl
 void __fastcall CDOTA_BossAttackableTrigger::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_BossAttackableTrigger::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
 }
 
@@ -19468,7 +19468,7 @@ void __fastcall CDOTA_BossAttackableTrigger::CEntityInstanceEntityClass::~CEntit
 void __fastcall CDOTA_BossAttackableTrigger::CEntityInstanceEntityClass::~CEntityInstanceEntityClass(
         CDOTA_BossAttackableTrigger::CEntityInstanceEntityClass *const this)
 {
-  this->_vptr_CEntityClass = off_3FAF330;
+  this->_vptr_CEntityClass = off_3FAF330;  // vptr: CEntityInstance::CEntityInstanceEntityClass
   CEntityClass::~CEntityClass(this);
   operator delete(this);
 }
